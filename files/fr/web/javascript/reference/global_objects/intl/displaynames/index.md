@@ -16,37 +16,37 @@ const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
 });
 
 console.log(regionNamesInFrench.of("FR"));
-// Expected output: "France"
+// Résultat attendu : "France"
 
 console.log(regionNamesInTraditionalChinese.of("FR"));
-// Expected output: "法國"
+// Résultat attendu : "法國"
 ```
 
 ## Constructeur
 
-- {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+- {{JSxRef("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
   - : Crée un nouvel objet `Intl.DisplayNames`.
 
 ## Méthodes statiques
 
-- {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
+- {{JSxRef("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
   - : Retourne un tableau contenant les langues fournies qui sont supportées sans avoir à se rabattre sur la langue locale par défaut au moment de l'exécution.
 
 ## Propriétés d'instance
 
 Ces propriétés sont définies sur `Intl.DisplayNames.prototype` et partagées par toutes les instances de `Intl.DisplayNames`.
 
-- {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
-  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Intl.DisplayNames`, la valeur initiale est le constructeur {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}}.
+- {{JSxRef("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet instance. Pour les instances de `Intl.DisplayNames`, la valeur initiale est le constructeur {{JSxRef("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}}.
 - `Intl.DisplayNames.prototype[Symbol.toStringTag]`
-  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Intl.DisplayNames"`. Cette propriété est utilisée dans {{jsxref("Object.prototype.toString()")}}.
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"Intl.DisplayNames"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
 
 ## Méthodes d'instance
 
-- {{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
-  - : Cette méthode reçoit un `code` et retourne une chaine à partir de la langue et des options fournies lors de l'instanciation de `Intl.DisplayNames`.
-- {{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
-  - : Retourne un nouvel objet dont les propriété reflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
+- {{JSxRef("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
+  - : Cette méthode reçoit un `code` et retourne une chaîne de caractères à partir de la langue et des options fournies lors de l'instanciation de `Intl.DisplayNames`.
+- {{JSxRef("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
+  - : Retourne un nouvel objet avec des propriétés reflétant la locale et les options de mise en forme calculées lors de l'initialisation de l'objet.
 
 ## Exemples
 
@@ -142,4 +142,4 @@ nomsDevises.of("CNY"); // "人民幣"
 ## Voir aussi
 
 - [Prothèse d'émulation de `Intl.DisplayNames` dans FormatJS <sup>(angl.)</sup>](https://formatjs.github.io/docs/polyfills/intl-displaynames/)
-- {{jsxref("Intl")}}
+- L'objet {{JSxRef("Intl")}}
