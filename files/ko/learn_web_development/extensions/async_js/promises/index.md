@@ -228,7 +228,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
    document.body.appendChild(image);
    ```
 
-   여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
+   여기서 우리는 두 번째 Promise가 fulfills일 때 반환된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
 
 방금 만든 HTML 파일을 저장하고 브라우저에서 불러오면, 이미지가 예상대로 페이지에 표시되는 것을 볼 수 있습니다. 잘 하셨습니다!
 
