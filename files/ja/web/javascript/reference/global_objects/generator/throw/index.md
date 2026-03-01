@@ -1,16 +1,19 @@
 ---
 title: Generator.prototype.throw()
+short-title: throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-**`throw()`** メソッドは、ジェネレーターの例外を、エラーを発生させることで再開し、 `done` と `value` の 2 つのプロパティを持ったオブジェクトを返します。
+**`throw()`** は {{jsxref("Generator")}} インスタンスのメソッドで、ジェネレーターの本体内で、現在の停止位置に `throw` 文が挿入されたかのように振る舞い、ジェネレーターがエラー状態にあることを知らせ、エラーを処理したり、クリーンアップ処理を行って自分自身を閉じたりすることができるようにします。
 
 ## 構文
 
-```
-gen.throw(exception)
+<!-- 通常、メソッドには "generatorInstance" という主題を追加しません。ただし、ここでは "throw" がキーワードであるため、これがないと構文が不正になるので必要です。 -->
+
+```js-nolint
+generatorInstance.throw(exception)
 ```
 
 ### 引数
@@ -22,19 +25,29 @@ gen.throw(exception)
 
 2 つのプロパティを持つ {{jsxref("Global_Objects/Object", "Object")}} です。
 
-- `done` (boolean)
-  - : &#x20;
-    - イテレーターが反復処理の末尾を過ぎている場合、値は `true` になります。この場合、 `value` はオプションでそのイテレーターの*返値*を指定します。
-    - イテレーターが反復処理の次の値を生成することができた場合、値は `false` になります。これは `done` プロパティを指定しない場合も同等です。
-
+- `done`
+  - : 論理値です。
+    - このジェネレーター関数の制御フローが末尾に達している場合、`true` になります。
+    - このジェネレーター関数がさらに値を生成できる場合、`false` になります。
 - `value`
-  - : イテレーターが返す何らかの JavaScript の値です。 `done` が `true` の場合は省略可能です。
+  - : 次の `yield` 式から得られる値です。
+
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : ジェネレーターが既に実行中である場合に発生します。
+
+`exception` がジェネレーター関数内の `try...catch` で捕捉されなかった場合、`throw()` の呼び出し側にも例外が送出されます。
+
+## 解説
+
+`throw()` メソッドが呼び出されると、ジェネレーターの本体内で現在中断されている位置に `throw exception;` 文が挿入されたかのように見なされます。ここで `exception` は `throw()` メソッドに渡された例外です。したがって、通常のフローでは、`throw(exception)` を呼び出すとジェネレーターが例外を発生します。ただし、`yield` 式が `try...catch` ブロックで囲まれている場合、エラーが補足され、エラー処理後に制御フローを再開するか、正常に終了させることが可能です。
 
 ## 例
 
 ### throw() の使用
 
-次の例では、簡単なジェネレーターと、 `throw`メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxref("Statements/try...catch", "try...catch")}} ブロックによって受け取られます。
+次の例では、簡単なジェネレーターと、 `throw` メソッドを用いて発生させるエラーを示します。エラーは通常 {{jsxref("Statements/try...catch", "try...catch")}} ブロックによって受け取られます。
 
 ```js
 function* gen() {
