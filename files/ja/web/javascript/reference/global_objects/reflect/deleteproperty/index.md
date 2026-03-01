@@ -1,32 +1,36 @@
 ---
 title: Reflect.deleteProperty()
+short-title: deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Reflect.deleteProperty()`** は静的メソッドで、{{jsxref("Operators/delete", "delete")}} 演算子と同様に実装されていますが、関数として動作します。オブジェクトからプロパティを削除します。
 
-静的な **`Reflect.defineProperty()`** メソッドは、{{jsxref("Object.defineProperty()")}} と似ていますが、 {{jsxref("Boolean")}} を返します。
-
-{{InteractiveExample("JavaScript デモ: Reflect.defineProperty()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.deleteProperty()", "taller")}}
 
 ```js interactive-example
-const object1 = {};
+const object = {
+  foo: 42,
+};
 
-if (Reflect.defineProperty(object1, "property1", { value: 42 })) {
-  console.log("property1 created!");
-  // Expected output: "property1 created!"
-} else {
-  console.log("problem creating property1");
-}
+Reflect.deleteProperty(object, "foo");
 
-console.log(object1.property1);
-// Expected output: 42
+console.log(object.foo);
+// 予想される結果: undefined
+
+const array = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(array, "3");
+
+console.log(array);
+// 予想される結果: Array [1, 2, 3, <1 empty slot>, 5]
 ```
 
 ## 構文
 
-```
-Reflect.defineProperty(target, propertyKey, attributes)
+```js-nolint
+Reflect.deleteProperty(target, propertyKey)
 ```
 
 ### 引数
@@ -35,46 +39,46 @@ Reflect.defineProperty(target, propertyKey, attributes)
   - : プロパティを定義する対象のオブジェクトです。
 - `propertyKey`
   - : 定義または修正をするプロパティ名です。
-- `attributes`
-  - : 定義または修正されているプロパティのための属性です。
 
 ### 返値
 
-プロパティの定義に成功したかどうかを示す {{jsxref("Boolean")}} です。
+プロパティの定義に成功したかどうかを示す論理値です。
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではなかった場合。
+- {{jsxref("TypeError")}}
+  - : `target` がオブジェクトではなかった場合。
 
 ## 解説
 
-`Reflect.defineProperty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。
+`Reflect.deleteProperty()` は、`delete` 演算子の反射的意味づけを提供します。つまり、`Reflect.deleteProperty(target, propertyKey)` は意味的に以下と同等です。
 
-> [!NOTE]
-> `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
+```js
+delete target.propertyKey;
+```
+
+ごく基本的なレベルでは、プロパティの削除は論理値を返します（[プロキシーハンドラー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)の場合と同様です）。`Reflect.deleteProperty()` は結果を直接返しますが、`delete` は結果が `false` の場合、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) では {{jsxref("TypeError")}} が発生します。厳格モードでない場合は、`delete` と `Reflect.deleteProperty()` の動作は同じです。
+
+`Reflect.deleteProperty()` は、`target` の `[[Delete]]` [オブジェクト内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) を呼び出します。
 
 ## 例
 
-### Reflect.defineProperty() の使用
+### Reflect.deleteProperty() の使用
 
 ```js
-let obj = {};
-Reflect.defineProperty(obj, "x", { value: 7 }); // true
-obj.x; // 7
-```
+const obj = { x: 1, y: 2 };
+Reflect.deleteProperty(obj, "x"); // true
+console.log(obj); // { y: 2 }
 
-### プロパティ定義が成功したかチェックする
+const arr = [1, 2, 3, 4, 5];
+Reflect.deleteProperty(arr, "3"); // true
+console.log(arr); // [1, 2, 3, <1 empty slot>, 5]
 
-成功してオブジェクトを返すか、失敗して {{jsxref("TypeError")}} をスローする {{jsxref("Object.defineProperty")}} を使う場合、プロパティの定義中に発生する何らかの例外をキャッチするには、[`try...catch`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) ブロックを使用します。
+// そのようなプロパティが存在しない場合に true を返す
+Reflect.deleteProperty({}, "foo"); // true
 
-`Reflect.defineProperty` は真偽値の成功ステータスを返すので、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) ブロックを使用することができます。
-
-```js
-if (Reflect.defineProperty(target, property, attributes)) {
-  // success
-} else {
-  // failure
-}
+// プロパティが設定不可の場合、false を返す
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## 仕様書
@@ -87,5 +91,7 @@ if (Reflect.defineProperty(target, property, attributes)) {
 
 ## 関連情報
 
+- [`Reflect.deleteProperty` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- {{jsxref("Object.defineProperty()")}}
+- [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete)
+- [`handler.deleteProperty()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty)

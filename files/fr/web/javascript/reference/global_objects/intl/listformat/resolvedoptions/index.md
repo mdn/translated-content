@@ -1,32 +1,49 @@
 ---
-title: Intl.ListFormat.prototype.resolvedOptions()
+title: "Intl.ListFormat : méthode resolvedOptions()"
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+La méthode **`resolvedOptions()`** des instances de {{JSxRef("Intl.ListFormat")}} retourne un nouvel objet dont les propriétés reflètent les options calculées lors de l'initialisation de cet objet `ListFormat`.
 
-La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.ListFormat.prototype.resolvedOptions()")}}
+
+```js interactive-example
+const deListFormatter = new Intl.ListFormat("de-DE", { type: "disjunction" });
+const options = deListFormatter.resolvedOptions();
+
+console.log(options.locale);
+// Résultat attendu : "de-DE"
+
+console.log(options.style);
+// Résultat attendu : "long"
+
+console.log(options.type);
+// Résultat attendu : "disjunction"
+```
 
 ## Syntaxe
 
-```js
-listFormat.resolvedOptions();
+```js-nolint
+resolvedOptions()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de style calculées lors de l'initialisation de l'objet {{jsxref("ListFormat")}}.
-
-## Description
-
-L'objet renvoyé par `resolvedOptions()` possède les propriétés suivantes :
+Un nouvel objet dont les propriétés reflètent les options calculées lors de l'initialisation de cet objet `ListFormat`. L'objet possède les propriétés suivantes, dans l'ordre indiqué&nbsp;:
 
 - `locale`
-  - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
-- `style`
-  - : La valeur fournie au constructeur via l'argument `options` ou la valeur utilisée par défaut (`"long"`). Cette propriété peut valoir `"long"`, `"short"` ou `"narrow"`.
+  - : La {{Glossary("BCP 47 language tag", "balise BCP 47 language tag")}} réellement utilisée, déterminée par le processus de [négociation de la locale](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_négociation_de_locale). Aucune clé d'extension Unicode ne sera incluse dans le résultat.
 - `type`
-  - : La valeur fournie au constructeur via l'argument `options` ou la valeur par défaut (`"conjunction"`). Cette propriété peut valoir `"conjunction"`, `"disjunction"` ou `"unit"`.
+  - : La valeur fournie pour cette propriété dans l'argument `options`, avec la valeur par défaut si nécessaire. Elle peut valoir `"conjunction"`, `"disjunction"` ou `"unit"`. La valeur par défaut est `"conjunction"`.
+- `style`
+  - : La valeur fournie pour cette propriété dans l'argument `options`, avec la valeur par défaut si nécessaire. Elle peut valoir `"long"`, `"short"` ou `"narrow"`. La valeur par défaut est `"long"`.
 
 ## Exemples
 
@@ -49,8 +66,8 @@ console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
 
 ## Voir aussi
 
-- {{jsxref("ListFormat", "Intl.ListFormat")}}
-- {{jsxref("NumberFormat.prototype.resolvedOptions()", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-- {{jsxref("Collator.prototype.resolvedOptions()", "Intl.Collator.prototype.resolvedOptions()")}}
-- {{jsxref("DateTimeFormat.prototype.resolvedOptions()", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
-- {{jsxref("PluralRules.prototype.resolvedOptions()", "Intl.PluralRules.prototype.resolvedOptions()")}}
+- L'objet {{JSxRef("Intl.ListFormat")}}
+- La méthode {{JSxRef("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
+- La méthode {{JSxRef("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
+- La méthode {{JSxRef("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}
+- La méthode {{JSxRef("Intl/PluralRules/resolvedOptions", "Intl.PluralRules.prototype.resolvedOptions()")}}
