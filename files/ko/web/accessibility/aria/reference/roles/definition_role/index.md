@@ -9,7 +9,7 @@ l10n:
 
 ## 설명
 
-`definition` ARIA 역할은 네이티브 {{HTMLElement('dfn')}} 요소와 유사하게, 용어나 개념의 정의에 해당하는 요소에 포함될 수 있습니다. 정의(definition)와 대상 용어(term)를 연결하고 접근 가능한 이름을 제공하려면, [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 속성을 사용하여 `role="term"`으로 지정된 용어를 참조하십시오.
+`definition` ARIA 역할은 네이티브 {{HTMLElement('dfn')}} 요소와 유사하게, 용어나 개념의 정의에 해당하는 요소에 포함될 수 있습니다. 정의된 내용과 그 대상이 되는 `term`을 연결하고 접근 가능한 이름을 제공하려면, [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 속성을 사용하여 `role="term"`으로 지정된 용어를 참조하십시오.
 
 ```html-nolint
 <p>
