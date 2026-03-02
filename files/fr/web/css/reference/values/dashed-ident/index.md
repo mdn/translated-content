@@ -3,7 +3,7 @@ title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
 original_slug: Web/CSS/dashed-ident
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<dashed-ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.
@@ -14,11 +14,11 @@ La syntaxe de `<dashed-ident>` est similaire à celle des identifiants CSS (comm
 
 Le double tiret au début permet de les identifier facilement lors de la lecture d'un bloc de code CSS et aide à éviter les conflits de noms avec les mots-clés CSS standards.
 
-Comme pour [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident), les `<dashed-ident>` sont définis par l'utilisateur·ice, mais contrairement à `<custom-ident>`, [CSS](/fr/docs/Web/CSS) ne définira jamais de `<dashed-ident>`.
+Comme pour {{CSSxRef("&lt;custom-ident&gt;")}}, les `<dashed-ident>` sont définis par l'utilisateur·ice, mais contrairement à `<custom-ident>`, [CSS](/fr/docs/Web/CSS) ne définira jamais de `<dashed-ident>`.
 
 ## Exemples
 
-### Utilisation avec les propriétés personnalisées CSS
+### Utiliser les propriétés personnalisées CSS
 
 Lorsque `<dashed-ident>` est utilisé avec les [propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), la propriété est d'abord déclarée puis utilisée dans une [fonction CSS `var()`](/fr/docs/Web/CSS/Reference/Values/var).
 
@@ -45,9 +45,9 @@ h6 {
 }
 ```
 
-### Utilisation avec `@color-profile`
+### Utiliser `@color-profile`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at [`@color-profile`](/fr/docs/Web/CSS/Reference/At-rules/@color-profile), la règle est d'abord déclarée puis utilisée dans une [fonction CSS `color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
+Lorsque `<dashed-ident>` est utilisé avec la règle at {{CSSxRef("@color-profile")}}, la règle est d'abord déclarée puis utilisée dans une [fonction CSS `color()`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 ```css
 @color-profile --my-color-profile {
@@ -59,9 +59,9 @@ Lorsque `<dashed-ident>` est utilisé avec la règle at [`@color-profile`](/fr/d
 }
 ```
 
-### Utilisation avec `@font-palette-values`
+### Utiliser `@font-palette-values`
 
-Lorsque `<dashed-ident>` est utilisé avec la règle at [`@font-palette-values`](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values), la règle est d'abord déclarée puis utilisée comme valeur pour la propriété [`font-palette`](/fr/docs/Web/CSS/font-palette).
+Lorsque `<dashed-ident>` est utilisé avec la règle at {{CSSxRef("@font-palette-values")}}, la règle est d'abord déclarée puis utilisée comme valeur pour la propriété {{CSSxRef("font-palette")}}.
 
 ```css
 @font-palette-values --my-palette {

@@ -214,7 +214,7 @@ table {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemples', 650, 170)}}
+{{EmbedLiveSample("Exemples", 650, 170)}}
 
 ## Résumé technique
 

@@ -1,51 +1,56 @@
 ---
-title: Date.prototype.setUTCDate()
+title: "Date : méthode setUTCDate()"
+short-title: setUTCDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`setUTCDate()`** des instances de {{JSxRef("Date")}} modifie le jour du mois pour cette date selon le temps universel.
 
-La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
-
-{{InteractiveExample("JavaScript Demo: Date.setUTCDate()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.setUTCDate()")}}
 
 ```js interactive-example
 const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
 
 console.log(event.getUTCDate());
-// Expected output: 20
+// Résultat attendu : 20
 
 event.setUTCDate(19);
 
 console.log(event.getUTCDate());
-// Expected output: 19
+// Résultat attendu : 19
 ```
 
 ## Syntaxe
 
-```js
-dateObj.setUTCDate(valeurJour);
+```js-nolint
+setUTCDate(dateValue)
 ```
 
 ### Paramètres
 
-- `valeurJour`
-  - : Un entier de 1 à 31, représentant un jour dans le mois.
+- `dateValue`
+  - : Un entier de 1 à 31 représentant un jour dans le mois.
 
 ### Valeur de retour
 
-Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
+Modifie l'objet {{JSxRef("Date")}} en place et retourne son nouveau [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide). Si `dateValue` vaut `NaN` (ou d'autres valeurs qui sont [contraintes](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre) en `NaN`, comme `undefined`), la date est définie sur [Date invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) et `NaN` est retourné.
 
 ## Description
 
-Si le paramètre renseigné est en dehors des limites attendues, `setUTCDate()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 40 pour `valeurJour`, et que le mois de la date est juin, le jour sera changé en 10 et le mois passera à juillet.
+Si la valeur `dateValue` est en dehors de la plage des jours du mois, `setDate()` mettra à jour l'objet {{JSxRef("Date")}} en conséquence.
+
+Par exemple, si 0 est fourni pour `dateValue`, la date sera définie au dernier jour du mois précédent. Si vous utilisez 40 pour `dateValue` et que le mois stocké dans l'objet {{JSxRef("Date")}} est juin, le jour sera changé en 10 et le mois sera incrémenté à juillet.
+
+Si un nombre négatif est fourni pour `dateValue`, la date sera définie en comptant à rebours à partir du dernier jour du mois précédent. -1 aura pour effet de définir la date à 1 jour avant le dernier jour du mois précédent.
 
 ## Exemples
 
-### Utiliser `setUTCDate()`
+### Utiliser la méthode `setUTCDate()`
 
 ```js
-var leGrandJour = new Date();
+const leGrandJour = new Date();
 leGrandJour.setUTCDate(20);
 ```
 
@@ -59,5 +64,5 @@ leGrandJour.setUTCDate(20);
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- La méthode {{JSxRef("Date.prototype.getUTCDate()")}}
+- La méthode {{JSxRef("Date.prototype.setDate()")}}

@@ -2,11 +2,11 @@
 title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@import`** est utilisée pour importer des règles de style depuis d'autres feuilles de style valides.
-Une règle `@import` _doit_ être définie en haut de la feuille de style, avant toute autre règle @ (sauf [@charset](/fr/docs/Web/CSS/Reference/At-rules/@charset) et [@layer](/fr/docs/Web/CSS/Reference/At-rules/@layer)) et toute déclaration de style, sinon elle sera ignorée.
+Une règle `@import` _doit_ être définie en haut de la feuille de style, avant toute autre règle @ (sauf {{CSSxRef("@charset")}} et {{CSSxRef("@layer")}}) et toute déclaration de style, sinon elle sera ignorée.
 
 ## Syntaxe
 
@@ -159,5 +159,5 @@ Ceci est un exemple de création de deux couches de cascade sans nom distinctes 
 
 - La règle {{CSSxRef("@media")}}
 - La règle {{CSSxRef("@supports")}}
-- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)

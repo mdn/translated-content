@@ -28,12 +28,12 @@ p::first-line {
 
 Les doubles deux-points (`::`) sont utilisés pour les pseudo-éléments. Cela distingue les pseudo-éléments des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) qui utilisent un seul deux-points (`:`) dans leur notation. Notez que les navigateurs prennent en charge la syntaxe à un seul deux-points pour les quatre pseudo-éléments d'origine&nbsp;: `::before`, `::after`, `::first-line` et `::first-letter`.
 
-Les pseudo-éléments n'existent pas indépendamment. L'élément dont un pseudo-élément fait partie est appelé son _élément d'origine_. Un pseudo-élément doit apparaître après tous les autres composants dans le sélecteur [complexe](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_complexe) ou [composé](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteur_composé). Le dernier élément du sélecteur est l'élément d'origine du pseudo-élément. Par exemple, vous pouvez sélectionner la première ligne d'un paragraphe en utilisant `p::first-line`, mais pas les enfants de la première ligne. Ainsi, `p::first-line > *` est invalide.
+Les pseudo-éléments n'existent pas indépendamment. L'élément dont un pseudo-élément fait partie est appelé son _élément d'origine_. Un pseudo-élément doit apparaître après tous les autres composants dans le sélecteur [complexe](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_complexe) ou [composé](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteur_composé). Le dernier élément du sélecteur est l'élément d'origine du pseudo-élément. Par exemple, vous pouvez sélectionner la première ligne d'un paragraphe en utilisant `p::first-line`, mais pas les enfants de la première ligne. Ainsi, `p::first-line > *` est invalide.
 
 Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'élément d'origine. Par exemple, `p:hover::first-line` sélectionne la première ligne (pseudo-élément) d'un paragraphe lorsque le paragraphe lui-même est survolé (pseudo-classe).
 
 > [!NOTE]
-> Quand une [liste de sélection](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#liste_de_sélection) contient un sélecteur invalide, l'ensemble du bloc de style est ignoré.
+> Quand une [liste de sélection](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#liste_de_sélection) contient un sélecteur invalide, l'ensemble du bloc de style est ignoré.
 
 ## Les pseudo-éléments typographiques
 

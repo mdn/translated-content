@@ -151,6 +151,6 @@ Cet exemple montre l'utilisation de l'élément `<blockquote>` pour citer un pas
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("q")}} qui permet de placer des citations en incise dans une ligne de texte.
-- L'élément HTML {{HTMLElement("cite")}} qui permet d'indiquer la source de la citation.
+- L'élément {{HTMLElement("q")}} qui permet de placer des citations en incise dans une ligne de texte.
+- L'élément {{HTMLElement("cite")}} qui permet d'indiquer la source de la citation.
 - [L'élément blockquote <sup>(angl.)</sup>](https://heydonworks.com/article/the-blockquote-element/) sur heydonworks.com (2024)

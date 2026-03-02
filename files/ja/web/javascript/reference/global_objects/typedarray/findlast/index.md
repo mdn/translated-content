@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/findLast
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`findLast()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列を逆順に反復処理し、指定されたテスト関数を満たす最初の要素の値を返します。テスト関数を満たす要素がない場合は {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findLast()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.findLast()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.findLast()")}}
 
 ```js interactive-example
 function isNegative(element /*, index, array */) {
@@ -19,7 +18,7 @@ function isNegative(element /*, index, array */) {
 const int8 = new Int8Array([10, 0, -10, 20, -30, 40, 50]);
 
 console.log(int8.find(isNegative));
-// Expected output: -30
+// 予想される結果: -30
 ```
 
 ## 構文
@@ -52,17 +51,20 @@ findLast(callbackFn, thisArg)
 
 ## 例
 
-### 型付き配列から素数のインデックスを探す
+### 型付き配列から最後の素数のインデックスを探す
 
 以下の例では、型付き配列から素数である値のうち、最後の値を返します（素数がない場合は {{jsxref("undefined")}} を返します）。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -75,47 +77,8 @@ uint8 = new Uint8Array([4, 5, 7, 8, 9, 11, 12]);
 console.log(uint8.findLast(isPrime)); // 11
 ```
 
-### すべての要素が処理され、コールバックによって変更することがある場合
-
-以下は、すべての要素が処理され、コールバック値に渡された値が処理時の値であることを示す例です。
-
-```js
-// インデックス 2, 3, 4 に要素のない配列を宣言。
-// 欠落した要素はゼロに初期化されます。
-const uint8 = new Uint8Array([0, 1, , , , 5, 6]);
-
-// 要素を逆順に反復処理します。
-// なお、すべての要素が処理されます。
-uint8.findLast((value, index) => {
-  console.log(`Visited index ${index} with value ${value}`);
-});
-
-// 削除されたものも含めて、すべての要素が表示されます。
-uint8.findLast((value, index) => {
-  // 最初の反復処理で要素 3 を変更します。
-  if (index === 6) {
-    console.log("Set uint8[3] to 44");
-    uint8[3] = 44;
-  }
-  // 要素 3 はまだ処理されますが、新しい値が示されます。
-  console.log(`Visited index ${index} with value ${value}`);
-});
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 0
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-// Set uint8[3] to 44
-// Visited index 6 with value 6
-// Visited index 5 with value 5
-// Visited index 4 with value 0
-// Visited index 3 with value 44
-// Visited index 2 with value 0
-// Visited index 1 with value 1
-// Visited index 0 with value 0
-```
+> [!NOTE]
+> この `isPrime()` の実装はデモンストレーション用です。実際のアプリケーションでは、繰り返し計算を避けることができますので、[エラトステネスの篩](https://ja.wikipedia.org/wiki/エラトステネスの篩)のような高度な記憶化アルゴリズムを使用することをお勧めします。
 
 ## 仕様書
 

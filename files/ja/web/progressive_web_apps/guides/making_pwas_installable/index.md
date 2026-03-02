@@ -106,7 +106,7 @@ PWA がインストール可能であるためには、`https` プロトコル�
 
 プロンプトには、 [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) と [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) マニフェストメンバーから導かれたPWAの名前とアイコンが表示されます。
 
-### ブラウザーの対応
+### ブラウザーの互換性
 
 ウェブからの PWA インストール促進への対応は、ブラウザーやプラットフォームによって異なります。
 

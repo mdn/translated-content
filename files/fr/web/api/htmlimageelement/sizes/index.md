@@ -3,20 +3,16 @@ title: "HTMLImageElement : propriété sizes"
 short-title: sizes
 slug: Web/API/HTMLImageElement/sizes
 l10n:
-  sourceCommit: bc9f7bec1ab48f29d241e38a9f1598f783f6b60a
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`sizes`** de l'interface {{domxref("HTMLImageElement")}} permet de définir la largeur de présentation de l'[image](/fr/docs/Web/HTML/Reference/Elements/img) pour chaque condition média d'une liste. Cela permet de sélectionner automatiquement différentes images — même de différentes orientations ou proportions — lorsque l'état du document change pour correspondre à différentes conditions média.
-
-Chaque condition est définie en utilisant le même format conditionnel que celui des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries).
+La propriété **`sizes`** de l'interface {{DOMxRef("HTMLImageElement")}} permet de définir la largeur de présentation de l'[image](/fr/docs/Web/HTML/Reference/Elements/img) pour chacune d'une liste de [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries). Cela offre la possibilité de sélectionner automatiquement différentes images — même des images d'orientations ou de rapports d'aspect différents — à mesure que l'état du document change pour correspondre à différentes conditions média. Elle reflète l'attribut de contenu [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes) de l'élément HTML `<img>`.
 
 ## Valeur
 
-Une chaîne de caractères contenant une liste, séparée par des virgules, de descripteurs de taille source suivis d'une taille de repli optionnelle. Chaque descripteur de taille source est composé d'une condition média, puis d'au moins un caractère d'espacement, puis de la valeur de taille source à utiliser pour l'image lorsque la condition média est vraie.
-Vous pouvez utiliser la valeur `auto` pour remplacer toute la liste des tailles ou la première entrée de la liste.
-Pour plus d'informations sur la syntaxe de l'attribut `sizes`, voir [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#sizes).
+Une chaîne de caractères. Pour plus d'informations sur la syntaxe de l'attribut `sizes`, voir [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#sizes).
 
 ## Exemples
 
@@ -88,7 +84,7 @@ article img {
 
 #### JavaScript
 
-Le code JavaScript gère les deux boutons qui permettent d'alterner la troisième option de largeur entre 40em et 50em&nbsp;; cela se fait en gérant l'événement {{domxref("Element.click_event", "click")}} et en utilisant la méthode JavaScript {{jsxref("String.replace", "replace()")}} pour remplacer la partie concernée de la chaîne `sizes`.
+Le code JavaScript gère les deux boutons qui permettent d'alterner la troisième option de largeur entre 40em et 50em&nbsp;; cela se fait en gérant l'événement {{DOMxRef("Element.click_event", "click")}} et en utilisant la méthode JavaScript {{JSxRef("String.replace", "replace()")}} pour remplacer la partie concernée de la chaîne `sizes`.
 
 ```js
 const image = document.querySelector("article img");
@@ -127,3 +123,6 @@ La page est mieux {{LiveSampleLink("sélection_dune_image_adaptée_à_la_largeur
 - [Images HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Images réactives](/fr/docs/Web/HTML/Guides/Responsive_images)
 - [Utiliser les attributs `srcset` et `sizes`](/fr/docs/Web/HTML/Reference/Elements/img#using_the_srcset_and_sizes_attributes)
+- La propriété {{DOMxRef("HTMLImageElement.currentSrc")}}
+- La propriété {{DOMxRef("HTMLImageElement.src")}}
+- La propriété {{DOMxRef("HTMLImageElement.srcset")}}

@@ -3,12 +3,12 @@ title: "HTMLImageElement : propriété complete"
 short-title: complete
 slug: Web/API/HTMLImageElement/complete
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'attribut en lecture seule **`complete`** de l'interface {{domxref("HTMLImageElement")}} est un booléen qui indique si l'image a été complètement chargée ou non.
+L'attribut en lecture seule **`complete`** de l'interface {{DOMxRef("HTMLImageElement")}} est un booléen qui indique si l'image a été complètement chargée ou non.
 
 ## Valeur
 

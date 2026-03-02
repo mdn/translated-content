@@ -3,7 +3,7 @@ title: <color>
 slug: Web/CSS/Reference/Values/color_value
 original_slug: Web/CSS/color_value
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.
@@ -66,21 +66,21 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
 
 Une valeur `<color>` peut être définie en utilisant l'une des méthodes suivantes&nbsp;:
 
-- Par des mots-clés&nbsp;: {{CSSXref("&lt;named-color&gt;")}} (comme `blue` ou `pink`), {{CSSXref("&lt;system-color&gt;")}}, et [`currentColor`](#currentcolor_keyword).
-- Par notations hexadécimales&nbsp;: {{CSSXref("&lt;hex-color&gt;")}} (comme `#ff0000`).
-- Par `<color-function>`, avec des paramètres dans un {{glossary("color space", "espace colorimétrique")}} utilisant des notations fonctionnelles&nbsp;:
-  - Espace colorimétrique [sRGB](https://fr.wikipedia.org/wiki/SRGB)&nbsp;: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, et {{CSSXref("color_value/rgb", "rgb()")}}.
-  - Espace colorimétrique [CIELAB](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976)&nbsp;: {{CSSXref("color_value/lab", "lab()")}} et {{CSSXref("color_value/lch", "lch()")}}.
-  - Espace colorimétrique [Oklab <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/)&nbsp;: {{CSSXref("color_value/oklab", "oklab()")}} et {{CSSXref("color_value/oklch", "oklch()")}}.
-  - Autres espaces colorimétriques&nbsp;: {{CSSXref("color_value/color", "color()")}}, {{CSSXref("color_value/device-cmyk", "device-cmyk()")}}.
-- En utilisant la syntaxe [relative color](/fr/docs/Web/CSS/CSS_colors/Relative_colors) pour produire une nouvelle couleur à partir d'une couleur existante. Toute fonction couleur ci-dessus peut prendre une **couleur d'origine** précédée du mot-clé `from` et suivie des définitions des canaux pour la nouvelle **couleur de sortie**.
-- En mélangeant deux couleurs&nbsp;: {{CSSXref("color_value/color-mix", "color-mix()")}}.
-- En spécifiant une couleur pour obtenir une couleur contrastée&nbsp;: {{CSSXref("color_value/contrast-color", "contrast-color()")}}.
-- En spécifiant deux couleurs, la première pour les thèmes clairs et la seconde pour les thèmes sombres&nbsp;: {{CSSXref("color_value/light-dark", "light-dark()")}}.
+- Par des mots-clés&nbsp;: {{CSSxRef("&lt;named-color&gt;")}} (comme `blue` ou `pink`), {{CSSxRef("&lt;system-color&gt;")}}, et [`currentColor`](#currentcolor_keyword).
+- Par notations hexadécimales&nbsp;: {{CSSxRef("&lt;hex-color&gt;")}} (comme `#ff0000`).
+- Par `<color-function>`, avec des paramètres dans un {{Glossary("color space", "espace colorimétrique")}} utilisant des notations fonctionnelles&nbsp;:
+  - Espace colorimétrique [sRGB](https://fr.wikipedia.org/wiki/SRGB)&nbsp;: {{CSSxRef("color_value/hsl", "hsl()")}}, {{CSSxRef("color_value/hwb", "hwb()")}}, et {{CSSxRef("color_value/rgb", "rgb()")}}.
+  - Espace colorimétrique [CIELAB](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976)&nbsp;: {{CSSxRef("color_value/lab", "lab()")}} et {{CSSxRef("color_value/lch", "lch()")}}.
+  - Espace colorimétrique [Oklab <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/)&nbsp;: {{CSSxRef("color_value/oklab", "oklab()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}.
+  - Autres espaces colorimétriques&nbsp;: {{CSSxRef("color_value/color", "color()")}}, {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}.
+- En utilisant la syntaxe [de couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors) pour produire une nouvelle couleur à partir d'une couleur existante. Toute fonction couleur ci-dessus peut prendre une **couleur d'origine** précédée du mot-clé `from` et suivie des définitions des canaux pour la nouvelle **couleur de sortie**.
+- En mélangeant deux couleurs&nbsp;: {{CSSxRef("color_value/color-mix", "color-mix()")}}.
+- En spécifiant une couleur pour obtenir une couleur contrastée&nbsp;: {{CSSxRef("color_value/contrast-color", "contrast-color()")}}.
+- En spécifiant deux couleurs, la première pour les thèmes clairs et la seconde pour les thèmes sombres&nbsp;: {{CSSxRef("color_value/light-dark", "light-dark()")}}.
 
 ### Mot-clé `currentColor`
 
-Le mot-clé `currentColor` représente la valeur de la propriété {{Cssxref("color")}} d'un élément. Cela permet d'utiliser la valeur de `color` sur des propriétés qui ne l'acceptent pas par défaut.
+Le mot-clé `currentColor` représente la valeur de la propriété {{CSSxRef("color")}} d'un élément. Cela permet d'utiliser la valeur de `color` sur des propriétés qui ne l'acceptent pas par défaut.
 
 Si `currentColor` est utilisé comme valeur de la propriété `color`, il prend alors la valeur héritée de la propriété `color`.
 
@@ -103,13 +103,13 @@ Si `currentColor` est utilisé comme valeur de la propriété `color`, il prend 
 }
 ```
 
-{{EmbedLiveSample("mot-clé_currentcolor", "100%", 80)}}
+{{EmbedLiveSample("Mot-clé `currentColor`", "100%", 80)}}
 
 ### Composants de couleur manquants
 
 Chaque composant de toute fonction couleur CSS — sauf pour celles utilisant l'ancienne syntaxe avec des virgules — peut être indiqué par le mot-clé `none` pour être un composant manquant.
 
-Indiquer explicitement les [composants manquants lors de l'interpolation de couleurs](#interpolation_avec_composants_manquants) est utile pour les cas où vous souhaitez {{glossary("interpolation", "interpoler")}} certains composants de couleur mais pas d'autres. Pour tous les autres usages, un composant manquant aura effectivement une valeur nulle dans l'unité appropriée&nbsp;: `0`, `0%` ou `0deg`. Par exemple, les couleurs suivantes sont équivalentes lorsqu'elles sont utilisées en dehors de l'interpolation&nbsp;:
+Indiquer explicitement les [composants manquants lors de l'interpolation de couleurs](#interpolation_avec_composants_manquants) est utile pour les cas où vous souhaitez {{Glossary("interpolation", "interpoler")}} certains composants de couleur mais pas d'autres. Pour tous les autres usages, un composant manquant aura effectivement une valeur nulle dans l'unité appropriée&nbsp;: `0`, `0%` ou `0deg`. Par exemple, les couleurs suivantes sont équivalentes lorsqu'elles sont utilisées en dehors de l'interpolation&nbsp;:
 
 ```css
 /* Ces valeurs sont équivalentes */
@@ -125,7 +125,7 @@ background-color: hsl(0deg 100% 50%);
 
 L'interpolation des couleurs a lieu avec les [dégradés](/fr/docs/Web/CSS/Reference/Values/gradient), les [transitions](/fr/docs/Web/CSS/Guides/Transitions/Using), et les [animations](/fr/docs/Web/CSS/Guides/Animations/Using).
 
-Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/Reference/Values/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSXref("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
+Lors de l'interpolation de valeurs `<color>`, elles sont d'abord converties dans un espace colorimétrique donné, puis chaque composant des [valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) est interpolé linéairement, la vitesse de l'interpolation étant déterminée par la [fonction d'accélération](/fr/docs/Web/CSS/Reference/Values/easing-function) dans les transitions et animations. L'espace colorimétrique d'interpolation par défaut est Oklab, mais il peut être remplacé via {{CSSxRef("&lt;color-interpolation-method&gt;")}} dans certaines notations fonctionnelles liées à la couleur.
 
 ### Interpolation avec composants manquants
 
@@ -205,7 +205,7 @@ Certaines personnes ont des difficultés à distinguer les couleurs. La recomman
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -256,7 +256,7 @@ inputElem.addEventListener("input", () => {
 
 #### Résultat
 
-{{EmbedLiveSample("exploration_des_valeurs_de_couleur", "100%", 300)}}
+{{EmbedLiveSample("Exploration des valeurs de couleur", "100%", 300)}}
 
 ### Génération de couleurs sRGB entièrement saturées
 
@@ -334,7 +334,7 @@ div:nth-child(12) {
 
 #### Résultat
 
-{{EmbedLiveSample("génération_de_couleurs_srgb_entièrement_saturées", "100%", 200)}}
+{{EmbedLiveSample("Génération de couleurs sRGB entièrement saturées", "100%", 200)}}
 
 ### Création de différentes nuances de rouge
 
@@ -390,7 +390,7 @@ div:nth-child(6) {
 
 #### Résultat
 
-{{EmbedLiveSample("création_de_différentes_nuances_de_rouge", "100%", 150)}}
+{{EmbedLiveSample("Création de différentes nuances de rouge", "100%", 150)}}
 
 ### Création de rouges de différentes saturations
 
@@ -444,7 +444,7 @@ div:nth-child(6) {
 
 #### Résultat
 
-{{EmbedLiveSample("création_de_rouges_de_différentes_saturations", "100%", 150)}}
+{{EmbedLiveSample("Création de rouges de différentes saturations", "100%", 150)}}
 
 ## Spécifications
 
@@ -456,10 +456,10 @@ div:nth-child(6) {
 
 ## Voir aussi
 
-- La propriété {{CSSXref("opacity")}} qui définit la transparence au niveau de l'élément
-- Le type de donnée {{CSSXref("&lt;hue&gt;")}} représentant l'angle de teinte d'une couleur
-- Les propriétés courantes {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}} utilisant `<color>`
-- La fonction {{CSSXref("color_value/color")}}
+- La propriété {{CSSxRef("opacity")}} qui définit la transparence au niveau de l'élément
+- Le type de donnée {{CSSxRef("&lt;hue&gt;")}} représentant l'angle de teinte d'une couleur
+- Les propriétés courantes {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("box-shadow")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-shadow")}} utilisant `<color>`
+- La fonction {{CSSxRef("color_value/color")}}
 - [Appliquer une couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - [Nouvelles fonctions, dégradés et teintes dans CSS Colors (Niveau 4)](/fr/blog/css-color-module-level-4/) sur le blog MDN (2023)
