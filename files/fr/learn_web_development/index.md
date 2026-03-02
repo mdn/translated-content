@@ -20,7 +20,7 @@ Bienvenue sur MDN **Apprendre le développement web** (aussi appelé **Apprendre
 >
 > ### Essayez les cours vidéo de notre partenaire
 >
-> Vous souhaitez suivre un cours vidéo interactif pour compléter nos articles ? Le [Frontend Developer Career Path](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) de Scrimba<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> enseigne également les sujets contenus dans le Programme MDN.
+> Vous souhaitez suivre un cours vidéo interactif pour compléter nos articles ? Le [Parcours professionnel d'un développeur front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) de Scrimba<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> enseigne également les sujets contenus dans le Programme MDN.
 >
 > <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></mdn-scrim-inline>
 
