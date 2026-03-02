@@ -1,7 +1,6 @@
 ---
 title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
-original_slug: Web/CSS/font-synthesis-small-caps
 l10n:
   sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
@@ -62,7 +61,7 @@ font-synthesis-small-caps: unset;
 #### CSS
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Montserrat&display=swap";
 
 .english {
   font-family: "Montserrat", sans-serif;

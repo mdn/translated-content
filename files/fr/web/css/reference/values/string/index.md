@@ -1,43 +1,51 @@
 ---
 title: <string>
 slug: Web/CSS/Reference/Values/string
-original_slug: Web/CSS/string
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-Le type de donnée CSS **`<string>`** représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.
+Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<string>`** représente une suite de caractères. Les chaînes de caractères sont utilisées dans de nombreuses propriétés CSS, telles que {{CSSxRef("content")}}, {{CSSxRef("font-family")}} et {{CSSxRef("quotes")}}.
 
 ## Syntaxe
 
-Une chaîne de caractères CSS est formée d'un ou plusieurs caractères [Unicode](https://fr.wikipedia.org/wiki/Unicode) délimités par des quotes (`'`) ou des doubles quotes (`"`). Une chaîne délimitée par des doubles quotes ne peut pas contenir de double quotes à moins qu'elles soient échappées à l'aide d'une barre oblique inversée (`\`). Le même principe s'applique aux chaînes délimitées par des quotes simples, qui ne peuvent contenir de quotes simples sans qu'elles soient échappés à l'aide d'une barre oblique inversée (`\`).
+Le type de données `<string>` est composé d'un nombre quelconque de caractères [Unicode](https://en.wikipedia.org/wiki/Unicode) entourés soit de guillemets doubles (`"`) soit de guillemets simples (`'`).
 
-Le caractère barre oblique inversée doit être échappé afin de faire partie d'une chaîne de caractère.
+La plupart des caractères peuvent être représentés littéralement. Tous les caractères peuvent aussi être représentés par leurs points de code Unicode en hexadécimal, précédés d'un antislash (`\`). Par exemple, `\22` représente un guillemet double, `\27` un guillemet simple (`'`), et `\A9` le symbole de copyright (`©`).
 
-Les nouvelles lignes ne sont pas acceptées, sauf si elles sont échappées à l'aide d'un caractère de saut de ligne tel que `\A` ou `\00000a`. Toutefois, des chaînes de caractères peuvent s'étendre sur plusieurs lignes. Dans ce cas, il est possible de couper la chaîne en plusieurs lignes en utilisant une barre oblique inversée (`\`) comme dernier caractère de chaque ligne.
+Il est important de noter que certains caractères normalement invalides peuvent être échappés avec un antislash. Cela inclut le guillemet double lorsqu'il est utilisé dans une chaîne délimitée par des guillemets doubles, le guillemet simple lorsqu'il est utilisé dans une chaîne délimitée par des guillemets simples, et l'antislash lui‑même. Par exemple, `\\` produit un antislash unique.
 
-Les caractères peuvent être décrits en utilisant leur [point de code Unicode](https://fr.wikipedia.org/wiki/Unicode#Partitionnement) hexadécimal, qui doit alors être échappé à l'aide du caractère `\`. `\27` représente par exemple le guillemet droit simple (`'`) et `\A9` le symbole du _copyright_ ©.
+Pour produire des retours à la ligne, vous devez les échapper avec un caractère de saut de ligne tel que `\A` ou `\00000A`. Dans votre code, cependant, les chaînes peuvent s'étendre sur plusieurs lignes, auquel cas chaque nouvelle ligne doit être échappée par un `\` placé en fin de ligne.
+
+Cependant, pour obtenir des retours à la ligne, vous devez également définir la propriété {{CSSxRef("white-space", "propriété white-space")}} sur une valeur appropriée.
 
 > [!NOTE]
-> Les [entités](/fr/docs/Glossary/Entity) telles que `&nbsp;` ou `&#8212;` ne peuvent pas être utilisées pour les chaînes de caractères CSS.
+> {{Glossary("character reference", "Références de caractères")}} (comme `&nbsp;` ou `&#8212;`) ne peuvent pas être utilisés dans une `<string>` CSS.
 
 ## Exemples
 
+### Exemples de chaînes de caractères valides
+
 ```css
-"Chaîne avec des guillemets doubles"
-"Chaîne avec plusieurs \" guillemets doubles"
-'Chaîne avec des guillemets simples'
-'Chaîne avec plusieurs \' guillemets simples'
+/* Chaînes de caractères de base */
+"Cette chaîne de caractères est délimitée par des guillemets doubles."
+'Cette chaîne de caractères est délimitée par des guillemets simples.'
 
-"Chaîne avec une \Anouvelle ligne"
+/* Échappement de caractères */
+"Ceci est une chaîne de caractères avec \" un guillemet double échappé."
+"Cette chaîne de caractères contient aussi \22 un guillemet double échappé."
+'Ceci est une chaîne de caractères avec \' un guillemet simple échappé.'
+'Cette chaîne de caractères contient aussi \27 un guillemet simple échappé.'
+"Ceci est une chaîne de caractères avec \\ un antislash échappé."
 
-"Une grande chaîne \
-de caractères"
-"Une grande chaîne de caractères"
+/* Nouvelle ligne dans une chaîne de caractères */
+"Cette chaîne de caractères contient une\A nouvelle ligne."
+
+/* Chaîne de caractères sur deux lignes de code (ces deux chaînes de caractères auront une sortie identique) */
+"Une très longue \
+chaîne de caractères géniale"
+"Une très longue chaîne de caractères géniale"
 ```
-
-> [!NOTE]
-> On peut également échapper des doubles quotes avec `\22` et les simples quotes avec `\27`.
 
 ## Spécifications
 
@@ -49,6 +57,6 @@ de caractères"
 
 ## Voir aussi
 
-- [Valeurs et unités en CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
-- [Tutoriel - Introduction aux valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- Le module des [valeurs et unités en CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
 - [Types de donnée en CSS](/fr/docs/Web/CSS/Reference/Values/Data_types)
+- [Introduction à CSS&nbsp;: Valeurs et unités](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

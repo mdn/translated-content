@@ -1,12 +1,11 @@
 ---
 title: min()
 slug: Web/CSS/Reference/Values/min
-original_slug: Web/CSS/min
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`min()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
+**`min()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}}、{{cssxref("angle")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が使用できるところならばどこでも使用することができます。
 
 {{InteractiveExample("CSS デモ: min()")}}
 
@@ -38,15 +37,15 @@ width: min(150vw, 100px);
 ## 構文
 
 ```css
-max(1, 2, 3)
-max(1px, 2px, 3px)
+min(1, 2, 3)
+min(1px, 2px, 3px)
 ```
 
 ### 引数
 
 `min()` 関数は、引数としてカンマで区切った 1 つ以上の式を取り、もっとも小さい (最も負である) 式の値の結果を値として使用します。
 
-式は、 (算術演算子を用いた) 数式、リテラル値、あるいは、有効な引数の型 ({{CSSxRef("&lt;length&gt;")}} など) に評価される {{CSSxRef("attr", "attr()")}} などの式を用いることができます。
+式は、 (算術演算子を用いた) 数式、リテラル値、あるいは、有効な引数の型 ({{CSSxRef("&lt;length&gt;")}} など) に評価される {{cssxref("attr()")}} などの式を用いることができます。
 
 必要に応じて、式の各値に異なる単位を使用することができます。必要に応じて、計算順序を決めるために括弧を使用することもできます。
 
@@ -115,7 +114,7 @@ form {
 
 ## 関連情報
 
-- {{CSSxRef("calc()")}}
-- {{CSSxRef("clamp()")}}
-- {{CSSxRef("max()")}}
-- [CSS 値](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- {{cssxref("calc()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("max()")}}
+- [学習: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

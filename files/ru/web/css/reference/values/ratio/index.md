@@ -6,7 +6,7 @@ original_slug: Web/CSS/ratio
 
 {{CSSRef}}
 
-[Тип данных](/ru/docs/Web/CSS/Reference/Values/Data_types) [CSS](/ru/docs/Web/CSS) **`<ratio>`** используется для описания [соотношений сторон](/ru/docs/Web/CSS/@media/aspect-ratio) в [медиавыражениях](/ru/docs/Web/CSS/CSS_media_queries), обозначает соотношения между двумя безразмерными значениями.
+[Тип данных](/ru/docs/Web/CSS/Reference/Values/Data_types) [CSS](/ru/docs/Web/CSS) **`<ratio>`** используется для описания [соотношений сторон](/ru/docs/Web/CSS/@media/aspect-ratio) в [медиавыражениях](/ru/docs/Web/CSS/Guides/Media_queries), обозначает соотношения между двумя безразмерными значениями.
 
 ## Синтаксис
 

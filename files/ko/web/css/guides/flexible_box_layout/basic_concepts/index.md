@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 일명 flexbox라 불리는 Flexible Box module은 flexbox 인터페이스 내의 아이템 간 공간 배분과 강력한 정렬 기능을 제공하기 위한 1차원 레이아웃 모델 로 설계되었습니다. 이 글에서는 flexbox의 주요 기능에 대한 개요를 다룹니다. 더 자세한 내용은 가이드의 다른 글에서 탐구하게 될 것입니다.
 
-flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)의 2차원 모델과는 대조됩니다.
+flexbox를 1차원이라 칭하는 것은, 레이아웃을 다룰 때 한 번에 하나의 차원(행이나 열)만을 다룬다는 뜻입니다. 이는 행과 열을 함께 조절하는 [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)의 2차원 모델과는 대조됩니다.
 
 ## flexbox의 두 개의 축
 

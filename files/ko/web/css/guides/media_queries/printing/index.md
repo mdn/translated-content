@@ -27,9 +27,9 @@ l10n:
 
 ## 미디어 쿼리와 @page 를 사용하여 인쇄 콘텐츠 제어하기
 
-CSS 의 {{cssxref("@media")}} @-규칙을 사용하면 웹 페이지가 화면에 보이는 경우와 PDF 형식인 경우, 그리고 용지에 인쇄되는 경우마다 각각 다른 스타일을 지정할 수 있게 됩니다. `print` [미디어 유형](/ko/docs/Web/CSS/@media#media_type) 은 인쇄 미디어를 위한 스타일을 적용하는데, 이 스타일은 인쇄된 콘텐츠에만 적용됩니다.
+CSS 의 {{cssxref("@media")}} @-규칙을 사용하면 웹 페이지가 화면에 보이는 경우와 PDF 형식인 경우, 그리고 용지에 인쇄되는 경우마다 각각 다른 스타일을 지정할 수 있게 됩니다. `print` [미디어 유형](/ko/docs/Web/CSS/Reference/At-rules/@media#media_type) 은 인쇄 미디어를 위한 스타일을 적용하는데, 이 스타일은 인쇄된 콘텐츠에만 적용됩니다.
 
-아래 코드를 스타일 시트 가장 뒤에 삽입해 보세요. [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity) 와 우선순위는 여전히 적용된다는 것을 참고해야 합니다.
+아래 코드를 스타일 시트 가장 뒤에 삽입해 보세요. [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity) 와 우선순위는 여전히 적용된다는 것을 참고해야 합니다.
 
 ```css
 @media print {
@@ -96,6 +96,6 @@ document.getElementById("print_external").addEventListener("click", () => {
 - [`window.print`](/ko/docs/Web/API/Window/print)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} 이벤트
 - {{ domxref("window.afterprint_event", "afterprint") }} 이벤트
-- [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@media")}}
-- [CSS paged media](/ko/docs/Web/CSS/CSS_paged_media) 모듈
+- [CSS paged media](/ko/docs/Web/CSS/Guides/Paged_media) 모듈

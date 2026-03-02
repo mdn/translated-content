@@ -31,7 +31,7 @@ vibrate(pattern)
 
 ## セキュリティ
 
-[ユーザーによる粘着的な有効化](/ja/docs/Web/Security/User_activation)が必要です。ユーザーがページまたはUIの要素を操作しなければ、この機能は動作しません。
+[ユーザーによる粘着的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。ユーザーがページまたはUIの要素を操作しなければ、この機能は動作しません。
 
 ## 例
 

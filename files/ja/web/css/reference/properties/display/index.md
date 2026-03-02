@@ -1,14 +1,13 @@
 ---
 title: display
 slug: Web/CSS/Reference/Properties/display
-original_slug: Web/CSS/display
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/Guides/Display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)などを設定します。
 
-正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
+正式には、 **`display`** プロパティは要素の内側と外側の表示型を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` の値の一部は、それ自身の個別の仕様書で完全に定義されています。例えば、`display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
 
 {{InteractiveExample("CSS デモ: display")}}
 
@@ -121,7 +120,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 ### 外側
 
 - {{CSSxRef("&lt;display-outside&gt;")}}
-  - : これらのキーワードは、本質的に要素のフローレイアウトにおける役割を表す、要素の外側の表示種別を指定します。
+  - : これらのキーワードは、本質的に要素のフローレイアウトにおける役割を表す、要素の外側の表示型を指定します。
     - `block`
       - : この要素はブロックボックスを生成し、通常のフローでは要素の前後で改行を生成します。
     - `inline`
@@ -145,11 +144,11 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 ### 内側
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
-  - : これらのキーワードは、要素の内側の表示種別を指定します。これは、要素 (置換要素ではないものとする) のコンテンツをレイアウトする整形コンテキストの種類を定義します。
+  - : これらのキーワードは、要素の内側の表示型を指定します。これは、要素 (置換要素ではないものとする) のコンテンツをレイアウトする整形コンテキストの種類を定義します。これらのキーワードのいずれかが単独で単一の値として使用されている場合、要素の外側の表示型はデフォルトで `block` になります（ただし `ruby` は例外で、デフォルトは `inline` です）。
     - `flow`
       - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、コンテンツをレイアウトします。
 
-        外側の表示種別が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
+        外側の表示型が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
 
         ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
 
@@ -165,7 +164,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
       - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) 整形モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
 > [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示種別を `block` に設定します（`display: block flex` や `display: block grid` など）。
+> 複数キーワードの構文に対応しているブラウザーは、**内側**の表示型のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示型を `block` に設定します（`display: block flex` や `display: block grid` など）。
 
 ### リストアイテム
 
@@ -177,8 +176,8 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
 > [!NOTE]
-> 複数キーワードの構文に対応しているブラウザーでは、内側の表示種別がないと既定で `flow` になります。
-> 外側の表示種別が指定されないと、基本ボックスは外側の表示種別が `block` になります。
+> 複数キーワードの構文に対応しているブラウザーでは、内側の表示型がないと既定で `flow` になります。
+> 外側の表示型が指定されないと、基本ボックスは外側の表示型が `block` になります。
 
 ### 内部
 
@@ -247,7 +246,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### どちらの構文を使用するべきか
 
-[CSS 表示モジュール](/ja/docs/Web/CSS/Guides/Display)では、 `display` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
+[CSS 表示方法モジュール](/ja/docs/Web/CSS/Guides/Display)では、 `display` プロパティに使用できる値を使って複数キーワードの構文を使用すると、明示的に**外側**と**内側**の表示方法を定義することができると説明しています。
 単一キーワードの値（構成済みの `<display-legacy>` 値）は後方互換性のために対応しています。
 
 例えば、 2 つの値を用いると、インラインのフレックスコンテナーを次のように指定することができます。
@@ -309,14 +308,14 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### display のアニメーション
 
-[対応しているブラウザー](#ブラウザーの互換性)では、 `display` を[離散アニメーション型](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
+[対応しているブラウザー](#ブラウザーの互換性)では、 `display` は[離散アニメーション型](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)でアニメーションします。これは一般的に、 2 つのプロパティ値の間をアニメーションの 50% で切り替わることを意味しています。
 
 例外が一つあり、それは `display: none` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、 [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
+この動作は、例えばコンテナーを `display: none` で DOM から除去したいが、すぐに消えてしまうのではなく、{{cssxref("opacity")}} でフェードアウトさせたい場合に、出現・消滅アニメーションを作成するのに便利です。
 
 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations) で `display` をアニメーションさせる場合、開始する `display` の値を明示的なキーフレームで指定する必要があります（例えば `0%` や `from` を使用します）。例えば、 [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
 
@@ -331,7 +330,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### display: none
 
-要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
+要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
 
 要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://webaim.org/techniques/css/invisiblecontent/)が利用できます。
 
@@ -339,14 +338,14 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ### display: contents
 
-一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [CSS 仕様書](https://drafts.csswg.org/css-display/#valdef-display-contents)によれば正しくありません。
+一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)から `display` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [CSS 仕様書](https://drafts.csswg.org/css-display/#valdef-display-contents)によれば正しくありません。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### 表
 
-一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
+一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
@@ -423,7 +422,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
 ```css
 html {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
   padding-top: 10px;
 }

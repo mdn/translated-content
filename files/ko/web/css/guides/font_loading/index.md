@@ -41,4 +41,4 @@ l10n:
 
 ## 같이 보기
 
-- [CSS 폰트](/ko/docs/Web/CSS/CSS_fonts) 모듈
+- [CSS 폰트](/ko/docs/Web/CSS/Guides/Fonts) 모듈

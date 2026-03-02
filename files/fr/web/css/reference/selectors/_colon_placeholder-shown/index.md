@@ -1,12 +1,11 @@
 ---
 title: :placeholder-shown
 slug: Web/CSS/Reference/Selectors/:placeholder-shown
-original_slug: Web/CSS/:placeholder-shown
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:placeholder-shown`** représente n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:placeholder-shown`** représente n'importe quel élément {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Reference/Elements/input#placeholder).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :placeholder-shown", "tabbed-shorter")}}
 
@@ -82,7 +81,7 @@ input:placeholder-shown {
 
 ### Dépassement du texte
 
-Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur des boîtes de recherche et celle des champs de formulaire peut être réduite fortement. Le texte de substitution peut donc être tronqué de façon indésirable. On peut alors utiliser {{cssxref("text-overflow")}} pour gérer cela gracieusement.
+Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur des boîtes de recherche et celle des champs de formulaire peut être réduite fortement. Le texte de substitution peut donc être tronqué de façon indésirable. On peut alors utiliser {{CSSxRef("text-overflow")}} pour gérer cela gracieusement.
 
 #### HTML
 
@@ -165,7 +164,7 @@ input.student-id:placeholder-shown {
 
 ## Voir aussi
 
-- Le pseudo-élément {{cssxref("::placeholder")}} applique un style au placeholder _lui-même_.
+- Le pseudo-élément {{CSSxRef("::placeholder")}} applique un style au placeholder _lui-même_.
 - Les éléments HTML associés&nbsp;:
   - {{HTMLElement("input")}}
   - {{HTMLElement("textarea")}}

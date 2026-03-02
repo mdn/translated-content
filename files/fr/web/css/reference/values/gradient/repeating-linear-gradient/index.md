@@ -3,10 +3,10 @@ title: repeating-linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-linear-gradient
 original_slug: Web/CSS/gradient/repeating-linear-gradient
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type {{cssxref("gradient")}}, un type spécifique d'[image](/fr/docs/Web/CSS/Reference/Values/image).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-linear-gradient()`** créé une image composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples représentés par {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, mais les arrêts de couleurs sont automatiquement répétés, indéfiniment, dans toutes les directions pour couvrir l'ensemble du conteneur. Le résultat de cette fonction est un objet de type {{CSSxRef("gradient")}}, un type spécifique d'[image](/fr/docs/Web/CSS/Reference/Values/image).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: repeating-linear-gradient()")}}
 
@@ -45,7 +45,7 @@ La longueur du dégradé répété est la distance entre le premier et le dernie
 
 Comme les autres dégradés, un dégradé linéaire répété [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description), c'est-à-dire qu'il n'a pas de taille ou de proportions préférées. Sa taille réelle correspondra à la taille de l'élément auquel il est appliqué.
 
-Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où les `<image>` peuvent l'être. Pour cette raison, `repeating-linear-gradient()` ne fonctionne pas avec {{Cssxref("background-color")}} et les autres propriétés qui utilisent le type de données {{cssxref("&lt;color&gt;")}}.
+Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où les `<image>` peuvent l'être. Pour cette raison, `repeating-linear-gradient()` ne fonctionne pas avec {{CSSxRef("background-color")}} et les autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
 ## Syntaxe
 
@@ -86,7 +86,7 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 
     Les valeurs `to top`, `to bottom`, `to left`, and `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont converties en un angle correspondant.
 
-- {{cssxref("&lt;angle&gt;")}}
+- {{CSSxRef("&lt;angle&gt;")}}
   - : L'angle indiquant la direction de la ligne du dégradé. Une valeur de `0deg` est équivalente à `to top`. Les valeurs d'angle vont croissant dans le sens horaire.
 - `<linear-color-stop>`
   - : Un arrêt de couleur décrit par une valeur {{CSSxRef("&lt;color&gt;")}}, suivie d'une ou deux positions optionnelles (une position étant donnée par un pourcentage (type {{CSSxRef("&lt;percentage&gt;")}}) ou une longueur (type {{CSSxRef("&lt;length&gt;")}}) le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur à `0` représente le début du dégradé. La valeur `100%` correspond à 100% de la taille de l'image, indiquant que le dégradé ne se répètera pas.
@@ -226,11 +226,11 @@ La boîte du haut utilise l'[interpolation plus courte](/fr/docs/Web/CSS/Referen
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- Autres fonctions de dégradés&nbsp;: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;image&gt;")}}
-- La fonction {{cssxref("image/image","image()")}}
-- La fonction {{cssxref("element", "element()")}}
-- La fonction {{cssxref("image/image-set","image-set()")}}
-- La fonction {{cssxref("cross-fade", "cross-fade()")}}
+- Autres fonctions de dégradés&nbsp;: {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- La fonction {{CSSxRef("image/image","image()")}}
+- La fonction {{CSSxRef("element", "element()")}}
+- La fonction {{CSSxRef("image/image-set","image-set()")}}
+- La fonction {{CSSxRef("cross-fade", "cross-fade()")}}

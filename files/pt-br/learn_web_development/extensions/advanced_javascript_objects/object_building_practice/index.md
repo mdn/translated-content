@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da sintaxe do objeto JavaScript, fornecendo uma base sólida para começar. Neste artigo, vamos mergulhar em um exercício prático, dando a você mais prática na construção de objetos JavaScript personalizados, com um resultado divertido e colorido.
 
@@ -311,4 +311,4 @@ Esperamos que você tenha se divertido escrevendo seu próprio exemplo de bolas 
 - [2D breakout game using pure JavaScript](/pt-BR/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — um ótimo tutorial para iniciantes que mostra como criar um jogo 2D.
 - [2D breakout game using Phaser](/pt-BR/docs/Games/Tutorials/2D_breakout_game_Phaser) — explica conceitos básicos da criação de um jogo 2D utilizando uma biblioteca JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

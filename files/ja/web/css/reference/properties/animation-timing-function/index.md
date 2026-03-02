@@ -1,12 +1,13 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/Reference/Properties/animation-timing-function
-original_slug: Web/CSS/animation-timing-function
 l10n:
-  sourceCommit: 30bf998d2d87c97c2865d713ad5afc9c476264a0
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-timing-function")}}
 
@@ -41,7 +42,7 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-play-state: paused;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   height: 150px;
   margin: auto;
@@ -72,25 +73,19 @@ animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const button = document.getElementById("play-pause");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const button = document.getElementById("play-pause");
-
-  button.addEventListener("click", () => {
-    if (el.classList.contains("running")) {
-      el.classList.remove("running");
-      button.textContent = "再生";
-    } else {
-      el.classList.add("running");
-      button.textContent = "一時停止";
-    }
-  });
+button.addEventListener("click", () => {
+  if (el.classList.contains("running")) {
+    el.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    el.classList.add("running");
+    button.textContent = "一時停止";
+  }
 });
 ```
-
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
@@ -136,7 +131,7 @@ animation-timing-function: unset;
 
 ### 値
 
-- {{cssxref("&lt;easing-function&gt;")}}
+- {{cssxref("easing-function")}}
   - : {{cssxref("animation-name")}} で定められた、アニメーションに対応するイージング関数です。
 
     ステップのないキーワードの値 （`ease`、`linear`、`ease-in-out` など）はそれぞれ、 4 つの点が修正された 3 次べジェ曲線を表しますが、 `cubic-bezier()` 関数の値では、定義されていない値を指定することができます。 `steps()` イージング関数は、入力時間を指定した等間隔の区間に分割します。この関数の引数には、ステップ数とステップ位置の 2 つが記載されています。
@@ -579,6 +574,7 @@ btn.addEventListener("click", () => {
 
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - {{cssxref('easing-function')}}
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - JavaScript の {{domxref("AnimationEvent")}} API
 - [Cubic bézier generation tool](https://cubic-bezier.com/)
 - その他のアニメーション関連プロパティ: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

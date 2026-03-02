@@ -17,7 +17,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 
 ### 給完全新手
 
-如果你想學習 JavaScript 但過去沒有 JavaScript 或程式設計經驗，請前往 [JavaScrip-動態的用戶端指令](/zh-TW/docs/Learn_web_development/Core/Scripting)。該處完整單元如下：
+如果你想學習 JavaScript 但過去沒有 JavaScript 或程式設計經驗，請前往 [JavaScript-動態的用戶端指令](/zh-TW/docs/Learn_web_development/Core/Scripting)。該處完整單元如下：
 
 - [JavaScript 入門](/zh-TW/docs/Learn_web_development/Core/Scripting)
   - : 說明一些基本問題像是「什麼是 JavaScript？」、「它看來像什麼？」、「它能做什麼？」，也討論 JavaScript 的主要特色，例如變數、字串、數值以及陣列。

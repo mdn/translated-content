@@ -65,7 +65,7 @@ li {
 
     > [!NOTE]
     >
-    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
+    > - `download` は[同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy) と、 `blob:`、 `data:` の各スキームでのみ動作します。
     > - ブラウザーがダウンロードをどのように扱うかは、ブラウザー、ユーザーの設定、その他の要因によって異なります。ダウンロードを開始する前にユーザーにプロンプトが表示されたり、ファイルが自動的に保存されたり、外部のアプリケーションまたはブラウザー自体で自動的に開いたりすることがあります。
     > - `Content-Disposition` ヘッダーが `download` とは異なる情報を持っていた場合、動作結果は様々です。
     >   - ヘッダーが `filename` を指定した場合、そちらが `download` 属性で指定されたファイル名より優先されます。
@@ -454,7 +454,7 @@ document
 
 ## セキュリティとプライバシー
 
-`<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Security/Referer_header:_privacy_and_security_concerns)を参照してください。
+`<a>` 要素は、ユーザーのセキュリティやプライバシーに影響を及ぼす可能性があります。詳細情報については [`Referer` ヘッダー: プライバシーとセキュリティの考慮事項](/ja/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns)を参照してください。
 
 `target="_blank"` を [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) や [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) なしで使用すると、ウェブサイトが {{domxref("window.opener")}} API 搾取攻撃を受けやすくなりますが、新しい版のブラウザーでは `target="_blank"` を設定すると、`rel="noopener"` と同じ保護が提供されます。詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 

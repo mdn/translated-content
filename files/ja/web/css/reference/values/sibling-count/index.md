@@ -1,22 +1,19 @@
 ---
 title: sibling-count()
 slug: Web/CSS/Reference/Values/sibling-count
-original_slug: Web/CSS/sibling-count
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-{{SeeCompatTable}}
-
-**`sibling-count()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、それが使用されている親要素の直接の子 DOM 要素の総数を表す整数を返します。
+**`sibling-count()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、それが使用されている要素の兄弟 DOM 要素（親要素の直接の子）の総数（自分自身を含む）を表す整数を返します。
 
 > [!NOTE]
-> {{CSSxRef("counter()")}} 関数も同様の結果を提供しますが、 `<string>` を返すのに対し、 `sibling-count()` は計算に使用できる `<integer>` を返します。
+> {{CSSxRef("counter()")}} 関数は同様の結果を `<string>` で返す（これは[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)により適しています）のに対し、 `sibling-index()` は `<integer>` で返します（これは計算に使用することができます）。
 
 ## 構文
 
-```css
---total-sibling-elements: sibling-count();
+```css-nolint
+sibling-count()
 ```
 
 ### 引数
@@ -25,7 +22,7 @@ l10n:
 
 ### 返値
 
-整数。直接の子DOM要素の総数です。
+整数。この要素自身を含む、兄弟 DOM 要素の総数です。
 
 ## 例
 
@@ -43,20 +40,25 @@ l10n:
   <li>Two</li>
   <li>Three</li>
   <li>Four</li>
+  <li>Five</li>
 </ul>
 ```
 
 #### CSS
 
-コンテナーの {{CSSxRef("column-count")}} を、コンテナーに含まれている直接の子要素の数と同じに設定します。また、結果の効果をよりよく示すために、奇数要素に {{CSSxRef("background-color")}} を設定します。
+それぞれのリストアイテムの {{CSSxRef("width")}} を、そのリストが含む直接の子要素の数で割ります。同時に、結果の効果をより明確に示すため、奇数番目の要素にはすべて {{CSSxRef("background-color")}} を設定します。
 
 ```css
 ul {
-  column-count: sibling-count();
-  text-align: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  text-align: center;
+  display: flex;
+}
+
+li {
+  width: calc(100% / sibling-count());
 }
 
 li:nth-of-type(odd) {

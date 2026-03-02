@@ -131,7 +131,7 @@ animation-delay: 2.1s, 480ms;
     음수 값을 지정하면 애니메이션이 즉시 시작되지만 애니메이션 주기의 도중에 시작됩니다. 예를 들어 애니메이션 지연 시간으로 -1s를 지정하면 애니메이션이 즉시 시작되지만 애니메이션 시퀀스의 1초부터 시작됩니다. 만약 animation-delay에 음수 값을 지정했지만 시작값이 절대값이면 시작값은 애니메이션이 요소에 적용된 시점부터 가져옵니다.
 
 > [!NOTE]
-> `animation- *` 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name) 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)을 참조하십시오.
+> `animation- *` 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 [`animation-name`](/ko/docs/Web/CSS/animation-name) 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)을 참조하십시오.
 
 ### 형식 구문
 
@@ -139,7 +139,7 @@ animation-delay: 2.1s, 480ms;
 
 ## 예제
 
-[CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)를 보세요.
+[CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)를 보세요.
 
 ## 명세
 
@@ -153,5 +153,5 @@ animation-delay: 2.1s, 480ms;
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

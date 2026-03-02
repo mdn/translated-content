@@ -6,7 +6,7 @@ original_slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}
 
 일단 여러분의 웹사이트를 만들기 위한 코드 작성과 파일 구성을 끝내셨다면, 이 모든 것을 온라인에 올려 사람들이 찾을 수 있게 할 필요가 있습니다. 이 글은 어떻게 최소한의 노력으로 간단한 예시 코드를 온라인에서 얻을 수 있는지 보여줍니다.
 
@@ -149,4 +149,4 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
 - Scott Murray 의 [Cheap or free static web hosting](http://alignedleft.com/resources/cheap-web-hosting) 에는 이용가능한 서비스를 위한 유용한 정보가 있습니다.
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards/How_the_web_works", "Learn_web_development/Getting_started/Your_first_website")}}

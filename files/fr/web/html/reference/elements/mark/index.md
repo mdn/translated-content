@@ -1,93 +1,55 @@
 ---
 title: "<mark> : l'élément de marquage du texte"
 slug: Web/HTML/Reference/Elements/mark
-original_slug: Web/HTML/Element/mark
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<mark>`** représente du texte qui est **marqué** ou **surligné** à des fins de référence ou de notation, en raison de la pertinence du passage marqué dans le contexte qui l'entoure.
 
-L'élément HTML **`<mark>`** représente un texte marqué ou surligné à cause de sa pertinence dans le contexte. Il peut par exemple être utilisé afin d'indiquer les correspondances d'un mot-clé recherché au sein d'un document.
-
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;mark&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>Search results for "salamander":</p>
+<p>Résultats de recherche pour «&nbsp;salamandre&nbsp;»&nbsp;:</p>
 
 <hr />
 
 <p>
-  Several species of <mark>salamander</mark> inhabit the temperate rainforest of
-  the Pacific Northwest.
+  Plusieurs espèces de <mark>salamandre</mark> habitent la forêt pluviale
+  tempérée du Nord-Ouest Pacifique.
 </p>
 
 <p>
-  Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and
-  other small creatures.
+  La plupart des <mark>salamandre</mark>s sont nocturnes et chassent des
+  insectes, des vers et d'autres petits animaux.
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 mark {
+  /* Ajoutez vos styles ici */
 }
 ```
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
+Cas d'utilisation typiques de `<mark>`&nbsp;:
+
 - Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
-- Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur (par exemple lorsqu'il recherche un terme en particulier).
+- Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur·ice (par exemple lorsqu'il recherche un terme en particulier).
 - `<mark>` ne doit pas être utilisé pour de la coloration syntaxique, c'est l'élément {{HTMLElement("span")}} qui devra être utilisé.
 - `<mark>` ne doit pas être confondu avec {{HTMLElement("strong")}}. L'élément {{HTMLElement("strong")}} est utilisé afin d'indiquer des fragments de texte _importants_ alors que `<mark>` est utilisé afin d'indiquer des fragments de texte _pertinents_.
 
-## Exemples
-
-### Exemple simple
-
-#### HTML
-
-```html
-<p>
-  L'élément &lt;mark&gt; est utilisé pour
-  <mark>mettre en avant</mark>
-  du texte pertinent dans le contexte.
-</p>
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_simple","100%","100%")}}
-
-### Identifier des passages
-
-Dans cet exemple, on utilise `<mark>` pour marquer les résultats d'une recherche dans un passage.
-
-#### HTML
-
-```html
-<p>
-  It is a dark time for the Rebellion. Although the Death Star has been
-  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
-  forces from their hidden base and pursued them across the galaxy.
-</p>
-
-<p>
-  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
-  freedom fighters led by Luke Skywalker has established a new secret base on
-  the remote ice world of Hoth.
-</p>
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Identifier_des_passages", 650, 130)}}
+> [!NOTE]
+> Ne confondez pas `<mark>` avec l'élément {{HTMLElement("strong")}}&nbsp;; `<mark>` sert à indiquer un contenu ayant un certain degré de _pertinence_, tandis que `<strong>` indique des portions de texte _importantes_.
 
 ## Accessibilité
 
-Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `mark`. On peut le rendre annonçable via la propriété CSS {{cssxref("content")}} et grâce aux pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}}.
+Par défaut, la plupart des outils d'assistance n'annoncent pas la présence de l'élément `mark`. On peut le rendre annonçable via la propriété CSS {{CSSxRef("content")}} et grâce aux pseudo-éléments {{CSSxRef("::before")}} et {{CSSxRef("::after")}}.
 
 ```css
 mark::before,
@@ -112,8 +74,55 @@ mark::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été marqué.
 
-- [_Short note on making your mark (more accessible) | The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/)
-- [_Tweaking Text Level Styles | Adrian Roselli_ (en anglais)](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [Brève note sur l'accessibilité du marquage | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Ajuster les styles de texte de niveau | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Exemples
+
+### Marquer un texte d'intérêt
+
+Dans ce premier exemple, un élément `<mark>` est utilisé pour marquer un texte dans une citation qui présente un intérêt particulier pour l'utilisateur·ice.
+
+```html
+<blockquote>
+  C'est une période de guerre civile. Des vaisseaux rebelles, frappant depuis
+  une base secrète, ont remporté leur première victoire contre le maléfique
+  Empire Galactique. Au cours de la bataille,
+  <mark>des espions rebelles ont réussi à voler des plans secrets</mark> de
+  l'arme ultime de l'Empire, l'ÉTOILE DE LA MORT, une station spatiale blindée
+  dotée d'une puissance suffisante pour détruire une planète entière.
+</blockquote>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Marquer un texte d'intérêt", 650, 130)}}
+
+### Identifier des passages
+
+Cet exemple montre comment utiliser `<mark>` pour marquer les résultats d'une recherche dans un passage.
+
+```html
+<p>
+  C'est une période sombre pour la Rébellion. Bien que l'Étoile de la Mort ait
+  été détruite, les troupes <mark class="match">impériales</mark> ont chassé les
+  forces rebelles de leur base secrète et les ont poursuivies à travers la
+  galaxie.
+</p>
+
+<p>
+  Évitant la redoutable flotte stellaire
+  <mark class="match">impériale</mark>, un groupe de combattants de la liberté
+  menés par Luke Skywalker a établi une nouvelle base secrète sur le monde glacé
+  et isolé de Hoth.
+</p>
+```
+
+Pour distinguer l'utilisation de `<mark>` pour les résultats de recherche d'autres usages possibles, cet exemple applique la classe personnalisée `"match"` à chaque correspondance.
+
+#### Résultat
+
+{{EmbedLiveSample("Identifier des passages", 650, 130)}}
 
 ## Résumé technique
 
@@ -121,26 +130,23 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -153,9 +159,17 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >du contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
+          >Pas de rôle correspondant <sup>(angl.)</sup></a
+        >
       </td>
     </tr>
     <tr>
@@ -164,7 +178,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>

@@ -3,7 +3,7 @@ title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 이번 장에서는 입력된 키값을 기준으로 정렬되는 데이터의 집합(자료 구조)에 대해 소개 할 것이다. Map과 Set은 입력된 순서대로 반복적으로 접근 가능한 요소들을 포함하고 있다.
 
@@ -138,4 +138,4 @@ Map객체의 key에 대한 동치성 비교와 Set객체의 값에 대한 동치
 - \-0과 +0은 같다고 간주한다.
 - {{jsxref("NaN")}}는 자기 자신하고 같다고 간주한다. (===와는 반대로)
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

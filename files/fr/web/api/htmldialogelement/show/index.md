@@ -3,12 +3,12 @@ title: "HTMLDialogElement : méthode show()"
 short-title: show()
 slug: Web/API/HTMLDialogElement/show
 l10n:
-  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
+  sourceCommit: e1a895da256b94f28be74b6f92ed18b5c2bec366
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`show()`** de l'interface {{domxref("HTMLDialogElement")}} affiche la boîte de dialogue de manière non modale, c'est-à-dire en permettant toujours l'interaction avec le contenu en dehors de la boîte de dialogue.
+La méthode **`show()`** de l'interface {{DOMxRef("HTMLDialogElement")}} affiche la boîte de dialogue de manière non modale, c'est-à-dire en permettant toujours l'interaction avec le contenu en dehors de la boîte de dialogue.
 
 ## Syntaxe
 
@@ -22,16 +22,16 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Levée si la boîte de dialogue est déjà ouverte et modale (c'est-à-dire si elle a déjà été ouverte avec {{domxref("HTMLDialogElement.showModal()")}}).
+- `InvalidStateError` {{DOMxRef("DOMException")}}
+  - : Levée si la boîte de dialogue est déjà ouverte et modale (c'est-à-dire si elle a déjà été ouverte avec {{DOMxRef("HTMLDialogElement.showModal()")}}).
 
 ## Exemples
 
-L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{htmlelement("dialog")}} contenant un formulaire via la méthode `show()`. Vous pouvez ensuite cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la méthode {{domxref("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation.
+L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un élément {{HTMLElement("dialog")}} contenant un formulaire via la méthode `show()`. Vous pouvez ensuite cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la méthode {{DOMxRef("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation.
 
 ```html
 <!-- Boîte de dialogue simple contenant un formulaire -->
@@ -49,15 +49,17 @@ L'exemple suivant montre un simple bouton qui, lorsqu'il est cliqué, ouvre un �
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Annuler</button>
-      <button type="submit">Valider</button>
+      <li>
+        <button type="reset">Réinitialiser</button>
+      </li>
+      <li>
+        <button type="submit">Valider</button>
+      </li>
     </menu>
   </form>
 </dialog>
 
-<menu>
-  <button id="updateDetails">Mettre à jour les informations</button>
-</menu>
+<button id="updateDetails">Mettre à jour les informations</button>
 ```
 
 ```js
@@ -97,5 +99,4 @@ cancelButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

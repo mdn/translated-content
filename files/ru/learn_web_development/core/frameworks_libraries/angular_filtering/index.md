@@ -3,7 +3,7 @@ title: Фильтрация списка дел
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Теперь перейдем к добавлению функционала позволяющего пользователям фильтровать свои задачи, чтобы они могли просматривать активные, завершенные или все элементы.
 
@@ -85,7 +85,7 @@ filter: 'all' | 'active' | 'done' = 'all';
 
 Это было быстро! Поскольку у вас уже был частично реализован код фильтрации в `app.component.ts`, все что вам нужно было сделать — это отредактировать шаблон, чтобы добавить элементы управления для фильтрации. В следующей и последней статье рассматривается, как создать полностью готовое Angular-приложение и предоставляются дополнительные ресурсы для продолжения учебного пути.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Testing
 original_slug: Learn/Server-side/Django/Testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Quant un site web grandit, il devient plus difficile à tester manuellement. Non seulement il y a plus de choses à tester, mais encore, comme les interactions entres ses composants deviennent plus complexes, un léger changement dans une partie de l'application peut affecter les autres parties, si bien qu'il va être nécessaire de faire beaucoup de modifications pour s'assurer que tout continue de fonctionner, et qu'aucune erreur ne sera introduite quand il y aura encore plus de modifications. Une façon de limiter ces problèmes est d'écrire des tests automatiques qui puissent être lancés d'une manière simple et fiable à chaque fois que vous faites une modification. Ce tutoriel montre comment automatiser des _tests unitaires_ sur votre site web en utilisant le framework de tests de Django.
 
@@ -14,7 +14,7 @@ Quant un site web grandit, il devient plus difficile à tester manuellement. Non
       <th scope="row">Prérequis:</th>
       <td>
         Avoir terminé tous les tutoriels précédents, y compris
-        <a href="/fr/docs/Learn/Server-side/Django/Forms"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Django Tutorial Part 9: Working with forms</a
         >.
       </td>
@@ -955,4 +955,4 @@ Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre mer
 - [Workshop: Test-Driven Web Development with Django](http://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/blog/python/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django")}}

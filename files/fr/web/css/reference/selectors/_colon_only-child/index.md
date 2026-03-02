@@ -1,9 +1,8 @@
 ---
 title: :only-child
 slug: Web/CSS/Reference/Selectors/:only-child
-original_slug: Web/CSS/:only-child
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:only-child`** représente n'importe quel élément qui est le seul enfant de son élément parent. Elle permet d'obtenir le même effet que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mais avec une spécificité inférieure.
@@ -140,7 +139,7 @@ li:only-child {
 
 ## Voir aussi
 
-- {{cssxref(":only-of-type")}}
-- {{cssxref(":first-child")}}
-- {{cssxref(":last-child")}}
-- {{cssxref(":nth-child")}}
+- La pseudo-classe {{CSSxRef(":only-of-type")}}
+- La pseudo-classe {{CSSxRef(":first-child")}}
+- La pseudo-classe {{CSSxRef(":last-child")}}
+- La pseudo-classe {{CSSxRef(":nth-child")}}

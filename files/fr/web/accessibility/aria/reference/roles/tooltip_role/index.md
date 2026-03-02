@@ -98,7 +98,7 @@ L'info-bulle peut être instanciée avec du CSS. Changez le nom de la classe ave
 
 {{EmbedLiveSample("exemples", "", 300)}}
 
-Le code ci-dessus masque l'info-bulle avec du CSS à l'état par défaut ou si la classe `hide-tooltip` a été ajoutée avec JavaScript (lorsque l'utilisateur·ice appuie sur <kbd>Échap</kbd>), avec une spécificité élevée pour garantir que l'info-bulle ne s'affiche pas. Quand l'élément propriétaire reçoit la sélection, il est positionné relativement et l'info-bulle devient visible. On garde l'info-bulle visible au survol, conformément à [WCAG 1.4.13](#problèmes_d'accessibilité). Ici, on permet au curseur de passer du champ à l'info-bulle sans que celle-ci disparaisse, en attendant 0,5&nbsp;s entre les deux&nbsp;; il existe d'autres moyens d'obtenir ce résultat, comme remplir l'espace avec un élément transparent qui garde l'info-bulle visible au survol.
+Le code ci-dessus masque l'info-bulle avec du CSS à l'état par défaut ou si la classe `hide-tooltip` a été ajoutée avec JavaScript (lorsque l'utilisateur·ice appuie sur <kbd>Échap</kbd>), avec une spécificité élevée pour garantir que l'info-bulle ne s'affiche pas. Quand l'élément propriétaire reçoit la sélection, il est positionné relativement et l'info-bulle devient visible. On garde l'info-bulle visible au survol, conformément à [WCAG 1.4.13](#problèmes_daccessibilité). Ici, on permet au curseur de passer du champ à l'info-bulle sans que celle-ci disparaisse, en attendant 0,5&nbsp;s entre les deux&nbsp;; il existe d'autres moyens d'obtenir ce résultat, comme remplir l'espace avec un élément transparent qui garde l'info-bulle visible au survol.
 
 ## Problèmes d'accessibilité
 

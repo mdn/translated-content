@@ -100,7 +100,7 @@ console.log(carré.area);
 
 ### Méthodes statiques
 
-Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn/JavaScript/Objects#l'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
+Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
 
 ```js
 class Point {

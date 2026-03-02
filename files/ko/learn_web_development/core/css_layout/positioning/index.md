@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
 original_slug: Learn/CSS/CSS_layout/Positioning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 당신이 일반 문서 레이아웃 대열에서 요소를 끄집어 내어, 그것이 다르게 행동하게 만들수 있게 해주는 것이 위치잡기다. 예를 들어 상대 요소 위에 놓거나 브라우저 뷰 포트 내부의 동일한 위치를 항상 유지하게 해준다. 이 문서는 서로 다른 {{cssxref("position")}} 값을 설명하고, 그 걸 사용하는 방법에 대해서도 설명한다.
 
@@ -230,7 +230,7 @@ span {
 
 ### 위치잡기 상황
 
-어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block)).
+어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block)).
 
 조상 요소가 명시적으로 정의된 위치 속성을 가지고 있지 않으면 초깃값으로 모든 조상 요소에 정적 위치가 부여됩니다. 그에 따른 결과, 절대적 위치잡기한 요소는 **initial containing block**에 포함되게 됩니다. 초기 콘테이너 블록은 브라우저 뷰포트 크기의 용적을 가지며, 자신도 {{htmlelement("html")}} 요소를 포함하는 블록입니다. 간단히 말해서, 절대적 위치잡기한 요소는 {{htmlelement("html")}} 요소의 외부에 포함되어 초기 뷰포트 기준과 비례한 곳에 위치하게 됩니다.
 
@@ -685,7 +685,7 @@ body {
 
 기본적인 위치잡기를 가지고 놀이삼아 시험해 보니 재미있었을 것이다; 비록 이것이 완전체 레이아웃에 사용할 수 있는 방법은 아니지만, 여러분이 보았다시피 이것이 알맞은 용도로 사용될 수 있는 많은 작업들이 있다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout")}}
 
 ## 참조 항목
 

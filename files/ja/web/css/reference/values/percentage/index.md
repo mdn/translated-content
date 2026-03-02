@@ -1,15 +1,14 @@
 ---
 title: <percentage>
 slug: Web/CSS/Reference/Values/percentage
-original_slug: Web/CSS/percentage
 l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、パーセント値による割合を表します。要素の親オブジェクトからの相対的な寸法を定義するためによく使われます。 {{CSSxRef("width")}}、 {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}、 {{CSSxRef("font-size")}} など、たくさんのプロパティでパーセント値を使うことができます。
 
 > [!NOTE]
-> 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値 ({{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など) にのみアクセスできます。
+> 継承されるのは計算値だけです。親要素のプロパティでパーセント値が使われても、継承したプロパティではパーセント値ではなく、実数値（{{CSSxRef("&lt;length&gt;")}} 値に向けたピクセル単位の幅など）にのみアクセスできます。
 
 ## 構文
 
@@ -24,31 +23,55 @@ l10n:
 ### 幅と左マージン
 
 ```html
-<div style="background-color:navy;">
-  <div style="width:50%; margin-left:20%; background-color:chartreuse;">
-    Width: 50%, Left margin: 20%
-  </div>
-  <div style="width:30%; margin-left:60%; background-color:pink;">
-    Width: 30%, Left margin: 60%
-  </div>
+<div class="container">
+  <div class="box1">Width: 50%, Left margin: 20%</div>
+  <div class="box2">Width: 30%, Left margin: 60%</div>
 </div>
 ```
 
-以上の HTML は以下のような出力になります。
+```css
+.container {
+  background-color: navy;
+}
+
+.box1 {
+  width: 50%;
+  margin-left: 20%;
+  background-color: chartreuse;
+}
+
+.box2 {
+  width: 30%;
+  margin-left: 60%;
+  background-color: pink;
+}
+```
 
 {{EmbedLiveSample('Width_and_margin-left', '600', 140)}}
 
 ### font-size
 
 ```html
-<div style="font-size:18px;">
+<div class="container">
   <p>Full-size text (18px)</p>
-  <p><span style="font-size:50%;">50% (9px)</span></p>
-  <p><span style="font-size:200%;">200% (36px)</span></p>
+  <p><span class="half">50% (9px)</span></p>
+  <p><span class="double">200% (36px)</span></p>
 </div>
 ```
 
-以上の HTML は以下のような出力になります。
+```css
+.container {
+  font-size: 18px;
+}
+
+.half {
+  font-size: 50%;
+}
+
+.double {
+  font-size: 200%;
+}
+```
 
 {{EmbedLiveSample('Font-size', 'auto', 160)}}
 
@@ -63,4 +86,4 @@ l10n:
 ## 関連情報
 
 - {{cssxref("&lt;length-percentage&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

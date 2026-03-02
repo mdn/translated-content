@@ -1,9 +1,8 @@
 ---
 title: min-height
 slug: Web/CSS/Reference/Properties/min-height
-original_slug: Web/CSS/min-height
 l10n:
-  sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小高を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)が、`min-height` で指定した値を下回ることを防ぎます。
@@ -26,12 +25,11 @@ min-height: 75%;
 min-height: 10px;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum height. <br />If there is
-    more content than the minimum the box will grow to the height needed by the
-    content.
+    これは最小高を変更可能なボックスです。<br />
+    最小高より多くのコンテンツがある場合、ボックスはコンテンツに必要とされる高さまで伸長します。
   </div>
 </section>
 ```
@@ -42,7 +40,7 @@ min-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -54,7 +52,7 @@ min-height: 10px;
 /* <length> 値 */
 min-height: 3.5em;
 min-height: anchor-size(height);
-min-height: anchor-size(--myAnchor block, 200px);
+min-height: anchor-size(--my-anchor block, 200px);
 
 /* <percentage> 値 */
 min-height: 10%;
@@ -82,13 +80,13 @@ min-height: unset;
   - : `min-height` を包含ブロックの高さに対するパーセント値で定義します。
 - `auto`
   - : ブラウザーが指定された要素の `min-height` を計算して選択します。
-- `max-content`
+- {{cssxref("max-content")}}
   - : 内容物が推奨する `min-height` です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : 内容物の最小の `min-height` です。
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 - `stretch`
   - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最小の高さを、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の高さに制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。

@@ -2,7 +2,7 @@
 title: Zone de grille
 slug: Glossary/Grid_Areas
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Une **zone de grille** se compose d'une ou plusieurs {{Glossary("grid cell", "cellules de grille")}} formant une zone rectangulaire sur la grille. Les zones de grille sont créées lors du placement d'un élément en utilisant [le placement basé sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement) ou lors de la définition de zones avec [les zones de grille nommées](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas).

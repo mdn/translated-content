@@ -1,14 +1,13 @@
 ---
 title: :host()
 slug: Web/CSS/Reference/Selectors/:host_function
-original_slug: Web/CSS/:host_function
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host()`** permet de sélectionner l'hôte du DOM sombre (<i lang="en">shadow DOM</i>) contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.
 
-Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser {{cssxref(":host-context()")}}.
+Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser {{CSSxRef(":host-context()")}}.
 
 > [!NOTE]
 > Alors que d'autres pseudo-classes fonctionnelles telles que {{CSSxRef(":is", ":is()")}} et {{CSSxRef(":not", ":not()")}} acceptent une liste de sélecteurs comme paramètres, `:host()` prend un seul sélecteur composé comme paramètre. De plus, alors que `:is()` et `:not()` ne prennent en compte que la spécificité de leur argument, la spécificité de `:host()` est à la fois la spécificité de la pseudo-classe **et** la spécificité de son argument.
@@ -79,7 +78,7 @@ function init() {
 
 ### Sélection de styles pour les hôtes de shadow
 
-Les fragments de code suivants sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat en direct](https://mdn.github.io/web-components-examples/host-selectors/)).
+Les fragments de code suivants sont extraits du dépôt d'exemple [_host-selectors_ <sup>(angl.)</sup>](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat en direct <sup>(angl.)</sup>](https://mdn.github.io/web-components-examples/host-selectors/)).
 
 Dans cet exemple, on dispose d'un élément personnalisé, `<context-span>`, qui peut contenir du texte :
 
@@ -122,6 +121,6 @@ La règle `:host(.footer) { color : red; }` s'applique à toutes les instances d
 ## Voir aussi
 
 - [Les composants web](/fr/docs/Web/API/Web_components)
-- {{CSSxRef(":host")}}
-- {{CSSxRef(":host-context", ":host-context()")}}
-- {{CSSxRef(":state",":state()")}}
+- La pseudo-classe {{CSSxRef(":host")}}
+- La pseudo-classe {{CSSxRef(":host-context()")}}
+- La pseudo-classe {{CSSxRef(":state()")}}

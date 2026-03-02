@@ -65,7 +65,7 @@ open(url, target, windowFeatures)
 
 ### 返回值
 
-一个 [`WindowProxy`](/zh-CN/docs/Glossary/WindowProxy) 对象。只要符合[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)安全要求，返回的引用就可用于访问新窗口的属性和方法。
+一个 [`WindowProxy`](/zh-CN/docs/Glossary/WindowProxy) 对象。只要符合[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)安全要求，返回的引用就可用于访问新窗口的属性和方法。
 
 ## 描述
 
@@ -232,7 +232,7 @@ console.log(sameOriginContext.origin);
 // https://example.com
 ```
 
-如需了解更多信息，请参阅[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)一文。
+如需了解更多信息，请参阅[同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)一文。
 
 ## 无障碍
 
@@ -290,4 +290,4 @@ console.log(sameOriginContext.origin);
 - [`window.focus()`](/zh-CN/docs/Web/API/Window/focus)
 - [`window.opener`](/zh-CN/docs/Web/API/Window/opener)
 - [`rel="opener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#opener) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#noopener)
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)

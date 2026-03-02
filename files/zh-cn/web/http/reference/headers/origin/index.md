@@ -44,7 +44,7 @@ Origin: <scheme>://<hostname>:<port>
 从广义上讲，用户代理会在以下情况中添加 {{httpheader("Origin")}} 请求标头：
 
 - {{Glossary("CORS", "跨源")}}请求。
-- 除 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 以外的[同源](/zh-CN/docs/Web/Security/Same-origin_policy)请求（即它会被添加到同源的 {{HTTPMethod("POST")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("PATCH")}} 和 {{HTTPMethod("DELETE")}} 请求中）。
+- 除 {{HTTPMethod("GET")}} 和 {{HTTPMethod("HEAD")}} 以外的[同源](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)请求（即它会被添加到同源的 {{HTTPMethod("POST")}}、{{HTTPMethod("OPTIONS")}}、{{HTTPMethod("PUT")}}、{{HTTPMethod("PATCH")}} 和 {{HTTPMethod("DELETE")}} 请求中）。
 
 除上述规则外，还有一些特殊情况。例如，在 [no-cors 模式](/zh-CN/docs/Web/API/Request/mode#属性值)下的跨源 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 请求不会发送 `Origin` 标头。
 
@@ -82,5 +82,5 @@ Origin: https://developer.mozilla.org:80
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)
+- [同源策略](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)
 - [浏览器在何时会发送 Origin 请求标头？又会在何时将其设置为 null？](https://stackoverflow.com/a/42242802/)（Stack Overflow）

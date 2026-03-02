@@ -1,9 +1,8 @@
 ---
 title: <flex>
 slug: Web/CSS/Reference/Values/flex_value
-original_slug: Web/CSS/flex_value
 l10n:
-  sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<flex>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、グリッドコンテナー内部における可変の長さを記述します。 {{cssxref("grid-template-columns")}} や {{cssxref("grid-template-rows")}} およびほかの関連プロパティで使われます。

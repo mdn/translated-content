@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-La méthode **`showModal()`** de l'interface {{domxref("HTMLDialogElement")}} affiche la boîte de dialogue en mode modal, au-dessus de toute autre boîte de dialogue présente. Elle s'affiche dans la {{glossary("top layer", "couche supérieure")}}, accompagnée d'un pseudo-élément {{cssxref('::backdrop')}}. Les éléments du même document que la boîte de dialogue, à l'exception de celle-ci et de ses descendants, deviennent _inertes_ (comme si l'attribut [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) était spécifié). Seul le document contenant est bloqué&nbsp;: si la boîte de dialogue est affichée dans une iframe, le reste de la page reste interactif.
+La méthode **`showModal()`** de l'interface {{DOMxRef("HTMLDialogElement")}} affiche la boîte de dialogue en mode modal, au-dessus de toute autre boîte de dialogue présente. Elle s'affiche dans la {{Glossary("top layer", "couche supérieure")}}, accompagnée d'un pseudo-élément {{CSSxRef('::backdrop')}}. Les éléments du même document que la boîte de dialogue, à l'exception de celle-ci et de ses descendants, deviennent _inertes_ (comme si l'attribut [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert) était spécifié). Seul le document contenant est bloqué&nbsp;: si la boîte de dialogue est affichée dans une iframe, le reste de la page reste interactif.
 
 ## Syntaxe
 
@@ -22,18 +22,18 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Levée si la boîte de dialogue est déjà ouverte et non modale (c'est-à-dire si elle a déjà été ouverte avec {{domxref("HTMLDialogElement.show()")}}).
+- `InvalidStateError` {{DOMxRef("DOMException")}}
+  - : Levée si la boîte de dialogue est déjà ouverte et non modale (c'est-à-dire si elle a déjà été ouverte avec {{DOMxRef("HTMLDialogElement.show()")}}).
 
 ## Exemples
 
 ### Ouvrir une boîte de dialogue modale
 
-L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, ouvre une boîte de dialogue modale {{htmlelement("dialog")}} contenant un formulaire via la fonction `HTMLDialogElement.showModal()`. Lorsque la boîte de dialogue est ouverte, tout le reste du contenu du document devient inerte. Vous pouvez alors cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la fonction {{domxref("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation. Sélectionner le bouton d'annulation ferme la boîte de dialogue et déclenche un événement {{domxref("HTMLDialogElement/close_event", "close")}}, mais pas un événement {{domxref("HTMLDialogElement/cancel_event", "cancel")}}.
+L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, ouvre une boîte de dialogue modale {{HTMLElement("dialog")}} contenant un formulaire via la fonction `HTMLDialogElement.showModal()`. Lorsque la boîte de dialogue est ouverte, tout le reste du contenu du document devient inerte. Vous pouvez alors cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la fonction {{DOMxRef("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton de validation. Sélectionner le bouton d'annulation ferme la boîte de dialogue et déclenche un événement {{DOMxRef("HTMLDialogElement/close_event", "close")}}, mais pas un événement {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}}.
 
 #### HTML
 
@@ -93,7 +93,7 @@ cancelButton.addEventListener("click", () => {
 
 #### Résultat
 
-{{EmbedLiveSample("ouvrir_une_boîte_de_dialogue_modale")}}
+{{EmbedLiveSample("Ouvrir une boîte de dialogue modale")}}
 
 ## Spécifications
 
@@ -105,5 +105,4 @@ cancelButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{ HTMLElement("dialog") }}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

@@ -1,9 +1,8 @@
 ---
 title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
-original_slug: Web/CSS/font-variant-position
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`font-variant-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
@@ -95,10 +94,10 @@ p {
 
 ## 関連情報
 
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/ja/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/ja/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/ja/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/ja/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/ja/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/ja/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}

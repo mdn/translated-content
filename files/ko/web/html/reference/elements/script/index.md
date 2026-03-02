@@ -97,7 +97,7 @@ original_slug: Web/HTML/Element/script
     기존 방식은 브라우저가 HTML 분석을 계속하기 전에 스크립트를 불러오고 평가했어야 하므로, `defer` 속성을 사용하면 **분석기를 멈추는 JavaScript**를 제거할 수 있습니다. `async`도 비슷한 효과를 가집니다.
 
 - `integrity`
-  - : {{glossary("user agent", "사용자 에이전트")}}가 가져온 리소스에 예기치 못한 변형이 존재하는지 검사할 때 사용할 인라인 메타데이터입니다. [하위 리소스 무결성](/ko/docs/Web/Security/Subresource_Integrity) 문서를 참고하세요.
+  - : {{glossary("user agent", "사용자 에이전트")}}가 가져온 리소스에 예기치 못한 변형이 존재하는지 검사할 때 사용할 인라인 메타데이터입니다. [하위 리소스 무결성](/ko/docs/Web/Security/Defenses/Subresource_Integrity) 문서를 참고하세요.
 - `nomodule`
   - : [ES2015 모듈](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)을 지원하는 브라우저에서는 실행하지 않을 스크립트임을 나타내는 불리언 특성입니다. 모듈화 JavaScript를 지원하지 않는 오래된 브라우저가 사용할 대체 스크립트에 사용할 수 있습니다.
 
@@ -108,7 +108,7 @@ original_slug: Web/HTML/Element/script
     - `no-referrer`: {{HTTPHeader("Referer")}} 헤더를 전송하지 않습니다.
     - `no-referrer-when-downgrade` (기본값): {{glossary("TLS")}}({{glossary("HTTPS")}}) 지원을 하지 않는 {{glossary("origin", "출처")}}에 대해서는 {{HTTPHeader("Referer")}} 헤더를 전송하지 않습니다.
     - `origin`: `Referer` 헤더가 요청 출처({{glossary("protocol", "스킴")}}, {{glossary("host", "호스트")}}, {{glossary("port", "포트")}})를 포함합니다.
-    - `origin-when-cross-origin`: [동일 출처](/ko/docs/Web/Security/Same-origin_policy) 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 교차 출처 요청에는 출처만 전송합니다.
+    - `origin-when-cross-origin`: [동일 출처](/ko/docs/Web/Security/Defenses/Same-origin_policy) 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 교차 출처 요청에는 출처만 전송합니다.
     - `same-origin`: 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 교차 출처 요청에는 아무 레퍼러 정보도 보내지 않습니다.
     - `strict-origin`: 목적지가 현재 문서와 동일하거나 더 높은(HTTP(S)→HTTPS) 보안 수준을 가진 경우 출처를 전송하고, 더 취약(HTTPS→HTTP)한 경우 전송하지 않습니다.
     - `strict-origin-when-cross-origin`: 동일 출처 요청에는 매개변수를 제거한 전체 URL을 전송합니다. 목적지가 현재 문서와 동일하거나 더 높은 보안 수준(HTTP(S)→HTTPS)을 가진 경우 자신의 출처를 전송합니다. 그 외의 경우 아무 레퍼러 정보도 보내지 않습니다.

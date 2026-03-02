@@ -5,7 +5,7 @@ slug: Web/API/Element/animationcancel_event
 
 {{APIRef("CSS3 Animations")}}
 
-Обработчик события [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) . Это событие вызывается когда анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения [`animationend`](/ru/docs/Web/API/Element/animationend_event)), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
+Обработчик события [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) . Это событие вызывается когда анимация ([CSS Animation](/ru/docs/Web/CSS/Guides/Animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения [`animationend`](/ru/docs/Web/API/Element/animationend_event)), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
 
 ## Синтаксис
 

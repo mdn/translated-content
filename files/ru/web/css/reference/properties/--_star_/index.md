@@ -85,5 +85,5 @@ slug: Web/CSS/Reference/Properties/--*
 
 ## Смотрите также
 
-- [Использование переменных в CSS](/ru/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Использование переменных в CSS](/ru/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - Функция {{cssxref("var", "var()")}}

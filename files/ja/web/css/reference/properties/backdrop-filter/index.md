@@ -1,9 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/Reference/Properties/backdrop-filter
-original_slug: Web/CSS/backdrop-filter
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
@@ -25,7 +24,7 @@ backdrop-filter: sepia(90%);
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div id="example-element">Example</div>
+    <div id="example-element">例</div>
   </div>
 </section>
 ```
@@ -47,7 +46,7 @@ backdrop-filter: sepia(90%);
   flex: 1;
   text-align: center;
   padding: 20px 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 0.2);
 }
 ```
 
@@ -58,7 +57,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: none;
 
 /* SVG フィルターへの URL */
-backdrop-filter: url(common-filters.svg#filter);
+backdrop-filter: url("common-filters.svg#filter");
 
 /* <filter-function> 値 */
 backdrop-filter: blur(2px);
@@ -73,7 +72,7 @@ backdrop-filter: sepia(90%);
 backdrop-filter: saturate(80%);
 
 /* 複数のフィルター */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+backdrop-filter: url("filters.svg#filter") blur(4px) saturate(150%);
 
 /* グローバル値 */
 backdrop-filter: inherit;
@@ -87,8 +86,8 @@ backdrop-filter: unset;
 
 - `none`
   - : 背後にフィルターを適用しません。
-- `<filter-function-list>`
-  - : 背景に適用する {{cssxref("&lt;filter-function&gt;")}} または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の空白区切りのリストです。CSS の `<filter-function>` には {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, {{CSSxRef("filter-function/sepia", "sepia()")}} があります。
+- `<filter-value-list>`
+  - : 背景に適用する {{cssxref("filter-function")}} または [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)の空白区切りのリストです。CSS の `<filter-function>` には {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, {{CSSxRef("filter-function/sepia", "sepia()")}} があります。
 
 ## 公式定義
 
@@ -163,7 +162,7 @@ body {
 ## 関連情報
 
 - {{cssxref("filter")}}
-- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("filter-function")}}
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)
 - [CSS 合成と混合](/ja/docs/Web/CSS/Guides/Compositing_and_blending)

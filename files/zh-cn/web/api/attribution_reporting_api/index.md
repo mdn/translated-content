@@ -43,7 +43,7 @@ l10n:
    - 一个链接。在这种情况下，交互是用户点击链接（直接通过 {{htmlelement("a")}} 元素，或通过 {{domxref("Window.open()")}} 调用）。通过对导航请求的响应来注册来源。
    - 一张图片，例如广告横幅或 1x1 透明跟踪像素。在这种情况下，交互是用户访问页面。图片加载时，即服务器响应图片请求时，注册来源。
    - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据你的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。来源在响应返回时注册。
-2. 当归因来源交互发生时，{{httpheader("Attribution-Reporting-Register-Source")}} 标头中返回的来源数据会存储在仅浏览器可访问的私有本地缓存中。此数据包括页面和广告主可用的上下文和第一方数据、收集转化数据的广告技术公司的来源以及一个或多个期望从该广告发生转化的目标（[eTLD+1](/zh-CN/docs/Glossary/eTLD)）（即广告主的网站，例如 `shop.example`）。
+2. 当归因来源交互发生时，{{httpheader("Attribution-Reporting-Register-Source")}} 标头中返回的来源数据会存储在仅浏览器可访问的私有本地缓存中。此数据包括页面和广告主可用的上下文和第一方数据、收集转化数据的广告技术公司的来源以及一个或多个期望从该广告发生转化的目标（{{glossary("registrable domain", "可注册域名")}}）（即广告主的网站，例如 `shop.example`）。
 3. 当用户稍后访问 `shop.example` 时，当交互指示转化发生时，该网站可以注册一个**归因触发器**（例如，用户点击 `shop.example` 上的“添加到购物车”按钮）。浏览器将发送一个带有 {{httpheader("Attribution-Reporting-Eligible")}} 标头的请求，以表明响应有资格注册归因触发器，如果响应中包含适当的 {{httpheader("Attribution-Reporting-Register-Trigger")}} 标头，则完成注册。归因触发器可以是，例如：
    - 一张图片，例如购物车图标或 1x1 透明跟踪像素。在这种情况下，交互是用户访问页面。触发器在图片加载时注册，即当服务器响应图片请求时。
    - 一个 fetch 请求（即 {{domxref("Window/fetch", "fetch()")}} 或 {{domxref("XMLHttpRequest")}}）。在这种情况下，交互可以根据你的应用程序的需要进行指定——例如，fetch 请求可以由 `click` 或 `submit` 事件触发。触发器在响应返回时注册。

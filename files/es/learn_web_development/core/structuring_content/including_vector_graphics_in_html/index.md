@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_i
 original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.
 
@@ -342,4 +342,4 @@ En el próximo artículo de este módulo, exploraremos las imágenes adaptables 
 - [Beneficios de accesibilidad de SVG](https://www.w3.org/TR/SVG-access/)
 - [Cómo escalar SVGs](https://css-tricks.com/scale-svg/) (¡no es tan simple como los gráficos rasterizados!)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

@@ -37,15 +37,15 @@ gl.getParameter(gl.DEPTH_CLEAR_VALUE);
 // 0.5
 ```
 
-## 仕様策定状況
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("WebGLRenderingContext.clear()")}}
 - {{domxref("WebGLRenderingContext.clearColor()")}}

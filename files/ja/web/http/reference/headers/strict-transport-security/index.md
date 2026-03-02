@@ -154,7 +154,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 関連情報
 
-- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)
 - [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) (blog.sidstamm.com, 2010)
 - [HTTP 厳格トランスポートセキュリティ(force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/) (hacks.mozilla.org, 2010)
 - [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) 早見表 (owasp.org)

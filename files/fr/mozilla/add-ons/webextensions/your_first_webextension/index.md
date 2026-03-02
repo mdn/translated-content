@@ -145,4 +145,4 @@ Maintenant que vous avez eu une introduction au processus de développement d'un
 - [En lire davantage sur l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage)
+- [Poursuivre votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_dapprentissage)

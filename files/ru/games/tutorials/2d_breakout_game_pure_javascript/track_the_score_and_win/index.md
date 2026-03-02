@@ -3,7 +3,7 @@ title: Счёт и выигрыш
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 Это 8й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
 

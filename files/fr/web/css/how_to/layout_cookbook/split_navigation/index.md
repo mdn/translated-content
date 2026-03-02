@@ -60,6 +60,6 @@ Dans ce cas, la marge automatique à gauche prend tout l'espace disponible et po
 
 ## Voir aussi
 
-- [Mise en page flexible CSS](/fr/docs/Web/CSS/CSS_flexible_box_layout)
+- [Mise en page flexible CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout)
 - La propriété {{CSSxRef("display")}}
 - La propriété {{CSSxRef("margin")}}

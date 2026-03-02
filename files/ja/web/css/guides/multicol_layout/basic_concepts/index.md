@@ -1,19 +1,18 @@
 ---
-title: 段組みの基本概念
+title: 段組みレイアウトの基本概念
 short-title: 基本概念
 slug: Web/CSS/Guides/Multicol_layout/Basic_concepts
-original_slug: Web/CSS/CSS_multicol_layout/Basic_concepts
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 段組みレイアウト (Multi-column layout) は、 multicol レイアウトとも呼ばれ、新聞のようにコンテンツを複数の段ボックスにレイアウトする仕様です。このガイドでは、この仕様がどのように働くかを、いくつかのよくある使用例と共に説明します。
 
-## 主要概念と用語
+## 主要概念
 
-段組みは他のレイアウト方法とは異なり、 CSS でコンテンツを分割し、すべての子孫要素を段に含めます。これは、印刷スタイルシートを作成するのに使われる [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)がコンテンツをページに分割するのと同様のことを行います。
+段組みは他のレイアウト方法とは異なり、CSS でコンテンツを分割し、すべての子孫要素を段に含めます。これは、印刷スタイルシートを作成するのに使われる [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)がコンテンツをページに分割するのと同様のことを行います。
 
-このガイドおよび以降のガイドでは、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールで定義されている以下のプロパティについて説明します。
+このガイドおよび以降のガイドでは、[CSS 段組みレイアウト](/ja/docs/Web/CSS/Guides/Multicol_layout)モジュールで定義されている以下のプロパティについて説明します。
 
 - {{cssxref("column-width")}}
 - {{cssxref("column-count")}}
@@ -190,4 +189,4 @@ body {
 
 ## 次のステップ
 
-このガイドでは、段組みレイアウトの基本的な利用を学びました。次のガイドでは、 [段のスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)がどれだけできるかを見てみます。
+このガイドでは、段組みレイアウトの基本的な利用を学びました。次のガイドでは、 [段自体のスタイル設定](/ja/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)がどれだけできるかを見てみます。

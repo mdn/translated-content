@@ -255,7 +255,7 @@ JavaScript 套用到你的 HTML 頁面的方式與 CSS 類似。CSS 使用 {{htm
    }
    ```
 
-4. 儲存並重新整理你的瀏覽器。你會發現點擊按鈕沒有任何效果，如果你檢查瀏覽器的主控台，你會看到類似 `Cross-origin request blocked` 的錯誤。這是因為像許多外部資源一樣，JavaScript 模組需要從與 HTML [同源](/zh-TW/docs/Web/Security/Same-origin_policy)的地方載入，而 `file://` URL 不符合資格。有兩種解決方案可以解決這個問題：
+4. 儲存並重新整理你的瀏覽器。你會發現點擊按鈕沒有任何效果，如果你檢查瀏覽器的主控台，你會看到類似 `Cross-origin request blocked` 的錯誤。這是因為像許多外部資源一樣，JavaScript 模組需要從與 HTML [同源](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)的地方載入，而 `file://` URL 不符合資格。有兩種解決方案可以解決這個問題：
    - 我們推薦的解決方案是[設定一個本地測試伺服器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)。在伺服器程式執行並在 `8000` 埠提供 `apply-javascript-external.html` 和 `script.js` 檔案的情況下，打開你的瀏覽器並前往 `http://localhost:8000`。
    - 如果你無法執行本地伺服器，你也可以使用 `<script defer src="script.js"></script>` 來代替 `<script type="module" src="script.js"></script>`。更多資訊請參見下文的[腳本載入策略](#腳本載入策略)。但請注意，我們在教學其他部分使用的功能可能無論如何都需要本地 HTTP 伺服器。
 5. 現在網站的運作方式和以前完全一樣，但現在我們的 JavaScript 在一個外部檔案中。這在組織程式碼和使其可在多個 HTML 檔案中重複使用方面通常是件好事。此外，沒有大塊腳本塞在裡面，HTML 也更容易閱讀。

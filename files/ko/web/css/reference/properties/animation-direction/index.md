@@ -41,7 +41,7 @@ animation-direction: unset;
   - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 역방향으로 진행됩니다. 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다.
 
 > [!NOTE]
-> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)을 참조하십시오.
+> animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)을 참조하십시오.
 
 ### Formal syntax
 
@@ -49,7 +49,7 @@ animation-direction: unset;
 
 ## 예제(Examples)
 
-[CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)를 보십시오.
+[CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)를 보십시오.
 
 ## 명세
 
@@ -61,5 +61,5 @@ animation-direction: unset;
 
 ## 같이 보기(See also)
 
-- [Using CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API

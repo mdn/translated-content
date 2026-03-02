@@ -8,7 +8,7 @@ l10n:
 
 HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두가지 이유로 중요하다. 폼이 사용 할수 있다는 것을 보장하고 접근성도 늘릴수 있기 떄문이다.(즉 장애인들도 쉽게 사용할 수 있다.) HTML 폼의 [접근성](/ko/docs/Web/Accessibility)은 중요한 점이고 어떻게 폼 접근성을 높일 수 있는지 볼것이다.
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 기본 사항을 다룬 후에는 이제 폼의 다른 부분에 구조와 의미를 부여하는 데 사용되는 요소들을 좀 더 자세히 살펴보겠습니다.
 
@@ -340,7 +340,7 @@ HTML폼을 만들떄 구조화 하는것은 중요한 것이다. 이것은 두�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://alistapart.com/article/sensibleforms/)
 
-{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 ### 고급 주제
 

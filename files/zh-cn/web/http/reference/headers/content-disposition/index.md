@@ -38,7 +38,7 @@ Content-Disposition: attachment; filename="filename.jpg"
 ```
 
 > [!NOTE]
-> 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
+> 在[同源 URL](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
 
 ### 作为多部分主体的标头
 
@@ -108,7 +108,7 @@ value2
 ## 兼容性说明
 
 - 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5 可以更好地处理 `Content-Disposition` HTTP 响应标头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见 [Firefox bug 588781](https://bugzil.la/588781)。
-- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
+- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Defenses/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
 
 ## 参见
 

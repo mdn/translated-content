@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 객체 지향 프로그래밍(OOP)은 Java 및 C++를 비롯한 많은 프로그래밍 언어의 기본이 되는 프로그래밍 패러다임입니다. 이 기사에서는 OOP의 기본 개념에 대한 개요를 제공합니다. **클래스와 인스턴스**, **상속**, **캡슐화**라는 세 가지 주요 개념에 대해 설명합니다. 지금은 특히 JavaScript를 참조하지 않고 이러한 개념을 설명하므로 모든 예제가 {{Glossary("Pseudocode", "pseudocode")}}로 제공됩니다.
 
@@ -28,7 +28,7 @@ l10n:
         > 참조) 및 OOJS 기본 사항 (
         <a href="/ko/docs/Learn/JavaScript/Objects/Basics"
           >객체 소개</a
-        > 및 <a href="/ko/docs/Learn/JavaScript/Objects/Object_prototypes">객체 프로토타입</a> 참조).
+        > 및 <a href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">객체 프로토타입</a> 참조).
       </td>
     </tr>
     <tr>
@@ -244,4 +244,4 @@ student.year // error: 'year' is a private property of Student
 
 다음 기사에서는 클래스 기반 객체 지향 프로그래밍을 지원하기 위해 JavaScript가 제공하는 기능을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

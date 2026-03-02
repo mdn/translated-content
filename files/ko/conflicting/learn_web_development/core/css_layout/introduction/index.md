@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Normal_Flow
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 이번 글에서는 normal flow, 다른 말로 만일 당신이 요소의 레이아웃을 변경하지 않을 시 웹페이지 요소가 자기 자신을 배치하는 방법에 관해 설명합니다.
 
@@ -107,4 +107,4 @@ span {
 
 이제 당신은 normal flow은 물론, 기본값으로 브라우저가 어떤 방식으로 사물을 배치하는지 이해했습니다. 당신의 디자인 필요에 따라 레이아웃을 만들기 위해 디스플레이 기본값을 변경하는 방법을 배우려면 다음 단계로 이동하세요.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

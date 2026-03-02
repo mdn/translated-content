@@ -2,10 +2,10 @@
 title: Base de données
 slug: Glossary/Database
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
-Une **base de données** est un système de stockage qui collecte des données organisées, pour faciliter certains travaux comme la recherche, la structure et l'extension.
+Une **base de données** est un système de stockage qui collecte des données organisées, ce qui facilite la recherche, la structure et l'extension.
 
 Dans le développement web, la plupart des bases de données utilisent le système de gestion de base de données relationnelle (SGBDR) pour organiser les données et la programmation en {{Glossary("SQL")}}. Cependant, certaines bases de données appelées NoSQL ne suivent pas l'ancien mécanisme de données organisées.
 

@@ -1,14 +1,13 @@
 ---
 title: font-stretch
 slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
-original_slug: Web/CSS/@font-face/font-stretch
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 {{deprecated_header}}
 
-**`font-stretch`** は CSS の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
+**`font-stretch`** は [CSS](/ja/docs/Web/CSS) の記述子で、ウェブページ作成者が {{cssxref("@font-face")}} アットルールで定義されているフォントが通常か、幅狭か、幅広かを指定できるようにします。
 
 ある特定のフォントについて、作成者は同じフォントの異なるスタイルに対応するさまざまなフォントフェイスをダウンロードでき、`font-stretch` 記述子を用いることでフォントフェイスのストレッチを明示的に指定します。この CSS 記述子の値は、対応するフォントプロパティの値と同じです。
 

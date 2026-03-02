@@ -3,7 +3,7 @@ title: <display-inside>
 slug: Web/CSS/Reference/Values/display-inside
 original_slug: Web/CSS/display-inside
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-inside>`** définit le type d'affichage ({{CSSxRef("display")}}) pour l'intérieur de l'élément. Ce type servira à la disposition du contenu de l'élément (si ce contenu n'est pas un élément remplacé). Ces mots-clés sont des valeurs de la propriété `display` et peuvent, historiquement être utilisé seul, ou plus récemment (cf. la spécification de niveau 3), être utilisé en combinaison avec un mot-clé {{CSSxRef("&lt;display-outside&gt;")}}.

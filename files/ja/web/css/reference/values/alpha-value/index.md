@@ -1,16 +1,15 @@
 ---
 title: <alpha-value>
 slug: Web/CSS/Reference/Values/alpha-value
-original_slug: Web/CSS/alpha-value
 l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`<alpha-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)であり、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} によって色の **{{Glossary("alpha", "アルファチャネル")}}** または **透過性** を表します。
+**`<alpha-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)であり、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} によって色の **{{Glossary("alpha", "アルファチャネル")}}** または**透過性**を表します。
 
 ## 構文
 
-`<alpha-value>` の値は [`<number>`](/ja/docs/Web/CSS/Reference/Values/number) または {{cssxref("percentage")}} のどちらかで指定します。
+`<alpha-value>` の値は {{cssxref("number")}} または {{cssxref("percentage")}} のどちらかで指定します。
 
 数値で指定した場合、有用な範囲は 0 （完全に透明）から 1.0 （完全に不透明）であり，その中間の 10 進数の値です。 0.5 は前景色が半分、背景色が半分使用されることを示します。 0 から 1 までの範囲の外にある値も許容されますが、 0 から 1 の範囲に収まるように[制限](<https://en.wikipedia.org/wiki/Clamping_(graphics)>)が行われます。
 
@@ -55,4 +54,4 @@ shape-image-threshold: 0.7;
 - [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)
 - [CSS 色](/ja/docs/Web/CSS/Guides/Colors)
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}

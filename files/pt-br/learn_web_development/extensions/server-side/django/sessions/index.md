@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -12,7 +12,7 @@ original_slug: Learn/Server-side/Django/Sessions
       <th scope="row">Pré-requisitos:</th>
       <td>
         Completar todos os tópicos anteriores do tutorial, incluindo
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -172,4 +172,4 @@ Em nosso próximo artigo nós iremos explicar a estrutura de autenticação e au
 
 - [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}

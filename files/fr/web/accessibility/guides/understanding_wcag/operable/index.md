@@ -35,7 +35,7 @@ Cette règle concerne la nécessité de rendre les fonctionnalités principales 
         >
         et
         <a
-          href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#rendre_l'accessibilité_clavier_personnalisée"
+          href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#rendre_laccessibilité_clavier_personnalisée"
           >Rendre l'accessibilité clavier personnalisée</a
         >
       </td>
@@ -64,7 +64,7 @@ Cette règle concerne la nécessité de rendre les fonctionnalités principales 
         >
         et
         <a
-          href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#rendre_l'accessibilité_clavier_personnalisée"
+          href="/fr/docs/Learn_web_development/Core/Accessibility/HTML#rendre_laccessibilité_clavier_personnalisée"
           >Rendre l'accessibilité clavier personnalisée</a
         >
       </td>

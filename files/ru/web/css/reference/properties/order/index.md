@@ -79,7 +79,7 @@ order: unset;
 > [!NOTE]
 > `order` воздействует только на **визуальный порядок** элементов, но не логический порядок или табуляцию. `order` не должен применяться к невизуальным медиаданным, таким как речь.
 
-Посмотрите [Используем CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) для более подробной информации и дополнительных свойствах.
+Посмотрите [Используем CSS flexible boxes](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) для более подробной информации и дополнительных свойствах.
 
 ### Значения
 

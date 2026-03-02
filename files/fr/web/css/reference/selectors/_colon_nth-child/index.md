@@ -1,9 +1,8 @@
 ---
 title: :nth-child
 slug: Web/CSS/Reference/Selectors/:nth-child
-original_slug: Web/CSS/:nth-child
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-child()`** permet de cibler les éléments en se basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe ciblera les éléments selon leur position parmi leurs voisins appartenant à un même parent.
@@ -519,8 +518,8 @@ tbody tr :nth-child(3) {
 
 ## Voir aussi
 
-- [`:nth-of-type()`](/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type)
-- [`:nth-last-child()`](/fr/docs/Web/CSS/Reference/Selectors/:nth-last-child)
-- La pseudo-classe [`:has()`](/fr/docs/Web/CSS/Reference/Selectors/:has) qui cible l'élément parent
-- [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes#pseudo-classes_relatives_%C3%A0_larborescence)
+- La pseudo-classe {{CSSxRef(":nth-of-type()")}}
+- La pseudo-classe {{CSSxRef(":nth-last-child()")}}
+- La pseudo-classe {{CSSxRef(":has()")}} qui cible l'élément parent
+- [Les pseudo-classes relatives à l'arborescence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes#pseudo-classes_relatives_à_larborescence)
 - Le module relatif [aux sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

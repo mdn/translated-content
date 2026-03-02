@@ -1,9 +1,8 @@
 ---
 title: text-spacing-trim
 slug: Web/CSS/Reference/Properties/text-spacing-trim
-original_slug: Web/CSS/text-spacing-trim
 l10n:
-  sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{seecompattable}}
@@ -171,5 +170,6 @@ p {
 
 ## 関連情報
 
-- [`ic`](/ja/docs/Web/CSS/Guides/Values_and_units#local_font-relative_lengths) および [`ric`](/ja/docs/Web/CSS/Guides/Values_and_units#root_font-relative_lengths) の単位
+- {{CSSXref("text-autospace")}}
+- [`ic`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ローカルフォント相対長) および [`ric`](/ja/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#ルートフォント相対長) 単位
 - [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュール

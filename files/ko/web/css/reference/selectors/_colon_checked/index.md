@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:checked
 original_slug: Web/CSS/:checked
 ---
 
-**`:checked`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 선택자는 선택했거나 `on` 상태인 **라디오**([`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)), **체크박스**([`<input type="checkbox">`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox)), **옵션**({{HTMLElement("option")}} 요소를 나타냅니다.
+**`:checked`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes) 선택자는 선택했거나 `on` 상태인 **라디오**([`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)), **체크박스**([`<input type="checkbox">`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox)), **옵션**({{HTMLElement("option")}} 요소를 나타냅니다.
 
 ```css
 /* Matches any checked/selected radio, checkbox, or option */
@@ -17,7 +17,7 @@ original_slug: Web/CSS/:checked
 사용자가 요소를 체크했거나 선택한 경우 활성화되고, 체크나 선택을 해제하는 경우 비활성화됩니다.
 
 > [!NOTE]
-> 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
+> 많은 경우 브라우저는 `<option>` 요소를 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)로 취급하므로, `:checked` 의사 클래스를 사용한 스타일을 적용할 수 있는 범위도 브라우저마다 다릅니다.
 
 ## 구문
 

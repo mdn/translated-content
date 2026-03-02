@@ -1,5 +1,5 @@
 ---
-title: Date.parse()
+title: "Date : méthode statique parse()"
 short-title: parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 l10n:
@@ -36,25 +36,25 @@ Date.parse(dateString)
 
 ### Valeur de retour
 
-Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#le_format_epoch_les_horodatages_et_les_dates_invalides) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{jsxref("NaN")}} est renvoyé.
+Un nombre représentant l'[horodatage (<i lang="en">timestamp</i> en anglais)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) de la date donnée. Si `dateString` ne peut pas être analysé comme une date valide, {{JSxRef("NaN")}} est renvoyé.
 
 ## Description
 
-Cette fonction est utile pour définir des valeurs de date à partir de chaînes de caractères, par exemple en combinaison avec la méthode {{jsxref("Date/setTime", "setTime()")}}.
+Cette fonction est utile pour définir des valeurs de date à partir de chaînes de caractères, par exemple en combinaison avec la méthode {{JSxRef("Date/setTime", "setTime()")}}.
 
 Les formats que `parse()` peut traiter ne sont pas explicitement spécifiés, mais il existe quelques {{Glossary("invariant", "invariants")}}&nbsp;:
 
-- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure) (produit par {{jsxref("Date/toISOString", "toISOString()")}}) doit être pris en charge.
-- Si `x` est un objet Date dont la valeur en millisecondes est zéro, alors `x.valueOf()` doit être égal à l'une des valeurs suivantes&nbsp;: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. Cela signifie que les formats produits par {{jsxref("Date/toString", "toString()")}} et {{jsxref("Date/toUTCString", "toUTCString()")}} doivent aussi être pris en charge.
-- La spécification _n'exige pas_ la prise en charge du format produit par {{jsxref("Date/toLocaleString", "toLocaleString()")}}. Cependant, les principaux moteurs essaient tous de prendre en charge le format `toLocaleString("en-US")`.
+- Le [format de chaîne de caractères date-heure](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#format_de_chaîne_de_date_et_heure) (produit par {{JSxRef("Date/toISOString", "toISOString()")}}) doit être pris en charge.
+- Si `x` est un objet Date dont la valeur en millisecondes est zéro, alors `x.valueOf()` doit être égal à l'une des valeurs suivantes&nbsp;: `Date.parse(x.toString())`, `Date.parse(x.toUTCString())`, `Date.parse(x.toISOString())`. Cela signifie que les formats produits par {{JSxRef("Date/toString", "toString()")}} et {{JSxRef("Date/toUTCString", "toUTCString()")}} doivent aussi être pris en charge.
+- La spécification _n'exige pas_ la prise en charge du format produit par {{JSxRef("Date/toLocaleString", "toLocaleString()")}}. Cependant, les principaux moteurs essaient tous de prendre en charge le format `toLocaleString("en-US")`.
 
-Les autres formats dépendent de l'implémentation et peuvent ne pas fonctionner sur tous les navigateurs. Une bibliothèque peut être utile si de nombreux formats différents doivent être pris en charge. En fait, le manque de fiabilité de `Date.parse()` est l'une des raisons de l'introduction de l'API {{jsxref("Temporal")}}.
+Les autres formats dépendent de l'implémentation et peuvent ne pas fonctionner sur tous les navigateurs. Une bibliothèque peut être utile si de nombreux formats différents doivent être pris en charge. En fait, le manque de fiabilité de `Date.parse()` est l'une des raisons de l'introduction de l'objet {{JSxRef("Temporal")}}.
 
 Comme `parse()` est une méthode statique de `Date`, vous l'utilisez toujours comme `Date.parse()`, et non comme une méthode d'un objet `Date` que vous avez créé.
 
 ## Exemples
 
-### Utilisation de Date.parse()
+### Utiliser la méthode `parse()`
 
 Les appels suivants renvoient tous `1546300800000`. Le premier impliquera l'heure UTC car il s'agit uniquement d'une date, et les autres spécifient explicitement le fuseau horaire UTC.
 
@@ -70,9 +70,9 @@ L'appel suivant, qui ne précise pas de fuseau horaire, sera interprété comme 
 Date.parse("2019-01-01T00:00:00");
 ```
 
-### Formats toString() et toUTCString()
+### Formats `toString()` et `toUTCString()`
 
-En plus du format standard de chaîne de caractères date et heure, les formats {{jsxref("Date/toString", "toString()")}} et {{jsxref("Date/toUTCString", "toUTCString()")}} sont pris en charge&nbsp;:
+En plus du format standard de chaîne de caractères date et heure, les formats {{JSxRef("Date/toString", "toString()")}} et {{JSxRef("Date/toUTCString", "toUTCString()")}} sont pris en charge&nbsp;:
 
 ```js
 // format toString()
@@ -230,4 +230,4 @@ Voici d'autres exemples de chaînes de date non standard. Les navigateurs sont t
 
 ## Voir aussi
 
-- {{jsxref("Date.UTC()")}}
+- La méthode statique {{JSxRef("Date.UTC()")}}

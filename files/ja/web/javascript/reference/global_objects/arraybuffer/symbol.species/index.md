@@ -1,11 +1,10 @@
 ---
 title: ArrayBuffer[Symbol.species]
+short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`ArrayBuffer[Symbol.species]`** は静的アクセサープロパティで、配列バッファーメソッドから返値を作成するために使用されるコンストラクターを返します。
 

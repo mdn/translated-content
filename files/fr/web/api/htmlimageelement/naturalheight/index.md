@@ -3,12 +3,12 @@ title: "HTMLImageElement : propriété naturalHeight"
 short-title: naturalHeight
 slug: Web/API/HTMLImageElement/naturalHeight
 l10n:
-  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`naturalHeight`** de l'interface {{domxref("HTMLImageElement")}} retourne la hauteur intrinsèque (naturelle), corrigée de la densité, de l'image en {{Glossary("CSS pixel", "pixels CSS")}}.
+La propriété en lecture seule **`naturalHeight`** de l'interface {{DOMxRef("HTMLImageElement")}} retourne la hauteur intrinsèque (naturelle), corrigée de la densité, de l'image en {{Glossary("CSS pixel", "pixels CSS")}}.
 
 Il s'agit de la hauteur de l'image lorsqu'aucune contrainte n'est appliquée&nbsp;: si vous ne spécifiez pas de hauteur pour l'image, ou si l'image est placée dans un conteneur qui limite ou définit explicitement la hauteur, elle sera affichée à cette hauteur naturelle.
 
@@ -18,7 +18,7 @@ Il s'agit de la hauteur de l'image lorsqu'aucune contrainte n'est appliquée&nbs
 
 ## Valeur
 
-Un entier indiquant la hauteur intrinsèque, en pixels CSS, de l'image. Il s'agit de la hauteur à laquelle l'image est affichée naturellement lorsqu'aucune contrainte ou valeur spécifique n'est définie pour l'image. Cette hauteur naturelle est corrigée en fonction de la densité de pixels de l'appareil sur lequel elle est affichée, contrairement à {{domxref("HTMLImageElement.height", "height")}}.
+Un entier indiquant la hauteur intrinsèque, en pixels CSS, de l'image. Il s'agit de la hauteur à laquelle l'image est affichée naturellement lorsqu'aucune contrainte ou valeur spécifique n'est définie pour l'image. Cette hauteur naturelle est corrigée en fonction de la densité de pixels de l'appareil sur lequel elle est affichée, contrairement à {{DOMxRef("HTMLImageElement.height", "height")}}.
 
 Si la hauteur intrinsèque n'est pas disponible — soit parce que l'image ne la spécifie pas, soit parce que les données de l'image ne sont pas accessibles pour obtenir cette information — `naturalHeight` retourne 0.
 
@@ -31,7 +31,7 @@ Cet exemple affiche à la fois la taille naturelle, corrigée de la densité, d'
 ```html
 <div class="box">
   <img
-    src="/en-US/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png"
+    src="/fr/docs/Web/HTML/Reference/Elements/img/clock-demo-400px.png"
     class="image"
     alt="Une horloge murale ronde avec un cadran blanc et des chiffres noirs" />
 </div>
@@ -67,11 +67,11 @@ image.addEventListener("load", (event) => {
 });
 ```
 
-Le code JavaScript affiche les tailles naturelle et affichée dans l'élément {{HTMLElement("pre")}}. Cela se fait en réponse à l'événement {{domxref("HTMLElement.load_event", "load")}} de l'image, afin de s'assurer que l'image est disponible avant d'examiner sa largeur et sa hauteur.
+Le code JavaScript affiche les tailles naturelle et affichée dans l'élément {{HTMLElement("pre")}}. Cela se fait en réponse à l'événement {{DOMxRef("HTMLElement.load_event", "load")}} de l'image, afin de s'assurer que l'image est disponible avant d'examiner sa largeur et sa hauteur.
 
 ### Résultat
 
-{{EmbedLiveSample("exemples", 600, 280)}}
+{{EmbedLiveSample("Exemples", 600, 280)}}
 
 ## Spécifications
 
@@ -80,3 +80,8 @@ Le code JavaScript affiche les tailles naturelle et affichée dans l'élément {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("HTMLImageElement.height")}}
+- La propriété {{DOMxRef("HTMLImageElement.naturalWidth")}}

@@ -1,15 +1,15 @@
 ---
-title: "スキルテスト: 値と単位"
+title: "確認テスト: 値と単位"
 short-title: 値と単位
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
 ---
 
-このスキルテストの目的は、 [CSS プロパティで使われる様々な種類の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS プロパティで使われる様々な種類の値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 

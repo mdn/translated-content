@@ -1,17 +1,16 @@
 ---
 title: font-family
 slug: Web/CSS/Reference/Properties/font-family
-original_slug: Web/CSS/font-family
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 5a8de324f0aa3873d757f68e4fcaf6bbc0104711
 ---
 
-**`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
+**`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や一般ファミリー名の優先順位リストを指定することができます。
 
 {{InteractiveExample("CSS デモ: font-family")}}
 
 ```css interactive-example-choice
-font-family: Georgia, serif;
+font-family: "Georgia", serif;
 ```
 
 ```css interactive-example-choice
@@ -56,18 +55,18 @@ section {
 
 一括指定プロパティの {{CSSxRef("font")}} を使用すると、 `font-size` やその他のフォント関連プロパティを一度に設定できるのでふつうは便利です。
 
-指定されたフォントが利用可能であるという保証はないので、 `font-family` リストの中に、総称ファミリーを少なくとも 1 つ、常に追加しておくべきです。総称ファミリーを使うことで、必要ならば、ブラウザーで受け付け可能な代替フォントを選択させることができます。
+指定されたフォントが利用可能であるという保証はないので、 `font-family` リストの中に、一般ファミリーを少なくとも 1 つ、常に追加しておくべきです。一般ファミリーを使うことで、必要ならば、ブラウザーで受け付け可能な代替フォントを選択させることができます。
 
 `font-family` プロパティでは、優先順位の高い方から低い方へ、フォントのリストを指定します。フォント選択は、ユーザーのシステム上に存在する、リスト中の一番最初に指定されたフォントを選んで終わるとは**限りません**。むしろ、フォント選択は **1 文字ずつ**行われます。なぜなら、利用可能なフォントが、その文字を表示するのに必要なグリフを欠いている場合には、そのフォントよりも順位の低い利用可能なフォントが試行されるからです。あるフォントが一部の[スタイル](/ja/docs/Web/CSS/Reference/Properties/font-style)、[種類](/ja/docs/Web/CSS/Reference/Properties/font-variant)、[大きさ](/ja/docs/Web/CSS/Reference/Properties/font-size)でのみ利用可能な場合、これらのプロパティがフォントファミリーの選択に影響する可能性があります。
 
 ## 構文
 
 ```css
-/* フォントファミリー名および総称ファミリー名 */
+/* フォントファミリー名および一般ファミリー名 */
 font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
-/* 総称ファミリー名のみ */
+/* 一般ファミリー名のみ */
 font-family: serif;
 font-family: sans-serif;
 font-family: monospace;
@@ -78,7 +77,6 @@ font-family: ui-serif;
 font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
-font-family: emoji;
 font-family: math;
 font-family: fangsong;
 
@@ -105,19 +103,19 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
     空白文字や数字、ハイフン以外の句読点を含むフォントファミリの名前は引用するのがよい習慣です。
 
-    [有効なファミリ名](#有効なファミリ名)も参照してください。
+    [有効なファミリー名](#有効なファミリー名)も参照してください。
 
 - `<generic-name>`
-  - : 総称フォントファミリーは代替の仕組みです。この仕組みによって、指定されたフォントがどれも利用できなかった場合、スタイルシート製作者の意図を多少なりとも保つことができます。総称ファミリー名はキーワードであり、引用符で囲んではいけません。総称フォントファミリーは、フォントファミリー名リストの最終選択肢である必要があります。以下のキーワードが定義されています。
+  - : 一般フォントファミリーは代替の仕組みです。この仕組みによって、指定されたフォントがどれも利用できなかった場合、スタイルシート製作者の意図を多少なりとも保つことができます。一般ファミリー名はキーワードであり、引用符で囲んではいけません。一般フォントファミリーは、フォントファミリー名リストの最終選択肢である必要があります。以下のキーワードが定義されています。
     - `serif`
       - : 終わりが止めや払い、または実際の活字のセリフの形をした角を持つ字形です。
 
-        例: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif
+        例: 明朝体、Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif
 
     - `sans-serif`
       - : 平たい角の端を持つ字形です。
 
-        例: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
+        例: ゴシック体、Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
 
     - `monospace`
       - : すべての字が同じ幅を持つ字形です。
@@ -127,7 +125,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `cursive`
       - : 筆記体フォントの字形には、一般に、続け書き、もしくは、イタリック体の特性以上に、その他の筆記体の特性があります。字形は、部分的に、あるいは完全につながっていて、仕上がりは、印刷された活字というよりは、手書きのペンまたは毛筆で書かれたように見えます。
 
-        例: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive
+        例: 草書体、楷書体、Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive
 
     - `fantasy`
       - : fantasy フォントは、遊び心に溢れた文字表現を含む、主として装飾的なフォントです。
@@ -135,7 +133,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
         例: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy
 
     - `system-ui`
-      - : 指定されたプラットフォームの既定のユーザーインターフェイスフォントからグリフを取ります。文字の伝統は世界で様々であるため、この総称は他の総称にきれいに一致しない文字フォントを提供します。
+      - : 指定されたプラットフォームの既定のユーザーインターフェイスフォントからグリフを取ります。文字の伝統は世界で様々であるため、この一般は他の一般にきれいに一致しない文字フォントを提供します。
+        > [!NOTE]
+        > その名の通り、`system-ui`は UI 要素をネイティブアプリのように見せるためのものであり、長文のテキストを組版するためのものではありません。そのため、表示される書体が一部のユーザーにとって好ましくない場合があります。例えば、Windows のデフォルト CJK フォントは、ラテン文字の表示が不十分な場合があり、`lang` 属性が表示フォントに影響しないことがあります。OS によっては `system-ui` のカスタマイズが許可されていませんが、ブラウザーでは一般的に `sans-serif` フォントファミリーのカスタマイズが可能です。長文の段落には、代わりに `sans-serif` やそれ以外の非 UI フォントファミリーを使用してください。
     - `ui-serif`
       - : ユーザーインターフェイス既定のセリフ付きフォントです。
     - `ui-sans-serif`
@@ -145,9 +145,8 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `ui-rounded`
       - : ユーザーインターフェイス既定の丸い特性を持ったフォントです。
     - `math`
-      - : これは、数式を表現するための特別なスタイル上の概念のためのものです。上付き文字と下付き文字、複数行をまたぐ括弧、式の入れ子、明確な意味を持つ二重のグリフなどです。
-    - `emoji`
-      - : 絵文字を表示するために特別にデザインされたフォントです。
+      - : これは、数式を表現するための特別なスタイル上の概念のためのものです。上付き文字や下付き文字、複数行を掛かる括弧、式の入れ子、明確な意味を持つ二重のグリフなどです。
+        UA スタイルシートは `math { font-family: math }` を設定して、 {{MathMLElement("math")}} 要素がデフォルトで適切なフォントを使用するようにしていることがあります。
     - `fangsong`
       - : セリフ風の明朝体と手書き風の楷書体との間にある中国語の文字の特定のスタイル (宋朝体) です。このスタイルは政府文書によく使用されます。
 
@@ -161,19 +160,19 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 ## 例
 
-<h3 id="Some_common_font_families">よくあるいくつかのフォントファミリー</h3>
+### よくあるいくつかのフォントファミリー
 
 ```css
 .serif {
-  font-family: Times, "Times New Roman", Georgia, serif;
+  font-family: "Times", "Times New Roman", "Georgia", serif;
 }
 
 .sansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
 .monospace {
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .cursive {
@@ -184,16 +183,18 @@ font-family: "Gill Sans Extrabold", sans-serif;
   font-family: fantasy;
 }
 
-.emoji {
-  font-family: emoji;
-}
-
 .math {
   font-family: math;
 }
 
 .fangsong {
   font-family: fangsong;
+}
+```
+
+```css hidden
+div {
+  margin: 0.5rem;
 }
 ```
 
@@ -208,16 +209,14 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
 <div class="fantasy">これは fantasy フォントの例です。</div>
 
-<div class="math">これは math フォントの例です。</div>
-
-<div class="emoji">これは emoji フォントの例です。</div>
-
 <div class="fangsong">これは fangsong フォントの例です。</div>
+
+<div class="math">これは math フォントの例です。</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}
 
-### 有効なファミリ名
+### 有効なファミリー名
 
 以下の宣言は有効です。
 
@@ -257,4 +256,6 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
+- {{cssxref("font-variant-emoji")}}
+- SVG の {{SVGAttr("font-family")}} 属性
 - [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

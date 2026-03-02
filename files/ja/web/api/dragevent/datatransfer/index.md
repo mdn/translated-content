@@ -3,7 +3,7 @@ title: "DragEvent: dataTransfer プロパティ"
 short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -16,6 +16,8 @@ l10n:
 
 {{domxref("DataTransfer")}} オブジェクトで、{{domxref("DragEvent","ドラッグイベントのデータ", "", 1)}}が入ります。
 
+このプロパティは、コンストラクターを使用してイベントが作成された場合に `null` となる可能性があります。ブラウザーによって配信される場合には決して `null` にはなりません。
+
 ## 例
 
 この例では、 {{domxref("HTMLElement/dragend_event", "dragend")}} イベントハンドラーの中でドラッグ＆ドロップデータへアクセスする方法を説明します。
@@ -25,14 +27,10 @@ function processData(d) {
   // データを処理...
 }
 
-dragTarget.addEventListener(
-  "dragend",
-  (ev) => {
-    // ドラッグ＆ドロップのデータ処理を呼び出す
-    if (ev.dataTransfer !== null) processData(ev.dataTransfer);
-  },
-  false,
-);
+dragTarget.addEventListener("dragend", (ev) => {
+  // ドラッグ＆ドロップのデータ処理を呼び出す
+  if (ev.dataTransfer !== null) processData(ev.dataTransfer);
+});
 ```
 
 ## 仕様書

@@ -7,32 +7,32 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLDialogElement`** fournit des méthodes pour manipuler les éléments {{HTMLElement("dialog")}}. Elle hérite des propriétés et méthodes de l'interface parente {{domxref("HTMLElement")}}.
+L'interface **`HTMLDialogElement`** fournit des méthodes pour manipuler les éléments {{HTMLElement("dialog")}}. Elle hérite des propriétés et méthodes de l'interface parente {{DOMxRef("HTMLElement")}}.
 
 {{InheritanceDiagram}}
 
 ## Propriétés d'instance
 
-_Hérite également des propriétés de son interface parente, {{domxref("HTMLElement")}}._
+_Hérite également des propriétés de son interface parente, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLDialogElement.closedBy")}}
+- {{DOMxRef("HTMLDialogElement.closedBy")}}
   - : Chaîne de caractères définissant ou retournant la valeur de l'attribut [`closedby`](/fr/docs/Web/HTML/Reference/Elements/dialog#closedby) de l'élément `<dialog>`, qui indique les types d'actions utilisateur permettant de fermer la boîte de dialogue.
-- {{domxref("HTMLDialogElement.open")}}
+- {{DOMxRef("HTMLDialogElement.open")}}
   - : Booléen reflétant l'attribut HTML [`open`](/fr/docs/Web/HTML/Reference/Elements/dialog#open), indiquant si la boîte de dialogue est disponible pour l'interaction.
-- {{domxref("HTMLDialogElement.returnValue")}}
+- {{DOMxRef("HTMLDialogElement.returnValue")}}
   - : Chaîne de caractères définissant ou retournant la valeur de retour de la boîte de dialogue.
 
 ## Méthodes d'instance
 
-_Hérite également des méthodes de son interface parente, {{domxref("HTMLElement")}}._
+_Hérite également des méthodes de son interface parente, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLDialogElement.close()")}}
+- {{DOMxRef("HTMLDialogElement.close()")}}
   - : Ferme la boîte de dialogue. Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
-- {{domxref("HTMLDialogElement.requestClose()")}}
+- {{DOMxRef("HTMLDialogElement.requestClose()")}}
   - : Demande la fermeture de la boîte de dialogue. Une chaîne de caractères optionnelle peut être passée en argument, ce qui met à jour la propriété `returnValue` de la boîte de dialogue.
-- {{domxref("HTMLDialogElement.show()")}}
+- {{DOMxRef("HTMLDialogElement.show()")}}
   - : Affiche la boîte de dialogue de manière non modale, c'est-à-dire en permettant toujours l'interaction avec le contenu extérieur à la boîte de dialogue.
-- {{domxref("HTMLDialogElement.showModal()")}}
+- {{DOMxRef("HTMLDialogElement.showModal()")}}
   - : Affiche la boîte de dialogue en modal, au-dessus de toute autre boîte de dialogue éventuellement présente. Tout ce qui se trouve en dehors de la boîte de dialogue devient [inerte](/fr/docs/Web/API/HTMLElement/inert) et les interactions extérieures sont bloquées.
 
 ## Événements
@@ -41,21 +41,21 @@ _Hérite également des événements de son interface parente, {{DOMxRef("HTMLEl
 
 Écoutez ces événements à l'aide de {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} ou en assignant un écouteur à la propriété `oneventname` de cette interface.
 
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
+- {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}}
   - : Déclenché lorsque la boîte de dialogue reçoit une demande de fermeture, que ce soit avec la touche <kbd>Échap</kbd>&nbsp;ou via la méthode `HTMLDialogElement.requestClose()`.
-- {{domxref("HTMLDialogElement/close_event", "close")}}
+- {{DOMxRef("HTMLDialogElement/close_event", "close")}}
   - : Déclenché lorsque la boîte de dialogue est fermée, que ce soit avec la touche <kbd>Échap</kbd>, la méthode `HTMLDialogElement.close()`, ou en soumettant un formulaire à l'intérieur de la boîte de dialogue avec [`method="dialog"`](/fr/docs/Web/HTML/Reference/Elements/form#method).
 
 ## Exemples
 
 ### Ouvrir une boîte de dialogue modale
 
-L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, utilise la fonction {{domxref("HTMLDialogElement.showModal()")}} pour ouvrir une boîte de dialogue modale {{htmlelement("dialog")}} contenant un formulaire.
+L'exemple suivant montre un bouton qui, lorsqu'il est cliqué, utilise la fonction {{DOMxRef("HTMLDialogElement.showModal()")}} pour ouvrir une boîte de dialogue modale {{HTMLElement("dialog")}} contenant un formulaire.
 
 Lorsque la boîte de dialogue est ouverte, tout ce qui n'est pas son contenu devient inerte.
-Vous pouvez cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la fonction {{domxref("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton _Confirmer_.
+Vous pouvez cliquer sur le bouton _Annuler_ pour fermer la boîte de dialogue (via la fonction {{DOMxRef("HTMLDialogElement.close()")}}), ou soumettre le formulaire avec le bouton _Confirmer_.
 
-Cet exemple montre comment utiliser tous les événements de «&nbsp;changement d'état&nbsp;» pouvant être déclenchés sur la boîte de dialogue&nbsp;: {{domxref("HTMLDialogElement/cancel_event", "cancel")}}, {{domxref("HTMLDialogElement/close_event", "close")}}, ainsi que les événements hérités {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}} et {{domxref("HTMLElement/toggle_event", "toggle")}}.
+Cet exemple montre comment utiliser tous les événements de «&nbsp;changement d'état&nbsp;» pouvant être déclenchés sur la boîte de dialogue&nbsp;: {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}}, {{DOMxRef("HTMLDialogElement/close_event", "close")}}, ainsi que les événements hérités {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}} et {{DOMxRef("HTMLElement/toggle_event", "toggle")}}.
 
 #### HTML
 
@@ -109,8 +109,8 @@ function log(text) {
 
 ##### Affichage de la boîte de dialogue
 
-Le code commence par récupérer les objets pour les éléments {{htmlelement("button")}}, l'élément {{htmlelement("dialog")}} et l'élément {{htmlelement("select")}}.
-Il ajoute ensuite un écouteur d'événements pour appeler la fonction {{domxref("HTMLDialogElement.showModal()")}} lorsque le bouton _Mettre à jour_ est cliqué.
+Le code commence par récupérer les objets pour les éléments {{HTMLElement("button")}}, l'élément {{HTMLElement("dialog")}} et l'élément {{HTMLElement("select")}}.
+Il ajoute ensuite un écouteur d'événements pour appeler la fonction {{DOMxRef("HTMLDialogElement.showModal()")}} lorsque le bouton _Mettre à jour_ est cliqué.
 
 ```js
 const updateButton = document.getElementById("updateDetails");
@@ -128,7 +128,7 @@ updateButton.addEventListener("click", () => {
 ##### Boutons Annuler et Confirmer
 
 On ajoute ensuite des écouteurs aux événements `click` des boutons _Confirmer_ et _Annuler_.
-Les gestionnaires appellent {{domxref("HTMLDialogElement.close()")}} avec la valeur sélectionnée (si présente) ou sans valeur, ce qui définit la valeur de retour de la boîte de dialogue ({{domxref("HTMLDialogElement.returnValue")}}) à la valeur sélectionnée ou à `null`.
+Les gestionnaires appellent {{DOMxRef("HTMLDialogElement.close()")}} avec la valeur sélectionnée (si présente) ou sans valeur, ce qui définit la valeur de retour de la boîte de dialogue ({{DOMxRef("HTMLDialogElement.returnValue")}}) à la valeur sélectionnée ou à `null`.
 
 ```js
 // Le bouton Confirmer ferme la boîte de dialogue si une valeur est sélectionnée.
@@ -145,7 +145,7 @@ cancelButton.addEventListener("click", () => {
 });
 ```
 
-Appeler `close()` déclenche également l'événement {{domxref("HTMLDialogElement/close_event", "close")}}, que nous implémentons ci-dessous en journalisant la valeur de retour de la boîte de dialogue.
+Appeler `close()` déclenche également l'événement {{DOMxRef("HTMLDialogElement/close_event", "close")}}, que nous implémentons ci-dessous en journalisant la valeur de retour de la boîte de dialogue.
 Si le bouton _Confirmer_ a été cliqué, cela doit être la valeur sélectionnée dans la boîte de dialogue, sinon ce sera `null`.
 
 ```js
@@ -156,10 +156,10 @@ dialog.addEventListener("close", (event) => {
 
 ##### Événement cancel
 
-L'événement {{domxref("HTMLDialogElement/cancel_event", "cancel")}} est déclenché lorsque des «&nbsp;moyens spécifiques à la plateforme&nbsp;» sont utilisés pour fermer la boîte de dialogue, comme la touche <kbd>Échap</kbd>.
+L'événement {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}} est déclenché lorsque des «&nbsp;moyens spécifiques à la plateforme&nbsp;» sont utilisés pour fermer la boîte de dialogue, comme la touche <kbd>Échap</kbd>.
 Il est aussi déclenché lorsque la méthode `HTMLDialogElement.requestClose()` est appelée.
 C'est un événement «&nbsp;annulable&nbsp;», ce qui signifie qu'on peut l'utiliser pour empêcher la fermeture de la boîte de dialogue.
-Ici, on traite simplement l'annulation comme une opération de fermeture, et on réinitialise la propriété {{domxref("HTMLDialogElement.returnValue")}} à `""` pour effacer toute valeur éventuellement définie.
+Ici, on traite simplement l'annulation comme une opération de fermeture, et on réinitialise la propriété {{DOMxRef("HTMLDialogElement.returnValue")}} à `""` pour effacer toute valeur éventuellement définie.
 
 ```js
 dialog.addEventListener("cancel", (event) => {
@@ -176,7 +176,7 @@ Ici, on ajoute un écouteur pour journaliser l'ouverture et la fermeture de la b
 
 > [!NOTE]
 > Les événements `toggle` et `beforetoggle` peuvent ne pas être déclenchés sur les éléments dialog dans tous les navigateurs.
-> Sur ces versions, vous pouvez vérifier la propriété {{domxref("HTMLDialogElement.open")}} après avoir tenté d'ouvrir/fermer la boîte de dialogue.
+> Sur ces versions, vous pouvez vérifier la propriété {{DOMxRef("HTMLDialogElement.open")}} après avoir tenté d'ouvrir/fermer la boîte de dialogue.
 
 ```js
 dialog.addEventListener("toggle", (event) => {
@@ -210,7 +210,7 @@ dialog.addEventListener("beforetoggle", (event) => {
 
 Notez que les boutons _Confirmer_ et _Annuler_ déclenchent tous deux l'événement `close`, et que le résultat doit refléter l'option sélectionnée dans la boîte de dialogue.
 
-{{EmbedLiveSample("ouvrir_une_boîte_de_dialogue_modale", '100%', "250px")}}
+{{EmbedLiveSample("Ouvrir une boîte de dialogue modale", '100%', 250)}}
 
 ## Spécifications
 
@@ -222,5 +222,4 @@ Notez que les boutons _Confirmer_ et _Annuler_ déclenchent tous deux l'événem
 
 ## Voir aussi
 
-- Élément HTML implémentant cette interface&nbsp;:
-  - {{HTMLElement("dialog")}}
+- L'élément HTML implémentant cette interface&nbsp;: {{HTMLElement("dialog")}}

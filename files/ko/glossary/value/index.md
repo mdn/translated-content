@@ -11,7 +11,7 @@ l10n:
 
 CSS 속성 값의 맥락에는, 지정된 값, 계산된 값, 실제 값이 있습니다. 모든 요소와 의사 요소에 적용되는 모든 CSS 속성의 최종 값은 4단계를 통한 계산의 결과입니다. 이 값은 명세서([지정된 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing))를 통해 결정된 다음, 상속에 사용되는 값([계산된 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e))으로 해석됩니다. 그 후에 필요한 경우 절대값([사용된 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2))으로 변환되고, 최종적으로 로컬 환경([실제 값](/ko/docs/Web/CSS/actual_value))의 제한에 따라 변환됩니다.
 
-CSS 데이터 타입은 [CSS 값 및 단위](/ko/docs/Web/CSS/CSS_values_and_units)를 참조하세요.
+CSS 데이터 타입은 [CSS 값 및 단위](/ko/docs/Web/CSS/Guides/Values_and_units)를 참조하세요.
 
 ## 같이 보기
 

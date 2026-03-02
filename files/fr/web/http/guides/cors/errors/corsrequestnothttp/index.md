@@ -26,7 +26,7 @@ Pour corriger ce problème, assurez-vous d'utiliser des URL HTTPS lors de requê
 
 ### Chargement d'un fichier local
 
-Les fichiers locaux appartenant au même répertoire et aux sous-répertoires étaient, par le passé, considérés comme provenant de la [même origine](/fr/docs/Web/Security/Same-origin_policy).
+Les fichiers locaux appartenant au même répertoire et aux sous-répertoires étaient, par le passé, considérés comme provenant de la [même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 
 Cela signifiait qu'un fichier et l'ensemble de ses ressources attachées pouvaient être chargés depuis un répertoire local (et les sous-répertoires associés) lors des tests, sans déclencher d'erreur CORS.
 

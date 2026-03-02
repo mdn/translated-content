@@ -1,12 +1,11 @@
 ---
 title: ::after
 slug: Web/CSS/Reference/Selectors/::after
-original_slug: Web/CSS/::after
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{CSSxRef("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::after", "tabbed-standard")}}
 
@@ -45,7 +44,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, [`::before`](/fr/docs/Web/CSS/Reference/Selectors/::before) et `::after` ne s'appliquent pas aux _[éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties)_ tels que les éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) ou [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
+> Les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément <sup>(angl.)</sup>](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, {{CSSxRef("::before")}} et `::after` ne s'appliquent pas aux [_éléments remplacés_](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) tels que les éléments {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 
@@ -60,16 +59,16 @@ a::after {
 
 Le pseudo-élément `::after` est un bloc en ligne (<i lang="en">inline box</i> en anglais) générée en tant qu'enfant immédiat de l'élément auquel il est associé, ou l'«&nbsp;élément d'origine&nbsp;». Il est souvent utilisé pour ajouter du contenu esthétique à un élément via la propriété {{CSSxRef("content")}}, comme des icônes, des guillemets ou d'autres décorations.
 
-Les pseudo-éléments `::after` ne peuvent pas être appliqués aux _{{ glossary("replaced elements", "éléments remplacés")}}_ tels que {{htmlelement("img")}}, dont le contenu est déterminé par des ressources externes et n'est pas affecté par les styles du document actuel.
+Les pseudo-éléments `::after` ne peuvent pas être appliqués aux _{{ Glossary("replaced elements", "éléments remplacés")}}_ tels que {{HTMLElement("img")}}, dont le contenu est déterminé par des ressources externes et n'est pas affecté par les styles du document actuel.
 
-Un pseudo-élément `::after` avec une valeur {{cssxref("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{cssxref("::marker")}}, tout comme un élément {{htmlelement("li")}} le fait.
+Un pseudo-élément `::after` avec une valeur {{CSSxRef("display")}} de `list-item` se comporte comme un élément de liste et peut donc générer un pseudo-élément {{CSSxRef("::marker")}}, tout comme un élément {{HTMLElement("li")}} le fait.
 
 Si la propriété {{CSSxRef("content")}} n'est pas indiquée, contient une valeur invalide, vaut `normal`, ou vaut `none`, le pseudo-élément `::after` ne sera pas rendu à l'écran. Il se comportera comme si `display: none` avait été appliqué.
 
 > [!NOTE]
 > CSS a introduit la notation `::after` (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Les navigateurs acceptent aussi la notation `:after`, introduite précédemment, à des fins de rétro-compatibilité.
 
-Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{cssxref("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
+Par défaut, les pseudo-éléments `::before` et `::after` partagent le même contexte d'empilement que leur parent. Si aucun {{CSSxRef("z-index")}} n'est explicitement défini, le contenu généré par le pseudo-élément `::after` apparaîtra au-dessus du contenu généré par le pseudo-élément `::before` parce que `::after` est rendu plus tard dans le flux DOM.
 
 ## Accessibilité
 
@@ -256,5 +255,5 @@ Lorsqu'on utilise des pseudo-éléments imbriqués, les puces de liste des trois
 
 ## Voir aussi
 
-- {{CSSxRef("::before")}}
-- {{CSSxRef("content")}}
+- Le pseudo-élément {{CSSxRef("::before")}}
+- La propriété {{CSSxRef("content")}}

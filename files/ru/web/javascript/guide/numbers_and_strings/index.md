@@ -3,7 +3,7 @@ title: Числа и даты
 slug: Web/JavaScript/Guide/Numbers_and_strings
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Данный раздел представляет собой введение в работу с числами и датами в JavaScript.
 
@@ -250,4 +250,4 @@ function JSClock() {
 
 В завершение всего, последнее условное выражение добавляет строку "P.M." к переменной `temp` если `hour` равно или больше 12, иначе, добавляется строка "A.M.".
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "conflicting/Web/JavaScript/Guide/Numbers_and_strings")}}

@@ -83,7 +83,7 @@ Tous les navigateurs tendent à exiger le protocole HTTPS par défaut. C'est dé
 
 Les rubriques connexes sont les suivantes&nbsp;:
 
-- [Transparence des certificats](/fr/docs/Web/Security/Certificate_Transparency)
+- [Transparence des certificats](/fr/docs/Web/Security/Defenses/Certificate_Transparency)
   - : Un standard ouvert pour surveiller et auditer les certificats, créant une base de données de journaux publics qui peut être utilisée pour aider à identifier les certificats incorrects ou malveillants.
 - [HTTP Strict Transport Security (HSTS)](/fr/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS est utilisé par les serveurs pour se protéger contre les attaques de rétrogradation de protocole et de détournement de cookies en permettant aux sites de dire aux clients qu'ils ne peuvent utiliser HTTPS que pour communiquer avec le serveur.
@@ -92,7 +92,7 @@ Les rubriques connexes sont les suivantes&nbsp;:
 
 ### Activer les « fonctionnalités avancées »
 
-Les soi-disant «&nbsp;fonctionnalités puissantes&nbsp;» des API Web qui fournissent un accès à des données et des opérations potentiellement sensibles ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), ce qui signifie essentiellement uniquement HTTPS. Non seulement cela, mais ces fonctionnalités Web sont soumises à un système d'autorisations utilisateur. Les utilisateur·ice·s doivent explicitement opter pour des fonctionnalités telles que l'autorisation des notifications, l'accès aux données de géolocalisation, le passage du navigateur en mode plein écran, l'accès aux flux multimédias des webcams, l'utilisation des paiements Web, etc.
+Les soi-disant «&nbsp;fonctionnalités puissantes&nbsp;» des API Web qui fournissent un accès à des données et des opérations potentiellement sensibles ne sont disponibles que dans des [contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts), ce qui signifie essentiellement uniquement HTTPS. Non seulement cela, mais ces fonctionnalités Web sont soumises à un système d'autorisations utilisateur. Les utilisateur·ice·s doivent explicitement opter pour des fonctionnalités telles que l'autorisation des notifications, l'accès aux données de géolocalisation, le passage du navigateur en mode plein écran, l'accès aux flux multimédias des webcams, l'utilisation des paiements Web, etc.
 
 ### Technologie anti-suivi
 
@@ -172,7 +172,7 @@ Bien sûr, il serait facile de gérer la confidentialité si vous ne vous préoc
 
 Les ressources tierces sont une partie essentielle du développement web moderne, elles offrent beaucoup de puissance. Cependant, toute ressource tierce que vous autorisez sur votre site a potentiellement les mêmes autorisations que vos propres ressources&nbsp;; tout dépend de la manière dont elle est incluse sur votre site&nbsp;:
 
-- JavaScript exécuté à l'intérieur du contenu tiers intégré dans votre site via un `<iframe>` est séparé par la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy), ce qui signifie qu'il n'aurait pas accès à d'autres scripts et données inclus dans le contexte de navigation de niveau supérieur.
+- JavaScript exécuté à l'intérieur du contenu tiers intégré dans votre site via un `<iframe>` est séparé par la [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy), ce qui signifie qu'il n'aurait pas accès à d'autres scripts et données inclus dans le contexte de navigation de niveau supérieur.
 - Cependant, un script tiers inclus directement dans votre page via un élément {{htmlelement("script")}} _aurait_ accès à vos autres scripts et données, qu'il soit hébergé sur votre site ou sur un autre site. Ce serait effectivement du code de première partie. Un script malveillant inclus de cette manière pourrait secrètement voler les données de vos utilisateur·ice·s, par exemple en les envoyant à un serveur tiers.
 
 Il est important d'auditer toutes les ressources tierces que vous utilisez sur votre site. Assurez-vous de savoir quelles données elles collectent, quelles requêtes elles effectuent et à qui, et quelles sont leurs politiques de confidentialité. Votre politique de confidentialité soigneusement conçue est inutile si vous utilisez un script tiers qui la viole.
@@ -192,7 +192,7 @@ La liste suivante fournit quelques conseils sur la façon d'atténuer les risque
 - Dans la mesure du possible, vous devez bloquer les tiers de recevoir un en-tête {{httpheader("Referer")}} lorsque vous leur faites des requêtes. Cela peut être fait de manière assez granulaire, par exemple en incluant [rel="noreferrer"](/fr/docs/Web/HTML/Reference/Attributes/rel/noreferrer) sur les liens externes. Ou, vous pourriez définir cela de manière plus globale pour la page ou le site, par exemple en utilisant l'en-tête {{httpheader("Referrer-Policy")}}.
 
   > [!NOTE]
-  > Voir aussi [En-tête Referer&nbsp;: problèmes de confidentialité et de sécurité](/fr/docs/Web/Security/Referer_header:_privacy_and_security_concerns).
+  > Voir aussi [En-tête Referer&nbsp;: problèmes de confidentialité et de sécurité](/fr/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns).
 
 - Utilisez l'en-tête HTTP {{httpheader("Permissions-Policy")}} pour contrôler l'accès aux «&nbsp;fonctionnalités puissantes&nbsp;» de l'API (telles que les notifications, les données de géolocalisation, l'accès aux flux multimédias des webcams, etc.). Cela peut être utile pour la confidentialité car cela empêche les sites tiers de faire des choses inattendues avec ces fonctionnalités, et les utilisateur·ice·s ne veulent pas être inutilement bombardés par des invites de permission qu'ils ne comprennent peut-être pas. Vous pouvez également contrôler l'utilisation des «&nbsp;fonctionnalités puissantes&nbsp;» à l'intérieur des sites tiers intégrés dans des éléments {{htmlelement("iframe")}} en spécifiant des politiques de permissions à l'intérieur d'un attribut `allow` sur l'`<iframe>` lui-même.
 

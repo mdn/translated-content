@@ -1,9 +1,8 @@
 ---
 title: update
 slug: Web/CSS/Reference/At-rules/@media/update
-original_slug: Web/CSS/@media/update
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`update`** peut être utilisée pour tester la fréquence à laquelle (le cas échéant) l'appareil de sortie est capable de modifier l'apparence du contenu une fois rendu.
@@ -65,4 +64,4 @@ La caractéristique `update` est définie avec un mot-clé parmi ceux de la list
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

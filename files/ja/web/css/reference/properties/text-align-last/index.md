@@ -1,9 +1,8 @@
 ---
 title: text-align-last
 slug: Web/CSS/Reference/Properties/text-align-last
-original_slug: Web/CSS/text-align-last
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-align-last`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
@@ -25,7 +24,7 @@ text-align-last: left;
 ```html interactive-example
 <section id="default-example">
   <div>
-    <p id="example-element" style="text-align: justify">
+    <p id="example-element">
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
       aliquip ex ea commodo consequat.
     </p>
@@ -40,6 +39,10 @@ section {
 
 #default-example > div {
   width: 250px;
+}
+
+#example-element {
+  text-align: justify;
 }
 ```
 

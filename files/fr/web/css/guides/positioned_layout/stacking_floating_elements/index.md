@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Stacking_floating_elements
 original_slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 ---
 
-{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_without_z-index","Web/CSS/Guides/Positioned_layout/Using_z-index", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}
 
 ## L'empilement et les éléments flottants
 
@@ -116,4 +116,4 @@ b {
 - [Exemple d'empilement n°2](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
 - [Exemple d'empilement n°3](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
 
-{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
+{{PreviousMenuNext("Web/CSS/Guides/Positioned_layout/Stacking_without_z-index","Web/CSS/Guides/Positioned_layout/Using_z-index", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}

@@ -3,7 +3,7 @@ title: Зацикливание кода
 slug: Learn_web_development/Core/Scripting/Loops
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 Языки программирования очень полезны для быстрой реализации повторяющихся задач. От базовых числовых операций до любой другой ситуации, когда у вас есть много похожих операций, которые нужно выполнить. В этой статье мы рассмотрим структуры циклов, доступные в JavaScript, которые можно использовать для этих целей.
 
@@ -872,4 +872,4 @@ do {
 - [break](/ru/docs/Web/JavaScript/Reference/Statements/break) и [continue](/ru/docs/Web/JavaScript/Reference/Statements/continue) описание
 - [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}

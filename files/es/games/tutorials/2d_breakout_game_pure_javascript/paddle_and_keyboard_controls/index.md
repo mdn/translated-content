@@ -3,7 +3,7 @@ title: Control de la pala y el teclado
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
 Este es el **cuarto** de los 10 pasos del [Tutorial de Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar después de completar la lección en [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
@@ -127,4 +127,4 @@ Aquí está el código que funciona, para que lo compares con el tuyo:
 
 Ahora mismo tenemos algo que parece un juego. El único problema es que todo lo que puedes hacer es golpear la bola con la paleta toda la vida (en realidad, ni siquiera la golpeas). Todo esto cambiará en el quinto capítulo, [Fin del juego](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), cuando añadiremos un estado de "Game Over".
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}

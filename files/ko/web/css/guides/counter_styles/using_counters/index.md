@@ -13,7 +13,7 @@ l10n:
 
 ## Counters 사용하기
 
-CSS 카운터를 사용하려면 먼저 {{cssxref("counter-reset")}} 속성을 사용하여 초기화 해야합니다. 카운터의 값은 {{cssxref("counter-increment")}} 속성을 이용하여 증가하거나 감소시킬 수 있습니다. 카운터의 현재 값은 {{cssxref("counter", "counter()")}} 혹은 {{cssxref("counters", "counters()")}} 함수로 표시되는데, 일반적으로 [가상 요소](/ko/docs/Web/CSS/Pseudo-elements)인 {{CSSxRef("content")}} 속성 내에서 쓰입니다.
+CSS 카운터를 사용하려면 먼저 {{cssxref("counter-reset")}} 속성을 사용하여 초기화 해야합니다. 카운터의 값은 {{cssxref("counter-increment")}} 속성을 이용하여 증가하거나 감소시킬 수 있습니다. 카운터의 현재 값은 {{cssxref("counter", "counter()")}} 혹은 {{cssxref("counters", "counters()")}} 함수로 표시되는데, 일반적으로 [가상 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)인 {{CSSxRef("content")}} 속성 내에서 쓰입니다.
 
 카운터는 박스를 생성하는 요소에 대해서만 설정, 재설정, 혹은 증가시킬 수 있습니다.
 예를 들어, 요소에 `display: none` 가 설정되어 있다면, 해당 요소에서 적용되는 카운터는 모두 무시됩니다.
@@ -99,7 +99,7 @@ h3::before {
 생성된 텍스트는 의사 요소의 범위 내에서 주어진 이름의 모든 카운터 값이고, 가장 바깥쪽부터 가장 안쪽까지를 문자열 (`<separator>`)를 사용하여 분리합니다.
 
 카운터는 두 가지 방법 모두에서 지정된 `<counter-style>` 로 렌더링됩니다. (기본값은 `decimal`)
-{{cssxref("list-style-type")}} 값들을 사용하거나 사용자 지정의 [맞춤 스타일](/ko/docs/Web/CSS/CSS_counter_styles)을 사용할 수도 있습니다.
+{{cssxref("list-style-type")}} 값들을 사용하거나 사용자 지정의 [맞춤 스타일](/ko/docs/Web/CSS/Guides/Counter_styles)을 사용할 수도 있습니다.
 
 `counter()` 와 `counters()` 의 사용에 대한 예제는 아래 [기본 예제](#기본_예제) 그리고 [중첩 카운터 예제](#중첩_카운터_예제)에서 확인할 수 있습니다.
 
@@ -308,5 +308,5 @@ li::before {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- [CSS 카운터 스타일](/ko/docs/Web/CSS/CSS_counter_styles) 모듈
-- [CSS 목록과 카운터](/ko/docs/Web/CSS/CSS_lists) 모듈
+- [CSS 카운터 스타일](/ko/docs/Web/CSS/Guides/Counter_styles) 모듈
+- [CSS 목록과 카운터](/ko/docs/Web/CSS/Guides/Lists) 모듈

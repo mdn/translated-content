@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`Array.fromAsync()`** crée une nouvelle instance d'`Array` (copie superficielle) à partir d'un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#itérateur_asynchrone_et_les_protocoles_itérables_asynchrones), d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
+La méthode statique **`Array.fromAsync()`** crée une nouvelle instance d'`Array` (copie superficielle) à partir d'un [objet itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone), d'un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_»), ou d'un [objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#manipuler_des_objets_semblables_à_des_tableaux).
 
 ## Syntaxe
 
@@ -37,7 +37,7 @@ Une nouvelle promesse ({{JSxRef("Promise")}}) dont la valeur de retour est une n
 
 `Array.fromAsync()` permet de créer des tableaux à partir&nbsp;:
 
-- [d'objets itérables asynchrones](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#itérateur_asynchrone_et_les_protocoles_itérables_asynchrones) (des objets comme {{DOMxRef("ReadableStream")}} et {{JSxRef("AsyncGenerator")}})&nbsp;; ou, si l'objet n'est pas un itérable asynchrone,
+- [d'objets itérables asynchrones](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) (des objets comme {{DOMxRef("ReadableStream")}} et {{JSxRef("AsyncGenerator")}})&nbsp;; ou, si l'objet n'est pas un itérable asynchrone,
 - [d'objets itérables](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») (des objets comme {{JSxRef("Map")}} et {{JSxRef("Set")}})&nbsp;; ou, si l'objet n'est pas itérable,
 - d'objets semblables à des tableaux (objets avec une propriété `length` et des éléments indexés).
 

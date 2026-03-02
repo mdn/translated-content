@@ -43,4 +43,4 @@ console.log(el.integrity); // 出力: "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/u
 ## 関連情報
 
 - {{domxref("HTMLLinkElement.integrity")}}
-- [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)
+- [サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)

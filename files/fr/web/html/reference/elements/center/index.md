@@ -1,24 +1,19 @@
 ---
 title: "<center> : l'élément de texte centré"
 slug: Web/HTML/Reference/Elements/center
-original_slug: Web/HTML/Element/center
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+{{Deprecated_Header}}
 
-> [!WARNING]
-> Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
+L'élément [HTML](/fr/docs/Web/HTML) **`<center>`** est un [élément de type bloc](/fr/docs/Glossary/Block-level_content) qui affiche son contenu de type bloc ou en ligne centré horizontalement dans son élément conteneur. Le conteneur est généralement, mais pas obligatoirement, {{HTMLElement("body")}}.
 
-L'élément **`<center>`** est un [élément de bloc](/fr/docs/Glossary/Block-level_content) qui contient des paragraphes et d'autres éléments de type bloc ou en ligne. Le contenu entier de cet élément est centré horizontalement au sein de son conteneur parent (généralement l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body)).
-
-Cet élément a été déprécié en HTML4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui peut être appliqué à l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) ou à un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p). Pour centrer des blocs, on utilisera d'autres propriétés ([`margin-left`](/fr/docs/Web/CSS/Reference/Properties/margin-left) et [`margin-right`](/fr/docs/Web/CSS/Reference/Properties/margin-right) (ou définissez [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin) à `0 auto`).
+Cette balise a été dépréciée dans HTML 4 (et XHTML 1) au profit de la propriété [CSS](/fr/docs/Web/CSS) {{CSSxRef("text-align")}}, qui peut être appliquée à l'élément {{HTMLElement("div")}} ou à un {{HTMLElement("p")}} individuel. Pour centrer des blocs, utilisez d'autres propriétés CSS comme {{CSSxRef("margin-left")}} et {{CSSxRef("margin-right")}} et définissez-les sur `auto` (ou définissez {{CSSxRef("margin")}} à `0 auto`).
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
-
-> [!NOTE]
-> Jusqu'à Gecko 1.9.2 inclus, Firefox implémentait l'interface [`HTMLSpanElement`](/fr/docs/Web/API/HTMLSpanElement) pour cet élément.
+Cet élément implémente l'interface {{DOMxRef("HTMLElement")}}.
 
 ## Exemple 1
 
@@ -29,27 +24,50 @@ Cet élément implémente l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLEleme
 </center>
 ```
 
+### Result
+
+{{EmbedLiveSample("Exemple 1")}}
+
 ## Exemple 2 (alternative CSS)
 
 ```html
-<div style="text-align:center">
+<div class="center">
   Ce texte sera centré.
   <p>Ainsi que ce paragraphe.</p>
 </div>
 ```
 
+```css
+.center {
+  text-align: center;
+}
+```
+
+### Result
+
+{{EmbedLiveSample("Exemple 2 (alternative CSS)")}}
+
 ## Exemple 3 (alternative CSS)
 
 ```html
-<p style="text-align:center">
+<p class="center">
   Cette ligne sera centrée.<br />
   Ainsi que cette ligne.
 </p>
 ```
 
-## Notes
+```css
+.center {
+  text-align: center;
+}
+```
 
-Appliquer [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)`: center` sur un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) ou [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) centre _le contenu_ de ces éléments, tout en laissant leurs dimensions générales inchangées.
+### Result
+
+{{EmbedLiveSample("Exemple 3 (alternative CSS)")}}
+
+> [!NOTE]
+> Appliquer {{CSSxRef("text-align", "text-align: center")}} à un élément {{HTMLElement("div")}} ou {{HTMLElement("p")}} centre _le contenu_ de ces éléments tout en laissant leurs dimensions générales inchangées.
 
 ## Spécifications
 
@@ -61,5 +79,5 @@ Appliquer [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)`: cen
 
 ## Voir aussi
 
-- La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
-- La propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
+- La propriété CSS {{CSSxRef("text-align")}}
+- La propriété CSS {{CSSxRef("display")}}

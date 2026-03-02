@@ -3,7 +3,7 @@ title: Déplacer la balle
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 Voici la deuxième étape de ce [tutoriel](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
 
@@ -138,4 +138,4 @@ Exercice : Essayez de changer la vitesse de la balle en mouvement ou la directio
 
 Nous avons dessiné nottre balle et elle se déplace mais elle ne cesse de disparaître du bord de notre canevas. Dans le troisième chapitre, nous verrons comment [faire rebondir la balle](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls) contre les bords.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

@@ -36,4 +36,4 @@ browser-compat: api.Ink
 - `\{{SeeCompatTable}}`——生成 **This is an experimental technology**（实验性）横幅，代表了这项技术是[实验性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的。也需要在页面元数据中添加值为 `experimental` 的 `status` 属性。
 - `\{{Deprecated_Header}}`——生成 **Deprecated**（已弃用）横幅，代表这项技术的使用已经[不受鼓励](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#已弃用)。也需要在页面元数据中添加值为 `deprecated` 的 `status` 属性。
 - `\{{Non-standard_Header}}`——生成 **Non-Standard**（非标准）横幅，代表这项技术的使用不是任何正式标准的一部分，即使它已经在很多浏览器中得到了实现。也需要在页面元数据中添加值为 `non-standard` 的 `status` 属性。
-- `\{{SecureContext_Header}}`——生成 **Secure context**（安全上下文）横幅，代表这项技术只在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中可用。
+- `\{{SecureContext_Header}}`——生成 **Secure context**（安全上下文）横幅，代表这项技术只在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中可用。

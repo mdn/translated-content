@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/Getting_started
 original_slug: Learn/CSS/First_steps/Getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprendendo algumas coisas práticas sobre a linguagem no decorrer do processo.
 
@@ -290,4 +290,4 @@ Neste tutorial, demos uma olhada na quantidade de maneiras as quais pode-se esti
 
 Na próxima lição, veremos como o CSS é estruturado.
 
-{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

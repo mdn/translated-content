@@ -12,11 +12,11 @@ L'événement **`cancel`** est déclenché sur un élément {{HTMLElement("dialo
 
 Cet événement est annulable mais ne se propage («&nbsp;<i lang="en">bubbles</i>&nbsp;» en anglais) pas.
 
-Lorsque la boîte de dialogue `<dialog>` est fermée avec la touche <kbd>Échap</kbd>, les événements `cancel` et {{domxref("HTMLDialogElement/close_event", "close")}} sont tous deux déclenchés.
+Lorsque la boîte de dialogue `<dialog>` est fermée avec la touche <kbd>Échap</kbd>, les événements `cancel` et {{DOMxRef("HTMLDialogElement/close_event", "close")}} sont tous deux déclenchés.
 
 ## Syntaxe
 
-Utilisez le nom de l'événement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'événement.
+Utilisez le nom de l'événement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'événement.
 
 ```js-nolint
 addEventListener("cancel", (event) => { })
@@ -26,7 +26,7 @@ oncancel = (event) => { }
 
 ## Type d'événement
 
-Un événement {{domxref("Event")}} générique.
+Un événement {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
@@ -81,7 +81,7 @@ closeButton.addEventListener("click", () => {
 
 #### Résultat
 
-{{ EmbedLiveSample('Canceling a dialog', '100%', '100px') }}
+{{EmbedLiveSample('Annuler une boîte de dialogue', '100%', 100)}}
 
 ## Spécifications
 

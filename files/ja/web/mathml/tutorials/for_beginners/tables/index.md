@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
 
 基本的な数式表記がすべてわかったら、あとは行列のような式や他にも高度な数式レイアウトを使用することができる表形式レイアウトを考えることができます。
 
@@ -287,4 +287,4 @@ MathML の表形式要素は [HTML 表](/ja/docs/Learn_web_development/Core/Stru
 - [`<mtr>` 要素](/ja/docs/Web/MathML/Reference/Element/mtr)
 - [`<mtd>` 要素](/ja/docs/Web/MathML/Reference/Element/mtd)
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}

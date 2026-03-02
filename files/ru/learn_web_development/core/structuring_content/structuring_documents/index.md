@@ -3,7 +3,7 @@ title: Структура документа и веб-сайта
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 В дополнение к определению отдельных частей вашей страницы (таких как «абзац» или «изображение»), {{glossary("HTML")}} также содержит ряд элементов блочного уровня, используемых для определения областей вашего веб-сайта (такие как «заголовок», «навигационное меню», «колонка основного содержимого»). В этой статье рассматривается, как планировать базовую структуру сайта и писать HTML для представления этой структуры.
 
@@ -285,4 +285,4 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 
 - [Using HTML sections and outlines](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements): Продвинутый справочник по семантическим элементам и алгоритму выделения разделов (outline algorithm) в HTML5.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}

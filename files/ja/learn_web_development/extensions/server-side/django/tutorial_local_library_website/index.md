@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 実践的なチュートリアルシリーズの最初の記事は、学習する内容を説明し、後の記事で進めていく「地域図書館」のサンプルウェブサイトの概要を示しています。
 
@@ -53,4 +53,4 @@ _地域図書館（LocalLibrary）は、この一連のチュートリアルの�
 
 地域図書館ウェブサイトについてと、何を学ぶのかをもう少し知りました。今度は例を含む[スケルトンプロジェクト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)を作成しましょう。
 
-{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}

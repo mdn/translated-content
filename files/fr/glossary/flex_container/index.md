@@ -2,7 +2,7 @@
 title: Conteneur flexible
 slug: Glossary/Flex_Container
 l10n:
-  sourceCommit: 13839b2979cc244034ffb1fe243240778b0cd23f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Une mise en page {{Glossary("flexbox")}} est définie en utilisant les valeurs `flex` ou `inline-flex` de la propriété `display` sur l'élément parent. Cet élément devient alors un **conteneur flexible** et chacun de ses enfants un {{Glossary("flex item", "élément flexible")}}.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [목록](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) 은 대부분 다른 텍스트처럼 작동하지만, 알아야 할 목록과 관련된 몇 가지 CSS 속성과 고려해야 할 모범 사례가 있습니다. 이 기사는 모든 것을 설명합니다.
 
@@ -20,7 +20,7 @@ original_slug: Learn/CSS/Styling_text/Styling_lists
         <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 소개</a
         > 둘러보기),
-        <a href="/ko/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >CSS 글꼴과 폰트 기본</a
         >.
       </td>
@@ -432,4 +432,4 @@ CSS counters는 목록 계산 및 스타일 지정을 사용자 지정하기 위
 
 몇 가지 관련 기본 원칙과 특정 속성을 알고 있으면 목록의 스타일을 비교적 쉽게 익힐 수 있습니다. 다음 본문에서는 스타일링 기술을 연결하는 방법을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}

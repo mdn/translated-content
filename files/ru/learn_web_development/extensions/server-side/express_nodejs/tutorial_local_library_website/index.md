@@ -3,7 +3,7 @@ title: "Учебник Express: сайт Local Library"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Первая статья в нашей серии практических уроков объясняет, что вы будете изучать, и предоставит обзор сайта "локальной библиотеки" ("local library"), над которым мы будем работать и развивать в последующих статьях.
 
@@ -47,4 +47,4 @@ _LocalLibrary_ это название сайта который мы будем
 
 Теперь, когда вы знаете немного больше о сайте _LocalLIbrary_ и о том, что мы будем изучать, пришло время приступить к созданию [скелета проекта](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website), который будет использован в нашем сайте.
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 {{Glossary("CSS")}} 에서, 선택자는 스타일을 지정할 웹 페이지의 {{glossary("HTML")}} 요소를 대상으로 하는 데 사용됩니다. 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 글와 하위 글에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴보겠습니다.
 
@@ -149,8 +149,7 @@ a[title] {
 또는 특정 값을 가진 속성의 존재 여부에 따라 선택할 수도 있습니다.
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
@@ -183,6 +182,6 @@ article > p {
 
 이 글에서는 특정 HTML 요소를 타겟팅할 수 있는 CSS 선택자를 소개했습니다. 다음에는 [타입, 클래스 및 ID 선택자](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)에 대해 자세히 살펴보겠습니다.
 
-전체 선택자 목록은 [CSS 선택자 참조](/ko/docs/Web/CSS/CSS_selectors)를 참고하세요.
+전체 선택자 목록은 [CSS 선택자 참조](/ko/docs/Web/CSS/Guides/Selectors)를 참고하세요.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}
 
 앞의 장들을 학습하셨다면 이제 JavaScript가 무엇인지, JavaScript로 무엇을 할 수 있는지, 다른 웹 기술과 함께 JavaScript를 어떻게 사용하는지, 주요 기능이 어떻게 생겼는지에 대해 이해하셨을 것입니다. 이번 장에서는 JavaScript의 가장 기본적인 구성 요소인 구성 중 하나인 변수에 대해 배우도록 하겠습니다.
 
@@ -427,4 +427,4 @@ console.log(bird.species); // "Striated Caracara"
 
 지금까지 JavaScript의 변수와 생성 방법에 대해 알아보았습니다. 다음 장에서는 JavaScript에서 숫자에 관해 자세히 살펴보고 기본 계산하는 방법을 알아보겠습니다.
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}

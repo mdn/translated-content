@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`isSecureContext`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+La propriété en lecture seule **`isSecureContext`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Valeur
 
@@ -23,4 +23,4 @@ Une valeur booléenne.
 
 ## Voir aussi
 
-- [Les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts)
+- [Les contextes sécurisés](/fr/docs/Web/Security/Defenses/Secure_Contexts)

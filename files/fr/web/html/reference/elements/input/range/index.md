@@ -506,7 +506,7 @@ input[type="range"] {
 
 ## Voir aussi
 
-- [Les formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\)
+- [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
 - [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number)
 - [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)

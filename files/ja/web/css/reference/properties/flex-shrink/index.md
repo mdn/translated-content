@@ -1,15 +1,14 @@
 ---
 title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
-original_slug: Web/CSS/flex-shrink
 l10n:
-  sourceCommit: bb48907e64eb4bf60f17efd7d39b46c771d220a0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムは `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
+**`flex-shrink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスアイテムのフレックス縮小係数を設定します。すべてのフレックスアイテムの寸法がフレックスコンテナーより大きい場合、フレックスアイテムはそれに合わせるため、 `flex-shrink` 値に従って[収縮します](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#flex-shrink_プロパティ)。それぞれのフレックス行の[負の余白](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios#正と負の余白)は、その行の `flex-shrink` 値が `0` より大きいフレックスアイテム間で分配されます。
 
 > [!NOTE]
-> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-shrink`、{{cssxref("flex-grow")}}、{{cssxref("flex-basis")}} の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-shrink` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> `flex-shrink` を単独で設定するのではなく、{{cssxref("flex")}} の一括指定を `auto` や `initial` などのキーワードを付けて使用することを推奨します。[キーワード値](/ja/docs/Web/CSS/Reference/Properties/flex#値) は、{{cssxref("flex-grow")}}、`flex-shrink`、{{cssxref("flex-basis")}} の信頼性の高い組み合わせに展開され、一般的に望まれる柔軟な動作を実現するのに役立ちます。
 
 {{InteractiveExample("CSS デモ: flex-shrink")}}
 
@@ -27,7 +26,7 @@ flex-shrink: 2;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I shrink</div>
+  <div class="transition-all" id="example-element">縮みます</div>
   <div>Item Two</div>
   <div>Item Three</div>
 </section>
@@ -42,7 +41,7 @@ flex-shrink: 2;
 }
 
 .default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
   flex-grow: 1;
@@ -101,11 +100,11 @@ flex-shrink: unset;
 
 ```html live-sample___setting_flex_item_shrink_factor
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box4" style="background-color:lightsalmon;">D</div>
-  <div class="box5" style="background-color:lightgreen;">E</div>
+  <div class="box1">A</div>
+  <div class="box2">B</div>
+  <div class="box3">C</div>
+  <div class="box4">D</div>
+  <div class="box5">E</div>
 </div>
 ```
 
@@ -123,7 +122,9 @@ flex-shrink: unset;
   width: 200px;
 }
 
-.box {
+.box1,
+.box2,
+.box3 {
   flex-shrink: 1;
 }
 
@@ -145,6 +146,21 @@ div {
   outline: 1px solid;
   line-height: 4em;
   text-align: center;
+}
+.box1 {
+  background-color: red;
+}
+.box2 {
+  background-color: lightblue;
+}
+.box3 {
+  background-color: yellow;
+}
+.box4 {
+  background-color: lightsalmon;
+}
+.box5 {
+  background-color: lightgreen;
 }
 ```
 

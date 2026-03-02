@@ -1,9 +1,8 @@
 ---
 title: :active-view-transition
 slug: Web/CSS/Reference/Selectors/:active-view-transition
-original_slug: Web/CSS/:active-view-transition
 l10n:
-  sourceCommit: 90e5b796c5741c209aaa674e9ff86d4d7c8e0427
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active-view-transition`** correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_et_utilisation) est en cours (_active_) et cesse de correspondre une fois la transition terminée.
@@ -103,5 +102,5 @@ changeColorButton.addEventListener("keypress", changeColor);
 
 ## Voir aussi
 
-- La pseudo-classe {{CSSXRef(":active-view-transition-type", ":active-view-transition-type()")}}
+- La pseudo-classe {{CSSxRef(":active-view-transition-type()")}}
 - La méthode [`startViewTransition`](/fr/docs/Web/API/Document/startViewTransition)

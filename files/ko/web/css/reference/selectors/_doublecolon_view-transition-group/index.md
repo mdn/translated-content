@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::view-transition-group`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 단일 뷰 전환 스냅샷 그룹을 나타냅니다.
+**`::view-transition-group`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 단일 뷰 전환 스냅샷 그룹을 나타냅니다.
 
 뷰 전환이 이루어지는 동안, `::view-transition` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 {{cssxref("::view-transition")}}의 자식으로만 존재하며, {{cssxref("::view-transition-image-pair")}} 를 자식으로 가집니다.
 

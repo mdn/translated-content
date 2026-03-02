@@ -14,7 +14,7 @@ Cet événement n'est pas annulable et ne remonte pas dans la chaîne d'événem
 
 ## Syntaxe
 
-Utilisez le nom de l'événement dans des méthodes comme {{domxref("EventTarget.addEventListener", "addEventListener()")}}, ou affectez une fonction à la propriété gestionnaire d'événement.
+Utilisez le nom de l'événement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou affectez une fonction à la propriété gestionnaire d'événement.
 
 ```js-nolint
 addEventListener("close", (event) => { })
@@ -24,7 +24,7 @@ onclose = (event) => { }
 
 ## Type d'événement
 
-Un événement {{domxref("Event")}} générique.
+Un événement {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
@@ -77,7 +77,7 @@ closeButton.addEventListener("click", () => {
 
 #### Résultat
 
-{{ EmbedLiveSample('Live_example', '100%', '200px') }}
+{{EmbedLiveSample('Exemple interactif', '100%', 200)}}
 
 ## Spécifications
 
@@ -90,4 +90,4 @@ closeButton.addEventListener("click", () => {
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("dialog")}}
-- L'interface {{domxref("Event")}}
+- L'interface {{DOMxRef("Event")}}

@@ -1,33 +1,33 @@
 ---
-title: HTMLMediaElement.readyState
+title: HTMLMediaElement：readyState 屬性
+short-title: readyState
 slug: Web/API/HTMLMediaElement/readyState
+l10n:
+  sourceCommit: e932acf254c5dd06e26798b9d8fe01ce8dab1fb7
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.readyState`** 屬性回傳目前媒體的就緒狀態。
+**`HTMLMediaElement.readyState`** 屬性表示媒體的就緒狀態。
 
-## 語法
+## 值
 
-```plain
-var readyState = audioOrVideo.readyState;
-```
+一個數字，為 {{domxref("HTMLMediaElement")}} 介面上定義的五個可能狀態常數之一：
 
-### 值
-
-一個 `unsigned short`，可能的值有：
-
-| 常數              | 值  | 描述                                                                                                 |
-| ----------------- | --- | ---------------------------------------------------------------------------------------------------- |
-| HAVE_NOTHING      | 0   | 沒有可用的媒體資源。                                                                                 |
-| HAVE_METADATA     | 1   | 已經取得足夠的媒體資源並已初始化元資料。繼續取得媒體資源不會導致例外。                               |
-| HAVE_CURRENT_DATA | 2   | 媒體資料已經足夠播放目前的時間，但沒有足夠的資料再播放一幀。                                         |
-| HAVE_FUTURE_DATA  | 3   | 資料已經足夠播放目前的時間，而且有至少一點點資料可以播放未來的時間（換句話說，可能只多了一到兩幀）。 |
-| HAVE_ENOUGH_DATA  | 4   | 資料足夠，且下載率夠高。媒體可以播放到結束而不被中斷。                                               |
+- `HTMLMediaElement.HAVE_NOTHING`（0）
+  - : 沒有關於媒體資源的可用資訊。
+- `HTMLMediaElement.HAVE_METADATA`（1）
+  - : 已擷取足夠的媒體資源，使得後設資料屬性已被初始化。跳轉將不再拋出例外。
+- `HTMLMediaElement.HAVE_CURRENT_DATA`（2）
+  - : 目前播放位置的資料可用，但不足以播放超過一個影格。
+- `HTMLMediaElement.HAVE_FUTURE_DATA`（3）
+  - : 目前播放位置以及未來至少一小段時間的資料可用（換句話說，例如至少兩個視訊影格）。
+- `HTMLMediaElement.HAVE_ENOUGH_DATA`（4）
+  - : 有足夠的資料可用（且下載速率夠高）使媒體可以不中斷地播放至結束。
 
 ## 範例
 
-下面這個例子會監聽 \`example\` 這個元素，並檢查是否已載入足夠的媒體資源。如果是的話，它會繼續播放。
+此範例將監聽 `example` 元素的音訊資料載入。接著它將檢查是否至少已載入目前的播放位置。如果是，音訊將會播放。
 
 ```html
 <audio id="example" preload="auto">
@@ -36,16 +36,16 @@ var readyState = audioOrVideo.readyState;
 ```
 
 ```js
-var obj = document.getElementById("example");
+const obj = document.getElementById("example");
 
-obj.addEventListener("loadeddata", function () {
-  if (obj.readyState >= 2) {
+obj.addEventListener("loadeddata", () => {
+  if (obj.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
     obj.play();
   }
 });
 ```
 
-## 標準
+## 規範
 
 {{Specifications}}
 
@@ -53,6 +53,6 @@ obj.addEventListener("loadeddata", function () {
 
 {{Compat}}
 
-## 也參考看看
+## 參見
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}：用於定義 `HTMLMediaElement.readyState` 屬性的介面

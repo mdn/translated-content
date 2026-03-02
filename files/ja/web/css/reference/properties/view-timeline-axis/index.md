@@ -1,19 +1,11 @@
 ---
 title: view-timeline-axis
 slug: Web/CSS/Reference/Properties/view-timeline-axis
-original_slug: Web/CSS/view-timeline-axis
 l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+  sourceCommit: aefcc1599f9a67bfb4e0e5f48b2175eac61739fe
 ---
 
-{{SeeCompatTable}}
-
-**`view-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール可能な要素（_スクローラー_）内の要素（主体要素）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインのアニメーションのタイムラインを提供するために使用される、スクロールバーの方向を指定するために使用します。 `view-timeline-axis` は主体要素に設定します。詳しくは [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)を参照してください。
-
-> [!NOTE]
-> スクローラーの軸方向の寸法がコンテナーをあふれていない場合、またはあふれた部分が非表示またはクリッピングされている場合、タイムラインは作成されません。
-
-`view-timeline-axis` および {{cssxref("view-timeline-name")}} の各プロパティは、 [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline) 一括指定プロパティを使用して設定することもできます。
+**`view-timeline-axis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[名前付きビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#名前付きビュー進行タイムライン)で使用されているスクロールの方向を指定します。
 
 ## 構文
 
@@ -21,23 +13,35 @@ l10n:
 /* 論理プロパティ値 */
 view-timeline-axis: block;
 view-timeline-axis: inline;
+
 /* 非論理プロパティ値 */
 view-timeline-axis: y;
 view-timeline-axis: x;
+
+/* グローバル値 */
+view-timeline-axis: inherit;
+view-timeline-axis: initial;
+view-timeline-axis: revert;
+view-timeline-axis: revert-layer;
+view-timeline-axis: unset;
 ```
 
 ### 値
 
-`view-timeline-axis` に許可されている値は次の通りです。
+- `<axis>`
+  - : ビューの進行タイムラインで使用されるスクロール方向を指定します。値は {{cssxref("axis")}} キーワードのいずれか（`block`、`inline`、`x`、`y`）を使用することができます。デフォルト値は `block` です。
 
-- `block`
-  - : スクローラー要素のブロック軸にあるスクロールバーで、行内のテキストの流れに垂直な方向の軸です。標準的な英語のような横書きモードでは `y` と同じになり、縦書きモードでは `x` と同じになります。これが既定値です。
-- `inline`
-  - : スクローラー要素のインライン軸にあるスクロールバーで、行内のテキストの流れと並行する方向の軸です。横書きモードでは `x` と同じになり、縦書きモードでは `y` と同じになります。
-- `y`
-  - : スクローラー要素の垂直軸上のスクロールバーです。
-- `x`
-  - : スクローラー要素の水平軸上のスクロールバーです。
+## 解説
+
+`view-timeline-axis` プロパティは、要素のボックスに基づいた[名前付きビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#名前付きビュー進行タイムライン)の方向または軸 (`<axis>`) を指定します。
+
+デフォルトでは、CSS の {{cssxref("@keyframes")}} アニメーションは時間ベースのデフォルトタイムラインに沿って進行します。代わりにビュー進行タイムラインを介してアニメーションの進行を設定する場合は、`view-timeline-axis` がタイムラインの進行方向を制御します。
+
+ビュー進行タイムラインでは、タイムラインに沿ったアニメーションの進行は、要素（_主体_）の可視性に基づきます。`view-timeline-axis` プロパティは主体に設定します。
+
+主体はスクロール可能な要素内に含まれている必要があります。スクロール可能な要素が軸方向のサイズでコンテナーからオーバーフローしていない場合、またはオーバーフローが非表示またはクリップされている場合、スクロール進行タイムラインは生成されません。
+
+`view-timeline-axis` は {{cssxref("view-timeline-inset")}} や {{cssxref("view-timeline-name")}} プロパティとともに、{{cssxref("view-timeline")}} 一括指定プロパティの構成要素です。
 
 ## 公式定義
 
@@ -51,9 +55,9 @@ view-timeline-axis: x;
 
 ### ビュー進行タイムラインの軸を定義
 
-この例では、`--subjectReveal`という名前のビュー進行タイムラインが、クラスが "animation "である主体要素の `view-timeline-name` プロパティを使用して定義されています。このタイムラインは、同じ要素のアニメーションに適用されます。
+この例では、`--subject-reveal` という名前のビュー進行タイムラインが、"animation" クラスの主体要素の `view-timeline-name` プロパティを使用して定義されています。そして、このタイムラインは、`animation-timeline: --subject-reveal;` を使用する形で、同じ要素のアニメーションに適用されます。
 
-`view-timeline-axis` の効果を示すために、この例ではアニメーションを駆動するために水平方向の（既定値ではない）スクロールバーを使用しています。
+`view-timeline-axis` の効果を示すために、この例ではアニメーションを駆動するために水平方向の（デフォルトではない）スクロールバーを使用しています。
 
 #### HTML
 
@@ -100,12 +104,10 @@ view-timeline-axis: x;
 
 #### CSS
 
-CSS では、 `view-timeline-name` プロパティを用いて、 `--subjectReveal` という名前の進行タイムラインの主体要素を設定します。
-スクロール軸は `view-timeline-axis: x;` (Chromium) や `view-timeline-axis: horizontal;` (Firefox) を使用して設定します。これにより、スクロールする祖先要素の水平スクロールバーの位置がアニメーションタイムラインを決定します。
+CSS では、`subject` 要素を `--subject-reveal` という名前付きのビュー進行タイムラインのソースとして、`view-timeline-name` プロパティを使用して設定します。
+スクロール軸は `view-timeline-axis: x;` で設定します。`view-timeline-axis: horizontal;` も同時に記述していますが、これは標準外の古い値である `horizontal` および `vertical` を対応するブラウザー向けに、`x` や `y` の代わりに対応するためです。
 
 `content` の祖先要素は、 `display: flex;` と `flex-flow: column wrap;` を使用してコンテンツをレイアウトすることで、水平方向にオーバーフローするようになっています。
-
-また、主体要素に `animation-duration` を適用することで、この例が Firefox でうまく動作するようになることにも注意してください。
 
 ```css
 .subject {
@@ -125,7 +127,7 @@ CSS では、 `view-timeline-name` プロパティを用いて、 `--subjectReve
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 p {
@@ -134,16 +136,12 @@ p {
 }
 
 .animation {
-  view-timeline-name: --subjectReveal;
-  /* Chromium supports the new x/y syntax */
+  view-timeline-name: --subject-reveal;
   view-timeline-axis: x;
-  /* Firefox still supports the old horizontal/vertical syntax */
   view-timeline-axis: horizontal;
 
-  animation-name: appear;
-  animation-fill-mode: both;
-  animation-timeline: --subjectReveal;
-  animation-duration: 1ms; /* Firefox では、アニメーションを適用するために必要 */
+  animation: appear 1ms linear both;
+  animation-timeline: --subject-reveal;
 }
 
 @keyframes appear {
@@ -153,15 +151,37 @@ p {
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
+  }
+}
+```
+
+```css hidden
+@layer no-support {
+  body::before {
+    display: block;
+    text-align: center;
+    padding: 1em;
+  }
+  @supports not (view-timeline-axis: inherit) {
+    body::before {
+      content: "このブラウザーは `view-timeline-axis` プロパティに対応していません。";
+      background-color: wheat;
+    }
+  }
+  @supports (view-timeline-axis: horizontal) {
+    body::before {
+      content: "このブラウザーは `view-timeline-axis` プロパティの古い値に対応しています。";
+      background-color: yellow;
+    }
   }
 }
 ```
 
 #### 結果
 
-下部の水平バーをスクロールすると、主体要素がアニメーションで表示されます。
+画面下部の水平バーをスクロールすると、スクロールに合わせて主体要素がアニメーション表示されます。
 
 {{EmbedLiveSample("Defining_the_axis_of_the_view_progress_timeline", "100%", "450px")}}
 
@@ -175,7 +195,9 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
-- {{cssxref("timeline-scope")}}
-- [`view-timeline`](/ja/docs/Web/CSS/Reference/Properties/view-timeline), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
+- {{cssxref("view()")}}
+- [ガイド: スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール

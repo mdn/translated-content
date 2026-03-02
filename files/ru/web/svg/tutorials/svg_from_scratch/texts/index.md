@@ -3,7 +3,7 @@ title: Текст
 slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
 ---
 
-{{SVGRef}}{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{SVGRef}}{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations")}}
 
 Говоря о тексте в SVG мы должны различать две отдельные темы. Первая это добавление и отображение текста в изображении, а вторая - SVG шрифты. Последняя будет описана в следующем разделе этого туториала, а пока мы полностью сфокусируемся на первой части: добавление текста в SVG изображение.
 
@@ -74,4 +74,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Texts
 </text>
 ```
 
-{{PreviousNext("Web/SVG/Tutorial/Patterns", "Web/SVG/Tutorial/Basic_Transformations")}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Patterns", "Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations")}}

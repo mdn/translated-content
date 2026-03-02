@@ -1,12 +1,11 @@
 ---
 title: :left
 slug: Web/CSS/Reference/Selectors/:left
-original_slug: Web/CSS/:left
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:left`**, liée à la règle {{cssxref("@page")}}, permet de cibler les pages de gauche lors d'une impression.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:left`**, liée à la règle {{CSSxRef("@page")}}, permet de cibler les pages de gauche lors d'une impression.
 
 ```css
 /* Sélectionne le contenu des pages gauches */
@@ -16,10 +15,10 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 }
 ```
 
-La position de la page soit à gauche ou à droite dépend de la direction d'écriture globale du document. Par exemple, si la première page est selon la direction « gauche à droite » alors elle sera une page {{cssxref(":right")}}, si elle est définie de « droite à gauche » ce sera une page `:left`.
+La position de la page soit à gauche ou à droite dépend de la direction d'écriture globale du document. Par exemple, si la première page est selon la direction « gauche à droite » alors elle sera une page {{CSSxRef(":right")}}, si elle est définie de « droite à gauche » ce sera une page `:left`.
 
 > [!NOTE]
-> Cette pseudo-classe peut être utilisée pour modifier uniquement le {{cssxref("margin")}}, {{cssxref("padding")}}, {{cssxref("border")}} et {{cssxref("background")}} de **la boîte correspondant à la page**. Toutes les autres propriétés CSS seront ignorées. Seule la boîte correspondant à la page pourra être affectée, le contenu du document ne pourra pas être modifié.
+> Cette pseudo-classe peut être utilisée pour modifier uniquement le {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, {{CSSxRef("border")}} et {{CSSxRef("background")}} de **la boîte correspondant à la page**. Toutes les autres propriétés CSS seront ignorées. Seule la boîte correspondant à la page pourra être affectée, le contenu du document ne pourra pas être modifié.
 
 ## Syntaxe
 
@@ -49,7 +48,7 @@ La position de la page soit à gauche ou à droite dépend de la direction d'éc
 
 ## Voir aussi
 
-- {{cssxref("@page")}}
+- La règle {{CSSxRef("@page")}}
 - Les autres pseudo-classes de page&nbsp;:
-  - {{cssxref(":first")}}
-  - {{cssxref(":right")}}
+  - {{CSSxRef(":first")}}
+  - {{CSSxRef(":right")}}

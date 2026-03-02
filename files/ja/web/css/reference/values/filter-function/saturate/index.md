@@ -1,12 +1,11 @@
 ---
 title: saturate()
 slug: Web/CSS/Reference/Values/filter-function/saturate
-original_slug: Web/CSS/filter-function/saturate
 l10n:
-  sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("&lt;filter-function&gt;")}} です。
+**`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("filter-function")}} です。
 
 > [!NOTE]
 > `saturate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
@@ -47,8 +46,12 @@ saturate(amount)
 
 ### 引数
 
-- `amount`
-  - : 変換の量で、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値では彩度を下げ、 `100%` を超える値では彩度を上げます。 `0%` の値では画像が完全に彩度がなくなり、 `100%` の値では入力が変更されないままになります。{{Glossary("interpolation","補間")}}の初期値は `1` です。
+- `amount` {{Optional_Inline}}
+  - : 変換の量で、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で指定します。 `100%` 未満の値では彩度を下げ、 `100%` を超える値では彩度を上げます。 `0%` の値では画像が完全に彩度がなくなり、 `100%` の値では入力が変更されないままになります。{{Glossary("interpolation","補間")}}の初期値は `1` です。デフォルト値は `1` です。
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -57,6 +60,7 @@ saturate(amount)
 ```css
 saturate(0)     /* 彩度なし */
 saturate(.4)    /* 彩度 40% */
+saturate()      /* 効果なし */
 saturate(100%)  /* 効果なし */
 saturate(200%)  /* 2 倍の彩度 */
 ```
@@ -118,7 +122,7 @@ for (let i = 0; i <= 200; i++) {
 
 ## 関連情報
 
-その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("&lt;filter-function&gt;")}} 関数には、次のものがあります。
+その他の {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティの値で使用できる {{cssxref("filter-function")}} 関数には、次のものがあります。
 
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}

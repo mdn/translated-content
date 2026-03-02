@@ -1,9 +1,8 @@
 ---
 title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
-original_slug: Web/CSS/:first-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first-of-type`** permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).
@@ -113,6 +112,6 @@ article :first-of-type {
 
 ## Voir aussi
 
-- {{cssxref(":nth-of-type")}}
-- {{cssxref(":last-of-type")}}
-- {{cssxref(":first-child")}}
+- La pseudo-classe {{CSSxRef(":nth-of-type")}}
+- La pseudo-classe {{CSSxRef(":last-of-type")}}
+- La pseudo-classe {{CSSxRef(":first-child")}}

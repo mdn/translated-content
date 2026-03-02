@@ -3,7 +3,7 @@ title: "Element: transitionstart イベント"
 short-title: transitionstart
 slug: Web/API/Element/transitionstart_event
 l10n:
-  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
@@ -16,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("transitionstart", (event) => {});
+```js-nolint
+addEventListener("transitionstart", (event) => { })
 
-ontransitionstart = (event) => {};
+ontransitionstart = (event) => { }
 ```
 
 ## イベント型
@@ -70,7 +70,7 @@ element.ontransitionstart = () => {
 .transition {
   width: 100px;
   height: 100px;
-  background: rgba(255, 0, 0, 1);
+  background: red;
   transition-property: transform, background;
   transition-duration: 2s;
   transition-delay: 1s;
@@ -78,11 +78,11 @@ element.ontransitionstart = () => {
 
 .transition:hover {
   transform: rotate(90deg);
-  background: rgba(255, 0, 0, 0);
+  background: transparent;
 }
 ```
 
-これにいくらかの JavaScript を追加して、{{domxref("Element/transitionstart_event", "transitionstart")}} および {{domxref("Element/transitionrun_event", "transitionrun")}} イベントが発生すると実行されるようにします。
+これにいくらかの JavaScript を追加して、`transitionstart` および {{domxref("Element/transitionrun_event", "transitionrun")}} イベントが発生すると実行されるようにします。
 
 ```js
 const transition = document.querySelector(".transition");

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/transform-function
 original_slug: Web/CSS/transform-function
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<transform-function>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 요소의 외형에 영향을 주는 변형을 나타냅니다. 변형 함수는 2D 또는 3D 공간 내에서 요소를 회전하고, 크기를 바꾸고, 왜곡하고, 이동할 수 있습니다. {{cssxref("transform")}} 속성에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<transform-function>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 요소의 외형에 영향을 주는 변형을 나타냅니다. 변형 함수는 2D 또는 3D 공간 내에서 요소를 회전하고, 크기를 바꾸고, 왜곡하고, 이동할 수 있습니다. {{cssxref("transform")}} 속성에서 사용합니다.
 
 ## 변형을 수학적으로 표현하기
 
@@ -45,7 +45,7 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### 행렬 변형
 
-- [`matrix()`](/ko/docs/Web/CSS/transform-function/matrix)
+- [`matrix()`](/ko/docs/Web/CSS/Reference/Values/transform-function/matrix)
   - : Describes a homogeneous 2D transformation matrix.
 - [`matrix3d()`](/ko/docs/Web/CSS/transform-function/matrix3d)
   - : Describes a 3D transformation as a 4×4 homogeneous matrix.
@@ -74,7 +74,7 @@ The `<transform-function>` data type is specified using one of the transformatio
   - : Scales an element up or down on the 2D plane.
 - [`scale3d()`](/ko/docs/Web/CSS/transform-function/scale3d)
   - : Scales an element up or down in 3D space.
-- [`scaleX()`](/ko/docs/Web/CSS/transform-function/scaleX)
+- [`scaleX()`](/ko/docs/Web/CSS/Reference/Values/transform-function/scaleX)
   - : Scales an element up or down horizontally.
 - [`scaleY()`](/ko/docs/Web/CSS/transform-function/scaleY)
   - : Scales an element up or down vertically.
@@ -92,7 +92,7 @@ The `<transform-function>` data type is specified using one of the transformatio
 
 ### 이동
 
-- [`translate()`](/ko/docs/Web/CSS/transform-function/translate)
+- [`translate()`](/ko/docs/Web/CSS/Reference/Values/transform-function/translate)
   - : Translates an element on the 2D plane.
 - [`translate3d()`](/ko/docs/Web/CSS/transform-function/translate3d)
   - : Translates an element in 3D space.

@@ -3,7 +3,7 @@ title: Rebota en las paredes
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 ---
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
@@ -105,4 +105,4 @@ Chequea el código acabado para esta parte con el tuyo, y juega:
 
 Ahora hemos llegado al punto donde nuestra pelota se mueve y permanece en el tablero de juego. En el capítulo cuarto, veremos la implementación del control de una pala - vea [Control de Pala y teclado](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
 
-{{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

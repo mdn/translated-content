@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 En el segundo artículo de este módulo, analizamos algunas características más avanzadas de las tablas HTML, como los subtítulos/resúmenes, la agrupación de filas en las secciones del encabezado, el cuerpo y el pie de página; y también analizamos la accesibilidad de las tablas para usuarios con discapacidad visual.
 
@@ -458,4 +458,4 @@ Volviendo a nuestro ejemplo de gastos, los dos fragmentos anteriores podrían re
 
 Podrías aprender algo más sobre las tablas en HTML, pero en realidad te hemos proporcionado toda la información que necesitas saber en este momento. En este punto, es posible que desees ir y aprender sobre la aplicación de estilo a tablas HTML: consulta [Aplicar estilo a las tablas](/es/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

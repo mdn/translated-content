@@ -1,9 +1,8 @@
 ---
 title: line-break
 slug: Web/CSS/Reference/Properties/line-break
-original_slug: Web/CSS/line-break
 l10n:
-  sourceCommit: 42d7bb6c3ed8e7e51cd71aa17165c28b58f5c4e7
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
@@ -36,8 +35,8 @@ line-break: loose;
 
 ```css interactive-example
 #example-element {
-  font-family: "Yu Gothic", YuGothic, Meiryo, "ＭＳ ゴシック", sans-serif;
-  border: 2px dashed #999;
+  font-family: "Yu Gothic", "YuGothic", "Meiryo", "ＭＳ ゴシック", sans-serif;
+  border: 2px dashed #999999;
   text-align: left;
   width: 240px;
   font-size: 16px;
@@ -73,7 +72,7 @@ line-break: unset;
 - `strict`
   - : 最も厳格な改行規則を使用してテキストを改行します。
 - `anywhere`
-  - : 句読点や温存された空白、単語の途中も含め、すべての文字の間で折り返しできるようにし、 GL, WJ, ZWJ の文字クラスや、 {{cssxref("word-break")}} プロパティでもたらされる折り返しの禁止を一切無視します。どの折り返しの機会も優先されることはありません。ハイフネーションは適用されません。
+  - : 句読点や温存されたホワイトスペース、単語の途中も含め、すべての文字の間で折り返しできるようにし、 GL, WJ, ZWJ の文字クラスや、 {{cssxref("word-break")}} プロパティでもたらされる折り返しの禁止を一切無視します。どの折り返しの機会も優先されることはありません。ハイフネーションは適用されません。
 
 ## 公式定義
 

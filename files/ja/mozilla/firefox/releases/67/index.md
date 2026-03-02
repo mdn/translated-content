@@ -103,7 +103,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- [Notifications](/ja/docs/Web/API/Notifications_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) に限り使用可能になりました ([Firefox バグ 1429432](https://bugzil.la/1429432))。
+- [Notifications](/ja/docs/Web/API/Notifications_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) に限り使用可能になりました ([Firefox バグ 1429432](https://bugzil.la/1429432))。
 - {{htmlelement("iframe")}} で、外部プロトコル URL の読み込みをブロックするようになりました ([Firefox バグ 1527882](https://bugzil.la/1527882))。
 
 ### WebDriver conformance (Marionette)

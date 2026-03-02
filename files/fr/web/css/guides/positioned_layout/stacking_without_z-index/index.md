@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Positioned_layout/Stacking_without_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 ---
 
-{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{CSSRef}}{{PreviousMenuNext("","Web/CSS/Guides/Positioned_layout/Stacking_floating_elements", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}
 
 ## Empilement sans `z-index`
 
@@ -102,4 +102,4 @@ div {
 }
 ```
 
-{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
+{{PreviousMenuNext("","Web/CSS/Guides/Positioned_layout/Stacking_floating_elements", "Web/CSS/Guides/Positioned_layout/Understanding_z-index")}}

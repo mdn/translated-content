@@ -1,14 +1,13 @@
 ---
 title: skewY()
 slug: Web/CSS/Reference/Values/transform-function/skewY
-original_slug: Web/CSS/transform-function/skewY
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`skewY()`** définit une transformation qui incline un élément dans la direction verticale sur le plan 2D. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`skewY()`** permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function).
-
-{{InteractiveExample("CSS Demo: skewY()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: skewY()")}}
 
 ```css interactive-example-choice
 transform: skewY(0);
@@ -36,7 +35,7 @@ transform: skewY(0.352rad);
 </section>
 ```
 
-Cette transformation est [une transvection](https://fr.wikipedia.org/wiki/Transvection) dans laquelle on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.
+Cette transformation est un cisaillement ([transvection](https://fr.wikipedia.org/wiki/Transvection)) qui déforme chaque point d'un élément selon un certain angle dans la direction verticale. L'ordonnée (coordonnée verticale, y) de chaque point est modifiée d'une valeur proportionnelle à l'angle défini et à la distance à l'origine&nbsp;; ainsi, plus un point est éloigné de l'origine, plus la valeur ajoutée sera grande.
 
 ## Syntaxe
 
@@ -47,106 +46,38 @@ skewY(a)
 ### Valeurs
 
 - `a`
-  - : Une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle) qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
+  - : Un {{CSSxRef("&lt;angle&gt;")}} représentant l'angle à utiliser pour déformer l'élément selon l'ordonnée (coordonnée verticale, y).
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="/fr/docs/Web/CSS/Reference/Values/transform-function#le_système_de_coordonnées_cartésiennes">Coordonnées cartésiennes</a> sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2 <sup>(angl.)</sup></a></th>
+      <th scope="col"><a href="https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_homog%C3%A8nes">Coordonnées homogènes</a> sur <a href="https://fr.wikipedia.org/wiki/Plan_projectif_r%C3%A9el">ℝℙ^2</a></th>
+      <th scope="col">Coordonnées cartésiennes sur <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3 <sup>(angl.)</sup></a></th>
+      <th scope="col">Coordonnées homogènes sur <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3 <sup>(angl.)</sup></a></th>
     </tr>
   </thead>
-   <tbody>
+  <tbody>
     <tr>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>tan</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cc} 1 & 0 \\ \tan(a) & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>tan</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & 0 \\ \tan(a) & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>tan</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{ccc} 1 & 0 & 0 \\ \tan(a) & 1 & 0 \\ 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
       <td rowspan="2">
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd
-                  ><mo>tan</mo>
-                  <mo>(</mo>
-                  <mi>a</mi>
-                  <mo>)</mo> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>tan</mo><mo>(</mo><mi>a</mi><mo>)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ \tan(a) & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
     <tr>
@@ -155,13 +86,17 @@ skewY(a)
   </tbody>
 </table>
 
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ### HTML
 
 ```html
 <div>Normal</div>
-<div class="skewed">Distordu</div>
+<div class="skewed">Incliné</div>
 ```
 
 ### CSS
@@ -181,9 +116,9 @@ div {
 
 ### Résultat
 
-{{EmbedLiveSample("","100%","250")}}
+{{EmbedLiveSample("Exemples", 200, 200)}}
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
@@ -193,5 +128,10 @@ div {
 
 ## Voir aussi
 
-- [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform)
-- [`<transform-function>`](/fr/docs/Web/CSS/Reference/Values/transform-function)
+- La propriété {{CSSxRef("transform")}}
+- Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
+- Propriétés de transformation individuelles&nbsp;:
+  - {{CSSxRef("translate")}}
+  - {{CSSxRef("scale")}}
+  - {{CSSxRef("rotate")}}
+  - Remarque&nbsp;: il n'existe pas de propriété `skew`

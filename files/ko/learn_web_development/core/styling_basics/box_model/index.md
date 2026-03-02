@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Box_model
 original_slug: Learn/CSS/Building_blocks/The_box_model
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이해하는 것은 CSS을 통해 레이아웃을 생성하거나, 아이템과 다른 아이템을 정렬하는 것을 가능하게 하는 열쇠입니다. 이번 단원에서 우리는 CSS 박스*모델*을 제대로 살펴보겠습니다. 박스의 작동 방식과 박스와 관련된 용어를 이해함으로써 더 복잡한 레이아웃 작업으로 넘어갈 수 있도록합니다.
 
@@ -72,7 +72,7 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 플렉스 항목이 되고, 나중에 익히게 될 [플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
 > [!NOTE]
-> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
+> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/Guides/Display/Block_and_inline_layout)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
 
 CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예로 `flex`나 [`grid`](/ko/docs/Learn_web_development/Core/CSS_layout/Grids)같은 박스가 취할 수 있는 그 밖의 다양한 내부 속성 값을 마주치게 될 겁니다.
 
@@ -220,7 +220,7 @@ html {
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-여백이 축소될 때와 축소되지 않을 때를 말해주는 여러 가지 규칙이 있습니다. 자세한 내용은 [여백 축소 정복](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)에 대한 자세한 페이지를 참조하십시오. 당장 기억해야 할 주안점은 마진 축소란 것이 벌어지고 있다는 점이다. 여백이 있는 공간을 생성하고도 여러분이 기대하는 만큼의 공간을 얻지 못한다면, 아마도 그것은 여백 축소 현상일 것입니다.
+여백이 축소될 때와 축소되지 않을 때를 말해주는 여러 가지 규칙이 있습니다. 자세한 내용은 [여백 축소 정복](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing)에 대한 자세한 페이지를 참조하십시오. 당장 기억해야 할 주안점은 마진 축소란 것이 벌어지고 있다는 점이다. 여백이 있는 공간을 생성하고도 여러분이 기대하는 만큼의 공간을 얻지 못한다면, 아마도 그것은 여백 축소 현상일 것입니다.
 
 ### 테두리
 
@@ -316,4 +316,4 @@ html {
 
 다음 단원에서는 [배경과 테두리](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)를 사용하여 평범한 보이는 박스를 더욱 흥미롭게 보이려면 어떤 방법이 있는지 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}

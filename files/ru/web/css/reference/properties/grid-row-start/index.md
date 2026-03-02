@@ -185,5 +185,5 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)_
 - Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

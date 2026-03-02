@@ -1,24 +1,23 @@
 ---
 title: ArrayBuffer.prototype.maxByteLength
+short-title: maxByteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength
 l10n:
-  sourceCommit: d42c4bd039f84d228a339a4a15c8abf9e67cf608
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+**`maxByteLength`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、この配列バッファーがサイズ変更可能な最大長をバイト数で表します。
 
-**`maxByteLength`** は {{jsxref("ArrayBuffer")}} インスタンスのアクセサープロパティで、`ArrayBuffer` がサイズ変更可能な最大長をバイト数で表します。
-
-{{InteractiveExample("JavaScript デモ: ArrayBuffer.maxByteLength")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.prototype.maxByteLength")}}
 
 ```js interactive-example
 const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 
 console.log(buffer.byteLength);
-// Expected output: 8
+// 予想される結果: 8
 
 console.log(buffer.maxByteLength);
-// Expected output: 16
+// 予想される結果: 16
 ```
 
 ## 解説

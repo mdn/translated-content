@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 이 단원에서는, 일을 하면서 가장 자주 사용하게 될 가장 간단한 선택자 중 일부를 살펴봅니다.
 
@@ -117,4 +117,4 @@ ID 선택자는 점 문자가 아닌 `#`으로 시작하지만, 클래스 선택
 
 유형, 클래스 및 ID 선택자를 마무리합니다. 계속해서 [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)를 살펴봄으로써 선택자를 자세히 탐구해봅시다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics")}}

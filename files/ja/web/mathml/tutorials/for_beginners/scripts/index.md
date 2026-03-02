@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}
 
 基本的な数学記法の復習を続け、添字つきの MathML 要素の構築に焦点を当てます。
 
@@ -464,4 +464,4 @@ math {
 - [`<mover>` 要素](/ja/docs/Web/MathML/Reference/Element/mover)
 - [`<munderover>` 要素](/ja/docs/Web/MathML/Reference/Element/munderover)
 
-{{PreviousMenuNext("Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Guides")}}

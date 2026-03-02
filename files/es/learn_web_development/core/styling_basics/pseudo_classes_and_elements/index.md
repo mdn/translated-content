@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 El conjunto de selectores que estudiaremos en este artículo se conocen como **pseudoclases** y **pseudoelementos**. Hay muchos y a menudo sirven para fines muy específicos. Una vez que sepas cómo usarlos, puedes echar un vistazo a la lista para ver si alguno sirve para la página que quieres crear. Una vez más, la página correspondiente de MDN resulta muy útil para conocer qué navegadores los admiten o no.
 
@@ -200,4 +200,4 @@ Hay un gran número de pseudoclases y pseudoelementos, así que resulta útil te
 | {{ Cssxref("::selection") }}      | Selecciona la parte del documento que ha sido seleccionada.                                                                 |
 | {{ Cssxref("::spelling-error") }} | Selecciona una parte del documento que contiene un error de ortografía indicado por el navegador.                           |
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

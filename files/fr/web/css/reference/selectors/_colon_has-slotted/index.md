@@ -1,12 +1,11 @@
 ---
 title: :has-slotted
 slug: Web/CSS/Reference/Selectors/:has-slotted
-original_slug: Web/CSS/:has-slotted
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has-slotted`** correspond lorsque le contenu d'un élément {{HTMLElement(`slot`)}} n'est pas vide ou n'utilise pas la valeur par défaut (voir [Utilisation des modèles et des slots](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:has-slotted`** correspond lorsque le contenu d'un élément {{HTMLElement("slot")}} n'est pas vide ou n'utilise pas la valeur par défaut (voir [Utilisation des modèles et des slots](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 
 > [!NOTE]
 > Même un seul nœud de texte blanc suffit pour que `:has-slotted` s'applique.
@@ -72,4 +71,4 @@ L'élément `<slot>` qui a été assigné à un contenu a correspondu à la pseu
 
 - L'élément HTML {{HTMLElement("template")}}
 - L'élément HTML {{HTMLElement("slot")}}
-- {{CSSXRef("::slotted")}}
+- La pseudo-classe {{CSSxRef("::slotted")}}

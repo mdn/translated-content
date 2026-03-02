@@ -22,6 +22,6 @@ Pour consulter les couleurs web sur MDN, voir la documentation de référence de
 - Noms de couleurs&nbsp;: {{CSSxRef("&lt;named-color&gt;")}}.
 - Notations hexadécimales&nbsp;: {{CSSxRef("&lt;hex-color&gt;")}}.
 - Fonctions de couleur&nbsp;:
-  - Espace colorimétrique [sRGB](/fr/docs/Glossary/Color_space#rgb_color_spaces)&nbsp;: {{CSSxRef("color_value/hsl", "hsl()")}}, {{CSSxRef("color_value/hwb", "hwb()")}} et {{CSSxRef("color_value/rgb", "rgb()")}}.
-  - Espace colorimétrique [CIELAB](/fr/docs/Glossary/Color_space#cielab_color_spaces)&nbsp;: {{CSSxRef("color_value/lab", "lab()")}} et {{CSSxRef("color_value/lch", "lch()")}}, {{CSSxRef("color_value/oklab", "oklab()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}.
+  - Espace colorimétrique [sRGB](/fr/docs/Glossary/Color_space#espaces_de_couleur_rgb)&nbsp;: {{CSSxRef("color_value/hsl", "hsl()")}}, {{CSSxRef("color_value/hwb", "hwb()")}} et {{CSSxRef("color_value/rgb", "rgb()")}}.
+  - Espace colorimétrique [CIELAB](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab)&nbsp;: {{CSSxRef("color_value/lab", "lab()")}} et {{CSSxRef("color_value/lch", "lch()")}}, {{CSSxRef("color_value/oklab", "oklab()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}.
   - Autres espaces colorimétriques&nbsp;: {{CSSxRef("color_value/color", "color()")}}.

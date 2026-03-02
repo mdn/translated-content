@@ -6,7 +6,7 @@ l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout")}}
 
 **CSS Media Query**는 예를 들어 "뷰포트가 480 픽셀보다 넓다."라고 여러분이 지정한 규칙에 브라우저 및 장치 환경이 일치하는 경우에만 CSS를 적용할 수 있는 방법을 제공합니다. 미디어 쿼리는 뷰포트의 크기에 따라 서로 다른 레이아웃을 생성할 수 있기 때문에 반응형 웹 디자인의 중요한 부분입니다. 하지만 사용자가 실행 중인 환경에 대해서 다른 것들을 감지하는 데에도 사용할 수 있습니다. 예를 들면 사용자가 마우스가 아닌 터치스크린을 사용하는지와 같이 실행 중인 환경에 대한 여러 내용들을 탐지하는 데도 사용할 수 있습니다. 이번 단원에서는 먼저 미디어 쿼리에 사용된 구문에 대해 배우고, 이어 해당 구문을 가공의 예제에서 사용하여 간단한 디자인이 어떻게 반응할 수 있는지 살펴보겠습니다.
 
@@ -113,7 +113,7 @@ l10n:
 
 실제로 최소값 또는 최대값을 사용하는 것이 반응형 디자인인 경우에 훨씬 유용하므로 `width` 또는 `height` 값을 사용하는 경우는 좀처럼 흔치 않습니다.
 
-미디어 쿼리 규격 수준 4 및 5에 소개된 최신 기능 중 일부가 제한적으로 브라우저 지원이 되지만, 당신이 테스트할 수 있는 다른 여러 미디어 기능이 있습니다. 각 기능은 브라우저 지원 정보와 함께 MDN에 문서화되어 있으니만큼 당신은 [미디어 쿼리 사용: 미디어 기능](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features)에서 전체 목록을 찾을 수 있습니다.
+미디어 쿼리 규격 수준 4 및 5에 소개된 최신 기능 중 일부가 제한적으로 브라우저 지원이 되지만, 당신이 테스트할 수 있는 다른 여러 미디어 기능이 있습니다. 각 기능은 브라우저 지원 정보와 함께 MDN에 문서화되어 있으니만큼 당신은 [미디어 쿼리 사용: 미디어 기능](/ko/docs/Web/CSS/Guides/Media_queries/Using#media_features)에서 전체 목록을 찾을 수 있습니다.
 
 #### 방향성
 
@@ -437,4 +437,4 @@ article {
 
 또한 서로 다른 구성 요소를 추가하고 미디어 쿼리를 추가한다든지 또는 플렉스박스나 격자와 같은 레이아웃 방법을 사용하는 것이 구성 요소를 반응형으로 만드는 가장 적절한 방법인지 여부를 실험할 수 있습니다. 바른 방식 혹은 그른 방식 따윈 없습니다. 말하자면 어떤 것이 디자인과 콘텐츠에 가장 적합한지 실험하고 관찰해야 합니다.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout")}}
