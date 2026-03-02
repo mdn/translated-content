@@ -1,16 +1,17 @@
 ---
 title: ::spelling-error
 slug: Web/CSS/Reference/Selectors/::spelling-error
-original_slug: Web/CSS/::spelling-error
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
-
-{{SeeCompatTable}}
 
 **`::spelling-error`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、綴りが正しくないと{{glossary("user agent", "ユーザーエージェント")}}が判断したテキストの区間を示します。
 
+`::spelling-error` 擬似要素は、すべての表示強調擬似要素に共通する特別な継承モデルに従います。この継承の仕組みの詳細については、[表示強調擬似要素の継承](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements_inheritance)の節を参照してください。
+
 ## 利用できるプロパティ
 
-`::spelling-error` 擬似要素では、一部の CSS プロパティのみが利用できます。
+`::spelling-error` を含むセレクターのルールでは、ごく一部の CSS プロパティのみを使用することができます。
 
 - {{cssxref("color")}}
 - {{cssxref("background-color")}}
@@ -23,8 +24,10 @@ original_slug: Web/CSS/::spelling-error
 
 ## 構文
 
-```css-nolint
-::spelling-error {}
+```css
+::spelling-error {
+  /* ... */
+}
 ```
 
 ## 例
@@ -45,13 +48,13 @@ original_slug: Web/CSS/::spelling-error
 
 ```css
 ::spelling-error {
-  text-decoration: wavy red;
+  text-decoration: wavy red underline;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Simple_document_spell_check', '100%', 60)}}
+{{EmbedLiveSample('Basic_document_spell_check', '100%', 60)}}
 
 ## 仕様書
 
@@ -64,3 +67,4 @@ original_slug: Web/CSS/::spelling-error
 ## 関連情報
 
 - {{cssxref("::grammar-error")}}
+- {{cssxref("text-decoration-line")}}

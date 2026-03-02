@@ -603,9 +603,9 @@ input[type="radio"]:indeterminate {
 - {{cssxref(":blank")}} 擬似クラスは、空のフォームコントロールを選択します。 {{cssxref(":empty")}} も {{HTMLElement("input")}} のように子を持たない要素に一致しますが、より一般化されており、他の{{glossary("void element", "空要素")}}、例えば {{HTMLElement("br")}} や {{HTMLElement("hr")}} などにも一致します。 `:empty` はそれなりにブラウザーが対応しています。`:blank` 擬似クラスの仕様書はまだ完成していないので、どのブラウザーも対応しているわけではありません。
 - [`:user-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
 
 ## まとめ
 

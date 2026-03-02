@@ -1,11 +1,10 @@
 ---
 title: TypedArray.from()
+short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 l10n:
-  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`TypedArray.from()`** メソッドは、配列風オブジェクトや反復可能オブジェクトから新しい[型付き配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)を生成します。このメソッドは {{jsxref("Array.from()")}} とほぼ同じです。
 
@@ -15,7 +14,7 @@ l10n:
 const uint16 = Int16Array.from("12345");
 
 console.log(uint16);
-// Expected output: Int16Array [1, 2, 3, 4, 5]
+// 予想される結果: Int16Array [1, 2, 3, 4, 5]
 ```
 
 ## 構文
@@ -34,6 +33,7 @@ TypedArray.from(arrayLike, mapFn, thisArg)
 - {{jsxref("Uint16Array")}}
 - {{jsxref("Int32Array")}}
 - {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 - {{jsxref("BigInt64Array")}}

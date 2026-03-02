@@ -15,11 +15,11 @@ slug: Web/HTTP/Reference/Methods/PUT
     </tr>
     <tr>
       <th scope="row">Успешный ответ имеет тело</th>
-      <td>Нет</td>
+      <td>Может</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>

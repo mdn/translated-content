@@ -1,18 +1,21 @@
 ---
-title: CanvasRenderingContext2D.scale()
+title: "CanvasRenderingContext2D: scale() メソッド"
+short-title: scale()
 slug: Web/API/CanvasRenderingContext2D/scale
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
-**`CanvasRenderingContext2D.scale()`** はキャンバス 2D API のメソッドで、キャンバス上の長さを縦方向および横方向に拡縮する変形を適用させます。
+**`CanvasRenderingContext2D.scale()`** はキャンバス 2D API のメソッドで、キャンバス上の単位を縦方向および横方向に拡縮する座標変換を適用させます。
 
 既定では、キャンバス上の 1 単位は正確に 1 ピクセルです。拡縮変換はこの動作を変更します。例えば、拡大係数が 0.5 の場合、単位は 0.5 ピクセルになり、図形は通常の半分の大きさで描かれます。同様に、拡大係数を 2.0 にすると、1 単位が 2 ピクセルになり、図形は通常の 2 倍の大きさで描画されます。
 
 ## 構文
 
-```js
-void ctx.scale(x, y);
+```js-nolint
+scale(x, y)
 ```
 
 ### 引数
@@ -21,6 +24,10 @@ void ctx.scale(x, y);
   - : 水平方向の拡大係数。負の値を指定すると、縦軸を跨いでピクセルを反転させます。 `1` を指定すると、水平方向には拡縮されません。
 - `y`
   - : 垂直方向の拡大係数。負の値を指定すると、横軸を跨いでピクセルを反転させます。 `1` を指定すると、垂直方向には拡縮されません。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -49,7 +56,7 @@ ctx.scale(9, 3);
 ctx.fillStyle = "red";
 ctx.fillRect(10, 10, 8, 20);
 
-// 変形行列を単位行列に戻す
+// 座標変換行列を恒等行列に戻す
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 // 原型の長方形

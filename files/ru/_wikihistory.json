@@ -4534,6 +4534,12 @@
       "VerZsuT"
     ]
   },
+  "Web/API/AbstractRange/collapsed": {
+    "modified": "2019-03-23T22:46:28.635Z",
+    "contributors": [
+      "AlexChuev"
+    ]
+  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T22:18:41.838Z",
     "contributors": [
@@ -8601,12 +8607,6 @@
       "Horhik",
       "fakedous",
       "fscholz"
-    ]
-  },
-  "Web/API/Range/collapsed": {
-    "modified": "2019-03-23T22:46:28.635Z",
-    "contributors": [
-      "AlexChuev"
     ]
   },
   "Web/API/Range/getBoundingClientRect": {
