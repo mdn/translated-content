@@ -61,7 +61,7 @@ Cette page propose une sélection de ressources d'apprentissage parmi les plus p
 
 - [Guide des polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts)
   - : Découvrez comment utiliser les polices variables dans vos créations.
-- [Le format Web Open Font Format (WOFF)](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+- [Le format Web Open Font Format (WOFF)](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
   - : WOFF (Web Open Font Format) est un format de fichier de police librement utilisable sur le web.
 
 ## Développement d'interfaces utilisateur

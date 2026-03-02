@@ -1,35 +1,88 @@
 ---
 title: border-inline
 slug: Web/CSS/Reference/Properties/border-inline
-original_slug: Web/CSS/border-inline
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-inline`** permet de définir les valeurs individuelles des propriétés logiques de bordure en ligne à un seul endroit dans la feuille de style.
 
-La propriété **`border-inline`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline")}}
+
+```css interactive-example-choice
+border-inline: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Ceci est une boîte avec une bordure autour.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eeeeee;
+  color: darkmagenta;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
+
+## Propriétés constitutives
+
+Cette propriété est une abréviation pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("border-inline-color")}}
+- {{CSSxRef("border-inline-style")}}
+- {{CSSxRef("border-inline-width")}}
+
+## Syntaxe
 
 ```css
 border-inline: 1px;
 border-inline: 2px dotted;
 border-inline: medium dashed blue;
+
+/* Valeurs globales */
+border-inline: inherit;
+border-inline: initial;
+border-inline: revert;
+border-inline: revert-layer;
+border-inline: unset;
 ```
-
-`border-inline` peut être utilisée afin de définir une ou plusieurs propriétés parmi {{cssxref("border-inline-width")}}, {{cssxref("border-inline-style")}} et {{cssxref("border-inline-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de en ligne. Les propriétés physiques correspondantes dépendront du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{cssxref("border-top")}} et {{cssxref("border-bottom")}} ou à {{cssxref("border-right")}} et {{cssxref("border-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
-
-Les bordures sur l'autre dimension peuvent être définies grâce à {{cssxref("border-block")}}, (qui est la proprété raccourcie pour {{cssxref("border-block-start")}} et {{cssxref("border-block-end")}}).
-
-## Syntaxe
 
 ### Valeurs
 
 La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.
 
 - `<'border-width'>`
-  - : La largeur de la bordure. Voir {{cssxref("border-width")}}.
+  - : La largeur de la bordure. Voir {{CSSxRef("border-width")}}.
 - `<'border-style'>`
-  - : Le style pour la ligne de la bordure. Voir {{cssxref("border-style")}}.
-- `<'color'>`
-  - : La couleur de la bordure. Voir {{cssxref("color")}}.
+  - : Le style pour la ligne de la bordure. Voir {{CSSxRef("border-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur de la bordure.
+
+## Description
+
+Les bordures physiques auxquelles `border-inline` correspond dépendent du mode d'écriture, de la direction et de l'orientation du texte de l'élément. Cela correspond aux propriétés {{CSSxRef("border-top")}} et {{CSSxRef("border-bottom")}} ou {{CSSxRef("border-right")}}, et {{CSSxRef("border-left")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+
+Les bordures dans l'autre dimension peuvent être définies avec {{CSSxRef("border-block")}}, qui définit {{CSSxRef("border-block-start")}} et {{CSSxRef("border-block-end")}}.
 
 ## Définition formelle
 
@@ -41,7 +94,17 @@ La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces
 
 ## Exemples
 
-### CSS
+### Bordure avec texte vertical
+
+#### HTML
+
+```html
+<div>
+  <p class="exempleTexte">Texte exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -56,17 +119,9 @@ div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="exempleTexte">Texte exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Bordure avec texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -78,10 +133,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui peuvent correspondre à cette propriété logique :
-  - {{cssxref("border-top")}},
-  - {{cssxref("border-right")}},
-  - {{cssxref("border-bottom")}},
-  - {{cssxref("border-left")}}.
-
-- Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top")}}, {{CSSxRef("border-right")}}, {{CSSxRef("border-bottom")}} ou {{CSSxRef("border-left")}}.
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

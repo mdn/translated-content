@@ -234,8 +234,8 @@ CSS の値と単位のモジュールでは、{{cssxref("frequency")}} および
   - [`color-mix()`](/ja/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
 - [CSS 画像](/ja/docs/Web/CSS/Guides/Images)モジュール
-  - {{cssxref("&lt;image&gt;")}}
-  - {{cssxref("&lt;gradient&gt;")}}
+  - {{cssxref("image")}}
+  - {{cssxref("gradient")}}
 
 ## 仕様書
 

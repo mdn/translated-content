@@ -100,7 +100,7 @@ var callback = (() => {
 })();
 ```
 
-## 関連項目
+## 関連情報
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "function statement", "", 1)}}

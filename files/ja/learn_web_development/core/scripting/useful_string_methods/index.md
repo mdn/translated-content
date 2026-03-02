@@ -733,9 +733,9 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('Making_new_strings_from_old_parts', '100%', 600) }}
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 文字列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: 文字列](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings)を見てください。
 
 ## 結論
 
