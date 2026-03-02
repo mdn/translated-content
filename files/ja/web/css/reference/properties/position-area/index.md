@@ -2,7 +2,7 @@
 title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
 ---
 
 **`position-area`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アンカー位置指定された要素を、関連付けられたアンカー要素の端を基準に相対的に配置することを可能にします。これは、配置対象の要素を暗黙の 3x3 グリッドの 1 つ以上のタイル上に配置することで実現され、アンカー要素は中央セルとなります。
@@ -87,7 +87,7 @@ position-area: unset;
   - `block-end span-inline-end` は、位置指定要素をブロックの末尾の行の中央に配置し、その行の中央タイルとインラインの末尾のタイルにまたがるようにします。
   - `bottom span-all` および `y-end span-all` は、配置された要素を最下段の中央に配置し、3 つのセル（この場合、最下段の左、中央、右のタイル）にまたがるようにします。
 
-アンカー機能の詳細、使用方法、および `position-area` プロパティについては、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと、[CSS アンカー位置指定の使用方法](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド、特に [`position-area` の設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#position-area_の設定)の節を参考にしてください。
+アンカー機能の詳細、使用方法、および `position-area` プロパティについては、[CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールと、[CSS アンカー位置指定の使用方法](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド、特に [`position-area` の設定](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#position-area_の設定)の節を参考にしてください。
 
 ### 調整されたデフォルトの動作
 
