@@ -2,10 +2,8 @@
 title: Heure Unix
 slug: Glossary/Unix_time
 l10n:
-  sourceCommit: 3da9465db662eb3a39e3aea413ef4d381637eab3
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 L'heure Unix est une méthode pour représenter un horodatage et est généralement définie comme le nombre de secondes écoulées depuis l'origine du temps Unix, située le premier janvier 1970 à minuit UTC. Les secondes intercalaires rajoutées depuis sont ignorées pour cette mesure.
 

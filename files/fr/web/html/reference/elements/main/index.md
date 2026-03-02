@@ -53,7 +53,7 @@ L'élément `<main>` a le rôle d'un [repère `main`](/fr/docs/Web/Accessibility
 
 ### Navigation rapide
 
-La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
+La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur·ice d'accéder plus rapidement au contenu principal de la page.
 
 Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
@@ -69,7 +69,7 @@ Ajouter un attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) à 
 </body>
 ```
 
-- [WebAIM : Liens et navigation rapide <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
+- [WebAIM&nbsp;: Liens et navigation rapide <sup>(angl.)</sup>](https://webaim.org/techniques/skipnav/)
 
 ### Mode lecture
 

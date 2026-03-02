@@ -1,9 +1,8 @@
 ---
 title: ::marker
 slug: Web/CSS/Reference/Selectors/::marker
-original_slug: Web/CSS/::marker
 l10n:
-  sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
+  sourceCommit: 618d480ec934c834d8a37796dc691061c401ed5d
 ---
 
 **`::marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、リスト項目の箇条書き記号ボックス（ふつうは黒丸や番号が入ったもの）を選択します。これは [`display: list-item`](/ja/docs/Web/CSS/Reference/Properties/display) が設定された要素や擬似要素、例えば {{HTMLElement("li")}} 要素や {{HTMLElement("summary")}} 要素で利用できます。
@@ -18,7 +17,7 @@ li::marker {
 ```
 
 ```html interactive-example
-<p>Group known as Mercury Seven:</p>
+<p>マーキュリーセブンとして知られるグループ:</p>
 <ul>
   <li>Malcolm Scott Carpenter</li>
   <li>Leroy Gordon (Gordo) Cooper Jr.</li>
@@ -34,12 +33,14 @@ li::marker {
 
 `::marker` 擬似要素は、限られた数の CSS プロパティのみに対応しています。例えば以下のようなものがあります。
 
-- すべての[フォントプロパティ](/ja/docs/Web/CSS/Guides/Fonts)
-- {{CSSxRef("white-space")}} プロパティ
-- {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}} の各プロパティ
-- {{CSSxRef("content")}} プロパティ
 - すべての[アニメーション](/ja/docs/Web/CSS/Guides/Animations#プロパティ)および[トランジション](/ja/docs/Web/CSS/Guides/Transitions#プロパティ)プロパティ
+- すべての[フォントプロパティ](/ja/docs/Web/CSS/Guides/Fonts)
+- {{CSSxRef("color")}}
+- {{CSSxRef("content")}}
+- {{cssxref("counter-increment")}}, {{cssxref("counter-reset")}}, {{cssxref("counter-set")}}
+- {{cssxref("quotes")}}
+- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}}, {{CSSxRef("direction")}}
+- {{CSSxRef("white-space")}}
 
 > [!NOTE]
 > 仕様書では、将来的にさらなる CSS プロパティに対応する可能性があるとしています。
@@ -58,9 +59,9 @@ li::marker {
 
 ```html
 <ul>
-  <li>Peaches</li>
-  <li>Apples</li>
-  <li>Plums</li>
+  <li>もも</li>
+  <li>りんご</li>
+  <li>すもも</li>
 </ul>
 ```
 
