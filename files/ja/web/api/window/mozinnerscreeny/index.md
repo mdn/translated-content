@@ -1,9 +1,12 @@
 ---
-title: Window.mozInnerScreenY
+title: "Window: mozInnerScreenY プロパティ"
+short-title: mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
+l10n:
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
-{{APIRef}}
+{{APIRef}}{{Non-standard_Header}}
 
 `mozInnerScreenY` は {{domxref("Window")}} のプロパティで、ウィンドウのビューポートにおける左上隅の Y 座標をスクリーン座標で返します。
 

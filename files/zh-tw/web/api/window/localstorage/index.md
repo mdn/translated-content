@@ -19,7 +19,7 @@ l10n:
 
 - `SecurityError`
   - : 在以下情況之一會拋出：
-    - 同源不是[一個有效的協定／主機／埠元組](/zh-TW/docs/Web/Security/Same-origin_policy#同源定義)。舉例來說，如果同源使用 `file:` 或 `data:` 協定，就可能發生這種情況。
+    - 同源不是[一個有效的協定／主機／埠元組](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy#同源定義)。舉例來說，如果同源使用 `file:` 或 `data:` 協定，就可能發生這種情況。
     - 請求違反了政策決定。例如，使用者已將瀏覽器組態為防止頁面保存資料。
 
     請注意，如果使用者封鎖了 Cookie，瀏覽器可能會將此解釋為防止頁面保存資料的指令。

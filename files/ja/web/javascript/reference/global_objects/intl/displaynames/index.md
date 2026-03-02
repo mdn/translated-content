@@ -47,20 +47,20 @@ console.log(regionNamesInTraditionalChinese.of("US"));
 
 ```js
 // 英語の地域名を表示
-let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
-regionNames.of('419'); // "Latin America"
-regionNames.of('BZ');  // "Belize"
-regionNames.of('US');  // "United States"
-regionNames.of('BA');  // "Bosnia & Herzegovina"
-regionNames.of('MM');  // "Myanmar (Burma)"
+let regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+regionNames.of("419"); // "Latin America"
+regionNames.of("BZ"); // "Belize"
+regionNames.of("US"); // "United States"
+regionNames.of("BA"); // "Bosnia & Herzegovina"
+regionNames.of("MM"); // "Myanmar (Burma)"
 
 // 繁体字中国語での地域名を表示
-regionNames = new Intl.DisplayNames(['zh-Hant'], {type: 'region'});
-regionNames.of('419'; // "拉丁美洲"
-regionNames.of('BZ'); // "貝里斯"
-regionNames.of('US'); // "美國"
-regionNames.of('BA'); // "波士尼亞與赫塞哥維納"
-regionNames.of('MM'); // "緬甸"
+regionNames = new Intl.DisplayNames(["zh-Hant"], { type: "region" });
+regionNames.of("419"); // "拉丁美洲"
+regionNames.of("BZ"); // "貝里斯"
+regionNames.of("US"); // "美國"
+regionNames.of("BA"); // "波士尼亞與赫塞哥維納"
+regionNames.of("MM"); // "緬甸"
 ```
 
 ### 言語の表示名

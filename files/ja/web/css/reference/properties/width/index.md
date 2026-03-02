@@ -1,9 +1,8 @@
 ---
 title: width
 slug: Web/CSS/Reference/Properties/width
-original_slug: Web/CSS/width
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の幅を設定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)の幅を設定しますが、 {{cssxref("box-sizing")}} を `border-box` に設定すると、[境界領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#境界領域)の幅を設定します。
@@ -29,7 +28,7 @@ width: auto;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the width.
+    これは幅が変更できるボックスです。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ width: auto;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -59,8 +58,8 @@ width: auto;
 /* <length> 値 */
 width: 300px;
 width: 25em;
-width: anchor-size(--myAnchor inline, 120%);
-width: minmax(100px, anchor-size(width));
+width: anchor-size(width);
+width: anchor-size(--my-anchor inline, 120%);
 
 /* <percentage> 値 */
 width: 75%;
@@ -89,19 +88,16 @@ width: unset;
   - : 親となる[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)の幅に対するパーセント値で定義します。
 - `auto`
   - : 指定された要素の幅をブラウザーが計算して決めます。
-- `max-content`
+- {{cssxref("max-content")}}
   - : 本来の望ましい幅です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : 本来の最小の幅です。
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : 利用できる空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) を超えないようにします。すなわち、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空間に対して fit-content 式を使用し、指定された引数に置き換えられます。すなわち `min(max-content, max(min-content, <length-percentage>))` です。
 - `stretch`
   - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の幅を、[包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block#包含ブロックの識別)の幅に設定します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/Reference/Properties/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
-
-    > [!NOTE]
-    > ブラウザーが `stretch` 値のために使用する別名と実装状況については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 ## アクセシビリティ
 
@@ -123,13 +119,13 @@ width: unset;
 ### 既定の幅
 
 ```css
-p.goldie {
+p.gold {
   background: gold;
 }
 ```
 
-```html
-<p class="goldie">The MDN community writes really great documentation.</p>
+```html-nolint
+<p class="gold">MDN コミュニティは非常に優れたドキュメントを作成しています。</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -153,8 +149,8 @@ p.goldie {
 ```
 
 ```html
-<div class="px_length">Width measured in px</div>
-<div class="em_length">Width measured in em</div>
+<div class="px_length">px で測定された幅</div>
+<div class="em_length">em で測定された幅</div>
 ```
 
 {{EmbedLiveSample('Example using pixels and ems', '500px', '64px')}}
@@ -170,7 +166,7 @@ p.goldie {
 ```
 
 ```html
-<div class="percent">Width in percentage</div>
+<div class="percent">パーセント値の幅</div>
 ```
 
 {{EmbedLiveSample('Example using percentage', '500px', '64px')}}
@@ -184,8 +180,8 @@ p.max-green {
 }
 ```
 
-```html
-<p class="max-green">The MDN community writes really great documentation.</p>
+```html-nolint
+<p class="max-green">MDN コミュニティは非常に優れたドキュメントを作成しています。</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -199,11 +195,60 @@ p.min-blue {
 }
 ```
 
-```html
-<p class="min-blue">The MDN community writes really great documentation.</p>
+```html-nolint
+<p class="min-blue">MDN コミュニティは非常に優れたドキュメントを作成しています。</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
+
+### Stretch width to fill the containing block
+
+#### HTML
+
+```html
+<div class="parent">
+  <div class="child">text</div>
+</div>
+
+<div class="parent">
+  <div class="child stretch">stretch</div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+@supports not (width: stretch) {
+  .parent {
+    display: none !important;
+  }
+
+  body::after {
+    content: "このブラウザーはまだ `stretch` 値には対応していません。";
+  }
+}
+```
+
+```css
+.parent {
+  border: solid;
+  margin: 1rem;
+  display: flex;
+}
+
+.child {
+  background: #00999999;
+  margin: 1rem;
+}
+
+.stretch {
+  width: stretch;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Stretch width to fill the containing block', 'auto', 250)}}
 
 ## 仕様書
 
@@ -220,5 +265,6 @@ p.min-blue {
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
+- SVG の {{SVGAttr("width")}} 属性
 - [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

@@ -1,18 +1,118 @@
 ---
 title: CSS 背景と境界
+short-title: 背景と境界
 slug: Web/CSS/Guides/Backgrounds_and_borders
-original_slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: f6497ec3b1a28d7b0a99f5d13e81027204293fa3
+  sourceCommit: d8022a15df88029e3ff0cd7b7474bd3c43a2e25e
 ---
 
 **CSS 背景と境界**モジュールでは、背景、境界、角の丸め、ボックスシャドウを要素に追加します。
 
 さまざまな種類の境界スタイルを追加することができます。ラスター画像から CSS グラデーションまで、どのような種類の画像でも境界を記載することができます。境界は角形または丸めることができ、それぞれの角には異なる半径を設定することができます。要素は、境界があってもなくても丸めることができます。
 
-ボックスシャドウには、内側の影も外側の影も、単一の影も複数の影も、明瞭なものもあれば透明へフェードするものもあります。外側の box-shadow は、要素の境界ボックスが不透明であるかのように影を落とします。内側の box-shadow は、パディング境界の外側がすべて不透明であるかのように影を落とします。影は明瞭にするか、影の色が透明へ遷移する拡散距離を含めることができます。
+ボックスシャドウには、内側の影も外側の影も、単一の影も複数の影も、明瞭なものもあれば透明へフェードするものもあります。外側のボックスシャドウは、要素の境界ボックスが不透明であるかのように影を落とします。内側のボックスシャドウは、パディング境界の外側がすべて不透明であるかのように影を落とします。影は明瞭にするか、影の色が透明へ遷移する拡散距離を含めることができます。
 
 このモジュールのプロパティは、 {{HTMLElement("table")}} 内のセルが共有境界を持つべきか別個の境界を持つべきかを定義することもできます。
+
+## リファレンス
+
+### プロパティ
+
+- {{cssxref("background-attachment")}}
+- {{cssxref("background-clip")}}
+- {{cssxref("background-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("background-origin")}}
+- {{cssxref("background-position")}}
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
+- {{cssxref("background-repeat")}} 一括指定
+- {{cssxref("background-size")}}
+- {{cssxref("background")}} 一括指定
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-bottom")}} 一括指定
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-left")}} 一括指定
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-right")}} 一括指定
+- {{cssxref("border-top-color")}}
+- {{cssxref("border-top-style")}}
+- {{cssxref("border-top-width")}}
+- {{cssxref("border-top")}} 一括指定
+- {{cssxref("border-color")}} 一括指定
+- {{cssxref("border-style")}} 一括指定
+- {{cssxref("border-width")}} 一括指定
+- {{cssxref("border")}} 一括指定
+- {{cssxref("border-bottom-left-radius")}}
+- {{cssxref("border-bottom-right-radius")}}
+- {{cssxref("border-top-left-radius")}}
+- {{cssxref("border-top-right-radius")}}
+- {{cssxref("border-radius")}} 一括指定
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
+- {{cssxref("border-image")}} 一括指定
+- {{cssxref("box-shadow")}}
+
+CSS backgrounds モジュールレベル 4 では、 `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-tbd` の各プロパティを導入しています。これらはまだ実装されていません。
+
+### データ型
+
+- {{cssxref("line-style")}} 列挙型
+
+## ガイド
+
+- [複数の背景の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+  - : 要素に 1 つ以上の背景を設定します。
+- [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+  - : 背景画像のサイズや繰り返しの動作を変更する方法を説明します。
+- [SVG の背景の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
+  - : SVG のアスペクト比、SVG の寸法値、 CSS の `background-size` プロパティが、 SVG 背景画像の拡大縮小に与える影響について説明します。
+- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
+  - : CSS でグラデーションの背景画像を作成する方法を説明します。
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+  - : CSS の背景画像を使用して装飾的な画像を実装する方法を学びます。
+- [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
+  - : 境界線やその他のボックスモデルプロパティが CSS ボックスモデルに与える影響について学びます。
+
+## 関連概念
+
+- {{cssxref("border-block-end-color")}}
+- {{cssxref("border-block-start-color")}}
+- {{cssxref("border-inline-end-color")}}
+- {{cssxref("border-inline-start-color")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-inline-end-style")}}
+- {{cssxref("border-inline-start-style")}}
+- {{cssxref("border-block-end-width")}}
+- {{cssxref("border-block-start-width")}}
+- {{cssxref("border-inline-end-width")}}
+- {{cssxref("border-inline-start-width")}}
+- {{cssxref("border-start-start-radius")}}
+- {{cssxref("border-start-end-radius")}}
+- {{cssxref("border-end-start-radius")}}
+- {{cssxref("border-end-end-radius")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("box-decoration-break")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型
+- {{cssxref("url")}} データ型
+- {{cssxref("image")}} データ型
+- {{cssxref("position")}} データ型
+- [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) キーワード
+
+## 例
 
 ### 背景、境界、ボックスシャドウの動き
 
@@ -36,19 +136,19 @@ div {
   width: 240px;
   padding: 20px;
   margin: 10px;
-  border: dotted 15px; /* 既定値の `currentcolor` */
+  border: dotted 15px; /* 既定値の `currentColor` */
   border-radius: 100px 0;
   background-image:
     radial-gradient(
       circle,
       transparent 60%,
-      currentcolor 60% 70%,
+      currentColor 60% 70%,
       transparent 70%
     ),
-    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(45deg, currentColor, white),
     linear-gradient(transparent, transparent);
   /* 3 枚目の透明な背景画像が追加され、背景色が透けて見えるスペースが確保された */
-  background-color: currentcolor;
+  background-color: currentColor;
   background-position: center;
   background-size:
     60px 60px,
@@ -77,111 +177,6 @@ div:first-of-type {
 
 上記の例の "Play" をクリックすると、 MDN Playground でコードを見たり編集したりすることができます。
 
-## リファレンス
-
-### プロパティ
-
-- {{cssxref("background-attachment")}}
-- {{cssxref("background-clip")}}
-- {{cssxref("background-color")}}
-- {{cssxref("background-image")}}
-- {{cssxref("background-origin")}}
-- {{cssxref("background-position")}}
-- {{cssxref("background-repeat")}}
-- {{cssxref("background-size")}}
-- {{cssxref("background")}} 一括指定
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-y")}}
-
-- {{cssxref("border-bottom-color")}}
-- {{cssxref("border-bottom-style")}}
-- {{cssxref("border-bottom-width")}}
-- {{cssxref("border-bottom")}} 一括指定
-- {{cssxref("border-left-color")}}
-- {{cssxref("border-left-style")}}
-- {{cssxref("border-left-width")}}
-- {{cssxref("border-left")}} 一括指定
-- {{cssxref("border-right-color")}}
-- {{cssxref("border-right-style")}}
-- {{cssxref("border-right-width")}}
-- {{cssxref("border-right")}} 一括指定
-- {{cssxref("border-top-color")}}
-- {{cssxref("border-top-style")}}
-- {{cssxref("border-top-width")}}
-- {{cssxref("border-top")}} 一括指定
-- {{cssxref("border-color")}} 一括指定
-- {{cssxref("border-style")}} 一括指定
-- {{cssxref("border-width")}} 一括指定
-- {{cssxref("border")}} 一括指定
-
-- {{cssxref("border-bottom-left-radius")}}
-- {{cssxref("border-bottom-right-radius")}}
-- {{cssxref("border-top-left-radius")}}
-- {{cssxref("border-top-right-radius")}}
-- {{cssxref("border-radius")}} 一括指定
-
-- {{cssxref("border-image-outset")}}
-- {{cssxref("border-image-repeat")}}
-- {{cssxref("border-image-slice")}}
-- {{cssxref("border-image-source")}}
-- {{cssxref("border-image-width")}}
-- {{cssxref("border-image")}} 一括指定
-
-- {{cssxref("box-shadow")}}
-
-> [!NOTE]
-> CSS backgrounds モジュールレベル 4 では、 `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, `background-tbd` の各プロパティを導入しています。これらはまだ実装されていません。
-
-### データ型
-
-- {{cssxref("line-style")}} 列挙型
-
-## ガイド
-
-- [複数の背景の使用](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
-  - : 要素に 1 つ以上の背景を設定します。
-- [背景画像の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
-  - : 背景画像のサイズや繰り返しの動作を変更する方法を説明します。
-- [SVG の背景の拡大縮小](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
-  - : SVG のアスペクト比、SVG の寸法値、 CSS の `background-size` プロパティが、 SVG 背景画像の拡大縮小に与える影響について説明します。
-- [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
-  - : CSS でグラデーションの背景画像を作成する方法を説明します。
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : CSS の背景画像を使用して装飾的な画像を実装する方法を学びます。
-- [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : 境界線やその他のボックスモデルプロパティが CSS ボックスモデルに与える影響について学びます。
-
-## 関連概念
-
-- {{cssxref("border-block-end-color")}} プロパティ
-- {{cssxref("border-block-start-color")}} プロパティ
-- {{cssxref("border-inline-end-color")}} プロパティ
-- {{cssxref("border-inline-start-color")}} プロパティ
-- {{cssxref("border-block-end-style")}} プロパティ
-- {{cssxref("border-block-start-style")}} プロパティ
-- {{cssxref("border-inline-end-style")}} プロパティ
-- {{cssxref("border-inline-start-style")}} プロパティ
-- {{cssxref("border-block-end-width")}} プロパティ
-- {{cssxref("border-block-start-width")}} プロパティ
-- {{cssxref("border-inline-end-width")}} プロパティ
-- {{cssxref("border-inline-start-width")}} プロパティ
-
-- {{cssxref("border-start-start-radius")}} プロパティ
-- {{cssxref("border-start-end-radius")}} プロパティ
-- {{cssxref("border-end-start-radius")}} プロパティ
-- {{cssxref("border-end-end-radius")}} プロパティ
-
-- {{cssxref("box-sizing")}} プロパティ
-- {{cssxref("box-decoration-break")}} プロパティ
-- {{cssxref("text-shadow")}} プロパティ
-
-- {{cssxref("url_value", "&lt;url&gt;")}} データ型
-- [`<color>`](/ja/docs/Web/CSS/Reference/Properties/color) データ型
-- [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) データ型
-- [`<position>`](/ja/docs/Web/CSS/Reference/Properties/position) データ型
-
-- [`currentcolor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) キーワード
-
 ## 仕様書
 
 {{Specifications}}
@@ -192,5 +187,7 @@ div:first-of-type {
 - {{cssxref("backdrop-filter")}}
 - [`drop-shadow()`](/ja/docs/Web/CSS/Reference/Values/filter-function/drop-shadow) フィルター関数
 - [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- ツール:
 - [境界画像作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
 - [境界角丸作成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
+  - [ボックスシャドウ生成ツール](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders/Box-shadow_generator)

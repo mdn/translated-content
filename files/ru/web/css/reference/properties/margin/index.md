@@ -6,7 +6,7 @@ original_slug: Web/CSS/margin
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`margin`** определяет [внешний отступ](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
+[CSS](/ru/docs/Web/CSS) свойство **`margin`** определяет [внешний отступ](/ru/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
 {{InteractiveExample("CSS Demo: margin")}}
 
@@ -194,7 +194,7 @@ margin: auto;
 
 ### Схлопывание отступов
 
-Иногда внешние отступы для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотрите [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) для получения большей информации.
+Иногда внешние отступы для верхней и нижней сторон схлопываются в один отступ, который равен наибольшему из двух отступов. Смотрите [Схлопывание внешних отступов](/ru/docs/Web/CSS/Guides/Box_model/Margin_collapsing) для получения большей информации.
 
 ## Спецификации
 
@@ -206,7 +206,7 @@ margin: auto;
 
 ## Смотрите также
 
-- [Введение в базовую блочную модель CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Введение в базовую блочную модель CSS](/ru/docs/Web/CSS/Guides/Box_model/Introduction)
+- [Схлопывание отступов](/ru/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}
 - Логические свойства: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}} и {{cssxref("margin-inline-end")}}. А так же сокращенные варианты: {{cssxref("margin-block")}} и {{cssxref("margin-inline")}}

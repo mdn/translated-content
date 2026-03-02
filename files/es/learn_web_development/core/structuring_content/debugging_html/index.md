@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Debugging_HTML
 original_slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Escribir HTML es fácil, pero ¿qué pasa si algo va mal y desconocemos dónde está el error de codificación? En este artículo veremos varias herramientas que nos ayudarán a arreglar errores en HTML.
 
@@ -171,4 +171,4 @@ Sabremos que todos los errores están arreglados cuando veamos el mensaje siguie
 
 Pues hasta aquí una introducción al depurado de HTML, que nos proporcionará habilidades para cuando comencemos a depurar CSS, JavaScript y otros lenguajes más adelante en nuestros trabajos. Este apartado también constituye el final de la introducción al módulo de artículos de aprendizaje de HTML; ahora podemos hacer los test de prueba: el primero de los cuales está en el enlace siguiente.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}

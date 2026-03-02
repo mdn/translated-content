@@ -145,7 +145,7 @@ updatePixelRatio();
 
 ## 같이 보기
 
-- [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries)
-- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries)
+- [미디어 쿼리 사용하기](/ko/docs/Web/CSS/Guides/Media_queries/Using)
 - [CSS `resolution` media query](/ko/docs/Web/CSS/@media/resolution)
 - {{cssxref("image-resolution")}} 속성

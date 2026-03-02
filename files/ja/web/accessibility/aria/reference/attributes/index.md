@@ -44,7 +44,7 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
 - [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
-2### ライブリージョン属性
+### ライブリージョン属性
 
 - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)

@@ -3,7 +3,7 @@ title: Элементы изображений, медиа и форм
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.
 
@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 
 ## Замещаемые элементы
 
-Изображения и видео описываются как **[Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)**. Это значит, что CSS не может влиять на внутреннюю планировку этих элементов — только на их позицию на странице среди других элементов. Однако, как мы увидим, существуют различные вещи, которые CSS может сделать с изображением.
+Изображения и видео описываются как **[Замещаемые элементы](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties)**. Это значит, что CSS не может влиять на внутреннюю планировку этих элементов — только на их позицию на странице среди других элементов. Однако, как мы увидим, существуют различные вещи, которые CSS может сделать с изображением.
 
 Конкретные замещаемые элементы, такие как изображения и видео, можно также описать, как элементы имеющие **соотношение сторон**. Это значит, что такой элемент имеет размер как по горизонтали (x) так и по вертикали (y) и будет отображаться используя "родные" размеры файла по умолчанию.
 
@@ -162,7 +162,7 @@ textarea {
 
 This lesson has highlighted some of the differences you will encounter when working with images, media, and other unusual elements in CSS. In the next article we'll look over a few tips you'll find useful when you have to style HTML tables.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 ## In this module
 

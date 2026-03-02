@@ -1,14 +1,13 @@
 ---
 title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
-original_slug: Web/CSS/grid-template
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-template`** définit les {{Glossary("grid column", "colonnes de grille")}}, les {{Glossary("grid_row", "lignes de grille")}} et les {{Glossary("grid areas", "zones de grille")}}.
 
-La propriété **`grid-template`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) permettant de définir les colonnes, grilles et zones d'une grille.
-
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: grid-template")}}
 
 ```css interactive-example-choice
 grid-template:
@@ -35,9 +34,9 @@ grid-template:
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+      <div>Un</div>
+      <div>Deux</div>
+      <div>Trois</div>
     </div>
   </div>
 </section>
@@ -52,25 +51,31 @@ grid-template:
 }
 
 #example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   grid-area: a;
 }
 
 #example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
   grid-area: b;
 }
 
 #example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
+  background-color: rgb(94 255 0 / 0.2);
   border: 3px solid green;
   grid-area: c;
 }
 ```
 
-Les propriétés détaillées sont {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}.
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("grid-template-areas")}}
+- {{CSSxRef("grid-template-columns")}}
+- {{CSSxRef("grid-template-rows")}}
 
 ## Syntaxe
 
@@ -81,7 +86,7 @@ grid-template: none;
 /* Valeurs utilisant grid-template-rows / grid-template-columns */
 grid-template: 100px 1fr / 50px 1fr;
 grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
+grid-template: [line-name] 100px / [column-name1] 30% [column-name2] 70%;
 grid-template: fit-content(100px) / fit-content(40%);
 
 /* Valeurs utilisant grid-template-areas grid-template-rows / grid-template-column */
@@ -99,23 +104,25 @@ grid-template:
 /* Valeurs globales */
 grid-template: inherit;
 grid-template: initial;
+grid-template: revert;
+grid-template: revert-layer;
 grid-template: unset;
 ```
 
 ### Valeurs
 
 - `none`
-  - : Un mot-clé qui applique `none` sur les trois propriétés détaillées et qui indique qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite et leurs tailles seront déterminées par les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
+  - : Définit les trois propriétés détaillées sur `none`, ce qui signifie qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite&nbsp;; leur taille sera déterminée par les propriétés {{CSSxRef("grid-auto-rows")}} et {{CSSxRef("grid-auto-columns")}}. Il s'agit de la valeur par défaut.
 - `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur `none`.
+  - : Voir {{CSSxRef("grid-template-rows")}} et {{CSSxRef("grid-template-columns")}} pour les valeurs définies. {{CSSxRef("grid-template-areas")}} recevra la valeur `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <track-list> ]?`
-  - : {{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
+  - : {{CSSxRef("grid-template-areas")}} est définie avec les chaînes listées, {{CSSxRef("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{CSSxRef("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
 
     > [!NOTE]
-    > La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
+    > La fonction {{CSSxRef("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
 
 > [!NOTE]
-> La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
+> La propriété raccourcie {{CSSxRef("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
 
 ## Définition formelle
 
@@ -127,7 +134,20 @@ grid-template: unset;
 
 ## Exemples
 
-### CSS
+### Définir un modèle de grille
+
+#### HTML
+
+```html
+<section id="page">
+  <header>En-tête</header>
+  <nav>Navigation</nav>
+  <main>Zone principale</main>
+  <footer>Bas de page</footer>
+</section>
+```
+
+#### CSS
 
 ```css
 #page {
@@ -136,8 +156,8 @@ grid-template: unset;
   height: 200px;
   grid-template:
     [header-left] "head head" 30px [header-right]
-    [main-left] "nav main" 1fr [main-right]
-    [footer-left] "nav foot" 30px [footer-right]
+    [main-left] "nav  main" 1fr [main-right]
+    [footer-left] "nav  foot" 30px [footer-right]
     / 120px 1fr;
 }
 
@@ -158,24 +178,13 @@ main {
 
 footer {
   background-color: red;
-  grid-column: foot;
+  grid-area: foot;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<section id="page">
-  <header>En-tête</header>
-  <nav>Navigation</nav>
-  <main>Zone principale</main>
-  <footer>Bas de page</footer>
-</section>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", "100%", "200px")}}
+{{EmbedLiveSample("Définir un modèle de grille", "100%", 200)}}
 
 ## Spécifications
 
@@ -187,9 +196,9 @@ footer {
 
 ## Voir aussi
 
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template-columns")}}
-- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
-- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propri%c3%a9t%c3%a9s_raccourcies_pour_les_grilles_css)
-- Tutoriel vidéo : [les propriétés raccourcies pour les zones de grille (en anglais)](https://gridbyexample.com/video/grid-template-shorthand/)
+- La propriété {{CSSxRef("grid-template-rows")}}
+- La propriété {{CSSxRef("grid-template-columns")}}
+- La propriété {{CSSxRef("grid-template-areas")}}
+- [Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#les_propriétés_raccourcies_pour_les_grilles_css)
+- Vidéo&nbsp;: [les propriétés raccourcies pour les zones de grille <sup>(angl.)</sup>](https://gridbyexample.com/video/grid-template-shorthand/)

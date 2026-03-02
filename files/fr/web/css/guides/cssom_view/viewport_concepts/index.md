@@ -39,7 +39,7 @@ window.outerHeight; /* 900 */
 
 Il existe plusieurs propriétés du DOM qui permettent d'obtenir la taille de la zone d'affichage et certaines dimensions associées :
 
-- La propriété du document {{DOMxRef("Element.clientWidth")}} est la largeur interne du document, exprimée en [pixels CSS](/fr/docs/Mozilla/Mobile/Balise_meta_viewport#Un_pixel_n'est_pas_un_pixel), et inclut le remplissage (_padding_) mais pas les marges, les bordures et les barres de défilement. **C'est la largeur de la zone d'affichage**.
+- La propriété du document {{DOMxRef("Element.clientWidth")}} est la largeur interne du document, exprimée en [pixels CSS](/fr/docs/Mozilla/Mobile/Balise_meta_viewport#un_pixel_nest_pas_un_pixel), et inclut le remplissage (_padding_) mais pas les marges, les bordures et les barres de défilement. **C'est la largeur de la zone d'affichage**.
 - La propriété {{DOMxRef("Window.innerWidth")}} correspond à la largeur, exprimée en pixels CSS, de la zone d'affichage dans la fenêtre du navigateur qui contient les éventuelles barres de défilement verticales.
 - La propriété {{DOMxRef("Window.outerWidth")}} correspond à la largeur extérieure de la fenêtre du navigateur et qui contient l'ensemble du _chrome_ (les éléments d'interface utilisateur du navigateur qui ne sont pas ceux de la page web consultée).
 

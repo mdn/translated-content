@@ -32,7 +32,7 @@ l10n:
 
 ## 같이 보기
 
-- [Border-image 생성기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
+- [Border-image 생성기](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
   - : 이 인터랙티브 도구를 사용하여 시각적으로 테두리 이미지를 생성할 수 있습니다. ({{cssxref("border-image")}} 속성)
-- [Border-radius 생성기](/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+- [Border-radius 생성기](/ko/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
   - : 이 인터랙티브 도구를 사용하면 둥글기가 적용된 모서리를 생성할 수 있습니다. ({{cssxref("border-radius")}} 속성)

@@ -1,9 +1,8 @@
 ---
 title: :valid
 slug: Web/CSS/Reference/Selectors/:valid
-original_slug: Web/CSS/:valid
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:valid`** permet de cibler tout élément {{HTMLElement("input")}} ou {{HTMLElement("form")}} dont la [validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu s'effectue correctement par rapport au type de donnée attendu. On peut ainsi facilement mettre en forme les champs correctement remplis par l'utilisateur.
@@ -105,7 +104,7 @@ input:valid + span::before {
 Nous définissons les `<span>` sur `position: relative` afin de pouvoir positionner le contenu généré par rapport à eux. Nous positionnons ensuite absolument différents contenus générés en fonction de la validité ou non des données du formulaire&nbsp;: une coche verte ou une croix rouge, respectivement. Pour ajouter un peu d'urgence supplémentaire aux données invalides, nous avons également donné aux entrées une bordure rouge épaisse lorsqu'elles sont invalides.
 
 > [!NOTE]
-> Nous avons utilisé `::before` pour ajouter ces étiquettes, car nous utilisions déjà `::after` pour les étiquettes "requises".
+> Nous avons utilisé `::before` pour ajouter ces étiquettes, car nous utilisions déjà `::after` pour les étiquettes «&nbsp;requises&nbsp;».
 
 Vous pouvez essayer ci-dessous&nbsp;:
 
@@ -124,8 +123,8 @@ Remarquez comment les champs de texte requis sont invalides lorsqu'ils sont vide
 ## Voir aussi
 
 - Autres pseudo-classes liées à la validation&nbsp;:
-  - {{cssxref(":invalid")}}
-  - {{cssxref(":required")}}
-  - {{cssxref(":optional")}}
+  - {{CSSxRef(":invalid")}}
+  - {{CSSxRef(":required")}}
+  - {{CSSxRef(":optional")}}
 - [Apprendre&nbsp;: La validation des données d'un formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - [Accéder à l'état de validité en JavaScript](/fr/docs/Web/API/ValidityState)

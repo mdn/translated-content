@@ -1,12 +1,13 @@
 ---
 title: -moz-orient
 slug: Web/CSS/Reference/Properties/-moz-orient
-original_slug: Web/CSS/-moz-orient
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
+La propriété [CSS](/fr/docs/Web/CSS) **`-moz-orient`** définit l'orientation de l'élément sur lequel elle est appliquée.
 
 ## Syntaxe
 
@@ -25,9 +26,9 @@ La propriété **`-moz-orient`** définit l'orientation de l'élément sur leque
 ### Valeurs
 
 - `inline`
-  - : L'élément est affiché dans la même direction que l'axe du texte : il est horizontal si le mode d'écriture est horizontal et vertical pour un mode d'écriture vertical.
+  - : L'élément est affiché dans la même direction que l'axe du texte&nbsp;: il est horizontal si le mode d'écriture est horizontal et vertical pour un mode d'écriture vertical.
 - `block`
-  - : L'élément est affiché dans la direction perpendiculaire à l'axe du texte : il est vertical si le mode d'écriture est horizontal et horizontal pour un mode d'écriture vertical.
+  - : L'élément est affiché dans la direction perpendiculaire à l'axe du texte&nbsp;: il est vertical si le mode d'écriture est horizontal et horizontal pour un mode d'écriture vertical.
 - `horizontal`
   - : L'élément est affiché horizontalement.
 - `vertical`
@@ -68,7 +69,7 @@ La propriété **`-moz-orient`** définit l'orientation de l'élément sur leque
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","200","360")}}
+{{EmbedLiveSample("Exemples", 200, 360)}}
 
 ## Spécifications
 
@@ -80,4 +81,4 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("box-orient")}}
+- La propriété {{CSSxRef("box-orient")}}

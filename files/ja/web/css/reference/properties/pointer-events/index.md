@@ -1,9 +1,8 @@
 ---
 title: pointer-events
 slug: Web/CSS/Reference/Properties/pointer-events
-original_slug: Web/CSS/pointer-events
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
 ---
 
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
@@ -19,21 +18,21 @@ pointer-events: none;
 ```
 
 ```css interactive-example-choice
-pointer-events: stroke; /* SVG-only */
+pointer-events: stroke; /* SVG のみ */
 ```
 
 ```css interactive-example-choice
-pointer-events: fill; /* SVG-only */
+pointer-events: fill; /* SVG のみ */
 ```
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
   <div id="example-element">
     <p>
-      <a href="#">example link</a>
+      <a href="#">リンクの例</a>
     </p>
     <p>
-      <svg viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <a xlink:href="#">
           <circle
             cx="50"
@@ -170,8 +169,7 @@ img {
 #### CSS
 
 ```css
-a[href="http://example.com"]
-{
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```
@@ -190,8 +188,7 @@ a[href="http://example.com"]
 
 ## 関連情報
 
-- SVG 属性 {{SVGAttr("pointer-events")}}
-- SVG 属性 {{SVGAttr("visibility")}}
-- {{domxref("PointerEvent")}} API
-- (X)HTML で使うことを踏まえた [WebKit の PointerEventsProperty の仕様書](https://webkit.org/specs/PointerEventsProperty.html)
-- {{cssxref("user-select")}} - ユーザーがテキストを選択できるかどうかの制御
+- {{cssxref("user-select")}}
+- SVG の {{SVGAttr("pointer-events")}} 属性
+- SVG の {{SVGAttr("visibility")}} 属性
+- {{domxref("PointerEvent")}}

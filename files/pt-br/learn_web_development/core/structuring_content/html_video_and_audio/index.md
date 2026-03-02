@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Agora que estamos à vontade para adicionar imagens simples a uma página da Web, o próximo passo é começar a adicionar players de vídeo e áudio aos seus documentos HTML! Neste artigo vamos olhar para fazer exatamente isso com os elementos {{htmlelement("video")}} e {{htmlelement("audio")}} ; Então, vamos terminar de olhar como adicionar legendas/subtítulos aos seus vídeos.
 
@@ -31,7 +31,7 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
               href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
               >Introdução ao HTML</a
             >) e
-        <a href="/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >Images in HTML</a
         >.
       </td>
@@ -329,4 +329,4 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 - [Manipulação de áudio e vídeo:](/pt-BR/docs/Web/Media/Audio_and_video_manipulation) muitos detalhes sobre a manipulação de áudio e vídeo usando JavaScript (por exemplo, adicionando filtros).
 - Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/General_embedding_technologies", "conflicting/Learn_web_development/Core/Structuring_content")}}

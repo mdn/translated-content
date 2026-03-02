@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Normal_Flow
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 Este artigo aborda o _Fluxo Normal_ de alinhamento e acomodação do conteúdo de uma página HTML, na qual o desenvolvedor não inseriu estilos pessoais. Este fluxo é um padrão usado pelos navegodares web. É uma solução preguiçosa ou rápida. Se o _Fluxo Normal_ por ventura não desagradar o programador, poupado será o seu tempo e esforço. Com o ônus adiado para quando ele quiser algo diferente.
 
@@ -107,4 +107,4 @@ span {
 
 Now that you understand normal flow, and how the browser lays things out by default, move on to understand how to change this default display to create the layout needed by your design.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}

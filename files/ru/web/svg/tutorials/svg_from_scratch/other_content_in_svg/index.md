@@ -3,7 +3,7 @@ title: Другое содержание в SVG
 slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}
 
 Помимо графических примитивов, таких как прямоугольники и круги, SVG предлагает набор элементов для встраивания других типов контента в изображения.
 
@@ -44,4 +44,4 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
 
 Поскольку `foreignObject` является элементом SVG, вы можете, как и в случае с изображением, использовать с ним любую добросовестность SVG, которая затем будет применяться к его контенту.
 
-{{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking", "Web/SVG/Tutorials/SVG_from_scratch/Filter_effects") }}

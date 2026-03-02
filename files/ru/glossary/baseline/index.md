@@ -19,4 +19,4 @@ slug: Glossary/Baseline
 
 ### Техническая документация
 
-- [CSS Box Alignment](/ru/docs/Web/CSS/CSS_box_alignment#типы_выравнивания) на MDN
+- [CSS Box Alignment](/ru/docs/Web/CSS/Guides/Box_alignment#типы_выравнивания) на MDN

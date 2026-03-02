@@ -1,12 +1,11 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
-original_slug: Web/CSS/font-variation-settings
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御できるようにします。
+**`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/Guides/Fonts/Variable_fonts)に対する低水準の制御を行うことができます。
 
 {{InteractiveExample("CSS デモ: font-variation-settings")}}
 
@@ -38,13 +37,13 @@ font-variation-settings: "wdth" 75;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
+  font-family: "Amstelvar";
   font-style: normal;
 }
 
 p {
   font-size: 1.5rem;
-  font-family: Amstelvar;
+  font-family: "Amstelvar", serif;
 }
 ```
 
@@ -124,7 +123,7 @@ font-variation-settings: unset;
 > [!NOTE]
 > 登録済みの軸のタグは小文字のタグを使用するのに対し、カスタム軸は大文字のタグを使用します。なお、フォントデザイナーはこの慣習に従うことを強制されているわけではなく、従っていないものもあります。ここで重要なことは、軸のタグは大文字と小文字を区別することです。
 
-オペレーティングシステムで可変フォントを使用するためには、最新版であることを確認する必要があります。例えば、 Linux ベースの OS では最新版の Linux Freetype が必要であり、 macOS 10.13 より前では可変フォントに対応していません。オペレーティングシステムが最新版でない場合、ウェブページや Firefox 開発者ツールで可変フォントを使用することができません。
+オペレーティングシステムで可変フォントを使用するためには、最新版であることを確認する必要があります。例えば、 Linux ベースの OS では最新版の Linux FreeType が必要であり、 macOS 10.13 より前では可変フォントに対応していません。オペレーティングシステムが最新版でない場合、ウェブページや Firefox 開発者ツールで可変フォントを使用することができません。
 
 ## 公式定義
 
@@ -179,7 +178,7 @@ font-variation-settings: unset;
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -264,7 +263,7 @@ angle.addEventListener("input", (e) => {
 p {
   font:
     1.2em "Roboto VF",
-    Helvetica,
+    "Helvetica",
     sans-serif;
   font-size: 4rem;
   margin: 1rem;

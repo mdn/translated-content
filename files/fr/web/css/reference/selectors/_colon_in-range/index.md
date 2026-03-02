@@ -1,12 +1,11 @@
 ---
 title: :in-range
 slug: Web/CSS/Reference/Selectors/:in-range
-original_slug: Web/CSS/:in-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [max](/fr/docs/Web/HTML/Reference/Elements/input#max).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:in-range`** cible un élément {{HTMLElement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :in-range", "tabbed-shorter")}}
 
@@ -113,7 +112,7 @@ input:out-of-range + label::after {
 {{EmbedLiveSample('Exemples', 600, 140)}}
 
 > [!NOTE]
-> Un élément `<input>` vide n'est pas considéré comme en dehors de la plage et ne sera pas sélectionné à l'aide du sélecteur de pseudo-classe `:out-of-range`. La pseudo-classe [`:blank`](/fr/docs/Web/CSS/Reference/Selectors/:blank) existe pour sélectionner les entrées vides, bien qu'au moment de la rédaction de cet article, elle soit encore expérimentale et peu prise en charge. Vous pouvez également utiliser l'attribut `required` et la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) pour fournir une logique et un style plus généraux afin de rendre les champs obligatoires (`:invalid` mettra en forme les champs vides _et_ hors limites).
+> Un élément `<input>` vide n'est pas considéré comme en dehors de la plage et ne sera pas sélectionné à l'aide du sélecteur de pseudo-classe `:out-of-range`. La pseudo-classe {{CSSxRef(":blank")}} existe pour sélectionner les entrées vides, bien qu'au moment de la rédaction de cet article, elle soit encore expérimentale et peu prise en charge. Vous pouvez également utiliser l'attribut `required` et la pseudo-classe {{CSSxRef(":invalid")}} pour fournir une logique et un style plus généraux afin de rendre les champs obligatoires (`:invalid` mettra en forme les champs vides _et_ hors limites).
 
 ## Spécifications
 
@@ -125,5 +124,5 @@ input:out-of-range + label::after {
 
 ## Voir aussi
 
-- {{cssxref(":out-of-range")}}
+- La pseudo-classe {{CSSxRef(":out-of-range")}}
 - [Guide de validation pour les données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

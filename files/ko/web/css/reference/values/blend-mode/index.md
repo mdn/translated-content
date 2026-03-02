@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/blend-mode
 original_slug: Web/CSS/blend-mode
 ---
 
-[CSS](/ko/docs/Web/CSS) **`<blend-mode>`** [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 요소가 겹칠 경우 색상이 어떻게 나타나야 하는지 정의합니다. {{cssxref("background-blend-mode")}}와 {{cssxref("mix-blend-mode")}} 속성에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<blend-mode>`** [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 요소가 겹칠 경우 색상이 어떻게 나타나야 하는지 정의합니다. {{cssxref("background-blend-mode")}}와 {{cssxref("mix-blend-mode")}} 속성에서 사용합니다.
 
 최종 색상은 혼합 모드를 적용한 레이어 각각의 픽셀 하나씩에 대해 전경색과 배경색을 취한 후 모드에 따라 계산을 수행하여 나온 새로운 값입니다.
 

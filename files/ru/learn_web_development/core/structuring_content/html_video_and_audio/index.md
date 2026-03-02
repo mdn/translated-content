@@ -3,7 +3,7 @@ title: Видео и аудио контент
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Теперь, когда мы спокойно добавляем простые изображения на веб-страницу, сделаем следующий шаг — начнём добавлять видео и аудиоплееры в ваши HTML-документы! В этой статье вы увидите, как это делать с элементами {{htmlelement("video")}} и {{htmlelement("audio")}} ; а в завершение посмотрите, как добавить титры и субтитры к вашим видео.
 
@@ -269,4 +269,4 @@ WEBVTT
 - [Audio and Video manipulation](/ru/docs/Web/Media/Guides/Audio_and_video_manipulation): Множество способов управления аудио и видео с помощью Javascript(вроде добавления фильтров).
 - Автоматические опции по переводу([translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/)).
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

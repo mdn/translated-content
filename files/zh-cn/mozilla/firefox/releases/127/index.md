@@ -34,7 +34,7 @@ l10n:
 
 ### 安全
 
-- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他媒体类型的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保了如果内容通过 HTTPS 安全提供，则其所有子资源也必须通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
+- Firefox 现在会自动将安全内容中的音频、视频和图像子资源的 HTTP 请求升级为 HTTPS，并阻止其他媒体类型的 HTTP 请求。如果因为媒体主机不支持 HTTPS 而导致升级请求失败，则认为找不到该媒体。这确保了如果内容通过 HTTPS 安全提供，则其所有子资源也必须通过 HTTPS 安全提供，否则不提供。由于页面不再显示[混合内容](/zh-CN/docs/Web/Security/Defenses/Mixed_content)，Firefox 还删除了用于指示页面是否包含混合内容的图标，并将控制台的混合内容警告替换为指示请求已被升级的警告。（[Firefox bug 1779757](https://bugzil.la/1779757)）。
 
 ### API
 

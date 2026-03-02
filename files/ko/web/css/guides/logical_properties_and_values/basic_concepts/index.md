@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a08c1d8b4022ffbd69d4fd3097d0a30716f5fde7
 ---
 
-[CSS 논리적 속성과 값 모듈](/ko/docs/Web/CSS/CSS_logical_properties_and_values#properties) 은 CSS 에서의 {{glossary("physical properties")}} 의 대열 상대적인 매핑과 값을 정의합니다. 이 안내서에서는 모듈에 대해 다루며, {{glossary("flow relative values")}} 값과 속성에 대해 설명합니다.
+[CSS 논리적 속성과 값 모듈](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#properties) 은 CSS 에서의 {{glossary("physical properties")}} 의 대열 상대적인 매핑과 값을 정의합니다. 이 안내서에서는 모듈에 대해 다루며, {{glossary("flow relative values")}} 값과 속성에 대해 설명합니다.
 
 ## 논리적 속성이 유용한 이유
 
@@ -50,5 +50,5 @@ CSS 2.1과 이전 버전에서는 화면의 물리적 크기를 따라 요소의
 
 - [그리드 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [플렉스 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [대열 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [대열 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/Guides/Display/Flow_layout_and_writing_modes)
 - Smashing Magazine (2018)의 [논리적 속성과 값 이해하기](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)

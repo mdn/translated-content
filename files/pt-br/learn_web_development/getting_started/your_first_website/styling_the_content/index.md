@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_conte
 original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 CSS (Folha de Estilo em Cascata) é o código que você usa para dar estilo à sua página Web. _CSS básico_ apresenta tudo que você precisa para começar. Responderemos a perguntas do tipo: Como mudo meu texto para preto ou vermelho? Como faço para que meu conteúdo apareça em determinados lugares na tela? Como decoro minha página com imagens e cores de fundo?
 
@@ -242,4 +242,4 @@ Se você emperrar, sempre poderá comparar seu trabalho com nosso código de [ex
 
 Aqui, nós só arranhamos na superfície do CSS. Para descobrir mais, vá ao nosso [tópico de aprendizado CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

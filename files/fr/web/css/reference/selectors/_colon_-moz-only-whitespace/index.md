@@ -1,10 +1,11 @@
 ---
 title: :-moz-only-whitespace
 slug: Web/CSS/Reference/Selectors/:-moz-only-whitespace
-original_slug: Web/CSS/:-moz-only-whitespace
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 > [!NOTE]
 > Dans la spécification [CSS4 Selectors <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
@@ -53,5 +54,5 @@ Définie brièvement comme `:blank` dans [Selectors Level 4 <sup>(angl.)</sup>](
 
 ## Voir aussi
 
-- {{CSSxRef(":blank")}}
-- {{CSSxRef(":empty")}}
+- La pseudo-classe {{CSSxRef(":blank")}}
+- La pseudo-classe {{CSSxRef(":empty")}}

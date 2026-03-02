@@ -40,7 +40,7 @@ li {
 
     > [!NOTE]
     >
-    > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
+    > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
     > - 瀏覽器如何處理下載因瀏覽器、用戶設置和其他因素而異。用戶在下載開始之前可能會收到提示，文件可能會自動保存，或者它可能會自動打開，無論是在外部應用程序中還是在瀏覽器本身中。
     > - 如果 `Content-Disposition` 標頭與 `download` 屬性的信息不同，則結果行為可能不同：
     >   - 如果標頭指定了 `filename`，則優先於 `download` 屬性中指定的文件名。
@@ -63,7 +63,7 @@ li {
 - `referrerpolicy`
   - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的程度。
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
-    - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
+    - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)。
     - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
     - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。

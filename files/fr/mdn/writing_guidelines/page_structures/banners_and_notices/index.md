@@ -15,7 +15,7 @@ Cet article décrit les bannières les plus importantes et comment elles sont aj
 
 ## Où les macros de bannière sont-elles ajoutées
 
-Les bannières sont ajoutées à l'aide de macros qui sont généralement insérées sous les métadonnées de la page, à côté de la macro d'encadré latéral. Par exemple, dans le bloc ci-dessous, la macro `\{{SecureContext_Header}}` a été utilisée pour indiquer que l'interface {{DOMxRef("AudioDecoder")}} n'est disponible que dans un [contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts), la macro `\{{AvailableInWorkers}}` a été utilisée pour indiquer que l'interface {{DOMxRef("AudioDecoder")}} n'est disponible que dans le [contexte window](/fr/docs/Web/API/Window) et le [contexte dedicated worker](/fr/docs/Web/API/DedicatedWorkerGlobalScope), et `\{{SeeCompatTable}}` a été ajoutée pour indiquer que l'interface est expérimentale.
+Les bannières sont ajoutées à l'aide de macros qui sont généralement insérées sous les métadonnées de la page, à côté de la macro d'encadré latéral. Par exemple, dans le bloc ci-dessous, la macro `\{{SecureContext_Header}}` a été utilisée pour indiquer que l'interface {{DOMxRef("AudioDecoder")}} n'est disponible que dans un [contexte sécurisé](/fr/docs/Web/Security/Defenses/Secure_Contexts), la macro `\{{AvailableInWorkers}}` a été utilisée pour indiquer que l'interface {{DOMxRef("AudioDecoder")}} n'est disponible que dans le [contexte window](/fr/docs/Web/API/Window) et le [contexte dedicated worker](/fr/docs/Web/API/DedicatedWorkerGlobalScope), et `\{{SeeCompatTable}}` a été ajoutée pour indiquer que l'interface est expérimentale.
 
 ```md
 ---
@@ -32,7 +32,7 @@ l10n:
 
 Vous devez ajouter manuellement les macros suivantes&nbsp;:
 
-- `\{{SecureContext_Header}}` — génère une bannière **Contexte sécurisé** qui indique que la technologie n'est disponible que dans un [contexte sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+- `\{{SecureContext_Header}}` — génère une bannière **Contexte sécurisé** qui indique que la technologie n'est disponible que dans un [contexte sécurisé](/fr/docs/Web/Security/Defenses/Secure_Contexts).
 - `\{{AvailableInWorkers}}` — génère une note **Disponible dans les workers** qui indique que la technologie est disponible dans le [contexte worker](/fr/docs/Web/API/Web_Workers_API).
 
 ## Bannières ajoutées automatiquement

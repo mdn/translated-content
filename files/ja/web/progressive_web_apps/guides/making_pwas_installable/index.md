@@ -76,7 +76,7 @@ Chromium ベースのブラウザー（Google Chrome、Samsung Internet、Micros
 
 PWA がインストール可能であるためには、`https` プロトコルを使用しているか、`localhost` または `127.0.0.1` を使用して、ローカル開発環境から提供しなければなりません。
 
-これは `file://` URL から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)よりも厳しい要求です。
+これは `file://` URL から読み込まれたリソースを安全であるとみなす[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)よりも厳しい要求です。
 
 ## アプリストアからのインストール
 
@@ -106,7 +106,7 @@ PWA がインストール可能であるためには、`https` プロトコル�
 
 プロンプトには、 [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/name) と [`icons`](/ja/docs/Web/Progressive_web_apps/Manifest/icons) マニフェストメンバーから導かれたPWAの名前とアイコンが表示されます。
 
-### ブラウザーの対応
+### ブラウザーの互換性
 
 ウェブからの PWA インストール促進への対応は、ブラウザーやプラットフォームによって異なります。
 

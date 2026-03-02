@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Basic_selectors
 original_slug: Learn/CSS/Building_blocks/Selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 Em {{Glossary("CSS")}}, os seletores são usados para direcionar os elementos {{glossary("HTML")}} em nossas páginas da web que queremos estilizar. Há uma grande variedade de seletores CSS disponíveis, permitindo uma precisão refinada ao selecionar os elementos a serem estilizados. Neste artigo e seus sub-artigos, examinaremos os diferentes tipos em grande detalhe, vendo como eles funcionam.
 
@@ -147,8 +147,7 @@ a[title] {
 Ou até mesmo faça uma seleção com base na presença de um atributo com um valor específico:
 
 ```css
-a[href="https://example.com"]
-{
+a[href="https://example.com"] {
 }
 ```
 
@@ -181,7 +180,7 @@ article > p {
 
 Você pode dar uma olhada na tabela de referência de seletores abaixo para obter links diretos para os vários tipos de seletores nesta seção Aprender ou no MDN em geral, ou continuar para iniciar sua jornada descobrindo sobre [seletores de tipo, classe e ID](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors) .
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 ## Tabela de referência de seletores
 

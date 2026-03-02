@@ -1,27 +1,33 @@
 ---
-title: HTMLFormElement.acceptCharset
+title: "HTMLFormElement : propriété acceptCharset"
+short-title: acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.acceptCharset`** représente une liste des codages de caratères acceptés par l'élément FORM concerné. Les valeurs de cette liste peuvent être séparés par des virgules ou des espaces.
+La propriété **`acceptCharset`** de l'interface {{DOMxRef("HTMLFormElement")}} représente l'{{Glossary("character encoding", "encodage de caractères")}} de l'élément HTML {{HTMLElement("form")}}.
 
-## Syntaxe
+La spécification autorise une seule valeur insensible à la casse `"UTF-8"`, reflétant l'omniprésence de cet encodage (historiquement plusieurs encodages de caractères pouvaient être spécifiés sous forme d'une liste séparée par des virgules ou par des espaces).
 
-```js
-string = form.acceptCharset;
-form.acceptCharset = string;
-```
+Ceci reflète la valeur de l'attribut HTML [`accept-charset`](/fr/docs/Web/HTML/Reference/Elements/form#accept-charset) du formulaire.
+
+## Valeur
+
+Une chaîne de caractères pouvant correspondre, de façon insensible à la casse, à `UTF-8`.
 
 ## Exemple
 
 ```js
-inputs = document.forms["myform"].acceptCharset;
+let charSet = document.forms["my-form"].acceptCharset;
 ```
 
-## Spécification
+## Spécifications
 
-[HTML 5, Section 4.10.3: The Form Element](https://www.w3.org/TR/html5/forms.html#dom-form-acceptcharset)
+{{Specifications}}
 
-[DOM Level 2 HTML: acceptCharset](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-19661795)
+## Compatibilité des navigateurs
+
+{{Compat}}

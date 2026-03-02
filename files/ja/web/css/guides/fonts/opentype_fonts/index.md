@@ -1,9 +1,9 @@
 ---
 title: OpenType フォント特性の手引き
+short-title: OpenType の特性
 slug: Web/CSS/Guides/Fonts/OpenType_fonts
-original_slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 フォント特性 (font features) または異体字 (variants) とは、OpenType フォントに含まれるさまざまな字形や文字スタイルのことです。これらには、合字 ('fi' や 'ffl' などの文字を組み合わせた特別な字形)、カーニング (特定の文字の組み合わせの間隔の調整)、分数、数字のスタイルなどがあります。これらはすべて OpenType 機能と呼ばれ、特定のプロパティや低レベルの制御プロパティ - {{cssxref("font-feature-settings")}} を通じてウェブ上で使用できるようになっています。この記事では、CSS で OpenType フォント特性を使用するために必要なすべての知識を提供します。
@@ -72,7 +72,7 @@ l10n:
 ```css hidden live-sample___font-kerning-example
 @font-face {
   font-family: "Plex Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -305,10 +305,6 @@ font-variant-alternates: styleset(alt-g);
 
 小文字の 'a' が標準形に戻り、小文字の 'g' が代わりに変化するのが分かるでしょう。
 
-#### 代替字形の詳細
-
-- <https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates>
-
 ### 合字
 
 関連するプロパティ: {{cssxref("font-variant-ligatures")}}
@@ -321,7 +317,7 @@ font-variant-alternates: styleset(alt-g);
 <fieldset>
   <legend><code>font-variant-ligatures</code> プロパティを使用</legend>
   <div class="container container1">
-    <p>Puffy Perfect -^ <-></p>
+    <p>Puffy Perfect -^ &lt;-&gt;</p>
   </div>
   <input type="checkbox" name="checkbox1" id="checkbox1" value="on" checked />
   <label for="checkbox1">合字を有効にする</label>
@@ -330,7 +326,7 @@ font-variant-alternates: styleset(alt-g);
 <fieldset>
   <legend><code>font-feature-settings</code> プロパティを使用</legend>
   <div class="container container2">
-    <p>Puffy Perfect -^ <-></p>
+    <p>Puffy Perfect -^ &lt;-&gt;</p>
   </div>
   <input type="checkbox" name="checkbox2" id="checkbox2" value="on" checked />
   <label for="checkbox2">合字を有効にする</label>
@@ -340,7 +336,7 @@ font-variant-alternates: styleset(alt-g);
 ```css hidden live-sample___font-variant-ligatures-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -446,7 +442,7 @@ checkBox2.addEventListener("change", () => {
 ```css hidden live-sample___font-variant-position-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -564,7 +560,7 @@ OpenType 特性の一般的な使用例の 1 つに、適切なスモールキ�
 ```css hidden live-sample___font-variant-caps-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -698,7 +694,7 @@ checkBox2.addEventListener("change", () => {
 ```css hidden live-sample___font-variant-numeric-example
 @font-face {
   font-family: "Source Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -813,7 +809,7 @@ checkBox2.addEventListener("change", () => {
 ```css hidden live-sample___font-variant-numeric-frac-example
 @font-face {
   font-family: "Source Serif";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -1032,7 +1028,7 @@ checkBox2.addEventListener("change", () => {
 ```css hidden live-sample___font-variant-example
 @font-face {
   font-family: "Playfair Display";
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   src:
@@ -1174,10 +1170,10 @@ checkBox2.addEventListener("change", () => {
 
 - [Font Feature Properties in CSS Fonts Module Level 3](https://drafts.csswg.org/css-fonts-3/#font-rend-props)
   - 〔日本語訳〕[CSS フォントモジュール第 3 水準におけるフォント特性プロパティ](https://triple-underscore.github.io/css-fonts-ja.html#font-rend-desc)
-- [font-variant-alternatives in CSS Fonts Module Level 4](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)
+- [font-variant-alternatives in CSS Fonts Module Level 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates)
   - 〔日本語訳〕[CSS フォントモジュール第 4 水準における font-variant-alternatives](https://triple-underscore.github.io/css-fonts4-ja.html#propdef-font-variant-alternates)
 
 ## その他の文献
 
-- [OpenType 機能の使用](https://helpx.adobe.com/jp/fonts/using/use-open-type-features.html) - アドビ
-- [CSS での OpenType 機能の構文](https://helpx.adobe.com/jp/fonts/using/open-type-syntax.html) - アドビ
+- [OpenType 機能の使用](https://helpx.adobe.com/jp/fonts/using/use-open-type-features.html) - Tim Brown, Head of Typography, Adobe
+- [アドビによる CSS での OpenType 機能の構文](https://helpx.adobe.com/jp/fonts/using/open-type-syntax.html)

@@ -3,7 +3,7 @@ title: Expressões Regulares
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Expressões regulares são padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos. Elas podem ser utilizadas com os métodos [`exec`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) e [`test`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test) do objeto [`RegExp`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp), e com os métodos [`match`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match), [`replace`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace),[`search`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/search), e [`split`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split) do objeto [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String). Este capítulo descreve o uso de expressões regulares em JavaScript.
 
@@ -1077,4 +1077,4 @@ Com o evento Change ativo, quando o usuário pressionar Enter, o valor será cap
 </html>
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
+{{PreviousNext("conflicting/Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}

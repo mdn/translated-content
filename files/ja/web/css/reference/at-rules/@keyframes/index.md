@@ -1,12 +1,11 @@
 ---
 title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
-original_slug: Web/CSS/@keyframes
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 4779d7c77859441641c1e061b21f2c74024fe796
 ---
 
-**`@keyframes`** は CSS の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/Guides/Transitions)よりも詳細に制御できます。
+**`@keyframes`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、アニメーションの流れに沿ったキーフレーム（または中間地点）のスタイルを定義することによって、一連の CSS アニメーションの中間ステップを制御します。これにより、アニメーションの中間ステップを[トランジション](/ja/docs/Web/CSS/Guides/Transitions)よりも詳細に制御できます。
 
 ## 構文
 
@@ -113,13 +112,13 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 ```css
 @keyframes important1 {
-  from {
+  0% {
     margin-top: 50px;
   }
   50% {
     margin-top: 150px !important; /* 無視される */
   }
-  to {
+  100% {
     margin-top: 100px;
   }
 }
@@ -144,7 +143,7 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 ### CSS アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)および [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) を参照してください。
+[CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)および[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)を参照してください。
 
 ## 仕様書
 
@@ -156,8 +155,10 @@ JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモ�
 
 ## 関連情報
 
-- {{cssxref("animation-range")}}
+- {{cssxref("animation-name")}}
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)
 - [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)モジュール
+- [CSS スクロール駆動アニメーションタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

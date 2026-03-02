@@ -3,11 +3,11 @@ title: circle()
 slug: Web/CSS/Reference/Values/basic-shape/circle
 original_slug: Web/CSS/basic-shape/circle
 l10n:
-  sourceCommit: 7e1296fc0722c86fb7e15487b5e9626597c7a2a0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`circle()`** définit un cercle grâce à son rayon et à la position du centre.
-Elle fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{cssxref("&lt;basic-shape&gt;")}}.
+Elle fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: circle()")}}
 
@@ -59,24 +59,24 @@ clip-path: circle(6rem at 12rem 8rem);
 ### Valeurs
 
 - `<shape-radius>`
-  - : Il peut s'agir d'une longueur {{cssxref("length")}}, d'un pourcentage {{cssxref("percentage")}} ou des valeurs `closest-side` et `farthest-side`.
+  - : Il peut s'agir d'une longueur {{CSSxRef("length")}}, d'un pourcentage {{CSSxRef("percentage")}} ou des valeurs `closest-side` et `farthest-side`.
     - `closest-side`
       - : Utilise la distance du centre de la forme jusqu'au côté le plus proche de la boîte de référence. Pour un cercle, il s'agit du côté le plus proche dans n'importe quelle dimension.
     - `farthest-side`
       - : Utilise la distance du centre de la forme jusqu'au côté le plus éloigné de la boîte de référence. Pour un cercle, il s'agit du côté le plus éloigné dans n'importe quelle dimension.
 
 - `<position>`
-  - : Déplace le centre du cercle. Il peut s'agir d'une longueur {{cssxref("length")}}, d'un pourcentage {{cssxref("percentage")}} ou de mots‑clés comme `left`. Si `<position>` est omis, la valeur par défaut est `center` (<i lang="en">center</i>).
+  - : Déplace le centre du cercle. Il peut s'agir d'une longueur {{CSSxRef("length")}}, d'un pourcentage {{CSSxRef("percentage")}} ou de mots‑clés comme `left`. Si `<position>` est omis, la valeur par défaut est `center` (<i lang="en">center</i>).
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Cercle simple
 
-Dans l'exemple ci‑dessous, la propriété {{cssxref("shape-outside")}} a pour valeur `circle(50%)`, ce qui définit un cercle sur un élément flottant autour duquel le texte s'écoule.
+Dans l'exemple ci‑dessous, la propriété {{CSSxRef("shape-outside")}} a pour valeur `circle(50%)`, ce qui définit un cercle sur un élément flottant autour duquel le texte s'écoule.
 
 ```html live-sample___circle
 <div class="box">
@@ -119,5 +119,5 @@ img {
 
 ## Voir aussi
 
-- Propriétés qui utilisent ce type de données&nbsp;: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Propriétés qui utilisent ce type de données&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

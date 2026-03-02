@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn_web_development/Core/Scripting/Return_values", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fornece experiência prática. Aqui você terá algumas práticas construindo sua própria função personalizada. Ao longo do caminho, também explicaremos alguns detalhes úteis sobre como lidar com funções.
 
@@ -18,7 +18,7 @@ Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fo
         <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >Primeiros passos do JavaScript</a
         >,
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Functions"
           >Funções — blocos reutilizáveis de código</a
         >.
       </td>
@@ -299,4 +299,4 @@ Para o próximo parâmetro. Este vai envolver um pouco mais de trabalho — vamo
 
 Parabéns por chegar ao final! Este artigo levou você ao longo de todo o processo de criação de uma função prática personalizada, que com um pouco mais de trabalho poderia ser transplantada em um projeto real. No próximo artigo, vamos encerrar as funções explicando outro conceito relacionado essencial — valores de retorno.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "conflicting/Learn_web_development/Core/Scripting")}}

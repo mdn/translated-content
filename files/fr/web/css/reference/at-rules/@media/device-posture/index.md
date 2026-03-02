@@ -1,9 +1,8 @@
 ---
 title: device-posture
 slug: Web/CSS/Reference/At-rules/@media/device-posture
-original_slug: Web/CSS/@media/device-posture
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -49,7 +48,7 @@ Pour voir le code ci-dessus en action, consultez la [démo de l'API Device Postu
 
 ## Voir aussi
 
-- {{domxref("DevicePosture")}}
+- L'interface API {{DOMxRef("DevicePosture")}}
 - L'[API Device Posture](/fr/docs/Web/API/Device_Posture_API)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

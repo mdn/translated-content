@@ -1,5 +1,5 @@
 ---
-title: ltr
+title: LTR (Gauche à droite)
 slug: Glossary/LTR
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57

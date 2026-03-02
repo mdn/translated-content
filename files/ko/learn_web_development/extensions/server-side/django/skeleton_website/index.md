@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 [장고 튜토리얼](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)의 두 번째 기사에서는 웹 사이트 프로젝트의 기본 뼈대(skeleton)를 만들고, 사이트의 특성에 맞춰 설정, 경로, 모델, 뷰 및 템플릿을 다루는 방법을 보여줍니다.
 
@@ -18,7 +18,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
           environment.)</a
         >
         <a
-          href="/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website"
           >장고 튜토리얼</a
         >을 복습하세요.
       </td>
@@ -380,4 +380,4 @@ python3 manage.py runserver
 - [Writing your first Django app - part 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/) (Django docs)
 - [Applications](https://docs.djangoproject.com/en/2.0/ref/applications/#configuring-applications) (Django Docs). 어플리케이션의 구성(configuring)에 관한 정보를 갖고 있습니다.
 
-{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}

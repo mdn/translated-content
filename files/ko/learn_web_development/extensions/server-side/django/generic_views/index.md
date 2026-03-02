@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 original_slug: Learn/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 이 튜토리얼은 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website에 책과 저자의 목록과 세부 페이지를 추가 하여 확장할 것입니다. 이 글에서 우리는 제네릭 클래스-기반 뷰(generic class-based views)에 대해 배울 것이며, 그것이 일반적인 사용 사례를 위해 작성해야 하는 코드들을 줄이는 방법을 보여줄 것입니다. 우리는 또한 URL 처리에 대해 더 세부적으로 알아볼 것이며, 기본 패턴 매칭(basic pattern matching)을 수행하는 방법을 보여줄 것입니다.
 
@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Generic_views
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/ko/docs/Learn/Server-side/Django/Home_page"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >를 포함한 모든 이전 튜토리얼을 완료하세요.
       </td>
@@ -493,7 +493,7 @@ class BookListView(generic.ListView):
 
 만약 현재 페이지에 pagination이 사용중이라면, `page_obj` 가 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 오브젝트 로서 존재합니다. 해당 오브젝트는 현재 페이지, 전 페이지, 페이지 수는 얼마나 되는 지등의 모든 정보를 제공합니다.
 
-pagination 링크를 만들기 위해 우리는 `{{ request.path }}` 를 이용하여 현재 페이지의 URL을 가져오도록 할 겁니다. 우리가 pagination을 하는 객체와 독립적이기 때문에 유용합니다.
+pagination 링크를 만들기 위해 우리는 `\{{ request.path }}` 를 이용하여 현재 페이지의 URL을 가져오도록 할 겁니다. 우리가 pagination을 하는 객체와 독립적이기 때문에 유용합니다.
 
 다됬네요!
 
@@ -548,4 +548,4 @@ URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서
 - [Built-in template tags and filters](https://docs.djangoproject.com/en/2.0/ref/templates/builtins) (Django docs).
 - [Pagination](https://docs.djangoproject.com/en/2.0/topics/pagination/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}

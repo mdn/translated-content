@@ -78,7 +78,7 @@ document.getElementById("btn").addEventListener("click", doSomething);
 
 代替の方法として、ファイルハッシュを使用して許可するスクリプトを指定する方法があります。
 この手法を使用すると、`<script>` 要素内の外部ファイルは、 [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性の有効なハッシュ値がすべて CSP ヘッダーで許可された値と一致した場合にのみ、読み込まれ実行されます。
-[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の機能は、ダウンロードしたファイルが示すハッシュ値を持ち、変更されていないことを追加的に調べます。
+[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)の機能は、ダウンロードしたファイルが示すハッシュ値を持ち、変更されていないことを追加的に調べます。
 これはドメインを信頼するよりも安全です。ファイルは、たとえ侵害されたサイトから読み込まれたとしても、改変されていない場合にのみ使用されるからです。
 しかし、これはより粒度の細かいものであり、関連付けられたスクリプトが変更されるたびに、 CSP とスクリプト要素でハッシュ値を更新することが要求されます。
 下記の CSP ヘッダーは、その手法を示しています。
@@ -118,7 +118,7 @@ Content-Security-Policy: script-src 'sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy
   crossorigin="anonymous"></script>
 ```
 
-[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)には、ハッシュの計算と `integrity` 属性の使用に関するより多くの情報が含まれています。
+[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)には、ハッシュの計算と `integrity` 属性の使用に関するより多くの情報が含まれています。
 
 ### 安全ではないインラインスクリプト
 

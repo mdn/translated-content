@@ -116,5 +116,5 @@ if (window.Element && !Element.prototype.closest) {
 
 ## 같이보기
 
-- [CSS 선택자 참고서](/ko/docs/Web/CSS/CSS_selectors)
+- [CSS 선택자 참고서](/ko/docs/Web/CSS/Guides/Selectors)
 - 선택자를 받는 {{domxref("Element")}} 메서드: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, {{domxref("Element.matches()")}}

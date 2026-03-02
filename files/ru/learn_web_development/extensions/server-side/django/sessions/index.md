@@ -3,7 +3,7 @@ title: "Руководство часть 7: Сессии"
 slug: Learn_web_development/Extensions/Server-side/Django/Sessions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Эта часть расширяет наш сайт [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), добавляя счётчик посещений домашней страницы, реализованного при помощи сессий. Это относительно простой пример, но он демонстрирует то, как при помощи сессий реализовать анализ поведения анонимных пользователей на сайте.
 
@@ -160,4 +160,4 @@ def index(request):
 
 - [Как использовать сессии](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django")}}

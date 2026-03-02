@@ -2,18 +2,18 @@
 title: Firefox 3 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 l10n:
-  sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
+  sourceCommit: 886f2641ae90a70858c5e7d0d20959c70ee44d9d
 ---
 
 この記事は、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。
 
-読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストールマニフェスト内の `maxVersion` 項目の更新だけで、なおかつ [addons.mozilla.org](https://addons.mozilla.org) に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って `maxVersion` を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。
+読み進める前に、私たちからひとつだけ参考になるヒントをお教えしましょう。もしあなたの拡張機能に必要な変更がインストールマニフェスト内の `maxVersion` 項目の更新だけで、なおかつ [addons.mozilla.org](https://addons.mozilla.org/) に拡張機能を登録している場合、新しいバージョンの拡張機能をアップロードする必要はありません！ AMO 上の「開発者用コントロールパネル」を使って `maxVersion` を更新するだけで作業は完了です。この方法なら、拡張機能が再度レビューに回ることもありません。
 
 ## Step 1: インストールマニフェストを更新する
 
-最初のステップ、そして、ほとんどの拡張機能にとって必要となるたったひとつのステップは、Firefox 3 との互換性を示すために [インストールマニフェスト](/ja/docs/Install_Manifests) ([`install.rdf`](/ja/docs/Creating_a_Skin_for_Firefox/install.rdf)) を更新する作業です。
+最初のステップ、そして、ほとんどの拡張機能にとって必要となるたったひとつのステップは、Firefox 3 との互換性を示すために [インストールマニフェスト](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests)ファイル、[`install.rdf`](https://web.archive.org/web/20160809001138/https://developer.mozilla.org/en-US/Add-ons/Themes/Obsolete/Creating_a_Skin_for_Firefox/install.rdf) を更新する作業です。
 
-ファイルを開いて、互換性がある Firefox の最高バージョンを示す行を見つけます。Firefox 2 向けの拡張機能であれば、以下のように書かれているはずです。
+ファイルを開いて、互換性がある Firefox の最新バージョンを示す行を見つけます。Firefox 2 向けの拡張機能であれば、以下のように書かれているはずです。
 
 ```xml
 <em:maxVersion>2.0.*</em:maxVersion>
@@ -27,20 +27,20 @@ l10n:
 
 次にアドオンを再インストールします。
 
-なお、Firefox 3 ではバージョン番号の余計な「.0」が廃止されますので、「3.0.0.\*」の代わりに「3.0.\*」と書くだけで済みます。
+なお、Firefox 3 ではバージョン番号の余計な ".0" が廃止されますので、`3.0.0.*` の代わりに `3.0.*` と書くだけで済みます。
 
 これまでに、一部の拡張機能に影響すると思われる API の変更がいくつも行われています (まだ今後も変更は行われるでしょう)。私たちは現在、これらの変更の完全なリストを作成中です。
 
 > [!NOTE]
-> もし拡張機能が、まだ [`Install.js`](/ja/docs/Install.js) スクリプトを[インストールマニフェスト](/ja/docs/Install_Manifests) の代わりに、使っている場合は、今回インストールマニフェストに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
+> もし拡張機能が、まだ [`Install.js`](https://web.archive.org/web/20210604075726/https://developer.mozilla.org/en-US/docs/Archive/Install.js) スクリプトを[インストールマニフェスト](https://web.archive.org/web/20210421140209/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Install_Manifests)の代わりに、使っている場合は、今回インストールマニフェストに移行していただく必要があります。Firefox 3 は XPI ファイル内の `install.js` スクリプトをサポートしません。
 
 ### インストールマニフェストに翻訳を追加する
 
-Firefox 3 は、翻訳された説明文を指定するための新しいプロパティを、インストールマニフェスト内でサポートしています。今までの方法も引き続き動作しますが、この新しい方法を利用すれば、アドオンが無効化されていたりインストールが保留されている場合も、各言語で説明文を表示できるようになります。詳しくは [拡張機能の説明の翻訳](/ja/Localizing_extension_descriptions) をご覧ください。
+Firefox 3 は、翻訳された説明文を指定するための新しいプロパティを、インストールマニフェスト内でサポートしています。今までの方法も引き続き動作しますが、この新しい方法を利用すれば、アドオンが無効化されていたりインストールが保留されている場合も、各言語で説明文を表示できるようになります。詳しくは[拡張機能の説明の翻訳](https://web.archive.org/web/20210126131244/https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localizing_extension_descriptions)をご覧ください。
 
 ## Step 2: 安全な更新を提供しているか確認する
 
-あなたが独自にアドオンを配布していて、[addons.mozilla.org](https://addons.mozilla.org) のような安全なアドオン提供サービスを利用していない場合、アドオンの更新に安全な方法を用いる必要があります。つまり、SSL を利用したウェブサイト上で更新を提供するか、暗号鍵を使って更新情報に署名する必要があります。詳しくは [安全な更新](/ja/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates) をご覧ください。
+あなたが独自にアドオンを配布していて、[addons.mozilla.org](https://addons.mozilla.org・) のような安全なアドオン提供サービスを利用していない場合、アドオンの更新に安全な方法を用いる必要があります。つまり、SSL を利用したウェブサイト上で更新を提供するか、暗号鍵を使って更新情報に署名する必要があります。詳しくは[安全な更新](https://web.archive.org/web/20201031093738/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Extension_Versioning,_Update_and_Compatibility#securing_updates)をご覧ください。
 
 ## Step 3: 変更された API に対応する
 
@@ -57,25 +57,25 @@ Firefox では現在このルールを強制していません。Firefox 3 の�
 
 ### ブックマークと履歴
 
-あなたの拡張機能から何らかの方法でブックマークや履歴のデータにアクセスしている場合、Firefox 3 と互換性を持たせるには多くの作業が必要です。これらの情報にアクセスするための古い API は、[Places](/ja/docs/Places) という新しいアーキテクチャに置き換えられました。既存の拡張機能を Places API に対応させる方法については、[Places への移行ガイド](/ja/docs/Places_Developer_Guide) で詳しく解説しています。
+あなたの拡張機能から何らかの方法でブックマークや履歴のデータにアクセスしている場合、Firefox 3 と互換性を持たせるには多くの作業が必要です。これらの情報にアクセスするための古い API は、[Places](https://web.archive.org/web/20210620103113/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places) という新しいアーキテクチャに置き換えられました。既存の拡張機能を Places API に対応させる方法については、[Places への移行ガイド](https://web.archive.org/web/20200621121524/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Places_Developer_Guide)で詳しく解説しています。
 
 ### ダウンロードマネージャー
 
-RDF データ形式から [Storage](/ja/docs/Storage) API への移行にあたって、ダウンロードマネージャーの API にも若干変更が加えられました。これに関する移行作業は非常に簡単なはずです。また、複数のダウンロードマネージャーリスナーをサポートするため、ダウンロードの進捗状況を監視する API にも変更がありました。詳しくは `nsIDownloadManager`、`nsIDownloadProgressListener`、[ダウンロードの監視](/ja/docs/Monitoring_downloads) を参照してください。
+RDF データ形式から [Storage](https://web.archive.org/web/20210401045303/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Storage) API への移行にあたって、ダウンロードマネージャーの API にも若干変更が加えられました。これに関する移行作業は非常に簡単なはずです。また、複数のダウンロードマネージャーリスナーをサポートするため、ダウンロードの進捗状況を監視する API にも変更がありました。詳しくは `nsIDownloadManager`、`nsIDownloadProgressListener`、[ダウンロードの監視](https://web.archive.org/web/20210516125311/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Monitoring_downloads) を参照してください。
 
 ### パスワードマネージャー
 
 あなたの拡張機能からパスワードマネージャーを利用してユーザーのログイン情報にアクセスしている場合、新しいログインマネージャー API を利用するように更新する必要があります。
 
-- [nsILoginManager の使い方](/ja/docs/XPCOM_Interface_Reference/Using_nsILoginManager) という記事には、パスワードマネージャーとログインマネージャーの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。
+- [nsILoginManager の使い方](https://web.archive.org/web/20210530180123/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILoginManager/Using_nsILoginManager)という記事には、パスワードマネージャーとログインマネージャーの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。
 - `nsILoginInfo`
 - `nsILoginManager`
 
-拡張機能の中で独自のパスワードストレージを提供したい場合は、組み込みのパスワードマネージャーストレージを上書きすることもできます。詳しくは [ログインマネージャー用ストレージモジュールの作成](/ja/docs/Creating_a_Login_Manager_storage_module) をご覧ください。
+拡張機能の中で独自のパスワードストレージを提供したい場合は、組み込みのパスワードマネージャーストレージを上書きすることもできます。詳しくは [ログインマネージャー用ストレージモジュールの作成](https://web.archive.org/web/20210515154057/https://developer.mozilla.org/en-US/docs/Mozilla/Creating_a_login_manager_storage_module)をご覧ください。
 
 #### ポップアップ (メニュー、コンテキストメニュー、ツールチップ、パネル)
 
-XUL のポップアップシステムは Firefox 3 で大幅に変更されました。ポップアップシステムには、メインメニュー、コンテキストメニュー、ポップアップパネルが含まれます。新しいシステムの仕組みについては [ポップアップの使用](/ja/docs/XUL/PopupGuide) ガイドをご覧ください。特筆すべき点は、`popup.showPopup` が非推奨となり、新しい `popup.openPopup` と `popup.openPopupAtScreen` に置き換えられたことです。
+XUL のポップアップシステムは Firefox 3 で大幅に変更されました。ポップアップシステムには、メインメニュー、コンテキストメニュー、ポップアップパネルが含まれます。新しいシステムの仕組みについては [ポップアップの使用](https://web.archive.org/web/20210418010207/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/PopupGuide)ガイドをご覧ください。特筆すべき点は、`popup.showPopup` が非推奨となり、新しい `popup.openPopup` と `popup.openPopupAtScreen` に置き換えられたことです。
 
 #### 自動補完
 
@@ -95,9 +95,9 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 
 内部文字列 API がエクスポートされなくなったので、外部文字列 API に移行する必要があります。有用な情報については、これらの記事を参照してください。
 
-- [Mozilla の外部文字列ガイド](/ja/docs/Mozilla_external_string_guide)
-- [XPCOM Glue](/ja/docs/XPCOM_Glue)
-- [内部連携から凍結連携への移行について](/ja/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage)
+- [Mozilla の外部文字列ガイド](https://web.archive.org/web/20160423162648/https://developer.mozilla.org/en-US/docs/Mozilla/Mozilla_external_string_guide)
+- [XPCOM Glue](https://web.archive.org/web/20210625030032/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Glue)
+- [内部連携から凍結連携への移行について](https://web.archive.org/web/20210620000937/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Migrating_from_Internal_Linkage_to_Frozen_Linkage)
 
 ### 削除されたインターフェイス
 
@@ -145,22 +145,22 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 
 ### ボックスの変更
 
-"appcontent" ボックスにオーバーレイして文書コンテンツの上にクロームを浮かせようとする拡張機能は、その素材を表示しなくなりました。新しい [`<xul:panel>`](/ja/docs/Mozilla/Tech/XUL/panel) XUL 要素を使うように拡張機能を更新する必要があります。もし、パネルが遅延後に自動的に消えないようにしたい場合は、 `noautohide` 属性を `true` に設定してください。
+"appcontent" ボックスにオーバーレイして文書コンテンツの上にクロームを浮かせようとする拡張機能は、その素材を表示しなくなりました。新しい [`<xul:panel>`](https://web.archive.org/web/20210301150646/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/panel) XUL 要素を使うように拡張機能を更新する必要があります。もし、パネルが遅延後に自動的に消えないようにしたい場合は、 `noautohide` 属性を `true` に設定してください。
 
 ### その他の変更
 
 _もし、拡張機能を Firefox 3 対応にするために必要な小さい変更があったら、ここに追加してください。_
 
 - `chrome://browser/base/utilityOverlay.js` は、セキュリティ上の理由からサポートされなくなりました。これまでこのスクリプトを利用していた場合は、`chrome://browser/content/utilityOverlay.js` へ切り替えてください。
-- `nsIAboutModule` の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します。 ([Firefox バグ 337746](https://bugzil.la/337746))
-- [`<xul:tabbrowser>`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([Firefox バグ 339964](https://bugzil.la/339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
+- `nsIAboutModule` の実装には、`getURIFlags` メソッドのサポートが必要になりました。詳しくは [nsIAboutModule.idl](https://searchfox.org/firefox-main/source/netwerk/protocol/about/nsIAboutModule.idl) を参照してください。これは新しい `about:` URI を提供する拡張機能に影響します。 ([Firefox バグ 337746](https://bugzil.la/337746))
+- [`<xul:tabbrowser>`](https://web.archive.org/web/20210221234616/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([Firefox バグ 339964](https://bugzil.la/339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
 - `nsISupports_proxies` の変更と、おそらくスレッド関連インターフェイスへの変更については、ドキュメントを用意する必要があります。
 - XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、 [Firefox バグ 319654](https://bugzil.la/319654) で行われた以下の変更に注意してください。
   1. XML PI が XUL ドキュメントの DOM に追加されました。これは、 {{ Domxref("Node.firstChild", "document.firstChild") }} が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに {{ Domxref("document.documentElement") }} を用いてください。
   2. `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 
-- `window.addEventListener("load", myFunc, true)` がウェブコンテンツが読み込まれた際 (ブラウザーのページ読み込み時) に呼び出されなくなりました。これは、 [Firefox バグ 296639](https://bugzil.la/296639) によって inner ウィンドウと outer ウィンドウの関係が変わったことによります。簡単な修正方法は `gBrowser.addEventListener("load", myFunc, true)` を使うことで、[ここ](/ja/docs/Code_snippets/Tabbed_browser#detecting_page_load)書かれている通りです。この方法は Firefox 2 でも有効です。
+- `window.addEventListener("load", myFunc, true)` がウェブコンテンツが読み込まれた際 (ブラウザーのページ読み込み時) に呼び出されなくなりました。これは、 [Firefox バグ 296639](https://bugzil.la/296639) によって inner ウィンドウと outer ウィンドウの関係が変わったことによります。簡単な修正方法は `gBrowser.addEventListener("load", myFunc, true)` を使うことで、この方法は Firefox 2 でも有効です。
 - `content.window.getSelection()` は、文字列を返す、非推奨となった `content.document.getSelection()` とは異なり、オブジェクトを返します (`toString()` を使えば文字列に変換できます)。
 - `event.preventBubble()` は Firefox 3 で非推奨となり、Firefox 3 で削除されました。Firefox 2 でも動作する [`event.stopPropagation()`](/ja/docs/Web/API/Event/stopPropagation) を使ってください。
-- `setTimeout()` を使って開始されるタイマーは、[Firefox バグ 52209](https://bugzil.la/52209) のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに `nsITimer` を使ってください。
-- 信頼できないソース（例：ウェブサイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい [`contentaccessible` フラグ](/ja/docs/Chrome_Registration#contentaccessible) を使わなければなりません。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("WorkerGlobalScope.setTimeout", "setTimeout()")}} を使って開始されるタイマーは、[Firefox バグ 52209](https://bugzil.la/52209) のために行われた修正によって、モーダル形式のウィンドウではブロックされるようになりました。代わりに `nsITimer` を使ってください。
+- 信頼できないソース（例：ウェブサイト）が拡張のクロームにアクセスできるようにする必要がある場合は、新しい [`contentaccessible` フラグ](https://web.archive.org/web/20210623201644/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration#contentaccessible)を使わなければなりません。

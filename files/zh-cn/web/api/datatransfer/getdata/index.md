@@ -1,47 +1,45 @@
 ---
-title: DataTransfer.getData()
+title: DataTransfer：getData() 方法
+short-title: getData()
 slug: Web/API/DataTransfer/getData
+l10n:
+  sourceCommit: 8285d415db211ae9efe04752d9dab1b574450ee8
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`DataTransfer.getData()`** 方法接受指定类型的拖放（以{{domxref("DOMString")}}的形式）数据。如果拖放行为没有操作任何数据，会返回一个空字符串。
+**`DataTransfer.getData()`** 方法查询指定类型的拖放数据（字符串形式）。如果拖放操作没有包含任何数据，此方法会返回一个空字符串。
 
-数据类型有：`text/plain`，`text/uri-list`。
+数据类型示例包括 `text/plain` 和 `text/uri-list`。
 
 ## 语法
 
-```plain
-DOMString dataTransfer.getData(format);
+```js-nolint
+getData(format)
 ```
 
 ### 参数
 
-- _format_
-  - : {{domxref("DOMString")}}类型
+- `format`
+  - : 表示要获取的数据类型的字符串。
 
 ### 返回值
 
-- {{domxref("DOMString")}}
-  - : 返回一个给定类型的{{domxref("DOMString")}}格式的数据。如果没有操作数据或者没有指定操作数据的类型，都会返回一个空字符串。
+表示指定 `format` 的拖放数据的字符串。如果拖放操作没有数据，或者指定 `format` 没有数据，则该方法返回一个空字符串。
 
-### 注意
-
-[HTML5 拖放规范](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) 规定了一个 `drag data store mode`。这可能会导致预期外的结果，即 **`DataTransfer.getData()`** 没有返回预期值。
+需要注意，因为只允许在指定事件中读取和写入数据，`DataTransfer.getData()` 可能不会返回预期的值。在 `dragstart` 和 `drop` 事件期间，你可以安全地访问数据。在其他所有事件中，数据均应被视为不可用。尽管如此，你仍然可以枚举项目及其格式。
 
 ## 示例
 
-这个例子展示了 {{domxref("DataTransfer")}}对象的{{domxref("DataTransfer.getData()","getData()")}}和{{domxref("DataTransfer.setData()","setData()")}}方法。
+下述示例展示了 {{domxref("DataTransfer")}} 对象的 `getData()` 和 {{domxref("DataTransfer.setData()","setData()")}} 方法。
 
 ### HTML
 
 ```html
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <span id="drag" draggable="true" ondragstart="drag(event)"
-    >drag me to the other box</span
-  >
+<div id="div1">
+  <span id="drag" draggable="true">将我拖动到另一个盒子中</span>
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2"></div>
 ```
 
 ### CSS
@@ -59,21 +57,31 @@ DOMString dataTransfer.getData(format);
 ### JavaScript
 
 ```js
-function allowDrop(allowdropevent) {
-  allowdropevent.target.style.color = "blue";
-  allowdropevent.preventDefault();
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
+const dragElement = document.getElementById("drag");
+
+dragElement.addEventListener("dragstart", drag);
+div1.addEventListener("dragover", allowDrop);
+div2.addEventListener("dragover", allowDrop);
+div1.addEventListener("drop", drop);
+div2.addEventListener("drop", drop);
+
+function allowDrop(allowDropEvent) {
+  allowDropEvent.target.style.color = "blue";
+  allowDropEvent.preventDefault();
 }
 
-function drag(dragevent) {
-  dragevent.dataTransfer.setData("text", dragevent.target.id);
-  dragevent.target.style.color = "green";
+function drag(dragEvent) {
+  dragEvent.dataTransfer.setData("text", dragEvent.target.id);
+  dragEvent.target.style.color = "green";
 }
 
-function drop(dropevent) {
-  dropevent.preventDefault();
-  var data = dropevent.dataTransfer.getData("text");
-  dropevent.target.appendChild(document.getElementById(data));
-  document.getElementById("drag").style.color = "black";
+function drop(dropEvent) {
+  dropEvent.preventDefault();
+  const data = dropEvent.dataTransfer.getData("text");
+  dropEvent.target.appendChild(document.getElementById(data));
+  dragElement.style.color = "black";
 }
 ```
 
@@ -91,7 +99,6 @@ function drop(dropevent) {
 
 ## 参见
 
-- [HTML 拖放 API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [拖放](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
 - [拖拽操作](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [使用拖拽数据存储](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
-- [DataTransfer 测试——粘贴或拖拽](https://codepen.io/tech_query/pen/MqGgap)

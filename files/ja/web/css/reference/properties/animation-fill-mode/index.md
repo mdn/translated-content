@@ -1,12 +1,13 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
-original_slug: Web/CSS/animation-fill-mode
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-fill-mode")}}
 
@@ -32,7 +33,7 @@ animation-delay: 1s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>アニメーション<span id="playstatus"></span></div>
+  <div>アニメーション<span id="play-status"></span></div>
   <div id="example-element">モードを選択すると開始します！</div>
 </section>
 ```
@@ -43,7 +44,7 @@ animation-delay: 1s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -54,7 +55,7 @@ animation-delay: 1s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -77,44 +78,38 @@ animation-delay: 1s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "待機中";
-    el.className = "";
+function update() {
+  status.textContent = "待機中";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "動作中";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "完了";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "動作中";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "完了";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
-```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+```
 
 ## 構文
 
@@ -153,7 +148,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | 偶数                        | `100%` または `to` |
     | `alternate-reverse`   | 奇数                        | `0%` または `from` |
 
-    アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
+    アニメーションするプロパティは、設定された {{cssxref("will-change")}} プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
 
 - `backwards`
   - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/Reference/At-rules/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
@@ -200,7 +195,7 @@ animation-fill-mode: unset;
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
+  border-top: 100px solid #cccccc;
   height: 300px;
 }
 

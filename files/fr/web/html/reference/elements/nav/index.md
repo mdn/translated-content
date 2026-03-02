@@ -1,19 +1,18 @@
 ---
 title: "<nav> : l'élément de section de navigation"
 slug: Web/HTML/Reference/Elements/nav
-original_slug: Web/HTML/Element/nav
+l10n:
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<nav>`** représente une section d'une page dont le but est de fournir des liens de navigation, soit au sein du document courant, soit vers d'autres documents. Des exemples courants de sections de navigation sont les menus, les tables des matières et les index.
 
-L'élément HTML **\<nav>** représente une section d'une page ayant des liens vers d'autres pages ou des fragments de cette page. Autrement dit, c'est une section destinée à la navigation dans un document (avec des menus, des tables des matières, des index, etc.).
-
-{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;nav&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <nav class="crumbs">
   <ol>
-    <li class="crumb"><a href="#">Bikes</a></li>
+    <li class="crumb"><a href="#">Vélos</a></li>
     <li class="crumb"><a href="#">BMX</a></li>
     <li class="crumb">Jump Bike 3000</li>
   </ol>
@@ -21,8 +20,9 @@ L'élément HTML **\<nav>** représente une section d'une page ayant des liens v
 
 <h1>Jump Bike 3000</h1>
 <p>
-  This BMX bike is a solid step into the pro world. It looks as legit as it
-  rides and is built to polish your skills.
+  Ce vélo BMX est une étape solide vers le monde professionnel. Il a l'apparence
+  et la performance d'un vrai BMX et est conçu pour perfectionner vos
+  compétences.
 </p>
 ```
 
@@ -42,7 +42,7 @@ nav {
 
 .crumb a::after {
   display: inline-block;
-  color: #000;
+  color: black;
   content: ">";
   font-size: 80%;
   font-weight: bold;
@@ -52,19 +52,19 @@ nav {
 
 ## Attributs
 
-Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Tous les liens d'un document ne doivent pas faire partie d'un élément `<nav>`. Ce dernier est fait pour créer des blocs conséquents contenants des liens de navigations au sein du document. L'élément {{HTMLElement("footer")}} possède souvent différents liens, il n'a pour autant pas besoin d'être dans un élément {{HTMLElement("nav")}}.
-- Un document peut avoir plusieurs éléments {{HTMLElement("nav")}}, par exemple un pour la navigation sur le site et un autre pour la navigation au sein de la page. L'attribut [`aria-labelledby`](/fr/docs/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-labelledby) pourra être utilisé afin d'améliorer l'accessibilité.
-- Les agents utilisateurs, tels que les lecteurs d'écrans assistant les utilisateurs handicapés, peuvent utiliser cet élément pour déterminer s'il faut omettre ou non le rendu initial du contenu relatif uniquement à la navigation.
+- Il n'est pas nécessaire que tous les liens soient contenus dans un élément `<nav>`. `<nav>` est destiné uniquement à un bloc principal de liens de navigation&nbsp;; typiquement, l'élément {{HTMLElement("footer")}} contient souvent une liste de liens qui n'ont pas besoin d'être dans un élément `<nav>`.
+- Un document peut comporter plusieurs éléments `<nav>`, par exemple un pour la navigation du site et un autre pour la navigation interne à la page. [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) peut être utilisé dans ce cas pour améliorer l'accessibilité, voir [l'exemple](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#libeller_le_contenu_des_sections).
+- Les agents utilisateur·ice·s, tels que les lecteurs d'écran destinés aux personnes en situation de handicap, peuvent utiliser cet élément pour déterminer s'il faut omettre le rendu initial du contenu réservé à la navigation.
 
 ## Exemples
 
-### HTML
+Dans cet exemple, un bloc `<nav>` est utilisé pour contenir une liste non ordonnée ({{HTMLElement("ul")}}) de liens. Avec une feuille de style CSS appropriée, cela peut être présenté comme une barre latérale, une barre de navigation ou un menu déroulant.
 
-```html
+```html live-sample___unordered-list
 <nav class="menu">
   <ul>
     <li><a href="#Accueil">Accueil</a></li>
@@ -74,9 +74,37 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Refer
 </nav>
 ```
 
-### Résultat
+{{EmbedLiveSample("unordered-list")}}
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
+La sémantique de l'élément `nav` est de fournir des liens. Cependant, un élément `nav` n'a pas besoin de contenir une liste, il peut aussi contenir d'autres types de contenu. Dans ce bloc de navigation, les liens sont fournis dans du texte&nbsp;:
+
+```html live-sample___prose
+<nav>
+  <h2>Navigation</h2>
+  <p>
+    Vous êtes sur ma page d'accueil. Au nord se trouve
+    <a href="/blog">mon blog</a>, d'où l'on entend les bruits de bataille. À
+    l'est, vous pouvez voir une grande montagne, sur laquelle de nombreux
+    <a href="/school">devoirs scolaires</a> sont éparpillés. Tout en haut de
+    cette montagne, vous pouvez apercevoir une petite silhouette qui semble être
+    moi, en train de rédiger désespérément une
+    <a href="/school/thesis">thèse</a>.
+  </p>
+  <p>
+    À l'ouest se trouvent plusieurs sorties. Une sortie amusante est intitulée
+    <a href="https://games.example.com/">«&nbsp;jeux&nbsp;»</a>. Une autre
+    sortie, plus ennuyeuse, est intitulée
+    <a href="https://isp.example.net/">ISP™</a>.
+  </p>
+  <p>
+    Au sud se trouve une <a href="/about">page de contacts</a> sombre et humide.
+    Des toiles d'araignée recouvrent son entrée désaffectée, et à un moment
+    donné, vous voyez un rat sortir rapidement de la page.
+  </p>
+</nav>
+```
+
+{{EmbedLiveSample("prose")}}
 
 ## Résumé technique
 
@@ -84,53 +112,58 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Refer
   <tbody>
     <tr>
       <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
-            >Catégories de contenu</a
-          ></dfn
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
+          href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant"
           >contenu sectionnant</a
-        >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
-          >contenu tangible</a
-        >.
+        >, contenu tangible.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Contenu autorisé</dfn></th>
+      <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >.
       </td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Omission de balises</dfn></th>
+      <th scope="row">Omission de balises</th>
       <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Parents autorisés</dfn></th>
+      <th scope="row">Parents autorisés</th>
       <td>
         Tout élément acceptant du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
     </tr>
     <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
+            >navigation</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun</td>
+      <td>Aucun <code>role</code> autorisé</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -145,6 +178,6 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Refer
 
 ## Voir aussi
 
-- Les autres éléments HTML en relation avec les sections : {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Plan et section d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ARIA : le rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)
+- Les autres éléments HTML en relation avec les sections&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h2&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h3&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h4&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h5&gt;")}}`, `{{HTMLElement("Heading_Elements", "&lt;h6&gt;")}}`, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
+- [Plan et section d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- [ARIA&nbsp;: rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)

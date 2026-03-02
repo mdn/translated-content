@@ -101,7 +101,7 @@ var myFunction = function namedFunction() {
 
 可以看到，上面的两个例子都不以 function 开头。不以 function 开头的函数语句就是函数表达式定义。
 
-当函数只使用一次时，通常使用**IIFE (_Immediately Invokable Function Expressions_)。**
+当函数只使用一次时，通常使用 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即调用函数表达式）。
 
 ```js
 (function () {

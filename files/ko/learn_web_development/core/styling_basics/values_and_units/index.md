@@ -6,9 +6,9 @@ l10n:
   sourceCommit: ff2893c6e14249c44e54c67102ca4218f08b70d1
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
-CSS 규칙은 [선언](/ko/docs/Web/CSS/CSS_syntax/Syntax#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
+CSS 규칙은 [선언](/ko/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
 CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는지를 설명하는 **값 유형을** 가지고 있습니다.
 이번 학습에서는 자주 사용되는 값 유형이 무엇인지, 그리고 그것이 어떻게 작동하는지를 살펴보겠습니다.
 
@@ -48,14 +48,14 @@ CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는�
 
 ## CSS 값이란 무엇인가?
 
-CSS 사양과 MDN의 속성 페이지에서 [`<color>`](/ko/docs/Web/CSS/color_value) 또는 [`<length>`](/ko/docs/Web/CSS/length). 와 같이 꺾쇠괄호로 묶여 있는 값을 찾을 수 있습니다. `<color>` 값이 특정 속성에 유효한 것으로 표시되면, [`<color>`](/ko/docs/Web/CSS/color_value) 참조 페이지에 나열된 대로 유효한 속성을 해당 속성의 값으로 사용할 수 있습니다.
+CSS 사양과 MDN의 속성 페이지에서 [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 또는 [`<length>`](/ko/docs/Web/CSS/Reference/Values/length). 와 같이 꺾쇠괄호로 묶여 있는 값을 찾을 수 있습니다. `<color>` 값이 특정 속성에 유효한 것으로 표시되면, [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 참조 페이지에 나열된 대로 유효한 속성을 해당 속성의 값으로 사용할 수 있습니다.
 
 > [!NOTE]
 > CSS 값을 _데이터 유형_ 이라고 합니다. 용어는 기본적으로 상호 교환이 가능합니다. CSS에서 데이터 유형이라고 하는 것을 볼 때, 실제로 가치를 말하는 멋진 방법입니다.
 
 > [!NOTE]
 > CSS 값은 CSS 속성과 구별하기 위해, 꺾쇠괄호(`<`, `>`)를 사용하여 표시되는 경향이 있습니다.
-> 예를 들어, {{cssxref("color")}} 속성과 [`<color>`](/ko/docs/Web/CSS/color_value) 데이터 형식이 있습니다.
+> 예를 들어, {{cssxref("color")}} 속성과 [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 데이터 형식이 있습니다.
 > CSS 데이터 형식과 HTML 요소도 꺾쇠괄호를 사용하므로 혼동될 수 있지만, 이는 매우 다른 상황에서 사용됩니다.
 
 다음 예제에서는 키워드를 사용하여 머리글의 색상을 설정하고, `rgb()` 함수를 사용하여 배경을 설정했습니다.
@@ -67,7 +67,7 @@ h1 {
 }
 ```
 
-CSS 값은 허용가능한 하윗값 모음을 정의하는 방법입니다. 즉, `<color>` 가 유효한 것으로 표시되면 — 키워드, 16진수 값, `rgb()` 함수 등 어떤 색상 값을 사용할 수 있는지 궁금할 필요가 없습니다. 사용 가능한 `<color>` 값은 브라우저에서 지원한다고 가정합니다. 각 값에 대한 MDN 페이지는 브라우저 지원에 대한 정보를 제공합니다. 예를 들어 [`<color>`](/ko/docs/Web/CSS/color_value) 페이지를 보면 브라우저 호환성 섹션에 다양한 색상 값 유형과 지원이 나열되어 있습니다.
+CSS 값은 허용가능한 하윗값 모음을 정의하는 방법입니다. 즉, `<color>` 가 유효한 것으로 표시되면 — 키워드, 16진수 값, `rgb()` 함수 등 어떤 색상 값을 사용할 수 있는지 궁금할 필요가 없습니다. 사용 가능한 `<color>` 값은 브라우저에서 지원한다고 가정합니다. 각 값에 대한 MDN 페이지는 브라우저 지원에 대한 정보를 제공합니다. 예를 들어 [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 페이지를 보면 브라우저 호환성 섹션에 다양한 색상 값 유형과 지원이 나열되어 있습니다.
 
 여러가지 가능한 값을 시험해 볼 수 있도록 예를 들어 자주 접할 수 있는 몇 가지 유형의 값과 단위를 살펴보겠습니다.
 
@@ -75,12 +75,12 @@ CSS 값은 허용가능한 하윗값 모음을 정의하는 방법입니다. 즉
 
 CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다. 다음은 모두 숫자로 분류됩니다.
 
-| 데이터 형식                                   | 설명                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55`와 같은 정수입니다.                                                                                                                                                                                                                                                                                                 |
-| [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다. 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                                |
-| [`<dimension>`](/ko/docs/Web/CSS/dimension)   | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
-| [`<percentage>`](/ko/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%`를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                          |
+| 데이터 형식                                                    | 설명                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/ko/docs/Web/CSS/Reference/Values/integer)       | `<integer>` 은 `1024` 또는`-55`와 같은 정수입니다.                                                                                                                                                                                                                                                                                                                                                    |
+| [`<number>`](/ko/docs/Web/CSS/Reference/Values/number)         | `<number>` 는 10진수를 나타냅니다. 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                                                                                   |
+| [`<dimension>`](/ko/docs/Web/CSS/dimension)                    | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/Reference/Values/length), [`<angle>`](/ko/docs/Web/CSS/Reference/Values/angle), [`<time>`](/ko/docs/Web/CSS/Reference/Values/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
+| [`<percentage>`](/ko/docs/Web/CSS/Reference/Values/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%`를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                                                                             |
 
 ### 길이
 
@@ -106,23 +106,23 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 
 상대 길이 단위는 다른 요소 (상위 요소의 글꼴 크기 또는 viewport 크기)와 관련이 있습니다. 상대 단위를 사용하면 텍스트나 다른 요소의 크기가 페이지의 다른 모든 것에 비례하여 조정되도록 신중하게 계획할 수 있다는 이점이 있습니다. 웹 개발에 가장 유용한 단위가 아래 표에 나열되어 있습니다.
 
-| 단위       | 관련 사항                                                                                                                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`       | 요소의 글꼴 크기.                                                                                                                                       |
-| `ex`       | 요소 글꼴의 x-height.                                                                                                                                   |
-| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                                                                         |
-| `rem`      | 루트 요소의 글꼴 크기.                                                                                                                                  |
-| `lh`       | 요소의 라인 높이.                                                                                                                                       |
-| `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다.                                          |
-| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비 1%와 같습니다.                                                        |
-| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이 1%와 같습니다.                                                        |
-| `vmin`     | viewport의 작은 치수의 1%.                                                                                                                              |
-| `vmax`     | viewport의 큰 치수의 1%.                                                                                                                                |
-| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.            |
-| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다. |
-| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                  |
-| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                    |
-| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                                |
+| 단위       | 관련 사항                                                                                                                                                  |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`       | 요소의 글꼴 크기.                                                                                                                                          |
+| `ex`       | 요소 글꼴의 x-height.                                                                                                                                      |
+| `ch`       | 요소 글꼴의 glyph "0"의 사전 길이 (너비)입니다.                                                                                                            |
+| `rem`      | 루트 요소의 글꼴 크기.                                                                                                                                     |
+| `lh`       | 요소의 라인 높이.                                                                                                                                          |
+| `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다.                                             |
+| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 너비 1%와 같습니다.                                                        |
+| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Guides/Display/Containing_block) 높이 1%와 같습니다.                                                        |
+| `vmin`     | viewport의 작은 치수의 1%.                                                                                                                                 |
+| `vmax`     | viewport의 큰 치수의 1%.                                                                                                                                   |
+| `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.            |
+| `vi`       | 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/Guides/Logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다. |
+| `svw, svh` | [작은 뷰포트](/ko/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                    |
+| `lvw, lvh` | [큰 뷰포트](/ko/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                      |
+| `dvw, dvh` | [동적인 뷰포트](/ko/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport) 각각의 너비 및 높이 1%.                                  |
 
 #### 예제 살펴보기
 
@@ -306,7 +306,7 @@ li {
 
 {{EmbedLiveSample("percentage-fonts")}}
 
-많은 값이 길이 또는 백분율을 허용하지만, 길이만 허용하는 값도 있습니다. MDN 속성 참조 페이지에서 어떤 값이 허용되는지 확인할 수 있습니다. 허용된 값에 [`<length-percentage>`](/ko/docs/Web/CSS/length-percentage) 가 포함된 경우 길이 또는 백분율을 사용할 수 있습니다. 허용된 값에 `<length>` 만 포함된 경우, 백분율을 사용할 수 없습니다.
+많은 값이 길이 또는 백분율을 허용하지만, 길이만 허용하는 값도 있습니다. MDN 속성 참조 페이지에서 어떤 값이 허용되는지 확인할 수 있습니다. 허용된 값에 [`<length-percentage>`](/ko/docs/Web/CSS/Reference/Values/length-percentage) 가 포함된 경우 길이 또는 백분율을 사용할 수 있습니다. 허용된 값에 `<length>` 만 포함된 경우, 백분율을 사용할 수 없습니다.
 
 ### 숫자
 
@@ -354,7 +354,7 @@ CSS에서 색상을 지정하는 방법은 여러 가지가 있으며, 그중 �
 
 ### 색상 키워드
 
-여기의 학습 섹션이나 MDN 의 다른 예에서 색상 키워드를 지정하는 직관적인 방법인 색상 키워드를 볼 수 있습니다. 이 키워드에는 여러 가지가 있으며 그중 일부는 상당히 재미있는 이름을 가지고 있습니다! [`<color>`](/ko/docs/Web/CSS/color_value) 값에 대한 전체 목록을 페이지에서 볼 수 있습니다.
+여기의 학습 섹션이나 MDN 의 다른 예에서 색상 키워드를 지정하는 직관적인 방법인 색상 키워드를 볼 수 있습니다. 이 키워드에는 여러 가지가 있으며 그중 일부는 상당히 재미있는 이름을 가지고 있습니다! [`<color>`](/ko/docs/Web/CSS/Reference/Values/color_value) 값에 대한 전체 목록을 페이지에서 볼 수 있습니다.
 
 아래의 라이브 예제에서 다른 색상 값을 사용하여 작동하는 방법에 대한 아이디어를 얻으십시오.
 
@@ -589,7 +589,7 @@ RGB보다 약간 덜 지원되는 HSL 색상은 (이전 버전의 IE에서는 �
 
 ## 이미지
 
-[`<image>`](/ko/docs/Web/CSS/image) 값 형식은 이미지가 유효한 값인 경우 사용됩니다. 이것은 `url()` 함수 또는 gradient를 통해 가리키는 실제 이미지 파일일 수 있습니다.
+[`<image>`](/ko/docs/Web/CSS/Reference/Values/image) 값 형식은 이미지가 유효한 값인 경우 사용됩니다. 이것은 `url()` 함수 또는 gradient를 통해 가리키는 실제 이미지 파일일 수 있습니다.
 
 아래 예제에서 CSS `background-image` 속성의 값으로 사용되는 이미지와 gradient를 보여주었습니다.
 
@@ -621,11 +621,11 @@ RGB보다 약간 덜 지원되는 HSL 색상은 (이전 버전의 IE에서는 �
 {{EmbedLiveSample("image", "", "380px")}}
 
 > [!NOTE]
-> `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/ko/docs/Web/CSS/image) 데이터 형식을 확인하세요.
+> `<image>` 에 대해 가능한 다른 값이 있지만 이 값은 최신이며 최신 브라우저 지원이 좋지 않습니다. \<image> 데이터 형식을 읽으려면 MDN 페이지에서 [`<image>`](/ko/docs/Web/CSS/Reference/Values/image) 데이터 형식을 확인하세요.
 
 ## 위치 (Position)
 
-[`<position>`](/ko/docs/Web/CSS/position_value) 값 형식은 배경 이미지 ([`background-position`](/ko/docs/Web/CSS/background-position) 를 통해) 와 같은 항목을 배치하는 데 사용되는 2D 좌표를 나타냅니다. `top`, `left`, `bottom`, `right` 및 `center`와 같은 키워드를 사용하여 항목을 2D 박스의 특정 범위에 맞춰 길이와 함께 박스의 위쪽 및 왼쪽 가장자리에서 offset을 나타냅니다.
+[`<position>`](/ko/docs/Web/CSS/Reference/Values/position_value) 값 형식은 배경 이미지 ([`background-position`](/ko/docs/Web/CSS/background-position) 를 통해) 와 같은 항목을 배치하는 데 사용되는 2D 좌표를 나타냅니다. `top`, `left`, `bottom`, `right` 및 `center`와 같은 키워드를 사용하여 항목을 2D 박스의 특정 범위에 맞춰 길이와 함께 박스의 위쪽 및 왼쪽 가장자리에서 offset을 나타냅니다.
 
 일반적인 position 값은 두 가지 값으로 구성됩니다. 첫 번째는 위치를 가로로 설정하고, 두 번째는 세로로 설정합니다. 한 축의 값만 지정하면 다른 축은 `center` 으로 설정됩니다.
 
@@ -653,7 +653,7 @@ RGB보다 약간 덜 지원되는 HSL 색상은 (이전 버전의 IE에서는 �
 
 ## 문자열 및 식별자 (identifiers)
 
-위의 예에서, 키워드가 값으로 (예: `red`, `black`, `rebeccapurple` 및 `goldenrod`와 같은 `<color>` 키워드) 사용되는 위치를 확인했습니다. 이러한 키워드는 CSS 가 이해하는 특수한 값인 **_식별자 (identifiers)_**로 보다 정확하게 설명됩니다. 따라서 인용되지 않으며 문자열로 취급되지 않습니다.
+위의 예에서, 키워드가 값으로 (예: `red`, `black`, `rebeccapurple` 및 `goldenrod`와 같은 `<color>` 키워드) 사용되는 위치를 확인했습니다. 이러한 키워드는 CSS 가 이해하는 특수한 값인 ***식별자 (identifiers)***로 보다 정확하게 설명됩니다. 따라서 인용되지 않으며 문자열로 취급되지 않습니다.
 
 CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생성된 콘텐츠를 지정할 때](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements#generating_content_with_before_and_after). 이 경우 값은 문자열임을 보여주기 위해 인용됩니다. 아래 예제에서는 인용되지 않은 색상 키워드와 인용된 생성된 콘텐츠 문자열을 사용합니다.
 
@@ -712,10 +712,10 @@ CSS에서 문자열을 사용하는 장소가 있습니다. 예를 들면, [생�
 
 ## 요약
 
-지금까지 가장 일반적인 형식의 값과 단위를 빠르게 살펴보았습니다. [CSS 값 및 단위](/ko/docs/Web/CSS/CSS_values_and_units) 참조 페이지에서 다양한 유형을 모두 볼 수 있습니다. 이 수업을 진행하면서 사용 중인 많은 것들을 보게 될 것입니다.
+지금까지 가장 일반적인 형식의 값과 단위를 빠르게 살펴보았습니다. [CSS 값 및 단위](/ko/docs/Web/CSS/Guides/Values_and_units) 참조 페이지에서 다양한 유형을 모두 볼 수 있습니다. 이 수업을 진행하면서 사용 중인 많은 것들을 보게 될 것입니다.
 
-기억해야 할 중요한 점은 각 속성에 정의된 값 목록이 있고 각 값에는 하윗값이 무엇인지 설명하는 정의가 있다는 것입니다. 그런 다음 MDN 에서 세부 사항을 찾을 수 있습니다. 예를 들어, [`<image>`](/ko/docs/Web/CSS/image) 를 사용하면 색상 gradient를 만들 수 있다는 점을 이해하는 것은 유용하지만 당연하지 않은 지식일 수 있습니다.
+기억해야 할 중요한 점은 각 속성에 정의된 값 목록이 있고 각 값에는 하윗값이 무엇인지 설명하는 정의가 있다는 것입니다. 그런 다음 MDN 에서 세부 사항을 찾을 수 있습니다. 예를 들어, [`<image>`](/ko/docs/Web/CSS/Reference/Values/image) 를 사용하면 색상 gradient를 만들 수 있다는 점을 이해하는 것은 유용하지만 당연하지 않은 지식일 수 있습니다.
 
 다음 기사에서는 CSS로 어떻게 [항목의 크기를 조절하는지](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 알아보겠습니다.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

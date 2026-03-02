@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Home_page
 original_slug: Learn/Server-side/Django/Home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}
 
 우리는 이제 첫 전체 페이지를 보여주는 코드를 추가할 때가 되었습니다 — [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website를 위한 홈페이지를요. 이 홈페이지는 각각의 모델 타입마다 갖고 있는 레코드들의 숫자를 보여주고, 우리의 다른 페이지들로 이동할 수 있는 사이드바 내비게이션 링크들을 제공합니다. 이 섹션에서 우리는 기본 URL 맵과 뷰들을 작성하고, 데이터베이스에서 레코드들을 가져오고 그리고 탬플릿을 사용하는 것에 대한 연습 경험을 가질 수 있습니다.
 
@@ -16,7 +16,7 @@ original_slug: Learn/Server-side/Django/Home_page
         <a href="/ko/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
-          href="/ko/docs/Learn/Server-side/Django/Admin_site"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >
         포함).
@@ -394,4 +394,4 @@ TEMPLATES = [
 - [Managing static files](https://docs.djangoproject.com/en/2.0/howto/static-files/) (Django docs)
 - [Django shortcut functions](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django/Generic_views", "Learn_web_development/Extensions/Server-side/Django")}}

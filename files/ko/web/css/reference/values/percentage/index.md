@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/percentage
 original_slug: Web/CSS/percentage
 ---
 
-**`<percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_values_and_units/CSS_data_types)은 백분율 값을 나타냅니다. 보통 부모 객체와의 상대적 크기를 지정할 때 사용합니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("font-size")}} 처럼 다양한 속성에서 백분율을 쓸 수 있습니다.
+**`<percentage>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/Reference/Values/Data_types)은 백분율 값을 나타냅니다. 보통 부모 객체와의 상대적 크기를 지정할 때 사용합니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("font-size")}} 처럼 다양한 속성에서 백분율을 쓸 수 있습니다.
 
 > [!NOTE]
 > 계산된 값만 상속받을 수 있습니다. 따라서 부모 속성이 백분율 값을 사용하더라도 전달되는 값은 실제값(예컨대 너비의 {{cssxref("&lt;length&gt;")}} 값은 픽셀)이며 백분율 값은 접근할 수 없습니다.

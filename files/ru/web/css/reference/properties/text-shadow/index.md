@@ -162,4 +162,4 @@ text-shadow: unset;
 - [Text Shadow CSS Generator](https://cssgenerator.org/text-shadow-css-generator.html) - Интерактивный генератор теней CSS.
 - {{cssxref("box-shadow")}}
 - Тип данных {{cssxref("&lt;color&gt;")}} (для определения цвета теней)
-- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- [Определение цвета для элемента HTML посредством CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)

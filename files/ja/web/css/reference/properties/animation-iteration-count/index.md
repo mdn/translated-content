@@ -1,12 +1,13 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
-original_slug: Web/CSS/animation-iteration-count
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-iteration-count")}}
 
@@ -24,7 +25,7 @@ animation-iteration-count: 1.5;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>アニメーション<span id="playstatus"></span></div>
+  <div>アニメーション<span id="play-status"></span></div>
   <div id="example-element">回数を選択すると始まります！</div>
 </section>
 ```
@@ -34,7 +35,7 @@ animation-iteration-count: 1.5;
   align-items: center;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   display: flex;
   flex-direction: column;
@@ -45,7 +46,7 @@ animation-iteration-count: 1.5;
   width: 150px;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -70,44 +71,38 @@ animation-iteration-count: 1.5;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "待機中";
-    el.className = "";
+function update() {
+  status.textContent = "待機中";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "再生中";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "完了";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "再生中";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "完了";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
-```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+```
 
 ## 構文
 

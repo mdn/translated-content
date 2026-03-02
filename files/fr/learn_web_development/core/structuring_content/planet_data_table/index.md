@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 original_slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn/HTML/Tables")}}
 
 Dans notre évaluation, nous vous fournissons des données sur les planètes de notre système solaire pour vous permettre de les structurer dans un tableau HTML.
 
@@ -66,4 +66,4 @@ Les étapes suivantes décrivent ce que vous devez faire pour compléter l'exemp
 
 Si vous réalisez cette évaluation dans le cadre d'un cours organisé, vous devez pouvoir remettre votre travail à votre professeur/formateur pour la correction. Si vous êtes en auto-apprentissage, alors vous pouvez obtenir aisément le guide de correction par une demande auprès de [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), ou dans le [#mdn](irc://irc.mozilla.org/mdn) canal IRC sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice — il n'y a rien à gagner en trichant !
 
-{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn/HTML/Tables")}}

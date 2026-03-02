@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 이번은 실전 튜토리얼 시리즈의 첫번째 파트로서 당신이 배울 내용을 설명하고, 이어지는 튜토리얼 시리즈에서 개발하고 개선시켜볼 "지역 도서관" 예제 웹사이트에 대한 개요를 제공한다.
 
@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/Django/Tutorial_local_library_website
       <td>
         <a href="/ko/docs/Learn/Server-side/Django/Introduction">Django 소개</a>
         파트를 읽으세요. 이어지는 파트를 위해서는
-        <a href="/ko/docs/Learn/Server-side/Django/development_environment"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >Django개발 환경 설치하기</a
         >
         파트도 필요합니다.
@@ -72,4 +72,4 @@ _LocalLibrary는 이 튜토리얼 시리즈에서 우리가 만들고 개선시�
 
 LocalLibrary 웹사이트와 당신이 앞으로 배울 내용에 대해 좀 더 알게되었다. 이제 우리 예제를 담을 [뼈대 프로젝트(skeleton project)](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)를 생성해볼 차례이다.
 
-{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}

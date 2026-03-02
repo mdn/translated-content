@@ -6,7 +6,7 @@ original_slug: Web/CSS/display
 
 {{CSSRef}}
 
-Свойство **`display`** ([CSS](/ru/docs/Web/CSS)) определяет _тип отображения (display type)_ элемента, имеющий два основных свойства, определяющих генерацию боксов — **внешний тип отображения** определяет расположение бокса в [схеме потока (flow layout)](/ru/docs/Web/CSS/CSS_display/Flow_layout) и **внутренний тип отображения** определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).
+Свойство **`display`** ([CSS](/ru/docs/Web/CSS)) определяет _тип отображения (display type)_ элемента, имеющий два основных свойства, определяющих генерацию боксов — **внешний тип отображения** определяет расположение бокса в [схеме потока (flow layout)](/ru/docs/Web/CSS/Guides/Display/Flow_layout) и **внутренний тип отображения** определяет расположение дочерних элементов бокса (бокс - это прямоугольная область, являющаяся изображением элемента).
 
 Некоторые значения свойства `display` полностью определены в их индивидуальных спецификациях; смотрите таблицу в конце этого документа со ссылками на все релевантные спецификации. Полный список значений приведён ниже.
 
@@ -120,8 +120,8 @@ display: unset;
 
 Кроме того, вы можете найти подробные объяснения способов разметки для определённых значений `display` в других статьях на MDN:
 
-- [Разметка CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout)
-- [Разметка CSS Flexible box](/ru/docs/Web/CSS/CSS_flexible_box_layout)
+- [Разметка CSS Grid](/ru/docs/Web/CSS/Guides/Grid_layout)
+- [Разметка CSS Flexible box](/ru/docs/Web/CSS/Guides/Flexible_box_layout)
 - [Разметка CSS](/ru/docs/Learn_web_development/Core/CSS_layout) (Модуль обучения для начинающих)
 
 ## Доступность
@@ -159,6 +159,6 @@ display: unset;
 ## Смотрите также
 
 - [Блоковая и Inline разметка нормальном потоке](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [Formatting contexts explained](/ru/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Formatting contexts explained](/ru/docs/Web/CSS/Guides/Display/Formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

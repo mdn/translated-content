@@ -1,15 +1,14 @@
 ---
 title: 可変フォントガイド
 slug: Web/CSS/Guides/Fonts/Variable_fonts
-original_slug: Web/CSS/CSS_fonts/Variable_fonts_guide
 l10n:
-  sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **可変フォント** (Variable fonts) は幅、太さ、スタイルごとに個別のフォントファイルを用意するのではなく、書体のさまざまなバリエーションを 1 つのファイルに組み込むことができる OpenType フォント仕様の進化版です。CSS および単一の {{cssxref("@font-face")}} 参照を介して、特定のフォントファイルに含まれるすべてのバリエーションにアクセスできます。この記事では、可変フォントの使用を開始するために知っておく必要があるすべての内容を説明します。
 
 > [!NOTE]
-> OS で可変フォントを使用するには、最新のフォントであることを確認してください。たとえば、Linux 系の OS には最新の Linux Freetype バージョンが必要であり、10.13 より前の macOS は可変フォントに対応していません。OS が最新でない場合、ウェブページや Firefox 開発ツールで可変フォントを使用できません。
+> OS で可変フォントを使用するには、最新のフォントであることを確認してください。たとえば、Linux 系の OS には Linux FreeType の最新バージョンが必要であり、10.13 より前の macOS は可変フォントに対応していません。OS が最新でない場合、ウェブページや Firefox 開発ツールで可変フォントを使用できません。
 
 ## 可変フォント: 何であるか、何が違うのか
 
@@ -86,7 +85,7 @@ font-variation-settings: "wght" 375;
 <div class="adjustable">
   <p class="p3">Weight</p>
   (font-variation-settings: "wght" <span id="angle-text">625</span>)<br />
-  <label for="text-axis">Adjust Weight: </label>
+  <label for="text-axis">太さを調整: </label>
   <input
     type="range"
     id="text-axis"
@@ -111,7 +110,7 @@ font-variation-settings: "wght" 375;
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -125,17 +124,17 @@ p {
 ```
 
 ```css live-sample___variable-fonts-weight-example
-/* weight range is 300 to 900 */
+/* weight の範囲は 300 から 900 */
 .p1 {
   font-weight: 625;
 }
 
-/* weight range is 300 to 900 */
+/* weight の範囲は 300 から 900 */
 .p2 {
   font-variation-settings: "wght" 625;
 }
 
-/* Adjust with slider & custom property */
+/* スライダーとカスタムプロパティで調整 */
 .p3 {
   font-variation-settings: "wght" var(--text-axis);
 }
@@ -183,7 +182,7 @@ font-variation-settings: "wdth" 115;
   <p class="p3">Width</p>
   (font-variation-settings: "wdth" <span id="angle-text">60</span>)<br />
 
-  <label for="text-axis">Adjust Width: </label>
+  <label for="text-axis">幅を調整: </label>
   <input
     type="range"
     id="text-axis"
@@ -208,7 +207,7 @@ font-variation-settings: "wdth" 115;
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -222,17 +221,17 @@ p {
 ```
 
 ```css live-sample___variable-fonts-width-example
-/* width range is 55% to 100% */
+/* width の範囲は 55% ～ 100% */
 .p1 {
   font-stretch: 60%;
 }
 
-/* width range is an integer from 55 to 100 */
+/* width の範囲は 55 ～ 100 の整数 */
 .p2 {
   font-variation-settings: "wdth" 60;
 }
 
-/* Adjust with slider & custom property */
+/* スライダーとカスタムプロパティで調整 */
 .p3 {
   font-variation-settings: "wdth" var(--text-axis);
 }
@@ -272,6 +271,8 @@ font-synthesis: none;
 <div>
   <p class="p1">Italic</p>
   <span>(font-style: italic)</span>
+  <p class=".p1-no-synthesis">Italic</p>
+  <span>(font-style: italic; font-synthesis: none)</span>
 </div>
 <div>
   <p class="p2">Italic</p>
@@ -281,7 +282,7 @@ font-synthesis: none;
   <p class="p3">Italic</p>
   (font-variation-settings: "ital" <span id="angle-text">1</span>)<br />
 
-  <label for="slant-angle">Adjust Italic: </label>
+  <label for="slant-angle">イタリックを調整: </label>
   <input
     type="range"
     id="text-axis"
@@ -305,8 +306,8 @@ font-synthesis: none;
 p {
   font:
     1.2em "Jost VF",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
   font-size: 4rem;
   margin: 1rem;
@@ -320,19 +321,23 @@ p {
 ```
 
 ```css live-sample___variable-fonts-italic-example
-/* italic range is 0 or 1 */
+/* font-style: italic で font-synthesis　の併用の有無 */
 .p1 {
-  font-synthesis: none;
   font-style: italic;
 }
 
-/* italic range is 0 or 1 */
-.p2 {
+.p1-no-synthesis {
+  font-style: italic;
   font-synthesis: none;
-  font-variation-settings: "ital" 1;
 }
 
-/* Adjust with slider & custom property */
+/* italic の範囲は 0 または 1 */
+.p2 {
+  font-variation-settings: "ital" 1;
+  font-synthesis: none;
+}
+
+/* スライダーとカスタムプロパティで調整 */
 .p3 {
   font-synthesis: none;
   font-variation-settings: "ital" var(--text-axis);
@@ -357,7 +362,7 @@ angle.addEventListener("input", (e) => {
 
 斜体 (`slnt`タグで表される) は、または 'oblique' とも良く呼ばれますが、文字の角度を変えるという点で真のイタリックとは異なりますが、何らかの文字の置換を行うわけではありません。また、数値の範囲で表現されるという点で、可変性があります。これにより、フォントをその軸に沿ってどこでも変化させることができます。許容される範囲は -90 〜 90 度の範囲です。
 
-傾きを制御できるプロパティは、 [`font-style`](/ja/docs/Web/CSS/Reference/Properties/font-style) と [`font-variation-settings`](/ja/docs/Web/CSS/Reference/Properties/font-variation-settings) の2つです。次の 2 つのプロパティ宣言は同じです。
+傾きを制御できるプロパティは、{{cssxref("font-style")}} と {{cssxref("font-variation-settings")}} の 2 つです。次の 2 つのプロパティ宣言は同じです。
 
 ```plain
 font-style: oblique 14deg;
@@ -396,13 +401,13 @@ font-variation-settings: "slnt" -14;
 ```css hidden live-sample___slant-example
 @font-face {
   font-family: "SlantFont";
-  font-style: oblique -15 15;
+  font-style: oblique -15deg 15deg;
   src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
     format("woff2");
 }
 
 p {
-  font-family: "SlantFont";
+  font-family: "SlantFont", sans-serif;
   display: inline-block;
   margin: 1rem;
   font-size: 4rem;
@@ -478,7 +483,7 @@ font-variation-settings: "opsz" 36;
   <p class="p4">Optical Size</p>
   (font-variation-settings: "opsz" <span id="angle-text">-64</span>)<br />
 
-  <label for="slant-angle">Adjust Optical Sizing: </label>
+  <label for="slant-angle">オプティカルサイズを調整: </label>
   <input
     type="range"
     name="text-axis"
@@ -503,7 +508,7 @@ font-variation-settings: "opsz" 36;
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 4rem;
   margin: 1rem;
@@ -520,17 +525,17 @@ p {
 .p1 {
   font-optical-sizing: none;
 }
-/* font-optical-sizing can be auto or none */
+/* font-optical-sizing は auto または none にできる */
 .p2 {
   font-optical-sizing: auto;
 }
 
-/* optical range is from 8 to 144 */
+/* オプティカルサイズの範囲は 8 ～ 144 */
 .p3 {
   font-variation-settings: "opsz" 64;
 }
 
-/* Adjust with slider & custom property */
+/* スライダーとカスタムプロパティで調整 */
 .p4 {
   font-variation-settings: "opsz" var(--text-axis);
 }
@@ -574,7 +579,7 @@ font-variation-settings: "GRAD" 88;
   <p class="p2">Grade</p>
   (font-variation-settings: 'GRAD' <span id="angle-text">88</span>)<br />
 
-  <label for="slant-angle">Adjust Grade: </label>
+  <label for="slant-angle">等級を調整: </label>
   <input
     type="range"
     name="text-axis"
@@ -599,7 +604,7 @@ font-variation-settings: "GRAD" 88;
 p {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   font-size: 64px;
   margin: 1rem;
@@ -619,7 +624,7 @@ p {
   font-variation-settings: "GRAD" 88;
 }
 
-/* Adjust with slider & custom property */
+/* スライダーとカスタムプロパティで調整 */
 .p2 {
   font-size: 64px;
   font-variation-settings: "GRAD" var(--text-axis);
@@ -655,11 +660,12 @@ angle.addEventListener("input", (e) => {
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: normal;
 }
 ```
 
-この場合、 `normal` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/Reference/Properties/font-style) プロパティが `normal` であるとき、このフォントファイルを使用しましょうということを示しています。 `oblique 0deg` と `oblique 0deg 20deg` の値は、 `0deg` のため、フォントが通常の正立字体を持っていることも示しています。
+この場合、 `normal` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で {{cssxref("font-style")}} プロパティが `normal` であるとき、このフォントファイルを使用しましょうということを示しています。 `oblique 0deg` と `oblique 0deg 20deg` の値は、 `0deg` のため、フォントが通常の正立字体を持っていることも示しています。
 
 #### イタリック体のみを含み、直立文字を含まないフォントの例
 
@@ -670,11 +676,12 @@ angle.addEventListener("input", (e) => {
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: italic;
 }
 ```
 
-この場合では、 `italic` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で [font-style](/ja/docs/Web/CSS/Reference/Properties/font-style) プロパティが `italic` であるとき、このフォントファイルを使用しましょうということを示しています。また、 `oblique 14deg` の値は、フォントがイタリック体の字体を持っていることを示しています。
+この場合では、 `italic` 値は、スタイル設定において `font-family` プロパティが `MyVariableFontName` で {{cssxref("font-style")}} プロパティが `italic` であるとき、このフォントファイルを使用しましょうということを示しています。また、 `oblique 14deg` の値は、フォントがイタリック体の字体を持っていることを示しています。
 
 #### 斜体軸を含むフォントの例
 
@@ -685,6 +692,7 @@ angle.addEventListener("input", (e) => {
     format("woff2-variations");
   font-weight: 125 950;
   font-stretch: 75% 125%;
+
   font-style: oblique 0deg 12deg;
 }
 ```
@@ -719,7 +727,7 @@ h1 {
 
 ```html hidden live-sample___sample-page-example
 <div class="container container1">
-  <h1>Moby Dick</h1>
+  <h1>Moby-Dick</h1>
   <h2>CHAPTER 1. Loomings.</h2>
   <p>
     Call me Ishmael. Some years ago—never mind how long precisely–having little
@@ -737,7 +745,7 @@ h1 {
 </div>
 <hr />
 <div class="container container2 demo2">
-  <h1>Moby Dick</h1>
+  <h1>Moby-Dick</h1>
   <h2>CHAPTER 1. (hover here)</h2>
   <p>
     Call me Ishmael. Some years ago—never mind how long precisely–having little
@@ -769,7 +777,7 @@ h1 {
 body {
   font:
     1.2em "Amstelvar VF",
-    Georgia,
+    "Georgia",
     serif;
   margin: 20px;
   padding: 0;
@@ -838,11 +846,11 @@ body {
 
 ## 参考文献
 
-- [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4) (編集者草稿)
-- [W3C Github issue queue](https://github.com/w3c/csswg-drafts/issues)
-- [Microsoft Open Type Variations introduction](https://learn.microsoft.com/ja/typography/opentype/spec/otvaroverview)
-- [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/ja/typography/opentype/spec/dvaraxisreg)
-- [Wakamai Fondue](https://wakamaifondue.com) (ドラッグ＆ドロップで簡単にフォントの特性を調べることができるサイト)
-- [Axis Praxis](https://www.axis-praxis.org) (オリジナル可変フォントの遊び場サイト)
-- [V-Fonts.com](https://v-fonts.com) (可変フォントのカタログとその入手先)
-- [Font Playground](https://play.typedetail.com) (ユーザーインターフェイスに非常に独特なアプローチを持つ、可変フォントのもう一つの遊び場。)
+- [W3C CSS Fonts Module 4 Specification](https://drafts.csswg.org/css-fonts-4/) (編集者草稿)
+- [W3C GitHub issue queue](https://github.com/w3c/csswg-drafts/issues)
+- [Microsoft Open Type Variations introduction](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview)
+- [Microsoft OpenType Design-Variation Axis Tag Registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg)
+- [Wakamai Fondue](https://wakamaifondue.com/) (ドラッグ＆ドロップで簡単にフォントの特性を調べることができるサイト)
+- [Axis Praxis](https://www.axis-praxis.org/) (オリジナル可変フォントの遊び場サイト)
+- [V-Fonts.com](https://v-fonts.com/) (可変フォントのカタログとその入手先)
+- [Font Playground](https://play.typedetail.com/) (ユーザーインターフェイスに非常に独特なアプローチを持つ、可変フォントのもう一つの遊び場。)

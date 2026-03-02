@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 original_slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 Dans ce cours nous allons étudier un autre concept important en CSS : les **débordements** (<i lang="en">overflows</i> en anglais). Un débordement de contenu correspond à ce qui se produit lorsque le contenu à insérer dans une boîte occupe trop d'espace pour s'y insérer confortablement. Dans ce guide vous allez apprendre à gérer cela.
 
@@ -13,25 +13,14 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Connaissances élémentaires en informatique,
-        <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour
-        <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >), et une idée
-        <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
-          >du fonctionnement de CSS</a
-        >.
+        Notions de base en HTML (étudiez
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe HTML de base</a
+        >), CSS <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units">Valeurs et unités</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Sizing">Dimensionnement</a>.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
       <td>Comprendre le principe des débordements et comment les gérer.</td>
     </tr>
   </tbody>
@@ -39,7 +28,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
 
 ## Qu'est-ce qu'un débordement ?
 
-Nous savons déjà qu'en CSS tout fonctionne par boîte, et que nous pouvons définir la taille de ces boîtes en leur donnant les valeurs [`width`](/fr/docs/Web/CSS/Reference/Properties/width) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height) (ou [`inline-size`](/fr/docs/Web/CSS/Reference/Properties/inline-size) et [`block-size`](/fr/docs/Web/CSS/Reference/Properties/block-size)). Un dépassement correspond à ce qui se produit lorsqu'il y a trop de contenu dans une boîte et que ce contenu ne s'y intègre pas confortablement. CSS propose différents outils pour gérer ce phénomène, c'est un concept utile à comprendre à ce stade. Vous allez rencontrer des cas de dépassement fréquemment en codant du CSS, particulièrement quand vous irez plus loin dans la mise en page avec CSS.
+Nous savons déjà qu'en CSS tout fonctionne par boîte, et que nous pouvons définir la taille de ces boîtes en leur donnant les valeurs {{CSSxRef("width")}} et {{CSSxRef("height")}}. Un dépassement correspond à ce qui se produit lorsqu'il y a trop de contenu dans une boîte et que ce contenu ne s'y intègre pas confortablement. CSS propose différents outils pour gérer ce phénomène, c'est un concept utile à comprendre à ce stade. Vous allez rencontrer des cas de dépassement fréquemment en codant du CSS, particulièrement quand vous irez plus loin dans la mise en page avec CSS.
 
 ## CSS essaie d'éviter les pertes de données
 
@@ -112,4 +101,4 @@ Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous so
 
 Cette courte leçon a introduit le concept de débordement ; vous comprenez maintenant que le CSS essaie de ne pas faire disparaître le contenu qui déborde car cela entraînerait des pertes de données. Vous avez découvert que vous pouvez gérer un débordement éventuel, et que vous devez également tester votre travail pour vous assurer que vous ne causez pas accidentellement un débordement problématique.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow", "Learn_web_development/Core/Styling_basics")}}

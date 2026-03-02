@@ -4,7 +4,7 @@ slug: conflicting/Web/JavaScript/Guide/Numbers_and_strings
 original_slug: Web/JavaScript/Guide/Text_formatting
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
 Este capítulo presenta cómo trabajar con cadenas de caracteres (`String`) y texto en JavaScript.
 
@@ -232,4 +232,4 @@ console.log(names.sort(germanDictionary.compare).join(", "));
 
 Para obtener más información sobre la API de {{JSxRef("Intl")}}, consulta también la [Introducción a la API de internacionalización de JavaScript](https://hacks.mozilla.org/2014/12/introducing-the-javascript-internationalization-api/).
 
-{{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}

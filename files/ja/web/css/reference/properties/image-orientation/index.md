@@ -1,9 +1,8 @@
 ---
 title: image-orientation
 slug: Web/CSS/Reference/Properties/image-orientation
-original_slug: Web/CSS/image-orientation
 l10n:
-  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
@@ -56,13 +55,13 @@ image-orientation: unset;
   - : 既定の初期値です。画像に含まれている [EXIF](https://ja.wikipedia.org/wiki/EXIF) 情報を使用して、画像の向きを適切にします。
 
 > [!WARNING]
-> `image-orientation: none;` はセキュリティ上の懸念により、EXIF 情報でエンコードされた安全でないオリジン画像の向きを上書きしません。 詳細は、[この CSS 作業グループ草案課題](https://github.com/w3c/csswg-drafts/issues/5165)をご覧ください。
+> `image-orientation: none;` はセキュリティ上の懸念があるため、安全でないオリジンの画像の [EXIF](https://ja.wikipedia.org/wiki/EXIF) 情報でエンコードされた向きを、上書き**しません**。 詳細は、[この CSS 作業グループ草案課題](https://github.com/w3c/csswg-drafts/issues/5165)をご覧ください。
 
 ## 解説
 
-このプロパティは、回転したカメラで撮影された画像の方向を修正するため*だけ*を目的としています。自由に回転させるために使用するべきでは*ありません*。撮影やスキャンで回転してしまった画像の向きを修正する以外の用途の場合は、{{cssxref("transform")}} プロパティに `rotate` キーワードを付けて回転を指定してください。これはユーザーによる画像の向きの変更や、印刷時に縦向きと横向きを変更する必要がある場合も含みます。
+このプロパティは、回転したカメラで撮影された画像の方向を修正するため*だけ*を目的としています。自由に回転させるために使用するべきではありません。撮影やスキャンで回転してしまった画像の向きを修正する以外の用途の場合は、{{cssxref("transform")}} プロパティに `rotate` キーワードを付けて回転を指定してください。これはユーザーによる画像の向きの変更や、印刷時に縦向きと横向きを変更する必要がある場合も含みます。
 
-{{cssxref("&lt;transform-function&gt;")}} などの他の CSS プロパティとの組み合わせで使用された場合、 `image-orientation` による回転は、常に他の変形が行われる前に適用されます。
+{{cssxref("&lt;transform-function&gt;")}} などの他の CSS プロパティとの組み合わせで使用された場合、 `image-orientation` による回転は、常に他の座標変換が行われる前に適用されます。
 
 ## 公式定義
 

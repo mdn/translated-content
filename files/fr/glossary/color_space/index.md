@@ -2,14 +2,14 @@
 title: Espace de couleur
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 5ba55a6939c0aaf988fc4d34ad7e51c52373a2a6
 ---
 
 Les **espaces de couleur** (<i lang="en">color spaces</i> en anglais) sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSxRef("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
 
 Les espaces de couleur catégorisent et définissent des gammes spécifiques de couleurs. Chaque espace de couleur est défini par un modèle mathématique et un ensemble de règles associées. Chaque espace de couleur a un {{Glossary("Gamut", "gamut")}} défini, qui fait référence à la gamme spécifique de couleurs qu'il peut représenter. Ces règles permettent une représentation cohérente et reproductible des couleurs sur différents appareils et logiciels.
 
-L'espace de couleur _sRGB_ (rouge, vert et bleu standard) a été créé pour le web, mais nous ne sommes plus limités à cet espace de couleur. Le [Module de couleur CSS de niveau 4](https://drafts.csswg.org/css-color-4) spécifie plusieurs espaces de couleur prédéfinis, et le [Module de couleur CSS de niveau 5](https://drafts.csswg.org/css-color-5/) va plus loin, spécifiant des fonctionnalités pour définir des espaces de couleur personnalisés.
+L'espace de couleur _sRGB_ (rouge, vert et bleu standard) a été créé pour le web, mais nous ne sommes plus limités à cet espace de couleur. Le [Module de couleur CSS de niveau 4 <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-4) spécifie plusieurs espaces de couleur prédéfinis, et le [Module de couleur CSS de niveau 5 <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-5/) va plus loin, spécifiant des fonctionnalités pour définir des espaces de couleur personnalisés.
 
 ## Espaces de couleur nommés
 
@@ -27,7 +27,7 @@ Les valeurs CSS `<color>` dans les espaces de couleur sRGB incluent {{CSSxRef("h
 
 L'espace de couleur HSV (teinte, saturation et valeur), et son synonyme HSB (teinte, saturation et luminosité), sont représentés en CSS comme {{CSSxRef("color_value/hwb", "hwb()")}}. Les couleurs nommées sont simplement des mots-clés mappés à des valeurs hexadécimales spécifiques. La conversion de ces diverses notations de couleur vers sRGB est mathématiquement simple. Notez que {{CSSxRef("&lt;color&gt;","currentColor","#mot-clé_currentcolor")}} peut être n'importe quelle couleur — elle n'est pas restreinte à sRGB.
 
-La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur [`HSL`](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) (_teinte-saturation-luminosité_) ou [`HWB`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
+La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut représenter l'espace de couleur _sRGB_. Les systèmes de coordonnées cylindriques comme les modèles de couleur {{CSSxRef("color_value/hsl", "HSL")}} (_teinte-saturation-luminosité_) ou {{CSSxRef("color_value/hwb", "HWB")}} (_teinte-blancheur-noirceur_) sont également utilisés pour représenter une couleur sRGB sur le web.
 
 - Espace de couleur `srgb`
   - : L'espace de couleur sRGB, ou «&nbsp;RGB standard&nbsp;», est l'espace de couleur RGB (rouge, vert, bleu) standard. Il a été créé pour être utilisé sur les moniteurs, imprimantes et le Web. C'est l'espace de couleur le plus largement utilisé et il est pris en charge par la plupart des systèmes d'exploitation, programmes logiciels, moniteurs et imprimantes. sRGB est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.

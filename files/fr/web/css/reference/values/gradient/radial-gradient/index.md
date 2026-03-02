@@ -3,10 +3,10 @@ title: radial-gradient()
 slug: Web/CSS/Reference/Values/gradient/radial-gradient
 original_slug: Web/CSS/gradient/radial-gradient
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type {{cssxref("&lt;gradient&gt;")}}, qui est un type particulier d'{{cssxref("&lt;image&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`radial-gradient()`** permet de créer une image CSS représentant un dégradé de couleur. Ce dégradé diffuse depuis une origine, le _centre_ du gradient. La forme du dégradé peut être un cercle ou une ellipse. La valeur renvoyée par cette fonction est un objet CSS de type {{CSSxRef("&lt;gradient&gt;")}}, qui est un type particulier d'{{CSSxRef("&lt;image&gt;")}}.
 
 {{InteractiveExample("Démonstrations CSS&nbsp;: radial-gradient()")}}
 
@@ -64,8 +64,8 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 
 ### Valeurs
 
-- {{cssxref("&lt;position&gt;")}}
-  - : La position du dégradé, interprétée de la même façon que pour les propriétés {{cssxref("background-position")}} ou {{cssxref("transform-origin")}}. La valeur par défaut est `center`.
+- {{CSSxRef("&lt;position&gt;")}}
+  - : La position du dégradé, interprétée de la même façon que pour les propriétés {{CSSxRef("background-position")}} ou {{CSSxRef("transform-origin")}}. La valeur par défaut est `center`.
 - `<ending-shape>`
   - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
 - `<size>`
@@ -87,7 +87,7 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
     Lorsque le mot-clé `<ending-shape>` est omis, la forme du dégradé est déterminée par la taille indiquée. Une seule valeur `<length>` donne un cercle, tandis que deux valeurs en unités `<length-percentage>` donnent une ellipse. Une seule valeur `<percentage>` n'est pas valide.
 
 - `<linear-color-stop>`
-  - : Une valeur d'arrêt de couleur, composée d'une valeur {{cssxref("&lt;color&gt;")}}, suivie d'une ou deux positions d'arrêt optionnelles (définies par une valeur {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;length&gt;")}} le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur de `0`, représentera le centre du dégradé&nbsp;; la valeur `100%` représentera l'intersection de la forme du contour avec la ligne d'évolution du dégradé. Les valeurs de pourcentages intermédiaire sont positionnées linéairement le long du dégradé. Inclure deux fois la même position pour deux arrêts différents revient à créer une rupture franche entre les deux couleurs.
+  - : Une valeur d'arrêt de couleur, composée d'une valeur {{CSSxRef("&lt;color&gt;")}}, suivie d'une ou deux positions d'arrêt optionnelles (définies par une valeur {{CSSxRef("&lt;percentage&gt;")}} ou {{CSSxRef("&lt;length&gt;")}} le long de l'axe du dégradé). Un pourcentage à `0%`, ou une longueur de `0`, représentera le centre du dégradé&nbsp;; la valeur `100%` représentera l'intersection de la forme du contour avec la ligne d'évolution du dégradé. Les valeurs de pourcentages intermédiaire sont positionnées linéairement le long du dégradé. Inclure deux fois la même position pour deux arrêts différents revient à créer une rupture franche entre les deux couleurs.
 - `<color-hint>`
   - : Une indication pour définir la progression de l'interpolation entre les deux arrêts de couleur adjacents. La longueur définit l'emplacement auquel la transition aurait été effectuée à moitié entre les deux couleurs. Si cette valeur est absente, la transition intermédiaire s'effectue au milieu des deux arrêts de couleur.
 
@@ -95,9 +95,9 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 
 Comme les autres formes de dégradé, un dégradé radial [n'a pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description). Autrement dit, il n'a pas de taille naturelle ou préférée ou de proportions particulières. Sa taille réelle correspondra à la taille de l'élément sur lequel il est appliqué.
 
-Pour créer un dégradé radial qui se répète pour remplir son conteneur, on utilisera plutôt la fonction {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}.
+Pour créer un dégradé radial qui se répète pour remplir son conteneur, on utilisera plutôt la fonction {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}.
 
-Une valeur de type `<gradient>` est une valeur de type `<image>` et ne peut donc être utilisé qu'aux endroits où une telle valeur peut être présente. C'est pour cela que `radial-gradient()` ne fonctionnera pas sur {{Cssxref("background-color")}} et sur les autres propriétés qui utilisent une valeur de type {{cssxref("&lt;color&gt;")}}.
+Une valeur de type `<gradient>` est une valeur de type `<image>` et ne peut donc être utilisé qu'aux endroits où une telle valeur peut être présente. C'est pour cela que `radial-gradient()` ne fonctionnera pas sur {{CSSxRef("background-color")}} et sur les autres propriétés qui utilisent une valeur de type {{CSSxRef("&lt;color&gt;")}}.
 
 ### Composition d'un dégradé radial
 
@@ -115,7 +115,7 @@ Les arrêts de couleurs sont positionnés selon une ligne virtuelle qui part du 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -232,11 +232,11 @@ Voir [la page Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_
 ## Voir aussi
 
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients)
-- Les autres fonctions de dégradés&nbsp;: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- Le type de donnée {{cssxref("&lt;hue-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;color-interpolation-method&gt;")}}
-- Le type de donnée {{cssxref("&lt;image&gt;")}}
-- La fonction{{cssxref("image/image","image()")}}
-- La fonction{{cssxref("element", "element()")}}
-- La fonction{{cssxref("image/image-set","image-set()")}}
-- La fonction{{cssxref("cross-fade", "cross-fade()")}}
+- Les autres fonctions de dégradés&nbsp;: {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
+- La fonction{{CSSxRef("image/image","image()")}}
+- La fonction{{CSSxRef("element", "element()")}}
+- La fonction{{CSSxRef("image/image-set","image-set()")}}
+- La fonction{{CSSxRef("cross-fade", "cross-fade()")}}

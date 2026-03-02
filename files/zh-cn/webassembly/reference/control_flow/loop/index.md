@@ -1,5 +1,6 @@
 ---
-title: loop
+title: loop：Wasm 文本指令
+short-title: loop
 slug: WebAssembly/Reference/Control_flow/loop
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -9,7 +10,7 @@ l10n:
 
 **`loop`** 语句和 `block` 语句的表现相反，跳转到 `loop` 会回到循环的开头，而跳转到 `block` 会达到块尾，也就是跳出块。
 
-{{InteractiveExample("Wat Demo: loop", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：loop", "tabbed-taller")}}
 
 ```wat interactive-example
 (module

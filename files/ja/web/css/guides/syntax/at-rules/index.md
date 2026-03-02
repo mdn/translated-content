@@ -1,12 +1,11 @@
 ---
 title: アットルール
 slug: Web/CSS/Guides/Syntax/At-rules
-original_slug: Web/CSS/CSS_syntax/At-rules
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**アットルール**は [CSS の文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)のうち、CSS の動作を規定するものです。アットルールはアットマーク、`@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。次のセミコロン、 `;` (U+003B SEMICOLON) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言ブロック)のどちらかが現れるまでの部分からなります。
+**アットルール**は [CSS の文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の文)のうち、CSS の動作を規定するものです。アットルールはアットマーク、`@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。次のセミコロン、 `;` (U+003B SEMICOLON) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の宣言ブロック)のどちらかが現れるまでの部分からなります。
 
 アットルールは、スタイルルールや他のアットルールをグループ化して構造化したり、選択したコンテンツに直接関連付けられていないスタイル情報を宣言したり、インポートや名前空間キーワードの割り当てなどの構文構造を管理したりするために使用されます。
 
@@ -52,7 +51,7 @@ l10n:
   - : ローカルおよび外部フォントリソースの場所、および、宣言された {{cssxref("font-family")}} とともにそれらのリソースが使用される場合のスタイル特性を定義します（[CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)）。
 - {{cssxref("@font-feature-values")}} （および `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset`, `@character-variant`）
   - : フォントファミリーごとにフォントの表示を制御します。 OpenType の {{cssxref("font-variant-alternates")}} のインデックスに、フォント固有の代替フォントまたは独自の名前を定義します（[CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)）。
-- {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
+- {{cssxref("@keyframes")}} （および別名の `@-webkit-keyframes`）
   - : アニメーションシーケンスの中間段階（またはキーフレーム）の CSS スタイルを記述して、名前付きアニメーションを定義します（[CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)）。
 - {{cssxref("@layer")}}
   - : そのレイヤーの CSS ルールを含む、名前付きのカスケードレイヤーを作成します（[CSS カスケードと継承](/ja/docs/Web/CSS/Guides/Cascade)）。複数のカスケードレイヤーの場合の優先順位を定義する[文アットルール](#文アットルール)としても使用されます。
@@ -71,29 +70,7 @@ l10n:
 - {{cssxref("@supports")}}
   - : 条件付きグループルールは、指定された条件の CSS 機能に対応しているブラウザーで、そのコンテンツを適用します（[CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)）。
 - {{cssxref("@view-transition")}}
-  - : 現在の文書を[ビュートランジション](/ja/docs/Web/API/View_Transition_API)に選択し、文書間のナビゲーショントランジションの場合は宛先文書も選択します。
-
-## 索引
-
-- {{cssxref("@charset")}}
-- {{cssxref("@color-profile")}}
-- {{cssxref("@container")}}
-- {{cssxref("@counter-style")}}
-- {{cssxref("@font-face")}}
-- {{cssxref("@font-feature-values")}}
-- {{cssxref("@font-palette-values")}}
-- {{cssxref("@import")}}
-- {{cssxref("@keyframes")}}
-- {{cssxref("@layer")}}
-- {{cssxref("@media")}}
-- {{cssxref("@namespace")}}
-- {{cssxref("@page")}}
-- {{cssxref("@position-try")}}
-- {{cssxref("@property")}}
-- {{cssxref("@scope")}}
-- {{cssxref("@starting-style")}}
-- {{cssxref("@supports")}}
-- {{cssxref("@view-transition")}}
+  - : 現在の文書を[ビュー遷移](/ja/docs/Web/API/View_Transition_API)の対象とし、文書間のナビゲーション遷移の場合は宛先文書も選択します。
 
 ## 仕様書
 
@@ -101,9 +78,10 @@ l10n:
 
 ## 関連情報
 
+- [CSS アットルール](/ja/docs/Web/CSS/Reference/At-rules)
 - [CSS アットルール関数](/ja/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [入れ子の CSS アットルール](/ja/docs/Web/CSS/Guides/Nesting/At-rules)
-- [CSS 文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_statements)
+- [CSS 文](/ja/docs/Web/CSS/Guides/Syntax/Introduction#css_の文)
 - [CSSRule](/ja/docs/Web/API/CSSRule) インターフェイス
 - [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュール
 - [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)

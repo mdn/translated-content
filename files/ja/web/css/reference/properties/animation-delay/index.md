@@ -1,12 +1,13 @@
 ---
 title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
-original_slug: Web/CSS/animation-delay
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-**`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
+**`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素にアニメーションを適用してからアニメーションが実行されるまでの待ち時間を指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
+
+アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 {{InteractiveExample("CSS デモ: animation-delay")}}
 
@@ -24,7 +25,7 @@ animation-delay: -2s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>アニメーション<span id="playstatus"></span></div>
+  <div>アニメーション<span id="play-status"></span></div>
   <div id="example-element">delay を選択すると始まります！</div>
 </section>
 ```
@@ -35,7 +36,7 @@ animation-delay: -2s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -45,7 +46,7 @@ animation-delay: -2s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -72,44 +73,38 @@ animation-delay: -2s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "待機中";
-    el.className = "";
+function update() {
+  status.textContent = "待機中";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "動作中";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "完了";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "動作中";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "完了";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
-```
 
-アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+```
 
 ## 構文
 

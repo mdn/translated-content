@@ -18,7 +18,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### Paramètres
 
 - `namespaceURI`
-  - : est une chaîne de caractères qui spécifie [l'URI de l'espace de noms](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) à associer à l'élément. La propriété [namespaceURI](/fr/docs/Web/API/Element/namespaceURI) de l'élément créé est initialisée avec la valeur de `namespaceURI`. voir [URI d'espaces de nom valides](#uri_d'espaces_de_nom_valides)
+  - : est une chaîne de caractères qui spécifie [l'URI de l'espace de noms](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) à associer à l'élément. La propriété [namespaceURI](/fr/docs/Web/API/Element/namespaceURI) de l'élément créé est initialisée avec la valeur de `namespaceURI`. voir [URI d'espaces de nom valides](#uri_despaces_de_nom_valides)
 - `qualifiedName`
   - : est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété [nodeName](/fr/docs/Web/API/Node/nodeName) de l'élément créé est initialisée avec la valeur de `qualifiedName`
 - `Options` {{Optional_Inline}}

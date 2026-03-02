@@ -119,7 +119,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   - : Les éléments canvas gèrent à présent l'API texte d'HTML5.
 - [Effets d'ombres dans un `canvas`](/fr/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs#Ombres)
   - : Les effets d'ombrages sont à présent gérés dans canvas.
-- [`createImageData()`](/fr/docs/HTML/Canvas/Manipulation_de_pixels_avec_canvas#création_d'un_objet_imagedata)
+- [`createImageData()`](/fr/docs/HTML/Canvas/Manipulation_de_pixels_avec_canvas#création_dun_objet_imagedata)
   - : La méthode `createImageData()` de canvas est à présent gérée, ce qui permet à du code de créer spécifiquement un objet `ImageData` plutôt que demander que ce soit fait automatiquement. Les performances d'autres méthodes d'`ImageData` peuvent en être améliorées puisqu'elles n'ont pas à créer l'objet.
 - Attribut `moz-opaque`
   - : L'attribut DOM `moz-opaque` a été ajouté, ce qui permet à canvas de savoir si oui ou non la transparence devra être prise en compte. Si le canvas sait qu'il n'y a pas de transparence, les performances de dessin peuvent être optimisées.

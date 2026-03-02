@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
 original_slug: Web/SVG/Tutorial/Basic_Shapes
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}
 
 SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적은 이름에서 명백하게 알 수 있다. 도형들의 위치와 크기를 지정하는 몇몇 속성들은 주어지지만, 여기에서 다뤄지지 않는 다른 속성들과 함께 더 정확하고 완전한 설명이 있는 레퍼런스를 첨부해 두겠다. 그러나, 대부분의 SVG 문서에서 사용되기 때문에 몇 가지 소개를 해줘야한다.
 
@@ -144,4 +144,4 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 - `d`
   - : A list of points and other information about how to draw the path. See the [Paths](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) section for more information.
 
-{{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Positions", "Web/SVG/Tutorials/SVG_from_scratch/Paths") }}

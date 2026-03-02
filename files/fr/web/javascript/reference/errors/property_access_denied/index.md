@@ -17,7 +17,7 @@ Error: Permission denied to access property "x"
 
 ## Quel est le problème ?
 
-Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'avez pas de permissions. Généralement, cela se produit lorsqu'un élément {{HTMLElement("iframe")}} est chargée depuis un domaine différent et que [la condition de même origine](/fr/docs/Web/Security/Same-origin_policy) n'est pas respectée.
+Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'avez pas de permissions. Généralement, cela se produit lorsqu'un élément {{HTMLElement("iframe")}} est chargée depuis un domaine différent et que [la condition de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) n'est pas respectée.
 
 ## Exemples
 
@@ -42,4 +42,4 @@ Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'av
 ## Voir aussi
 
 - {{HTMLElement("iframe")}}
-- [Condition d'origine (_same-origin policy_)](/fr/docs/Web/Security/Same-origin_policy)
+- [Condition d'origine (_same-origin policy_)](/fr/docs/Web/Security/Defenses/Same-origin_policy)

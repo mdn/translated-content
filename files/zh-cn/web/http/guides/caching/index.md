@@ -49,7 +49,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Defenses/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
 
 #### 托管缓存
 
@@ -461,7 +461,7 @@ Cache-Control: max-age=31536000
 
 共享缓存主要位于源服务器之前，旨在减少到源服务器的流量。
 
-因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为**_请求折叠_**。
+因此，如果多个相同的请求同时到达共享缓存，中间缓存将代表自己将单个请求转发到源，然后源可以将结果重用于所有客户端。这称为***请求折叠***。
 
 当请求同时到达时会发生请求折叠，因此即使响应中给出了 `max-age=0` 或 `no-cache`，它也会被重用。
 

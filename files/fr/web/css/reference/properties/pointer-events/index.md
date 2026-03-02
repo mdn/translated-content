@@ -161,8 +161,7 @@ Dans l'exemple qui suit, on désactive les événements de pointeur pour le lien
 #### CSS
 
 ```css
-a[href="http://example.com"]
-{
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```

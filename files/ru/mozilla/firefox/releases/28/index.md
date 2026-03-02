@@ -26,7 +26,7 @@ Firefox 28 был выпущен 18 марта 2014 года. Список кл�
 
 ### CSS
 
-- Support for multi-line [flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
+- Support for multi-line [flexbox](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) has been added ([Firefox bug 939901](https://bugzil.la/939901)).
 - Longhand East Asian [counter styles](/ru/docs/Web/CSS/list-style-type) have been implemented ([Firefox bug 934072](https://bugzil.la/934072)).
 - Support for the {{cssxref("background-blend-mode")}} property has been added ([Firefox bug 841601](https://bugzil.la/841601)).
 - The `none` value has been added to {{cssxref("font-variant-ligatures")}} ([Firefox bug 913264](https://bugzil.la/913264)).

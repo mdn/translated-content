@@ -2,9 +2,8 @@
 title: グリッドレイアウトと他のレイアウト方法との関係
 short-title: グリッドと他のレイアウト
 slug: Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
-original_slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)はレイアウトを行うための完全なシステムの一部として、 CSS の他の機能と一緒に動作するよう設計されました。このガイドでは、既に使われている他の技術と、どのようにグリッドが適合するかを説明します。
@@ -321,9 +320,9 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 
 自由度の高いトラック数のグリッドを作成しながら、グリッド上に並べられたアイテムを行と列で同時に確認することができるようになりました。
 
-## グリッドと絶対位置指定された要素
+## グリッドと絶対位置指定要素
 
-グリッドは[絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#absolute_positioning)要素と相互作用するので、グリッドやグリッド領域内にアイテムを配置したい場合に便利です。仕様では、グリッドコンテナーが包含ブロックであり、絶対配置されたアイテムの親である場合の動作を定義しています。
+グリッドは[絶対位置指定](/ja/docs/Web/CSS/Reference/Properties/position#絶対位置指定)要素と相互作用するので、グリッドやグリッド領域内にアイテムを配置したい場合に便利です。仕様では、グリッドコンテナーが包含ブロックであり、絶対配置されたアイテムの親である場合の動作を定義しています。
 
 ### 包含ブロックとしてのグリッドコンテナー
 

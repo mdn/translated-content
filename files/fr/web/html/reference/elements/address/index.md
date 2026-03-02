@@ -1,21 +1,20 @@
 ---
 title: "<address> : l'élément d'adresse de contact"
 slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<address>`** indique que le HTML inclus fournit des informations de contact pour une personne, des personnes ou une organisation.
 
-L'élément HTML **`<address>`** indique des informations de contact pour une personne, un groupe de personnes ou une organisation.
-
-{{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;address&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Contact the author of this page:</p>
+<p>Contactez l'auteur·ice de cette page&nbsp;:</p>
 
 <address>
-  <a href="mailto:jim@example.com">jim@example.com</a><br />
-  <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+  <a href="mailto:toto@example.fr">toto@example.fr</a><br />
+  <a href="tel:+33123456789">+33 (0)1 23 45 67 89</a>
 </address>
 ```
 
@@ -29,124 +28,19 @@ a[href^="tel"]::before {
 }
 ```
 
-L'information de contact fournie via cet élément peut prendre n'importe quelle forme pertinente : ce peut être une adresse physique, une URL, une adresse électronique, un numéro de téléphone, des coordonnées géographiques, etc. Ces informations devraient contenir le nom de la personne, du groupe de personne ou de l'organisation à laquelle le contact fait référence.
+L'information de contact fournie par le contenu d'un élément `<address>` peut prendre la forme la plus appropriée au contexte, et peut inclure tout type d'information de contact nécessaire, comme une adresse physique, une URL, une adresse électronique, un numéro de téléphone, un identifiant de réseau social, des coordonnées géographiques, etc. L'élément `<address>` doit inclure le nom de la personne, des personnes ou de l'organisation à laquelle l'information de contact fait référence.
 
-Cet élément peut être employé dans un élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) pour indiquer la personne qui écrit l'article ou être utilisé dans l'en-tête de la page pour fournir une adresse d'entreprise.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <dfn
-          ><a href="/fr/docs/Web/Guide/HTML/Content_categories"
-            >Catégories de contenu</a
-          ></dfn
-        >
-      </th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >,
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >contenu tangible</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Contenu de flux</a
-        >, mais sans élément <code>&#x3C;address></code> inclus, sans contenu de
-        titre (<a href="/fr/docs/Web/HTML/Element/hgroup"
-          ><code>&#x3C;hgroup></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h1></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h2></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h3></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h4></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h5></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/Heading_Elements"
-          ><code>&#x3C;h6></code></a
-        >), sans contenu de section (<a href="/fr/docs/Web/HTML/Element/article"
-          ><code>&#x3C;article></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/aside"><code>&#x3C;aside></code></a
-        >,
-        <a href="/fr/docs/Web/HTML/Element/section"
-          ><code>&#x3C;section></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/nav"><code>&#x3C;nav></code></a
-        >), et sans
-        <a href="/fr/docs/Web/HTML/Element/header"
-          ><code>&#x3C;header></code></a
-        >
-        ou élément
-        <a href="/fr/docs/Web/HTML/Element/footer"><code>&#x3C;footer></code></a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>
-        Aucune, la balise d'ouverture et la balise de fermeture sont
-        obligatoires.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>
-        Tout élément qui accepte un
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux"
-          >contenu de flux</a
-        >
-        mais pas d'éléments <code>&#x3C;address></code>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >Aucun rôle correspondant</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a
-        >. Avant Gecko 2.0 (Firefox 4), Gecko implémentait cet élément en
-        utilisant l'interface
-        <a href="/fr/docs/Web/API/HTMLSpanElement"
-          ><code>HTMLSpanElement</code></a
-        >.
-      </td>
-    </tr>
-  </tbody>
-</table>
+`<address>` peut être utilisé dans divers contextes, par exemple pour fournir les informations de contact d'une entreprise dans l'en-tête de la page, ou pour indiquer l'auteur·ice d'un article en incluant un élément `<address>` dans {{HTMLElement("article")}}.
 
 ## Attributs
 
-Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes), communs à tous les éléments.
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-- Pour représenter une adresse arbitraire, qui n'est pas relative à l'information de contact, on utilisera l'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) plutôt que l'élément `<address>`.
-- Cet élément ne doit pas contenir plus d'informations que l'information de contact, par exemple une date de publication (qui appartiendrait à l'élément [`<time>`](/fr/docs/Web/HTML/Reference/Elements/time)).
-- Typiquement un élément `<address>` peut être placé dans l'élément [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer) de la section courante, s'il y en a une.
+- L'élément `<address>` ne peut être utilisé que pour représenter les informations de contact de son ancêtre le plus proche de type {{HTMLElement("article")}} ou {{HTMLElement("body")}}.
+- Cet élément ne doit pas contenir plus d'informations que les informations de contact, comme une date de publication (qui appartient à un élément {{HTMLElement("time")}}).
+- Typiquement, un élément `<address>` peut être placé dans l'élément {{HTMLElement("footer")}} de la section courante, s'il y en a une.
 
 ## Exemples
 
@@ -167,9 +61,86 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "100%", 190)}}
+{{EmbedLiveSample("Exemples", 300, 200)}}
 
-Bien que le rendu par défaut du texte de l'élément `<address>` utilise le même style par défaut que les éléments [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i) ou [`<em>`](/fr/docs/Web/HTML/Reference/Elements/em), il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.
+Bien qu'il affiche le texte avec le même style par défaut que les éléments HTML {{HTMLElement("i")}} ou {{HTMLElement("em")}}, il est plus approprié d'utiliser `<address>` pour les informations de contact, car il apporte une information sémantique supplémentaire.
+
+## Résumé technique
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
+          >Catégories de contenu</a
+        >
+      </th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu du flux</a
+        >, contenu tangible.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >Contenu de flux</a
+        >, mais sans élément <code>&#x3C;address></code> inclus, sans contenu de
+        titre ({{HTMLElement("hgroup")}}, {{HTMLElement("Heading_Elements", "h1")}},
+        {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}},
+        {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}},
+        {{HTMLElement("Heading_Elements", "h6")}}), aucun contenu de section
+        ({{HTMLElement("article")}}, {{HTMLElement("aside")}},
+        {{HTMLElement("section")}}, {{HTMLElement("nav")}}), et aucun
+        {{HTMLElement("header")}} ou {{HTMLElement("footer")}}.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>
+        Aucune, la balise d'ouverture et la balise de fermeture sont
+        obligatoires.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>
+        Tout élément acceptant du
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
+          >contenu de flux</a
+        >, mais toujours à l'exclusion des éléments <code>&#x3C;address></code>
+        (selon le principe logique de symétrie, si une balise
+        <code>&#x3C;address></code> parent ne peut pas contenir un élément
+        <code>&#x3C;address></code> imbriqué, alors le même contenu
+        <code>&#x3C;address></code> ne peut pas avoir une balise
+        <code>&#x3C;address></code> comme parent).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
+            >group</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td>
+        {{DOMxRef("HTMLElement")}}. Avant Gecko 2.0 (Firefox 4), Gecko
+        implémentait cet élément en utilisant l'interface
+        {{DOMxRef("HTMLSpanElement")}}.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -181,5 +152,5 @@ Bien que le rendu par défaut du texte de l'élément `<address>` utilise le mê
 
 ## Voir aussi
 
-- Les autres éléments liés aux sections d'un document : [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside), [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Reference/Elements/hgroup), [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer), [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) ;
-- [Sections et titres d'un document HTML5](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
+- Les autres éléments liés aux sections d'un document&nbsp;: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("footer")}}, {{HTMLElement("section")}}, {{HTMLElement("header")}}
+- [Sections et titres d'un document HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)

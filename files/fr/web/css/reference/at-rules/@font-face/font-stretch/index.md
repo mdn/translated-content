@@ -1,14 +1,13 @@
 ---
 title: font-stretch
 slug: Web/CSS/Reference/At-rules/@font-face/font-stretch
-original_slug: Web/CSS/@font-face/font-stretch
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-{{deprecated_header}}
+{{Deprecated_Header}}
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet aux auteur·ice·s de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{cssxref("@font-face")}}.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet aux auteur·ice·s de choisir entre la forme normale, condensée ou étendue d'une police fournie dans une règle {{CSSxRef("@font-face")}}.
 
 Pour une police donnée, les auteur·ice·s peuvent télécharger différentes fontes pour différents styles et utiliser alors `font-stretch` de façon explicite afin de choisir la fonte voulue. Les valeurs fournies au descripteur CSS sont les mêmes que celles qui peuvent être utilisées pour la propriété correspondante.
 
@@ -45,7 +44,7 @@ La propriété `font-stretch` est décrite à l'aide de l'une des valeurs énum�
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Indique une forme plus étendue que la normale (la valeur `ultra-expanded` étant la plus étendue).
 - `<percentage>`
-  - : Un pourcentage (une valeur de type {{cssxref("&lt;percentage&gt;")}}) dont la valeur est comprise entre 50% et 200% (inclus). Les valeurs négatives ne sont pas autorisées pour cette propriété.
+  - : Un pourcentage (une valeur de type {{CSSxRef("&lt;percentage&gt;")}}) dont la valeur est comprise entre 50% et 200% (inclus). Les valeurs négatives ne sont pas autorisées pour cette propriété.
 
 Dans les versions antérieures de la spécification pour `font-stretch`, la propriété ne s'utilisait qu'avec des mots-clés. Avec le module CSS Fonts de niveau 4, la syntaxe est étendue afin de permettre l'utilisation des valeurs `<percentage>`. Cela permet aux polices variables de permettre un contrôle plus fin voire continu.
 
@@ -119,7 +118,7 @@ Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoi
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ### Syntaxe formelle
 
@@ -149,11 +148,11 @@ Dans l'exemple suivant, on charge une police Open Sans locale et on l'importe en
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}

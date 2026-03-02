@@ -1,14 +1,17 @@
 ---
 title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
-original_slug: Web/CSS/counter-increment
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`counter-increment`** permet d'incrémenter ou de décrémenter la valeur des compteurs nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) selon les valeurs définies, ou d'empêcher la modification de tous les compteurs ou de la valeur d'un compteur individuel.
 
-La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) d'une valeur donnée.
+Si un compteur nommé dans la liste des compteurs et valeurs séparés par des espaces n'existe pas, il sera créé. Si aucune valeur n'est fournie pour un compteur dans la liste, le compteur sera augmenté de `1`.
 
-{{InteractiveExample("CSS Demo: counter-increment")}}
+La valeur du compteur peut être réinitialisée à n'importe quel entier avec la propriété CSS {{CSSxRef("counter-reset")}}.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: counter-increment")}}
 
 ```css interactive-example-choice
 counter-increment: example-counter;
@@ -28,7 +31,9 @@ counter-increment: example-counter -5;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Counter value:</div>
+  <div class="transition-all" id="example-element">
+    Valeur du compteur&nbsp;:
+  </div>
 </section>
 ```
 
@@ -43,9 +48,6 @@ counter-increment: example-counter -5;
 }
 ```
 
-> [!NOTE]
-> La valeur du compteur peut être réinitialisée avec une valeur arbitraire grâce à la propriété {{cssxref("counter-reset")}}.
-
 ## Syntaxe
 
 ```css
@@ -58,29 +60,30 @@ counter-increment: mon-compteur -1;
 /* On incrémente 'compteur1' de 1 et on décrémente 'compteur2' de 4 */
 counter-increment: compteur1 compteur2 -4;
 
-/* On n'incrémente/décremente rien */
-/* cela permet d'effacer les règles moins spécifiques */
+/* On n'incrémente/décremente rien : cela permet d'effacer les règles moins spécifiques */
 counter-increment: none;
 
 /* Valeurs globales */
 counter-increment: inherit;
 counter-increment: initial;
+counter-increment: revert;
+counter-increment: revert-layer;
 counter-increment: unset;
 ```
 
-La propriété `counter-increment` peut être définie de deux façons :
-
-- Avec le mot-clé `none`
-- Avec un identifiant ({{cssxref("&lt;custom-ident&gt;")}}) qui identifie le compteur et qui est éventuellement suivi par un entier ({{cssxref("&lt;integer&gt;")}}). On peut définir autant de compteurs qu'on veut, chacun étant séparé par un espace.
-
 ### Valeurs
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : Le nom du compteur qu'on souhaite incrémenter.L'identifiant peut se composer d'une combinaison de lettres entre `a` et `z` (sensible à la casse), de nombres compris entre `0` et `9`, de tirets bas (`_` ou _underscores_) et/ou de tirets. Le premier caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets au début d'un identifiant. Enfin, un identifiant ne doit pas être `none`, `unset`, `initial` ou `inherit` quelque soit la combinaison de la casse.
-- {{cssxref("&lt;integer&gt;")}}
-  - : La valeur qu'on souhaite ajouter au compteur. La valeur par défaut est 1 (le compteur est alors incrémenté de 1).
+La propriété `counter-increment` accepte comme valeur soit une liste de noms de compteurs séparés par des espaces, définis comme `<custom-ident>` (identifiant personnalisé) avec une valeur `<integer>` (entier) optionnelle, soit le mot-clé `none`. Vous pouvez définir autant de compteurs à incrémenter que vous le souhaitez, chaque nom ou paire nom-nombre étant séparé par un espace.
+
+- {{CSSxRef("&lt;custom-ident&gt;")}}
+  - : Le nom du compteur qu'on souhaite incrémenter ou décrémenter.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Définit la valeur à ajouter au compteur. Si l'entier est précédé d'un signe `-`, la valeur sera retirée du compteur. La valeur par défaut est `1` si aucune valeur n'est définie.
 - `none`
-  - : Aucun compteur n'est incrémenté. Cette valeur est utilisée comme valeur par défaut et permet également d'annuler des incréments décrits par des règles moins spécifiques.
+  - : Indique qu'aucun compteur ne doit être incrémenté ou décrémenté. Cette valeur peut aussi servir à annuler l'incrémentation ou la décrémentation de tous les compteurs dans des règles plus spécifiques. Il s'agit de la valeur par défaut de la propriété.
+
+> [!NOTE]
+> L'utilisation de la valeur `none` empêche tous les compteurs d'être incrémentés ou décrémentés pour les éléments sélectionnés où cette règle s'applique. Pour empêcher uniquement certains compteurs d'être incrémentés ou décrémentés, définissez la valeur `integer` à `0` sur les compteurs concernés.
 
 ## Définition formelle
 
@@ -92,33 +95,57 @@ La propriété `counter-increment` peut être définie de deux façons :
 
 ## Exemples
 
-### CSS
+### Diminuer la valeur du compteur
 
-```css
-ol {
-  list-style-type: none;
-  counter-reset: compteListe;
-}
+Dans cet exemple, vous affichez une séquence de nombres en comptant à rebours. Pour cela, vous utilisez un compteur pour afficher des nombres en partant de 100 et en diminuant de 7 à chaque fois.
 
-li::before {
-  counter-increment: compteListe 2;
-  content: counter(compteListe) " ";
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<ol>
-  <li>Et de deux</li>
-  <li>Et de quatre</li>
-  <li>Et de six</li>
-</ol>
+<div>
+  <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i
+  ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i
+  ><i></i><i></i><i></i><i></i><i></i><i></i>
+</div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples")}}
+Nous définissons la valeur initiale du compteur nommé `sevens` à `100` avec {{CSSxRef("counter-reset")}}. Ensuite, pour chaque {{HTMLElement("i")}}, nous diminuons le compteur de `7`.
+
+Pour que le premier compte soit à `100`, nous ciblons le premier élément `<i>` avec la pseudo-classe {{CSSxRef(":first-of-type")}} et nous définissons `counter-increment: none;`. De plus, la propriété {{CSSxRef("content")}} est utilisée dans le pseudo-élément {{CSSxRef("::before")}} pour afficher la valeur du compteur avec la fonction {{CSSxRef("counter()")}}.
+
+```css
+div {
+  counter-reset: sevens 100;
+}
+i {
+  counter-increment: sevens -7;
+}
+i:first-of-type {
+  counter-increment: none;
+}
+i::before {
+  content: counter(sevens);
+}
+```
+
+```css hidden
+div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 200px;
+}
+i {
+  flex: 0 0 2em;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Diminuer la valeur du compteur", 140, 300)}}
 
 ## Spécifications
 
@@ -130,8 +157,9 @@ li::before {
 
 ## Voir aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-set")}}
-- {{cssxref("@counter-style")}}
-- Les fonctions CSS {{cssxref("counter")}} et {{cssxref("counters")}}
+- Les propriétés de compteur {{CSSxRef("counter-set")}}, {{CSSxRef("counter-reset")}}
+- La règle de compteur {{CSSxRef("@counter-style")}}
+- Les fonctions de compteur {{CSSxRef("counter()")}}, {{CSSxRef("counters()")}}
+- La guide [d'utilisation des compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

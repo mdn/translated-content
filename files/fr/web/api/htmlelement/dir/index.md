@@ -1,30 +1,31 @@
 ---
-title: HTMLElement.dir
+title: "HTMLElement : propriété dir"
+short-title: dir
 slug: Web/API/HTMLElement/dir
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
-La propriété **`HTMLElement.dir`** permet d'obtenir ou de modifier la direction d'écriture du texte du contenu de l'élément courant.
+La propriété **`dir`** de l'interface {{DOMxRef("HTMLElement")}} indique la direction d'écriture du texte du contenu de l'élément courant. Elle reflète l'attribut [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) de l'élément.
 
-La direction d'écriture du texte d'un élément est celle selon laquelle le texte est écrit, ce qui permet de prendre en charge différents systèmes d'écriture. Les langues arabes et hébraïques sont notamment écrites de droite à gauche.
+Notez que si l'attribut `dir` n'est pas défini, l'élément peut tout de même hériter de la direction de son parent. Cependant, cette direction héritée n'est pas reflétée par la valeur de cette propriété.
 
-Lorsque la propriété `dir` d'une image vaut `rtl`, ce qui indique que les attributs HTML `title` et `alt` seront mis en forme avec un mode d'écriture de droite à gauche.
-
-Lorsque la propriété `dir` d'un tableau vaut `rtl`, l'ordre des colonnes est arrangé de droite à gauche.
-
-Lorsqua la propriété `dir` d'un élément vaut `auto`, la direction de l'élément est déterminée selon son premier caractère de direction fort ou, par défaut, la direction d'écriture de son élément parent.
-
-> [!NOTE]
-> Les navigateurs peuvent permettre aux utilisatrices et utilisateurs de modifier la direction d'écriture des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) afin de faciliter l'édition du contenu. Chrome et Safari fournissent une option via le menu contextuel des champs de saisie, Internet Explorer et Edge (ancienne version) utilisent la combinaison de touches <kbd>Ctrl</kbd> + <kbd>Maj gauche</kbd> et <kbd>Ctrl</kbd> + <kbd>Maj droit</kbd>. Firefox utilise <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>Maj</kbd> + <kbd>X</kbd> mais _ne_ met _pas_ à jour la valeur de l'attribut **`dir`**.
+La direction d'écriture du texte d'un élément correspond au sens dans lequel le texte s'affiche (pour la prise en charge de différents systèmes linguistiques). L'arabe et l'hébreu sont des exemples de langues utilisant la direction RTL.
 
 ## Valeur
 
 Cette propriété peut avoir une de ces valeurs&nbsp;:
 
-- `ltr`, pour l'écriture de gauche à droite (<i lang="en">left-to-right</i> en anglais qui donne `ltr`)
-- `rtl`, pour l'écriture de droite à gauche (<i lang="en">right-to-left</i> en anglais qui donne `rtl`)
-- `auto` pour indiquer la direction de l'élément, telle que déterminée par le moteur selon le contenu de l'élément.
+- `"ltr"`
+  - : Pour l'écriture de gauche à droite (<i lang="en">left-to-right</i> en anglais)
+- `"rtl"`
+  - : Pour l'écriture de droite à gauche (<i lang="en">right-to-left</i> en anglais)
+- `"auto"`
+  - : Pour indiquer la direction de l'élément, telle que déterminée par le moteur selon le contenu de l'élément.
+- `""`
+  - : Valeur par défaut&nbsp;; la direction est héritée de l'élément parent.
 
 ## Exemples
 
@@ -45,7 +46,7 @@ parg.dir = "rtl";
 
 ## Voir aussi
 
-- [`document.dir`](/fr/docs/Web/API/Document/dir)
-- L'attribut universel HTML [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir)
-- La propriété CSS [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction)
-- La pseudo-classe CSS [`:dir`](/fr/docs/Web/CSS/Reference/Selectors/:dir)
+- La propriété {{DOMxRef("document.dir")}}
+- L'attribut HTML universel [`dir`](/fr/docs/Web/HTML/Reference/Global_attributes/dir)
+- La propriété CSS {{CSSxRef("direction")}}
+- La pseudo-classe CSS {{CSSxRef(":dir")}}

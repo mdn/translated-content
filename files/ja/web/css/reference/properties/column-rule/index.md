@@ -1,9 +1,8 @@
 ---
 title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
-original_slug: Web/CSS/column-rule
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`column-rule`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さ、スタイル、色を設定します。
@@ -90,7 +89,7 @@ column-rule: unset;
 ### 例 1
 
 ```css
-/* "medium dotted currentcolor" と同じ */
+/* "medium dotted currentColor" と同じ */
 p.foo {
   column-rule: dotted;
 }
@@ -100,7 +99,7 @@ p.bar {
   column-rule: solid blue;
 }
 
-/* "8px solid currentcolor" と同じ */
+/* "8px solid currentColor" と同じ */
 p.baz {
   column-rule: solid 8px;
 }
@@ -125,9 +124,9 @@ p.abc {
 ```css
 .content-box {
   padding: 0.3em;
-  background: #ff7;
+  background: #ffff77;
   column-count: 3;
-  column-rule: inset 2px #33f;
+  column-rule: inset 2px #3333ff;
 }
 ```
 

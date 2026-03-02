@@ -3,10 +3,10 @@ title: grayscale()
 slug: Web/CSS/Reference/Values/filter-function/grayscale
 original_slug: Web/CSS/filter-function/grayscale
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: grayscale()")}}
 
@@ -45,7 +45,7 @@ grayscale(amount)
 ### Paramètres
 
 - `amount` {{Optional_Inline}}
-  - : La quantité de l'image d'entrée convertie en niveaux de gris. Elle s'exprime en nombre ({{cssxref("&lt;number&gt;")}}) ou en pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur de `100%` convertit l'image entièrement en niveaux de gris, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet linéairement proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
+  - : La quantité de l'image d'entrée convertie en niveaux de gris. Elle s'exprime en nombre ({{CSSxRef("&lt;number&gt;")}}) ou en pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Une valeur de `100%` convertit l'image entièrement en niveaux de gris, tandis qu'une valeur de `0%` laisse l'image inchangée. Les valeurs comprises entre `0%` et `100%` appliquent un effet linéairement proportionnel. La valeur initiale utilisée pour {{Glossary("interpolation", "l'interpolation")}} est `0`. La valeur par défaut est `1`.
 
 ## Syntaxe formelle
 
@@ -74,14 +74,14 @@ grayscale(100%)
 
 ## Voir aussi
 
-Les autres fonctions {{cssxref("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{cssxref("filter")}} et {{cssxref("backdrop-filter")}} sont&nbsp;:
+Les autres fonctions {{CSSxRef("&lt;filter-function&gt;")}} pouvant être utilisées dans les valeurs des propriétés {{CSSxRef("filter")}} et {{CSSxRef("backdrop-filter")}} sont&nbsp;:
 
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{CSSxRef("filter-function/blur", "blur()")}}
+- {{CSSxRef("filter-function/brightness", "brightness()")}}
+- {{CSSxRef("filter-function/contrast", "contrast()")}}
+- {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}
+- {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}
+- {{CSSxRef("filter-function/invert", "invert()")}}
+- {{CSSxRef("filter-function/opacity", "opacity()")}}
+- {{CSSxRef("filter-function/saturate", "saturate()")}}
+- {{CSSxRef("filter-function/sepia", "sepia()")}}

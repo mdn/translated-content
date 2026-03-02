@@ -35,5 +35,5 @@ l10n:
 
 ## 같이 보기
 
-- [Printing](/ko/docs/Web/CSS/CSS_media_queries/Printing) 가이드
-- [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries) 모듈
+- [Printing](/ko/docs/Web/CSS/Guides/Media_queries/Printing) 가이드
+- [미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries) 모듈

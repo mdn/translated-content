@@ -2,7 +2,7 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 l10n:
-  sourceCommit: 4f5e90f47c518afd1e3c11a9fb32b933cc8434e9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("Web Animations")}}

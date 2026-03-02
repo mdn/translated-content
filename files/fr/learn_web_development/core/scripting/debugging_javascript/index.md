@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Dans cet article, nous verrons certains problèmes fréquents qui se posent entre les différents navigateurs avec JavaScript, et aussi comment les résoudre.
 
@@ -413,4 +413,4 @@ Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec 
 
 Et voilà pour JavaScript. Ce n'est pas si simple, mais cet article devrait vous donner quelques points de départ et idées pour diagnostiquer et résoudre certains problèmes JavaScript que vous pourriez rencontrer à l'avenir.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}

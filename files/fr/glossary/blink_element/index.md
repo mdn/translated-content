@@ -3,7 +3,7 @@ title: L'élément de clignotement (balise <blink>)
 short-title: Élément <blink>
 slug: Glossary/blink_element
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'élément **`<blink>`** (balise blink) est une fonctionnalité HTML obsolète qui n'est plus prise en charge par les navigateurs web et n'est plus documentée sur MDN. Il servait à faire clignoter du texte (affichage/disparition en boucle).

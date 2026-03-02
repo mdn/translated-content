@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/General_embedding_technolog
 original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans les pages Web, y compris images, vidéos et audios. Donc, à ce stade, nous aimerions franchir en quelque sorte une étape similaire, en examinant certains éléments qui permettent d'intégrer une grande variété de types de contenu dans des pages Web : les éléments {{htmlelement("iframe")}}, {{htmlelement("embed")}} et {{htmlelement("object")}}. Les `<iframe>` servent à intégrer d'autres pages Web, et les deux autres des PDF, SVG et même des Flash — une technique en voie de disparition, mais que vous rencontrerez encore assez régulièrement.
 
@@ -363,4 +363,4 @@ Le problème de l'intégration de contenus tiers dans des documents web peut rap
 
 D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

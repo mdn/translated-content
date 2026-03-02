@@ -1,38 +1,23 @@
 ---
-title: Atomics.load()
+title: "Atomics : méthode statique load()"
+short-title: load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
+l10n:
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-{{JSRef}}
-
-La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
-
-{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
-
-```js interactive-example
-// Create a SharedArrayBuffer with a size in bytes
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-// 5 + 2 = 7
-console.log(Atomics.add(uint8, 0, 2));
-// Expected output: 5
-
-console.log(Atomics.load(uint8, 0));
-// Expected output: 7
-```
+La méthode statique **`load()`** de l'objet {{JSxRef("Atomics")}} retourne une valeur située à une position donnée du tableau.
 
 ## Syntaxe
 
-```js
-Atomics.load(typedArray, index);
+```js-nolint
+Atomics.load(typedArray, index)
 ```
 
 ### Paramètres
 
 - `typedArray`
-  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+  - : Un tableau typé entier partagé parmi {{JSxRef("Int8Array")}}, {{JSxRef("Uint8Array")}}, {{JSxRef("Int16Array")}}, {{JSxRef("Uint16Array")}}, {{JSxRef("Int32Array")}}, {{JSxRef("Uint32Array")}}, {{JSxRef("BigInt64Array")}} ou {{JSxRef("BigUint64Array")}}.
 - `index`
   - : La position du tableau `typedArray` qu'on souhaite charger.
 
@@ -40,20 +25,28 @@ Atomics.load(typedArray, index);
 
 La valeur à la position indiquée (`typedArray[index]`).
 
-### Exceptions levées
+### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
-- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
-- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
+- {{JSxRef("TypeError")}}
+  - : Levée si `typedArray` n'est pas un des types d'entiers autorisés.
+- {{JSxRef("RangeError")}}
+  - : Levée si `index` est en dehors des limites de `typedArray`.
 
 ## Exemples
 
-```js
-var sab = new SharedArrayBuffer(1024);
-var ta = new Uint8Array(sab);
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-Atomics.add(ta, 0, 12);
-Atomics.load(ta, 0); // 12
+### Utiliser `Atomics.load()`
+
+```js
+// Crée un SharedArrayBuffer avec une taille en octets
+const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
+const ta = new Uint8Array(sab);
+ta[0] = 7;
+
+console.log(Atomics.add(ta, 0, 12)); // Ajoute 12 à l'index 0
+console.log(Atomics.load(ta, 0)); // 19, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications
@@ -66,5 +59,5 @@ Atomics.load(ta, 0); // 12
 
 ## Voir aussi
 
-- {{jsxref("Atomics")}}
-- {{jsxref("Atomics.store()")}}
+- L'objet {{JSxRef("Atomics")}}
+- La méthode {{JSxRef("Atomics.store()")}}

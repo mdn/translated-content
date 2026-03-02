@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 테이블 평가에서 우리는 태양계의 행성에 대한 일부 데이터를 제공하고, 이를 HTML 테이블로 구조화하도록 요청합니다.
 
@@ -75,4 +75,4 @@ l10n:
    - 평가하거나 도움이 필요한 예제의 링크를 온라인 공유 편집기에 제공합니다(위의 1단계에서 언급한 대로). 이것은 좋은 습관입니다 — 코드를 볼 수 없다면 코딩 문제에 도움을 주기가 매우 어렵습니다.
    - 도움을 원하는 질문이나 평가 페이지의 링크를 제공하여 해당 질문을 찾을 수 있도록 합니다.
 
-{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

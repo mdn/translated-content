@@ -7,6 +7,8 @@ l10n:
 
 **`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
+{{cssxref("background-attachment")}} が `fixed` のときは `background-origin` が無視されることに注意してください。
+
 {{InteractiveExample("CSS デモ: background-origin")}}
 
 ```css interactive-example-choice
@@ -41,8 +43,6 @@ background-repeat: no-repeat;
   font-weight: bold;
 }
 ```
-
-{{cssxref("background-attachment")}} が `fixed` のときは `background-origin` が無視されることに注意してください。
 
 ## 構文
 

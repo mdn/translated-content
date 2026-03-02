@@ -42,7 +42,7 @@ Server: Apache/2.4.1 (Unix)
 
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
 - [多主机和错误定向请求的](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache 服务器文档
-- [TLS 1.3](/zh-CN/docs/Web/Security/Transport_Layer_Security#tls_1.3)
+- [TLS 1.3](/zh-CN/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)
 - [服务器名称指示（SNI）](https://zh.wikipedia.org/wiki/服务器名称指示)
 - [传输层安全（TLS）配置](/zh-CN/docs/Web/Security/Practical_implementation_guides/TLS)
 - Apache [错误代码 `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) 的实现

@@ -1,9 +1,8 @@
 ---
 title: forced-colors
 slug: Web/CSS/Reference/At-rules/@media/forced-colors
-original_slug: Web/CSS/@media/forced-colors
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`forced-colors`** permet de détecter si l'{{Glossary("user agent", "agent utilisateur")}} a activé un mode couleurs forcées, dans lequel il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page. Un exemple de mode couleurs forcées est le mode contraste élevé de Windows.
@@ -27,26 +26,26 @@ En mode couleurs forcées, les valeurs des propriétés suivantes sont traitées
 
 Ces valeurs imposées sont choisies parmi l'ensemble des couleurs système, ce qui garantit un contraste cohérent pour les éléments d'interface courants lorsque les utilisateur·ice·s ont activé les couleurs forcées.
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("border-color")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("-webkit-tap-highlight-color")}}
+- {{CSSxRef("color")}}
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-emphasis-color")}}
+- {{CSSxRef("border-color")}}
+- {{CSSxRef("outline-color")}}
+- {{CSSxRef("column-rule-color")}}
+- {{CSSxRef("-webkit-tap-highlight-color")}}
 - L'[attribut SVG `fill`](/fr/docs/Web/SVG/Reference/Attribute/fill)
 - L'[attribut SVG `stroke`](/fr/docs/Web/SVG/Reference/Attribute/stroke)
 
 De plus, les propriétés suivantes ont un comportement particulier en mode couleurs forcées&nbsp;:
 
-- {{cssxref("box-shadow")}} est forcée à «&nbsp;none&nbsp;»
-- {{cssxref("text-shadow")}} est forcée à «&nbsp;none&nbsp;»
-- {{cssxref("background-image")}} est forcée à «&nbsp;none&nbsp;» pour les valeurs qui ne sont pas basées sur une URL
-- {{cssxref("color-scheme")}} est forcée à «&nbsp;light dark&nbsp;»
-- {{cssxref("scrollbar-color")}} est forcée à «&nbsp;auto&nbsp;»
+- {{CSSxRef("box-shadow")}} est forcée à «&nbsp;none&nbsp;»
+- {{CSSxRef("text-shadow")}} est forcée à «&nbsp;none&nbsp;»
+- {{CSSxRef("background-image")}} est forcée à «&nbsp;none&nbsp;» pour les valeurs qui ne sont pas basées sur une URL
+- {{CSSxRef("color-scheme")}} est forcée à «&nbsp;light dark&nbsp;»
+- {{CSSxRef("scrollbar-color")}} est forcée à «&nbsp;auto&nbsp;»
 
-Les couleurs système imposées pour les propriétés ci-dessus dépendent du contexte de l'élément. Par exemple, la propriété {{cssxref("color")}} sur un bouton sera forcée à `ButtonText`. Sur un texte normal, elle sera forcée à `CanvasText`. Voir la [liste des couleurs système](/fr/docs/Web/CSS/system-color) pour plus de détails sur les cas d'utilisation selon le contexte d'interface.
+Les couleurs système imposées pour les propriétés ci-dessus dépendent du contexte de l'élément. Par exemple, la propriété {{CSSxRef("color")}} sur un bouton sera forcée à `ButtonText`. Sur un texte normal, elle sera forcée à `CanvasText`. Voir la [liste des couleurs système](/fr/docs/Web/CSS/system-color) pour plus de détails sur les cas d'utilisation selon le contexte d'interface.
 
 > [!NOTE]
 > Les agents utilisateur choisissent les couleurs système en fonction de la sémantique native des éléments, _pas_ selon les rôles ARIA ajoutés.
@@ -56,9 +55,9 @@ En plus de ces ajustements, les navigateurs aident à garantir la lisibilité du
 
 Il existe certains cas où l'agent utilisateur ne force pas les valeurs des propriétés ci-dessus&nbsp;:
 
-Lorsque {{cssxref("forced-color-adjust")}} est défini à `none` sur un élément, aucune des valeurs de couleurs forcées ne s'applique et les styles auteur·ice sont utilisés normalement. De plus, la plaque de fond du texte est désactivée.
+Lorsque {{CSSxRef("forced-color-adjust")}} est défini à `none` sur un élément, aucune des valeurs de couleurs forcées ne s'applique et les styles auteur·ice sont utilisés normalement. De plus, la plaque de fond du texte est désactivée.
 
-Lorsque {{cssxref("forced-color-adjust")}} est défini à `preserve-parent-color` sur un élément, et que la valeur de {{cssxref("color")}} sur l'élément n'est pas héritée de son parent, alors l'élément se comporte comme si `preserve-parent-color` était défini à `none`.
+Lorsque {{CSSxRef("forced-color-adjust")}} est défini à `preserve-parent-color` sur un élément, et que la valeur de {{CSSxRef("color")}} sur l'élément n'est pas héritée de son parent, alors l'élément se comporte comme si `preserve-parent-color` était défini à `none`.
 
 Lorsqu'une [couleur système](/fr/docs/Web/CSS/system-color) est spécifiée, elle sera utilisée à la place de la valeur qui aurait été forcée.
 
@@ -79,7 +78,7 @@ Cette caractéristique média n'est active que si l'utilisateur·ice a activé d
 > [!NOTE]
 > L'exemple ci-dessous ne fonctionnera que dans un navigateur prenant en charge cette caractéristique média, et avec une préférence telle que le mode contraste élevé activée dans votre système d'exploitation.
 
-Cet exemple est un bouton qui obtient normalement son contraste via {{cssxref("box-shadow")}}. En mode couleurs forcées, box-shadow est forcé à none, donc l'exemple utilise la caractéristique média forced-colors pour s'assurer qu'il y a une bordure de la couleur appropriée (ButtonText dans ce cas).
+Cet exemple est un bouton qui obtient normalement son contraste via {{CSSxRef("box-shadow")}}. En mode couleurs forcées, box-shadow est forcé à none, donc l'exemple utilise la caractéristique média forced-colors pour s'assurer qu'il y a une bordure de la couleur appropriée (ButtonText dans ce cas).
 
 ### HTML
 
@@ -120,6 +119,6 @@ Cet exemple est un bouton qui obtient normalement son contraste via {{cssxref("b
 
 ## Voir aussi
 
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}
 - [Adapter l'affichage pour le contraste élevé de Windows avec les standards des couleurs forcées <sup>(angl.)</sup>](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- {{cssxref("forced-color-adjust")}}
+- La propriété {{CSSxRef("forced-color-adjust")}}

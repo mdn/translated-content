@@ -1,12 +1,37 @@
 ---
 title: <foreignObject>
 slug: Web/SVG/Reference/Element/foreignObject
-original_slug: Web/SVG/Element/foreignObject
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-{{SVGRef}}
+L'élément [SVG](/fr/docs/Web/SVG) **`<foreignObject>`** inclut des éléments provenant d'un espace de noms XML différent. Dans le contexte d'un navigateur, il s'agit très probablement de (X)HTML.
 
-L'élément **`<foreignObject>`** permet d'inclure des éléments d'un espace de noms XML différent à l'intérieur du [SVG](/fr/docs/Web/SVG). Dans le contexte d'un navigateur, il s'agit généralement d'inclure du XHTML/HTML.
+## Contexte d'utilisation
+
+{{SVGInfo}}
+
+## Attributs
+
+- {{SVGAttr("height")}}
+  - : Cet attribut détermine la hauteur du rectangle.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage)&nbsp;; _Valeur par défaut_&nbsp;: `auto`; _Animation_&nbsp;: **oui**
+- {{SVGAttr("width")}}
+  - : Cet attribut détermine la largeur du rectangle.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage)&nbsp;; _Valeur par défaut_&nbsp;: `auto`; _Animation_&nbsp;: **oui**
+- {{SVGAttr("x")}}
+  - : Cet attribut détermine la coordonnée x du rectangle.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage)&nbsp;; _Valeur par défaut_&nbsp;: `0`; _Animation_&nbsp;: **oui**
+- {{SVGAttr("y")}}
+  - : Cet attribut détermine la coordonnée y du rectangle.
+    _Type de valeur_&nbsp;: [**\<length>**](/fr/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/fr/docs/Web/SVG/Guides/Content_type#percentage)&nbsp;; _Valeur par défaut_&nbsp;: `0`; _Animation_&nbsp;: **oui**
+
+> [!NOTE]
+> À partir de SVG2 `x`, `y`, `width`, et `height` sont des _Propriétés Géometriques_, ce qui signifie que ces attributs peuvent également être utilisés comme des propriétés CSS pour cet élément.
+
+## Interface DOM
+
+Cet élément implémente l'interface {{DOMxRef("SVGForeignObjectElement")}}.
 
 ## Exemple
 
@@ -21,10 +46,6 @@ svg {
 ```html
 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <style>
-    polygon {
-      fill: black;
-    }
-
     div {
       color: white;
       font: 18px serif;
@@ -51,43 +72,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Exemple', 150, '100%')}}
-
-## Attributs
-
-- {{SVGAttr("height")}}
-  - : Cet attribut détermine la hauteur du rectangle.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
-- {{SVGAttr("width")}}
-  - : Cet attribut détermine la largeur du rectangle.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
-- {{SVGAttr("x")}}
-  - : Cet attribut détermine la coordonnée x du rectangle.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
-- {{SVGAttr("y")}}
-  - : Cet attribut détermine la coordonnée y du rectangle.
-    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
-
-> [!NOTE]
-> À partir de SVG2 `x`, `y`, `width`, et `height` sont des _Propriétés Géometriques_, ce qui signifie que ces attributs peuvent également être utilisés comme des propriétés CSS pour cet élément.
-
-### Attributs globaux
-
-- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute)
-  - : Notamment: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Reference/Attribute)
-  - : Notamment: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- Attributs d'événement
-  - : [Attributs d'événements globaux](/fr/docs/Web/SVG/Attribute#attributs_d'événement_globaux), [Attributs d'événement graphiques](/fr/docs/Web/SVG/Attribute#attributs_d'événement_graphiques), [Attributs d'événement du document](/fr/docs/Web/SVG/Attribute#attributs_d'événement_du_document), [Attributs d'événement des éléments du document](/fr/docs/Web/SVG/Attribute#attributs_d'événement_des_éléments_du_document)
-- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute)
-  - : Notamment: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- Attributs Aria
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-
-## Notes d'usage
-
-{{svginfo}}
 
 ## Spécifications
 

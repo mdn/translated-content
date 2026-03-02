@@ -6,7 +6,7 @@ original_slug: Web/CSS/::first-letter
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
+[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::first-letter`** применяет стили к первой букве первой строки [блочного элемента](/ru/docs/Web/CSS/Guides/Display/Visual_formatting_model#block-level_elements_and_block_boxes), но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).
 
 ```css
 /* Стили для первой буквы элемента <p> */

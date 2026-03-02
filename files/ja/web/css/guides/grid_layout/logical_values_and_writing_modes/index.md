@@ -2,9 +2,8 @@
 title: グリッド、論理的な値、書字方向
 short-title: 論理的な値と書字方向
 slug: Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
-original_slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS グリッドレイアウトの最も重要な機能の 1 つは、仕様に組み込まれているさまざまな書字方向に対応していることです。このガイドでは、グリッドやその他の最新のレイアウト方法のこの機能について、書字方向や論理的プロパティおよび物理的プロパティについて少しずつ学んでいきたいと思います。
@@ -78,13 +77,13 @@ p {
 
 ## ブロックとインライン
 
-物理的プロパティではなく論理的プロパティを使用する場合、世界は左から右、上から下という方向では見えません。参照点が異なるのです。ここで、[グリッド配置ガイド](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)で紹介されている ブロック 軸と インライン 軸の理解が役立ちます。ブロックとインラインという観点からレイアウトについて考えると、CSS グリッドレイアウトでの動作が大きな意味を成すことがわかります。
+物理的プロパティではなく論理的プロパティを使用する場合、世界は左から右、上から下という方向では見えません。参照点が異なるのです。ここで、[グリッド配置ガイド](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)で紹介されているブロック軸とインライン軸の理解が役立ちます。ブロックとインラインという観点からレイアウトについて考えると、CSS グリッドレイアウトでの動作が大きな意味を成すことがわかります。
 
 ![ブロック軸とインライン軸の既定の方向を示す画像](8-horizontal-tb.png)
 
 ## CSS の書字方向
 
-[CSS 書字方向] (/ja/docs/Web/CSS/CSS_writing_modes) モジュールは、CSS での書字方向の動作を指定します。これらの機能は、英語とは異なる書字方向の言語に対応するためだけのものではありません。クリエイティブな目的にも使用することができます。この節の例では、{{cssxref("writing-mode")}} プロパティを使用して、グリッドに適用される書字方向を変化させ、その過程で論理値がどのように動作するかを示しています。
+[CSS 書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)モジュールは、CSS での書字方向の動作を指定します。これらの機能は、英語とは異なる書字方向の言語に対応するためだけのものではありません。クリエイティブな目的にも使用することができます。この節の例では、{{cssxref("writing-mode")}} プロパティを使用して、グリッドに適用される書字方向を変化させ、その過程で論理値がどのように動作するかを示しています。
 
 ### `writing-mode`
 
@@ -112,14 +111,12 @@ p {
 }
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <p class="horizontal-tb">
     書字方向が既定の <code>horizontal-tb</code> に設定されています
   </p>
-  <p class="vertical-rl">
-    書字方向が <code>vertical-rl</code> に設定されています
-  </p>
+  <p class="vertical-rl">書字方向が <code>vertical-rl</code> に設定されています</p>
 </div>
 ```
 
@@ -454,8 +451,8 @@ p {
   grid-gap: 20px;
   grid-template-columns: 1fr auto;
   font:
-    1em Helvetica,
-    Arial,
+    1em "Helvetica",
+    "Arial",
     sans-serif;
 }
 nav {

@@ -3,7 +3,7 @@ title: Страница о Mozilla
 slug: Learn_web_development/Core/Structuring_content/Splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 В этом задании мы проверим ваши знания приёмов, рассмотренных в статьях этого модуля, через добавление изображений и видео на забавную страницу о Mozilla!
 
@@ -76,4 +76,4 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 
 Если вы выполняете это задание как часть организованного курса вам следует передать вашу работу учителю/наставнику для оценки. Если вы обучаетесь самостоятельно, то вы легко можете получить отметку [в ветке форума этого упражнения](https://discourse.mozilla.org/t/mozilla-splash-page-assessment/24679), либо в IRC канале [#mdn](irc://irc.mozilla.org/mdn) на [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте выполнить упражнение - жульничеством ничего не добиться!
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

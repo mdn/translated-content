@@ -1,12 +1,11 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
-original_slug: Web/CSS/mask-border-mode
 l10n:
-  sourceCommit: 82586e39bd8df5ffabdec58ee3361ed97856f870
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)のブレンドモードを指定します。
+**`mask-border-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の混合モードを指定します。
 
 ## 構文
 
@@ -44,12 +43,17 @@ mask-border-mode: unset;
 
 ## ブラウザーの互換性
 
-このプロパティは、まだどのブラウザーも対応していません。
+今のところ、この機能に対応しているブラウザーはありません。
 
 ## 関連情報
 
-- {{cssxref("mask-border")}}
+- {{cssxref("mask-mode")}}
+- {{cssxref("mask-type")}}
+- [Alpha transparency versus luminance](/ja/docs/Web/CSS/Guides/Masking/Introduction#alpha_transparency_versus_luminance)
+- {{cssxref("mask-border")}} 一括指定
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
+- {{cssxref("mask-mode")}}
+- [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール

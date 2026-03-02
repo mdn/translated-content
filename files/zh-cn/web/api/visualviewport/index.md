@@ -3,9 +3,9 @@ title: VisualViewport
 slug: Web/API/VisualViewport
 ---
 
-{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
+{{APIRef("CSSOM view API")}}
 
-[Visual Viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API) 提供了当前页面的视觉视口接口，即 **`VisualViewport`** 。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 `VisualViewport` 属性。
+[CSSOM view API](/zh-CN/docs/Web/API/CSSOM_view_API) 的 **`VisualViewport`** 接口表示给定 window 的视觉视口。对于每个页面容器来说（如 iframe），都存在有一个独立的 window 对象。每个页面容器的 window 对象都有一个独立的 `VisualViewport` 属性。
 
 你可以使用 {{domxref("Window.visualViewport")}} 获得对应 window 的视觉视口 API。
 

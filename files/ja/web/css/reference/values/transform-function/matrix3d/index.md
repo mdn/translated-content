@@ -1,12 +1,11 @@
 ---
 title: matrix3d()
 slug: Web/CSS/Reference/Values/transform-function/matrix3d
-original_slug: Web/CSS/transform-function/matrix3d
 l10n:
-  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 4x4 の 3D 同次変換行列を定義します。
+**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、4x4 の 3D 同次変換行列を定義します。
 結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: matrix3d()")}}
@@ -65,13 +64,13 @@ transform: matrix3d(
 
 ## 構文
 
-`matrix3d()` 関数は 16 個の値で指定します。列優先の順で記述します。
-
 ```css
 matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 ```
 
 ### 値
+
+`matrix3d()` 関数は 16 個の値で指定します。列優先の順で記述します。
 
 - _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_
   _a3_ _b3_ _c3_ _d3_
@@ -82,7 +81,7 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
       <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
       <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
@@ -97,29 +96,17 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
         一般的な 3D <a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F">アフィン変換</a>は、変換が線形座標変換ではないので、直交座標行列を使用して表現することはできません。
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mi>a1</mi> </mtd><mtd><mi>a2</mi> </mtd
-                ><mtd><mi>a3</mi> </mtd><mtd><mi>a4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>b1</mi> </mtd><mtd><mi>b2</mi> </mtd
-                ><mtd><mi>b3</mi> </mtd><mtd><mi>b4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>c1</mi> </mtd><mtd><mi>c2</mi> </mtd
-                ><mtd><mi>c3</mi> </mtd><mtd><mi>c4</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mi>d1</mi> </mtd><mtd><mi>d2</mi> </mtd
-                ><mtd><mi>d3</mi> </mtd><mtd><mi>d4</mi></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mi>a1</mi></mtd><mtd><mi>a2</mi></mtd><mtd><mi>a3</mi></mtd><mtd><mi>a4</mi></mtd></mtr><mtr><mtd><mi>b1</mi></mtd><mtd><mi>b2</mi></mtd><mtd><mi>b3</mi></mtd><mtd><mi>b4</mi></mtd></mtr><mtr><mtd><mi>c1</mi></mtd><mtd><mi>c2</mi></mtd><mtd><mi>c3</mi></mtd><mtd><mi>c4</mi></mtd></mtr><mtr><mtd><mi>d1</mi></mtd><mtd><mi>d2</mi></mtd><mtd><mi>d3</mi></mtd><mtd><mi>d4</mi></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} a1 & a2 & a3 & a4 \\ b1 & b2 & b3 & b4 \\ c1 & c2 & c3 & c4 \\ d1 & d2 & d3 & d4 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
 </table>
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -167,36 +154,36 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
   position: absolute;
   backface-visibility: inherit;
   font-size: 60px;
-  color: #fff;
+  color: white;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 70%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 70%);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -227,7 +214,7 @@ html {
 }
 body {
   height: 100vh;
-  /* Centering content */
+  /* コンテンツを中央ぞろえ */
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -247,7 +234,7 @@ body {
 }
 
 @keyframes MotionScale {
-  from {
+  0% {
     /*
       ここでは恒等行列を基礎としています。
       以下の行列は、以下の変換を記述しています。
@@ -256,6 +243,7 @@ body {
         それぞれの Z 座標を 0 移動する
         10% 縮小する
     */
+    /* prettier-ignore */
     transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
@@ -264,6 +252,7 @@ body {
     );
   }
   50% {
+    /* prettier-ignore */
     transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
@@ -271,8 +260,9 @@ body {
       0, 0, 0, 0.9
     );
   }
-  to {
-     transform: matrix3d(
+  100% {
+    /* prettier-ignore */
+    transform: matrix3d(
       1, 0, 0, 0,
       0, 1, 0, 0,
       0, 0, 1, 0,
@@ -302,4 +292,3 @@ body {
   - {{cssxref("scale")}}
   - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/) (2012)

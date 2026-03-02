@@ -1,5 +1,6 @@
 ---
-title: block
+title: block：Wasm 文本指令
+short-title: block
 slug: WebAssembly/Reference/Control_flow/block
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -9,7 +10,7 @@ l10n:
 
 **`loop`** 语句和 `block` 语句的表现相反，跳转到 `loop` 会回到循环的开头，而跳转到 `block` 会达到块尾，也就是跳出块。
 
-{{InteractiveExample("Wat Demo: block", "tabbed-taller")}}
+{{InteractiveExample("Wat 演示：block", "tabbed-taller")}}
 
 ```wat interactive-example
 (module
@@ -51,11 +52,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
     const log_if_not_100 = result.instance.exports.log_if_not_100;
 
     log_if_not_100(99);
-    // 期望的输出：99
+    // 期望输出：99
     log_if_not_100(100);
     // 不应该打印任何东西
     log_if_not_100(101);
-    // 期望的输出：101
+    // 期望输出：101
   },
 );
 ```

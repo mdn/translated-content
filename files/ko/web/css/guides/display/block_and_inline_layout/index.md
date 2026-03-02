@@ -51,7 +51,7 @@ CSS 규격에 따라 블록 요소 사이의 여백이 *축소*된다. 즉, 하�
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-여백 축소에 관해선 [여백 축소 정복](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) 안내서에서 자세한 내용을 파악할 수 있다.
+여백 축소에 관해선 [여백 축소 정복](/ko/docs/Web/CSS/Guides/Box_model/Margin_collapsing) 안내서에서 자세한 내용을 파악할 수 있다.
 
 > [!NOTE]
 > 참고: 여백의 축소 여부가 불확실할 경우 브라우저 개발툴에 나오는 상자 모델 값을 확인하십시오. 이렇게 하면 현재 일어나고 일을 파악하는 데 도움이 될 수 있는 실제 여백 크기를 알 수 있습니다.
@@ -100,7 +100,7 @@ CSS 2.1에 존재하는 규칙 외에도 새로운 수준의 CSS는 블록 및 �
 
 ## 참조 항목
 
-- [CSS 기본 상자 모델](/ko/docs/Web/CSS/CSS_box_model)
+- [CSS 기본 상자 모델](/ko/docs/Web/CSS/Guides/Box_model)
 - _[일반 대열](/ko/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)_ - 레이아웃 살펴보기
 - [인라인 요소](/ko/docs/Glossary/Inline-level_content)
 - [블락 수준 요소](/ko/docs/Glossary/Block-level_content)

@@ -3,7 +3,7 @@ title: Каким должен быть ваш веб-сайт?
 slug: Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}
 
 _Каким должен быть ваш веб-сайт?_ обсудите план и дизайн веб-сайта, _прежде_ чем приступить к написанию кода, в том числе "Какую информацию будет содержать мой веб-сайт?" "Какие шрифты и цвета я хочу использовать?" "Что будет делать мой сайт?"
 
@@ -41,7 +41,7 @@ _Каким должен быть ваш веб-сайт?_ обсудите пл
 
 ### Цветовая схема
 
-Чтобы выбрать цвет, перейдите в [инструмент выбора цвета](/ru/docs/Web/CSS/CSS_colors/Color_format_converter) и выберите цвет, который вам нравится. Когда вы щёлкните по цвету, вы увидите странный код из шести цифр, например, `#660066`. Это называется _шестнадцатеричный код (hex(adecimal) code)_ и он представляет ваш цвет. Скопируйте это код куда-нибудь прямо сейчас.
+Чтобы выбрать цвет, перейдите в [инструмент выбора цвета](/ru/docs/Web/CSS/Guides/Colors/Color_format_converter) и выберите цвет, который вам нравится. Когда вы щёлкните по цвету, вы увидите странный код из шести цифр, например, `#660066`. Это называется _шестнадцатеричный код (hex(adecimal) code)_ и он представляет ваш цвет. Скопируйте это код куда-нибудь прямо сейчас.
 
 ![](screenshot_from_2014-11-03_17-40-49.png)
 
@@ -75,4 +75,4 @@ _Каким должен быть ваш веб-сайт?_ обсудите пл
 
 ![](font2.png)
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website")}}

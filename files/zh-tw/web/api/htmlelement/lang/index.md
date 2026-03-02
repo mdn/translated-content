@@ -1,30 +1,26 @@
 ---
-title: HTMLElement.lang
+title: HTMLElement：lang 屬性
+short-title: lang
 slug: Web/API/HTMLElement/lang
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.lang`** 屬性（{{Glossary("property")}}）可以讀取或設定一個表示元素之語系的標籤屬性（{{Glossary("attribute")}}）值。
+{{domxref("HTMLElement")}} 介面的 **`lang`** 屬性以 {{glossary("BCP 47 language tag", "BCP 47 語言標籤")}}的形式，表示元素屬性值與文字內容的基礎語言。它反映了元素的 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/lang) 屬性；`xml:lang` 屬性不影響此屬性。
 
-`HTMLElement.lang` 屬性所回傳的語系代碼定義於網際網路工程任務小組（IETF）的 [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) 文件中。常見的例子如 "en" 代表英語、"ja" 代表日語、"es" 代表西班牙語等等。此標籤屬性的預設值為 `unknown`。請留意，雖然此標籤屬性於個別層級的元素上是有效的，但大部分都設定於文件的根元素。
+注意，如果未指定 `lang` 屬性，元素本身仍可能從其父元素繼承語言。然而，該繼承的語言不會反映在此屬性的值中。
 
-`HTMLElement.lang` 屬性只對 `lang` 標籤屬性有作用，而不是 `xml:lang`。
+## 值
 
-## 語法
-
-```plain
-var languageUsed = elementNodeReference.lang; // Get the value of lang
-elementNodeReference.lang = NewLanguage; // Set new value for lang
-```
-
-_languageUsed_ is a string variable that gets the language in which the text of the current element is written. _NewLanguage_ is a string variable with its value setting the language in which the text of the current element is written.
+一個字串。常見的範例包括代表英文的「en」、代表日文的「ja」、代表西班牙文的「es」等等。如果未指定，則值為空字串。
 
 ## 範例
 
 ```js
-// this snippet compares the base language and
-// redirects to another url based on language
+// 此片段比較基礎語言，並
+// 根據語言重新導向至另一個 URL
 if (document.documentElement.lang === "en") {
   window.location.href = "Some_document.html.en";
 } else if (document.documentElement.lang === "ru") {
@@ -35,3 +31,7 @@ if (document.documentElement.lang === "en") {
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}

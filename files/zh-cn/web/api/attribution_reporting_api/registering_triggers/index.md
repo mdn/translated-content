@@ -85,7 +85,7 @@ l10n:
 
    同样，请参见 {{httpheader("Attribution-Reporting-Register-Trigger")}} 以获取所有可用字段的详细描述。
 
-3. 当用户与归因触发器交互时，浏览器会尝试将触发器与浏览器私有本地缓存中存储的任何归因来源条目进行匹配。要成功匹配，`Attribution-Reporting-Register-Trigger` 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) 必须与 {{httpheader("Attribution-Reporting-Register-Source")}} 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data) 中提供的一个值匹配，并且注册触发器的顶级页面的站点（方案 + [eTLD+1](/zh-CN/docs/Glossary/eTLD)）必须：
+3. 当用户与归因触发器交互时，浏览器会尝试将触发器与浏览器私有本地缓存中存储的任何归因来源条目进行匹配。要成功匹配，`Attribution-Reporting-Register-Trigger` 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) 必须与 {{httpheader("Attribution-Reporting-Register-Source")}} 的 [`"trigger_data"`](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data) 中提供的一个值匹配，并且注册触发器的顶级页面的站点（方案 + {{glossary("registrable domain", "可注册域名")}}）必须：
    - 与来源的相关数据中指定的 `destination` 的站点之一匹配。
    - 与指定来源注册的请求同源。
 

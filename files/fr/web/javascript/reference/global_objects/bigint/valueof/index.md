@@ -1,31 +1,36 @@
 ---
-title: BigInt.prototype.valueOf()
+title: "BigInt : méthode valueOf()"
+short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`valueOf()`** des valeurs {{JSxRef("BigInt")}} retourne la valeur primitive encapsulée dans un objet {{JSxRef("BigInt")}}.
 
-La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.
-
-{{InteractiveExample("JavaScript Demo: BigInt.valueOf()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: BigInt.prototype.valueOf()", "shorter")}}
 
 ```js interactive-example
 console.log(typeof Object(1n));
-// Expected output: "object"
+// Sortie attendue : "object"
 
 console.log(typeof Object(1n).valueOf());
-// Expected output: "bigint"
+// Sortie attendue : "bigint"
 ```
 
 ## Syntaxe
 
-```js
-bigIntObj.valueOf();
+```js-nolint
+valueOf()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un grand entier (_big int_) représentant la valeur primitive de l'objet {{jsxref("BigInt")}} courant.
+Un `BigInt` représentant la valeur primitive de l'objet {{JSxRef("BigInt")}} défini.
 
 ## Exemples
 
@@ -46,4 +51,4 @@ typeof Object(1n).valueOf(); // bigint
 
 ## Voir aussi
 
-- {{jsxref("BigInt.prototype.toString()")}}
+- La méthode {{JSxRef("BigInt.prototype.toString()")}}

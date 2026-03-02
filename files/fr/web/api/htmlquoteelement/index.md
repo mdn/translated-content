@@ -1,24 +1,26 @@
 ---
 title: HTMLQuoteElement
 slug: Web/API/HTMLQuoteElement
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLQuoteElement`** fournit des propriétés et méthodes (en complément de celles fournies par l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) dont elle hérite) pour manipuler les éléments de citation comme [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) et [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite).
+L'interface **`HTMLQuoteElement`** fournit des propriétés et méthodes spécifiques (en plus de l'interface {{DOMxRef("HTMLElement")}} dont elle hérite) pour manipuler les éléments de citation, comme {{HTMLElement("blockquote")}} et {{HTMLElement("q")}}, mais pas l'élément {{HTMLElement("cite")}}.
 
 {{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
-_Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- [`HTMLQuoteElement.cite`](/fr/docs/Web/API/HTMLQuoteElement/cite)
-  - : Une chaîne de caractères qui reflète la valeur de l'attribut HTML [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#attr-cite), qui contient une URL pour la source de la citation.
+- {{DOMxRef("HTMLQuoteElement.cite")}}
+  - : Une chaîne de caractères reflétant l'attribut HTML [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#cite), contenant une URL pour la source de la citation.
 
-## Méthodes
+## Méthodes d'instance
 
-_Cette interface n'a pas de méthode spécifique, elle hérite des méthodes de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLElement)._
+_Aucune méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -30,4 +32,4 @@ _Cette interface n'a pas de méthode spécifique, elle hérite des méthodes de 
 
 ## Voir aussi
 
-- Les éléments HTML qui portent cette interface&nbsp;: [`<blockquote>`](/fr/docs/Web/HTML/Reference/Elements/blockquote) et [`<q>`](/fr/docs/Web/HTML/Reference/Elements/q), mais pas [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite).
+- Les éléments HTML qui implémentent cette interface&nbsp;: {{HTMLElement("blockquote")}} et {{HTMLElement("q")}}, mais pas {{HTMLElement("cite")}}.

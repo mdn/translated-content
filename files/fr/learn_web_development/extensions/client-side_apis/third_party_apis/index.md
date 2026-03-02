@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 original_slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par le navigateur. Il en existe d'autres&nbsp;: de nombreux sites et services, tels que Google Maps, Twitter, Facebook, PayPal, etc. fournissent des API permettant aux développeuses et développeurs d'exploiter leurs données (par exemple d'afficher un flux Twitter sur un blog) ou leurs services (utiliser l'outil de connexion Facebook pour que des personnes se connectent par ce biais à votre application). Dans cet article, nous verrons les différences entre les API du navigateur et celles fournies par des services tiers (en anglais, on parle de «&nbsp;<i lang="en">third-party API</i>&nbsp;») et nous illustrerons certains cas d'usage pour ces API tierces.
 
@@ -12,11 +12,20 @@ Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par l
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Les bases de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas en JavaScript</a>, <a href="/fr/docs/Apprendre/JavaScript/Building_blocks">les blocs de construction du langage</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets JavaScript</a>), <a href="/fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Introduction">les notions de base des API côté client</a>.</td>
+      <td>
+        Connaissance de base de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, en particulier <a href="/fr/docs/Learn_web_development/Core/Scripting/Object_basics">les bases des objets JavaScript</a> et les API principales comme <a href="/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting">le scripting DOM</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Network_requests">les requêtes réseau</a>.
+      </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Comprendre le fonctionnement des API tierces et comment les utiliser pour ajouter des fonctionnalités à ses sites ou applications.</td>
+      <th scope="row">Objectifs d'apprentissage&nbsp;:</th>
+      <td>
+        <ul>
+          <li>Les concepts derrière les API tierces et les schémas associés comme les clés d'API.</li>
+          <li>Utiliser une API de cartographie tierce.</li>
+          <li>Utiliser une API RESTful.</li>
+          <li>Utiliser les API YouTube de Google.</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -406,4 +415,4 @@ Pour le faire fonctionner, vous devrez&nbsp;:
 
 Dans cet article, nous avons vu une introduction à l'utilisation des API tierces afin d'ajouter des fonctionnalités à nos sites web.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}

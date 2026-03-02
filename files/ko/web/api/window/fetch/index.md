@@ -75,7 +75,7 @@ fetch(resource, options)
     - `referrerPolicy`
       - : 요청에 사용할 [리퍼러 정책](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)을 지정합니다. `no-referrer`, `no-referrer-when-downgrade`, `same-origin`, `origin`, `strict-origin`, `origin-when-cross-origin`, `strict-origin-when-cross-origin`, `unsafe-url` 중 하나를 사용할 수 있습니다.
     - `integrity`
-      - : 요청의 [하위 리소스 무결성](/ko/docs/Web/Security/Subresource_Integrity)을 지정합니다. (예시: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)
+      - : 요청의 [하위 리소스 무결성](/ko/docs/Web/Security/Defenses/Subresource_Integrity)을 지정합니다. (예시: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`)
     - `keepalive`
       - : 요청이 페이지 수명보다 오래 지속되는 걸 허용합니다. `keepalive` 플래그는 {{domxref("Navigator.sendBeacon()")}} API의 대체제입니다.
     - `signal`

@@ -1,12 +1,11 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-variation-settings
-original_slug: Web/CSS/@font-face/font-variation-settings
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.
 
 Depuis que ce descripteur définit des valeurs de variation sur l'objet de police dans la règle `@font-face` et non sur un élément entier, seuls certains glyphes d'un élément peuvent être rendus à l'aide de ce descripteur.
 
@@ -25,7 +24,7 @@ font-variation-settings: "xhgt" 0.7;
 - `normal`
   - : Le texte est disposé avec les paramètres par défaut.
 - `<string> <number>`
-  - : Lorsque le texte est affiché, la liste des noms des axes OpenType est envoyée au moteur afin d'activer ou de désactiver des paramètres de la police. Chaque paramètre se compose d'un nom ({{cssxref("&lt;string&gt;")}}) de 4 caractères ASCII, suivis d'un nombre ({{cssxref("number")}}) qui indique la valeur de l'axe. Si la chaîne de caractères contient moins ou plus de caractères ou contient des caractères en dehors de l'intervalle de points de code U+20 - U+7E, la propriété entière sera considérée comme invalide. Le nombre utilisé peut être décimal ou négatif.
+  - : Lorsque le texte est affiché, la liste des noms des axes OpenType est envoyée au moteur afin d'activer ou de désactiver des paramètres de la police. Chaque paramètre se compose d'un nom ({{CSSxRef("&lt;string&gt;")}}) de 4 caractères ASCII, suivis d'un nombre ({{CSSxRef("number")}}) qui indique la valeur de l'axe. Si la chaîne de caractères contient moins ou plus de caractères ou contient des caractères en dehors de l'intervalle de points de code U+20 - U+7E, la propriété entière sera considérée comme invalide. Le nombre utilisé peut être décimal ou négatif.
 
 ## Définition formelle
 
@@ -61,11 +60,11 @@ font-variation-settings: "xhgt" 0.7;
 
 ## Voir aussi
 
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/src", "src")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}

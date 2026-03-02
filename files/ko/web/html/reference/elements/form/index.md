@@ -46,7 +46,7 @@ label {
 }
 ```
 
-`<form>` 요소를 꾸밀 땐, 모든 {{domxref("HTMLFormElement.elements", "elements")}}의 유효성을 나타내는 CSS {{cssxref(":valid")}}와 {{cssxref(":invalid")}} [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)를 사용할 수 있습니다.
+`<form>` 요소를 꾸밀 땐, 모든 {{domxref("HTMLFormElement.elements", "elements")}}의 유효성을 나타내는 CSS {{cssxref(":valid")}}와 {{cssxref(":invalid")}} [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)를 사용할 수 있습니다.
 
 <table class="properties">
   <tbody>

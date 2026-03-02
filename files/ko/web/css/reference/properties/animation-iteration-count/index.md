@@ -140,7 +140,7 @@ animation-iteration-count: unset;
   - : 애니메이션이 반복되는 횟수입니다. 기본값은 1로 지정되어 있습니다. 애니메이션 주기의 일부분만 재생하기 위해 정수가 아닌 값을 지정할 수 있습니다. 예를 들어, `0.5`는 애니메이션 주기의 절반만 재생합니다. 음수 값은 유효하지 않습니다.
 
 > [!NOTE]
-> `animation-*` 속성에 여러 개의 쉼표로 구분된 값을 지정하면 {{cssxref("animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values)을 참조하십시오.
+> `animation-*` 속성에 여러 개의 쉼표로 구분된 값을 지정하면 {{cssxref("animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values)을 참조하십시오.
 
 > [!NOTE]
 > [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때, `animation-iteration-count` 속성을 지정하면 타임라인이 진행되는 동안 애니메이션이 해당 횟수만큼 반복됩니다. `animation-iteration-count` 속성을 지정하지 않으면, 애니메이션은 한 번만 실행됩니다. `infinite`는 스크롤 기반 애니메이션에서 유효한 값이지만 애니메이션이 작동하지 않게 됩니다.
@@ -197,7 +197,7 @@ animation-iteration-count: unset;
 
 {{EmbedLiveSample("Setting iteration count","100%","250")}}
 
-다른 예제들은 [CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)을 참조하세요.
+다른 예제들은 [CSS animations](/ko/docs/Web/CSS/Guides/Animations/Using)을 참조하세요.
 
 ## 명세서
 
@@ -209,6 +209,6 @@ animation-iteration-count: unset;
 
 ## 같이 보기
 
-- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 애니메이션 사용하기](/ko/docs/Web/CSS/Guides/Animations/Using)
 - JavaScript {{domxref("AnimationEvent")}} API
 - 애니메이션과 관련된 다른 CSS 속성: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}, {{cssxref("animation-timing-function")}}

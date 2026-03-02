@@ -1,12 +1,11 @@
 ---
 title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
-original_slug: Web/CSS/dashed-ident
 l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
+**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、{{glossary("identifier", "識別子")}}として使用される任意の文字列を示します。
 
 ## 構文
 
@@ -14,7 +13,7 @@ l10n:
 
 先頭に 2 つのダッシュをつけることで、 CSS コードブロックを読むときに簡単に識別でき、標準 CSS キーワードとの名前の衝突を避けることができます。
 
-[`<custom-ident>`](/ja/docs/Web/CSS/Reference/Values/custom-ident) と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [CSS](/ja/docs/Web/CSS) は `<dashed-ident>` を定義しません。
+{{cssxref("custom-ident")}} と同様に、 `<dashed-ident>` はユーザーによって識別されますが、 `<custom-ident>` とは異なり、 [CSS](/ja/docs/Web/CSS) は `<dashed-ident>` を定義していません。
 
 ## 例
 
@@ -65,9 +64,9 @@ h6 {
 
 ```css
 @font-palette-values --my-palette {
-  font-family: Bixa;
+  font-family: "Bixa";
   base-palette: 1;
-  override-colors: 0 #ff0000;
+  override-colors: 0 red;
 }
 
 h1,

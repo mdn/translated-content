@@ -8,7 +8,7 @@ CSS 그리드 레이아웃은 레이아웃 작업을 위한 전체 시스템 중
 
 ## 그리드와 플랙스박스
 
-CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout)의 기본 차이점이라면, 플랙스박스는 한 줄로 된 행 _혹은_ 열 방향의 레이아웃과 같이 일차원의 레이아웃을 염두에 두고 설계되었다는 점입니다. 하지만, 그리드는 행과 열 모두를 염두에 둔 2차원적 레이아웃을 고려해서 설계되었습니다. 그러나 두 기술은 몇 가지 공통된 면모를 공유하고 있어서, 이미 플랙스박스 사용법을 익히셨다면 그리드를 이해하는 데도 도움이 될 만한 둘 사이의 유사점을 목격하실 수도 있습니다.
+CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/docs/Web/CSS/Guides/Flexible_box_layout)의 기본 차이점이라면, 플랙스박스는 한 줄로 된 행 _혹은_ 열 방향의 레이아웃과 같이 일차원의 레이아웃을 염두에 두고 설계되었다는 점입니다. 하지만, 그리드는 행과 열 모두를 염두에 둔 2차원적 레이아웃을 고려해서 설계되었습니다. 그러나 두 기술은 몇 가지 공통된 면모를 공유하고 있어서, 이미 플랙스박스 사용법을 익히셨다면 그리드를 이해하는 데도 도움이 될 만한 둘 사이의 유사점을 목격하실 수도 있습니다.
 
 ### 1차원적 대비 2차원적 레이아웃
 
@@ -110,7 +110,7 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 그리드와 플랙스박스 둘 사이의 선택을 고민할 때 자신에게 던질 수 있는 간단한 질문으로:
 
 - 레이아웃을 조정할 때 오직 가로 행 **_혹은_** 세로 열 만이 고려 대상이라면 – 플랙스박스를 사용하십시오
-- 레아아웃을 조정할 때 가로 행과 세로 열 **_모두_**를 염두에 두어야 한다면 – 그리드를 사용하십시오
+- 레아아웃을 조정할 때 가로 행과 세로 열 ***모두***를 염두에 두어야 한다면 – 그리드를 사용하십시오
 
 ### 콘텐츠 중심 혹은 레이아웃 먼저?
 
@@ -591,13 +591,13 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout)
 4. **가이드**
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
    8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)

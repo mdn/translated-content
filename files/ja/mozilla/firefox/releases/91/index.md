@@ -33,7 +33,7 @@ l10n:
 
 ### HTTP
 
-- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を要求するようになりました ([Firefox バグ 1704005](https://bugzil.la/1704005))。
+- [Gamepad API](/ja/docs/Web/API/Gamepad_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts) を要求するようになりました ([Firefox バグ 1704005](https://bugzil.la/1704005))。
 
 ### API
 

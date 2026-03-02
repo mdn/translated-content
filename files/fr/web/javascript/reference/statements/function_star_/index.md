@@ -47,7 +47,7 @@ Les générateurs sont des fonctions qu'il est possible de quitter puis de repre
 
 Les générateurs, combinés avec [les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises), sont des outils de programmation asynchrones puissants qui permettent de réduire les inconvénients causés par les _callbacks_ (fonctions de rappel) et [l'inversion de contrôle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 
-Lorsqu'on appelle une fonction génératrice, son corps n'est pas exécuté immédiatement, c'est un {{jsxref("Les_protocoles_iteration","itérateur","#Le_protocole_.C2.AB_it.C3.A9rateur_.C2.BB",1)}} qui est renvoyé pour la fonction. Lorsque la méthode `next()` de l'itérateur est appelée, le corps de la fonction génératrice est utilisé jusqu'à ce que la première expression {{jsxref("Opérateurs/yield", "yield")}} soit trouvée. Cette expression définira la valeur à renvoyer pour l'itérateur. Si on utilise {{jsxref("Opérateurs/yield*", "yield*")}}, on pourra déléguer la génération des valeurs à une autre fonction génératrice. La méthode `next()` renvoie un objet dont la propriété `value` contient la valeur générée et une propriété `done` qui indique si le générateur a produit sa dernière valeur ou non. Lorsqu'on appelle la méthode `next()` avec un argument, cela reprendra l'exécution de la fonction génératrice et remplacera la valeur de l'expression `yield` (là où l'exécution avait été interrompue) avec la valeur de l'argument passé à `next()`.
+Lorsqu'on appelle une fonction génératrice, son corps n'est pas exécuté immédiatement, c'est un {{jsxref("Les_protocoles_iteration","itérateur","#le_proprocole_itérateur",1)}} qui est renvoyé pour la fonction. Lorsque la méthode `next()` de l'itérateur est appelée, le corps de la fonction génératrice est utilisé jusqu'à ce que la première expression {{jsxref("Opérateurs/yield", "yield")}} soit trouvée. Cette expression définira la valeur à renvoyer pour l'itérateur. Si on utilise {{jsxref("Opérateurs/yield*", "yield*")}}, on pourra déléguer la génération des valeurs à une autre fonction génératrice. La méthode `next()` renvoie un objet dont la propriété `value` contient la valeur générée et une propriété `done` qui indique si le générateur a produit sa dernière valeur ou non. Lorsqu'on appelle la méthode `next()` avec un argument, cela reprendra l'exécution de la fonction génératrice et remplacera la valeur de l'expression `yield` (là où l'exécution avait été interrompue) avec la valeur de l'argument passé à `next()`.
 
 On peut utiliser une instruction `return` dans un générateur. Lorsque cette instruction sera exécutée, le générateur sera terminé (`done` vaudra `true`). La valeur renvoyée par l'instruction `return` sera la valeur de terminaison du générateur. Une fois qu'un générateur est terminé, il ne peut plus produire d'autres valeurs.
 
@@ -199,7 +199,7 @@ console.log(truc.next()); // {value: 10, done: false}
 
 - L'expression {{jsxref("Opérateurs/function*", "function*")}}
 - L'objet {{jsxref("GeneratorFunction")}}
-- {{jsxref("Les_protocoles_iteration","itérateur","#Le_protocole_.C2.AB_it.C3.A9rateur_.C2.BB",1)}}
+- {{jsxref("Les_protocoles_iteration","itérateur","#le_protocole_itérateur",1)}}
 - {{jsxref("Opérateurs/yield", "yield")}}
 - {{jsxref("Opérateurs/yield*", "yield*")}}
 - L'objet {{jsxref("Function")}}

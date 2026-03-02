@@ -1,9 +1,8 @@
 ---
 title: minmax()
 slug: Web/CSS/Reference/Values/minmax
-original_slug: Web/CSS/minmax
 l10n:
-  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
+  sourceCommit: c1c83d2f84db361bdef77913ec783eed61d5c16c
 ---
 
 **`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)で使用されます。
@@ -45,7 +44,7 @@ grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   text-align: left;
 }
@@ -82,29 +81,31 @@ minmax(auto, 300px)
 
 _min_ および _max_ の 2 つの引数を取る関数です。
 
-どちらの引数も `<length>`, `<percentage>`, `<flex>`, またはキーワード値 `max-content`, `min-content`, `auto` のうちの一つを取ります。
+どちらの引数も `<length>`, `<percentage>`, またはキーワード値 `max-content`, `min-content`, `auto` のうちの一つを取ります。
 
-もし _min_ が _max_ より大きい場合は無視され、 `minmax(min,max)` は _min_ として扱われます。最大値として、 {{cssxref("flex_value","&lt;flex&gt;")}} 値はグリッドトラックのフレックス係数を設定します。それは _min_ としては無効です。
+2 つ目の引数 _max_ は、{{cssxref("flex_value","&lt;flex&gt;")}} の値も同時に受け入れます。（この `fr` 単位は _max_ でのみ使用できるものであり、_min_ では不正な値となります。）
+
+_max_ < _min_ であった場合、_max_ は無視され、`minmax(min,max)` は _min_ となります。
 
 ### 値
 
 - {{cssxref("&lt;length&gt;")}}
   - : 負ではない寸法。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 負ではないパーセント値で、列グリッドトラックのグリッドコンテナーのインライン寸法、および行グリッドトラックのグリッドコンテナーのブロック寸法からの相対値。グリッドコンテナーの寸法がトラックの寸法に依存する場合、 `<percentage>` は `auto` として扱う必要があります。{{glossary("user agent", "ユーザーエージェント")}}は、グリッドコンテナーの寸法に対するトラックの固有の寸法の貢献度を調整し、パーセント値を尊重して最小限の量だけトラックの最終的な寸法を増加させることがあります。
+  - : 負ではないパーセント値で、列のグリッドトラックのグリッドコンテナーのインラインサイズ、および行グリッドトラックのグリッドコンテナーのブロックサイズに対する割合。グリッドコンテナーのサイズがトラックのサイズに依存する場合、 `<percentage>` は `auto` として扱う必要があります。{{glossary("user agent", "ユーザーエージェント")}}は、グリッドコンテナーの寸法に対するトラックの固有の寸法の貢献度を調整し、パーセント値を尊重して最小限の量だけトラックの最終的な寸法を増加させることがあります。
 - {{cssxref("&lt;flex&gt;")}}
   - : 単位 `fr` がついた負ではない寸法で、トラックのフレックス係数を指定します。それぞれの `<flex>` による寸法のトラックは、フレックス係数の割合に従って残りの空間を配分します。
-- `max-content`
+- {{cssxref("max-content")}}
   - : グリッドトラックを占めるグリッドアイテムの max-content の貢献度の最大値を表します。
-- `min-content`
+- {{cssxref("min-content")}}
   - : グリッドトラックを占めるグリッドアイテムの min-content の貢献度の最大値を表します。
 - `auto`
   - : `min` として使用した場合、グリッドトラックを占めるグリッドアイテムの最大最小サイズ（{{cssxref("min-width")}}/{{cssxref("min-height")}} で指定）を表します。
     `max` として使用した場合は、 `max-content` と同じです。ただし、 `max-content` とは異なり、 `normal` や `stretch` のように {{cssxref("align-content")}} や {{cssxref("justify-content")}} プロパティ値によるトラックの拡張が可能です。
 
-### 形式文法
+## 形式文法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ### CSS プロパティ
 

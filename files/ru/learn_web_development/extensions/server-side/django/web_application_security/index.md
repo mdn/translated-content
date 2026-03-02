@@ -3,7 +3,7 @@ title: Безопасность веб-приложения Django
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Защита пользовательских данных - важная часть проектирования любого веб-сайта.Ранее мы рассматривали некоторые наиболее распространённые угрозы безопасности в теме [Веб безопасность](/ru/docs/Web/Security). В данной статье будет представлена практическая демонстрация того, как встроенные механизмы защиты Django's обрабатывают подобные угрозы.
 
@@ -176,7 +176,7 @@ Django имеет методы обеспечения защиты от расп
 - [Веб безопасность](/ru/docs/Web/Security) (MDN)
 - [Безопасность вашего сайта](/ru/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 ## In this module
 

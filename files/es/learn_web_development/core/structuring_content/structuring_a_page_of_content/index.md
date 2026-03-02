@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_a_page_of_conte
 original_slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 La estructuración de una página de contenido lista para su uso mediante CSS es una habilidad muy importante para dominar, por lo que en esta evaluación verá su capacidad para pensar en cómo podría finalizar una página buscando y eligiendo la semántica estructural adecuada para construir un diseño en la parte superior.
 
@@ -90,4 +90,4 @@ La siguiente captura de pantalla muestra un ejemplo de cómo podría verse la le
 
 Si está siguiendo esta evaluación como parte de un curso organizado, debe ser capaz de dar su trabajo a su maestro / mentor para el marcado. Si usted está aprendiendo por si mismo, entonces puede obtener la guía de marcado con bastante facilidad preguntando sobre ello en la lista de correo [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc), o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Pruebe a hacer el ejercicio primero - ¡No hay nada que ganar por hacer trampa!
 
-{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenu("Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "conflicting/Learn_web_development/Core/Structuring_content")}}

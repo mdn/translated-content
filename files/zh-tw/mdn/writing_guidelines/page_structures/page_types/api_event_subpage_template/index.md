@@ -51,7 +51,7 @@ l10n:
 >
 > 需要根據以下建議更新或刪除這些巨集：
 >
-> - `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，指示該技術僅在[安全性上下文](/zh-TW/docs/Web/Security/Secure_Contexts)中可用。如果不是，則可以刪除巨集呼叫。如果是，則也應在[僅限安全性上下文的功能](/zh-TW/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)頁面中填入該巨集所呼叫的條目。
+> - `\{{SecureContext_Header}}`——這會產生一個**安全上下文**橫幅，指示該技術僅在[安全性上下文](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts)中可用。如果不是，則可以刪除巨集呼叫。如果是，則也應在[僅限安全性上下文的功能](/zh-TW/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)頁面中填入該巨集所呼叫的條目。
 > - `\{{AvailableInWorkers}}`——這會產生一個 **Worker 可用**註釋，表示該技術在 [Worker 上下文](/zh-TW/docs/Web/API/Web_Workers_API)中可用。如果它僅在 Window 上下文中可用，則可以刪除此巨集呼叫。如果它也可用或僅在 Worker 上下文中可用，那麼由於它的可用性，你可能還需要向其傳遞參數（有關所有可用值，請參閱 [\\{{AvailableInWorkers}} 巨集原始碼](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)），你可能還需要在 [Worker 中可用的 Web API](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#worker_中可用的_web_api) 頁面中為其填入項目。
 > - `\{{APIRef("GroupDataName")}}`——這將產生左側參考側邊欄，顯示與目前頁面相關的快速參考連結。例如，[WebVR API](/zh-TW/docs/Web/API/WebVR_API) 中的每個頁面都有相同的側邊欄，指向 API 中的其他頁面。若要為你的 API 產生正確的側邊欄，你需要在我們的 GitHub 倉庫中新增一個 GroupData 條目，並在巨集呼叫中包含該條目的名稱來取代 _GroupDataName_。有關如何操作的信息，請參閱我們的 [API 參考側邊欄](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)指南。
 >

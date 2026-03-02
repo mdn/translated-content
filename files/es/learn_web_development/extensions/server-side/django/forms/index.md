@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Forms
 original_slug: Learn/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 
@@ -15,7 +15,7 @@ En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y
       <td>
         Completar todos los temas de tutoriales anteriores, incluyendo
         <a
-          href="/es/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Authentication_and_sessions"
           >Tutorial Django Parte 8: Autenticación y permisos de usuarios</a
         >.
       </td>
@@ -663,4 +663,4 @@ Hay mucho más que se puede hacer con los formularios (consulte nuestra lista Ve
 - [Creating forms from models](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/) (Django docs)
 - [Generic editing views](https://docs.djangoproject.com/en/1.10/ref/class-based-views/generic-editing/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

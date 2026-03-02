@@ -70,7 +70,7 @@ requestStorageAccess(types)
     - `types` 引数が与えられており、すべてのプロパティが `false` である場合。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 次のような場合に発生します。
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)ではない場合。
     - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
     - この文書または最上位の文書のオリジンが `null` である場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。

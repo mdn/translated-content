@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no se muestra en el navegador cuando se carga la página. Contiene información como el título ({{htmlelement("title")}}) de la página, enlaces al {{Glossary("CSS")}} (si quieres aplicar estilo a tu contenido HTML con CSS), enlaces para personalizar `favicon`, y otros metadatos (datos sobre el HTML, como quién lo escribió y palabras claves importantes que describen el documento). En este artículo abarcaremos todo esto y más, para darte bases sólidas en el manejo del marcado y otro código que debería estar presente en tu cabecera.
 
@@ -14,7 +14,7 @@ El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no
       <th scope="row">Prerrequisitos:</th>
       <td>
         Estar familiarizado con el HTML básico, que se expone en
-        [Empezar con el HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started).
+        [Empezar con el HTML](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax).
       </td>
     </tr>
     <tr>
@@ -298,4 +298,4 @@ El estándar [ISO_639-1](https://es.wikipedia.org/wiki/ISO_639-1) define estos c
 
 Esto marca el final de nuestra guía rápida del {{Glossary("head")}} de HTML — aún hay muchas más cosas que puedes hacer aquí, pero una guía exhaustiva puede ser aburrida y confusa a estas alturas, ¡y nosotros queremos darte una idea de las cuestiones más comunes con las que te encontrarás aquí por ahora! En el siguiente artículo veremos los fundamentos de texto de HTML.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}

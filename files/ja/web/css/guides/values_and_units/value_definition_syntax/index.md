@@ -1,9 +1,8 @@
 ---
 title: 値定義構文
 slug: Web/CSS/Guides/Values_and_units/Value_definition_syntax
-original_slug: Web/CSS/CSS_values_and_units/Value_definition_syntax
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS の値定義構文**は、形式文法であり、 CSS プロパティや関数の有効な値の組み合わせ定義するのに使われます。この構文に加えて、有効な値の組み合わせは意味的な制約で有効値の集まりをさらに制限できます (例えば、数値を正の値に限定します)。
@@ -32,7 +31,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 #### 基本データ型
 
-データの種類によっては CSS 全体で使われ、仕様書のすべての値に一度だけ定義されるものがあります。これは「基本データ型」と呼ばれ、名前を記号 '`<`' と '`>`' で囲って表現されます。例: {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
+データの種類によっては CSS 全体で使われ、仕様書のすべての値に一度だけ定義されるものがあります。これは「基本データ型」と呼ばれ、名前を記号 `<` と `>` で囲って表現されます。例: {{cssxref("angle")}}, {{CSSxRef("&lt;string&gt;")}}, …
 
 #### 非終端データ型
 
@@ -103,7 +102,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 ### 二重バー
 
-2 つ以上の成分を二重バー `||` で区切ると、すべての対象が省略可能であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の値定義に使われます。
+2 つ以上の成分を二重バー `||` で区切ると、それぞれが選択肢であることを意味します。**少なくともいずれか 1 つが存在する必要がありますが、順序は問いません**。[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の値定義に使われます。
 
 {{CSSSyntaxRaw(`example = <number> || <length> || <color>`)}}
 
@@ -282,7 +281,7 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 ## 範囲の角括弧記法 (`[min,max]`)
 
-特定の範囲内の数値を受け入れることができる型もあります。例えば、 [`column-count`](/ja/docs/Web/CSS/Reference/Properties/column-count) プロパティは、正の値 1 から無限大までの整数値を受け入れることができます。対応する構文は次のようになります。
+特定の範囲内の数値を受け入れることができる型もあります。例えば、{{cssxref("column-count")}} プロパティは、正の値 1 から無限大までの整数値を受け入れることができます。対応する構文は次のようになります。
 
 {{CSSSyntaxRaw(`example = <integer [1,∞]>`)}}
 
@@ -413,7 +412,6 @@ CSS では、スラッシュ (`/`) やカンマ (`,`) のようないくつか�
 
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
-  - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
   - [コメント](/ja/docs/Web/CSS/Guides/Syntax/Comments)
   - [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
   - [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance)

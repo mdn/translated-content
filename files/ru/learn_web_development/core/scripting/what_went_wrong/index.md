@@ -3,7 +3,7 @@ title: Что пошло не так? Устранение ошибок JavaScri
 slug: Learn_web_development/Core/Scripting/What_went_wrong
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Когда вы создали игру «Угадай номер» в предыдущей статье, вы, возможно, обнаружили, что она не работает. Не бойтесь — эта статья призвана избавить вас от разрыва волос над такими проблемами, предоставив вам несколько простых советов о том, как найти и исправить ошибки в программах JavaScript.
 
@@ -227,4 +227,4 @@ function checkGuess( {
 - Есть много других типов ошибок, которые не перечислены здесь; мы составляем ссылку , которая объясняет , что они означают подробно - см. [ссылку ошибки JavaScript](/ru/docs/Web/JavaScript/Reference/Errors) .
 - Если вы столкнётесь с любыми ошибками в коде, которые вы не знаете , как исправить после прочтения этой статьи, вы можете получить помощь! Спросите на [нить обучения Область дискурсе](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) , или в [#mdn](irc://irc.mozilla.org/mdn) IRC канал на [Mozilla IRC](https://wiki.mozilla.org/IRC). Расскажите нам, какая у вас ошибка, и мы постараемся вам помочь. Приложите пример своего кода для большей ясности проблемы.
 
-{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги/Variables", "Learn/JavaScript/Первые_шаги")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting/Variables", "conflicting/Learn_web_development/Core/Scripting")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 26a87658fdd41e4d55dfd9cd3e9c1025e3038988
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 다음으로 살펴볼 선택자의 종류는 **의사 클래스** 및 **의사 요소**라고 합니다. 여러 개가 있으며, 종종 매우 특정한 목적을 위해 사용됩니다. 사용 방법을 알게 되면 목록을 보고 달성하려는 작업에 적합한 것이 있는지 확인할 수 있습니다. 다시 한 번 각 선택자에 대한 관련 MDN 페이지는 브라우저 지원을 설명하는 데 도움이 됩니다.
 
@@ -98,7 +98,7 @@ article p:first-child {
 
 모든 의사 클래스는 이와 같은 방식으로 작동합니다. HTML에 클래스를 추가한 것처럼 동작하여 특정 상태에 있는 문서의 일부를 대상으로 합니다. MDN의 다른 예를 살펴보십시오.
 
-- [`:last-child`](/ko/docs/Web/CSS/:last-child)
+- [`:last-child`](/ko/docs/Web/CSS/Reference/Selectors/:last-child)
 - [`:only-child`](/ko/docs/Web/CSS/:only-child)
 - [`:invalid`](/ko/docs/Web/CSS/:invalid)
 
@@ -109,8 +109,8 @@ article p:first-child {
 
 일부 의사 클래스는 사용자가 어떤 방식으로든 문서와 상호 작용할 때만 적용됩니다. **동적 의사 클래스**라고도 하는 이러한 **사용자 행동** 의사 클래스는 사용자가 요소와 상호 작용할 때 클래스가 요소에 추가된 것처럼 작동합니다. 예를 들면, 다음과 같습니다.
 
-- [`:hover`](/ko/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/ko/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
+- [`:hover`](/ko/docs/Web/CSS/Reference/Selectors/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
+- [`:focus`](/ko/docs/Web/CSS/Reference/Selectors/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
 ```html live-sample___hover
 <p><a href="">Hover over me</a></p>
@@ -250,7 +250,7 @@ CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 
 
 ## See also
 
-- [Pseudo-classes reference](/ko/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-elements reference](/ko/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes reference](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [Pseudo-elements reference](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}

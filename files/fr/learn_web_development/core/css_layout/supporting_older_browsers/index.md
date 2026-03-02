@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 ---
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
 Dans ce module, nous vous recommandons d'utiliser Flexbox et les grilles CSS comme principales méthodes de mise en page de vos créations. Cependant, certains visiteurs de votre site utilisent des navigateurs plus anciens ou qui ne prennent pas en charge les méthodes que vous avez utilisées. Ce sera toujours le cas sur le Web : au fur et à mesure que de nouvelles fonctionnalités sont développées, les différents navigateurs donnent la priorité à certaines fonctionnalités plutôt qu'à d'autres. Cet article explique comment utiliser les techniques modernes du Web sans exclure les utilisateurs de technologies plus anciennes.
 
@@ -234,4 +234,4 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 - [Conception Web en cascade avec les requêtes de fonctionnalités](https://24ways.org/2017/cascading-web-design/) (en)
 - [Utilisation des requêtes de fonctionnalités (vidéo)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/) (en)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

@@ -85,8 +85,7 @@ img {
 ```
 
 ```css
-a[href="http://example.com"]
-{
+a[href="http://example.com"] {
   pointer-events: none;
 }
 ```

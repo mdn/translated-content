@@ -2,7 +2,7 @@
 title: Document：forms 屬性
 slug: Web/API/Document/forms
 l10n:
-  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
+  sourceCommit: b756b8ef42bfd3b9e2f3d46fb44d41e2d3f15e25
 ---
 
 {{APIRef("DOM")}}
@@ -11,6 +11,11 @@ l10n:
 
 > [!NOTE]
 > 同樣地，你可以使用 {{domxref("HTMLFormElement.elements")}} 屬性存取表單中所有使用者輸入元件的清單。
+
+你也可以將具名的 `<form>` 元素作為 `document` 物件的屬性來存取。例如，`document["login-form"]` 和 `document.forms["login-form"]` 都可以用來存取名為 `login-form` 的表單。
+
+> [!WARNING]
+> 依賴 `document["form-name"]` 模式相當危險且不建議使用，因為這可能會與瀏覽器現有或未來的 API 產生預期外的衝突。例如，若瀏覽器未來引入了內建的 `document["login-form"]` 屬性，你的程式碼可能就無法再存取該表單元素。為避免此類衝突，請務必使用 `document.forms` 來存取具名表單。
 
 ## 值
 

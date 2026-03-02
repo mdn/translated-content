@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:root
 original_slug: Web/CSS/:root
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:root`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 문서 트리의 루트 요소를 선택합니다 HTML의 루트 요소는 {{htmlelement("html")}} 요소이므로, `:root`의 [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)가 더 높다는 점을 제외하면 `html` 선택자와 똑같습니다.
+[CSS](/ko/docs/Web/CSS) **`:root`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 문서 트리의 루트 요소를 선택합니다 HTML의 루트 요소는 {{htmlelement("html")}} 요소이므로, `:root`의 [명시도](/ko/docs/Web/CSS/Guides/Cascade/Specificity)가 더 높다는 점을 제외하면 `html` 선택자와 똑같습니다.
 
 ```css
 /* 문서의 루트 요소 선택
@@ -22,7 +22,7 @@ original_slug: Web/CSS/:root
 
 ### 전역 CSS 변수 선언하기
 
-`:root`는 전역 [CSS 변수](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) 선언에 유용하게 사용할 수 있습니다.
+`:root`는 전역 [CSS 변수](/ko/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) 선언에 유용하게 사용할 수 있습니다.
 
 ```css
 :root {

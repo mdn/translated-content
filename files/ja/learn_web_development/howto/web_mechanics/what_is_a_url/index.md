@@ -100,7 +100,7 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 - {{HTMLElement("iframe")}} 要素により、他の HTML 文書を表示する
 
 > [!NOTE]
-> URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
+> URL を指定してページの一部としてリソースを読み込む際（`<script>`, `<audio>`, `<img>`, `<video>` を使用する場合など）は、 HTTP と HTTPS の URL のみを使用してください。いくつかの例外はあります（注目すべきは `data:` です。[data URL](/ja/docs/Web/URI/Reference/Schemes/data) を参照してください）。たとえば FTP を使用しても、安全になることはなく、多くのブラウザーでは対応していません。
 
 {{Glossary("CSS")}} や {{Glossary("JavaScript")}} などの他の技術は、URL を広範囲に使用し、真にウェブの中核です。
 
@@ -154,4 +154,4 @@ URL はとても技術的な香りがするにもかかわらず、人間が読�
 
 ## 関連情報
 
-[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) — データ URL とは、 URL の前に`data:`スキームを付けたもので、コンテンツ制作者が小さなファイルを文書内にインラインで埋め込むことを可能にします。
+[data URL](/ja/docs/Web/URI/Reference/Schemes/data) — data URL とは、 URL の前に`data:`スキームを付けたもので、コンテンツ制作者が小さなファイルを文書内にインラインで埋め込むことを可能にします。

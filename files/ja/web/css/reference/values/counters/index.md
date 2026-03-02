@@ -1,14 +1,13 @@
 ---
 title: counters()
 slug: Web/CSS/Reference/Values/counters
-original_slug: Web/CSS/counters
 l10n:
-  sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`counters()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)により、カウンターが入れ子になっている場合にマーカーを組み合わせることができます。この関数は、指定された文字列と、存在する場合は名前付きで入れ子になったカウンターの現在の値を連結した文字列を返します。 3 番目はオプションの引数で、リストのスタイルを定義することができます。
 
-`counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/Reference/Values/string) に対応するすべての箇所で用いることができます。
+`counters()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には {{cssxref("string")}} に対応するすべての箇所で用いることができます。
 
 `counters()` 関数には `counters(<name>, <string>)` と `counters(<name>, <string>, <style>)` の 2 つの形があります。生成されるテキストは、 `<name>` で指定された名前のすべてのカウンターの値を、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。カウンターは指定された `<style>` でレンダリングされ、`<style>` が指定されていない場合は `decimal` が既定値となります。
 
@@ -28,25 +27,25 @@ li::before {
 
 ```html interactive-example
 <ol>
-  <li>Mars</li>
+  <li>火星</li>
   <li>
-    Saturn
+    土星
     <ol>
-      <li>Mimas</li>
-      <li>Enceladus</li>
+      <li>ミマス</li>
+      <li>エンケラドゥス</li>
       <li>
         <ol>
-          <li>Voyager</li>
-          <li>Cassini</li>
+          <li>ボイジャー</li>
+          <li>カッシーニ</li>
         </ol>
       </li>
-      <li>Tethys</li>
+      <li>テティス</li>
     </ol>
   </li>
   <li>
-    Uranus
+    天王星
     <ol>
-      <li>Titania</li>
+      <li>ティタニア</li>
     </ol>
   </li>
 </ol>
@@ -55,14 +54,14 @@ li::before {
 ## 構文
 
 ```css
-/* 単純な使用法 - スタイルは既定で decimal */
+/* 基本的な使用法 - スタイルは既定で decimal */
 counters(counter-name, '.');
 
 /* カウンターの表示の変更 */
 counters(counter-name, '-', upper-roman)
 ```
 
-[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)自身には視覚的効果が何もありません。 `counters()` 関数（および {{cssxref("counter", "counter()")}} 関数）は開発者が定義したコンテンツを返すことで利用価値が生まれます。
+[カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)自身には視覚的効果が何もありません。 `counters()` 関数（および {{cssxref("counter()")}} 関数）は開発者が定義したコンテンツを返すことで利用価値が生まれます。
 
 ### 値
 
@@ -73,12 +72,12 @@ counters(counter-name, '-', upper-roman)
 - {{cssxref("&lt;string&gt;")}}
   - : 任意の数のテキスト文字です。ラテン文字以外は Unicode エスケープシーケンスでエンコードする必要があります。例えば `\000A9` は著作権記号を表します。
 - `<counter-style>`
-  - : カウンタースタイル名または [`symbols()`](/ja/docs/Web/CSS/Reference/Values/symbols) 関数です。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの単純な定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)があります。省略された場合は、既定で `decimal` になります。
+  - : カウンタースタイル名または [`symbols()`](/ja/docs/Web/CSS/Reference/Values/symbols) 関数です。カウンタースタイル名には `numeric`, `alphabetic`, `symbolic` などの定義済みスタイル、より複雑なアジアやエチオピアのカウンタースタイル、その他の[定義済みカウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)があります。省略された場合は、既定で `decimal` になります。
 
 返値は、その要素の `<counter-name>` という名前の CSS カウンターセット内にあるすべてのカウンターの値を、 `<counter-style>` で定義されたカウンタースタイル（省略した場合は `decimal`）で含む文字列です。返される文字列は、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。
 
 > [!NOTE]
-> 結合前のカウンターについての情報は、 {{cssxref("counter", "counter()")}} 関数を参照してください。こちらは `<string>` を引数として取りません。
+> 結合前のカウンターについての情報は、 {{cssxref("counter()")}} 関数を参照してください。こちらは `<string>` を引数として取りません。
 
 ### 形式文法
 

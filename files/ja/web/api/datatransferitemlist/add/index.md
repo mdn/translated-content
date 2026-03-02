@@ -1,8 +1,9 @@
 ---
-title: DataTransferItemList.add()
+title: "DataTransferItemList: add() メソッド"
+short-title: add()
 slug: Web/API/DataTransferItemList/add
 l10n:
-  sourceCommit: 77b8cdb3a05999ade4a269d0ef2443618bb7cd66
+  sourceCommit: e0f97a8a4e8a2fc45f1a7bdc8d1e3f524ccb627d
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -42,21 +43,11 @@ add(file)
 
 ```html
 <div>
-  <p
-    id="source"
-    ondragstart="dragstart_handler(event);"
-    ondragend="dragend_handler(event);"
-    draggable="true">
-    Select this element, drag it to the Drop Zone and then release the selection
-    to move the element.
+  <p id="source" draggable="true">
+    この要素を選択し、ドロップゾーンまでドラッグして、選択を解除すると要素が移動します。
   </p>
 </div>
-<div
-  id="target"
-  ondrop="drop_handler(event);"
-  ondragover="dragover_handler(event);">
-  Drop Zone
-</div>
+<div id="target">ドロップゾーン</div>
 ```
 
 ### CSS
@@ -78,68 +69,65 @@ div {
 ### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+const source = document.getElementById("source");
+const target = document.getElementById("target");
+
+source.addEventListener("dragstart", (ev) => {
   console.log("dragStart");
-  // Add this element's id to the drag payload so the drop handler will
-  // know which element to add to its tree
+  // この要素の ID をドラッグデータ本体に追加し、ドロップハンドラーが
+  // どの要素をツリーに追加すべきかを認識できるようにする
   const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
+  // ドラッグデータ本体に他のアイテムを追加する
+  dataList.add("<p>段落…</p>", "text/html");
   dataList.add("http://www.example.org", "text/uri-list");
-}
+});
 
-function drop_handler(ev) {
-  console.log("Drop");
-  ev.preventDefault();
-  const data = event.dataTransfer.items;
-  // Loop through the dropped items and log their data
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
-      // This item is the target node
-      data[i].getAsString((s) => {
-        ev.target.appendChild(document.getElementById(s));
-      });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
-      // Drag data item is HTML
-      data[i].getAsString((s) => {
-        console.log(`… Drop: HTML = ${s}`);
-      });
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
-      // Drag data item is URI
-      data[i].getAsString((s) => {
-        console.log(`… Drop: URI = ${s}`);
-      });
-    }
-  }
-}
-
-function dragover_handler(ev) {
-  console.log("dragOver");
-  ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
-}
-
-function dragend_handler(ev) {
+source.addEventListener("dragend", (ev) => {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
   for (let i = 0; i < dataList.length; i++) {
     dataList.remove(i);
   }
-  // Clear any remaining drag data
+  // 残っているドラッグデータをすべてクリア
   dataList.clear();
-}
+});
+
+target.addEventListener("drop", (ev) => {
+  console.log("Drop");
+  ev.preventDefault();
+  // ドロップされたアイテムをループ処理し、そのデータをログに記録
+  for (const item of event.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
+      // アイテムがターゲットノード
+      item.getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
+      // ドラッグデータ項目が HTML
+      item.getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
+      });
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
+      // ドラッグデータ項目が URI
+      item.getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
+      });
+    }
+  }
+});
+
+target.addEventListener("dragover", (ev) => {
+  console.log("dragOver");
+  ev.preventDefault();
+  // dropEffect を「移動」に設定
+  ev.dataTransfer.dropEffect = "move";
+});
 ```
 
 ### 結果
 
 {{EmbedLiveSample('Examples', 400, 300)}}
-
-{{LiveSampleLink('Examples', 'Result link')}}
 
 ## 仕様書
 
