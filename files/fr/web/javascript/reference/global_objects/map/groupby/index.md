@@ -121,8 +121,8 @@ console.log(resultat.get(restock2));
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map.groupBy` dans `core-js <sup>(angl.)</sup>`](https://github.com/zloirock/core-js#array-grouping)
-- [Prothèse d'émulation es-shims de `Map.groupBy <sup>(angl.)</sup>`](https://www.npmjs.com/package/map.groupby)
+- [Prothèse d'émulation de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-grouping)
+- [Prothèse d'émulation es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
 - Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
 - La méthode {{JSxRef("Map/Map", "Map()")}}
