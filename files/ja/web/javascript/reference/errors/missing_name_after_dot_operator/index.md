@@ -65,6 +65,6 @@ console.log("Hello" . "world");
 console.log("Hello" + "World");
 ```
 
-## 関連項目
+## 関連情報
 
 - [メンバー演算子](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)

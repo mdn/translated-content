@@ -1,14 +1,13 @@
 ---
 title: column-rule
 slug: Web/CSS/Reference/Properties/column-rule
-original_slug: Web/CSS/column-rule
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) `column-rule` définit la largeur, le style et la couleur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
 
-Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) **`column-rule`** permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.
-
-{{InteractiveExample("CSS Demo: column-rule")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule")}}
 
 ```css interactive-example-choice
 column-rule: dotted;
@@ -29,11 +28,12 @@ column-rule: thick inset blue;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -46,15 +46,17 @@ column-rule: thick inset blue;
 }
 ```
 
-Cette propriété est une propriété raccourcie qui permet de définir {{cssxref("column-rule-width")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-color")}} (plutôt que d'avoir à les définir une par une, ce qui est plus laborieux).
+## Propriétés constituantes
 
-> [!NOTE]
-> Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.
+Cette propriété est une propriété raccourcie regroupant les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("column-rule-color")}}
+- {{CSSxRef("column-rule-style")}}
+- {{CSSxRef("column-rule-width")}}
 
 ## Syntaxe
 
 ```css
-/* Syntaxe avec des mots-clés */
 column-rule: dotted;
 column-rule: solid blue;
 column-rule: solid 8px;
@@ -63,19 +65,19 @@ column-rule: thick inset blue;
 /* Valeurs globales */
 column-rule: inherit;
 column-rule: initial;
+column-rule: revert;
+column-rule: revert-layer;
 column-rule: unset;
 ```
-
-Cette propriété peut être définie avec une, deux ou trois valeurs telles que définies ci-après, dans n'importe quel ordre.
 
 ### Valeurs
 
 - `<'column-rule-width'>`
-  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou l'un des mots-clés `thin`, `medium` ou `thick`. Pour plus de détails, voir {{cssxref("border-width")}}.
+  - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) ou l'un des mots-clés `thin`, `medium` ou `thick`. Pour plus de détails, voir {{CSSxRef("border-width")}}.
 - `<'column-rule-style'>`
-  - : Voir {{cssxref("border-style")}} pour les différentes valeurs possibles.
+  - : Voir {{CSSxRef("border-style")}} pour les différentes valeurs possibles.
 - `<'column-rule-color'>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).
+  - : Une valeur de couleur ({{CSSxRef("&lt;color&gt;")}}).
 
 ## Définition formelle
 
@@ -87,31 +89,55 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 
 ## Exemples
 
-### HTML
-
-```html
-<div id="col_rul">
-  <p>column one</p>
-  <p>column two</p>
-  <p>column three</p>
-</div>
-```
-
-### CSS
+### Exemple 1
 
 ```css
-#col_rul {
+/* Équivaut à "medium dotted currentColor" */
+p.toto {
+  column-rule: dotted;
+}
+
+/* Équivaut à "medium solid blue" */
+p.tata {
+  column-rule: solid blue;
+}
+
+/* Équivaut à "8px solid currentColor" */
+p.tutu {
+  column-rule: solid 8px;
+}
+
+p.abc {
+  column-rule: thick inset blue;
+}
+```
+
+### Exemple 2
+
+#### HTML
+
+```html
+<p class="content-box">
+  Il s'agit d'un bloc de texte réparti en trois colonnes. Notez comment la
+  propriété `column-rule` sert à ajuster le style, la largeur et la couleur de
+  la règle qui apparaît entre les colonnes.
+</p>
+```
+
+#### CSS
+
+```css
+.content-box {
   padding: 0.3em;
-  background: gold;
-  border: groove 2px gold;
-  column-rule: inset 2px gold;
+  background: #ffff77;
   column-count: 3;
+  column-rule: inset 2px #3333ff;
 }
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Exemple 2")}}
 
 ## Spécifications
 
@@ -120,3 +146,10 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Apprendre&nbsp;: Mise en page multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- La propriété {{CSSxRef("column-rule-style")}}
+- La propriété {{CSSxRef("column-rule-width")}}
+- La propriété {{CSSxRef("column-rule-color")}}

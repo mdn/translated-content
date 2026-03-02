@@ -1,9 +1,8 @@
 ---
 title: Fusion des marges
 slug: Web/CSS/Guides/Box_model/Margin_collapsing
-original_slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 l10n:
-  sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
 Les marges [haute](/fr/docs/Web/CSS/Reference/Properties/margin-top) et [basse](/fr/docs/Web/CSS/Reference/Properties/margin-bottom) des blocs sont parfois combinées (fusionnées) en une seule marge dont la taille est la plus grande des marges individuelles (ou simplement l'une d'elles si elles sont égales), un comportement appelé **fusion des marges**. Notez que les marges des éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) et [absolument positionnés](/fr/docs/Web/CSS/Reference/Properties/position#types_de_positionnement) ne fusionnent jamais.
@@ -14,13 +13,13 @@ La fusion des marges se produit dans trois cas principaux&nbsp;:
   - : Les marges de frères et sœurs adjacents sont fusionnées (sauf lorsque le second doit être [écarté](/fr/docs/Web/CSS/Reference/Properties/clear) des flottants).
 - Aucun contenu ne sépare le parent et les descendants
   - : Les marges verticales entre un bloc parent et ses descendants peuvent fusionner. Cela se produit lorsqu'il n'y a aucun contenu séparateur entre eux. Plus précisément, cela arrive dans deux cas principaux&nbsp;:
-    - La {{cssxref("margin-top")}} d'un parent fusionne avec la {{cssxref("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{cssxref("border-top")}}, une {{cssxref("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/Reference/Properties/clear)_ est appliquée.
-    - La {{cssxref("margin-bottom")}} d'un parent fusionne avec la {{cssxref("margin-bottom")}} de son dernier descendant en flux, sauf si le parent a une {{cssxref("height")}} ou {{cssxref("min-height")}} définie, une {{cssxref("border-bottom")}}, ou une {{cssxref("padding-bottom")}}.
+    - La {{CSSxRef("margin-top")}} d'un parent fusionne avec la {{CSSxRef("margin-top")}} de son premier descendant en flux, sauf si le parent possède une {{CSSxRef("border-top")}}, une {{CSSxRef("padding-top")}}, contient du contenu en ligne (comme du texte), ou si une _[clearance](/fr/docs/Web/CSS/Reference/Properties/clear)_ est appliquée.
+    - La {{CSSxRef("margin-bottom")}} d'un parent fusionne avec la {{CSSxRef("margin-bottom")}} de son dernier descendant en flux, sauf si le parent a une {{CSSxRef("height")}} ou {{CSSxRef("min-height")}} définie, une {{CSSxRef("border-bottom")}}, ou une {{CSSxRef("padding-bottom")}}.
 
     Dans les deux cas, créer un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) sur le parent empêche aussi ses marges de fusionner avec celles de ses enfants.
 
 - Blocs vides
-  - : S'il n'y a ni bordure, ni remplissage, ni contenu en ligne, ni {{cssxref("height")}}, ni {{cssxref("min-height")}} pour séparer la {{cssxref("margin-top")}} d'un bloc de sa {{cssxref("margin-bottom")}}, alors ses marges haute et basse fusionnent.
+  - : S'il n'y a ni bordure, ni remplissage, ni contenu en ligne, ni {{CSSxRef("height")}}, ni {{CSSxRef("min-height")}} pour séparer la {{CSSxRef("margin-top")}} d'un bloc de sa {{CSSxRef("margin-bottom")}}, alors ses marges haute et basse fusionnent.
 
 À noter&nbsp;:
 
@@ -72,10 +71,12 @@ p {
 
 ### Résultat
 
-{{EmbedLiveSample('exemples', 'auto', 350)}}
+{{EmbedLiveSample("Exemples", "auto", 350)}}
 
 ## Voir aussi
 
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model) module
+- [Introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
 - Concepts clés CSS&nbsp;:
   - [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
   - [Règles at](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
@@ -85,11 +86,11 @@ p {
   - [Modèle de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
   - [Modes de mise en page](/fr/docs/Glossary/Layout_mode)
   - [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
-  - Valeurs
+  - Valeurs&nbsp;:
     - [Valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
     - [Valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
     - [Valeurs utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
     - [Valeurs réelle](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
   - [Syntaxe de définition des valeurs](/fr/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [Propriétés raccourcies](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-  - {{glossary("Replaced elements", "Éléments remplacés")}}
+  - L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}

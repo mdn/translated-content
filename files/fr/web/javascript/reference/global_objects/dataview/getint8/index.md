@@ -1,57 +1,54 @@
 ---
-title: DataView.prototype.getInt8()
+title: "DataView : méthode getInt8()"
+short-title: getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getInt8()`** des instances de {{JSxRef("DataView")}} lit 1 octet au décalage d'octet défini de cette `DataView` et l'interprète comme un entier signé sur 8 bits.
 
-La méthode **`getInt8()`** permet de lire un entier signé sur 8 bits à l'octet donné par rapport au début de {{jsxref("DataView")}}.
-
-{{InteractiveExample("JavaScript Demo: DataView.getInt8()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: DataView.prototype.getInt8()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// Créer un ArrayBuffer avec une taille en octets
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+view.setInt8(1, 127); // Entier signé sur 8 bits maximum
 
 console.log(view.getInt8(1));
-// Expected output: 127
+// Résultat attendu : 127
 ```
 
 ## Syntaxe
 
-```js
-dataview.getInt8(positionOctet);
+```js-nolint
+getInt8(byteOffset)
 ```
 
 ### Paramètres
 
-- `positionOctet`
+- `byteOffset`
   - : La position, exprimée en nombre d'octets depuis le début de la vue, à laquelle lire les données.
 
 ### Valeur de retour
 
-Un entier signé sur 8 bits.
+Un entier compris entre -128 et 127 inclus.
 
-### Erreurs renvoyées
+### Exceptions
 
-- {{jsxref("RangeError")}}
-  - : Renvoyée si `positionOctet` est tel qu'il est en dehors de la vue.
-
-## Description
-
-Il n'y a pas de contrainte d'alignement, les valeurs codées sur plusieurs octets peuvent être obtenues depuis n'importe quelle position.
+- {{JSxRef("RangeError")}}
+  - : Levée si le paramètre `byteOffset` est défini de façon à lire au-delà de la fin de la vue.
 
 ## Exemples
 
-### Utilisation de la méthode `getInt8`
+### Utiliser la méthode `getInt8()`
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt8(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getInt8(1)); // 1
 ```
 
 ## Spécifications
@@ -64,5 +61,7 @@ dataview.getInt8(1); // 0
 
 ## Voir aussi
 
-- {{jsxref("DataView")}}
-- {{jsxref("ArrayBuffer")}}
+- Le guide [des tableaux typés JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
+- L'objet {{JSxRef("DataView")}}
+- L'objet {{JSxRef("ArrayBuffer")}}
+- L'objet {{JSxRef("Int8Array")}}

@@ -1,12 +1,15 @@
 ---
 title: Intl.Locale.prototype.getTextInfo()
+short-title: getTextInfo()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTextInfo
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Intl.Locale")}} インスタンスの **`getTextInfo()`** メソッドは、ロケールに対して `ltr` (左書き) または `rtl` (右書き) で示される文字の並び順を返します。
+**`getTextInfo()`** は {{jsxref("Intl.Locale")}} インスタンスのメソッドで、ロケールに対して `ltr` (左書き) または `rtl` (右書き) で示される文字の並び順を返します。
 
 > [!NOTE]
-> 一部のブラウザーのあるバージョンでは、このメソッドが `textInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.textInfo === locale.textInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
+> 一部のブラウザーの一部のバージョンでは、このメソッドが `textInfo` と呼ばれるアクセサープロパティとして実装されていました。しかしこの実装ではアクセスするたびに新しいオブジェクトを返すため、`locale.textInfo === locale.textInfo` が `false` を返してしまい、この状況を防ぐために、現在はメソッドとして実装されています。詳細については、[ブラウザーの互換性](#ブラウザーの互換性)の表を確認してください。
 
 ## 構文
 

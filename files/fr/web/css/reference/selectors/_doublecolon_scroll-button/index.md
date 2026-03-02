@@ -56,7 +56,7 @@ Lorsqu'il n'est pas possible de défiler davantage dans une direction donnée, l
 
 ## Exemples
 
-Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) pour d'autres exemples.
+Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) pour d'autres exemples.
 
 ### Créer des boutons de défilement
 
@@ -220,7 +220,7 @@ ul::scroll-button(right) {
 - Le pseudo-élément {{CSSxRef("::scroll-marker")}}
 - Le pseudo-élément {{CSSxRef("::column")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
-- [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

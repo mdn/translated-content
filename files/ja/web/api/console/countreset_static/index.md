@@ -1,19 +1,20 @@
 ---
-title: console.countReset()
+title: "console: countReset() 静的メソッド"
+short-title: countReset()
 slug: Web/API/console/countReset_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.countReset()`** は {{domxref("console.count()")}} で使われたカウンターをリセットします。
-
-{{AvailableInWorkers}}
+**`console.countReset()`** 静的メソッドは、{{domxref("console/count_static", "console.count()")}} で使用されるカウンターをリセットします。
 
 ## 構文
 
-```js
-countReset();
-countReset(label);
+```js-nolint
+console.countReset()
+console.countReset(label)
 ```
 
 ### 引数
@@ -30,25 +31,21 @@ countReset(label);
 例えば、次のようなコードがあったとします。
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count();
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.count();
 console.countReset();
 ```
 
 コンソールへの出力は、次のようになります。
 
-```
+```plain
 "default: 1"
 "default: 2"
 "default: 3"
@@ -61,25 +58,21 @@ console.countReset();
 変数 `user` を `label` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "alice" を渡してみます。
 
 ```js
-let user = "";
-
-function greet() {
+function greet(user) {
   console.count(user);
   return `hi ${user}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
+greet("bob");
+greet("alice");
+greet("alice");
 console.countReset("bob");
 console.count("alice");
 ```
 
 以下のように出力されます。
 
-```
+```plain
 "bob: 1"
 "alice: 1"
 "alice: 2"
@@ -96,3 +89,9 @@ console.count("alice");
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [Microsoft Edge's documentation for `console.countReset()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#countreset)
+- [Node.js documentation for `console.countReset()`](https://nodejs.org/docs/latest/api/console.html#consolecountresetlabel)
+- [Google Chrome's documentation for `console.countReset()`](https://developer.chrome.com/docs/devtools/console/api/#countreset)
