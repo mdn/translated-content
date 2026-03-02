@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-La méthode **`values()`** des instances de {{JSxRef("Map")}} retourne un nouvel _[objet itérateur de map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui contient les valeurs de chaque élément de cette map dans l'ordre d'insertion.
+La méthode **`values()`** des instances de {{JSxRef("Map")}} retourne un nouvel objet _[itérateur de tableau associatif](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui contient les valeurs de chaque élément de cette map dans l'ordre d'insertion.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.values()")}}
 
