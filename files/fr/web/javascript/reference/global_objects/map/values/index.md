@@ -1,5 +1,5 @@
 ---
-title: Map.prototype.values()
+title: "Map : méthode values()"
 short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Map/values
 l10n:
