@@ -1,9 +1,8 @@
 ---
 title: color-scheme
 slug: Web/CSS/Reference/Properties/color-scheme
-original_slug: Web/CSS/color-scheme
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`color-scheme`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。ユーザーエージェントは、使用されている配色に合わせて、 UI クロームの次の側面を変更します。

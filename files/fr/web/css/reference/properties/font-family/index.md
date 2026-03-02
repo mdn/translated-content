@@ -1,14 +1,13 @@
 ---
 title: font-family
 slug: Web/CSS/Reference/Properties/font-family
-original_slug: Web/CSS/font-family
+l10n:
+  sourceCommit: 5a8de324f0aa3873d757f68e4fcaf6bbc0104711
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-family`** définit une liste priorisée d'un ou plusieurs noms de famille de police et/ou de noms de famille génériques pour l'élément sélectionné.
 
-La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.
-
-{{InteractiveExample("CSS Demo: font-family")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-family")}}
 
 ```css interactive-example-choice
 font-family: Georgia, serif;
@@ -37,11 +36,12 @@ font-family: system-ui;
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de la Saint-Michel vient de se terminer, et le Lord
+    Chancelier siège dans le Lincoln's Inn Hall. Un temps de novembre
+    implacable. Autant de boue dans les rues que si les eaux venaient tout juste
+    de se retirer de la surface de la terre, et il ne serait pas étonnant de
+    croiser un Mégalosaure, long d'une quarantaine de pieds, se dandinant comme
+    un lézard éléphantesque sur Holborn Hill.
   </p>
 </section>
 ```
@@ -52,16 +52,13 @@ section {
 }
 ```
 
-Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle @ {{cssxref("@font-face")}} définie.
+Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle {{CSSxRef("@font-face")}} définie.
 
-Pour fixer `font-family` et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{cssxref("font")}}.
+Pour fixer `font-family` et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{CSSxRef("font")}}.
 
-Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.
+Les auteur·ice·s doivent toujours inclure au moins un nom de famille générique dans une liste `font-family`, car il n'est pas garanti qu'une police donnée soit disponible. Cela permet au navigateur de choisir une police de secours acceptable si nécessaire.
 
-> [!NOTE]
-> La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
->
-> Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.
+La propriété `font-family` définit une liste de polices, de la priorité la plus haute à la plus basse. La sélection de la police ne s'arrête _pas_ à la première police de la liste présente sur le système de l'utilisateur·ice. Au contraire, la sélection de la police se fait _caractère par caractère_, ainsi si une police disponible ne possède pas le glyphe pour un caractère nécessaire, les polices suivantes sont essayées. Lorsqu'une police n'est disponible que dans certains [styles](/fr/docs/Web/CSS/Reference/Properties/font-style), [variantes](/fr/docs/Web/CSS/Reference/Properties/font-variant) ou [tailles](/fr/docs/Web/CSS/Reference/Properties/font-size), ces propriétés peuvent aussi influencer la famille de police choisie.
 
 ## Syntaxe
 
@@ -77,86 +74,82 @@ font-family: monospace;
 font-family: cursive;
 font-family: fantasy;
 font-family: system-ui;
-font-family: emoji;
+font-family: ui-serif;
+font-family: ui-sans-serif;
+font-family: ui-monospace;
+font-family: ui-rounded;
 font-family: math;
 font-family: fangsong;
 
 /* Valeurs globales */
 font-family: inherit;
 font-family: initial;
+font-family: revert;
+font-family: revert-layer;
 font-family: unset;
 ```
 
-La propriété `font-family` permet de lister différentes familles de police, séparées par des virgules. Chaque nom de famille est une valeur [`<family-name>`](#family-name) ou [`<generic-name>`](#generic-name).
+La propriété `font-family` permet de lister différentes familles de police, séparées par des virgules. Chaque nom de famille est une valeur `<family-name>` ou `<generic-name>`.
 
-Dans l'exemple suivant, on liste deux familles de police, la première utilise une valeur `<family-name>` et la seconde utilise une valeur `<generic-name>` :
+Dans l'exemple suivant, on liste deux familles de police, la première utilise une valeur `<family-name>` et la seconde utilise une valeur `<generic-name>`&nbsp;:
 
 ```css
-font-family:
-  Gill Sans Extrabold,
-  sans-serif;
+font-family: "Gill Sans Extrabold", sans-serif;
 ```
 
 ### Valeurs
 
 - `<family-name>`
-  - : Le nom d'une famille de polices ; par exemple « Times » ou « Helvetica » sont des noms de famille de polices. Les noms de familles qui comportent des blancs doivent être encadrées par des doubles quotes (").
+  - : Le nom d'une famille de polices. Il doit s'agir soit d'une seule valeur de type {{CSSxRef("string")}}, soit d'une séquence d'identifiants personnalisés ({{CSSxRef("custom-ident")}}) séparés par des espaces. Les valeurs de chaîne de caractères doivent être entourées de guillemets mais peuvent contenir n'importe quel caractère Unicode. Les identifiants personnalisés ne sont pas entourés de guillemets, mais certains caractères doivent être échappés.
+
+    Il est recommandé d'entourer de guillemets les noms de famille de police qui contiennent des espaces, des chiffres ou des signes de ponctuation autres que les traits d'union.
+
+    Voir aussi [Validité des noms de famille](#validité_des_noms_de_famille).
+
 - `<generic-name>`
-  - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis :
+  - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur·ice lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis&nbsp;:
     - `serif`
-      - : Les caractères possèdent des [empattements](<https://fr.wikipedia.org/wiki/Empattement_(typographie)>).
-        Voici des exemples de polices avec empattement : Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+      - : Les glyphes possèdent des terminaisons, des extrémités évasées ou effilées, ou de véritables empattements.
+
+        Par exemple&nbsp;: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif.
+
     - `sans-serif`
-      - : Les caractères n'ont pas d'empattement, leurs extrémités sont anguleuses.
-        Voici des exemples de polices correspondantes : "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+      - : Les glyphes ont des terminaisons simples, sans empattement.
+
+        Par exemple&nbsp;: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
+
     - `monospace`
-      - : Tous les caractères mesurent la même largeur, on dit que la police est à [chasse](<https://fr.wikipedia.org/wiki/Chasse_(typographie)>) fixe.
-        Les polices "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace sont à chasse fixe.
+      - : Tous les glyphes ont la même largeur fixe.
+
+        Par exemple&nbsp;: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
+
     - `cursive`
-      - : Les caractères des polices cursives possèdent des extrémités permettant de les joindre les uns aux autres, partiellement ou complètement. Cela donne un résultat semblable à l'écriture manuelle au crayon plutôt qu'à des caractères d'imprimerie.
-        Voici quelques exemples de polices cursives : "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+      - : Les glyphes des polices cursives possèdent généralement des terminaisons jointives ou d'autres caractéristiques cursives au-delà de celles des polices italiques. Les glyphes sont partiellement ou complètement reliés, et le résultat ressemble davantage à une écriture manuscrite au stylo ou au pinceau qu'à des lettres imprimées.
+
+        Par exemple&nbsp;: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
+
     - `fantasy`
       - : Les polices fantaisie sont des polices décoratives pour lesquelles les caractères sont représentées de façon légère.
-        Les polices suivantes sont des exemples de cette famille : Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+
+        Par exemple&nbsp;: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+
     - `system-ui`
-      - : Les glyphes utilisés sont ceux de l'interface utilisateur par défaut pour le système d'exploitation de la plateforme. Les variantes typographiques différant grandement d'une région à l'autre, cette famille générique est utilisée pour les polices qui ne correspondent pas aux autres familles génériques.
+      - : Les glyphes utilisés sont ceux de la police d'interface utilisateur par défaut pour la plateforme concernée. Les traditions typographiques variant grandement à travers le monde, cette famille générique est prévue pour les polices qui ne correspondent pas clairement aux autres familles génériques.
+        > [!NOTE]
+        > Comme son nom l'indique, `system-ui` est destiné à donner aux éléments d'interface un aspect natif, et non à composer de longs paragraphes de texte. Cela peut rendre la police affichée inadaptée pour certain·e·s utilisateur·ice·s — par exemple, la police CJK par défaut de Windows peut mal afficher les écritures latines, et l'attribut `lang` peut ne pas affecter la police affichée. Certains systèmes d'exploitation ne permettent pas de personnaliser `system-ui`, tandis que les navigateurs permettent généralement de personnaliser la famille de polices `sans-serif`. Pour de longs paragraphes, utilisez `sans-serif` ou une autre famille de polices non-UI.
+    - `ui-serif`
+      - : La police serif par défaut de l'interface utilisateur.
+    - `ui-sans-serif`
+      - : La police sans-serif par défaut de l'interface utilisateur.
+    - `ui-monospace`
+      - : La police monospace par défaut de l'interface utilisateur.
+    - `ui-rounded`
+      - : La police par défaut de l'interface utilisateur avec des caractéristiques arrondies.
     - `math`
-      - : Une police utilisée pour les mise en forme relatives aux mathématiques comme les indices, les exposants, les accolades sur plusieurs lignes, etc.
-    - `emoji`
-      - : Une police conçue spécifiquement pour l'affichage des emoji.
+      - : Ceci concerne les besoins stylistiques particuliers de la représentation des mathématiques&nbsp;: exposant et indice, accolades sur plusieurs lignes, expressions imbriquées, et glyphes doublement barrés avec des significations distinctes.
+        Les feuilles de style de l'agent utilisateur peuvent définir `math { font-family: math }` afin que l'élément MathML {{MathMLElement("math")}} utilise par défaut des polices appropriées.
     - `fangsong`
       - : Un style de caractères chinois particulier se situant entre le style serif Song et la forme cursive Kai. Ce style est généralement utilisé pour les documents officiels du gouvernement.
-
-### Validité des noms de famille
-
-Les noms de famille de polices doivent être encadrés par des doubles ou doivent former une série d'un ou plusieurs identifiants valides. Cela signifie que les signes de ponctuation et les chiffres débutant chaque fragment doivent être échappés pour les noms de famille qui ne sont pas encadrés par des quotes.
-
-Les déclarations suivantes sont valides :
-
-```css
-font-family: "Gill Sans Extrabold", sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;
-```
-
-Et ces déclarations sont **invalides** :
-
-```css example-bad
-font-family:
-  Goudy Bookletter 1911,
-  sans-serif;
-font-family: Red/Black, sans-serif;
-font-family:
-  "Lucida" Grande,
-  sans-serif;
-font-family: Ahem!, sans-serif;
-font-family:
-  test @foo,
-  sans-serif;
-font-family: #POUND, sans-serif;
-font-family:
-  Hawaii 5-0,
-  sans-serif;
-```
 
 ## Définition formelle
 
@@ -168,71 +161,102 @@ font-family:
 
 ## Exemples
 
-### CSS
+### Quelques familles de polices courantes
 
 ```css
-.exempleserif {
-  font-family: Times, "Times New Roman", Georgia, serif;
+.serif {
+  font-family: "Times", "Times New Roman", "Georgia", serif;
 }
 
-.exemplesansserif {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+.sansserif {
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 
-.exemplemonospace {
-  font-family: "Lucida Console", Courier, monospace;
+.monospace {
+  font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.exemplecursive {
+.cursive {
   font-family: cursive;
 }
 
-.exemplefantasy {
+.fantasy {
   font-family: fantasy;
 }
 
-.exempleemoji {
-  font-family: emoji;
-}
-
-.exemplemath {
+.math {
   font-family: math;
 }
 
-.exemplefangsong {
+.fangsong {
   font-family: fangsong;
 }
 ```
 
-### HTML
+```css hidden
+div {
+  margin: 0.5rem;
+}
+```
 
-```html
-<div class="exempleserif">
-  Voici un exemple de police avec empattement (serif).
+```html hidden
+<div class="serif">Ceci est un exemple de police avec empattement.</div>
+
+<div class="sansserif">Ceci est un exemple de police sans empattement.</div>
+
+<div class="monospace">Ceci est un exemple de police à chasse fixe.</div>
+
+<div class="cursive">Ceci est un exemple de police cursive.</div>
+
+<div class="fantasy">Ceci est un exemple de police fantaisie.</div>
+
+<div class="fangsong">Ceci est un exemple de police fangsong.</div>
+
+<div class="math">
+  Ceci est un exemple de police mathématique&nbsp;: ℝ, ∫, ∑…
 </div>
-
-<div class="exemplesansserif">
-  Voici un exemple de police sans empattement (sans-serif).
-</div>
-
-<div class="exemplemonospace">
-  Voici un exemple de police à chasse fixe (monospace).
-</div>
-
-<div class="exemplecursive">Voici un exemple de police cursive.</div>
-
-<div class="exemplefantasy">Voici un exemple de police fantaisie.</div>
-
-<div class="exemplemath">Voici un exemple de police mathématique.</div>
-
-<div class="exempleemoji">Voici un exemple de police emoji.</div>
-
-<div class="exemplefangsong">Voici un exemple de police fangsong.</div>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples',600,120)}}
+{{EmbedLiveSample("Quelques familles de polices courantes", 600, 220)}}
+
+### Validité des noms de famille
+
+Les déclarations suivantes sont valides&nbsp;:
+
+```css example-good
+font-family: "Gill Sans Extrabold", sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
+
+Et ces déclarations sont invalides&nbsp;:
+
+```css example-bad
+font-family:
+  Goudy Bookletter 1911,
+  sans-serif;
+font-family: Red/Black, sans-serif;
+font-family:
+  "Lucida" Grande,
+  sans-serif;
+font-family: Ahem!, sans-serif;
+font-family:
+  test @toto,
+  sans-serif;
+font-family: #POUND, sans-serif;
+font-family:
+  Hawaii 5-0,
+  sans-serif;
+```
+
+L'exemple suivant est techniquement valide mais n'est pas recommandé&nbsp;:
+
+```css
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
+```
 
 ## Spécifications
 
@@ -241,3 +265,11 @@ font-family:
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("font-style")}}
+- La propriété {{CSSxRef("font-weight")}}
+- La propriété {{CSSxRef("font-variant-emoji")}}
+- L'attribut SVG {{SVGAttr("font-family")}}
+- [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)

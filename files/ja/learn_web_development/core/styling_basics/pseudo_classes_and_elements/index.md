@@ -1,11 +1,10 @@
 ---
 title: 擬似クラスと擬似要素
+short-title: 擬似クラスと擬似要素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
@@ -19,7 +18,7 @@ l10n:
         HTML の基本（
         <a href="/ja/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >基本的な HTML の構文</a
-        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター<a>。
+        >を学んでいること）、<a href="/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">基本的な CSS セレクター</a>。
       </td>
     </tr>
     <tr>
@@ -42,9 +41,9 @@ l10n:
 
 擬似クラスはコロンで始まるキーワードです。例えば `:hover` は擬似クラスです。
 
-### 単純な擬似クラスの例
+### 基本的な擬似クラスの例
 
-簡単な例を見てみましょう。以下の最初の例に示すように、記事の最初の段落を大きく太字にしたい場合は、その段落にクラスを追加してから、そのクラスに CSS を追加できます。
+基本的な例を見てみましょう。記事の最初の段落を大きく太字にしたい場合は、その段落にクラスを追加してから、そのクラスに CSS を追加できます。
 
 ```html live-sample___first-child
 <article>
@@ -70,7 +69,7 @@ l10n:
 
 {{EmbedLiveSample("first-child")}}
 
-しかし、これでは保守が面倒になります。文書の先頭に新しい段落が追加されたらどうでしょう？新しい段落にクラスを移さなければなりません。クラスを追加する代わりに、 {{cssxref(":first-child")}} 擬似クラスセレクターを使用することができます。これは常に記事の最初の子要素を対象としますので、 HTML を編集する必要がなくなります（これは、CMS によって生成された可能性があるため、とにかく常に可能であるとは限りません）。
+しかし、これでは保守が面倒になります。文書の先頭に新しい段落が追加されたらどうでしょう？新しい段落にクラスを移さなければなりません。クラスを追加する代わりに、 {{cssxref(":first-child")}} 擬似クラスセレクターを使用することができます。これは常にある要素（この場合は `<article>`）の子要素を対象としますので、 HTML を編集する必要がなくなります（これは、CMS によって生成された可能性があるため、とにかく常に可能であるとは限りません）。
 
 ```html live-sample___first-child2
 <article>
@@ -96,11 +95,7 @@ article p:first-child {
 
 {{EmbedLiveSample("first-child2")}}
 
-すべての擬似クラスは、この同じ方法で動作します。特定の状態にある文書の一部を対象にして、 HTML にクラスを追加したかのように動作します。 MDN の他の例をいくつか見てみましょう。
-
-- [`:last-child`](/ja/docs/Web/CSS/Reference/Selectors/:last-child)
-- [`:only-child`](/ja/docs/Web/CSS/Reference/Selectors/:only-child)
-- [`:invalid`](/ja/docs/Web/CSS/Reference/Selectors/:invalid)
+すべての擬似クラスは同様に振る舞います。特定の状態にある文書の一部を対象とし、HTMLにクラスを追加したかのように動作します。
 
 > [!NOTE]
 > 擬似クラスや要素の前に要素セレクターを書かずに書くことは有効です。この例では、 `:first-child` と書けば、段落の最初の子要素だけでなく、 `<article>` 要素の最初の子要素であるすべての要素に適用されます。 `:first-child` は `*:first-child` と等価だからです。しかし、通常は複数の要素を制御したいので、より詳細度を上げる必要があります。
@@ -109,8 +104,8 @@ article p:first-child {
 
 一部の擬似クラスは、ユーザーが何らかの方法で文書を操作したときにのみ適用されます。これらの**ユーザー操作の**擬似クラスは、**動的擬似クラス**と呼ばれることもあり、ユーザーが要素を操作したときに、要素にクラスが追加されたかのように動作します。例は次のとおりです。
 
-- [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) — 前述の通りです。これは、ユーザーが要素（通常はリンク）の上にポインターを載せた場合にのみ適用されます。
-- [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) — ユーザーがキーボードコントロールを使用して要素にフォーカスした場合にのみ適用されます。
+- {{cssxref(":hover")}} — 前述の通りです。これは、ユーザーが要素（通常はリンク）の上にポインターを載せた場合にのみ適用されます。
+- {{cssxref(":focus")}} — ユーザーがキーボードコントロールを使用して要素にフォーカスした場合にのみ適用されます。
 
 ```html live-sample___hover
 <p><a href="">ここにカーソルを当ててください</a></p>
@@ -129,6 +124,15 @@ a:hover {
 ```
 
 {{EmbedLiveSample("hover")}}
+
+### 擬似クラスの実践
+
+最初の[擬似クラスの例](#基本的な擬似クラスの例)に戻り、MDN playground を使用して CSS 編集してください。
+
+1. 段落テキストに、ポインターをかざしたときに `blue` 色になるルールを追加しましょう。
+2. 記事内の最後の段落のみを選択し、`orange` の `background-color` を適用するルールを追加しましょう。
+
+その他の利用できる擬似クラスに関する情報は、MDN の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)リファレンスページで確認できます。
 
 ## 擬似要素とは何か
 
@@ -171,9 +175,24 @@ article p::first-line {
 
 これにより、両方の段落の最初の行が選択されていることがわかります。
 
+### 擬似要素の実践
+
+前の例の CSS を MDN playground で編集しましょう。
+
+1. マウスカーソルで選択したテキスト部分に `red` の `background-color` を適用するルールを追加します（これには {{cssxref("::selection")}} 擬似要素が必要です）。テストのためにテキストを選択してみてください。
+2. `<article>` 内のそれぞれの `<p>` の先頭文字を付与するルールを追加します。
+
+- `yellow` の `background-color`
+- `1px solid black` の `border`
+- `font-size` を `2rem` に
+
+その他の利用可能な疑似要素に関する情報は、MDN の[疑似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)リファレンスページで確認できます。
+
 ## 擬似クラスと擬似要素を組み合わせる
 
-最初の段落の最初の行を太字にしたい場合は、 `:first-child` および `::first-line` セレクターを連結することができます。前のライブ例を編集して、次の CSS を使用するようにしてください。 `<article>` 要素内にある最初の `<p>` 要素の最初の行を選択したいということです。
+最初の段落の最初の行を太字にしたい場合は、 `:first-child` および `::first-line` セレクターを連結することができます。
+
+前の例を編集して、次の CSS を使用するようにしてください。 `<article>` 要素内にある最初の `<p>` 要素の最初の行を選択したいということです。
 
 ```css
 article p:first-child::first-line {
@@ -184,9 +203,9 @@ article p:first-child::first-line {
 
 ## ::before および ::after を使用したコンテンツの生成
 
-CSS を使用してコンテンツを文書に挿入するための [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティと共に使用される特別な擬似要素がいくつかあります。
+これらは {{cssxref("content")}} プロパティと組み合わせて、CSS を使用して文書内にコンテンツを挿入するために使用される特別な擬似要素がいくつかあります。この手法は**生成コンテンツ**と呼ばれます。
 
-以下のライブ例のように、これらを使用してテキストの文字列を挿入できます。{{cssxref("content")}} プロパティのテキスト値を変更してみて、出力でそれを確認してください。 `::before` 擬似要素を `::after` に変更して、要素の最初ではなく最後に挿入されたテキストを表示することもできます。
+次の例のように、テキスト文字列を挿入するために使用することができます。また、生成コンテンツには `yellow` の背景色を指定し、段落の内容と容易に判別できるようにしています。
 
 ```html live-sample___before
 <p class="box">この HTML ページ内のボックスのコンテンツ</p>
@@ -195,14 +214,22 @@ CSS を使用してコンテンツを文書に挿入するための [`content`](
 ```css live-sample___before
 .box::before {
   content: "これは他のコンテンツの前に表示されます。";
+  background-color: yellow;
 }
 ```
 
 {{EmbedLiveSample("before")}}
 
-CSS からテキストを挿入することは、ウェブ上で実に多く使用することではありません。なぜなら、そのテキストはスクリーンリーダーによってはアクセスできず、将来誰かが見つけて編集するのが難しくなるからです。
+### 生成コンテンツの実践
 
-これらの擬似要素のより有効な使用法は、アイコンを挿入することです。たとえば、以下の例で追加された小さな矢印は、スクリーンリーダーで読みたくない視覚的なインジケーターです。
+前回の例を次のように編集してみてください。
+
+- {{cssxref("content")}} プロパティのテキスト値を変更すると、出力で変更が反映されます。
+- `::before` 擬似要素を `::after` に変更すると、テキストが要素の先頭ではなく末尾に挿入されるようになります。
+
+### アイコンコンテンツの生成
+
+上記の例は妥当な CSS です。しかし、CSS からテキストを挿入することは、ウェブ上であまり多く使用することではありません。そのテキストはスクリーンリーダーによってはアクセスできず、将来誰かが見つけて編集するのが難しくなるからです。これらの擬似要素のより有効な使用法は、アイコンを挿入することです。たとえば、以下の例で追加された小さな矢印は、スクリーンリーダーで読みたくない視覚的なインジケーターです。
 
 ```html live-sample___after-icon
 <p class="box">この HTML ページ内のボックスのコンテンツ</p>
@@ -216,9 +243,11 @@ CSS からテキストを挿入することは、ウェブ上で実に多く使�
 
 {{EmbedLiveSample("after-icon")}}
 
-これらの擬似要素は、空の文字列を挿入するためにも頻繁に使用され、ページ上の要素と同じようにスタイルを設定できます。
+### 図形の生成
 
-次の例では、 `::before` 擬似要素を使用して空の文字列を追加しています。幅と高さでスタイルを設定できるように、これを `display: block` に設定しました。次に、CSS を使用して、他の要素と同じようにスタイルを設定します。CSS をいじって、CSS の外観と動作を変更できます。
+生成コンテンツは、空の文字列を挿入するためにもよく使用され、ページ上の要素と同じようにスタイルを設定できます。
+
+次の例では、 `::before` 擬似要素を使用して空の文字列を追加しています。幅と高さを指定して四角形を作成可能にするため、これを `display: block` に設定しました。次に、CSS を使用して、他の要素と同じようにスタイルを設定します。
 
 ```html live-sample___before-styled
 <p class="box">この HTML ページ内のボックスのコンテンツ</p>
@@ -237,7 +266,9 @@ CSS からテキストを挿入することは、ウェブ上で実に多く使�
 
 {{EmbedLiveSample("before-styled", "", "160")}}
 
-`::before` と `::after` 擬似要素を `content` プロパティとともに使用することは、CSS では「生成コンテンツ」と呼ばれ、この手法がさまざまなタスクに使用されているのをよく目にします。良い例は、 [CSS Arrow Please](http://cssarrowplease.com/) のサイトで、矢印を生成するのに役立てています。矢印を作成するときの CSS を見ると、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素が使用されていることがわかります。これらのセレクターが表示されたら、{{cssxref("content")}} プロパティを見て、文書に何が追加されているかを確認してください。
+上記の CSS をいじって、生成される図形の見た目や動作を変えてみてください。
+
+生成コンテンツが、様々な他の用途に使用される様子をよく目にするでしょう。良い例は、[CSS Arrow Please](http://cssarrowplease.com/) のサイトで、矢印を生成するのに役立てています。矢印を作成するときの CSS を見ると、 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素が使用されていることがわかります。これらのセレクターが表示されたら、{{cssxref("content")}} プロパティを見て、文書に何が追加されているかを確認してください。
 
 ## まとめ
 

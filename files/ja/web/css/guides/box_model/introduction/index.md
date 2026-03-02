@@ -1,14 +1,14 @@
 ---
 title: CSS 基本ボックスモデル入門
+short-title: 入門
 slug: Web/CSS/Guides/Box_model/Introduction
-original_slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 l10n:
-  sourceCommit: 28505c5b2d83732399d8ba96e4b32793580a7f13
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
 ブラウザーのレンダリングエンジンは文書をレイアウトする際に、それぞれの要素を標準的な **CSS 基本ボックスモデル**に基づいた長方形のボックスとして表現します。 CSS はこれらのボックスの寸法、位置、プロパティ（色、背景、境界の幅など）を決定します。
 
-それぞれのボックスは 4 つの部品（または*領域*）から構成され、それぞれの縁について*コンテンツの縁 (content edge)*、_パディングの縁 (padding edge)_、_境界の縁 (border edge)_、_マージンの縁 (margin edge)_ が定義されています。
+それぞれのボックスは 4 つの部分（または領域）から構成されており、それぞれの縁について、コンテンツの縁 (content edge)、パディングの縁 (padding edge)、境界の縁 (border edge)、マージンの縁 (margin edge) が定義されています。
 
 ![CSS ボックスモデル](boxmodel.png)
 
@@ -16,7 +16,7 @@ l10n:
 
 **コンテンツ領域**は、コンテンツの縁に囲まれた領域で、文字列、画像、動画プレイヤー等の「実際の」コンテンツを含みます。領域の寸法は*コンテンツ幅*（または*コンテンツボックスの幅*）と*コンテンツの高さ*（または*コンテンツボックスの高さ*）です。背景色や背景画像を持っていることがあります。
 
-{{cssxref("box-sizing")}} プロパティが `content-box` (既定値) に設定されており、要素がブロック要素である場合は、コンテンツ領域の寸法は {{cssxref("width")}}、{{cssxref("min-width")}}、{{cssxref("max-width")}}、{{cssxref("height")}}、{{cssxref("min-height")}}、{{cssxref("max-height")}} の各プロパティによって正確に定義することができます。
+{{cssxref("box-sizing")}} プロパティが `content-box` (既定値) に設定されており、要素がブロック要素である場合は、コンテンツ領域の寸法は {{cssxref("width")}}、{{cssxref("min-width")}}、{{cssxref("max-width")}}、{{ cssxref("height") }}、{{cssxref("min-height")}}、{{cssxref("max-height")}} の各プロパティによって正確に定義することができます。
 
 ## パディング領域
 
@@ -40,9 +40,10 @@ l10n:
 
 ## 関連情報
 
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 - [レイアウトと包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)
 - [CSS カスケード入門](/ja/docs/Web/CSS/Guides/Cascade/Introduction)
-- [カスケード、詳細度、継承](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - CSS の主要概念:
   - [CSS の構文](/ja/docs/Web/CSS/Guides/Syntax/Introduction)
   - [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)
@@ -59,4 +60,4 @@ l10n:
     - [実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
   - [値の定義構文](/ja/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - [一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
-  - [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+  - {{glossary("Replaced elements", "置換要素")}}

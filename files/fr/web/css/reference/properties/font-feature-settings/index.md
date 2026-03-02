@@ -1,14 +1,13 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
-original_slug: Web/CSS/font-feature-settings
+l10n:
+  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
 
-La propriété **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
-
-{{InteractiveExample("CSS Demo: font-feature-settings")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-feature-settings")}}
 
 ```css interactive-example-choice
 font-feature-settings: normal;
@@ -29,7 +28,7 @@ font-feature-settings: "smcp", "zero";
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>La difficulté des gauffres</p>
     <table>
       <tr>
         <td><span class="tabular">0O</span></td>
@@ -71,11 +70,6 @@ section {
 }
 ```
 
-> [!NOTE]
-> Lorsque c'est possible, les auteurs devraient utiliser la propriété raccourcie {{cssxref("font-variant")}} ou l'une des propriétés détaillées correspondantes parmi {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.
->
-> Cette propriété est une fonctionnalité bas-niveau permettant de gérer des cas particuliers où il n'y a aucun moyen d'accéder à une fonctionnalité OpenType donnée. Cette propriété CSS ne devrait notamment pas être utilisée pour activer les petites majuscules.
-
 ## Syntaxe
 
 ```css
@@ -93,16 +87,27 @@ font-feature-settings:
 /* Valeurs globales */
 font-feature-settings: inherit;
 font-feature-settings: initial;
+font-feature-settings: revert;
+font-feature-settings: revert-layer;
 font-feature-settings: unset;
 ```
 
+Dans la mesure du possible, les auteur·ice·s Web devraient plutôt utiliser la propriété raccourcie {{CSSxRef("font-variant")}} ou une propriété détaillée associée comme {{CSSxRef("font-variant-ligatures")}}, {{CSSxRef("font-variant-caps")}}, {{CSSxRef("font-variant-east-asian")}}, {{CSSxRef("font-variant-alternates")}}, {{CSSxRef("font-variant-numeric")}} ou {{CSSxRef("font-variant-position")}}.
+
+Celles-ci donnent des résultats plus efficaces, prévisibles et compréhensibles que `font-feature-settings`, qui est une fonctionnalité de bas niveau conçue pour gérer des cas particuliers où il n'existe aucun autre moyen d'activer ou d'accéder à une fonctionnalité OpenType. En particulier, il ne faut pas utiliser `font-feature-settings` pour activer les petites capitales.
+
 ### Valeurs
 
+Cette propriété se définit soit avec le mot-clé `normal`, soit avec une liste de valeurs `<feature-tag-value>` séparées par des virgules. Lors du rendu du texte, la liste des valeurs OpenType `<feature-tag-value>` est transmise au moteur de mise en page du texte pour activer ou désactiver des fonctionnalités de police.
+
 - `normal`
-  - : Le texte est disposé en utilisant les réglages par défaut.
+  - : Indique que le texte est disposé en utilisant les réglages de police par défaut. Il s'agit de la valeur par défaut.
 - `<feature-tag-value>`
-  - : Lors du rendu du texte, l'étiquette de fonctionnalité OpenType est passée au moteur afin d'activer ou de désactiver certaines fonctionnalités de la police. L'étiquette est toujours une chaîne (type {{cssxref("&lt;string&gt;")}}) de 4 caractères ASCII. Si la chaîne contient plus ou moins de 4 caractères ou contient des caractères en dehors de l'intervalle U+20 - U+7E, la déclaration sera considérée comme invalide.
-    La valeur associée à l'étiquette est un entier positif. Les deux mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est donnée pour une étiquette, la valeur par défaut sera `1`. Pour les fonctionnalités OpenType qui ne sont pas booléennees, la valeur implique qu'un glyphe donné soit sélectionné.
+  - : Représente une collection de valeurs (<i lang="en">tuple</i> en anglais) séparées par un espace, constitué d'un nom d'étiquette et d'une valeur optionnelle.
+
+    Le nom d'étiquette est toujours une {{CSSxRef("&lt;string&gt;")}} de quatre caractères {{Glossary("ASCII")}}. Si le nom d'étiquette comporte plus ou moins de caractères ou s'il contient des caractères en dehors de l'intervalle de points de code `U+20` — `U+7E`, le descripteur est invalide.
+
+    La valeur optionnelle peut être un entier positif ou le mot-clé `on` ou `off`. Les mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est définie, la valeur par défaut est `1`. Pour les fonctionnalités OpenType non booléennes (par exemple, [alternatives stylistiques](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt)), la valeur implique qu'un glyphe particulier soit sélectionné&nbsp;; pour les fonctionnalités booléennes, la valeur active ou désactive la fonctionnalité.
 
 ## Définition formelle
 
@@ -114,31 +119,33 @@ font-feature-settings: unset;
 
 ## Exemples
 
+### Activer différentes fonctionnalités de police
+
 ```css
 /* on utilise les glyphes alternatifs en small-cap */
-.smallcaps {
+.small-caps {
   font-feature-settings: "smcp" on;
 }
 
 /* on convertit les majuscules et minuscules en petites
    capitales */
-.allsmallcaps {
+.all-small-caps {
   font-feature-settings: "c2sc", "smcp";
 }
 
 /* on utilise les zéros barrés d'une barre oblique afin de
    les différencier de "O" */
-.nicezero {
+.nice-zero {
   font-feature-settings: "zero";
 }
 
 /* on active les formes historiques */
-.hist {
+.historical {
   font-feature-settings: "hist";
 }
 
 /* on désactive les ligatures communément utilisées */
-.noligs {
+.no-ligatures {
   font-feature-settings: "liga" 0;
 }
 
@@ -158,8 +165,8 @@ td.tabular {
 }
 
 /* On active l'ensemble stylistique 7 */
-.fancystyle {
-  font-family: Gabriola; /* Windows 7 et Mac OS */
+.fancy-style {
+  font-family: "Gabriola", cursive;
   font-feature-settings: "ss07";
 }
 ```
@@ -174,5 +181,13 @@ td.tabular {
 
 ## Voir aussi
 
-- [La liste des fonctionnalités OpenType](https://www.microsoft.com/typography/otspec/featurelist.htm)
-- [_Using the whole font_, un article MSDN en anglais](https://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx)
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/src", "src")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}
+- [La liste des fonctionnalités OpenType <sup>(angl.)</sup>](https://learn.microsoft.com/fr-fr/typography/opentype/spec/featurelist)
+- [Utiliser la police entière <sup>(angl.)</sup>](https://sparanoid.com/lab/opentype-features/)
