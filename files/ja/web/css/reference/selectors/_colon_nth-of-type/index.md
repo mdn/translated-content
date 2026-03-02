@@ -1,9 +1,8 @@
 ---
 title: :nth-of-type()
 slug: Web/CSS/Reference/Selectors/:nth-of-type
-original_slug: Web/CSS/:nth-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`:nth-of-type()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、同じ型（タグ名）の兄弟要素の中で、その位置に基づいて要素を照合します。

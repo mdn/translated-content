@@ -1,16 +1,15 @@
 ---
 title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
-original_slug: Web/CSS/font-variant
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
-
-{{CSSRef}}
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
 
-On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2 (première révision), `normal` ou `small-caps`, en utilisant la propriété raccourcie [`font`](/fr/docs/Web/CSS/Reference/Properties/font).
+On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2.1, `normal` ou `small-caps`, en utilisant la propriété raccourcie {{CSSxRef("font")}}.
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-variant")}}
 
 ```css interactive-example-choice
 font-variant: normal;
@@ -31,7 +30,7 @@ font-variant: small-caps slashed-zero;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Difficult waffles</p>
+    <p>La difficulté des gauffres</p>
     <table>
       <tr>
         <td><span class="tabular">0O</span></td>
@@ -73,15 +72,17 @@ section {
 }
 ```
 
-## Propriétés détaillées correspondantes
+## Propriétés constitutives
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+Cette propriété est une abréviation pour les propriétés CSS suivantes&nbsp;:
 
-- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- {{CSSxRef("font-variant-alternates")}}
+- {{CSSxRef("font-variant-caps")}}
+- {{CSSxRef("font-variant-east-asian")}}
+- {{CSSxRef("font-variant-emoji")}}
+- {{CSSxRef("font-variant-ligatures")}}
+- {{CSSxRef("font-variant-numeric")}}
+- {{CSSxRef("font-variant-position")}}
 
 ## Syntaxe
 
@@ -93,25 +94,38 @@ font-variant: common-ligatures small-caps;
 font-variant: inherit;
 font-variant: initial;
 font-variant: revert;
+font-variant: revert-layer;
 font-variant: unset;
 ```
 
 ### Valeurs
 
 - `normal`
-  - : Définit une police normale&nbsp;; chacune des propriétés individuelles a une valeur initiale de `normal`. Les propriétés détaillées de `font-variant` sont&nbsp;: [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps), [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric), [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates), [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures) et [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian).
+  - : Définit une police normale. Chaque propriété individuelle a une valeur initiale de `normal`.
+
 - `none`
-  - : Définit une valeur de `none` pour [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures) et une valeur de `normal` pour les autres propriétés, leur valeur initiale.
+  - : Définit la valeur de {{CSSxRef("font-variant-ligatures")}} à `none` et la valeur des autres propriétés individuelles à `normal`, leur valeur initiale.
+
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures). Les valeurs possibles sont&nbsp;: `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual` et `no-contextual`.
+  - : Définit les mots-clés relatifs à la propriété détaillée {{CSSxRef("font-variant-ligatures")}}. Les valeurs possibles sont&nbsp;: `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual` et `no-contextual`.
+
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates).
+  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée {{CSSxRef("font-variant-ligatures")}}.
+
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée [`font-variant-caps`](/fr/docs/Web/CSS/Reference/Properties/font-variant-caps).
+  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée {{CSSxRef("font-variant-caps")}}. La valeur `small-caps` est la seule variante de police non `normal` valide dans la propriété raccourcie {{CSSxRef("font")}}.
+
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric). Les valeurs possibles sont&nbsp;: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` et `slashed-zero`.
+  - : Définit les mots-clés relatifs à la propriété détaillée {{CSSxRef("font-variant-numeric")}}. Les valeurs possibles sont&nbsp;: `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal` et `slashed-zero`.
+
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-  - : Définit les mots-clés relatifs à la propriété détaillée [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian). Les valeurs possibles sont&nbsp;: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width` et `ruby`.
+  - : Définit les mots-clés relatifs à la propriété détaillée {{CSSxRef("font-variant-east-asian")}}. Les valeurs possibles sont&nbsp;: `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width` et `ruby`.
+
+- `sub`, `super`
+  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée {{CSSxRef("font-variant-position")}}.
+
+- `text`, `emoji`, `unicode`
+  - : Définit les mots-clés et fonctions relatifs à la propriété détaillée {{CSSxRef("font-variant-emoji")}}.
 
 ## Définition formelle
 
@@ -119,7 +133,7 @@ font-variant: unset;
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -128,8 +142,8 @@ font-variant: unset;
 #### HTML
 
 ```html
-<p class="normal">Firefox normal</p>
-<p class="small">Firefox petit</p>
+<p class="normal">Firefox normal&nbsp;!</p>
+<p class="small">Firefox petit&nbsp;!</p>
 ```
 
 #### CSS
@@ -145,7 +159,7 @@ p.small {
 
 #### Résultat
 
-{{EmbedLiveSample('', 'Web/CSS/font-variant')}}
+{{EmbedLiveSample("Utiliser la valeur `small-caps` de `font-variant`")}}
 
 ## Spécifications
 
@@ -157,6 +171,7 @@ p.small {
 
 ## Voir aussi
 
-- [`text-transform`](/fr/docs/Web/CSS/Reference/Properties/text-transform)
-- [`text-combine-upright`](/fr/docs/Web/CSS/Reference/Properties/text-combine-upright)
-- [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)
+- La propriété {{CSSxRef("text-transform")}}
+- La propriété {{CSSxRef("text-combine-upright")}}
+- La propriété {{CSSxRef("text-orientation")}}
+- L'attribut SVG {{SVGAttr("font-variant")}}

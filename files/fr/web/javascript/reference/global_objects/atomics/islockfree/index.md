@@ -3,7 +3,7 @@ title: "Atomics : méthode statique isLockFree()"
 short-title: isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`isLockFree()`** de l'objet {{JSxRef("Atomics")}} est utilisée afin de déterminer si on doit utiliser des verrous (<i lang="en">locks</i> en anglais) ou des opérations atomiques. Elle sert de primitive d'optimisation, afin que des algorithmes hautement performants puissent déterminer s'ils doivent utiliser des verrous ou des opérations atomiques dans les sections critiques. Si une primitive atomique n'est pas sans verrou, il est souvent plus efficace qu'un algorithme mette en œuvre son propre mécanisme de verrouillage.
@@ -40,7 +40,7 @@ Une valeur `true` ou `false` indiquant si l'opération s'exécute sans verrou.
 
 ## Exemples
 
-### Utilisation de `isLockFree()`
+### Utiliser `Atomics.isLockFree()`
 
 ```js
 Atomics.isLockFree(1); // true (dépend de la plateforme)

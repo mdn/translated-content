@@ -1,36 +1,43 @@
 ---
-title: FinalizationRegistry.prototype.unregister()
+title: "FinalizationRegistry : méthode unregister()"
+short-title: unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La méthode `unregister()` permet de retirer un objet donné d'un registre [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry).
+La méthode **`unregister()`** des instances de {{JSxRef("FinalizationRegistry")}} retire une valeur cible de cet objet `FinalizationRegistry`.
 
 ## Syntaxe
 
-```js
-unregister(jetonDesenregistrement);
+```js-nolint
+unregister(unregisterToken)
 ```
 
 ### Paramètres
 
-- `jetonDesenregistrement`
-  - : Le jeton utilisé par la méthode [`register()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register) lors de l'enregistrement de l'objet cible.
+- `unregisterToken`
+  - : Le jeton utilisé avec la méthode {{JSxRef("FinalizationRegistry/register", "register()")}} lors de l'enregistrement de la valeur cible. Plusieurs valeurs enregistrées avec le même `unregisterToken` seront retirées ensemble du registre.
 
 ### Valeur de retour
 
-`undefined`.
+Aucune ({{JSxRef("undefined")}}).
 
-## Notes
+### Exceptions
 
-Lorsqu'un objet cible a été récupéré, il ne fait plus partie du registre. Aussi, il n'est pas nécessaire d'utiliser `unregister()` dans les fonctions de rappel de nettoyage. Appelez uniquement `unregister` si vous n'avez pas reçu de fonction de rappel de nettoyage et que vous n'en avez plus besoin.
+- {{JSxRef("TypeError")}}
+  - : Levée si `unregisterToken` n'est pas un objet ou un [symbole non enregistré](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol#symboles_partagés_et_registre_global_des_symboles).
+
+## Description
+
+Lorsqu'une valeur cible a été récupérée, elle ne fait plus partie du registre.
+Il n'est pas nécessaire d'appeler `unregister` dans votre fonction de rappel de nettoyage. N'appelez `unregister` que si vous n'avez pas reçu de fonction de rappel de nettoyage et que vous n'en avez plus besoin.
 
 ## Exemples
 
-### Utiliser unregister()
+### Utiliser la méthode `unregister()`
 
-Cet exemple illustre l'enregistrement d'un objet en l'utilisant lui-même comme jeton pour le retirer du registre par la suite via `unregister()`&nbsp;:
+Cet exemple illustre l'enregistrement d'un objet en l'utilisant lui-même comme jeton pour le retirer du registre par la suite avec `unregister()`&nbsp;:
 
 ```js
 class Bidule {
@@ -113,4 +120,4 @@ class Bidule {
 
 ## Voir aussi
 
-- [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)
+- L'objet {{JSxRef("FinalizationRegistry")}}

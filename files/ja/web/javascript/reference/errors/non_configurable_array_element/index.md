@@ -79,7 +79,7 @@ copy.length = 1;
 // arr.length == 3
 ```
 
-## 関連項目
+## 関連情報
 
 - [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)
 - {{jsxref("Array.length")}}
