@@ -1,64 +1,64 @@
 ---
-title: Math.asin()
+title: "Math : méthode statique asin()"
+short-title: asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+La méthode statique **`Math.asin()`** retourne le sinus inverse (en radians) d'un nombre. C'est-à-dire,
 
-La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle est définie par :
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚜𝚒𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;tel que&nbsp;</mtext><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1}, 1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{l'unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ tel que } \sin(y) = x</annotation></semantics>
+</math>
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>;</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="thickmathspace"></mspace><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.asin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arcsin</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1};1],\;\mathtt{\operatorname{Math.asin}(x)} = \arcsin(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \sin(y) = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.asin()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// Calculer l'angle d'un triangle rectangle en radians
 function calcAngle(opposite, hypotenuse) {
   return Math.asin(opposite / hypotenuse);
 }
 
 console.log(calcAngle(6, 10));
-// Expected output: 0.6435011087932844
+// Sortie attendue : 0.6435011087932844
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// Sortie attendue : NaN
 ```
 
 ## Syntaxe
 
-```js
-Math.asin(x);
+```js-nolint
+Math.asin(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Un nombre.
+  - : Un nombre compris entre -1 et 1, représentant la valeur du sinus de l'angle.
 
 ### Valeur de retour
 
-L'arc sinus du nombre passé en argument (exprimé en radians). Si ce nombre n'est pas compris entre -1 et 1, la valeur renvoyée sera {{jsxref("NaN")}}.
+L'arc sinus (angle en radians compris entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> et <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>, inclus) de `x`. Si `x` est inférieur à -1 ou supérieur à 1, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-La méthode `Math.asin()` renvoie une valeur numérique comprise entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> et <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math> pour `x` compris entre -1 et 1. Si `x` est hors de cet intervalle, la méthode renverra {{jsxref("NaN")}}.
-
-`Math.asin()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.asin()`, elle ne doit pas être appelée à partir d'un autre objet créé (`Math` n'est pas un constructeur).
+Parce que `asin()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.asin()`, plutôt qu'en tant que méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-### Utiliser `Math.asin()`
+### Utiliser la méthode `Math.asin()`
 
 ```js
 Math.asin(-2); // NaN
-Math.asin(-1); // -1.570796326794897 (-pi/2)
+Math.asin(-1); // -1.5707963267948966 (-π/2)
+Math.asin(-0); // -0
 Math.asin(0); // 0
-Math.asin(0.5); // 0.5235987755982989
-Math.asin(1); // 1.570796326794897 (pi/2)
+Math.asin(0.5); // 0.5235987755982989 (π/6)
+Math.asin(1); // 1.5707963267948966 (π/2)
 Math.asin(2); // NaN
 ```
-
-Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.asin()` renvoie {{jsxref("NaN")}}.
 
 ## Spécifications
 
@@ -70,9 +70,10 @@ Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.as
 
 ## Voir aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.atan()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- La méthode statique {{JSxRef("Math.acos()")}}
+- La méthode statique {{JSxRef("Math.atan()")}}
+- La méthode statique {{JSxRef("Math.atan2()")}}
+- La méthode statique {{JSxRef("Math.cos()")}}
+- La méthode statique {{JSxRef("Math.sin()")}}
+- La méthode statique {{JSxRef("Math.tan()")}}
+- La fonction CSS {{CSSxRef("asin()")}}
