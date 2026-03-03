@@ -1,14 +1,16 @@
 ---
-title: <input>：输入（表单输入）元素
+title: <input>：HTML 输入元素
 slug: Web/HTML/Reference/Elements/input
+l10n:
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
 [HTML](/zh-CN/docs/Web/HTML) **`<input>`** 元素用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据。取决于设备和{{Glossary("user agent", "用户代理")}}不同，表单可以使用各种类型的输入数据和控件。`<input>` 元素是目前 HTML 中最强大、最复杂的元素之一，因为它有大量的输入类型和属性组合。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML 演示：&lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="name">Name (4 to 8 characters):</label>
+<label for="name">名称（4~8 个字符）：</label>
 
 <input
   type="text"
@@ -150,7 +152,7 @@ label {
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td>用于输入数字的控件。如果支持的话，会显示滚动按钮并提供缺省验证（即只能输入数字）。拥有动态键盘的设备上会显示数字键盘。</td>
+      <td>用于输入数字的控件。如果支持的话，会显示滚动按钮并提供默认验证。拥有动态键盘的设备上会显示数字键盘。</td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
 &#x3C;input type="number" name="number"/></pre>
@@ -159,7 +161,7 @@ label {
     </tr>
     <tr>
       <td>{{HTMLElement("input/password", "password")}}</td>
-      <td>单行的文本区域，其值会被遮盖。如果站点不安全，会警告用户。</td>
+      <td>单行的文本区域，其值会被隐藏。如果站点不安全，会警告用户。</td>
       <td id="examplepassword">
         <pre class="brush: html hidden">
 &#x3C;input type="password" name="password"/></pre>
@@ -178,7 +180,7 @@ label {
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td>此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用 <a href="#min"><code>min</code></a> 和 <a href="#max"><code>max</code></a> 来规定可接受值的范围。</td>
+      <td>用于输入数值的控件，其精确值并不重要。控件是一个范围组件，默认值为正中间的值。同时使用 <a href="#min"><code>min</code></a> 和 <a href="#max"><code>max</code></a> 来规定可接受值的范围。</td>
       <td id="examplerange">
         <pre class="brush: html hidden">
 &#x3C;input type="range" name="range" min="0" max="25"/></pre>
@@ -286,73 +288,84 @@ label {
 
 `<input>` 元素包含的属性包含[全局的 HTML 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)和以下这些额外属性：
 
-| 属性                                | 类型                                                                 | 描述                                                                       |
-| ----------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [`accept`](#accept)                 | `file`                                                               | 文件上传控件中预期文件类型的提示                                           |
-| [`alt`](#alt)                       | `image`                                                              | 图片类型的 alt 属性。对无障碍是必需的                                      |
-| [`autocomplete`](#autocomplete)     | 除了 `checkbox`、`radio` 和按钮以外                                  | 表单自动填充特性提示                                                       |
-| [`capture`](#capture)               | `file`                                                               | 文件上传控件中媒体捕获方法的提示                                           |
-| [`checked`](#checked)               | `checkbox`、`radio`                                                  | 控件是否选中                                                               |
-| [`dirname`](#dirname)               | `search`、`text`                                                     | 表单字段的名称，用于在提交表单时发送元素的方向性                           |
-| [`disabled`](#disabled)             | 所有类型                                                             | 表单控件是否禁用                                                           |
-| [`form`](#form)                     | 所有类型                                                             | 将控件联系到表单元素中                                                     |
-| [`formaction`](#formaction)         | `image`、`submit`                                                    | 要提交表单的 URL 地址                                                      |
-| [`formenctype`](#formenctype)       | `image`、`submit`                                                    | 提交表单时使用的表单数据编码类型                                           |
-| [`formmethod`](#formmethod)         | `image`、`submit`                                                    | 提交表单时所使用的 HTTP 方法                                               |
-| [`formnovalidate`](#formnovalidate) | `image`、`submit`                                                    | 绕过表单提交时的表单控件验证                                               |
-| [`formtarget`](#formtarget)         | `image`、`submit`                                                    | 提交表单时的浏览上下文                                                     |
-| [`height`](#height)                 | `image`                                                              | 与 {{htmlelement('img')}} 元素的 height 属性有相同含义，垂直方向上的维度值 |
-| [`list`](#list)                     | 除了 `hidden`、`password`、`checkbox`、`radio` 和按钮以外            | 自动完成选项的 {{htmlelement('datalist')}} 的 id 属性的值                  |
-| [`max`](#max)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最大值                                                                     |
-| [`maxlength`](#maxlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最大长度（字符数）                                               |
-| [`min`](#min)                       | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最小值                                                                     |
-| [`minlength`](#minlength)           | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最小长度（字符数）                                               |
-| [`multiple`](#multiple)             | `email`、`file`                                                      | 布尔值。是否允许多个值                                                     |
-| [`name`](#name)                     | 所有类型                                                             | 表单的控件名称，作为键值对的一部分与表单一同提交                           |
-| [`pattern`](#pattern)               | `text`、`search`、`url`、`tel`、`email`、`password`                  | 为了使得 `value` 有效，必须符合的模式                                      |
-| [`placeholder`](#placeholder)       | `text`、`search`、`url`、`tel`、`email`、`password`、`number`        | 当没有值设定时，出现在表单控件上的文字                                     |
-| [`readonly`](#readonly)             | 除了 `hidden`、`range`、`color`、`checkbox`、`radio` 和按钮以外      | 布尔值。如果存在，其中的值将不可编辑。                                     |
-| [`required`](#required)             | 除了 `hidden`、`range`、`color` 和按钮以外                           | 布尔值。如果存在，一个值是必需的，或者必须勾选该值才能提交表格。           |
-| [`size`](#size)                     | `text`、`search`、`url`、`tel`、`email`、`password`                  | 控件的尺寸                                                                 |
-| [`src`](#src)                       | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `src` 属性含义相同，图片资源的地址        |
-| [`step`](#step)                     | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 有效的增量值                                                               |
-| [`type`](#type)                     | 所有类型                                                             | 表单控件的类型                                                             |
-| [`value`](#value)                   | 所有类型                                                             | 表单控件的初始值                                                           |
-| [`width`](#width)                   | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `width` 属性含义相同                      |
+| 属性                                          | 类型                                                                 | 描述                                                                       |
+| --------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [`accept`](#accept)                           | `file`                                                               | 文件上传控件中预期文件类型的提示                                           |
+| [`alpha`](#alpha)                             | `color`                                                              | 颜色的透明度                                                               |
+| [`alt`](#alt)                                 | `image`                                                              | 图片类型的 alt 属性。对无障碍是必需的                                      |
+| [`autocapitalize`](#autocapitalize)           | 除了 `url`、`email` 和 `password` 以外                               | 控制输入文本的自动大写行为                                                 |
+| [`autocomplete`](#autocomplete)               | 除了 `checkbox`、`radio` 和按钮以外                                  | 表单自动填充特性提示                                                       |
+| [`capture`](#capture)                         | `file`                                                               | 文件上传控件中媒体捕获方法的提示                                           |
+| [`checked`](#checked)                         | `checkbox`、`radio`                                                  | 控件是否选中                                                               |
+| [`colorspace`](#colorspace)                   | `color`                                                              | 选择颜色值时需要使用的[颜色空间](/zh-CN/docs/Glossary/Color_space)         |
+| [`dirname`](#dirname)                         | `hidden`、`text`、`search`、`url`、`tel`、`email`                    | 表单字段的名称，用于在提交表单时发送元素的方向性                           |
+| [`disabled`](#disabled)                       | 所有类型                                                             | 表单控件是否禁用                                                           |
+| [`form`](#form)                               | 所有类型                                                             | 将控件与表单元素建立练习                                                   |
+| [`formaction`](#formaction)                   | `image`、`submit`                                                    | 要提交表单的 URL 地址                                                      |
+| [`formenctype`](#formenctype)                 | `image`、`submit`                                                    | 提交表单时使用的表单数据编码类型                                           |
+| [`formmethod`](#formmethod)                   | `image`、`submit`                                                    | 提交表单时所使用的 HTTP 方法                                               |
+| [`formnovalidate`](#formnovalidate)           | `image`、`submit`                                                    | 绕过表单提交时的表单控件验证                                               |
+| [`formtarget`](#formtarget)                   | `image`、`submit`                                                    | 提交表单时的浏览上下文                                                     |
+| [`height`](#height)                           | `image`                                                              | 与 {{htmlelement('img')}} 元素的 height 属性有相同含义，垂直方向上的维度值 |
+| [`list`](#list)                               | 除了 `hidden`、`password`、`checkbox`、`radio` 和按钮以外            | 自动完成选项的 {{htmlelement('datalist')}} 的 id 属性的值                  |
+| [`max`](#max)                                 | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最大值                                                                     |
+| [`maxlength`](#maxlength)                     | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最大长度（字符数）                                               |
+| [`min`](#min)                                 | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 最小值                                                                     |
+| [`minlength`](#minlength)                     | `text`、`search`、`url`、`tel`、`email`、`password`                  | `value` 的最小长度（字符数）                                               |
+| [`multiple`](#multiple)                       | `email`、`file`                                                      | 布尔值。是否允许多个值                                                     |
+| [`name`](#name)                               | 所有类型                                                             | 表单的控件名称，作为键值对的一部分与表单一同提交                           |
+| [`pattern`](#pattern)                         | `text`、`search`、`url`、`tel`、`email`、`password`                  | 为了使得 `value` 有效，必须符合的模式                                      |
+| [`placeholder`](#placeholder)                 | `text`、`search`、`url`、`tel`、`email`、`password`、`number`        | 当没有值设定时，出现在表单控件上的文字                                     |
+| [`popovertarget`](#popovertarget)             | `button`                                                             | 将 `<input type="button">` 指定为弹出框元素的控制项                        |
+| [`popovertargetaction`](#popovertargetaction) | `button`                                                             | 指定弹出框控件应执行的操作                                                 |
+| [`readonly`](#readonly)                       | 除了 `hidden`、`range`、`color`、`checkbox`、`radio` 和按钮以外      | 布尔值。如果存在，其中的值将不可编辑。                                     |
+| [`required`](#required)                       | 除了 `hidden`、`range`、`color` 和按钮以外                           | 布尔值。如果存在，一个值是必需的，或者必须勾选该值才能提交表格。           |
+| [`size`](#size)                               | `text`、`search`、`url`、`tel`、`email`、`password`                  | 控件的尺寸                                                                 |
+| [`src`](#src)                                 | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `src` 属性含义相同，图片资源的地址        |
+| [`step`](#step)                               | `date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` | 有效的增量值                                                               |
+| [`type`](#type)                               | 所有类型                                                             | 表单控件的类型                                                             |
+| [`value`](#value)                             | 所有类型                                                             | 表单控件的初始值                                                           |
+| [`width`](#width)                             | `image`                                                              | 与 {{htmlelement('img')}} 元素的 `width` 属性含义相同                      |
 
 一些额外的非标准属性被列在标准属性的描述之后。
 
-### 属性各论
+### 单独的属性
 
-- `accept`
+- [`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept)
   - : 仅对 `file` 输入类型有效。`accept` 属性定义了 `file` 上传控件可选择文件类型的列表。参见 {{HTMLElement("input/file", "file")}} 输入类型以了解更多信息。
 
+- `alpha` {{experimental_inline}}
+  - : 仅对 `color` 输入类型有效，`alpha` 属性使终端用户能够设置所选颜色的透明度。
+
 - `alt`
-  - : 仅对 `image` 类型有效。`alt` 属性提供了图片的替代文字，在图片的 [`src`](#src) 属性缺失或对应资源加载失败时，会显示该属性的值。参见 {{HTMLElement("input/image", "image")}} 输入类型以了解更多信息。
+  - : 仅对 `image` 按钮有效。`alt` 属性提供了图片的替代文字，在图片的 [`src`](#src) 属性缺失或对应资源加载失败时，会显示该属性的值。参见 {{HTMLElement("input/image", "image")}} 输入类型以了解更多信息。
+
+- `autocapitalize`
+  - : 控制输入文本是否自动首字母大写，以及采用何种方式实现。更多信息请参阅 [`autocapitalize`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize) 全局属性页面。
 
 - [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)
-  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete#值) 以了解允许的值。
+  - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性将一个以空白字符分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。参见 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete#值) 以了解允许的值。
 
     `autocomplete` 属性对 `hidden`、`text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`、`color` 和 `password` 类型的输入有效。该属性对于那些不返回数值或文本数据的输入控件没有效果，对除了 `checkbox`、`radio`、`file` 和任何按钮类型的所有输入类型均有效。
 
-    查看 [HTML autocomplete 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)以了解额外信息，包括密码安全和对于 `hidden` 来说，`autocomplete` 的方式与其他输入类型略有不同。
+    查看 [`autocomplete` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)以了解额外信息，包括密码安全相关说明，以及 `hidden` 输入类型与其他输入类型在 `autocomplete` 属性上的细微差异。
 
 - `autofocus`
-  - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 `<dialog>` 显示完毕）时，该 input 元素应该自动拥有焦点。
+  - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 {{HTMLElement("dialog")}} 显示完毕）时，该 input 元素应该自动拥有焦点。
 
     > [!NOTE]
     > 具有 `autofocus` 属性的元素可能在 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
 
-    文档中只有一个表单元素可以具有 `autofocus` 属性。如果放置了多于一个元素，会聚焦第一个具有该属性的元素。
+    文档中只有一个表单元素可以具有 `autofocus` 属性。如果该属性设置到多于一个元素上，会聚焦第一个具有该属性的元素。
 
     `autofocus` 不能应用于类型为 `hidden` 的输入控件上，因为隐藏的控件不可聚焦。
 
     > [!WARNING]
     > 自动聚焦表单控件会使使用读屏技术的视力障碍者和有认知障碍的人感到困惑。当指定了 `autofocus` 时，读屏器会将用户“传送”到表单控件上，而不会事先警告他们。
 
-    在应用 `autofocus` 属性时，要仔细考虑无障碍问题。自动聚焦于一个控件会导致页面在加载时滚动。焦点也会导致动态键盘在某些触摸设备上显示。虽然屏幕阅读器会宣布收到焦点的表单控件的标签，但屏幕阅读器不会宣布标签之前的任何内容，在小设备上的视力良好的用户同样会错过前面的内容所创造的背景。
+    在应用 `autofocus` 属性时，要仔细考虑无障碍问题。自动聚焦于一个控件会导致页面在加载时滚动。焦点也会导致动态键盘在某些触摸设备上显示。虽然屏幕阅读器会宣告收到焦点的表单控件的标签，但屏幕阅读器不会宣告标签之前的任何内容，在小设备上的视力良好的用户同样会错过先前内容构成的上下文信息。
 
-- `capture`
+- [`capture`](/zh-CN/docs/Web/HTML/Reference/Attributes/capture)
   - : 在 HTML 媒体捕获规范中引入，仅对 `file` 输入类型有效，`capture` 属性定义了应该使用哪种媒体（如麦克风、视频或相机）来捕获一个新文件，以便在支持场景中用 `file` 上传控件上传。参见 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `checked`
@@ -363,8 +376,13 @@ label {
     >
     > 例如，`name` 为 `fruit` 的复选框含有 `value` 为 `cherry` 的一项，且该复选框为选中状态，提交的表单数据将包含 `fruit=cherry`；如果复选框为非活动状态，它不会列入到表单数据中。复选框和单选按钮的默认 `value` 值为 `on`。
 
-- `dirname`
-  - : 仅对 `text` 和 `search` 输入类型有效。`dirname` 属性允许提交元素的方向。当包含这个属性时，表单控件将提交两个名称/值对：第一个是 [`name`](#name) 和 [`value`](#value)，第二个是 `dirname` 作为名称，其值为浏览器设置的 `ltr` 或 `rtl`。
+- `colorspace` {{experimental_inline}}
+  - : 仅对 `color` 输入类型有效。`colorspace` 属性指定了 `type="color"` 所使用的[色彩空间](/zh-CN/docs/Glossary/Color_space)。可能的{{Glossary("enumerated", "枚举")}}值包括：
+    - `"limited-srgb"`：颜色属于 {{glossary("RGB", "sRGB")}} 色彩空间，其中包括 {{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}、{{cssxref("color_value/hwb", "hwb()")}} 和 {{cssxref("hex-color")}} 值。颜色值限制为每个 `r`、`g` 和 `b` 分量 8 位。这是默认值。
+    - `"display-p3"`：[Display P3 色彩空间](/zh-CN/docs/Glossary/Color_space#display-p3)，例如：`color(display-p3 1.84 -0.19 0.72 / 0.6)`
+
+- [`dirname`](/zh-CN/docs/Web/HTML/Reference/Attributes/dirname)
+  - : 对 `hidden`、`text`、`search`、`url`、`tel` 和 `email` 输入类型有效。`dirname` 属性允许提交元素的方向性。当包含这个属性时，表单控件将提交两个名称/值对：第一个是 [`name`](#name) 和 [`value`](#value)，第二个是 `dirname` 作为名称，其值为浏览器设置的 `ltr` 或 `rtl`。
 
     ```html
     <form action="page.html" method="post">
@@ -377,9 +395,9 @@ label {
     <!-- page.html?fruit=cherry&fruit.dir=ltr -->
     ```
 
-    当提交上述表单时，会发送 `name` / `value` 对 `fruit=cherry` 和 `dirname` / 方向对 `fruit.dir=ltr`。
+    当提交上述表单时，会发送 `name` / `value` 对 `fruit=cherry` 和 `dirname` / 方向对 `fruit.dir=ltr`。更多信息请参见 [`dirname` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/dirname)。
 
-- `disabled`
+- [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled)
   - : 一个布尔属性，如果存在的话，表示用户不应该与该输入进行交互。禁用的输入通常以较暗的颜色呈现，或使用一些其他形式的指示，表明该字段不能使用。
 
     具体来说，禁用的输入不会接收 {{domxref("Element/click_event", "click")}} 事件，而且禁用的输入不会随表单提交。
@@ -387,7 +405,7 @@ label {
     > [!NOTE]
     > 虽然规范中没有要求，但 Firefox 默认会在不同的页面加载中[保持 `<input>` 的动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](#autocomplete) 属性来控制这个特性。
 
-- `form`
+- [`form`](/zh-CN/docs/Web/HTML/Reference/Attributes/form)
   - : 一个字符串，指定该输入与之相关的 {{HTMLElement("form")}} 元素（即其**表单所有者**）。如果存在该属性，该字符串的值必须与相同文档中的 `<form>` 元素的 [`id`](#id) 相同。如果没有指定该属性，该 `<input>` 元素与最近包含它的表单相关。
 
     `form` 属性可以让你在文档的任何地方放置一个输入控件，但在文档的其他地方包含一个表单。
@@ -406,46 +424,46 @@ label {
 - `formtarget`
   - : 仅对 `image` 和 `submit` 输入类型有效。参见 {{HTMLElement("input/submit", "submit")}} 输入类型介绍以获得更多信息。
 - `height`
-  - : 仅对 `image` 输入按钮有效。`height` 是要显示代表图形提交按钮的图片的高度。参见 {{HTMLElement("input/image", "image")}}。
+  - : 仅对 `image` 输入按钮有效。`height` 是要显示代表图形提交按钮的图片的高度。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 - `id`
-  - : 全局属性对所有元素有效，包括所有的输入类型，它定义了一个唯一的标识符（ID），在整个文档中必须是唯一的。其目的是为了在链接时识别该元素。该值被用作 {{htmlelement('label')}} 的 `for` 属性的值，以便将标签与表单控件连接起来。参见 {{htmlelement('label')}}。
+  - : 全局属性，对所有元素有效，包括所有的输入类型，它定义了一个唯一的标识符（ID），在整个文档中必须是唯一的。其目的是为了在链接时识别该元素。该值被用作 {{htmlelement('label')}} 的 `for` 属性的值，以便将标签与表单控件连接起来。参见 {{htmlelement('label')}}。
 - `inputmode`
   - : 对所有元素都有效的全局值，它为浏览器提供了一个提示，说明在编辑这个元素或其内容时要使用的虚拟键盘配置类型。值包括 `none`、`text`、`tel`、`url`、`email`、`numeric`、`decimal` 和 `search`。
 - `list`
-  - : 给予 `list` 属性的值应该是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {domxref("Element.id", "id")}}。`<datalist>` 提供了一个预定义值的列表，向用户建议这个输入。列表中任何与[`type`](#type)不兼容的值都不包括在建议的选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
+  - : 给予 `list` 属性的值应该是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {{domxref("Element.id", "id")}}。`<datalist>` 提供了一个预定义值的列表，向用户建议这个输入。列表中任何与 [`type`](#type) 不兼容的值都不包括在建议的选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
     在 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` 和 `color` 上均有效。
 
-    根据规范，`hidden`、`password`、`checkbox`、`radio`、`file` 或任何按钮类型不支持 `list` 属性。
+    根据规范，`hidden`、`password`、`checkbox`、`radio`、`file` 及任何按钮类型不支持 `list` 属性。
 
-    根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像选择一样打开但允许非列表值的输入。查看[浏览器兼容性表](/zh-CN/docs/Web/HTML/Reference/Elements/datalist#浏览器兼容性)，了解其他输入类型。
+    根据浏览器的不同，用户可能会看到一个建议的自定义调色板、沿着一个范围的跳动标记、甚至是一个像 {{HTMLElement("select")}} 一样打开但允许非列表值的输入。查看[浏览器兼容性表格](/zh-CN/docs/Web/HTML/Reference/Elements/datalist#浏览器兼容性)，了解其他输入类型。
 
     参见 {{htmlelement('datalist')}} 元素。
 
-- `max`
+- [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)
   - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`max` 的值可能低于 `min` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
-- `maxlength`
-  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
+- [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 {{glossary("UTF-16", "UTF-16 码元")}}为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
-    如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果文本框中的字符数大于 `maxlength` {{glossary("UTF-16", "UTF-16 码元")}}长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
-- `min`
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
+- [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min)
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 指定的值不是数字，则元素没有最小值。
 
     该值必须小于或等于 `max` 属性的值。如果 `min` 属性存在但没有指定或无效，则不应用 `min` 值。如果 `min` 属性有效，并且非空值小于 `min` 属性所允许的最小值，约束验证将阻止表单提交。参见[客户端验证](#客户端验证)一节以获取更多信息。
 
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`min` 的值可能高于 `max` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
-- `minlength`
-  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则该字段将没有最小值。
+- [`minlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/minlength)
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 {{glossary("UTF-16", "UTF-16 码元")}}为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则元素没有最小值。
 
-    如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
+    如果输入字段的文本长度小于 `minlength` {{glossary("UTF-16", "UTF-16 码元")}}的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
-- `multiple`
-  - : 如果设置了布尔值 `multiple` 属性，意味着用户可以在电子邮件部件中输入逗号分隔的电子邮件地址，或者可以通过 `file` 输入选择多个文件。参见 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型。
+- [`multiple`](/zh-CN/docs/Web/HTML/Reference/Attributes/multiple)
+  - : 如果设置了 `multiple` 布尔属性，意味着用户可以在电子邮件部件中输入逗号分隔的电子邮件地址，或者可以通过 `file` 输入选择多个文件。参见 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `name`
   - : 一个指定输入控件名称的字符串。当表单数据被提交时，这个名字会和控件的值一起提交。
@@ -460,7 +478,7 @@ label {
 
     在一个同名的单选按钮组中，一次只能选中一个单选按钮。选择该组中的任何一个单选按钮会自动取消对同一组中当前被选中的单选按钮的选择。如果表单被提交，这一个被选中的单选按钮的值会和名称一起被发送。
 
-    当标签进入一系列同名的单选按钮组时，如果有一个被选中，将聚焦该单选按钮。如果它们没有按源顺序分组，如果组中有一个被选中，当遇到组中的第一个时，标签进入组开始，跳过所有没有选中的。换句话说，如果有一个被选中，标签就会跳过该组中未被选中的单选按钮。如果没有勾选，当到达同名组中的第一个按钮时，就会聚焦该单选按钮组。
+    当通过 Tab 键进入一系列同名的单选按钮组时，如果有一个被选中，将聚焦该单选按钮。如果它们没有按源顺序分组，如果组中有一个被选中，当遇到组中的第一个时，Tab 键进入组开始，跳过所有没有选中的。换句话说，如果存在选中项，Tab 键就会跳过该组中未被选中的单选按钮；如果不存在，当到达同名组中的第一个按钮时，就会聚焦该单选按钮组。
 
     一旦组中的一个单选按钮有了焦点，使用箭头键将浏览所有同名的单选按钮，即使这些单选按钮在源顺序中没有被分组。
 
@@ -477,39 +495,56 @@ label {
     > [!WARNING]
     > 避免给表单元素一个与表单内置属性相对应的 `name`，因为这样你就会用这个对相应输入的引用来覆盖预定义的属性或方法。
 
-- `pattern`
-  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
+- [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern)
+  - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 [`value`](#value) 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明。模式文本周围不应指定正斜杠。在编译正则表达式时：
+    1. 模式将被隐式包裹在 `^(?:` 和 `)$` 中，使得匹配必须与输入值的*全部*内容进行比对，即 `^(?:<pattern>)$`。
+    2. 默认启用 `'v'` 标志，使模式被视为 Unicode 码点的序列，而非 {{Glossary("ASCII")}}。
 
-    如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
+    如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。如果存在 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Attributes/multiple) 属性，则编译后的正则表达式将与每个逗号分隔的值进行匹配。
 
     > [!NOTE]
     > 如果使用了 `pattern` 属性，要在附近告知用户所期望的输入格式。你可以包含 [`title`](#title) 属性来解释满足模式的需求说明，大多数浏览器将它们显示为工具提示（tooltip）。对于无障碍来说，视觉的解释是必要的，工具提示是一种改进点。
-    > 参见[客户端验证](#客户端验证)一节以了解更多信息。
 
-- `placeholder`
-  - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“First Name”，一个适合的占位文字可能是“如 Mustafa”。
+    参见[客户端验证](#客户端验证)一节以了解更多信息。
+
+- [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Attributes/placeholder)
+  - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“姓氏”，一个适合的占位文字可能是“如：赵”。
 
     > [!NOTE]
     > `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
 
-- `readonly`
+- `popovertarget`
+  - : 将 `<input type="button">` 元素转换为弹出框控制按钮；其值为要控制的弹出框元素的 ID。更多详情请参阅 {{domxref("Popover API", "Popover API", "", "nocode")}} 专题页面。通过 `popovertarget` 属性建立弹出框与其调用按钮的关系，还具有以下两个实用效果：
+    - 浏览器会自动创建隐式 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) 属性，并在弹出框显示时将其置于键盘焦点导航顺序的合理位置。这使得弹出框对键盘及辅助技术（AT）用户更具可访问性（参见[弹出框无障碍特性](/zh-CN/docs/Web/API/Popover_API/Using#弹出框无障碍特性)）。
+    - 浏览器会在两者间建立隐式锚点关联，便于通过 [CSS 锚点定位](/zh-CN/docs/Web/CSS/Guides/Anchor_positioning)将弹出框定位于其控制项周围。更多细节请参阅[弹出框锚点定位](/zh-CN/docs/Web/API/Popover_API/Using#popover_anchor_positioning)。
+
+- `popovertargetaction`
+  - : 指定由控件 `<input type="button">` 控制的弹出框元素应执行的操作。可能值包括：
+    - `"hide"`
+      - : 按钮将隐藏已显示的弹出框。若尝试隐藏已隐藏的弹出框，则不执行任何操作。
+    - `"show"`
+      - : 按钮将显示隐藏的弹出框。若尝试显示已显示的弹出框，则不执行任何操作。
+    - `"toggle"`
+      - : 按钮将切换弹出框的显示状态。若弹出框处于隐藏状态，则显示；若处于显示状态，则隐藏。若省略 `popovertargetaction` 属性，则 `"toggle"` 为控制按钮默认执行的操作。
+
+- [`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly)
   - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
 
     参见 [HTML 属性：`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly) 以了解更多信息。
 
-- `required`
+- [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)
   - : `required` 是一个布尔属性，如果存在，则表示用户必须在提交表单之前指定一个非空值。`required` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`password`、`checkbox`、`radio` 和 `file` 输入类型。
 
     参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)以了解更多信息。
 
-- `size`
-  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/Reference/Properties/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
+- [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size)
+  - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS {{cssxref("width")}} 属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级高于 `size` 属性。
 
 - `src`
-  - : 仅对 `image` 输入按钮有效。指定将要在提交按钮上显示的图像的 URL。参见 {{HTMLElement("input/image", "image")}} 输入类型。
+  - : 仅对 `image` 输入按钮有效。`src` 参数为字符串，用于指定要显示的图像文件 URL，该图像将作为图形化提交按钮呈现。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 
-- `step`
-  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性指定了值必须满足的粒度。
+- [`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step)
+  - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性指定了值必须满足的粒度。仅当值与步长基准值相差整数步时才有效。步长基准值为：若指定则为 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min)，否则为 [`value`](#value)，若两者均未提供则为 `0`（`week` 属性除外，其默认步长基准值为 -259,200,000，代表 `1970-W01` 周的起始点）。
 
     如果没有明确包含它：
     - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
@@ -517,13 +552,14 @@ label {
 
     值必须为一个正数（整数或小数）或特殊值 `any`（意味着不指定任何步进值，任意值都可以接受（除其他制约因素如 [`min`](#min) 或 [`max`](#min) 之外））。
 
-    如果没有明确设置 `any`，`number`、日期/时间输入类型和 `range` 输入类型的有效值等于步进的基础——[`min`](#min)值和步进值的增量，如果指定的话，最高为[`max`](#max)值。
+    如果没有明确设置 `any`，`number`、日期/时间输入类型和 `range` 输入类型的有效值等于步进的基础——[`min`](#min) 值和步进值的增量，如果指定的话，最高为 [`max`](#max) 值。
 
-    例如，如果存在这样一个元素 `<input type="number" min="10" step="2">`，那么任何大于等于 `10` 的偶整数都是有效的。如果省略（`<input type="number">`），任何整数都有效，但浮点数（如 `4.2`）无效，因为 `step` 默认为`1`。为了使 `4.2` 有效，`step` 必须被设置为 `any`、0.1、0.2 或任何 `min` 值以 `.2` 结尾的数字，例如 `<input type="number" min="-5.2">`。
+    例如，如果存在这样一个元素 `<input type="number" min="10" step="2">`，那么任何大于等于 `10` 的偶整数都是有效的。如果省略（`<input type="number">`），任何整数都有效，但浮点数（如 `4.2`）无效，因为 `step` 默认为 `1`。为了使 `4.2` 有效，`step` 必须被设置为 `any`、0.1、0.2 或任何 `min` 值以 `.2` 结尾的数字，例如 `<input type="number" min="-5.2">`。
 
     > [!NOTE]
     > 当用户输入的数据不符合步进配置时，该值在约束验证中被认为是无效的，将匹配 `:invalid` 伪类。
-    > 参见[客户端验证](#客户端验证)以获取更多信息。
+
+    参见[客户端验证](#客户端验证)以获取更多信息。
 
 - `tabindex`
   - : 对所有元素有效的全局属性，包括所有的输入类型，是一个整数属性，表示该元素如果参与顺序键盘导航，是否可以接受输入焦点（可聚焦）。由于除了隐藏类型的输入外，所有的输入类型都是可聚焦的，这个属性不应该用在表单控件上，因为这样做需要管理文档中所有元素的聚焦顺序，如果设置错误，就有可能损害可用性和无障碍性。
@@ -555,22 +591,15 @@ label {
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocorrect"><code>autocorrect</code></a></td>
-      <td>
-        指定 autocorrect 状态的字符串，状态为 code>on</code> 或 <code>off</code>。<strong>仅 Safari 适用。</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#incremental"><code>incremental</code></a></td>
       <td>
-        是否重复发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件，以便在用户仍在编辑字段值时更新实时搜索结果。<strong>WebKit 和 Blink 适用（Safari、Chrome、Opera 等）。</strong>
+        是否重复发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件，以便在用户仍在编辑字段值时更新实时搜索结果。<strong>仅 WebKit 和 Blink 适用（Safari、Chrome、Opera 等）。</strong>
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
-        <p>当用户在编辑字段时按下键盘的 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时，所需要进行的动作的字符串表示，这用于决定虚拟键盘上那个键的合适的标签。</p>
-        <p><strong>已弃用，请使用 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> 替代。</strong></p>
+        <p>当用户在编辑字段时按下键盘的 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时，所需要进行的动作的字符串表示，这用于决定虚拟键盘上那个键的合适的标签。<strong>该属性已弃用，请使用 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> 替代。</strong></p>
       </td>
     </tr>
     <tr>
@@ -596,13 +625,6 @@ label {
   </tbody>
 </table>
 
-- `autocorrect` {{non-standard_inline}}
-  - : （仅 Safari 适用）。一个字符串，表示是否在用户编辑该字段时激活自动更正。允许的值为：
-    - `on`
-      - : 启用自动更正，如果配置了文字替换，则一同处理它们。
-    - `off`
-      - : 禁用自动更正和文字替换。
-
 - `incremental` {{non-standard_inline}}
   - : 布尔属性 `incremental` 是 WebKit 和 Blink 的扩展（所以 Safari、Opera、Chrome 等都支持），如果存在的话，就会告诉{{Glossary("user agent","用户代理")}}将输入作为实时搜索处理。当用户编辑该字段的值时，用户代理将 {{domxref("HTMLInputElement/search_event", "search")}} 事件发送到代表搜索框的 {{domxref("HTMLInputElement")}} 对象。这使得你的代码能够在用户编辑搜索时实时更新搜索结果。
 
@@ -611,10 +633,10 @@ label {
     `search` 事件是限速的，因此它的发送频率不会超过实施定义的间隔。
 
 - `orient` {{non-standard_inline}}
-  - : 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal`，代表范围滑块水平呈现；和 `vertical`，代表范围滑块垂直呈现。
+  - : 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal`，代表范围滑块水平呈现；和 `vertical`，代表范围滑块垂直呈现。有关创建垂直表单控件的现代方法，请参阅[创建垂直表单控件](/zh-CN/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)。
 
 - `results` {{non-standard_inline}}
-  - : 只有 Safari 支持的 `results` 属性是一个数值，可以让你覆盖 {{HTMLElement("input")}} 元素原生提供的先前搜索查询下拉菜单中显示的最大条目数。
+  - : 只有 Safari 支持的 `results` 属性是一个数值，可以让你覆盖 `<input>` 元素原生提供的先前搜索查询下拉菜单中显示的最大条目数。
 
     该值必须是一个非负的十进制数字。如果没有提供，或者提供了一个无效的值，则使用浏览器的默认最大条目数。
 
@@ -639,6 +661,8 @@ label {
   - : 将输入元素中指定的字符范围的内容设置为一个给定的字符串。`selectMode` 参数可以控制现有内容如何被影响。
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : 在一个文本输入元素中选择指定的字符范围。对不以文本输入字段形式出现的输入没有任何作用。
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : 显示输入元素的浏览器选择器，该选择器通常在元素被选中时显示，但可通过按钮点击或其他用户交互触发。
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : 默认情况下，将一个数字输入的值减少 1，或减少指定的单位数量。
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
@@ -652,7 +676,7 @@ label {
 
 <table class="no-markdown">
   <caption>
-  与 <code>&#x3C;input></code> 元素非常相关的标题：
+  与 <code>&#x3C;input></code> 元素非常相关的伪类：
   </caption>
   <thead>
     <tr>
@@ -753,6 +777,12 @@ label {
         与 <code>:invalid</code> 相似，但是在失焦的情况下激活。匹配无效的输入，但只在用户交互之后，例如关注该控件、离开该控件或试图提交包含无效控件的表单。
       </td>
     </tr>
+    <tr>
+      <td>{{Cssxref(":open")}}</td>
+      <td>
+        <code>&lt;input&gt;</code> 元素会显示一个选择器供用户选择值（例如 <a href="/zh-CN/docs/Web/HTML/Reference/Elements/input/color"><code>&lt;input type="color"&gt;</code></a>）——但仅当该元素处于打开状态时，即选择器显示时才会生效。
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -782,9 +812,11 @@ input:checked + label {
 /* 匹配密码输入 */
 input[type="password"] {
 }
+
 /* 匹配合法值限制在一个范围内的表单控件 */
 input[min][max] {
 }
+
 /* 匹配含有 pattern 属性的表单控件 */
 input[pattern] {
 }
@@ -801,14 +833,6 @@ input[pattern] {
 ```
 
 只有适用于 {{cssxref("::first-line")}} 伪元素的 CSS 属性子集可以在选择器中使用 `::placeholder` 的规则。
-
-### appearance
-
-{{cssxref("appearance")}} 属性可以将（几乎）任何元素显示为基于操作系统主题的平台原生样式，也可以用 `none` 值去除任何平台原生样式。
-
-你可以用 `div {appearance: radio;}` 使 `<div>` 看起来像一个单选按钮，或者用 `[type="radio"] {appearance: checkbox;}` 使一个单选看起来像一个复选框，但不要这样做。
-
-设置 `appearance: none` 移除了平台原生的边框，但没有移除其功能。
 
 ### caret-color
 
@@ -836,6 +860,12 @@ input.custom {
 #### 结果
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
+
+### field-sizing
+
+{{cssxref("field-sizing")}} 属性可控制表单输入框的尺寸行为（即默认情况下为其分配首选尺寸）。该属性允许覆盖默认行为，使表单控件能够根据内容自动调整尺寸。
+
+该属性通常用于创建能紧贴内容缩放、随文本输入增长的表单字段。适用于接受直接文本输入的输入类型（例如 [`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 和 [`url`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url))、输入类型 [`file`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file) 以及 {{htmlelement("textarea")}} 元素。
 
 ### object-position 和 object-fit
 
@@ -1069,7 +1099,7 @@ nameInput.addEventListener("invalid", () => {
 > 始终在客户端和服务器端验证输入约束。约束验证并不能消除在*服务器端*进行验证的必要性。无效的值仍然可以由旧的浏览器或坏的行为者发送。
 
 > [!NOTE]
-> Firefox 在许多版本中支持一个专有的错误属性——`x-moz-errormessage`，它允许你以类似的方式设置自定义错误信息。从第 66 版开始，这个属性已被移除（见[Firefox bug 1513890](https://bugzil.la/1513890)）。
+> Firefox 在许多版本中支持一个专有的错误属性——`x-moz-errormessage`，它允许你以类似的方式设置自定义错误信息。从版本号 66 开始，这个属性已被移除（见 [Firefox bug 1513890](https://bugzil.la/1513890)）。
 
 ### 本地化
 
@@ -1081,7 +1111,28 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 - 尝试任何 `Content-Language` HTTP 头所指定的语言。或者，
 - 如果没有指定，则使用浏览器的区域设置。
 
-### 技术总结
+## 无障碍
+
+### 标签
+
+在包含输入框时，添加标签是无障碍要求。此举旨在让辅助技术使用者明确输入框用途。此外，点击或触摸标签会将焦点转移至关联的表单控件，这既提升了视障用户的无障碍体验，也扩大了用户可点击/触摸的操作区域。对于尺寸微小的单选按钮和复选框而言，此设计尤为重要（甚至不可或缺）。有关标签的通用信息，请参阅[标签](#标签)。
+
+以下示例展示了如何以上述样式关联 `<label>` 与 `<input>` 元素：需为 `<input>` 添加 `id` 属性，`<label>` 则需设置 `for` 属性，其值应与输入框的 `id` 一致。
+
+```html
+<label for="peas">你喜欢豌豆吗？</label>
+<input type="checkbox" name="peas" id="peas" />
+```
+
+### 尺寸
+
+交互元素（如表单输入框）应提供足够大的区域以便轻松激活。这有助于各类人群，包括存在运动控制障碍者，以及使用触控笔或手指等非精确输入方式的用户。建议最小交互区域尺寸为 44×44 [CSS 像素](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels)。
+
+- [理解成功标准 2.5.5：目标尺寸 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [目标尺寸与 2.5.5 准则 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [快速测试：大尺寸触控目标 - A11Y 项目](https://www.a11yproject.com/posts/large-touch-targets/)
+
+## 技术概要
 
 <table class="properties">
   <tbody>
@@ -1092,7 +1143,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
       <td>
         <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、列表元素、可提交元素、可重设元素、表单相关元素<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
+        >、列表元素、可提交元素、可重设元素、表单相关元素<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >。如果 <code
           ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/input#attr-type">type</a></code
@@ -1102,7 +1153,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
     <tr>
       <th scope="row">允许内容</th>
       <td>
-        无，这是一个<a href="/zh-CN/docs/Glossary/empty_element">空元素</a>。
+        无，这是一个{{Glossary("void element", "空元素")}}</a>。
       </td>
     </tr>
     <tr>
@@ -1115,6 +1166,107 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
         任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td>
+        <ul>
+          <li>
+            <code>type=button</code>：
+            <code
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
+          </li>
+          <li>
+            <code>type=checkbox</code>：
+            <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role">checkbox</a></code>
+          </li>
+          <li>
+            <code>type=email</code>
+            <ul>
+              <li>
+                无 <code>list</code> 属性：
+                <code
+                  ><a
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
+              </li>
+              <li>
+                有 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>type=image</code>：
+            <code
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
+          </li>
+          <li>
+            <code>type=number</code>：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
+          </li>
+          <li><code>type=radio</code>：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><code>type=range</code>：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
+          <li>
+            <code>type=reset</code>:
+            <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
+          </li>
+          <li>
+            <code>type=search</code>
+            <ul>
+              <li>
+                无 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>
+              </li>
+              <li>
+                有 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>type=submit</code>:
+            <code
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
+          </li>
+          <li>
+            <code>type=tel</code>
+            <ul>
+              <li>
+               无 <code>list</code> 属性：
+                <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
+              </li>
+              <li>
+                有 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>type=text</code>
+            <ul>
+              <li>
+                无 <code>list</code> 属性：
+                <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
+              </li>
+              <li>
+                有 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>type=url</code>
+            <ul>
+              <li>
+                无 <code>list</code> 属性：
+                <code
+                  ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a ></code>
+              </li>
+              <li>
+                有 <code>list</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>type=color|date|datetime-local|file|hidden|month|password|time|week</code>：
+            <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">没有对应的角色</a>
+          </li>
+        </ul>
       </td>
     </tr>
     <tr>
@@ -1172,47 +1324,24 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
             >
           </li>
           <li>
-            <code>type=color|date|datetime|datetime-local|email|file</code
-            >：无
+            没有 <code>list</code> 属性的 <code>type=text</code>：
+            <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
           <li>
-            <code>type=hidden|month|number|password|range|reset</code>：无
+            <code>type=color|date|datetime-local|email|file|hidden|</code>
+              <code>month|number|password|range|reset|search|submit|tel|url|week</code>
+            或有 <code>list</code> 属性的 <code>type=text</code>：没有允许的
+            <code>role</code>
           </li>
-          <li><code>type=search|submit|tel|text|url|week</code>：无</li>
         </ul>
       </td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
-      <td>
-        <a href="/zh-CN/docs/Web/API/HTMLInputElement"
-          ><code>HTMLInputElement</code></a
-        >
-      </td>
+      <td>{{domxref("HTMLInputElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## 无障碍考虑
-
-### 标签
-
-当包括输入元素时，在旁边添加标签是一项无障碍要求，这样那些使用辅助技术的人就可以知道输入的内容是什么。另外，点击或触摸一个标签会将焦点集中到该标签的相关表单控件上。这提高了视力用户的可及性和可用性，增加了用户可以点击或触摸以激活表单控件的区域。这对单选按钮和复选框特别有用（甚至非常必要），因为它们很小。关于标签的更多信息，请参见[标签](#标签)一节。
-
-以下示例是将 `<label>` 和一个 `<input>` 元素建立联系。你需要赋予 `<input>` 元素一个 `id` 属性。 `<label>` 需要一个 `for` 属性，其值与输入的 `id` 相同。
-
-```html
-<label for="peas">你喜欢豌豆吗？</label>
-<input type="checkbox" name="peas" id="peas" />
-```
-
-### 尺寸
-
-像表单输入这样的互动元素应该提供一个足够大的区域，以便于激活它们。这有助于各种人，包括有运动控制问题的人和使用非精确形式的输入（如手写笔或手指）的人。建议最小互动尺寸为 44×44 [CSS 像素](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)。
-
-- [了解成功标准 2.5.5：目标尺寸 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [目标尺寸和 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [快速测试：大型点击目标——The A11Y Project](https://a11yproject.com/posts/large-touch-targets/)
 
 ## 规范
 
@@ -1224,14 +1353,10 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 
 ## 参见
 
-- [表单约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
+- CSS {{cssxref("appearance")}} 属性
 - [你的第一个表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form)
-- [如何构建 Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
+- [如何构建 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [原生表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [发送表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
-- [表单数据验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers)
+- [表单约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)
 - [为 HTML 表单添加样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [HTML 表单高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)
-- [CSS 属性兼容性表格](/zh-CN/docs/Learn_web_development/Extensions/Forms)

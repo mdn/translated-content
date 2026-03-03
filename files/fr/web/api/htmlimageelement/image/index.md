@@ -3,12 +3,12 @@ title: "HTMLImageElement : constructeur Image()"
 short-title: Image()
 slug: Web/API/HTMLImageElement/Image
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}
 
-Le constructeur **`Image()`** crée une nouvelle instance {{domxref("HTMLImageElement")}}. C'est fonctionnellement équivalent à {{domxref("Document.createElement()", "document.createElement('img')")}}.
+Le constructeur **`Image()`** crée une nouvelle instance de {{DOMxRef("HTMLImageElement")}}. C'est fonctionnellement équivalent à {{DOMxRef("Document.createElement()", "document.createElement('img')")}}.
 
 > [!NOTE]
 > Cette fonction ne doit pas être confondue avec la fonction CSS [`image()`](/fr/docs/Web/CSS/Reference/Values/image/image).
@@ -23,9 +23,9 @@ new Image(width, height)
 
 ### Paramètres
 
-- `width` {{optional_inline}}
+- `width` {{Optional_Inline}}
   - : La largeur de l'image (c'est-à-dire, la valeur pour l'attribut [`width`](/fr/docs/Web/HTML/Reference/Elements/img#width))
-- `height` {{optional_inline}}
+- `height` {{Optional_Inline}}
   - : La hauteur de l'image (c'est-à-dire, la valeur pour l'attribut [`height`](/fr/docs/Web/HTML/Reference/Elements/img#height)).
 
 ## Notes d'utilisation

@@ -1,15 +1,17 @@
 ---
-title: "スキルテスト: レスポンシブウェブデザインとメディアクエリー"
-short-title: レスポンシブウェブデザインとメディアクエリー
+title: "確認テスト: レスポンシブウェブデザインとメディアクエリー"
+short-title: "テスト: RWD とメディアクエリー"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: 5bc6436b2e8ba611ec3c5c979b71655aa74fc713
 ---
 
-このスキルテストの目的は、[メディアクエリーの使用方法](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)を理解しているかどうかを評価し、実践的な課題でレスポンシブウェブデザインを身につけてもらうことです。この課題をクリアするために必要な知識は、 [CSS レイアウトモジュール](/ja/docs/Learn_web_development/Core/CSS_layout)のレイアウトレッスンに完全に含まれています。
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Mobile-first_challenge", "Learn_web_development/Core/CSS_layout")}}
+
+この確認テストの目的は、[メディアクエリーの使用方法](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)を理解しているかどうかを評価し、実践的な課題でレスポンシブウェブデザインを身につけてもらうことです。この課題をクリアするために必要な知識は、 [CSS レイアウトモジュール](/ja/docs/Learn_web_development/Core/CSS_layout)のレイアウトレッスンに完全に含まれています。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題
 
@@ -26,3 +28,5 @@ l10n:
 ![2 段組みのレイアウト。](rwd-task.png)
 
 デスクトップレイアウトを作成する方法はいくつもありますので、いろいろ試してみてください。また、 2 つ目のブレークポイントを追加して、タブレットで縦長モードで動作するレイアウトを作成してもいいでしょう。
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout/Mobile-first_challenge", "Learn_web_development/Core/CSS_layout")}}

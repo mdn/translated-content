@@ -1,40 +1,39 @@
 ---
-title: <thead>
+title: "<thead> : l'élément d'en-tête du tableau"
 slug: Web/HTML/Reference/Elements/thead
-original_slug: Web/HTML/Element/thead
+l10n:
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<thead>`** encapsule un ensemble de lignes de tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent l'en-tête d'un tableau contenant des informations sur les colonnes du tableau. Il s'agit généralement d'en-têtes de colonnes (éléments {{HTMLElement("th")}}).
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<thead>`** définit un ensemble de lignes qui définit l'en-tête des colonnes d'un tableau.
-
-{{InteractiveExample("HTML Demo: &lt;thead&gt;", "tabbed-taller")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;thead&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
   <caption>
-    Council budget (in £) 2018
+    Budget du conseil (en livres sterling) 2018
   </caption>
   <thead>
     <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
+      <th scope="col">Articles</th>
+      <th scope="col">Dépenses</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Donuts</th>
-      <td>3,000</td>
+      <th scope="row">Beignets</th>
+      <td>3 000</td>
     </tr>
     <tr>
-      <th scope="row">Stationery</th>
-      <td>18,000</td>
+      <th scope="row">Fournitures de bureau</th>
+      <td>18 000</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row">Totals</th>
-      <td>21,000</td>
+      <th scope="row">Total</th>
+      <td>21 000</td>
     </tr>
   </tfoot>
 </table>
@@ -44,7 +43,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<thead>`** définit un ensemble de lign
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -75,34 +74,249 @@ td {
 }
 ```
 
+## Attributs
+
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+### Attributs obsolètes
+
+Les attributs suivants sont obsolètes et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour de code existant et pour des raisons historiques uniquement.
+
+- `align` {{Deprecated_Inline}}
+  - : Définit l'alignement horizontal de chaque cellule d'en-tête. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez plutôt la propriété CSS {{CSSxRef("text-align")}}, car cet attribut est obsolète.
+
+- `bgcolor` {{Deprecated_Inline}}
+  - : Définit la couleur d'arrière-plan de chaque cellule d'en-tête. La valeur est une couleur HTML&nbsp;; soit un [code RGB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color), préfixé d'un `#`, soit un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est obsolète.
+
+- `char` {{Deprecated_Inline}}
+  - : Ne fait rien. Il était à l'origine destiné à définir l'alignement du contenu sur un caractère de chaque cellule d'en-tête. Si [`align`](#align) n'est pas défini à `char`, cet attribut est ignoré.
+
+- `charoff` {{Deprecated_Inline}}
+  - : Ne fait rien. Il était à l'origine destiné à définir le nombre de caractères de décalage du contenu de la cellule d'en-tête par rapport au caractère d'alignement défini par l'attribut [`char`](#char).
+
+- `valign` {{Deprecated_Inline}}
+  - : Définit l'alignement vertical de chaque cellule d'en-tête. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `baseline`, `bottom`, `middle` et `top`. Utilisez la propriété CSS {{CSSxRef("vertical-align")}} à la place, car cet attribut est obsolète.
+
+## Notes d'utilisation
+
+- L'élément `<thead>` est placé après tout élément {{HTMLElement("caption")}} et {{HTMLElement("colgroup")}}, mais avant tout élément {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} et {{HTMLElement("tr")}}.
+- Avec ses éléments associés {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}}, l'élément `<thead>` fournit des informations {{Glossary("semantics", "sémantiques")}} utiles et peut être utilisé lors du rendu à l'écran ou à l'impression. La définition de tels groupes de contenu de tableau apporte également des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche.
+- Lors de l'impression d'un document, dans le cas d'un tableau sur plusieurs pages, l'en-tête du tableau indique généralement des informations qui restent identiques sur chaque page.
+
+## Exemples
+
+Voir {{HTMLElement("table")}} pour un exemple complet de tableau présentant les standards courants et les bonnes pratiques.
+
+### Structure d'en-tête simple
+
+Cet exemple montre un tableau divisé en une section d'en-tête avec des en-têtes de colonnes et une section de corps avec les données principales du tableau.
+
+#### HTML
+
+Les éléments `<thead>` et {{HTMLElement("tbody")}} sont utilisés pour structurer les lignes du tableau en sections {{Glossary("semantics", "sémantiques")}}. L'élément `<thead>` représente la section d'en-tête du tableau, qui contient une ligne ({{HTMLElement("tr")}}) de cellules d'en-tête de colonnes ({{HTMLElement("th")}}).
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Identifiant de l'étudiant</th>
+      <th>Nom</th>
+      <th>Spécialité</th>
+      <th>Crédits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Informatique</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>Littérature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+      <td>Astrophysique</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+Quelques règles CSS de base sont utilisées pour mettre en forme et mettre en valeur l'en-tête du tableau afin que les titres des colonnes se distinguent des données du corps du tableau.
+
+```css
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  text-align: center;
+  background-color: #2c5e77;
+  color: white;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Structure d'en-tête simple", 650, 140)}}
+
+### Lignes d'en-tête multiples
+
+Cet exemple montre une section d'en-tête de tableau comportant deux lignes.
+
+#### HTML
+
+Nous étendons la structure du tableau du [premier exemple](#structure_d'en-tête_simple) en incluant deux lignes de tableau ({{HTMLElement("tr")}}) dans l'élément `<thead>`, créant ainsi un en-tête de tableau à plusieurs lignes. Nous avons ajouté une colonne supplémentaire, séparant les noms d'étudiant·e·s en prénom et nom.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Identifiant de l'étudiant</th>
+      <th colspan="2">Étudiant</th>
+      <th rowspan="2">Spécialité</th>
+      <th rowspan="2">Crédits</th>
+    </tr>
+    <tr>
+      <th>Prénom</th>
+      <th>Nom</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Martha</td>
+      <td>Jones</td>
+      <td>Informatique</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Victor</td>
+      <td>Nim</td>
+      <td>Littérature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Alexandra</td>
+      <td>Petrov</td>
+      <td>Astrophysique</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### Extension de cellules
+
+Pour associer et aligner les cellules d'en-tête avec les bonnes colonnes et lignes, les attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/th#rowspan) sont utilisés sur les éléments {{HTMLElement("th")}}. Les valeurs définies dans ces attributs indiquent combien de cellules chaque cellule d'en-tête ({{HTMLElement("th")}}) occupe. En raison de la façon dont ces attributs sont définis, les deux cellules d'en-tête de la deuxième ligne sont alignées avec les colonnes qu'elles surplombent. Chacune occupe une ligne et une colonne, car les valeurs par défaut des attributs [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#colspan) et [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/th#rowspan) sont toutes deux `1`.
+
+L'extension de colonnes et de lignes démontrée par cet exemple est illustrée dans la figure suivante&nbsp;:
+
+![Illustration démontrant l'extension de colonnes et de lignes des cellules de tableau : les cellules 1, 3 et 4 s'étendent chacune sur une colonne et deux lignes ; la cellule 2 s'étend sur deux colonnes et une ligne ; les cellules 5 et 6 occupent chacune une seule ligne et colonne, s'insérant dans les cellules disponibles qui sont la deuxième et la troisième colonne de la deuxième ligne](/shared-assets/images/diagrams/html/table/column-row-span.png)
+
+#### CSS
+
+Le CSS est inchangé par rapport au [premier exemple](#structure_d'en-tête_simple).
+
+```css hidden
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  background-color: #2c5e77;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+tbody {
+  background-color: #e4f0f5;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Extension de cellules", 650, 180)}}
+
+## Résumé technique
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>Aucun.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.</td>
+      <td>Zéro ou plusieurs éléments {{HTMLElement("tr")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
       <td>
-        La balise de début est obligatoire. La balise de fin peut être absente si l'élément <a href="/fr/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a> est immédiatement suivi par un élément <a href="/fr/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a> ou par un élément <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a>.
+        La balise de début est obligatoire. La balise de fin peut être absente si l'élément <code>&lt;thead&gt;</code> est immédiatement suivi par un élément {{HTMLElement("tbody")}} ou par un élément {{HTMLElement("tfoot")}}.
       </td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Un élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>. L'élément <code>&lt;thead&gt;</code> doit apparaître après tout élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>(même si ce dernier est défini implicitement), il doit apparaître avant tout élément <a href="/fr/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.
+        Un élément {{HTMLElement("table")}}. L'élément <code>&lt;thead&gt;</code> doit apparaître après tout élément {{HTMLElement("caption")}} ou {{HTMLElement("colgroup")}}, qui est défini implicitement, il doit apparaître avant tout élément {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} et {{HTMLElement("tr")}}.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"><code>rowgroup</code></a>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role"
+            >rowgroup</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -111,72 +325,10 @@ td {
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLTableSectionElement"><code>HTMLTableSectionElement</code></a></td>
+      <td>{{DOMxRef("HTMLTableSectionElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-### Attributs dépréciés ou obsolètes
-
-- `align` {{Deprecated_inline}}
-  - : Cet attribut définit l'alignement horizontal pour le contenu de chaque cellule. Les valeurs possibles sont&nbsp;:
-    - `left`
-      - : Le contenu de la cellule est aligné à gauche de la cellule.
-    - `center`
-      - : Le contenu de la cellule est centré horizontalement.
-    - `right`
-      - : Le contenu de la cellule est aligné à droite de la cellule.
-    - `justify`
-      - : Insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié.
-    - `char`
-      - : Aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs `char` et `charoff`.
-
-    Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
-
-    > [!WARNING]
-    > Cet attribut est devenu obsolète dans le dernier standard.
-    >
-    > - Pour réaliser le même effet qu'avec les valeurs `left`, `center`, `right` ou `justify`, utilisez la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) sur cet élément.
-    > - Pour réaliser le même effet qu'avec `char`, vous pouvez utiliser la valeur de `char` comme valeur pour la propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
-
-- `bgcolor` {{Non-standard_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan de chaque cellule dans une colonne. Sa valeur est [un code hexadécimal RGB sur 6 chiffres](/fr/docs/Web/CSS/Reference/Values/color_value#les_couleurs_rgb), préfixé d'un '`#`' ou un des [mots-clés de couleurs prédéfinis](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
-
-    Pour réaliser un effet équivalent, on utilisera plutôt la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color).
-
-- `char` {{Deprecated_inline}}
-  - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut `align` ne vaut pas `char`, l'attribut est ignoré.
-
-    > [!NOTE]
-    > Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec `char`, on peut utiliser la même valeur sur la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
-
-- `charoff` {{Deprecated_inline}}
-  - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
-
-    > [!NOTE]
-    > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et n'est plus supporté dans le dernier standard.
-
-- `valign` {{Deprecated_inline}}
-  - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles pour cet attribut sont&nbsp;:
-    - `baseline`
-      - : Aligne le texte à la ligne la plus basse possible en utilisant la [ligne de base](https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
-    - `bottom`
-      - : Place le texte au plus bas de la cellule.
-    - `middle`
-      - : Centre verticalement le texte dans la cellule.
-    - `top`
-      - : Place le texte au plus haut de la cellule.
-
-    > [!NOTE]
-    > Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser. La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) doit être utilisée à la place.
-
-## Exemples
-
-Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation de l'élément `<thead>`.
 
 ## Spécifications
 
@@ -188,16 +340,9 @@ Consulter la page [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour d
 
 ## Voir aussi
 
-- Les autres éléments HTML liés aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
-  - [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody)
-  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
-  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
-  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
-- Les propriétés et pseudo-classes CSS particulièrement utiles pour mettre en forme l'élément `<thead>`&nbsp;:
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de définir l'alignement des cellules de la colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner le contenu des différentes cellules par rapport à un même caractère (par exemple le point ou la virgule)
+- [Apprendre&nbsp;: bases des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- Les autres éléments HTML liés aux tableaux&nbsp;: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}
+- La propriété CSS {{CSSxRef("background-color")}} pour définir la couleur d'arrière-plan de chaque cellule d'en-tête
+- La propriété CSS {{CSSxRef("border")}} pour contrôler les bordures des cellules d'en-tête
+- La propriété CSS {{CSSxRef("text-align")}} pour aligner horizontalement le contenu de chaque cellule d'en-tête
+- La propriété CSS {{CSSxRef("vertical-align")}} pour aligner verticalement le contenu de chaque cellule d'en-tête
