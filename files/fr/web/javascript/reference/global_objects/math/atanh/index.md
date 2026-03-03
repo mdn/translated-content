@@ -1,74 +1,64 @@
 ---
-title: Math.atanh()
+title: "Math : méthode statique atanh()"
+short-title: atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Math.atanh()`** retourne l'arc tangente hyperbolique d'un nombre. C'est-à-dire,
 
-La fonction **`Math.atanh()`** renvoie l'arc tangente hyperbolique d'un nombre :
+<math display="block">
+  <semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗𝚑</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow></mtd><mtd><mo>=</mo><mo lspace="0em" rspace="0.16666666666666666em">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;telle que&nbsp;</mtext><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.16666666666666666em"></mspace><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mtd></mtr></mtable><annotation encoding="TeX">\begin{aligned}\forall x \in ({-1}, 1),\;\mathtt{\operatorname{Math.atanh}(x)} &= \operatorname{artanh}(x) = \text{l'unique } y \text{ telle que } \tanh(y) = x \\&= \frac{1}{2}\,\ln\left(\frac{1+x}{1-x}\right)\end{aligned}</annotation></semantics>
+</math>
 
-<math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mrow><mo>(</mo><mrow><mo>-</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arctanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> le seul </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mtext> tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tanh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in \left( -1, 1 \right), \mathtt{\operatorname{Math.atanh}(x)} = \operatorname{arctanh}(x) = \text{ the unique } \; y \; \text{such that} \; \tanh(y) = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.atanh()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.atanh()")}}
 
 ```js interactive-example
 console.log(Math.atanh(-1));
-// Expected output: -Infinity
+// Sortie attendue : -Infinity
 
 console.log(Math.atanh(0));
-// Expected output: 0
+// Sortie attendue : 0
 
 console.log(Math.atanh(0.5));
-// Expected output: 0.549306144334055 (approximately)
+// Sortie attendue : 0.549306144334055 (approximativement)
 
 console.log(Math.atanh(1));
-// Expected output: Infinity
+// Sortie attendue : Infinity
 ```
 
 ## Syntaxe
 
-```js
-Math.atanh(x);
+```js-nolint
+Math.atanh(x)
 ```
 
 ### Paramètres
 
 - `x`
-  - : Un nombre.
+  - : Un nombre compris entre -1 et 1, inclus.
 
 ### Valeur de retour
 
-L'arc tangente hyperbolique du nombre passé en argument.
+La tangente hyperbolique inverse de `x`. Si `x` est 1, retourne {{JSxRef("Infinity")}}. Si `x` est -1, retourne `-Infinity`. Si `x` est inférieur à -1 ou supérieur à 1, retourne {{JSxRef("NaN")}}.
 
 ## Description
 
-`atanh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.atanh()`, et non pas une méthode d'un objet `Math` créé sur mesure (`Math` n'est pas un constructeur).
+Parce que `atanh()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.atanh()`, et non comme méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
-### Utiliser `Math.atanh()`
+### Utiliser la méthode `Math.atanh()`
 
 ```js
 Math.atanh(-2); // NaN
 Math.atanh(-1); // -Infinity
+Math.atanh(-0); // -0
 Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
 Math.atanh(1); // Infinity
 Math.atanh(2); // NaN
-```
-
-Pour les valeurs strictement inférieures à -1 ou strictement supérieures à 1, {{jsxref("NaN")}} sera renvoyé.
-
-## Prothèse d'émulation (_polyfill_)
-
-Pour <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&#x3C;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &#x3C; 1</annotation></semantics></math>, on a la formule suivante : <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math>et on peut donc émuler la fonction avec :
-
-```js
-Math.atanh =
-  Math.atanh ||
-  function (x) {
-    return Math.log((1 + x) / (1 - x)) / 2;
-  };
 ```
 
 ## Spécifications
@@ -81,8 +71,10 @@ Math.atanh =
 
 ## Voir aussi
 
-- {{jsxref("Math.acosh()")}}
-- {{jsxref("Math.asinh()")}}
-- {{jsxref("Math.cosh()")}}
-- {{jsxref("Math.sinh()")}}
-- {{jsxref("Math.tanh()")}}
+- [Prothèse d'émulation de `Math.atanh` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-math)
+- [Prothèse d'émulation es-shims de `Math.atanh` <sup>(angl.)</sup>](https://www.npmjs.com/package/math.atanh)
+- La méthode statique {{JSxRef("Math.acosh()")}}
+- La méthode statique {{JSxRef("Math.asinh()")}}
+- La méthode statique {{JSxRef("Math.cosh()")}}
+- La méthode statique {{JSxRef("Math.sinh()")}}
+- La méthode statique {{JSxRef("Math.tanh()")}}
