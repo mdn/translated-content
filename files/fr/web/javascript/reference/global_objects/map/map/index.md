@@ -1,30 +1,34 @@
 ---
 title: Constructeur Map()
+short-title: Map()
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
+l10n:
+  sourceCommit: 1d905454be7d8910d5e3b33f0c22d063fe212816
 ---
 
-{{JSRef}}
-
-Le **constructeur `Map()`** permet de créer des objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map).
+Le **constructeur `Map()`** permet de créer des objets {{JSxRef("Map")}}.
 
 ## Syntaxe
 
-```js
-new Map();
-new Map(iterable);
+```js-nolint
+new Map()
+new Map(iterable)
 ```
+
+> [!NOTE]
+> `Map()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
-- `iterable` {{optional_inline}}
-  - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) ou un autre objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) dont les éléments sont des clés/valeurs (par exemple des tableaux avec deux éléments comme `[[ 1, 'un' ],[ 2, 'deux' ]]`). Chaque paire de clé/valeur est ajouté au nouvel objet `Map`.
+- `iterable` {{Optional_Inline}}
+  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) (comme un tableau) est passé, tous ses éléments seront ajoutés au nouvel objet `Map`. Chaque élément doit être un objet avec deux propriétés&nbsp;: `0` et `1`, qui correspondent à la clé et à la valeur (par exemple, `[[1, "un"],[2, "deux"]]`). Si vous ne définissez pas ce paramètre, ou si sa valeur est `null` ou `undefined`, le nouvel objet `Map` est vide.
 
 ## Exemples
 
 ### Créer un nouvel objet `Map`
 
 ```js
-let maMap = new Map([
+const maMap = new Map([
   [1, "un"],
   [2, "deux"],
   [3, "trois"],
@@ -41,7 +45,8 @@ let maMap = new Map([
 
 ## Voir aussi
 
-- Une prothèse d'émulation pour `Map`, disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js#map)
-- [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+- [Prothèse d'émulation de `Map` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#map)
+- [Prothèse d'émulation es-shims de `Map` <sup>(angl.)</sup>](https://www.npmjs.com/package/es-map)
+- L'objet {{JSxRef("Set")}}
+- L'objet {{JSxRef("WeakMap")}}
+- L'objet {{JSxRef("WeakSet")}}
