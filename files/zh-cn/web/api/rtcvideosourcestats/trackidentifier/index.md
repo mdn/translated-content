@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCVideoSourceStats")}} 字典的 **`trackIdentifier`** 属性是与此相关联的 [`MediaStreamTrack`](/zh-CN/docs/Web/API/MediaStreamTrack) 的 `id` 属性值。
+{{domxref("RTCVideoSourceStats")}} 字典的 **`trackIdentifier`** 属性包含关联的 [`MediaStreamTrack`](/zh-CN/docs/Web/API/MediaStreamTrack) 的 `id` 属性值。
 
 ## 值
 
-与此相关联的 [`MediaStreamTrack.id`](/zh-CN/docs/Web/API/MediaStreamTrack/id) 值。
+包含关联的 [`MediaStreamTrack.id`](/zh-CN/docs/Web/API/MediaStreamTrack/id) 值的字符串。
 
 ## 规范
 
