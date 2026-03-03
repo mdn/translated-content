@@ -2,7 +2,7 @@
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`506 Variant Also Negotiates`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼於在內容協商中出現選擇資源的過程中出現遞迴循環時回傳。

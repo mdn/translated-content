@@ -1,9 +1,8 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/Reference/Properties/mask-border-slice
-original_slug: Web/CSS/mask-border-slice
 l10n:
-  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の部品を構成するために使用されます。
@@ -91,7 +90,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> {{cssxref("mask-border")}} ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 > [!NOTE]
 > fill キーワードは、要素の内容を表示したい場合には設定する必要があります。

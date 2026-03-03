@@ -1,9 +1,8 @@
 ---
 title: ::scroll-marker
 slug: Web/CSS/Reference/Selectors/::scroll-marker
-original_slug: Web/CSS/::scroll-marker
 l10n:
-  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
+  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
 ---
 
 {{SeeCompatTable}}
@@ -24,7 +23,10 @@ l10n:
 
 スクロールコンテナーの `::scroll-marker-group` 擬似要素は、スクロールコンテナーまたはその子孫で生成された `::scroll-marker` 擬似要素を自動的にすべて含みます。これにより、それらをグループとして位置指定およびレイアウトすることができ、通常、CSS カルーセルを作成してスクロール位置インジケータを作成する場合に使用されます。個々のスクロールマーカーを使用して、関連付けられたコンテンツアイテムに移動することができます。
 
-アクセシビリティに関しては、スクロールマーカーグループおよびそれに含まれるスクロールマーカーは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味づけでレンダリングされます。このグループに <kbd>Tab</kbd> キーを押すと、1 つのアイテムのように動作し （つまり、 <kbd>Tab</kbd> キーをもう一度押すと、グループを過ぎて次のアイテムに移動します）、左右 （または上下） のカーソルキーを使用して、異なるスクロールマーカー間を移動することができます。
+> [!NOTE]
+> あるいは、既存の要素コンテナーからスクロールマーカーグループコンテナーを生成することも可能です。その際は {{cssxref("scroll-target-group")}} を使用します。このコンテナー内に含まれる {{htmlelement("a")}} 要素で、ページの節にリンクするフラグメント識別子を持つものは、自動的にスクロールマーカー同様に動作します。
+
+スクロールマーカーグループコンテナーが `scroll-marker-group` プロパティを使用してスクロールコンテナー上に作成されると、スクロールコンテナーは [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)/[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の意味づけでレンダリングされます。キーボードで <kbd>Tab</kbd> キーを押すと移動可能、左右（または上下）カーソルキーを使用して異なる「ページ」間を移動できます。これにより、関連付けられたスクロールマーカーとスクロールボタンの状態も期待通りに変化します。スクロールマーカー間も通常通りタブ移動が使用できます。
 
 ## 例
 
@@ -55,7 +57,7 @@ l10n:
 
 `<ul>` をカルーセルに変換するには、 {{cssxref("display")}} を `flex` に設定し、単一の、折り返しのない `<li>` 要素の行を作成します。 {{cssxref("overflow-x")}} プロパティは `auto` に設定されています。これは、アイテムが X 軸でコンテナーからはみ出した場合、コンテンツが水平方向にスクロールすることを意味します。次に、 `<ul>` を[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)に変換し、コンテナーの {{cssxref("scroll-snap-type")}} の値が `mandatory` に設定されている場合に、アイテムが常に所定の位置にスナップするようにします。
 
-`scroll-marker-group` プロパティを使用してスクロールマーカーグループを作成し、そのグループをすべてのコンテンツの後に配置します。
+`scroll-marker-group` プロパティを使用してスクロールマーカーグループコンテナーを作成し、そのグループをすべてのコンテンツの後に配置します。
 
 ```css live-sample___creating-scroll-markers live-sample___custom-numbering
 ul {
@@ -74,7 +76,7 @@ ul {
 ```css live-sample___creating-scroll-markers live-sample___custom-numbering
 li {
   list-style-type: none;
-  background-color: #eee;
+  background-color: #eeeeee;
   flex: 0 0 33%;
   height: 100px;
   padding-top: 20px;
@@ -143,7 +145,7 @@ li::scroll-marker {
   text-decoration: none;
   border: 2px solid rgb(0 0 0 / 0.15);
   border-radius: 0.5em;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 ```
 
@@ -163,7 +165,7 @@ li:last-child::scroll-marker {
 
 ```css live-sample___custom-numbering
 ::scroll-marker:hover {
-  background-color: #dcc;
+  background-color: #ddcccc;
 }
 
 ::scroll-marker:target-current {
@@ -187,9 +189,12 @@ li:last-child::scroll-marker {
 ## 関連情報
 
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref(":target-current")}}
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
 - [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール

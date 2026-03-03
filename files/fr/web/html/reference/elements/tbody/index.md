@@ -1,40 +1,39 @@
 ---
 title: "<tbody> : l'élément de corps d'un tableau"
 slug: Web/HTML/Reference/Elements/tbody
-original_slug: Web/HTML/Element/tbody
+l10n:
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
-{{HTMLSidebar}}
+L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper une ou plusieurs lignes du tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le corps (principal) des données d'un tableau.
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper un ou plusieurs éléments [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) afin de former le corps d'un tableau HTML ([`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)).
-
-{{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;tbody&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
   <caption>
-    Council budget (in £) 2018
+    Budget du conseil (en livres sterling) 2018
   </caption>
   <thead>
     <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
+      <th scope="col">Articles</th>
+      <th scope="col">Dépenses</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Donuts</th>
-      <td>3,000</td>
+      <th scope="row">Beignets</th>
+      <td>3 000</td>
     </tr>
     <tr>
-      <th scope="row">Stationery</th>
-      <td>18,000</td>
+      <th scope="row">Fournitures de bureau</th>
+      <td>18 000</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row">Totals</th>
-      <td>21,000</td>
+      <th scope="row">Total</th>
+      <td>21 000</td>
     </tr>
   </tfoot>
 </table>
@@ -44,7 +43,7 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper un ou pl
 thead,
 tfoot {
   background-color: #2c5e77;
-  color: #fff;
+  color: white;
 }
 
 tbody {
@@ -75,34 +74,334 @@ td {
 }
 ```
 
-L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), fournissent des informations sémantiques qui sont utilisées pour l'affichage à l'écran, l'impression et [l'accessibilité](/fr/docs/Glossary/Accessibility).
+## Attributs
+
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+
+### Attributs obsolètes
+
+- `align` {{Deprecated_Inline}}
+  - : Définit l'alignement horizontal de chaque cellule du corps. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `left`, `center`, `right`, `justify` et `char`. Lorsque cela est pris en charge, la valeur `char` aligne le contenu textuel sur le caractère défini dans l'attribut [`char`](#char) et sur le décalage défini par l'attribut [`charoff`](#charoff). Utilisez la propriété CSS {{CSSxRef("text-align")}} à la place, car cet attribut est déprécié.
+
+- `bgcolor` {{Deprecated_Inline}}
+  - : Définit la couleur d'arrière-plan de chaque cellule du corps. La valeur est une couleur HTML&nbsp;; soit un [code RGB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/Reference/Values/hex-color) précédé d'un `#`, soit un [mot-clé de couleur](/fr/docs/Web/CSS/Reference/Values/named-color). Les autres valeurs CSS {{CSSxRef("&lt;color&gt;")}} ne sont pas prises en charge. Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place, car cet attribut est déprécié.
+
+- `char` {{Deprecated_Inline}}
+  - : Définit l'alignement du contenu sur un caractère dans chaque cellule du corps. Les valeurs typiques incluent un point (`.`) pour aligner des nombres ou des valeurs monétaires. Si [`align`](#align) n'est pas défini sur `char`, cet attribut est ignoré.
+
+- `charoff` {{Deprecated_Inline}}
+  - : Définit le nombre de caractères de décalage du contenu de la cellule du corps par rapport au caractère d'alignement défini par l'attribut [`char`](#char).
+
+- `valign` {{Deprecated_Inline}}
+  - : Définit l'alignement vertical de chaque cellule du corps. Les valeurs {{Glossary("enumerated", "énumérées")}} possibles sont `baseline`, `bottom`, `middle` et `top`. Utilisez la propriété CSS {{CSSxRef("vertical-align")}} à la place, car cet attribut est déprécié.
+
+## Notes d'utilisation
+
+- Le `<tbody>` est placé après tout élément {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}} et {{HTMLElement("thead")}}.
+- Si des éléments {{HTMLElement("tr")}} sont définis comme enfants directs de {{HTMLElement("table")}} (voir «&nbsp;omission de balise&nbsp;» dans le [résumé technique](#résumé_technique) pour une description des cas où cela est valide), alors le balisage généré par le navigateur inclura un élément `<tbody>` qui les encapsule. En conséquence, les sélecteurs CSS comme `table > tr` ne sélectionneront pas ces éléments. Voir aussi l'exemple [Sans corps explicite](#sans_définir_de_corps).
+- Il est permis d'utiliser plusieurs `<tbody>` par tableau tant qu'ils sont tous consécutifs. Cela permet de diviser les lignes (éléments {{HTMLElement("tr")}}) des grands tableaux en sections, chacune pouvant être mise en forme séparément si besoin. Si les éléments ne sont pas balisés comme consécutifs, les navigateurs corrigeront cette erreur d'auteur, en s'assurant que tout élément {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} soit respectivement rendu en premier et en dernier dans le tableau.
+- Avec les éléments associés {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}}, l'élément `<tbody>` fournit des informations {{Glossary("semantics", "sémantiques")}} utiles et peut être utilisé lors du rendu à l'écran ou à l'impression. Définir de tels groupes de contenu de tableau fournit aussi des informations contextuelles précieuses pour les technologies d'assistance, y compris les lecteurs d'écran et les moteurs de recherche.
+- Lors de l'impression d'un document, dans le cas d'un tableau multipage, les éléments {{HTMLElement("thead")}} et {{HTMLElement("tfoot")}} définissent généralement des informations qui restent identiques — ou du moins très similaires — sur chaque page, tandis que le contenu de l'élément `<tbody>` diffère généralement d'une page à l'autre.
+- Lorsqu'un tableau est présenté dans un contexte d'écran (comme une fenêtre) qui n'est pas assez grand pour afficher le tableau en entier, le {{Glossary("user agent", "agent utilisateur")}} peut permettre à l'utilisateur·ice de faire défiler séparément le contenu des blocs {{HTMLElement("thead")}}, `<tbody>`, {{HTMLElement("tfoot")}} et {{HTMLElement("caption")}} pour un même parent {{HTMLElement("table")}}.
+
+## Exemples
+
+Voir {{HTMLElement("table")}} pour un exemple complet de tableau présentant les standards courants et les bonnes pratiques.
+
+### Sans définir de corps
+
+Cet exemple montre que le navigateur encapsule automatiquement les éléments {{HTMLElement("tr")}} dans un élément `<tbody>` si les lignes ne sont pas imbriquées dans un élément de regroupement de tableau (`<tbody>`, `<tfoot>` ou `<thead>`) et sont, comme dans cet exemple, des enfants directs de l'élément {{HTMLElement("table")}}.
+
+#### HTML
+
+Ici, un tableau très simple est créé avec quelques lignes de tableau (éléments {{HTMLElement("tr")}}) contenant des données (éléments {{HTMLElement("td")}}) sur des étudiant·e·s.
+
+```html
+<table>
+  <tr>
+    <td>3741255</td>
+    <td>Martha Jones</td>
+    <td>Informatique</td>
+    <td>240</td>
+  </tr>
+  <tr>
+    <td>3971244</td>
+    <td>Victor Nim</td>
+    <td>Littérature</td>
+    <td>220</td>
+  </tr>
+  <tr>
+    <td>4100332</td>
+    <td>Alexandra Petrov</td>
+    <td>Astrophysique</td>
+    <td>260</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+Notez le CSS dans l'exemple, où une {{CSSxRef("background-color")}} est définie pour l'élément `<tbody>` et où `tbody` est utilisé dans un {{Glossary("css_selector", "sélecteur CSS")}} supplémentaire. Il est également possible d'utiliser les {{Glossary("developer_tools", "outils de développement du navigateur")}} pour vérifier la présence de l'élément `<tbody>` dans le {{Glossary("DOM")}}.
+
+```css
+tbody {
+  background-color: #e4f0f5;
+}
+
+tbody > tr > td:last-of-type {
+  width: 60px;
+  text-align: center;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Sans définir de corps", 650, 150)}}
+
+### Structure de base du corps
+
+Cet exemple étend et améliore le tableau de base du [précédent exemple](#sans_définir_de_corps).
+
+#### HTML
+
+Nous introduisons une tête de tableau (élément {{HTMLElement("thead")}}) et utilisons explicitement un élément `<tbody>` pour structurer le tableau en sections {{Glossary("semantics", "sémantiques")}}. La tête de tableau contient les en-têtes de colonnes (éléments {{HTMLElement("th")}}). L'élément `<tbody>` représente la section du corps du tableau, qui contient plusieurs lignes (éléments {{HTMLElement("tr")}}) avec les données principales du tableau, c'est-à-dire les données de chaque étudiant·e.
+
+L'utilisation de tels groupes de contenu de tableau et d'une structuration {{Glossary("semantics", "sémantique")}} n'est pas seulement utile pour la présentation visuelle (via la mise en forme CSS) et l'information contextuelle pour les technologies d'assistance&nbsp;; de plus, l'utilisation explicite de l'élément `<tbody>` aide le navigateur à créer la structure de tableau souhaitée, évitant ainsi des résultats indésirables.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Identifiant de l'étudiant</th>
+      <th>Nom</th>
+      <th>Spécialité</th>
+      <th>Crédits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>Informatique</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>Littérature</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+      <td>Astrophysique</td>
+      <td>260</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+Le CSS est presque inchangé par rapport au [précédent exemple](#sans_définir_de_corps), à l'exception de quelques styles de base pour mettre en valeur l'en-tête du tableau afin que les en-têtes de colonnes se distinguent des données du corps du tableau. Comme dans [l'exemple ci-dessus](#sans_définir_de_corps), le [sélecteur de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) `tbody` est utilisé pour mettre en forme les cellules du corps.
+
+```css
+tbody {
+  background-color: #e4f0f5;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+
+thead {
+  border-bottom: 2px solid rgb(160 160 160);
+  background-color: #2c5e77;
+  color: white;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Structure de base du corps", 650, 140)}}
+
+### Plusieurs corps de tableau
+
+Cet exemple étend et améliore encore le tableau de [l'exemple ci-dessus](#structure_de_base_du_corps) en introduisant plusieurs sections de corps.
+
+L'utilisation de plusieurs éléments `<tbody>` permet de créer des regroupements de lignes dans un tableau. Chaque corps de tableau peut potentiellement avoir sa propre ou ses propres lignes d'en-tête&nbsp;; cependant, _il ne peut y avoir qu'un seul élément {{HTMLElement("thead")}} par tableau_&nbsp;! Pour cette raison, des {{HTMLElement("tr")}} avec des éléments {{HTMLElement("th")}} peuvent être utilisés pour créer des en-têtes dans chaque `<tbody>`.
+
+#### HTML
+
+En s'appuyant sur le tableau du [précédent exemple de base](#structure_de_base_du_corps), on ajoute plus d'étudiant·e·s et, au lieu d'indiquer la spécialité de chaque étudiant·e sur chaque ligne, les étudiant·e·s sont regroupé·e·s par spécialité. Notez que chaque spécialité est incluse dans son propre bloc `<tbody>`, la première ligne (élément {{HTMLElement("tr")}}) servant d'en-tête du bloc, affichant le nom de la spécialité dans un élément {{HTMLElement("th")}} qui utilise l'attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#colspan) pour étendre l'en-tête sur les trois colonnes du tableau. Chaque ligne restante dans chaque `<tbody>` de spécialité représente un·e étudiant·e.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Identifiant de l'étudiant</th>
+      <th>Nom</th>
+      <th>Crédits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th colspan="3">Informatique</th>
+    </tr>
+    <tr>
+      <td>3741255</td>
+      <td>Jones, Martha</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>4077830</td>
+      <td>Pierce, Benjamin</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>5151701</td>
+      <td>Kirk, James</td>
+      <td>230</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="3">Littérature</th>
+    </tr>
+    <tr>
+      <td>3971244</td>
+      <td>Nim, Victor</td>
+      <td>220</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th colspan="3">Astrophysique</th>
+    </tr>
+    <tr>
+      <td>4100332</td>
+      <td>Petrov, Alexandra</td>
+      <td>260</td>
+    </tr>
+    <tr>
+      <td>8892377</td>
+      <td>Toyota, Hiroko</td>
+      <td>240</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+La majeure partie du CSS est inchangée. Cependant, un style un peu plus subtil est ajouté pour les cellules d'en-tête contenues directement dans un `<tbody>` (par opposition à celles qui se trouvent dans le {{HTMLElement("thead")}}). Cela est utilisé pour les en-têtes indiquant la spécialité correspondante de chaque section du tableau.
+
+```css
+tbody > tr > th {
+  border-top: 2px solid rgb(160 160 160);
+  border-bottom: 1px solid rgb(140 140 140);
+  background-color: #e4f0f5;
+  font-weight: normal;
+}
+
+tbody {
+  background-color: whitesmoke;
+}
+
+thead {
+  background-color: #2c5e77;
+  color: white;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 6px 8px;
+  text-align: left;
+}
+
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Plusieurs corps de tableau", 650, 300)}}
+
+## Résumé technique
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories">Catégories de contenu</a>
       </th>
       <td>Aucune.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.</td>
+      <td>Zéro ou plusieurs éléments {{HTMLElement("tr")}}.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>L'élément <code>&lt;tbody&gt;</code> n'est pas un élément fils obligatoire de <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>. Cependant, il doit être présent si l'élément parent <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> possède un élément <a href="/fr/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a> ou un autre élément <code>&lt;tbody&gt;</code> comme autre élément enfant. Si l'élément <code>&lt;tbody&gt;</code> démarre avec un élément <code>&lt;tbody&gt;</code> et qu'il ne suit pas un élément <code>&lt;tbody&gt;</code> qui n'est pas fermé, la balise ouvrante peut être omise.</td>
+      <td>L'élément <code>&lt;tbody&gt;</code> n'est pas un élément fils obligatoire de {{HTMLElement("table")}}. Cependant, il doit être présent si l'élément parent {{HTMLElement("table")}} possède un élément {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} ou un autre élément <code>&lt;tbody&gt;</code> comme autre élément enfant. Si l'élément <code>&lt;tbody&gt;</code> démarre avec un élément <code>&lt;tbody&gt;</code> et qu'il ne suit pas un élément <code>&lt;tbody&gt;</code> qui n'est pas fermé, la balise ouvrante peut être omise.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        L'élément <code>&lt;tbody&gt;</code> doit être au sein d'un élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> et peut être ajouté après un élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a>.
+        L'élément <code>&lt;tbody&gt;</code> doit être au sein d'un élément {{HTMLElement("table")}} et peut être ajouté après un élément {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}}.
       </td>
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
       <td>
-        <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role"
+            >rowgroup</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -111,259 +410,10 @@ L'élément `<tbody>`, ainsi que les éléments [`<thead>`](/fr/docs/Web/HTML/Re
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLTableSectionElement"><code>HTMLTableSectionElement</code></a></td>
+      <td>{{DOMxRef("HTMLTableSectionElement")}}</td>
     </tr>
   </tbody>
 </table>
-
-## Attributs
-
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
-
-### Attributs dépréciés
-
-- `align` {{Deprecated_inline}}
-  - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
-    - `left`
-      - : Le contenu de la cellule est aligné à gauche de la cellule.
-    - `center`
-      - : Le contenu de la cellule est centré horizontalement.
-    - `right`
-      - : Le contenu de la cellule est aligné à droite de la cellule.
-    - `justify`
-      - : Ajuste la largeur des espaces du contenu texte afin que le contenu de la cellule soit justifié.
-    - `char`
-      - : Aligne le contenu texte de la cellule selon un caractère spécial avec un décalage minimum défini par les attributs [`char`](#char) et [`charoff`](#charoff`).
-
-    Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
-
-    Cet attribut étant déprécié, on utilisera la propriété CSS [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) à la place.
-
-    > [!NOTE]
-    > Le comportement de la propriété `text-align` équivalent à `align="char"` n'est pas implémenté par les navigateurs à l'heure actuelle. Voir [le tableau de compatibilité des navigateurs `text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align#browser_compatibility) à propos de l'alignement basé sur les une valeur `<string>`.
-
-- `bgcolor` {{Deprecated_inline}}
-  - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un [code hexadécimal à 6 chiffres RGB](/fr/docs/Web/CSS/Reference/Values/color_value#couleurs_rgb) précédé d'un `#`. Un des [mots-clés prédéfinis pour les couleurs](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés) peut également être utilisé.
-
-    Cet attribut étant déprécié, on utilisera la propriété CSS [`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color) à la place.
-
-- `char` {{Deprecated_inline}}
-  - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (`.`) pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#align) ne vaut pas `char`, l'attribut est ignoré.
-- `charoff` {{deprecated_inline}}
-  - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
-- `valign` {{deprecated_inline}}
-  - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont&nbsp;:
-    - `baseline`
-      - : Aligne le texte sur la ligne la plus basse possible en utilisant la [ligne de base](http://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
-    - `bottom`
-      - : Place le texte au plus bas de la cellule.
-    - `middle`
-      - : Qui centre verticalement le texte dans la cellule.
-    - `top`
-      - : Qui place le texte au plus haut de la cellule.
-
-    Cet attribut est déprécié, on utilisera la propriété CSS [`vertical-align`](/fr/docs/Web/CSS/Reference/Properties/vertical-align) à la place.
-
-## Notes d'utilisation
-
-- Lorsque le tableau contient un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) (qui identifie les lignes d'en-tête), l'élément `<tbody>` _doit_ apparaître après.
-- Si on utilise `<tbody>`, il faudra alors que celui-ci contienne toutes les lignes qui ne sont pas des lignes d'en-tête ou de pied de tableau. Autrement dit, il n'est pas possible d'avoir des éléments [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) qui soient des éléments fils directs de [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table) si on utilise `<tbody>`.
-- Lorsqu'il est imprimé, `<tbody>` représente le contenu qui, lorsqu'il est plus long qu'une page, sera différent sur chaque page. En revanche, [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot) seront les mêmes ou seront semblables sur chacune des pages.
-- Lorsqu'un tableau est présenté sur un écran qui n'est pas suffisamment grand pour l'afficher en entier, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra permettre de faire défiler séparément les contenus des éléments [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot), `<tbody>` et [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption) d'un même élément [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table).
-- À la différence des éléments `<thead>`, `<tfoot>` et `<caption>`, on peut utiliser plusieurs éléments `<tbody>`, tant qu'ils sont consécutifs. Cela permet de répartir les lignes des grands tableaux en différentes sections, chacune pouvant être mise en forme distinctement.
-
-## Exemples
-
-Quelques exemples sont présentés ci-après afin d'illustrer l'utilisation de l'élément `<tbody>`. Pour plus d'exemples, voir [la section Exemples de la page sur `<table>`](/fr/docs/Web/HTML/Reference/Elements/table#exemples).
-
-### Exemple simple
-
-Dans ce premier exemple simple, on crée un tableau contenant des informations sur un groupe d'étudiants, composé d'un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) et d'un élément `<tbody>` qui contient plusieurs lignes.
-
-#### HTML
-
-Voici le fragment de tableau HTML. On notera que toutes les cellules du tableau sont contenues dans un seul élément `<tbody>`.
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th>Identifiant</th>
-      <th>Nom</th>
-      <th>Spécialité</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>3741255</td>
-      <td>Martha Jones</td>
-      <td>Informatique</td>
-    </tr>
-    <tr>
-      <td>3971244</td>
-      <td>Victor Nim</td>
-      <td>Littérature</td>
-    </tr>
-    <tr>
-      <td>4100332</td>
-      <td>Alexandra Petrov</td>
-      <td>Astrophysique</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-Le CSS permettant la mise en forme du tableau se décompose comme suit&nbsp;:
-
-```css
-table {
-  border: 2px solid #555;
-  border-collapse: collapse;
-  font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    sans-serif;
-}
-```
-
-Pour commencer, on définit le style général du tableau, l'épaisseur, le style et la couleur de la bordure extérieure avec [`border-collapse`](/fr/docs/Web/CSS/Reference/Properties/border-collapse) pour s'assurer que les lignes de bordure sont partagées entre les cellules adjacentes plutôt que chacune ait ses propres bordures avec un espace interstitiel. [`font`](/fr/docs/Web/CSS/Reference/Properties/font) est utilisé pour définir une police de caractères pour les textes du tableau.
-
-```css
-th,
-td {
-  border: 1px solid #bbb;
-  padding: 2px 8px 0;
-  text-align: left;
-}
-```
-
-On définit ensuite le style pour la majorité des cellules, tant celles qui ont des données mais aussi celles formées par [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td) et [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th). On leur donne un contour gris d'une épaisseur de 1 pixel et le contenu des cellules est aligné à gauche avec [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align).
-
-```css
-thead > tr > th {
-  background-color: #cce;
-  font-size: 18px;
-  border-bottom: 2px solid #999;
-}
-```
-
-Enfin, on met en forme les cellules d'en-têtes, contenues dans le bloc [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead). Celles-ci utilisent un arrière-plan ([`background-color`](/fr/docs/Web/CSS/Reference/Properties/background-color)) plus sombre, une police plus grande et une bordure basse plus épaisse et plus sombre.
-
-#### Résultat
-
-Voici le résultat obtenu&nbsp;:
-
-{{EmbedLiveSample("", 650, 150)}}
-
-### Plusieurs corps de tableau
-
-On peut créer plusieurs sections au sein d'un tableau en utilisant plusieurs éléments `<tbody>`. Chacun peut avoir son propre en-tête et ses propres lignes. Toutefois, _il ne peut y avoir qu'un seul élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead) par tableau&nbsp;!_ Pour cette raison, il faudra utiliser un élément [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr) rempli d'éléments [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th) afin de créer des en-têtes au sein de chaque `<tbody>`. Voyons cela.
-
-Prenons l'exemple précédent et ajoutons plus d'étudiants à la liste. Cette fois, on met à jour le tableau afin de regrouper les étudiants par spécialité, avec des lignes d'en-tête pour chaque spécialité.
-
-#### Résultat
-
-Commençons par voir le résultat&nbsp;:
-
-{{EmbedLiveSample("", 650, 280)}}
-
-#### HTML
-
-Le HTML modifié ressemble à ceci&nbsp;:
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th>Identifiant</th>
-      <th>Nom</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th colspan="2">Informatique</th>
-    </tr>
-    <tr>
-      <td>3741255</td>
-      <td>Martha Jones</td>
-    </tr>
-    <tr>
-      <td>4077830</td>
-      <td>Benjamin Pierce</td>
-    </tr>
-    <tr>
-      <td>5151701</td>
-      <td>James Kirk</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="2">Littérature</th>
-    </tr>
-    <tr>
-      <td>3971244</td>
-      <td>Victor Nim</td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="2">Astrophysique</th>
-    </tr>
-    <tr>
-      <td>4100332</td>
-      <td>Alexandra Petrov</td>
-    </tr>
-    <tr>
-      <td>8892377</td>
-      <td>Hiroko Toyota</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-On voit ici que chaque spécialité est placée dans un bloc `<tbody>` séparé, avec la première ligne qui contient un unique élément [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th) avec un attribut [`colspan`](/fr/docs/Web/HTML/Reference/Elements/th#attr-colspan) pour s'étendre sur toute la largeur du tableau. Cet en-tête indique le nom de la spécialité contenue dans le `<tbody>`.
-
-Puis, chaque ligne suivante pour ce `<tbody>` se compose de deux cellules&nbsp;: la première contenant l'identifiant et la seconde contenant le nom.
-
-#### CSS
-
-```css hidden
-table {
-  border: 2px solid #555;
-  border-collapse: collapse;
-  font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    sans-serif;
-}
-
-th,
-td {
-  border: 1px solid #bbb;
-  padding: 2px 8px 0;
-  text-align: left;
-}
-
-thead > tr > th {
-  background-color: #cce;
-  font-size: 18px;
-  border-bottom: 2px solid #999;
-}
-```
-
-Le CSS est inchangé pour la plupart. Une différence est apportée en ciblant les cellules d'en-tête d'un `<tbody>` (plutôt que celles d'un élément [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)). On peut alors mettre en forme les en-têtes de chaque section.
-
-```css
-tbody > tr > th {
-  background-color: #dde;
-  border-bottom: 1.5px solid #bbb;
-  font-weight: normal;
-}
-```
 
 ## Spécifications
 
@@ -375,16 +425,9 @@ tbody > tr > th {
 
 ## Voir aussi
 
-- Les autres éléments HTML relatifs aux tableaux&nbsp;:
-  - [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption)
-  - [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col)
-  - [`<colgroup>`](/fr/docs/Web/HTML/Reference/Elements/colgroup)
-  - [`<table>`](/fr/docs/Web/HTML/Reference/Elements/table)
-  - [`<td>`](/fr/docs/Web/HTML/Reference/Elements/td)
-  - [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot)
-  - [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th)
-  - [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead)
-  - [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)
-- Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tbody>`&nbsp;:
-  - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child) qui permet de paramétrer l'alignement des cellules d'une colonne
-  - La propriété [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align) qui permet d'aligner le contenu des cellules par rapport à un même caractère (par exemple «&nbsp;.&nbsp;»)
+- [Apprendre&nbsp;: bases des tableaux HTML](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- Autres éléments liés aux tableaux&nbsp;: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
+- La propriété CSS {{CSSxRef("background-color")}} pour définir la couleur d'arrière-plan de chaque cellule du corps
+- La propriété CSS {{CSSxRef("border")}} pour contrôler les bordures des cellules du corps
+- La propriété CSS {{CSSxRef("text-align")}} pour aligner horizontalement le contenu de chaque cellule du corps
+- La propriété CSS {{CSSxRef("vertical-align")}} pour aligner verticalement le contenu de chaque cellule du corps

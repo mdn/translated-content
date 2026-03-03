@@ -1,20 +1,33 @@
 ---
 title: <hue>
 slug: Web/CSS/Reference/Values/hue
-original_slug: Web/CSS/hue
 l10n:
-  sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<hue>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、色の色相角を表します。
 これは、色相を 1 つの値として受け入れる色関数、具体的には [`hsl()`](/ja/docs/Web/CSS/Reference/Values/color_value/hsl)、 [`hwb()`](/ja/docs/Web/CSS/Reference/Values/color_value/hwb)、[`lch()`](/ja/docs/Web/CSS/Reference/Values/color_value/lch)、[`oklch()`](/ja/docs/Web/CSS/Reference/Values/color_value/oklch) 関数記法で使用されます。
 
+## 構文
+
+`<hue>` は `<angle>` または `<number>` のどちらかになります。
+
+### 値
+
+- {{cssxref("angle")}}
+  - : `deg`、`grad`、`rad`、`turn` をそれぞれ使用して、度、グラジアン、ラジアン、回転で表される角度。
+- `<number>`
+  - : 色相角の度数を表す実数。
+
+`<angle>` は周期的なので、 `<hue>` は範囲 `[0deg, 360deg)` に正規化されます。 `480deg` は `120deg` と同じ、 `-120deg` は `240deg` と同じ、 `-1turn` は `1turn` と同じ、といった具合に暗黙のうちに折り返されます。
+
+## 解説
+
 ![sRGB 色相環](color_wheel.svg)
 
-上の色相環は [sRGB](https://ja.wikipedia.org/wiki/SRGB) 色空間におけるすべての角度の色相を表示させています。具体的な例では、赤は `0deg`、黄は `60deg`、ライムは `120deg`、シアンは `180deg`、青は `240deg`、マゼンタは `300deg` です。
+上の色相環は [sRGB](https://ja.wikipedia.org/wiki/SRGB) {{glossary("color space", "色空間")}}におけるすべての角度の色相を表示させています。具体的な例では、赤は `0deg`、黄は `60deg`、ライムは `120deg`、シアンは `180deg`、青は `240deg`、マゼンタは `300deg` です。
 
-> [!NOTE]
-> 具体的な色相に対応する角度は色空間によって異なります。例えば、 sRGB の緑の色相角は、 sRGB 色空間では `120deg` ですが、 CIELAB 色空間では `134.39deg` です。
+特定の色相に対応する角度は色空間によって異なります。例えば、 sRGB の緑の色相角は、 sRGB 色空間では `120deg` ですが、 CIELAB 色空間では `134.39deg` です。
 
 以下の表は、 sRGB （{{CSSXref("color_value/hsl", "hsl()")}} および {{CSSXref("color_value/hwb", "hwb()")}}）、 CIELAB （{{CSSXref("color_value/lch", "lch()")}} で用いる）、 Oklab （{{CSSXref("color_value/oklch", "oklch()")}}）の色空間での主な色を示します。
 
@@ -101,24 +114,11 @@ l10n:
   </tbody>
 </table>
 
-## 構文
+## `<hue>` 値の補間
 
-`<hue>` は `<angle>` または `<number>` のどちらかになります。
+`<hue>` 値は {{cssxref("angle")}} 値として補間され、既定では [`shorter`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#値) となります。色関連の CSS 関数の中には、{{CSSXref("&lt;hue-interpolation-method&gt;")}} 成分によってこれを上書きできるものもあります。
 
-### 値
-
-- {{CSSXref("&lt;angle&gt;")}}
-  - : `deg`、`grad`、`rad`、`turn` をそれぞれ使用して、度、グラジアン、ラジアン、回転で表される角度。
-- `<number>`
-  - : 色相角の度数を表す実数。
-
-`<angle>` は周期的なので、 `<hue>` は範囲 `[0deg, 360deg)` に正規化されます。 `480deg` は `120deg` と同じ、 `-120deg` は `240deg` と同じ、 `-1turn` は `1turn` と同じ、といった具合に暗黙のうちに折り返されます。
-
-### 補間
-
-`<hue>` 値は {{CSSXref("&lt;angle&gt;")}} 値として補間され、既定では [`shorter`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method#values) となります。色関連の CSS 関数の中には、{{CSSXref("&lt;hue-interpolation-method&gt;")}} 成分によってこれを上書きできるものもあります。
-
-### 形式文法
+## 形式文法
 
 {{csssyntax}}
 
@@ -150,7 +150,7 @@ p {
 }
 span {
   font-family: monospace;
-  background: rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 10%);
   padding: 3px;
 }
 #hue-slider {
@@ -239,5 +239,5 @@ div {
 
 ## 関連情報
 
-- [`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

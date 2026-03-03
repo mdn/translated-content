@@ -1,10 +1,11 @@
 ---
 title: :host-context()
 slug: Web/CSS/Reference/Selectors/:host-context
-original_slug: Web/CSS/:host-context
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
+
+{{deprecated_header}}
 
 **`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、シャドウホスト（シャドウルートを保有する要素）とその DOM 上の祖先のセレクターに基づいて、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内の要素のスタイルを別々に設定することができます。
 
@@ -14,7 +15,7 @@ l10n:
 
 このセレクターは、すべてのシャドウ境界を貫通します。これは、`<greenhouse>` またはホストの祖先および祖先の DOM のいずれかに直接適用されている、日なたのテーマまたは日陰のテーマを、文書ルートに到達するまでずっと見ていきます。
 
-セレクターを直接 `<greenhouse>` ホストのみに制限したり、選択をホストの DOM に制限したりするには、代わりに {{cssxref(":host")}} または {{cssxref(":host_function", ":host()")}} 擬似クラスを使用します。
+セレクターを直接 `<greenhouse>` ホストのみに制限したり、選択をホストの DOM に制限したりするには、代わりに {{cssxref(":host")}} または {{cssxref(":host()")}} 擬似クラスを使用します。
 
 > [!NOTE]
 > これは、シャドウ DOM の外で使用しても効果はありません。
@@ -24,7 +25,7 @@ l10n:
 {{InteractiveExample("CSS デモ: :host-context()", "tabbed-shorter")}}
 
 ```css interactive-example
-/* 以下の CSS がシャドウ DOM 内に適用されています。 */
+/* この CSS はシャドウ DOM の内部に適用されます。 */
 
 :host-context(.container) {
   border: 5px dashed green;
@@ -36,7 +37,7 @@ l10n:
 ```
 
 ```html interactive-example
-<!-- シャドウ DOM 外の要素 -->
+<!-- シャドウ DOM の外側の要素 -->
 <div class="container">
   <h1 id="shadow-dom-host"></h1>
 </div>
@@ -97,9 +98,9 @@ p {
 
 ### シャドウホストの選択的なスタイル設定
 
-以下は、[ホストセレクターの例](https://github.com/mdn/web-components-examples/tree/main/host-selectors)（[ライブでも見る](https://mdn.github.io/web-components-examples/host-selectors/)）から抜粋したものです。
+以下のスニペットは、 [host セレクターの例](https://github.com/mdn/web-components-examples/tree/main/host-selectors)（[ライブでも参照](https://mdn.github.io/web-components-examples/host-selectors/)）から引用したものです。
 
-この例では、テキストを囲むことができる基本的なカスタム要素 `<context-span>` があります。
+この例では、テキストの周りを囲むことができるカスタム要素、`<context-span>` を使います。
 
 ```html
 <h1>
@@ -107,7 +108,7 @@ p {
 </h1>
 ```
 
-要素のコンストラクター内で `style` 要素と `span` 要素を作成し、 `span` 要素にカスタム要素のコンテンツを入れ、`style` 要素に CSS ルールを入れます。
+要素のコンストラクターの中で、 `style` および `span` 要素を作成し、 `span` の中をカスタム要素の中身で埋め、 `style` 要素をいくつかの CSS ルールで埋めます。
 
 ```js
 const style = document.createElement("style");
@@ -140,7 +141,7 @@ style.textContent =
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
 - CSS {{cssxref(":host")}} 擬似クラス
-- CSS {{cssxref(":host_function", ":host()")}} 擬似クラス
+- CSS {{cssxref(":host()")}} 擬似クラス
 - CSS {{cssxref(":state",":state()")}} 擬似クラス
 - CSS {{CSSXref("::slotted")}} 擬似要素
 - HTML {{HTMLElement("template")}} 要素

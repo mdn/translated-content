@@ -1,13 +1,14 @@
 ---
-title: Function.name
+title: "Function : propriété name"
+short-title: name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La propriété de donnée **`name`** d'une instance de {{JSxRef("Function")}} indique le nom de la fonction tel que défini lors de sa création, ou peut être soit `anonymous` soit `''` (une chaîne vide) pour les fonctions créées anonymement.
 
-La propriété **`function.name`** est une propriété en lecture seule qui renvoie le nom de la fonction courante ou `"anonymous"` si celle-ci a été créée de façon anonyme.
-
-{{InteractiveExample("JavaScript Demo: Function.name")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Function.name")}}
 
 ```js interactive-example
 const func1 = function () {};
@@ -17,125 +18,237 @@ const object = {
 };
 
 console.log(func1.name);
-// Expected output: "func1"
+// Résultat attendu : "func1"
 
 console.log(object.func2.name);
-// Expected output: "func2"
+// Résultat attendu : "func2"
 ```
 
-{{js_property_attributes(0,0,1)}}
+## Valeur
+
+Une chaîne de caractères.
+
+{{js_property_attributes(0, 0, 1)}}
 
 > [!NOTE]
 > Dans les implémentations non-standards antérieures à ES2015, l'attribut `configurable` valait `false`.
 
-## Exemples
+## Description
 
-### Instruction de fonction
+La propriété `name` d'une fonction peut être utilisée pour identifier la fonction dans les outils de débogage ou les messages d'erreur. Elle n'a aucune signification sémantique pour le langage lui-même.
 
-La propriété `name` renvoie le nom de la fonction lorsque celle-ci est utilisée dans une instruction de fonction.
+La propriété `name` est en lecture seule et ne peut pas être modifiée avec l'opérateur d'affectation&nbsp;:
 
 ```js
-function faireUnTruc() {}
-faireUnTruc.name; // "faireUnTruc"
+function uneFonction() {}
+
+uneFonction.name = "autreFonction";
+console.log(uneFonction.name); // uneFonction
 ```
 
-### Fonctions créées avec un constructeur
+Pour la modifier, utilisez {{JSxRef("Object.defineProperty()")}}.
 
-Lorsqu'on crée une fonction avec `new Function(...)` ou simplement `Function(...)`, on crée uniquement des objets dont le nom est "anonymous".
+La propriété `name` est généralement déduite de la façon dont la fonction est définie. Dans les sections suivantes, nous décrirons les différentes manières dont elle peut être déduite.
+
+### Déclaration de fonction
+
+La propriété `name` retourne le nom d'une déclaration de fonction.
+
+```js
+function faireQuelqueChose() {}
+faireQuelqueChose.name; // "faireQuelqueChose"
+```
+
+### Déclaration de fonction exportée par défaut
+
+Une déclaration [`export default`](/fr/docs/Web/JavaScript/Reference/Statements/export) exporte la fonction comme une déclaration plutôt qu'une expression. Si la déclaration est anonyme, le nom est `"default"`.
+
+```js
+// -- quelconqueModule.js --
+export default function () {}
+
+// -- main.js --
+import quelconqueModule from "./quelconqueModule.js";
+
+quelconqueModule.name; // "default"
+```
+
+### Le constructeur `Function`
+
+Les fonctions créées avec le constructeur [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) ont pour nom `"anonymous"`.
 
 ```js
 new Function().name; // "anonymous"
 ```
 
-### Inférence des noms de fonction
+### Expression de fonction
 
-Les variables et les méthodes permettent d'inférer (c'est-à-dire de « deviner ») le nom des fonctions anonymes en fonction de leur position syntaxique (cette fonctionnalité est apparue avec ECMAScript 2015).
+Si l'expression de fonction est nommée, ce nom est utilisé comme propriété `name`.
 
 ```js
-var f = function () {};
-var objet = {
-  uneMéthode: function () {},
+const quelconqueMethode = function quelconqueNomMethode() {};
+quelconqueMethode.name; // "quelconqueNomMethode"
+```
+
+Les expressions de fonction anonymes, créées soit avec le mot-clé `function`, soit avec la syntaxe des fonctions fléchées, ont `""` (une chaîne de caractères vide) comme nom par défaut.
+
+```js
+(function () {}).name; // ""
+(() => {}).name; // ""
+```
+
+Cependant, de tels cas sont rares — généralement, afin d'appeler la fonction ailleurs, l'expression de fonction est associée à un identifiant. Le nom d'une expression de fonction anonyme peut être déduit dans certains contextes syntaxiques, y compris&nbsp;: [déclaration de variable et méthode](#declaration_de_variable_et_methode), [initialiseur et valeur par défaut](#initialiseur_et_valeur_par_defaut).
+
+Un cas pratique où le nom ne peut pas être déduit est une fonction retournée par une autre fonction&nbsp;:
+
+```js
+function obtenirToto() {
+  return () => {};
+}
+obtenirToto().name; // ""
+```
+
+### Déclaration de variable et méthode
+
+Les variables et les méthodes peuvent déduire le nom d'une fonction anonyme à partir de leur position syntaxique.
+
+```js
+const f = function () {};
+const objet = {
+  quelconqueMethode: function () {},
 };
 
 console.log(f.name); // "f"
-console.log(objet.uneMéthode.name); // "uneMéthode"
+console.log(objet.quelconqueMethode.name); // "quelconqueMethode"
 ```
 
-On peut définir une fonction avec un nom grâce à une {{jsxref("Opérateurs/L_opérateur_function", "expression de fonction", "", 1)}}:
+Il en va de même pour l'affectation&nbsp;:
 
 ```js
-var objet = {
-  uneMéthode: function objet_maMéthode() {},
-};
-console.log(objet.uneMéthode.name); // logs "objet_maMéthode"
+let f;
+f = () => {};
+f.name; // "f"
+```
 
-try {
-  objet_maMéthode;
-} catch (e) {
-  console.log(e);
+### Initialiseur et valeur par défaut
+
+Les fonctions placées dans des initialiseurs (valeurs par défaut) de la [décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring#valeur_par_défaut), des [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters), des [champs de classe](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields), etc., héritent du nom de l'identifiant auquel elles sont liées.
+
+```js
+const [f = () => {}] = [];
+f.name; // "f"
+
+const { quelconqueMethode: m = () => {} } = {};
+m.name; // "m"
+
+function toto(f = () => {}) {
+  console.log(f.name);
 }
-// ReferenceError: objet_maMéthode is not defined
+toto(); // "f"
+
+class Toto {
+  static quelconqueMethode = () => {};
+}
+Toto.quelconqueMethode.name; // quelconqueMethode
 ```
 
-On ne peut pas changer le nom d'une fonction, cette propriété est uniquement en lecture :
+### Méthode raccourcie
 
 ```js
-var objet = {
-  // anonyme
-  uneMéthode: function () {},
+const o = {
+  tot() {},
 };
-
-objet.uneMéthode.name = "uneMéthode";
-console.log(object.uneMéthode.name); // une chaîne vide, uneMéthode est anonyme
+o.tot.name; // "tot";
 ```
 
-Pour modifier le nom, on pourrait cependant utiliser la méthode {{jsxref("Object.defineProperty()")}}.
+### Fonction liée
 
-### Notation raccourcie pour les méthodes
-
-```js
-var o = {
-  toto() {},
-};
-o.toto.name; // "toto";
-```
-
-### Noms des fonctions liées
-
-{{jsxref("Function.bind()")}} produit une fonction dont le nom sera la chaîne "bound " suivi du nom de la fonction.
+{{JSxRef("Function.prototype.bind()")}} produit une fonction dont le nom est la chaîne `"bound "` suivie du nom de la fonction liée.
 
 ```js
 function toto() {}
 toto.bind({}).name; // "bound toto"
 ```
 
-### Noms de fonction pour les accesseurs et les mutateurs
+### Accesseur et mutateur
 
-Lorsqu'on utilise les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaîtra avant le nom de la fonction.
+Lorsque vous utilisez les propriétés d'accesseur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get) et [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" apparaît dans le nom de la fonction.
 
 ```js
-var o = {
-  get toto() {},
+const o = {
+  get toto() {
+    return 1;
+  },
   set toto(x) {},
 };
 
-var descripteur = Object.getOwnPropertyDescriptor(o, "toto");
-descripteur.get.name; // "get toto"
-descripteur.set.name; // "set toto";
+const descriptor = Object.getOwnPropertyDescriptor(o, "toto");
+descriptor.get.name; // "get toto"
+descriptor.set.name; // "set toto";
 ```
 
-### Noms des fonctions utilisées dans les classes
+### Classe
 
-On peut utiliser la notation `obj.constructor.name` pour vérifier la « classe » d'un objet (attention aux avertissements ci-après) :
+Le nom d'une classe suit le même algorithme que les déclarations et expressions de fonction.
 
 ```js
-function Toto() {} // Syntaxe ES2015 : class Toto {}
-
-var instanceDeToto = new Toto();
-console.log(instanceDeToto.constructor.name); // affiche "Toto" dans la console
+class Toto {}
+Toto.name; // "Toto"
 ```
 
-**Attention :** l'interpréteur utilisera la propriété native `Function.name` uniquement si la fonction ne possède pas une propriété en propre intitulée _name_ (cf section [9.2.11 de la spécification ECMAScript2015](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)). Cependant, ES2015 indique que les propriétés définies avec mot-clé _static_ seront des propriétés propres de la fonction constructrice (cf. ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)). Ainsi, il n'est plus possible d'obtenir le nom de la classe si celle-ci possède une méthode statique intitulée `name()` :
+> [!WARNING]
+> JavaScript ne définira la propriété `name` d'une fonction que si une fonction n'a pas de propriété propre appelée `name`. Cependant, les [membres statiques](/fr/docs/Web/JavaScript/Reference/Classes/static) des classes seront définis comme des propriétés propres de la fonction constructeur de la classe, et empêcheront donc l'application du `name` intégré. Voir [l'exemple](#vérifier_le_nom_du_constructeur_dun_objet) ci-dessous.
+
+### Symbole comme nom de fonction
+
+Si un {{JSxRef("Symbol")}} est utilisé comme nom de fonction et que le symbole possède une description, le nom de la méthode sera cette description entre crochets.
+
+```js
+const sym1 = Symbol("toto");
+const sym2 = Symbol();
+
+const o = {
+  [sym1]() {},
+  [sym2]() {},
+};
+
+o[sym1].name; // "[toto]"
+o[sym2].name; // "[]"
+```
+
+### Champs et méthodes privés
+
+Les champs privés et les méthodes privées ont le dièse (`#`) comme partie de leur nom.
+
+```js
+class Toto {
+  #champ = () => {};
+  #methode() {}
+  getNames() {
+    console.log(this.#champ.name);
+    console.log(this.#methode.name);
+  }
+}
+
+new Toto().getNames();
+// "#champ"
+// "#methode"
+```
+
+## Exemples
+
+### Vérifier le nom du constructeur d'un objet
+
+Vous pouvez utiliser `obj.constructor.name` pour vérifier la «&nbsp;classe&nbsp;» d'un objet.
+
+```js
+function Toto() {} // Ou : class Toto {}
+
+const totoInstance = new Toto();
+console.log(totoInstance.constructor.name); // "Toto"
+```
+
+Cependant, comme les membres statiques deviennent des propriétés propres de la classe, on ne peut pas obtenir le nom de la classe pour pratiquement toute classe ayant une propriété de méthode statique `name()`&nbsp;:
 
 ```js
 class Toto {
@@ -144,60 +257,62 @@ class Toto {
 }
 ```
 
-Avec `static name()`, `Toto.name` ne contient plus le nom de la classe mais une référence à l'objet `name()`. La définition utilisée ci-avant se comporte de façon semblable à ce fragment de code ES5 :
+Avec une méthode `static name()`, `Toto.name` ne contient plus le nom réel de la classe mais une référence à l'objet fonction `name()`. Essayer d'obtenir la classe de `totoInstance` via `totoInstance.constructor.name` ne donnera pas du tout le nom de la classe, mais une référence à la méthode statique de la classe. Exemple&nbsp;:
+
+```js
+const instanceToto = new Toto();
+console.log(instanceToto.constructor.name); // ƒ name() {}
+```
+
+En raison de l'existence de champs statiques, `name` peut aussi ne pas être une fonction.
+
+```js
+class Toto {
+  static name = 123;
+}
+console.log(new Toto().constructor.name); // 123
+```
+
+Si une classe possède une propriété statique appelée `name`, elle deviendra également _écrivable_. La définition intégrée en l'absence d'une définition statique personnalisée est _en lecture seule_&nbsp;:
+
+```js
+Toto.name = "Bonjour";
+console.log(Toto.name); // "Bonjour" si la classe Toto a une propriété statique "name", mais "Toto" sinon.
+```
+
+Par conséquent, vous ne pouvez pas compter sur la propriété intégrée `name` pour contenir toujours le nom d'une classe.
+
+### Compresseurs et outils de minification JavaScript
+
+> [!WARNING]
+> Faites attention lors de l'utilisation de la propriété `name` avec des transformations du code source, telles que celles effectuées par des compresseurs (minifieurs) ou des ofuscateurs JavaScript. Ces outils sont souvent utilisés dans une chaîne de construction JavaScript pour réduire la taille d'un programme avant son déploiement en production. De telles transformations modifient souvent le nom d'une fonction lors de la construction.
+
+Le code source tel que&nbsp;:
 
 ```js
 function Toto() {}
-Object.defineProperty(Toto, "name", { writable: true });
-Toto.name = function () {};
-```
+const toto = new Toto();
 
-Il est donc parfois erroné de penser que `Function.name` pointe toujours vers le nom de la classe.
-
-### Noms de fonction sous la forme de symboles
-
-Si un symbole ({{jsxref("Symbol")}}) est utilisé comme nom d'une fonction et que celui-ci dispose d'une description, c'est cette dernière qui sera utilisée comme nom de la méthode, entre crochets :
-
-```js
-var sym1 = Symbol("Toto");
-var sym2 = Symbol();
-var o = {
-  [sym1]: function () {},
-  [sym2]: function () {},
-};
-
-o[sym1].name; // "[Toto]"
-o[sym2].name; // ""
-```
-
-## Compresseurs et outils de minification JavaScript
-
-Attention à l'utilisation de `Function.name` lorsque le code source est transformé par certains outils. En effet, ceux-ci réduisent généralement la taille d'un programme en compressant les espaces et en modifiant parfois les noms de variables. Ainsi, un fragment de code comme :
-
-```js
-function Toto() {}
-var toto = new Toto();
-
-if (Toto.constructor.name === "Toto") {
+if (toto.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log("Oups !");
+  console.log("Oops!");
 }
 ```
 
-pourrait être compressé en :
+peut être compressé en&nbsp;:
 
 ```js
 function a() {}
-var b = new a();
+const b = new a();
 if (b.constructor.name === "Toto") {
   console.log("'toto' est une instance de 'Toto'");
 } else {
-  console.log("Oups !");
+  console.log("Oops!");
 }
 ```
 
-Dans la version non-compressée, la condition du test est remplie et on affiche _'toto' est une instance de 'Toto'_ dans la console. Mais dans la version compressée, la condition n'est pas vérifiée. Lorsqu'on utilise `name`, il faut s'assurer que les outils utilisés ne modifient pas le nom des fonctions.
+Dans la version non compressée, le programme exécute la branche vraie et affiche «&nbsp;'toto' est une instance de 'Toto'&nbsp;» — alors que dans la version compressée, il se comporte différemment et exécute la branche else. Si vous dépendez de la propriété `name`, comme dans l'exemple ci‑dessus, assurez‑vous que votre chaîne de construction ne modifie pas les noms de fonctions, ou ne supposez pas qu'une fonction ait un nom particulier.
 
 ## Spécifications
 
@@ -206,3 +321,9 @@ Dans la version non-compressée, la condition du test est remplie et on affiche 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Prothèse d'émulation pour `Function: name` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-function)
+- [Prothèse es-shims de `Function.prototype.name` <sup>(angl.)</sup>](https://www.npmjs.com/package/function.prototype.name)
+- L'objet {{JSxRef("Function")}}

@@ -8,7 +8,7 @@ l10n:
 
 La valeur **`viewport`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) d'un élément HTML {{HTMLElement("meta")}} donne des indications sur la façon dont la {{Glossary("viewport", "zone d'affichage")}} doit être dimensionnée.
 
-Si elle est spécifiée, vous définissez les comportements liés à la zone d'affichage à l'aide de l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément HTML `<meta>`, sous la forme d'une liste séparée par des virgules d'une ou plusieurs valeurs.
+Si elle est définie, vous définissez les comportements liés à la zone d'affichage à l'aide de l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément HTML `<meta>`, sous la forme d'une liste séparée par des virgules d'une ou plusieurs valeurs.
 
 ## Notes d'utilisation
 

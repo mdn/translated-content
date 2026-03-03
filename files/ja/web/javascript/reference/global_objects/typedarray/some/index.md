@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.some()
+short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
 ---
 
-{{JSRef}}
+**`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の要素のうち、指定されたテスト関数を満たす要素が 1 つでも見つかった場合に `true` を返します。それ以外の場合は `false` を返します。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
 
-**`some()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の中に指定された関数で実装されているテストに合格する要素が 1 つでもあるかどうかをテストします。型付き配列の中に指定された関数が true を返す要素があれば true を返し、なければ false を返します。型付き配列を変更することはありません。このメソッドは {{jsxref("Array.prototype.some()")}} と同じアルゴリズムです。
-
-{{InteractiveExample("JavaScript デモ: TypedArray.some()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.some()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {
@@ -20,10 +19,10 @@ const int8 = new Int8Array([-10, 20, -30, 40, -50]);
 const positives = new Int8Array([10, 20, 30, 40, 50]);
 
 console.log(int8.some(isNegative));
-// Expected output: true
+// 予想される結果: true
 
 console.log(positives.some(isNegative));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文

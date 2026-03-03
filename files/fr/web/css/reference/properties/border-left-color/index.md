@@ -1,16 +1,13 @@
 ---
 title: border-left-color
 slug: Web/CSS/Reference/Properties/border-left-color
-original_slug: Web/CSS/border-left-color
+l10n:
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-left-color`** permet de définir la couleur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à gauche d'un élément. Elle peut aussi être définie avec les propriétés raccourcies CSS {{CSSxRef("border-color")}} ou {{CSSxRef("border-left")}}.
 
-La propriété **`border-left-color`** permet de définir la couleur utilisée pour la bordure gauche d'un élément.
-
-Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-left")}}.
-
-{{InteractiveExample("CSS Demo: border-left-color")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-left-color")}}
 
 ```css interactive-example-choice
 border-left-color: red;
@@ -21,11 +18,11 @@ border-left-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-left-color: rgb(170, 50, 220, 0.6);
+border-left-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-border-left-color: hsl(60, 90%, 50%, 0.8);
+border-left-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -35,15 +32,15 @@ border-left-color: transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -56,22 +53,26 @@ border-left-color: transparent;
 ```css
 /* Valeurs de type <color> */
 border-left-color: red;
-border-left-color: rgb(255, 128, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
 border-left-color: #ffbb00;
+border-left-color: rgb(255 0 0);
+border-left-color: hsl(100deg 50% 25% / 75%);
 border-left-color: currentColor;
 border-left-color: transparent;
 
 /* Valeurs globales */
 border-left-color: inherit;
 border-left-color: initial;
+border-left-color: revert;
+border-left-color: revert-layer;
 border-left-color: unset;
 ```
 
+La propriété `border-left-color` se définit avec une seule valeur.
+
 ### Valeurs
 
-- `<color>`
-  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté gauche.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur de la bordure gauche.
 
 ## Définition formelle
 
@@ -83,34 +84,36 @@ border-left-color: unset;
 
 ## Exemples
 
-### CSS
+### Une div avec une bordure
+
+#### HTML
+
+```html
+<div class="ma-boite">
+  <p>
+    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
+    <span class="texte-rouge">rouge</span>.
+  </p>
+</div>
+```
+
+#### CSS
 
 ```css
-.maboite {
+.ma-boite {
   border: solid 0.3em gold;
   border-left-color: red;
   width: auto;
 }
 
-.texterouge {
+.texte-rouge {
   color: red;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div class="maboite">
-  <p>
-    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
-    <span class="texterouge">rouge</span>.
-  </p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Une div avec une bordure")}}
 
 ## Spécifications
 
@@ -122,16 +125,7 @@ border-left-color: unset;
 
 ## Voir aussi
 
-- Les propriétés raccourcies liées aux bordures
-  - {{cssxref("border")}},
-  - {{cssxref("border-left")}},
-  - {{cssxref("border-color")}}.
-
-- Les propriétés de couleur pour les autres bordures :
-  - {{cssxref("border-top-color")}},
-  - {{cssxref("border-bottom-color")}},
-  - {{cssxref("border-right-color")}}.
-
-- Les autres propriétés liées à la bordure gauche :
-  - {{cssxref("border-left-style")}},
-  - {{cssxref("border-left-width")}}.
+- Les propriétés raccourcies liées aux bordures&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-left")}} et {{CSSxRef("border-color")}}.
+- Les propriétés de couleur pour les autres bordures&nbsp;: {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}} et {{CSSxRef("border-top-color")}}.
+- Les autres propriétés liées à la même bordure&nbsp;: {{CSSxRef("border-left-style")}} et {{CSSxRef("border-left-width")}}.
+- La valeur de couleur par défaut [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor).

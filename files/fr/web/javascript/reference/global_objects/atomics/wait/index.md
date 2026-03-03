@@ -3,7 +3,7 @@ title: "Atomics : méthode statique wait()"
 short-title: wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`wait()`** de l'objet {{JSxRef("Atomics")}} vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
@@ -49,11 +49,14 @@ Une chaîne de caractères qui vaut `"ok"`, `"not-equal"` ou `"timed-out"` selon
 
 ## Exemples
 
-### Utilisation de `wait()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.wait()`
 
 Étant donné un `Int32Array` partagé&nbsp;:
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```

@@ -1,19 +1,16 @@
 ---
-title: HTMLIFrameElement.allowPaymentRequest
+title: "HTMLIFrameElement : propriété allowPaymentRequest"
+short-title: allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`allowPaymentRequest`** de l'interface {{domxref("HTMLIFrameElement")}} retourne une valeur booléenne indiquant si la [<i lang="en">Payment Request API</i>](/fr/docs/Web/API/Payment_Request_API) peut être invoquée sur une <i lang="en">iframe</i> utilisant une origine tierce.
+La propriété **`allowPaymentRequest`** de l'interface {{DOMxRef("HTMLIFrameElement")}} retourne une valeur booléenne indiquant si [l'API Payment Request](/fr/docs/Web/API/Payment_Request_API) peut être invoquée sur un cadre intégré (<i lang="en">iframe</i> en anglais) utilisant une origine tierce.
 
-## Syntaxe
-
-```js
-var allow = htmlIFrameElement.allowPaymentRequest;
-```
-
-### Valeur
+## Valeur
 
 Une valeur booléenne.
 
@@ -23,4 +20,4 @@ Une valeur booléenne.
 
 ## Voir aussi
 
-- [Payment Request API](/fr/docs/Web/API/Payment_Request_API)
+- [L'API Payment Request](/fr/docs/Web/API/Payment_Request_API)
