@@ -10,10 +10,10 @@ l10n:
 
 {{domxref("NavigatorUAData")}} 接口的 **`getHighEntropyValues()`** 方法返回一个 {{jsxref("Promise")}}，它兑现为一个字典对象，其中包含低熵信息以及关于浏览器的请求的高熵信息。
 
-兑现后的对象包含默认包含在 `NavigatorUAData` 对象中的[“低熵”属性](/zh-CN/docs/Web/API/NavigatorUAData#实例属性)——这些值不太可能用于识别用户指纹。它还包含参数对象中请求的“高熵”值子集，且这些值已获得授权。这些值更可能被用于指纹识别。需注意，[低熵](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)与[高熵](/zh-CN/docs/Web/HTTP/Guides/Client_hints#高熵提示)的定义与 HTTP [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)机制中的定义相同。
+兑现后的对象包含默认包含在 `NavigatorUAData` 对象中的[“低熵”属性](/zh-CN/docs/Web/API/NavigatorUAData#实例属性)——这些值不太可能用于识别用户指纹。它还包含参数对象中请求的、且已获授权的“高熵”值子集。这些值更可能被用于指纹识别。需注意，[低熵](/zh-CN/docs/Web/HTTP/Guides/Client_hints#低熵提示)与[高熵](/zh-CN/docs/Web/HTTP/Guides/Client_hints#高熵提示)的定义与 HTTP [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)机制中的定义相同。
 
 > [!NOTE]
-> 通过 {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}} 可控制 `getHighEntropyValues()` 方法获取高熵用户代理数据的行为，如果权限不不允许，方法只会返回 `brands`、`mobiles` 和 `platform` 低熵数据。
+> 通过 {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{HTTPHeader('Permissions-Policy')}} 可控制 `getHighEntropyValues()` 方法获取高熵用户代理数据的行为。如果权限不允许，方法只会返回 `brands`、`mobiles` 和 `platform` 低熵数据。
 
 ## 语法
 
