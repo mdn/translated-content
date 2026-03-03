@@ -1,13 +1,11 @@
 ---
-title: "ARIA: роль checkbox"
-short-title: checkbox
+title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 ---
 
-Роль `checkbox` предназначена для интерактивных элементов управления с состоянием
-"отмечен/не отмечен". Элементы с `role="checkbox"` должны также включать атрибут
-[`aria-checked`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked),
-чтобы передавать состояние флажка вспомогательным технологиям.
+{{AccessibilitySidebar}}
+
+[checkbox role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) используется для переключаемых интерактивных элементов управления. Элементы, содержащие `role="checkbox"` также должны включать `aria-checked` атрибут, чтобы продемонстрировать состояние чекбокса ассистивным технологиям.
 
 ```html
 <span
@@ -16,135 +14,83 @@ slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
   tabindex="0"
   aria-labelledby="chk1-label">
 </span>
-<label id="chk1-label">Запомнить мои настройки</label>
+<label id="chk1-label">Remember my preferences</label>
 ```
 
-> [!NOTE]
-> Первое правило ARIA: если встроенный HTML-элемент или атрибут обладает нужной
-> семантикой и поведением, используйте его вместо перепрофилирования другого
-> элемента с добавлением ARIA. Вместо этого применяйте нативный
-> [HTML-флажок `<input type="checkbox">`](/ru/docs/Web/HTML/Reference/Elements/input/checkbox)
-> (с связанным элементом {{HTMLElement('label')}}), который изначально предоставляет
-> всю необходимую функциональность:
+Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), который изначально предоставляет необходимый функционал:
 
 ```html
 <input type="checkbox" id="chk1-label" />
-<label for="chk1-label">Запомнить мои настройки</label>
+<label for="chk1-label">Запомнить мои предпочтения</label>
 ```
 
 ## Описание
 
-Нативный элемент управления формы HTML — флажок
-([`<input type="checkbox">`](/ru/docs/Web/HTML/Reference/Elements/input/checkbox))
-может находиться в двух состояниях: ("отмечен" или "не отмечен"), а также в
-[`неопределённом`](/ru/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes)
-состоянии, устанавливаемом с помощью JavaScript. Аналогично, элемент с
-`role="checkbox"` может находиться в трёх состояниях, обозначаемых с помощью
-атрибута `aria-checked`: `true`, `false` или `mixed`.
+Нативный [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) элемент управления может находиться только в двух состояниях отмеченности - "отмечен" или "не отмечен", с [неопределённым](/ru/docs/Web/HTML/Element/input/checkbox#Indeterminate_state_checkboxes) состоянием, устанавливаемым с помощью JavaScript. Аналогично элемент с `role="checkbox"` может находиться в трёх состояниях, обозначенных через `aria-checked` атрибут: `true`, `false`, or `mixed`.
 
-Поскольку флажок является интерактивным элементом управления, он должен быть
-доступен для фокусировки и управления с клавиатуры. Если роль применяется к
-элементу, который не может получать фокус, используйте атрибут
-[`tabindex`](/ru/docs/Web/HTML/Reference/Global_attributes/tabindex), чтобы это
-исправить. Ожидаемая клавиша для активации флажка — <kbd>Пробел</kbd>.
+Поскольку чекбокс является интерактивным элементом, он должен быть фокусируемым и доступным при помощи клавиатуры. Если роль установлена для нефокусируемого элемента, чтобы исправить ситуацию, используйте атрибут `tabindex`. Ожидаемый способ активации чекбокса при помощи клавиатуры - <kbd>Пробел</kbd> .
 
-Разработчик должен динамически изменять значение атрибута `aria-checked` при
-активации флажка.
+Разработчику необходимо динамически изменять значение атрибута `aria-checked` при активации чекбокса.
 
-### Все потомки являются презентационными
+### Связанные ARIA-роли, ARIA-состояния и ARIA-свойства
 
-Существуют некоторые типы компонентов пользовательского интерфейса, которые при
-представлении в API доступности платформы могут содержать только текст. API
-доступности не имеют способа представления семантических элементов, содержащихся
-внутри `checkbox`. Чтобы обойти это ограничение, браузеры автоматически применяют
-роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role)
-ко всем элементам-потомкам любого элемента `checkbox`, так как это роль, которая
-не поддерживает семантические дочерние элементы.
+- aria-checked
+  - : Значение `aria-checked` определяет состояние чекбокса. Этот атрибут может принимать одно из трёх значений:
 
-Например, рассмотрим следующий элемент `checkbox`, содержащий заголовок.
+    `true`
+    Чекбокс отмечен
+    `false`
+    Чекбокс не отмечен
+    `mixed`
+    Чекбокс частично отмечен, или в неопределённом состоянии
 
-```html
-<div role="checkbox"><h6>Название моего флажка</h6></div>
-```
+- tabindex="0"
+  - : Делает элемент фокусируемым, так что пользователь ассистивных технологий может сразу перейти к нему и начать читать.
 
-Поскольку потомки `checkbox` являются презентационными, следующий код эквивалентен:
+### Взаимодействие с клавиатурой
 
-```html
-<div role="checkbox"><h6 role="presentation">Название моего флажка</h6></div>
-```
-
-С точки зрения пользователя вспомогательных технологий, заголовок не существует,
-так как предыдущие snippets кода эквивалентны следующему в
-[дереве доступности](/ru/docs/Glossary/Accessibility_tree):
-
-```html
-<div role="checkbox">Название моего флажка</div>
-```
-
-### Связанные роли, состояния и свойства WAI-ARIA
-
-- [`aria-checked`](/ru/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-  - : Значение `aria-checked` определяет состояние флажка. Этот атрибут имеет одно
-    из трёх возможных значений:
-    - `true`
-      - : Флажок отмечен.
-    - `false`
-      - : Флажок не отмечен.
-    - `mixed`
-      - : Флажок частично отмечен или находится в неопределённом состоянии.
-
-- `tabindex="0"`
-  - : Используется, чтобы сделать элемент фокусируемым, чтобы пользователь
-    вспомогательных технологий мог перейти к нему с помощью клавиши Tab и начать
-    чтение сразу.
-
-### Взаимодействия с клавиатурой
-
-| Клавиша           | Функция           |
-| ----------------- | ----------------- |
-| <kbd>Пробел</kbd> | Активирует флажок |
+| Клавиша           | Функция            |
+| ----------------- | ------------------ |
+| <kbd>Пробел</kbd> | Активирует чекбокс |
 
 ### Необходимый JavaScript
 
-#### Необходимые обработчики событий
+#### Необходимый обработчики событий
 
-- `onclick`
-  - : Обрабатывает клики мышью как по самому флажку, так и по связанной с ним
-    метке, которые изменяют состояние флажка путём изменения значения атрибута
-    `aria-checked` и его внешнего вида, чтобы он отображался как отмеченный или
-    неотмеченный для зрячих пользователей.
-- `onKeyDown`
-  - : Обрабатывает случай, когда пользователь нажимает клавишу <kbd>Пробел</kbd>,
-    чтобы изменить состояние флажка путём изменения значения атрибута `aria-checked`
-    и его внешнего вида, чтобы он отображался как отмеченный или неотмеченный для
-    зрячих пользователей.
+- onclick
+  - : Обрабатывает клики, которые изменяют состояние чекбокса, меняя значение атрибута `aria-checked` и внешний вид чекбокса так, чтобы он выглядел отмеченным млм неотмеченным для зрячего пользователя.
+- onKeyPress
+  - : Обрабатывает случай, когда пользователь нажимает&#x20;
 
-## Примеры
+    <kbd>Пробел</kbd>
 
-В следующем примере создаётся несемантический элемент флажка с использованием CSS
-и JavaScript для обработки состояния "отмечен" или "не отмечен".
+    &#x20;для смены состояния чекбокса путём изменения значения атрибута `aria-checked` и внешнего вида чекбокса так, чтобы он выглядел отмеченным млм неотмеченным для зрячего пользователя.
 
-### HTML
+### Примеры
+
+Пример ниже создаёт простой чекбокс, используя CSS и JavaScript для обработки отмеченного и неотмеченного состояний элемента.
+
+#### HTML
 
 ```html
 <span
   role="checkbox"
   id="chkPref"
   aria-checked="false"
+  onclick="changeCheckbox()"
+  onKeyPress="changeCheckbox()"
   tabindex="0"
   aria-labelledby="chk1-label"></span>
-<label id="chk1-label">Запомнить мои настройки</label>
+<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
+  >Запомнить мои предпочтения</label
+>
 ```
 
-### CSS
+#### CSS
 
 ```css
 [role="checkbox"] {
   padding: 5px;
-}
-
-[role="checkbox"]:focus {
-  border: 2px solid #0198e1;
 }
 
 [aria-checked="true"]::before {
@@ -156,83 +102,48 @@ slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
 }
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
-const item = document.getElementById("chkPref");
-const label = document.getElementById("chk1-label");
-
-function changeCheckbox(code) {
-  const checked = item.getAttribute("aria-checked");
-
-  if (code && code !== "Space") {
-    return;
-  }
-  if (checked === "true") {
-    item.setAttribute("aria-checked", "false");
-  } else {
-    item.setAttribute("aria-checked", "true");
+function changeCheckbox(event) {
+  let item = document.getElementById("chkPref");
+  switch (item.getAttribute("aria-checked")) {
+    case "true":
+      item.setAttribute("aria-checked", "false");
+      break;
+    case "false":
+      item.setAttribute("aria-checked", "true");
+      break;
   }
 }
-
-item.addEventListener("keydown", (event) => {
-  changeCheckbox(event.code);
-});
-
-label.addEventListener("keydown", (event) => {
-  changeCheckbox(event.code);
-});
-
-item.addEventListener("click", changeCheckbox);
-label.addEventListener("click", changeCheckbox);
 ```
 
 {{EmbedLiveSample("Примеры", 230, 250)}}
 
-## Вопросы доступности
+## Доступность
 
-Когда роль `checkbox` добавляется к элементу, пользовательский агент должен
-сделать следующее:
+Когда `checkbox` роль добавлена к элементу, юзер агент должен сделать следующее:
 
-- Предоставить элемент как имеющий роль `checkbox` в API доступности операционной
-  системы.
-- Когда значение `aria-checked` изменяется, отправлять событие изменения
-  доступного состояния.
+- Показать элемент как элемент с функциями чекбокса для API доступности.
+- Когда значение aria-checked меняется, отправить доступное событие изменения состояния.
 
-Продукты вспомогательных технологий должны делать следующее:
+Продукты, использующие ассистивные технологии должны сделать следующее:
 
-- Скринридеры должны объявлять элемент как флажок и, опционально, предоставлять
-  инструкции по его активации.
-
-Разработчики, реализующие флажки, должны делать следующее:
-
-- Обеспечить, чтобы до флажка можно было добраться и взаимодействовать с ним как
-  с помощью клавиатуры, так и с помощью кликов мыши.
-- Поддерживать атрибут `aria-checked` в актуальном состоянии после пользовательских
-  взаимодействий.
-- Предоставлять стили, указывающие на то, что флажок находится в фокусе.
+- Программы чтения с экрана должны объявить элемент как чекбокс и при необходимости предоставить инструкции о том, как его активировать.
 
 > [!NOTE]
-> Мнения о том, как вспомогательные технологии должны обрабатывать эту технику,
-> могут различаться. Представленная выше информация отражает одно из таких мнений
-> и может быть изменена.
+> Мнения относительно того, как ассистивные технологии должны работать в таких случаях, отличаются. Информация, приведённая выше, также одно из таких мнений, и не является нормативом.
 
-## Рекомендации
+## Лучшие практики
 
-Первое правило ARIA: если встроенный HTML-элемент или атрибут обладает нужной
-вам семантикой и поведением, используйте его вместо перепрофилирования элемента
-и добавления роли, состояния или свойства ARIA для обеспечения доступности.
-Таким образом, рекомендуется использовать нативный
-[HTML-флажок](/ru/docs/Web/HTML/Reference/Elements/input/checkbox) через элемент
-управления формой вместо воссоздания его функциональности с помощью JavaScript и
-ARIA.
+Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.
 
 ## Смотрите также
 
-- [`<input type="checkbox">`](/ru/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [ARIA: роль `radio`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [ARIA: роль `menuitem`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
-- [ARIA: роль `menuitemcheckbox`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
-- [ARIA: роль `menuitemradio`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
-- [ARIA: роль `switch`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [ARIA: роль `option`](/ru/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
+- [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
+- [ARIA: radio role](/ru/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
+- [ARIA: menuitem role](/ru/docs/Web/Accessibility/ARIA/Roles/Menuitem_Role)
+- [ARIA: menuitemcheckbox role](/ru/docs/Web/Accessibility/ARIA/Roles/Menuitemcheckbox_Role)
+- [ARIA: menuitemradio role](/ru/docs/Web/Accessibility/ARIA/Roles/Menuitemradio_Role)
+- [ARIA: switch role](/ru/docs/Web/Accessibility/ARIA/Roles/Switch_role)
+- [ARIA: option role](/ru/docs/Web/Accessibility/ARIA/Roles/Option_role)
