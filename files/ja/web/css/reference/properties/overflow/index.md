@@ -1,9 +1,8 @@
 ---
 title: overflow
 slug: Web/CSS/Reference/Properties/overflow
-original_slug: Web/CSS/overflow
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
@@ -54,8 +53,8 @@ overflow: auto;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`overflow-x`](/ja/docs/Web/CSS/Reference/Properties/overflow-x)
-- [`overflow-y`](/ja/docs/Web/CSS/Reference/Properties/overflow-y)
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
 ## 構文
 
@@ -81,22 +80,22 @@ overflow: unset;
 ### 値
 
 - `visible`
-  - : 溢れたコンテンツは切り取られず、要素のパディングボックスの外側に表示されることがあります。要素ボックスは{{glossary("scroll container", "スクロールコンテナー")}}ではありません。これは `overflow` プロパティの既定値です。
+  - : あふれたコンテンツは切り取られず、要素のパディングボックスの外側に表示されることがあります。要素ボックスは{{glossary("scroll container", "スクロールコンテナー")}}ではありません。これは `overflow` プロパティの既定値です。
 - `hidden`
-  - : 溢れたコンテンツは要素のパディングボックスで切り取られます。スクロールバーはなく、切り取られたコンテンツは見えなくなります（つまり、切り取られたコンテンツは非表示になります）が、コンテンツはまだ存在しています。ユーザーエージェントはスクロールバーを追加せず、また、タッチスクリーンでのドラッグやマウスのスクロールホイールなどの操作によって、ユーザーが切り取られた領域の外にあるコンテンツを表示することもできません。コンテンツはプログラムによってスクロールさせることができ（例えば、アンカーテキストへのリンク、非表示でありながらフォーカス可能な要素へのタブ操作、{{domxref("Element.scrollLeft", "scrollLeft")}} プロパティの値や {{domxref("Element.scrollTo", "scrollTo()")}} メソッドの設定など）、この場合、要素ボックスはスクロールコンテナーとなります。
+  - : あふれたコンテンツは要素のパディングボックスで切り取られます。スクロールバーはなく、切り取られたコンテンツは見えなくなります（つまり、切り取られたコンテンツは非表示になります）が、コンテンツはまだ存在しています。ユーザーエージェントはスクロールバーを追加せず、また、タッチスクリーンでのドラッグやマウスのスクロールホイールなどの操作によって、ユーザーが切り取られた領域の外にあるコンテンツを表示することもできません。コンテンツはプログラムによってスクロールさせることができ（例えば、アンカーテキストへのリンク、非表示でありながらフォーカス可能な要素へのタブ操作、{{domxref("Element.scrollLeft", "scrollLeft")}} プロパティの値や {{domxref("Element.scrollTo", "scrollTo()")}} メソッドの設定など）、この場合、要素ボックスはスクロールコンテナーとなります。
 - `clip`
-  - : 溢れたコンテンツは、[`overflow-clip-margin`](/ja/docs/Web/CSS/Reference/Properties/overflow-clip-margin) プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側に溢れたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
+  - : あふれたコンテンツは、{{cssxref("overflow-clip-margin")}} プロパティを使用して定義された要素のはみ出しクリップ辺で切り取られます。その結果、コンテンツは要素のパディングボックスを `overflow-clip-margin` の {{cssxref("&lt;length&gt;")}} 値分、または設定されていない場合は `0px` 分はみ出します。切り取られた領域の外側にあふれたコンテンツは表示されず、ユーザーエージェントはスクロールバーを追加せず、プログラムによるスクロールも行われません。新しい[整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)は作成されません。整形コンテキストを確立するには、`overflow: clip` を {{cssxref("display", "display: flow-root", "#flow-root")}} とともに使用してください。この要素ボックスはスクロールコンテナーにはなりません。
 - `scroll`
-  - : 溢れたコンテンツは要素のパディングボックスで切り取られ、スクロールバーを使用してスクロールさせることで、溢れたコンテンツを表示することができます。ユーザーエージェントは、コンテンツが溢れているか否かに関わらずスクロールバーを表示します。そのため、このキーワードを使用すると、コンテンツが変化するたびにスクロールバーが表示されたり非表示になったりすることを防ぐことができます。ただし、印刷時には溢れたコンテンツが印刷される場合があります。要素ボックスはスクロールコンテナーになります。
+  - : あふれたコンテンツは要素のパディングボックスで切り取られ、スクロールバーを使用してスクロールさせることで、あふれたコンテンツを表示することができます。ユーザーエージェントは、コンテンツが溢れているか否かに関わらずスクロールバーを表示します。そのため、このキーワードを使用すると、コンテンツが変化するたびにスクロールバーが表示されたり非表示になったりすることを防ぐことができます。ただし、印刷時にはあふれたコンテンツが印刷される場合があります。要素ボックスはスクロールコンテナーになります。
 - `auto`
-  - : 溢れたコンテンツは要素のパディングボックスで切り取られ、溢れたコンテンツはスクロールバーを使ってスクロールして表示することができます。`scroll` とは異なり、ユーザエージェントはコンテンツが溢れた場合にのみスクロールバーを表示します。コンテンツが要素のパディングボックス内に収まる場合、`visible` と同じように見えますが、新しい整形コンテキストを確立します。要素ボックスはスクロールコンテナーになります。
+  - : あふれたコンテンツは要素のパディングボックスで切り取られ、あふれたコンテンツはスクロールバーを使ってスクロールして表示することができます。`scroll` とは異なり、ユーザエージェントはコンテンツがあふれた場合にのみスクロールバーを表示します。コンテンツが要素のパディングボックス内に収まる場合、`visible` と同じように見えますが、新しい整形コンテキストを確立します。要素ボックスはスクロールコンテナーになります。
 
 > [!NOTE]
 > キーワード値 `overlay` は、`auto` の値の古い別名です。 `overlay` を使用すると、スクロールバーは空間を占有するのではなく、コンテンツの上に描画されます。
 
 ## 解説
 
-overflow のオプションには、溢れたコンテンツを非表示にするもの、スクロールバーを表示して溢れたコンテンツが見られるようにするもの、溢れたコンテンツを要素ボックスの周囲の領域に流すもの、およびそれらの組み合わせがあります。
+overflow のオプションには、あふれたコンテンツを非表示にするもの、スクロールバーを表示してあふれたコンテンツが見られるようにするもの、あふれたコンテンツを要素ボックスの周囲の領域に流すもの、およびそれらの組み合わせがあります。
 
 `overflow` の各キーワードを使用する際には、以下の点に留意してください。
 
@@ -116,9 +115,9 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 ## アクセシビリティ
 
-スクロールするコンテンツ領域は、キーボードのみを使用するユーザーにはスクロールできません。ただし、Firefox を使用しているユーザーは例外です（Firefox では、コンテナーが既定ではキーボード操作可能に設定されています）。
+スクロール可能なコンテンツ領域はキーボードフォーカスを受け付けないため、キーボードのみを使用するユーザーはスクロールできません。Firefox および Chrome 132 以降はこの限りではなく、デフォルトでスクロール可能なコンテナーにフォーカスを付与します。
 
-開発者として、Firefox 以外のキーボードのみ操作のユーザーにコンテナーのスクロールを許可するには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を使用して `tabindex="0"` と指定する必要があります。残念ながら、スクリーンリーダーがこのタブストップに遭遇すると、それが何であるかのコンテキストを保有していないため、スクリーンリーダーはそのコンテンツ全体をアナウンスする可能性が高いです。適切な WAI-ARIA ロール（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定することで、この問題を軽減できます。
+他のブラウザーでは、キーボードのみを使用するユーザーがコンテナーをスクロールすることができるようにするには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) をコンテナーに `tabindex="0"` で割り当てる必要があります。残念ながら、スクリーンリーダーがこのタブストップを検出すると、コンテナーに関するコンテキストを持たないため、コンテナーの内容全体を読み上げてしまう可能性があります。これを軽減するために、コンテナーに適切な [WAI-ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定してください。
 
 ## 例
 
@@ -254,5 +253,5 @@ p.overlay {
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
 - SVG の {{SVGAttr("overflow")}} 属性
-- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) (adrianroselli.com, 2022)

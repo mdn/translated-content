@@ -2,10 +2,8 @@
 title: 文と宣言
 slug: Web/JavaScript/Reference/Statements
 l10n:
-  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar("Statements")}}
 
 JavaScript アプリケーションは、適切な構文で書かれた文から構成されます。ひとつの文が数行に渡る場合もあります。また複数の文それぞれがセミコロンで区切られていれば 1 行となる場合もあります。そのキーワードはひとつではなく、キーワードのグループとなっています。
 
@@ -38,6 +36,10 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
   - : ブロックスコープを持つローカル変数を宣言し、その変数をある値に初期化することもできます。
 - {{jsxref("Statements/const", "const")}}
   - : 読み取り専用の名前付き定数を宣言します。
+- {{jsxref("Statements/using", "using")}}
+  - : 同期的に破棄されるローカル変数を宣言します。
+- {{jsxref("Statements/await_using", "await using")}}
+  - : 非同期に破棄されるローカル変数を宣言します。
 
 ### 関数とクラス
 
@@ -61,7 +63,7 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
 - {{jsxref("Statements/for...in", "for...in")}}
   - : オブジェクトの列挙可能なプロパティに対し任意の順番で反復処理を行います。それぞれ個別のプロパティに対し、文を実行できます。
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : 反復可能オブジェクト ({{jsxref("Global_Objects/Array","配列","",1)}}、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
+  - : 反復可能オブジェクト ({{jsxref("Array","配列","",1)}}、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を含む) を反復処理し、それぞれ個別のプロパティの値に対する実行文をともなった反復処理フックを呼び出します。
 - {{jsxref("Statements/for-await...of", "for await...of")}}
   - : 非同期反復オブジェクト、配列風オブジェクト、[イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)を反復処理し、各固有のプロパティ値で実行する文を実行しつつ、カスタムイテレーションフックを実行する。
 - {{jsxref("Statements/while", "while")}}
@@ -83,12 +85,12 @@ JavaScript アプリケーションは、適切な構文で書かれた文から
   - : 外部モジュールや別のスクリプトからエクスポートされる関数をインポートするのに使われます。
 - {{jsxref("Statements/label", "ラベル", "", 1)}}
   - : `break` や `continue` 文を使う際に参照できる識別子を含む文を用意します。
-- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
+- {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
   - : 文のスコープチェーンを拡張します。
 
 ## 文と宣言の違いについて
 
-この節では、 2 種類の構文を比較します。[_文_](https://tc39.es/ecma262/#prod-Statement)と[_宣言_](https://tc39.es/ecma262/#prod-Declaration)です。これらは 2 つの独立した文法集合です。以下のものは宣言です。
+この節では、 2 種類の構文を比較します。[_文_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement)と[_宣言_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration)です。これらは 2 つの独立した文法集合です。以下のものは宣言です。
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
@@ -125,11 +127,11 @@ if (条件)
   var i = 0;
 ```
 
-宣言は「識別子と値を結びつける」ものであり、文は「アクションを実行する」ものであると考えることができます。なぜなら、`var` は通常の字句スコープの規則に従わないので、副作用を引き起こす可能性があるからです。グローバル変数の作成、既存の `var` で定義された変数の変更、ブロックの外から見える変数の定義（`var` で定義された変数はブロックスコープに入らないため）のような形式です。
+宣言は「識別子と値を{{Glossary("binding", "結びつける")}}」ものであり、文は「アクションを実行する」ものであると考えることができます。なぜなら、`var` は通常の字句スコープの規則に従わないので、副作用を引き起こす可能性があるからです。グローバル変数の作成、既存の `var` で定義された変数の変更、ブロックの外から見える変数の定義（`var` で定義された変数はブロックスコープに入らないため）のような形式です。
 
 他の例として、[ラベル](/ja/docs/Web/JavaScript/Reference/Statements/label)は文にのみ付けることができます。
 
-```js example-bad
+```js-nolint example-bad
 label: const a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
 ```
 
@@ -154,4 +156,4 @@ if (条件) {
 
 ## 関連情報
 
-- [演算子](/ja/docs/Web/JavaScript/Reference/Operators)
+- [式と演算子](/ja/docs/Web/JavaScript/Reference/Operators)

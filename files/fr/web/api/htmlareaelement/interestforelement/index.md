@@ -3,10 +3,10 @@ title: "HTMLAreaElement : propriété interestForElement"
 short-title: interestForElement
 slug: Web/API/HTMLAreaElement/interestForElement
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 La propriété **`interestForElement`** de l'interface {{DOMxRef("HTMLAreaElement")}} obtient ou définit l'élément cible d'un invocateur d'intérêt (<i lang="en">interest invoker</i>), lorsque l'élément HTML {{HTMLElement("area")}} associé est défini comme invocateur d'intérêt.
 

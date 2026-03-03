@@ -7,11 +7,11 @@ l10n:
   sourceCommit: 594ae0d4ffb6326a9529fe366d30ca633309ee30
 ---
 
-L'attribut **`max`** définit la valeur maximale acceptable et valide pour le champ de saisie contenant l'attribut. Si la [`valeur`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) de l'élément est supérieure à cette valeur, l'élément échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette valeur doit être supérieure ou égale à la valeur de l'attribut [`min`](min). Si l'attribut `max` est présent mais n'est pas spécifié ou est invalide, aucune valeur `max` n'est appliquée. Si l'attribut `max` est valide et qu'une valeur non vide est supérieure au maximum autorisé par l'attribut `max`, la validation des contraintes empêchera la soumission du formulaire.
+L'attribut **`max`** définit la valeur maximale acceptable et valide pour le champ de saisie contenant l'attribut. Si la [`valeur`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est supérieure à cette valeur, l'élément échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette valeur doit être supérieure ou égale à la valeur de l'attribut [`min`](min). Si l'attribut `max` est présent mais n'est pas défini ou est invalide, aucune valeur `max` n'est appliquée. Si l'attribut `max` est valide et qu'une valeur non vide est supérieure au maximum autorisé par l'attribut `max`, la validation des contraintes empêchera la soumission du formulaire.
 
-Valable pour les types de saisie numérique, y compris les types {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} et {{HTMLElement("input/range", "range")}}, ainsi que les deux éléments HTML {{HTMLElement('progress')}} et {{HTMLElement('meter')}}, l'attribut `max` est un nombre qui spécifie la valeur la plus positive qu'un contrôle de formulaire doit considérer comme valide.
+Valable pour les types de saisie numérique, y compris les types `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}`, ainsi que les deux éléments HTML {{HTMLElement("progress")}} et {{HTMLElement("meter")}}, l'attribut `max` est un nombre qui spécifie la valeur la plus positive qu'un contrôle de formulaire doit considérer comme valide.
 
-Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript {{DOMxRef('validityState.rangeOverflow')}} sera vrai, et le contrôle sera assorti des pseudo-classes {{CSSxRef(':out-of-range')}} et {{CSSxRef(':invalid')}}.
+Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript {{DOMxRef("ValidityState.rangeOverflow")}} sera vrai, et le contrôle sera assorti des pseudo-classes {{CSSxRef(":out-of-range")}} et {{CSSxRef(":invalid")}}.
 
 ### Syntaxe
 
@@ -70,11 +70,11 @@ Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript {{DOM
 </table>
 
 > [!NOTE]
-> Lorsque les données saisies par l'utilisateur ne respectent pas la valeur maximale fixée, la valeur est considérée comme invalide dans la validation des contraintes et correspondra aux pseudo-classes {{CSSxRef(':invalid')}} et {{CSSxRef(':out-of-range')}}.
+> Lorsque les données saisies par l'utilisateur·ice ne respectent pas la valeur maximale fixée, la valeur est considérée comme invalide dans la validation des contraintes et correspondra aux pseudo-classes CSS {{CSSxRef(":invalid")}} et {{CSSxRef(":out-of-range")}}.
 
 Voir la [validation côté client](/fr/docs/Web/HTML/Guides/Constraint_validation) et {{DOMxRef("ValidityState.rangeOverflow", "rangeOverflow")}} pour plus d'informations.
 
-Pour l'élément {{HTMLElement('progress')}}, l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément {{HTMLElement('meter')}}, l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([`min`](/fr/docs/Web/HTML/Reference/Attributes/min) attribut), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+Pour l'élément {{HTMLElement("progress")}}, l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément {{HTMLElement("meter")}}, l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([`min`](/fr/docs/Web/HTML/Reference/Attributes/min) attribut), si elle est définie. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
 <table class="no-markdown">
   <caption>
@@ -109,7 +109,7 @@ Pour l'élément {{HTMLElement('progress')}}, l'attribut `max` décrit la quanti
 
 ## Accessibilité
 
-Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `max`, assurez-vous que cette exigence maximale est comprise par l'utilisateur. Fournir des instructions dans le {{HTMLElement('label')}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus flexibles, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Fournissez des instructions pour aider les utilisateur·ice·s à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut `max`, assurez-vous que cette exigence maximale est comprise par l'utilisateur·ice. Fournir des instructions dans le {{HTMLElement("label")}} peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus flexibles, envisagez d'utiliser [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) ou [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Spécifications
 
@@ -126,8 +126,8 @@ Fournissez des instructions pour aider les utilisateurs à comprendre comment re
 - Les autres attributs de mesure&nbsp;: [`low`](/fr/docs/Web/HTML/Reference/Elements/meter#low), [`high`](/fr/docs/Web/HTML/Reference/Elements/meter#high), [`optimum`](/fr/docs/Web/HTML/Reference/Elements/meter#optimum)
 - [Validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation)
 - [Validation de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- L'attribut JavaScript {{DOMxRef('validityState.rangeOverflow')}}
-- La pseudo-classe CSS {{CSSxRef(':out-of-range')}}
-- L'élément HTML {{HTMLElement('input')}}
-- Les valeurs de l'attribut type {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} et {{HTMLElement("input/range", "range")}}
-- L'élément HTML {{HTMLElement('meter')}}
+- La propriété API {{DOMxRef("ValidityState.rangeOverflow")}}
+- La pseudo-classe CSS {{CSSxRef(":out-of-range")}}
+- L'élément {{HTMLElement("input")}}
+- Les valeurs de l'attribut type `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}`
+- L'élément {{HTMLElement("meter")}}

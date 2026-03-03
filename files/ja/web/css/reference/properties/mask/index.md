@@ -1,9 +1,8 @@
 ---
 title: mask
 slug: Web/CSS/Reference/Properties/mask
-original_slug: Web/CSS/mask
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 7b291dab974ec1ceb97c83f45ce76c3afada2e63
 ---
 
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、画像の指定した領域をマスクまたはクリップして、要素を（部分的にまたは完全に）非表示にします。これは、すべての `mask-*` プロパティの一括指定です。このプロパティは、カンマで区切られた 1 つ以上の値を受け入れ、各値は `<mask-layer>` に対応します。
@@ -28,21 +27,21 @@ l10n:
 mask: none;
 
 /* 画像値 */
-mask: url(mask.png); /* マスクとして使用されるピクセル画像 */
-mask: url(masks.svg#star); /* マスクとして使用される SVG グラフィック内の要素 */
+mask: url("mask.png"); /* マスクとして使用されるピクセル画像 */
+mask: url("masks.svg#star"); /* マスクとして使用される SVG グラフィック内の要素 */
 
 /* 組み合わせ値 */
-mask: url(masks.svg#star) luminance; /* 輝度マスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) 40px 20px; /* マスクとして使用される 上から 40px、左から 20px の位置に配置されている */
-mask: url(masks.svg#star) 0 0/50px 50px; /* 幅と高さが 50px のマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) repeat-x; /* 水平方向に繰り返されるマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) stroke-box; /* ストロークで囲まれたボックスに拡張するマスクとして使用される SVG グラフィック内の要素 */
-mask: url(masks.svg#star) exclude; /* SVGグラフィック内の要素をマスクとして使用し、非重複部分を使用して背景と組み合わせる */
+mask: url("masks.svg#star") luminance; /* 輝度マスクとして使用される SVG グラフィック内の要素 */
+mask: url("masks.svg#star") 40px 20px; /* マスクとして使用される 上から 40px、左から 20px の位置に配置されている */
+mask: url("masks.svg#star") 0 0/50px 50px; /* 幅と高さが 50px のマスクとして使用される SVG グラフィック内の要素 */
+mask: url("masks.svg#star") repeat-x; /* 水平方向に繰り返されるマスクとして使用される SVG グラフィック内の要素 */
+mask: url("masks.svg#star") stroke-box; /* ストロークで囲まれたボックスに拡張するマスクとして使用される SVG グラフィック内の要素 */
+mask: url("masks.svg#star") exclude; /* SVGグラフィック内の要素をマスクとして使用し、非重複部分を使用して背景と組み合わせる */
 
 /* 複数のマスク */
 mask:
-  url(masks.svg#star) left / 16px repeat-y,
-  /* 幅 16px の左端のマスク */ url(masks.svg#circle) right / 16px repeat-y; /* 幅 16px の右端のマスク */
+  url("masks.svg#star") left / 16px repeat-y,
+  /* 幅 16px の左端のマスク */ url("masks.svg#circle") right / 16px repeat-y; /* 幅 16px の右端のマスク */
 
 /* グローバル値 */
 mask: inherit;
@@ -189,6 +188,9 @@ div {
 
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("filter")}}
+- [CSS マスク入門](/ja/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS のマスクプロパティ](/ja/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [複数のマスクの宣言](/ja/docs/Web/CSS/Guides/Masking/Multiple_masks)
 - [CSS マスク](/ja/docs/Web/CSS/Guides/Masking)モジュール
 - SVG の {{SVGAttr("mask")}} 属性
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

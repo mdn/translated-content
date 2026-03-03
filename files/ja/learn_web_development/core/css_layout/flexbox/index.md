@@ -2,12 +2,10 @@
 title: フレックスボックス
 slug: Learn_web_development/Core/CSS_layout/Flexbox
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
 [フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout) (Flexbox) は、アイテムを行または列に並べるための 1 次元のレイアウト方法です。アイテムがたわんで（伸びて）追加の空間を埋めたり、縮んで小さい空間に収まったりします。この記事では、すべての基本事項について説明します。
 
@@ -50,11 +48,60 @@ CSS フレックスボックスレイアウトでは、以下のことができ�
 
 フレックスボックス機能は、1 次元レイアウトのニーズに最適なソリューションでしょう。早速みてみましょう。
 
+> [!NOTE]
+> Scrimba の入門ガイド [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> は、フレックスボックスがウェブ上でどれほど一般的であり、学ぶことがなぜ重要なのかを網羅するインタラクティブなガイドを提供し、フレックスボックスの威力を示す典型的な場合を順を追って説明しています。
+
 ## 簡単な例の紹介
 
-この記事では、フレックスボックスがどのように機能するのかを理解するのに役立つ一連の演習を進めていくようにします。 まず始めに、github リポジトリーから最初のスターターファイル [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) のローカルコピーを作成し、最新のブラウザー（Firefox や Chrome など）にロードして、コードエディターでコードを確認してください。 ここでも[ライブで見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html)ことができます。
+この記事では、フレックスボックスの仕組みを理解するための演習を順を追って進めます。始める前に、HTML と CSS のローカルコピーを作成してください。最新のブラウザー（Firefox や Chrome など）で読み込み、コードエディターでコードを確認しましょう。または "Play" ボタンをクリックすると、playground で開くことができます。
 
-![フレックスボックスチュートリアルのスタート地点を示す画像](bih741v.png)
+```html live-sample___flexbox_0
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
+
+```css live-sample___flexbox_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* 以下にフレックスボックスの CSS を追加 */
+```
+
+{{EmbedLiveSample("flexbox_0", "100", "415")}}
 
 内部に最上位の見出しを持つ {{htmlelement("header")}} 要素と、 {{htmlelement("section")}} 要素があり、その中に 3 つの {{htmlelement("article")}} を含むます。 これらを使用して、かなり標準的な 3 列のレイアウトを作成しましょう。
 
@@ -62,15 +109,61 @@ CSS フレックスボックスレイアウトでは、以下のことができ�
 
 まず最初に、どの要素を柔軟な箱 (flexible box) としてレイアウトするかを選択する必要があります。 これを行うために、影響を与えたい要素の親要素に {{cssxref("display")}} の特別な値を設定します。 この場合、 {{htmlelement("article")}} 要素をレイアウトしたいので、これを {{htmlelement("section")}} に設定します。
 
-```css
+```html hidden live-sample___flexbox_1
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+section {
+  zoom: 0.8;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+/* 以下にフレックスボックスの CSS を追加 */
+```
+
+```css live-sample___flexbox_1
 section {
   display: flex;
 }
 ```
 
-これによって、 `<section>` 要素が**フレックスコンテナー**となり、その子は**フレックスアイテム**になります。その結果、以下のような感じになるでしょう。
+これによって、`<section>` 要素が**フレックスコンテナー**となり、その子は**フレックスアイテム**になります。その結果、以下のような感じになるでしょう。
 
-![1 行目に 1 列、 2 行目に 3 列のレイアウトを含む 2 列のコンテナーで、コンテンツによってウェブページを異なるレイアウトに分割できることを示します。](flexbox-example2.png)
+{{EmbedLiveSample("flexbox_1", "100", "210")}}
 
 このたった一つの宣言が必要なものすべてを与えてくれます。信じられないでしょう？ 同じ幅の列を持つ複数列のレイアウトがあり、列の高さはすべて同じです。 これは、フレックスアイテム（フレックスコンテナーの子）に与えられる既定値が、このような一般的な問題を解決するために設定されているためです。 それらについての詳細は後で。
 
@@ -112,27 +205,137 @@ flex-direction: column;
 
 ## 折り返し
 
-レイアウトの幅や高さが決まっているときに発生する問題の 1 つは、最終的にはフレックスボックスの子がコンテナーをはみ出してレイアウトが壊れることです。 [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox-wrap0.html) の例を見て、それを[ライブで見て](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html)みてください（この例に沿って進めたい場合は、このファイルのローカルコピーを取ってください）。
+レイアウトに固定幅や固定高を設定した場合に生じる課題の一つは、最終的にフレックスボックスの子要素がコンテナーからはみ出し、レイアウトが崩れることです。次の例では 5 つの {{htmlelement("article")}} 要素がありますが、これらは `min-width: 400px` が設定されているため収まらず、水平スクロールが発生します。
 
-![サンプルのフレックスボックスの例では、すべてのフレックスアイテムがフレックスコンテナーの単一の行にレイアウトされています。8 つ目のフレックスアイテムはブラウザーウィンドウからはみ出し、ページには水平方向と垂直方向のスクロールバーが表示されますが、これは前の 7 つのフレックスアイテムがビューポート内で使用できる空間を占めているため、ウィンドウ幅に収まらないためです。](flexbox-example3.png)
-
-ここでは、子要素が実際にコンテナーからはみ出してることがわかります。ブラウザーは既定では、`flex-direction` が `row` に設定されている場合はすべてのフレックスアイテムを単一の行に、`flex-direction` が `column` に設定されている場合は単一の列に配置しようとします。これを修正する一つの方法は、{{htmlelement("section")}} ルールに以下のような宣言を追加することです。
-
-```css
-flex-wrap: wrap;
+```html hidden live-sample___flex-wrap_0
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>4 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>5 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
 ```
 
-また、 {{htmlelement("article")}} のルールに次の宣言を追加してください。
-
-```css
-flex: 200px;
+```css hidden live-sample___flex-wrap_0
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
 ```
 
-試してみてください。 これが含まれていると次のようにレイアウトがはるかに良く見えることがわかります。
+{{EmbedLiveSample("flex-wrap_0", "100", "230")}}
 
-![フレックスアイテムは、フレックスコンテナー内に複数列でレイアウトされます。フレックスコンテナーでは flex-wrap プロパティが 'wrap' に設定されており、前の行のフレックスアイテムがフレックスコンテナーからはみ出した場合、新しい行にフレックスアイテムが表示されます。各フレックスアイテムには 200 ピクセルの幅が指定されました。すべての項目は同じ高さになるように伸張され、最も多くの内容を含むフレックス項目の高さと同じになります。](flexbox-example4.png)
+ここで、子要素が確かにコンテナーからはみ出していることがわかります。デフォルトで、`flex-direction` が `row` に設定されている場合、ブラウザーはすべてのフレックスアイテムを単一の行に配置しようとします。一方、`flex-direction` が `column` に設定されている場合は単一の列に配置しようとします。
 
-現在、複数の行があります — 多くのフレックスボックスの子が各行に納められているので、オーバーフローは次のラインに移動します。 `article` に設定した `flex: 200px` の宣言は、それぞれが少なくとも `200px` 幅になることを意味します。 このプロパティについては後で詳しく説明します。 また、最後の行の最後の数個の子がそれぞれ幅広になっているので、依然として行全体がいっぱいになっていることに気付くかもしれません。
+```html hidden live-sample___flex-wrap_1
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>4 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>5 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flex-wrap_1
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  min-width: 400px;
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  flex-direction: row;
+  zoom: 0.8;
+}
+```
+
+この問題を修正する方法の一つは、{{htmlelement("section")}} ルールに次の宣言を追加することです。
+
+```css live-sample___flex-wrap_1
+section {
+  flex-wrap: wrap;
+}
+```
+
+これを加えると、レイアウトがずっと見やすくなるのがわかるでしょう。
+
+{{EmbedLiveSample("flex-wrap_1", "100", "430")}}
+
+行が複数になりました。それぞれの行には、合理的な範囲で可能な限り多くのフレックスボックスの子要素が配置されます。オーバーフローした要素は次の行に移動されます。
 
 しかし、ここでできることは他にもあります。 まず最初に、 {{cssxref("flex-direction")}} プロパティの値を `row-reverse` に変更してみてください。 これで、まだ複数行のレイアウトがあることがわかりますが、ブラウザーウィンドウの反対側の隅から開始して逆方向に流れます。
 
@@ -153,45 +356,190 @@ flex-flow: row wrap;
 
 ## フレックスアイテムの柔軟なサイズ変更
 
-それでは、最初の例に戻って、フレックスアイテムの占めるスペースの割合を制御する方法を見てみましょう。 ローカルコピーの [flexbox0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox0.html) を開くか、新しい出発点として [flexbox1.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flexbox1.html) のコピーを入手してください（[ライブで見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)）。
+では最初の例に戻り、フレックスアイテムが他のフレックスアイテムと比較してどの程度の空間を占めるかを制御できる方法を見ていきましょう。
 
-まず、CSS の一番下に次のルールを追加します。
+```html hidden live-sample___flexbox_2
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
 
-```css
+```css hidden live-sample___flexbox_2
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+```
+
+ローカルコピーの CSS ファイルの末尾に、次のルールを追加してください。
+
+```css live-sample___flexbox_2
 article {
   flex: 1;
 }
 ```
 
+{{EmbedLiveSample("flexbox_2", "100", "210")}}
+
 これは、各フレックスアイテムが主軸に沿って使用可能な空間のうちどれだけを占めるかを決定する、無単位の割合値です。 この場合、それぞれの {{htmlelement("article")}} 要素に同じ値（`1` の値）を与えています。 つまり、パディングやマージンなどを設定した後の残りの予備スペースのうちから、すべてが同じ量を占めます。これは割合であり、各フレックスアイテムに `400000` の値を指定してもまったく同じ効果があることを意味します。
+
+```html hidden live-sample___flexbox_3
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flexbox_3
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
+}
+article {
+  flex: 1;
+}
+```
 
 それでは、前のルールの下に次のルールを追加します。
 
-```css
+```css live-sample___flexbox_3
 article:nth-of-type(3) {
   flex: 2;
 }
 ```
 
-更新すると、3 番目の {{htmlelement("article")}} が他の 2 つの幅の 2 倍の幅を占めます。 合計で 4 割合単位が使用可能です。 最初の 2 つのフレックスアイテムはそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3 つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。
+{{EmbedLiveSample("flexbox_3", "100", "210")}}
+
+更新すると、3 番目の {{htmlelement("article")}} が他の 2 つの幅の 2 倍の幅を占めるようになります。 合計で 4 割合単位が使用可能です。 最初の 2 つのフレックスアイテムはそれぞれ 1 単位ずつ持つため、それぞれ使用可能なスペースの 1/4 を占めます。 3 つ目は 2 単位を持っているので、それは使用可能なスペースの 2/4（または 1/2）を占めます。
 
 `flex` の値内に最小サイズ値を指定することもできます。 既存の `article` のルールを次のように更新してみてください。
 
-```css
-article {
-  flex: 1 200px;
-}
+```html hidden live-sample___flexbox_4
+<header>
+  <h1>サンプルのフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>3 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+</section>
+```
 
-article:nth-of-type(3) {
-  flex: 2 200px;
+```css hidden live-sample___flexbox_4
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  zoom: 0.8;
+  display: flex;
 }
 ```
 
-これは基本的に「各フレックスアイテムには最初に `200px` の使用可能な空間が与えられます。 その後、残りの使用可能な空間は割合単位に従って共有されます。」と述べています。 更新してみると、空間の共有方法に違いが見られます。
+```css live-sample___flexbox_4
+article {
+  flex: 1 100px;
+}
 
-![3 つのフレックスアイテムを持つフレックスコンテナー。3 つ目のフレックスアイテムは最初の 2 つよりも少し大きくなっています。](flexbox-example1.png)
+article:nth-of-type(3) {
+  flex: 2 100px;
+}
+```
 
-すべてのフレックスアイテムの最小幅は 200 ピクセルで、'flex' を使用して設定されています。最初の 2 つのフレックスアイテムの flex の値は 1 で、3 つ目のアイテムは 2 です。これはフレックスコンテナーの残りの空間を 4 等分に分割します。最初の 2 つのフレックスアイテムにはそれぞれ 1 単位、3 つ目のフレックスアイテムには 2 単位が割り当てられており、3 つ目のフレックスアイテムの幅は、同じ幅の他の 2 種類よりも広くなっています。
+これは基本的に「各フレックスアイテムには最初に `100px` の使用可能な空間が与えられます。 その後、残りの使用可能な空間は割合単位に従って共有されます。」と述べています。空間の共有方法に違いが見られます。
+
+{{EmbedLiveSample("flexbox_4", "100", "210")}}
+
+すべてのフレックスアイテムの最小幅は 100 ピクセルで、'flex' を使用して設定されています。最初の 2 つのフレックスアイテムの flex の値は 1 で、3 つ目のアイテムは 2 です。これはフレックスコンテナーの残りの空間を 4 等分に分割します。最初の 2 つのフレックスアイテムにはそれぞれ 1 単位、3 つ目のフレックスアイテムには 2 単位が割り当てられており、3 つ目のフレックスアイテムの幅は、同じ幅の他の 2 種類よりも広くなっています。
 
 フレックスボックスの真の価値は、その柔軟性/応答性に見ることができます。ブラウザーウィンドウのサイズを変更したり、別の {{htmlelement("article")}} 要素を追加したりしても、レイアウトは問題なく機能します。
 
@@ -207,15 +555,75 @@ article:nth-of-type(3) {
 
 ## 水平方向と垂直方向の配置
 
-フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックスアイテムを整列させることもできます。 新しい例である [flex-align0.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/flex-align0.html) を見て（[ライブも見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)）、これを調べてみましょう。 これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。
+フレックスボックスの機能を使用して、主軸または交差軸に沿ってフレックスアイテムを整列させることもできます。新しい例を見てみましょう。
 
-![5 つのボタンが、フレックスコンテナーの中に並んでいます。ボタンは左上にぎっしり詰まっていて、見ていてすっきりしません。](flexbox-example5.png)
+```html live-sample___flex-align_0
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css live-sample___flex-align_0
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* 以下にフレックスボックスの CSS を追加 */
+```
+
+これは、きちんとした柔軟なボタン/ツールバーに変わります。 現時点では、いくつかのボタンが左上隅に詰まった水平のメニューバーが表示されます。
+
+{{EmbedLiveSample("flex-align_0", "100", "125")}}
 
 まず、この例のローカルコピーを取ります。
 
-それでは、例の CSS の最後に次のものを追加してください。
+次に、例の CSS の最後に次のものを追加してください。
 
-```css
+```html hidden live-sample___flex-align_1
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_1
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+/* 以下にフレックスボックスの CSS を追加 */
+```
+
+```css live-sample___flex-align_1
 div {
   display: flex;
   align-items: center;
@@ -223,7 +631,7 @@ div {
 }
 ```
 
-![フレックスコンテナーに 5 つのボタンが並んでいます。フレックスアイテムは上下中央に、左右には等間隔に位置指定されています。](flexbox_center_space-around.png)
+{{EmbedLiveSample("flex-align_1", "100", "125")}}
 
 ページを更新すると、ボタンが横方向と縦方向に中央揃えになっていることがわかります。 これを 2 つの新しいプロパティを介して行いました。フレックスアイテムは `align-items` プロパティを `center` に設定することで、交差軸の中心に配置されます。`justify-content` プロパティを `space-around` に 設定することで、フレックスアイテムは主軸に沿って等間隔に配置されます。
 
@@ -235,15 +643,49 @@ div {
 
 個々のフレックスアイテムの {{cssxref("align-items")}} のふるまいは、 {{cssxref("align-self")}} プロパティを適用することで上書きできます。 例えば、 CSS に次のコードを追加してみてください。
 
-```css
+```html hidden live-sample___flex-align_2
+<div>
+  <button>Smile</button>
+  <button>Laugh</button>
+  <button>Wink</button>
+  <button>Shrug</button>
+  <button>Blush</button>
+</div>
+```
+
+```css hidden live-sample___flex-align_2
+body {
+  font-family: sans-serif;
+  width: 90%;
+  max-width: 960px;
+  margin: 10px auto;
+}
+div {
+  height: 100px;
+  border: 1px solid black;
+}
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* 以下にフレックスボックスの CSS を追加 */
+```
+
+```css live-sample___flex-align_2
 button:first-child {
   align-self: flex-end;
 }
 ```
 
-![5 つのボタンが、フレックスコンテナーの中に一列に並べられています。最初のものを除くすべてのフレックスアイテムは、交差軸の中心、つまり上下中央に配置されています。最初のアイテムは、フレックスコンテナーの下端、交差軸の端に詰めて配置されています。フレックスコンテナーのアイテムは、コンテナーの主軸（幅）に沿って等間隔に配置されます。](flexbox_first-child_flex-end.png)
+{{EmbedLiveSample("flex-align_2", "100", "125")}}
 
-これがどのような影響を与えるのかを見て、終了したらもう一度削除します。
+これがどのような影響を与えるのかを見て、終了したらもう一度削除してください。
 
 {{cssxref("justify-content")}} は、フレックスアイテムが主軸上のどこに配置されるかを制御します。
 
@@ -254,7 +696,7 @@ button:first-child {
 - 上記で使用した値、`space-around` は便利です。 両端に少しの空間を残して、すべてのアイテムを主軸に沿って均等に配置します。
 - もう 1 つの値、`space-between` があります。 これは、両端に空間を残さないという点を除けば、`space-around` にとてもよく似ています。
 
-[`justify-items`](/ja/docs/Web/CSS/Reference/Properties/justify-items) プロパティはフレックスボックスレイアウトでは無視されます。
+{{cssxref("justify-items")}} プロパティはフレックスボックスレイアウトでは無視されます。
 
 続ける前に、これらの値を使用してそれらがどのように機能するかを確認することをお勧めします。
 
@@ -289,9 +731,87 @@ button:last-child {
 
 ## ネストしたフレックスボックス
 
-フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックスアイテムをフレックスコンテナーとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。 [complex-flexbox.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/flexbox/complex-flexbox.html) を見てください（[ライブも見る](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)）。
+フレックスボックスを使ってかなり複雑なレイアウトを作成することは可能です。 フレックスアイテムをフレックスコンテナーとしても設定して、その子も柔軟な箱のようにレイアウトできるようにしてもまったく問題ありません。
 
-![サンプルフレックスボックスの例では、 3 つのフレックスアイテムの子を並べて保有しています。最初の 2 人は同じ幅で、3 人目は少し広くなっています。 3 つ目のフレックスアイテムはフレックスコンテナーでもあります。これには、 2 列に並んだボタンのセットと、それに続くテキストがあります。最初の行には 4 つのボタンがあり、一列に並んでいます。ボタンは同じ幅で、コンテナーの幅いっぱいに保有されています。 2 つ目の行には、単一のボタンがあり、それ自体で行の幅をすべて保有しています。](flexbox-example7.png)
+```html hidden live-sample___flex-nesting
+<header>
+  <h1>複雑なフレックスボックスの例</h1>
+</header>
+<section>
+  <article>
+    <h2>1 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <h2>2 つ目の記事</h2>
+    <p>コンテンツ…</p>
+  </article>
+  <article>
+    <div>
+      <button>Smile</button>
+      <button>Laugh</button>
+      <button>Wink</button>
+      <button>Shrug</button>
+      <button>Blush</button>
+    </div>
+    <div>
+      <p>段落 1 のコンテンツ…</p>
+    </div>
+    <div>
+      <p>段落 2 のコンテンツ…</p>
+    </div>
+  </article>
+</section>
+```
+
+```css hidden live-sample___flex-nesting
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+header {
+  background: purple;
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+article {
+  padding: 10px;
+  margin: 10px;
+  background: aqua;
+}
+section {
+  display: flex;
+  zoom: 0.8;
+}
+article {
+  flex: 1 170px;
+}
+article:nth-of-type(3) {
+  flex: 3 170px;
+  display: flex;
+  flex-flow: column;
+}
+article:nth-of-type(3) div:first-child {
+  flex: 1 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+button {
+  flex: 1 auto;
+  margin: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+```
+
+{{EmbedLiveSample("flex-nesting", "100", "290")}}
 
 このように、フレックスアイテムがいくつかある複雑なレイアウトは、フレックスコンテナーとして扱われます。このための HTML はかなり素直です。 3 つの {{htmlelement("article")}} を含む {{htmlelement("section")}} 要素があります。 3 番目の {{htmlelement("article")}} には 3 つの {{htmlelement("div")}} が含まれています。
 
@@ -319,11 +839,11 @@ section {
 
 ```css
 article {
-  flex: 1 200px;
+  flex: 1 100px;
 }
 
 article:nth-of-type(3) {
-  flex: 3 200px;
+  flex: 3 100px;
   display: flex;
   flex-flow: column;
 }
@@ -352,13 +872,9 @@ button {
 }
 ```
 
-## スキルテスト
-
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox)を見てください。
-
 ## まとめ
 
-以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次は、CSS レイアウトのもう 1 つの重要な側面を見ていきましょう。[CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)です。
+以上でフレックスボックスの基本についての解説を終わります。これから学習を進めていく中で、フレックスボックスで楽しく遊んでいただけることを期待しています。次の記事では、これらの知識をどれだけ理解し、定着させられたかを調べるためのテストをいくつかご紹介します。
 
 ## 関連情報
 
@@ -370,4 +886,4 @@ button {
 - [CSS-Tricks guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) — フレックスボックスのすべてを視覚的にわかりやすく説明した記事です。
 - [Flexbox Froggy](https://flexboxfroggy.com/) — フレックスボックスの基本を学び、理解を深めるための教育ゲームです。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox", "Learn_web_development/Core/CSS_layout")}}

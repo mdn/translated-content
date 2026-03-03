@@ -187,7 +187,7 @@ Certaines requêtes sur le dépôt de contenu MDN concernent des travaux spécif
 Dans ce cas, l'auteur·ice indique le nom d'utilisateur du·de la relecteur·ice à la fin de la description de la requête, par exemple&nbsp;:
 
 ```md
-reviewer: @SphinxKnight
+reviewer: @tristantheb
 ```
 
 Si vous recevez une demande de relecture et qu'une autre personne a été désignée comme relecteur·ice, ne relisez pas les changements.

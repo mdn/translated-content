@@ -1,14 +1,14 @@
 ---
-title: console.profileEnd()
+title: "console: profileEnd() 静的メソッド"
+short-title: profileEnd()
 slug: Web/API/console/profileEnd_static
+l10n:
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
 
-> [!WARNING]
-> console.profile() の直後に本 API を呼び出すと、本 API が動作しないことがあります。これを回避するには、 setTimeout の中で 5ms 以上遅延させて呼び出してください。 [Firefox バグ 1240249](https://bugzil.la/1240249) を参照してください。
-
-**`console.profileEnd()`** メソッドは、 {{DOMxRef("console.profile()")}} で開始したプロファイルの記録を終了します。
+**`console.profileEnd()`** 静的メソッドは、以前 {{domxref("console/profile_static", "console.profile()")}} で開始したプロファイルの記録を終了します。
 
 任意で引数にプロファイル名を与えることができます。引数を与えると、複数のプロファイルを記録している場合に特定のプロファイルのみ停止することができます。
 
@@ -16,18 +16,16 @@ slug: Web/API/console/profileEnd_static
 - `console.profileEnd()` に記録中のプロファイル名に一致しない名称を渡すと、何も行いません。
 - `console.profileEnd()` にプロファイル名を渡さない場合は、直近に開始したプロファイルを終了します。
 
-{{AvailableInWorkers}}
-
 ## 構文
 
-```js
-profileEnd(profileName);
+```js-nolint
+console.profileEnd(profileName)
 ```
 
 ### 引数
 
-- `profileName`
-  - : プロファイルにつける名前。この引数は省略可能です。
+- `profileName` {{Optional_Inline}}
+  - : プロファイルにつける名前です。
 
 ### 返値
 
@@ -39,4 +37,4 @@ profileEnd(profileName);
 
 ## 関連情報
 
-- {{DOMxRef("console.profile()")}}
+- {{domxref("console/profile_static", "console.profile()")}}

@@ -135,7 +135,7 @@ Un élément `<caption>` est utilisé comme premier enfant du tableau ({{HTMLEle
   <thead>
     <tr>
       <th>Connexion</th>
-      <th>Courriel :</th>
+      <th>Courriel&nbsp;:</th>
     </tr>
   </thead>
   <tbody>
@@ -190,7 +190,7 @@ td {
 
 ### Résultat
 
-{{EmbedLiveSample('Tableau avec légende', 650, 140)}}
+{{EmbedLiveSample("Tableau avec légende", 650, 140)}}
 
 ## Résumé technique
 
