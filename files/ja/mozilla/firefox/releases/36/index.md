@@ -33,8 +33,8 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - {{cssxref("display")}} プロパティの値 `contents` を実験的に実装しました。デフォルトで無効に設定しています ([Firefox バグ 907396](https://bugzil.la/907396))。
 - [Quirks モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)で、[`:active` および `:hover` の Quirk](/ja/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) の適用対象を削減しました。リンクにのみ、および要素内に擬似要素や他の擬似クラスがない場合や擬似クラスの要素の一部ではない場合に限り適用されます ([Firefox バグ 783213](https://bugzil.la/783213))。
 - {{cssxref("isolation")}} プロパティを実装しました ([Firefox バグ 1077872](https://bugzil.la/1077872))。
-- CSS の {{cssxref("&lt;gradient&gt;")}} が乗算済み色に適用されるようになり、仕様書や他ブラウザーと合致しました。また、途中に予期しない灰色が現れないようになりました ([Firefox バグ 591600](https://bugzil.la/591600))。
-- {{cssxref("&lt;gradient&gt;")}} に、補間法のヒントを与える構文を追加しました ([Firefox バグ 1074056](https://bugzil.la/1074056))。
+- CSS の {{cssxref("gradient")}} が乗算済み色に適用されるようになり、仕様書や他ブラウザーと合致しました。また、途中に予期しない灰色が現れないようになりました ([Firefox バグ 591600](https://bugzil.la/591600))。
+- {{cssxref("gradient")}} に、補間法のヒントを与える構文を追加しました ([Firefox バグ 1074056](https://bugzil.la/1074056))。
 - {{cssxref("scroll-behavior")}} プロパティを実装しました ([Firefox バグ 1010538](https://bugzil.la/1010538))。
 
 ### HTML

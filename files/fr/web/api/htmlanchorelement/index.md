@@ -2,7 +2,7 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,7 +15,7 @@ L'interface **`HTMLAnchorElement`** représente les éléments d'hyperlien et fo
 
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-- {{DOMxRef("HTMLAnchorElement.attributionSrc")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLAnchorElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
   - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/a#attributionsrc) sur un élément {{HTMLElement("a")}} de façon programmatique, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une source d'attribution basée sur la navigation.
 - {{DOMxRef("HTMLAnchorElement.download")}}
   - : Une chaîne de caractères indiquant que la ressource liée doit être téléchargée plutôt qu'affichée dans le navigateur. La valeur représente le nom de fichier proposé. Si ce nom n'est pas valide pour le système d'exploitation sous-jacent, le navigateur l'adaptera.
@@ -29,7 +29,7 @@ _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
   - : Une chaîne de caractères résultant de l'analyse de l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href) relativement au document, contenant une URL valide de la ressource liée.
 - {{DOMxRef("HTMLAnchorElement.hreflang")}}
   - : Une chaîne de caractères reflétant l'attribut HTML [`hreflang`](/fr/docs/Web/HTML/Reference/Elements/a#hreflang), indiquant la langue de la ressource liée.
-- {{DOMxRef("HTMLAnchorElement.interestForElement")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLAnchorElement.interestForElement")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Obtient ou définit l'élément cible d'un invocateur d'intérêt, dans les cas où l'élément HTML {{HTMLElement("a")}} associé est défini comme un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers#création_dun_invocateur_dinteret).
 - {{DOMxRef("HTMLAnchorElement.origin")}} {{ReadOnlyInline}}
   - : Retourne une chaîne de caractères contenant l'origine de l'URL, c'est-à-dire son schéma, son domaine et son port.

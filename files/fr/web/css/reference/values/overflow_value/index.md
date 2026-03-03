@@ -2,7 +2,7 @@
 title: <overflow>
 slug: Web/CSS/Reference/Values/overflow_value
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<overflow>`** représente les mots-clés pour les propriétés {{CSSxRef("overflow-block")}}, {{CSSxRef("overflow-inline")}}, {{CSSxRef("overflow-x")}}, {{CSSxRef("overflow-y")}} et la propriété raccourcie {{CSSxRef("overflow")}}. Ces propriétés s'appliquent aux conteneurs de bloc, flex et grille.
@@ -22,7 +22,7 @@ Le type de valeur énuméré `<overflow>` définit l'une des valeurs listées ci
 - `hidden`
   - : Le contenu débordant est tronqué à la boîte de remplissage de l'élément. Il n'y a pas de barres de défilement et le contenu tronqué n'est pas visible (c'est‑à‑dire qu'il est masqué), mais il existe toujours. Les agents utilisateur n'ajoutent pas de barres de défilement et n'autorisent pas l'affichage du contenu hors de la zone tronquée par des actions comme le glissement tactile ou la molette de souris. Le contenu _peut_ être défilé de façon programmatique (par exemple, via {{DOMxRef("Element.scrollLeft", "scrollLeft")}} ou {{DOMxRef("Element.scrollTo", "scrollTo()")}}). Il peut aussi être défilé au clavier&nbsp;: les flèches permettent de faire défiler le contenu et la touche Tab permet de sélectionner un élément focalisable masqué. La boîte sur laquelle cette valeur est appliquée est un conteneur de défilement.
 - `clip`
-  - : Le contenu débordant est tronqué au _bord de découpe du débordement_ (<i lang="en">overflow clip edge</i>) défini par la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/Reference/Properties/overflow-clip-margin). Le contenu déborde la boîte de remplissage de la valeur {{CSSxRef("&lt;length&gt;")}} de `overflow-clip-margin` ou de `0px` si non définie. Le contenu hors de la région tronquée n'est pas visible, les agents utilisateur n'ajoutent pas de barre de défilement et le défilement programmatique n'est pas pris en charge. Aucun nouveau [contexte de formatage](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) n'est créé.
+  - : Le contenu débordant est tronqué au _bord de découpe du débordement_ (<i lang="en">overflow clip edge</i>) défini par la propriété {{CSSxRef("overflow-clip-margin")}}. Le contenu déborde la boîte de remplissage de la valeur {{CSSxRef("&lt;length&gt;")}} de `overflow-clip-margin` ou de `0px` si non définie. Le contenu hors de la région tronquée n'est pas visible, les agents utilisateur n'ajoutent pas de barre de défilement et le défilement programmatique n'est pas pris en charge. Aucun nouveau [contexte de formatage](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) n'est créé.
 - `scroll`
   - : Le contenu débordant est tronqué à la boîte de remplissage de l'élément, et peut être défilé via des barres de défilement. Les agents utilisateur affichent des barres de défilement horizontales et verticales si une seule valeur est définie, que le contenu déborde ou non. Ce mot‑clé peut empêcher l'apparition/disparition des barres de défilement selon le contenu. Les imprimantes peuvent imprimer le contenu débordant. La boîte sur laquelle cette valeur est appliquée est un conteneur de défilement.
 - `auto`
@@ -213,7 +213,7 @@ pre:nth-of-type(5) {
   overflow-clip-margin: 3em;
 }
 pre:nth-of-type(5)::before {
-  content: "overlay (or clip if not supported): ";
+  content: "overlay (ou clip si pas supporté) : ";
 }
 
 pre:nth-of-type(6) {
@@ -226,7 +226,7 @@ pre:nth-of-type(6)::before {
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "500", "800")}}
+{{EmbedLiveSample("Exemples", 500, 800)}}
 
 Pour observer l'effet de la sélection clavier sur le débordement et le défilement, utilisez la touche Tab pour parcourir tous les liens de l'exemple. Remarquez que la boîte `clip` ne crée pas de conteneur de défilement et que le lien ne devient pas visible lorsqu'il est sélectionné. La valeur `visible`, qui garde le lien toujours en vue, n'est pas non plus un conteneur de défilement.
 

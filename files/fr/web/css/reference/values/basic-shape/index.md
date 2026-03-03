@@ -3,7 +3,7 @@ title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
 original_slug: Web/CSS/basic-shape
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}} et {{CSSxRef("offset-path")}}.
@@ -183,7 +183,7 @@ Les valeurs dans une fonction `<basic-shape>` sont calculées comme spécifié, 
 
 ### Interpolation des formes de base
 
-Lors de l'animation entre deux fonctions `<basic-shape>`, les règles d'{{Glossary("interpolation")}} suivantes s'appliquent. Les valeurs des paramètres de chaque fonction `<basic-shape>` forment une liste. Pour qu'une interpolation ait lieu entre deux formes, les deux formes doivent utiliser la même boîte de référence et le nombre et le type de valeurs dans les deux listes `<basic-shape>` doivent correspondre.
+Lors de l'animation entre deux fonctions `<basic-shape>`, les règles {{Glossary("interpolation", "d'interpolation")}} suivantes s'appliquent. Les valeurs des paramètres de chaque fonction `<basic-shape>` forment une liste. Pour qu'une interpolation ait lieu entre deux formes, les deux formes doivent utiliser la même boîte de référence et le nombre et le type de valeurs dans les deux listes `<basic-shape>` doivent correspondre.
 
 Chaque valeur dans les listes des deux fonctions `<basic-shape>` est interpolée selon sa valeur calculée comme {{CSSxRef("number")}}, {{CSSxRef("length")}}, {{CSSxRef("percentage")}}, {{CSSxRef("angle")}} ou {{CSSxRef("calc", "calc()")}} lorsque c'est possible. L'interpolation peut tout de même avoir lieu si les valeurs ne sont pas de ces types mais sont identiques entre les deux fonctions de forme de base interpolées, comme `nonzero`.
 
@@ -268,7 +268,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample('polygone_animé','340', '340')}}
+{{EmbedLiveSample("Polygone animé", 340, 340)}}
 
 ## Spécifications
 
@@ -284,6 +284,6 @@ div {
 - Éléments SVG&nbsp;: {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - Le module de [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
-- [Introduction au masquage CSS](/fr/docs/Web/CSS/CSS_masking/Masking)
+- [Introduction au masquage CSS](/fr/docs/Web/CSS/Guides/Masking/Masking)
 - Le module de [masquage CSS](/fr/docs/Web/CSS/Guides/Masking)
 - [Modifier les chemins de forme dans Firefox Developer Tools <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

@@ -1,14 +1,13 @@
 ---
 title: float
 slug: Web/CSS/Reference/Properties/float
-original_slug: Web/CSS/float
 l10n:
-  sourceCommit: 6aa2d63aef51ada47960f4754b601af66a99d63c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La propriété CSS **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu)).
+La propriété [CSS](/fr/docs/Web/CSS) **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<i lang="en">inline</i> en anglais) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/Reference/Properties/position#positionnement_absolu)).
 
-{{InteractiveExample("CSS Demo: float")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: float")}}
 
 ```css interactive-example-choice
 float: none;
@@ -33,10 +32,11 @@ float: inline-end;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="transition-all" id="example-element">Float me</div>
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+    <div class="transition-all" id="example-element">Faites-moi flotter</div>
+    Autant de boue dans les rues que si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de croiser
+    un Mégalosaure, long d'une quarantaine de pieds, se dandinant comme un
+    lézard éléphantesque sur Holborn Hill.
   </div>
 </section>
 ```
@@ -59,29 +59,29 @@ float: inline-end;
 }
 ```
 
-Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de `float` est différente de `none`.
+Un _élément flottant_ est un élément pour lequel la valeur calculée de `float` est différente de `none`.
 
-`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de [`display`](/fr/docs/Web/CSS/Reference/Properties/display) dans certains cas&nbsp;:
+`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de {{CSSxRef("display")}} dans certains cas&nbsp;:
 
-| [Valeur définie](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_définie) | [Valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) |
-| ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| `inline`                                                                                   | `block`                                                                                      |
-| `inline-block`                                                                             | `block`                                                                                      |
-| `inline-table`                                                                             | `table`                                                                                      |
-| `table-row`                                                                                | `block`                                                                                      |
-| `table-row-group`                                                                          | `block`                                                                                      |
-| `table-column`                                                                             | `block`                                                                                      |
-| `table-column-group`                                                                       | `block`                                                                                      |
-| `table-cell`                                                                               | `block`                                                                                      |
-| `table-caption`                                                                            | `block`                                                                                      |
-| `table-header-group`                                                                       | `block`                                                                                      |
-| `table-footer-group`                                                                       | `block`                                                                                      |
-| `inline-flex`                                                                              | `flex`                                                                                       |
-| `inline-grid`                                                                              | `grid`                                                                                       |
-| _autre_                                                                                    | _inchangée_                                                                                  |
+| Valeur définie       | Valeur calculée |
+| -------------------- | --------------- |
+| `inline`             | `block`         |
+| `inline-block`       | `block`         |
+| `inline-table`       | `table`         |
+| `table-row`          | `block`         |
+| `table-row-group`    | `block`         |
+| `table-column`       | `block`         |
+| `table-column-group` | `block`         |
+| `table-cell`         | `block`         |
+| `table-caption`      | `block`         |
+| `table-header-group` | `block`         |
+| `table-footer-group` | `block`         |
+| `inline-flex`        | `flex`          |
+| `inline-grid`        | `grid`          |
+| _autre_              | _inchangée_     |
 
 > [!NOTE]
-> Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), la plupart des navigateurs récents permettront d'utiliser `float`, mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
+> Lorsqu'on accède à une propriété CSS en JavaScript via l'objet {{DOMxRef("HTMLElement.style")}}, les noms de propriétés d'un seul mot sont utilisés tels quels. Bien que `float` soit un mot réservé en JavaScript, la propriété CSS `float` est accessible sous le nom `float` dans les navigateurs modernes. Dans les anciens navigateurs, il faut utiliser `cssFloat` pour accéder à la propriété `float`. (C'est similaire à la façon dont l'attribut «&nbsp;class&nbsp;» est accessible sous le nom «&nbsp;className&nbsp;» et l'attribut «&nbsp;for&nbsp;» d'un élément `<label>` est accessible sous le nom «&nbsp;htmlFor&nbsp;».)
 
 ## Syntaxe
 
@@ -112,9 +112,9 @@ La propriété `float` est définie à l'aide d'un mot-clé, parmi la liste des 
 - `none`
   - : Un mot-clé indiquant que l'élément ne doit pas flotter.
 - `inline-start`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche&nbsp;; pour les scripts RTL, c'est le bord droit.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts `ltr` (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche&nbsp;; pour les scripts `rtl`, c'est le bord droit.
 - `inline-end`
-  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit&nbsp;; pour les scripts RTL, c'est le bord gauche.
+  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts `ltr` (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit&nbsp;; pour les scripts `rtl`, c'est le bord gauche.
 
 ## Définition formelle
 
@@ -180,11 +180,11 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample('','400','190')}}
+{{EmbedLiveSample("Le positionnement des éléments flottants", 400, 190)}}
 
 ## Dégager des éléments du flottement
 
-Parfois, on veut forcer le déplacement d'un élément sous les éléments flottants. On peut, par exemple, vouloir que les paragraphes soient adjacents aux éléments flottants mais que les titres soient sur leur propre ligne. Voir la documentation de [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) pour plus d'exemples.
+Parfois, on veut forcer le déplacement d'un élément sous les éléments flottants. On peut, par exemple, vouloir que les paragraphes soient adjacents aux éléments flottants mais que les titres soient sur leur propre ligne. Voir la documentation de {{CSSxRef("clear")}} pour plus d'exemples.
 
 ## Spécifications
 
@@ -197,4 +197,4 @@ Parfois, on veut forcer le déplacement d'un élément sous les éléments flott
 ## Voir aussi
 
 - [Le contexte de formatage des blocs](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
-- La propriété [`clear`](/fr/docs/Web/CSS/Reference/Properties/clear) qui permet de forcer le déplacement d'un élément sous un élément flottant
+- La propriété {{CSSxRef("clear")}} qui permet de forcer le déplacement d'un élément sous un élément flottant.

@@ -1,25 +1,24 @@
 ---
 title: TypedArray.prototype.includes()
+short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`includes()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の項目内に特定の値が含まれているかどうかを判断し、その結果に応じて `true` か `false` を返します。このメソッドは {{jsxref("Array.prototype.includes()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.includes()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.includes()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 
 console.log(uint8.includes(20));
-// Expected output: true
+// 予想される結果: true
 
 // Check from position 3
 console.log(uint8.includes(20, 3));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
@@ -54,10 +53,9 @@ uint8.includes(2); // true
 uint8.includes(4); // false
 uint8.includes(3, 3); // false
 
-// NaN の扱い (Float32 および Float64 に限り true)
+// NaN の扱い（浮動小数点型の配列の場合のみ関係）
 new Uint8Array([NaN]).includes(NaN); // false (コンストラクターに渡した NaN は 0 に変換されるため)
-new Float32Array([NaN]).includes(NaN); // true;
-new Float64Array([NaN]).includes(NaN); // true;
+new Float32Array([NaN]).includes(NaN); // true
 ```
 
 ## 仕様書

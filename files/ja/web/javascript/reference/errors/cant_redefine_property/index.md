@@ -42,7 +42,7 @@ Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
 Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
-## 関連項目
+## 関連情報
 
 - [\[\[Configurable\]\]](/ja/docs/Web/JavaScript/Guide/Data_structures#プロパティ)
 - {{jsxref("Object.defineProperty()")}}

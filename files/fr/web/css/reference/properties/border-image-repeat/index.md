@@ -1,14 +1,13 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/Reference/Properties/border-image-repeat
-original_slug: Web/CSS/border-image-repeat
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit comment les images pour les côtés et la partie centrale de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) sont mises à l'échelle et disposées en mosaïque. La région centrale peut être affichée en utilisant le mot-clé «&nbsp;fill&nbsp;» dans la propriété {{CSSxRef("border-image-slice")}}.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
-
-{{InteractiveExample("CSS Demo: border-image-repeat")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-image-repeat")}}
 
 ```css interactive-example-choice
 border-image-repeat: stretch;
@@ -32,7 +31,7 @@ border-image-repeat: round stretch;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">Ceci est une boîte entourée d'une bordure.</div>
 </section>
 ```
 
@@ -45,7 +44,7 @@ border-image-repeat: round stretch;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -69,6 +68,7 @@ border-image-repeat: round stretch;
 border-image-repeat: inherit;
 border-image-repeat: initial;
 border-image-repeat: revert;
+border-image-repeat: revert-layer;
 border-image-repeat: unset;
 ```
 
@@ -80,13 +80,13 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
 ### Valeurs
 
 - `stretch`
-  - : Un mot-clé qui indique que la zone de l'image doit être étirée pour remplir l'espace entre les deux bordures.
+  - : Les régions de bord de l'image source sont étirées pour remplir l'espace entre chaque bordure.
 - `repeat`
-  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Les portions répétées peuvent être rognées si nécessaire.
+  - : Les régions de bord de l'image source sont disposées en mosaïque (répétées) pour remplir l'espace entre chaque bordure. Les motifs peuvent être rognés pour s'ajuster correctement.
 - `round`
-  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Si on ne peut pas remplir cet espace avec un nombre entier de motifs, ceux-ci seront étirés pour qu'il y ait une répétition entière et que l'espace soit parfaitement rempli.
+  - : Les régions de bord de l'image source sont disposées en mosaïque (répétées) pour remplir l'espace entre chaque bordure. Les motifs peuvent être étirés pour s'ajuster correctement.
 - `space`
-  - : Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera réparti entre ces motifs.
+  - : Les régions de bord de l'image source sont disposées en mosaïque (répétées) pour remplir l'espace entre chaque bordure. L'espace supplémentaire sera réparti entre les motifs pour s'ajuster correctement.
 
 ## Définition formelle
 
@@ -94,7 +94,7 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -127,8 +127,8 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
 ```
 
 ```js hidden
-var repetition = document.getElementById("repetition");
-repetition.addEventListener("change", function (evt) {
+const repetition = document.getElementById("repetition");
+repetition.addEventListener("change", (evt) => {
   document.getElementById("bordered").style.borderImageRepeat =
     evt.target.value;
 });
@@ -136,7 +136,7 @@ repetition.addEventListener("change", function (evt) {
 
 ### Résultat
 
-{{EmbedLiveSample('', '480', '250')}}
+{{EmbedLiveSample("Répéter l'image de bordure", "auto", 200)}}
 
 ## Spécifications
 
@@ -150,3 +150,4 @@ repetition.addEventListener("change", function (evt) {
 
 - [Les arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: les arrière-plans et les bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Images de bordure dans CSS&nbsp;: un domaine clé pour l'Interop 2023](/fr/blog/border-images-interop-2023/) sur le blog MDN (2023)

@@ -1,13 +1,14 @@
 ---
-title: Intl.Collator.prototype.compare
+title: "Intl.Collator : méthode compare()"
+short-title: compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`compare()`** des instances de {{JSxRef("Intl.Collator")}} compare deux chaînes de caractères selon l'ordre de tri de cet objet de comparaison.
 
-La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
-
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.Collator.prototype.compare()")}}
 
 ```js interactive-example
 const enCollator = new Intl.Collator("en");
@@ -15,60 +16,60 @@ const deCollator = new Intl.Collator("de");
 const svCollator = new Intl.Collator("sv");
 
 console.log(enCollator.compare("z", "a") > 0);
-// Expected output: true
+// Résultat attendu : true
 
 console.log(deCollator.compare("z", "ä") > 0);
-// Expected output: true
+// Résultat attendu : true
 
 console.log(svCollator.compare("z", "ä") > 0);
-// Expected output: false
+// Résultat attendu : false
 ```
 
 ## Syntaxe
 
-```js
-collator.compare(chaine1, chaine2);
+```js-nolint
+compare(string1, string2)
 ```
 
 ### Paramètres
 
-- `chaine1`, `chaine2`
-  - : Les chaînes de caractères à comparer.
+- `string1`, `string2`
+  - : Les chaînes de caractères à comparer entre elles.
 
-## Description
+### Valeur de retour
 
-L'accesseur `compare` renvoie un nombre qui indique le résultat de la comparaison entre `chaine1` et `chaine2` selon l'ordre de tri de l'objet {{jsxref("Collator")}} : la valeur obtenue sera négative si `chaine1` précède `chaine2`, positive si `chaine1` succède à `chaine2`, nulle si les deux chaînes sont considérées égales.
+Un nombre indiquant comment `string1` et `string2` se comparent entre elles selon l'ordre de tri de cet objet de comparaison&nbsp;:
+
+- Une valeur négative si `string1` précède `string2`&nbsp;;
+- Une valeur positive si `string1` suit `string2`&nbsp;;
+- 0 si elles sont considérées comme égales.
 
 ## Exemples
 
-### Utiliser `compare()` pour trier un tableau
+### Utiliser la méthode `compare()` pour trier un tableau
 
-Dans cet exemple, on utilise la fonction de l'accesseur `compare` pour trier des tableaux. On observe que la fonction est liée à l'objet `Collator`, on peut donc directement la passer à la méthode {{jsxref("Array.prototype.sort()")}}.
+Dans cet exemple, on utilise la fonction de l'accesseur `compare` pour trier des tableaux. On observe que la fonction est liée à l'objet `Collator`, on peut donc directement la passer à la méthode {{JSxRef("Array.prototype.sort()")}}.
 
 ```js
-var a = ["Offenbach", "Österreich", "Odenwald"];
-var collator = new Intl.Collator("de-u-co-phonebk");
+const a = ["Offenbach", "Österreich", "Odenwald"];
+const collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(", "));
-// → "Odenwald, Österreich, Offenbach"
+console.log(a.join(", ")); // "Odenwald, Österreich, Offenbach"
 ```
 
-### Utiliser `compare()` pour chercher dans un tableau
+### Utiliser la méthode `compare()` pour chercher dans un tableau
 
-Ici, on utilise la fonction de l'accesseur `compare` pour trouver les chaînes égales à une chaîne donnée parmi un tableau :
+Utiliser la fonction `compare` pour trouver les chaînes de caractères correspondantes dans des tableaux&nbsp;:
 
 ```js
-var a = ["Congrès", "congres", "Assemblée", "poisson"];
-var collator = new Intl.Collator("fr", {
+const a = ["Congrès", "congres", "Assemblée", "poisson"];
+const collator = new Intl.Collator("fr", {
   usage: "search",
   sensitivity: "base",
 });
-var s = "congres";
-var matches = a.filter(function (v) {
-  return collator.compare(v, s) === 0;
-});
-console.log(matches.join(", "));
-// → "Congrès, congres"
+const s = "congres";
+const matches = a.filter((v) => collator.compare(v, s) === 0);
+console.log(matches.join(", ")); // "Congrès, congres"
 ```
 
 ## Spécifications
@@ -81,5 +82,5 @@ console.log(matches.join(", "));
 
 ## Voir aussi
 
-- {{jsxref("Collator", "Intl.Collator")}}
-- {{jsxref("String.prototype.localeCompare()")}}
+- L'objet {{JSxRef("Intl.Collator")}}
+- La méthode {{JSxRef("String.prototype.localeCompare()")}}

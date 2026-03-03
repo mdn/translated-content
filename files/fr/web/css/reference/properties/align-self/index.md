@@ -1,16 +1,15 @@
 ---
 title: align-self
 slug: Web/CSS/Reference/Properties/align-self
-original_slug: Web/CSS/align-self
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`align-self`** permet d'écraser la valeur de {{CSSxRef("align-items")}} d'un élément de grille ou de flex. En grille, elle aligne l'élément à l'intérieur de la {{Glossary("Grid Areas", "zone de grille")}}. En flexbox, elle aligne l'élément sur {{Glossary("cross axis", "l'axe transversal")}}.
 
-La propriété CSS **`align-self`** permet d'aligner les objets flexibles d'une ligne flexible ou d'une grille en surchargeant la valeur donnée par {{cssxref("align-items")}}.
+Cette propriété ne s'applique pas aux boîtes de niveau bloc ni aux cellules de tableau. Si la marge sur l'axe transversal d'un élément flex est `auto`, alors `align-self` est ignorée.
 
-Si l'un des objet a une marge automatique (`auto`) pour l'axe perpendiculaire à l'axe principal, `align-self` sera ignoré. Lorsque le conteneur est une grille, `align-self` permet d'aligner l'élément au sein de [la zone de grille](/fr/docs/Glossary/Grid_Areas). Si le conteneur est une boîte flexible, l'alignement se fait selon [l'axe secondaire](/fr/docs/Glossary/Cross_Axis).
-
-{{InteractiveExample("CSS Demo: align-self")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: align-self")}}
 
 ```css interactive-example-choice
 align-self: stretch;
@@ -31,9 +30,9 @@ align-self: end;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+    <div class="transition-all" id="example-element">Un</div>
+    <div>Deux</div>
+    <div>Trois</div>
   </div>
 </section>
 ```
@@ -49,12 +48,10 @@ align-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
-
-Cette propriété ne s'applique pas aux boîtes qui sont des blocs ou aux cellules d'un tableau.
 
 ## Syntaxe
 
@@ -65,13 +62,14 @@ align-self: normal;
 
 /* Alignement géométrique */
 /* align-self ne gère pas les valeurs left et right */
-align-self: center; /* Les éléments sont alignés sur le centre */
-align-self: start; /* Les éléments sont alignés au début de l'axe */
-align-self: end; /* Les éléments sont alignés à la fin de l'axe */
-align-self: self-start; /* Les éléments sont alignés par rapport à leur début */
-align-self: self-end; /* Les éléments sont alignés par rapport à leur fin */
-align-self: flex-start; /* Les éléments flexibles sont alignés au début */
-align-self: flex-end; /* Les éléments flexibles sont alignés à la fin */
+align-self: center;
+align-self: start;
+align-self: end;
+align-self: self-start;
+align-self: self-end;
+align-self: flex-start;
+align-self: flex-end;
+align-self: anchor-center;
 
 /* Alignement selon la ligne de base */
 align-self: baseline;
@@ -86,19 +84,21 @@ align-self: unsafe center;
 /* Valeurs globales */
 align-self: inherit;
 align-self: initial;
+align-self: revert;
+align-self: revert-layer;
 align-self: unset;
 ```
 
 ### Valeurs
 
 - `auto`
-  - : La valeur est calculée par rapport à celle de {{cssxref("align-items")}}.
+  - : La valeur est calculée par rapport à celle de {{CSSxRef("align-items")}}.
 - `normal`
   - : L'effet de ce mot-clé dépend du mode de disposition utilisé :
     - Pour une disposition absolue, ce mot-clé est synonyme de `start` pour les boîtes remplacées positionnées de façon absolue, il est synonyme de _stretch_ pour les autres boîtes positionnées de façon absolue.
     - Pour une disposition absolue et des positions statiques, ce mot-clé est synonyme de `stretch`.
     - Pour les éléments flexibles, ce mot-clé est synonyme de `stretch`.
-    - Pour les éléments positionnés sur une grille, ce mot-clé est synonyme de `stretch`, sauf pour les boîtes qui ont un ratio d'aspec ou des dimensions intrinsèques, dans ce cas, cette valeur se comporte comme `start`.
+    - Pour les éléments de grille, ce mot-clé conduit à un comportement similaire à celui de `stretch`, sauf pour les boîtes avec un {{Glossary("aspect ratio", "rapport d'aspect")}} ou une taille intrinsèque où il se comporte comme `start`.
     - Cette propriété ne s'applique pas aux boîtes qui sont des blocs ou aux cellules d'un tableau.
 
 - `self-start`
@@ -116,7 +116,9 @@ align-self: unset;
   - : Indique l'alignement par rapport à la ligne de base.
     Si besoin, la valeur `first baseline` est remplacée par `start` et `last baseline` est remplacée par `end`.
 - `stretch`
-  - : Si la somme des dimensions des éléments sur l'axe perpendiculaire à l'axe principal est inférieure à la dimension du conteneur et que l'élément est dimensionné automatiquement, celui-ci est agrandi (tout en respectant les éventuelles contraintes dictées par {{cssxref("max-height")}}/{{cssxref("max-width")}} ou autres) afin que l'ensemble des éléments remplissent le conteneur sur cet axe.
+  - : Si la somme des dimensions des éléments sur l'axe perpendiculaire à l'axe principal est inférieure à la dimension du conteneur et que l'élément est dimensionné automatiquement, celui-ci est agrandi (tout en respectant les éventuelles contraintes dictées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} ou autres) afin que l'ensemble des éléments remplissent le conteneur sur cet axe.
+- `anchor-center`
+  - : Dans le cas des éléments [positionnés par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément ancre associé dans la direction de bloc. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 - `safe`
   - : Si la taille d'un élément dépasse du conteneur avec l'alignement fourni par la valeur, l'élément sera en réalité aligné comme si la valeur `start` avait été utilisée.
 - `unsafe`
@@ -132,52 +134,41 @@ align-self: unset;
 
 ## Exemples
 
-### CSS
-
-```css
-.flex-container {
-  height: 250px;
-  display: flex;
-}
-
-.element-flex {
-  background: palegreen;
-  width: 100px;
-  padding: 5px;
-  margin: 5px;
-  line-height: 50px;
-  font-size: 2em;
-}
-
-.center {
-  -webkit-align-self: center;
-  align-self: center;
-}
-
-.baseline {
-  -webkit-align-self: baseline;
-  align-self: baseline;
-}
-
-.stretch {
-  -webkit-align-self: stretch;
-  align-self: stretch;
-}
-```
-
 ### HTML
 
 ```html
-<div class="flex-container">
-  <p class="element-flex center">Milieu</p>
-  <p class="element-flex baseline">Base</p>
-  <p class="element-flex stretch">Étiré</p>
-</div>
+<section>
+  <div>Élément #1</div>
+  <div>Élément #2</div>
+  <div>Élément #3</div>
+</section>
+```
+
+### CSS
+
+```css
+section {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  background: beige;
+}
+
+div {
+  height: 60px;
+  background: cyan;
+  margin: 5px;
+}
+
+div:nth-child(3) {
+  align-self: flex-end;
+  background: pink;
+}
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","300","300")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -189,9 +180,10 @@ align-self: unset;
 
 ## Voir aussi
 
-- [Utiliser les boîtes flexibles CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)
-- La propriété {{cssxref("align-items")}}
+- [Concepts de base des boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Alignement des boîtes dans une grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [Alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- La propriété {{CSSxRef("align-items")}}
+- La propriété {{CSSxRef("justify-self")}}
+- La propriété {{CSSxRef("place-self")}}
