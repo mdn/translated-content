@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("RTCVideoSourceStats")}} 字典的 **`kind`** 属性是一个值为 `video` 的字符串。
 
-当遍历 {{domxref("RTCStatsReport")}} 时，`kind` 可用于区分音频和视频媒体源。两种媒体源的 {{domxref("RTCVideoSourceStats.type", "type")}} 属性值均为 `media-source`。若 `kind` 为 `audio`，则表示一个 {{domxref("RTCAudioSourceStats")}} 对象。
+当遍历 {{domxref("RTCStatsReport")}} 时，`kind` 可用于区分音频和视频媒体源。两种媒体源的 {{domxref("RTCVideoSourceStats.type", "type")}} 属性值均为 `media-source`，若 `kind` 为 `audio`，则表示一个 {{domxref("RTCAudioSourceStats")}} 对象。
 
 ## 值
 
