@@ -2,7 +2,6 @@
 title: WebDriver のエラー
 short-title: Errors
 slug: Web/WebDriver/Reference/Errors
-page-type: landing-page
 original_slug: Web/WebDriver/Reference/Classic/Errors
 sidebar: webdriver
 l10n:
