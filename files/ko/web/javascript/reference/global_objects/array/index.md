@@ -325,7 +325,7 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.forEach()")}}
   - : 호출 배열의 각 요소로 함수를 호출합니다.
 - {{jsxref("Array.prototype.includes()")}}
-  - : 호출하는 배열에 값이 포함되어 있는지 여부를 판단하여 적절하게 `true`나`false`를 반환합니다.
+  - : 호출하는 배열에 값이 포함되어 있는지 여부를 판단하여 적절하게 `true`나 `false`를 반환합니다.
 - {{jsxref("Array.prototype.indexOf()")}}
   - : 호출 배열에서 지정된 요소를 찾을 수 있는 첫 번째(최소) 인덱스를 반환합니다.
 - {{jsxref("Array.prototype.join()")}}
@@ -384,7 +384,7 @@ f("a", "b"); // 'a+b'
 
 ### 배열 만들기
 
-이 예제는 먼저 [배열 리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#배열_맅터럴_표기법)을 사용하고, 다음은 [`Array()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 생성자를 사용하고, 마지막으로 문자열에서 배열을 생성하는 [`String.prototype.split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)을 사용하여 새 배열을 만드는 세 가지 방법을 보여 줍니다.
+이 예제는 먼저 [배열 리터럴 표기법](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#배열_리터럴_표기법)을 사용하고, 다음은 [`Array()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Array) 생성자를 사용하고, 마지막으로 문자열에서 배열을 생성하는 [`String.prototype.split()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/split)을 사용하여 새 배열을 만드는 세 가지 방법을 보여 줍니다.
 
 ```js
 // 배열 리터럴 표기법을 사용하여 'fruits' 배열을 만듭니다.
@@ -431,7 +431,7 @@ fruits[1]; // Banana
 // 배열의 길이보다 1 작습니다.
 fruits[fruits.length - 1]; // Banana
 
-// 배열의 길이볻 큰 인덱스를 사용하면
+// 배열의 길이보다 큰 인덱스를 사용하면
 // undefined가 반환됩니다.
 fruits[99]; // undefined
 ```
@@ -625,7 +625,7 @@ for (const fruit of fruits) {
 
 ### 배열의 각 요소에 대해 함수 호출
 
-이 예제는 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 메서드를 사용하여 `fruits` 배열의 각 요소에 대해 함수를 호출합니다. 이 함수는 각 항목이 항목의 인덱스 번호를 함께 콘솔에 기록합니다.
+이 예제는 [`forEach()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 메서드를 사용하여 `fruits` 배열의 각 요소에 대해 함수를 호출합니다. 이 함수는 각 항목과 항목의 인덱스 번호를 함께 콘솔에 기록합니다.
 
 ```js
 const fruits = ["Apple", "Mango", "Cherry"];

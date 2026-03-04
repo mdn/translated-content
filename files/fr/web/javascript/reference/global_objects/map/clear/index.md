@@ -1,55 +1,60 @@
 ---
-title: Map.prototype.clear()
+title: "Map : méthode clear()"
+short-title: clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`clear()`** des instances de {{JSxRef("Map")}} supprime tous les éléments de ce tableau associatif.
 
-La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.clear()")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("bar", "baz");
-map1.set(1, "foo");
+map.set("bar", "baz");
+map.set(1, "foo");
 
-console.log(map1.size);
-// Expected output: 2
+console.log(map.size);
+// Sortie attendue : 2
 
-map1.clear();
+map.clear();
 
-console.log(map1.size);
-// Expected output: 0
+console.log(map.size);
+// Sortie attendue : 0
 ```
 
 ## Syntaxe
 
-```js
-maMap.clear();
+```js-nolint
+clear()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-{{jsxref("undefined")}}.
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemple
 
 ### Utiliser la méthode `clear()`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("truc", "bidule");
 maMap.set(1, "toto");
 
-maMap.size; // 2
-maMap.has("truc"); // true
+console.log(maMap.size); // 2
+console.log(maMap.has("truc")); // true
 
 maMap.clear();
 
-maMap.size; // 0
-maMap.has("truc"); // false
+console.log(maMap.size); // 0
+console.log(maMap.has("truc")); // false
 ```
 
 ## Spécifications
@@ -62,4 +67,4 @@ maMap.has("truc"); // false
 
 ## Voir aussi
 
-- {{jsxref("Map")}}
+- L'objet {{JSxRef("Map")}}
