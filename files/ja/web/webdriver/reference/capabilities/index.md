@@ -2,7 +2,6 @@
 title: WebDriver の能力
 short-title: 能力
 slug: Web/WebDriver/Reference/Capabilities
-page-type: landing-page
 original_slug: Web/WebDriver/Reference/Classic/Capabilities
 sidebar: webdriver
 l10n:
