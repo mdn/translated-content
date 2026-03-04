@@ -2,7 +2,7 @@
 title: Arbre d'accessibilité
 slug: Glossary/Accessibility_tree
 l10n:
-  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
 L'**arbre d'accessibilité** contient des informations liées à l'{{Glossary("accessibility", "accessibilité")}} pour la plupart des éléments HTML.
@@ -22,7 +22,7 @@ Un objet d'arbre d'accessibilité comporte quatre propriétés&nbsp;:
 
 De plus, l'arbre d'accessibilité contient souvent des informations concernant ce qui peut être fait avec un élément&nbsp;: un lien peut être _suivi_, on peut _écrire dans_ un champ texte etc.
 
-Toujours à l'état de brouillon au sein du Web Incubator Community Group en avril 2022, le **[modèle d'objet accessible <sup>(angl.)</sup>](https://wicg.github.io/aom/explainer.html)** (<i lang="en">Accessibility Object Model, AOM</i> en anglais) cherche à étendre les APIs pour rendre plus facile l'expression des sémantiques d'accessibilité et potentiellement permettre l'accès en lecture à l'arborescence d'accessibilité calculée.
+Toujours à l'état de brouillon au sein du Web Incubator Community Group en avril 2022, le **[modèle d'objet accessible <sup>(angl.)</sup>](https://wicg.github.io/aom/explainer.html)** (<i lang="en">Accessibility Object Model, AOM</i> en anglais) cherche à étendre les API pour exprimer la sémantique d'accessibilité et potentiellement permettre l'accès en lecture à l'arborescence d'accessibilité calculée.
 
 ## Voir aussi
 
