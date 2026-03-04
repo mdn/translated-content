@@ -2,7 +2,7 @@
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
 {{APIRef("HTML DOM")}}
@@ -29,9 +29,9 @@ _Hérite des propriétés de son parent {{DOMxRef("HTMLElement")}}._
   - : Une chaîne de caractères contenant le nom d'hôte dans l'URL référencée.
 - {{DOMxRef("HTMLAreaElement.href")}}
   - : Une chaîne de caractères qui reflète l'attribut HTML [`href`](/fr/docs/Web/HTML/Reference/Elements/area#href), contenant une URL valide de la ressource liée.
-- {{DOMxRef("HTMLAreaElement.interestForElement")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLAreaElement.interestForElement")}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Obtient ou définit l'élément cible d'un invocateur d'intérêt, dans les cas où l'élément HTML {{HTMLElement("area")}} associé est défini comme un [invocateur d'intérêt](/fr/docs/Web/API/Popover_API/Using_interest_invokers#création_dun_invocateur_dinteret).
-- {{DOMxRef("HTMLAreaElement.noHref")}} {{Deprecated_Inline}}
+- `HTMLAreaElement.noHref` {{Deprecated_Inline}}
   - : Un booléen indiquant si la zone est inactive (`true`) ou active (`false`).
 - {{DOMxRef("HTMLAreaElement.origin")}} {{ReadOnlyInline}}
   - : Retourne une chaîne de caractères contenant l'origine de l'URL, c'est-à-dire son schéma, son domaine et son port.

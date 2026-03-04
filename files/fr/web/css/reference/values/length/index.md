@@ -3,17 +3,17 @@ title: <length>
 slug: Web/CSS/Reference/Values/length
 original_slug: Web/CSS/length
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: 81e6735431b50ded681b760b702e68b80000b58c
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<length>`** correspond à une mesure de distance. Les longueurs peuvent être utilisées dans de nombreuses propriétés CSS, comme {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}} et {{Cssxref("text-shadow")}}.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<length>`** correspond à une mesure de distance. Les longueurs peuvent être utilisées dans de nombreuses propriétés CSS, comme {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, {{CSSxRef("border-width")}}, {{CSSxRef("font-size")}} et {{CSSxRef("text-shadow")}}.
 
 > [!NOTE]
-> Bien que les valeurs {{cssxref("&lt;percentage&gt;")}} puissent être utilisées dans certaines propriétés qui acceptent des valeurs `<length>`, elles ne sont pas elles-mêmes des valeurs `<length>`. Voir {{cssxref("&lt;length-percentage&gt;")}}.
+> Bien que les valeurs {{CSSxRef("&lt;percentage&gt;")}} puissent être utilisées dans certaines propriétés qui acceptent des valeurs `<length>`, elles ne sont pas elles-mêmes des valeurs `<length>`. Voir {{CSSxRef("&lt;length-percentage&gt;")}}.
 
 ## Syntaxe
 
-Le type de données `<length>` consiste en un nombre ({{cssxref("&lt;number&gt;")}}) suivi de l'une des unités listées ci-dessous. Comme pour toutes les dimensions CSS, il n'y a pas d'espace entre le nombre et l'unité littérale. L'unité de longueur est optionnelle si le nombre est `0`.
+Le type de données `<length>` consiste en un nombre ({{CSSxRef("&lt;number&gt;")}}) suivi de l'une des unités listées ci-dessous. Comme pour toutes les dimensions CSS, il n'y a pas d'espace entre le nombre et l'unité littérale. L'unité de longueur est optionnelle si le nombre est `0`.
 
 > [!NOTE]
 > Certaines propriétés autorisent des valeurs `<length>` négatives, d'autres non.
@@ -37,31 +37,31 @@ Les longueurs liées à la police définissent la valeur `<length>` en fonction 
 > Ces unités, en particulier `em` et la racine relative `rem`, sont souvent utilisées pour créer des mises en page adaptatives, qui maintiennent le rythme vertical de la page même lorsque l'utilisateur·ice change la taille de la police.
 
 - `cap`
-  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{Cssxref("font")}}) de l'élément.
+  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{CSSxRef("font")}}) de l'élément.
 - `ch`
-  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{Cssxref("font")}}) de l'élément.
+  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{CSSxRef("font")}}) de l'élément.
     Dans les cas où il est impossible ou peu pratique de déterminer la mesure du glyphe `0`, il faut supposer qu'il mesure `0.5em` de large sur `1em` de haut.
 - `em`
-  - : Représente la taille de police ({{Cssxref("font-size")}}) calculée de l'élément. Si utilisée sur la propriété {{Cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
+  - : Représente la taille de police ({{CSSxRef("font-size")}}) calculée de l'élément. Si utilisée sur la propriété {{CSSxRef("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
 - `ex`
-  - : Représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la police ({{Cssxref("font")}}) de l'élément. Dans les polices comportant la lettre `x`, il s'agit généralement de la hauteur des lettres minuscules de la police&nbsp;; `1ex ≈ 0.5em` dans de nombreuses polices.
+  - : Représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la police ({{CSSxRef("font")}}) de l'élément. Dans les polices comportant la lettre `x`, il s'agit généralement de la hauteur des lettres minuscules de la police&nbsp;; `1ex ≈ 0.5em` dans de nombreuses polices.
 - `ic`
   - : Égal à la {{Glossary("advance measure", "mesure d'avancement")}} utilisée du glyphe "水" (idéogramme CJK de l'eau, U+6C34), trouvée dans la police utilisée pour l'afficher.
 - `lh`
-  - : Égal à la valeur calculée de la propriété {{Cssxref("line-height")}} de l'élément sur lequel elle est utilisée, convertie en longueur absolue. Cette unité permet des calculs de longueur basés sur la taille théorique d'une ligne vide idéale. Cependant, la taille réelle des boîtes de ligne peut différer selon leur contenu.
+  - : Égal à la valeur calculée de la propriété {{CSSxRef("line-height")}} de l'élément sur lequel elle est utilisée, convertie en longueur absolue. Cette unité permet des calculs de longueur basés sur la taille théorique d'une ligne vide idéale. Cependant, la taille réelle des boîtes de ligne peut différer selon leur contenu.
 
 ### Unités de longueur relatives basées sur la police de l'élément racine
 
-Les unités de longueur relatives à la police de l'élément racine définissent la valeur `<length>` en fonction de la taille d'un caractère particulier ou d'une caractéristique de la police de l'élément {{Cssxref(":root")}}.
+Les unités de longueur relatives à la police de l'élément racine définissent la valeur `<length>` en fonction de la taille d'un caractère particulier ou d'une caractéristique de la police de l'élément {{CSSxRef(":root")}}.
 
 - `rcap`
-  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{Cssxref("font")}}) de l'élément racine.
+  - : Représente la hauteur nominale des lettres capitales (<i lang="en">cap height</i>) de la police ({{CSSxRef("font")}}) de l'élément racine.
 - `rch`
-  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{Cssxref("font")}}) de l'élément racine.
+  - : Représente la largeur ou, plus précisément, la {{Glossary("advance measure", "mesure d'avancement")}} du glyphe `0` (zéro, le caractère Unicode U+0030) dans la police ({{CSSxRef("font")}}) de l'élément racine.
 - `rem`
-  - : Représente la taille de police ({{Cssxref("font-size")}}) de l'élément racine (généralement l'élément {{HTMLElement("html")}}). Lorsqu'elle est utilisée sur la propriété {{Cssxref("font-size")}} de l'élément racine, elle représente sa valeur initiale. La valeur par défaut courante dans les navigateurs est `16px`, mais les préférences utilisateur·ice·s peuvent la modifier.
+  - : Représente la taille de police ({{CSSxRef("font-size")}}) de l'élément racine (généralement l'élément {{HTMLElement("html")}}). Lorsqu'elle est utilisée sur la propriété {{CSSxRef("font-size")}} de l'élément racine, elle représente sa valeur initiale. La valeur par défaut courante dans les navigateurs est `16px`, mais les préférences utilisateur·ice·s peuvent la modifier.
 - `rex`
-  - : Représente la hauteur d'x de la police ({{Cssxref("font")}}) de l'élément racine.
+  - : Représente la hauteur d'x de la police ({{CSSxRef("font")}}) de l'élément racine.
 - `ric`
   - : Représente la valeur de l'unité [`ic`](#ic) sur la police de l'élément racine.
 - `rlh`
@@ -102,7 +102,7 @@ Les **unités de longueur en pourcentage de la zone d'affichage** sont basées s
 Les longueurs en pourcentage de la zone d'affichage définissent des valeurs `<length>` en pourcentage par rapport à la taille du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block), qui dépend soit de la taille de la {{Glossary("viewport", "zone d'affichage")}}, soit de la zone de page, c'est-à-dire la partie visible du document. Lorsque la hauteur ou la largeur du bloc englobant initial change, les éléments dimensionnés en fonction de celui-ci sont redimensionnés en conséquence. Il existe une variante d'unité de longueur en pourcentage de la zone d'affichage pour chacune des tailles décrites ci-dessus.
 
 > [!NOTE]
-> Les longueurs de la zone d'affichage sont invalides dans les blocs de déclaration {{cssxref("@page")}}.
+> Les longueurs de la zone d'affichage sont invalides dans les blocs de déclaration {{CSSxRef("@page")}}.
 
 - `vh`
   - : Représente un pourcentage de la hauteur du [bloc englobant initial](/fr/docs/Web/CSS/Guides/Display/Containing_block) de la zone d'affichage. `1vh` correspond à 1% de la hauteur de la zone d'affichage. Par exemple, si la hauteur de la zone d'affichage est de `300px`, une valeur de `70vh` pour une propriété donnera `210px`.
@@ -142,7 +142,7 @@ Les composants qui utilisent des unités de longueur relatives à leur conteneur
 
 Si aucun conteneur éligible n'est disponible pour la requête, l'unité de longueur relative au conteneur prend par défaut la [petite unité de zone d'affichage](#unités_pour_petite_zone_daffichage) pour cet axe (`sv*`).
 
-Pour plus d'informations, voir [Requêtes de conteneur](/fr/docs/Web/CSS/CSS_containment/Container_queries).
+Pour plus d'informations, voir [Requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).
 
 - `cqw`
   - : Représente un pourcentage de la largeur du conteneur de requête. `1cqw` correspond à 1% de la largeur du conteneur de requête. Par exemple, si la largeur du conteneur de requête est de `800px`, une valeur de `50cqw` pour une propriété donnera `400px`.
@@ -174,7 +174,7 @@ Pour les appareils à haute densité de pixels, les pouces (`in`), centimètres 
 > De nombreux·ses utilisateur·ice·s augmentent la taille de police par défaut de leur {{Glossary("user agent", "agent utilisateur")}} pour améliorer la lisibilité du texte. Les longueurs absolues peuvent poser des problèmes d'accessibilité car elles sont fixes et ne s'adaptent pas aux préférences utilisateur·ice·s. Pour cette raison, il est préférable d'utiliser des longueurs relatives (comme `em` ou `rem`) lors de la définition de `font-size`.
 
 - `px`
-  - : Un pixel. Pour les écrans, cela représente traditionnellement un {{glossary("device pixel", "pixel matériel")}} (point). Cependant, pour les _imprimantes_ et les _écrans haute résolution_, un pixel CSS correspond à plusieurs pixels matériels. `1px` = `1in / 96`.
+  - : Un pixel. Pour les écrans, cela représente traditionnellement un {{Glossary("device pixel", "pixel matériel")}} (point). Cependant, pour les _imprimantes_ et les _écrans haute résolution_, un pixel CSS correspond à plusieurs pixels matériels. `1px` = `1in / 96`.
 - `cm`
   - : Un centimètre. `1cm` = `96px / 2,54`.
 - `mm`
@@ -190,7 +190,7 @@ Pour les appareils à haute densité de pixels, les pouces (`in`), centimètres 
 
 ## Interpolation
 
-Lorsqu'elles sont animées, les valeurs du type de données `<length>` sont interpolées comme des nombres réels à virgule flottante. L'{{Glossary("interpolation", "interpolation")}} s'effectue sur la valeur calculée. La vitesse de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation","",1)}} associée à l'animation.
+Lorsqu'elles sont animées, les valeurs du type de données `<length>` sont interpolées comme des nombres réels à virgule flottante. L'{{Glossary("interpolation", "interpolation")}} s'effectue sur la valeur calculée. La vitesse de l'interpolation est déterminée par la {{CSSxRef("easing-function","fonction de temporisation","",1)}} associée à l'animation.
 
 ## Exemples
 

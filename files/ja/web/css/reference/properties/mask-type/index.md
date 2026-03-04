@@ -1,9 +1,8 @@
 ---
 title: mask-type
 slug: Web/CSS/Reference/Properties/mask-type
-original_slug: Web/CSS/mask-type
 l10n:
-  sourceCommit: ce1dfc470d18fa6ba694a5b8bd5c657914e57cc3
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`mask-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{svgElement("mask")}} 要素に適用されます。これは、マスクの輝度（明度）またはアルファ (透過率) のどちらのコンテンツを使用するかを定義します。このプロパティは、{{cssxref("mask-mode")}} プロパティによって上書きされる場合があります。 `mask-type` プロパティは、画像マスクやグラデーションマスクには効果はありません。
@@ -136,11 +135,11 @@ mask#luminanceMask {
 }
 
 img.alphaMaskType {
-  mask-image: url(#alphaMask);
+  mask-image: url("#alphaMask");
 }
 
 img.luminanceMaskType {
-  mask-image: url(#luminanceMask);
+  mask-image: url("#luminanceMask");
 }
 ```
 

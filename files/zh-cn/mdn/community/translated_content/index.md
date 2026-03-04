@@ -31,7 +31,7 @@ l10n:
 ### 法语（`fr`）
 
 - 讨论组：[Matrix (#l10n-fr channel)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- 当前维护者：[cw118](https://github.com/cw118)、[SphinxKnight](https://github.com/SphinxKnight)、[tristantheb](https://github.com/tristantheb)
+- 当前维护者：[cw118](https://github.com/cw118)、[tristantheb](https://github.com/tristantheb)
 
 ### 日语（`ja`）
 

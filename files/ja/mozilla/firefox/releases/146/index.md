@@ -1,9 +1,9 @@
 ---
-title: Firefox 146 release notes for developers (Stable)
-short-title: Firefox 146 (Stable)
+title: Firefox 146 release notes for developers
+short-title: Firefox 146
 slug: Mozilla/Firefox/Releases/146
 l10n:
-  sourceCommit: 30487c754854c3f21157827914eefb94d0e5bd4d
+  sourceCommit: fa422ef89f5da5c7bc10a03f8e84b01b8132061c
 ---
 
 このページでは、開発者に影響する Firefox 146 の変更点をまとめています。
@@ -67,6 +67,7 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 ## アドオン開発者向けの変更点一覧
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} および {{WebExtAPIRef("browsingData.remove")}} ({{WebExtAPIRef("browsingData.DataTypeSet")}} に `localStorage` が設定された場合) が、[`sessionStorage`](/ja/docs/Web/API/Window/sessionStorage) からオブジェクトを削除するようになりました ([Firefox bug 1886894](https://bugzil.la/1886894))。
+- {{WebExtAPIRef("proxy.onRequest")}} API で、{{WebExtAPIRef("proxy.ProxyInfo")}} 戻り値型において MASQUE プロキシー (QUIC のプロキシートンネル) をサポートしました ([Firefox bug 1988988](https://bugzil.la/1988988) および [Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## 実験的なウェブ機能
 
@@ -80,7 +81,7 @@ Firefox 146 は、米国時間 [2025 年 12 月 9 日](https://whattrainisitnow.
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
 
-  Nightly ビルドで Navigation API をサポートしました。これは、ブラウザーのナビゲーションアクションを開始・傍受・管理する機能を提供します。また、アプリケーションの履歴の項目を調査することもできます。これは {{domxref("History API", "", "", "nocode")}} や {{domxref("window.location")}} のような従来のウェブプラットフォームの機能の後継であり、従来の機能の短所を解決するとともに、特に {{glossary("SPA", "SPA (単一ページアプリケーション)")}} のニーズを対象にしています ([Firefox bug 1979288](https://bugzil.la/1979288))。
+  Nightly ビルドで [Navigation API](/ja/docs/Web/API/Navigation_API) をサポートしました。これは、ブラウザーのナビゲーションアクションを開始・傍受・管理する機能を提供します。また、アプリケーションの履歴の項目を調査することもできます。これは {{domxref("History API", "", "", "nocode")}} や {{domxref("window.location")}} のような従来のウェブプラットフォームの機能の後継であり、従来の機能の短所を解決するとともに、特に {{glossary("SPA", "SPA (単一ページアプリケーション)")}} のニーズを対象にしています ([Firefox bug 1979288](https://bugzil.la/1979288))。
 
 - **CSS `shape()` 曲線コマンドの相対的な制御点**: `layout.css.basic-shape-shape.enabled`
 

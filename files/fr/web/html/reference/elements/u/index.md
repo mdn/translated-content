@@ -1,22 +1,21 @@
 ---
 title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Reference/Elements/u
-original_slug: Web/HTML/Element/u
+l10n:
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{HTMLSidebar}}
-
-L'élément HTML **`<u>`** permet d'afficher un fragment de texte qui est annoté avec des éléments non textuels. Par défaut, le contenu de l'élément est souligné. Cela pourra par exemple être le cas pour marquer un texte comme étant un nom propre chinois, ou pour marquer un texte qui a été mal orthographié.
+L'élément [HTML](/fr/docs/Web/HTML) **`<u>`** représente une portion de texte en ligne devant être rendue de manière à indiquer qu'elle comporte une annotation non textuelle. Par défaut, il est affiché avec un unique soulignement continu, mais cela peut être modifié via CSS.
 
 > [!WARNING]
-> Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{cssxref("text-decoration")}} avec la valeur `"underline"`.
+> Cet élément était auparavant appelé _underline_ pour les anciennes versions des spécifications HTML. Si on souhaite simplement souligner du texte, il ne faudra pas utiliser cet élément mais la propriété CSS {{CSSxRef("text-decoration")}} avec la valeur `"underline"`.
 
-{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;u&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  You could use this element to highlight <u>speling</u> mistakes, so the writer
-  can <u>corect</u> them.
+  Vous pouvez utiliser cet élément pour signaler des fautes d'orthographe, par
+  exemple <u>épèlé</u>, afin que le rédacteur puisse les <u>corig</u>.
 </p>
 ```
 
@@ -26,32 +25,32 @@ p {
 }
 
 u {
-  text-decoration: #f00 wavy underline;
+  text-decoration: red wavy underline;
 }
 ```
 
+Voir la section [Notes d'utilisation](#notes_dutilisation) pour plus de détails sur le moment où il est approprié d'utiliser `<u>` et quand ce n'est pas le cas.
+
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-Étant seulement un élément de mise en forme, l'élément {{HTMLElement("u")}} a été déprécié en HTML 4 et XHTML 1. Il a été ré-introduit en HTML5 avec une autre signification : le contenu de l'élément est annoté avec une annotation non-textuelle.
-
-La spécification rappelle que dans la majorité des cas, d'autres éléments que `<u>` doivent être utilisés.
+Comme d'autres éléments purement liés à la mise en forme, l'élément HTML d'origine `<u>` (soulignement) a été déprécié dans HTML 4&nbsp;; cependant, `<u>` a été réintroduit dans HTML5 avec une nouvelle signification sémantique&nbsp;: marquer un texte comme ayant une annotation non textuelle appliquée.
 
 > [!NOTE]
-> Attention à la mise en forme par défaut d'un élément `<u>` qui le souligne. Cela peut être source de confusion entre un tel texte et un lien hypertexte (également souligné par défaut).
+> Évitez d'utiliser l'élément `<u>` avec sa mise en forme par défaut (texte souligné) d'une manière qui pourrait être confondue avec un lien hypertexte, également souligné par défaut.
 
 ### Cas d'utilisation
 
-L'élément `<u>` peut être utilisé afin d'indiquer des erreurs d'orthographe ou de grammaire, afin d'indiquer des noms propres au sein d'un texte écrit en chinois ou afin d'annoter un texte de façon visuelle.
+Les cas d'utilisation valides de l'élément `<u>` incluent l'annotation des erreurs d'orthographe, l'application d'une [marque de nom propre <sup>(angl.)</sup>](https://en.wikipedia.org/wiki/Proper_name_mark) pour indiquer les noms propres dans un texte chinois, et d'autres formes d'annotation.
 
-L'élément `<u>` ne doit pas être utilisé afin de simplement souligner un texte ou afin d'indiquer le titre d'une œuvre.
+Vous ne devez _pas_ utiliser `<u>` pour souligner du texte à des fins de présentation, ni pour indiquer des titres de livres.
 
 ### Autres éléments pouvant être utilisés
 
-Dans la plupart des cas, il faudra utiliser un autre élément que `<u>` :
+Dans la plupart des cas, il faudra utiliser un autre élément que `<u>`&nbsp;:
 
 - {{HTMLElement("em")}} afin d'indiquer une emphase
 - {{HTMLElement("b")}} afin d'indiquer une attention particulière
@@ -60,13 +59,13 @@ Dans la plupart des cas, il faudra utiliser un autre élément que `<u>` :
 - {{HTMLElement("cite")}} afin d'indiquer le titre d'une œuvre ou d'une publication
 - {{HTMLElement("i")}} afin d'indiquer un terme technique, des noms de navires, des pensées ou des translitérations au sein d'un texte occidental.
 
-Afin de fournir une annotation textuelle, on pourra utiliser l'élément {{HTMLElement("ruby")}}.
+Pour fournir des annotations textuelles (par opposition aux annotations non textuelles créées avec `<u>`), utilisez l'élément {{HTMLElement("ruby")}}.
 
-Afin de modifier la mise en forme, sans apporter de modification sémantique, on utilisera la propriété {{cssxref("text-decoration")}} avec la valeur `"underline"`.
+Pour appliquer une apparence soulignée sans signification sémantique, utilisez la valeur `underline` de la propriété CSS {{CSSxRef("text-decoration")}}.
 
 ## Exemples
 
-### Indiquer une erreur
+### Indiquer une erreur d'orthographe
 
 Dans cet exemple, on utilise `<u>` et des règles CSS pour afficher un paragraphe qui contient une coquille. L'erreur est indiquée avec une ligne ondulée rouge sous le texte.
 
@@ -89,7 +88,7 @@ u.spelling {
 
 #### Résultat
 
-{{EmbedLiveSample("Indiquer_une_erreur", 650, 80)}}
+{{EmbedLiveSample("Indiquer une erreur d'orthographe", 650, 80)}}
 
 ### Éviter `<u>`
 
@@ -97,7 +96,7 @@ La plupart du temps, ce n'est pas l'élément `<u>` qu'il faut utiliser. Voici q
 
 #### Souligner pour la simple mise en forme
 
-Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS {{cssxref("text-decoration")}} et la valeur `"underline"` :
+Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS {{CSSxRef("text-decoration")}} et la valeur `"underline"`&nbsp;:
 
 ##### HTML
 
@@ -117,7 +116,7 @@ Soupe de potiron avec un soupçon de noix de muscade
 
 ##### Résultat
 
-{{EmbedLiveSample("Souligner_pour_la_simple_mise_en_forme", 650, 80)}}
+{{EmbedLiveSample("Souligner pour la simple mise en forme", 650, 80)}}
 
 #### Indiquer le titre pour un livre
 
@@ -134,7 +133,7 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
 
 ##### Résultat
 
-{{EmbedLiveSample("Indiquer_le_titre_pour_un_livre", 650, 80)}}
+{{EmbedLiveSample("Indiquer le titre pour un livre", 650, 80)}}
 
 ## Résumé technique
 
@@ -142,18 +141,18 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_de_flux"
           >Contenu de flux</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -161,7 +160,7 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -174,9 +173,19 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du
-        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
+        <a href="/fr/docs/Web/HTML/Guides/Content_categories#contenu_phrasé"
           >contenu phrasé</a
         >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td>
+        <code
+          ><a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
+        >
       </td>
     </tr>
     <tr>
@@ -185,7 +194,7 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <td>{{DOMxRef("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -201,4 +210,4 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
 ## Voir aussi
 
 - Les éléments {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}} et {{HTMLElement("cite")}} qui, selon les cas, peuvent être utilisés à la place de `<u>`.
-- La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir un effet stylistique semblable à la mise en forme par défaut d'un élément `<u>`.
+- La propriété CSS {{CSSxRef("text-decoration")}} qui permet d'obtenir un effet stylistique semblable à la mise en forme par défaut d'un élément `<u>`.

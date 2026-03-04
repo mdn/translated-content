@@ -3,10 +3,10 @@ title: "HTMLAnchorElement : propriété interestForElement"
 short-title: interestForElement
 slug: Web/API/HTMLAnchorElement/interestForElement
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 La propriété **`interestForElement`** de l'interface {{DOMxRef("HTMLAnchorElement")}} obtient ou définit l'élément cible d'un invocateur d'intérêt (<i lang="en">interest invoker</i> en anglais), lorsque l'élément HTML {{HTMLElement("a")}} associé est défini comme invocateur d'intérêt.
 

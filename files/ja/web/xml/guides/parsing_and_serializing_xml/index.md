@@ -95,7 +95,7 @@ const docInnerHtml = document.documentElement.innerHTML;
 const docOuterHtml = document.documentElement.outerHTML;
 ```
 
-## 関連項目
+## 関連情報
 
 - [XPath](/ja/docs/Web/XML/XPath)
 - {{domxref("Window/fetch", "fetch()")}}

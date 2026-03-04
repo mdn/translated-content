@@ -3,7 +3,7 @@ title: 網路錯誤記錄（NEL）
 short-title: 網路錯誤記錄
 slug: Web/HTTP/Guides/Network_Error_Logging
 l10n:
-  sourceCommit: c65a961090cf305a88fd496d1383a6931280cb37
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 {{SeeCompatTable}}

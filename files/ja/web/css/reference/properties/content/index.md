@@ -1,9 +1,8 @@
 ---
 title: content
 slug: Web/CSS/Reference/Properties/content
-original_slug: Web/CSS/content
 l10n:
-  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
+  sourceCommit: f7f6f16b39d5a2a1436ed1ffb2d3cd7b24ba6521
 ---
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
@@ -50,7 +49,8 @@ content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
 /* 生成コンテンツの代替テキスト、レベル 3 の仕様書で追加 */
-content: url("../img/test.png") / "This is the alt text";
+content: url("../img/test.png") / "これは代替テキストです";
+content: counter(chapter) / "第 " counter(chapter) "章";
 
 /* <string> 値 */
 content: "unparsed text";
@@ -71,7 +71,7 @@ content: no-open-quote;
 content: no-close-quote;
 
 /* normal と none を除き、複数の値が同時に使用可 */
-content: "prefix" url(http://www.example.com/test.png);
+content: "prefix" url("http://www.example.com/test.png");
 content: "prefix" url("/img/test.png") "suffix" / "Alt text";
 content: open-quote counter(chapter_counter);
 
@@ -87,10 +87,10 @@ content: unset;
 
 値は次のいずれかです。
 
-- 2 つのキーワード値のうちの 1 つ - `none` または `normal`
+- 2 つのキーワード値のどちらか。`none` または `normal` です。デフォルトのプロパティ値は `normal` です。
 - DOM ノードを置き換える場合は `<content-replacement>`。 `<content-replacement>` は常に `<image>` です。
 - 擬似要素とマージンボックスを置き換える場合は `<content-list>`。 `<content-list>` は、指定された順で現れる 1 つ以上の無名ボックスのリストです。 `<content-list>` のアイテムは [`<string>`](#string)、[`<image>`](#image)、[`<counter>`](#counter)、[`<quote>`](#quote)、[`<target>`](#target)、[`<leader()>`](#leader) のいずれかです。
-- オプションの代替テキスト値として、スラッシュ (`/`) で始まる `<string>` または `<counter>` を使用できます。
+- オプションの代替テキスト値には、スラッシュ (`/`) の後に `<string>` または `<counter>`、[`attr()`](#attrx) 関数値が使用できます。
 
 上記で挙げたキーワードとデータ型については、下記でさらに詳しく説明します。
 
@@ -104,15 +104,15 @@ content: unset;
 - {{cssxref("&lt;string&gt;")}}
   - : 一致する単一引用符または二重引用符で囲まれた文字の並び。複数の文字列値は連結されます（CSS には連結演算子はありません）。
 
-- {{cssxref("&lt;image&gt;")}}
-  - : {{cssxref("&lt;image&gt;")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("&lt;gradient&gt;")}} のデータ型、または {{cssxref("element", "element()")}} 関数で定義されるウェブページ自身の一部です。
+- {{cssxref("image")}}
+  - : {{cssxref("image")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("gradient")}} のデータ型、または {{cssxref("element()")}} 関数で定義されるウェブページ自身の一部です。
 
 - `<counter>`
-  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができます。
-    - {{cssxref("counter", "counter()")}}
-      - : {{cssxref("counter", "counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
-    - {{cssxref("counters", "counters()")}}
-      - : {{cssxref("counters", "counters()")}} 関数も、 'counters(_名前_, _文字列_)' または 'counters(_名前_, _文字列_, _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
+  - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/Guides/Counter_styles/Using_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
+    - {{cssxref("counter()")}}
+      - : {{cssxref("counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
+    - {{cssxref("counters()")}}
+      - : {{cssxref("counters()")}} 関数も、 'counters(名前, 文字列)' または 'counters(名前, 文字列, スタイル)' の 2 つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
 
 - `<quote>`
   - : `<quote>` データ型には、言語または位置に依存したキーワードです。
@@ -130,8 +130,8 @@ content: unset;
 - `attr(x)`
   - : CSS 関数 `attr(x)` は、選択された要素、または擬似要素の元となる要素の属性値を取得します。要素の属性 `x` の値は、属性名を表す解釈前の文字列です。属性 `x` が存在しない場合は、空文字列が返値として返されます。 属性名引数の大文字小文字の区別は、文書内の言語に依存します。
 
-- 代替テキスト: `/ <string> | <counter>`
-  - : 画像や `<content-list>` アイテムには、スラッシュとテキスト文字列またはカウンターを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。 {{cssxref("string", "/ &lt;string>")}} または {{cssxref("counter", "/ &lt;counter>")}} データ型で、この要素の「代替テキスト」を表します。
+- 代替テキスト: `/ <string> | <counter> | attr()`
+  - : 画像や `<content-list>` アイテムには、スラッシュの後に文字列、カウンター、`attr()` 関数の組み合わせを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。
 
 ## 公式定義
 
@@ -143,7 +143,7 @@ content: unset;
 
 ## アクセシビリティ
 
-CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
+CSS の生成コンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
 
 挿入されたコンテンツが装飾的なものでない場合は、支援技術に情報が指定され、 CSS が無効の場合にも利用できることを確認してください。
 
@@ -213,14 +213,14 @@ CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Obje
 
 ```css
 q {
-  color: #00f;
+  color: blue;
 }
 
 q::before,
 q::after {
   font-size: larger;
-  color: #f00;
-  background: #ccc;
+  color: red;
+  background: #cccccc;
 }
 
 q::before {
@@ -279,7 +279,7 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-各リストアイテムのマーカーで生成されたコンテンツには、接頭辞として "item" というテキストが追加され、接頭辞とカウンターを区切る空白が含まれ、次の ": "、コロン、さらに空白が続きます。 {{cssxref("counters", "counters()")}} 関数は、数値アイテムカウンターを定義し、その数値は、ほとんどのブラウザーではピリオド (`.`) で区切られます。
+各リストアイテムのマーカーで生成されたコンテンツには、接頭辞として "item" というテキストが追加され、接頭辞とカウンターを区切る空白が含まれ、次の ": "、コロン、さらに空白が続きます。 {{cssxref("counters()")}} 関数は、数値アイテムカウンターを定義し、その数値は、ほとんどのブラウザーではピリオド (`.`) で区切られます。
 
 ### 属性値の文字列
 
@@ -341,6 +341,56 @@ a::before {
 
 スクリーンリーダーを使用している場合は、画像に到達したときに "MOZILLA" という単語が読み上げられるはずです。開発者ツールの選択ツールで `::before` 擬似要素を選択し、アクセシビリティパネルで{{glossary("accessible name", "アクセシブル名")}}を表示することができます。
 
+### 代替テキストにカウンターを含める
+
+この例では、書籍の各章へのリンク一覧を機能としており、生成コンテンツを使用してそれぞれのリンクの前に書籍アイコンと章番号を表示する方法を示しています。アイコンの代わりに「章」という文字列を含む代替テキストも併せて表示されます。これにより、それぞれのリンクの{{glossary("accessible name", "アクセシブル名")}}テキストの前に章番号と「章」が表示され、リンクがフォーカスされた際にスクリーンリーダーのユーザーに読み上げられます。
+
+#### HTML
+
+見出しを含み、章タイトルリンクの順序付きリストを {{htmlelement("ol")}}、{{htmlelement("li")}}、{{htmlelement("a")}} 要素を使用して作成します。
+
+```html live-sample___alt-counter
+<h2>目次</h2>
+<ol>
+  <li><a href="#">見知らぬ者の呼び声</a></li>
+  <li><a href="#">二羽のフクロウ</a></li>
+  <li><a href="#">夕食は味気なかった</a></li>
+  <li><a href="#">三羽のフクロウ</a></li>
+  <li><a href="#">誰もドアを開けなかった</a></li>
+  <li><a href="#">見知らぬ人が立ち去る</a></li>
+  <li><a href="#">就寝時間</a></li>
+</ol>
+```
+
+#### CSS
+
+CSS では {{cssxref("counter-reset")}} を `chapter` カウンターに対して `<ol>` 要素に加えています。同時に、それぞれの `<li>` 要素で `chapter` カウンターを増加させるために {{cssxref("counter-increment")}} を使用し、リストマーカーを除去するために {{cssxref("list-style-type")}} の値を `none` に設定します。
+
+```css live-sample___alt-counter
+ol {
+  counter-reset: chapter;
+}
+
+li {
+  counter-increment: chapter;
+  list-style-type: none;
+}
+```
+
+次に、`<a>` 要素の {{cssxref("::before")}} 擬似要素に対して、生成される `content` を、章を表す本の絵文字、現在の `chapter` カウンター値、そして生成コンテンツをリンクテキストと区切るための空白文字設定します。最後に、生成コンテンツの代替テキストを、現在の `chapter` カウンター値の後に「章」を付加した内容に設定します。
+
+```css live-sample___alt-counter
+a::before {
+  content: "📖 " counter(chapter) " " / counter(chapter) " 章";
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('alt-counter', '100%', 270)}}
+
+スクリーンリーダーがリスト内のリンクに移動すると、対応ブラウザーは現在のカウンター番号と「章」、続いてリンクテキストを読み上げます。例えば「1章 見知らぬ者の呼び声」や「2章 二羽のフクロウ」といった具合です。
+
 ### URL による要素の置換
 
 この例では、通常の要素が置き換えられます。要素のコンテンツは、 {{cssxref("url_value", "&lt;url&gt;")}} 型を使用して SVG に置き換えられます。
@@ -387,7 +437,7 @@ div::after {
 ```css
 div {
   border: 1px solid;
-  background-color: #ccc;
+  background-color: #cccccc;
   min-height: 100px;
   min-width: 100px;
 }
@@ -460,5 +510,4 @@ div {
 - {{glossary("Replaced elements", "置換要素")}}
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール
-
 - ブラウザーのアクセシビリティパネル: [Firefox アクセシビリティインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/)、[Chrome のアクセシビリティパネル](https://developer.chrome.com/docs/devtools/accessibility/reference#pane)、[Safari のアクセシビリティツリー](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

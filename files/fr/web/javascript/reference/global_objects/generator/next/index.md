@@ -1,38 +1,48 @@
 ---
-title: Generator.prototype.next()
+title: "Generator : méthode next()"
+short-title: next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et `value`. Cette méthode peut également recevoir un paramètre pour envoyer une valeur au générateur.
+La méthode **`next()`** des instances de {{JSxRef("Generator")}} retourne un objet avec deux propriétés `done` et `value`. Vous pouvez également fournir un paramètre à la méthode `next` pour envoyer une valeur au générateur.
 
 ## Syntaxe
 
-```js
-gen.next(valeur);
+```js-nolint
+next()
+next(value)
 ```
 
 ### Paramètres
 
-- `valeur`
-  - : La valeur à envoyer au générateur. La valeur sera affectée comme résultat d'une expression `yield`. Autrement dit, lorsque le générateur contient une expression de la forme `variable = yield expression`, c'est l'argument `valeur` qui sera affecté à `variable`_._
+- `value` {{Optional_Inline}}
+  - : La valeur à envoyer au générateur.
+
+    La valeur sera affectée comme résultat d'une expression `yield`. Par exemple, dans `variable = yield expression`, la valeur passée à la fonction `.next()` sera affectée à `variable`.
 
 ### Valeur de retour
 
-Un {{jsxref("Object")}} possédant deux propriétés :
+Un {{JSxRef("Object")}} possédant deux propriétés&nbsp;:
 
-- `done` (un booléen)
-  - vaut `true` si l'itérateur a atteint la fin de la série sur laquelle il itère. Dans ce cas, la propriété `value` définit la valeur de retour pour l'itérateur.
-  - vaut `false` si l'itérateur a pu fournir la prochaine valeur de la série. C'est la valeur par défaut si la propriété `done` n'est pas définie.
+- `done`
+  - : Une valeur booléenne&nbsp;:
+    - `true` si le générateur a dépassé la fin de son flux de contrôle. Dans ce cas, `value` définit la valeur de retour du générateur (qui peut être indéfinie).
+    - `false` si le générateur peut produire d'autres valeurs.
+- `value`
+  - : Toute valeur JavaScript produite ou retournée par le générateur.
 
-- `value` - n'importe quelle valeur JavaScript renvoyée par l'itérateur. Cette propriété peut être absente lorsque `done` vaut `true`.
+### Exceptions
+
+- {{JSxRef("TypeError")}}
+  - : Levée si le générateur est déjà en cours d'exécution.
 
 ## Exemples
 
-### Utiliser `next()`
+### Utiliser la méthode `next()`
 
-L'exemple suivant illustre comment utiliser un générateur simple et les objets renvoyés par la méthode `next` :
+L'exemple suivant illustre comment utiliser un générateur simple et les objets renvoyés par la méthode `next`&nbsp;:
 
 ```js
 function* gen() {
@@ -48,24 +58,46 @@ g.next(); // "Object { value: 3, done: false }"
 g.next(); // "Object { value: undefined, done: true }"
 ```
 
+### Utiliser la méthode `next()` avec une liste
+
+Dans cet exemple, `obtenirPage` prend une liste et la «&nbsp;pagine&nbsp;» en segments de taille `taillePage`. Chaque appel à `next` produira un de ces segments.
+
+```js
+function* obtenirPage(list, taillePage = 1) {
+  for (let index = 0; index < list.length; index += taillePage) {
+    yield list.slice(index, index + taillePage);
+  }
+}
+
+const list = [1, 2, 3, 4, 5, 6, 7, 8];
+const page = obtenirPage(list, 3); // Generator { }
+
+page.next(); // { value: [1, 2, 3], done: false }
+page.next(); // { value: [4, 5, 6], done: false }
+page.next(); // { value: [7, 8], done: false }
+page.next(); // { value: undefined, done: true }
+```
+
 ### Envoyer des valeurs à un générateur
 
-Ici, `next` est appelé avec une valeur. On notera ici que le premier appel n'affiche rien car le générateur n'a encore rien généré.
+Dans cet exemple, `next` est appelé avec une valeur.
+
+> [!NOTE]
+> Le premier appel n'affiche rien, car le générateur ne produisait rien initialement.
 
 ```js
 function* gen() {
   while (true) {
-    var value = yield null;
+    const value = yield;
     console.log(value);
   }
 }
 
-var g = gen();
-g.next(1);
-// "{ value: null, done: false }"
-g.next(2);
-// 2
-// "{ value: null, done: false }"
+const g = gen();
+g.next(1); // Retourne { value: undefined, done: false }
+// Aucun journal à cette étape : la première valeur envoyée via `next` est perdue
+g.next(2); // Retourne { value: undefined, done: false }
+// Journalise 2
 ```
 
 ## Spécifications
@@ -78,5 +110,5 @@ g.next(2);
 
 ## Voir aussi
 
-- {{jsxref("Instructions/function*","function*")}}
-- [Les itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- La délcaration {{JSxRef("Statements/function*", "function*")}}
+- Le guide [des itérateurs et générateurs](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators)

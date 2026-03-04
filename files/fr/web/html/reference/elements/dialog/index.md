@@ -46,7 +46,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ## Notes d'utilisation
 
 - Les éléments {{HTMLElement("form")}} peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
-- Le pseudo-élément CSS {{CSSxRef('::backdrop')}} peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec {{DOMxRef("HTMLDialogElement.showModal()")}}. Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
+- Le pseudo-élément CSS {{CSSxRef("::backdrop")}} peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec {{DOMxRef("HTMLDialogElement.showModal()")}}. Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
 - L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
 - Ne pas ajouter l'attribut `tabindex` à l'élément `<dialog>` car il n'est pas interactif et ne reçoit pas la sélection. Le contenu du dialogue, y compris le bouton de fermeture contenu dans le dialogue, peut recevoir la sélection et être interactif.
 
@@ -60,7 +60,7 @@ Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut
 
 Bien que les boîtes de dialogue puissent être créées à l'aide d'autres éléments, l'élément natif `<dialog>` offre des caractéristiques d'utilisation et d'accessibilité qui doivent être reproduites si vous utilisez d'autres éléments dans un but similaire. Si vous créez une implémentation de dialogue personnalisée, assurez-vous que tous les comportements par défaut attendus sont pris en charge et que les recommandations d'étiquetage appropriées sont suivies.
 
-L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML global [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
+L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
 
 ## Exemples
 
@@ -104,7 +104,7 @@ Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la sél
 
 #### CSS
 
-Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément {{CSSxRef('::backdrop')}}.
+Nous pouvons styliser l'arrière-plan du dialogue en utilisant le pseudo-élément {{CSSxRef("::backdrop")}}.
 
 ```css
 ::backdrop {
@@ -706,6 +706,6 @@ Le code s'affiche comme suit&nbsp;:
 - L'évènement {{DOMxRef("HTMLDialogElement/close_event", "close")}} de l'interface `HTMLDialogElement`
 - L'évènement {{DOMxRef("HTMLDialogElement/cancel_event", "cancel")}} de l'interface `HTMLDialogElement`
 - La propriété {{DOMxRef("HTMLDialogElement/open", "open")}} de l'interface `HTMLDialogElement`
-- L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
+- L'attribut universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
 - Le pseudo-élément {{CSSxRef("::backdrop")}}
 - [Guide sur les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
