@@ -11,7 +11,7 @@ l10n:
 
 ## 起点
 
-首先，点击下方代码示例面板中的 **Play** 按钮，在 MDN Playground 中打开提供的正文文本。你将按照后续章节中的说明对文本进行适当标记。
+首先，点击下方代码示例面板中的 **Play** 按钮，在 MDN 代码演练场中打开提供的正文文本。你将按照后续章节中的说明对文本进行适当标记。
 
 ```html-nolint live-sample___start
 Dr. Eleanor Gaye
@@ -115,7 +115,7 @@ The memoirs of Bill S Preston, Esq.
 - 你应该使用适当的结构来构造整体文档，包括 doctype、{{htmlelement("html")}}、{{htmlelement("head")}} 和 {{htmlelement("body")}} 元素。
 - 除下面提到的几点之外，这封信应该被标记成有着段落和标题的结构。这封信有 1 个顶级标题（“Re:”那行）和 3 个二级标题。
 - 两个地址应该放在 {{htmlelement("address")}} 元素下。每行的地址应该放在新的一行而不是新的段落。
-- 使用适当类型的列表标记该学期的开学时间（the semester start dates）、学习科目（study subjects）和异域舞蹈（exotic dances）。
+- 使用适当类型的列表标记该学期的开学时间（semester start date）、学习科目（study subject）和异域舞蹈（exotic dance）。
 
 ### 行内语义
 
