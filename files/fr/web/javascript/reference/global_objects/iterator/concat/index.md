@@ -38,11 +38,11 @@ function* infiniteIterables() {
   }
 }
 
-// BAD:
+// MAUVAIS :
 // Iterator.concat(...infiniteIterables());
 // L'opérateur de propagation ne termine jamais
 
-// GOOD:
+// BON :
 const it = infiniteIterables().flatMap((x) => x);
 // Séquence infinie de nombres : 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ...
 ```
