@@ -1,9 +1,8 @@
 ---
 title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
-original_slug: Web/CSS/gradient/repeating-conic-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b1bc04e2aedcaa50c55fb54686fb7855fdcbfc4e
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`repeating-conic-gradient()`** crée une image composée d'un dégradé conique répété (plutôt qu'un [dégradé unique](/fr/docs/Web/CSS/Reference/Values/gradient/conic-gradient)), avec des transitions de couleurs qui tournent autour d'un point central (plutôt que de [rayonner depuis le centre](/fr/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)).
@@ -48,7 +47,7 @@ repeating-conic-gradient(
 )
 
 /* Interpolation dans l'espace colorimétrique polaire
-   avec la méthode d'interpolation de teinte la plus longue */
+   avec la méthode d'interpolation de teinte la plus courte */
 repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 
@@ -212,7 +211,7 @@ div {
 }
 ```
 
-Dans cet exemple d'interpolation, on utilise le système de couleurs [hsl](/fr/docs/Web/CSS/Reference/Values/color_value/hsl) et la teinte (<i lang="en">hue</i>) est interpolée.
+Dans cet exemple d'interpolation, on utilise le système de couleurs {{CSSxRef("color_value/hsl", "hsl")}} et la teinte (<i lang="en">hue</i>) est interpolée.
 
 ```css
 .shorter {
