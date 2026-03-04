@@ -2,7 +2,7 @@
 title: DNS
 slug: Glossary/DNS
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 632359b60e58a4f5b2a69020dd79d0ecf38d4dbb
 ---
 
 **DNS** (<i lang="en">Domain Name System</i> pour _Système de noms de domaine_ en français) est un système de nommage hiérarchique et décentralisé pour les ressources connectées à Internet. Le DNS maintient une liste de {{Glossary("domain name","noms de domaine")}} ainsi que des ressources, telles que les adresses IP, qui leur sont associées.
