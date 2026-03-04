@@ -91,7 +91,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Gauche à droite sans bdi', '', 120)}}
+{{EmbedLiveSample("Gauche à droite sans bdi", "", 120)}}
 
 ### Texte sans `<bdi>` avec deux directionnalités
 
@@ -114,7 +114,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Texte sans `<bdi>` avec deux directionnalités', '', 120)}}
+{{EmbedLiveSample("Texte sans `<bdi>` avec deux directionnalités", "", 120)}}
 
 ### Texte avec `<bdi>` et deux directionnalités
 
@@ -137,7 +137,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample('Texte avec `<bdi>` et deux directionnalités', '', 120)}}
+{{EmbedLiveSample("Texte avec `<bdi>` et deux directionnalités", "", 120)}}
 
 ## Résumé technique
 

@@ -1,79 +1,89 @@
 ---
-title: Date.UTC()
+title: "Date : méthode statique UTC()"
+short-title: UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode statique **`Date.UTC()`** accepte des paramètres représentant les composantes de date et d'heure, comme le constructeur {{JSxRef("Date")}}, mais les considère comme UTC. Elle retourne le nombre de millisecondes écoulées depuis le 1er janvier 1970, 00:00:00 UTC.
 
-La méthode **`Date.UTC()`** accepte des paramètres similaires à ceux du constructeur {{jsxref("Date")}} et renvoie le nombre de millièmes de seconde depuis le 1er janvier 1970, 00:00:00, temps universel. Autrement dit, elle renvoie la date en UTC.
-
-{{InteractiveExample("JavaScript Demo: Date.UTC()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.UTC()")}}
 
 ```js interactive-example
 const utcDate1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
 const utcDate2 = new Date(Date.UTC(0, 0, 0, 0, 0, 0));
 
 console.log(utcDate1.toUTCString());
-// Expected output: "Fri, 02 Feb 1996 03:04:05 GMT"
+// Résultat attendu : "Fri, 02 Feb 1996 03:04:05 GMT"
 
 console.log(utcDate2.toUTCString());
-// Expected output: "Sun, 31 Dec 1899 00:00:00 GMT"
+// Résultat attendu : "Sun, 31 Dec 1899 00:00:00 GMT"
 ```
 
 ## Syntaxe
 
-```js
-Date.UTC(année[,mois[,jour[,heures[,minutes[,secondes[,ms]]]]]])
+```js-nolint
+Date.UTC(year)
+Date.UTC(year, monthIndex)
+Date.UTC(year, monthIndex, day)
+Date.UTC(year, monthIndex, day, hours)
+Date.UTC(year, monthIndex, day, hours, minutes)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds)
+Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ```
 
 ## Paramètres
 
-- `année`
-  - : Une année sur deux chiffres pour une année après 1900 (ex. 98 pour 1998) ou bien une année sur quatre chiffres (2018).
-- `mois`{{optional_inline}}
-  - : Un entier entre 0 (janvier) et 11 (décembre) représentant le mois.
-
-    > [!NOTE]
-    > Cet argument est optionnel depuis ECMAScript 2017.
-
-- `jour`{{optional_inline}}
-  - : Un entier entre 1 et 31 représentant le jour du mois. La valeur par défaut vaut 1.
-- `heures`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 23 représentant les heures. La valeur par défaut vaut 0.
-- `minutes`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 59 représentant les minutes. La valeur par défaut vaut 0.
-- `secondes`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 59 représentant les secondes. La valeur par défaut vaut 0.
-- `ms`{{optional_inline}}
-  - : Paramètre optionnel, un entier entre 0 et 999 représentant les millièmes de seconde. La valeur par défaut vaut 0.
+- `year`
+  - : Valeur entière représentant l'année. Les valeurs de `0` à `99` correspondent aux années de `1900` à `1999`. Toutes les autres valeurs correspondent à l'année réelle. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#interprétation_des_années_sur_deux_chiffres).
+- `monthIndex` {{Optional_Inline}}
+  - : Valeur entière représentant le mois, commençant à `0` pour janvier jusqu'à `11` pour décembre. La valeur par défaut est `0`.
+- `day` {{Optional_Inline}}
+  - : Valeur entière représentant le jour du mois. La valeur par défaut est `1`.
+- `hours` {{Optional_Inline}}
+  - : Valeur entière comprise entre `0` et `23` représentant l'heure du jour. La valeur par défaut est `0`.
+- `minutes` {{Optional_Inline}}
+  - : Valeur entière représentant les minutes. La valeur par défaut est `0`.
+- `seconds` {{Optional_Inline}}
+  - : Valeur entière représentant les secondes. La valeur par défaut est `0`.
+- `milliseconds` {{Optional_Inline}}
+  - : Valeur entière représentant les millisecondes. La valeur par défaut est `0`.
 
 ### Valeur de retour
 
-Un nombre représentant le nombre de millisecondes écoulées entre la date indiquée et le premier janvier 1970 à minuit UTC.
+Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide) de la date donnée. Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Description
 
-La méthode `UTC` prend des paramètres de date et d'heure séparés par des virgules et renvoie le nombre de millièmes de seconde entre le 1er janvier 1970, 00:00:00, temps universel et la date et l'heure spécifiées.
+Les années comprises entre `0` et `99` sont converties en une année du 20<sup>e</sup> siècle `(1900 + year)`. Par exemple, `95` est converti en l'année `1995`.
 
-Il faut spécifier l'année entière pour le premier paramètre&nbsp;; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année)&nbsp;; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
+La méthode `UTC()` diffère du constructeur {{JSxRef("Date/Date", "Date()")}} de trois façons&nbsp;:
 
-La méthode `UTC` diffère du constructeur {{jsxref("Date")}} pour deux raisons :
+1. `Date.UTC()` utilise le temps universel plutôt que l'heure locale.
+2. `Date.UTC()` retourne une valeur temporelle sous la forme d'un nombre au lieu de créer un objet {{JSxRef("Date")}}.
+3. Lorsqu'un seul nombre est passé, `Date.UTC()` l'interprète comme une année et non comme un timestamp.
 
-- `Date.UTC` utilise le temps universel plutôt que l'heure locale.
-- `Date.UTC` renvoie une valeur temporelle sous la forme d'un nombre plutôt que de créer un objet `Date`.
+Si un paramètre est en dehors de la plage attendue, la méthode `UTC()` ajuste les autres paramètres pour s'adapter à la valeur. Par exemple, si `15` est utilisé pour `monthIndex`, l'année sera incrémentée de 1 `(year + 1)` et `3` sera utilisé pour le mois.
 
-Si un paramètre spécifié est en dehors des limites attendues, la méthode `UTC` met à jour les autres paramètres pour s'adapter à ce nombre. Par exemple, si vous utilisez 15 pour le mois, l'année sera incrémentée d'une unité (année + 1), et la valeur 3 (avril) sera utilisée pour le mois.
-
-Comme `UTC` est une méthode statique de `Date`, on l'utilise toujours sous la forme `Date.UTC()` plutôt que comme une méthode d'un objet `Date` que vous auriez créé.
+Comme `UTC()` est une méthode statique de `Date`, vous l'utilisez toujours sous la forme `Date.UTC()`, et non comme une méthode d'un objet `Date` que vous auriez créé.
 
 ## Exemples
 
-### Utiliser `Date.UTC()`
+### Utiliser la méthode `UTC()`
 
-L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale&nbsp;:
+L'instruction suivante crée un objet {{JSxRef("Date")}} avec les arguments considérés comme UTC plutôt que locaux&nbsp;:
 
 ```js
-var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+const utcDate = new Date(Date.UTC(2018, 11, 1, 0, 0, 0));
+```
+
+### Comportement de `Date.UTC()` avec un seul argument
+
+`Date.UTC()` lorsqu'elle reçoit un seul argument avait un comportement incohérent, car les implémentations ne gardaient la cohérence qu'avec le constructeur {{JSxRef("Date/Date", "Date()")}}, qui n'interprète pas un seul argument comme une année. Les implémentations doivent maintenant traiter un `monthIndex` omis comme `0`, au lieu de le contraindre à `NaN`.
+
+```js
+Date.UTC(2017); // 1483228800000
 ```
 
 ## Spécifications
@@ -86,4 +96,5 @@ var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
 
 ## Voir aussi
 
-- {{jsxref("Date.parse()")}}
+- La méthode statique {{JSxRef("Date.parse()")}}
+- L'objet {{JSxRef("Date")}}

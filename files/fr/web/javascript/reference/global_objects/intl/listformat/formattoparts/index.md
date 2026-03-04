@@ -1,50 +1,74 @@
 ---
-title: Intl.ListFormat.prototype.formatToParts()
+title: "Intl.ListFormat : méthode formatToParts()"
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`formatToParts()`** des instances de {{JSxRef("Intl.ListFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne formatée qui serait retournée par {{JSxRef("Intl/ListFormat/format", "format()")}}. Elle est utile pour construire des chaînes personnalisées à partir des éléments propres à la locale.
 
-La méthode **`Intl.ListFormat.prototype.formatToParts()`** renvoie un tableau ({{jsxref("Array")}}) d'objets représentants les différentes composantes de la chaine de caractères qui est le résultat du formatage de la liste (selon les options de locale et de style indiquées).
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.ListFormat.prototype.formatToParts()", "taller")}}
+
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatterEn = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+
+const formatterFr = new Intl.ListFormat("fr", {
+  style: "long",
+  type: "conjunction",
+});
+
+const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
+const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
+
+console.log(partValuesEn);
+// Résultat attendu : "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+console.log(partValuesFr);
+// Résultat attendu : "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+```
 
 ## Syntaxe
 
-```js
-Intl.ListFormat.prototype.formatToParts(list);
+```js-nolint
+formatToParts(list)
 ```
 
 ### Paramètres
 
 - `list`
-  - : Un tableau ({{jsxref("Array")}}) de valeurs à mettre en forme selon une locale et des options de style.
+  - : Un objet itérable, tel qu'un tableau, contenant des chaînes de caractères. Si vous l'omettez, cela formate un tableau vide, ce qui peut prêter à confusion, il est donc conseillé de toujours passer explicitement une liste.
 
 ### Valeur de retour
 
-Un tableau ({{jsxref("Array")}}) de fragments composants la chaîne de caractères pour la liste formatée.
+Un tableau ({{JSxRef("Array")}}) d'objets contenant la liste formatée en fragments. Chaque objet possède deux propriétés, `type` et `value`, chacune contenant une chaîne de caractères. La concaténation des chaînes de caractères de `value`, dans l'ordre fourni, donnera la même chaîne de caractères que {{JSxRef("Intl/ListFormat/format", "format()")}}. La propriété `type` peut prendre l'une des valeurs suivantes&nbsp;:
 
-## Description
-
-Alors que la méthode {{jsxref("ListFormat.prototype.format()", "Intl.ListFormat.prototype.format()")}} renvoie une chaîne de caractères avec la liste formatée (en fonction de la locale et des options de style), `formatToParts()` renvoie un tableau des différentes composantes de cette chaîne.
-
-Chaque élément du tableau résultant possède deux propriétés : `type` et `value`. La propriété `type` pourra valoir `"element"` (pour indiquer une valeur de la liste) ou `"literal"` (pour indiquer un élément linguistique). La propriété `value` fournit quant à elle le contenu du fragment sous forme d'une chaîne de caractères.
-
-Les options de locale et de style utilisées pour le formatage sont fournies lors de la construction de l'instance {{jsxref("ListFormat", "Intl.ListFormat")}}.
+- `literal`
+  - : Toute chaîne de caractères qui fait partie du modèle de formatage&nbsp;; par exemple `", "`, `", and"`, etc.
+- `element`
+  - : Un élément de la liste, exactement tel que fourni.
 
 ## Exemples
 
+### Utiliser la méthode `formatToParts()`
+
 ```js
 const fruits = ["Apple", "Orange", "Pineapple"];
-const myListFormat = new Intl.ListFormat("en-GB", {
+const maListeFormattee = new Intl.ListFormat("en-GB", {
   style: "long",
   type: "conjunction",
 });
 
-console.table(myListFormat.formatToParts(fruits));
+console.table(maListeFormattee.formatToParts(fruits));
 // [
 //  { "type": "element", "value": "Apple" },
 //  { "type": "literal", "value": ", " },
 //  { "type": "element", "value": "Orange" },
-//  { "type": "literal", "value": ", and " },
+//  { "type": "literal", "value": " and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
 ```
@@ -59,8 +83,5 @@ console.table(myListFormat.formatToParts(fruits));
 
 ## Voir aussi
 
-- {{jsxref("ListFormat", "Intl.ListFormat")}}
-- {{jsxref("ListFormat.prototype.format()", "Intl.ListFormat.prototype.format()")}}
-- {{jsxref("RelativeTimeFormat.formatToParts()", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
-- {{jsxref("NumberFormat.formatToParts()", "Intl.NumberFormat.prototype.formatToParts()")}}
-- {{jsxref("DateTimeFormat.formatToParts()", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+- L'objet {{JSxRef("Intl.ListFormat")}}
+- La méthode {{JSxRef("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}

@@ -1,27 +1,26 @@
 ---
 title: TypedArray.prototype.join()
+short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`join()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、この型付き配列のすべての要素を、カンマまたは指定する区切り文字で連結して新しい文字列を作成して返します。型付き配列に 1 つの項目しかない場合、その項目は区切り文字を使用せずに返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.join()")}} と同じです。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.join()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.join()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 
 console.log(uint8.join());
-// Expected output: "10,20,30,40,50"
+// 予想される結果: "10,20,30,40,50"
 
 console.log(uint8.join(""));
-// Expected output: "1020304050"
+// 予想される結果: "1020304050"
 
 console.log(uint8.join("-"));
-// Expected output: "10-20-30-40-50"
+// 予想される結果: "10-20-30-40-50"
 ```
 
 ## 構文

@@ -1,9 +1,8 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/Reference/Properties/mask-border-outset
-original_slug: Web/CSS/mask-border-outset
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`mask-border-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/Reference/Properties/mask-border)の境界ボックスからの距離を指定します。
@@ -73,7 +72,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 ```
 
 > [!NOTE]
-> [`mask-border`](/ja/docs/Web/CSS/Reference/Properties/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> {{cssxref("mask-border")}} ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

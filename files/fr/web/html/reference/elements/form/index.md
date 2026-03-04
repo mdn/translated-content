@@ -45,7 +45,7 @@ label {
 }
 ```
 
-Il est possible d'utiliser les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) CSS {{CSSxRef(':valid')}} et {{CSSxRef(':invalid')}} pour mettre en forme un élément `<form>` selon que le contenu des {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire est valide ou non.
+Il est possible d'utiliser les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme un élément `<form>` selon que le contenu des {{DOMxRef("HTMLFormElement.elements", "elements")}} du formulaire est valide ou non.
 
 ## Attributs
 
@@ -59,10 +59,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `accept-charset`
   - : L'{{Glossary("character encoding", "encodage de caractères")}} accepté par le serveur.
-    La spécification autorise une seule valeur insensible à la casse `"UTF-8"`, reflétant l'omniprésence de cet encodage (historiquement, plusieurs encodages de caractères pouvaient être spécifiés sous forme de liste séparée par des virgules ou par des espaces).
+    La spécification autorise une seule valeur insensible à la casse `"UTF-8"`, reflétant l'omniprésence de cet encodage (historiquement, plusieurs encodages de caractères pouvaient être définis sous forme de liste séparée par des virgules ou par des espaces).
 
 - `autocapitalize`
-  - : Contrôle la mise en majuscules automatique du texte saisi et, le cas échéant, la manière dont elle s'effectue. Voir la page de l'attribut global [`autocapitalize`](/fr/docs/Web/HTML/Reference/Global_attributes/autocapitalize) pour plus d'informations.
+  - : Contrôle la mise en majuscules automatique du texte saisi et, le cas échéant, la manière dont elle s'effectue. Voir la page de l'attribut universel [`autocapitalize`](/fr/docs/Web/HTML/Reference/Global_attributes/autocapitalize) pour plus d'informations.
 
 - [`autocomplete`](/fr/docs/Web/HTML/Reference/Attributes/autocomplete)
   - : Indique si, par défaut, les éléments d'entrée peuvent voir leurs valeurs complétées automatiquement par le navigateur. Les attributs `autocomplete` appliqués aux éléments du formulaire remplacent celui défini sur le `<form>`. Valeurs possibles&nbsp;:
@@ -118,7 +118,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 <!-- Formulaire simple qui enverra une requête GET -->
 <form>
   <label
-    >Nom :
+    >Nom&nbsp;:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Sauvegarder</button>
@@ -127,7 +127,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 <!-- Formulaire qui enverra une requête POST à l'URL actuelle -->
 <form method="post">
   <label
-    >Nom :
+    >Nom&nbsp;:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Sauvegarder</button>

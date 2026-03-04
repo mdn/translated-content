@@ -1,9 +1,9 @@
 ---
 title: CSS 色調整
+short-title: 色調整
 slug: Web/CSS/Guides/Color_adjustment
-original_slug: Web/CSS/CSS_color_adjustment
 l10n:
-  sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS 色調整**モジュールは、モデルを提供し、「ダークモード」、コントラスト調整、その他の配色設定などのユーザーの環境設定を処理するために、ユーザーエージェントによる自動色調整を制御します。
@@ -35,13 +35,14 @@ l10n:
   - {{cssxref("color")}}
   - {{cssxref("color-scheme")}}
   - {{cssxref("column-rule-color")}}
-  - [`fill`](/ja/docs/Web/SVG/Reference/Attribute/fill)
-  - [`flood-color`](/ja/docs/Web/SVG/Reference/Attribute/flood-color)
-  - [`lighting-color`](/ja/docs/Web/SVG/Reference/Attribute/lighting-color)
+  - {{cssxref("fill")}}
+  - {{cssxref("flood-color")}}
+  - {{cssxref("flood-opacity")}}
+  - {{cssxref("lighting-color")}}
   - {{cssxref("outline-color")}}
   - {{cssxref("scrollbar-color")}}
-  - [`stop-color`](/ja/docs/Web/SVG/Reference/Attribute/stop-color)
-  - [`stroke`](/ja/docs/Web/SVG/Reference/Attribute/stroke)
+  - {{cssxref("stop-color")}}
+  - {{cssxref("stroke")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-emphasis-color")}}
   - {{cssxref("text-shadow")}}

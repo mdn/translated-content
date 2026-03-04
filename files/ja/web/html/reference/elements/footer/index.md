@@ -1,27 +1,24 @@
 ---
 title: "<footer>: フッター要素"
 slug: Web/HTML/Reference/Elements/footer
-original_slug: Web/HTML/Element/footer
 l10n:
-  sourceCommit: dc1203a33cf26d9b9dfe919e32ecd00c0c365a3b
+  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
 ---
 
-{{HTMLSidebar}}
-
-**`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
+**`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。 `<footer>` には通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
 {{InteractiveExample("HTML デモ: &lt;footer&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <article>
-  <h1>How to be a wizard</h1>
+  <h1>魔法使いになる方法</h1>
   <ol>
-    <li>Grow a long, majestic beard.</li>
-    <li>Wear a tall, pointed hat.</li>
-    <li>Have I mentioned the beard?</li>
+    <li>長く立派なひげを蓄えよう。</li>
+    <li>背の高い、先のとがった帽子をかぶる。</li>
+    <li>ひげのことは話したっけ？</li>
   </ol>
   <footer>
-    <p>© 2018 Gandalf</p>
+    <p>© 2018 ガンダルフ</p>
   </footer>
 </article>
 ```
@@ -38,7 +35,7 @@ footer {
   justify-content: center;
   padding: 5px;
   background-color: #45a1ff;
-  color: #fff;
+  color: white;
 }
 ```
 
@@ -51,6 +48,12 @@ footer {
 - セクションの著者や編集者の連絡先情報は、多くの場合 `<footer>` 要素内に {{HTMLElement("address")}} 要素として配置します。
 - 区分コンテンツや区分化ルート要素の最も近い祖先が本体要素の場合、フッターはページ全体に適用されます。
 - `<footer>` 要素は区分コンテンツではありません。つまり、この要素が新たな[アウトライン](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を生成することはありません。
+
+## アクセシビリティ
+
+Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロール](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#道しるべランドマーク_signpostlandmark)が [VoiceOver](https://help.apple.com/voiceover/info/guide/) によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 `role="contentinfo"` を `footer` 要素に追加して、ランドマークが適切に表示されるようにしてください。
+
+- 関連記事: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
 ## 例
 
@@ -76,17 +79,11 @@ footer {
   text-align: center;
   padding: 5px;
   background-color: #abbaba;
-  color: #000;
+  color: black;
 }
 ```
 
 {{EmbedLiveSample('Examples')}}
-
-## アクセシビリティの考慮
-
-Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロール](/ja/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics#道しるべランドマーク_signpostlandmark)が [VoiceOver](https://help.apple.com/voiceover/info/guide/) によって適切に公開されていませんでした。古い Safari ブラウザーに対応する必要がある場合は、 `role="contentinfo"` を `footer` 要素に追加して、ランドマークが適切に表示されるようにしてください。
-
-- 関連記事: [WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
 
 ## 技術的概要
 
@@ -94,16 +91,16 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>, 知覚可能コンテンツ
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし、子孫に他の <code>&#x3C;footer></code> や
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし、子孫に他の <code>&#x3C;footer></code> や
         {{HTMLElement("header")}} がないもの。
       </td>
     </tr>
@@ -114,7 +111,7 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素。ただし、
         {{HTMLElement("address")}}, {{HTMLElement("header")}},
         他の <code>&#x3C;footer></code> の子孫要素として配置してはならない。
       </td>
@@ -123,18 +120,17 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role">contentinfo</a>、ただし
-        <a href="/ja/docs/Web/HTML/Element/article">article</a>,
-        <a href="/ja/docs/Web/HTML/Element/aside">aside</a>,
-        <a href="/ja/docs/Web/HTML/Element/main">main</a>,
-        <a href="/ja/docs/Web/HTML/Element/nav">nav</a>,
-        <a href="/ja/docs/Web/HTML/Element/section">section</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/article">article</a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/aside">aside</a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/main">main</a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/nav">nav</a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/section">section</a>
         のいずれかの要素、または
-        <code>role=<a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role">article</a></code>,
         <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role">complementary</a></code>,
         <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role">main</a></code>,
         <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role">navigation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code>
-        がある要素の子である場合は <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role">region</a></code> ロールがある要素の子である場合は <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a>
       </td>
     </tr>
     <tr>

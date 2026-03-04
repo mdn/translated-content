@@ -1,12 +1,11 @@
 ---
 title: text-shadow
 slug: Web/CSS/Reference/Properties/text-shadow
-original_slug: Web/CSS/text-shadow
 l10n:
-  sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
+**`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ({{cssxref("text-decoration")}}) に適用される影のカンマで区切ったリストを受け入れます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
 {{InteractiveExample("CSS デモ: text-shadow")}}
 
@@ -15,7 +14,7 @@ text-shadow: 1px 1px 2px pink;
 ```
 
 ```css interactive-example-choice
-text-shadow: #fc0 1px 0 10px;
+text-shadow: #ffcc00 1px 0 10px;
 ```
 
 ```css interactive-example-choice
@@ -49,7 +48,7 @@ text-shadow:
 ```css interactive-example
 p {
   font:
-    1.5em Georgia,
+    1.5em "Georgia",
     serif;
 }
 ```
@@ -61,7 +60,7 @@ p {
 text-shadow: 1px 1px 2px black;
 
 /* color | offset-x | offset-y | blur-radius */
-text-shadow: #fc0 1px 0 10px;
+text-shadow: #ffcc00 1px 0 10px;
 
 /* offset-x | offset-y | color */
 text-shadow: 5px 5px #558abb;
@@ -135,7 +134,7 @@ text-shadow: unset;
     0 0 0.2em blue;
   color: white;
   font:
-    1.5em Georgia,
+    1.5em "Georgia",
     serif;
 }
 ```
@@ -159,6 +158,8 @@ text-shadow: unset;
 
 ## 関連情報
 
-- {{cssxref("&lt;color&gt;")}} データ型（影の色を指定するため）
+- [テキストの影の紹介](/ja/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
+- {{cssxref("&lt;color&gt;")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
+- [CSS テキスト装飾](/ja/docs/Web/CSS/Guides/Text_decoration)モジュール
