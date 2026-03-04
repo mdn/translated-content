@@ -90,3 +90,4 @@ slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 - HTML-атрибут [`hidden`](/ru/docs/Web/HTML/Reference/Global_attributes/hidden)
 - CSS-свойство {{CSSXref('display')}}
 - CSS-свойство {{CSSXref('visibility')}}
+
