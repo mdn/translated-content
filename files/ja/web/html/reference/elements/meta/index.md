@@ -2,7 +2,7 @@
 title: "<meta>: メタデータ要素"
 slug: Web/HTML/Reference/Elements/meta
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`<meta>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{Glossary("Metadata","メタデータ")}}を表します。これは、他のメタ関連要素 ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}) で表すことができないものを表します。
@@ -144,4 +144,3 @@ l10n:
 
 - [標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)
 - [学習: `<meta>`](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)
-- [viewport メタタグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)

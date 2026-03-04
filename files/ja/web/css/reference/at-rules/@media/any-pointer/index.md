@@ -1,9 +1,8 @@
 ---
 title: any-pointer
 slug: Web/CSS/Reference/At-rules/@media/any-pointer
-original_slug: Web/CSS/@media/any-pointer
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 **`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。

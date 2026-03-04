@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-The reference to the topmost window.
+最上位のウィンドウへの参照です。
 
 ## 注記
 

@@ -50,26 +50,26 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リスト化"
           >リスト化</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能"
           >ラベル付け可能</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リセット可能"
           >リセット可能</a
         >
         <a
-          href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フォーム関連コンテンツ"
           >フォーム関連要素</a
         >、知覚可能コンテンツ
       </td>
@@ -77,7 +77,7 @@ l10n:
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -89,7 +89,7 @@ l10n:
     <tr>
       <th scope="row">許可された親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

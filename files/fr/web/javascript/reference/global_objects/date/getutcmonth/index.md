@@ -1,13 +1,14 @@
 ---
-title: Date.prototype.getUTCMonth()
+title: "Date : méthode getUTCMonth()"
+short-title: getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getUTCMonth()`** des instances de {{JSxRef("Date")}} retourne le mois pour cette date selon le temps universel, sous forme d'une valeur indexée à partir de zéro (où zéro indique le premier mois de l'année).
 
-La méthode **`getUTCMonth()`** renvoie le mois de la date renseignée, d'après UTC. La numérotation des mois commence à 0 pour le premier mois de l'année.
-
-{{InteractiveExample("JavaScript Demo: Date.getUTCMonth()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Date.prototype.getUTCMonth()")}}
 
 ```js interactive-example
 const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
@@ -15,32 +16,36 @@ const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
 
 // December
 console.log(date1.getUTCMonth());
-// Expected output: 11
+// Résultat attendu : 11
 
 // January
 console.log(date2.getUTCMonth());
-// Expected output: 0
+// Résultat attendu : 0
 ```
 
 ## Syntaxe
 
-```js
-dateObj.getUTCMonth();
+```js-nolint
+getUTCMonth()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un entier entre 0 et 11 correspondant au mois dans l'année de la date indiquée selon le temps universel (0 pour janvier, 1 pour février, 2 pour mars, et ainsi de suite…).
+Un entier entre 0 et 11 correspondant au mois dans l'année de la date indiquée selon le temps universel (0 pour janvier, 1 pour février, 2 pour mars, et ainsi de suite…). Retourne `NaN` si la date est [invalide](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide).
 
 ## Exemples
 
-### Utiliser `getUTCMonth()`
+### Utiliser la méthode `getUTCMonth()`
 
 L'exemple suivant assigne le mois de la date actuelle à la variable `mois`.
 
 ```js
-var aujourdhui = new Date();
-var mois = aujourdhui.getUTCMonth();
+const aujourdhui = new Date();
+const mois = aujourdhui.getUTCMonth();
 ```
 
 ## Spécifications
@@ -53,5 +58,5 @@ var mois = aujourdhui.getUTCMonth();
 
 ## Voir aussi
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- La méthode {{JSxRef("Date.prototype.getMonth()")}}
+- La méthode {{JSxRef("Date.prototype.setUTCMonth()")}}

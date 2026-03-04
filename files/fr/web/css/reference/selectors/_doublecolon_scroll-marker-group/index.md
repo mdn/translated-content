@@ -29,7 +29,7 @@ En termes d'accessibilité, le groupe de marqueurs de défilement et les marqueu
 
 ## Exemples
 
-Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) pour d'autres exemples qui utilisent le pseudo-élément `::scroll-marker`.
+Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) pour d'autres exemples qui utilisent le pseudo-élément `::scroll-marker`.
 
 ### Créer des marqueurs de défilement pour un carrousel
 
@@ -186,7 +186,7 @@ ul::scroll-marker-group {
 - Le pseudo-élément {{CSSxRef("::scroll-marker")}}
 - Le pseudo-élément {{CSSxRef("::column")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
-- [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
+- [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
 - Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

@@ -7,7 +7,7 @@ l10n:
 ---
 
 La valeur **`color-scheme`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} indique un schéma de couleurs suggéré que les agents utilisateur·ice·s doivent utiliser pour une page.
-Si elle est spécifiée, vous définissez le schéma de couleurs à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur CSS {{CSSxRef("color-scheme")}} valide.
+Si elle est définie, vous définissez le schéma de couleurs à l'aide d'un attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) dans l'élément `<meta>` avec une valeur CSS {{CSSxRef("color-scheme")}} valide.
 
 La couleur de thème fonctionne au _niveau du document_ de la même manière que la propriété CSS {{CSSxRef("color-scheme")}} spécifie les schémas de couleurs préférés et acceptés des _éléments individuels_.
 L'utilisation principale de `<meta name="color-scheme">` est d'indiquer la compatibilité et l'ordre de préférence pour les modes clair et sombre.

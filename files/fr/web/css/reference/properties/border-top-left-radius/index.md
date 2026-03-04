@@ -1,14 +1,13 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/Reference/Properties/border-top-left-radius
-original_slug: Web/CSS/border-top-left-radius
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-top-left-radius`** arrondit le coin supérieur gauche d'un élément en définissant le rayon (ou les rayons des axes semi-majeur et semi-mineur) de l'ellipse qui définit la courbure du coin.
 
-La propriété **`border-top-left-radius`** définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
-
-{{InteractiveExample("CSS Demo: border-top-left-radius")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-top-left-radius")}}
 
 ```css interactive-example-choice
 border-top-left-radius: 80px 80px;
@@ -31,7 +30,7 @@ background-clip: content-box;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a top left rounded corner.
+    Ceci est une boîte avec un coin supérieur gauche arrondi.
   </div>
 </section>
 ```
@@ -49,36 +48,51 @@ background-clip: content-box;
 }
 ```
 
-> [!NOTE]
-> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
-
 ## Syntaxe
 
 ```css
-/* Le coin est un quart de cercle         */
+/* Le coin est un cercle */
 /* La valeur indique le rayon de courbure */
 border-top-left-radius: 3px;
 
-/* Le coin est un quart d'ellipse         */
-/* La première valeur indique le demi-axe */
-/* horizontal et la seconde le demi-axe   */
-/* vertical                               */
+/* Le coin est une ellipse */
+/* border-top-left-radius: horizontal vertical */
 border-top-left-radius: 0.5em 1em;
 
 border-top-left-radius: inherit;
+
+/* Valeurs globales */
+border-top-left-radius: inherit;
+border-top-left-radius: initial;
+border-top-left-radius: revert;
+border-top-left-radius: revert-layer;
+border-top-left-radius: unset;
 ```
 
-Cette propriété peut prendre deux formes :
+Avec une valeur&nbsp;:
 
-- Une première avec une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure pour ce coin
-- Une seconde avec deux valeurs
-  - La première est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin
-  - La seconde est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin
+- la valeur est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiquant le rayon du cercle à utiliser pour la bordure de ce coin.
+
+Avec deux valeurs&nbsp;:
+
+- la première valeur est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiquant l'axe semi-majeur horizontal de l'ellipse à utiliser pour la bordure de ce coin.
+- la seconde valeur est une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiquant l'axe semi-majeur vertical de l'ellipse à utiliser pour la bordure de ce coin.
 
 ### Valeurs
 
 - `<length-percentage>`
-  - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
+  - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{CSSxRef("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
+
+## Description
+
+L'arrondi peut être un cercle ou une ellipse, ou si l'une des valeurs est `0`, aucun arrondi n'est appliqué et le coin est carré.
+
+![border-radius.png](border-radius.png)
+
+Un arrière-plan, qu'il s'agisse d'une image ou d'une couleur, est rogné à la bordure, même si elle est arrondie&nbsp;; l'emplacement exact du rognage est défini par la valeur de la propriété {{CSSxRef("background-clip")}}.
+
+> [!NOTE]
+> Si la valeur de cette propriété n'est pas définie dans une propriété raccourcie {{CSSxRef("border-radius")}} appliquée à l'élément après la propriété CSS `border-top-left-radius`, la valeur de cette propriété est alors réinitialisée à sa valeur initiale par la [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 ## Définition formelle
 
@@ -90,48 +104,85 @@ Cette propriété peut prendre deux formes :
 
 ## Exemples
 
-### CSS
+### Arc de cercle
+
+Une seule valeur `<length>` produit un arc de cercle.
+
+```html hidden
+<div></div>
+```
 
 ```css
 div {
+  border-top-left-radius: 40px;
   background-color: lightgreen;
   border: solid 1px black;
   width: 100px;
-  height: 130px;
+  height: 100px;
 }
+```
 
-.arc_cercle {
-  border-top-left-radius: 40px 40px;
-}
+{{EmbedLiveSample("Arc de cercle")}}
 
-.arc_ellipse {
+### Arc d'une ellipse
+
+Deux valeurs `<length>` différentes produisent un arc d'ellipse.
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
   border-top-left-radius: 40px 20px;
-}
-
-.pourcentage {
-  border-top-left-radius: 40%;
-}
-
-.rognage {
-  border: black 10px double;
-  border-top-left-radius: 40%;
-  background-color: rgb(250,20,70);
-  background-clip: content-box; // essayez margin-box...
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
 }
 ```
 
-### HTML
+{{EmbedLiveSample("Arc d'une ellipse")}}
 
-```html
-<div class="arc_cercle"></div>
-<div class="arc_ellipse"></div>
-<div class="pourcentage"></div>
-<div class="rognage"></div>
+### Élément carré avec un rayon en pourcentage
+
+Un élément carré avec une seule valeur `<percentage>` produit un arc de cercle.
+
+```html hidden
+<div></div>
 ```
 
-### Résultat
+```css
+div {
+  border-top-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+}
+```
 
-{{EmbedLiveSample("Exemples","200","540")}}
+{{EmbedLiveSample("Élément carré avec un rayon en pourcentage")}}
+
+### Élément qui n'est pas carré avec un rayon en pourcentage
+
+Un élément qui n'est pas carré avec une seule valeur `<percentage>` produit un arc d'ellipse.
+
+```html hidden
+<div></div>
+```
+
+```css
+div {
+  border-top-left-radius: 40%;
+  background-color: lightgreen;
+  border: solid 1px black;
+  width: 200px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("Élément qui n'est pas carré avec un rayon en pourcentage")}}
 
 ## Spécifications
 
@@ -143,8 +194,5 @@ div {
 
 ## Voir aussi
 
-- La propriété raccourcie {{cssxref("border-radius")}}
-- Les propriétés pour les autres coins :
-  - {{cssxref("border-top-right-radius")}},
-  - {{cssxref("border-bottom-right-radius")}},
-  - {{cssxref("border-bottom-left-radius")}}.
+- La propriété raccourcie {{CSSxRef("border-radius")}}
+- Les propriétés {{CSSxRef("border-top-right-radius")}}, {{CSSxRef("border-bottom-right-radius")}} et {{CSSxRef("border-bottom-left-radius")}}

@@ -48,7 +48,7 @@ Historiquement, il était présenté comme une règle ou une ligne horizontale. 
 
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-### Attributs dépréciés, obsolètes ou non-standard
+### Attributs obsolètes ou non-standard
 
 - `align` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Définit l'alignement de la ligne horizontale sur la page. Si aucune valeur n'est renseignée, la valeur prise par défaut est `left`.

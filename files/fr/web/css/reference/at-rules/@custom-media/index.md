@@ -2,12 +2,12 @@
 title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 l10n:
-  sourceCommit: dd868507df863ab4f37d53c960c76e20e9ee365f
+  sourceCommit: ad20400adefa435897ee28e55cb8dfa7419e29f8
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
-La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@custom-media`** permet de définir des alias pour des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) longues ou complexes. Au lieu de répéter la même `<media-query-list>` codée en dur dans plusieurs règles [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media), elle peut être définie une fois dans une règle `@custom-media` et référencée dans toute la feuille de style selon les besoins.
+La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@custom-media`** permet de définir des alias pour des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries) longues ou complexes. Au lieu de répéter la même `<media-query-list>` codée en dur dans plusieurs règles {{CSSxRef("@media")}}, elle peut être définie une fois dans une règle `@custom-media` et référencée dans toute la feuille de style selon les besoins.
 
 ## Syntaxe
 
@@ -21,7 +21,7 @@ La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@c
 ### Valeurs
 
 - `<extension-name>`
-  - : Un type [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident)&nbsp;; le nom identifiant la requête média personnalisée.
+  - : Un type {{CSSxRef("&lt;dashed-ident&gt;")}}&nbsp;; le nom identifiant la requête média personnalisée.
 - Valeur représentée
   - : La valeur associée à la requête média personnalisée. Les valeurs possibles sont&nbsp;:
     - `<media-query-list>`
@@ -33,7 +33,7 @@ La [règle @](/fr/docs/Web/CSS/Reference/At-rules) [CSS](/fr/docs/Web/CSS) **`@c
 
 ## Description
 
-Lors de la création d'interfaces adaptatives, la même condition média doit souvent être répétée dans plusieurs règles [`@media`](/fr/docs/Web/CSS/Reference/At-rules/@media), parfois dans différents fichiers et équipes. Dupliquer les requêtes média augmente le risque d'erreurs, complique la refactorisation et génère une surcharge de maintenance inutile. À chaque modification d'une requête média, il faut retrouver et mettre à jour manuellement chaque occurrence — un processus sujet aux erreurs et difficile à suivre dans de grandes bases de code.
+Lors de la création d'interfaces adaptatives, la même condition média doit souvent être répétée dans plusieurs règles {{CSSxRef("@media")}}, parfois dans différents fichiers et équipes. Dupliquer les requêtes média augmente le risque d'erreurs, complique la refactorisation et génère une surcharge de maintenance inutile. À chaque modification d'une requête média, il faut retrouver et mettre à jour manuellement chaque occurrence — un processus sujet aux erreurs et difficile à suivre dans de grandes bases de code.
 
 La règle `@custom-media` résout ce problème en permettant de définir des **alias nommés** pour les requêtes média. Au lieu de répéter la requête complète partout, vous déclarez la condition une fois comme requête média personnalisée et référencez son alias dans toutes vos feuilles de style. Ainsi, la mise à jour de la requête sous-jacente ne nécessite qu'une seule modification à un seul endroit.
 
@@ -69,7 +69,7 @@ L'opérateur `and` permet de combiner plusieurs conditions qui doivent toutes ê
 }
 ```
 
-Cet alias ne correspond que lorsque la zone d'affichage (<i lang="en">viewport</i> en anglais) est comprise dans la plage de largeur spécifiée.
+Cet alias ne correspond que lorsque la zone d'affichage (<i lang="en">viewport</i> en anglais) est comprise dans la plage de largeur définie.
 
 #### Utilisation de l'opérateur `or`
 
@@ -234,4 +234,4 @@ La définition initiale de `--mobile-breakpoint` est remplacée et donc ignorée
 - La règle {{CSSxRef("@media")}}
 - La règle {{CSSxRef("@import")}}
 - [Design adaptatif](/fr/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
-- [Module des requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
+- Le module [des requêtes média CSS](/fr/docs/Web/CSS/Guides/Media_queries)
