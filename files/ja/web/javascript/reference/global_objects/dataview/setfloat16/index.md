@@ -1,34 +1,34 @@
 ---
-title: DataView.prototype.setUint16()
-short-title: setUint16()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
+title: DataView.prototype.setFloat16()
+short-title: setFloat16()
+slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat16
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`setUint16()`** は {{jsxref("DataView")}} インスタンスのメソッドで、数値を受け取り、符号なし 16 ビット整数として、この `DataView` の指定されたバイトオフセットから始まる 2 バイトに格納します。アラインメント制約はなく、マルチバイトの値は範囲内の任意のオフセットに格納できます。
+**`setFloat16()`** は {{jsxref("DataView")}} インスタンスのメソッドで、数値を受け取り、16 ビット浮動小数点数として、この `DataView` の指定されたバイトオフセットから始まる 2 バイトに格納します。アラインメント制約はなく、マルチバイトの値は範囲内の任意のオフセットに格納できます。
 
-{{InteractiveExample("JavaScript デモ: DataView.prototype.setUint16()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.setFloat16()")}}
 
 ```js interactive-example
 // ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint16(1, 65535); // 符号なし 16 ビット整数の最大値
+view.setFloat16(1, Math.PI);
 
-console.log(view.getUint16(1));
-// 予想される結果: 65535
+console.log(view.getFloat16(1));
+// 予想される結果: 3.140625
 ```
 
 ## 構文
 
 ```js-nolint
-setUint16(byteOffset, value)
-setUint16(byteOffset, value, littleEndian)
+setFloat16(byteOffset, value)
+setFloat16(byteOffset, value, littleEndian)
 ```
 
-### 引数
+### Parameters
 
 - `byteOffset`
   - : データを格納するビューの先頭からのバイト単位のオフセットです。
@@ -48,13 +48,13 @@ setUint16(byteOffset, value, littleEndian)
 
 ## 例
 
-### setUint16() メソッドの使用
+### setFloat16() メソッドの使用
 
 ```js
 const buffer = new ArrayBuffer(10);
 const dataview = new DataView(buffer);
-dataview.setUint16(0, 3);
-dataview.getUint16(1); // 768
+dataview.setFloat16(0, 3);
+dataview.getFloat16(1); // 0
 ```
 
 ## 仕様書
@@ -67,7 +67,8 @@ dataview.getUint16(1); // 768
 
 ## 関連情報
 
+- [`DataView.prototype.setFloat16` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#float16-methods)
 - [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
-- {{jsxref("Uint16Array")}}
+- {{jsxref("Float16Array")}}
