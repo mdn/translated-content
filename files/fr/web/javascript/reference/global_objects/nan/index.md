@@ -130,7 +130,7 @@ console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ### Échapper silencieusement `NaN`
 
-`NaN` propagates through mathematical operations, so it's usually sufficient to test for `NaN` once at the end of calculation to detect error conditions. The only case where `NaN` gets silently escaped is when using [exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) with an exponent of `0`, which immediately returns `1` without testing the base's value.
+`NaN` se propage à travers les opérations mathématiques, il est donc généralement suffisant de tester la présence de `NaN` une seule fois à la fin du calcul pour détecter les conditions d'erreur. Le seul cas où `NaN` est silencieusement échappé est lors de l'utilisation de [l'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation) avec un exposant de `0`, ce qui retourne immédiatement `1` sans tester la valeur de la base.
 
 ```js
 NaN ** 0 === 1; // true

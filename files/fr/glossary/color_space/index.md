@@ -2,7 +2,7 @@
 title: Espace de couleur
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: 5ba55a6939c0aaf988fc4d34ad7e51c52373a2a6
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
 Les **espaces de couleur** (<i lang="en">color spaces</i> en anglais) sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSxRef("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
