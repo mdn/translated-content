@@ -2,7 +2,6 @@
 title: "Attribut HTML : multiple"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
-original_slug: Web/HTML/Attributes/multiple
 l10n:
   sourceCommit: 7fdf1972da2094ecf91427a578685670c2fbdb17
 ---
