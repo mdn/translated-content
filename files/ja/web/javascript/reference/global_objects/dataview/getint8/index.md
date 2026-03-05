@@ -1,29 +1,30 @@
 ---
 title: DataView.prototype.getInt8()
+short-title: getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`getInt8()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 1 バイトを読み取り、符号付き 8 ビット整数として解釈します。
 
-**`getInt8()`** メソッドは、符号付き 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
-
-{{InteractiveExample("JavaScript デモ: DataView.getInt8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.getInt8()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setInt8(1, 127); // Max signed 8-bit integer
+view.setInt8(1, 127); // 最大の符号付き 8 ビット整数
 
 console.log(view.getInt8(1));
-// Expected output: 127
+// 予想される結果: 127
 ```
 
 ## 構文
 
-```
-dataview.getInt8(byteOffset)
+```js-nolint
+getInt8(byteOffset)
 ```
 
 ### 引数
@@ -33,25 +34,21 @@ dataview.getInt8(byteOffset)
 
 ### 返値
 
-符号付き 8 ビット整数。
+整数で、-128 以上 127 以下です。
 
-### 発生するエラー
+### 例外
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
-
-## 解説
-
-アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
+  - : `byteOffset` がビューの末尾を越えて読み取るように設定されている場合に発生します。
 
 ## 例
 
-### getInt8 メソッドの使用
+### getInt8() の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getInt8(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getInt8(1)); // 1
 ```
 
 ## 仕様書
@@ -64,5 +61,7 @@ dataview.getInt8(1); // 0
 
 ## 関連情報
 
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Int8Array")}}

@@ -2,7 +2,7 @@
 title: Bun
 slug: Glossary/Bun
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 6722199b4d63fad3c33db1146af380fc98b6c202
 ---
 
 **Bun** est un environnement d'exécution {{Glossary("JavaScript")}} moderne et rapide, conçu pour privilégier la performance et les outils pour les développeur·euse·s.
@@ -17,4 +17,4 @@ Contrairement à [Node.js <sup>(angl.)</sup>](https://nodejs.org/) et [Deno <sup
 
 ## Voir aussi
 
-- [Site officiel de Bun <sup>(angl.)</sup>](https://bun.sh/)
+- [Site officiel de Bun <sup>(angl.)</sup>](https://bun.com/)

@@ -1,31 +1,31 @@
 ---
-title: DataView.prototype.getUint32()
-short-title: getUint32()
-slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint32
+title: DataView.prototype.getFloat16()
+short-title: getFloat16()
+slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat16
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`getUint32()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 4 バイトを読み取り、符号なし 32 ビット整数として解釈します。アラインメント制約はありません。境界内の任意のオフセットからマルチバイト値を取得できます。
+**`getFloat16()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 2 バイトを読み取り、 16 ビット浮動小数点数として解釈します。アラインメント制約はありません。境界内の任意のオフセットからマルチバイト値を取得できます。
 
-{{InteractiveExample("JavaScript デモ: DataView.prototype.getUint32()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.getFloat16()")}}
 
 ```js interactive-example
 // ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint32(1, 4294967295); // 符号なし 32 ビット整数の最大値
+view.setFloat16(1, Math.PI);
 
-console.log(view.getUint32(1));
-// 予想される結果: 4294967295
+console.log(view.getFloat16(1));
+// 予想される結果: 3.140625
 ```
 
 ## 構文
 
-```
-getUint32(byteOffset)
-getUint32(byteOffset, littleEndian)
+```js-nolint
+getFloat16(byteOffset)
+getFloat16(byteOffset, littleEndian)
 ```
 
 ### 引数
@@ -37,7 +37,7 @@ getUint32(byteOffset, littleEndian)
 
 ### 返値
 
-整数で、0 以上 4294967295 以下です。
+浮動小数点値で、`-65504` 以上 `65504` 以下です。
 
 ### 例外
 
@@ -46,12 +46,12 @@ getUint32(byteOffset, littleEndian)
 
 ## 例
 
-### getUint32() の使用
+### getFloat16() の使用
 
 ```js
 const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 const dataview = new DataView(buffer);
-console.log(dataview.getUint32(1)); // 16909060
+console.log(dataview.getFloat16(1)); // 0.00001537799835205078
 ```
 
 ## 仕様書
@@ -64,7 +64,8 @@ console.log(dataview.getUint32(1)); // 16909060
 
 ## 関連情報
 
+- [`DataView.prototype.getFloat16` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#float16-methods)
 - [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
-- {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
