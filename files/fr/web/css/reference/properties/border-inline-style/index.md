@@ -1,14 +1,15 @@
 ---
 title: border-inline-style
 slug: Web/CSS/Reference/Properties/border-inline-style
-original_slug: Web/CSS/border-inline-style
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-inline-style`** définit le style des bordures logiques en ligne d'un élément, qui correspond à un style de bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("border-top-style")}} et {{CSSxRef("border-bottom-style")}}, ou {{CSSxRef("border-left-style")}} et {{CSSxRef("border-right-style")}}, selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
-La propriété **`border-inline-style`** permet de définir le style pour la bordure sur les côtés d'un élément qui correspondent à l'axe en ligne. Cette propriété logique correspond à différentes propriétés physiques selon le mode d'écriture, la direction et l'orientation du texte. Autrement dit, cette propriété correspond à [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style) et [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style) ou à [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style) et [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style) selon les valeurs des propriétés [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction) et [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation).
+Le style de bordure dans l'autre dimension peut être défini avec {{CSSxRef("border-block-style")}}, qui définit {{CSSxRef("border-block-start-style")}} et {{CSSxRef("border-block-end-style")}}.
 
-{{InteractiveExample("CSS Demo: border-inline-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-inline-style")}}
 
 ```css interactive-example-choice
 border-inline-style: dotted;
@@ -29,15 +30,15 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -46,38 +47,48 @@ direction: rtl;
 }
 ```
 
-Pour les autres côtés, la bordure peut être mise en forme grâce à la propriété [`border-block-style`](/fr/docs/Web/CSS/Reference/Properties/border-block-style) qui définit [`border-block-start-style`](/fr/docs/Web/CSS/Reference/Properties/border-block-start-style) et [`border-block-end-style`](/fr/docs/Web/CSS/Reference/Properties/border-block-end-style).
-
 ## Syntaxe
 
 ```css
 /* Valeurs de type <'border-style'> */
 border-inline-style: dashed;
 border-inline-style: dotted;
-border-inline-style: revert;
 border-inline-style: groove;
+
+/* Valeurs globales */
+border-inline-style: inherit;
+border-inline-style: initial;
+border-inline-style: revert;
+border-inline-style: revert-layer;
+border-inline-style: unset;
 ```
 
 ### Valeur
 
 - `<'border-style'>`
-  - : Le style de la ligne pour la bordure. Voir [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+  - : Le style de la ligne pour la bordure. Voir {{CSSxRef("border-style")}}.
+
+## Définition formelle
+
+{{CSSInfo}}
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Définir `border-inline-style`
+
+#### HTML
 
 ```html
 <div>
-  <p class="texteExemple">Texte exemple</p>
+  <p class="exempleTexte">Texte exemple</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -86,22 +97,20 @@ div {
   height: 120px;
 }
 
-.texteExemple {
+.exempleTexte {
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-inline-style: dashed;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', 140, 140)}}
+{{EmbedLiveSample("Définir `border-inline-style`", 140, 140)}}
 
 ## Spécifications
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## Compatibilité des navigateurs
 
@@ -109,5 +118,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques qui correspondent à cette propriété logique&nbsp;: [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style).
-- [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode), [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction), [`text-orientation`](/fr/docs/Web/CSS/Reference/Properties/text-orientation)
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Cette propriété correspond à l'une des propriétés physiques de bordure&nbsp;: {{CSSxRef("border-top-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}} ou {{CSSxRef("border-left-style")}}.
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

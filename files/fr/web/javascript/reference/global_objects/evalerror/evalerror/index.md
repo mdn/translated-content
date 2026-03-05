@@ -1,28 +1,44 @@
 ---
 title: Constructeur EvalError()
+short-title: EvalError()
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-Le **constructeur `EvalError()`** permet de créer un objet représentant une erreur concernant la fonction globale [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par les moteurs JavaScript désormais, toutefois l'objet `EvalError` reste présent à des fins de compatibilité.
+Le constructeur **`EvalError()`** crée des objets {{JSxRef("EvalError")}}.
 
 ## Syntaxe
 
-```js
-new EvalError();
-new EvalError(message);
-new EvalError(message, nomFichier);
-new EvalError(message, nomFichier, numeroLigne);
+```js-nolint
+new EvalError()
+new EvalError(message)
+new EvalError(message, options)
+new EvalError(message, fileName)
+new EvalError(message, fileName, lineNumber)
+
+EvalError()
+EvalError(message)
+EvalError(message, options)
+EvalError(message, fileName)
+EvalError(message, fileName, lineNumber)
 ```
+
+> [!NOTE]
+> `EvalError()` peut être appelée avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `EvalError`.
 
 ### Paramètres
 
-- `message` {{optional_inline}}
-  - : Une description de l'erreur, compréhensible par un humain.
-- `nomFichier` {{optional_inline}}
+- `message` {{Optional_Inline}}
+  - : Description de l'erreur, compréhensible par un·e humain·e.
+- `options` {{Optional_Inline}}
+  - : Un objet qui possède les propriétés suivantes&nbsp;:
+    - `cause` {{Optional_Inline}}
+      - : Une propriété indiquant la cause spécifique de l'erreur.
+        Lors de l'interception et du relancement d'une erreur avec un message plus spécifique ou utile, cette propriété peut être utilisée pour transmettre l'erreur d'origine.
+- `fileName` {{Optional_Inline}} {{Non-standard_Inline}}
   - : Le nom du fichier contenant le code qui a causé l'exception.
-- `numeroLigne` {{optional_inline}}
+- `lineNumber` {{Optional_Inline}} {{Non-standard_Inline}}
   - : Le numéro de la ligne du code qui a causé l'exception.
 
 ## Exemples
@@ -33,15 +49,12 @@ new EvalError(message, nomFichier, numeroLigne);
 
 ```js
 try {
-  throw new EvalError("Coucou", "unFichier.js", 10);
+  throw new EvalError("Bonjour");
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message); // "Coucou"
+  console.log(e.message); // "Bonjour"
   console.log(e.name); // "EvalError"
-  console.log(e.fileName); // "unFichier.js"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // "@Scratchpad/2:2:9\n"
+  console.log(e.stack); // Pile de l'erreur
 }
 ```
 
@@ -55,5 +68,5 @@ try {
 
 ## Voir aussi
 
-- [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error)
-- [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- L'objet {{JSxRef("Error")}}
+- La fonction {{JSxRef("Global_Objects/eval", "eval()")}}

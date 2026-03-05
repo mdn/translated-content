@@ -5,16 +5,25 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 
 {{JSRef}}
 
-Метод **catch()** возвращает промис (`Promise(`) и работает только в случае отклонения промиса. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.
+Метод **`catch()`** экземпляров {{jsxref("Promise")}} планирует вызов функции при отклонении промиса. Он немедленно возвращает другой объект {{jsxref("Promise")}}, что позволяет создавать цепочки вызовов вместе с другими методам промисов. Это краткая запись для {{jsxref("Promise/then", "then(undefined, onRejected)")}}.
 
-## Syntax
+{{InteractiveExample("JavaScript Demo: Promise.prototype.catch()")}}
 
-```
-p.catch(onRejected);
-
-p.catch(function(reason) {
-   // отказ
+```js interactive-example
+const promise = new Promise((resolve, reject) => {
+  throw new Error("Ой-ой!");
 });
+
+promise.catch((error) => {
+  console.error(error);
+});
+// Ожидаемый результат: Error: Ой-ой!
+```
+
+## Синтаксис
+
+```js-nolint
+promiseInstance.catch(onRejected)
 ```
 
 ### Параметры

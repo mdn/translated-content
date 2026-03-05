@@ -72,4 +72,4 @@ _画像の出典: [Icons & Browser Colors](https://web.dev/articles/icons-and-br
 
 - `<meta>` `name` 属性の [`color-scheme`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) 値
 - CSS の {{cssxref("color-scheme")}} プロパティ
-- [`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) メディアクエリー
+- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メディアクエリー

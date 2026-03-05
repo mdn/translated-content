@@ -1,16 +1,15 @@
 ---
 title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
-original_slug: Web/CSS/list-style-image
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit une image à utiliser comme marqueur d'élément de liste.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Reference/Elements/li).
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("list-style")}}.
 
-On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style).
-
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: list-style-image")}}
 
 ```css interactive-example-choice
 list-style-image: url("/shared-assets/images/examples/rocket.svg");
@@ -72,7 +71,7 @@ hr {
 ```
 
 > [!NOTE]
-> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels [`display`](/fr/docs/Web/CSS/Reference/Properties/display) vaut `list-item`). Par défaut, cela inclut les éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li). Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol) ou à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)).
+> Cette propriété est appliquée aux éléments de liste, c'est-à-dire aux éléments avec {{CSSxRef("display", "display: list-item;")}} qui [par défaut <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/rendering.html#lists) inclut les éléments {{HTMLElement("li")}}. Parce que cette propriété est héritée, elle peut être définie sur l'élément parent (normalement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour qu'elle s'applique à tous les éléments de liste.
 
 ## Syntaxe
 
@@ -80,7 +79,7 @@ hr {
 /* Valeurs avec un mot-clé*/
 list-style-image: none;
 
-/*  Valeurs pointant vers une image */
+/* Valeurs de type <url> */
 list-style-image: url("star-solid.gif");
 
 /* Valeurs avec une image */
@@ -90,27 +89,30 @@ list-style-image: linear-gradient(to left bottom, red, blue);
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: revert;
+list-style-image: revert-layer;
 list-style-image: unset;
 ```
 
 ### Valeurs
 
-- [`<image>`](/fr/docs/Web/CSS/Reference/Values/image)
-  - : Une valeur représentant une image valide, qui sera utilisée comme puce.
+- {{CSSxRef("&lt;image&gt;")}}
+  - : Une image valide à utiliser comme marqueur.
 - `none`
-  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec [`list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type) sera utilisé à la place.
+  - : Définit qu'aucune image n'est utilisée comme marqueur. Si cette valeur est définie, le marqueur défini dans {{CSSxRef("list-style-type")}} sera utilisé à la place. C'est la valeur par défaut pour {{CSSxRef("list-style")}}.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Utiliser une URL
+### Utiliser une valeur URL
+
+Cet exemple utilise une étoile comme marqueur, que nous ajoutons avec la fonction d'image {{CSSxRef("url_value", "&lt;url&gt;")}}.
 
 #### HTML
 
@@ -131,9 +133,11 @@ ul {
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser_une_URL')}}
+{{EmbedLiveSample("Utiliser une valeur URL")}}
 
 ### Utiliser un dégradé
+
+Cet exemple utilise un [dégradé CSS](/fr/docs/Web/CSS/Guides/Images/Using_gradients) comme marqueur, que nous créons avec la fonction d'image {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.
 
 #### HTML
 
@@ -155,7 +159,7 @@ ul {
 
 #### Résultat
 
-{{EmbedLiveSample('Utiliser_un_dégradé')}}
+{{EmbedLiveSample("Utiliser un dégradé")}}
 
 ## Spécifications
 
@@ -167,9 +171,9 @@ ul {
 
 ## Voir aussi
 
-- {{Cssxref("list-style")}} shorthand
-- {{Cssxref("list-style-type")}} property
-- {{Cssxref("list-style-position")}} property
-- {{cssxref("::marker")}} pseudo-element
-- Le module des [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
-- Le module des [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- La propriété raccourcie {{CSSxRef("list-style")}}
+- La propriété {{CSSxRef("list-style-type")}}
+- La propriété {{CSSxRef("list-style-position")}}
+- Le pseudo-élément {{CSSxRef("::marker")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

@@ -48,7 +48,7 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
   - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/Guides/Media_queries/Using) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
 - [Redimensionnement d'images de fond](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
   - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size).
-- [Support des polices WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+- [Support des polices WOFF](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
   - : [`@font-face`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
 - [Evènements pointeurs](/fr/docs/Web/CSS/Reference/Properties/pointer-events)
   - : La propriété [`pointer-events`](/fr/docs/Web/CSS/Reference/Properties/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
