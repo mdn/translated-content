@@ -2,14 +2,14 @@
 title: image-set()
 slug: Web/CSS/Reference/Values/image/image-set
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)記法で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。
 
-解像度や帯域幅は、端末やネットワークのアクセスによって異なります。`image-set()` 関数は、ユーザーの端末に最も適した画像解像度を提供します。画像オプションの集合を提供し、それぞれに関連する解像度宣言を付けて、そこからブラウザーが端末や設定に最も適したものを選び出します。解像度はファイルサイズのプロキシーとして使用することができます。高解像度の画面を持つ遅いモバイル接続のユーザーエージェントは、高解像度の画像を読み込むのを待つよりも、低解像度の画像を受信することを好むかもしれません。
+解像度や帯域幅は、端末やネットワークのアクセスによって異なります。`image-set()` 関数は、ユーザーの端末に最も適した解像度の画像を提供します。画像の選択肢の集合を提供し、それぞれに解像度宣言を関連付けて、そこからブラウザーが端末や設定に最も適したものを選び出します。解像度はファイルサイズのプロキシーとして使用することができます。高解像度の画面を持っていても、遅いモバイル接続のユーザーエージェントは、高解像度の画像を読み込むのを待つよりも、低解像度の画像を受信することを好むかもしれません。
 
-`image-set()` はそれぞれのユーザーが必要なことを判断するのではなく、オプションを提供することができます。
+`image-set()` は、それぞれのユーザーが必要なことを判断するのではなく、選択肢を提供することができます。
 
 ## 構文
 
@@ -41,11 +41,11 @@ image-set(
 ### 値
 
 - `<image>`
-  - : [`<image>`](/ja/docs/Web/CSS/Reference/Values/image) は画像セット以外のあらゆる画像を指定できます。 `image-set()` 関数は他の `image-set()` 関数の中に入れ子にすることはできません。
+  - : {{cssxref("image")}} は画像集合以外のあらゆる画像を指定できます。 `image-set()` 関数は他の `image-set()` 関数の中に入れ子にすることはできません。
 - `<string>`
-  - : 画像への URL です。
+  - : 画像の URL です。
 - `<resolution>` {{optional_inline}}
-  - : [`<resolution>`](/ja/docs/Web/CSS/Reference/Values/resolution) の単位には、`x` や `dppx` (dots per pixel 単位)、dpi (dots per inch)、dpcm (dots per centimeter) があります。 `image-set()` 内の画像はすべて、解像度が固有でなければなりません。
+  - : {{cssxref("resolution")}} の単位には、`x` や `dppx` (dots per pixel 単位)、`dpi` (dots per inch)、`dpcm` (dots per centimeter) があります。 `image-set()` 内の画像はすべて、解像度が一意でなければなりません。
 - `type(<string>)` {{optional_inline}}
   - : 有効な MIME タイプの文字列、例えば "image/jpeg" です。
 
@@ -64,7 +64,7 @@ image-set(
 
 ### image-set() を使用して代替の background-image オプションの提供
 
-この例は [`image-set()`](https://drafts.csswg.org/css-images-4/#funcdef-image-set) を使用して 2 つの代替 {{cssxref("background-image")}} オプションを提供する方法を示しています。解像度の必要性に応じて、通常版と高解像度版から選択します。
+この例は [`image-set()`](https://drafts.csswg.org/css-images-4/#funcdef-image-set) を使用して 2 つの {{cssxref("background-image")}} の選択肢を提供する方法を示しています。解像度の必要性に応じて、通常版と高解像度版から選択します。
 
 ```html live-sample___image-set-example
 <div class="box"></div>
@@ -126,7 +126,7 @@ image-set(
 
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("gradient")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
