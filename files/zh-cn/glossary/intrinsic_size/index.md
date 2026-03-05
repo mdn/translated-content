@@ -61,7 +61,7 @@ p {
 
 ## 参见
 
-- CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}}属性值。
+- CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}} 属性值。
 - CSS {{cssxref("aspect-ratio")}} 属性
 - [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块
 - [CSS 尺寸规范：固有尺寸](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)
