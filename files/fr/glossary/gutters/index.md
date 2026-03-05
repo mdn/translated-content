@@ -2,10 +2,10 @@
 title: Gouttières
 slug: Glossary/Gutters
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: cee38200097c0261de3067165362100b830a580d
 ---
 
-**Les gouttières** sont l'espace entre {{Glossary("grid_tracks", "les pistes de contenu")}}. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout) en utilisant les propriétés {{CSSxRef("column-gap")}}, {{CSSxRef("row-gap")}} ou {{CSSxRef("gap")}}.
+**Les gouttières** sont l'espace entre {{Glossary("grid_tracks", "les pistes de contenu")}}. Elles peuvent être créées avec [les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout), [la mise en page flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [la mise en page multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) en utilisant les propriétés {{CSSxRef("column-gap")}}, {{CSSxRef("row-gap")}} ou {{CSSxRef("gap")}}.
 
 ## Exemple
 
