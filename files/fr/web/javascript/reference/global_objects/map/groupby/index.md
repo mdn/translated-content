@@ -1,5 +1,5 @@
 ---
-title: "Map : méthode groupBy()"
+title: "Map : méthode statique groupBy()"
 short-title: groupBy()
 slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 l10n:
@@ -121,9 +121,9 @@ console.log(resultat.get(restock2));
 
 ## Voir aussi
 
-- [Prothèse d'émulation de `Map.groupBy` dans `core-js <sup>(angl.)</sup>`](https://github.com/zloirock/core-js#array-grouping)
-- [Prothèse d'émulation es-shims de `Map.groupBy <sup>(angl.)</sup>`](https://www.npmjs.com/package/map.groupby)
+- [Prothèse d'émulation de `Map.groupBy` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#array-grouping)
+- [Prothèse d'émulation es-shims de `Map.groupBy` <sup>(angl.)</sup>](https://www.npmjs.com/package/map.groupby)
 - Le guide [des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
 - La méthode {{JSxRef("Array.prototype.reduce()")}}
-- La méthode {{JSxRef("Map/Map", "Map()")}}
-- La méthode {{JSxRef("Object.groupBy()")}}
+- Le constructeur {{JSxRef("Map/Map", "Map()")}}
+- La méthode statique {{JSxRef("Object.groupBy()")}}

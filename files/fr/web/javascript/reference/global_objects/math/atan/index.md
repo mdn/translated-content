@@ -1,33 +1,36 @@
 ---
-title: Math.atan()
+title: "Math : méthode statique atan()"
+short-title: atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
+l10n:
+  sourceCommit: 0fb5a7e4cc045ba0b1dc453624f196309d9bea10
 ---
 
-{{JSRef}}
+La méthode statique **`Math.atan()`** retourne l'arc tangente (en radians) d'un nombre. C'est-à-dire,
 
-La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en radians. Elle est définie par :
+<math display="block">
+  <semantics><mrow><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚝𝚊𝚗</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>l'unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mtext>&nbsp;tel que&nbsp;</mtext><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{l'unique } y \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \text{ tel que } \tan(y) = x</annotation></semantics>
+</math>
 
-<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.atan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">arctan</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo>le seul<mspace width="thickmathspace"></mspace><mi>y</mi><mo>∊</mo><mrow><mo>[</mo><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>;</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><mo>]</mo></mrow><mspace width="thinmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.atan}(x)} = \arctan(x) = \text{ the unique } \; y \in \left[-\frac{\pi}{2}; \frac{\pi}{2}\right] \, \text{such that} \; \tan(y) = x</annotation></semantics></math>
-
-{{InteractiveExample("JavaScript Demo: Math.atan()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Math.atan()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// Calcul de l'angle d'un triangle rectangle en radians
 function calcAngle(opposite, adjacent) {
   return Math.atan(opposite / adjacent);
 }
 
 console.log(calcAngle(8, 10));
-// Expected output: 0.6747409422235527
+// Sortie attendue : 0.6747409422235527
 
 console.log(calcAngle(5, 3));
-// Expected output: 1.0303768265243125
+// Sortie attendue : 1.0303768265243125
 ```
 
 ## Syntaxe
 
-```js
-Math.atan(x);
+```js-nolint
+Math.atan(x)
 ```
 
 ### Paramètres
@@ -37,29 +40,25 @@ Math.atan(x);
 
 ### Valeur de retour
 
-L'arc tangente du nombre passé en argument (exprimé en radians).
+L'arc tangente (angle en radians compris entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> et <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>, inclus) de `x`. Si `x` est {{JSxRef("Infinity")}}, elle retourne <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>. Si `x` est `-Infinity`, elle retourne <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math>.
 
 ## Description
 
-La méthode `Math.atan()` renvoie une valeur numérique comprise entre <math><semantics><mrow><mo>-</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow><annotation encoding="TeX">-\frac{\pi}{2}</annotation></semantics></math> et <math><semantics><mfrac><mi>π</mi><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi}{2}</annotation></semantics></math>.
-
-`atan()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.atan()`, elle ne doit pas être utilisée comme une méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+Parce que `atan()` est une méthode statique de `Math`, vous l'utilisez toujours comme `Math.atan()`, plutôt qu'en tant que méthode d'un objet `Math` que vous auriez créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
-### Utiliser `Math.atan()`
+### Utiliser la méthode `Math.atan()`
 
 ```js
-Math.atan(1); // 0.7853981633974483
-Math.atan(0); // 0
+Math.atan(-Infinity); // -1.5707963267948966 (-π/2)
 Math.atan(-0); // -0
+Math.atan(0); // 0
+Math.atan(1); // 0.7853981633974483  (π/4)
+Math.atan(Infinity); // 1.5707963267948966  (π/2)
 
-Math.atan(Infinity); // 1.5707963267948966
-Math.atan(-Infinity); // -1.5707963267948966
-
-// L'angle formé entre la droite [(0,0);(x,y)] et l'axe des abscisses
-// dans un système de coordonnées cartésienne
-Math.atan(y / x);
+// L'angle que forme la droite [(0,0);(x,y)] avec l'axe des abscisses dans un système de coordonnées cartésiennes
+const theta = (x, y) => Math.atan(y / x);
 ```
 
 ## Spécifications
@@ -72,9 +71,10 @@ Math.atan(y / x);
 
 ## Voir aussi
 
-- {{jsxref("Math.acos()")}}
-- {{jsxref("Math.asin()")}}
-- {{jsxref("Math.atan2()")}}
-- {{jsxref("Math.cos()")}}
-- {{jsxref("Math.sin()")}}
-- {{jsxref("Math.tan()")}}
+- La méthode statique {{JSxRef("Math.acos()")}}
+- La méthode statique {{JSxRef("Math.asin()")}}
+- La méthode statique {{JSxRef("Math.atan2()")}}
+- La méthode statique {{JSxRef("Math.cos()")}}
+- La méthode statique {{JSxRef("Math.sin()")}}
+- La méthode statique {{JSxRef("Math.tan()")}}
+- La fonction CSS {{CSSxRef("atan()")}}
