@@ -107,7 +107,7 @@ tfoot td {
   - : 親要素内のテーブルの水平方向の配置を指定します。 {{Glossary("enumerated","列挙")}}値として、`left`、`center`、`right` があります。 この属性は非推奨であるため、代わりに CSS の {{cssxref("margin-inline-start")}} および {{cssxref("margin-inline-end")}} プロパティを使用してください。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("color_value", "&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
+  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `border` {{deprecated_inline}}
   - : 表を囲む枠のサイズを非負の整数（ピクセル単位）で定義します。`0` に設定すると、[`frame`](#frame)属性は無効になります。この属性は非推奨であるため、代わりに CSS の プロパティの {{cssxref("border")}} を使用してください。

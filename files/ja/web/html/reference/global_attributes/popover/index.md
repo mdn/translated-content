@@ -73,5 +73,5 @@ JavaScript を使用して制御することもできます。例えば、{{domx
 - {{domxref("Popover API", "ポップオーバー API", "", "nocode")}}
 - HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性
 - HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性
-- CSS の [`::backdrop`](/ja/docs/Web/CSS/Reference/Selectors/::backdrop) 擬似要素
-- CSS の [`:popover-open`](/ja/docs/Web/CSS/Reference/Selectors/:popover-open) 擬似クラス
+- CSS の {{cssxref("::backdrop")}} 擬似要素
+- CSS の {{cssxref(":popover-open")}} 擬似クラス

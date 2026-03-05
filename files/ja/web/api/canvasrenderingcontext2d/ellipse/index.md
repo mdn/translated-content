@@ -1,16 +1,20 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
+title: "CanvasRenderingContext2D: ellipse() メソッド"
+short-title: ellipse()
 slug: Web/API/CanvasRenderingContext2D/ellipse
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.ellipse()`** はキャンバス 2D API のメソッドで、現在のサブパスに楕円の弧を追加します。
 
 ## 構文
 
-```js
-void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, counterclockwise]);
+```js-nolint
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)
+ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise)
 ```
 
 `ellipse()` メソッドは `(x, y)` を中心として、 `radiusX` と `radiusY` を半径とする楕円の弧を生成します。パスは `startAngle` から始まって `endAngle` で終わり、回転方向は `anticlockwise` で指定します（既定では時計回りです）。
@@ -28,17 +32,21 @@ void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, count
 - `rotation`
   - : 楕円の傾きで、ラジアンで表現します。
 - `startAngle`
-  - : 楕円が始まる角度で、正の X 軸から時計回りの角度をラジアンで表現したものです。
+  - : 楕円が始まる[離心角](https://ja.wikipedia.org/wiki/離心近点角)で、正の X 軸から時計回りの角度をラジアンで表現したものです。
 - `endAngle`
-  - : 楕円が終わる角度で、正の X 軸から時計回りの角度をラジアンで表現したものです。
+  - : 楕円が終わる[離心角](https://ja.wikipedia.org/wiki/離心近点角)で、正の X 軸から時計回りの角度をラジアンで表現したものです。
 - `counterclockwise` {{optional_inline}}
-  - : 省略可能な論理値で、 `true` の場合は楕円を反時計回りに描きます。既定値は `false` (時計回り) です。
+  - : オプションの論理値で、 `true` の場合は楕円を反時計回りに描きます。デフォルト値は `false` (時計回り) です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
 ### 完全な楕円の描画
 
-この例は、 π/4 ラジアンの角度 (45**°**) で楕円を描きます。楕円全体を描くには、弧が 0 ラジアン (0**°**) で始まり、 2π ラジアン (360**°**) で終わるようにします。
+この例は、 π/4 ラジアンの角度 (45°) で楕円を描きます。楕円全体を描くには、弧が 0 ラジアン (0°) で始まり、 2π ラジアン (360°) で終わるようにします。
 
 #### HTML
 
@@ -57,7 +65,7 @@ ctx.beginPath();
 ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
 ctx.stroke();
 
-// Draw the ellipse's line of reflection
+// 楕円の反射線を描画
 ctx.beginPath();
 ctx.setLineDash([5, 5]);
 ctx.moveTo(0, 200);
@@ -71,7 +79,7 @@ ctx.stroke();
 
 ### 様々な楕円の弧
 
-この例では、様々な属性の3本の楕円のパスを生成します。
+この例では、様々な属性の 3 本の楕円のパスを生成します。
 
 #### HTML
 
