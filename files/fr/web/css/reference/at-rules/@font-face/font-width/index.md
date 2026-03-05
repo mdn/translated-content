@@ -1,7 +1,6 @@
 ---
 title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
-page-type: css-at-rule-descriptor
 l10n:
   sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
 ---
