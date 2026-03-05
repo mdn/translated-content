@@ -2,7 +2,7 @@
 title: "<summary> : l'élément de révélation d'un résumé"
 slug: Web/HTML/Reference/Elements/summary
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
