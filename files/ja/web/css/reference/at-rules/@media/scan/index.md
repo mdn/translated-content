@@ -1,9 +1,8 @@
 ---
 title: scan
 slug: Web/CSS/Reference/At-rules/@media/scan
-original_slug: Web/CSS/@media/scan
 l10n:
-  sourceCommit: 6da4cf5ad98eff4a623db03164549c4f2e3b001a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器のスキャンプロセスに基づいて CSS スタイルを適用するために使用されます。
