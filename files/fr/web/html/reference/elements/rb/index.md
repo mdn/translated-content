@@ -2,7 +2,7 @@
 title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Reference/Elements/rb
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
 ---
 
 {{Deprecated_Header}}
@@ -111,3 +111,4 @@ Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemp
 - L'élément {{HTMLElement("rt")}}
 - L'élément {{HTMLElement("rp")}}
 - L'élément {{HTMLElement("rtc")}}
+- Le module [de mise en page CSS ruby](/fr/docs/Web/CSS/Guides/Ruby_layout)
