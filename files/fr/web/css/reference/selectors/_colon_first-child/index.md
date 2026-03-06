@@ -2,7 +2,7 @@
 title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.
@@ -65,14 +65,15 @@ li:first-child {
   </p>
   <p>
     En revanche, ce paragraphe n'est pas mis en forme car ce n'est pas le
-    premier !
+    premier&nbsp;!
   </p>
 </div>
 
 <div>
   <h2>Ce titre h2 n'est pas mis en forme car ce n'est pas un paragraphe.</h2>
   <p>
-    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier fils !
+    Et ce paragraphe n'est pas mis en forme car ce n'est pas le premier
+    fils&nbsp;!
   </p>
 </div>
 ```
@@ -89,7 +90,7 @@ p:first-child {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_simple', 500, 200)}}
+{{EmbedLiveSample("Exemple simple", 500, 200)}}
 
 ### Utiliser les listes non ordonnées
 
