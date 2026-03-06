@@ -1,28 +1,26 @@
 ---
-title: Sélecteurs descendant
+title: Combinateur de descendant
 slug: Web/CSS/Reference/Selectors/Descendant_combinator
-original_slug: Web/CSS/Descendant_combinator
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{CSSRef}}
-
-Le **combinateur de descendance**, représenté par un blanc (ou plusieurs blancs à la suite) permet de combiner deux sélecteurs (sous la forme `sélecteur₁ sélecteur₂`) afin de cibler les éléments qui correspondent au second sélecteur uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur. Les sélecteurs qui utilisent ce combinateur sont souvent appelés des sélecteurs de descendants.
+Le **combinateur de descendant** — généralement représenté par un seul caractère espace («&nbsp;») — combine deux sélecteurs de sorte que les éléments correspondant au second sélecteur sont sélectionnés s'ils ont un ancêtre (parent, parent du parent, parent du parent du parent, etc.) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur de descendant sont appelés _sélecteurs de descendant_.
 
 ```css
-/* Les éléments <li> qui sont des descendants */
-/* d'un <ul class="mon-truc"> */
+/* Les éléments <li> qui sont des descendants d'une liste "mon-truc" */
 ul.mon-truc li {
   margin: 2em;
 }
 ```
 
-Techniquement, le combinateur de descendance est représenté par un ou plusieurs blancs (les caractères qui sont des blancs sont : l'espace, le retour chariot, le saut de ligne, la tabulation verticale, la tabulation horizontale) entre deux sélecteurs lorsqu'il n'y a aucun autre combinateur. Les blancs utilisés pour le combinateur peuvent éventuellement contenir des commentaires CSS.
+Techniquement, le combinateur de descendant est constitué d'un ou plusieurs caractères d'espacement {{Glossary("CSS")}} — le caractère espace et/ou l'un des quatre caractères de contrôle&nbsp;: retour chariot, saut de page, saut de ligne et tabulation — placés entre deux sélecteurs en l'absence d'un autre combinateur. De plus, les caractères d'espacement qui composent le combinateur peuvent contenir n'importe quel nombre de commentaires CSS.
 
 ## Syntaxe
 
 ```css
-selecteur1 selecteur2 {
-  /* déclarations CSS */
+selector1 selector2 {
+  /* propriétés de style */
 }
 ```
 
@@ -63,7 +61,7 @@ li li {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Exemples", "100%", 160)}}
 
 ## Spécifications
 
