@@ -1,53 +1,68 @@
 ---
-title: PerformanceNavigationTiming.unloadEventStart
+title: "PerformanceNavigationTiming : propriété unloadEventStart"
+short-title: unloadEventStart
 slug: Web/API/PerformanceNavigationTiming/unloadEventStart
+l10n:
+  sourceCommit: 62708f419bc2b77535822fd9f9b0fd0912fd2014
 ---
 
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
+{{APIRef("Performance API")}}
 
-La propriété en lecture seule **`unloadEventStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne commence l'événement de déchargement du document précédent. S'il n'y a pas de document précédent, cette propriété renvoie `0`.
+La propriété en lecture seule **`unloadEventStart`** retourne un objet {{DOMxRef("DOMHighResTimeStamp")}} représentant le temps immédiatement avant que le gestionnaire d'évènements {{DOMxRef("Window/unload_event", "unload")}} du document précédent ne commence.
 
-## Syntaxe
+## Valeur
+
+La propriété `unloadEventStart` peut avoir les valeurs suivantes&nbsp;:
+
+- Un objet {{DOMxRef("DOMHighResTimeStamp")}} représentant le temps immédiatement avant que le gestionnaire d'évènements {{DOMxRef("Window/unload_event", "unload")}} du document précédent ne démarre.
+- `0` s'il n'y a pas de document précédent.
+- `0` si la page précédente était sur une autre origine.
+
+## Exemples
+
+### Mesurer le temps d'exécution du gestionnaire d'évènements `unload`
+
+La propriété `unloadEventStart` peut être utilisée pour mesurer combien de temps il faut pour traiter le gestionnaire d'évènements {{DOMxRef("Window/unload_event", "unload")}}.
+
+Cela est utile pour mesurer le temps d'exécution des gestionnaires d'évènements {{DOMxRef("Window/unload_event", "unload")}} de longue durée.
 
 ```js
-perfEntry.unloadEventStart;
+window.addEventListener("unload", (event) => {
+  // Du code de longue durée
+});
 ```
 
-### Valeur de retour
-
-Un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne lance l'événement de déchargement du document précédent.
-
-## Exemple
-
-L'exemple suivant illustre l'utilisation de cette propriété.
+Exemple utilisant un {{DOMxRef("PerformanceObserver")}}, qui notifie des nouvelles entrées de performance `navigation` au fur et à mesure qu'elles sont enregistrées dans la timeline de performance du navigateur. Utilisez l'option `buffered` pour accéder aux entrées avant la création de l'observateur.
 
 ```js
-function print_nav_timing_data() {
-  // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let perfEntries = performance.getEntriesByType("navigation");
+const observateur = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entree) => {
+    const tempsEventUnload = entree.unloadEventEnd - entree.unloadEventStart;
+    if (tempsEventUnload > 0) {
+      console.log(
+        `${entree.name} :
+          temps d'exécution du gestionnaire d'évènements unload :
+          ${tempsEventUnload}ms`,
+      );
+    }
+  });
+});
 
-  for (let i = 0; i < perfEntries.length; i++) {
-    console.log("= Entrée de navigation : entry[" + i + "]");
-    let p = perfEntries[i];
-    // propriétés du DOM
-    console.log(
-      "Contenu du DOM chargé = " +
-        (p.domContentLoadedEventEnd - p.domContentLoadedEventStart),
-    );
-    console.log("Contenu du DOM complet = " + p.domComplete);
-    console.log("Contenu du DOM interactif = " + p.interactive);
+observateur.observe({ type: "navigation", buffered: true });
+```
 
-    // temps de chargement et de déchargement des documents
-    console.log("Document chargé = " + (p.loadEventEnd - p.loadEventStart));
-    console.log(
-      "Document déchargé = " + (p.unloadEventEnd - p.unloadEventStart),
-    );
+Exemple utilisant {{DOMxRef("Performance.getEntriesByType()")}}, qui ne montre que les entrées de performance `navigation` présentes dans la timeline de performance du navigateur au moment où vous appelez cette méthode&nbsp;:
 
-    // autres propriétés
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+```js
+const entrees = performance.getEntriesByType("navigation");
+entrees.forEach((entree) => {
+  const tempsEventUnload = entree.unloadEventEnd - entree.unloadEventStart;
+  if (tempsEventUnload > 0) {
+    console.log(`${entree.name} :
+      temps d'exécution du gestionnaire d'évènements unload :
+      ${tempsEventUnload}ms`);
   }
-}
+});
 ```
 
 ## Spécifications
@@ -57,3 +72,7 @@ function print_nav_timing_data() {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'évènement {{DOMxRef("Window/unload_event", "unload")}}

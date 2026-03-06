@@ -2,7 +2,7 @@
 title: "<menu> : l'élément de menu"
 slug: Web/HTML/Reference/Elements/menu
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à {{HTMLElement("ul")}}, mais il est traité par les navigateurs (et exposé dans l'arbre d'accessibilité) comme identique à {{HTMLElement("ul")}}. Il représente une liste non ordonnée d'éléments (représentés par des éléments {{HTMLElement("li")}}).

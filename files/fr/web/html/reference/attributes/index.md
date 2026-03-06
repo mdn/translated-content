@@ -2,9 +2,8 @@
 title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: baa785abec7bc852b909f1c827510731ada5ff4f
+  sourceCommit: ca28b2bcdde45055e29c568c981fcde0684fba3b
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -553,6 +552,17 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
       <td>
         Indique qu'un élément est marqué pour le suivi par des objets {{DOMxRef("PerformanceObserver")}} utilisant le type <code>"element"</code>. Pour plus de détails, voir l'interface {{DOMxRef("PerformanceElementTiming")}}.
       </td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/fetchpriority">fetchpriority</a></code>
+      </td>
+      <td>
+        {{HTMLElement("img")}},
+        {{HTMLElement("link")}},
+        {{HTMLElement("script")}}
+      </td>
+      <td>Signale que le téléchargement d'une image particulière tôt dans le processus de chargement a plus ou moins d'impact sur l'expérience utilisateur que ce qu'un navigateur peut raisonnablement déduire lors de l'attribution d'une priorité interne.</td>
     </tr>
     <tr>
       <td>
@@ -1454,6 +1464,26 @@ Pour être tout à fait explicite, les valeurs `"true"` et `"false"` ne sont pas
 
 > [!WARNING]
 > L'utilisation des attributs de contenu du gestionnaire d'événements est déconseillée. Le mélange de HTML et de JavaScript produit souvent du code impossible à maintenir, et l'exécution des attributs du gestionnaire d'événements peut également être bloquée par les politiques de sécurité du contenu.
+
+> [!WARNING]
+> Bien que cela ne soit pas visible en appelant la méthode `Function.prototype.toString()` sur le gestionnaire, les attributs du gestionnaire d'évènements enveloppent implicitement le code à l'intérieur de 2 instructions `with`, et peuvent produire des résultats inattendus. Par exemple&nbsp;:
+>
+> ```html
+> <div onclick="console.log(new URL(location))">Mauvais exemple</div>
+> ```
+>
+> Cela devient essentiellement&nbsp;:
+>
+> ```js example-bad
+> function onclick(event) {
+>   with (this.ownerDocument) {
+>     with (this) {
+>       console.log(new URL(location)); // 'URL' fait maintenant référence à document.URL au lieu de window.URL
+>       // TypeError: URL is not a constructor
+>     }
+>   }
+> }
+> ```
 
 En plus des attributs répertoriés dans le tableau ci-dessus, les [gestionnaires d'événements](/fr/docs/Web/API/Document_Object_Model/Events#utilisation_des_propriété_onevent) globaux — tel que [`onclick`](/fr/docs/Web/API/Element/click_event) — peuvent également être définis comme étant des [attributs du contenu](#attribut_de_contenu_ou_attribut_idl) sur tous les éléments.
 

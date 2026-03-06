@@ -1,14 +1,13 @@
 ---
 title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
-original_slug: Web/CSS/background-attachment
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`background-attachment`** définit si la position d'une image d'arrière-plan est fixe par rapport à la {{Glossary("viewport", "zone d'affichage")}}, ou si elle défile avec son bloc englobant.
 
-La propriété **`background-attachment`** définit si la position de l'image d'arrière-plan est fixée dans la zone d'affichage (<i lang="en">viewport</i>) ou si celle-ci défile avec le bloc englobant.
-
-{{InteractiveExample("CSS Demo: background-attachment")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: background-attachment")}}
 
 ```css interactive-example-choice
 background-attachment: scroll;
@@ -33,16 +32,18 @@ background-attachment: scroll, local;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
-    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
-    Implacable November weather. As much mud in the streets as if the waters had
-    but newly retired from the face of the earth, and it would not be wonderful
-    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
-    lizard up Holborn Hill.
+    Londres. La session de Michaelmas venait de se terminer et le Lord
+    Chancelier siégeait dans Lincoln's Inn Hall. Un temps de novembre
+    implacable. Autant de boue dans les rues comme si les eaux venaient à peine
+    de se retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, d'une quarantaine de pieds de long environ, se
+    dandinant comme un lézard pachydermique sur Holborn Hill. Londres. La
+    session de Michaelmas venait de se terminer et le Lord Chancelier siégeait
+    dans Lincoln's Inn Hall. Un temps de novembre implacable. Autant de boue
+    dans les rues comme si les eaux venaient à peine de se retirer de la surface
+    de la terre, et il ne serait pas étonnant de rencontrer un Megalosaurus,
+    d'environ quarante pieds de long, se dandinant comme un lézard pachydermique
+    sur Holborn Hill.
   </div>
 </section>
 ```
@@ -69,8 +70,8 @@ body {
   overflow: auto;
   padding: 20px;
   text-shadow:
-    0 0 0.6rem #000,
-    0 0 0.6rem #000;
+    0 0 0.6rem black,
+    0 0 0.6rem black;
 }
 ```
 
@@ -94,7 +95,7 @@ La propriété `background-attachment` est définie avec un des mots-clés de la
 ### Valeurs
 
 - `fixed`
-  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i>). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec [`background-clip: text`](/fr/docs/Web/CSS/Reference/Properties/background-clip)).
+  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec [`background-clip: text`](/fr/docs/Web/CSS/Reference/Properties/background-clip)).
 - `local`
   - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
 - `scroll`
@@ -102,15 +103,26 @@ La propriété `background-attachment` est définie avec un des mots-clés de la
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Exemple simple
+
+#### HTML
+
+```html
+<p>
+  Il y avait des portes tout autour du hall, mais elles étaient toutes fermées à
+  clé&nbsp;; et quand Alice eut parcouru tout un côté puis l'autre, essayant
+  chaque porte, elle marcha tristement au milieu, se demandant comment elle
+  allait bien pouvoir sortir.
+</p>
+```
 
 #### CSS
 
@@ -121,23 +133,33 @@ p {
 }
 ```
 
+#### Résultat
+
+{{EmbedLiveSample("Exemple simple")}}
+
+### Gestion de plusieurs arrière-plans
+
+Cette propriété prend en charge plusieurs images d'arrière-plan. Vous pouvez définir une valeur `<attachment>` différente pour chaque image, séparées par des virgules. Chaque image est associée au type `<attachment>` correspondant, de la première à la dernière.
+
 #### HTML
 
 ```html
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  Il y avait des portes tout autour du hall, mais elles étaient toutes fermées à
+  clé&nbsp;; et quand Alice eut parcouru tout un côté puis l'autre, essayant
+  chaque porte, elle marcha tristement au milieu, se demandant comment elle
+  allait bien pouvoir sortir. Soudain, elle tomba sur une petite table à trois
+  pieds, entièrement en verre massif&nbsp;; il n'y avait rien dessus sauf une
+  minuscule clé dorée, et la première pensée d'Alice fut qu'elle pouvait
+  appartenir à l'une des portes du hall&nbsp;; mais, hélas&nbsp;! soit les
+  serrures étaient trop grandes, soit la clé était trop petite, mais en tout cas
+  elle ne put en ouvrir aucune. Cependant, lors de son second passage, elle
+  découvrit un petit rideau qu'elle n'avait pas remarqué auparavant, et derrière
+  se trouvait une petite porte d'environ quinze pouces de haut&nbsp;: elle
+  essaya la petite clé dorée dans la serrure, et à sa grande joie, elle
+  s'adapta&nbsp;!
 </p>
 ```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_simple")}}
-
-### Gestion de plusieurs arrière-plans
-
-On peut utiliser cette propriété lorsqu'on travaille avec plusieurs images en arrière-plan. On peut définir, pour chaque image, un `background-attachment` spécifique. Pour cela, on utilisera une liste, séparée par des virgules. Les images seront associées dans l'ordre à chaque propriété d'attachement.
 
 #### CSS
 
@@ -149,27 +171,9 @@ p {
 }
 ```
 
-#### HTML
-
-```html
-<p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
-</p>
-```
-
 #### Résultat
 
-{{EmbedLiveSample("")}}
+{{EmbedLiveSample("Gestion de plusieurs arrière-plans")}}
 
 ## Spécifications
 
@@ -181,4 +185,4 @@ p {
 
 ## Voir aussi
 
-- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

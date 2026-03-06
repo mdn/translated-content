@@ -441,7 +441,7 @@ h1 {
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-この[ビューポート](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
+この[ビューポート](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)メタタグは、モバイルブラウザーに、ビューポートの幅を端末の幅に設定し、文書を意図したサイズの 100% にスケーリングするよう指示します。 これにより、文書はモバイル向けに最適化されたサイズで表示されます。
 
 なぜこれが必要なのでしょうか？ モバイルブラウザーは、ビューポートの幅について嘘をつく傾向があるためです。
 
