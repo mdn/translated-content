@@ -1,9 +1,8 @@
 ---
 title: orientation
 slug: Web/CSS/Reference/At-rules/@media/orientation
-original_slug: Web/CSS/@media/orientation
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`orientation`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}} (または[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)ではページボックス) の向きを調べるために使用することができます。

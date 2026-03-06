@@ -28,7 +28,7 @@ l10n:
 `inert` 属性は、オフスクリーンや非表示にすべき要素にも追加することができます。不活性な要素は、その子孫とともに、タブ順序とアクセシビリティツリーから取り除かれます。
 
 > [!NOTE]
-> `inert` はグローバルな属性であり、どんな要素にも使用することができますが、一般的にはコンテンツのセクションに使用されます。個々のコントロールを「不活性」にするには、代わりに [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性と CSS の [`:disabled`](/ja/docs/Web/CSS/Reference/Selectors/:disabled) スタイルを使用することを検討してください。
+> `inert` はグローバルな属性であり、どんな要素にも使用することができますが、一般的にはコンテンツのセクションに使用されます。個々のコントロールを「不活性」にするには、代わりに [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性と CSS の {{cssxref(":disabled")}} スタイルを使用することを検討してください。
 
 ## アクセシビリティの考慮
 

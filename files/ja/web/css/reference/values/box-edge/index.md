@@ -1,12 +1,11 @@
 ---
 title: <box-edge>
 slug: Web/CSS/Reference/Values/box-edge
-original_slug: Web/CSS/box-edge
 l10n:
-  sourceCommit: 3a1ad1fcf1a399211b333eed524fe9df13bdb62b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`<box-edge>`** 値型は[ボックス端](/ja/docs/Web/CSS/Guides/Box_model/Introduction)のキーワード、例えば [`content-box`](#content-box) や [`border-box`](#border-box) を表します。 box-edge キーワードは、要素のボックスモデルのさまざまな側面や、要素が画面にどのように位置指定され描画されるかを定義するために使用します。
+**`<box-edge>`** 値型は[ボックスの縁](/ja/docs/Web/CSS/Guides/Box_model/Introduction)のキーワード、例えば [`content-box`](#content-box) や [`border-box`](#border-box) を表します。 box-edge キーワードは、要素のボックスモデルのさまざまな側面や、要素が画面にどのように位置指定され描画されるかを定義するために使用します。
 
 box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>`, `<geometry-box>` データ型の成分ですが、これらに限定されません。これらの型は {{cssxref("transform-box")}} や {{cssxref("background-clip")}} などのプロパティで適用されます。
 
@@ -14,15 +13,15 @@ box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coo
 
 ```plain
 <visual-box> = content-box | padding-box | border-box /* 3 つの <box> 値 */
-<layout-box> = <box> | margin-box /* <shape-box> 値 */
-<paint-box> = <box> | fill-box | stroke-box
-<coord-box> = <box> | fill-box | stroke-box | view-box
+<layout-box> = <visual-box> | margin-box /* <shape-box> 値 */
+<paint-box> = <visual-box> | fill-box | stroke-box
+<coord-box> = <paint-box> | fill-box | stroke-box | view-box
 <geometry-box> = <shape-box> | fill-box | stroke-box | view-box
 ```
 
 ### 値
 
-`<box-edge>` は `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>`, `<geometry-box>` のいずれかの型になることができます。
+`<box-edge>` は `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coord-box>`, `<geometry-box>` のいずれかの型を取ります。
 
 - `<visual-box>`
   - : ウェブページ上で、要素のためにユーザーから見えるように生成された矩形のボックスを指します。要素のコンテンツ、パディング、境界線を記載します。 `<box>` とも呼ばれ、この値はマージン領域を除きます。この値型は {{cssxref("background-clip")}}と{{cssxref("overflow-clip-margin")}} プロパティで使用されます。
@@ -62,7 +61,7 @@ box-edge キーワードは `<visual-box>`, `<layout-box>`, `<paint-box>`, `<coo
   - : SVG におけるストロークの外接ボックスを参照します。 CSS では `stroke-box` は `border-box` として扱われます。ストロークを適用した際の要素の図形を定義するために使用します。
 
 - `view-box`
-  - : 最も近い SVG ビューポート要素の 元ボックスを参照します。元ボックスは、その要素の {{svgattr("viewBox")}} 属性によって確立された初期 SVG ユーザー座標系の幅と高さを持つ長方形です。元ボックスは、その左上隅がその[座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)の原点に固定されるように配置されます。 CSS では `view-box` は `border-box` として扱われます。
+  - : 最も近い SVG ビューポート要素の元ボックスを参照します。元ボックスは、その要素の {{svgattr("viewBox")}} 属性によって確立された初期 SVG ユーザー座標系の幅と高さを持つ矩形です。元ボックスは、その左上隅がその[座標系](/ja/docs/Web/API/CSSOM_view_API/Coordinate_systems)の原点に固定されるように配置されます。 CSS では `view-box` は `border-box` として扱われます。
     > [!NOTE]
     > SVG ビューポートが原点に固定されていない場合、元ボックスは SVG ビューポートに対応しません。
 

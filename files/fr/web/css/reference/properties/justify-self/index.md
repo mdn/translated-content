@@ -1,14 +1,13 @@
 ---
 title: justify-self
 slug: Web/CSS/Reference/Properties/justify-self
-original_slug: Web/CSS/justify-self
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.
 
-La propriété CSS **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.
-
-{{InteractiveExample("CSS Demo: justify-self")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: justify-self")}}
 
 ```css interactive-example-choice
 justify-self: stretch;
@@ -29,9 +28,9 @@ justify-self: end;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+    <div class="transition-all" id="example-element">Un</div>
+    <div>Deux</div>
+    <div>Trois</div>
   </div>
 </section>
 ```
@@ -47,18 +46,18 @@ justify-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
 
-L'effet de cette propriété varie selon le mode de disposition utilisé :
+L'effet de cette propriété dépend du mode de disposition utilisé&nbsp;:
 
-- Pour les dispositions de bloc : elle permet d'aligner un élément sur l'axe en ligne par rapport à son bloc englobant.
-- Pour les éléments positionnés de façon absolue : elle permet d'aligner un élément dans le bloc englobant par rapport à l'axe en ligne en prenant en compte les valeurs de décalage pour les côtés haut, gauche, bas et droit.
-- Pour les dispositions des cellules de tableau : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)).
-- Pour les dispositions flexibles : cette propriété est ignorée ([en savoir plus](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox)).
-- Pour les dispositions avec les grilles : cette propriété permet d'aligner un objet sur l'axe en ligne sur la zone de grille à laquelle il appartient ([en savoir plus](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)).
+- Pour les dispositions de bloc, elle aligne un élément à l'intérieur de son bloc englobant sur l'axe en ligne.
+- Pour les éléments positionnés de façon absolue, elle aligne un élément à l'intérieur de son bloc englobant sur l'axe en ligne, en tenant compte des valeurs de décalage haut, gauche, bas et droite.
+- Pour les dispositions des cellules de tableau, cette propriété est _ignorée_. Voir [l'alignement dans les dispositions de bloc, positionnées absolument et les tableaux](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
+- Pour les dispositions flexibles, cette propriété est _ignorée_. Voir [l'alignement en flexbox](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox).
+- Pour les grilles, elle aligne un élément à l'intérieur de sa zone de grille sur l'axe en ligne. Voir [l'alignement en disposition grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout).
 
 ## Syntaxe
 
@@ -78,6 +77,7 @@ justify-self: self-start;
 justify-self: self-end;
 justify-self: left; /* L'élément est aligné à gauche */
 justify-self: right; /* L'élément est aligné à droite */
+justify-self: anchor-center;
 
 /* Alignement par rapport à la ligne de base */
 justify-self: baseline;
@@ -91,27 +91,29 @@ justify-self: unsafe center;
 /* Valeurs globales */
 justify-self: inherit;
 justify-self: initial;
+justify-self: revert;
+justify-self: revert-layer;
 justify-self: unset;
 ```
 
-Cette propriété peut être définie selon trois formes différentes :
+Cette propriété peut être définie selon trois formes différentes&nbsp;:
 
-- Grâce à un mot-clé : `normal`, `auto` ou `stretch`.
-- Relativement à la ligne de base : dans ce cas, on a le mot-clé `baseline` éventuellement suivi de `first` ou de `last`
-- Grâce à un positionnement :
-  - Un mot-clé parmi : `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left` ou `right`
-  - Puis éventuellement `safe` ou `unsafe`
+- Grâce à un mot-clé&nbsp;: `normal`, `auto` ou `stretch`.
+- Relativement à la ligne de base&nbsp;: dans ce cas, on a le mot-clé `baseline` éventuellement suivi de `first` ou de `last`.
+- Grâce à un positionnement&nbsp;:
+  - Un mot-clé parmi&nbsp;: `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left` ou `right`.
+  - Puis éventuellement `safe` ou `unsafe`.
 
 ### Valeurs
 
 - `auto`
   - : La valeur utilisée est celle de la propriété `justify-items` définie pour la boîte parente. Si la boîte n'a pas de parent ou est positionnée de façon absolue, `auto` sera synonyme de `normal`.
 - `normal`
-  - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé :
+  - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé&nbsp;:
     - Pour une disposition en bloc, `normal` est synonyme de `start`.
     - Pour les dispositions avec un positionnment absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
-    - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est ignorée.
-    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est ignorée*.*
+    - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est _ignorée_.
+    - Pour les dispositions qui utilisent les boîtes flexibles, ce mot-clé n'a pas de signification car cette propriété est _ignorée_.
     - Pour les dispositions qui utilisent une grille, ce mot-clé aura un comportement proche de `stretch`, sauf pour les boîtes qui ont des dimensions intrinsèques, dans ce cas, il est synonyme de `start`.
 
 - `start`
@@ -119,11 +121,9 @@ Cette propriété peut être définie selon trois formes différentes :
 - `end`
   - : L'élément est aligné vers la fin du conteneur pour l'axe en ligne.
 - `flex-start`
-  - : L'élément est aligné vers le début du conteneur flexible pour l'axe en ligne.
-    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `start`.
+  - : Pour les éléments qui ne sont pas enfants d'un conteneur flexible, cette valeur est traitée comme `start`.
 - `flex-end`
-  - : L'élément est aligné vers la fin du conteneur flexible pour l'axe en ligne.
-    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `end`.
+  - : Pour les éléments qui ne sont pas enfants d'un conteneur flexible, cette valeur est traitée comme `end`.
 - `self-start`
   - : L'élément est aligné sur le bord du conteneur au début de l'axe en ligne.
 - `self-end`
@@ -134,77 +134,93 @@ Cette propriété peut être définie selon trois formes différentes :
   - : L'élément est aligné vers la gauche du conteneur dans le sens de l'axe en ligne.
 - `right`
   - : L'élément est aligné vers la droite du conteneur dans le sens de l'axe en ligne.
-- `baseline first baseline`
-  `last baseline`
+- `baseline`, `first baseline`, `last baseline`
   - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
     Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
 - `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en ligne, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en ligne, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+- `anchor-center`
+  - : Dans le cas des éléments [positionnés avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning), aligne l'élément au centre de l'élément d'ancre associé dans la direction en ligne. Voir [Centrer sur l'ancre avec `anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_avec_anchor-center).
 - `safe`
   - : Si la taille de l'élément dépasse du conteneur pour la valeur d'alignement indiquée, l'élément est alors aligné comme si la valeur `start` avait été utilisée.
 - `unsafe`
   - : Quelle que soit la taille de l'élément par rapport au conteneur (il peut dépasser), la valeur fournie pour indiquer l'alignement est respectée.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
 ## Exemples
 
-### CSS
+### Démonstration simple
 
-```css hidden
-* {
-  box-sizing: border-box;
-}
+Dans l'exemple suivant, nous avons une disposition en grille 2 x 2. Initialement, le conteneur de grille reçoit une valeur `justify-items` de `stretch` — la valeur par défaut — ce qui fait que les éléments de la grille s'étendent sur toute la largeur de leurs cellules.
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
-}
+Les deuxième, troisième et quatrième éléments de la grille reçoivent ensuite différentes valeurs de `justify-self`, pour montrer comment celles-ci remplacent la valeur de `justify-items`. Ces valeurs font que les éléments de la grille n'occupent que la largeur de leur contenu et s'alignent à différents endroits dans leurs cellules.
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
-}
-```
-
-```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(2, 100px);
-  height: 300px;
-  width: 300px;
-  grid-gap: 10px;
-  align-content: space-between;
-}
-.item1 {
-  justify-self: start;
-}
-.item3 {
-  justify-self: end;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<div class="wrapper">
-  <div class="item1">Objet 1</div>
-  <div class="item2">Objet 2</div>
-  <div class="item3">Objet 3</div>
-  <div class="item4">Objet 4</div>
-</div>
+<article class="container">
+  <span>Premier enfant</span>
+  <span>Deuxième enfant</span>
+  <span>Troisième enfant</span>
+  <span>Quatrième enfant</span>
+</article>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples', '300', '300')}}
+```css
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+  letter-spacing: 1px;
+}
+
+article {
+  background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  margin: 20px;
+  width: 300px;
+  justify-items: stretch;
+}
+
+span:nth-child(2) {
+  justify-self: start;
+}
+
+span:nth-child(3) {
+  justify-self: center;
+}
+
+span:nth-child(4) {
+  justify-self: end;
+}
+
+article span {
+  background-color: black;
+  color: white;
+  margin: 1px;
+  text-align: center;
+}
+
+article,
+span {
+  padding: 10px;
+  border-radius: 7px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Démonstration simple", "100%", 200)}}
 
 ## Spécifications
 
@@ -216,6 +232,8 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Voir aussi
 
-- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
-- La propriété {{cssxref("justify-items")}}
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- La propriété {{CSSxRef("justify-items")}}
+- La propriété {{CSSxRef("align-self")}}
+- La propriété {{CSSxRef("place-self")}}

@@ -1,20 +1,13 @@
 ---
 title: border-top
 slug: Web/CSS/Reference/Properties/border-top
-original_slug: Web/CSS/border-top
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-top`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) supérieure d'un élément.
 
-La propriété CSS **`border-top`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de paramétrer la bordure haute d'un élément.
-
-C'est une propriété raccourcie qui permet de définir les valeurs de :
-
-- {{cssxref("border-top-width")}},
-- {{cssxref("border-top-style")}},
-- {{cssxref("border-top-color")}}.
-
-{{InteractiveExample("CSS Demo: border-top")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-top")}}
 
 ```css interactive-example-choice
 border-top: solid;
@@ -33,47 +26,34 @@ border-top: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+border-top: 4mm ridge rgb(211 220 50 / 0.6);
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-> [!NOTE]
-> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
->
-> Comme pour les autres propriétés raccourcies, `border-top` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
->
-> ```css
-> border-top-style: dotted;
-> border-top: thick green;
-> ```
->
-> est équivalent à :
->
-> ```css
-> border-top-style: dotted;
-> border-top: none thick green;
-> ```
->
-> et la valeur {{cssxref("border-top-style")}} fournie avant `border-top` est ignorée.
->
-> La valeur par défaut de {{cssxref("border-top-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("border-top-color")}}
+- {{CSSxRef("border-top-style")}}
+- {{CSSxRef("border-top-width")}}
 
 ## Syntaxe
 
@@ -81,6 +61,13 @@ border-top: 4mm ridge rgba(211, 220, 50, 0.6);
 border-top: 1px;
 border-top: 2px dotted;
 border-top: medium dashed green;
+
+/* Valeurs globales */
+border-top: inherit;
+border-top: initial;
+border-top: revert;
+border-top: revert-layer;
+border-top: unset;
 ```
 
 Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe quel ordre et une voire deux valeurs peuvent être omises.
@@ -88,11 +75,11 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 ### Valeurs
 
 - `<br-width>`
-  - : Voir {{cssxref("border-top-width")}}.
+  - : Voir {{CSSxRef("border-top-width")}}.
 - `<br-style>`
-  - : Voir {{cssxref("border-top-style")}}.
-- `<color>`
-  - : Voir {{cssxref("border-top-color")}}.
+  - : Voir {{CSSxRef("border-top-style")}}.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : Voir {{CSSxRef("border-top-color")}}.
 
 ## Définition formelle
 
@@ -104,26 +91,30 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 
 ## Exemples
 
-### CSS
+### Appliquer une bordure supérieure
+
+#### HTML
+
+```html
+<div>Ceci est une boîte avec une bordure sur le côté supérieur.</div>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border-top: 3px dotted orange;
+div {
+  border-top: 4px dashed blue;
+  background-color: gold;
+  height: 100px;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
-  « MARMELADE D’ORANGES. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","150")}}
+{{EmbedLiveSample("Appliquer une bordure supérieure")}}
 
 ## Spécifications
 
@@ -132,3 +123,9 @@ Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe q
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{CSSxRef("border")}}
+- {{CSSxRef("border-block")}}
+- {{CSSxRef("outline")}}

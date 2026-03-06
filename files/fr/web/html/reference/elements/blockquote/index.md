@@ -2,7 +2,7 @@
 title: "<blockquote> : l'élément de bloc de citation"
 slug: Web/HTML/Reference/Elements/blockquote
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<blockquote>`** indique que le texte qu'il contient est une citation longue. Habituellement, cela s'affiche visuellement par une indentation (voir [Notes](#notes_dutilisation) pour savoir comment la modifier). Une URL pour la source de la citation peut être donnée avec l'attribut `cite`, tandis qu'une représentation textuelle de la source peut être donnée avec l'élément HTML {{HTMLElement("cite")}}.

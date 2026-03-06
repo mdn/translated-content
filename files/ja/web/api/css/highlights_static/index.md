@@ -1,13 +1,14 @@
 ---
 title: "CSS: highlights 静的プロパティ"
+short-title: highlights
 slug: Web/API/CSS/highlights_static
 l10n:
-  sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
-**`highlights`** は {{domxref("CSS")}} インターフェイスは静的な読み取り専用プロパティであり、interface は、{{domxref("css_custom_highlight_api", "CSS カスタムハイライト API", "", "nocode")}} を使用して任意のテキスト範囲をスタイル設定するために用いる `HighlightRegistry` へのアクセス手段を提供します。
+**`highlights`** は {{domxref("CSS")}} インターフェイスは静的な読み取り専用プロパティであり、{{domxref("css_custom_highlight_api", "CSS カスタムハイライト API", "", "nocode")}} を使用して任意のテキスト範囲をスタイル設定するために用いる `HighlightRegistry` へのアクセス手段を提供します。
 
 ## 値
 
@@ -15,7 +16,7 @@ l10n:
 
 ## 例
 
-次の例は、複数のテキスト範囲を作成し、そのテキスト範囲に対して `Highlight` オブジェクトを作成し、このハイライトを `HighlightRegistry` に登録し、最後に {{cssxref("::highlight", "::highlight()")}} 擬似要素を使用してテキスト範囲にスタイルを設定する例を示しています。
+次の例は、複数のテキスト範囲を作成し、そのテキスト範囲に対して `Highlight` オブジェクトを作成し、このハイライトを `HighlightRegistry` に登録し、最後に {{cssxref("::highlight()")}} 擬似要素を使用してテキスト範囲にスタイルを設定する例を示しています。
 
 ```js
 const parentNode = document.getElementById("foo");
@@ -51,4 +52,5 @@ CSS.highlights.set("my-custom-highlight", myCustomHighlight);
 ## 関連情報
 
 - {{domxref("css_custom_highlight_api", "CSS カスタムハイライト API", "", "nocode")}}
+- [CSS カスタムハイライト API](/ja/docs/Web/CSS/Guides/Custom_highlight_API)モジュール
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
