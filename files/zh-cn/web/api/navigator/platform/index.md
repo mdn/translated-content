@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1238ffad886924b20549d0cf3adca735cb0d074f
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 {{domxref("Navigator")}} 接口的 **`platform`** 只读属性返回一个字符串，用于标识用户浏览器所在的平台。
 

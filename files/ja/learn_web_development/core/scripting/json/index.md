@@ -345,9 +345,9 @@ myString;
 
 ここでは、 JavaScript オブジェクトを作成してその中身を確認しています。次に `stringify()` を使って JSON 文字列に変換し、返値を新しい変数に保存し、その値も確認しています。
 
-## スキルテスト
+## 確認テスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)を参照してください。
 
 ## まとめ
 

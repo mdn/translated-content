@@ -31,4 +31,4 @@ La `framework.themes.dark` est la couche dans laquelle le fichier CSS serait imp
 ## Voir aussi
 
 - {{CSSxRef("@import")}}
-- Le module [cascade et héritage CSS](/fr/docs/Web/CSS/CSS_cascade)
+- Le module [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)

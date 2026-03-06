@@ -2,7 +2,7 @@
 title: "<rtc> : l'élément de conteneur de texte Ruby"
 slug: Web/HTML/Reference/Elements/rtc
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
 ---
 
 {{Deprecated_Header}}
@@ -127,3 +127,4 @@ Cet élément inclut uniquement les [attributs universels](/fr/docs/Web/HTML/Ref
 - L'élément {{HTMLElement("rp")}}
 - L'élément {{HTMLElement("rb")}}
 - L'élément {{HTMLElement("rt")}}
+- Le module [de mise en page CSS ruby](/fr/docs/Web/CSS/Guides/Ruby_layout)

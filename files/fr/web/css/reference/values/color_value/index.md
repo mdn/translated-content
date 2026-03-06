@@ -73,7 +73,7 @@ Une valeur `<color>` peut être définie en utilisant l'une des méthodes suivan
   - Espace colorimétrique [CIELAB](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976)&nbsp;: {{CSSxRef("color_value/lab", "lab()")}} et {{CSSxRef("color_value/lch", "lch()")}}.
   - Espace colorimétrique [Oklab <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/)&nbsp;: {{CSSxRef("color_value/oklab", "oklab()")}} et {{CSSxRef("color_value/oklch", "oklch()")}}.
   - Autres espaces colorimétriques&nbsp;: {{CSSxRef("color_value/color", "color()")}}, {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}.
-- En utilisant la syntaxe [de couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors) pour produire une nouvelle couleur à partir d'une couleur existante. Toute fonction couleur ci-dessus peut prendre une **couleur d'origine** précédée du mot-clé `from` et suivie des définitions des canaux pour la nouvelle **couleur de sortie**.
+- En utilisant la syntaxe [de couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors) pour produire une nouvelle couleur à partir d'une couleur existante. Toute fonction couleur ci-dessus peut prendre une **couleur d'origine** précédée du mot-clé `from` et suivie des définitions des canaux pour la nouvelle **couleur de sortie**.
 - En mélangeant deux couleurs&nbsp;: {{CSSxRef("color_value/color-mix", "color-mix()")}}.
 - En spécifiant une couleur pour obtenir une couleur contrastée&nbsp;: {{CSSxRef("color_value/contrast-color", "contrast-color()")}}.
 - En spécifiant deux couleurs, la première pour les thèmes clairs et la seconde pour les thèmes sombres&nbsp;: {{CSSxRef("color_value/light-dark", "light-dark()")}}.
@@ -461,5 +461,5 @@ div:nth-child(6) {
 - Les propriétés courantes {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("box-shadow")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-shadow")}} utilisant `<color>`
 - La fonction {{CSSxRef("color_value/color")}}
 - [Appliquer une couleur aux éléments HTML avec CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - [Nouvelles fonctions, dégradés et teintes dans CSS Colors (Niveau 4)](/fr/blog/css-color-module-level-4/) sur le blog MDN (2023)

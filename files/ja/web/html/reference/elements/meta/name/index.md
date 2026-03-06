@@ -87,5 +87,5 @@ CSS 端末適応仕様書では、以下のメタデータ名を定義してい�
 
 ## 関連情報
 
-- [ビューポートの `<meta>` タグ](/ja/docs/conflicting/Web/HTML/Reference/Elements/meta/name/viewport)
+- [ビューポートの `<meta>` タグ](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport)
 - [メタデータ: `<meta>` 要素](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#メタデータ_meta_要素)

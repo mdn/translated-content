@@ -114,7 +114,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
       <td>
         <p>
           Événements liés aux
-          <a href="/fr/docs/Web/CSS/CSS_transitions">Transitions CSS</a>.
+          <a href="/fr/docs/Web/CSS/Guides/Transitions">Transitions CSS</a>.
         </p>
         <p>
           Fournit des événements de notification lorsque les transitions CSS
