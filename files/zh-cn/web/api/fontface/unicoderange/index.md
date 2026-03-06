@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
-{{domxref("FontFace")}} 接口的 **`unicodeRange`** 属性用于获取或设置该字体所涵盖的 Unicode 码点范围。
+{{domxref("FontFace")}} 接口的 **`unicodeRange`** 属性用于获取或设置该字体所涵盖的 Unicode 码位范围。
 
 此属性等效于 {{cssxref("@font-face/unicode-range", "unicode-range")}} 描述符。
 
 ## 值
 
-一个字符串，内容为样式表 `@font-face` 规则中所定义的描述符。
+表示样式表 `@font-face` 规则中定义的描述符的字符串。
 
 ## 规范
 
