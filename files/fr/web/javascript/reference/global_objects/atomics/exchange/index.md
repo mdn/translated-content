@@ -3,26 +3,10 @@ title: "Atomics : méthode statique exchange()"
 short-title: exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
 La méthode statique **`exchange()`** de l'objet {{JSxRef("Atomics")}} permet d'enregistrer une valeur à une position donnée d'un tableau et de renvoyer l'ancienne valeur qui était contenue dans le tableau. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
-
-{{InteractiveExample("Démonstration JavaScript&nbsp;: Atomics.exchange()")}}
-
-```js interactive-example
-// Crée un SharedArrayBuffer avec une taille en octets
-const buffer = new SharedArrayBuffer(16);
-const uint8 = new Uint8Array(buffer);
-uint8[0] = 5;
-
-console.log(Atomics.load(uint8, 0));
-// Résultat attendu : 5
-
-Atomics.exchange(uint8, 0, 2); // Retourne 5
-console.log(Atomics.load(uint8, 0));
-// Résultat attendu : 2
-```
 
 ## Syntaxe
 
@@ -52,14 +36,19 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
 ## Exemples
 
-### Utilisation de `exchange()`
+Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
+
+### Utiliser `Atomics.exchange()`
 
 ```js
+// Crée un SharedArrayBuffer avec une taille en octets
 const sab = new SharedArrayBuffer(1024);
+// Crée une vue et définit la valeur de l'index 0
 const ta = new Uint8Array(sab);
+ta[0] = 7;
 
-Atomics.exchange(ta, 0, 12); // retourne 0, l'ancienne valeur
-Atomics.load(ta, 0); // 12
+console.log(Atomics.exchange(ta, 0, 12)); // retourne 7, l'ancienne valeur
+console.log(Atomics.load(ta, 0)); // 12, la nouvelle/valeur actuelle
 ```
 
 ## Spécifications

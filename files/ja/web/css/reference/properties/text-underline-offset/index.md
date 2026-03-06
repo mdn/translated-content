@@ -1,9 +1,8 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
-original_slug: Web/CSS/text-underline-offset
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
@@ -32,7 +31,7 @@ text-underline-offset: -0.5rem;
 p {
   font: 1.5em sans-serif;
   text-decoration-line: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: red;
 }
 ```
 

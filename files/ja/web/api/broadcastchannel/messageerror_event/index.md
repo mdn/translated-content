@@ -1,13 +1,14 @@
 ---
 title: "BroadcastChannel: messageerror イベント"
+short-title: messageerror
 slug: Web/API/BroadcastChannel/messageerror_event
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 079b166268e5a1353e4244133f5883a3f530228f
 ---
 
-{{APIRef}}
+{{APIRef("BroadCastChannel API")}}{{AvailableInWorkers}}
 
-`messageerror` イベントは、シリアル化を解釈できないメッセージがチャンネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクト上で発生します。
+**`messageerror`** は {{domxref("BroadcastChannel")}} インターフェイスのイベントで、シリアル化の解除ができないメッセージがチャンネルに到着したときに発生します。
 
 ## 構文
 
@@ -15,6 +16,7 @@ l10n:
 
 ```js-nolint
 addEventListener("messageerror", (event) => { })
+
 onmessageerror = (event) => { }
 ```
 
@@ -41,7 +43,9 @@ _このインターフェイスは親である {{domxref("Event")}} からプロ
 
 ## 例
 
-このコードは [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) を使用してメッセージとエラーを待ち受けします。
+### messageerror イベントの待ち受け
+
+このコードは {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してメッセージとエラーを待ち受けします。
 
 ```js
 const channel = new BroadcastChannel("example-channel");
@@ -69,6 +73,28 @@ channel.onmessageerror = (event) => {
 };
 ```
 
+### 共有メモリーを使用した試行
+
+`messageerror` イベントの一般的な原因は、{{jsxref("SharedArrayBuffer")}} オブジェクト、またはそれを裏付けとするバッファビューを[エージェントクラスター](/ja/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing)間で送信しようとすることです。次のコードはその例を示しています。
+
+ページ A では次のコードを実行します。
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.postMessage({ data: new SharedArrayBuffer(1024) });
+```
+
+ページ B では次のコードを実行します。
+
+```js
+const channel = new BroadcastChannel("hello");
+channel.addEventListener("messageerror", (event) => {
+  console.error("Message error");
+});
+```
+
+その後、ページ B はページ A から送信されたメッセージをシリアル化解除しようとすると、`messageerror` イベントを受信します。
+
 ## 仕様書
 
 {{Specifications}}
@@ -79,4 +105,4 @@ channel.onmessageerror = (event) => {
 
 ## 関連情報
 
-- 関連イベント: [`message`](/ja/docs/Web/API/BroadcastChannel/message_event)
+- 関連イベント: {{domxref("BroadcastChannel/message_event", "message")}}

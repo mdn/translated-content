@@ -72,7 +72,7 @@ hsl(120deg, 75%, 25%, 0.8)
 
 ### Valeurs
 
-Ci‑dessous se trouvent les descriptions des valeurs autorisées pour les couleurs à la fois absolues et [relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors).
+Ci‑dessous se trouvent les descriptions des valeurs autorisées pour les couleurs à la fois absolues et [relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
 
 #### Syntaxe des valeurs absolues
 
@@ -399,6 +399,6 @@ div.legacyHSLA {
 - [Interpolation de la teinte dans `color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix#utiliser_linterpolation_de_teinte_avec_color-mix)
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Outil de sélection de couleur <sup>(angl.)</sup>](https://apps.colorjs.io/picker/) par Lea Verou

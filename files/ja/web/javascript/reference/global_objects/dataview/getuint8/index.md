@@ -1,29 +1,30 @@
 ---
 title: DataView.prototype.getUint8()
+short-title: getUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`getUint8()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 1 バイトを読み取り、符号なし 8 ビット整数として解釈します。
 
-**`getUint8()`** メソッドは、符号なし 8 ビット整数 (unsigned byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
-
-{{InteractiveExample("JavaScript デモ: DataView.getUint8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.getUint8()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
 const view = new DataView(buffer);
-view.setUint8(1, 255); // Max unsigned 8-bit integer
+view.setUint8(1, 255); // 最大の符号なし 8 ビット整数
 
 console.log(view.getUint8(1));
-// Expected output: 255
+// 予想される結果: 255
 ```
 
 ## 構文
 
-```
-dataview.getUint8(byteOffset)
+```js-nolint
+getUint8(byteOffset)
 ```
 
 ### 引数
@@ -33,25 +34,21 @@ dataview.getUint8(byteOffset)
 
 ### 返値
 
-符号なし 8 ビット整数。
+整数で、0 以上 255 以下です。
 
 ### 発生するエラー
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るように設定されている場合に発生します。
-
-## 解説
-
-アライメントの強制はありません。複数バイトの値はどのオフセットからも読み取ることができます。
+  - : `byteOffset` がビューの末尾を越えて読み取るように設定されている場合に発生します。
 
 ## 例
 
-### getUint8 メソッドの使用
+### getUint8() の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getUint8(1); // 0
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getUint8(1)); // 1
 ```
 
 ## 仕様書
@@ -64,5 +61,7 @@ dataview.getUint8(1); // 0
 
 ## 関連情報
 
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("Uint8Array")}}
