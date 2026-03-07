@@ -32,12 +32,16 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.clonable", "clonable")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
     Si défini, un clone de l'hôte d'ombre (l'élément parent de ce `<template>`) créé avec {{DOMxRef("Node.cloneNode()")}} ou {{DOMxRef("Document.importNode()")}} inclura une racine d'ombre dans la copie.
 
+- `shadowrootcustomelementregistry` {{Experimental_Inline}}
+  - : Définit la propriété [`customElementRegistry`](/fr/docs/Web/API/ShadowRoot/customElementRegistry) d'une [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot) créée avec cet élément à `null`, plutôt que celle du registre d'éléments personnalisés du document [registre d'éléments personnalisés](/fr/docs/Web/API/Document/customElementRegistry).
+    Cela permet d'attacher ultérieurement un {{DOMxRef("CustomElementRegistry")}} à portée locale en utilisant {{DOMxRef("CustomElementRegistry.initialize()")}}.
+
 - `shadowrootdelegatesfocus`
   - : Définit la valeur de la propriété {{DOMxRef("ShadowRoot.delegatesFocus")}} d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément à `true`.
     Si cela est défini et qu'un élément non sélectionnable dans l'arbre d'ombre est sélectionné, la sélection est déléguée au premier élément sélectionnable de l'arbre.
     La valeur par défaut est `false`.
 
-- `shadowrootreferencetarget` {{Experimental_Inline}}
+- `shadowrootreferencetarget` {{Experimental_Inline}} {{Non-standard_Inline}}
   - : Définit la valeur de la propriété `referenceTarget` d'un objet {{DOMxRef("ShadowRoot")}} créé avec cet élément. La valeur doit être l'identifiant d'un élément à l'intérieur du DOM d'ombre. Si défini, les références ciblant l'élément hôte depuis l'extérieur du DOM d'ombre feront que l'élément cible référencé deviendra la cible effective de la référence à l'élément hôte.
 
 - `shadowrootserializable`

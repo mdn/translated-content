@@ -2,7 +2,7 @@
 title: "<button> : l'élément représentant un bouton"
 slug: Web/HTML/Reference/Elements/button
 l10n:
-  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
+  sourceCommit: d546e97005f598df47e121cc2ec842240b0b71e6
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.
@@ -60,9 +60,16 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `"show-modal"`
       - : Le bouton affichera un élément {{HTMLElement("dialog")}} en mode modale. Si la boîte de dialogue est déjà modale, aucune action ne sera effectuée. C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.showModal()")}} sur l'élément `<dialog>`.
     - `"close"`
-      - : Le bouton fermera un élément {{HTMLElement("dialog")}}. Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée. C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.close()")}} sur l'élément `<dialog>`.
+      - : Le bouton fermera un élément {{HTMLElement("dialog")}}.
+        Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée.
+        C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.close()")}} sur l'élément `<dialog>`.
+        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
     - `"request-close"`
-      - : Le bouton déclenchera un événement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un événement {{DOMxRef("HTMLDialogElement.close_event", "close")}}. Cela diffère de la commande `close` car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'événement `cancel` pour empêcher la fermeture du `<dialog>`. Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée. C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.requestClose()")}} sur l'élément `<dialog>`.
+      - : Le bouton déclenchera un événement {{DOMxRef("HTMLDialogElement.cancel_event", "cancel")}} sur un élément {{HTMLElement("dialog")}} pour demander au navigateur de le fermer, suivi d'un événement {{DOMxRef("HTMLDialogElement.close_event", "close")}}.
+        Cela diffère de la commande `close` car les auteur·ice·s peuvent appeler {{DOMxRef("Event.preventDefault()")}} sur l'événement `cancel` pour empêcher la fermeture du `<dialog>`.
+        Si la boîte de dialogue est déjà fermée, aucune action ne sera effectuée.
+        C'est l'équivalent déclaratif de l'appel à la méthode {{DOMxRef("HTMLDialogElement.requestClose()")}} sur l'élément `<dialog>`.
+        Lorsqu'il est utilisé avec l'attribut `value`, la valeur du bouton sera transmise comme propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de la boîte de dialogue.
     - `"show-popover"`
       - : Le bouton affichera un élément contextuel flottant (<i lang="en">popover</i> en anglais) caché. Si vous essayez d'afficher un élément contextuel flottant déjà affiché, aucune action ne sera effectuée. Voir {{DOMxRef("Popover API", "l'API Popover", "", "nocode")}} pour plus de détails. Ceci est équivalent à la valeur `show` pour l'attribut [`popovertargetaction`](#popovertargetaction), et fournit également un équivalent déclaratif à l'appel de la méthode {{DOMxRef("HTMLElement.showPopover()")}} sur l'élément contextuel flottant.
     - `"hide-popover"`
@@ -118,7 +125,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Le nom du bouton, soumis en tant que paire avec la valeur (`value`) du bouton comme partie des données du formulaire.
 
 - `popovertarget`
-  - : Transforme un `<button>` en un élément de contrôle d'un élément contextuel flottant (<i lang="en">popover</i> en anglais)&nbsp;; il prend comme valeur l'`id` de l'élément élément contextuel flottant à contrôler. Voir la page sur [l'API Popover](/fr/docs/Web/API/Popover_API) pour plus de détails.
+  - : Transforme un `<button>` en un élément de contrôle d'un élément contextuel flottant (<i lang="en">popover</i> en anglais)&nbsp;; il prend comme valeur `id` de l'élément élément contextuel flottant à contrôler. Voir la page sur [l'API Popover](/fr/docs/Web/API/Popover_API) pour plus de détails.
 
 - `popovertargetaction`
   - : Définit l'action à effectuer sur l'élément contextuel flottant (<i lang="en">popover</i> en anglais) cible lorsqu'un bouton est activé. Les valeurs possibles sont&nbsp;:
@@ -136,7 +143,9 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les événements de l'élément, qui sont déclenchés lorsque les événements se produisent.
 
 - `value`
-  - : Définit la valeur associée au `name` du bouton lorsqu'il est soumis avec les données du formulaire. Cette valeur est transmise au serveur en paramètres lorsque le formulaire est soumis.
+  - : Définit la valeur associée au `name` du bouton lorsqu'il est soumis avec les données du formulaire.
+    Cette valeur est transmise au serveur en paramètres lorsque le formulaire est soumis.
+    Lorsqu'il est utilisé avec les commandes `close` ou `request-close`, l'attribut `value` définit le {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} de l'élément {{HTMLElement("dialog")}} contrôlé.
 
 ## Notes
 
@@ -307,6 +316,82 @@ Lorsque l'événement est `cancelable`, la valeur des boutons radio est vérifi�
 
 - Si la valeur est `oui`, la boîte de dialogue est fermée.
 - Si la valeur est `non`, l'attribut `hidden` est désactivé sur l'avertissement et la méthode [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) est appelée, ce qui empêche le comportement de fermeture par défaut du `<dialog>`.
+
+### Utiliser l'attribut `value` avec la commande `close` d'un dialogue
+
+Cet exemple montre comment utiliser l'attribut `value` d'un bouton avec la commande `close` pour remplir la propriété {{DOMxRef("HTMLDialogElement.returnValue", "returnValue")}} d'un dialogue.
+
+Lorsque le bouton **Annuler** ou **Supprimer** est cliqué, le dialogue se ferme et définit sa `returnValue` sur l'attribut `value` du bouton.
+Le gestionnaire d'évènements `close` vérifie `dialog.returnValue` pour déterminer quelle action l'utilisateur a choisie et affiche le résultat à l'écran.
+
+#### HTML
+
+Le HTML définit d'abord un bouton **Supprimer l'enregistrement** qui utilise l'attribut `commandfor` pour définir le dialogue à ouvrir.
+
+Dans le dialogue, les boutons **Annuler** et **Supprimer** utilisent l'attribut `commandfor` pour indiquer qu'ils s'appliquent au dialogue actuel.
+Ils définissent également l'attribut `command` sur `"close"` et l'attribut `value` sur `"cancel"` et `"delete"` respectivement — la valeur du bouton sélectionné est automatiquement copiée dans la propriété `returnValue` du dialogue lorsque le bouton est cliqué.
+
+```html
+<button commandfor="confirm-dialog" command="show-modal">
+  Supprimer l'enregistrement
+</button>
+<dialog id="confirm-dialog">
+  <header>
+    <h1>Supprimer l'enregistrement ?</h1>
+  </header>
+  <p>Êtes-vous sûr&nbsp;? Cette action est irréversible.</p>
+  <footer>
+    <button commandfor="confirm-dialog" command="close" value="cancel">
+      Annuler
+    </button>
+    <button commandfor="confirm-dialog" command="close" value="delete">
+      Supprimer
+    </button>
+  </footer>
+</dialog>
+```
+
+```html
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
+```
+
+#### JavaScript
+
+The code uses a `close` event listener to log the dialog's `returnValue`.
+
+```js
+const dialog = document.getElementById("confirm-dialog");
+
+dialog.addEventListener("close", () => {
+  switch (dialog.returnValue) {
+    case "cancel":
+      log("Annuler a été cliqué");
+      break;
+    case "delete":
+      log("Supprimer a été cliqué");
+      break;
+    default:
+      log("Fermé avec la valeur :", dialog.returnValue);
+  }
+});
+```
+
+#### Résultats
+
+{{EmbedLiveSample("Utiliser l'attribut `value` avec la commande `close` d'un dialogue", 100, 200)}}
 
 ## Résumé technique
 

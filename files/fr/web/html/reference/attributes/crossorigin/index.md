@@ -2,9 +2,8 @@
 title: "Attribut HTML : crossorigin"
 short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
-original_slug: Web/HTML/Attributes/crossorigin
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 L'attribut **`crossorigin`** est valide sur les éléments HTML {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}} et {{HTMLElement("video")}}. Il permet de gérer le [CORS](/fr/docs/Web/HTTP/Guides/CORS), c'est-à-dire la façon dont l'élément traite les requêtes inter-origines, et donc de configurer les requêtes CORS pour les données récupérées par l'élément. Selon l'élément, l'attribut peut être un attribut de configuration CORS.
@@ -58,7 +57,7 @@ Par défaut (c'est-à-dire si l'attribut n'est pas défini), CORS n'est pas util
 
 ### Utiliser `crossorigin` avec l'élément `script`
 
-On peut utiliser l'élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.fr/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur·ice.
+On peut utiliser l'élément {{HTMLElement("script")}} afin d'indiquer au navigateur d'exécuter un script (ici, `https://exemple.fr/framework-exemple.js`) sans envoyer les informations d'authentification de l'utilisateur·ice.
 
 ```html
 <script

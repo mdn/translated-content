@@ -2,7 +2,7 @@
 title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-display`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} détermine comment une police est affichée en fonction de son état de téléchargement et de disponibilité.

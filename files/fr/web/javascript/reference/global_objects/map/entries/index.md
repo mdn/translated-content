@@ -1,50 +1,55 @@
 ---
-title: Map.prototype.entries()
+title: "Map : méthode entries()"
+short-title: entries()
 slug: Web/JavaScript/Reference/Global_Objects/Map/entries
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`entries()`** des instances de {{JSxRef("Map")}} retourne un nouvel objet _[d'itérateur de tableau associatif](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ qui contient les paires `[key, value]` de chaque élément de cette `Map` dans l'ordre d'insertion.
 
-La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérateurs) qui contient les paires `[clé, valeur]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.entries()")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("0", "foo");
-map1.set(1, "bar");
+map.set("0", "toto");
+map.set(1, "truc");
 
-const iterator1 = map1.entries();
+const iterator = map.entries();
 
-console.log(iterator1.next().value);
-// Expected output: Array ["0", "foo"]
+console.log(iterator.next().value);
+// Sortie attendue : Array ["0", "toto"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "bar"]
+console.log(iterator.next().value);
+// Sortie attendue : Array [1, "truc"]
 ```
 
 ## Syntaxe
 
-```js
-maMap.entries();
+```js-nolint
+entries()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Un nouvel objet `Iterator` {{jsxref("Map")}}.
+Un nouvel [objet d'itérateur itérable](/fr/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Exemple
 
-### Utiliser `entries()`
+### Utiliser la méthode `entries()`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "bidule");
 
-var mapIter = maMap.entries();
+const mapIter = maMap.entries();
 
 console.log(mapIter.next().value); // ["0", "toto"]
 console.log(mapIter.next().value); // [1, "truc"]
@@ -61,5 +66,5 @@ console.log(mapIter.next().value); // [Object, "bidule"]
 
 ## Voir aussi
 
-- {{jsxref("Map.prototype.keys()")}}
-- {{jsxref("Map.prototype.values()")}}
+- La méthode {{JSxRef("Map.prototype.keys()")}}
+- La méthode {{JSxRef("Map.prototype.values()")}}

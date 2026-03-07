@@ -2,9 +2,8 @@
 title: "Attribut HTML : readonly"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
-original_slug: Web/HTML/Attributes/readonly
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur·ice ne peut pas modifier le contrôle.
@@ -95,27 +94,23 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ```html
 <div class="group">
-  <input type="text" value="Une valeur" readonly="readonly" id="text" />
+  <input type="text" value="Une valeur" readonly id="text" />
   <label for="text">Zone de texte</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <input type="date" value="2020-01-01" readonly id="date" />
   <label for="date">Date</label>
 </div>
 <div class="group">
-  <input
-    type="email"
-    value="exemple@domaine.fr"
-    readonly="readonly"
-    id="email" />
+  <input type="email" value="exemple@domaine.fr" readonly id="email" />
   <label for="email">Courriel</label>
 </div>
 <div class="group">
-  <input type="password" value="MotDePasse123" readonly="readonly" id="pwd" />
+  <input type="password" value="MotDePasse123" readonly id="pwd" />
   <label for="pwd">Mot de passe</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly" id="ta">Un message</textarea>
+  <textarea readonly id="ta">Un message</textarea>
   <label for="ta">Message</label>
 </div>
 ```

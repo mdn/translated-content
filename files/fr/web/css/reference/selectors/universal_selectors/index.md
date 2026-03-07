@@ -1,32 +1,40 @@
 ---
 title: Sélecteurs universels
 slug: Web/CSS/Reference/Selectors/Universal_selectors
-original_slug: Web/CSS/Universal_selectors
+l10n:
+  sourceCommit: ca0d81a57fd36cf5da9621c44171d0f333f3f3e1
 ---
 
-{{CSSRef}}
-
-L'astérisque (\*) est le sélecteur universel en CSS. Il correspond à un élément de n'importe quel type.
+Le **sélecteur universel** CSS (`*`) cible les éléments de n'importe quel type.
 
 ```css
+/* Cibler tous les éléments */
 * {
   color: green;
 }
 ```
 
-En CSS 3, l'astérisque peut être combinée avec les espaces de nom :
+Le sélecteur universel est un [sélecteur de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors) particulier et peut donc être associé à un espace de noms lors de l'utilisation de {{CSSxRef("@namespace")}}. Cela est utile lorsque vous travaillez avec des documents contenant plusieurs espaces de noms, comme HTML avec SVG ou MathML intégré, ou XML qui mélange plusieurs vocabulaires.
 
-- `ns|*` - correspond à tous les éléments de l'espace de noms `ns`
-- `*|*` - correspond à tous les éléments
-- `|*` - correspond à tous les éléments sans espace de noms déclaré
+- `ns|*` - cible tous les éléments de l'espace de noms _ns_
+- `*|*` - cible tous les éléments
+- `|*` - cible tous les éléments sans espace de noms déclaré
+
+> [!NOTE]
+> Le sélecteur universel (`*`) cible **uniquement les éléments**.
+> Il ne cible **pas** directement les pseudo-éléments.
+>
+> Pour cibler tous les pseudo-éléments {{CSSxRef("::before")}} sur une page, par exemple, vous devez utiliser un sélecteur comme `*::before`. Cela fonctionne parce que `*` cible tous les éléments, et le pseudo-élément `::before` est disponible sur tous les éléments.
 
 ## Syntaxe
 
-```
-* { style properties }
+```css
+* {
+  /* propriétés de style */
+}
 ```
 
-L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs simples. Par exemple, `*.warning` et `.warning` seront équivalents.
+L'astérisque est optionnelle avec les sélecteurs simples. Par exemple, `*.warning` et `.warning` sont équivalents.
 
 ## Exemples
 
@@ -49,6 +57,7 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
   float: left;
 }
 
+/* libérer automatiquement le voisin suivant après un élément flottant */
 .floating + * {
   clear: left;
 }
@@ -67,7 +76,18 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', 250, 100)}}
+{{EmbedLiveSample("Exemples")}}
+
+### Espaces de noms
+
+Dans cet exemple, le sélecteur ne correspondra qu'aux éléments dans l'espace de noms example.
+
+```css
+@namespace example url("http://www.exemple.com/");
+example|* {
+  color: blue;
+}
+```
 
 ## Spécifications
 
@@ -76,3 +96,8 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- [Apprendre CSS&nbsp;: Sélecteurs de base](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

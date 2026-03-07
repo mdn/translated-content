@@ -2,7 +2,7 @@
 title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 7d6315943bf1032e19c65bca591e28d2117e9bec
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
@@ -16,7 +16,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
     local("Trickster"),
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+    url("trickster-outline.woff2") format("woff2");
 }
 ```
 
@@ -57,6 +57,8 @@ Si la fonction `local()` est fournie, on lui passera un nom de police à recherc
 
 Les navigateurs tentent le téléchargement des ressources selon leur ordre de déclaration. Aussi, on écrira généralement `local()` avant `url()`. Les deux fonctions sont optionnelles et on peut donc avoir un bloc de règle contenant un ou plusieurs appels à `local()`, sans `url()`. On peut utiliser les fonctions `format()` ou `tech()` afin de cibler des polices plus spécifiques. Dans ce cas, on doit lister ces versions _avant_ celles qui n'utilisent pas ces valeurs. En effet, dans le cas contraire, ce seraient les versions moins spécifiques qui seraient tentées et utilisées.
 
+Pour la diffusion sur le Web, il est généralement préférable de fournir les polices au format WOFF2, car il compresse les polices plus efficacement que les formats plus anciens comme WOFF ou OpenType, ce qui réduit la taille des fichiers et améliore les temps de chargement. WOFF2 est également bien pris en charge par les navigateurs modernes, ce qui en fait un choix par défaut sûr pour la plupart des sites.
+
 En permettant de fournir ses propres polices, `@font-face` permet de concevoir du contenu qui ne soit pas limité aux polices universellement disponibles. En permettant d'indiquer le nom d'une police locale, on peut personnaliser le contenu sans pour autant avoir besoin d'une connexion Internet.
 
 > [!NOTE]
@@ -84,7 +86,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
       font-family: "MyHelvetica";
       src:
         local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url("MgOpenModernaBold.ttf");
+        url("MgOpenModernaBold.woff2");
       font-weight: bold;
     }
   }
@@ -113,7 +115,7 @@ Dans cet exemple, on indique une police téléchargeable à utiliser et on l'app
 ```css live-sample___web-font-example
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 body {
@@ -127,14 +129,14 @@ body {
 
 ### Indiquer des polices alternatives locales
 
-Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui est utilisé. Si elle n'est pas disponible sur l'appareil malgré les deux noms tentés, c'est une police distante avec le fichier `MgOpenModernaBold.ttf` qui est utilisée à la place&nbsp;:
+Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui est utilisé. Si elle n'est pas disponible sur l'appareil malgré les deux noms tentés, c'est une police distante avec le fichier `MgOpenModernaBold.woff2` qui est utilisée à la place&nbsp;:
 
 ```css
 @font-face {
   font-family: "MyHelvetica";
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
+    url("MgOpenModernaBold.woff2");
   font-weight: bold;
 }
 ```

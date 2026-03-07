@@ -2,7 +2,7 @@
 title: Interligne (leading)
 slug: Glossary/Leading
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 En typographie, une **interligne** (ou <i lang="en">leading</i> en anglais) désigne l'espace ajouté au-dessus et en dessous du texte pour assurer l'espacement entre les lignes. Historiquement, dans la composition physique, des morceaux de véritable [plomb](https://fr.wikipedia.org/wiki/Plomb) étaient utilisés pour créer cet espacement, d'où le nom anglais.

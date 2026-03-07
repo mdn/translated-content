@@ -2,9 +2,8 @@
 title: "Attribut HTML : pattern"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
-original_slug: Web/HTML/Attributes/pattern
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 L'attribut **`pattern`** indique une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_expressions) que doit respecter la valeur du contrôle du formulaire. Si une valeur non nulle (qui n'est pas `null`) ne respecte pas les contraintes portées par `pattern`, la propriété {{DOMxRef("ValidityState.patternMismatch", "patternMismatch")}} en lecture seule, rattachée à l'objet {{DOMxRef("ValidityState")}}, vaudra `true`.

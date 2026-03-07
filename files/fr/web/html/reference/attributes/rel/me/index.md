@@ -1,7 +1,6 @@
 ---
 title: rel="me"
 slug: Web/HTML/Reference/Attributes/rel/me
-original_slug: Web/HTML/Attributes/rel/me
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---

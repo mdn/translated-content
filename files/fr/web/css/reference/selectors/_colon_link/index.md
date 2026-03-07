@@ -2,7 +2,7 @@
 title: :link
 slug: Web/CSS/Reference/Selectors/:link
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:link`** représente un élément qui n'a pas encore été visité. Il correspond à chaque élément {{HTMLElement('a')}} ou {{HTMLElement('area')}} non visité qui possède un attribut `href`.
@@ -41,7 +41,7 @@ a:link {
 </ul>
 ```
 
-Les styles définis par les pseudo-classes `:link` et [`:visited`](/fr/docs/Web/CSS/Reference/Selectors/:visited) peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{CSSxRef(':hover')}} ou {{CSSxRef(':active')}}) ayant au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
+Les styles définis par les pseudo-classes `:link` et {{CSSxRef(":visited")}} peuvent être remplacés par toute pseudo-classe d'action utilisateur ultérieure ({{CSSxRef(':hover')}} ou {{CSSxRef(":active")}}) ayant au moins la même spécificité. Pour mettre en forme correctement les liens, placez la règle `:link` avant toutes les autres règles liées aux liens, comme défini par l'ordre _LVHA_ : `:link` — `:visited` — `:hover` — `:active`. Les pseudo-classes `:visited` et `:link` s'excluent mutuellement.
 
 > [!NOTE]
 > On utilisera {{CSSxRef(":any-link")}} pour sélectionner un élément qu'il ait été visité ou non.
@@ -77,7 +77,7 @@ a:link {
 
 ### Résultat
 
-{{EmbedLiveSample("exemples")}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -89,7 +89,4 @@ a:link {
 
 ## Voir aussi
 
-- Les pseudo-classes de lien&nbsp;:
-  - {{CSSxRef(":visited")}}
-  - {{CSSxRef(":hover")}}
-  - {{CSSxRef(":active")}}
+- Les pseudo-classes associées&nbsp;: {{CSSxRef(":visited")}}, {{CSSxRef(":hover")}}, {{CSSxRef(":active")}}

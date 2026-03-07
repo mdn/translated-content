@@ -2,10 +2,12 @@
 title: Nom de domaine
 slug: Glossary/Domain_name
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 42cdcf670eb79e8b6857ef7bd4a9f3befa38a4c2
 ---
 
 Un **nom de domaine** est l'adresse d'un site web sur l'{{Glossary("Internet")}}. Les noms de domaine sont utilisés dans les {{Glossary("URL","URLs")}} pour identifier le serveur qui héberge une page web particulière. Le nom de domaine consiste en séquence hiérarchique de noms (_labels_) séparés par des points et terminée par une {{Glossary("TLD","extension")}}.
+
+Par exemple, `developer.mozilla.org`.
 
 ## Voir aussi
 

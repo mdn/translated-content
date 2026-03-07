@@ -2,7 +2,7 @@
 title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: 21f3703f37be2ab064fb8cff005438f47f92a1de
 ---
 
 {{SeeCompatTable}}
@@ -206,7 +206,7 @@ Notre conteneur comprend trois éléments extensibles qui seront suffisamment la
 
 Nous définissons le conteneur comme un conteneur flexible, en définissant une largeur ({{CSSxRef("width")}}) sur le conteneur qui correspond à la moitié de la largeur totale de ses enfants flexibles. L'ajout d'une valeur {{CSSxRef("overflow-x")}} de `scroll` lui donne une barre de défilement horizontale.
 
-Notre chronologie de progression de défilement, définie à l'aide des propriétés {{CSSxRef("scroll-timeline-name")}} et {{CSSxRef("scroll-timeline-axis")}}, est nommée `--square-timeline`. Cette chronologie est appliquée à notre élément `#square` en utilisant `animation-timeline: --square-timeline`.
+Notre chronologie de progression de défilement, définie à l'aide des propriétés {{CSSxRef("scroll-timeline-name")}} et {{CSSxRef("scroll-timeline-axis")}}, est nommée `--square-timeline`. Cette chronologie est appliquée à notre élément `#shape` en utilisant `animation-timeline: --square-timeline`.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
 #container {

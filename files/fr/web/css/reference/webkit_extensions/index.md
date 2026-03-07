@@ -2,10 +2,10 @@
 title: Extensions CSS préfixées par le vendeur WebKit (-webkit-)
 slug: Web/CSS/Reference/Webkit_extensions
 l10n:
-  sourceCommit: 1f6d5b39a5883789ece6b570227648113c7021a1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Un {{glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
+Un {{Glossary("vendor prefix", "préfixe vendeur")}} est utilisé pour indiquer qu'une fonctionnalité est spécifique à un certain navigateur.
 Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) prennent en charge plusieurs extensions de [CSS](/fr/docs/Web/CSS), qui sont préfixées par `-webkit-`.
 
 ## Propriétés préfixées par -webkit sans équivalents standard
@@ -16,7 +16,7 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 
 ### A - C
 
-- `-webkit-app-region` {{deprecated_inline}}&nbsp;: N'est plus pris en charge dans Safari.
+- `-webkit-app-region` {{Deprecated_Inline}}&nbsp;: N'est plus pris en charge dans Safari.
 - `-webkit-border-horizontal-spacing`
 - `-webkit-border-vertical-spacing`
 - {{CSSxRef("-webkit-box-reflect")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
@@ -42,17 +42,17 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 
 - `-webkit-margin-after`
 - `-webkit-margin-before`
-- {{CSSxRef("-webkit-mask-box-image")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
-- {{CSSxRef("-webkit-mask-composite")}}&nbsp;: Voir {{cssxref("mask-border")}} et {{cssxref("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-slice")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-source")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-width")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
+- {{CSSxRef("-webkit-mask-composite")}}&nbsp;: Voir {{CSSxRef("mask-border")}} et {{CSSxRef("border-image")}}.
 - {{CSSxRef("-webkit-mask-position-x")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
 - {{CSSxRef("-webkit-mask-position-y")}}&nbsp;: Prise en charge avec `-webkit-` par tous les navigateurs, pour des raisons de compatibilité.
-- {{CSSxRef("-webkit-mask-repeat-x")}} {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
-- {{CSSxRef("-webkit-mask-repeat-y")}} {{deprecated_inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
+- {{CSSxRef("-webkit-mask-repeat-x")}} {{Deprecated_Inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
+- {{CSSxRef("-webkit-mask-repeat-y")}} {{Deprecated_Inline}}&nbsp;: N'est plus prise en charge&nbsp;; utilisez {{CSSxRef("mask-repeat")}}.
 - `-webkit-mask-source-type`: N'est pas pris en charge dans Chrome.
 - `-webkit-max-logical-height`
 - `-webkit-max-logical-width`
@@ -74,7 +74,7 @@ Les agents utilisateurs basés sur WebKit ou Blink (tels que Safari et Chrome) p
 - {{CSSxRef("-webkit-text-stroke-color")}}
 - {{CSSxRef("-webkit-text-stroke-width")}}
 - `-webkit-text-zoom`&nbsp;: N'est pas pris en charge dans Chrome.
-- {{CSSxRef("-webkit-touch-callout")}} {{deprecated_inline}}: N'est pris en charge que dans Safari sur iOS.
+- {{CSSxRef("-webkit-touch-callout")}} {{Deprecated_Inline}}: N'est pris en charge que dans Safari sur iOS.
 - `-webkit-transform-origin-x`
 - `-webkit-transform-origin-y`
 - `-webkit-transform-origin-z`
@@ -159,7 +159,7 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 - `::-webkit-file-upload-button`&nbsp;: Utilisez {{CSSxRef("::file-selector-button")}}
 - {{CSSxRef("::-webkit-inner-spin-button")}}
 - `::-webkit-input-placeholder`&nbsp;: Utilisez {{CSSxRef("::placeholder")}}
-- {{CSSxRef("::-webkit-meter-bar")}} {{deprecated_inline}}
+- {{CSSxRef("::-webkit-meter-bar")}} {{Deprecated_Inline}}
 - {{CSSxRef("::-webkit-meter-even-less-good-value")}}
 - {{CSSxRef("::-webkit-meter-inner-element")}}
 - {{CSSxRef("::-webkit-meter-optimum-value")}}
@@ -174,14 +174,14 @@ Si un pseudo-élément (mais pas une pseudo-classe) a un préfixe `-webkit-`, le
 
 ## Fonctionnalités multimédias
 
-- {{CSSxRef("@media/-webkit-animation")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-animation")}} {{Deprecated_Inline}}
 - {{CSSxRef("@media/-webkit-device-pixel-ratio")}}&nbsp;: Prise en charge multiplateforme
-- {{CSSxRef("@media/-webkit-transform-2d")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-transform-2d")}} {{Deprecated_Inline}}
 - {{CSSxRef("@media/-webkit-transform-3d")}}&nbsp;: Prise en charge multiplateforme
-- {{CSSxRef("@media/-webkit-transition")}} {{deprecated_inline}}
+- {{CSSxRef("@media/-webkit-transition")}} {{Deprecated_Inline}}
 
 ## Voir aussi
 
 - [Extensions CSS préfixées par le vendeur Firefox (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- L'entrée du glossaire {{glossary("Vendor Prefix", "Préfixe vendeur")}}.
+- L'entrée du glossaire {{Glossary("Vendor Prefix", "Préfixe vendeur")}}.
 - [La mise en forme des contrôles de formulaires sur le Trac WebKit <sup>(angl.)</sup>](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

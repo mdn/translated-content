@@ -2,7 +2,7 @@
 title: "<hr> : l'élément de rupture thématique (règle horizontale)"
 slug: Web/HTML/Reference/Elements/hr
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 479f72f9279246685bcf6eec93527ac3f470f93e
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments de niveau paragraphe&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.
@@ -42,11 +42,13 @@ hr::after {
 }
 ```
 
-Historiquement, il était présenté comme une règle ou une ligne horizontale. Bien qu'il puisse encore être affiché comme une règle horizontale par les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes de présentation&nbsp;; si vous souhaitez tracer une ligne horizontale, faites‑le à l'aide du CSS approprié.
+Historiquement, l'élément `<hr>` a toujours été présenté comme une règle horizontale ou une ligne. Bien qu'il puisse encore être affiché comme une règle horizontale dans les navigateurs visuels, cet élément est désormais défini en termes sémantiques plutôt qu'en termes présentatifs. Par conséquent, si vous souhaitez tracer une ligne horizontale, faites-le en ajoutant une bordure à un élément existant à l'aide de CSS.
+
+Les propriétés `border-*` (par exemple, {{CSSxRef("border-style")}} et {{CSSxRef("border-color")}}) vous permettent de personnaliser de manière significative l'apparence d'une ligne, que vous personnalisiez un élément `<hr>` ou la bordure d'un autre élément.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément prend en charge les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs obsolètes ou non-standard
 
@@ -148,4 +150,4 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Refer
 ## Voir aussi
 
 - L'élément {{HTMLElement("p")}}
-- [`<hr>` dans `<select>`](/fr/docs/Web/HTML/Reference/Elements/select#select_with_grouping_options)
+- [`<hr>` dans `<select>`](/fr/docs/Web/HTML/Reference/Elements/select#sélecteur_avec_options_groupées)

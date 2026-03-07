@@ -2,7 +2,7 @@
 title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: f86740f3a842a5a075be18185ecaf9a981eda4b9
+  sourceCommit: 539dea64b179cea3f12270fe2b5203a9d2d08795
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pourriez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).
@@ -83,6 +83,15 @@ En plus des [attributs communs](/fr/docs/Web/HTML/Reference/Elements/input#attri
 - `value`
   - : L'attribut `value` est partagé par l'ensemble des éléments {{HTMLElement("input")}}&nbsp;; mais il a un rôle spécifique pour les champs de type `checkbox`&nbsp;: lorsqu'un formulaire est envoyé, seules les cases à cocher qui sont cochées sont envoyées au serveur et c'est la valeur de l'attribut `value` qui est envoyée. Si l'attribut `value` n'est pas renseigné, ce sera la chaîne de caractères `"on"` qui sera envoyée par défaut (voir [la section précédente](#valeur))
 
+- `switch` {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Un attribut [booléen](/fr/docs/Glossary/Boolean/HTML) qui s'applique uniquement aux champs de type `checkbox`. Lorsqu'il est présent, il indique que la `checkbox` représente un `switch` d'activation/désactivation plutôt qu'une `checkbox` classique. Il modifie l'apparence du contrôle `checkbox`, mais le comportement sous-jacent reste identique à celui d'une `checkbox` normale.
+
+    > [!NOTE]
+    > Cet attribut permet aux agents utilisateurs d'exposer la sémantique ARIA `switch` aux technologies d'assistance — sans obliger les documents à spécifier explicitement `role="switch"`. Le balisage et l'API sont similaires à ceux des cases à cocher, sauf que la pseudo-classe `:indeterminate` ne correspond jamais.
+
+    > [!WARNING]
+    > Cet attribut est encore expérimental et bénéficie d'un support limité dans les navigateurs. L'attribut est ignoré par les navigateurs qui ne le prennent pas en charge.
+
 ## Utiliser les cases à cocher
 
 Nous avons déjà couvert l'utilisation la plus basique des cases à cocher ci-dessus. Voyons maintenant les autres fonctionnalités et techniques courantes liées aux cases à cocher dont vous aurez besoin.
@@ -130,6 +139,32 @@ Afin qu'une case à cocher soit sélectionnée par défaut, il suffit de placer 
 ```
 
 {{EmbedLiveSample("Cocher certaines cases par défaut", 600, 100)}}
+
+### Utiliser une case à cocher comme interrupteur
+
+L'exemple suivant montre comment faire en sorte qu'une case à cocher ressemble et se comporte comme un interrupteur marche/arrêt.
+
+```html
+<form>
+  <fieldset>
+    <legend>Réglez vos paramètres</legend>
+    <div>
+      <label for="theme">Mode sombre</label>
+      <input type="checkbox" name="theme" id="theme" switch checked />
+    </div>
+    <div>
+      <label for="notifications">Notifications</label>
+      <input type="checkbox" name="notifications" id="notifications" switch />
+    </div>
+    <button type="submit">Soumettre</button>
+  </fieldset>
+</form>
+```
+
+> [!NOTE]
+> Bien que seuls certains navigateurs affichent la case à cocher comme un interrupteur, le comportement est le même dans tous les navigateurs.
+
+{{EmbedLiveSample("Utiliser une case à cocher comme interrupteur", 600, 100)}}
 
 ### Fournir une zone cliquable plus grande pour vos cases à cocher
 
@@ -354,7 +389,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td><code><a href="#checked">checked</a></code></td>
+      <td><code><a href="#checked">checked</a></code> et <code><a href="#switch">switch</a></code></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>

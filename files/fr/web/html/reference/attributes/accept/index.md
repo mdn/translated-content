@@ -2,9 +2,8 @@
 title: "Attribut HTML : accept"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
-original_slug: Web/HTML/Attributes/accept
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 19a086b6076db59fcc42ee76a98ba183adb29f8c
 ---
 
 L'attribut **`accept`** prend comme valeur une liste, séparée par des virgules, d'un ou plusieurs types de fichiers ou de [spécificateurs de type de fichier unique](#spécification_de_type_de_fichier_unique), décrivant les types de fichiers autorisés.

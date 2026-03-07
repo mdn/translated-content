@@ -2,7 +2,7 @@
 title: "<rt> : l'élément de texte Ruby"
 slug: Web/HTML/Reference/Elements/rt
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
@@ -114,3 +114,4 @@ body {
 - L'élément {{HTMLElement("rb")}}
 - L'élément {{HTMLElement("rtc")}}
 - Les propriétés et valeurs CSS {{CSSxRef("text-transform", "text-transform: full-size-kana")}}
+- Le module [de mise en page CSS ruby](/fr/docs/Web/CSS/Guides/Ruby_layout)

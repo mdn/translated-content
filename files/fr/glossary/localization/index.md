@@ -2,7 +2,7 @@
 title: Localisation
 slug: Glossary/Localization
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 7d4f930455a349e3c73836500add3d4840c76f5d
 ---
 
 La localisation (<abbr>l10n</abbr>) est le processus d'adaptation d'une interface utilisateur de logiciel à une culture spécifique.
@@ -25,7 +25,7 @@ Les facteurs communs suivants sont à considérer&nbsp;:
 - les vacances locales
 - les noms de personnes
 
-La pratique complémentaire, qui consiste à concevoir un système pour qu'il soit facile à localiser, s'appelle {{Glossary("Internationalization", "l'internationalisation")}}.
+La pratique complémentaire, qui consiste à concevoir un système facile à localiser, s'appelle {{Glossary("Internationalization", "l'internationalisation")}}.
 
 ## Voir aussi
 

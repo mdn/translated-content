@@ -1,40 +1,41 @@
 ---
-title: Map.prototype.size
+title: "Map : propriété size"
+short-title: size
 slug: Web/JavaScript/Reference/Global_Objects/Map/size
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La propriété d'accesseur **`size`** des instances de {{JSxRef("Map")}} retourne le nombre d'éléments dans cette map.
 
-L'accesseur **`size`** est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.size")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", "alpha");
-map1.set("b", "beta");
-map1.set("g", "gamma");
+map.set("a", "alpha");
+map.set("b", "beta");
+map.set("g", "gamma");
 
-console.log(map1.size);
-// Expected output: 3
+console.log(map.size);
+// Sortie attendue : 3
 ```
 
 ## Description
 
-La valeur de `size` est un entier représentant le nombre d'entrées d'un objet `Map`. Le mutateur correspond à cette propriété est {{jsxref("undefined")}}, on ne peut pas donc pas modifier cette propriété.
+La valeur de `size` est un entier représentant le nombre d'entrées de l'objet `Map`. La fonction d'accesseur pour définir `size` est `undefined`&nbsp;; vous ne pouvez donc pas modifier cette propriété.
 
-## Exemple
+## Exemples
 
-### Utiliser `size`
+### Utiliser la propriété `size`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("a", "alpha");
 maMap.set("b", "beta");
 maMap.set("g", "gamma");
 
-maMap.size; // 3
+console.log(maMap.size); // 3
 ```
 
 ## Spécifications
@@ -47,4 +48,4 @@ maMap.size; // 3
 
 ## Voir aussi
 
-- {{jsxref("Map")}}
+- L'objet {{JSxRef("Map")}}

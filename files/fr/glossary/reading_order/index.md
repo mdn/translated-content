@@ -1,6 +1,8 @@
 ---
 title: Ordre de lecture
 slug: Glossary/Reading_order
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 L'**ordre de lecture** désigne l'ordre dans lequel le contenu est parcouru, par exemple lorsqu'il est lu par une {{Glossary("screen reader", "synthèse vocale")}}, ou navigué à l'aide de méthodes de navigation séquentielle comme le passage d'un lien ou d'un bouton à l'autre avec la touche de tabulation. Par défaut, l'ordre de lecture d'une page web est défini par l'ordre des éléments dans le code source du document.

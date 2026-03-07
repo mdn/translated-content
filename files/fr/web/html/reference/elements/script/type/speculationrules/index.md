@@ -3,7 +3,7 @@ title: <script type="speculationrules">
 short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 l10n:
-  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}

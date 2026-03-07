@@ -2,23 +2,24 @@
 title: "Attribut HTML : required"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
-original_slug: Web/HTML/Attributes/required
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 L'attribut {{Glossary("Boolean/HTML", "booléen")}} **`required`**, s'il est présent, indique que l'utilisateur·ice doit définir une valeur avant que le formulaire propriétaire puisse être envoyé.
 
-L'attribut `required` est pris en charge par les types `{{HTMLElement("input/text","text")}}`, `{{HTMLElement("input/search","search")}}`, `{{HTMLElement("input/url","url")}}`, `{{HTMLElement("input/tel","tel")}}`, `{{HTMLElement("input/email","email")}}`, `{{HTMLElement("input/password","password")}}`, `{{HTMLElement("input/date","date")}}`, `{{HTMLElement("input/month","month")}}`, `{{HTMLElement("input/week","week")}}`, `{{HTMLElement("input/time","time")}}`, `{{HTMLElement("input/datetime-local","datetime-local")}}`, `{{HTMLElement("input/number","number")}}`, `{{HTMLElement("input/checkbox","checkbox")}}`, `{{HTMLElement("input/radio","radio")}}`, `{{HTMLElement("input/file","file")}}`, de l'élément HTML {{HTMLElement("input")}}, ainsi que les éléments HTML de contrôle de formulaire {{HTMLElement("select")}} et {{HTMLElement("textarea")}}. Si l'attribut est présent sur l'un de ces types ou éléments, la pseudo-classe CSS {{CSSxRef(":required")}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":optional")}} correspondra.
+L'attribut `required` est pris en charge par les types `{{HTMLElement("input/text", "text")}}`, `{{HTMLElement("input/search", "search")}}`, `{{HTMLElement("input/url", "url")}}`, `{{HTMLElement("input/tel", "tel")}}`, `{{HTMLElement("input/email", "email")}}`, `{{HTMLElement("input/password", "password")}}`, `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}`, `{{HTMLElement("input/checkbox", "checkbox")}}`, `{{HTMLElement("input/radio", "radio")}}`, `{{HTMLElement("input/file", "file")}}`, de l'élément HTML {{HTMLElement("input")}}, ainsi que les éléments HTML de contrôle de formulaire {{HTMLElement("select")}} et {{HTMLElement("textarea")}}. Si l'attribut est présent sur l'un de ces types ou éléments, la pseudo-classe CSS {{CSSxRef(":required")}} correspondra. Si l'attribut n'est pas inclus, la pseudo-classe {{CSSxRef(":optional")}} correspondra.
 
-L'attribut n'est pas pris en charge ou pertinent pour les types {{HTMLElement("input/range","range")}} et {{HTMLElement("input/color","color")}}, car les deux ont des valeurs par défaut. Le type `color` a pour valeur par défaut `#000000`. Le type `range` a pour valeur par défaut le point médian entre `min` et `max` — avec `min` et `max` par défaut à 0 et 100 respectivement dans la plupart des navigateurs si non déclarés. `required` n'est pas non plus pris en charge sur le type {{HTMLElement("input/hidden","hidden")}} — il n'est pas attendu que l'utilisateur·ice remplisse un champ de formulaire caché. Enfin, `required` n'est pas pris en charge sur les types de bouton, y compris {{HTMLElement("input/image","image")}}.
+L'attribut n'est pas pris en charge ou pertinent pour les types `{{HTMLElement("input/range", "range")}}` et `{{HTMLElement("input/color", "color")}}`, car les deux ont des valeurs par défaut. Le type `color` a pour valeur par défaut `#000000`. Le type `range` a pour valeur par défaut le point médian entre `min` et `max` — avec `min` et `max` par défaut à 0 et 100 respectivement dans la plupart des navigateurs si non déclarés. `required` n'est pas non plus pris en charge sur le type `{{HTMLElement("input/hidden", "hidden")}}` — il n'est pas attendu que l'utilisateur·ice remplisse un champ de formulaire caché. Enfin, `required` n'est pas pris en charge sur les types de bouton, y compris `{{HTMLElement("input/image", "image")}}`.
 
-Dans le cas d'un groupe de boutons {{HTMLElement("input/radio","radio")}} portant le même nom, si un seul bouton radio du groupe possède l'attribut `required`, un bouton radio du groupe doit être sélectionné, même si ce n'est pas forcément celui sur lequel l'attribut est appliqué. Pour faciliter la maintenance du code, il est recommandé d'inclure l'attribut `required` sur chaque bouton radio du groupe portant le même nom, ou sur aucun.
+Dans le cas d'un groupe de boutons `{{HTMLElement("input/radio", "radio")}}` portant le même nom, si un seul bouton radio du groupe possède l'attribut `required`, un bouton radio du groupe doit être sélectionné, même si ce n'est pas forcément celui sur lequel l'attribut est appliqué. Pour faciliter la maintenance du code, il est recommandé d'inclure l'attribut `required` sur chaque bouton radio du groupe portant le même nom, ou sur aucun.
 
-Dans le cas d'un groupe de cases à cocher {{HTMLElement("input/checkbox","checkbox")}} portant le même nom, seules les cases à cocher avec l'attribut `required` sont requises.
+Dans le cas d'un groupe de cases à cocher `{{HTMLElement("input/checkbox", "checkbox")}}` portant le même nom, seules les cases à cocher avec l'attribut `required` sont requises.
 
 > [!NOTE]
 > Définir [`aria-required="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) indique à un lecteur d'écran qu'un élément (n'importe lequel) est requis, mais n'a aucun impact sur le caractère optionnel de l'élément.
+
+## Description
 
 ### Interactions entre attributs
 

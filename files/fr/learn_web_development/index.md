@@ -1,12 +1,9 @@
 ---
 title: Apprendre le développement web
 slug: Learn_web_development
-original_slug: Learn
 l10n:
-  sourceCommit: 02eafb53ee0b481bc4a60e7da630811201fe228a
+  sourceCommit: 57bc2729e3963907c0b54158ae1a31318a2ebbd1
 ---
-
-## Compétences essentielles pour les nouveaux·elles développeur·euse·s front-end
 
 Bienvenue sur MDN **Apprendre le développement web** (aussi appelé **Apprendre**). Cette ressource propose un ensemble structuré de tutoriels pour enseigner les compétences et pratiques essentielles afin de devenir un·e développeur·euse front-end accompli·e, ainsi que des défis et des ressources complémentaires recommandées.
 
@@ -18,6 +15,14 @@ Bienvenue sur MDN **Apprendre le développement web** (aussi appelé **Apprendre
 
 > [!NOTE]
 > Dernière mise à jour&nbsp;: août 2025 ([voir le journal des modifications](/fr/docs/Learn_web_development/Changelog)).
+
+> [!CALLOUT]
+>
+> ### Essayez les cours vidéo de notre partenaire
+>
+> Vous souhaitez suivre un cours vidéo interactif pour compléter nos articles ? Le [Parcours professionnel d'un développeur front-end <sup>(angl.)</sup>](https://scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) de Scrimba<sup>[_Partenaire d'apprentissage MDN_](/fr/docs/MDN/Writing_guidelines/Learning_content#liens_partenaires_et_intégrations)</sup> enseigne également les sujets contenus dans le Programme MDN.
+>
+> <mdn-scrim-inline url="https://scrimba.com/s06icdv" scrimtitle="Scrimba + MDN"></mdn-scrim-inline>
 
 ## Vous ne savez pas par où commencer ?
 

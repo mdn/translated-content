@@ -55,13 +55,13 @@ p {
 
 {{ EmbedLiveSample('最大固有尺寸', '100%', '200') }}
 
-## 非固有尺寸
+## 外在尺寸
 
-**非固有尺寸**（extrinsic size）与*固有尺寸*相反，是基于元素的上下文，而不考虑其内容的尺寸。非固有尺寸由盒模型属性值决定。在非固有尺寸中，百分比指定了盒子相对于其包含块的大小。
+**外在尺寸**（extrinsic size）与*固有尺寸*相反，是基于元素的上下文，而不考虑其内容的尺寸。外在尺寸由盒模型属性值决定。在外在尺寸中，百分比指定了盒子相对于其包含块的大小。
 
 ## 参见
 
-- CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}}属性值。
+- CSS {{cssxref("min-content")}}、{{cssxref("max-content")}} 和 {{cssxref("fit-content")}} 属性值。
 - CSS {{cssxref("aspect-ratio")}} 属性
 - [CSS 盒模型](/zh-CN/docs/Web/CSS/Guides/Box_sizing)模块
 - [CSS 尺寸规范：固有尺寸](https://www.w3.org/TR/css-sizing-3/#intrinsic-sizes)

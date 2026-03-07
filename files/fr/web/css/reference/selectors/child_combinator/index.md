@@ -1,27 +1,26 @@
 ---
-title: Sélecteurs enfant
+title: Combinateur enfant
 slug: Web/CSS/Reference/Selectors/Child_combinator
-original_slug: Web/CSS/Child_combinator
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{CSSRef}}
-
-Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments correspondant au second sélecteur qui sont des enfants **directs** des éléments ciblés par le premier sélecteur.
+Le **combinateur enfant** (`>`) est placé entre deux sélecteurs CSS. Il cible uniquement les éléments correspondant au second sélecteur qui sont des enfants directs des éléments correspondant au premier.
 
 ```css
-/* Les éléments <li> qui sont des enfant d'un */
-/* <ul class="mon-truc"> */
+/* Les éléments <li> qui sont des enfants d'une liste "mon-truc" */
 ul.mon-truc > li {
   margin: 2em;
 }
 ```
 
-En comparaison, lorsque deux sélecteurs sont combinés à l'aide du sélecteur descendant, l'expression formée par la combinaison des deux sélecteurs cible les éléments correspondant au second sélecteur qui ont un parent de n'importe quel niveau qui correspond au premier sélecteur, quelque soit le nombre de « sauts » dans le DOM.
+Les éléments correspondant au second sélecteur doivent être les enfants immédiats des éléments correspondant au premier sélecteur. C'est plus strict que le [combinateur de descendant](/fr/docs/Web/CSS/Reference/Selectors/Descendant_combinator), qui cible tous les éléments correspondant au second sélecteur pour lesquels il existe un élément ancêtre correspondant au premier sélecteur, peu importe le nombre de «&nbsp;sauts&nbsp;» dans le DOM.
 
 ## Syntaxe
 
-```
-selecteur1 > selecteur2 { déclarations CSS }
+```css-nolint
+/* L'espace autour du combinateur > est optionnel mais recommandé. */
+selector1 > selector2 { /* propriétés de style */ }
 ```
 
 ## Exemples
@@ -30,11 +29,11 @@ selecteur1 > selecteur2 { déclarations CSS }
 
 ```css
 span {
-  background-color: white;
+  background-color: aqua;
 }
 
 div > span {
-  background-color: blue;
+  background-color: yellow;
 }
 ```
 

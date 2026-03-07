@@ -2,7 +2,6 @@
 title: "Attribut HTML : disabled"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
-original_slug: Web/HTML/Attributes/disabled
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---

@@ -2,7 +2,6 @@
 title: "Attribut HTML : minlength"
 short-title: minlength
 slug: Web/HTML/Reference/Attributes/minlength
-original_slug: Web/HTML/Attributes/minlength
 l10n:
   sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
 ---

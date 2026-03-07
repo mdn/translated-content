@@ -2,7 +2,6 @@
 title: "Attribut HTML : size"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
-original_slug: Web/HTML/Attributes/size
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---

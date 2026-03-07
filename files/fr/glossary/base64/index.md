@@ -2,7 +2,7 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 8e832fce3360267f296722dfd6dd87d1c547b1bf
 ---
 
 **Base64** est un groupe de schémas pour [encoder des données binaires sous forme d'un texte](https://fr.wikipedia.org/wiki/Conversion_du_binaire_en_texte) au format ASCII grâce à la représentation de ces données en base 64. Le terme _base64_ vient à l'origine de l'encodage utilisé pour transférer certains [contenus MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding).
@@ -56,7 +56,7 @@ Les navigateurs proposent également nativement deux fonctions JavaScript pour d
 > [!NOTE]
 > Base64 est un encodage binaire et non un encodage texte, mais `btoa` et `atob` ont été ajoutées à la plateforme web avant la prise en charge des types de données binaires. En conséquence, ces deux fonctions utilisent des chaînes pour représenter des données binaires, le {{Glossary("code point", "point de code")}} de chaque caractère représentant la valeur de chaque octet. Cela a mené à la croyance erronée que `btoa` peut être utilisé pour encoder n'importe quelle donnée textuelle — par exemple, pour créer une URL `data:` Base64 d'un document texte ou HTML.
 >
-> Cependant, la correspondance octet/point de code n'est fiable que pour les points de code jusqu'à `0x7f`. De plus, les points de code supérieurs à `0xff` feront lever une erreur par `btoa` car ils dépassent la valeur maximale pour 1 octet. La section suivante détaille comment contourner cette limitation lors de l'encodage de texte Unicode arbitraire.
+> Cependant, la correspondance octet/point de code n'est fiable que pour les points de code jusqu'à `0x7f`. De plus, les points de code supérieurs à `0xff` feront lever une erreur par `btoa` car ils dépassent la valeur maximale pour 1 octet. La section «&nbsp;[des chaînes Unicode](/fr/docs/Web/API/Window/btoa#chaînes_unicode)&nbsp;» de la méthode {{DOMxRef("Window.btoa()")}} détaille comment contourner cette limitation lors de l'encodage de texte Unicode arbitraire.
 
 ## Voir aussi
 

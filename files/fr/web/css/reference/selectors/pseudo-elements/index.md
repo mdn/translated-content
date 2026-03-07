@@ -1,12 +1,14 @@
 ---
 title: Pseudo-éléments
 slug: Web/CSS/Reference/Selectors/Pseudo-elements
-original_slug: Web/CSS/Pseudo-elements
 l10n:
-  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
+  sourceCommit: 21d2342d16ed78d6c72c66a71599125eb2405a31
 ---
 
 Un **pseudo-élément** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de mettre en forme une partie spécifique du ou des éléments sélectionnés.
+
+> [!NOTE]
+> Cette page est un index de tous les pseudo-éléments en CSS. La page des [pseudo-éléments CSS](/fr/docs/Web/CSS/Guides/Pseudo-elements) présente le module qui définit certains, mais pas tous, de ces pseudo-éléments.
 
 ## Syntaxe
 
@@ -44,22 +46,26 @@ Un pseudo-élément peut être sélectionné en fonction de l'état actuel de l'
 - {{CSSxRef("::cue")}}
   - : Les [répliques WebVTT](/fr/docs/Web/API/WebVTT_API) à l'intérieur d'un élément sélectionné.
     Cela peut être utilisé pour [mettre en forme les sous-titres et autres répliques](/fr/docs/Web/API/WebVTT_API#mettre_en_forme_les_sous-titres_webvtt) dans les médias avec des pistes VTT.
-    Le module [CSS pseudo-éléments](/fr/docs/Web/CSS/CSS_pseudo-elements) définit également les sous-pseudo-éléments `::postfix` et `::prefix`. Ceux-ci ne sont pas encore pris en charge par aucun navigateur.
+    Le module [des pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements) définit également les sous-pseudo-éléments `::postfix` et `::prefix`. Ceux-ci ne sont pas encore pris en charge par aucun navigateur.
 
 ## Les pseudo-éléments de mise en évidence
 
 Sélectionne des sections de document en fonction du contenu et de l'état du document, permettant à ces zones d'être mises en forme différemment pour indiquer cet état à l'utilisateur·ice.
 
+- {{CSSxRef("::grammar-error")}}
+  - : Une portion de texte que le navigateur pense être grammaticalement incorrecte.
+- {{CSSxRef("::highlight()")}}
+  - : Les éléments dans le [registre de mise en évidence](/fr/docs/Web/API/CSS/highlights_static). Il est utilisé pour créer des surlignages personnalisés.
+- {{CSSxRef("::search-text")}}
+  - : Résultats de recherche identifiés par la fonction de recherche de texte «&nbsp;Rechercher&nbsp;» ou «&nbsp;Rechercher dans la page&nbsp;» de l'agent utilisateur.
 - {{CSSxRef("::selection")}}
   - : La portion d'un document qui a été sélectionnée.
 - {{CSSxRef("::target-text")}}
   - : L'élément cible du document. L'élément cible est identifié à l'aide de l'identifiant de fragment de l'URL.
 - {{CSSxRef("::spelling-error")}}
   - : Une portion de texte que le navigateur pense être mal orthographiée.
-- {{CSSxRef("::grammar-error")}}
-  - : Une portion de texte que le navigateur pense être grammaticalement incorrecte.
-- {{CSSxRef("::highlight()")}}
-  - : Les éléments dans le [registre de mise en évidence](/fr/docs/Web/API/CSS/highlights_static). Il est utilisé pour créer des surlignages personnalisés.
+- {{CSSxRef("::target-text")}}
+  - : L'élément cible du document. L'élément cible est identifié à l'aide de l'identifiant de [fragment de l'URL](/fr/docs/Web/URI/Reference/Fragment).
 
 ## Les pseudo-éléments conformes à l'arborescence
 
@@ -76,11 +82,11 @@ Ces pseudo-éléments se comportent comme des éléments normaux, s'intégrant p
 - {{CSSxRef("::backdrop")}}
   - : L'arrière-plan de l'élément d'origine rendu dans la [couche supérieure](/fr/docs/Glossary/Top_layer).
 - {{CSSxRef("::scroll-button()")}}
-  - : Crée un bouton qui peut contrôler le défilement du {{glossary("scroll container", "conteneur déroulant")}} auquel il est appliqué.
+  - : Crée un bouton qui peut contrôler le défilement du {{Glossary("scroll container", "conteneur déroulant")}} auquel il est appliqué.
 - {{CSSxRef("::scroll-marker")}}
   - : Crée un pseudo-élément qui est un marqueur de défilement — un bouton cible de défilement pour son élément d'origine imbriqué dans un groupe de marqueurs de défilement.
 - {{CSSxRef("::scroll-marker-group")}}
-  - : Génère un conteneur avant ou après un conteneur de défilement pour contenir les pseudo-éléments {{cssxref("::scroll-marker")}} générés sur l'élément ou ses descendants.
+  - : Génère un conteneur avant ou après un conteneur de défilement pour contenir les pseudo-éléments {{CSSxRef("::scroll-marker")}} générés sur l'élément ou ses descendants.
 
 ## Les pseudo-éléments basés sur des éléments
 
@@ -171,11 +177,44 @@ T
 
 V
 
-- {{cssxref("::view-transition")}}
-- {{cssxref("::view-transition-image-pair()")}}
-- {{cssxref("::view-transition-group()")}}
-- {{cssxref("::view-transition-new()")}}
-- {{cssxref("::view-transition-old()")}}
+- {{CSSxRef("::view-transition")}}
+- {{CSSxRef("::view-transition-image-pair()")}}
+- {{CSSxRef("::view-transition-group()")}}
+- {{CSSxRef("::view-transition-new()")}}
+- {{CSSxRef("::view-transition-old()")}}
+
+### Pseudo-éléments non standard
+
+Les pseudo-éléments non standard avec préfixe fournisseur incluent&nbsp;:
+
+#### Préfixe `-moz-`
+
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- {{CSSxRef("::-moz-list-bullet")}}
+- {{CSSxRef("::-moz-list-number")}}
+- {{CSSxRef("::-moz-meter-bar")}}
+- {{CSSxRef("::-moz-progress-bar")}}
+- {{CSSxRef("::-moz-range-progress")}}
+- {{CSSxRef("::-moz-range-thumb")}}
+- {{CSSxRef("::-moz-range-track")}}
+
+#### Préfixe `-webkit-`
+
+- {{CSSxRef("::-webkit-inner-spin-button")}}
+- {{CSSxRef("::-webkit-meter-bar")}}
+- {{CSSxRef("::-webkit-meter-even-less-good-value")}}
+- {{CSSxRef("::-webkit-meter-inner-element")}}
+- {{CSSxRef("::-webkit-meter-optimum-value")}}
+- {{CSSxRef("::-webkit-meter-suboptimum-value")}}
+- {{CSSxRef("::-webkit-progress-bar")}}
+- {{CSSxRef("::-webkit-progress-inner-element")}}
+- {{CSSxRef("::-webkit-progress-value")}}
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("::-webkit-search-cancel-button")}}
+- {{CSSxRef("::-webkit-search-results-button")}}
+- {{CSSxRef("::-webkit-slider-runnable-track")}}
+- {{CSSxRef("::-webkit-slider-thumb")}}
 
 ## Les pseudo-éléments imbriqués
 
@@ -190,7 +229,7 @@ Consultez les pages de référence des pseudo-éléments individuels pour des ex
 
 ## Héritage des pseudo-éléments de mise en évidence
 
-[Les pseudo-éléments de mise en évidence](#les_pseudo-éléments_de_mise_en_évidence), tels que {{CSSxref("::selection")}}, {{CSSxref("::target-text")}}, {{CSSxref("::highlight()")}}, {{CSSxref("::spelling-error")}}, et {{CSSxref("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
+[Les pseudo-éléments de mise en évidence](#les_pseudo-éléments_de_mise_en_évidence), tels que {{CSSxRef("::selection")}}, {{CSSxRef("::target-text")}}, {{CSSxRef("::highlight()")}}, {{CSSxRef("::spelling-error")}}, et {{CSSxRef("::grammar-error")}}, suivent un modèle d'héritage cohérent qui diffère de [l'héritage des éléments réguliers](/fr/docs/Web/CSS/Guides/Cascade/Inheritance).
 
 Lorsque vous appliquez des styles aux pseudo-éléments de mise en évidence, ils héritent à la fois de&nbsp;:
 
@@ -201,7 +240,7 @@ Cela signifie que si vous mettez en forme à la fois le pseudo-élément de mise
 
 Voici un exemple concret.
 
-Tout d'abord, nous avons un HTML qui inclut deux éléments {{htmlelement("div")}} imbriqués. Une partie du contenu textuel inclus est contenue directement à l'intérieur du `<div>` parent, et une partie est imbriquée à l'intérieur du `<div>` enfant.
+Tout d'abord, nous avons un HTML qui inclut deux éléments HTML {{HTMLElement("div")}} imbriqués. Une partie du contenu textuel inclus est contenue directement à l'intérieur du `<div>` parent, et une partie est imbriquée à l'intérieur du `<div>` enfant.
 
 ```html live-sample___highlight_inheritance
 <div class="parent">
@@ -210,7 +249,7 @@ Tout d'abord, nous avons un HTML qui inclut deux éléments {{htmlelement("div")
 </div>
 ```
 
-Ensuite, nous incluons un peu de CSS, qui sélectionne les éléments `<div>` parent et enfant séparément et leur donne différentes valeurs de {{cssxref("color")}}, et sélectionne le texte sélectionné du parent et de l'enfant ({{cssxref("::selection")}}). Cela donne à chaque `<div>` une couleur de fond différente et définit une couleur de texte différente sur la sélection du parent.
+Ensuite, nous incluons un peu de CSS, qui sélectionne les éléments `<div>` parent et enfant séparément et leur donne différentes valeurs de {{CSSxRef("color")}}, et sélectionne le texte sélectionné du parent et de l'enfant ({{CSSxRef("::selection")}}). Cela donne à chaque `<div>` une couleur de fond différente et définit une couleur de texte différente sur la sélection du parent.
 
 ```css live-sample___highlight_inheritance
 /* Mise en forme pour l'élément parent */
@@ -285,7 +324,7 @@ Lorsque vous utilisez le sélecteur universel avec des pseudo-éléments mise en
 ## Voir aussi
 
 - Le module des [pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements)
-- Les [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [Les pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 - Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - [Apprendre&nbsp;: Pseudo-classes et pseudo-éléments](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [Changements d'héritage pour le style de sélection CSS <sup>(angl.)</sup>](https://developer.chrome.com/blog/selection-styling) — Explication détaillée des changements du modèle d'héritage des pseudo-éléments mise en évidence dans Chrome 134

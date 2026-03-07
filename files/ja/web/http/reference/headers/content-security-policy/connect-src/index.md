@@ -1,8 +1,9 @@
 ---
-title: "CSP: connect-src"
+title: "Content-Security-Policy: connect-src ディレクティブ"
+short-title: connect-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
@@ -58,32 +59,31 @@ Content-Security-Policy: connect-src <source-expression-list>;
 
 ### 違反の場合
 
-以下の CSP ヘッダーを指定した場合、
+次の CSP ヘッダーを指定した場合、
 
 ```http
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-以下の接続はブロックされ、読み込まれません。
+次の接続はブロックされ、読み込まれません。
 
 ```html
-<a ping="https://not-example.com">
-  <script>
-    const response = fetch("https://not-example.com/");
+<a ping="https://not-example.com" href="/">リンク</a>
+<script>
+  const response = fetch("https://not-example.com/");
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://not-example.com/");
-    xhr.send();
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://not-example.com/");
+  xhr.send();
 
-    const ws = new WebSocket("wss://not-example.com/");
+  const ws = new WebSocket("wss://not-example.com/");
 
-    const es = new EventSource("https://not-example.com/");
+  const es = new EventSource("https://not-example.com/");
 
-    navigator.sendBeacon("https://not-example.com/", {
-      /* … */
-    });
-  </script></a
->
+  navigator.sendBeacon("https://not-example.com/", {
+    /* … */
+  });
+</script>
 ```
 
 ## 仕様書

@@ -2,7 +2,7 @@
 title: inherits
 slug: Web/CSS/Reference/At-rules/@property/inherits
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 98bbdcd90e5487539cebe19b12fe3d731fb5a03e
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.
@@ -69,6 +69,7 @@ window.CSS.registerProperty({
 ## Voir aussi
 
 - Autres descripteurs de {{CSSxRef("@property")}}&nbsp;: {{CSSxRef("@property/initial-value", "initial-value")}} et {{CSSxRef("@property/syntax","syntax")}}
+- [Enregistrement des propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
 - [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
 - [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
 - [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)

@@ -2,9 +2,8 @@
 title: "Attribut HTML : autocomplete"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
-original_slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
 L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
@@ -38,7 +37,7 @@ L'attribut `autocomplete` fournit une indication à l'agent utilisateur sur la f
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
@@ -62,7 +61,7 @@ Si vous ajoutez l'attribut `autocomplete` sur un champ {{HTMLElement("input/hidd
 La source des valeurs suggérées dépend généralement du navigateur&nbsp;: il s'agit en général des valeurs précédemment saisies par l'utilisateur·rice, mais elles peuvent aussi provenir de valeurs préconfigurées. Par exemple, un navigateur peut permettre à l'utilisateur·rice d'enregistrer son nom, son adresse, son numéro de téléphone et ses adresses e-mail pour l'autocomplétion. Il peut aussi proposer d'enregistrer des informations de carte bancaire chiffrées, pour un remplissage automatique après authentification.
 
 > [!NOTE]
-> L'attribut `autocomplete` contrôle aussi, dans Firefox (contrairement aux autres navigateurs), [la persistance de l'état désactivé ou coché d'un champ `<input>`, `<textarea>` ou d'un `<form>` entier lors d'un rechargement de page <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). Cette fonctionnalité est activée par défaut. Définir `autocomplete="off"` la désactive, même si l'attribut ne devrait normalement pas s'appliquer selon le type de champ. Voir [bug 654072 de Firefox <sup>(angl.)</sup>](https://bugzil.la/654072).
+> L'attribut `autocomplete` contrôle aussi, dans Firefox (contrairement aux autres navigateurs), [la persistance de l'état désactivé ou coché d'un champ `<input>`, `<textarea>` ou d'un `<form>` entier lors d'un rechargement de page <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). Cette fonctionnalité est activée par défaut. Définir `autocomplete="off"` la désactive, même si l'attribut ne devrait normalement pas s'appliquer selon le type de champ. Voir le [bogue 654072 de Firefox <sup>(angl.)</sup>](https://bugzil.la/654072).
 
 ## Valeurs
 
@@ -72,7 +71,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
     > [!NOTE]
-    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir [l'article sur l'autoremplissage des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir la section [Gérer le remplissage automatique des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#gérer_le_remplissage_automatique_des_champs_de_connexion).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -123,7 +122,7 @@ Les jetons qui identifient le type de destinataire incluent&nbsp;:
   - : Le type de contact identifié par les jetons suivants sert à contacter le·la destinataire quel que soit l'endroit.
 - `fax`
   - : Le destinataire identifié par les jetons suivants est un télécopieur.
-- `page`
+- `pager`
   - : Le destinataire identifié par les jetons suivants est un téléavertisseur ou un bip.
 
 ##### Jetons de contact numérique
@@ -184,13 +183,13 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
     - `address-line1`, `address-line2`, `address-line3`
       - : Chaque ligne individuelle de l'adresse postale. Ces champs ne doivent être présents que si `street-address` n'est pas utilisé.
 - `address-level4`
-  - : Le niveau administratif le plus fin ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant quatre niveaux.
+  - : Le [niveau administratif](#les_niveaux_administratifs_pour_les_adresses) le plus fin, pour les adresses comportant quatre niveaux.
 - `address-level3`
-  - : Le troisième niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant au moins trois niveaux.
+  - : Le troisième [niveau administratif](#les_niveaux_administratifs_pour_les_adresses), pour les adresses comportant au moins trois niveaux.
 - `address-level2`
-  - : Le deuxième niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant au moins deux niveaux. Pour les pays à deux niveaux administratifs, cela correspond généralement à la ville, au village ou à la localité où se situe l'adresse.
+  - : Le deuxième [niveau administratif](#les_niveaux_administratifs_pour_les_adresses), pour les adresses comportant au moins deux niveaux. Pour les pays à deux niveaux administratifs, cela correspond généralement à la ville, au village ou à la localité où se situe l'adresse.
 - `address-level1`
-  - : Le premier niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)) de l'adresse. Il s'agit généralement de la région ou de la province où se situe l'adresse. Aux États-Unis, il s'agit de l'État. En Suisse, du canton. Au Royaume-Uni, du comté.
+  - : Le premier [niveau administratif](#les_niveaux_administratifs_pour_les_adresses) de l'adresse. Il s'agit généralement de la région ou de la province où se situe l'adresse. Aux États-Unis, il s'agit de l'État. En Suisse, du canton. Au Royaume-Uni, du comté.
 - `country`
   - : Un code de pays ou de territoire.
 - `country-name`
@@ -244,7 +243,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 Avec {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, le jeton `webauthn` peut être inclus en dernier pour indiquer à l'agent utilisateur d'afficher les identifiants à clé publique lorsque l'utilisateur·rice interagit avec le contrôle.
 
 - `webauthn`
-  - : Les clés d'accès générées par l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès via l'autoremplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.
+  - : Les clés d'accès générées par [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès via l'autoremplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.
 
 ## Exemples
 

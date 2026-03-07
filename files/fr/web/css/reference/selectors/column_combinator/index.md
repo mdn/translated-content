@@ -1,10 +1,11 @@
 ---
 title: Combinateur de colonne
 slug: Web/CSS/Reference/Selectors/Column_combinator
-original_slug: Web/CSS/Column_combinator
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 Le **combinateur de colonne** (`||`) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.
 
@@ -18,9 +19,10 @@ col.selected||td {
 
 ## Syntaxe
 
-```css
-column-selector||cell-selector {
-  /* propriétés pour le style */
+```css-nolint
+/* L'espace autour du combinateur || est optionnel mais recommandé. */
+column-selector || cell-selector {
+  /* propriétés de style */
 }
 ```
 
@@ -76,6 +78,9 @@ col.selected||td {
 
 ## Voir aussi
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid")}}
+- L'élément HTML {{HTMLElement("col")}}
+- L'élément HTML {{HTMLElement("colgroup")}}
+- La propriété {{CSSxRef("grid")}}
+- La pseudo-classe {{CSSxRef(":nth-of-type")}}
+- La pseudo-classe {{CSSxRef(":nth-last-of-type")}}
+- Le module [des sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)

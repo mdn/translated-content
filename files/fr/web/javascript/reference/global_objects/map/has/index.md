@@ -1,48 +1,51 @@
 ---
-title: Map.prototype.has()
+title: "Map : méthode has()"
+short-title: has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
+l10n:
+  sourceCommit: 0574ac1985889d2ccce1b61e42db98d74ac1bbcb
 ---
 
-{{JSRef}}
+La méthode **`has()`** des instances de {{JSxRef("Map")}} retourne un booléen indiquant si une entrée avec la clé définie existe dans cette `Map` ou non.
 
-La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet `Map` en question contient la clé donnée.
-
-{{InteractiveExample("JavaScript Demo: Map.prototype.has()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Map.prototype.has()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("toto", "truc");
 
-console.log(map1.has("bar"));
-// Expected output: true
+console.log(map.has("toto"));
+// Sortie attendue : true
 
-console.log(map1.has("baz"));
-// Expected output: false
+console.log(map.has("baz"));
+// Sortie attendue : false
 ```
 
 ## Syntaxe
 
-```js
-maMap.has(clé);
+```js-nolint
+has(key)
 ```
 
 ### Paramètres
 
-- `clé`
-  - : Ce paramètre obligatoire correspond à la clé dont on veut savoir si elle appartient à l'objet `Map`.
+- `key`
+  - : La clé de l'entrée à tester pour sa présence dans l'objet `Map`. Les clés des objets sont comparées par {{Glossary("Object_reference", "référence")}}, et pas par valeur.
 
 ### Valeur de retour
 
-Cette méthode renvoie un booléen : `true` si un élément avec cette clé existe au sein de l'objet `Map` et `false` sinon.
+Retourne `true` si une entrée avec la clé définie existe dans l'objet `Map`, sinon `false`.
 
 ## Exemples
 
+### Utiliser la méthode `has()`
+
 ```js
-var maMap = new Map();
+const maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.has("truc"); // renvoie true
-maMap.has("machin"); // renvoie false
+maMap.has("truc"); // true
+maMap.has("bidule"); // false
 ```
 
 ## Spécifications
@@ -55,6 +58,7 @@ maMap.has("machin"); // renvoie false
 
 ## Voir aussi
 
-- {{jsxref("Map")}}
-- {{jsxref("Map.prototype.set()")}}
-- {{jsxref("Map.prototype.get()")}}
+- L'objet {{JSxRef("Map")}}
+- La méthode {{JSxRef("Map.prototype.delete()")}}
+- La méthode {{JSxRef("Map.prototype.get()")}}
+- La méthode {{JSxRef("Map.prototype.set()")}}

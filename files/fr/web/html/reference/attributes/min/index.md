@@ -2,9 +2,8 @@
 title: "Attribut HTML : min"
 short-title: min
 slug: Web/HTML/Reference/Attributes/min
-original_slug: Web/HTML/Attributes/min
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 L'attribut **`min`** définit la valeur minimale acceptable et valide pour le champ de saisie qui contient cet attribut. Si la [valeur](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est inférieure à cette valeur, le champ échoue lors de la [validation](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Cette valeur doit être inférieure ou égale à la valeur de l'attribut `max`.
