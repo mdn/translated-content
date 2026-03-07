@@ -1,74 +1,188 @@
 ---
-title: Using Fetch
+title: 使用 Fetch API
 slug: Web/API/Fetch_API/Using_Fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}
 
-[Fetch API](/zh-TW/docs/Web/API/Fetch_API) 提供了一種 JavaScript Interface 來操作 HTTP pipeline，比方 request 和 response。同時它也提供了 global 的 {{domxref("GlobalFetch.fetch","fetch()")}} method，使得在網路上非同步地 fetch resources 這件事變得簡單易懂。
+[Fetch API](/zh-TW/docs/Web/API/Fetch_API) 提供一個 JavaScript 介面，用來發送 HTTP 請求與處理回應。
 
-同樣的功能，以前都是使用 {{domxref("XMLHttpRequest")}}，而 Fetch 作為其替代方案，能更方便地整合在如 {{domxref("ServiceWorker_API", "Service Workers")}} 等相關技術上。此外，Fetch 具備額外的 logical palce，能拿來定義其他和 HTTP 有關的東西，像是 CORS 和 HTTP extensions。
+Fetch 是 {{domxref("XMLHttpRequest")}} 的現代替代方案，相較於 {{domxref("XMLHttpRequest")}} 使用的 {{glossary("callback_function", "回呼函式")}}，它基於 [Promise](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)。而且能更方便地整合在如 {{domxref("ServiceWorker_API", "Service Workers")}} 與 [跨來源資源共享（CORS）](/zh-TW/docs/Web/HTTP/Guides/CORS)等相關技術上。
 
-`fetch` 和 `jQuery.ajax()` 有三個主要的差異:
+使用 Fetch API，呼叫 {{domxref("Window/fetch", "fetch()")}} 就可以建立請求，它在 {{domxref("Window", "window")}} 和 {{domxref("WorkerGlobalScope", "worker")}} 的上下文中都能作為全域函式使用。你可以傳入一個 {{domxref("Request")}} 物件，或是一個 URL 字串，以及額外的參數設定來使用 fetch。
 
-- `fetch()` 回傳的 promise **不會 reject HTTP 的 error status**，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 `ok` status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。
-- `fetch` **可以接收跨站的 cookies**，你可以用 Fetch 來建立跨站的 session。
-- `fetch` **不會傳送 cookies**，除非你有設定 credentials 的 [init option](/zh-TW/docs/Web/API/Window/fetch#parameters)。 (Since [Aug 25, 2017](https://github.com/whatwg/fetch/pull/585). The spec changed the default credentials policy to `same-origin`. Firefox changed since 61.0b13.)
+`fetch()` 函式回傳一個 {{jsxref("Promise")}}，當伺服器回應時會被 fulfill 一個代表伺服器回應的 {{domxref("Response")}} 物件。接著你可以藉由呼叫物件上合適的方法，來檢查回應狀態，並且以各種格式擷取回應內容，包括文字檔與 JSON。
 
-## 使用 Fetch 發送請求 ( request )
-
-用法簡單，如下:
+以下是一個使用 `fetch()` 來從伺服器獲取一些 JSON 資料的簡單範例：
 
 ```js
-fetch("http://example.com/movies.json")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (myJson) {
-    console.log(myJson);
-  });
+async function getData() {
+  const url = "https://example.org/products.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`回應狀態: ${response.status}`);
+    }
+
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
 ```
 
-這裡要使用 fetch 透過網路取得 json 然後印出在 console，最簡單的方式只需要一個參數就是資料的 URI，fetch 會回傳一個包含 response 的 promise 。
+我們宣告一個 URL 字串，並且將其作為參數傳入 `fetch()`，並且不帶額外選項。
 
-這個範例使用的 url 只是示意用。
+當發生一些錯誤，`fetch()` 函式會 reject 這個 promise，不過如果是伺服器回應錯誤狀態，例如 {{httpstatus("404")}}，這並不會讓 promise 被 reject，因此我們應該主動檢查回應的狀態，例如在這裡如果它不 OK，我們可以主動拋出錯誤。
 
-回傳的 response 需要透過 {{domxref("Body.json","json()")}} (在 {{domxref("Body")}} 可以找到定義, Body 是用 {{domxref("Request")}} 和 {{domxref("Response")}} 實作出來的物件.)
+如果沒有發生以上情況，我們可以藉由呼叫 `Response` 的 {{domxref("Response.json()", "json()")}} 方法來以 {{glossary("JSON")}} 獲取回應的主體，並且將他輸出。要注意就像 `fetch()` 函式一樣，`json()` 也是非同步的，而且所有其他用來獲取回應主體的方法也都一樣。
 
-> [!NOTE]
-> 其實 Body 還提供了其他類似的功能可以將內容輸成其他類型格式，詳見[Body](#body)
+在本頁接下來的部分，我們將更詳細的探討這個過程的各階段。
 
-Fetch 請求的安全性 [Content Security Policy](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)(內容安全策略) 是由 header 中的 `connect-src` directive 所設定 ，並非其他 directive ( 比如：img-src、default-src 等)。
+## 建立請求
 
-### Request 可用的設定值
+你可以呼叫 `fetch()` 來建立請求，傳入：
 
-`fetch()` 第二個參數是選用的，可以傳送一個 `init` Object 來設定 request。
+1. 欲請求的資源定義，這可以是：
+   - 一個 URL 字串
+   - 一個物件，例如 {{domxref("URL")}} 的實例，總之只要是其 {{glossary("stringifier")}} 會回傳 URL 字串都可以
+   - 一個 {{domxref("Request")}} 實例
+2. 可選的物件，包含可以用來設定請求的選項
 
-更多可以用的設定值詳見 {{domxref("GlobalFetch.fetch","fetch()")}}
+在這個章節我們我會看看一些最常用的選項。如果你想要查看所有可用的選項，你可以查看 [`fetch()`](/zh-TW/docs/Web/API/Window/fetch)。
+
+### 設定 HTTP 請求方法
+
+預設下，`fetch` 會做 {{httpmethod("GET")}} 請求，但你可以使用 `method` 這個選項來使用不同的 [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)
 
 ```js
-// 來發個 POST Request:
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  // …
+});
+```
 
-postData("http://example.com/answer", { answer: 42 })
-  .then((data) => console.log(data)) // JSON from `response.json()` call
-  .catch((error) => console.error(error));
+如果 `mode` 設為 `no-cors`，則 `method` 一定要是 `GET`、`POST`、`HEAD`其中一個。
 
-function postData(url, data) {
-  // Default options are marked with *
-  return fetch(url, {
-    body: JSON.stringify(data), // must match 'Content-Type' header
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, same-origin, *omit
-    headers: {
-      "user-agent": "Mozilla/4.0 MDN Example",
-      "content-type": "application/json",
-    },
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, cors, *same-origin
-    redirect: "follow", // manual, *follow, error
-    referrer: "no-referrer", // *client, no-referrer
-  }).then((response) => response.json()); // 輸出成 json
-}
+### 設定主體（Body）
+
+請求主體是請求的負載，它是客戶端寄送給伺服器的內容，你不能在 `GET` 請求中包含主體，它是用來在 {{httpmethod("POST")}} 或 {{httpmethod("PUT")}} 上使用。舉例來說，如果你想要上傳一個檔案到伺服器，你可能會建立一個 `POST` 請求然後將檔案放在請求主體。
+
+要設定一個請求的主體，在 `body` 這個選項傳遞它：
+
+```js
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  // …
+});
+```
+
+以下都是可傳遞的物件種類：
+
+- 字串
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}}
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{domxref("URLSearchParams")}}
+- {{domxref("FormData")}}
+- {{domxref("ReadableStream")}}
+
+其他物件會使用 `toString()` 方法來轉換，舉例來說你可以使用 {{domxref("URLSearchParams")}} 物件來編碼資料（更多資訊請查看 [設定Headers](#設定-headers)）：
+
+```js
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded",
+  },
+  // 會自動轉換成 "username=example&password=password"
+  body: new URLSearchParams({ username: "example", password: "password" }),
+  // …
+});
+```
+
+注意就像回應主體，請求主體也是 streams，然後請求時會讀取它，因此如果一個請求包含主體，你不能發送兩次：
+
+```js example-bad
+const request = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const response1 = await fetch(request);
+console.log(response1.status);
+
+// 拋出錯誤： "Body has already been consumed."
+const response2 = await fetch(request);
+console.log(response2.status);
+```
+
+你需要在發送前先 {{domxref("Request.clone()", "複製請求", "", "nocode")}}：
+
+```js
+const request1 = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const request2 = request1.clone();
+
+const response1 = await fetch(request1);
+console.log(response1.status);
+
+const response2 = await fetch(request2);
+console.log(response2.status);
+```
+
+更多資訊請查看 [Locked and disturbed streams](#locked_and_disturbed_streams)
+
+### 設定 Headers
+
+Headers 會提供伺服器有關請求的相關資訊，舉例來說，在 `POST` 請求中，{{httpheader("Content-Type")}} 這個 header 會告訴伺服器請求主體的格式。
+
+你可以在 `header` 傳入物件實字，包含 `header-名稱：header-值` 的屬性：
+
+```js
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ username: "example" }),
+  // …
+});
+```
+
+另外，你也可以建立一個 {{domxref("Headers")}} 物件，使用 {{domxref("Headers.append()")}} 就可以新增 header，然後將其放入 `header` 這個選項傳遞：
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  headers: myHeaders,
+  body: JSON.stringify({ username: "example" }),
+  // …
+});
+```
+
+相較於一般的物件實字，`Headers` 這個物件提供了一些額外的輸入淨化（input sanitization）。舉例來說，header 的名稱會變成小寫，值前後的多餘空白會被去除，也避免一些特定 header 的設定。有一些 headers 是自動被瀏覽器設定的，使用者被禁止設定，如 {{glossary("Forbidden request header", "Forbidden request headers")}}。如果 {{domxref("Request.mode", "mode")}} 選項被設定為 `no-cors`，禁止的 headers 又會更多。
+
+### 在 GET 請求中發送資料
+
+`GET` 請求並沒有主體，但你仍然藉由以查詢字串的方式修改網址，來傳送一些資料，這是相當常用的方法。你可以使用 {{domxref("URLSearchParams")}} 來編碼這個資料，然後將其加在網址後面：
+
+```js
+const params = new URLSearchParams();
+params.append("username", "example");
+
+// GET 請求會送到 https://example.org/login?username=example
+const response = await fetch(`https://example.org/login?${params}`);
 ```
 
 ### 包含憑證(Credentials) 的 Request 用法
