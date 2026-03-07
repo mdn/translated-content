@@ -11,7 +11,7 @@ Uma grande parte do conteúdo presente na internet pode se tornar acessível ape
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Pré-requsitos:</th>
+      <th scope="row">Pré-requisitos:</th>
       <td>
         <p>
           Conceitos básicos de computadores, entendimento básico de HTML (veja
@@ -115,7 +115,7 @@ Nós preparamos uma versão com o texto mais longo para que você tente utilizar
 3. Você pode pular para o título mais próximo/anterior em muitos leitores de tela.
 4. Você também pode fazer uma lista com todos os títulos em muitos leitores de tela, possibilitando a navegação em um sumário para encontrar conteúdos específicos.
 
-As pessoas ás vezes escrevem títulos, parágrafos, etc. utilizando HTML para vizualização e quebras de linha, ás vezes como o seguinte:
+As pessoas ás vezes escrevem títulos, parágrafos, etc. utilizando HTML para visualização e quebras de linha, ás vezes como o seguinte:
 
 ```html example-bad
 <font size="7">Meu título</font> <br /><br />
@@ -150,7 +150,7 @@ A linguagem que você usa também pode afetar a acessibilidade. No geral, você 
 
 - Não utilize traços se você pode evitá-los. Ao invés de escrever 5-7, escreva 5 a 7.
 - Expanda as abreviações — ao invés de escrever Jan, escreva Janeiro.
-- Expanda os acrônimos, pelo menos uma ou duaz vezes. Ao invés de escrever direto HTML, escreva _Hypertext Markup Language_, ou HTML.
+- Expanda os acrônimos, pelo menos uma ou duas vezes. Ao invés de escrever direto HTML, escreva _Hypertext Markup Language_, ou HTML.
 
 ### Layouts de páginas
 
@@ -200,7 +200,7 @@ Tente ler o nosso exemplo [table-layout.html](https://mdn.github.io/learning-are
   <!-- linha do conteúdo principal -->
   <tr id="main">
     <td id="content" colspan="4" bgcolor="#ffffff">
-      <!-- conteudo vem aqui -->
+      <!-- conteúdo vem aqui -->
     </td>
     <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
       <h2>Related</h2>
@@ -270,7 +270,7 @@ Outra consideração que pode ser feita é criar layouts utilizando a semântica
 
 Por controles de UI, o que nós queremos dizer é as partes dos documentos web que os usuários interagem com — mais comumente botões, links, e formulários. Nessa seção nós daremos uma olhada em princípios da acessibilidade que deverão ser analisados com cuidado ao criar esses controles de UI. Os artigos mais recentes do WAI-ARIA e multimedia irão olhar para outros aspectos da acessibilidade de UIs.
 
-Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os navegadores premitem que esses controles sejam acessados pelo teclado. Você pode experimentar isso utilizando o nosso exemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (ver o [código-fonte](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — abra em uma nova aba e experimente apertar a tecla tab; depois de algumas tecladas, você irá ver o foco da aba se mover entre diferentes elementos que podem ser focados; os elementos focados são dados um estilo de destaque em todos os navegadores (muda levemente entre diferentes navegadores) dessa forma você pode dizer qual elemento está em foco.
+Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os navegadores permitem que esses controles sejam acessados pelo teclado. Você pode experimentar isso utilizando o nosso exemplo [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (ver o [código-fonte](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — abra em uma nova aba e experimente apertar a tecla tab; depois de algumas tecladas, você irá ver o foco da aba se mover entre diferentes elementos que podem ser focados; os elementos focados são dados um estilo de destaque em todos os navegadores (muda levemente entre diferentes navegadores) dessa forma você pode dizer qual elemento está em foco.
 
 ![](button-focused-unfocused.png)
 
