@@ -1,0 +1,38 @@
+---
+title: CSS Positioning
+slug: Web/CSS/Guides/Positioned_layout
+page-type: css-module
+spec-urls:
+  - https://drafts.csswg.org/css-position/
+  - https://drafts.csswg.org/css-position-4/
+original_slug: Web/CSS/CSS_positioned_layout
+sidebar: cssref
+---
+
+{{CSSRef}}
+
+**CSS Positioning** é um módulo do CSS que define como ficam a posição dos elementos relativos e absolutos da página.
+
+## Referências
+
+### CSS Properties
+
+- {{cssxref("bottom")}}
+- {{cssxref("clear")}}
+- {{cssxref("display")}}
+- {{cssxref("float")}}
+- {{cssxref("left")}}
+- {{cssxref("position")}}
+- {{cssxref("right")}}
+- {{cssxref("top")}}
+- {{cssxref("visibility")}}
+- {{cssxref("z-index")}}
+
+## Roteiro
+
+- [Entendendo o CSS z-index](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+  - : Apresenta o conceito de contexto de empilhamento e explica como funciona o atributo z-index, com diversos exemplos.
+
+## Especificações
+
+{{Specifications}}
