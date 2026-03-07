@@ -555,4 +555,3 @@ slug: Web/Accessibility/Guides/Understanding_WCAG/Perceivable
   2. [Управляемый контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. [Понятный контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
   4. [Надёжный контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
-
