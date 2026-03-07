@@ -14,7 +14,7 @@ La caractéristique `color-gamut` se définit avec l'une des valeurs-mots-clés 
 - `srgb`
 - : L'agent utilisateur et le périphérique de sortie peuvent prendre en charge un gamut d'environ [sRGB](/fr/docs/Glossary/Color_space#srgb) ou plus. Cela inclut la grande majorité des affichages couleur.
 - `p3`
-- : L'agent utilisateur et le périphérique de sortie peuvent prendre en charge un gamut d'environ [Display P3 <sup>(angl.)</sup>](https://www.color.org/chardata/rgb/DisplayP3.xalter) ou plus. Le gamut P3 est plus large et inclut le gamut sRGB.
+- : L'agent utilisateur et le périphérique de sortie peuvent prendre en charge un gamut d'environ [Display P3 <sup>(angl.)</sup>](https://registry.color.org/rgb-registry/displayp3) ou plus. Le gamut P3 est plus large et inclut le gamut sRGB.
 - `rec2020`
 - : L'agent utilisateur et le périphérique de sortie peuvent prendre en charge un gamut d'environ [ITU-R Recommendation BT.2020](https://fr.wikipedia.org/wiki/Rec._2020) ou plus. Le gamut REC. 2020 est plus large et inclut le gamut P3.
 

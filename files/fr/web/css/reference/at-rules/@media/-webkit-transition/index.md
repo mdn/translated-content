@@ -2,7 +2,7 @@
 title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b868534a020a9efb06cba1846cf139f1c8b79aba
 ---
 
 {{Deprecated_Header}}{{Non-standard_Header}}

@@ -2,10 +2,10 @@
 title: size
 slug: Web/CSS/Reference/At-rules/@page/size
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size`** associé à la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`size`** associé à la [règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
 
 Les dimensions de cette boîte peuvent être définies de façon absolues ou relatives (dans ce cas, la page occupera l'espace disponible).
 
@@ -18,8 +18,7 @@ size: auto;
 size: portrait;
 size: landscape;
 
-/* Des valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 /* 1 valeur : hauteur = largeur */
 size: 6in;
 
@@ -95,7 +94,7 @@ size: A4 portrait;
 }
 ```
 
-### Imbrication dans une règle @media
+### Imbrication dans une règle `@media`
 
 ```css
 @media print {
