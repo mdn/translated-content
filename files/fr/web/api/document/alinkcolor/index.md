@@ -1,30 +1,32 @@
 ---
-title: Document.alinkColor
+title: "Document : propriété alinkColor"
+short-title: alinkColor
 slug: Web/API/Document/alinkColor
+l10n:
+  sourceCommit: cac79d099b0a4e48456cb53eb2435f6acf03e188
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-Retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
+La propriété **`alinkColor`** de l'interface {{DOMxRef("Document")}} retourne ou définit la couleur d'un lien actif dans le corps du document. Un lien hypertexte est actif durant le temps entre les événements `mousedown` et `mouseup`.
 
-## Syntaxe
+## Valeur
 
-```js
-var color = document.alinkColor;
-document.alinkColor = color;
-```
+Une chaîne de caractères contenant le nom de la couleur (par exemple, `blue`, `darkblue`, etc.) ou la valeur hexadécimale de la couleur (par exemple, `#0000FF`).
 
-_color_ est un echaîne de caractère contenant le nom de la couleur en anglais(exemple., `blue` pour bleu, `darkblue` pour bleu foncé, etc.) ou la valeur hexadécimal de la couleur (exemple, `#0000FF`)
+Lorsque la valeur est définie sur `null`, cette valeur `null` est convertie en chaîne de caractères vide (`""`), donc `document.alinkColor = null` est équivalent à `document.alinkColor = ""`.
 
 ## Notes
 
-La valeur par défaut pour cette propriété est rouge (`#ee000` en hexadécimal) sur Mozilla Firefox.
+La valeur par défaut pour cette propriété dans Mozilla Firefox est rouge (`#ee0000` en hexadécimal).
 
-`document.alinkColor` est obsolète dans [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) (lien en anglais). Une alternative est le sélecteur CSS {{Cssxref(":active")}}.
+`document.alinkColor` est obsolète dans [la spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-alinkcolor). Une alternative est le sélecteur CSS {{CSSxRef(":active")}}.
 
-Une autre alternative est `document.body.aLink`, même si elle est [obsolète dans HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) (lien en anglais) en faveur de l'alternative CSS ci-dessus.
+Firefox supporte à la fois `alinkColor`/`:active` et {{CSSxRef(":focus")}}.
 
-[Gecko](/fr/docs/Glossary/Gecko) supporte `alinkColor`/`:active` et [`:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus). Internet Explorer 6 et 7 supportent `alinkColor`/`:active` seulement pour la [balise HTML des liens (`<a>`)](/fr/docs/Web/HTML/Reference/Elements/a) et le comportement est le même que `:focus` sur Gecko. Il n'y a pas de support pour `:focus` dans IE.
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

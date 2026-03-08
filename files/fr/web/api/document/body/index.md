@@ -1,29 +1,33 @@
 ---
-title: document.body
+title: "Document : propriété body"
+short-title: body
 slug: Web/API/Document/body
+l10n:
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
-Retourne l'élément `<body>` ou `<frameset>` du document courant.
+La propriété **`body`** de l'interface {{DOMxRef("Document")}} représente le nœud {{HTMLElement("body")}} ou {{HTMLElement("frameset")}} du document courant, ou `null` si aucun de ces éléments n'existe.
 
-## Syntaxe
+## Valeur
+
+L'une des valeurs suivantes&nbsp;:
+
+- {{DOMxRef("HTMLBodyElement")}}
+- {{DOMxRef("HTMLFrameSetElement")}}
+- `null`
+
+## Exemples
 
 ```js
-var objRef = document.body;
-document.body = objRef;
-```
-
-## Exemple
-
-```js
-// dans le HTML: <body id="ancienElementBody"></body>
+// Étant donné ce code HTML : <body id="ancienElementBody"></body>
 alert(document.body.id); // "ancienElementBody"
 
-var unNouvelElementBody = document.createElement("body");
+const nouvelElementBody = document.createElement("body");
 
-unNouvelElementBody.id = "nouvelElementBody";
-document.body = unNouvelElementBody;
+nouvelElementBody.id = "nouvelElementBody";
+document.body = nouvelElementBody;
 alert(document.body.id); // "nouvelElementBody"
 ```
 
@@ -31,8 +35,16 @@ alert(document.body.id); // "nouvelElementBody"
 
 `document.body` est l'élément dans lequel le contenu du document est situé. Dans les documents avec un élément `<body>` celui-ci est retourné, et dans les documents de type frameset l'élément `<frameset>` le plus extérieur est retourné.
 
-Même si body est modifiable, lui affecter une nouvelle valeur retire tous les éléments enfants du `<body>` existant.
+Bien que la propriété `body` soit modifiable, affecter un nouveau body à un document supprimera effectivement tous les enfants actuels de l'élément `<body>` existant.
 
 ## Spécification
 
-- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("document.head")}}

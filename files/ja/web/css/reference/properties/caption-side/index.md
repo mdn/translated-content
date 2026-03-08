@@ -1,12 +1,11 @@
 ---
 title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
-original_slug: Web/CSS/caption-side
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
+**`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref("writing-mode")}} に対する相対値です。
 
 {{InteractiveExample("CSS デモ: caption-side")}}
 
@@ -24,26 +23,28 @@ caption-side: bottom;
     <caption>
       有名な動物
     </caption>
-    <tr>
-      <th>名前</th>
-      <th>場所</th>
-    </tr>
-    <tr>
-      <td>キリン</td>
-      <td>アフリカ</td>
-    </tr>
-    <tr>
-      <td>ペンギン</td>
-      <td>南極</td>
-    </tr>
-    <tr>
-      <td>ナマケモノ</td>
-      <td>南アメリカ</td>
-    </tr>
-    <tr>
-      <td>トラ</td>
-      <td>アジア</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>名前</th>
+        <th>場所</th>
+      </tr>
+      <tr>
+        <td>キリン</td>
+        <td>アフリカ</td>
+      </tr>
+      <tr>
+        <td>ペンギン</td>
+        <td>南極</td>
+      </tr>
+      <tr>
+        <td>ナマケモノ</td>
+        <td>南アメリカ</td>
+      </tr>
+      <tr>
+        <td>トラ</td>
+        <td>アジア</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -52,7 +53,7 @@ caption-side: bottom;
 table {
   font-size: 1.2rem;
   text-align: left;
-  color: #000;
+  color: black;
 }
 
 th,
@@ -61,16 +62,16 @@ td {
 }
 
 caption {
-  background: #fc3;
+  background: #ffcc33;
   padding: 0.5rem 1rem;
 }
 
 tr {
-  background: #eee;
+  background: #eeeeee;
 }
 
 tr:nth-child(even) {
-  background: #ccc;
+  background: #cccccc;
 }
 ```
 
@@ -89,7 +90,7 @@ caption-side: revert-layer;
 caption-side: unset;
 ```
 
-`caption-side` プロパティは、以下のキーワード値のうちの一つで指定します。
+`caption-side` プロパティは、次のキーワード値のどちらかで指定します。
 
 ### 値
 
@@ -111,31 +112,35 @@ caption-side: unset;
 
 ## 例
 
-<h3 id="Setting_captions_above_and_below">キャプションを上や下に設定</h3>
+### 上や下にキャプションを設定
 
 #### HTML
 
 ```html
 <table class="top">
   <caption>
-    この表の上側のキャプション
+    表の上側のキャプション
   </caption>
-  <tr>
-    <td>いくつかのデータ</td>
-    <td>もっと多くのデータ</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>いくつかのデータ</td>
+      <td>もっと多くのデータ</td>
+    </tr>
+  </tbody>
 </table>
 
 <br />
 
 <table class="bottom">
   <caption>
-    この表の下側のキャプション
+    表の下側のキャプション
   </caption>
-  <tr>
-    <td>いくつかのデータ</td>
-    <td>もっと多くのデータ</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>いくつかのデータ</td>
+      <td>もっと多くのデータ</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -1,12 +1,13 @@
 ---
 title: empty-cells
 slug: Web/CSS/Reference/Properties/empty-cells
-original_slug: Web/CSS/empty-cells
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`empty-cells`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table", "表")}}のセルが目に見えるコンテンツを持たない場合に、周囲の境界と背景を描画するかどうかを指定します。
+
+このプロパティは、 {{cssxref("border-collapse")}} プロパティが `separate` であった場合のみ効果があります。
 
 {{InteractiveExample("CSS デモ: empty-cells")}}
 
@@ -21,26 +22,28 @@ empty-cells: hide;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>顧客名</th>
-      <th>年齢</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>Louise Q.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Owen B.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Stan L.</td>
-      <td>71</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>顧客名</th>
+        <th>年齢</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Louise Q.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Owen B.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Stan L.</td>
+        <td>71</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -48,12 +51,10 @@ empty-cells: hide;
 ```css interactive-example
 th,
 td {
-  border: 2px solid #a19;
+  border: 2px solid #aa1199;
   padding: 0.25rem 0.5rem;
 }
 ```
-
-このプロパティは、 {{cssxref("border-collapse")}} プロパティが `separate` であった場合のみ効果があります。
 
 ## 構文
 
@@ -95,25 +96,29 @@ empty-cells: unset;
 
 ```html
 <table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 <br />
 <table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 ```
 

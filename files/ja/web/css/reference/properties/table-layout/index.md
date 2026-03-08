@@ -1,9 +1,8 @@
 ---
 title: table-layout
 slug: Web/CSS/Reference/Properties/table-layout
-original_slug: Web/CSS/table-layout
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`table-layout`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。
@@ -33,38 +32,40 @@ width: 100%;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>名前</th>
-      <th>場所</th>
-    </tr>
-    <tr>
-      <td>ライオン</td>
-      <td>アフリカ</td>
-    </tr>
-    <tr>
-      <td>ノルウェーレミング</td>
-      <td>ヨーロッパ</td>
-    </tr>
-    <tr>
-      <td>アザラシ</td>
-      <td>南極</td>
-    </tr>
-    <tr>
-      <td>トラ</td>
-      <td>アジア</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>名前</th>
+        <th>場所</th>
+      </tr>
+      <tr>
+        <td>ライオン</td>
+        <td>アフリカ</td>
+      </tr>
+      <tr>
+        <td>ノルウェーレミング</td>
+        <td>ヨーロッパ</td>
+      </tr>
+      <tr>
+        <td>アザラシ</td>
+        <td>南極</td>
+      </tr>
+      <tr>
+        <td>トラ</td>
+        <td>アジア</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
 
 ```css interactive-example
 table {
-  border: 1px solid #139;
+  border: 1px solid #113399;
 }
 
 th,
 td {
-  border: 2px solid #a19;
+  border: 2px solid #aa1199;
   padding: 0.25rem 0.5rem;
 }
 ```
@@ -90,7 +91,7 @@ table-layout: unset;
   - : 自動表レイアウトアルゴリズムが使用されます。表とそのセルの幅は、コンテンツに合わせて調整されます。ほとんどのブラウザーは、既定でこのアルゴリズムを使用しています。
 
 - `fixed`
-  - : 固定表レイアウトアルゴリズムが使用されます。このキーワードを使用する場合、表の幅は [`width`](/ja/docs/Web/CSS/Reference/Properties/width) プロパティを使用して明示的に指定する必要があります。width プロパティの値が auto に設定されているか、指定されていない場合、ブラウザーは自動表レイアウトアルゴリズムを使用します。この場合、固定値は効果はありません。\
+  - : 固定表レイアウトアルゴリズムが使用されます。このキーワードを使用する場合、表の幅は {{cssxref("width")}} プロパティを使用して明示的に指定する必要があります。width プロパティの値が auto に設定されているか、指定されていない場合、ブラウザーは自動表レイアウトアルゴリズムを使用します。この場合、固定値は効果はありません。\
     固定表レイアウトアルゴリズムは、表の水平方向のレイアウトが表の幅、列の幅、および境界線またはセル間隔のみに依存するため、自動レイアウトアルゴリズムよりも高速です。水平方向のレイアウトは、明示的に設定された幅のみに依存するため、セルのコンテンツには依存しません。
 
     固定表レイアウトアルゴリズムでは、各列の幅は次のように決定されます。
@@ -118,22 +119,24 @@ table-layout: unset;
 
 ```html
 <table>
-  <tr>
-    <td>Ed</td>
-    <td>Wood</td>
-  </tr>
-  <tr>
-    <td>Albert</td>
-    <td>Schweitzer</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Fonda</td>
-  </tr>
-  <tr>
-    <td>William</td>
-    <td>Shakespeare</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Ed</td>
+      <td>Wood</td>
+    </tr>
+    <tr>
+      <td>Albert</td>
+      <td>Schweitzer</td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td>Fonda</td>
+    </tr>
+    <tr>
+      <td>William</td>
+      <td>Shakespeare</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -1,73 +1,66 @@
 ---
-title: Document.anchors
+title: "Document : propriété anchors"
+short-title: anchors
 slug: Web/API/Document/anchors
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
-{{APIRef("DOM")}} {{deprecated_header()}}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-`anchors` retourne une liste de toutes les ancres du document.
+La propriété en lecture seule **`anchors`** de l'interface {{DOMxRef("Document")}} retourne une liste de toutes les ancres du document.
 
-## Syntaxe
+## Valeur
 
-```js
-nodeList = document.anchors;
-```
+Un objet {{DOMxRef("HTMLCollection")}}.
 
-## Exemple
+## Exemples
+
+### Exemple simple
 
 ```js
 if (document.anchors.length >= 5) {
-  dump("Trop d'ancres trouvées !");
-  window.location = "http://www.google.com";
+  console.log("a trouvé beaucoup trop d'ancres");
 }
 ```
 
-L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :
+### Créer une table des matières
+
+L'exemple suivant remplit automatiquement une table des matières avec chaque ancre présente sur la page&nbsp;:
 
 ```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
-      function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.innerHTML = document.anchors[i].text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
-        }
-      }
-    </script>
-  </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+<h1>Titre</h1>
+<h2><a name="contents">Contenus</a></h2>
+<ul id="tdm"></ul>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+<h2><a name="plants">Plantes</a></h2>
+<ol>
+  <li>Pommes</li>
+  <li>Oranges</li>
+  <li>Poires</li>
+</ol>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
-  </body>
-</html>
+<h2><a name="veggies">Légumes</a></h2>
+<ol>
+  <li>Carottes</li>
+  <li>Céleri</li>
+  <li>Betteraves</li>
+</ol>
 ```
 
-[Voir dans JSFiddle](https://jsfiddle.net/S4yNp)
+```js
+const tdm = document.getElementById("tdm");
+for (const ancre of document.anchors) {
+  const li = document.createElement("li");
+  const nouvelleAncre = document.createElement("a");
+  nouvelleAncre.href = `#${ancre.name}`;
+  nouvelleAncre.textContent = ancre.text;
+  li.appendChild(nouvelleAncre);
+  tdm.appendChild(li);
+}
+```
+
+{{EmbedLiveSample("Créer une table des matières", "", 500)}}
 
 ## Notes
 
@@ -75,4 +68,8 @@ Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient 
 
 ## Spécification
 
-- [DOM Level 2 HTML: anchors](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
