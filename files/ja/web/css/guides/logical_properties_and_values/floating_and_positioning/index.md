@@ -1,9 +1,9 @@
 ---
 title: 浮動ボックスと位置指定の論理的プロパティ
+short-title: 浮動ボックスと位置指定
 slug: Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning
-original_slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールには、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)で使用する位置指定プロパティがあります。このガイドはこれらの使い方を見てみます。

@@ -1,14 +1,14 @@
 ---
-title: 寸法指定の論理的プロパティ
+title: サイズ指定の論理的プロパティ
+short-title: サイズ指定
 slug: Web/CSS/Guides/Logical_properties_and_values/Sizing
-original_slug: Web/CSS/CSS_logical_properties_and_values/Sizing
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-このガイドでは、ページ上の要素の寸法の設定に使用する、物理的な方向のプロパティと論理的なプロパティのフローに関連した対応付けを説明します。
+このガイドでは、ページ上の要素のサイズの設定に使用する、物理的な方向のプロパティと論理的なプロパティのフローに関連した対応付けを説明します。
 
-アイテムの寸法を指定するときに、[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールにより、水平・垂直の物理的な長さ（左や右など）に関連する物理的な寸法ではなく、テキストの流れ（インラインとブロック）に関連した寸法を示すことができます。これらのフローに関連した対応付けは、私たちの大多数にとって普通であることもあるので、デザインでは物理的・論理的の両方の寸法を使用することができます。書字方向がどうであっても物理的な長さに関連した機能が使用したい場合もあるでしょう。
+アイテムのサイズを指定するときに、[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールにより、水平・垂直の物理的な長さ（左や右など）に関連する物理的なサイズではなく、テキストの流れ（インラインとブロック）に関連したサイズを示すことができます。これらのフローに関連した対応付けは、私たちの大多数にとって普通であることもあるので、デザインでは物理的・論理的の両方のサイズを使用することができます。書字方向がどうであっても物理的な長さに関連した機能が使用したい場合もあるでしょう。
 
 ## 長さへの対応付け
 
@@ -29,7 +29,7 @@ l10n:
 
 {{CSSxRef("width")}} と {{CSSxRef("height")}} の論理的な対応付けでは、 {{CSSxRef("inline-size")}} がインライン次元の長さを設定し、 {{CSSxRef("block-size")}} がブロック次元の長さを設定します。英語の場合は、 `width` を `inline-size` で、 `height` を `block-size` で置き換えると同じレイアウトになります。
 
-以下のライブデモでは、書字方向を `horizontal-tb` に設定しました。これを `vertical-rl` に変更すると、最初の例 — `width` と `height` を使用したもの — では、テキストが縦書きになっても、それぞれの方向が同じ寸法になります。 2 番目の例 — `inline-size` と `block-size` を使用したもの — は、ブロック全体が回転したようにテキストの方向に従います。
+以下のライブデモでは、書字方向を `horizontal-tb` に設定しました。これを `vertical-rl` に変更すると、最初の例 — `width` と `height` を使用したもの — では、テキストが縦書きになっても、それぞれの方向が同じサイズになります。 2 番目の例 — `inline-size` と `block-size` を使用したもの — は、ブロック全体が回転したようにテキストの方向に従います。
 
 ```html-nolint live-sample___size-inline-block
 <div class="container">
@@ -77,7 +77,7 @@ body {
 
 ## 最小幅と最小高の例
 
-{{CSSxRef("min-width")}} と {{CSSxRef("min-height")}} も、 {{CSSxRef("min-inline-size")}} と {{CSSxRef("min-block-size")}} に対応付けられます。これらは `inline-size` および `block-size` プロパティと同様に動作しますが、固定の寸法ではなく最小寸法を設定します。
+{{CSSxRef("min-width")}} と {{CSSxRef("min-height")}} も、 {{CSSxRef("min-inline-size")}} と {{CSSxRef("min-block-size")}} に対応付けられます。これらは `inline-size` および `block-size` プロパティと同様に動作しますが、固定のサイズではなく最小サイズを設定します。
 
 最初の例のように、以下の例を `vertical-rl` に変更してみて、その作用を確認してみてください。最初の例では `min-height` を使用しており、二番目の例では `min-block-size` を使用しています。
 

@@ -1,12 +1,13 @@
 ---
 title: border-start-start-radius
 slug: Web/CSS/Reference/Properties/border-start-start-radius
-original_slug: Web/CSS/border-start-start-radius
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-start-start-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/Reference/Properties/text-orientation)や[書字方向](/ja/docs/Web/CSS/Guides/Writing_modes)に依存せずにスタイルを構築する際に便利です。
+
+このプロパティは、要素のブロック先頭とインライン先頭の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-left-radius")}} プロパティに対応します。
 
 {{InteractiveExample("CSS デモ: border-start-start-radius")}}
 
@@ -50,8 +51,6 @@ writing-mode: vertical-rl;
 }
 ```
 
-このプロパティは、要素の block-start と inline-start の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-left-radius")}} プロパティに対応します。
-
 ## 構文
 
 ```css
@@ -74,7 +73,7 @@ border-start-start-radius: unset;
 ### 値
 
 - `<length-percentage>`
-  - : 円の半径または楕円の長半径及び短半径を示します。絶対的な長さの場合は、 CSS の {{cssxref("&lt;length&gt;")}} データ型で表現することができます。水平軸のパーセント値はボックスの幅、垂直軸のパーセント値はボックスの高さに対する値です。負の数は無効です。
+  - : 円の半径または楕円の長半径および短半径を示します。絶対的な長さの場合は、 CSS の {{cssxref("&lt;length&gt;")}} データ型で表現することができます。水平軸のパーセント値はボックスの幅、垂直軸のパーセント値はボックスの高さに対する値です。負の数は無効です。
 
 ## 公式定義
 
@@ -109,7 +108,7 @@ div {
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
-  background-color: #fff;
+  background-color: white;
   border-start-start-radius: 10px;
 }
 ```

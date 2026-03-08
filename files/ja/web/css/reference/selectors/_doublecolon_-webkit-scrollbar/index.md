@@ -1,9 +1,8 @@
 ---
 title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
-original_slug: Web/CSS/::-webkit-scrollbar
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 {{Non-standard_Header}}
@@ -62,12 +61,12 @@ l10n:
 .mostly-customized-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #aaa; /* またはトラックに追加 */
+  background-color: #aaaaaa; /* またはトラックに追加 */
 }
 
 /* つまみを追加 */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: black;
 }
 ```
 
@@ -188,5 +187,5 @@ l10n:
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
 - [Don't use custom scrollbars](https://ericwbailey.website/published/dont-use-custom-css-scrollbars/) (2023)
-- [Scrollbar styling](https://developer.chrome.com/docs/css-ui/scrollbar-styling) on developer.chrome.com (2024)
-- [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/) on WebKit.org (2009)
+- [Scrollbar styling](https://developer.chrome.com/docs/css-ui/scrollbar-styling) - developer.chrome.com (2024)
+- [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/) - WebKit.org (2009)

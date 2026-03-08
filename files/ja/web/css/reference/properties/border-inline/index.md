@@ -1,12 +1,11 @@
 ---
 title: border-inline
 slug: Web/CSS/Reference/Properties/border-inline
-original_slug: Web/CSS/border-inline
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
+**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの一ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)です。
 
 {{InteractiveExample("CSS デモ: border-inline")}}
 
@@ -36,8 +35,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #8b008b;
+  background-color: #eeeeee;
+  color: darkmagenta;
   padding: 0.75em;
   width: 80%;
   height: 100px;
@@ -45,17 +44,13 @@ direction: rtl;
 }
 ```
 
-`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
-
-他の方向の境界については、 {{cssxref("border-block")}} によって、 {{cssxref("border-block-start")}} と {{cssxref("border-block-end")}} の両方を設定することができます。
-
 ## 構成要素のプロパティ
 
-このプロパティは下記の CSS プロパティの一括指定です。
+このプロパティは次の CSS プロパティの一括指定です。
 
-- [`border-inline-color`](/ja/docs/Web/CSS/Reference/Properties/border-inline-color)
-- [`border-inline-style`](/ja/docs/Web/CSS/Reference/Properties/border-inline-style)
-- [`border-inline-width`](/ja/docs/Web/CSS/Reference/Properties/border-inline-width)
+- {{cssxref("border-inline-color")}}
+- {{cssxref("border-inline-style")}}
+- {{cssxref("border-inline-width")}}
 
 ## 構文
 
@@ -83,6 +78,12 @@ border-inline: unset;
 - {{CSSXref("&lt;color&gt;")}}
   - : 境界線の色です。
 
+## 解説
+
+`border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
+
+他の方向の境界については、 {{cssxref("border-block")}} によって、 {{cssxref("border-block-start")}} と {{cssxref("border-block-end")}} の両方を設定することができます。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -93,7 +94,7 @@ border-inline: unset;
 
 ## 例
 
-### テキストが垂直の場合の境界
+### 縦書きテキストの場合の境界
 
 #### HTML
 
@@ -120,7 +121,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("テキストが垂直の場合の境界", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの場合の境界", 140, 140)}}
 
 ## 仕様書
 

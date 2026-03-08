@@ -1,9 +1,8 @@
 ---
 title: inline-size
 slug: Web/CSS/Reference/Properties/inline-size
-original_slug: Web/CSS/inline-size
 l10n:
-  sourceCommit: 883491d47f6b764563aa825d9d56f83fb80c6fb9
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロックにおける[インライン軸](/ja/docs/Glossary/Grid_Axis)方向の寸法を定義します。書字方向 ({{cssxref("writing-mode")}}) が横書きである場合、これは {{cssxref("width")}} に対応します。書字方向が縦書きである場合、 {{cssxref("height")}} プロパティに対応します。関連するプロパティは {{cssxref("block-size")}} であり、これは要素のもう一方の軸を定義します。
@@ -45,7 +44,7 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -56,7 +55,7 @@ writing-mode: vertical-lr;
 inline-size: 300px;
 inline-size: 25em;
 inline-size: anchor-size(width);
-inline-size: anchor-size(--myAnchor inline);
+inline-size: anchor-size(--my-anchor inline);
 
 /* <percentage> 値 */
 inline-size: 75%;
