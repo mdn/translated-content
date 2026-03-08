@@ -188,7 +188,7 @@ class maClasse {}
 
 ### Exceptions
 
-Tous les navigateurs actuels exposent un objet non-standard [`document.all`](/fr/docs/Web/API/document/all) dont le type est `undefined`.
+Tous les navigateurs actuels exposent un objet non-standard [`document.all`](/fr/docs/Web/API/Document/all) dont le type est `undefined`.
 
 ```js
 typeof document.all === "undefined";
