@@ -2,7 +2,7 @@
 title: color-gamut
 slug: Web/CSS/Reference/At-rules/@media/color-gamut
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-gamut`** est utilisée pour appliquer des styles CSS en fonction de l'intervalle approximatif des couleurs {{Glossary("gamut")}} pris en charge par l'agent utilisateur et l'appareil de sortie.
