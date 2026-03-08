@@ -17,7 +17,7 @@ La propriété **`applets`** de l'objet {{DOMxRef("Document")}} retourne une col
 
 Un objet {{DOMxRef("HTMLCollection")}} vide.
 
-## Spécification
+## Spécifications
 
 {{Specifications}}
 
