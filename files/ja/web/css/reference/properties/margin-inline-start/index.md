@@ -1,12 +1,11 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/Reference/Properties/margin-inline-start
-original_slug: Web/CSS/margin-inline-start
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
 ---
 
-**`margin-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`margin-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} のいずれかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: margin-inline-start")}}
 
@@ -68,7 +67,7 @@ margin-inline-start: 10px; /* 絶対的な長さ */
 margin-inline-start: 1em; /* テキストの大きさに対する相対値 */
 margin-inline-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 margin-inline-start: anchor-size(block);
-margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
+margin-inline-start: calc(anchor-size(--my-anchor width, 30px) / 4);
 
 /* キーワード値 */
 margin-inline-start: auto;
@@ -85,7 +84,7 @@ margin-inline-start: unset;
 
 ### 値
 
-`margin-inline-start` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
+`margin-inline-start` プロパティは {{cssxref("margin-top")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -97,11 +96,11 @@ margin-inline-start: unset;
 
 ## 例
 
-### インライン方向の先頭側のマージンの設定
+### インライン方向の先頭のマージンの設定
 
 #### HTML
 
-```html live-sample___setting_inline_start_margin
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -109,7 +108,7 @@ margin-inline-start: unset;
 
 #### CSS
 
-```css live-sample___setting_inline_start_margin
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -125,7 +124,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_margin", 140, 140)}}
+{{EmbedLiveSample("インライン方向の先頭のマージンの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -139,5 +138,5 @@ div {
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
 - {{cssxref("margin-inline-end")}}
-- 対応づけ先の物理的なプロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
+- 対応づけ先の物理的プロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

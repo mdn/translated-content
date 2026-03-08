@@ -1,12 +1,11 @@
 ---
 title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
-original_slug: Web/CSS/margin-inline
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: c3c0f615b9b35e1ce3c799927eb21732b2f05926
 ---
 
-The **`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
+**`margin-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
 {{InteractiveExample("CSS デモ: margin-inline")}}
 
@@ -98,7 +97,7 @@ margin-inline: unset;
 
 ### 値
 
-`margin-inline` プロパティは、 {{CSSxRef("margin", "", "#値")}} プロパティと同じ値を取ります。
+`margin-inline` プロパティは、 {{CSSxRef("margin-top", "", "#値")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
@@ -110,11 +109,11 @@ margin-inline: unset;
 
 ## 例
 
-### インライン方向の先頭と末尾のマージンの設定
+### インライン方向の先頭と末尾のマージンを設定
 
 #### CSS
 
-```css live-sample___setting_inline_start_and_end_margins
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -135,7 +134,7 @@ p {
 
 #### HTML
 
-```html live-sample___setting_inline_start_and_end_margins
+```html
 <div>
   <p>テキストの例</p>
 </div>
@@ -146,7 +145,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_and_end_margins", 140, 240)}}
+{{EmbedLiveSample("インライン方向の先頭と末尾のマージンを設定", 140, 240)}}
 
 ## 仕様書
 

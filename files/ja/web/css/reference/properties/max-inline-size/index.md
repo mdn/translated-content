@@ -1,9 +1,8 @@
 ---
 title: max-inline-size
 slug: Web/CSS/Reference/Properties/max-inline-size
-original_slug: Web/CSS/max-inline-size
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`max-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最大の寸法を定義します。これは {{cssxref("max-width")}} または {{cssxref("max-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
@@ -47,7 +46,7 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -58,7 +57,7 @@ writing-mode: vertical-lr;
 max-inline-size: 300px;
 max-inline-size: 25em;
 max-inline-size: anchor-size(width);
-max-inline-size: anchor-size(--myAnchor self-block, 200px);
+max-inline-size: anchor-size(--my-anchor self-block, 200px);
 
 /* <percentage> 値 */
 max-inline-size: 75%;
