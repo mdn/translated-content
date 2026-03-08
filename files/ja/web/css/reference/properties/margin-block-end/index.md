@@ -1,12 +1,11 @@
 ---
 title: margin-block-end
 slug: Web/CSS/Reference/Properties/margin-block-end
-original_slug: Web/CSS/margin-block-end
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
 ---
 
-**`margin-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
+**`margin-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
 {{InteractiveExample("CSS デモ: margin-block-end")}}
 
@@ -55,7 +54,7 @@ writing-mode: vertical-lr;
   display: inline-block;
   border: solid #ce7777 10px;
   background-color: #2b3a55;
-  color: #ffffff;
+  color: white;
   flex-shrink: 0;
 }
 
@@ -72,6 +71,8 @@ writing-mode: vertical-lr;
 margin-block-end: 10px; /* 絶対的な長さ */
 margin-block-end: 1em; /* テキストの大きさに対する相対値 */
 margin-block-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-end: anchor-size(inline);
+margin-block-end: calc(anchor-size(--my-anchor block, 20px) / 4);
 
 /* キーワード値 */
 margin-block-end: auto;
@@ -90,11 +91,11 @@ margin-block-end: unset;
 
 ### 値
 
-`margin-block-end` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
+`margin-block-end` プロパティは {{cssxref("margin-top")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -106,7 +107,7 @@ margin-block-end: unset;
 
 #### HTML
 
-```html live-sample___setting_block_end_margin
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -114,7 +115,7 @@ margin-block-end: unset;
 
 #### CSS
 
-```css live-sample___setting_block_end_margin
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -130,7 +131,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_end_margin", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の末尾のマージンを設定", 140, 140)}}
 
 ## 仕様書
 
