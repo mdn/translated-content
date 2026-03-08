@@ -20,9 +20,9 @@ l10n:
 ## 구문
 
 ```js
-new SharedWorker(url)
-new SharedWorker(url, name)
-new SharedWorker(url, options)
+new SharedWorker(url);
+new SharedWorker(url, name);
+new SharedWorker(url, options);
 ```
 
 ### 매개변수
@@ -46,6 +46,7 @@ new SharedWorker(url, options)
         기본 값은 `same-origin`입니다(동일 출처 요청에만 자격 증명 포함).
 
         이 옵션은 classic 워커에서는 무시됩니다.
+
     - `name`
       - : 워커 범위를 나타내는 {{domxref("SharedWorkerGlobalScope")}}의 식별 이름을 지정하는 문자열입니다.
         주로 디버깅 목적에 유용합니다.
