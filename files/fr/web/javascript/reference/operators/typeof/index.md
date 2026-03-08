@@ -1,61 +1,61 @@
 ---
 title: L'opérateur typeof
+short-title: typeof
 slug: Web/JavaScript/Reference/Operators/typeof
+l10n:
+  sourceCommit: d19713a0df638c5a46deecd8b8075d27146c7bea
 ---
 
-{{jsSidebar("Operators")}}
+L'opérateur **`typeof`** retourne une chaîne de caractères indiquant le type de la valeur de son opérande.
 
-L'opérateur **`typeof`** renvoie une chaîne qui indique le type de son opérande.
-
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: l'opérateur typeof")}}
 
 ```js interactive-example
 console.log(typeof 42);
-// Expected output: "number"
+// Sortie attendue : "number"
 
 console.log(typeof "blubber");
-// Expected output: "string"
+// Sortie attendue : "string"
 
 console.log(typeof true);
-// Expected output: "boolean"
+// Sortie attendue : "boolean"
 
 console.log(typeof undeclaredVariable);
-// Expected output: "undefined"
+// Sortie attendue : "undefined"
 ```
 
 ## Syntaxe
 
-L'opérateur `typeof` est suivi de son opérande&nbsp;:
-
-```js
-typeof operande;
-typeof operande;
+```js-nolint
+typeof operand
 ```
 
 ### Paramètre
 
-- `operande`
-  - : Une expression représentant l'objet ou la valeur [primitive](/fr/docs/Glossary/Primitive) dont on souhaite obtenir le type.
+- `operand`
+  - : Une expression représentant l'objet ou la valeur {{Glossary("primitive")}} dont on souhaite obtenir le type.
 
 ## Description
 
 Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pour plus d'informations sur les types et valeurs primitives en JavaScript, voir la page sur [les types et structures de données JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures).
 
-| Type                                                                                                 | Résultat                   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------- |
-| [indéfini](/fr/docs/Glossary/Undefined)                                                              | `"undefined"`              |
-| [nul](/fr/docs/Glossary/Null)                                                                        | `"object"` (voir ci-après) |
-| [booléen](/fr/docs/Glossary/Boolean)                                                                 | `"boolean"`                |
-| [nombre](/fr/docs/Glossary/Number)                                                                   | `"number"`                 |
-| [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                               | `"bigint"`                 |
-| [chaîne de caractère](/fr/docs/Glossary/String)                                                      | `"string"`                 |
-| [symbole (nouveauté d'ECMAScript 6 / 2015)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) | `"symbol"`                 |
-| [objet Function (au sens ECMA-262, un objet qui implémente [[Call]])](/fr/docs/Glossary/Function)    | `"function"`               |
-| Tout autre objet                                                                                     | `"object"`                 |
+| Type                                                                                                                                                                                                             | Résultat                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| [Indéfini](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)                                                                                                                                           | `"undefined"`                       |
+| [Nul](/fr/docs/Web/JavaScript/Reference/Operators/null)                                                                                                                                                          | `"object"` ([reason](#typeof_null)) |
+| [Booléen](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)                                                                                                                                              | `"boolean"`                         |
+| [Nombre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)                                                                                                                                                | `"number"`                          |
+| [Grand Entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)                                                                                                                                          | `"bigint"`                          |
+| [Chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)                                                                                                                                  | `"string"`                          |
+| [Symbole](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)                                                                                                                                               | `"symbol"`                          |
+| [Fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) (implémente [[Call]] selon ECMA-262&nbsp;; les [classes](/fr/docs/Web/JavaScript/Reference/Statements/class) sont également des fonctions) | `"function"`                        |
+| Tout autre objet                                                                                                                                                                                                 | `"object"`                          |
+
+Cette liste de valeurs est exhaustive. Aucun moteur conforme aux spécifications n'est signalé pour produire (ou n'a historiquement produit) des valeurs autres que celles énumérées.
 
 ## Exemples
 
-### Usage simple
+### Utilisation simple
 
 ```js
 // Pour les nombres
@@ -64,20 +64,19 @@ typeof 3.14 === "number";
 typeof 42 === "number";
 typeof Math.LN2 === "number";
 typeof Infinity === "number";
-typeof NaN === "number"; // Bien que littéralement ce soit "Not-A-Number"…
+typeof NaN === "number"; // Bien que littéralement ce soit "Not-A-Number"
 typeof Number("1") === "number"; // Number essaie de convertir l'argument en nombre
 typeof Number("chaussure") === "number"; // cela vaut également pour les valeurs qui ne peuvent pas être converties
 
-// Grand entier
 typeof 42n === "bigint";
 
 // Les chaînes de caractères
 typeof "" === "string";
 typeof "bla" === "string";
 typeof `gabarit de chaîne` === "string";
-typeof "1" === "string"; // on a ici un nombre écrit sous forme d'une chaîne
-typeof typeof 1 === "string"; // typeof renvoie toujours une chaîne
-typeof String(1) === "string"; // String convertit n'importe quelle valeur en chaîne
+typeof "1" === "string"; // on a ici un nombre écrit sous forme d'une chaîne de caractères
+typeof typeof 1 === "string"; // typeof retourne toujours une chaîne de caractères
+typeof String(1) === "string"; // String convertit n'importe quelle valeur en chaîne de caractères
 
 // Les booléens
 typeof true === "boolean";
@@ -103,10 +102,9 @@ typeof { a: 1 } === "object";
 typeof [1, 2, 4] === "object";
 
 typeof new Date() === "object";
-typeof /regex/ === "object"; // Voir la section sur les expressions rationnelles
+typeof /regex/ === "object";
 
-// Les expressions suivantes sont source de confusion
-// à ne pas utiliser sous cette forme
+// Les éléments suivants sont source de confusion, dangereux et inutiles. Évitez-les.
 typeof new Boolean(true) === "object";
 typeof new Number(1) === "object";
 typeof new String("abc") === "object";
@@ -124,77 +122,116 @@ typeof Math.sin === "function";
 typeof null === "object";
 ```
 
-Lors de la première implémentation de JavaScript, les valeurs JavaScript étaient représentées avec une étiquette de type et une valeur. Pour les objets, l'étiquette de type était 0. `null` était représenté par la valeur NULL (0x00 pour la plupart des plates-formes). Par conséquent, l'étiquette de type de `null` valait 0, d'où le comportement de `typeof` ([source](https://www.2ality.com/2013/10/typeof-null.html)).
+Dans la première implémentation de JavaScript, les valeurs JavaScript étaient représentées par une balise de type et une valeur. La balise de type pour les objets était `0`. `null` était représenté comme le pointeur NULL (`0x00` sur la plupart des plateformes). Par conséquent, `null` avait `0` comme balise de type, d'où la valeur de retour de `typeof` `"object"`. ([référence <sup>(angl.)</sup>](https://2ality.com/2013/10/typeof-null.html))
 
-Un correctif fut proposé pour ECMAScript, mais il fut [refusé](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). Avec cette version, on aurait eu `typeof null === 'null'`.
+Une correction a été proposée pour ECMAScript (avec une option à activer), mais [a été rejetée <sup>(angl.)</sup>](https://web.archive.org/web/20160331031419/http://wiki.ecmascript.org:80/doku.php?id=harmony:typeof_null). Cela aurait donné `typeof null === "null"`.
 
 ### Utiliser l'opérateur `new`
 
-```js
-// Tous les constructeurs doivent être employés
-// avec le mot-clé "new"
-let maChaine = new String("toto");
-let monNombre = new Number(100);
-
-typeof maChaine; // renverra "object"
-typeof monNombre; // renverra "object"
-
-// En revanche avec le constructeur Function,
-// on aura :
-let maFonction = new Function();
-typeof maFonction; // renverra "function"
-```
-
-### Utilisation des parenthèses
+Tous les constructeurs appelés avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) retourneront des valeurs non primitives (`"object"` ou `"function"`). La plupart retournent des objets, à l'exception notable de [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function), qui retourne une fonction.
 
 ```js
-// Les parenthèses peuvent s'avérer utile pour
-// déterminer le type de données d'une expression
-// complète
+const str = new String("String");
+const num = new Number(100);
 
-let maDonnee = 99;
+typeof str; // "object"
+typeof num; // "object"
 
-typeof maDonnee + " Toto"; // renverra 'number Toto'
-typeof (maDonnee + " Toto"); // renverra 'string'
+const func = new Function();
+
+typeof func; // "function"
 ```
 
-### Expressions rationnelles
+### Nécessité des parenthèses dans la syntaxe
 
-Les expressions rationnelles qu'on peut appeler directement furent parfois ajoutées de façon non standard dans certains navigateurs.
+L'opérateur `typeof` a une [priorité](/fr/docs/Web/JavaScript/Reference/Operators/Operator_precedence) plus élevée que les opérateurs binaires tels que l'addition (`+`). Par conséquent, des parenthèses sont nécessaires pour évaluer le type d'un résultat d'addition.
 
 ```js
-typeof /s/ === "function"; // Chrome 1 à 12 : Non conforme à ECMAScript 5.1
-typeof /s/ === "object"; // À partir de Firefox 5 : Conforme à ECMAScript 5.1
+// Les parenthèses peuvent être utilisées pour déterminer le type de données des expressions.
+const uneDonnee = 99;
+
+typeof uneDonnee + " toto"; // "number toto"
+typeof (uneDonnee + " toto"); // "string"
 ```
 
-### Erreurs et zone morte temporaire (_Temporal Dead Zone_ / TDZ)
+### Interaction avec les variables non déclarées et non initialisées
 
-Avant ECMAScript 2015 (ES6), `typeof` retournait toujours une chaîne de caractères, quel que soit l'opérande utilisé. On ne pouvait pas avoir d'erreur en utilisant `typeof`.
-
-Avec l'apparition des opérateurs [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), si on utilise `typeof` sur des variables déclarées avec ces opérateurs (ou avec une classe) avant leur déclaration, cela déclenchera une erreur [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Si on utilise `typeof` sur une variable déclarée avec `var` avant la déclaration, cela renverra `undefined`. Les variables déclarées avec `let` et `const` sont en fait placées dans une _[zone morte temporaire](/fr/docs/Web/JavaScript/Reference/Statements/let)_ entre le début du bloc et leur initialisation et dans cette zone, tout accès à la variable produit une erreur.
+`typeof` fonctionne avec les identifiants non déclarés, retournant `"undefined"` au lieu de lancer une erreur.
 
 ```js
-typeof variableGlobaleNonDeclaree === "undefined";
-
-typeof variableLet; // ReferenceError
-let variableLet;
-
-typeof constante; // ReferenceError
-const constante = "coucou";
-
-typeof maClasse; // ReferenceError
-class maClasse {}
+typeof variableNonDeclaree; // "undefined"
 ```
 
-### Exceptions
+Cependant, utiliser `typeof` sur des déclarations lexicales ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, {{JSxRef("Statements/using", "using")}} {{JSxRef("Statements/await_using", "await using")}} et {{JSxRef("Statements/class", "class")}}) dans le même bloc avant le lieu de déclaration générera une {{JSxRef("ReferenceError")}}. Les variables à portée de bloc se trouvent dans une _[zone morte temporelle](/fr/docs/Web/JavaScript/Reference/Statements/let#zone_morte_temporaire_temporal_dead_zone_tdz)_ depuis le début du bloc jusqu'à ce que l'initialisation soit traitée, période pendant laquelle une erreur sera levée si elles sont accessibles.
 
-Tous les navigateurs actuels exposent un objet non-standard [`document.all`](/fr/docs/Web/API/Document/all) dont le type est `undefined`.
+```js example-bad
+typeof newLetVariable; // ReferenceError
+typeof newConstVariable; // ReferenceError
+typeof newClass; // ReferenceError
+
+let newLetVariable;
+const newConstVariable = "bonjour";
+class newClass {}
+```
+
+Voir [l'opérateur `typeof` et `undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined#lopérateur_typeof_et_undefined) pour plus de détails.
+
+### Comportement exceptionnel de `document.all`
+
+Tous les navigateurs actuels exposent un objet hôte non standard {{DOMxRef("Document.all", "document.all")}} avec le type `undefined`.
 
 ```js
 typeof document.all === "undefined";
 ```
 
-Bien que la spécification requière que les objets exotiques aient des types différents, ces types doivent être des chaînes différentes des chaînes existantes pour les objets standards. À ce titre, le type de `document.all` représente une violation « volontaire » du standard ECMAScript original.
+Bien que `document.all` soit également {{Glossary("falsy", "équivalent à faux")}} et [égal à `undefined` de manière lâche](/fr/docs/Web/JavaScript/Reference/Operators/Equality), il n'est pas [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined). Le cas de `document.all` ayant le type `"undefined"` est classé dans les standards web comme une «&nbsp;violation volontaire&nbsp;» de la norme ECMAScript originale pour la compatibilité web.
+
+### Méthode personnalisée qui obtient un type plus spécifique
+
+`typeof` est très utile, mais il n'est pas aussi polyvalent que nécessaire. Par exemple, `typeof []` est `"object"`, tout comme `typeof new Date()`, `typeof /abc/`, etc.
+
+Pour une plus grande spécificité dans la vérification des types, nous présentons une fonction personnalisée `type(value)`, qui imite en grande partie le comportement de `typeof`, mais pour les non-primitifs (c'est-à-dire les objets et les fonctions), elle retourne un nom de type plus granulaire lorsque cela est possible.
+
+```js
+function type(value) {
+  if (value === null) {
+    return "null";
+  }
+  const baseType = typeof value;
+  // Types primitifs
+  if (!["object", "function"].includes(baseType)) {
+    return baseType;
+  }
+
+  // Symbol.toStringTag définit souvent le "nom d'affichage" de la
+  // classe de l'objet. Il est utilisé dans Object.prototype.toString().
+  const tag = value[Symbol.toStringTag];
+  if (typeof tag === "string") {
+    return tag;
+  }
+
+  // Si c'est une fonction dont le code source commence par le mot-clé "class"
+  if (
+    baseType === "function" &&
+    Function.prototype.toString.call(value).startsWith("class")
+  ) {
+    return "class";
+  }
+
+  // Le nom du constructeur ; par exemple `Array`, `GeneratorFunction`,
+  // `Number`, `String`, `Boolean` ou `MyCustomClass`
+  const className = value.constructor.name;
+  if (typeof className === "string" && className !== "") {
+    return className;
+  }
+
+  // À ce stade, il n'existe pas de méthode robuste pour obtenir le type
+  // de la valeur, donc nous utilisons l'implémentation de base.
+  return baseType;
+}
+```
+
+Pour vérifier des variables potentiellement inexistantes qui autrement déclencheraient une {{JSxRef("ReferenceError")}}, utilisez `typeof nonExistentVar === "undefined"` car ce comportement ne peut pas être imité avec du code personnalisé.
 
 ## Spécifications
 
@@ -204,23 +241,7 @@ Bien que la spécification requière que les objets exotiques aient des types di
 
 {{Compat}}
 
-## Notes spécifiques à IE
-
-Pour les versions 6, 7 et 8 d'Internet Explorer, les objets de l'environnement hôte sont des objets et non des fonctions. Par exemple, on aura :
-
-```js
-typeof alert === "object";
-```
-
-Certaines propriétés non-standard d'IE renvoient d'autres valeurs ([tc39/ecma262#1440
-(commentaire)](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872)):
-
-```js
-typeof window.external.AddSearchProvider === "unknown";
-typeof window.external.IsSearchProviderInstalled === "unknown";
-```
-
 ## Voir aussi
 
-- L'opérateur [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [À propos du non-respect volontaire du standard avec le type de `document.all`](https://github.com/tc39/ecma262/issues/668)
+- L'opérateur {{JSxRef("Operators/instanceof", "instanceof")}}
+- [La violation délibérée de la norme par `document.all` <sup>(angl.)</sup>](https://github.com/tc39/ecma262/issues/668)
