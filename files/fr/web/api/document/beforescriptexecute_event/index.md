@@ -38,7 +38,7 @@ document.onbeforescriptexecute = starting;
 
 [Voir l'exemple en direct <sup>(angl.)</sup>](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
-## Spécification
+## Spécifications
 
 Ne fait partie d'aucune spécification.
 
