@@ -1,9 +1,11 @@
 ---
 title: border-top-color
-slug: Web/CSS/Reference/Properties/border-top-color
+slug: Web/CSS/border-top-color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-top-color`** 属性用以设置某元素顶部 {{cssxref("border")}}的颜色。通常，用{{cssxref("border-color")}} 或 {{cssxref("border-top")}} 设置该颜色更为便捷可取。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的[上边框](/zh-CN/docs/Web/CSS/border)颜色。也可以通过简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-top")}} 来设置该属性。
 
 {{InteractiveExample("CSS Demo: border-top-color")}}
 
@@ -16,109 +18,74 @@ border-top-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-top-color: rgb(170, 50, 220, 0.6);
+border-top-color: rgba(180, 222, 100, 0.5);
 ```
 
-```css interactive-example-choice
-border-top-color: hsl(60, 90%, 50%, 0.8);
-```
-
-```css interactive-example-choice
-border-top-color: transparent;
-```
-
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
-  </div>
-</section>
-```
-
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
-  height: 100px;
-}
-```
-
-## 语法
-
+## Syntax
 ```css
-/* <color> values */
+/* <color> 值 */
 border-top-color: red;
 border-top-color: #ffbb00;
 border-top-color: rgb(255, 0, 0);
 border-top-color: hsla(100%, 50%, 25%, 0.75);
-border-top-color: currentColor;
+border-top-color: currentcolor;
 border-top-color: transparent;
 
-/* Global values */
+/* 全局值 */
 border-top-color: inherit;
 border-top-color: initial;
+border-top-color: revert;
+border-top-color: revert-layer;
 border-top-color: unset;
 ```
 
-`border-top-color` 属性的值为单值。
+### Values
+- {{cssxref("&lt;color&gt;")}}：表示上边框的颜色。
 
-### 值
+## Formal definition
+{{CSSInfo}}
 
-- {{cssxref("&lt;color&gt;")}}
-  - : 上边框的颜色。
-
-### 形式语法
-
+## Formal syntax
 {{csssyntax}}
 
-## 示例
-
-### 一个简单的带边框容器
-
+## Examples
+### 简单边框示例
 #### HTML
-
 ```html
-<div class="mybox">
-  <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
-  </p>
+<div class="box">
+  <p class="red-border">顶部红色边框的段落。</p>
+  <p class="blue-border">顶部蓝色边框的段落。</p>
 </div>
 ```
 
 #### CSS
-
 ```css
-.mybox {
-  border: solid 0.3em gold;
-  border-top-color: red;
-  width: auto;
+.box {
+  border-width: 0.5rem;
+  border-style: solid;
 }
 
-.redtext {
-  color: red;
+.red-border {
+  border-top-color: red;
+}
+
+.blue-border {
+  border-top-color: blue;
 }
 ```
 
-#### 结果
+#### Result
+{{EmbedLiveSample('Examples')}}
 
-{{EmbedLiveSample('一个简单的带边框容器')}}
+## 无障碍建议
+边框颜色本身不会对视力障碍用户造成特殊影响，但如果边框用于表示交互元素或者分隔内容，建议添加足够的对比度和语义标识，确保屏幕阅读器用户能够理解边框所表示的含义。
 
-## 规范
-
+## Specifications
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
-
 {{Compat}}
 
 ## 参见
-
-- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-top")}}, and {{Cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-left-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-top-style")}} and {{cssxref("border-top-width")}}.
+- 边框相关的简写属性：{{cssxref("border")}}、{{cssxref("border-top")}}、{{cssxref("border-color")}}
+- 其他边框颜色属性：{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}
