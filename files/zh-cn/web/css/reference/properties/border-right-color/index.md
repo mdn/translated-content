@@ -1,9 +1,11 @@
 ---
 title: border-right-color
-slug: Web/CSS/Reference/Properties/border-right-color
+slug: Web/CSS/border-right-color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-right-color`** CSS 属性用来设置元素右边的 {{cssxref("border")}}. 这个属性的值也可以通过简写的 CSS 属性 {{cssxref("border-color")}} 或{{cssxref("border-right")}}来设置。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的[右边框](/zh-CN/docs/Web/CSS/border)颜色。也可以通过简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-right")}} 来设置该属性。
 
 {{InteractiveExample("CSS Demo: border-right-color")}}
 
@@ -16,109 +18,74 @@ border-right-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-right-color: rgb(170, 50, 220, 0.6);
-```
-
-```css interactive-example-choice
-border-right-color: hsl(60, 90%, 50%, 0.8);
-```
-
-```css interactive-example-choice
-border-right-color: transparent;
-```
-
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
-  </div>
-</section>
-```
-
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
-  height: 100px;
-}
+border-right-color: rgba(180, 222, 100, 0.5);
 ```
 
 ## Syntax
-
 ```css
-/* <color> values */
+/* <color> 值 */
 border-right-color: red;
 border-right-color: #ffbb00;
 border-right-color: rgb(255, 0, 0);
 border-right-color: hsla(100%, 50%, 25%, 0.75);
-border-right-color: currentColor;
+border-right-color: currentcolor;
 border-right-color: transparent;
 
-/* Global values */
+/* 全局值 */
 border-right-color: inherit;
 border-right-color: initial;
+border-right-color: revert;
+border-right-color: revert-layer;
 border-right-color: unset;
 ```
 
-The `border-right-color` property is specified as a single value.
-
 ### Values
+- {{cssxref("&lt;color&gt;")}}：表示右边框的颜色。
 
-- {{cssxref("&lt;color&gt;")}}
-  - : The color of the right border.
+## Formal definition
+{{CSSInfo}}
 
-### Formal syntax
-
+## Formal syntax
 {{csssyntax}}
 
 ## Examples
-
-### A simple div with a border
-
+### 简单边框示例
 #### HTML
-
 ```html
-<div class="mybox">
-  <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
-  </p>
+<div class="box">
+  <p class="red-border">右边红色边框的段落。</p>
+  <p class="blue-border">右边蓝色边框的段落。</p>
 </div>
 ```
 
 #### CSS
-
 ```css
-.mybox {
-  border: solid 0.3em gold;
-  border-right-color: red;
-  width: auto;
+.box {
+  border-width: 0.5rem;
+  border-style: solid;
 }
 
-.redtext {
-  color: red;
+.red-border {
+  border-right-color: red;
+}
+
+.blue-border {
+  border-right-color: blue;
 }
 ```
 
 #### Result
+{{EmbedLiveSample('Examples')}}
 
-{{EmbedLiveSample('A_simple_div_with_a_border')}}
+## 无障碍建议
+边框颜色本身不会对视力障碍用户造成特殊影响，但如果边框用于表示交互元素或者分隔内容，建议添加足够的对比度和语义标识，确保屏幕阅读器用户能够理解边框所表示的含义。
 
 ## Specifications
-
 {{Specifications}}
 
-{{cssinfo}}
-
-## Browser compatibility
-
+## 浏览器兼容性
 {{Compat}}
 
-## See also
-
-- The border-related CSS shorthand properties: {{cssxref("border")}}, {{cssxref("border-right")}}, and {{cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{cssxref("border-left-color")}}, {{cssxref("border-bottom-color")}}, and {{cssxref("border-top-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-right-style")}} and {{cssxref("border-right-width")}}.
+## 参见
+- 边框相关的简写属性：{{cssxref("border")}}、{{cssxref("border-right")}}、{{cssxref("border-color")}}
+- 其他边框颜色属性：{{cssxref("border-top-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}
