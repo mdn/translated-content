@@ -1,12 +1,11 @@
 ---
 title: border-style
-slug: Web/CSS/Reference/Properties/border-style
+slug: Web/CSS/border-style
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-`border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
-
-> [!NOTE]
-> `border-style` 默认值是 `none`，这意味着如果你只修改 {{ Cssxref("border-width") }} 和 {{ Cssxref("border-color") }} 是不会出现边框的。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的[边框](/zh-CN/docs/Web/CSS/border)样式。它是一个简写属性，可以同时设置元素四个方向的边框样式。
 
 {{InteractiveExample("CSS Demo: border-style")}}
 
@@ -19,173 +18,130 @@ border-style: dotted;
 ```
 
 ```css interactive-example-choice
+border-style: dashed;
+```
+
+```css interactive-example-choice
+border-style: solid;
+```
+
+```css interactive-example-choice
+border-style: double;
+```
+
+```css interactive-example-choice
+border-style: groove;
+```
+
+```css interactive-example-choice
+border-style: ridge;
+```
+
+```css interactive-example-choice
 border-style: inset;
 ```
 
 ```css interactive-example-choice
-border-style: dashed solid;
+border-style: outset;
 ```
 
-```css interactive-example-choice
-border-style: dashed double none;
-```
-
-```css interactive-example-choice
-border-style: dashed groove none dotted;
-```
-
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
-  </div>
-</section>
-```
-
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
-  width: 80%;
-  height: 100px;
-}
-
-body {
-  background-color: #fff;
-}
-```
-
-## 语法
-
+## Syntax
 ```css
-/* Apply to all four sides */
+/* 关键字值 */
+border-style: none;
+border-style: hidden;
+border-style: dotted;
 border-style: dashed;
+border-style: solid;
+border-style: double;
+border-style: groove;
+border-style: ridge;
+border-style: inset;
+border-style: outset;
 
-/* horizontal | vertical */
+/* 垂直方向 | 水平方向 */
 border-style: dotted solid;
 
-/* top | horizontal | bottom */
+/* 顶部 | 水平方向 | 底部 */
 border-style: hidden double dashed;
 
-/* top | right | bottom | left */
+/* 顶部 | 右侧 | 底部 | 左侧 */
 border-style: none solid dotted dashed;
 
-/* Global values */
+/* 全局值 */
 border-style: inherit;
 border-style: initial;
+border-style: revert;
+border-style: revert-layer;
 border-style: unset;
 ```
 
-### 取值
+### Values
+- ****：无样式边框，宽度计算值为 0，除非设置了 {{cssxref("border-image")}}。
+- ****：与  类似，但在表格边框冲突时优先级更高。
+- ****：点线边框。
+- ****：虚线边框。
+- ****：实线边框。
+- ****：双实线边框，两条线的宽度之和等于 {{cssxref("border-width")}} 的值。
+- ****：3D 凹槽边框，效果取决于 {{cssxref("border-color")}} 的值。
+- ****：3D 凸槽边框，与  效果相反。
+- ****：3D 凹入边框，使元素看起来像是嵌入在页面中。
+- ****：3D 凸出边框，使元素看起来像是从页面中突出。
 
-- `<br-style>`
-  - : 关键字用于描述边框样式。它可以有以下取值：
+## Formal definition
+{{CSSInfo}}
 
-    | `none`   |     | 和关键字 `hidden` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`none` 值优先级最低，意味着如果存在其他的重叠边框，则会显示为那个边框。 |
-    | -------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `hidden` |     | 和关键字 `none` 类似，不显示边框。在这种情况下，如果没有设定背景图片，{{ cssxref("border-width") }} 计算后的值将是 `0`，即使先前已经指定过它的值。在单元格边框重叠情况下，`hidden` 值优先级最高，意味着如果存在其他的重叠边框，边框不会显示。       |
-    | `dotted` |     | 显示为一系列圆点。标准中没有定义两点之间的间隔大小，视不同实现而定。圆点半径是 {{ cssxref("border-width") }} 计算值的一半。                                                                                                                         |
-    | `dashed` |     | 显示为一系列短的方形虚线。标准中没有定义线段的长度和大小，视不同实现而定。                                                                                                                                                                          |
-    | `solid`  |     | 显示为一条实线。                                                                                                                                                                                                                                    |
-    | `double` |     | 显示为一条双实线，宽度是 {{ cssxref("border-width") }} 。                                                                                                                                                                                           |
-    | `groove` |     | 显示为有雕刻效果的边框，样式与 `ridge` 相反。                                                                                                                                                                                                       |
-    | `ridge`  |     | 显示为有浮雕效果的边框，样式与 `groove` 相反。                                                                                                                                                                                                      |
-    | `inset`  |     | 显示为有陷入效果的边框，样式与 `outset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `groove` 的样式。                                                                                                     |
-    | `outset` |     | 显示为有突出效果的边框，样式与 `inset` 相反。当它指定到 {{ cssxref("border-collapse") }} 为 `collapsed` 的单元格时，会显示为 `ridge` 的样式。                                                                                                       |
-
-### 形式语法
-
+## Formal syntax
 {{csssyntax}}
 
-## 示例
-
-### 包含所有属性取值的表格
-
-以下是一个所有取值的例子
-
+## Examples
+### 多种边框样式示例
 #### HTML
-
 ```html
-<table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
-</table>
+<div class="box">
+  <p class="none">无样式边框</p>
+  <p class="dotted">点线边框</p>
+  <p class="dashed">虚线边框</p>
+  <p class="solid">实线边框</p>
+  <p class="double">双实线边框</p>
+  <p class="groove">凹槽边框</p>
+  <p class="ridge">凸槽边框</p>
+  <p class="inset">凹入边框</p>
+  <p class="outset">凸出边框</p>
+</div>
 ```
 
 #### CSS
-
 ```css
-/* 定义表格外观 */
-table {
+.box p {
   border-width: 3px;
-  background-color: #52e396;
-}
-tr,
-td {
-  padding: 2px;
+  margin: 10px;
+  padding: 5px;
 }
 
-/* border-style 示例 */
-.b1 {
-  border-style: none;
-}
-.b2 {
-  border-style: hidden;
-}
-.b3 {
-  border-style: dotted;
-}
-.b4 {
-  border-style: dashed;
-}
-.b5 {
-  border-style: solid;
-}
-.b6 {
-  border-style: double;
-}
-.b7 {
-  border-style: groove;
-}
-.b8 {
-  border-style: ridge;
-}
-.b9 {
-  border-style: inset;
-}
-.b10 {
-  border-style: outset;
-}
+.none { border-style: none; }
+.dotted { border-style: dotted; }
+.dashed { border-style: dashed; }
+.solid { border-style: solid; }
+.double { border-style: double; }
+.groove { border-style: groove; }
+.ridge { border-style: ridge; }
+.inset { border-style: inset; }
+.outset { border-style: outset; }
 ```
 
-#### 输出
+#### Result
+{{EmbedLiveSample('Examples')}}
 
-{{ EmbedLiveSample('包含所有属性取值的表格', 300, 200) }}
+## 无障碍建议
+边框样式本身不会对视力障碍用户造成特殊影响，但如果边框用于表示交互元素的状态（如聚焦、错误提示），建议同时添加文本说明或ARIA属性，确保屏幕阅读器用户能够理解边框所表示的含义。
 
-## 规范
-
+## Specifications
 {{Specifications}}
 
 ## 浏览器兼容性
-
 {{Compat}}
 
 ## 参见
-
-- 和边框有关的 CSS 简写属性：{{ Cssxref("border") }}, {{ Cssxref("border-width") }}, {{ Cssxref("border-color") }}, {{ Cssxref("border-radius") }}
+- 边框相关的简写属性：{{cssxref("border")}}、{{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}}
+- 相关边框属性：{{cssxref("border-width")}}、{{cssxref("border-color")}}、{{cssxref("border-radius")}}
