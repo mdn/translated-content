@@ -1,73 +1,91 @@
 ---
 title: border-bottom-color
-slug: Web/CSS/Reference/Properties/border-bottom-color
+slug: Web/CSS/border-bottom-color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-bottom-color`** 属性设置一个元素底部边框的颜色。应当指出，在多数情况下，CSS 简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 更方便实用。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的[下边框](/zh-CN/docs/Web/CSS/border)颜色。也可以通过简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 来设置该属性。
 
-{{cssinfo}}
+{{InteractiveExample("CSS Demo: border-bottom-color")}}
 
-## 语法
-
-```css
-border-bottom-color: yellow;
-border-bottom-color: #f5f6f7;
+```css interactive-example-choice
+border-bottom-color: red;
 ```
 
-### 值
+```css interactive-example-choice
+border-bottom-color: #32a1ce;
+```
 
-- `<color>`
-  - : 一个描绘底边的颜色的 CSS {{cssxref("&lt;color&gt;")}} 值。
-- `inherit`
-  - : 一个代表父元素底边颜色的关键字（可能和 `border-bottom-color` 默认值不同）
+```css interactive-example-choice
+border-bottom-color: rgba(180, 222, 100, 0.5);
+```
 
-### 正式语法
+## Syntax
+```css
+/* <color> 值 */
+border-bottom-color: red;
+border-bottom-color: #ffbb00;
+border-bottom-color: rgb(255, 0, 0);
+border-bottom-color: hsla(100%, 50%, 25%, 0.75);
+border-bottom-color: currentcolor;
+border-bottom-color: transparent;
 
+/* 全局值 */
+border-bottom-color: inherit;
+border-bottom-color: initial;
+border-bottom-color: revert;
+border-bottom-color: revert-layer;
+border-bottom-color: unset;
+```
+
+### Values
+- {{cssxref("&lt;color&gt;")}}：表示下边框的颜色。
+
+## Formal definition
+{{CSSInfo}}
+
+## Formal syntax
 {{csssyntax}}
 
-## 示例
-
-### 一个带有边框的简单 div
-
-#### HTML 内容
-
+## Examples
+### 简单边框示例
+#### HTML
 ```html
-<div class="mybox">
-  <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
-  </p>
+<div class="box">
+  <p class="red-border">下边红色边框的段落。</p>
+  <p class="blue-border">下边蓝色边框的段落。</p>
 </div>
 ```
 
-#### CSS 内容
-
+#### CSS
 ```css
-.mybox {
-  border: solid 0.3em gold;
-  border-bottom-color: red;
-  width: auto;
+.box {
+  border-width: 0.5rem;
+  border-style: solid;
 }
 
-.redtext {
-  color: red;
+.red-border {
+  border-bottom-color: red;
+}
+
+.blue-border {
+  border-bottom-color: blue;
 }
 ```
 
-#### 结果
+#### Result
+{{EmbedLiveSample('Examples')}}
 
-{{EmbedLiveSample('一个带有边框的简单 div')}}
+## 无障碍建议
+边框颜色本身不会对视力障碍用户造成特殊影响，但如果边框用于表示交互元素或者分隔内容，建议添加足够的对比度和语义标识，确保屏幕阅读器用户能够理解边框所表示的含义。
 
-## 规范
-
+## Specifications
 {{Specifications}}
 
 ## 浏览器兼容性
-
 {{Compat}}
 
 ## 参见
-
-- 边框相关的 CSS 简写属性 {{Cssxref("border")}}, {{Cssxref("border-bottom")}} 和 {{Cssxref("border-color")}} 。
-- 用于其他边框颜色相关的 CSS 属性： {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, 和 {{Cssxref("border-left-color")}} 。
-- 同样用于底边的其他边框相关的 CSS 属性： {{cssxref("border-bottom-style")}} 和 {{cssxref("border-bottom-width")}} 。
+- 边框相关的简写属性：{{cssxref("border")}}、{{cssxref("border-bottom")}}、{{cssxref("border-color")}}
+- 其他边框颜色属性：{{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}
