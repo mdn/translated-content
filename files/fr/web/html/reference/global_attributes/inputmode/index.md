@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inputmode`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui suggère le type de données qui pourrait être saisi par l'utilisateur·ice lors de la modification de l'élément ou de son contenu.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inputmode`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui suggère le type de données qui pourrait être saisi par l'utilisateur·ice lors de la modification de l'élément ou de son contenu.
 Ceci permet au navigateur d'afficher un clavier virtuel approprié.
 
 Il est principalement utilisé sur les éléments {{HTMLElement("input")}}, mais peut être utilisé sur tout élément en mode [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).

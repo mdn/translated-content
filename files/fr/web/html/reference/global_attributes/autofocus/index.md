@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 01d5901fdbad83033fe1f86486f652d07db7ce2a
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** est un attribut booléen indiquant si l'élément doit recevoir la sélection (<i lang="en">focus</i> en anglais) au chargement de la page ou, s'il est imbriqué à l'intérieur d'un élément {{HTMLElement("dialog")}} ou [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), lorsque le `<dialog>` ou la fenêtre contextuelle est affiché.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** est un attribut booléen indiquant si l'élément doit recevoir la sélection (<i lang="en">focus</i> en anglais) au chargement de la page ou, s'il est imbriqué à l'intérieur d'un élément {{HTMLElement("dialog")}} ou [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), lorsque le `<dialog>` ou la fenêtre contextuelle est affiché.
 
 ```html
 <input name="q" autofocus />
