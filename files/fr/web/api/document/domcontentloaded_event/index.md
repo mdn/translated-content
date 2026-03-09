@@ -10,7 +10,7 @@ l10n:
 
 L'évènement **`DOMContentLoaded`** se déclenche lorsque le document HTML a été entièrement analysé, et que tous les scripts différés ([`<script defer src="…">`](/fr/docs/Web/HTML/Reference/Elements/script#defer) et [`<script type="module">`](/fr/docs/Web/HTML/Reference/Elements/script#module)) ont été téléchargés et exécutés. Il n'attend pas que d'autres éléments comme les images, les sous-cadres et les scripts asynchrones aient fini de charger.
 
-`DOMContentLoaded` does not wait for stylesheets to load, cependant les scripts différés _font_ attendre les feuilles de style, et l'évènement `DOMContentLoaded` est mis en file d'attente après les scripts différés. De plus, les scripts qui ne sont ni différés ni asynchrones (par exemple, `<script>`) attendent le chargement des feuilles de style déjà analysées.
+`DOMContentLoaded` n'attend pas le chargement des feuilles de style, cependant les scripts différés _font_ attendre les feuilles de style, et l'évènement `DOMContentLoaded` est mis en file d'attente après les scripts différés. De plus, les scripts qui ne sont ni différés ni asynchrones (par exemple, `<script>`) attendent le chargement des feuilles de style déjà analysées.
 
 Un autre évènement, {{DOMxRef("Window/load_event", "load")}}, doit être utilisé uniquement pour détecter une page entièrement chargée. Il est courant de se tromper en utilisant `load` là où `DOMContentLoaded` serait plus approprié.
 

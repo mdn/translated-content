@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** est une liste des classes de l'élément, séparées par des [espaces ASCII](/fr/docs/Glossary/Whitespace#en_html).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** est une liste des classes de l'élément, séparées par des [espaces ASCII](/fr/docs/Glossary/Whitespace#en_html).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: class", "tabbed-standard")}}
 
