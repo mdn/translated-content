@@ -1,34 +1,47 @@
 ---
-title: document.images
+title: "Document : propriété images"
+short-title: images
 slug: Web/API/Document/images
+l10n:
+  sourceCommit: 0af9a589170f1535622062de89bbf73507580b8f
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-`document.images` renvoie une collection des images du document HTML courant.
+La propriété en lecture seule **`images`** de l'interface {{DOMxRef("Document")}} retourne une [collection](/fr/docs/Web/API/HTMLCollection) des [images](/fr/docs/Web/API/HTMLImageElement) dans le document HTML courant.
 
-## Syntaxe
+## Valeur
+
+Une collection ({{DOMxRef("HTMLCollection")}}) fournissant une liste dynamique de toutes les images contenues dans le document courant.
+Chaque entrée de la collection est un {{DOMxRef("HTMLImageElement")}} représentant un élément image unique.
+
+## Notes d'utilisation
+
+Vous pouvez utiliser soit la notation de tableau JavaScript, soit la méthode {{DOMxRef("HTMLCollection.item", "item()")}} sur la collection retournée pour accéder aux éléments de la collection.
+Les deux exemples suivants sont équivalents&nbsp;:
 
 ```js
-HTMLCollection = document.images;
+firstImage = imageCollection.item(0);
+
+firstImage = imageCollection[0];
 ```
 
-## Exemple
+## Exemples
+
+Cet exemple parcourt la liste des images et trouve celles nommées `"banner.gif"`.
 
 ```js
-var listeimg = document.images;
-for (var i = 0; i < listeimg.length; i++) {
-  if (listeimg[i] == "banner.gif") {
-    // l'image banner a été trouvée
+for (const image of document.images) {
+  if (image.src === "banner.gif") {
+    console.log("Bannière trouvée");
   }
 }
 ```
 
-## Notes
+## Spécifications
 
-[`document.images`](/fr/docs/Web/API/Document/images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
-- Traduction en français (non normative)&nbsp;: [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)
+{{Compat}}
