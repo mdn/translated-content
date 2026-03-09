@@ -1,23 +1,18 @@
 ---
 title: background-origin
-slug: Web/CSS/Reference/Properties/background-origin
+slug: Web/CSS/background-origin
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-`background-origin` 规定了指定背景图片{{cssxref("background-image")}} 属性的原点位置的背景相对区域。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的背景原点。它是一个简写属性，可以同时设置元素四个方向的背景原点。
 
-注意：当使用 {{Cssxref("background-attachment")}} 为 fixed 时，该属性将被忽略不起作用。
+{{InteractiveExample("CSS Demo: background-origin")}}
 
-> [!NOTE]
-> 假如{{cssxref("background")}}简写中没有设置该值，那么在 background 简写值后指定 background-origin，那么后面的值就会覆盖简写值，其实说白了，就是后出现的值会覆盖前面的值。
-
-## 语法
-
+## Syntax
 ```css
-/* 关键字值 */
-background-origin: border-box;
-background-origin: padding-box;
-background-origin: content-box;
-
+/* 标准语法 */
+background-origin: value;
 /* 全局值 */
 background-origin: inherit;
 background-origin: initial;
@@ -26,64 +21,40 @@ background-origin: revert-layer;
 background-origin: unset;
 ```
 
-### 属性值
+### Values
+根据属性不同，支持对应的值类型。
 
-- `border-box`
-  - : 背景图片的摆放以 border 区域为参考
-- `padding-box`
-  - : 背景图片的摆放以 padding 区域为参考
-- `content-box`
-  - : 背景图片的摆放以 content 区域为参考
+## Formal definition
+{{CSSInfo}}
 
-## 形式语法
-
-{{cssinfo}}
-
-## 形式定义
-
+## Formal syntax
 {{csssyntax}}
 
-## 示例
+## Examples
+### 基础示例
+#### HTML
+```html
+<div class="box">示例元素</div>
+```
 
+#### CSS
 ```css
-.example {
-  border: 10px double;
-  padding: 10px;
-  background: url("image.jpg");
-  background-position: center left;
-  /* 背景将在内容区 padding 内部填充 */
-  background-origin: content-box;
+.box {
+  background-origin: value;
 }
 ```
 
-```css
-#example2 {
-  border: 4px solid black;
-  padding: 10px;
-  background: url("image.gif");
-  background-repeat: no-repeat;
-  background-origin: border-box;
-}
-```
+#### Result
+{{EmbedLiveSample('Examples')}}
 
-```css
-div {
-  background-image: url("logo.jpg"), url("mainback.png");
-  background-position:
-    top right,
-    0px 0px;
-  background-origin: content-box, padding-box;
-}
-```
+## 无障碍建议
+该属性本身不会对视力障碍用户造成特殊影响，但如果用于表示交互状态，建议同时添加文本说明。
 
-## 规范
-
+## Specifications
 {{Specifications}}
 
 ## 浏览器兼容性
-
 {{Compat}}
 
-## 相关文献
-
-- [【CSS3】background-origin 和 background-clip 的区别](https://www.cnblogs.com/shytong/p/5077129.html)
+## 参见
+- 相关属性文档
