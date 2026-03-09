@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("Document")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour inspecter les [politiques de fonctionnalités](/fr/docs/Web/HTTP/Headers/Feature-Policy) appliquées à un document spécifique.
+La propriété en lecture seule **`featurePolicy`** de l'interface {{DOMxRef("Document")}} retourne l'interface {{DOMxRef("FeaturePolicy")}}, qui fournit une API simple pour inspecter les [politiques de fonctionnalités](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) appliquées à un document spécifique.
 
 ### Valeur
 
