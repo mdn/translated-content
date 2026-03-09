@@ -1,82 +1,91 @@
 ---
 title: border-left-color
-slug: Web/CSS/Reference/Properties/border-left-color
+slug: Web/CSS/border-left-color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-left-color`** 属性设置元素的左边框颜色。值得注意的是，在大数情况下使用 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 更加方便和普遍。
+**** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置元素的[左边框](/zh-CN/docs/Web/CSS/border)颜色。也可以通过简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 来设置该属性。
 
+{{InteractiveExample("CSS Demo: border-left-color")}}
+
+```css interactive-example-choice
+border-left-color: red;
+```
+
+```css interactive-example-choice
+border-left-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-left-color: rgba(180, 222, 100, 0.5);
+```
+
+## Syntax
 ```css
-/* <color> values */
+/* <color> 值 */
 border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255, 0, 0);
 border-left-color: hsla(100%, 50%, 25%, 0.75);
-border-left-color: currentColor;
+border-left-color: currentcolor;
 border-left-color: transparent;
 
-/* Global values */
+/* 全局值 */
 border-left-color: inherit;
 border-left-color: initial;
+border-left-color: revert;
+border-left-color: revert-layer;
 border-left-color: unset;
 ```
 
-{{cssinfo}}
+### Values
+- {{cssxref("&lt;color&gt;")}}：表示左边框的颜色。
 
-## 语法
+## Formal definition
+{{CSSInfo}}
 
-`border-left-color` 属性取值为单个颜色值。
-
-### 取值
-
-- {{cssxref("&lt;color&gt;")}}
-  - : 左边框的颜色。
-
-### 形式语法
-
+## Formal syntax
 {{csssyntax}}
 
-## 示例
-
-### 一个带边框的简单 div
-
+## Examples
+### 简单边框示例
 #### HTML
-
 ```html
-<div class="mybox">
-  <p>
-    This is a box with a border around it. Note which side of the box is
-    <span class="redtext">red</span>.
-  </p>
+<div class="box">
+  <p class="red-border">左边红色边框的段落。</p>
+  <p class="blue-border">左边蓝色边框的段落。</p>
 </div>
 ```
 
 #### CSS
-
 ```css
-.mybox {
-  border: solid 0.3em gold;
-  border-left-color: red;
-  width: auto;
+.box {
+  border-width: 0.5rem;
+  border-style: solid;
 }
-.redtext {
-  color: red;
+
+.red-border {
+  border-left-color: red;
+}
+
+.blue-border {
+  border-left-color: blue;
 }
 ```
 
-#### 结果
+#### Result
+{{EmbedLiveSample('Examples')}}
 
-{{EmbedLiveSample('一个带边框的简单 div')}}
+## 无障碍建议
+边框颜色本身不会对视力障碍用户造成特殊影响，但如果边框用于表示交互元素或者分隔内容，建议添加足够的对比度和语义标识，确保屏幕阅读器用户能够理解边框所表示的含义。
 
-## 规范
-
+## Specifications
 {{Specifications}}
 
 ## 浏览器兼容性
-
 {{Compat}}
 
 ## 参见
-
-- The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, and {{Cssxref("border-color")}}.
-- The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-bottom-color")}}, and {{Cssxref("border-top-color")}}.
-- The other border-related CSS properties applying to the same border: {{cssxref("border-left-style")}} and {{cssxref("border-left-width")}}.
+- 边框相关的简写属性：{{cssxref("border")}}、{{cssxref("border-left")}}、{{cssxref("border-color")}}
+- 其他边框颜色属性：{{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}}
