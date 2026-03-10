@@ -20,7 +20,7 @@ Los siguientes artículos pueden ayudarte a obtener más información sobre HTML
 - Introducción a HTML
   - : Si eres nuevo en el desarrollo Web, asegúrate de leer el artículo [Conceptos básicos de HTML](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) para aprender qué es HTML y cómo usarlo.
 - Tutoriales HTML
-  - : Para ver artículos sobre cómo usar HTML, así como tutoriales y ejemplos completos, consulte el [Área de aprendizaje de HTML](/es/docs/Learn_web_development/Core/Structuring_content).
+  - : Para ver artículos sobre cómo usar HTML, así como tutoriales y ejemplos completos, consulta el [Área de aprendizaje de HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 - Referencia HTML
   - : En nuestra extensa sección [referencia HTML](/es/docs/Web/HTML/Reference) encontrarás los detalles sobre cada elemento y atributo en HTML.
 
@@ -40,7 +40,7 @@ El [Área de aprendizaje de HTML](/es/docs/Learn_web_development/Core/Structurin
   - : Este módulo prepara el escenario para que te acostumbres a conceptos y sintaxis importantes, tal como la aplicación de HTML al texto, cómo crear hipervínculos y cómo utilizar HTML para estructurar una página web.
 - [Multimedia e inserción](/es/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
   - : Este módulo explora cómo usar HTML para incluir multimedia en tus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo insertar video, audio e incluso otras páginas web completas.
-- [tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
+- [Tablas HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : Representar datos tabulares en una página web de una manera comprensible y accesible puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con características más complejas como la implementación de subtítulos y resúmenes.
 - [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios son una parte muy importante de la Web — proporcionan gran parte de la funcionalidad que necesitas para interactuar con sitios web, p. ej. registrarte e iniciar sesión, enviar comentarios, comprar productos y más. Este módulo te ayuda a comenzar a crear las partes de formularios del lado del cliente/Interfaz de usuario.
