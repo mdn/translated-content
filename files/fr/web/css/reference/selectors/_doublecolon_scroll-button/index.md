@@ -2,7 +2,7 @@
 title: ::scroll-button()
 slug: Web/CSS/Reference/Selectors/::scroll-button
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
 ---
 
 {{SeeCompatTable}}
@@ -56,7 +56,7 @@ Lorsqu'il n'est pas possible de défiler davantage dans une direction donnée, l
 
 ## Exemples
 
-Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels) pour d'autres exemples.
+Voir [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels) pour d'autres exemples.
 
 ### Créer des boutons de défilement
 
@@ -154,11 +154,11 @@ ul::scroll-button(right) {
 }
 ```
 
-Il n'est pas nécessaire de définir de [texte alternatif](/fr/docs/Web/CSS/Reference/Properties/content#texte_alternatif_string_counter) pour les icônes de `content`, car le navigateur fournit automatiquement des {{Glossary("accessible name", "noms accessibles")}} appropriés.
+Il n'est pas nécessaire de définir de [texte alternatif](/fr/docs/Web/CSS/Reference/Properties/content#ajouter_des_compteurs_dans_le_texte_alternatif) pour les icônes de `content`, car le navigateur fournit automatiquement des {{Glossary("accessible name", "noms accessibles")}} appropriés.
 
 #### Résultat
 
-{{EmbedLiveSample("créer_des_boutons_de_défilement", '', '220')}}
+{{EmbedLiveSample("Créer les boutons de défilement", "", 220)}}
 
 Notez que les boutons de défilement apparaissent en bas à gauche du carrousel. Essayez de les activer pour voir comment le contenu défile.
 
@@ -203,7 +203,7 @@ ul::scroll-button(right) {
 
 #### Résultat
 
-{{EmbedLiveSample("positionner_les_boutons_de_défilement", '', '220')}}
+{{EmbedLiveSample("Positionner les boutons de défilement", "", 220)}}
 
 ## Spécifications
 
@@ -220,7 +220,7 @@ ul::scroll-button(right) {
 - Le pseudo-élément {{CSSxRef("::scroll-marker")}}
 - Le pseudo-élément {{CSSxRef("::column")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
-- [Créer des carrousels en CSS](/fr/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
-- Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
-- [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)
+- [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
+- Le module [de débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
+- Le module [de positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
+- [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) sur chrome.dev (2025)

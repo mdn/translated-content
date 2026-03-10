@@ -2,7 +2,6 @@
 title: "Attribut HTML : step"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
-original_slug: Web/HTML/Attributes/step
 l10n:
   sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
 ---

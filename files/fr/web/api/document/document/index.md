@@ -1,21 +1,24 @@
 ---
-title: Document()
+title: "Document : constructeur Document()"
+short-title: Document()
 slug: Web/API/Document/Document
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
-Le constructeur **`Document`** crée un nouvel objet de {{domxref("Document")}}, qui est une référence de la page courante du navigateur et sert de point d'entrée vers les contenus de celle-ci.
+Le constructeur **`Document`** crée un nouvel objet {{DOMxRef("Document")}}, qui est une page web chargée dans le navigateur et servant de point d'entrée vers le contenu de la page.
 
 ## Syntaxe
 
-```js
-var document = new Document();
+```js-nolint
+new Document()
 ```
 
 ### Paramètres
 
-None.
+Aucun.
 
 ## Spécifications
 

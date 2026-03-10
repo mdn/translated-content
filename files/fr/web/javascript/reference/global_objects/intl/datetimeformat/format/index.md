@@ -1,106 +1,90 @@
 ---
-title: Intl.DateTimeFormat.prototype.format
+title: "Intl.DateTimeFormat : méthode format()"
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`format()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} formate une date selon la locale et les options de format de cet objet `Intl.DateTimeFormat`.
 
-La méthode **`Intl.DateTimeFormat.prototype.format()`** est un accesseur formate une date selon les options de locale et de format de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
-
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.prototype.format()", "taller")}}
 
 ```js interactive-example
-const options1 = {
+const options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
-const date1 = new Date(2012, 5);
+const date = new Date(2012, 5);
 
-const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
-console.log(dateTimeFormat1.format(date1));
-// Expected output: "петак, 1. јун 2012."
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options);
+console.log(dateTimeFormat1.format(date));
+// Résultat attendu : "петак, 1. јун 2012."
 
-const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
-console.log(dateTimeFormat2.format(date1));
-// Expected output: "Friday, 1 June 2012"
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options);
+console.log(dateTimeFormat2.format(date));
+// Résultat attendu : "Friday, 1 June 2012"
 
-const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
-console.log(dateTimeFormat3.format(date1));
-// Expected output: "Friday, June 1, 2012"
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options);
+console.log(dateTimeFormat3.format(date));
+// Résultat attendu : "Friday, June 1, 2012"
 ```
 
 ## Syntaxe
 
-```js
-dateTimeFormat.format(date);
+```js-nolint
+format(date)
 ```
 
 ### Paramètres
 
 - `date`
-  - : La date à formater.
+  - : La date à formater. Peut être un objet {{JSxRef("Date")}} ou {{JSxRef("Temporal.PlainDateTime")}}. Il peut également s'agir d'un objet {{JSxRef("Temporal.PlainTime")}}, {{JSxRef("Temporal.PlainDate")}}, {{JSxRef("Temporal.PlainYearMonth")}} ou {{JSxRef("Temporal.PlainMonthDay")}} si l'objet `DateTimeFormat` a été configuré pour afficher au moins une partie pertinente de la date.
 
-## Description
+    > [!NOTE]
+    > Un objet {{JSxRef("Temporal.ZonedDateTime")}} provoquera toujours une exception `TypeError`&nbsp;; utilisez {{JSxRef("Temporal/ZonedDateTime/toLocaleString", "Temporal.ZonedDateTime.prototype.toLocaleString()")}} ou convertissez-le en objet {{JSxRef("Temporal.PlainDateTime")}} à la place.
 
-L'accesseur `format` permet de formater une date en une chaîne de caractères en fonction des options de locale et de format définies pour l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
+    Omettre ce paramètre entraîne le formatage de la date courante (telle que retournée par {{JSxRef("Date.now()")}}), ce qui peut prêter à confusion, il est donc conseillé de toujours passer explicitement une date.
+
+### Valeur de retour
+
+Une chaîne de caractères représentant la `date` donnée, formatée selon la locale et les options de format de cet objet {{JSxRef("Intl.DateTimeFormat")}}.
+
+> [!NOTE]
+> La plupart du temps, le format retourné par `format()` est cohérent. Toutefois, le résultat peut varier selon les implémentations, même au sein d'une même locale — ces variations de sortie sont prévues et permises par la spécification. Il se peut aussi que le résultat ne soit pas celui attendu. Par exemple, la chaîne de caractères peut utiliser des espaces insécables ou être entourée de caractères de contrôle bidirectionnels. Vous ne devez pas comparer les résultats de `format()` à des constantes codées en dur.
 
 ## Exemples
 
-### Utiliser `format`
+### Utiliser la méthode `format()`
 
-On peut utiliser la fonction renvoyée par l'accesseur `format` pour formater une date. Par exemple selon la locale serbe :
+Utilisez la fonction accesseur `format` pour formater une seule date, ici pour la Serbie&nbsp;:
 
 ```js
-var options = {
+const options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
-var dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
+const dateTimeFormat = new Intl.DateTimeFormat("sr-RS", options);
 console.log(dateTimeFormat.format(new Date()));
 // → "недеља, 7. април 2013."
 ```
 
-### Utiliser `format` avec `map()`
+### Utiliser `format()` avec `map()`
 
-On peut également utiliser la fonction renvoyée par l'accesseur `format` pour formater toutes les dates d'un tableau. On observe que la fonction est liée à l'objet `DateTimeFormat` dont elle provient, on peut donc la passer directement à {{jsxref("Array.prototype.map()")}}.
+Utilisez la fonction accesseur `format` pour formater toutes les dates d'un tableau. Notez que la fonction est liée à l'objet {{JSxRef("Intl.DateTimeFormat")}} dont elle provient, vous pouvez donc la passer directement à {{JSxRef("Array.prototype.map()")}}.
 
 ```js
-var a = [new Date(2012, 08), new Date(2012, 11), new Date(2012, 03)];
-var options = { year: "numeric", month: "long" };
-var dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
-var formatted = a.map(dateTimeFormat.format);
+const a = [new Date(2012, 8), new Date(2012, 11), new Date(2012, 3)];
+const options = { year: "numeric", month: "long" };
+const dateTimeFormat = new Intl.DateTimeFormat("pt-BR", options);
+const formatted = a.map(dateTimeFormat.format);
 console.log(formatted.join("; "));
 // → "setembro de 2012; dezembro de 2012; abril de 2012"
 ```
-
-### Comparaison des dates formatées et des valeurs statiques
-
-La plupart du temps, le format renvoyé par `format()` est cohérent. Toutefois, cela peut évoluer à l'avenir et n'est pas garanti pour l'ensemble des langues (de telles variations sont souhaitables et permises par la spécification). Ainsi, IE et Edge ajoutent des caractères de contrôle bidirectionnels autour des dates afin que le texte produit ait une directionalité cohérente avec le texte avec lequel elles seront concaténées.
-
-Aussi, mieux vaut ne pas comparer un résultat fourni par `format()` avec une valeur statique :
-
-```js example-bad
-let d = new Date("2019-01-01T00:00:00.000000Z");
-let formattedDate = Intl.DateTimeFormat(undefined, {
-  year: "numeric",
-  month: "numeric",
-  day: "numeric",
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}).format(d);
-
-"1.1.2019, 01:00:00" === formattedDate;
-// true pour Firefox et les autres
-// false pour IE et Edge
-```
-
-> [!NOTE]
-> Voir aussi ce fil [StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
 
 ## Spécifications
 
@@ -112,7 +96,4 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 
 ## Voir aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleString")}}
-- {{jsxref("Date.prototype.toLocaleDateString")}}
-- {{jsxref("Date.prototype.toLocaleTimeString")}}
+- L'objet {{JSxRef("Intl.DateTimeFormat")}}
