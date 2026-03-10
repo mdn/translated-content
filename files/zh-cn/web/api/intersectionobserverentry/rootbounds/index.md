@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} 接口的 **`rootBounds`** 只读属性是一个对应于 {{domxref("IntersectionObserverEntry.target", "target")}} 的根相交矩形 {{domxref("DOMRectReadOnly")}}，并在指定了 {{domxref("IntersectionObserver.rootMargin")}} 时该矩形将按该值进行偏移。
+{{domxref("IntersectionObserverEntry")}} 接口的 **`rootBounds`** 只读属性是一个对应于 {{domxref("IntersectionObserverEntry.target", "target")}} 的根相交矩形的 {{domxref("DOMRectReadOnly")}}，并在指定了 {{domxref("IntersectionObserver.rootMargin")}} 时该矩形将按该值进行偏移。
 
 ## 值
 
