@@ -2,7 +2,7 @@
 title: console
 slug: Web/API/console
 l10n:
-  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
+  sourceCommit: f19387e11b429473d515019a0b8d9ba4e615f88f
 ---
 
 {{APIRef("Console API")}} {{AvailableInWorkers}}
@@ -11,7 +11,7 @@ l10n:
 
 コンソール API の実装はランタイムによって異なる場合があります。具体的な例として、いくつかのコンソールメソッドはオンラインエディターや IDE によっては動作が異なったり、まったく動作しなかったりすることがあります。この記事で記述された動作を確認するには、ブラウザーの開発者ツールでメソッドを試してください。
 
-`console` オブジェクトには任意のグローバルオブジェクトからアクセスできます。閲覧スコープの {{domxref("Window")}} や、特定の種類のワーカーを表す {{domxref("WorkerGlobalScope")}} の console プロパティを通してアクセスできます。これは {{domxref("Window.console")}} として公開されていますが、単に `console` として参照できます。
+`console` オブジェクトは次のように、あらゆるグローバルスコープで利用できます。
 
 ```js
 console.log("Failed to open the specified link");
@@ -112,7 +112,7 @@ obj.prop = 123;
 console.log(JSON.parse(JSON.stringify(obj)));
 ```
 
-ブラウザーで動作する他の選択肢として、[`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
+ブラウザーで動作する他の選択肢として、{{DOMxRef("Window.structuredClone", "structuredClone()")}} があり、これはさまざまな種類のオブジェクトを複製するのに有効です。
 
 #### 複数のオブジェクトの出力
 
@@ -127,7 +127,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 出力は以下のようになります。
 
 ```plain
-My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
+My first car was a Dodge Charger . The object is: {str:"Some text", id:5}
 ```
 
 #### 文字列置換の使用
@@ -183,6 +183,8 @@ console.log(
 ![Firefox コンソールでスタイル付けされたテキスト](css-styling.png)
 
 `%c` は複数回使用することができます。
+
+<!-- cSpell:ignore corange cred -->
 
 ```js
 console.log(
@@ -296,5 +298,5 @@ foo();
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — Firefox のウェブコンソールがコンソール API の呼び出しを処理する方法
 - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — モバイル端末がデバッグ対象である場合に、コンソールの出力を確認する方法
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
-- [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge DevTools](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

@@ -1,16 +1,15 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/Reference/Properties/animation-iteration-count
-original_slug: Web/CSS/animation-iteration-count
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-iteration-count`** définit le nombre de fois qu'une séquence d'animation doit être jouée avant de s'arrêter.
 
-La propriété **`animation-iteration-count`** indique le nombre de cycles utilisés pour répéter une animation avant que celle-ci s'arrête.
+Il est souvent pratique d'utiliser la propriété raccourcie {{CSSxRef("animation")}} pour définir toutes les propriétés d'animation en une seule fois.
 
-Si plusieurs valeurs sont indiquées, à chaque lancement de l'animation, c'est la valeur suivante de la liste qui est utilisée. Lorsqu'on arrive à la fin de la liste, on reprend avec la première valeur de la liste.
-
-{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-iteration-count")}}
 
 ```css interactive-example-choice
 animation-iteration-count: 0;
@@ -26,8 +25,8 @@ animation-iteration-count: 1.5;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a count to start!</div>
+  <div>Animation <span id="play-status"></span></div>
+  <div id="example-element">Sélectionnez un nombre pour démarrer&nbsp;!</div>
 </section>
 ```
 
@@ -36,7 +35,7 @@ animation-iteration-count: 1.5;
   align-items: center;
   background-color: #1766aa;
   border-radius: 50%;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   color: white;
   display: flex;
   flex-direction: column;
@@ -47,7 +46,7 @@ animation-iteration-count: 1.5;
   width: 150px;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -72,44 +71,38 @@ animation-iteration-count: 1.5;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
+function update() {
+  status.textContent = "déclée";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "en cours";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "terminée";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
-```
 
-Généralement, on utilisera la propriété raccourcie {{cssxref("animation")}} afin de définir toutes les propriétés relatives à une animation.
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+```
 
 ## Syntaxe
 
@@ -117,26 +110,35 @@ Généralement, on utilisera la propriété raccourcie {{cssxref("animation")}} 
 /* Valeur avec un mot-clé */
 animation-iteration-count: infinite;
 
-/* Valeur avec une quantité */
-/* Type <number>            */
+/* Valeur <number> */
 animation-iteration-count: 3;
 animation-iteration-count: 2.3;
 
 /* Gestion de plusieurs animations */
 animation-iteration-count: 2, 0, infinite;
+
+/* Valeurs globales */
+animation-iteration-count: inherit;
+animation-iteration-count: initial;
+animation-iteration-count: revert;
+animation-iteration-count: revert-layer;
+animation-iteration-count: unset;
 ```
 
-La propriété `animation-iteration-count` est définie avec une ou plusieurs valeurs, parmi la liste suivante, séparées par des virgules.
+La propriété **`animation-iteration-count`** se définit avec une ou plusieurs valeurs séparées par des virgules.
 
 ### Valeurs
 
 - `infinite`
-  - : L'animation sera répétée à l'infini. Dans ce mode d'animation infinie, cette valeur est considérée de la même manière qu'une valeur paire par la propriété **`animation-direction`**.
-- `<number>`
-  - : Le nombre de répétitions pour l'animation. La valeur par défaut est `1` (elle n'est exécutée qu'une seule fois). Les valeurs négatives sont considérées comme invalides. Il est possible d'utiliser des valeurs qui ne sont pas entières pour indiquer des fragments d'un cycle (ainsi `0.5` indiquera une moitié du cycle de l'animation).
+  - : L'animation sera répétée indéfiniment.
+- {{CSSxRef("&lt;number&gt;")}}
+  - : Le nombre de répétitions de l'animation&nbsp;; la valeur par défaut est `1`. Vous pouvez indiquer des valeurs non entières pour jouer une partie d'un cycle d'animation&nbsp;: par exemple, `0.5` jouera la moitié du cycle. Les valeurs négatives sont invalides.
 
 > [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+> [!NOTE]
+> Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), définir une valeur `animation-iteration-count` fait répéter l'animation ce nombre de fois au fil de la progression de la chronologie. Si aucune valeur `animation-iteration-count` n'est fournie, l'animation ne se produira qu'une seule fois. La valeur `infinite` est valide pour les animations pilotées par le défilement, mais elle donne une animation qui ne fonctionne pas.
 
 ## Définition formelle
 
@@ -148,55 +150,49 @@ La propriété `animation-iteration-count` est définie avec une ou plusieurs va
 
 ## Exemples
 
-### CSS
+### Définir le nombre d'itérations
+
+Cette animation sera exécutée 10 fois.
+
+#### HTML
+
+```html
+<div class="box"></div>
+```
+
+#### CSS
 
 ```css
-p {
-  animation-duration: 3s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
 }
 
-.infini {
-  animation-iteration-count: infinite;
-}
-
-.dix {
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
   animation-iteration-count: 10;
 }
 
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
   }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
+  100% {
+    transform: rotate(360deg);
   }
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="infini">
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
-</p>
+Passez la souris sur le rectangle pour démarrer l'animation.
 
-<p class="dix">
-  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois cinq
-  font douze, quatre fois six font treize, quatre fois sept font — je
-  n’arriverai jamais à vingt de ce train-là.
-</p>
-```
+{{EmbedLiveSample("Définir le nombre d'itérations", 300, 300)}}
 
-### Résultat
-
-{{EmbedLiveSample("Exemples","300","300")}}
+Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
 
 ## Spécifications
 
@@ -209,4 +205,5 @@ p {
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

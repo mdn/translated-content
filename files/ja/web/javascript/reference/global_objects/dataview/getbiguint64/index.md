@@ -1,63 +1,60 @@
 ---
 title: DataView.prototype.getBigUint64()
+short-title: getBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`getBigUint64()`** は {{jsxref("DataView")}} インスタンスのメソッドで、この `DataView` の指定されたバイトオフセットから 8 バイトを読み取り、符号なし 64 ビット整数として解釈します。アラインメント制約はありません。境界内の任意のオフセットからマルチバイト値を取得できます。
 
-**`getBigInt64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位のオフセット位置から取得します。
-
-{{InteractiveExample("JavaScript デモ: DataView.getBigUint64()")}}
+{{InteractiveExample("JavaScript デモ: DataView.prototype.getBigUint64()")}}
 
 ```js interactive-example
-// Create an ArrayBuffer with a size in bytes
+// ArrayBuffer をバイト単位のサイズで作成
 const buffer = new ArrayBuffer(16);
 
-// Highest possible BigInt value that fits in an unsigned 64-bit integer
+// 符号なし 64 ビット整数に収まる最大の長整数値
 const max = 2n ** 64n - 1n;
 
 const view = new DataView(buffer);
 view.setBigUint64(1, max);
 
 console.log(view.getBigUint64(1));
-// Expected output: 18446744073709551615n
+// 予想される結果: 18446744073709551615n
 ```
 
 ## 構文
 
-```js
-getBigUint64(byteOffset);
-getBigUint64(byteOffset, littleEndian);
+```js-nolint
+getBigUint64(byteOffset)
+getBigUint64(byteOffset, littleEndian)
 ```
 
 ### 引数
 
-- byteOffset
-  - : データを読み取るビューの先頭からのバイト単位のオフセットです。
-- littleEndian
-  - : {{optional_inline}} 64 ビット整数を[リトルエンディアンまたはビッグエンディアン](/ja/docs/Glossary/Endianness)のどちらの形式で格納されているかを示します。 `false` または `undefined` の場合、ビッグエンディアンの値が読み取られます。
+- `byteOffset`
+  - : ビューの先頭からのバイト単位のオフセットで、データを読み取る位置です。
+- `littleEndian` {{optional_inline}}
+  - : データが[リトルエンディアンとビッグエンディアン](/ja/docs/Glossary/Endianness)のどちらの形式で格納されているかを示します。`false` または `undefined` の場合、ビッグエンディアンの値が読み取られます。
 
 ### 返値
 
-{{jsxref("BigInt")}} です。
+長整数 ({{jsxref("BigInt")}}) で、0 以上 2<sup>64</sup>-1 以下です。
 
-### 発生するエラー
+### 例外
 
 - {{jsxref("RangeError")}}
-  - : `byteOffset` がビューの末尾を超えて読み取るような値に設定されたときに発生します。
-
-## 解説
-
-アライメントの制約はありません。複数バイトの値はどのオフセットからでも読み取ることができます。
+  - : `byteOffset` がビューの末尾を越えて読み取るように設定されている場合に発生します。
 
 ## 例
 
-### `getBigUint64` メソッドの使用
+### getBigUint64() の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
-dataview.getBigUint64(0); // 0n
+const { buffer } = new Uint8Array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+const dataview = new DataView(buffer);
+console.log(dataview.getBigUint64(1)); // 72623859790382856n
 ```
 
 ## 仕様書
@@ -70,6 +67,7 @@ dataview.getBigUint64(0); // 0n
 
 ## 関連情報
 
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}
-- {{jsxref("BigInt")}}
+- {{jsxref("BigUint64Array")}}

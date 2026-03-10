@@ -3,7 +3,7 @@ title: Référence des éléments HTML
 short-title: Éléments
 slug: Web/HTML/Reference/Elements
 l10n:
-  sourceCommit: c9b674213a99a5ad5ed35ecd9b1b88c9c6631545
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
 Cette page répertorie tous les {{Glossary("Element", "éléments")}} {{Glossary("HTML")}}, qui sont créés à l'aide de {{Glossary("Tag", "balises")}}.
@@ -210,11 +210,12 @@ HTML fournit plusieurs éléments pour créer des formulaires que l'utilisateur�
 
 HTML propose un ensemble d'éléments pour créer des composants d'interface utilisateur interactifs.
 
-| Élément                    | Description                                                                                                                                                                                                                |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{HTMLElement("details")}} | Crée un widget de révélation dans lequel l'information n'est visible que lorsque le widget est basculé en état «&nbsp;ouvert&nbsp;». Un résumé ou une étiquette doit être fourni via l'élément {{HTMLElement("summary")}}. |
-| {{HTMLElement("dialog")}}  | Représente une boîte de dialogue ou un autre composant interactif (alerte réductible, inspecteur, sous‑fenêtre, etc.).                                                                                                     |
-| {{HTMLElement("summary")}} | Définit un résumé, une légende ou un titre pour la zone révélée par un élément `details`. Cliquer sur `<summary>` bascule l'état du parent {{HTMLElement("details")}} entre ouvert et fermé.                               |
+| Élément                                                | Description                                                                                                                                                                                                                |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{HTMLElement("details")}}                             | Crée un widget de révélation dans lequel l'information n'est visible que lorsque le widget est basculé en état «&nbsp;ouvert&nbsp;». Un résumé ou une étiquette doit être fourni via l'élément {{HTMLElement("summary")}}. |
+| {{HTMLElement("geolocation")}} {{Experimental_Inline}} | Crée un contrôle interactif permettant à l'utilisateur·ice de partager ses données de géolocalisation avec la page.                                                                                                        |
+| {{HTMLElement("dialog")}}                              | Représente une boîte de dialogue ou un autre composant interactif (alerte réductible, inspecteur, sous‑fenêtre, etc.).                                                                                                     |
+| {{HTMLElement("summary")}}                             | Définit un résumé, une légende ou un titre pour la zone révélée par un élément `details`. Cliquer sur `<summary>` bascule l'état du parent {{HTMLElement("details")}} entre ouvert et fermé.                               |
 
 ## Composants Web
 

@@ -1,59 +1,55 @@
 ---
-title: Intl.DateTimeFormat.supportedLocalesOf()
+title: "Intl.DateTimeFormat : méthode statique supportedLocalesOf()"
+short-title: supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
+La méthode statique **`supportedLocalesOf()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau contenant celles des locales fournies qui sont prises en charge pour la mise en forme de la date et de l'heure sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
-À partir d'une locale ou d'un tableau de locales **`Intl.DateTimeFormat.supportedLocalesOf()`** renvoie un tableau qui contient les locales supportées pour le formatage des dates et des heures qui ne nécessitent pas d'avoir recours à la locale par défaut de l'environnement.
-
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
 const options1 = { localeMatcher: "lookup" };
 
 console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
-// Expected output: Array ["id-u-co-pinyin", "de-ID"]
-// (Note: the exact output may be browser-dependent)
+// Résultat attendu : Array ["id-u-co-pinyin", "de-ID"]
+// (Remarque : le résultat exact peut dépendre du navigateur)
 ```
 
 ## Syntaxe
 
-```js
-Intl.DateTimeFormat.supportedLocalesOf(locales[, options])
+```js-nolint
+Intl.DateTimeFormat.supportedLocalesOf(locales)
+Intl.DateTimeFormat.supportedLocalesOf(locales, options)
 ```
 
 ### Paramètres
 
 - `locales`
-  - : Un chaîne de caractères au format d'une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour plus d'informations sur le format de l'argument `locales`, voir la page {{jsxref("Intl", "Intl", "#lidentification_et_le_choix_de_la_locale")}}.
-- `options`
-  - : Paramètre optionnel, un objet pouvant avoir la propriété suivante :
+  - : Une chaîne de caractères avec une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}, ou un tableau de telles chaînes. Pour la forme générale et l'interprétation de l'argument `locales`, voir [la description du paramètre sur la page principale de `Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#argument_locales).
+- `options` {{Optional_Inline}}
+  - : Un objet qui peut avoir la propriété suivante&nbsp;:
     - `localeMatcher`
-      - : L'algorithme de correspondance entre locales à utiliser. Les valeurs possibles sont "lookup" et "best fit". Pour plus d'informations sur ce sujet, voir la page {{jsxref("Intl", "Intl", "#Choix_de_la_locale")}}.
+      - : L'algorithme de correspondance de locale à utiliser. Les valeurs possibles sont `"lookup"` et `"best fit"`&nbsp;; la valeur par défaut est `"best fit"`. Pour plus d'informations sur cette option, voir la page {{JSxRef("Intl", "Intl", "#identification_et_négociation_de_locale", 1)}}.
 
 ### Valeur de retour
 
-Un tableau de chaînes de caractères qui représente un sous-ensemble des balises de langue qui sont prises en charge pour la mise en forme de l'heure et de la date sans qu'il soit nécessaire d'utiliser la locale par défaut de l'environnement d'exécution.
-
-## Description
-
-Renvoie un tableau qui est un sous-ensemble de `locales`. Les balises de langues renvoyées sont celles supportées par l'environnement pour le formatage des heures et des dates. Ces balises sont déterminées en fonction de l'algorithme de correspondances de locale et des locales utilisées. Le tableau résultant fournit les locales qui permettent de ne pas avoir à utiliser la locale par défaut.
+Un tableau de chaînes de caractères représentant un sous-ensemble des balises de langue fournies qui sont prises en charge pour la mise en forme de la date et de l'heure sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
 ## Exemple
 
-### Utiliser `supportedLocalesOf`
+### Utiliser la méthode `supportedLocalesOf()`
 
-Si on dispose d'un environnement qui supporte les locales indonésienne et allemande mais pas balinaise pour le formatage des dates et des heures, `supportedLocalesOf` renverra les balises BCP 47 pour l'indonésien et l'allemand (bien que la collation pinyin ne soit pas pertinente pour les dates ni pour l'indonésien et qu'il soit peu probable qu'une variante indonésienne existe pour l'allemand). Pour l'exemple, on l'utilise l'algorithme `"lookup"`. Si on utilisait `"best fit"`, on pourrait considérer que l'indonésien est adéquat pour la locale balinaise (sachant que la plupart des balinais comprend l'indonésien) et donc également renvoyer la balise balinaise.
+En supposant un environnement d'exécution qui prend en charge l'indonésien et l'allemand mais pas le balinais pour la mise en forme des dates et des heures, `supportedLocalesOf` retourne les balises de langue pour l'indonésien et l'allemand sans modification, même si la collation `pinyin` n'est ni pertinente pour la mise en forme des dates et heures ni utilisée avec l'indonésien, et qu'une variante spécialisée de l'allemand pour l'Indonésie est peu probable. Notez la spécification de l'algorithme `"lookup"` ici — un comparateur `"best fit"` pourrait décider que l'indonésien est une correspondance adéquate pour le balinais puisque la plupart des locuteur·ice·s balinais·es comprennent aussi l'indonésien, et donc retourner également la balise de langue balinaise.
 
 ```js
-var locales = ["ban", "id-u-co-pinyin", "de-ID"];
-var options = { localeMatcher: "lookup" };
-console.log(
-  Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "),
-);
-// → "id-u-co-pinyin, de-ID"
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options));
+// ["id-u-co-pinyin", "de-ID"]
 ```
 
 ## Spécifications
@@ -66,4 +62,4 @@ console.log(
 
 ## Voir aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+- L'objet {{JSxRef("Intl.DateTimeFormat")}}
