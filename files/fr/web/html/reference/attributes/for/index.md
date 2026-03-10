@@ -2,7 +2,6 @@
 title: "Attribut HTML : for"
 short-title: for
 slug: Web/HTML/Reference/Attributes/for
-original_slug: Web/HTML/Attributes/for
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---

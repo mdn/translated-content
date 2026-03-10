@@ -1,87 +1,91 @@
 ---
 title: Request
 slug: Web/API/Request
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-L'interface **`Request`** de l'[API Fetch](/fr/docs/Web/API/Fetch_API) représente une demande de ressource.
+L'interface **`Request`** de [l'API Fetch](/fr/docs/Web/API/Fetch_API) représente une demande de ressource.
 
-Vous pouvez créer un nouvel objet `Request` en utilisant le constructeur {{domxref("Request.Request","Request()")}}, mais vous êtes plus susceptible de rencontrer un objet `Request` renvoyé à la suite d'une autre opération d'API, telle en tant que service worker {{domxref("FetchEvent.request")}}.
+Vous pouvez créer un nouvel objet `Request` à l'aide du constructeur {{DOMxRef("Request.Request","Request()")}}, mais il est plus courant de rencontrer un objet `Request` retourné à la suite d'une opération d'une autre API, comme un service worker {{DOMxRef("FetchEvent.request")}}.
 
 ## Constructeur
 
-- {{domxref("Request.Request","Request()")}}
+- {{DOMxRef("Request.Request", "Request()")}}
   - : Crée un nouvel objet `Request`.
 
-## Propriétés
+## Propriétés d'instance
 
-- {{domxref("Request.cache")}} {{readonlyInline}}
-  - : Contient le mode de cache de la demande (par exemple, `default`, `reload`, `no-cache`).
-- {{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}
-  - : Contient le contexte de la demande (par exemple, `audio`, `image`, `iframe`, etc.)
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : Contient les informations d'identification de la demande (par exemple, `omit`, `same-origin`, `include`). La valeur par défaut est `same-origin`.
-- {{domxref("Request.destination")}} {{ReadOnlyInline}}
-  - : Renvoie une chaîne de l'énumération {{domxref("RequestDestination")}} décrivant la destination de la requête. Il s'agit d'une chaîne indiquant le type de contenu demandé.
-- {{domxref("Request.headers")}} {{readonlyInline}}
-  - : Contient l'objet {{domxref("Headers")}} associé de la requête.
-- {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Contient la valeur d'[intégrité de la sous-ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la demande (par exemple, `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.method")}} {{readonlyInline}}
-  - : Contient la méthode de la requête (`GET`, `POST`, etc).
-- {{domxref("Request.mode")}} {{readonlyInline}}
-  - : Contient le mode de la demande (par exemple, `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.redirect")}} {{readonlyinline}}
-  - : Contient le mode de gestion des redirections. Il peut s'agir d'un `follow`, `error`, ou d'un `manual`.
-- {{domxref("Request.referrer")}} {{readonlyInline}}
-  - : Contient le référent de la demande (par exemple, `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
-  - : Contient la politique de référent de la demande (par exemple, `no-referrer`).
-- {{domxref("Request.url")}} {{readonlyInline}}
-  - : Contient l'URL de la demande.
+- {{DOMxRef("Request.body")}} {{ReadOnlyInline}}
+  - : Un objet {{DOMxRef("ReadableStream")}} du contenu du corps.
+- {{DOMxRef("Request.bodyUsed")}} {{ReadOnlyInline}}
+  - : Stocke `true` ou `false` pour indiquer si le corps a déjà été utilisé dans une requête.
+- {{DOMxRef("Request.cache")}} {{ReadOnlyInline}}
+  - : Contient le mode de cache de la requête (par exemple&nbsp;: `default`, `reload`, `no-cache`).
+- {{DOMxRef("Request.credentials")}} {{ReadOnlyInline}}
+  - : Contient une valeur contrôlant si les identifiants doivent être inclus dans la requête (par exemple&nbsp;: `omit`, `same-origin`, `include`). La valeur par défaut est `same-origin`.
+- {{DOMxRef("Request.destination")}} {{ReadOnlyInline}}
+  - : Une chaîne de caractères décrivant le type de contenu demandé.
+- {{DOMxRef("Request.duplex")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Le mode duplex de la requête, qui détermine si le navigateur doit envoyer la requête entière avant de traiter la réponse.
+- {{DOMxRef("Request.headers")}} {{ReadOnlyInline}}
+  - : Contient l'objet {{DOMxRef("Headers")}} associé à la requête.
+- {{DOMxRef("Request.integrity")}} {{ReadOnlyInline}}
+  - : Contient la valeur [d'intégrité de la sous-ressource](/fr/docs/Web/Security/Defenses/Subresource_Integrity) de la requête (par exemple&nbsp;: `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+- {{DOMxRef("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
+  - : Un booléen indiquant si la requête est une navigation dans l'historique.
+- {{DOMxRef("Request.keepalive")}} {{ReadOnlyInline}}
+  - : Contient le paramètre `keepalive` de la requête (`true` ou `false`), qui indique si le navigateur gardera la requête associée active si la page qui l'a initiée est déchargée avant la fin de la requête.
+- {{DOMxRef("Request.method")}} {{ReadOnlyInline}}
+  - : Contient la méthode de la requête (`GET`, `POST`, etc.).
+- {{DOMxRef("Request.mode")}} {{ReadOnlyInline}}
+  - : Contient le mode de la requête (par exemple&nbsp;: `cors`, `no-cors`, `same-origin`, `navigate`).
+- {{DOMxRef("Request.redirect")}} {{ReadOnlyInline}}
+  - : Contient le mode de gestion des redirections. Il peut s'agir de `follow`, `error` ou `manual`.
+- {{DOMxRef("Request.referrer")}} {{ReadOnlyInline}}
+  - : Contient le référent de la requête (par exemple&nbsp;: `client`).
+- {{DOMxRef("Request.referrerPolicy")}} {{ReadOnlyInline}}
+  - : Contient la politique de référent de la requête (par exemple&nbsp;: `no-referrer`).
+- {{DOMxRef("Request.signal")}} {{ReadOnlyInline}}
+  - : Retourne le signal {{DOMxRef("AbortSignal")}} associé à la requête.
+- {{DOMxRef("Request.url")}} {{ReadOnlyInline}}
+  - : Contient l'URL de la requête.
 
-`Request` implémente {{domxref("Body")}}, donc il hérite également des propriétés suivantes:
+## Méthodes d'instance
 
-- {{domxref("Body.body", "body")}} {{readonlyInline}}
-  - : Un getter simple utilisé pour exposer un {{domxref("ReadableStream")}} du contenu du corps.
-- {{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}
-  - : Stocke un {{domxref("Boolean")}} qui déclare si le corps a déjà été utilisé dans une réponse.
-
-## Méthodes
-
-- {{domxref("Request.clone()")}}
+- {{DOMxRef("Request.arrayBuffer()")}}
+  - : Retourne une promesse qui se résout avec une représentation {{JSxRef("ArrayBuffer")}} du corps de la requête.
+- {{DOMxRef("Request.blob()")}}
+  - : Retourne une promesse qui se résout avec une représentation {{DOMxRef("Blob")}} du corps de la requête.
+- {{DOMxRef("Request.bytes()")}}
+  - : Retourne une promesse qui se résout avec une représentation {{JSxRef("Uint8Array")}} du corps de la requête.
+- {{DOMxRef("Request.clone()")}}
   - : Crée une copie de l'objet `Request` actuel.
-
-`Request` implémente {{domxref("Body")}}, donc il dispose également des méthodes suivantes:
-
-- {{domxref("Body.arrayBuffer()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("ArrayBuffer")}} du corps de la requête.
-- {{domxref("Body.blob()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("Blob")}} du corps de la requête.
-- {{domxref("Body.formData()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("FormData")}} du corps de la requếte.
-- {{domxref("Body.json()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("JSON")}} du corps de la requête.
-- {{domxref("Body.text()")}}
-  - : Renvoie une promesse qui se résout avec une représentation {{domxref("USVString")}} (texte) du coprs de la requête.
+- {{DOMxRef("Request.formData()")}}
+  - : Retourne une promesse qui se résout avec une représentation {{DOMxRef("FormData")}} du corps de la requête.
+- {{DOMxRef("Request.json()")}}
+  - : Retourne une promesse qui se résout avec le résultat de l'analyse du corps de la requête en tant que {{JSxRef("JSON")}}.
+- {{DOMxRef("Request.text()")}}
+  - : Retourne une promesse qui se résout avec une représentation texte du corps de la requête.
 
 > [!NOTE]
-> Les fonctions {{domxref("Body")}} ne peuvent être exécutées qu'une seule fois; les appels suivants seront résolus avec des chaînes vides / ArrayBuffers.
+> Les fonctions du corps de la requête ne peuvent être exécutées qu'une seule fois&nbsp;; les appels suivants seront rejetés avec un TypeError indiquant que le flux du corps a déjà été utilisé.
 
 ## Exemples
 
-Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis renvoyons certaines valeurs de propriété de la requête:
+Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` (pour un fichier image dans le même répertoire que le script), puis nous retournons certaines valeurs de propriété de la requête&nbsp;:
 
 ```js
 const request = new Request("https://www.mozilla.org/favicon.ico");
 
-const URL = request.url;
+const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
 ```
 
-Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple:
+Vous pouvez ensuite récupérer cette requête en passant l'objet `Request` en paramètre à un appel {{DOMxRef("Window/fetch", "fetch()")}}, par exemple&nbsp;:
 
 ```js
 fetch(request)
@@ -91,37 +95,36 @@ fetch(request)
   });
 ```
 
-Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu du body pour une requête api qui nécessite une charge utile de body:
+Dans l'extrait de code suivant, nous créons une nouvelle requête à l'aide du constructeur `Request()` avec des données initiales et du contenu de corps pour une requête API qui nécessite une charge utile de corps&nbsp;:
 
 ```js
-const request = new Request("https://example.com", {
+const request = new Request("https://exemple.com", {
   method: "POST",
-  body: '{"foo": "bar"}',
+  body: '{"toto": "tata"}',
 });
 
-const URL = request.url;
+const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
 > [!NOTE]
-> Le type de body ne peut être qu'un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} ou {{domxref("ReadableStream")}} donc pour ajouter un objet JSON à la charge utile, vous devez stringify cet objet.
+> Le corps ne peut être qu'un objet {{DOMxRef("Blob")}}, {{JSxRef("ArrayBuffer")}}, {{JSxRef("TypedArray")}}, {{JSxRef("DataView")}}, {{DOMxRef("FormData")}}, {{DOMxRef("URLSearchParams")}}, {{DOMxRef("ReadableStream")}}, ou un objet {{JSxRef("String")}}, ainsi qu'une chaîne de caractères littérale, donc pour ajouter un objet JSON à la charge utile, vous devez transformer cet objet en chaîne de caractères.
 
-Vous pouvez ensuite récupérer cette demande d'API en passant l'objet `Request` en tant que paramètre à un appel [`fetch()`](/fr/docs/Web/API/Window/fetch), par exemple et obtenir la réponse:
+Vous pouvez ensuite effectuer cette requête API en passant l'objet `Request` en paramètre à un appel {{DOMxRef("Window/fetch", "fetch()")}}, par exemple, et obtenir la réponse&nbsp;:
 
 ```js
 fetch(request)
   .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Something went wrong on api server!");
+    if (response.status !== 200) {
+      throw new Error("Quelque chose s'est mal passé sur le serveur API !");
     }
+    return response.json();
   })
   .then((response) => {
     console.debug(response);
-    // ...
+    // …
   })
   .catch((error) => {
     console.error(error);
@@ -138,6 +141,6 @@ fetch(request)
 
 ## Voir aussi
 
-- [ServiceWorker API](/fr/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
+- [L'API ServiceWorker](/fr/docs/Web/API/Service_Worker_API)
+- [Contrôle d'accès HTTP (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)

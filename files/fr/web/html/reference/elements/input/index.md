@@ -2,7 +2,7 @@
 title: "<input> : l'élément de saisie dans un formulaire"
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: c10cfb6daba8fe6fc5366f2e1ca1bd32de8a537f
+  sourceCommit: 3712f845b54b2754b2b550c7d7dca18f0277c0ad
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<input>`** permet de créer des contrôles interactifs pour les formulaires web afin d'accepter des données de la part de l'utilisateur·ice&nbsp;; une grande variété de types de données d'entrée et de widgets de contrôle est disponible, selon l'appareil et {{Glossary("user agent", "agent utilisateur")}}. L'élément `<input>` est l'un des éléments HTML les plus puissants et les plus complexes en raison du grand nombre de combinaisons possibles de types d'entrée et d'attributs.
@@ -326,6 +326,7 @@ Les éléments `<input>` peuvent utiliser les [attributs universels](/fr/docs/We
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                      | La taille du contrôle                                                                                                     |
 | [`src`](#src)                                 | `image`                                                                  | Analogue à l'attribut `src` de l'élément {{HTMLElement("img")}}&nbsp;; indique l'emplacement de l'image                   |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`     | Un incrément pour les valeurs valides                                                                                     |
+| [`switch`](#switch)                           | `checkbox`                                                               | Indique si l'entrée de type case à cocher doit être rendue comme un interrupteur                                          |
 | [`type`](#type)                               | tous                                                                     | Le type de contrôle de formulaire                                                                                         |
 | [`value`](#value)                             | tous sauf `image`                                                        | La valeur initiale du contrôle                                                                                            |
 | [`width`](#width)                             | `image`                                                                  | Analogue à l'attribut `width` de l'élément {{HTMLElement("img")}}                                                         |
@@ -557,6 +558,12 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > Lorsque la donnée saisie ne respecte pas l'incrément, la valeur est considérée comme invalide pour la validation des contraintes et l'élément sera ciblé par la pseudo-classe `:invalid`.
 
     Voir [la validation côté client](#validation_côté_client) pour plus d'information.
+
+- [`switch`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{Experimental_Inline}} {{Non-standard_Inline}}
+  - : Valide uniquement pour les entrées de type `checkbox`, `switch` est un attribut booléen qui indique si l'entrée de type case à cocher doit être rendue comme un interrupteur.
+
+    > [!NOTE]
+    > Cet attribut est encore expérimental et bénéficie d'un support limité dans les navigateurs. L'attribut est ignoré sur les navigateurs non pris en charge.
 
 - `tabindex`
   - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un entier qui indique si l'élément peut prendre le focus et s'il devrait participer à la navigation séquentielle au clavier. Comme tous les types d'élément `<input>`, sauf ceux masqués, peuvent prendre le focus, cet attribut ne devrait pas être utilisé sur les contrôles de formulaire, car cela nécessiterait de gérer l'ordre du focus pour tous les éléments du document, au risque de dégradé l'utilisabilité et l'accessibilité si cela était fait de façon incorrecte.

@@ -70,7 +70,7 @@ If an error occurred, element 0 will be `undefined`, and element 1 will contain 
   - a boolean property `isError`, set to `true`
   - a string property `code` containing an error code.
 
-## ブラウザーの対応状況
+## ブラウザーの互換性
 
 {{Compat}}
 

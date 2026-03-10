@@ -2,7 +2,7 @@
 title: "<iframe> : l'élément de cadre intégré"
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: da2d33b62be6362222d83dae5ce1f381d263a51c
+  sourceCommit: 929f6a4afa23a47036da5e8f6a09898a2cce9929
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -26,7 +26,7 @@ iframe {
 }
 ```
 
-Chaque contexte de navigation intégré possède son propre [document](/fr/docs/Web/API/Document) et permet des navigations vers des URL. Les navigations de chaque contexte de navigation intégré sont linéarisées dans l'[historique de session](/fr/docs/Web/API/History) du contexte de navigation _le plus élevé_. Le contexte de navigation qui contient les autres est appelé _contexte de navigation parent_. Le contexte de navigation _le plus élevé_ — celui qui n'a pas de parent — correspond généralement à la fenêtre du navigateur, représentée par l'objet {{DOMxRef("Window")}}.
+Chaque contexte de navigation intégré possède son propre [document](/fr/docs/Web/API/Document) et permet des navigations vers des URL. Les navigations de chaque contexte de navigation intégré sont linéarisées dans [l'historique de session](/fr/docs/Web/API/History) du contexte de navigation _le plus élevé_. Le contexte de navigation qui contient les autres est appelé _contexte de navigation parent_. Le contexte de navigation _le plus élevé_ — celui qui n'a pas de parent — correspond généralement à la fenêtre du navigateur, représentée par l'objet {{DOMxRef("Window")}}.
 
 > [!WARNING]
 > Parce que chaque contexte de navigation constitue un environnement de document complet, chaque `<iframe>` présent dans une page augmente la mémoire et les ressources informatiques nécessaires. Bien qu'en théorie vous puissiez utiliser autant d'`<iframe>` que vous le souhaitez, surveillez les problèmes de performance.
@@ -44,13 +44,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Une Permissions Policy définie par l'attribut `allow` applique une restriction supplémentaire en plus de la politique indiquée dans l'en-tête {{HTTPHeader("Permissions-Policy")}}. Elle ne la remplace pas.
 
 - `allowfullscreen`
-  - : Cet attribut, lorsqu'il vaut `true`, indique que l'`<iframe>` intégrée peut être passée en plein écran via la méthode {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}}.
+  - : Cet attribut, lorsqu'il vaut `true`, indique que l'`<iframe>` intégrée peut être passée en plein écran avec la méthode {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}}.
 
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="fullscreen"`.
 
 - `allowpaymentrequest` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Cet attribut, lorsqu'il vaut `true`, permet à l'`<iframe>` intégrée d'appeler l'API [Payment Request](/fr/docs/Web/API/Payment_Request_API).
+  - : Cet attribut, lorsqu'il vaut `true`, permet à l'`<iframe>` intégrée d'appeler [l'API Payment Request](/fr/docs/Web/API/Payment_Request_API).
 
     > [!NOTE]
     > Cet attribut est considéré comme historique et a été redéfini avec `allow="payment"`.
@@ -103,15 +103,15 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `sandbox`
   - : Cet attribut permet d'appliquer des restrictions sur le contenu qui peut apparaître dans l'`<iframe>`. Si cet attribut vaut la chaîne de caractères vide, toutes les restrictions sont appliquées, sinon, on peut utiliser une liste de mots-clés séparés par des espaces pour définir des restrictions précises. Les mots-clés qui peuvent être utilisés sont&nbsp;:
     - `allow-downloads`
-      - : Permet le téléchargement de fichiers via un élément {{HTMLElement("a")}} ou {{HTMLElement("area")}} avec l'attribut [download](/fr/docs/Web/HTML/Reference/Elements/a#download), ainsi que via la navigation qui conduit au téléchargement d'un fichier. Cela fonctionne que l'utilisateur·ice ait cliqué sur le lien ou que du code JavaScript l'ait initié sans interaction de l'utilisateur·ice.
+      - : Permet le téléchargement de fichiers avec un élément {{HTMLElement("a")}} ou {{HTMLElement("area")}} avec l'attribut [download](/fr/docs/Web/HTML/Reference/Elements/a#download), ainsi qu'avec la navigation qui conduit au téléchargement d'un fichier. Cela fonctionne que l'utilisateur·ice ait cliqué sur le lien ou que du code JavaScript l'ait initié sans interaction de l'utilisateur·ice.
     - `allow-forms`
       - : Permet à la page d'envoyer des formulaires. Si ce mot-clé n'est pas utilisé, un formulaire s'affichera normalement, mais son envoi n'activera pas la validation des champs, n'enverra pas de données au serveur web et ne fermera pas un dialogue.
     - `allow-modals`
-      - : Permet à la page d'ouvrir des fenêtres modales via {{DOMxRef("Window.alert()")}}, {{DOMxRef("Window.confirm()")}}, {{DOMxRef("Window.print()")}} et {{DOMxRef("Window.prompt()")}}&nbsp;; l'ouverture d'un {{HTMLElement("dialog")}} est autorisée indépendamment de ce mot-clé. Il permet également à la page de recevoir l'événement {{DOMxRef("BeforeUnloadEvent")}}.
+      - : Permet à la page d'ouvrir des fenêtres modales avec {{DOMxRef("Window.alert()")}}, {{DOMxRef("Window.confirm()")}}, {{DOMxRef("Window.print()")}} et {{DOMxRef("Window.prompt()")}}&nbsp;; l'ouverture d'un {{HTMLElement("dialog")}} est autorisée indépendamment de ce mot-clé. Il permet également à la page de recevoir l'évènement {{DOMxRef("BeforeUnloadEvent")}}.
     - `allow-orientation-lock`
-      - : Permet à la ressource de verrouiller l'orientation de l'écran via {{DOMxRef("Screen.lockOrientation")}}.
+      - : Permet à la ressource de verrouiller l'orientation de l'écran avec {{DOMxRef("Screen.lockOrientation")}}.
     - `allow-pointer-lock`
-      - : Permet à la page d'utiliser l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
+      - : Permet à la page d'utiliser [l'API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
     - `allow-popups`
       - : Permet l'ouverture de popups (créées, par exemple, par {{DOMxRef("Window.open()")}} ou `target="_blank"`). Si ce mot-clé n'est pas utilisé, cette fonctionnalité échouera silencieusement.
     - `allow-popups-to-escape-sandbox`
@@ -120,10 +120,12 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
       - : Permet aux intégrateurs de contrôler si un cadre intégré peut démarrer une [session de présentation](/fr/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
       - : Si ce jeton n'est pas utilisé, la ressource est traitée comme provenant d'une origine spéciale qui échoue toujours à la {{Glossary("same-origin policy", "police de même origine")}} (empêchant potentiellement l'accès au [stockage/de cookies](/fr/docs/Web/Security/Defenses/Same-origin_policy#accès_aux_données_de_stockage_inter-origine) et à certaines API JavaScript).
+        > [!NOTE]
+        > Lorsque `allow-same-origin` est présent, un document parent de même origine peut toujours accéder au DOM de l'iframe et interagir avec lui, même si `allow-scripts` n'est pas défini. Le jeton `allow-scripts` ne contrôle que l'exécution de scripts dans le contexte de navigation intégré et n'affecte pas l'accès au DOM depuis le parent.
     - `allow-scripts`
       - : Permet à la page d'exécuter des scripts (mais pas de créer des fenêtres pop-up). Si ce mot-clé n'est pas utilisé, cette opération n'est pas autorisée.
     - `allow-storage-access-by-user-activation` {{Experimental_Inline}}
-      - : Permet à un document chargé dans l'`<iframe>` d'utiliser la {{DOMxRef("Storage Access API", "l'API d'accès au stockage", "", "nocode")}} pour demander l'accès aux cookies non partitionnés.
+      - : Permet à un document chargé dans l'`<iframe>` d'utiliser {{DOMxRef("Storage Access API", "l'API d'accès au stockage", "", "nocode")}} pour demander l'accès aux cookies non partitionnés.
     - `allow-top-navigation`
       - : Permet à la ressource de naviguer le contexte de navigation de plus haut niveau (celui nommé `_top`).
     - `allow-top-navigation-by-user-activation`
@@ -140,7 +142,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Lorsqu'on redirige l'utilisateur·ice, ouvre une fenêtre popup ou un nouvel onglet depuis une page intégrée dans un `<iframe>` avec l'attribut `sandbox`, le nouveau contexte de navigation est soumis aux mêmes restrictions `sandbox`. Cela peut poser des problèmes — par exemple, si une page intégrée dans un `<iframe>` sans l'attribut `sandbox="allow-forms"` ou `sandbox="allow-popups-to-escape-sandbox"` ouvre un nouveau site dans un onglet séparé, l'envoi d'un formulaire dans ce nouveau contexte de navigation échouera silencieusement.
 
 - `src`
-  - : L'URL de la page à intégrer. Utilisez la valeur `about:blank` pour intégrer une page vide conforme à la {{Glossary("Same-origin policy", "politique de même origine")}}. Notez également que supprimer par programme l'attribut `src` d'un `<iframe>` (par exemple via {{DOMxRef("Element.removeAttribute()")}}) provoque le chargement de `about:blank` dans la frame pour Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
+  - : L'URL de la page à intégrer. Utilisez la valeur `about:blank` pour intégrer une page vide conforme à la {{Glossary("Same-origin policy", "politique de même origine")}}. Notez également que supprimer par programme l'attribut `src` d'un `<iframe>` (par exemple avec {{DOMxRef("Element.removeAttribute()")}}) provoque le chargement de `about:blank` dans la frame pour Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.
 
     > [!NOTE]
     > La page `about:blank` utilise l'URL du document englobant comme URL de base lors de la résolution des URL relatives, comme les liens d'ancrage.
@@ -181,7 +183,7 @@ Les `iframes` (et aussi les {{HTMLElement("frame")}}) font partie du pseudo-tabl
 
 En utilisant l'élément {{DOMxRef("HTMLIFrameElement")}} du DOM, les scripts peuvent accéder à l'objet {{DOMxRef("window")}} de la page HTML incluse par la propriété {{DOMxRef("HTMLIFrameElement.contentWindow", "contentWindow")}}. La propriété {{DOMxRef("HTMLIFrameElement.contentDocument", "contentDocument")}} fait référence au document contenu dans l'`iframe` (l'équivalent de `contentWindow.document`).
 
-Depuis l'_iframe_, un script peut obtenir une référence à la fenêtre parente via la propriété {{DOMxRef("window.parent")}}.
+Depuis l'_iframe_, un script peut obtenir une référence à la fenêtre parente avec la propriété {{DOMxRef("window.parent")}}.
 
 Les scripts qui tentent d'accéder au contenu de l'_iframe_ doivent respecter [les règles de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy).
 Les scripts ne peuvent pas accéder à la plupart des propriétés des autres objets `window` s'ils ont été chargés depuis un domaine différent. Cela s'applique également aux scripts d'un _iframe_ qui souhaitent accéder au contexte englobant.
@@ -202,20 +204,20 @@ Notez que les autorisations de navigation vers le haut sont héritées, une cadr
 
 ## Positionnement et redimensionnement
 
-En tant qu'{{Glossary("replaced elements", "élément remplacé")}}, la position, l'alignement et le redimensionnement du document embarqué via `<iframe>` peuvent être ajustés via la propriété {{CSSxRef("object-position")}}.
+En tant qu'{{Glossary("replaced elements", "élément remplacé")}}, la position, l'alignement et le redimensionnement du document embarqué avec `<iframe>` peuvent être ajustés par la propriété {{CSSxRef("object-position")}}.
 
 > [!NOTE]
 > La propriété {{CSSxRef("object-fit")}} n'a aucun effet sur les éléments `<iframe>`.
 
-## Comportement des événements `error` et `load`
+## Comportement des évènements `error` et `load`
 
-Les événements `error` et `load` déclenchés sur des `<iframe>` pourraient être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'événement [error](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'événement [load](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu de l'`<iframe>` échoue à se charger.
+Les évènements `error` et `load` déclenchés sur des `<iframe>` pourraient être utilisés pour sonder l'espace d'URL des serveurs HTTP du réseau local. Par conséquent, par mesure de sécurité, les agents utilisateur ne déclenchent pas l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event) sur les `<iframe>`, et l'évènement [`load`](/fr/docs/Web/API/HTMLElement/load_event) est toujours déclenché même si le contenu de l'`<iframe>` échoue à se charger.
 
 ## Exemples
 
 ### Un \<iframe> simple
 
-Cet exemple intègre la page <https://example.org> dans un cadre intégré. C'est un cas d'utilisation courant des cadres intégrés&nbsp;: intégrer du contenu provenant d'un autre site. Par exemple, l'exemple en direct lui‑même et l'[exemple interactif](#exemple_interactif) en haut de la page sont tous deux des intégrations `<iframe>` de contenu provenant d'un autre site MDN.
+Cet exemple intègre la page <https://example.org> dans un cadre intégré. C'est un cas d'utilisation courant des cadres intégrés&nbsp;: intégrer du contenu provenant d'un autre site. Par exemple, l'exemple en direct lui‑même et [l'exemple interactif](#exemple_interactif) en haut de la page sont tous deux des intégrations `<iframe>` de contenu provenant d'un autre site MDN.
 
 #### HTML
 
@@ -236,7 +238,7 @@ Cet exemple intègre la page <https://example.org> dans un cadre intégré. C'es
 
 Cet exemple affiche directement du code source dans une iframe. Cela peut être utilisé comme technique pour empêcher l'injection de scripts lors de l'affichage de contenu généré par des utilisateur·ice·s, lorsqu'on le combine avec l'attribut `sandbox`.
 
-Notez que lorsque vous utilisez `srcdoc`, toutes les URL relatives du contenu intégré seront résolues par rapport à l'URL de la page englobante. Si vous voulez utiliser des liens d'ancrage qui pointent vers des emplacements du contenu intégré, vous devez spécifier explicitement `about:srcdoc` comme URL de base.
+Notez que lorsque vous utilisez `srcdoc`, toutes les URL relatives du contenu intégré seront résolues par rapport à l'URL de la page englobante. Si vous voulez utiliser des liens d'ancrage qui pointent vers des emplacements du contenu intégré, vous devez définir explicitement `about:srcdoc` comme URL de base.
 
 #### HTML
 
@@ -251,10 +253,10 @@ Notez que lorsque vous utilisez `srcdoc`, toutes les URL relatives du contenu in
 <li><a href=&quot;about:srcdoc#embed_user&quot;>Pour intégrer du contenu généré par les utilisateur·ice·s</a></li>
 </ol>
 <h2 id=&quot;embed_another&quot;>Intégrer du contenu depuis une autre page</h2>
-<p>Utilisez l'attribut <code>src</code> pour spécifier l'URL de la page à intégrer&nbsp;:</p>
+<p>Utilisez l'attribut <code>src</code> pour définir l'URL de la page à intégrer&nbsp;:</p>
 <pre><code>&amp;lt;iframe src=&quot;https://example.org&quot;&amp;gt;&amp;lt;/iframe&amp;gt;</code></pre>
 <h2 id=&quot;embed_user&quot;>Intégrer du contenu généré par les utilisateur·ice·s</h2>
-<p>Utilisez l'attribut <code>srcdoc</code> pour spécifier le contenu à intégrer. Ce billet en est déjà un exemple&nbsp;!</p>
+<p>Utilisez l'attribut <code>srcdoc</code> pour définir le contenu à intégrer. Ce billet en est déjà un exemple&nbsp;!</p>
 "
     width="500"
     height="250"

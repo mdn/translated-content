@@ -1,14 +1,16 @@
 ---
 title: border-top-style
 slug: Web/CSS/Reference/Properties/border-top-style
-original_slug: Web/CSS/border-top-style
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-top-style`** permet de définir le style de ligne de la {{CSSxRef("border")}} supérieure d'un élément.
 
-La propriété **`border-top-style`** définit le style de ligne utilisé pour mettre en forme la bordure en haut d'une boîte.
+> [!NOTE]
+> La spécification ne définit pas comment les bordures de styles différents se rejoignent dans les coins.
 
-{{InteractiveExample("CSS Demo: border-top-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-top-style")}}
 
 ```css interactive-example-choice
 border-top-style: none;
@@ -37,15 +39,15 @@ border-top-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +55,9 @@ border-top-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 
@@ -79,10 +78,11 @@ border-top-style: outset;
 border-top-style: inherit;
 border-top-style: initial;
 border-top-style: revert;
+border-top-style: revert-layer;
 border-top-style: unset;
 ```
 
-La propriété `border-top-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+La propriété `border-top-style` se définit avec un seul mot-clé {{CSSxRef("line-style")}}.
 
 ## Définition formelle
 
@@ -90,11 +90,13 @@ La propriété `border-top-style` se définit avec l'un des mots-clés utilisés
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Définir `border-top-style`
+
+#### HTML
 
 ```html
 <table>
@@ -117,7 +119,7 @@ La propriété `border-top-style` se définit avec l'un des mots-clés utilisés
 </table>
 ```
 
-### CSS
+#### CSS
 
 ```css
 /* On applique un style sur le tableau */
@@ -163,9 +165,9 @@ td {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', 300, 200)}}
+{{EmbedLiveSample("Définir `border-top-style`", 300, 200)}}
 
 ## Spécifications
 
@@ -177,6 +179,5 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style), [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
-
-- Les autres propriétés liées à la bordure haute&nbsp;: [`border-top`](/fr/docs/Web/CSS/Reference/Properties/border-top), [`border-top-color`](/fr/docs/Web/CSS/Reference/Properties/border-top-color), [`border-top-width`](/fr/docs/Web/CSS/Reference/Properties/border-top-width).
+- Les autres propriétés liées au style des bordures&nbsp;: {{CSSxRef("border-left-style")}}, {{CSSxRef("border-right-style")}}, {{CSSxRef("border-bottom-style")}} et {{CSSxRef("border-style")}}.
+- Les autres propriétés liées à la bordure haute&nbsp;: {{CSSxRef("border-top")}}, {{CSSxRef("border-top-color")}} et {{CSSxRef("border-top-width")}}.
