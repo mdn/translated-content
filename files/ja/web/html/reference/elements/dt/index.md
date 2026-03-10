@@ -59,14 +59,14 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし配下に {{HTMLElement("header")}}、{{HTMLElement("footer")}}、区分コンテンツ、見出しコンテンツがないもの。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>。ただし配下に {{HTMLElement("header")}}、{{HTMLElement("footer")}}、区分コンテンツ、見出しコンテンツがないもの。
       </td>
     </tr>
     <tr>

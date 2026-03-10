@@ -317,6 +317,6 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
 ## Voir aussi
 
 - [Utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/CSS_syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
 - L'interface API {{DOMxRef("CSSSupportsRule")}}
 - La méthode API {{DOMxRef("CSS.supports_static", "CSS.supports()")}}
