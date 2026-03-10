@@ -16,7 +16,7 @@ l10n:
 
 ## 示例
 
-参见 [使用交叉观察者 API 测量元素可见性时长](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) 一文。文中给出了演示了如何利用 `time` 属性来跟踪元素对用户可见的时长的完整示例。
+参见[使用交叉观察器 API 测量元素可见性时长](/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)一文。文中给出了演示了如何利用 `time` 属性来跟踪元素对用户可见的时长的完整示例。
 
 ## 规范
 
