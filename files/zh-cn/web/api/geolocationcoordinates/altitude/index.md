@@ -24,6 +24,6 @@ l10n:
 
 ## 参见
 
-- [使用地理定位 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - 它所属的 {{domxref("GeolocationCoordinates")}} 接口。
-- [美国国家影像测绘局技术报告 8350.2，第三版（WGS84）](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)
+- [国家影像与测绘局技术报告 8350.2，第三版（WGS84）](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)
