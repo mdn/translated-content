@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSS 字体加载 API")}}{{AvailableInWorkers}}
 
-{{domxref("FontFace")}} 接口的 **`weight`** 属性用于获取或设置字体的字重。
+{{domxref("FontFace")}} 接口的 **`weight`** 属性用于获取或设置字体的粗细。
 
 该属性等效于 {{cssxref("@font-face/font-weight", "font-weight")}} 描述符。
 
