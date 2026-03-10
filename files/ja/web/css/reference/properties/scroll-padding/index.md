@@ -1,12 +1,11 @@
 ---
 title: scroll-padding
 slug: Web/CSS/Reference/Properties/scroll-padding
-original_slug: Web/CSS/scroll-padding
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 57b9e55cd708d8ff4bfd9dc65c568bdee4089453
 ---
 
-**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
+**`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。{{glossary("scroll container", "スクロールコンテナー")}}内におけるスクロールポートの最適表示領域を定義するオフセットを指定します。
 
 {{InteractiveExample("CSS デモ: scroll-padding")}}
 
@@ -19,7 +18,7 @@ scroll-padding: 20px;
 ```
 
 ```css interactive-example-choice
-scroll-padding: 2em;
+scroll-padding: 20%;
 ```
 
 ```html interactive-example
@@ -56,7 +55,7 @@ scroll-padding: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,12 +64,10 @@ scroll-padding: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
-
-`scroll-padding-*` プロパティは、スクロールポートの*最適な表示領域*のオフセットを定義します。これにより、スクロールポートの中で他のコンテンツ (固定配置されたツールバーやサイドバーなど) に隠れてしまう領域を除外したり、ターゲット要素とスクロールポートの縁の間に余裕を持たせたりすることができます。
 
 ## 構成要素のプロパティ
 
@@ -107,6 +104,14 @@ scroll-padding: unset;
 - `auto`
   - : オフセットがユーザーエージェントによって決定されます。これは一般的には `0px` になりますが、ゼロ以外の値がより適切であれば、ユーザエージェントは自由に検出して他の値を取ることができます。
 
+## 解説
+
+`scroll-padding` プロパティは一括指定で、{{CSSXref("scroll-padding-top")}}、{{CSSXref("scroll-padding-right")}}、{{CSSXref("scroll-padding-bottom")}}、{{CSSXref("scroll-padding-left")}} をその順序で設定します。これらはそれぞれスクロールコンテナーの上部、右側、下部、左側のスクロールパディングを設定します。
+
+スクロールスナップコンテナーを作成する際に役立つ `scroll-padding` プロパティは、スクロールポートの最適な表示領域（ユーザーに表示される要素の配置先となる領域）のオフセットを定義することができます。これにより、固定位置のツールバーやサイドバーなどコンテンツを遮る可能性のあるオブジェクトのための余地を確保したり、対象要素とスクロールポートの端との間に余裕を持たせたりするために、スクロールポート内に内側の空間を作成することができます。
+
+このプロパティは [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュールで定義されていますが、{{cssxref("scroll-snap-type")}} プロパティの値にかかわらず、すべてのスクロールコンテナーに適用されます。
+
 ## 公式定義
 
 {{cssinfo}}
@@ -125,5 +130,8 @@ scroll-padding: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- {{cssxref("scroll-snap-type")}}
+- [スクロールスナップの基本概念](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
+- [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)モジュール
