@@ -24,5 +24,5 @@ l10n:
 
 ## 参见
 
-- [使用地理定位 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+- [使用地理位置 API](/zh-CN/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("GeolocationPosition")}}
