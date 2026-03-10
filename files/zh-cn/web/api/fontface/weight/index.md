@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 3b7232826ab98368d06ebf8b021886e4a544de93
 ---
 
-{{APIRef("CSS 字体加载 API")}}{{AvailableInWorkers}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 {{domxref("FontFace")}} 接口的 **`weight`** 属性用于获取或设置字体的粗细。
 
