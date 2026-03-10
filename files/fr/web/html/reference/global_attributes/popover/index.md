@@ -134,7 +134,7 @@ header button {
 }
 ```
 
-Nous avons utilisé [le positionnement par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/) pour positionner la fenêtre contextuelle du menu sous le `<button>` et [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) pour disposer les éléments du menu et les boutons d'information.
+Nous avons utilisé [le positionnement par ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) pour positionner la fenêtre contextuelle du menu sous le `<button>` et [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) pour disposer les éléments du menu et les boutons d'information.
 
 ```css
 #menu {
