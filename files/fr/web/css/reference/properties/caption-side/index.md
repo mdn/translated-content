@@ -1,14 +1,13 @@
 ---
 title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
-original_slug: Web/CSS/caption-side
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`caption-side`** place le contenu de la {{HTMLElement("caption", "légende")}} d'un tableau sur le côté défini. Les valeurs sont relatives au mode d'écriture ({{CSSxRef("writing-mode")}}) du tableau.
 
-La propriété **`caption-side`** permet de choisir l'emplacement de la légende d'un tableau (représentée par l'élément [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption) du tableau). Les valeurs sont relatives au mode d'écriture (cf. [`writing-mode`](/fr/docs/Web/CSS/Reference/Properties/writing-mode)) du tableau.
-
-{{InteractiveExample("CSS Demo: caption-side")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: caption-side")}}
 
 ```css interactive-example-choice
 caption-side: top;
@@ -22,27 +21,27 @@ caption-side: bottom;
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
     <caption>
-      Famous animals
+      Animaux célèbres
     </caption>
     <tr>
-      <th>Name</th>
-      <th>Location</th>
+      <th>Nom</th>
+      <th>Lieu</th>
     </tr>
     <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
+      <td>Girafe</td>
+      <td>Afrique</td>
     </tr>
     <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
+      <td>Manchot</td>
+      <td>Antarctique</td>
     </tr>
     <tr>
-      <td>Sloth</td>
-      <td>South America</td>
+      <td>Paresseux</td>
+      <td>Amérique du Sud</td>
     </tr>
     <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
+      <td>Tigre</td>
+      <td>Asie</td>
     </tr>
   </table>
 </section>
@@ -52,7 +51,7 @@ caption-side: bottom;
 table {
   font-size: 1.2rem;
   text-align: left;
-  color: #000;
+  color: black;
 }
 
 th,
@@ -61,32 +60,25 @@ td {
 }
 
 caption {
-  background: #fc3;
+  background: #ffcc33;
   padding: 0.5rem 1rem;
 }
 
 tr {
-  background: #eee;
+  background: #eeeeee;
 }
 
 tr:nth-child(even) {
-  background: #ccc;
+  background: #cccccc;
 }
 ```
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
 /* Valeurs directionnelles */
 caption-side: top;
 caption-side: bottom;
-
-/* Valeurs logiques */
-caption-side: block-start;
-caption-side: block-end;
-caption-side: inline-start;
-caption-side: inline-end;
 
 /* Valeur globales */
 caption-side: inherit;
@@ -104,46 +96,23 @@ La propriété `caption-side` se paramètre à l'aide d'un des mots-clés suivan
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au-dessus du tableau.
 - `bottom`
   - : Un mot-clé qui indique que la boîte de la légende doit être positionnée en dessous du tableau.
-- `block-start`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe de bloc.
-- `block-end`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe de bloc.
-- `inline-start`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé au début de l'axe en ligne.
-- `inline-end`
-  - : Un mot-clé qui indique que la boîte de la légende doit être positionnée au bord du tableau situé à la fin de l'axe en ligne.
+
+> [!NOTE]
+> Le module [des propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values) définit deux valeurs logiques, `inline-start` et `inline-end`, pour placer la boîte de légende respectivement au début et à la fin de l'axe en ligne du tableau. Ces valeurs ne sont prises en charge par aucun navigateur.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### CSS
+### Définir les légendes au-dessus et en dessous
 
-```css
-.top caption {
-  caption-side: top;
-}
-
-.bottom caption {
-  caption-side: bottom;
-}
-
-table {
-  border: 1px solid red;
-}
-
-td {
-  border: 1px solid blue;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <table class="top">
@@ -169,9 +138,29 @@ td {
 </table>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("","auto","160")}}
+```css
+.top caption {
+  caption-side: top;
+}
+
+.bottom caption {
+  caption-side: bottom;
+}
+
+table {
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir les légendes au-dessus et en dessous", "auto", 160)}}
 
 ## Spécifications
 
@@ -180,3 +169,9 @@ td {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'élément HTML {{HTMLElement("caption")}}
+- [Les tableaux CSS](/fr/docs/Web/CSS/Guides/Table)
+- [Les propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)

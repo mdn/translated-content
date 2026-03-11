@@ -1,12 +1,9 @@
 ---
 title: 同一オリジンポリシー
 slug: Web/Security/Defenses/Same-origin_policy
-original_slug: Web/Security/Same-origin_policy
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: 39070892d5d1a5cc55312a0ac10c97f4c339384f
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **同一オリジンポリシー**は重要なセキュリティの仕組みであり、ある{{Glossary("Origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。
 
@@ -58,18 +55,18 @@ document.domain = "company.com";
 
 ブラウザーはポート番号を個別に検査します。 `document.domain` を呼び出すと、 `document.domain = document.domain` の場合も含め、ポート番号が `null` で上書きされます。従って、スクリプトの最初に `document.domain = "company.com"` を設定しただけでは、 `company.com:8080` と `company.com` とは互いにアクセス**できません**。双方のポートが `null` になるように、双方で設定しなければなりません。
 
-この仕組みにはいくつかの制限があります。例えば、 [`document-domain`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) の [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) が有効になっている場合や、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 内にある場合は、 `SecurityError` の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
+この仕組みにはいくつかの制限があります。例えば、文書がサンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 内にある場合は、 `SecurityError` の [`DOMException`](/ja/docs/Web/API/DOMException) が発生します。また、この方法でオリジンを変更しても、多くの Web API ([`localStorage`](/ja/docs/Web/API/Window/localStorage), [`indexedDB`](/ja/docs/Web/API/IndexedDB_API), [`BroadcastChannel`](/ja/docs/Web/API/BroadcastChannel), [`SharedWorker`](/ja/docs/Web/API/SharedWorker) など) で使用されているオリジンチェックには影響しません。失敗事例のより詳細なリストは、 [Document.domain > Failures](/ja/docs/Web/API/Document/domain#failures) にあります。
 
 > [!NOTE]
 > サブドメインから親ドメインへアクセスさせるために `document.domain` を使用する際は、親ドメインとサブドメインの双方で同じ値を `document.domain` に設定することが必要です。この作業は、親ドメインを元の値に戻す際にも必要です。これを怠ると権限エラーが発生します。
 
 ## 異なるオリジンへのネットワークアクセス
 
-{{domxref("XMLHttpRequest")}} や {{htmlelement("img")}} 要素を使用する場合など、 同一オリジンポリシーは 2 つのオリジン間における通信を制御します。一般にこれらの通信は 3 つのカテゴリーに分類されます。
+{{domxref("Window/fetch", "fetch()")}} や {{htmlelement("img")}} 要素を使用する場合など、 同一オリジンポリシーは 2 つのオリジン間における通信を制御します。一般にこれらの通信は 3 つのカテゴリーに分類されます。
 
 - 異なるオリジンへの*書き込み*は、概して許可されます。例えばリンクやリダイレクト、フォームの送信などがあります。まれに使用される HTTP リクエストの際は[プリフライト](/ja/docs/Web/HTTP/Guides/CORS#preflighted_requests)が必要です。
 - 異なるオリジンの*埋め込み*は、概して許可されます。例は後述します。
-- 異なるオリジンからの*読み込み*は一般に許可されませんが、埋め込みによって読み取り権限がしばしば漏れてしまいます。例えば埋め込み画像の幅や高さ、埋め込みスクリプトの動作内容、あるいは[埋め込みリソースでアクセス可能なもの](https://bugzilla.mozilla.org/show_bug.cgi?id=629094)を読み取ることができます。
+- 異なるオリジンからの*読み込み*は一般に許可されませんが、埋め込みによって読み取り権限がしばしば漏れてしまいます。例えば埋め込み画像の幅や高さ、埋め込みスクリプトの動作内容、あるいは[埋め込みリソースでアクセス可能なもの](https://bugzil.la/629094)を読み取ることができます。
 
 以下に挙げるのは、異なるオリジンに埋め込むことができるリソースの例です。
 

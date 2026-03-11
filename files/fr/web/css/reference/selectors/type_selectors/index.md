@@ -1,12 +1,11 @@
 ---
 title: Sélecteurs de type
 slug: Web/CSS/Reference/Selectors/Type_selectors
-original_slug: Web/CSS/Type_selectors
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-Les sélecteurs de type CSS ciblent des éléments en fonction du nom de leur nœud. Ainsi, lorsqu'un sélecteur de type est utilisé seul, il ciblera tous les éléments de ce type (autrement dit tous les nœuds avec ce nom) contenus dans le document.
+Le **sélecteur de type** CSS cible les éléments par nom de nœud. En d'autres termes, il sélectionne tous les éléments du type donné dans un document.
 
 ```css
 /* Cibler tous les éléments <a>. */
@@ -15,10 +14,18 @@ a {
 }
 ```
 
+Les sélecteurs de type peuvent être associés à un espace de noms lors de l'utilisation de {{CSSxRef("@namespace")}}. Cela est utile lorsque vous travaillez avec des documents contenant plusieurs espaces de noms, comme HTML avec SVG ou MathML intégré, ou XML qui mélange plusieurs vocabulaires.
+
+- `ns|h1` - cible les éléments `<h1>` dans l'espace de noms _ns_
+- `*|h1` - cible tous les éléments `<h1>`
+- `|h1` - cible tous les éléments `<h1>` sans espace de noms déclaré
+
 ## Syntaxe
 
-```
-élément { style propriétés }
+```css
+element {
+  /* propriétés de style */
+}
 ```
 
 ## Exemples
@@ -41,7 +48,18 @@ span {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', 200, 150)}}
+{{EmbedLiveSample("Exemples", 200, 150)}}
+
+### Espaces de noms
+
+Dans cet exemple, le sélecteur ne correspondra qu'aux éléments `<h1>` dans l'espace de noms example.
+
+```css
+@namespace example url("http://www.exemple.com/");
+example|h1 {
+  color: blue;
+}
+```
 
 ## Spécifications
 
@@ -50,3 +68,8 @@ span {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- [Apprendre CSS&nbsp;: Sélecteurs de base](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

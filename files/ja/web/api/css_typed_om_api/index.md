@@ -1,6 +1,8 @@
 ---
 title: CSS 型付きオブジェクトモデル API
 slug: Web/API/CSS_Typed_OM_API
+l10n:
+  sourceCommit: 0c13af55e869cbc54830fd1a601fd05f60717375
 ---
 
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
@@ -17,34 +19,34 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 
 {{domxref('CSSStyleValue')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、型付きオブジェクトモデル API を通してアクセスできるすべての CSS 値の基底クラスとなるものです。このクラスのインスタンスは、文字列が期待される場所であればどこでも使用することができます。
 
-- {{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}}
-  - : parse() は CSSStyleValue インターフェイスのメソッドで、 CSS 文字列から CSSNumericValue を構築することができます。これは、特定の CSS プロパティを指定された値に設定し、最初の値を CSSStyleValue オブジェクトとして返します。
-- {{domxref('CSSStyleValue.parseAll()')}}
-  - : parseAll() は CSSStyleValue インターフェイスのメソッドで、特定の CSS プロパティを指定された値に設定し、CSSStyleValue オブジェクトの配列を返すもので、それぞれが指定された値の一つを含んでいます。
+- {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}}
+  - : CSS 文字列から `CSSNumericValue` を構築することができるメソッドです。これは、特定の CSS プロパティを指定された値に設定し、最初の値を `CSSStyleValue` オブジェクトとして返します。
+- {{domxref('CSSStyleValue.parseAll_static', 'CSSStyleValue.parseAll()')}}
+  - : 特定の CSS プロパティを指定された値に設定するメソッドで、`CSSStyleValue` オブジェクトの配列を返すもので、それぞれが指定された値の一つを含んでいます。
 
 ### `StylePropertyMap`
 
-{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、 CSSStyleDeclaration の代替となる CSS 宣言ブロックの表現を提供します。
+{{domxref('StylePropertyMap')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、 `CSSStyleDeclaration` の代替となる CSS 宣言ブロックの表現を提供します。
 
 - {{domxref('StylePropertyMap.set()')}}
-  - : StylePropertyMap インターフェイスのメソッドで、指定されたプロパティを持つ CSS 宣言を指定された値に変更します。
+  - : 指定されたプロパティを持つ CSS 宣言を指定された値に変更するメソッドです。
 - {{domxref('StylePropertyMap.append()')}}
-  - : 指定されたプロパティと値による新しい CSS 宣言を、この StylePropertyMap に追加するメソッドです。
+  - : 指定されたプロパティと値による新しい CSS 宣言を、この `StylePropertyMap` に追加するメソッドです。
 - {{domxref('StylePropertyMap.delete()')}}
-  - : 指定されたプロパティを持つ CSS 宣言を、この StylePropertyMap から削除するメソッドです。
+  - : 指定されたプロパティを持つ CSS 宣言を、この `StylePropertyMap` から削除するメソッドです。
 - {{domxref('StylePropertyMap.clear()')}}
-  - : StylePropertyMap からすべての宣言を削除するメソッドです。
+  - : `StylePropertyMap` からすべての宣言を削除するメソッドです。
 
 ### `CSSUnparsedValue`
 
 {{domxref('CSSUnparsedValue')}} は CSS 型付きオブジェクトモデル API のインターフェイスで、カスタムプロパティを参照するプロパティ値を表します。文字列の断片と変数の参照のリストから成ります。
 
 - {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}} コンストラクター
-  - : カスタムプロパティを参照するプロパティ値を表す新しい CSSUnparsedValue オブジェクトを生成します。
+  - : カスタムプロパティを参照するプロパティ値を表す新しい `CSSUnparsedValue` オブジェクトを生成します。
 - {{domxref('CSSUnparsedValue.entries()')}}
-  - : このオブジェクト自身の列挙可能なプロパティの \[key, value] ペアの配列を for...in ループで提供されるのと同じ順序で返すメソッドです（for-in ループはプロトタイプチェーン内のプロパティも列挙する点が異なります）。
+  - : このオブジェクト自身の列挙可能なプロパティの `[key, value]` ペアの配列を `for...in` ループで提供されるのと同じ順序で返すメソッドです（for-in ループはプロトタイプチェーン内のプロパティも列挙する点が異なります）。
 - {{domxref('CSSUnparsedValue.forEach()')}}
-  - : CSSUnparsedValue の各要素に対して、提供された関数を一回ずつ実行するメソッドです。
+  - : `CSSUnparsedValue` の各要素に対して、提供された関数を一回ずつ実行するメソッドです。
 - {{domxref('CSSUnparsedValue.keys()')}}
   - : 配列のそれぞれのインデックスのキーを含む、新しい配列イテレーターオブジェクトを返すメソッドです。
 
@@ -59,12 +61,12 @@ CSS 型付きオブジェクトモデルは、 CSS のプロパティに割り�
 
 ## CSSStyleValue インターフェイス
 
-CSSStyleValue は、すべての CSS 値が表現される基本クラスです。サブクラスは以下の通りです。
+{{domxref('CSSStyleValue')}} は、すべての CSS 値が表現される基本クラスです。サブクラスは以下の通りです。
 
 - {{domxref('CSSImageValue')}} オブジェクト
-  - : 画像を取るプロパティ、例えば [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image), [`list-style-image`](/ja/docs/Web/CSS/Reference/Properties/list-style-image), [`border-image-source`](/ja/docs/Web/CSS/Reference/Properties/border-image-source) の値を表すインターフェイスです。
+  - : 画像を取るプロパティ、例えば {{cssxref("background-image")}}, {{cssxref("list-style-image")}}, {{cssxref("border-image-source")}} の値を表すインターフェイスです。
 - {{domxref('CSSKeywordValue')}}
-  - : CSS のキーワードやその他の識別子を表現するオブジェクトを生成する インターフェイスです。文字列が期待される場所で使用された場合、 CSSKeyword.value の値を返します。
+  - : CSS のキーワードやその他の識別子を表現するオブジェクトを生成する インターフェイスです。文字列が期待される場所で使用された場合、`CSSKeyword.value` の値を返します。
 - {{domxref('CSSMathValue')}}
   - : 単一の値や単位よりも複雑な数値を表すサブクラスのツリーで、次のようなものがあります。
     - {{domxref('CSSMathInvert')}} - CSS の {{cssxref("calc","calc()")}} 値を `calc(1 / <value>)` のように使用したものを表現します。
@@ -79,19 +81,19 @@ CSSStyleValue は、すべての CSS 値が表現される基本クラスです�
     - {{domxref('CSSNumericValue.add')}} - 与えられた数字を `CSSNumericValue` に加算します。
     - {{domxref('CSSNumericValue.sub')}} - 与えられた数値を `CSSNumericValue` から減算します。
     - {{domxref('CSSNumericValue.mul')}} - 与えられた数値を `CSSNumericValue` に乗算します。
-    - {{domxref('CSSNumericValue.div')}} - 与えられた数値を他の数値で割り、0 の場合はエラーが発生します。
+    - {{domxref('CSSNumericValue.div')}} - `CSSNumericValue` を指定された値で割り、`0` の場合にエラーが発生します。
     - {{domxref('CSSNumericValue.min')}} - 渡された値の最小値を返します。
     - {{domxref('CSSNumericValue.max')}} - 渡された値の最大値を返します。
     - {{domxref('CSSNumericValue.equals')}} - すべての値がまったく同じ型と値で、同じ順序である場合には true を返します。そうでなければ、 false を返します。
     - {{domxref('CSSNumericValue.to')}} - `value` を指定された*単位*の別の値に変換する。
     - {{domxref('CSSNumericValue.toSum')}}
     - {{domxref('CSSNumericValue.type')}}
-    - {{domxref('CSSNumericValue.parse')}} - CSS の文字列から解釈された数値を返します。
+    - {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}} - CSS の文字列から解釈された数値を返します。
 
 - {{domxref('CSSPositionValue')}}
   - : object-position など、位置を取るプロパティの値を表します。
 - {{domxref('CSSTransformValue')}}
-  - : [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) のリスト値を表すインターフェイスです。これらは 1 つ以上の {{domxref('CSSTransformComponent')}} を含んでおり、個々の `transform` 関数値を表します。
+  - : {{cssxref("transform")}} のリスト値を表すインターフェイスです。これらは 1 つ以上の {{domxref('CSSTransformComponent')}} を含んでおり、個々の `transform` 関数値を表します。
 - {{domxref('CSSUnitValue')}}
   - : 単一の単位、または名前付き数値とパーセントで表現できる数値を表すインターフェイスです。
 - {{domxref('CSSUnparsedValue')}}

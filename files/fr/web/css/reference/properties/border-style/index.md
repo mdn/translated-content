@@ -1,14 +1,13 @@
 ---
 title: border-style
 slug: Web/CSS/Reference/Properties/border-style
-original_slug: Web/CSS/border-style
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-style`** permet de définir le style de ligne pour les quatre côtés de la bordure d'un élément.
 
-La propriété CSS **`border-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.
-
-{{InteractiveExample("CSS Demo: border-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-style")}}
 
 ```css interactive-example-choice
 border-style: none;
@@ -37,15 +36,15 @@ border-style: dashed groove none dotted;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,18 +52,18 @@ border-style: dashed groove none dotted;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
 
-## Propriétés détaillées correspondantes
+## Propriétés constitutives
 
-Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;:
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-- [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style)
-- [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style)
-- [`border-right-style`](/fr/docs/Web/CSS/Reference/Properties/border-right-style)
-- [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style)
+- {{CSSxRef("border-bottom-style")}}
+- {{CSSxRef("border-left-style")}}
+- {{CSSxRef("border-right-style")}}
+- {{CSSxRef("border-top-style")}}
 
 ## Syntaxe
 
@@ -94,13 +93,11 @@ border-style: none solid dotted dashed;
 border-style: inherit;
 border-style: initial;
 border-style: revert;
+border-style: revert-layer;
 border-style: unset;
 ```
 
-> [!NOTE]
-> La valeur par défaut de `border-style` est `none`. Cela signifie que si on modifie [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) et [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color), on ne verra pas la bordure tant que cette propriété n'est pas différente de `none` ou de `hidden`.
-
-La propriété `border-style` peut être définie avec une, deux, trois ou quatre valeurs&nbsp;:
+La propriété `border-style` peut être définie avec une, deux, trois ou quatre valeurs.
 
 - Avec **une valeur**, celle-ci s'applique aux **quatre côtés**.
 - Avec **deux valeurs**, la première s'applique aux côtés **haut et bas** et la seconde aux côtés **gauche et droit**.
@@ -114,25 +111,25 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 - `<line-style>`
   - : Un mot-clé qui décrit le style utilisé pour la bordure sur les côtés de la boîte. Ce mot-clé peut prendre l'une des valeurs suivantes&nbsp;:
     - `none`
-      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
+      - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la valeur calculée de {{CSSxRef("border-width")}} sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
     - `hidden`
-      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/Reference/Properties/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a _la plus haute priorité_ et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
+      - : L'effet obtenu est le même qu'avec `none`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec {{CSSxRef("background-image")}}), la valeur calculée de {{CSSxRef("border-width")}} sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `hidden` a _la plus haute priorité_ et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera affichée.
     - `dotted`
-      - : Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width).
+      - : Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de {{CSSxRef("border-width")}}.
     - `dashed`
       - : Affiche une série de tirets. La taille de ces tirets n'est pas définie par la spécification et est laissée à l'implémentation.
     - `solid`
       - : Affiche une ligne droite continue.
     - `double`
-      - : Deux lignes droites sont affichées dont la somme des épaisseurs correspond à la valeur fournie par [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width).
+      - : Deux lignes droites sont affichées dont la somme des épaisseurs correspond à la valeur fournie par {{CSSxRef("border-width")}}.
     - `groove`
       - : La bordure crée un effet 3D donnant l'impression qu'elle a été gravée dans le document. On obtient un effet opposé à `ridge`.
     - `ridge`
       - : La bordure crée un effet 3D donnant l'impression que la bordure ressort du document. L'effet obtenu est opposé à celui obtenu avec `groove`.
     - `inset`
-      - : La bordure crée un effet 3D qui donne l'impression que la boîte est renfoncée dans le document (l'effet obtenu est opposé à celui obtenu avec `outset`). Lorsqu'elle est appliquée sur une cellule de tableau et que [`border-collapse`](/fr/docs/Web/CSS/Reference/Properties/border-collapse) vaut `collapsed`, cette valeur se comporte comme `groove`.
+      - : La bordure crée un effet 3D qui donne l'impression que la boîte est renfoncée dans le document (l'effet obtenu est opposé à celui obtenu avec `outset`). Lorsqu'elle est appliquée sur une cellule de tableau et que {{CSSxRef("border-collapse")}} vaut `collapsed`, cette valeur se comporte comme `groove`.
     - `outset`
-      - : La bordure crée un effet 3D qui fait ressortir la boîte (l'effet est opposé à `inset`). Lorsqu'elle est utilisée sur une cellule de tableau avec [`border-collapse`](/fr/docs/Web/CSS/Reference/Properties/border-collapse) qui vaut `collapsed`, cette valeur se comporte comme `ridge`.
+      - : La bordure crée un effet 3D qui fait ressortir la boîte (l'effet est opposé à `inset`). Lorsqu'elle est utilisée sur une cellule de tableau avec {{CSSxRef("border-collapse")}} qui vaut `collapsed`, cette valeur se comporte comme `ridge`.
 
 ## Définition formelle
 
@@ -140,11 +137,11 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Toutes les valeurs de border-style
+### Toutes les valeurs de `border-style`
 
 Voici un exemple utilisant toutes les valeurs de cette propriété.
 
@@ -221,7 +218,7 @@ pre {
 
 #### Résultat
 
-{{EmbedLiveSample('', '1200', 450)}}
+{{EmbedLiveSample("Toutes les valeurs de `border-style`", 1200, 450)}}
 
 ## Spécifications
 
@@ -233,4 +230,4 @@ pre {
 
 ## Voir aussi
 
-- Les autres propriétés raccourcies liées aux bordures&nbsp;: [`border`](/fr/docs/Web/CSS/Reference/Properties/border), [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width), [`border-color`](/fr/docs/Web/CSS/Reference/Properties/border-color), [`border-radius`](/fr/docs/Web/CSS/Reference/Properties/border-radius)
+- Les autres propriétés raccourcies liées aux bordures&nbsp;: {{CSSxRef("border")}}, {{CSSxRef("border-width")}}, {{CSSxRef("border-color")}}, {{CSSxRef("border-radius")}}

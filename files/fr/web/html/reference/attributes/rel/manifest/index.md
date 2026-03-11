@@ -1,7 +1,6 @@
 ---
 title: rel="manifest"
 slug: Web/HTML/Reference/Attributes/rel/manifest
-original_slug: Web/HTML/Attributes/rel/manifest
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---

@@ -1,12 +1,13 @@
 ---
 title: color
 slug: Web/CSS/Reference/Properties/color
-original_slug: Web/CSS/color
 l10n:
-  sourceCommit: cd3fbb8b10186d3466ab16d590978d5c10882875
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/Reference/Properties/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/Reference/Values/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
+**`color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/Reference/Properties/text-decoration)における前景色の[色値](/ja/docs/Web/CSS/Reference/Values/color_value)を設定し、 [`currentColor`](/ja/docs/Web/CSS/Reference/Values/color_value#currentcolor_キーワード) の値を設定します。`currentColor` は他のプロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。
+
+HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)をご覧ください。
 
 {{InteractiveExample("CSS デモ: color")}}
 
@@ -55,8 +56,6 @@ color: hwb(152deg 0% 58% / 70%);
   padding: 10px;
 }
 ```
-
-HTML における色の使用の概要については、[CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)をご覧ください。
 
 ## 構文
 
@@ -111,7 +110,7 @@ color: unset;
 
 `color` プロパティは単一の {{cssxref("&lt;color&gt;")}} 値で指定します。
 
-なお、値は単一の色でなければなりません。 {{cssxref("&lt;gradient&gt;")}} は実際の型が {{cssxref("&lt;image&gt;")}} であるため使用できません。
+なお、値は単一の色でなければなりません。 {{cssxref("gradient")}} は実際の型が {{cssxref("image")}} であるため使用できません。
 
 ### 値
 
@@ -190,5 +189,5 @@ p {
 - 他の色に関するプロパティ: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("print-color-adjust")}}
 - SVG の {{SVGAttr("color")}} 属性
 - {{CSSXref("color_value/color")}} 関数
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
+- [CSS を使った HTML 要素への色の適用](/ja/docs/Web/CSS/Guides/Colors/Applying_color)
 - [WCAG: 色のコントラスト](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)

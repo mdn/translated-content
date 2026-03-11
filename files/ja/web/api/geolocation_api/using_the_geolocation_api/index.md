@@ -2,7 +2,7 @@
 title: 位置情報 API の使用
 slug: Web/API/Geolocation_API/Using_the_Geolocation_API
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
 {{DefaultAPISidebar("Geolocation API")}}
@@ -174,3 +174,7 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ### 結果
 
 {{EmbedLiveSample('Examples', 350, 150, "", "", "", "geolocation")}}
+
+## 関連情報
+
+- {{htmlelement("geolocation")}} 要素

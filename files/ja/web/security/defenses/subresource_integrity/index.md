@@ -1,12 +1,9 @@
 ---
 title: サブリソース完全性
 slug: Web/Security/Defenses/Subresource_Integrity
-original_slug: Web/Security/Subresource_Integrity
 l10n:
-  sourceCommit: 8df009472bbc7f0fc8a69717e1493de02982ed66
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **サブリソース完全性** (Subresource Integrity, SRI) は、（[CDN](/ja/docs/Glossary/CDN) などから）取得したリソースが意図せず改ざんされていないかをブラウザーが検証するセキュリティ機能です。 SRI を利用する際には、取得したリソースのハッシュ値と一致すべきハッシュ値を指定します。
 
@@ -49,7 +46,7 @@ sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 
 #### SRI ハッシュジェネレーター
 
-[SRI ハッシュジェネレーター](https://www.srihash.org/)は、 SRI ハッシュを生成することができるオンラインツールです。
+[SRI ハッシュジェネレーター](https://srihash.org/)は、 SRI ハッシュを生成することができるオンラインツールです。
 
 #### OpenSSL の使用
 
@@ -79,7 +76,7 @@ pause
 4. 任意のキーを押し、コマンドボックスを閉じます。
 
 > [!NOTE]
-> OpenSSL がシステムにインストールされていない場合は、 [OpenSSL プロジェクトのウェブサイト](https://www.openssl.org/)で、ダウンロードおよびインストールに関する情報を確認してください。 OpenSSL プロジェクトは、 OpenSSL のバイナリーを配布していませんが、サードパーティーの配布に関する非公式なリストを https://wiki.openssl.org/index.php/Binaries で管理しています。
+> OpenSSL がシステムにインストールされていない場合は、 [OpenSSL プロジェクトのウェブサイト](https://www.openssl.org/)で、ダウンロードおよびインストールに関する情報を確認してください。 OpenSSL プロジェクトは、 OpenSSL のバイナリーを配布していませんが、サードパーティーの配布に関する非公式なリストを https://github.com/openssl/openssl/wiki/Binaries で管理しています。
 
 #### shasum の使用
 
@@ -100,6 +97,51 @@ shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
 Access-Control-Allow-Origin: *
 ```
 
+## ブラウザーがサブリソース完全性を扱う方法
+
+ブラウザーは SRI を次の方法で扱います。
+
+1. ブラウザーが {{HTMLElement("script")}} 要素または {{HTMLElement("link")}} 要素に `integrity` 属性を検出すると、スクリプトの実行前、または {{HTMLElement("link")}} 要素で指定されたスタイルシートの適用前に、ブラウザーはまずそのスクリプトまたはスタイルシートを `integrity` 値で指定された期待されるハッシュと比較しなければなりません。
+
+   埋め込まれた文書以外から提供されるリソースのサブリソース完全性の検証において、ブラウザーは追加で[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を用いてリソースを確認し、そのリソースを配信するオリジンがリクエスト元オリジンとの共有をすることができることを保証します。
+
+2. スクリプトまたはスタイルシートが関連付けられた `integrity` 値と一致しない場合、ブラウザーは当該スクリプトの実行またはスタイルシートの適用を拒否し、代わりにそのスクリプトまたはスタイルシートの取得に失敗したことを示すネットワークエラーを返さなければなりません。
+
+## 完全性ポリシー
+
+HTTP の {{httpheader("Integrity-Policy")}} ヘッダーおよび {{httpheader("Integrity-Policy-Report-Only")}} ヘッダーを使用することで、文書は読み込まれたスクリプトおよびスタイルシートのサブリソースに対する完全性メタデータ要件に関するポリシーを強制することができるようになります。
+
+`Integrity-Policy` ヘッダーが指定されている場合、ブラウザーは [no-cors](/ja/docs/Web/API/Request/mode#no-cors) モードのリクエストや `integrity` 属性が指定されていないリクエストをブロックします。また、有効な報告用エンドポイントが指定されている場合、同時に違反を報告します。
+`Integrity-Policy-Report-Only` ヘッダーが指定されている場合、ブラウザーはポリシーに違反するリクエストをすることができるのですが、違反を報告エンドポイントに報告します（有効な報告エンドポイントが指定されている場合）。
+
+開発者は通常、完全性ポリシー導入の第一段階として `Integrity-Policy-Report-Only` を使用し、文書内に読み込まれるすべてのスクリプトやスタイルシートが適切な完全性メタデータを確実に持つようにします。違反レポートが受信されなくなれば、ユーザーに表示される不具合のリスクなしに `Integrity-Policy` ヘッダーを使用したブロックを有効化できると判断できます。
+
+ヘッダー値は、次のキーを備えた構造化フィールド辞書として定義されます。
+
+- `blocked-destinations`
+  - : ブロックする[リクエスト出力先](/ja/docs/Web/API/Request/destination)の一覧を定義します。許可される値は `script` と `style` のみです。
+- `sources` {{optional_inline}}
+  - : 完全性ソースのリストを定義します。デフォルトかつ現在対応している唯一の値は `inline` です。したがって、ヘッダーに `sources=(inline)` を追加しても、`sources` を除外した場合と同様の効果があります。
+- `endpoints` {{optional_inline}}
+  - : [報告エンドポイント](/ja/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#endpoint) のリストを定義します。報告エンドポイントは {{httpheader("Reporting-Endpoints")}} ヘッダー内で定義する必要があります。
+
+完全性ポリシーによってリクエストがブロックされた場合、[報告 API](/ja/docs/Web/API/Reporting_API) の違反レポートが作成されます。このレポートの型は `integrity-violation`、本体は {{domxref("IntegrityViolationReportBody")}} 型となり、文書の URL やブロックされたリソースなどの情報が含まれます。
+
+典型的なレポートは同様に次のようなものになるでしょう。
+
+```json
+{
+  "type": "integrity-violation",
+  "url": "https://example.com",
+  "body": {
+    "documentURL": "https://example.com",
+    "blockedURL": "https://example.com/main.js",
+    "destination": "script",
+    "reportOnly": false
+  }
+}
+```
+
 ## 例
 
 以下の例では、 `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` が特定のスクリプト `example-framework.js` の期待される SHA-384 ハッシュ値としてすでに知られており、スクリプトのコピーが `https://example.com/example-framework.js` にホストされているものとします。
@@ -118,15 +160,20 @@ Access-Control-Allow-Origin: *
 > [!NOTE]
 > `crossorigin` 属性については [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
-## サブリソース完全性のブラウザーでの扱い
+### `Integrity-Policy`ヘッダーによる完全性の強制
 
-ブラウザーは SRI を以下のように処理します。
+文書に {{httpheader("Integrity-Policy")}} ヘッダーを追加することで、文書が読み込む外部リソース（この場合はスクリプト）が完全性をもって読み込まれ（[no-cors](/ja/docs/Web/API/Request/mode#no-cors) モードで読み込まれないこと）を保証できます。
 
-1. ブラウザーは `integrity` 属性を持った {{HTMLElement("script")}} または {{HTMLElement("link")}} 属性を見つけると、スクリプトや {{HTMLElement("link")}} 属性で指定された任意のスタイルシートを適用する前に、`integrity` 属性のハッシュ値とスクリプトやスタイルシートのハッシュ値を比較しなくてはなりません。
+```http
+Integrity-Policy: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
+```
 
-   サブリソース完全性の検証において、サブリソースが埋め込まれる文書のオリジン以外から提供されたリソースについては、ブラウザーは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を使用してリソースに追加のチェックを行い、オリジンがリソースがリクエストしたオリジンに共有されることを許可しているかどうかを確認します。
+すべての外部スクリプトに完全性メタデータを持つかどうか不明な場合、この機能のレポート専用バージョンを有効化し、違反レポートを取得することができます。
+{{httpheader("Integrity-Policy-Report-Only")}} ヘッダーを使用してこれを実現することができます。
 
-2. スクリプトやスタイルシートが対応する `integrity` 属性値と一致しない場合、ブラウザーはスクリプトを実行したりスタイルシートを適用してはいけません。その代わりに、スクリプトやスタイルシートの取得が失敗したというネットワークエラーを返さなくてはなりません。
+```http
+Integrity-Policy-Report-Only: blocked-destinations=(script), endpoints=(integrity-endpoint, some-other-integrity-endpoint)
+```
 
 ## 仕様書
 
