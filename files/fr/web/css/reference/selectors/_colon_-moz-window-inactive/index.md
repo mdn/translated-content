@@ -2,7 +2,7 @@
 title: :-moz-window-inactive
 slug: Web/CSS/Reference/Selectors/:-moz-window-inactive
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{Non-standard_Header}}
@@ -50,7 +50,7 @@ Cet exemple illustre la modification de l'apparence de l'arrière-plan d'une bo�
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","220","220")}}
+{{EmbedLiveSample("Exemples", 220, 220)}}
 
 ## Spécifications
 
@@ -63,7 +63,6 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Extensions CSS de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- Sélecteurs CSS connexes :
-  - [`:active`](/fr/docs/Web/CSS/Reference/Selectors/:active)
-
-- La propriété {{DOMxRef("Document.activeElement")}} pour le DOM régulier, et la propriété {{DOMxRef("ShadowRoot.activeElement")}} pour les racines du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).
+- Sélecteurs CSS associés&nbsp;:
+  - {{CSSxRef(":active")}}
+- La propriété API {{DOMxRef("Document.activeElement")}} pour le DOM régulier, et la propriété {{DOMxRef("ShadowRoot.activeElement")}} pour les racines du [DOM d'ombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).

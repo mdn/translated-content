@@ -2,7 +2,7 @@
 title: ::first-line
 slug: Web/CSS/Reference/Selectors/::first-line
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::first-line`** applique la décoration à la première ligne d'un élément. La quantité de texte sur la première ligne dépend de nombreux facteurs, comme la largeur des éléments ou du document, mais aussi de la taille du texte. Comme tous les pseudo-éléments, les sélecteurs contenant `::first-line` ne ciblent pas un élément HTML réel.
@@ -55,7 +55,7 @@ Seul un petit sous-ensemble de propriétés CSS peut être utilisé avec le pseu
 
 ## Exemples
 
-### Mise en forme de la première ligne d'un paragraphe
+### Mettre en forme la première ligne d'un paragraphe
 
 #### HTML
 
@@ -96,9 +96,9 @@ Seul un petit sous-ensemble de propriétés CSS peut être utilisé avec le pseu
 
 ### Résultat
 
-{{EmbedLiveSample('mise_en_forme_de_la_première_ligne_dun_paragraphe', 350, 130)}}
+{{EmbedLiveSample("Mettre en forme la première ligne d'un paragraphe", 350, 130)}}
 
-### Mise en forme de la première ligne d'un élément de texte SVG
+### Mettre en forme la première ligne d'un élément de texte SVG
 
 Dans cet exemple, nous stylisons la première ligne d'un élément SVG {{SVGElement("text")}} en utilisant le pseudo-élément `::first-line`.
 
@@ -142,7 +142,7 @@ text::first-line {
 
 #### Résultat
 
-{{EmbedLiveSample("mise_en_forme_de_la_première_ligne_dun_élément_de_texte_svg", "100%", 150)}}
+{{EmbedLiveSample("Mettre en forme la première ligne d'un élément de texte SVG", "100%", 150)}}
 
 ## Spécifications
 
@@ -155,4 +155,4 @@ text::first-line {
 ## Voir aussi
 
 - Le pseudo-élément {{CSSxRef("::first-letter")}}
-- la propriété {{CSSxRef("white-space")}}
+- La propriété {{CSSxRef("white-space")}}

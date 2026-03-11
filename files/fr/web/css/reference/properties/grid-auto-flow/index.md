@@ -1,14 +1,13 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/Reference/Properties/grid-auto-flow
-original_slug: Web/CSS/grid-auto-flow
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`grid-auto-flow`** contrôle le fonctionnement de l'algorithme de placement automatique, en définissant précisément la façon dont les éléments placés automatiquement sont intégrés dans la grille.
 
-La propriété **`grid-auto-flow`** permet de contrôler la façon dont fonctionne l'algorithme de placement automatique. Celui-ci définit exactement comme les objets placés automatiquement s'inscrivent dans la grille.
-
-{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: grid-auto-flow")}}
 
 ```css interactive-example-choice
 grid-auto-flow: row;
@@ -26,11 +25,11 @@ grid-auto-flow: row dense;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+      <div>Un</div>
+      <div>Deux</div>
+      <div>Trois</div>
+      <div>Quatre</div>
+      <div>Cinq</div>
     </div>
   </div>
 </section>
@@ -47,7 +46,7 @@ grid-auto-flow: row dense;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
@@ -59,6 +58,10 @@ grid-auto-flow: row dense;
   grid-column: auto / span 2;
 }
 ```
+
+> [!NOTE]
+> La propriété `masonry-auto-flow` a été retirée de la [disposition en maçonnerie](/fr/docs/Web/CSS/Guides/Grid_layout/Masonry_layout) CSS au profit de `grid-auto-flow`.
+> Voir [csswg-drafts #10231 <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/10231) pour plus de détails.
 
 ## Syntaxe
 
@@ -73,13 +76,15 @@ grid-auto-flow: column dense;
 /* Valeurs globales */
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
+grid-auto-flow: revert;
+grid-auto-flow: revert-layer;
 grid-auto-flow: unset;
 ```
 
-Cette propriété peut prendre deux formes :
+Cette propriété peut prendre deux formes&nbsp;:
 
-- la première avec un seul mot-clé parmi : `row`, `column` ou `dense`
-- la seconde avec deux mots-clés : `row dense` ou `column dense`.
+- la première avec un seul mot-clé parmi `row`, `column` ou `dense`
+- la seconde avec deux mots-clés `row dense` ou `column dense`.
 
 ### Valeurs
 
@@ -88,9 +93,9 @@ Cette propriété peut prendre deux formes :
 - `column`
   - : Les éléments sont organisés en remplissant chacune des colonnes au fur et à mesure, quitte à en ajouter si besoin.
 - `dense`
-  - : L'algorithme de placement automatique utilisera une méthode de « regroupement dense » où il essaie de remplir les trous dans la grille si des éléments plus petits arrivent ensuite. De fait, on peut obtenir une impression de désordre alors qu'il s'agit simplement du comblement des espaces libres.
+  - : L'algorithme de compartimentation «&nbsp;dense&nbsp;» tente de remplir les trous plus tôt dans la grille, si des éléments plus petits arrivent ensuite. Cela peut amener des éléments à apparaître hors ordre, lorsque cela permet de remplir les trous laissés par des éléments plus grands.
 
-    Si cette valeur est absente, le moteur utilisera un algorithme simple qui ne fait que se déplacer vers l'avant, sans revenir vers les espaces vides. De cette façon, les éléments apparaitront nécessairement dans l'ordre mais pourront laisser des trous.
+    Si cette valeur est omise, un algorithme «&nbsp;creux&nbsp;» est utilisé, où l'algorithme de placement ne se déplace que «&nbsp;vers l'avant&nbsp;» dans la grille lors du placement des éléments, sans jamais revenir en arrière pour remplir les trous. Cela garantit que tous les éléments placés automatiquement apparaissent «&nbsp;dans l'ordre&nbsp;», même si cela laisse des trous qui auraient pu être comblés par des éléments arrivant plus tard.
 
 ## Définition formelle
 
@@ -102,7 +107,27 @@ Cette propriété peut prendre deux formes :
 
 ## Exemples
 
-### CSS
+### Définir le placement automatique sur la grille
+
+#### HTML
+
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
+</div>
+<select id="direction">
+  <option value="column">column</option>
+  <option value="row">row</option>
+</select>
+<input id="dense" type="checkbox" />
+<label for="dense">dense</label>
+```
+
+#### CSS
 
 ```css
 #grid {
@@ -137,32 +162,12 @@ Cette propriété peut prendre deux formes :
 }
 ```
 
-### HTML
-
-```html
-<div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
-</div>
-<select id="direction" onchange="changeGridAutoFlow()">
-  <option value="column">column</option>
-  <option value="row">row</option>
-</select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
-<label for="dense">dense</label>
-```
-
-### JavaScript
-
-```js
+```js hidden
 function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("direction");
+  const dense = document.getElementById("dense");
+  let gridAutoFlow = direction.value === "row" ? "row" : "column";
 
   if (dense.checked) {
     gridAutoFlow += " dense";
@@ -170,11 +175,16 @@ function changeGridAutoFlow() {
 
   grid.style.gridAutoFlow = gridAutoFlow;
 }
+
+const selectElem = document.querySelector("select");
+const inputElem = document.querySelector("input");
+selectElem.addEventListener("change", changeGridAutoFlow);
+inputElem.addEventListener("change", changeGridAutoFlow);
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples", "200px", "230px")}}
+{{EmbedLiveSample("Définir le placement automatique sur la grille", 200, 260)}}
 
 ## Spécifications
 
@@ -186,8 +196,8 @@ function changeGridAutoFlow() {
 
 ## Voir aussi
 
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid")}}
-- [Guide : le placement automatique sur la grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
-- Tutoriel vidéo : [Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)](https://gridbyexample.com/video/series-auto-placement-order/)
+- La propriété {{CSSxRef("grid-auto-rows")}}
+- La propriété {{CSSxRef("grid-auto-columns")}}
+- La propriété {{CSSxRef("grid")}}
+- [Le placement automatique sur la grille](/fr/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- Vidéo&nbsp;: [Introduction au placement automatique sur la grille et à l'ordre des éléments <sup>(angl.)</sup>](https://gridbyexample.com/video/series-auto-placement-order/)

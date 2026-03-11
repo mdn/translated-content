@@ -1,14 +1,15 @@
 ---
 title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
-original_slug: Web/CSS/animation-delay
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-delay`** définit le temps à attendre entre l'application de l'animation sur un élément et le début de l'animation. L'animation peut démarrer plus tard, immédiatement depuis le début, ou immédiatement en étant déjà avancée.
 
-La propriété **`animation-delay`** définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément.
+Il est souvent pratique d'utiliser la propriété raccourcie {{CSSxRef("animation")}} pour définir toutes les propriétés d'animation en une seule fois.
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-delay")}}
 
 ```css interactive-example-choice
 animation-delay: 250ms;
@@ -24,8 +25,8 @@ animation-delay: -2s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+  <div>Animation <span id="play-status"></span></div>
+  <div id="example-element">Sélectionnez un délai pour démarrer&nbsp;!</div>
 </section>
 ```
 
@@ -35,7 +36,7 @@ animation-delay: -2s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -45,7 +46,7 @@ animation-delay: -2s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -72,63 +73,72 @@ animation-delay: -2s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
+function update() {
+  status.textContent = "décalée";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "en cours";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "terminée";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
 ```
-
-La valeur par défaut, `0s`, indique que l'animation doit démarrer dès qu'elle est appliquée. Dans les autres cas, la valeur indique le décalage à observer entre le début de l'animation et le moment où celle-ci a été appliquée sur l'élément.
-
-Si des valeurs négatives sont utilisées, l'animation débutera immédiatement en étant déjà « avancée ». Par exemple, si on utilise la valeur `-1s` comme durée, l'animation commencera immédiatement avec l'état qu'elle aurait « normalement » eue au bout d'une seconde.
-
-Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir l'ensemble des propriétés liées aux animations en une seule fois.
 
 ## Syntaxe
 
 ```css
+/* Animation seule */
 animation-delay: 3s;
-animation-delay: 2s, 4ms;
+animation-delay: 0s;
+animation-delay: -1500ms;
+
+/* Animations multiples */
+animation-delay: 2.1s, 480ms;
+
+/* Valeurs globales */
+animation-delay: inherit;
+animation-delay: initial;
+animation-delay: revert;
+animation-delay: revert-layer;
+animation-delay: unset;
 ```
 
 ### Valeurs
 
-- `<time>`
-  - : La durée avec laquelle décaler le début de l'animation à partir du moment où celle-ci a été appliquée à l'élément. La valeur peut être indiquée en secondes (`s` comme suffixe) ou en millisecondes (`ms` comme suffixe). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
+- {{CSSxRef("&lt;time&gt;")}}
+  - : Le décalage temporel, à partir du moment où l'animation est appliquée à l'élément, sur lequel l'animation doit commencer. Cette valeur peut être indiquée en secondes (`s`) ou en millisecondes (`ms`). L'unité est obligatoire.
+
+    Une valeur positive indique que l'animation doit commencer après le temps indiqué. Une valeur de `0s`, qui est la valeur par défaut, indique que l'animation doit commencer dès qu'elle est appliquée.
+
+    Une valeur négative fait démarrer l'animation immédiatement, mais en cours de cycle. Par exemple, si vous définissez `-1s` comme délai d'animation, l'animation commencera immédiatement mais débutera à 1 seconde après le début de la séquence d'animation. Si vous indiquez une valeur négative pour le délai d'animation, mais que la valeur de départ est implicite, la valeur de départ est prise au moment où l'animation est appliquée à l'élément.
 
 > [!NOTE]
-> Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+> [!NOTE]
+> `animation-delay` n'a aucun effet sur les [animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations).
 
 ## Définition formelle
 
@@ -140,41 +150,49 @@ animation-delay: 2s, 4ms;
 
 ## Exemples
 
-### CSS
+### Définir un délai d'animation
 
-```css
-p {
-  animation-duration: 3s;
-  animation-delay: 15s;
-  animation-name: glissement;
-  animation-iteration-count: infinite;
-}
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
+Cette animation a un délai de 2 secondes.
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<p>
-  La Chenille et Alice se considérèrent un instant en silence. Enfin la Chenille
-  sortit le houka de sa bouche, et lui adressa la parole d’une voix endormie et
-  traînante.
-</p>
+<div class="box"></div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample("Exemples","300","200")}}
+```css
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.box:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-delay: 2s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+```
+
+#### Résultat
+
+Passez la souris sur le rectangle pour démarrer l'animation.
+
+{{EmbedLiveSample("Définir un délai d'animation", "100%", 250)}}
+
+Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour des exemples.
 
 ## Spécifications
 
@@ -187,4 +205,5 @@ p {
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

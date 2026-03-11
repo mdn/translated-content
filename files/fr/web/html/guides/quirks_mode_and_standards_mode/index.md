@@ -1,18 +1,20 @@
 ---
-title: Mode quirks et mode standard
+title: Comprendre les modes quirks et standards
+short-title: Modes quirks et standards
 slug: Web/HTML/Guides/Quirks_mode_and_standards_mode
-original_slug: Web/HTML/Quirks_Mode_and_Standards_Mode
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
+À l'époque, les pages web étaient généralement écrites en deux versions&nbsp;: une pour Netscape Navigator et une pour Microsoft Internet Explorer. Lorsque les standards du web ont été créés au W3C, les navigateurs ne pouvaient pas simplement commencer à les utiliser, car cela aurait cassé la plupart des sites existants sur le web. Les navigateurs ont donc introduit deux modes pour traiter différemment les nouveaux sites conformes aux standards et les anciens sites hérités.
 
-Par le passé, les pages web étaient souvent écrites sous deux versions : une destinée à Netscape Navigator et l'autre à Microsoft Internet Explorer. Lorsque les standards du Web sont apparus avec le W3C, les navigateurs ne pouvaient pas simplement commencer à les utiliser car leur mise en place rendrait inutilisable la plupart des sites web existant. Les navigateurs ont alors introduit deux modes afin de traiter les sites respectants les standards des autres sites historiques.
+Il existe désormais trois modes utilisés par les moteurs de rendu des navigateurs web&nbsp;: le mode quirks, le mode quasi-quirks et le mode standard. En **mode quirks**, la mise en page émule le comportement de Navigator 4 et Internet Explorer 5. Cela est essentiel pour prendre en charge les sites web créés avant l'adoption généralisée des standards du web. En **mode standard**, le comportement est (espérons-le) celui décrit par les spécifications HTML et CSS modernes. En **mode quasi-quirks**, il n'y a qu'un très petit nombre de particularités implémentées.
 
-Il existe aujourd'hui trois modes utilisés par les moteurs de rendu des navigateurs web : le mode _quirks_, le mode quasi-standard et le mode standard total. En **mode _quirks_**, le moteur de mise en page émule le comportement non-standard de Navigator 4 et d'Internet Explorer 5. Ce mode permet de prendre en charge les sites web rédigés avant l'adoption généralisée des standards web. En **mode standard total**, le comportement du navigateur est entièrement (aux bugs près) celui décrit par les spécifications HTML et CSS. En **mode quasi-standard**, très peu de déviations sont implémentées.
+Les modes quasi-quirks et standard étaient auparavant appelés respectivement «&nbsp;mode presque standard&nbsp;» et «&nbsp;mode totalement standard&nbsp;». Ces noms ont été modifiés car le comportement est désormais standardisé.
 
 ## Comment les navigateurs déterminent le mode à utiliser ?
 
-Pour les documents [HTML](/fr/docs/Web/HTML), les navigateurs utilisent le `DOCTYPE` présent au début du document afin de déterminer si celui-ci doit être géré avec le mode _quirks_ ou avec l'un des modes standards. Si vous souhaitez qu'une page utilise le mode standard total, son DOCTYPE devra correspondre à celui utilisé dans cet exemple :
+Pour les documents [HTML](/fr/docs/Web/HTML), les navigateurs utilisent le `DOCTYPE` présent au début du document afin de déterminer si celui-ci doit être géré avec le mode _quirks_ ou avec l'un des modes standards. Si vous souhaitez qu'une page utilise le mode standard total, son DOCTYPE devra correspondre à celui utilisé dans cet exemple&nbsp;:
 
 ```html
 <!doctype html>
@@ -25,22 +27,22 @@ Pour les documents [HTML](/fr/docs/Web/HTML), les navigateurs utilisent le `DOCT
 </html>
 ```
 
-Le DOCTYPE illustré dans cet exemple, `<!DOCTYPE html>`, est le plus simple possible et correspond à la recommandation HTML5. Les versions précédentes des standards HTML recommandaient d'autres variantes. Toutefois, l'ensemble des navigateurs actuels utiliseront le mode standard total avec ce DOCTYPE (y compris IE6). Il n'est pas justifié de choisir un DOCTYPE plus compliqué ; le faire risquerait de déclencher l'utilisation du mode quasi-standard ou du mode _quirks_.
+Le DOCTYPE illustré dans cet exemple, `<!doctype html>`, est le plus simple possible et correspond à la recommandation des standards HTML actuels. Les versions précédentes des standards HTML recommandaient d'autres variantes, mais tous les navigateurs existants aujourd'hui utiliseront le mode standard total avec ce DOCTYPE. Il n'y a aucune raison valable d'utiliser un DOCTYPE plus compliqué. Le faire risquerait de déclencher le mode quasi-quirks ou le mode quirks.
 
-Assurez-vous que le DOCTYPE soit présent au tout début du document HTML. Tout ce qui précède le DOCTYPE (un commentaire ou une déclaration XML) déclenchera le mode _quirks_ pour Internet Explorer 9 et les versions antérieures.
+Placez le DOCTYPE tout au début de votre document HTML, avant tout autre contenu.
 
-En HTML5, le seul but du DOCTYPE est d'activer le mode standard total. Les anciennes versions du standard HTML donnaient une sémantique plus riche au DOCTYPE mais aucun navigateur n'a utilisé le DOCTYPE pour autre chose que pour choisir entre le mode _quirks_ et l'un des modes standards.
+Le seul but de `<!doctype html>` est d'activer le mode standard total. Les anciennes versions des DOCTYPE des standards HTML apportaient une signification supplémentaire, mais aucun navigateur ne l'a jamais utilisé pour autre chose que pour choisir entre les modes de rendu.
 
-Vous pouvez également consulter [cet article avec plus de détails sur la façon dont les navigateurs choisissent entre les différents modes](https://hsivonen.iki.fi/doctype/).
+Vous pouvez également consulter [cet article avec plus de détails sur la façon dont les navigateurs choisissent entre les différents modes <sup>(angl.)</sup>](https://hsivonen.fi/doctype/).
 
 ### XHTML
 
-Si la page est servie comme [XHTML](/fr/docs/Glossary/XHTML) avec le type MIME `application/xhtml+xml` dans l'en-tête HTTP `Content-Type`, il n'est pas nécessaire d'utiliser de DOCTYPE afin d'activer le mode standard, car de tels documents utiliseront toujours le mode standard total. On notera toutefois que servir les pages avec un type `application/xhtml+xml` entraînera l'affichage [d'une boîte de téléchargement](/fr/docs/Glossary/XHTML#support) d'un fichier au format inconnu sous Internet Explorer 8 car IE9 est la première version d'Internet Explorer à prendre en charge XHTML.
+Si vous servez votre page comme {{Glossary("XHTML")}} en utilisant le type MIME `application/xhtml+xml` dans l'en-tête HTTP `Content-Type`, il n'est pas nécessaire d'utiliser de DOCTYPE pour activer le mode standard total, car de tels documents utilisent toujours le mode standard total.
 
-Si on sert un contenu semblable à du XHTML mais avec le type MIME `text/html`, le navigateur l'interprètera comme du HTML et il faudra alors ajouter le DOCTYPE afin d'utiliser un mode standard.
+Si vous servez un contenu de type XHTML avec le type MIME `text/html`, les navigateurs l'interpréteront comme du HTML et il faudra alors ajouter le DOCTYPE pour utiliser le mode standard total.
 
 ## Comment connaître le mode utilisé ?
 
-Sous Firefox, vous pouvez utiliser le menu contextuel : "Informations sur la page" et le champ "Mode de rendu" de l'onglet Général..
+Si la page est rendue en mode quirks ou quasi-quirks, Firefox affichera un avertissement dans l'onglet console des outils de développement. Si cet avertissement n'est pas affiché, Firefox utilise le mode standard total.
 
-Sous Internet Explorer, appuyez sur la touche _F12_ et utilisez le champ _Document Mode_.
+La valeur de `document.compatMode` en JavaScript indique si le document est en mode quirks. Si sa valeur est `"BackCompat"`, le document est en mode quirks. Sinon, la valeur sera `"CSS1Compat"`.

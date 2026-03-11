@@ -1,13 +1,12 @@
 ---
 title: 動画と音声のコンテンツ
+short-title: 動画と音声
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: daad50a992d56b23573fdd50517c75df176747cf
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}
 
 ウェブページに簡単な画像を追加するのができるようになったので、次のステップは HTML 文書に動画と音声のプレイヤーを追加することです。この記事では {{htmlelement("video")}} と {{htmlelement("audio")}} 要素を使って実現することを見ていきます。それから動画にキャプションや字幕を追加する方法を見て完了します。
 
@@ -84,13 +83,13 @@ l10n:
 
 #### メディアファイルの内容
 
-まず、用語をすばやく見てみましょう。MP3、MP4、WebM などの形式は **[コンテナー形式](/ja/docs/Web/Media/Guides/Formats/Containers)** と呼ばれています。それらは、音声トラック、映像トラック（動画の場合）、および提示されるメディアを記述するメタデータなど、歌または動画全体を構成する様々な部分を含みます。
+まず、用語をすばやく見てみましょう。OGG、WAV、MP4、WebM などの形式は **[コンテナー形式](/ja/docs/Web/Media/Guides/Formats/Containers)** と呼ばれています。それらは、音声トラック、映像トラック（動画の場合）、および提示されるメディアを記述するメタデータなど、歌または動画全体を構成する様々な部分を含みます。
 
 ある WebM ファイルに、メイン映像トラックと別アングルのトラック、英語とスペイン語の音声、英語のコメンタリートラックの音声がある映画が含まれている場合、下図のような概念で考えることができます。また、長編映画の字幕、映画のスペイン語字幕、コメンタリーの英語字幕を含むテキストトラックも記載されています。
 
 ![メディアファイルの中身をトラック単位で概念化した図。](containersandtracks.png)
 
-コンテナー内の音声トラックと映像トラックは、そのメディアをエンコードするために使用されるコーデックに適した形式のデータを保持します。音声トラックと映像トラックでは、異なる形式が使用されます。それぞれの音声トラックは [音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs) を使用してエンコードされ、一方映像トラックは、 （おそらく予想通り） [映像コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)を使用してエンコードされます。前にお話ししたように、さまざまなブラウザーでは、多様な動画と音声の形式、および多様なコンテナー形式（MP3、MP4、WebM など、さまざまな種類の動画と音声を順番に入力することができる形式）に対応しています。
+コンテナー内の音声トラックと映像トラックは、そのメディアをエンコードするために使用されるコーデックに適した形式のデータを保持します。音声トラックと映像トラックでは、異なる形式が使用されます。それぞれの音声トラックは [音声コーデック](/ja/docs/Web/Media/Guides/Formats/Audio_codecs) を使用してエンコードされ、一方映像トラックは、 （おそらく予想通り） [映像コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)を使用してエンコードされます。前にお話ししたように、さまざまなブラウザーでは、多様な動画と音声の形式、および多様なコンテナー形式（OGG、MP4、WebM など、さまざまな種類の動画と音声を順番に入力することができる形式）に対応しています。
 
 例えば、
 
@@ -100,7 +99,7 @@ l10n:
 
 いくつかの特殊なケースもあります。例えば、音声の種類によっては、コーデックのデータはコンテナーなしで、または簡易的なコンテナーで格納されることがよくあります。そのような例の 1 つが FLAC コーデックで、最も一般的には、生の FLAC トラックだけの FLAC ファイルに格納されます。
 
-もう1つは、常に人気のある MP3 ファイルです。「MP3 ファイル」とは、実際には、 MPEG-1 Audio Layer III (MP3) 音声トラックが MPEG または MPEG-2 コンテナーに格納されたものです。これは特に面白いことに、ほとんどのブラウザーが MPEG メディアを {{HTMLElement("video")}} および {{HTMLElement("audio")}} 要素で使用することに対応していませんが、 MP3 はその人気のために対応していることがあります。
+もう一つの例は、広く普及している「MP3 ファイル」です。「MP3 ファイル」とは、MPEG-1 Audio Layer III 圧縮方式でエンコードされた音声ファイルです。メタデータを含めることができるのですが、単体の MPEG または MPEG-2 コンテナー内にカプセル化されていません。 {{htmlelement("audio")}} 要素や {{htmlelement("video")}} 要素で広範に対応されていることは、その持続的な人気を如実に物語っています。
 
 オーディオプレーヤーは、 MP3 または Ogg ファイルの音声トラックを直接再生する傾向があります。これらはコンテナーを必要としません。
 
@@ -109,13 +108,13 @@ l10n:
 > [!NOTE]
 > MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
 >
-> これらの特許のために、これらのコーデックに対応するために実装しようとするブラウザーは、通常、膨大なライセンス料を支払わなければなりません。さらに、制限のあるソフトウェアを避けて、オープンな形式だけを使用することを好む人々もいます。このような法的・選好的な理由から、ウェブ開発者は、視聴者全員を取り込むために複数の形式に対応しなければならないことが分かっています。
+> これらの特許のために、これらのコーデックに対応するために実装しようとするブラウザーは、通常、膨大なライセンス料を支払わなければなりません。さらに、制限のあるソフトウェアを避けて、オープンな形式だけを使用することを好む人々もいます。これらの法的および選好的な理由により、ウェブ開発者はすべての視聴者に動画を体験してもらうために、複数の形式に対応せざるを得ない状況になっています。
 
 前節で説明したコーデックは、映像と音声を管理可能なファイルに圧縮するために存在します。生の映像と音声は非常に大きいからです。各ブラウザーには一連の **{{Glossary("Codec","コーデック")}}**、例えば Vorbis や H.264 などが含まれており、圧縮された音声や映像のデータをバイナリーデータに戻すために使用されます。各コーデックには利点と欠点があり、また各コンテナーにも長所と欠点があるため、どのコンテナーを使用するかの判断に影響を与えることがあります。
 
 ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザーで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
 
-アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Guides/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
+アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Guides/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Guides/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
 
 もう一つ覚えておいていただきたいのは、モバイル用のブラウザーは、デスクトップ版と同じ形式をすべて対応しているわけではない場合があるのと同様、デスクトップ版で対応していない形式にも追加で対応している場合があるということです。さらに、デスクトップとモバイルのブラウザーは、メディア再生の処理をオフロードするように設計されている場合があります（すべてのメディアに対して、または内部で処理できない特定の型に対してのみ、オフロードする）。つまり、メディアへの対応は、ユーザーがインストールしているソフトウェアに部分的に依存しているのです。
 
@@ -126,10 +125,10 @@ l10n:
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
   <p>
-    お使いのブラウザーはこの動画に対応していません。こちらは代わりの<a
+    お使いのブラウザーはこの動画に対応していません。代わりの<a
       href="rabbit320.mp4"
       >動画へのリンク</a
-    >です。
+    >があります。
   </p>
 </video>
 ```
@@ -182,7 +181,7 @@ HTML 動画に含めることができる他の多くの機能があります。
 - [`poster`](/ja/docs/Web/HTML/Reference/Elements/video#poster)
   - : この属性は、動画の再生前に表示される画像の URL を値としてとります。これは、スプラッシュ画面または広告画面に使用するためのものです。
 - [`preload`](/ja/docs/Web/HTML/Reference/Elements/video#preload)
-  - : この属性は、大きなファイルをバッファリングする要素で使用されます。3 つの値のいずれかを取ることができます。
+  - : 大容量ファイルのバッファリングに使用されます。次の 3 つの値のいずれかを取ります。
     - `"none"` はファイルをバッファリングしません
     - `"auto"` はメディアファイルをバッファリングする
     - `"metadata"` はファイルのメタデータのみをバッファリングする
@@ -262,7 +261,7 @@ WEBVTT
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 
 1. 適切な場所に `.vtt` ファイルとして保存します。
-2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Reference/Elements/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Reference/Elements/track#label) を追加して、読み手が検索している言語を識別しやすくします。
+2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) 属性を使用して、キューが `subtitles`、`captions`、`descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Reference/Elements/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Reference/Elements/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
 こちらが例です。
 
@@ -274,37 +273,59 @@ WEBVTT
 </video>
 ```
 
-これを試すには、[ローカルの HTTP サーバー](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)にファイルをホストする必要があります。ブラウザーの出力には、字幕付きの動画が表示されます。以下のような感じです。
-
-![再生、停止、音量、キャプションのオン/オフなどのスタンドコントロールを備えたビデオプレーヤー。 動画の再生には、槍のような武器を持つ男のシーンが表示され、キャプションには "Esta hoja tiene pasado oscuro." と表示されます。](video-player-with-captions.png)
-
-詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](https://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
+このことを試すには、ファイルを[ローカルの HTTP サーバー](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)にホストする必要があります。ブラウザーの出力には、字幕が表示された動画が表示されます。完全なアプリケーションとそのソースコードについては、[HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)を参照してください。この例では、ユーザーが異なる字幕を選択できるように JavaScript を使用しています。字幕を有効にするには、"CC" ボタンを押して、英語 (English)、ドイツ語 (Deutsch)、スペイン語 (Español) のいずれかのオプションを選択する必要があります。
 
 > [!NOTE]
 > テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
 
-### アクティブラーニング: 自分の音声と動画を埋め込む
+### 自分の音声と動画を埋め込む
 
-このアクティブラーニングでは、（理想的には）世界に出て行って、自分自身で動画や音声を録音してほしいと思います。最近のほとんどの携帯電話では、とても簡単に音声や動画を録音でき、それをコンピューターに転送できれば、それを使用することができます。動画の場合は WebM や MP4、音声の場合は MP3 や Ogg に変換する必要がありますが、 [Miro Video Converter](http://www.mirovideoconverter.com/) や [Audacity](https://sourceforge.net/projects/audacity/) など、手間をかけずにできるプログラムが十分に用意されています。ぜひ、一度やってみてください。
+この課題では、外に出て自分自身で動画や音声を録音してみあｍしょう。スマートフォンをお持ちなら、それを使用して音声と映像を録音し、コンピューターに転送して試してみましょう。動画の場合、WebM や MP4 に、音声の場合には MP3 や Ogg に変換する必要があるかもしれませんがでこの作業をすることができる [CloudConvert](https://cloudconvert.com/mp4-converter) （オンライン）や [Audacity](https://sourceforge.net/projects/audacity/) （デスクトップアプリケーション）など、十分なツールがあります。ぜひ試してみてください！
 
-動画や音声を入手できない場合は、この[サンプル](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)を自由に使用してこの演習を行うことができます。サンプルコードを参照のために使用することもできます。
+> [!NOTE]
+> 動画や音声を入手できない場合は、この[音声および動画のサンプルファイル](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)を自由に使用してこの演習を行うことができます。
 
 次のことをしましょう。
 
 1. 音声と動画のファイルをコンピューターの新しいディレクトリーに保存します。
-2. 同じディレクトリーに `index.html` と呼ばれる新しい HTML ファイルを作成します。
+2. 同じディレクトリー内に、[始めるテンプレート](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)を基にした新しい HTML ファイルを作成し、`index.html` という名前を付けます。
 3. ページに {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を追加します。それらにデフォルトのブラウザーコントロールを表示させます。
 4. 両方の要素に {{HTMLElement("source")}} 要素を付けて、ブラウザーが最もよくサポートするフォーマットを見つけて読み込むようにします。これらは [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を含むべきです。
-5. `<video>` 要素に、動画が再生される前に表示されるポスターを指定します。自分のポスターのグラフィックを作成して楽しんでください。
+5. 非対応ブラウザー向けに、タグ内にメディアへの直接リンクを提供する代替の `<p>` 要素を両方とも用意しましょう。
+6. `<video>` 要素に、動画が再生される前に表示されるポスターを指定します。自分のポスターのグラフィックを作成して楽しんでください。
 
-さらに、テキストトラックを研究し、動画にキャプションを追加する方法をうまくいくようにすることもできます。
+<details>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
-## スキルテスト
+完了した HTML は、次のようになるはずです。
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video) を見てください。
+```html
+<video controls poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    このブラウザーは HTML 動画に対応していません。<a href="rabbit320.mp4"
+      >動画へのリンク</a
+    >はこちらです。
+  </p>
+</video>
+
+<audio controls>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    このブラウザーは HTML 音声に非対応です。代わりに音声ファイルへの<a
+      href="viper.mp3"
+      >リンク</a
+    >をこちらに用意しました。
+  </p>
+</audio>
+```
+
+</details>
 
 ## まとめ
 
-以上で終了です。ウェブページの動画と音声で遊んで楽しんでいただけたことを期待しています。次に、 HTML メディアでスキルを評価する課題を紹介します。
+これで終了です。ウェブページでの動画や音声の操作を楽しんでいただけたでしょうか？次は、HTML の動画と音声に関する情報の理解と記憶の程度を調べるための試験を行いましょう。
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video", "Learn_web_development/Core/Structuring_content")}}

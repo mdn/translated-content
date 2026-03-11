@@ -2,9 +2,8 @@
 title: "Attribut HTML : max"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
-original_slug: Web/HTML/Attributes/max
 l10n:
-  sourceCommit: 594ae0d4ffb6326a9529fe366d30ca633309ee30
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 L'attribut **`max`** définit la valeur maximale acceptable et valide pour le champ de saisie contenant l'attribut. Si la [`valeur`](/fr/docs/Web/HTML/Reference/Elements/input#value) de l'élément est supérieure à cette valeur, l'élément échoue à [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette valeur doit être supérieure ou égale à la valeur de l'attribut [`min`](min). Si l'attribut `max` est présent mais n'est pas défini ou est invalide, aucune valeur `max` n'est appliquée. Si l'attribut `max` est valide et qu'une valeur non vide est supérieure au maximum autorisé par l'attribut `max`, la validation des contraintes empêchera la soumission du formulaire.
@@ -74,7 +73,7 @@ Si la valeur dépasse la valeur maximale autorisée, l'attribut JavaScript {{DOM
 
 Voir la [validation côté client](/fr/docs/Web/HTML/Guides/Constraint_validation) et {{DOMxRef("ValidityState.rangeOverflow", "rangeOverflow")}} pour plus d'informations.
 
-Pour l'élément {{HTMLElement("progress")}}, l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément {{HTMLElement("meter")}}, l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale ([`min`](/fr/docs/Web/HTML/Reference/Attributes/min) attribut), si elle est définie. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
+Pour l'élément {{HTMLElement("progress")}}, l'attribut `max` décrit la quantité de travail que nécessite la tâche indiquée par l'élément `progress`. S'il est présent, il doit avoir une valeur supérieure à zéro et être un nombre à virgule flottante valide. Pour l'élément {{HTMLElement("meter")}}, l'attribut `max` définit la limite numérique supérieure de la plage mesurée. Celle-ci doit être supérieure à la valeur minimale (attribut [`min`](/fr/docs/Web/HTML/Reference/Attributes/min)), si elle est définie. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.
 
 <table class="no-markdown">
   <caption>
