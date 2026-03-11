@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLElement")}} 接口的 **`autofocus`** 属性表示一个布尔值，该值反映了 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) HTML 全局属性。此属性指示该元素是否应在页面加载时获得焦点；或者，如果该元素嵌套在 {{htmlelement("dialog")}} 或 [`popover`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) 元素内，则指示该 `<dialog>` 或弹窗显示时是否应获得焦点。
+{{domxref("HTMLElement")}} 接口的 **`autofocus`** 属性是一个反映了 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) HTML 全局属性的布尔值。此属性指示该元素是否应在页面加载时获得焦点；或者，如果该元素嵌套在 {{htmlelement("dialog")}} 或 [`popover`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) 元素内，则指示该 `<dialog>` 或弹窗显示时是否应获得焦点。
 
 在一个文档、`<dialog>` 元素或弹窗中，最多只能有一个元素具有此属性。若将该属性应用于多个元素，则第一个可聚焦的元素将获得焦点。
 
