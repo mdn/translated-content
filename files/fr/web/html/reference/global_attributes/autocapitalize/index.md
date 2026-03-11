@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocapitalize`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si le texte saisi est automatiquement mis en majuscule et, le cas échéant, de quelle manière. Cela concerne&nbsp;:
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocapitalize`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si le texte saisi est automatiquement mis en majuscule et, le cas échéant, de quelle manière. Cela concerne&nbsp;:
 
 - les éléments {{HTMLElement("input")}} et {{HTMLElement("textarea")}}.
 - tout élément sur lequel l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable) est défini.

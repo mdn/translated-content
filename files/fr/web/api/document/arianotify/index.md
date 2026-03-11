@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 La méthode **`ariaNotify()`** de l'interface {{DOMxRef("Document")}} définit qu'une chaîne de caractères de texte doit être annoncée par un {{Glossary("screen reader", "lecteur d'écran")}} si disponible et activé.
 

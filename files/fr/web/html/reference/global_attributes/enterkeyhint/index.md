@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`enterkeyhint`** est un attribut {{Glossary("Enumerated", "énuméré")}} définissant le libellé d'action (ou l'icône) à présenter pour la touche entrée sur le clavier virtuel.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`enterkeyhint`** est un attribut {{Glossary("Enumerated", "énuméré")}} définissant le libellé d'action (ou l'icône) à présenter pour la touche entrée sur le clavier virtuel.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: enterkeyhint", "tabbed-shorter")}}
 

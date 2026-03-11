@@ -187,7 +187,7 @@ console.log(moods.match(regexpEmoticons));
 キャレット記法"
             >キャレット記法</a
           >を使用した制御文字に一致します。 "X" には A–Z の文字が入ります（コードポイント<code>U+0001</code><em>–</em><code>U+001A</code> に対応します）。例えば
-          <code>/\cM\J/</code> は "\r\n" に一致します。
+          <code>/\cM\cJ/</code> は "\r\n" に一致します。
         </p>
       </td>
     </tr>

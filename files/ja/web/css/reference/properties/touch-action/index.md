@@ -1,10 +1,20 @@
 ---
 title: touch-action
 slug: Web/CSS/Reference/Properties/touch-action
-original_slug: Web/CSS/touch-action
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`touch-action`** は CSS のプロパティで、タッチ画面のユーザーが要素のある領域をどのように操作できるか（例えば、ブラウザー内に組み込まれたパンまたはズーム機能）を設定します。
+**`touch-action`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タッチ画面のユーザーが要素のある領域をどのように操作できるか（例えば、ブラウザー内に組み込まれたズーム機能）を設定します。
+
+既定では、パン（スクロール）およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("Element/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("Element/pointermove_event", "pointermove")}} および {{domxref("Element/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 `touch-action` を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。
+
+ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
+
+> [!NOTE]
+> ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -23,17 +33,9 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: revert;
+touch-action: revert-layer;
 touch-action: unset;
 ```
-
-既定では、パン（スクロール）およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("HTMLElement/pointermove_event", "pointermove")}} および {{domxref("HTMLElement/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 `touch-action` を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。
-
-ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
-
-> [!NOTE]
-> ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
-
-## 構文
 
 `touch-action` プロパティは次の何れかの形で指定することができます。
 
@@ -74,7 +76,7 @@ touch-action: unset;
 
 ## 例
 
-<h3 id="すべてのジェスチャーの無効化">すべてのジェスチャーの無効化</h3>
+### すべてのジェスチャーの無効化
 
 最も一般的な使い方は、要素（およびスクロールしないその子孫）のすべてのジェスチャーを無効にして、地図やゲームの画面のように、独自のドラッグやズームの振る舞いを提供することです。
 
@@ -110,7 +112,7 @@ touch-action: unset;
 ## 関連情報
 
 - {{cssxref("pointer-events","pointer-events")}}
-- {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
+- [ポインターイベント](/ja/docs/Web/API/Pointer_events)
 - WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
-- Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- Google Developers Blog [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention/)
 - [スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)

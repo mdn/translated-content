@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
-Les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) **`data-*`** forment une classe d'attributs, appelés **attributs de données personnalisés** (<i lang="en">custom data attributes</i> en anglais), ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Document_Object_Model), qu'on peut manipuler avec des scripts.
+[Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) **`data-*`** forment une classe d'attributs, appelés **attributs de données personnalisés** (<i lang="en">custom data attributes</i> en anglais), ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Document_Object_Model), qu'on peut manipuler avec des scripts.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: data-*", "tabbed-standard")}}
 

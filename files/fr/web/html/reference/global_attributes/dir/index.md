@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`dir`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui permet d'indiquer la direction du texte d'un élément.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`dir`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui permet d'indiquer la direction du texte d'un élément.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: dir", "tabbed-standard")}}
 

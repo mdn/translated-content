@@ -1,12 +1,11 @@
 ---
 title: scroll-padding-block
 slug: Web/CSS/Reference/Properties/scroll-padding-block
-original_slug: Web/CSS/scroll-padding-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のブロック軸のスクロールパディングを設定します。
+`scroll-padding-block` は[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、要素のブロック方向のスクロールパディングを設定します。
 
 {{InteractiveExample("CSS デモ: scroll-padding-block")}}
 
@@ -56,7 +55,7 @@ scroll-padding-block: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,19 +64,19 @@ scroll-padding-block: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
 
-scroll-padding 系のプロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、作者は他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+scroll-padding 系のプロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`scroll-padding-block-end`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-end)
-- [`scroll-padding-block-start`](/ja/docs/Web/CSS/Reference/Properties/scroll-padding-block-start)
+- {{cssxref("scroll-padding-block-end")}}
+- {{cssxref("scroll-padding-block-start")}}
 
 ## 構文
 
@@ -101,9 +100,9 @@ scroll-padding-block: unset;
 ### 値
 
 - `<length-percentage>`
-  - : スクロールポートの対応する辺からの内側のオフセットで、有効な長さまたはパーセント値です。
+  - : スクロールポートの対応する辺からのオフセットで、有効な長さまたはパーセント値です。
 - `auto`
-  - : オフセットはユーザーエージェントによって特定されます。これは一般に 0px になりますが、ユーザーエージェントはゼロ以外の値がもっと適切である場合を検出して他のことを行うことができます。
+  - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
 
 ## 公式定義
 
@@ -123,5 +122,5 @@ scroll-padding-block: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

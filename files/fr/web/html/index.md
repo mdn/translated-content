@@ -3,12 +3,12 @@ title: "HTML : HyperText Markup Language"
 short-title: HTML
 slug: Web/HTML
 l10n:
-  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
+  sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
 ---
 
 **HTML** signifie «&nbsp;_HyperText Markup Language_&nbsp;» qu'on peut traduire par «&nbsp;langage de balises pour l'hypertexte&nbsp;». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).
 
-L'«&nbsp;hypertexte&nbsp;» désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette «&nbsp;toile&nbsp;» (ce mot est traduit par _web_ en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
+L'«&nbsp;hypertexte&nbsp;» désigne les liens qui relient les pages web entre elles, que ce soit au sein d'un même site web ou entre différents sites web. Les liens sont un aspect fondamental du Web. Ce sont eux qui forment cette «&nbsp;toile&nbsp;» (ce mot est traduit par <i lang="en">web</i> en anglais). En téléchargeant du contenu sur l'Internet et en le reliant à des pages créées par d'autres personnes, vous devenez un participant actif du World Wide Web.
 
 Le langage HTML utilise des «&nbsp;balises&nbsp;» pour annoter du texte, des images et d'autres contenus afin de les afficher dans un navigateur web. Le balisage HTML comprend des «&nbsp;éléments&nbsp;» spéciaux tels que {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} et bien d'autres.
 
@@ -32,11 +32,11 @@ Les [guides HTML](/fr/docs/Web/HTML/Guides) vous aident à construire avec HTML 
 - [Formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
   - : Les formulaires sont une partie très importante du Web&nbsp;: ils fournissent une grande partie des fonctionnalités nécessaires pour interagir avec les sites web (inscription, connexion, envoi de commentaires, achat de produits, etc.). Ce module vous initie à la création de la partie client/«&nbsp;front-end&nbsp;» des formulaires.
 - [Image avec CORS activé](/fr/docs/Web/HTML/How_to/CORS_enabled_image)
-  - : L'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#crossorigin), combiné à un en-tête {{glossary("CORS")}} approprié, permet de charger des images définies par l'élément {{HTMLElement("img")}} depuis des origines externes et de les utiliser dans un élément {{HTMLElement("canvas")}} comme si elles étaient chargées depuis l'origine courante.
+  - : L'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#crossorigin), combiné à un en-tête {{Glossary("CORS")}} approprié, permet de charger des images définies par l'élément {{HTMLElement("img")}} depuis des origines externes et de les utiliser dans un élément {{HTMLElement("canvas")}} comme si elles étaient chargées depuis l'origine courante.
 - [Attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Certains éléments HTML qui prennent en charge [CORS](/fr/docs/Web/HTTP/Guides/CORS), comme {{HTMLElement("img")}} ou {{HTMLElement("video")}}, possèdent un attribut `crossorigin` (propriété `crossOrigin`), qui permet de configurer les requêtes CORS pour les données récupérées par l'élément.
 - [Précharger du contenu avec rel="preload"](/fr/docs/Web/HTML/Reference/Attributes/rel/preload)
-  - : La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{htmlelement("link")}} permet d'écrire des requêtes de récupération déclaratives dans votre {{htmlelement("head")}} HTML, en spécifiant les ressources dont vos pages auront besoin très rapidement après le chargement. Vous pouvez ainsi commencer à précharger ces ressources tôt dans le cycle de chargement, avant que le moteur principal de rendu du navigateur ne démarre. Cela garantit leur disponibilité plus tôt et réduit le risque de bloquer le premier affichage de la page, ce qui améliore les performances. Cet article propose un guide de base sur le fonctionnement de `preload`.
+  - : La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}} permet d'écrire des requêtes de récupération déclaratives dans votre {{HTMLElement("head")}} HTML, en spécifiant les ressources dont vos pages auront besoin très rapidement après le chargement. Vous pouvez ainsi commencer à précharger ces ressources tôt dans le cycle de chargement, avant que le moteur principal de rendu du navigateur ne démarre. Cela garantit leur disponibilité plus tôt et réduit le risque de bloquer le premier affichage de la page, ce qui améliore les performances. Cet article propose un guide de base sur le fonctionnement de `preload`.
 - [Images réactives](/fr/docs/Web/HTML/Guides/Responsive_images)
   - : Cet article présente le concept d'images réactives&nbsp;: des images qui s'adaptent aux appareils ayant des tailles d'écran, des résolutions et d'autres caractéristiques très variées. Il présente aussi les outils HTML permettant de les mettre en œuvre, afin d'améliorer les performances sur différents appareils.
 
@@ -45,7 +45,7 @@ Les [guides HTML](/fr/docs/Web/HTML/Guides) vous aident à construire avec HTML 
 - [Référence HTML](/fr/docs/Web/HTML/Reference)
   - : HTML est composé d'**éléments**, chacun pouvant être modifié par un certain nombre d'**attributs**. Les documents HTML sont reliés entre eux par des **liens**.
 - [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements)
-  - : Parcourez la liste de tous les {{glossary("Element", "éléments")}} {{glossary("HTML")}}.
+  - : Parcourez la liste de tous les {{Glossary("Element", "éléments")}} {{Glossary("HTML")}}.
 - [Référence des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes)
   - : Les éléments HTML possèdent des **attributs**. Ce sont des valeurs supplémentaires qui configurent les éléments ou modifient leur comportement de différentes manières.
 - [Attributs globaux](/fr/docs/Web/HTML/Reference/Global_attributes)

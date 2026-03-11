@@ -8,7 +8,7 @@ l10n:
 
 {{Non-standard_Header}}{{SeeCompatTable}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`anchor`** permet d'associer un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous voulez arrimer l'élément positionné. L'élément positionné peut ensuite être placé à l'aide de la [mise en position par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`anchor`** permet d'associer un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous voulez arrimer l'élément positionné. L'élément positionné peut ensuite être placé à l'aide de la [mise en position par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 
 > [!NOTE]
 > Vous pouvez également associer un élément positionné à un élément d'ancre avec CSS, en utilisant les propriétés {{CSSxRef("anchor-name")}} et {{CSSxRef("position-anchor")}}. Si les deux techniques d'ancrage sont appliquées au même élément, la technique CSS prévaut sur la technique HTML.
@@ -107,7 +107,7 @@ Faites défiler l'exemple pour voir comment la boîte d'information est arrimée
 
 ## Spécifications
 
-Cet attribut ne fait pas encore partie de la spécification HTML. Consultez la discussion sur l'ajout de l'attribut `anchor` à [https://github.com/whatwg/html/pull/9144](https://github.com/whatwg/html/pull/9144).
+Cet attribut ne fait pas encore partie de la spécification HTML. Consultez la discussion sur l'ajout de l'attribut `anchor` à <https://github.com/whatwg/html/pull/9144>.
 
 ## Compatibilité des navigateurs
 

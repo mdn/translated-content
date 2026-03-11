@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments présents dans des {{Glossary("shadow tree", "arbres d'ombre")}} imbriqués, en exportant leurs noms de `part`.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments présents dans des {{Glossary("shadow tree", "arbres d'ombre")}} imbriqués, en exportant leurs noms de `part`.
 
 L'arbre d'ombre est une structure isolée où les identifiants, classes et styles ne peuvent pas être atteints par les sélecteurs ou requêtes du DOM classique. Deux attributs HTML peuvent être appliqués aux éléments d'un arbre d'ombre pour permettre de cibler des styles CSS depuis l'extérieur&nbsp;: `part` et `exportparts`.
 
@@ -97,7 +97,7 @@ Nous stylons des parties de l'arbre d'ombre du `<card-component>` en utilisant l
 
 ### Composant imbriqué
 
-En poursuivant l'exemple du `<card-component>`, nous créons un composant imbriqué en enveloppant le `<card-component>` dans un autre composant&nbsp;; ici, le composant `<card-wrapper>`. Nous exportons ensuite, via l'attribut `exportparts`, les parties du composant imbriqué que nous souhaitons rendre stylables depuis l'extérieur de son arbre d'ombre.
+En poursuivant l'exemple du `<card-component>`, nous créons un composant imbriqué en enveloppant le `<card-component>` dans un autre composant&nbsp;; ici, le composant `<card-wrapper>`. Nous exportons ensuite, avec l'attribut `exportparts`, les parties du composant imbriqué que nous souhaitons rendre stylables depuis l'extérieur de son arbre d'ombre.
 
 #### HTML
 
@@ -292,7 +292,7 @@ customElements.define(
 
 #### CSS
 
-Lors du ciblage des parts du `<card-component>` depuis l'intérieur du `<card-wrapper>`, on ne peut styliser que les parts exportées via leurs noms exposés&nbsp;:
+Lors du ciblage des parts du `<card-component>` depuis l'intérieur du `<card-wrapper>`, on ne peut styliser que les parts exportées avec leurs noms exposés&nbsp;:
 
 ```css
 /* sélectionne le nom des parties exportées */

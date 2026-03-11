@@ -1,9 +1,8 @@
 ---
 title: scroll-padding-inline-start
 slug: Web/CSS/Reference/Properties/scroll-padding-inline-start
-original_slug: Web/CSS/scroll-padding-inline-start
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 `scroll-padding-inline-start` プロパティは、スクロールポートの*最適表示領域*のインライン方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
@@ -59,7 +58,7 @@ scroll-padding-inline-start: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ scroll-padding-inline-start: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -117,5 +116,5 @@ scroll-padding-inline-start: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

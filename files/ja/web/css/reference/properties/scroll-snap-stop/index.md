@@ -1,9 +1,8 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
-original_slug: Web/CSS/scroll-snap-stop
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 **`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
@@ -66,7 +65,7 @@ scroll-snap-stop: always;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -75,7 +74,7 @@ scroll-snap-stop: always;
 }
 
 .snap-container > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -128,7 +127,7 @@ scroll-snap-stop: unset;
   <div>5</div>
 </div>
 
-<p>scroll-snap-stop: always (X Mandatory) on odd child elements</p>
+<p>scroll-snap-stop: always (X Mandatory) （奇数番目の子要素）</p>
 <div class="x mandatory-scroll-snapping always-stop-odd">
   <div>1</div>
   <div>2</div>
@@ -137,7 +136,7 @@ scroll-snap-stop: unset;
   <div>5</div>
 </div>
 
-<p>scroll-snap-stop: always (X Mandatory) on even child elements</p>
+<p>scroll-snap-stop: always (X Mandatory) （偶数番目の子要素）</p>
 <div class="x mandatory-scroll-snapping always-stop-even">
   <div>1</div>
   <div>2</div>
@@ -211,7 +210,7 @@ div[class] {
 
 div > div {
   flex: none;
-  outline: 1px solid #333;
+  outline: 1px solid #333333;
 }
 
 .x > div {
@@ -285,5 +284,7 @@ div > div {
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- {{cssxref("scroll-snap-align")}}
+- {{cssxref("scroll-initial-target")}}
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

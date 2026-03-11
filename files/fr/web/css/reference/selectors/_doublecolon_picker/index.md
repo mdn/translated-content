@@ -2,10 +2,8 @@
 title: ::picker()
 slug: Web/CSS/Reference/Selectors/::picker
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
 ---
-
-{{SeeCompatTable}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::picker()`** cible la partie sélecteur (<i lang="en">picker</i>) d'un élément, par exemple la liste déroulante d'un [élément `<select>` personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select).
 

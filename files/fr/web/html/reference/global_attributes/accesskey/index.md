@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`accesskey`** indique un raccourci clavier possible pour l'élément courant. La valeur de l'attribut doit être un seul caractère imprimable (ce qui inclut les caractères accentués et autres caractères pouvant être générés par le clavier).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`accesskey`** indique un raccourci clavier possible pour l'élément courant. La valeur de l'attribut doit être un seul caractère imprimable (ce qui inclut les caractères accentués et autres caractères pouvant être générés par le clavier).
 
 {{InteractiveExample("Démonstration HTML&nbsp;: accesskey", "tabbed-shorter")}}
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** est un attribut énuméré qui indique si l'élément doit être éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son widget pour permettre l'édition.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** est un attribut énuméré qui indique si l'élément doit être éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son widget pour permettre l'édition.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: contenteditable", "tabbed-shorter")}}
 

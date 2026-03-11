@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 032373c0ec106ec2d57f6bd14e74e2cc9191907a
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`hidden`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique que le navigateur ne doit pas rendre le contenu de l'élément. Par exemple, il peut être utilisé pour masquer des éléments de la page qui ne peuvent pas être utilisés tant que le processus de connexion n'est pas terminé.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`hidden`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique que le navigateur ne doit pas rendre le contenu de l'élément. Par exemple, il peut être utilisé pour masquer des éléments de la page qui ne peuvent pas être utilisés tant que le processus de connexion n'est pas terminé.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: hidden", "tabbed-shorter")}}
 
@@ -68,7 +68,7 @@ Par exemple, les éléments avec le style `display: block` seront affichés mêm
 Dans l'état _masqué jusqu'à découverte_, l'élément est masqué mais son contenu sera accessible à la fonctionnalité «&nbsp;Rechercher dans la page&nbsp;» du navigateur ou à la navigation par fragment.
 Lorsque ces fonctionnalités provoquent un défilement vers un élément dans un sous-arbre _masqué jusqu'à découverte_, le navigateur va&nbsp;:
 
-1. Déclencher un évènement [`beforematch`](/fr/docs/Web/API/Element/beforematch_event) sur l'élément masqué
+1. Déclencher un évènement {{DOMxRef("Element/beforematch_event", "beforematch")}} sur l'élément masqué
 2. Retirer l'attribut `hidden` de l'élément
 3. Faire défiler jusqu'à l'élément
 
