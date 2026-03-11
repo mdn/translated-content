@@ -3,7 +3,7 @@ title: Règles @ CSS
 short-title: Règles @
 slug: Web/CSS/Reference/At-rules
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 3ee2355c3c90cf92c3119b82f8ebfa5d16c91c53
 ---
 
 Les **règles @** sont des [instructions CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#instructions_css) qui indiquent à CSS comment se comporter. Elles servent à regrouper et structurer des règles de style et d'autres règles @, à déclarer des informations de style non directement associées au contenu sélectionné, et à gérer des constructions syntaxiques telles que les imports et les mappages de mots-clés d'espaces de noms. Elles commencent par un arobase, `@` (U+0040 COMMERCIAL AT), suivi d'un identifiant.
@@ -24,6 +24,7 @@ Les **règles @** sont des [instructions CSS](/fr/docs/Web/CSS/Guides/Syntax/Int
   - {{CSSxRef("@counter-style/suffix")}}
   - {{CSSxRef("@counter-style/symbols")}}
   - {{CSSxRef("@counter-style/system")}}
+- {{CSSxRef("@custom-media")}}
 - {{CSSxRef("@document")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
 - {{CSSxRef("@font-face")}}
   - {{CSSxRef("@font-face/ascent-override")}}

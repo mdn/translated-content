@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`id`** définit un identifiant qui doit être unique pour l'ensemble du document.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: id", "tabbed-shorter")}}
 
@@ -35,7 +35,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`id`** d
 
 ## Syntaxe
 
-La valeur d'un attribut ID ne doit pas contenir de caractères [espace ASCII](/fr/docs/Glossary/Whitespace#in_html). Les navigateurs traitent les identifiants non conformes qui contiennent des espaces comme si l'espace faisait partie de l'identifiant. Contrairement à l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class), qui accepte des valeurs séparées par des espaces, les éléments ne peuvent avoir qu'une seule valeur d'ID.
+La valeur d'un attribut ID ne doit pas contenir de caractères [d'espace ASCII](/fr/docs/Glossary/Whitespace#in_html). Les navigateurs traitent les identifiants non conformes qui contiennent des espaces comme si l'espace faisait partie de l'identifiant. Contrairement à l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class), qui accepte des valeurs séparées par des espaces, les éléments ne peuvent avoir qu'une seule valeur d'ID.
 
 Techniquement, la valeur d'un attribut ID peut contenir n'importe quel autre caractère Unicode. Cependant, lorsqu'elle est utilisée dans des sélecteurs CSS, soit depuis JavaScript avec des API comme {{DOMxRef("Document.querySelector()")}}, soit dans des feuilles de style CSS, la valeur de l'attribut ID doit être un [identifiant CSS](/fr/docs/Web/CSS/Reference/Values/ident) valide. Cela signifie que si la valeur d'un attribut ID n'est pas un identifiant CSS valide (par exemple, `my?id` ou `1234`), elle doit être échappée avant d'être utilisée dans un sélecteur, soit avec la méthode {{DOMxRef("CSS.escape_static", "CSS.escape()")}}, soit [manuellement](/fr/docs/Web/CSS/Reference/Values/ident#échappement_de_caractères).
 

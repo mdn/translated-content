@@ -1,12 +1,11 @@
 ---
 title: border-inline-end-style
 slug: Web/CSS/Reference/Properties/border-inline-end-style
-original_slug: Web/CSS/border-inline-end-style
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-inline-end-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-inline-end-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-inline-end-style")}}
 
@@ -36,8 +35,8 @@ direction: rtl;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -67,17 +66,17 @@ border-inline-end-style: unset;
 ### 値
 
 - `<'border-style'>`
-  - : 境界のスタイルです。 {{cssxref("border-style")}} を参照してください。
+  - : 境界の線のスタイルです。 {{ cssxref("border-style") }} を参照してください。
 
 ## 公式定義
 
 {{CSSInfo}}
 
-### 形式文法
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### inline-end-style の設定
 
@@ -107,7 +106,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("inline-end-style の設定", 140, 140)}}
 
 ## 仕様書
 
@@ -120,5 +119,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応づけられます
+- このプロパティは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの一つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

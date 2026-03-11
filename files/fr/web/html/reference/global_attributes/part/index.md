@@ -1,14 +1,14 @@
 ---
-title: part
+title: "Attribut HTML universel : part"
+short-title: part
 slug: Web/HTML/Reference/Global_attributes/part
-original_slug: Web/HTML/Global_attributes/part
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`part`** contient une liste espacée des noms de parties de l'élément. Les noms de parties permettent au CSS de sélectionner et de mettre en forme des éléments spécifiques dans un arbre d'ombre avec le pseudo-élément CSS {{CSSxRef("::part")}}.
 
-[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`part`** contient une liste des parties du nom de l'élément, séparées par des espaces. Les parties du nom permettent de sélectionner et de mettre en forme en CSS des parties spécifiques du <i lang="en">DOM</i> dans l'arbre fantôme avec le pseudo-élément {{CSSxRef("::part")}}.
-
-Consultez notre [exemple d'utilisation des parties fantômes du DOM](https://mdn.github.io/web-components-examples/shadow-part/).
+Voir [l'attribut `exportparts`](/fr/docs/Web/HTML/Reference/Global_attributes/exportparts) pour un exemple d'utilisation.
 
 ## Spécifications
 
@@ -20,4 +20,10 @@ Consultez notre [exemple d'utilisation des parties fantômes du DOM](https://mdn
 
 ## Voir aussi
 
-- Liste de tous les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+- L'attribut HTML [`exportparts`](/fr/docs/Web/HTML/Reference/Global_attributes/exportparts)
+- Les éléments HTML {{HTMLElement("template")}} et {{HTMLElement("slot")}}
+- Les pseudo-éléments CSS {{CSSxRef("::part")}} et {{CSSxRef("::slotted")}}
+- L'interface API {{DOMxRef("ShadowRoot")}}
+- La propriété API {{DOMxRef("Element.part")}}
+- [Utiliser les modèles et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
+- Le module [de portée CSS](/fr/docs/Web/CSS/Guides/Scoping)

@@ -1,12 +1,11 @@
 ---
 title: Sélecteurs de classe
 slug: Web/CSS/Reference/Selectors/Class_selectors
-original_slug: Web/CSS/Class_selectors
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-Les **sélecteurs de classe** CSS permettent de cibler des éléments d'un document en fonction du contenu de l'attribut `class` de chaque élément.
+Le **sélecteur de classe** [CSS](/fr/docs/Web/CSS) cible les éléments en fonction du contenu de leur attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class).
 
 ```css
 /* Cible tous les éléments ayant la classe "spacious" */
@@ -26,47 +25,93 @@ li.spacious.elegant {
 }
 ```
 
-L'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#class) est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
-
 ## Syntaxe
 
-```
-.nomdeclasse { déclarations CSS }
+```css
+.class_name {
+  /* … */
+}
 ```
 
-Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) de la façon suivante :
+Notez que cela est équivalent au [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) suivant&nbsp;:
 
+```css
+[class~="class_name"] {
+  /* … */
+}
 ```
-[class~=nomdeclasse] { déclarations CSS }
-```
+
+La valeur `class_name` doit être un [identifiant CSS](/fr/docs/Web/CSS/Reference/Values/ident) valide. Les attributs `class` HTML qui ne sont pas des identifiants CSS valides doivent être [échappés](/fr/docs/Web/CSS/Reference/Values/ident#échappement_de_caractères) avant de pouvoir être utilisés dans les sélecteurs de classe.
 
 ## Exemples
 
-### CSS
+### Sélecteurs de classe valides
 
-```css
-.classy {
-  background-color: skyblue;
-}
-.toto {
-  font-weight: bold;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<div class="classy">Voici un div avec du texte.</div>
-<div class="toto classy truc">
-  Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout
-  de même !
-</div>
-<div>En voilà un autre.</div>
+<p class="red">Ce paragraphe a un texte rouge.</p>
+<p class="red yellow-bg">Ce paragraphe a un texte rouge et un fond jaune.</p>
+<p class="red fancy">
+  Ce paragraphe a un texte rouge et une mise en forme «&nbsp;fancy&nbsp;».
+</p>
+<p>Ceci est juste un paragraphe normal.</p>
 ```
 
-### Résultat
+```html
+<!-- Les deux paragraphes suivants ont des attributs de classe
+qui contiennent des caractères devant être échappés en CSS -->
 
-{{EmbedLiveSample('Exemples')}}
+<p class="item?one">Ce paragraphe a un fond rose.</p>
+<p class="123item">Ce paragraphe a un fond jaune.</p>
+```
+
+#### CSS
+
+```css
+.red {
+  color: #ff3333;
+}
+
+.yellow-bg {
+  background: #ffffaa;
+}
+
+.fancy {
+  font-weight: bold;
+  text-shadow: 4px 4px 3px #7777ff;
+}
+```
+
+```css
+/* Dans les deux règles suivantes, les attributs de classe doivent être échappés */
+
+.item\?one {
+  background-color: pink;
+}
+
+.\00003123item {
+  background-color: yellow;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Sélecteurs de classe valides")}}
+
+### Sélecteurs de classe invalides
+
+Les sélecteurs de classe dans les règles suivantes ne sont pas des identifiants CSS valides et seront ignorés.
+
+```css example-bad
+.item?one {
+  background-color: green;
+}
+
+.123item {
+  background-color: green;
+}
+```
 
 ## Spécifications
 
@@ -75,3 +120,8 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- [Apprendre CSS&nbsp;: Sélecteurs de base](/fr/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)

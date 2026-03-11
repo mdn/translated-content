@@ -2,7 +2,7 @@
 title: font-weight
 slug: Web/CSS/Reference/At-rules/@font-face/font-weight
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-weight`** permet aux auteur·ice·s d'indiquer les graisses pour les polices fournies dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}. La propriété {{CSSxRef("font-weight")}} peut être utilisée séparément pour indiquer la graisse des caractères d'un texte (c'est-à-dire s'ils sont en gras, normaux ou plus fins).
@@ -123,21 +123,21 @@ p.two {
 
 #### Résultat
 
-{{EmbedLiveSample("sélectionner_les_polices_normales_et_grasses", "", 300)}}
+{{EmbedLiveSample("Sélectionner les polices normales et grasses", "", 300)}}
 
-### Définir des plages de font-weight
+### Définir des plages de `font-weight`
 
 Cet exemple montre comment inclure plusieurs polices pour différentes graisses (et styles), en incluant plusieurs déclarations `@font-face` avec la même valeur de `font-family`. En définissant les descripteurs `font-weight` avec des plages de 1 à 1000, dans le reste de vos feuilles de style, vous pouvez déclarer une valeur de `font-weight` (ou de `font-style`), et être assuré·e que la police appropriée sera utilisée.
 
 #### HTML
 
 ```html
-<p class="one">Cette police a une graisse de 100</p>
-<p class="three">Cette police a une graisse de 300</p>
-<p class="four">Cette police a une graisse de 400</p>
-<p class="five">Cette police a une graisse de 500</p>
-<p class="seven">Cette police a une graisse de 700</p>
-<p class="nine">Cette police a une graisse de 900</p>
+<p class="un">Cette police a une graisse de 100</p>
+<p class="trois">Cette police a une graisse de 300</p>
+<p class="quatre">Cette police a une graisse de 400</p>
+<p class="cinq">Cette police a une graisse de 500</p>
+<p class="sept">Cette police a une graisse de 700</p>
+<p class="neuf">Cette police a une graisse de 900</p>
 ```
 
 #### CSS
@@ -184,36 +184,36 @@ body {
   font-size: 2rem;
 }
 
-p.one {
+p.un {
   font-weight: 100;
 }
 
-p.three {
+p.trois {
   font-weight: 300;
 }
 
-p.four {
+p.quatre {
   font-weight: 400;
 }
 
-p.five {
+p.cinq {
   font-weight: 500;
 }
 
-p.seven {
+p.sept {
   font-weight: 700;
 }
 
-p.nine {
+p.neuf {
   font-weight: 900;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("définir_des_plages_de_font-weight", "", 500)}}
+{{EmbedLiveSample("Définir des plages de `font-weight`", "", 500)}}
 
-Le paragraphe `seven` utilise la police extra-bold. Bien que `font-weight: 700` corresponde aux déclarations `FiraSans-Bold` et `FiraSans-ExtraBold`, comme `FiraSans-ExtraBold` est déclarée plus tard, elle remplace `FiraSans-Bold` pour cette valeur.
+Le paragraphe `sept` utilise la police extra-bold. Bien que `font-weight: 700` corresponde aux déclarations `FiraSans-Bold` et `FiraSans-ExtraBold`, comme `FiraSans-ExtraBold` est déclarée plus tard, elle remplace `FiraSans-Bold` pour cette valeur.
 
 De même, les valeurs `100` et `300` utilisent la police light&nbsp;; bien que `FiraSans-Regular` et `FiraSans-Light` incluent `300` dans leurs plages, `FiraSans-Light` est déclarée plus tard. On pourrait aussi déclarer `FiraSans-Regular` après `FiraSans-Light`, mais il faudrait alors modifier la plage du descripteur font-weight.
 
@@ -231,7 +231,7 @@ Nous incluons un {{HTMLElement("input/range")}} de type `range`, dans un {{HTMLE
 
 ```html
 <p>LeagueMono, font-weight: 300 (comparaison)</p>
-<p id="example">LeagueMono, font-weight: <output>400</output> (exemple)</p>
+<p id="exemple">LeagueMono, font-weight: <output>400</output> (exemple)</p>
 <p>LeagueMono, font-weight: 700 (comparaison)</p>
 <label
   >Changer la graisse&nbsp;:
@@ -269,22 +269,22 @@ p:last-of-type {
 Nous incluons un gestionnaire d'événement qui met à jour la propriété `font-weight` du paragraphe et le texte affiché&nbsp;:
 
 ```js
-const text = document.querySelector("#example");
-const log = document.querySelector("output");
-const range = document.querySelector("input");
+const texte = document.querySelector("#exemple");
+const journal = document.querySelector("output");
+const plage = document.querySelector("input");
 
-range.addEventListener("change", () => {
-  text.style.fontWeight = range.value;
-  log.innerText = range.value;
+plage.addEventListener("change", () => {
+  texte.style.fontWeight = plage.value;
+  journal.innerText = plage.value;
 });
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("définir_une_plage_pour_une_police_variable", "", "400")}}
+{{EmbedLiveSample("Définir une plage pour une police variable", "", 400)}}
 
 Changez la graisse du paragraphe via le curseur.
-Notez que le paragraphe exemple n'est pas plus fin que le paragraphe `300` au-dessus ni plus gras que le paragraphe `700` en dessous&nbsp;: la graisse est limitée à la plage définie par le descripteur `font-weight`.
+Notez que le paragraphe exemple n'est pas plus fin que le paragraphe `300` au-dessus ni plus gras que le paragraphe `700` en dessous&nbsp;; la graisse est limitée à la plage définie par le descripteur `font-weight`.
 
 ## Spécifications
 

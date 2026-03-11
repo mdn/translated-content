@@ -1,18 +1,15 @@
 ---
 title: Combinateur de voisins suivants
 slug: Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
-original_slug: Web/CSS/Subsequent-sibling_combinator
 l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
-
-{{CSSRef}}
 
 Le **combinateur de voisins suivants** (`~`) permet de séparer deux sélecteurs et de cibler _toutes les instances_ du deuxième élément qui suivent le premier (qui ne sont pas nécessairement voisins immédiats) et qui partagent le même élément parent.
 
+Dans l'exemple suivant, le combinateur de voisins suivants (`~`) permet de sélectionner et de mettre en forme les paragraphes qui sont à la fois des voisins d'une image et qui apparaissent après n'importe quelle image.
+
 ```css
-/* Cible tous éléments <p> qui arrivent après un élément
-   <img>. */
 img ~ p {
   color: red;
 }
@@ -22,12 +19,14 @@ img ~ p {
 
 ```css-nolint
 /* L'espace entre le tilde (~) est optionnel mais est recommandé. */
-element_anterieur ~ element_cible { propriétés de style }
+former_element ~ target_element {
+  /* propriétés de style */
+}
 ```
 
 ## Exemples
 
-### Utilisation du combinateur avec des sélecteurs simples
+### Utiliser le combinateur avec des sélecteurs simples
 
 Cet exemple illustre l'utilisation du combinateur `~` avec deux sélecteurs simples (`p` et `span`).
 
@@ -58,9 +57,9 @@ p ~ span {
 }
 ```
 
-{{EmbedLiveSample("", "auto", 300)}}
+{{EmbedLiveSample("Utiliser le combinateur avec des sélecteurs simples", "auto", 300)}}
 
-### Utilisation du combinateur avec des sélecteurs complexes
+### Utiliser le combinateur avec des sélecteurs complexes
 
 Cet exemple contient deux [sélecteurs complexes](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#selecteur_complexe), tous deux utilisant le combinateur de voisins généraux&nbsp;: `.monTexte p ~ span` et `.monTexte p ~ .monTexte span`.
 
@@ -91,7 +90,7 @@ L'exemple ci-dessous montre que l'élément cible du sélecteur complexe doit pa
 }
 ```
 
-{{EmbedLiveSample("", "auto", 200)}}
+{{EmbedLiveSample("Utiliser le combinateur avec des sélecteurs complexes", "auto", 200)}}
 
 Dans le HTML ci-dessus, les deux voisins de `.monTexte p` sont `span` et `.monTexte`. Le `span` vert est un descendant de la classe `.monTexte`, qui est un voisin de `p`.
 

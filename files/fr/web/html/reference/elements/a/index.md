@@ -1,7 +1,6 @@
 ---
 title: "<a> : l'élément d'ancre"
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 l10n:
   sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
 ---
