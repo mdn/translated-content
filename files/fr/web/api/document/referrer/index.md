@@ -1,24 +1,37 @@
 ---
-title: Document.referrer
+title: "Document : propriété referrer"
+short-title: referrer
 slug: Web/API/Document/referrer
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
-## Résumé
+La propriété **`referrer`** de l'interface {{DOMxRef("Document")}} retourne [l'URI <sup>(angl.)</sup>](https://www.w3.org/Addressing/#background) de la page qui a mené à cette page.
 
-Renvoie l'[URI](https://www.w3.org/Addressing/#background) de la page de provenance.
+## Valeur
 
-## Syntaxe
+La valeur est une chaîne de caractères vide si l'utilisateur·ice a accédé à la page directement (pas par un lien, mais par exemple en utilisant un marque-page). Comme cette propriété retourne uniquement une chaîne de caractères, elle ne donne pas accès au modèle objet de document (DOM) de la page référente.
+
+Dans un {{HTMLElement("iframe")}}, la valeur de `Document.referrer` sera initialement définie sur le {{DOMxRef("HTMLAnchorElement/href", "href")}} du {{DOMxRef("Window/location", "Window.location")}} du parent pour les requêtes de même origine.
+Pour les requêtes inter-origine, il s'agit par défaut de {{DOMxRef("HTMLAnchorElement/origin", "origin")}} du `Window.location` du parent.
+Pour plus d'informations, voir la documentation sur [Referrer-Policy&nbsp;: strict-origin-when-cross-origin](/fr/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin).
+
+## Exemples
+
+La ligne suivante affiche une chaîne de caractères contenant la valeur de la propriété référente du document.
 
 ```js
-string = document.referrer;
+console.log(document.referrer);
 ```
 
-## Notes
+Si l'utilisateur·ice a accédé à la page via un lien comme `<a href="https://www.w3.org/">W3</a>`, cela affichera le domaine précédent comme `developer.mozilla.org`. Si l'utilisateur·ice a accédé à la page directement, cela affichera une chaîne vide.
 
-La valeur est une chaîne de caractères vide si l'utilisateur est arrivé directement sur la page (pas grâce à un lien, mais, par exemple, via un marque-page). Étant donné que cette propriété ne retourne qu'une chaîne, elle ne vous donne pas un accès DOM à la page de provenance.
+## Spécifications
 
-## Spécification
+{{Specifications}}
 
-- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+## Compatibilité des navigateurs
+
+{{Compat}}
