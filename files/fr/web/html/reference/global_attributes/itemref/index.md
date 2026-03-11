@@ -1,43 +1,25 @@
 ---
-title: itemref
+title: "Attribut HTML universel : itemref"
+short-title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
-original_slug: Web/HTML/Global_attributes/itemref
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemref`** permet d'associer des propriétés qui ne sont pas des descendants d'un élément avec l'attribut [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes/itemscope).
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemref`** permet d'associer des propriétés à un objet via `itemscope` lorsque l'élement courant n'est pas un élément descendant. `itemref` fournit une liste d'identifiants d'éléments (à ne pas confondre avec `itemid`) dont des propriétés sont définies plus loin dans le document.
+`itemref` fournit une liste d'identifiants d'éléments (à ne pas confondre avec `itemid`) ailleurs dans le document, avec des propriétés supplémentaires.
 
-L'attribut `itemref` peut uniquement être défini sur des éléments pour lesquels un attribut `itemscope` a été défini.
+L'attribut `itemref` ne peut être défini que sur des éléments qui ont un attribut `itemscope` défini.
 
 > [!NOTE]
-> L'attribut `itemref` ne fait pas partie du modèle de données des micro-données. Il s'agit purement d'une construction syntaxique pour aider les auteurs à annoter une page où les données ne suivent pas une structure arborescente claire.
+> L'attribut `itemref` ne fait pas partie du modèle de données des microdonnées. Il s'agit purement d'une construction syntaxique pour aider les auteur·ice·s à annoter une page où les données ne suivent pas une structure arborescente claire. Par exemple, il permet aux auteur·ice·s de baliser des données dans un tableau de manière à ce que chaque colonne définisse un élément distinct tout en conservant les propriétés dans les cellules.
 
-## Syntaxe
+## Exemples
 
-### Syntaxe formelle
+### Représenter des données structurées pour un groupe
 
-```
-itemref
-```
-
-## Exemple
-
-### HTML
-
-```html
-<div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
-<div id="b" itemprop="band" itemscope itemref="c"></div>
-<div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
-</div>
-```
-
-### Structure de données correspondante
-
-Au format [JSON-LD](https://json-ld.org/) :
+Cet exemple utilise des attributs de microdonnées pour représenter les données structurées suivantes (au format [JSON-LD <sup>(angl.)</sup>](https://json-ld.org/))&nbsp;:
 
 ```json
 {
@@ -51,19 +33,31 @@ Au format [JSON-LD](https://json-ld.org/) :
 }
 ```
 
+#### HTML
+
+```html
+<div itemscope id="amanda" itemref="a b"></div>
+<p id="a">Nom&nbsp;: <span itemprop="name">Amanda</span></p>
+<div id="b" itemprop="band" itemscope itemref="c"></div>
+<div id="c">
+  <p>Groupe&nbsp;: <span itemprop="name">Jazz Band</span></p>
+  <p>Taille&nbsp;: <span itemprop="size">12</span> membres</p>
+</div>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Représenter des données structurées pour un groupe")}}
+
 ## Spécifications
 
 {{Specifications}}
 
-## Compatibilité des navigateurs
-
-{{Compat}}
-
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop)
-  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- Les autres attributs universels relatifs aux microdonnées&nbsp;:
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes/itemprop)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes/itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes/itemtype)

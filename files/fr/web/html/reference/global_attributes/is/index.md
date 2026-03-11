@@ -1,35 +1,36 @@
 ---
-title: is
+title: "Attribut HTML universel : is"
+short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
-original_slug: Web/HTML/Global_attributes/is
+l10n:
+  sourceCommit: 56f5609d323467cd08eeaddc57e4490a02be1889
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+> [!NOTE]
+> [Safari ne prévoit pas de prendre en charge les éléments personnalisés intégrés <sup>(angl.)</sup>](https://github.com/WebKit/standards-positions/issues/97) et [les éditeurs de navigateurs explorent des solutions alternatives pour personnaliser les éléments intégrés <sup>(angl.)</sup>](https://github.com/WICG/webcomponents/issues/1029). Consultez la section [compatibilité des navigateurs](#compatibilité_des_navigateurs) pour obtenir des informations sur la prise en charge.
 
-L'attribut **`is`** est un [attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) qui indique qu'un élément HTML standard devrait se comporter comme un élément natif personnalisé (_custom element_) défini (voir [Manipuler les _custom elements_](/fr/docs/Web/API/Web_components/Using_custom_elements) pour plus de détails).
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`is`** permet de définir qu'un élément HTML standard doit se comporter comme un élément intégré personnalisé défini (voir [Utilisation des éléments personnalisés](/fr/docs/Web/API/Web_components/Using_custom_elements) pour plus de détails).
 
-Cet attribut peut uniquement être utilisé si l'élément personnalisé indiqué a été correctement [défini](/fr/docs/Web/API/CustomElementRegistry/define) dans le document courant et qu'il étend le type d'élément sur lequel il est appliqué.
+Cet attribut ne peut être utilisé que si le nom de l'élément personnalisé défini a été correctement [défini](/fr/docs/Web/API/CustomElementRegistry/define) dans le document courant, et qu'il étend le type d'élément auquel il est appliqué.
 
 ## Exemples
 
-Cet exemple est tiré de l'exemple [`word-count-web-component`](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+Le code suivant est tiré de notre exemple [word-count-web-component <sup>(angl.)</sup>](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) ([voir le résultat en direct <sup>(angl.)</sup>](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 
 ```js
-// On crée une classe pour l'élément
+// Création d'une classe pour l'élément
 class WordCount extends HTMLParagraphElement {
   constructor() {
-    // On appelle super() pour récupérer l'initialisation
-    // des classes parentes
+    // Toujours appeler super() en premier dans le constructeur
     super();
 
-    // Le contenu du constructeur, etc.
-    ...
-
+    // Contenu du constructeur omis pour plus de concision
+    // …
   }
 }
 
-// On définit le nouvel élément.
-customElements.define('word-count', WordCount, { extends: 'p' });
+// Définir le nouvel élément
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html
@@ -46,4 +47,4 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## Voir aussi
 
-- Les différents [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
