@@ -16,7 +16,7 @@ La valeur est une chaîne de caractères vide si l'utilisateur·ice a accédé �
 
 Dans un {{HTMLElement("iframe")}}, la valeur de `Document.referrer` sera initialement définie sur le {{DOMxRef("HTMLAnchorElement/href", "href")}} du {{DOMxRef("Window/location", "Window.location")}} du parent pour les requêtes de même origine.
 Pour les requêtes inter-origine, il s'agit par défaut de {{DOMxRef("HTMLAnchorElement/origin", "origin")}} du `Window.location` du parent.
-Pour plus d'informations, voir la documentation sur [Referrer-Policy&nbsp;: strict-origin-when-cross-origin](/fr/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin).
+Pour plus d'informations, voir la documentation sur [Referrer-Policy&nbsp;: strict-origin-when-cross-origin](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin).
 
 ## Exemples
 
