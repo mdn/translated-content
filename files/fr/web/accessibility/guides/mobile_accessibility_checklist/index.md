@@ -34,7 +34,7 @@ Ce document fournit une liste de vérification concise des exigences d'accessibi
 
 - Un équivalent textuel doit être fourni pour chaque élément non textuel non strictement décoratif de l'application.
   - Utilisez _alt_ et _title_ lorsque c'est pertinent ([Guide anglophone sur l'utilisation de l'attribut HTML title <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)).
-  - Si ces attributs ne sont pas applicables, utilisez les [états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
+  - Si ces attributs ne sont pas applicables, utilisez [les états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
 
 - Les images de texte sont à proscrire.
 - Tous les composants d'interface utilisateur avec un texte visible (ou une image de texte) comme libellé doivent avoir ce même texte dans [le nom programmatique <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#dfn-name) du composant. [WCAG 2.1&nbsp;: Libellé dans le nom. <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
