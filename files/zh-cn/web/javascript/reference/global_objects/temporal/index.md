@@ -5,14 +5,6 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-```参考或问题
-wall-clock time 有墙钟时间、墙上时间、挂钟时间、实际时间等翻译，这个词我没找到权威的翻译，考虑了下，决定使用直译“墙钟时间”。
-
-the Chinese calendar 中国农历
-https://en.wikipedia.org/wiki/Chinese_calendar
-
-```
-
 **`Temporal`** 对象支持在各种场景下管理日期和时间，包括内置的时区和日历表示、墙钟时间转换、运算、格式化等功能。它被设计为 {{jsxref("Date")}} 对象的完全替代方案。
 
 ## 描述
