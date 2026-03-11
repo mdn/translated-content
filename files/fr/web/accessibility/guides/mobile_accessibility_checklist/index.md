@@ -37,12 +37,12 @@ Ce document fournit une liste de vérification concise des exigences d'accessibi
   - Si ces attributs ne sont pas applicables, utilisez [les états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
 
 - Les images de texte sont à proscrire.
-- Tous les composants d'interface utilisateur avec un texte visible (ou une image de texte) comme libellé doivent avoir ce même texte dans le [nom programmatique](https://w3c.github.io/wcag/guidelines/22/#dfn-name) du composant. [WCAG 2.1&nbsp;: Libellé dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
+- Tous les composants d'interface utilisateur avec un texte visible (ou une image de texte) comme libellé doivent avoir ce même texte dans [le nom programmatique <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#dfn-name) du composant. [WCAG 2.1&nbsp;: Libellé dans le nom. <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
 - Tous les contrôles de formulaire doivent avoir des libellés (éléments HTML {{HTMLElement("label")}}) pour les utilisateur·ice·s de lecteurs d'écran.
 
 ## Gestion des états
 
-- Les contrôles standards comme les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour les autres contrôles personnalisés, les changements d'état doivent être fournis via les [états ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/#state_prop_def) tels que `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded` et `aria-pressed`.
+- Les contrôles standards comme les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour les autres contrôles personnalisés, les changements d'état doivent être fournis avec [les états ARIA <sup>(angl.)</sup>](https://w3c.github.io/aria/#state_prop_def) tels que `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded` et `aria-pressed`.
 
 ## Orientation
 

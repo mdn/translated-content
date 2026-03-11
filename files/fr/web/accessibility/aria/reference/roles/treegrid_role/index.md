@@ -3,7 +3,7 @@ title: "ARIA : rôle treegrid"
 short-title: treegrid
 slug: Web/Accessibility/ARIA/Reference/Roles/treegrid_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 Le rôle `treegrid` identifie un élément comme étant une grille dont les lignes peuvent être développées ou réduites, de la même manière qu'une «&nbsp;arborescence&nbsp;» (<i lang="en">tree</i> en anglais).
