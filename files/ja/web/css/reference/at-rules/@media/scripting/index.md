@@ -1,9 +1,8 @@
 ---
 title: scripting
 slug: Web/CSS/Reference/At-rules/@media/scripting
-original_slug: Web/CSS/@media/scripting
 l10n:
-  sourceCommit: 0702c8b455d44d12892863735bf7f507ea8eb1cf
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。

@@ -2,7 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Reference/Status/504
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`504 Gateway Timeout`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示當伺服器充當閘道器或{{Glossary("Proxy_server", "代理")}}時，未能及時從上游伺服器獲得回應，以完成請求。這與 {{HTTPStatus("502", "502 Bad Gateway")}} 類似，不同之處在於 `504` 狀態碼表示代理或閘道器在一定時間內未從源伺服器接收到任何 HTTP 回應。

@@ -2,7 +2,7 @@
 title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:modal`** cible un élément qui est dans un état interdisant toute interaction avec les autres éléments situés en dehors jusqu'à ce que l'interaction soit terminée. Plusieurs éléments peuvent être ciblés par la pseudo-classe `:modal` à un même instant donné, mais un seul de ces éléments sera actif et permettra de recevoir une saisie.
@@ -148,7 +148,7 @@ favDialog.addEventListener("close", () => {
 
 ### Résultat
 
-{{EmbedLiveSample("mettre_en_forme_une_boîte_de_dialogue", "100%", 300)}}
+{{EmbedLiveSample("Mettre en forme une boîte de dialogue", "100%", 300)}}
 
 ## Spécifications
 
@@ -161,7 +161,5 @@ favDialog.addEventListener("close", () => {
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("dialog")}}
-- Les autres pseudo-classes relatives à l'état d'affichage&nbsp;:
-  - {{CSSxRef(":fullscreen")}}
-  - {{CSSxRef(":picture-in-picture")}}
+- Les autres pseudo-classes de l'état d'affichage&nbsp;: {{CSSxRef(":fullscreen")}} et {{CSSxRef(":picture-in-picture")}}
 - La liste complète des [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

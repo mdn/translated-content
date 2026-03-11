@@ -33,7 +33,7 @@ Cette règle ne s'applique pas à la fonctionnalité CSS documentée sur la page
 
 Il existe des principes universellement reconnus qu'il n'est pas nécessaire d'énumérer ici&nbsp;:
 
-- Assurez-vous que votre code ne comporte pas d'erreurs de syntaxe, ce qui peut entraîner l'[ignorance de la propriété ou de la déclaration](/fr/docs/Web/CSS/CSS_syntax/Error_handling). Une syntaxe standard non encore implémentée est acceptable, si elle respecte notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible).
+- Assurez-vous que votre code ne comporte pas d'erreurs de syntaxe, ce qui peut entraîner l'[ignorance de la propriété ou de la déclaration](/fr/docs/Web/CSS/Guides/Syntax/Error_handling). Une syntaxe standard non encore implémentée est acceptable, si elle respecte notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible).
 - N'utilisez pas de fonctionnalités [non standard, obsolètes ou dépréciées](/fr/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete). Cette règle s'étend aux [fonctionnalités préfixées](/fr/docs/Glossary/Vendor_Prefix#préfixes_css)&nbsp;: utilisez l'alternative préfixée _uniquement si_ la fonctionnalité standard n'est pas disponible (voir notre [règle générale sur les fonctionnalités CSS modernes](#utilisez_les_fonctionnalités_css_modernes_lorsque_cest_possible)). Si le lecteur a besoin d'une compatibilité plus large, il peut soit ajouter lui-même le préfixe de repli, soit utiliser un postprocesseur CSS.
 - N'écrivez pas de code redondant ou non fonctionnel, ce qui est souvent le signe de bogues ou de restes de refactorisation. Cela inclut les propriétés répétées dans une déclaration, les déclarations vides, les commentaires vides ou les sélecteurs qui ne correspondent à aucun élément.
 
@@ -277,7 +277,7 @@ Les pseudo-éléments `::before`, `::after`, `::first-letter` et `::first-line` 
 
 ### Listes de sélecteurs complexes
 
-Les pseudo-classes `:is()`, `:where()` et `:not()` acceptent des [listes de sélecteurs complexes](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#sélecteurs_complexes). Utilisez-les pour raccourcir vos sélecteurs.
+Les pseudo-classes `:is()`, `:where()` et `:not()` acceptent des [listes de sélecteurs complexes](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#sélecteurs_complexes). Utilisez-les pour raccourcir vos sélecteurs.
 
 Écrivez ceci&nbsp;:
 

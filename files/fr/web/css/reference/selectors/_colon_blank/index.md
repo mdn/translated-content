@@ -2,7 +2,7 @@
 title: :blank
 slug: Web/CSS/Reference/Selectors/:blank
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -10,7 +10,7 @@ l10n:
 > [!NOTE]
 > Le sélecteur `:blank` est une fonctionnalité considérée risquée car en cours de modification par le CSSWG.
 >
-> Voir [l'_issue_ n°1967 à ce propos <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/1967).
+> Voir [le problème n°1967 à ce propos <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/1967).
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:blank`** permet de sélectionner les champs saissables par l'utilisateur·ice et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).
 
@@ -42,9 +42,9 @@ textarea:blank {
 }
 ```
 
-#### Result
+#### Résultat
 
-{{EmbedLiveSample('exemple_de_base_avec_blank', '100%', 150)}}
+{{EmbedLiveSample("Exemple de base avec `:blank`", "100%", 150)}}
 
 ## Spécifications
 

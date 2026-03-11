@@ -2,7 +2,7 @@
 title: "<link> : l'élément de lien vers des ressources externes"
 slug: Web/HTML/Reference/Elements/link
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers {{Glossary("CSS", "une feuille de style")}}, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
@@ -139,20 +139,26 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
           </td>
         </tr>
         <tr>
+          <td>json</td>
+          <td>
+            Les destinations <code>modulepreload</code>.
+          </td>
+        </tr>
+        <tr>
           <td>object</td>
           <td>Élément <code>&#x3C;object></code></td>
         </tr>
         <tr>
           <td>script</td>
           <td>
-            Élément <code>&#x3C;script></code>, Worker <code>importScripts</code>
+            Élément <code>&#x3C;script></code>, Worker <code>importScripts</code>, et destinations <code>modulepreload</code>.
           </td>
         </tr>
         <tr>
           <td>style</td>
           <td>
             Élément <code>&#x3C;link rel=stylesheet></code>, CSS
-            <code>@import</code>
+            <code>@import</code> et destinations <code>modulepreload</code>.
           </td>
         </tr>
         <tr>
@@ -227,12 +233,15 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Cet attribut est principalement utilisé pour lier des feuilles de style externes&nbsp;: il permet à l'agent utilisateur de sélectionner la plus adaptée à l'appareil utilisé.
 
 - `referrerpolicy`
-  - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
+  - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource. Pour des explications détaillées et des exemples de chaque politique, voir la documentation de l'en-tête {{HTTPHeader("Referrer-Policy")}}.
     - `no-referrer` signifie que l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
     - `no-referrer-when-downgrade` signifie qu'aucun en-tête {{HTTPHeader("Referer")}} n'est envoyé lors d'une navigation vers une origine non protégée par TLS (HTTPS).
       Il s'agit du comportement par défaut de l'agent utilisateur si aucune autre règle n'est précisée.
     - `origin` signifie que le référent sera l'origine de la page (schéma, hôte et port).
     - `origin-when-cross-origin` signifie que lors d'une navigation vers d'autres origines, le référent se limite au schéma, à l'hôte et au port, tandis que sur la même origine, le chemin est inclus.
+    - `same-origin` signifie que le référent (origine, chemin et chaîne de requête) est envoyé pour les requêtes de même origine, mais qu'aucun référent n'est envoyé pour les requêtes inter-origines.
+    - `strict-origin` signifie que seule l'origine est envoyée lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS). Aucun référent n'est envoyé vers des destinations moins sécurisées (HTTPS→HTTP). Ceci est important pour les pages HTTPS car cela empêche la fuite d'informations de référent vers des origines non sécurisées.
+    - `strict-origin-when-cross-origin` signifie que le référent complet est envoyé pour les requêtes de même origine. Pour les requêtes inter-origines, seule l'origine est envoyée lorsque le protocole reste le même (HTTPS→HTTPS), et aucun référent n'est envoyé lors d'une dégradation vers HTTP. Il s'agit de la valeur par défaut, qui équilibre fonctionnalité, confidentialité et sécurité pour les sites HTTPS.
     - `unsafe-url` signifie que le référent inclut l'origine et le chemin (mais ni le fragment, ni le mot de passe ou le nom d'utilisateur·ice).
       Ce cas n'est pas sécurisé car il peut laisser fuiter des origines et des chemins de ressources TLS vers des origines non sécurisées.
 
@@ -452,3 +461,4 @@ le rendu de la page sera bloqué jusqu'à ce que la ressource et ses sous-ressou
 ## Voir aussi
 
 - L'en-tête HTTP {{HTTPHeader("Link")}}
+- L'en-tête HTTP {{HTTPHeader("Referrer-Policy")}}

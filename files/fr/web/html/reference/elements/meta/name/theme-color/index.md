@@ -2,9 +2,8 @@
 title: <meta name="theme-color">
 short-title: theme-color
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
-original_slug: Web/HTML/Element/meta/name/theme-color
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
 La valeur de **`theme-color`** comme attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta#name) de l'élément HTML {{HTMLElement("meta")}}, indique une suggestion de couleur que les agents utilisateur devraient utiliser pour personnaliser l'affichage de la page ou l'interface utilisateur environnante. Si elle est utilisée, l'attribut [`content`](/fr/docs/Web/HTML/Reference/Elements/meta#content) devra avoir une valeur CSS de type {{CSSxRef("&lt;color&gt;")}}.

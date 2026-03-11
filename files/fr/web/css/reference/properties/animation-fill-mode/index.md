@@ -1,14 +1,15 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/Reference/Properties/animation-fill-mode
-original_slug: Web/CSS/animation-fill-mode
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`animation-fill-mode`** définit la façon dont une animation CSS applique des styles à sa cible avant et après son exécution.
 
-La propriété **`animation-fill-mode`** indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
+Il est souvent pratique d'utiliser la propriété raccourcie {{CSSxRef("animation")}} pour définir toutes les propriétés d'animation en une seule fois.
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: animation-fill-mode")}}
 
 ```css interactive-example-choice
 animation-fill-mode: none;
@@ -32,8 +33,8 @@ animation-delay: 1s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a mode to start!</div>
+  <div>Animation <span id="play-status"></span></div>
+  <div id="example-element">Sélectionnez un mode pour démarrer&nbsp;!</div>
 </section>
 ```
 
@@ -43,7 +44,7 @@ animation-delay: 1s;
   color: white;
   margin: auto;
   margin-left: 0;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -54,7 +55,7 @@ animation-delay: 1s;
   flex-direction: column;
 }
 
-#playstatus {
+#play-status {
   font-weight: bold;
 }
 
@@ -77,55 +78,58 @@ animation-delay: 1s;
 ```
 
 ```js interactive-example
-"use strict";
+const el = document.getElementById("example-element");
+const status = document.getElementById("play-status");
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
-
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
+function update() {
+  status.textContent = "décalée";
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
-      });
+      el.className = "animating";
     });
-  }
-
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
   });
+}
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
-  });
+el.addEventListener("animationstart", () => {
+  status.textContent = "en cours";
+});
 
-  const observer = new MutationObserver(() => {
-    update();
-  });
+el.addEventListener("animationend", () => {
+  status.textContent = "terminée";
+});
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
-
+const observer = new MutationObserver(() => {
   update();
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
 ```
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
+/* Animation seule */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
 animation-fill-mode: both;
 
-/* Gestion de plusieurs animations */
+/* Animations multiples */
 animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
+
+/* Valeurs globales */
+animation-fill-mode: inherit;
+animation-fill-mode: initial;
+animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
+animation-fill-mode: unset;
 ```
 
 ### Valeurs
@@ -133,30 +137,35 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.
 - `forwards`
-  - : La cible retiendra les valeurs calculées définies lors de la dernière étape (_keyframe_). La dernière étape considérée dépend de la valeur de {{cssxref("animation-direction")}} et de {{cssxref("animation-iteration-count")}} :
+  - : La cible retiendra les valeurs calculées définies lors de la dernière image clé (<i lang="en">keyframe</i> en anglais). La dernière étape considérée dépend de la valeur de {{CSSxRef("animation-direction")}} et de {{CSSxRef("animation-iteration-count")}}&nbsp;:
 
-    | `animation-direction` | `animation-iteration-count` | dernière _keyframe_ |
-    | --------------------- | --------------------------- | ------------------- |
-    | `normal`              | pair ou impair              | `100%` ou `to`      |
-    | `reverse`             | pair ou impair              | `0%` ou `from`      |
-    | `alternate`           | pair                        | `0%` ou `from`      |
-    | `alternate`           | impair                      | `100%` ou `to`      |
-    | `alternate-reverse`   | pair                        | `100%` ou `to`      |
-    | `alternate-reverse`   | impair                      | `0%` ou `from`      |
+    | `animation-direction` | `animation-iteration-count` | dernière étape |
+    | --------------------- | --------------------------- | -------------- |
+    | `normal`              | pair ou impair              | `100%` ou `to` |
+    | `reverse`             | pair ou impair              | `0%` ou `from` |
+    | `alternate`           | pair                        | `0%` ou `from` |
+    | `alternate`           | impair                      | `100%` ou `to` |
+    | `alternate-reverse`   | pair                        | `100%` ou `to` |
+    | `alternate-reverse`   | impair                      | `0%` ou `from` |
+
+    Les propriétés animées se comportent comme si elles étaient incluses dans une valeur de propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement a été créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
 
 - `backwards`
-  - : L'animation appliquera les valeur définies par la première _keyframe_ pertinente et les retiendra pendant la durée indiquée par {{cssxref("animation-delay")}}. La première _keyframe_ pertinente dépend de la valeur de {{cssxref("animation-direction")}} :
+  - : L'animation appliquera les valeur définies par la première image clé (<i lang="en">keyframe</i> en anglais) pertinente et les retiendra pendant la durée indiquée par {{CSSxRef("animation-delay")}}. La première étape pertinente dépend de la valeur de {{CSSxRef("animation-direction")}}&nbsp;:
 
-    | `animation-direction`            | première _keyframe_ |
-    | -------------------------------- | ------------------- |
-    | `normal` ou `alternate`          | `0%` ou `from`      |
-    | `reverse` ou `alternate-reverse` | `100%` ou `to`      |
+    | `animation-direction`            | première étape |
+    | -------------------------------- | -------------- |
+    | `normal` ou `alternate`          | `0%` ou `from` |
+    | `reverse` ou `alternate-reverse` | `100%` ou `to` |
 
 - `both`
   - : L'animation respectera les règles qui s'appliquent à `forwards` et `backwards`, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.
 
 > [!NOTE]
-> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Guides/Animations/Using).
+> Lorsque vous indiquez plusieurs valeurs séparées par des virgules sur une propriété `animation-*`, elles sont appliquées aux animations dans l'ordre d'apparition des {{CSSxRef("animation-name")}}. Si le nombre d'animations et de valeurs de propriété `animation-*` ne correspond pas, voir [Définir plusieurs valeurs de propriétés d'animation](/fr/docs/Web/CSS/Guides/Animations/Using#définir_plusieurs_valeurs_de_propriétés_danimation).
+
+> [!NOTE]
+> `animation-fill-mode` a le même effet lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) que pour les animations classiques basées sur le temps.
 
 ## Définition formelle
 
@@ -168,47 +177,11 @@ animation-fill-mode: both, forwards, none;
 
 ## Exemples
 
-### CSS
+### Définir le mode de remplissage
 
-```css
-.demo {
-  border-top: 100px solid #ccc;
-  height: 300px;
-  font-family: sans-serif;
-}
-@keyframes grow {
-  0% {
-    font-size: 0;
-  }
-  100% {
-    font-size: 40px;
-  }
-}
-@-webkit-keyframes grow {
-  0% {
-    font-size: 0;
-  }
-  100% {
-    font-size: 40px;
-  }
-}
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-}
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
-}
-```
+Vous pouvez voir l'effet de `animation-fill-mode` dans l'exemple suivant. Il montre comment faire en sorte que l'animation reste dans son état final plutôt que de revenir à l'état d'origine (qui est le comportement par défaut).
 
-### HTML
+#### HTML
 
 ```html
 <p>Déplacez votre souris sur la boîte grise.</p>
@@ -218,9 +191,40 @@ animation-fill-mode: both, forwards, none;
 </div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples',700,300)}}
+```css
+.demo {
+  border-top: 100px solid #cccccc;
+  height: 300px;
+}
+
+@keyframes grow {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+
+.demo:hover .grows {
+  animation-name: grow;
+  animation-duration: 3s;
+}
+
+.demo:hover .grows-and-stays {
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir le mode de remplissage", 700, 300)}}
+
+Voir [Animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using) pour plus d'exemples.
 
 ## Spécifications
 
@@ -233,4 +237,5 @@ animation-fill-mode: both, forwards, none;
 ## Voir aussi
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- L'interface API {{DOMxRef("AnimationEvent")}}
+- Les autres propriétés d'animation associées&nbsp;: {{CSSxRef("animation")}}, {{CSSxRef("animation-composition")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-name")}}, {{CSSxRef("animation-play-state")}}, {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-timing-function")}}

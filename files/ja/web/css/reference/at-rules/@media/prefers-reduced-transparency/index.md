@@ -1,9 +1,8 @@
 ---
 title: prefers-reduced-transparency
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency
-original_slug: Web/CSS/@media/prefers-reduced-transparency
 l10n:
-  sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -23,7 +22,7 @@ l10n:
 また、特定の設定を提供していないプラットフォームでは、より曖昧な手掛かりに依存する場合もあります。
 
 - Windows 10/11: 設定 > 個人用設定 > 色 > 透明効果
-- macOS: System Preferences > Accessibility > Display > Reduce transparency
+- macOS: System Settings > Accessibility > Display > Reduce transparency
 - iOS: Settings > Accessibility > Display & Text Size > Reduce Transparency
 
 ## 例

@@ -1,22 +1,13 @@
 ---
 title: update
 slug: Web/CSS/Reference/At-rules/@media/update
-original_slug: Web/CSS/@media/update
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`update`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力端末がどれだけの頻度でコンテンツの表示を更新することができるかを調べるために使用することができます。
 
-```css
-@media (update: < none | slow | fast >) {
-  /* 出力機器の更新頻度が一致する場合に適用するスタイル */
-}
-```
-
 ## 構文
-
-`update` 特性は、以下の一覧のうち一つのキーワード値で指定します。
 
 - `none`
   - : いったん表示されると、レイアウトは更新されることはありません。例: 紙に印刷する文書。

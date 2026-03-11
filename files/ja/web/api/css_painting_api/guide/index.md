@@ -2,46 +2,47 @@
 title: CSS 描画 API の使用
 slug: Web/API/CSS_Painting_API/Guide
 l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("CSS Painting API")}}
-[CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API) を用いると、開発者がプログラムで CSS 画像が呼び出されるところならばどこでも利用できる画像を定義できます。例えば CSS の [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image)、[`border-image`](/ja/docs/Web/CSS/Reference/Properties/border-image-source), [`mask-image`](/ja/docs/Web/CSS/Reference/Properties/mask-image) などです。
+
+[CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API) を用いると、開発者がプログラムで CSS 画像が呼び出されるところならばどこでも利用できる画像を定義できます。例えば CSS の {{cssxref("background-image")}}、{{cssxref("border-image")}}、{{cssxref("mask-image")}} などです。
 
 CSS スタイルシートで使用される画像をプログラムで生成するには、いくつかのステップを踏む必要があります。
 
-1. [`registerPaint()`](/ja/docs/Web/API/PaintWorkletGlobalScope/registerPaint) 関数を用いて描画ワークレットを定義します
+1. {{domxref('PaintWorkletGlobalScope.registerPaint', 'registerPaint()')}} 関数を用いて描画ワークレットを定義します
 2. そのワークレットを登録します
-3. `{{cssxref("image/paint","paint()")}}` という CSS 関数を読み込みます
+3. {{cssxref('image/paint', 'paint()')}} という CSS 関数を読み込みます
 
 これらの手順を詳しく説明するために、このヘッダーのようなハーフハイライトの背景を作成することから始めます。
 
 ![ヘッダーの左下 3 分の 2 に「My Cool Header」と書かれたテキストと黄色の背景画像ブロック。](mycoolheader.png)
 
 > [!NOTE]
-> この記事の例全体の完全なソースは [https://github.com/mdn/dom-examples/tree/main/css-painting](https://github.com/mdn/dom-examples/tree/main/css-painting) にあり、例は [https://mdn.github.io/dom-examples/css-painting/](https://mdn.github.io/dom-examples/css-painting/) でライブで実行できます。
+> 完全な動作するデモについては、[CSS 描画 API の例](https://mdn.github.io/dom-examples/css-painting/)とその[ソースコード](https://github.com/mdn/dom-examples/tree/main/css-painting)を参照してください。
 
 ## CSS 描画ワークレット
 
-外部スクリプトファイルでは、[`registerPaint()`](/ja/docs/Web/API/PaintWorkletGlobalScope/registerPaint) 関数を使用して [CSS 描画ワークレット](/ja/docs/Web/API/Worklet)に名前をつけています。この関数には 2 つの引数を取ります。最初の引数はそのワークレットの名前です。これは CSS で要素にスタイルを適用する際に `paint()` 関数の引数として渡されます。2 つ目の引数は、すべての魔法を行うクラスで、その中でコンテキストオプションと、画像となる 2 次元キャンバスに何を描画するかを定義します。
+外部スクリプトファイルでは、{{domxref('PaintWorkletGlobalScope.registerPaint', 'registerPaint()')}} 関数を使用して [CSS 描画ワークレット](/ja/docs/Web/API/Worklet)に名前をつけています。この関数には 2 つの引数を取ります。最初の引数はそのワークレットの名前です。これは CSS で要素にスタイルを適用する際に `paint()` 関数の引数として渡されます。2 つ目の引数は、すべての魔法を行うクラスで、その中でコンテキストオプションと、画像となる 2 次元キャンバスに何を描画するかを定義します。
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     /*
-       アルファ透明度を許可するかどうかを定義します。既定では true にします。
-       false に設定した場合、すべてのキャンバスに
-       使用されている色は完全に不透明になります。
-    */
+     * アルファ透明度を許可するかどうかを定義します。既定では true にします。
+     * false に設定した場合、すべてのキャンバスに
+     * 使用されている色は完全に不透明になります。
+     */
     static get contextOptions() {
       return { alpha: true };
     }
 
     /*
-        ctx は 2D の描画コンテキストで
-        HTML キャンバス API のサブセットです。
-    */
+     * ctx は 2D の描画コンテキストで
+     * HTML キャンバス API のサブセットです。
+     */
     paint(ctx) {
       ctx.fillStyle = "hsl(55 90% 60% / 100%)";
       ctx.fillRect(0, 15, 200, 20); /* 順序: x, y, w, h */
@@ -50,23 +51,23 @@ registerPaint(
 );
 ```
 
-このクラスの例では、`contextOptions()` を用いて 1 つだけコンテキストオプションを定義しています。そこではアルファ透明度を許可するシンプルなオブジェクトを返しています。
+このクラスの例では、`contextOptions()` を用いて 1 つだけコンテキストオプションを定義しています。そこではアルファ透明度を許可するオブジェクトを返しています。
 
 それでは `paint()` 関数を用いてキャンバスに描画していきます。
 
 `paint()` 関数は 3 つの引数を取ることができます。ここでは最初の引数だけ渡していて、それはレンダリングコンテキスト（後ほど詳しく説明します）といい、ふつう `ctx` という変数名で表されます。2D レンダリングコンテキストは [HTML キャンバス API](/ja/docs/Web/API/Canvas_API) のサブセットで、Houdini (`PaintRenderingContext2D`と呼ばれる) で利用可能なバージョンはキャンバス API のほとんどすべての機能を含むサブセットですが、そのうち `CanvasImageData`, `CanvasUserInterface`, `CanvasText`, `CanvasTextDrawingStyles` の各 API は [除かれています](https://drafts.css-houdini.org/css-paint-api-1/#2d-rendering-context))。
 
-黄色の影をつくるために [`fillStyle`](/ja/docs/Web/API/CanvasRenderingContext2D/fillStyle) を `hsl(55 90% 60% / 100%)` と定義し、その色の矩形を作成するために `fillRect()` を呼び出します。[`fillRect()`](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect) の引数は、順に x 軸原点、y 軸原点、幅、高さです。`fillRect(0, 15, 200, 20)` は、幅 200 単位、高さ 20 単位の矩形を、コンテンツボックスの左端から 0 単位、上端から 15 単位に作成します。
+黄色の影をつくるために {{domxref('CanvasRenderingContext2D.fillStyle', 'fillStyle')}} を `hsl(55 90% 60% / 100%)` と定義し、その色の矩形を作成するために `fillRect()` を呼び出します。{{domxref('CanvasRenderingContext2D.fillRect', 'fillRect()')}} の引数は、順に x 軸原点、y 軸原点、幅、高さです。`fillRect(0, 15, 200, 20)` は、幅 200 単位、高さ 20 単位の矩形を、コンテンツボックスの左端から 0 単位、上端から 15 単位に作成します。
 
-CSS の [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size) と [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティを使用して、この背景画像のサイズを変更したり、再配置したりすることができますが、これは描画ワークレットで作成した黄色のボックスの既定のサイズと配置です。
+CSS の {{cssxref("background-size")}} と {{cssxref("background-position")}} プロパティを使用して、この背景画像のサイズを変更したり、再配置したりすることができますが、これは描画ワークレットで作成した黄色のボックスの既定のサイズと配置です。
 
-この例はシンプルなものにしてみました。より多くのオプションについては、[キャンバスのドキュメント](/ja/docs/Web/HTML/Reference/Elements/canvas)を参照してください。また、このチュートリアルの後半では、少し複雑さを追加しています。
+この例はシンプルなものにしてみました。より多くのオプションについては、 {{HTMLElement("canvas")}} のドキュメントを参照してください。また、このチュートリアルの後半では、少し複雑さを追加しています。
 
 ## ワークレットの登録
 
-描画ワークレットを使用するためには、[`addModule()`](/ja/docs/Web/API/Worklet/addModule) を用いて登録し、HTML 内の目的の DOM ノードに適用される CSS セレクターのスタイルに含める必要があります。
+描画ワークレットを使用するためには、{{domxref('Worklet.addModule', 'addModule()')}} を用いて登録し、HTML 内の目的の DOM ノードに適用される CSS セレクターのスタイルに含める必要があります。
 
-描画ワークレットのセットアップとデザインは、上に示した外部スクリプトで行われました。この[ワークレット](/ja/docs/Web/API/Worklet)をメインスクリプトから登録する必要があります。
+描画ワークレットのセットアップとデザインは、上に示した外部スクリプトで行われました。このワークレット ({{domxref('worklet')}}) をメインスクリプトから登録する必要があります。
 
 ```js
 CSS.paintWorklet.addModule("nameOfPaintWorkletFile.js");
@@ -88,7 +89,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 ```
 
@@ -120,17 +121,16 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     static get contextOptions() {
       return { alpha: true };
     }
 
     /*
-        ctx は 2D 描画コンテキスト
-        size は paintSize で、描画するボックスの寸法（height と width）を持つ
-    */
-
+     * ctx は 2D 描画コンテキスト
+     * size は paintSize で、描画するボックスの寸法（height と width）を持つ
+     */
     paint(ctx, size) {
       ctx.fillStyle = "hsl(55 90% 60% / 100%)";
       ctx.fillRect(0, size.height / 3, size.width * 0.4, size.height * 0.6);
@@ -164,7 +164,7 @@ registerPaint(
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 .half {
   width: 50%;
@@ -208,13 +208,13 @@ registerPaint(
 );
 ```
 
-`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に`inputArguments` について見ていきます。
+`paint()` 関数の 3 つの引数には、描画コンテキスト、描画サイズ、プロパティが含まれます。プロパティにアクセスできるようにするために、静的な `inputProperties()` メソッドを含めています。これは、通常のプロパティや[カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を含む CSS プロパティへの動的なアクセスを提供し、プロパティ名の{{jsxref("Array", "配列")}}を返します。最後に [`inputArguments`](#引数を渡す) について見ていきます。
 
 3 種類の色と 3 種類の幅の間で周回する背景画像を使って、項目一覧を作成してみましょう。
 
 ![背景画像の幅と色は、カスタムプロパティに基づいて変更されます。](boxbg.png)
 
-この CSS では、`--boxColor` と `--widthSubtractor` のカスタムプロパティを使用しています。
+この CSS では、`--box-color` と `--width-subtractor` のカスタムプロパティを使用しています。
 
 ### 描画ワークレット
 
@@ -229,25 +229,24 @@ registerPaint(
     }
 
     /*
-     この関数を使用して、要素に定義されているカスタムプロパティ (または 'height' などの
-     通常のプロパティ) を取得し、それらを指定した配列で返します。
-  */
+     * この関数を使用して、要素に定義されているカスタムプロパティ (または 'height' などの
+     * 通常のプロパティ) を取得し、それらを指定した配列で返します。
+     */
     static get inputProperties() {
-      return ["--boxColor", "--widthSubtractor"];
+      return ["--box-color", "--width-subtractor"];
     }
 
     paint(ctx, size, props) {
       /*
-       ctx -> 描画コンテキスト
-       size -> paintSize: width および height
-       props -> properties: get() メソッド
-    */
-
-      ctx.fillStyle = props.get("--boxColor");
+       * ctx -> 描画コンテキスト
+       * size -> paintSize: width および height
+       * props -> properties: get() メソッド
+       */
+      ctx.fillStyle = props.get("--box-color");
       ctx.fillRect(
         0,
         size.height / 3,
-        size.width * 0.4 - props.get("--widthSubtractor"),
+        size.width * 0.4 - props.get("--width-subtractor"),
         size.height * 0.6,
       );
     }
@@ -286,22 +285,22 @@ registerPaint(
 
 #### CSS
 
-この CSS では、`--boxColor` および `--widthSubtractor` のカスタムプロパティを定義します。
+この CSS では、`--box-color` および `--width-subtractor` のカスタムプロパティを定義します。
 
 ```css
 li {
   background-image: paint(boxbg);
-  --boxColor: hsl(55 90% 60% / 100%);
+  --box-color: hsl(55 90% 60% / 100%);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 100%);
-  --widthSubtractor: 20;
+  --box-color: hsl(155 90% 60% / 100%);
+  --width-subtractor: 20;
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 100%);
-  --widthSubtractor: 40;
+  --box-color: hsl(255 90% 60% / 100%);
+  --width-subtractor: 40;
 }
 ```
 
@@ -321,7 +320,7 @@ CSS.paintWorklet.addModule("boxbg.js");
 
 ## より複雑にする
 
-これまでの例は、例えば装飾的に[生成されたコンテンツ](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)を `::before` で配置したり、`background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` とするなど、既存の CSS プロパティを使用する方法で再現することができるので、あまり刺激的には見えないかもしれません。CSS 描画 API が面白くて強力なのは、変数を渡して自動的にサイズを変更する複雑な画像を作成できることです。
+これまでの例は、例えば装飾的な[生成コンテンツ](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)を `::before` で配置したり、`background: linear-gradient(yellow, yellow) 0 15px / 200px 20px no-repeat;` とするなど、既存の CSS プロパティを使用する方法で再現することができるので、あまり刺激的には見えないかもしれません。CSS 描画 API が面白くて強力なのは、変数を渡して自動的にサイズを変更する複雑な画像を作成できることです。
 
 それではもっと複雑な例を見てみましょう。
 
@@ -329,10 +328,10 @@ CSS.paintWorklet.addModule("boxbg.js");
 
 ```js
 registerPaint(
-  "headerHighlight",
+  "header-highlight",
   class {
     static get inputProperties() {
-      return ["--highColor"];
+      return ["--high-color"];
     }
     static get contextOptions() {
       return { alpha: true };
@@ -344,7 +343,7 @@ registerPaint(
       const y = size.height * 0.3;
       const blockWidth = size.width * 0.33;
       const highlightHeight = size.height * 0.85;
-      const color = props.get("--highColor");
+      const color = props.get("--high-color");
 
       ctx.fillStyle = color;
 
@@ -389,20 +388,20 @@ registerPaint(
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-それぞれのヘッダーは、それぞれ異なった値の `--highColor` [カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を持つことができます。
+それぞれのヘッダーは、それぞれ異なった値の `--high-color` [カスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)を持つことができます。
 
 ```css
 .fancy {
-  background-image: paint(headerHighlight);
+  background-image: paint(header-highlight);
 }
 h1 {
-  --highColor: hsl(155 90% 60% / 70%);
+  --high-color: hsl(155 90% 60% / 70%);
 }
 h3 {
-  --highColor: hsl(255 90% 60% / 50%);
+  --high-color: hsl(255 90% 60% / 50%);
 }
 h6 {
-  --highColor: hsl(355 90% 60% / 30%);
+  --high-color: hsl(355 90% 60% / 30%);
 }
 ```
 
@@ -416,7 +415,7 @@ CSS.paintWorklet.addModule("header-highlight.js");
 
 {{EmbedGHLiveSample("dom-examples/css-painting/fancy-header-highlight/", 200, 200)}}
 
-このワークレットそのものを編集することはできませんが、CSS や HTML をいじることはできます。ヘッダーの [`float`](/ja/docs/Web/CSS/Reference/Properties/float) と [`clear`](/ja/docs/Web/CSS/Reference/Properties/clear) を試してみるのはどうでしょう？
+このワークレットそのものを編集することはできませんが、CSS や HTML をいじることはできます。ヘッダーの {{cssxref("scale")}} や {{cssxref("rotate")}} を試してみるのはどうでしょう？
 
 上記の背景画像を CSS 描画 API を使わずに作ってみるのもいいかもしれません。これは可能ですが、作成したい色ごとに異なる、かなり複雑な線形グラデーションを宣言しなければなりません。CSS 描画 API を使えば、1 つのワークレットを再利用することができ、その場合でも異なる色を渡すことができます。
 
@@ -431,28 +430,36 @@ CSS で関数を呼び出すときに、これらの引数を追加すること�
 
 ```css
 li {
-  background-image: paint(hollowHighlights, stroke);
+  background-image: paint(hollow-highlights, stroke);
 }
 ```
 
 これで、`registerPaint()` に渡されるクラスの `inputArguments()` メソッドを使用して、`paint()` 関数に追加したカスタム引数にアクセスできるようになりました。
 
 ```js
-static get inputArguments() { return ['*']; }
+class Worklet {
+  static get inputArguments() {
+    return ["*"];
+  }
+  // …
+}
 ```
 
 実際にアクセスするにはこうします。
 
 ```js
-paint(ctx, size, props, args) {
+class Worklet {
+  // …
+  paint(ctx, size, props, args) {
+    // カスタム引数を使う
+    const hasStroke = args[0].toString();
 
-  // カスタム引数を使う
-  const hasStroke = args[0].toString();
-
-  // stroke 引数が 'stroke' の場合は塗りつぶしはしません
-  if (hasStroke === 'stroke') {
-    ctx.fillStyle = 'transparent';
-    ctx.strokeStyle = color;
+    // stroke 引数が 'stroke' の場合は塗りつぶしはしません
+    if (hasStroke === "stroke") {
+      ctx.fillStyle = "transparent";
+      ctx.strokeStyle = color;
+    }
+    // …
   }
   // …
 }
@@ -464,40 +471,49 @@ paint(ctx, size, props, args) {
 
 ```css
 li {
-  background-image: paint(hollowHighlights, stroke, 10px);
+  background-image: paint(hollow-highlights, stroke, 10px);
 }
 ```
 
 また、特定の型の引数を指定することもできます。引数の値をリストで `get` する際に、特に `<length>` で単位を指定します。
 
 ```js
-static get inputArguments() { return ['*', '<length>']; }
+class Worklet {
+  // …
+  static get inputArguments() {
+    return ["*", "<length>"];
+  }
+  // …
+}
 ```
 
-この場合は `<length>` 属性を要求しました。返される配列の最初の要素は [`CSSUnparsedValue`](/ja/docs/Web/API/CSSUnparsedValue) です。2 番目の要素は [`CSSStyleValue`](/ja/docs/Web/API/CSSStyleValue) です。
+この場合は `<length>` 属性を要求しました。返される配列の最初の要素は {{domxref('CSSUnparsedValue')}} です。2 番目の要素は {{domxref('CSSStyleValue')}} です。
 
 カスタム引数がユニットなどの CSS 値である場合、`registerPaint()` 関数で取得する際に value type キーワードを使用することで、Typed OM CSSStyleValue クラス（およびサブクラス）を呼び出すことができます。
 
 これで型と値のプロパティにアクセスできるようになりました。つまり箱から出してすぐにピクセル数と数値型を取得できるということです。（確かに `ctx.lineWidth` は、長さの単位を持つ値ではなく float を値として受け取りますが、これは例ですから...）
 
 ```js
-paint(ctx, size, props, args) {
+class Worklet {
+  // …
+  paint(ctx, size, props, args) {
+    const strokeWidth = args[1];
 
-  const strokeWidth = args[1];
+    if (strokeWidth.unit === "px") {
+      ctx.lineWidth = strokeWidth.value;
+    } else {
+      ctx.lineWidth = 1.0;
+    }
 
-  if (strokeWidth.unit === 'px') {
-    ctx.lineWidth = strokeWidth.value;
-  } else {
-    ctx.lineWidth = 1.0;
+    // …
   }
-
   // …
 }
 ```
 
 このワークレットのさまざまな部分を制御するためにカスタムプロパティを使用することと、ここに記載されている引数との違いに注目する価値があります。カスタムプロパティ (および実際にはスタイルマップ上のすべてのプロパティ) はグローバルなもので、CSS (および JS) 内の他の場所で使用することができます。
 
-例えば `paint()` 関数内で色を設定するために `--mainColor` を用意するのは便利ですが、これは CSS の他の場所で色を設定するのにも使えます。これを paint のためだけに特別に変更したい場合は、かなり難しいかもしれません。そこで便利なのがカスタム引数です。もう一つの考え方としては、引数は実際に描画するものを制御するために設定され、プロパティはスタイルを制御するために設定されるということです。
+例えば `paint()` 関数内で色を設定するために `--main-color` を用意するのは便利ですが、これは CSS の他の場所で色を設定するのにも使えます。これを paint のためだけに特別に変更したい場合は、かなり難しいかもしれません。そこで便利なのがカスタム引数です。もう一つの考え方としては、引数は実際に描画するものを制御するために設定され、プロパティはスタイルを制御するために設定されるということです。
 
 ![リストアイテムの背景画像は、ピンク、紫、緑のいずれかであり、ストロークの幅が異なり、緑は塗りつぶされています。](hollowfilled.png)
 
@@ -507,10 +523,10 @@ paint(ctx, size, props, args) {
 
 ```js
 registerPaint(
-  "hollowHighlights",
+  "hollow-highlights",
   class {
     static get inputProperties() {
-      return ["--boxColor"];
+      return ["--box-color"];
     }
     // `paint` 関数に渡されるカスタム引数
     static get inputArguments() {
@@ -534,9 +550,9 @@ registerPaint(
       const blockHeight = size.height * 0.85;
 
       // CSS から paint() 関数に渡された値
-      const color = props.get("--boxColor");
+      const color = props.get("--box-color");
       const strokeType = args[0].toString();
-      const strokeWidth = parseInt(args[1]);
+      const strokeWidth = parseInt(args[1], 10);
 
       // 線幅を設定する
       ctx.lineWidth = strokeWidth ?? 1.0;
@@ -586,18 +602,18 @@ registerPaint(
 
 ```css
 li {
-  --boxColor: hsl(155 90% 60% / 50%);
-  background-image: paint(hollowHighlights, stroke, 5px);
+  --box-color: hsl(155 90% 60% / 50%);
+  background-image: paint(hollow-highlights, stroke, 5px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(255 90% 60% / 50%);
-  background-image: paint(hollowHighlights, filled, 3px);
+  --box-color: hsl(255 90% 60% / 50%);
+  background-image: paint(hollow-highlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(355 90% 60% / 50%);
-  background-image: paint(hollowHighlights, stroke, 1px);
+  --box-color: hsl(355 90% 60% / 50%);
+  background-image: paint(hollow-highlights, stroke, 1px);
 }
 ```
 

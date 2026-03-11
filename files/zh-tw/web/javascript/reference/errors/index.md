@@ -2,7 +2,7 @@
 title: JavaScript 錯誤參考
 slug: Web/JavaScript/Reference/Errors
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 下方列出了 JavaScript 會拋出的錯誤。這些錯誤可以作為有用的除錯輔助，但回報的問題不一定總是能立即明瞭。下方的頁面將提供關於這些錯誤的更多細節。每個錯誤都是一個基於 {{jsxref("Error")}} 物件的物件，並具有 `name` 和 `message` 屬性。
