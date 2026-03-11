@@ -26,7 +26,7 @@ Cependant, cela ne fonctionne que pour activer l'autorisation pour du code inté
 C'est aussi moins efficace que d'utiliser les en-têtes, car la ressource doit être chargée pour activer l'autorisation.
 
 > [!NOTE]
-> L'utilisation de cette fonctionnalité peut être bloquée par une [politique de permissions](/fr/docs/Web/HTTP/Headers/Permissions-Policy) {{HTTPHeader("Permissions-Policy/storage-access", "storage-access")}} définie sur votre serveur. De plus, le document doit passer des vérifications supplémentaires propres au navigateur telles que des listes d'autorisation, des listes de blocage, une classification sur l'appareil, les paramètres utilisateur·ice·s, des heuristiques anti [usurpation de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ou demander explicitement la permission à l'utilisateur·ice.
+> L'utilisation de cette fonctionnalité peut être bloquée par une [politique de permissions](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) {{HTTPHeader("Permissions-Policy/storage-access", "storage-access")}} définie sur votre serveur. De plus, le document doit passer des vérifications supplémentaires propres au navigateur telles que des listes d'autorisation, des listes de blocage, une classification sur l'appareil, les paramètres utilisateur·ice·s, des heuristiques anti [usurpation de clic](/fr/docs/Web/Security/Attacks/Clickjacking), ou demander explicitement la permission à l'utilisateur·ice.
 
 ## Syntaxe
 
