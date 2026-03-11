@@ -3,7 +3,7 @@ title: "ARIA : rôle navigation"
 short-title: navigation
 slug: Web/Accessibility/ARIA/Reference/Roles/navigation_role
 l10n:
-  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle `navigation` sert à identifier les principaux groupes de liens utilisés pour naviguer dans le contenu d'un site web ou d'une page.
@@ -113,6 +113,5 @@ Les lecteurs d'écran annoncent le type de rôle du repère. Il n'est donc pas n
 
 - L'élément HTML {{HTMLElement('nav')}}
 - [Utiliser les sections et la structure HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [Utiliser les repères WAI-ARIA <sup>(angl.)</sup>](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
-- [Repères accessibles <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [Navigation sémantique avec l'élément nav <sup>(angl.)</sup>](https://html5doctor.com/nav-element/)
+- [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
+- [Navigation sémantique avec l'élément nav | HTML5 Doctor <sup>(angl.)</sup>](https://html5doctor.com/nav-element/)

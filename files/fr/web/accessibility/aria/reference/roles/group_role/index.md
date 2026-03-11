@@ -2,9 +2,8 @@
 title: "ARIA : rôle group"
 short-title: group
 slug: Web/Accessibility/ARIA/Reference/Roles/group_role
-original_slug: Web/Accessibility/ARIA/Roles/group_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 Le rôle `group` identifie un ensemble d'objets d'interface utilisateur qui n'est pas destiné à être inclus dans un résumé de page ou une table des matières par les technologies d'assistance.
@@ -37,7 +36,11 @@ L'exemple de code HTML ci-dessous utilise le rôle `group` avec une vue `tree`&n
     role="presentation"
     aria-owns="animalGroup"
     aria-expanded="true">
-    <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
+    <img
+      role="presentation"
+      tabindex="-1"
+      src="images/treeExpanded.gif"
+      alt="" />
     <span role="treeitem" tabindex="0">Animaux</span>
   </div>
   <div id="animalGroup" role="group">
@@ -50,7 +53,11 @@ L'exemple de code HTML ci-dessous utilise le rôle `group` avec une vue `tree`&n
       role="presentation"
       aria-owns="catGroup"
       aria-expanded="false">
-      <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
+      <img
+        role="presentation"
+        tabindex="-1"
+        src="images/treeContracted.gif"
+        alt="" />
       <span role="treeitem" tabindex="0">Chats</span>
     </div>
     <div id="catGroup" role="group">
