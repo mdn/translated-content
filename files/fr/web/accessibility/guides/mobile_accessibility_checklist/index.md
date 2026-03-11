@@ -1,9 +1,8 @@
 ---
 title: Liste de vérification de l'accessibilité mobile
 slug: Web/Accessibility/Guides/Mobile_accessibility_checklist
-original_slug: Web/Accessibility/Mobile_accessibility_checklist
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Ce document fournit une liste de vérification concise des exigences d'accessibilité pour les développeur·euse·s d'applications mobiles. Il a vocation à évoluer en continu à mesure que de nouveaux modèles apparaissent.
@@ -34,8 +33,8 @@ Ce document fournit une liste de vérification concise des exigences d'accessibi
 ## Équivalents textuels
 
 - Un équivalent textuel doit être fourni pour chaque élément non textuel non strictement décoratif de l'application.
-  - Utilisez _alt_ et _title_ lorsque c'est pertinent ([Guide anglophone sur l'utilisation de l'attribut HTML title <sup>(angl.)</sup>](https://www.tpgi.com/using-the-html-title-attribute-updated/)).
-  - Si ces attributs ne sont pas applicables, utilisez les [états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
+  - Utilisez _alt_ et _title_ lorsque c'est pertinent ([Guide anglophone sur l'utilisation de l'attribut HTML title <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)).
+  - Si ces attributs ne sont pas applicables, utilisez [les états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes) appropriés comme `aria-label`, `aria-labelledby` ou `aria-describedby`.
 
 - Les images de texte sont à proscrire.
 - Tous les composants d'interface utilisateur avec un texte visible (ou une image de texte) comme libellé doivent avoir ce même texte dans le [nom programmatique](https://w3c.github.io/wcag/guidelines/22/#dfn-name) du composant. [WCAG 2.1&nbsp;: Libellé dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
@@ -72,4 +71,4 @@ Ce document fournit une liste de vérification concise des exigences d'accessibi
 - Les cibles tactiles doivent être suffisamment grandes pour permettre l'interaction (voir les [BBC Mobile Accessibility Guidelines <sup>(angl.)</sup>](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size) pour des recommandations sur la taille des cibles).
 
 > [!NOTE]
-> La [version originale de ce document <sup>(angl.)</sup>](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) a été rédigée par [Yura Zenevich](https://yzen.github.io/).
+> La [version originale de ce document <sup>(angl.)</sup>](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) a été rédigée par [Yura Zenevich <sup>(angl.)</sup>](https://yzen.github.io/).
