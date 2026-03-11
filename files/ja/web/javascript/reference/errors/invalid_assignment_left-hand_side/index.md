@@ -47,7 +47,7 @@ if (Math.PI == 3 || Math.PI == 4) {
 var str = "Hello, " + "from the " + "other side!";
 ```
 
-## 関連項目
+## 関連情報
 
 - [代入演算子](/ja/docs/Web/JavaScript/Reference/Operators#代入演算子)
 - [等値演算子](/ja/docs/Web/JavaScript/Reference/Operators#等値演算子)

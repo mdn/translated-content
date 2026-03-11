@@ -1,39 +1,71 @@
 ---
-title: document.open
+title: "Document : méthode open()"
+short-title: open()
 slug: Web/API/Document/open
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`document.open()`** ouvre un document pour [l'écriture](/fr/docs/Web/API/Document/write).
+La méthode **`open()`** de l'interface {{DOMxRef("Document")}} ouvre un document pour {{DOMxRef("Document.write", "l'écriture", "", "1")}}.
+
+Cela entraîne certains effets de bord. Par exemple&nbsp;:
+
+- Tous les écouteurs d'évènements actuellement enregistrés sur le document, les nœuds à l'intérieur du document ou la fenêtre du document sont supprimés.
+- Tous les nœuds existants sont supprimés du document.
 
 ## Syntaxe
 
-```js
-document.open();
+```js-nolint
+open()
 ```
 
-## Exemple
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Une instance de l'objet `Document`.
+
+## Exemples
+
+Le code simple suivant ouvre le document et remplace son contenu par un certain nombre de fragments HTML différents, avant de le refermer.
 
 ```js
-// Dans cet exemple, le contenu du document est
-// écrasé au cours de la réinitialisation avec open()
-document.write("<html><p>supprimez-moi</p></html>");
 document.open();
-// Le document est vide.
+document.write("<p>Bonjour le monde !</p>");
+document.write("<p>Je suis un poisson</p>");
+document.write("<p>Le nombre est 42</p>");
+document.close();
 ```
 
 ## Notes
 
-Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).
+Cette méthode est soumise à la même [politique de même origine](/fr/docs/Web/Security/Defenses/Same-origin_policy) que les autres propriétés, et ne fonctionne pas si cela devait changer l'origine du document.
 
-Par ailleurs, un appel automatique à `document.open()` est réalisé lorsque [document.write()](/fr/docs/Web/API/Document/write) est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. documenter les paramètres à document.open ne figurant pas dans la spécification
+## La méthode `open()` avec trois arguments
 
-Cette méthode ne doit pas être confondue avec [window.open()](/fr/docs/Web/API/Window/open). `document.open` permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que `window.open` fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme `window` est l'objet, si on appelle juste `open(...)`, il sera traité comme un appel à `window.open(...)`. Le document ouvert peut être fermé à l'aide de [document.close()](/fr/docs/Web/API/Document/close).
+Il existe une version moins connue et peu utilisée de `document.open()` avec trois arguments, qui est un alias de {{DOMxRef("Window.open()")}} (voir sa page pour plus de détails).
 
-Voir [Security check basics](/fr/docs/Mozilla/Gecko/Script_security#Security_checks) pour plus d'informations sur les principaux.
+Cet appel, par exemple, ouvre github.com dans une nouvelle fenêtre, avec son ouvreur défini sur `null`&nbsp;:
 
-Si vous ne voulez pas créer une entrée d'historique, remplacez `open()` par `open("text/html", "replace")`.
+```js
+document.open("https://www.github.com", "", "noopener=true");
+```
+
+## La méthode `open()` avec deux arguments
+
+Les navigateurs prenaient autrefois en charge une version à deux arguments de `document.open()`, avec la signature suivante&nbsp;:
+
+```js
+document.open(type, replace);
+```
+
+Où `type` définit le type MIME des données que vous écrivez (par exemple `text/html`) et `replace`, si défini (c'est-à-dire une chaîne de caractères `"replace"`), il définit que l'entrée d'historique pour le nouveau document remplacerait l'entrée d'historique actuelle du document en cours d'écriture.
+
+Cette forme est maintenant obsolète&nbsp;; elle ne générera pas d'erreur, mais se contentera de rediriger vers `document.open()` (c'est-à-dire qu'elle est équivalente à l'exécution de `document.open()` sans arguments). Le comportement de remplacement de l'historique se produit désormais toujours.
 
 ## Spécifications
 
@@ -45,5 +77,5 @@ Si vous ne voulez pas créer une entrée d'historique, remplacez `open()` par `o
 
 ## Voir aussi
 
-- {{domxref("Document")}}
-- {{domxref("Window.open()")}}
+- L'interface {{DOMxRef("Document")}}
+- La méthode {{DOMxRef("Window.open()")}}

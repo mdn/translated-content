@@ -1,14 +1,13 @@
 ---
 title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
-original_slug: Web/CSS/list-style-type
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`list-style-type`** permet de définir l'apparence de la puce d'un élément de liste (un cercle, un caractère, un compteur spécifique, etc.).
 
-La propriété **`list-style-type`** permet de définir l'apparence de la puce d'un élément de liste (un cercle, un caractère, un compteur spécifique, etc.).
-
-{{InteractiveExample("CSS Demo: list-style-type")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: list-style-type")}}
 
 ```css interactive-example-choice
 list-style-type: space-counter;
@@ -29,7 +28,7 @@ list-style-type: "\1F44D";
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div>
-    <p>NASA Notable Missions</p>
+    <p>Missions remarquables de la NASA</p>
     <ul class="transition-all unhighlighted" id="example-element">
       <li>Apollo</li>
       <li>Hubble</li>
@@ -40,9 +39,9 @@ list-style-type: "\1F44D";
   <hr />
   <div class="note">
     <p>
-      <code>space-counter</code> is defined with
+      <code>space-counter</code> est défini avec
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
       >
@@ -87,9 +86,9 @@ hr {
 }
 ```
 
-La [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) de la puce utilisée sera la même que la couleur calculée de l'élément sur lequel elle s'applique.
+Le marqueur utilisera [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor), c'est-à-dire la même [couleur](/fr/docs/Web/CSS/Reference/Values/color_value) calculée que l'élément auquel il s'applique.
 
-Cette propriété s'applique aux éléments d'une liste (c'est-à-dire les éléments pour lesquels on a `display: list-item;`). Cela inclut par défaut les éléments [`li`](/fr/docs/Web/HTML/Reference/Elements/li) et [`summary`](/fr/docs/Web/HTML/Reference/Elements/summary). Il est possible de l'utiliser pour d'autres éléments si on utilise `display: list-item` sur ceux-ci. Cette propriété est héritée et on peut donc l'appliquer aux éléments parents (généralement [`ol`](/fr/docs/Web/HTML/Reference/Elements/ol) ou [`ul`](/fr/docs/Web/HTML/Reference/Elements/ul)) afin qu'elle s'applique à l'ensemble des éléments fils.
+Seuls quelques éléments HTML ({{HTMLElement("li")}} et {{HTMLElement("summary")}}) ont une valeur par défaut de `display: list-item`. Cependant, la propriété `list-style-type` peut être appliquée à tout élément dont la valeur de {{CSSxRef("display")}} est définie à `list-item`. De plus, comme cette propriété est héritée, elle peut être définie sur un élément parent (généralement {{HTMLElement("ol")}} ou {{HTMLElement("ul")}}) pour l'appliquer à tous les éléments de liste.
 
 ## Syntaxe
 
@@ -103,12 +102,10 @@ list-style-type: georgian;
 list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
-/* Une chaîne de caractères */
-/* Type <string>            */
+/* Valeurs de type <string> */
 list-style-type: "-";
 
-/* Un identifiant correspondant à */
-/* une règle @counter-style       */
+/* Un identifiant correspondant à une règle @counter-style */
 list-style-type: custom-counter-style;
 
 /* Valeur avec un mot-clé */
@@ -118,14 +115,15 @@ list-style-type: none;
 list-style-type: inherit;
 list-style-type: initial;
 list-style-type: revert;
+list-style-type: revert-layer;
 list-style-type: unset;
 ```
 
 La propriété `list-style-type` peut être définie grâce à&nbsp;:
 
-- une valeur `<custom-ident>`
-- une valeur `symbols()`
-- une valeur `<string>`
+- une valeur `<custom-ident>`.
+- une valeur `symbols()`.
+- une valeur `<string>`.
 - le mot-clé `none`.
 
 À noter que&nbsp;:
@@ -135,11 +133,11 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 
 ### Valeurs
 
-- [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
-  - : Un identifiant correspondant à la valeur d'un [`@counter-style`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style) ou à un style prédéfini&nbsp;:
-- [`symbols()`](/fr/docs/Web/CSS/Reference/Values/symbols)
+- {{CSSxRef("&lt;custom-ident&gt;")}}
+  - : Un identifiant correspondant à la valeur d'un {{CSSxRef("@counter-style")}} ou à un style prédéfini&nbsp;:
+- {{CSSxRef("symbols()")}}
   - : Définit un style de puce utilisé.
-- [`<string>`](/fr/docs/Web/CSS/Reference/Values/string)
+- {{CSSxRef("&lt;string&gt;")}}
   - : La chaîne de caractères indiquée sera utilisée comme puce.
 - `none`
   - : Aucun marqueur n'est affiché.
@@ -151,7 +149,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
   - : Un carré plein.
 - `decimal`
   - : Des nombres décimaux, commençant par 1.
-- `cjk-decimal` {{experimental_inline}}
+- `cjk-decimal`
   - : Des nombres décimaux Han.
 - `decimal-leading-zero`
   - : Des nombres décimaux complétés par des 0.
@@ -162,7 +160,7 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
 - `lower-greek`
   - : Des lettres grecques en minuscules.
 - `lower-alpha`, `lower-latin`
-  - : Des lettres ASCII en minuscules.
+  - : Des lettres {{Glossary("ASCII")}} en minuscules.
 - `upper-alpha`, `upper-latin`
   - : Des lettres ASCII en majuscules.
 - `arabic-indic`, `-moz-arabic-indic`
@@ -177,11 +175,11 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
   - : Des nombres ordinaux Han de la «&nbsp;branche terrestre&nbsp;».
 - `cjk-heavenly-stem`, `-moz-cjk-heavenly-stem`
   - : Des nombres ordinaux Han de la «&nbsp;souche céleste&nbsp;».
-- `cjk-ideographic` {{experimental_inline}}
+- `cjk-ideographic`
   - : Identique à `trad-chinese-informal`.
 - `devanagari`, `-moz-devanagari`
   - : La numérotation devanagari.
-- `ethiopic-numeric` {{experimental_inline}}
+- `ethiopic-numeric`
   - : La numérotation éthiopienne.
 - `georgian`
   - : La numérotation géorgienne traditionnelle.
@@ -189,94 +187,85 @@ La propriété `list-style-type` peut être définie grâce à&nbsp;:
   - : La numérotation gujarati.
 - `gurmukhi`, `-moz-gurmukhi`
   - : La numérotation gurmukhi.
-- `hebrew` {{experimental_inline}}
+- `hebrew`
   - : La numérotation hébraïque traditionnelle.
-- `hiragana` {{experimental_inline}}
+- `hiragana`
   - : Le lettrage lexicographique hiragana.
-- `hiragana-iroha` {{experimental_inline}}
+- `hiragana-iroha`
   - : Le lettrage [iroha](https://fr.wikipedia.org/wiki/Iroha) hiragana.
-- `japanese-formal` {{experimental_inline}}
+- `japanese-formal`
   - : La numérotation japonaise formelle utilisée pour les documents financiers ou légaux. Les kanjis sont conçus afin de ne pas pouvoir être modifié pour ressembler à un autre.
-- `japanese-informal` {{experimental_inline}}
+- `japanese-informal`
   - : La numérotation japonaise informelle.
 - `kannada`, `-moz-kannada`
   - : La numérotation kannada.
-- `katakana` {{experimental_inline}}
+- `katakana`
   - : Le lettrage lexicographique katakana.
-- `katakana-iroha` {{experimental_inline}}
+- `katakana-iroha`
   - : Le lettrage [iroha](https://fr.wikipedia.org/wiki/Iroha) katakana.
-- `korean-hangul-formal` {{experimental_inline}}
+- `korean-hangul-formal`
   - : La numérotation coréenne hangul.
-- `korean-hanja-formal` {{experimental_inline}}
+- `korean-hanja-formal`
   - : La numérotation formelle coréenne Han.
-- `korean-hanja-informal` {{experimental_inline}}
+- `korean-hanja-informal`
   - : La numérotation coréenne hanja.
 - `lao`, `-moz-lao`
   - : La numérotation laotienne.
-- `lower-armenian` {{experimental_inline}}\*
+- `lower-armenian`
   - : La numérotation arménienne en minuscules.
 - `malayalam`, `-moz-malayalam`
   - : La numérotation Malayalam.
-- `mongolian` {{experimental_inline}}
+- `mongolian`
   - : La numérotation mongolienne.
 - `myanmar`, `-moz-myanmar`
   - : La numérotation birmane.
 - `oriya`, `-moz-oriya`
   - : La numérotation Oriya.
-- `persian` {{experimental_inline}}, `-moz-persian`
+- `persian`, `-moz-persian`
   - : La numérotation perse.
-- `simp-chinese-formal` {{experimental_inline}}
+- `simp-chinese-formal`
   - : La numérotation formelle en chinois simplifié.
-- `simp-chinese-informal` {{experimental_inline}}
+- `simp-chinese-informal`
   - : La numérotation informelle en chinois simplifié.
-- `tamil` {{experimental_inline}}, `-moz-tamil`
+- `tamil`, `-moz-tamil`
   - : La numérotation tamoule.
 - `telugu`, `-moz-telugu`
   - : La numérotation Telugu.
 - `thai`, `-moz-thai`
   - : La numérotation thaïlandaise.
-- `tibetan` {{experimental_inline}}\*
+- `tibetan`
   - : La numérotation tibétaine.
-- `trad-chinese-formal` {{experimental_inline}}
+- `trad-chinese-formal`
   - : La numérotation formelle en chinois traditionnel.
-- `trad-chinese-informal` {{experimental_inline}}
+- `trad-chinese-informal`
   - : La numérotation informelle en chinois traditionnel.
-- `upper-armenian` {{experimental_inline}}\*
+- `upper-armenian`
   - : La numérotation arménienne traditionnelle en majuscules.
-- `disclosure-open` {{experimental_inline}}
-  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details)) est déplié/révélé.
-- `disclosure-closed` {{experimental_inline}}
-  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément [`<details>`](/fr/docs/Web/HTML/Reference/Elements/details)) est replié/masqué.
+- `disclosure-open`
+  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément {{HTMLElement("details")}}) est déplié/révélé.
+- `disclosure-closed`
+  - : Un symbole indiquant qu'un contrôle de révélation (tel qu'un élément {{HTMLElement("details")}}) est replié/masqué.
+
+Reportez-vous à l'exemple [Tous les styles de liste](#tous_les_styles_de_liste) pour voir les valeurs ci-dessus en action. Les détails de tous les styles de compteurs disponibles utilisés par différentes cultures à travers le monde se trouvent dans [Styles de compteurs prêts à l'emploi <sup>(angl.)</sup>](https://w3c.github.io/predefined-counter-styles/).
 
 ### Extensions non-standards
 
-Mozilla (Firefox), Blink (Chrome et Opera) et WebKit (Safari) fournissent certains types prédéfinis afin d'assurer la prise en charge de types de liste dans d'autres langues. Consultez le tableau de compatibilité pour l'extension à utiliser selon le navigateur.
+Quelques types prédéfinis sont pris en charge par Mozilla (Firefox) avec le préfixe `-moz-`.
 
-- `-moz-ethiopic-halehame`
-- `-moz-ethiopic-halehame-am`
-- `ethiopic-halehame-ti-er`, `-moz-ethiopic-halehame-ti-er`
-- `ethiopic-halehame-ti-et`, `-moz-ethiopic-halehame-ti-et`
-- `hangul`, `-moz-hangul`
-- `hangul-consonant`, `-moz-hangul-consonant`
-- `urdu`, `-moz-urdu`
+- `ethiopic-halehame`&nbsp;: `-moz-ethiopic-halehame`
+- `ethiopic-halehame-am`&nbsp;: `-moz-ethiopic-halehame-am`
+- `ethiopic-halehame-ti-er`&nbsp;: `-moz-ethiopic-halehame-ti-er`
+- `ethiopic-halehame-ti-et`&nbsp;: `-moz-ethiopic-halehame-ti-et`
+- `ethiopic-numeric`&nbsp;: `-moz-ethiopic-numeric`
+- `hangul`&nbsp;: `-moz-hangul`
+- `hangul-consonant`&nbsp;: `-moz-hangul-consonant`
+- `urdu`&nbsp;: `-moz-urdu`
+
+Voir le [tableau de compatibilité](#compatibilité_des_navigateurs) pour savoir quels navigateurs prennent en charge quelle extension.
 
 ## Accessibilité
 
-Le lecteur d'écran [VoiceOver](https://help.apple.com/voiceover/info/guide/) n'annonce pas, incorrectement, les listes non ordonnées lorsque `list-style-type: none` leur est appliqué. Pour pallier ce problème, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/Reference/Properties/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
-
-```css
-ul {
-  list-style-type: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-- [_VoiceOver and_ `list-style-type: none` – _Unfettered Thoughts_ (en anglais)](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
-- [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+Safari ne reconnaitra pas une liste ordonnée ou non ordonnée comme une liste dans l'arbre d'accessibilité si elle a une valeur `list-style-type` de `none`. Cela peut être résolu en ajoutant `role="list"` à la balise d'ouverture de la liste. Pour en savoir plus sur ce point et sur les solutions possibles, voir [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style#accessibilité).
 
 ## Définition formelle
 
@@ -284,7 +273,7 @@ ul li::before {
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -325,7 +314,7 @@ ol.shortcut {
 
 #### Résultat
 
-{{EmbedLiveSample("Définition de l'apparence des puces","200","300")}}
+{{EmbedLiveSample("Définition de l'apparence des puces", 200, 300)}}
 
 ### Tous les styles de liste
 
@@ -340,7 +329,7 @@ ol.shortcut {
   <li>Spitzer</li>
 </ol>
 
-<h2>Choisissez un style de liste :</h2>
+<h2>Choisissez un style de liste&nbsp;:</h2>
 
 <div class="container">
   <label for="disc">
@@ -777,15 +766,18 @@ input {
 
 ```js
 const container = document.querySelector(".container");
+const list = document.querySelector("ol");
+
 container.addEventListener("change", (event) => {
-  const list = document.querySelector("ol");
   list.setAttribute("style", `list-style-type: ${event.target.value}`);
 });
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Tous les styles de liste", "600", "850")}}
+{{EmbedLiveSample("Tous les styles de liste", 600, 800)}}
+
+Nous ne sommes pas limité·e·s aux types de styles de liste définis sur cette page ou dans la spécification. La règle {{CSSxRef("@counter-style")}} permet de créer des [compteurs avec n'importe quel alphabet <sup>(angl.)</sup>](https://r12a.github.io/app-counters/).
 
 ## Spécifications
 
@@ -797,6 +789,9 @@ container.addEventListener("change", (event) => {
 
 ## Voir aussi
 
-- [`list-style`](/fr/docs/Web/CSS/Reference/Properties/list-style)
-- [`list-style-image`](/fr/docs/Web/CSS/Reference/Properties/list-style-image)
-- [`list-style-position`](/fr/docs/Web/CSS/Reference/Properties/list-style-position)
+- La propriété raccourcie {{CSSxRef("list-style")}}
+- La propriété {{CSSxRef("list-style-image")}}
+- La propriété {{CSSxRef("list-style-position")}}
+- Le pseudo-élément {{CSSxRef("::marker")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)

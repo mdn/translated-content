@@ -2,7 +2,7 @@
 title: "<header> : l'élément d'en-tête"
 slug: Web/HTML/Reference/Elements/header
 l10n:
-  sourceCommit: 3527b9372ddeb3b301cc826ed2fbcf086b487568
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<header>`** représente du contenu introductif, généralement un groupe d'éléments d'introduction ou d'aides à la navigation. Il peut contenir des éléments de titre mais aussi un logo, un formulaire de recherche, le nom d'un·e auteur·ice et d'autres éléments.

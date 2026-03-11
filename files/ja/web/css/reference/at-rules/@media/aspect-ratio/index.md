@@ -1,9 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/aspect-ratio
-original_slug: Web/CSS/@media/aspect-ratio
 l10n:
-  sourceCommit: 9e7260485703694d47aa360e2db97aae2ea5ae42
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の{{glossary("aspect ratio", "アスペクト比")}}を調べるために使用します。
@@ -21,10 +20,9 @@ l10n:
 ### HTML
 
 ```html
-<iframe id="outer">
-  <div id="inner">
-    ビューポートの幅と高さを変更しながら、この要素を見ていてください。
-  </div>
+<iframe
+  id="outer"
+  srcdoc="<div id='inner'>ビューポートの幅と高さを変更しながら、この要素を見ていてください。</div>">
 </iframe>
 ```
 
@@ -35,7 +33,7 @@ l10n:
 /* アスペクト比が 8/5 = 1.6 以上である場合に選択 */
 @media (min-aspect-ratio: 8/5) {
   div {
-    background: #99f; /* 青 */
+    background: #9999ff; /* 青 */
   }
 }
 
@@ -43,14 +41,14 @@ l10n:
 /* アスペクト比が 3/2 = 1.5 以下である場合に選択 */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9f9; /* 緑 */
+    background: #99ff99; /* 緑 */
   }
 }
 
 /* 正確なアスペクト比。上書きを防ぐために最下部に配置 */
 @media (aspect-ratio: 1/1) {
   div {
-    background: #f99; /* 赤 */
+    background: #ff9999; /* 赤 */
   }
 }
 ```
@@ -66,7 +64,7 @@ l10n:
 
 <iframe
   id="outer"
-  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #99f; } } @media (max-aspect-ratio: 3/2) { div { background: #9f9; } } @media (aspect-ratio: 1/1) { div { background: #f99; } }</style><div id='inner'>ビューポートの幅と高さを変更しながら、この要素を見ていてください。</div>">
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #9999ff; } } @media (max-aspect-ratio: 3/2) { div { background: #99ff99; } } @media (aspect-ratio: 1/1) { div { background: #ff9999; } }</style><div id='inner'>ビューポートの幅と高さを変更しながら、この要素を見ていてください。</div>">
 </iframe>
 ```
 
@@ -113,6 +111,6 @@ h.onchange = h.oninput = () => {
 
 ## 関連情報
 
-- [`aspect-ratio` の理解](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [`aspect-ratio` を理解する](/ja/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
 - [@media](/ja/docs/Web/CSS/Reference/At-rules/@media)

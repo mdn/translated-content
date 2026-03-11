@@ -3,7 +3,7 @@ title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 original_slug: Web/CSS/anchor-name
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 8300697ca75ca1e77175912110d4fe9ef48cb0bb
 ---
 
 **`anchor-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の識別子となる**アンカー名**を付与することで、その要素を**アンカー要素**として定義できるようにします。それぞれの名前は、位置指定要素の {{cssxref("position-anchor")}} プロパティの値として設定することができ、アンカーと関連付けられた状態となります。
@@ -50,7 +50,7 @@ anchor-name: unset;
 
 `anchor-name` プロパティは、 主ボックスを生成するすべての要素で使用することができます。これは、[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)（{{cssxref("::before")}} や {{cssxref("::after")}} を使用して生成されたコンテンツを含む）や、[`range` 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)のつまみ ({{cssxref("::-webkit-slider-thumb")}}) などの UI 機能もアンカー要素になり得るということです。擬似要素は、特に指定がない限り、擬似要素の親要素と同じ要素に暗黙的にアンカーされます。
 
-アンカー機能と使い方についての詳しい情報は、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールのランディングページと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイドを参照してください。
+アンカー機能と使い方についての詳しい情報は、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュールと [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイドを参照してください。
 
 ## 公式定義
 
