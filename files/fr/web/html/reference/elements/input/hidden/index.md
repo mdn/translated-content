@@ -146,7 +146,7 @@ Bien que le champ masqué soit totalement invisible, ses données sont tout de m
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>
