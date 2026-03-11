@@ -1,41 +1,40 @@
 ---
-title: Document.preferredStyleSheetSet
+title: "Document : propriété preferredStyleSheetSet"
+short-title: preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-Retourne la feuille de style préférée, telle que définie par l'auteur de la page.
+La propriété **`preferredStyleSheetSet`** de l'interface {{DOMxRef("Document")}} retourne l'ensemble de feuilles de style préféré tel que défini par l'auteur·ice de la page.
 
-## Syntaxe
+## Valeur
 
-```js
-preferredStyleSheetSet = document.preferredStyleSheetSet;
-```
+L'ensemble de feuilles de style préféré par l'auteur·ice. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
 
-Au retour, `preferredStyleSheetSet` indique la feuille de style préférée par l'auteur. Ceci est déterminé par l'ordre des déclarations des feuilles de style et par l'entête HTTP intitulé `Default-Style`.
+Si aucun ensemble de feuilles de style préféré n'est défini par l'auteur·ice, une chaîne de caractères vide (`""`) est retournée.
 
-En l'absence de feuille de style préférée, une chaine vide ("") est retournée.
-
-## Exemple
+## Exemples
 
 ```js
 if (document.preferredStyleSheetSet) {
   console.log(
-    "La feuille de style préférée est : " + document.preferredStyleSheetSet,
+    `L'ensemble de feuilles de style préféré est : ${document.preferredStyleSheetSet}`,
   );
 } else {
   console.log("Il n'y a pas de feuille de style préférée.");
 }
 ```
 
-## Spécifications
+## Compatibilité des navigateurs
 
-- [HTML5: Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("document.lastStyleSheetSet")}}
-- {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.styleSheetSets")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
+- La propriété {{DOMxRef("document.lastStyleSheetSet")}}
+- La propriété {{DOMxRef("document.selectedStyleSheetSet")}}
+- La propriété {{DOMxRef("document.styleSheetSets")}}
+- La méthode {{DOMxRef("document.enableStyleSheetsForSet()")}}
