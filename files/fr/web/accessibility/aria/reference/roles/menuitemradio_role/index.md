@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemradio"
 short-title: menuitemradio
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
 ---
 
 Le rôle `menuitemradio` est un élément de menu sélectionnable dans un ensemble d'éléments ayant le même rôle, dont un seul peut être sélectionné à la fois.
@@ -28,7 +28,7 @@ Si vous souhaitez que plusieurs éléments d'un groupe soient sélectionnés, ou
 
 Si un `menu` ou une `menubar` contient plusieurs groupes d'éléments `menuitemradio`, ou si le `menu` contient un groupe d'éléments `menuitemradio` ainsi que d'autres éléments `menuitem` non liés et/ou des éléments `menuitemcheckbox`, regroupez chaque ensemble d'éléments `menuitemradio` liés dans un élément `group` ou séparez le groupe des autres éléments de menu avec un élément `separator` (ou un élément HTML ayant un rôle équivalent comme un regroupement {{HTMLElement('fieldset')}} ou une séparation thématique {{HTMLElement('hr')}}).
 
-Un nom accessible est requis. Idéalement, le nom accessible doit provenir d'un élément {{htmlelement('label')}} associé si vous utilisez `<input type="radio">` ou d'un contenu visible descendant. Sachez que si le label ou le contenu descendant n'est pas suffisant et que, de préférence, [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) est utilisé en référant un contenu non descendant ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) est utilisé, ces deux propriétés ARIA masqueront les autres contenus descendants aux technologies d'assistance.
+Un nom accessible est requis. Idéalement, le nom accessible doit provenir d'un élément {{HTMLElement('label')}} associé si vous utilisez `<input type="radio">` ou d'un contenu visible descendant. Sachez que si le label ou le contenu descendant n'est pas suffisant et que, de préférence, [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) est utilisé en référant un contenu non descendant ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) est utilisé, ces deux propriétés ARIA masqueront les autres contenus descendants aux technologies d'assistance.
 
 Si tous les éléments de l'ensemble ne sont pas présents dans le DOM, incluez les propriétés [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) et [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset). Lors de la spécification de `aria-setsize` et `aria-posinset` sur un `menuitemradio`, définissez la valeur en fonction du nombre total d'éléments dans le menu, en excluant les séparateurs.
 
@@ -133,7 +133,7 @@ L'apparence visuelle de l'état sélectionné est celle d'un bouton radio coché
 }
 ```
 
-N'utilisez pas la propriété raccourcie [`background`](/fr/docs/Web/CSS/Reference/Properties/background), car cela écraserait la propriété [`background-clip`](/fr/docs/Web/CSS/Reference/Properties/background-clip) utilisée pour créer l'effet bouton radio.
+N'utilisez pas la propriété CSS raccourcie {{CSSxRef("background")}}, car cela écraserait la propriété CSS {{CSSxRef("background-clip")}} utilisée pour créer l'effet bouton radio.
 
 ### Préférez HTML
 
@@ -146,4 +146,4 @@ La première règle d'ARIA est&nbsp;: si un élément ou un attribut HTML natif 
 ## Voir aussi
 
 - [ARIA&nbsp;: rôle `radio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)
+- L'élément HTML [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)

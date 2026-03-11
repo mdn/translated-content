@@ -3,7 +3,7 @@ title: "ARIA : rôle spinbutton"
 short-title: spinbutton
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 Le rôle `spinbutton` définit un type de plage où l'utilisateur·ice doit sélectionner une valeur parmi des choix discrets.
@@ -14,7 +14,7 @@ Le rôle `spinbutton` indique que l'élément est un widget de saisie dont la va
 
 Le spinbutton représente la plage des valeurs possibles. La valeur du champ de saisie spinbutton correspond à la valeur courante.
 
-Les spinbuttons comportent souvent trois composants&nbsp;: un champ texte affichant la valeur courante, un bouton d'incrémentation et un bouton de décrémentation. Le champ texte est généralement le seul composant sélectionnable, car les fonctions d'incrémentation et de décrémentation sont accessibles au clavier via les flèches. En général, le champ texte permet aussi à l'utilisateur·ice de modifier directement la valeur.
+Les spinbuttons comportent souvent trois composants&nbsp;: un champ texte affichant la valeur courante, un bouton d'incrémentation et un bouton de décrémentation. Le champ texte est généralement le seul composant sélectionnable, car les fonctions d'incrémentation et de décrémentation sont accessibles au clavier avec les flèches. En général, le champ texte permet aussi à l'utilisateur·ice de modifier directement la valeur.
 
 En plus d'inclure l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour rendre le spinbutton sélectionnable, il faut prendre en charge la sélection au clavier et aux dispositifs de pointage. Les touches directionnelles telles que les flèches doivent être prises en charge pour les utilisateur·ice·s de clavier. Le changement de valeur lors du clic sur les boutons d'incrémentation et de décrémentation doit être pris en charge pour les dispositifs de pointage. Voir [interactions au clavier](#interactions_au_clavier) ci‑dessous.
 
@@ -43,13 +43,13 @@ L'attribut [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attribute
 
 L'attribut [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) définit la valeur maximale. Si elle est absente ou n'est pas un nombre, la valeur par défaut est `100`.
 
-La valeur de l'attribut [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) doit être comprise entre la valeur minimale et la valeur maximale incluses. Cet attribut est obligatoire pour `spinbutton` et `meter`, et optionnel pour `progressbar`.
+La valeur de l'attribut [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) doit être comprise entre la valeur minimale et la valeur maximale incluses. Cet attribut est obligatoire pour `meter` et optionnel pour `progressbar`.
 
 Pour le rôle `spinbutton`, sauf si vous utilisez des éléments HTML sémantiques comme [`<input type="number">`](/fr/docs/Web/HTML/Reference/Elements/input/number), la valeur de `aria-valuenow` doit être mise à jour par programmation lorsque la valeur change.
 
 L'attribut optionnel [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) est utilisé lorsque la valeur numérique de `aria-valuenow` ne reflète pas la valeur réelle du spinbutton. Les valeurs minimale, maximale et courante doivent être numériques. Lorsque la signification de ces nombres n'est pas numérique, il faut inclure l'attribut `aria-valuetext` avec une chaîne de caractères définissant la valeur. Par exemple, pour un spinbutton de tailles de t‑shirt, l'attribut `aria-valuetext` doit passer de très petit à très grand au fur et à mesure que la valeur de `aria-valuenow` augmente.
 
-La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques. Il n'existe pas d'attribut HTML équivalent pour `<input>`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{htmlelement('input')}}. Lorsque `aria-valuetext` est une fonctionnalité importante pour un spinbutton, envisagez d'utiliser {{HTMLElement('select')}} avec des éléments {{HTMLElement('option')}} à la place.
+La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques. Il n'existe pas d'attribut HTML équivalent pour `<input>`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{HTMLElement('input')}}. Lorsque `aria-valuetext` est une fonctionnalité importante pour un spinbutton, envisagez d'utiliser {{HTMLElement('select')}} avec des éléments {{HTMLElement('option')}} à la place.
 
 Un nom accessible est **obligatoire**. Si le rôle `spinbutton` est appliqué à un élément HTML {{HTMLElement('input')}}, le nom accessible peut provenir du {{HTMLElement('label')}} associé. Sinon, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) si un libellé visible est présent ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) si aucun libellé visible n'est présent.
 
@@ -61,8 +61,8 @@ Certaines catégories de composants d'interface utilisateur, lorsqu'elles sont r
 
 ### Propriétés, états et rôles WAI-ARIA associés
 
-- [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (obligatoire)
-  - : À définir sur une valeur décimale comprise entre `aria-valuemin` et `aria-valuemax`, indiquant la valeur courante du spinbutton. Si absent, il n'y a pas de valeur par défaut.
+- [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
+  - : À définir sur une valeur décimale comprise entre `aria-valuemin` et `aria-valuemax`, indiquant la valeur courante du spinbutton. Si absent, l'élément de bouton rotatif n'a pas de valeur courante.
 
 - [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : Les technologies d'assistance présentent souvent la valeur de `aria-valuenow` comme un nombre. Si `aria-valuenow` n'est pas pertinent, utilisez `aria-valuetext` pour fournir au spinbutton une valeur plus compréhensible.
@@ -76,7 +76,7 @@ Certaines catégories de composants d'interface utilisateur, lorsqu'elles sont r
 - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
   - : Définit la chaîne de caractères ou identifie l'élément (ou les éléments) qui étiquettent le spinbutton et fournissent un nom accessible. Un nom accessible est obligatoire.
 - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : Définit une chaîne de caractères qui étiquette le spinbutton. Cela fournit un nom accessible à l'élément lorsqu'aucun libellé visible n'est disponible via {{HTMLElement('label')}} ou `aria-labelledby`.
+  - : Définit une chaîne de caractères qui étiquette le spinbutton. Cela fournit un nom accessible à l'élément lorsqu'aucun libellé visible n'est disponible avec {{HTMLElement('label')}} ou `aria-labelledby`.
 
 ### Interactions au clavier
 

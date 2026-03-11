@@ -3,7 +3,7 @@ title: "ARIA : rôle region"
 short-title: region
 slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 l10n:
-  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle **`region`** sert à identifier les zones d'un document jugées importantes par l'auteur·ice. Il s'agit d'un repère générique permettant d'aider à la navigation lorsqu'aucun autre rôle de repère n'est approprié.
@@ -18,7 +18,7 @@ Le rôle **`region`** sert à identifier les zones d'un document jugées importa
 
 Le rôle `region` est un [repère ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères). Il doit être réservé aux sections de contenu suffisamment importantes pour que les utilisateur·ice·s veuillent pouvoir y accéder facilement et les retrouver dans un résumé de la page. Le rôle region est un terme générique, à utiliser uniquement si la section à identifier ne correspond pas à un autre rôle de repère, comme [`banner`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role), [`main`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/main_role), [`contentinfo`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role), [`complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role) ou [`navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role).
 
-Chaque élément avec le rôle `region` doit inclure un label décrivant la finalité du contenu, de préférence via [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) référant à un titre visible. Si aucun titre visible n'est présent, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
+Chaque élément avec le rôle `region` doit inclure un label décrivant la finalité du contenu, de préférence avec [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) référant à un titre visible. Si aucun titre visible n'est présent, utilisez [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 Le contenu d'un repère `region` doit avoir du sens s'il est séparé du contenu principal du document.
 
@@ -97,5 +97,4 @@ Si une zone de contenu possède `tabindex="0"`, ajoutez `role="region"` pour ind
 - [ARIA&nbsp;: rôle `complementary`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)
 - [ARIA&nbsp;: rôle `navigation`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)
 - [Rôles de repère&nbsp;: Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_points_de_repère)
-- [Utiliser les repères WAI-ARIA - 2013 | The Paciello <sup>(angl.)</sup> Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
