@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocorrect`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si la correction automatique du texte éditable est activée pour les erreurs d'orthographe et/ou de ponctuation.
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autocorrect`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui contrôle si la correction automatique du texte éditable est activée pour les erreurs d'orthographe et/ou de ponctuation.
 
 Le comportement précis de la correction automatique, y compris les mots qui sont substitués, dépend de l'agent utilisateur et des services fournis par l'appareil sous‑jacent. Par exemple, sur macOS, un agent utilisateur peut s'appuyer sur [texte et ponctuation de remplacement enregistrés <sup>(angl.)</sup>](https://support.apple.com/en-vn/guide/mac-help/mh35735/mac). D'autres appareils et navigateurs peuvent adopter une approche différente.
 

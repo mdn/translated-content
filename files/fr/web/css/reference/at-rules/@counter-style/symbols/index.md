@@ -2,10 +2,10 @@
 title: symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/symbols
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`symbols`** de la règle {{cssxref("@counter-style")}} est utilisé pour spécifier les symboles servant à créer les représentations du compteur dans le système de compteur indiqué. Ce descripteur est obligatoire lorsque la valeur du descripteur {{cssxref('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`symbols`** de la règle {{CSSxRef("@counter-style")}} est utilisé pour définir les symboles servant à créer les représentations du compteur dans le système de compteur indiqué. Ce descripteur est obligatoire lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`.
 
 ## Syntaxe
 
@@ -19,19 +19,19 @@ symbols: indic-numbers;
 
 ### Valeurs
 
-Le descripteur `symbols` est spécifié comme une liste d'une ou plusieurs valeurs `<symbol>` séparées par des espaces.
+Le descripteur `symbols` est défini comme une liste d'une ou plusieurs valeurs `<symbol>` séparées par des espaces.
 
 - `<symbol>`
-  - : Spécifie le symbole à utiliser dans le système de compteur. Chaque symbole de la liste peut être une {{cssxref("&lt;string&gt;")}}, une {{cssxref("&lt;image&gt;")}} ou un {{cssxref("&lt;custom-ident&gt;")}}. La valeur `<image>` peut être spécifiée comme une {{cssxref("url_value", "&lt;url&gt;")}} ou une {{cssxref("&lt;gradient&gt;")}}.
+  - : Spécifie le symbole à utiliser dans le système de compteur. Chaque symbole de la liste peut être une {{CSSxRef("&lt;string&gt;")}}, une {{CSSxRef("&lt;image&gt;")}} ou un {{CSSxRef("&lt;custom-ident&gt;")}}. La valeur `<image>` peut être définie comme une {{CSSxRef("url_value", "&lt;url&gt;")}} ou une {{CSSxRef("&lt;gradient&gt;")}}.
 
 > [!NOTE]
-> Lorsqu'on utilise un {{glossary("identifier", "identifiant")}} pour un symbole, il faut noter que les caractères non alphabétiques {{glossary("ASCII")}} comme `*`, `"` et `\` ne sont pas considérés comme des identifiants. Ils doivent être soit entourés de guillemets comme une chaîne, soit échappés.
+> Lorsqu'on utilise un {{Glossary("identifier", "identifiant")}} pour un symbole, il faut noter que les caractères non alphabétiques {{Glossary("ASCII")}} comme `*`, `"` et `\` ne sont pas considérés comme des identifiants. Ils doivent être soit entourés de guillemets comme une chaîne, soit échappés.
 
 ## Description
 
-Un symbole peut être une chaîne de caractères, une image ou un identifiant. Il est utilisé dans la règle {{cssxref("@counter-style")}} [at-rule](/fr/docs/Web/CSS/Guides/Syntax/At-rules).
+Un symbole peut être une chaîne de caractères, une image ou un identifiant. Il est utilisé dans la règle {{CSSxRef("@counter-style")}} [at-rule](/fr/docs/Web/CSS/Guides/Syntax/At-rules).
 
-Lorsque la valeur du descripteur {{cssxref('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`, le descripteur `symbols` doit être spécifié. Pour le système `additive`, utilisez le descripteur {{cssxref('@counter-style/additive-symbols', 'additive-symbols')}} à la place pour spécifier les symboles.
+Lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`, le descripteur `symbols` doit être défini. Pour le système `additive`, utilisez le descripteur {{CSSxRef('@counter-style/additive-symbols', 'additive-symbols')}} à la place pour définir les symboles.
 
 Bien qu'un espace entre les symboles entre guillemets ne soit pas obligatoire, cela rend le CSS plus lisible. Pour utiliser un guillemet comme symbole, il faut soit échapper le caractère guillemet, soit entourer le caractère de guillemets différents, comme `"'"`.
 
@@ -39,11 +39,11 @@ Lorsque vous définissez des symboles avec des identifiants au lieu de chaînes 
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,7 +78,7 @@ Dans cet exemple, la liste des valeurs pour le descripteur `symbols` inclut des 
 
 #### Résultat
 
-{{EmbedLiveSample('définir_les_symboles_du_compteur')}}
+{{EmbedLiveSample("Définir les symboles du compteur")}}
 
 ## Spécifications
 
@@ -90,8 +90,8 @@ Dans cet exemple, la liste des valeurs pour le descripteur `symbols` inclut des 
 
 ## Voir aussi
 
-- Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
-- Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
+- Les descripteurs de {{CSSxRef("@counter-style")}}&nbsp;: {{CSSxRef("@counter-style/system","system")}}, {{CSSxRef("@counter-style/additive-symbols", "additive-symbols")}}, {{CSSxRef("@counter-style/negative", "negative")}}, {{CSSxRef("@counter-style/prefix", "prefix")}}, {{CSSxRef("@counter-style/suffix", "suffix")}}, {{CSSxRef("@counter-style/range", "range")}}, {{CSSxRef("@counter-style/pad", "pad")}}, {{CSSxRef("@counter-style/speak-as", "speak-as")}} et {{CSSxRef("@counter-style/fallback", "fallback")}}
+- Propriétés de style de liste&nbsp;: {{CSSxRef("list-style")}}, {{CSSxRef("list-style-image")}}, {{CSSxRef("list-style-position")}}
+- La fonction {{CSSxRef("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
 - Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
 - Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

@@ -2,7 +2,7 @@
 title: resolution
 slug: Web/CSS/Reference/At-rules/@media/resolution
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`resolution`** peut être utilisée pour tester la densité de pixels de l'appareil de sortie.
@@ -58,5 +58,5 @@ La caractéristique `resolution` est une valeur de type {{CSSxRef("&lt;resolutio
 
 ## Voir aussi
 
-- La propriété JavaScript {{DOMxRef("window.devicePixelRatio")}}
+- La propriété API {{DOMxRef("window.devicePixelRatio")}}
 - La propriété {{CSSxRef("image-resolution")}}

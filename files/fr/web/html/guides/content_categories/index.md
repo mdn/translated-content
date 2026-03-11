@@ -2,12 +2,12 @@
 title: Catégories de contenu
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: e66301dff87e1ac68bd5e6e9dace12ead3eded6f
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
-La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains éléments (comme {{HTMLElement("track")}}) ne fassent partie d'_aucune_ de ces catégories.
+La plupart des éléments [HTML](/fr/docs/Web/HTML) font partie d'une ou plusieurs **catégories de contenu** — ces catégories regroupent des éléments qui partagent des caractéristiques communes. Il s'agit d'un regroupement souple (cela ne crée pas réellement de relation entre les éléments de ces catégories), mais cela permet de définir et de décrire le comportement partagé des catégories et leurs règles associées. Il est possible que certains [éléments ne fassent partie d'_aucune_ de ces catégories](#élément_sans_catégorie).
 
-Les catégories de contenu servent à définir le _modèle de contenu_ des éléments, c'est-à-dire ce que chaque élément peut avoir comme descendants. Par exemple, un élément `<p>` ne peut contenir que du _contenu phrasé_, tandis qu'un élément `<div>` peut contenir du _contenu de flux_.
+Les catégories de contenu servent à définir le _modèle de contenu_ des éléments, c'est-à-dire ce que chaque élément peut avoir comme descendants. Par exemple, l'élément `<p>` ne peut contenir que du _contenu phrasé_, tandis que l'élément `<div>` peut contenir du _contenu de flux_. Certains éléments, comme `<ins>`, ont un [_modèle de contenu transparent_](#modèle_de_contenu_transparent).
 
 Il existe sept principales catégories de contenu, qui peuvent être résumées par le diagramme de Venn ci-dessous&nbsp;:
 
@@ -68,6 +68,7 @@ Les éléments de flux sont&nbsp;:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
+- {{HTMLElement("geolocation")}}
 - {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
@@ -333,6 +334,35 @@ Certains éléments appartiennent à cette catégorie seulement sous certaines c
 - {{HTMLElement("input")}}, si l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) ne vaut pas `hidden`
 - {{HTMLElement("ol")}}, si ses enfants incluent au moins un élément {{HTMLElement("li")}}
 - {{HTMLElement("ul")}}, si ses enfants incluent au moins un élément {{HTMLElement("li")}}
+
+## Éléments sans catégorie
+
+Certains éléments ne font partie d'_aucune_ catégorie de contenu. Ceux-ci incluent&nbsp;:
+
+- {{HTMLElement("caption")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{HTMLElement("dd")}}
+- {{HTMLElement("dt")}}
+- {{HTMLElement("figcaption")}}
+- {{HTMLElement("head")}}
+- {{HTMLElement("html")}}
+- {{HTMLElement("legend")}}
+- {{HTMLElement("li")}}
+- {{HTMLElement("optgroup")}}
+- {{HTMLElement("option")}}
+- {{HTMLElement("param")}}
+- {{HTMLElement("rb")}}
+- {{HTMLElement("rp")}}
+- {{HTMLElement("rt")}}
+- {{HTMLElement("rtc")}}
+- {{HTMLElement("source")}}
+- {{HTMLElement("tbody")}}
+- {{HTMLElement("tfoot")}}
+- {{HTMLElement("th")}}
+- {{HTMLElement("thead")}}
+- {{HTMLElement("tr")}}
+- {{HTMLElement("track")}}
 
 ## Éléments supports de script
 

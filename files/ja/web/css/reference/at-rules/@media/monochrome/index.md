@@ -1,9 +1,8 @@
 ---
 title: monochrome
 slug: Web/CSS/Reference/At-rules/@media/monochrome
-original_slug: Web/CSS/@media/monochrome
 l10n:
-  sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
 **`monochrome`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア特性)で、出力機器のモノクロフレームバッファのピクセルあたりのビット数を調べるために使用することができます。
@@ -32,7 +31,7 @@ p {
 @media (monochrome) {
   p.mono {
     display: block;
-    color: #333;
+    color: #333333;
   }
 }
 

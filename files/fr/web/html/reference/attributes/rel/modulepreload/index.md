@@ -1,9 +1,8 @@
 ---
 title: rel="modulepreload"
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
-original_slug: Web/HTML/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
 ---
 
 Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.
@@ -20,12 +19,12 @@ Lorsque vous utilisez `modulepreload`, le mode de requête est toujours [`cors`]
 Si `crossorigin` est défini sur [`anonymous`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin#anonymous) ou une chaîne de caractères vide ([`""`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin#sect)) (par défaut), alors le mode d'identification est [`same-origin`](/fr/docs/Web/API/Request/credentials#same-origin), et les identifiants utilisateur·ice·s comme les cookies et l'authentification ne sont envoyés que pour les requêtes du même domaine.
 Si `crossorigin` est défini sur [`use-credentials`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials), alors le mode d'identification est [`include`](/fr/docs/Web/API/Request/credentials#include), et les identifiants sont envoyés pour les requêtes du même domaine et inter-domaines.
 
-L'attribut [`as`](/fr/docs/Web/HTML/Reference/Elements/link#as) est optionnel pour les liens avec `rel="modulepreload"` et sa valeur par défaut est "script".
-Il peut être défini sur "script" ou toute destination similaire à un script, comme "audioworklet", "paintworklet", "serviceworker", "sharedworker" ou "worker".
-Un [`Event`](/fr/docs/Web/API/Event/Event) nommé "error" est déclenché sur l'élément si une autre destination est utilisée.
+L'attribut [`as`](/fr/docs/Web/HTML/Reference/Elements/link#as) est optionnel pour les liens avec `rel="modulepreload"` et sa valeur par défaut est `"script"`.
+Il peut être défini sur `"script"`, `"style"`, `"json"`, ou toute destination similaire à un script, comme `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"` ou `"worker"`.
+Un {{DOMxRef("Event/Event", "Event")}} nommé «&nbsp;error&nbsp;» est déclenché sur l'élément si une autre destination est utilisée.
 
 Un navigateur _peut_ également choisir de récupérer automatiquement les dépendances du module.
-Attention&nbsp;: il s'agit d'une optimisation propre à chaque navigateur&nbsp;— la seule façon de garantir que tous les navigateurs préchargeront les dépendances d'un module est de les définir individuellement&nbsp;!
+On notera qu'il s'agit d'une optimisation propre à chaque navigateur — la seule façon de garantir que tous les navigateurs préchargeront les dépendances d'un module est de les définir individuellement&nbsp;!
 De plus, les événements nommés `load` ou `error` sont déclenchés immédiatement après le succès ou l'échec du chargement des ressources _définies_.
 Si les dépendances sont récupérées automatiquement, aucun événement supplémentaire n'est déclenché dans le thread principal (mais il est possible de surveiller les requêtes dans un service worker ou sur le serveur).
 
@@ -33,7 +32,7 @@ Si les dépendances sont récupérées automatiquement, aucun événement suppl�
 
 Considérez l'exemple [basic-modules <sup>(angl.)</sup>](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) ([version en ligne <sup>(angl.)</sup>](https://mdn.github.io/js-examples/module-examples/basic-modules/)), présenté dans le guide [Modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules#structure_de_lexemple).
 
-La structure de fichiers est la suivante, avec le module principal `main.js` qui importe statiquement deux modules dépendants `modules/canvas.js` et `modules/square.js` via l'[instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import).
+La structure de fichiers est la suivante, avec le module principal `main.js` qui importe statiquement deux modules dépendants `modules/canvas.js` et `modules/square.js` via [l'instruction `import`](/fr/docs/Web/JavaScript/Reference/Statements/import).
 
 ```plain
 index.html
