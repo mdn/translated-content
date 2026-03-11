@@ -1,28 +1,43 @@
 ---
-title: Document.releaseCapture()
+title: "Document : méthode releaseCapture()"
+short-title: releaseCapture()
 slug: Web/API/Document/releaseCapture
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}{{Non-standard_Header}}
 
-Libère la capture de la souris si elle est actuellement activée (_bouton gauche enfoncé_) sur un élément de ce document. L'activation de la capture de la souris sur un élément se fait en appelant {{domxref("element.setCapture()")}}.
+La méthode **`releaseCapture()`** de l'interface {{DOMxRef("Document")}} libère la capture de la souris si elle est actuellement activée sur un élément de ce document. Une fois la capture de la souris libérée, les évènements de souris ne seront plus tous dirigés vers l'élément sur lequel la capture est activée.
+
+L'activation de la capture de la souris sur un élément se fait en appelant {{DOMxRef("element.setCapture()")}}.
 
 ## Syntaxe
 
-```js
-document.releaseCapture();
+```js-nolint
+releaseCapture()
 ```
 
-Une fois la capture de la souris relâchée, les événements de souris ne seront plus dirigés vers l'élément sur lequel la capture est activée.
+### Paramètres
 
-## Exemple
+Aucun.
 
-Voir l'[exemple](/fr/docs/Web/API/Element/setCapture#example) pour {{domxref("element.setCapture()")}}.
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
+
+## Exemples
+
+Voir [l'exemple](/fr/docs/Web/API/Element/setCapture#exemples) pour {{DOMxRef("element.setCapture()")}}.
 
 ## Spécifications
 
-Basé sur l'implémentation Internet Explorer.
+Ne fait partie d'aucune spécification.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("element.setCapture()")}}
+- La méthode {{DOMxRef("element.setCapture()")}}
