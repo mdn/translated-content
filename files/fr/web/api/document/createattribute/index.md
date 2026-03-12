@@ -1,41 +1,46 @@
 ---
-title: document.createAttribute
+title: "Document : méthode createAttribute()"
+short-title: createAttribute()
 slug: Web/API/Document/createAttribute
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-La méthode **`Document.createAttribute()`** crée un nouveau nœud d'attribut et le renvoie. L'objet a créé un noeud implémentant l'interface {{domxref("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
+La méthode **`createAttribute()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud d'attribut et le renvoie. L'objet créé est un nœud implémentant l'interface {{DOMxRef("Attr")}}. Le DOM n'impose pas le type d'attribut à ajouter à un élément particulier de cette manière.
 
 > [!NOTE]
-> La chaîne de caractères donnée dans le paramètre est convertie en minuscules.
+> La chaîne de caractères donnée en paramètre est convertie en minuscules.
 
 ## Syntaxe
 
-```js
-attribut = document.createAttribute(nom);
+```js-nolint
+createAttribute(name)
 ```
 
 ### Paramètres
 
-- `nom` est une chaîne de caractères contenant le nom de l'attribut.
+- `name`
+  - : Une chaîne de caractères contenant le nom de l'attribut.
 
 ### Valeur de retour
 
-Un nœud {{domxref("Attr")}}.
+Un nœud {{DOMxRef("Attr")}}.
 
 ### Exceptions levées
 
-- `INVALID_CHARACTER_ERR` si le paramètre contient un caractère invalide pour un attribut XML.
+- `InvalidCharacterError` {{DOMxRef("DOMException")}}
+  - : Levée si la valeur de [`name`](#name) n'est pas un [nom XML <sup>(angl.)</sup>](https://www.w3.org/TR/xml/#dt-name) valide&nbsp;; par exemple, si elle commence par un chiffre, un tiret ou un point, ou contient des caractères autres que des caractères alphanumériques, des tirets bas (`_`), des tirets (`-`) ou des points (`.`).
 
 ## Exemples
 
 ```js
-var node = document.getElementById("div1");
-var a = document.createAttribute("my_attrib");
-a.value = "newVal";
-node.setAttributeNode(a);
-console.log(node.getAttribute("my_attrib")); // "newVal"
+const noeud = document.getElementById("div1");
+const a = document.createAttribute("mon_attribut");
+a.value = "nouvelleValeur";
+noeud.setAttributeNode(a);
+console.log(noeud.getAttribute("mon_attribut")); // "nouvelleValeur"
 ```
 
 ## Spécifications
@@ -48,4 +53,7 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 ## Voir aussi
 
-- {{domxref("Document.createElement()")}}
+- La méthode {{DOMxRef("Document.createAttributeNS()")}}
+- La méthode {{DOMxRef("Document.createElement()")}}
+- La méthode {{DOMxRef("Element.setAttribute()")}}
+- La méthode {{DOMxRef("Element.setAttributeNode()")}}

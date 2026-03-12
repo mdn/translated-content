@@ -3,7 +3,7 @@ title: "ARIA : rôle row"
 short-title: row
 slug: Web/Accessibility/ARIA/Reference/Roles/row_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 Un élément avec `role="row"` représente une ligne de cellules dans une structure tabulaire. Une ligne contient une ou plusieurs cellules, cellules de grille ou en-têtes de colonne, et éventuellement un en-tête de ligne, au sein d'un [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) et éventuellement dans un [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).

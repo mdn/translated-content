@@ -1,65 +1,63 @@
 ---
-title: itemprop
+title: "Attribut HTML universel : itemprop"
+short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
-original_slug: Web/HTML/Global_attributes/itemprop
+l10n:
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemprop`** est utilisé pour ajouter des propriétés à un objet. Chaque élément HTML peut avoir un attribut `itemprop` défini, et un `itemprop` consiste en une paire nom-valeur. Chaque paire nom-valeur est appelée une **propriété**, et un groupe d'une ou plusieurs propriétés forme un **objet**. Les valeurs des propriétés sont soit une chaîne de caractères, soit une URL, et peuvent être associées à un très large éventail d'éléments, y compris {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, et {{HTMLElement("video")}}.
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
+## Exemples
 
-### Un exemple simple
+L'exemple ci-dessous montre le code source pour un ensemble d'éléments marqués avec des attributs `itemprop`, suivi d'un tableau montrant les données structurées résultantes.
 
-#### HTML
+### HTML
 
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span
-    >Director:
+  <span>
+    Réalisateur&nbsp;:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)
+    (né le 16 août 1954)
   </span>
   <span itemprop="genre">Science fiction</span>
-  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer"
-    >Trailer</a
-  >
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
+    Bande-annonce
+  </a>
 </div>
 ```
 
-#### Structure de données
+### Structure de données
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2"> </td>
-      <th colspan="2" rowspan="1"><strong>Objet</strong></th>
+      <td rowspan="2"> </td>
+      <th colspan="2"><strong>Item</strong></th>
     </tr>
     <tr>
-      <th>
-        <strong>Nom pour <code>itemprop</code></strong>
-      </th>
-      <th>
-        <strong>Valeur pour <code>itemprop</code></strong>
-      </th>
+      <th><strong>itemprop name</strong></th>
+      <th><strong>itemprop value</strong></th>
     </tr>
     <tr>
-      <td><code>itemprop</code></td>
+      <td>itemprop</td>
       <td>name</td>
       <td>Avatar</td>
     </tr>
     <tr>
-      <td><code>itemprop</code></td>
+      <td>itemprop</td>
       <td>director</td>
       <td>James Cameron</td>
     </tr>
     <tr>
-      <td><code>itemprop</code></td>
+      <td>itemprop</td>
       <td>genre</td>
       <td>Science fiction</td>
     </tr>
     <tr>
-      <td><code>itemprop</code></td>
+      <td>itemprop</td>
       <td>trailer</td>
       <td>../movies/avatar-theatrical-trailer.html</td>
     </tr>
@@ -68,15 +66,15 @@ L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itempro
 
 ## Propriétés
 
-Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL. Lorsque c'est une URL, on l'exprime grâce à l'élément {{HTMLElement("a")}} et avec son attribut `href`. Pour un élément {{HTMLElement("img")}}, on lira son attribut `src`, de même pour les autres éléments HTML qui font appel à d'autres ressources.
+Les propriétés ont des valeurs qui sont soit une chaîne de caractères, soit une URL. Lorsqu'une valeur de chaîne est une URL, elle est exprimée à l'aide de l'élément HTML {{HTMLElement("a")}} et de son attribut [`href`](/fr/docs/Web/HTML/Reference/Elements/a#href), de l'élément HTML {{HTMLElement("img")}} et de son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src), ou d'autres éléments qui lient ou intègrent des ressources externes.
 
-### Trois propriétés dont les valeurs sont des chaînes simples
+### Trois propriétés dont les valeurs sont des chaînes de caractères
 
 ```html
 <div itemscope>
-  <p>My name is <span itemprop="name">Neil</span>.</p>
-  <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
-  <p>I am <span itemprop="nationality">British</span>.</p>
+  <p>Mon nom est <span itemprop="name">Neil</span>.</p>
+  <p>Mon groupe s'appelle <span itemprop="band">Four Parts Water</span>.</p>
+  <p>Je suis <span itemprop="nationality">Britannique</span>.</p>
 </div>
 ```
 
@@ -88,7 +86,11 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 </div>
 ```
 
-### Une propriété dont la valeur est un identifiant « machine »
+Lorsqu'une chaîne de caractères ne peut pas être facilement lue et comprises par une personne (par exemple, une longue chaîne de caractères composée de chiffres et de lettres), elle peut être affichée en utilisant l'attribut de donnée de l'élément, avec la version plus facilement compréhensible par un humain donnée dans le contenu de l'élément (qui ne fait pas partie des données structurées — voir l'exemple ci-dessous).
+
+### Une propriété dont la valeur est un identifiant produit
+
+L'identifiant n'est pas destiné à être lisible par les humain·e·s, donc le nom du produit est utilisé à la place.
 
 ```html
 <h1 itemscope>
@@ -96,229 +98,230 @@ Les valeurs des propriétés sont généralement des chaînes de caractères ou 
 </h1>
 ```
 
-Lorsqu'une chaîne est décrite avec un format machine plutôt qu'un format « humain », la propriété est exprimée avec la valeur de l'attribut `value` de l'élément {{HTMLElement("data")}} et c'est le contenu de l'élément qui fournira la valeur humainement compréhensible.
+Pour les données numériques, l'élément de mesure et son attribut de valeur peuvent être utilisés.
 
 ### Un exemple de mesure
 
 ```html
 <div itemscope itemtype="http://schema.org/Product">
-  <span itemprop="name"> Panasonic White 60L Refrigerator </span>
+  <span itemprop="name">Réfrigérateur Panasonic White 60L</span>
   <img src="panasonic-fridge-60l-white.jpg" alt="" />
   <div
     itemprop="aggregateRating"
     itemscope
     itemtype="http://schema.org/AggregateRating">
-    <meter itemprop="ratingValue" min="0" value="3.5" max="5">
-      Rated 3.5/5
-    </meter>
-    (based on <span itemprop="reviewCount">11</span>
-    customer reviews)
+    <meter itemprop="ratingValue" min="0" value="3.5" max="5">Noté 3.5/5</meter>
+    (basé sur <span itemprop="reviewCount">11</span>
+    avis clients)
   </div>
 </div>
 ```
 
-Pour les données numériques, on peut utiliser l'élément {{HTMLElement("meter")}} et la valeur de son attribut `value`.
+De même, pour les données relatives à la date et l'heure, l'élément de temps et son attribut de dates et heures peut être utilisé.
 
-### Une propriété de date
+### Un élément avec une propriété, `"birthday"`, dont la valeur est une date
 
 ```html
 <div itemscope>
-  I was born on
-  <time itemprop="birthday" datetime="2009-05-10"> May 10th 2009 </time>.
+  Je suis né·e le
+  <time itemprop="birthday" datetime="1984-05-10">10 mai 1984</time>.
 </div>
 ```
 
-Pour les valeurs temporelles, on utilisera les éléments {{HTMLElement("time")}} et son attribut `datetime`.
+Les propriétés peuvent également être des groupes de paires nom-valeur, en plaçant l'attribut de portée d'élément sur l'élément qui déclare la propriété. Chaque valeur est soit une chaîne, soit un groupe de paires nom-valeur (c'est-à-dire un élément).
 
-### Imbrication de propriétés
+### Un élément externe représentant une personne, et un élément interne représentant un groupe
 
 ```html
 <div itemscope>
+  <p>Nom&nbsp;: <span itemprop="name">Amanda</span></p>
   <p>
-    Name:
-    <span itemprop="name">Amanda</span>
-  </p>
-  <p>
-    Band:
+    Groupe&nbsp;:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)
+      (<span itemprop="size">12</span> membres)
     </span>
   </p>
 </div>
 ```
 
-On peut avoir des imbrications de propriétés et utiliser l'attribut `itemscope` sur l'élément qui porte le groupe.
+L'élément externe ci-dessus a deux propriétés, `"name"` et `"band"`. Le nom (`"name"`) est «&nbsp;Amanda&nbsp;», et le groupe (`"band"`) est un élément à part entière, avec deux propriétés, `"name"` et `"size"`. Le nom du groupe est «&nbsp;Jazz Band&nbsp;», et le `"size"` est «&nbsp;12&nbsp;». L'élément externe dans cet exemple est un élément microdonnées de niveau supérieur. Les éléments qui ne font pas partie d'autres éléments sont appelés éléments microdonnées de niveau supérieur.
 
-L'élément de plus haut niveau possède deux propriétés `name` et `band`. La valeur de `name` est Amanda et la valeur de `band` est un objet à part entière, composé de deux propriétés `name` et `size`. Le valeur pour `name` est Jazz Band et la valeur de `size` est 12. L'objet de plus haut niveau est un objet qui ne fait pas partie d'un autre objet.
+### Toutes les propriétés séparées de leurs éléments
 
-### Séparation des objets
+Cet exemple est le même que le précédent, mais toutes les propriétés sont séparées de leurs éléments.
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span></p>
+<p id="a">Nom&nbsp;: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-  <p>Band: <span itemprop="name">Jazz Band</span></p>
-  <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Groupe&nbsp;: <span itemprop="name">Jazz Band</span></p>
+  <p>Taille&nbsp;: <span itemprop="size">12</span> membres</p>
 </div>
 ```
 
-On obtient le même résultat qu'avec l'exemple précédent. Le premier objet possède deux propriétés `name` (qui vaut Amanda) et `band` qui est défini avec un autre objet. Le deuxième objet possède deux propriétés `name` (qui vaut Jazz Band) et `size` (qui vaut 12).
+Ça donne le même résultat que l'exemple précédent. Le premier élément a deux propriétés, `"name"`, définie sur «&nbsp;Amanda&nbsp;», et `"band"`, définie sur un autre élément. Ce deuxième élément a deux autres propriétés, `"name"`, définie sur «&nbsp;Jazz Band&nbsp;», et `"size"`, définie sur «&nbsp;12&nbsp;».
 
-### Un objet avec plusieurs occurrences d'une propriété
+Un élément peut avoir plusieurs propriétés avec le même nom et des valeurs différentes.
+
+### Glace avec deux saveurs
 
 ```html
 <div itemscope>
-  <p>Flavors in my favorite ice cream:</p>
+  <p>Saveurs dans ma glace préférée&nbsp;:</p>
   <ul>
-    <li itemprop="flavor">Lemon sorbet</li>
-    <li itemprop="flavor">Apricot sorbet</li>
+    <li itemprop="flavor">Sorbet au citron</li>
+    <li itemprop="flavor">Sorbet à l'abricot</li>
   </ul>
 </div>
 ```
 
-Cet objet possède deux fois la même propriété `flavor`, qui prend deux valeurs Lemon sorbet et Apricot sorbet.
+Cela donne un élément avec deux propriétés, toutes deux nommées `"flavor"` et ayant pour valeurs «&nbsp;Sorbet au citron&nbsp;» et «&nbsp;Sorbet à l'abricot&nbsp;».
 
-### Deux propriétés avec la même valeur
+Un élément introduisant une propriété peut également introduire plusieurs propriétés à la fois, pour éviter la duplication lorsque certaines des propriétés ont la même valeur.
+
+### Un élément avec deux propriétés, `"favorite-color"` et `"favorite-fruit"`, toutes deux définies sur la valeur « orange »
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color favorite-fruit"> orange </span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange
+  </span>
 </div>
 ```
 
-On peut définir deux propriétés au même endroit si elles prennent la même valeur.
+> [!NOTE]
+> Il n'y a pas de relation entre les microdonnées et le contenu du document où les microdonnées sont balisées.
 
-### Équivalence sémantique
+### Les mêmes données structurées balisées de deux manières différentes
+
+Il n'y a pas de différence sémantique entre les deux exemples suivants
 
 ```html
 <figure>
   <img src="castle.jpeg" />
   <figcaption>
-    <span itemscope>
-      <span itemprop="name">The Castle</span>
-    </span>
-    (1986)
+    <span itemscope><span itemprop="name">Le Château</span></span> (1986)
   </figcaption>
 </figure>
 ```
 
 ```html
-<span itemscope>
-  <meta itemprop="name" content="The Castle" />
-</span>
+<span itemscope><meta itemprop="name" content="Le Château" /></span>
 <figure>
   <img src="castle.jpeg" />
-  <figcaption>The Castle (1986)</figcaption>
+  <figcaption>Le Château (1986)</figcaption>
 </figure>
 ```
 
-Ces deux exemples sont équivalents d'un point de vue sémantique. Tous les deux se composent d'un schéma et d'une légende et tous les deux possèdent un objet avec une propriété `name` qui vaut The Castle. Une différence subsiste : si l'utilisateur glisse-dépose l'élément, l'objet sera inclus dans les données. Dans les deux cas, l'image n'est pas associée à l'objet.
+Les deux exemples ont une figure avec une légende, et les deux, complètement indépendants de la figure, ont un élément avec une paire nom-valeur avec le nom (`"name"`) et la valeur «&nbsp;Le Château&nbsp;». La seule différence est que si l'utilisateur fait glisser la légende hors du document, l'élément sera inclus dans les données de glisser-déposer. L'image associée à l'élément ne sera pas incluse.
 
-## Les noms et les valeurs
+## Noms et valeurs
 
-Une propriété est un ensemble non-ordonné de composants uniques sensibles à la casse qui représentent les paires de noms/valeurs. Les valeur doit avoir au moins composant pour se rattacher à l'objet. Dans le tableau ci-après, chaque cellule correspond à un composant.
+Une propriété est un ensemble non ordonné de jetons uniques qui sont sensibles à la casse et représentent les paires nom-valeur. La valeur de la propriété doit contenir au moins un jeton. Dans l'exemple ci-dessous, chaque cellule de données est un jeton.
 
 ### Exemples de noms
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th colspan="1" rowspan="2" scope="col"> </th>
-      <th colspan="2" rowspan="1" scope="col">Objet</th>
+      <th rowspan="2" scope="col"> </th>
+      <th colspan="2" scope="col">Item</th>
     </tr>
     <tr>
-      <th scope="col">nom pour <code>itemprop</code></th>
-      <th scope="col">valeur pour <code>itemprop</code></th>
+      <th scope="col">itemprop <strong>name</strong></th>
+      <th scope="col">itemprop <strong>value</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>country</td>
       <td>Ireland</td>
     </tr>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>Option</td>
       <td>2</td>
     </tr>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
-      <td>Ring of Kerry</td>
+      <td>Anneau de Kerry</td>
     </tr>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>img</td>
       <td>https://www.flickr.com/photos/nlireland/6992065114/</td>
     </tr>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>website</td>
       <td>flickr</td>
     </tr>
     <tr>
-      <th><code>itemprop</code></th>
+      <th>itemprop</th>
       <td>(token)</td>
       <td>(token)</td>
     </tr>
   </tbody>
 </table>
 
-**Les composants** sont des chaînes de caractères ou des URL. Un objet est appelé un objet typé si c'est une URL. Les chaînes ne peuvent pas contenir de point ou de deux points.
+**Les jetons** sont des chaînes de caractères ou des URL. Un objet est appelé un **objet typé** si c'est une URL. Sinon, c'est une chaîne de caractères. Les chaînes de caractères ne peuvent pas contenir de point ou de deux points (voir après).
 
-1. Si un objet est un objet typé, il doit être :
-   1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
-   2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
-   3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
+1. Si un objet est un objet typé, il doit être&nbsp;:
+   1. Un nom de propriété défini, ou
+   2. Une URL valide, qui fait référence à la définition du vocabulaire, ou
+   3. Une URL valide utilisée comme nom de propriété propriétaire (c'est-à-dire non défini dans une spécification publique), ou
 
-2. Si un objet n'est pas un objet typé, le nom doit être :
-   1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
+2. Si un objet n'est pas un objet typé, le nom doit être&nbsp;:
+   1. Une chaîne de caractères qui ne contient pas de caractères `.` (U+002E FULL STOP) et pas de caractères `:` (U+003A COLON) et qui est utilisée comme un nom de propriété propriétaire (c'est-à-dire non défini dans une spécification publique).
 
 > [!NOTE]
-> Les caractères « : » sont interdits pour les valeurs qui ne sont pas des URL afin de pouvoir distinguer les URL du reste. Les valeurs avec les caractères « . » sont réservés pour de futurs ajouts et les blancs ne sont pas autorisés car les valeurs seraient analysées comme plusieurs valeurs distinctes.
+> Les caractères « : » sont interdits pour les valeurs qui ne sont pas des URL afin de pouvoir distinguer les URL du reste. Les valeurs avec les caractères « . » sont réservés pour de futurs ajouts. Les espaces ne sont pas autorisés car les valeurs seraient analysées comme plusieurs jetons distincts.
 
-## Valeurs
+## Valeur
 
-La valeur d'une propriété est définie comme le premier cas qui correspond dans cette liste :
+La valeur d'une propriété est définie comme le premier cas qui correspond dans cette liste&nbsp;:
 
-- Si l'élément possède un attribut **`itemscope` :**
-  - La valeur est **l'objet** créé par l'élément.
+- Si l'élément a un attribut `itemscope`
+  - La valeur est **l'élément** créé par l'élément
 
-- Si l'élément est un élément **`meta` :**
-  - La valeur est celle de l'attribut **`content`** s'il existe, la chaîne vide sinon.
+- Si l'élément est un élément `meta`
+  - La valeur est la valeur de l'attribut `content` de l'élément
 
-- Si l'élément est **`audio`**, **`embed`**, **`iframe`**, **`img`**, **`source`**, **`track`** ou **`video` :**
-  - La valeur est l'URL correspondant à l'analyse de l'attribut `src` relatif au nœeud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+- Si l'élément est un élément `audio`, `embed`, `iframe`, `img`, `source`, `track` ou `video`
+  - La valeur est la chaîne URL résultante, qui résulte de l'analyse de la valeur de l'attribut `src` de l'élément par rapport au document nœud (partie de l'[API DOM Microdata](/fr/docs/Web/HTML/Guides/Microdata)) de l'élément au moment où l'attribut est défini
 
-- Si l'élément est un élément **`a`**, **`area`** ou **`link` :**
-  - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `href` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+- Si l'élément est un élément `a`, `area` ou `link`
+  - La valeur est la chaîne URL résultante, qui résulte de l'analyse de la valeur de l'attribut `href` de l'élément par rapport au document nœud de l'élément au moment où l'attribut est défini
 
-- Si l'élément est un élément **`object` :**
-  - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `data` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
+- Si l'élément est un élément `object`
+  - La valeur est la chaîne URL résultante, qui résulte de l'analyse de la valeur de l'attribut `data` de l'élément par rapport au document nœud de l'élément au moment où l'attribut est défini
 
-- Si l'élément est un élément **`data` :**
-  - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
+- Si l'élément est un élément `data`
+  - La valeur est la valeur de l'attribut `value` de l'élément
 
-- Si l'élément est un élément **`meter` :**
-  - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
+- Si l'élément est un élément `meter`
+  - La valeur est la valeur de l'attribut `value` de l'élément
 
-- Si l'élément est un élément **`time` :**
-  - La valeur de l'élément est la valeur de l'attribut **`datetime`**.
+- Si l'élément est un élément `time`
+  - La valeur est la valeur de l'attribut `datetime` de l'élément
 
-Sinon :
+Sinon
 
-- La valeur de l'élément est le contenu textuel de l'élément HTML (`textContent`).
+- La valeur est le _contenu textuel_ (`textContent`) de l'élément.
 
-Les éléments qui permettent d'utiliser des attributs URL pour des URL absolues sont : **`a`**, **`area`**, **`audio`**, **`embed`**, **`iframe`**, **`img`**, **`link`**, **`object`**, **`source`**, **`track`** et **`video`**.
+Si la valeur d'une propriété est une `URL`, la propriété doit être définie en utilisant un élément de propriété URL. Les éléments de propriété URL sont les éléments `a`, `area`, `audio`, `embed`, `iframe`, `img`, `link`, `object`, `source`, `track` et `video`.
 
 ### Ordre des noms
 
-L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs valeurs, l'ordre sera relatif pour cette propriété.
+Les noms ne sont pas ordonnés les uns par rapport aux autres, mais si un nom particulier a plusieurs valeurs, elles ont un ordre relatif.
 
-#### Exemples équivalents
+Dans l'exemple suivant, la propriété `"a"` a les valeurs «&nbsp;1&nbsp;» et «&nbsp;2&nbsp;», _dans cet ordre_, mais il n'est pas important que la propriété `"a"` vienne avant la propriété `"b"` ou non.
 
 ```html
 <div itemscope>
@@ -327,6 +330,8 @@ L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs
   <p itemprop="b">test</p>
 </div>
 ```
+
+Voici plusieurs exemples équivalents&nbsp;:
 
 ```html
 <div itemscope>
@@ -354,49 +359,66 @@ L'ordre des noms n'a pas d'importance mais si une propriété possède plusieurs
 </div>
 ```
 
-## Syntaxe
+### Représenter des données structurées pour un livre
 
-### Syntaxe formelle
+Cet exemple utilise des attributs microdata pour représenter les données structurées suivantes&nbsp;:
 
-```
-itemprop = "name", value
-```
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td rowspan="4">itemscope</td>
+      <td>itemtype: itemid</td>
+      <td colspan="2">https://schema.org/Book: urn:isbn:0-374-22848-5</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>title</td>
+      <td>Les hiboux des glaces orientales</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>author</td>
+      <td>Jonathan C Slaght</td>
+    </tr>
+    <tr>
+      <td>itemprop</td>
+      <td>datePublished</td>
+      <td>2020-08-04</td>
+    </tr>
+  </tbody>
+</table>
 
-## Exemples
-
-### HTML
-
-Un exemple sur un livre qu'on décrit avec les différents attributs.
+#### HTML
 
 ```html
 <dl
   itemscope
-  itemtype="http://vocab.example.net/book"
-  itemid="urn:isbn:0-330-34032-8">
-  <dt>Title</dt>
-  <dd itemprop="title">The Reality Dysfunction</dd>
-  <dt>Author</dt>
-  <dd itemprop="author">Peter F. Hamilton</dd>
-  <dt>Publication date</dt>
+  itemtype="https://schema.org/Book"
+  itemid="urn:isbn:0-374-22848-5<">
+  <dt>Titre</dt>
+  <dd itemprop="title">Les hiboux des glaces orientales</dd>
+  <dt>Auteur</dt>
+  <dd itemprop="author">Jonathan C Slaght</dd>
+  <dt>Date de publication</dt>
   <dd>
-    <time itemprop="pubdate" datetime="1996-01-26"> 26 January 1996 </time>
+    <time itemprop="datePublished" datetime="2020-08-04">4 août 2020</time>
   </dd>
 </dl>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Représenter des données structurées pour un livre")}}
 
 ## Spécifications
 
 {{Specifications}}
 
-## Compatibilité des navigateurs
-
-{{Compat}}
-
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
-  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
-  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes#itemscope)
-  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- Les autres attributs universels relatifs aux microdonnées&nbsp;:
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes/itemid)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes/itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes/itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes/itemtype)

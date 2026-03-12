@@ -1,14 +1,13 @@
 ---
 title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
-original_slug: Web/CSS/column-rule-style
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-style`** définit le style de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.
 
-La propriété **`column-rule-style`** permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.
-
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: column-rule-style")}}
 
 ```css interactive-example-choice
 column-rule-style: none;
@@ -28,17 +27,18 @@ column-rule-style: double;
 
 ```css interactive-example-choice
 column-rule-style: ridge;
-column-rule-color: #88f;
+column-rule-color: #8888ff;
 ```
 
 ```html interactive-example
 <section id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de Michaelmas venait de se terminer, et le lord
+    chancelier siégeait dans la salle de Lincoln's Inn. Un novembre implacable.
+    Tant de boue dans les rues comme si les eaux venaient tout juste de se
+    retirer de la surface de la terre, et il ne serait pas étonnant de
+    rencontrer un Megalosaurus, quarante pieds de long environ, se dandinant
+    comme un lézard éléphantesque en montant Holborn Hill.
   </p>
 </section>
 ```
@@ -54,7 +54,7 @@ column-rule-color: #88f;
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
+/* Valeurs de type <'border-style'> */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -69,15 +69,17 @@ column-rule-style: outset;
 /* Valeurs globales */
 column-rule-style: inherit;
 column-rule-style: initial;
+column-rule-style: revert;
+column-rule-style: revert-layer;
 column-rule-style: unset;
 ```
 
-La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
+La propriété `column-rule-style` avec une valeur unique de type `<'border-style'>`.
 
 ### Valeurs
 
-- `<br-style>`
-  - : Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. _[collapsing border model](https://www.w3.org/TR/CSS2/tables.html#collapsing-borders)_).
+- `<'border-style'>`
+  - : Un mot-clé défini comme pour {{CSSxRef("border-style")}} qui permet de définir le style appliqué au trait. Le rendu doit être interprété conformément au modèle d'affaissement des bordures.
 
 ## Définition formelle
 
@@ -89,35 +91,30 @@ La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 
 ## Exemples
 
-### CSS
+### Définir une règle de colonne en tirets
+
+#### HTML
+
+```html
+<p>
+  Ce texte est réparti en trois colonnes. La propriété `column-rule-style` est
+  utilisée pour changer le style de la ligne tracée entre les colonnes. Ne
+  trouvez-vous pas cela merveilleux&nbsp;?
+</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
-  border: 10px solid #000000;
-
-  columns: 3;
-  column-rule-width: thick;
-  column-rule-color: blue;
+p {
+  column-count: 3;
   column-rule-style: dashed;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">
-  « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je ne
-  le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être une
-  vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
-  n’aimerais pas cela du tout. » « Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ? Il y a à peine de la place
-  pour vous, et il n’y en a pas du tout pour vos livres de leçons. »
-</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Définir une règle de colonne en tirets")}}
 
 ## Spécifications
 
@@ -126,3 +123,10 @@ La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- [Apprendre&nbsp;: Mise en page multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
+- La propriété {{CSSxRef("column-rule")}}
+- La propriété {{CSSxRef("column-rule-color")}}
+- La propriété {{CSSxRef("column-rule-width")}}

@@ -1,14 +1,14 @@
 ---
 title: マージン、境界、パディングの論理的プロパティ
+short-title: マージン、境界、パディング
 slug: Web/CSS/Guides/Logical_properties_and_values/Margins_borders_padding
-original_slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュールでは、それぞれのマージン、境界、パディングのプロパティおよびその一括指定について、フローに関連する対応付けを定義しています。
 
-[CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、一括指定値のすべてがあるためです。
+[論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)のメインページを見ると、たくさんのプロパティが並んでいます。これは多くがマージン、境界、パディングのそれぞれの辺について 4 つの個別指定値と、すべての一括指定値があるためです。
 
 ## マージン、境界、パティングの対応付け
 

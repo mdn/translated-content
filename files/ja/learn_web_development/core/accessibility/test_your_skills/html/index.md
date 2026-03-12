@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: HTML アクセシビリティ"
+title: "確認テスト: HTML アクセシビリティ"
 slug: Learn_web_development/Core/Accessibility/Test_your_skills/HTML
 original_slug: Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{learnsidebar}}
 
-このスキルテストの目的は、 [HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML)の記事を理解したかどうかを評価することです。
+この確認テストの目的は、 [HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML)の記事を理解したかどうかを評価することです。
 
 > [!NOTE]
 > このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインエディターで解決策を試すことができます。

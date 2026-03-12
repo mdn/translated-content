@@ -10,9 +10,9 @@ l10n:
 Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur à vos [éléments](/fr/docs/Web/HTML/Reference/Elements) [HTML](/fr/docs/Web/HTML) afin d'obtenir l'apparence souhaitée. Ce guide est une introduction à l'utilisation de CSS pour appliquer des couleurs aux éléments HTML. Il inclut [des listes des propriétés CSS qui définissent une couleur dans leurs valeurs](#propriétés_qui_peuvent_avoir_une_couleur) et explique comment utiliser les couleurs [dans les feuilles de style](#spécification_des_couleurs_dans_les_feuilles_de_style) et [d'autres façons](#autres_facons_dutiliser_la_couleur).
 
 > [!NOTE]
-> Il est important de [bien utiliser les couleurs](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely). Choisissez toujours des couleurs appropriées, assurez-vous que le contraste entre le texte et l'arrière-plan est suffisant pour la lisibilité, et gardez à l'esprit les besoins des personnes ayant des capacités visuelles différentes.
+> Il est important de [bien utiliser les couleurs](/fr/docs/Web/CSS/Guides/Colors/Using_color_wisely). Choisissez toujours des couleurs appropriées, assurez-vous que le contraste entre le texte et l'arrière-plan est suffisant pour la lisibilité, et gardez à l'esprit les besoins des personnes ayant des capacités visuelles différentes.
 
-Pour en savoir plus sur les couleurs CSS en tant que type de donnée, voir la référence du [type de donnée CSS `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) et le [guide des valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values).
+Pour en savoir plus sur les couleurs CSS en tant que type de donnée, voir la référence du [type de donnée CSS `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) et le [guide des valeurs de couleur CSS](/fr/docs/Web/CSS/Guides/Colors/Color_values).
 
 ## Propriétés qui peuvent avoir une couleur
 
@@ -109,7 +109,7 @@ Ici, nous avons un {{HTMLElement("div")}} conteneur avec deux `<div>` enfants, c
 Regardons le CSS qui produit le résultat, étape par étape.
 
 > [!NOTE]
-> Nous utilisons plusieurs [types de valeurs de couleurs CSS](/fr/docs/Web/CSS/CSS_colors/Color_values) afin d'en démontrer l'usage. Ce n'est pas recommandé en production. Choisissez une notation de couleur unique au sein de l'équipe.
+> Nous utilisons plusieurs [types de valeurs de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors/Color_values) afin d'en démontrer l'usage. Ce n'est pas recommandé en production. Choisissez une notation de couleur unique au sein de l'équipe.
 
 ```css
 .conteneur {
@@ -192,7 +192,7 @@ CSS n'est pas la seule technologie Web à gérer la couleur. Par exemple&nbsp;:
 ## Voir aussi
 
 - Type de donnée [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value)
-- [Valeurs de couleur CSS](/fr/docs/Web/CSS/CSS_colors/Color_values)
-- [Bien utiliser les couleurs](/fr/docs/Web/CSS/CSS_colors/Using_color_wisely)
+- [Valeurs de couleur CSS](/fr/docs/Web/CSS/Guides/Colors/Color_values)
+- [Bien utiliser les couleurs](/fr/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - Le module [Couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Dessiner des graphiques](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
