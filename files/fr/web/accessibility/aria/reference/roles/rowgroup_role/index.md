@@ -3,7 +3,7 @@ title: "ARIA : rôle rowgroup"
 short-title: rowgroup
 slug: Web/Accessibility/ARIA/Reference/Roles/rowgroup_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 Le rôle `rowgroup` («&nbsp;groupe de lignes&nbsp;») regroupe des [lignes](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) au sein d'une structure tabulaire. Un `rowgroup` contient une ou plusieurs lignes composées de [cellules](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role), de [cellules de grille](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), d'[en-têtes de colonne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) ou d'[en-têtes de ligne](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) à l'intérieur d'une [`grid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role), d'une [`table`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) ou d'un [`treegrid`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role).

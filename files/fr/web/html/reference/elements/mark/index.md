@@ -2,7 +2,7 @@
 title: "<mark> : l'élément de marquage du texte"
 slug: Web/HTML/Reference/Elements/mark
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<mark>`** représente du texte qui est **marqué** ou **surligné** à des fins de référence ou de notation, en raison de la pertinence du passage marqué dans le contexte qui l'entoure.
@@ -74,7 +74,7 @@ mark::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été marqué.
 
-- [Brève note sur l'accessibilité du marquage | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Brève note sur l'accessibilité du marquage | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Ajuster les styles de texte de niveau | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Exemples

@@ -1,5 +1,5 @@
 ---
-title: "スキルテスト: CSS グリッド"
+title: "確認テスト: CSS グリッド"
 short-title: "テスト: CSS グリッド"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 l10n:
@@ -8,10 +8,10 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
-このスキルテストの目的は、[グリッドとグリッドアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
+この確認テストの目的は、[グリッドとグリッドアイテム](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の動作を理解しているかどうかを評価することです。今までに使用した素材のさまざまな要素を使用する、いくつかの小さな課題に取り組んでいただきます。
 
 > [!NOTE]
-> 手助けが必要な場合は、[スキルテスト](/ja/docs/Learn_web_development#スキルテスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
 ## 課題 1
 

@@ -2,7 +2,7 @@
 title: "<del> : l'élément de texte supprimé"
 slug: Web/HTML/Reference/Elements/del
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<del>`** représente une portion de texte qui a été supprimée d'un document. Cela peut être utilisé, par exemple, pour afficher le «&nbsp;suivi des modifications&nbsp;» ou des informations sur les différences dans le code source. L'élément HTML {{HTMLElement("ins")}} peut être utilisé pour l'effet inverse&nbsp;: indiquer le texte qui a été ajouté au document.
@@ -73,7 +73,7 @@ del::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été supprimé.
 
-- [Note courte sur la façon de laisser votre marque (plus accessible) | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Note courte sur la façon de laisser votre marque (plus accessible) | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Ajustement des styles de niveau texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Exemples

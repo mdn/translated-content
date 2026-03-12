@@ -3,7 +3,7 @@ title: "Accessibilité : Comprendre les couleurs et la luminance"
 short-title: Couleurs et luminance
 slug: Web/Accessibility/Guides/Colors_and_Luminance
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
 ---
 
 Comprendre la couleur, la luminance et la saturation est important pour la conception et la lisibilité pour toutes les personnes voyantes, mais c'est essentiel pour celles ayant une vision réduite, une déficience de la perception des couleurs ou des troubles neurologiques, cognitifs ou autres.
@@ -30,13 +30,13 @@ La luminance doit être déterminée avant de pouvoir calculer le contraste. Lor
 
 ### Terminologie
 
-La terminologie peut prêter à confusion car différents termes désignent parfois la même chose. «&nbsp;Luminance&nbsp;» et «&nbsp;saturation&nbsp;» sont particulièrement importants à bien distinguer. Par exemple, la «&nbsp;saturation&nbsp;» est parfois appelée «&nbsp;chroma&nbsp;». Dans d'autres contextes, «&nbsp;chroma&nbsp;» et «&nbsp;saturation&nbsp;» sont deux concepts différents. Le «&nbsp;L&nbsp;» de l'espace colorimétrique HSL est parfois appelé «&nbsp;luminosité&nbsp;», parfois «&nbsp;clarté&nbsp;». Même le nom des couleurs courantes peut prêter à débat&nbsp;: par exemple, le «&nbsp;rouge cramoisi&nbsp;» peut être décrit par la valeur hexadécimale `#990000` pour certain·e·s et `#DC143C` pour d'autres. Pour ce document, nous utiliserons la terminologie telle que définie sur la page CSS {{CSSXRef("&lt;named-color&gt;")}}.
+La terminologie peut prêter à confusion car différents termes désignent parfois la même chose. «&nbsp;Luminance&nbsp;» et «&nbsp;saturation&nbsp;» sont particulièrement importants à bien distinguer. Par exemple, la «&nbsp;saturation&nbsp;» est parfois appelée «&nbsp;chroma&nbsp;». Dans d'autres contextes, «&nbsp;chroma&nbsp;» et «&nbsp;saturation&nbsp;» sont deux concepts différents. Le «&nbsp;L&nbsp;» de l'espace colorimétrique HSL est parfois appelé «&nbsp;luminosité&nbsp;», parfois «&nbsp;clarté&nbsp;». Même le nom des couleurs courantes peut prêter à débat&nbsp;: par exemple, le «&nbsp;rouge cramoisi&nbsp;» peut être décrit par la valeur hexadécimale `#990000` pour certain·e·s et `#DC143C` pour d'autres. Pour ce document, nous utiliserons la terminologie telle que définie sur la page CSS {{CSSxRef("&lt;named-color&gt;")}}.
 
 Lorsque vous travaillez avec la couleur, il est important de savoir dans quel «&nbsp;espace colorimétrique&nbsp;» vous vous situez, car chaque espace correspond à un système de mesure différent.
 
 En impression couleur, votre imprimante utilise probablement des cartouches cyan, magenta, jaune et noir (<abbr>CMJN</abbr>). Le modèle CMJN est soustractif&nbsp;: les quatre encres _retirent_ certaines longueurs d'onde de la lumière, ne réfléchissant que la plage étroite qui leur est associée. Le modèle RVB est additif et ajoute différentes proportions de lumières rouge, verte et bleue.
 
-Actuellement, l'espace {{glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
+Actuellement, l'espace {{Glossary("RGB", "RVB")}} domine dans le développement web. Bien que les espaces HEX, RVB et HSL aient des notations différentes, les navigateurs convertissent automatiquement les valeurs entre ces notations. Les [modules de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) fournissent d'autres espaces colorimétriques. Cependant, en raison de la domination actuelle de l'espace RVB pour mesurer la couleur à l'écran, la plupart des calculs de ce document sont supposés être en RVB, et plus précisément en sRGB.
 
 ## L'espace colorimétrique sRGB
 
@@ -48,7 +48,7 @@ Des technologies comme [OpenGL](https://fr.wikipedia.org/wiki/OpenGL) et [Direct
 
 ### Valeurs de couleur CSS
 
-Il est important de savoir qu'il existe des variations même au sein d'un même {{glossary("color space", "espace colorimétrique")}}, comme l'espace colorimétrique {{glossary("RGB", "RVB")}}. Par exemple, les variantes de l'espace colorimétrique RVB incluent **RVB**, **sRVB**, **Adobe RVB**, **Adobe Wide Gamut RVB** et **RGBA**, entre autres.
+Il est important de savoir qu'il existe des variations même au sein d'un même {{Glossary("color space", "espace colorimétrique")}}, comme l'espace colorimétrique {{Glossary("RGB", "RVB")}}. Par exemple, les variantes de l'espace colorimétrique RVB incluent **RVB**, **sRVB**, **Adobe RVB**, **Adobe Wide Gamut RVB** et **RGBA**, entre autres.
 
 Voici des exemples de notations CSS utilisées pour définir une couleur. Dans chaque cas, la couleur d'exemple est un magenta totalement opaque&nbsp;:
 
@@ -105,23 +105,23 @@ Si toutes les valeurs sont des paires de chiffres identiques, la valeur peut êt
 
 L'exemple montre aussi la syntaxe héritée pour [`rgb()` et `rgba()`](/fr/docs/Web/CSS/Reference/Values/color_value/rgb#exemples). La syntaxe héritée des fonctions de couleur est séparée par des virgules, avec une fonction distincte lorsque le canal alpha est inclus. Les nouvelles fonctions de couleur n'ont qu'une seule syntaxe avec des valeurs séparées par des espaces (plutôt que par des virgules), le canal alpha, s'il est présent, étant précédé d'une barre oblique. La syntaxe moderne permet de mélanger nombres et pourcentages et prend en charge le mot‑clé `none`&nbsp;; la syntaxe héritée séparée par des virgules ne le permet pas.
 
-Les exemples suivants montrent «&nbsp;HSL&nbsp;», qui signifie _Teinte, Saturation et Luminosité_. Les valeurs de couleur HSL sont considérées par beaucoup comme plus intuitives que les valeurs RVB. La couleur produite à partir de ces réglages reste dans l'espace colorimétrique sRVB, mais {{CSSXRef("color_value/hsl", "hsl()")}} est une syntaxe intuitive pour beaucoup. La teinte est ajustée comme un angle, et il est facile de créer une interface utilisateur avec un bouton rotatif ou un contrôle circulaire pour ajuster la teinte. Notez que les couleurs HSL intègrent la _luminosité_, et non la _luminance_, ce qui est une distinction importante.
+Les exemples suivants montrent «&nbsp;HSL&nbsp;», qui signifie _Teinte, Saturation et Luminosité_. Les valeurs de couleur HSL sont considérées par beaucoup comme plus intuitives que les valeurs RVB. La couleur produite à partir de ces réglages reste dans l'espace colorimétrique sRVB, mais {{CSSxRef("color_value/hsl", "hsl()")}} est une syntaxe intuitive pour beaucoup. La teinte est ajustée comme un angle, et il est facile de créer une interface utilisateur avec un bouton rotatif ou un contrôle circulaire pour ajuster la teinte. Notez que les couleurs HSL intègrent la _luminosité_, et non la _luminance_, ce qui est une distinction importante.
 
-Les exemples suivants montrent «&nbsp;HWB&nbsp;», pour _Teinte, Blanchiment et Noircissement_. Avec `hsl()` et {{CSSXRef("color_value/hwb", "hwb()")}}, la première valeur peut être un {{CSSXRef("&lt;number&gt;")}} ou une {{CSSXRef("&lt;angle&gt;")}}. Si l'unité est omise, la valeur est interprétée comme des degrés (`deg`).
+Les exemples suivants montrent «&nbsp;HWB&nbsp;», pour _Teinte, Blanchiment et Noircissement_. Avec `hsl()` et {{CSSxRef("color_value/hwb", "hwb()")}}, la première valeur peut être un {{CSSxRef("&lt;number&gt;")}} ou une {{CSSxRef("&lt;angle&gt;")}}. Si l'unité est omise, la valeur est interprétée comme des degrés (`deg`).
 
-Il existe plusieurs autres fonctions de couleur et espaces colorimétriques. Les trois derniers exemples montrent comment représenter le magenta avec les fonctions {{CSSXRef("color_value/lab", "lab()")}}, {{CSSXRef("color_value/oklch", "oklch()")}} et {{CSSXRef("color_value/color", "color()")}}.
+Il existe plusieurs autres fonctions de couleur et espaces colorimétriques. Les trois derniers exemples montrent comment représenter le magenta avec les fonctions {{CSSxRef("color_value/lab", "lab()")}}, {{CSSxRef("color_value/oklch", "oklch()")}} et {{CSSxRef("color_value/color", "color()")}}.
 
 ### Conversions
 
 Comme indiqué précédemment, une couleur dans un même espace colorimétrique peut être exprimée de nombreuses façons. En observant l'espace RVB pour décrire la couleur «&nbsp;magenta&nbsp;», on voit qu'une même couleur peut s'exprimer en hexadécimal raccourci à trois chiffres qui correspond à une valeur hexadécimale à six chiffres, à une valeur RVB ou à une valeur RGBA exprimée en pourcentages.
 
-Le RVB est orienté matériel, reflétant l'utilisation historique des écrans cathodiques. De nombreux·ses développeur·euse·s et designer·euse·s préfèrent l'intuitivité de la notation {{CSSXRef("color_value/hsl", "hsl()")}}. Heureusement, les navigateurs convertissent automatiquement le RVB en HSL et les outils de développement proposent souvent une conversion en un clic.
+Le RVB est orienté matériel, reflétant l'utilisation historique des écrans cathodiques. De nombreux·ses développeur·euse·s et designer·euse·s préfèrent l'intuitivité de la notation {{CSSxRef("color_value/hsl", "hsl()")}}. Heureusement, les navigateurs convertissent automatiquement le RVB en HSL et les outils de développement proposent souvent une conversion en un clic.
 
 Outre les outils de développement, de nombreux utilitaires peuvent convertir le RVB en HSL pour vous et fournir à la fois la notation hexadécimale RVB et la syntaxe des fonctions CSS. Un excellent exemple est l'outil de Tom Jewett, [«&nbsp;mini color selector&nbsp;» <sup>(angl.)</sup>](https://colortutorial.design/microColorsC.html), qui propose des options HSL, RVB et hexadécimal pour vérifier le contraste directement dans le navigateur. Notez que les sélecteurs de couleur des outils de développement et cet outil fournissent tous des valeurs de contraste WCAG&nbsp;: [contraste de couleur <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/).
 
 ![Sélecteur de couleurs avec HSL et RGB et valeurs de contraste.](microcolorsc.jpg)
 
-Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSXRef("color_value/lch", "lch()")}} et{{CSSXRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSXRef("color_value/lab", "lab()")}} et {{CSSXRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
+Comme indiqué précédemment, le [module de couleurs CSS](/fr/docs/Web/CSS/Guides/Colors) intègre d'autres espaces colorimétriques, notamment la notation fonctionnelle {{CSSxRef("color_value/lch", "lch()")}} et{{CSSxRef("color_value/oklch", "oklch()")}}, ainsi que les systèmes de coordonnées de couleur {{CSSxRef("color_value/lab", "lab()")}} et {{CSSxRef("color_value/oklab", "oklab()")}}, qui peuvent décrire n'importe quelle couleur visible. Cela dit, sRGB reste l'espace colorimétrique par défaut et préféré pour l'accessibilité en raison de sa large diffusion.
 
 En matière d'accessibilité, les normes et recommandations sont cependant rédigées majoritairement en se basant sur l'espace colorimétrique sRGB, en particulier pour les rapports de contraste de couleur.
 
@@ -130,7 +130,7 @@ En matière d'accessibilité, les normes et recommandations sont cependant rédi
 
 ### Interroger les valeurs de couleur
 
-La méthode {{domxref('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou via `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
+La méthode {{DOMxRef('Window.getComputedStyle()')}} retourne des valeurs en utilisant l'échelle décimale RVB ou via `color(srgb...)`. Par exemple, appeler `Window.getComputedStyle()` sur un élément HTML `<div>` avec `background-color: red` retourne `rgb(255, 0, 0)`. Cependant, lors de l'utilisation de [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors) (par exemple `background-color: rgb(from blue 255 0 0)`), `Window.getComputedStyle()` peut retourner `color(srgb 1 0 0)`. Étant lié au matériel, `Window.getComputedStyle()` mesure la couleur en termes de RVB, pas selon la perception humaine.
 
 ### Daltonisme rouge/vert
 
@@ -150,7 +150,7 @@ La «&nbsp;forme&nbsp;» du texte importe aussi&nbsp;: les caractères fins sont
 
 ### Contraste et taille de police
 
-Les [recommandations de contraste WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan) définissent le texte «&nbsp;grand&nbsp;» comme étant un texte de `18pt` (environ `24px`) ou plus lorsque {{cssxref('font-weight')}} est `normal`, et `14pt` (environ `18,7px`) pour le texte en `gras`. Elles expliquent :
+Les [recommandations de contraste WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan) définissent le texte «&nbsp;grand&nbsp;» comme étant un texte de `18pt` (environ `24px`) ou plus lorsque {{CSSxRef('font-weight')}} est `normal`, et `14pt` (environ `18,7px`) pour le texte en `gras`. Elles expliquent :
 
 _Le texte plus grand et aux traits de caractères plus larges est plus facile à lire avec un contraste plus faible. Par conséquent, l'exigence de contraste pour les textes de grande taille est plus faible. Cela permet aux auteur·rice·s d'utiliser une gamme de couleurs plus large pour les grands textes, ce qui est utile pour la mise en page des pages, notamment les titres._
 
@@ -228,7 +228,7 @@ La saturation est parfois décrite comme la «&nbsp;pureté&nbsp;» ou l'«&nbsp
 
 Sur un écran, les couleurs saturées correspondent à des longueurs d'onde particulières. La définition de la saturation varie selon l'espace colorimétrique, mais la saturation se mesure facilement. L'important est de connaître l'espace colorimétrique utilisé et d'être prêt·e à le convertir si nécessaire.
 
-Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _hue_, _saturation_ et _value_, et le synonyme HSB, qui signifie _hue_, _saturation_ et _brightness_, sont représentés en CSS par [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb) pour _hue_, _whiteness_ et _blackness_.
+Les espaces colorimétriques les plus souvent considérés pour la photosensibilité sont RVB, HSL et HSV (aussi appelé HSB). L'espace HSV, qui signifie _hue_, _saturation_ et _value_, et le synonyme HSB, qui signifie _hue_, _saturation_ et _brightness_, sont représentés en CSS par {{CSSxRef("color_value/hwb", "hwb()")}} pour _hue_, _whiteness_ et _blackness_.
 
 Il est important de savoir dans quel espace colorimétrique vous travaillez. Par exemple, les couleurs saturées ont une _luminosité_ (<i lang="en">lightness</i>) de `0.5` en HSL, tandis qu'en HWB elles ont une valeur `1`. La saturation dans l'espace RVB est généralement indiquée par une valeur RVB de `255` ou `100%` pour la couleur considérée. Par exemple, un rouge saturé de valeur hexadécimale `#ff0000` correspond à `rgb(255 0 0)` et à `hsl(0 100% 50%)`. Un autre rouge saturé de valeur hexadécimale `#ff3300` correspond à `rgb(255 51 0)` et à `hsl(12 100% 50%)`. Ce sont tous deux des rouges «&nbsp;saturés&nbsp;». Ils représentent deux «&nbsp;teintes&nbsp;» différentes mais sont tous deux considérés comme des couleurs saturées.
 
@@ -262,7 +262,7 @@ La nature de la lumière bleue provoque une mise au point à un emplacement diff
 
 ## Le cas particulier du rouge
 
-Toutes les teintes (<i lang="en">hue</i>) ne sont pas traitées de la même façon par le cerveau. De manière générale, la physiologie et la psychologie humaines réagissent au rouge différemment des autres couleurs. Les humain·e·s répondent aux couleurs aussi bien sur le plan physiologique que psychologique. Par exemple, il a été démontré que [certaines couleurs sont plus susceptibles de provoquer des crises d'épilepsie que d'autres <sup>(angl.)</sup>](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Certains appareils proposent une [option «&nbsp;niveau de gris&nbsp;» en tant qu'option d'accessibilité <sup>(angl.)</sup>](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options) qui peut aider les personnes photosensibles. Pour reproduire ce réglage «&nbsp;niveaux de gris&nbsp;», utilisez la propriété CSS {{cssxref("filter")}} avec une fonction {{cssxref("filter-function/grayscale", "grayscale()")}} ou {{cssxref("filter-function/saturate", "saturate()")}} de type {{cssxref("&lt;filter-function&gt;")}}.
+Toutes les teintes (<i lang="en">hue</i>) ne sont pas traitées de la même façon par le cerveau. De manière générale, la physiologie et la psychologie humaines réagissent au rouge différemment des autres couleurs. Les humain·e·s répondent aux couleurs aussi bien sur le plan physiologique que psychologique. Par exemple, il a été démontré que [certaines couleurs sont plus susceptibles de provoquer des crises d'épilepsie que d'autres <sup>(angl.)</sup>](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Certains appareils proposent une [option «&nbsp;niveau de gris&nbsp;» en tant qu'option d'accessibilité <sup>(angl.)</sup>](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options) qui peut aider les personnes photosensibles. Pour reproduire ce réglage «&nbsp;niveaux de gris&nbsp;», utilisez la propriété CSS {{CSSxRef("filter")}} avec une fonction {{CSSxRef("filter-function/grayscale", "grayscale()")}} ou {{CSSxRef("filter-function/saturate", "saturate()")}} de type {{CSSxRef("&lt;filter-function&gt;")}}.
 
 ### Rouge saturé
 
@@ -314,8 +314,8 @@ La couleur — en particulier la teinte et la saturation — peut influencer not
 
 - [Accessibilité](/fr/docs/Web/Accessibility)
 - [Apprendre&nbsp;: l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility)
-- La propriété CSS {{CSSXRef("color")}}
-- Le type de données {{CSSXRef("color_value", "&lt;color&gt;")}}
+- La propriété CSS {{CSSxRef("color")}}
+- Le type de données {{CSSxRef("color_value", "&lt;color&gt;")}}
 - [Accessibilité Web pour les crises et réactions physiques](/fr/docs/Web/Accessibility/Guides/Seizure_disorders)
 - [Comment la couleur rouge influence notre comportement <sup>(angl.)</sup>](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American par Susana Martinez-Conde, Stephen L. Macknik, 1er novembre 2014
 - [Désaturation du rouge <sup>(angl.)</sup>](https://www.smartoptometry.app/red-desaturation/) L'œil humain est tellement «&nbsp;accordé&nbsp;» au rouge que les ophtalmologistes utilisent ce test pour évaluer l'intégrité du nerf optique.

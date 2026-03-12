@@ -1,32 +1,33 @@
 ---
 title: Reflect.getOwnPropertyDescriptor()
+short-title: getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-静的な **`Reflect.getOwnPropertyDescriptor()`** メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。
+**`Reflect.getOwnPropertyDescriptor()`** は静的メソッドで、{{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトに指定されたプロパティが存在する場合、そのプロパティ記述子を返します。存在しない場合は {{jsxref("undefined")}} を返します。
 
 {{InteractiveExample("JavaScript デモ: Reflect.getOwnPropertyDescriptor()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   property1: 42,
 };
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").value);
-// Expected output: 42
+console.log(Reflect.getOwnPropertyDescriptor(object, "property1").value);
+// 予想される結果: 42
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property2"));
-// Expected output: undefined
+console.log(Reflect.getOwnPropertyDescriptor(object, "property2"));
+// 予想される結果: undefined
 
-console.log(Reflect.getOwnPropertyDescriptor(object1, "property1").writable);
-// Expected output: true
+console.log(Reflect.getOwnPropertyDescriptor(object, "property1").writable);
+// 予想される結果: true
 ```
 
 ## 構文
 
-```
+```js-nolint
 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 ```
 
@@ -43,11 +44,14 @@ Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
 ### 例外
 
-{{jsxref("TypeError")}}: `target` が {{jsxref("Object")}} ではない場合
+- {{jsxref("TypeError")}}
+  - : `target` がオブジェクトではない場合
 
 ## 解説
 
-`Reflect.getOwnPropertyDescriptor` オブジェクトにプロパティが存在する場合、与えられたプロパティのプロパティディスクリプタを返します。一方、プロパティが存在しない場合は、{{jsxref("undefined")}} を返します。{{jsxref("Object.getOwnPropertyDescriptor()")}} との唯一の違いは、非オブジェクトの対象がどのようにバンドルされるかだけです。
+`Reflect.getOwnPropertyDescriptor()` は、オブジェクトのプロパティ記述子を取得する反射的意味づけを提供します。{{jsxref("Object.getOwnPropertyDescriptor()")}} との唯一の違いは、オブジェクト以外の対象の処理方法です。`Reflect.getOwnPropertyDescriptor()` は対象がオブジェクトでない場合に {{jsxref("TypeError")}} を発生しますが、`Object.getOwnPropertyDescriptor()` はそれをオブジェクトに変換します。
+
+`Reflect.getOwnPropertyDescriptor()` は、`target` の `[[GetOwnProperty]]` [オブジェクト内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) を呼び出します。
 
 ## 例
 
@@ -86,5 +90,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 ## 関連情報
 
+- [`Reflect.getOwnPropertyDescriptor` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- [`handler.getOwnPropertyDescriptor()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor)

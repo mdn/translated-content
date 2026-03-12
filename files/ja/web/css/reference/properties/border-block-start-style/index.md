@@ -1,12 +1,11 @@
 ---
 title: border-block-start-style
 slug: Web/CSS/Reference/Properties/border-block-start-style
-original_slug: Web/CSS/border-block-start-style
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-block-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-block-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-block-start-style")}}
 
@@ -40,8 +39,8 @@ writing-mode: vertical-lr;
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;

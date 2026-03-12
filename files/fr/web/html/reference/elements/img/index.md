@@ -3,7 +3,7 @@ title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Reference/Elements/img
 original_slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 493802c1d8ada608700ba664a45bbca5127b913c
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
@@ -233,7 +233,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     ```
 
 - `src`
-  - : L'{{Glossary("URL")}} de l'image. Cet attribut est obligatoire. Pour les {{Glossary("Browser", "navigateurs")}} qui prennent en charge `srcset`, l'image fourni par `src` est considérée comme une candidate avec un descripteur de densité de pixel à `1x`, sauf si une image avec un tel descripteur est déjà définie dans `srcset`, ou si `srcset` contient des descripteurs `w`.
+  - : {{Glossary("URL", "L'URL")}} de l'image. Cet attribut est obligatoire. Pour les {{Glossary("Browser", "navigateurs")}} qui prennent en charge `srcset`, l'image fourni par `src` est considérée comme une candidate avec un descripteur de densité de pixel à `1x`, sauf si une image avec un tel descripteur est déjà définie dans `srcset`, ou si `srcset` contient des descripteurs `w`.
 
 - `srcset`
   - : Une ou plusieurs chaînes de caractères séparées par des virgules, qui indiquent des sources possibles pour l'image que {{Glossary("user agent", "l'agent utilisateur")}} pourra utiliser. Chaque chaîne de caractères se compose&nbsp;:
@@ -252,7 +252,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : La largeur intrinsèque de l'image, exprimée en pixels. La valeur doit être un nombre entier sans unité.
 
 - `usemap`
-  - : L'{{Glossary("URL")}} partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Reference/Elements/map) associée à l'élément.
+  - : {{Glossary("URL", "L'URL")}} partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Reference/Elements/map) associée à l'élément.
 
     > [!NOTE]
     > Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément {{HTMLElement("a")}} ou d'un élément {{HTMLElement("button")}}.
@@ -279,7 +279,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété {{Glossary("CSS")}} {{CSSxRef("margin")}}doit être utilisée à la place.
 
 - `longdesc` {{Deprecated_Inline}}
-  - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une {{Glossary("URL")}} ou l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un autre élément.
+  - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une {{Glossary("URL")}} ou un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) d'un autre élément.
 
     > [!NOTE]
     > Cet attribut est considéré comme obsolète dans la [spécification HTML <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc). Son avenir est incertain&nbsp;; il est recommandé d'utiliser une alternative {{Glossary("WAI")}}-{{Glossary("ARIA")}} comme [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) ou [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details).
@@ -346,7 +346,7 @@ L'attribut `title` ne doit pas non plus être utilisé comme information de lég
 
 La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la verra&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en ligne en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
 
-- [Utiliser l'attribut HTML `title` — mis à jour | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [Utiliser l'attribut HTML `title` — mis à jour | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 
 ## Exemples
 
@@ -385,7 +385,7 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
   srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
-{{EmbedLiveSample("utiliser_lattribut_srcset", "100%", "160")}}
+{{EmbedLiveSample("Utiliser l'attribut `srcset`", "100%", 160)}}
 
 ### Utiliser les attributs `srcset` et `sizes`
 

@@ -3,7 +3,7 @@ title: "ARIA : rôle contentinfo"
 short-title: contentinfo
 slug: Web/Accessibility/ARIA/Reference/Roles/contentinfo_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle `contentinfo` définit un pied de page, contenant des informations d'identification telles que des informations sur le droit d'auteur, des liens de navigation et des déclarations de confidentialité, que l'on trouve sur chaque document d'un site. Cette section est communément appelée pied de page.
@@ -28,7 +28,7 @@ Ceci est un pied de page de site web. L'utilisation de l'élément {{HTMLElement
 
 Le rôle `contentinfo` est [un repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) utilisé pour identifier un pied de page. Les repères peuvent être utilisés par les technologies d'assistance pour identifier et naviguer rapidement vers de grandes sections du document. Les pages ne doivent inclure qu'un seul rôle de repère `contentinfo` de niveau supérieur par page.
 
-Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en utilisant l'élément {{HTMLElement('footer')}} soit en déclarant `role="contentinfo"`. Les repères `contentinfo` présents dans un contenu intégré via {{HTMLElement('iframe')}} ne comptent pas dans cette limite.
+Chaque page ne doit inclure qu'un seul repère `contentinfo`, créé soit en utilisant l'élément {{HTMLElement('footer')}} soit en déclarant `role="contentinfo"`. Les repères `contentinfo` présents dans un contenu intégré avec {{HTMLElement('iframe')}} ne comptent pas dans cette limite.
 
 > [!NOTE]
 > L'utilisation de l'élément {{HTMLElement('footer')}} communiquera automatiquement qu'une section a un rôle de `contentinfo`. Les développeurs devraient toujours préférer utiliser le bon élément HTML sémantique plutôt que d'utiliser ARIA, en s'assurant de {{HTMLElement('footer#accessibility', 'test for known issues')}} dans VoiceOver.
@@ -124,6 +124,5 @@ Certaines technologies, telles que les extensions de navigateur, peuvent génér
 
 - L'élément HTML {{HTMLElement('footer')}}
 - [Utiliser des sections HTML et des plans](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [Utiliser des repères WAI-ARIA - 2013 | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Mise à jour de l'élément Footer | HTML5 Doctor <sup>(angl.)</sup>](https://html5doctor.com/the-footer-element-update/)

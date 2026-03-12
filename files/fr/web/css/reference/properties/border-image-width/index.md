@@ -1,14 +1,15 @@
 ---
 title: border-image-width
 slug: Web/CSS/Reference/Properties/border-image-width
-original_slug: Web/CSS/border-image-width
+l10n:
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
-
-{{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-width`** définit la largeur de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+Si la valeur de cette propriété est supérieure à celle de {{CSSxRef("border-width")}}, l'image de bordure s'étendra au-delà du remplissage (et/ou du contenu).
+
+{{InteractiveExample("Démonstration CSS&nbsp;: border-image-width")}}
 
 ```css interactive-example-choice
 border-image-width: 30px;
@@ -28,7 +29,7 @@ border-image-width: 20% 8%;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">This is a box with a border around it.</div>
+  <div id="example-element">Ceci est une boîte entourée d'une bordure.</div>
 </section>
 ```
 
@@ -41,7 +42,7 @@ border-image-width: 20% 8%;
   justify-content: center;
   padding: 50px;
   background: #fff3d4;
-  color: #000;
+  color: black;
   border: 30px solid;
   border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
     round;
@@ -57,16 +58,13 @@ Si la valeur de cette propriété est supérieure à [`border-width`](/fr/docs/W
 /* Valeur avec un mot-clé */
 border-image-width: auto;
 
-/* Longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 border-image-width: 1rem;
 
-/* Valeur proportionnelle */
-/* Type <percentage> */
+/* Valeurs de type <percentage> */
 border-image-width: 25%;
 
-/* Valeur numérique */
-/* Type <number> */
+/* Valeurs de type <number> */
 border-image-width: 3;
 
 /* côtés verticaux | horizontaux */
@@ -82,6 +80,7 @@ border-image-width: 5% 2em 10% auto;
 border-image-width: inherit;
 border-image-width: initial;
 border-image-width: revert;
+border-image-width: revert-layer;
 border-image-width: unset;
 ```
 
@@ -95,11 +94,11 @@ La propriété `border-image-width` est définie avec une, deux, trois ou quatre
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) représentant la largeur de la bordure. Cette longueur peut être absolue (ex. `px`) ou relative (ex. `rem`). Les pourcentages sont relatifs à la largeur de la boîte de bordure. Les valeurs négatives sont considérées invalides.
+  - : La largeur de la bordure, définie comme une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}). Les pourcentages sont relatifs à la _largeur_ de la zone d'image de bordure pour les décalages horizontaux et à la _hauteur_ de la zone d'image de bordure pour les décalages verticaux. Ne doit pas être négatif.
 - `<number>`
-  - : Représente un multiple de [la valeur calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) de la propriété [`border-width`](/fr/docs/Web/CSS/Reference/Properties/border-width) de l'élément. Les valeurs négatives sont considérées invalides.
+  - : La largeur de la bordure, définie comme un multiple de la {{CSSxRef("border-width")}} correspondante. Ne doit pas être négatif.
 - `auto`
-  - : L'épaisseur de la bordure imagée est égale à la largeur ou à la hauteur (selon ce qui peut s'appliquer) de la propriété [`border-image-slice`](/fr/docs/Web/CSS/Reference/Properties/border-image-slice) correspondante. Si l'image ne possède pas de dimensions intrinsèques, c'est la valeur calculée de `border-width` qui sera utilisée à la place.
+  - : La largeur de la bordure est rendue égale à la largeur ou à la hauteur intrinsèque (selon le cas) de la {{CSSxRef("border-image-slice")}} correspondante. Si l'image ne possède pas la dimension intrinsèque requise, la `border-width` correspondante est utilisée à la place.
 
 ## Définition formelle
 
@@ -107,15 +106,15 @@ La propriété `border-image-width` est définie avec une, deux, trois ou quatre
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Réaliser un pavage avec une image de bordure
 
-Dans cet exemple on crée une image de bordure en utilisant le fichier ".png" suivant, qui mesure 90 pixels par 90 pixels&nbsp;:
+Dans cet exemple on crée une image de bordure en utilisant le fichier `.png` suivant, qui mesure 90 pixels par 90 pixels&nbsp;:
 
-![](border.png)
+![Image carrée contenant huit cercles. Les cercles dans chaque coin sont violet clair. Les quatre cercles sur les côtés sont bleus. La zone au centre, où un neuvième cercle pourrait tenir, est vide.](border.png)
 
 Chaque cercle sur l'image a un diamètre de 30 pixels.
 
@@ -143,7 +142,7 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample('', 200, 280)}}
+{{EmbedLiveSample("Réaliser un pavage avec une image de bordure", 200, 240)}}
 
 ## Spécifications
 
@@ -157,3 +156,4 @@ p {
 
 - [Arrière-plans et bordures](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [Apprendre le CSS&nbsp;: arrière-plans et bordures](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+- [Images de bordure dans CSS&nbsp;: un domaine clé pour l'Interop 2023](/fr/blog/border-images-interop-2023/) sur le blog MDN (2023)

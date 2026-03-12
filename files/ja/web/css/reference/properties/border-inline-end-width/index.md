@@ -1,12 +1,11 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
-original_slug: Web/CSS/border-inline-end-width
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`border-inline-end-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
+**`border-inline-end-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のいずれかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: border-inline-end-width")}}
 
@@ -37,7 +36,7 @@ direction: rtl;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -78,7 +77,7 @@ border-inline-end-width: unset;
 
 ## 例
 
-### テキストが垂直方向の場合の境界の適用
+### 縦書きテキストの境界の適用
 
 #### HTML
 
@@ -88,7 +87,7 @@ border-inline-end-width: unset;
 </div>
 ```
 
-##### CSS
+#### CSS
 
 ```css
 div {
@@ -106,7 +105,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("テキストが垂直方向の場合の境界の適用", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界の適用", 140, 140)}}
 
 ## 仕様書
 
@@ -119,5 +118,5 @@ div {
 ## 関連情報
 
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)
-- このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの 1 つに対応づけられます
+- このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの一つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

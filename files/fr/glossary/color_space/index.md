@@ -2,7 +2,7 @@
 title: Espace de couleur
 slug: Glossary/Color_space
 l10n:
-  sourceCommit: 5ba55a6939c0aaf988fc4d34ad7e51c52373a2a6
+  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
 ---
 
 Les **espaces de couleur** (<i lang="en">color spaces</i> en anglais) sont des organisations nommées de couleurs pour des modèles de couleur sous-jacents basés sur des coordonnées. Un modèle de couleur définit comment les composants d'une couleur (par exemple, les canaux `h`, `w`, et `b` d'une couleur {{CSSxRef("color_value/hwb", "hwb()")}}) se rapportent à un espace de couleur. La plupart des espaces de couleur sont des grilles tridimensionnelles ou quadridimensionnelles qui représentent les couleurs. Chaque dimension (ou axe) correspond à un canal différent. Les couleurs peuvent être exprimées dans plusieurs espaces de couleur, et peuvent être transformées d'un espace de couleur à un autre, tout en conservant la même apparence.
@@ -13,9 +13,9 @@ L'espace de couleur _sRGB_ (rouge, vert et bleu standard) a été créé pour le
 
 ## Espaces de couleur nommés
 
-Les [espaces de couleur RGB](#espaces_de_couleur_rgb) prédéfinis incluent `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, et `rec2020`. Les [espaces de couleur CIELAB](#espaces_de_couleur_cielab) prédéfinis incluent `lab-d50` et `lab-d65`. Les [espaces de couleur XYZ](#espaces_de_couleur_xyz) prédéfinis incluent `xyz-d50`, et `xyz-d65` (et `xyz`, un alias pour `xyz-d65`).
+Les [espaces de couleur RGB](#espaces_de_couleur_rgb) prédéfinis incluent `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, et `rec2020`. Les [espaces de couleur CIELAB](#espaces_de_couleur_cielab) prédéfinis incluent `lab-d50` et `lab-d65`. Les [espaces de couleur XYZ](#espaces_de_couleur_xyz) prédéfinis incluent `xyz-d50`, et `xyz-d65` (et `xyz`, un alias pour `xyz-d65`).
 
-Les espaces de couleur sont soit [rectangulaires soit polaires <sup>(angl.)</sup>](https://ericportis.com/posts/2024/okay-color-spaces/). Les espaces de couleur rectangulaires incluent `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, et `xyz-d65` (ou `xyz`). Les espaces de couleur polaires incluent `hsl`, `hwb`, `lch`, et `oklch`.
+Les espaces de couleur sont soit [rectangulaires soit polaires <sup>(angl.)</sup>](https://ericportis.com/posts/2024/okay-color-spaces/). Les espaces de couleur rectangulaires incluent `srgb`, `srgb-linear`, `display-p3`, `display-p3-linear`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `lab`, `oklab`, `xyz-d50`, et `xyz-d65` (ou `xyz`). Les espaces de couleur polaires incluent `hsl`, `hwb`, `lch`, et `oklch`.
 
 ### Espaces de couleur RGB
 
@@ -36,7 +36,10 @@ La fonction de couleur `rgb()` n'est pas la seule fonction de couleur qui peut r
   - : L'espace de couleur sRGB à éclairage linéaire prédéfini, `srgb-linear`, est le même que `srgb` sauf que la fonction de transfert est à éclairage linéaire sans codage gamma. L'espace de couleur `srgb-linear` accepte les trois valeurs `r`, `g`, et `b` comme paramètres numériques, avec des couleurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
 
 - Espace de couleur `display-p3`
-  - : Défini par Apple, l'espace de couleur [**Display P3** <sup>(angl.)</sup>](https://www.color.org/chardata/rgb/DisplayP3.xalter) combine le gamut de couleur DCI-P3, le point blanc D65 et la courbe gamma sRGB. C'est un espace à large gamut typique des moniteurs à large gamut actuels, permettant des verts et des rouges plus vibrants que le gamut de couleur sRGB. Le `display-p3` est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
+  - : Défini par Apple, l'espace de couleur [**Display P3** <sup>(angl.)</sup>](https://registry.color.org/rgb-registry/displayp3) combine le gamut de couleur DCI-P3, le point blanc D65 et la courbe gamma sRGB. C'est un espace à large gamut typique des moniteurs à large gamut actuels, permettant des verts et des rouges plus vibrants que le gamut de couleur sRGB. L'espace `display-p3` est basé sur `r`, `g`, et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
+
+- Espace de couleur `display-p3-linear`
+  - : L'espace de couleur prédéfini `display-p3-linear` est similaire à `display-p3`, sauf qu'il utilise une fonction de transfert à lumière linéaire et n'a pas de codage gamma, ce qui permet une plus grande précision dans les couleurs affichées. L'espace `display-p3-linear` est basé sur les canaux `r`, `g` et `b`, avec des valeurs dans le gamut allant de `0` à `1`. Le point blanc est D65.
 
 - Espace de couleur `a98-rgb`
   - : `a98-rgb` est l'espace de couleur Adobe® 1998 RGB conçu pour représenter toutes les couleurs CMYK en RGB. Environ 50% des couleurs visibles spécifiées par l'[espace de couleur CIELab](#espaces_de_couleur_cielab) peuvent être atteintes, englobant plus de teintes cyan-vert que d'autres espaces de couleur RGB. Les valeurs `r`, `g`, et `b` dans le gamut vont de `0` à `1`. La courbe de transfert est une fonction gamma, proche mais pas exactement 1/2.2. Le point blanc est D65.
