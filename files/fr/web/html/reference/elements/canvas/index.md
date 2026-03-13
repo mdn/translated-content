@@ -2,7 +2,7 @@
 title: "<canvas> : l'élément de canevas graphique"
 slug: Web/HTML/Reference/Elements/canvas
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Utilisez l'élément HTML **`<canvas>`** avec soit l'[API de script Canvas](/fr/docs/Web/API/Canvas_API), soit l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
@@ -49,7 +49,6 @@ L'élément `<canvas>` pris isolément n'est qu'une image matricielle et ne four
 
 - [Cas d'utilisation pour l'accessibilité de `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Problèmes d'accessibilité de l'élément `<canvas>` <sup>(angl.)</sup>](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [L'accessibilité de l'élément `<canvas>` dans Firefox 13 — Steve Faulkner <sup>(angl.)</sup>](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Bonnes pratiques pour concevoir des éléments `<canvas>` interactifs <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Exemples

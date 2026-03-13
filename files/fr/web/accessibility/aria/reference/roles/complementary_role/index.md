@@ -3,7 +3,7 @@ title: "ARIA : rôle complementary"
 short-title: complementary
 slug: Web/Accessibility/ARIA/Reference/Roles/complementary_role
 l10n:
-  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le [rôle de repère](/fr/docs/Web/Accessibility/ARIA/Reference/Roles#3._rôles_de_repères) `complementary` est utilisé pour désigner une section de soutien qui se rapporte au contenu principal, mais qui peut se suffire à elle-même lorsqu'elle est séparée. Ces sections sont souvent présentées sous forme de barres latérales ou de boîtes d'appel. Si possible, utilisez l'[élément HTML \<aside>](/fr/docs/Web/HTML/Reference/Elements/aside) à la place.
@@ -106,6 +106,5 @@ Certaines technologies, telles que les extensions de navigateur, peuvent génér
 - L'élément HTML {{HTMLElement('aside')}}
 - [Utiliser des sections HTML et des plans](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [Rôles des repères&nbsp;: Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/Guides/Techniques#rôles_de_repères)
-- [Utiliser des repères WAI-ARIA - 2013 | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Repères accessibles | scottohara.me <sup>(angl.)</sup>](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Aside Revisité | HTML5 Doctor <sup>(angl.)</sup>](https://html5doctor.com/aside-revisited/)

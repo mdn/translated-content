@@ -1,21 +1,25 @@
 ---
-title: EventSource.readyState
+title: "EventSource: readyState プロパティ"
+short-title: readyState
 slug: Web/API/EventSource/readyState
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: a166ba48ceb8bccb37c67a0a8856b0e5b12e0135
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`readyState`** は {{domxref("EventSource")}} インターフェイスの読み取り専用プロパティで、コネクションの状態を表す数値を返します。
 
 ## 値
 
-コネクションの状態を表す数値。使用可能な値は以下の通りです。
+数値で、 {{domxref("EventSource")}} インターフェイス上で定義されている 3 つの状態定数のいずれかです。
 
-- `0` — 接続試行中
-- `1` — 接続中
-- `2` — 接続終了
+- `EventSource.CONNECTING` (0)
+  - : コネクションはまだ開いていません。
+- `EventSource.OPEN` (1)
+  - : コネクションが開いており、通信の準備ができています。
+- `EventSource.CLOSED` (2)
+  - : コネクションが閉じているか、開けません。
 
 ## 例
 

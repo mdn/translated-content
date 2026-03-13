@@ -1,51 +1,49 @@
 ---
-title: Document.styleSheetSets
+title: "Document : propriété styleSheetSets"
+short-title: styleSheetSets
 slug: Web/API/Document/styleSheetSets
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-Renvoie une liste active de tous les jeux de feuilles de styles actuellement disponibles.
+La propriété en lecture seule **`styleSheetSets`** de l'interface {{DOMxRef("Document")}} retourne une liste active de tous les jeux de feuilles de styles actuellement disponibles.
 
-## Syntaxe
+## Valeur
 
-```js
-sets = document.styleSheetSets;
-```
+Une liste des jeux de feuilles de styles disponibles.
 
-En retour, `sets` est une liste de jeux de feuilles de styles disponibles.
+## Exemples
 
-## Exemple
-
-Étant donné un élément {{HTMLElement("ul")}} (liste) avec l'ID "sheetList", vous pouvez le remplir avec tous les noms de tous les jeux de feuilles de styles disponibles avec un code comme celui-ci :
+Étant donné un élément HTML {{HTMLElement("ul")}} (liste) avec l'ID `"sheetList"`, vous pouvez le remplir avec tous les noms de tous les jeux de feuilles de styles disponibles avec un code comme celui-ci&nbsp;:
 
 ```js
-var list = document.getElementById("sheetList");
-var sheets = document.styleSheetSets;
+const list = document.getElementById("sheetList");
+const sheets = document.styleSheetSets;
 
-list.innerHTML = "";
+list.textContent = "";
 
-for (var i = 0; i < sheets.length; i++) {
-  var item = document.createElement("li");
-
-  item.innerHTML = sheets[i];
+for (const sheet of sheets) {
+  const item = document.createElement("li");
+  item.textContent = sheet;
   list.appendChild(item);
 }
 ```
 
 ## Notes
 
-La liste des jeux de feuilles de styles disponibles est construite par énumération de toutes les feuilles de styles disponibles pour le document, dans l'ordre dans lequel elles sont répertoriées dans l'attribut {{domxref("document.styleSheets")}}, en ajoutant le `title` (_titre_) de chacune de celles en ayant un. Les doublons sont supprimés de la liste (en utilisant une comparaison sensible à la casse).
+La liste des jeux de feuilles de styles disponibles est construite par énumération de toutes les feuilles de styles disponibles pour le document, dans l'ordre dans lequel elles sont répertoriées dans l'attribut {{DOMxRef("document.styleSheets")}}, en ajoutant le `title` (_titre_) de chacune de celles en ayant un. Les doublons sont supprimés de la liste (en utilisant une comparaison sensible à la casse).
 
-## Spécifications
+## Compatibilité des navigateurs
 
-- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("Stylesheet")}}
-- {{domxref("document.styleSheets")}}
-- {{domxref("document.lastStyleSheetSet")}}
-- {{domxref("document.preferredStyleSheetSet")}}
-- {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
+- L'interface {{DOMxRef("Stylesheet")}}
+- La propriété {{DOMxRef("Document.styleSheets")}}
+- La propriété {{DOMxRef("Document.lastStyleSheetSet")}}
+- La propriété {{DOMxRef("Document.preferredStyleSheetSet")}}
+- La propriété {{DOMxRef("Document.selectedStyleSheetSet")}}
+- La méthode {{DOMxRef("Document.enableStyleSheetsForSet()")}}

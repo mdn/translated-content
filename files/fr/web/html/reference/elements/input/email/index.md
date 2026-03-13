@@ -359,7 +359,7 @@ En complément, l'élément {{HTMLElement("label")}} est utilisé pour associer 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Valeur</a></strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères représentant une adresse électronique, ou vide.
       </td>

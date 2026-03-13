@@ -3,7 +3,7 @@ title: "ARIA : rôle radiogroup"
 short-title: radiogroup
 slug: Web/Accessibility/ARIA/Reference/Roles/radiogroup_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle `radiogroup` représente un groupe de boutons `radio`.
@@ -20,7 +20,7 @@ Lorsque vous utilisez des éléments non sémantiques comme boutons radio, vous 
 
 Certaines implémentations de `radiogroup` initialisent le groupe avec tous les boutons non sélectionnés. Une fois qu'un bouton radio est sélectionné, il n'est généralement pas possible de revenir à un état où aucun bouton n'est sélectionné.
 
-Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par un label spécifié avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` via la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
+Le `radiogroup` doit avoir un nom accessible, soit par un label visible référencé par [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby), soit par un label spécifié avec [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). Si des éléments fournissent des informations supplémentaires sur le groupe, ils sont référencés par le `radiogroup` avec la propriété [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby).
 
 ## Propriétés, états et rôles WAI-ARIA associés
 
@@ -52,7 +52,7 @@ Les flèches sont utilisées pour naviguer entre les éléments d'une barre d'ou
 
 ## Fonctionnalités JavaScript requises
 
-Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les événements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs labels associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) doit être assurée.
+Les interactions utilisateur pour les `radiogroup` doivent reproduire celles d'un groupe de boutons radio HTML natifs avec le même nom. Les événements clavier pour Tab, Espace et les flèches doivent être capturés. Les clics sur les éléments radio et leurs labels associés doivent aussi être capturés. De plus, [la gestion de la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) doit être assurée.
 
 En général, quitter un élément sélectionné amène à l'élément sélectionnable suivant dans l'ordre du DOM. Utiliser les flèches pour naviguer dans un groupe de boutons radio maintient la sélection dans le groupe, déplaçant la sélection vers le premier bouton radio lorsque <kbd>Flèche vers la droite</kbd> ou <kbd>Flèche vers le bas</kbd> est relâchée alors que la sélection était sur le dernier bouton, et vers le dernier bouton si <kbd>Flèche vers la gauche</kbd> ou <kbd>Flèche vers le haut</kbd> est relâchée alors que la sélection était sur le premier bouton. La gestion dynamique de [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) est une méthode pour gérer ces événements.
 
@@ -60,7 +60,7 @@ En général, quitter un élément sélectionné amène à l'élément sélectio
 
 Utilisez le sélecteur d'attribut `[aria-checked="true"]` ([sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors)) pour styliser l'état sélectionné des boutons radio.
 
-Utilisez les pseudo-classes CSS {{CSSXRef(':hover')}} et {{CSSXRef(':focus')}} pour styliser la sélection visuelle au clavier et le survol. L'effet de sélection et de survol doit englober le bouton radio et le label pour faciliter la perception de l'option choisie et indiquer que cliquer sur le label ou le bouton active le bouton radio.
+Utilisez les pseudo-classes CSS {{CSSxRef(':hover')}} et {{CSSxRef(':focus')}} pour styliser la sélection visuelle au clavier et le survol. L'effet de sélection et de survol doit englober le bouton radio et le label pour faciliter la perception de l'option choisie et indiquer que cliquer sur le label ou le bouton active le bouton radio.
 
 ## Exemples
 

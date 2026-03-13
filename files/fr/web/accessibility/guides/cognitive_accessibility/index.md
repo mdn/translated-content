@@ -2,7 +2,7 @@
 title: Accessibilité cognitive
 slug: Web/Accessibility/Guides/Cognitive_accessibility
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
 ---
 
 L'accessibilité cognitive concerne les aspects d'accessibilité pour les personnes ayant des troubles cognitifs et des difficultés d'apprentissage. Ce document présente l'accessibilité cognitive et explique comment améliorer l'accessibilité du Web pour les personnes ayant des différences cognitives et d'apprentissage.
@@ -55,7 +55,7 @@ Toutes les recommandations suivantes profitent à bien plus qu'aux seules person
 
 ## Adaptabilité
 
-La [règle 1.3 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) indique que «&nbsp;le contenu doit être **adaptable**&nbsp;». Créez un contenu qui peut être présenté de différentes manières sans perte d'information ni de structure. Par exemple, proposez des mises en page {{glossary('responsive web design', 'adaptatives')}} avec un affichage mobile en colonne unique.
+La [règle 1.3 <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/adaptable) indique que «&nbsp;le contenu doit être **adaptable**&nbsp;». Créez un contenu qui peut être présenté de différentes manières sans perte d'information ni de structure. Par exemple, proposez des mises en page {{Glossary('responsive web design', 'adaptatives')}} avec un affichage mobile en colonne unique.
 
 Toutes les informations, y compris la structure et les relations véhiculées par la présentation, doivent être disponibles sous une forme perceptible par tou·te·s les utilisateur·ice·s pour atteindre cet objectif. Par exemple, l'information peut être lue à voix haute par un outil de synthèse vocale. Rendre votre contenu compréhensible par les logiciels est un bon moyen de garantir qu'il pourra être utilisé dans d'autres modes de présentation.
 

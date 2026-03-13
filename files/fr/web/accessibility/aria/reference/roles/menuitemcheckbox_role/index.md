@@ -3,7 +3,7 @@ title: "ARIA : rôle menuitemcheckbox"
 short-title: menuitemcheckbox
 slug: Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le rôle `menuitemcheckbox` est un `menuitem` avec un état vérifiable dont les valeurs possibles sont `true`, `false` ou `mixed`.
@@ -20,7 +20,7 @@ Les éléments de menu contenant le rôle de `menuitemcheckbox` doivent inclure 
 
 Similaire à l'attribut `checked` des {{HTMLElement("input")}} de type `checkbox`, l'attribut `aria-checked` d'un `menuitemcheckbox` indique si l'élément de menu est coché (`true`), non coché (`false`), ou représente un sous-niveau de menu d'autres éléments de menu qui ont un mélange de valeurs cochées et non cochées (`mixed`). La valeur `mixed` est similaire à l'attribut [`indeterminate`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) de la case à cocher, qui donne l'apparence d'un troisième état, ni coché ni non coché.
 
-Un nom accessible est requis. Idéalement, le nom accessible devrait provenir d'un élément {{htmlelement("label")}} associé s'il utilise `<input type="checkbox">` ou d'un contenu descendant visible. Réalisez si le label ou le contenu descendant n'est pas suffisant et, de préférence, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) faisant référence à un contenu non descendant ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) est utilisé, ces deux propriétés ARIA masqueront d'autres contenus descendants des technologies d'assistance.
+Un nom accessible est requis. Idéalement, le nom accessible devrait provenir d'un élément {{HTMLElement("label")}} associé s'il utilise `<input type="checkbox">` ou d'un contenu descendant visible. Réalisez si le label ou le contenu descendant n'est pas suffisant et, de préférence, utilisez [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) faisant référence à un contenu non descendant ou [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) est utilisé, ces deux propriétés ARIA masqueront d'autres contenus descendants des technologies d'assistance.
 
 Si tous les éléments de l'ensemble ne sont pas présents dans le DOM, incluez les propriétés [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) et [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset). Lors de la spécification de `aria-setsize` et `aria-posinset` sur un `menuitemcheckbox`, définissez la valeur par rapport au nombre total d'éléments dans le menu, en excluant les séparateurs.
 

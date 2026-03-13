@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-labelledby"
 short-title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 l10n:
-  sourceCommit: 16872c1ba8d44b5ff5f016497e52e0d4682467dc
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 L'attribut `aria-labelledby` identifie l'élément (ou les éléments) qui servent de libellé à l'élément sur lequel il est appliqué.

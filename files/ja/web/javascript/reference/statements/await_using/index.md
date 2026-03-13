@@ -2,7 +2,7 @@
 title: await using
 slug: Web/JavaScript/Reference/Statements/await_using
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 419694495e070daaf466c923b413b3f476740fd6
 ---
 
 **`await using`** 宣言は、非同期的に破棄されるブロックスコープのローカル変数を宣言します。 {{jsxref("Statements/const", "const")}} と同様に、 `await using` で宣言された変数は初期化が必要であり、再代入できません。変数の値は `null`、`undefined`、または [`[Symbol.asyncDispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) か [`[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) メソッドを持つオブジェクトのいずれかでなければなりません。変数がスコープ外になると、リソースを解放するために、オブジェクトの `[Symbol.asyncDispose]()` または `[Symbol.dispose]()` メソッドが呼び出され待機されます。
@@ -118,9 +118,9 @@ for await (using reader of asyncIterableOfSyncDisposables) {
 ```
 
 ```js
-const syncIterableOfAsyncDisposables = fs
-  .globSync("*.txt")
-  .map((path) => fs.open(path, "r"));
+const syncIterableOfAsyncDisposables = await Promise.all(
+  fs.globSync("*.txt").map((path) => fs.open(path, "r")),
+);
 for (await using file of syncIterableOfAsyncDisposables) {
   console.log(await file.read());
 }

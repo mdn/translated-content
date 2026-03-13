@@ -3,7 +3,7 @@ title: "ARIA : rôle cell"
 short-title: cell
 slug: Web/Accessibility/ARIA/Reference/Roles/cell_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 La valeur `cell` de l'attribut ARIA `role` identifie un élément comme étant une cellule dans un conteneur tabulaire qui ne contient pas d'informations d'en-tête de colonne ou de ligne. Pour être prise en charge, la cellule doit être imbriquée dans un élément avec le rôle `row`.
@@ -124,7 +124,7 @@ L'exemple ci-dessus est un tableau ARIA non sémantique avec cinq des 81 lignes 
 
 ## Bonnes pratiques
 
-N'utilisez que {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}} etc., pour structurer les tableaux de données. Vous pouvez ajouter des rôles ARIA pour garantir l'accessibilité si la sémantique native du tableau est supprimée, par exemple via la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité). Un cas d'usage pertinent pour le rôle ARIA `table` est lorsque la sémantique native d'un tableau est remplacée par la [propriété `display` de CSS, par exemple avec `display: grid`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité). Dans ce cas, vous pouvez utiliser les rôles de tableau ARIA pour réintroduire la sémantique.
+N'utilisez que {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thead')}}, {{HTMLElement('tr')}}, {{HTMLElement('th')}}, {{HTMLElement('td')}} etc., pour structurer les tableaux de données. Vous pouvez ajouter des rôles ARIA pour garantir l'accessibilité si la sémantique native du tableau est supprimée, par exemple avec la propriété [`display`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité). Un cas d'usage pertinent pour le rôle ARIA `table` est lorsque la sémantique native d'un tableau est remplacée par la [propriété `display` de CSS, par exemple avec `display: grid`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité). Dans ce cas, vous pouvez utiliser les rôles de tableau ARIA pour réintroduire la sémantique.
 
 ```html
 <table
@@ -164,7 +164,7 @@ N'utilisez que {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement
 </table>
 ```
 
-Ci-dessus se trouve la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont pas nécessaires si la sémantique native du tableau, et donc des lignes, n'a pas été modifiée, par exemple via [la propriété `display`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité).
+Ci-dessus se trouve la manière sémantique d'écrire un tableau. Les rôles ARIA ne sont pas nécessaires si la sémantique native du tableau, et donc des lignes, n'a pas été modifiée, par exemple avec [la propriété `display`](/fr/docs/Web/CSS/Reference/Properties/display#accessibilité).
 
 ### Bénéfices supplémentaires
 

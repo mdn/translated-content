@@ -2,7 +2,7 @@
 title: "<ins> : l'élément de texte inséré"
 slug: Web/HTML/Reference/Elements/ins
 l10n:
-  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ins>`** représente une portion de texte qui a été ajoutée à un document. Vous pouvez utiliser l'élément {{HTMLElement("del")}} de la même manière pour indiquer une portion de texte qui a été supprimée du document.
@@ -93,7 +93,7 @@ ins::after {
 
 Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment ces annonces pour éviter une verbosité trop importante. Il est donc important de ne pas abuser de cette technique et de ne l'appliquer qu'à des situations où il est nécessaire de comprendre que du contenu a été inséré.
 
-- [Brève note pour rendre vos marques plus accessibles | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Brève note pour rendre vos marques plus accessibles | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Ajuster les styles au niveau du texte | Adrian Roselli <sup>(angl.)</sup>](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Exemples

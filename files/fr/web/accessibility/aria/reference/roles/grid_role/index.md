@@ -3,7 +3,7 @@ title: "ARIA : rôle grid"
 short-title: grid
 slug: Web/Accessibility/ARIA/Reference/Roles/grid_role
 l10n:
-  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 Le rôle `grid` est destiné à un widget qui contient une ou plusieurs lignes de cellules. La position de chaque cellule est significative et peut être mise au point à l'aide de l'entrée au clavier.
@@ -26,28 +26,28 @@ Le rôle `grid` est un widget composite contenant une collection d'une ou plusie
     <tr>
       <th scope="row">Allée 1</th>
       <td tabindex="0">
-        <button id="1a" tabindex="-1">1A</button>
+        <button id="btn-1a" tabindex="-1">1A</button>
       </td>
       <td tabindex="-1">
-        <button id="1b" tabindex="-1">1B</button>
+        <button id="btn-1b" tabindex="-1">1B</button>
       </td>
-      <!-- More Columns -->
+      <!-- Plus de colonnes -->
     </tr>
     <tr>
       <th scope="row">Allée 2</th>
       <td tabindex="-1">
-        <button id="2a" tabindex="-1">2A</button>
+        <button id="btn-2a" tabindex="-1">2A</button>
       </td>
       <td tabindex="-1">
-        <button id="2b" tabindex="-1">2B</button>
+        <button id="btn-2b" tabindex="-1">2B</button>
       </td>
-      <!-- More Columns -->
+      <!-- Plus de colonnes -->
     </tr>
   </tbody>
 </table>
 ```
 
-Un widget de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories : la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres widgets (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
+Un widget de grille contient une ou plusieurs lignes avec une ou plusieurs cellules de contenu interactif thématiquement lié. Bien qu'il n'implique pas de présentation visuelle spécifique, il implique une relation entre les éléments. Les utilisations se répartissent en deux catégories&nbsp;: la présentation d'informations tabulaires (grilles de données) et le regroupement d'autres widgets (grilles de mise en page). Même si les grilles de données et les grilles de mise en page utilisent les mêmes rôles, états et propriétés ARIA, les différences dans leur contenu et leur objectif font ressortir des facteurs importants à prendre en compte dans la conception de l'interaction au clavier. Voir [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) pour plus de détails.
 
 Les éléments de cellule ont le rôle [`gridcell`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), sauf s'ils sont un en-tête de ligne ou de colonne, auquel cas, les éléments sont [`rowheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) et [`columnheader`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectivement. Les éléments de cellule doivent être possédés par des éléments avec un rôle [`row`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/row_role). Les lignes peuvent être regroupées à l'aide du rôle [`rowgroup`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role).
 

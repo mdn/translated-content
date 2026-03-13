@@ -1,9 +1,8 @@
 ---
 title: Zones dynamiques ARIA
 slug: Web/Accessibility/ARIA/Guides/Live_regions
-original_slug: Web/Accessibility/ARIA/ARIA_Live_Regions
 l10n:
-  sourceCommit: 93e3c303704c560ce28cc7764ff0069e67c48e79
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 En JavaScript, il est possible de modifier dynamiquement des parties d'une page sans recharger l'ensemble de la page&nbsp;: par exemple, pour actualiser une liste de résultats de recherche à la volée, ou pour afficher une alerte ou notification discrète qui ne nécessite pas d'interaction de l'utilisateur·ice. Si ces changements sont généralement visibles pour les personnes voyantes, ils peuvent passer inaperçus pour les utilisateur·ice·s de technologies d'assistance. Les zones dynamiques (<i lang="en">live regions</i>) ARIA comblent cette lacune et permettent d'exposer de façon programmatique les changements dynamiques de contenu afin qu'ils puissent être annoncés par les technologies d'assistance.
@@ -116,7 +115,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 
 Lorsque l'utilisateur·ice sélectionne une nouvelle planète, l'information dans la zone dynamique sera annoncée. Comme la zone possède `aria-live="polite"`, le lecteur d'écran attendra une pause de l'utilisateur·ice avant d'annoncer la mise à jour. Ainsi, descendre dans la liste et sélectionner une autre planète n'annonce pas les changements dans la zone dynamique. Seule la planète finalement choisie déclenchera l'annonce.
 
-Voici une capture d'écran de VoiceOver sur Mac annonçant la mise à jour (via les sous-titres) de la zone dynamique&nbsp;:
+Voici une capture d'écran de VoiceOver sur Mac annonçant la mise à jour (avec les sous-titres) de la zone dynamique&nbsp;:
 
 ![Capture d'écran de VoiceOver sur Mac annonçant la mise à jour d'une zone « live ». Les sous-titres sont affichés.](web_accessibility_aria_aria_live_regions.png)
 
@@ -168,7 +167,7 @@ Les éléments ayant les valeurs [`role="…"`](/fr/docs/Web/Accessibility/ARIA/
 
 ## Attributs supplémentaires pour les zones « live »
 
-Les zones dynamiques sont bien prises en charge. The Paciello Group a publié en 2014 des [informations sur l'état du support des zones «&nbsp;live&nbsp;» <sup>(angl.)</sup>](https://www.tpgi.com/screen-reader-support-aria-live-regions/). Paul J. Adam a étudié plus particulièrement le [support des attributs `aria-atomic` et `aria-relevant` <sup>(angl.)</sup>](https://pauljadam.com/demos/aria-atomic-relevant.html).
+Les zones dynamiques sont bien prises en charge. Vispero a publié en 2014 des [informations sur l'état du support des zones «&nbsp;live&nbsp;» <sup>(angl.)</sup>](https://vispero.com/resources/screen-reader-support-aria-live-regions/). Paul J. Adam a étudié plus particulièrement le [support des attributs `aria-atomic` et `aria-relevant` <sup>(angl.)</sup>](https://pauljadam.com/demos/aria-atomic-relevant.html).
 
 1. **`aria-atomic`**&nbsp;: L'attribut `aria-atomic=BOOLÉEN` est utilisé pour définir si le lecteur d'écran doit ou non présenter la zone dynamique comme un ensemble, même si une partie seulement de la zone est modifiée — Les valeurs possibles sont `false`/`true`. La valeur par défaut est `false`.
 2. [**`aria-relevant`**](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
@@ -246,7 +245,7 @@ Sans `aria-atomic="true"`, le lecteur d'écran n'annonce que la valeur de l'ann�
 
 Avec `aria-relevant`, vous pouvez définir quels types de changements/mises à jour d'une zone dynamique doivent être annoncés.
 
-Par exemple, un site de chat souhaite afficher la liste des utilisateur·ice·s actuellement connecté·e·s. Plutôt que d'annoncer uniquement les utilisateur·ice·s connecté·e·s, on souhaite aussi déclencher une annonce lorsqu'un·e utilisateur·ice est _retiré·e_ de la liste. On peut y parvenir en spécifiant `aria-relevant="additions removals"`.
+Par exemple, un site de chat souhaite afficher la liste des utilisateur·ice·s actuellement connecté·e·s. Plutôt que d'annoncer uniquement les utilisateur·ice·s connecté·e·s, on souhaite aussi déclencher une annonce lorsqu'un·e utilisateur·ice est _retiré·e_ de la liste. On peut y parvenir en définissant `aria-relevant="additions removals"`.
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
@@ -262,5 +261,5 @@ Détail des propriétés dynamiques d'ARIA&nbsp;:
 
 ## Voir aussi
 
-- [Rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles)
-- Les méthodes {{domxref("Document.ariaNotify()")}} et {{domxref("Element.ariaNotify()")}}
+- [Les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles)
+- Les méthodes API {{DOMxRef("Document.ariaNotify()")}} et {{DOMxRef("Element.ariaNotify()")}}

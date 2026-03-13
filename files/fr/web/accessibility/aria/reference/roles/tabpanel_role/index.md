@@ -3,7 +3,7 @@ title: "ARIA : rôle tabpanel"
 short-title: tabpanel
 slug: Web/Accessibility/ARIA/Reference/Roles/tabpanel_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 Le rôle `tabpanel` est un conteneur pour les ressources du contenu superposé associé à un onglet (`tab`).
@@ -28,13 +28,13 @@ Chaque onglet (`tab`) dans une `tablist` peut servir d'étiquette à son `tabpan
 
 Vous pouvez aussi associer chaque `tabpanel` à son onglet en incluant l'id du `tabpanel` comme valeur de l'attribut [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) de l'onglet.
 
-Lorsqu'une interface à onglets est initialisée, un `tabpanel` est affiché et son onglet associé est stylisé pour indiquer qu'il est actif, reflétant son état programmatique. Tous les éléments `tabpanel` inactifs doivent être masqués pour tous les utilisateur·ice·s, le plus souvent via la propriété CSS `display: none`.
+Lorsqu'une interface à onglets est initialisée, un `tabpanel` est affiché et son onglet associé est stylisé pour indiquer qu'il est actif, reflétant son état programmatique. Tous les éléments `tabpanel` inactifs doivent être masqués pour tous les utilisateur·ice·s, le plus souvent avec la propriété CSS `display: none`.
 
 Voir l'article sur le rôle [ARIA `tab`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) pour plus d'informations spécifiques à l'utilisation de ce rôle.
 
 Ajoutez [`tabindex="-1"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour permettre à un `tabpanel` de recevoir la sélection sans l'inclure dans l'ordre de tabulation de la page.
 
-Veillez à définir des styles pour un `tabpanel` lorsqu'il reçoit la sélection, idéalement avec la pseudo-classe CSS {{CSSXref(':focus')}}, afin que les utilisateur·ice·s au clavier sachent qu'il y a eu un changement de sélection et soient informé·e·s du contenu actuellement sélectionné.
+Veillez à définir des styles pour un `tabpanel` lorsqu'il reçoit la sélection, idéalement avec la pseudo-classe CSS {{CSSxRef(':focus')}}, afin que les utilisateur·ice·s au clavier sachent qu'il y a eu un changement de sélection et soient informé·e·s du contenu actuellement sélectionné.
 
 Les carrousels peuvent être créés avec ce modèle d'onglets&nbsp;: les contrôles de sélection de diapositive peuvent être balisés comme des onglets (`tabs`) dans une `tablist`, la diapositive étant représentée par un élément `tabpanel`.
 
