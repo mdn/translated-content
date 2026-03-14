@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("Window")}}
 
 La méthode `window.prompt()` demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
 
@@ -22,9 +22,9 @@ prompt(message, defaultValue);
 
 ### Paramètres
 
-- `message` {{optional_inline}}
+- `message` {{Optional_Inline}}
   - : Une chaîne de caractères affichée pour l'utilisateur·ice. Peut être omise s'il n'y a rien à afficher dans la fenêtre de saisie.
-- `defaultValue` {{optional_inline}}
+- `defaultValue` {{Optional_Inline}}
   - : Une chaîne de caractères contenant la valeur par défaut affichée dans le champ de saisie.
 
 ### Valeur de retour
@@ -106,6 +106,6 @@ const unNombre = Number(window.prompt("Veuillez saisir un nombre.", ""));
 ## Voir aussi
 
 - L'élément HTML {{HTMLElement("dialog")}}
-- La méthode {{domxref("window.alert", "alert")}}
-- La méthode {{domxref("window.confirm", "confirm")}}
+- La méthode {{DOMxRef("window.alert", "alert")}}
+- La méthode {{DOMxRef("window.confirm", "confirm")}}
 - [Ne jamais utiliser un avertissement quand il faut proposer une annulation <sup>(angl.)</sup>](https://alistapart.com/article/neveruseawarning/) sur A List Apart (2017)
