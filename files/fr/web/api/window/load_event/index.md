@@ -2,28 +2,37 @@
 title: "Window : évènement load"
 slug: Web/API/Window/load_event
 l10n:
-  sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{APIRef}}
 
-L'évènement **`load`** est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style et des images) sont complètement chargées. Cela contraste avec [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event), qui est déclenché lorsque le <i lang="en">DOM</i> de la page est chargé sans attendre la fin du chargement des ressources.
+L'évènement **`load`** de l'interface {{DOMxRef("Window")}} est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style, des scripts (y compris les scripts asynchrones, différés et les modules), des cadres intégrés et des images) sont complètement chargées, à l'exception de celles qui sont [chargées paresseusement](/fr/docs/Web/Performance/Guides/Lazy_loading#images_et_iframes).
+Cela contraste avec {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, qui est déclenché dès que le DOM de la page est chargé, sans attendre la fin du chargement des ressources.
 
-Cet évènement n'est pas annulable et ne bouillonne pas.
+Cet événement n'est pas annulable et ne se propage pas.
+
+> [!NOTE]
+> _Tous les évènements nommés `load` ne se propageront pas vers `Window`_, même si `bubbles` est initialisé à `true`. Pour intercepter les évènements `load` sur la `window`, cet évènement `load` doit être dispatché directement vers la `window`.
+
+> [!NOTE]
+> L'évènement `load` qui est dispatché lorsque le document principal est chargé _est_ dispatché sur la `window`, mais possède deux propriétés modifiées&nbsp;: `target` est `document`, et `path` est `undefined`. Ces deux propriétés sont modifiées pour des raisons de compatibilité avec les versions précédentes.
+
+Pour éviter d'exécuter un script avant que le DOM qu'il manipule soit entièrement construit, vous pouvez placer le script à la fin du corps du document, juste avant la balise de fermeture `</body>`, sans l'envelopper dans un écouteur d'événement. Vous ne devriez généralement utiliser l'événement `load` que pour attendre le chargement des ressources externes, telles que les images ou les scripts différés.
 
 ## Syntaxe
 
-Utilisez cet évènement dans des méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènement.
+Utilisez cet évènement dans des méthodes telles que {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez un gestionnaire d'évènement.
 
-```js
-addEventListener("load", (event) => {});
+```js-nolint
+addEventListener("load", (event) => { })
 
-onload = (event) => {};
+onload = (event) => { }
 ```
 
 ## Type d'évènement
 
-Un [`Event`](/fr/docs/Web/API/Event) générique.
+Un objet {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
@@ -43,7 +52,7 @@ window.onload = (event) => {
 };
 ```
 
-### Exemple <i lang="en">live</i>
+### Exemple en direct
 
 #### HTML
 
@@ -53,7 +62,7 @@ window.onload = (event) => {
 </div>
 
 <div class="event-log">
-  <label for="eventLog">Journal d'évènements :</label>
+  <label for="eventLog">Journal d'évènements&nbsp;:</label>
   <textarea
     readonly
     class="event-log-contents"
@@ -93,8 +102,8 @@ button {
 
 ```js
 const log = document.querySelector(".event-log-contents");
-
 const reload = document.querySelector("#reload");
+
 reload.addEventListener("click", () => {
   log.textContent = "";
   window.setTimeout(() => {
@@ -107,7 +116,7 @@ window.addEventListener("load", (event) => {
 });
 
 document.addEventListener("readystatechange", (event) => {
-  log.textContent += `readystate : ${document.readyState}\n`;
+  log.textContent += `readystate: ${document.readyState}\n`;
 });
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -117,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 #### Résultat
 
-{{EmbedLiveSample('', '100%', '180px')}}
+{{EmbedLiveSample("Exemple en direct", "100%", 160)}}
 
 ## Spécifications
 
@@ -129,8 +138,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 ## Voir aussi
 
-- Évènements liés&nbsp;:
-  - [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
-  - [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
-  - [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
-  - [`unload`](/fr/docs/Web/API/Window/unload_event)
+- L'API Document [`readyState`](/fr/docs/Web/API/Document/readyState)
+- Évènements associés&nbsp;:
+  - {{DOMxRef("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
+  - {{DOMxRef("Window/beforeunload_event", "beforeunload")}}
+  - {{DOMxRef("Window/unload_event", "unload")}}
