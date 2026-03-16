@@ -53,7 +53,7 @@ window.addEventListener("messageerror", (event) => {
 });
 ```
 
-Idem, mais en utilisant la propriété de gestionnaire d'évènements {{DOMxRef("WindowEventHandlers/onmessageerror", "onmessageerror")}}&nbsp;:
+Idem, mais en utilisant la propriété de gestionnaire d'évènements `onmessageerror`&nbsp;:
 
 ```js
 window.onmessageerror = (event) => {
