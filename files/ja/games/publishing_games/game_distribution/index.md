@@ -7,7 +7,7 @@ l10n:
 
 [チュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を一つまたは[二つ](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)実行し、HTML ゲームを作成しました。素晴らしいですね！この記事では、新しく作成したゲームを世界に配信する方法について知っておく必要があるすべてのことを説明します。これには、オンラインで自らホストすること、オープンなマーケットプレイスに提出すること、Google Play や iOS App Store などの閉じられたマーケットプレイスに提出することが含まれます。
 
-## HTML のネイティブに対する利点
+## ネイティブに対する HTML の利点
 
 HTML でゲームを構築すると、次のような追加の利点があります。
 
