@@ -230,7 +230,7 @@ console.log(
   (5.259).toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
-  })
+  }),
 ); // $5.26
 ```
 
