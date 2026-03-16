@@ -2,9 +2,8 @@
 title: "ARIA : rôle textbox"
 short-title: textbox
 slug: Web/Accessibility/ARIA/Reference/Roles/textbox_role
-original_slug: Web/Accessibility/ARIA/Roles/textbox_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: fd2acb039cc1caee4af10f76ffb839c8da7da5b8
 ---
 
 Le rôle `textbox` sert à identifier un élément qui permet la saisie de texte libre. Chaque fois que possible, préférez utiliser un élément {{HTMLElement("input")}} avec [type="text"](/fr/docs/Web/HTML/Reference/Elements/input/text) pour une saisie sur une seule ligne, ou un élément {{HTMLElement("textarea")}} pour une saisie sur plusieurs lignes.
@@ -79,17 +78,17 @@ En saisie sur une seule ligne (quand `aria-multiline` vaut `false` ou n'est pas 
 Toutes les fonctionnalités associées aux propriétés et états doivent être maintenues, et la soumission du formulaire sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> dans une zone de saisie sur une seule ligne doit être gérée.
 
 - Gestionnaire d'événement de sélection et attribut `aria-activedescendant`
-  - : Si vous implémentez un widget composite, comme une boîte combinée composée d'une zone de saisie et d'une liste déroulante, vous devez gérer l'attribut `aria-activedescendant` via un gestionnaire. Avant d'utiliser cette technique, assurez-vous que les navigateurs ciblés la prennent en charge. Voir la [spécification aria-descendant <sup>(angl.)</sup>](https://w3c.github.io/aria/#aria-activedescendant) pour plus d'informations.
+  - : Si vous implémentez un widget composite, comme une boîte combinée composée d'une zone de saisie et d'une liste déroulante, vous devez gérer l'attribut `aria-activedescendant` avec un gestionnaire. Avant d'utiliser cette technique, assurez-vous que les navigateurs ciblés la prennent en charge. Voir la [spécification aria-descendant <sup>(angl.)</sup>](https://w3c.github.io/aria/#aria-activedescendant) pour plus d'informations.
 
 > [!NOTE]
-> Il est préférable d'utiliser un élément {{HTMLElement("input")}} avec type="text", ou un élément {{HTMLElement("textarea")}} plutôt que le rôle ARIA textbox. Lorsque vous utilisez l'un de ces éléments sémantiques, le rôle ARIA textbox n'est pas nécessaire. Voir [Notes sur l'utilisation d'ARIA en HTML <sup>(angl.)</sup>](https://w3c.github.io/using-aria/).
+> Il est préférable d'utiliser un élément {{HTMLElement("input")}} avec `type="text"`, ou un élément {{HTMLElement("textarea")}} plutôt que le rôle ARIA textbox. Lorsque vous utilisez l'un de ces éléments sémantiques, le rôle ARIA textbox n'est pas nécessaire. Voir [Notes sur l'utilisation d'ARIA en HTML <sup>(angl.)</sup>](https://w3c.github.io/using-aria/).
 
 ## Effets possibles sur les agents utilisateur et les technologies d'assistance
 
 Lorsque le rôle `textbox` est ajouté à un élément, ou que cet élément devient visible, l'agent utilisateur doit&nbsp;:
 
 - Exposer l'élément comme ayant le rôle textbox dans l'API d'accessibilité du système d'exploitation.
-- Déclencher un événement de zone de saisie accessible via l'API d'accessibilité du système d'exploitation si elle le prend en charge.
+- Déclencher un événement de zone de saisie accessible avec l'API d'accessibilité du système d'exploitation si elle le prend en charge.
 
 Les produits de technologies d'assistance doivent écouter cet événement et en informer l'utilisateur·ice&nbsp;:
 

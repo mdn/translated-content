@@ -2,16 +2,15 @@
 title: "ARIA : rôle button"
 short-title: button
 slug: Web/Accessibility/ARIA/Reference/Roles/button_role
-original_slug: Web/Accessibility/ARIA/Roles/button_role
 l10n:
-  sourceCommit: 5f2a755c4fa7d126f85b56fbca90b15c5f039eff
+  sourceCommit: 4bd173b85d62fcc9471fa878f64cd6c166f114ab
 ---
 
-Le rôle `button` est destiné aux éléments cliquables qui déclenchent une réponse lorsqu'ils sont activés par l'utilisateur. Ajouter `role="button"` indique au lecteur d'écran que l'élément est un bouton, mais ne fournit aucune fonctionnalité de bouton. Utilisez {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
+Le rôle `button` est destiné aux éléments cliquables qui déclenchent une réponse lorsqu'ils sont activés par l'utilisateur. Ajouter `role="button"` indique au lecteur d'écran que l'élément est un bouton, mais ne fournit pas les autres fonctionnalités typiques d'un bouton, telles que les évènements de clic et la gestion du clavier. Vous pouvez les ajouter vous-même, mais vous devriez généralement utiliser {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
 
 ## Description
 
-Le rôle `button` identifie un élément comme étant un bouton pour les technologies d'assistance telles que les lecteurs d'écran. Un bouton est un widget utilisé pour effectuer des actions telles que soumettre un formulaire, ouvrir une boîte de dialogue, annuler une action ou exécuter une commande telle que l'insertion d'un nouvel enregistrement ou l'affichage d'informations. Ajouter `role="button"` indique aux technologies d'assistance que l'élément est un bouton, mais ne fournit aucune fonctionnalité de bouton. Utilisez {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
+Le rôle `button` identifie un élément comme étant un bouton pour les technologies d'assistance telles que les lecteurs d'écran. Un bouton est un widget utilisé pour effectuer des actions telles que soumettre un formulaire, ouvrir une boîte de dialogue, annuler une action ou exécuter une commande telle que l'insertion d'un nouvel enregistrement ou l'affichage d'informations. Ajouter `role="button"` indique aux technologies d'assistance que l'élément est un bouton, mais ne fournit pas les autres fonctionnalités typiques d'un bouton, telles que les évènements de clic et la gestion du clavier. Vous pouvez les ajouter vous-même, mais vous devriez généralement utiliser {{HTMLElement("button")}} ou {{HTMLElement("input")}} avec `type="button"` à la place.
 
 Ce rôle de `button` peut être utilisé en combinaison avec l'attribut [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) pour [créer des boutons interrupteurs](#boutons_à_bascule).
 
@@ -28,7 +27,7 @@ L'exemple ci-dessus crée un bouton sur lequel on peut se positionner, mais néc
 ```
 
 > [!NOTE]
-> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour {{domxref("Element/click_event", "click")}} et {{domxref("Element/keydown_event", "keydown")}}. Cela comprend la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
+> Si on utilise `role="button"` plutôt que les éléments sémantiques `<button>` ou `<input type="button">`, il faudra : permettre à l'élément de recevoir le focus, définir des gestionnaires d'évènements pour {{DOMxRef("Element/click_event", "click")}} et {{DOMxRef("Element/keydown_event", "keydown")}}. Cela comprend la gestion des touches <kbd>Entrée</kbd> et <kbd>Espace</kbd>, afin de traiter la saisie de l'utilisateur. Voir [l'exemple de code officiel de WAI-ARIA <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
 En plus du widget de bouton ordinaire, `role="button"` doit être inclus lors de la création d'un bouton interrupteur ou d'un bouton de menu à l'aide d'un élément non bouton.
 
@@ -74,7 +73,7 @@ Après l'activation du bouton, le focus est défini selon le type d'action réal
 Les boutons doivent pouvoir être utilisés par souris, tactile et clavier. Pour les éléments HTML natifs `<button>`, l'événement `onclick` est déclenché pour les clics de souris et lorsque l'utilisateur·ice appuie sur <kbd>Espace</kbd> ou <kbd>Entrer</kbd> lorsque le bouton a le focus. Mais si une autre balise est utilisée pour créer un bouton, l'événement `onclick` n'est déclenché que lors d'un clic avec la souris, même si `role="button"` est utilisé. Pour cette raison, des gestionnaires d'événements clavier distincts doivent être ajoutés à l'élément afin que le bouton soit déclenché lorsque la touche <kbd>Espace</kbd> ou <kbd>Entrer</kbd> est pressée.
 
 - `onclick`
-  - : Gère l'événement levé quand le bouton est activé via un clic souris ou un événement tactile.
+  - : Gère l'événement levé quand le bouton est activé avec un clic souris ou un événement tactile.
 - `onKeyDown`
   - : Gère l'événement levé quand le bouton est activé avec les touches Entrer ou Espace du clavier. (À noter et non [l'événement obsolète onKeyPress](/fr/docs/Web/API/Element/keypress_event))
 

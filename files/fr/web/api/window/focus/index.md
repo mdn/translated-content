@@ -22,7 +22,7 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 

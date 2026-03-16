@@ -1,48 +1,48 @@
 ---
-title: window.cancelAnimationFrame()
+title: "Window : méthode cancelAnimationFrame()"
+short-title: cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
+l10n:
+  sourceCommit: 9bf78e9898a1bf51a67e33f8e82276fca575979d
 ---
 
-{{APIRef}}La méthode **`window.cancelAnimationFrame()`** met fin à une animation précédement configurée par un appel à {{domxref("window.requestAnimationFrame()")}}.
+{{APIRef}}
+
+La méthode **`cancelAnimationFrame()`** de l'interface {{DOMxRef("Window")}} annule une demande de trame d'animation précédemment programmée avec un appel à {{DOMxRef("window.requestAnimationFrame()")}}.
 
 ## Syntaxe
 
-```js
-window.cancelAnimationFrame(requestID);
+```js-nolint
+cancelAnimationFrame(requestID)
 ```
 
 ### Paramètres
 
 - `requestID`
-  - : L'identifiant retourné par l'appel à {{domxref("window.requestAnimationFrame()")}} qui a généré la fonction de rappel (callback)
+  - : L'identifiant retourné par l'appel à {{DOMxRef("window.requestAnimationFrame()")}} qui a généré la fonction de rappel.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
 ```js
-var requestAnimationFrame =
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
+const debut = document.timeline.currentTime;
 
-var cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+let maRequete;
 
-var start = window.mozAnimationStartTime; // Seulement supporté par Firefox. Les autre navigateurs peuvent utiliser quelque chose comme Date.now()..
-
-var myReq; // Déclarer la variable globalement avant de lancer l'animation
-
-function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress / 10, 200) + "px";
-  if (progress < 2000) {
-    // Ne pas oublier de récupérer l'identifiant à chaque appel de la fonction
-    myReq = requestAnimationFrame(step);
+function etape(timestamp) {
+  const progres = timestamp - debut;
+  d.style.left = `${Math.min(progres / 10, 200)}px`;
+  if (progres < 2000) {
+    // c'est important de mettre à jour l'identifiant de la requête à chaque appel de requestAnimationFrame
+    maRequete = requestAnimationFrame(etape);
   }
 }
-myReq = requestAnimationFrame(step);
-// L'annulation utilise le dernier identifiant
-cancelAnimationFrame(myReq);
+maRequete = requestAnimationFrame(etape);
+// l'annulation utilise le dernier identifiant de requête
+cancelAnimationFrame(maRequete);
 ```
 
 ## Spécifications
@@ -55,5 +55,5 @@ cancelAnimationFrame(myReq);
 
 ## Voir aussi
 
-- {{domxref("window.mozAnimationStartTime")}}
-- {{domxref("window.requestAnimationFrame()")}}
+- La méthode {{DOMxRef("Window.requestAnimationFrame()")}}
+- La méthode {{DOMxRef("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

@@ -247,7 +247,7 @@ L'intervalle valide inclut toutes les heures comprises entre les valeurs `min` e
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Valeur</a></strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères représentant une date et une heure (dans le fuseau horaire local), ou vide.
       </td>

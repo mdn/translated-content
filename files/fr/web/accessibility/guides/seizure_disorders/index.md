@@ -3,7 +3,7 @@ title: "Accessibilité Web : crises et réactions physiques"
 short-title: Prévenir crises et réactions physiques
 slug: Web/Accessibility/Guides/Seizure_disorders
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: b56ef42f1aac2481bfe42bfcf6c235ceb22624c4
 ---
 
 Cet article présente les concepts permettant de rendre le contenu Web accessible aux personnes souffrant de troubles vestibulaires, ainsi que les méthodes pour mesurer et prévenir les contenus susceptibles d'entraîner des crises ou d'autres réactions physiques.
@@ -187,6 +187,9 @@ En n'indexant pas la page (`noindex`) et en ne suivant pas les liens de la page 
     <title>…</title>
     <meta name="robots" content="noindex, nofollow" />
   </head>
+  <body>
+    …
+  </body>
 </html>
 ```
 
