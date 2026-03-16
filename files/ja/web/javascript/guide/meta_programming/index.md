@@ -2,10 +2,8 @@
 title: メタプログラミング
 slug: Web/JavaScript/Guide/Meta_programming
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Internationalization", "Web/JavaScript/Guide/Modules")}}
 
 {{jsxref("Proxy")}} および {{jsxref("Reflect")}} オブジェクトにより、基本的な言語操作 (例えば、プロパティ参照、代入、列挙、関数呼び出しなど) に割り込み、動作をカスタマイズすることができます。この 2 つのオブジェクトのおかげで、 JavaScript でメタレベルのプログラミングが行えます。
 
@@ -41,7 +39,7 @@ console.log(p.a, p.b); // 1, 42
   - : プロパティへのアクセスを提供するメソッドです。 (オペレーティングシステムにおけるトラップの概念と同じようなものです。)
 - ターゲット (target)
   - : プロキシーが仮想化するオブジェクトです。多くの場合、プロキシーのストレージバックエンドとして使用されます。拡張や設定できないオブジェクトのプロパティの不変条件（変更されない意味）がターゲットに対して検証されます。
-- 不変条件 (invariant)
+- {{Glossary("invariant", "不変条件")}} (invariant)
   - : 独自の操作を実装した際に変更されない意味を**不変条件**と呼びます。ハンドラーの不変条件に違反した場合、 {{jsxref("TypeError")}} が発生します。
 
 ## ハンドラーとトラップ
@@ -282,5 +280,3 @@ if (Reflect.defineProperty(target, property, attributes)) {
   // 失敗した時の処理
 }
 ```
-
-{{PreviousNext("Web/JavaScript/Guide/Internationalization", "Web/JavaScript/Guide/Modules")}}

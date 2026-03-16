@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}{{Deprecated_Header}}
 
 La méthode **`blur()`** ne fait rien.
 
@@ -25,7 +25,7 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ({{jsxref("undefined")}}).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 

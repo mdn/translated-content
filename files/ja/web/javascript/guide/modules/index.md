@@ -2,10 +2,10 @@
 title: JavaScript モジュール
 slug: Web/JavaScript/Guide/Modules
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}
 
 本章では、JavaScript のモジュールを使い始めるために必要なことすべてを紹介します。
 
@@ -136,9 +136,9 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
-const square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
-reportArea(square1.length, reportList);
-reportPerimeter(square1.length, reportList);
+const square = draw(myCanvas.ctx, 50, 50, 100, "blue");
+reportArea(square.length, reportList);
+reportPerimeter(square.length, reportList);
 ```
 
 > [!NOTE]
@@ -149,8 +149,8 @@ reportPerimeter(square1.length, reportList);
 ブラウザーがモジュールをインポートするのに、絶対 URL か、文書のベース URL を使用して解決される相対 URL であるモジュール指定子を使用する方法は、前述したとおりです。
 
 ```js
-import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
+import { name as squareName, draw } from "./shapes/square.js";
 ```
 
 [インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)により、モジュールをインポートするときに、モジュール指定子でほぼ全ての好きなテキストを代わりに指定することができます。このマップは、モジュールの URL が解決されたときにテキストを置き換える対応する値を提供します。
@@ -174,8 +174,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
 インポートマップは `<script>` 要素の中の [JSON オブジェクト](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap#json_のインポートマップ表現) で、 `type` 属性を [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) に設定して定義することができます。
-文書内に置けるインポートマップは 1 つだけで、静的インポートと動的インポートの両方でどのモジュールが読み込まれるかを解決するために使用できるので、モジュールをインポートする `<script>` 要素の前に宣言する必要があります。
-インポートマップは文書内の特定の要素にのみ適用されることに注意してください。仕様では、ワーカーやワークレットのコンテキストでインポートマップを適用する方法についてはカバーされていません。 <!-- https://github.com/WICG/import-maps/issues/2 -->
+なお、インポートマップは文書内の特定の要素にのみ適用されることに注意してください。仕様では、ワーカーやワークレットのコンテキストでインポートマップを適用する方法についてはカバーされていません。 <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 このマップで、上記のプロパティ名をモジュール指定子として使用することができるようになりました。
 モジュール指定子キーに末尾のスラッシュがない場合は、モジュール指定子キー全体が照合されて置換されます。
@@ -395,7 +394,7 @@ document.adoptedStyleSheets = [styles];
 ```html example-bad
 <script>
   import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
-  // ...
+  // …
 </script>
 <script src="a-module-using-import-statements.js"></script>
 <!-- SyntaxError: import declarations may only appear at top level of a module -->
@@ -422,13 +421,13 @@ document.adoptedStyleSheets = [styles];
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>ページの例</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>
     <div id="main"></div>
     <script>
-      // A var statement creates a global variable.
+      // var 文はグローバル変数を作成する。
       var text = "Hello";
     </script>
     <script type="module" src="./render.js"></script>
@@ -493,18 +492,18 @@ import { default as randomSquare } from "./modules/square.js";
 例えば、次のどちらも同じ仕事をしますが、少し異なる方法で行います。
 
 ```js
-// module.js の内部
+// -- module.js --
 export { function1 as newFunctionName, function2 as anotherNewFunctionName };
 
-// main.js の内部
+// -- main.js --
 import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
 ```
 
 ```js
-// module.js の内部
+// -- module.js --
 export { function1, function2 };
 
-// main.js の内部
+// -- main.js --
 import {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName,
@@ -612,9 +611,9 @@ import * as Triangle from "./modules/triangle.js";
 どの場合も、その指定されたオブジェクト名の配下からモジュールのインポートにアクセスできます。例えば次のようにして使います。
 
 ```js
-const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
-Square.reportArea(square1.length, reportList);
-Square.reportPerimeter(square1.length, reportList);
+const square = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
+Square.reportArea(square.length, reportList);
+Square.reportPerimeter(square.length, reportList);
 ```
 
 このように (必要な箇所にオブジェクトの名前を含むようにさえすれば) コードは以前と同じように書くことができ、そしてインポートはより簡潔になります。
@@ -654,10 +653,10 @@ import { Square } from "./modules/square.js";
 そして、正方形を描くために次のようにクラスを使います。
 
 ```js
-const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
-square1.draw();
-square1.reportArea();
-square1.reportPerimeter();
+const square = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
+square.draw();
+square.reportArea();
+square.reportPerimeter();
 ```
 
 ## モジュールの集約
@@ -747,7 +746,7 @@ const squareBtn = document.querySelector(".square");
 ```js
 squareBtn.addEventListener("click", () => {
   import("./modules/square.js").then((Module) => {
-    const square1 = new Module.Square(
+    const square = new Module.Square(
       myCanvas.ctx,
       myCanvas.listId,
       50,
@@ -755,9 +754,9 @@ squareBtn.addEventListener("click", () => {
       100,
       "blue",
     );
-    square1.draw();
-    square1.reportArea();
-    square1.reportPerimeter();
+    square.draw();
+    square.reportArea();
+    square.reportPerimeter();
   });
 });
 ```
@@ -821,7 +820,7 @@ const circleBtn = document.querySelector(".circle");
 シェイプ関数を呼び出す際に、前回使用された文字列の代わりに `colors` を使用することにします。
 
 ```js
-const square1 = new Module.Square(
+const square = new Module.Square(
   myCanvas.ctx,
   myCanvas.listId,
   50,
@@ -830,7 +829,7 @@ const square1 = new Module.Square(
   colors.blue,
 );
 
-const circle1 = new Module.Circle(
+const circle = new Module.Circle(
   myCanvas.ctx,
   myCanvas.listId,
   75,
@@ -839,7 +838,7 @@ const circle1 = new Module.Circle(
   colors.green,
 );
 
-const triangle1 = new Module.Triangle(
+const triangle = new Module.Triangle(
   myCanvas.ctx,
   myCanvas.listId,
   100,
@@ -1006,9 +1005,9 @@ export const b = 1;
 
 ## 関連情報
 
-- [JavaScript modules](https://v8.dev/features/modules) (v8.dev, 2018)
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) (hacks.mozilla.org, 2018)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) (hacks.mozilla.org, 2015)
-- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)（Axel Rauschmayer の書籍）
+- [JavaScript modules](https://v8.dev/features/modules) - v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) - hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) - hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) - Dr. Axel Rauschmayer
 
-{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}

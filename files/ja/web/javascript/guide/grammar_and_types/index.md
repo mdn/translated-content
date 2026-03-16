@@ -2,10 +2,10 @@
 title: 文法とデータ型
 slug: Web/JavaScript/Guide/Grammar_and_types
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 この節では JavaScript の基本文法、変数宣言、データ型、リテラルについて説明します。
 
@@ -242,6 +242,7 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新の ECMAScript 標準では、以下の 8 つのデータ型が定義されています。
 
 - {{Glossary("Primitive", "プリミティブ型")}}のデータ型が 7 つあります。
+
   1. {{Glossary("Boolean", "論理型")}}。 `true` または `false`。
   2. {{Glossary("null")}}。null 値を意味する特殊なキーワードです。（JavaScript は大文字・小文字を区別するため、`null` は `Null` や `NULL` などと同じではありません。）
   3. {{Glossary("undefined")}}。値が未定義である最上位プロパティです。
@@ -295,6 +296,7 @@ z = "37" + 7; // "377"
 
 - {{jsxref("parseInt()")}}
 - {{jsxref("parseFloat()")}}
+- {{jsxref("Number()")}}
 
 `parseInt` は整数のみを返すので、小数は切り捨てられます。
 
@@ -305,7 +307,7 @@ z = "37" + 7; // "377"
 parseInt("101", 2); // 5
 ```
 
-文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。
+文字列から数値を取り出す代替手段は、`+` (単項プラス) 演算子を使う方法です。これは暗黙に[数値への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)を行います。これは {{jsxref("Number()")}} 関数と同じ処理です。
 
 ```js-nolint
 "1.1" + "1.1"; // '1.11.1'
@@ -358,7 +360,7 @@ console.log(fish);
 
 要素のリストの最後にカンマを付けた場合、そのカンマは無視されます。
 
-次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
+次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在せず、`myList[1]` は空です。リスト内の他のカンマはすべて、新しい要素を示します。
 
 ```js
 const myList = ["home", , "school"];
@@ -376,8 +378,7 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> [!NOTE]
-> [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
+> [!NOTE] > [末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)は、複数行の配列を保有するときに git diff をきれいに保つのに役立ちます。なぜなら、項目を最後に追加しても一行追加するだけで、前の行は変更されないからです。
 >
 > ```diff
 > const myList = [
@@ -495,11 +496,11 @@ console.log(car[7]); // マツダ
 
 ```js-nolint example-bad
 const unusualPropertyNames = {
-  '': '空文字列',
-  '!': 'バン！'
-}
-console.log(unusualPropertyNames.'');   // SyntaxError: Unexpected string
-console.log(unusualPropertyNames.!);    // SyntaxError: Unexpected token !
+  "": "空文字列",
+  "!": "バン！",
+};
+console.log(unusualPropertyNames.""); // SyntaxError: Unexpected string
+console.log(unusualPropertyNames.!); // SyntaxError: Unexpected token !
 ```
 
 代わりに、これらはブラケット記法 (`[]`) でアクセスする必要があります。
@@ -524,7 +525,7 @@ const obj = {
   // メソッド
   toString() {
     // スーパークラスの呼び出し
-    return "d " + super.toString();
+    return `d ${super.toString()}`;
   },
   // 計算による（動的な）プロパティ名
   ["prop_" + (() => 42)()]: 42,
@@ -566,18 +567,19 @@ console.log("Joyo's cat".length); // この場合は 10 が出力される。
 
 テンプレート文字列は文字列の構築に糖衣構文を利用することができます。（これは Perl や Python などの文字列補完機能に似ています。）
 
-```js-nolint
+```js
 // 基本的な文字列リテラルの作成
-`In JavaScript '\n' is a line-feed.`
+`JavaScript では '\n' は行送りです。`;
 
 // 複数行の文字列
-`In JavaScript, template strings can run
- over multiple lines, but double and single
- quoted strings cannot.`
+`JavaScript では、テンプレート文字列は、
+ 複数行にわたって書くことができますが、
+ 二重引用符や単一引用符ではできません。`;
 
 // 文字列補完
-const name = 'Lev', time = 'today';
-`Hello ${name}, how are you ${time}?`
+const name = "Lev",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 ```
 
 [タグ付きテンプレート](/ja/docs/Web/JavaScript/Reference/Template_literals#タグ付きテンプレート)は、テンプレートリテラルを指定するためのコンパクトな構文と、それを解釈するための「タグ」関数の呼び出しを組み合わせたものです。タグ付きテンプレートは、文字列と関連する値の集合を処理する関数を呼び出すための、より簡潔で意味づけされた方法にすぎません。以下の例では、テンプレートタグ関数の名前が `print` であり、テンプレートタグ関数の名前がテンプレートリテラルの前にあります。`print` 関数は引数を補間し、オブジェクトや配列をシリアライズするので、厄介な `[object Object]` になることを避けることができます。
@@ -652,30 +654,28 @@ console.log("I need to do:\n%o\nMy current progress is: %o\n", todos, progress);
 
 ここで、JavaScript の文字列で使用できる特殊文字の表を示します。
 
-| 文字        | 意味                                                                                                                                                                                                        |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `\0`        | ヌル文字                                                                                                                                                                                                    |
-| `\b`        | バックスペース                                                                                                                                                                                              |
-| `\f`        | 改ページ                                                                                                                                                                                                    |
-| `\n`        | 改行                                                                                                                                                                                                        |
-| `\r`        | 復帰                                                                                                                                                                                                        |
-| `\t`        | タブ                                                                                                                                                                                                        |
-| `\v`        | 垂直タブ                                                                                                                                                                                                    |
-| `\'`        | アポストロフィまたは単一引用符                                                                                                                                                                              |
-| `\"`        | 二重引用符                                                                                                                                                                                                  |
-| `\\`        | バックスラッシュ (\\)                                                                                                                                                                                       |
-| `\XXX`      | `0` から `377` までの 3 桁の 8 進数 _XXX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\251` は著作権記号を示します。                                                                            |
-|             |                                                                                                                                                                                                             |
-| `\xXX`      | `00` から `FF` までの 2 桁の 16 進数 _XX_ で指定された、Latin-1 エンコーディングの文字。 例えば、`\xA9` は著作権記号を示します。                                                                            |
-|             |                                                                                                                                                                                                             |
-| `\uXXXX`    | 4 桁の 16 進数 _XXXX_ で指定された Unicode 文字。 例えば、`\u00A9` は著作権記号を示します。[Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)をご覧ください。 |
-| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                           |
+| 文字        | 意味                                                                                                                                                                                                             |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | ヌル文字                                                                                                                                                                                                         |
+| `\b`        | バックスペース                                                                                                                                                                                                   |
+| `\f`        | 改ページ                                                                                                                                                                                                         |
+| `\n`        | 改行                                                                                                                                                                                                             |
+| `\r`        | 復帰                                                                                                                                                                                                             |
+| `\t`        | タブ                                                                                                                                                                                                             |
+| `\v`        | 垂直タブ                                                                                                                                                                                                         |
+| `\'`        | アポストロフィまたは単一引用符                                                                                                                                                                                   |
+| `\"`        | 二重引用符                                                                                                                                                                                                       |
+| `\\`        | バックスラッシュ (\\)                                                                                                                                                                                            |
+| `\XXX`      | Latin-1 エンコーディングの文字を 3 桁以下の 8 進数で指定したもので、`XXX` の部分は `0` ～ `377` の範囲です。例えば、`\251` は著作権記号を示します。                                                              |
+| `\xXX`      | Latin-1 エンコーディングの文字を 2 桁の 16 進数で指定したもので、`XX` の形で、`00` ～ `FF` の範囲です。例えば、`\xA9` は著作権記号を示します。                                                                   |
+| `\uXXXX`    | Unicode 文字を 4 桁の 16 進数 `XXXX` 指定したものです。例えば、`\u00A9` は著作権記号を示します。[Unicode エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル)をご覧ください。 |
+| `\u{XXXXX}` | Unicode コードポイントエスケープです。 例えば `\u{2F804}` は Unicode エスケープである `\uD87E\uDC04` と同じです。                                                                                                |
 
 #### 文字のエスケープ
 
 上記の表に掲載されていない文字は直前にバックスラッシュをつけても無視されますが、こうした使い方は非推奨であり使用を避けるべきです。
 
-バックスラッシュを直前につけることで、引用符を文字列に含めることができます。これは引用符の*エスケープ*と呼ばれます。例えば以下のようにします。
+バックスラッシュを直前につけることで、引用符を文字列に含めることができます。これは引用符のエスケープと呼ばれます。例えば以下のようにします。
 
 ```js-nolint
 const quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";

@@ -2,7 +2,7 @@
 title: 文字クラス
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0f6daa30cf89c66d37700c51b8a12e660fee29d9
 ---
 
 文字クラスは、文字や数字の区別など、文字の種類を区別します。
@@ -186,7 +186,7 @@ console.log(moods.match(regexpEmoticons));
           <a href="https://ja.wikipedia.org/wiki/
 キャレット記法"
             >キャレット記法</a
-          >を使用した制御文字に一致します。 "X" には A–Z の文字が入ります（コードポイント<code>U+0001</code><em>–</em><code>U+001A</code> に対応します）。例えば
+          >を使用した制御文字に一致します。 "X" には A–Z または a-z の文字が入ります（コードポイント<code>U+0001</code><em>–</em><code>U+001A</code> に対応します）。例えば
           <code>/\cM\cJ/</code> は "\r\n" に一致します。
         </p>
       </td>

@@ -48,7 +48,7 @@ l10n:
 
 ### HTML
 
-```html
+```html-nolint
 <input class="ignored" value="ユーザーはこの要素にフォーカスを与えることができません。" />
 ```
 

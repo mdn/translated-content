@@ -2,7 +2,7 @@
 title: 数量子
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: 0f6daa30cf89c66d37700c51b8a12e660fee29d9
 ---
 
 数量子は、一致させる文字や式の数を示します。
@@ -121,7 +121,7 @@ console.log(modifiedQuote.match(regexpTooGreedy));
       </td>
       <td>
         <p>
-          既定では <code>*</code> や <code>+</code> といった数量子は貪欲です。つまり、できる限り多くの文字列と一致しようとします。数量子の後に <code>?</code> の文字を指定すると、数量子が「非貪欲」になります。つまり、一致が見つかるとすぐに停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
+          デフォルトで、<code>*</code> や <code>+</code> といった数量子は「貪欲」です。つまり、可能な限り多くの回数を一致させようとします。量指定子の後に <code>?</code> 文字を付けると、その量指定子は「非貪欲」になります。つまり、最小の一致数が見つかり次第、そこで停止します。例えば、"some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing" といった文字列が与えられた場合は、
         </p>
         <ul>
           <li>
@@ -129,6 +129,12 @@ console.log(modifiedQuote.match(regexpTooGreedy));
           </li>
           <li><code>/&#x3C;.*?>/</code> は "&#x3C;foo>" に一致します。</li>
         </ul>
+        <div class="notecard note">
+          <p>
+            <strong>メモ:</strong> <code>?</code> を <code>{n}</code> の後に付けることは、文法的には有効ですが、実際には意味がありません。
+            <code>{n}</code> は常に正確に n 回一致しますので、<code>x{n}?</code> は <code>x{n}</code> と同じになります。
+          </p>
+        </div>
       </td>
     </tr>
   </tbody>

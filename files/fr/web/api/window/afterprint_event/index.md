@@ -1,36 +1,57 @@
 ---
-title: afterprint
+title: "Window : évènement afterprint"
+short-title: afterprint
 slug: Web/API/Window/afterprint_event
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
 
-L'événement **afterprint** est déclenché après que le document associé a été imprimé ou que l'aperçu avant impression a été fermé.
+L'évènement **`afterprint`** de l'interface {{DOMxRef("Window")}} est déclenché après que le document associé a commencé à s'imprimer ou que l'aperçu avant impression a été fermé.
 
-## Informations générales
+Les évènements {{DOMxRef("Window.beforeprint_event", "beforeprint")}} et `afterprint` permettent aux pages de modifier leur contenu avant le début de l'impression (par exemple, pour supprimer une bannière) puis de rétablir ces modifications après la fin de l'impression. En général, il est préférable d'utiliser une règle CSS [`@media print`](/fr/docs/Web/CSS/Guides/Media_queries/Using#cibler_des_types_de_média), mais il peut être nécessaire d'utiliser ces évènements dans certains cas.
 
-- Spécification
-  - : [HTML5](https://html.spec.whatwg.org/multipage/webappapis.html#printing)
-- Interface
-  - : Event
-- Propagation
-  - : Non
-- Annulable
-  - : Non
-- Cible
-  - : DefaultView (`<window>`)
-- Action par défaut
-  - : Aucune
+## Syntaxe
 
-## Propriétés
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènements.
 
-| Property                        | Type                       | Description                                            |
-| ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+```js-nolint
+addEventListener("afterprint", (event) => { })
 
-## Evénements liés
+onafterprint = (event) => { }
+```
 
-- [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)
+## Type d'évènement
+
+Un objet {{DOMxRef("Event")}} générique.
+
+## Exemples
+
+Utilisation de `addEventListener()`&nbsp;:
+
+```js
+window.addEventListener("afterprint", (event) => {
+  console.log("Après impression");
+});
+```
+
+Utilisation de la propriété de gestionnaire d'évènements `onafterprint`&nbsp;:
+
+```js
+window.onafterprint = (event) => {
+  console.log("Après impression");
+};
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- Évènement associé&nbsp;: {{DOMxRef("Window/beforeprint_event", "beforeprint")}}
