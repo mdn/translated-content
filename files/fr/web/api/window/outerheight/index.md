@@ -1,33 +1,26 @@
 ---
-title: Window.outerHeight
+title: "Window : propriété outerHeight"
+short-title: outerHeight
 slug: Web/API/Window/outerHeight
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef}}
 
-`Window.outerHeight` retourne la hauteur de la fenêtre (du navigateur) en pixels. La hauteur retournée prends en compte la fenêtre du navigateur entier, y compris la barre latérale, window chrome and window resizing borders/handles.
-
-Cette propriété n'a pas de valeur par défaut.
-
-Syntaxe
-
-```js
-outWindowHeight = window.outerHeight;
-```
-
-La valeur retournée correspond à la hauteur extérieure de la fenêtre.
+La propriété en lecture seule **`outerHeight`** de l'interface {{DOMxRef("Window")}} retourne la hauteur en pixels de la fenêtre du navigateur entière, y compris toute barre latérale, le chrome de la fenêtre et les bordures/poignées de redimensionnement de la fenêtre.
 
 ## Notes
 
-Pour changer la taille de la fenêtre, utilisez {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
+Pour changer la taille de la fenêtre, utilisez {{DOMxRef("window.resizeBy()")}} et {{DOMxRef("window.resizeTo()")}}.
 
-Pour obtenir la hauteur intérieure de la fenêtre (la hauteur de la page actuelle), utilisez {{domxref("window.innerHeight")}}.
+Pour obtenir la hauteur intérieure de la fenêtre (la hauteur de la page actuelle), utilisez {{DOMxRef("window.innerHeight")}}.
 
 ### Exemple illustré
 
 La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
-![innerHeight vs outerHeight illustration](FirefoxInnerVsOuterHeight2.png)
+![illustration de innerHeight et outerHeight](FirefoxInnerVsOuterHeight2.png)
 
 ## Spécifications
 
@@ -39,8 +32,8 @@ La figure suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ## Voir aussi
 
-- {{domxref("window.innerHeight")}}
-- {{domxref("window.innerWidth")}}
-- {{domxref("window.outerWidth")}}
-- {{domxref("window.resizeBy()")}}
-- {{domxref("window.resizeTo()")}}
+- La propriété {{DOMxRef("window.innerHeight")}}
+- La propriété {{DOMxRef("window.innerWidth")}}
+- La propriété {{DOMxRef("window.outerWidth")}}
+- La méthode {{DOMxRef("window.resizeBy()")}}
+- La méthode {{DOMxRef("window.resizeTo()")}}
