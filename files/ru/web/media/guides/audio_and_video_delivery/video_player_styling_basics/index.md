@@ -48,7 +48,9 @@ slug: Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics
       <span id="progress-bar"></span>
     </progress>
   </div>
-  <button id="mute" type="button" data-state="mute">Звук выключить/включить</button>
+  <button id="mute" type="button" data-state="mute">
+    Звук выключить/включить
+  </button>
   <button id="vol-inc" type="button" data-state="vol-up">Громкость +</button>
   <button id="vol-dec" type="button" data-state="vol-down">Громкость -</button>
   <button id="fs" type="button" data-state="go-fullscreen">Полноэкранный режим</button>
