@@ -108,7 +108,7 @@ evenOddResult = finalResult % 2;
 // ...
 ```
 
-```js hidden live-sample___math-1-finish
+```js-nolint hidden live-sample___math-1-finish
 let finalResult;
 let evenOddResult;
 
