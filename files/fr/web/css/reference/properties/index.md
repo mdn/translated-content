@@ -1,9 +1,8 @@
 ---
 title: Propriétés CSS
 slug: Web/CSS/Reference/Properties
-original_slug: Web/CSS/Properties
 l10n:
-  sourceCommit: 5878ceaae26e3873d5122fa3c294896fe8092be6
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
@@ -27,8 +26,8 @@ img {
 ## Syntaxe
 
 ```css
-sélecteur {
-  propriété: valeur;
+selecteur {
+  propriete: valeur;
 }
 ```
 
@@ -49,6 +48,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("alignment-baseline")}}
 - {{CSSxRef("all")}} (version courte)
 - {{CSSxRef("anchor-name")}}
+- {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
@@ -82,6 +82,8 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("background-repeat")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (version courte)
+- {{CSSxRef("baseline-shift")}}
+- {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -166,7 +168,10 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("break-before")}}
 - {{CSSxRef("break-inside")}}
 - {{CSSxRef("caption-side")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret")}} (version courte)
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -178,12 +183,14 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("column-count")}}
 - {{CSSxRef("column-fill")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-height")}}
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
 - {{CSSxRef("column-rule")}} (version courte)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
+- {{CSSxRef("column-wrap")}}
 - {{CSSxRef("columns")}} (version courte)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
@@ -196,6 +203,23 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("container")}} (version courte)
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
+- {{CSSxRef("corner-block-end-shape")}}
+- {{CSSxRef("corner-block-start-shape")}}
+- {{CSSxRef("corner-bottom-left-shape")}}
+- {{CSSxRef("corner-bottom-right-shape")}}
+- {{CSSxRef("corner-bottom-shape")}} (version courte)
+- {{CSSxRef("corner-end-end-shape")}}
+- {{CSSxRef("corner-end-start-shape")}}
+- {{CSSxRef("corner-inline-end-shape")}}
+- {{CSSxRef("corner-inline-start-shape")}}
+- {{CSSxRef("corner-left-shape")}} (version courte)
+- {{CSSxRef("corner-right-shape")}} (version courte)
+- {{CSSxRef("corner-shape")}} (version courte)
+- {{CSSxRef("corner-start-end-shape")}}
+- {{CSSxRef("corner-start-start-shape")}}
+- {{CSSxRef("corner-top-left-shape")}}
+- {{CSSxRef("corner-top-right-shape")}}
+- {{CSSxRef("corner-top-shape")}} (version courte)
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -209,6 +233,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("direction")}}
 - {{CSSxRef("display")}}
 - {{CSSxRef("dominant-baseline")}}
+- {{CSSxRef("dynamic-range-limit")}}
 - {{CSSxRef("empty-cells")}}
 - {{CSSxRef("field-sizing")}}
 - {{CSSxRef("fill-opacity")}}
@@ -251,6 +276,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("font-variant")}} (version courte)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
+- {{CSSxRef("font-width")}}
 - {{CSSxRef("font")}} (version courte)
 - {{CSSxRef("forced-color-adjust")}}
 
@@ -285,13 +311,14 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("inset-block-end")}}
 - {{CSSxRef("inset-block-start")}}
 - {{CSSxRef("inset-block")}} (version courte)
-- {{CSSxRef("inset-block")}} (version courte)
 - {{CSSxRef("inset-inline-end")}}
 - {{CSSxRef("inset-inline-start")}}
 - {{CSSxRef("inset-inline")}} (version courte)
-- {{CSSxRef("inset-inline")}} (version courte)
 - {{CSSxRef("inset")}} (version courte)
-- {{CSSxRef("inset")}} (version courte)
+- {{CSSxRef("interactivity")}}
+- {{CSSxRef("interest-delay")}}
+- {{CSSxRef("interest-delay-end")}}
+- {{CSSxRef("interest-delay-start")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -362,6 +389,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{CSSxRef("object-view-box")}}
 - {{CSSxRef("offset-anchor")}}
 - {{CSSxRef("offset-distance")}}
 - {{CSSxRef("offset-path")}}
@@ -432,11 +460,13 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("rotate")}}
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("ruby-align")}}
+- {{CSSxRef("ruby-overhang")}}
 - {{CSSxRef("ruby-position")}}
 - {{CSSxRef("rx")}}
 - {{CSSxRef("ry")}}
 - {{CSSxRef("scale")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
 - {{CSSxRef("scroll-margin-block")}} (version courte)
@@ -463,6 +493,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
+- {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
 - {{CSSxRef("scroll-timeline")}} (version courte)
@@ -492,11 +523,13 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("text-align-last")}}
 - {{CSSxRef("text-align")}}
 - {{CSSxRef("text-anchor")}}
+- {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
 - {{CSSxRef("text-box")}} (version courte)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}
@@ -562,7 +595,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 
 ### Propriétés non standard
 
-Les propriétés non standard ou préfixées par le navigateur comprennent les suivantes&nbsp;:
+Les propriétés non standard préfixées par le navigateur comprennent&nbsp;:
 
 #### Préfixe `-moz-`
 
@@ -600,4 +633,4 @@ Les propriétés non standard ou préfixées par le navigateur comprennent les s
 - [Pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Extensions CSS de Mozilla (-moz-)](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
 - [Extensions CSS de WebKit (-webkit-)](/fr/docs/Web/CSS/Reference/Webkit_extensions)
-- {{Glossary("Vendor prefix", "Préfixe vendeur")}}
+- L'entrée de glossaire {{Glossary("Vendor prefix", "Préfixe vendeur")}}
