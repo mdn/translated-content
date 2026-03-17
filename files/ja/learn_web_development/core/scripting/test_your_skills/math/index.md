@@ -127,7 +127,9 @@ evenOddResult = finalResult % 2;
 const section = document.querySelector("section");
 const para1 = document.createElement("p");
 const finalResultCheck =
-  finalResult === 48 ? `はい、よくできました。` : `いいえ、 ${finalResult} でした。`;
+  finalResult === 48
+    ? `はい、よくできました。`
+    : `いいえ、 ${finalResult} でした。`;
 para1.textContent = `finalResult は 48 でしょうか？ ${finalResultCheck}`;
 const para2 = document.createElement("p");
 const evenOddResultCheck =
