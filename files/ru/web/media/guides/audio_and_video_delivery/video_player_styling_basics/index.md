@@ -53,7 +53,9 @@ slug: Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics
   </button>
   <button id="vol-inc" type="button" data-state="vol-up">Громкость +</button>
   <button id="vol-dec" type="button" data-state="vol-down">Громкость -</button>
-  <button id="fs" type="button" data-state="go-fullscreen">Полноэкранный режим</button>
+  <button id="fs" type="button" data-state="go-fullscreen">
+    Полноэкранный режим
+  </button>
 </div>
 ```
 
