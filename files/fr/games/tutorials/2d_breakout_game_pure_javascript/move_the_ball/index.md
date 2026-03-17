@@ -13,7 +13,7 @@ Nous avons vu dans l'article précédent comment dessiner une balle, maintenant 
 
 ## Définir une boucle de dessin
 
-Afin que le dessin soit mis à jour sur le canevas à chaque image, nous allons définir une fonction `draw()` qui sera exécutée en continu et qui utilisera des variables pour les positions des sprites, etc. Pour qu'une fonction s'exécute de façon répétée avec JavaScript, on pourra utiliser les méthodes {{DOMxRef("WindowTimers.setInterval()", "setInterval()")}} ou {{DOMxRef("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
+Afin que le dessin soit mis à jour sur le canevas à chaque image, nous allons définir une fonction `draw()` qui sera exécutée en continu et qui utilisera des variables pour les positions des sprites, etc. Pour qu'une fonction s'exécute de façon répétée avec JavaScript, on pourra utiliser les méthodes {{DOMxRef("Window.setInterval()", "setInterval()")}} ou {{DOMxRef("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
 
 Supprimez tout le JavaScript que vous avez actuellement dans votre HTML à l'exception des deux premières lignes puis ajoutez ce qui suit en dessous de ces lignes. La fonction `draw()` sera exécutée toutes les 10 millisecondes (environ) grâce à `setInterval`&nbsp;:
 
