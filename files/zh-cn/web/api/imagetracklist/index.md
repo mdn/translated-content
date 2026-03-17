@@ -12,7 +12,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("ImageTrackList.ready")}} {{ReadOnlyInline}}
-  - : 返回一个 {{jsxref("promise")}}，并在 `ImageTrackList` 被 {{domxref("ImageTrack","tracks")}} 填充完毕兑现。
+  - : 返回一个会在 `ImageTrackList` 被 {{domxref("ImageTrack","tracks")}} 填充完毕时兑现的 {{jsxref("promise")}}。
 - {{domxref("ImageTrackList.length")}} {{ReadOnlyInline}}
   - : 返回一个指示 `ImageTrackList` 的长度的整型。
 - {{domxref("ImageTrackList.selectedIndex")}} {{ReadOnlyInline}}
