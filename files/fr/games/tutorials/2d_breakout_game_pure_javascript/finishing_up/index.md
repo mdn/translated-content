@@ -66,7 +66,7 @@ drawLives();
 
 ## Améliorer le rendu avec `requestAnimationFrame()`
 
-Maintenant, travaillons sur quelque chose qui n'est pas lié à la mécanique du jeu, mais à la façon dont il est rendu. {{DOMxRef("window.requestAnimationFrame", "requestAnimationFrame")}} aide le navigateur à rendre le jeu mieux que la cadence fixe que nous avons actuellement mise en place en utilisant {{DOMxRef("windowTimers.setInterval()", "setInterval()")}}. Remplacez la ligne suivante&nbsp;:
+Maintenant, travaillons sur quelque chose qui n'est pas lié à la mécanique du jeu, mais à la façon dont il est rendu. {{DOMxRef("window.requestAnimationFrame", "requestAnimationFrame")}} aide le navigateur à rendre le jeu mieux que la cadence fixe que nous avons actuellement mise en place en utilisant {{DOMxRef("Window.setInterval()", "setInterval()")}}. Remplacez la ligne suivante&nbsp;:
 
 ```js
 interval = setInterval(draw, 10);
