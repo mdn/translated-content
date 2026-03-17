@@ -1,12 +1,14 @@
 ---
-title: queueMicrotask()
+title: "Window : méthode queueMicrotask()"
+short-title: queueMicrotask()
 slug: Web/API/Window/queueMicrotask
-original_slug: Web/API/queueMicrotask
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`queueMicrotask()`**, exposée par l'interface [`Window`](/fr/docs/Web/API/Window) ou l'ou [`Worker`](/fr/docs/Web/API/Worker), met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'évènements du navigateur.
+La méthode **`queueMicrotask()`** de l'interface {{DOMxRef("Window")}} met en file d'attente une micro-tâche qui doit être exécutée à un moment sûr avant que le contrôle soit retourné à la boucle d'évènements du navigateur.
 
 La micro-tâche est une fonction courte qui doit être exécutée après que la tâche actuelle ait terminé son exécution et lorsqu'il n'y a pas d'autre code en attente d'exécution avant que le contrôle du contexte d'exécution soit retourné à la boucle d'évènements du navigateur.
 
@@ -18,29 +20,28 @@ Les micro-tâches sont particulièrement utiles pour les bibliothèques et les <
 
 ## Syntaxe
 
-```js
-queueMicrotask(function)
+```js-nolint
+queueMicrotask(callback)
 ```
 
 ### Paramètres
 
-- `function`
-  - : Une [fonction](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
+- `callback`
+  - : Une {{JSxRef("function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
 ```js
 self.queueMicrotask(() => {
-  // Le contenu de la fonction à appeler
-  // comme micro-tâche
+  // Le contenu de la fonction à appeler comme micro-tâche
 });
 ```
 
-Tiré de la [spécification de `queueMicrotask()`](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)&nbsp;:
+Tiré de la [spécification de `queueMicrotask()` <sup>(ang.)</sup>](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)&nbsp;:
 
 ```js
 MyElement.prototype.loadData = function (url) {
@@ -61,24 +62,6 @@ MyElement.prototype.loadData = function (url) {
 };
 ```
 
-## Lorsque `queueMicrotask()` n'est pas disponible
-
-Le code ci-dessous est une prothèse d'émulation (<i lang="en">polyfill</i>) pour `queueMicrotask()`. Il crée une micro-tâche en utilisant une promesse qui se résout immédiatement, et, si la promesse ne peut pas être créée, utilise un minuteur.
-
-```js
-if (typeof self.queueMicrotask !== "function") {
-  self.queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
-      .catch((e) =>
-        setTimeout(() => {
-          throw e;
-        }),
-      ); // gérer les exceptions
-  };
-}
-```
-
 ## Spécifications
 
 {{Specifications}}
@@ -89,8 +72,9 @@ if (typeof self.queueMicrotask !== "function") {
 
 ## Voir aussi
 
+- La méthode {{DOMxRef("WorkerGlobalScope.queueMicrotask()")}}
 - [Prothèse d'émulation de `queueMicrotask()` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Utiliser les micro-tâches en JavaScript avec `queueMicrotask()`](/fr/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS)
-- [Explications sur `queueMicrotask()` (en anglais)](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
-- [Tâches, micro-tâches, queues et ordonnancement, une présentation de Jake Archibald (en anglais)](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- [Explications sur `queueMicrotask()` <sup>(angl.)</sup>](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [Tâches, micro-tâches, queues et ordonnancement, une présentation <sup>(angl.)</sup>](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) de Jake Archibald
