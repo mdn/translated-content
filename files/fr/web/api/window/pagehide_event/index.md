@@ -52,7 +52,7 @@ et {{DOMxRef("Window.beforeunload_event", "beforeunload")}}, cet évènement n'e
 
 Cependant, contrairement aux évènements `unload` et `beforeunload`, cet évènement est compatible avec le [cache avant/arrière <sup>(angl.)</sup>](https://web.dev/articles/bfcache) (bfcache), donc ajouter un écouteur à cet évènement n'empêchera pas la page d'être incluse dans le bfcache.
 
-Le meilleur évènement à utiliser pour signaler la fin de la session d'un utilisateur est l'évènement {{DOMxRef("Window.visibilitychange_event", "visibilitychange")}}. Dans les navigateurs qui ne prennent pas en charge `visibilitychange`, l'évènement `pagehide` est la meilleure alternative.
+Le meilleur évènement à utiliser pour signaler la fin de la session d'un utilisateur est l'évènement {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}. Dans les navigateurs qui ne prennent pas en charge `visibilitychange`, l'évènement `pagehide` est la meilleure alternative.
 
 Si vous essayez spécifiquement de détecter les évènements de déchargement de page, l'évènement `pagehide` est la meilleure option.
 
