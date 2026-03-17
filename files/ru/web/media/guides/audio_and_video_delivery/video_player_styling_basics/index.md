@@ -39,7 +39,9 @@ slug: Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics
 
 ```html live-sample___video-player-styled
 <div id="video-controls" class="controls" data-state="hidden">
-  <button id="play-pause" type="button" data-state="play">Воспроизведение/пауза</button>
+  <button id="play-pause" type="button" data-state="play">
+    Воспроизведение/пауза
+  </button>
   <button id="stop" type="button" data-state="stop">Стоп</button>
   <div class="progress">
     <progress id="progress" value="0">
