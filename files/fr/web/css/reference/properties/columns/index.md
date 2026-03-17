@@ -81,7 +81,7 @@ columns: revert-layer;
 columns: unset;
 ```
 
-La valeur de la propriété `columns` peut être définie comme une valeur {{CSSxRef("&lt;column-count&gt;")}} et/ou une valeur {{CSSxRef("&lt;column-width&gt;")}}, dans n'importe quel ordre, éventuellement suivie d'une valeur {{CSSxRef("column-height", "&lt;column-height&gt;")}} précédée d'un slash (`/`).
+La valeur de la propriété `columns` peut être définie comme une valeur {{CSSxRef("column-count", "&lt;column-count&gt;")}} et/ou une valeur {{CSSxRef("column-width", "&lt;column-width&gt;")}}, dans n'importe quel ordre, éventuellement suivie d'une valeur {{CSSxRef("column-height", "&lt;column-height&gt;")}} précédée d'un slash (`/`).
 
 ### Valeurs
 
