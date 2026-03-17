@@ -212,7 +212,7 @@ alert(counter2.value()); /* Alerts 0 */
 在導入 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：
 
 ```html live-sample___closures_bad
-<p id="help">Helpful notes will appear here</p>
+<p id="help">這裡將顯示一些實用資訊</p>
 <p>電子郵件：<input type="text" id="email" name="email" /></p>
 <p>姓名：<input type="text" id="name" name="name" /></p>
 <p>年齡：<input type="text" id="age" name="age" /></p>
