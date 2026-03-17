@@ -1,5 +1,5 @@
 ---
-title: GeolocationCoordinates 接口的 speed 属性
+title: GeolocationCoordinates：speed 属性
 short-title: speed
 slug: Web/API/GeolocationCoordinates/speed
 l10n:
