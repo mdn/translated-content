@@ -453,7 +453,7 @@ video.addEventListener("volumechange", () => {
 
 ### Индикатор прогресса и полноэкранный режим
 
-Реализации [Индикатора прогресса](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#progress) и [Полноэкранного режима](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) не изменились.
+Реализации [Индикатора прогресса](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#progress) и [Полноэкранного режима](/ru/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player#fullscreen) не изменились.
 
 ```js hidden live-sample___video-player-styled
 progress.addEventListener("click", (e) => {
