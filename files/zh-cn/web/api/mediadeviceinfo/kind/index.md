@@ -1,5 +1,5 @@
 ---
-title: MediaDeviceInfo: kind 属性
+title: MediaDeviceInfo：kind 属性
 short-title: kind
 slug: Web/API/MediaDeviceInfo/kind
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-{{domxref("MediaDeviceInfo")}} 接口的 **`kind`** 只读属性返回一个枚举值，即 `"videoinput"`、`"audioinput"` 或 `"audiooutput"` 中的一个。
+{{domxref("MediaDeviceInfo")}} 接口的 **`kind`** 只读属性返回一个枚举值，可以是 `"videoinput"`、`"audioinput"` 或 `"audiooutput"` 中的一个。
 
 ## 值
 
