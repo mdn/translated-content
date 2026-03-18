@@ -1,5 +1,5 @@
 ---
-title: MediaRecorder: audioBitrateMode 属性
+title: MediaRecorder：audioBitrateMode 属性
 short-title: audioBitrateMode
 slug: Web/API/MediaRecorder/audioBitrateMode
 l10n:
@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-以下之一：
+可以取以下两个值之一：
 
 - `constant`
   - ：{{domxref("MediaRecorder")}} 使用该恒定比特率进行编码。
