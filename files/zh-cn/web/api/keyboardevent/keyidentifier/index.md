@@ -1,5 +1,5 @@
 ---
-title: KeyboardEvent: keyIdentifier 属性
+title: KeyboardEvent：keyIdentifier 属性
 short-title: keyIdentifier
 slug: Web/API/KeyboardEvent/keyIdentifier
 l10n:
