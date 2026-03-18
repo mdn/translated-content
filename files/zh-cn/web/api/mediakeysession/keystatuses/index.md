@@ -1,5 +1,5 @@
 ---
-title: MediaKeySession: keyStatuses 属性
+title: MediaKeySession：keyStatuses 属性
 short-title: keyStatuses
 slug: Web/API/MediaKeySession/keyStatuses
 l10n:
