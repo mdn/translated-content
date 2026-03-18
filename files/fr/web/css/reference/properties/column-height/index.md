@@ -174,9 +174,7 @@ Le HTML, qui contient plusieurs paragraphes de contenu provenant des pages d'acc
   <a href="/fr/docs/Web/HTML/Reference/Elements/section"
     ><code>&lt;section&gt;</code></a
   >,
-  <a href="/fr/docs/Web/HTML/Reference/Elements/p">
-    <code>&lt;p&gt;</code> </a
-  >,
+  <a href="/fr/docs/Web/HTML/Reference/Elements/p"> <code>&lt;p&gt;</code> </a>,
   <a href="/fr/docs/Web/HTML/Reference/Elements/div"><code>&lt;div&gt;</code></a
   >,
   <a href="/fr/docs/Web/HTML/Reference/Elements/span"
