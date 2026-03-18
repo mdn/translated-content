@@ -8,16 +8,16 @@ l10n:
 
 {{APIRef("Window")}}
 
-La méthode `window.prompt()` demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
+La méthode **`prompt()`** de l'interface {{DOMxRef("Window")}} demande au navigateur d'afficher une boîte de dialogue avec un message optionnel pour inviter l'utilisateur·ice à saisir du texte, puis attend que l'utilisateur·ice soumette le texte ou annule la boîte de dialogue.
 
 Dans certaines conditions (par exemple si l'utilisateur·ice change d'onglet), le navigateur peut ne pas afficher de boîte de dialogue ou ne pas attendre la saisie ou l'annulation par l'utilisateur·ice.
 
 ## Syntaxe
 
-```js
-prompt();
-prompt(message);
-prompt(message, defaultValue);
+```js-nolint
+prompt()
+prompt(message)
+prompt(message, defaultValue)
 ```
 
 ### Paramètres
@@ -85,7 +85,7 @@ signe = prompt("Vous sentez-vous chanceux ?", "sûr");
 
 Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur·ice d'accéder au reste de l'interface du programme tant que la boîte de dialogue n'est pas fermée.
 Pour cette raison, il vaut mieux ne pas abuser des fonctions qui créent ce type de fenêtre.
-On peut aussi utiliser l'élément {{HTMLElement("dialog")}} pour les confirmations.
+On peut aussi utiliser l'élément HTML {{HTMLElement("dialog")}} pour les confirmations.
 
 Une boîte de dialogue de type prompt contient un champ de saisie sur une ligne, un bouton Annuler et un bouton OK, et renvoie le texte (éventuellement vide) saisi par l'utilisateur·ice.
 Le résultat est une chaîne de caractères, il peut donc être nécessaire de convertir la valeur fournie par l'utilisateur·ice.

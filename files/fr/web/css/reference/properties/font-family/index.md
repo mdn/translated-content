@@ -2,7 +2,7 @@
 title: font-family
 slug: Web/CSS/Reference/Properties/font-family
 l10n:
-  sourceCommit: 5a8de324f0aa3873d757f68e4fcaf6bbc0104711
+  sourceCommit: 3ea29f3443256eb763b957f2eb8d9c597f039add
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-family`** définit une liste priorisée d'un ou plusieurs noms de famille de police et/ou de noms de famille génériques pour l'élément sélectionné.
@@ -146,7 +146,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `ui-rounded`
       - : La police par défaut de l'interface utilisateur avec des caractéristiques arrondies.
     - `math`
-      - : Ceci concerne les besoins stylistiques particuliers de la représentation des mathématiques&nbsp;: exposant et indice, accolades sur plusieurs lignes, expressions imbriquées, et glyphes doublement barrés avec des significations distinctes.
+      - : Police qui répond aux besoins de mise en forme particuliers de la représentation des mathématiques&nbsp;: exposant et indice, accolades sur plusieurs lignes, expressions imbriquées, et glyphes doublement barrés avec des significations distinctes.
         Les feuilles de style de l'agent utilisateur peuvent définir `math { font-family: math }` afin que l'élément MathML {{MathMLElement("math")}} utilise par défaut des polices appropriées.
     - `fangsong`
       - : Un style de caractères chinois particulier se situant entre le style serif Song et la forme cursive Kai. Ce style est généralement utilisé pour les documents officiels du gouvernement.
