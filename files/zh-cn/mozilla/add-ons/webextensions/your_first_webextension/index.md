@@ -8,15 +8,13 @@ l10n:
 > [!NOTE]
 > 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，借助[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，以了解有关 Firefox 测试、发布和扩展的更多工作流程。
 
-在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“`mozilla.org`”或其任意子域名加载的任何页面添加一个红色边框。
+在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从 `mozilla.org` 或其任意子域名加载的任何页面添加一个红色边框。
 
 该示例的源代码位于 GitHub：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
 
 ## 编写扩展
 
 在合适的位置，例如在 `Documents` 目录下，创建一个名为 `borderify` 的新目录，并导航到该目录。你可以使用计算机的文件资源管理器，或者使用[命令行终端](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)。了解如何使用命令行终端是一个很有用的技能，因为它有助于你进行更高级的扩展开发。使用终端，你可以这样创建目录：
-
-创建一个新的目录并切换到该目录。例如，在你的命令行或者终端，你可以这么做：
 
 ```bash
 mkdir borderify
@@ -97,9 +95,9 @@ document.body.style.border = "5px solid red";
 
 该脚本将加载到与 manifest.json 文件中的 `content_scripts` 键给出的模式相匹配的页面中。该脚本可以直接访问文档，就像页面自身加载的脚本一样。
 
-- [了解更多关于内容脚本的内容。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [了解更多关于内容脚本的内容。](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
-## 测试一下
+## 尝试一下
 
 首先，仔细检查文件是否在正确的位置：
 
