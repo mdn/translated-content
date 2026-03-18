@@ -1,5 +1,5 @@
 ---
-title: MediaStreamTrack: id 属性
+title: MediaStreamTrack：id 属性
 short-title: id
 slug: Web/API/MediaStreamTrack/id
 l10n:
