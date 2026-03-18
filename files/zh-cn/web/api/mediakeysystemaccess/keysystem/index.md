@@ -1,5 +1,5 @@
 ---
-title: MediaKeySystemAccess: keySystem 属性
+title: MediaKeySystemAccess：keySystem 属性
 short-title: keySystem
 slug: Web/API/MediaKeySystemAccess/keySystem
 l10n:
@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("Encrypted Media Extensions")}} {{SecureContext_Header}}
 
-{{domxref("MediaKeySystemAccess")}} 接口的 **`keySystem`** 只读属性返回一个字符串，用于标识正在使用的密钥系统。
+{{domxref("MediaKeySystemAccess")}} 接口的 **`keySystem`** 只读属性返回用于标识正在使用的密钥系统的字符串。
 
 这是在请求系统访问时传递给 {{domxref("Navigator.requestMediaKeySystemAccess()")}} 的值。
 
 ## 值
 
-一个字符串。
+字符串。
 
 ## 规范
 
