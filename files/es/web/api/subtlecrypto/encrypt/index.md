@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-El método **`encrypt()`**  de la interfaz {{domxref("SubtleCrypto")}} cifra datos.
+El método **`encrypt()`** de la interfaz {{domxref("SubtleCrypto")}} cifra datos.
 
 Recibe como argumento una {{glossary("key")}} para cifrar, los parámetros específicos del algoritmo, y los datos que se van a cifrar (también conocido como "texto plano" o "plaintext" en inglés).
 Retorna un objeto {{jsxref("Promise")}} que se resolverá con los datos cifrados (También conocidos como "texto cifrado" o "ciphertext" en inglés).
@@ -39,7 +39,7 @@ Un objeto {{jsxref("Promise")}} que se resuelve con un {{jsxref("ArrayBuffer")}}
 
 ### Excepciones
 
-La promesa se rechaza cuando se presentan las siguientes excepciones: 
+La promesa se rechaza cuando se presentan las siguientes excepciones:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Se lanza cuando la operación solicitada no es válida para la clave proporcionada (por ejemplo, un algoritmo de crifrado no válido o una clave incompatible con el algoritmo especificado).
