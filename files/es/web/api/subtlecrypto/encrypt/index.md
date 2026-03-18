@@ -2,7 +2,7 @@
 title: "SubtleCrypto: método encrypt() "
 slug: Web/API/SubtleCrypto/encrypt
 l10n:
-	sourceCommit:373b648fd3f8f742aac14180ebe4ab2e07f8dfab
+  sourceCommit: 373b648fd3f8f742aac14180ebe4ab2e07f8dfab
 ---
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
