@@ -1,5 +1,5 @@
 ---
-title: MediaRecorder: videoBitsPerSecond property
+title: MediaRecorder：videoBitsPerSecond 属性
 short-title: videoBitsPerSecond
 slug: Web/API/MediaRecorder/videoBitsPerSecond
 l10n:
