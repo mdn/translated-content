@@ -11,6 +11,6 @@ l10n:
 
 {{WebExtExamples}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
