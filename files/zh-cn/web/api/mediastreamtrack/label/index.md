@@ -1,5 +1,5 @@
 ---
-title: MediaStreamTrack: label 属性
+title: MediaStreamTrack：label 属性
 short-title: label
 slug: Web/API/MediaStreamTrack/label
 l10n:
