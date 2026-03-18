@@ -1,5 +1,5 @@
 ---
-title: MediaEncryptedEvent: initDataType 属性
+title: MediaEncryptedEvent：initDataType 属性
 short-title: initDataType
 slug: Web/API/MediaEncryptedEvent/initDataType
 l10n:
