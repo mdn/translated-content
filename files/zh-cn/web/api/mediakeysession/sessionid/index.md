@@ -1,5 +1,5 @@
 ---
-title: MediaKeySession: sessionId property
+title: MediaKeySession：sessionId 属性
 short-title: sessionId
 slug: Web/API/MediaKeySession/sessionId
 l10n:
