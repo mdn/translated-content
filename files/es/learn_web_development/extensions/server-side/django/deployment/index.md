@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 original_slug: Learn/Server-side/Django/Deployment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
 
