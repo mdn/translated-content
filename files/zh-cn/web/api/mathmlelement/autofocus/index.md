@@ -1,5 +1,5 @@
 ---
-title: MathMLElement: autofocus property
+title: MathMLElement：autofocus 属性
 short-title: autofocus
 slug: Web/API/MathMLElement/autofocus
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("MathML")}}
 
-{{domxref("MathMLElement")}} 接口的 **`autofocus`** 属性包含一个反映了 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) HTML 全局属性的布尔值，指示当页面加载时或当元素变为可见时（如果 MathML 元素在 {{htmlelement("dialog")}} 或 [popover](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) 内）是否应该聚焦 MathML 元素。
+{{domxref("MathMLElement")}} 接口的 **`autofocus`** 属性包含一个反映了 HTML 全局属性 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) 的布尔值，指示当页面加载时或当元素变为可见时（如果 MathML 元素在 {{htmlelement("dialog")}} 或 [popover](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) 内）是否应该聚焦 MathML 元素。
 
 ## 值
 
