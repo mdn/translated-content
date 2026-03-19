@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`value`** 属性*必须*返回上次设置的值。该值由[监视可用的演示显示器列表](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays) 算法更新。
+**`value`** 属性*必须*返回上次设置的值。该值由[监视可用的演示显示器列表](https://www.w3.org/TR/presentation-api/#dfn-monitor-the-list-of-available-presentation-displays)算法更新。
 
 `onchange` 属性是一个[事件处理器](https://www.w3.org/TR/presentation-api/#dfn-event-handler)，其对应的[事件处理器事件类型](https://www.w3.org/TR/presentation-api/#dfn-event-handler-event-type)为 `change`。
 
