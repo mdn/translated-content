@@ -1,70 +1,112 @@
 ---
-title: WindowBase64.btoa()
+title: "Window : méthode btoa()"
+short-title: btoa()
 slug: Web/API/Window/btoa
-original_slug: Web/API/btoa
+l10n:
+  sourceCommit: 3e097148b4c6cb9c6d8824275599f855ca63827b
 ---
 
 {{APIRef("HTML DOM")}}
 
-La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
+La méthode **`btoa()`** de l'interface {{DOMxRef("Window")}} crée une chaîne de caractères {{Glossary("Base64")}} encodée à partir d'une chaîne de caractères {{Glossary("ASCII")}} (c'est-à-dire une chaîne dans laquelle chaque caractère est traité comme un octet de données binaires).
 
-> [!NOTE]
-> Étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir [Chaînes Unicode](#chaînes_unicode) pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
+Vous pouvez utiliser cette méthode pour encoder des données qui pourraient autrement engendrer des problèmes de communication, les transmettre, puis utiliser la méthode {{DOMxRef("Window.atob()")}} pour décoder à nouveau les données. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
+
+Vous pouvez également utiliser la méthode {{JSxRef("Uint8Array.prototype.toBase64()")}} si vos données sont dans un objet `Uint8Array` afin d'éviter de créer une chaîne de caractères contenant des octets bruts.
 
 ## Syntaxe
 
-```js
-var donneesEncodees = scope.btoa(chaineAEncoder);
+```js-nolint
+btoa(stringToEncode)
 ```
 
 ### Paramètres
 
-- `chaineAEncoder`
-  - : Une chaîne dont les caractères représentent chacun un octet unique de données binaires à encoder en ASCII.
+- `stringToEncode`
+  - : La chaîne de caractères binaire à encoder. Les chaînes de caractères en JavaScript sont encodées en {{Glossary("UTF-16")}}, ce qui signifie que chaque caractère doit avoir un point de code inférieur à 256, représentant un octet de données.
 
-### Valeur retournée
+### Valeur de retour
 
-Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
+Une chaîne de caractères ASCII contenant la représentation Base64 de `stringToEncode`.
 
 ### Exceptions
 
-## Exemple
+- `InvalidCharacterError` {{DOMxRef("DOMException")}}
+  - : La chaîne de caractères contenait un caractère qui ne tenait pas dans un seul octet. Voir la section «&nbsp;Chaîne de caractères Unicode&nbsp;» ci-dessous pour plus de détails.
+
+## Exemples
 
 ```js
-var donneesEncodees = window.btoa("Salut, monde"); // encode une chaîne
-var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
+const donneesEncodees = window.btoa("Salut, le monde"); // encode une chaîne de caractères
+const donneesDecodees = window.atob(donneesEncodees); // décode la chaîne de caractères
 ```
 
-## Notes
+### Chaînes de caractères Unicode
 
-Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode [`atob()`](/fr/docs/Web/API/Window/atob) pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.
-
-`btoa()` est également disponible pour les composants XPCOM implémentés en JavaScript, même si {domxref("Window")}} n'est pas l'objet global dans les composants.
-
-## Chaînes Unicode
-
-Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
-
-Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html)&nbsp;:
+Base64, par conception, attend des données binaires comme entrée. En termes de chaînes de caractères JavaScript, cela signifie des chaînes dans lesquelles le point de code de chaque caractère occupe un seul octet. Donc, si vous passez une chaîne de caractères à `btoa()` contenant des caractères qui occupent plus d'un octet, vous obtiendrez une erreur, car cela n'est pas considéré comme des données binaires&nbsp;:
 
 ```js
-// Chaîne ucs-2 en ascii encodé en base64
-function uena(chn) {
-  return window.btoa(unescape(encodeURIComponent(chn)));
-}
-// Ascii encodé en base64 en chaîne ucs-2
-function aenu(chn) {
-  return decodeURIComponent(escape(window.atob(chn)));
-}
-// Usage :
-uena("✓ à la mode"); // 4pyTIMOgIGxhIG1vZGU=
-aenu("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
+const ok = "a";
+console.log(ok.codePointAt(0).toString(16)); //   61: occupe < 1 octet
 
-uena("I \u2661 Unicode!"); // SSDimaEgVW5pY29kZSE=
-aenu("SSDimaEgVW5pY29kZSE="); // "I ♡ Unicode!"
+const notOK = "✓";
+console.log(notOK.codePointAt(0).toString(16)); // 2713: occupe > 1 octet
+
+console.log(window.btoa(ok)); // YQ==
+console.log(window.btoa(notOK)); // erreur
 ```
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Glossary/Base64).
+Comme `btoa` interprète les points de code de sa chaîne de caractères d'entrée comme des valeurs d'octet, appeler `btoa` sur une chaîne de caractères provoquera une exception «&nbsp;Caractère hors plage&nbsp;» si le point de code d'un caractère dépasse `0xff`. Pour les cas où vous devez encoder du texte Unicode arbitraire, il est nécessaire de convertir d'abord la chaîne de caractères en ses octets constitutifs en {{Glossary("UTF-8")}}, puis d'encoder les octets.
+
+La solution la plus simple consiste à utiliser `TextEncoder` et `TextDecoder` pour convertir entre UTF-8 et les représentations sur un seul octet de la chaîne de caractères&nbsp;:
+
+```js
+function base64ToBytes(base64) {
+  const binString = atob(base64);
+  return Uint8Array.from(binString, (m) => m.codePointAt(0));
+}
+
+function bytesToBase64(bytes) {
+  const binString = Array.from(bytes, (byte) =>
+    String.fromCodePoint(byte),
+  ).join("");
+  return btoa(binString);
+}
+
+// Utilisation
+bytesToBase64(new TextEncoder().encode("a Ā 𐀀 文 🦄")); // "YSDEgCDwkICAIOaWhyDwn6aE"
+new TextDecoder().decode(base64ToBytes("YSDEgCDwkICAIOaWhyDwn6aE")); // "a Ā 𐀀 文 🦄"
+```
+
+### Convertir des données binaires arbitraires
+
+Les fonctions `bytesToBase64` et `base64ToBytes` de la section précédente peuvent être utilisées directement pour convertir entre des chaînes de caractères Base64 et {{JSxRef("Uint8Array")}}.
+
+Pour de meilleures performances, la conversion asynchrone entre des URL de données base64 est possible nativement sur la plateforme web via les API {{DOMxRef("FileReader")}} et [`fetch`](/fr/docs/Web/API/Fetch_API)&nbsp;:
+
+```js
+async function bytesToBase64DataUrl(bytes, type = "application/octet-stream") {
+  return await new Promise((resolve, reject) => {
+    const reader = Object.assign(new FileReader(), {
+      onload: () => resolve(reader.result),
+      onerror: () => reject(reader.error),
+    });
+    reader.readAsDataURL(new File([bytes], "", { type }));
+  });
+}
+
+async function dataUrlToBytes(dataUrl) {
+  const res = await fetch(dataUrl);
+  return new Uint8Array(await res.arrayBuffer());
+}
+
+// Utilisation
+await bytesToBase64DataUrl(new Uint8Array([0, 1, 2])); // "data:application/octet-stream;base64,AAEC"
+await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array [0, 1, 2]
+```
+
+> [!NOTE]
+> Pour les environnements compatibles, il est également possible d'utiliser les méthodes natives {{JSxRef("Uint8Array.fromBase64()")}}, {{JSxRef("Uint8Array.prototype.toBase64()")}} et {{JSxRef("Uint8Array.prototype.setFromBase64()")}}.
 
 ## Spécifications
 
@@ -76,7 +118,9 @@ Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des
 
 ## Voir aussi
 
-- [Base64 encoding and decoding](/fr/docs/Glossary/Base64)
-- [Les URL de `données`](/fr/docs/Web/URI/Reference/Schemes/data)
-- [`atob()`](/fr/docs/Web/API/Window/atob)
-- [Components.utils.importGlobalProperties](/fr/docs/Components.utils.importGlobalProperties)
+- [Une prothèse d'émulation pour `btoa` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#base64-utility-methods) est disponible dans [`core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js)
+- [Les url `data`](/fr/docs/Web/URI/Reference/Schemes/data)
+- {{DOMxRef("WorkerGlobalScope.btoa()")}}&nbsp;: la même méthode, mais dans les contextes de worker.
+- La méthode {{DOMxRef("Window.atob()")}}
+- La méthode {{JSxRef("Uint8Array.prototype.toBase64()")}}
+- L'entrée de glossaire {{Glossary("Base64")}}

@@ -2,9 +2,8 @@
 title: "ARIA : rôle alert"
 short-title: alert
 slug: Web/Accessibility/ARIA/Reference/Roles/alert_role
-original_slug: Web/Accessibility/ARIA/Roles/alert_role
 l10n:
-  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle `alert` est utilisé pour les informations importantes et généralement urgentes. `alert` est un type de [`status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role) traité comme une région dynamique atomique.
@@ -122,5 +121,5 @@ document.getElementById("hiddenAlertContainer").innerHTML =
 - [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA&nbsp;: rôle `alertdialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [Régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
-- [Prise en charge du rôle ARIA `alert`, The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/aria-alert-support/)
+- [Prise en charge du rôle ARIA `alert` — Vispero <sup>(angl.)</sup>](https://vispero.com/resources/aria-alert-support/)
 - [Exemple d'utilisation d'`alert` <sup>(angl.)</sup>](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)

@@ -3,7 +3,7 @@ title: "ARIA : rôle option"
 short-title: option
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 Le rôle `option` est utilisé pour les éléments sélectionnables dans une `listbox`.
@@ -52,7 +52,7 @@ Du point de vue de l'utilisateur·ice de technologies d'assistance, le titre n'e
 #### États et propriétés
 
 - [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-  - : Sert à décrire l'état de sélection de l'option. Obligatoire.
+  - : Sert à décrire l'état de sélection de l'option.
 
 - [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
   - : Sert à décrire l'état coché lorsque les options sont utilisées en sélection multiple. Accepte `true`, `false` et `mixed`. Optionnel.

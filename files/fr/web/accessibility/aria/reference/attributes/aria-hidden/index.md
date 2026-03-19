@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-hidden"
 short-title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 L'attribut `aria-hidden` indique un état d'élément déterminant s'il est exposé à une API d'accessibilité.
@@ -25,7 +25,7 @@ La présence de l'attribut `aria-hidden` masque le contenu aux technologies d'as
 > [!WARNING]
 > N'utilisez pas `aria-hidden="true"` sur des éléments pouvant recevoir la sélection.
 
-Le statut masqué d'un élément dépend de son rendu. Le rendu est généralement contrôlé par le CSS. Par exemple, un élément dont la propriété `display` est définie à `none` via CSS n'est pas rendu. Un élément est considéré comme masqué si lui-même ou l'un de ses ancêtres n'est pas rendu ou a la valeur de son attribut `aria-hidden` définie à `true`. Notez qu'un élément et ses enfants ayant `aria-hidden="true"` resteront visibles, sauf s'ils sont également masqués par le CSS.
+Le statut masqué d'un élément dépend de son rendu. Le rendu est généralement contrôlé par le CSS. Par exemple, un élément dont la propriété `display` est définie à `none` avec CSS n'est pas rendu. Un élément est considéré comme masqué si lui-même ou l'un de ses ancêtres n'est pas rendu ou a la valeur de son attribut `aria-hidden` définie à `true`. Notez qu'un élément et ses enfants ayant `aria-hidden="true"` resteront visibles, sauf s'ils sont également masqués par le CSS.
 
 Soyez prudent·e lorsque vous utilisez `aria-hidden` pour masquer du contenu visuellement rendu aux technologies d'assistance. Vous ne devez pas masquer du contenu visible sauf si cela améliore l'expérience des utilisateur·ice·s de technologies d'assistance en supprimant du contenu redondant ou superflu. Ce n'est que lorsque le sens et la fonctionnalité identiques ou équivalents sont exposés aux technologies d'assistance que la suppression de contenu visible de l'API d'accessibilité peut être envisagée.
 
@@ -71,10 +71,10 @@ Ici, nous avons un bouton avec [une icône Font Awesome <sup>(angl.)</sup>](http
 
 ## Interfaces associées
 
-- {{domxref("Element.ariaHidden")}}
-  - : La propriété {{domxref("Element.ariaHidden", "ariaHidden")}}, partie de l'interface {{domxref("Element")}}, reflète la valeur de l'attribut `aria-hidden`, qui indique si l'élément est exposé à une API d'accessibilité.
-- {{domxref("ElementInternals.ariaHidden")}}
-  - : La propriété {{domxref("ElementInternals.ariaHidden", "ariaHidden")}}, partie de l'interface {{domxref("ElementInternals")}}, reflète la valeur de l'attribut `aria-hidden`.
+- {{DOMxRef("Element.ariaHidden")}}
+  - : La propriété {{DOMxRef("Element.ariaHidden", "ariaHidden")}}, partie de l'interface {{DOMxRef("Element")}}, reflète la valeur de l'attribut `aria-hidden`, qui indique si l'élément est exposé à une API d'accessibilité.
+- {{DOMxRef("ElementInternals.ariaHidden")}}
+  - : La propriété {{DOMxRef("ElementInternals.ariaHidden", "ariaHidden")}}, partie de l'interface {{DOMxRef("ElementInternals")}}, reflète la valeur de l'attribut `aria-hidden`.
 
 ## Rôles associés
 
@@ -90,5 +90,5 @@ Utilisé dans **TOUS** les rôles
 - L'attribut ARIA [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - L'attribut ARIA [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
 - L'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden)
-- La propriété CSS {{CSSXref('display')}}
-- La propriété CSS {{CSSXref('visibility')}}
+- La propriété CSS {{CSSxRef('display')}}
+- La propriété CSS {{CSSxRef('visibility')}}
