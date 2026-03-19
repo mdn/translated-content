@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-{{domxref("OfflineAudioCompletionEvent")}} 接口的 `renderedBuffer` 只读属性是包含处理 {{domxref("OfflineAudioContext")}} 的结果的 {{domxref("AudioBuffer")}}。
+{{domxref("OfflineAudioCompletionEvent")}} 接口的 `renderedBuffer` 只读属性返回包含处理 {{domxref("OfflineAudioContext")}} 结果的 {{domxref("AudioBuffer")}}。
 
 ## 值
 
