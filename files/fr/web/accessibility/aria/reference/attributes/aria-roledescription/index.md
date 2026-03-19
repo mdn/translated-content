@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-roledescription"
 short-title: aria-roledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 L'attribut `aria-roledescription` définit une description du rôle d'un élément, lisible par l'humain et localisée par l'auteur·ice.
@@ -72,4 +72,4 @@ Pris en charge par tous les rôles et tous les éléments de balisage de base sa
 
 ## Voir aussi
 
-- [Rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles)
+- [Les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Reference/Roles)

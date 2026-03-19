@@ -1,9 +1,8 @@
 ---
 title: max-block-size
 slug: Web/CSS/Reference/Properties/max-block-size
-original_slug: Web/CSS/max-block-size
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
 ---
 
 **`max-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("writing-mode")}} で指定された書字方向とは逆の向きの要素の最大寸法を指定します。すなわち、書字方向が水平 (横書き) であれば、 `max-block-size` は {{cssxref("max-height")}} と等価になります。書字方向が垂直 (縦書き) であれば、 `max-block-size` は {{cssxref("max-width")}} と同じになります。
@@ -51,7 +50,7 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
@@ -61,7 +60,7 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 max-block-size: 300px;
 max-block-size: 25em;
-max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: anchor-size(--my-anchor self-inline, 250px);
 max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> 値 */
@@ -92,13 +91,13 @@ max-block-size: unset;
   - : `max-block-size` を包含ブロックの幅に対するパーセント値で定義します。
 - `none`
   - : ボックスの寸法を制限しません。
-- `max-content`
+- {{cssxref("max-content")}}
   - : コンテンツが推奨する `max-block-size` です。
-- `min-content`
+- {{cssxref("min-content")}}
   - : コンテンツの最小の `max-block-size` です。
-- `fit-content`
+- {{cssxref("fit-content")}}
   - : 利用可能な空間を使用しますが、 [max-content](/ja/docs/Web/CSS/Reference/Values/max-content) よりも大きくはなりません。つまり、 `min(max-content, max(min-content, stretch))` です。
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- [`fit-content(<length-percentage>)`](/ja/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 
 ### 書字方向が方向にどう影響するのか
@@ -118,7 +117,7 @@ max-block-size: unset;
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -130,7 +129,7 @@ max-block-size: unset;
 
 この例では、同じテキスト ([Herman Melville](https://en.wikipedia.org/wiki/Herman_Melville) の小説 _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_ の冒頭部分) が `horizontal-tb` および `vertical-rl` の両方の書字方向で表示されます。
 
-二つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
+2 つのボックスついてそれ以外の部分はすべて、 {{cssxref("max-block-size")}} に使われている値を含めて同じです。
 
 #### HTML
 
@@ -156,7 +155,7 @@ max-block-size: unset;
 
 #### CSS
 
-この CSS では3つのクラスを定義しています。最初は `standard-box` で、両方のボックスに適用され、上にあるものです。これはブロックの最小および最大の寸法、フォントの大きさ、などを指定します。
+この CSS では 3 つのクラスを定義しています。最初は `standard-box` で、両方のボックスに適用され、上にあるものです。これはブロックの最小および最大の寸法、フォントの大きさ、などを指定します。
 
 その後にくるクラス `horizontal` および `vertical` は、ボックスに {{cssxref("writing-mode")}} プロパティを追加し、値を使われるクラスに応じて `horizontal-tb` または `vertical-rl` に設定します。
 
@@ -164,7 +163,7 @@ max-block-size: unset;
 .standard-box {
   padding: 4px;
   background-color: #abcdef;
-  color: #000;
+  color: black;
   font:
     16px "Open Sans",
     "Helvetica",

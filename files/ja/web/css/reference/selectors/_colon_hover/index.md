@@ -1,12 +1,11 @@
 ---
 title: :hover
 slug: Web/CSS/Reference/Selectors/:hover
-original_slug: Web/CSS/:hover
 l10n:
-  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-**`:hover`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーがポインティングデバイスで要素に反応したものの、アクティブ化する必要がないものを選択します。普通はユーザーがカーソル（マウスポインター）を要素の上にかざしたときにそうなります。
+**`:hover`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーがポインティングデバイスで反応した要素に一致します。この擬似クラスは、一般的にユーザーがマウスボタンを押さずにカーソル（マウスポインター）を要素の上にかざしたときに発動します。
 
 {{InteractiveExample("CSS デモ: :hover", "tabbed-shorter")}}
 
@@ -28,14 +27,14 @@ l10n:
 ```
 
 ```html interactive-example
-<p>Would you like to join our quest?</p>
-<button class="joinBtn">Confirm</button>
+<p>クエストに参加しますか？</p>
+<button class="joinBtn">確認</button>
 ```
 
 `:hover` 擬似クラスによって定義されたスタイルは、少なくとも同等の仕様を持つリンク関連の擬似クラス ({{ cssxref(":link") }}、{{ cssxref(":visited") }}、{{ cssxref(":active") }}) によって上書きされます。適切にリンクにスタイルを適用するには、 `:hover` の規則を `:link` と `:visited` の後、 `:active` の前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。
 
 > [!NOTE]
-> `:hover` 擬似クラスはタッチ画面で問題になります。ブラウザーによっては、 `:hover` 擬似クラスに全く一致しなかったり、要素をタッチした直後だけ一致したり、ユーザーが指を離しても一致し続け、他の要素にタッチするまで続いたりします。ウェブの開発者は、ホバー機能が制限されていたり存在しなかったりしても、コンテンツにアクセスできるように考慮してください。
+> `:hover`擬似クラスはタッチスクリーン上で問題を招きます。ブラウザーによっては、`:hover`擬似クラスがまったく一致しなかったり、要素に触れた直後の一瞬だけ一致したり、ユーザーがタッチを止めた後も別の要素に触れるまで一致し続けたりする可能性があります。ウェブ開発者は、ホバー機能が制限されている、あるいは存在しない端末でもコンテンツが利用可能であるよう考慮すべきです。
 
 ## 構文
 

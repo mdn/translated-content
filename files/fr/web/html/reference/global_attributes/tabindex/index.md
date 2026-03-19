@@ -1,25 +1,28 @@
 ---
-title: tabindex
+title: "Attribut HTML universel : tabindex"
+short-title: tabindex
 slug: Web/HTML/Reference/Global_attributes/tabindex
-original_slug: Web/HTML/Global_attributes/tabindex
+l10n:
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`tabindex`** permet aux développeur·euse·s de créer des éléments HTML sélectionnables, de permettre ou d'empêcher leur sélection séquentielle (généralement avec la touche <kbd>Tab</kbd>, d'où le nom) et de déterminer leur ordre relatif pour la navigation séquentielle.
 
-L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`tabindex`** est un entier indiquant si l'élément peut capturer le focus et si c'est le cas, dans quel ordre il le capture lors de la navigation au clavier (généralement à l'aide de la touche <kbd>Tab</kbd>). Si plusieurs éléments partagent la même valeur d'attribut **`tabindex`**, leur ordre sera calculé en fonction de leur position dans le document.
-
-{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+{{InteractiveExample("Démonstrations HTML&nbsp;: tabindex", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+<p>
+  Cliquez n'importe où dans ce panneau, puis essayez de naviguer dans les
+  éléments à l'aide de la touche <kbd>Tab</kbd>.
+</p>
 
-<label>First in tab order:<input type="text" /></label>
+<label>Premier dans l'ordre de tabulation&nbsp;:<input type="text" /></label>
 
-<div tabindex="0">Tabbable due to tabindex.</div>
+<div tabindex="0">Peut avoir la sélection grâce à tabindex.</div>
 
-<div>Not tabbable: no tabindex.</div>
+<div>Pas de sélection&nbsp;: pas de tabindex.</div>
 
-<label>Third in tab order:<input type="text" /></label>
+<label>Troisième dans l'ordre de tabulation&nbsp;:<input type="text" /></label>
 ```
 
 ```css interactive-example
@@ -40,50 +43,35 @@ div:focus {
 }
 ```
 
-Cet attribut peut prendre l'une des valeurs suivantes :
-
-- Une valeur négative : l'élément peut capturer le focus mais ne peut pas être atteint via la navigation au clavier ;
-
-  > [!NOTE]
-  > Cette valeur peut être utile lorsqu'on a un contenu situé en dehors de l'écran qui doit apparaître lors d'un évènement donné. Il ne sera pas possible d'y passer le focus au clavier mais on pourra le faire avec [la méthode `focus()`](/fr/docs/Web/API/HTMLElement/focus).
-
-- `0` : l'élément peut capturer le focus et être atteint via la navigation au clavier, cependant son ordre relatif est défini par la plateforme, généralement selon l'ordre des éléments du DOM ;
-
-  > [!WARNING]
-  > Le positionnement CSS n'aura pas d'impact sur le `taborder`. Le positionnement n'a qu'un impact visuel, l'ordre des tabulations correspond à l'ordre du DOM.
-
-- Une valeur positive : l'élément peut capturer le focus et peut être atteint via la navigation au clavier, l'ordre relatif dans la navigation est défini par la valeur de l'attribut. Les navigations seront parcourues dans l'ordre croissant.
-
-  > [!WARNING]
-  > Il n'est pas recommandé de fournir des valeurs positives pour les éléments car cela peut être source de confusion, notamment pour les personnes qui utilisent des technologies d'assistance. Il est préférable d'organiser les éléments dans un ordre correct au niveau du DOM.
-
-Si on utilise l'attribut `tabindex` sur un élément {{HTMLElement("div")}}, on ne pourra pas naviguer dans le contenu de cet élément avec les flèches du clavier, sauf si `tabindex` est également utilisé sur le contenu. Pour observer ce comportement, vous pouvez utiliser [cet exemple JSFiddle](https://jsfiddle.net/jainakshay/0b2q4Lgv/).
+Il accepte un entier comme valeur, avec des résultats différents selon la valeur de l'entier&nbsp;:
 
 > [!NOTE]
-> La valeur maximale pour `tabindex` est fixée à 32767 par HTML4. Sa valeur par défaut est 0 pour les éléments qui peuvent recevoir le focus et -1 pour les autres.
+> Si un élément HTML est affiché et possède l'attribut `tabindex` avec une valeur entière valide, l'élément peut être sélectionné avec JavaScript (en appelant la méthode [`focus()`](/fr/docs/Web/API/HTMLElement/focus)) ou visuellement en cliquant avec la souris. La valeur particulière de `tabindex` contrôle si l'élément est `tabbable` (c'est-à-dire accessible par navigation séquentielle au clavier, généralement avec la touche <kbd>Tab</kbd>).
 
-## Exemples
+- Une _valeur négative_ (la valeur négative exacte n'a pas d'importance, généralement `tabindex="-1"`) signifie que l'élément n'est pas accessible par navigation séquentielle au clavier.
 
-### HTML
+  > [!NOTE]
+  > `tabindex="-1"` peut être utile pour les éléments qui ne doivent pas être accessibles directement avec la touche <kbd>Tab</kbd>, mais qui doivent recevoir la sélection au clavier. Des exemples incluent une fenêtre modale hors écran qui doit être sélectionnée lorsqu'elle devient visible, ou un message d'erreur de soumission de formulaire qui doit être immédiatement sélectionné lors de la soumission d'un formulaire erroné.
 
-```html
-<button tabindex="1">Un bouton</button>
-<textarea>Saisir un texte</textarea>
-<button tabindex="0">Un autre bouton</button>
-<button tabindex="1">Et un troisième</button>
-```
+- `tabindex="0"` signifie que l'élément doit être accessible dans la navigation séquentielle au clavier, après toute valeur positive de `tabindex`. L'ordre de navigation de sélection de ces éléments est défini par leur ordre dans le code source du document.
+- Une _valeur positive_ signifie que l'élément doit être accessible dans la navigation séquentielle au clavier, avec son ordre défini par la valeur du nombre. Ainsi, `tabindex="4"` est sélectionné avant `tabindex="5"` et `tabindex="0"`, mais après `tabindex="3"`. Si plusieurs éléments partagent la même valeur positive de `tabindex`, leur ordre relatif entre eux suit leur position dans le code source du document. La valeur maximale pour `tabindex` est 32767.
+- Si l'attribut `tabindex` est inclus sans valeur définie, le fait que l'élément soit sélectionnable est déterminé par l'agent utilisateur.
 
-### Résultat
+  > [!WARNING]
+  > Il est recommandé d'utiliser uniquement les valeurs `0` et `-1` pour `tabindex`. Évitez d'utiliser des valeurs de `tabindex` supérieures à `0` et des propriétés CSS qui peuvent changer l'ordre des éléments HTML sélectionnables ([Ordre des éléments flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Ordering_items)). Cela rend difficile la navigation et l'utilisation du contenu de la page pour les personnes qui dépendent du clavier ou des technologies d'assistance. Il vaut mieux écrire le document avec les éléments dans une séquence logique.
 
-{{EmbedLiveSample("Exemples","200","300")}}
+Certains éléments HTML sélectionnables ont une valeur par défaut de `tabindex` à `0` définie en interne par [l'agent utilisateur](/fr/docs/Glossary/User_agent). Ces éléments sont un {{HTMLElement("a")}} ou {{HTMLElement("area")}} avec l'attribut `href`, {{HTMLElement("button")}}, {{HTMLElement("frame")}} {{Deprecated_Inline}}, {{HTMLElement("iframe")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, et l'élément SVG {{SVGElement("a")}}, ou un élément {{HTMLElement("summary")}} qui fournit un résumé pour un élément {{HTMLElement("details")}}. Les développeur·euse·s ne doivent pas ajouter l'attribut `tabindex` à ces éléments sauf si cela modifie le comportement par défaut (par exemple, inclure une valeur négative retirera l'élément de l'ordre de navigation de sélection).
 
-## Accessibilité
+> [!WARNING]
+> Il ne faut pas utiliser l'attribut `tabindex` sur l'élément {{HTMLElement("dialog")}}.
+
+## Problèmes d'accessibilité
 
 Il faut éviter d'utiliser l'attribut `tabindex` avec du contenu [non-interactif](/fr/docs/Web/HTML/Guides/Content_categories#contenu_interactif) si on souhaite uniquement rendre cet élément accessible au clavier (par exemple en voulant utiliser un élément {{HTMLElement("div")}} plutôt qu'un élément {{HTMLElement("button")}}).
 
-Les composants rendus interactifs par cette méthode ne feront pas partie de l'[arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) et ne pourront pas être analysés par les technologies d'assistance. Le contenu devrait être décrit sémantiquement avec des éléments interactifs ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.). En effet, ces éléments disposent nativement de rôles et d'états qui peuvent être utilisées par les API d'accessibilité (il faut sinon les gérer via [ARIA](/fr/docs/Web/Accessibility/ARIA)).
+Les composants rendus interactifs par cette méthode ne feront pas partie de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité) et ne pourront pas être analysés par les technologies d'assistance. Le contenu devrait être décrit sémantiquement avec des éléments interactifs ({{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, etc.). En effet, ces éléments disposent nativement de rôles et d'états qui peuvent être utilisées par les API d'accessibilité (il faut sinon les gérer via [ARIA](/fr/docs/Web/Accessibility/ARIA)).
 
-- [Utiliser l'attribut `tabindex`|_The Paciello Group_ (en anglais)](https://developer.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
+- [Utiliser l'attribut `tabindex` | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/using-the-tabindex-attribute/)
 
 ## Spécifications
 
@@ -95,7 +83,7 @@ Les composants rendus interactifs par cette méthode ne feront pas partie de l'[
 
 ## Voir aussi
 
-- La propriété {{domxref("HTMLElement.tabIndex")}} qui reflète cet attribut.
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
-- [Ce billet en anglais sur l'accessibilité et `tabindex`](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) écrit par Adrian Roselli
-- [`Document.hasFocus()`](/fr/docs/Web/API/Document/hasFocus)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- La propriété {{DOMxRef("HTMLElement.tabIndex")}} qui reflète cet attribut
+- Problèmes d'accessibilité avec `tabindex`&nbsp;: voir [Ne pas utiliser tabindex supérieur à 0 <sup>(angl.)</sup>](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html) par Adrian Roselli
+- L'entrée de glossaire {{Glossary("Reading order", "Ordre de lecture")}}

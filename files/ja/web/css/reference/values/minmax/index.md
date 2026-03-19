@@ -25,7 +25,7 @@ grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One. This column has more text in it.</div>
+      <div>One. この列にはより多くのテキストがあります。</div>
       <div>Two</div>
       <div>Three</div>
       <div>Four</div>

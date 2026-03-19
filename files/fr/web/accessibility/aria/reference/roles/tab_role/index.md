@@ -3,7 +3,7 @@ title: "ARIA : rôle tab"
 short-title: tab
 slug: Web/Accessibility/ARIA/Reference/Roles/tab_role
 l10n:
-  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
+  sourceCommit: 7ba6358a0ff684cc67c60b76d6d972722bbf0d18
 ---
 
 Le rôle `tab` indique un élément interactif à l'intérieur d'un `tablist` qui, lorsqu'il est activé, affiche son `tabpanel` associé.
@@ -71,7 +71,7 @@ Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'ex
 
 Cet exemple combine le rôle `tab` avec `tablist` et des éléments avec le rôle `tabpanel` pour créer un groupe interactif de contenus à onglets. Ici, le groupe de contenu est englobé dans une `div`, le `tablist` possède un attribut `aria-label` qui le décrit pour les technologies d'assistance. Chaque `tab` est un bouton avec les attributs mentionnés précédemment. Le premier onglet possède à la fois `tabindex="0"` et `aria-selected="true"`. Ces deux attributs doivent toujours être coordonnés ainsi&nbsp;: lorsqu'un autre onglet est sélectionné, il aura alors `tabindex="0"` et `aria-selected="true"`. Tous les onglets non sélectionnés doivent avoir `aria-selected="false"` et `tabindex="-1"`.
 
-Tous les éléments `tabpanel` ont `tabindex="0"` pour être accessibles à la tabulation, et tous sauf celui actuellement actif ont l'attribut `hidden`. L'attribut `hidden` sera retiré lorsqu'un `tabpanel` devient visible via JavaScript. Un style de base est appliqué pour restyler les boutons et modifier le [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) des éléments `tab` afin de donner l'illusion qu'ils sont connectés au `tabpanel` pour les éléments actifs, et que les éléments inactifs sont derrière le `tabpanel` actif.
+Tous les éléments `tabpanel` ont `tabindex="0"` pour être accessibles à la tabulation, et tous sauf celui actuellement actif ont l'attribut `hidden`. L'attribut `hidden` sera retiré lorsqu'un `tabpanel` devient visible avec JavaScript. Un style de base est appliqué pour restyler les boutons et modifier le [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) des éléments `tab` afin de donner l'illusion qu'ils sont connectés au `tabpanel` pour les éléments actifs, et que les éléments inactifs sont derrière le `tabpanel` actif.
 
 ```html
 <div class="tabs">

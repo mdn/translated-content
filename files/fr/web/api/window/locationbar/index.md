@@ -1,38 +1,25 @@
 ---
-title: Window.locationbar
+title: "Window : propriété locationbar"
+short-title: locationbar
 slug: Web/API/Window/locationbar
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-Renvoie l'objet `locationbar`, dont la visibilité peut être vérifiée.
+La propriété **`locationbar`** de l'interface {{DOMxRef("Window")}} retourne l'objet `locationbar`.
 
-## Syntaxe
+Ceci fait partie d'un groupe de propriétés de `Window` qui contiennent une propriété booléenne `visible`, qui représentait autrefois si une partie particulière de l'interface utilisateur d'un navigateur web était visible ou non.
 
-```js
-objRef = window.locationbar;
-```
+Pour des raisons de confidentialité et d'interopérabilité, la valeur de la propriété `visible` est maintenant `false` si cette `Window` est une fenêtre contextuelle, et `true` sinon.
 
-## Exemple
+## Valeur
 
-L'exemple HTML complet suivant montre comment la propriété `visible` de l'objet `locationbar` est utilisée.
+Un objet contenant une seule propriété&nbsp;:
 
-```html
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Divers tests DOM</title>
-
-    <script>
-      var visible = window.locationbar.visible;
-    </script>
-  </head>
-  <body>
-    <p>Divers tests DOM</p>
-  </body>
-</html>
-```
+- `visible` {{ReadOnlyInline}}
+  - : Une propriété booléenne, `false` si cette `Window` est une fenêtre contextuelle, et `true` sinon.
 
 ## Spécifications
 
@@ -44,4 +31,8 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ## Voir aussi
 
-- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}}, {{domxref("window.personalbar")}}, {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}}, {{domxref("window.toolbar")}}
+- La propriété {{DOMxRef("window.menubar")}}
+- La propriété {{DOMxRef("window.personalbar")}}
+- La propriété {{DOMxRef("window.scrollbars")}}
+- La propriété {{DOMxRef("window.statusbar")}}
+- La propriété {{DOMxRef("window.toolbar")}}

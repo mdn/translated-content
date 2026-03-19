@@ -3,12 +3,12 @@ title: "Document : méthode querySelector()"
 short-title: querySelector()
 slug: Web/API/Document/querySelector
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
+La méthode **`querySelector()`** de l'interface {{DOMxRef("Document")}} retourne le premier élément {{DOMxRef("Element")}} du document qui correspond au sélecteur [CSS](/fr/docs/Web/CSS/Guides/Selectors) défini, ou à un groupe de sélecteurs CSS. Si aucune correspondance n'est trouvée, `null` est retourné.
 
 La correspondance se fait par un parcours en profondeur (pré‑ordre) des nœuds du document, en commençant par le premier élément du balisage et en parcourant ensuite les nœuds dans l'ordre séquentiel.
 
@@ -31,14 +31,14 @@ querySelector(selectors)
 
 ### Valeur de retour
 
-Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{DOMxRef("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors) défini, ou `null` s'il n'y a pas de correspondances.
 
-Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} à la place.
+Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs définis, vous devez utiliser {{DOMxRef("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
 ### Exception
 
 - `SyntaxError` {{DOMxRef("DOMException")}}
-  - : Signale que la syntaxe du _sélecteur_ défini est invalide.
+  - : Levée lorsque la syntaxe des _sélecteurs_ définis est invalide.
 
 ## Exemples
 
@@ -78,9 +78,9 @@ Cet exemple montre que si un document HTML contient un [`id`](/fr/docs/Web/HTML/
 
 #### HTML
 
-Dans le code suivant, un {{HTMLElement("div")}} a un `id` de `"this?element"`, qui n'est pas un identifiant CSS valide, parce que le caractère `"?"` n'est pas autorisé dans les identifiants CSS.
+Dans le code suivant, un élément HTML {{HTMLElement("div")}} a un `id` de `"this?element"`, qui n'est pas un identifiant CSS valide, parce que le caractère `"?"` n'est pas autorisé dans les identifiants CSS.
 
-Nous avons également trois boutons et un élément {{HTMLElement("pre")}} pour consigner les erreurs.
+Nous avons également trois boutons et un élément HTML {{HTMLElement("pre")}} pour consigner les erreurs.
 
 ```html
 <div id="this?element"></div>

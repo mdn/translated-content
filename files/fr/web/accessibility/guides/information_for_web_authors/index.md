@@ -3,7 +3,7 @@ title: Informations sur l'accessibilité pour les auteurs de sites web
 short-title: Informations pour les auteurs de sites web
 slug: Web/Accessibility/Guides/Information_for_Web_authors
 l10n:
-  sourceCommit: 79f65d8322a4e55e9f3f4c91441c9188dbe670e0
+  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
 ---
 
 Ce document liste les recommandations, réglementations, guides pratiques et outils pour vérifier et corriger les problèmes d'accessibilité sur les sites web.
@@ -41,8 +41,8 @@ Outils à intégrer dans votre processus de développement pour ajouter des test
 - [Lighthouse Audits <sup>(angl.)</sup>](https://github.com/GoogleChrome/lighthouse/blob/main/docs/readme.md#using-programmatically)
 - [AccessLint.js <sup>(angl.)</sup>](https://github.com/accesslint/accesslint.js/tree/master)
 
-Des outils {{glossary("Continuous integration", "d'intégration continue")}} permettent de détecter les problèmes d'accessibilité dans vos pull requests GitHub&nbsp;:
+Des outils {{Glossary("Continuous integration", "d'intégration continue")}} permettent de détecter les problèmes d'accessibilité dans vos pull requests GitHub&nbsp;:
 
-- [AccessLint <sup>(angl.)</sup>](https://accesslint.com/)
+- [AccessLint <sup>(angl.)</sup>](https://www.accesslint.com/)
 
 Il est préférable de tester vos applications web avec de vraies personnes, mais vous pouvez simuler le daltonisme, la basse vision, le contraste faible et le zoom. Testez toujours votre site sans souris ni tactile pour vérifier la navigation au clavier. Essayez aussi la navigation vocale. Désactivez la souris et utilisez des extensions comme [Web Disability Simulator <sup>(angl.)</sup>](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla).

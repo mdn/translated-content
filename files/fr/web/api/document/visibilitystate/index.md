@@ -1,33 +1,34 @@
 ---
-title: Document.visibilityState
+title: "Document : propriété visibilityState"
+short-title: visibilityState
 slug: Web/API/Document/visibilityState
+l10n:
+  sourceCommit: 14a752ccdcaa736e8e368156c48bca61a3c1e5ed
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-La propriété en lecture seule **`Document.visibilityState`** renvoie la visibilité du {{domxref('document')}}, c'est-à-dire informe si l'élément est visible dans son contexte. Il est utile de savoir si le document est en arrière-plan ou sur un onglet invisible ou seulement chargé pour le pré-rendu. Les valeurs possibles sont :
+La propriété en lecture seule **`visibilityState`** de l'interface {{DOMxRef("Document")}} retourne la visibilité du document. Elle peut être utilisée pour vérifier si le document est en arrière-plan, dans une fenêtre minimisée ou autrement non visible pour l'utilisateur·ice.
 
-- **`'visible'`** : le contenu de la page peut être au-moins partiellement visible. Dans la pratique, cela signifie que la page est l'onglet de premier plan d'une fenêtre non réduite.
-- **`'hidden`'** (_caché_) : le contenu de la page n'est pas visible pour l'utilisateur. Dans la pratique , cela signifie que le document est soit dans un onglet d'arrière-plan ou une partie d'une fenêtre réduite, soit que le verrouillage de l'écran du système d'exploitation est actif.
-- **`'prerender'`** (_prérendu_) : le contenu de la page est prérendu et n'est pas visible par l'utilisateur (considéré caché aux fins de [`document.hidden`](/fr/docs/Web/API/Document/hidden)). Le document peut démarrer dans cet état mais ne changera jamais à partir d'une autre valeur. Note : le support du navigateur est facultatif.
-- **`'unloaded`'** (_déchargé_) : la page est en train d'être déchargée de la mémoire. Remarque : le support du navigateur est facultatif.
+Lorsque la valeur de cette propriété change, l'évènement {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}} est envoyé au {{DOMxRef("Document")}}.
 
-Lorsque la valeur de cette propriété change, l'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) est envoyé au {{domxref("Document")}}.
+La propriété {{DOMxRef("Document.hidden")}} fournit un moyen alternatif de déterminer si la page est cachée.
 
-L'utilisation typique de ceci peut être d'empêcher le téléchargement de certains éléments actifs lorsque le document est uniquement prérendu, ou d'arrêter certaines activités lorsque le document est en arrière-plan ou réduit au minimum.
+## Valeur
 
-## Syntaxe
+Une chaîne de caractères avec l'une des valeurs suivantes&nbsp;:
 
-```js
-var string = document.visibilityState;
-```
+- `visible`
+  - : Le contenu de la page peut être au moins partiellement visible. En pratique, cela signifie que la page est l'onglet au premier plan d'une fenêtre non minimisée.
+- `hidden`
+  - : Le contenu de la page n'est pas visible pour l'utilisateur·ice. En pratique, cela signifie que le document est soit un onglet en arrière-plan, soit une partie d'une fenêtre minimisée, ou que le verrouillage de l'écran du système d'exploitation est actif.
 
 ## Exemples
 
 ```js
-document.addEventListener("visibilitychange", function () {
+document.addEventListener("visibilitychange", () => {
   console.log(document.visibilityState);
-  // Modifier le comportement...
+  // Modifier le comportement…
 });
 ```
 
@@ -38,3 +39,8 @@ document.addEventListener("visibilitychange", function () {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("Document.hidden")}}
+- [L'API Page Visibility](/fr/docs/Web/API/Page_Visibility_API)

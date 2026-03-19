@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-sort"
 short-title: aria-sort
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-sort
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: c1564acf160ef4b320fb7b89ab65211b9c50cf1b
 ---
 
 L'attribut `aria-sort` indique si les éléments d'un tableau ou d'une grille sont triés par ordre croissant ou décroissant.
