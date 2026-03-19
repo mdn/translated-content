@@ -1,12 +1,11 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
-original_slug: Web/CSS/margin-inline-end
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 12b2bba6348add286377d12f0806d43ddc72bdb7
 ---
 
-**`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} のいずれかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
 {{InteractiveExample("CSS デモ: margin-inline-end")}}
 
@@ -68,7 +67,7 @@ margin-inline-end: 10px; /* 絶対的な長さ */
 margin-inline-end: 1em; /* テキストの大きさに対する相対値 */
 margin-inline-end: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 margin-inline-end: anchor-size(height);
-margin-inline-end: calc(anchor-size(--myAnchor self-inline, 25px) / 5);
+margin-inline-end: calc(anchor-size(--my-anchor self-inline, 25px) / 5);
 
 /* キーワード値 */
 margin-inline-end: auto;
@@ -85,11 +84,11 @@ margin-inline-end: unset;
 
 ### 値
 
-`margin-inline-end` プロパティは {{cssxref("margin-left")}} プロパティと同じ値を取ります。
+`margin-inline-end` プロパティは {{cssxref("margin-top")}} プロパティと同じ値を取ります。
 
 ## 公式定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## 形式文法
 
@@ -97,11 +96,11 @@ margin-inline-end: unset;
 
 ## 例
 
-### インライン方向の末尾側のマージンの設定
+### インライン方向の末尾のマージンを設定
 
 #### HTML
 
-```html live-sample___setting_inline_end_margin
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -109,7 +108,7 @@ margin-inline-end: unset;
 
 #### CSS
 
-```css live-sample___setting_inline_end_margin
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -125,7 +124,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_end_margin", 140, 140)}}
+{{EmbedLiveSample("インライン方向の末尾のマージンを設定", 140, 140)}}
 
 ## 仕様書
 

@@ -2,7 +2,7 @@
 title: display
 slug: Web/CSS/Reference/Properties/display
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`display`** définit si un élément est traité comme une [boîte de bloc ou en ligne](/fr/docs/Web/CSS/Guides/Display/Flow_layout) et le mode de disposition utilisé pour ses enfants, comme la [mise en flux](/fr/docs/Web/CSS/Guides/Display/Flow_layout), la disposition [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou la disposition [flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
@@ -16,7 +16,7 @@ display: block;
 ```
 
 ```css interactive-example-choice
-display: inline-block;
+display: inline flow-root;
 ```
 
 ```css interactive-example-choice
@@ -76,34 +76,34 @@ code {
 ## Syntaxe
 
 ```css
-/* Valeurs précomposées */
+/* Affichage court */
+display: none;
+display: contents;
 display: block;
 display: inline;
 display: inline-block;
+display: list-item;
+display: inline list-item;
 display: flex;
 display: inline-flex;
 display: grid;
 display: inline-grid;
-display: flow-root;
+display: table;
+display: inline-table;
 
-/* Suppression de boîte */
-display: none;
-display: contents;
-
-/* Syntaxe à mots-clés multiples */
-display: block flex;
+/* Affichage complet */
 display: block flow;
 display: block flow-root;
-display: block grid;
-display: inline flex;
 display: inline flow;
 display: inline flow-root;
+display: block flow list-item;
+display: inline flow list-item;
+display: block flex;
+display: inline flex;
+display: block grid;
 display: inline grid;
-
-/* Autres valeurs */
-display: table;
-display: table-row; /* Tous les éléments de tableau ont une valeur CSS display équivalente */
-display: list-item;
+display: block table;
+display: inline table;
 
 /* Valeurs globales */
 display: inherit;
@@ -129,10 +129,10 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
       - : L'élément génère une ou plusieurs boîtes en ligne qui ne créent pas de retour à la ligne avant ou après elles-mêmes. En flux normal, l'élément suivant sera sur la même ligne s'il y a de la place.
 
 > [!NOTE]
-> Lorsque les navigateurs qui prennent en charge la syntaxe à plusieurs mots-clés rencontrent une propriété d'affichage qui ne possède qu'une valeur **extérieure** (par exemple, `display: block` ou `display: inline`), la valeur intérieure est définie sur `flow` (par exemple, `display: block flow` et `display: inline flow`).
+> Lorsqu'une propriété d'affichage est définie avec uniquement une valeur **extérieure** (par exemple, `display: block` ou `display: inline`), la valeur intérieure par défaut est `flow` (par exemple, `display: block flow` et `display: inline flow`).
 
 > [!NOTE]
-> Pour garantir le bon fonctionnement des mises en page sur les anciens navigateurs, vous pouvez utiliser la syntaxe a valeur unique, par exemple `display: inline flex` peut avoir la solution de repli suivante
+> Vous pouvez utiliser la syntaxe à valeur unique comme solution de repli pour la syntaxe à plusieurs mots-clés, par exemple `display: inline flex` pourrait avoir la solution de repli suivante
 >
 > ```css
 > .container {
@@ -166,7 +166,7 @@ Les valeurs de mots-clés peuvent être regroupées en six catégories de valeur
       - : L'élément se comporte comme un élément de niveau en ligne et dispose son contenu selon le modèle de formatage ruby. Il se comporte comme les éléments HTML {{HTMLElement("ruby")}} correspondants.
 
 > [!NOTE]
-> Lorsque les navigateurs qui prennent en charge la syntaxe à mots-clés multiples rencontrent une propriété d'affichage qui ne possède qu'une valeur **intérieure** (par exemple, `display: flex` ou `display: grid`), la valeur extérieure est définie sur `block` (par exemple, `display: block flex` et `display: block grid`).
+> Lorsqu'une propriété d'affichage est définie avec uniquement une valeur **intérieure** (par exemple, `display: flex` ou `display: grid`), la valeur extérieure par défaut est `block` (par exemple, `display: block flex` et `display: block grid`).
 
 ### Élément de liste
 
@@ -179,7 +179,7 @@ Cela peut être utilisé avec {{CSSxRef("list-style-type")}} et {{CSSxRef("list-
 `list-item` peut aussi être combiné avec n'importe quel mot-clé {{CSSxRef("&lt;display-outside&gt;")}} et le mot-clé `flow` ou `flow-root` {{CSSxRef("&lt;display-inside&gt;")}}.
 
 > [!NOTE]
-> Dans les navigateurs qui prennent en charge la syntaxe à mots-clés multiples, si aucune valeur intérieure n'est définie, elle sera par défaut `flow`.
+> Si aucune valeur intérieure n'est définie, elle sera par défaut `flow`.
 > Si aucune valeur extérieure n'est définie, la boîte principale aura un type d'affichage extérieur `block`.
 
 ### Interne
@@ -350,7 +350,6 @@ Tout élément ciblé avec `display: contents` sera retiré de [l'arbre d'access
 
 Modifier la valeur de `display` pour un élément HTML {{HTMLElement("table")}} afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de [l'arbre d'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#api_daccessibilité). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
 
-- [Une rapide note sur l'impact de la propriété CSS `display` sur la sémantique des tableaux — The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Du contenu masqué avec une meilleure accessibilité - Go Make Things <sup>(angl.)</sup>](https://gomakethings.com/hidden-content-for-better-a11y/)
 - [Explications sur la règle 1.3 de WCAG sur MDN](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.3_—_créer_du_contenu_pouvant_être_présenté_de_différentes_façons)
 - [Comprendre le critère de succès 1.3.1, W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
@@ -502,6 +501,7 @@ Vous pouvez trouver plus d'exemples dans les pages pour chaque type d'affichage 
 
 - Les propriétés {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - Les propriétés {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- Le module [de disposition Ruby CSS](/fr/docs/Web/CSS/Guides/Ruby_layout)
 - L'attribut SVG {{SVGAttr("display")}}
 - [Explications sur les contextes de formatage](/fr/docs/Web/CSS/Guides/Display/Formatting_contexts)
 - [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout)

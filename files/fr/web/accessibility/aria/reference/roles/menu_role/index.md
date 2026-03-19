@@ -3,7 +3,7 @@ title: "ARIA : rôle menu"
 short-title: menu
 slug: Web/Accessibility/ARIA/Reference/Roles/menu_role
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle `menu` est un type de widget composite qui offre une liste de choix à l'utilisateur·ice.
@@ -18,7 +18,7 @@ Un menu peut être une liste de contrôles toujours visible ou un widget qui peu
 
 Lorsqu'un utilisateur·ice active un choix dans un menu qui a été ouvert, le menu se ferme généralement. Si l'action de choix du menu invoque un sous-menu, le menu restera ouvert et le sous-menu sera affiché.
 
-Lorsqu'un menu s'ouvre, la sélection du clavier est placée sur le premier élément de menu. Pour être accessible au clavier, vous devez [gérer la sélection <sup>(angl.)</sup>](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability) pour tous les éléments descendants&nbsp;: tous les éléments de menu dans le `menu` sont sélectionnables. Le bouton de menu qui ouvre le menu et les éléments de menu, plutôt que le menu lui-même, sont les éléments sélectionnables.
+Lorsqu'un menu s'ouvre, la sélection du clavier est placée sur le premier élément de menu. Pour être accessible au clavier, vous devez [gérer la sélection <sup>(angl.)</sup>](https://primer.style/accessibility/design-guidance/focus-management/) pour tous les éléments descendants&nbsp;: tous les éléments de menu dans le `menu` sont sélectionnables. Le bouton de menu qui ouvre le menu et les éléments de menu, plutôt que le menu lui-même, sont les éléments sélectionnables.
 
 Les éléments de menu incluent [`menuitem`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role), [`menuitemcheckbox`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role) et [`menuitemradio`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role). Les éléments de menu [désactivés](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) sont sélectionnables mais ne peuvent pas être activés.
 

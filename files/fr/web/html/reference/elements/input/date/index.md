@@ -236,7 +236,7 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Valeur</a></strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne représentant une date au format YYYY-MM-DD, ou vide
       </td>

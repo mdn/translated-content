@@ -1,9 +1,8 @@
 ---
 title: border-spacing
 slug: Web/CSS/Reference/Properties/border-spacing
-original_slug: Web/CSS/border-spacing
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`border-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} における隣り合うセルの境界同士の間隔を定めます。このプロパティは {{cssxref("border-collapse")}} が `separate` のときのみ適用されます。
@@ -25,18 +24,20 @@ border-spacing: 5px 1rem;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <td>セル 1.1</td>
-      <td>セル 1.2</td>
-    </tr>
-    <tr>
-      <td>セル 2.1</td>
-      <td>セル 2.2</td>
-    </tr>
-    <tr>
-      <td>セル 3.1</td>
-      <td>セル 3.2</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>セル 1.1</td>
+        <td>セル 1.2</td>
+      </tr>
+      <tr>
+        <td>セル 2.1</td>
+        <td>セル 2.2</td>
+      </tr>
+      <tr>
+        <td>セル 3.1</td>
+        <td>セル 3.2</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -53,11 +54,6 @@ td {
   padding: 0.75rem;
 }
 ```
-
-`border-spacing` の値は、表の外周部分にも使用され、表の境界線と最初/最後の列または行との間の距離は、 (縦または横の) 対応する `border-spacing` と、表の対応する側 (上下左右のいずれか) の {{cssxref("padding")}} の合計になります。
-
-> [!NOTE]
-> `border-spacing` プロパティは、`<table>` 要素における非推奨の `cellspacing` 属性と同等ですが、 `border-spacing` では任意で 2 つ目の値を指定して、水平方向と垂直方向に異なる間隔を設定することができる点が異なります。
 
 ## 構文
 
@@ -86,6 +82,13 @@ border-spacing: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 固定値による間隔の大きさです。
 
+## 解説
+
+`border-spacing` の値は、表の外周部分にも使用され、表の境界線と最初/最後の列または行との間の距離は、 (縦または横の) 対応する `border-spacing` と、表の対応する側 (上下左右のいずれか) の {{cssxref("padding")}} の合計になります。
+
+> [!NOTE]
+> `border-spacing` プロパティは、`<table>` 要素における非推奨の `cellspacing` 属性と同等ですが、 `border-spacing` では任意で 2 つ目の値を指定して、水平方向と垂直方向に異なる間隔を設定することができる点が異なります。
+
 ## 公式定義
 
 {{CSSInfo}}
@@ -104,21 +107,23 @@ border-spacing: unset;
 
 ```html
 <table>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 original_slug: Learn/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico.
 

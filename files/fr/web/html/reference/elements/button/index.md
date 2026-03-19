@@ -2,7 +2,7 @@
 title: "<button> : l'élément représentant un bouton"
 slug: Web/HTML/Reference/Elements/button
 l10n:
-  sourceCommit: d546e97005f598df47e121cc2ec842240b0b71e6
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.
@@ -189,7 +189,7 @@ Si vous souhaitez masquer visuellement le texte du bouton, il existe une méthod
 
 Cependant, il est important de noter que laisser le texte du bouton visible peut aider les personnes qui ne sont pas familières avec la signification de l'icône ou qui ne comprennent pas la fonction du bouton. Cela est particulièrement important pour les personnes peu technophiles ou dont la culture apporte une autre interprétation à l'icône utilisée.
 
-- [Qu'est-ce qu'un nom accessible&nbsp;? | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/what-is-an-accessible-name/)
+- [Qu'est-ce qu'un nom accessible&nbsp;? | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/what-is-an-accessible-name/)
 - [MDN Comprendre WCAG, explications de la règle 4.1](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#règle_4.1_—_compatible_maximiser_la_compatibilité_avec_les_agent·e·s_utilisateur·ice·s_actuels_et_futurs_y_compris_les_technologies_dassistance)
 - [Comprendre le critère de succès 4.1.2 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 

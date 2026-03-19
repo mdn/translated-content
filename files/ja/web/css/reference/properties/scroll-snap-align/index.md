@@ -1,9 +1,8 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
-original_slug: Web/CSS/scroll-snap-align
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 `scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーのスナップポート（つまり{{glossary("alignment container", "配置コンテナー")}}）の中における[スナップ領域](/ja/docs/Glossary/Scroll_snap#スナップ領域)（つまり {{glossary("alignment subject", "配置対象物")}}）の配置として指定します。
@@ -59,7 +58,7 @@ scroll-snap-align: center;
   flex: 0 0 66%;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@ scroll-snap-align: center;
 }
 
 #example-parent > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -125,5 +124,7 @@ scroll-snap-align: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- {{cssxref("scroll-snap-stop")}}
+- {{cssxref("scroll-initial-target")}}
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) - web.dev (2018)

@@ -3,7 +3,7 @@ title: "Window : évènement popstate"
 short-title: popstate
 slug: Web/API/Window/popstate_event
 l10n:
-  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
+  sourceCommit: cf3515a7aa9db738bfbd02c16f94fbab180fd1fb
 ---
 
 {{APIRef("History API")}}
@@ -47,10 +47,8 @@ Ces méthodes et leurs évènements associés peuvent être utilisés pour ajout
 
 Notez que le simple fait d'appeler `history.pushState()` ou `history.replaceState()` n'exécutera pas l'évènement `popstate`. L'évènement `popstate` sera exécuté lors d'une action du navigateur telle qu'un clic sur le bouton de retour ou d'avance (ou un appel à `history.back()` ou `history.forward()` en JavaScript).
 
-Les navigateurs ont tendance à gérer l'évènement `popstate` différemment lors du chargement de la page. Chrome (avant la v34) et Safari émettent toujours un évènement `popstate` lors du chargement de la page, contrairement à Firefox.
-
 > [!NOTE]
-> Lors de l'écriture de fonctions qui traitent l'évènement `popstate`, il est important de prendre en compte que des propriétés comme `window.location` reflèteront déjà le changement d'état (si cela a modifié l'URL courante), mais que `document` pourrait ne pas encore l'être. Si le but est d'intervenir au moment où le nouvel état du document est déjà totalement en place, il convient d'utiliser un appel à la méthode {{DOMxRef("Window.setTimeout", "setTimeout()")}} avec un délai nul pour placer effectivement la fonction _callback_ de traitement à la fin de la boucle d'évènements du navigateur&nbsp;: `window.onpopstate = () => setTimeout(doSomeThing, 0);`
+> Lors de l'écriture de fonctions qui traitent l'évènement `popstate`, il est important de prendre en compte que des propriétés comme `window.location` reflèteront déjà le changement d'état (si cela a modifié l'URL courante), mais que `document` pourrait ne pas encore l'être. Si le but est d'intervenir au moment où le nouvel état du document est déjà totalement en place, il convient d'utiliser un appel à la méthode {{DOMxRef("Window.setTimeout", "setTimeout()")}} avec un délai nul pour placer effectivement la fonction _de rappel_ de traitement à la fin de la boucle d'évènements du navigateur&nbsp;: `window.onpopstate = () => setTimeout(doSomeThing, 0);`
 
 ## Quand l'évènement `popstate` est-il envoyé ?
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 O primeiro artigo da nossa série de tutoriais práticos explica o que você irá aprender, e fornece uma visão do site de exemplo "biblioteca local" que estaremos trabalhando e evoluindo em artigos seguintes.
 
