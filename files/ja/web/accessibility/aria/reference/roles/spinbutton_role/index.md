@@ -43,7 +43,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性は最大値を定義します。これが無いか、数値でない場合、既定値は `100` です。
 
-[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は  `meter` では必須であり、`progressbar` ではオプションです。
+[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `meter` では必須であり、`progressbar` ではオプションです。
 
 `spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
 
