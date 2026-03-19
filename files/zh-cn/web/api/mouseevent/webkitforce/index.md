@@ -12,7 +12,7 @@ l10n:
 
 ## 规范
 
-_不属于任何规范。_ Apple 在 Mac 开发者库中提供了[描述](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)。
+*不属于任何规范。*Apple 在 Mac 开发者库中提供了[描述](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)。
 
 ## 参见
 
