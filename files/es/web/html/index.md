@@ -6,7 +6,7 @@ page-type: landing-page
 sidebar: htmlsidebar
 ---
 
-HTML (Lenguaje de Marcado de Hipertexto, del inglés *HyperText Markup Language*) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, normalmente se utilizan otras tecnologías para describir la apariencia o presentación de una página web (CSS) y su funcionalidad o comportamiento (JavaScript).
+HTML (Lenguaje de Marcado de Hipertexto, del inglés _HyperText Markup Language_) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, normalmente se utilizan otras tecnologías para describir la apariencia o presentación de una página web (CSS) y su funcionalidad o comportamiento (JavaScript).
 
 El "hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un mismo sitio web o entre distintos sitios web. Los enlaces son un aspecto fundamental de la Web. Al publicar contenido en Internet y enlazarlo con páginas creadas por otras personas, te conviertes en un participante activo de la World Wide Web.
 
