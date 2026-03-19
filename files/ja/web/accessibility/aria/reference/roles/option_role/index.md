@@ -52,7 +52,7 @@ l10n:
 #### 状態とプロパティ
 
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-  - : 選択肢の選択状態を記述するために使用します。必須です。
+  - : 選択肢の選択状態を記述するために使用します。オプションです。
 
 - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
   - : 選択肢を複数選択で使用する場合のチェック状態を記述するために使用します。`true`、`false`、`mixed` に対応しています。オプションです。
