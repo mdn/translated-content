@@ -2,8 +2,6 @@
 title: "HTML: Lenguaje de Marcado de Hipertexto"
 short-title: HTML
 slug: Web/HTML
-page-type: landing-page
-sidebar: htmlsidebar
 ---
 
 HTML (Lenguaje de Marcado de Hipertexto, del inglés _HyperText Markup Language_) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, normalmente se utilizan otras tecnologías para describir la apariencia o presentación de una página web (CSS) y su funcionalidad o comportamiento (JavaScript).
