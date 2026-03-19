@@ -8,7 +8,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
-{{domxref("PaymentResponse")}} 接口的 **`payerName`** 只读属性返回用户提供的名称。只有当在 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} 构造函数的 options 参数中将 `requestPayerName` 选项设置为 `true` 时，才会存在此选项。
+{{domxref("PaymentResponse")}} 接口的 **`payerName`** 只读属性返回用户提供的名称。只有当在 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest()')}} 构造函数的 options 参数中的 `requestPayerName` 选项设置为 `true` 时才会存在此选项。
 
 ## 值
 
