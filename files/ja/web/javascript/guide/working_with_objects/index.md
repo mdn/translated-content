@@ -1,11 +1,11 @@
 ---
-title: オブジェクトでの作業
+title: オブジェクトの操作
 slug: Web/JavaScript/Guide/Working_with_objects
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 59433be3814da9b599782af543eabccab071c81e
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Using_classes")}}
 
 JavaScript は、オブジェクトベースの枠組みで設計されています。オブジェクトはプロパティの集まりであり、[プロパティ](/ja/docs/Glossary/Property/JavaScript)は名前 (あるいは「キー」) と値との関連付けから成り立っています。プロパティの値を関数にすることもでき、その場合はプロパティは[メソッド](/ja/docs/Glossary/Method)と呼ばれます。
 
@@ -31,7 +31,7 @@ const obj = {
 };
 ```
 
-コロンの前の各プロパティ名は識別子（名前、数値、文字列リテラルのいずれか）であり、それぞれの `valueN` は、プロパティ名に割り当てる値となる式です。プロパティ名も式にすることができます。計算されるキーは、角括弧で囲む必要があります。[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)のリファレンスには、構文についてより詳細な説明が記載されています。
+コロンの前の各プロパティ名は識別子、数値、文字列リテラルのいずれかであり、それぞれの `valueN` は、プロパティ名に割り当てる値となる式です。プロパティ名も式にすることができます。計算されるキーは、角括弧で囲む必要があります。[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)のリファレンスには、構文についてより詳細な説明が記載されています。
 
 この例では、新しく作成されたオブジェクトが変数 `obj` に代入されています。これはオプションです。このオブジェクトを他の場所で参照する必要がない場合は、変数に割り当てる必要はありません。（オブジェクトが文として表示される場合は、オブジェクトリテラルを括弧で囲む必要がある場合があります。そうしないと、リテラルがブロック文と混同される可能性があります。）
 
@@ -149,7 +149,7 @@ car1 にプロパティ `color` を追加し、そこに "black" という値を
 
 ```js
 // Animal のプロパティとメソッドをカプセル化
-const Animal = {
+const animalProto = {
   type: "Invertebrates", // プロパティの既定値、「無脊椎動物」
   displayType() {
     // Animal の種類を表示するメソッド
@@ -157,12 +157,12 @@ const Animal = {
   },
 };
 
-// animal1 という新しい animal 型を作成
-const animal1 = Object.create(Animal);
-animal1.displayType(); // 出力 : Invertebrates
+// animal という新しい animal 型を作成
+const animal = Object.create(animalProto);
+animal.displayType(); // 出力 : Invertebrates
 
 // Fishes という新しい animal 型を作成
-const fish = Object.create(Animal);
+const fish = Object.create(animalProto);
 fish.type = "Fishes";
 fish.displayType(); // 出力 : Fishes
 ```
@@ -305,7 +305,7 @@ function showProps(obj, objName) {
 }
 ```
 
-継承された列挙可能でないプロパティを列挙するネイティブの方法はありません。ただし、次の関数で実現することができます。
+継承された列挙可能でないプロパティを、すべて列挙するネイティブの方法はありません。ただし、次の関数で実現することができます。
 
 ```js
 function listAllProperties(myObj) {
@@ -329,9 +329,7 @@ function listAllProperties(myObj) {
 
 ```js
 // 2 つのプロパティ a と b を持つ新しいオブジェクト myobj を作成。
-const myObj = new Object();
-myObj.a = 5;
-myObj.b = 12;
+const myObj = { a: 5, b: 12 };
 
 // プロパティ a を削除すると、myobj には b プロパティだけが残る。
 delete myObj.a;
@@ -396,15 +394,15 @@ car2.displayCar();
 
 ### オブジェクト参照のための this の使用
 
-JavaScript には、メソッド内で現在のオブジェクトを参照するための [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) という特別なキーワードがあります。以下の例には、`Manager` と `Intern` という 2 つのオブジェクトがあり、それぞれが独自の `name`, `age`, `job` を持っています。関数 `sayHi()` の中に `this.name` があることに注目してください。 2 つのオブジェクトに追加すると、同じ関数で、それぞれに添付されたオブジェクトの名前付きメッセージが出力されます。
+JavaScript には、メソッド内で現在のオブジェクトを参照するための [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) という特別なキーワードがあります。以下の例には、`manager` と `intern` という 2 つのオブジェクトがあり、それぞれが独自の `name`, `age`, `job` を持っています。関数 `sayHi()` の中に `this.name` があることに注目してください。 2 つのオブジェクトに追加すると、同じ関数で、それぞれに添付されたオブジェクトの名前付きメッセージが出力されます。
 
 ```js
-const Manager = {
+const manager = {
   name: "Karina",
   age: 27,
   job: "Software Engineer",
 };
-const Intern = {
+const intern = {
   name: "Tyrone",
   age: 21,
   job: "Software Engineer Intern",
@@ -415,14 +413,14 @@ function sayHi() {
 }
 
 // 両方のオブジェクトに sayHi 関数を追加
-Manager.sayHi = sayHi;
-Intern.sayHi = sayHi;
+manager.sayHi = sayHi;
+intern.sayHi = sayHi;
 
-Manager.sayHi(); // Hello, my name is Karina
-Intern.sayHi(); // Hello, my name is Tyrone
+manager.sayHi(); // Hello, my name is Karina
+intern.sayHi(); // Hello, my name is Tyrone
 ```
 
-`this` は関数呼び出しの「隠し引数」であり、関数が呼び出される前にオブジェクトを指定することによって渡されます。例えば、 `Manager.sayHi()` では、 `this` は `Manager` オブジェクトです。 `Manager` は関数 `sayHi()` の前に来るからです。別のオブジェクトから同じ関数にアクセスすると、 `this` も同様に変更されます。 {{jsxref("Function.prototype.call()")}} や {{jsxref("Reflect.apply()")}} のような他のメソッドを使用して関数を呼び出す場合、 `this` の値を明示的に引数として渡すことができます。
+`this` は関数呼び出しの「隠し引数」であり、関数が呼び出される前にオブジェクトを指定することによって渡されます。例えば、 `manager.sayHi()` では、 `this` は `manager` オブジェクトです。 `manager` は関数 `sayHi()` の前に来るからです。別のオブジェクトから同じ関数にアクセスすると、 `this` も同様に変更されます。 {{jsxref("Function.prototype.call()")}} や {{jsxref("Reflect.apply()")}} のような他のメソッドを使用して関数を呼び出す場合、 `this` の値を明示的に引数として渡すことができます。
 
 ## ゲッターとセッターの定義
 
