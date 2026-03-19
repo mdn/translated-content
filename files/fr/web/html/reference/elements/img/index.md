@@ -3,7 +3,7 @@ title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Reference/Elements/img
 original_slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
@@ -346,7 +346,7 @@ L'attribut `title` ne doit pas non plus être utilisé comme information de lég
 
 La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la verra&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en ligne en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
 
-- [Utiliser l'attribut HTML `title` — mis à jour | The Paciello Group <sup>(angl.)</sup>](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+- [Utiliser l'attribut HTML `title` — mis à jour | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 
 ## Exemples
 
