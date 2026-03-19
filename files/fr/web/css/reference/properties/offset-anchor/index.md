@@ -1,17 +1,102 @@
 ---
 title: offset-anchor
 slug: Web/CSS/Reference/Properties/offset-anchor
-original_slug: Web/CSS/offset-anchor
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{cssref}}{{seecompattable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`offset-anchor`** définit le point à l'intérieur de la boîte d'un élément se déplaçant le long d'un {{CSSxRef("offset-path")}} qui est effectivement en mouvement le long du chemin.
 
-La propriété CSS **`offset-anchor`** définit le point, à l'intérieur d'une boîte d'un élément, qui se déplace le long d'un chemin {{cssxref("offset-path")}}.
+{{InteractiveExample("Démonstration CSS&nbsp;: offset-anchor")}}
+
+```css interactive-example-choice
+offset-anchor: auto;
+```
+
+```css interactive-example-choice
+offset-anchor: right top;
+```
+
+```css interactive-example-choice
+offset-anchor: left bottom;
+```
+
+```css interactive-example-choice
+offset-anchor: 20% 80%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="wrapper">
+    <div id="example-element"></div>
+  </div>
+  <button id="playback" type="button">Lecture</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  offset-path: path("M 0,20 L 200,20");
+  animation: distance 3000ms infinite alternate ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+  animation-play-state: paused;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+.wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 49%,
+    black 50%,
+    black 51%,
+    transparent 52%
+  );
+  border: 1px solid #cccccc;
+  width: 90%;
+}
+
+@keyframes distance {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#playback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+```
+
+```js interactive-example
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
+
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "Lecture";
+  } else {
+    example.classList.add("running");
+    button.textContent = "Pause";
+  }
+});
+```
 
 ## Syntaxe
 
 ```css
-/* Valeurs avec un movalues */
+/* Valeurs avec un mot-clé */
 offset-anchor: top;
 offset-anchor: bottom;
 offset-anchor: left;
@@ -19,12 +104,10 @@ offset-anchor: right;
 offset-anchor: center;
 offset-anchor: auto;
 
-/* Valeurs de pourcentages */
-/* Type <percentage> */
+/* Valeurs de type <percentage> */
 offset-anchor: 25% 75%;
 
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 offset-anchor: 0 0;
 offset-anchor: 1cm 2cm;
 offset-anchor: 10ch 8em;
@@ -36,15 +119,17 @@ offset-anchor: right 3em bottom 10px;
 /* Valeurs globales */
 offset-anchor: inherit;
 offset-anchor: initial;
+offset-anchor: revert;
+offset-anchor: revert-layer;
 offset-anchor: unset;
 ```
 
 ### Valeurs
 
 - `auto`
-  - : `offset-anchor` reçoit la même valeur que {{cssxref("transform-origin")}} sauf si {{cssxref("offset-path")}} vaut `none`, dans ce cas, elle récupère la valeur de {{cssxref("offset-position")}}.
-- `<position>`
-  - : Une position ({{cssxref("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{cssxref("&lt;position&gt;")}} et {{cssxref("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour `<position>`, excepté pour `background(-position)`.
+  - : `offset-anchor` reçoit la même valeur que {{CSSxRef("transform-origin")}} sauf si {{CSSxRef("offset-path")}} vaut `none`, dans ce cas, elle récupère la valeur de {{CSSxRef("offset-position")}}.
+- {{CSSxRef("&lt;position&gt;")}}
+  - : Une position ({{CSSxRef("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{CSSxRef("&lt;position&gt;")}} et {{CSSxRef("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour `<position>`, excepté pour `background(-position)`.
 
 ## Définition formelle
 
@@ -56,13 +141,15 @@ offset-anchor: unset;
 
 ## Exemples
 
-Dans l'exemple suivant, on dispose de trois éléments {{htmlelement("div")}} imbriqués chacun dans un élément {{htmlelement("section")}}. Chaque `<div>` se déplace sur le même chemin {{cssxref("offset-path")}} (une ligne horizontale mesurant 200 pixels). Les trois blocs possèdent une couleur ({{cssxref("background-color")}}) et une valeur `offset-anchor` différentes.
+### Définir différentes valeurs de `offset-anchor`
 
-Chaque élément `<section>` a été mise en forme avec un dégradé linéaire afin de fournir une indication visuelle du chemin.
+Dans l'exemple suivant, nous avons trois éléments {{HTMLElement("div")}} imbriqués dans des éléments {{HTMLElement("section")}}. Chaque `<div>` reçoit le même {{CSSxRef("offset-path")}} (une ligne horizontale de 200 pixels de long) et est animé pour se déplacer le long de celle-ci. Les trois reçoivent ensuite différentes valeurs de {{CSSxRef("background-color")}} et de `offset-anchor`.
 
-On peut voir que la première valeur, `auto`, déplace l'élément sur son centre. La deuxième et la troisième déplacent le `<div>` par le coin supérieur droit et le coin inférieur gauche respectivement.
+Chaque `<section>` a été mis en forme avec un dégradé linéaire pour lui donner une ligne horizontale traversant son centre, afin de vous donner un affichage visuel de l'endroit où les chemins d'encart des `<div>` se trouvent.
 
-### HTML
+Cela vous permet de voir quel effet ont les différentes valeurs de `offset-anchor` — la première, `auto`, fait se déplacer le point central du `<div>` le long du chemin. Les deux autres font se déplacer respectivement les points supérieur droit et inférieur gauche du `<div>` le long du chemin.
+
+#### HTML
 
 ```html
 <section>
@@ -76,7 +163,7 @@ On peut voir que la première valeur, `auto`, déplace l'élément sur son centr
 </section>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -91,11 +178,11 @@ section {
     to bottom,
     transparent,
     transparent 49%,
-    #000 50%,
-    #000 51%,
+    black 50%,
+    black 51%,
     transparent 52%
   );
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-bottom: 10px;
 }
 
@@ -124,9 +211,9 @@ section {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', '300')}}
+{{EmbedLiveSample("Définir différentes valeurs de `offset-anchor`", "100%", 300)}}
 
 ## Spécifications
 
@@ -138,7 +225,7 @@ section {
 
 ## Voir aussi
 
-- {{cssxref("offset")}}
-- {{cssxref("offset-distance")}}
-- {{cssxref("offset-rotation")}}
+- La propriété raccourcie {{CSSxRef("offset")}}
+- La propriété {{CSSxRef("offset-distance")}}
+- La propriété {{CSSxRef("offset-rotation")}}
 - [L'élément SVG `<path>`](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
