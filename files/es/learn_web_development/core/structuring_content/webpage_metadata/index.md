@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 original_slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Basic_HTML_syntax", "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no se muestra en el navegador cuando se carga la página. Contiene información como el título ({{htmlelement("title")}}) de la página, enlaces al {{Glossary("CSS")}} (si quieres aplicar estilo a tu contenido HTML con CSS), enlaces para personalizar `favicon`, y otros metadatos (datos sobre el HTML, como quién lo escribió y palabras claves importantes que describen el documento). En este artículo abarcaremos todo esto y más, para darte bases sólidas en el manejo del marcado y otro código que debería estar presente en tu cabecera.
 

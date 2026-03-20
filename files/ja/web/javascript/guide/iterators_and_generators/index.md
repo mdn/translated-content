@@ -2,10 +2,10 @@
 title: イテレーターとジェネレーター
 slug: Web/JavaScript/Guide/Iterators_and_generators
 l10n:
-  sourceCommit: c16a0ee78e5142b3bfcdaf57d595add3ce825f13
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Internationalization")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Resource_management")}}
 
 イテレーターとジェネレーターは、コア言語の内部に反復処理が直接的に取り入れられており、{{jsxref("Statements/for...of","for...of")}} ループの動作を簡単にカスタマイズできる仕組みをもたらします。
 
@@ -161,7 +161,7 @@ for (const value of myIterable) {
 
 ### 反復可能オブジェクトが必要な構文
 
-{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring_assignment", "構造分解", "", 1)}}などの文や式は、反復可能オブジェクトを必要とします。
+{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring", "構造分解", "", 1)}}構文などの文や式は、反復可能オブジェクトを必要とします。
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -231,4 +231,4 @@ console.log(sequence.next().value); // 2
 
 またジェネレーターは、与えられた値を返してジェネレーター自身の処理を終了させる {{jsxref("Generator/return", "return()")}} メソッドを持っています。
 
-{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Internationalization")}}
+{{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Resource_management")}}

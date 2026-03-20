@@ -1,14 +1,13 @@
 ---
 title: min-inline-size
 slug: Web/CSS/Reference/Properties/min-inline-size
-original_slug: Web/CSS/min-inline-size
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne selon le mode d'écriture utilisé. Elle correspond à la propriété {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.
 
-La propriété **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
-
-{{InteractiveExample("CSS Demo: min-inline-size")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: min-inline-size")}}
 
 ```css interactive-example-choice
 min-inline-size: 200px;
@@ -32,7 +31,9 @@ writing-mode: vertical-lr;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change min-inline-size</div>
+  <div class="transition-all" id="example-element">
+    Changer le min-inline-size
+  </div>
 </section>
 ```
 
@@ -43,40 +44,40 @@ writing-mode: vertical-lr;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
-
-Si le mode d'écriture est orienté verticalement, `min-inline-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-block-size")}} peut être utilisée pour les blocs.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 min-inline-size: 100px;
 min-inline-size: 5em;
+min-inline-size: anchor-size(width);
 
-/* Valeurs proportionnelles à la */
-/* largeur du bloc englobant     */
-/* Type <percentage>             */
+/* Valeurs de type <percentage> */
 min-inline-size: 10%;
 
 /* Valeurs avec un mot-clé */
 min-inline-size: max-content;
 min-inline-size: min-content;
 min-inline-size: fit-content;
-min-inline-size: fill-available;
+min-inline-size: fit-content(20em);
 
 /* Valeurs globales */
 min-inline-size: inherit;
 min-inline-size: initial;
+min-inline-size: revert;
+min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 
+Si le mode d'écriture est orienté verticalement, la valeur de `min-inline-size` correspond à la hauteur minimale de l'élément&nbsp;; sinon, elle correspond à la largeur minimale de l'élément. Une propriété associée est {{CSSxRef("min-block-size")}}, qui définit l'autre dimension de l'élément.
+
 ### Valeurs
 
-La propriété `min-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
+La propriété `min-inline-size` peut prendre les mêmes valeurs que les propriétés {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}.
 
 ## Définition formelle
 
@@ -88,10 +89,18 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Exemples
 
-### CSS
+### Définir la taille minimale en ligne pour le texte vertical
+
+#### HTML
+
+```html
+<p class="texteExemple">Texte d'exemple</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
+.texteExemple {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 5%;
@@ -99,15 +108,9 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">Texte d'exemple</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Définir la taille minimale en ligne pour le texte vertical")}}
 
 ## Spécifications
 
@@ -119,8 +122,5 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes
-  - {{cssxref("min-width")}}
-  - {{cssxref("min-height")}}
-
-- {{cssxref("writing-mode")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("min-width")}} et {{CSSxRef("min-height")}}
+- La propriété {{CSSxRef("writing-mode")}}
