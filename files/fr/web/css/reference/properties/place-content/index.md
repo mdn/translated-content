@@ -1,14 +1,13 @@
 ---
 title: place-content
 slug: Web/CSS/Reference/Properties/place-content
-original_slug: Web/CSS/place-content
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-content`** permet d'aligner le contenu à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}) dans un système de mise en page pertinent tel que [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).
 
-La propriété raccourcie **`place-content`** permet de définir les valeurs des propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}. Elle peut être utilisée pour n'importe quelle méthode de disposition (boîtes flexibles, grilles, etc;) qui prend en charge ces deux propriétés d'alignement.
-
-{{InteractiveExample("CSS Demo: place-content")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: place-content")}}
 
 ```css interactive-example-choice
 place-content: end space-between;
@@ -34,9 +33,9 @@ place-content: end;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+      <div>Un</div>
+      <div>Deux</div>
+      <div>Trois</div>
     </div>
   </div>
 </section>
@@ -53,12 +52,19 @@ place-content: end;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
 
-Syntaxe
+## Propriétés constitutives
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("align-content")}}
+- {{CSSxRef("justify-content")}}
+
+## Syntaxe
 
 ```css
 /* Valeurs décrivant l'alignement */
@@ -84,42 +90,49 @@ place-content: stretch space-evenly;
 /* Valeurs globales */
 place-content: inherit;
 place-content: initial;
+place-content: revert;
+place-content: revert-layer;
 place-content: unset;
 ```
 
-La première valeur utilisée sera celle qui correspond à {{cssxref("align-content")}} et la seconde valeur correspondra à {{cssxref("justify-content")}}. Si la deuxième valeur n'est pas présente, la première valeur indiquée sera également utilisée pour `justify-content`.
+La première valeur utilisée sera celle qui correspond à {{CSSxRef("align-content")}} et la seconde valeur correspondra à {{CSSxRef("justify-content")}}.
 
-> [!WARNING]
-> Si une seule valeur est fournie et que celle-ci est invalide pour l'une ou l'autre des propriétés détaillées, c'est la déclaration entière qui sera invalide.
+> [!NOTE]
+> Si la deuxième valeur n'est pas présente, la première valeur indiquée sera également utilisée pour `justify-content`, à condition qu'elle soit valide pour les deux propriétés. Si elle est invalide pour l'une ou l'autre, la déclaration entière sera invalide.
 
 ### Valeurs
 
 - `start`
-  - : Les éléments sont alignés vers le début du conteneur pour l'axe correspondant.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord de départ du conteneur d'alignement dans l'axe approprié.
 - `end`
-  - : Les éléments sont alignés vers la fin du conteneur pour l'axe correspondant.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord de fin du conteneur d'alignement dans l'axe approprié.
 - `flex-start`
-  - : Les éléments sont alignés vers le début du conteneur flexible pour l'axe correspondant. Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne sont pas des éléments d'un conteneur flexible, cette valeur sera synonyme de `start`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord du conteneur d'alignement en fonction du côté de départ principal ou transversal du conteneur flex.
+    Cela ne s'applique qu'aux éléments de mise en page flex. Pour les éléments qui ne sont pas enfants d'un conteneur flex, cette valeur est traitée comme `start`.
 - `flex-end`
-  - : Les éléments sont alignés vers la fin du conteneur flexible pour l'axe correspondant. Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne sont pas des éléments d'un conteneur flexible, cette valeur sera synonyme de `end`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord du conteneur d'alignement en fonction du côté de fin principal ou transversal du conteneur flex.
+    Cela ne s'applique qu'aux éléments de mise en page flex. Pour les éléments qui ne sont pas enfants d'un conteneur flex, cette valeur est traitée comme `end`.
 - `center`
-  - : Les éléments sont alignés au centre du conteneur dans l'axe correspondant.
+  - : Les éléments sont regroupés les uns contre les autres vers le centre du conteneur d'alignement.
 - `left`
-  - : Les éléments sont alignés vers le bord gauche du conteneur dans l'axe correspondant. Si l'axe de cette propriété n'est pas parallèle à l'axe en ligne (_inline axis_), cette valeur sera synonyme de `start`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord gauche du conteneur d'alignement. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
 - `right`
-  - : Les éléments sont alignés vers le bord droit du conteneur dans l'axe correspondant. Si l'axe de cette propriété n'est pas parallèle à l'axe en ligne (_inline axis_), cette valeur sera synonyme de `start`.
+  - : Les éléments sont regroupés les uns contre les autres vers le bord droit du conteneur d'alignement dans l'axe approprié. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
 - `space-between`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. Ainsi, l'espace entre chaque élément adjacent sera le même. Le premier élément est aligné sur le bord du conteneur et le dernier élément est également aligné sur le bord du conteneur à la fin de l'axe.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+  - : Les éléments sont répartis de manière égale à l'intérieur du conteneur d'alignement. L'espacement entre chaque paire d'éléments adjacents est le même. Le premier élément est aligné avec le bord de départ principal, et le dernier élément est aligné avec le bord de fin principal.
+- `baseline`, `first baseline`, `last baseline`
+  - : Définit la participation à l'alignement sur la première ou la dernière ligne de base&nbsp;: aligne la ligne de base d'alignement du premier ou du dernier ensemble de lignes de base de la boîte avec la ligne de base correspondante dans l'ensemble partagé de première ou dernière ligne de base de toutes les boîtes de son groupe de partage de ligne de base.
+    L'alignement de repli pour `first baseline` est `start`, celui pour `last baseline` est `end`.
 - `space-around`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. L'espace entre chaque élément adjacent sera le même. L'espace entre le bord du conteneur et le premier élément sera la moitié de l'espace utilisé entre chaque élément. L'espace entre le dernier élément et le bord du conteneur sera la moitié de l'espace utilisé entre chaque élément.
+  - : Les éléments sont répartis de manière égale à l'intérieur du conteneur d'alignement. L'espacement entre chaque paire d'éléments adjacents est le même. L'espace vide avant le premier élément et après le dernier élément est égal à la moitié de l'espace entre chaque paire d'éléments adjacents.
 - `space-evenly`
-  - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. L'espace entre chaque élément adjacent sera le même, ce sera également cet espace qui sera utilisé entre le bord du conteneur et le premier élément et entre le dernier élément et le bord du conteneur.
+  - : Les éléments sont répartis de manière égale à l'intérieur du conteneur d'alignement. L'espacement entre chaque paire d'éléments adjacents, le bord de départ principal et le premier élément, et le bord de fin principal et le dernier élément, est exactement le même.
 - `stretch`
-  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe correspondant, tous les éléments dimensionnés automatiquement seront étirés de la même façon (et pas de façon proportionnelle) tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes) afin que la taille de l'ensemble des éléments soit exactement celle du conteneur.
+  - : Si la taille combinée des éléments est inférieure à la taille du conteneur d'alignement, les éléments de taille `auto` voient leur taille augmentée de manière égale (et non proportionnelle), tout en respectant les contraintes imposées par {{CSSxRef("max-height")}}/{{CSSxRef("max-width")}} (ou une fonctionnalité équivalente), de sorte que la taille combinée remplisse exactement le conteneur d'alignement.
+- `safe`
+  - : Utilisé avec un mot-clé d'alignement. Si le mot-clé choisi signifie que l'élément déborde du conteneur d'alignement entraînant une perte de données, l'élément est aligné comme si le mode d'alignement était `start`.
+- `unsafe`
+  - : Utilisé avec un mot-clé d'alignement. Quelle que soit la taille relative de l'élément et du conteneur d'alignement, et indépendamment du fait que le débordement puisse entraîner une perte de données, la valeur d'alignement donnée est respectée.
 
 ## Définition formelle
 
@@ -131,7 +144,98 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
 
 ## Exemples
 
-### CSS
+### Placer le contenu dans un conteneur flexible
+
+#### HTML
+
+```html
+<div id="container">
+  <div class="small">Lorem</div>
+  <div class="small">Lorem<br />ipsum</div>
+  <div class="large">Lorem</div>
+  <div class="large">Lorem<br />ipsum</div>
+  <div class="large"></div>
+  <div class="large"></div>
+</div>
+```
+
+```html hidden
+<code>writing-mode:</code
+><select id="writingMode">
+  <option value="horizontal-tb" selected>horizontal-tb</option>
+  <option value="vertical-rl">vertical-rl</option>
+  <option value="vertical-lr">vertical-lr</option>
+  <option value="sideways-rl">sideways-rl</option>
+  <option value="sideways-lr">sideways-lr</option></select
+><code>;</code><br />
+
+<code>direction:</code
+><select id="direction">
+  <option value="ltr" selected>ltr</option>
+  <option value="rtl">rtl</option></select
+><code>;</code><br />
+
+<code>place-content:</code
+><select id="alignerAlignContent">
+  <option value="normal">normal</option>
+  <option value="first baseline">first baseline</option>
+  <option value="last baseline">last baseline</option>
+  <option value="baseline">baseline</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly" selected>space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center">center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option>
+</select>
+<select id="justifierAlignContent">
+  <option value="normal">normal</option>
+  <option value="space-between">space-between</option>
+  <option value="space-around">space-around</option>
+  <option value="space-evenly">space-evenly</option>
+  <option value="stretch">stretch</option>
+  <option value="center" selected>center</option>
+  <option value="start">start</option>
+  <option value="end">end</option>
+  <option value="flex-start">flex-start</option>
+  <option value="flex-end">flex-end</option>
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="safe">safe</option>
+  <option value="unsafe">unsafe</option></select
+><code>;</code>
+```
+
+```js hidden
+function mettreAJour() {
+  document.getElementById("container").style.placeContent =
+    `${document.getElementById("alignerAlignContent").value} ` +
+    `${document.getElementById("justifierAlignContent").value}`;
+}
+
+const alignerAlignContent = document.getElementById("alignerAlignContent");
+alignerAlignContent.addEventListener("change", mettreAJour);
+
+const justifierAlignContent = document.getElementById("justifierAlignContent");
+justifierAlignContent.addEventListener("change", mettreAJour);
+
+const writingM = document.getElementById("writingMode");
+writingM.addEventListener("change", (evt) => {
+  document.getElementById("container").style.writingMode = evt.target.value;
+});
+
+const direction = document.getElementById("direction");
+direction.addEventListener("change", (evt) => {
+  document.getElementById("container").style.direction = evt.target.value;
+});
+```
+
+#### CSS
 
 ```css
 #container {
@@ -140,9 +244,9 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
-  writing-mode: horizontal-tb; /* Cette valeur peut être modifiée dans l'exemple */
-  direction: ltr; /* Cette valeur peut être modifiée dans l'exemple */
-  place-content: flex-end center; /* Cette valeur peut être modifiée dans l'exemple */
+  writing-mode: horizontal-tb; /* Peut être modifié dans l'exemple interactif */
+  direction: ltr; /* Peut être modifié dans l'exemple interactif */
+  place-content: flex-end center; /* Peut être modifié dans l'exemple interactif */
 }
 
 div > div {
@@ -162,94 +266,9 @@ div > div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br />ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br />impsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
-</div>
-```
-
-```html hidden
-<code>writing-mode:</code
-><select id="writingMode">
-  <option value="horizontal-tb" selected>horizontal-tb</option>
-  <option value="vertical-rl">vertical-rl</option>
-  <option value="vertical-lr">vertical-lr</option>
-  <option value="sideways-rl">sideways-rl</option>
-  <option value="sideways-lr">sideways-lr</option></select
-><code>;</code><br />
-<code>direction:</code
-><select id="direction">
-  <option value="ltr" selected>ltr</option>
-  <option value="rtl">rtl</option></select
-><code>;</code><br />
-<code>place-content:</code
-><select id="alignContentAlignment">
-  <option value="normal">normal</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
-  <option value="baseline">baseline</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly" selected>space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center">center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-</select>
-<select id="justifyContentAlignment">
-  <option value="normal">normal</option>
-  <option value="space-between">space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-  <option value="center" selected>center</option>
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="left">left</option>
-  <option value="right">right</option></select
-><code>;</code>
-```
-
-```js hidden
-var update = function () {
-  document.getElementById("container").style.placeContent =
-    document.getElementById("alignContentAlignment").value +
-    " " +
-    document.getElementById("justifyContentAlignment").value;
-};
-
-var alignContentAlignment = document.getElementById("alignContentAlignment");
-alignContentAlignment.addEventListener("change", update);
-
-var justifyContentAlignment = document.getElementById(
-  "justifyContentAlignment",
-);
-justifyContentAlignment.addEventListener("change", update);
-
-var writingM = document.getElementById("writingMode");
-writingM.addEventListener("change", function (evt) {
-  document.getElementById("container").style.writingMode = evt.target.value;
-});
-var direction = document.getElementById("direction");
-direction.addEventListener("change", function (evt) {
-  document.getElementById("container").style.direction = evt.target.value;
-});
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", "370", "300")}}
+{{EmbedLiveSample("Placer le contenu dans un conteneur flexible", 370, 300)}}
 
 ## Spécifications
 
@@ -261,10 +280,9 @@ direction.addEventListener("change", function (evt) {
 
 ## Voir aussi
 
-- [Utiliser les boîtes flexibles en CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
-- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
-- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
-- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)
-- La propriété {{cssxref("align-content")}}
-- La propriété {{cssxref("justify-content")}}
+- La propriété {{CSSxRef("align-content")}}
+- La propriété {{CSSxRef("justify-content")}}
+- [Concepts de base des boîtes flexibles en CSS](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Alignement des boîtes dans une grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- Le guide [de l'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
