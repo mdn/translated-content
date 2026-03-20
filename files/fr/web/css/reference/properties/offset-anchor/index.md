@@ -227,5 +227,5 @@ section {
 
 - La propriété raccourcie {{CSSxRef("offset")}}
 - La propriété {{CSSxRef("offset-distance")}}
-- La propriété {{CSSxRef("offset-rotation")}}
+- La propriété {{CSSxRef("offset-rotate")}}
 - [L'élément SVG `<path>`](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
