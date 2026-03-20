@@ -2,7 +2,7 @@
 title: border-left-width
 slug: Web/CSS/Reference/Properties/border-left-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 893eb2dfe0ce3e837b3a7512a684b2f02e31d64e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-left-width`** permet de définir l'épaisseur de la bordure gauche d'un élément.
@@ -74,11 +74,11 @@ border-left-width: unset;
 - `<line-width>`
   - : Définit l'épaisseur de la bordure, soit par une valeur explicite de type {{CSSxRef("&lt;length&gt;")}} positive, soit par un mot-clé. Si c'est un mot-clé, il doit s'agir de l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
+      - Identique à `1px`.
     - `medium` (intermédiaire)
+      - Identique à `3px`.
     - `thick` (épais)
-
-> [!NOTE]
-> La spécification ne précise pas exactement l'épaisseur associée à chaque mot-clé, le résultat précis dépend donc de l'implémentation. Cependant, l'ordre `thin ≤ medium ≤ thick` est toujours respecté et les valeurs restent constantes pour un même document.
+      - Identique à `5px`.
 
 ## Définition formelle
 

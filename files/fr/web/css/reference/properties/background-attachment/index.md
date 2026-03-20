@@ -2,7 +2,7 @@
 title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: d35f07a74f76374a6d98aa07b0b42e79322b02ec
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-attachment`** définit si la position d'une image d'arrière-plan est fixe par rapport à la {{Glossary("viewport", "zone d'affichage")}}, ou si elle défile avec son bloc englobant.
@@ -22,28 +22,23 @@ background-attachment: local;
 ```
 
 ```css interactive-example-choice
-background-attachment: local, scroll;
+background-attachment: fixed, scroll;
 ```
 
 ```css interactive-example-choice
-background-attachment: scroll, local;
+background-attachment: scroll, fixed;
 ```
 
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    Londres. La session de Michaelmas venait de se terminer et le Lord
-    Chancelier siégeait dans Lincoln's Inn Hall. Un temps de novembre
-    implacable. Autant de boue dans les rues comme si les eaux venaient à peine
-    de se retirer de la surface de la terre, et il ne serait pas étonnant de
-    rencontrer un Megalosaurus, d'une quarantaine de pieds de long environ, se
-    dandinant comme un lézard pachydermique sur Holborn Hill. Londres. La
-    session de Michaelmas venait de se terminer et le Lord Chancelier siégeait
-    dans Lincoln's Inn Hall. Un temps de novembre implacable. Autant de boue
-    dans les rues comme si les eaux venaient à peine de se retirer de la surface
-    de la terre, et il ne serait pas étonnant de rencontrer un Megalosaurus,
-    d'environ quarante pieds de long, se dandinant comme un lézard pachydermique
-    sur Holborn Hill.
+    <p>
+      D'ici à là<br />
+      de là à ici,<br />
+      Des choses amusantes<br />
+      Sont partout.
+    </p>
+    <p>--Dr. Seuss</p>
   </div>
 </section>
 ```
@@ -64,14 +59,14 @@ body {
     url("/shared-assets/images/examples/lizard.png") right 3rem top 1rem / 15rem
       no-repeat,
     url("/shared-assets/images/examples/moon.jpg") center / 10rem;
-  color: #ff5454;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bolder;
   overflow: auto;
   padding: 20px;
+  color: red;
   text-shadow:
-    0 0 0.6rem black,
-    0 0 0.6rem black;
+    0 0 0.5rem black,
+    0 0 0.5rem black;
 }
 ```
 
@@ -90,12 +85,12 @@ background-attachment: revert;
 background-attachment: unset;
 ```
 
-La propriété `background-attachment` est définie avec un des mots-clés de la liste suivante.
+La propriété `background-attachment` est définie avec un ou plusieurs mots-clés de la liste suivante, séparés par des virgules.
 
 ### Valeurs
 
 - `fixed`
-  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec [`background-clip: text`](/fr/docs/Web/CSS/Reference/Properties/background-clip)).
+  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<i lang="en">viewport</i> en anglais). Même si un élément dispose d'un mécanisme de défilement, l'arrière-plan ne se déplace pas avec l'élément. Si cette valeur est définie, la propriété {{CSSxRef("background-origin")}} est ignorée.
 - `local`
   - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
 - `scroll`
@@ -115,21 +110,37 @@ La propriété `background-attachment` est définie avec un des mots-clés de la
 
 #### HTML
 
+Nous incluons une liste non ordonnée ({{HTMLElement("ul")}}) avec quelques éléments de liste ({{HTMLElement("li")}}).
+
 ```html
-<p>
-  Il y avait des portes tout autour du hall, mais elles étaient toutes fermées à
-  clé&nbsp;; et quand Alice eut parcouru tout un côté puis l'autre, essayant
-  chaque porte, elle marcha tristement au milieu, se demandant comment elle
-  allait bien pouvoir sortir.
-</p>
+<ul>
+  <li>Un poisson</li>
+  <li>Deux poissons</li>
+  <li>Poisson rouge</li>
+  <li>Poisson bleu</li>
+  <li>Poisson noir</li>
+  <li>Poisson bleu</li>
+  <li>Vieux poisson</li>
+  <li>Nouveau poisson.</li>
+  <li>Celui-ci a une petite étoile.</li>
+  <li>Celui-ci a une petite voiture.</li>
+  <li>Dis&nbsp;! Quel lot</li>
+  <li>De poissons il y a.</li>
+</ul>
 ```
 
 #### CSS
 
+Nous définissons une image de fond ({{CSSxRef("background-image")}}) et réglons la propriété `background-attachment` sur `fixed`. Nous incluons également une {{CSSxRef("height")}}, une {{CSSxRef("width")}} et un débordement ({{CSSxRef("overflow")}}) pour garantir que l'élément défile.
+
 ```css
-p {
+ul {
   background-image: url("star-solid.gif");
   background-attachment: fixed;
+
+  width: 300px;
+  height: 70px;
+  overflow: scroll;
 }
 ```
 
@@ -137,43 +148,79 @@ p {
 
 {{EmbedLiveSample("Exemple simple")}}
 
+Notez comment l'arrière-plan reste fixe par rapport à la zone d'affichage de la liste lorsque vous faites défiler le texte débordant.
+
 ### Gestion de plusieurs arrière-plans
 
 Cette propriété prend en charge plusieurs images d'arrière-plan. Vous pouvez définir une valeur `<attachment>` différente pour chaque image, séparées par des virgules. Chaque image est associée au type `<attachment>` correspondant, de la première à la dernière.
 
 #### HTML
 
+Nous incluons tout le poème de Dr. Seuss.
+
 ```html
-<p>
-  Il y avait des portes tout autour du hall, mais elles étaient toutes fermées à
-  clé&nbsp;; et quand Alice eut parcouru tout un côté puis l'autre, essayant
-  chaque porte, elle marcha tristement au milieu, se demandant comment elle
-  allait bien pouvoir sortir. Soudain, elle tomba sur une petite table à trois
-  pieds, entièrement en verre massif&nbsp;; il n'y avait rien dessus sauf une
-  minuscule clé dorée, et la première pensée d'Alice fut qu'elle pouvait
-  appartenir à l'une des portes du hall&nbsp;; mais, hélas&nbsp;! soit les
-  serrures étaient trop grandes, soit la clé était trop petite, mais en tout cas
-  elle ne put en ouvrir aucune. Cependant, lors de son second passage, elle
-  découvrit un petit rideau qu'elle n'avait pas remarqué auparavant, et derrière
-  se trouvait une petite porte d'environ quinze pouces de haut&nbsp;: elle
-  essaya la petite clé dorée dans la serrure, et à sa grande joie, elle
-  s'adapta&nbsp;!
-</p>
+<div>
+  <ul>
+    <li>Un poisson</li>
+    <li>Deux poissons</li>
+    <li>Poisson rouge</li>
+    <li>Poisson bleu</li>
+    <li>Poisson noir</li>
+    <li>Poisson bleu</li>
+    <li>Vieux poisson</li>
+    <li>Nouveau poisson.</li>
+    <li>Celui-ci a une petite étoile.</li>
+    <li>Celui-ci a une petite voiture.</li>
+    <li>Dis&nbsp;! Quel lot</li>
+    <li>De poissons il y a.</li>
+    <li>Oui. Certains sont rouges. Et certains sont bleus.</li>
+    <li>Certains sont vieux. Et certains sont nouveaux.</li>
+    <li>Certains sont tristes.</li>
+    <li>Et certains sont joyeux.</li>
+    <li>Et certains sont très, très mauvais.</li>
+    <li>Pourquoi sont-ils</li>
+    <li>Tristes et joyeux et mauvais&nbsp;?</li>
+    <li>Je ne sais pas.</li>
+    <li>Allez demander à votre père.</li>
+    <li>Certains sont maigres.</li>
+    <li>Et certains sont gros.</li>
+    <li>Le gros a</li>
+    <li>Un chapeau jaune.</li>
+    <li>De là à ici, d'ici à là,</li>
+    <li>Des choses amusantes</li>
+    <li>Sont partout.</li>
+  </ul>
+  <p>--Dr. Seuss</p>
+</div>
 ```
 
 #### CSS
 
+Nous incluons une {{CSSxRef("height")}}, une {{CSSxRef("width")}} et un {{CSSxRef("overflow")}} sur le parent {{HTMLElement("div")}} pour garantir que le contenu défile.
+
+Nous définissons deux images d'arrière-plan séparées par des virgules sur la liste, et réglons la propriété `background-attachment` sur `fixed, scroll`, ce qui signifie que la première image d'arrière-plan sera `fixed` et la seconde sera `scroll`. Nous réglons la propriété {{CSSxRef("background-repeat")}} pour que les deux images d'arrière-plan se répètent verticalement, en les séparant avec la propriété {{CSSxRef("background-position")}}.
+
 ```css
-p {
+div {
+  width: 300px;
+  height: 200px;
+  overflow: scroll;
+}
+ul {
   background-image: url("star-solid.gif"), url("star-transparent.gif");
   background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat: repeat-y;
+  background-position:
+    0 0,
+    100px 0;
 }
 ```
 
 #### Résultat
 
 {{EmbedLiveSample("Gestion de plusieurs arrière-plans")}}
+
+Notez comment la première image d'arrière-plan est fixe par rapport à la zone d'affichage tandis que la seconde image d'arrière-plan est fixe par rapport à la liste.
 
 ## Spécifications
 
@@ -185,4 +232,13 @@ p {
 
 ## Voir aussi
 
+- Les autres propriétés CSS {{CSSxRef("background")}}&nbsp;:
+  - {{CSSxRef("background-clip")}}
+  - {{CSSxRef("background-color")}}
+  - {{CSSxRef("background-image")}}
+  - {{CSSxRef("background-origin")}}
+  - {{CSSxRef("background-position")}}
+  - {{CSSxRef("background-repeat")}}
+  - {{CSSxRef("background-size")}}
 - [Utiliser plusieurs arrière-plans](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- Le module [de fond et de bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Splash_page
 original_slug: Learn_web_development/Core/Structuring_content/Mozilla_splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técnicas mostradas en los artículos de este módulo, ¡para que tú agregues algunas imágenes y videos a una página de bienvenida de Mozzilla!.
 

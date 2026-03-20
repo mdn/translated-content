@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 original_slug: Learn/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
 

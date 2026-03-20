@@ -39,9 +39,8 @@ arr.reduce(callback[accumulator, currentValue, currentIndex, array], initialValu
       - : 原陣列目前所迭代處理中的元素之索引。若有傳入 `initialValue`，則由索引 0 之元素開始，若無則自索引 1 之元素開始。
     - `array` {{optional_inline}}
       - : 呼叫 `reduce()` 方法的陣列。
-
-  - `initialValue` {{optional_inline}}
-    - : 於第一次呼叫 `callback` 時要傳入的累加器初始值。若沒有提供初始值，則原陣列的第一個元素將會被當作初始的累加器。假如於一個空陣列呼叫 `reduce()` 方法且沒有提供累加器初始值，將會發生錯誤。
+- `initialValue` {{optional_inline}}
+  - : 於第一次呼叫 `callback` 時要傳入的累加器初始值。若沒有提供初始值，則原陣列的第一個元素將會被當作初始的累加器。假如於一個空陣列呼叫 `reduce()` 方法且沒有提供累加器初始值，將會發生錯誤。
 
 ### 回傳值
 

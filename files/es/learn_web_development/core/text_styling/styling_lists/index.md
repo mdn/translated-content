@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_lists
 original_slug: Learn/CSS/Styling_text/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 Las [listas](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists) se comportan como cualquier otro texto en su mayor parte, pero hay algunas propiedades CSS específicas de las listas que debes conocer y algunas prácticas recomendadas a tener en cuenta. Este artículo te lo explica.
 

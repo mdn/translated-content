@@ -1,24 +1,28 @@
 ---
-title: Window.parent
+title: "Window : propriété parent"
+short-title: parent
 slug: Web/API/Window/parent
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
-La propriété **`Window.parent`** est une référence au parent de la fenêtre ou du cadre embarqué (<i lang="en">subframe</i>).
+La propriété **`parent`** de l'interface {{DOMxRef("Window")}} est une référence au parent
+de la fenêtre ou du sous-cadre (<i lang="en">subframe</i>).
 
 Si une fenêtre n'a pas de parent, la propriété `parent` sera une référence à elle-même.
 
-Lorsqu'une fenêtre est chargée dans un élément [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), ou [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame), son parent correspond à la fenêtre de l'élément qui embarque la fenêtre.
+Lorsqu'une fenêtre est chargée dans un élément {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, ou {{HTMLElement("frame")}}, son parent correspond à la fenêtre de l'élément qui embarque la fenêtre.
 
 ## Valeur
 
-Un objet `Window` ou [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe).
+Un objet `Window` ou {{HTMLElement("iframe")}}.
 
 ## Exemples
 
 ```js
-if (window.parent != window.top) {
+if (window.parent !== window.top) {
   // Nous sommes à plus d'un niveau de profondeur
 }
 ```
@@ -33,5 +37,5 @@ if (window.parent != window.top) {
 
 ## Voir aussi
 
-- [`window.frameElement`](/fr/docs/Web/API/Window/frameElement) renvoie l'élément spécifique (par exemple `<iframe>`) dans lequel `window` est embarqué.
-- [`window.top`](/fr/docs/Web/API/Window/top) renvoie une référence à la fenêtre de plus haut niveau.
+- La propriété {{DOMxRef("window.frameElement")}} retourne l'élément spécifique (par exemple `<iframe>`) dans lequel `window` est embarqué.
+- La propriété {{DOMxRef("Window.top")}} retourne une référence à la fenêtre de plus haut niveau.

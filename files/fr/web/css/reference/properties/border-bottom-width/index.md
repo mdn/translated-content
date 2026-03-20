@@ -2,7 +2,7 @@
 title: border-bottom-width
 slug: Web/CSS/Reference/Properties/border-bottom-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 893eb2dfe0ce3e837b3a7512a684b2f02e31d64e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
@@ -74,11 +74,11 @@ border-bottom-width: unset;
 - `<line-width>`
   - : Définit l'épaisseur de la bordure, soit comme une longueur ({{CSSxRef("&lt;length&gt;")}}) explicite et non négative, soit comme un mot-clé. Si c'est un mot-clé, il doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
+      - Identique à `1px`.
     - `medium` (intermédiaire)
+      - Identique à `3px`.
     - `thick` (épais)
-
-> [!NOTE]
-> Comme la spécification ne définit pas l'épaisseur exacte associée à chaque mot-clé, le résultat précis lors de leur utilisation dépend de l'implémentation. Néanmoins, ils suivent toujours le schéma `thin ≤ medium ≤ thick`, et les valeurs sont constantes dans un même document.
+      - Identique à `5px`.
 
 ## Définition formelle
 

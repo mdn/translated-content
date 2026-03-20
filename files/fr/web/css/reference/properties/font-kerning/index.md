@@ -2,7 +2,7 @@
 title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-kerning`** définit l'utilisation des informations de crénage stockées dans une police.

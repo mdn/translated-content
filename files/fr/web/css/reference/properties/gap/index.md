@@ -2,7 +2,7 @@
 title: gap
 slug: Web/CSS/Reference/Properties/gap
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 18257cdbf1d31e61780c52ef36e6fd582eba8d3c
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`gap`** définit les espaces (également appelés {{Glossary("gutters", "gouttières")}}) entre les lignes et les colonnes. Cette propriété s'applique aux conteneurs [multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout), [flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout) et [grilles](/fr/docs/Web/CSS/Guides/Grid_layout).
@@ -61,8 +61,8 @@ gap: calc(20px + 10%);
 
 Cette propriété est une version abrégée pour les propriétés CSS suivantes&nbsp;:
 
-- {{CSSxRef("column-gap")}}
 - {{CSSxRef("row-gap")}}
+- {{CSSxRef("column-gap")}}
 
 ## Syntaxe
 

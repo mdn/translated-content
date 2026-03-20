@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Models
 original_slug: Learn/Server-side/Django/Models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django/Admin_site", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.
 
