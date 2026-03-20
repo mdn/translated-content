@@ -3,7 +3,7 @@ title: "ARIA: option ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 original_slug: Web/Accessibility/ARIA/Roles/option_role
 l10n:
-  sourceCommit: f6310f5cf34dfe4b5c0a45494a83b0a5ef9a6571
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `option` ロールは `listbox` で選択可能な項目に使用します。

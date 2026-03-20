@@ -3,7 +3,7 @@ title: "ARIA: spinbutton ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 original_slug: Web/Accessibility/ARIA/Roles/spinbutton_role
 l10n:
-  sourceCommit: 15495ec2cf79a6677a523629925ee269343d4bf0
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `spinbutton` ロールは、ユーザーに離散的な選択肢の中から値を選択することを期待する範囲選択の型を定義します。
