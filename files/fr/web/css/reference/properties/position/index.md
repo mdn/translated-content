@@ -1,14 +1,13 @@
 ---
 title: position
 slug: Web/CSS/Reference/Properties/position
-original_slug: Web/CSS/position
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}, et les propriétés logiques relatives au flux {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} et {{CSSxRef("inset-inline-end")}} peuvent être utilisées pour déterminer l'emplacement final des éléments positionnés.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés [`top`](/fr/docs/Web/CSS/Reference/Properties/top), [`right`](/fr/docs/Web/CSS/Reference/Properties/right), [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom) et [`left`](/fr/docs/Web/CSS/Reference/Properties/left) déterminent l'emplacement final de l'élément positionné.
-
-{{InteractiveExample("CSS Demo: position")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: position")}}
 
 ```css interactive-example-choice
 position: static;
@@ -22,8 +21,8 @@ left: 40px;
 
 ```css interactive-example-choice
 position: absolute;
-top: 40px;
-left: 40px;
+inset-inline-start: 40px;
+inset-block-start: 40px;
 ```
 
 ```css interactive-example-choice
@@ -35,33 +34,34 @@ top: 20px;
 <section class="default-example" id="default-example">
   <div id="example-element-container">
     <p>
-      In this demo you can control the <code>position</code> property for the
-      yellow box.
+      Dans cette démo, vous pouvez contrôler la propriété
+      <code>position</code> pour la boîte jaune.
     </p>
     <div class="box"></div>
     <div class="box" id="example-element"></div>
     <div class="box"></div>
     <p class="clear">
-      To see the effect of <code>sticky</code> positioning, select the
-      <code>position: sticky</code> option and scroll this container.
+      Pour voir l'effet du positionnement <code>sticky</code>, sélectionnez
+      l'option <code>position: sticky</code> et faites défiler ce conteneur.
     </p>
     <p>
-      The element will scroll along with its container, until it is at the top
-      of the container (or reaches the offset specified in <code>top</code>),
-      and will then stop scrolling, so it stays visible.
+      L'élément défilera avec son conteneur, jusqu'à ce qu'il atteigne le haut
+      du conteneur (ou atteigne le décalage défini dans
+      <code>top</code>), puis il cessera de défiler, restant ainsi visible.
     </p>
     <p>
-      The rest of this text is only supplied to make sure the container
-      overflows, so as to enable you to scroll it and see the effect.
+      Le reste de ce texte est fourni uniquement pour s'assurer que le conteneur
+      déborde, afin de vous permettre de le faire défiler et de voir l'effet.
     </p>
     <hr />
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      Au fin fond des confins inexplorés de la partie la moins en vue du bras
+      spiral ouest de la Galaxie se trouve un petit soleil jaune dont personne
+      ne se soucie. En orbite autour de lui, à une distance d'environ 148
+      millions de kilomètres, tourne une petite planète bleu-vert tout à fait
+      insignifiante, dont les formes de vie issues du singe sont si
+      incroyablement primitives qu'elles trouvent encore les montres numériques
+      plutôt géniales.
     </p>
   </div>
 </section>
@@ -74,7 +74,7 @@ section {
 }
 
 .box {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   float: left;
   width: 65px;
@@ -115,74 +115,77 @@ position: sticky;
 position: inherit;
 position: initial;
 position: revert;
+position: revert-layer;
 position: unset;
 ```
 
 ### Valeurs
 
 - `static`
-  - : Comportement normal (par défaut). L'élément est alors positionné dans le flux avec sa position. Les propriétés [`top`](/fr/docs/Web/CSS/Reference/Properties/top), [`right`](/fr/docs/Web/CSS/Reference/Properties/right), [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom), [`left`](/fr/docs/Web/CSS/Reference/Properties/left) et [`z-index`](/fr/docs/Web/CSS/Reference/Properties/z-index) ne s'appliquent pas.
-
+  - : L'élément est positionné selon le [flux normal](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow) du document. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("z-index")}} n'ont _aucun effet_. C'est la valeur par défaut.
 - `relative`
-  - : L'élément est positionné dans le flux normal du document puis décalé, par rapport à lui-même, selon les valeurs fournies par `top`, `right`, `bottom` et `left`. Le décalage n'a pas d'impact sur la position des éléments. Aussi, l'espace fourni à l'élément sur la page est le même que celui fourni avec `static`.
+  - : L'élément est positionné selon le flux normal du document, puis décalé _par rapport à lui-même_ en fonction des valeurs de `top`, `right`, `bottom` et `left`. Le décalage n'affecte pas la position des autres éléments&nbsp;; ainsi, l'espace réservé à l'élément dans la mise en page de la page est le même que si la position était `static`.
 
-    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. L'effet de cette valeur n'est pas défini pour les éléments `table-*-group`, `table-row`, `table-column`, `table-cell` et `table-caption`.
+    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) lorsque la valeur de `z-index` n'est pas `auto`. Son effet sur les éléments `table-*-group`, `table-row`, `table-column`, `table-cell` et `table-caption` est indéfini.
 
 - `absolute`
-  - : L'élément est retiré du flux normal et aucun espace n'est créé pour l'élément sur la page. Il est ensuite positionné par rapport à son ancêtre le plus proche qui est positionné s'il y en a un ou par rapport au bloc englobant initial sinon. La position finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
+  - : L'élément est retiré du flux normal du document, et aucun espace n'est créé pour l'élément dans la mise en page de la page. L'élément est positionné par rapport à son ancêtre positionné le plus proche (le cas échéant) ou par rapport au [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant) initial. Sa position finale est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
-    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. Les éléments positionnés de façon absolue peuvent avoir des marges, ces marges ne fusionnent pas avec les autres marges.
+    Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) lorsque la valeur de `z-index` n'est pas `auto`. Les marges des boîtes positionnées absolument ne se [combinent pas](/fr/docs/Web/CSS/Guides/Box_model/Margin_collapsing) avec d'autres marges.
 
 - `fixed`
-  - : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage (<i lang="en">viewport</i>), sauf si un des ancêtres a une propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform), [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective) ou [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) qui est différente de `none` (voir [la spécification sur les transformations CSS](https://www.w3.org/TR/css-transforms-1/#propdef-transform))&nbsp;; dans ce cas, c'est l'élément ancêtre qui joue le rôle de bloc englobant. Cela empêche le défilement lorsque la page est parcourue (ou lors de l'impression, le positionne à cette position fixe pour _chaque page_). Cette valeur crée toujours un nouveau contexte d'empilement. Certaines incohérences existent entre les navigateurs quant au rôle de `perspective` et `filter` pour la définition du bloc englobant. La valeur finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
+  - : L'élément est retiré du flux normal du document, et aucun espace n'est créé pour l'élément dans la mise en page de la page. L'élément est positionné par rapport à son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant) initial, qui est la fenêtre d'affichage dans le cas des médias visuels. Sa position finale est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
-    Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). Pour les documents imprimés, cela se traduit par le placement de l'élément au même endroit pour _chacune des pages_.
+    Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). Dans les documents imprimés, l'élément est placé à la même position sur _chaque page_.
 
 - `sticky`
-  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
+  - : L'élément est positionné selon le flux normal du document, puis décalé par rapport à son _ancêtre défilant le plus proche_ et à son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) (l'ancêtre de niveau bloc le plus proche), y compris les éléments liés aux tableaux, en fonction des valeurs de `top`, `right`, `bottom` et `left`. Le décalage n'affecte pas la position des autres éléments.
 
-    Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément «&nbsp;adhèrera&nbsp;» à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche&nbsp;: cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf. cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
+    Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). Notez qu'un élément attaché «&nbsp;adhère&nbsp;» à son ancêtre le plus proche qui possède un «&nbsp;mécanisme de défilement&nbsp;» (créé lorsque `overflow` est `hidden`, `scroll`, `auto` ou `overlay`), même si cet ancêtre n'est pas le plus proche ancêtre réellement défilant.
+
+    > [!NOTE]
+    > Au moins une propriété [d'encart](/fr/docs/Web/CSS/Reference/Properties/inset) ({{CSSxRef("top")}}, {{CSSxRef("inset-block-start")}}, {{CSSxRef("right")}}, {{CSSxRef("inset-inline-end")}}, etc.) doit être définie avec une valeur différente de `auto` pour l'axe sur lequel l'élément doit être rendu adhérent. Si les deux propriétés `inset` pour un axe sont définies sur `auto`, sur cet axe la valeur `sticky` se comportera comme `relative`.
 
 ## Description
 
 ### Types de positionnement
 
-- Un **élément positionné** est un élément dont la propriété de position [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing) est `relative`, `absolute`, `fixed` ou `sticky`.
-- Un **élément positionné de façon relative** est un élément dont la propriété de position calculée est `relative`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/Reference/Properties/top) ou [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom) indiquent le décalage vertical à appliquer et [`left`](/fr/docs/Web/CSS/Reference/Properties/left) ou [`right`](/fr/docs/Web/CSS/Reference/Properties/right) indiquent le décalage horizontal.
-- Un **élément positionné de façon absolue** est un élément dont la propriété de position calculée est `absolute` ou `fixed`. Dans ce cas, les propriétés [`top`](/fr/docs/Web/CSS/Reference/Properties/top), [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom), [`right`](/fr/docs/Web/CSS/Reference/Properties/right) et [`left`](/fr/docs/Web/CSS/Reference/Properties/left) indiquent les distances entre les bords de l'élément et les bords du bloc englobant (c'est-à-dire l'ancêtre par rapport auquel l'élément est positionné). Si l'élément possède des marges, elles sont ajoutées aux décalages.
-- Un **élément positionné en adhérence** est un élément dont la propriété de position calculée vaut `sticky`. Un tel élément se comporte comme un élément positionné de façon relative jusqu'à ce que son bloc englobant dépasse un seuil donné (par exemple fourni par la valeur de [`top`](/fr/docs/Web/CSS/Reference/Properties/top)) au sein du conteneur puis il se comporte ensuite comme un élément fixe jusqu'à atteindre le bord opposé du bloc englobant.
+- Un **élément positionné** est un élément dont la valeur [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) de la propriété `position` est soit `relative`, `absolute`, `fixed` ou `sticky`. (En d'autres termes, il s'agit de toute valeur autre que `static`.)
+- Un **élément positionné relativement** est un élément dont la valeur [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) de la propriété `position` est `relative`. Les propriétés {{CSSxRef("top")}} et {{CSSxRef("bottom")}} définissent le décalage vertical par rapport à sa position normale&nbsp;; les propriétés {{CSSxRef("left")}} et {{CSSxRef("right")}} définissent le décalage horizontal.
+- Un **élément positionné absolument** est un élément dont la valeur [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) de la propriété `position` est `absolute` ou `fixed`. Les propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}} définissent les décalages par rapport aux bords du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément. (Le bloc englobant est l'ancêtre par rapport auquel l'élément est positionné.) Si l'élément a des marges, elles sont ajoutées au décalage. L'élément crée un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context) (BFC) pour son contenu.
+- Un **élément positionné de manière adhérente** est un élément dont la valeur [calculée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée) de la propriété `position` est `sticky`. Il est traité comme positionné relativement jusqu'à ce que son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) dépasse un seuil défini (par exemple, en définissant {{CSSxRef("top")}} sur une valeur autre que auto) dans sa racine de flux (ou le conteneur dans lequel il défile), auquel cas il est traité comme «&nbsp;collé&nbsp;» jusqu'à ce qu'il rencontre le bord opposé de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block).
 
-La plupart du temps, les éléments positionnés de façon absolue ont leurs propriétés [`height`](/fr/docs/Web/CSS/Reference/Properties/height) et [`width`](/fr/docs/Web/CSS/Reference/Properties/width) qui valent `auto` afin que le contenu ait suffisamment d'espace. Toutefois, les éléments positionnés de façon absolue et qui ne sont pas des éléments remplacés peuvent remplir l'espace vertical en utilisant [`top`](/fr/docs/Web/CSS/Reference/Properties/top) et [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom) tout en laissant [`height`](/fr/docs/Web/CSS/Reference/Properties/height) indéfini (c'est-à-dire avec la valeur `auto`). On pourra faire de même pour l'espace horizontal avec les propriétés [`left`](/fr/docs/Web/CSS/Reference/Properties/left) et [`right`](/fr/docs/Web/CSS/Reference/Properties/right).
+La plupart du temps, les éléments positionnés absolument qui ont {{CSSxRef("height")}} et {{CSSxRef("width")}} définis sur `auto` sont dimensionnés de manière à s'adapter à leur contenu. Cependant, les éléments positionnés absolument non {{Glossary("Replaced_elements", "remplacés")}} peuvent être configurés pour remplir l'espace vertical disponible en définissant à la fois {{CSSxRef("top")}} et {{CSSxRef("bottom")}} et en laissant {{CSSxRef("height")}} non défini (c'est-à-dire `auto`). Ils peuvent de même être configurés pour remplir l'espace horizontal disponible en définissant à la fois {{CSSxRef("left")}} et {{CSSxRef("right")}} et en laissant {{CSSxRef("width")}} sur `auto`.
 
-Sauf dans le cas précédemment énoncé des éléments positionnés de façon absolue et qui remplissent l'espace&nbsp;:
+À l'exception du cas décrit ci-dessus (des éléments positionnés absolument remplissant l'espace disponible)&nbsp;:
 
-- Si `top` et `bottom` sont tous les deux définis (enfin, s'ils ne valent pas `auto`), c'est `top` qui aura la priorité
-- Si `left` et `right` sont tous les deux définis, c'est `left` qui aura la priorité si la direction du texte est de gauche à droite (LTR) et `right` qui aura la priorité si la direction du texte est de droite à gauche (RTL) (par exemple en perse, arabe, hébreu).
+- Si `top` et `bottom` sont tous deux définis (techniquement, pas `auto`), `top` prévaut.
+- Si `left` et `right` sont tous deux définis, `left` prévaut lorsque {{CSSxRef("direction")}} est `ltr` (anglais, japonais horizontal, etc.) et `right` prévaut lorsque {{CSSxRef("direction")}} est `rtl` (persan, arabe, hébreu, etc.).
 
 ## Accessibilité
 
-Il faut s'assurer que les éléments positionnés avec `absolute` ou `fixed` ne masquent pas d'autre contenu sur la page lorsqu'on zoome sur la page afin d'augmenter la taille du texte.
+Assurez-vous que les éléments positionnés avec une valeur `absolute` ou `fixed` ne masquent pas d'autres contenus lorsque la page est zoomée pour augmenter la taille du texte.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Présentation visuelle&nbsp;: comprendre les critères de succès 1.4.8 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [Comprendre le WCAG sur MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Présentation visuelle&nbsp;: Comprendre SC 1.4.8 | Comprendre le WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### Performance et accessibilité
 
-Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuvent entraîner des problèmes de performance et d'accessibilité. Lorsque l'utilisatrice ou l'utilisateur fait défiler le contenu, le navigateur doit «&nbsp;repeindre&nbsp;» le contenu adhérant ou fixé à un nouvel emplacement. Selon le contenu qui doit être repeint, les performances du navigateur et celles de l'appareil, il est possible que le contenu ne soit pas affiché de façon fluide (60fps), créant ainsi des saccades. Une solution consiste à ajouter `will-change: transform` (cf. [`will-change`](/fr/docs/Web/CSS/Reference/Properties/will-change)) aux éléments positionnés afin que le rendu de l'élément soit géré à part, améliorant ainsi les performances et l'accessibilité.
+Les éléments défilants contenant du contenu `fixed` ou `sticky` peuvent causer des problèmes de performance et d'accessibilité. Lorsque l'utilisateur·ice fait défiler la page, le navigateur doit repeindre le contenu adhérant ou fixe à un nouvel emplacement. En fonction du contenu à repeindre, des performances du navigateur et de la vitesse de traitement de l'appareil, le navigateur peut ne pas être capable de gérer les repeints à 60 fps. Un tel scénario peut entraîner des {{Glossary("Jank", "saccades")}} et, plus important encore, des problèmes d'accessibilité pour les personnes sensibles. Une solution consiste à ajouter {{CSSxRef("will-change", "will-change: transform")}} aux éléments positionnés pour rendre l'élément dans sa propre couche, améliorant ainsi la vitesse de repeint et donc les performances et l'accessibilité.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Positionnement relatif
 
-Dans cet exemple, on voit comment les autres éléments sont positionnés, comme si «&nbsp;Deux&nbsp;» prenait l'espace de sa position normale.
+Les éléments positionnés relativement sont décalés d'une certaine distance par rapport à leur position normale dans le document, mais sans que ce décalage n'affecte les autres éléments. Dans l'exemple ci-dessous, notez comment les autres éléments sont placés comme si «&nbsp;Deux&nbsp;» occupait l'espace de sa position normale.
 
 #### HTML
 
@@ -208,7 +211,7 @@ Dans cet exemple, on voit comment les autres éléments sont positionnés, comme
   color: white;
 }
 
-#deux {
+#two {
   position: relative;
   top: 20px;
   left: 20px;
@@ -218,13 +221,11 @@ Dans cet exemple, on voit comment les autres éléments sont positionnés, comme
 
 #### Résultat
 
-{{EmbedLiveSample('', '600px', '200px')}}
+{{EmbedLiveSample("Positionnement relatif", "", 200)}}
 
 ### Positionnement absolu
 
-Les éléments qui sont positionnés de façon relative sont toujours pris en compte dans le flux normal des éléments du document. En revanche, les éléments positionnés de façon absolue sont retirés du flux et ne prennent donc plus d'espace lorsqu'il s'agit de positionner les autres éléments. Un élément positionné de façon absolue est positionné par rapport à son plus proche ancêtre positionné. S'il n'y a pas de tel ancêtre, c'est le conteneur initial, le bloc englobant la racine du document, qui est utilisé (voir [la définition du W3C](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)).
-
-Dans l'exemple qui suit, on n'a pas d'ancêtre positionné et la boîte «&nbsp;Trois&nbsp;» est positionnée de façon absolue par rapport à l'ancêtre immédiat (l'élément `<body>` de l'`iframe` générée ici)&nbsp;:
+Les éléments positionnés relativement restent dans le flux normal du document. En revanche, un élément positionné de manière absolue est retiré du flux&nbsp;; ainsi, les autres éléments sont positionnés comme s'il n'existait pas. L'élément positionné de manière absolue est positionné par rapport à son _ancêtre positionné le plus proche_ (c'est-à-dire l'ancêtre le plus proche qui n'est pas `static`). Si aucun ancêtre positionné n'existe, il est positionné par rapport au ICB ([initial containing block <sup>(angl.)</sup>](https://drafts.csswg.org/css-display/#initial-containing-block)), qui est le bloc englobant de l'élément racine du document.
 
 #### HTML
 
@@ -246,11 +247,12 @@ Dans l'exemple qui suit, on n'a pas d'ancêtre positionné et la boîte «&nbsp;
 </p>
 
 <p>
-  Les éléments <em>en ligne (inline)</em> <span>comme celui-ci</span> et
-  <span>celui-là</span> se situent sur la même ligne avec également les nœuds
-  texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent
+  les éléments en ligne <span>comme celui-ci</span> et <span>celui-là</span> se
+  situent sur la même ligne avec également les nœuds de texte. S'il y a de
+  l'espace sur la même ligne. Les éléments qui dépassent
   <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette
-  image <img src="long.jpg" />
+  image
+  <img src="https://mdn.github.io/shared-assets/images/examples/long.jpg" />
 </p>
 ```
 
@@ -281,18 +283,18 @@ span {
 .positioned {
   position: absolute;
   background: yellow;
-  top: 30px;
-  left: 30px;
+  inset-block-start: 30px;
+  inset-inline-start: 30px;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('', '100%', 420)}}
+{{EmbedLiveSample("Positionnement absolu", "100%", 420)}}
 
 ### Positionnement fixe
 
-Le positionnement fixe est semblable au positionnement absolu sauf qu'ici, le bloc englobant correspond à la zone d'affichage (<i lang="en">viewport</i>) si aucun ancêtre de l'élément ne possède une propriété [`transform`](/fr/docs/Web/CSS/Reference/Properties/transform), [`perspective`](/fr/docs/Web/CSS/Reference/Properties/perspective) ou [`filter`](/fr/docs/Web/CSS/Reference/Properties/filter) qui est différente de `none`. On utilise souvent ce positionnement pour créer un élément flottant qui reste à la même position, même lorsqu'on fait défiler la page. Dans l'exemple qui suit, la boîte «&nbsp;Un&nbsp;» est fixée à 80 pixels du haut de la page et à 20 pixels du bord gauche.
+Le positionnement fixe est similaire au positionnement absolu, à la différence que le [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément est le bloc englobant initial établi par la _zone d'affichage_, sauf si un ancêtre possède une propriété `transform`, `perspective` ou `filter` définie sur une valeur autre que `none` (voir [bloc englobant pour le positionnement fixe <sup>(angl.)</sup>](https://drafts.csswg.org/css-position/#fixed-positioning-containing-block)), auquel cas cet ancêtre prend la place du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block) de l'élément. Cela permet de créer un élément «&nbsp;flottant&nbsp;» qui reste à la même position, quel que soit le défilement. Dans l'exemple ci-dessous, la boîte «&nbsp;Un&nbsp;» est fixée à 80 pixels du haut de la page et à 10 pixels de la gauche. Même après défilement, elle reste à la même place par rapport à la _zone d'affichage_. De plus, lorsque la propriété {{CSSxRef("will-change")}} est définie sur `transform`, un nouveau bloc englobant est établi.
 
 #### HTML
 
@@ -359,13 +361,11 @@ Le positionnement fixe est semblable au positionnement absolu sauf qu'ici, le bl
 
 #### Résultat
 
-Lorsqu'on regarde le haut de la page, la boîte apparaît en haut à gauche, même après avoir défilé, elle reste à la même place par rapport à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;:
+{{EmbedLiveSample("Positionnement fixe", "", 300)}}
 
-{{EmbedLiveSample('', '800px', '300px')}}
+### Positionnement adhérent
 
-### Positionnement adhérent (<i lang="en">sticky</i>)
-
-Le positionnement adhérent est un mélange de positionnement relatif et de positionnement fixe. L'élément est considéré comme positionné de façon relative, jusqu'à ce qu'un seuil soit franchi. À partir de ce seuil, l'élément est positionné de façon fixe. Par exemple&nbsp;:
+La règle CSS suivante positionne l'élément avec l'identifiant `un` de manière relative jusqu'à ce que la zone d'affichage soit défilée de sorte que l'élément soit à 10 pixels du haut. Au-delà de ce seuil, l'élément est fixé à 10 pixels du haut.
 
 ```css
 #un {
@@ -374,13 +374,13 @@ Le positionnement adhérent est un mélange de positionnement relatif et de posi
 }
 ```
 
-positionnera l'élément avec l'identifiant `un` de façon relative jusqu'à ce que la zone d'affichage défile au point où l'élément est à moins de 10 pixels du haut. Ensuite, il sera fixé à 10 pixels du haut, jusqu'à ce que la zone d'affichage redéfile jusqu'avant ce seuil.
+#### Liste avec des en-têtes adhérents
 
-Le positionnement adhérent est souvent utilisé pour gérer les niveaux de titre dans les listes alphabétiques. Le titre pour B apparaîtra sous les éléments commençant par A jusqu'à ce que ceux-ci disparaissent de l'écran. Plutôt que de défiler avec le reste de l'écran, la lettre B restera affichée en haut de la zone d'affichage jusqu'à ce que tous les éléments commençant par B aient défilés sur l'écran (ce sera ensuite le tour de la lettre C et ainsi de suite).
+Une utilisation courante du positionnement adhérent est pour les en-têtes dans une liste alphabétique. L'en-tête «&nbsp;B&nbsp;» apparaîtra juste en dessous des éléments commençant par «&nbsp;A&nbsp;» jusqu'à ce qu'ils soient défilés hors de l'écran. Plutôt que de glisser hors de l'écran avec le reste du contenu, l'en-tête «&nbsp;B&nbsp;» restera fixé en haut de la zone d'affichage jusqu'à ce que tous les éléments «&nbsp;B&nbsp;» aient été défilés hors de l'écran, moment auquel il sera recouvert par l'en-tête «&nbsp;C&nbsp;», et ainsi de suite.
 
-Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/Reference/Properties/top) ou [`right`](/fr/docs/Web/CSS/Reference/Properties/right) ou [`bottom`](/fr/docs/Web/CSS/Reference/Properties/bottom) ou [`left`](/fr/docs/Web/CSS/Reference/Properties/left) pour que le positionnement adhérent fonctionne comme attendu. Sinon, on ne pourra pas le distinguer du positionnement relatif.
+Vous devez définir un seuil avec au moins une des propriétés `top`, `right`, `bottom` ou `left` pour que le positionnement adhérent fonctionne comme prévu. Sinon, il sera indiscernable du positionnement relatif.
 
-#### HTML
+##### HTML
 
 ```html
 <dl>
@@ -406,7 +406,7 @@ Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/Reference/Prope
   </div>
   <div>
     <dt>T</dt>
-    <dd>Ted Leo & The Pharmacists</dd>
+    <dd>Ted Leo &amp; The Pharmacists</dd>
     <dd>T-Pain</dd>
     <dd>Thrice</dd>
     <dd>TV On The Radio</dd>
@@ -415,7 +415,7 @@ Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/Reference/Prope
 </dl>
 ```
 
-#### CSS
+##### CSS
 
 ```css
 * {
@@ -423,18 +423,18 @@ Il faut définir un seuil avec au moins [`top`](/fr/docs/Web/CSS/Reference/Prope
 }
 
 dl > div {
-  background: #fff;
-  padding: 24px 0 0 0;
+  background: white;
+  padding-top: 24px;
 }
 
 dt {
   background: #b8c1c8;
   border-bottom: 1px solid #989ea4;
   border-top: 1px solid #717d85;
-  color: #fff;
+  color: white;
   font:
-    bold 18px/21px Helvetica,
-    Arial,
+    bold 18px/21px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
   padding: 2px 0 0 12px;
@@ -445,22 +445,88 @@ dt {
 
 dd {
   font:
-    bold 20px/45px Helvetica,
-    Arial,
+    bold 20px/45px "Helvetica",
+    "Arial",
     sans-serif;
   margin: 0;
-  padding: 0 0 0 12px;
+  padding-left: 12px;
   white-space: nowrap;
 }
 
 dd + dd {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 ```
 
-#### Résultat
+##### Résultat
 
-{{EmbedLiveSample('', '500px', '300px')}}
+{{EmbedLiveSample("Liste avec des en-têtes adhérents", "", 300)}}
+
+#### Positionnement adhérent avec toutes les limites définies
+
+L'exemple suivant démontre le comportement d'un élément lorsque toutes les limites sont définies. Ici, nous avons deux emojis d'ampoule dans un paragraphe. Les ampoules utilisent le positionnement adhérent, et les limites sont définies à 50px du haut, 100px de la droite, 50px du bas et 50px de la gauche. Un fond gris sur l'élément div parent marque la zone des limites.
+
+##### HTML
+
+```html
+Utilisez les barres de défilement pour placer les ampoules (💡) au bon endroit
+dans le texte suivant&nbsp;:
+<div>
+  <p>
+    La représentation d'une idée par une ampoule (<span class="bulb">💡</span>)
+    est une métaphore couramment utilisée qui symbolise le moment d'inspiration
+    ou la naissance d'une nouvelle idée. L'association entre une ampoule et une
+    idée peut être retracée jusqu'à l'invention de l'ampoule à incandescence
+    (<span class="bulb">💡</span>) par Thomas Edison à la fin du 19ème siècle.
+    L'ampoule est un symbole puissant car elle représente l'illumination, la
+    clarté et l'éclaircissement soudain des pensées ou de la compréhension.
+    Lorsqu'une personne a une idée, on décrit souvent cela comme une ampoule qui
+    s'allume dans son esprit, signifiant un moment d'intuition ou de créativité.
+    L'image d'une ampoule suggère également l'idée d'énergie, de puissance et de
+    potentiel de croissance et de développement.
+  </p>
+</div>
+```
+
+##### CSS
+
+```css hidden
+div {
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  font-size: 16px;
+  font-family: "Verdana";
+  border: 1px solid;
+}
+
+p {
+  width: 600px;
+  user-select: none;
+  margin: 0;
+  border: 110px solid transparent;
+}
+```
+
+```css
+.bulb {
+  position: sticky;
+  inset: 50px 100px;
+}
+
+div {
+  /* marquer la zone définie par les limites inset en utilisant une couleur grise */
+  background: linear-gradient(#99999999, #99999999) 100px 50px / 192px 100px
+    no-repeat;
+}
+```
+
+##### Résultat
+
+{{EmbedLiveSample("Positionnement adhérent avec toutes les limites définies", "", 300)}}
+
+Lorsque vous placez les deux ampoules à leur place correcte, vous remarquerez qu'elles sont positionnées relativement à l'intérieur de la zone définie par les limites inset. Lorsque vous les déplacez en dehors de cette zone, elles restent fixes (adhérentes) à la limite inset dans cette direction.
 
 ## Spécifications
 
@@ -472,4 +538,7 @@ dd + dd {
 
 ## Voir aussi
 
-- [Apprendre le CSS&nbsp;: le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- L'entrée de glossaire {{Glossary("Inset properties", "Propriétés d'encart")}}
+- [Apprendre&nbsp;: Le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Propriétés d'encart pour la disposition positionnée](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Floating_and_positioning#exemple_des_propriétés_inset_pour_les_dispositions_positionnées)
+- Le module [de disposition positionnée CSS](/fr/docs/Web/CSS/Guides/Positioned_layout)
