@@ -1,14 +1,13 @@
 ---
 title: perspective
 slug: Web/CSS/Reference/Properties/perspective
-original_slug: Web/CSS/perspective
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`perspective`** détermine la distance entre le plan d'équation `z = 0` et la position de l'utilisateur·ice afin de donner une perspective aux éléments positionnés en 3D.
 
-La propriété **`perspective`** détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété.
-
-{{InteractiveExample("CSS Demo: perspective")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: perspective")}}
 
 ```css interactive-example-choice
 perspective: none;
@@ -66,41 +65,35 @@ perspective: 5.5cm;
 }
 
 .front {
-  background: rgba(90, 90, 90, 0.7);
+  background: rgb(90 90 90 / 0.7);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
+  background: rgb(0 210 0 / 0.7);
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210, 0, 0, 0.7);
+  background: rgb(210 0 0 / 0.7);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 210, 0.7);
+  background: rgb(0 0 210 / 0.7);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
+  background: rgb(210 210 0 / 0.7);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
+  background: rgb(210 0 210 / 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété `perspective`) ne sont pas dessiné.
-
-Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.
-
-Si on utilise cette propriété avec une valeur différente de `0` ou `none`, cela créera un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index/L'empilement_de_couches). Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont `position: fixed` ou `position: absolute`
 
 ## Syntaxe
 
@@ -108,14 +101,15 @@ Si on utilise cette propriété avec une valeur différente de `0` ou `none`, ce
 /* Valeur avec un mot-clé */
 perspective: none;
 
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 perspective: 20px;
 perspective: 3.5em;
 
 /* Valeurs globales */
 perspective: inherit;
 perspective: initial;
+perspective: revert;
+perspective: revert-layer;
 perspective: unset;
 ```
 
@@ -123,8 +117,19 @@ perspective: unset;
 
 - `none`
   - : Un mot-clé qui indique qu'on n'applique aucune perspective.
-- `<length>`
-  - : Une longueur (une valeur de type {{cssxref("&lt;length&gt;")}}) qui indique la distance entre l'utilisateur et le plan d'équation z = 0. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Si elle vaut `0` ou qu'elle est négative, aucune transformation de perspective ne sera appliquée.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Une longueur qui indique la distance entre l'utilisateur·ice et le plan d'équation `z = 0`. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Les valeurs négatives sont des erreurs de syntaxe. Si la valeur est inférieure à `1px`, elle est ramenée à `1px`.
+
+## Description
+
+Chaque élément 3D avec `z>0` devient plus grand&nbsp;; chaque élément 3D avec `z<0` devient plus petit. L'intensité de l'effet est déterminée par la valeur de cette propriété.
+Les grandes valeurs de `perspective` provoquent une petite transformation&nbsp;; les petites valeurs de `perspective` provoquent une grande transformation.
+
+Les parties des éléments 3D qui se trouvent derrière l'utilisateur·ice — c'est-à-dire dont les coordonnées sur l'axe z sont supérieures à la valeur de la propriété CSS `perspective` — ne sont pas dessinées.
+
+Le _point de fuite_ est par défaut placé au centre de l'élément, mais sa position peut être modifiée en utilisant la propriété {{CSSxRef("perspective-origin")}}.
+
+L'utilisation de cette propriété avec une valeur autre que `none` crée un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). De plus, dans ce cas, l'objet agira comme un bloc contenant pour les éléments `position: fixed` qu'il contient.
 
 ## Définition formelle
 
@@ -136,170 +141,9 @@ perspective: unset;
 
 ## Exemples
 
-### Trois cubes
+### Définir la perspective
 
-#### HTML
-
-```html
-<table>
-  <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code></th>
-      <th><code>perspective: 350px;</code></th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th><code>perspective: 500px;</code></th>
-      <th><code>perspective: 650px;</code></th>
-    </tr>
-    <tr>
-      <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-      <td>
-        <div class="container">
-          <div class="cube pers650">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
-          </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-```css
-/* Des classes pour les différentes valeurs */
-.pers250 {
-  perspective: 250px;
-}
-.pers350 {
-  perspective: 350px;
-}
-.pers500 {
-  perspective: 500px;
-}
-.pers650 {
-  perspective: 650px;
-}
-
-/* On définit le div pour le conteneur, */
-/* le cube, ainsi qu'une face générique */
-.container {
-  width: 200px;
-  height: 200px;
-  margin: 75px 0 0 75px;
-  border: none;
-}
-
-.cube {
-  width: 100%;
-  height: 100%;
-  backface-visibility: visible;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
-}
-
-.face {
-  display: block;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
-  font-size: 60px;
-  color: white;
-  text-align: center;
-}
-
-/* On définit chaque face en fonction de sa direction */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
-}
-
-.back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
-}
-
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-}
-
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-}
-
-.top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-}
-
-.bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-}
-
-/* On améliore légèrement le tableau */
-th,
-p,
-td {
-  background-color: #eeeeee;
-  padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Trois_cubes', 660, 700)}}
+Un exemple montrant comment un cube varie si la `perspective` est définie à différentes positions est donné dans [Utiliser les transformations CSS > Définir la perspective](/fr/docs/Web/CSS/Guides/Transforms/Using#définir_la_perspective).
 
 ## Spécifications
 
