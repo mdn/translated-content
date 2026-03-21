@@ -9,7 +9,7 @@ l10n:
 
 JIT コンパイラは通常、コードの実行中に継続的に解析を行い、頻繁に実行される部分（ホットスポット）を特定します。コンパイルによるオーバーヘッドよりも高速化効果が大きい場合、JIT コンパイラはそれらの部分をマシンコードにコンパイルします。コンパイルされたコードはプロセッサによって直接実行されるため、大幅なパフォーマンス向上につながります。
 
-JIT is commonly used in modern {{glossary("browser", "web browsers")}} to optimize the performance of JavaScript code.
+JIT は、JavaScript コードのパフォーマンスを最適化するために、現代の {{glossary("browser", "ブラウザー")}} で一般的に使用されています。
 
 ## See also
 
