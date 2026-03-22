@@ -1,5 +1,5 @@
 ---
-title: RTCDataChannelStats: messagesReceived 属性
+title: RTCDataChannelStats：messagesReceived 属性
 short-title: messagesReceived
 slug: Web/API/RTCDataChannelStats/messagesReceived
 l10n:
