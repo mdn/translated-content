@@ -1,30 +1,22 @@
 ---
 title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
-original_slug: Web/CSS/@container
 l10n:
-  sourceCommit: 5a195171d06aee3d9c1c78d71c7f0c3a060f5263
+  sourceCommit: 6e46ba1a7ac7aa2268afd0ecd079f221ef6d9af4
 ---
 
 **`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、クエリーされたコンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変化したときに評価されます。
 
-{{cssxref("container-name")}} プロパティは、クエリーコンテナーの名前の一覧を指定します。これらの名前は、対象となるクエリーコンテナーをフィルターするために、`@container` ルールで使用することができます。オプションで、大文字と小文字を区別する `<container-name>` は、クエリーによって対象となるクエリーコンテナーをフィルタリングします。
+条件には、{{cssxref("container-name")}} と `<container-query>` のどちらか、あるいは両方を指定する必要があります。
 
-要素に対して適格なクエリーコンテナーが選択されると、`<container-condition>` の各コンテナー機能はそのクエリーコンテナーに対して評価されます。
+{{cssxref("container-name")}} プロパティは、クエリーコンテナーの名前のリストを指定します。これらの名前は、対象となるクエリーコンテナーをフィルターするために、`@container` ルールで使用することができます。
+`<container-query>` 内のコンテナー機能は、選択されたコンテナーに対して評価されます。
+`<container-name>` が指定されていない場合、`<container-query>` の機能は、一致する [`container-type`](/ja/docs/Web/CSS/Reference/Properties/container-type) を持つ、最も近い親のクエリーコンテナーに対して評価されます。
+`<container-query>`が指定されていない場合、名前付きコンテナーが選択されます。
 
 ## 構文
-
-`@container` アットルールは以下の構文です。
-
-```plain
-@container <container-condition># {
-  <stylesheet>
-}
-```
-
-例えば次のようなります。
 
 ```css
 /* <size-query> 付き */
@@ -38,6 +30,13 @@ l10n:
 @container tall (height > 30rem) {
   p {
     line-height: 1.6;
+  }
+}
+
+/* <container-name> のみ（クエリーはオプション） */
+@container sidebar {
+  h2 {
+    background: blue;
   }
 }
 
@@ -74,14 +73,12 @@ l10n:
 ### 値
 
 - `<container-condition>`
-  - : オプションの `<container-name>` および `<container-query>`。条件が真の場合、この `<stylesheet>` で定義されたスタイルが適用されます。
-    - `<container-name>`
-      - : オプション。クエリーが真と評価された際にスタイルが適用されるコンテナーの名前を、{{cssxref("ident")}} として指定します。
-    - `<container-query>`
+  - : オプションの `<container-name>` および `<container-query>`。
+    条件が `true` の場合、この `<stylesheet>` で定義されたスタイルが適用されます。
+    - `<container-name>` {{optional_inline}}
+      - : オプション。クエリーが `true` と評価された際にスタイルが適用されるコンテナーの名前を、{{cssxref("ident")}} として指定します。
+    - `<container-query>` {{optional_inline}}
       - : コンテナーのサイズ、[`<style-feature>`](#コンテナースタイルクエリー)、スクロール状態のいずれかが変更された際に、クエリーコンテナーに対して評価される一連の特性を指定します。
-
-- `<stylesheet>`
-  - : 一連の CSS ルールまたは宣言です。
 
 ### コンテナークエリー内の論理キーワード
 
@@ -140,7 +137,7 @@ l10n:
 
 #### サイズコンテナー記述子
 
-`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。複数の条件を含める場合の構文は、 [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) サイズ機能クエリーの場合と同じです。
+`<container-condition>` には、 1 つ以上の論理型のサイズクエリーを含めることができ、それぞれは括弧で囲みます。サイズクエリーには、サイズ記述子、値、および記述子に応じて比較演算子が含まれます。クエリーでは、常に[コンテンツボックス](/ja/docs/Web/CSS/Reference/Values/box-edge#content-box)を基準として測定します。複数の条件を含める場合の構文は、{{cssxref("@media")}} サイズ機能クエリーの場合と同じです。
 
 ```css
 @container (min-width: 400px) {
@@ -167,7 +164,7 @@ l10n:
   - : コンテナーの {{cssxref("inline-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `orientation`
-  - : コンテナーの[方向](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)で、`landscape` または `portrait` のいずれかです。
+  - : コンテナーの[方向](/ja/docs/Web/CSS/Reference/At-rules/@media/orientation)で、`landscape` または `portrait` のどちらかです。
 
 - `width`
   - : コンテナーの幅を {{cssxref("length")}} 値で表したものです。
@@ -180,6 +177,9 @@ l10n:
 @container scroll-state(scrollable: top) {
   /* … */
 }
+@container scroll-state(scrolled: block-end) {
+  /* … */
+}
 @container scroll-state(stuck: inline-end) {
   /* … */
 }
@@ -188,7 +188,7 @@ l10n:
 }
 ```
 
-スクロール状態コンテナー記述子に対応しているキーワードには、物理値および{{glossary("flow relative values", "フロー相対値")}}が含まれます。
+スクロール状態コンテナー記述子に対応しているキーワードには、{{glossary("physical properties", "物理値")}}および{{glossary("flow relative values", "フロー相対値")}}が含まれます。
 
 - `scrollable`
   - : スクロールバーをドラッグしたり、トラックパッドのジェスチャーを使用したりといった、ユーザーによるスクロールによって、コンテナーを指定した方向にスクロールできるかどうかを問い合わせます。つまり、指定した方向にスクロールできるコンテンツがあふれているかどうかです。有効な `scrollable` 値には、次のキーワードを含めることができます。
@@ -225,6 +225,45 @@ l10n:
 
     ```css
     @container not scroll-state(scrollable: none) {
+      /* … */
+    }
+    ```
+
+- `scrolled`
+  - : コンテナーが最後に指定された方向にスクロールされたかどうかを調べます。有効な `scrolled` の値には、以下のキーワードが含まれます。
+    - `none`
+      - : このコンテナーが{{glossary("scroll container", "スクロールコンテナー")}}でないか、その他の理由でどの方向にもスクロールできない場合。
+    - `top`
+      - : このコンテナーが最後に上方向にスクロールした場合。
+    - `right`
+      - : このコンテナーが最後に右方向にスクロールした場合。
+    - `bottom`
+      - : このコンテナーが最後に下方向にスクロールした場合。
+    - `left`
+      - : このコンテナーが最後に左方向にスクロールした場合。
+    - `x`
+      - : このコンテナーが最後に左方向と右方向の一方または両方に水平にスクロールした場合。
+    - `y`
+      - : このコンテナーが最後に上方向と下方向の一方または両方に垂直にスクロールした場合。
+    - `block-start`
+      - : このコンテナーが最後にブロックの先頭方向にスクロールした場合。
+    - `block-end`
+      - : このコンテナーが最後にブロックの末尾方向にスクロールした場合。
+    - `inline-start`
+      - : このコンテナーが最後にインラインの先頭方向にスクロールした場合。
+    - `inline-end`
+      - : このコンテナーが最後にインラインの末尾方向にスクロールした場合。
+    - `block`
+      - : このコンテナーが最後にブロックの先頭方向と末尾方向の一方または両方にスクロールした場合。
+    - `inline`
+      - : このコンテナーが最後にインラインの先頭方向と末尾方向の一方または両方にスクロールした場合。
+
+    条件を満たすと、`@container` ブロック内のルールがスクロールコンテナーの子孫に適用されます。
+
+    方向に関係なく、コンテナーがスクロールしたかどうかを評価するには、`none` 値を `not` 演算子で使用してください。
+
+    ```css
+    @container not scroll-state(scrolled: none) {
       /* … */
     }
     ```
@@ -328,11 +367,11 @@ l10n:
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.textContent = ".post width: " + post.clientWidth + "px";
+span.textContent = `.post width: ${post.clientWidth}px`;
 post.parentNode.insertBefore(span, post.nextSibling);
 // リサイズ時に更新
 window.addEventListener("resize", () => {
-  span.textContent = ".post width: " + post.clientWidth + "px";
+  span.textContent = `.post width: ${post.clientWidth}px`;
 });
 ```
 
@@ -395,7 +434,7 @@ span {
 次に、コンテナークエリーに名前を追加して、そのコンテナーを対象とします。
 
 ```css
-@container summary (min-width: 400px) {
+@container summary (width >= 400px) {
   .card {
     font-size: 1.5em;
   }
@@ -410,8 +449,8 @@ span {
 以下は、 `summary` という名前のコンテナーが `400px` よりも幅が広く、かつ祖先に `800px` よりも幅の広いコンテナーがある場合に、宣言されたスタイルを適用するクエリーです。
 
 ```css
-@container summary (min-width: 400px) {
-  @container (min-width: 800px) {
+@container summary (width > 400px) {
+  @container (width > 800px) {
     /* <stylesheet> */
   }
 }
@@ -458,11 +497,20 @@ span {
 
 個別指定プロパティを照会するスタイルの機能クエリーは、計算された値が各プロパティで一致する場合は真となり、一致しない場合は偽となります。例えば、 `@container style(border: 2px solid red)` は、その短縮形を構成する 12 個の個別指定プロパティ（`border-bottom-style` など）がすべて真であれば真になります。
 
+なお、[`!important`](/ja/docs/Web/CSS/Reference/Values/important)はスタイルクエリ－内で使用できますが、無視されます。
+
+```css
+/* !important は有効だが、効果がない */
+@container style(--themeColor: purple !important) {
+  /* <スタイルシート> */
+}
+```
+
 グローバルな `revert` と `revert-layer` は `<style-feature>` の値としては不正なため、コンテナースタイルクエリーは偽になります。
 
 ### スクロール状態クエリー
 
-スクロール状態クエリーの例の手順を追って説明については、「[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)」をご覧ください。
+スクロール状態クエリーの例の手順を追って説明については、[コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)をご覧ください。
 
 ## 仕様書
 
