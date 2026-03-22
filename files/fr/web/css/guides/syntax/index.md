@@ -97,6 +97,6 @@ La spécification [WHATWG](/fr/docs/Glossary/WHATWG)&nbsp;:
 
 ## Voir aussi
 
-- Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - Le module de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
 - Le module de [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
