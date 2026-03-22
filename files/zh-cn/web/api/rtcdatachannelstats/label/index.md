@@ -1,5 +1,5 @@
 ---
-title: RTCDataChannelStats: label 属性
+title: RTCDataChannelStats：label 属性
 short-title: label
 slug: Web/API/RTCDataChannelStats/label
 l10n:
