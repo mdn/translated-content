@@ -1,12 +1,48 @@
 ---
 title: offset-distance
 slug: Web/CSS/Reference/Properties/offset-distance
-original_slug: Web/CSS/offset-distance
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}} pour un élément à placer.
 
-La propriété **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}}.
+{{InteractiveExample("Démonstration CSS&nbsp;: offset-distance")}}
+
+```css interactive-example-choice
+offset-distance: 0%;
+```
+
+```css interactive-example-choice
+offset-distance: 80%;
+```
+
+```css interactive-example-choice
+offset-distance: 50px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 24px;
+  height: 24px;
+  background: #2bc4a2;
+  offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
+  clip-path: polygon(0% 0%, 70% 0%, 100% 50%, 70% 100%, 0% 100%, 30% 50%);
+}
+
+/* Fournit une image de référence du chemin que l'élément suit */
+#default-example {
+  background-position: calc(50% - 12px) calc(50% + 14px);
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -45 150 140" width="150" height="140"><path d="M-70,-40 C-70,70 70,70 70,-40" fill="none" stroke="lightgrey" stroke-width="2" stroke-dasharray="4.5"/></svg>');
+}
+```
 
 ## Syntaxe
 
@@ -19,20 +55,35 @@ offset-distance: 50%;
 
 /* Une position absolue le long du chemin */
 offset-distance: 40px;
+
+/* Valeurs globales */
+offset-distance: inherit;
+offset-distance: initial;
+offset-distance: revert;
+offset-distance: revert-layer;
+offset-distance: unset;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
-  - : Une longueur qui définit l'emplacement de l'élément le long du chemin (défini par {{cssxref('offset-path')}}). La valeur 100% représente la longueur totale du chemin (lorsque `offset-path` est défini par une forme simple ou grâce à la fonction `path()`).
+### Valeurs
 
-### Syntaxe formelle
+- {{CSSxRef('&lt;length-percentage&gt;')}}
+  - : Une longueur qui définit l'emplacement de l'élément le long d'un chemin (défini par {{CSSxRef('offset-path')}}).
+
+    100% représente la longueur totale du chemin (lorsque `offset-path` est défini comme une forme de base ou avec `path()`).
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
 ## Exemples
 
-### Animation
+### Utiliser `offset-distance` dans une animation
 
-La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de la propriété `offset-distance`. Si on souhaite animer un élément le long du chemin, on définira un chemin avec {{cssxref('offset-path')}} et on utilisera une animation qui fera évoluer `offset-distance` de `0%` à `100%`.
+L'aspect mouvement dans <i lang="en">CSS Motion Path</i> provient généralement de l'animation de la propriété `offset-distance`. Si vous souhaitez animer un élément le long de son chemin complet, vous devez définir son {{CSSxRef('offset-path')}} puis configurer une animation qui fait évoluer `offset-distance` de `0%` à `100%`.
 
 #### HTML
 
@@ -63,7 +114,7 @@ La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de l
 
 #### Résultat
 
-{{EmbedLiveSample('Animation')}}
+{{EmbedLiveSample("Utiliser `offset-distance` dans une animation", "100%", 150)}}
 
 ## Spécifications
 
@@ -72,3 +123,11 @@ La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de l
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("offset")}}
+- La propriété {{CSSxRef("offset-anchor")}}
+- La propriété {{CSSxRef("offset-path")}}
+- La propriété {{CSSxRef("offset-position")}}
+- La propriété {{CSSxRef("offset-rotate")}}

@@ -1,32 +1,33 @@
 ---
 title: orphans
 slug: Web/CSS/Reference/Properties/orphans
-original_slug: Web/CSS/orphans
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`orphans`** définit le nombre minimum de lignes dans un bloc englobant qui doivent être affichées en bas d'une [page](/fr/docs/Web/CSS/Guides/Paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout).
 
-La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/Guides/Paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout) dans un conteneur de bloc.
+En typographie, un orphelin (<i lang="en">orphan</i> en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
+
+## Syntaxe
 
 ```css
-/* Valeur numérique entière */
+/* Valeurs de type <integer> */
+orphans: 2;
 orphans: 3;
 
 /* Valeurs globales */
 orphans: inherit;
 orphans: initial;
+orphans: revert;
+orphans: revert-layer;
 orphans: unset;
 ```
 
-> [!NOTE]
-> En typographie, un orphelin (_orphan_ en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
-
-## Syntaxe
-
 ### Valeurs
 
-- `<integer>`
-  - : Seules les valeurs positives sont autorisées. Le nombre de lignes qu'on souhaite avoir au minimum avant une rupture.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Le nombre minimum de lignes qui peuvent rester seules en bas d'un fragment avant une rupture de fragmentation. La valeur doit être positive.
 
 ## Définition formelle
 
@@ -38,41 +39,47 @@ orphans: unset;
 
 ## Exemples
 
-### HTML
+### Définir une taille minimale d'orphelin de trois lignes
+
+#### HTML
 
 ```html
-<p class="exemple">
-  Tout en causant ainsi, Alice était entrée dans une petite chambre bien rangée,
-  et, comme elle s’y attendait, sur une petite table dans l’embrasure de la
-  fenêtre, elle vit un éventail et deux ou trois paires de gants de chevreau
-  tout petits. Elle en prit une paire, ainsi que l’éventail, et allait quitter
-  la chambre lorsqu’ elle aperçut, près du miroir, une petite bouteille. Cette
-  fois il n’y avait pas l’inscription BUVEZ-MOI — ce qui n’empêcha pas Alice de
-  la déboucher et de la porter à ses lèvres. « Il m’arrive toujours quelque
-  chose d’intéressant, » se dit-elle, « lorsque je mange ou que je bois. Je vais
-  voir un peu l’effet de cette bouteille. J’espère bien qu’elle me fera
-  regrandir, car je suis vraiment fatiguée de n’être qu’une petite nabote !
-  »C’est ce qui arriva en effet, et bien plus tôt qu’elle ne s’y attendait. Elle
-  n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond et
-  qu’elle fut forcée de se baisser pour ne pas se casser le cou. Elle remit bien
-  vite la bouteille sur la table en se disant : « En voilà assez ; j’espère ne
-  pas grandir davantage. Je ne puis déjà plus passer par la porte. Oh ! je
-  voudrais bien n’avoir pas tant bu ! »
-</p>
+<div>
+  <p>Ceci est le premier paragraphe contenant du texte.</p>
+  <p>
+    Ceci est le deuxième paragraphe contenant un peu plus de texte que le
+    premier. Il est utilisé pour démontrer le fonctionnement de la propriété
+    orphans.
+  </p>
+  <p>
+    Ceci est le troisième paragraphe. Il contient un peu plus de texte que le
+    premier.
+  </p>
+</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-.exemple {
-  orphans: 4;
+div {
+  background-color: #8cffa0;
+  height: 150px;
   columns: 3;
+  orphans: 3;
+}
+
+p {
+  background-color: #8ca0ff;
+}
+
+p:first-child {
+  margin-top: 0;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples","600","500")}}
+{{EmbedLiveSample("Définir une taille minimale d'orphelin de trois lignes", 380, 150)}}
 
 ## Spécifications
 
@@ -84,5 +91,5 @@ orphans: unset;
 
 ## Voir aussi
 
-- {{cssxref("widows")}}
+- La propriété {{CSSxRef("widows")}}
 - [Média paginés](/fr/docs/Web/CSS/Guides/Paged_media)

@@ -93,8 +93,8 @@ jobs:
           # Remove files from BASE.
           rm -r files docs *.md
 
-          # Remove non-Markdown files from HEAD.
-          find pr_head -type f ! -name '*.md' -delete
+          # Remove everything from HEAD, except Markdown files and the Markdownlint config.
+          find pr_head -type f ! -name '*.md' ! -name '.markdownlint.jsonc' -delete
 
           # Move Markdown files from HEAD into BASE.
           mv pr_head/files pr_head/docs pr_head/*.md .

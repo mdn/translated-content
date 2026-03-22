@@ -3,7 +3,7 @@ title: Firefox 148 note de version pour les développeurs
 short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
 l10n:
-  sourceCommit: 71bf9d9aafdab8fea55d3cde76982f94cc313013
+  sourceCommit: c49748a0ce4fdf77427e29cb6edbca8953a514e7
 ---
 
 Cet article présente les informations concernant les changements de Firefox 148 qui concernent les développeur·euse·s.
@@ -90,7 +90,7 @@ Firefox 148 est sorti le [24 février 2026 <sup>(angl.)</sup>](https://whattrain
 
 #### Marionette
 
-- Ajout de la commande `Reporting:GenerateTestReport` pour [générer un rapport de test via l'API Reporting <sup>(angl.)</sup>](https://www.w3.org/TR/reporting-1/#generate-test-report-command) ([bogue Firefox 1909662 <sup>(angl.)</sup>](https://bugzil.la/1909662)).
+- Ajout de la commande `Reporting:GenerateTestReport` pour [générer un rapport de test via l'API Reporting <sup>(angl.)</sup>](https://w3c.github.io/reporting/#generate-test-report-command) ([bogue Firefox 1909662 <sup>(angl.)</sup>](https://bugzil.la/1909662)).
 
 ## Fonctionnalités web expérimentales
 

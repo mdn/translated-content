@@ -1,14 +1,13 @@
 ---
 title: padding-right
 slug: Web/CSS/Reference/Properties/padding-right
-original_slug: Web/CSS/padding-right
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-right`** définit la largeur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) à droite d'un élément.
 
-La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
-
-{{InteractiveExample("CSS Demo: padding-right")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: padding-right")}}
 
 ```css interactive-example-choice
 padding-right: 1.5em;
@@ -34,8 +33,8 @@ padding-right: 0;
 <section id="default-example">
   <div class="transition-all" id="example-element">
     <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
     </div>
   </div>
 </section>
@@ -53,34 +52,38 @@ padding-right: 0;
 }
 ```
 
+La zone de remplissage d'un élément est l'espace entre son contenu et sa bordure.
+
 > [!NOTE]
-> La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-right` donc).
+> La propriété {{CSSxRef("padding")}} peut être utilisée pour définir les remplissages sur les quatre côtés d'un élément avec une seule déclaration.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 padding-right: 0.5em;
 padding-right: 0;
 padding-right: 2cm;
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
+/* Valeurs de type <percentage> */
 padding-right: 10%;
 
 /* Valeurs globales */
 padding-right: inherit;
 padding-right: initial;
+padding-right: revert;
+padding-right: revert-layer;
 padding-right: unset;
 ```
 
+La propriété `padding-right` est définie comme une seule valeur choisie dans la liste ci-dessous. Contrairement aux marges, les valeurs négatives ne sont pas autorisées pour le remplissage.
+
 ### Valeurs
 
-- `<length>`
-  - : Cette valeur définit une largeur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.
-- `<percentage>`
-  - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
 
 ## Définition formelle
 
@@ -92,27 +95,16 @@ padding-right: unset;
 
 ## Exemples
 
-### HTML
-
-```html
-<p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
-  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
-</p>
-```
-
-### CSS
+### Définir le remplissage à droite en utilisant des pixels et des pourcentages
 
 ```css
-.padd {
-  padding-right: 20%;
-  border: solid 1px;
+.content {
+  padding-right: 5%;
+}
+.side-box {
+  padding-right: 10px;
 }
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
 
 ## Spécifications
 
@@ -124,5 +116,9 @@ padding-right: unset;
 
 ## Voir aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
-- La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-right`, {{cssxref("padding-top")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.
+- Les propriétés {{CSSxRef("padding-top")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- La propriété raccourcie {{CSSxRef("padding")}}
+- Les propriétés {{CSSxRef("padding-block-start")}}, {{CSSxRef("padding-block-end")}}, {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("padding-block")}} et {{CSSxRef("padding-inline")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

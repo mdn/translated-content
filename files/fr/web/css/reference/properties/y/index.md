@@ -3,7 +3,7 @@ title: y
 slug: Web/CSS/Reference/Properties/y
 original_slug: Web/CSS/y
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`y`** définit la coordonnée de l'axe y du coin supérieur gauche de l'élément de forme SVG {{SVGElement("rect")}}, d'image {{SVGElement("image")}}, de fenêtre {{SVGElement("foreignObject")}} et de l'élément imbriqué {{SVGElement("svg")}} par rapport au plus proche `<svg>` présent dans le [système de coordonée](/fr/docs/Web/API/CSSOM_view_API/Coordinate_systems). S'il est présent, il remplace l'attribut {{SVGAttr("y")}}.
@@ -28,12 +28,12 @@ y: unset;
 
 ### Valeurs
 
-La longueur {{cssxref("length")}} et le pourcentage {{cssxref("percentage")}} indiquent la position des coordonnées de l'axe des y du coin supérieur gauche de l'élément SVG.
+La longueur ({{CSSxRef("&lt;length&gt;")}}) et le pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) indiquent la position des coordonnées de l'axe des y du coin supérieur gauche de l'élément SVG.
 
-- {{cssxref("length")}}
-  - : En tant que longueur absolue ou relative, elle peut être exprimée dans n'importe quelle unité autorisée par le type de données CSS {{cssxref("&lt;length&gt;")}}.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : En tant que longueur absolue ou relative, elle peut être exprimée dans n'importe quelle unité autorisée par le type de données CSS {{CSSxRef("&lt;length&gt;")}}.
 
-- {{cssxref("percentage")}}
+- {{CSSxRef("&lt;percentage&gt;")}}
   - : Les pourcentages se réfèrent à la hauteur du SVG {{SVGAttr("viewBox")}}, s'il est déclaré, sinon, le pourcentage fait référence à la hauteur de la fenêtre SVG actuelle.
 
 ## Définition formelle
@@ -42,7 +42,7 @@ La longueur {{cssxref("length")}} et le pourcentage {{cssxref("percentage")}} in
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -65,7 +65,7 @@ Nous incluons quatre SVG identiques de l'élément `<rect>`&nbsp;; leurs valeurs
 
 #### CSS
 
-Nous stylisons tous les rectangles pour qu'ils aient une bordure noire et soient légèrement transparents, de sorte que les rectangles qui se chevauchent soient visibles. Nous fournissons aux rectangles différents remplissages {{cssxref("fill")}} et valeurs en `y`.
+Nous stylisons tous les rectangles pour qu'ils aient une bordure noire et soient légèrement transparents, de sorte que les rectangles qui se chevauchent soient visibles. Nous fournissons aux rectangles différents remplissages {{CSSxRef("fill")}} et valeurs en `y`.
 
 ```css
 svg {
@@ -96,7 +96,7 @@ rect:nth-of-type(4) {
 
 #### Résultats
 
-{{EmbedLiveSample("Définition des coordonnées de l'axe y des formes SVG", "300", "180")}}
+{{EmbedLiveSample("Définition des coordonnées de l'axe y des formes SVG", 300, 180)}}
 
 Les bords supérieurs des rectangles sont à `10` (à partir de l'attribut), `-20px`, `4em`, et `60%`, respectivement. Le rectangle est `40px`grand, donc le `-20px` place la moitié du rectangle rouge à l'extérieur de la fenêtre. Le SVG est de `150px` de large, de sorte que le côté supérieur du rectangle orange se trouve à `90px` à partir du haut de la fenêtre SVG.
 
@@ -111,8 +111,8 @@ Les bords supérieurs des rectangles sont à `10` (à partir de l'attribut), `-2
 ## Voir aussi
 
 - L'attribut SVG {{SVGAttr("y")}}
-- Propriétés de géométrie `y`, {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("width")}}, {{cssxref("height")}}
-- {{cssxref("fill")}}
-- {{cssxref("stroke")}}
-- {{cssxref("paint-order")}}
-- Type de données {{cssxref("basic-shape")}}
+- Les propriétés de géométrie `y`, {{CSSxRef("cx")}}, {{CSSxRef("cy")}}, {{CSSxRef("r")}}, {{CSSxRef("rx")}}, {{CSSxRef("ry")}}, {{CSSxRef("x")}}, {{CSSxRef("width")}}, {{CSSxRef("height")}}
+- La propriété {{CSSxRef("fill")}}
+- La propriété {{CSSxRef("stroke")}}
+- La propriété {{CSSxRef("paint-order")}}
+- Le type de données {{CSSxRef("basic-shape")}}

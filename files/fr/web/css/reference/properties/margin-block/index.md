@@ -2,7 +2,7 @@
 title: margin-block
 slug: Web/CSS/Reference/Properties/margin-block
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c3c0f615b9b35e1ce3c799927eb21732b2f05926
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin-block`** définit les marges logiques de début et de fin de bloc d'un élément, qui correspondent à des marges physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément.
@@ -102,7 +102,7 @@ La propriété `margin-block` peut être définie avec une ou deux valeurs.
 
 ### Valeurs
 
-La propriété `margin-block` accepte les mêmes valeurs que la propriété {{CSSxRef("margin", "", "#valeurs")}}.
+La propriété `margin-block` accepte les mêmes valeurs que la propriété {{CSSxRef("margin-top", "", "#valeurs")}}.
 
 ## Définition formelle
 

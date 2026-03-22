@@ -1,14 +1,15 @@
 ---
 title: min-block-size
 slug: Web/CSS/Reference/Properties/min-block-size
-original_slug: Web/CSS/min-block-size
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`min-block-size`** définit la taille minimale horizontale ou verticale du bloc d'un élément, en fonction de son mode d'écriture. Elle correspond soit à la propriété {{CSSxRef("min-width")}}, soit à la propriété {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.
 
-La propriété **`min-block-size`** définit la taille minimale horizontale ou verticale d'un élément de bloc (_block_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
+Si le mode d'écriture est orienté verticalement, la valeur de `min-block-size` correspond à la largeur minimale de l'élément&nbsp;; sinon, elle correspond à la hauteur minimale de l'élément. Une propriété associée est {{CSSxRef("min-inline-size")}}, qui définit l'autre dimension de l'élément.
 
-{{InteractiveExample("CSS Demo: min-block-size")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: min-block-size")}}
 
 ```css interactive-example-choice
 min-block-size: 150px;
@@ -33,9 +34,10 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum block size. <br />If there is
-    more content than the minimum the box will grow in the block dimension as
-    needed by the content.
+    Ceci est une boîte où vous pouvez changer la taille minimale du bloc.
+    <br />
+    Si le contenu dépasse le minimum, la boîte s'agrandira dans la dimension du
+    bloc selon les besoins du contenu.
   </div>
 </section>
 ```
@@ -46,40 +48,38 @@ writing-mode: vertical-lr;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
-
-Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 min-block-size: 100px;
 min-block-size: 5em;
+min-block-size: anchor-size(self-inline);
 
-/* Valeurs proportionnelles à la */
-/* largeur du bloc englobant     */
-/* Type <percentage>             */
+/* Valeurs de type <percentage> */
 min-block-size: 10%;
 
 /* Valeurs avec un mot-clé */
 min-block-size: max-content;
 min-block-size: min-content;
 min-block-size: fit-content;
-min-block-size: fill-available;
+min-block-size: fit-content(20em);
 
 /* Valeurs globales */
 min-block-size: inherit;
 min-block-size: initial;
+min-block-size: revert;
+min-block-size: revert-layer;
 min-block-size: unset;
 ```
 
 ### Valeurs
 
-La propriété `min-block-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
+La propriété `min-block-size` peut prendre les mêmes valeurs que les propriétés {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}.
 
 ## Définition formelle
 
@@ -91,26 +91,27 @@ La propriété `min-block-size` peut prendre les mêmes valeurs que les proprié
 
 ## Exemples
 
-### CSS
+### Définir la taille minimale du bloc pour du texte vertical
+
+#### HTML
+
+```html
+<p class="texteExemple">Texte d'exemple</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
+.texteExemple {
   writing-mode: vertical-rl;
   background-color: yellow;
-  block-size: 5%;
   min-block-size: 200px;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">Texte d'exemple</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
+{{EmbedLiveSample("Définir la taille minimale du bloc pour du texte vertical")}}
 
 ## Spécifications
 
@@ -122,8 +123,5 @@ La propriété `min-block-size` peut prendre les mêmes valeurs que les proprié
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes
-  - {{cssxref("min-width")}}
-  - {{cssxref("min-height")}}
-
-- {{cssxref("writing-mode")}}
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("min-width")}} et {{CSSxRef("min-height")}}
+- La propriété {{CSSxRef("writing-mode")}}

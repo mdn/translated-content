@@ -3,7 +3,7 @@ title: "ARIA: option ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/option_role
 original_slug: Web/Accessibility/ARIA/Roles/option_role
 l10n:
-  sourceCommit: f6310f5cf34dfe4b5c0a45494a83b0a5ef9a6571
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `option` ロールは `listbox` で選択可能な項目に使用します。
@@ -52,7 +52,7 @@ l10n:
 #### 状態とプロパティ
 
 - [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-  - : 選択肢の選択状態を記述するために使用します。必須です。
+  - : 選択肢の選択状態を記述するために使用します。オプションです。
 
 - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
   - : 選択肢を複数選択で使用する場合のチェック状態を記述するために使用します。`true`、`false`、`mixed` に対応しています。オプションです。

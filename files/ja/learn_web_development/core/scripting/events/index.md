@@ -3,10 +3,10 @@ title: イベント入門
 short-title: イベント
 slug: Learn_web_development/Core/Scripting/Events
 l10n:
-  sourceCommit: 6149deb5f4beccdc09549fbf8d1810d9a4dc3462
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
 イベントは、プログラミングしているシステムで発生するもので、コードがそれらに反応できるようにシステムが伝えるものです。
 例えば、ユーザーがウェブページ上でボタンを押したとき、ある情報を表示するように反応させたいと思うかもしれません。この記事では、イベントに関する重要な概念を取り上げ、ブラウザーの中でのイベントの振る舞いを見ていきます。
@@ -49,7 +49,7 @@ l10n:
 - 動画が再生される、停止される、再生が終わる
 - エラーが発生する
 
-ここから（そして MDN の[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)から）、発生するイベントが**たくさん**あることがわかります。
+ここから（そして MDN の[イベント索引](/ja/docs/Web/API/Document_Object_Model/Events#イベント索引)から）、発生するイベントが**たくさん**あることがわかります。
 
 イベントに反応するには、そのイベントに **イベントリスナー** を割り当てます。これは、イベントの発生を待ち受けるコードの機能です。イベントが発生すると、そのイベントに対応するために、**イベントハンドラー** 関数（イベントリスナーによって参照される、またはイベントリスナー内に含まれる）が呼び出されます。このようなコードのブロックを、イベントに応じて実行するように設定することを、**イベントハンドラーの登録** といいます。
 
@@ -108,7 +108,7 @@ btn.addEventListener("click", () => {
 HTML の {{HTMLElement("button")}} 要素は、ユーザーがそれをクリックすると `click` イベントを発行します。イベントリスナーを追加するために、その要素に対して `addEventListener()` メソッドを呼び出します。このメソッドは 2 つの引数を取ります。
 
 - 文字列 `"click"` で、クリックイベントを待ち受けしたいことを示します。ボタンは他にもたくさんのイベントを発行することができます。例えば、ユーザーがマウスをボタンの上に移動させたときに [`"mouseover"`](/ja/docs/Web/API/Element/mouseover_event) を発行したり、ユーザーがキーを押してボタンにフォーカスが当たったときに [`"keydown"`](/ja/docs/Web/API/Element/keydown_event) を発行したりすることができます。
-- イベント発生時に呼び出す関数です。この場合、定義されているこの無名関数はランダムな RGB の色を生成し、その色の [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color) を [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定します。
+- イベント発生時に呼び出す関数です。この場合、定義されているこの無名関数はランダムな RGB の色を生成し、その色の {{cssxref("background-color")}} を [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) に設定します。
 
 別個の名前付き関数を作成し、`addEventListener()` の 2 つ目の引数でそれを参照することもできます。
 
@@ -395,4 +395,4 @@ Node.js の [HTTP の connect イベントのドキュメント](https://nodejs.
 
 ウェブページの要素は、他にも要素を入れ子にできることがこれで分かったでしょう。例えば、[既定の動作の抑制](#既定の動作の抑制)の例では、いくつかのテキストボックスが、それぞれが {{htmlelement("div")}} 要素内に配置され、さらにそれらが {{htmlelement("form")}} 要素内に配置されています。 `<form>` 要素にクリックイベントリスナーが追加され、ユーザーがテキストボックスの 1 つをクリックすると何が起こるでしょうか？ 関連付けられたイベントハンドラー関数は、イベントバブリングと呼ばれるプロセスによって発行されます。このプロセスについては、次のレッスンで説明します。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Test_your_skills/Functions","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}

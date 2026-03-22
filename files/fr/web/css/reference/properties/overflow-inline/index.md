@@ -1,17 +1,14 @@
 ---
 title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
-original_slug: Web/CSS/overflow-inline
 l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
-
-La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** est une propriété logique qui définit ce qu'il faut afficher quand le contenu dépasse d'une boîte sur les bords en ligne (ceux parallèles au sens d'écriture). On peut choisir d'afficher rien, une barre de défilement ou de laisser le contenu dépasser.
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** définit ce qu'il faut afficher lorsque le contenu dépasse les bords en ligne d'une boîte. Cela peut être rien, une barre de défilement ou le contenu débordant.
 
 > [!NOTE]
-> La propriété `overflow-inline` correspond à [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y) ou [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x) selon le mode d'écriture du document.
+> La propriété `overflow-inline` correspond à {{CSSxRef("overflow-y")}} ou {{CSSxRef("overflow-x")}} selon le mode d'écriture du document.
 
 ## Syntaxe
 
@@ -31,7 +28,7 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-La propriété `overflow-inline` est définie avec une valeur de type [`<overflow>`](/fr/docs/Web/CSS/overflow_value) (voir les valeurs ci-après).
+La propriété `overflow-inline` est définie avec une valeur de type {{CSSxRef("overflow_value", "&lt;overflow&gt;")}} (voir les valeurs ci-après).
 
 ### Valeurs
 
@@ -40,7 +37,7 @@ La propriété `overflow-inline` est définie avec une valeur de type [`<overflo
 - `hidden`
   - : Le contenu qui dépasse est masqué afin de ne pas dépasser dans l'axe en ligne. Aucune barre de défilement n'est affichée.
 - `clip`
-  - : Le contenu qui dépasse est rogné sur le bord de dépassement de l'élément, défini avec la propriété [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin).
+  - : Le contenu qui dépasse est rogné sur le bord de dépassement de l'élément, défini avec la propriété {{CSSxRef("overflow-clip-margin")}}.
 - `scroll`
   - : Le contenu est rogné si nécessaire selon l'axe en ligne pour tenir dans la boîte (de remplissage). Les navigateurs affichent des barres de défilement que le contenu soit rogné ou non (on évite ainsi d'avoir des barres qui apparaissent/disparaissent lorsque le contenu change). Les imprimantes peuvent imprimer le contenu qui dépasse.
 - `auto`
@@ -56,7 +53,9 @@ La propriété `overflow-inline` est définie avec une valeur de type [`<overflo
 
 ## Exemples
 
-### HTML
+### Définir le comportement du débordement en ligne
+
+#### HTML
 
 ```html
 <ul>
@@ -92,7 +91,7 @@ La propriété `overflow-inline` est définie avec une valeur de type [`<overflo
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -119,9 +118,9 @@ div {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("", "100%", "320")}}
+{{EmbedLiveSample("Définir le comportement du débordement en ligne", "100%", 270)}}
 
 ## Spécifications
 
@@ -133,17 +132,8 @@ div {
 
 ## Voir aussi
 
-- Les propriétés CSS associées&nbsp;:
-  - [`clip`](/fr/docs/Web/CSS/Reference/Properties/clip)
-  - [`display`](/fr/docs/Web/CSS/Reference/Properties/display)
-  - [`overflow`](/fr/docs/Web/CSS/Reference/Properties/overflow)
-  - [`overflow-block`](/fr/docs/Web/CSS/Reference/Properties/overflow-block)
-  - [`overflow-clip-margin`](/fr/docs/Web/CSS/overflow-clip-margin)
-  - [`overflow-x`](/fr/docs/Web/CSS/Reference/Properties/overflow-x)
-  - [`overflow-y`](/fr/docs/Web/CSS/Reference/Properties/overflow-y)
-  - [`text-overflow`](/fr/docs/Web/CSS/Reference/Properties/text-overflow)
-  - [`white-space`](/fr/docs/Web/CSS/Reference/Properties/white-space)
-- [Le module de spécification CSS sur le dépassement (<i lang="en">overflow</i>)](/fr/docs/Web/CSS/Guides/Overflow)
-- [Les propriétés logiques](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
-- [Les modes d'écritures](/fr/docs/Web/CSS/Guides/Writing_modes)
-- [Apprendre le débordement de contenu](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- Les propriétés {{CSSxRef("clip")}}, {{CSSxRef("display")}}, {{CSSxRef("overflow")}}, {{CSSxRef("overflow-block")}}, {{CSSxRef("overflow-clip-margin")}}, {{CSSxRef("overflow-x")}}, {{CSSxRef("overflow-y")}}, {{CSSxRef("text-overflow")}}, {{CSSxRef("white-space")}}
+- Le module [de débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
+- [Les propriétés logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [Modes d'écriture CSS](/fr/docs/Web/CSS/Guides/Writing_modes)
+- [Apprendre&nbsp;: Contenu débordant](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow)

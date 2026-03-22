@@ -28,7 +28,7 @@ l10n:
       <th scope="row">学習成果:</th>
       <td>
         <ul>
-          <li>「置換要素」という耀g。どういう意味でしょう。</li>
+          <li>「置換要素」という用語。どういう意味でしょう。</li>
           <li>基本的な <code>&lt;img&gt;</code> タグの構文</li>
           <li><code>src</code> を使用してリソースを指すこと。</li>
           <li><code>width</code> と <code>height</code> を使用して、例えば、画像の読み込みが完了して表示された後に、 UI が不快でぎこちない動きで更新されるのを避けることができること。</li>
