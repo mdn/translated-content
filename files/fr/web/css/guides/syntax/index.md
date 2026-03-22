@@ -1,9 +1,8 @@
 ---
 title: Syntaxe CSS
 slug: Web/CSS/Guides/Syntax
-original_slug: Web/CSS/CSS_syntax
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 81f8fcd666952c1782653a3675347c392cc997ca
 ---
 
 Le module **Syntaxe CSS** décrit, en termes généraux, la structure et la syntaxe des feuilles de style en cascade, ou CSS. Il définit CSS comme le langage de description du rendu de documents structurés (tels que HTML et XML), sur le web et ailleurs.
@@ -15,14 +14,14 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 - Aucune
 
 > [!NOTE]
-> Le module précise que {{cssxref("@charset")}} n'est pas une véritable règle @, mais plutôt une règle héritée non reconnue qui doit être omise lors de la vérification grammaticale d'une feuille de style. La seule utilisation valide de `@charset` se trouve au tout début d'une feuille de style, où elle est interprétée comme une séquence d'octets spéciale supprimée avant le traitement du contenu.
+> Le module précise que {{CSSxRef("@charset")}} n'est pas une véritable règle @, mais plutôt une règle héritée non reconnue qui doit être omise lors de la vérification grammaticale d'une feuille de style. La seule utilisation valide de `@charset` se trouve au tout début d'une feuille de style, où elle est interprétée comme une séquence d'octets spéciale supprimée avant le traitement du contenu.
 
 ## Référence
 
 ### Concepts clés
 
-- {{cssxref("CSS_syntax/At-rule", "Règles @")}}
-- [Échappement de caractères](/fr/docs/Web/CSS/Reference/Values/custom-ident#escaping_characters)
+- [Règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
+- [Échappement de caractères](/fr/docs/Web/CSS/Reference/Values/custom-ident#caractères_échappés)
 - [Commentaires CSS](/fr/docs/Web/CSS/Guides/Syntax/Comments)
 - [Déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [Bloc de déclaration CSS](/fr/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
@@ -32,10 +31,10 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 
 ### Termes du glossaire
 
-- {{glossary("CSS_Descriptor", "Descripteur CSS")}}
-- {{glossary("parse", "Analyse")}}
-- {{glossary("stylesheet", "Feuille de style")}}
-- {{glossary("whitespace", "Espace blanc")}}
+- {{Glossary("CSS_Descriptor", "Descripteur CSS")}}
+- {{Glossary("Parse", "Analyse")}}
+- {{Glossary("Stylesheet", "Feuille de style")}}
+- {{Glossary("Whitespace", "Espace blanc")}}
 
 ## Guides
 
@@ -48,7 +47,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 - [Gestion des erreurs CSS](/fr/docs/Web/CSS/Guides/Syntax/Error_handling)
   - : Vue d'ensemble de la façon dont les navigateurs gèrent le CSS invalide.
 
-- [Premiers pas avec CSS&nbsp;: la syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics)
+- [Premiers pas avec CSS&nbsp;: la syntaxe CSS](/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#syntaxe_css_de_base)
   - : Guide d'introduction à CSS, incluant une présentation de la syntaxe CSS.
 
 ## Concepts associés
@@ -57,34 +56,34 @@ Le module des [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)&nbsp;:
 
 - [Spécificité CSS](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
 
-Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)&nbsp;:
+Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascade)&nbsp;:
 
-- La règle {{cssxref("@import")}}
-- L'indicateur {{cssxref("important")}}
-- [Valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#la_valeur_initial)
-- [Valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculées)
-- [Valeurs utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisées)
-- [Valeurs réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelles)
+- La règle {{CSSxRef("@import")}}
+- L'indicateur {{CSSxRef("important", "!important")}}
+- [Valeurs initiales](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale)
+- [Valeurs calculées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_calculée)
+- [Valeurs utilisées](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée)
+- [Valeurs réelles](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_réelle)
 - [Héritage CSS](/fr/docs/Web/CSS/Guides/Cascade/Inheritance)
 - {{Glossary("Property/CSS", "propriété CSS")}}
 
 Le module des [propriétés personnalisées CSS pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)&nbsp;:
 
 - [Propriété personnalisée (`--*`)](/fr/docs/Web/CSS/Reference/Properties/--*)
-- Fonction {{cssxref("var")}}
+- La fonction {{CSSxRef("var()")}}
 
 Le module des [règles conditionnelles CSS](/fr/docs/Web/CSS/Guides/Conditional_rules)&nbsp;:
 
-- La règle {{cssxref("@media")}}
-- La règle {{cssxref("@supports")}}
+- La règle {{CSSxRef("@media")}}
+- La règle {{CSSxRef("@supports")}}
 
 L'API [CSS Object Model (CSSOM)](/fr/docs/Web/API/CSS_Object_Model)&nbsp;:
 
-- La propriété {{domxref("CSSValue.cssText", "cssText")}}
-- La méthode {{domxref("CSSStyleSheet.insertRule()", "insertRule(rule)")}}
-- La méthode {{domxref("CSSStyleSheet.replace()", "replace(text)")}}
+- La propriété {{DOMxRef("CSSValue.cssText", "cssText")}}
+- La méthode {{DOMxRef("CSSStyleSheet.insertRule()", "insertRule(rule)")}}
+- La méthode {{DOMxRef("CSSStyleSheet.replace()", "replace(text)")}}
 
-La spécification [WHATWG](/fr/docs/Glossary/WHATWG)&nbsp;:
+La spécification {{Glossary("WHATWG")}}&nbsp;:
 
 - L'élément HTML {{HTMLElement("style")}}
 - L'élément HTML {{HTMLElement("link")}}
@@ -97,6 +96,6 @@ La spécification [WHATWG](/fr/docs/Glossary/WHATWG)&nbsp;:
 
 ## Voir aussi
 
-- Les [fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
-- Le module de [sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
-- Le module de [valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
+- [Les fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
+- Le module [de sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors)
+- Le module [des valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units)
