@@ -1,5 +1,5 @@
 ---
-title: "scroll-timeline"
+title: scroll-timeline
 slug: Web/CSS/Reference/Properties/scroll-timeline
 l10n:
   sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
