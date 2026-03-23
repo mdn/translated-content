@@ -61,8 +61,8 @@ l10n:
 ## 関連情報
 
 - [CSS オブジェクトモデル (CSSOM)](/ja/docs/Web/API/CSS_Object_Model) API
-- [CSSOM ビュー API](/en-US/docs/Web/API/CSSOM_view_API)
-- [CSS ビューポート](/en-US/docs/Web/CSS/Guides/Viewport) モジュール
+- [CSSOM ビュー API](/ja/docs/Web/API/CSSOM_view_API)
+- [CSS ビューポート](/ja/docs/Web/CSS/Guides/Viewport) モジュール
 - [CSS オーバーフロー](/ja/docs/Web/CSS/Guides/Overflow)モジュール
 - [CSS オーバースクロール動作](/ja/docs/Web/CSS/Guides/Overscroll_behavior)モジュール
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
