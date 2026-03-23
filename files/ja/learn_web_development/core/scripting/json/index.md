@@ -158,8 +158,7 @@ JSON には単一のプリミティブ型を含めることもできます。た
 [JSONLint](https://jsonlint.com/) や [JSON-validate](https://www.json-validate.com/) のようなアプリケーションを使って妥当性を検証をすることもできます。
 
 > [!NOTE]
-> このセクションを読み終えたところで、Scrimba の [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>
-[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> によるインタラクティブなチュートリアルも併せて活用してみてはいかがでしょうか。このチュートリアルでは、基本的なJSON構文や、ブラウザの開発者ツール内でJSONリクエストデータを表示する方法について、役立つガイダンスが提供されています。
+> このセクションを読み終えたところで、Scrimba の [JSON review](https://scrimba.com/frontend-path-c0j/~0lt?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> によるインタラクティブなチュートリアルも併せて活用してみてはいかがでしょうか。このチュートリアルでは、基本的なJSON構文や、ブラウザの開発者ツール内でJSONリクエストデータを表示する方法について、役立つガイダンスが提供されています。
 
 ## JSON の例を操作してみる
 
