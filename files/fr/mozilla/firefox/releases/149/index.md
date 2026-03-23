@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: 1ba0755482292cd52e89cf96fda34000c8e60c91
+  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.
@@ -26,6 +26,10 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 - La propriété CSS {{CSSxRef("vertical-align")}} est désormais une propriété raccourcie pour les propriétés {{CSSxRef("alignment-baseline")}}, {{CSSxRef("baseline-shift")}} et {{CSSxRef("baseline-source")}}. ([bogue Firefox 1830771 <sup>(angl.)</sup>](https://bugzil.la/1830771)).
 
+- La partie [`<container-query>`](/fr/docs/Web/CSS/Reference/At-rules/@container#container-query) de la [règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@container")}} est désormais optionnelle.
+  Cela permet de faire correspondre des conteneurs uniquement en fonction de leurs noms.
+  ([bogue Firefox 2016474 <sup>(angl.)</sup>](https://bugzil.la/2016474)).
+
 ### APIs
 
 - Le paramètre [`options.resizeQuality`](/fr/docs/Web/API/Window/createImageBitmap#resizequality) est désormais pris en charge par {{DOMxRef("Window.createImageBitmap()")}} et {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}.
@@ -35,7 +39,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 #### DOM
 
 - La méthode [`HTMLSelectElement.showPicker()`](/fr/docs/Web/API/HTMLInputElement/showPicker#showpicker_pour_un_champ_dentrée_associé_à_une_datalist) est désormais prise en charge pour une liste d'options définie dans un {{HTMLElement("datalist")}}.
-  Cela permet de lancer programmatiquement le sélecteur du navigateur pour un `<datalist>` lorsqu'il est déclenché par une interaction utilisateur ([bogue Firefox 1998668 <sup>(angl.)</sup>](https://bugzil.la/1998668)).
+  Cela permet de lancer programmatiquement le sélecteur du navigateur pour un `<datalist>` lorsqu'il est déclenché par une interaction utilisateur·ice ([bogue Firefox 1998668 <sup>(angl.)</sup>](https://bugzil.la/1998668)).
 
 - L'interface {{DOMxRef("CloseWatcher")}} est désormais prise en charge.
   Cela permet aux développeur·euse·s de créer des composants pouvant être fermés à l'aide de mécanismes natifs de l'appareil, tels que la touche <kbd>Esc</kbd> sur Windows ou la touche <kbd>Retour</kbd> sur Android, de la même manière que les composants intégrés tels que les [boîtes de dialogue](/fr/docs/Web/HTML/Reference/Elements/dialog) et les [fenêtres contextuelles](/fr/docs/Web/API/Popover_API).
@@ -70,9 +74,30 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
     ([bogue Firefox 1993037 <sup>(angl.)</sup>](https://bugzil.la/1993037))
 - Ajout du support pour `tabId` en tant que paramètre de niveau supérieur dans {{WebExtAPIRef("action.isEnabled")}} et {{WebExtAPIRef("browserAction.isEnabled")}}. Ce changement assure la compatibilité avec l'implémentation Chrome de `action.isEnabled`. ([bogue Firefox 2013477 <sup>(angl.)</sup>](https://bugzil.la/2013477))
 - Un geste de l'utilisateur·ice n'est plus requis pour {{WebExtAPIRef("action.openPopup")}} et {{WebExtAPIRef("browserAction.openPopup")}} pour ouvrir une fenêtre affichée par dessus le contenu (<i lang="en">popup</i> en anglais). Cette fonctionnalité était disponible derrière la préférence `extensions.openPopupWithoutUserGesture.enabled` depuis Firefox 108. Ce changement aligne le comportement de Firefox avec Chrome et Safari. ([bogue Firefox 1799344 <sup>(angl.)</sup>](https://bugzil.la/1799344))
+- Si `windowId` est passé dans {{WebExtAPIRef("action.openPopup")}} ou {{WebExtAPIRef("browserAction.openPopup")}}, la fenêtre doit être sélectionnée (active) pour que l'élément affiché par dessus le contenu s'ouvre. Pour ouvrir un élément par dessus le contenu dans une fenêtre qui n'est pas sélectionnée, {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} doit être appelé en premier. Ce changement aligne le comportement de Firefox avec Chrome. ([bogue Firefox 2011516 <sup>(angl.)</sup>](https://bugzil.la/2011516))
 
 - La capacité des extensions à exécuter dynamiquement du code dans leurs documents `moz-extension:` avec {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, et {{WebExtAPIRef("scripting.removeCSS")}} est désormais obsolète. ([bogue Firefox 2011234 <sup>(angl.)</sup>](https://bugzil.la/2011234)) La fonctionnalité n'est plus disponible dans Firefox Nightly, et les versions bêta et release de Firefox affichent un avertissement dans la console de l'onglet. Cette restriction s'appliquera à toutes les versions de Firefox 152 et ultérieures. ([bogue Firefox 2015559 <sup>(angl.)</sup>](https://bugzil.la/2015559)) En alternative, une extension peut exécuter du code dans ses documents de manière dynamique en enregistrant un écouteur {{WebExtAPIRef("runtime.onMessage")}} dans le script du document, puis en envoyant un message pour déclencher l'exécution du code requis.
 - Le filtre CSS implicite appliqué aux icônes SVG des [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sur les thèmes sombres est désactivé dans les versions Nightly ([bogue Firefox 2001318 <sup>(angl.)</sup>](https://bugzil.la/2001318)) et sera désactivé dans les autres éditions de Firefox à partir de la version 152 ([bogue Firefox 2016509 <sup>(angl.)</sup>](https://bugzil.la/2016509)). Vous pouvez tester les icônes SVG des actions de page avec le filtre CSS désactivé dans d'autres éditions de Firefox en créant une préférence booléenne `about:config` appelée `extensions.webextensions.pageActionIconDarkModeFilter.enabled` et en la définissant sur `false`.
+
+### Conformité WebDriver (WebDriver BiDi, Marionette)
+
+#### Général
+
+- Mise à jour des implémentations de capture d'écran pour les protocoles WebDriver BiDi et WebDriver classique afin de retourner correctement une erreur lorsque la zone de capture d'écran demandée dépasse les dimensions maximales prises en charge, au lieu de la découper silencieusement. ([bogue Firefox 1994148 <sup>(angl.)</sup>](https://bugzil.la/1994148)).
+- Mise à jour de l'implémentation des Actions pour les protocoles WebDriver BiDi et WebDriver classique afin de permettre à une action `scroll` de type source d'entrée `wheel` de faire défiler plus que les dimensions de la fenêtre visuelle. ([bogue Firefox 1962355 <sup>(angl.)</sup>](https://bugzil.la/1962355)).
+
+#### WebDriver BiDi
+
+- Ajout du support pour la gestion automatique des invites utilisateur·ice, qui peut être configurée par les capacités avec la commande `session.new`. ([bogue Firefox 1905086 <sup>(angl.)</sup>](https://bugzil.la/1905086)).
+- Ajout de la commande `browser.setDownloadBehavior`, qui permet aux client·e·s d'autoriser ou d'interdire les téléchargements et de définir un dossier de téléchargement personnalisé. Ce comportement peut être configuré par session ou par contextes utilisateur. ([bogue Firefox 1989022 <sup>(angl.)</sup>](https://bugzil.la/1989022)).
+- Ajout des évènements `script.realmCreated` et `script.realmDestroyed` pour les contextes de travail (pour les travailleurs dédiés, partagés et de service). ([bogue Firefox 1936770 <sup>(angl.)</sup>](https://bugzil.la/1936770)).
+- Correction d'un problème où les évènements `browsingContext.userPromptOpened` et `browsingContext.userPromptClosed` rapportaient incorrectement l'ID du contexte de niveau supérieur au lieu de l'ID du contexte du cadre intégré sur Android. ([bogue Firefox 2007385 <sup>(angl.)</sup>](https://bugzil.la/2007385)).
+- Correction de la sérialisation des nœuds DOM pour ne plus exposer les racines d'ombre (<i lang="en">shadow root</i> en anglais) spécifiques à l'agent utilisateur. ([bogue Firefox 2016673 <sup>(angl.)</sup>](https://bugzil.la/2016673)).
+- Mise à jour de la logique d'application des différents paramètres aux nouveaux contextes de navigation pour s'assurer que, dans le cas de la création d'un contexte de navigation avec la commande `window.open`, les émulations, les remplacements de la fenêtre d'affichage et les scripts de préchargement s'appliquent avant que la commande ne retourne. ([bogue Firefox 1985997 <sup>(angl.)</sup>](https://bugzil.la/1985997), [bogue Firefox 2005546 <sup>(angl.)</sup>](https://bugzil.la/2005546) et [bogue Firefox 2005558 <sup>(angl.)</sup>](https://bugzil.la/2005558)).
+
+#### Marionette
+
+- Amélioration de plusieurs commandes WebDriver classiques pour gérer les délais d'attente `implicit` et `pageLoad` conformément au délai d'attente du script, permettant aux valeurs `null` de désactiver les délais d'attente. ([bogue Firefox 2008345](https://bugzil.la/2008345)).
 
 ## Fonctionnalités web expérimentales
 
@@ -90,7 +115,7 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 
 - **Pseudo-classes basées sur les médias**: `dom.media.pseudo-classes.enabled`
 
-  Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(":muted")}}, {{CSSxRef(":paused")}}, {{CSSxRef(":playing")}}, {{CSSxRef(":seeking")}}, {{CSSxRef(":stalled")}}, et {{CSSxRef(":volume-locked")}} vous permettent de styliser les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} en fonction de leur état actuel, comme en lecture ou en pause. ([bogue Firefox 1707584 <sup>(angl.)</sup>](https://bugzil.la/1707584), [bogue Firefox 2014512 <sup>(angl.)</sup>](https://bugzil.la/2014512)).
+  Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(":muted")}}, {{CSSxRef(":paused")}}, {{CSSxRef(":playing")}}, {{CSSxRef(":seeking")}}, {{CSSxRef(":stalled")}}, et {{CSSxRef(":volume-locked")}} vous permettent de mettre en forme les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} en fonction de leur état actuel, comme en lecture ou en pause. ([bogue Firefox 1707584 <sup>(angl.)</sup>](https://bugzil.la/1707584), [bogue Firefox 2014512 <sup>(angl.)</sup>](https://bugzil.la/2014512)).
 
 - **Les attributs `alpha` et `colorspace` des éléments de saisie de type `color`** (Nightly seulement)&nbsp;: `dom.forms.html_color_picker.enabled`
 
@@ -99,3 +124,12 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
 - **Requêtes `@container style()`** (Nightly)&nbsp;: `layout.css.style-queries.enabled`
 
   La règle CSS [`@container`](/fr/docs/Web/CSS/Reference/At-rules/@container) prend en charge les requêtes [`style()`](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#conteneurs_de_requêtes_de_style). Cela vous permet de vérifier si un conteneur possède une déclaration CSS valide, une propriété CSS ou une propriété personnalisée, et d'appliquer des styles à ses enfants en conséquence. ([bogue Firefox 2014404 <sup>(angl.)</sup>](https://bugzil.la/2014404)).
+
+- **CSS Typed Object Model Level 1**&nbsp;: `layout.css.typed-om.enabled`
+
+  La spécification CSS Typed Object Model Level 1 est en cours d'implémentation.
+  Dans cette version, la prise en charge de la méthode {{DOMxRef("CSSNumericValue/to","to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} a été ajoutée, permettant la conversion d'une valeur numérique CSS d'une unité à une autre. ([bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
+
+- **Prise en charge de l'image JPEG XL&nbsp;: décodeur basé sur Rust**&nbsp;: `image.jxl.enabled`
+
+  L'ancien décodeur d'image [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation basée sur Rust utilisant la bibliothèque `jxl-rs`. ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
