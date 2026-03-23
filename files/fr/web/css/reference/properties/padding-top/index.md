@@ -1,16 +1,13 @@
 ---
 title: padding-top
 slug: Web/CSS/Reference/Properties/padding-top
-original_slug: Web/CSS/padding-top
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-top`** définit la hauteur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) en haut d'un élément.
 
-La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
-
-La [zone de remplissage](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
-
-{{InteractiveExample("CSS Demo: padding-top")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: padding-top")}}
 
 ```css interactive-example-choice
 padding-top: 1em;
@@ -36,8 +33,8 @@ padding-top: 0;
 <section id="default-example">
   <div class="transition-all" id="example-element">
     <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
     </div>
   </div>
 </section>
@@ -55,33 +52,40 @@ padding-top: 0;
 }
 ```
 
-La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-top` donc).
+La zone de remplissage d'un élément est l'espace entre son contenu et sa bordure.
+
+![L'effet de la propriété CSS padding-top sur la boîte de l'élément](padding-top.svg)
+
+> [!NOTE]
+> La propriété {{CSSxRef("padding")}} peut être utilisée pour définir les marges intérieures sur les quatre côtés d'un élément avec une seule déclaration.
 
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
+/* Valeurs de type <percentage> */
 padding-top: 10%;
 
 /* Valeurs globales */
 padding-top: inherit;
 padding-top: initial;
+padding-top: revert;
+padding-top: revert-layer;
 padding-top: unset;
 ```
 
+La propriété `padding-top` est définie comme une seule valeur choisie parmi la liste ci-dessous. Contrairement aux marges, les valeurs négatives ne sont pas autorisées pour le padding.
+
 ### Valeurs
 
-- `<length>`
-  - : Cette valeur définit une hauteur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.
-- `<percentage>`
-  - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille du remplissage en tant que valeur fixe. Doit être non négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille du remplissage en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Doit être non négative.
 
 ## Définition formelle
 
@@ -93,27 +97,16 @@ padding-top: unset;
 
 ## Exemples
 
-### HTML
-
-```html
-<p class="padd">
-  Elle n’avait pas bu la moitié de la bouteille, que sa tête touchait au plafond
-  et qu’elle fut forcée de se baisser pour ne pas se casser le cou.
-</p>
-```
-
-### CSS
+### Définir le remplissage supérieur en utilisant des pixels et des pourcentages
 
 ```css
-.padd {
-  padding-top: 5em;
-  border: solid 1px;
+.content {
+  padding-top: 5%;
+}
+.side-box {
+  padding-top: 10px;
 }
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
 
 ## Spécifications
 
@@ -125,5 +118,9 @@ padding-top: unset;
 
 ## Voir aussi
 
-- [Le modèle de boîtes CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
-- La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.
+- Les propriétés {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- La propriété raccourcie {{CSSxRef("padding")}}
+- Les propriétés {{CSSxRef("padding-block-start")}}, {{CSSxRef("padding-block-end")}}, {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("padding-block")}} et {{CSSxRef("padding-inline")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

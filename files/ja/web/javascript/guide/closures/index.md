@@ -2,14 +2,12 @@
 title: クロージャ
 slug: Web/JavaScript/Guide/Closures
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: 984adfc302136da0ee90eab7caaa85d577b735e6
 ---
 
-{{jsSidebar("Intermediate")}}
+**クロージャ**は、組み合わされた（囲まれた）関数と、その周囲の状態（**字句環境**、lexical environment）への参照の組み合わせです。言い換えれば、クロージャは関数にその外側のスコープにアクセスする機能を提供します。JavaScript では、クロージャは関数が作成されるたびに、関数作成時点で作成されます。
 
-**クロージャ**は、組み合わされた（囲まれた）関数と、その周囲の状態（**レキシカル環境**）への参照の組み合わせです。言い換えれば、クロージャは関数にその外側のスコープにアクセスする機能を提供します。JavaScript では、クロージャは関数が作成されるたびに、関数作成時点で作成されます。
-
-## レキシカルスコープ
+## 字句スコープ
 
 次のような関数を考えてみてください。
 
@@ -27,7 +25,7 @@ init();
 
 `init()` 関数はローカル変数 `name` を作成し、それから関数 `displayName()` を定義しています。`displayName()` は `init()` の中で定義されている内部関数で、その関数本体の内部でしか利用できません。`displayName()` 自体はローカル変数を持っていませんが、外側のスコープで宣言された変数にアクセスできるので、`displayName()` では親関数 `init()` で宣言された変数 `name` を使用できます。しかし、 `displayName()` に同じローカル変数があればそれが使われます。
 
-[この JSFiddle リンク](https://jsfiddle.net/3dxck52m/)を使用してコードを実行すると、`displayName()` 関数内の `console.log()` 文が、その親関数で宣言されている `name` 変数の値を正常に表示していることに注意してください。これはレキシカルスコープの例で、関数が入れ子になっているときにパーサーがどのように変数名を解決するかを記述したものです。レキシカルという言葉は、レキシカルスコープがソースコード内で変数が宣言された場所を使用して、その変数が利用できる場所を決定するという事実を示しています。入れ子の関数は、その外側のスコープで宣言された変数にアクセスすることができます。
+このコードをコンソールで実行すると、`displayName()` 関数内の `console.log()` 文が、その親関数で宣言されている `name` 変数の値を正常に表示していることに注意してください。これは字句スコープの例で、関数が入れ子になっているときにパーサーがどのように変数名を解決するかを記述したものです。字句という言葉は、字句スコープがソースコード内で変数が宣言された場所を使用して、その変数が利用できる場所を決定するという事実を示しています。入れ子の関数は、その外側のスコープで宣言された変数にアクセスすることができます。
 
 ### let と const のスコープ
 
@@ -74,11 +72,11 @@ const myFunc = makeFunc();
 myFunc();
 ```
 
-このコードを実行すると、前回例に挙げた `init()` 関数と全く同じ効果があります。異なる形で興味深いのは、`displayName()` の内部関数が、実行される前に外部関数から返されることです。
+このコードを実行すると、前の例に挙げた `init()` 関数と全く同じ効果があります。異なる形で興味深いのは、`displayName()` の内部関数が、実行される前に外部関数から返されることです。
 
-このコードが動作するということは直感的に理解できないかもしれません。いくつかのプログラミング言語では、関数内部のローカル変数はその関数が実行されている間だけ存在します。一旦 `makeFunc()` の実行が完了したら、name 変数はもう必要とされなくなると考えた方が筋は通っています。ただこのコードが期待したとおりに動くという事は、これは明らかに JavaScript にはあてはまりません。
+このコードが動作するということは直感的に理解できないかもしれません。いくつかのプログラミング言語では、関数内部のローカル変数はその関数が実行されている間だけ存在します。一旦 `makeFunc()` の実行が完了したら、`name` 変数はもう必要とされなくなると考えた方が筋は通っています。ただこのコードは動作しますので、これは明らかに JavaScript ではあてはまりません。
 
-この理由は、JavaScript の関数はクロージャとなるためです。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆるローカル変数によって構成されています。この場合、`myFunc` は `makeFunc` が実行された時に作られた `displayName` 関数のインスタンスへの参照です。`displayName` のインスタンスはレキシカル環境への参照を保持し、そこに `name` 変数が存在します。このため、`makeFunc` が実行された時に、`name` 変数が残っていて "Mozilla" が `console.log` に渡されます。
+この理由は、JavaScript の関数はクロージャとなるためです。クロージャは関数とその関数が作られた環境という 2 つのものの組み合わせです。この環境は、クロージャが作られた時点でスコープ内部にあったあらゆるローカル変数によって構成されています。この場合、`myFunc` は `makeFunc` が実行された時に作られた `displayName` 関数のインスタンスへの参照です。`displayName` のインスタンスは字句環境への参照を保持し、そこに `name` 変数が存在します。このため、`makeFunc` が実行された時に、`name` 変数が残っていて "Mozilla" が `console.log` に渡されます。
 
 ここにもう少し面白い例があります。`makeAdder` 関数です。
 
@@ -102,11 +100,11 @@ console.log(add10(2)); // 12
 
 `add5` と `add10` は両方ともクロージャです。両者は同じ関数本体の定義を共有していますが、保有している環境は異なります。`add5` の環境では `x` は 5 で、`add10` の環境では `x` は 10 です。
 
-## 実用的なクロージャ
+## 実践的なクロージャ
 
-クロージャが有益なのは、データ（レキシカル環境）とそのデータを使用する関数を関連付けることができるからです。これは、オブジェクト指向プログラミングと明らかに並列しています。オブジェクトでは、データ（オブジェクトのプロパティ）を 1 つまたは複数のメソッドに関連付けることができます。
+クロージャは、データ（字句環境）を、そのデータを操作する関数に関連付けることができるという点で有用です。これは、オブジェクト指向プログラミングでオブジェクトがデータ（オブジェクトのプロパティ）を 1 つ以上のメソッドに関連付けられることと、明らかに類似しています。
 
-したがって、メソッドを 1 つだけ持つオブジェクトを使いたくなるような状況ならば、どんな時でもクロージャを使う事ができます。
+したがって、メソッドを 1 つだけ持つオブジェクトを使いたくなるような状況ならば、どんな時でもクロージャを使うことができます。
 
 ウェブではこのような状況はよくあります。私たちが書く JavaScript のコードは大半がイベントベースです。つまり、ある動作を定義し、それを click や keypress といったユーザーによって引き起こされるイベントに取り付けます。私たちのコードの多くはコールバック、すなわちイベントに反応して実行される単独の関数として取り付けられます。
 
@@ -114,7 +112,7 @@ console.log(add10(2)); // 12
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 12px;
 }
 
@@ -133,7 +131,7 @@ JavaScript のコード:
 
 ```js
 function makeSizer(size) {
-  return function () {
+  return () => {
     document.body.style.fontSize = `${size}px`;
   };
 }
@@ -155,13 +153,14 @@ document.getElementById("size-16").onclick = size16;
 <button id="size-12">12</button>
 <button id="size-14">14</button>
 <button id="size-16">16</button>
+<p>このテキストは、上のボタンをクリックするとサイズが変化します。</p>
 ```
 
-[JSFiddle](https://jsfiddle.net/hotae160/) でコードを実行します。
+{{EmbedLiveSample("実践的なクロージャ", "", "200")}}
 
-## クロージャでプライベートメソッドを模倣する
+## クロージャでプライベートメソッドを模倣
 
-Java などの言語ではプライベートなメソッドを宣言することが出来ます。これは同じクラス内にあるほかのメソッドからのみ呼び出せるメソッドのことです。
+Java などの言語ではプライベートなメソッドを宣言することができます。これは同じクラス内にあるほかのメソッドからのみ呼び出せるメソッドのことです。
 
 JavaScript には、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)が登場するまで、[プライベートメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#プライベートメソッド)を宣言するネイティブの方法はありませんでしたが、クロージャを使うとプライベートメソッドを模倣することができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。
 
@@ -201,12 +200,12 @@ console.log(counter.value()); // 1.
 
 ここでは色々なことが行われています。前の例ではクロージャがそれぞれ独自の環境を持っていましたが、この例では環境が 1 つだけ作成され、その環境は `counter.increment`, `counter.decrement`, `counter.value` という 3 つの関数によって共有されています。
 
-この共有レキシカル環境は、_定義されるとすぐに実行される_（[IIFE](/ja/docs/Glossary/IIFE) とも呼ばれます）無名関数の本文で作成されています。この環境は変数 `privateCounter` と関数 `changeBy` という 2 つのプライベートアイテムを含んでいます。これらはどちらも無名関数の外側からは直接アクセス出来ません。その代わり、この無名ラッパー関数から返される 3 つのパブリック関数からは間接的にアクセスします。
+この共有字句環境は、_定義されるとすぐに実行される_（[IIFE](/ja/docs/Glossary/IIFE) とも呼ばれます）無名関数の本文で作成されています。この環境は変数 `privateCounter` と関数 `changeBy` という 2 つのプライベートアイテムを含んでいます。これらはどちらも無名関数の外側からは直接アクセス出来ません。その代わり、この無名ラッパー関数から返される 3 つのパブリック関数からは間接的にアクセスします。
 
-これら 3 つのパブリック関数は同じ環境を共有するクロージャです。JavaScript のレキシカルスコープにより、これらの関数はそれぞれが変数 `privateCounter` と関数 `changeBy` にアクセスできます。
+これら 3 つのパブリック関数は同じ環境を共有するクロージャです。JavaScript の字句スコープにより、これらの関数はそれぞれが変数 `privateCounter` と関数 `changeBy` にアクセスできます。
 
 ```js
-const makeCounter = function () {
+function makeCounter() {
   let privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -224,7 +223,7 @@ const makeCounter = function () {
       return privateCounter;
     },
   };
-};
+}
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();
@@ -240,7 +239,7 @@ console.log(counter1.value()); // 1.
 console.log(counter2.value()); // 0.
 ```
 
-2 つのカウンターが互いに独立した状態を維持していることに注目してください。各クロージャは、独自のクロージャを介して異なるバージョンの `privateCounter` 変数を参照しています。カウンターのいずれかが呼び出されるたびに、この変数の値を変更することで、そのレキシカル環境が変化します。あるクロージャで変数値を変更しても、もう一方のクロージャの値には影響しません。
+2 つのカウンターが互いに独立した状態を維持していることに注目してください。各クロージャは、独自のクロージャを介して異なるバージョンの `privateCounter` 変数を参照しています。カウンターのいずれかが呼び出されるたびに、この変数の値を変更することで、その字句環境が変化します。あるクロージャで変数値を変更しても、もう一方のクロージャの値には影響しません。
 
 > [!NOTE]
 > このようにしてクロージャを使うと、普通はオブジェクト指向プログラミングに付き物のいくつかの利点、具体的には*データの隠蔽*や*カプセル化*が利用できるようになります。
@@ -360,14 +359,14 @@ console.log(getX()); // 2
 
 [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) キーワードが導入される前までは、ループの内部でクロージャが作成された時にある問題がよく起こっていました。次のような例を考えてみます。
 
-```html
+```html live-sample___closures_bad
 <p id="help">ここにヘルプが表示されます</p>
 <p>E メール: <input type="text" id="email" name="email" /></p>
 <p>名前: <input type="text" id="name" name="name" /></p>
 <p>年齢: <input type="text" id="age" name="age" /></p>
 ```
 
-```js
+```js example-bad live-sample___closures_bad
 function showHelp(help) {
   document.getElementById("help").textContent = help;
 }
@@ -391,7 +390,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-[JSFiddle](https://jsfiddle.net/v7gjv/8164/) でコードを実行してみてください。
+{{EmbedLiveSample("closures_bad", "", "200")}}
 
 配列 `helpText` は 3 つのヘルプを定義しており、それぞれが文書内の入力フィールドの ID と関連付けられています。ループがこれらの定義を巡回して、それぞれの入力フィールドの `onfocus` イベントをそれに関連付けられたヘルプを表示するメソッドと結び付けています。
 
@@ -401,7 +400,14 @@ setupHelp();
 
 こういった場合の解決策の 1 つとして、より多くのクロージャを使う方法があります。具体的には、前に述べたような関数ファクトリーを使います。
 
-```js
+```html hidden live-sample___closures_factory
+<p id="help">ここにヘルプが表示されます</p>
+<p>E メール: <input type="text" id="email" name="email" /></p>
+<p>名前: <input type="text" id="name" name="name" /></p>
+<p>年齢: <input type="text" id="age" name="age" /></p>
+```
+
+```js live-sample___closures_factory
 function showHelp(help) {
   document.getElementById("help").textContent = help;
 }
@@ -428,9 +434,9 @@ function setupHelp() {
 setupHelp();
 ```
 
-[JSFiddle](https://jsfiddle.net/v7gjv/9573/) でコードを実行してみてください。
+{{EmbedLiveSample("closures_factory", "", "200")}}
 
-これは期待通り動きます。全てのコールバックが 1 つの環境を共有するのではなく、`makeHelpCallback` 関数がそれぞれに対して*新しいレキシカル環境*を作っており、そこでは `help` が配列 `helpText` の対応する文字列を参照しています。
+これは期待通り動きます。全てのコールバックが 1 つの環境を共有するのではなく、`makeHelpCallback` 関数がそれぞれに対して*新しい字句環境*を作っており、そこでは `help` が配列 `helpText` の対応する文字列を参照しています。
 
 上のものを無名クロージャを使って書く、他の方法もあります。
 
@@ -486,28 +492,20 @@ setupHelp();
 
 この例では `var` の代わりに `const` を使っているため、すべてのクロージャがブロックスコープの変数をバインドしており、つまり追加のクロージャは要求されません。
 
-他の方法として、以下のように `forEach()` を使用して配列 `helpText` を操作し、それぞれの [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) にリスナーを割り当てることができます。
+現行の JavaScript で書いているのであれば、単純な `for` ループの代わりに、 {{jsxref("Statements/for...of", "for...of")}} ループを使用し、`item` を `let` または `const` として宣言する方法や、{{jsxref("Array/forEach", "forEach()")}} メソッドを使用する方法など、より多くの選択肢を検討できます。これらはいずれもクロージャの問題を避けることができます。
 
 ```js
-function showHelp(help) {
-  document.getElementById("help").textContent = help;
+for (const item of helpText) {
+  document.getElementById(item.id).onfocus = () => {
+    document.getElementById("help").textContent = item.help;
+  };
 }
 
-function setupHelp() {
-  var helpText = [
-    { id: "email", help: "あなたの E メールアドレス" },
-    { id: "name", help: "あなたのフルネーム" },
-    { id: "age", help: "あなたの年齢 (17 歳以上)" },
-  ];
-
-  helpText.forEach(function (text) {
-    document.getElementById(text.id).onfocus = function () {
-      showHelp(text.help);
-    };
-  });
-}
-
-setupHelp();
+helpText.forEach((item) => {
+  document.getElementById(item.id).onfocus = () => {
+    showHelp(item.help);
+  };
+});
 ```
 
 ## パフォーマンスへの配慮
