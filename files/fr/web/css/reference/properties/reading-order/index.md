@@ -76,7 +76,7 @@ Dans notre balisage, nous avons six éléments HTML {{HTMLElement("a")}} contenu
 
 #### CSS
 
-Sur le `<div>`, nous définissons la propriété {{CSSxRef("grid-auto-flow")}} à `dense`, donc les éléments peuvent s'afficher hors de l'ordre source. La propriété `reading-order` sur l'élément `<a>` avec une classe `top` est définie à `-1`, donc «&nbsp;Élément 4&nbsp;» sera le premier élément dans le flux de lecture. La propriété `reading-order` sur l'élément `<a>` avec une classe `bottom` est définie à `21`, donc «&nbsp;Élément 2&nbsp;» sera le dernier élément dans l'ordre de lecture. Les éléments restants seront visités entre les deux, dans l'ordre des lignes de la grille, car la propriété {{CSSxRef("reading-flow")}} de l'élément `<div>` est définie à {{CSSxRef("grid-rows")}}.
+Sur le `<div>`, nous définissons la propriété {{CSSxRef("grid-auto-flow")}} à `dense`, donc les éléments peuvent s'afficher hors de l'ordre source. La propriété `reading-order` sur l'élément `<a>` avec une classe `top` est définie à `-1`, donc «&nbsp;Élément 4&nbsp;» sera le premier élément dans le flux de lecture. La propriété `reading-order` sur l'élément `<a>` avec une classe `bottom` est définie à `21`, donc «&nbsp;Élément 2&nbsp;» sera le dernier élément dans l'ordre de lecture. Les éléments restants seront visités entre les deux, dans l'ordre des lignes de la grille, car la propriété {{CSSxRef("reading-flow")}} de l'élément `<div>` est définie à {{CSSxRef("grid-row", "grid-rows")}}.
 
 ```css
 .wrapper {
