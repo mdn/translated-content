@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: 4e100cee733013cb48babc0c734fe96dda9ece6c
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.
@@ -30,11 +30,20 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
   Cela permet de faire correspondre des conteneurs uniquement en fonction de leurs noms.
   ([bogue Firefox 2016474 <sup>(angl.)</sup>](https://bugzil.la/2016474)).
 
+### JavaScript
+
+Pas de changements notables.
+
 ### APIs
 
 - Le paramètre [`options.resizeQuality`](/fr/docs/Web/API/Window/createImageBitmap#resizequality) est désormais pris en charge par {{DOMxRef("Window.createImageBitmap()")}} et {{DOMxRef("WorkerGlobalScope.createImageBitmap()")}}.
   De plus, les méthodes permettent désormais de définir à la fois les options de redimensionnement ([`options.resizeWidth`](/fr/docs/Web/API/Window/createImageBitmap#resizewidth) ou [`options.resizeHeight`](/fr/docs/Web/API/Window/createImageBitmap#resizeheight)) et les paramètres matriciels de l'image ([`sx`, `sy`, `sw`, et `sh`](/fr/docs/Web/API/Window/createImageBitmap#sx)) en même temps — auparavant, définir les deux retournait la matrice source non mise à l'échelle.
   ([bogue Firefox 2010125 <sup>(angl.)</sup>](https://bugzil.la/2010125)).
+
+- [L'API Reporting](/fr/docs/Web/API/Reporting_API) est désormais prise en charge pour signaler les violations de la [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) et de l'en-tête {{HTTPHeader("Integrity-Policy")}}.
+  Cela permet de signaler des objets de rapport qui sont des objets {{DOMxRef("CSPViolationReport")}} et des objets {{DOMxRef("IntegrityViolationReport")}} dans les pages en violation en utilisant un {{DOMxRef("ReportingObserver")}} (les rapports peuvent être filtrés sur la propriété `type`&nbsp;: `"csp-violation"` ou `"integrity-violation"`).
+  Une version sérialisée des objets de rapport peut également être envoyée à un serveur de rapport défini dans l'en-tête HTTP correspondant — les noms des points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
+  ([bogue Firefox 1976074 <sup>(angl.)</sup>](https://bugzil.la/1976074), [bogue Firefox 2008916 <sup>(angl.)</sup>](https://bugzil.la/2008916)).
 
 #### DOM
 

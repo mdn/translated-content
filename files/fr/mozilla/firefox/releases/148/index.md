@@ -3,7 +3,7 @@ title: Firefox 148 note de version pour les développeurs
 short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
 l10n:
-  sourceCommit: c49748a0ce4fdf77427e29cb6edbca8953a514e7
+  sourceCommit: 4e100cee733013cb48babc0c734fe96dda9ece6c
 ---
 
 Cet article présente les informations concernant les changements de Firefox 148 qui concernent les développeur·euse·s.
