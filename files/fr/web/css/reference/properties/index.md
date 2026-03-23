@@ -2,7 +2,7 @@
 title: Propriétés CSS
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
 ---
 
 Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
@@ -79,7 +79,9 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}}
+- {{CSSxRef("background-repeat")}} (version courte)
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (version courte)
 - {{CSSxRef("baseline-shift")}}

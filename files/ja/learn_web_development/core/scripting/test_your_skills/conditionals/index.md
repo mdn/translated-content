@@ -73,7 +73,7 @@ section.appendChild(para1);
 
 完成した JavaScript は、次のようになるでしょう。
 
-```js
+```js-nolint
 let season = "summer";
 let response;
 
@@ -90,7 +90,7 @@ if (season === "summer") {
 // ...
 ```
 
-```js hidden live-sample___conditionals-1-finish
+```js-nolint hidden live-sample___conditionals-1-finish
 let season = "summer";
 let response;
 
@@ -178,7 +178,7 @@ if (machineActive) {
     response = "ひどい点数だ。完全に失敗だ！";
   } else if (score >= 20 && score < 40) {
     response =
-      "いくらか知っているようだが、かなり悪い点数だ。改善が必要だ。";
+      "いくらか分かっているようですが、かなり悪い点数です。改善が必要です。";
   } else if (score >= 40 && score < 70) {
     response = "悪くない仕事をしましたね！";
   } else if (score >= 70 && score < 90) {
@@ -187,7 +187,7 @@ if (machineActive) {
     response = "すごい点数だね。カンニングしてない？本当？";
   }
 } else {
-  response = "マシンの電源がオフになっています。電源を入れてスコアを処理してください。";
+  response = "電源がオフになっています。電源を入れてスコアを処理してください。";
 }
 
 // 以下のコードは編集しないでください。
@@ -206,7 +206,7 @@ if (machineActive) {
     response = "ひどい点数だ。完全に失敗だ！";
   } else if (score >= 20 && score < 40) {
     response =
-      "いくらか知っているようだが、かなり悪い点数だ。改善が必要だ。";
+      "いくらか分かっているようですが、かなり悪い点数です。改善が必要です。";
   } else if (score >= 40 && score < 70) {
     response = "悪くない仕事をしましたね！";
   } else if (score >= 70 && score < 90) {
@@ -215,7 +215,7 @@ if (machineActive) {
     response = "すごい点数だね。カンニングしてない？本当？";
   }
 } else {
-  response = "マシンの電源がオフになっています。電源を入れてスコアを処理してください。";
+  response = "電源がオフになっています。電源を入れてスコアを処理してください。";
 }
 
 const section = document.querySelector("section");
@@ -292,7 +292,8 @@ if (machineActive) {
       ? "ログインに成功しました。"
       : "パスワードが違います。ログインに失敗しました。";
 } else {
-  machineResult = "マシンは動作していません。起動して再度ログインしてみてください。";
+  machineResult =
+    "マシンは動作していません。起動してログインしなおしてください。";
 }
 
 // 以下のコードは編集しないでください。
@@ -313,7 +314,8 @@ if (machineActive) {
       ? "ログインに成功しました。"
       : "パスワードが違います。ログインに失敗しました。";
 } else {
-  machineResult = "マシンは動作していません。起動して再度ログインしてみてください。";
+  machineResult =
+    "マシンは動作していません。起動してログインしなおしてください。";
 }
 
 const section = document.querySelector("section");

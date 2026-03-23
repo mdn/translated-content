@@ -680,7 +680,7 @@ td {
 <!--
 ## テーブル概念の対話的な復習
 
-次のScrimba<sup>[_MDNラーニングパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>からの埋め込みコンテンツは、この記事で網羅したテクニックの大半をまとめたインタラクティブなレッスンを提供します。重要なポイントの復習や追加練習のために、ぜひご覧ください。
+次のScrimba<sup>[_MDNラーニングパートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>からの埋め込みコンテンツは、この記事で網羅したテクニックの大半をまとめたインタラクティブなレッスンを提供します。重要なポイントの復習や追加練習のために、ぜひご覧ください。
 
 <mdn-scrim-inline url="https://scrimba.com/frontend-path-c0j/~03s" scrimtitle="HTML tables"></scrim-inline>
 -->

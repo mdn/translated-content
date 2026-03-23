@@ -101,7 +101,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 
 ## Voir aussi
 
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [Imbrication des règles @ CSS](/fr/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Instructions CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#instructions_css)
 - L'[interface CSSRule](/fr/docs/Web/API/CSSRule)

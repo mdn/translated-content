@@ -2,16 +2,19 @@
 title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 6e46ba1a7ac7aa2268afd0ecd079f221ef6d9af4
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
 Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
-La propriété {{CSSxRef("container-name")}} spécifie une liste de noms de conteneurs de requête. Ces noms peuvent être utilisés par les règles `@container` pour filtrer les conteneurs ciblés. Le `<container-name>` optionnel et sensible à la casse filtre les conteneurs ciblés par la requête.
+La condition doit définir un ou les deux de {{CSSxRef("container-name")}} et `<container-query>`.
 
-Une fois qu'un conteneur de requête éligible a été sélectionné pour un élément, chaque fonctionnalité de conteneur dans le `<container-condition>` est évaluée par rapport à ce conteneur.
+La propriété {{CSSxRef("container-name")}} définit une liste de noms de conteneurs de requête, qui sont utilisés pour filtrer les conteneurs ciblés par les règles `@container`.
+Les fonctionnalités de conteneur dans le `<container-query>` sont évaluées par rapport aux conteneurs sélectionnés.
+Si aucun `<container-name>` n'est défini, les fonctionnalités du `<container-query>` sont évaluées par rapport au conteneur de requête ancêtre le plus proche qui a le {{CSSxRef("container-type")}} correspondant.
+Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélectionnés.
 
 ## Syntaxe
 
@@ -27,6 +30,13 @@ Une fois qu'un conteneur de requête éligible a été sélectionné pour un él
 @container tall (height > 30rem) {
   p {
     line-height: 1.6;
+  }
+}
+
+/* Avec un <container-name> uniquement (la requête est optionnelle) */
+@container sidebar {
+  h2 {
+    background: blue;
   }
 }
 
@@ -63,10 +73,11 @@ Une fois qu'un conteneur de requête éligible a été sélectionné pour un él
 ### Paramètres
 
 - `<container-condition>`
-  - : Un `<container-name>` optionnel et un `<container-query>`. Les styles définis dans la `<stylesheet>` sont appliqués si la condition est vraie.
-    - `<container-name>`
-      - : Optionnel. Le nom du conteneur auquel les styles seront appliqués lorsque la requête est vraie, spécifié comme un {{CSSxRef("ident")}}.
-    - `<container-query>`
+  - : Définit un ou les deux de `<container-name>` et `<container-query>`.
+    Les styles définis dans la `<stylesheet>` sont appliqués si la condition est `true`.
+    - `<container-name>` {{Optional_Inline}}
+      - : Le nom du conteneur auquel les styles seront appliqués lorsque la requête est vraie, défini comme un identifiant ({{CSSxRef("&lt;ident&gt;")}}).
+    - `<container-query>` {{Optional_Inline}}
       - : Un ensemble de fonctionnalités évaluées sur le conteneur interrogé lorsque la taille, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement du conteneur changent.
 
 ### Mots-clés logiques dans les requêtes de conteneur
@@ -166,6 +177,9 @@ Les descripteurs d'état de défilement sont spécifiés dans le `<container-con
 @container scroll-state(scrollable: top) {
   /* … */
 }
+@container scroll-state(scrolled: block-end) {
+  /* … */
+}
 @container scroll-state(stuck: inline-end) {
   /* … */
 }
@@ -174,7 +188,7 @@ Les descripteurs d'état de défilement sont spécifiés dans le `<container-con
 }
 ```
 
-Les mots-clés pris en charge pour les descripteurs d'état de défilement incluent les valeurs physiques et les {{Glossary("flow relative values", "valeurs relatives de flux")}}.
+Les mots-clés pris en charge pour les descripteurs d'état de défilement incluent les valeurs {{Glossary("physical properties", "physiques")}} et {{Glossary("flow relative values", "relatives au flux")}}.
 
 - `scrollable`
   - : Vérifie si le conteneur peut être défilé dans la direction donnée par une action de l'utilisateur·ice (barre de défilement, geste tactile, etc.). Autrement dit, y a-t-il du contenu débordant dans la direction donnée qui peut être atteint par défilement&nbsp;? Les valeurs valides pour `scrollable` incluent&nbsp;:
@@ -211,6 +225,45 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
 
     ```css
     @container not scroll-state(scrollable: none) {
+      /* … */
+    }
+    ```
+
+- `scrolled`
+  - : Vérifie si le conteneur a été récemment défilé dans une direction définie. Les valeurs valides pour `scrolled` incluent les mots-clés suivants&nbsp;:
+    - `none`
+      - : Le conteneur n'est pas un {{Glossary("scroll container", "conteneur de défilement")}} ou n'a pas été récemment défilé dans une quelconque direction.
+    - `top`
+      - : Le conteneur a été récemment défilé vers son bord supérieur.
+    - `right`
+      - : Le conteneur a été récemment défilé vers son bord droit.
+    - `bottom`
+      - : Le conteneur a été récemment défilé vers son bord inférieur.
+    - `left`
+      - : Le conteneur a été récemment défilé vers son bord gauche.
+    - `x`
+      - : Le conteneur a été récemment défilé horizontalement vers la gauche, la droite ou les deux.
+    - `y`
+      - : Le conteneur a été récemment défilé verticalement vers le haut, le bas ou les deux.
+    - `block-start`
+      - : Le conteneur a été récemment défilé vers le début du bloc.
+    - `block-end`
+      - : Le conteneur a été récemment défilé vers la fin du bloc.
+    - `inline-start`
+      - : Le conteneur a été récemment défilé vers le début de la ligne.
+    - `inline-end`
+      - : Le conteneur a été récemment défilé vers la fin de la ligne.
+    - `block`
+      - : Le conteneur a été récemment défilé vers le début ou la fin du bloc.
+    - `inline`
+      - : Le conteneur a été récemment défilé vers le début ou la fin de la ligne.
+
+    Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur défilant.
+
+    Pour vérifier si un conteneur a été récemment défilé, sans se soucier de la direction, utilisez la valeur `none` avec l'opérateur `not`&nbsp;:
+
+    ```css
+    @container not scroll-state(scrolled: none) {
       /* … */
     }
     ```
@@ -444,6 +497,15 @@ La requête suivante vérifie si la [valeur calculée](/fr/docs/Web/CSS/Guides/C
 
 Les fonctionnalités de style qui interrogent une propriété raccourcie sont vraies si les valeurs calculées correspondent pour chacune de ses propriétés longues, et fausses sinon. Par exemple, `@container style(border: 2px solid red)` sera vrai si les 12 propriétés longues qui composent ce raccourci (`border-bottom-style`, etc.) sont toutes vraies.
 
+Notez que [`!important`](/fr/docs/Web/CSS/Reference/Values/important) est autorisé dans les requêtes de style mais est ignoré.
+
+```css
+/* !important est valide mais n'a aucun effet */
+@container style(--themeColor: purple !important) {
+  /* <stylesheet> */
+}
+```
+
 Les valeurs globales `revert` et `revert-layer` sont invalides dans un `<style-feature>` et rendent la requête de style de conteneur fausse.
 
 ### Requêtes d'état de défilement
@@ -468,4 +530,4 @@ Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/C
 - La propriété {{CSSxRef("contain")}}
 - La propriété {{CSSxRef("content-visibility")}}
 - Le module de [Compartimentation CSS](/fr/docs/Web/CSS/Guides/Containment)
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)

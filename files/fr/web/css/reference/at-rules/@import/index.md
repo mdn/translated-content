@@ -160,4 +160,4 @@ Ceci est un exemple de création de deux couches de cascade sans nom distinctes 
 - La règle {{CSSxRef("@media")}}
 - La règle {{CSSxRef("@supports")}}
 - Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)

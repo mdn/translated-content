@@ -2,7 +2,7 @@
 title: :empty
 slug: Web/CSS/Reference/Selectors/:empty
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{CSSxRef("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
@@ -21,7 +21,7 @@ div:empty {
 <div></div>
 
 <p>Élément avec commentaire :</p>
-<div><!-- A comment --></div>
+<div><!-- Un commentaire --></div>
 
 <p>Élément avec élément imbriqué vide :</p>
 <div><p></p></div>
@@ -44,15 +44,10 @@ Les technologies d'assistance telles que les lecteurs d'écran ne peuvent pas an
 
 Le texte fournissant le nom accessible peut être masqué grâce [à des propriétés <sup>(angl.)</sup>](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) afin de le retirer visuellement mais de le conserver pour les technologies d'assistance. Cette méthode est généralement utilisée pour les boutons utilisant une simple icône comme indication.
 
-- [Qu'est-ce qu'un nom accessible ? The Paciello Group <sup>(angl.)</sup>](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
-- <i lang="en">Hidden content for better a11y</i>
-
-  [<i lang="en">Hidden content for better a11y</i> <sup>(angl.)</sup>](https://gomakethings.com/hidden-content-for-better-a11y/)
-
-- [Comprendre la règle WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
-- <i lang="en">Understanding Success Criterion 2.4.4</i>
-
-  [<i lang="en">Understanding Success Criterion 2.4.4</i> <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
+- [Qu'est-ce qu'un nom accessible&nbsp;? | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/what-is-an-accessible-name/)
+- [Une meilleure accessibilité grâce au contenu masqué | Go Make Things <sup>(angl.)</sup>](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Comprendre le WCAG sur MDN, explications de la règle 2.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.4_—_navigation_fournir_des_moyens_daider_les_utilisateurs_et_utilisatrices_à_naviguer_trouver_du_contenu_et_savoir_leur_position)
+- [Comprendre le critère de succès 2.4.4 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
 ## Exemples
 
@@ -94,7 +89,7 @@ body {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples','100%','105')}}
+{{EmbedLiveSample("Exemples", "100%", 105)}}
 
 ## Spécifications
 
@@ -107,4 +102,4 @@ body {
 ## Voir aussi
 
 - {{CSSxRef(":-moz-only-whitespace")}} — L'implémentation des {{Glossary("Vendor_Prefix", "préfixes")}} dans les changements de [Selectors Level 4 <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#the-empty-pseudo)
-- {{CSSxRef(":blank")}}
+- La pseudo-classe {{CSSxRef(":blank")}}

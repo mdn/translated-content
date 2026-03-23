@@ -125,7 +125,7 @@ l10n:
 > 詳細については、[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)のガイドや [An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) を参照すると、さまざまな状況で画像の `alt` 属性を使用する方法が分かります。
 
 > [!NOTE]
-> [HTML tags](https://scrimba.com/html-css-crash-course-c02l/~0d?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> HTMLタグ MDNラーニングパートナー（Scrimba 提供）は、画像に関する情報とミニチャレンジを提供するインタラクティブなレッスンです。
+> [HTML tags](https://scrimba.com/html-css-crash-course-c02l/~0d?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> HTMLタグ MDNラーニングパートナー（Scrimba 提供）は、画像に関する情報とミニチャレンジを提供するインタラクティブなレッスンです。
 
 ### 幅と高さ
 
