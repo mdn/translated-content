@@ -1,12 +1,103 @@
 ---
 title: scale
 slug: Web/CSS/Reference/Properties/scale
-original_slug: Web/CSS/scale
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}{{seecompattable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scale`** permet de définir des transformations de mise à l'échelle individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela correspond mieux à l'utilisation typique de l'interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformation à définir dans la valeur `transform`.
 
-La propriété **`scale`** permet de mise à l'échelle individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
+{{InteractiveExample("Démonstration CSS&nbsp;: scale")}}
+
+```css interactive-example-choice
+scale: none;
+```
+
+```css interactive-example-choice
+scale: 1.5;
+```
+
+```css interactive-example-choice
+scale: 1.7 50%;
+```
+
+```css interactive-example-choice
+scale: 1 -1;
+```
+
+```css interactive-example-choice
+scale: 1.2 1.2 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## Syntaxe
 
@@ -24,19 +115,26 @@ scale: 0.5;
 scale: 2 0.5;
 
 /* Trois valeurs */
-scale: 2 0.5 2;
+scale: 200% 50% 200%;
+
+/* Valeurs globales */
+scale: inherit;
+scale: initial;
+scale: revert;
+scale: revert-layer;
+scale: unset;
 ```
 
 ### Valeurs
 
-- Une seule valeur de longueur/pourcentage
-  - : Une longueur ou un pourcentage qui définit une mise à l'échelle en deux dimensions. Le facteur utilisé est le même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `scale()` (mise à l'échelle sur deux dimensions) avec une seule valeur.
-- Deux valeurs de longueur/pourcentage
-  - : Deux longueurs ou pourcentages qui définissent respectivement les composantes horizontale et verticale de l'agrandissement/rétrécissement en deux dimensions. Cela est équivalent à la fonction `scale()` appelée avec ces deux arguments.
-- Trois valeurs de longueur/pourcentage
-  - : Trois longueurs ou pourcentages qui définissent respectivement les composantes horizontale, verticale et en profondeur de la mise à l'échelle sur trois dimensions. Cela est équivalent à la fonction `scale3d()` appelée avec ces trois arguments.
+- Valeur simple
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) définissant un facteur d'échelle permettant de redimensionner l'élément concerné selon le même facteur sur les axes X et Y. Cela équivaut à la fonction `scale()` (redimensionnement 2D) avec une seule valeur définie.
+- Deux valeurs
+  - : Deux nombres ({{CSSxRef("&lt;number&gt;")}}) ou pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les valeurs de mise à l'échelle des axes X et Y d'une mise à l'échelle 2D. Équivaut à une fonction `scale()` (mise à l'échelle 2D) avec deux valeurs définies.
+- Trois valeurs
+  - : Trois nombres ({{CSSxRef("&lt;number&gt;")}}) ou pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les valeurs de mise à l'échelle des axes X, Y et Z d'une mise à l'échelle 3D. Équivaut à une fonction `scale3d()` (mise à l'échelle 3D) avec trois valeurs définies.
 - `none`
-  - : Cette valeur indique qu'aucune mise à l'échelle ne devrait être appliquée.
+  - : Définit qu'aucun redimensionnement ne doit être appliqué.
 
 ## Définition formelle
 
@@ -48,51 +146,44 @@ scale: 2 0.5 2;
 
 ## Exemples
 
-### HTML
+### Redimensionner un élément au survol
+
+L'exemple suivant montre comment redimensionner un élément au survol.
+Deux boîtes sont affichées, l'une avec une seule valeur `scale` qui redimensionne l'élément sur les deux axes.
+La deuxième boîte a deux valeurs `scale` qui redimensionnent l'élément sur les axes X et Y de manière indépendante.
+
+#### HTML
 
 ```html
-<div>
-  <p class="scale">Scaling</p>
-</div>
+<div class="box" id="box1">valeur unique</div>
+<div class="box" id="box2">deux valeurs</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.box {
+  float: left;
+  margin: 1em;
+  width: 7em;
+  line-height: 7em;
   text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 3px dotted;
 }
 
-.scale {
-  transition: scale 1s;
+#box1:hover {
+  scale: 1.25;
 }
 
-div:hover .scale {
-  scale: 2 0.7;
+#box2:hover {
+  scale: 1.25 0.75;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Redimensionner un élément au survol", "100%", 150)}}
 
 ## Spécifications
 
@@ -104,6 +195,8 @@ div:hover .scale {
 
 ## Voir aussi
 
-- {{cssxref('translate')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- La propriété {{CSSxRef('translate')}}
+- La propriété {{CSSxRef('rotate')}}
+- La propriété {{CSSxRef('transform')}}
+
+Note&nbsp;: `skew` n'est pas une valeur de transformation indépendante

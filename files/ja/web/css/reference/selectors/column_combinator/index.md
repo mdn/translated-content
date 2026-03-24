@@ -1,7 +1,8 @@
 ---
 title: 列結合子
 slug: Web/CSS/Reference/Selectors/Column_combinator
-original_slug: Web/CSS/Column_combinator
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -17,8 +18,9 @@ col.selected||td {
 
 ## 構文
 
-```css
-column-selector||cell-selector {
+```css-nolint
+/* || 結合子の周りのホワイトスペースは省略可能ですが推奨される。 */
+column-selector || cell-selector {
   /* スタイルプロパティ */
 }
 ```
@@ -39,6 +41,7 @@ column-selector||cell-selector {
       <td>B</td>
       <td>C</td>
     </tr>
+
     <tr>
       <td colspan="2">D</td>
       <td>E</td>
@@ -71,12 +74,13 @@ col.selected||td {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+今のところ、この機能を実装しているブラウザーはありません。
 
 ## 関連情報
 
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}
 - {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-last-of-type")}}
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール

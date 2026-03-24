@@ -1,14 +1,13 @@
 ---
 title: right
 slug: Web/CSS/Reference/Properties/right
-original_slug: Web/CSS/right
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`right`** participe à la spécification de la position horizontale d'un [élément positionné](/fr/docs/Web/CSS/Reference/Properties/position). Cette {{Glossary("inset properties", "propriété d'encart")}} n'a aucun effet sur les éléments non positionnés.
 
-La propriété **`right`** définit, en partie, la position des éléments positionnés. La propriété `right` n'a aucun effet sur les éléments non-positionnés.
-
-{{InteractiveExample("CSS Demo: right")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: right")}}
 
 ```css interactive-example-choice
 right: 0;
@@ -29,12 +28,12 @@ right: 20px;
 ```html interactive-example
 <section id="default-example">
   <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+    <div id="example-element">Je suis positionné absolument.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      Autant de boue dans les rues comme si les eaux venaient de se retirer de
+      la surface de la terre, et il ne serait pas étonnant de rencontrer un
+      Megalosaurus, d'environ douze mètres de long, se dandinant comme un lézard
+      éléphantesque sur Holborn Hill.
     </p>
   </div>
 </section>
@@ -60,25 +59,16 @@ right: 20px;
 }
 ```
 
-L'effet de la propriété `right` dépend de la façon dont l'élément est positionné (c'est-à-dire de la valeur de la propriété {{cssxref("position")}}) :
-
-- Quand `position` vaut `absolute` ou `fixed`, `right` indique la distance entre le bord droit de l'élément et le bord droit du bloc englobant.
-- Quand `position` vaut `relative`, `right` indique la distance de laquelle le bord droit de l'élément est décalé vers la gauche par rapport à sa position normale.
-- Quand `position` vaut `sticky`, `right` se comporte comme `relative` lorsque l'élément est à l'intérieur de la zone d'affichage (_viewport_) et comme `fixed` lorsque l'élément est en dehors de la zone d'affichage.
-- Quand `position` vaut `static`, `right` n'a aucun effet.
-
-Lorsque les propriétés `right` et {{cssxref("left")}} sont définies toutes les deux et que l'élément ne peut pas s'étendre afin de satisfaire ces deux contraintes, la position de l'élément est _sur-définie._ Dans ce cas, la valeur de {{cssxref("left")}} est prioritaire lorsque le contenant est disposé en lecture de gauche à droite (la valeur calculée de `right` sera `-left`), et la valeur de `right` est prioritaire lorsque le contenant est disposé en lecture de droite à gauche (la valeur calculée de {{cssxref("left")}} sera `-right`).
-
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 right: 3px;
 right: 2.4em;
+right: anchor(--my-anchor 50%);
+right: anchor-size(--my-anchor height, 65px);
 
-/* Valeurs de pourcentage */
-/* Type <percentage>      */
+/* Valeurs de type <percentage> */
 right: 10%;
 
 /* Valeur avec un mot-clé */
@@ -87,25 +77,36 @@ right: auto;
 /* Valeurs globales */
 right: inherit;
 right: initial;
+right: revert;
+right: revert-layer;
 right: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui peut être négative, positive ou nulle et représente :
-    - pour les éléments à positionnement absolu : la distance jusqu'au bord droit du bloc englobant.
-    - pour les éléments à positionnement relatif : le décalage à droite que l'élément subit par rapport à sa position dans le flux normal s'il n'était pas positionné.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) négative, nulle ou positive&nbsp;:
+    - pour _les éléments positionnés absolument_, elle représente la distance par rapport au bord droit du bloc englobant.
+    - pour _les éléments positionnés par ancre_, la fonction {{CSSxRef("anchor()")}} se résout en une valeur {{CSSxRef("&lt;length&gt;")}} relative à la position du bord gauche ou droit de l'élément ancre associé (voir [Utiliser les propriétés d'encart avec les valeurs de fonction `anchor()`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#utiliser_les_propriétés_dencart_avec_des_valeurs_de_fonction_anchor)), et la fonction {{CSSxRef("anchor-size()")}} se résout en une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou à la hauteur de l'élément ancre associé (voir [Définir la position de l'élément en fonction de la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_position_dun_élément_selon_la_taille_de_lancre)).
+    - pour _les éléments positionnés relativement_, elle représente la distance à laquelle l'élément est déplacé vers la gauche par rapport à sa position normale.
 
-- `<percentage>`
-  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} représentant le pourcentage de la largeur du bloc englobant.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de la largeur du bloc englobant.
 - `auto`
-  - : Un mot-clé qui représente :
-    - pour les éléments à positionnement absolu : la position de l'élément fondé sur la propriété {{cssxref("left")}} et considère `width: auto` comme une largeur fondée sur le contenu ; ou, si `left` vaut aussi `auto`, l'élément serait positionné horizontalement comme s'il avait été un élément statique.
-    - pour les éléments à positionnement relatif : le décalage à droite de l'élément par rapport à sa position originale fondé sur la propriété {{cssxref("left")}} ou, si `left` vaut également `auto`, aucun décalage.
+  - : Définit que&nbsp;:
+    - pour _les éléments positionnés absolument_, la position de l'élément est basée sur la propriété {{CSSxRef("left")}}, tandis que `width: auto` est traité comme une largeur basée sur le contenu ; ou si `left` est également `auto`, l'élément est positionné là où il devrait être horizontalement s'il était un élément statique.
+    - pour _les éléments positionnés relativement_, la distance de l'élément par rapport à sa position normale est basée sur la propriété {{CSSxRef("left")}}&nbsp;; ou si `left` est également `auto`, l'élément n'est pas déplacé horizontalement du tout.
 
-- `inherit`
-  - : Un mot-clé indiquant que la valeur est identique à la valeur calculée de l'élément parent (qui peut ne pas être sont bloc contenant). Cette valeur calculée est manipulée comme si elle était de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou comme si elle était le mot-clé `auto`.
+## Description
+
+L'effet de `right` dépend de la façon dont l'élément est positionné (c'est-à-dire la valeur de la propriété {{CSSxRef("position")}})&nbsp;:
+
+- Lorsque `position` est défini sur `absolute` ou `fixed`, la propriété `right` définit la distance entre la marge extérieure du bord droit de l'élément et la bordure intérieure du bord droit de son bloc englobant. Si l'élément positionné a un [_élément ancre_](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using) associé, et que la valeur de la propriété inclut une fonction {{CSSxRef("anchor()")}}, `right` positionne le bord droit de l'élément positionné par rapport au bord [`<anchor-side>`](/fr/docs/Web/CSS/Reference/Values/anchor#anchor-side) défini. La propriété `right` est [compatible](/fr/docs/Web/CSS/Reference/Values/anchor#compatibilité_des_propriétés_dencart_et_des_valeurs_anchor-side) avec les valeurs `left`, `right`, `start`, `end`, `self-start`, `self-end`, `center` et `<percentage>`.
+- Lorsque `position` est défini sur `relative`, la propriété `right` définit la distance à laquelle le bord droit de l'élément est déplacé vers la gauche par rapport à sa position normale.
+- Lorsque `position` est défini sur `sticky`, la propriété `right` est utilisée pour calculer le rectangle de contrainte de sélection.
+- Lorsque `position` est défini sur `static`, la propriété `right` n'a _aucun effet_.
+
+Lorsque {{CSSxRef("left")}} et `right` sont tous deux définis, si rien ne l'empêche, l'élément s'étire pour satisfaire les deux. Si l'élément ne peut pas s'étirer pour satisfaire les deux — par exemple, si une `width` est déclarée — la position de l'élément est _sur-contrainte_. Dans ce cas, la valeur de `left` a la priorité lorsque le conteneur est de gauche à droite&nbsp;; la valeur de `right` a la priorité lorsque le conteneur est de droite à gauche.
 
 ## Définition formelle
 
@@ -117,10 +118,19 @@ right: unset;
 
 ## Exemples
 
-### CSS
+### Positionnement absolu et relatif utilisant `right`
+
+#### HTML
+
+```html
+<div id="relative">Positionnement relatif</div>
+<div id="absolute">Positionnement absolu</div>
+```
+
+#### CSS
 
 ```css
-#exemple_3 {
+#relative {
   width: 100px;
   height: 100px;
   background-color: #ffc7e4;
@@ -129,7 +139,7 @@ right: unset;
   left: 20px;
 }
 
-#exemple_4 {
+#absolute {
   width: 100px;
   height: 100px;
   background-color: #ffd7c2;
@@ -139,16 +149,54 @@ right: unset;
 }
 ```
 
-### HTML
+#### Résultat
+
+{{EmbedLiveSample("Positionnement absolu et relatif utilisant `right`", 500, 220)}}
+
+### Déclarer à la fois `left` et `right`
+
+Lorsque `left` et `right` sont tous deux déclarés, l'élément s'étirera pour satisfaire les deux, sauf si d'autres contraintes l'en empêchent. Si l'élément ne peut pas s'étirer ou se rétrécir pour satisfaire les deux, la position de l'élément est _sur-contrainte_. Dans ce cas, la priorité est basée sur la direction du conteneur&nbsp;: `left` a la priorité si la direction du conteneur est de gauche à droite, et `right` a la priorité si la direction du conteneur est de droite à gauche.
+
+#### HTML
 
 ```html
-<div id="exemple_3">Exemple 3</div>
-<div id="exemple_4">Exemple 4</div>
+<div id="parent">
+  Parent
+  <div id="noWidth">Pas de largeur</div>
+  <div id="width">width: 100px</div>
+</div>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples', 500, 220)}}
+```css
+div {
+  outline: 1px solid #cccccc;
+}
+#parent {
+  width: 200px;
+  height: 200px;
+  background-color: #ffc7e4;
+  position: relative;
+}
+/* déclarer à la fois left et right */
+#width,
+#noWidth {
+  background-color: #c2ffd7;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/* déclarer une largeur */
+#width {
+  width: 100px;
+  top: 60px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Déclarer à la fois `left` et `right`", 500, 220)}}
 
 ## Spécifications
 
@@ -160,7 +208,9 @@ right: unset;
 
 ## Voir aussi
 
-- {{cssxref("position")}},
-- {{cssxref("left")}},
-- {{cssxref("top")}},
-- {{cssxref("bottom")}}
+- Les propriétés {{CSSxRef("top")}}, {{CSSxRef("bottom")}} et {{CSSxRef("left")}}
+- La propriété raccourcie {{CSSxRef("inset")}}
+- Les propriétés {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} et {{CSSxRef("inset-inline-end")}}
+- Les propriétés raccourcies {{CSSxRef("inset-block")}} et {{CSSxRef("inset-inline")}}
+- La propriété {{CSSxRef("position")}}
+- Le module [de mise en page positionnée CSS](/fr/docs/Web/CSS/Guides/Positioned_layout)

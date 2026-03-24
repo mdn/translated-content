@@ -380,6 +380,22 @@ Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(
 
 ## Les API Web
 
+### CSS Typed Object Model Level 1
+
+Le travail d'implémentation a commencé sur le [CSS Typed OM Level 1 <sup>(angl.)</sup>](https://drafts.css-houdini.org/css-typed-om/).
+Par exemple, la méthode {{DOMxRef("CSSNumericValue/to", "to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} est prise en charge pour convertir une valeur numérique CSS d'une unité à une autre.
+([Bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Non                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.typed-om.enabled`
+  - : Mettre sur `true` pour activer.
+
 ### Propriétés `actions` et `maxActions` de Notification
 
 La propriété en lecture seule {{DOMxRef("Notification/actions","actions")}} et la propriété statique en lecture seule [`maxActions`](/fr/docs/Web/API/Notification/maxActions_static) de l'interface {{DOMxRef("Notification")}} sont prises en charge dans Nightly sur bureau.
@@ -421,29 +437,6 @@ Voir [le bogue Firefox 1602129 <sup>(angl.)</sup>](https://bugzil.la/1602129) po
   - : Mettre sur `true` pour activer (activé dans Nightly et sur Windows dans toutes les versions)
 - `dom.webgpu.service-workers.enabled`
   - : Mettre sur `true` pour activer (activé dans Nightly)
-
-### Prise en charge de l'API Reporting pour les violations CSP
-
-[L'API Reporting](/fr/docs/Web/API/Reporting_API) prend désormais en charge le signalement des violations de la [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
-
-Les instances de {{DOMxRef('Report')}} retournées par l'interface {{DOMxRef('ReportingObserver')}} peuvent désormais avoir une valeur `type` de `"csp-violation"` et une propriété `body` qui contient une instance de l'interface {{DOMxRef('CSPViolationReportBody')}}.
-Cela permet de signaler les violations CSP au sein d'une page web.
-
-Les rapports de violation CSP peuvent également être envoyés à des points de terminaison distants définis par nom dans la directive CSP {{CSP("report-to")}} — les noms de points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
-Le rapport est une sérialisation de l'objet {{DOMxRef('Report')}} décrit ci-dessus, avec une propriété `body` qui est une sérialisation d'une instance de {{DOMxRef('CSPViolationReportBody')}}.
-
-Ce rapport de violation remplace un mécanisme similaire spécifique à CSP pour l'envoi de rapports de violation, qui utilise la directive CSP {{CSP("report-uri")}} pour définir l'URL du point de signalement, et dispose d'un [format JSON de rapport de violation spécifique à CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-(Voir [le bogue Firefox 1391243 <sup>(angl.)</sup>](https://bugzil.la/1391243)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 130                    | Non                 |
-| Developer Edition | 130                    | Non                 |
-| Beta              | 130                    | Non                 |
-| Release           | 130                    | Non                 |
-
-- `dom.reporting.enabled`
-  - : Mettre sur `true` pour activer.
 
 ### WebRTC et multimédia
 
@@ -501,6 +494,7 @@ Firefox prend en charge les images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org
 Voir [le bogue Firefox 1539075 <sup>(angl.)</sup>](https://bugzil.la/1539075) pour plus de détails.
 
 Notez que, comme indiqué ci-dessous, la fonctionnalité n'est disponible que dans les versions Nightly (peu importe si la préférence est activée).
+Dans Firefox 149, le précédent décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation en Rust utilisant la bibliothèque `jxl-rs` ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |

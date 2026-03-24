@@ -2,12 +2,12 @@
 title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 l10n:
-  sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`font-synthesis-small-caps`** は [CSS](/ja/docs/Web/CSS) プロパティで、フォントファミリーにスモールキャップの書体がない場合に、ブラウザーがスモールキャップの書体を合成するかどうかを指定します。スモールキャップの字体は通常、大文字の形状を使用しますが、小文字のサイズに縮小されます。
 
-すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
+すべての書体合成値を制御するには、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。
 
 ## 構文
 
@@ -88,6 +88,6 @@ font-synthesis-small-caps: unset;
 
 ## 関連情報
 
-- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) shorthand, [font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style), [font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
-- {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-weight")}}
-- [CanvasRenderingContext2D: fontVariantCaps property](/ja/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)
+- [font-synthesis](/ja/docs/Web/CSS/Reference/Properties/font-synthesis) 一括指定、[font-synthesis-style](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-style)、[font-synthesis-weight](/ja/docs/Web/CSS/Reference/Properties/font-synthesis-weight)
+- {{cssxref("font-style")}}、{{cssxref("font-variant")}}、{{cssxref("font-variant-caps")}}、{{cssxref("font-weight")}}
+- [CanvasRenderingContext2D: fontVariantCaps プロパティ](/ja/docs/Web/API/CanvasRenderingContext2D/fontVariantCaps)
