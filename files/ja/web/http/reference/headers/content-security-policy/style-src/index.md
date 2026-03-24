@@ -3,7 +3,7 @@ title: "Content-Security-Policy: style-src ディレクティブ"
 short-title: style-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
 ---
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。
