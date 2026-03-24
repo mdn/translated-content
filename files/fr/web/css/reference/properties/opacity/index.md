@@ -1,14 +1,13 @@
 ---
 title: opacity
 slug: Web/CSS/Reference/Properties/opacity
-original_slug: Web/CSS/opacity
+l10n:
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
 
-La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
-
-{{InteractiveExample("CSS Demo: opacity")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: opacity")}}
 
 ```css interactive-example-choice
 opacity: 0;
@@ -25,11 +24,12 @@ opacity: 1;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de la Saint-Michel vient de s'achever, et le Lord
+    Chancelier siège à Lincoln's Inn Hall. Le temps de novembre est implacable.
+    Il y a tant de boue dans les rues qu'on dirait que les eaux viennent à peine
+    de se retirer de la surface de la terre, et il ne serait pas étonnant de
+    croiser un mégalosaure, d'une quinzaine de mètres de long, se dandinant
+    comme un lézard éléphantesque en haut de Holborn Hill.
   </p>
 </section>
 ```
@@ -42,39 +42,85 @@ opacity: 1;
 }
 ```
 
-La valeur s'applique à l'ensemble de l'élément et à ce qu'il contient même si la valeur n'est pas héritée par les éléments fils. Ainsi, un élément et les fils qu'il contient auront tous la même opacité relative à l'arrière-plan, même si l'élément et ses descendants ont des opacités différentes. Si on souhaite utiliser différentes opacités pour les différents éléments enfants, plutôt que d'utiliser `opacity`, on pourra utiliser la propriété {{cssxref("background")}} avec une composante alpha différente de 1 (par exemple : `background: rgba(0, 0, 0, 0.4);`).
-
 ## Syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Totalement opaque  */
-opacity: 1;
-opacity: 1;
-
-/* Légèrement transparent */
-opacity: 0.6;
-
-/* Complètement transparent */
-opacity: 0;
-opacity: 0;
+opacity: 0.9;
+opacity: 90%;
 
 /* Valeurs globales */
 opacity: inherit;
 opacity: initial;
+opacity: revert;
+opacity: revert-layer;
 opacity: unset;
 ```
 
 ### Valeurs
 
-- `<number>`
-  - : Une valeur de type {{cssxref("&lt;number&gt;")}} dans l'intervalle \[`0.0`, `1.0]` qui représente l'opacité de l'élément, la valeur de son canal alpha. Les valeurs en dehors de cet intervalle seront considérées comme valides mais ramenées dans cet intervalle (ainsi `6` sera équivalent à `1` et -2 sera équivalent à `0`).
+- `<alpha-value>`
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) dans l'intervalle `0.0` à `1.0`, inclus, ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) dans l'intervalle `0%` à `100%`, inclus, représentant l'opacité du canal (c'est-à-dire la valeur de son canal alpha). Toute valeur en dehors de l'intervalle, bien que valide, est ramenée à la limite la plus proche de l'intervalle.
 
-    | Valeur                                                                                   | Signification                                                         |
-    | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | `0`                                                                                      | L'élément est complètement transparent (invisible).                   |
-    | Toute valeur de type {{cssxref("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent, on peut voir l'arrière-plan. |
-    | `1` (la valeur par défaut)                                                               | L'élément est complètement opaque.                                    |
+    | Valeur                                                                                   | Signification                                                                                          |
+    | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+    | `0`                                                                                      | L'élément est complètement transparent (c'est-à-dire invisible).                                       |
+    | Toute valeur de type {{CSSxRef("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent (c'est-à-dire que le contenu derrière l'élément peut être vu). |
+    | `1` (valeur par défaut)                                                                  | L'élément est complètement opaque (visuellement solide).                                               |
+
+## Description
+
+`opacity` s'applique à l'élément dans son ensemble, y compris à son contenu, même si la valeur n'est pas héritée par les éléments enfants. Ainsi, l'élément et ses enfants ont tous la même opacité par rapport à l'arrière-plan de l'élément, même s'ils ont des opacités différentes les uns par rapport aux autres.
+
+Pour changer uniquement l'opacité d'un arrière-plan, utilisez la propriété {{CSSxRef("background")}} avec une [valeur de couleur](/fr/docs/Web/CSS/Reference/Values/color_value) qui permet un canal alpha. Par exemple&nbsp;:
+
+```css
+background: rgb(0 0 0 / 40%);
+```
+
+Lorsque la valeur de `opacity` est définie sur `0`, l'élément et tous ses enfants apparaissent invisibles, mais ils font toujours partie du DOM. Cela signifie qu'ils enregistrent toujours les [évènements de pointeur](/fr/docs/Web/API/Pointer_events) et, si les éléments font partie d'un ordre de tabulation, ils peuvent recevoir la sélection. Pour une bonne utilisabilité, assurez-vous de rendre ces éléments visibles lorsqu'ils reçoivent des interactions utilisateur ou utilisez la propriété CSS {{CSSxRef("pointer-events")}} pour désactiver les évènements de pointeur et retirer l'élément de l'ordre de tabulation en le désactivant avec l'attribut `disabled` ou en définissant [`tab-index="-1"`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) pour les éléments interactifs non liés aux formulaires.
+
+L'utilisation de `opacity` avec une valeur autre que `1` place l'élément dans un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+
+L'opacité seule ne doit pas être utilisée pour fournir des informations aux lecteurs d'écran. Utilisez l'attribut HTML [`hidden`](/fr/docs/Web/HTML/Reference/Global_attributes/hidden), CSS {{CSSxRef("visibility")}}, ou les propriétés de style CSS {{CSSxRef("display")}}. Il est préférable d'éviter d'utiliser l'attribut [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden), mais si l'élément est masqué avec l'opacité, alors cachez-le également aux lecteurs d'écran.
+
+### Transition d'opacité
+
+Lors de la [transition](/fr/docs/Web/CSS/Guides/Transitions) de l'opacité des éléments lorsque vous les ajoutez à la page alors que le contenu était auparavant masqué avec [`visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/visibility#hidden), [`display: none`](/fr/docs/Web/CSS/Reference/Properties/display#none), ou [`content-visibility: hidden`](/fr/docs/Web/CSS/Reference/Properties/content-visibility#hidden), vous devez inclure à la fois un {{CSSxRef("@starting-style")}} et [`transition-behavior: allow-discrete`](/fr/docs/Web/CSS/Reference/Properties/transition-behavior#allow-discrete)&nbsp;:
+
+```css
+.card {
+  transition:
+    opacity 5s,
+    display 5s;
+  background-color: orange;
+
+  transition-behavior: allow-discrete;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.card.hidden {
+  display: none;
+  opacity: 0;
+}
+```
+
+Pour activer les transitions de premier style, des règles `@starting-style` sont nécessaires. Dans le code ci-dessus, définir `opacity: 0` dans `@starting-style` fournit un point de départ pour la transition lorsque l'élément reçoit sa mise à jour de style initiale. Pour plus de détails, voir {{CSSxRef("@starting-style")}}.
+
+La définition de `transition-behavior: allow-discrete` est nécessaire pour effectuer la transition vers `display: none`. Voir la propriété {{CSSxRef("transition-behavior")}} pour plus de détails.
+
+## Accessibilité
+
+Si l'opacité du texte est ajustée, il est important de s'assurer que le ratio de contraste entre la couleur du texte et l'arrière-plan sur lequel le texte est placé est suffisamment élevé pour que les personnes ayant des déficiences visuelles puissent lire le contenu de la page.
+
+Le ratio de contraste des couleurs est déterminé en comparant la luminosité des valeurs de couleur du texte ajustées par l'opacité et de l'arrière-plan. Pour répondre aux [Directives pour l'accessibilité des contenus Web (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/) actuelles, un ratio de 4,5:1 est requis pour le contenu textuel et de 3:1 pour les textes plus grands tels que les titres. Un texte de grande taille est défini comme ayant une taille de 18,66px et [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) ou plus, ou 24px ou plus.
+
+- [WebAIM&nbsp;: Vérificateur de contraste des couleurs <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
+- [Comprendre le WCAG sur MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le critère de succès 1.4.3 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+
+Divers systèmes d'exploitation offrent une préférence pour réduire la transparence. Pour définir une `opacity` en fonction des préférences de transparence des systèmes d'exploitation de l'utilisateur·ice, utilisez la requête média [`prefers-reduced-transparency`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency).
 
 ## Définition formelle
 
@@ -86,85 +132,101 @@ opacity: unset;
 
 ## Exemples
 
-### Exemple simple
+### Définir l'opacité
+
+L'exemple suivant montre comment la propriété `opacity` modifie l'opacité de l'ensemble de l'élément et de son contenu, rendant ainsi le texte très difficile à lire.
+
+#### HTML
+
+```html
+<div class="light">Vous pouvez à peine voir ceci.</div>
+<div class="medium">Ceci est plus facile à voir.</div>
+<div class="heavy">Ceci est très facile à voir.</div>
+```
 
 #### CSS
 
 ```css
 div {
   background-color: yellow;
+  font-weight: bold;
+  font-size: 130%;
 }
-
-.leger {
-  /* On ne voit presque pas le texte */
-  opacity: 0.2;
+.light {
+  opacity: 0.2; /* À peine voir le texte sur le fond */
 }
-.moyen {
-  /* On peut mieux discerner le texte */
-  opacity: 0.5;
+.medium {
+  opacity: 0.5; /* Voir le texte plus clairement sur le fond */
 }
-.lourd {
-  /* Le texte est clairement visible */
-  opacity: 0.9;
+.heavy {
+  opacity: 0.9; /* Voir le texte très clairement sur le fond */
 }
-```
-
-#### HTML
-
-```html
-<div class="leger">On arrive à peine à lire.</div>
-<div class="moyen">On voit mieux.</div>
-<div class="lourd">Ceci est plus simple à lire.</div>
 ```
 
 #### Résultat
 
-{{EmbedLiveSample('Exemple_simple', '640', '64')}}
+{{EmbedLiveSample("Définir l'opacité", 640, 105)}}
 
-### Jouer sur l'opacité avec `:hover`
+### Définir l'opacité au survol
+
+Dans l'exemple suivant, l'opacité est modifiée au survol, de sorte que l'image de fond rayée de l'élément parent apparaît à travers l'image.
+
+#### HTML
+
+```html
+<div class="wrapper">
+  <img
+    src="/shared-assets/images/examples/dino.svg"
+    alt="MDN Dino"
+    width="128"
+    height="146"
+    class="opacity" />
+</div>
+```
 
 #### CSS
 
 ```css
 img.opacity {
   opacity: 1;
-  /* IE8 et antérieurs */
-  filter: alpha(opacity=100);
-  /* Déclenche "hasLayout" dans IE 7 et antérieurs */
-  zoom: 1;
 }
 
 img.opacity:hover {
   opacity: 0.5;
-  filter: alpha(opacity=50);
-  zoom: 1;
 }
-```
 
-#### HTML
-
-```html
-<img
-  src="//developer.mozilla.org/media/img/mdn-logo.png"
-  alt="MDN logo"
-  width="128"
-  height="146"
-  class="opacity" />
+.wrapper {
+  width: 200px;
+  height: 160px;
+  background-color: #f03cc3;
+  background-image: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgb(255 255 255 / 50%) 50%
+  );
+  background-size: 20px 20px;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Jouer_sur_l'opacité_avec_hover", '150', '175')}}
+{{EmbedLiveSample("Définir l'opacité au survol", 150, 200)}}
 
-## Accessibilité
+### Mettre en forme en fonction des préférences de l'utilisateur·ice
 
-Si l'opacité du texte est modifiée, il est nécessaire de vérifier que le contraste entre la couleur du texte et l'arrière-plan est suffisant pour que le texte soit lisible, y compris pour les personnes souffrant de trouble de la vision.
+Pour mettre en forme les éléments en fonction des préférences de transparence des systèmes d'exploitation de l'utilisateur·ice, utilisez la requête média [`prefers-reduced-transparency`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency). L'exemple suivant montre comment utiliser la requête média `prefers-color-scheme` pour définir l'opacité souhaitée en fonction des préférences de l'utilisateur·ice.
 
-Le ratio de contraste est déterminé en comparant la luminosité de la couleur du texte (dont l'opacité a été adaptée) et celle de l'arrière-plan. Les recommandations du [WCAG](https://www.w3.org/WAI/intro/wcag) conseillent un ratio de 4.5:1 pour les textes normaux et 3:1 pour les textes plus grands (un texte est considéré comme grand s'il est en gras et dont les lettres mesurent 18.66px ou si ses lettres mesurent 24px ou plus).
+```css
+.element {
+  opacity: 0.5;
+}
 
-- [Vérificateur de contraste WebAIM](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.3, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+@media (prefers-reduced-transparency) {
+  .element {
+    opacity: 1;
+  }
+}
+```
 
 ## Spécifications
 
@@ -176,4 +238,6 @@ Le ratio de contraste est déterminé en comparant la luminosité de la couleur 
 
 ## Voir aussi
 
-- [La documentation MSDN de Microsoft sur `filter:alpha(opacity=xx)`](https://msdn.microsoft.com/en-us/library/ms532910%28VS.85%29.aspx)
+- La requête média [`prefers-reduced-transparency`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency)
+- Le module [de couleur CSS](/fr/docs/Web/CSS/Guides/Colors)
+- L'attribut SVG {{SVGAttr("opacity")}}

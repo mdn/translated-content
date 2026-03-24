@@ -1,9 +1,8 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
-original_slug: Web/CSS/scroll-snap-type
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
 **`scroll-snap-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("scroll container", "スクロールコンテナー")}}に設定され、[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)内のスナップポイントの強制の方向と厳格さを設定することで、スクロールスナップを有効にします。
@@ -58,7 +57,7 @@ scroll-snap-type: x proximity;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@ scroll-snap-type: x proximity;
 }
 
 #example-element > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -299,5 +298,5 @@ div:nth-child(odd) {
 - スクロールの子のプロパティ: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
 - [スクロールスナップの基本概念](/ja/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
 - [スクロールスナップの使用](/ja/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
-- [CSS scroll snap](/ja/docs/Web/CSS/Guides/Scroll_snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

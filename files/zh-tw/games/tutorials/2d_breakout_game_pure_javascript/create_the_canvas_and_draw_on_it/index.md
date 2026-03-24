@@ -99,12 +99,45 @@ ctx.closePath();
 
 ## 比較你的程式碼
 
-這裡第一課的有全部原始碼，在 JSFiddle 上實際運行:
+這裡第一課的有全部原始碼，可以實際運行:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+```
+
+```css
+canvas {
+  background: #eeeeee;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.rect(20, 40, 50, 50);
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
+ctx.fillStyle = "green";
+ctx.fill();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(160, 10, 100, 40);
+ctx.strokeStyle = "rgb(0 0 255 / 0.5)";
+ctx.stroke();
+ctx.closePath();
+```
+
+{{embedlivesample("比較你的程式碼", 600, 340)}}
 
 > [!NOTE]
-> 練習改變物體的大小和顏色
+> 嘗試改變物體的大小和顏色。
 
 ## 下一步
 

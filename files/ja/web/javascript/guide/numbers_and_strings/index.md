@@ -2,10 +2,10 @@
 title: 数値と文字列
 slug: Web/JavaScript/Guide/Numbers_and_strings
 l10n:
-  sourceCommit: 0785ed06b89a60d6df673504d84e276852017c92
+  sourceCommit: 82617295992be4d9dc4ca74499ee63f8d2e5984b
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
 
 本章では、JavaScript で 2 つの最も基本的なデータ型、数値と文字列について説明します。その基盤となる表現と、それらを使用して作業し、計算を行うための関数について紹介します。
 
@@ -66,9 +66,9 @@ const m = 0644; // 420
 16 進数の構文では、先行ゼロの後に小文字または大文字の "X" を使います (`0x` または `0X`)。0x の後の数値が範囲 (0123456789ABCDEF) 外の場合、 {{jsxref("SyntaxError")}}: "Identifier starts immediately after numeric literal" (数値リテラルの直後に識別子があります) が発生します。
 
 ```js-nolint
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xFFFFFFFFFFFFF // 4503599627370495
+0xabcdef123456  // 188900967593046
+0XA             // 10
 ```
 
 ### 指数表現
@@ -82,6 +82,21 @@ const m = 0644; // 420
 1e-3   // 0.001
 1E3    // 1000
 ```
+
+### 数値セパレーター
+
+以上示したすべてのリテラル構文において、可読性を改善するために、数字の間にアンダースコア (`_`) を挿入することができます。
+
+```js-nolint
+1_000_000_000_000
+1_050.95
+0b1010_0001_1000_0101
+0o2_2_5_6
+0xA0_B0_C0
+1_000_000_000_000_000_000_000n
+```
+
+数値リテラルに関する詳細については、[字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#数値リテラル)のリファレンスを参照してください。
 
 ## Number オブジェクト
 
@@ -300,7 +315,7 @@ const bigint = 12n ** 34n; // 4922235242952026704037113243122008064n
 const bigintDiv = 5n / 2n; // 2n。長整数には 2.5 がない
 ```
 
-`Math` 関数は長整数値では使用できません。長整数値が利用できるように、 `Math.max()` のような特定の `Math` 関数をオーバーロードするための[公開提案](https://github.com/tc39/proposal-bigint-math)があります。
+`Math` 関数は長整数値では使用できません。数値でのみ機能します。
 
 長整数と数値のどちらかを選ぶかは、用途と入力の範囲によって決まります。数値の精度は、すでにほとんどの日常的な課題に対応できるはずです。また、長整数はバイナリーデータを処理するのに最も適しています。
 

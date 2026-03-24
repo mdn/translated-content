@@ -8,16 +8,16 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-La propriété en lecture seule `fence` de l'interface {{domxref("Window")}} retourne une instance d'objet {{domxref("Fence")}} pour le contexte du document courant.
+La propriété en lecture seule `fence` de l'interface {{DOMxRef("Window")}} retourne une instance d'objet {{DOMxRef("Fence")}} pour le contexte du document courant.
 
-Les objets `Fence` ne sont disponibles que dans les documents intégrés dans des éléments HTML {{htmlelement("fencedframe")}} (chargés via des {{domxref("FencedFrameConfig")}}) ou des éléments HTML {{htmlelement("iframe")}} (chargés via des URN opaques).
+Les objets `Fence` ne sont disponibles que dans les documents intégrés dans des éléments HTML {{HTMLElement("fencedframe")}} (chargés via des {{DOMxRef("FencedFrameConfig")}}) ou des éléments HTML {{HTMLElement("iframe")}} (chargés via des URN opaques).
 
 > [!NOTE]
 > Voir [Fonctionnement des `<fencedframe>`](/fr/docs/Web/API/Fenced_frame_API#fonctionnement_des_fencedframe) pour une description des `FencedFrameConfig` et des URN opaques.
 
 ## Valeur
 
-Une instance d'objet {{domxref("Fence")}}, ou `null` si le contexte du document n'a pas accès à un objet {{domxref("Fence")}}.
+Une instance d'objet {{DOMxRef("Fence")}}, ou `null` si le contexte du document n'a pas accès à un objet {{DOMxRef("Fence")}}.
 
 ## Exemples
 

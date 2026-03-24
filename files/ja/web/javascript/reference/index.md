@@ -2,10 +2,8 @@
 title: JavaScript リファレンス
 slug: Web/JavaScript/Reference
 l10n:
-  sourceCommit: 21e2b8f4b57964e00899bf81d9457d04e1f1009d
+  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
 ---
-
-{{jsSidebar}}
 
 JavaScript リファレンスは、 JavaScript 言語に関する事実の保管庫として機能します。言語全体がここで詳細に記述されています。 JavaScript のコードを書いていると、これらのページをよく参照することになります（だから「JavaScript リファレンス」という題名なのです）。
 
@@ -52,6 +50,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("EvalError")}}
 - {{jsxref("RangeError")}}
 - {{jsxref("ReferenceError")}}
+- {{jsxref("SuppressedError")}}
 - {{jsxref("SyntaxError")}}
 - {{jsxref("TypeError")}}
 - {{jsxref("URIError")}}
@@ -116,6 +115,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Generator")}}
 - {{jsxref("AsyncGenerator")}}
 - {{jsxref("AsyncFunction")}}
+- {{jsxref("DisposableStack")}}
+- {{jsxref("AsyncDisposableStack")}}
 
 ### リフレクション
 
@@ -155,6 +156,8 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/using", "using")}}
+- {{jsxref("Statements/await_using", "await using")}}
 
 ### 関数とクラス
 

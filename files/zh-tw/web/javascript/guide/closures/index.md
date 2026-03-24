@@ -23,9 +23,7 @@ init();
 
 `init()` 建立了局部變數 `name` 與 `displayName()` 函式。`displayName()` 是個在 `init()` 內定義的內部函式，且只在該函式內做動。`displayName()` 自己並沒有局部變數，不過它可以訪問外面函式的變數、因而能取用在父函式宣告的變數 `name`。
 
-{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
-
-[運行](https://jsfiddle.net/xAFs9/3/)這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
+在控制台運行這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
 
 ## 閉包
 
@@ -84,7 +82,7 @@ console.log(add10(2)); // 12
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 12px;
 }
 
@@ -103,14 +101,14 @@ h2 {
 
 ```js
 function makeSizer(size) {
-  return function () {
-    document.body.style.fontSize = size + "px";
+  return () => {
+    document.body.style.fontSize = `${size}px`;
   };
 }
 
-var size12 = makeSizer(12);
-var size14 = makeSizer(14);
-var size16 = makeSizer(16);
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
 ```
 
 `size12`、`size14`、`size16` 現在變成能調整字體大小到 12、14、與 16 像素的函式。而我們能如下例一般，把他們附加到按鈕上（本例為連結）：
@@ -122,12 +120,13 @@ document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
+<p>點擊上方按鈕，這段文字的大小會改變。</p>
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/7726/","","200")}}
+{{EmbedLiveSample("實用的閉包", "", "200")}}
 
 ## 使用閉包模擬私有方法
 
@@ -210,28 +209,29 @@ alert(counter2.value()); /* Alerts 0 */
 
 ## 在迴圈建立閉包：一個常見錯誤
 
-在 ECMAScript 2015 導入 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：
+在導入 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：
 
-```html
-<p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email" /></p>
-<p>Name: <input type="text" id="name" name="name" /></p>
-<p>Age: <input type="text" id="age" name="age" /></p>
+```html live-sample___closures_bad
+<p id="help">這裡將顯示一些實用資訊</p>
+<p>電子郵件：<input type="text" id="email" name="email" /></p>
+<p>姓名：<input type="text" id="name" name="name" /></p>
+<p>年齡：<input type="text" id="age" name="age" /></p>
 ```
 
-```js
+```js example-bad live-sample___closures_bad
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
+    { id: "email", help: "你的電子郵件地址" },
+    { id: "name", help: "你的全名" },
+    { id: "age", help: "你的年齡（必須年滿16歲）" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
+    // 罪魁禍首是這行使用了 `var`
     var item = helpText[i];
     document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
@@ -242,7 +242,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/", "", 200)}}
+{{EmbedLiveSample("closures_bad", "", "200")}}
 
 `helpText` 陣列定義了三個有用的提示，每個提示都和文件內的輸入字段 ID 相關連。迴圈透過這三個定義，依序針對相對應的幫助方法（help method）添加了 `onfocus` 事件。
 
@@ -252,9 +252,16 @@ setupHelp();
 
 其中一個解法是使用更多閉包，尤其要使用前述的函式工廠：
 
-```js
+```html hidden live-sample___closures_factory
+<p id="help">這裡將顯示一些實用資訊</p>
+<p>電子郵件：<input type="text" id="email" name="email" /></p>
+<p>姓名：<input type="text" id="name" name="name" /></p>
+<p>年齡：<input type="text" id="age" name="age" /></p>
+```
+
+```js live-sample___closures_factory
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
@@ -265,9 +272,9 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
+    { id: "email", help: "你的電子郵件地址" },
+    { id: "name", help: "你的全名" },
+    { id: "age", help: "你的年齡（必須年滿16歲）" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -279,7 +286,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/9573/", "", 200)}}
+{{EmbedLiveSample("closures_factory", "", "200")}}
 
 這次就如同預期般的運作了。與所有回調共享作用域環境相比，`makeHelpCallback` 給每個回調建立新的作用域環境，該環境的 `help` 參照到 `helpText` 陣列的對應字串。
 
@@ -287,14 +294,14 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: "email", help: "Your e-mail address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
+    { id: "email", help: "你的電子郵件地址" },
+    { id: "name", help: "你的全名" },
+    { id: "age", help: "你的年齡（必須年滿16歲）" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -303,30 +310,30 @@ function setupHelp() {
       document.getElementById(item.id).onfocus = function () {
         showHelp(item.help);
       };
-    })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
+    })(); // 事件監聽器立即附加到項目的目前值上（保留到迭代為止）。
   }
 }
 
 setupHelp();
 ```
 
-如果你不想用更多閉包的話，你可以使用 ES2015 的 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 關鍵字：
+如果你不想用更多閉包的話，你可以使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 或 [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const) 關鍵字：
 
 ```js
 function showHelp(help) {
-  document.getElementById("help").innerHTML = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
-  var helpText = [
-    { id: "email", help: "Your e-mail address" },
-    { id: "name", help: "Your full name" },
-    { id: "age", help: "Your age (you must be over 16)" },
+  const helpText = [
+    { id: "email", help: "你的電子郵件地址" },
+    { id: "name", help: "你的全名" },
+    { id: "age", help: "你的年齡（必須年滿16歲）" },
   ];
 
-  for (var i = 0; i < helpText.length; i++) {
-    let item = helpText[i];
-    document.getElementById(item.id).onfocus = function () {
+  for (let i = 0; i < helpText.length; i++) {
+    const item = helpText[i];
+    document.getElementById(item.id).onfocus = () => {
       showHelp(item.help);
     };
   }
@@ -335,7 +342,7 @@ function setupHelp() {
 setupHelp();
 ```
 
-在這裡，我們用了 `let` 而不是 `var`，所以每個閉包都會與每個 block-scoped 變數綁定，因而能在不用更多閉包的情況下完美運行。
+在這裡，我們用了 `const` 而不是 `var`，所以每個閉包都會與每個區塊作用域變數綁定，因而能在不用更多閉包的情況下完美運行。
 
 ## 性能考量
 
@@ -367,10 +374,10 @@ function MyObject(name, message) {
   this.message = message.toString();
 }
 MyObject.prototype = {
-  getName: function () {
+  getName() {
     return this.name;
   },
-  getMessage: function () {
+  getMessage() {
     return this.message;
   },
 };
@@ -389,23 +396,6 @@ MyObject.prototype.getName = function () {
 MyObject.prototype.getMessage = function () {
   return this.message;
 };
-```
-
-以上的程式碼，可以寫得如同下例般簡潔：
-
-```js
-function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
-}
-(function () {
-  this.getName = function () {
-    return this.name;
-  };
-  this.getMessage = function () {
-    return this.message;
-  };
-}).call(MyObject.prototype);
 ```
 
 在前例中，所有物件可共享繼承的原型，物件創立時也無須每次都定義方法。詳細資料請參見[深入了解物件模型](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。
