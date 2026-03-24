@@ -69,7 +69,7 @@ l10n:
 
 ### 指南
 
-- [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout) 模块
+- [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)模块
   - [弹性盒基础概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - [在弹性容器中对齐项目](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - [控制弹性项目在主轴上的比例](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Controlling_flex_item_ratios)
@@ -78,7 +78,7 @@ l10n:
   - [弹性盒布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Relationship_with_other_layout_methods)
   - [弹性盒布局的典型应用场景](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
 
-- [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout) 模块
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)模块
   - [网格布局基础概念](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
   - [网格布局与其他布局方法的关系](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
   - [基于行的布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
