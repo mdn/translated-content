@@ -1,114 +1,64 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
-original_slug: Web/CSS/scrollbar-color
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-color`** définit la couleur de la piste et du curseur de la barre de défilement.
 
-La propriété **`scrollbar-color`** permet à un auteur de définir la couleur utilisée pour le curseur et la piste (la ligne sur laquelle se déplace le curseur) de la barre de défilement.
+La **piste** désigne l'arrière-plan de la barre de défilement, qui reste généralement fixe quelle que soit la position de défilement.
 
-{{InteractiveExample("CSS Demo: scrollbar-color")}}
+Le **curseur** désigne la partie mobile de la barre de défilement, qui flotte généralement au-dessus de la piste.
 
-```css interactive-example-choice
-scrollbar-color: yellow blue;
-```
-
-```css interactive-example-choice
-scrollbar-color: #87ceeb #ff5621;
-```
-
-```css interactive-example-choice
-scrollbar-color: auto;
-```
-
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
-    daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
-    corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
-    fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
-    earthnut pea peanut soko zucchini.
-  </div>
-</section>
-```
-
-```css interactive-example
-#example-element {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-}
-```
+Lorsque la valeur `scrollbar-color` est définie sur l'élément racine du document, les valeurs s'appliquent aux barres de défilement de la zone d'affichage (<i lang="en">viewport</i> en anglais).
 
 ## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
 scrollbar-color: auto;
-scrollbar-color: dark;
-scrollbar-color: light;
 
-/* Valeur de couleur */
-/* La première cible le curseur et la seconde la piste */
-/* type <color> */
-scrollbar-color: rebeccapurple green;
+/* Valeurs de type <color> */
+scrollbar-color: rebeccapurple green; /* Deux couleurs valides.
+La première s'applique au curseur de la barre de défilement, la seconde à la piste. */
 
 /* Valeurs globales */
 scrollbar-color: inherit;
 scrollbar-color: initial;
+scrollbar-color: revert;
+scrollbar-color: revert-layer;
 scrollbar-color: unset;
 ```
 
 ### Valeurs
 
-- `<scrollbar-face-color>`
-  - : Une valeur définissant la couleur.
+- `<scrollbar-color>`
+  - : Définit la couleur de la barre de défilement.
 
     <table class="standard-table">
       <tbody>
         <tr>
           <td><code>auto</code></td>
           <td>
-            <p>
-              Utilise le rendu par défaut du système pour la piste de la barre de
-              défilement si aucune autre couleur n'est indiquée pour la mise en
-              forme CSS de la barre de défilement.
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td><code>dark</code></td>
-          <td>
-            Affiche une barre de défilement sombre. Ce peut être la variante sombre
-            fournie par le système sous-jacent ou une barre de défilement
-            personnalisée avec des couleurs sombres.
-          </td>
-        </tr>
-        <tr>
-          <td><code>light</code></td>
-          <td>
-            Affiche une barre de défilement claire. Ce peut être la variante claire
-            fournie par le système sous-jacent ou une barre de défilement
-            personnalisée avec des couleurs claires.
+            Rendu par défaut de la plateforme pour la portion de la piste de la barre de défilement, en l'absence de toute autre propriété de couleur de barre de défilement.
           </td>
         </tr>
         <tr>
           <td><code>&#x3C;color> &#x3C;color></code></td>
           <td>
-            La première couleur est appliquée au curseur et la seconde à la piste
-            sur laquelle se déplace le curseur.
+            La première couleur est appliquée au curseur de la barre de défilement, la seconde à la piste.
           </td>
         </tr>
       </tbody>
     </table>
 
-    > [!NOTE]
-    > Pour toute valeur de `scrollbar-color`, les agents utilisateur doivent appliquer la valeur sur l'élément racine de la zone d'affichage (_viewport_).
+> [!NOTE]
+> [`@media (forced-colors: active)`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors) définit `scrollbar-color` sur `auto`.
 
-    > [!NOTE]
-    > Si la couleur d'une partie de la barre de défilement est indiquée, les implémentations peuvent afficher une barre de défilement simple (plutôt que celle provenant du système) afin de la colorer avec la/les couleur(s) indiquée(s).
+## Accessibilité
+
+Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est nécessaire de s'assurer que le contraste entre le curseur et la piste est suffisant. Lorsque des mots-clés sont utilisés, c'est à l'agent utilisateur de s'assurer que le contraste est suffisant. Voir [les techniques WCAG 2.0 G183&nbsp;: Utiliser un ratio de contraste de 3:1 <sup>(angl.)</sup>](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
 
 ## Définition formelle
 
@@ -120,18 +70,20 @@ scrollbar-color: unset;
 
 ## Exemples
 
-### CSS
+### Coloration des barres de défilement
+
+#### CSS
 
 ```css
 .scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #000077 #bada55;
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <div class="scroller">
@@ -143,13 +95,9 @@ scrollbar-color: unset;
 </div>
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples")}}
-
-## Accessibilité
-
-Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est nécessaire de s'assurer que le contraste entre le curseur et la piste est suffisant. Lorsque des mots-clés sont utilisés, c'est à l'agent utilisateur de s'assurer que le contraste est suffisant. Voir [les techniques WCAG 2.0 G183 : Utiliser un ratio de contraste de 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
+{{EmbedLiveSample("Coloration des barres de défilement")}}
 
 ## Spécifications
 
@@ -158,3 +106,11 @@ Lorsqu'on utilise `scrollbar-color` avec certains couleurs spécifiques, il est 
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [de débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
+- Le module [de mise en forme des barres de défilement CSS](/fr/docs/Web/CSS/Guides/Scrollbars_styling)
+- La propriété {{CSSxRef("overflow")}}
+- La propriété {{CSSxRef("scrollbar-gutter")}}
+- La propriété {{CSSxRef("scrollbar-width")}}
