@@ -1,9 +1,8 @@
 ---
 title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
-original_slug: Web/CSS/@page
 l10n:
-  sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`@page`** は CSS のアットルールで、印刷されるページのさまざまな側面を変更するために使用されます。ページの寸法、方向、およびマージンを対象として変更します。`@page` アットルールは、さまざまな擬似クラスを使用して、印刷物のすべてのページまたはその一部を対象として使用することができます。
@@ -45,8 +44,8 @@ l10n:
 
 `@page` アットルールには、ページ記述子と[マージンのアットルール](#マージンのアットルール)のみを含めることができます。次の記述子は、少なくとも 1 つのブラウザーで実装されています。
 
-- [`margin`](/ja/docs/Web/CSS/Reference/Properties/margin)
-  - : ページのマージンを指定します。個々のマージンプロパティ [`margin-top`](/ja/docs/Web/CSS/Reference/Properties/margin-top)、[`margin-right`](/ja/docs/Web/CSS/Reference/Properties/margin-right)、[`margin-bottom`](/ja/docs/Web/CSS/Reference/Properties/margin-bottom)、[`margin-left`](/ja/docs/Web/CSS/Reference/Properties/margin-left) も使用できます。
+- {{cssxref("margin")}}
+  - : ページのマージンを指定します。個々のマージンプロパティ {{cssxref("margin-top")}}、{{cssxref("margin-right")}}、{{cssxref("margin-bottom")}}、{{cssxref("margin-left")}} も使用できます。
 - [`page-orientation`](/ja/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : ページの方向を指定します。これはページのレイアウトには影響しません。回転は、出力媒体でのレイアウト後に適用されます。
 - [`size`](/ja/docs/Web/CSS/Reference/At-rules/@page/size)
@@ -293,15 +292,15 @@ l10n:
 <button>ページを印刷</button>
 <article>
   <section>
-    <h2>ヘッダー 1</h2>
+    <h2>見出し 1</h2>
     <p>段落 1 です。</p>
   </section>
   <section>
-    <h2>ヘッダー 2</h2>
+    <h2>見出し 2</h2>
     <p>段落 2 です。</p>
   </section>
   <section>
-    <h2>ヘッダー 3</h2>
+    <h2>見出し 3</h2>
     <p>段落 3 です。</p>
   </section>
 </article>
@@ -382,5 +381,4 @@ section {
 - {{cssxref("page")}} プロパティ
 - `@page` [`size`](/ja/docs/Web/CSS/Reference/At-rules/@page/size) 記述子
 - [CSS ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)モジュール
-- [Paged.js: W3C paged media polyfill](https://pagedjs.org/documentation/1-the-big-picture/) (pagedjs.org)
 - [\[META\] CSS Paged Media Module Level 3](https://bugzil.la/286443) この件 (ページベースのカウンターなど) に関する進捗の追跡は、 Bugzilla のチケット
