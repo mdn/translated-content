@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("MathML")}}
 
-{{domxref("MathMLElement")}} 接口的 **`autofocus`** 属性包含一个反映了 HTML 全局属性 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) 的布尔值，指示当页面加载时或当元素变为可见时（如果 MathML 元素在 {{htmlelement("dialog")}} 或 [popover](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover) 内）是否应该聚焦 MathML 元素。
+{{domxref("MathMLElement")}} 接口的 **`autofocus`** 属性包含一个反映了 HTML 全局属性 [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus) 的布尔值。指示当页面加载时或当元素变为可见时（如果 MathML 元素在 {{htmlelement("dialog")}} 或[弹出框](/zh-CN/docs/Web/HTML/Reference/Global_attributes/popover)内）是否应该聚焦 MathML 元素。
 
 ## 值
 
@@ -26,4 +26,4 @@ l10n:
 
 - {{domxref("MathMLElement.focus()")}}
 - {{domxref("HTMLElement.autofocus")}}
-- [Popover API](/zh-CN/docs/Web/API/Popover_API)
+- [弹出框 API](/zh-CN/docs/Web/API/Popover_API)
