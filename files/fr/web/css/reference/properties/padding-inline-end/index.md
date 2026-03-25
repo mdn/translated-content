@@ -1,16 +1,13 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/Reference/Properties/padding-inline-end
-original_slug: Web/CSS/padding-inline-end
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-end`** définit le remplissage logique en fin de ligne d'un élément, qui se traduit par un remplissage physique en fonction du mode d'écriture, de la directions et de l'orientation du texte de l'élément.
 
-La propriété **`padding-inline-end`** définit le décalage avec la fin de la zone de remplissage d'un élément, selon le mode d'écriture, la directionnalité et l'orientation du texte. Elle correspond à la propriété {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} ou {{cssxref("padding-left")}} selon les valeurs définies pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
-
-Les autres parties « logiques » du remplissage sont définies grâce aux propriétés {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}} et {{cssxref("padding-inline-start")}}.
-
-{{InteractiveExample("CSS Demo: padding-inline-end")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: padding-inline-end")}}
 
 ```css interactive-example-choice
 padding-inline-end: 20px;
@@ -32,8 +29,8 @@ direction: rtl;
 <section id="default-example">
   <div class="transition-all" id="example-element">
     <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
     </div>
   </div>
 </section>
@@ -55,24 +52,33 @@ direction: rtl;
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-padding-inline-end: 10px;
-padding-inline-end: 1em;
+/* Valeurs de type <length> */
+padding-inline-end: 10px; /* Une longueur absolue */
+padding-inline-end: 1em; /* Une longueur relative à la taille du texte */
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
+/* Valeurs de type <percentage> */
 padding-inline-end: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-inline-end: inherit;
 padding-inline-end: initial;
+padding-inline-end: revert;
+padding-inline-end: revert-layer;
 padding-inline-end: unset;
 ```
 
 ### Valeurs
 
-La propriété `padding-inline-end` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille de remplissage en tant que valeur fixe. Cette valeur ne peut pas être négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille de remplissage en pourcentage, relative à [la taille en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_largeur_ dans une langue horizontale) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut pas être négative.
+
+## Description
+
+La propriété `padding-inline-end` prend les mêmes valeurs que les propriétés de remplissage physique telles que {{CSSxRef("padding-top")}}. Cependant, elle peut être équivalente à {{CSSxRef("padding-right")}}, {{CSSxRef("padding-left")}}, `padding-top` ou {{CSSxRef("padding-bottom")}} en fonction des valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+
+Elle est liée à {{CSSxRef("padding-block-start")}}, {{CSSxRef("padding-block-end")}} et {{CSSxRef("padding-inline-start")}}, qui définissent les autres valeurs de remplissage de l'élément.
 
 ## Définition formelle
 
@@ -84,15 +90,17 @@ La propriété `padding-inline-end` peut prendre les mêmes valeurs que la propr
 
 ## Exemples
 
-### HTML
+### Définir le remplissage en fin de ligne pour le texte vertical
+
+#### HTML
 
 ```html
 <div>
-  <p class="exemple">Texte d'exemple Lorem y psoum</p>
+  <p class="texteExemple">Texte d'exemple</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -101,16 +109,16 @@ div {
   height: 120px;
 }
 
-.exemple {
+.texteExemple {
   writing-mode: vertical-lr;
   padding-inline-end: 20px;
   background-color: #c8c800;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir le remplissage en fin de ligne pour le texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -122,12 +130,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("padding-top")}},
-  - {{cssxref("padding-right")}},
-  - {{cssxref("padding-bottom")}},
-  - {{cssxref("padding-left")}}
-
-- {{cssxref("writing-mode")}},
-- {{cssxref("direction")}},
-- {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
