@@ -1,9 +1,8 @@
 ---
 title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
-original_slug: Web/CSS/@scope
 l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`@scope`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)を使用すると、特定の DOM サブツリー内の要素を選択できるようになり、セレクターを DOM 構造に密接に結合させることなく、また上書きしにくい特定のセレクターを書くことなく、要素を正確に対象とすることができます。
@@ -14,11 +13,11 @@ JavaScript で `@scope` は CSS オブジェクトモデルインターフェイ
 
 `@scope` アットルールは、 1 つ以上のルールセット（**スコープ付きスタイルルール**と呼ばれます）を収め、選択した要素に適用するスコープを定義します。 `@scope` は 2 つの方法で使用することができます。
 
-1. CSS の中における独立したブロックとして。この場合、**スコープルート**とオプションの**スコープリミット**セレクターを含む前置き部を記述します。これらはスコープの上限と下限を定義します。
+1. CSS の中における独立したブロックとして。この場合、**スコープルート**とオプションの**スコープリミット**セレクターを含む前置部を記述します。これらはスコープの上限と下限を定義します。
 
    ```css
-   @scope (scope root) to (scope limit) {
-     ルールセット
+   @scope (スコープルート) to (スコープリミット) {
+     /* … */
    }
    ```
 
@@ -28,17 +27,19 @@ JavaScript で `@scope` は CSS オブジェクトモデルインターフェイ
    <parent-element>
      <style>
        @scope {
-         ルールセット
+         /* ルールセット */
        }
      </style>
    </parent-element>
    ```
 
+   また、インラインの `@scope` をスコープ制限セレクターと組み合わせることも可能です。例えば、`@scope to (スコープリミット) { ... }` のようにします。
+
 ## 解説
 
 複雑なウェブ文書には、ヘッダー、フッター、ニュース記事、地図、メディアプレーヤー、広告などの部品が含まれることがあります。複雑さが増すにつれて、これらの部品のスタイル設定を効果的に管理することが重要になり、スタイルを効果的にスコープ化することで、この複雑さを管理することができます。以下の DOM ツリーを考えてみましょう。
 
-```plain-nolint
+```plain
 body
 └─ article.feature
    ├─ section.article-hero
@@ -80,6 +81,8 @@ body
 > [!NOTE]
 > このような上限と下限のあるスコープは、一般に**ドーナツスコープ**と呼ばれています。
 
+スコープの上限は包含され、下限は除外されます。この動作を変更するには、いずれかのセレクターを全称子セレクターと組み合わせることができます。例えば、`@scope (スコープルート) to (スコープリミット > *)` とすると両方の境界が包含型になり、`@scope (スコープルート > *) to (スコープリミット)` とすると両方の境界が除外型になります。一方、`@scope (スコープルート > *) to (スコープリミット > *)` とすると、上限は除外型、下限は包含型になります。
+
 `article-body` クラスを持つ `<section>` 内の画像をすべて選択したい場合は、スコープリミットセレクターを省略できます。
 
 ```css
@@ -111,9 +114,9 @@ body
 > [!NOTE]
 > 重要なことは、 `@scope` はセレクターのアプリケーションを固有の DOM サブツリーに分離することはできますが、適用されるスタイルをサブツリー内に完全に分離することはできないということです。（例えば {{cssxref("color")}} や {{cssxref("font-family")}} のように）子から継承されるプロパティは、設定するスコープのを超えて継承されます。
 
-### `:scope` 擬似クラス
+### `@scope` ブロック内の `:scope` 擬似クラス
 
-`@scope` ブロックのコンテキストにおいて、 {{cssxref(":scope")}} 擬似クラスはスコープルートを表します。スコープの内部からスコープルート自体にスタイルを適用する簡単な方法を提供します。
+`@scope` ブロック内では、{{cssxref(":scope")}} 擬似クラスを使用することで、次のようにスコープのルート要素にスタイルを直接適用することができます。
 
 ```css
 @scope (.feature) {
@@ -125,34 +128,26 @@ body
 }
 ```
 
-実際、`:scope` はすべてのスコープ付きスタイルルールに暗黙的に付加されます。必要であれば、明示的に `:scope` を前置したり、[入れ子](/ja/docs/Web/CSS/Guides/Nesting)セレクター (`&`) を前置したりして、同じ効果を得ることができます。
+`@scope` ブロック内の `:scope` については、いつかの注意事項があります。
 
-以下のブロックにある 3 つのルールは、選択するものがすべて同じです。
+- `:scope` はクラスレベルの詳細度を追加します（詳しくは [@scope の詳細度](#scope_の詳細度)を参照してください）。
 
-```css
-@scope (.feature) {
-  img { ... }
-
-  :scope img { ... }
-
-  & img { ... }
-}
-```
-
-### スコープ付きセレクターの使用に関するメモ
-
-- スコープリミットは `:scope` を使用して、スコープリミットとルートとの間の固有の関係要件を指定することができます。例えば、以下のようになります。
+- スコープリミットは `:scope` を使用して、スコープリミットとルートとの間の固有の関係要件を指定することができます。例えば、以下のようにします。
 
   ```css
   /* :scope の直接の子である場合にのみ、スコープリミットになります。 */
-  @scope (.article-body) to (:scope > figure) { ... }
+  @scope (.article-body) to (:scope > figure) {
+    /* … */
+  }
   ```
 
 - スコープリミットは `:scope` を使用してスコープルート外の要素を参照することができます。例えば、次のようにします。
 
   ```css
   /* figure は :scope が .feature の中にある場合に限りリミットとなる */
-  @scope (.article-body) to (.feature :scope figure) { ... }
+  @scope (.article-body) to (.feature :scope figure) {
+    /* … */
+  }
   ```
 
 - スコープ付きスタイルルールはサブツリーを除外できません。 `:scope + p` のような選択はサブツリーの外になるので無効です。
@@ -170,45 +165,39 @@ body
 
 ### `@scope` の詳細度
 
-ルールセットを `@scope` ブロックの中に記述しても、スコープのルートとリミットの中で使用されているセレクターに関係なく、そのセレクターの詳細度には影響しません。例えば、次のようになります。
+`@scope` ルール内では、単純セレクターと [`&`](/ja/docs/Web/CSS/Reference/Selectors/Nesting_selector) 入れ子セレクターの両方が、セレクターの先頭に `:where(:scope)` が付加されたかのように動作します。
+{{cssxref(":where()")}} が持つ[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)はゼロであるため、単純セレクターや `&` に重みは追加されません。詳細度の重みは、セレクターの残りの部分によって決定されます。
+例えば、`& img` セレクターの詳細度は、`:where(:scope) img` (0-0-1) の詳細度と同等です。
+
+> [!WARNING]
+> `@scope` ブロック内の `&` の扱いは、ブラウザーエンジンやリリースバージョンによって異なります。
+> 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)を確認してください。
+
+以下のコードブロックにある 2 つの場合において、詳細度は `img` のみから決まります。
 
 ```css
 @scope (.article-body) {
-  /* img は期待通り、 0-0-1 の詳細度になります。 */
-  img { ... }
+  /* img は期待通り、 0-0-1 の詳細度になる */
+  img {
+    /* … */
+  }
+
+  /* & img も 0-0-1 の詳細度になる */
+  & img {
+    /* … */
+  }
 }
 ```
 
-しかし、もし `:scope` 擬似クラスを明示的にスコープのついたセレクターに付加するのであれば、その詳細度を計算する際に考慮する必要があります。 `:scope` は通常の擬似クラスと同様、 0-1-0 の詳細度になります。例えば、以下のようになります。
+一方で、`:scope` を明示的に使用すると、スコープのルートが選択され、クラスレベルの詳細度 (0-1-0) が追加されます。これは、`:scope` が[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)であるためです。
+以下のコードブロックでは、`:scope img` の詳細度は 0-1-1 となります。
 
 ```css
 @scope (.article-body) {
   /* :scope img は 0-1-0 + 0-0-1 = 0-1-1 の詳細度になります。 */
-  :scope img { ... }
-}
-```
-
-スコープブロック内で `&` セレクターを使用した場合、 `&` はスコープのルートセレクターを表します。これは、内部的には {{cssxref(":is", ":is()")}} 擬似クラス関数の中に包まれたセレクターとして計算されます。例えば、次のようになります。
-
-```css
-@scope (figure, #primary) {
-  & img { ... }
-}
-```
-
-`& img` は `:is(figure, #primary) img` と等価です。 `:is()` は最も詳細な引数（この場合は `#primary`）の詳細度を取るので、スコープされた `& img` セレクターの詳細度は 1-0-0 + 0-0-1 = 1-0-1 となります。
-
-### `@scope` 内における `:scope` と `&` の違い
-
-`:scope` は一致するスコープルートを表し、 `&` はスコープルートに一致するために使用するセレクターを表します。このため、 `&` を複数回連結することが可能です。しかし、 `:scope` を使用することができるのは一度だけです。スコープルートの中のスコープルートに照合することはできません。
-
-```css
-@scope (.feature) {
-  /* 一致するルート .feature 内の .feature を選択する */
-  & & { ... }
-
-  /* 機能しない */
-  :root :root { ... }
+  :scope img {
+    /* … */
+  }
 }
 ```
 
@@ -216,15 +205,15 @@ body
 
 `@scope` は [CSS カスケード](/ja/docs/Web/CSS/Guides/Cascade)に新しい基準、**スコープの近接性**を追加します。これは、 2 つのスコープに競合するスタイル設定がある場合、スコープルートまでの DOM ツリー階層のホップ数が最も少ないスタイルを適用するという状態です。この意味を例で見ていきましょう。
 
-以下の HTML スニペットでは、異なるテーマのカードが互いに入れ子になっています。
+次の HTML スニペットを見てみましょう。異なるテーマのカードが互いに入れ子になっています。
 
 ```html
 <div class="light-theme">
-  <p>Light theme text</p>
+  <p>明るいテーマのテキスト</p>
   <div class="dark-theme">
-    <p>Dark theme text</p>
+    <p>暗いテーマのテキスト</p>
     <div class="light-theme">
-      <p>Light theme text</p>
+      <p>明るいテーマのテキスト</p>
     </div>
   </div>
 </div>
@@ -234,11 +223,11 @@ body
 
 ```css
 .light-theme {
-  background: #ccc;
+  background: #cccccc;
 }
 
 .dark-theme {
-  background: #333;
+  background: #333333;
 }
 
 .light-theme p {
@@ -250,14 +239,14 @@ body
 }
 ```
 
-一番内側の段落はライトテーマカードの中なので、黒く色づけされるはずです。しかし、 `.light-theme p` と `.dark-theme p` の両方を対象にしています。 `.dark-theme p` のルールの方がソースの順番で後に現れるため、そちらが適用され、段落は誤って白に着色されてしまいます。
+一番内側の段落は明るいテーマのカードの中なので、黒く色づけされるはずです。しかし、 `.light-theme p` と `.dark-theme p` の両方を対象にしています。 `.dark-theme p` のルールの方がソースの順番で後に現れるため、そちらが適用され、段落は誤って白に着色されてしまいます。
 
-これを修正するには、以下のように `@scope` を使用することができます。
+次のように `@scope` を使用することで、これを修正することができます。
 
 ```css
 @scope (.light-theme) {
   :scope {
-    background: #ccc;
+    background: #cccccc;
   }
   p {
     color: black;
@@ -266,7 +255,7 @@ body
 
 @scope (.dark-theme) {
   :scope {
-    background: #333;
+    background: #333333;
   }
   p {
     color: white;
@@ -277,7 +266,7 @@ body
 これで一番内側の段落は正しく黒く色づけされました。これは、 `.light-theme` のスコープルートからは DOM ツリーの階層が1階層しか離れておらず、 `.dark-theme` のスコープルートからは 2 階層しか離れていないためです。したがって、 light スタイルが勝ちます。
 
 > [!NOTE]
-> スコープの近さはソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/Reference/Values/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)のような他にも優先度の高い仕様によって上書きされます。
+> スコープの近接性はソースの順序を上書きしますが、[重要度](/ja/docs/Web/CSS/Reference/Values/important)、[レイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)のような他にも優先度の高い仕様によって上書きされます。
 
 ## 形式文法
 
@@ -346,7 +335,7 @@ div {
 
 上記のコードでは、このように描画されます。
 
-{{ EmbedLiveSample("Basic style inside scope roots", "100%", "150") }}
+{{EmbedLiveSample("Basic style inside scope roots", "100%", "150")}}
 
 ### スコープルートとスコープリミット
 
@@ -359,12 +348,12 @@ div {
 ```html
 <article class="feature">
   <section class="article-hero">
-    <h2>Article heading</h2>
-    <img alt="image" />
+    <h2>記事の見出し</h2>
+    <img alt="image" src="" />
   </section>
 
   <section class="article-body">
-    <h3>Article subheading</h3>
+    <h3>記事の副見出し</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod
       consectetur leo, nec eleifend quam volutpat vitae. Duis quis felis at
@@ -372,19 +361,19 @@ div {
       pharetra velit nisi, ac efficitur magna luctus nec.
     </p>
 
-    <img alt="image" />
+    <img alt="image" src="" />
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
     <figure>
-      <img alt="image" />
-      <figcaption>My infographic</figcaption>
+      <img alt="image" src="" />
+      <figcaption>インフォグラフィック</figcaption>
     </figure>
   </section>
 
   <footer>
     <p>Written by Chris Mills.</p>
-    <img alt="image" />
+    <img alt="image" src="" />
   </footer>
 </article>
 ```
@@ -422,8 +411,8 @@ img {
 
 この CSS には、 2 つの `@scope` ブロックがあります。
 
-- 最初の `@scope` ブロックは、 `.feature` のクラスを持つ要素（この場合は外側の `<div>` のみ）をスコープルートとして定義しており、 `@scope` を使用して固有の HTML サブセットをテーマにできることを示しています。
-- 2 つ目の `@scope` ブロックもスコープルートを `.feature` クラスの要素と定義していますが、さらにスコープリミットは `figure` と定義しています。これにより、格納されたルールセットはスコープルート（この場合は `<div class="figure"> ... </div>`）内の一致する要素にのみ適用され、子孫の `<figure>` 要素の中に入れ子になっているものは適用**されません**。この `@scope` ブロックには、 `<img>` 要素を太い黒枠と金色の背景色でスタイル設定する単一のルールセットが格納されています。
+- 最初の `@scope` ブロックは、 `.feature` のクラスを持つ要素（この場合は外側の `<article>` のみ）をスコープルートとして定義しており、 `@scope` を使用して固有の HTML サブセットをテーマにできることを示しています。
+- 2 つ目の `@scope` ブロックもスコープルートを `.feature` クラスの要素と定義していますが、さらにスコープリミットは `figure` と定義しています。これにより、格納されたルールセットはスコープルート（この場合は `<article class="feature"> ... </article>`）内の一致する要素にのみ適用され、子孫の `<figure>` 要素の中に入れ子になっているものは適用**されません**。この `@scope` ブロックには、 `<img>` 要素を太い黒枠と金色の背景色でスタイル設定する単一のルールセットが格納されています。
 
 ```css
 /* スコープ化した CSS */
@@ -455,9 +444,9 @@ img {
 
 #### 結果
 
-レンダリングされたコードでは、 `<figure>` 要素（ラベル付けは "My infographic"）内のものを除いて、すべての`<img>`要素が太い境界線と金色の背景でスタイル設定されていることに注目してください。
+レンダリングされたコードでは、 `<figure>` 要素（ラベル付けは "My infographic"）内のものを除いて、すべての `<img>` 要素が太い境界線と金色の背景でスタイル設定されていることに注目してください。
 
-{{ EmbedLiveSample("Scope roots and scope limits", "100%", "400") }}
+{{EmbedLiveSample("Scope roots and scope limits", "100%", "400")}}
 
 ## 仕様書
 
@@ -471,4 +460,6 @@ img {
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
-- [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) on developer.chrome.com (2023)
+- [詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Defining the `&` selector in a `@scope` rule](https://css.oddbird.net/scope/parent-selector/) - css.oddbird.net (2025)
+- [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) - developer.chrome.com (2023)

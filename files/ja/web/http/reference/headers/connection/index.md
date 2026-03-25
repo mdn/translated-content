@@ -1,15 +1,21 @@
 ---
-title: Connection
+title: Connection ヘッダー
+short-title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
-original_slug: Web/HTTP/Headers/Connection
+l10n:
+  sourceCommit: 0e40ec22841891d42376ad8a6d29135953c5106c
 ---
 
-**`Connection`** 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が `keep-alive` であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。
+HTTP の **`Connection`** ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。
+送信された値が `keep-alive` であった場合は、接続が維持されて閉じられず、同一のサーバーに送るべき後続のリクエストで再利用されます。
 
 > [!WARNING]
-> {{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、[HTTP/2 では禁止されています](https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2)。Chrome と Firefox は HTTP/2 レスポンスでそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
+> `Connection` や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、[HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) および [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) では禁止されています。Chrome と Firefox は HTTP/2 レスポンスではそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスを読み込みません。
 
-標準のホップバイホップヘッダー ({{HTTPHeader("Keep-Alive")}}、{{HTTPHeader("Transfer-Encoding")}}、{{HTTPHeader("TE")}}、{{HTTPHeader("Connection")}}、{{HTTPHeader("Trailer")}}、{{HTTPHeader("Upgrade")}}、{{HTTPHeader("Proxy-Authorization")}}、{{HTTPHeader("Proxy-Authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `Connection` ヘッダーに列挙する必要があります。したがって、これを解釈する最初のプロキシーはそれを消費する必要があり、その先に転送してはいけません。標準のホップバイホップヘッダーも列挙する必要があります。
+標準の[ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers)ヘッダー ({{HTTPHeader("Keep-Alive")}}、{{HTTPHeader("Transfer-Encoding")}}、{{HTTPHeader("TE")}}、`Connection`、{{HTTPHeader("Trailer")}}、{{HTTPHeader("Upgrade")}}、{{HTTPHeader("Proxy-Authorization")}}、{{HTTPHeader("Proxy-Authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `Connection` ヘッダーに列挙する必要があります。これにより、最初のプロキシーは、これらの情報を転送せずに自身で処理しなければならないことを認識できるようになります。
+
+`Connection` のデフォルト値が、変更されました。
+そのため、下位互換性を確保するために、HTTP/1.1 ではデフォルト設定となっているにもかかわらず、ブラウザーはしばしば明示的に `Connection: keep-alive` を送信します。
 
 <table class="properties">
   <tbody>
@@ -28,7 +34,7 @@ original_slug: Web/HTTP/Headers/Connection
 
 ## 構文
 
-```
+```http
 Connection: keep-alive
 Connection: close
 ```
@@ -36,9 +42,11 @@ Connection: close
 ## ディレクティブ
 
 - `close`
-  - : クライアントあるいはサーバーが接続を閉じる意思があることを示します。これは HTTP/1.0 リクエストの既定の動作です。
-- カンマ区切りの HTTP ヘッダーのリスト \[通常は `keep-alive` のみ]
-  - : クライアントが接続を開いておく意思があることを示します。接続の維持は HTTP/1.1 の既定の動作です。ヘッダー名のリストは、介在する最初の非透過プロキシーやキャッシュが削除するヘッダーの名前です。これらのヘッダーは最終的な宛先ノードではなく、送信者と最初のエンティティ間の接続の定義に使用します。
+  - : クライアントあるいはサーバーが接続を閉じる意思があることを示します。
+    これは HTTP/1.0 リクエストの既定の動作です。
+- カンマ区切りの HTTP ヘッダーのリスト（通常は `keep-alive` のみ）
+  - : クライアントが接続を開いておく意思があることを示します。接続の維持は HTTP/1.1 のデフォルトの動作です。
+    ヘッダー名のリストは、介在する最初の非透過プロキシーやキャッシュが削除するヘッダーの名前です。これらのヘッダーは最終的な宛先ノードではなく、送信者と最初のエンティティ間の接続の定義に使用します。
 
 ## 仕様書
 
@@ -47,3 +55,8 @@ Connection: close
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [HTTP/1.x のコネクション管理](/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
+- [プロトコルのアップグレードの仕組み](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)

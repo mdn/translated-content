@@ -1,5 +1,6 @@
 ---
-title: "CSP: style-src"
+title: "Content-Security-Policy: style-src ディレクティブ"
+short-title: style-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
@@ -72,7 +73,7 @@ Content-Security-Policy: style-src https://example.com/
 </style>
 
 <style>
-  @import url("https://not-example.com/styles/print.css") print;
+  @import "https://not-example.com/styles/print.css" print;
 </style>
 ```
 
@@ -127,7 +128,7 @@ Content-Security-Policy: style-src 'unsafe-inline';
 ```
 
 特定のインラインスタイルブロックのみを許可するには、 nonce-source を使用することができます。
-（暗号的に安全なランダムトークンジェネレータを使用して）ランダムな nonce 値を生成し、それをポリシーに含める必要があります。
+（暗号的に安全なランダムトークンジェネレータを使用して）ランダムな{{Glossary("Nonce", "ノンス")}}値を生成し、それをポリシーに含める必要があります。
 この nonce 値は、 HTTP リクエストごとに一意である必要があるため、動的に生成する必要があることに注意することが重要です。
 
 ```http

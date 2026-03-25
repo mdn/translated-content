@@ -1,9 +1,8 @@
 ---
 title: :focus
 slug: Web/CSS/Reference/Selectors/:focus
-original_slug: Web/CSS/:focus
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`:focus`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、フォーカスを持っている (フォームの input のような) 要素を表します。普通はユーザーが要素をクリックやタップをしたり、キーボードの <kbd>Tab</kbd> キーで選択したりしたときです。
@@ -27,15 +26,15 @@ select:focus {
 
 ```html interactive-example
 <form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
+  <p>どの風味をご注文されますか？</p>
+  <label>氏名: <input name="firstName" type="text" /></label>
   <label
-    >Flavor:
+    >風味:
     <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
+      <option>さくらんぼ</option>
+      <option>緑茶</option>
+      <option>ムーストラック</option>
+      <option>ミントチップ</option>
     </select>
   </label>
 </form>
@@ -51,6 +50,18 @@ select:focus {
   /* ... */
 }
 ```
+
+## アクセシビリティ
+
+視覚的なフォーカスインジケーターが、弱視の人々からも見えるように確認してください。これは外光が明るい場所 (太陽の下の屋外など) で画面を使用するすべての人にも利益になります。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) は、視覚的なフォーカスインジケーターを少なくとも 3:1 にすることを要求しています。
+
+- アクセシブルな視覚フォーカスインジケーター: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+
+### `:focus { outline: none; }`
+
+[WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) を満たすフォーカスの輪郭線で置き換えることなしに、フォーカスの輪郭線（視覚的なフォーカスインジケーター）を削除しないでください。
+
+- ちょっとしたヒント: [Never remove CSS outlines](https://www.a11yproject.com/posts/never-remove-css-outlines/)
 
 ## 例
 
@@ -78,18 +89,6 @@ select:focus {
 ### 結果
 
 {{EmbedLiveSample("Examples")}}
-
-## アクセシビリティの考慮
-
-視覚的なフォーカスインジケーターが、弱視の人々からも見えるように確認してください。これは外光が明るい場所 (太陽の下の屋外など) で画面を使用するすべての人にも利益になります。 [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) は、視覚的なフォーカスインジケーターを少なくとも 3:1 にすることを要求しています。
-
-- Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-
-### `:focus { outline: none; }`
-
-[WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) を満たすフォーカスの輪郭線で置き換えることなしに、フォーカスの輪郭線（視覚的なフォーカスインジケーター）を削除しないでください。
-
-- Quick Tip: [Never remove CSS outlines](https://www.a11yproject.com/posts/never-remove-css-outlines/)
 
 ## 仕様書
 

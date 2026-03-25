@@ -1,9 +1,8 @@
 ---
 title: :focus-within
 slug: Web/CSS/Reference/Selectors/:focus-within
-original_slug: Web/CSS/:focus-within
 l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`:focus-within`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、その要素または子孫要素にフォーカスがある場合に一致します。言い換えれば、それ自身が {{CSSxRef(":focus")}} 擬似クラスに該当するか、子孫に `:focus` に該当する要素がある要素を表します。（これは[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)における子孫も含みます。）
@@ -23,15 +22,15 @@ label:focus-within {
 
 ```html interactive-example
 <form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
+  <p>どの風味をご注文されますか？</p>
+  <label>氏名: <input name="firstName" type="text" /></label>
   <label
-    >Flavor:
+    >風味:
     <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
+      <option>さくらんぼ</option>
+      <option>緑茶</option>
+      <option>ムーストラック</option>
+      <option>ミントチップ</option>
     </select>
   </label>
 </form>
@@ -75,7 +74,7 @@ form {
 }
 
 form:focus-within {
-  background: #ff8;
+  background: #ffff88;
   color: black;
 }
 
