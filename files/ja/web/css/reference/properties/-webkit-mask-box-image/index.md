@@ -59,7 +59,7 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 ## 形式文法
 
-{{CSSSyntaxRaw("-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]")}}
+{{CSSSyntaxRaw(`-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]`)}}
 
 ## 例
 
