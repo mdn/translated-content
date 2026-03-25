@@ -169,11 +169,11 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ## Смотрите также
 
 - [WCAG](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG)
-  - [Воспринимаемость](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
-  - [Управляемость](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
-  - [Понятность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
-  - [Надёжность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
+  - [Воспринимаемый контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  - [Управляемый контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  - [Понятный контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  - [Надёжный контент](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
-- [Google выпустила расширение для автоматических субтитров в Chrome](https://blog.google/products/chrome/live-caption-chrome/)
+- [Компания Google выпустила расширение для автоматических субтитров в Chrome](https://blog.google/products/chrome/live-caption-chrome/)
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
