@@ -1,8 +1,9 @@
 ---
 title: Учётные данные
 slug: Glossary/Credential
-sidebar: glossarysidebar
 ---
+
+{{GlossarySidebar}}
 
 Учётные данные — это объект, который позволяет системе принять решение об {{glossary("authentication", "аутентификации")}}, например, разрешить пользователю вход в учётную запись.
 
