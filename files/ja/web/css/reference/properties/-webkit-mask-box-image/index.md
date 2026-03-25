@@ -52,11 +52,14 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 ## 公式定義
 
-{{CSSInfo}}
+- 初期値: `none`
+- 適用対象: すべての要素
+- 継承: なし
+- 計算値: 指定値と同じ
 
 ## 形式文法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw("-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]")}}
 
 ## 例
 
