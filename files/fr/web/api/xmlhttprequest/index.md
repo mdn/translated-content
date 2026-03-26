@@ -58,14 +58,6 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 - {{DOMxRef("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 
-### Gestionnaires d'évènement
-
-Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRequest`, est pris en charge par l'ensemble des navigateurs.
-
-D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
-
-La plupart des navigateurs récents gère également les évènements via la méthode {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes `on*`).
-
 ## Méthodes d'instance
 
 - {{DOMxRef("XMLHttpRequest.abort()")}}
