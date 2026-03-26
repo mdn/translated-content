@@ -1,8 +1,8 @@
 ---
-title: 字符转义：\\n、\\u{...}
+title: 字符转义：\n、\u{...}
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 l10n:
-  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
+  sourceCommit: a7acf4c7a38f1df8f5d0dee1f17672968ac979d5
 ---
 
 **字符转义**表示一种可能无法以字面形式方便地表示的字符。
@@ -25,8 +25,8 @@ l10n:
 
 ### 参数
 
-- `HHH`
-  - : 表示字符的 Unicode 码位的十六进制数。`\xHH` 形式必须包含两位十六进制数字；`\uHHHH` 形式必须包含四位；`\u{HHH}` 形式可包含 1 到 6 位十六进制数字。
+- `H…H`
+  - : 表示字符的 Unicode 码位的十六进制数。`\xHH` 形式必须包含两位十六进制数字；`\uHHHH` 形式必须包含四位；`\u{H…H}` 形式可包含 1 到 6 位十六进制数字。
 
 ## 描述
 
@@ -44,7 +44,7 @@ l10n:
   - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数必须恰好为两位长度。
 - `\uHHHH`
   - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数必须恰好为四位长度。在 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)中，两个此类转义序列可用于表示代理对。（在非 Unicode 感知模式下，它们始终表示两个独立字符。）
-- `\u{HHH}`
+- `\u{H…H}`
   - : 表示具有给定十六进制 Unicode 码位的字符。该十六进制数长度可为 1 至 6 位。（仅限于 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)。）
 
 在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下，不符合上述规则的转义序列将变为*一致转义序列*：它们表示反斜杠后跟的字符。例如，`\a` 表示字符 `a`。这种行为限制了在不引发向后兼容性问题的情况下引入新转义序列的能力，因此在 Unicode 感知模式下被禁止。
