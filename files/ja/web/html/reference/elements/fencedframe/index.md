@@ -18,7 +18,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を含みます。
+この要素には、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に加えて、次の属性があります。
 
 - `allow` {{experimental_inline}}
   - : `<fencedframe>` に対する [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を指定します。これにより、リクエスト元のオリジンに基づいて `<fencedframe>` で利用可能な機能が定義されます。どの機能を制御できるかについては、後述の[フェンスドフレームで利用可能な権限ポリシー](#permissions_policies_available_to_fenced_frames)を参照してください。
@@ -30,7 +30,7 @@ l10n:
 
 ## フェンスドフレームで利用可能な権限ポリシー
 
-トップレベルコンテキストからフェンスドフレームへ機能の許可・拒否を委譲すると、それ自体が通信チャネルとなり得るため、プライバシー上のリスクになります。そのため、 [Permissions Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) (例: [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera)、[`geolocation`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)) は、フェンスドフレーム内では**利用できません**。
+トップレベルコンテキストからフェンスドフレームへ機能の許可・拒否を委譲すると、それ自体が通信チャネルとなり得るため、プライバシー上のリスクになります。そのため、[Permissions Policy](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy) (例: [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera)、[`geolocation`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)) は、フェンスドフレーム内では**利用できません**。
 
 フェンスドフレーム内でポリシーにより有効化できるのは、フェンスドフレーム専用に設計された次の機能のみです。
 
@@ -114,7 +114,7 @@ frame.config = frameConfig;
         >,
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >, 埋め込みコンテンツ, 対話型コンテンツ, 知覚可能コンテンツ
+        >、埋め込みコンテンツ、対話型コンテンツ、知覚可能コンテンツ
       </td>
     </tr>
     <tr>
