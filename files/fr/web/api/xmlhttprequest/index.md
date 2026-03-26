@@ -53,9 +53,9 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 
 ### Propriétés non-standard
 
-- {{DOMxRef("XMLHttpRequest.mozAnon")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- `XMLHttpRequest.mozAnon` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
-- {{DOMxRef("XMLHttpRequest.mozSystem")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- `XMLHttpRequest.mozSystem` {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 
 ## Méthodes d'instance
