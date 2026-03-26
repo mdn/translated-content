@@ -19,7 +19,7 @@ l10n:
 - {{domxref("MediaKeySystemAccess.createMediaKeys()")}}
   - : 返回一个会兑现为一个新的 {{domxref("MediaKeys")}} 对象的 {{jsxref('Promise')}}。
 - {{domxref("MediaKeySystemAccess.getConfiguration()")}}
-  - : 返回一个包含支持的配置选项的组合对象。
+  - : 返回一个包含支持的配置选项组合的对象。
 
 ## 规范
 
