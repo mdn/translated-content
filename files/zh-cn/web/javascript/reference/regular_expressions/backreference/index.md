@@ -91,7 +91,7 @@ findDuplicates("Hello hellos"); // undefined
 
 ## 参见
 
-- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)教程
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
 - [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)
 - [捕获组：`(...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [具名捕获组：`(?<name>...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
