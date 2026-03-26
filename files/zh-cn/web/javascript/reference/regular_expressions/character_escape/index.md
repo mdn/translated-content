@@ -17,7 +17,7 @@ l10n:
 
 \xHH
 \uHHHH
-\u{HHH}
+\u{H…H}
 ```
 
 > [!NOTE]
