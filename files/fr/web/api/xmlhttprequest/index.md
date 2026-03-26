@@ -65,7 +65,7 @@ _Cette interface hérite également des propriétés de {{DOMxRef("XMLHttpReques
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders()")}}
   - : Retourne tous les en-têtes de réponse, séparés par {{Glossary("CRLF")}}, sous forme de chaîne de caractères, ou `null` si aucune réponse n'a été reçue.
 - {{DOMxRef("XMLHttpRequest.getResponseHeader()")}}
-  - : Retourne la chaîne de caractères contenant le texte de l'en-tête défini ou `null` si aucune des réponse n'a été reçue ou si l'en-tête n'existe pas dans la réponse.
+  - : Retourne la chaîne de caractères contenant le texte de l'en-tête défini ou `null` si aucune des réponses n'a été reçue ou si l'en-tête n'existe pas dans la réponse.
 - {{DOMxRef("XMLHttpRequest.open()")}}
   - : Initialise une requête.
 - {{DOMxRef("XMLHttpRequest.overrideMimeType()")}}
