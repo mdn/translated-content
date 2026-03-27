@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: 4e100cee733013cb48babc0c734fe96dda9ece6c
+  sourceCommit: d1d2fb19fa649240ce6e25c4d79e21d9a5f6de37
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.
@@ -32,7 +32,9 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 ### JavaScript
 
-Pas de changements notables.
+- Le [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) `"islamic-umalqura"` est désormais pris en charge par {{JSxRef("Intl")}}.
+  Cette chaîne de caractères sera dans la liste des calendriers retournés par {{JSxRef("Intl.supportedValuesOf()")}}, et peut être définie comme paramètre [`options.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) dans le [constructeur `DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat).
+  ([bogue Firefox 2011505 <sup>(angl.)</sup>](https://bugzil.la/2011505)).
 
 ### APIs
 
@@ -41,9 +43,11 @@ Pas de changements notables.
   ([bogue Firefox 2010125 <sup>(angl.)</sup>](https://bugzil.la/2010125)).
 
 - [L'API Reporting](/fr/docs/Web/API/Reporting_API) est désormais prise en charge pour signaler les violations de la [politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) et de l'en-tête {{HTTPHeader("Integrity-Policy")}}.
-  Cela permet de signaler des objets de rapport qui sont des objets {{DOMxRef("CSPViolationReport")}} et des objets {{DOMxRef("IntegrityViolationReport")}} dans les pages en violation en utilisant un {{DOMxRef("ReportingObserver")}} (les rapports peuvent être filtrés sur la propriété `type`&nbsp;: `"csp-violation"` ou `"integrity-violation"`).
+  Cette API permet de signaler des objets {{DOMxRef("CSPViolationReport")}} et {{DOMxRef("IntegrityViolationReport")}} dans les pages en infraction à l'aide d'un {{DOMxRef("ReportingObserver")}} (les rapports peuvent être filtrés sur la propriété `type`&nbsp;: `"csp-violation"` ou `"integrity-violation"`).
   Une version sérialisée des objets de rapport peut également être envoyée à un serveur de rapport défini dans l'en-tête HTTP correspondant — les noms des points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
   ([bogue Firefox 1976074 <sup>(angl.)</sup>](https://bugzil.la/1976074), [bogue Firefox 2008916 <sup>(angl.)</sup>](https://bugzil.la/2008916)).
+
+- Jusqu'à Firefox 148, `structuredClone.call(iframe.contentWindow)` créait incorrectement des objets dans le [domaine d'exécution](/fr/docs/Web/JavaScript/Reference/Execution_model#domaine_dexécution_realm) de l'appelant au lieu du domaine d'exécution du cadre intégré (<i lang="en">iframe</i> en anglais). L'implémentation crée désormais des objets dans le domaine d'exécution de `this`, de sorte que le comportement de la méthode correspond davantage à la spécification.
 
 #### DOM
 
@@ -84,6 +88,7 @@ Pas de changements notables.
 - Ajout du support pour `tabId` en tant que paramètre de niveau supérieur dans {{WebExtAPIRef("action.isEnabled")}} et {{WebExtAPIRef("browserAction.isEnabled")}}. Ce changement assure la compatibilité avec l'implémentation Chrome de `action.isEnabled`. ([bogue Firefox 2013477 <sup>(angl.)</sup>](https://bugzil.la/2013477))
 - Un geste de l'utilisateur·ice n'est plus requis pour {{WebExtAPIRef("action.openPopup")}} et {{WebExtAPIRef("browserAction.openPopup")}} pour ouvrir une fenêtre affichée par dessus le contenu (<i lang="en">popup</i> en anglais). Cette fonctionnalité était disponible derrière la préférence `extensions.openPopupWithoutUserGesture.enabled` depuis Firefox 108. Ce changement aligne le comportement de Firefox avec Chrome et Safari. ([bogue Firefox 1799344 <sup>(angl.)</sup>](https://bugzil.la/1799344))
 - Si `windowId` est passé dans {{WebExtAPIRef("action.openPopup")}} ou {{WebExtAPIRef("browserAction.openPopup")}}, la fenêtre doit être sélectionnée (active) pour que l'élément affiché par dessus le contenu s'ouvre. Pour ouvrir un élément par dessus le contenu dans une fenêtre qui n'est pas sélectionnée, {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} doit être appelé en premier. Ce changement aligne le comportement de Firefox avec Chrome. ([bogue Firefox 2011516 <sup>(angl.)</sup>](https://bugzil.la/2011516))
+- L'implémentation de {{DOMxRef("structuredClone")}} a été modifiée pour instancier des objets dans le domaine d'exécution de `this` au lieu du domaine d'exécution de l'appelant. Pour des raisons de compatibilité, la portée globale des scripts de contenu inclut désormais sa propre méthode `structuredClone` qui masque la méthode `window.structuredClone`. Pour plus d'informations, voir [`structuredClone` dans Partage d'objets avec les scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 - La capacité des extensions à exécuter dynamiquement du code dans leurs documents `moz-extension:` avec {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, et {{WebExtAPIRef("scripting.removeCSS")}} est désormais obsolète. ([bogue Firefox 2011234 <sup>(angl.)</sup>](https://bugzil.la/2011234)) La fonctionnalité n'est plus disponible dans Firefox Nightly, et les versions bêta et release de Firefox affichent un avertissement dans la console de l'onglet. Cette restriction s'appliquera à toutes les versions de Firefox 152 et ultérieures. ([bogue Firefox 2015559 <sup>(angl.)</sup>](https://bugzil.la/2015559)) En alternative, une extension peut exécuter du code dans ses documents de manière dynamique en enregistrant un écouteur {{WebExtAPIRef("runtime.onMessage")}} dans le script du document, puis en envoyant un message pour déclencher l'exécution du code requis.
 - Le filtre CSS implicite appliqué aux icônes SVG des [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sur les thèmes sombres est désactivé dans les versions Nightly ([bogue Firefox 2001318 <sup>(angl.)</sup>](https://bugzil.la/2001318)) et sera désactivé dans les autres éditions de Firefox à partir de la version 152 ([bogue Firefox 2016509 <sup>(angl.)</sup>](https://bugzil.la/2016509)). Vous pouvez tester les icônes SVG des actions de page avec le filtre CSS désactivé dans d'autres éditions de Firefox en créant une préférence booléenne `about:config` appelée `extensions.webextensions.pageActionIconDarkModeFilter.enabled` et en la définissant sur `false`.
@@ -139,6 +144,6 @@ Vous pouvez en trouver d'autres sur la page [Fonctionnalités expérimentales](/
   La spécification CSS Typed Object Model Level 1 est en cours d'implémentation.
   Dans cette version, la prise en charge de la méthode {{DOMxRef("CSSNumericValue/to","to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} a été ajoutée, permettant la conversion d'une valeur numérique CSS d'une unité à une autre. ([bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
 
-- **Prise en charge de l'image JPEG XL&nbsp;: décodeur basé sur Rust**&nbsp;: `image.jxl.enabled`
+- **Prise en charge de l'image JPEG XL&nbsp;: décodeur basé sur Rust** (Nightly seulement)&nbsp;: `image.jxl.enabled`
 
   L'ancien décodeur d'image [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation basée sur Rust utilisant la bibliothèque `jxl-rs`. ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
