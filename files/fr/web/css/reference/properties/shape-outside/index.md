@@ -1,14 +1,13 @@
 ---
 title: shape-outside
 slug: Web/CSS/Reference/Properties/shape-outside
-original_slug: Web/CSS/shape-outside
+l10n:
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`shape-outside`** définit une forme — qui peut ne pas être rectangulaire — autour de laquelle le contenu en ligne adjacent doit «&nbsp;s'écouler&nbsp;». Par défaut, le contenu en ligne s'écoule autour de la boîte de marge de l'élément&nbsp;; `shape-outside` permet de personnaliser cet écoulement, rendant possible l'enveloppement du texte autour d'objets complexes plutôt que de simples rectangles.
 
-La propriété **`shape-outside`** définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété `shape-outside` permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.
-
-{{InteractiveExample("CSS Demo: shape-outside")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: shape-outside")}}
 
 ```css interactive-example-choice
 shape-outside: circle(50%);
@@ -19,7 +18,7 @@ shape-outside: ellipse(130px 140px at 20% 20%);
 ```
 
 ```css interactive-example-choice
-shape-outside: url(/shared-assets/images/examples/round-balloon.png);
+shape-outside: url("/shared-assets/images/examples/round-balloon.png");
 ```
 
 ```css interactive-example-choice
@@ -34,14 +33,15 @@ shape-outside: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
       id="example-element"
       src="/shared-assets/images/examples/round-balloon.png"
       width="150" />
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    Nous avions convenu, mon compagnon et moi, que je devrais passer le voir
+    chez lui, après le dîner, pas plus tard que onze heures. Ce jeune Français
+    athlétique appartient à un petit groupe de sportifs parisiens, qui se sont
+    adonnés au «&nbsp;ballon&nbsp;» comme passe-temps. Après avoir épuisé toutes
+    les sensations que l'on peut trouver dans les sports ordinaires, même celles
+    de «&nbsp;l'automobile&nbsp;» à toute vitesse, les membres de «&nbsp;l'Aéro
+    Club&nbsp;» recherchent maintenant dans les airs, où ils se livrent à toutes
+    sortes d'exploits audacieux, l'excitation nerveuse qu'ils ont cessé de
+    trouver sur terre.
   </div>
 </section>
 ```
@@ -74,30 +74,49 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 
-/* Valeur de type <url> */
-shape-outside: url(image.png);
+/* Boîte de forme avec une forme de base */
+shape-outside: circle() border-box;
+shape-outside: margin-box ellipse();
 
-/* Valeur de type <gradient> */
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+/* Valeurs de type <url> */
+shape-outside: url("image.png");
+
+/* Valeurs de type <gradient> */
+shape-outside: linear-gradient(45deg, white 150px, red 150px);
 
 /* Valeurs globales */
-shape-outside: initial;
 shape-outside: inherit;
+shape-outside: initial;
+shape-outside: revert;
+shape-outside: revert-layer;
 shape-outside: unset;
 ```
+
+La propriété `shape-outside` est définie en utilisant les valeurs de la liste ci-dessous, qui définissent la _zone de flottement_ pour les _éléments flottants_. La zone de flottement détermine la forme autour de laquelle le contenu en ligne (éléments flottants) s'enroule.
 
 ### Valeurs
 
 - `none`
-  - : La zone de flottement n'est pas modifiée. Le contenu en ligne épouse le contour de la boîte de marge normalement.
+  - : La zone de flottement n'est pas affectée. Le contenu en ligne s'enroule autour de la boîte de marge de l'élément, comme d'habitude.
 - `<shape-box>`
-  - : La forme est calculée selon '`margin-box`', '`border-box`', '`padding-box`' or '`content-box`' qui correspondent chacune aux boîtes de marge, bordure, remplissage et de contenu. La boîte ainsi définie inclue les courbures induites par {{cssxref("border-radius")}}. On a un effet semblable à {{cssxref("background-clip")}}.
-- `<basic-shape>`
-  - : Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi [`inset()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#inset()>), [`circle()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#circle()>), [`ellipse()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#ellipse()>), ou [`polygon()`](</fr/docs/Web/CSS/Reference/Values/basic-shape#polygon()>). Si une valeur `<shape-box>` est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction `<basic-shape>`. Si `<shape-box>` n'est pas fournie, la valeur par défaut sera '`margin-box`'.
-- `<image>`
-  - : La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode `fetch`, éventuellement avec CORS pour les URL utilisées dans `shape-outside`. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du _referrer_ comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur **`none`**.
+  - : La zone de flottement est calculée en fonction de la forme des bords de l'élément flottant (comme défini par le [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)). Cela peut être `margin-box`, `border-box`, `padding-box` ou `content-box`. La forme inclut toute courbure créée par la propriété {{CSSxRef("border-radius")}} (comportement similaire à {{CSSxRef("background-clip")}}).
+    - `margin-box`
+      - : Définit la forme entourée par le bord extérieur de la marge. Les rayons des coins de cette forme sont déterminés par les valeurs correspondantes de {{CSSxRef("border-radius")}} et {{CSSxRef("margin")}}. Si le ratio `border-radius / margin` est `1` ou plus, alors le rayon du coin de la boîte de marge est `border-radius + margin`. Si le ratio est inférieur à `1`, alors le rayon du coin de la boîte de marge est `border-radius + (margin * (1 + (ratio - 1) ^ 3))`.
+    - `border-box`
+      - : Définit la forme entourée par le bord extérieur de la bordure. La forme suit les règles normales de courbure des coins pour l'extérieur de la bordure.
+    - `padding-box`
+      - : Définit la forme entourée par le bord extérieur du remplissage. La forme suit les règles normales de courbure des coins pour l'intérieur de la bordure.
+    - `content-box`
+      - : Définit la forme entourée par le bord extérieur du contenu. Chaque rayon de coin de cette boîte est le plus grand de `0` ou `border-radius - border-width - padding`.
+
+- {{CSSxRef("basic-shape")}}
+  - : La zone de flottement est calculée en fonction de la forme créée par une fonction {{CSSxRef("basic-shape/inset","inset()")}}, {{CSSxRef("basic-shape/circle","circle()")}}, {{CSSxRef("basic-shape/ellipse","ellipse()")}}, ou {{CSSxRef("basic-shape/polygon","polygon()")}}&nbsp;; les autres fonctions `<basic-shape>` sont invalides. Si une `<shape-box>` est également fournie, elle définit la boîte de référence pour la fonction `<basic-shape>`. Sinon, la boîte de référence par défaut est `margin-box`.
+- {{CSSxRef("image")}}
+  - : La zone de flottement est extraite et calculée en fonction du canal alpha de l'{{CSSxRef("image")}} défini, comme défini par {{CSSxRef("shape-image-threshold")}}.
+
+> [!NOTE]
+> Si l'image est invalide, l'effet est comme si le mot-clé `none` avait été défini. De plus, l'image doit être servie avec des en-têtes {{Glossary("CORS")}} permettant son utilisation.
 
 ## Définition formelle
 
@@ -107,33 +126,25 @@ shape-outside: unset;
 
 {{CSSSyntax}}
 
-## Interpolation
-
-Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivantes. Les valeurs avec des fonctions sont interpolées comme une liste simple. Les valeurs d'une liste sont interpolées comme des longueurs, des pourcentages ou des valeurs calculées lorsque c'est possible. Si les valeurs de la liste n'ont pas ces types mais sont identiques (par exemple, on trouve `nonzero` à la même position dans les deux listes), les valeurs pourront interopérer.
-
-- Les deux formes doivent utiliser la même boîtes de référence.
-- Si les deux formes sont du même type, que ce type est `ellipse()` ou `circle()` et qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont du type `inset()`, on aura une interpolation entre chaque valeur.
-- Si les deux formes sont du types `polygon()`, que les deux polygones ont le même nombre de côtés et utilisent la même règle `<fill-rule>`, on aura une interpolation entre chaque valeur.
-- Dans les autres cas, on n'a pas d'interpolation définie.
-
 ## Exemples
 
-### HTML
+### Texte en entonnoir
+
+#### HTML
 
 ```html
 <div class="main">
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be funneling your attention
-    towards a spot on the page to drive you to follow a particular link.
-    Sometimes you don't notice.
+    Parfois, le contenu textuel d'une page web semble canaliser votre attention
+    vers un point précis de la page pour vous inciter à suivre un lien
+    particulier. Parfois, vous ne le remarquez pas.
   </p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .main {
@@ -142,25 +153,21 @@ Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivante
 
 .left,
 .right {
-  width: 40%;
-  height: 12ex;
   background-color: lightgray;
+  height: 12ex;
+  width: 40%;
 }
 
 .left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
+  float: left;
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
 }
 
 p {
@@ -168,9 +175,9 @@ p {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', "100%", 130)}}
+{{EmbedLiveSample("Texte en entonnoir", "100%", 130)}}
 
 ## Spécifications
 
@@ -182,11 +189,8 @@ p {
 
 ## Voir aussi
 
-- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/Guides/Shapes)
+- [Les formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
-- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/Guides/Shapes/From_box_values)
-- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)
-- [Créer des formes à partir d'images](/fr/docs/Web/CSS/Guides/Shapes/From_images)
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("shape-margin")}}
-- {{cssxref("shape-image-threshold")}}
+- Le type de donnée {{CSSxRef("&lt;basic-shape&gt;")}}
+- La propriété {{CSSxRef("shape-margin")}}
+- La propriété {{CSSxRef("shape-image-threshold")}}
