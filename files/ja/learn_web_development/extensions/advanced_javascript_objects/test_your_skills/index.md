@@ -8,7 +8,7 @@ l10n:
 
 このページでは、高度な JavaScript のオブジェクトに関する理解度を確認するためのテストを紹介します。
 
-## トピック別に高度な JavaScript オブジェクトの理解度を確認する
+## トピック別の高度な JavaScript オブジェクトの確認テスト
 
 {{SubpagesWithSummaries}}
 
