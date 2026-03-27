@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`timeZoneId()`** des instances de {{JSxRef("Temporal.Now")}} retourne un [identifiant de fuseau horaire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages) représentant le fuseau horaire actuel du système. La plupart des systèmes retournent un identifiant de fuseau horaire principal tel que `"America/New_York"`, bien qu'un identifiant de fuseau horaire avec décalage tel que `"-04:00"` soit également possible. L'identifiant de fuseau horaire retourné est le fuseau horaire par défaut utilisé par les autres méthodes de `Temporal.Now`.
+La méthode statique **`Temporal.Now.timeZoneId()`** retourne un [identifiant de fuseau horaire](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages) représentant le fuseau horaire actuel du système. La plupart des systèmes retournent un identifiant de fuseau horaire principal tel que `"America/New_York"`, bien qu'un identifiant de fuseau horaire avec décalage tel que `"-04:00"` soit également possible. L'identifiant de fuseau horaire retourné est le fuseau horaire par défaut utilisé par les autres méthodes de `Temporal.Now`.
 
 ## Syntaxe
 
