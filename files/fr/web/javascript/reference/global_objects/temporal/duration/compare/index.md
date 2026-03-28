@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`compare()`** des instances de {{JSxRef("Temporal.Duration")}} retourne un nombre (-1, 0 ou 1) indiquant si la première durée est plus courte, égale ou plus longue que la deuxième durée.
+La méthode statique **`Temporal.Duration.compare()`** retourne un nombre (-1, 0 ou 1) indiquant si la première durée est plus courte, égale ou plus longue que la deuxième durée.
 
 ## Syntaxe
 

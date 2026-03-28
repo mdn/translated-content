@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`from()`** des instances de {{JSxRef("Temporal.Instant")}} crée un nouvel objet `Temporal.Instant` à partir d'un autre objet `Temporal.Instant` ou d'une chaîne de caractères au format [RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#format_rfc_9557).
+La méthode statique **`Temporal.Instant.from()`** crée un nouvel objet `Temporal.Instant` à partir d'un autre objet `Temporal.Instant` ou d'une chaîne de caractères au format [RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Instant#format_rfc_9557).
 
 ## Syntaxe
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`now()`** retourne le nombre de millisecondes écoulées depuis [l'epoch](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
+La méthode statique **`Date.now()`** retourne le nombre de millisecondes écoulées depuis [l'époque](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), qui est défini comme minuit au début du 1er janvier 1970, UTC.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Date.now()")}}
 

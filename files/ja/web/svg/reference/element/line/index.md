@@ -2,31 +2,14 @@
 title: <line>
 slug: Web/SVG/Reference/Element/line
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<line>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の基本図形であり、2 つの点をつなぐ直線を作成するために使用します。
 
-## 例
+## 使用コンテキスト
 
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
-
-  <!-- If you do not specify the stroke
-       color the line will not be visible -->
-</svg>
-```
-
-{{EmbedLiveSample('Example', 100, 100)}}
+{{svginfo}}
 
 ## 属性
 
@@ -46,9 +29,29 @@ svg {
   - : パス全体の長さをユーザーの単位で定義します。
     _Value type_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: _none_; _アニメーション_: **可**
 
-## 使用上のメモ
+## DOM インターフェイス
 
-{{svginfo}}
+この要素は {{domxref("SVGLineElement")}} インターフェイスを実装しています。
+
+## 例
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
+
+  <!-- 線の色を指定しなかった場合、線は表示されません -->
+</svg>
+```
+
+{{EmbedLiveSample('Example', 100, 100)}}
 
 ## 仕様書
 

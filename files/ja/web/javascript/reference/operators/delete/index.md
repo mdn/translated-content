@@ -1,5 +1,5 @@
 ---
-title: delete 演算子
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 l10n:
   sourceCommit: 03d5115691a7a9fa3df3b6ebd20a0c7eed213252

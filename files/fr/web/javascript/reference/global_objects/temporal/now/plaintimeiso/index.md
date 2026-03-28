@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`plainTimeISO()`** des instances de {{JSxRef("Temporal.Now")}} des instances de {{JSxRef("Temporal.Now")}} retourne l'heure actuelle sous forme d'objet {{JSxRef("Temporal.PlainTime")}}, dans le fuseau horaire défini.
+La méthode statique **`Temporal.Now.plainTimeISO()`** retourne l'heure actuelle sous forme d'objet {{JSxRef("Temporal.PlainTime")}}, dans le fuseau horaire défini.
 
 Notez que bien que la méthode contienne «&nbsp;ISO&nbsp;» dans son nom, les objets {{JSxRef("Temporal.PlainTime")}} n'ont pas de calendriers associés, car le format de l'heure n'est pas dépendant du calendrier.
 

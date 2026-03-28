@@ -2,10 +2,12 @@
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 1d2e1875bdfdd2fb8d0806535220bbd56d3a091d
 ---
 
 Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs doivent être agrégées en une seule. Ce type d'exception est levé lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}} lorsque l'ensemble des promesses qui lui sont passées échouent.
+
+Comparé à {{JSxRef("SuppressedError")}}, `AggregateError` représente une liste d'erreurs non liées, tandis que `SuppressedError` représente une erreur survenue lors de la gestion d'une autre erreur.
 
 `AggregateError` est une sous-classe de {{JSxRef("Error")}}.
 

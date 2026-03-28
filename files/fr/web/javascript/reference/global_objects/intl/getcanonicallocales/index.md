@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 6356aa3911fe6cf953e0b04c3b285fe95e4b5355
 ---
 
-La méthode statique **`getCanonicalLocales()`** des instances de {{JSxRef("Intl")}} retourne un tableau contenant les noms canoniques des locales. Les doublons sont omis et les éléments sont validés comme des balises de langue structurellement valides.
+La méthode statique **`Intl.getCanonicalLocales()`** retourne un tableau contenant les noms canoniques des locales. Les doublons sont omis et les éléments sont validés comme des balises de langue structurellement valides.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.getCanonicalLocales()")}}
 
@@ -43,7 +43,7 @@ Un tableau qui contient les noms canoniques des locales.
 
 ## Exemples
 
-### Utiliser la méthode `getCanonicalLocales()`
+### Utiliser la méthode `Intl.getCanonicalLocales()`
 
 ```js
 Intl.getCanonicalLocales("EN-US"); // ["en-US"]

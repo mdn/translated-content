@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`plainDateISO()`** des instances de {{JSxRef("Temporal.Now")}} retourne la date actuelle sous forme d'objet {{JSxRef("Temporal.PlainDate")}}, dans le calendrier ISO 8601 et le fuseau horaire défini.
+La méthode statique **`Temporal.Now.plainDateISO()`** retourne la date actuelle sous forme d'objet {{JSxRef("Temporal.PlainDate")}}, dans le calendrier ISO 8601 et le fuseau horaire défini.
 
 ## Syntaxe
 

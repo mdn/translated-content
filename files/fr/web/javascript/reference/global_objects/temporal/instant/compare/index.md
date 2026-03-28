@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`compare()`** des instances de {{JSxRef("Temporal.Instant")}} retourne un nombre (-1, 0 ou 1) indiquant si le premier instant est antérieur, identique ou postérieur au second instant. Elle est équivalente à la comparaison des {{JSxRef("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} des deux instants.
+La méthode statique **`Temporal.Instant.compare()`** retourne un nombre (-1, 0 ou 1) indiquant si le premier instant est antérieur, identique ou postérieur au second instant. Elle est équivalente à la comparaison des {{JSxRef("Temporal/Instant/epochNanoseconds", "epochNanoseconds")}} des deux instants.
 
 ## Syntaxe
 

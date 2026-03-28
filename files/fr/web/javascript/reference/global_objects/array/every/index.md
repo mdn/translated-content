@@ -3,7 +3,7 @@ title: "Array : méthode every()"
 short-title: every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
 l10n:
-  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
+  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
 ---
 
 La méthode **`every()`** des instances de {{JSxRef("Array")}} retourne `false` si elle trouve un élément du tableau qui ne satisfait pas la fonction de test fournie. Sinon, elle retourne `true`.

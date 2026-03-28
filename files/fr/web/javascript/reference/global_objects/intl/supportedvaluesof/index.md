@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b86874b5762b52ce0055f58d561004d1a204ad5
 ---
 
-La méthode statique **`supportedValuesOf()`** des instances de {{JSxRef("Intl")}} retourne un tableau contenant les valeurs de calendrier, de collation, de monnaie, de systèmes de numérotation ou d'unités prises en charge par l'implémentation.
+La méthode statique **`Intl.supportedValuesOf()`** retourne un tableau contenant les valeurs de calendrier, de collation, de monnaie, de systèmes de numérotation ou d'unités prises en charge par l'implémentation.
 
 Les doublons sont omis et le tableau est trié par ordre lexicographique croissant (ou plus précisément, en utilisant {{JSxRef("Array/sort", "Array.prototype.sort()")}} avec une fonction de comparaison `undefined`).
 

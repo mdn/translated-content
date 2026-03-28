@@ -1,17 +1,19 @@
 ---
 title: "確認テスト: 背景と境界線"
-short-title: 背景と境界線
+short-title: "テスト: 背景と境界線"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 l10n:
-  sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 この確認テストの目的は、 [CSS のボックスの背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)を理解しているかどうかを評価することです。
 
 > [!NOTE]
 > 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-## 課題 1
+## 背景と境界線 1
 
 この課題では、ページのヘッダーに背景、境界線、簡単なスタイル設定を追加します。
 
@@ -25,17 +27,19 @@ l10n:
    https://mdn.github.io/shared-assets/images/examples/balloons.jpg
    ```
 
-最終的には下記画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![画像は、半透明の黒地に写真の背景、丸まった境界線、白文字のボックスを表示させます。](backgrounds-task1.png)
+{{EmbedLiveSample("backgrounds1-start", "", "160px")}}
 
-```html live-sample___backgrounds1
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___backgrounds1-start live-sample___backgrounds1-finish
 <div class="box">
-  <h2>Backgrounds & Borders</h2>
+  <h2>背景と境界線</h2>
 </div>
 ```
 
-```css live-sample___backgrounds1
+```css live-sample___backgrounds1-start live-sample___backgrounds1-finish
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
@@ -58,16 +62,18 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("backgrounds1", "", "200px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("backgrounds1-finish", "", "160px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
 
 `border`、`border-radius`、`background-image`、`background-size` を使用し、 RGB 色を使用して背景色を部分的に透明にする方法を理解しましょう。
 
-```css
+```css live-sample___backgrounds1-finish
 .box {
-  border: 5px solid #000;
+  border: 5px solid black;
   border-radius: 10px;
   background-image: url("https://mdn.github.io/shared-assets/images/examples/balloons.jpg");
   background-size: cover;
@@ -75,15 +81,15 @@ h2 {
 
 h2 {
   background-color: rgb(0 0 0 / 50%);
-  color: #fff;
+  color: white;
 }
 ```
 
 </details>
 
-## 課題 2
+## 背景と境界線 2
 
-この課題では、装飾的なボックスに背景画像や境界画像、他にもスタイル設定を追加してください。
+この課題では、装飾的なボックスに背景画像や境界画像、その他のスタイルを追加してください。
 
 課題を完成させるには、次のようにしてください。
 
@@ -97,17 +103,19 @@ h2 {
 
 3. 見出しのテキストが画像に重ならないように、また中央に配置されていることを確認してください。これを達成するために前回学んだテクニックを使用する必要があります。
 
-最終的には下記画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![画像は、左上と右下の角を丸めた青い境界線を持つボックスを表示させます。テキストの左側には単一の星、右側には 3 つの星。](backgrounds-task2.png)
+{{EmbedLiveSample("backgrounds2-start", "", "200px")}}
 
-```html live-sample___backgrounds2
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___backgrounds2-start live-sample___backgrounds2-finish
 <div class="box">
-  <h2>Backgrounds & Borders</h2>
+  <h2>背景と境界線</h2>
 </div>
 ```
 
-```css live-sample___backgrounds2
+```css live-sample___backgrounds2-start live-sample___backgrounds2-finish
 body {
   padding: 1em;
   font: 1.2em / 1.5 sans-serif;
@@ -129,7 +137,9 @@ h2 {
 }
 ```
 
-{{EmbedLiveSample("backgrounds2", "", "220px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("backgrounds2-finish", "", "220px")}}
 
 <details>
 <summary>ここをクリックすると、模範解答を表示します。</summary>
@@ -137,7 +147,7 @@ h2 {
 見出しにパディングを追加して、星の画像と重ならないようにする必要があります。これは、先の[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)のレッスンで学んだこととリンクしています。
 テキストは、 `text-align` プロパティで配置する必要があります。
 
-```css
+```css live-sample___backgrounds2-finish
 .box {
   border: 5px solid lightblue;
   border-top-left-radius: 20px;
@@ -156,3 +166,5 @@ h2 {
 ```
 
 </details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Size_decorate_content_panel", "Learn_web_development/Core/Styling_basics")}}

@@ -34,7 +34,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -100,7 +100,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -166,7 +166,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -199,7 +199,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -232,7 +232,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -265,7 +265,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -298,7 +298,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -331,7 +331,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -364,7 +364,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -397,7 +397,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -430,7 +430,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -463,7 +463,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -496,7 +496,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -529,7 +529,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -562,7 +562,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -595,7 +595,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -628,7 +628,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -655,7 +655,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -688,7 +688,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -715,7 +715,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -748,7 +748,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -781,7 +781,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0%</code></td>
     </tr>
     <tr>
@@ -814,7 +814,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>-10%</code></td>
     </tr>
     <tr>
@@ -847,7 +847,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -859,36 +859,6 @@ l10n:
 
 > [!NOTE]
 > `<foreignObject>` の Y 座標は {{cssxref("y")}} 幾何プロパティでも定義できます。 CSS で設定すると、 `y` プロパティの値は `y` 属性の値を上書きします。
-
-### `<glyphRef>`
-
-> [!WARNING]
-> SVG2 では {{SVGElement('glyphRef')}} は非推奨であり、使用すべきではありません。
-
-{{SVGElement('glyphRef')}} の場合、 `y` が文字の Y 軸の座標を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number"
-            >&#x3C;number></a
-          ></strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
 
 ### `<image>`
 
@@ -913,7 +883,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -949,7 +919,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>-10%</code></td>
     </tr>
     <tr>
@@ -976,7 +946,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -1009,7 +979,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -1045,7 +1015,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -1083,7 +1053,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -1135,44 +1105,6 @@ line {
 
 {{EmbedLiveSample('text', '100%', 100)}}
 
-### `<tref>`
-
-> [!WARNING]
-> SVG2 では {{SVGElement('tref')}} は非推奨であり、使用すべきではありません。
-
-{{SVGElement('tref')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
-
-複数の値がある場合、`y` はテキストから個々の文字への Y 座標を定義します。値が文字よりも少ない場合、残りの文字は最後に配置された文字と一直線上に配置されます。値が文字よりも多い場合は、余分な値は無視されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        (<strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
-            >&#x3C;length></a
-          ></strong
-        >
-        |
-        <strong
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >) のリスト
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
 ### `<tspan>`
 
 {{SVGElement('tspan')}} にある値が 1 つの場合、 `y` は*コンテンツテキストの位置*を配置しなければならない Y 座標を定義します。*コンテンツテキストの位置*は、通常、テキストの最初の行のベースライン上の点です。正確な*コンテンツテキスト位置*は、 {{SVGAttr('text-anchor')}} や {{cssxref('direction')}} など、他のプロパティの影響を受けます。
@@ -1198,7 +1130,7 @@ line {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -1275,7 +1207,7 @@ line {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>

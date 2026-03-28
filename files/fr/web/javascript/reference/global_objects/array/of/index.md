@@ -52,7 +52,7 @@ La méthode `Array.of()` est une méthode de fabrique générique. Par exemple, 
 
 ## Exemples
 
-### Utiliser `Array.of()`
+### Utiliser la méthode `Array.of()`
 
 ```js
 Array.of(1); // [1]

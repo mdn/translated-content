@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`wait()`** de l'objet {{JSxRef("Atomics")}} vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
+La méthode statique **`Atomics.wait()`** vérifie qu'un emplacement de mémoire partagée contient une valeur donnée et, si c'est le cas, se met en sommeil en attendant une notification de réveil ou l'expiration d'un délai. Elle retourne une chaîne de caractères valant `"not-equal"` si l'emplacement mémoire ne correspond pas à la valeur donnée, `"ok"` si elle est réveillée par {{JSxRef("Atomics.notify()")}}, ou `"timed-out"` si le délai expire.
 
 `Atomics.wait()` et {{JSxRef("Atomics.notify()")}} sont utilisés ensemble pour permettre la synchronisation des processus basée sur une valeur en mémoire partagée. Un processus peut continuer immédiatement si la valeur de synchronisation a changé, ou attendre la notification d'un autre processus lorsqu'il atteint le point de synchronisation.
 
@@ -51,7 +51,7 @@ Une chaîne de caractères qui vaut `"ok"`, `"not-equal"` ou `"timed-out"` selon
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.wait()`
+### Utiliser la méthode `Atomics.wait()`
 
 Étant donné un `Int32Array` partagé&nbsp;:
 

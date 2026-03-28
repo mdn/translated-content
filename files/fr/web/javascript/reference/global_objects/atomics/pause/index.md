@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`pause()`** de l'objet {{JSxRef("Atomics")}} fournit une primitive de micro‑attente qui indique au processeur que l'appelant effectue une boucle d'attente active en attendant l'accès à une ressource partagée. Cela permet au système de réduire les ressources allouées au cœur (par exemple la consommation d'énergie) ou au processus, sans céder l'exécution du processus courant.
+La méthode statique **`Atomics.pause()`** fournit une primitive de micro‑attente qui indique au processeur que l'appelant effectue une boucle d'attente active en attendant l'accès à une ressource partagée. Cela permet au système de réduire les ressources allouées au cœur (par exemple la consommation d'énergie) ou au processus, sans céder l'exécution du processus courant.
 
 `pause()` n'a pas d'effet observable autre que le temps d'attente. Le comportement exact dépend de l'architecture du processeur et du système d'exploitation. Par exemple, sur Intel x86, il peut s'agir d'une instruction `pause` comme indiqué dans le [manuel d'optimisation d'Intel <sup>(angl.)</sup>](https://www.intel.com/content/www/us/en/content-details/671488/intel-64-and-ia-32-architectures-optimization-reference-manual-volume-1.html). Sur certaines plateformes, il peut s'agir d'une opération sans effet.
 
@@ -35,7 +35,7 @@ Aucune ({{JSxRef("undefined")}}).
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.pause()`
+### Utiliser la méthode `Atomics.pause()`
 
 Appeler {{JSxRef("Atomics.wait()")}} ou {{JSxRef("Atomics.waitAsync()")}} pour attendre l'accès à une mémoire partagée entraîne la mise hors du cœur du fil d'exécution, puis son retour après l'attente. Cela est efficace en période de forte contention, où l'accès à la mémoire partagée peut prendre un certain temps. Lorsque la contention est faible, il est souvent plus efficace de sonder le verrou sans céder le fil d'exécution&nbsp;: cette approche est connue sous le nom d'[attente active](https://fr.wikipedia.org/wiki/Attente_active) ou de [verrou tournant](https://fr.wikipedia.org/wiki/Spinlock). La méthode `pause()` permet d'effectuer l'attente active de manière plus efficace en fournissant au processeur un indice sur ce que fait le fil d'exécution, et donc sur son faible besoin en ressources.
 

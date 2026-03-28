@@ -3,7 +3,7 @@ title: "Array : méthode filter()"
 short-title: filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 96f1c1c8891dbd4566485e564c0eb578a65a4d9d
 ---
 
 La méthode **`filter()`** des instances de {{JSxRef("Array")}} crée une [copie superficielle](/fr/docs/Glossary/Shallow_copy) d'une portion d'un tableau donné, filtrée pour ne contenir que les éléments du tableau d'origine qui passent le test implémenté par la fonction fournie.
@@ -94,9 +94,9 @@ console.log(tableau.filter(estPremier)); // [2, 3, 5, 7, 11, 13]
 > [!NOTE]
 > L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il serait préférable d'utiliser un algorithme fortement mémoïsé comme le [Crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) pour éviter les calculs répétés.
 
-### Filtrer les entrées invalides d'un JSON
+### Filtrer les objets invalides d'un tableau d'objets
 
-L'exemple suivant utilise `filter()` pour créer un JSON filtré contenant tous les éléments dont l'`id` est numérique et non nul.
+L'exemple suivant utilise `filter()` pour créer un tableau filtré contenant tous les objets sont différents de zéro, et des `id` numériques.
 
 ```js
 const arr = [

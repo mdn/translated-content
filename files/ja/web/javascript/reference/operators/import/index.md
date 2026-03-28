@@ -83,7 +83,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-ただし、1つだけ奇妙な場合があります。プロミスは決して [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数は[プロミス解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function)プロセスの一部として、ダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
+ただし、1 つだけ奇妙な場合があります。プロミスは決して [thenable](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) に履行されることはないので、もし `my-module.js` モジュールが `then()` という関数をエクスポートすると、その関数は[プロミス解決](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function)プロセスの一部として、ダイナミックインポートのプロミスが履行されると自動的に呼ばれることになります。
 
 ```js
 // my-module.js
@@ -113,6 +113,14 @@ import(`/my-module.js?t=${Date.now()}`);
 ```
 
 これにより、長時間実行されるアプリケーションでメモリーリークが発生する可能性があることに注意してください。エンジンはモジュール名前空間オブジェクトを安全にガベージコレクションできないためです。現在、モジュール名前空間オブジェクトのキャッシュを手動でクリアする方法はありません。
+
+また、[フェッチ API](/ja/docs/Web/API/Fetch_API) を使用してモジュールのソースコードをテキストとして取得し、モジュールの型に応じて手動で評価することもできます。
+
+- JavaScript モジュールについては、ブラウザーではソースコードを [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) として動的にインポートしたり、Node.js では [`vm.Module`](https://nodejs.org/docs/latest/api/vm.html#class-vmmodule) を使用して評価したりすることができます。
+- JSON モジュールについては、{{jsxref("JSON.parse()")}} を使用してソースコードを構文解析できます。
+- CSS モジュールについては、新しい {{domxref("CSSStyleSheet")}} オブジェクトを作成し、その [`replace()`](/ja/docs/Web/API/CSSStyleSheet/replace) メソッドを使用して、ソースコードを格納することができます。
+
+ただし、これは意味的には動的インポートとは異なります。[フェッチの出力先](/ja/docs/Web/API/Request/destination)、[CSP](/ja/docs/Web/HTTP/Guides/CSP)、[モジュールの解決](/ja/docs/Web/JavaScript/Reference/Operators/import.meta/resolve)といったユーザーエージェントの設定が、正しく適用されない可能性があるからです。
 
 モジュール名前空間オブジェクトのキャッシュは、*正常に*読み込まれ、リンクされたモジュールにのみ適用されます。モジュールは 3 つのステップでインポートされます：読み込み（モジュールの取得）、リンク（主にモジュールの解析）、評価（解析されたコードの実行）。評価の失敗のみがキャッシュされます。モジュールの読み込みやリンクに失敗した場合、次のインポートで再度読み込みとリンクを試行する場合があります。ブラウザーは取得操作の結果をキャッシュする場合としない場合がありますが、一般的な HTTP セマンティクスに従うべきなので、そのようなネットワーク障害の処理は {{domxref("Window/fetch", "fetch()")}} の失敗を処理することと異なるべきではありません。
 
@@ -194,6 +202,16 @@ Promise.all(
     (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
+```
+
+### 動的インポートによるインポート属性の使用
+
+[インポート属性](/ja/docs/Web/JavaScript/Reference/Statements/import/with)を `import()` 構文の第二引数として受け入れることができます。
+
+```js
+const data = await import("./data.json", {
+  with: { type: "json" },
+});
 ```
 
 ## 仕様書

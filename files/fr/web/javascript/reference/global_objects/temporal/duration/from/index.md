@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`from()`** des instances de {{JSxRef("Temporal.Duration")}} crée un nouvel objet `Temporal.Duration` à partir d'un autre objet `Temporal.Duration`, d'un objet avec des propriétés de durée ou d'une chaîne de caractères ISO 8601.
+La méthode statique **`Temporal.Duration.from()`** crée un nouvel objet `Temporal.Duration` à partir d'un autre objet `Temporal.Duration`, d'un objet avec des propriétés de durée ou d'une chaîne de caractères ISO 8601.
 
 ## Syntaxe
 

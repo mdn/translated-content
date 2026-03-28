@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-La méthode statique **`supportedLocalesOf()`** des instances de {{JSxRef("Intl.ListFormat")}} retourne un tableau contenant celles des locales fournies qui sont prises en charge pour le formatage des listes sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+La méthode statique **`Intl.ListFormat.supportedLocalesOf()`** retourne un tableau contenant celles des locales fournies qui sont prises en charge pour le formatage des listes sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ Un tableau de chaînes de caractères représentant un sous-ensemble des balises
 
 ## Exemples
 
-### Utiliser la méthode `supportedLocalesOf()`
+### Utiliser la méthode `Intl.ListFormat.supportedLocalesOf()`
 
 En supposant un environnement d'exécution qui prend en charge le formatage des listes pour l'indonésien et l'allemand mais pas pour le balinais, `supportedLocalesOf` retourne les balises de langue pour l'indonésien et l'allemand sans modification, même si la collation `pinyin` n'est ni pertinente pour le formatage des listes ni utilisée avec l'indonésien, et qu'une version spécialisée de l'allemand pour l'Indonésie est peu probable. Notez la spécification de l'algorithme `"lookup"` ici — un appariement `"best fit"` pourrait considérer que l'indonésien est une correspondance adéquate pour le balinais puisque la plupart des locuteurs balinais comprennent aussi l'indonésien, et donc retourner également la balise de langue balinaise.
 

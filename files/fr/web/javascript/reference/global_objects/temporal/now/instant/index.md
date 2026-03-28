@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`instant()`** des instances de {{JSxRef("Temporal.Now")}} retourne l'heure actuelle sous forme d'objet {{JSxRef("Temporal.Instant")}}.
+La méthode statique **`Temporal.Now.instant()`** retourne l'heure actuelle sous forme d'objet {{JSxRef("Temporal.Instant")}}.
 
 ## Syntaxe
 

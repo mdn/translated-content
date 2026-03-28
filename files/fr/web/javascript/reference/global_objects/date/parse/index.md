@@ -54,7 +54,7 @@ Comme `parse()` est une méthode statique de `Date`, vous l'utilisez toujours co
 
 ## Exemples
 
-### Utiliser la méthode `parse()`
+### Utiliser la méthode `Date.parse()`
 
 Les appels suivants renvoient tous `1546300800000`. Le premier impliquera l'heure UTC car il s'agit uniquement d'une date, et les autres spécifient explicitement le fuseau horaire UTC.
 

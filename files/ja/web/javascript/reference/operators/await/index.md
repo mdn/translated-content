@@ -1,5 +1,5 @@
 ---
-title: await 演算子
+title: await
 slug: Web/JavaScript/Reference/Operators/await
 l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4

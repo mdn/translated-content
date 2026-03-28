@@ -70,7 +70,7 @@ Comme `UTC()` est une méthode statique de `Date`, vous l'utilisez toujours sous
 
 ## Exemples
 
-### Utiliser la méthode `UTC()`
+### Utiliser la méthode `Date.UTC()`
 
 L'instruction suivante crée un objet {{JSxRef("Date")}} avec les arguments considérés comme UTC plutôt que locaux&nbsp;:
 
