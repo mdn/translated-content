@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
 ---
 
-**authenticator** (認証器) は、ユーザーの登録と認証に必要な暗号化操作を実行し、これらの操作で使用される暗号化キーを安全に保存できるエンティティです。
+**authenticator** (認証器) は、ユーザーの登録と認証に必要な暗号化の操作をして、これらの操作で使用される暗号化キーを安全に保存できるエンティティです。
 
 authenticator は、ハードウェアまたはソフトウェアで実装される可能性があります。Apple デバイスの [Touch ID](https://en.wikipedia.org/wiki/Touch_ID) システムや Windows の [Windows Hello](https://en.wikipedia.org/wiki/Windows_10#System_security) システムのように、デバイスに統合されている場合もあれば、[YubiKey](https://en.wikipedia.org/wiki/YubiKey) などの取り外し可能なモジュールである場合もあります。
 
