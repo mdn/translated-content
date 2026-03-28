@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: カスケード"
-short-title: "試験: カスケード"
+short-title: "テスト: カスケード"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade
 l10n:
   sourceCommit: 2f16610802bfbdf6394ca919557a4369b1236e10
