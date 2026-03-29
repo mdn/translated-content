@@ -24,7 +24,7 @@ Une chaîne de caractères représentant le mois et le jour donnés au format [R
 
 ## Description
 
-La méthode `toJSON()` est appelée automatiquement par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.PlainMonthDay` est sérialisé. Elle permet de sérialiser utilement les objets `Temporal.PlainMonthDay` dans du JSON, qui peut ensuite être désérialisé en utilisant la fonction {{JSxRef("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} comme revitaliseur dans {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est appelée automatiquement par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.PlainMonthDay` est sérialisé. Elle permet de sérialiser utilement les objets `Temporal.PlainMonthDay` dans du JSON, qui peut ensuite être désérialisé en utilisant la fonction {{JSxRef("Temporal/PlainMonthDay/from", "Temporal.PlainMonthDay.from()")}} comme réactivateur dans {{JSxRef("JSON.parse()")}}.
 
 ## Exemples
 
