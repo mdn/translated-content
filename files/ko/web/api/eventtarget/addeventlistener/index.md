@@ -172,7 +172,7 @@ const el = document.getElementById("outside");
 el.addEventListener("click", modifyText, false);
 ```
 
-위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버를링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
+위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버블링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
 
 #### 결과
 
