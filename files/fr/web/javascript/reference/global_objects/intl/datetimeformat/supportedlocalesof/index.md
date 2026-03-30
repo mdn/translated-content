@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-La méthode statique **`supportedLocalesOf()`** des instances de {{JSxRef("Intl.DateTimeFormat")}} retourne un tableau contenant celles des locales fournies qui sont prises en charge pour la mise en forme de la date et de l'heure sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+La méthode statique **`Intl.DateTimeFormat.supportedLocalesOf()`** retourne un tableau contenant celles des locales fournies qui sont prises en charge pour la mise en forme de la date et de l'heure sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.DateTimeFormat.supportedLocalesOf()", "shorter")}}
 
@@ -41,7 +41,7 @@ Un tableau de chaînes de caractères représentant un sous-ensemble des balises
 
 ## Exemple
 
-### Utiliser la méthode `supportedLocalesOf()`
+### Utiliser la méthode `Intl.DateTimeFormat.supportedLocalesOf()`
 
 En supposant un environnement d'exécution qui prend en charge l'indonésien et l'allemand mais pas le balinais pour la mise en forme des dates et des heures, `supportedLocalesOf` retourne les balises de langue pour l'indonésien et l'allemand sans modification, même si la collation `pinyin` n'est ni pertinente pour la mise en forme des dates et heures ni utilisée avec l'indonésien, et qu'une variante spécialisée de l'allemand pour l'Indonésie est peu probable. Notez la spécification de l'algorithme `"lookup"` ici — un comparateur `"best fit"` pourrait décider que l'indonésien est une correspondance adéquate pour le balinais puisque la plupart des locuteur·ice·s balinais·es comprennent aussi l'indonésien, et donc retourner également la balise de langue balinaise.
 

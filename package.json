@@ -23,9 +23,15 @@
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "node scripts/npm-check.js"
   },
-  "packageManager": "npm@11.6.2",
+  "packageManager": "npm@11.9.0",
   "engines": {
     "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.8.0"
+    }
   },
   "devDependencies": {
     "autocorrect-node": "2.14.0",
@@ -35,7 +41,7 @@
     "html-to-text": "^9.0.5",
     "lefthook": "^2.1.4",
     "markdown-it": "^14.1.1",
-    "markdownlint-cli2": "^0.21.0",
+    "markdownlint-cli2": "^0.22.0",
     "markdownlint-rule-search-replace": "^1.2.0",
     "mdast-util-from-markdown": "^2.0.3",
     "ora": "^9.3.0",

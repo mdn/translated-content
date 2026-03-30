@@ -24,7 +24,7 @@ l10n:
       <th scope="row">学習成果:</th>
       <td>
         <ul>
-          <li>結合氏の基本概念。</li>
+          <li>結合子の基本概念。</li>
           <li>子孫結合子と子結合子。</li>
           <li>次兄弟結合子と後続兄弟結合子。</li>
           <li>入れ子。</li>
@@ -60,7 +60,7 @@ body article p {
 {{EmbedLiveSample("descendant")}}
 
 > [!NOTE]
-> [Aside: Compound selectors](https://scrimba.com/frontend-path-c0j/~0br?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>（Scrimba 提供）は、子孫結合子の実践的な解説を提供するインタラクティブなレッスンです。
+> [Aside: Compound selectors](https://scrimba.com/frontend-path-c0j/~0br?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>（Scrimba 提供）は、子孫結合子の実践的な解説を提供するインタラクティブなレッスンです。
 
 ## 子結合子
 

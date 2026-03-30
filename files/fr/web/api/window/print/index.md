@@ -1,11 +1,14 @@
 ---
-title: Window.print()
+title: "Window : méthode print()"
+short-title: print()
 slug: Web/API/Window/print
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef}}
 
-Ouvre la boîte de dialogue pour imprimer le document actuel.
+La méthode **`print()`** de l'interface {{DOMxRef("Window")}} ouvre la boîte de dialogue pour imprimer le document actuel.
 
 Si le chargement du document est toujours en cours lorsque cette fonction est appelée, l'ouverture de la boîte de dialogue attendra la fin du chargement.
 
@@ -13,8 +16,8 @@ Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte d
 
 ## Syntaxe
 
-```js
-print();
+```js-nolint
+print()
 ```
 
 ### Paramètres
@@ -23,7 +26,7 @@ Aucun.
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Spécifications
 
@@ -36,5 +39,5 @@ Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 ## Voir aussi
 
 - [Guide sur l'impression](/fr/docs/Web/CSS/Guides/Media_queries/Printing)
-- [L'évènement `beforeprint`](/fr/docs/Web/API/Window/beforeprint_event)
-- [L'évènement `afterprint`](/fr/docs/Web/API/Window/afterprint_event)
+- L'évènement {{DOMxRef("window.beforeprint_event", "beforeprint")}}
+- L'évènement {{DOMxRef("window.afterprint_event", "afterprint")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`isError()`** détermine si la valeur passée est une erreur {{JSxRef("Error")}}.
+La méthode statique **`Error.isError()`** détermine si la valeur passée est une erreur {{JSxRef("Error")}}.
 
 ## Syntaxe
 
@@ -37,7 +37,7 @@ C'est une alternative plus robuste à [`instanceof Error`](/fr/docs/Web/JavaScri
 
 ## Exemples
 
-### Utiliser la méthode `isError()`
+### Utiliser la méthode `Error.isError()`
 
 ```js
 // tous les appels suivants retournent true

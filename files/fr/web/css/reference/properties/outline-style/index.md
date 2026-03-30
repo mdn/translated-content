@@ -1,14 +1,13 @@
 ---
 title: outline-style
 slug: Web/CSS/Reference/Properties/outline-style
-original_slug: Web/CSS/outline-style
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`outline-style`** définit le style du contour d'un élément. Un contour est une ligne tracée autour d'un élément, à l'extérieur de la {{CSSxRef("border")}}.
 
-La propriété **`outline-style`** permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et peut être utilisée afin de faire ressortir l'élément.
-
-{{InteractiveExample("CSS Demo: outline-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: outline-style")}}
 
 ```css interactive-example-choice
 outline-style: none;
@@ -33,7 +32,7 @@ outline-style: inset;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    Ceci est une boîte avec un contour autour.
   </div>
 </section>
 ```
@@ -47,7 +46,7 @@ outline-style: inset;
 }
 ```
 
-Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("outline")}} lors de la définition de l'apparence d'un contour.
 
 ## Syntaxe
 
@@ -67,31 +66,35 @@ outline-style: outset;
 /* Valeurs globales */
 outline-style: inherit;
 outline-style: initial;
+outline-style: revert;
+outline-style: revert-layer;
 outline-style: unset;
 ```
+
+La propriété `outline-style` est définie avec une des valeurs listées ci-après.
 
 ### Valeurs
 
 - `auto`
-  - : L'agent utilisateur peut afficher une bordure avec une mise en forme par défaut.
+  - : Permet à l'agent utilisateur d'afficher un style de contour personnalisé.
 - `none`
-  - : Aucune bordure n'est dessinée (équivalent à {{cssxref("outline-width")}} avec la valeur `0`).
+  - : Aucun contour n'est utilisé. La {{CSSxRef("outline-width")}} est `0`.
 - `dotted`
-  - : Le bordure est dessinée avec une série de points.
+  - : Le contour est une série de points.
 - `dashed`
-  - : La bordure est dessinée avec des tirets.
+  - : Le contour est une série de segments de ligne courts.
 - `solid`
-  - : La bordure est dessinée avec une ligne continue.
+  - : Le contour est une ligne unique.
 - `double`
-  - : La bordure est dessinée avec deux lignes continues. La valeur de la propriété {{cssxref("outline-width")}} désigne la somme de la largeur des deux lignes et de l'espace entre elles.
+  - : Le contour est composé de deux lignes uniques. La {{CSSxRef("outline-width")}} est la somme des deux lignes et de l'espace entre elles.
 - `groove`
-  - : La bordure est dessinée comme si elle était gravée dans le document.
+  - : Le contour semble être gravé dans la page.
 - `ridge`
-  - : La forme obtenue est opposée à `groove` : la bordure semble dépasser du document.
+  - : L'opposé de `groove`&nbsp;: le contour semble être en relief par rapport à la page.
 - `inset`
-  - : La bordure semble être intégrée dans le document..
+  - : Le contour donne l'impression que la boîte est encastrée dans la page.
 - `outset`
-  - : La forme obtenue est opposée à `inset` : la bordure semble ressortir du document.
+  - : L'opposé de `inset`&nbsp;: le contour donne l'impression que la boîte sort de la page.
 
 ## Définition formelle
 
@@ -103,64 +106,167 @@ outline-style: unset;
 
 ## Exemples
 
-### Exemple simple
+### Définir le style de contour sur `auto`
 
-#### CSS
-
-```css
-.exemple-groove {
-  outline-style: groove;
-  outline-color: red;
-  outline-width: 2px;
-}
-
-.exemple-outset {
-  outline-style: outset;
-  outline-color: green;
-  outline-width: 1px;
-}
-```
+La valeur `auto` indique un style de contour personnalisé, décrit dans [la spécification <sup>(angl.)</sup>](https://drafts.csswg.org/css-ui/#outline-style) comme «&nbsp;typiquement un style \[qui] est soit une valeur par défaut de l'interface utilisateur pour la plateforme, soit peut-être un style plus riche que ce qui peut être décrit en détail en CSS, par exemple, un contour à bords arrondis avec des pixels extérieurs semi-translucides qui semblent briller&nbsp;».
 
 #### HTML
 
 ```html
-<p class="exemple-groove">Ça c'est le groove</p>
-<p class="exemple-outset">Et ça c'est outset</p>
+<div>
+  <p class="auto">Démonstration de contour</p>
+</div>
 ```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_simple","100%","100%")}}
-
-### Utilisation de la valeur auto
-
-La valeur `auto` indique une bordure sur mesure selon l'interface du système d'exploitation ou de l'agent utilisateur.
 
 #### CSS
 
 ```css
 .auto {
-  outline-style: auto; /* same result as "outline: auto" */
+  outline-style: auto; /* même résultat que "outline: auto" */
 }
 
-/* To make the Demo clearer */
+/* Pour rendre la démonstration plus claire */
 * {
   outline-width: 10px;
   padding: 15px;
 }
 ```
 
+#### Résultat
+
+{{EmbedLiveSample("Définir le style de contour sur `auto`")}}
+
+### Définir le style de contour sur `dashed` et `dotted`
+
 #### HTML
 
 ```html
 <div>
-  <p class="auto">Outline Demo</p>
+  <div class="dotted">
+    <p class="dashed">Démonstration de contour</p>
+  </div>
 </div>
 ```
 
-#### Résulat
+#### CSS
 
-{{EmbedLiveSample('Utilisation_de_la_valeur_auto')}}
+```css
+.dotted {
+  outline-style: dotted; /* même résultat que "outline: dotted" */
+}
+.dashed {
+  outline-style: dashed;
+}
+
+/* Pour rendre la démonstration plus claire */
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir le style de contour sur `dashed` et `dotted`")}}
+
+### Définir le style de contour sur `solid` et `double`
+
+#### HTML
+
+```html
+<div>
+  <div class="solid">
+    <p class="double">Démonstration de contour</p>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+.solid {
+  outline-style: solid;
+}
+.double {
+  outline-style: double;
+}
+
+/* Pour rendre la démonstration plus claire */
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir le style de contour sur `solid` et `double`")}}
+
+### Définir le style de contour sur `groove` et `ridge`
+
+#### HTML
+
+```html
+<div>
+  <div class="groove">
+    <p class="ridge">Démonstration de contour</p>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+.groove {
+  outline-style: groove;
+}
+.ridge {
+  outline-style: ridge;
+}
+
+/* Pour rendre la démonstration plus claire */
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir le style de contour sur `groove` et `ridge`")}}
+
+### Définir le style de contour sur `inset` et `outset`
+
+#### HTML
+
+```html
+<div>
+  <div class="inset">
+    <p class="outset">Démonstration de contour</p>
+  </div>
+</div>
+```
+
+#### CSS
+
+```css
+.inset {
+  outline-style: inset;
+}
+.outset {
+  outline-style: outset;
+}
+
+/* Pour rendre la démonstration plus claire */
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Définir le style de contour sur `inset` et `outset`")}}
 
 ## Spécifications
 
@@ -169,3 +275,9 @@ La valeur `auto` indique une bordure sur mesure selon l'interface du système d'
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("outline-width")}}
+- La propriété {{CSSxRef("outline-color")}}

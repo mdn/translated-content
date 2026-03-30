@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode adopt()"
 short-title: adopt()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/adopt
 l10n:
-  sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
+  sourceCommit: 419694495e070daaf466c923b413b3f476740fd6
 ---
 
 La méthode **`adopt()`** des instances de {{JSxRef("AsyncDisposableStack")}} enregistre une valeur qui n'implémente pas le protocole de libération asynchrone dans la pile, en fournissant une fonction de libération personnalisée.
@@ -44,7 +44,7 @@ La fonction suivante crée un descripteur de fichier (comme un [`FileHandle` <su
 async function lireFichier(chemin) {
   await using gestionnaire = new AsyncDisposableStack();
   const descripteur = gestionnaire.adopt(
-    fs.open(chemin),
+    await fs.open(chemin),
     async (descripteur) => await descripteur.close(),
   );
   const donnees = await descripteur.read();

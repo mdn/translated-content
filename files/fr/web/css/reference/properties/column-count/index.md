@@ -2,12 +2,14 @@
 title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-count`** divise le contenu d'un élément en le répartissant dans le nombre de colonnes à définir.
 
-{{InteractiveExample("CSS Demo: column-count")}}
+La propriété raccourcie {{CSSxRef("columns")}} peut être utilisée pour définir les valeurs des propriétés `column-count`, {{CSSxRef("column-height")}} et {{CSSxRef("column-width")}} en une seule déclaration.
+
+{{InteractiveExample("Démonstration CSS&nbsp;: column-count")}}
 
 ```css interactive-example-choice
 column-count: 2;
@@ -114,7 +116,9 @@ column-count: unset;
 
 ## Voir aussi
 
-- La propriété {{CSSxRef("column-width")}} et raccourcie {{CSSxRef("columns")}}
+- La propriété {{CSSxRef("column-height")}}
+- La propriété {{CSSxRef("column-width")}}
+- La propriété raccourcie {{CSSxRef("columns")}}
 - Les propriétés {{CSSxRef("column-rule-color")}}, {{CSSxRef("column-rule-style")}}, {{CSSxRef("column-rule-width")}} et raccourcie {{CSSxRef("column-rule")}}
 - [Apprendre&nbsp;: La disposition multi-colonnes](/fr/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Les concepts de bases pour la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)
