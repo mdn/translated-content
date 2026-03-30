@@ -8,7 +8,7 @@ l10n:
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-{{DOMxRef("NDEFRecord")}} 接口的 `encoding` 属性返回文本负载的编码方式。如果不是文本负载，则返回 `null`。
+{{DOMxRef("NDEFRecord")}} 接口的 **`encoding`** 属性返回文本负载的编码方式。如果不是文本负载，则返回 `null`。
 
 ## 值
 
