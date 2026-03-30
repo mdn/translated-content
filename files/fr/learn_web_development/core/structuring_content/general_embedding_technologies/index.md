@@ -20,7 +20,7 @@ Les développeur·euse·s pensent généralement à intégrer des médias tels q
         <a
           href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >la gestion des fichiers</a
-        >, familiarité avec les <a href="/fr/docs/Learn_web_development/Core/Structuring_content/"
+        >, familiarité avec les <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >fondamentaux du HTML</a>.
       </td>
     </tr>
