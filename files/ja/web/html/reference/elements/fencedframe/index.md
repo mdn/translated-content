@@ -21,7 +21,7 @@ l10n:
 この要素には、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)に加えて、次の属性があります。
 
 - `allow` {{experimental_inline}}
-  - : `<fencedframe>` に対する [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を指定します。これにより、リクエスト元のオリジンに基づいて `<fencedframe>` で利用可能な機能が定義されます。どの機能を制御できるかについては、後述の[フェンスドフレームで利用可能な権限ポリシー](#permissions_policies_available_to_fenced_frames)を参照してください。
+  - : `<fencedframe>` に対する [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) を指定します。これにより、リクエスト元のオリジンに基づいて `<fencedframe>` で利用可能な機能が定義されます。どの機能を制御できるかについては、後述の[フェンスドフレームで利用可能な権限ポリシー](#フェンスドフレームで利用可能な権限ポリシー)を参照してください。
 
 - `height` {{experimental_inline}}
   - : フェンスドフレームの高さを CSS ピクセル単位で表す整数値です。既定値は `150` です。
