@@ -2,7 +2,7 @@
 title: appearance
 slug: Web/CSS/Reference/Properties/appearance
 l10n:
-  sourceCommit: a1c041f5d15330c7bcd85e9bf93d88f759174cf5
+  sourceCommit: 76936e1d9ff271ac59307a0f858d0d7b57f3866a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`appearance`** définit l'apparence rendue des éléments de module d'interface utilisateur remplacés, tels que les contrôles de formulaire. Le plus souvent, ces éléments reçoivent une mise en forme native, spécifique à la plateforme, basée sur le thème du système d'exploitation, ou une apparence primitive avec des styles pouvant être remplacés à l'aide de CSS.
@@ -72,7 +72,7 @@ La propriété `appearance` peut être appliquée à tous les éléments et pseu
   - : Définit les modules interactifs pour qu'ils s'affichent avec leur apparence _native du système d'exploitation_. Se comporte comme `none` sur les éléments sans mise en forme native du système d'exploitation.
 
 - `base-select` {{Experimental_Inline}}
-  - : Ne concerne que l'élément HTML {{HTMLElement("select")}} et le pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}, permettant leur mise en forme.
+  - : Ne concerne que l'élément HTML {{HTMLElement("select")}} et le pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}, permettant leur mise en forme complète.
 
 - `<compat-special>`
   - : A un effet similaire à `auto` sur certains éléments.
@@ -109,7 +109,11 @@ Certains modules disparaissent complètement lorsque `appearance: none` est appl
 
 Comme `none` peut rendre un module invisible, la valeur `base` a été ajoutée pour fournir une apparence de base aux modules. Lorsqu'elle est prise en charge, la valeur `base` garantit que les modules conservent leur apparence native tout en permettant d'utiliser CSS pour modifier les styles qui ne sont pas modifiables par défaut. Contrairement à `none`, qui peut faire disparaître les boutons radio et les cases à cocher, `base` donne au module une apparence primitive avec des styles natifs par défaut utilisables et interopérables, tout en permettant un bon degré de personnalisation via CSS. Bien que cette valeur `base` ne soit pas encore prise en charge, les nombreuses valeurs `<compat-auto>` offrent une fonctionnalité similaire mais sont spécifiques à chaque type et non globales.
 
+### Éléments de sélection personnalisables
+
 La valeur `base-select`, qui concerne uniquement l'élément {{HTMLElement("select")}} et le pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}, permet [de mettre en forme les éléments `<select>` et le sélecteur](#définir_lapparence_dun_sélecteur) (qui contient les éléments `<option>`). Le sélecteur est affiché dans le calque supérieur, comme une fenêtre contextuelle. Lorsque `base-select` est défini, le sélecteur peut être positionné par rapport à la liste déroulante (ou à d'autres éléments) en utilisant les fonctionnalités de [positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning). De plus, la valeur `base-select` fait que le `<select>` n'est pas affiché en dehors de la fenêtre du navigateur ou ne déclenche pas de composants intégrés du système d'exploitation mobile. Il n'est aussi plus dimensionné en fonction de la largeur de l'élément `<option>` le plus large.
+
+Voir [les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select) pour plus d'informations.
 
 ### Valeurs non standard préfixées
 

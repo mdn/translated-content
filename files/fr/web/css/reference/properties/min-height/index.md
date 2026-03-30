@@ -1,12 +1,13 @@
 ---
 title: min-height
 slug: Web/CSS/Reference/Properties/min-height
-original_slug: Web/CSS/min-height
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La propriété **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`height`](/fr/docs/Web/CSS/Reference/Properties/height) devienne inférieure à `min-height`.
+La propriété [CSS](/fr/docs/Web/CSS) **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("height")}} devienne inférieure à la valeur définie pour `min-height`.
 
-{{InteractiveExample("CSS Demo: min-height")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: min-height")}}
 
 ```css interactive-example-choice
 min-height: 150px;
@@ -27,9 +28,9 @@ min-height: 10px;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the minimum height. <br />If there is
-    more content than the minimum the box will grow to the height needed by the
-    content.
+    Ceci est une boîte où vous pouvez changer la hauteur minimale.<br />
+    Si le contenu dépasse le minimum, la boîte s'agrandira à la hauteur
+    nécessaire pour le contenu.
   </div>
 </section>
 ```
@@ -40,49 +41,59 @@ min-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
-La valeur de la propriété `min-height` surcharge celles de [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height) et [`height`](/fr/docs/Web/CSS/Reference/Properties/height) lorsque `min-height` est supérieure.
+La hauteur de l'élément est définie sur la valeur de `min-height` chaque fois que `min-height` est supérieure à {{CSSxRef("max-height")}} ou {{CSSxRef("height")}}.
 
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* Valeur de type <length> */
 min-height: 3.5em;
+min-height: anchor-size(height);
+min-height: anchor-size(--my-anchor block, 200px);
 
-/* Valeur de proportion */
-/* Type <percentage>       */
+/* Valeur de type <percentage> */
 min-height: 10%;
 
 /* Valeurs avec un mot-clé */
 min-height: max-content;
 min-height: min-content;
+min-height: fit-content;
 min-height: fit-content(20em);
+min-height: stretch;
 
 /* Valeurs globales */
 min-height: inherit;
 min-height: initial;
 min-height: revert;
+min-height: revert-layer;
 min-height: unset;
 ```
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : La hauteur minimale exprimée de façon absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : La hauteur minimale exprimée de façon relative à la hauteur du bloc englobant grâce à une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage).
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Définit la hauteur minimale (`min-height`) comme une valeur absolue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Définit la hauteur minimale (`min-height`) comme un pourcentage de la hauteur du bloc englobant.
 - `auto`
-  - : Le navigateur calcule et définit la hauteur minimale de l'élément spécifié.
-- `max-content`
-  - : La hauteur intrinsèque préférée.
-- `min-content`
-  - : La hauteur intrinsèque minimale préférée.
-- `fit-content` ([`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage))
-  - : Utilise la formule `fit-content()`, remplaçant l'espace disponible par l'argument passé. Par exemple&nbsp;: `min(max-content, max(min-content, argument))`.
+  - : Le navigateur calculera et sélectionnera une hauteur minimale (`min-height`) pour l'élément défini.
+- {{CSSxRef("max-content")}}
+  - : La hauteur minimale (`min-height`) intrinsèque préférée.
+- {{CSSxRef("min-content")}}
+  - : La hauteur minimale (`min-height`) intrinsèque minimale.
+- {{CSSxRef("fit-content")}}
+  - : Utilise l'espace disponible, mais pas plus que {{CSSxRef("max-content")}}, c'est-à-dire `min(max-content, max(min-content, stretch))`.
+- [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument défini, c'est-à-dire `min(max-content, max(min-content, argument))`.
+- `stretch`
+  - : Limite la hauteur minimale de la [marge de la boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_composants_dune_boîte) de l'élément à la hauteur de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant). Elle tente de faire en sorte que la marge remplisse l'espace disponible dans le bloc englobant, se comportant ainsi de manière similaire à `100%`, mais en appliquant la taille résultante à la marge plutôt qu'à la boîte déterminée par {{CSSxRef("box-sizing")}}.
+
+    > [!NOTE]
+    > Pour vérifier les alias utilisés par les navigateurs pour la valeur `stretch` et son état d'implémentation, consultez la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
 ## Définition formelle
 
@@ -90,11 +101,11 @@ min-height: unset;
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Définition de min-height
+### Définir `min-height`
 
 ```css
 table {
@@ -116,5 +127,10 @@ form {
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction), [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
-- [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height)
+- La propriété {{CSSxRef("max-height")}}
+- La propriété {{CSSxRef("height")}}
+- La propriété {{CSSxRef("min-inline-size")}}
+- La propriété {{CSSxRef("min-block-size")}}
+- La propriété {{CSSxRef("box-sizing")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)
