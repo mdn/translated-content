@@ -1,5 +1,5 @@
 ---
-title: MediaStreamTrackProcessor: readable 属性
+title: MediaStreamTrackProcessor：readable 属性
 short-title: readable
 slug: Web/API/MediaStreamTrackProcessor/readable
 l10n:
