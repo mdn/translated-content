@@ -2,10 +2,8 @@
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Guide/Data_structures
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。
 
@@ -82,12 +80,12 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 表現可能な範囲外の値は、自動的に次のように変換されます。
 
-- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `+Infinity` に変換されます。
-- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `+0` に変換されます。
+- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `Infinity` に変換されます。
+- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `0` に変換されます。
 - -{{jsxref("Number.MAX_VALUE")}} より小さな負の数は `-Infinity` に変換されます。
 - -{{jsxref("Number.MIN_VALUE")}} より大きな負の数は `-0` に変換されます。
 
-`+Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
+`Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
 
 数値型には、複数の表現を持つ値が1つだけあります。`0` は `-0` と `+0` の両方で表します（`0` は `+0` の別名です）。実際には、異なる表現にほとんど違いはありません。例えば、`+0 === -0` は `true` です。ただし、ゼロで割ったときには気づくことができるようになっています。
 

@@ -2,7 +2,7 @@
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
 l10n:
-  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
+  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
 ---
 
 L'objet **`Array`**, comme les tableaux dans d'autres langages de programmation, permet [de stocker une collection de plusieurs éléments sous un même nom de variable](/fr/docs/Learn_web_development/Core/Scripting/Arrays) et possède des membres pour [effectuer des opérations courantes sur les tableaux](#exemples).

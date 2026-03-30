@@ -1,9 +1,8 @@
 ---
 title: :is()
 slug: Web/CSS/Reference/Selectors/:is
-original_slug: Web/CSS/:is
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターのいずれか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
@@ -268,6 +267,6 @@ some-element::after {
 
 ## 関連情報
 
-- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が 0 です。
+- {{cssxref(":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が 0 です。
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

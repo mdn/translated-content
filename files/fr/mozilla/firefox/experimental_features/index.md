@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: a28b03ab5b7bf13809362eb0f997880e0aece45f
+  sourceCommit: fa3c5c29a9d186b9970860bff1f513d3fb4ca354
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -61,6 +61,20 @@ Les éléments HTML [`<input type="datetime-local">`](/fr/docs/Web/HTML/Referenc
 | Release           | 144                    | Non                 |
 
 - `dom.forms.datetime.timepicker`
+  - : Mettre sur `true` pour activer.
+
+### Les attributs `alpha` et `colorspace` dans les éléments de saisie `color`
+
+L'élément HTML [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color) prend en charge les attributs [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) et [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace). ([Le bogue Firefox 1919718](https://bugzil.la/1919718)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Oui                 |
+| Developer Edition | -                      | -                   |
+| Beta              | -                      | -                   |
+| Release           | -                      | -                   |
+
+- `dom.forms.html_color_picker.enabled`
   - : Mettre sur `true` pour activer.
 
 ## CSS
@@ -314,6 +328,48 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 - `layout.css.custom-media.enabled`
   - : Mettre sur `true` pour activer.
 
+### Valeurs `<attr-type>` dans la fonction CSS `attr()`
+
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de spécifier comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([Bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245))
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Non                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.attr.enabled`
+  - : Mettre sur `true` pour activer.
+
+### `color-mix()` accepte plusieurs arguments de couleur
+
+La fonction CSS [`color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix) prend désormais en charge plusieurs valeurs [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), et pas seulement deux. Cela vous permet de mélanger plusieurs couleurs et de définir les pourcentages de chacune. ([Bogues Firefox 2007772 <sup>(angl.)</sup>](https://bugzil.la/2007772)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Oui                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.color-mix-multi-color.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Pseudo-classes basées sur les médias
+
+Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(":muted")}}, {{CSSxRef(":paused")}}, {{CSSxRef(":playing")}}, {{CSSxRef(":seeking")}}, {{CSSxRef(":stalled")}}, et {{CSSxRef(":volume-locked")}} vous permettent de mettre en forme les éléments HTML {{HTMLElement("audio")}} et {{HTMLElement("video")}} en fonction de leur état actuel, comme en lecture ou en pause. ([Bogue Firefox 1707584](https://bugzil.la/1707584), [bogue Firefox 2014512](https://bugzil.la/2014512)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Oui                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `dom.media.pseudo-classes.enabled`
+  - : Mettre sur `true` pour activer.
+
 ## SVG
 
 **Aucune fonctionnalité expérimentale dans ce cycle de publication.**
@@ -324,50 +380,20 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 
 ## Les API Web
 
-### Interface CloseWatcher
+### CSS Typed Object Model Level 1
 
-Les composants web natifs ayant des sémantiques «&nbsp;ouvrir&nbsp;» et «&nbsp;fermer&nbsp;», comme les boîtes de dialogue modales et les popovers, peuvent être fermés à l'aide de mécanismes natifs de l'appareil.
-Par exemple, sur Android, vous pouvez fermer une boîte de dialogue avec le bouton retour.
-L'interface {{DOMxRef("CloseWatcher")}} permet aux développeur·euse·s d'implémenter des composants d'interface utilisateur, comme des barres latérales personnalisées, qui peuvent également être fermés à l'aide de mécanismes natifs.
-(Voir [le bogue Firefox 1888729 <sup>(angl.)</sup>](https://bugzil.la/1888729)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ?          |
-| ----------------- | ---------------------- | ---------------------------- |
-| Nightly           | 140                    | Oui (bureau). Non (Android). |
-| Developer Edition | 132                    | Non                          |
-| Beta              | 132                    | Non                          |
-| Release           | 132                    | Non                          |
-
-- `dom.closewatcher.enabled`
-  - : Mettre sur `true` pour activer.
-
-### L'API HTML Sanitizer
-
-[L'API HTML Sanitizer](/fr/docs/Web/API/HTML_Sanitizer_API) permet aux développeur·euse·s de prendre des chaînes HTML non fiables et de les assainir pour une insertion sûre dans le DOM d'un document.
+Le travail d'implémentation a commencé sur le [CSS Typed OM Level 1 <sup>(angl.)</sup>](https://drafts.css-houdini.org/css-typed-om/).
+Par exemple, la méthode {{DOMxRef("CSSNumericValue/to", "to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} est prise en charge pour convertir une valeur numérique CSS d'une unité à une autre.
+([Bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 146                    | Oui                 |
-| Developer Edition | 147                    | Oui                 |
-| Beta              | 147                    | Oui                 |
-| Release           | 138                    | Non                 |
+| Nightly           | 149                    | Non                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
 
-- `dom.security.sanitizer.enabled`
-  - : Mettre sur `true` pour activer.
-
-### Suppression des évènements `beforescriptexecute` et `afterscriptexecute`
-
-Les évènements non standard [`beforescriptexecute`](/fr/docs/Web/API/Document/beforescriptexecute_event) et [`afterscriptexecute`](/fr/docs/Web/API/Document/afterscriptexecute_event) sur l'interface {{DOMxRef("Document")}}, ainsi que [`afterscriptexecute`](/fr/docs/Web/API/Element/afterscriptexecute_event) et [`beforescriptexecute`](/fr/docs/Web/API/Element/beforescriptexecute_event) sur l'interface {{DOMxRef("Element")}}, sont en voie de suppression. Ils ont été désactivés dans Nightly.
-(Voir [le bogue Firefox 1954685 <sup>(angl.)</sup>](https://bugzil.la/1954685)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 139                    | Non                 |
-| Developer Edition | 139                    | Oui                 |
-| Beta              | 139                    | Oui                 |
-| Release           | 139                    | Oui                 |
-
-- `dom.events.script_execute.enable`
+- `layout.css.typed-om.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Propriétés `actions` et `maxActions` de Notification
@@ -411,29 +437,6 @@ Voir [le bogue Firefox 1602129 <sup>(angl.)</sup>](https://bugzil.la/1602129) po
   - : Mettre sur `true` pour activer (activé dans Nightly et sur Windows dans toutes les versions)
 - `dom.webgpu.service-workers.enabled`
   - : Mettre sur `true` pour activer (activé dans Nightly)
-
-### Prise en charge de l'API Reporting pour les violations CSP
-
-[L'API Reporting](/fr/docs/Web/API/Reporting_API) prend désormais en charge le signalement des violations de la [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
-
-Les instances de {{DOMxRef('Report')}} retournées par l'interface {{DOMxRef('ReportingObserver')}} peuvent désormais avoir une valeur `type` de `"csp-violation"` et une propriété `body` qui contient une instance de l'interface {{DOMxRef('CSPViolationReportBody')}}.
-Cela permet de signaler les violations CSP au sein d'une page web.
-
-Les rapports de violation CSP peuvent également être envoyés à des points de terminaison distants définis par nom dans la directive CSP {{CSP("report-to")}} — les noms de points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
-Le rapport est une sérialisation de l'objet {{DOMxRef('Report')}} décrit ci-dessus, avec une propriété `body` qui est une sérialisation d'une instance de {{DOMxRef('CSPViolationReportBody')}}.
-
-Ce rapport de violation remplace un mécanisme similaire spécifique à CSP pour l'envoi de rapports de violation, qui utilise la directive CSP {{CSP("report-uri")}} pour définir l'URL du point de signalement, et dispose d'un [format JSON de rapport de violation spécifique à CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-(Voir [le bogue Firefox 1391243 <sup>(angl.)</sup>](https://bugzil.la/1391243)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 130                    | Non                 |
-| Developer Edition | 130                    | Non                 |
-| Beta              | 130                    | Non                 |
-| Release           | 130                    | Non                 |
-
-- `dom.reporting.enabled`
-  - : Mettre sur `true` pour activer.
 
 ### WebRTC et multimédia
 
@@ -491,6 +494,7 @@ Firefox prend en charge les images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org
 Voir [le bogue Firefox 1539075 <sup>(angl.)</sup>](https://bugzil.la/1539075) pour plus de détails.
 
 Notez que, comme indiqué ci-dessous, la fonctionnalité n'est disponible que dans les versions Nightly (peu importe si la préférence est activée).
+Dans Firefox 149, le précédent décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation en Rust utilisant la bibliothèque `jxl-rs` ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -591,24 +595,6 @@ Cette fonctionnalité est activée sur Android dans toutes les versions, mais n�
 | Release           | 71               | Non (bureau). Oui (Android).                 |
 
 - `dom.webshare.enabled`
-  - : Mettre sur `true` pour activer.
-
-### L'API Screen Orientation
-
-#### `ScreenOrientation.lock()`
-
-La méthode {{DOMxRef("ScreenOrientation.lock()")}} permet de verrouiller un appareil sur une orientation particulière, si cela est pris en charge par l'appareil et autorisé par les exigences préalables du navigateur.
-En général, le verrouillage de l'orientation n'est autorisé que sur les appareils mobiles lorsque le document est affiché en plein écran.
-Voir [le bogue Firefox 1697647 <sup>(angl.)</sup>](https://bugzil.la/1697647) pour plus de détails.
-
-| Canal de parution | Version modifiée | Activé par défaut ? |
-| ----------------- | ---------------- | ------------------- |
-| Nightly           | 111              | Oui                 |
-| Developer Edition | 97               | Non                 |
-| Beta              | 97               | Non                 |
-| Release           | 97               | Non                 |
-
-- `dom.screenorientation.allow-lock`
   - : Mettre sur `true` pour activer.
 
 ### L'API Notifications

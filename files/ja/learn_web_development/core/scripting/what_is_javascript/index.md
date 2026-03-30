@@ -2,10 +2,8 @@
 title: JavaScript とは
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 l10n:
-  sourceCommit: eb20babb96149f98bcbf7817b58e305c5297f2e1
+  sourceCommit: 09b05cde696fbf1fe4061a41f048a8274f858700
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
@@ -45,17 +43,34 @@ JavaScript はウェブページに複雑な機能を実装することを可能
 
 この 3 層は素晴らしい構成です。例としてシンプルなボタンを見てみます。HTML を使って構造と目的をマークアップできます。
 
-```html
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Player 1: Chris の段落をプレーンテキストで表示](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 次に、 CSS を加えて、見栄えをよくします。
 
-```css
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
-  font-family: "helvetica neue", helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 2px solid rgb(200 200 0 / 60%);
@@ -68,33 +83,36 @@ button {
 }
 ```
 
-![Player 1: Chris のスタイル段落](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 最後に、JavaScript を加えて動的なふるまいを実装します。
 
-```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("名前を入力して下さい");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
+テキストラベルをクリックし、開いたダイアログボックスに名前を入力して、「OK」ボタンを押してみてください。
 
-テキストラベルの最新バージョンをクリックしてみて、何が起きるのか見てみましょう。（このデモは GitHub でも見られます。[ソースコード](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)または[ライブ実行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)を参照してください。）
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript はそれ以上のことができます。もっと詳しく見てみましょう。
+
+> [!NOTE]
+> 先に進む前に、この早い段階で Scrimba の課題に挑戦して、実際に手を動かしてみてはいかがでしょうか？[ウェルカムメッセージのレンダリング](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>。このコードの書き方がわからなくても、まったく心配はいりません。ウェブ検索で答えを探すのが最適です。Scrimba の最後にある解答を確認してみてください。
 
 ## 実際に何ができるのか
 
 JavaScript は次のことを実現する一般的なプログラミング機能で構成されています。
 
 - 有用な値を変数に格納します。上の例では、ユーザーに新しい名前を問いかけて、`name` と名付けられた変数に入力された新しい名前を格納しています。
-- 連なった文字（プログラミングでは「文字列」と呼ばれます）に対する操作。上の例では「Player 1: 」という文字列と `name` 変数をつなげて「Player 1: Chris」というような新しいラベルを生成しています。
+- 連なった文字（プログラミングでは「文字列」と呼ばれます）に対する操作。上の例では "Player 1: " という文字列と変数 `name` をつなげて "Player 1: Chris" というような新しいラベルを生成しています。
 - ウェブページで起きるイベントに対処します。先ほどの例では {{domxref("Element/click_event", "click")}} イベントを使用して、ボタンがクリックされたことを検出し、ラベルを更新するコードを実行しました。
 - 他にもたくさんのことができます。
 
@@ -118,7 +136,7 @@ API は大まかに 2 種類に分けられます。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
 
-- [Twitter API](https://developer.x.com/ja/docs) を使用すると、ウェブサイトに最新のツイートを表示させることができます。
+- [Bluesky API](https://docs.bsky.app/) を使用すると、ウェブサイトに最新の投稿を表示させることができます。
 - [Google マップ API](https://developers.google.com/maps/) や [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) を使用すると、ウェブサイトに専用の地図を埋め込み、付加機能を付けることもできます。
 
 > [!NOTE]
@@ -151,23 +169,23 @@ JavaScript のごく一般的な用途は、（先ほど言及した） Document
 例えば、最初の例で見た JavaScript のブロックに戻りましょう。
 
 ```js
-const button = document.querySelector("button");
-
-button.addEventListener("click", updateName);
-
 function updateName() {
   const name = prompt("名前を入力してください");
   button.textContent = `Player 1: ${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-このコードではボタンを選択して (1 行目)、イベントリスナーを登録して (3 行目) ボタンがクリックされたとき、`updateName()` というコードブロック (5 行目から 8 行目) が実行されるようにしています。`updateName()` というコードブロック (再利用可能なコードブロックで「関数」と呼びます) は、ユーザーに新しい名前を尋ねて、表示内容を変更するため、ボタンテキストにその名前を挿入します。
+ここではまず、`updateName()` というコードブロックを定義します（このような再利用可能なコードブロックは**関数**と呼ばれます）。この関数は、ユーザーに新しい名前を入力してもらい、その名前をボタンのテキストに挿入します。次に、`document.querySelector` を使用してボタンの参照を取得し、`addEventListener` を使ってイベントリスナーを登録します。これにより、ボタンがクリックされたときに `updateName()` 関数が実行されるようになります。
 
-もし、最初の 2 行を入れ替えた場合、動かなくなってしまいます。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に `Uncaught ReferenceError: Cannot access 'button' before initialization` というエラーが出るでしょう。
+もし `const button = ...` と `button.addEventListener(...)` の行の順序を入れ替えると、コードは動作しなくなります。代わりに[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に `Uncaught ReferenceError: Cannot access 'button' before initialization` というエラーが出るでしょう。
 この意味は `button` オブジェクトがまだ初期化されていないため、イベントリスナーが設定できないということを表しています。
 
 > [!NOTE]
-> これはとてもよくあるエラーです。オブジェクトに対して何かをする前にはそのオブジェクトへの参照が存在していることに気を配らなければなりません。
+> [巻き上げ](/ja/docs/Glossary/Hoisting)のような挙動があるため、JavaScript が常に上から下へと正確に順序通りに実行されるとは限りませんが、これでひとまず、一般的に変数や関数などは、使用前に定義しておく必要があることを覚えておいてください。これはよくあるエラーの原因です。
 
 ### インタープリターとコンパイルコード
 
@@ -209,6 +227,9 @@ JavaScript はサーバーサイドの言語としても使われます。人気
 
 JavaScript は CSS と同じような方法で、HTML ページに適用することができます。
 CSS では {{htmlelement("link")}} 要素を使用することで外部のスタイルシートを適用することができ、また、{{htmlelement("style")}} 要素を使用することで HTML 内蔵に書かれたスタイルシートを適用することが出来ました。 JavaScript で HTML に書く必要があるのは {{htmlelement("script")}} 要素だけです。どのように書くのか見てみましょう。
+
+> [!NOTE]
+> Scrimba の [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> は対話的なチュートリアルで、HTML に JavaScript を追加するいくつかの方法を一通り行います。
 
 ### 内蔵 JavaScript
 

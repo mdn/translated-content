@@ -97,7 +97,7 @@ p {
 これにより、ページ上のすべての段落に、どのコンピューターでも見られる arial フォントが採用されます。
 
 > [!NOTE]
-> Scrimba の [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> では、フォントの重要性、ウェブセーフフォント、CSS でのフォント指定方法についてインタラクティブなガイドを提供します。さらに、知識を試すチャレンジも用意されています。
+> Scrimba の [Web-safe fonts](https://scrimba.com/learn-html-and-css-c0p/~01r?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> では、フォントの重要性、ウェブセーフフォント、CSS でのフォント指定方法についてインタラクティブなガイドを提供します。さらに、知識を試すチャレンジも用意されています。
 
 #### ウェブセーフフォント
 
@@ -533,6 +533,6 @@ p {
 ## 関連情報
 
 - [All about the CSS font-family property](https://explainers.dev/font-family/), explainers.dev
-- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>
+- [Web-safe fonts](https://scrimba.com/the-frontend-developer-career-path-c0j/~02b?via=mdn), Scrimba <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
 
 {{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

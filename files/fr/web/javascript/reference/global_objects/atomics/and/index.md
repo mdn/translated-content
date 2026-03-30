@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`and()`** de l'objet {{JSxRef("Atomics")}} calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.and()`** calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ Atomics.and(typedArray, index, value)
   - : Un tableau typé entier partagé parmi {{JSxRef("Int8Array")}}, {{JSxRef("Uint8Array")}}, {{JSxRef("Int16Array")}}, {{JSxRef("Uint16Array")}}, {{JSxRef("Int32Array")}}, {{JSxRef("Uint32Array")}}, {{JSxRef("BigInt64Array")}} ou {{JSxRef("BigUint64Array")}}.
 - `index`
   - : La position dans `typedArray` où calculer le ET binaire.
-- `valeur`
+- `value`
   - : Le nombre avec lequel on souhaite calculer le ET binaire.
 
 ### Valeur de retour
@@ -58,7 +58,7 @@ Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fo
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.and()`
+### Utiliser la méthode `Atomics.and()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets
