@@ -331,7 +331,7 @@ while (i < 5) {
 
 一个被标签为 `checkiandj` 的语句包含了一个标签为 `checkj` 的语句。
 
-如果遇到 `continue` 语句，程序会结束当前 `chechj` 的迭代并开始下一轮的迭代。
+如果遇到 `continue` 语句，程序会结束当前 `checkj` 的迭代并开始下一轮的迭代。
 
 每次遇到 `continue` 语句时，`checkj` 语句会一直重复执行，直到 `checkj` 语句的条件为 `false`。
 
