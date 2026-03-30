@@ -16,7 +16,7 @@ l10n:
 
 ## 示例
 
-参见[MediaStreamTrack 的可插入流](/zh-CN/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API#示例)一文以获取示例。
+参见 [MediaStreamTrack API 的可插入流](/zh-CN/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API#示例)一文以获取示例。
 
 ## 规范
 
