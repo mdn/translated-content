@@ -24,7 +24,7 @@ Une chaîne de caractères représentant l'instant donné dans le [format RFC 95
 
 ## Description
 
-La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.Instant` est converti en chaîne de caractères JSON. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.Instant` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/Instant/from", "Temporal.Instant.from()")}} comme reviver de {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.Instant` est converti en chaîne de caractères JSON. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.Instant` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/Instant/from", "Temporal.Instant.from()")}} comme réactivateur de {{JSxRef("JSON.parse()")}}.
 
 ## Exemples
 

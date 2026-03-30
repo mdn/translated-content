@@ -24,7 +24,7 @@ Une chaîne de caractères représentant la durée donnée dans le [format ISO 8
 
 ## Description
 
-La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.Duration` est converti en chaîne de caractères. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.Duration` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}} comme reviver de {{JSxRef("JSON.parse()")}}.
+La méthode `toJSON()` est automatiquement appelée par {{JSxRef("JSON.stringify()")}} lorsqu'un objet `Temporal.Duration` est converti en chaîne de caractères. Cette méthode est généralement destinée à, par défaut, sérialiser de manière utile les objets `Temporal.Duration` lors de la sérialisation [JSON](/fr/docs/Glossary/JSON), qui peuvent ensuite être désérialisés en utilisant la fonction {{JSxRef("Temporal/Duration/from", "Temporal.Duration.from()")}} comme réactivateur de {{JSxRef("JSON.parse()")}}.
 
 ## Exemples
 
