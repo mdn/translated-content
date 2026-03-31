@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::cue
 original_slug: Web/CSS/::cue
 ---
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::cue`** señala las pistas de texto [WebVTT](/es/docs/Web/API/WebVTT_API) dentro del elemento seleccionado. Esto puede ser usado para [estilizar subtítulos y otras pistas de texto](/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT) multimedia con pistas de texto.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::cue`** señala las pistas de texto [WebVTT](/es/docs/Web/API/WebVTT_API) dentro del elemento seleccionado. Esto puede ser usado para [estilizar subtítulos y otras pistas de texto](/es/docs/Web/API/WebVTT_API#Estilizando_anotaciones_WebVTT) multimedia con pistas de texto.
 
 ```css
 ::cue {
@@ -23,39 +23,39 @@ Las propiedades son aplicadas al cojunto completo de anotaciones como si fuesen 
 
 Las reglas cuyos selectores incluyen este elemento solo pueden usar las siguientes propiedades CSS:
 
-- [`background`](/es/docs/Web/CSS/background)
-- [`background-attachment`](/es/docs/Web/CSS/background-attachment)
-- [`background-clip`](/es/docs/Web/CSS/background-clip)
-- [`background-color`](/es/docs/Web/CSS/background-color)
-- [`background-image`](/es/docs/Web/CSS/background-image)
-- [`background-origin`](/es/docs/Web/CSS/background-origin)
-- [`background-position`](/es/docs/Web/CSS/background-position)
-- [`background-repeat`](/es/docs/Web/CSS/background-repeat)
-- [`background-size`](/es/docs/Web/CSS/background-size)
-- [`color`](/es/docs/Web/CSS/color)
-- [`font`](/es/docs/Web/CSS/font)
-- [`font-family`](/es/docs/Web/CSS/font-family)
-- [`font-size`](/es/docs/Web/CSS/font-size)
+- [`background`](/es/docs/Web/CSS/Reference/Properties/background)
+- [`background-attachment`](/es/docs/Web/CSS/Reference/Properties/background-attachment)
+- [`background-clip`](/es/docs/Web/CSS/Reference/Properties/background-clip)
+- [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color)
+- [`background-image`](/es/docs/Web/CSS/Reference/Properties/background-image)
+- [`background-origin`](/es/docs/Web/CSS/Reference/Properties/background-origin)
+- [`background-position`](/es/docs/Web/CSS/Reference/Properties/background-position)
+- [`background-repeat`](/es/docs/Web/CSS/Reference/Properties/background-repeat)
+- [`background-size`](/es/docs/Web/CSS/Reference/Properties/background-size)
+- [`color`](/es/docs/Web/CSS/Reference/Properties/color)
+- [`font`](/es/docs/Web/CSS/Reference/Properties/font)
+- [`font-family`](/es/docs/Web/CSS/Reference/Properties/font-family)
+- [`font-size`](/es/docs/Web/CSS/Reference/Properties/font-size)
 - [`font-stretch`](/es/docs/Web/CSS/font-stretch)
-- [`font-style`](/es/docs/Web/CSS/font-style)
-- [`font-variant`](/es/docs/Web/CSS/font-variant)
-- [`font-weight`](/es/docs/Web/CSS/font-weight)
-- [`line-height`](/es/docs/Web/CSS/line-height)
-- [`opacity`](/es/docs/Web/CSS/opacity)
-- [`outline`](/es/docs/Web/CSS/outline)
-- [`outline-color`](/es/docs/Web/CSS/outline-color)
-- [`outline-style`](/es/docs/Web/CSS/outline-style)
-- [`outline-width`](/es/docs/Web/CSS/outline-width)
+- [`font-style`](/es/docs/Web/CSS/Reference/Properties/font-style)
+- [`font-variant`](/es/docs/Web/CSS/Reference/Properties/font-variant)
+- [`font-weight`](/es/docs/Web/CSS/Reference/Properties/font-weight)
+- [`line-height`](/es/docs/Web/CSS/Reference/Properties/line-height)
+- [`opacity`](/es/docs/Web/CSS/Reference/Properties/opacity)
+- [`outline`](/es/docs/Web/CSS/Reference/Properties/outline)
+- [`outline-color`](/es/docs/Web/CSS/Reference/Properties/outline-color)
+- [`outline-style`](/es/docs/Web/CSS/Reference/Properties/outline-style)
+- [`outline-width`](/es/docs/Web/CSS/Reference/Properties/outline-width)
 - [`ruby-position`](/es/docs/Web/CSS/ruby-position)
 - [`text-combine-upright`](/es/docs/Web/CSS/text-combine-upright)
-- [`text-decoration`](/es/docs/Web/CSS/text-decoration)
-- [`text-decoration-color`](/es/docs/Web/CSS/text-decoration-color)
-- [`text-decoration-line`](/es/docs/Web/CSS/text-decoration-line)
-- [`text-decoration-style`](/es/docs/Web/CSS/text-decoration-style)
+- [`text-decoration`](/es/docs/Web/CSS/Reference/Properties/text-decoration)
+- [`text-decoration-color`](/es/docs/Web/CSS/Reference/Properties/text-decoration-color)
+- [`text-decoration-line`](/es/docs/Web/CSS/Reference/Properties/text-decoration-line)
+- [`text-decoration-style`](/es/docs/Web/CSS/Reference/Properties/text-decoration-style)
 - [`text-decoration-thickness`](/es/docs/Web/CSS/text-decoration-thickness)
-- [`text-shadow`](/es/docs/Web/CSS/text-shadow)
-- [`visibility`](/es/docs/Web/CSS/visibility)
-- [`white-space`](/es/docs/Web/CSS/white-space)
+- [`text-shadow`](/es/docs/Web/CSS/Reference/Properties/text-shadow)
+- [`visibility`](/es/docs/Web/CSS/Reference/Properties/visibility)
+- [`white-space`](/es/docs/Web/CSS/Reference/Properties/white-space)
 
 ## Ejemplos
 

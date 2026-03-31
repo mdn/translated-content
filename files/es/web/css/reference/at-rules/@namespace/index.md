@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/At-rules/@namespace
 original_slug: Web/CSS/@namespace
 ---
 
-**`@namespace`** es una [regla](/es/docs/Web/CSS/CSS_syntax/At-rule) que define [XML namespace](/es/docs/Namespaces) a ser usados en una [hoja de estilos CSS](/es/docs/Glossary/CSS). Los namespaces definidos pueden utilizarse para restringir [selectores universales](/es/docs/Web/CSS/Universal_selectors), [types](/es/docs/Web/CSS/Type_selectors), y [selectores de atributos](/es/docs/Web/CSS/Attribute_selectors) para seleccionar sólo elementos dentro de ese namespace.La regla `@namespace` generalmente sólo es útil cuando se trata de documents que contienen múltiples namespace—como HTML5 con SVG o MathML, o XML que mezclamúltiplesvocabularios.
+**`@namespace`** es una [regla](/es/docs/Web/CSS/Guides/Syntax/At-rules) que define [XML namespace](/es/docs/Namespaces) a ser usados en una [hoja de estilos CSS](/es/docs/Glossary/CSS). Los namespaces definidos pueden utilizarse para restringir [selectores universales](/es/docs/Web/CSS/Reference/Selectors/Universal_selectors), [types](/es/docs/Web/CSS/Reference/Selectors/Type_selectors), y [selectores de atributos](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) para seleccionar sólo elementos dentro de ese namespace.La regla `@namespace` generalmente sólo es útil cuando se trata de documents que contienen múltiples namespace—como HTML5 con SVG o MathML, o XML que mezclamúltiplesvocabularios.
 
 ```css
 @namespace url(http://www.w3.org/1999/xhtml);

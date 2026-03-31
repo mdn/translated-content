@@ -6,7 +6,7 @@ original_slug: Web/CSS/:empty
 
 {{ CSSRef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
 
 > [!NOTE]
 > En [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.

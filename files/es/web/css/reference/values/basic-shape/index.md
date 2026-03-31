@@ -10,7 +10,7 @@ El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (s
 
 ## Figuras posibles
 
-Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax).
+Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax).
 
 - `inset()`
   - : &#x20;
@@ -23,7 +23,7 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
 
     Cuando se proporcionan los cuatro primeros argumentos, representan la separación superior, derecha, inferior e izquierda del interior de la caja de referencia que define las posiciones de los bordes del rectángulo interior. Estos argumentos siguen la sintaxis de la abreviatura de margen, que permite definir los cuatro valores en uno, dos o cuatro valores.
 
-    Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.
+    Los argumentos opcionales [`<border-radius>`](/es/docs/Web/CSS/Reference/Properties/border-radius) definen esquinas redondeadas para el rectángulo incrustado usando la sintaxis de abreviatura de border-radius.
 
     Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
 
@@ -79,7 +79,7 @@ Los valores en una función `<basic-shape>` son calculados segun se especifica, 
 
 - Valores omitidos son incluidos y calculados acorde a su valor predeterminado.
 - Un valor {{cssxref("&lt;position&gt;")}} en `circle()` o `ellipse()` es calculado como un par de separaciones (horizontal y después vertical) desde el origen superior izquierdo, cada uno dado como combinación de una longitud absoluta y un porcentaje.
-- Un valor [`<border-radius>`](/es/docs/Web/CSS/border-radius) en `inset()` es calculado como una lista expandida de ocho valores {{cssxref("length")}} o de porcentaje.
+- Un valor [`<border-radius>`](/es/docs/Web/CSS/Reference/Properties/border-radius) en `inset()` es calculado como una lista expandida de ocho valores {{cssxref("length")}} o de porcentaje.
 
 ## Interpolación de Figuras Básicas
 

@@ -43,22 +43,22 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 
 - [Referencia CSS:](/es/docs/Web/CSS/Reference) Esta referencia exhaustiva para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
 - Conceptos clave de CSS:
-  - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity), [herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
+  - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity), [herencia](/es/docs/Web/CSS/Guides/Cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
   - [Unidades y valores CSS](/es/docs/Web/CSS/CSS_Values_and_Units)
-  - [Modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) y [colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Modelo de caja](/es/docs/Web/CSS/Guides/Box_model/Introduction) y [colapso de margen](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/Containing_block)
-  - Contextos de [apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - Valores [iniciales](/es/docs/Web/CSS/CSS_cascade/Value_processing), [calculados](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/es/docs/Web/CSS/used_value) y [actuales](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/CSS_flexible_box_layout)
-  - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/CSS_grid_layout)
-  - _[Media queries](/es/docs/Web/CSS/CSS_media_queries)_
-  - [Animaciones](/es/docs/Web/CSS/animation)
+  - Contextos de [apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) y [formato de bloques](/es/docs/Web/CSS/Guides/Display/Block_formatting_context)
+  - Valores [iniciales](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing), [calculados](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/es/docs/Web/CSS/used_value) y [actuales](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+  - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/Guides/Grid_layout)
+  - _[Media queries](/es/docs/Web/CSS/Guides/Media_queries)_
+  - [Animaciones](/es/docs/Web/CSS/Reference/Properties/animation)
 
 ## Cookbook
 
-El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
+El [libro de cocina de diseño CSS](/es/docs/Web/CSS/How_to/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
 
 ## Herramientas para el desarrollo de CSS
 

@@ -269,7 +269,7 @@ form {
 }
 ```
 
-Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) y [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
+Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout) y [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
 
 ```css
 h1 {
@@ -352,7 +352,7 @@ textarea {
 
 #### Dar estilo al botón de enviar
 
-El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con CSS; puedes hacer lo que quieras, incluso usando [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements):
+El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con CSS; puedes hacer lo que quieras, incluso usando [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {

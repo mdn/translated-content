@@ -101,7 +101,7 @@ Sin embargo, puede controlar el tamaño de estas filas con la propiedad `grid-au
 
 #### Usando `minmax()`
 
-Puede usar [`minmax()`](/es/docs/Web/CSS/minmax) en su valor para [`grid-auto-rows`](/es/docs/Web/CSS/grid-auto-rows) permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
+Puede usar [`minmax()`](/es/docs/Web/CSS/Reference/Values/minmax) en su valor para [`grid-auto-rows`](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows) permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
 
 ```css hidden
 * {
@@ -197,7 +197,7 @@ También puede pasar una lista de pistas, esto se repetirá. La siguiente lista 
 
 ### Colocación automática por columna
 
-También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna. Usando la propiedad [`grid-auto-flow`](/es/docs/Web/CSS/grid-auto-flow) con un valor de `column` . En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando [`grid-template-rows`](/es/docs/Web/CSS/grid-template-rows) . Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita. Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático. Puede controlar el tamaño de las pistas de columna implícitas con [`grid-auto-columns`](/es/docs/Web/CSS/grid-auto-columns) , esto funciona de la misma manera que [`grid-auto-rows`](/es/docs/Web/CSS/grid-auto-rows) .
+También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna. Usando la propiedad [`grid-auto-flow`](/es/docs/Web/CSS/grid-auto-flow) con un valor de `column` . En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando [`grid-template-rows`](/es/docs/Web/CSS/Reference/Properties/grid-template-rows) . Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita. Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático. Puede controlar el tamaño de las pistas de columna implícitas con [`grid-auto-columns`](/es/docs/Web/CSS/Reference/Properties/grid-auto-columns) , esto funciona de la misma manera que [`grid-auto-rows`](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows) .
 
 En el siguiente ejemplo, he creado una cuadrícula con tres pistas de fila de 200 píxeles de altura. Estoy colocando automáticamente por columna y las columnas creadas tendrán un ancho de columna de 300 píxeles, luego un ancho de columna de 100 píxeles hasta que haya suficientes pistas de columna para contener todos los elementos.
 

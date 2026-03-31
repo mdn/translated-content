@@ -247,7 +247,7 @@ El manejador `onload` especifica entonces qué hacer con la respuesta. Ya sabemo
 
 ### Tienen mecanismos adicionales de seguridad donde sea necesario
 
-Las características de las WebAPI están sujetas a las mismas consideraciones de seguridad que JavaScript y otras tecnologías web (por ejemplo [same-origin policy](/es/docs/Web/Security/Same-origin_policy)), pero a veces tienen mecanismos adicionales de seguridad. Por ejemplo, algunas de las WebAPIs más modernas solamente funcionan en páginas servidas mediante HTTPS debido a que transmiten información potencialmente sensible (algunos ejemplos son [Service Workers](/es/docs/Web/API/Service_Worker_API) y [Push](/es/docs/Web/API/Push_API)).
+Las características de las WebAPI están sujetas a las mismas consideraciones de seguridad que JavaScript y otras tecnologías web (por ejemplo [same-origin policy](/es/docs/Web/Security/Defenses/Same-origin_policy)), pero a veces tienen mecanismos adicionales de seguridad. Por ejemplo, algunas de las WebAPIs más modernas solamente funcionan en páginas servidas mediante HTTPS debido a que transmiten información potencialmente sensible (algunos ejemplos son [Service Workers](/es/docs/Web/API/Service_Worker_API) y [Push](/es/docs/Web/API/Push_API)).
 
 Además, algunas WebAPIs solicitarán permiso al usuario para ser activadas cuando se produzcan las llamadas desde el código. Como ejemplo, habrás observado un cuadro de diálogo como éste al probar nuestro ejemplo anterior de [Geolocalización](/es/docs/Web/API/Geolocation):
 

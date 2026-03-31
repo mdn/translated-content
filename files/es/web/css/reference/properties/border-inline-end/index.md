@@ -6,7 +6,7 @@ original_slug: Web/CSS/border-inline-end
 
 {{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores lógicos individuales del borde en línea final en un solo lugar en la hoja de estilos.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-end`** es una [propiedad abreviada](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para establecer los valores lógicos individuales del borde en línea final en un solo lugar en la hoja de estilos.
 
 {{InteractiveExample("CSS Demo: border-inline-end")}}
 

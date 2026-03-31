@@ -10,7 +10,7 @@ La propiedad [CSS](/es/docs/Web/CSS) **`flex-flow`** es una propiedad atajo para
 
 {{cssinfo}}
 
-Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Para más propiedades e información ve [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts).
 
 ## Sintaxis
 
@@ -39,7 +39,7 @@ flex-flow: unset;
 
 ### Valores
 
-Ve [`flex-direction`](/es/docs/Web/CSS/flex-direction) y [`flex-wrap`](/es/docs/Web/CSS/flex-wrap) para más detalles de los valores.
+Ve [`flex-direction`](/es/docs/Web/CSS/Reference/Properties/flex-direction) y [`flex-wrap`](/es/docs/Web/CSS/Reference/Properties/flex-wrap) para más detalles de los valores.
 
 ### Sintaxis formal
 
@@ -64,4 +64,4 @@ element {
 
 ## Ver también
 
-- [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Utilizando cajas flexibles CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

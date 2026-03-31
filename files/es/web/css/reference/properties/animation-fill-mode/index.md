@@ -50,7 +50,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | odd                         | `0%` or `from`             |
 
 - `backwards`
-  - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/Web/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
+  - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/Web/CSS/Reference/At-rules/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
 
     | `animation-direction`           | primer keyframe |
     | ------------------------------- | --------------- |
@@ -126,5 +126,5 @@ CSS
 
 ## Ver también
 
-- [Usando CSS Animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando CSS Animations](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

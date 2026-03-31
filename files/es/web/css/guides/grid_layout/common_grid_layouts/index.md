@@ -108,7 +108,7 @@ Esto no creará ningún diseño, sin embargo, nuestros elementos ahora tienen no
 }
 ```
 
-Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una [media query](/es/docs/Web/CSS/CSS_media_queries) y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.
+Después de establecer la columna simple para todas los tamaños de pantalla, ahora podemos añadir una [media query](/es/docs/Web/CSS/Guides/Media_queries) y redefinir nuestro layout para los casos en los que tuviéramos suficiente pantalla real como para mostrar dos columnas.
 
 ```css
 @media (min-width: 500px) {
@@ -370,7 +370,7 @@ Algo a tener en cuenta a la hora de crear este diseño es que no hemos necesitad
 
 ## Un listado de productos con auto-placement
 
-Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir [media queries](/es/docs/Web/CSS/CSS_media_queries) para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.
+Muchos diseños son esencialmente conjuntos de "tarjetas" - listados de productos, galerías de imágenes, etc. Una cuadrícula puede hacer que sea muy fácil crear estos listados de una manera responsiva sin necesidad de añadir [media queries](/es/docs/Web/CSS/Guides/Media_queries) para ello. En este siguiente ejemplo estoy combinando CSS Grid y Flexbox Layouts para hacer un sencillo diseño de listado de productos.
 
 El marcado de mi anuncio es una lista no ordenada de artículos. Cada elemento contiene un encabezado, un texto de altura variable y un enlace para llamar a la acción.
 

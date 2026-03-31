@@ -184,6 +184,6 @@ El texto en el ejemplo es editable. Cambie el texto, agregando palabras largas, 
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [Módulo de texto CSS](/es/docs/Web/CSS/CSS_text)
+- [Módulo de texto CSS](/es/docs/Web/CSS/Guides/Text)
 - [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) en developer.chrome.com
 - [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) en developer.chrome.com

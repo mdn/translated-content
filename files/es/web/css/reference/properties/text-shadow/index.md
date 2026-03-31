@@ -12,7 +12,7 @@ Cada sombra es especificada como un ófset del texto, junto con valores de color
 
 Múltiples sombras son aplicadas del frente al fondo, en el mismo orden que sean definidas.
 
-Esta propiedad aplica para los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements) {{cssxref("::first-line")}} y {{cssxref("::first-letter")}}.
+Esta propiedad aplica para los [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{cssxref("::first-line")}} y {{cssxref("::first-letter")}}.
 
 {{cssinfo}}
 

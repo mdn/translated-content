@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:first-of-type
 original_slug: Web/CSS/:first-of-type
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** de [CSS](/es/docs/Web/CSS) representa el primer elemento de su tipo entre un grupo de elementos hermanos.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:first-of-type`** de [CSS](/es/docs/Web/CSS) representa el primer elemento de su tipo entre un grupo de elementos hermanos.
 
 ```css
 /* Selecciona cualquier <p> que sea el primer elemento
@@ -48,7 +48,7 @@ p:first-of-type {
 
 ### Elementos anidados
 
-Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
+Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
 
 #### HTML
 

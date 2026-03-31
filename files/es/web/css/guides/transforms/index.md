@@ -29,7 +29,7 @@ El módulo **Transformaciones CSS** define cómo los elementos diseñados con CS
 
 ## Guías
 
-- [Usando transformaciones CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Usando transformaciones CSS](/es/docs/Web/CSS/Guides/Transforms/Using)
   - : Tutorial paso a paso sobre cómo transformar elementos estilizados con CSS.
 
 ## Especificaciones

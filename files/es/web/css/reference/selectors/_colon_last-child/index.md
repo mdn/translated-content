@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:last-child
 original_slug: Web/CSS/:last-child
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:last-child`** de [CSS](/es/docs/Web/CSS) representa el último elemento entre un grupo de elementos hermanos.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:last-child`** de [CSS](/es/docs/Web/CSS) representa el último elemento entre un grupo de elementos hermanos.
 
 ```css
 /* Selecciona cualquier <p> que sea el último elemento
