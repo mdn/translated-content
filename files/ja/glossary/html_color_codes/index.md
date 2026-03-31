@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
 ---
 
-**HTTP カラーコード** は事実上、ウェブ ページの色を指定する方法の中で、最も楽に使える方法の一般的な用語です。これは `black`、 `purple`、 `aqua` のような HTML color 色名、`#000000`、 `#800080`、 `#00ffff` のような 16 進数表記を含みます。これらは元々HTML 仕様に定義されています。例えば、オリジナルの 16 色の HTML カラーに関する [HTML 3.2 色定義](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) を参照してください。
+**HTTP カラーコード** は事実上、ウェブページの色を指定する方法の中で、最も楽に使える方法の一般的な用語です。これは `black`、 `purple`、 `aqua` のような HTML color 色名、`#000000`、 `#800080`、 `#00ffff` のような 16 進数表記を含みます。これらは元々 HTML 仕様に定義されています。例えば、オリジナルの 16 色の HTML カラーに関する [HTML 3.2 色定義](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) を参照してください。
 
 ウェブ上の色を「HTML カラーコード」や「HTML カラー名」と呼ぶのは、もはや正確ではありません。ウェブ上の色は現在、[CSS color module](/ja/docs/Web/CSS/Guides/Colors) で指定されており、一般的に CSS カラーまたはウェブカラーと呼ばれています。
 
@@ -13,11 +13,11 @@ l10n:
 
 ### 一般的な情報
 
-Wikipedia 上の [Webカラー](https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A9%E3%83%BC)
+Wikipedia 上の [ウェブカラー](https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%AB%E3%83%A9%E3%83%BC)
 
 ### 技術資料
 
-MDN で ウェブ カラーを調べるには、CSS {{cssxref("&lt;color&gt;")}}値のリファレンスドキュメント、またはより具体的には以下を参照してください。
+MDN で ウェブカラーを調べるには、CSS {{cssxref("&lt;color&gt;")}}値のリファレンスドキュメント、またはより具体的には以下を参照してください。
 
 - 色名: {{cssxref("&lt;named-color&gt;")}}
 - 16 進数表記: {{cssxref("&lt;hex-color&gt;")}}
