@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La propriété **`hour`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne un entier de 0 à 23 représentant la composante heure de ce temps.
+La propriété d'accesseur **`hour`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne un entier de 0 à 23 représentant la composante heure de ce temps.
 
 Le mutateur d'accesseur de `hour` est `undefined`. Vous ne pouvez pas modifier cette propriété directement. Utilisez la méthode {{JSxRef("Temporal/ZonedDateTime/with", "with()")}} pour créer un nouvel objet `Temporal.ZonedDateTime` avec la nouvelle valeur souhaitée.
 
