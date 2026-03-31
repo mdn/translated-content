@@ -14,7 +14,7 @@ La méthode `DELETE` n'a pas de sémantique définie pour le corps du message, q
   <tbody>
     <tr>
       <th scope="row">La requête a un corps</th>
-      <td>Elle peut</td>
+      <td>Non</td>
     </tr>
     <tr>
       <th scope="row">La réponse de succès a un corps</th>
