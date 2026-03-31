@@ -19,7 +19,7 @@ str.fontcolor(color)
 ### Parametros
 
 - `color`
-  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/es/docs/Web/CSS/color_value).
+  - : A string expressing the color as a hexadecimal RGB triplet or as a string literal. String literals for color names are listed in the [CSS color reference](/es/docs/Web/CSS/Reference/Values/color_value).
 
 ## Descripción
 

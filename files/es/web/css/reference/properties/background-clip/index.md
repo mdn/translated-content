@@ -87,4 +87,4 @@ p {
 ## Ver también
 
 - {{ cssxref("clip") }}
-- [Modelo de caja CSS](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Modelo de caja CSS](/es/docs/Web/CSS/Guides/Box_model/Introduction)

@@ -32,7 +32,7 @@ La regla `@page` puede ser accesada por medio de la interfaz modelo objeto {{dom
 
 ## Ejemplos
 
-Por favor dirígete a las [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) de `@page` por ejemplos.
+Por favor dirígete a las [pseudo-classes](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de `@page` por ejemplos.
 
 - {{Cssxref(":blank")}}
 - {{Cssxref(":first")}}

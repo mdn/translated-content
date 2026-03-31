@@ -587,7 +587,7 @@ Este ejemplo funciona creando lo que se conoce como un _**block formatting conte
 
 ### display: flow-root
 
-La manera moderna de resolver este problema es usar el valor `flow-root` de la propiedad `display`. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina `overflow: auto` de la regla `.wrapper` y añade `display: flow-root`. Asumiendo que tu [navegador sea compatible](/es/docs/Web/CSS/display#browser_compatibility), la caja se limpiará.
+La manera moderna de resolver este problema es usar el valor `flow-root` de la propiedad `display`. Esto existe solo para crear un BFC sin usar hacks; no habrá consecuencias no deseadas cuando lo use. Elimina `overflow: auto` de la regla `.wrapper` y añade `display: flow-root`. Asumiendo que tu [navegador sea compatible](/es/docs/Web/CSS/Reference/Properties/display#browser_compatibility), la caja se limpiará.
 
 ```css
 .wrapper {

@@ -127,17 +127,17 @@ CSS
 
 ## Guías
 
-- [Basic concepts of Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relationship of Grid Layout to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Basic concepts of Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relationship of Grid Layout to other layout methods](/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
 - [Layout using line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [Layout using named grid lines](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Auto-placement in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [Auto-placement in CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+- [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
 - [CSS Grid, Logical Values and Writing Modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS Grid and progressive enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Realising common layouts using CSS Grid](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+- [Realising common layouts using CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 ## Recursos externos
 

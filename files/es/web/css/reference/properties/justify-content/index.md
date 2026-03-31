@@ -15,7 +15,7 @@ El alineamiento se produce luego de que las longitudes y márgenes automáticos 
 
 {{cssinfo}}
 
-Véase [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más propiedades e información.
+Véase [Using CSS flexible boxes](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para más propiedades e información.
 
 ## Sintaxis
 
@@ -152,4 +152,4 @@ Resultados en:
 
 ## Ver también
 
-- [Using CSS flexible boxes](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Using CSS flexible boxes](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

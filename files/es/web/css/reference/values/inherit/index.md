@@ -12,7 +12,7 @@ original_slug: Web/CSS/inherit
 
 #### Para propiedades heredadas
 
-Para las propiedades [heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
+Para las propiedades [heredadas](/es/docs/Web/CSS/Guides/Cascade/Inheritance#propiedades_heredadas), este valor refuerza el comportamiento del valor por defecto y es necesario sólo para anular otras reglas. Por ejemplo:
 
 ```
   /* hacer las cabeceras de segundo nivel, verdes */
@@ -32,7 +32,7 @@ el elemento será azul.
 
 #### Para propiedades no heredadas
 
-Para las propiedades [no heredadas](/es/docs/Web/CSS/CSS_cascade/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
+Para las propiedades [no heredadas](/es/docs/Web/CSS/Guides/Cascade/Inheritance#propiedades_no_heredadas), este valor especifica un comportamiento que tiene relativamente poco sentido al no reforzar el valor por defecto.
 
 ### Notas
 
@@ -46,7 +46,7 @@ Siempre se hereda desde el elemento padre dentro del árbol del documento, aún 
 
 ### Ver también
 
-[initial](/es/docs/Web/CSS/initial)
+[initial](/es/docs/Web/CSS/Reference/Values/initial)
 
 Categorías
 

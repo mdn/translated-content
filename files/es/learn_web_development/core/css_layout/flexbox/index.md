@@ -6,7 +6,7 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
 
 {{LearnSidebar}}{{PreviousMenuNext("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
-[Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
+[Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. En este artículo expondremos todas sus características básicas.
 
 <table>
   <tbody>

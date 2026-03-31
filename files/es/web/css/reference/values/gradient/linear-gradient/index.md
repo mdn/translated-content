@@ -98,11 +98,11 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
 ## Descripción
 
-Como con cualquier gradiente, un gradiente lineal [no tiene dimensiones intrínsecas](/es/docs/Web/CSS/image#description); es decir, no tiene un tamaño natural o preferido, ni una proporción preferida. Su tamaño concreto coincidirá con el tamaño del elemento al que se aplica.
+Como con cualquier gradiente, un gradiente lineal [no tiene dimensiones intrínsecas](/es/docs/Web/CSS/Reference/Values/image#description); es decir, no tiene un tamaño natural o preferido, ni una proporción preferida. Su tamaño concreto coincidirá con el tamaño del elemento al que se aplica.
 
 Para crear un gradiente lineal que se repita para llenar su contenedor, use la función {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} en su lugar.
 
-Debido a que los `<gradient>` pertenecen al tipo de datos `<image>`, solo se pueden usar donde se pueden usar [`<image>`](/es/docs/Web/CSS/image). Por esta razón, `linear-gradient()` no funcionará en {{CSSxRef("background-color")}} y otras propiedades que usan el tipo de datos {{CSSxRef("&lt;color&gt;")}}.
+Debido a que los `<gradient>` pertenecen al tipo de datos `<image>`, solo se pueden usar donde se pueden usar [`<image>`](/es/docs/Web/CSS/Reference/Values/image). Por esta razón, `linear-gradient()` no funcionará en {{CSSxRef("background-color")}} y otras propiedades que usan el tipo de datos {{CSSxRef("&lt;color&gt;")}}.
 
 ### Composición de un gradiente lineal
 
@@ -263,7 +263,7 @@ body {
 
 ### Más ejemplos de linear-gradient
 
-Consulta [uso de gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients) para obtener más ejemplos.
+Consulta [uso de gradientes CSS](/es/docs/Web/CSS/Guides/Images/Using_gradients) para obtener más ejemplos.
 
 ## Especificaciones
 
@@ -275,7 +275,7 @@ Consulta [uso de gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients
 
 ## Véase también
 
-- [Uso de degradados CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Uso de degradados CSS](/es/docs/Web/CSS/Guides/Images/Using_gradients)
 - Otras funciones de gradiente: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
 - [`<hue-interpolation-method>`](/es/docs/Web/CSS/hue-interpolation-method)
 - [`<color-interpolation-method>`](/es/docs/Web/CSS/color-interpolation-method)

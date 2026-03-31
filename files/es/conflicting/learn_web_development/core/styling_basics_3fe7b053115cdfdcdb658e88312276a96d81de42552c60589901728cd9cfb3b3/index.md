@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 En esta evaluación, practicarás más la creación de cajas con un aspecto genial intentando crear una caja llamativa.
 
@@ -104,4 +104,4 @@ La siguiente captura de pantalla muestra un ejemplo de cómo podría verse el di
 
 ![Una gran caja roja con esquinas redondeadas. Un texto blanco con sombra paralela dice 'esta es una caja genial'.](fancy-box2.png)
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

@@ -7,11 +7,11 @@ original_slug: Web/CSS/box-flex
 > [!WARNING]
 > Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información acerca de qué usar en vez de esta propiedad.
+Ver [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para más información acerca de qué usar en vez de esta propiedad.
 
 ## Resumen
 
-Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información sobre las propiedades de los elementos flexbox.
+Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-flex` y `-webkit-box-flex` especifican cómo una `-moz-box` o `-webkit-box` crecen para rellenar la caja que los contienen, en la dirección del diseño o esquema (layout) de la caja contenedora.Ver [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para más información sobre las propiedades de los elementos flexbox.
 
 {{cssinfo}}
 

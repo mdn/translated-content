@@ -223,7 +223,7 @@ Este ejemplo incluye los elementos básicos necesarios para usar un `<iframe>`:
 - [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : Si está configurado, el `<iframe>` se puede colocar en modo pantalla completa usando el [Full Screen API](/es/docs/Web/API/Fullscreen_API) (El uso del API está fuera del alcance de este artículo.)
 - [`frameborder`](/es/docs/Web/HTML/Reference/Elements/iframe#frameborder)
-  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/border)`: none;` en tu {{Glossary('CSS')}}.
+  - : Si se establece en 1, esto le indica al navegador que dibuje un borde entre este marco y otros marcos, que es el comportamiento predeterminado. 0 elimina el borde. Usar esto ya no es realmente recomendable, ya que el mismo efecto se puede lograr mejor usando[`border`](/es/docs/Web/CSS/Reference/Properties/border)`: none;` en tu {{Glossary('CSS')}}.
 - [`src`](/es/docs/Web/HTML/Reference/Elements/iframe#src)
   - : Este atributo, como con {{htmlelement("video")}}/{{htmlelement("img")}},contiene una ruta que apunta a la URL del documento que se va a incrustar.
 - [`width`](/es/docs/Web/HTML/Reference/Elements/iframe#width) and [`height`](/es/docs/Web/HTML/Reference/Elements/iframe#height)

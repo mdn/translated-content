@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/time
 original_slug: Web/CSS/time
 ---
 
-El [tipo de dato](/es/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<time>`** de [CSS](/es/docs/Web/CSS) representa un valor de tiempo expresado en segundos o milisegundos. Se usa en {{cssxref("animation")}}, {{cssxref("transition")}} y propiedades relacionadas.
+El [tipo de dato](/es/docs/Web/CSS/Reference/Values/Data_types) **`<time>`** de [CSS](/es/docs/Web/CSS) representa un valor de tiempo expresado en segundos o milisegundos. Se usa en {{cssxref("animation")}}, {{cssxref("transition")}} y propiedades relacionadas.
 
 ## Sintaxis
 

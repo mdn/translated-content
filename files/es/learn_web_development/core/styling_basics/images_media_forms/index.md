@@ -40,7 +40,7 @@ En este artículo vamos a ver cómo se tratan ciertos elementos especiales en CS
 
 ## Elementos de reemplazo
 
-Las imágenes y los vídeos se describen como **[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)**. Esto significa que el CSS no puede intervenir en aspectos del diseño interno de estos elementos, sino solo a su posición en la página y algunos otros aspectos. Sin embargo, como veremos, hay varias cosas que el CSS puede hacer con una imagen.
+Las imágenes y los vídeos se describen como **[elementos de reemplazo](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties)**. Esto significa que el CSS no puede intervenir en aspectos del diseño interno de estos elementos, sino solo a su posición en la página y algunos otros aspectos. Sin embargo, como veremos, hay varias cosas que el CSS puede hacer con una imagen.
 
 También se describen ciertos elementos de reemplazo que, como las imágenes y vídeos, presentan una **relación de aspecto**. Esto significa que tienen un tamaño definido tanto en la dimensión horizontal (x) como en la vertical (y), y por defecto se mostrarán con las dimensiones intrínsecas del archivo.
 

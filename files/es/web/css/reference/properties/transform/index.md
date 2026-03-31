@@ -42,7 +42,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
+Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
 
 ## Síntaxis
 
@@ -85,7 +85,7 @@ transform: unset;
 ### Valores
 
 - `<transform-function>`
-  - : Una o más de las [funciones de transformación CSS](/es/docs/Web/CSS/transform-function) que se aplicarán, ver más abajo.
+  - : Una o más de las [funciones de transformación CSS](/es/docs/Web/CSS/Reference/Values/transform-function) que se aplicarán, ver más abajo.
 - `none`
   - : Especifica que ninguna transformación podrá ser aplicada.
 
@@ -97,7 +97,7 @@ transform: unset;
 
 ## Ejemplos
 
-Consulte [Uso de las transformaciones CSS.](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+Consulte [Uso de las transformaciones CSS.](/es/docs/Web/CSS/Guides/Transforms/Using)
 
 ## Funciones CSS transform
 
@@ -146,7 +146,7 @@ Específica una matriz de transformación 2D compuesta por seis valores a especi
 transform:  rotate(deg);     /* ej. rotate(90deg) */
 ```
 
-Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las manecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
+Define una operación de rotación 2D de un elemento, específicando la cantidad de grados (deg) que este rotará en sentido de las manecillas del reloj (según lo especificado por la propiedad [transform-origen](/es/docs/Web/CSS/Reference/Properties/transform-origin)). La operación corresponde a la matriz **\[cos(angle) sin(angle) -sin(angle) cos(angle) 0 0]**.
 
 ### rotateX
 
@@ -236,7 +236,7 @@ transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
 
 Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty`** no es específicada, se asumirá que su valor es cero.
 
-Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/es/docs/Web/CSS/length) o un valor de [`porcentaje`](/es/docs/Web/CSS/percentage).
+Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/es/docs/Web/CSS/Reference/Values/length) o un valor de [`porcentaje`](/es/docs/Web/CSS/Reference/Values/percentage).
 
 ### translateX
 
@@ -264,6 +264,6 @@ Translada un elemento a lo largo del eje Y.
 
 ## Véase También
 
-- [Uso de transformaciones](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)[CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Uso de transformaciones](/es/docs/Web/CSS/Guides/Transforms/Using)[CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - Tipos de datos [\<translation-value>](/es/docs/translation-value)
 - [Complemento de transformación 2D para jQuery](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.

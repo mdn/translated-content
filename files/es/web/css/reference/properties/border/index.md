@@ -8,7 +8,7 @@ original_slug: Web/CSS/border
 
 ### Propiedades Constitutivas
 
-Esta es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para las siguientes propiedades CSS:
+Esta es una [propiedad abreviada](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para las siguientes propiedades CSS:
 
 - border-color
 - border-style
@@ -73,7 +73,7 @@ La propiedad abreviada `border` es especialmente útil cuando deseas que los cua
 
 ### Bordes vs. contornos
 
-Los bordes y los [contornos](/es/docs/Web/CSS/outline) son muy parecidos. Sin embargo, los contornos se distinguen de los bordes de la siguiente forma:
+Los bordes y los [contornos](/es/docs/Web/CSS/Reference/Properties/outline) son muy parecidos. Sin embargo, los contornos se distinguen de los bordes de la siguiente forma:
 
 - Los contornos nunca toman espacio, ya que se dibujan fuera del contenido de un elemento.
 - De conformidad con las especificaciones, si bien los contornos suelen ser rectangulares, no necesitan serlo.
