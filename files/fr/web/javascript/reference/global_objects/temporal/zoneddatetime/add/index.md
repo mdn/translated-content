@@ -22,11 +22,11 @@ add(duration, options)
 - `options` {{Optional_Inline}}
   - : Un objet contenant la propriété suivante&nbsp;:
     - `overflow` {{Optional_Inline}}
-      - : Une chaîne de caractères définissant le comportement lorsque un composant de date est hors de portée. Les valeurs possibles sont&nbsp;:
+      - : Une chaîne de caractères définissant le comportement lorsque une composante de date est hors de portée. Les valeurs possibles sont&nbsp;:
         - `"constrain"` (par défaut)
-          - : Le composant de date est [contraint](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#fixer_les_dates_invalides) à la plage valide.
+          - : La composante de date est [contraint](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#fixer_les_dates_invalides) à la plage valide.
         - `"reject"`
-          - : Un objet {{JSxRef("RangeError")}} est levé si le composant de date est hors de portée.
+          - : Un objet {{JSxRef("RangeError")}} est levé si la composante de date est hors de portée.
 
 ### Valeur de retour
 
@@ -46,8 +46,8 @@ L'addition et la soustraction sont effectuées selon les règles définies dans 
 - Ajouter ou soustraire la partie date d'une durée en utilisant l'arithmétique de calendrier&nbsp;: en d'autres termes, ajouter la partie date à son `PlainDateTime` en utilisant {{JSxRef("Temporal/PlainDateTime/add", "Temporal.PlainDateTime.prototype.add()")}}, puis interpréter le résultat dans le même fuseau horaire. Le résultat s'ajustera automatiquement à l'heure d'été en utilisant les règles du champ `timeZone` de cette instance. Par exemple, `2024-11-03T01:00:00-04:00[America/New_York]` plus un jour donne `2024-11-04T01:00:00-05:00[America/New_York]`, comme si le jour avait 25 heures.
   - Si la date et l'heure sont [ambiguës](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_et_écarts_lors_du_passage_de_lheure_locale_à_lutc) ou invalides en raison d'une transition de décalage du fuseau horaire, elles sont résolues en utilisant le comportement `disambiguation: "compatible"`&nbsp;: le plus tardif des deux instants possibles sera utilisé pour les transitions sautées et le plus tôt des deux instants possibles sera utilisé pour les transitions répétées. Par exemple, `2024-03-09T02:05:00-05:00[America/New_York]` plus un jour devrait donner `2024-03-10T02:05:00-05:00[America/New_York]`, mais cette heure n'existe pas, donc l'heure affichée une heure plus tard, `2024-03-10T03:05:00-04:00[America/New_York]`, est retournée.
   - Si le [décalage est ambigu](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#ambiguïté_du_décalage), il est résolu en utilisant le comportement `offset: "prefer"`&nbsp;: le décalage est utilisé s'il est valide pour le fuseau horaire et l'heure locale, et recalculé sinon. Par exemple, `2024-11-02T01:00:00-04:00[America/New_York]` plus un jour donne `2024-11-03T01:00:00-04:00[America/New_York]`, tandis que `2024-11-04T01:00:00-05:00[America/New_York]` moins un jour donne `2024-11-03T01:00:00-05:00[America/New_York]`.
-  - Si les composants de la date et de l'heure résultantes sont hors limites, ils sont résolus en utilisant l'option `overflow`. Par exemple, `2024-08-31` plus un mois donne `2024-09-31` qui n'existe pas, donc il est ramené à `2024-09-30` par défaut.
-  - If the resulting date-time's components are out of bounds, they are resolved using the `overflow` option. For example, `2024-08-31` plus one month is `2024-09-31` which doesn't exist, so it is clamped to `2024-09-30` by default.
+  - Si les composantes de la date et de l'heure résultantes sont hors limites, ils sont résolus en utilisant l'option `overflow`. Par exemple, `2024-08-31` plus un mois donne `2024-09-31` qui n'existe pas, donc il est ramené à `2024-09-30` par défaut.
+  - Si les composantes de la date et de l'heure obtenues dépassent les limites autorisées, elles sont ajustées à l'aide de l'option `overflow`. Par exemple, `2024-08-31` plus un mois donne `2024-09-31`, qui n'existe pas, donc cette date est limitée à `2024-09-30` par défaut.
 - Ajouter ou soustraire la partie temps d'une durée en utilisant le temps réel&nbsp;; en d'autres termes, ajouter la partie temps à son `Instant` en utilisant {{JSxRef("Temporal/Instant/add", "Temporal.Instant.prototype.add()")}}, puis interpréter le résultat dans le même fuseau horaire. Par exemple, `2024-11-03T01:00:00-04:00[America/New_York]` plus une heure donne `2024-11-03T01:00:00-05:00[America/New_York]`.
 
 Ces règles rendent l'arithmétique avec `Temporal.ZonedDateTime` «&nbsp;sûre pour l'heure d'été&nbsp;», ce qui signifie que les résultats correspondent au mieux aux attentes des utilisateur·ice·s réels et des personnes qui implémentent d'autres applications de calendrier conformes aux standards. Ces attentes incluent&nbsp;:
