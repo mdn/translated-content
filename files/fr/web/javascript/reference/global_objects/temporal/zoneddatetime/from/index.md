@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-L **`Temporal.ZonedDateTime.from()`** méthode statique crée un nouvel objet `Temporal.ZonedDateTime` à partir d'un autre objet `Temporal.ZonedDateTime`, d'un objet avec des propriétés de date, d'heure et de fuseau horaire, ou d'une chaîne de caractères [RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#format_rfc_9557).
+La méthode statique **`Temporal.ZonedDateTime.from()`** crée un nouvel objet `Temporal.ZonedDateTime` à partir d'un autre objet `Temporal.ZonedDateTime`, d'un objet avec des propriétés de date, d'heure et de fuseau horaire, ou d'une chaîne de caractères [RFC 9557](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#format_rfc_9557).
 
 ## Syntaxe
 
