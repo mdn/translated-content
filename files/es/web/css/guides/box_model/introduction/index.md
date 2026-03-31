@@ -32,7 +32,7 @@ El espesor de los bordes está determinado por la propiedad {{cssxref("border-wi
 
 El **área de margen** o **margin area**, delimitada por el límite de margen (Margin edge en la imagen), extiende el área de borde para incluir un área vacía, utilizada para separar al elemento del resto de sus vecinos. Sus dimensiones son _"margin-box width"_ para el ancho y _"margin-box height"_ para el alto.
 
-El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
+El tamaño del área de margen está determinado por las propiedades {{cssxref("margin-top")}} , {{cssxref("margin-right")}} , {{cssxref("margin-bottom")}} , {{cssxref("margin-left")}} y la propiedad resumida {{cssxref("margin")}} . Cuando se produce un [colapso de margen](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing), el área de margen no está claramente definida ya que los márgenes se comparten entre cajas.
 
 Por último, tenga en cuenta que para los elementos en línea no modificados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref("line-height")}} , aunque los bordes y el relleno sigan apareciendo alrededor del contenido.
 
@@ -42,19 +42,19 @@ Por último, tenga en cuenta que para los elementos en línea no modificados, la
 - [Introducción a la cascada CSS](/es/docs/Web/CSS/Cascade)
 - [Cascada y herencia](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - Conceptos clave de CSS
-  - [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule)
-  - [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
-  - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-  - [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [Sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Reglas-At](/es/docs/Web/CSS/Guides/Syntax/At-rules)
+  - [Comentarios](/es/docs/Web/CSS/Guides/Syntax/Comments)
+  - [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity)
+  - [Herencia](/es/docs/Web/CSS/Guides/Cascade/Inheritance)
   - [Modo de diseño](/es/docs/Glossary/Layout_mode)
   - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
-  - [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [Entendiendo el colapso de margen](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - Valores
-    - [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
     - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
     - [Valor usado](/es/docs/Web/CSS/used_value)
     - [Valor real](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-  - [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)
+  - [Sintaxis de definición de valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - [Propiedades abreviadas](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [Elementos reemplazados](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties)

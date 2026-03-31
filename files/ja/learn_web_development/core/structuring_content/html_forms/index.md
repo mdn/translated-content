@@ -257,7 +257,7 @@ btn.addEventListener("click", () => {
 これらのボタン型は `<input>` 要素に同じ `type` 値を使用することでも作成することができます。[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)、[`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button) です。しかしこれらは `<button>` と比べると多くの欠点があります。そのため、代わりに `<button>` を使用しましょう。
 
 > [!NOTE]
-> Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> には無料のレッスン [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) があり、この記事で以前扱ったフォームの基本事項について、有益な対話形式の復習を提供します。
+> Scrimba<sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> には無料のレッスン [The very basics of forms](https://scrimba.com/learn-responsive-web-design-c029/~031?via=mdn) があり、この記事で以前扱ったフォームの基本事項について、有益な対話形式の復習を提供します。
 
 ## アクセシビリティに関する余談
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode statique **`fromEpochMilliseconds()`** des instances de {{JSxRef("Temporal.Instant")}} crée un nouvel objet `Temporal.Instant` à partir du nombre de millisecondes écoulées depuis l'époque Unix (minuit au début du 1er janvier 1970, UTC).
+La méthode statique **`Temporal.Instant.fromEpochMilliseconds()`** crée un nouvel objet `Temporal.Instant` à partir du nombre de millisecondes écoulées depuis l'époque Unix (minuit au début du 1er janvier 1970, UTC).
 
 Pour convertir un objet {{JSxRef("Date")}} en un objet `Temporal.Instant`, utilisez plutôt {{JSxRef("Date.prototype.toTemporalInstant()")}}.
 

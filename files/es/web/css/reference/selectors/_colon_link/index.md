@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:link
 original_slug: Web/CSS/:link
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:link`** [CSS](/es/docs/Web/CSS) representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo `href`.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:link`** [CSS](/es/docs/Web/CSS) representa un elemento que aún no se ha visitado. Coincide con cada elemento no visitado {{HTMLElement("a")}}, {{HTMLElement("area")}}, o {{HTMLElement("link")}} que tiene un atributo `href`.
 
 ```css
 /* Selecciona cualquier <a> que aún no se haya visitado */

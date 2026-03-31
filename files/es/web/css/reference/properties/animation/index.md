@@ -6,9 +6,9 @@ original_slug: Web/CSS/animation
 
 ## Resumen
 
-La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
+La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
 
-La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/Guides/Transitions/Using#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{cssinfo}}
 
@@ -23,7 +23,7 @@ Formal grammar:  [ <'animation-name'> || <'animation-duration'> || <'animation-t
 
 ## Ejemplos
 
-Consulte [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver los ejemplos.
+Consulte [CSS animations](/es/docs/Web/CSS/Guides/Animations/Using) para ver los ejemplos.
 
 ## Sobre Accesibilidad
 
@@ -49,5 +49,5 @@ Para más información (en inglés):
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

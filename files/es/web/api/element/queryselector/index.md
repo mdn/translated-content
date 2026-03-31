@@ -94,8 +94,8 @@ Puedes ver más ejemplos sobre el formato apropiado para los `selectores` aquí 
 
 ## Véase también
 
-- [Localizando elementos DOM usando selectores](/es/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-- [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) en la guia de CSS
+- [Localizando elementos DOM usando selectores](/es/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
+- [Selectores de atributo](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) en la guia de CSS
 - [Selectores de atributo](/es/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) en MDN Learning
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}} y {{domxref("Document.querySelectorAll()")}}

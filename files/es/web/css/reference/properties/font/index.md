@@ -12,7 +12,7 @@ La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valore
 
 ## Sintaxis
 
-`font:` \[ <[font-style](/es/docs/Web/CSS/font-style)> || <[font-variant](/es/docs/Web/CSS/font-variant)> || <[font-weight](/es/docs/Web/CSS/font-weight)> ]? <[font-size](/es/docs/Web/CSS/font-size)> \[ / <[line-height](/es/docs/Web/CSS/line-height)> ]? <[font-family](/es/docs/Web/CSS/font-family)>
+`font:` \[ <[font-style](/es/docs/Web/CSS/Reference/Properties/font-style)> || <[font-variant](/es/docs/Web/CSS/Reference/Properties/font-variant)> || <[font-weight](/es/docs/Web/CSS/Reference/Properties/font-weight)> ]? <[font-size](/es/docs/Web/CSS/Reference/Properties/font-size)> \[ / <[line-height](/es/docs/Web/CSS/Reference/Properties/line-height)> ]? <[font-family](/es/docs/Web/CSS/Reference/Properties/font-family)>
 
 `font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
 

@@ -39,7 +39,7 @@ indexOf(searchElement, fromIndex)
   - : 検索し始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
     - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `-array.length <= fromIndex < 0` の場合、 `fromIndex + array.length` が使用されます。ただし、この場合でも配列は前から後ろに向けて検索されます。
     - `fromIndex < -array.length` または `fromIndex` が省略された場合は `0` が使用され、配列全体に対して検索が行われます。
-    - `fromIndex >= array.length` の場合、配列の検索は行われず、 `false` が返されます。
+    - `fromIndex >= array.length` の場合、配列の検索は行われず、 `-1` が返されます。
 
 ### 返値
 

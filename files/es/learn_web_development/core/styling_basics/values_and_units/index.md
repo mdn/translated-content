@@ -40,13 +40,13 @@ Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de va
 
 ## ¿Qué es un valor CSS?
 
-En las especificaciones CSS y en las páginas de propiedades de este proyecto MDN, podrás detectar los valores porque estarán escritos entre corchetes angulares, como [`<color>`](/es/docs/Web/CSS/color_value) o [`<length>`](/es/docs/Web/CSS/length). Cuando veas que el valor `<color>` es válido para una propiedad en particular, significa que para esa propiedad puedes usar como valor cualquier color válido de entre los que se enumeran en la página de referencia de la propiedad [`<color>`](/es/docs/Web/CSS/color_value).
+En las especificaciones CSS y en las páginas de propiedades de este proyecto MDN, podrás detectar los valores porque estarán escritos entre corchetes angulares, como [`<color>`](/es/docs/Web/CSS/Reference/Values/color_value) o [`<length>`](/es/docs/Web/CSS/Reference/Values/length). Cuando veas que el valor `<color>` es válido para una propiedad en particular, significa que para esa propiedad puedes usar como valor cualquier color válido de entre los que se enumeran en la página de referencia de la propiedad [`<color>`](/es/docs/Web/CSS/color_value).
 
 > [!NOTE]
 > También verás valores CSS denominados _tipos de datos_. Los términos son básicamente intercambiables: cuando veas algo en CSS denominado 'tipo de datos', en realidad es solo una forma elegante de decir 'valor'.
 
 > [!NOTE]
-> Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad {{cssxref ("color")}} con respecto al tipo de dato [\<color>](/es/docs/Web/CSS/color_value)). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.
+> Sí, hay una tendencia de denotar los valores CSS entre corchetes angulares, para diferenciarlos de las propiedades CSS (por ejemplo, la propiedad {{cssxref ("color")}} con respecto al tipo de dato [\<color>](/es/docs/Web/CSS/Reference/Values/color_value)). Aunque podría generarte confusión entre los tipos de datos CSS y los elementos HTML, porque ambos usan corchetes angulares, es poco probable porque se usan en contextos muy diferentes.
 
 En el ejemplo siguiente hemos establecido el color de nuestro encabezado con una palabra clave y el fondo con la función `rgb()`:
 
@@ -57,7 +57,7 @@ h1 {
 }
 ```
 
-Un valor en CSS es una forma de definir una colección de subvalores admitidos. Esto significa que si ves `<color>` como válido, no necesitas preguntarte cuáles de los diferentes tipos de valor de color puedes usar: palabras clave, valores hexadecimales, funciones `rgb()`, etc. Puedes usar _cualquier_ valor `<color>` disponible siempre que tu navegador lo admita. La página de MDN te dará información sobre lo que admite cada navegador para cada valor. Por ejemplo, puedes ver que en la sección de compatibilidad de navegadores de la página para [`<color>`](/es/docs/Web/CSS/color_value) se enumeran diferentes tipos de valores de color y los navegadores que los admiten.
+Un valor en CSS es una forma de definir una colección de subvalores admitidos. Esto significa que si ves `<color>` como válido, no necesitas preguntarte cuáles de los diferentes tipos de valor de color puedes usar: palabras clave, valores hexadecimales, funciones `rgb()`, etc. Puedes usar _cualquier_ valor `<color>` disponible siempre que tu navegador lo admita. La página de MDN te dará información sobre lo que admite cada navegador para cada valor. Por ejemplo, puedes ver que en la sección de compatibilidad de navegadores de la página para [`<color>`](/es/docs/Web/CSS/Reference/Values/color_value) se enumeran diferentes tipos de valores de color y los navegadores que los admiten.
 
 Echemos un vistazo a algunos de los tipos de valores y unidades con los que puedes encontrar con frecuencia, con ejemplos para que puedas probar diferentes valores posibles.
 
@@ -65,12 +65,12 @@ Echemos un vistazo a algunos de los tipos de valores y unidades con los que pued
 
 Al utilizar CSS te puedes encontrar con varios tipos de datos numéricos. Todos los siguientes están clasificados como tipos de datos numéricos:
 
-| Tipo de datos                                 | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/es/docs/Web/CSS/integer)       | Un `<integer>` es un número entero, como `1024` o `-55`.                                                                                                                                                                                                                                                                                                                                  |
-| [`<number>`](/es/docs/Web/CSS/number)         | Un `<number>` representa un número decimal; puede tener o no un punto de separación decimal con un componente fraccionario, por ejemplo: `0.255`, `128` o `-1.2`.                                                                                                                                                                                                                         |
-| `<dimension>`                                 | Una `<dimension>` es un `<number>` con una unidad asociada, por ejemplo: `45deg` (grados), `5s` (segundos) o `10px` (píxeles). `<dimension>` es una categoría general que incluye los tipos [`<length>`](/es/docs/Web/CSS/length), [`<angle>`](/es/docs/Web/CSS/angle), [`<time>`](/es/docs/Web/CSS/time) y [`<resolution>`](/es/docs/Web/CSS/resolution)[.](/es/docs/Web/CSS/resolution) |
-| [`<percentage>`](/es/docs/Web/CSS/percentage) | Un `<percentage>` representa una fracción de algún otro valor, por ejemplo, `50%`. Los valores de porcentaje siempre son relativos a otra cantidad, por ejemplo, la longitud de un elemento es relativa a la longitud de su elemento padre.                                                                                                                                               |
+| Tipo de datos                                                  | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/es/docs/Web/CSS/Reference/Values/integer)       | Un `<integer>` es un número entero, como `1024` o `-55`.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| [`<number>`](/es/docs/Web/CSS/Reference/Values/number)         | Un `<number>` representa un número decimal; puede tener o no un punto de separación decimal con un componente fraccionario, por ejemplo: `0.255`, `128` o `-1.2`.                                                                                                                                                                                                                                                                                             |
+| `<dimension>`                                                  | Una `<dimension>` es un `<number>` con una unidad asociada, por ejemplo: `45deg` (grados), `5s` (segundos) o `10px` (píxeles). `<dimension>` es una categoría general que incluye los tipos [`<length>`](/es/docs/Web/CSS/Reference/Values/length), [`<angle>`](/es/docs/Web/CSS/Reference/Values/angle), [`<time>`](/es/docs/Web/CSS/Reference/Values/time) y [`<resolution>`](/es/docs/Web/CSS/Reference/Values/resolution)[.](/es/docs/Web/CSS/resolution) |
+| [`<percentage>`](/es/docs/Web/CSS/Reference/Values/percentage) | Un `<percentage>` representa una fracción de algún otro valor, por ejemplo, `50%`. Los valores de porcentaje siempre son relativos a otra cantidad, por ejemplo, la longitud de un elemento es relativa a la longitud de su elemento padre.                                                                                                                                                                                                                   |
 
 ### Longitudes
 
@@ -176,7 +176,7 @@ El sistema de colores estándar disponible en los ordenadores modernos es de 24 
 
 ### Palabras clave para los colores
 
-Muy a menudo, en los ejemplos de este artículo o en cualquier otra página de MDN, verás que se utilizan las palabras clave para los colores, ya que son una forma simple y comprensible de especificar colores. Hay una multitud de estas palabras clave, ¡algunas de las cuales tienen nombres de lo más curiosos! Puedes ver una lista completa en la página para el valor [`<color>`](/es/docs/Web/CSS/color_value).
+Muy a menudo, en los ejemplos de este artículo o en cualquier otra página de MDN, verás que se utilizan las palabras clave para los colores, ya que son una forma simple y comprensible de especificar colores. Hay una multitud de estas palabras clave, ¡algunas de las cuales tienen nombres de lo más curiosos! Puedes ver una lista completa en la página para el valor [`<color>`](/es/docs/Web/CSS/Reference/Values/color_value).
 
 **Juega con diferentes valores de color en los ejemplos en vivo que encontrarás a continuación, para adquirir una idea más clara de cómo funcionan.**
 
@@ -232,18 +232,18 @@ Puedes usar cualquiera de estos valores de color en tus proyectos. Es probable q
 
 ## Imágenes
 
-El tipo de datos [`<image>`](/es/docs/Web/CSS/image) se usa cuando una imagen es un valor válido. Puede ser un archivo de imagen real al que apunta una función `url()`, o un degradado.
+El tipo de datos [`<image>`](/es/docs/Web/CSS/Reference/Values/image) se usa cuando una imagen es un valor válido. Puede ser un archivo de imagen real al que apunta una función `url()`, o un degradado.
 
 En el ejemplo siguiente mostramos una imagen y un gradiente en uso como un valor para la propiedad CSS `background-image`.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
 
 > [!NOTE]
-> Hay otros valores posibles para `<image>`, pero son más nuevos y aún hay pocos navegadores que los admiten. Consulta la página de MDN para el tipo de dato [`<image>`](/es/docs/Web/CSS/image) si deseas saber más sobre ellos.
+> Hay otros valores posibles para `<image>`, pero son más nuevos y aún hay pocos navegadores que los admiten. Consulta la página de MDN para el tipo de dato [`<image>`](/es/docs/Web/CSS/Reference/Values/image) si deseas saber más sobre ellos.
 
 ## Posición
 
-El tipo de dato [`<position>`](/es/docs/Web/CSS/position_value) representa un conjunto de coordenadas 2D que se utiliza para colocar un elemento, por ejemplo una imagen de fondo (con el atributo [`background-position`](/es/docs/Web/CSS/background-position)). Puede tomar palabras clave como `top`, `left`, `bottom`, `right` y `center` para alinear los elementos con los límites específicos de una caja de dos dimensiones, y también longitudes, que representan desplazamientos desde los bordes superior e izquierdo de la caja.
+El tipo de dato [`<position>`](/es/docs/Web/CSS/position_value) representa un conjunto de coordenadas 2D que se utiliza para colocar un elemento, por ejemplo una imagen de fondo (con el atributo [`background-position`](/es/docs/Web/CSS/Reference/Properties/background-position)). Puede tomar palabras clave como `top`, `left`, `bottom`, `right` y `center` para alinear los elementos con los límites específicos de una caja de dos dimensiones, y también longitudes, que representan desplazamientos desde los bordes superior e izquierdo de la caja.
 
 Un valor de posición típico consta de dos valores: el primero establece la posición horizontal, y el segundo la vertical. Si solo especificas valores para un eje, el otro usará `center` por defecto.
 
@@ -281,6 +281,6 @@ Esta ha sido una revisión rápida de los tipos de valores y unidades más comun
 
 Lo que debes recordar es que cada propiedad tiene una lista definida de valores admisibles, y cada valor incluye una definición que explica cuáles son sus subvalores. A continuación puedes buscar los detalles aquí, en MDN.
 
-Por ejemplo, comprender que [`<image>`](/es/docs/Web/CSS/image) también te permite crear un degradado de color es útil, ¡pero quizás no sea un conocimiento obvio!
+Por ejemplo, comprender que [`<image>`](/es/docs/Web/CSS/Reference/Values/image) también te permite crear un degradado de color es útil, ¡pero quizás no sea un conocimiento obvio!
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}

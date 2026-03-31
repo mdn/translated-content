@@ -181,5 +181,5 @@ grid-auto-columns: unset;
 ## Vea también
 
 - Propiedades CSS relacionadas: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Guía de Layout tipo Grid (en inglés): _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)_
+- Guía de Layout tipo Grid (en inglés): _[Auto-placement in grid layout - sizing rows in the implicit grid](/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement#sizing_rows_in_the_implicit_grid)_
 - Video tutorial (inglés): _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

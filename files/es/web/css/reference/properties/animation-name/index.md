@@ -44,7 +44,7 @@ animation-name: unset;
 
 ## Ejemplos
 
-Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+Ver ejemplos [CSS animations](/es/docs/Web/CSS/Guides/Animations/Using).
 
 ## Especificaciones
 
@@ -56,5 +56,5 @@ Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 
 ## Ver también
 
-- [Usando CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando CSS animations](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

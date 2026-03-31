@@ -10,7 +10,7 @@ original_slug: Web/CSS/::-webkit-slider-runnable-track
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-webkit-slider-runnable-track`** representa el trayecto (la ranura sobre la que se desliza el indicador) de un {{HTMLElement("input")}} con `type="range"`.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS **`::-webkit-slider-runnable-track`** representa el trayecto (la ranura sobre la que se desliza el indicador) de un {{HTMLElement("input")}} con `type="range"`.
 
 ## Especificaciones
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:hover
 original_slug: Web/CSS/:hover
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:hover`** de [CSS](/es/docs/Web/CSS) coincide cuando el usuario interactúa con un elemento con un dispositivo señalador, pero no necesariamente lo activa. Generalmente se activa cuando el usuario se desplaza sobre un elemento con el cursor (puntero del mouse).
 
 ```css
 /* Selecciona cualquier elemento <a> cuando está "mantenido (hovered)" */
@@ -54,7 +54,7 @@ a:hover {
 Puede usar la pseudoclase `:hover` para crear una galería de imágenes con imágenes de tamaño completo que solo se muestran cuando el mouse se mueve sobre una miniatura. Vea [esta demostración](css-gallery.zip) para una posible nota.
 
 > [!NOTE]
-> Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/:checked).
+> Para un efecto análogo, pero basado en la pseudo-clase [`:checked`](/es/docs/Web/CSS/%3Achecked) (aplicado a radioboxes ocultos), vea [esta demostración](css-checked-gallery.zip), tomada de la página de referencia [:checked](/es/docs/Web/CSS/Reference/Selectors/:checked).
 
 ## Especificaciones
 
