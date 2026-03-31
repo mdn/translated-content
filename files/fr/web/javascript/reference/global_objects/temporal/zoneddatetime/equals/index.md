@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
-La méthode **`equals()`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne `true` si cette date et heure est équivalente en valeur à une autre date et heure (sous une forme convertible par {{JSxRef("Temporal.ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}), et `false` sinon. Elles sont comparées à la fois par leurs valeurs d'instant, leurs fuseaux horaires et leurs calendriers, donc deux dates et heures provenant de calendriers ou de fuseaux horaires différents peuvent être considérées comme égales par {{JSxRef("Temporal.ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}} mais pas par `equals()`.
+La méthode **`equals()`** des instances de {{JSxRef("Temporal.ZonedDateTime")}} retourne `true` si cette date et heure est équivalente en valeur à une autre date et heure (sous une forme convertible par {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}), et `false` sinon. Elles sont comparées à la fois par leurs valeurs d'instant, leurs fuseaux horaires et leurs calendriers, donc deux dates et heures provenant de calendriers ou de fuseaux horaires différents peuvent être considérées comme égales par {{JSxRef("Temporal/ZonedDateTime/compare", "Temporal.ZonedDateTime.compare()")}} mais pas par `equals()`.
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ equals(other)
 ### Paramètres
 
 - `other`
-  - : Une chaîne de caractères, un objet ou une instance de {{JSxRef("Temporal.ZonedDateTime")}} représentant l'autre date et heure à comparer. Il est converti en un objet `Temporal.ZonedDateTime` en utilisant le même algorithme que {{JSxRef("Temporal.ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
+  - : Une chaîne de caractères, un objet ou une instance de {{JSxRef("Temporal.ZonedDateTime")}} représentant l'autre date et heure à comparer. Il est converti en un objet `Temporal.ZonedDateTime` en utilisant le même algorithme que {{JSxRef("Temporal/ZonedDateTime/from", "Temporal.ZonedDateTime.from()")}}.
 
 ### Valeur de retour
 
