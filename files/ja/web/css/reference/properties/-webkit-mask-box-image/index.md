@@ -52,10 +52,10 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 ## 公式定義
 
-- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#initial_value): `none`
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値): `none`
 - 適用対象: すべての要素
 - [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance): いいえ
-- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#computed_value): 指定どおり
+- [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値): 指定どおり
 
 ## 形式文法
 
