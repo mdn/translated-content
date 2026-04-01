@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-与其他全局对象不同的是，`Math` 不是一个构造函数，不可以与 [`new` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)同时使用，也不可以将 `Math` 对象作为函数调用。`Math` 的所有属性与方法都是静态的。
+与其他全局对象不同的是，`Math` 不是构造函数，不可以与 [`new` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)一起使用，也不可以将 `Math` 对象作为函数调用。`Math` 的所有属性与方法都是静态的。
 
 > [!NOTE]
 > `Math` 的许多函数的精度是*取决于具体实现的*。
