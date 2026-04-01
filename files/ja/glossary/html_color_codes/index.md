@@ -17,7 +17,7 @@ Wikipedia 上の [ウェブカラー](https://ja.wikipedia.org/wiki/%E3%82%A6%E3
 
 ### 技術資料
 
-MDN で ウェブカラーを調べるには、CSS {{cssxref("&lt;color&gt;")}}値のリファレンスドキュメント、またはより具体的には以下を参照してください。
+MDN でウェブカラーを調べるには、CSS {{cssxref("&lt;color&gt;")}} 値のリファレンスドキュメント、またはより具体的には以下を参照してください。
 
 - 色名: {{cssxref("&lt;named-color&gt;")}}
 - 16 進数表記: {{cssxref("&lt;hex-color&gt;")}}
