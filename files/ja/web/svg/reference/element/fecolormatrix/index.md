@@ -2,7 +2,7 @@
 title: <feColorMatrix>
 slug: Web/SVG/Reference/Element/feColorMatrix
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 62476ac3c21417ad3a07e12c9f8eaf92cea8311d
 ---
 
 **`<feColorMatrix>`** は [SVG](/ja/docs/Web/SVG) のフィルター要素で、変換行列に基づいて色を変化させます。すべてのピクセルのカラー値 `[R,G,B,A]` は 5 x 5 の行列で[行列乗算](https://en.wikipedia.org/wiki/Matrix_multiplication)され、新しい色 `[R',G',B',A']` を生成します。
@@ -46,7 +46,7 @@ New red = [ r1 * old red ] + [ r2 * old green ] + [ r3 * old Blue ] + [ r4 * old
 
 例えば、真っ黒な画像をより赤くしたい場合は、 `r5` を正の実数 _x_ とすれば、新しい画像の各画素の赤さを _x_ だけ増加させます。
 
-**単位行列** は次のようになります。
+**恒等行列** は次のようになります。
 
 ```plain
      R G B A W
@@ -66,9 +66,10 @@ A' | 0 0 0 1 0 |
 
 ## 属性
 
-- {{SVGAttr("in")}}: 値には、`SourceGraphic`、`SourceAlpha`、`BackgroundImage`、`BackgroundAlpha`、`FillPaint`、`StrokePaint`、または別のフィルタープリミティブへの参照が指定できます。
+- {{SVGAttr("in")}}
 - {{SVGAttr("type")}}: 値には、`matrix`、`saturate`、`hueRotate`、および `luminanceToAlpha` が指定できます。
 - {{SVGAttr("values")}}: `type` 属性で設定した行列型の値です。
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM インターフェイス
 
@@ -97,7 +98,7 @@ A' | 0 0 0 1 0 |
   <use href="#circles" />
   <text x="70" y="50">参照</text>
 
-  <!-- 等値行列 -->
+  <!-- 恒等行列 -->
   <filter id="colorMeTheSame">
     <feColorMatrix
       in="SourceGraphic"
@@ -111,7 +112,7 @@ A' | 0 0 0 1 0 |
     href="#circles"
     transform="translate(0 70)"
     filter="url(#colorMeTheSame)" />
-  <text x="70" y="120">等値行列</text>
+  <text x="70" y="120">恒等行列</text>
 
   <!-- RGB を組み合わせて緑成分へ -->
   <filter id="colorMeGreen">
@@ -172,7 +173,7 @@ A' | 0 0 0 1 0 |
 
 ## 関連情報
 
-- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルタープリミティブ属性)
+- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルタープリミティブ属性（プレゼンテーション属性）)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
