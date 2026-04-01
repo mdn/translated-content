@@ -25,7 +25,7 @@ Dónde :
     Representa la ubicación del recurso a importar. La _url_ puede ser absoluta o relativa.
 
 - _list-of-media-queries_
-  - : Es una lista separada por comas de [consultas de medios (media query)](/es/docs/Web/CSS/Guides/Media_queries/Using) que condicionan la aplicación de las reglas CSS definidas en el enlace _url_. Si el navegador no soporta cualquiera de estos [consultas de medios (media query)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries), ni siquiera cargará el recurso vinculado.
+  - : Es una lista separada por comas de [consultas de medios (media query)](/es/docs/Web/CSS/Guides/Media_queries/Using) que condicionan la aplicación de las reglas CSS definidas en el enlace _url_. Si el navegador no soporta cualquiera de estos [consultas de medios (media query)](/es/docs/Web/CSS/Guides/Media_queries/Using), ni siquiera cargará el recurso vinculado.
 
 ## Ejemplos
 

@@ -264,6 +264,6 @@ Translada un elemento a lo largo del eje Y.
 
 ## Véase También
 
-- [Uso de transformaciones](/es/docs/Web/CSS/Guides/Transforms/Using)[CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Uso de transformaciones](/es/docs/Web/CSS/Guides/Transforms/Using)[CSS](/es/docs/Web/CSS/Guides/Transforms/Using)
 - Tipos de datos [\<translation-value>](/es/docs/translation-value)
 - [Complemento de transformación 2D para jQuery](http://plugins.jquery.com/project/jquery-transform)en navegador-cruzado.

@@ -8,7 +8,7 @@ original_slug: Web/CSS/animation
 
 La propiedad `animation` de [CSS](/es/docs/Web/CSS) es una [propiedad abreviada (shorthand property)](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para {{ cssxref("animation-name") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-timing-function") }}, {{ cssxref("animation-delay") }}, {{ cssxref("animation-iteration-count") }} y {{ cssxref("animation-direction") }}.
 
-La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/Guides/Transitions/Using#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+La [lista de propiedades CSS que pueden ser animadas](/es/docs/Web/CSS/Guides/Transitions/Using#propiedades_que_pueden_ser_animadas)está disponible; cabe señalar que estas son las mismas propiedades soportadas por [CSS transitions](/es/docs/Web/CSS/Guides/Transitions/Using).
 
 {{cssinfo}}
 
