@@ -1,46 +1,72 @@
 ---
-title: Document.createElement()
+title: Document：createElement() 方法
+short-title: createElement()
 slug: Web/API/Document/createElement
+l10n:
+  sourceCommit: ff9dd829bb17d272b7d14c41a442f2c2e3680521
 ---
 
 {{APIRef("DOM")}}
 
-在 [HTML](/zh-CN/docs/Web/HTML) 文档中，**`Document.createElement()`** 方法用于创建一个由标签名称 _tagName_ 指定的 HTML 元素。如果用户代理无法识别 _tagName_，则会生成一个未知 HTML 元素 {{domxref("HTMLUnknownElement")}}。
+{{domxref("Document")}} 接口的 **`createElement()`** 方法用于创建一个指定 `localName` 的 {{domxref("HTMLElement")}}。
+
+如果 `localName` 无法被识别，该方法将创建一个 {{domxref("HTMLUnknownElement")}}。
 
 ## 语法
 
 ```js-nolint
-createElement(tagName)
-createElement(tagName, options)
+createElement(localName)
+createElement(localName, options)
 ```
 
 ### 参数
 
-- _tagName_
-  - : 指定要创建元素类型的字符串，创建元素时的 {{domxref("Node.nodeName", "nodeName")}} 使用 `tagName` 的值为初始化，该方法不允许使用限定名称 (如："html:a")，在 HTML 文档上调用 `createElement()` 方法创建元素之前会将`tagName` 转化成小写，在 Firefox、Opera 和 Chrome 内核中，`createElement(null)` 等同于 `createElement("null")`
-- _options_{{optional_inline}}
-  - : 一个可选的参数 `ElementCreationOptions` 是包含一个属性名为 `is` 的对象，该对象的值是用 `customElements.define()` 方法定义过的一个自定义元素的标签名。为了向前兼容较老版本的 [Custom Elements specification](https://www.w3.org/TR/custom-elements/), 有一些浏览器会允许你传一个值为自定义元素的标签名的字符串作为该参数的值。可以参考本页下方的 [Web component 示例](#web_component_示例)。
+- `localName`
+  - : 一个字符串，指定要创建的元素类型。不要使用限定名称（如 "html:a"）调用此方法。在 HTML 文档上调用时，`createElement()` 会在创建元素之前将 `localName` 转换为小写。在 Firefox、Opera 和 Chrome 中，`createElement(null)` 的效果与 `createElement("null")` 相同。
+- `options` {{Optional_Inline}}
+  - : 一个包含以下可选属性的对象（注意，`is` 和 `customElementRegistry` 只能设置其中一个）：
+    - `is` {{Optional_Inline}}
+      - : 一个字符串，定义先前使用 {{domxref("CustomElementRegistry/define", "customElements.define()")}} 定义的自定义元素的标签名。新元素将被赋予一个 `is` 属性，其值为自定义元素的标签名。详见 [Web component 示例](#web_component_示例)。
+    - `customElementRegistry` {{Optional_Inline}}
+      - : 一个 {{domxref("CustomElementRegistry")}}，用于设置自定义元素的[作用域自定义元素注册表](/zh-CN/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)。
 
 ### 返回值
 
-新建的元素（{{domxref("Element")}}）。
+新的 {{domxref("Element")}}。
+
+> [!NOTE]
+> 如果文档是 {{domxref("HTMLDocument", "HTMLDocument", "", "1")}}，则返回新的 {{domxref("HTMLElement", "HTMLElement", "", "1")}}，这是最常见的情况。否则返回新的 {{domxref("Element","Element","","1")}}。
+
+### 异常
+
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : 如果 [`localName`](#localname) 值不是有效的元素名称，则抛出此异常。如果字符串长度至少为 1 且满足以下条件，则为有效的元素名称：
+    - 以字母字符开头，且不包含 ASCII 空白字符、`NULL`、`/` 或 `>`（分别为 U+0000、U+002F 或 U+003E）。
+    - 以 `:`（U+003A）、`_`（U+005F）或 U+0080 到 U+10FFFF 范围内的任何字符开头，_并且_ 其余码点仅包含这些相同的字符以及 ASCII 字母数字字符、`-`（U+002D）和 `.`（U+002E）。
+
+    > [!NOTE]
+    > 早期版本的规定更为严格，要求 `localName` 必须是有效的 [XML 名称](https://www.w3.org/TR/xml/#dt-name)。
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : 如果同时指定了 [`is`](#is) 和 [`customElementRegistry`](#customelementregistry) 选项，则抛出此异常。
 
 ## 示例
 
 ### 基础示例
 
-#### HTML
+创建一个新的 `<div>` 并将其插入到 ID 为 `div1` 的元素之前。
 
-创建一个新的 `<div>` 并且插入到 ID 为“`div1`”的元素前。
+#### HTML
 
 ```html
 <!doctype html>
-<html>
+<html lang="zh-CN">
   <head>
-    <title>||Working with elements||</title>
+    <meta charset="UTF-8" />
+    <title>操作元素</title>
   </head>
   <body>
-    <div id="div1">The text above has been created dynamically.</div>
+    <div id="div1">上面的文本是动态创建的。</div>
   </body>
 </html>
 ```
@@ -52,14 +78,14 @@ document.body.onload = addElement;
 
 function addElement() {
   // 创建一个新的 div 元素
-  let newDiv = document.createElement("div");
+  const newDiv = document.createElement("div");
   // 给它一些内容
-  let newContent = document.createTextNode("Hi there and greetings!");
-  // 添加文本节点 到这个新的 div 元素
+  const newContent = document.createTextNode("你好！欢迎使用！");
+  // 将文本节点添加到新的 div 元素中
   newDiv.appendChild(newContent);
 
-  // 将这个新的元素和它的文本添加到 DOM 中
-  let currentDiv = document.getElementById("div1");
+  // 将新元素及其文本添加到 DOM 中
+  const currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
 }
 ```
@@ -68,45 +94,34 @@ function addElement() {
 
 ### Web component 示例
 
-以下示例片段取自我们的 expanding-list-web-component 示例 (实时查看)。在这个案例中，我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}.
+以下示例片段取自我们的 expanding-list-web-component 示例（[实时查看](https://mdn.github.io/dom-examples/web-components/expanding-list-web-component/)）。在这个案例中，我们的自定义元素继承了以 {{htmlelement("ul")}} 元素为代表的 {{domxref("HTMLUListElement")}}。
 
 ```js
 // 为新元素创建一个类
 class ExpandingList extends HTMLUListElement {
   constructor() {
-    // Always call super first in constructor
+    // 构造函数中始终首先调用 super
     super();
 
-    // constructor definition left out for brevity
-    ...
+    // 构造函数定义省略
+    // …
   }
 }
 
 // 定义新元素
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 如果我们想以函数的方式创建此元素的实例，则可以使用以下方式调用：
 
 ```js
-let expandingList = document.createElement("ul", { is: "expanding-list" });
+const expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
-新元素将被赋予`is`属性，其值为自定义元素的标签名称。
+新元素将被赋予 `is` 属性，其值为自定义元素的标签名称。
 
 > [!NOTE]
-> 为了兼容之前版本的 [Custom Elements specification](https://www.w3.org/TR/custom-elements/) 规范，某些浏览器将允许你在此处传递字符串而不是对象，其中字符串的值是自定义元素的标记名。
-
-## 注意
-
-- 在一个 [XUL](/zh-CN/docs/Mozilla/Tech/XUL) 文档中，该方法创建指定的 XUL 元素。在其他文档中，它创建一个命名空间 URI 为 null 的元素，这时，新元素会继承文档的命名空间。
-- 若要显式指定元素的命名空间 URI，请使用 [`document.createElementNS()`](/zh-CN/docs/Web/API/Document/createElementNS)。
-- 当在一个被标记为 HTML 文档的文档对象上执行时，createElement() 优先将参数转换为小写。
-- 当创建一个带限制条件的元素时，请使用{{ domxref("document.createElementNS()") }}。
-- Gecko 2.0 之前，quirks 模式下 tagName 可以包含尖括号 (<和>)；从 Gecko2.0 开始，该方法在 quirks 模式和标准模式下表现一致。
-- 从 Gecko 19.0 开始， `createElement(null)` 和 `createElement("null")` 相同。Opera 也会将 null 字符串化，但是 Chrome 和 IE 都会抛出错误。
-- 从 Gecko 22.0 开始，当参数为"bgsounds", "multicol", 或"image"时， `createElement()` 不再使用 {{domxref("HTMLSpanElement")}} 接口，参数为 "bgsound" 和 "multicol" 时，使用 `HTMLUnknownElement`，为“image”时使用{{domxref("HTMLElement")}} `HTMLElement`。
-- `createElement` 的 Gecko 实现不遵循 XUL 和 XHTML 的 DOM 说明文档：创建元素的 `localName` 和 `namespaceURI` 不会被设置为 `null`。更多细节详见 [Firefox bug 280692](https://bugzil.la/280692)。
+> 为了兼容之前版本的 [Custom Elements specification](https://www.w3.org/TR/custom-elements/) 规范，某些浏览器允许在此处传递字符串而不是对象，其中字符串的值是自定义元素的标签名。
 
 ## 规范
 
@@ -116,11 +131,11 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("Node.removeChild()")}}
 - {{domxref("Node.replaceChild()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.hasChildNodes()")}}
-- {{domxref("document.createElementNS()")}} — 在创建元素时，明确指定元素的命名空间 URI。
+- {{domxref("document.createElementNS()")}} — 在创建元素时明确指定元素的命名空间 URI。
