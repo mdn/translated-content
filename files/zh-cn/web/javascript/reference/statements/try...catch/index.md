@@ -73,8 +73,8 @@ catch (e) console.log(e);
 try {
   throw new TypeError("哦豁");
 } catch ({ name, message }) {
-  console.log(name); // “TypeError”
-  console.log(message); // “哦豁”
+  console.log(name); // "TypeError"
+  console.log(message); // "哦豁"
 }
 ```
 
@@ -137,7 +137,7 @@ try {
 }
 ```
 
-控制流语句（`return`、`throw`、`break`、`continue`）在 `finally` 块中将“覆盖” `try` 块或 `catch` 块的任何正常完成值。在此示例中，`try` 块尝试返回 1，但在返回之前，控制流已转移到 `finally` 块，因此 `finally` 块的返回值将被返回。
+控制流语句（`return`、`throw`、`break`、`continue`）在 `finally` 块中将"覆盖" `try` 块或 `catch` 块的任何正常完成值。在此示例中，`try` 块尝试返回 1，但在返回之前，控制流已转移到 `finally` 块，因此 `finally` 块的返回值将被返回。
 
 ```js
 function doIt() {
@@ -172,7 +172,7 @@ try {
 
 ### 条件捕获块
 
-你可以通过将 `try...catch` 块与 `if...else if...else` 结构组合起来，创建“条件 `catch` 块”。例如：
+你可以通过将 `try...catch` 块与 `if...else if...else` 结构组合起来，创建"条件 `catch` 块"。例如：
 
 ```js
 try {
@@ -232,8 +232,8 @@ try {
 }
 
 // 输出：
-// “finally”
-// “外层” “哦豁”
+// "finally"
+// "外层" "哦豁"
 ```
 
 现在，如果我们已经在内部的 `try` 块中通过添加 `catch` 块捕获了异常：
@@ -252,8 +252,8 @@ try {
 }
 
 // 输出：
-// “内层” “哦豁”
-// “最终”
+// "内层" "哦豁"
+// "最终"
 ```
 
 现在，让我们重新抛出错误。
@@ -273,40 +273,75 @@ try {
 }
 
 // 输出：
-// “内层” “哦豁”
-// “最终”
-// “外层” “哦豁”
+// "内层" "哦豁"
+// "最终"
+// "外层" "哦豁"
 ```
 
-任何特定的异常只会被直接包裹它的 `catch` 块捕获一次，除非该异常被重新抛出。当然，如果在“内部”代码块中触发了任何新的异常（因为 `catch` 块中的代码可能会执行某些操作并抛出异常），这些异常将由外部的 `catch` 块捕获。
+任何特定的异常只会被直接包裹它的 `catch` 块捕获一次，除非该异常被重新抛出。当然，如果在"内部"代码块中触发了任何新的异常（因为 `catch` 块中的代码可能会执行某些操作并抛出异常），这些异常将由外部的 `catch` 块捕获。
+
+### 使用 finally 进行资源清理
+
+以下示例展示了 `finally` 块的一个用例。代码打开一个文件，然后执行使用该文件的语句；`finally` 块确保文件在使用后始终关闭，即使抛出了异常。
+
+```js
+openMyFile();
+try {
+  // 占用资源
+  writeMyFile(theData);
+} finally {
+  closeMyFile(); // 始终关闭资源
+  // 任何未捕获的异常都会在这里被延迟处理
+}
+```
+
+同样，`try` 块中任何 `return` 语句的效果都会在 `finally` 块结束后才生效，尽管返回值表达式是在进入 `finally` 块之前计算的。
+
+```js
+function safeWriteMyFile() {
+  openMyFile();
+  try {
+    return writeMyFile(theData); // 函数调用被求值
+  } finally {
+    closeMyFile(); // 始终关闭资源
+    // return 在这里被延迟
+  }
+}
+```
 
 ### 从 finally 块返回
 
-如果 `finally` 块返回一个值，这个值将成为整个 `try-catch-finally` 语句的返回值，而不管 `try` 和 `catch` 块中的 `return` 语句。这包括 `catch` 块中抛出的异常。
+以下示例说明了 `finally` 块中的控制流语句的行为。当控制流通过第一个 `return` 语句退出 `try` 块时，返回值表达式（`order.sort()`）在进入 `finally` 块之前被计算，函数计划在 `finally` 块执行完毕后返回该值。然而，`finally` 块中的 `return` 语句会覆盖前一个 `return` 语句的效果，包括其返回值。
 
 ```js
-(() => {
+function doIt() {
+  const order = ["z"];
   try {
-    try {
-      throw new Error("哦豁");
-    } catch (ex) {
-      console.error("内层", ex.message);
-      throw ex;
-    } finally {
-      console.log("最终");
-      return;
-    }
-  } catch (ex) {
-    console.error("外层", ex.message);
+    order.push("try");
+    return order.sort(); // "z" 现在在 "try" 之后
+  } finally {
+    order.push("finally");
+    return order;
   }
-})();
-
-// 输出：
-// “内层” “哦豁”
-// “最终”
+}
+doIt();
+// 返回 ["try", "z", "finally"]，而不是 ["finally", "try", "z"] 或 ["try", "z"]
 ```
 
-外层的“哦豁”不会被抛出，因为 `finally` 块中的 `return` 语句将控制流转移到外部。同样的规则也适用于 `catch` 块中返回的值。
+同样的逻辑也适用于其他控制流语句。在这里，函数首先计划抛出值 `"catch"`，但最终返回值 `"finally"`。
+
+```js
+function doIt() {
+  try {
+    throw "catch";
+  } finally {
+    return "finally";
+  }
+}
+doIt(); // 返回 "finally"
+```
+
+通常不建议在 `finally` 块中使用控制流语句。请只将其用于清理代码。
 
 ## 规范
 
