@@ -5,7 +5,7 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
+La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/conflicting/Web/API/Document_Object_Model).
 
 El árbol DOM incluye elementos como {{HTMLElement("body")}} y {{HTMLElement("table")}}, entre [muchos otros](/es/docs/Web/HTML/Reference/Elements). Proporciona funcionalidad globalmente al documento, como obtener la URL de la página y crear nuevos elementos en el documento.
 
@@ -428,13 +428,13 @@ Puede detectar estos eventos usando `addEventListener()` o asignando un detector
 ### Eventos de transición
 
 - {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Se activa cuando se cancela una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}}.
+  - : Se activa cuando se cancela una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitioncancel", "ontransitioncancel")}}.
 - {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Se activa cuando se completa una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}}.
+  - : Se activa cuando se completa una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionend", "ontransitionend")}}.
 - {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Se activa cuando se crea por primera vez una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}.
+  - : Se activa cuando se crea por primera vez una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionrun", "ontransitionrun")}}.
 - {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Se activa cuando realmente ha comenzado una [transición de CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}.
+  - : Se activa cuando realmente ha comenzado una [transición de CSS](/es/docs/Web/CSS/Guides/Transitions/Using). También disponible a través de la propiedad {{DOMxRef("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}}.
 
 ## Extensiones no estándar {{Non-standard_Inline}}
 

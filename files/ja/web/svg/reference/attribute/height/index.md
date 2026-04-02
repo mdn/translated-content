@@ -2,10 +2,10 @@
 title: height
 slug: Web/SVG/Reference/Attribute/height
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
 ---
 
-**`height`** 属性は、ユーザー座標系における要素の垂直方向の長さを定義します。
+**`height`** 属性は、ユーザー座標系における要素の垂直方向の寸法を定義します。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -58,7 +58,7 @@ svg {
 
 ## feBlend
 
-{{SVGElement('feBlend')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feBlend')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -77,7 +77,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -89,7 +89,7 @@ svg {
 
 ## feColorMatrix
 
-{{SVGElement('feColorMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feColorMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -108,7 +108,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -120,7 +120,7 @@ svg {
 
 ## feComponentTransfer
 
-{{SVGElement('feComponentTransfer')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feComponentTransfer')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -139,7 +139,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ svg {
 
 ## feComposite
 
-{{SVGElement('feComposite')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feComposite')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -170,7 +170,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -182,7 +182,7 @@ svg {
 
 ## feConvolveMatrix
 
-{{SVGElement('feConvolveMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feConvolveMatrix')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -201,7 +201,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -213,7 +213,7 @@ svg {
 
 ## feDiffuseLighting
 
-{{SVGElement('feDiffuseLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feDiffuseLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -232,7 +232,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ svg {
 
 ## feDisplacementMap
 
-{{SVGElement('feDisplacementMap')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feDisplacementMap')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -263,7 +263,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -275,7 +275,7 @@ svg {
 
 ## feDropShadow
 
-{{SVGElement('feDropShadow')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feDropShadow')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -294,7 +294,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -306,7 +306,7 @@ svg {
 
 ## feFlood
 
-{{SVGElement('feFlood')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feFlood')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -325,7 +325,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -337,7 +337,7 @@ svg {
 
 ## feGaussianBlur
 
-{{SVGElement('feGaussianBlur')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feGaussianBlur')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -356,7 +356,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -368,7 +368,7 @@ svg {
 
 ## feImage
 
-{{SVGElement('feImage')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feImage')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -387,7 +387,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -399,7 +399,7 @@ svg {
 
 ## feMerge
 
-{{SVGElement('feMerge')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feMerge')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -418,7 +418,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -430,7 +430,7 @@ svg {
 
 ## feMorphology
 
-{{SVGElement('feMorphology')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feMorphology')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -449,7 +449,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -461,7 +461,7 @@ svg {
 
 ## feOffset
 
-{{SVGElement('feOffset')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feOffset')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -480,7 +480,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -492,7 +492,7 @@ svg {
 
 ## feSpecularLighting
 
-{{SVGElement('feSpecularLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feSpecularLighting')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -511,7 +511,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -523,7 +523,7 @@ svg {
 
 ## feTile
 
-{{SVGElement('feTile')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feTile')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -542,7 +542,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -554,7 +554,7 @@ svg {
 
 ## feTurbulence
 
-{{SVGElement('feTurbulence')}} の場合、 `height` はプリミティブの描画領域の垂直方向の長さを定義します。
+{{SVGElement('feTurbulence')}} の場合、 `height` はプリミティブの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -573,7 +573,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -585,7 +585,7 @@ svg {
 
 ## filter
 
-{{SVGElement('filter')}} の場合、 `height` はフィルターの描画領域の垂直方向の長さを定義します。
+{{SVGElement('filter')}} の場合、 `height` はフィルターの描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -604,7 +604,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>120%</code></td>
     </tr>
     <tr>
@@ -616,7 +616,7 @@ svg {
 
 ## foreignObject
 
-{{SVGElement('foreignObject')}} の場合、 `height` は参照先の文書の描画領域の垂直方向の長さを定義します。
+{{SVGElement('foreignObject')}} の場合、 `height` は参照先の文書の描画領域の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -636,7 +636,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>
@@ -651,7 +651,7 @@ svg {
 
 ## image
 
-{{SVGElement('image')}} の場合、 `height` は画像の垂直方向の長さを定義します。
+{{SVGElement('image')}} の場合、 `height` は画像の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -671,7 +671,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（画像の内在的なtreated as the intrinsic height of the image)</td>
     </tr>
     <tr>
@@ -686,7 +686,7 @@ svg {
 
 ## mask
 
-{{SVGElement('mask')}} の場合、 `height` は効果の領域の垂直方向の長さを定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
+{{SVGElement('mask')}} の場合、 `height` は効果の領域の垂直方向の寸法を定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
 
 <table class="properties">
   <tbody>
@@ -705,7 +705,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>120%</code></td>
     </tr>
     <tr>
@@ -717,7 +717,7 @@ svg {
 
 ## pattern
 
-{{SVGElement('pattern')}} の場合、 `height` はタイルパターンの垂直方向の長さを定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
+{{SVGElement('pattern')}} の場合、 `height` はタイルパターンの垂直方向の寸法を定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
 
 <table class="properties">
   <tbody>
@@ -730,7 +730,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -742,7 +742,7 @@ svg {
 
 ## rect
 
-{{SVGElement('rect')}} の場合、 `height` は矩形の垂直方向の長さを定義します。
+{{SVGElement('rect')}} の場合、 `height` は矩形の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -762,7 +762,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>
@@ -777,7 +777,7 @@ svg {
 
 ## svg
 
-{{SVGElement('svg')}} の場合、 `height` は SVG ビューポートの描画領域の垂直方向の長さを定義します。
+{{SVGElement('svg')}} の場合、 `height` は SVG ビューポートの描画領域の垂直方向の寸法を定義します。
 
 > [!NOTE]
 > HTML 文書内の {{SVGAttr('viewBox')}} 属性と `height` 属性の両方が省略された場合、 [svg 要素は高さ `150px` で表示されます](https://svgwg.org/specs/integration/#svg-css-sizing)。
@@ -800,7 +800,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code> (treated as <code>100%</code>)</td>
     </tr>
     <tr>
@@ -815,7 +815,7 @@ svg {
 
 ## use
 
-{{SVGElement('use')}} の場合、 `height` は参照先要素の垂直方向の長さを定義します。
+{{SVGElement('use')}} の場合、 `height` は参照先要素の垂直方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -835,7 +835,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>

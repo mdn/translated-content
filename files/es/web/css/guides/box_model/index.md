@@ -50,9 +50,9 @@ original_slug: Web/CSS/CSS_box_model
 
 ## Guías y Herramientas
 
-- [Introduction to the CSS box model](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Introduction to the CSS box model](/es/docs/Web/CSS/Guides/Box_model/Introduction)
   - : Explica uno de los conceptos fundamentales de CSS, el modelo de caja: describe el significado del margen, del relleno, así como de las diferentes zonas de una caja.
-- [Mastering margin collapsing](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Mastering margin collapsing](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - : En determinados casos dos márgenes adyacentes se convierten en uno. Este artículo explica cuando sucede esto y cómo controlarlo.
 - [Box-shadow generator](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
   - : Una herramienta interactiva que permite crear sombras y proporciona la síntaxis necesaria para generar dichas sombras usando la propiedad {{cssxref("box-shadow")}}.

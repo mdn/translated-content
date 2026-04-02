@@ -66,10 +66,10 @@ La propiedad `border-radius` no se aplica a los elementos de tabla cuando {{cssx
 
 Esta propiedad es una abreviatura de las siguientes propiedades CSS:
 
-- [`border-top-left-radius`](/es/docs/Web/CSS/border-top-left-radius)
-- [`border-top-right-radius`](/es/docs/Web/CSS/border-top-right-radius)
-- [`border-bottom-right-radius`](/es/docs/Web/CSS/border-bottom-right-radius)
-- [`border-bottom-left-radius`](/es/docs/Web/CSS/border-bottom-left-radius)
+- [`border-top-left-radius`](/es/docs/Web/CSS/Reference/Properties/border-top-left-radius)
+- [`border-top-right-radius`](/es/docs/Web/CSS/Reference/Properties/border-top-right-radius)
+- [`border-bottom-right-radius`](/es/docs/Web/CSS/Reference/Properties/border-bottom-right-radius)
+- [`border-bottom-left-radius`](/es/docs/Web/CSS/Reference/Properties/border-bottom-left-radius)
 
 ## Sintaxis
 

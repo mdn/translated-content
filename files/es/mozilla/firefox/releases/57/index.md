@@ -26,7 +26,7 @@ _No hay ningún cambio._
 
 ### CSS
 
-- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Progressive_web_apps/Manifest#display).
+- Ahora admitimos los valores `minimal-ui` y `standalone` de la consulta [`display-mode`](/es/docs/Web/CSS/Reference/At-rules/@media/display-mode) ([Error 1369815 en Firefox](https://bugzil.la/1369815)). Consúltese también el [campo de manifiesto de aplicación web `display`](/es/docs/Web/Progressive_web_apps/Manifest#display).
 - Se corrigió un problema que causaba que la notación abreviada de la cuadrícula quedara restablecida al utilizar {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} ([Error 1387410 en Firefox](https://bugzil.la/1387410)).
 - Se ha eliminado la preferencia `layout.css.clip-path-shapes.enabled`, que permitía activar o desactivar la compatibilidad de {{cssxref("&lt;basic-shape&gt;")}} con {{cssxref("clip-path")}} ([Error 1399767 en Firefox](https://bugzil.la/1399767)).
 

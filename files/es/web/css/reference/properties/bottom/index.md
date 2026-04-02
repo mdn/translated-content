@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
+La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/Reference/Properties/position). No tiene efecto en elementos no posicionados.
 
 {{InteractiveExample("CSS Demo: bottom")}}
 
@@ -62,7 +62,7 @@ bottom: 20px;
 
 El efecto de la propiedad `bottom` depende de cómo esté posicionado el elemento (es decir, del valor de la propiedad {{cssxref("position")}}):
 
-- Cuando `position` se establece como `absolute` o `fixed`, la propiedad `bottom` especifica la distancia entre el borde exterior del [margen inferior](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) del elemento y el borde exterior del relleno inferior del bloque contenedor.
+- Cuando `position` se establece como `absolute` o `fixed`, la propiedad `bottom` especifica la distancia entre el borde exterior del [margen inferior](/es/docs/Web/CSS/Guides/Box_model/Introduction) del elemento y el borde exterior del relleno inferior del bloque contenedor.
 
 - Cuando `position` se establece en `relative`, la propiedad `bottom` especifica la distancia a la que se mueve el borde inferior del elemento con respecto a su posición normal.
 

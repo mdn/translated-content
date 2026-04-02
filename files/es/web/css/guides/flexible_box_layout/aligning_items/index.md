@@ -103,7 +103,7 @@ Una vez mas podemos cambiar nuestra `flex-direction` a `column` para ver como es
 > [!NOTE]
 > El valor `space-evenly` no está definido en las especificaciones de flexbox y la ultima adiccion a las especificaciones de Alineacion de cajas Box Alignment . El soporte del navegador para este valor no es tan bueno como el de los valores definidos en la especificación de flexbox.
 
-Revise la [documentacion para `justify-content` en MDN](/es/docs/Web/CSS/justify-content) para encontrar más detalles de todos sus valores y el soporte de los navegadores.
+Revise la [documentacion para `justify-content` en MDN](/es/docs/Web/CSS/Reference/Properties/justify-content) para encontrar más detalles de todos sus valores y el soporte de los navegadores.
 
 ## Alineando contenido en el eje principal
 
@@ -185,9 +185,9 @@ En este ejemplo en vivo, tenemos elementos flexibles, organizados simplemente en
 
 Al principio de este artículo, expliqué que las propiedades de alineación actualmente contenidas en la especificación de flexbox de Nivel 1 también se incluyen en el Nivel de Alineación de Casillas 3, que puede extender estas propiedades y valores en el futuro. Ya hemos visto un lugar donde esto ha sucedido, con la introducción del `space-evenly` para las propiedades de `align-content` y `justify-content`.
 
-El módulo de alineación de cuadro también incluye otros métodos para crear espacio entre elementos, como la función de `column-gap` y `ow-gap`, como se ve en el [Diseño de rejillas de CSS](/es/docs/Web/CSS/CSS_grid_layout). La inclusión de estas propiedades en la Alineación de cajas significa que en el futuro también deberíamos poder utilizar `column-gap` y `row-gap` tambien en diseños flexibles. Esto significará que no tendremos que usar márgenes para espaciar los elementos flexibles.
+El módulo de alineación de cuadro también incluye otros métodos para crear espacio entre elementos, como la función de `column-gap` y `ow-gap`, como se ve en el [Diseño de rejillas de CSS](/es/docs/Web/CSS/Guides/Grid_layout). La inclusión de estas propiedades en la Alineación de cajas significa que en el futuro también deberíamos poder utilizar `column-gap` y `row-gap` tambien en diseños flexibles. Esto significará que no tendremos que usar márgenes para espaciar los elementos flexibles.
 
-Mi sugerencia al explorar en profundidad la alineación de flexbox es hacerlo conjuntamente con la alineación en Diseño de rejillas. Ambas especificaciones utilizan las propiedades de alineación que se detallan en la especificación de Alineación de cajas. Puede ver cómo se comportan estas propiedades cuando se trabaja con una cuadrícula en el artículo de MDN [Alineación de cajas](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout) , y también he comparado cómo funciona la alineación en estas especificaciones en mi [Hoja de trucos de alineacion de cajas](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
+Mi sugerencia al explorar en profundidad la alineación de flexbox es hacerlo conjuntamente con la alineación en Diseño de rejillas. Ambas especificaciones utilizan las propiedades de alineación que se detallan en la especificación de Alineación de cajas. Puede ver cómo se comportan estas propiedades cuando se trabaja con una cuadrícula en el artículo de MDN [Alineación de cajas](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment) , y también he comparado cómo funciona la alineación en estas especificaciones en mi [Hoja de trucos de alineacion de cajas](https://rachelandrew.co.uk/css/cheatsheets/box-alignment).
 
 ## Ver también
 

@@ -57,6 +57,11 @@ original_slug: Web/CSS/-webkit-mask-box-image
 - 継承: しない
 - 計算値: 指定通り
 - アニメーションの種類: 離散
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): `none`
+- 適用対象: すべての要素
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): いいえ
+- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定どおり
+
 ## 形式文法
 
 {{CSSSyntaxRaw(`-webkit-mask-box-image = <mask-image-source> [ <mask-image-offset>{4} <mask-border-repeat>{1,2} ]`)}}

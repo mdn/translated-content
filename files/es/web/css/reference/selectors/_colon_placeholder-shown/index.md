@@ -6,7 +6,7 @@ original_slug: Web/CSS/:placeholder-shown
 
 {{SeeCompatTable}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Reference/Elements/input#attr-placeholder).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:placeholder-shown`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{htmlElement("input")}} o {{htmlElement("textarea")}} que esté mostrando actualmente el [texto de marcador de posición (placeholder)](/es/docs/Web/HTML/Reference/Elements/input#attr-placeholder).
 
 ```css
 /* Selecciona cualquier elemento con un placeholder activo */

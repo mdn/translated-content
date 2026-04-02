@@ -40,7 +40,7 @@ l10n:
 前回までの記事と同様に、JavaScript コンソールに配列の基礎となるコード例を[ブラウザーの開発者コンソール](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)に入力しながら学びましょう。
 
 > [!NOTE]
-> Scrimba の [Aside: Intro to arrays](https://scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn) scrim <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>は、例題の解説や知識を検査するための課題を交えた、配列に関する有益なインタラクティブな入門ガイドを提供しています。
+> Scrimba の [Aside: Intro to arrays](https://scrimba.com/the-frontend-developer-career-path-c0j/~06e?via=mdn) scrim <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>は、例題の解説や知識を検査するための課題を交えた、配列に関する有益なインタラクティブな入門ガイドを提供しています。
 
 ## 配列の作成
 

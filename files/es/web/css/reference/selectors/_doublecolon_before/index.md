@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::before
 original_slug: Web/CSS/::before
 ---
 
-En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
+En CSS, `::before` crea un [pseudoelemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido estético a un elemento, usando la propiedad {{cssxref("content")}}. Este elemento se muestra en línea con el texto de forma predeterminada.
 
 ```css
 /* Añade un corazón antes de los enlaces */
@@ -14,14 +14,14 @@ a::before {
 ```
 
 > [!NOTE]
-> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
 ## Sintaxis
 
 {{csssyntax}}
 
 > [!NOTE]
-> CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
+> CSS3 introdujo la notación `::before` (con doble dos puntos) para diferenciar [pseudo-clases](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) con [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Los navegadores aceptan `:before`, añadido en CSS2.
 
 ## Ejemplos
 

@@ -7,7 +7,7 @@ original_slug: Web/CSS/box-ordinal-group
 > [!WARNING]
 > Esta propiedad pertenece al borrador original del diseño o esquema de la caja CSS flexible, y ha sido reemplazada en borradores posteriores.
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información sobre qué usar en sustitución de esta propiedad.
+Ver [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para más información sobre qué usar en sustitución de esta propiedad.
 
 ## Resumen
 

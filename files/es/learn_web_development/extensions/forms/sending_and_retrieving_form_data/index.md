@@ -294,7 +294,7 @@ Dependiendo de lo que estés haciendo, hay algunos problemas de seguridad muy co
 
 Cross-Site Scripting (XSS) y Cross-Site Request Falsification (CSRF) son tipos comunes de ataques que se producen cuando se muestran los datos enviados por un usuario y que son devueltos a otro usuario para otro uso.
 
-XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy) . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
+XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy) . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
 
 Los ataques CSRF son similares a los ataques XSS porque comienzan de la misma manera - mediante la inyección de comandos de cliente en páginas Web - pero su objetivo es diferente. Los atacantes CSRF tratan de escalar privilegios de un usuario de mayores privilegios (por ejemplo, un administrador de sitio) para realizar una acción que no deberían ser capaces de hacer (por ejemplo, el envío de datos a un usuario no fiable).
 

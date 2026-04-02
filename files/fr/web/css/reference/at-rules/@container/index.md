@@ -2,11 +2,11 @@
 title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 6e46ba1a7ac7aa2268afd0ecd079f221ef6d9af4
+  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
-Les déclarations de style sont filtrées par une condition et appliquées au conteneur si la condition est vraie.
+Les déclarations de style sont filtrées par une condition et appliquées aux élément à l'intérieur du conteneur si la condition est vraie.
 La condition est évaluée lorsque la taille du conteneur interrogé, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement changent.
 
 La condition doit définir un ou les deux de {{CSSxRef("container-name")}} et `<container-query>`.
@@ -47,6 +47,15 @@ Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélecti
   }
 }
 
+/* Avec une requête d'ancrage */
+@container anchored(fallback: bottom) {
+  .infobox::before {
+    content: "▲";
+    bottom: 100%;
+    top: auto;
+  }
+}
+
 /* Avec un <container-name> et un <scroll-state> */
 @container sticky-heading scroll-state(stuck: top) {
   h2 {
@@ -76,9 +85,9 @@ Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélecti
   - : Définit un ou les deux de `<container-name>` et `<container-query>`.
     Les styles définis dans la `<stylesheet>` sont appliqués si la condition est `true`.
     - `<container-name>` {{Optional_Inline}}
-      - : Le nom du conteneur auquel les styles seront appliqués lorsque la requête est vraie, défini comme un identifiant ({{CSSxRef("&lt;ident&gt;")}}).
+      - : Le nom du conteneur à interroger&nbsp;; il est défini comme un {{CSSxRef("&lt;ident&gt;")}}. Si la requête est évaluée à `true`, les styles déclarés sont appliqués aux éléments descendants du conteneur.
     - `<container-query>` {{Optional_Inline}}
-      - : Un ensemble de fonctionnalités évaluées sur le conteneur interrogé lorsque la taille, le [`<style-feature>`](#requêtes_de_style_de_conteneur) ou l'état de défilement du conteneur changent.
+      - : Un ensemble de fonctionnalités évaluées sur le conteneur interrogé lorsque la taille, le [`<style-feature>`](#requêtes_de_style_de_conteneur), l'état de défilement, ou la position de repli appliquée en cas de modification du conteneur changent.
 
 ### Mots-clés logiques dans les requêtes de conteneur
 
@@ -133,7 +142,7 @@ Les détails sur l'utilisation et les restrictions de nommage sont décrits dans
 
 ### Descripteurs
 
-Les requêtes `<container-condition>` incluent les descripteurs de conteneur [size](#descripteurs_de_taille_de_conteneur) et [scroll-state](#descripteurs_détat_de_défilement_du_conteneur).
+Les requêtes `<container-condition>` incluent les descripteurs de conteneur [size](#descripteurs_de_taille_de_conteneur), [scroll-state](#descripteurs_détat_de_défilement_du_conteneur) et [anchored](#descripteurs_dancrage_du_conteneur).
 
 #### Descripteurs de taille de conteneur
 
@@ -164,14 +173,14 @@ Le `<container-condition>` peut inclure une ou plusieurs requêtes booléennes d
   - : Le {{CSSxRef("inline-size")}} du conteneur, exprimé en {{CSSxRef("length")}}.
 
 - `orientation`
-  - : L'[orientation](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation) du conteneur, soit `landscape`, soit `portrait`.
+  - : [L'orientation](/fr/docs/Web/CSS/Reference/At-rules/@media/orientation) du conteneur, soit `landscape`, soit `portrait`.
 
 - `width`
   - : La largeur du conteneur, exprimée en {{CSSxRef("length")}}.
 
 #### Descripteurs d'état de défilement du conteneur
 
-Les descripteurs d'état de défilement sont spécifiés dans le `<container-condition>` entre parenthèses après le mot-clé `scroll-state`, par exemple&nbsp;:
+Les descripteurs d'état de défilement sont définis dans le `<container-condition>` comme argument de la fonction `scroll-state()`, par exemple&nbsp;:
 
 ```css
 @container scroll-state(scrollable: top) {
@@ -318,7 +327,7 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
 
     Pour vérifier un conteneur avec une requête `stuck` différente de `none`, il doit avoir `position: sticky` et être dans un conteneur défilant. Si le test est réussi, les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur sticky.
 
-    Il est possible que deux valeurs d'axes opposés correspondent en même temps&nbsp;:
+    Il est possible que deux valeurs d'axes adjacents correspondent en même temps&nbsp;:
 
     ```css
     @container scroll-state((stuck: top) and (stuck: left)) {
@@ -341,6 +350,27 @@ Les mots-clés pris en charge pour les descripteurs d'état de défilement inclu
       /* … */
     }
     ```
+
+#### Descripteurs d'ancrage du conteneur
+
+Les descripteurs d'ancrage du conteneur sont définis dans le `<container-condition>` comme argument de la fonction `anchored()`, par exemple&nbsp;:
+
+```css
+@container anchored(fallback: top) {
+  /* … */
+}
+@container anchored(fallback: flip-block flip-inline) {
+  /* … */
+}
+@container anchored(fallback: --custom-fallback) {
+  /* … */
+}
+```
+
+- `fallback`
+  - : Vérifie si un repli spécifique de positionnement est actuellement actif sur un conteneur positionné par ancre, comme défini avec la propriété {{CSSxRef("position-try-fallbacks")}}. Les valeurs valides pour `fallback` incluent toute valeur composante qui est valide pour inclusion dans une valeur de propriété `position-try-fallbacks`.
+
+    Si la valeur `fallback` nommée dans le test est actuellement active sur le conteneur positionné par ancre, le test réussit et les règles à l'intérieur du bloc `@container` sont appliquées aux descendants du conteneur positionné par une ancre.
 
 ## Syntaxe formelle
 
@@ -510,7 +540,11 @@ Les valeurs globales `revert` et `revert-layer` sont invalides dans un `<style-f
 
 ### Requêtes d'état de défilement
 
-Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) pour des exemples détaillés.
+Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) pour des exemples.
+
+### Requêtes d'ancrage
+
+Voir [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) pour des exemples de requêtes d'ancrage.
 
 ## Spécifications
 
@@ -525,6 +559,7 @@ Voir [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/C
 - [Utiliser les requêtes de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Utiliser les requêtes d'état de défilement de conteneur](/fr/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- [Utiliser les requêtes de conteneur avec une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - La propriété {{CSSxRef("container-name")}}
 - La propriété {{CSSxRef("container-type")}}
 - La propriété {{CSSxRef("contain")}}

@@ -199,4 +199,4 @@ En este ejemplo,cada elemento de la listcoincide con un valor diferente de `back
 
 ## Mira también
 
-- [Usando diferentes fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Usando diferentes fondos](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
