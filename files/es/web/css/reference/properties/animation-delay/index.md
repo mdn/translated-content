@@ -38,7 +38,7 @@ animation-delay: 2s, 4ms
 
 ## Ejemplos
 
-Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+Visitar [animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -50,5 +50,5 @@ Visitar [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) 
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

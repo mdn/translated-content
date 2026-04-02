@@ -96,7 +96,7 @@ transform: translateZ(-3ch);
 
 Esta transformación es definida por una {{cssxref("&lt;length&gt;")}} la cual especifica que tan lejos hacia denttro o hacia afuera el elemento o los elementos se mueven.
 
-En los ejemplos interacticos anteriores, [`perspective: 550px;`](/es/docs/Web/CSS/perspective) (para crear un espacio 3D) y [`transform-style: preserve-3d;`](/es/docs/Web/CSS/transform-style) (los elementos hijos, los 6 lados del cubo, estan también posicionados en el espacio 3D), es decir, han sido establecidos en el cubo.
+En los ejemplos interacticos anteriores, [`perspective: 550px;`](/es/docs/Web/CSS/Reference/Properties/perspective) (para crear un espacio 3D) y [`transform-style: preserve-3d;`](/es/docs/Web/CSS/Reference/Properties/transform-style) (los elementos hijos, los 6 lados del cubo, estan también posicionados en el espacio 3D), es decir, han sido establecidos en el cubo.
 
 > [!NOTE]
 > `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
@@ -225,7 +225,7 @@ Si el valor `perspective()` es menor que el valor `translateZ()`, como `transfor
 
 ## Compatibilidad con navegador
 
-Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para información de compatibilidad.
+Por favor observe la propiedad [`<transform-function>`](/es/docs/Web/CSS/Reference/Values/transform-function#browser_compatibility) para información de compatibilidad.
 
 ## Véase también
 

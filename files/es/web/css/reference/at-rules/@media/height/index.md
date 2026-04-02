@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/At-rules/@media/height
 original_slug: Web/CSS/@media/height
 ---
 
-Las [CSS](/es/docs/Web/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
+Las [CSS](/es/docs/Web/CSS) [media feature (consulta de medios)](/es/docs/Web/CSS/Guides/Media_queries/Using#media_features) **`height`** puede ser usada para aplicar estilos basados en la altura del {{glossary("viewport")}} (o la caja de la página, para [paged media](/es/docs/Web/CSS/CSS_paged_media)).
 
 ## Sintáxis
 

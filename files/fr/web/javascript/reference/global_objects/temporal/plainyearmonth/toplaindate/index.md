@@ -2,6 +2,8 @@
 title: "Temporal.PlainYearMonth : méthode toPlainDate()"
 short-title: toPlainDate()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainYearMonth/toPlainDate
+l10n:
+  sourceCommit: 7e14795a6ef2bf5e760c315ce64800dd1cd98c29
 ---
 
 La méthode **`toPlainDate()`** des instances de {{JSxRef("Temporal.PlainYearMonth")}} retourne un nouvel objet {{JSxRef("Temporal.PlainDate")}} représentant le mois et son année ainsi qu'un jour fourni dans le même système de calendrier.

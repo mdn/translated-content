@@ -96,5 +96,5 @@ Tenga en cuenta que particularmente no es recomendado usar una dimensión de pí
 ## Ver también
 
 - [CSS Reference](/es/docs/Web/CSS/Reference)
-- [Multiple backgrounds](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Multiple backgrounds](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - [Scaling background images](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)

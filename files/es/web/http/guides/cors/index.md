@@ -10,7 +10,7 @@ l10n:
 
 Un ejemplo de solicitud de origen cruzado: el código JavaScript del front-end servido desde `https://domain-a.com` utiliza {{domxref("XMLHttpRequest")}} para realizar una solicitud a `https://domain-b.com/data.json` .
 
-Por razones de seguridad, los navegadores restringen las peticiones HTTP de origen cruzado iniciadas desde scripts. Por ejemplo, `XMLHttpRequest` y la [API Fetch](/es/docs/Web/API/Fetch_API) siguen la [Política Same-origin](/es/docs/Web/Security/Same-origin_policy). Esto significa que una aplicación web que utilice esas API solo puede solicitar recursos del mismo origen desde el que se cargó la aplicación, a menos que la respuesta de otros orígenes incluya las cabeceras CORS adecuadas.
+Por razones de seguridad, los navegadores restringen las peticiones HTTP de origen cruzado iniciadas desde scripts. Por ejemplo, `XMLHttpRequest` y la [API Fetch](/es/docs/Web/API/Fetch_API) siguen la [Política Same-origin](/es/docs/Web/Security/Defenses/Same-origin_policy). Esto significa que una aplicación web que utilice esas API solo puede solicitar recursos del mismo origen desde el que se cargó la aplicación, a menos que la respuesta de otros orígenes incluya las cabeceras CORS adecuadas.
 
 ![Representación diagramática del mecanismo CORS](cors_principle.png)
 

@@ -6,7 +6,7 @@ original_slug: Web/CSS/:right
 
 {{ CSSRef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:right`**, utilizada con la [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, representa todas las páginas de la derecha de un documento impreso.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/es/docs/Web/CSS) **`:right`**, utilizada con la [regla-at](/es/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@page")}}, representa todas las páginas de la derecha de un documento impreso.
 
 ```css
 /* Selecciona cualquier página de la derecha al imprimir */

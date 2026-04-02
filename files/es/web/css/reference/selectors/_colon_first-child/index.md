@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:first-child
 original_slug: Web/CSS/:first-child
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:first-child`** de [CSS](/es/docs/Web/CSS) representa el primer elemento entre un grupo de elementos hermanos.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:first-child`** de [CSS](/es/docs/Web/CSS) representa el primer elemento entre un grupo de elementos hermanos.
 
 ```css
 /* Selecciona cualquier <p> que sea el primer

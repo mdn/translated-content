@@ -46,4 +46,4 @@ li:first-of-type + li {
 
 ## Ver también
 
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Subsequent-sibling_combinator)
+- [Selectores de hermanos generales](/es/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator)

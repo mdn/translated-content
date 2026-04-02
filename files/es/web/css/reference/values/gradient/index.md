@@ -42,7 +42,7 @@ background: conic-gradient(#f69d3c, #3f87a6);
 }
 ```
 
-Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
+Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una imagen con [dimensiones intrínsecas](/es/docs/Web/CSS/Reference/Values/image#no_intrinsic); es decir, que no tiene tamaño natural o preferido, ni una relación preferida. Su tamaño concreto coincidirá con los elementos a los que se aplica.
 
 ## Funciones de las Gradientes
 
@@ -162,7 +162,7 @@ body {
 
 ## Interpolación
 
-Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent](/es/docs/Web/CSS/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
+Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent](/es/docs/Web/CSS/Reference/Values/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
 
 ## Especificaciones
 
@@ -174,4 +174,4 @@ Cada tipo de gradiente tiene una matriz de compatibilidad diferente. Por favor, 
 
 ## Ver también
 
-- [Usando Gradientes CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Usando Gradientes CSS](/es/docs/Web/CSS/Guides/Images/Using_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}

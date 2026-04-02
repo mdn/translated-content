@@ -39,7 +39,7 @@ animation-duration: 10s, 30s, 230ms
 
 ## Ejemplos
 
-Visitar [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+Visitar [CSS animations](/es/docs/Web/CSS/Guides/Animations/Using) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -51,5 +51,5 @@ Visitar [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) p
 
 ## Consultar también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

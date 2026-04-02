@@ -2,13 +2,14 @@
 title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur. Les contextes de conteneur disponibles sont&nbsp;:
 
 - [Taille](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur en fonction d'une condition de taille générale ou de taille en ligne, comme une dimension maximale ou minimale, un rapport d'aspect ou une orientation.
 - [État de défilement](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur en fonction d'une condition d'état de défilement, comme le fait que le conteneur soit un conteneur de défilement partiellement défilé ou qu'il soit une [cible d'accrochage](/fr/docs/Glossary/Scroll_snap#cible_daccrochage) qui va être accrochée à son conteneur d'accrochage de défilement.
+- [Ancrage](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)&nbsp;: Permet d'appliquer sélectivement des règles CSS aux enfants d'un conteneur en fonction du fait que le conteneur est [positionné par une ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning) et qu'une [option de repli d'essai de position](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) lui est appliquée.
 
 ## Syntaxe
 
@@ -18,6 +19,7 @@ container-type: normal;
 container-type: size;
 container-type: inline-size;
 container-type: scroll-state;
+container-type: anchored;
 
 /* Deux valeurs */
 container-type: size scroll-state;
@@ -33,6 +35,9 @@ container-type: unset;
 ### Valeurs
 
 La propriété `container-type` peut prendre une seule valeur parmi la liste ci-dessous, ou deux valeurs — l'une doit être `scroll-state` et l'autre peut être `inline-size` ou `size`. En d'autres termes, un élément peut être établi comme conteneur de requête de taille, conteneur de requête d'état de défilement, les deux, ou aucun des deux.
+
+- `anchored`
+  - : Établit un conteneur de requête pour les requêtes de conteneur ancré sur le conteneur. Dans ce cas, la taille de l'élément n'est pas calculée de façon isolée&nbsp;; aucune [compartimentation](/fr/docs/Web/CSS/Guides/Containment/Using) n'est appliquée.
 
 - `inline-size`
   - : Établit un conteneur de requête pour les requêtes dimensionnelles sur [l'axe en ligne](/fr/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#dimensions_de_bloc_et_en_ligne) du conteneur.
@@ -60,7 +65,7 @@ La propriété `container-type` peut prendre une seule valeur parmi la liste ci-
 
 Les requêtes de conteneur permettent d'appliquer sélectivement des styles à l'intérieur d'un conteneur en fonction de requêtes conditionnelles effectuées sur ce conteneur. La règle {{CSSxRef("@container")}} sert à définir les tests réalisés sur un conteneur et les règles qui s'appliquent à son contenu si la requête retourne `true`.
 
-Les tests de requête de conteneur ne sont effectués que sur les éléments ayant la propriété `container-type`, qui définit les éléments comme conteneur de taille, conteneur d'état de défilement, ou les deux.
+Les tests de requête de conteneur ne sont effectués que sur les éléments ayant la propriété `container-type`, qui définit les éléments comme conteneur de taille, conteneur d'état de défilement, conteneur de requête ancré, ou une combinaison de ceux-ci.
 
 ### Utiliser les requêtes de taille de conteneur
 
@@ -79,6 +84,22 @@ La taille du conteneur doit être définie par le contexte, comme les éléments
 - Si le conteneur est positionné avec [`position: sticky`](/fr/docs/Web/CSS/Reference/Properties/display) et est collé à une limite d'un {{Glossary("scroll container", "conteneur de défilement")}}.
 
 Dans le premier cas, le conteneur interrogé est le conteneur de défilement lui-même. Dans les deux autres cas, le conteneur interrogé est un élément affecté par la position de défilement d'un conteneur de défilement ancêtre.
+
+### Requêtes de conteneur ancré
+
+[Les requêtes de conteneur ancré](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) permettent d'appliquer sélectivement des règles CSS aux descendants d'un conteneur positionné par une ancre lorsqu'une option de repli d'essai de position est active sur celui-ci, comme défini par la propriété {{CSSxRef("position-try-fallbacks")}}.
+
+Par exemple, vous pouvez avoir un élément infobulle positionné par une ancre qui est placé au-dessus de son ancre par défaut grâce à une valeur {{CSSxRef("position-area")}} de `top`, mais qui possède une valeur `position-try-fallbacks` de `flip-block` définie. Cela fera basculer l'infobulle dans la direction du bloc vers le bas de son ancre lorsqu'elle commence à déborder du haut de la zone d'affichage. Si l'on définit `container-type: anchored` dessus, on peut détecter quand l'option de repli d'essai de position est appliquée à l'aide d'une règle `@container` et appliquer du CSS en conséquence.
+
+```css
+.tooltip {
+  position: absolute;
+  position-anchor: --monAncre;
+  position-area: top;
+  position-try-fallbacks: flip-block;
+  container-type: anchored;
+}
+```
 
 ## Exemples
 
@@ -171,6 +192,7 @@ h3 {
 - [Requêtes de conteneur CSS](/fr/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Utiliser les requêtes de taille et de style de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Utiliser les requêtes d'état de défilement du conteneur](/fr/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Utiliser les requêtes de conteneur ancré](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - La règle {{CSSxRef("@container")}}
 - La propriété raccourcie {{CSSxRef("container")}}
 - La propriété {{CSSxRef("container-name")}}

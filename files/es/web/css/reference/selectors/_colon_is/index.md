@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-La función [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) de [CSS](/es/docs/Web/CSS) **`:is()`** toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista. Esto es útil para escribir selectores grandes en una forma más compacta.
+La función [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de [CSS](/es/docs/Web/CSS) **`:is()`** toma una lista de selectores como argumento y selecciona cualquier elemento que pueda ser seleccionado por uno de los selectores en esa lista. Esto es útil para escribir selectores grandes en una forma más compacta.
 
 > [!NOTE]
 > Originalmente llamado `:matches()` (y `:any()`), este selector pasó a llamarse `:is()` en [CSSWG número 3258](https://github.com/w3c/csswg-drafts/issues/3258).
@@ -267,6 +267,6 @@ some-element::after {
 
 ## Véase también
 
-- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity).
+- {{CSSxRef(":where", ":where()")}} - Como `:is()`, pero con 0 [especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity).
 - [Lista de selección](/es/docs/Web/CSS/Selector_list)
 - [Componentes web](/es/docs/Web/API/Web_components)

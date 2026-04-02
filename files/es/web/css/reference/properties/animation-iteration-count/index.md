@@ -35,7 +35,7 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Ejemplos
 
-Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+Ver ejemplos [CSS animations](/es/docs/Web/CSS/Guides/Animations/Using).
 
 ## Especificaciones
 
@@ -47,5 +47,5 @@ Ver ejemplos [CSS animations](/es/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 
 ## Ver también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

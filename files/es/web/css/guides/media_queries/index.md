@@ -8,7 +8,7 @@ Las **consultas de medios** le permiten adaptar su sitio o aplicación dependien
 
 Son un componente clave del [responsive design](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design). Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.
 
-En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/Web/CSS/CSS_syntax/At-rule) para aplicar condicionalmente parte de una hoja de estilo en función del resultado de una consulta de medios. Use {{cssxref ("@ import")}} para aplicar condicionalmente una hoja de estilo completa.
+En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/Web/CSS/Guides/Syntax/At-rules) para aplicar condicionalmente parte de una hoja de estilo en función del resultado de una consulta de medios. Use {{cssxref ("@ import")}} para aplicar condicionalmente una hoja de estilo completa.
 
 ### Consultas de medios en HTML
 
@@ -33,7 +33,7 @@ Puede obtener más información sobre el uso programático de consultas de medio
 
 ## Guides
 
-- [Usando consultas de medios](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Usando consultas de medios](/es/docs/Web/CSS/Guides/Media_queries/Using)
   - : Presenta las consultas de los medios, su sintaxis y los operadores y las funciones de los medios que se utilizan para construir expresiones de consulta de los medios.
 - [Probando las consultas de medios programáticamente](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : Describe cómo usar las consultas de medios en su código de JavaScript para determinar el estado de un dispositivo, y para configurar escuchas que notifican su código cuando cambian los resultados de las consultas de medios (como cuando el usuario gira la pantalla o cambia el tamaño del navegador).

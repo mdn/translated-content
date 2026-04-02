@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-moz-range-track
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS **`::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
 
 > [!NOTE]
 > Si usamos `::-moz-range-track` con cualquier otra cosa que no sea un `<input type="range">` ni seleccionaremos nada ni se mostrará efecto alguno.

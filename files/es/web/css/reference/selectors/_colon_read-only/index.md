@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:read-only
 original_slug: Web/CSS/:read-only
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-only`** de [CSS](/es/docs/Web/CSS) representa un elemento que ya no es editable por el usuario (como un [input](/es/docs/Web/HTML/Reference/Elements/input)).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:read-only`** de [CSS](/es/docs/Web/CSS) representa un elemento que ya no es editable por el usuario (como un [input](/es/docs/Web/HTML/Reference/Elements/input)).
 
 ```css
 /* Selecciona cualquier <input> que está en modo de solo lectura */

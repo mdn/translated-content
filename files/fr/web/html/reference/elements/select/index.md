@@ -2,7 +2,7 @@
 title: "<select> : l'élément de liste déroulante"
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 2362f25e1ccee7ad584584ab3521f3ff34a3e6ed
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.
@@ -102,7 +102,11 @@ Les utilisateur·ice·s du clavier pourront sélectionner des options non-contig
 
 ## Mise en forme avec CSS
 
-L'élément `<select>` a historiquement été réputé difficile à mettre en forme efficacement avec CSS, d'où l'introduction de fonctionnalités permettant de créer des [éléments de sélection entièrement personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select).
+L'élément `<select>` a historiquement été réputé difficile à mettre en forme efficacement avec CSS.
+Les guides suivants contiennent des informations sur les fonctionnalités plus récentes qui ont été introduites pour permettre des éléments de sélection entièrement personnalisables&nbsp;:
+
+- [Éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- [Listes de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select_listboxes)
 
 ### Mise en forme héritée des select
 

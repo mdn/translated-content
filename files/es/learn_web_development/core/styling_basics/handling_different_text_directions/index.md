@@ -47,7 +47,7 @@ En el ejemplo siguiente existe un encabezado desplegado usando `writing-mode: ve
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-Los tres valores posibles para la propiedad [`writing-mode`](/es/docs/Web/CSS/writing-mode) son:
+Los tres valores posibles para la propiedad [`writing-mode`](/es/docs/Web/CSS/Reference/Properties/writing-mode) son:
 
 - `horizontal-tb`: Dirección de flujo de bloque de arriba abajo. Las frases aparecen horizontales.
 - `vertical-rl`: Dirección de flujo de bloque de derecha a izquierda. Las frases aparecen verticales.
@@ -111,7 +111,7 @@ Puedes ver una comparación entre las propiedades físicas y lógicas a continua
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-Existe un gran número de propiedades cuando consideras cada uno de los bordes que puedes hacer a mano, y puedes ver todas las propiedades asignadas en la página de MDN para [propiedades Lógicas y Valores](/es/docs/Web/CSS/CSS_logical_properties_and_values)
+Existe un gran número de propiedades cuando consideras cada uno de los bordes que puedes hacer a mano, y puedes ver todas las propiedades asignadas en la página de MDN para [propiedades Lógicas y Valores](/es/docs/Web/CSS/Guides/Logical_properties_and_values)
 
 ### Valores lógicos
 

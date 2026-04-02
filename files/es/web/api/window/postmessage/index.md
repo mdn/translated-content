@@ -10,7 +10,7 @@ l10n:
 
 El método **`window.postMessage()`** permite la comunicación segura entre objetos {{domxref("Window")}} de diferentes orígenes; por ejemplo, entre una página y una ventana emergente que ha abierto, o entre una página y un _iframe_ incrustado dentro de ella.
 
-Normalmente, a los _scripts_ en diferentes páginas se les permite acceder entre sí si y solo si las páginas de las que se originan comparten el mismo [origen](/es/docs/Web/API/Location/origin) (también conocido como "[política del mismo origen](/es/docs/Web/Security/Same-origin_policy)"). `window.postMessage()` proporciona un mecanismo controlado para eludir esta restricción de forma segura (si se usa correctamente).
+Normalmente, a los _scripts_ en diferentes páginas se les permite acceder entre sí si y solo si las páginas de las que se originan comparten el mismo [origen](/es/docs/Web/API/Location/origin) (también conocido como "[política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy)"). `window.postMessage()` proporciona un mecanismo controlado para eludir esta restricción de forma segura (si se usa correctamente).
 
 Furthermore, an accessing script must have obtained the window object of the accessed document beforehand. This can occur through methods such as [`window.open()`](/es/docs/Web/API/Window/open) for popups or [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement/contentWindow) for iframes.
 

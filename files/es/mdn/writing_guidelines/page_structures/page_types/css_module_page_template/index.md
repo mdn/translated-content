@@ -32,11 +32,11 @@ l10n:
 > - **title**
 >   - : El valor `title` se muestra en la parte superior de la página.
 >     Este es el nombre del módulo seguido del texto "CSS".
->     Por ejemplo, el título de la página de inicio del módulo [grid layout](/es/docs/Web/CSS/CSS_grid_layout) es _Diseño de cuadrícula de CSS_.
+>     Por ejemplo, el título de la página de inicio del módulo [grid layout](/es/docs/Web/CSS/Guides/Grid_layout) es _Diseño de cuadrícula de CSS_.
 > - **slug**
 >   - : El valor `slug` es el final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/CSS/CSS_NameOfTheModule`.
->     Por ejemplo, el `slug` para la página de inicio del módulo [grid layout](/es/docs/Web/CSS/CSS_grid_layout) es `Web/CSS/CSS_grid_layout`.
+>     Por ejemplo, el `slug` para la página de inicio del módulo [grid layout](/es/docs/Web/CSS/Guides/Grid_layout) es `Web/CSS/CSS_grid_layout`.
 > - **page-type**
 >   - : El valor `page-type` para las páginas de destino del módulo CSS es `css-module` (solo para contenido en ingles).
 > - **spec-urls**

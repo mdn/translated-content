@@ -8,7 +8,7 @@ original_slug: Web/CSS/:-moz-broken
 
 ## Resumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-broken` selecciona elementos con enlaces a imágenes no válidos
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-broken` selecciona elementos con enlaces a imágenes no válidos
 
 Este selector está pensado sobre todo para desarrolladores de temas.
 

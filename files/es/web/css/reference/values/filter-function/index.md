@@ -4,15 +4,15 @@ slug: Web/CSS/Reference/Values/filter-function
 original_slug: Web/CSS/filter-function
 ---
 
-El [tipo de datos](/es/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
+El [tipo de datos](/es/docs/Web/CSS/Reference/Values/Data_types) [CSS](/es/docs/Web/CSS) **`<filter-function>`** representa un efecto gráfico que puede cambiar la apariencia de una imagen de entrada. Se usa en las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.
 
 ## Sintaxis
 
 El tipo de datos `<filter-function>` se especifica utilizando una de las funciones de filtro enumeradas a continuación. Cada función requiere un argumento que, si no es válido, da como resultado que no se aplique ningún filtro.
 
-- [`blur()`](/es/docs/Web/CSS/filter-function/blur)
+- [`blur()`](/es/docs/Web/CSS/Reference/Values/filter-function/blur)
   - : Difumina la imagen.
-- [`brightness()`](/es/docs/Web/CSS/filter-function/brightness)
+- [`brightness()`](/es/docs/Web/CSS/Reference/Values/filter-function/brightness)
   - : Hace que la imagen sea más brillante o más oscura.
 - [`contrast()`](/es/docs/Web/CSS/filter-function/contrast)
   - : Aumenta o disminuye el contraste de la imagen.

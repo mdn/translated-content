@@ -88,7 +88,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 
     > [!NOTE]
     >
-    > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Same-origin_policy).
+    > - Este atributo sólo funciona para las [políticas de mismo origen (same-origin URLs)](/es/docs/Web/Security/Defenses/Same-origin_policy).
     > - Este atributo puede ser utilizado con [`blob:` URLs](/es/docs/Web/API/URL/createObjectURL_static) y [`data:` URLs](/es/docs/Web/URI/Reference/Schemes/data) para descargar contenido generado por JavaScript, tales como fotografías creadas por una aplicación web de edición de imágenes.
     > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Reference/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.

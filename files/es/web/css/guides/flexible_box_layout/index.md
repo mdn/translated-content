@@ -53,11 +53,11 @@ Las propiedades `align-content`, `align-self`, `align-items` y `justify-content`
 
 ## Guías
 
-- [Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Conceptos básicos de Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
   - : Una visión general de las características de flexbox
 - [Relación de flexbox con otros métodos de diseño.](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
   - : Cómo flexbox se relaciona con otros métodos de diseño y otras especificaciones de CSS
-- [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
   - : Cómo funcionan las propiedades de Alineación de cuadro con flexbox.
 - [Ordenando elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
   - : Explicando las diferentes formas de cambiar el orden y la dirección de los elementos, y cubriendo los problemas potenciales al hacerlo.
@@ -65,7 +65,7 @@ Las propiedades `align-content`, `align-self`, `align-items` y `justify-content`
   - : Este artículo explica las propiedades de flex-grow, flex-shrink y flex-basis.
 - [Dominar el envoltorio de elementos flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
   - : Cómo crear contenedores flex con múltiples líneas y controlar la visualización de los elementos en esas líneas.
-- [Casos de uso típicos de flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [Casos de uso típicos de flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases)
   - : Patrones de diseño comunes que son los típicos casos de uso de flexbox.
 - [Compatibilidad con versiones anteriores de Flexbox](/es/docs/conflicting/Glossary/Flexbox)
   - : Estado del navegador de flexbox, problemas de interoperabilidad y compatibilidad con navegadores antiguos y versiones de la especificación

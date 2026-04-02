@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-La [regla arroba](/es/docs/Web/CSS/CSS_syntax/At-rule) **`@counter-style`** de [CSS](/es/docs/Web/CSS) le permite definir estilos de contador que no forman parte del conjunto predefinido de estilos. Una regla `@counter-style` define cómo convertir un valor de contador en una representación de cadena.
+La [regla arroba](/es/docs/Web/CSS/Guides/Syntax/At-rules) **`@counter-style`** de [CSS](/es/docs/Web/CSS) le permite definir estilos de contador que no forman parte del conjunto predefinido de estilos. Una regla `@counter-style` define cómo convertir un valor de contador en una representación de cadena.
 
 ```css
 @counter-style thumbs {

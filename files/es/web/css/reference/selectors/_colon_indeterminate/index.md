@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:indeterminate
 original_slug: Web/CSS/:indeterminate
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:indeterminate`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento de formulario cuyo estado sea indeterminado.
 
 ```css
 /* Selecciona cualquier <input> cuyo estado sea indeterminado */

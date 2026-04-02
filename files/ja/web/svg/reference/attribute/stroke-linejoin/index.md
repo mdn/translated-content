@@ -2,7 +2,7 @@
 title: stroke-linejoin
 slug: Web/SVG/Reference/Attribute/stroke-linejoin
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 **`stroke-linejoin`** 属性は、描線（線）が描かれたときにパスの角に使用する形状を定義する表示属性です。
@@ -18,7 +18,6 @@ l10n:
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 例
@@ -114,12 +113,12 @@ svg {
     <tr>
       <th scope="row">値</th>
       <td>
-        <code>arcs</code> | <code>bevel</code> |<code>miter</code> |
+        <code>arcs</code> | <code>bevel</code> | <code>miter</code> |
         <code>miter-clip</code> | <code>round</code>
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>miter</code></td>
     </tr>
     <tr>
@@ -132,7 +131,7 @@ svg {
 ### arcs
 
 > [!NOTE]
-> `arcs` は SVG2 で導入されたものであり、まだ広く対応されていません。詳しくは下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+> `arcs` の値は、まだ広く対応されていません。
 
 `arcs` 値は、パスの区間同士を結合するために円弧のコーナーを使用することを示します。円弧の形状は、結合点の描線の外側の辺を、結合点の外側の辺と同じ曲率の円弧で拡張することによって形成されます。
 
@@ -272,7 +271,7 @@ svg {
 
 `miter-clip` 値は、パスの区間同士をつなぐために鋭いコーナーを使用することを示します。コーナーは、パスの区間同士のタンジェントで描線の外縁を交差するまで伸ばすことで形成します。
 
-{{SVGAttr('stroke-miterlimit')}} を超えると、パスセグメントの交点から、{{SVGAttr('stroke-miterlimit')}} の値の半分に描線幅を掛けた距離でマイターが切り取られます。これは、とても鋭いな結合やアニメーションの場合に `miter` よりも良い描画結果になります。
+{{SVGAttr('stroke-miterlimit')}} を超えると、パス区間の交点から、{{SVGAttr('stroke-miterlimit')}} の値の半分に描線幅を掛けた距離でマイターが切り取られます。これは、とても鋭いな結合やアニメーションの場合に `miter` よりも良い描画結果になります。
 
 ```css hidden
 html,

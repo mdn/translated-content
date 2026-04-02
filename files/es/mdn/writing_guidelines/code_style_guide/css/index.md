@@ -122,11 +122,11 @@ Por lo general, al enseñar los detalles de la sintaxis de CSS, es más claro y 
   animation: 3s ease-in 1s 2 reverse both paused slidein;
   ```
 
-En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/docs/Web/CSS/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/animation-duration), y el segundo valor que se puede analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/animation#syntax).)
+En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/docs/Web/CSS/Reference/Values/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/Reference/Properties/animation-duration), y el segundo valor que se puede analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/Reference/Properties/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/Reference/Properties/animation#syntax).)
 
 ## Media queries centradas en móviles
 
-En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
+En una hoja de estilo que contiene estilos de [_media queries_](/es/docs/Web/CSS/Guides/Media_queries/Using) para diferentes tamaños de ventana gráfica de dispositivos, primero incluye el estilo para pantallas estrechas/móviles antes de encontrar cualquier otra _media query_. Agrega estilos para tamaños de ventana gráfica más amplios mediante _media queries_ sucesivas. Seguir esta regla tiene muchas ventajas que se explican en el artículo de [Diseño responsivo](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ```css example-good
 /* Diseño CSS predeterminado para pantallas estrechas */

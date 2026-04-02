@@ -78,7 +78,7 @@ CSS
 ## Ver también
 
 - Propiedades CSS relacionadas: {{cssxref("grid-row-gap")}}, {{cssxref("grid-gap")}}
-- Guía sobre CSS Grid Layout: _[Conceptos básicos sobre CSS Grid Layout - Gutters](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Guía sobre CSS Grid Layout: _[Conceptos básicos sobre CSS Grid Layout - Gutters](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)_
 
 <section id="Quick_links">
 <ol>

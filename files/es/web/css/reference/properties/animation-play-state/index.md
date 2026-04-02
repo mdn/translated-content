@@ -43,7 +43,7 @@ animation-play-state: unset;
 
 ## Ejemplos
 
-Visita [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) para ver algunos ejemplos.
+Visita [animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using) para ver algunos ejemplos.
 
 ## Especificaciones
 
@@ -55,5 +55,5 @@ Visita [animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations) p
 
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

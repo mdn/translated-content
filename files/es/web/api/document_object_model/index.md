@@ -13,7 +13,7 @@ El DOM representa un documento con un árbol lógico. Cada rama del árbol termi
 
 Los nodos también pueden tener controladores de eventos adjuntos. Una vez que se activa un evento, los controladores de eventos se ejecutan.
 
-Para saber más sobre qué es el DOM y cómo representa los documentos, consulta nuestro artículo [Introducción al DOM](/es/docs/Web/API/Document_Object_Model/Introduction).
+Para saber más sobre qué es el DOM y cómo representa los documentos, consulta nuestro artículo [Introducción al DOM](/es/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef).
 
 ## Interfaces DOM
 
@@ -270,5 +270,5 @@ Estas son las API de DOM para los tipos de datos utilizados en las definiciones 
 
 ## Véase también
 
-- [Ejemplos de DOM](/es/docs/Web/API/Document_Object_Model/Examples)
+- [Ejemplos de DOM](/es/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)
 - [Módelos de Objetos de CSS (CSSOM, por sus siglas en Inglés)](/es/docs/Web/API/CSS_Object_Model)

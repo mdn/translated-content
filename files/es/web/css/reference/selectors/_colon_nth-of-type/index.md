@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:nth-of-type
 original_slug: Web/CSS/:nth-of-type
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-of-type()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos.
 
 ```css
 /* Selecciona cada cuarto elementos <p> entre

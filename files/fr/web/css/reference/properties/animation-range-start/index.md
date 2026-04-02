@@ -2,10 +2,8 @@
 title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-start`** définit le point sur la chronologie où une animation doit commencer.
 
@@ -203,5 +201,6 @@ Faites défiler pour voir l'élément s'animer. Remarquez que l'élément est d�
 - La propriété {{CSSxRef("view-timeline-inset")}}
 - La propriété `rangeStart` de la méthode {{DOMxRef("Element.animate()")}}
 - [Chronologies d'animation pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

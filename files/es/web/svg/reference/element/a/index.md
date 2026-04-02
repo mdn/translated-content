@@ -62,7 +62,7 @@ svgns|a:active {
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
 > [!WARNING]
-> Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Reference/Elements/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
+> Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Reference/Elements/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/Reference/At-rules/@namespace) para distinguir entre los dos.
 
 ## Atributos
 

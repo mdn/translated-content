@@ -23,7 +23,7 @@ vertical-align: baseline | sub | super | text-top | text-bottom | middle | top |
 La mayoría de los valores de alinean verticalmente el elemento de forma relativa al elemento padre:
 
 - `baseline`
-  - : Alinea la línea base del elemento con la línea base del padre. La línea base de algunos [elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties), como {{HTMLElement("textarea")}} no está especificado en la especificación HTML, que significa que su comportamiento puede cambiar en un navegador u otro.
+  - : Alinea la línea base del elemento con la línea base del padre. La línea base de algunos [elementos reemplazados](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties), como {{HTMLElement("textarea")}} no está especificado en la especificación HTML, que significa que su comportamiento puede cambiar en un navegador u otro.
 - `sub`
   - : Alinea la línea base del elemento con la línea subscript del elemento padre.
 - `super`
@@ -34,7 +34,7 @@ La mayoría de los valores de alinean verticalmente el elemento de forma relativ
   - : Aligns the bottom of the element with the bottom of the parent element's font.
 - `middle`
   - : Aligns the middle of the element with the middle of lowercase letters in the parent.
-- [`<length>`](/es/docs/Web/CSS/length)
+- [`<length>`](/es/docs/Web/CSS/Reference/Values/length)
   - : Aligns the baseline of the element at the given length above the baseline of its parent.
 - `<percentage>`
   - : Like \<length> values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.

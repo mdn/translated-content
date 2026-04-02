@@ -7,11 +7,11 @@ original_slug: Web/CSS/box-pack
 > [!WARNING]
 > Esta propiedad es parte del módulo estándar original para el diseño de las cajas CSS Flexible que fue sustituida por un nuevo estándar.
 
-Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para más información.
+Ver [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para más información.
 
 ## Resumen
 
-Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-pack` y `-webkit-box-pack` especifican cómo una `-moz-box` o un `-webkit-box` empaquetan o disponen su contenido en la dirección de su diseño o esquema. El efecto de esto sólo es visible si hay expacio extra en la caja. Ver [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox#flexible_box_properties) para más información sobre las propiedades de los elementos flexbox.
+Las propiedades [CSS](/es/docs/Web/CSS)`-moz-box-pack` y `-webkit-box-pack` especifican cómo una `-moz-box` o un `-webkit-box` empaquetan o disponen su contenido en la dirección de su diseño o esquema. El efecto de esto sólo es visible si hay expacio extra en la caja. Ver [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#flexible_box_properties) para más información sobre las propiedades de los elementos flexbox.
 
 La dirección del esquema o diseño (layout) depende de la orientación del elemento: vertical o horizontal.
 

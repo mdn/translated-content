@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:enabled
 original_slug: Web/CSS/:enabled
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:enabled` [CSS](/es/docs/Web/CSS) representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el foco. El elemento también tiene un estado deshabilitado el en cuál, no puede ser activado ni acepta el foco.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:enabled` [CSS](/es/docs/Web/CSS) representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.) o si accepta el foco. El elemento también tiene un estado deshabilitado el en cuál, no puede ser activado ni acepta el foco.
 
 ```css
 /* Selecciona cualquier <input> habilitado */

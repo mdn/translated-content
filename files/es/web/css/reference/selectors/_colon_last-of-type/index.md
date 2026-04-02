@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:last-of-type
 original_slug: Web/CSS/:last-of-type
 ---
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** de [CSS](/es/docs/Web/CSS) representa el último elemento de su tipo entre un grupo de elementos hermanos.
+La [pseudo-class](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:last-of-type`** de [CSS](/es/docs/Web/CSS) representa el último elemento de su tipo entre un grupo de elementos hermanos.
 
 ```css
 /* Selecciona cualquier <p> que sea el último elemento
@@ -48,7 +48,7 @@ p:last-of-type {
 
 ### Elementos anidados
 
-Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
+Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Tenga en cuenta que el [selector universal](/es/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) está implícito cuando no se escribe un selector simple.
 
 #### HTML
 

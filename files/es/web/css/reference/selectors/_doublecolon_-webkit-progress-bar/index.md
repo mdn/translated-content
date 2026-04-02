@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-webkit-progress-bar
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-bar`** representa la barra entera del elemento {{HTMLElement("progress")}} . Normalmente sólo está visible a partir de la porción rellena de la barra ya que, por defecto se muestra debajo del pseudo-lemento {{ cssxref("::-webkit-progress-value") }}. Es hijo del pseudo-elemento {{cssxref("::-webkit-progress-inner-element")}} y padre del pseudo-elemento {{cssxref("::-webkit-progress-value")}}.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-bar`** representa la barra entera del elemento {{HTMLElement("progress")}} . Normalmente sólo está visible a partir de la porción rellena de la barra ya que, por defecto se muestra debajo del pseudo-lemento {{ cssxref("::-webkit-progress-value") }}. Es hijo del pseudo-elemento {{cssxref("::-webkit-progress-inner-element")}} y padre del pseudo-elemento {{cssxref("::-webkit-progress-value")}}.
 
 > [!NOTE]
 > Para que `::-webkit-progress-value` tenga efecto , en el elemento `<progress>` {{cssxref("-webkit-appearance")}} debe tener el valor _none_.

@@ -73,7 +73,7 @@ El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https
 
 1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
 2. La segunda técnica era la idea de las [imágenes fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/CSS_media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Guides/Media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
 
 Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
 
@@ -97,7 +97,7 @@ Puedes añadir múltiples consultas a los media dentro de una hoja de estilo, y 
 
 Un enfoque común cuando se usan las consultas a los media es crear un diseño sencillo de una sola columna para dispositivos de pantalla estrecha (por ejemplo, teléfonos móviles), luego implementar un diseño en columnas para pantallas más grandes cuando se sabe que hay suficiente ancho de pantalla para manejarlo. Esto se describe a menudo como diseño **primero móvil**.
 
-Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/CSS_media_queries) en la documentación de MDN.
+Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/Guides/Media_queries) en la documentación de MDN.
 
 ## Cuadrículas flexibles
 
@@ -254,7 +254,7 @@ h1 {
 
 El problema de hacer esto es que el usuario pierde la posibilidad de ampliar cualquier conjunto de texto configurado en unidades `vw`, porque ese texto siempre está en relación con el tamaño de la ventana gráfica. **Por lo tanto, nunca hay que establecer texto utilizando solo unidades de ventana**.
 
-Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
+Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/Reference/Values/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
 
 ```css
 h1 {

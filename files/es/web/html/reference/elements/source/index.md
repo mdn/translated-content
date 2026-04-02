@@ -91,7 +91,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `type`
   - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
 - `media` {{experimental_inline}}
-  - : [Consulta multimedia](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
+  - : [Consulta multimedia](/es/docs/Web/CSS/Guides/Media_queries/Using) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 
 Si el atributo `type` no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente `<source>`. Si se especifica el atributo `type`, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento `<source>` se comprueba a la vez.
 

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:root
 original_slug: Web/CSS/:root
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs/Web/CSS) selecciona el elemento raíz de un árbol que representa el documento. En HTML, `:root` representa el elemento {{HTMLElement("html")}} y es idéntico al selector `html`, excepto que su [especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity) es mayor.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:root`** de [CSS](/es/docs/Web/CSS) selecciona el elemento raíz de un árbol que representa el documento. En HTML, `:root` representa el elemento {{HTMLElement("html")}} y es idéntico al selector `html`, excepto que su [especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity) es mayor.
 
 ```css
 /* Selecciona el elemento raíz del documento:
@@ -20,7 +20,7 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs
 
 ## Ejemplo
 
-`:root` puede ser útil para declarar [variables CSS](/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) globales:
+`:root` puede ser útil para declarar [variables CSS](/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) globales:
 
 ```css
 :root {

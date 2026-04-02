@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) a su elemento principal).
+El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) a su elemento principal).
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
@@ -47,7 +47,7 @@ Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. E
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
+> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
 
 ## Notas de uso
 

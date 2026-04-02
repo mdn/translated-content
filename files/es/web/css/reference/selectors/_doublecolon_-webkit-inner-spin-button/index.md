@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-webkit-inner-spin-button
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-inner-spin-button`** se usa para dar estilo a la parte interior del botón ruleta para seleccionar números en los input con type="number".
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-inner-spin-button`** se usa para dar estilo a la parte interior del botón ruleta para seleccionar números en los input con type="number".
 
 ## Ejemplo
 

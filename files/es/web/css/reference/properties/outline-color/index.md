@@ -81,9 +81,9 @@ Suele ser más conveniente usar la propiedad abreviada {{cssxref("outline")}} al
 
 ## Problemas de accesibilidad
 
-Los [estilos de enfoque](/es/docs/Web/CSS/:focus) personalizados normalmente implican realizar ajustes en la propiedad {{cssxref("outline")}}. Si se ajusta el color del contorno, es importante asegurarse de que la relación de contraste entre este y el fondo sobre el que se coloca el contorno sea lo suficientemente alta como para que las personas con problemas de visión puedan percibirlo.
+Los [estilos de enfoque](/es/docs/Web/CSS/Reference/Selectors/:focus) personalizados normalmente implican realizar ajustes en la propiedad {{cssxref("outline")}}. Si se ajusta el color del contorno, es importante asegurarse de que la relación de contraste entre este y el fondo sobre el que se coloca el contorno sea lo suficientemente alta como para que las personas con problemas de visión puedan percibirlo.
 
-La relación de contraste de color se determina comparando la luminosidad del texto y los valores de color de fondo. Para cumplir con las [Directrices de Accesibilidad al Contenido Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) actuales, se requiere una proporción de 4.5:1 para el contenido de texto y de 3:1 para textos más grandes, como los encabezados. El texto grande se define como 18.66 px y en [negrita](/es/docs/Web/CSS/font-weight) o más grande, o 24 px o más.
+La relación de contraste de color se determina comparando la luminosidad del texto y los valores de color de fondo. Para cumplir con las [Directrices de Accesibilidad al Contenido Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) actuales, se requiere una proporción de 4.5:1 para el contenido de texto y de 3:1 para textos más grandes, como los encabezados. El texto grande se define como 18.66 px y en [negrita](/es/docs/Web/CSS/Reference/Properties/font-weight) o más grande, o 24 px o más.
 
 - [WebAIM: Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/)
 - [MDN Entendiendo las WCAG, Directriz 1.4 explicaciones](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)

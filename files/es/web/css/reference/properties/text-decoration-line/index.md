@@ -87,7 +87,7 @@ La propiedad `text-decoration-line` se especifica como `none`, o **uno o más** 
 - `line-through`
   - : Cada línea de texto tiene una línea decorativa que pasa por su centro.
 - `blink` {{deprecated_inline}}
-  - : El texto parpadea (alterna entre visible e invisible). Es posible que algunos navegadores no parpadeen el texto. Este valor está **obsoleto** en favor de [animaciones CSS](/es/docs/Web/CSS/animation).
+  - : El texto parpadea (alterna entre visible e invisible). Es posible que algunos navegadores no parpadeen el texto. Este valor está **obsoleto** en favor de [animaciones CSS](/es/docs/Web/CSS/Reference/Properties/animation).
 
 ## Definicion formal
 

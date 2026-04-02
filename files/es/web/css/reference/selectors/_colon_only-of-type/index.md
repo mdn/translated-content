@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:only-of-type
 original_slug: Web/CSS/:only-of-type
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:only-of-type`** [CSS](/es/docs/Web/CSS) representa un elemento que no tiene hermanos del mismo tipo.
 
 ```css
 /* Selecciona cada <p>, pero solo si es el único */

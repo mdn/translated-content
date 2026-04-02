@@ -20,7 +20,7 @@ Cuando tenemos un conjunto de elementos que queremos mostrar horizontalmente, po
 
 ### Espacio distribuido fuera de los elementos
 
-Para distribuir el espacio entre o alrededor de los elementos, usamos las propiedades de alineación en flexbox y la propiedad {{cssxref ("justify-content")}}. Puede leer más sobre esta propiedad en [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), que trata sobre la alineación de elementos en el eje principal.
+Para distribuir el espacio entre o alrededor de los elementos, usamos las propiedades de alineación en flexbox y la propiedad {{cssxref ("justify-content")}}. Puede leer más sobre esta propiedad en [Alinear elementos en un contenedor flexible](/es/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items), que trata sobre la alineación de elementos en el eje principal.
 
 En el siguiente ejemplo en vivo, mostramos los elementos en su tamaño natural y utilizando `justify-content: space-between` crea cantidades iguales de espacio entre los elementos. Puede cambiar la forma en que se distribuye el espacio utilizando el valor `space-around`, o, donde sea compatible, `space-evenly`. También puede usar `flex-start` para colocar el espacio al final de los elementos, `flex-end` para colocarlo delante de ellos, o `center` para centrar los elementos de navegación.
 
@@ -40,7 +40,7 @@ En el ejemplo en vivo a continuación, intente cambiar `flex: auto` a `flex: 1`.
 
 Otra forma de alinear elementos en el eje principal es usar márgenes automáticos. Esto permite el patrón de diseño de una barra de navegación donde un grupo de elementos se alinean a la izquierda y otro grupo se alinea a la derecha.
 
-Aquí estamos utilizando la técnica de márgenes automáticos descrita en [Uso de márgenes automáticos para la alineación del eje principal](/es/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#using_auto_margins_for_main_axis_alignment). Los elementos se alinean en el eje principal con `flex-start` ya que este es el comportamiento inicial de flexbox, y estamos alineando el elemento de la derecha dándole un margen izquierdo de auto. Puede mover la clase de un elemento a otro para cambiar dónde ocurre la división.
+Aquí estamos utilizando la técnica de márgenes automáticos descrita en [Uso de márgenes automáticos para la alineación del eje principal](/es/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items#using_auto_margins_for_main_axis_alignment). Los elementos se alinean en el eje principal con `flex-start` ya que este es el comportamiento inicial de flexbox, y estamos alineando el elemento de la derecha dándole un margen izquierdo de auto. Puede mover la clase de un elemento a otro para cambiar dónde ocurre la división.
 
 También en este ejemplo, estamos utilizando márgenes en los elementos flexibles para crear un espacio entre los elementos, y un margen negativo en el contenedor para que los elementos aún permanezcan a nivel con los bordes derecho e izquierdo. Hasta que las propiedades `gap` de la especificación de alineación de caja sea implementada en flexbox, debemos usar márgenes de esta manera si queremos crear un margen entre los elementos.
 

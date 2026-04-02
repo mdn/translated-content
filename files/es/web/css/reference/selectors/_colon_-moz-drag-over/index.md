@@ -8,7 +8,7 @@ original_slug: Web/CSS/:-moz-drag-over
 
 ## Resumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-drag-over` se usa para editar un elemento cuando se produce un evento de arrasttar (drag) sobre él.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-drag-over` se usa para editar un elemento cuando se produce un evento de arrasttar (drag) sobre él.
 
 ## Síntaxis
 

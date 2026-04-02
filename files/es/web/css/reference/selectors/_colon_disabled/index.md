@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:disabled
 original_slug: Web/CSS/:disabled
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:disabled` de [CSS](/es/docs/Web/CSS) representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene además un estado habilitado en el cual puede ser activado o recibir foco.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:disabled` de [CSS](/es/docs/Web/CSS) representa a cualquier elemento deshabilitado. Un elemento se encuentra deshabilitado si no puede ser activado (por ejemplo ser selecionado, hacer click en él o aceptar texto de entrada) ni aceptar el foco. El elemento tiene además un estado habilitado en el cual puede ser activado o recibir foco.
 
 ```css
 /* Selecciona cualquier <input> deshabilitado */

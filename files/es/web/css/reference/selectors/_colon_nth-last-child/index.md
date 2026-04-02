@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:nth-last-child
 original_slug: Web/CSS/:nth-last-child
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-child()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-last-child()`** de [CSS](/es/docs/Web/CSS) selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final.
 
 ```css
 /* Selecciona cada cuarto elemento entre

@@ -8,7 +8,7 @@ original_slug: Web/CSS/-webkit-text-stroke-color
 
 ## Resumen
 
-La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/Web/CSS/color_value) del trazo de los caracteres de texto. Si no se fija se usa el valor de la propiedad {{cssxref("color")}}.
+La propiedad CSS **`-webkit-text-stroke-color`** especifica el [color](/es/docs/Web/CSS/Reference/Values/color_value) del trazo de los caracteres de texto. Si no se fija se usa el valor de la propiedad {{cssxref("color")}}.
 
 {{cssinfo}}
 

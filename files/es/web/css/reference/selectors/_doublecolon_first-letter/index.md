@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::first-letter
 original_slug: Web/CSS/::first-letter
 ---
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Glossary/Block-level_content), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::first-letter`** aplica estilos a la primera letra de la primera línea un [elemento de bloque](/es/docs/Glossary/Block-level_content), sólo cuando no es precedido de otro contenido (como imágenes o tablas).
 
 ```css
 /* Selecciona la primera letra de <p> */
@@ -20,7 +20,7 @@ La primera letra de un elemento no es siempre fácil de identificar:
 - La combinación del pseudoelemento {{ cssxref("::before") }} y la propiedad {{ cssxref("content") }} podría inyectar texto al inico del elemento. En dicho caso, `::first-letter` se aplicaría a la primera letra de este contenido generado.
 
 > [!NOTE]
-> CSS3 introdujo la notación`::first-letter` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan`:first-letter`, introducido en CSS2.
+> CSS3 introdujo la notación`::first-letter` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Los navegadores también aceptan`:first-letter`, introducido en CSS2.
 
 ## Propiedades permitidas
 

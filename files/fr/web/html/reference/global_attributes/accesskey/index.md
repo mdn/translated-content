@@ -3,7 +3,7 @@ title: "Attribut HTML universel : accesskey"
 short-title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 1696e3eadd2b142341a65a1cf6e9a4f3416412d1
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`accesskey`** indique un raccourci clavier possible pour l'élément courant. La valeur de l'attribut doit être un seul caractère imprimable (ce qui inclut les caractères accentués et autres caractères pouvant être générés par le clavier).
@@ -61,7 +61,8 @@ La combinaison de touches utilisée pour le raccourci clavier dépend du navigat
     </tr>
     <tr>
       <th>Opera</th>
-      <td colspan="2"><kbd>Alt</kbd> + <kbd><em>touche</em></kbd></td>
+      <td><kbd>Alt</kbd> + <kbd><em>touche</em></kbd></td>
+      <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>touche</em></kbd></td>
       <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>touche</em></kbd></td>
     </tr>
   </tbody>

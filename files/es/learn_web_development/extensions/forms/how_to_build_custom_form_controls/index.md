@@ -1674,7 +1674,7 @@ To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) r
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Attribute_selectors).
+> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 
 ### The `aria-selected` attribute
 

@@ -136,7 +136,7 @@ filter: contrast(200%);
 ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : Aplica el parámetro `<shadow>` como una sombra, siguiendo los contornos de la imagen. La sintaxis es similar a `<box-shadow>` (definida en el [módulo fondo y bordes CSS](/es/docs/Web/CSS/CSS_backgrounds_and_borders)), con la excepción de que la palabra clave `inset` y el parámetro `spread` no están permitidos. Al igual que con todos los valores de la propiedad `filter`, cualquier filtro después de `drop-shadow()` se aplica a la sombra.
+  - : Aplica el parámetro `<shadow>` como una sombra, siguiendo los contornos de la imagen. La sintaxis es similar a `<box-shadow>` (definida en el [módulo fondo y bordes CSS](/es/docs/Web/CSS/Guides/Backgrounds_and_borders)), con la excepción de que la palabra clave `inset` y el parámetro `spread` no están permitidos. Al igual que con todos los valores de la propiedad `filter`, cualquier filtro después de `drop-shadow()` se aplica a la sombra.
 
 ```css
 filter: drop-shadow(16px 16px 10px black);

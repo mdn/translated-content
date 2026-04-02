@@ -7,7 +7,7 @@ original_slug: Web/CSS/CSS_media_queries/Using_media_queries
 Las **_Media queries_** le permiten aplicar estilos CSS según el tipo general de un dispositivo (como impresión o pantalla) u otras características como la resolución de la pantalla o el ancho del _{{glossary("viewport")}}_ del navegador.
 Las _media queries_ se utilizan para lo siguiente:
 
-- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
+- Para aplicar estilos condicionalmente utilizando las [reglas de arroba](/es/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/es/docs/Web/CSS) {{cssxref("@media")}} e {{cssxref("@import")}}.
 - Para segmentar medios específicos para {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} y otros [HTML](/es/docs/Web/HTML) con el atributo `media=`.
 - Para [probar y monitorear los estados de los medios](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries) usando los métodos {{domxref("Window.matchMedia()")}} y {{domxref("EventTarget.addEventListener()")}}.
 
@@ -19,11 +19,11 @@ Las _media queries_ se utilizan para lo siguiente:
 Una _media query_ se compone de un _tipo de medio_ opcional y cualquier cantidad de expresiones de _características de medios_, que pueden combinarse opcionalmente de varias maneras usando _operadores lógicos_.
 Las consultas de medios no distinguen entre mayúsculas y minúsculas.
 
-- Los [tipos de medios](/es/docs/Web/CSS/@media#media_types) definen la amplia categoría de dispositivos para los que se aplica la consulta de medios: `all`, `print`, `screen`.
+- Los [tipos de medios](/es/docs/Web/CSS/Reference/At-rules/@media#media_types) definen la amplia categoría de dispositivos para los que se aplica la consulta de medios: `all`, `print`, `screen`.
 
   El tipo es opcional (se asume que es `all`) excepto cuando se usan los operadores lógicos `not` o `only`.
 
-- Las [características multimedia](/es/docs/Web/CSS/@media#media_features) describen una característica específica del {{glossary("user agent")}}, dispositivo de salida o entorno:
+- Las [características multimedia](/es/docs/Web/CSS/Reference/At-rules/@media#media_features) describen una característica específica del {{glossary("user agent")}}, dispositivo de salida o entorno:
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -58,7 +58,7 @@ Las consultas de medios no distinguen entre mayúsculas y minúsculas.
   Las expresiones de características de medios comprueban su presencia o valor y son completamente opcionales.
   Cada expresión de característica de medios debe estar entre paréntesis.
 
-- Se pueden utilizar [operadores lógicos](/es/docs/Web/CSS/@media#logical_operators) para componer una _media query_ compleja: `not`, `and` y `only`.
+- Se pueden utilizar [operadores lógicos](/es/docs/Web/CSS/Reference/At-rules/@media#logical_operators) para componer una _media query_ compleja: `not`, `and` y `only`.
   También puede combinar múltiples _media queries_ en una sola regla separándolas con comas.
 
 Una _media query_ se calcula como `true` cuando el tipo de medio (si se especifica) coincide con el dispositivo en el que se muestra un documento y todas las expresiones de características de medios se computan como verdaderas.
@@ -90,7 +90,7 @@ Por ejemplo, esta regla `@media` usa dos consultas de medios tanto para disposit
 }
 ```
 
-Consulte [tipos de medios](/es/docs/Web/CSS/@media#media_types) para obtener una lista de todos los tipos de medios.
+Consulte [tipos de medios](/es/docs/Web/CSS/Reference/At-rules/@media#media_types) para obtener una lista de todos los tipos de medios.
 Debido a que describen dispositivos solo en términos muy amplios, solo algunos están disponibles; para atributos más específicos, use _características de medios_ en su lugar.
 
 ## Destinos de características de los medios
@@ -125,7 +125,7 @@ Por ejemplo, este CSS se aplicará a cualquier dispositivo con una pantalla a co
 
 Si una característica no se aplica al dispositivo en el que se ejecuta el navegador, las expresiones relacionadas con esa característica multimedia siempre son falsas.
 
-Para obtener más ejemplos de [Características multimedia](/es/docs/Web/CSS/@media#media_features), consulte la página de referencia de cada característica específica.
+Para obtener más ejemplos de [Características multimedia](/es/docs/Web/CSS/Reference/At-rules/@media#media_features), consulte la página de referencia de cada característica específica.
 
 ## Creación de _media queries_ complejas
 
@@ -236,7 +236,7 @@ El nivel 4 agrega un _contexto de rango_ para escribir tales consultas. Por ejem
 
 > [!NOTE]
 > La especificación Media Queries Level 4 tiene un soporte razonable en los navegadores modernos, pero algunas características multimedia no son compatibles.
-> Consulte la [tabla de compatibilidad del navegador de `@media`](/es/docs/Web/CSS/@media#browser_compatibility) para obtener más detalles.
+> Consulte la [tabla de compatibilidad del navegador de `@media`](/es/docs/Web/CSS/Reference/At-rules/@media#browser_compatibility) para obtener más detalles.
 
 ```css
 @media (max-width: 30em) {
@@ -293,9 +293,9 @@ Por ejemplo, las siguientes consultas de prueba para dispositivos que tienen una
 
 ## Véase también
 
-- [@media](/es/docs/Web/CSS/@media)
-- [_Container queries_](/es/docs/Web/CSS/CSS_containment/Container_queries)
+- [@media](/es/docs/Web/CSS/Reference/At-rules/@media)
+- [_Container queries_](/es/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Prueba de _media queries_ programáticamente](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [Animaciones CSS entre _media queries_](https://davidwalsh.name/animate-media-queries)
-- [Características multimedia extendidas de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions#media_features)
+- [Características multimedia extendidas de Mozilla](/es/docs/Web/CSS/Reference/Mozilla_extensions#media_features)
 - [Características multimedia extendidas de WebKit](/es/docs/Web/CSS/WebKit_Extensions#media_features)

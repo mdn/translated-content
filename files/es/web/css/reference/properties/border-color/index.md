@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/border-color
 original_slug: Web/CSS/border-color
 ---
 
-{{ PreviousNext("Web/CSS/border", "Web/CSS/border-style") }}
+{{ PreviousNext("Web/CSS/Reference/Properties/border", "Web/CSS/Reference/Properties/border-style") }}
 
 ### Resumen
 

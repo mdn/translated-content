@@ -6,7 +6,7 @@ original_slug: Web/CSS/:fullscreen
 
 {{SeeCompatTable}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
 
 ```css
 /* Selecciona cualquier <div> que se muestre en modo de pantalla completa */

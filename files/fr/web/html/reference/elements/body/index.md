@@ -2,7 +2,7 @@
 title: "<body> : l'élément pour le corps du document"
 slug: Web/HTML/Reference/Elements/body
 l10n:
-  sourceCommit: a18c4a4188f856bec56a5df6ee53b65cee66e713
+  sourceCommit: 2a7d7d219c2ed31fbeec632d0b3f5e8a320a050a
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.
@@ -11,10 +11,10 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu princi
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-### Attributs d'événement
+### Attributs d'évènement
 
 > [!NOTE]
-> Chacun des noms d'attributs d'événement ci-dessous est lié à son événement équivalent de l'interface {{DOMxRef("Window")}}. Vous pouvez écouter ces événements en utilisant {{DOMxRef("EventTarget/addEventListener", "addEventListener()")}} au lieu d'ajouter l'attribut `oneventname` à l'élément `<body>`.
+> Chacun des noms d'attributs d'évènement ci-dessous est lié à son évènement équivalent de l'interface {{DOMxRef("Window")}}. Vous pouvez écouter ces évènements en utilisant {{DOMxRef("EventTarget/addEventListener", "addEventListener()")}} au lieu d'ajouter l'attribut `oneventname` à l'élément `<body>`.
 
 - {{DOMxRef("Window/afterprint_event", "onafterprint")}}
   - : Fonction appelée après que l'utilisateur·rice a imprimé le document.
@@ -78,23 +78,21 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Couleur d'arrière-plan du document.
     Utilisez la propriété CSS {{CSSxRef("background-color")}} à la place.
 - `bottommargin` {{Deprecated_Inline}}
-  - : Marge inférieure du body.
-    Utilisez la propriété CSS {{CSSxRef("margin-bottom")}} (ou la propriété logique {{CSSxRef("margin-block-end")}}) à la place.
+  - : Ignoré.
 - `leftmargin` {{Deprecated_Inline}}
-  - : Marge gauche du body.
-    Utilisez la propriété CSS {{CSSxRef("margin-left")}} (ou la propriété logique {{CSSxRef("margin-inline-start")}}) à la place.
+  - : La marge gauche et droite du corps.
+    Utilisez les propriétés CSS {{CSSxRef("margin-left")}} et {{CSSxRef("margin-right")}} (ou la propriété logique {{CSSxRef("margin-inline")}}) à la place.
 - `link` {{Deprecated_Inline}}
   - : Couleur du texte des liens hypertexte non visités.
     Utilisez la propriété CSS {{CSSxRef("color")}} avec la pseudo-classe {{CSSxRef(":link")}} à la place.
 - `rightmargin` {{Deprecated_Inline}}
-  - : Marge droite du body.
-    Utilisez la propriété CSS {{CSSxRef("margin-right")}} (ou la propriété logique {{CSSxRef("margin-inline-end")}}) à la place.
+  - : Ignoré.
 - `text` {{Deprecated_Inline}}
   - : Couleur du texte.
     Utilisez la propriété CSS {{CSSxRef("color")}} à la place.
 - `topmargin` {{Deprecated_Inline}}
-  - : Marge supérieure du body.
-    Utilisez la propriété CSS {{CSSxRef("margin-top")}} (ou la propriété logique {{CSSxRef("margin-block-start")}}) à la place.
+  - : Marge supérieure et inférieure du corps.
+    Utilisez les propriétés CSS {{CSSxRef("margin-top")}} et {{CSSxRef("margin-bottom")}} (ou la propriété logique {{CSSxRef("margin-block")}}) à la place.
 - `vlink` {{Deprecated_Inline}}
   - : Couleur du texte des liens hypertexte visités.
     Utilisez la propriété CSS {{CSSxRef("color")}} avec la pseudo-classe {{CSSxRef(":visited")}} à la place.
@@ -193,4 +191,4 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - L'élément {{HTMLElement("html")}}
 - L'élément {{HTMLElement("head")}}
-- [Aperçu de la gestion des événements](/fr/docs/Web/API/Document_Object_Model/Events#enregistrer_des_gestionnaires_dévénements)
+- [Aperçu de la gestion des évènements](/fr/docs/Web/API/Document_Object_Model/Events#enregistrer_des_gestionnaires_dévènements)

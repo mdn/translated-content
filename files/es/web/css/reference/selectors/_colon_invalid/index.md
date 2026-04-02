@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:invalid
 original_slug: Web/CSS/:invalid
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/HTML/Constraint_validation).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:invalid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyos contenidos no se puedan [validar](/es/docs/Web/HTML/Constraint_validation).
 
 ```css
 /* Selecciona cualquier <input> no válido */

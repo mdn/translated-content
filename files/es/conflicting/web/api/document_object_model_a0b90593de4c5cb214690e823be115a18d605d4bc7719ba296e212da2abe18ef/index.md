@@ -229,6 +229,6 @@ En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos
 ## Otros enlaces
 
 - [Referencia DOM](/es/docs/Web/API/Document_Object_Model)
-- [Introducción al DOM](/es/docs/Web/API/Document_Object_Model/Introduction)
+- [Introducción al DOM](/es/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)
 - [Eventos y el DOM](/es/docs/Learn_web_development/Core/Scripting/Events)
-- [Ejemplos](/es/docs/Web/API/Document_Object_Model/Examples)
+- [Ejemplos](/es/docs/conflicting/Web/API/Document_Object_Model_16086573ad7dac5194660bdbfcad47fdf7637bed7caad1fb76fb380952c4fb4b)

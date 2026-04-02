@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/background-position
 original_slug: Web/CSS/background-position
 ---
 
-{{ PreviousNext("Web/CSS/background-image", "Web/CSS/background-repeat") }}
+{{ PreviousNext("Web/CSS/Reference/Properties/background-image", "Web/CSS/Reference/Properties/background-repeat") }}
 
 ## Resumen
 

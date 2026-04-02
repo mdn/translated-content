@@ -60,4 +60,4 @@ body {
 
 ## Ver también
 
-- [Usando variables CSS](/es/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Usando variables CSS](/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)

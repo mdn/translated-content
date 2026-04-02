@@ -6,7 +6,7 @@ original_slug: Web/CSS/::marker
 
 {{SeeCompatTable}}
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::marker`** en [CSS](/es/docs/Web/CSS) selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para [`display: list-item`](/es/docs/Web/CSS/display), como el elemento {{HTMLElement("li")}} y {{HTMLElement("summary")}}.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::marker`** en [CSS](/es/docs/Web/CSS) selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para [`display: list-item`](/es/docs/Web/CSS/Reference/Properties/display), como el elemento {{HTMLElement("li")}} y {{HTMLElement("summary")}}.
 
 ```css
 ::marker {
@@ -19,7 +19,7 @@ El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::marker`** en [CSS](/
 
 Sólo ciertas propiedades CSS puedes utilizarse en una regla con `::marker` como selector:
 
-- Todas las [propiedades de fuentes](/es/docs/Web/CSS/CSS_fonts)
+- Todas las [propiedades de fuentes](/es/docs/Web/CSS/Guides/Fonts)
 - {{CSSxRef("color")}}
 - La propiedad {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} y {{CSSxRef("direction")}}
 - La propiedad {{CSSxRef("content")}}

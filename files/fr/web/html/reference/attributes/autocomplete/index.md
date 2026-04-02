@@ -3,7 +3,7 @@ title: "Attribut HTML : autocomplete"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: 2456adac96280a9c78696fa4a0a87810671c3a8d
 ---
 
 L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
@@ -54,7 +54,7 @@ Si la même liste de jetons est utilisée dans plusieurs contrôles de formulair
 
 Certains jetons peuvent être utilisés plusieurs fois avec des valeurs attendues différentes, comme le jeton `zip-code` dans un formulaire contenant à la fois une adresse de livraison et de facturation. Inclure plusieurs jetons différents dans une liste séparée par des espaces permet d'attribuer des valeurs d'autocomplétion uniques&nbsp;: par exemple, `autocomplete="shipping zip-code"` et `autocomplete="billing zip-code"`.
 
-Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping zip-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours "section-", suivis d'une chaîne alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
+Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping zip-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours "section-", suivis d'une chaîne de caractères alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
 
 Si vous ajoutez l'attribut `autocomplete` sur un champ {{HTMLElement("input/hidden", "hidden")}} (`<input type="hidden">`), sa valeur doit être une liste ordonnée de jetons séparés par des espaces&nbsp;; les mots-clés `on` et `off` ne sont pas autorisés.
 
@@ -95,7 +95,7 @@ Les options de `<token-list>` incluent, dans l'ordre&nbsp;:
 Pour créer un groupe nommé de champs de formulaire, on peut utiliser le jeton optionnel `section-*`. S'il est présent, ce jeton doit être le premier de la liste de jetons séparés par des espaces.
 
 - `section-*`
-  - : Définit le nom d'un groupe de contrôles de formulaire. Il s'agit d'un jeton dont les huit premiers caractères sont la chaîne «&nbsp;section-&nbsp;» (insensible à la casse), suivie de caractères supplémentaires. Tous les contrôles de formulaire commençant par le même jeton appartiennent au même groupe nommé.
+  - : Définit le nom d'un groupe de contrôles de formulaire. Il s'agit d'un jeton dont les huit premiers caractères sont la chaîne de caractères «&nbsp;section-&nbsp;» (insensible à la casse), suivie de caractères supplémentaires. Tous les contrôles de formulaire commençant par le même jeton appartiennent au même groupe nommé.
 
 #### Identifiant de regroupement
 
@@ -244,6 +244,20 @@ Avec {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, le jeton `webauthn
 
 - `webauthn`
   - : Les clés d'accès générées par [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès via l'autoremplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.
+
+## Accessibilité
+
+L'utilisation de valeurs `autocomplete` appropriées aide les utilisateur·ice·s ayant des troubles cognitifs, des limitations motrices ou d'autres conditions à remplir les formulaires plus rapidement et avec plus de précision, en réduisant la nécessité de saisir et de mémoriser des informations. Lorsque le navigateur peut identifier la finalité d'un champ de formulaire grâce à sa valeur `autocomplete`, il peut proposer des données enregistrées telles que des noms, des adresses et des informations de paiement, ce qui profite à tou·te·s les utilisateur·ice·s mais est particulièrement important pour celles et ceux qui rencontrent des difficultés à saisir manuellement des données.
+
+Fournir des jetons autocomplete valides permet également de satisfaire au [Critère de succès 1.3.5 de la WCAG 2.2&nbsp;: Identifier la finalité de la saisie <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) (Niveau AA), qui exige que la finalité des champs de saisie collectant des informations utilisateur·ice·s puisse être déterminée de manière programmatique. Cela permet aux agents utilisateur et aux technologies d'assistance d'appliquer des présentations personnalisées, comme l'affichage d'icônes familières à côté des champs, pour aider les utilisateur·ice·s à comprendre et à compléter les formulaires.
+
+### Éviter de désactiver l'autocomplétion
+
+Définir `autocomplete="off"` empêche le navigateur de proposer des données enregistrées pour un champ. Les développeur·euse·s utilisent parfois cette option pour empêcher l'autoremplissage pour des raisons de sécurité (comme pour des codes à usage unique), mais cela supprime une fonctionnalité dont de nombreux·ses utilisateur·ice·s dépendent. Les utilisateur·ice·s ayant des troubles cognitifs peuvent s'appuyer sur l'autocomplétion pour se souvenir de leurs informations personnelles, et les utilisateur·ice·s ayant des limitations motrices bénéficient d'une saisie réduite. Les navigateurs peuvent également ignorer `autocomplete="off"` sur les champs de connexion afin de prendre en charge les gestionnaires de mots de passe.
+
+### Éviter les valeurs autocomplete invalides
+
+L'utilisation de valeurs invalides ou non standard (comme des chaînes de caractères inventées pour contourner l'autoremplissage) a un effet similaire&nbsp;: le navigateur ne peut associer le champ à aucune finalité connue et ne peut donc pas proposer de suggestions pertinentes. Cela ne répond également plus à l'exigence WCAG ci-dessus, car la finalité de la saisie n'est alors plus déterminable de manière programmatique. Si vous devez désactiver l'autoremplissage pour un champ spécifique, envisagez d'utiliser `autocomplete="off"` uniquement lorsque cela est réellement nécessaire (par exemple pour un champ CAPTCHA ou un champ de jeton à usage unique) plutôt que de l'appliquer à l'ensemble d'un formulaire.
 
 ## Exemples
 

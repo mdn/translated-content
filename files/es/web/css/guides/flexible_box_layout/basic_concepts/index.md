@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación. Este artículo hace un repaso de las principales características de flexbox, las que exploraremos con mayor detalle en el resto de estas guías.
 
-Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del [Grid Layout de CSS](/es/docs/Web/CSS/CSS_grid_layout), el cual controla columnas y filas a la vez.
+Cuando describimos a flexbox como unidimensional destacamos el hecho que flexbox maneja el layout en una sola dimensión a la vez — ya sea como fila o como columna. Esto contrasta con el modelo bidimensional del [Grid Layout de CSS](/es/docs/Web/CSS/Guides/Grid_layout), el cual controla columnas y filas a la vez.
 
 Los dos ejes de flexbox
 

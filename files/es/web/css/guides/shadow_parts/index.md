@@ -27,7 +27,7 @@ Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de su
 
 ## Guías
 
-- [Pseudoelementos CSS](/es/docs/Web/CSS/Pseudo-elements)
+- [Pseudoelementos CSS](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - : Lista alfabética de pseudoelementos definidos por todas las especificaciones de CSS y WebVTT
 
 - [Componentes web](/es/docs/Web/API/Web_components)
@@ -54,6 +54,6 @@ Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de su
 ## Véase también
 
 - [Pseudoelementos de CSS](/es/docs/Web/CSS/CSS_pseudo-elements) module
-- [Selectores de CSS](/es/docs/Web/CSS/CSS_selectors) module
+- [Selectores de CSS](/es/docs/Web/CSS/Guides/Selectors) module
 - [Uso del shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM)
 - [Plantillas: Estilando fuera del ámbito actual](https://web.dev/learn/html/template/#styling_outside_of_the_current_scope) en web.dev (2023)

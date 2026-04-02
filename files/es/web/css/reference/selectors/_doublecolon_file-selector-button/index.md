@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::file-selector-button
 original_slug: Web/CSS/::file-selector-button
 ---
 
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Reference/Elements/input/file).
+El [pseudoelemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::file-selector-button`** representa el botón de un {{HTMLElement("input") }} con el atributo [`type="file"`](/es/docs/Web/HTML/Reference/Elements/input/file).
 
 {{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-En CSS, **`::after`** crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comúnmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}. Está en línea de forma predeterminada.
+En CSS, **`::after`** crea un [pseudoelemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comúnmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}. Está en línea de forma predeterminada.
 
 {{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
 
@@ -61,10 +61,10 @@ Los pseudoelementos `::after` no se pueden aplicar a _{{ glossary("replaced elem
 
 Un pseudoelemento `::after` con un valor de {{cssxref("display")}} igual a `list-item` se comporta como un elemento de lista, y por lo tanto puede generar un pseudoelemento {{cssxref("::marker")}} igual que un elemento {{htmlelement("li")}}.
 
-Si la propiedad [`content`](/es/docs/Web/CSS/content) no está especificada, tiene un valor inválido, o tiene `normal` o `none` como valor, el pseudoelemento `::after` no se renderizará. Se comporta como si se hubiera establecido `display: none`.
+Si la propiedad [`content`](/es/docs/Web/CSS/Reference/Properties/content) no está especificada, tiene un valor inválido, o tiene `normal` o `none` como valor, el pseudoelemento `::after` no se renderizará. Se comporta como si se hubiera establecido `display: none`.
 
 > [!NOTE]
-> La especificación [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introdujo la notación de doble punto `::after` para distinguir las [pseudoclasses](/es/docs/Web/CSS/Pseudo-classes) de los [pseudoelementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan la notación de un solo punto `:after`, introducida en CSS2.
+> La especificación [Selectors Level 3](https://drafts.csswg.org/selectors-3/#gen-content) introdujo la notación de doble punto `::after` para distinguir las [pseudoclasses](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) de los [pseudoelementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements). Los navegadores también aceptan la notación de un solo punto `:after`, introducida en CSS2.
 
 ## Accesibilidad
 
@@ -135,7 +135,7 @@ Podemos estilizar texto o imágenes con la propiedad {{CSSxRef("content")}} casi
 
 ### Tooltips
 
-Este ejemplo usa `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/attr) y un [atributo de datos personalizado](/es/docs/Web/HTML/Reference/Global_attributes/data-*) `data-description` para crear tooltips. ¡No es necesario JavaScript!
+Este ejemplo usa `::after` en conjunto con la expresión CSS [`attr()`](/es/docs/Web/CSS/Reference/Values/attr) y un [atributo de datos personalizado](/es/docs/Web/HTML/Reference/Global_attributes/data-*) `data-description` para crear tooltips. ¡No es necesario JavaScript!
 
 También podemos ayudar a los usuarios de teclado con esta técnica, añadiendo un `tabindex` de `0` para hacer que cada `span` sea enfocable desde el teclado, y utilizando un selector CSS `:focus`. Esto demuestra lo flexibles que `::before` y `::after` pueden ser, aunque para una experiencia más accesible, probablemente sea más apropiado un widget de divulgación semántica creado de alguna otra forma (como con elementos [details y summary](/es/docs/Web/HTML/Reference/Elements/details)).
 
@@ -191,7 +191,7 @@ span[data-description]:focus::after {
 
 ### Pseudoelementos anidados `::after::marker`
 
-El [pseudoelemento anidado](/es/docs/Web/CSS/Pseudo-elements#nesting_pseudo-elements) `::after::marker` selecciona el {{CSSxRef("::marker")}} de lista de un pseudoelemento `::after` que es a su vez un elemento de lista, es decir, que tiene su propiedad {{CSSxRef("display")}} establecida a `list-item`.
+El [pseudoelemento anidado](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements#nesting_pseudo-elements) `::after::marker` selecciona el {{CSSxRef("::marker")}} de lista de un pseudoelemento `::after` que es a su vez un elemento de lista, es decir, que tiene su propiedad {{CSSxRef("display")}} establecida a `list-item`.
 
 En esta demo, generamos elementos de lista adicionales antes y después de un menú de navegación de lista utilizando `::before` y `::after` (configurándolos a `display: list-item` para que se comporten como elementos de lista). Luego usamos `ul::before::marker` y `ul::after::marker` para dar a sus marcadores de lista un color diferente.
 

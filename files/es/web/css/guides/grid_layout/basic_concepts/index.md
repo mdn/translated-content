@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Grid_layout/Basic_concepts
 original_slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
-[CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
+[CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout) presenta un sistema de cuadrícula bidimensional para CSS. Las cuadrículas se pueden utilizar para posicionar áreas principales de la página o pequeños elementos de la interfaz de usuario. Este artículo lo introduce a Grid Layout de CSS y la nueva terminología que forma parte de la especificación CSS Grid Layout Nivel 1. Las características mostradas en este resumen se explicarán con mayor detalle en el resto de esta guía.
 
 ## ¿Qué es una cuadrícula(grid)?
 
@@ -30,7 +30,7 @@ Grid contiene características de alineación para poder controlar la forma cóm
 
 Se puede colocar más de un elemento en una celda de la cuadrícula o área, las cuales pueden solaparse o superponerse total o parcialmente entre sí. Esta estratificación puede ser controlada con la propiedad {{cssxref("z-index")}}.
 
-Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
+Grid es una poderosa especificación que, cuando se combina con otras partes de CSS como [flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout), puede ayudarle a crear diseños que antes eran imposibles de construir en CSS. Todo comienza creando una cuadrícula en su **contenedor de cuadrícula**.
 
 ## El contenedor de Grid
 
@@ -608,7 +608,7 @@ Si establezco `box1` a `display: grid` puedo darle una definición de vía y tam
 
 {{ EmbedLiveSample('anidamiento', '600', '340') }}
 
-En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
+En este caso, la cuadrícula anidada no tiene ninguna relación con el padre. Como usted puede ver en el ejemplo, no ha heredado la [`grid-gap`](/es/docs/Web/CSS/Reference/Properties/gap) del elemento padre y las líneas de la cuadrícula anidada no se alinean con las líneas de la cuadrícula padre.
 
 ### Subgrid
 
@@ -751,7 +751,7 @@ Podemos controlar el orden en el que los artículos se apilan utilizando la prop
 
 ## Siguientes Pasos
 
-En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
+En este artículo hemos tenido una mirada muy rápida a través de la Especificación de Grid Layout. Juegue un poco con los ejemplos de código, y luego pase a [la siguiente parte de esta guía donde realmente nos vamos a adentrar en detalle dentro de CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods).
 
 <section id="Quick_links">
 <ol>

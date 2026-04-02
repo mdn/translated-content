@@ -48,7 +48,7 @@ background-image:
 
 Las imágenes de fondo se dibujan apilando capas de contexto una encima de la otra. La primera capa especificada se dibuja como si estuviera más cerca del usuario.
 
-Los [bordes](/es/docs/Web/CSS/border) del elemento se dibujan encima de ellos y el {{cssxref("background-color")}} se dibuja debajo de ellos. La forma en que se dibujan las imágenes en relación con el cuadro y sus bordes se define mediante las propiedades CSS {{cssxref("background-clip")}} y {{cssxref("background-origin")}}.
+Los [bordes](/es/docs/Web/CSS/Reference/Properties/border) del elemento se dibujan encima de ellos y el {{cssxref("background-color")}} se dibuja debajo de ellos. La forma en que se dibujan las imágenes en relación con el cuadro y sus bordes se define mediante las propiedades CSS {{cssxref("background-clip")}} y {{cssxref("background-origin")}}.
 
 Si no se puede dibujar una imagen específica (por ejemplo, cuando no se puede cargar el archivo indicado por el URI especificado), los navegadores lo manejan como si fuera un valor `none`.
 
@@ -79,7 +79,7 @@ background-image: unset;
 - `none`
   - : Utilizado para especificar que un elemento no debe tener imagen de fondo.
 - `<image>`
-  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
+  - : Es un {{cssxref("&lt;image&gt;")}} que indica la imagen que se va a mostrar. Puede haber varios, separados por comas, ya que se admiten [fondos múltiples](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds).
 
 ## Problemas de accesibilidad
 

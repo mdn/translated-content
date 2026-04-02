@@ -174,5 +174,5 @@ Esta propiedad puede especificarse como:
 ## Ver también
 
 - Propiedades CSS relacionadas: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Guía de grid layout: _[Basic concepts of grid layout - Grid Tracks](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Guía de grid layout: _[Basic concepts of grid layout - Grid Tracks](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#grid_tracks)_
 - Video tutorial: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_

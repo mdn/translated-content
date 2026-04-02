@@ -2,7 +2,7 @@
 title: Propriétés CSS
 slug: Web/CSS/Reference/Properties
 l10n:
-  sourceCommit: 8a74d8feac267c1ddc37a4a8bc61e9aa8db75b12
+  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
 ---
 
 Une **_propriété_** [CSS](/fr/docs/Web/CSS) est un paramètre utilisé dans une [déclaration CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) qui vous permet de mettre en forme certains aspects des éléments sélectionnés. Par exemple, la propriété {{CSSxRef("opacity")}} est utilisée pour définir l'opacité d'un élément sélectionné, ce qui vous permet de contrôler si le contenu derrière cet élément est visible&nbsp;:
@@ -574,7 +574,7 @@ Les propriétés standard définies par les spécifications CSS sont les suivant
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}}
+- {{CSSxRef("vertical-align")}} (version courte)
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}

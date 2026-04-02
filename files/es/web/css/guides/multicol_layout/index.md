@@ -26,7 +26,7 @@ original_slug: Web/CSS/CSS_multicol_layout
 
 ## Guías
 
-- [Diseños multicolumna con CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Diseños multicolumna con CSS](/es/docs/Web/CSS/Guides/Multicol_layout/Using)
   - : Tutorial paso a paso sobre cómo desarrollar diseños de varias columnas.
 
 ## Especificaciones

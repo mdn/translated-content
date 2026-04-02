@@ -12,7 +12,7 @@ Un aspecto importante de los componentes Web es la encapsulación — ser capaz 
 
 ## Vista de alto nivel
 
-Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Introduction) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
+Este artículo asume que usted está familiarizado con el concepto de [DOM (Document Object Model)](/es/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) — una estructura en forma de arbol de nodos conectados que representan los diferentes elementos y cadenas de texto que aparecen en un documento de marcado (generalmente un documento HTML en el caso de documentos web). Como ejemplo, considere el siguiente fragmento HTML:
 
 ```html
 <!doctype html>

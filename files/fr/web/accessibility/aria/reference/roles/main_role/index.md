@@ -3,7 +3,7 @@ title: "ARIA : rôle main"
 short-title: main
 slug: Web/Accessibility/ARIA/Reference/Roles/main_role
 l10n:
-  sourceCommit: 6193c69cb71e80e45e7dff97188253ed15d58321
+  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
 ---
 
 Le rôle de repère `main` est utilisé pour indiquer le contenu principal d'un document. La zone de contenu principal se compose de contenu qui est directement lié ou qui développe le sujet central d'un document, ou la fonction principale d'une application.

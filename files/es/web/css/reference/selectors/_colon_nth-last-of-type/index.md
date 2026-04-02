@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:nth-last-of-type
 original_slug: Web/CSS/:nth-last-of-type
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:nth-last-of-type()`** [CSS](/es/docs/Web/CSS) coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:nth-last-of-type()`** [CSS](/es/docs/Web/CSS) coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final.
 
 ```css
 /* Selecciona cada cuarto elementos <p> entre

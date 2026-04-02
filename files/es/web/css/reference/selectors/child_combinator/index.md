@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/Child_combinator
 original_slug: Web/CSS/Child_combinator
 ---
 
-El combinador `>` separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos **directos** del primero. EN contraste, cuando se combinan dos selectores con el [selector de descendiente](/es/docs/Web/CSS/Descendant_combinator), la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.
+El combinador `>` separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos **directos** del primero. EN contraste, cuando se combinan dos selectores con el [selector de descendiente](/es/docs/Web/CSS/Reference/Selectors/Descendant_combinator), la expresión busca elementos que coinciden con el segundo selector y que tienen algun ancestro que coindice con el primero, sin importar el nivel de separación que tengan dentro del DOM.
 
 ## Sintaxis
 

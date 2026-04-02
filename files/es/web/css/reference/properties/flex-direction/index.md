@@ -165,5 +165,5 @@ Si utilizas `flex-direction` con un valor de `row-reverse` o `column-reverse` en
 
 ## Ver también
 
-- Guía de CSS Flexbox: _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guía de CSS Flexbox: _[Conceptos básicos de Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - Guía de CSS Flexbox: _[Ordenar items flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

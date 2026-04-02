@@ -56,7 +56,7 @@ Todas las animaciones, incluso aquellas con 0 segundos de duración, lanzan even
 
 ## Guías
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Usando animaciones CSS](/es/docs/Web/CSS/Guides/Animations/Using)
   - : Tutorial paso a paso sobre cómo crear animaciones usando CSS. Este artículo describe las propiedades CSS y las reglas arroba relacionadas con la animación y cómo interactúan entre sí.
 - [Consejos y trucos de animación CSS](/es/docs/Web/API/Web_Animations_API/Tips)
   - : Consejos y trucos para ayudarlo a aprovechar al máximo las animaciones CSS.
@@ -75,6 +75,6 @@ Todas las animaciones, incluso aquellas con 0 segundos de duración, lanzan even
 ## Véase también
 
 - [Animaciones CSS basadas en desplazamiento](/es/docs/Web/CSS/CSS_scroll-driven_animations)
-- Propiedades en el módulo CSS [transitions](/es/docs/Web/CSS/CSS_transitions) para activar animaciones en función de las acciones del usuario
+- Propiedades en el módulo CSS [transitions](/es/docs/Web/CSS/Guides/Transitions) para activar animaciones en función de las acciones del usuario
 - El elemento HTML {{htmlelement("canvas")}} junto con la [API de canvas](/es/docs/Web/API/Canvas_API) y la [API de WebGL](/es/docs/Web/API/WebGL_API) para dibujar gráficos y animaciones
 - La interfaz {{domxref("SVGAnimationElement")}} para todas las interfaces de elementos relacionados con la animación, incluidas {{domxref("SVGAnimateElement")}}, {{domxref("SVGAnimateElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} y {{domxref("SVGAnimateTransformElement")}}

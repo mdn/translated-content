@@ -61,7 +61,7 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 
 ¿Quieres probar tus habilidades de CSS? Las siguientes evaluaciones pondrán a prueba su comprensión del CSS cubierto en las guías anteriores.
 
-- [Comprensión de CSS básica](/es/docs/Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension)
+- [Comprensión de CSS básica](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9)
   - : Esta evaluación evalúa su comprensión de la sintaxis básica, selectores, especificidad, modelo de caja y más.
 - [Crear papel con membrete elegante](/es/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
   - : Si desea causar la impresión correcta, escribir una carta en papel con membrete puede ser un buen comienzo. En esta evaluación, lo retaremos a crear una plantilla en línea para lograr ese aspecto.

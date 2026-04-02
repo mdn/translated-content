@@ -770,7 +770,7 @@ En esta descripción general, hemos recorrido las características principales d
 
 ## Ver también
 
-- [Guías de cuadrícula CSS](/es/docs/Web/CSS/CSS_grid_layout#guides)
+- [Guías de cuadrícula CSS](/es/docs/Web/CSS/Guides/Grid_layout#guides)
 - [Inspector de cuadrícula CSS: Examinar diseños de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

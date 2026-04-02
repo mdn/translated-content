@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-webkit-slider-thumb
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) CSS **`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
 
 ## Especificaciones
 

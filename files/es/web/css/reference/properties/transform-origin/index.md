@@ -64,7 +64,7 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 ## Ejemplos
 
-Ver [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) para más ejemplos.
+Ver [Uso de CSS transforms](/es/docs/Web/CSS/Guides/Transforms/Using) para más ejemplos.
 
 ### Ejemplos en vivo
 
@@ -90,4 +90,4 @@ Ver [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
 
 ## Ver también
 
-- [Uso de CSS transform](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Uso de CSS transform](/es/docs/Web/CSS/Guides/Transforms/Using)
