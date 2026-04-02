@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-{{domxref('MediaKeySession')}} 接口的 **`sessionId`** 只读属性包含由内容解密模块 (CDM) 为当前媒体对象及其关联的密钥或许可证生成的唯一字符串。
+{{domxref('MediaKeySession')}} 接口的 **`sessionId`** 只读属性包含由内容解密模块（CDM）为当前媒体对象及其关联的密钥或许可证生成的唯一字符串。
 
 ## 值
 
