@@ -15,9 +15,9 @@ l10n:
 可以取以下两个值之一：
 
 - `constant`
-  - : {{domxref("MediaRecorder")}} 使用该恒定比特率进行编码。
+  - : {{domxref("MediaRecorder")}} 使用恒定比特率进行编码。
 - `variable`
-  - : {{domxref("MediaRecorder")}} 使用该可变比特率进行编码，允许为复杂的信号分配更多空间，为不太复杂的信号分配更少空间。
+  - : {{domxref("MediaRecorder")}} 使用可变比特率进行编码，允许为复杂的信号分配更多空间，为不太复杂的信号分配更少空间。
 
 ## 规范
 
