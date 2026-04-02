@@ -1,15 +1,16 @@
 ---
 title: Window：requestAnimationFrame() 方法
+short-title: requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 l10n:
-  sourceCommit: f9f48866f02963e752717310b76a70d5bdaf554c
+  sourceCommit: 14964f7b946f7e7f19c1a0a2f71e4e8db60ecd4a
 ---
 
 {{APIRef}}
 
 **`window.requestAnimationFrame()`** 方法会告诉浏览器你希望执行一个动画。它要求浏览器在下一次重绘之前，调用用户提供的回调函数。
 
-对回调函数的调用频率通常与显示器的刷新率相匹配。虽然 75hz、120hz 和 144hz 也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`。
+对回调函数的调用频率通常与显示器的刷新率相匹配。最常见的刷新率是 60hz（每秒 60 个周期/帧），不过 75hz、120hz 和 144hz 也被广泛使用。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`。
 
 > [!NOTE]
 > 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 `requestAnimationFrame()`。`requestAnimationFrame()` 是一次性的。
@@ -34,10 +35,13 @@ requestAnimationFrame(callback)
 
 ### 返回值
 
-请求 ID 是一个 `long` 类型整数值，是在回调列表里的唯一标识符。这是一个非零值，但你不能对该值做任何其他假设。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
+一个 `unsigned long` 整数值，即请求 ID，是在回调列表里的唯一标识符。这是一个非零值，但你不能对该值做任何其他假设。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
 
 > [!WARNING]
-> 请求 ID 通常实现为每个窗口的递增计数器。因此，即使它从 1 开始计数，也可能会溢出并最终达到 0。虽然这不太可能对短期应用程序造成问题，但你应该避免使用 `0` 作为无效请求标识符 ID 的哨兵值，而应该使用无法达到的值，如 `null`。规范没有指定溢出行为，因此浏览器具有不同的行为。溢出时，该值要么回绕到 0，要么变为负值，要么抛出错误。除非溢出会抛出异常，否则请求 ID 也不是真正唯一的，因为对于可能无限多的回调函数，只有有限多个 32 位整数。但请注意，在 60Hz 渲染频率下，每帧调用 100 次 `requestAnimationFrame()`，大约需要 500 天才会出现此问题。
+> 请求 ID 通常实现为每个窗口的递增计数器。因此，即使它从 1 开始计数，也可能会溢出并最终达到 0。虽然这不太可能对短期应用程序造成问题，但你应该避免使用 `0` 作为无效请求标识符 ID 的哨兵值，而应该使用无法达到的值，如 `null`。
+> 规范没有指定溢出行为，因此浏览器具有不同的行为。溢出时，该值要么回绕到 0，要么变为负值，要么抛出错误。
+> 除非溢出会抛出异常，否则请求 ID 也不是真正唯一的，因为对于可能无限多的回调函数，只有有限多个 32 位整数。
+> 但请注意，在 60Hz 渲染频率下，每帧调用一次 `requestAnimationFrame()`，大约需要 800 天才会出现此问题。
 
 ## 示例
 
@@ -45,8 +49,7 @@ requestAnimationFrame(callback)
 
 ```js
 const element = document.getElementById("some-element-you-want-to-animate");
-let start, previousTimeStamp;
-let done = false;
+let start;
 
 function step(timestamp) {
   if (start === undefined) {
@@ -54,38 +57,30 @@ function step(timestamp) {
   }
   const elapsed = timestamp - start;
 
-  if (previousTimeStamp !== timestamp) {
-    // 这里使用 Math.min() 确保元素在恰好位于 200px 时停止运动
-    const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = `translateX(${count}px)`;
-    if (count === 200) done = true;
-  }
-
-  if (elapsed < 2000) {
-    // 2 秒之后停止动画
-    previousTimeStamp = timestamp;
-    if (!done) {
-      window.requestAnimationFrame(step);
-    }
+  // Math.min() 用于确保元素精确停在 200px
+  const shift = Math.min(0.1 * elapsed, 200);
+  element.style.transform = `translateX(${shift}px)`;
+  if (shift < 200) {
+    requestAnimationFrame(step);
   }
 }
 
-window.requestAnimationFrame(step);
+requestAnimationFrame(step);
 ```
 
-以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧中动画进度的起点。如果你想同步到外部时钟，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间（16.67ms @60hz）。回调函数的时间戳参数表示上一帧的结束，因此最快将在下一帧中呈现新计算的值。
+以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧动画进度的基准。如果你想与外部时钟同步，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间（60Hz 时为 16.67ms）。回调的时间戳参数表示上一帧的结束时间，因此新计算的值最快会在下一帧中呈现。
 
-此示例会等待第一个回调函数执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你无需与任意外部同步（例如音频），则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
+此示例等待第一个回调执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你不需要与任何外部内容（如音频）同步，则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
 
 ```js
 let zero;
 requestAnimationFrame(firstFrame);
-function firstFrame(timeStamp) {
-  zero = timeStamp;
-  animate(timeStamp);
+function firstFrame(timestamp) {
+  zero = timestamp;
+  animate(timestamp);
 }
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration;
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));
@@ -93,13 +88,13 @@ function animate(timeStamp) {
 }
 ```
 
-此示例在第一次调用 `requestAnimationFrame` 前使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 设置了一个零值。`document.timeline.currentTime` 与 `timeStamp` 参数对齐，因此零值等价于第 0 帧的时间戳。
+此示例在首次调用 `requestAnimationFrame` 之前使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 设置零值。`document.timeline.currentTime` 与 `timestamp` 参数对齐，因此零值等同于第 0 帧的时间戳。
 
 ```js
 const zero = document.timeline.currentTime;
 requestAnimationFrame(animate);
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration; // animation-timing-function: linear
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));
@@ -107,7 +102,10 @@ function animate(timeStamp) {
 }
 ```
 
-此示例使用 {{domxref("performance.now()")}} 而不是回调的时间戳值去设置动画。你可以使用它来实现稍高的同步精度，尽管附加精确度是易变的且增长不大。备注：此示例不能让你可靠地同步动画回调函数。
+此示例使用 {{domxref("performance.now()")}} 而非回调的时间戳值来进行动画。你可以使用此方法实现稍高的同步精度，尽管额外精度是可变的且提升不大。
+
+> [!NOTE]
+> 此示例不允许你可靠地同步动画回调。
 
 ```js
 const zero = performance.now();
@@ -116,7 +114,7 @@ function animate() {
   const value = (performance.now() - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
-    requestAnimationFrame((t) => animate(t));
+    requestAnimationFrame(animate);
   } else element.style.opacity = 1;
 }
 ```
@@ -134,4 +132,5 @@ function animate() {
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
-- [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://www.testufo.com/#test=animation-time-graph)
+- [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://testufo.com/#test=animation-time-graph)
+- [Firefox 切换到 uint32_t 作为 requestAnimationFrame 请求 ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
