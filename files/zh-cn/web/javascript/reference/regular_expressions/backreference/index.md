@@ -37,7 +37,7 @@ l10n:
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
-在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式) 下，无效的反向引用会转换为[旧式的八进制转义序列](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#转义序列)。这是一种[为兼容 Web 而保留的已弃用语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖此特性。
+在[非 Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)下，无效的反向引用会转换为[旧式的八进制转义序列](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#转义序列)。这是一种[为兼容 Web 而保留的已弃用语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)，不应依赖此特性。
 
 ```js
 /(a)\2/.test("a\x02"); // true

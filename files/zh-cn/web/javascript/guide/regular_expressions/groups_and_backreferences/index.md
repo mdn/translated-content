@@ -219,7 +219,7 @@ for (const match of quote.matchAll(regexpQuotes)) {
 }
 ```
 
-更多示例请参见[反向引用](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference) 参考文档。
+更多示例请参见[反向引用](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)参考文档。
 
 ## 参见
 
