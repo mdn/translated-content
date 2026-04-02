@@ -2,12 +2,14 @@
 title: 交叉观察器 API
 slug: Web/API/Intersection_Observer_API
 l10n:
-  sourceCommit: ab3d575903f42cef83e062b8f3499240cd2a6bc8
+  sourceCommit: 450708eb6ad17ff17f6c3b393de91909260ecd26
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 交叉观察器 API（Intersection Observer API）提供了一种异步检测目标元素与祖先元素或顶级文档的{{Glossary("viewport","视口")}}相交情况变化的方法。
+
+## 概述
 
 过去，要检测一个元素是否可见或者两个元素是否相交并不容易，很多解决办法不可靠或性能很差。然而，随着互联网的发展，这种需求却与日俱增，比如，下面这些情况都需要用到相交检测：
 
@@ -24,7 +26,7 @@ l10n:
 
 交叉观察器 API 无法提供重叠像素的确切数量或具体是哪些像素重叠；不过，它涵盖了“如果它们相交*N*%左右，我需要做什么”这种更常见的用例。
 
-## 交叉观察器的概念和用法
+## 概念和用法
 
 交叉观察器 API 允许你配置一个回调函数，当以下情况发生时会被调用：
 
@@ -42,13 +44,14 @@ l10n:
 通过调用 IntersectionObserver 构造函数，创建交叉观测器，并将回调函数传给它，当一个方向或另一个方向越过阈值时，就运行该函数：
 
 ```js
-let options = {
+const options = {
   root: document.querySelector("#scrollArea"),
   rootMargin: "0px",
+  scrollMargin: "0px",
   threshold: 1.0,
 };
 
-let observer = new IntersectionObserver(callback, options);
+const observer = new IntersectionObserver(callback, options);
 ```
 
 阈值为 1.0 意味着目标元素完全出现在 `root` 选项指定的元素中 100% 可见时，回调函数将会被执行。
@@ -60,26 +63,22 @@ let observer = new IntersectionObserver(callback, options);
 - `root`
   - : 用作视口的元素，用于检查目标的可见性。必须是目标的祖先。如果未指定或为 `null`，则默认为浏览器视口。
 - `rootMargin`
-  - : 根周围的边距。其值可以类似于 CSS {{cssxref("margin")}} 属性，例如 `"10px 20px 30px 40px"`（上、右、下、左）。这些值可以是百分比。在计算交叉点之前，这组值用于增大或缩小根元素边框的每一侧。默认值为全零。
+  - : 根周围的边距。其值可以类似于 CSS {{cssxref("margin")}} 属性，例如 `"10px 20px 30px 40px"`（上、右、下、左）。这些值只能是像素（`px`）或百分比（`%`）。在计算交叉点之前，这组值用于增大或缩小根元素边界框的每一侧。负值会缩小根元素的边界框，正值会扩大它。默认值为 `"0px 0px 0px 0px"`。
+- `scrollMargin`
+  - : 嵌套{{glossary("scroll container", "滚动容器")}}周围的边距，取值和默认值与 `rootMargin` 相同。这些边距在计算交集之前应用于嵌套的可滚动容器。正值会增大容器的剪切矩形，允许目标在可见之前就发生交集；负值会缩小剪切矩形。
 - `threshold`
-  - : 一个数字或一个数字数组，表示目标可见度达到多少百分比时，观察器的回调就应该执行。如果只想在能见度超过 50% 时检测，可以使用 0.5 的值。如果希望每次能见度超过 25% 时都执行回调，则需要指定数组 \[0, 0.25, 0.5, 0.75, 1]。默认值为 0（这意味着只要有一个像素可见，回调就会运行）。值为 1.0 意味着在每个像素都可见之前，阈值不会被认为已通过。
+  - : 一个数字或一个数字数组，表示目标可见度达到多少百分比时，观察器的回调就应该执行。如果只想在能见度超过 50% 时检测，可以使用 0.5 的值。如果希望每次能见度超过 25% 时都执行回调，则需要指定数组 \[0, 0.25, 0.5, 0.75, 1]。默认值为 0（这意味着只要目标元素与根的边界相交或接触，回调就会运行，即使还没有像素可见）。值为 1.0 意味着在每个像素都可见之前，阈值不会被认为已通过。
+- `delay` {{experimental_inline}}
+  - : 当跟踪目标可见性（[trackVisibility](#trackvisibility) 为 `true`）时，可用于设置此观察器通知之间的最小延迟（毫秒）。限制通知速率是可取的，因为可见性计算在计算上是密集的。如果跟踪可见性，则对于小于 100 的任何值，该值将被设置为 100，你应该使用可容忍的最大值。默认值为 0。
+- `trackVisibility` {{experimental_inline}}
+  - : 一个布尔值，指示此 `IntersectionObserver` 是否跟踪目标可见性的变化。当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
 
-#### 定位要观察的元素
+#### 交集变化回调
 
-创建一个观察器后，需要给定一个目标元素进行观察。
-
-```js
-let target = document.querySelector("#listItem");
-observer.observe(target);
-
-// 我们为观察器设置的回调将在第一次执行，
-// 它将等待我们为观察器分配目标（即使目标当前不可见）
-```
-
-每当目标满足该 `IntersectionObserver` 指定的阈值（threshold），回调被调用。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察器的列表：
+传递给 `IntersectionObserver()` 构造函数的回调接收一个 {{domxref("IntersectionObserverEntry")}} 对象列表和观察器：
 
 ```js
-let callback = (entries, observer) => {
+const callback = (entries, observer) => {
   entries.forEach((entry) => {
     // 每个条目描述一个目标元素观测点的交叉变化：
     //   entry.boundingClientRect
@@ -93,9 +92,39 @@ let callback = (entries, observer) => {
 };
 ```
 
-回调接收到的条目列表包括每个报告了相交状态变化的目标的一个条目。检查 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 属性的值，查看条目是否代表当前与根相交的元素。
+回调接收到的条目列表包括每个跨越阈值事件的一个 {{domxref("IntersectionObserverEntry")}} 对象——可以一次接收多个条目，要么来自多个目标，要么来自单个目标在短时间内跨越多个阈值。条目使用队列分发，因此应该按照生成的时间排序，但最好使用 {{domxref("IntersectionObserverEntry.time")}} 来正确排序。每个条目描述给定元素与根元素的交叉程度、元素是否被视为相交等。条目仅包含那个特定时刻的信息——如果你需要随时间跟踪的信息，如滚动方向和速度，可能需要通过记忆之前接收到的条目来自行计算。
 
 请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果需要执行任何耗时的操作，请使用 {{domxref("Window.requestIdleCallback()")}}。
+
+下面的代码片段展示了一个回调，它会记录元素从与根不相交过渡到至少相交 75% 的次数。阈值为 0.0（默认值）时，当 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的布尔值发生变化时，回调将被[近似](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting)调用。因此，该代码段首先检查过渡是否为正值，然后确定 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 是否高于 75%，如果高于 75%，就会递增计数器。
+
+```js
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      let elem = entry.target;
+
+      if (entry.intersectionRatio >= 0.75) {
+        intersectionCounter++;
+      }
+    }
+  });
+};
+```
+
+#### 定位要观察的元素
+
+创建观察器后，需要给定一个目标元素进行观察：
+
+```js
+const target = document.querySelector("#listItem");
+observer.observe(target);
+
+// 我们为观察器设置的回调将在第一次执行，
+// 它会等待我们为观察器分配目标（即使目标当前不可见）
+```
+
+每当目标满足该 `IntersectionObserver` 指定的阈值，回调就会被调用。
 
 此外，请注意，如果指定了 `root` 选项，目标必须是根元素的后代。
 
@@ -116,6 +145,213 @@ let callback = (entries, observer) => {
 - 否则，根交集矩形就是交集根的客户端边界矩形（通过调用 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} 返回）。
 
 在创建 {{domxref("IntersectionObserver")}} 时，可以通过设置**根边距**（rootMargin）来进一步调整交叉点根矩形。`rootMargin` 中的值定义了添加到交叉点根边界框每一侧的偏移量，以创建最终的交叉点根边界（执行回调时将在 {{domxref("IntersectionObserverEntry.rootBounds")}} 中显示）。
+
+#### 交集根与滚动边距
+
+考虑这样一种情况：你有一个根元素，其中包含嵌套的{{glossary("scroll container", "滚动容器")}}，并且你想要观察其中一个可滚动容器内的目标元素的交集。
+
+默认情况下，当目标在根定义的区域内可见时，与目标元素的交集开始可以被观察到；换句话说，当容器在根中滚动到可见位置，并且目标在其容器的剪切矩形中滚动到可见位置时。
+
+你可以使用滚动边距（scroll margin）在目标在其滚动容器中滚动到可见位置之前或之后开始观察交集。该边距会添加到根中的所有嵌套滚动容器，包括根元素本身（如果它也是滚动容器），并且具有增大（正边距）或缩小（负边距）用于计算交集的剪切区域的效果。
+
+> [!NOTE]
+> 你可以在每个需要滚动边距的滚动容器上创建一个交集观察器，并使用根边距属性来达到类似的效果。使用滚动边距更符合人体工程学，因为在大多数情况下，你可以只为所有嵌套目标使用一个交集观察器。
+
+在下面的示例中，我们有一个可滚动的盒子和一个最初不可见的图片轮播。根元素上的观察器观察轮播中的图片元素目标。当图片元素开始与根元素相交时，图片会被加载，交集会被记录，观察器会被移除。
+
+向下滚动以显示轮播。可见的图片应该立即加载。如果你滚动轮播，你应该会观察到图片在元素变得可见时就会被加载。
+
+重置示例后，你可以使用提供的控件来更改滚动边距百分比。如果你设置一个正值，如 20%，滚动容器的剪切矩形将增加 20%，你应该会观察到图片在进入视图之前就被检测到并加载。类似地，负值意味着交集只有在图片已经在视图中时才会被检测到。
+
+```html hidden
+<button id="reset" type="button">重置</button>
+```
+
+```html hidden
+<div id="root-container">
+  <p>前面的内容（向下滚动到轮播）</p>
+
+  <div class="flex-container">
+    <div class="carousel">
+      <img
+        src=""
+        data-src="ballon-portrait.jpg"
+        class="lazy-carousel-img"
+        alt="气球肖像" />
+      <img
+        src=""
+        data-src="balloon-small.jpg"
+        class="lazy-carousel-img"
+        alt="小气球" />
+      <img
+        src=""
+        data-src="surfer.jpg"
+        class="lazy-carousel-img"
+        alt="冲浪者" />
+      <img
+        src=""
+        data-src="border-diamonds.png"
+        class="lazy-carousel-img"
+        alt="边框钻石" />
+      <img src="" data-src="fire.png" class="lazy-carousel-img" alt="火焰" />
+      <img
+        src=""
+        data-src="puppy-header.jpg"
+        class="lazy-carousel-img"
+        alt="小狗" />
+      <img src="" data-src="moon.jpg" class="lazy-carousel-img" alt="月亮" />
+      <img src="" data-src="rhino.jpg" class="lazy-carousel-img" alt="犀牛" />
+    </div>
+    <div id="margin-indicator"></div>
+  </div>
+  <p>后面的内容</p>
+</div>
+```
+
+```html hidden
+<div class="controls">
+  <label>
+    设置滚动根的右边距：
+    <input id="margin" type="number" value="0" step="5" />%
+  </label>
+</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#root-container {
+  height: 250px;
+  overflow-y: auto;
+  border: solid blue;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+p {
+  height: 50vh;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#margin-indicator {
+  position: relative;
+  height: 100px;
+  width: 1px;
+  background-color: red;
+  opacity: 0.5;
+  display: flex;
+}
+
+.carousel {
+  width: 300px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  border: solid;
+}
+
+.carousel img {
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  display: block;
+  width: 195px;
+  height: 99px;
+  min-width: 195px;
+  min-height: 99px;
+  margin-right: 10px;
+  background-color: #eeeeee;
+}
+
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js hidden
+const rootContainer = document.getElementById("root-container");
+const marginIndicator = document.getElementById("margin-indicator");
+const carousel = document.querySelector(".carousel");
+const lazyImages = carousel.querySelectorAll(".lazy-carousel-img");
+let imageObserver;
+
+function createImageObserver() {
+  if (imageObserver) {
+    imageObserver.disconnect();
+  }
+
+  let observerOptions = {
+    root: rootContainer,
+    rootMargin: "0px",
+    scrollMargin: `${margin.valueAsNumber}%`,
+    threshold: 0.01,
+  };
+
+  imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        log(`intersect: ${img.dataset.src}`);
+        img.src = `https://mdn.github.io/shared-assets/images/examples/${img.dataset.src}`;
+        img.classList.remove("lazy-carousel-img");
+        observer.unobserve(img);
+      }
+    });
+  }, observerOptions);
+
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+
+  lazyImages.forEach((image) => {
+    imageObserver.observe(image);
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  createImageObserver();
+  margin.addEventListener("input", () => {
+    createImageObserver();
+  });
+} else {
+  lazyImages.forEach((img) => {
+    img.src = img.dataset.src;
+    img.classList.remove("lazy-carousel-img");
+  });
+  console.warn("Intersection Observer 不支持。所有轮播图片已加载。");
+}
+```
+
+{{EmbedLiveSample("交集根与滚动边距", "100%", "500px")}}
 
 #### 阈值
 
@@ -169,8 +405,8 @@ let callback = (entries, observer) => {
   position: relative;
   left: 175px;
   width: 150px;
-  background-color: rgb(245, 170, 140);
-  border: 2px solid rgb(201, 126, 17);
+  background-color: rgb(245 170 140);
+  border: 2px solid rgb(201 126 17);
   padding: 4px;
   margin-bottom: 6px;
 }
@@ -198,8 +434,8 @@ let callback = (entries, observer) => {
     sans-serif;
   position: absolute;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: rgb(255 255 255 / 70%);
+  border: 1px solid rgb(0 0 0 / 70%);
   width: 3em;
   height: 18px;
   padding: 2px;
@@ -231,11 +467,12 @@ let callback = (entries, observer) => {
 let observers = [];
 
 startup = () => {
-  let wrapper = document.querySelector(".wrapper");
+  const wrapper = document.querySelector(".wrapper");
+  const template = document.querySelector("#boxTemplate");
 
   // 观察器选项
 
-  let observerOptions = {
+  const observerOptions = {
     root: null,
     rootMargin: "0px",
     threshold: [],
@@ -243,7 +480,7 @@ startup = () => {
 
   // 每个方框的阈值集数组。第一个方框的阈值是通过编程设置的，因为有很多个（每个百分点）。
 
-  let thresholdSets = [
+  const thresholdSets = [
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -257,12 +494,10 @@ startup = () => {
   // 添加每个盒子，为每个盒子创建一个新的观察器
 
   for (let i = 0; i < 4; i++) {
-    let template = document
-      .querySelector("#boxTemplate")
-      .content.cloneNode(true);
-    let boxID = `box${i + 1}`;
-    template.querySelector(".sampleBox").id = boxID;
-    wrapper.appendChild(document.importNode(template, true));
+    const newBox = document.importNode(template.content, true);
+    const boxID = `box${i + 1}`;
+    newBox.querySelector(".sampleBox").id = boxID;
+    wrapper.appendChild(newBox);
 
     // 为该盒子设置观察器
 
@@ -283,13 +518,13 @@ startup = () => {
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
-    let box = entry.target;
-    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
+    const box = entry.target;
+    const visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
-    box.querySelector(".topLeft").innerHTML = visiblePct;
-    box.querySelector(".topRight").innerHTML = visiblePct;
-    box.querySelector(".bottomLeft").innerHTML = visiblePct;
-    box.querySelector(".bottomRight").innerHTML = visiblePct;
+    box.querySelector(".topLeft").textContent = visiblePct;
+    box.querySelector(".topRight").textContent = visiblePct;
+    box.querySelector(".bottomLeft").textContent = visiblePct;
+    box.querySelector(".bottomRight").textContent = visiblePct;
   });
 };
 
@@ -297,6 +532,14 @@ startup();
 ```
 
 {{EmbedLiveSample("阈值", 500, 500)}}
+
+#### 跟踪可见性和延迟
+
+默认情况下，当目标元素滚动到根元素的视口时，观察器会提供通知。虽然这在许多情况下已经足够，但有时重要的是，当目标被"视觉损害"时不报告交集。例如，在测量分析或广告展示时，重要的是目标元素没有被全部或部分隐藏或扭曲。
+
+`trackVisibility` 设置告诉观察器仅报告浏览器认为未被视觉损害的目标的交集，例如通过改变不透明度或应用滤镜或变换。该算法是保守的，可能会遗漏技术上可见的元素，例如那些只有轻微不透明度降低的元素。
+
+可见性计算在计算上是昂贵的，应该仅在必要时使用。当跟踪可见性时，还应设置 {{domxref("IntersectionObserver/delay","delay")}} 来限制最小报告周期。建议将延迟设置为可容忍的最大值（跟踪可见性时的最小延迟为 100 毫秒）。
 
 #### 剪切和相交矩形
 
@@ -308,28 +551,6 @@ startup();
 4. 当递归向上到达交点根时，得到的矩形将映射到交点根的坐标空间。
 5. 然后通过与[根交集矩形](#根交集矩形)相交来更新得到的矩形。
 6. 最后，将该矩形映射到目标的 {{domxref("document")}} 坐标空间。
-
-### 交集变化回调
-
-当根元素中可见的目标元素数量超过某个可见度阈值时，{{domxref("IntersectionObserver")}} 对象的回调将被执行。回调的输入是由所有 {{domxref("IntersectionObserverEntry")}} 对象组成的数组（每次跨阈值产生一个），以及对 `IntersectionObserver` 对象本身的引用。
-
-阈值列表中的每个条目都是一个 {{domxref("IntersectionObserverEntry")}} 对象，描述了一个被跨越的阈值；也就是说，每个条目都描述了给定元素与根元素相交的程度、元素是否被视为相交以及发生转变的方向。
-
-下面的代码片段显示了一个回调，该回调会记录元素从与根不相交过渡到至少相交 75% 的次数。阈值为 0.0（默认值）时，当 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的布尔值发生变化时，回调将被[近似](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting)调用。因此，该代码段首先检查过渡是否为正值，然后确定 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 是否高于 75%，如果高于 75%，就会递增计数器。
-
-```js
-const intersectionCallback = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let elem = entry.target;
-
-      if (entry.intersectionRatio >= 0.75) {
-        intersectionCounter++;
-      }
-    }
-  });
-};
-```
 
 ## 接口
 
