@@ -1,8 +1,9 @@
 ---
 title: Document：getElementById() 方法
+short-title: getElementById()
 slug: Web/API/Document/getElementById
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{ ApiRef("DOM") }}
@@ -37,16 +38,9 @@ getElementById(id)
 ### HTML
 
 ```html
-<html lang="zh">
-  <head>
-    <title>getElementById 示例</title>
-  </head>
-  <body>
-    <p id="para">这里有一些文本</p>
-    <button onclick="changeColor('blue');">蓝色</button>
-    <button onclick="changeColor('red');">红色</button>
-  </body>
-</html>
+<p id="para">这里有一些文本</p>
+<button>蓝色</button>
+<button>红色</button>
 ```
 
 ### JavaScript
@@ -56,6 +50,12 @@ function changeColor(newColor) {
   const elem = document.getElementById("para");
   elem.style.color = newColor;
 }
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    changeColor(event.target.textContent.toLowerCase());
+  });
+});
 ```
 
 ### 结果
