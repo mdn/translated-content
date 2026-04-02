@@ -5,6 +5,8 @@ l10n:
   sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
 ---
 
+本文将从头到尾详细介绍如何为 Firefox 创建一个扩展。该扩展会在从 `mozilla.org` 或其任何子域名加载的页面上添加红色边框。
+
 [此示例的源代码可在 GitHub 上找到](https://github.com/mdn/webextensions-examples/tree/main/borderify)。
 
 ## 编写扩展
@@ -55,7 +57,7 @@ cd borderify
 ```
 
 - 前三个键（[`manifest_version`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) 和 [`version`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)）是必须的，包含有扩展的基本元数据。
-- [`description`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 对于 Safari 是必须的，而对于其他的则是可选的。但建议设置次属性，因为它将显示在浏览器的扩展管理器中（例如，Firefox 的 `about:addons`）。
+- [`description`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 对于 Safari 是必须的，而对于其他的则是可选的。但建议设置此属性，因为它将显示在浏览器的扩展管理器中（例如，Firefox 的 `about:addons`）。
 - [`icons`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 是可选的，但建议设置：它允许你给扩展指定图标。
 - [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 在 Firefox 中是必须的。
   - `gecko` 属性为 addons.mozilla.org 和 Firefox 提供了关于扩展的额外配置信息。
@@ -64,8 +66,8 @@ cd borderify
 
 到目前为止，`manifest.json` 的这些键已经提供了有关扩展的信息。下一个键——[`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)——开始定义扩展的功能。该键告诉 Firefox 加载脚本到其 URL 匹配特定模式的网页中。本例中，扩展要求 Firefox 加载脚本“borderify.js”到任何来自“mozilla.org”或其子域的 HTTP 或 HTTPS 页面。
 
-- [进一步了解内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
-- [进一步了解模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+- [了解更多关于内容脚本的内容。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
+- [了解更多关于模式匹配的内容。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
 ### icons/border-48.png
 
@@ -73,9 +75,9 @@ Firefox 通过界面（例如工具栏和附加组件管理器——`about:addon
 
 此示例的 manifest.json 告诉 Firefox 图标位于“icons/border-48.png”。
 
-在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[示例中的图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/borderify/icons/border-48.png)，来自谷歌的质感设计的图标库，遵循[署名—相同方式共享](https://creativecommons.org/licenses/by-sa/3.0/deed.zh-hans)协议。
+在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[示例中的图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/borderify/icons/border-48.png)，该图标来自谷歌 Material Design 图标库，遵循[署名—相同方式共享](https://creativecommons.org/licenses/by-sa/3.0/deed.zh-hans)协议。
 
-如果你选择提供一个图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中指定 `96` 属性即可，就像这样：
+如果你选择提供一个图标，它应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中指定 `96` 属性即可，就像这样：
 
 ```json
 "icons": {
@@ -98,7 +100,7 @@ document.body.style.border = "5px solid red";
 
 Firefox 将脚本加载到与 manifest.json 文件中的 `content_scripts` 键给出的模式相匹配的页面中。该脚本可以直接访问文档，就像页面自身加载的脚本一样。
 
-[了解更多关于内容脚本的内容。](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+[了解更多关于内容脚本的内容。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 
 ## 尝试一下
 
@@ -114,7 +116,7 @@ borderify/
 
 ### 安装
 
-打开 Firefox 的 [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) 页面，点击**此 Firefox**，点击**临时加载附加组件**按钮，并选择你的扩展所在的目录：
+打开 Firefox 的 [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) 页面，点击**此 Firefox**，点击**临时加载附加组件**按钮，并选择你的扩展所在的目录。
 
 附加组件将会被安装，直到下次重启浏览器失效。
 
@@ -134,7 +136,7 @@ borderify/
 
 不妨做些实验：编辑内容脚本，以更改边框颜色，或者对页面内容进行其他修改。保存内容脚本，然后点击 `about:debugging` 中的**重新加载**按钮，重新加载扩展程序的文件。你可以立即看到更改。
 
-[了解更多关于加载扩展的信息](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
+[了解更多关于加载扩展的信息。](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
 
 ## 打包和发布
 

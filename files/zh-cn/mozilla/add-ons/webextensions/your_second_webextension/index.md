@@ -5,12 +5,12 @@ l10n:
   sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
 ---
 
-[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)教程介绍了编写扩展程序的基本流程。在这篇文章，我们将编写一个更加复杂的扩展来为你展示其他的 API。
+[你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)教程介绍了编写扩展程序的基本流程。在这篇文章，我们将编写一个更加复杂的扩展，以演示其他 API 的使用。
 
 你开发的扩展演示了 Web 扩展 API 的许多基本概念，包括：
 
 - 将按钮添加到工具栏。
-- 定义一个将使用 HTML、CSS 和 JavaScript 的弹出框。
+- 使用 HTML、CSS 和 JavaScript 定义一个弹出框。
 - 将内容脚本注入到网页。
 - 内容脚本与扩展的其他部分之间的通信。
 - 打包你的扩展的资源，使其可被网页所用。
@@ -49,7 +49,7 @@ cd beastify
 ```json
 {
   "description": "在工具栏添加一个动作图标。点击按钮选择一个动物。当前活动的标签页的内容会被替换成被选择动物的图片。参见 https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Beastify",
   "version": "1.0",
 
@@ -89,7 +89,7 @@ cd beastify
 ```
 
 - 前三个键（[`manifest_version`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)、[`name`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) 和 [`version`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)）是必须的，包含有扩展的基本元数据。
-- [`description`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 对于 Safari 是必须的，而对于其他的则是可选的。但建议设置次属性，因为它将显示在浏览器的扩展管理器中（例如，Firefox 的 `about:addons`）。
+- [`description`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) 对于 Safari 是必须的，而对于其他的则是可选的。但建议设置此属性，因为它将显示在浏览器的扩展管理器中（例如，Firefox 的 `about:addons`）。
 - [`homepage_url`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) 是可选的，但建议设置：它提供了关于扩展的有用信息。
 - [`icons`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 是可选的，但建议设置；它允许你给扩展指定一个图标。
 - [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 是必须的。
@@ -111,9 +111,7 @@ cd beastify
 
 创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用[示例中的图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)，它是从 [Aha-Soft 的免费 Retina 图标集](https://www.aha-soft.com/free-icons/free-retina-icon-set/)获取的，并根据其许可条款使用。
 
-如果你选择提供一个图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中添加 `96` 属性即可：
-
-如果你选择提供一个图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标；将其指定为 manifest.json 的 `icons` 对象的 `96` 属性：
+如果你选择提供一个图标，它应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标；将其指定为 manifest.json 的 `icons` 对象的 `96` 属性：
 
 ```json
 "icons": {
@@ -130,7 +128,7 @@ cd beastify
 
 ### 弹出框
 
-如果你没有提供弹出框，用户点击工具栏的按钮时，Firefox 会直接向你的插件分派点击事件。如果你提供了弹出框，用户点击工具栏按钮会打开弹出框，Firefox 不会派发点击事件。
+如果你没有提供弹出框，用户点击工具栏的按钮时，Firefox 会直接向你的插件派发点击事件。如果你提供了弹出框，用户点击工具栏按钮会打开弹出框，Firefox 不会派发点击事件。
 
 对于该示例，你需要一个弹出框。弹出框的功能是让用户选择三种动物的其中一种。
 
@@ -337,7 +335,7 @@ function reportExecuteScriptError(error) {
 })();
 ```
 
-只要弹出框加载完，弹出框的脚本就会使用 [`browser.scripting.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API 在活动的标签页执行[内容脚本](#内容脚本)。如果内容脚本执行成功，页面会一直保持内容脚本，直到标签被关闭或者用户导航到其他页面。
+只要弹出框加载完，弹出框的脚本就会使用 [`browser.scripting.executeScript()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/scripting/executeScript) API 在活动的标签页执行[内容脚本](#内容脚本)。如果内容脚本执行成功，页面会一直保持内容脚本的加载状态，直到标签被关闭或者用户导航到其他页面。
 
 如果扩展程序无法在活动页面中执行内容脚本，则 `browser.scripting.executeScript()` 调用可能会失败。例如，扩展不能在（像 `about:debugging` 这样的）特权浏览器页面执行，也不能在 [addons.mozilla.org](https://addons.mozilla.org/) 域的页面中执行。如果调用失败，`reportExecuteScriptError()` 会隐藏 `<div id="popup-content">` 元素，并展示 `<div id="error-content"...` 元素，然后在[控制台](https://extensionworkshop.com/documentation/develop/debugging/)中打印错误。
 
@@ -399,7 +397,7 @@ function reportExecuteScriptError(error) {
   }
 
   /**
-   * 监听来自背景脚本的消息。
+   * 监听来自后台脚本的消息。
    * 根据消息，调用“beastify()”或“reset()”。
    */
   browser.runtime.onMessage.addListener((message) => {
@@ -412,7 +410,7 @@ function reportExecuteScriptError(error) {
 })();
 ```
 
-内容脚本做的第一件事是检查全局变量 `window.hasRun`：如果它被设置了，脚本直接返回；否则设置 `window.hasRun` 并继续。原因是每次用户打开弹出框，弹出框就会在活动页面执行一次内容脚本，所以扩展可能会在单个页面运行多个脚本实例。如果是这样的话，代码需要保证只有一个实例在做所有事情。
+内容脚本做的第一件事是检查全局变量 `window.hasRun`：如果它被设置了，脚本直接返回；否则设置 `window.hasRun` 并继续。原因是每次用户打开弹出框，弹出框就会在活动页面执行一次内容脚本，所以扩展可能会在单个标签页运行多个脚本实例。如果是这样的话，代码需要保证只有第一个实例执行操作。
 
 然后内容脚本使用 [`browser.runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API 监听来自弹出框的消息。你之前已经看到，弹出框脚本能够发送两种不同的消息：“beastify”和“reset”。
 
@@ -479,7 +477,7 @@ web-ext run
 
 你已经创建了一个更加高级的 Firefox 扩展，接下来可以：
 
-- [阅读更多关于扩展的内容](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [了解扩展的结构](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [探索扩展的示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [了解开发、测试和发布扩展需要的知识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next)
 - [进一步学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next#继续你的学习经历)。
