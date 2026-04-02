@@ -207,7 +207,7 @@ console.log(text.match(regexpFoxQuality));
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) 使用 $ 修正字符串结尾处的匹配。
+// 1) 使用 ^ 修正字符串开头处的匹配。
 buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
 console.log(1, buggyMultiline); // 修复 'tey' => 'hey' 和 'tangs' => 'hangs'，而不对 'traa' 做改动。
 
