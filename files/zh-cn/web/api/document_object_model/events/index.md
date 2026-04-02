@@ -1,6 +1,8 @@
 ---
 title: DOM 事件
 slug: Web/API/Document_Object_Model/Events
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -730,6 +732,239 @@ slug: Web/API/Document_Object_Model/Events
     </tr>
   </tbody>
 </table>
+
+## 创建和派发事件
+
+除了由内置接口触发的事件外，你也可以自己创建和派发 DOM 事件。这类事件通常称为*合成事件*，以区别于由浏览器触发的事件。
+
+### 创建自定义事件
+
+可以使用 [`Event`](/zh-CN/docs/Web/API/Event) 构造函数来创建事件，如下所示：
+
+```js
+const event = new Event("build");
+
+// 监听事件。
+elem.addEventListener("build", (e) => {
+  /* … */
+});
+
+// 派发事件。
+elem.dispatchEvent(event);
+```
+
+此代码示例使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
+
+### 添加自定义数据 – CustomEvent()
+
+要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，**detail** 属性可用于传递自定义数据。
+例如，可以这样创建事件：
+
+```js
+const event = new CustomEvent("build", { detail: elem.dataset.time });
+```
+
+这样你就可以在事件监听器中访问这些额外的数据：
+
+```js
+function eventHandler(e) {
+  console.log(`The time is: ${e.detail}`);
+}
+```
+
+### 添加自定义数据 – 继承 Event
+
+[`Event`](/zh-CN/docs/Web/API/Event) 接口也可以被子类化。这对于代码复用、更复杂的自定义数据，甚至为事件添加方法特别有用。
+
+```js
+class BuildEvent extends Event {
+  #buildTime;
+
+  constructor(buildTime) {
+    super("build");
+    this.#buildTime = buildTime;
+  }
+
+  get buildTime() {
+    return this.#buildTime;
+  }
+}
+```
+
+这段代码定义了一个 `BuildEvent` 类，它具有只读属性和固定的事件类型。
+
+然后可以这样创建事件：
+
+```js
+const event = new BuildEvent(elem.dataset.time);
+```
+
+然后可以在事件监听器中通过自定义属性访问额外的数据：
+
+```js
+function eventHandler(e) {
+  console.log(`The time is: ${e.buildTime}`);
+}
+```
+
+### 事件冒泡
+
+通常需要从子元素触发事件，并由祖先元素捕获；可以选择在事件中包含数据：
+
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
+
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+
+// 创建一个新事件，允许冒泡，并在"detail"属性中传递任何你想要的数据
+const eventAwesome = new CustomEvent("awesome", {
+  bubbles: true,
+  detail: { text: () => textarea.value },
+});
+
+// form 元素监听自定义的"awesome"事件，然后输出传递的 text() 方法的结果
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+
+// 当用户输入时，form 内的 textarea 派发/触发事件，以自身为起点
+textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
+```
+
+### 动态创建和派发事件
+
+元素可以监听尚未创建的事件：
+
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
+
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+
+textarea.addEventListener("input", function () {
+  // 动态创建并派发/触发事件
+  // 注意：我们使用了"函数表达式"（而不是"箭头函数表达式"），这样"this"将代表该元素
+  this.dispatchEvent(
+    new CustomEvent("awesome", {
+      bubbles: true,
+      detail: { text: () => textarea.value },
+    }),
+  );
+});
+```
+
+## 触发内置事件
+
+此示例演示如何在复选框上模拟点击（即通过程序生成点击事件）。[查看示例](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
+
+```js
+function simulateClick() {
+  const event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+  });
+  const cb = document.getElementById("checkbox");
+  const cancelled = !cb.dispatchEvent(event);
+
+  if (cancelled) {
+    // 某个处理程序调用了 preventDefault。
+    alert("cancelled");
+  } else {
+    // 没有处理程序调用 preventDefault。
+    alert("not cancelled");
+  }
+}
+```
+
+## 注册事件处理程序
+
+有两种推荐的方法来注册处理程序。可以通过将事件处理程序代码分配给目标元素的相应 _onevent_ 属性，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理程序注册为元素的监听器，从而使事件处理程序代码在事件触发时运行。无论哪种情况，处理程序都会收到一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)（或[派生接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)）的对象。主要区别在于使用事件监听器方法可以添加（或删除）多个事件处理程序。
+
+> [!WARNING]
+> 不推荐第三种使用 HTML onevent 属性设置事件处理程序的方法！这会使标记膨胀，降低可读性并增加调试难度。更多信息请参阅[内联事件处理程序——不要使用这些](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理程序——不要使用这些)。
+
+### 使用 onevent 属性
+
+按照惯例，触发事件的 JavaScript 对象都有相应的"onevent"属性（通过在事件名称前加上"on"来命名）。当事件被触发时，这些属性会被调用以运行关联的处理程序代码，也可以由你自己的代码直接调用。
+
+要设置事件处理程序代码，只需将其分配给相应的 onevent 属性。每个元素中的每个事件只能分配一个事件处理程序。如果需要，可以通过向同一属性分配另一个函数来替换处理程序。
+
+以下示例展示了如何使用 `onclick` 属性为 `click` 事件设置 `greet()` 函数。
+
+```js
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("greet:", event);
+}
+
+btn.onclick = greet;
+```
+
+请注意，表示事件的对象作为第一个参数传递给事件处理程序。此事件对象实现或派生自 {{domxref("Event")}} 接口。
+
+### EventTarget.addEventListener
+
+在元素上设置事件处理程序最灵活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。这种方法允许为元素分配多个监听器，并且如果需要，可以使用 {{domxref("EventTarget.removeEventListener")}} 移除监听器。
+
+> [!NOTE]
+> 添加和移除事件处理程序的能力使你能够，例如，让同一个按钮在不同情况下执行不同的操作。此外，在更复杂的程序中，清理旧的/未使用的事件处理程序可以提高效率。
+
+以下示例展示了如何将 `greet()` 函数设置为 `click` 事件的监听器/事件处理程序（如果需要，可以使用匿名函数表达式代替命名函数）。再次注意，事件作为第一个参数传递给事件处理程序。
+
+```js
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("greet:", event);
+}
+
+btn.addEventListener("click", greet);
+```
+
+该方法还可以接受额外的参数/选项来控制事件捕获和移除的方式。更多信息可以在 {{domxref("EventTarget.addEventListener")}} 参考页面找到。
+
+#### 使用 AbortSignal
+
+事件监听器的一个显著特性是能够使用中止信号同时清理多个事件处理程序。
+
+这是通过向所有你希望一起移除的事件处理程序的 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用传递相同的 {{domxref("AbortSignal")}} 来实现的。然后你可以调用拥有该 `AbortSignal` 的控制器的 {{domxref("AbortController/abort()", "abort()")}}，这将移除所有使用该信号添加的事件处理程序。例如，添加一个可以使用 `AbortSignal` 移除的事件处理程序：
+
+```js
+const controller = new AbortController();
+
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal },
+); // 向此处理程序传递一个 AbortSignal
+```
+
+然后可以这样移除此事件处理程序：
+
+```js
+controller.abort(); // 移除与此控制器关联的任何/所有事件处理程序
+```
+
+### 多个事件处理程序的交互
+
+`onevent` IDL 属性（例如 `element.onclick = ...`）和 HTML `onevent` 内容属性（例如 `<button onclick="...">`）都指向同一个单一处理程序槽。HTML 在 JavaScript 能够访问同一元素之前加载，因此通常 JavaScript 会替换 HTML 中指定的内容。使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 添加的处理程序是独立的。使用 `onevent` 不会移除或替换使用 `addEventListener()` 添加的监听器，反之亦然。
+
+当事件被派发时，监听器会分阶段调用。有两个阶段：*捕获*和*冒泡*。在捕获阶段，事件从最高祖先元素开始，沿 DOM 树向下移动直到到达目标。在冒泡阶段，事件沿相反方向移动。事件监听器默认在冒泡阶段监听，可以通过在 `addEventListener()` 中指定 `capture: true` 来在捕获阶段监听。在一个阶段内，监听器按照它们被注册的顺序运行。`onevent` 处理程序在第一次变为非 null 时注册；后续重新赋值只会更改其回调，而不会更改其在顺序中的位置。
+
+调用 {{domxref("Event.stopPropagation()")}} 可以阻止调用传播链中后续其他元素上的监听器。{{domxref("Event.stopImmediatePropagation()")}} 还会阻止调用同一元素上剩余的监听器。
 
 ## 规范
 
