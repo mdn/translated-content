@@ -1,17 +1,13 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/Reference/Properties/text-decoration-style
-original_slug: Web/CSS/text-decoration-style
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{CSSxRef("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
 
-La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
-
-> [!NOTE]
-> Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
-
-{{InteractiveExample("CSS Demo: text-decoration-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: text-decoration-style")}}
 
 ```css interactive-example-choice
 text-decoration-style: solid;
@@ -36,9 +32,11 @@ text-decoration-style: wavy;
 ```html interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    Je préfère être
+    <span class="transition-all" id="example-element"
+      >heureux que d'avoir raison</span
+    >
+    n'importe quel jour.
   </p>
 </section>
 ```
@@ -55,7 +53,7 @@ p {
 
 Si la mise en forme appliquée possède une sémantique forte (par exemple barrer le texte pour indiquer qu'il a été supprimé), on recommande aux auteurs d'utiliser les balises HTML associées si elles existent (par exemple {{HTMLElement("del")}} ou {{HTMLElement("s")}}). Les navigateurs peuvent parfois désactiver la mise en forme et ces éléments permettent de conserver la sémantique du contenu quoi qu'il arrive.
 
-La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
+Lors de la définition de plusieurs propriétés de décoration de ligne en même temps, il peut être plus pratique d'utiliser la propriété raccourcie {{CSSxRef("text-decoration")}} à la place.
 
 ## Syntaxe
 
@@ -70,6 +68,8 @@ text-decoration-style: wavy;
 /* Valeurs globales */
 text-decoration-style: inherit;
 text-decoration-style: initial;
+text-decoration-style: revert;
+text-decoration-style: revert-layer;
 text-decoration-style: unset;
 ```
 
@@ -85,6 +85,8 @@ text-decoration-style: unset;
   - : Dessine une ligne avec des tirets.
 - `wavy`
   - : Dessine une ligne ondulée.
+- `-moz-none`
+  - : Ne dessine aucune ligne. Utilisez {{CSSxRef("text-decoration-line", "text-decoration-line: none")}} à la place.
 
 ## Définition formelle
 
@@ -96,31 +98,29 @@ text-decoration-style: unset;
 
 ## Exemples
 
-### CSS
+### Définir un soulignement ondulé
+
+Le code suivant crée un soulignement ondulé rouge&nbsp;:
+
+#### CSS
 
 ```css
-.exemple {
-  -moz-text-decoration-line: underline;
-  -moz-text-decoration-style: wavy;
-  -moz-text-decoration-color: red;
-  -webkit-text-decoration-line: underline;
-  -webkit-text-decoration-style: wavy;
-  -webkit-text-decoration-color: red;
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
-<p class="exemple">Et voilà le résultat.</p>
+<p class="wavy">Et voilà le résultat.</p>
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Définir un soulignement ondulé")}}
 
 ## Spécifications
 
@@ -132,4 +132,8 @@ text-decoration-style: unset;
 
 ## Voir aussi
 
-- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-style`.
+- Lors de la définition de plusieurs propriétés de décoration de ligne en même temps, il peut être plus pratique d'utiliser la propriété raccourcie {{CSSxRef("text-decoration")}} à la place.
+- La propriété {{CSSxRef("text-decoration-line")}}
+- La propriété {{CSSxRef("text-decoration-color")}}
+- La propriété {{CSSxRef("text-decoration-thickness")}}
+- La propriété {{CSSxRef("text-underline-offset")}}
