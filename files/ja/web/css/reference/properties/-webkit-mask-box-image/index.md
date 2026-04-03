@@ -6,61 +6,57 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 {{ CSSRef() }} {{ Non-standard_header() }}
 
-`-webkit-mask-box-image` はマスク画像を要素の境界ボックスに設定します。
+`-webkit-mask-box-image` は、マスク画像を要素の境界ボックスに設定します。
 
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): なし
-- 適用先: すべての要素
-- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): なし
+- 初期値: なし
+- 適用対象: すべての要素
+- 継承: しない
 - メディア: {{cssxref("Media/Visual", "visual")}}
-- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定通り
+- 計算値: 指定通り
 
 ## 構文
 
-```
--webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
+```css
+-webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>];
 ```
 
-ここで、
+ここで:
 
-- \<mask-box-image>
+- `<mask-box-image>`
   - : `{{cssxref("url()", "&lt;uri&gt;")}} | <gradient> | none`
-- \<top> \<right> \<bottom> \<left>
+- `<top> <right> <bottom> <left>`
   - : `<length> | <percentage>`
-- \<x-repeat> \<y-repeat>
+- `<x-repeat> <y-repeat>`
   - : `repeat | stretch | round | space`
 
-### 値
+## 値
 
-- \<uri>
+- `<uri>`
   - : マスク画像として使用する画像リソースの位置です。
-- \<gradient>
+- `<gradient>`
   - : マスク画像として使用する `-webkit-gradient` 関数です。
-- none
-  - : 境界ボックスにマスク画像がないことを示すために使用します。
-- \<length>
+- `none`
+  - : 境界ボックスにマスク画像がないことを示します。
+- `<length>`
   - : マスク画像のオフセットの大きさです。利用可能な単位は {{cssxref("&lt;length&gt;")}} を参照してください。
-- \<percentage>
-  - : マスク画像のオフセットで、境界ボックスの対応する長さ（幅または高さ）に対するパーセント値です。
-- repeat
-  - : マスク画像は、境界ボックスの範囲に必要な回数だけ繰り返されます。マスク画像が境界ボックスに均等に配置できない場合は、部分画像を含むことがあります。
-- stretch
-  - : マスク画像は、境界ボックスを正確に含むように引き伸ばされます。
-- round
-  - : マスク画像は多少引き伸ばされ、境界ボックスの端にマスク画像の一部が残らないように繰り返されます。
-- space
-  - : マスク画像は引き伸ばされることなく何度でも繰り返されます。境界ボックスの端に、部分的なマスク画像は置かれません。
+- `<percentage>`
+  - : 境界ボックスの対応する長さ（幅または高さ）に対する割合です。
+- `repeat`
+  - : マスク画像は、境界ボックスの範囲に必要な回数だけ繰り返されます。
+- `stretch`
+  - : マスク画像は、境界ボックスに合うように引き伸ばされます。
+- `round`
+  - : マスク画像は調整され、端に切れた画像が出ないように繰り返されます。
+- `space`
+  - : マスク画像は引き伸ばされずに繰り返され、端に部分画像は表示されません。
 
 ## 公式定義
 
-- 初期値: [`none`](https://developer.mozilla.org/ja/docs/Web/CSS/none)
+- 初期値: `none`
 - 適用対象: すべての要素
 - 継承: しない
 - 計算値: 指定通り
 - アニメーションの種類: 離散
-- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): `none`
-- 適用対象: すべての要素
-- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): いいえ
-- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定どおり
 
 ## 形式文法
 
@@ -76,7 +72,7 @@ original_slug: Web/CSS/-webkit-mask-box-image
 }
 ```
 
-### 画僧のオフセットと塗りつぶし
+### 画像のオフセットと繰り返し
 
 ```css
 .exampletwo {
@@ -86,7 +82,7 @@ original_slug: Web/CSS/-webkit-mask-box-image
 
 ## 仕様書
 
-Not part of any standard.
+標準仕様の一部ではありません。
 
 ## ブラウザーの互換性
 
@@ -94,4 +90,10 @@ Not part of any standard.
 
 ## 関連情報
 
-{{ cssxref("mask") }}, {{ cssxref("mask-origin") }}, {{ cssxref("-webkit-mask-attachment") }},{{ cssxref("mask-clip") }},{{ cssxref("mask-image") }},{{ cssxref("-webkit-mask-composite") }},{{ cssxref("mask-repeat") }}
+{{cssxref("mask")}},
+{{cssxref("mask-origin")}},
+{{cssxref("-webkit-mask-attachment")}},
+{{cssxref("mask-clip")}},
+{{cssxref("mask-image")}},
+{{cssxref("-webkit-mask-composite")}},
+{{cssxref("mask-repeat")}}
