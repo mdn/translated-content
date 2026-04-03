@@ -85,8 +85,7 @@ console.log(text.match(regexpFoxQuality));
           </li>
         </ul>
         <p>
-          匹配退格字符 (<code>[\b]</code>), 查看
-          <a
+          匹配退格字符 (<code>[\b]</code>), 查看<a
             href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >字符类</a
           >
