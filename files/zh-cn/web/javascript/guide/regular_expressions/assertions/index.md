@@ -111,9 +111,8 @@ console.log(text.match(regexpFoxQuality));
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><code>字符</code></th>
- <th scope="col">字符</th>
- <th scope="col">含义</th>
+      <th scope="col">字符</th>
+      <th scope="col">含义</th>
     </tr>
   </thead>
   <tbody>
