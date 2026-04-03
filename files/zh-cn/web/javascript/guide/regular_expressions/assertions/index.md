@@ -1,11 +1,11 @@
 ---
-title: Assertions
+title: 断言
 slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 ---
 
-断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如先行断言，后行断言以及条件表达式）。
+断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如前向断言，后向断言以及条件表达式）。
 
-{{InteractiveExample("JavaScript Demo: RegExp Assertions", "taller")}}
+{{InteractiveExample("JavaScript 演示：正则表达式断言", "taller")}}
 
 ```js interactive-example
 const text = "A quick fox";
@@ -68,18 +68,16 @@ console.log(text.match(regexpFoxQuality));
       <td><code>\b</code></td>
       <td>
         <p>
-          匹配一个单词的边界，这是一个字的字符前后没有另一个字的字符位置，例如在字母和空格之间。需要注意的是匹配的单词边界不包括在匹配中。换句话说，匹配字边界的长度为零。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>单词边界断言：</strong></a>匹配一个单词的边界。这是指某个单词字符前后均无其他单词字符的情况，例如字母与空格之间。请注意，匹配到的单词边界不包含在匹配结果中。换言之，匹配到的单词边界长度为零。
         </p>
         <p>一些例子：</p>
         <ul>
-          <li><code>/\bm/</code> 在 "moon" 中匹配到 "m"</li>
+          <li><code>/\bm/</code> 匹配“moon”中的“m”</li>
           <li>
-            <code>/oo\b/</code> 在 "moon" 中不会匹配到 "oo", 因为 "oo" 后面跟着
-            "n" 这个单词字符。
+            <code>/oo\b/</code> 不匹配“moon”中的“oo”, 因为“oo”后面跟着单词字符“n”。
           </li>
           <li>
-            <code>/oon\b/</code> 在 "moon" 中匹配 "oon"，因为 "oon"
-            是这个字符串的结尾，因此后面没有单词字符
+            <code>/oon\b/</code> 匹配“moon”中的“oon”，因为“oon”是这个字符串的结尾，因此后面没有单词字符。
           </li>
           <li>
             <code>/\w\b\w/</code>
@@ -87,8 +85,7 @@ console.log(text.match(regexpFoxQuality));
           </li>
         </ul>
         <p>
-          匹配退格字符 (<code>[\b]</code>), 查看
-          <a
+          匹配退格字符 (<code>[\b]</code>), 查看<a
             href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes"
             >字符类</a
           >
@@ -99,11 +96,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>\B</code></td>
       <td>
         <p>
-          匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code
-            >/\Bon/</code
-          >
-          在“at noon”中匹配“on” ，<code>/ye\B/</code> 在 "possibly
-          yesterday"中匹配"ye" 。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>非单词边界断言：</strong></a>匹配非单词边界。这是一个前一个字符和后一个字符类型相同的位置：要么两者都是单词，要么两者都不是单词，例如两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的单词边界一样，匹配的非单词边界也不包含在匹配范围内。例如，<code>/\Bon/</code> 匹配“at noon”中的“on”，<code>/ye\B/</code> 匹配“possibly yesterday”的“ye”。
         </p>
       </td>
     </tr>
@@ -113,13 +106,13 @@ console.log(text.match(regexpFoxQuality));
 ### 其他断言
 
 > [!NOTE]
-> `？`字符也可用作量词
+> `?` 字符也可用作量词。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col"><code>字符</code></th>
-      <th scope="col"><code>含义</code></th>
+      <th scope="col">字符</th>
+      <th scope="col">含义</th>
     </tr>
   </thead>
   <tbody>
@@ -207,7 +200,7 @@ console.log(text.match(regexpFoxQuality));
 buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
-// 1) 使用 $ 修正字符串结尾处的匹配。
+// 1) 使用 ^ 修正字符串开头处和换行符后的匹配问题。
 buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
 console.log(1, buggyMultiline); // 修复 'tey' => 'hey' 和 'tangs' => 'hangs'，而不对 'traa' 做改动。
 
@@ -253,18 +246,22 @@ const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
 
-### 匹配字边界
+### 匹配单词边界
+
+在本示例中，我们匹配以“en”或“ed”结尾的水果名称。
 
 ```js
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // 选择包含以“en”或“ed”结尾的单词的描述：
-const enEdSelection = fruitsWithDescription.filter((descr) =>
-  /(en|ed)\b/.test(descr),
+const enEdSelection = fruitsWithDescription.filter((description) =>
+  /(?:en|ed)\b/.test(description),
 );
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
+
+在[单词边界断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)参考中查看更多示例。
 
 ### 先行断言
 
@@ -319,3 +316,8 @@ console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
 - [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
 - [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)参考
+- [输入边界断言：`^`、`$`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+- [前向断言：`(?=...)`、`(?!...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [后向断言：`(?<=...)`、`(?<!...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [单词边界断言：`\b`、`\B`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
