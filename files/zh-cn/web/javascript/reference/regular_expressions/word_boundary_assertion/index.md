@@ -21,7 +21,7 @@ l10n:
 单词字符包括：
 
 - 字母（A–Z、a–z）、数字（0–9）和下划线（\_）。
-- 如果正则表达式处于 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-感知模式)，且 [`i`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) 标志已设置，则其他 Unicode 字符通过[大小写折叠](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)规范化为上述字符之一。
+- 如果正则表达式处于 [Unicode 感知模式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode_感知模式)，且 [`i`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase) 标志已设置，则其他 Unicode 字符通过[大小写折叠](https://unicode.org/Public/UCD/latest/ucd/CaseFolding.txt)规范化为上述字符之一。
 
 单词字符也可通过 `\w` [字符类转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)进行匹配。
 

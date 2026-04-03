@@ -96,7 +96,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>\B</code></td>
       <td>
         <p>
-          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>非单词边界断言：</strong></a>匹配非单词边界。这是一个前一个字符和后一个字符类型相同的位置：要么两者都是单词，要么两者都不是单词，例如两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的单词边界一样，匹配的非单词边界也不包含在匹配范围内。例如，<code>/\Bon/</code>匹配“at noon”中的“on”，<code>/ye\B/</code> 匹配“possibly yesterday”的“ye”。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>非单词边界断言：</strong></a>匹配非单词边界。这是一个前一个字符和后一个字符类型相同的位置：要么两者都是单词，要么两者都不是单词，例如两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的单词边界一样，匹配的非单词边界也不包含在匹配范围内。例如，<code>/\Bon/</code> 匹配“at noon”中的“on”，<code>/ye\B/</code> 匹配“possibly yesterday”的“ye”。
         </p>
       </td>
     </tr>
@@ -112,7 +112,8 @@ console.log(text.match(regexpFoxQuality));
   <thead>
     <tr>
       <th scope="col"><code>字符</code></th>
-      <th scope="col"><code>含义</code></th>
+ <th scope="col">字符</th>
+ <th scope="col">含义</th>
     </tr>
   </thead>
   <tbody>
