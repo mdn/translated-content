@@ -62,7 +62,7 @@ text-underline-position: unset;
 ### Valeurs
 
 - `auto`
-  - : {{Glossary("user agent", "L'agent utilisateur")}} utilise son propre algorithme pour placer la ligne au niveau ou sous la {{Glossary("/Baseline/Typography", "ligne de base alphabétique")}}.
+  - : {{Glossary("user agent", "L'agent utilisateur")}} utilise son propre algorithme pour placer la ligne au niveau ou sous la {{Glossary("Baseline/Typography", "ligne de base alphabétique")}}.
 - `from-font`
   - : Si le fichier de police contient des informations sur une position préférée, utiliser cette valeur. Si le fichier de police n'inclut pas cette information, se comporter comme si `auto` était défini, le navigateur choisissant une position appropriée.
 - `under`
