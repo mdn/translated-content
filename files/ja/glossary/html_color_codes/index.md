@@ -1,5 +1,5 @@
 ---
-title: HTML color codes (HTTP カラーコード)
+title: HTML color codes (HTML カラーコード)
 slug: Glossary/html_color_codes
 l10n:
   sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
