@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 {{JSRef}}
 
-Статический метод `Promise.race()` принимает итерируемый объект с промисами в качестве входных данных и возвращает [промис](/ru/docs/Web/JavaScript/Reference/global_objects/promise), который завершается (выполняется или отклоняется) в зависимости от результата первого промиса из переданного итерируемого объекта, который завершится, с его значением или причиной отклонения.
+Статический метод **`Promise.race()`** принимает итерируемый объект с промисами в качестве входных данных и возвращает {{jsxref("Promise")}}, который завершается (выполняется или отклоняется) в зависимости от результата первого промиса из переданного итерируемого объекта, который завершится, с его значением или причиной отклонения.
 
 {{InteractiveExample("JavaScript Demo: Promise.race()", "taller")}}
 
@@ -35,11 +35,11 @@ Promise.race(iterable)
 ### Параметры
 
 - `iterable`
-  - : [Итерируемый объект](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (например, [массив](/ru/docs/Web/javascript/reference/global_objects/array") с промисами.
+  - : [Итерируемый объект](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (например, {{jsxref("Array")}}) с промисами.
 
 ### Возвращаемое значение
 
-[промис](/ru/docs/Web/JavaScript/Reference/global_objects/promise), который асинхронно завершается с конечным состоянием первого промиса из `iterable`, который завершится. Иными словами, промис выполняется успешно, если первым завершится успешный промис, и отклоняется, если первым завершится отклонённый промис. Если переданный `iterable` пуст, возвращённый промис навсегда останется в состоянии ожидания. Если переданный `iterable` не пуст, но не содержит ни одного ожидающего промиса, возвращённый промис всё равно завершится асинхронно (а не синхронно).
+{{jsxref("Promise")}}, который асинхронно завершается с конечным состоянием первого промиса из `iterable`, который завершится. Иными словами, промис выполняется успешно, если первым завершится успешный промис, и отклоняется, если первым завершится отклонённый промис. Если переданный `iterable` пуст, возвращённый промис навсегда останется в состоянии ожидания. Если переданный `iterable` не пуст, но не содержит ни одного ожидающего промиса, возвращённый промис всё равно завершится асинхронно (а не синхронно).
 
 ## Описание
 
@@ -295,7 +295,7 @@ Promise.any([promise1, promise2])
 
 ## Смотрите также
 
-- [Promise](/ru/docs/Web/JavaScript/Reference/global_objects/promise)
-- [Promise.all](/ru/docs/Web/JavaScript/Reference/global_objects/promise/all)
-- [Promise.allSettled](/ru/docs/Web/JavaScript/Reference/global_objects/promise/allsettled)
-- [Promise.any](/ru/docs/Web/JavaScript/Reference/global_objects/promise/any)
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettled()")}}
+- {{jsxref("Promise.any()")}}
