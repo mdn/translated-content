@@ -180,6 +180,6 @@ Le code s'affiche comme suit&nbsp;:
 ## Voir aussi
 
 - La propriété {{CSSxRef("overlay")}}
-- La règle{{CSSxRef("@starting-style")}}
+- La règle {{CSSxRef("@starting-style")}}
 - Le module [des transitions CSS](/fr/docs/Web/CSS/Guides/Transitions)
 - [Quatre nouvelles fonctionnalités CSS pour des animations d'entrée et de sortie fluides <sup>(angl.)</sup>](https://developer.chrome.com/blog/entry-exit-animations/) sur developer.chrome.com (2023)
