@@ -92,8 +92,8 @@ transition-timing-function: unset;
 
 ### Valeurs
 
-- `<timing-function>`
-  - : Chaque valeur {{CSSxRef("&lt;timing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{CSSxRef("transition-property")}}.
+- `<easing-function>`
+  - : Chaque valeur {{CSSxRef("&lt;easing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{CSSxRef("transition-property")}}.
 
     Les valeurs des mots-clés qui ne sont pas des étapes (`ease`, `linear`, `ease-in-out`, etc.) représentent chacune une courbe de Bézier cubique avec quatre points de contrôle fixes, tandis que la fonction `cubic-bezier()` permet d'utiliser une valeur non prédéfinie. Les fonctions d'accélération par étapes divisent la durée d'entrée en un nombre spécifié d'intervalles de durée égale. Elles sont définies par un nombre d'étapes et une position d'étape.
     - `ease`
