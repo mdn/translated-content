@@ -1,9 +1,8 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/Reference/Properties/box-decoration-break
-original_slug: Web/CSS/box-decoration-break
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`box-decoration-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[断片](/ja/docs/Web/CSS/Guides/Fragmentation)が複数の行、段、ページに渡る場合に描画する方法を指定します。

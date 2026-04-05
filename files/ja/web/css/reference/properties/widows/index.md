@@ -1,14 +1,13 @@
 ---
 title: widows
 slug: Web/CSS/Reference/Properties/widows
-original_slug: Web/CSS/widows
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Guides/Paged_media)、領域、[段](/ja/docs/Web/CSS/Guides/Multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。
+**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Guides/Paged_media)、領域、[段](/ja/docs/Web/CSS/Guides/Multicol_layout)の先頭に表示されるブロックコンテナーの最小行数を設定します。
 
-組版において、ウィドウ (_widow_) とは (段落が前のページから続いている場合に) 段落の最後の行がページの先頭に単独で現れることです。
+組版において、ウィドウ (_widow_) とは（段落が前のページから続いている場合に）段落の最後の行がページの先頭に単独で現れることです。
 
 ## 構文
 
@@ -28,7 +27,7 @@ widows: unset;
 ### 値
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : 区切りの後の新しい断片の先頭に残すことができる最小行数です。値は正の数である必要があります。
+  - : 断片の先頭において、断片の分割の直後に単独で残ることができる最小行数です。
 
 ## 公式定義
 
@@ -40,15 +39,19 @@ widows: unset;
 
 ## 例
 
-<h3 id="Controlling_column_widows">段のウィドウの制御</h3>
+### 段のウィドウの制御
 
 #### HTML
 
 ```html
 <div>
-  これは幾らかのテキストを含む最初の段落です。
-  これは最初の段落よりも多くのテキストを含む第二の段落です。これはウィドウがどの様に動作するのかを示すために用います。
-  これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
+  <p>これは幾らかのテキストを含む最初の段落です。</p>
+  <p>
+    これは最初の段落よりも多くのテキストを含む第二の段落です。これは widows がどの様に動作するのかを示すために用います。
+  </p>
+  <p>
+    これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
+  </p>
 </div>
 ```
 

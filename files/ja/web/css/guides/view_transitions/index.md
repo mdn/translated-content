@@ -1,9 +1,9 @@
 ---
 title: CSS ビュー遷移
+short-title: ビュー遷移
 slug: Web/CSS/Guides/View_transitions
-original_slug: Web/CSS/CSS_view_transitions
 l10n:
-  sourceCommit: ef793e5764cf3b6371f275233a8e278e692d2ff8
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS ビュー遷移**モジュールは、[ビュー遷移 API](/ja/docs/Web/API/View_Transition_API) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための CSS プロパティと擬似要素も定義します。
@@ -12,10 +12,8 @@ l10n:
 
 ### プロパティ
 
-- {{cssxref("view-transition-name")}} {{experimental_inline}}
-
-> [!NOTE]
-> このモジュールでは、`view-transition-class` プロパティも定義していますが、いまのところ、どのブラウザーも対応していません。
+- {{cssxref("view-transition-class")}}
+- {{cssxref("view-transition-name")}}
 
 ### アットルールと記述子
 
@@ -24,14 +22,13 @@ l10n:
 
 ### セレクターと擬似要素
 
-- {{cssxref("::view-transition")}} {{experimental_inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-group()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-new()")}} {{experimental_inline}}
-- {{cssxref("::view-transition-old()")}} {{experimental_inline}}
-
-> [!NOTE]
-> このモジュールでは、`:active-view-transition` および `:active-view-transition-type()` 擬似クラスも定義していますが、いまのところ、どのブラウザーも対応していません。
+- {{cssxref(":active-view-transition")}}
+- {{cssxref(":active-view-transition-type()")}}
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
 
 ### インターフェイス
 
