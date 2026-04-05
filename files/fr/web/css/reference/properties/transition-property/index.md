@@ -1,14 +1,13 @@
 ---
 title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
-original_slug: Web/CSS/transition-property
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) devrait être appliqué.
 
-La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) devrait être appliqué.
-
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: transition-property")}}
 
 ```css interactive-example-choice
 transition-property: margin-right;
@@ -28,14 +27,14 @@ transition-property: none;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">Survolez pour voir<br />la transition.</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -44,42 +43,39 @@ transition-property: none;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
 
-> [!NOTE]
-> [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
-
-Si vous définissez une propriété raccourcie (par exemple {{cssxref("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
+Si vous définissez une propriété raccourcie (par exemple {{CSSxRef("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
 
 ## Syntaxe
 
 ```css
-/* Avec un mot-clé */
+/* Valeurs avec un mot-clé */
 transition-property: none;
 transition-property: all;
 
-/* Valeurs utilisant un identifiant */
-/* <custom-ident> */
-transition-property: test1;
+/* Valeurs de type <custom-ident> */
 transition-property: test_05;
 transition-property: -specific;
 transition-property: sliding-vertically;
 
 /* Valeurs multiples */
 transition-property: test1, animation4;
-transition-property: all, height, all;
+transition-property: all, height, color;
 transition-property:
   all,
   -moz-specific,
   sliding;
 
-/* Avec des valeurs globales */
+/* Valeurs globales */
 transition-property: inherit;
 transition-property: initial;
+transition-property: revert;
+transition-property: revert-layer;
 transition-property: unset;
 ```
 
@@ -89,8 +85,8 @@ transition-property: unset;
   - : Aucune propriété n'est concernée par les transitions.
 - `all`
   - : Toutes les propriétés qui peuvent avoir une transition animée seront concernées.
-- `<custom-ident>`
-  - : Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change. Pour plus de détails sur la forme de cet identifiant, voir la page sur le type {{cssxref("&lt;custom-ident&gt;")}}.
+- {{CSSxRef("&lt;custom-ident&gt;")}}
+  - : Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change.
 
 ## Définition formelle
 
@@ -102,7 +98,48 @@ transition-property: unset;
 
 ## Exemples
 
-Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'article sur les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using).
+### Exemple simple
+
+Lorsque le bouton est survolé ou reçoit la sélection, il subit une transition de couleur d'une durée d'une seconde&nbsp;; la propriété `transition-property` est {{CSSxRef("background-color")}}.
+
+#### HTML
+
+```html
+<button class="cible">Sélectionnez-moi&nbsp;!</button>
+```
+
+#### CSS
+
+```css hidden
+html {
+  height: 100vh;
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  outline: none;
+}
+```
+
+```css
+.cible {
+  transition-property: background-color;
+  transition-duration: 1s;
+  background-color: #cccccc;
+}
+
+.cible:hover,
+.cible:focus {
+  background-color: #eeeeee;
+}
+```
+
+{{EmbedLiveSample("Exemple simple", 600, 100)}}
+
+Voir notre guide [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using) pour plus d'exemples de `transition-property`.
 
 ## Spécifications
 
@@ -115,4 +152,8 @@ Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'articl
 ## Voir aussi
 
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
-- {{domxref("TransitionEvent")}}
+- La propriété {{CSSxRef('transition')}}
+- La propriété {{CSSxRef('transition-duration')}}
+- La propriété {{CSSxRef('transition-timing-function')}}
+- La propriété {{CSSxRef('transition-delay')}}
+- L'interface API {{DOMxRef("TransitionEvent")}}

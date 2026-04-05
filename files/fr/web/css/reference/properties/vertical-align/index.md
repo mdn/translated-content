@@ -1,14 +1,21 @@
 ---
 title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
-original_slug: Web/CSS/vertical-align
+l10n:
+  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i> en anglais), en ligne et bloc (<i lang="en">inline-block</i> en anglais) ou d'une boîte de cellule de tableau.
 
-La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i>), en ligne / bloc (<i lang="en">inline-block</i>) ou d'une boîte de cellule de tableau.
+## Propriétés constitutives
 
-{{InteractiveExample("CSS Demo: vertical-align")}}
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("alignment-baseline")}}
+- {{CSSxRef("baseline-source")}}
+- {{CSSxRef("baseline-shift")}}
+
+{{InteractiveExample("Démonstration CSS&nbsp;: vertical-align")}}
 
 ```css interactive-example-choice
 vertical-align: baseline;
@@ -37,7 +44,7 @@ vertical-align: text-top;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <p>
-    Align the star:
+    Alignez l'étoile&nbsp;:
     <img id="example-element" src="/shared-assets/images/examples/star2.png" />
   </p>
 </section>
@@ -54,15 +61,17 @@ vertical-align: text-top;
 
 La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
 
-- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) sur une ligne de texte)
-- ou pour aligner verticalement le contenu d'une cellule dans un tableau
+- Pour aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur. Par exemple, elle peut être utilisée pour [positionner verticalement une image dans une ligne de texte](#alignement_vertical_sur_une_boîte_de_ligne).
+- Pour aligner verticalement [le contenu d'une cellule dans un tableau](#alignement_vertical_dune_cellule_de_tableau).
 
-`vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Glossary/Block-level_content).
+Utilisez cette syntaxe raccourcie (`vertical-align`) à la place des propriétés correspondantes en forme longue, sauf si vous avez besoin de les appliquer en cascade de manière indépendante ou (sur les éléments SVG) pour assurer la compatibilité avec les anciennes implémentations SVG.
+
+Notez que `vertical-align` ne s'applique qu'aux éléments en ligne, en ligne-bloc et aux cellules de tableau&nbsp;: vous ne pouvez pas l'utiliser pour aligner verticalement des [éléments de niveau bloc](/fr/docs/Glossary/Block-level_content).
 
 ## Syntaxe
 
 ```css
-/* Avec un mot-clé */
+/* Valeurs avec un mot-clé */
 vertical-align: baseline;
 vertical-align: sub;
 vertical-align: super;
@@ -72,19 +81,18 @@ vertical-align: middle;
 vertical-align: top;
 vertical-align: bottom;
 
-/* Valeurs de longueur */
-/* type <length> */
+/* Valeurs de type <length> */
 vertical-align: 10em;
 vertical-align: 4px;
 
-/* Valeurs en pourcentage */
-/* type <percentage> */
+/* Valeurs de type <percentage> */
 vertical-align: 20%;
 
 /* Valeurs globales */
 vertical-align: inherit;
 vertical-align: initial;
 vertical-align: revert;
+vertical-align: revert-layer;
 vertical-align: unset;
 ```
 
@@ -94,10 +102,10 @@ La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 
 #### Valeurs relatives au parent
 
-Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
+Ces valeurs alignent l'élément verticalement, relativement à son élément parent&nbsp;:
 
 - `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties), comme [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains {{Glossary("replaced elements", "éléments remplacés")}}, comme {{HTMLElement("textarea")}}, n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
 - `sub`
   - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
 - `super`
@@ -108,10 +116,10 @@ Ces valeurs alignent l'élément verticalement, relativement à son élément pa
   - : Aligne le bas de l'élément avec le bas de la police de l'élément parent.
 - `middle`
   - : Aligne le milieu de l'élément avec la hauteur donnée par la ligne de base de l'élément parent à laquelle on ajoute la moitié de sa hauteur en x (<i lang="en">x-height</i>).
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
+- {{CSSxRef("&lt;length&gt;")}}
   - : Aligne la ligne de base de l'élément à la hauteur de la ligne de base de l'élément parent à laquelle on ajoute la hauteur donnée. Les valeurs négatives sont autorisées.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height). Les valeurs négatives sont autorisées.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Aligne la ligne de base de l'élément à un pourcentage donné au-dessus de la ligne de base de son parent, la valeur étant un pourcentage de la propriété {{CSSxRef("line-height")}}. Une valeur négative est autorisée.
 
 #### Valeurs relatives à la ligne
 
@@ -124,16 +132,18 @@ Les valeurs suivantes alignent l'élément par rapport à la ligne entière plut
 
 Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la marge basse qui est utilisée.
 
-### Pour les cellules de tableau
+### Valeurs pour les cellules de tableau
 
-- `baseline`, `sub`, `super`, `text-top`, `text-bottom`, `<length>` et `<percentage>`
+- `baseline` (et `sub`, `super`, `text-top`, `text-bottom`, `<length>`, et `<percentage>`)
   - : La ligne de base de la cellule est alignée avec celle de toutes les autres cellules de la ligne courante qui sont alignées par rapport à la ligne de base.
 - `top`
-  - : Aligne le bord haut de la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec le haut de la ligne.
+  - : Aligne le bord haut de la boîte de remplissage (<i lang="en">padding</i> en anglais) de la cellule avec le haut de la ligne.
 - `middle`
-  - : Centre la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec la ligne.
+  - : Centre la boîte de remplissage de la cellule avec la ligne.
 - `bottom`
-  - : Aligne le bord bas de la boîte de remplissage (<i lang="en">padding</i>) avec le bas de la ligne.
+  - : Aligne le bord bas de la boîte de remplissage avec le bas de la ligne.
+
+Les valeurs négatives sont autorisées.
 
 ## Définition formelle
 
@@ -141,7 +151,7 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -151,22 +161,22 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 
 ```html
 <div>
-  Une <img src="frame_image.svg" alt="link" width="32" height="32" /> image avec
-  un alignement par défaut.
+  Une <img src="frame_image.svg" alt="link" width="32" height="32" />
+  image avec un alignement par défaut.
 </div>
 <div>
   Une
-  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  <img class="haut" src="frame_image.svg" alt="link" width="32" height="32" />
   image avec un alignement en haut du texte.
 </div>
 <div>
   Une
-  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  <img class="bas" src="frame_image.svg" alt="link" width="32" height="32" />
   image avec un alignement en bas du texte.
 </div>
 <div>
   Une
-  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  <img class="milieu" src="frame_image.svg" alt="link" width="32" height="32" />
   image avec un alignement au milieu.
 </div>
 ```
@@ -174,41 +184,41 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 #### CSS
 
 ```css
-img.top {
+img.haut {
   vertical-align: text-top;
 }
-img.bottom {
+img.bas {
   vertical-align: text-bottom;
 }
-img.middle {
+img.milieu {
   vertical-align: middle;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("")}}
+{{EmbedLiveSample("Exemple simple")}}
 
 ### Alignement vertical sur une boîte de ligne
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  top: <img style="vertical-align: top" src="star.png" /> middle:
-  <img style="vertical-align: middle" src="star.png" /> bottom:
-  <img style="vertical-align: bottom" src="star.png" /> super:
-  <img style="vertical-align: super" src="star.png" /> sub:
-  <img style="vertical-align: sub" src="star.png" />
+top:         <img style="vertical-align: top" src="star.png" alt="étoile"/>
+middle:      <img style="vertical-align: middle" src="star.png" alt="étoile"/>
+bottom:      <img style="vertical-align: bottom" src="star.png" alt="étoile"/>
+super:       <img style="vertical-align: super" src="star.png" alt="étoile"/>
+sub:         <img style="vertical-align: sub" src="star.png" alt="étoile"/>
 </p>
 
 <p>
-  text-top: <img style="vertical-align: text-top" src="star.png" /> text-bottom:
-  <img style="vertical-align: text-bottom" src="star.png" /> 0.2em:
-  <img style="vertical-align: 0.2em" src="star.png" /> -1em:
-  <img style="vertical-align: -1em" src="star.png" /> 20%:
-  <img style="vertical-align: 20%" src="star.png" /> -100%:
-  <img style="vertical-align: -100%" src="star.png" />
+text-top:    <img style="vertical-align: text-top" src="star.png" alt="étoile"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png" alt="étoile"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png" alt="étoile"/>
+-1em:        <img style="vertical-align: -1em" src="star.png" alt="étoile"/>
+20%:         <img style="vertical-align: 20%" src="star.png" alt="étoile"/>
+-100%:       <img style="vertical-align: -100%" src="star.png" alt="étoile"/>
 </p>
 ```
 
@@ -234,33 +244,34 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("", '100%', 160)}}
+{{EmbedLiveSample("Alignement vertical sur une boîte de ligne", "100%", 160)}}
 
 ### Alignement vertical d'une cellule de tableau
+
+Dans cet exemple, nous avons un tableau avec une seule ligne contenant six cellules. La ligne définit `vertical-align` sur `bottom` comme valeur par défaut.
+
+- Les quatre premières cellules définissent chacune leurs propres valeurs de `vertical-align`, qui remplacent la valeur de la ligne.
+- La cinquième cellule ne définit aucune valeur de `vertical-align`, elle hérite donc de la valeur de la ligne.
+
+La sixième cellule est uniquement utilisée pour s'assurer que les cellules sont suffisamment hautes pour voir l'effet.
 
 #### HTML
 
 ```html
 <table>
-  <tr>
-    <td style="vertical-align: baseline">baseline</td>
-    <td style="vertical-align: top">top</td>
-    <td style="vertical-align: middle">middle</td>
-    <td style="vertical-align: bottom">bottom</td>
-    <td>
-      <p>
-        Elle voulait savoir si elle grandissait ou rapetissait, et fut tout
-        étonnée de rester la même; franchement, c'est ce qui arrive le plus
-        souvent lorsqu'on mange du gâteau; mais Alice avait tellement pris
-        l'habitude de s'attendre à des choses extraordinaires, que cela lui
-        paraissait ennuyeux et stupide de vivre comme tout le monde.
-      </p>
-      <p>
-        Aussi elle se remit à l'œuvre, et eut bien vite fait disparaître le
-        gâteau.
-      </p>
-    </td>
-  </tr>
+  <tbody>
+    <tr class="bas">
+      <td class="ligne-de-base">baseline</td>
+      <td class="haut">top</td>
+      <td class="milieu">middle</td>
+      <td>bottom</td>
+      <td>Style de la ligne</td>
+      <td>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pretium felis eu sem mattis vulputate.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -283,11 +294,27 @@ td {
   padding: 0.5em;
   font-family: monospace;
 }
+
+.bas {
+  vertical-align: bottom;
+}
+
+.ligne-de-base {
+  vertical-align: baseline;
+}
+
+.haut {
+  vertical-align: top;
+}
+
+.milieu {
+  vertical-align: middle;
+}
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("", '100%', 230)}}
+{{EmbedLiveSample("Alignement vertical d'une cellule de tableau", "100%", 230)}}
 
 ## Spécifications
 
@@ -299,9 +326,7 @@ td {
 
 ## Voir aussi
 
-- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#centrer_des_éléments)
-- [`line-height`](/fr/docs/Web/CSS/Reference/Properties/line-height)
-- [`text-align`](/fr/docs/Web/CSS/Reference/Properties/text-align)
-- [`margin`](/fr/docs/Web/CSS/Reference/Properties/margin)
-- [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement (en anglais)](http://phrogz.net/css/vertical-align/index.html)
-- [Tout ce qu'il y a à savoir sur `vertical-align` (en anglais)](https://christopheraue.net/design/vertical-align)
+- [Cas d'utilisation classique des boîtes flexibles, section «&nbsp;Centrer des éléments&nbsp;»](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#centrer_des_éléments)
+- Les propriétés {{CSSxRef("line-height")}}, {{CSSxRef("text-align")}}, {{CSSxRef("margin")}}
+- [Comprendre `vertical-align`, ou comment (ne pas) centrer des éléments verticalement <sup>(angl.)</sup>](https://phrogz.net/css/vertical-align/index.html)
+- [Tout ce qu'il y a à savoir sur `vertical-align` <sup>(angl.)</sup>](https://christopheraue.net/design/vertical-align)
