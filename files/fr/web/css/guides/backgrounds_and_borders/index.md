@@ -170,7 +170,7 @@ Le module d'arrière-plan CSS niveau 4 introduit également les propriétés `ba
 - {{CSSxRef("box-decoration-break")}}
 - {{CSSxRef("text-shadow")}}
 - Le type de donnée {{CSSxRef("url_value", "&lt;url&gt;")}}
-- La fonction {{CSSxRef("url")}}
+- La fonction {{CSSxRef("url_function", "url()")}}
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;position&gt;")}}
 - Le mot-clé [`currentcolor`](/fr/docs/Web/CSS/Reference/Values/color_value#le_mot_clé_currentcolor)
