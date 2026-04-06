@@ -3,12 +3,16 @@ title: Méthode de requête DELETE
 short-title: DELETE
 slug: Web/HTTP/Reference/Methods/DELETE
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: 531ab7d0f0572957de89f715de2adb981628d64e
 ---
 
 La méthode HTTP **`DELETE`** demande au serveur de supprimer une ressource donnée.
 
-La méthode `DELETE` n'a pas de sémantique définie pour le corps du message, qui devrait donc être vide.
+Les requêtes utilisant `DELETE` ne doivent être utilisées que pour supprimer des données et ne doivent pas contenir de corps.
+
+> [!NOTE]
+> La sémantique de l'envoi d'un corps de message dans les requêtes `DELETE` n'est pas définie.
+> Certains serveurs peuvent rejeter la requête avec une réponse [d'erreur 4XX côté client](/fr/docs/Web/HTTP/Reference/Status#réponses_derreur_côté_client).
 
 <table class="properties">
   <tbody>
