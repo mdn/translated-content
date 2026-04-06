@@ -58,7 +58,7 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 
 ## Cookbook
 
-El [libro de cocina de diseño CSS](/es/docs/Web/CSS/How_to/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
+El [libro de cocina de diseño CSS](/es/docs/Web/CSS/How_to/Layout_cookbook)[](/es/docs/Web/CSS/How_to/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
 
 ## Herramientas para el desarrollo de CSS
 

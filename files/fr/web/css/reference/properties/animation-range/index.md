@@ -2,10 +2,8 @@
 title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 l10n:
-  sourceCommit: a397ab763a6686a4056af755e4da32ac735b9fa5
+  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
 ---
-
-{{SeeCompatTable}}
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation-range`** est utilisée pour définir le début et la fin de la plage d'attachement d'une animation le long de sa chronologie, c'est-à-dire à quel endroit de la chronologie une animation commencera et se terminera.
 
@@ -276,5 +274,6 @@ Cochez la case pour appliquer la propriété `animation-fill-mode` à l'élémen
 - La propriété {{CSSxRef("timeline-scope")}}
 - La propriété {{CSSxRef("view-timeline-inset")}}
 - La propriété {{CSSxRef("animation-fill-mode")}}
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - Le module [des animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

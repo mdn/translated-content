@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: セレクター"
-short-title: "試験: セレクター"
+short-title: "テスト: セレクター"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 l10n:
   sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
