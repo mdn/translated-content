@@ -47,7 +47,6 @@ _La interfaz `ServiceWorker` hereda métodos de su padre, {{domxref("EventTarget
 ## Eventos
 
 - {{domxref("ServiceWorker.statechange_event", "statechange")}}
-
   - : Se dispara cuando {{domxref("ServiceWorker.state")}} cambia.
 
 - {{domxref("ServiceWorker.error_event", "error")}}
