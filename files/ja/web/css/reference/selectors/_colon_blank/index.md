@@ -1,9 +1,8 @@
 ---
 title: :blank
 slug: Web/CSS/Reference/Selectors/:blank
-original_slug: Web/CSS/:blank
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -53,8 +52,9 @@ textarea:blank {
 
 ## ブラウザーの互換性
 
-現在、この機能を実装しているブラウザーはありません。
+現在、この機能に対応しているブラウザーはありません。
 
 ## 関連情報
 
 - {{CSSxRef(":empty")}}
+- [CSS セレクター](/ja/docs/Web/CSS/Guides/Selectors)モジュール

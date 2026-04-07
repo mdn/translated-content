@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-La méthode statique **`supportedLocalesOf()`** des instances de {{JSxRef("Intl.DisplayNames")}} retourne un tableau contenant, parmi les locales fournies, celles qui sont prises en charge pour les noms d'affichage sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
+La méthode statique **`Intl.DisplayNames.supportedLocalesOf()`** retourne un tableau contenant, parmi les locales fournies, celles qui sont prises en charge pour les noms d'affichage sans avoir à recourir à la locale par défaut de l'environnement d'exécution.
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ Un tableau de chaînes de caractères qui est un sous-ensemble des balises de la
 
 ## Exemples
 
-### Utiliser la méthode `supportedLocalesOf()`
+### Utiliser la méthode `Intl.DisplayNames.supportedLocalesOf()`
 
 En supposant un environnement d'exécution qui prend en charge l'indonésien et l'allemand mais pas le balinais pour les noms d'affichage, `supportedLocalesOf` retourne les balises de langue indonésiennes et allemandes inchangées, même si la collation `pinyin` n'est ni pertinente pour les noms d'affichage ni utilisée avec l'indonésien, et qu'un allemand spécialisé pour l'Indonésie est peu susceptible d'être pris en charge. Notez la spécification de l'algorithme `"lookup"` ici — un sélecteur `"best fit"` pourrait décider que l'indonésien est une correspondance acceptable pour le balinais puisque la plupart des locuteurs balinais comprennent également l'indonésien, et renvoyerait donc aussi la balise de langue balinaise.
 

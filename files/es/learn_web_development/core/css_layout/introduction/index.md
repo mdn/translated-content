@@ -79,7 +79,7 @@ Los métodos que permiten cambiar la disposición de los elementos en CSS son lo
 - **Floats**: la aplicación de un valor {{cssxref ("float")}} como `left` puede hacer que los elementos de nivel de bloque rodeen el elemento por uno de sus lados, como la forma en que las imágenes a veces tienen texto flotando a su alrededor en los diseños de algunas revistas.
 - **La propiedad {{cssxref ("position")}}**: permite controlar con precisión la ubicación de las cajas dentro de otras cajas. El posicionamiento estático es el valor predeterminado en el flujo normal, pero puede hacer que los elementos se distribuyan de manera diferente si se utilizan otros valores, por ejemplo, pueden estar siempre fijados a la parte superior izquierda de la ventana del navegador.
 - **Diseño de tablas**: se pueden usar las características que sirven para diseñar las partes de una tabla HTML en elementos que no son de tabla con `display: table` y las propiedades asociadas.
-- **Diseño en varias columnas**: las propiedades de [diseño en varias columnas](/es/docs/Web/CSS/CSS_multicol_layout) permiten distribuir el contenido de un bloque en columnas, como en el caso de un periódico.
+- **Diseño en varias columnas**: las propiedades de [diseño en varias columnas](/es/docs/Web/CSS/Guides/Multicol_layout) permiten distribuir el contenido de un bloque en columnas, como en el caso de un periódico.
 
 ## La propiedad display
 
@@ -91,7 +91,7 @@ Además de poder cambiar la presentación predeterminada de un elemento `block` 
 
 ## Flexbox
 
-Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/CSS_flexible_box_layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
+Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/Guides/Flexible_box_layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
 
 ### Establecer display: flex
 

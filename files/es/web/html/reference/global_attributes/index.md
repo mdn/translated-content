@@ -27,7 +27,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
     - `words`, la primera letra de cada palabra de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
     - `characters`, todas las letras de manera predeterminada deben estar en mayúsculas
 - **`[class](/es/docs/Web/HTML/Global_attributes/class)`**
-  - : Una lista separada por espacios de las clases del elemento. Las clases permiten que CSS y JavaScript seleccionen y accedan a elementos específicos a través de los [selectores de clase](/es/docs/Web/CSS/Class_selectors) o funciones como el método {{DOMxRef("document.getElementsByClassName()")}}.
+  - : Una lista separada por espacios de las clases del elemento. Las clases permiten que CSS y JavaScript seleccionen y accedan a elementos específicos a través de los [selectores de clase](/es/docs/Web/CSS/Reference/Selectors/Class_selectors) o funciones como el método {{DOMxRef("document.getElementsByClassName()")}}.
 - **`[contenteditable](/es/docs/Web/HTML/Global_attributes/contenteditable)`**
   - : Un atributo enumerado que indica si el usuario debe poder editar el elemento. Si es así, el navegador modifica su «_widget_» para permitir la edición. El atributo debe tomar uno de los siguientes valores:
     - `true` o la _cadena vacía_, la cual indica que el elemento debe ser editable;

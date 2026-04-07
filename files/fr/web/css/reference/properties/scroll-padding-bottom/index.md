@@ -1,16 +1,13 @@
 ---
 title: scroll-padding-bottom
 slug: Web/CSS/Reference/Properties/scroll-padding-bottom
-original_slug: Web/CSS/scroll-padding-bottom
+l10n:
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-bottom`** définit des décalages pour le bord de début dans la dimension de bloc de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.
 
-La propriété **`scroll-padding-bottom`** est une propriété qui permet de définir le remplissage sur le côté bas entre l'élément et la zone de défilement.
-
-Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
-
-{{InteractiveExample("CSS Demo: scroll-padding-bottom")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding-bottom")}}
 
 ```css interactive-example-choice
 scroll-padding-bottom: 0;
@@ -31,7 +28,7 @@ scroll-padding-bottom: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -58,7 +55,7 @@ scroll-padding-bottom: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -67,7 +64,7 @@ scroll-padding-bottom: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -78,8 +75,7 @@ scroll-padding-bottom: 2em;
 /* Valeurs avec un mot-clé */
 scroll-padding-bottom: auto;
 
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 scroll-padding-bottom: 10px;
 scroll-padding-bottom: 1em;
 scroll-padding-bottom: 10%;
@@ -87,6 +83,8 @@ scroll-padding-bottom: 10%;
 /* Valeurs globales */
 scroll-padding-bottom: inherit;
 scroll-padding-bottom: initial;
+scroll-padding-bottom: revert;
+scroll-padding-bottom: revert-layer;
 scroll-padding-bottom: unset;
 ```
 
@@ -112,3 +110,8 @@ scroll-padding-bottom: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

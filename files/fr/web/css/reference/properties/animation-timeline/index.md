@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 21f3703f37be2ab064fb8cff005438f47f92a1de
 ---
 
-{{SeeCompatTable}}
-
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** définit la chronologie utilisée pour contrôler la progression d'une animation CSS.
 
 ## Syntaxe

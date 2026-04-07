@@ -1,14 +1,13 @@
 ---
 title: min-width
 slug: Web/CSS/Reference/Properties/min-width
-original_slug: Web/CSS/min-width
 l10n:
-  sourceCommit: 82ef8b5c50a0045add71f1a06f5be1db781aede4
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir inférieure à la valeur spécifiée par `min-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche [la valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("width")}} de devenir inférieure à la valeur définie par `min-width`.
 
-{{InteractiveExample("CSS Demo: min-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: min-width")}}
 
 ```css interactive-example-choice
 min-width: 150px;
@@ -29,7 +28,7 @@ min-width: 40ch;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    Change the minimum width.
+    Changer la largeur minimale.
   </div>
 </section>
 ```
@@ -41,27 +40,27 @@ min-width: 40ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
-La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) ou à [`width`](/fr/docs/Web/CSS/Reference/Properties/width).
+La largeur de l'élément sera la valeur de la propriété `min-width` si celle-ci est supérieure à {{CSSxRef("max-width")}} ou à {{CSSxRef("width")}}.
 
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* Valeur de type <length> */
 min-width: 3.5em;
 
-/* Valeurs relatives */
-/* Type <percentage> */
+/* Valeurs de type <percentage> */
 min-width: 10%;
 
 /* Valeurs avec un mot-clé */
 min-width: max-content;
 min-width: min-content;
+min-width: fit-content;
 min-width: fit-content(20em);
+min-width: stretch;
 
 /* Valeurs globales */
 min-width: inherit;
@@ -73,58 +72,50 @@ min-width: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : La largeur minimale sous la forme d'une valeur absolue. Une largeur négative rendra la déclaration invalide.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : La largeur minimale, exprimée comme une fraction de la largeur du bloc englobant. Les valeurs négatives rendront la déclaration invalide.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Définit la largeur minimale (`min-width`) comme une valeur absolue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Définit la largeur minimale (`min-width`) comme un pourcentage de la largeur du bloc englobant.
 - `auto`
-  - : Le navigateur calculera et sélectionnera une valeur de `min-width` pour l'élément ciblé.
-- `max-content`
-  - : La valeur intrinsèque préférée pour `min-width`.
-- `min-content`
-  - : La valeur intrinsèque minimale pour `min-width`.
-- `fit-content(<length-percentage>)`
-  - : Utilise la formule `fit-content` avec le maximum d'espace disponible remplacé par l'argument indiqué, c'est-à-dire `min(max-content, max(min-content, argument))`. Voir [`<length-percentage>`](/fr/docs/Web/CSS/Reference/Values/length-percentage) pour le type de valeur qui peut être utilisée en argument.
+  - : La valeur par défaut. La source de la valeur automatique pour l'élément défini dépend de sa valeur d'affichage. Pour les boîtes de type bloc, les boîtes en ligne, les blocs en ligne et toutes les boîtes de mise en page de tableau, `auto` se résout à `0`.
+
+    Pour les {{Glossary("Flex_Item", "éléments flexibles")}} et les éléments de grille, la valeur minimale de largeur est soit la taille suggérée définie, comme la valeur de la propriété `width`, la taille transférée, calculée si l'élément a un `aspect-ratio` défini et que la hauteur est une taille définie, sinon, la taille `min-content` est utilisée. Si l'élément flexible ou de grille est un {{Glossary("scroll container", "conteneur défilant")}}, ou si un élément de grille s'étend sur plus d'une piste de colonne flexible, la taille minimale automatique est `0`.
+
+- {{CSSxRef("max-content")}}
+  - : La largeur minimale (`min-width`) intrinsèque préférée.
+- {{CSSxRef("min-content")}}
+  - : La largeur minimale (`min-width`) intrinsèque minimale.
+- {{CSSxRef("fit-content")}}
+  - : Utilise l'espace disponible, mais pas plus que {{CSSxRef("max-content")}}, c'est-à-dire `min(max-content, max(min-content, stretch))`.
+- [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument défini, c'est-à-dire `min(max-content, max(min-content, argument))`.
+- `stretch`
+  - : Limite la largeur minimale de la [marge de la boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_composants_dune_boîte) de l'élément à la largeur de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant). Elle tente de faire en sorte que la marge de la boîte remplisse l'espace disponible dans le bloc englobant, se comportant ainsi de manière similaire à `100%`, mais en appliquant la taille résultante à la marge de la boîte plutôt qu'à la boîte déterminée par {{CSSxRef("box-sizing")}}.
+
+    > [!NOTE]
+    > Pour vérifier les alias utilisés par les navigateurs pour la valeur `stretch` et son état d'implémentation, consultez la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
-
-```html
-<div>
-  Lorem ipsum tralala sit amet, consectetur adipisicing
-  <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
-  </p>
-</div>
-```
-
-### CSS
+### Définir la largeur minimale d'un élément
 
 ```css
-div {
-  width: 200px;
-  border: solid 1px red;
+table {
+  min-width: 75%;
 }
 
-p {
-  min-width: 250px;
-  border: solid 1px blue;
+form {
+  min-width: 0;
 }
 ```
-
-### Résultat
-
-{{EmbedLiveSample("","",200)}}
 
 ## Spécifications
 
@@ -136,8 +127,10 @@ p {
 
 ## Voir aussi
 
-- [`width`](/fr/docs/Web/CSS/Reference/Properties/width)
-- [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width)
-- [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height)
-- [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
-- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- La propriété {{CSSxRef("max-width")}}
+- La propriété {{CSSxRef("width")}}
+- La propriété {{CSSxRef("min-inline-size")}}
+- La propriété {{CSSxRef("min-block-size")}}
+- La propriété {{CSSxRef("box-sizing")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)
