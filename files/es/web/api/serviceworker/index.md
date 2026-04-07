@@ -2,7 +2,7 @@
 title: ServiceWorker
 slug: Web/API/ServiceWorker
 l10n:
-  sourceCommit: 5d29bef0815f8cc4b5b152b9ee1ab53f002ee617
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{securecontext_header}}{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
