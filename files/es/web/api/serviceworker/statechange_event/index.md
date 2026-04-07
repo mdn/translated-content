@@ -3,7 +3,7 @@ title: "ServiceWorker: evento statechange"
 short-title: statechange
 slug: Web/API/ServiceWorker/statechange_event
 l10n:
-  sourceCommit: bc0237f139ee3a9db67a669ae1b6bf45ebba7f94
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}

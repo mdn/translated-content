@@ -3,7 +3,7 @@ title: "ServiceWorker: propiedad state"
 short-title: state
 slug: Web/API/ServiceWorker/state
 l10n:
-  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}

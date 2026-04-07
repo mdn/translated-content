@@ -3,7 +3,7 @@ title: "ServiceWorker: método postMessage()"
 short-title: postMessage()
 slug: Web/API/ServiceWorker/postMessage
 l10n:
-  sourceCommit: e0310b3f565d3147fa80d9e63ace41e0fc244fa6
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("Service Workers API")}}{{securecontext_header}}{{AvailableInWorkers}}
