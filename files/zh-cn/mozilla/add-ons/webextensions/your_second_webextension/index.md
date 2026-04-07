@@ -2,7 +2,7 @@
 title: 你的第二个扩展
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 l10n:
-  sourceCommit: ee33efab7300d7bf7319921a22f2eb2b60df91da
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 [你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)教程介绍了编写扩展程序的基本流程。在这篇文章，我们将编写一个更加复杂的扩展，以演示其他 API 的使用。
@@ -149,8 +149,8 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML 文件就像这样：
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="choose_beast.css" />
