@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-`PasswordCredential` 接口的 **`name`** 只读属性返回包含可读的，用于在凭据选择器中显示字符串的公共名称。
+`PasswordCredential` 接口的 **`name`** 只读属性返回人类可读的，包含用于在凭据选择器中显示的公共名称的字符串。
 
 ## 值
 
