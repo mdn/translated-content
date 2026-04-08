@@ -14,9 +14,9 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
       <th scope="row">사전 요구 사항:</th>
       <td>
         <p>
-          코어 <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a> 및
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙함.
+          코어 <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> 및
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어에 익숙함.
           터미널/커맨드라인에 대한 지식.<br /><br />Vue 컴포넌트는 앱의 데이터를
           관리하는 JavaScript 객체와 기본 DOM 구조에 매핑되는 HTML 기반 템플릿
           구문을 조합해 작성된다. Vue를 설치하고 고급 기능(예: 단일 파일

@@ -14,11 +14,11 @@ En los primeros días del diseño web, las páginas se diseñaban para llenar un
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos en CSS</a> y
-        <a href="/es/docs/Learn/CSS/Building_blocks"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos en CSS</a> y
+        <a href="/es/docs/Learn_web_development/Core/Styling_basics"
           >Los elementos básicos del CSS</a
         >).
       </td>

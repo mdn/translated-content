@@ -22,10 +22,10 @@ Como você sabe de seu estudo de HTML, os elementos podem ter atributos que forn
           href="/pt-BR/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalhando com arquivos</a
         >, Basico de HTML (Estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução para o HTML</a
         >), e uma ideia de como CSS funciona (Estude
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros paços</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS primeiros paços</a>.)
       </td>
     </tr>
     <tr>

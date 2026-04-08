@@ -353,7 +353,7 @@ http://foo.com?pos.x=123&pos.y=456
     <tr>
       <td>
         <code
-          ><a href="/ja/docs/Web/HTML/Global_attributes/autofocus"
+          ><a href="/ja/docs/Web/HTML/Reference/Global_attributes/autofocus"
             >autofocus</a
           ></code
         >
@@ -376,7 +376,7 @@ http://foo.com?pos.x=123&pos.y=456
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form">form</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form">form</a></code>
       </td>
       <td></td>
       <td>
@@ -385,14 +385,14 @@ http://foo.com?pos.x=123&pos.y=456
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#name">name</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#name">name</a></code>
       </td>
       <td></td>
       <td>要素の名前。これはフォームデータとともに送信されます。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#value">value</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#value">value</a></code>
       </td>
       <td></td>
       <td>要素の初期値です。</td>

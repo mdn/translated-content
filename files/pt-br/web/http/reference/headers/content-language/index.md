@@ -55,7 +55,7 @@ Content-Language: de-DE, en-CA
 
 ### Indicando a língua que um documento está escrito
 
-O atributo global [`lang`](/pt-BR/docs/Web/HTML/Global_attributes/lang) é usado em elementos HTML para indicar a língua de um documento [HTML](/pt-BR/docs/Web/HTML) ou partes dele.
+O atributo global [`lang`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/lang) é usado em elementos HTML para indicar a língua de um documento [HTML](/pt-BR/docs/Web/HTML) ou partes dele.
 
 ```html
 <html lang="de"></html>

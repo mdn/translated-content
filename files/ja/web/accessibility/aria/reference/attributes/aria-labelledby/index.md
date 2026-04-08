@@ -124,6 +124,6 @@ l10n:
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

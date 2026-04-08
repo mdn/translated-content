@@ -22,10 +22,10 @@ l10n:
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 지식 숙지 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 설명)
       </td>

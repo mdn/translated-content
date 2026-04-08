@@ -36,19 +36,19 @@ label {
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente la valeur contenue dans le champ de recherche.
+        Une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>DOMString</code></a>) qui représente la valeur contenue dans le champ de recherche.
       </td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>.
+        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/Element/input_event"><code>input</code></a>.
       </td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-maxlength"><code>maxlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-minlength"><code>minlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-pattern"><code>pattern</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-required"><code>required</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-size"><code>size</code></a>.
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-maxlength"><code>maxlength</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-minlength"><code>minlength</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern"><code>pattern</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-required"><code>required</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-size"><code>size</code></a>.
       </td>
     </tr>
     <tr>

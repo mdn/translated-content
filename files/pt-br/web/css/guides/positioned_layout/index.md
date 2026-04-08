@@ -25,7 +25,7 @@ original_slug: Web/CSS/CSS_positioned_layout
 
 ## Roteiro
 
-- [Entendendo o CSS z-index](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Entendendo o CSS z-index](/pt-BR/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
   - : Apresenta o conceito de contexto de empilhamento e explica como funciona o atributo z-index, com diversos exemplos.
 
 ## Especificações

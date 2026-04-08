@@ -15,7 +15,7 @@ Dado que el acceso a la web en dispositivos móviles es tan popular, y las plata
       <td>
         Conocimientos básicos de computación, una comprensión básica de HTML,
         CSS y JavaScript, y una comprensión de los
-        <a href="/es/docs/Learn/Accessibility">artículos previos del curso</a>.
+        <a href="/es/docs/Learn_web_development/Core/Accessibility">artículos previos del curso</a>.
       </td>
     </tr>
     <tr>

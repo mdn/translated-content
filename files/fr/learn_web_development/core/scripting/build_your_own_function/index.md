@@ -14,7 +14,7 @@ Dans l'article précédent, nous avons traité essentiellement de la théorie. L
       <th scope="row">Prérequis :</th>
       <td>
         Savoir-faire de base, une compréhension minimale HTML et CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >premiers pas en JavaScript</a
         >,
         <a href="/fr/docs/Learn_web_development/Core/Scripting/Functions"

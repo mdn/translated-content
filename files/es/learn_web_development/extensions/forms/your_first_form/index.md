@@ -14,7 +14,7 @@ El primer artículo de nuestra serie te proporciona una primera experiencia de c
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">lenguaje HTML</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">lenguaje HTML</a>.
       </td>
     </tr>
     <tr>

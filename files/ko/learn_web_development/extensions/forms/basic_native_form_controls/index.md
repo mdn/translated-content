@@ -16,7 +16,7 @@ l10n:
       <th scope="row">사전 요구 사항</th>
       <td>
         기본 컴퓨터 지식과 기본
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 이해</a
         >가 필요합니다.
       </td>

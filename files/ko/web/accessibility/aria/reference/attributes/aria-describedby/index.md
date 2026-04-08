@@ -56,6 +56,6 @@ l10n:
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
 
 <section id="Quick_links">
-<strong><a href="/ko/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+<strong><a href="/ko/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
 </section>

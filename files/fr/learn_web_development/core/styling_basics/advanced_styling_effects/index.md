@@ -14,7 +14,7 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
       <th scope="row">Prérequis :</th>
       <td>
         Notions de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >) et idées sur le fonctionnement des CSS (voir
         <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a

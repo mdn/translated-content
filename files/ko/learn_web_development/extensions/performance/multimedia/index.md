@@ -17,7 +17,7 @@ l10n:
       <td>
         컴퓨터에 대한 기본적인 이해도,
         <a href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software">기본적인 소프트웨어 설치</a>,
-        <a href="/ko/docs/Learn/Getting_started_with_the_web">클라이언트 사이드 웹 기술</a>에 대한 기초 지식
+        <a href="/ko/docs/Learn_web_development/Getting_started/Your_first_website">클라이언트 사이드 웹 기술</a>에 대한 기초 지식
       </td>
     </tr>
     <tr>

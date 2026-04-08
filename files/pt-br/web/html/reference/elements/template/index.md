@@ -15,18 +15,18 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     <tr>
       <th scope="row">
         <a
-          href="/pt-BR/docs/Web/HTML/Content_categories"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Conteúdo de categorias</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, script-supporting element
       </td>
@@ -34,10 +34,10 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     <tr>
       <th scope="row">Conteúdo Permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content, </a
         >qualquer conteúdo HTML válido que é permitido para ocorrer dentro do
         {{HTMLElement("ol")}}, {{HTMLElement("dl")}},
@@ -73,7 +73,7 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 Há também um atributo _content,_ o qual é _read-only_ e provê acesso ao conteúdo do template. A existência desse atributo _content_ é frequentemente usada como um modo de determinar se o navegador do usuário suporta o element **`<template>`**.
 

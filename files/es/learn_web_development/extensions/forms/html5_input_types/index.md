@@ -14,7 +14,7 @@ En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/Basic
       <th scope="row">Requisitos previos:</th>
       <td>
         Formación básica en informática, y una
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >comprensión básica de HTML</a
         >.
       </td>

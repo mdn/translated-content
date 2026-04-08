@@ -127,7 +127,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/resize"><code>resize</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Properties/resize"><code>resize</code></a>
       </td>
       <td>Permet de modifier les dimensions d'un élément.</td>
     </tr>
@@ -144,7 +144,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-handler-crashed"
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:-moz-handler-crashed"
           ><code>:-moz-handler-crashed</code></a
         >
       </td>
@@ -152,7 +152,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-placeholder"
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:placeholder-shown"
           ><code>:-moz-placeholder</code></a
         >
       </td>
@@ -162,7 +162,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-submit-invalid"
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:-moz-submit-invalid"
           ><code>:-moz-submit-invalid</code></a
         >
       </td>
@@ -173,7 +173,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-window-inactive"
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:-moz-window-inactive"
           ><code>:-moz-window-inactive</code></a
         >
       </td>
@@ -181,41 +181,41 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:invalid"><code>:invalid</code></a>
       </td>
       <td>
         Automatiquement appliquée aux champs
-        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&#x3C;input></code></a>
         dont le contenu est invalide.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:optional"><code>:optional</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:optional"><code>:optional</code></a>
       </td>
       <td>
         Automatiquement appliquée aux champs
-        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&#x3C;input></code></a>
         qui ne spécifient pas l'attribut <code>required</code>.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:required"><code>:required</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:required"><code>:required</code></a>
       </td>
       <td>
         Automatiquement appliquée aux champs
-        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&#x3C;input></code></a>
         qui spécifient l'attribut <code>required</code>.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:valid"><code>:valid</code></a>
       </td>
       <td>
         Automatiquement appliquée aux champs
-        <a href="/fr/docs/Web/HTML/Element/input"><code>&#x3C;input></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input"><code>&#x3C;input></code></a>
         dont le contenu a été validé avec succès.
       </td>
     </tr>
@@ -232,7 +232,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-focusring"
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:focus-visible"
           ><code>:-moz-focusring</code></a
         >
       </td>
@@ -266,7 +266,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
       </td>
       <td>
         Permet de spécifier des valeurs de
-        <a href="/fr/docs/Web/CSS/length"><code>&#x3C;length></code></a> comme
+        <a href="/fr/docs/Web/CSS/Reference/Values/length"><code>&#x3C;length></code></a> comme
         des expressions mathématiques.
       </td>
     </tr>
@@ -276,25 +276,25 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
       </td>
       <td>
         Permet d'utiliser un élément arbritaire de fond pour
-        <a href="/fr/docs/Web/CSS/background-image"
+        <a href="/fr/docs/Web/CSS/Reference/Properties/background-image"
           ><code>background-image</code></a
         >
-        and <a href="/fr/docs/Web/CSS/background"><code>background</code></a
+        and <a href="/fr/docs/Web/CSS/Reference/Properties/background"><code>background</code></a
         >.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/-moz-image-rect"
+        <a href="/fr/docs/Web/CSS/Reference/Values/-moz-image-rect"
           ><code>-moz-image-rect</code></a
         >
       </td>
       <td>
         Permet d'utiliser un subrectangle d'une image comme
-        <a href="/fr/docs/Web/CSS/background-image"
+        <a href="/fr/docs/Web/CSS/Reference/Properties/background-image"
           ><code>background-image</code></a
         >
-        or <a href="/fr/docs/Web/CSS/background"><code>background</code></a
+        or <a href="/fr/docs/Web/CSS/Reference/Properties/background"><code>background</code></a
         >.
       </td>
     </tr>
@@ -315,7 +315,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     <tr>
       <td><code>-moz-background-size</code></td>
       <td>
-        <a href="/fr/docs/Web/CSS/background-size"
+        <a href="/fr/docs/Web/CSS/Reference/Properties/background-size"
           ><code>background-size</code></a
         >
       </td>
@@ -324,7 +324,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     <tr>
       <td><code>-moz-border-radius</code></td>
       <td>
-        <a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Properties/border-radius"><code>border-radius</code></a>
       </td>
       <td>
         L'ancien nom est encore pris en charge pour une durée limitée, le temps
@@ -335,7 +335,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     <tr>
       <td><code>-moz-box-shadow</code></td>
       <td>
-        <a href="/fr/docs/Web/CSS/box-shadow"><code>box-shadow</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Properties/box-shadow"><code>box-shadow</code></a>
       </td>
       <td></td>
     </tr>
@@ -400,55 +400,55 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
   <tbody>
     <tr>
       <td>
-        <code><a href="/fr/docs/DOM/HTMLSpanElement">HTMLSpanElement</a></code>
+        <code><a href="/fr/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code>
       </td>
       <td>
-        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+        <code><a href="/fr/docs/Web/API/HTMLElement">HTMLElement</a></code>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/abbr"><code>&#x3C;abbr></code></a
+        <a href="/fr/docs/Web/HTML/Reference/Elements/abbr"><code>&#x3C;abbr></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/acronym"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/acronym"
           ><code>&#x3C;acronym></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/address"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/address"
           ><code>&#x3C;address></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/b"><code>&#x3C;b></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/bdo"><code>&#x3C;bdo></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/big"><code>&#x3C;big></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/b"><code>&#x3C;b></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/bdo"><code>&#x3C;bdo></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/big"><code>&#x3C;big></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/blink"><code>&#x3C;blink></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/center"><code>&#x3C;center></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/cite"><code>&#x3C;cite></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/code"><code>&#x3C;code></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/dd"><code>&#x3C;dd></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/dfn"><code>&#x3C;dfn></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/dt"><code>&#x3C;dt></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/em"><code>&#x3C;em></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/i"><code>&#x3C;i></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/kbd"><code>&#x3C;kbd></code></a
+        <a href="/fr/docs/Web/HTML/Reference/Elements/center"><code>&#x3C;center></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/cite"><code>&#x3C;cite></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/code"><code>&#x3C;code></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/dd"><code>&#x3C;dd></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/dfn"><code>&#x3C;dfn></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/dt"><code>&#x3C;dt></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/em"><code>&#x3C;em></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/i"><code>&#x3C;i></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/kbd"><code>&#x3C;kbd></code></a
         >,
         <a href="/fr/docs/Web/HTML/Element/listing"
           ><code>&#x3C;listing></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/nobr"><code>&#x3C;nobr></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/nobr"><code>&#x3C;nobr></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/plaintext"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/plaintext"
           ><code>&#x3C;plaintext></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/s"><code>&#x3C;s></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/samp"><code>&#x3C;samp></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/s"><code>&#x3C;s></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/samp"><code>&#x3C;samp></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/small"><code>&#x3C;small></code></a
+        <a href="/fr/docs/Web/HTML/Reference/Elements/small"><code>&#x3C;small></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/strike"><code>&#x3C;strike></code></a
+        <a href="/fr/docs/Web/HTML/Reference/Elements/strike"><code>&#x3C;strike></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/strong"><code>&#x3C;strong></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/sub"><code>&#x3C;sub></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/sup"><code>&#x3C;sup></code></a
-        >, , <a href="/fr/docs/Web/HTML/Element/tt"><code>&#x3C;tt></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/u"><code>&#x3C;u></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/var"><code>&#x3C;var></code></a
-        >, <a href="/fr/docs/Web/HTML/Element/xmp"><code>&#x3C;xmp></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/strong"><code>&#x3C;strong></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/sub"><code>&#x3C;sub></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/sup"><code>&#x3C;sup></code></a
+        >, , <a href="/fr/docs/Web/HTML/Reference/Elements/tt"><code>&#x3C;tt></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/u"><code>&#x3C;u></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/var"><code>&#x3C;var></code></a
+        >, <a href="/fr/docs/Web/HTML/Reference/Elements/xmp"><code>&#x3C;xmp></code></a>
       </td>
     </tr>
     <tr>
@@ -456,17 +456,17 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
         <code><a href="/fr/docs/DOM/HTMLDivElement">HTMLDivElement</a></code>
       </td>
       <td>
-        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+        <code><a href="/fr/docs/Web/API/HTMLElement">HTMLElement</a></code>
       </td>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Element/noembed"
+          href="/fr/docs/Web/HTML/Reference/Elements/noembed"
           ><code>&#x3C;noembed></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/noframes"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/noframes"
           ><code>&#x3C;noframes></code></a
         >,
-        <a href="/fr/docs/Web/HTML/Element/noscript"
+        <a href="/fr/docs/Web/HTML/Reference/Elements/noscript"
           ><code>&#x3C;noscript></code></a
         >
       </td>
@@ -476,10 +476,10 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
         <code><a href="/fr/docs/DOM/HTMLWBRElement">HTMLWBRElement</a></code>
       </td>
       <td>
-        <code><a href="/fr/docs/DOM/HTMLElement">HTMLElement</a></code>
+        <code><a href="/fr/docs/Web/API/HTMLElement">HTMLElement</a></code>
       </td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/wbr"><code>&#x3C;wbr></code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/wbr"><code>&#x3C;wbr></code></a>
       </td>
     </tr>
   </tbody>

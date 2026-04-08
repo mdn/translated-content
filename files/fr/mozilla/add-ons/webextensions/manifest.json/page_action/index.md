@@ -135,21 +135,21 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant
           des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          <code><a href="/fr/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
           et
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >, tout comme une page Web normale. Cependant, n'utilisez pas
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           avec du code intégré, car vous obtiendrez une erreur de politique de
           violation de contenu. Au lieu de cela,
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >
           doit utiliser l'attribut
-          <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour
+          <code><a href="/fr/docs/Web/HTML/Reference/Elements/script">src</a></code> pour
           charger un fichier script séparé.
         </p>
         <p>

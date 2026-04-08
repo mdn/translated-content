@@ -15,7 +15,7 @@ Mettre en forme un tableau HTML n'est pas le travail le plus passionnant au mond
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), tableaux en HTML (voir <a href="/fr/docs/Learn/HTML/Tables">le module sur les tableaux HTML</a>) et une idée du fonctionnement des CSS (voir <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a>).
+        Notions de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), tableaux en HTML (voir <a href="/fr/docs/Learn/HTML/Tables">le module sur les tableaux HTML</a>) et une idée du fonctionnement des CSS (voir <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a>).
       </td>
     </tr>
     <tr>

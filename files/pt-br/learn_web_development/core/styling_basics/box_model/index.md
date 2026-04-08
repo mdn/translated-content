@@ -15,17 +15,17 @@ Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para
       <td>
         Familiaridade básica em utilizar computadores, ambiente de trabalho
         básico configurado conforme detalhado em<a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conhecimento básico de como
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >criar e gerenciar arquivos</a
         >, básico de HTML (
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >), e uma idéia de como o CSS funciona (ensinado em
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS primeiros passos</a>.)
       </td>
     </tr>
     <tr>
@@ -219,7 +219,7 @@ In the example below, we have two paragraphs. The top paragraph has a `margin-bo
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
+There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
 
 ### Borders
 

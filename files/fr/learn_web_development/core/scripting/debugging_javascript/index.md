@@ -16,7 +16,7 @@ Pour cela, nous aborderons entre autres les outils de développement des navigat
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaissance des bases de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">des principes de tests entre les différents navigateurs</a>.
+      <td>Connaissance des bases de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction">des principes de tests entre les différents navigateurs</a>.
       </td>
     </tr>
     <tr>

@@ -16,7 +16,7 @@ Dans l'article précédent, nous avons passé en revue l'essentiel de la théori
         <p>
           Connaissance basique de l'informatique, une compréhension basique du
           HTML et du CSS, une familiarité avec les bases du JavaScript (voir
-          <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
+          <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et
           <a href="/fr/docs/Learn/JavaScript/Building_blocks"
             >Les blocs de construction</a
           >) et les bases de la programmation objet en JavaScript (voir <a

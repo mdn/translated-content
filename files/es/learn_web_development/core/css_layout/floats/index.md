@@ -14,10 +14,10 @@ Originalmente pensada para flotar imágenes dentro de bloques de texto, la propi
       <th scope="row">Requisitos previos:</th>
       <td>
         HTML básico (ver
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), y una idea de Cómo funciona CSS (ver
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción a CSS</a>.)
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción a CSS</a>.)
       </td>
     </tr>
     <tr>

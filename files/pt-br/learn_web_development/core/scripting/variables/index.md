@@ -347,7 +347,7 @@ diasNaSemana = 8;
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você reteve essas informações antes de prosseguir — veja [Teste suas habilidades: variáveis](/pt-BR/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables).
 
 ## Sumário
 

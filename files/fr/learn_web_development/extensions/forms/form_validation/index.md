@@ -14,8 +14,8 @@ Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les don
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs, une bonne compréhension du
-        <a href="/fr/docs/Learn/HTML">HTML</a>, des
-        <a href="/fr/docs/Learn/CSS">CSS</a> et de
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, des
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et de
         <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
       </td>
     </tr>

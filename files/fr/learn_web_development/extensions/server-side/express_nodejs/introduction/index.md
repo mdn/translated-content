@@ -14,11 +14,11 @@ Dans ce tout premier article consacré à Express, nous répondons aux questions
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Une culture de base en informatique, une compréhension globale de la
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation côté serveur</a
         >
         et, en particulier, les mécanismes d'<a
-          href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >interactions client-serveur dans un site web.</a
         >
       </td>

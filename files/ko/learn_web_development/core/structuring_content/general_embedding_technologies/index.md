@@ -21,10 +21,10 @@ l10n:
           >기본적인 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a>에 대한 기본 지식
           , HTML 기초 지식(
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 다룸)과 이 과정에 포함된 이전 문서를 익힘
       </td>
@@ -321,25 +321,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>삽입된 콘텐츠의 {{glossary("URL")}}</td>
-      <td><a href="/ko/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/ko/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         삽입된 콘텐츠의 정확한 {{glossary("MIME type", 'media type')}}
       </td>
-      <td><a href="/ko/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/ko/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/ko/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         플러그인이 제어하는 박스의 높이와 너비(CSS 픽셀단위)
       </td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Element/object#width"><code>width</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/ko/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

@@ -14,11 +14,11 @@ original_slug: Learn/JavaScript/Objects/Basics
       <th scope="row">사전 지식:</th>
       <td>
         컴퓨터와 관련된 기본지식, HTML 과 CSS, 그리고 JavaScript 에 대한 기본
-        지식 (<a href="/ko/docs/Learn/JavaScript/First_steps"
+        지식 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting"
           >JavaScript 첫걸음</a
         >
         및
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >JavaScript 구성요소</a
         >
         참조).

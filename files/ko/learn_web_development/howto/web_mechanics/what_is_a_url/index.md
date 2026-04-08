@@ -16,14 +16,14 @@ l10n:
       <th scope="row">사전 지식</th>
       <td>
         먼저
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >인터넷은 어떻게 동작하는 방법</a
         >,
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >웹 서버</a
         >
         그리고
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks"
           >웹 링크 뒤에 있는 개념</a
         >을 알아야 합니다.
       </td>

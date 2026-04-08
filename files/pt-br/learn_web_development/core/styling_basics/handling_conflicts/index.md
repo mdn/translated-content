@@ -17,17 +17,17 @@ Embora trabalhar com esta lição possa parecer menos relevante imediatamente e 
       <td>
         Conhecimentos básicos em informática,
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conhecimentos básicos de
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabalhando com arquivos</a
         >, noções básicas de HTML (estudo
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
          >), e uma ideia de como funciona o CSS (estudo
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">Primeiros passos do CSS</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">Primeiros passos do CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -44,9 +44,9 @@ Embora trabalhar com esta lição possa parecer menos relevante imediatamente e 
 
 CSS significa **Folhas de Estilo em Cascata**, e a primeira palavra _cascading_ é incrivelmente importante de se entender — a maneira como a cascata se comporta é a chave para entender o CSS.
 
-Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Muitas vezes, o problema é que você cria duas regras que aplicam valores diferentes da mesma propriedade ao mesmo elemento. [**Cascata**](/pt-BR/docs/Web/CSS/Cascade) e o conceito intimamente relacionado de [**especificidade**](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity) são mecanismos que controlam qual regra se aplica quando há tal conflito. A regra que está estilizando seu elemento pode não ser a que você espera, então você precisa entender como esses mecanismos funcionam.
+Em algum momento, você estará trabalhando em um projeto e descobrirá que o CSS que você pensou que deveria ser aplicado a um elemento não está funcionando. Muitas vezes, o problema é que você cria duas regras que aplicam valores diferentes da mesma propriedade ao mesmo elemento. [**Cascata**](/pt-BR/docs/Web/CSS/Cascade) e o conceito intimamente relacionado de [**especificidade**](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity) são mecanismos que controlam qual regra se aplica quando há tal conflito. A regra que está estilizando seu elemento pode não ser a que você espera, então você precisa entender como esses mecanismos funcionam.
 
-Também significativo aqui é o conceito de [**herança**](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance), o que significa que algumas propriedades CSS por padrão herdam valores definidos no elemento pai do elemento atual e algumas não. Isso também pode causar algum comportamento inesperado.
+Também significativo aqui é o conceito de [**herança**](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance), o que significa que algumas propriedades CSS por padrão herdam valores definidos no elemento pai do elemento atual e algumas não. Isso também pode causar algum comportamento inesperado.
 
 Vamos começar dando uma olhada rápida nas principais coisas com as quais estamos lidando, depois veremos cada uma delas e veremos como elas interagem umas com as outras e com seu CSS. Estes podem parecer um conjunto complicado de conceitos para entender. À medida que você pratica escrever CSS a maneira como ele funciona se tornará mais óbvia para você.
 
@@ -60,7 +60,7 @@ No exemplo abaixo, temos duas regras que podem ser aplicadas ao {{glossary("elem
 
 ### Especificidade
 
-[Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity) é o algoritmo que o navegador usa para decidir qual valor de propriedade é aplicado a um elemento. Se vários blocos de estilo tiverem seletores diferentes que configuram a mesma propriedade com valores diferentes e visam o mesmo elemento, a especificidade decide o valor da propriedade que será aplicado ao elemento. A especificidade é basicamente uma medida de quão específica será a seleção de um seletor:
+[Especificidade](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity) é o algoritmo que o navegador usa para decidir qual valor de propriedade é aplicado a um elemento. Se vários blocos de estilo tiverem seletores diferentes que configuram a mesma propriedade com valores diferentes e visam o mesmo elemento, a especificidade decide o valor da propriedade que será aplicado ao elemento. A especificidade é basicamente uma medida de quão específica será a seleção de um seletor:
 
 - Um seletor de elemento é menos específico; ele selecionará todos os elementos desse tipo que aparecem em uma página, por isso tem menos peso. Os seletores de pseudoelementos têm a mesma especificidade que os seletores de elementos regulares.
 - Um seletor de classe é mais específico; ele selecionará apenas os elementos em uma página que tenham um valor de atributo `class` específico, portanto, terá mais peso. Seletores de atributo e pseudoclasses têm o mesmo peso que uma classe.
@@ -82,7 +82,7 @@ Por exemplo, se você definir `color` e `font-family` em um elemento, todos os e
 Algumas propriedades não herdam — por exemplo, se você definir um {{cssxref("width")}} de 50% em um elemento, todos os seus descendentes não obterão uma largura de 50% da largura de seu pai. Se fosse esse o caso, seria muito frustrante usar CSS!
 
 > [!NOTE]
-> Nas páginas de referência de propriedade MDN CSS, você pode encontrar uma caixa de informações técnicas chamada "Definição formal", que lista vários pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Consulte a [seção de definição formal da propriedade de cores](/pt-BR/docs/Web/CSS/color#formal_definition) como exemplo.
+> Nas páginas de referência de propriedade MDN CSS, você pode encontrar uma caixa de informações técnicas chamada "Definição formal", que lista vários pontos de dados sobre essa propriedade, incluindo se ela é herdada ou não. Consulte a [seção de definição formal da propriedade de cores](/pt-BR/docs/Web/CSS/Reference/Properties/color#formal_definition) como exemplo.
 
 ## Compreender como os conceitos funcionam juntos
 
@@ -111,11 +111,11 @@ O {{glossary("CSS")}} fornece cinco valores de propriedades universais especiais
 - {{cssxref("inherit")}}
   - : define o valor da propriedade aplicada a um elemento selecionado para ser igual ao de seu elemento pai. Efetivamente, isso "ativa a herança".
 - {{cssxref("initial")}}
-  - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) dessa propriedade.
+  - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37) dessa propriedade.
 - {{cssxref("revert")}}
   - : redefine o valor da propriedade aplicado a um elemento selecionado para o estilo padrão do navegador, em vez dos padrões aplicados a essa propriedade. Esse valor age como {{cssxref("unset")}} em muitos casos.
 - {{cssxref("revert-layer")}}
-  - : Redefine o valor da propriedade aplicada a um elemento selecionado para o valor estabelecido em uma [camada em cascata](/pt-BR/docs/Web/CSS/@layer) anterior.
+  - : Redefine o valor da propriedade aplicada a um elemento selecionado para o valor estabelecido em uma [camada em cascata](/pt-BR/docs/Web/CSS/Reference/At-rules/@layer) anterior.
 - {{cssxref("unset")}}
   - : Redefine a propriedade para seu valor natural, o que significa que, se a propriedade for herdada naturalmente, ela agirá como `herdar`, caso contrário, agirá como `inicial`.
 
@@ -182,11 +182,11 @@ A quantidade de especificidade que um seletor tem é medida usando três valores
 - **Elementos**: Pontue um nesta coluna para cada seletor de elemento ou pseudoelemento contido no seletor geral.
 
 > [!NOTE]
-> O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Universal_selectors)), [combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
+> O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
 
-A negação ([`:not()`](/pt-BR/docs/Web/CSS/:not)), seletor relacional ([`:has()`](/pt-BR/docs/Web/CSS /:has)), e as pseudoclasses matches-any ([`:is()`](/pt-BR/docs/Web/CSS/:is)) não têm efeito na especificidade, mas suas parâmetros fazem. A especificidade que cada um contribui para o algoritmo de especificidade é a especificidade do seletor no parâmetro que tem maior peso.
+A negação ([`:not()`](/pt-BR/docs/Web/CSS/Reference/Selectors/:not)), seletor relacional ([`:has()`](/pt-BR/docs/Web/CSS /:has)), e as pseudoclasses matches-any ([`:is()`](/pt-BR/docs/Web/CSS/:is)) não têm efeito na especificidade, mas suas parâmetros fazem. A especificidade que cada um contribui para o algoritmo de especificidade é a especificidade do seletor no parâmetro que tem maior peso.
 
-A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/CSS_selectors).
+A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/Guides/Selectors).
 
 | Seletor                                   | Identificadores | Classes | Elementos | Especificidade total |
 | ----------------------------------------- | --------------- | ------- | --------- | -------------------- |
@@ -213,7 +213,7 @@ Então, o que está acontecendo aqui? Em primeiro lugar, estamos interessados ap
 
 ### Estilos Embutidos
 
-Os estilos embutidos, ou seja, a declaração de estilo dentro de um atributo [`style`](/pt-BR/docs/Web/HTML/Global_attributes#style), têm precedência sobre todos os estilos normais, independentemente da especificidade. Tais declarações não possuem seletores, mas sua especificidade pode ser interpretada como 1-0-0-0; sempre mais do que qualquer outro peso de especificidade, não importa quantos IDs estejam nos seletores.
+Os estilos embutidos, ou seja, a declaração de estilo dentro de um atributo [`style`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#style), têm precedência sobre todos os estilos normais, independentemente da especificidade. Tais declarações não possuem seletores, mas sua especificidade pode ser interpretada como 1-0-0-0; sempre mais do que qualquer outro peso de especificidade, não importa quantos IDs estejam nos seletores.
 
 ### !important
 
@@ -230,7 +230,7 @@ Vamos examinar isso para ver o que está acontecendo - tente remover algumas das
 
 1. Você verá que os valores {{cssxref("color")}} e {{cssxref("padding")}} da terceira regra foram aplicados, mas os valores {{cssxref("background-color")}} não tem. Por que? Realmente, todos os três certamente devem ser aplicados porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.
 2. No entanto, as regras acima vencem porque os seletores de classe têm maior especificidade do que os seletores de elemento.
-3. Ambos os elementos têm um [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) de `better`, mas o segundo tem um [`id`](/pt-BR/docs /Web/HTML/Global*attributes#id) de `vencedor` também. Como os IDs têm uma especificidade \_ainda maior* do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe — os seletores de ID são _muito específicos_ no que visam), a cor de fundo vermelha e o 1px a borda preta deve ser aplicada ao 2º elemento, com o primeiro elemento obtendo a cor de fundo cinza e sem borda, conforme especificado pela classe.
+3. Ambos os elementos têm um [`class`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#class) de `better`, mas o segundo tem um [`id`](/pt-BR/docs /Web/HTML/Global*attributes#id) de `vencedor` também. Como os IDs têm uma especificidade \_ainda maior* do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe — os seletores de ID são _muito específicos_ no que visam), a cor de fundo vermelha e o 1px a borda preta deve ser aplicada ao 2º elemento, com o primeiro elemento obtendo a cor de fundo cinza e sem borda, conforme especificado pela classe.
 4. O segundo elemento _fica_ com a cor de fundo vermelha, mas sem borda. Por que? Por causa do sinalizador `!important` na segunda regra. Adicionar o sinalizador `!important` depois de `border: none` significa que esta declaração prevalecerá sobre o valor `border` na regra anterior, mesmo que o seletor de ID tenha maior especificidade.
 
 > [!NOTE]
@@ -262,7 +262,7 @@ Declarações conflitantes serão aplicadas na seguinte ordem, com as posteriore
 
 ### Ordem das camadas em cascata
 
-Mesmo que [camadas em cascata](/pt-BR/docs/Web/CSS/@layer) seja um tópico avançado e você não possa usar esse recurso imediatamente, é importante entender como as camadas são colocadas em cascata.
+Mesmo que [camadas em cascata](/pt-BR/docs/Web/CSS/Reference/At-rules/@layer) seja um tópico avançado e você não possa usar esse recurso imediatamente, é importante entender como as camadas são colocadas em cascata.
 
 Quando você declara CSS em camadas em cascata, a ordem de precedência é determinada pela ordem em que as camadas são declaradas. Os estilos CSS declarados fora de qualquer camada são combinados, na ordem em que esses estilos são declarados, em uma camada sem nome, como se fosse a última camada declarada. Com estilos concorrentes normais (não importantes), as camadas posteriores têm precedência sobre as camadas definidas anteriormente. No entanto, para estilos sinalizados com `!important`, a ordem é inversa, com estilos importantes em camadas anteriores tendo precedência sobre estilos importantes declarados em camadas subsequentes ou fora de qualquer camada. Os estilos embutidos têm precedência sobre todos os estilos de autor, independentemente da camada.
 

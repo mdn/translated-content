@@ -14,7 +14,7 @@ Les **fonctions** sont un autre concept essentiel de la programmation, qui perme
       <th scope="row">Prerequis:</th>
       <td>
         Culture informatique basique, compréhension basique du HTML et du CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript...</a
         >
       </td>

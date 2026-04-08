@@ -446,7 +446,7 @@ var myRequest = new XMLHttpRequest();
             title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/ru/docs/WebSockets" title="/ru/docs/WebSockets"
+          <a href="/ru/docs/Web/API/WebSockets_API" title="/ru/docs/WebSockets"
             >Web Sockets</a
           >, or <code>responseText</code> from progress events instead.
         </p>

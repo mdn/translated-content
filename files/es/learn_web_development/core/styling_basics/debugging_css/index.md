@@ -15,17 +15,17 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>
     </tr>
     <tr>

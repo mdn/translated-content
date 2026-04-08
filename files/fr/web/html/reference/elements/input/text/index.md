@@ -42,33 +42,33 @@ label {
     <tr>
       <td><strong>Valeur</strong></td>
       <td>
-        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente la valeur contenue dans le champ texte.
+        Une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>DOMString</code></a>) qui représente la valeur contenue dans le champ texte.
       </td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
       <td>
         <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et
-        <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>
+        <a href="/fr/docs/Web/API/Element/input_event"><code>input</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>Attributs communs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-maxlength"><code>maxlength</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-minlength"><code>minlength</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-pattern"><code>pattern</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>,
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-required"><code>required</code></a> et
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-size"><code>size</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-autocomplete"><code>autocomplete</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-maxlength"><code>maxlength</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-minlength"><code>minlength</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern"><code>pattern</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-placeholder"><code>placeholder</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-readonly"><code>readonly</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-required"><code>required</code></a> et
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-size"><code>size</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <code>value</code></td>
+      <td><a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>, <code>value</code></td>
     </tr>
     <tr>
       <td><strong>Méthodes</strong></td>

@@ -17,15 +17,15 @@ Sin embargo, en los últimos años, CSS ha evolucionado para soportar de mejor f
       <td>
         Literatura computacional básica,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimiento básico de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manejo de archivos</a
-        >, HTML básico (<a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        >, HTML básico (<a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
         >), y una idea de cómo funciona CSS (<a
-          href="/es/docs/Learn/CSS/First_steps"
+          href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >Primeros pasos en CSS</a
         >.)
       </td>

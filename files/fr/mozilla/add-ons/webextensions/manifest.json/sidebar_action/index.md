@@ -75,7 +75,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           chrome://browser/content/extension-mac.css sur OS X. Lors de la
           définition des dimensions, savez que cette feiulle de style est
           actuellement définit <code>box-sizing: border-box</code> (see
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          <a href="/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
         </p>
         <p>
           Le
@@ -142,10 +142,10 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript à l'aide
           des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          <code><a href="/fr/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
           et
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
           >, tout comme une page Web normale.
         </p>
         <p>

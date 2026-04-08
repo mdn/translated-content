@@ -14,8 +14,8 @@ Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs
       <th scope="row">Prérequis:</th>
       <td>
         Etre familier avec les bases des langage
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
         <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
       </td>
     </tr>

@@ -13,7 +13,7 @@ Dans les articles précédents, nous avons vu la mise en forme des différents c
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, une compréhension élémentaire de <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">HTML</a> et de <a href="/fr/docs/Learn/CSS/First_steps">CSS</a>, y compris une connaissance générale des <a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">pseudo-classes et des pseudo-éléments</a>.
+        Notions informatiques de base, une compréhension élémentaire de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et de <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS</a>, y compris une connaissance générale des <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements">pseudo-classes et des pseudo-éléments</a>.
       </td>
     </tr>
     <tr>

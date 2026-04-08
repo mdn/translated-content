@@ -14,9 +14,9 @@ Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco so
       <th scope="row">Pré-requisitos:</th>
       <td>
         <p>
-          Familiaridade com <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e linguagem
-          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento de
+          Familiaridade com <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e linguagem
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>, conhecimento de
           <a
             href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/linha de comandos.</a
@@ -66,9 +66,9 @@ React utiliza características de JavaScript moderno para muitos de seus padrõe
 const heading = <h1> Mozilla Developer Network</h1>;
 ```
 
-A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1>`](/pt-BR/docs/Web/HTML/Element/Heading_Elements) em nosso aplicativo.
+A constante _heading_ acima é conhecida como uma **expressão JSX.** React pode utilizá-la para renderizar a _tag_ [`<h1>`](/pt-BR/docs/Web/HTML/Reference/Elements/Heading_Elements) em nosso aplicativo.
 
-Suponha que quiséssemos conter nosso cabeçalho em uma tag [`<header>`](/pt-BR/docs/Web/HTML/Element/header), por razões semânticas? A aproximação em JSX permite-nos aninhar nossos elementos dentro uns dos outros, do mesmo jeito que fazemos com o HTML:
+Suponha que quiséssemos conter nosso cabeçalho em uma tag [`<header>`](/pt-BR/docs/Web/HTML/Reference/Elements/header), por razões semânticas? A aproximação em JSX permite-nos aninhar nossos elementos dentro uns dos outros, do mesmo jeito que fazemos com o HTML:
 
 ```js
 const header = (
@@ -89,7 +89,7 @@ const header = (
 > );
 > ```
 >
-> Entretanto, isso é meio estranho, porquê a tag [`<header>`](/pt-BR/docs/Web/HTML/Element/header) que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.
+> Entretanto, isso é meio estranho, porquê a tag [`<header>`](/pt-BR/docs/Web/HTML/Reference/Elements/header) que inicia a expressão não está alinhada na mesma posição que sua tag de fechamento correspondente.
 
 Claro, seu navegador não é capaz de ler o JSX sem alguma ajuda. Quando compilado (utilizando uma ferramenta como [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), nossa expressão de cabeçalho ficaria assim:
 
@@ -111,7 +111,7 @@ Para ler mais sobre o JSX, confira este artigo do time do React, [JSX In Depth](
 
 Existem muitos jeitos de utilizar o React, mas nós iremos utilizar a ferramenta de interface de linha de comando (CLI), _create-react-app_, como mencionado anteriormente, que acelera o processo de desenvolvimento da aplicação em React instalando alguns pacotes e criando alguns arquivos para você, lidando com os processos de automação mencionados acima.
 
-É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script>`](/pt-BR/docs/Web/HTML/Element/script) em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
+É possível [adicionar React á um website sem create-react-app](https://reactjs.org/docs/add-react-to-a-website.html) copiando alguns elementos [`<script>`](/pt-BR/docs/Web/HTML/Reference/Elements/script) em um arquivo HTML, mas o a interface de linha de comando _create-react-app_ é um ponto de partida comum para aplicações em React. Utilizar-lo vai permitir que você passe mais tempo construindo seu aplicativo e menos tempo incomodando-se com configurações.
 
 ### Requisitos
 
@@ -184,7 +184,7 @@ moz-todo-react
 
 A pasta `src` é onde nós iremos ficar a maior parte do nosso tempo, é onde o código fonte da nossa aplicação vive.
 
-A pasta `public` contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title>`](/pt-BR/docs/Web/HTML/Element/title) neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
+A pasta `public` contém arquivos que serão lidos pelo navegador enquanto você desenvolve o aplicativo; o mais importante de todos estes arquivos é o `index.html`. O React irá injetar seu código neste arquivo para que seu navegador possa executá-lo. Existem outras marcações que ajudam o _create-react-app_ a funcionar, então cuidado para não editar estas, a não ser que você saiba o que você está fazendo. Você é encorajado a mudar o texto dentro do elemento [`<title>`](/pt-BR/docs/Web/HTML/Reference/Elements/title) neste arquivo, esta mudança irá refletir no título de sua aplicação. Títulos de páginas precisos são importante para acessibilidade!
 
 A pasta `public` também será publicada quando você construir e lançar uma versão de produção de seu aplicativo. Nós não cobriremos _lançamento_ (deploy) de aplicações neste tutorial, entretanto você provavelmente conseguirá implementar uma solução similar para isso descrito em nosso tutorial [Lançando nosso app](/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
@@ -273,9 +273,9 @@ function App() {
 
 A função `App` retrona uma expressão JSX. Essa expressão define o que, no fim, o seu navegador irá renderizar para o DOM.
 
-Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/pt-BR/docs/Web/HTML/Element/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
+Alguns elementos na expressão têm atributos, que são escritos assim como no HTML, seguindo o seguinte padrão de `atributo="valor"`. Na linha 3, a tag [`<div>`](/pt-BR/docs/Web/HTML/Reference/Elements/div) de abertaura tem o atributo _`className`_. Isso é o mesmo que o atributo [`class`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/class)no HTML, porém por conta do JSX ser Javascript, nós não podemos utilizar a palavra `class` — esta é reservada, isso quer dizer que o JavaScript já utiliza-a para um propósito específico e causaria problemas no nosso código inseri-lá aqui. Alguns outros atributos de HTML são escritos diferentes em JSX em comparação com o HTML, pela mesma razão. Nós falaremos sobre estes quando encontrarmos os mesmos.
 
-Tome um momento para mudar a _tag_ [`<p>`](/pt-BR/docs/Web/HTML/Element/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/pt-BR/docs/Web/HTML/Element/a) e salve; o link _"Learn React"_ vai desaparecer.
+Tome um momento para mudar a _tag_ [`<p>`](/pt-BR/docs/Web/HTML/Reference/Elements/p) na linha 6 para que esta diga "Hello, world!", e então salve o arquivo. Você irá notar que esta mudança é imediatamente refletida e renderiza no servidor de desenvolvimento executando em `http://localhost:3000` em seu navegador. Agora delete a _tag_ [`<a>`](/pt-BR/docs/Web/HTML/Reference/Elements/a) e salve; o link _"Learn React"_ vai desaparecer.
 
 Seu componente `App` deve estar assim agora:
 

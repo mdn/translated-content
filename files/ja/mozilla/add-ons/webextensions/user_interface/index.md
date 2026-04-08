@@ -21,7 +21,7 @@ WebExtension API を使った機能拡張には、いくつかのユーザーイ
   <tbody>
     <tr>
       <td>
-        <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">ブラウザーツールバーボタン</a>
+        <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button">ブラウザーツールバーボタン</a>
         (ブラウザーアクション)
       </td>
       <td>

@@ -53,17 +53,17 @@ Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le ty
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui contient la représentation textuelle de la valeur numérique sélectionnée. On utilisera la méthode <a href="/fr/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a> afin d'obtenir la valeur sous forme numérique (type <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>).
+        Une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>DOMString</code></a>) qui contient la représentation textuelle de la valeur numérique sélectionnée. On utilisera la méthode <a href="/fr/docs/Web/API/HTMLInputElement/valueAsNumber"><code>valueAsNumber</code></a> afin d'obtenir la valeur sous forme numérique (type <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>).
       </td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
-      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/Input_event"><code>input</code></a></td>
+      <td><a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/Element/input_event"><code>input</code></a></td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-max"><code>max</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-min"><code>min</code></a>, et <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-max"><code>max</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-min"><code>min</code></a>, et <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-step"><code>step</code></a>
       </td>
     </tr>
     <tr>

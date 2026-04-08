@@ -164,7 +164,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>

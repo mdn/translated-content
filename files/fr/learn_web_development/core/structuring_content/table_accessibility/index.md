@@ -14,7 +14,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >).
       </td>

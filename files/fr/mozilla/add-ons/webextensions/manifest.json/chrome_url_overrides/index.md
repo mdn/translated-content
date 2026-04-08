@@ -79,7 +79,7 @@ La clé `chrome_url_overrides` est un objet qui peut avoir les propriétés suiv
         </p>
         <p>
           Il est très pratique d'inclure un
-          <a href="/fr/docs/Web/HTML/Element/title">&#x3C;title></a> pour la
+          <a href="/fr/docs/Web/HTML/Reference/Elements/title">&#x3C;title></a> pour la
           page, ou le titre de l'onglet sera l'URL "moz-extension://..." .
         </p>
         <p>

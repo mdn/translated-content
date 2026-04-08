@@ -15,7 +15,7 @@ Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne f
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>).
+        Notions informatiques de base, <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>).
       </td>
     </tr>
     <tr>
