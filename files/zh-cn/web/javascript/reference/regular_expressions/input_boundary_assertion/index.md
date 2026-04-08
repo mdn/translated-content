@@ -55,7 +55,7 @@ isImage("image.pdf"); // false
 
 ### 匹配整个输入
 
-有时，需要确保正则表达式匹配整个输入内容，而不仅仅是输入的子字符串。例如，如果您要判断一个字符串是否为有效的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，可以在模式的两端添加输入边界断言：
+有时，需要确保正则表达式匹配整个输入内容，而不仅仅是输入的子字符串。例如，如果需要判断一个字符串是否为有效的[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)，可以在模式的两端添加输入边界断言：
 
 ```js
 function isValidIdentifier(str) {
