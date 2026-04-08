@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Presentation API")}}
 
-[Presentation API](/zh-CN/docs/Web/API/Presentation_API) 的 **`PresentationReceiver`** 接口提供了用于接收浏览上下文可以访问控制浏览上下文并与其进行通信的方法。
+[呈现 API](/zh-CN/docs/Web/API/Presentation_API) 的 **`PresentationReceiver`** 接口提供了用于接收浏览上下文可以访问控制浏览上下文并与其进行通信的方法。
 
 ## 实例属性
 
