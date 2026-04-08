@@ -14,7 +14,7 @@ l10n:
 
 ## 值
 
-DER 编码证书的 {{glossary("Base64")}} 格式。
+以 {{glossary("Base64")}} 表示的，经 DER 编码后的证书。
 
 ## 规范
 
