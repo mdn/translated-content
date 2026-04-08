@@ -39,7 +39,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>^</code></td>
       <td>
         <p>
-          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>起始输入边界断言：</strong></a>：匹配输入的起始。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/^A/</code> 不匹配“an A”中的“A”，但是可以匹配“An A”中第一个“A”。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>起始输入边界断言</strong></a>：匹配输入的起始。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/^A/</code> 不匹配“an A”中的“A”，但是可以匹配“An A”中第一个“A”。
         </p>
         <div class="notecard note">
           <p>
@@ -56,7 +56,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>$</code></td>
       <td>
         <p>
-          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>终止输入边界断言：</strong></a>：匹配输入的结束。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/t$/</code> 不匹配“eater”中的“t”，但是可以匹配“eat”中的“t”。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>终止输入边界断言</strong></a>：匹配输入的结束。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/t$/</code> 不匹配“eater”中的“t”，但是可以匹配“eat”中的“t”。
         </p>
       </td>
     </tr>
