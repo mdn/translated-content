@@ -12,7 +12,7 @@ l10n:
 ## 实例属性
 
 - {{domxref('PresentationReceiver.connectionList')}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - ：返回一个会兑现为包含*传入的演示连接*的列表的 {{domxref('PresentationConnectionList')}} 对象的 {{jsxref('Promise')}}。
+  - : 返回一个会兑现为包含*传入的演示连接*的列表的 {{domxref('PresentationConnectionList')}} 对象的 {{jsxref('Promise')}}。
 
 ## 规范
 
