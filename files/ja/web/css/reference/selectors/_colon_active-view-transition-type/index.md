@@ -91,8 +91,7 @@ const fwdBtn = document.getElementById("forwards");
 const content = document.querySelector("p");
 
 const first = "これが私の最初のコンテンツです。気に入っていただけますように！";
-const second =
-  "これが私の 2 つ目のコンテンツです。最初より良いでしょうか？";
+const second = "これが私の 2 つ目のコンテンツです。最初より良いでしょうか？";
 ```
 
 次に、前へボタンと次へボタンに `click` イベントリスナーを追加します。これらがクリックされると、`changeContent()` 関数が実行されます。
