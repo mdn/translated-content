@@ -7,7 +7,7 @@ slug: Web/API/HTMLSpanElement
 
 **`HTMLSpanElement`** インターフェイスは {{HTMLElement("span")}} 要素を表し、 {{DOMxRef("HTMLElement")}} から派生していますが、それ以外のプロパティやメソッドを追加していません。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## プロパティ
 

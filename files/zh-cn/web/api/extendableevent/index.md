@@ -12,7 +12,7 @@ slug: Web/API/ExtendableEvent
 
 此接口继承自{{domxref("Event")}}接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 > [!NOTE]
 > 只有当全局范围是 {{domxref("ServiceWorkerGlobalScope")}} 时，此接口才可用。当它是一个 {{domxref("Window")}} 或其他类型 worker 的作用域时，它不可用。
