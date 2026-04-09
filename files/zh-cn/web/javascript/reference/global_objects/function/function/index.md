@@ -107,17 +107,17 @@ const untrustedCode = "alert('Potentially evil code!');";
 const adder = new Function("a", "b", untrustedCode);
 ```
 
-指定了 [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 或 [`default-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) 的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网站默认会阻止此类代码运行。如果你必须允许通过 `Function()` 运行脚本，可以通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令来[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这些问题。这可以确保输入通过转换函数进行处理。
+对于指定了 [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 或 [`default-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) 的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网站默认会阻止此类代码运行。如果你必须允许通过 `Function()` 运行脚本，可通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令来[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这些问题。这可以确保输入经过转换函数进行处理。
 
-要允许 `Function()` 运行，你还需要在 CSP 的 `script-src` 指令中指定 [`trusted-types-eval` 关键字](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)。[`unsafe-eval`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) 关键字也允许 `Function()`，但比 `trusted-types-eval` 更不安全，因为它允许在不支持受信任类型的浏览器上执行。
+若要允许 `Function()` 运行，你还需要在 CSP 的 `script-src` 指令中指定 [`trusted-types-eval` 关键字](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)。[`unsafe-eval`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) 关键字也允许 `Function()`，但安全性远低于 `trusted-types-eval`，因为它甚至会在不支持受信任类型的浏览器上允许执行。
 
-例如，你的网站所需的 CSP 可能如下所示：
+例如，你的网站的 CSP 配置可能如下所示：
 
 ```http
 Content-Security-Policy: require-trusted-types-for 'script'; script-src '<你的白名单>' 'trusted-types-eval'
 ```
 
-转换函数的行为取决于需要用户提供脚本的特定用例。如果可能，你应该将允许的脚本锁定为恰好是你信任运行的代码。如果无法做到，你可能允许或阻止提供的字符串中某些函数的使用。
+转换函数的行为取决于具体需要用户提供脚本的用例。如果可能，你应该将允许的脚本严格限定为仅包含你信任的代码。如果无法做到这一点，你可以在提供的字符串中允许或阻止某些函数的使用。
 
 ## 示例
 
