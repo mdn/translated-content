@@ -279,8 +279,7 @@ Dans cet exemple, on utilisera la même feuille de style que précédemment mais
 <form>
   <div>
     <label for="telNo">
-      Veuillez saisir un numéro de téléphone
-      (au format xx xx xx xx xx)&nbsp;:
+      Veuillez saisir un numéro de téléphone (au format xx xx xx xx xx)&nbsp;:
     </label>
     <input
       id="telNo"
