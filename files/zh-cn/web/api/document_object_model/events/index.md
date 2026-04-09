@@ -735,11 +735,11 @@ l10n:
 
 ## 创建和派发事件
 
-除了由内置接口触发的事件外，你也可以自己创建和派发 DOM 事件。这类事件通常称为*合成事件*，以区别于由浏览器触发的事件。
+除了由内置接口触发的事件外，你还可以自己创建和派发 DOM 事件。这类事件通常称为*合成事件*，以区别于由浏览器触发的事件。
 
 ### 创建自定义事件
 
-可以使用 [`Event`](/zh-CN/docs/Web/API/Event) 构造函数来创建事件，如下所示：
+可以使用 [`Event`](/zh-CN/docs/Web/API/Event) 构造函数按如下方式来创建事件：
 
 ```js
 const event = new Event("build");
@@ -757,14 +757,13 @@ elem.dispatchEvent(event);
 
 ### 添加自定义数据 – CustomEvent()
 
-要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，**detail** 属性可用于传递自定义数据。
-例如，可以这样创建事件：
+要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，并通过**detail** 属性传递自定义数据。例如，可以这样创建事件：
 
 ```js
 const event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
-这样你就可以在事件监听器中访问这些额外的数据：
+这样你就可以在事件监听器中访问这些自定义的数据：
 
 ```js
 function eventHandler(e) {
@@ -774,7 +773,7 @@ function eventHandler(e) {
 
 ### 添加自定义数据 – 继承 Event
 
-[`Event`](/zh-CN/docs/Web/API/Event) 接口也可以被子类化。这对于代码复用、更复杂的自定义数据，甚至为事件添加方法特别有用。
+[`Event`](/zh-CN/docs/Web/API/Event) 接口也可以被子类化。这对于代码复用、处理更复杂的自定义数据，甚至为事件添加方法都特别有用。
 
 ```js
 class BuildEvent extends Event {
@@ -791,15 +790,15 @@ class BuildEvent extends Event {
 }
 ```
 
-这段代码定义了一个 `BuildEvent` 类，它具有只读属性和固定的事件类型。
+这段代码定义了一个具有只读属性和固定事件类型的 `BuildEvent` 类。
 
-然后可以这样创建事件：
+然后可以按如下方式创建该事件：
 
 ```js
 const event = new BuildEvent(elem.dataset.time);
 ```
 
-然后可以在事件监听器中通过自定义属性访问额外的数据：
+然后，可以使用自定义属性在事件监听器中访问这些附加数据：
 
 ```js
 function eventHandler(e) {
@@ -809,7 +808,7 @@ function eventHandler(e) {
 
 ### 事件冒泡
 
-通常需要从子元素触发事件，并由祖先元素捕获；可以选择在事件中包含数据：
+通常情况下，我们希望从子元素触发事件，并让父元素捕获该事件；此外，还可以选择性地将数据包含在事件中：
 
 ```html
 <form>
@@ -864,7 +863,7 @@ textarea.addEventListener("input", function () {
 
 ## 触发内置事件
 
-此示例演示如何在复选框上模拟点击（即通过程序生成点击事件）。[查看示例](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
+此示例演示如何使用 DOM 方法模拟复选框的点击操作（即通过编程方式生成点击事件）。[查看示例运行效果](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
 
 ```js
 function simulateClick() {
@@ -888,10 +887,10 @@ function simulateClick() {
 
 ## 注册事件处理程序
 
-有两种推荐的方法来注册处理程序。可以通过将事件处理程序代码分配给目标元素的相应 _onevent_ 属性，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理程序注册为元素的监听器，从而使事件处理程序代码在事件触发时运行。无论哪种情况，处理程序都会收到一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)（或[派生接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)）的对象。主要区别在于使用事件监听器方法可以添加（或删除）多个事件处理程序。
+有两种推荐的方法来注册处理程序。可以通过将事件处理程序代码分配给目标元素的相应 _onevent_ 属性，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理程序注册为元素的监听器，从而使事件处理程序代码在事件触发时运行。无论哪种方式，处理程序都会收到一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)（或[派生接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)）的对象。主要区别在于，可以使用事件监听器方法可以添加（或删除）多个事件处理程序。
 
 > [!WARNING]
-> 不推荐第三种使用 HTML onevent 属性设置事件处理程序的方法！这会使标记膨胀，降低可读性并增加调试难度。更多信息请参阅[内联事件处理程序——不要使用这些](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理程序——不要使用这些)。
+> 不建议使用第三种方法，即使用 HTML onevent 属性设置事件处理程序的方法！这种方法会增加标记的复杂度，降低代码的可读性，并增加调试难度。更多信息请参阅[内联事件处理器——不要使用](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理器——不要使用)。
 
 ### 使用 onevent 属性
 
