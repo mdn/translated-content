@@ -47,9 +47,9 @@ Fetch API 使用 {{DOMxRef("Request")}} 和 {{DOMxRef("Response")}} 对象（以
 ## HTTP 标头
 
 - {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}}
-  - : 控制 `fetchLater()` API 的[顶级配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas)。
+  - : 控制 `fetchLater()` API 的[顶级配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)。
 - {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}}
-  - : 控制 `fetchLater()` API 的[跨源子框架共享配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas)。
+  - : 控制 `fetchLater()` API 的[跨源子框架共享配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)。
 
 ## 规范
 

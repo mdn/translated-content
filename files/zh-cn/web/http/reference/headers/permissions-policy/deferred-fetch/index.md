@@ -12,7 +12,7 @@ l10n:
 
 此指令与 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 一起，决定了 640KiB 的总配额限制如何在顶级源及其跨源子框架之间分配。默认情况下，顶级源获得 512KiB，每个跨源子框架从剩余的 128KiB 中获得 8KiB。`deferred-fetch` 权限策略可以允许子框架源从顶级 512KiB 配额中获得更大的 64KiB 配额，以替代默认情况下它们会收到的 8KiB 最小配额。
 
-更多详情和示例，请参阅 [`fetchLater()` 配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#quotas)。
+更多详情和示例，请参阅 [`fetchLater()` 配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)。
 
 ## 语法
 
