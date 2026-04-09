@@ -63,7 +63,6 @@ Cada una de estas partes provee información específica sobre el nombre de domi
   - : Las etiquetas son lo que siguen al TLD. Una etiqueta es una secuencia de caracteres sin distinguir minúsculas o mayúsculas con una longiutd entre uno y sesenta y tres caracteres, que contiene solo letras `A` a la `Z`, digitos `0` a `9` y el caracter '-' (que no puede encontrarse al inicio o al final de la etiqueta). `a`, `97` y `hola-persona-desconocida-16-como-estas` son ejemplos de etiquetas válidas.
 
     La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD).
-  
     Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio sobre el que se tenga control (p. ej. [mozilla.org](https://mozilla.org/es-ES/)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Comprar un nombre de dominio
