@@ -240,7 +240,7 @@ function draw() {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     } else {
-      alert(`游戏结束！你的得分是: ${score}`);
+      alert(`游戏结束！你的得分是：${score}`);
       document.location.reload();
       clearInterval(interval); // Chrome 结束游戏需要它
     }
