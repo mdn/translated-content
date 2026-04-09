@@ -7,7 +7,7 @@ slug: Web/API/HTMLImageElement
 
 Интерфейс **`HTMLImageElement`** предоставляет специальные свойства и методы (расширяя обычный интерфейс {{domxref("HTMLElement")}} ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
