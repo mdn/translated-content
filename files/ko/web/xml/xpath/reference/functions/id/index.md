@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/id
 original_slug: Web/XPath/Functions/id
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `id` 함수는 인수로 준 id와 일치하는 노드를 찾아 그 식별된 노드를 포함하는 노드 집합을 반환합니다.
 

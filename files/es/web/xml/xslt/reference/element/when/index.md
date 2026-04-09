@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/when
 original_slug: Web/XSLT/Reference/Element/when
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:when>` siempre aparece dentro de un elemento `<xsl:choose>`, actuando como una sentencia case.
 
