@@ -59,7 +59,6 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 
     La lista completa de TLD es [administrada por ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
-
 - Etiqueta (o componente)
   - : Las etiquetas son lo que siguen al TLD. Una etiqueta es una secuencia de caracteres sin distinguir minúsculas o mayúsculas con una longiutd entre uno y sesenta y tres caracteres, que contiene solo letras `A` a la `Z`, digitos `0` a `9` y el caracter '-' (que no puede encontrarse al inicio o al final de la etiqueta). `a`, `97` y `hola-persona-desconocida-16-como-estas` son ejemplos de etiquetas válidas.
 
