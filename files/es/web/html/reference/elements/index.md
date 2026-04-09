@@ -3,14 +3,16 @@ title: Referencia de Elementos HTML
 short-title: Elementos
 slug: Web/HTML/Reference/Elements
 original_slug: Web/HTML/Element
+l10n:
+  sourceCommit: fce59e0706ab0114d9968c23722dccfacaebf998
 ---
 
-{{HTMLSidebar("Elements")}}
+Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTML")}}, que se crean usando {{Glossary("Tag", "etiquetas")}}.
 
-Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTML")}}. Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente con facilidad. Aunque esta guía está escrita para aquellos que son nuevos escribiendo código, se pretende que sea una referencia útil para cualquiera.
+Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente con facilidad. Una lista ordenada alfabeticamente, de todos los elementos, se encuentra en la barra lateral de la página de cada elemento, así como en esta misma.
 
 > [!NOTE]
-> Para más información básica acerca de los elementos y atributos HTML, vea [la sección sobre elementos en el artículo 'Introducción a HTML'](/es/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks).
+> Para más información básica acerca de los elementos y atributos HTML, vea [Anatomía de un elemento HTML](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomía_de_un_elemento_html).
 
 ## Raíz principal
 
@@ -20,18 +22,18 @@ Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTM
 
 ## Metadatos del documento
 
-Los metadatos contienen información sobre la página. Esto incluye información sobre estilos, _scripts_ y datos que ayudan al _software_ ({{Glossary("search engine", "search engines")}}, {{Glossary("Browser","browsers")}}, etc.) a usar y generar la página. Los metadatos de estilos y _scripts_ pueden estar definidos en la página o estar enlazados a otro fichero que contiene la información.
+Los metadatos contienen información sobre la página. Esto incluye información sobre estilos, _scripts_ y datos que ayudan al _software_ ({{Glossary("search engine", "motores de busqueda")}}, {{Glossary("Browser","navegadores")}}, etc.) a usar y generar la página. Los metadatos de estilos y _scripts_ pueden estar definidos en la página o estar enlazados a otro fichero que contiene la información.
 
 | Elemento                 | Descripción                                                                                                                                                                                                                                                                     |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{HTMLElement("base")}}  | El **elemento HTML `<base>`** especifica la dirección URL base que se utilizará para todas las direcciones URL relativas contenidas dentro de un documento. Sólo puede haber un elemento \<base> en un documento.                                                               |
-| {{HTMLElement("head")}}  | El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.                                                                                                                         |
-| {{HTMLElement("link")}}  | El **elemento HTML `<link>`** especifica la relación entre el documento actual y un recurso externo. Los usos posibles de este elemento incluyen la definición de un marco relacional para navegación. Este elemento es más frecuentemente usado para enlazar hojas de estilos. |
-| {{HTMLElement("meta")}}  | **Sus etiquetas son**: `<meta>` (solo tiene una).                                                                                                                                                                                                                               |
-| {{HTMLElement("style")}} | **Sus etiquetas son**: `<style>` y `</style>` (ambas obligatorias).                                                                                                                                                                                                             |
+| {{HTMLElement("head")}}  | El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su [titulo](/es/docs/Web/HTML/Reference/Elements/title), [scripts](/es/docs/Web/HTML/Reference/Elements/script), y [hojas de estilo](/es/docs/Web/HTML/Reference/Elements/style).                                                                                                                       |
+| {{HTMLElement("link")}}  | El **elemento HTML `<link>`** especifica la relación entre el documento actual y un recurso externo. Este elemento es más frecuentemente usado para enlazar hojas de estilos, pero también se usa para establecer iconos (ambos "favicon" e iconos para la pantalla de bienvenida y aplicaciones en dispositivos móbiles) entre otras cosas. |
+| {{HTMLElement("meta")}}  |  Representa {{Glossary("Metadata","metadatos")}} que no pueden representarse con otros elementos HTML relacionados a metadatos, como lo son {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.                                                                                                                                                                                                        |
+| {{HTMLElement("style")}} | Contiene información del estilo de un documento o parte del documento. Contiene CSS, que es aplicado al contenido del documento que contiene este elemento.                                                                                                                         |
 | {{HTMLElement("title")}} | El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.                    |
 
-## Seccionamiento básico
+## Seccionamiento raiz
 
 | Elemento                | Descripción                                                                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
