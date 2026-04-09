@@ -56,7 +56,7 @@ Una red no se limita a dos ordenadores, se pueden conectar tantos como se desee;
 
 ![Diez ordenadores interconectados](internet-schema-2.png)
 
-Para resolver este problema, cada ordenador en una red está conectado a una pequeño ordenador especial llamado _conmutador_ o switch (en Inglés). Este conmutador cumple una única función: tal como hace un señalizador en una estación de tren, el conmutador se asegura que el mensaje enviado desde un ordenador emisor llegue al destino correcto. Para enviar un mensaje al ordenador B, el ordenador A debe enviar el mensaje al conmutador, el cual a su vez reeniva el mensaje al ordenador B - el ordenador B no recibe mensajes destinados a otros ordenadores, y ninguno de los mensajes para el ordenador B llegan a otros ordenadores de la red de area local.
+Para resolver este problema, cada ordenador en una red está conectado a un pequeño ordenador especial llamado _conmutador_ o switch (en Inglés). Este conmutador cumple una única función: tal como hace un señalizador en una estación de tren, el conmutador se asegura que el mensaje enviado desde un ordenador emisor llegue al destino correcto. Para enviar un mensaje al ordenador B, el ordenador A debe enviar el mensaje al conmutador, el cual a su vez reeniva el mensaje al ordenador B - el ordenador B no recibe mensajes destinados a otros ordenadores, y ninguno de los mensajes para el ordenador B llegan a otros ordenadores de la red de area local.
 
 Una vez que agregamos un conmutador al sistema, nuestra red de 10 ordenadores solo requiere 10 cables: un enchufe para cada ordenador y un conmutador con 10 enchufes.
 
