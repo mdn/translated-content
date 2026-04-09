@@ -19,7 +19,7 @@ O elemento **HTML `<span>` é um conteiner generico em linha para conteúdo fras
 
 ## Atributos
 
-Esse elemento inclui apenas os [a](/pt-BR/docs/Web/HTML/Reference/Global_attributes)[tributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui apenas os [a](/pt-BR/docs/Web/HTML/Reference/Global_attributes)[tributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## DOM interface
 

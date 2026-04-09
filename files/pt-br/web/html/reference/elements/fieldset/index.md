@@ -85,7 +85,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Globa
 </form>
 ```
 
-### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Reference/Elements/input) e [textboxes](/pt-BR/docs/Web/HTML/Element/input)\*
+### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Reference/Elements/input) e [textboxes](/pt-BR/docs/Web/HTML/Reference/Elements/input)\*
 
 O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 
