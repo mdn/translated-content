@@ -6,7 +6,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l'installer et créer un nouveau projet, étudier la structure de haut niveau de l'ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.
 
@@ -276,4 +276,4 @@ With a basic introduction out of the way, we'll now go further and build up our 
 
 In the next article we'll build our first custom component, and look at some important concepts such as passing props into it and saving its data state.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

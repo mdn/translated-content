@@ -3,7 +3,7 @@ title: 프로그레시브 웹 앱 구조
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 ---
 
-{{PWASidebar}}{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{PreviousMenuNext("Web/Progressive_web_apps", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 이제 우리는 PWA의 원리에 대해 알고 있습니다. 실제 앱의 권장 구조에 대해 살펴봅시다. 우리는 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 어플리케이션을 왜 그렇게 구축하였는지, 그리고 무슨 이점이 있는지 분석하는 것으로 시작할 것입니다.
 
@@ -311,4 +311,4 @@ var games = [
 
 다음 문서에서는 service worker의 도움을 통한 오프라인 사용을 위해 app shell과 컨텐츠가 어떻게 캐싱되는지에 대해 더 자세히 살펴볼 것입니다.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps", "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps")}}

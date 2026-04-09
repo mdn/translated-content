@@ -13,15 +13,15 @@ Não há limitação para a profundidade e a imbricação das listas definidas c
 > [!NOTE]
 > Ambos os elementos {{HTMLElement("ol")}} e {{HTMLElement("ul")}}, representam uma lista de itens. Diferem porque, com o elemento {{HTMLElement("ol")}}, a ordem é significativa. Como regra de ouro para determinar qual deles usar, tente mudar a ordem dos itens da lista; se a significação for alterada, o elemento {{HTMLElement("ol")}} deve ser utilizado, senão o elemento {{HTMLElement("ul")}} é adequado.
 
-- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_[Flutuante](/pt-BR/docs/Web/HTML/Content_categories#flow_content) e no caso dos elementos filhos de `<ol>` incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.
+- _[Categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_[Flutuante](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content) e no caso dos elementos filhos de `<ol>` incluirem pelo menos um elemento de conteúdo {{HTMLElement("li")}} evidente.
 - _Conteúdo permitido_ Zero ou mais elementos {{HTMLElement("li")}}
 - _Omissão de etiqueta (Tag)_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo flutuante](/pt-BR/docs/Web/HTML/Content_categories#flow_content).
+- _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo flutuante](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content).
 - _Interface DOM_ {{domxref("HTMLOListElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact` {{Deprecated_inline}}
   - : Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
@@ -45,7 +45,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `'I'` indica algarismos romanos maiúsculos,
     - e `'1'` indica números (padrão).
 
-    O tipo de marcação é usado na lista inteira, a menos que um atributo [`type`](/pt-BR/docs/Web/HTML/Element/li#type) diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
+    O tipo de marcação é usado na lista inteira, a menos que um atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/li#type) diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
 
     > [!NOTE]
     > Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS {{cssxref("list-style-type")}} deve ser usada em seu lugar.
@@ -149,7 +149,7 @@ A saída HTML acima será:
 - Outros elementos HTML relacionados à lista: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
 - Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento`<ol>`:
   - a propriedade {{cssxref("list-style")}}, conveniente para escolher a forma como os ordinais são exibidos,
-  - [contadores CSS](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), útil para gerenciar listas complexas aninhadas,
+  - [contadores CSS](/pt-BR/docs/Web/CSS/Guides/Counter_styles/Using_counters), útil para gerenciar listas complexas aninhadas,
   - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto [`compact`](#compact),
   - a propriedade {{cssxref("margin")}}, aplicável para controlar a indentação da lista.
 

@@ -178,6 +178,6 @@ En gagnant en expérience avec CSS, vous irez de plus en plus vite pour comprend
 
 Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous doter de compétences utiles pour analyser d'éventuels problèmes CSS (ou d'autres langages) à l'avenir.
 
-Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing).
+Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Organizing).
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}

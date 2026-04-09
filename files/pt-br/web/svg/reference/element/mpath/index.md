@@ -64,8 +64,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos XLink](/pt-BR/docs/SVG/Attribute#xlink) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Atributos específicos

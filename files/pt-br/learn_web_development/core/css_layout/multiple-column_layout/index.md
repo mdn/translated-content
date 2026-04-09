@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 original_slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}
 
 A especificação de layout de várias colunas fornece um método de disposição do conteúdo em colunas, como você pode ver em um jornal. Este artigo explica como usar esse recurso.
 
@@ -486,4 +486,4 @@ You now know how to use the basic features of multiple-column layout, another to
 - [CSS Fragmentation](/pt-BR/docs/Web/CSS/CSS_Fragmentation)
 - [Using multi-column layouts](/pt-BR/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout")}}

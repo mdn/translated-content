@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Flexbox
 original_slug: Learn/CSS/CSS_layout/Flexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Practical_positioning_examples", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}
 
 Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Flexbox está se tornando apto para uso geral. Flexbox provê ferramentas para criação rápida de layouts complexos e flexíveis, e características que se mostraram historicamente difíceis com CSS. Este artigo explica todos os seus fundamentos.
 
@@ -339,4 +339,4 @@ Iremos discutir estratégias para contornar problemas complicados de compatibili
 Isso conclui nosso tour sobre o básico de _flexbox_. Esperamos que você tenha aproveitado, e que você continue aproveitando enquanto avança com seu aprendizado.
 No próximo tópico, veremos outro aspecto importante dos Esquemas em CSS: os sistemas de _grid,_ como você pode ver nesse artigo sobre [CSS grid layout](https://blog.alura.com.br/criando-layouts-com-css-grid-layout/).
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Practical_positioning_examples", "Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout")}}

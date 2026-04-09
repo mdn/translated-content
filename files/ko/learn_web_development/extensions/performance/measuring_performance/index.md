@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 79b1494aa78ef35b13ee8c028f6d4838478a6420
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 성능을 측정하는 것은 당신의 앱, 사이트 또는 웹 서비스의 성공을 평가하는 데 도움이 되는 중요한 지표를 제공합니다.
 
@@ -99,4 +99,4 @@ l10n:
 
 이 글에서는 웹 앱 또는 사이트에서 성능을 측정하는 데 도움을 주는 웹 성능 도구들에 대해서 간략한 개요를 제공했습니다. 다음은 체감 성능과 피할 수 없는 성능 저하를 사용자에게 덜 심각하게 보이거나 완전히 위장하는 몇 가지 기법에 대해 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}

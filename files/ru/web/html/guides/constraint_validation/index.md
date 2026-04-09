@@ -443,7 +443,7 @@ window.onload = function () {
 
 Следующее может помочь с управлением текстом нарушения ограничений:
 
-- Метод [element.setCustomValidity(message)](</ru/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)>) для элементов:
+- Метод [element.setCustomValidity(message)](</ru/docs/Learn_web_development/Extensions/Forms/Form_validation#element.setcustomvalidity(message)>) для элементов:
   - {{HTMLElement("fieldset")}}. Примечание: Добавление кастомного сообщения валидации на элемент fieldset не предотвращает отправку формы в большинстве браузеров.
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

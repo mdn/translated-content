@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Advanced_form_styling
 original_slug: Learn/Forms/Advanced_form_styling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
 
@@ -514,7 +514,7 @@ Si vous souhaitez être capable de contrôler la mise en forme, il sera plus sim
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez fini cet article, mais vous rappelez-vous des informations essentielles&nbsp;? Pour vous évaluer et vérifier que vous avez retenu ce qu'il fallait avant de poursuivre, voyez [l'évaluation sur la mise en forme avancée](/fr/docs/Learn/Forms/Test_your_skills:_Advanced_styling). Attention, cette évaluation utilise également des notions abordées [dans le prochain article](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes), n'hésitez pas à commencer par cette lecture avant l'évaluation.
+Vous avez fini cet article, mais vous rappelez-vous des informations essentielles&nbsp;? Pour vous évaluer et vérifier que vous avez retenu ce qu'il fallait avant de poursuivre, voyez [l'évaluation sur la mise en forme avancée](/fr/docs/Learn_web_development/Extensions/Forms). Attention, cette évaluation utilise également des notions abordées [dans le prochain article](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes), n'hésitez pas à commencer par cette lecture avant l'évaluation.
 
 ## Résumé
 
@@ -522,4 +522,4 @@ Bien qu'il existe encore des difficultés pour utiliser CSS avec les formulaires
 
 Dans le prochain article de ce module, nous aborderons [les différentes pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes) qui peuvent être utilisées dans les navigateurs modernes afin d'adapter la mise en forme d'un formulaire à différents états.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}

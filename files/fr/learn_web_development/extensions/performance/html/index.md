@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/HTML
 original_slug: Learn/Performance/HTML
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML est par défaut rapide et accessible. Il est du devoir de toute personne développant des sites web et des applications de s'assurer que ces deux caractéristiques sont préservées lors de la création ou de la modification de code HTML. Des difficultés peuvent apparaître par exemple lorsque la taille de fichier d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) est trop importante, ou lorsqu'une page web n'est pas optimisée pour les appareils mobiles. Ce module a pour but de présenter les fonctionnalités clés de HTML qui sont liées aux performances, et qui peuvent améliorer drastiquement la qualité de vos pages web.
 
@@ -51,7 +51,7 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 
 ## Conclusion
 
-{{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 ## Voir aussi
 

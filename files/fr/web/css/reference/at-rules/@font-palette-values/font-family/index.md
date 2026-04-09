@@ -70,7 +70,7 @@ h2.extra-spicy {
 
 ### Utiliser le même identifiant de palette pour plusieurs familles de police
 
-Dans cet exemple, deux règles [@font-palette-values](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values) sont définies pour deux familles de police, mais les deux utilisent le même identifiant dashed-ident, `--Dark Mode`. Cela permet d'appliquer la propriété [font-palette](/fr/docs/Web/CSS/font-palette) à plusieurs éléments (`h1` et `h2` ici) en même temps. C'est utile si vous souhaitez adapter les couleurs des polices à l'identité visuelle de votre site.
+Dans cet exemple, deux règles [@font-palette-values](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values) sont définies pour deux familles de police, mais les deux utilisent le même identifiant dashed-ident, `--Dark Mode`. Cela permet d'appliquer la propriété [font-palette](/fr/docs/Web/CSS/Reference/Properties/font-palette) à plusieurs éléments (`h1` et `h2` ici) en même temps. C'est utile si vous souhaitez adapter les couleurs des polices à l'identité visuelle de votre site.
 
 ```css
 @font-palette-values --Dark-Mode {

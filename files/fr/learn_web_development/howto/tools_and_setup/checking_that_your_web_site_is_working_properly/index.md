@@ -91,7 +91,7 @@ Où est donc le problème ?
 
 ![Deleting the 's'](Capture%20du%202015-10-12%2018-50-56.png)
 
-Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/docs/Learn/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
+Puis en sauvegardant et [en envoyant le fichier vers le serveur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server), on peut ensuite recharger la page dans le navigateur :
 
 ![The image loads corectly in the browser](Capture%20du%202015-10-12%2018-53-50.png)
 

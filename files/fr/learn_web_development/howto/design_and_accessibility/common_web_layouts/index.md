@@ -123,4 +123,4 @@ Comme vous pouvez le voir, il est possible de créer des sites sensationnels ave
 Deux options s'offrent maintenant à vous&nbsp;:
 
 - Approfondir vos connaissances [sur les bases de la conception web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).
-- Mettre le tout en pratique en [créant votre toute première page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML).
+- Mettre le tout en pratique en [créant votre toute première page web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).

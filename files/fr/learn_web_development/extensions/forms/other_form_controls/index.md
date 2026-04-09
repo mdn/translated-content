@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 original_slug: Learn/Forms/Other_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont pas des éléments `<input>`. C'est le cas par exemple des listes déroulantes, des champs textes sur plusieurs lignes mais aussi d'autres fonctionnalités comme l'élément [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output) (croisé dans l'article précédent), et des barres de progression.
 
@@ -308,7 +308,7 @@ La prise en charge de [`<progress>`](/fr/docs/Web/HTML/Reference/Elements/progre
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article. Mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin. [Testez vos compétences&nbsp;: les autres contrôles de formulaire](/fr/docs/Learn/Forms/Test_your_skills:_Other_controls).
+Vous avez atteint la fin de cet article. Mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin. [Testez vos compétences&nbsp;: les autres contrôles de formulaire](/fr/docs/Learn_web_development/Extensions/Forms).
 
 ## Résumé
 
@@ -316,4 +316,4 @@ Au cours des derniers articles, nous avons vu qu'il existe de nombreux types de 
 
 Maintenant que vous en savez un peu plus sur le HTML derrière les différents contrôles de formulaire, voyons [comment les mettre en forme](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}

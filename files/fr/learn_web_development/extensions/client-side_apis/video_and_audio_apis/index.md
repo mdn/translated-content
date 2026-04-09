@@ -477,7 +477,7 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - {{domxref("HTMLMediaElement")}}
 - [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide aux `<video>` et `<audio>` HTML.
 - [Intégration audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
-- [Manipulation audio et vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
+- [Manipulation audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
 - Les pages référence {{htmlelement("video")}} et {{htmlelement("audio")}}.
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats).
 

@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ## Um Exemplo Simples
 
@@ -36,10 +36,10 @@ O processo de renderização inclui o seguinte:
 1. Começamos com o elemento raiz do `svg`:
    - A declaração doctype conhecida em (X)HTML deve ser deixada de lado porque a validação SVG baseada em DTD leva a mais problemas do que resolve.
    - Antes do SVG 2, para identificar a versão do SVG para outros tipos de validação, os atributos `version`e `baseProfile `deveriam sempre ser usados. Ambos os atributos `version`e `baseProfile`estão obsoletos no SVG 2.
-   - Como um dialeto XML, o SVG deve sempre vincular os namespaces corretamente (no atributo xmlns). Consulte a página [Curso intensivo de namespaces](/pt-BR/docs/Web/SVG/Namespaces_Crash_Course) para obter mais informações.
+   - Como um dialeto XML, o SVG deve sempre vincular os namespaces corretamente (no atributo xmlns). Consulte a página [Curso intensivo de namespaces](/pt-BR/docs/Web/SVG/Guides/Namespaces_crash_course) para obter mais informações.
 
-2. O fundo é definido como vermelho desenhando um retângulo [`<rect>`](/pt-BR/docs/Web/SVG/Element/rect) que cobre toda a área da imagem.
-3. Um círculo verde [`<circle>`](/pt-BR/docs/Web/SVG/Element/circle)com raio de 80px é desenhado no centro do retângulo vermelho (centro do círculo deslocado 150px para a direita e 100px para baixo a partir do canto superior esquerdo).
+2. O fundo é definido como vermelho desenhando um retângulo [`<rect>`](/pt-BR/docs/Web/SVG/Reference/Element/rect) que cobre toda a área da imagem.
+3. Um círculo verde [`<circle>`](/pt-BR/docs/Web/SVG/Reference/Element/circle)com raio de 80px é desenhado no centro do retângulo vermelho (centro do círculo deslocado 150px para a direita e 100px para baixo a partir do canto superior esquerdo).
 4. O texto "SVG" é desenhado. O interior de cada letra é preenchido com branco. O texto é posicionado definindo uma âncora onde queremos que fique o ponto médio: neste caso, o ponto médio deve corresponder ao centro do círculo verde. Ajustes finos podem ser feitos no tamanho da fonte e na posição vertical para garantir que o resultado final seja esteticamente agradável.
 
 ## Propriedades básicas de arquivos SVG
@@ -48,7 +48,7 @@ O processo de renderização inclui o seguinte:
 - Na web, os arquivos SVG podem ser exibidos diretamente no navegador ou incorporados em arquivos HTML usando vários métodos:
   - Se o HTML for XHTML e entregue como application/xhtml+xml, o SVG poderá ser incorporado diretamente na fonte XML.
   - O SVG também pode ser incorporado diretamente no HTML.
-  - Pode ser usado com o elemento [`<img>`](/pt-BR/docs/Web/HTML/Element/img)
+  - Pode ser usado com o elemento [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img)
   - O arquivo SVG pode ser referenciado com um elemento `object`:
 
     ```html
@@ -92,4 +92,4 @@ Você pode verificar se o seu servidor está enviando os cabeçalhos HTTP corret
 
 A configuração incorreta do servidor é um motivo muito comum para o SVG não carregar, portanto, verifique a sua. Se o seu servidor não estiver configurado para enviar os cabeçalhos corretos com os arquivos SVG que está servindo, o Firefox provavelmente marcará os arquivos como texto ou lixo codificado, ou até mesmo pedirá ao usuário que escolha um aplicativo para abri-los.
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

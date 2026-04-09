@@ -136,7 +136,7 @@ CSS
 - [Box alignment in CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
 - [CSS Grid, Logical Values and Writing Modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid and progressive enhancement](/es/docs/Web/CSS/Guides/Grid_layout)
 - [Realising common layouts using CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 ## Recursos externos

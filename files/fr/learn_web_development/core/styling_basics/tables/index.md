@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 916af5e72ce683c6f7795755830c11677ca0f529
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Mettre en forme un tableau HTML n'est pas le travail le plus passionnant au monde, mais c'est parfois un passage obligé. Dans cet article, nous verrons comment donner un bel aspect aux tableaux HTML, notamment avec certaines techniques de mise en forme.
 
@@ -310,10 +310,10 @@ Avant de poursuivre, voici une liste rapide des points les plus utiles que nous 
 
 ## Testez vos compétences&nbsp;!
 
-Nous voici à la fin de cet article, mais avez-vous mémorisé les informations essentielles&nbsp;? Pour vérifier ce que vous avez retenu, vous pouvez vous évaluer avant de poursuivre&nbsp;: [Testez vos compétences&nbsp;: les tableaux](/fr/docs/Learn/CSS/Building_blocks/Tables_tasks).
+Nous voici à la fin de cet article, mais avez-vous mémorisé les informations essentielles&nbsp;? Pour vérifier ce que vous avez retenu, vous pouvez vous évaluer avant de poursuivre&nbsp;: [Testez vos compétences&nbsp;: les tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
 ## Résumé
 
 Maintenant que le sujet de la mise en forme des tableaux est réglé, voyons ce qui peut nous occuper ensuite. Dans le prochain article, nous verrons [le débogage de CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) et comment résoudre des problèmes comme des dispositions qui n'ont pas l'aspect voulu ou des propriétés qui ne s'appliquent pas comme on le voudrait. Ce prochain guide contient des informations sur l'utilisation des outils de développement des navigateurs pour trouver des solutions à ces problèmes.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

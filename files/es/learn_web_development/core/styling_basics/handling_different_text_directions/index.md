@@ -134,7 +134,7 @@ Las propiedades lógicas y los valores son más recientes que su equivalente fí
 
 ## ¡Prueba tus habilidades!
 
-Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: [Prueba tus habilidades: modos de escritura.](/es/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks)
+Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: [Prueba tus habilidades: modos de escritura.](/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 
 ## Resumen
 
