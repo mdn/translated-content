@@ -2,7 +2,7 @@
 title: Fetch API
 slug: Web/API/Fetch_API
 l10n:
-  sourceCommit: 450708eb6ad17ff17f6c3b393de91909260ecd26
+  sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

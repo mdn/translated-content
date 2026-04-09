@@ -2,11 +2,6 @@
 title: "Permissions-Policy: deferred-fetch-minimal 指令"
 short-title: deferred-fetch-minimal
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch-minimal
-page-type: http-permissions-policy-directive
-status:
-  - experimental
-browser-compat: http.headers.Permissions-Policy.deferred-fetch-minimal
-sidebar: http
 l10n:
   sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
 ---

@@ -2,11 +2,6 @@
 title: "Permissions-Policy: deferred-fetch 指令"
 short-title: deferred-fetch
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
-page-type: http-permissions-policy-directive
-status:
-  - experimental
-browser-compat: http.headers.Permissions-Policy.deferred-fetch
-sidebar: http
 l10n:
   sourceCommit: 8c1bc8d99fc8301fbbe874f6dcf8d41a9f4fe5fb
 ---
