@@ -1,5 +1,6 @@
 ---
 title: Referencia HTML
+short-title: Referencia
 slug: Web/HTML/Reference
 ---
 

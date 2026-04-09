@@ -1,5 +1,6 @@
 ---
 title: Tecnología web para desarrolladores
+short-title: Web
 slug: Web
 l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0

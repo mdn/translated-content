@@ -1,5 +1,6 @@
 ---
 title: "HTML: Lenguaje de etiquetas de hipertexto"
+short-title: HTML
 slug: Web/HTML
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Referencia de Elementos HTML
+short-title: Elementos
 slug: Web/HTML/Reference/Elements
 original_slug: Web/HTML/Element
 ---
