@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-Fetch API 提供了一个获取资源的接口（包括跨网络通信）。它是 {{DOMxRef("XMLHttpRequest")}} 更强大、更灵活的替代方案。
+Fetch API 提供了一个用于获取资源（包括跨网络通信）的接口。它是 {{DOMxRef("XMLHttpRequest")}} 更强大、更灵活的替代方案。
 
 ## 概念和用法
 
