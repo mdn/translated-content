@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/input/time
 original_slug: Web/HTML/Element/input/time
 ---
 
-{{HTMLSidebar}}
-
 Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`time`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir une heure (avec des minutes et éventuellement des secondes).
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}

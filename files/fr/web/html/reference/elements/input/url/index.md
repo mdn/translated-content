@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/input/url
 original_slug: Web/HTML/Element/input/url
 ---
 
-{{HTMLSidebar}}
-
 Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}

@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/input/text
 original_slug: Web/HTML/Element/input/text
 ---
 
-{{HTMLSidebar}}
-
 Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
