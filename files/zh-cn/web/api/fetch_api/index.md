@@ -21,11 +21,11 @@ Fetch API 使用 {{DOMxRef("Request")}} 和 {{DOMxRef("Response")}} 对象（以
 
 虽然可以直接使用 {{DOMxRef("Request.Request", "Request()")}} 和 {{DOMxRef("Response.Response", "Response()")}} 构造函数创建请求和响应对象，但这种做法并不常见。通常，它们会作为其他 API 操作的结果被创建（例如，来自 service worker 的 {{DOMxRef("FetchEvent.respondWith()")}}）。
 
-有关使用 Fetch API 功能的更多信息，请参阅[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)。
+有关使用 Fetch API 功能的更多信息，请参见[使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)。
 
 ### 延迟 Fetch
 
-{{domxref("Window/fetchLater", "fetchLater()")}} API 允许开发者请求一个*延迟 fetch*，它可以在指定的时间段之后发送，或者在页面关闭或跳转至其他页面时发送。参见[使用延迟 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
+{{domxref("Window/fetchLater", "fetchLater()")}} API 允许开发者请求一个*延迟 fetch*，它可以在指定的时间段之后发送，或者在页面关闭或导航离开时发送。参见[使用延迟 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
 
 ## 接口
 
