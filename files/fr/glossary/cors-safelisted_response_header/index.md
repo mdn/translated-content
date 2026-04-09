@@ -34,6 +34,6 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - Termes de glossaire associés&nbsp;:
   - {{Glossary("CORS")}}
-  - {{Glossary("CORS-safelisted_request_header","En-tête de requête sûr pour le CORS")}}
-  - {{Glossary("Forbidden header name","Noms d'en-tête interdits")}}
-  - {{Glossary("Request header","En-tête de requête")}}
+  - {{Glossary("CORS-safelisted_request_header", "En-tête de requête sûr pour le CORS")}}
+  - {{Glossary("Forbidden request header", "En-tête de requête interdit")}}
+  - {{Glossary("Request header", "En-tête de requête")}}
