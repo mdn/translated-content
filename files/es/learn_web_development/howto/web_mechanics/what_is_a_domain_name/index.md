@@ -2,11 +2,9 @@
 title: ¿Qué es un nombre de dominio?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
-En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
 
 <table>
   <tbody>
@@ -14,11 +12,11 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/es/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >cómo funciona Internet</a
         >
         y entender
-        <a href="/es/Learn/Understanding_URLs">qué son las URLs</a>.
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">qué son las URLs</a>.
       </td>
     </tr>
     <tr>
@@ -33,11 +31,15 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
 
 ## Resumen
 
-Los nombres de dominio son una parte clave de la infraestructura de internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
+Los nombres de dominio son una parte clave de la infraestructura de Internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, la cual puede estar formada por 32 bits para el protocolo IPv4 (por lo general se escribe con 4 números separados por puntos entre el 0 y 255, por ejemplo, `173.194.121.32`) o por 128 bits para la versión IPv6 (formada por 8 grupos de 4 números hexadecimales separados por dos puntos, ejemplo `2027:0da8:8b73:0000:0000:8a2e:0370:1337`). Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece, ya que un número por sí solo no dice mucho. Además las direcciones IP son difíciles de recordar y pueden cambiarse en cualquier momento. Para resolver estos problemas se usan direcciones que las personas pueden leer, que son intuitivas, fáciles de recordar y dicen mucho sobre el servicio web que ofrecen, se denominan nombres de dominio.
+Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, ya sea IPv4 (p. ej. `192.0.2.172`) o una IPv6 (p. ej. `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
-## Ánalisis del tema
+Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
+
+Para resolver todos estos problemas, usamos direcciones que las personas pueden leer, se denominan nombres de dominio.
+
+## Profundizar
 
 ### Estructura de los nombres de dominio
 
@@ -47,24 +49,31 @@ Un nombre de dominio tiene una estructura simple formada por varias partes (pued
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
-- TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - estan hecho para indicar que un recurso está en un idioma o país en particular.
-- Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
-- Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
-
-<!-- -->
-
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
-  - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
+  - : Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (`.com`, `.org`, `.net`) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
+    - TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - estan hechos para indicar que un recurso está en un idioma o país en particular.
+    - Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
+    - Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
 
-    **Etiqueta (o componente)**
+    TLDs pueden contener tanto caracteres especiales como caracteres latinos. La longitud máxima de un TLD es de 63 caracteres, sin embargo la mayoría se tiene alrededor de 2-3.
 
-    Las etiquetas son lo que siguen al TLD. Una etiqueta puede se cualquier cosa desde una letra hasta una oración completa. La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD). Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, www.inf.ed.ac.uk es un nombre de dominio correcto. Para cualquier dominio sobre el que se tenga control (por ejemplo [mozilla.org](https://mozilla.org)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/) o [iot.mozilla.org](https://iot.mozilla.org/)).
+    La lista completa de TLD es [administrada por ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
+
+
+- Etiqueta (o componente)
+  - : Las etiquetas son lo que siguen al TLD. Una etiqueta es una secuencia de caracteres sin distinguir minúsculas o mayúsculas con una longiutd entre uno y sesenta y tres caracteres, que contiene solo letras `A` a la `Z`, digitos `0` a `9` y el caracter '-' (que no puede encontrarse al inicio o al final de la etiqueta). `a`, `97` y `hola-persona-desconocida-16-como-estas` son ejemplos de etiquetas válidas.
+
+    La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD).
+  
+    Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio sobre el que se tenga control (p. ej. [mozilla.org](https://mozilla.org/es-ES/)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Comprar un nombre de dominio
 
 #### ¿Quién es propietario de un nombre de dominio?
 
-No se puede "comprar un nombre de dominio". Se paga por el derecho de usar un nombre de dominio por uno o más años. Se pueden renovar los derechos y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá se podrá apropiar se un nombre de dominio. Una vez que deja de pagarlo queda libre para que otras personas puedan utilizarlo.
+No se puede "comprar un nombre de dominio". Esto es para que dominios que no se usan, eventualmente se vuelven disponibles para usarse nuevamente por alguien mas. Si cada nombre de dominio fuera comprado, la web se llenaría de nombres de dominio sin usar, que estarían bloqueados y no se podrían usar por nadie mas.
+
+Por el contrario, pagas por el derecho a usar un nombre de dominio, por uno o más años. Puedes renovar tu derecho, y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá eres dueño del nombre de dominio.
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
@@ -112,7 +121,7 @@ $ whois afunkydomainname.org
 NOT FOUND
 ```
 
-Como se observa, el dominio no existe en la base de datos de `whois` (en el momento que se escribió), por lo que pudiéramos pedir registrarlo. ¡Bueno para saber!
+Como se observa, el dominio no existe en la base de datos de `whois` (en el momento que se escribió), por lo que pudiéramos pedir registrarlo. ¡Es bueno saber!
 
 #### Obtener un nombre de dominio
 
@@ -130,9 +139,6 @@ El proceso es bastante sencillo:
 
 Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel". Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente). De esta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
 
-> [!NOTE]
-> Este tiempo es amenudo llamado **tiempo de propagación**. Sin embargo, este término no es preciso puesto que la actualizaciónn no se está propagando en sí (primer nivel → nivel inferior). Los servidores DNS consultados por su computadora (nivel inferior) son los que obtienen la información del servidor autoritario(primer nivel) cuando lo necesitan.
-
 ### ¿Cómo funciona una petición DNS?
 
 Como ya hemos visto, cuando usted quiere visualizar una página web en su navegador es más simple escribir un nombre de dominio que una dirección IP. Echemos un vistazo al proceso:
@@ -148,7 +154,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 
 Bien, hemos hablado mucho sobre procesos y arquitectura. Es hora de seguir adelante.
 
-- Si quieres ponerte manos a la obra, es buen momento para comenzar a profundizar en el diseño y explorar [la estructura de una página web](/es/docs/Learn/Common_questions/dise%C3%B1os_web_comunes).
+- Si quieres ponerte manos a la obra, es buen momento para comenzar a profundizar en el diseño y explorar [la estructura de una página web](/es/docs/Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts).
 - Vale la pena señalar que algunos aspectos de construcción de un sitio web cuestan dinero. Por favor, remítase a [cuánto cuesta construir un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost).
 - O lea más sobre [Nombre de Dominio](https://es.wikipedia.org/wiki/Dominio) en la Wikipedia.
 - Puede encontrar además [aquí](https://howdns.works/) una explicación colorida y divertida de cómo los DNS trabajan.
