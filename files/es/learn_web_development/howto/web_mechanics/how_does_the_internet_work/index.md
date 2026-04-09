@@ -74,13 +74,13 @@ Puedes imaginar que podemos conectar conmutadores entre sí infinitamente, para 
 
 En la realidad, esto lleva a muchos problemas de ingeniería. Entre más conmutadores un paquete tenga que pasar, le toma mas tiempo llegar a su destino. Y no puedes tener un solo árbol de conmutadores, porque entonces cuando uno solo falla podría desconectar una gran porción de dispositivos. Para resolver este problema, mantenemos cada red local tan pequeña como es posible y conectamos estas redes locales usando un dispositivo separado, llamado _enrutador_ o router (en Inglés). Un enrutador es un ordenador que sabe como reenviar mensajes entre redes. El enrutador is como una oficina postal: cuando un paquete llega, lee la dirección del recipiente y reenvia el paquete al recipiente correcto directamente sin pasar por capas de relevos.
 
-Una red así se acerca mucho a lo que llamamos Internet. Solo necesitamos un medio físico (cables) para conectar todos estos enrutadores. Afortunadamente, dicha infrestructura ya existía previa al Internet, y es la red telefónica. Para conectar nuestra red a la infrestructura telefónica necesitamos una pieza especial de equipo, llamada _módem_. Este _módem_ convierte la información de nuestra red a información manejable por la infrestructura telefónica y viceversa.
+Una red así se acerca mucho a lo que llamamos Internet. Solo necesitamos un medio físico (cables) para conectar todos estos enrutadores. Afortunadamente, dicha infrestructura ya existía previa al Internet, y es la red telefónica. Para conectar nuestra red a la infrestructura telefónica, necesitamos una pieza especial de equipo llamada _módem_. Este _módem_ convierte la información de nuestra red a información manejable por la infrestructura telefónica y viceversa.
 
 ![Un enrutador conectado a un modem](internet-schema-6.png)
 
-Note que el enrutador comercial en su hogar es probablemente una combinación de un conmutador, un enrutador y un módem, todos en un solo dispositivo.
+Nótese que el enrutador comercial en su hogar es probablemente una combinación de un conmutador, un enrutador y un módem. Todos en un solo dispositivo.
 
-Entonces estamos conectados a la infraestructura telefónica. El siguiente paso es enviar el mensaje desde nuestra red a la red que queremos llegar. Para lograr eso, conectaremos nuestra red a un proveedor de servicios de internet (ISP de sus siglas en inglés Internet Service Provider). Un ISP es una empresa que gestiona algunos enrutadores especiales interconectados, que también pueden acceder a enrutadores de otros ISP. Así, el mensaje de nuestra red es llevada a través de la red de redes de ISP, hasta la red de destino. Internet consiste en toda esta infraestructura de redes.
+Entonces estamos conectados a la infraestructura telefónica. El siguiente paso es enviar el mensaje desde nuestra red a la red que queremos llegar. Para lograr eso, conectaremos nuestra red a un proveedor de servicios de internet (ISP de sus siglas en inglés Internet Service Provider). Un ISP es una empresa que gestiona algunos enrutadores especiales interconectados, que también pueden acceder a enrutadores de otros ISP. Así, el mensaje de nuestra red es llevado a través de la red de redes de ISP, hasta la red de destino. Internet consiste en toda esta infraestructura de redes.
 
 ![stack de Internet al completo](internet-schema-7.png)
 
@@ -98,16 +98,16 @@ Como puedes notar, cuando navegamos por la web con un navegador, normalmente uti
 
 ### Intranets and Extranets
 
-Intranets son redes _privadas_ que estan restringidas a miembros de una organización en particular.
+Las Intranets son redes _privadas_ que estan restringidas a miembros de una organización en particular.
 Son comunmente usadas para proveer un portal para que los miembros accedan a recursos compartidos, colabores y se comuniquen de manera segura.
 Por ejemplo, la intranet de una orfanizacion puede alojar paginas web para compartir información de un equipo o depratamento, unidades de almacenamiento compartidas para administrar documentos clave o archivos, portales para llevar acabo tareas administrativas, y herramientas de colaboracion como wikis, tableros de discución y sistemas de mensajería.
 
-Extranets son muy similares a las Intranets, excepto que éstas abren toda o parte de la red privada para permitir compartir o colaborar con otras organizaciones.
+Las Extranets son muy similares a las Intranets, excepto que éstas abren toda o parte de la red privada para permitir compartir o colaborar con otras organizaciones.
 Tipicamente son usadas para compartir información de manera segura con clientes y otras partes interesadas con quiernes trabajan de cerca.
 Muchas veces sus funciones son similares a las que provee una intranet: compartir información y archivos, herramientas de colaboración, tableros de discución, etc.
 
-Ambas, intranets y extranets trabajan en el mismo tipo de infrestructura que el Internet y utilizan los mismos protocolos.
-Por lo tanto puden ser accesadas por miembros autorizados desde diferentes locaciones físicas.
+Ambas, Intranets y Extranets trabajan en el mismo tipo de infrestructura que el Internet y utilizan los mismos protocolos.
+Por lo tanto, puden ser accesadas por miembros autorizados, desde diferentes locaciones físicas.
 
 ![Graphical Representation of how Extranet and Intranet work](internet-schema-8.png)
 
