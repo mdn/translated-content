@@ -15,7 +15,7 @@ O cabeçalho `Vary` deve ser colocado em uma resposta {{HTTPStatus("304")}} `Not
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

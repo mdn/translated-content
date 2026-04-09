@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Headers/Last-Modified
 
 | Header type                                                               | {{Glossary("Response header")}} |
 | ------------------------------------------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                              |
+| {{Glossary("Forbidden request header")}}                                  | no                              |
 | {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                             |
 
 ## 语法

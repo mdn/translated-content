@@ -20,7 +20,7 @@ O cabeçalho `Content-Disposition` é definido em um grande contexto de mensagen
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>
