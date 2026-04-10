@@ -14,10 +14,10 @@ original_slug: Learn/CSS/Styling_text/Fundamentals
       <th scope="row">전제조건</th>
       <td>
         기본적인 컴퓨터의 이해, HTML 기본 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         > 둘러보기), CSS 기본 (study
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 소개</a
         > 둘러보기).
       </td>

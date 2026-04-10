@@ -54,10 +54,10 @@ label {
     <tr>
       <td><strong>추가 특성</strong></td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#accept"><code>accept</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#capture"><code>capture</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#files"><code>files</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>

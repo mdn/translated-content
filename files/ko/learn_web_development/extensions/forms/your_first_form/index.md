@@ -13,7 +13,7 @@ original_slug: Learn/Forms/Your_first_form
     <tr>
       <th scope="row">사전 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML에 대한 기본적인 이해</a
         >.
       </td>

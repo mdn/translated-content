@@ -15,7 +15,7 @@ original_slug: Learn/Server-side/First_steps/Web_frameworks
       <td>
         기본적인 컴퓨터 활용법. HTTP 요청을 서버측 코드가 어떻게 다루고
         응답하는지에 대한 높은 수준의 이해 (<a
-          href="https://developer.mozilla.org/ko/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a
         >를 참고 하십시오).
       </td>

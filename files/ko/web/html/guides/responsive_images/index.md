@@ -15,11 +15,11 @@ l10n:
     <tr>
       <th scope="row">전제조건</th>
       <td>
-        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML">
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">
           HTML의 기본 사항
         </a>
         과
-        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images">
           웹 페이지에 정적 이미지를 추가하는 방법
         </a>
         을 이미 알고 있어야 합니다.
@@ -28,7 +28,7 @@ l10n:
     <tr>
       <th scope="row">목표</th>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/img#srcset">
+        <a href="/ko/docs/Web/HTML/Reference/Elements/img#srcset">
           <code>srcset</code>
         </a>
         및 {{htmlelement("picture")}} 요소와 같은 기능을 사용하여 웹사이트에 반응형 이미지 솔루션을 구현하는 방법을 알아보세요.
