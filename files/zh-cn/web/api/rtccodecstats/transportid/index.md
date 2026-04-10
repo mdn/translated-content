@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("RTCCodecStats")}} 字典的 **`transportId`** 属性是表示编解码器正在使用的传输的唯一标识符字符串。
 
-你可以通过匹配 `RTCCodecStats.transportId` 和 {{domxref("RTCTransportStats.id")}} 值来关联编解码器和相关的传输统计信息。
+你可以通过将 `RTCCodecStats.transportId` 与 {{domxref("RTCTransportStats.id")}} 值进行匹配，来关联编解码器和相关的传输统计信息。
 
 ## 值
 
