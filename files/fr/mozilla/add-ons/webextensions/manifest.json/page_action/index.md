@@ -191,7 +191,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Masquer l'action de page par défaut pour les pages dont les URLs
           correspondent des
-          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/match_patterns"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >modèles de correspondance</a
           >
           données.

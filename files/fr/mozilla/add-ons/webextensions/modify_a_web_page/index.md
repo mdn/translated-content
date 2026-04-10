@@ -148,7 +148,7 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
       </td>
       <td>
         <code
-          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >

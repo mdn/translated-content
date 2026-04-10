@@ -208,7 +208,7 @@ Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
       </td>
       <td>
         <code
-          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
