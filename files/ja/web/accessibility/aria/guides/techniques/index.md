@@ -9,11 +9,11 @@ l10n:
 <section id="Quick_links">
   <ol>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA ライブリージョン</a></li>
+    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides">ARIA ガイド</a></li>
+    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions">ARIA ライブリージョン</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装ガイド</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/forms">ウェブフォーム</a></li>
+    <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
+    <li><a href="/ja/docs/Web/Accessibility/ARIA">ウェブフォーム</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA に関するバグの報告方法</a></li>
     <li class="toggle">
       <details><summary>ARIA ステートとプロパティ</summary>

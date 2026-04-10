@@ -18,7 +18,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         基本的なコンピューターリテラシー。
-       <a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドのウェブサイトプログラミング</a>の一般的な理解、特に、<a href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライアントとサーバーとのやり取り</a>の仕組みを理解していること。
+       <a href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps">サーバーサイドのウェブサイトプログラミング</a>の一般的な理解、特に、<a href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライアントとサーバーとのやり取り</a>の仕組みを理解していること。
       </td>
     </tr>
     <tr>
