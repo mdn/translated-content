@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 419694495e070daaf466c923b413b3f476740fd6
 ---
 
- {{jsxref("AsyncDisposableStack")}} インスタンスの **`use()`** メソッドは、[非同期破棄プロトコル](/ja/docs/Web/JavaScript/Guide/Resource_management) を実装する値をスタックに登録します。
+{{jsxref("AsyncDisposableStack")}} インスタンスの **`use()`** メソッドは、[非同期破棄プロトコル](/ja/docs/Web/JavaScript/Guide/Resource_management) を実装する値をスタックに登録します。
 
 `use()` メソッドに関する一般的な情報については {{jsxref("DisposableStack.prototype.use()")}} を参照してください。
 
