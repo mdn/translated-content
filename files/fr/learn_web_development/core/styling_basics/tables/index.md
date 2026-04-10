@@ -80,7 +80,7 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
 
 {{EmbedLiveSample('','100%','330')}}
 
-Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#attr-scope), [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption), [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), etc. Malheureusement, son apparence n'est pas assez bonne sur l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
+Le tableau est bien balisé, facile à mettre en forme et accessible grâce aux fonctionnalités offertes par [`scope`](/fr/docs/Web/HTML/Reference/Elements/th#scope), [`<caption>`](/fr/docs/Web/HTML/Reference/Elements/caption), [`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), etc. Malheureusement, son apparence n'est pas assez bonne sur l'écran (voir la version en anglais directement ici [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html))&nbsp;:
 
 ![](table-unstyled.png)
 

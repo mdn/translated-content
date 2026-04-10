@@ -53,20 +53,20 @@ label {
     <tr>
       <td><strong>Attributs communs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-autocomplete"><code>autocomplete</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-maxlength"><code>maxlength</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-minlength"><code>minlength</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern"><code>pattern</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-placeholder"><code>placeholder</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-readonly"><code>readonly</code></a>,
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-required"><code>required</code></a> et
-        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-size"><code>size</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a> et
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>Attributs IDL</strong></td>
-      <td><a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>, <code>value</code></td>
+      <td><a href="/fr/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>, <code>value</code></td>
     </tr>
     <tr>
       <td><strong>Méthodes</strong></td>
@@ -82,7 +82,7 @@ label {
 
 ## Valeur
 
-L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) d'un tel élément contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui correspond à la valeur contenue dans le champ texte. En JavaScript, cette valeur peut être récupérée avec la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+L'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) d'un tel élément contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui correspond à la valeur contenue dans le champ texte. En JavaScript, cette valeur peut être récupérée avec la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 ```js
 let monTexte = leTexteSaisi.value;
@@ -112,12 +112,12 @@ Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si
 
 ### `pattern`
 
-L'attribut `pattern` est une expression rationnelle que doit respecter la valeur ([`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)) du champ afin d'être [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères ASCII. Aucune barre oblique (`/`) ne devrait être utilisée autour du motif.
+L'attribut `pattern` est une expression rationnelle que doit respecter la valeur ([`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)) du champ afin d'être [valide](/fr/docs/Web/HTML/Guides/Constraint_validation). Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Regular_expressions)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères ASCII. Aucune barre oblique (`/`) ne devrait être utilisée autour du motif.
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
 > [!NOTE]
-> L'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#attr-title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
+> L'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pourra être utilisé afin d'afficher une bulle d'informations qui explique les conditions à respecter. Il est également conseillé d'inclure un texte explicatif à proximité du champ.
 
 Voir [la section sur l'utilisation d'un motif de validation](#utiliser_un_motif_de_validation) pour plus de détails et un exemple.
 
@@ -176,7 +176,7 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
 > [!NOTE]
-> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
+> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes/enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
 Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
@@ -206,7 +206,7 @@ Lorsque le formulaire est envoyé, la paire nom/valeur est envoyée au serveur s
 
 ### Utiliser des textes indicatifs (<i lang="en">placeholders</i>)
 
-Il est possible de fournir un texte indicatif qui sera affiché dans le champ lorsqu'aucune valeur n'a été saisi. Pour cela, on utilise l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#attr-placeholder). Par exemple&nbsp;:
+Il est possible de fournir un texte indicatif qui sera affiché dans le champ lorsqu'aucune valeur n'a été saisi. Pour cela, on utilise l'attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder). Par exemple&nbsp;:
 
 ```html
 <form>
@@ -232,7 +232,7 @@ Le texte indicatif est généralement affiché dans une couleur plus claire que 
 
 ### Contrôler la taille physique du champ
 
-La taille physique du champ de saisie peut être adaptée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size). Sa valeur correspond au nombre de caractères qui seront affichés simultanément. Voici par exemple, un fragment de code HTML où la contrôle de saisie affichera au plus 30 caractères en même temps (on pourra saisir un texte plus long mais toutes les lettres ne seront pas affichées)&nbsp;:
+La taille physique du champ de saisie peut être adaptée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). Sa valeur correspond au nombre de caractères qui seront affichés simultanément. Voici par exemple, un fragment de code HTML où la contrôle de saisie affichera au plus 30 caractères en même temps (on pourra saisir un texte plus long mais toutes les lettres ne seront pas affichées)&nbsp;:
 
 ```html
 <form>
@@ -291,7 +291,7 @@ Comme le montrent les sélecteurs utilisés, cette technique s'appuie sur la pr�
 
 ### Rendre un champ obligatoire
 
-On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required) afin d'indiquer que le champ doit être rempli avant de pouvoir envoyer le formulaire&nbsp;:
+On peut utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) afin d'indiquer que le champ doit être rempli avant de pouvoir envoyer le formulaire&nbsp;:
 
 ```html
 <form>
@@ -334,7 +334,7 @@ Si vous tentez d'envoyer le formulaire sans avoir saisi de valeur dans le champ 
 
 ### Contraindre la longueur du texte saisi
 
-Il est possible d'indiquer la longueur minimale du texte grâce à l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#attr-minlength). De même, on peut utiliser l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#attr-maxlength) pour indiquer le nombre maximal de caractères attendus.
+Il est possible d'indiquer la longueur minimale du texte grâce à l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, on peut utiliser l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) pour indiquer le nombre maximal de caractères attendus.
 
 Dans l'exemple suivant, pour que le texte soit valide, il faut qu'il soit plus long que 4 caractères et moins long que 8 caractères.
 
@@ -390,7 +390,7 @@ Si vous essayez d'envoyer le formulaire avec un nom d'utilisateur plus court (qu
 
 ### Utiliser un motif de validation
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction à la validation des données avec les expressions rationnelles).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie afin d'être valide (voir [Validation selon une expression régulière](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction à la validation des données avec les expressions rationnelles).
 
 Dans l'exemple qui suit, on restreint le format du texte afin que ce soit un texte en minuscules (pour lequel seules les lettres de `a` à `z` sont autorisées) et qui mesure entre 4 et 8 caractères.
 

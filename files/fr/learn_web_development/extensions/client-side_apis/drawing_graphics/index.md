@@ -353,7 +353,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
    image.src = "firefox.png";
    ```
 
-   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
+   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
 
 3. On peut alors essayer d'intégrer l'image avec la méthode `drawImage()`, mais il faut d'abord s'assurer que le fichier de l'image a bien été chargé, sinon le dessin échouera. Pour cela, on peut utiliser l'évènement `load` qui est uniquement déclenché après que le chargement de l'image est terminé. Ajoutez le bloc qui suit après les instructions précédentes&nbsp;:
 
@@ -518,7 +518,7 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
    ctx.translate(width / 2, height / 2);
    ```
 
-3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#attr-src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
+3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
 
    ```js
    const image = new Image();

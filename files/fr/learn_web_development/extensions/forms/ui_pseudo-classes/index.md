@@ -206,7 +206,7 @@ On peut cibler les contrôles d'un formulaire avec les pseudo-classes [`:valid`]
 - Les contrôles sans contraintes de validation seront toujours valides, et donc toujours ciblés par `:valid`.
 - Les contrôles avec `required` et qui n'ont pas de valeur sont considérés comme invalides et seront donc ciblés par `:invalid` et par `:required`.
 - Les contrôles avec une validation native, comme `<input type="email">` ou `<input type="url">`, sont ciblés par `:invalid` lorsque les données saisies ne correspondent pas au motif et au format voulu (mais sont considérés comme valides s'ils sont vides).
-- Les contrôles dont la valeur courante est en dehors des limites d'intervalle décrites par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) sont ciblés par `:invalid`, et aussi par [`:out-of-range`](/fr/docs/Web/CSS/Reference/Selectors/:out-of-range) que nous verrons par la suite.
+- Les contrôles dont la valeur courante est en dehors des limites d'intervalle décrites par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) sont ciblés par `:invalid`, et aussi par [`:out-of-range`](/fr/docs/Web/CSS/Reference/Selectors/:out-of-range) que nous verrons par la suite.
 - Il existe d'autres méthodes pour qu'un élément soit ciblé par `:valid`/`:invalid`, nous verrons comment dans [l'article sur la validation d'un formulaire côté client](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation). Gardons les choses simples pour l'instant.
 
 Prenons un exemple simple d'utilisation de `:valid`/`:invalid` (vous pouvez voir [l'exemple de démonstration `valid-invalid.html`](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html), et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
@@ -262,7 +262,7 @@ On voit ici comment les champs texte sont invalides lorsqu'ils sont vides et val
 
 ### Respect de l'intervalle pour les données numériques
 
-Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/Reference/Selectors/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/Reference/Selectors/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
+Comme mentionné brièvement avant, il existe deux autres pseudo-classes&nbsp;: [`:in-range`](/fr/docs/Web/CSS/Reference/Selectors/:in-range) et [`:out-of-range`](/fr/docs/Web/CSS/Reference/Selectors/:out-of-range). Celles-ci s'appliquent aux champs numériques dont les intervalles de validité sont délimités par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) lorsque leurs données sont comprises ou en dehors de cet intervalle.
 
 > [!NOTE]
 > Les types de champs numériques sont&nbsp;: `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`.
