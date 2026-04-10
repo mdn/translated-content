@@ -22,7 +22,7 @@ Ahora que estamos cómodos añadiendo imágenes simples a una página web, el si
           href="/es/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabajo con archivos</a
         >, familiaridad con los fundamentos de HTML (como está cubierto en
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Empezando con HTML</a
         >) e
         <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_images"

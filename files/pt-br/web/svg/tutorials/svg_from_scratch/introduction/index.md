@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
 original_slug: Web/SVG/Tutorial/Introduction
 ---
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}
 
 ![](svg_overview.png)[SVG](/pt-BR/docs/Web/SVG) é uma linguagem [XML](/pt-BR/XML), similar ao [XHTML](/pt-BR/XHTML), na qual pode ser usada para desenhar vetores gráficos (imagens), como os mostrados à direita. Ela pode ser usada para criar uma imagem qualquer especificando todas as linhas e formas necessárias, para modificar uma imagem raster já existente ou fazer ambas as opções. A imagem e seus componentes também podem ser transformados, compostas em conjunto, ou filtradas para mudar completamente sua aparência.
 
@@ -25,7 +25,7 @@ SVG é suportado em todos os browsers modernos em cobre algumas versões anterio
 - O XML é case-sensitive (diferencia maiúsculas e minúsculas, diferentemente do HTML), ou seja, todos os exemplos devem ser escritos exatamente como mostrado aqui.
 - Valores de atributos, mesmo que estes sejam números, devem ser colocados dentro de aspas.
 
-SVG é uma especificação imensa. Este tutorial combre apenas o conteúdo básico. Uma vez que você se familiarizar você estará habilitado a usar o [Element Reference](/pt-BR/docs/Web/SVG/Element) e o [Interface Reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces) para encontrar qualquer outra coisa que precisa saber.
+SVG é uma especificação imensa. Este tutorial combre apenas o conteúdo básico. Uma vez que você se familiarizar você estará habilitado a usar o [Element Reference](/pt-BR/docs/Web/SVG/Reference/Element) e o [Interface Reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces) para encontrar qualquer outra coisa que precisa saber.
 
 ### Sabores do SVG
 
@@ -35,4 +35,4 @@ Além das recomendações completas do SVG, o grupo de trabalho do W3C introduzi
 
 Havia planos para uma especificação de impressão SVG, que adicionaria suporte a várias páginas e gerenciamento de cores aprimorado. Este trabalho foi descontinuado.
 
-{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started") }}

@@ -180,6 +180,6 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 ## Voir aussi
 
 - [Cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies)
-- [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
+- [`Cookie`](/fr/docs/Web/HTTP/Reference/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
 - [Cookies SameSite](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)

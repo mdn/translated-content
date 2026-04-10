@@ -19,7 +19,7 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     <tr>
       <th scope="row">Valeur par défaut</th>
       <td>
-        Si cette directive est absente, l'agent utilisateur consultera d'abord la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, puis la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a> et enfin la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
+        Si cette directive est absente, l'agent utilisateur consultera d'abord la directive <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, puis la directive <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src"><code>script-src</code></a> et enfin la directive <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
       </td>
     </tr>
   </tbody>

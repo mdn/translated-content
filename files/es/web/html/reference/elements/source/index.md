@@ -24,7 +24,7 @@ El **elemento HTML `<source>`** especifica recursos de medios múltiples para lo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>

@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
-Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostariamos de dar um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed) e [`<object>`](/pt-BR/docs/Web/HTML/Element/object). `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar recursos externos como arquivos PDF.
+Até agora você já deve ter aprendido a incorporar coisas em suas páginas da web, incluindo imagens, vídeo e áudio. Neste ponto, gostariamos de dar um passo para o lado, olhando para alguns elementos que permitem incorporar uma ampla variedade de tipos de conteúdo em suas páginas: os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/pt-BR/docs/Web/HTML/Reference/Elements/embed) e [`<object>`](/pt-BR/docs/Web/HTML/Element/object). `<iframe>`s são para incorporar outras páginas da Web, e as outras duas permitem incorporar recursos externos como arquivos PDF.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -61,15 +61,15 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
 
 Há muito tempo, na Web, era popular o uso de **frames** para criar sites - pequenas partes de um site armazenadas em páginas HTML individuais. Elas foram incorporadas em um documento mestre chamado **frameset**, que permitiu especificar a área na tela que cada **frame** preenchia, como dimensionar as colunas e linhas de uma tabela. Eles foram considerados o auge da frescura entre a metade e o final dos anos 90, e havia evidências de que ter uma página da Web dividida em partes menores como essa era melhor para as velocidades de download - especialmente perceptível pelas conexões de rede que eram tão lentas na época. No entanto, eles tinham muitos problemas, que superavam quaisquer positivos à medida que as velocidades da rede ficavam mais rápidas, para que você não as veja mais sendo usadas.
 
-Um pouco mais tarde (final dos anos 90, início dos anos 2000), as tecnologias de plug-in tornaram-se muito populares, como [Java Applets](/pt-BR/docs/Glossary/Java) e [Flash](/pt-BR/docs/Glossary/Adobe_Flash) - isso permitiu que os desenvolvedores da Web incorporassem conteúdo rico em páginas da Web, como vídeos e animações, que não estavam disponíveis apenas no HTML. A incorporação dessas tecnologias foi alcançada através de elementos como [`<object>`](/pt-BR/docs/Web/HTML/Element/object), e o menos utilizado [`<embed>`](/pt-BR/docs/Web/HTML/Element/embed), eles eram muito úteis na época. Desde então, ficaram fora de moda devido a muitos problemas, incluindo acessibilidade, segurança, tamanho do arquivo e muito mais; hoje em dia, a maioria dos dispositivos móveis não suporta mais esses plug-ins, como o [Flash](/pt-BR/docs/Glossary/Adobe_Flash).
+Um pouco mais tarde (final dos anos 90, início dos anos 2000), as tecnologias de plug-in tornaram-se muito populares, como [Java Applets](/pt-BR/docs/Glossary/Java) e [Flash](/pt-BR/docs/Glossary/Adobe_Flash) - isso permitiu que os desenvolvedores da Web incorporassem conteúdo rico em páginas da Web, como vídeos e animações, que não estavam disponíveis apenas no HTML. A incorporação dessas tecnologias foi alcançada através de elementos como [`<object>`](/pt-BR/docs/Web/HTML/Element/object), e o menos utilizado [`<embed>`](/pt-BR/docs/Web/HTML/Reference/Elements/embed), eles eram muito úteis na época. Desde então, ficaram fora de moda devido a muitos problemas, incluindo acessibilidade, segurança, tamanho do arquivo e muito mais; hoje em dia, a maioria dos dispositivos móveis não suporta mais esses plug-ins, como o [Flash](/pt-BR/docs/Glossary/Adobe_Flash).
 
-Finalmente, o elemento [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) apareceu (juntamente com outras formas de incorporar conteúdo, como [`<canvas>`](/pt-BR/docs/Web/HTML/Element/canvas), `<video>`, etc.) Isso fornece uma maneira de incorporar um documento da Web inteiro dentro de outro, como se fosse um [`<img>`](/pt-BR/docs/Web/HTML/Element/img) ou outro elemento, e é usado regularmente hoje.
+Finalmente, o elemento [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe) apareceu (juntamente com outras formas de incorporar conteúdo, como [`<canvas>`](/pt-BR/docs/Web/HTML/Reference/Elements/canvas), `<video>`, etc.) Isso fornece uma maneira de incorporar um documento da Web inteiro dentro de outro, como se fosse um [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img) ou outro elemento, e é usado regularmente hoje.
 
 Com a lição de história fora do caminho, vamos seguir em frente e ver como usar algumas delas.
 
 ## Aprendizado ativo: usos clássicos de incorporação
 
-Neste artigo, vamos pular direto para uma seção de aprendizado ativo, para fornecer imediatamente uma idéia real de para que servem as tecnologias de incorporação. O mundo on-line está muito familiarizado com o [Youtube](https://www.youtube.com/), mas muitas pessoas não conhecem alguns dos recursos de compartilhamento disponíveis. Vejamos como o YouTube nos permite incorporar um vídeo em qualquer página que gostariamos de usar um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe).
+Neste artigo, vamos pular direto para uma seção de aprendizado ativo, para fornecer imediatamente uma idéia real de para que servem as tecnologias de incorporação. O mundo on-line está muito familiarizado com o [Youtube](https://www.youtube.com/), mas muitas pessoas não conhecem alguns dos recursos de compartilhamento disponíveis. Vejamos como o YouTube nos permite incorporar um vídeo em qualquer página que gostariamos de usar um [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe).
 
 1. Primeiro, vá ao Youtube e encontre o vídeo que você gosta.
 2. Abaixo do vídeo, você encontrará um botão _Compartilhar_ - selecione para exibir as opções de compartilhamento.
@@ -217,7 +217,7 @@ textarea.onkeyup = function () {
 
 ## Iframes em detalhes
 
-Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) foram projetados para permitir que você incorpore outros documentos da Web ao documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não querer implementar sua própria versão - como vídeo de fornecedores de vídeo on-line, sistemas de comentários como [Disqus](https://disqus.com/), mapas de fornecedores de mapas on-line, banners publicitários, etc. Os exemplos editáveis ao vivo que você está usando neste curso são implementados usando `<iframe>`s.
+Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe) foram projetados para permitir que você incorpore outros documentos da Web ao documento atual. Isso é ótimo para incorporar conteúdo de terceiros em seu site sobre o qual você pode não ter controle direto e não querer implementar sua própria versão - como vídeo de fornecedores de vídeo on-line, sistemas de comentários como [Disqus](https://disqus.com/), mapas de fornecedores de mapas on-line, banners publicitários, etc. Os exemplos editáveis ao vivo que você está usando neste curso são implementados usando `<iframe>`s.
 
 Existem algumas sérias [Preocupações com segurança](/pt-BR/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies#preocupa%C3%A7%C3%B5es_com_seguran%C3%A7a) a serem consideradas com `<iframe>`s, como discutiremos abaixo, mas isso não significa que você não deve usá-las em seus sites - apenas requer algum conhecimento e pensamento cuidadoso. Vamos explorar o código um pouco mais detalhadamente. Digamos que você queira incluir o glossário MDN em uma de suas páginas da web - você pode tentar algo como isto:
 
@@ -257,13 +257,13 @@ Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`
 
 - [`border: none`](/pt-BR/docs/Web/CSS/border)
   - : Se usado, o `<iframe>` é mostrado sem um borda ao seu redor. Caso contrário, por padrão, navegadores mostram o `<iframe>` com uma borda ao seu redor (o que é geralmente indesejável).
-- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : Se definido, o `<iframe>` poderá ser colocado no modo de tela cheia usando a [Fullscreen API](/pt-BR/docs/Web/API/Fullscreen_API) (um pouco além do escopo deste artigo).
-- [`src`](/pt-BR/docs/Web/HTML/Element/iframe#src)
-  - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video) / [`<img>`](/pt-BR/docs/Web/HTML/Element/img), contém um caminho apontando para o URL do documento a ser incorporado.
-- [`width`](/pt-BR/docs/Web/HTML/Element/iframe#width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#height)
+- [`src`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#src)
+  - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Reference/Elements/video) / [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img), contém um caminho apontando para o URL do documento a ser incorporado.
+- [`width`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#width) e [`height`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#height)
   - : Esses atributos especificam a largura e a altura que você deseja no iframe.
-- [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
+- [`sandbox`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos recursos `<iframe>` (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
 
 > [!NOTE]
@@ -305,7 +305,7 @@ Você deseja que os atacantes tenham a menor quantidade possível de poder para 
 
 Conteúdo fora de uma sandbox pode fazer muito mais que o esperado (executar JavaScript, submeter forms, criar novas janelas no navegador, etc.) Por padrão, você deve impor todas as restrições disponíveis utilizando o atributo `sandbox` sem parâmetros, como mostrado em nosso exemplo anterior.
 
-Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro do valor do atributo `sandbox=""`) — veja em [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) as referências de entrada para todas as opções disponíveis. Uma nota importante é que você _nunca_ deve adicionar ambos `allow-scripts` e `allow-same-origin` no atributo sandbox — neste caso, conteúdo incorporado pode burlar a política de segurança de mesmo destino que impede sites de executarem scripts, e utilizar JavaScript para desativar o sandboxing completamente.
+Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro do valor do atributo `sandbox=""`) — veja em [`sandbox`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#sandbox) as referências de entrada para todas as opções disponíveis. Uma nota importante é que você _nunca_ deve adicionar ambos `allow-scripts` e `allow-same-origin` no atributo sandbox — neste caso, conteúdo incorporado pode burlar a política de segurança de mesmo destino que impede sites de executarem scripts, e utilizar JavaScript para desativar o sandboxing completamente.
 
 > [!NOTE]
 > Sandboxing não fornece nenhuma proteção se atacantes puderem enganar os usuários para que visitem conteúdo malicioso diretamete (fora de um `iframe`). Se existir qualquer chance que certo conteúdo possa ser malicioso (exemplo, conteúdo gerado por usuários), por favor forneça-o em um {{glossary("domain")}} diferente de seu site principal.
@@ -328,13 +328,13 @@ However, you are unlikely to use these elements very much — Applets haven't be
 
 If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
 
-|                                                                            | {{htmlelement("embed")}}                                                                                  | {{htmlelement("object")}}                                                                                   |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} of the embedded content                                | [`src`](/pt-BR/docs/Web/HTML/Element/embed#src)                                                           | [`data`](/pt-BR/docs/Web/HTML/Element/object#data)                                                          |
-| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/pt-BR/docs/Web/HTML/Element/embed#type)                                                         | [`type`](/pt-BR/docs/Web/HTML/Element/object#type)                                                          |
-| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/pt-BR/docs/Web/HTML/Element/embed#height) [`width`](/pt-BR/docs/Web/HTML/Element/embed#width) | [`height`](/pt-BR/docs/Web/HTML/Element/object#height) [`width`](/pt-BR/docs/Web/HTML/Element/object#width) |
-| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                             | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                   |
-| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                   | contained within `<object>`, after `<param>` elements                                                       |
+|                                                                            | {{htmlelement("embed")}}                                                                                                        | {{htmlelement("object")}}                                                                                   |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} of the embedded content                                | [`src`](/pt-BR/docs/Web/HTML/Reference/Elements/embed#src)                                                                      | [`data`](/pt-BR/docs/Web/HTML/Element/object#data)                                                          |
+| _accurate_ {{glossary("MIME type", 'media type')}} of the embedded content | [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/embed#type)                                                                    | [`type`](/pt-BR/docs/Web/HTML/Element/object#type)                                                          |
+| height and width (in CSS pixels) of the box controlled by the plugin       | [`height`](/pt-BR/docs/Web/HTML/Reference/Elements/embed#height) [`width`](/pt-BR/docs/Web/HTML/Reference/Elements/embed#width) | [`height`](/pt-BR/docs/Web/HTML/Element/object#height) [`width`](/pt-BR/docs/Web/HTML/Element/object#width) |
+| names and values, to feed the plugin as parameters                         | ad hoc attributes with those names and values                                                                                   | single-tag {{htmlelement("param")}} elements, contained within `<object>`                                   |
+| independent HTML content as fallback for an unavailable resource           | not supported (`<noembed>` is obsolete)                                                                                         | contained within `<object>`, after `<param>` elements                                                       |
 
 > [!NOTE] `<object>` requires a `data` attribute, a `type` attribute, or both. If you use both, you may also use the [`typemustmatch`](/pt-BR/docs/Web/HTML/Element/object#typemustmatch) attribute (only implemented in Firefox, as of this writing). `typemustmatch` keeps the embedded file from running unless the `type` attribute provides the correct media type. `typemustmatch` can therefore confer significant security benefits when you're embedding content from a different {{glossary("origin")}} (it can keep attackers from running arbitrary scripts through the plugin).
 

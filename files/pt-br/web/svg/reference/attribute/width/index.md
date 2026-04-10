@@ -36,7 +36,7 @@ Esse atributo precisa ser especificado, exceto para o elemento {{ SVGElement("sv
 
 Os seguintes elementos podem user o atributo witdh
 
-- [Filter primitive elements](/pt-BR/docs/Web/SVG/Element#filterprimitive) »
+- [Filter primitive elements](/pt-BR/docs/Web/SVG/Reference/Element#filterprimitive) »
 - {{ SVGElement("filter") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("image") }}

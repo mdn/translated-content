@@ -8,7 +8,7 @@ original_slug: Web/CSS/:last-child
 
 ## Resumo
 
-A CSS [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-child` representa qualquer elemento que é o último filho de seu elemento pai.
+A CSS [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:last-child` representa qualquer elemento que é o último filho de seu elemento pai.
 
 ## Sintaxe
 
