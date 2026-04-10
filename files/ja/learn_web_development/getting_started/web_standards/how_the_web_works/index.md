@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 *ウェブのしくみ*では、コンピューターや携帯電話のウェブブラウザーでウェブページを見るときに起こることを簡単に説明します。
 
