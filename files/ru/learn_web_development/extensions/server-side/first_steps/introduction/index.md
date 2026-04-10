@@ -3,7 +3,7 @@ title: Введение в серверную часть
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 Добро пожаловать на курс для начинающих по программированию серверной части сайта! В этой первой статье мы рассмотрим программирование на стороне сервера с высокого уровня, отвечая на такие вопросы, как «что это»?, «как это отличается от программирования на стороне клиента»? и «почему это так полезно»? После прочтения этой статьи вы поймёте дополнительные возможности, доступные веб-сайтам посредством программирования на стороне сервера.
 
@@ -175,4 +175,4 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 
 В следующей статье мы поможем вам выбрать лучший фреймворк для вашего первого сайта; затем мы изучим несколько основных взаимодействий с клиентской частью более подробно.
 
-{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}

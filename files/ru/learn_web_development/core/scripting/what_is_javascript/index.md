@@ -3,7 +3,7 @@ title: Что такое JavaScript?
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Добро пожаловать на курс MDN JavaScript для начинающих! В первой статье курса мы дадим базовое определение JavaScript, ответим на вопросы «Что такое JavaScript?» и «Что он делает?», узнаем как работает JavaScript и как добавить его на веб-страницу.
 
@@ -330,4 +330,4 @@ for (var i = 0; i < buttons.length; i++) {
 
 JavaScript может показаться немного пугающим в данным момент, но не переживайте - в этом курсе мы проведём вас сквозь него простыми шагами, которые имеют смысл, забегая наперёд. В следующей главе мы [погрузимся непосредственно в практику](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/A_first_splash), подталкивая вас погрузиться в код и сделать ваши собственные примеры JavaScript.
 
-{{NextMenu("Learn/JavaScript/Первые_шаги/A_first_splash", "Learn/JavaScript/Первые_шаги")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
