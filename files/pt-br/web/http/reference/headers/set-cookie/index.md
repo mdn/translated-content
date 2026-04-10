@@ -15,7 +15,7 @@ Para mais informações, veja o guia em [HTTP cookies](/pt-BR/docs/Web/HTTP/Guid
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

@@ -7,7 +7,7 @@ slug: Web/HTTP/Reference/Headers/Cache-Control
 
 | Header type                                                               | {{Glossary("General header")}} |
 | ------------------------------------------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}}                                     | no                             |
+| {{Glossary("Forbidden request header")}}                                  | no                             |
 | {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                            |
 
 ## 语法

@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/with-param
 original_slug: Web/XSLT/Reference/Element/with-param
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasará a una plantilla.
 
