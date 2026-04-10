@@ -14,11 +14,11 @@ Existem muitos outros elementos em HTML para formatação de texto, que não tra
       <th scope="row">Pré-requisitos:</th>
       <td>
         Familiaridade básica em HTML, conforme abordado em
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Introdução ao HTML</a
         >. Formatação de texto em HTML, conforme abordado em
         <a
-          href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
+          href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >Fundamentais de texto em HTML</a
         >.
       </td>

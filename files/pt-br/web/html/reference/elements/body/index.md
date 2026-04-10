@@ -13,7 +13,7 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
     <tr>
       <th scope="row">
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias</a
         >
       </th>
@@ -28,7 +28,7 @@ O **elemento** `<body>` do **HTML** representa o conteúdo de um documento HTML.
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conte%C3%BAdo_de_fluxo"
           >Conteúdo de fluxo</a
         >.
       </td>

@@ -23,7 +23,7 @@ original_slug: Learn/CSS/First_steps/What_is_CSS
           >como trabalhar com arquivos</a
         >, e conhecimento básico sobre HTML (estude
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+          href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >.)
       </td>

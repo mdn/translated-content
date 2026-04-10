@@ -67,8 +67,8 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>

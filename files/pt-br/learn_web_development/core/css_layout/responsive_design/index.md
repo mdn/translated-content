@@ -14,11 +14,11 @@ Nos primórdios do web design, páginas eram criadas para serem visualizadas em 
       <th scope="row">Prerrequisitos:</th>
       <td>
         HTML básico (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), e uma idea de como o CSS funciona (estude
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS first steps</a> e
-        <a href="/pt-BR/docs/Learn/CSS/Building_blocks">CSS building blocks</a
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS first steps</a> e
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333">CSS building blocks</a
         >.)
       </td>
     </tr>

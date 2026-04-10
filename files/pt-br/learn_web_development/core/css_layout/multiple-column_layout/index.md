@@ -14,7 +14,7 @@ A especificação de layout de várias colunas fornece um método de disposiçã
       <th scope="row">Pré requisitos:</th>
       <td>
         HTML basico (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >) e uma ideia de como CSS funciona (estude
         <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"

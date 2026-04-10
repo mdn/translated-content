@@ -17,17 +17,17 @@ Embora trabalhar com esta lição possa parecer menos relevante imediatamente e 
       <td>
         Conhecimentos básicos em informática,
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conhecimentos básicos de
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabalhando com arquivos</a
         >, noções básicas de HTML (estudo
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
          >), e uma ideia de como funciona o CSS (estudo
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">Primeiros passos do CSS</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">Primeiros passos do CSS</a>.)
       </td>
     </tr>
     <tr>

@@ -15,9 +15,9 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
       <td>
         Interação básica com o computador, entendimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (ver
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Elementos construtivos</a
         >).
       </td>

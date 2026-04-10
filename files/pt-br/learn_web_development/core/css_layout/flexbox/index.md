@@ -14,7 +14,7 @@ Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Fle
       <th scope="row">Pré-requisitos:</th>
       <td>
         HTML básico (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução a HTML</a
         >), e uma ideia de como CSS funciona (estude
         <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a

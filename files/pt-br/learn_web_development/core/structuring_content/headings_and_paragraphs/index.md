@@ -14,7 +14,7 @@ Um dos principais objetivos do HTML é dar estrutura de texto e significado, tam
       <th scope="row">Pré-requisitos:</th>
       <td>
         Familiaridade básica em HTML, tal como coberto
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Iniciando com o HTML.</a
         >
       </td>

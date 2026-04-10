@@ -58,7 +58,7 @@ input {
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
-      <td><a href="/pt-BR/docs/Web/HTML/Element/input#checked"><code>checked</code></a></td>
+      <td><a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#checked"><code>checked</code></a></td>
     </tr>
     <tr>
       <td><strong>Atributos IDL</strong></td>

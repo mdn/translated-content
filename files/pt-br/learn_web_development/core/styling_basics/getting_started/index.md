@@ -22,7 +22,7 @@ Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de 
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >operação com arquivos</a
         >, básico de HTML (veja
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >), e uma ideia de
         <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"

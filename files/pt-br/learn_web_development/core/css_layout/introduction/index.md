@@ -14,7 +14,7 @@ This article will recap some of the CSS layout features we've already touched up
       <th scope="row">Prerequisites:</th>
       <td>
         The basics of HTML (study
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
         <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"

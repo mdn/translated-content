@@ -15,17 +15,17 @@ Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para
       <td>
         Familiaridade básica em utilizar computadores, ambiente de trabalho
         básico configurado conforme detalhado em<a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conhecimento básico de como
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >criar e gerenciar arquivos</a
         >, básico de HTML (
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >), e uma idéia de como o CSS funciona (ensinado em
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS primeiros passos</a>.)
       </td>
     </tr>
     <tr>

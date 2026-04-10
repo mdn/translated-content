@@ -30,13 +30,13 @@ code {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -44,7 +44,7 @@ code {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -57,7 +57,7 @@ code {
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
