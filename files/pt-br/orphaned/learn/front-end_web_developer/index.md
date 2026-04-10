@@ -96,7 +96,7 @@ As avaliações em cada módulo são projetadas para testar seu conhecimento sob
 
 #### Conteúdo adicional
 
-- [CSS layout cookbook](/pt-BR/docs/Web/CSS/Layout_cookbook)
+- [CSS layout cookbook](/pt-BR/docs/Web/CSS/How_to/Layout_cookbook)
 
 ### Interatividade com JavaScript
 

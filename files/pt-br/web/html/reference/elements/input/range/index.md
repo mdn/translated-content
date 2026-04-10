@@ -91,7 +91,7 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
 
 ## Value
 
-O atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) contém uma {{domxref("DOMString")}} que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (`""`). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:
+O atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) contém uma {{domxref("DOMString")}} que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (`""`). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:
 
 ```js
 defaultValue =
@@ -117,7 +117,7 @@ Como regra geral, se o usuário tiver maior probabilidade de se interessar por p
 
 ### Especificando o mínimo e o máximo
 
-Por padrão, o mínimo é 0 e o máximo é 100. Se não é o que você precisa, voce pode facilmente especificar limites diferentes alterando os valores dos atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e/ou [`max`](/pt-BR/docs/Web/HTML/Element/input#max). Este pode ser um valor inteiro.
+Por padrão, o mínimo é 0 e o máximo é 100. Se não é o que você precisa, voce pode facilmente especificar limites diferentes alterando os valores dos atributos [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e/ou [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max). Este pode ser um valor inteiro.
 
 Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:
 
@@ -129,7 +129,7 @@ Por exemplo, para pedir ao usuário um valor entre -10 e 10, você pode usar:
 
 ### Definindo a escala entre valores
 
-Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo [`step`](/pt-BR/docs/Web/HTML/Global_attributes#step) para controlar esta escala. Por exemplo, se você precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de `step` para 0.01:
+Por padrão, a escala entre o mínimo e o máximo é 1, significando que este sempre é um valor inteiro. você pode alterar o atributo [`step`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#step) para controlar esta escala. Por exemplo, se você precisa de um valor de duas casas decimais entre os valores 5 e 10, voce deve definir o valor de `step` para 0.01:
 
 ### Configurando o atributo step
 
@@ -141,7 +141,7 @@ Por padrão, a escala entre o mínimo e o máximo é 1, significando que este se
 
 ### Configurando step como `any`
 
-Se você deseja aceitar um valor independente das casas decimais, voce pode especificar o valor `"any"` para o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step):
+Se você deseja aceitar um valor independente das casas decimais, voce pode especificar o valor `"any"` para o atributo [`step`](/pt-BR/docs/Web/HTML/Reference/Elements/input#step):
 
 ```html
 <input type="range" min="0" max="3.14" step="any" />
@@ -153,7 +153,7 @@ Este exemplo permite ao usuário selecionar qualquer valor entre 0 e π sem qual
 
 ### Adicionando marcas de mapeamento e etiquetas
 
-As especificações do HTML oferece aos navegadores uma certa flexibilidade sobre como apresentar o controle deslizante. Em parte alguma esta flexibilidade é mais aparente do que no mapeamento de marcas e, menos ainda, na etiqueta. A especificação descreve como adicionar pontos personalizados ao controle usando o atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list) e o elemento {{HTMLElement("datalist")}} , mas não tem requisitos nem padronizações para marcações ou mesmo pontos ao longo do controle deslizante.
+As especificações do HTML oferece aos navegadores uma certa flexibilidade sobre como apresentar o controle deslizante. Em parte alguma esta flexibilidade é mais aparente do que no mapeamento de marcas e, menos ainda, na etiqueta. A especificação descreve como adicionar pontos personalizados ao controle usando o atributo [`list`](/pt-BR/docs/Web/HTML/Reference/Elements/input#list) e o elemento {{HTMLElement("datalist")}} , mas não tem requisitos nem padronizações para marcações ou mesmo pontos ao longo do controle deslizante.
 
 #### Modelo de controle do range
 
@@ -161,7 +161,7 @@ Uma vez que os navegadores têm essa flexibilidade e, até à data, nenhum supor
 
 ##### Um controle sem o atributo
 
-Isto é o que você obtem se não especificar o atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list) , ou se o navegador não oferece suporte.
+Isto é o que você obtem se não especificar o atributo [`list`](/pt-BR/docs/Web/HTML/Reference/Elements/input#list) , ou se o navegador não oferece suporte.
 
 <table class="standard-table">
   <tbody>
@@ -184,7 +184,7 @@ Isto é o que você obtem se não especificar o atributo [`list`](/pt-BR/docs/We
 
 ##### Um controle com o Atributo
 
-Este controle está usando um atributo `list` especificando o ID de uma {{HTMLElement("datalist")}} que define uma serie de marcações no controle. Há 11 deles, de modo que há um 0% bem como a adição de 10% em cada próximo. Cada ponto representa usando um elemento {{HTMLElement("option")}} com propriedade [`value`](/pt-BR/docs/Web/HTML/Element/option#value) definido para o valor do intervalo no qual uma marca deve ser desenhada.
+Este controle está usando um atributo `list` especificando o ID de uma {{HTMLElement("datalist")}} que define uma serie de marcações no controle. Há 11 deles, de modo que há um 0% bem como a adição de 10% em cada próximo. Cada ponto representa usando um elemento {{HTMLElement("option")}} com propriedade [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/option#value) definido para o valor do intervalo no qual uma marca deve ser desenhada.
 
 <table class="standard-table">
   <tbody>
@@ -227,7 +227,7 @@ Este controle está usando um atributo `list` especificando o ID de uma {{HTMLEl
 
 ##### Um controle deslizante com marcas e rótulos
 
-Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-BR/docs/Web/HTML/Element/option#label) para o elemento {{HTMLElement("option")}} correspondente às marcas de marcação para as quais você deseja ter rótulos.
+Você pode adicionar rótulos para seu controle usando o atributo [`label`](/pt-BR/docs/Web/HTML/Reference/Elements/option#label) para o elemento {{HTMLElement("option")}} correspondente às marcas de marcação para as quais você deseja ter rótulos.
 
 <table class="standard-table">
   <tbody>
@@ -354,10 +354,10 @@ O tamanho do controle está configurado para ter 150 pixels de comprimento por 2
 
 Não há padrões de validação disponível, no entanto, as seguintes formas de validações são realizadas automaticamente:
 
-- Se [`value`](/pt-BR/docs/Web/HTML/Element/input#value) estiver definido para algo que não possa ser convertido em um número flutuante válido, a validação falhará porque a entrada está sofrendo de uma entrada incorreta.
-- O valor não será inferior há [`min`](/pt-BR/docs/Web/HTML/Element/input#min). O valor padrão é 0.
-- O valor não pode ser maior que [`max`](/pt-BR/docs/Web/HTML/Element/input#max). O valor padrão é 100.
-- O valor será um multiplo de [`step`](/pt-BR/docs/Web/HTML/Element/input#step). O valor padrão é 1.
+- Se [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) estiver definido para algo que não possa ser convertido em um número flutuante válido, a validação falhará porque a entrada está sofrendo de uma entrada incorreta.
+- O valor não será inferior há [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min). O valor padrão é 0.
+- O valor não pode ser maior que [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max). O valor padrão é 100.
+- O valor será um multiplo de [`step`](/pt-BR/docs/Web/HTML/Reference/Elements/input#step). O valor padrão é 1.
 
 ## Exemplos
 

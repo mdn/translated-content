@@ -41,4 +41,4 @@ Usar o elemento `<canvas>`não é muito difícil, mas você precisa de um conhec
 
 Devido a um erro técnico lamentável que ocorreu na semana de 17 de junho de 2013, perdemos parte do histórico deste tutorial, incluindo atribuições a todos os contribuidores anteriores ao seu conteúdo. Pedimos desculpas por isso, e espero que você nos perdoe desse infeliz infortúnio.
 
-{{ Next("Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica") }}
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

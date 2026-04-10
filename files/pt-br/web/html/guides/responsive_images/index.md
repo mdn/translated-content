@@ -10,7 +10,7 @@ Neste artigo nós iremos aprender sobre o conceito de imagens responsivas — im
 
 | Pré-requisitos: | Você deve ter visto a [introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content) e como [adicionar imagens estáticas numa página web](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images). |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objetivo:       | Aprender como usar funcionalidades como [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e o elemento {{htmlelement("picture")}} para implementar soluções de imagens responsivas em websites.                                    |
+| Objetivo:       | Aprender como usar funcionalidades como [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset) e o elemento {{htmlelement("picture")}} para implementar soluções de imagens responsivas em websites.                         |
 
 ## Por que imagens responsivas?
 
@@ -39,7 +39,7 @@ Você pode pensar que imagens vetorizadas resolveriam estes problemas, e elas re
 Este tipo de problema não existia quando a web começou a existir, no começo dos anos 1990 - naquele tempo somente desktops e laptops navegavam a Web, então engenheiros de navegadores e programadores nem pensavam em implementar soluções. _Tecnologias de imagens responsivas_ foram implementadas recentemente para resolver os problemas indicados acima, permitindo a você oferecer ao navegador vários arquivos de imagem, todas mostrando a mesma coisa mas contendo diferentes números de pixels (mudança de resolução), ou diferentes imagens para diferentes espaços de alocação (direção de arte).
 
 > [!NOTE]
-> As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
+> As novas funcionalidades discutidas neste artigo — [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset)/[`sizes`](/pt-BR/docs/Web/HTML/Reference/Elements/img#sizes)/{{htmlelement("picture")}} — são todas suportadas nas versões atuais de navegadores mobile e desktop (incluindo Microsoft Edge, embora não suportada pelo Internet Explorer).
 
 ## Como você faz para criar imagens responsivas?
 
@@ -53,7 +53,7 @@ Então, qual é o problema que nós queremos resolver com a mudança de resoluç
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-Nós podemos, entretanto, usar dois novos atributos — [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes) — para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a escolher a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
+Nós podemos, entretanto, usar dois novos atributos — [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Reference/Elements/img#sizes) — para fornecer várias fontes adicionais juntamente com sugestões para ajudar o navegador a escolher a correta. Você pode ver um exemplo disso no nosso exemplo [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) no Github (ver também [o código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
 <img
@@ -103,7 +103,7 @@ Então, com estes atributos no lugar, o navegador irá:
 
 E é isto! Então neste ponto, se um navegador suportado com uma largura de 480px carregar a página, a condição (`max-width: 480px`) será verdadeira, então o slot `440px` será escolhido, então o `elva-fairy-480w.jpg` será carregada, como a largura inerente (`480w`) é a mais próxima de `440px`. A imagem de 800px é 128KB no disco enquanto que a versão de 480px é somente 63KB - economizando 65KB. Agora imagine se fosse uma página que tivesse várias imagens. Usando esta técnica poderia economizar os dados de usuários de celular.
 
-Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Element/img#src) como normal.
+Navegadores antigos que não suportam estas funcionalidades serão ignorados, seguiremos e carregaremos a imagem definida no atributo [`src`](/pt-BR/docs/Web/HTML/Reference/Elements/img#src) como normal.
 
 > [!NOTE]
 > No {{htmlelement("head")}} do documento você encontrará a linha `<meta name="viewport" content="width=device-width">`: isto força os navegadores de celular a adotar a largura real para carregar páginas da web (alguns navegadores mobile mentem sobre sua largura da janela, e em vez carregam páginas em uma largura grande, então encolhem a página carregada, o que é de muita ajuda para imagens e designs responsivos. Nós iremos ensinar mais sobre isso em um módulo futuro).
@@ -217,7 +217,7 @@ Para esse exercício, nós estamos esperando que você seja corajoso e vá sozin
 Isto é um geral sobre imagens responsivas - nós esperamos que você tenha aproveitado estas novas técnicas. Recapitulando, há dois problemas que nós discutimos aqui:
 
 - **Direção de Arte:** O problema consiste em apresentar imagens cortadas para diferentes layouts - por exemplo, uma imagem panorâmica mostrada completa em um layout desktop, e uma imagem retrato mostrando o objeto principal ampliado em um layout mobile. Isto pode ser resolvido usando o elemento {{htmlelement("picture")}}.
-- **Mudança de resolução:** O problema é apresentar arquivos menores de imagens para dispositivos estreitos, porque eles não precisam de imagens gigantes como em computadores - e também, opcionalmente, que você queira apresentar imagens de diferentes resoluções para altas e baixas densidades de tela. Isto pode resolver usando [vector graphics](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (imagens SVG), e os atributos [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Element/img#sizes).
+- **Mudança de resolução:** O problema é apresentar arquivos menores de imagens para dispositivos estreitos, porque eles não precisam de imagens gigantes como em computadores - e também, opcionalmente, que você queira apresentar imagens de diferentes resoluções para altas e baixas densidades de tela. Isto pode resolver usando [vector graphics](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (imagens SVG), e os atributos [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Reference/Elements/img#sizes).
 
 Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content)! A única coisa para fazer agora é seguir e tentar nosso [Teste de Multimídia e Incorporação](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), e ver como você está. Divirta-se!
 

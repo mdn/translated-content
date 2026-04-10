@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_colors/Applying_color
 
 Este artigo é uma cartilha que apresenta cada uma das maneiras pelas quais as cores CSS podem ser usadas em HTML.
 
-O uso da cor é uma forma fundamental de expressão humana. As crianças experimentam a cor antes mesmo de terem a destreza manual para desenhar. Talvez seja por isso que a cor é uma das primeiras coisas que as pessoas muitas vezes querem experimentar quando aprendem a desenvolver sites. Com [CSS](/pt-BR/docs/Web/CSS), há várias maneiras de adicionar cor aos seus [elementos](/pt-BR/docs/Web/HTML/Element) [HTML](/pt-BR/docs/Web/HTML) para criar exatamente a aparência desejada.
+O uso da cor é uma forma fundamental de expressão humana. As crianças experimentam a cor antes mesmo de terem a destreza manual para desenhar. Talvez seja por isso que a cor é uma das primeiras coisas que as pessoas muitas vezes querem experimentar quando aprendem a desenvolver sites. Com [CSS](/pt-BR/docs/Web/CSS), há várias maneiras de adicionar cor aos seus [elementos](/pt-BR/docs/Web/HTML/Reference/Elements) [HTML](/pt-BR/docs/Web/HTML) para criar exatamente a aparência desejada.
 
 Vamos abordar a maior parte do que você precisa saber ao usar cores, incluindo uma [lista do que você pode colorir e quais propriedades CSS estão envolvidas](#things_that_can_have_color), [como você descreve as cores](#how_to_describe_a_color), e como realmente [usar cores em folhas de estilo e em scripts](#using_color). Também veremos como [deixar o usuário escolher uma cor](#letting_the_user_pick_a_color).
 
@@ -37,7 +37,7 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("text-emphasis-color")}}
   - : A cor a ser usada ao desenhar símbolos de ênfase adjacentes a cada caractere no texto. Isso é usado principalmente ao desenhar texto para idiomas do Leste Asiático.
 - {{cssxref("caret-color")}}
-  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) está definido.
+  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#contenteditable) está definido.
 
 ### Caixas
 
@@ -88,7 +88,7 @@ Para uma discussão mais detalhada de cada um dos tipos de valor de cor, veja a 
 
 Um conjunto de nomes de cores padrão foi definido, permitindo que você use essas palavras-chave em vez de representações numéricas de cores se você optar por fazer isso e houver uma palavra-chave representando a cor exata que você deseja usar. As palavras-chave de cores incluem as cores primárias e secundárias padrão (como `red`, `blue` ou `orange`), tons de cinza (de `black` a `white`, incluindo cores como `darkgray` e `lightgrey`), e uma variedade de outras cores misturadas, incluindo `lightseagreen`, `cornflowerblue` e `rebeccapurple`.
 
-Veja [Palavras-chave de cores](/pt-BR/docs/Web/CSS/color_value#palavras-chave_de-cores) para uma lista de todas as palavras-chave de cores disponíveis.
+Veja [Palavras-chave de cores](/pt-BR/docs/Web/CSS/Reference/Values/color_value#palavras-chave_de-cores) para uma lista de todas as palavras-chave de cores disponíveis.
 
 ### valores RGB
 
@@ -299,7 +299,7 @@ Nossas duas caixas coloridas compartilham várias propriedades em comum, então,
 }
 ```
 
-Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
+Resumidamente, `.box` estabelece o tamanho de cada caixa, bem como a configuração da fonte utilizada dentro dela. Também aproveitamos o [CSS Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout) para centralizar facilmente o conteúdo de cada caixa. Ativamos o modo `flex` usando {{cssxref("display", "display: flex")}} e definimos {{cssxref("justify-content")}} e {{cssxref("align-items")}} para `center`. Então podemos criar uma classe para cada umas duas caixas que definem as propriedades que diferem entre as duas.
 
 ```css
 .boxLeft {
@@ -339,7 +339,7 @@ Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que �
 
 ## Deixando o usuário escolher uma cor
 
-Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
+Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type).
 
 O elemento `<input>` representa uma cor apenas na [notação de string hexadecimal](#hexadecimal_string_notation) abordada acima.
 
@@ -441,7 +441,7 @@ Depois de decidir a cor base, existem muitas ferramentas on-line que podem ajud�
 
 Alguns exemplos (todos gratuitos para uso a partir do momento em que esta lista foi revisada pela última vez):
 
-- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [Ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Paletton](https://paletton.com/)
 - [Roda de cores on-line do Adobe Color CC](https://color.adobe.com/create/color-wheel)
 
@@ -525,4 +525,4 @@ Com este conjunto, o navegador não alterará a aparência do elemento e o desen
 
 - [Desenhando gráficos](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Gráficos na web](/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [ferramenta seletora de cores do MDN](/pt-BR/docs/Web/CSS/Guides/Colors/Color_format_converter)
