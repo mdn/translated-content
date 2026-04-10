@@ -217,7 +217,7 @@ Em resumo, usar tabelas para leiuate no lugar de usar [técnicas de leiaute CSS]
 Falamos o suficiente sobre teoria de tabelas, então, vamos partir para um exemplo prático e construir uma tabela simples.
 
 1. Antes de tudo, faça uma cópia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório na sua máquina local.
-2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Element/table)**. Acrescente-as dentro da seção body de seu HTML.
+2. O conteúdo de cada tabela fica contido entre as duas tags : **[`<table></table>`](/pt-BR/docs/Web/HTML/Reference/Elements/table)**. Acrescente-as dentro da seção body de seu HTML.
 3. O menor contêiner dentro de uma tabela é uma célula da tabela, que é criada por um elemento **[`<td>`](/pt-BR/docs/Web/HTML/Element/td)** ('td' significa 'dados da tabela'). Adicione as linhas seguintes dentro das tags da tabela:
 
    ```html
@@ -319,7 +319,7 @@ Aqui, o problema é que mesmo que possamos entender o que está acontecendo, nã
 Vamos tentar melhorar essa tabela.
 
 1. Primeiro, faça uma cópia local dos arquivos [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) e [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dentro de um novo diretório da sua máquina local. O HTML contém o mesmo exemplo de Dogs visto acima.
-2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Element/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
+2. Para reconhecer os cabeçalhos de uma tabela como cabeçalhos, tanto visualmente como semanticamente, podemos usar o elemento **[`<th>`](/pt-BR/docs/Web/HTML/Reference/Elements/th)** ('th' significa 'cabeçalho da tabela'). Ele funciona da mesma maneira que um `<td>`, exceto que denota um cabeçalho, e não uma célula normal. Abra o arquivo HTML, e mude todos os elementos `<td>` que envolvem os cabeçalhos das tabelas para o elemento `<th>`.
 3. Salve o HTML e abra em um navegador, e veja que os cabeçalhos agora se parecem mais com cabeçalhos.
 
 > [!NOTE]
@@ -396,7 +396,7 @@ Vamos usar `colspan` e `rowspan` para melhorar essa tabela.
 Existe uma última característica da qual vamos falar nesse artigo, antes de prosseguir. HTML tem um método de definir informação de estilo para uma coluna inteira de dados de uma só vez — o elemento **[`<col>`](/pt-BR/docs/Web/HTML/Element/col)** e **[`<colgroup>`](/pt-BR/docs/Web/HTML/Element/colgroup)**. Eles existem por que pode ser um pouco entediante e ineficiente ter de especificar o estilo de colunas - temos de especificar as informações de estilo para _cada_ `<td>` ou `<th>` da coluna, ou usar um seletor complexo como o {{cssxref(":nth-child()")}}.
 
 > [!NOTE]
-> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/background), [`width`](/pt-BR/docs/Web/CSS/width), e [`visibility`](/pt-BR/docs/Web/CSS/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
+> Estilizar colunas dessa maneira está [limitada para umas poucas propriedades](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/pt-BR/docs/Web/CSS/border), [`background`](/pt-BR/docs/Web/CSS/Reference/Properties/background), [`width`](/pt-BR/docs/Web/CSS/Reference/Properties/width), e [`visibility`](/pt-BR/docs/Web/CSS/Reference/Properties/visibility). Para ajustar outras propriedades devemos aplicar o estilo para cada `<td>` ou `<th>` da coluna, ou usar um seletor complexo como um {{cssxref(":nth-child()")}}.
 
 Veja o simples exemplo a seguir:
 

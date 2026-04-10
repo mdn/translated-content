@@ -189,7 +189,7 @@ Lembre-se de que essas são propriedades personalizadas, não variáveis reais, 
 
 ## Valores alternativos de propriedade personalizada
 
-Usando a função [`var()`](/pt-BR/docs/Web/CSS/var), você pode definir vários **valores alternativos** quando a variável dada ainda não está definida; isso pode ser útil ao trabalhar com [Elementos personalizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements) e [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).
+Usando a função [`var()`](/pt-BR/docs/Web/CSS/Reference/Values/var), você pode definir vários **valores alternativos** quando a variável dada ainda não está definida; isso pode ser útil ao trabalhar com [Elementos personalizados](/pt-BR/docs/Web/API/Web_components/Using_custom_elements) e [Shadow DOM](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM).
 
 > [!NOTE]
 > os valores alternativos não são usados para corrigir a compatibilidade do navegador. Se o navegador não oferecer suporte a propriedades personalizadas de CSS, o valor de fallback não ajudará. É apenas um backup para o navegador que suporta propriedades personalizadas CSS para escolher um valor diferente se a variável fornecida não estiver definida ou tiver um valor inválido.
@@ -228,7 +228,7 @@ No entanto, quando os valores das propriedades personalizadas são analisados, o
 
 Infelizmente, esses valores válidos podem ser usados, através da notação funcional `var()`, em um contexto onde eles podem não fazer sentido. Propriedades e variáveis personalizadas podem levar a declarações CSS inválidas, levando ao novo conceito de _válido no tempo computado._
 
-Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) ou [herdado](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance) valor da propriedade é usado.
+Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37) ou [herdado](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance) valor da propriedade é usado.
 
 Os próximos dois exemplos ilustram isso.
 
@@ -310,5 +310,5 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## Veja também
 
-- [Sintaxe de propriedade personalizada](/pt-BR/docs/Web/CSS/--*)
-- [`var()`](/pt-BR/docs/Web/CSS/var)
+- [Sintaxe de propriedade personalizada](/pt-BR/docs/Web/CSS/Reference/Properties/--*)
+- [`var()`](/pt-BR/docs/Web/CSS/Reference/Values/var)

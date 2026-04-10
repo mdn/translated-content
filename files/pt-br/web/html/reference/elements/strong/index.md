@@ -66,7 +66,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -112,6 +112,6 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 ## Veja também
 
-- [HTML bold element](/pt-BR/docs/Web/HTML/Element/b)
+- [HTML bold element](/pt-BR/docs/Web/HTML/Reference/Elements/b)
 
 {{HTMLSidebar}}

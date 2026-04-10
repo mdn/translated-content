@@ -40,7 +40,7 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### HTML
 
-- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
+- La propriété `crossOrigin` a été ajouté à [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/img#crossorigin) a été ajouté à l'élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (voir [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299)).
 - La méthode [`HTMLSelectElement.add()`](</fr/docs/Web/API/HTMLSelectElement#add()>) supporte désormais supporte désormais soit un élément ou soit l'index d'un élément auquel un nouvel élément doit être inséré avant. Auparavant, seulement un élément était supporté (voir [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200)).
 - Le constructeur `HTMLIsIndexElement` a été retiré. Aucun éléments n'a implémenté cette interface depuis Firefox 4.
 - la fonctionnalité HTML5 "menu contextuel" (attribut `contextmenu`), qui vous permet d'ajouter des éléments personnalisés particuliers au menu contextuel d'origine, est désormais supportée (l'implémentation est encore expérimentale en attendant des changements dans la spécification (voir [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)')).
@@ -90,8 +90,8 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### WebSockets
 
-- La méthode [`send()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#send()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ne renvoie plus à tort une valeur booléenne.
-- La méthode [`close()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#close()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
+- La méthode [`send()`](</fr/docs/Web/API/WebSocket#send()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ne renvoie plus à tort une valeur booléenne.
+- La méthode [`close()`](</fr/docs/Web/API/WebSocket#close()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
 - L'attribut `extensions` de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) est à présent supporté.
 - Le constructeur WebSocket supporte désormais un ensemble de protocoles ainsi que la chaîne d'un seul protocole.
 - Le contenu mixte n'est pas autorisé avec WebSockets, vous ne pouvez plus établir une connexion vers un serveur WebSocket non sécurisé à partir d'un contenu sécurisé.

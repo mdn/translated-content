@@ -35,8 +35,8 @@ original_slug: Web/CSS/CSS_display
 
 ### `display: flex`
 
-- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Alinhando itens em um container Flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alinhando itens em um container Flex](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Relações de controle de itens flexíveis ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [Combinações Flexbox entre navegadores](/pt-BR/docs/Glossary/Flexbox)
 - [Dominando o agrupamento de itens flexíveis](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
@@ -47,8 +47,8 @@ original_slug: Web/CSS/CSS_display
 
 ### `display: grid`
 
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
 - [Posicionamento baseado em linha](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Áreas de modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [Layout usando linhas de grade nomeadas](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)

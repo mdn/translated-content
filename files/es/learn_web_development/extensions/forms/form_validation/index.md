@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 original_slug: Learn/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 Antes de enviar datos al servidor, es importante asegurarse de que se completan todos los controles de formulario requeridos, y en el formato correcto. Esto se denomina **validación de formulario en el lado del cliente** y ayuda a garantizar que los datos que se envían coinciden con los requisitos establecidos en los diversos controles de formulario. Este artículo te guiará por los conceptos básicos y ejemplos de validación de formularios en el lado del cliente.
 
@@ -14,9 +14,9 @@ Antes de enviar datos al servidor, es importante asegurarse de que se completan 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, y entender cómo funcionan el
-        <a href="/es/docs/Learn/HTML">HTML</a>, el
-        <a href="/es/docs/Learn/CSS">CSS</a> y el
-        <a href="/es/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>, el
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> y el
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -801,7 +801,7 @@ Como puedes ver, no es tan difícil construir un sistema de validación por tu c
 
 ## Prueba tus habilidades!
 
-Has llegado al final de este artículo pero ¿puedes recordar la información más importante?Puedes encontrar pruebas adicionales para comprovar que has comprendido la información antes de que continue — visita [Prueba tus habilidades: Validación de formularios](/es/docs/Learn/Forms/Test_your_skills:_Form_validation).
+Has llegado al final de este artículo pero ¿puedes recordar la información más importante?Puedes encontrar pruebas adicionales para comprovar que has comprendido la información antes de que continue — visita [Prueba tus habilidades: Validación de formularios](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Resumen
 
@@ -813,10 +813,10 @@ La validación de formularios en el lado del cliente a veces requiere JavaScript
 
 Una vez que hayas verificado que el formulario se ha completado correctamente, puedes proceder a enviarlo. Vamos a exponer el [envío de los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) en el próximo artículo.
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 ### Temas avanzados
 
 - [Cómo construir controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Enviar formularios por JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn_web_development/Extensions/Forms)

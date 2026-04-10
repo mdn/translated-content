@@ -54,5 +54,5 @@ Inclua este polyfill para fornecer suporte para navegadores mais antigos e atual
 
 ## Veja também
 
-- O elemento {{ HTMLElement("input") }}, especialmente seu atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list);
+- O elemento {{ HTMLElement("input") }}, especialmente seu atributo [`list`](/pt-BR/docs/Web/HTML/Reference/Elements/input#list);
 - O elemento {{ HTMLElement("option") }}.
