@@ -136,4 +136,4 @@ Each shadow in the list (treating `none` as a 0-length list) is interpolated via
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS](/pt-BR/docs/Web/CSS/Guides/Colors/Applying_color)
