@@ -49,14 +49,14 @@ slug: Web/HTML/Guides/Constraint_validation
   <tbody>
     <tr>
       <td>
-        <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a href="/ru/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>
       </td>
       <td>
-        <a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions"
+        <a href="/ru/docs/Web/JavaScript/Guide/Regular_expressions"
           >Регулярное выражение JavaScript</a
         >
         (без
