@@ -53,8 +53,8 @@ function changeColor(newColor) {
 
 document.querySelectorAll("button").forEach((button) => {
   const colors = {
-    "蓝色": "blue",
-    "红色": "red",
+    蓝色: "blue",
+    红色: "red",
   };
   button.addEventListener("click", (event) => {
     changeColor(colors[event.target.textContent]);
