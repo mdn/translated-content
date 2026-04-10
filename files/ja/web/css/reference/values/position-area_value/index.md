@@ -341,5 +341,5 @@ The y-axis keywords include:
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/ja/docs/Web/CSS/Reference/Values/anchor) function
 - [CSS アンカー位置指定の使用](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using)ガイド
-- [オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイド
+- [オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイド
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)モジュール
