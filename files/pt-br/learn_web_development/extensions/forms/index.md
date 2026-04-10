@@ -60,4 +60,4 @@ A definir.
 
 ## Veja também
 
-- [Referência de elementos de formulário HTML](/pt-BR/docs/Web/HTML/Element#formulários)
+- [Referência de elementos de formulário HTML](/pt-BR/docs/Web/HTML/Reference/Elements#formulários)

@@ -9,7 +9,7 @@ original_slug: Web/HTML/Element
 Esta página lista todos los {{Glossary("Element","elementos")}} {{Glossary("HTML")}}. Están agrupados por funciones para ayudarte a encontrar lo que tienes en mente con facilidad. Aunque esta guía está escrita para aquellos que son nuevos escribiendo código, se pretende que sea una referencia útil para cualquiera.
 
 > [!NOTE]
-> Para más información básica acerca de los elementos y atributos HTML, vea [la sección sobre elementos en el artículo 'Introducción a HTML'](/es/docs/Web/Guide/HTML/Introduction#Elements_%E2%80%94_the_basic_building_blocks).
+> Para más información básica acerca de los elementos y atributos HTML, vea [la sección sobre elementos en el artículo 'Introducción a HTML'](/es/docs/Learn_web_development/Core/Structuring_content#Elements_%E2%80%94_the_basic_building_blocks).
 
 ## Raíz principal
 

@@ -19,7 +19,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 - [A estrutura básica de uma página web](https://reference.sitepoint.com/html/page-structure) — o doctype e a 'árvore' do documento
 - [Elementos HTML fundamentais](https://reference.sitepoint.com/html/elements) — estrutura, cabeçalho, lista, elementos de formulário e mais, explicados por categoria.
 - [Tutorial para iniciantes HTML](https://htmldog.com/guides/htmlbeginner/) — um tutorial e exercícios que recapitulam o conhecimento básico aprendido acima.
-- [Elementos HTML](/pt-BR/docs/Web/HTML/Element) — um guia completo para os elementos HTML elements com detalhes de como os navegadores os suportam
+- [Elementos HTML](/pt-BR/docs/Web/HTML/Reference/Elements) — um guia completo para os elementos HTML elements com detalhes de como os navegadores os suportam
 
 ### CSS
 

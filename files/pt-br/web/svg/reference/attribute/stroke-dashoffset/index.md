@@ -25,5 +25,5 @@ O valor pode ser negativo.
 
 Os seguintes elementos podem utilizar o atributo `stroke-dashoffset`
 
-- [Shape elements](/pt-BR/docs/Web/SVG/Element#shape) »
-- [Text content elements](/pt-BR/docs/Web/SVG/Element#textcontent) »
+- [Shape elements](/pt-BR/docs/Web/SVG/Reference/Element#shape) »
+- [Text content elements](/pt-BR/docs/Web/SVG/Reference/Element#textcontent) »

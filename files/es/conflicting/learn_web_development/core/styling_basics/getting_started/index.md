@@ -15,13 +15,13 @@ Ahora que ya sabes qué es el CSS y conoces sus conceptos básicos, es hora de p
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajo con archivos</a
         >, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y una idea de
         <a href="/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"

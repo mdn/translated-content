@@ -135,7 +135,7 @@ La función `minmax()` puede ser usada dentro de:
    7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
    8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
    9. [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/Guides/Grid_layout)
    11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 5. **Propiedades**

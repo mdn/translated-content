@@ -6,7 +6,7 @@ original_slug: Web/CSS/display
 
 {{CSSRef}}
 
-A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/CSS_grid_layout) ou [flex](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout).
+A propriedade **`display`** [CSS](/pt-BR/docs/Web/CSS) define se um elemento é tratado como um [bloco ou elemento inline](/pt-BR/docs/Web/CSS/CSS_Flow_Layout) e o layout usado para seus filhos, como [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout), [grid](/pt-BR/docs/Web/CSS/Guides/Grid_layout) ou [flex](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout).
 
 Formalmente, a propriedade **`display`** define os _tipos de exibição_ internos e externos de um elemento. O tipo externo define a participação de um elemento no [layout de fluxo](/pt-BR/docs/Web/CSS/CSS_Flow_Layout); o tipo interno define o layout dos filhos. Alguns valores de `display` são totalmente definidos em suas próprias especificações individuais; por exemplo, o detalhe do que acontece quando `display: flex` é declarado é definido na especificação CSS Flexible Box Model.
 
@@ -85,9 +85,9 @@ Os valores de palavra-chave podem ser agrupados em seis categorias de valor.
     - `table`
       - : Esses elementos se comportam como elementos HTML {{HTMLElement("table")}}. Ele define uma caixa de nível de bloco.
     - `flex`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout).
     - `grid`
-      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout).
+      - : O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o [modelo de grade](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
     - `ruby` {{Experimental_Inline}}
       - : O elemento se comporta como um elemento inline e apresenta seu conteúdo de acordo com o modelo de formatação ruby. Ele se comporta como os elementos HTML {{HTMLElement("ruby")}} correspondentes.
 
@@ -223,8 +223,8 @@ As páginas individuais para os diferentes tipos de valor que o `display` pode t
 
 ### display: flex
 
-- [Conceitos básicos do flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Alinhamento de itens em um contêiner flexível](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Conceitos básicos do flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Alinhamento de itens em um contêiner flexível](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
 - [Controle de proporções de itens flexíveis ao longo do eixo principal](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [Mastering Wrapping of Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)
 - [Ordering Flex Items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)
@@ -233,8 +233,8 @@ As páginas individuais para os diferentes tipos de valor que o `display` pode t
 
 ### display: grid
 
-- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Conceitos básicos de layout de grade](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relação com outros métodos de layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
 - [Posicionamento baseado em linha](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Áreas de modelo de grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [Layout usando linhas de grade nomeadas](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)

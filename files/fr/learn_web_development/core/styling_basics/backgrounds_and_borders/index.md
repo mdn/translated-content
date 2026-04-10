@@ -15,16 +15,16 @@ Dans cette leçon, nous verrons quelques-unes des mises en forme créatives auto
       <td>
         Compétences informatique basiques,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base installés</a
         >, connaissance simple en
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manipulation de fichiers</a
         >, les bases du HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), et une esquisse du fonctionnement du CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>. )
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">premiers pas en CSS</a>. )
       </td>
     </tr>
     <tr>

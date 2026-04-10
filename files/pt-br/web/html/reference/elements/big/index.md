@@ -10,7 +10,7 @@ The obsolete **HTML Big Element** (**`<big>`**) renders the enclosed text at a f
 
 ## Atributos
 
-This element has no other attributes than the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes), common to all elements.
+This element has no other attributes than the [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes), common to all elements.
 
 ## Examples
 
