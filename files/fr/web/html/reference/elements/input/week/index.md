@@ -10,9 +10,7 @@ Les éléments {{HTMLElement("input")}} de type **`week`** créent des champs de
 {{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;week&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="camp-week">
-  Choisissez une semaine en mai ou en juin&nbsp;:
-</label>
+<label for="camp-week"> Choisissez une semaine en mai ou en juin&nbsp;: </label>
 
 <input
   type="week"
@@ -48,9 +46,7 @@ Une chaîne de caractères qui représente la valeur de la semaine et de l'anné
 Il est possible de définir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) de la façon suivante&nbsp;:
 
 ```html
-<label for="week">
-  À quelle semaine souhaiteriez-vous démarrer&nbsp;?
-</label>
+<label for="week"> À quelle semaine souhaiteriez-vous démarrer&nbsp;? </label>
 <input id="week" type="week" name="week" value="2017-W01" />
 ```
 
