@@ -1,6 +1,5 @@
 ---
 title: CSS
-short-title: CSS
 slug: Web/CSS
 ---
 
