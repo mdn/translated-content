@@ -36,9 +36,9 @@ L'élément `<select>` et le sélecteur ont automatiquement une relation implici
 
 ### Positionnement par ancre du sélecteur
 
-Autre effet de la relation implicite invocateur/popover évoquée ci‑dessus&nbsp;: l'élément `<select>` et le sélecteur ont aussi une ancre implicite en référence, ce qui signifie que le sélecteur est automatiquement à l'élément via le [positionnement par ancrage en CSS](/fr/docs/Web/CSS/CSS_anchor_positioning). Cela présente plusieurs avantages, notamment&nbsp;:
+Autre effet de la relation implicite invocateur/popover évoquée ci‑dessus&nbsp;: l'élément `<select>` et le sélecteur ont aussi une ancre implicite en référence, ce qui signifie que le sélecteur est automatiquement à l'élément via le [positionnement par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning). Cela présente plusieurs avantages, notamment&nbsp;:
 
-- Les styles par défaut du navigateur positionnent le sélecteur relativement au bouton (l'ancre) et vous pouvez personnaliser cette position comme expliqué dans [Positionner des éléments relativement à leur ancre](/fr/docs/Web/CSS/CSS_anchor_positioning/Using#positioning_elements_relative_to_their_anchor). À titre de référence, les styles par défaut associés sont les suivants&nbsp;:
+- Les styles par défaut du navigateur positionnent le sélecteur relativement au bouton (l'ancre) et vous pouvez personnaliser cette position comme expliqué dans [Positionner des éléments relativement à leur ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor). À titre de référence, les styles par défaut associés sont les suivants&nbsp;:
 
   ```css
   inset: auto;
@@ -53,7 +53,7 @@ Autre effet de la relation implicite invocateur/popover évoquée ci‑dessus&nb
   position-area: block-end span-inline-end;
   ```
 
-- Les styles par défaut du navigateur définissent aussi des alternatives de repli avec `position-try` qui repositionnent le sélecteur s'il risque de déborder de la fenêtre d'affichage. Les options de repli sont expliquées dans [Options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding). À titre de référence, les styles de repli par défaut associés sont les suivants&nbsp;:
+- Les styles par défaut du navigateur définissent aussi des alternatives de repli avec `position-try` qui repositionnent le sélecteur s'il risque de déborder de la fenêtre d'affichage. Les options de repli sont expliquées dans [Options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding). À titre de référence, les styles de repli par défaut associés sont les suivants&nbsp;:
 
   ```css
   position-try-order: most-block-size;

@@ -194,7 +194,7 @@ Reserve um tempo para examinar o código e entendê-lo - os comentários dentro 
 
 ## Elementos de layout do HTML em mais detalhes
 
-É bom entender o significado geral de todos os elementos de seção do HTML em detalhes - isso é algo em que você trabalhará gradualmente ao começar a obter mais experiência com o desenvolvimento web. Você pode encontrar muitos detalhes lendo o nosso [Elementos HTML](/pt-BR/docs/Web/HTML/Element). Para agora, estes são as principais definições que você deve tentar entender:
+É bom entender o significado geral de todos os elementos de seção do HTML em detalhes - isso é algo em que você trabalhará gradualmente ao começar a obter mais experiência com o desenvolvimento web. Você pode encontrar muitos detalhes lendo o nosso [Elementos HTML](/pt-BR/docs/Web/HTML/Reference/Elements). Para agora, estes são as principais definições que você deve tentar entender:
 
 - {{HTMLElement('main')}} é para o conteúdo único dessa página.Use \<main> apenas uma vez por página, e o coloca diretamente dentro do {{HTMLElement('body')}}. Não é ideal aninhar ele dentro de qualquer outro elemento senão o elemento \<body>.
 - {{HTMLElement('article')}} inclui um bloco de conteúdo relacionado o qual faz sentido por si só, sem o restante da página (por exemplo, uma postagem singular dum blog).
@@ -206,7 +206,7 @@ Reserve um tempo para examinar o código e entendê-lo - os comentários dentro 
 
 ### Elementos de layout não-semânticos
 
-Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
+Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo [`class`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#class) adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
 
 {{HTMLElement("span")}} é um elemento não-semântico embutido, que você deve usar apenas se não conseguir pensar em um elemento de texto semântico melhor para agrupar seu conteúdo ou se não quiser adicionar um significado específico. Por exemplo:
 

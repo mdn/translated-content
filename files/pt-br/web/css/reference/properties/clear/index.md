@@ -6,7 +6,7 @@ original_slug: Web/CSS/clear
 
 {{CSSRef}}
 
-A propriedade **`clear do`** [CSS](/pt-BR/docs/Web/CSS) especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/Web/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
+A propriedade **`clear do`** [CSS](/pt-BR/docs/Web/CSS) especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/Web/CSS/Reference/Properties/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
 
 {{InteractiveExample("CSS Demo: clear")}}
 
@@ -65,9 +65,9 @@ clear: both;
 }
 ```
 
-Quando essa propriedade é aplicada em elementos não flutuantes, ele move a borda ([border edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) desse elemento para a borda da margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Ocorre um colapso das margens verticais dos elementos não flutuantes.
+Quando essa propriedade é aplicada em elementos não flutuantes, ele move a borda ([border edge](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)) desse elemento para a borda da margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Ocorre um colapso das margens verticais dos elementos não flutuantes.
 
-As margens verticais entre dois elementos flutuantes não irão sofrer esse colapso. Quando aplicada a elementos flutuantes, a borda de margem ([margin edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) do elemento inferior é movida abaixo da borda de margem ([border edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Isso afeta a posição dos elementos flutuantes posteriores, sendo que os elementos flutuantes posteriores não podem ser posicionados acima dos anteriores.
+As margens verticais entre dois elementos flutuantes não irão sofrer esse colapso. Quando aplicada a elementos flutuantes, a borda de margem ([margin edge](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)) do elemento inferior é movida abaixo da borda de margem ([border edge](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)) de todos os elementos flutuantes relevantes. Isso afeta a posição dos elementos flutuantes posteriores, sendo que os elementos flutuantes posteriores não podem ser posicionados acima dos anteriores.
 
 Os elementos flutuantes que devem ser limpos (clear) são os elementos anteriores dentro do mesmo contexto de bloco ([block formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)).
 
@@ -272,4 +272,4 @@ p {
 
 ## Veja também
 
-- [Box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Box model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)

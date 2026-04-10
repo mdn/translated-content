@@ -38,12 +38,12 @@ time {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
         <a href="/es/docs/HTML/Content_categories#Phrasing_content"

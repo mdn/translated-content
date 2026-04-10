@@ -17,15 +17,15 @@ Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadame
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, estar familiarizado con los principios básicos de HTML (como se
         describe en
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Empezar con el HTML</a
         >).
       </td>
