@@ -14,9 +14,9 @@ Antes de enviar datos al servidor, es importante asegurarse de que se completan 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, y entender cómo funcionan el
-        <a href="/es/docs/Learn/HTML">HTML</a>, el
-        <a href="/es/docs/Learn/CSS">CSS</a> y el
-        <a href="/es/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>, el
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> y el
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>.
       </td>
     </tr>
     <tr>

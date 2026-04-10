@@ -18,9 +18,9 @@ En este artículo proporcionaremos una breve introducción al [framework Svelte]
       <td>
         <p>
         Se recomienda que como mínimo te sientas familiarizado con lo básico de los lenguajes
-          <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a> y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la
+          <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>, además tener conocimiento de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/línea de comandos</a

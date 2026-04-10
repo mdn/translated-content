@@ -19,7 +19,7 @@ Este no será un estudio exhaustivo, solo veremos lo que necesitas saber en esta
     <tr>
       <th scope="row">Pre-requisitos:</th>
       <td>
-  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/Learn/JavaScript/First_steps"
+  Conocimientos básicos de informática, entendimiento básico de HTML y CSS, <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting"
           >Primeros pasos con JavaScript</a
         >.
       </td>

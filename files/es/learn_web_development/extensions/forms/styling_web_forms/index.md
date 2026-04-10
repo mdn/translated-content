@@ -14,8 +14,8 @@ En los artículos anteriores vimos todo el HTML que necesitas para crear y estru
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática y una comprensión básica de
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y
-        <a href="/es/docs/Learn/CSS/First_steps">CSS</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML</a> y
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>.
       </td>
     </tr>
     <tr>

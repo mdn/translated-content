@@ -17,7 +17,7 @@ También hablamos acerca de cómo podemos usar [prototipos](/es/docs/Learn_web_d
     <tr>
       <th scope="row">Prerequisitos:</th>
       <td>
-        Conocimientos básicos de informática, comprensión básica de HTML y CSS, familiaridad con conceptos básicos de Javascript (mira <a href="/es/docs/Learn/JavaScript/First_steps">Primeros pasos</a> y <a href="/es/docs/Learn/JavaScript/Building_blocks">Construyendo con bloques</a>) y lo esencial de JSOO (Javascript orientado a objetos)(mira <a href="/es/docs/Learn/JavaScript/Objects/Basics">Introducción a los objetos</a> y <a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_programming">Programación orientada a objetos</a>)
+        Conocimientos básicos de informática, comprensión básica de HTML y CSS, familiaridad con conceptos básicos de Javascript (mira <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting">Primeros pasos</a> y <a href="/es/docs/Learn_web_development/Core/Scripting">Construyendo con bloques</a>) y lo esencial de JSOO (Javascript orientado a objetos)(mira <a href="/es/docs/Learn_web_development/Core/Scripting/Object_basics">Introducción a los objetos</a> y <a href="/es/docs/Learn/JavaScript/Objects/Object-oriented_programming">Programación orientada a objetos</a>)
       </td>
     </tr>
     <tr>

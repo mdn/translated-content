@@ -46,7 +46,7 @@ En navegadores que no soportan entradas de tipo `number`, una entrada `number` r
   </tr>
   <tr>
    <td><strong>Atributos comunes que soporta</strong></td>
-   <td><a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>, <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>, <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>, <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a></td>
+   <td><a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>, <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>, <a href="/es/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>, <a href="/es/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a></td>
   </tr>
   <tr>
    <td><strong>Atributos IDL</strong></td>
