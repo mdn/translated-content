@@ -95,15 +95,15 @@ svg|a:active {
 
 ### Global attributes
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+- [Styling Attributes](/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Conditional Processing Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : [Global event attributes](/docs/Web/SVG/Reference/Attribute#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Reference/Attribute#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Reference/Attribute#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink Attributes
   - : Most notably: {{SVGAttr("xlink:title")}}

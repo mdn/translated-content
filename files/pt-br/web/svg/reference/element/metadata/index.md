@@ -18,7 +18,7 @@ Metadados são dados estruturados sobre dados. Metadados que são incluídos com
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Atributos específicos
 

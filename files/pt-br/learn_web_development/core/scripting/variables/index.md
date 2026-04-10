@@ -353,4 +353,4 @@ Você chegou ao final deste artigo, mas consegue se lembrar das informações ma
 
 Por agora você deve saber razoavelmente sobre variáveis JavaScript e como criá-las. No próximo artigo Vamos focar nos números em mais detalhes, vendo como fazer matemática básica no JavaScript.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}

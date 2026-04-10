@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 original_slug: Learn/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/HTML/Constraint_validation).
 
@@ -755,4 +755,4 @@ A validação de formulário não requer JavaScript complexo, mas requer pensar 
 - Seja permissivo quanto ao formato de entrada.
 - Indique exatamente onde ocorre o erro (especialmente em formulários grandes).
 
-{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls", "Learn_web_development/Extensions/Forms")}}

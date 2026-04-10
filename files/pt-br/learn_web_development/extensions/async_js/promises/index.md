@@ -414,4 +414,4 @@ Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/pt-BR
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API", "Learn_web_development/Extensions/Async_JS")}}

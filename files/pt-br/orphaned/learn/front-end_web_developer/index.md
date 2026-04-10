@@ -148,7 +148,7 @@ As avaliações em cada módulo são projetadas para testar seu conhecimento sob
 
 #### Guias principais
 
-- [Cross Browser Teste](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 horas de leitura/exercícioss)
+- [Cross Browser Teste](/pt-BR/docs/Learn_web_development/Extensions/Testing) (25–30 horas de leitura/exercícioss)
 - [Acessibilidade](/pt-BR/docs/Web/Accessibility) (20–25 horas de leitura/exercícios)
 
 ### Ferramentas modernas

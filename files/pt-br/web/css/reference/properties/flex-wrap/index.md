@@ -50,7 +50,7 @@ flex-wrap: wrap-reverse;
 }
 ```
 
-Veja [Using CSS flexible boxes](/pt-BR/docs/CSS/Using_CSS_flexible_boxes) para mais propriedades e informação.
+Veja [Using CSS flexible boxes](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para mais propriedades e informação.
 
 ## Syntax
 
