@@ -92,7 +92,7 @@ In addition to being able to change the default presentation by turning an item 
 
 ## Flexbox
 
-Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
+Flexbox is the short name for the [Flexible Box Layout](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout) Module, designed to make it easy for us to lay things out in one dimension — either as a row or as a column. To use flexbox, you apply `display: flex` to the parent element of the elements you want to lay out; all its direct children then become flex items. We can see this in a simple example.
 
 The HTML markup below gives us a containing element, with a class of `wrapper`, inside which are three {{htmlelement("div")}} elements. By default these would display as block elements, below one another, in our English language document.
 

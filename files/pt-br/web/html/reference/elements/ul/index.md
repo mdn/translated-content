@@ -55,7 +55,7 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `compact`{{ Deprecated_inline() }}
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.

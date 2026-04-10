@@ -45,14 +45,14 @@ figcaption {
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>
-     <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>、
-     <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>
+     <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、
+     <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容">可感知内容</a>
     </td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
    <td>
-     {{HTMLElement("figcaption")}} 元素，且紧随着<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容">流式内容</a>；或紧随流式内容的 {{HTMLElement("figcaption")}} 元素；或流式内容。
+     {{HTMLElement("figcaption")}} 元素，且紧随着<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>；或紧随流式内容的 {{HTMLElement("figcaption")}} 元素；或流式内容。
     </td>
   </tr>
   <tr>

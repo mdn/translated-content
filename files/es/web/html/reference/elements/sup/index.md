@@ -18,11 +18,11 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_din%C3%A1mico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_din%C3%A1mico"
           >Contenido dinamíco</a
         >(Flow content) y
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_est%C3%A1tico_o_de_texto"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_est%C3%A1tico_o_de_texto"
           >contenido estático o de texto</a
         >(phrasing content)
       </td>
@@ -31,7 +31,7 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_est%C3%A1tico_o_de_texto"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_est%C3%A1tico_o_de_texto"
           >contenido estático o de texto</a
         >
       </td>
@@ -71,7 +71,7 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
         <font
           ><font
             ><a
-              href="https://developer.mozilla.org/es/docs/Web/API/HTMLElement"
+              href="/es/docs/Web/API/HTMLElement"
               title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, others implement it via an interface that inherits it."
               ><code>HTMLElement</code></a
             ></font

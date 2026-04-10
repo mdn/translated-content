@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/title
 
 {{HTMLSidebar("Global_attributes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **title** contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:
+O [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes) **title** contém textos representando informações de orientação, relacionados ao elemento a que pertence. Geralmente, mas não obrigatoriamente, esta informação pode ser apresentada ao usuário como uma dica. Alguns usos comuns:
 
 - Link: título ou descrição do documento vinculado
 - Elemento de mídia como uma imagem: descrição ou créditos associados
@@ -42,5 +42,5 @@ Este exemplo define um título de duas linhas.
 
 ## Veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("HTMLElement.title")}} que reflete este atributo.

@@ -162,7 +162,7 @@ tfoot td {
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ### Atributos depreciados
 
@@ -700,7 +700,7 @@ Isso ajuda as pessoas a navegar com o auxílio de tecnologia assistiva, como um 
 
 ### Escopo de linhas e colunas
 
-O atributo [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope) em elementos de cabeçalho é redundante em contextos simples, porque o escopo é inferido. No entanto, algumas tecnologias assistivas podem não obter inferências corretas, portanto, especificar o escopo do cabeçalho pode melhorar a experiência do usuário. Em tabelas complexas, o escopo pode ser especificado para fornecer as informações necessárias sobre as células relacionadas a um cabeçalho.
+O atributo [`scope`](/pt-BR/docs/Web/HTML/Reference/Elements/th#scope) em elementos de cabeçalho é redundante em contextos simples, porque o escopo é inferido. No entanto, algumas tecnologias assistivas podem não obter inferências corretas, portanto, especificar o escopo do cabeçalho pode melhorar a experiência do usuário. Em tabelas complexas, o escopo pode ser especificado para fornecer as informações necessárias sobre as células relacionadas a um cabeçalho.
 
 #### Examples
 
@@ -749,7 +749,7 @@ A tecnologia assistiva, como leitores de tela, pode ter dificuldade em analisar 
 
 Idealmente, considere maneiras alternativas de apresentar o conteúdo da tabela, incluindo dividi-la em uma coleção de tabelas relacionadas menores que não precisam depender do uso dos atributos `colspan` e `rowspan`. Além de ajudar as pessoas que usam tecnologia assistiva a entender o conteúdo da tabela, isso também pode beneficiar pessoas com problemas cognitivos que podem ter dificuldade em entender as associações que o layout da tabela está descrevendo.
 
-Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) e [`headers`](/pt-BR/docs/Web/ HTML/Element/td#headers) para associar programaticamente cada célula da tabela aos cabeçalhos aos quais a célula está associada.
+Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id) e [`headers`](/pt-BR/docs/Web/ HTML/Element/td#headers) para associar programaticamente cada célula da tabela aos cabeçalhos aos quais a célula está associada.
 
 - [Tabelas MDN para usuários com deficiência visual](/pt-BR/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
 - [Tabelas com cabeçalhos de vários níveis • Tabelas • Tutoriais de acessibilidade na Web do W3C WAI](https://www.w3.org/WAI/tutorials/tables/multi-level/)

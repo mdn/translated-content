@@ -9,7 +9,7 @@ original_slug: Web/CSS/box-ordinal-group
 > [!WARNING]
 > Essa propriedade é parte do projeto do módulo original do CSS Flexible Box Layout, e foi substituído em projetos recentes.
 
-Veja [Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) para mais informações do que você deveria usar ao invés dessa propriedade.
+Veja [Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) para mais informações do que você deveria usar ao invés dessa propriedade.
 
 ## Sumário
 

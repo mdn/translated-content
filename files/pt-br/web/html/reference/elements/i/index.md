@@ -61,7 +61,7 @@ O **elemento HTML `<i>` **representa uma parte do texto que é destacada do rest
 
 ## Atributos
 
-Esse elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui apenas [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemplo
 

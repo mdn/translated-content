@@ -110,7 +110,7 @@ figcaption {
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

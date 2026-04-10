@@ -17,11 +17,11 @@ En este artículo, cubrimos los conceptos básicos de HTML. Para empezar, este a
       <td>
         Conocimientos informáticos básicos,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, y conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >.
       </td>

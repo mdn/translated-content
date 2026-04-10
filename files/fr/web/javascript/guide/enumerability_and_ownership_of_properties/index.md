@@ -39,7 +39,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                       >propertyIsEnumerable()</a
                     ></code
                   >
@@ -47,7 +47,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                       >hasOwnProperty()</a
                     ></code
                   >
@@ -56,13 +56,13 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty()</a
                   >
                   - </code
                 >en utilisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a
                   ></code
                 >
@@ -71,7 +71,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty()</a
                   ></code
                 >
@@ -102,7 +102,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in"
+                    href="/fr/docs/Web/JavaScript/Reference/Operators/in"
                     >in</a
                   ></code
                 >
@@ -132,7 +132,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/keys"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                       >Object.keys()</a
                     ></code
                   >
@@ -140,7 +140,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                       >getOwnPropertyNames()</a
                     ></code
                   >
@@ -148,7 +148,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                       >getOwnPropertySymbols()</a
                     ></code
                   >
@@ -157,18 +157,18 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames()</a
                   ></code
                 >
                 <code
                   >- <a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                     >getOwnPropertySymbols()</a
                   > </code
                 >en utilisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a
                   ></code
                 >
@@ -178,7 +178,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                       >getOwnPropertyNames()</a
                     ></code
                   >
@@ -186,7 +186,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                       >getOwnPropertySymbols()</a
                     ></code
                   >
@@ -220,7 +220,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/keys"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                       >Object.keys()</a
                     ></code
                   >
@@ -228,7 +228,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                       >getOwnPropertyNames()</a
                     ></code
                   >
@@ -236,7 +236,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                       >getOwnPropertySymbols()</a
                     ></code
                   >
@@ -245,17 +245,17 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames()</a
                   >
                   -
                   <a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                     >getOwnPropertySymbols()</a
                   ></code
                 >en utilisant <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
+                    href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a
                   ></code
                 >
@@ -265,7 +265,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                       >getOwnPropertyNames()</a
                     ></code
                   >
@@ -273,7 +273,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                 <p>
                   <code
                     ><a
-                      href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
+                      href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"
                       >getOwnPropertySymbols()</a
                     ></code
                   >
@@ -297,7 +297,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
               <td>
                 <code
                   ><a
-                    href="/fr/docs/Web/JavaScript/Reference/Instructions/for...in"
+                    href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"
                     >for..in</a
                   ></code
                 >

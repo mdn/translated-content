@@ -74,7 +74,7 @@ s {
 
 ## Atributos
 
-Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 > **Note:** **Notas de implementação:** Até Gecko 1.9.2 inclusive, Firefox implementa [`HTMLSpanElement`](/pt-BR/docs/DOM/span) para a interface deste elemento.
 
