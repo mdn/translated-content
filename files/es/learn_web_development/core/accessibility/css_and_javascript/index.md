@@ -335,7 +335,7 @@ Como nota final, hemos utilizado algunos atributos WAI-ARIA en nuestra demostrac
 </div>
 ```
 
-Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics) con mucho más detalle.
+Explicaremos estos atributos en nuestro próximo artículo, que cubre [WAI-ARIA](/es/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) con mucho más detalle.
 
 > [!NOTE]
 > Algunos de vosotros probablemente estaréis pensando en el hecho de que los formularios HTML5 tienen mecanismos de validación integrados como los atributos `required`, `min` / `minlength` y `max` / `maxlength` (consultad la referencia del elemento {{htmlelement("input")}} para más información). No los hemos usado en la demostración porque la compatibilidad entre navegadores es irregular (por ejemplo, solo funciona en IE10 y versiones superiores).
@@ -379,4 +379,4 @@ Esperamos que este artículo te haya brindado una buena cantidad de detalles y c
 
 ¡Siguiente parada, WAI-ARIA!
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

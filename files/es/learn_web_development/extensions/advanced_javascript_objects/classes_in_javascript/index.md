@@ -206,4 +206,4 @@ Haz llegado al final de este artículo pero, ¿Aún recuerdas la información m�
 
 En este artículo repasamos las herramientas principales que existen en JavaScript para crear programas orientados a objetos. A pesar de que no abarcamos este tema completamente, lo que vimos debería ser suficiente para iniciar. Nuestro [artículo sobre clases](/es/docs/Web/JavaScript/Reference/Classes) es un buen lugar para aprender más.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

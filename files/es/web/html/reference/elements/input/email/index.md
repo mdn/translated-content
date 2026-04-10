@@ -432,4 +432,4 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
   - [`readonly`](/es/docs/Web/HTML/Attributes/readonly)
   - [`size`](/es/docs/Web/HTML/Attributes/size)
 
-- [Compatibilidad con propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad con propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)
