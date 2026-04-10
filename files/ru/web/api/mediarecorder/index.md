@@ -47,15 +47,15 @@ The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/r
 - {{domxref("MediaRecorder.ondataavailable")}}
   - : Вызывает обработчик события [`dataavailable`](/ru/docs/Web/Events/dataavailable), которое запускается раз в `timeslice` миллисекунд (или, если `timeslice` не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}. Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.
 - {{domxref("MediaRecorder.onerror")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`recordingerror`](/ru/docs/Web/Events/recordingerror), включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events) вызывается для обработки события [`recordingerror`](/ru/docs/Web/Events/recordingerror), включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.
 - {{domxref("MediaRecorder.onpause")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`pause`](/ru/docs/Web/API/HTMLMediaElement/pause_event), случившегося во время приостановки медиа.
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events) вызывается для обработки события [`pause`](/ru/docs/Web/API/HTMLMediaElement/pause_event), случившегося во время приостановки медиа.
 - {{domxref("MediaRecorder.onresume")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`resume`](/ru/docs/Web/API/SpeechSynthesisUtterance/resume_event), случившегося во время возобновления записи.
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events) вызывается для обработки события [`resume`](/ru/docs/Web/API/SpeechSynthesisUtterance/resume_event), случившегося во время возобновления записи.
 - {{domxref("MediaRecorder.onstart")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers)вызывается для обработки события [`start`](/ru/docs/Web/API/SpeechRecognition/start_event), случившегося во время начала записи.
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events)вызывается для обработки события [`start`](/ru/docs/Web/API/SpeechRecognition/start_event), случившегося во время начала записи.
 - {{domxref("MediaRecorder.onstop")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers) вызывается для обработки события [`stop`](/ru/docs/Web/Events/stop), случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events) вызывается для обработки события [`stop`](/ru/docs/Web/Events/stop), случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}
 
 ## Пример
 

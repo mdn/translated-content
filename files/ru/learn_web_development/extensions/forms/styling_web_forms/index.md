@@ -3,7 +3,7 @@ title: Стили HTML форм
 slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers", "Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms")}}
 
 В этой статье Вы узнает, как использовать CSS с HTML-формами, чтобы сделать их (надеюсь) более красивыми. Удивительно, но это может быть немного сложнее. По историческим и техническим причинам виджеты форм плохо сочетаются с CSS. Из-за этих трудностей многие разработчики предпочитают создавать свои собственные HTML-виджеты, чтобы получить контроль над своим внешним видом. Однако в современных браузерах веб-дизайнеры все больше контролируют дизайн элементов формы. Давайте приступим!
 
@@ -402,7 +402,7 @@ As you can see, as long as we want to build forms with just text fields and butt
 
 [In the next article](/ru/docs/Learn/Forms/Advanced_form_styling), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
 
-{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML_forms_in_legacy_browsers", "Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms")}}
 
 ## In this module
 
@@ -416,4 +416,4 @@ As you can see, as long as we want to build forms with just text fields and butt
 - [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Styling HTML forms](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ru/docs/Learn_web_development/Extensions/Forms)
