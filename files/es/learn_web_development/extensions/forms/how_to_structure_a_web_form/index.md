@@ -14,7 +14,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">lenguajes HTML</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">lenguajes HTML</a>.
       </td>
     </tr>
     <tr>

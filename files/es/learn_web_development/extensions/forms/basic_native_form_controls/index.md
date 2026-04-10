@@ -14,7 +14,7 @@ En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/How_t
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">lenguaje HTML</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">lenguaje HTML</a>.
       </td>
     </tr>
     <tr>

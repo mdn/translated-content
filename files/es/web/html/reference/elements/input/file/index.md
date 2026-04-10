@@ -461,7 +461,7 @@ El ejemplo se ve así; juegue:
     </tr>
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
-      <td><a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>Atributos adicionales</strong></td>

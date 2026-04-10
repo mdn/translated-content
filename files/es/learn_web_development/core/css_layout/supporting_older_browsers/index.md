@@ -16,10 +16,10 @@ En este módulo recomendamos utilizar Flexbox y Grid como las herramientas princ
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
       </td>
     </tr>
     <tr>

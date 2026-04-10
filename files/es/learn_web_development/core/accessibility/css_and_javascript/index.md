@@ -15,7 +15,7 @@ CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de 
       <td>
         Conocimientos básicos de informática, conocimientos básicos de HTML, CSS
         y JavaScript, y comprensión de
-        <a href="/es/docs/Learn/Accessibility/Qué_es_la_accesibilidad"
+        <a href="/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility"
           >qué es la accesibilidad</a
         >.
       </td>

@@ -59,10 +59,10 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a> y
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

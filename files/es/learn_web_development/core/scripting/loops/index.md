@@ -16,7 +16,7 @@ Los lenguajes de programación son muy útiles para completar rápidamente tarea
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, una comprensión básica de HTML y CSS,
-        <a href="/es/docs/Learn/JavaScript/First_steps"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting"
           > Primeros pasos de JavaScript </a
         >.
       </td>

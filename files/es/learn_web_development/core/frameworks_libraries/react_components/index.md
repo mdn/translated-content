@@ -16,9 +16,9 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
       <th scope="row">Prerequesitos:</th>
       <td>
         <p>
-          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a>, y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>,
+          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>,
           conocimientos de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
