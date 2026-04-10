@@ -125,7 +125,7 @@ td {
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{Deprecated_inline}}
   - : Estes atributos especificam como será o alinhamento horizontal de cada conteúdo da célula. Os possíveis valores são:

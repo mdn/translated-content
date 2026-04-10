@@ -76,7 +76,7 @@ Algumas informações, chamadas de dados tabulares, precisam ser organizadas em 
 ### Representação de dados
 
 - [Como representar valores numéricos em HTML](/pt-BR/docs/Learn/HTMLHowto/Represent_numeric_values_with_HTML)
-- [Como usar atributos de dados](/pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [Como usar atributos de dados](/pt-BR/docs/Web/HTML/How_to/Use_data_attributes)
 - [Como associar conteúdo legível por humanos com estruturas arbitrárias de dados](/pt-BR/docs/Learn/HTML/Howto/Associate_human_readable_content_with_arbitrary_computer_data_structures)
 
 ### Interatividade
@@ -92,7 +92,7 @@ Algumas informações, chamadas de dados tabulares, precisam ser organizadas em 
 
 ### Imagens & multimídia avançados
 
-- [Como adicionar imagens responsivas em uma página web](/pt-BR/docs/Web/HTML/Responsive_images)
+- [Como adicionar imagens responsivas em uma página web](/pt-BR/docs/Web/HTML/Guides/Responsive_images)
 - [Como adicionar imagens vetoriais em uma página web](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [Como adicionar um mapa de links em uma imagem](/pt-BR/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
@@ -106,4 +106,4 @@ HTML não é unilíngue. A linguagem fornece ferramentas para lidar com problema
 
 ### Performance
 
-- [Como criar páginas HTML que carregam rápido](/pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Como criar páginas HTML que carregam rápido](/pt-BR/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)

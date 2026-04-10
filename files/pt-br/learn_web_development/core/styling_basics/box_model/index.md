@@ -219,7 +219,7 @@ In the example below, we have two paragraphs. The top paragraph has a `margin-bo
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 1000)}}
 
-There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
+There are a number of rules that dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing). The main thing to remember for now is that margin collapsing is a thing that happens. If you are creating space with margins and don't get the space you expect, this is probably what is happening.
 
 ### Borders
 

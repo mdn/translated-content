@@ -5,9 +5,9 @@ original_slug: Web/CSS/@media/prefers-color-scheme
 ---
 
 > [!NOTE]
-> Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](/pt-BR/docs/Web/CSS/@media/prefers-color-scheme) será substituída pela `light`.
+> Se você definiu `privacy.resistFingerprinting` como **true**, [`prefers-color-scheme`](/pt-BR/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) será substituída pela `light`.
 
-O **`prefers-color-scheme`** [CSS](/pt-BR/docs/Web/CSS) [media feature](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) é usado para detectar se o usuário solicitou que o sistema use um tema de cores claras ou escuras.
+O **`prefers-color-scheme`** [CSS](/pt-BR/docs/Web/CSS) [media feature](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#media_features) é usado para detectar se o usuário solicitou que o sistema use um tema de cores claras ou escuras.
 
 ## Syntax
 
