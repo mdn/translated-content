@@ -16,9 +16,9 @@ Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous 
       <th scope="row">Conditions préalables:</th>
       <td>
         <p>
-          Familiarité avec les langages <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript,</a> connaissance de la
+          Familiarité avec les langages <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>et
+          <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript,</a> connaissance de la
           <a
             href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >ligne terminal/commande</a

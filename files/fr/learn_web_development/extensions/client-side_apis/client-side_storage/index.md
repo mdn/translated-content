@@ -20,7 +20,7 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
         <a href="/fr/Apprendre/JavaScript/Building_blocks"
           >les briques JavaScript</a
         >,
-        <a href="/fr/docs/Learn/JavaScript/Objects">les objets JavaScript</a>),
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">les objets JavaScript</a>),
         les
         <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
           >notions de base des APIs côté client</a

@@ -14,7 +14,7 @@ Les graphiques vectoriels sont utiles dans de nombreuses circonstances. Ils sont
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaître <a href="/fr/docs/Learn_web_development/Core/Structuring_content">les fondamentaux en HTML</a>, savoir comment <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">insérer une image dans un document</a>.</td>
+      <td>Connaître <a href="/fr/docs/Learn_web_development/Core/Structuring_content">les fondamentaux en HTML</a>, savoir comment <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Multimedia_and_embedding/Images_in_HTML">insérer une image dans un document</a>.</td>
     </tr>
     <tr>
       <th scope="row">Objectif&nbsp;:</th>

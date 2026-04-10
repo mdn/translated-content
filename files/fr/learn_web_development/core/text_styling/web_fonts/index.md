@@ -17,7 +17,7 @@ Dans le premier article du module, nous avons exploré les fonctions CSS de base
           href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), les bases CSS (étudiées dans
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction à CSS</a
         >).
       </td>
     </tr>

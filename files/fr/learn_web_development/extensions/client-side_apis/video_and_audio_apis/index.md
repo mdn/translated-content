@@ -20,7 +20,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
         <a href="/fr/Apprendre/JavaScript/Building_blocks"
           >les briques Javascript</a
         >,
-        <a href="/fr/docs/Learn/JavaScript/Objects">Introduction aux objets</a
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">Introduction aux objets</a
         >), <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
           >Introduction aux APIs web</a
         >

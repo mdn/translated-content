@@ -17,7 +17,7 @@ Cet article est une sorte de boîte à malices : elle introduit certaines des fo
         <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >) et idées sur le fonctionnement des CSS (voir
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction aux CSS</a
         >).
       </td>
     </tr>

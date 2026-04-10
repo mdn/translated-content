@@ -71,4 +71,4 @@ Pour les solutions fréquentes aux problèmes de HTML/CSS/JavaScript, essayez le
 
 - [Utiliser HTML pour résoudre des problèmes courants](/fr/docs/Learn_web_development/Howto/Solve_HTML_problems)
 - [Utiliser CSS pour résoudre des problèmes courants](/fr/docs/Learn_web_development/Howto/Solve_CSS_problems)
-- [Utiliser JavaScript pour résoudre des problèmes courants](/fr/docs/Learn/JavaScript/Howto)
+- [Utiliser JavaScript pour résoudre des problèmes courants](/fr/docs/Learn_web_development/Core/Scripting/Howto)

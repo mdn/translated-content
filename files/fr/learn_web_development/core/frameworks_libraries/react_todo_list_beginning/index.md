@@ -19,7 +19,7 @@ Disons que nous avons pour mission de créer une preuve de concept en React&nbsp
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Connaissances des fondamentaux en <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaissance <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">du terminal/de la ligne de commande</a>.
+          Connaissances des fondamentaux en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, connaissance <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">du terminal/de la ligne de commande</a>.
         </p>
       </td>
     </tr>

@@ -25,7 +25,7 @@ Après ces descriptions, nous verrons en JavaScript comment les constructeurs et
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Compréhension des fonctions en JavaScript, notions de bases de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction</a >), et notions de base sur les objets (voir <a href="/fr/docs/Learn/JavaScript/Objects/Basics">Introduction aux objets</a> et <a href="/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">Prototypes d'objet</a>).</td>
+      <td>Compréhension des fonctions en JavaScript, notions de bases de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">Blocs de construction</a >), et notions de base sur les objets (voir <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects/Basics">Introduction aux objets</a> et <a href="/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes">Prototypes d'objet</a>).</td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>

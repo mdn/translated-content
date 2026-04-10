@@ -15,7 +15,7 @@ Les sites et applications web modernes récupèrent fréquemment des données du
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions fondamentales de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas en JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction en JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Objects">Les objets JavaScript</a>), <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les bases des API côté client</a>
+        Notions fondamentales de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas en JavaScript</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">Blocs de construction en JavaScript</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">Les objets JavaScript</a>), <a href="/fr/docs/Learn_web_development/Core/Scripting/Client-side_web_APIs/Introduction">les bases des API côté client</a>
       </td>
     </tr>
     <tr>

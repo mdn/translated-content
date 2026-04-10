@@ -658,7 +658,7 @@ body {
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats_skills).
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn_web_development/Core/Styling_basics/CSS_layout/Floats_skills).
 
 ## Résumé
 

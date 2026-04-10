@@ -15,7 +15,7 @@ Il y a un dernier concept essentiel sur les fonctions dont nous devons discuter&
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions de base en informatique, compréhension élémentaire de HTML et CSS, avoir lu <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas en JavaScript</a>, et <a href="/fr/docs/Learn/JavaScript/Building_blocks/Functions">Fonctions — blocs de code réutilisable</a>.
+        Notions de base en informatique, compréhension élémentaire de HTML et CSS, avoir lu <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas en JavaScript</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks/Functions">Fonctions — blocs de code réutilisable</a>.
       </td>
     </tr>
     <tr>
@@ -172,7 +172,7 @@ Voici quelques conseils supplémentaires à propos des fonctions&nbsp;:
 
 ## Évaluez vos compétences&nbsp;!
 
-Vous voici à la fin de cet article. Avez-vous bien retenu les informations importantes&nbsp;? Pour le vérifier avant d'aller plus loin, vous pouvez [vous évaluer sur les fonctions JavaScript](/fr/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions).
+Vous voici à la fin de cet article. Avez-vous bien retenu les informations importantes&nbsp;? Pour le vérifier avant d'aller plus loin, vous pouvez [vous évaluer sur les fonctions JavaScript](/fr/docs/Learn_web_development/Core/Scripting/Building_blocks/Test_your_skills:_Functions).
 
 ## Conclusion
 

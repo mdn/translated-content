@@ -17,11 +17,11 @@ Lors de la mise en forme de [liens](/fr/docs/Learn_web_development/Core/Structur
           href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML)</a
         >, notions de base en CSS (étudier l'<a
-          href="/fr/docs/Learn/CSS/Introduction_to_CSS"
+          href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS"
           >Introduction à CSS</a
         >),
         <a
-          href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte"
+          href="/fr/docs/Learn_web_development/Core/Styling_basics/Styling_text/initiation-mise-en-forme-du-texte"
           >initiation à la mise en forme de texte</a
         >.
       </td>
