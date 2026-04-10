@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{CSSxRef("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
+Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<corner-shape-value>`** qui décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{CSSxRef("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/Reference/Properties/corner-shape#propriétés_constitutives) pour définir la forme à appliquer aux coins concernés du conteneur.
 
 ## Syntaxe
 
@@ -46,7 +46,7 @@ Le type de donnée `<corner-shape-value>` peut prendre la fonction {{CSSxRef("su
 
 Dans cet exemple, un menu déroulant permet de sélectionner différentes valeurs `<corner-shape-value>` et un curseur ajuste la valeur de {{CSSxRef("border-radius")}} du conteneur. Cela permet de visualiser l'effet des différents mots-clés et des paramètres de la fonction `superellipse()`.
 
-La propriété `corner-shape` définit la forme des coins de la boîte, tandis que la zone à laquelle la forme s'applique est déterminée par la propriété `border-radius`. Le code est masqué pour plus de clarté, mais vous pouvez trouver [une explication complète des valeurs de `corner-shape`](/fr/docs/Web/CSS/corner-shape#comparaison_des_valeurs_corner-shape) ainsi que d'autres exemples sur la page de référence {{CSSxRef("corner-shape")}}.
+La propriété `corner-shape` définit la forme des coins de la boîte, tandis que la zone à laquelle la forme s'applique est déterminée par la propriété `border-radius`. Le code est masqué pour plus de clarté, mais vous pouvez trouver [une explication complète des valeurs de `corner-shape`](/fr/docs/Web/CSS/Reference/Properties/corner-shape#comparaison_des_valeurs_corner-shape) ainsi que d'autres exemples sur la page de référence {{CSSxRef("corner-shape")}}.
 
 ```html hidden live-sample___value-comparison
 <form>

@@ -403,18 +403,18 @@ Web 最常用的图像格式是：
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容类别</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#嵌入内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#嵌入内容"
           >嵌入内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >。如果元素有 <code>usemap</code> 属性，则其也是交互式内容的一种。
       </td>

@@ -2,7 +2,7 @@
 title: Installation des outils de base
 short-title: Installation des outils
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
-original_slug: Learn/Getting_started_with_the_web/Installing_basic_software
+original_slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 l10n:
   sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
 ---

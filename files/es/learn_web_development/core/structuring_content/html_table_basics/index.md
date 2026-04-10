@@ -14,7 +14,7 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (ver
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>

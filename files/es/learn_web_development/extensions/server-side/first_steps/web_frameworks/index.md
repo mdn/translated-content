@@ -18,7 +18,7 @@ El artículo anterior te mostró que pinta tiene la comunicación entre los clie
           cómo gestiona y responde a las peticiones HTTP el código de lado
           servidor (ver
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
             >Visión general Cliente-Servidor</a
           >).
         </p>

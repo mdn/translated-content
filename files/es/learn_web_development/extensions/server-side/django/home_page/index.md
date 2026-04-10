@@ -19,7 +19,7 @@ Estamos listos ahora para añadir el código para mostrar nuestra primera págin
           >Introducción a Django</a
         >. Completa los tópicos previos del tutorial (incluyendo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"
           >Tutorial de Django Parte 4: Sitio de administración de Django</a
         >).
       </td>

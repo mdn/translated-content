@@ -30,7 +30,7 @@ li {
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a>.</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, and if the <code>&lt;ol&gt;</code> element's children include at least one {{HTMLElement("li")}} element, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Palpable_content">palpable content</a>.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -42,11 +42,11 @@ li {
   </tr>
   <tr>
    <th scope="row">允许的父级</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">隐含的 ARIA 角色</th>
-   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/list_role">list</a></code></td>
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>

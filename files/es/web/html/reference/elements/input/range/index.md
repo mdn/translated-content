@@ -38,11 +38,11 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#max"><code>max</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#min"><code>min</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#max"><code>max</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#min"><code>min</code></a> y
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>

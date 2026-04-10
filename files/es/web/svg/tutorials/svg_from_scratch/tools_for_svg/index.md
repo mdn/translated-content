@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
 original_slug: Web/SVG/Tutorial/Tools_for_SVG
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
 
 Ahora que hemos cubierto los aspectos básicos de los componentes internos de SVG, analizaremos algunas herramientas para trabajar con archivos SVG.
 
@@ -68,4 +68,4 @@ In GIS (Geographic Information System) applications SVG is often used as both st
 
 The W3C offers a [list of programs](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations) that support SVG.
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Image_element") }}
