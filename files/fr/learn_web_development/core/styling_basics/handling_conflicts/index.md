@@ -16,7 +16,7 @@ Bien que ce chapitre puisse sembler plus théorique voire académique que d'autr
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions élémentaires d'informatique, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">travailler avec les fichiers</a>, connaître les bases de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), et avoir une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>).</td>
+      <td>Notions élémentaires d'informatique, <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">travailler avec les fichiers</a>, connaître les bases de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), et avoir une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>).</td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
@@ -256,7 +256,7 @@ Si vous changez la première ligne du CSS de cet exemple par `@layer secondLayer
 
 ## Évaluez vos compétences
 
-Vous avez terminé l'article, mais avez-vous mémorisé les informations essentielles&nbsp;? Vous pouvez vérifier que c'est le cas en vous évaluant avec [l'évaluation sur la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_tasks).
+Vous avez terminé l'article, mais avez-vous mémorisé les informations essentielles&nbsp;? Vous pouvez vérifier que c'est le cas en vous évaluant avec [l'évaluation sur la cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks).
 
 ## Résumé
 

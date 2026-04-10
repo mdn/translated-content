@@ -14,12 +14,12 @@ Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs,
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >compréhension du HTML</a
-        >, et<a href="/fr/docs/Learn/HTML/Introduction_to_HTML"> </a
+        >, et<a href="/fr/docs/Learn_web_development/Core/Structuring_content"> </a
         >connaissances de base de
-        <a href="/fr/docs/Web/HTTP/Basics_of_HTTP">HTTP </a>et
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Web/HTTP">HTTP </a>et
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation côté serveur.</a
         >
       </td>

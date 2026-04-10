@@ -15,7 +15,7 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Des connaissances de base en informatique, une compréhension de base du <a href="/fr/docs/Learn/HTML">HTML</a> et <a href="/fr/docs/Learn/CSS">CSS</a>, des notions de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">briques JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Objects">objets JavaScript</a>).
+        Des connaissances de base en informatique, une compréhension de base du <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, des notions de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">premiers pas</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">briques JavaScript</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">objets JavaScript</a>).
       </td>
     </tr>
     <tr>

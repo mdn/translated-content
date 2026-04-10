@@ -77,7 +77,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           Un objet JSON dont les propriétés représentent les images à afficher
           dans différentes parties du navigateur. Voir les
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#images"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#images"
               >images</a
             ></code
           >
@@ -94,7 +94,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           Un objet JSON dont les propriétés représentent les couleurs de
           différentes parties du navigateur. Voir
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#couleurs"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#couleurs"
               >couleurs</a
             ></code
           >
@@ -111,7 +111,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           This object has two properties that affect how the
           <code>"additional_backgrounds"</code> images are displayed. See
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#properties"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#properties"
               >properties</a
             ></code
           >

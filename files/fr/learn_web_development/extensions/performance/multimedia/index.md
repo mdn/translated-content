@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Multimedia
 original_slug: Learn/Performance/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 Les fichiers média, et plus précisément les images et les vidéos, représentent plus de 70 % des octets téléchargés sur un site web classique. En termes de performance lors du téléchargement des ressources d'une page, la suppression des fichiers média et la réduction de la taille des fichiers est la solution de facilité pour produire des sites performants. Cet article s'intéresse à l'optimisation des images et des vidéos dans le but d'améliorer les performances.
 
@@ -15,11 +15,11 @@ Les fichiers média, et plus précisément les images et les vidéos, représent
       <td>
         Bases de l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base</a
         >
         installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >des technologies web opérant côté client</a
         >.
       </td>
@@ -132,4 +132,4 @@ Pour les images d'arrière-plan, il est important de mettre en place une valeur 
 
 Dans cette section nous avons vu l'optimisation des images. Vous avez maintenant une compréhension générale de la façon d'optimiser la bande passante de la moitié des sites web. Ce n'est qu'un des types d'optimisation consommant la bande passante des visiteurs et ralentissant le chargement des pages. Dans le prochain article, nous verrons l'optimisation du critère responsable de 20 % de la consommation de bande passante.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
