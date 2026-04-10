@@ -38,12 +38,12 @@ O exemplo a seguir mostra a estilização de um retângulo com um atributo de es
 
 Os seguintes elementos podem utilizar o atributo `style`
 
-- [Elementos "container"](/pt-BR/docs/Web/SVG/Element#container) »
-- [Elementos de filtro primitivo](/pt-BR/docs/Web/SVG/Element#filterprimitive) »
-- [Elementos de gradiente](/pt-BR/docs/Web/SVG/Element#gradient) »
-- [Elementos gráficos](/pt-BR/docs/Web/SVG/Element#graphics) »
-- [Elementos estruturais](/pt-BR/docs/Web/SVG/Element#structural) »
-- [Elementos de texto](/pt-BR/docs/Web/SVG/Element#textcontent) »
+- [Elementos "container"](/pt-BR/docs/Web/SVG/Reference/Element#container) »
+- [Elementos de filtro primitivo](/pt-BR/docs/Web/SVG/Reference/Element#filterprimitive) »
+- [Elementos de gradiente](/pt-BR/docs/Web/SVG/Reference/Element#gradient) »
+- [Elementos gráficos](/pt-BR/docs/Web/SVG/Reference/Element#graphics) »
+- [Elementos estruturais](/pt-BR/docs/Web/SVG/Reference/Element#structural) »
+- [Elementos de texto](/pt-BR/docs/Web/SVG/Reference/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
 - {{ SVGElement("font") }}

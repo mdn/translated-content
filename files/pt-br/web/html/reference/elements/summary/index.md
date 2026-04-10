@@ -21,7 +21,7 @@ O elemento HTML _summary_ (`<summary>`) é utilizado como um sumário ou legenda
 
 ## Atributos
 
-Como todos os outros elementos HTML, esse elemento possui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Como todos os outros elementos HTML, esse elemento possui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Interface do DOM
 

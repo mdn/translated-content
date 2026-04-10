@@ -146,7 +146,7 @@ Olhando para essa página você descobrirá que, além de remover a marcação d
 
 Até agora, temos estilizado elementos baseado em seus nomes HTML. isto funciona enquanto você desejar que todos os elementos desse tipo, no seu documento, se pareçam o mesmo. Na maioria das vezes, isso não é o caso, e, então, você precisará encontrar uma maneira de selecionar um subconjunto de elementos sem alterar os outros. A maneira mais comum de fazer isso é adicionar uma classe ao seu elemento HTML e especificar essa classe.
 
-No seu documento HTML, adicione um [atributo de classe](/pt-BR/docs/Web/HTML/Global_attributes/class) ao segundo item da lista. Sua lista se parecerá, agora, assim:
+No seu documento HTML, adicione um [atributo de classe](/pt-BR/docs/Web/HTML/Reference/Global_attributes/class) ao segundo item da lista. Sua lista se parecerá, agora, assim:
 
 ```html
 <ul>
@@ -223,7 +223,7 @@ O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma re
 
 ## Estilizando coisas baseadas no estado
 
-O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
+O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Reference/Elements/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
 
 ```css
 a:link {

@@ -10,7 +10,7 @@ Une requête d'intervalle HTTP (ou requête partielle) demande au serveur d'envo
 
 ## Vérifier si un serveur prend en charge les requêtes partielles
 
-Si la réponse HTTP inclut l'en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges) avec une autre valeur que `none`, cela indique que le serveur prend en charge les requêtes d'intervalle. Si la réponse ne contient pas l'en-tête `Accept-Ranges`, cela indique que le serveur ne les prend pas en charge. Si les requêtes d'intervalle ne sont pas prises en charge, les applications peuvent s'adapter à cette condition&nbsp;; par exemple un gestionnaire de téléchargement pourrait désactiver les boutons de mise en pause qui s'appuient sur les requêtes d'intervalle pour suspendre/reprendre un téléchargement.
+Si la réponse HTTP inclut l'en-tête [`Accept-Ranges`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Ranges) avec une autre valeur que `none`, cela indique que le serveur prend en charge les requêtes d'intervalle. Si la réponse ne contient pas l'en-tête `Accept-Ranges`, cela indique que le serveur ne les prend pas en charge. Si les requêtes d'intervalle ne sont pas prises en charge, les applications peuvent s'adapter à cette condition&nbsp;; par exemple un gestionnaire de téléchargement pourrait désactiver les boutons de mise en pause qui s'appuient sur les requêtes d'intervalle pour suspendre/reprendre un téléchargement.
 
 Pour vérifier si un serveur prend en charge les requêtes d'intervalle, vous pouvez envoyer une requête [`HEAD`](/fr/docs/Web/HTTP/Reference/Methods/HEAD) afin d'inspecter les en-têtes sans demander la ressource complète. Si vous utilisez [curl](https://curl.se/), vous pouvez utiliser l'option `-I` afin d'envoyer une requête `HEAD`&nbsp;:
 
@@ -42,7 +42,7 @@ Dans cette réponse, `Accept-Ranges: bytes` indique que 'bytes' (les octets) peu
 
 ## Demander un intervalle donné au serveur
 
-Si le serveur prend en charge les requêtes d'intervalle, on pourra indiquer la ou les parties du document qu'on souhaite récupérer depuis le serveur en précisant l'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) dans la requête HTTP.
+Si le serveur prend en charge les requêtes d'intervalle, on pourra indiquer la ou les parties du document qu'on souhaite récupérer depuis le serveur en précisant l'en-tête [`Range`](/fr/docs/Web/HTTP/Reference/Headers/Range) dans la requête HTTP.
 
 ### Demander un seul intervalle
 
@@ -74,11 +74,11 @@ content-range: bytes 0-1023/146515
 (contenu binaire)
 ```
 
-L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Reference/Headers/Content-Length) indique alors la taille de l'intervalle demandé, pas la taille complète de l'image. L'en-tête de réponse [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range) indique que ce message partiel appartient à une ressource plus étendue.
+L'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Reference/Headers/Content-Length) indique alors la taille de l'intervalle demandé, pas la taille complète de l'image. L'en-tête de réponse [`Content-Range`](/fr/docs/Web/HTTP/Reference/Headers/Content-Range) indique que ce message partiel appartient à une ressource plus étendue.
 
 ### Demander plusieurs intervalles
 
-L'en-tête [`Range`](/fr/docs/Web/HTTP/Headers/Range) permet également de récupérer plusieurs intervalles à la fois pour un document en plusieurs parties. Les intervalles sont alors séparés par une virgule.
+L'en-tête [`Range`](/fr/docs/Web/HTTP/Reference/Headers/Range) permet également de récupérer plusieurs intervalles à la fois pour un document en plusieurs parties. Les intervalles sont alors séparés par une virgule.
 
 ```bash
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
@@ -111,7 +111,7 @@ eta http-equiv="Content-type" content="text/html; c
 
 Lorsqu'on envoie des requêtes ultérieures pour récupérer d'autres parties de la ressource, il faut s'assurer que la ressource stockée n'a pas été modifiée depuis la réception du dernier fragment.
 
-L'en-tête de requête [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range) permet de construire une requête d'intervalle conditionnelle&nbsp;: si la condition indiquée est respectée, la requête d'intervalle sera respectée et le serveur renverra une réponse HTTP [`206 Partial Content`](/fr/docs/Web/HTTP/Reference/Status/206) avec le corps approprié. Si la condition n'est pas respectée, la ressource complète sera renvoyée avec un statut [`200 OK`](/fr/docs/Web/HTTP/Reference/Status/200). Cet en-tête peut être utilisé avec un validateur [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) ou [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag), mais pas avec les deux.
+L'en-tête de requête [`If-Range`](/fr/docs/Web/HTTP/Reference/Headers/If-Range) permet de construire une requête d'intervalle conditionnelle&nbsp;: si la condition indiquée est respectée, la requête d'intervalle sera respectée et le serveur renverra une réponse HTTP [`206 Partial Content`](/fr/docs/Web/HTTP/Reference/Status/206) avec le corps approprié. Si la condition n'est pas respectée, la ressource complète sera renvoyée avec un statut [`200 OK`](/fr/docs/Web/HTTP/Reference/Status/200). Cet en-tête peut être utilisé avec un validateur [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified) ou [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag), mais pas avec les deux.
 
 ```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
@@ -136,8 +136,8 @@ L'en-tête [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding) pe
   - [`206 Partial Content`](/fr/docs/Web/HTTP/Reference/Status/206)
   - [`416 Range Not Satisfiable`](/fr/docs/Web/HTTP/Reference/Status/416)
 - Les en-têtes associés&nbsp;:
-  - [`Accept-Ranges`](/fr/docs/Web/HTTP/Headers/Accept-Ranges)
-  - [`Range`](/fr/docs/Web/HTTP/Headers/Range)
-  - [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
-  - [`If-Range`](/fr/docs/Web/HTTP/Headers/If-Range)
+  - [`Accept-Ranges`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Ranges)
+  - [`Range`](/fr/docs/Web/HTTP/Reference/Headers/Range)
+  - [`Content-Range`](/fr/docs/Web/HTTP/Reference/Headers/Content-Range)
+  - [`If-Range`](/fr/docs/Web/HTTP/Reference/Headers/If-Range)
   - [`Transfer-Encoding`](/fr/docs/Web/HTTP/Headers/Transfer-Encoding)

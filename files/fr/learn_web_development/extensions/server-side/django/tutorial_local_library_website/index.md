@@ -14,7 +14,7 @@ Le premier article de cette série didactique explique ce que vous apprendrez et
       <th scope="row">Prérequis:</th>
       <td>
         La lecture de
-        <a href="/fr/docs/Learn/Server-side/Django/Introduction"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >l'introduction</a
         >. Pour les articles suivants avoir mis à jour l'environnement comme
         décrit précédemment.

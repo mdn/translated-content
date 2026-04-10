@@ -4,7 +4,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 original_slug: Web/SVG/Tutorial/Getting_Started
 ---
 
-{{SVGRef}}{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}
 
 ### Un Ejemplo Simple
 
@@ -90,4 +90,4 @@ Puede comprobar que su servidor envía las cabeceras HTTP correctas con sus arch
 
 La configuración incorrecta del servidor es una razón muy común para que SVG no se cargue, así que asegúrese de comprobar la suya. Si su servidor no está configurado para enviar las cabeceras correctas con los archivos SVG que esta sirviendo, lo más probable es que Firefox muestre el marcado de los archivos como texto o basura codificada, o incluso que pida al usuario que elija una aplicación para abrirlos.
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

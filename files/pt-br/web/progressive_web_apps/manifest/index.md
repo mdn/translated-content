@@ -197,7 +197,7 @@ Valid values are:
 </table>
 
 > [!NOTE]
-> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/pt-BR/docs/Web/CSS/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
+> You can selectively apply CSS to your app based on the display mode, using the [display-mode](/pt-BR/docs/Web/CSS/Reference/At-rules/@media/display-mode) media feature. This can be used to provide a consistent user experience between launching a site from an URL and launching it from a desktop icon.
 
 ### icons
 
