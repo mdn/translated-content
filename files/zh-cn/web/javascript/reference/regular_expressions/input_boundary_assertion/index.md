@@ -16,9 +16,9 @@ $
 
 ## 描述
 
-`^` 表示当前位置是输入的开头。`$` 表示当前位置是输入的结尾。两者都是*断言*，因此不会消耗任何字符。
+`^` 断言当前位置是输入的开头，`$` 断言当前位置是输入的结尾。因为两者都是*断言*，它们不会消耗任何字符。
 
-更准确地说，`^` 表示左侧的字符超出了字符串的范围；`$` 表示右侧的字符超出了字符串的范围。如果设置了 [`m`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) 标志，当左侧字符是[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符) 时，`^` 也会匹配；当右侧字符是行结束符时，`$` 也会匹配。
+更准确地说，`^` 断言左侧的字符超出了字符串的范围；`$` 断言右侧的字符超出了字符串的范围。如果设置了 [`m`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) 标志，则 `^` 也会匹配左侧字符是[行终止符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#行终止符)的情况，`$` 同理也会匹配右侧字符是行结束符的情况。
 
 除非设置了 `m` 标志，否则 `^` 和 `$` 断言仅在位于模式边界时才有意义，因为它们左侧或右侧的任何其他字符都会导致断言失败。
 
@@ -68,7 +68,7 @@ isValidIdentifier("1foo"); // false
 isValidIdentifier("  foo  "); // false
 ```
 
-在进行代码生成（即使用代码生成代码）时，此函数非常有用，因为可以与其他字符串属性不同地使用有效的标识符，例如使用[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#点号表示法)代替[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)：
+该函数在进行代码生成（即使用代码生成代码）时非常有用，因为你可使用与其他字符串属性不同的合法标识符，如使用[点号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#点号表示法)代替[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)：
 
 ```js
 const variables = ["foo", "foo:bar", "  foo  "];
