@@ -15,7 +15,7 @@ Les événements sont des actions ou des occurrences qui se produisent dans le s
       <td>
         Connaissances de base en informatique, une compréhension de base de HTML
         et CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript</a
         >.
       </td>

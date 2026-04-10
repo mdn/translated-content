@@ -12,7 +12,7 @@ Un navigateur web contient certains outils graphiques très puissants, comme le 
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions élémentaires de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">les premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">les blocs de construction</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets en JavaScript</a>), et <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les notions de bases pour les API côté client</a></td>
+      <td>Notions élémentaires de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">les premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">les blocs de construction</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets en JavaScript</a>), et <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les notions de bases pour les API côté client</a></td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>

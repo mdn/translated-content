@@ -16,7 +16,7 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
       <th scope="row">Prérequis:</th>
       <td>
         Notions de bases de JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">premiers pas</a>,
         <a href="/fr/Apprendre/JavaScript/Building_blocks"
           >les briques JavaScript</a
         >,

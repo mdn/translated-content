@@ -14,9 +14,9 @@ original_slug: Learn/CSS/CSS_layout/Floats
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction au HTML</a
         >), et une idée de la manière dont fonctionne CSS (étudiez
-        <a href="/fr/docs/Learn/CSS/First_steps">Introduction au CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Introduction au CSS</a>.)
       </td>
     </tr>
     <tr>

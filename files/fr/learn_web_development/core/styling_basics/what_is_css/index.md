@@ -21,7 +21,7 @@ Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire 
         <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >savoir manipuler des fichiers</a
         >, connaissance de base de HTML (cf. <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >.)
       </td>

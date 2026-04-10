@@ -19,7 +19,7 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
           <a href="/fr/docs/Learn/JavaScript">JavaScript</a>,
           connaissance de la
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >ligne de commande/du terminal</a
           >.
         </p>

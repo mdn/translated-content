@@ -23,10 +23,10 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
         <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >la manipulation des fichiers</a
         >, notions élémentaires sur HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >l'introduction à HTML</a
         >), et une idée du fonctionnement de CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">les premiers pas en CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">les premiers pas en CSS</a>.)
       </td>
     </tr>
     <tr>

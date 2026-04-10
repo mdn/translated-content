@@ -14,7 +14,7 @@ Les langages de programmation sont très utiles pour effectuer des tâches rép�
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Culture informatique basique, compréhension basique du HTML et du CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript…</a
         >
       </td>

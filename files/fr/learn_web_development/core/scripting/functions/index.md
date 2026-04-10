@@ -14,7 +14,7 @@ Les **fonctions** sont un autre concept essentiel de la programmation, qui perme
       <th scope="row">Prerequis:</th>
       <td>
         Culture informatique basique, compréhension basique du HTML et du CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript...</a
         >
       </td>
@@ -241,7 +241,7 @@ Si aucun paramètre n'est inclus pour spécifier un caractère de jointure / dé
 
 ## La portée des fonctions et les conflits
 
-Parlons un peu de la {{glossary("portée")}} — un concept très important lorsque l'on a affaire à des fonctions. Lorsque vous créez une fonction, les variables et les autres choses qui sont définies à l'intérieur de la fonction ont leur propre **portée**, ce qui signifie qu'elles sont enfermées dans leur propre compartiment séparé et qu'elles ne peuvent pas être affectées par d'autres fonctions ou par le code en dehors de la fonction.
+Parlons un peu de la {{glossary("scope", "portée")}} — un concept très important lorsque l'on a affaire à des fonctions. Lorsque vous créez une fonction, les variables et les autres choses qui sont définies à l'intérieur de la fonction ont leur propre **portée**, ce qui signifie qu'elles sont enfermées dans leur propre compartiment séparé et qu'elles ne peuvent pas être affectées par d'autres fonctions ou par le code en dehors de la fonction.
 
 Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe quelle partie du code.
 

@@ -21,7 +21,7 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
         <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >), et une idée de
         <a href="/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"

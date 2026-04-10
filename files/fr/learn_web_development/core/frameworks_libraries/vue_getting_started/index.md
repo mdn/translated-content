@@ -20,7 +20,7 @@ Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous 
           <a href="/fr/docs/Learn/CSS">CSS</a>et
           <a href="/fr/docs/Learn/JavaScript">JavaScript,</a> connaissance de la
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >ligne terminal/commande</a
           >.
         </p>

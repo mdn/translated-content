@@ -13,7 +13,7 @@ Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les con
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-         Compréhension élémentaire de l'informatique et compréhension des bases de <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">HTML</a> et de <a href="/fr/docs/Learn/CSS/First_steps">CSS</a>.
+         Compréhension élémentaire de l'informatique et compréhension des bases de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et de <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">CSS</a>.
       </td>
     </tr>
     <tr>

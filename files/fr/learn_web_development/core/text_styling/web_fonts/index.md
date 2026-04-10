@@ -14,7 +14,7 @@ Dans le premier article du module, nous avons exploré les fonctions CSS de base
       <th scope="row">Prérequis :</th>
       <td>
         Connaissances informatiques de base, les bases HTML (étudiées dans l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), les bases CSS (étudiées dans
         <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a

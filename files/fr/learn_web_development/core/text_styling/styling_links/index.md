@@ -14,7 +14,7 @@ Lors de la mise en forme de [liens](/fr/docs/Learn_web_development/Core/Structur
       <th scope="row">Prérequis :</th>
       <td>
         Notions de base en informatique, notions de base en HTML (étudier l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML)</a
         >, notions de base en CSS (étudier l'<a
           href="/fr/docs/Learn/CSS/Introduction_to_CSS"

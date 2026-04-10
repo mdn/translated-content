@@ -14,7 +14,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
       <th scope="row">Prérequis:</th>
       <td>
         Les bases du JavaScript (voir <a
-          href="/fr/docs/Learn/JavaScript/First_steps"
+          href="/fr/docs/Learn_web_development/Core/Scripting"
           >premiers pas en JavaScript</a
         >,
         <a href="/fr/Apprendre/JavaScript/Building_blocks"

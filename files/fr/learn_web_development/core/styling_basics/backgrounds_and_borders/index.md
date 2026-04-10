@@ -21,10 +21,10 @@ Dans cette leçon, nous verrons quelques-unes des mises en forme créatives auto
         <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >manipulation de fichiers</a
         >, les bases du HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), et une esquisse du fonctionnement du CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>. )
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">premiers pas en CSS</a>. )
       </td>
     </tr>
     <tr>

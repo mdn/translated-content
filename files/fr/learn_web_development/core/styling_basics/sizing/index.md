@@ -21,10 +21,10 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
             href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
             >travailler avec des fichiers</a
           >, connaissance de base du HTML (cf.
-          <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
             >Introduction à HTML</a
           >), et une idée de
-          <a href="/fr/docs/Learn/CSS/First_steps">Comment fonctionne CSS</a>.
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Comment fonctionne CSS</a>.
         </p>
       </td>
     </tr>
@@ -114,7 +114,7 @@ Dimensionner les objets en fonction de la fenêtre peut s'avérer utile. Par exe
 
 ## Testez vos compétences !
 
-Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez retenu ces informations avant de passer à autre chose — voir [Tester vos compétences : Dimensionnement](/fr/docs/Learn/CSS/Building_blocks/Sizing_tasks).
+Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez retenu ces informations avant de passer à autre chose — voir [Tester vos compétences : Dimensionnement](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks).
 
 ## Résumé
 
