@@ -31,13 +31,13 @@ Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core
 
 Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en la web. Cubren temas como, formularios, CORS, precarga de contenido e imagenes responsivas.
 
-- [HTML cheatsheet for syntax and common tasks](/es/docs/Web/HTML/Guides/Cheatsheet)
-  - : Quick reference for common HTML syntax and tasks.
-- [Using HTML comments `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)
-  - : HTML comments are used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
+- [Hoja de referencia para sintaxis y tareas comunes HTML](/es/docs/Web/HTML/Guides/Cheatsheet)
+  - : Referencia rápida para sintaxis y tareas comuned de HTML.
+- [Usando comentarios HTML `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)
+  - : Los comentarios HTML son usados para agregar explicaciones a las etiquetas o para prevenir que el navegador interprete partes del documento.
 - [Using HTML form validation and the Constraint Validation API](/es/docs/Web/HTML/Guides/Constraint_validation)
   - : HTML5 introduced constraint validation to ease form validation on the client side. Basic constraints can be checked without JavaScript by setting attributes on form elements.
-- [Content categories](/es/docs/Web/HTML/Guides/Content_categories)
+- [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories)
   - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
 - [Using date and time formats in HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Certain HTML elements use date and/or time values. This guide describes the formats of the strings that specify these values.
@@ -47,24 +47,24 @@ Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en
   - : Microformats are standards used to embed semantics and structured data in HTML for use by social web applications, search engines, aggregators, and other tools.
 - [Understanding quirks and standards modes](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
   - : Historical information on quirks mode and standards mode.
-- [Using responsive images in HTML](/es/docs/Web/HTML/Guides/Responsive_images)
+- [Usando imagenes responsivas en HTML](/es/docs/Web/HTML/Guides/Responsive_images)
   - : Learn about responsive images that work well on devices with widely differing screen sizes, resolutions, and other features, improving performance across different devices.
 - [Media types and formats on the web](/es/docs/Web/Media/Guides/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 
-## How to
+## Como hacer
 
-- [Define terms with HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)
+- [Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)
   - : HTML provides several ways to convey description semantics, whether inline or as structured glossaries. This article shows how to properly mark up keywords when defining them.
-- [Use data attributes](/es/docs/Web/HTML/How_to/Use_data_attributes)
+- [Usar atributos data](/es/docs/Web/HTML/How_to/Use_data_attributes)
   - : HTML5 is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. `data-*` attributes allow us to store extra information on standard, semantic HTML elements.
-- [Use cross-origin images in a canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
-  - : Some HTML elements that provide support for [CORS](/es/docs/Web/HTTP/Guides/CORS), such as {{HTMLElement("img")}} or {{HTMLElement("video")}}, have a `crossorigin` attribute (`crossOrigin` property), which lets you configure the CORS requests for the element's fetched data.
-- [Add a hitmap on top of an image](/es/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
+- [Usar imagenes cross-origin en canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : Algunos elementos HTML proveén soporte para [CORS](/es/docs/Web/HTTP/Guides/CORS), tales como {{HTMLElement("img")}} o {{HTMLElement("video")}}, que tienen un atributo `crossorigin` (propiedad `crossOrigin`), la cual te permite configurar las solicitudes CORS para los datos traidos del elemento.
+- [Agregar un hitmap sobre una imagen](/es/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
   - : Image maps allow hyperlinks to be associated with different parts of an image. This article shows how to create and implement them.
 - [Author fast-loading HTML pages](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : These tips are based on common knowledge and experimentation. An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection.
-- [Add JavaScript to your web page](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
+- [Agregar JavaScript a tu página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
   - : This article explains how to add JavaScript code to an HTML file.
 
 ## Referencia
@@ -89,10 +89,10 @@ HTML consists of **elements**, each of which may be modified by some number of *
 
 ### Valores de Atributos
 
-- [rel keywords](/es/docs/Web/HTML/Reference/Attributes/rel)
-  - : Defines the relationship between a linked resource and the current document.
+- [palabras reservadas rel](/es/docs/Web/HTML/Reference/Attributes/rel)
+  - : Definen la relacion entre un recurso enlazado y el documento actual.
 
 ## Temas relacionados
 
-- [Applying color to HTML elements using CSS](/es/docs/Web/CSS/Guides/Colors/Applying_color)
-  - : This article covers most of the ways you use CSS to add color to HTML content, listing what parts of HTML documents can be colored and what CSS properties to use when doing so.
+- [Aplicando color a elementos HTML usando CSS](/es/docs/Web/CSS/Guides/Colors/Applying_color)
+  - : Este artículo cubre la mayoría de las formas en que puedes agregar color al contenido de HTML, lista a que partes de los documentos HTML se les puede agregar color y que propiedades de CSS usar para hacerlo.
