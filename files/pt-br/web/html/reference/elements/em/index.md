@@ -64,7 +64,7 @@ O **elemento** **HTML** **`<em>`** marca o texto que tem ênfase. O elemento \<e
 
 ## Atributos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

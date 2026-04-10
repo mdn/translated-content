@@ -1,10 +1,9 @@
 ---
 title: Introduction au test en navigateur croisé
 slug: Learn_web_development/Extensions/Testing/Introduction
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"
 
@@ -14,9 +13,9 @@ Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs
       <th scope="row">Prérequis:</th>
       <td>
         Etre familier avec les bases des langage
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -173,4 +172,4 @@ Juste pour redire ce qui a déjà été dit au-dessus, si vous découvrez des bu
 
 Cet article devrez vous avoir donné un haut niveau de compréhension des concepts les plus importants que vous devez connaître à propos du test en navigateur croisé. Armé de ce savoir, vous êtes maintenant prêt à démarrer et à commencer à apprendre à propos des stratégies de test multi-navigateur.
 
-{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}

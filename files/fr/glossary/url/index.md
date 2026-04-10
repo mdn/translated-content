@@ -13,6 +13,6 @@ Les URL peuvent également être utilisées pour le transfert de fichiers ({{Glo
 
 ## Voir aussi
 
-- [Comprendre les URL et leur structure](/fr/docs/Learn/Understanding_URLs)
+- [Comprendre les URL et leur structure](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - La syntaxe des URL est définie dans le [Standard Vivant des URL <sup>(angl.)</sup>](https://url.spec.whatwg.org/)
 - [URL](https://fr.wikipedia.org/wiki/Uniform_Resource_Locator) sur Wikipédia

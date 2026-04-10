@@ -20,7 +20,7 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
       <td><a href="/fr/docs/Glossary/Navigation_directive">Directive de navigation</a></td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>Non, ne pas définir cette directive autorise toutes les adresses.</td>
     </tr>
   </tbody>

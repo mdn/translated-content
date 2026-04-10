@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement
 
 HTML 媒体元素接口在属性和方法中添加了 {{domxref("HTMLElement", "HTML 元素", "", 1)}}来支持基础的媒体相关的能力，就像音频和视频一样。{{domxref("HTMLVideoElement", "HTML 视频元素", "", 1)}}和{{domxref("HTMLAudioElement", "HTML 音频元素", "", 1)}}元素都继承自此接口。
 
-{{InheritanceDiagram}}
+{{InheritanceDiagram(600, 180)}}
 
 ## 特性
 
@@ -71,7 +71,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
       <td>
         一个表示媒体元素
         <a
-          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
+          href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
         <a href="/zh-CN/docs/HTML/CORS_settings_attributes"

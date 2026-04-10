@@ -66,5 +66,5 @@ A avaliação a seguir testará sua compreensão dos métodos de layout CSS abor
 
 - [Exemplos de posicionamento prático](/pt-BR/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
   - : Este artigo mostra como construir alguns exemplos do mundo real para ilustrar que tipos de coisas você pode fazer com o posicionamento.
-- [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/Layout_cookbook)
+- [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/How_to/Layout_cookbook)
   - : O livro de receitas de layout CSS visa reunir receitas para padrões de layout comuns, coisas que você pode precisar implementar em seus sites. Além de fornecer o código que você pode usar como ponto de partida em seus projetos, essas receitas destacam as diferentes maneiras pelas quais as especificações de layout podem ser usadas e as escolhas que você pode fazer como desenvolvedor.k
