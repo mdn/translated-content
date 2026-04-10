@@ -503,4 +503,4 @@ El ejemplo se ve así; juegue:
 ## Véase también
 
 - [Uso de archivos de aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications): contiene una serie de otros ejemplos útiles relacionados con `<input type="file">` y la [API de archivos](/es/docs/Web/API/File).
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad de propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este artículo conoceremos React. Descubriremos algunos detalles sobre su trasfondo y casos de uso, configuraremos una cadena básica de herramientas para React en nuestra computadora local, crearemos y jugaremos con una aplicación inicial sencilla, mientras aprendemos —durante el proceso— un poco acerca de cómo funciona React.
 
@@ -457,4 +457,4 @@ En React:
 - Algunos atributos JSX son diferentes a los atributos HTML, para evitar conflictos con las palabras reservadas de JavaScript. Por ejemplo, el atributo `class` de HTML se convierte en `className` en JSX. Ten en cuenta que los atributos de varias palabras se nombran con `camelCase`.
 - Los props se escriben como atributos dentro de las llamadas de componentes y se pasan a los componentes.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

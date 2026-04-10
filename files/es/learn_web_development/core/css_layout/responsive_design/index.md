@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de _diseño web responsivo_ (RWD, _responsive web design_), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo, y en este artículo te ayudaremos a comprender las principales técnicas que necesitas saber para dominarlo.
 
@@ -134,7 +134,7 @@ En pantallas más anchas se pasa a dos columnas:
 
 ## Tecnologías modernas de diseño de páginas web
 
-Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
+Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
 
 ### Multicol
 
@@ -301,4 +301,4 @@ El diseño responsivo se refiere a un diseño página de un sitio web o una apli
 
 Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

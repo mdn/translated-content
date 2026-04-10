@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 original_slug: Learn/Forms/Basic_native_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
 
@@ -277,7 +277,7 @@ Muchos de los elementos que se utilizan para definir controles de formulario tie
 
 Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto original que se introdujo en los primeros días de HTML, que es compatible con todos los navegadores. En el artículo siguiente veremos los valores del atributo `type` que se han añadido en HTML5 más recientemente.
 
-{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 ### Temas avanzados
 
@@ -285,4 +285,4 @@ Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto origi
 - [Cómo crear widgets de formularios personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn_web_development/Extensions/Forms)

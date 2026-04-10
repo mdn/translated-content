@@ -520,4 +520,4 @@ daySelect.onchange = function () {
 - Los elementos {{HTMLElement("input")}} generícos y la interfaz usada para manipularlos, {{domxref("HTMLInputElement")}}
 - [Tutorial seleccionador de fechas](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [Formatos de fecha y tiempo usados en HTML](/es/docs/Web/HTML/Date_and_time_formats)
-- [Compatibilidad con las propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad con las propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)
