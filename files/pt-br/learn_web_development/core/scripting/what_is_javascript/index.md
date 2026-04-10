@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 Sejam bem-vindos ao curso de JavaScript para iniciantes do MDN! Neste primeiro artigo vamos fazer uma análise profunda da linguagem, respondendo questões como "O que é JavaScript?", e "O que ele faz?", para você se sentir confortável com a proposta da linguagem.
 
@@ -413,4 +413,4 @@ Então, esse foi o seu primeiro passo no mundo do JavaScript. Nós iniciamos ape
 
 O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos [mergulhar direto para a prática](/pt-BR/docs/Learn_web_development/Core/Scripting/A_first_splash), levando você a construir seu próprio código JavaScript.
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}

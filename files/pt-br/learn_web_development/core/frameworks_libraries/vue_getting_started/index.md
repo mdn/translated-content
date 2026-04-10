@@ -56,7 +56,7 @@ Para uma boa comparação (mas potencialmente tendenciosa) entre o Vue e muitos 
 
 ## Installation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Reference/Elements/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
 - Development Script (Unoptimized, but includes console warnings. Great for development
 
@@ -238,7 +238,7 @@ If you navigate to the "local" address in a new browser tab (this should be some
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img) element from the template section:
 
 ```vue
 <img alt="Vue logo" src="./assets/logo.png" />

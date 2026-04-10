@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento {{htmlelement("img")}}, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento {{htmlelement("figure")}}, e detalhando como ele se relaciona com imagens de fundo do CSS.
 
@@ -117,7 +117,7 @@ O que exatamente você deve escrever dentro do seu atributo `alt`? Depende do _p
 - **Decoração.** Se a imagem é apenas decoração e não faz parte do conteúdo, adicione um espaço em branco `alt=""`. Por exemplo, um leitor de tela não perde tempo lendo conteúdo que não é essencial para o usuário. Imagens decorativas realmente não pertencem ao seu HTML. [CSS background images](#css_background_images) deve ser usado para inserir decoração, mas se for inevitável, `alt=""` é o melhor caminho a percorrer.
 - **Conteúdo.** Se sua imagem fornecer informações significativas, forneça as mesmas informações em um _breve_ `alt` texto. Ou melhor ainda, no texto principal que todos podem ver. Não escreva redundante `alt` texto. O quão irritante seria para um usuário que enxerga se todos os parágrafos fossem escritos duas vezes no conteúdo principal? Se a imagem for descrita adequadamente pelo corpo do texto principal, você pode simplesmente usar `alt=""`.
 - **Link.** Se você colocar uma imagem dentro das tags {{htmlelement("a")}}, para transformar uma imagem em um link, você ainda deve fornecer [links acessíveis](/pt-BR/docs/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks#Pr%C3%A1ticas_recomendadas). Nesses casos, você também pode escrevê-lo no mesmo elemento `<a>`, ou dentro do atributo `alt` da imagem. O que funcionar melhor no seu caso.
-- **Texto.** Você não deve colocar seu texto em imagens. Se o cabeçalho principal precisar de uma sombra projetada, por exemplo, [use CSS](/pt-BR/docs/Web/CSS/text-shadow) para isso, em vez de colocar o texto em uma imagem. No entanto, se você _realmente não puder evitar fazer isso_, deve fornecer o texto dentro do atributo `alt`.
+- **Texto.** Você não deve colocar seu texto em imagens. Se o cabeçalho principal precisar de uma sombra projetada, por exemplo, [use CSS](/pt-BR/docs/Web/CSS/Reference/Properties/text-shadow) para isso, em vez de colocar o texto em uma imagem. No entanto, se você _realmente não puder evitar fazer isso_, deve fornecer o texto dentro do atributo `alt`.
 
 Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não estejam perdendo nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.
 
@@ -280,7 +280,7 @@ Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e 
 O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.
 
 > [!NOTE]
-> Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+> Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Reference/Elements/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
 
 Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
 
@@ -376,4 +376,4 @@ Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você de
 
 É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content")}}

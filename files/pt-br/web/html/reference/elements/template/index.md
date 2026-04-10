@@ -73,7 +73,7 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 Há também um atributo _content,_ o qual é _read-only_ e provê acesso ao conteúdo do template. A existência desse atributo _content_ é frequentemente usada como um modo de determinar se o navegador do usuário suporta o element **`<template>`**.
 

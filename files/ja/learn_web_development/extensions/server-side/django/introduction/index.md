@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 この最初の Django の記事では、「Django とは何か」 という問いに答え、このウェブフレームワークの特徴と概要を説明します。
 
@@ -246,4 +246,4 @@ def index(request):
 
 上記では実際の Django コードをいくつか見ましたが、クライアントサイドのコードとは異なり、実行するための開発環境をセットアップする必要があります。それが次のステップです。
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

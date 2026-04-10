@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 original_slug: Learn/Server-side/Express_Nodejs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 Neste primeiro artigo sobre Express responderemos as questões " O que é Node?" e "O que é Express?", além de dar a você uma visão geral sobre o que torna o Express um framework web tão especial. Vamos descrever as principais características e mostrar alguns dos principais blocos de códigos de construção de um aplicativo Express (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
 
@@ -520,7 +520,7 @@ Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve
 - [Serving static files in Express](<Serving static files in Express>) (Express docs)
 - [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 ## Próximos módulos
 

@@ -79,7 +79,7 @@ code {
 
 ## Atributos
 
-Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui apenas os [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemplo
 
