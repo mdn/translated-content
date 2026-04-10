@@ -236,7 +236,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Nous avons appelé le paramètre de cette fonction `jsonObj` afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
+Nous avons appelé le paramètre de cette fonction `jsonObj` afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
 
 ### Création des fiches des héros
 

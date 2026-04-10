@@ -15,10 +15,10 @@ En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprend
       <td>
         Compétences informatique basiques,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >Logiciels de base installés</a
         >, connaissance simple en
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manipulation de fichiers</a
         >, les bases du HTML (voir
         <a href="/fr/docs/Learn_web_development/Core/Structuring_content"

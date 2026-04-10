@@ -48,7 +48,7 @@ Cet exemple utilise l'[API Canvas](/fr/docs/Learn_web_development/Extensions/Cli
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
-1. Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
+1. Un document HTML très simple contenant un élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
 2. Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
 3. Un peu de JavaScript qui sert à paramétrer l'élément `<canvas>` et fournir les fonctions globales que nous utiliserons.
 

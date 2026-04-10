@@ -13,20 +13,13 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Compétences informatiques de base,
-        <a
-          href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >installation des outils de base</a
-        >, bases de la
-        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >manipulation des fichiers</a
-        >, connaissance des fondamentaux du HTML (comme expliqué dans
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started"
-          >Commencer avec le HTML)</a
-        >
-        et
-        <a href="/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >Images en HTML</a
+        Avoir une connaissance de base en HTML, comme expliqué dans
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe de base HTML</a
+        >. Les sémantiques au niveau du texte telles que <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >les titres et les paragraphes</a
+        > et <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >les listes</a
         >.
       </td>
     </tr>
@@ -49,7 +42,7 @@ Une solution embarquée devrait résoudre la plupart de ces problèmes. Heureuse
 Nous ne vous apprendrons pas à produire des fichiers audio ou vidéo — cela demande des compétences totalement différentes. Nous vous conseillons ce lien Github [fichiers d'échantillons audio et vidéo et exemples de code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) pour votre expérience personnelle, au cas où vous ne pourriez pas y accéder par vous-même.
 
 > [!NOTE]
-> Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne {{glossary("OVP","OVPs")}} comme [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), et [Vimeo](https://vimeo.com/). Pour l'audio, voyez [Soundcloud](https://soundcloud.com/) par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.
+> Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne OVPs comme [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), et [Vimeo](https://vimeo.com/). Pour l'audio, voyez [Soundcloud](https://soundcloud.com/) par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.
 
 ### L' élément \<video>
 

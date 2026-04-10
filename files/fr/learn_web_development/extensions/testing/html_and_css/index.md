@@ -1,7 +1,7 @@
 ---
 title: Gérer les problèmes courants en HTML et CSS
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+original_slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
 ---
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Extensions/Testing")}}
@@ -20,7 +20,7 @@ Maintenant que les bases sont posées, nous allons nous concentrer sur les probl
           <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a> ; une idée du haut
           niveau des
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+            href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction"
             >principes du test en navigateur croisé</a
           >.
         </p>

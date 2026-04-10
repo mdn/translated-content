@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne fait pas vraiment ce qu'on attend de lui. Que faire quand rien ne se passe alors qu'un sélecteur devrait cibler un élément&nbsp;? Pourquoi une boîte est-elle d'une taille différente que celle souhaitée&nbsp;? Dans cet article, nous vous guiderons pour le débogage des problèmes CSS et l'utilisation des outils de développement des navigateurs pour le diagnostic.
 
@@ -15,7 +15,7 @@ Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne f
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>).
+        Notions informatiques de base, <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>).
       </td>
     </tr>
     <tr>
@@ -180,4 +180,4 @@ Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous d
 
 Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Organizing).
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

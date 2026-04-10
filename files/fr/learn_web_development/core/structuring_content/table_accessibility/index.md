@@ -48,7 +48,7 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 Le titre est placé directement sous la balise `<table>`.
 
 > [!NOTE]
-> L'attribut [`summary`](/fr/docs/Web/HTML/Reference/Elements/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> L'attribut [`summary`](/fr/docs/Web/HTML/Reference/Elements/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme obsolète par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 

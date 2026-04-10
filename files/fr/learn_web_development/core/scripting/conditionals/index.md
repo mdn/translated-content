@@ -4,9 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}
-
-{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil&nbsp;; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
 
@@ -440,7 +438,7 @@ Dans cet exemple nous allons vous aider à finaliser une application de calendri
 
 - Un élément {{htmlelement("select")}} permettant à l'utilisateur de choisir un mois.
 - Un pilote d'événement `onchange` pour détecter si la valeur choisie dans le menu `<select>` a été modifiée.
-- Une fonction `createCalendar()` qui trace le calendrier et affiche le mois voulu dans l'élément {{htmlelement("h1")}}.
+- Une fonction `createCalendar()` qui trace le calendrier et affiche le mois voulu dans l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}`.
 
 Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onchange`, juste au dessous du commentaire `// AJOUTER LA CONDITION ICI`. Elle doit&nbsp;:
 
@@ -649,4 +647,4 @@ C'est tout ce qu'il est nécessaire de connaître à propos des structures condi
 - [Référence if...else](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Référence opérateur conditionnel (ternaire)](/fr/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Test_your_skills/Conditionals", "Learn_web_development/Core/Scripting")}}

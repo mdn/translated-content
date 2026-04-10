@@ -427,7 +427,7 @@ Pour un exemple complet et fonctionnel, [visitez la page de démo sur Github](ht
 
 ## Utilisation de `eval()` dans les scripts de contenu
 
-Dans Chrome, {{jsxref("Objets_globaux/eval","eval()")}} exécute toujours le code dans le contexte du script de contenu et pas dans le contexte de la page.
+Dans Chrome, {{JSxRef("eval()")}} exécute toujours le code dans le contexte du script de contenu et pas dans le contexte de la page.
 
 Dans Firefox&nbsp;:
 

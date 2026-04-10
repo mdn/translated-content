@@ -429,7 +429,7 @@ La propriété {{cssxref("text-align")}} s'utilise pour contrôler la dispositio
 - `center`: le texte est centré.
 - `justify`: étale le texte, en faisant varier les espaces entre les mots afin de donner la même largeur à toutes les lignes du texte. Vous devez l'utiliser avec discernement — il peut sembler parfait, surtout lorsqu'il est appliqué à un paragraphe avec beaucoup de longs mots. Si vous voulez l'utiliser, vous devriez aussi penser à utiliser quelque chose d'autre, comme {{cssxref ("hyphens")}}, pour couper certains des mots les plus longs entre les lignes.
 
-Si nous appliquons `text-align: center;` à l'élément {{htmlelement("h1")}} de notre exemple, nous aurons :
+Si nous appliquons `text-align: center;` à l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` de notre exemple, nous aurons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>

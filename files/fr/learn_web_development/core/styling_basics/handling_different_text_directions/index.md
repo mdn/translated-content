@@ -17,10 +17,10 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
       <td>
         Notions informatiques de base,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >avoir installé les logiciels de base</a
         >, notions élémentaires sur
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >la manipulation des fichiers</a
         >, notions élémentaires sur HTML (voir
         <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
