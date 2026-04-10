@@ -25,4 +25,4 @@ l10n:
 ## 参见
 
 - `codecs.clockRate` 选项，该选项作为参数传递给 [`RTCRtpTransceiver.setCodecPreferences()`](/zh-CN/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#clockrate) 和 [`RTCRtpSender.setParameters()`](/zh-CN/docs/Web/API/RTCRtpSender/setParameters#clockrate)。
-- `codecs.clockRate`，这是由 [`RTCRtpSender.getParameters()`](/zh-CN/docs/Web/API/RTCRtpSender/getParameters#clockrate) 和 [`RTCRtpReceiver.getParameters()`](/zh-CN/docs/Web/API/RTCRtpReceiver/getParameters#clockrate) 返回的对象中的属性。
+- `codecs.clockRate`，作为由 [`RTCRtpSender.getParameters()`](/zh-CN/docs/Web/API/RTCRtpSender/getParameters#clockrate) 和 [`RTCRtpReceiver.getParameters()`](/zh-CN/docs/Web/API/RTCRtpReceiver/getParameters#clockrate) 返回的对象中的属性。
