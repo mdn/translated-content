@@ -11,7 +11,7 @@ slug: Web/HTML/Reference/Elements/template
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>, script-supporting element</td>
   </tr>
   <tr>
    <th scope="row">Permitted content</th>

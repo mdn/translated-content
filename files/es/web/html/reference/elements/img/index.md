@@ -30,7 +30,7 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
           >contenido estático</a
         >,
         <a
-          href="/es/docs/Web/Guide/HTML/Content_categories#Embedded_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Embedded_content"
           >contenido incrustado</a
         >, contenido palpable. Si el elemento tiene un atributo
         <code>usemap</code>, it also is a part of the

@@ -60,7 +60,7 @@ O **elemento HTML `<picture>`** é um container usado para especificar múltiplo
 
 ## Atributos
 
-Esse elemento só inclui [elementos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento só inclui [elementos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemplo 1: Uso com atributo `media`
 

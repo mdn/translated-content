@@ -14,9 +14,9 @@ original_slug: Learn/CSS/CSS_layout/Floats
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction au HTML</a
         >), et une idée de la manière dont fonctionne CSS (étudiez
-        <a href="/fr/docs/Learn/CSS/First_steps">Introduction au CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Introduction au CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -658,7 +658,7 @@ body {
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats_skills).
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn_web_development/Core/Styling_basics/CSS_layout/Floats_skills).
 
 ## Résumé
 
