@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ccafad98826d97da19728626047a7020000fd639
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur fonctionnement, comment les utiliser dans votre code, et leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
 
@@ -289,4 +289,4 @@ Les API <i lang="en">Web Audio</i> et [`HTMLMediaElement`](/fr/docs/Web/API/HTML
 
 À ce stade, vous devriez avoir une bonne idée de ce que sont les API, de leur fonctionnement et de ce que vous pouvez faire avec dans votre code JavaScript. Vous avez probablement hâte de commencer à faire des choses amusantes avec des API spécifiques, alors allez-y&nbsp;! Par la suite, nous verrons comment manipuler des documents avec le DOM (<i lang="en">Document Object Model</i> ou modèle objet de document en français).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}

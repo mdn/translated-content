@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.
 
@@ -725,4 +725,4 @@ window.addEventListener("load", drawOutput);
 
 Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
