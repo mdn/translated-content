@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 Dans cet article, nous allons commencer le voyage vers la maîtrise des styles du texte avec {{glossary("CSS")}}. Nous passerons en revue les principes de base de mise en forme du texte, y compris la graisse, la famille et le style de police, les codes d'abréviation, l'alignement du texte et autres effets, ainsi que l'espacement des lignes et des lettres.
 
@@ -14,10 +14,10 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
       <th scope="row">Prérequis :</th>
       <td>
         Connaissances informatiques de base, les bases HTML (étudiées dans l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), les bases CSS (étudiées dans
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction à CSS</a
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction à CSS</a
         >).
       </td>
     </tr>
@@ -207,7 +207,7 @@ Dans l'article [Valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styl
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
 - `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
 
-La propriété `font-size` d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété `font‑size` est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément {{htmlelement ("h1")}} a une taille de 2 `em` définie par défaut, donc aura une taille finale de 32 px.
+La propriété `font-size` d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété `font‑size` est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément `{{HTMLElement("Heading_Elements", "&lt:h1&gt:")}}` a une taille de 2 `em` définie par défaut, donc aura une taille finale de 32 px.
 
 Les choses deviennent plus difficiles lorsque vous commencez à modifier la taille de la police des éléments imbriqués. Par exemple, vous avez un élément {{htmlelement ("article")}} dans la page dont la taille de police est 1.5 `em` (24 px), puis, vous voulez que les paragraphes de l'`<article>` aient une taille de police calculée de 20 px, quelle valeur de `em` utiliseriez-vous ?
 
@@ -346,10 +346,10 @@ text-shadow: 4px 4px 5px red;
 
 Les 4 propriétés sont les suivantes :
 
-1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
+1. Le décalage horizontal de l'ombre par rapport au texte original — cette grandeur acepte la plupart des [unités de longueur et de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size) des CSS disponibles, mais vous utiliserez en règle générale le px. Cette valeur doit être précisée.
 2. Le décalage vertical de l'ombre par rapport au texte original — cette grandeur se comporte à la base comme la précédente, sauf que l'ombre est portée vers le haut ou vers le bas, et non vers la gauche ou la droite. Cette valeur doit être précisée.
-3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size) des CSS.
-4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
+3. Le rayon de floutage — plus cette valeur est élevée, plus l'ombre est étalée largement. Si cette valeur n'est pas précisée, la valeur par défaut est 0, ce qui signifie pas de flou. Elle accepte toutes les [unités de longueur et de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size) des CSS.
+4. La couleur de l'ombre, qui peut prendre toute [unité de couleur CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors). Si elle n'est pas définie, c'est la couleur noire par défaut.
 
 > [!NOTE]
 > Les valeurs positives de décalage déplacent l'ombre à droite et en bas, mais vous pouvez aussi utiliser des valeurs négatives pour obtenir une ombre à gauche et en haut, par exemple `-1px -1px`.
@@ -366,7 +366,7 @@ text-shadow:
   0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
-Si nous l'appliquons à l'élément {{htmlelement ("h1")}} de notre exemple Tommy le Chat, nous nous obtenons :
+Si nous l'appliquons à l'élément `{{HTMLElement("Heading_Elements", "&lt:h1&gt:")}}` de notre exemple Tommy le Chat, nous nous obtenons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -429,7 +429,7 @@ La propriété {{cssxref("text-align")}} s'utilise pour contrôler la dispositio
 - `center`: le texte est centré.
 - `justify`: étale le texte, en faisant varier les espaces entre les mots afin de donner la même largeur à toutes les lignes du texte. Vous devez l'utiliser avec discernement — il peut sembler parfait, surtout lorsqu'il est appliqué à un paragraphe avec beaucoup de longs mots. Si vous voulez l'utiliser, vous devriez aussi penser à utiliser quelque chose d'autre, comme {{cssxref ("hyphens")}}, pour couper certains des mots les plus longs entre les lignes.
 
-Si nous appliquons `text-align: center;` à l'élément {{htmlelement("h1")}} de notre exemple, nous aurons :
+Si nous appliquons `text-align: center;` à l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` de notre exemple, nous aurons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -535,7 +535,7 @@ p {
 
 ### Espacement entre les lettres et les mots
 
-Les propriétés {{cssxref ("letter-spacing")}} et {{cssxref ("word-spacing")}} permettent de définir l'espacement entre les lettres et les mots de votre texte. Vous ne les utiliserez pas très souvent, mais vous pourriez les utiliser pour obtenir une certaine apparence ou pour améliorer la lisibilité d'une police particulièrement dense. Ils peuvent prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#length_and_size).
+Les propriétés {{cssxref ("letter-spacing")}} et {{cssxref ("word-spacing")}} permettent de définir l'espacement entre les lettres et les mots de votre texte. Vous ne les utiliserez pas très souvent, mais vous pourriez les utiliser pour obtenir une certaine apparence ou pour améliorer la lisibilité d'une police particulièrement dense. Ils peuvent prendre la plupart des [unités de longueur et de taille](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size).
 
 Si nous appliquons les paramètres suivants à la première ligne des éléments {{htmlelement("p")}} dans notre exemple :
 
@@ -725,4 +725,4 @@ window.addEventListener("load", drawOutput);
 
 Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

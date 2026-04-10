@@ -45,11 +45,11 @@ slug: Web/SVG/Reference/Attribute/height
       <td>
         <code>auto</code> |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
         >
         |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
+          ><a href="/docs/Web/SVG/Guides/Content_type#Percentage"
             >&#x3C;percentage></a
           ></strong
         >

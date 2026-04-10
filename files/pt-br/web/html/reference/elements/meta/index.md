@@ -62,7 +62,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > o atributo global [`name`](#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
@@ -109,7 +109,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
         > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo [`charset`](#charset).
 
     - `"default-style"`
-      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo [`content`](#content) deve conter o **title** de um {{HTMLElement("link")}} elemento de quem [`href`](/pt-BR/docs/Web/HTML/Element/link#href) atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
+      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo [`content`](#content) deve conter o **title** de um {{HTMLElement("link")}} elemento de quem [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/link#href) atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
     - `"refresh"`
       - : este pragma especifica:
         - o numero de segundos até a página ser recarregada, se o atributo [`content`](#content) contém apenas um número inteiro não negativo;

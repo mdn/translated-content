@@ -61,7 +61,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
 
 ## Attributos
 
-Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Estes elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `profile` {{deprecated_inline}}
   - : A {{glossary("URI")}} de um ou mais perfis de metadados, separado por espaço em branco.

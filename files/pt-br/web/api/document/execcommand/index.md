@@ -5,7 +5,7 @@ slug: Web/API/Document/execCommand
 
 {{ApiRef("DOM")}}
 
-Quando um documento HTML está em [`designMode`](/pt-BR/docs/Web/API/Document/designMode), seu objeto `document` expõe um metodo **`execCommand`** para editar a região editável corrente, algo como elementos [form inputs](/pt-BR/docs/Web/HTML/Element/input) ou [`contentEditable`](/pt-BR/docs/Web/HTML/Global_attributes/contenteditable).
+Quando um documento HTML está em [`designMode`](/pt-BR/docs/Web/API/Document/designMode), seu objeto `document` expõe um metodo **`execCommand`** para editar a região editável corrente, algo como elementos [form inputs](/pt-BR/docs/Web/HTML/Reference/Elements/input) ou [`contentEditable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/contenteditable).
 
 A maioria dos comandos afetam apenas uma área selecionada \[[seleção](/pt-BR/docs/Web/API/Selection)] (negrito, itálico, etc.), enquantos outros adicionam novos elementos (adicionar um link por exemplo), ou afetam uma linha toda (identação). Quando usando `contentEditable`, o metódo `execCommand()` afeta o elemento editável ativo.
 
@@ -86,11 +86,11 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `insertImage`
   - : Insere uma imagem no ponto de inserção (exclui a seleção). Requer uma string de URL para o `src` da imagem como argumento. Os requisitos para essa string são os mesmos que `createLink`.
 - `insertOrderedList`
-  - : Cria uma [lista ordenada e numerada](/pt-BR/docs/Web/HTML/Element/ol) para a seleção ou no ponto de inserção.
+  - : Cria uma [lista ordenada e numerada](/pt-BR/docs/Web/HTML/Reference/Elements/ol) para a seleção ou no ponto de inserção.
 - `insertUnorderedList`
-  - : Cria uma [lista não ordenada](/pt-BR/docs/Web/HTML/Element/ul) para a seleção ou no ponto de inserção.
+  - : Cria uma [lista não ordenada](/pt-BR/docs/Web/HTML/Reference/Elements/ul) para a seleção ou no ponto de inserção.
 - `insertParagraph`
-  - : Insere um [parágrafo](/pt-BR/docs/Web/HTML/Element/p) ao redor da seleção ou da linha atual. (O Internet Explorer insere um parágrafo no ponto de inserção e exclui a seleção.)
+  - : Insere um [parágrafo](/pt-BR/docs/Web/HTML/Reference/Elements/p) ao redor da seleção ou da linha atual. (O Internet Explorer insere um parágrafo no ponto de inserção e exclui a seleção.)
 - `insertText`
   - : Insere o texto fornecido no ponto de inserção (exclui a seleção).
 - `italic`
@@ -124,7 +124,7 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `undo`
   - : Desfaz o último comando executado.
 - `unlink`
-  - : Remove o elemento [âncora](/pt-BR/docs/Web/HTML/Element/a) de um hiperlink selecionado.
+  - : Remove o elemento [âncora](/pt-BR/docs/Web/HTML/Reference/Elements/a) de um hiperlink selecionado.
 - `useCSS` {{Deprecated_inline}}
   - : Alterna o uso de tags HTML ou CSS para a marcação gerada. Requer um booleano `true` / `false` como argumento.
 

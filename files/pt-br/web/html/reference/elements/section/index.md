@@ -71,7 +71,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

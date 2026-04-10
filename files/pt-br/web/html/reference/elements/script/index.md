@@ -59,7 +59,7 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
   - : Um atributo booleano indicando que o navegador deve, se possível, executar o script assíncronamente.
