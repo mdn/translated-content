@@ -14,7 +14,7 @@ Si [`waitUntil()`](/fr/docs/Web/API/ExtendableEvent/waitUntil) est appelé en de
 
 Cette interface hérite de l'interface [`Event`](/fr/docs/Web/API/Event).
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 > [!NOTE]
 > Cette interface est disponible seulement quand la portée globale est [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope). Elle n'est pas disponible quand c'est un objet [`Window`](/fr/docs/Web/API/Window) ou un autre type de worker.

@@ -7,7 +7,7 @@ slug: Web/API/HTMLSpanElement
 
 A interface **`HTMLSpanElement`** representa um elemento {{HTMLElement("span")}} e deriva de uma interface {{DOMxRef("HTMLElement")}}, mas sem implementar propriedades ou métodos adicionais.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Propriedades
 

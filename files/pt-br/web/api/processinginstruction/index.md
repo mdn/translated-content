@@ -13,7 +13,7 @@ Instruções de processamento definidas por usuário não podem começar com `'x
 
 Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/docs/Web/API/Node).
 
-{{InheritanceDiagram(700,70)}}
+{{InheritanceDiagram}}
 
 ### Atributos
 

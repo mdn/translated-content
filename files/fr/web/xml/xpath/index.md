@@ -4,8 +4,6 @@ slug: Web/XML/XPath
 original_slug: Web/XPath
 ---
 
-{{XSLTRef}}
-
 XPath est une abréviation pour _XML Path Language_ (qu'on pourrait traduire en français par « langage de chemin XML »). Ce langage utilise une syntaxe non-XML pour cibler différentes parties d'un document [XML](/fr/docs/Web/XML/Guides/XML_introduction). Il peut aussi être utilisé pour tester certains nœuds d'un document afin de déterminer s'ils suivent un motif particulier.
 
 XPath est principalement utilisé avec [XSLT](/fr/docs/Web/XML/XSLT), mais on peut tout aussi bien l'utiliser afin de naviguer dans le [DOM](/fr/docs/Web/API/Document_Object_Model) de tout document structuré avec un langage semblable à XML ([HTML](/fr/docs/Web/HTML) ou [SVG](/fr/docs/Web/SVG) par exemple) grâce à l'interface [`XPathExpression`](/fr/docs/Web/API/XPathExpression). Cela permet d'éviter les méthodes [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById) ou [`ParentNode.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll) ou encore les propriétés [`Node.childNodes`](/fr/docs/Web/API/Node/childNodes).

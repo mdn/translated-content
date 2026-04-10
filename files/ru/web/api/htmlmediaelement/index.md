@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement
 
 Интерфейс HTMLMediaElement добавляет к {{domxref ("HTMLElement")}} свойства и методы, необходимые для поддержки базовых мультимедийных возможностей, общих для аудио и видео. Элементы {{domxref ("HTMLVideoElement")}} и {{domxref ("HTMLAudioElement")}} наследуют этот интерфейс.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

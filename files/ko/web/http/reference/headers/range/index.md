@@ -13,7 +13,7 @@ original_slug: Web/HTTP/Headers/Range
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>아니오</td>
     </tr>
   </tbody>
