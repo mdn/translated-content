@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
 original_slug: Learn/CSS/First_steps/What_is_CSS
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 **{{Glossary("CSS")}}** (Folhas de Estilo em Cascata) permite a você criar páginas web agradáveis, mas como isso funciona por baixo dos panos? Este artigo explica o que é CSS, com um exemplo de sintaxe simples, e, também, trata alguns conceitos-chaves sobre a linguagem.
 
@@ -121,4 +121,4 @@ A seguir, é apresentado o gráfico de dados compat para propriedade CSS [`font-
 
 Agora que você tem algum entendimento do que o CSS é, vamos ao [Iniciando com CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started), onde pode começar a escrever alguma coisa, você mesmo.
 
-{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{NextMenu("conflicting/Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}

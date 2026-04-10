@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 No início a Web era somente texto, e era tedioso. Felizmente, não demorou muito para que a capacidade de incorporar imagens (e outros tipos de conteúdo mais interessantes) dentro das páginas da web fosse adicionada. Existem outros tipo de mídia para se considerar, mas é lógico começar com o humilde elemento {{htmlelement("img")}}, usado para inserir uma simples imagem em uma página web. Neste artigo, analisaremos como dominar seu uso, incluindo o básico, anotando-o com legendas usando o elemento {{htmlelement("figure")}}, e detalhando como ele se relaciona com imagens de fundo do CSS.
 
@@ -376,4 +376,4 @@ Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você de
 
 É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
 Neste artigo nós abordamos os princípios básicos do HTML, para você começar. Definimos os elementos, atributos e todos os outros termos importantes que você possa ter ouvido e onde eles se encaixam na linguagem. Também mostramos como um elemento HTML é estruturado, como uma página HTML típica é estruturada e explicamos outras importantes características básicas da linguagem. Ao longo do caminho, nós brincaremos com um pouco de HTML, para despertar seu interesse!
 
@@ -762,4 +762,4 @@ Você chegou ao final do artigo — esperamos que tenha gostado do seu tour pelo
 
 - [Aplicando cores a elementos HTML usando CSS](/pt-BR/docs/Web/CSS/Guides/Colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}

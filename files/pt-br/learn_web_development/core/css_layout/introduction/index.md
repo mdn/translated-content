@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
 
 This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different {{cssxref("display")}} values — and introduce some of the concepts we'll be covering throughout this module.
 
@@ -771,4 +771,4 @@ body {
 
 This article has provided a brief summary of all the layout technologies you should know about. Read on for more information on each individual technology!
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
