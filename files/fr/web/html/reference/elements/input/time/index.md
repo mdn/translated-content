@@ -62,18 +62,18 @@ Pour Edge, le contrôle affiché est un plus élaboré&nbsp;: il affiche un sél
   <tbody>
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
-      <td>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente une heure ou qui est vide.</td>
+      <td>Une chaîne de caractères <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>DOMString</code></a> qui représente une heure ou qui est vide.</td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>
+        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/Element/input_event"><code>input</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-step"><code>step</code></a>
       </td>
     </tr>
     <tr>

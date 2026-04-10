@@ -15,11 +15,11 @@ Les fichiers média, et plus précisément les images et les vidéos, représent
       <td>
         Bases de l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base</a
         >
         installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >des technologies web opérant côté client</a
         >.
       </td>

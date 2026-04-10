@@ -15,12 +15,12 @@ Maintenant que les bases sont posées, nous allons nous concentrer sur les probl
       <td>
         <p>
           Connaissances avec le noyau des langages
-          <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>, et
+          <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
           <a href="/fr/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut
           niveau des
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+            href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction"
             >principes du test en navigateur croisé</a
           >.
         </p>

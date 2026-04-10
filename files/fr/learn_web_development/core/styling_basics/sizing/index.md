@@ -14,17 +14,17 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
         <p>
           Maîtrise élémentaire de l'informatique,
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
             >suite logicielle de base installée</a
           >, compétences élémentaires pour
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
             >travailler avec des fichiers</a
           >, connaissance de base du HTML (cf.
-          <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
             >Introduction à HTML</a
           >), et une idée de
-          <a href="/fr/docs/Learn/CSS/First_steps">Comment fonctionne CSS</a>.
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Comment fonctionne CSS</a>.
         </p>
       </td>
     </tr>

@@ -13,7 +13,7 @@ Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/How
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions informatiques de base et <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">une compréhension élémentaire de HTML</a>.
+        Notions informatiques de base et <a href="/fr/docs/Learn_web_development/Core/Structuring_content">une compréhension élémentaire de HTML</a>.
       </td>
     </tr>
     <tr>
@@ -319,7 +319,7 @@ De nombreux éléments de formulaire disposent d'attributs qui leur sont spécif
   <tbody>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Global_attributes/autofocus">autofocus</a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Global_attributes/autofocus">autofocus</a></code>
       </td>
       <td><code>false<code></td>
       <td>
@@ -328,32 +328,32 @@ De nombreux éléments de formulaire disposent d'attributs qui leur sont spécif
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Attributes/disabled">disabled</a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code>
       </td>
       <td><code>false</code></td>
       <td>
-        Cet attribut booléen indique que la personne ne peut pas interagir avec l'élément. Si cet attribut n'est pas indiqué, l'élément hérite du comportement de l'élément parent (par exemple, <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>). S'il n'y a pas d'élément, parmi les parents, avec l'attribut <code>disabled</code> indiqué, l'élément est actif.
+        Cet attribut booléen indique que la personne ne peut pas interagir avec l'élément. Si cet attribut n'est pas indiqué, l'élément hérite du comportement de l'élément parent (par exemple, <a href="/fr/docs/Web/HTML/Reference/Elements/fieldset"><code>&lt;fieldset&gt;</code></a>). S'il n'y a pas d'élément, parmi les parents, avec l'attribut <code>disabled</code> indiqué, l'élément est actif.
       </td>
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Form">form</a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/form">form</a></code>
       </td>
       <td></td>
       <td>
-        L'élément <code>&lt;form&gt;</code> auquel le contrôle est associé. On utilisera cet attribut si l'élément du contrôle n'est pas un des enfants/descendants de l'élément du formulaire. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut <code>id</code>) d'un élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> du même document. Cela permet d'associer un contrôle à un formulaire, même s'il est situé dans un autre élément.
+        L'élément <code>&lt;form&gt;</code> auquel le contrôle est associé. On utilisera cet attribut si l'élément du contrôle n'est pas un des enfants/descendants de l'élément du formulaire. La valeur de cet attribut doit être l'identifiant (la valeur de l'attribut <code>id</code>) d'un élément <a href="/fr/docs/Web/HTML/Reference/Elements/form"><code>&lt;form&gt;</code></a> du même document. Cela permet d'associer un contrôle à un formulaire, même s'il est situé dans un autre élément.
       </td>
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Input#attr-name">name</a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-name">name</a></code>
       </td>
       <td></td>
       <td>Le nom du champ de formulaire porté par l'élément. Il est envoyé avec les données du formulaire.</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/Web/HTML/Element/Input#attr-value">value</a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input#attr-value">value</a></code>
       </td>
       <td></td>
       <td>La valeur initiale de l'élément.</td>

@@ -16,7 +16,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
-        <a href="/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >la différence entre une page web, un serveur web et un moteur de
           recherche.</a
         >

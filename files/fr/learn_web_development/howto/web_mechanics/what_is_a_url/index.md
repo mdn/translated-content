@@ -15,7 +15,7 @@ Cet article aborde les <i lang="en">Uniform Resource Locators</i> (URL) (qu'on p
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Comprendre <a href="/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">le fonctionnement général d'Internet</a>, <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ce qu'est un serveur web</a>, et <a href="/fr/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks">les concepts derrière les liens sur le Web</a>.
+        Comprendre <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">le fonctionnement général d'Internet</a>, <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">ce qu'est un serveur web</a>, et <a href="/fr/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks">les concepts derrière les liens sur le Web</a>.
       </td>
     </tr>
     <tr>

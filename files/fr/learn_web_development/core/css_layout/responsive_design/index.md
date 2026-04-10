@@ -14,7 +14,7 @@ La conception réactive, plus souvent appelée <i lang="en">responsive design</i
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions fondamentales de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a> et <a href="/fr/docs/Learn/CSS/Building_blocks">Blocs de construction CSS</a>.)
+      <td>Notions fondamentales de HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction au HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Blocs de construction CSS</a>.)
       </td>
     </tr>
     <tr>

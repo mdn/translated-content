@@ -14,7 +14,7 @@ Les bases vues, nous examinons maintenant plus en détail les éléments utilis�
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs et les
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >connaissances de base du HTML</a
         >.
       </td>

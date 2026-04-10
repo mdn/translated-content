@@ -13,7 +13,7 @@ Dans [l'article précédent](/fr/docs/Learn_web_development/Extensions/Forms/Bas
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, une <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">compréhension élémentaire de HTML</a>.
+        Notions informatiques de base, une <a href="/fr/docs/Learn_web_development/Core/Structuring_content">compréhension élémentaire de HTML</a>.
       </td>
     </tr>
     <tr>

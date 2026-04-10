@@ -17,7 +17,7 @@ Les présentations ayant été faites pour les concepts du JavaScript orienté o
       <td>
         Une connaissance générale de l'informatique, des notions de HTML et CSS,
         une connaissance des bases en JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
+        <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et
         <a href="/fr/docs/Learn/JavaScript/Building_blocks"
           >Blocs de construction</a
         >) ainsi que des notions de JavaScript orienté objet (JSOO) (voir

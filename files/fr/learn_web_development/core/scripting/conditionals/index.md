@@ -17,7 +17,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
       <td>
         Connaissances du vocabulaire informatique, compréhension des bases du
         HTML et des CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >Premiers pas en JavaScript</a
         >.
       </td>

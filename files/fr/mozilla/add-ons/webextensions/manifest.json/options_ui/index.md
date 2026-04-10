@@ -71,7 +71,7 @@ La clé `options_ui` est un objet avec le contenu suivant :
           <code>chrome://browser/content/extension-mac.css</code> sur macOS.
           Lorsque vous fixez les dimensions, sachez que cette feuille de style
           fixe actuellement <code>box-sizing: border-box</code> (voir
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          <a href="/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
         </p>
         <p>
           Le

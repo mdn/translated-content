@@ -15,11 +15,11 @@ Dans ce premier article sur Django, nous allons répondre à la question suivant
       <td>
         Connaissances basiques de programmation. Une compréhension générale de
         la
-        <a href="/fr/docs/Learn/Server-side/First_steps"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programmation coté serveur</a
         >
         ainsi qu'une
-        <a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview"
+        <a href="/fr/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >compréhension des interactions client-serveur dans les sites web</a
         >.
       </td>
