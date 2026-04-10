@@ -443,4 +443,4 @@ Lorsque vous installez un nouvel éditeur de texte, il est probable que votre sy
 
 ## Prochaines étapes
 
-Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn/Set_up_a_basic_working_environment) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML).
+Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn_web_development/Getting_started/Your_first_website).

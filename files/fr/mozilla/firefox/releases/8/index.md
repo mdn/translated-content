@@ -90,8 +90,8 @@ Firefox 8, basé sur Gecko 8.0, est sorti le 8 novembre 2011. Cet article fourni
 
 ### WebSockets
 
-- La méthode [`send()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#send()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ne renvoie plus à tort une valeur booléenne.
-- La méthode [`close()`](</fr/docs/WebSockets/WebSockets_reference/WebSocket#close()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
+- La méthode [`send()`](</fr/docs/Web/API/WebSocket#send()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) ne renvoie plus à tort une valeur booléenne.
+- La méthode [`close()`](</fr/docs/Web/API/WebSocket#close()>) de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) correspond désormais à la version actuelle du standard, et les événements proches utilisent à présent correctement l'interface [`CloseEvent`](/fr/docs/Web/API/CloseEvent).
 - L'attribut `extensions` de l'objet [`WebSocket`](/fr/docs/Web/API/WebSocket) est à présent supporté.
 - Le constructeur WebSocket supporte désormais un ensemble de protocoles ainsi que la chaîne d'un seul protocole.
 - Le contenu mixte n'est pas autorisé avec WebSockets, vous ne pouvez plus établir une connexion vers un serveur WebSocket non sécurisé à partir d'un contenu sécurisé.

@@ -39,8 +39,8 @@ Pour commencer, le document doit être mis à disposition dans [un contexte séc
 
 Pour les documents de plus haut niveau, deux en-têtes HTTP doivent être utilisés pour isoler le site des origines tierces&nbsp;:
 
-- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
-- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
+- [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) avec la valeur `same-origin` (ce qui protège l'origine des éventuels attaquants)
+- [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy) avec la valeur `require-corp` (ce qui protège les éventuelles victimes de votre origine)
 
 ```http
 Cross-Origin-Opener-Policy: same-origin

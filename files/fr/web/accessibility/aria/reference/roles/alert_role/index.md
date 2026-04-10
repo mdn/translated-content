@@ -20,7 +20,7 @@ Le rôle `alert` doit uniquement être utilisé pour les informations qui néces
 
 Le rôle `alert` doit uniquement être utilisé pour le contenu texte et pas pour les éléments interactifs comme les liens ou les boutons. Il n'est pas nécessaire que les éléments avec le rôle `alert` puissent recevoir le focus, les outils d'assistance annonceront le contenu mis à jour lorsque le rôle est ajouté, quel que soit l'état du focus.
 
-Le rôle `alert` est à ajouter au nœud contenant le message d'alerte, **il ne doit pas** être ajouté à l'élément qui a déclenché l'alerte. Les alertes sont [des régions dynamiques assertives](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions). Utiliser `role="alert"` sera équivalent à définir [`aria-live="assertive"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) et [`aria-atomic="true"`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). Ces régions n'ayant pas besoin du focus, il n'a pas à être géré et aucune interaction utilisateur ne doit être requise.
+Le rôle `alert` est à ajouter au nœud contenant le message d'alerte, **il ne doit pas** être ajouté à l'élément qui a déclenché l'alerte. Les alertes sont [des régions dynamiques assertives](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions). Utiliser `role="alert"` sera équivalent à définir [`aria-live="assertive"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) et [`aria-atomic="true"`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic). Ces régions n'ayant pas besoin du focus, il n'a pas à être géré et aucune interaction utilisateur ne doit être requise.
 
 > [!WARNING]
 > Étant donné sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement pour les situations où l'attention de la personne doit être sollicitée.
@@ -113,12 +113,12 @@ document.getElementById("hiddenAlertContainer").innerHTML =
 
 ## Voir aussi
 
-- L'attribut ARIA [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- L'attribut ARIA [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- L'attribut ARIA [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+- L'attribut ARIA [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 - [ARIA&nbsp;: rôle `log`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/log_role)
-- [ARIA&nbsp;: rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Roles/marquee_role)
+- [ARIA&nbsp;: rôle `marquee`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role)
 - [ARIA&nbsp;: rôle `status`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/status_role)
-- [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Roles/timer_role)
+- [ARIA&nbsp;: rôle `timer`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/timer_role)
 - [ARIA&nbsp;: rôle `alertdialog`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [Régions dynamiques ARIA](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [Prise en charge du rôle ARIA `alert` — Vispero <sup>(angl.)</sup>](https://vispero.com/resources/aria-alert-support/)

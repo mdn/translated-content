@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à spécifier les [formes de coins](/fr/docs/Web/CSS/corner-shape) soit directement, soit via les mots-clés {{cssxref("&lt;corner-shape-value>")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à spécifier les [formes de coins](/fr/docs/Web/CSS/Reference/Properties/corner-shape) soit directement, soit via les mots-clés {{cssxref("&lt;corner-shape-value>")}}.
 
 ## Syntaxe
 
@@ -135,7 +135,7 @@ Une superellipse négative ou positive sera symétrique à une superellipse de v
 
 ### Comparaison des valeurs `superellipse()`
 
-Dans cet exemple, deux curseurs {{HTMLElement("input/range", "<code>&lt;input type=\"range\"&gt;</code>")}} permettent de parcourir différentes valeurs `superellipse()` pour `corner-shape` et différentes valeurs de {{cssxref("border-radius")}}, afin de comparer leurs effets sur un conteneur. Le code est masqué pour plus de clarté, mais l'explication complète de la [comparaison des valeurs superellipse](/fr/docs/Web/CSS/corner-shape#comparaison_des_valeurs_superellipse) est disponible sur la page de référence {{cssxref("corner-shape")}}.
+Dans cet exemple, deux curseurs {{HTMLElement("input/range", "<code>&lt;input type=\"range\"&gt;</code>")}} permettent de parcourir différentes valeurs `superellipse()` pour `corner-shape` et différentes valeurs de {{cssxref("border-radius")}}, afin de comparer leurs effets sur un conteneur. Le code est masqué pour plus de clarté, mais l'explication complète de la [comparaison des valeurs superellipse](/fr/docs/Web/CSS/Reference/Properties/corner-shape#comparaison_des_valeurs_superellipse) est disponible sur la page de référence {{cssxref("corner-shape")}}.
 
 ```html hidden live-sample___value-comparison
 <form>

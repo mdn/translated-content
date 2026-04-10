@@ -28,7 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
   </tbody>
 </table>
 
-Utilisez la clé `options_ui` pour définir une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Options_pages) pour votre extension.
+Utilisez la clé `options_ui` pour définir une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) pour votre extension.
 
 La page d'options contient des paramètres pour l'extension. L'utilisateur peut y accéder à partir du gestionnaire des extensions du navigateur, et vous pouvez l'ouvrir à partir de votre extension à l'aide de {{WebExtAPIRef("runtime.openOptionsPage()")}}.
 
