@@ -16,7 +16,7 @@ Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font
 }
 ```
 
-Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de police spécifiée. Vous pouvez créer des [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} pour d'autres familles de police en utilisant le même {{CSSxRef("dashed-ident", "&lt;dashed-ident&gt;")}}. Cela signifie que si vous avez plusieurs polices couleur, vous pouvez utiliser le même identifiant pour chacune.
+Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de police définie. Vous pouvez créer des [règles](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} pour d'autres familles de police en utilisant le même {{CSSxRef("dashed-ident", "&lt;dashed-ident&gt;")}}. Cela signifie que si vous avez plusieurs polices couleur, vous pouvez utiliser le même identifiant pour chacune.
 
 ### Valeurs
 
@@ -35,7 +35,7 @@ Les autres valeurs de palette qui suivent ne s'appliquent qu'à la famille de po
 
 ### Utiliser des noms de famille identiques
 
-Dans cet exemple, lorsque le descripteur `font-family` est utilisé dans la règle [@font-palette-values](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values), la même valeur est utilisée pour la propriété `font-family` que lors de sa déclaration.
+Dans cet exemple, lorsque le descripteur `font-family` est utilisé dans la règle {{CSSxRef("@font-palette-values")}}, la même valeur est utilisée pour la propriété `font-family` que lors de sa déclaration.
 
 #### HTML
 
@@ -70,7 +70,7 @@ h2.extra-spicy {
 
 ### Utiliser le même identifiant de palette pour plusieurs familles de police
 
-Dans cet exemple, deux règles [@font-palette-values](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values) sont définies pour deux familles de police, mais les deux utilisent le même identifiant dashed-ident, `--Dark Mode`. Cela permet d'appliquer la propriété [font-palette](/fr/docs/Web/CSS/Reference/Properties/font-palette) à plusieurs éléments (`h1` et `h2` ici) en même temps. C'est utile si vous souhaitez adapter les couleurs des polices à l'identité visuelle de votre site.
+Dans cet exemple, deux règles {{CSSxRef("@font-palette-values")}} sont définies pour deux familles de police, mais les deux utilisent le même identifiant dashed-ident, `--Dark Mode`. Cela permet d'appliquer la propriété {{CSSxRef("font-palette")}} à plusieurs éléments (`h1` et `h2` ici) en même temps. C'est utile si vous souhaitez adapter les couleurs des polices à l'identité visuelle de votre site.
 
 ```css
 @font-palette-values --Dark-Mode {
@@ -108,7 +108,7 @@ h2 {
 ## Voir aussi
 
 - Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
-- La règle {{CSSxRef("@font-palette-values", "@font-palette-values")}}
+- La règle {{CSSxRef("@font-palette-values")}}
 - Le descripteur {{CSSxRef("@font-palette-values/override-colors", "override-colors")}}
 - La propriété {{CSSxRef("font-palette")}}
 - La propriété API {{DOMxRef("CSSFontPaletteValuesRule.fontFamily")}}

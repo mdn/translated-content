@@ -145,17 +145,17 @@ En plus des API standard du DOM, les scripts de contenu peuvent utiliser les API
 
 Depuis l'API [`extension`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension)&nbsp;:
 
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/extension#getURL()>)
+- [`getURL()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/extension#getURL()>)
 - [`inIncognitoContext`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
 
 Depuis l'API [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime)&nbsp;:
 
-- [`connect()`](</fr/Add-ons/WebExtensions/API/runtime#connect()>)
-- [`getManifest()`](</fr/Add-ons/WebExtensions/API/runtime#getManifest()>)
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/runtime#getURL()>)
+- [`connect()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#connect()>)
+- [`getManifest()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#getManifest()>)
+- [`getURL()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#getURL()>)
 - [`onConnect`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onconnect)
 - [`onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage)
-- [`sendMessage()`](</fr/Add-ons/WebExtensions/API/runtime#sendMessage()>)
+- [`sendMessage()`](</fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()>)
 
 Depuis l'API [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n)&nbsp;:
 
@@ -201,14 +201,14 @@ Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
       <th scope="row">Envoyer un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -218,14 +218,14 @@ Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
       <th scope="row">Recevoir un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

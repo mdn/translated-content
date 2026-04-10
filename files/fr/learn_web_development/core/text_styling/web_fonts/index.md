@@ -13,12 +13,11 @@ Dans le premier article du module, nous avons exploré les fonctions CSS de base
     <tr>
       <th scope="row">Prérequis :</th>
       <td>
-        Connaissances informatiques de base, les bases HTML (étudiées dans l'<a
-          href="/fr/docs/Learn_web_development/Core/Structuring_content"
-          >Introduction au HTML</a
-        >), les bases CSS (étudiées dans
-        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Introduction_to_CSS">Introduction à CSS</a
-        >).
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
+          >Structurer le contenu avec HTML</a
+        >,
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Bases de la mise en forme CSS</a>,
+        <a href="/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals">Bases de la mise en forme du texte et des polices</a>.
       </td>
     </tr>
     <tr>
@@ -174,10 +173,10 @@ Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;�
 
 - `font-family`&nbsp;: cette ligne précise la référence à la police. Vous pouvez mettre cette assertion comme bon vous semble, pour autant que ce soit utilisé de manière cohérent dans la CSS.
 - `src` : ces lignes indiquent les chemins vers les fichiers de fontes à importer dans la CSS (la partie `url`) et le format de chaque fichier de fonte (la partie `format`). Cette dernière partie est dans chaque cas optionnelle, mais il est utile de la déclarer car elle permet aux navigateurs de trouver la police à utiliser plus rapidement. Plusieurs déclarations peuvent être mises dans la liste, séparées par des virgules — le navigateur cherchera parmi celles-ci et utilisera la première trouvée qu'il comprend — toutefois il est préférable de mettre en tête les formats nouveaux comme WOFF2 et le plus anciens comme TTF en fin de liste. Les fontes EOT font exception — elles seront placées en tête pour corriger une paire de bogues dans les anciennes versions de IE, car IE essayera d'utiliser la première trouvée même s'il est en fait incapable de l'utiliser.
-- {{cssxref("font-weight")}}/{{cssxref("font-style")}}&nbsp;: ces lignes définissent la graisse de la police, si elle est italique ou pas. Si vous importez plusieurs graisses d'une même police, vous pouvez indiquer quelles sont ses caractéristiques et utiliser diverses valeurs de {{cssxref("font-weight")}}/{{cssxref("font-style")}} pour faire votre choix au lieu d'appeler de noms différents les membres de la même famille. [@font-face tip: define font-weight and font-style to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) (_en anglais — Astuces pour @font-face : définir la graisse et le style des fontes pour avoir des CSS simples_) par Roger Johansson montre que faire plus en détail.
+- {{CSSxRef("@font-face/font-weight", "font-weight")}}/{{CSSxRef("@font-face/font-style", "font-style")}}&nbsp;: ces lignes définissent la graisse de la police, si elle est italique ou pas. Si vous importez plusieurs graisses d'une même police, vous pouvez indiquer quelles sont ses caractéristiques et utiliser diverses valeurs de {{CSSxRef("@font-face/font-weight", "font-weight")}}/{{CSSxRef("@font-face/font-style", "font-style")}} pour faire votre choix au lieu d'appeler de noms différents les membres de la même famille. [@font-face tip: define font-weight and font-style to keep your CSS simple](http://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) (_en anglais — Astuces pour @font-face : définir la graisse et le style des fontes pour avoir des CSS simples_) par Roger Johansson montre que faire plus en détail.
 
 > [!NOTE]
-> Vous pouvez aussi définir des valeurs particulières de {{cssxref("font-variant")}} et {{cssxref("font-stretch")}} pour vos polices. Dans les navigateurs les plus récents, vous pouvez également indiquer une valeur pour {{cssxref("unicode-range")}}&nbsp;: c'est la plage des codes caractères dont l'utilisation est prévue — dans les navigateurs prenant en charge cette propriété, seuls les caractères indiqués seront téléchargés, ce qui réduit les volumes téléchargés non nécessaires. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) (_Création de piles de fontes personnalisées en définissant des plages unicode_) de Drew McLellan donne quelques indications utiles pour l'utilisation de cette propriété.
+> Vous pouvez aussi définir des valeurs particulières de {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}} et {{CSSxRef("@font-face/font-stretch", "font-stretch")}} pour vos polices. Dans les navigateurs les plus récents, vous pouvez également indiquer une valeur pour {{CSSxRef("@font-face/unicode-range", "unicode-range")}}&nbsp;: c'est la plage des codes caractères dont l'utilisation est prévue — dans les navigateurs prenant en charge cette propriété, seuls les caractères indiqués seront téléchargés, ce qui réduit les volumes téléchargés non nécessaires. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) (_Création de piles de fontes personnalisées en définissant des plages unicode_) de Drew McLellan donne quelques indications utiles pour l'utilisation de cette propriété.
 
 ## Résumé
 

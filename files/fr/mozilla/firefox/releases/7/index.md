@@ -96,7 +96,7 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 #### AddonManager.jsm
 
-- Le gestionnaire de modules complémentaires a de nouvelles méthodes pour gérer les listes d'extensions qui ont changé durant le démarrage des applications : [`AddonManager.addStarupChange()`](</fr/Add-ons/Add-on_Manager/AddonManager#addStartupChange()>), [`AddonManager.removeStartupChange()`](</fr/Add-ons/Add-on_Manager/AddonManager#removeStartupChange()>) et [`AddonManager.getStartupChanges()`](</fr/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()>).
+- Le gestionnaire de modules complémentaires a de nouvelles méthodes pour gérer les listes d'extensions qui ont changé durant le démarrage des applications : [`AddonManager.addStarupChange()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#addStartupChange()>), [`AddonManager.removeStartupChange()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#removeStartupChange()>) et [`AddonManager.getStartupChanges()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()>).
 - .
 
 ### XUL

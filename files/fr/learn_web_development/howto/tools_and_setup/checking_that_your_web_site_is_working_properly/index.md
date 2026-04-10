@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is
 original_slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous présenterons les différentes étapes permettant de diagnostiquer les problèmes d'un site web ainsi que les mesures à prendre pour corriger certains de ces problèmes.
 
 <table class="standard-table">

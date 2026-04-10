@@ -25,10 +25,10 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 - `navigator.mozPay` a été lancé. ([bug Firefox 767818](https://bugzil.la/767818))
 - `window.devicePixelRatio` a été lancé. ([bug Firefox 564815](https://bugzil.la/564815))
 - Le backend MacOS X pour `window.navigator.battery` a été implémenté. ([bug Firefox 696045](https://bugzil.la/696045))
-- {{domxref("BlobBuilder", "MozBlobBuilder")}} a été retiré. Les développeurs doivent utiliser le constructeur {{domxref("Blob")}} pour créer un objet `Blob`. ([bug Firefox 744907](https://bugzil.la/744907))
+- `MozBlobBuilder` a été retiré. Les développeurs doivent utiliser le constructeur {{domxref("Blob")}} pour créer un objet `Blob`. ([bug Firefox 744907](https://bugzil.la/744907))
 - L'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) et l'[API Page Visibility](/fr/docs/Web/API/Page_Visibility_API) ont été dépréfixés. ([bug Firefox 812086](https://bugzil.la/812086))
 - `TextDecoder` et `TextEncoder` ont été ajoutés. ([bug Firefox 764234](https://bugzil.la/764234))
-- `HTMLMediaElement.src` a été séparée en deux propriétés : la propriété `src` standard, qui traite {{domxref("DOMString")}}, et la propriété préfixée `mozSrcObject`, qui traite [les flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API). ([bug Firefox 792665](https://bugzil.la/792665))
+- `HTMLMediaElement.src` a été séparée en deux propriétés : la propriété `src` standard, qui traite une chaîne de caractères, et la propriété préfixée `mozSrcObject`, qui traite [les flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API). ([bug Firefox 792665](https://bugzil.la/792665))
 - Support des [objets transférables](</fr/docs/Web/API/Web_Workers_API/Using_web_workers#passing_data_by_transferring_ownership_(transferable_objects)>).
 
 ### JavaScript
@@ -65,9 +65,4 @@ Les interfaces suivantes ont été supprimées.
 
 - [Notes de version de Firefox 18](https://www.mozilla.org/en-US/firefox/18.0/releasenotes/)
 - [Aurora 18 : HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
-- [Compatibilité des sites pour Firefox 18](/fr/docs/Site_Compatibility_for_Firefox_18)
 - [Compatibilité des modules complémentaires pour Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
-
-### Anciennes versions
-
-{{Firefox_for_developers('17')}}

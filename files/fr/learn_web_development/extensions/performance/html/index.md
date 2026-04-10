@@ -19,7 +19,7 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
           >logiciels de base</a
         >
         installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >des technologies web opérant côté client</a
         >.
       </td>
@@ -39,10 +39,9 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 - [L'élément `<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
 - [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
 - [L'élément `<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
-- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attributes)
+- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attributs)
   - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
-
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) - ([https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
 - Attributs `async` / `defer`
 - [L'élément `<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
 - [L'élément `<object>`](/fr/docs/Web/HTML/Reference/Elements/object)
@@ -61,4 +60,4 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 - [L'attribut `srcset` de l'élément `<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributs)
   - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
 - [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload)
-- [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/)

@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.
 
 <table class="standard-table">
@@ -14,7 +12,7 @@ Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir e
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Assurez-vous d'avoir d'abord identifié
-        <a href="/fr/Apprendre/Commencez_votre_projet_web"
+        <a href="/fr/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >ce que vous souhaitez accomplir</a
         >
         avec votre projet web.
