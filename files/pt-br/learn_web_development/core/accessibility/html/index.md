@@ -15,7 +15,7 @@ Uma grande parte do conteúdo presente na internet pode se tornar acessível ape
       <td>
         <p>
           Conceitos básicos de computadores, entendimento básico de HTML (veja
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
             >Introdução ao HTML</a
           >), e entendimento do
           <a href="/pt-BR/docs/Learn/Accessibility/What_is_accessibility"

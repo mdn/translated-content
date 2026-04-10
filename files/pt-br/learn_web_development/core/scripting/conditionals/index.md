@@ -14,7 +14,7 @@ Em qualquer linguagem de programação, o código precisa tomar decisões e real
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimento básico de algoritmos, um entendimento básico de HTML e CSS,
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">JavaScript </a
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">JavaScript </a
         >primeiros passos.
       </td>
     </tr>

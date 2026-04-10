@@ -15,11 +15,11 @@ Neste primeiro artigo sobre Express responderemos as questões " O que é Node?"
       <td>
         Conhecimentos básicos em informática. Uma compreensão geral de
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programação web no lado servidor (backend)</a
         >, em particular, nos mecanismos de
         <a
-          href="/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
           >interação cliente-servidor de websites</a
         >.
       </td>

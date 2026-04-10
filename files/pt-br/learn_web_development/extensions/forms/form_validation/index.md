@@ -14,9 +14,9 @@ A validação de formulário nos ajuda a garantir que os usuários preencham os 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimento em informática, uma compreensão razoável de
-        <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-        <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
-        <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -179,9 +179,9 @@ Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alg
 
 ### Restringindo o comprimento de suas entradas
 
-Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando [`minlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength) atributos. Um campo é inválido se seu valor for menor que o valor [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) ou maior que o valor [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength). Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
+Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando [`minlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength) atributos. Um campo é inválido se seu valor for menor que o valor [`minlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength) ou maior que o valor [`maxlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength). Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
 
-Para campos numéricos (ou seja, `<input type="number">`), os atributos [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo [`min`](/pt-BR/docs/Web/HTML/Element/input#min) ou maior que o atributo [`max`](/pt-BR/docs/Web/HTML/Element/input#max), o campo será inválido.
+Para campos numéricos (ou seja, `<input type="number">`), os atributos [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) ou maior que o atributo [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max), o campo será inválido.
 
 Vejamos outro exemplo. Crie uma nova cópia do arquivo [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 

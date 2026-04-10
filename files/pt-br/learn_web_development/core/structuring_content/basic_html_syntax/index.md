@@ -15,12 +15,12 @@ Neste artigo nós abordamos os princípios básicos do HTML, para você começar
       <td>
         Básico de informática,
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >
         e conhecimento básico de como
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabalhar com arquivos</a
         >.
       </td>

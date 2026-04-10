@@ -16,7 +16,7 @@ Com o básico fora do caminho, podemos olhar melhor para os elementos utilizados
       <th scope="row">Pré-Requisitos:</th>
       <td>
         Leitura sobre computação básica e
-        <a href="/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/docs/Learn_web_development/Core/Structuring_content"
           >entendimento básico de HTML.</a
         >
       </td>

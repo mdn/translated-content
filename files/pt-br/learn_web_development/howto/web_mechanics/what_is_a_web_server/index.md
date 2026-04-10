@@ -12,12 +12,12 @@ Neste artigo vamos revisar o que são web servers, como eles funcionam, e por qu
       <th scope="row">Pré-requisitos:</th>
       <td>
         Você deve saber
-        <a href="/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
+        <a href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >como a Internet funciona</a
         >
         e
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web"
           >entender a diferença entre uma página web, um site, um servidor web e
           um mecanismo de busca</a
         >.

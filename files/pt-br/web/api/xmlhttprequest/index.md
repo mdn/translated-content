@@ -395,7 +395,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
             href="/pt-BR/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/pt-BR/docs/WebSockets"
+          <a href="/pt-BR/docs/Web/API/WebSockets_API"
             >Web Sockets</a
           >
           ou <code>responseText</code> de eventos de progresso em seu lugar.

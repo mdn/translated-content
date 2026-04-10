@@ -477,15 +477,15 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conteúdo_de_fluxo"
           >Conteúdo de fluxo</a
         >, conteúdo de fraseado, conteúdo incorporado. Se possui o atributo
-        <a href="/pt-BR/docs/Web/HTML/Element/video#controls"><code>controls</code></a>: interactive
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/video#controls"><code>controls</code></a>: interactive
         conteúdo interativo e conteúdo palpável.
       </td>
     </tr>
@@ -493,7 +493,7 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
       <th scope="row">Conteúdo permitido</th>
       <td>
         <p>
-          Se o elemento possui um atributo <a href="/pt-BR/docs/Web/HTML/Element/video#src"><code>src</code></a>
+          Se o elemento possui um atributo <a href="/pt-BR/docs/Web/HTML/Reference/Elements/video#src"><code>src</code></a>
           : zero ou mais elementos {{HTMLElement("track")}},
           seguido de conteúdo transparente que não contém elementos de mídia – ou seja
           nenhum {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.

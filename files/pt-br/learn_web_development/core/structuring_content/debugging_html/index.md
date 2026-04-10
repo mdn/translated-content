@@ -14,7 +14,7 @@ Escrever HTML é legal, mas e se algo der errado, e você não conseguir descobr
       <th scope="row">Pré-requisitos:</th>
       <td>
         Familiaridade com HTML, conforme abordado, por exemplo, em
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Introdução ao HTML</a
         >,
         <a

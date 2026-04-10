@@ -15,15 +15,15 @@ Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como fu
       <td>
         <p>
           Conhecimentos básicos de computação,
-          <a href="/pt-BR/docs/Aprender/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Aprender/CSS">CSS</a> e JavaScript (veja
-          <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiros passos</a
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a> e JavaScript (veja
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">primeiros passos</a
           >,
-          <a href="/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos"
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
             >elementos construtivos</a
           >
           e
-          <a href="/pt-BR/docs/Aprender/JavaScript/Objetos"
+          <a href="/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects"
             >introdução a objetos</a
           >).
         </p>

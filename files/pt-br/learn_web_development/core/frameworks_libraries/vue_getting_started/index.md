@@ -15,9 +15,9 @@ Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examina
       <td>
         <p>
           Conhecimento com as liguagens
-          <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
-          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>, conhecimento do
           <a
             href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a

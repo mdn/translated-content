@@ -57,15 +57,15 @@ Os detalhes de como o processo de inserção do texto funciona podem variar depe
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#required"><code>required</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#inputmode"><code>inputmode</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>

@@ -47,15 +47,15 @@ figcaption {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Conteudo de fluxo</a
         >,
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#palpable_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#palpable_content"
           >conteúdo palpável</a
         >.
       </td>
@@ -64,7 +64,7 @@ figcaption {
       <th scope="row">Conteúdo permitido</th>
       <td>
         Um elemento {{HTMLElement("figcaption")}}, seguido por
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content"
           >conteúdo de fluxo</a
         >; ou conteúdo de fluxo seguido por um
         {{HTMLElement("figcaption")}} elemento; ou conteúdo de fluxo.
@@ -78,7 +78,7 @@ figcaption {
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Contúdo de fluxo</a
         >.
       </td>
@@ -95,7 +95,7 @@ figcaption {
       <th scope="row">Funções ARIA permitidas</th>
       <td>
         Com nenhum
-        <a href="/pt-BR/docs/Web/HTML/Element/figcaption">figcaption </a
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/figcaption">figcaption </a
         >descendente:
         <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">qualquer</a>,
         caso contrário, não há papéis permitidos

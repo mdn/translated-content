@@ -15,9 +15,9 @@ Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo 
       <td>
         Conhecimento básico de computação, conhecimento básico de HTML e CSS,
         familiaridade com com o básico de Javascript (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Construindo blocos</a
         >) e OOJS básico (veja
         <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"

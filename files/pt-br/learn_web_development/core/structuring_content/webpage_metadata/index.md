@@ -19,7 +19,7 @@ O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibi
               <td>
                 Familiaridade básica em HTML, tal como
                 <a
-                  href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+                  href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
                   >Iniciando com HTML.</a
                 >
               </td>

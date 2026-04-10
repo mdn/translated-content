@@ -23,7 +23,7 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
           >trabalho com arquivos</a
         >, familiaridade com os fundamentos de HTML (conforme abordado em
         <a
-          href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Introdução ao HTML</a
         >) e os artigos anteriores deste módulo.
       </td>
@@ -41,11 +41,11 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
                   ><code>&#x3C;object></code></a
                 >,
                 <a
-                  href="/pt-BR/docs/Web/HTML/Element/embed"
+                  href="/pt-BR/docs/Web/HTML/Reference/Elements/embed"
                   ><code>&#x3C;embed></code></a
                 >e
                 <a
-                  href="/pt-BR/docs/Web/HTML/Element/iframe"
+                  href="/pt-BR/docs/Web/HTML/Reference/Elements/iframe"
                   ><code>&#x3C;iframe></code></a
                 >, como documentos PDF e outras páginas da web.
               </td>
