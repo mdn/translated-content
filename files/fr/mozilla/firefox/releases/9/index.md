@@ -46,7 +46,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) est utilisé avec `type="file"` et `accept="image/*"`.
 - Les images ICO de style PNG de Windows Vista sont à présent supportée.
 - Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
-- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
+- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
 
 ### CSS
 
