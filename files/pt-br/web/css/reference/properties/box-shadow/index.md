@@ -66,7 +66,7 @@ box-shadow:
   0 0 1em red;
 ```
 
-A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/docs/CSS/text-shadow) (a primeira sombra especificada está na parte superior).
+A propriedade box-shadow permite que você adicione uma sombra em quase qualquer elemento. Se um {{cssxref ("border-radius")}} for especificado no elemento com uma box-shadow, a sombra assume os mesmos cantos arredondados. O comando z-ordering de múltiplas box-shadows é o mesmo que múltiplas [text shadows](/pt-BR/docs/Web/CSS/Reference/Properties/text-shadow) (a primeira sombra especificada está na parte superior).
 
 [Box-shadow generator](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator) é uma ferrament interativa qu permite a criação de `box-shadow`.
 

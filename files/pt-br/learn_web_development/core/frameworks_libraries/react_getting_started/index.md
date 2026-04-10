@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco sobre e os casos de usos, configurar uma React toolchain no computador localmente, e criar e usar um app simples como partida, aprendendo um pouco sobre como os processos do React funcionam.
 
@@ -456,4 +456,4 @@ No React
 - Alguns atributos de JSX são diferente dos atributos de HTML, isto é feito para que eles não entrem em conflito com palavras reservadas do JavaScript. Por exemplo. `class` no HTML transforma-se em `className` no JSX. Note que atributos com múltiplas palavras são escritos no padrão de formatação _camel-case_.
 - _Props_ são escritas bem como atributos dentro das invocações de componentes e são passadas para dentro de componentes.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

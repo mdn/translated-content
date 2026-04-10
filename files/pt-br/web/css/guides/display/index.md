@@ -56,7 +56,7 @@ original_slug: Web/CSS/CSS_display
 - [Alinhamento de caixa no layout da grade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Grades, valores lógicos e modos de escrita](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [Layout e acessibilidade da grade CSS](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [Layout de grade CSS e aprimoramento progressivo](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Layout de grade CSS e aprimoramento progressivo](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
 - [Realizando layouts comuns usando grades](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Especificações

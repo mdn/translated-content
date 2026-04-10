@@ -87,6 +87,6 @@ No exemplo abaixo, o primeiro seletor corresponderá a um valor que começa com 
 
 ## Próximos passos
 
-Agora que terminamos com os seletores de atributo, você pode continuar no próximo artigo e ler sobre [pseudo-class and pseudo-element selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements).
+Agora que terminamos com os seletores de atributo, você pode continuar no próximo artigo e ler sobre [pseudo-class and pseudo-element selectors](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
 
-{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
+{{PreviousMenuNext("conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}

@@ -30,7 +30,7 @@ Esses blocos são chamados de **blocos de declaração** e as declarações dent
 ![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
 
 > [!NOTE]
-> O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/docs/HTML/Global_attributes#style).
+> O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#style).
 
 ## Regras CSS
 

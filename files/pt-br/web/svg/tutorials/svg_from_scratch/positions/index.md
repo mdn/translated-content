@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Positions
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}
 
 Neste artigo, examinamos como os Scalable Vector Graphics (SVG) representam as posições e tamanhos dos objetos dentro de um contexto de desenho, incluindo o sistema de coordenadas e o que significa uma medição de "pixel" em um contexto escalável.
 
@@ -52,4 +52,4 @@ Uma citação da especificação SVG 1.1 ilustra isso:
 
 > \[...] suponha que o agente do usuário possa determinar a partir de seu ambiente que "1px" corresponde a "0,2822222mm" (ou seja, 90dpi). Então, para todo o processamento de conteúdo SVG: [...] "1cm" é igual a "35,43307px" (e, portanto, 35,43307 unidades de usuário)
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorial/Basic_Shapes") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Getting_started", "Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes") }}

@@ -109,7 +109,7 @@ Elas geralmente se dividem em duas categorias.
 - [APIs de áudio e vídeo](/pt-BR/docs/Web/Media/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} e [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) permitem a você fazer coisas realmente interessantes com multimídia, tanto tocar música e vídeo em uma página da web, como capturar vídeos com a sua câmera e exibir no computador de outra pessoa (veja [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) para ter uma ideia).
 
 > [!NOTE]
-> Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar [testes cross browser](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing) com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).
+> Muitas demonstrações acima não vão funcionar em navegadores antigos — quando você for experimentar, é uma boa ideia usar browsers modernos como Firefox, Edge ou Opera para ver o código funcionar. Você vai precisar estudar [testes cross browser](/pt-BR/docs/Learn_web_development/Extensions/Testing) com mais detalhes quando você estiver chegando perto de produzir código (código real que as pessoas vão usar).
 
 **APIs de terceiros** não estão implementados no navegador automaticamente, e você geralmente tem que pegar seu código e informações em algum lugar da Web. Por exemplo:
 

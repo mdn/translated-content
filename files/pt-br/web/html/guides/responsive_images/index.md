@@ -219,7 +219,7 @@ Isto é um geral sobre imagens responsivas - nós esperamos que você tenha apro
 - **Direção de Arte:** O problema consiste em apresentar imagens cortadas para diferentes layouts - por exemplo, uma imagem panorâmica mostrada completa em um layout desktop, e uma imagem retrato mostrando o objeto principal ampliado em um layout mobile. Isto pode ser resolvido usando o elemento {{htmlelement("picture")}}.
 - **Mudança de resolução:** O problema é apresentar arquivos menores de imagens para dispositivos estreitos, porque eles não precisam de imagens gigantes como em computadores - e também, opcionalmente, que você queira apresentar imagens de diferentes resoluções para altas e baixas densidades de tela. Isto pode resolver usando [vector graphics](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (imagens SVG), e os atributos [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset) e [`sizes`](/pt-BR/docs/Web/HTML/Reference/Elements/img#sizes).
 
-Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content)! A única coisa para fazer agora é seguir e tentar nosso [Teste de Multimídia e Incorporação](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page), e ver como você está. Divirta-se!
+Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content)! A única coisa para fazer agora é seguir e tentar nosso [Teste de Multimídia e Incorporação](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Splash_page), e ver como você está. Divirta-se!
 
 ## Veja também
 
@@ -229,4 +229,4 @@ Isto também encerra o módulo [Multimídia e Incorporação](/pt-BR/docs/confli
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "conflicting/Learn_web_development/Core/Structuring_content")}}

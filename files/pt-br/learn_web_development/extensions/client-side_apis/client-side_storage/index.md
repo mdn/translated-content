@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Os navegadores modernos oferecem suporte a várias maneiras de os sites armazenarem dados no computador do usuário - com a permissão do usuário - e depois recuperá-los quando necessário. Isso permite que você mantenha dados para armazenamento de longo prazo, salve sites ou documentos para uso offline, retenha configurações específicas do usuário para seu site e muito mais. Este artigo explica os princípios básicos de como eles funcionam.
 
@@ -781,4 +781,4 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/pt-BR/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
