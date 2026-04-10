@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cae0c87750df678bf635db5d9f903a17f6cab035
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "Learn_web_development/Core/Structuring_content")}}
 
 Les graphiques vectoriels sont utiles dans de nombreuses circonstances. Ils sont légers et permettent un redimensionnement à volonté, quand on les agrandit, ils ne deviennent pas pixelisés et la taille des fichiers n'explose pas. Dans cet article, nous verrons comment inclure des images vectorielles dans une page web.
 
@@ -14,7 +14,7 @@ Les graphiques vectoriels sont utiles dans de nombreuses circonstances. Ils sont
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaître <a href="/fr/docs/Learn_web_development/Core/Structuring_content">les fondamentaux en HTML</a>, savoir comment <a href="/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images">insérer une image dans un document</a>.</td>
+      <td>Connaître <a href="/fr/docs/Learn_web_development/Core/Structuring_content">les fondamentaux en HTML</a>, savoir comment <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Multimedia_and_embedding/Images_in_HTML">insérer une image dans un document</a>.</td>
     </tr>
     <tr>
       <th scope="row">Objectif&nbsp;:</th>
@@ -339,4 +339,4 @@ Dans le dernier article de ce module, nous verrons [les images adaptatives (<i l
 - [Les propriétés SVG et CSS (en anglais)](https://css-tricks.com/svg-properties-and-css/)
 - [Comment redimensionner des images SVG (en anglais)](https://css-tricks.com/scale-svg/)
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "Learn_web_development/Core/Structuring_content")}}

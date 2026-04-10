@@ -73,7 +73,7 @@ La clé `chrome_url_overrides` est un objet qui peut avoir les propriétés suiv
           Le document peut charger CSS et JavaScript, tout comme une page Web
           normale. L'utilisation de JavaScript dans la page permet d'accéder aux
           mêmes
-          <a href="/fr/Add-ons/WebExtensions/API"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API"
             >API privilégiées "browser.*" </a
           >comme une extension d'arrière-plan.
         </p>

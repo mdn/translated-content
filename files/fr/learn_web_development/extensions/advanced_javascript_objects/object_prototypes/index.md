@@ -13,7 +13,7 @@ Les prototypes sont un mécanisme au sein de JavaScript qui permettent aux objet
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Une connaissance générale de l'informatique, des notions d'HTML et CSS, une connaissance des bases en JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction</a>) ainsi que des notions de JavaScript orienté objet (JSOO) (voir <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>).
+        Une connaissance générale de l'informatique, des notions d'HTML et CSS, une connaissance des bases en JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">Blocs de construction</a>) ainsi que des notions de JavaScript orienté objet (JSOO) (voir <a href="/fr/docs/Learn_web_development/Core/Scripting/Object-oriented/Introduction">Introduction aux objets</a>).
       </td>
     </tr>
     <tr>

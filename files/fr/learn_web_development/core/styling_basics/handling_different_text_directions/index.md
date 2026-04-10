@@ -133,7 +133,7 @@ Les propriétés logiques et les valeurs correspondantes sont plus récentes que
 
 ## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks).
+Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Résumé
 

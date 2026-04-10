@@ -16,7 +16,7 @@ Jusqu'à présent, notre application est monolithique. Avant de pouvoir en faire
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Connaissances des fondamentaux en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaissance <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">du terminal/de la ligne de commande</a>.
+          Connaissances des fondamentaux en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, connaissance <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line">du terminal/de la ligne de commande</a>.
         </p>
       </td>
     </tr>

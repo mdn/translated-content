@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.
 
 <table class="standard-table">

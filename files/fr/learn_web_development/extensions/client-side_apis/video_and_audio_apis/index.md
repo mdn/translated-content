@@ -13,17 +13,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
     <tr>
       <th scope="row">Prérequis:</th>
       <td>
-        Les bases du JavaScript (voir <a
-          href="/fr/docs/Learn_web_development/Core/Scripting"
-          >premiers pas en JavaScript</a
-        >,
-        <a href="/fr/Apprendre/JavaScript/Building_blocks"
-          >les briques Javascript</a
-        >,
-        <a href="/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">Introduction aux objets</a
-        >), <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
-          >Introduction aux APIs web</a
-        >
+        Connaissances de base en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, en particulier <a href="/fr/docs/Learn_web_development/Core/Scripting/Object_basics">les bases des objets JavaScript</a> et la couverture des API de base telles que <a href="/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting">le scripting DOM</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Network_requests">les requêtes réseau</a>.
       </td>
     </tr>
     <tr>
@@ -477,7 +467,7 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - {{domxref("HTMLMediaElement")}}
 - [Contenu audio et vidéo](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio) — simple guide aux `<video>` et `<audio>` HTML.
 - [Intégration audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery) — guide détaillé sur l'intégration de média dans le navigateur, avec de nombreux conseils, astuces et liens vers des tutoriels plus avancés.
-- [Manipulation audio et vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
+- [Manipulation audio et vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation) — guide détaillé pour manipuler l'audio et vidéo avec [Canvas API](/fr/docs/Web/API/Canvas_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), et plus encore.
 - Les pages référence {{htmlelement("video")}} et {{htmlelement("audio")}}.
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/Media/Guides/Formats).
 

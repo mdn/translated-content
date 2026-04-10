@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui renvoie l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/Reference/Values/angle) entre `-90deg` et `90deg`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui renvoie l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/Reference/Values/angle) entre `-90deg` et `90deg`.
 
 ## Syntaxe
 

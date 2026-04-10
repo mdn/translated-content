@@ -6,7 +6,7 @@ l10n:
   sourceCommit: ccafad98826d97da19728626047a7020000fd639
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur fonctionnement, comment les utiliser dans votre code, et leur structure. Nous verrons également quelles sont les principales API et leur utilisation.
 
@@ -15,7 +15,7 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API&nbsp;: leur
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Des connaissances de base en informatique, une compréhension de base du <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, des notions de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">briques JavaScript</a>, <a href="/fr/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">objets JavaScript</a>).
+        Des connaissances de base en informatique, une compréhension de base du <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a> et <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, des notions de JavaScript (voir <a href="/fr/docs/Learn_web_development/Core/Scripting">premiers pas</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks">briques JavaScript</a>, <a href="/fr/docs/Learn_web_development/Core/Scripting/Objects">objets JavaScript</a>).
       </td>
     </tr>
     <tr>
@@ -289,4 +289,4 @@ Les API <i lang="en">Web Audio</i> et [`HTMLMediaElement`](/fr/docs/Web/API/HTML
 
 À ce stade, vous devriez avoir une bonne idée de ce que sont les API, de leur fonctionnement et de ce que vous pouvez faire avec dans votre code JavaScript. Vous avez probablement hâte de commencer à faire des choses amusantes avec des API spécifiques, alors allez-y&nbsp;! Par la suite, nous verrons comment manipuler des documents avec le DOM (<i lang="en">Document Object Model</i> ou modèle objet de document en français).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}

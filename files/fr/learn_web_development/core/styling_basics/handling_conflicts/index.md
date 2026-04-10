@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
 
@@ -256,7 +256,7 @@ Si vous changez la première ligne du CSS de cet exemple par `@layer secondLayer
 
 ## Évaluez vos compétences
 
-Vous avez terminé l'article, mais avez-vous mémorisé les informations essentielles&nbsp;? Vous pouvez vérifier que c'est le cas en vous évaluant avec [l'évaluation sur la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_tasks).
+Vous avez terminé l'article, mais avez-vous mémorisé les informations essentielles&nbsp;? Vous pouvez vérifier que c'est le cas en vous évaluant avec [l'évaluation sur la cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks).
 
 ## Résumé
 
@@ -266,4 +266,4 @@ Si vous n'avez pas encore complètement compris la cascade, la spécificité et 
 
 Si vous rencontrez des problèmes étranges où votre mise en forme ne s'applique pas ou de façon inattendue, revenez voir cette page, il se peut que ce soit un problème de spécificité.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

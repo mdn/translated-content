@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Measuring_performance
 original_slug: Learn/Performance/Measuring_performance
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 La mesure des performance fournit un indicateur important pour vous aider à assurer le succès de votre application, site ou service web.
 
@@ -94,4 +94,4 @@ Vous pouvez aussi utiliser le [moniteur de performances](https://firefox-source-
 
 Cet article était destiné à proposer une vue d'ensemble rapide des indicateurs de performance web que vous pouvez mesurer sur un site ou une application web. Dans le prochain article, nous verrons comment travailler sur la performance perçue et nous découvrirons des techniques permettant de rendre les éléments les plus longs à charger un peu moins lents pour le visiteur, voire pour les masquer complètement.
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}

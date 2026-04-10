@@ -135,29 +135,23 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant
           des éléments
-          <code><a href="/fr/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
+          {{HTMLElement("link")}}
           et
-          <code
-            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
-          >, tout comme une page Web normale. Cependant, n'utilisez pas
-          <code
-            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
-          >
+          {{HTMLElement("script")}}, tout comme une page Web normale. Cependant, n'utilisez pas
+          {{HTMLElement("script")}}
           avec du code intégré, car vous obtiendrez une erreur de politique de
           violation de contenu. Au lieu de cela,
-          <code
-            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
-          >
+          {{HTMLElement("script")}}
           doit utiliser l'attribut
-          <code><a href="/fr/docs/Web/HTML/Reference/Elements/script">src</a></code> pour
+          {{HTMLElement("script")}} pour
           charger un fichier script séparé.
         </p>
         <p>
           Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans la fenêtre contextuelle peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (à
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs WebExtension</a> (à
           condition, bien sûr, que l'extension ait les
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
             >permissions</a
           >
           appropriées).
@@ -165,7 +159,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -182,7 +176,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -197,7 +191,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
         <p>
           Masquer l'action de page par défaut pour les pages dont les URLs
           correspondent des
-          <a href="/fr/Add-ons/WebExtensions/match_patterns"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >modèles de correspondance</a
           >
           données.

@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
   </tbody>
 </table>
 
-Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner celle à afficher.
+Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner celle à afficher.
 
 La clé `sidebar_action` vous permet de définir les propriétés par défaut de la barre latérale. Vous pouvez modifier ces propriétés lors de l'exécution à l'aide de l'API {{WebExtAPIRef("sidebarAction")}}.
 
@@ -75,7 +75,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           chrome://browser/content/extension-mac.css sur OS X. Lors de la
           définition des dimensions, savez que cette feiulle de style est
           actuellement définit <code>box-sizing: border-box</code> (see
-          <a href="/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
+          {{CSSxRef("box-sizing")}}).
         </p>
         <p>
           Le
@@ -120,7 +120,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
         <p>
           Voir
           <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
             >Choix de la taille d'icones</a
           >
           pour plus de conseils sur ce sujet.
@@ -142,18 +142,16 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
         <p>
           Le fichier HTML peut inclure des fichiers CSS et JavaScript à l'aide
           des éléments
-          <code><a href="/fr/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code>
+          {{HTMLElement("link")}}
           et
-          <code
-            ><a href="/fr/docs/Web/HTML/Reference/Elements/script">&#x3C;script></a></code
-          >, tout comme une page Web normale.
+          {{HTMLElement("script")}}, tout comme une page Web normale.
         </p>
         <p>
            Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans le panneau peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> (à
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API">APIs des WebExtension</a> (à
           condition, bien sûr, que l'extension ait les
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
             >permissions</a
           >
           appropriées).
@@ -162,7 +160,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
         <p>
           C'est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -182,7 +180,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           Cette propriété est facultative : si elle est omise, le titre de la
           barre latérale est le
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/name"
+            ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name"
               >nom</a
             ></code
           >
@@ -191,7 +189,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
         <p>
           C'est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable.</a
           >
         </p>
