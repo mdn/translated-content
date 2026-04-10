@@ -1,5 +1,5 @@
 ---
-title: "HTMLElement: offsetWidth property"
+title: HTMLElement：offsetWidth 属性
 short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
 ---
