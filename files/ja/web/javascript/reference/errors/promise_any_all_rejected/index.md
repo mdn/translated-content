@@ -33,7 +33,7 @@ Promise.any([]).catch((error) => {
 });
 ```
 
-###すべての拒否の処理
+### すべての拒否の処理
 
 ```js
 const promises = [
