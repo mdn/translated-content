@@ -36,7 +36,7 @@ use(value)
 
 ### use() の使用
 
-この関数は、ファイル (Node.js の [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) を読み込み、その内容を返します.`FileHandle` クラスはファイルを非同期で閉じる `[Symbol.asyncDispose]()` メソッドを実装しているため、関数の処理が完了するとファイルハンドルは自動的に閉じられます。
+この関数は、ファイル (Node.js の [`FileHandle`](https://nodejs.org/api/fs.html#class-filehandle)) を読み込み、その内容を返します。`FileHandle` クラスはファイルを非同期で閉じる `[Symbol.asyncDispose]()` メソッドを実装しているため、関数の処理が完了するとファイルハンドルは自動的に閉じられます。
 
 ```js
 async function readFileContents(path) {
