@@ -6,7 +6,7 @@ l10n:
   sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{jsxref("AsyncDisposableStack")}} インスタンスの **`[Symbol.asyncDispose]()`** メソッドは、非同期破棄プロトコルを実装し、{{jsxref("Statements/await_using", "await using")}} とともに使用されたときに オブジェクトを破棄できるようにします。これは、{{jsxref("AsyncDisposableStack/disposeAsync", "disposeAsync()")}} メソッドのエイリアスです。
+{{jsxref("AsyncDisposableStack")}} インスタンスの **`[Symbol.asyncDispose]()`** メソッドは、非同期破棄プロトコルを実装し、{{jsxref("Statements/await_using", "await using")}} とともに使用されたときにオブジェクトを破棄できるようにします。これは、{{jsxref("AsyncDisposableStack/disposeAsync", "disposeAsync()")}} メソッドのエイリアスです。
 
 ## 構文
 
