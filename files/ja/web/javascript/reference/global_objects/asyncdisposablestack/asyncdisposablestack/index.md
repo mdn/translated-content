@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 7a5b580a28a0b1a33e42e9fb81c8234994ec0e36
 ---
 
-**`AsyncDisposableStack()`** コンストラクタは、{{jsxref("AsyncDisposableStack")}} オブジェクトを作成します。
+**`AsyncDisposableStack()`** コンストラクターは、{{jsxref("AsyncDisposableStack")}} オブジェクトを作成します。
 
 ## 構文
 
