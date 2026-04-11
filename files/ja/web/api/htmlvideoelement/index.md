@@ -41,7 +41,7 @@ _親インターフェイスである {{domxref("HTMLMediaElement")}} および 
 - {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : `unsigned long` で、画面上に描画されたフレームの数を返します。
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : `double` で、最後にペイントされたビデオフレームの時刻をを秒単位で返します。
+  - : `double` で、最後にペイントされたビデオフレームの時刻を秒単位で返します。
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 論理値で、動画に音声があるかどうかを示す値を返します。
 

@@ -793,7 +793,7 @@ l10n:
 
 ### `<filter>`
 
-{{SVGElement('filter')}} の場合、 `x` はこのフィルターの描画領域における左上隅の X 座標をを定義します。
+{{SVGElement('filter')}} の場合、 `x` はこのフィルターの描画領域における左上隅の X 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -826,7 +826,7 @@ l10n:
 
 ### `<foreignObject>`
 
-{{SVGElement('foreignObject')}} の場合、 `x` はビューポートの左上隅の X 座標をを定義します。
+{{SVGElement('foreignObject')}} の場合、 `x` はビューポートの左上隅の X 座標を定義します。
 
 <table class="properties">
   <tbody>
