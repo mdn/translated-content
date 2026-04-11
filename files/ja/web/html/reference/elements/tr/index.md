@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
+**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素を混在させることができます。
 
 {{InteractiveExample("HTML デモ: &lt;tr&gt;", "tabbed-taller")}}
 
