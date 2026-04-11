@@ -2,13 +2,15 @@
 title: HTMLElement：offsetWidth 属性
 short-title: offsetWidth
 slug: Web/API/HTMLElement/offsetWidth
+l10n:
+  sourceCommit: 0916e1754652f3a7c663ef031faa26c98f492023
 ---
 
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement")}} 接口的 **`offsetWidth`** 只读属性以整数形式返回元素的布局宽度。
 
-通常，`offsetWidth` 是元素 CSS 宽度的像素测量值，包括任何边框、内边距和垂直滚动条（如果渲染了的话）。它不包括伪元素（如 `::before` 或 `::after`）的宽度。
+通常，`offsetWidth` 是元素 CSS 宽度的像素测量值，包括任何边框、内边距和垂直滚动条（如果已渲染）。它不包括伪元素（如 `::before` 或 `::after`）的宽度。
 
 如果元素被隐藏（例如，将元素或其某个祖先元素的 `style.display` 设置为 `"none"`），则返回 `0`。
 
