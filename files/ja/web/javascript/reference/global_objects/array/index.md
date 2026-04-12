@@ -502,7 +502,7 @@ console.log(removedItems);
 
 ### 配列を最初の _N_ 項目ちょうどに切り詰める
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドはを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、配列 `fruits` を最初の 2 項目ちょうどに切り詰めます。
 
 ```js
 const fruits = ["りんご", "バナナ", "いちご", "マンゴー", "さくらんぼ"];
