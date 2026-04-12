@@ -255,7 +255,7 @@ input:required + span::after {
 
 そして、生成コンテンツに、このラベルに書かせたい内容である "required" を与え、好きなようにスタイルと位置を設定します。結果は以下のようになります（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-```html hidden live-sample___required-optional-generated
+```html-nolint hidden live-sample___required-optional-generated
 <form>
   <fieldset>
     <legend>フィードバックフォーム</legend>
@@ -422,7 +422,7 @@ input:valid + span::before {
 
 次の例で試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-```html hidden live-sample___valid-invalid
+```html-nolint hidden live-sample___valid-invalid
 <form>
   <fieldset>
     <legend>フィードバックフォーム</legend>
@@ -603,7 +603,7 @@ input:out-of-range + span::after {
 
 これは以前の `:required` の例と同じような話ですが、ここでは `::after` の内容に適用される宣言を別のルールに分割し、 `:required` と `:out-of-range` 状態のための `::after` の内容に、それぞれ別のコンテンツとスタイルを保有するようにした点が異なっています。こちらで試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-```html hidden live-sample___out-of-range
+```html-nolint hidden live-sample___out-of-range
 <form>
   <fieldset>
     <legend>フィードバックフォーム</legend>
@@ -755,7 +755,7 @@ form.addEventListener("submit", (e) => {
 
 このような例を見てみましょう。まず最初の HTML は、テキスト入力フィールドと、請求先住所の無効化をオン・オフするためのチェックボックスを含むシンプルなフォームです。請求先住所フィールドは既定値で無効になっています。
 
-```html
+```html-nolint
 <form>
   <fieldset id="shipping">
     <legend>お届け先住所</legend>
