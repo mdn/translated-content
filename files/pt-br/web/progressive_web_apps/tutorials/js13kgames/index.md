@@ -31,7 +31,7 @@ Existem alguns princípios que uma aplicação Web deve tentar seguir para serem
 
 - [Detectável](/pt-BR/docs/Apps/Progressive/Advantages#discoverable), o seu conteúdo deve poder ser encontrado por mecanismos de busca na Web.
 - [Instalável](/pt-BR/docs/Apps/Progressive/Advantages#installable), deve poder ser acessada a partir da tela inicial do dispositivo.
-- [Linkavel](/docs/Web/Apps/Progressive/Advantages#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
+- [Linkavel](/docs/Web/Progressive_web_apps#linkable), você deve poder compartilhar simplesmente enviando a sua URL.
 - [Independente de rede](/pt-BR/docs/Apps/Progressive/Advantages#network_independent), deve funcionar offline e ou com uma conexão fraca.
 - [Progressiva](/pt-BR/docs/Apps/Progressive/Advantages#progressive), deve funcionar em um nível básico e navegadores antigos e em um nível completo nos mais modernos.
 - [Re-engajável](/pt-BR/docs/Apps/Progressive/Advantages#re-engageable), deve ser possível enviar notificações.

@@ -382,7 +382,7 @@ stylesheet.onerror = () => {
       </th>
       <td>
         メタデータコンテンツ。
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。
       </td>
     </tr>
@@ -398,7 +398,7 @@ stylesheet.onerror = () => {
       <th>許可されている親要素</th>
       <td>
         メタデータ要素を受け入れるすべての要素。
-        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>

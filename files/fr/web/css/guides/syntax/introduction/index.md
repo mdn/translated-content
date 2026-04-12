@@ -34,7 +34,7 @@ Un bloc de déclaration CSS est visualisé dans le schéma ci-dessous.
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style).
+> Le contenu d'un bloc de déclaration CSS, c'est-à-dire une liste de déclarations séparées par des points-virgules, sans les accolades d'ouverture et de fermeture, peut être placé dans un attribut HTML [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style).
 
 ## Ensembles de règles CSS
 

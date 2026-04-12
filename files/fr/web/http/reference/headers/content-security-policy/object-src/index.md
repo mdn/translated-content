@@ -22,7 +22,7 @@ Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web
       <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la
         directive <code>default-src</code>.

@@ -112,6 +112,6 @@ Depuis l'état initial, lorsque vous réduisez la hauteur, le rapport d'aspect c
 
 ## Voir aussi
 
-- [Comprendre `aspect-ratio`](/fr/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Comprendre `aspect-ratio`](/fr/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - La règle {{CSSxRef("@media")}}

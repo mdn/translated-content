@@ -1,33 +1,32 @@
 ---
 title: widows
 slug: Web/CSS/Reference/Properties/widows
-original_slug: Web/CSS/widows
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de [la page](/fr/docs/Web/CSS/Guides/Paged_media), la région ou [la colonne](/fr/docs/Web/CSS/Guides/Multicol_layout).
 
-La propriété **`widows`** définit le nombre minimum de lignes qui peuvent être laissées en haut de la [page](/fr/docs/Web/CSS/Medias_paginés), région ou [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout) suivante. En utilisant la propriété `widows`, on évite d'avoir des veuves sur une seule ligne.
+En typographie, une _veuve_ est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une page. (Le paragraphe se poursuit à partir d'une page précédente.)
+
+## Syntaxe
 
 ```css
-/* Valeurs entières */
-/* type <integer> */
+/* Valeurs de type <integer> */
 widows: 2;
 widows: 3;
 
 /* Valeurs globales */
 widows: inherit;
 widows: initial;
+widows: revert;
+widows: revert-layer;
 widows: unset;
 ```
 
-> [!NOTE]
-> En typographie, une ligne veuve est la dernière ligne d'un paragraphe qui apparaît seule en haut d'une nouvelle page (alors que le paragraphe démarrait sur une page antérieure).
-
-## Syntaxe
-
 ### Valeurs
 
-- `<integer>`
+- {{CSSxRef("&lt;integer&gt;")}}
   - : Cet entier indique le nombre minimum de lignes qui peuvent apparaître en haut d'une nouvelle page, région ou colonne lorsqu'une rupture intervient. Si la valeur est négative, la déclaration est invalide.
 
 ## Définition formelle
@@ -40,7 +39,24 @@ widows: unset;
 
 ## Exemple
 
-### CSS
+### Contrôler les lignes veuves dans les colonnes
+
+#### HTML
+
+```html
+<div>
+  <p>Un premier paragraphe avec un peu de texte.</p>
+  <p>
+    Un deuxième paragraphe avec un peu plus de texte et qui permet d'illustrer
+    le fonctionnement de widows.
+  </p>
+  <p>
+    Enfin, un troisième paragraphe avec un peu plus de texte que le premier.
+  </p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -58,22 +74,7 @@ p:first-child {
 }
 ```
 
-### HTML
-
-```html
-<div>
-  <p>Un premier paragraphe avec un peu de texte.</p>
-  <p>
-    Un deuxième paragraphe avec un peu plus de texte et qui permet d'illustrer
-    le fonctionnement de widows.
-  </p>
-  <p>
-    Enfin, un troisième paragraphe avec un peu plus de texte que le premier.
-  </p>
-</div>
-```
-
-### Résult
+#### Résultat
 
 {{EmbedLiveSample("Exemple", 400, 160)}}
 
@@ -87,5 +88,5 @@ p:first-child {
 
 ## Voir aussi
 
-- {{cssxref("orphans")}}
-- [Médias paginés](/fr/docs/Web/CSS/Medias_paginés)
+- La propriété {{CSSxRef("orphans")}}
+- [Les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)

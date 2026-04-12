@@ -9,7 +9,7 @@ slug: Web/API/HTMLVideoElement
 
 [지원하는 미디어 포맷](/ko/docs/Web/Media/Formats) 목록은 브라우저마다 다릅니다. 여러분은 적절한 범위의 브라우저에서 지원하는 한가지 비디어 포맷을 제공하던가, 지원할 모든 브라우저를 위한 여러 종류의 미디어 포맷을 제공해야 합니다.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## 속성(Properties)
 

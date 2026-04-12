@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/document
 original_slug: Web/XPath/Functions/document
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `document` recherche un ensemble de nœuds dans un ou des documents externes et retourne l'ensemble de nœuds résultant.
 

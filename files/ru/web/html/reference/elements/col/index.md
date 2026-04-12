@@ -136,7 +136,7 @@ Please see the {{HTMLElement("table")}} page for examples on `<col>`.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories"
           >Content categories</a
         >
       </th>

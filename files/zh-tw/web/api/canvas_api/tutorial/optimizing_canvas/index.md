@@ -17,4 +17,4 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 - 使用{{domxref("window.requestAnimationFrame()")}}
 - 用[JSPerf](https://jsperf.com/)測試效能
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations")}}

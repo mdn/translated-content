@@ -39,10 +39,10 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributos centraiss](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de evento gráfico](/pt-BR/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Atributos centraiss](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de evento gráfico](/pt-BR/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

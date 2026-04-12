@@ -5,7 +5,7 @@ slug: Web/API/Element/keydown_event
 
 {{ApiRef("HTML DOM")}}
 
-La propriété **`onkeydown`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`keydown`](/fr/docs/Web/API/Element/keydown_event).
+La propriété **`onkeydown`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/API/Document_Object_Model/Events) qui permet de traiter les évènements [`keydown`](/fr/docs/Web/API/Element/keydown_event).
 
 L'évènement `keydown` est déclenché lorsque l'utilisatrice ou l'utilisateur appuie sur une touche du clavier.
 

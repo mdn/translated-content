@@ -83,7 +83,7 @@ dd {
       <td>
         <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>

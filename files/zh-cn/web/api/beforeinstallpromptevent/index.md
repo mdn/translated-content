@@ -9,7 +9,7 @@ slug: Web/API/BeforeInstallPromptEvent
 
 该接口继承自{{domxref("Event")}}接口。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## 构造器
 

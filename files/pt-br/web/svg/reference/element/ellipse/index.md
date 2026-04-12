@@ -22,10 +22,10 @@ As elipses são incapazes de especificar a orientação exatada dela mesma (se, 
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

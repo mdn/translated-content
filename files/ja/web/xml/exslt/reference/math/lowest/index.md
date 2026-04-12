@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/math/lowest
 original_slug: Web/EXSLT/math/lowest
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
 `math:lowest()` は、指定されたノードセットの最小値（[`math:min()`](/ja/docs/Web/XML/EXSLT/math/min) を使用して計算した最小値）を持つノードを返します。
 

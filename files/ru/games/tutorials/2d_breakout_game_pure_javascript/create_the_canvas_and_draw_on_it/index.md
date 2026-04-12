@@ -110,4 +110,4 @@ ctx.closePath();
 
 Сейчас мы создали базовый HTML и немного узнали о canvas, давайте на следующем шаге изучим, как [Двигать мяч в нашей игре](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}

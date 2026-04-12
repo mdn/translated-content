@@ -446,7 +446,7 @@ var myRequest = new XMLHttpRequest();
             title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/ru/docs/WebSockets" title="/ru/docs/WebSockets"
+          <a href="/ru/docs/Web/API/WebSockets_API" title="/ru/docs/WebSockets"
             >Web Sockets</a
           >, or <code>responseText</code> from progress events instead.
         </p>
@@ -595,7 +595,7 @@ void send(FormData data);
 
 If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
 
-The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [Blobs](/ru/docs/Web/API/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
+The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [Blobs](/ru/docs/Web/API/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/Web/API/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
 
 ### setRequestHeader()
 

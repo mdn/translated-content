@@ -7,7 +7,7 @@ slug: Web/API/Headers
 
 L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l'ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (voir la section [Exemples](#exemples).) Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
 
-Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}} et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden request header", "en-têtes de requête interdit")}} et {{Glossary("Forbidden response header name", "nom d'en-tête de réponse interdit")}}.
 
 Un objet `Headers` a aussi une garde associée, qui prend la valeur `immutable`, `request`, `request-no-cors`, `reponse`, or `none`. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}} vont modifier le `Header`. Pour plus d'informations voir {{Glossary("Guard")}}.
 

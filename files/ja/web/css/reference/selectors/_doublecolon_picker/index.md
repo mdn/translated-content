@@ -55,7 +55,7 @@ l10n:
   position-area: block-end span-inline-end;
   ```
 
-- ブラウザーの既定のスタイルでは、ビューポートからオーバーフローする危険がある場合に、ピッカーの位置を再調整する位置指定の代替処理も定義されています。位置指定の代替処理については、[オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)ガイドで説明されています。参照までに、関連する既定の代替スタイルは以下の通りです。
+- ブラウザーの既定のスタイルでは、ビューポートからオーバーフローする危険がある場合に、ピッカーの位置を再調整する位置指定の代替処理も定義されています。位置指定の代替処理については、[オーバーフロー時の代替処理と条件付き非表示](/ja/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)ガイドで説明されています。参照までに、関連する既定の代替スタイルは以下の通りです。
 
   ```css
   position-try-order: most-block-size;

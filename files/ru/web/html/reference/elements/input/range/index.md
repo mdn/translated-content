@@ -470,4 +470,4 @@ input[type="range"] {
 - {{domxref('validityState.rangeOverflow')}} и{{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/ru/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)
-- [Compatibility of CSS properties](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/ru/docs/Learn_web_development/Extensions/Forms)

@@ -13,7 +13,7 @@ O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

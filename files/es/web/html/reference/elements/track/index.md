@@ -38,7 +38,7 @@ video::cue {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>

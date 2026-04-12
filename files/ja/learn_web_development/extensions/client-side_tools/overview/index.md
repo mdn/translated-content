@@ -174,4 +174,4 @@ l10n:
 
 これで、クライアント側のウェブツールのトピックの概要についての簡単な紹介を締めくくります。 次に、多くのツールが呼び出されるコマンド ラインの速習コースを提供します。 コマンド ラインで何ができるかを見てから、最初のツールをインストールして使用してみます。
 
-{{NextMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{NextMenu("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Extensions/Client-side_tools")}}

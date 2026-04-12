@@ -15,13 +15,13 @@ Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de 
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction à HTML</a
         >), et une idée de
         <a href="/fr/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"

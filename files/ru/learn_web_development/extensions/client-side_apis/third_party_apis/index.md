@@ -440,6 +440,6 @@ This article has given you a useful introduction to using third party APIs to ad
 - [Manipulating documents](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting)
 - [Fetching data from the server](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [Third party APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
+- [Drawing graphics](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
 - [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [Client-side storage](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)

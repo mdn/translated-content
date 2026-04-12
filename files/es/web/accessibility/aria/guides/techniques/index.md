@@ -12,8 +12,8 @@ l10n:
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Guides">Guías ARIA</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Regiones en vivo de ARIA</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">Guía de implementadores del lector de pantalla ARIA</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/ARIA_Techniques">Uso de ARIA: roles, estados y propiedades</a></li>
-    <li><a href="/es/docs/Web/Accessibility/ARIA/Multipart_labels">Etiquetas de varias partes</a></li>
+    <li><a href="/es/docs/Web/Accessibility/ARIA/Guides/Techniques">Uso de ARIA: roles, estados y propiedades</a></li>
+    <li><a href="/es/docs/Web/Accessibility/ARIA/Guides/Multipart_labels">Etiquetas de varias partes</a></li>
     <li><a href="/es/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">Cómo registrar errores relacionados con ARIA</a></li>
     <li class="toggle">
       <details><summary>Estados y propiedades de ARIA</summary>

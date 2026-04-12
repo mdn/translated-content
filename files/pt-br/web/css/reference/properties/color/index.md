@@ -176,4 +176,4 @@ p {
 
 ## Veja também
 
-- [Tipo de dado \<color> no CSS.](/pt-BR/docs/Web/CSS/color_value)
+- [Tipo de dado \<color> no CSS.](/pt-BR/docs/Web/CSS/Reference/Values/color_value)

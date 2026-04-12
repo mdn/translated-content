@@ -14,7 +14,7 @@ En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, 
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td><a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>.)</td>
+      <td><a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>.)</td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>

@@ -7,7 +7,7 @@ slug: Web/API/HTMLUnknownElement
 
 L'interface **`HTMLUnknownElement`** représente un élément HTML invalide et dérive de l'interface {{DOMxRef("HTMLElement")}}, mais sans implémenter aucune propriété ou méthode additionnelle.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Propriétés
 

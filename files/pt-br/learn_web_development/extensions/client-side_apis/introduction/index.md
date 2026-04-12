@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como funcionam, como usá-las em seu código e como são estruturadas? Ainda, vamos entender quais são as principais classes de APIs e quais usos elas possuem.
 
@@ -15,15 +15,15 @@ Primeiro, vamos ver as APIs a partir de um nível mais alto: o que são, como fu
       <td>
         <p>
           Conhecimentos básicos de computação,
-          <a href="/pt-BR/docs/Aprender/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Aprender/CSS">CSS</a> e JavaScript (veja
-          <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiros passos</a
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a> e JavaScript (veja
+          <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">primeiros passos</a
           >,
-          <a href="/pt-BR/docs/Aprender/JavaScript/Elementos_construtivos"
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
             >elementos construtivos</a
           >
           e
-          <a href="/pt-BR/docs/Aprender/JavaScript/Objetos"
+          <a href="/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects"
             >introdução a objetos</a
           >).
         </p>
@@ -290,4 +290,4 @@ These permission prompts are given to users for security — if they weren't in 
 
 Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs")}}

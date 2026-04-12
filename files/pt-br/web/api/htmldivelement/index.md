@@ -7,7 +7,7 @@ slug: Web/API/HTMLDivElement
 
 A interface `HTMLDivElement` fornece propriedades especiais ( além da interface normal {{domxref ("HTMLElement")}} que também está a sua disposição por herança ) para manipular elementos div.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Propriedades
 

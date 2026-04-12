@@ -59,7 +59,7 @@ A tabela seguinte estÃ¡ ordenada da mais alta (20) para a mais baixa (0) precedÃ
       <td rowspan="3">19</td>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors#Dot_notation"
           >Acesso a Membro</a
         >
       </td>
@@ -69,7 +69,7 @@ A tabela seguinte estÃ¡ ordenada da mais alta (20) para a mais baixa (0) precedÃ
     <tr>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_accessors#Dot_notation"
           >Acesso a Membro Computado</a
         >
       </td>
@@ -480,7 +480,7 @@ A tabela seguinte estÃ¡ ordenada da mais alta (20) para a mais baixa (0) precedÃ
       <td>4</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >Condicional</a
         >
       </td>
@@ -545,7 +545,7 @@ A tabela seguinte estÃ¡ ordenada da mais alta (20) para a mais baixa (0) precedÃ
     <tr>
       <td>
         <a
-          href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/yield*"
           >yield*</a
         >
       </td>
@@ -566,7 +566,7 @@ A tabela seguinte estÃ¡ ordenada da mais alta (20) para a mais baixa (0) precedÃ
       <td>0</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >VÃ­rgula / SequÃªncia</a
         >
       </td>

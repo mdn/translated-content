@@ -132,4 +132,4 @@ function ballLeaveScreen() {
 
 Жизни делают игру более казуальной — даже если вы проиграете единожды, у вас будут ещё 2 жизни и вы сможете продолжить игру. Теперь мы можем поработать над внешним видом игры, сделать её более красивой, добавив [анимацию и эффекты](/ru/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Win_the_game", "Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Win_the_game", "Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens")}}

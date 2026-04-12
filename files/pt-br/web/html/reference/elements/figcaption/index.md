@@ -76,7 +76,7 @@ figcaption {
 
 ## Atributos
 
-Esse elemento possui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse elemento possui somente os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemplos
 

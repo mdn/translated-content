@@ -123,7 +123,7 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
         <li>Para los caracteres que generalmente se tratan literalmente, indica que el siguiente caracter es especial y no se debe interpretar literalmente. Por ejemplo, <code>/b/</code> reconoce el caracter "b". Al colocar una barra invertida delante de "b", es decir, usando <code>/\b/</code>, el caracter se vuelve especial para significar que concuerda con el límite de una palabra.</li>
         <li>Para los caracteres que generalmente se tratan de manera especial, indica que el siguiente caracter no es especial y se debe interpretar literalmente. Por ejemplo, "*" es un caracter especial que significa que deben reconocer 0 o más ocurrencias del caracter anterior; por ejemplo, <code>/a*/</code> significa reconocer 0 o más "a"s. Para emparejar el <code>*</code> literal, precédelo con una barra invertida; por ejemplo, <code>/a\*/</code> concuerda con "a*".</li>
        </ul>
-       <p>Ten en cuenta que algunos caracteres como <code>:</code>, <code>-</code>, <code>@</code>, etc. no tienen un significado especial cuando se escapan ni cuando no se escapan. Las secuencias de escape como <code>\:</code>, <code>\-</code>, <code>\@</code> serán equivalentes a sus equivalentes de caracteres literales sin escapar en expresiones regulares. Sin embargo, en las expresiones regulares con <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_searching_with_flags_2">indicador Unicode</a>, esto provocará un error de <em>escape de identidad no válido</em>. Esto se hace para asegurar la compatibilidad con el código existente que usa nuevas secuencias de escape como <code>\p</code> o <code>\k</code>.</p>
+       <p>Ten en cuenta que algunos caracteres como <code>:</code>, <code>-</code>, <code>@</code>, etc. no tienen un significado especial cuando se escapan ni cuando no se escapan. Las secuencias de escape como <code>\:</code>, <code>\-</code>, <code>\@</code> serán equivalentes a sus equivalentes de caracteres literales sin escapar en expresiones regulares. Sin embargo, en las expresiones regulares con <a href="/es/docs/Web/JavaScript/Guide/Regular_expressions#Advanced_searching_with_flags_2">indicador Unicode</a>, esto provocará un error de <em>escape de identidad no válido</em>. Esto se hace para asegurar la compatibilidad con el código existente que usa nuevas secuencias de escape como <code>\p</code> o <code>\k</code>.</p>
        <div class="blockIndicator note">
        <p>Para reconocer este caracter literalmente, escápalo consigo mismo. En otras palabras, para buscar <code>\</code> usa <code>/\\/</code>.</p>
        </div>
@@ -151,7 +151,7 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
       <td>
        <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no reconoce la "A" en "an A", pero encuentra la primera "A" en "An A".</p>
        <div class="blockIndicator note">
-       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">grupo</a>.</p>
+       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un <a href="/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences">grupo</a>.</p>
        </div>
       </td>
      </tr>
@@ -172,7 +172,7 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
         <li><code>/oon\b/</code> encuentra "oon" en "moon", porque "oon" es el final de la cadena, por lo que no va seguido de un caracter de palabra.</li>
         <li><code>/\w\b\w/</code> nunca encontrará nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
        </ul>
-       <p>Para encontrar un caracter de retroceso (<code>[\b]</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">Clases de caracteres</a>.</p>
+       <p>Para encontrar un caracter de retroceso (<code>[\b]</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes">Clases de caracteres</a>.</p>
       </td>
      </tr>
      <tr>

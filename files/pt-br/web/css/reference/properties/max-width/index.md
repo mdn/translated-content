@@ -6,7 +6,7 @@ original_slug: Web/CSS/max-width
 
 {{CSSRef}}
 
-A propriedade **`max-width`** do [CSS](/pt-BR/docs/Web/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/Web/CSS/CSS_cascade/used_value) da propriedade {{cssxref("width")}} se torne maior que o valor especificado por `max-width`.
+A propriedade **`max-width`** do [CSS](/pt-BR/docs/Web/CSS) estabelece a largura máxima de um elemento. Ele evita que o [valor usado](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing) da propriedade {{cssxref("width")}} se torne maior que o valor especificado por `max-width`.
 
 {{InteractiveExample("CSS Demo: max-width")}}
 
@@ -145,6 +145,6 @@ Neste exemplo, o "child" terá 150 pixels de largura ou a largura do "parent", o
 
 ## Veja também
 
-- [O box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [O box model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction), {{cssxref("box-sizing")}}
 - {{cssxref("width")}}, {{cssxref("min-width")}}
 - The mapped logical properties: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}

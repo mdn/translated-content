@@ -30,7 +30,7 @@ Esses blocos são chamados de **blocos de declaração** e as declarações dent
 ![css syntax - declarations block.png](css_syntax_-_declarations_block.png)
 
 > [!NOTE]
-> O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/docs/HTML/Global_attributes#style).
+> O conteúdo de um bloco de declaração, que é uma lista separada por pontos e vírgulas, sem as chaves, pode ser posto dentro da tag HTML [`style`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#style).
 
 ## Regras CSS
 
@@ -56,7 +56,7 @@ A **statement** is a building block that begins with any non-space characters an
 There are different kinds of statements:
 
 - **Rulesets** (or _rules_) that, as seen, associate a collection of CSS declarations to a condition described by a selector.
-- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
+- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
 
 Any statement which isn't a rule or an at-rule is invalid and ignored.
 

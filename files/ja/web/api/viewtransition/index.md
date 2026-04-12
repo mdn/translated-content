@@ -2,34 +2,42 @@
 title: ViewTransition
 slug: Web/API/ViewTransition
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: baf0cb6bfe8bf2418122300d3f93e3aa94f72dca
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transition API")}}
 
-**`ViewTransition`** は{{domxref("View Transitions API", "ビュー遷移 API", "", "nocode")}} のインターフェイスで、ビュー遷移を表し、トランジションが様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、またはトランジションを完全にスキップする機能を提供します。
+**`ViewTransition`** は{{domxref("View Transition API", "ビュー遷移 API", "", "nocode")}} のインターフェイスで、アクティブなビュー遷移を表し、遷移が様々な状態（例えば、アニメーションを実行する準備ができている、またはアニメーションが終了した）に達したときに反応する機能、または遷移を完全にスキップする機能を提供します。
 
-このオブジェクト型は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが返します。 `startViewTransition()` が呼び出されると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API#ビュー遷移のプロセス)で説明されている一連のステップに従います。これは様々なプロミスが履行されるタイミングについても説明しています。
+このオブジェクト型は、以下の方法で利用することができます。
 
-{{InheritanceDiagram}}
+- {{domxref("Document.activeViewTransition")}} プロパティ経由。これにより、後で簡単にアクセスできるように保存しておく必要がなく、どのような状況でもアクティブなビュー遷移に一貫した方法でアクセスできるようになります。
+- 同一文書内 (SPA) の遷移の場合、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドによっても返されます。
+- 文書間 (MPA) の遷移の場合、以下のものも利用可能です。
+  - 遷出元のページ内では、{{domxref("Window.pageswap_event", "pageswap")}} イベントオブジェクトの {{domxref("PageSwapEvent.viewTransition")}} プロパティ。
+  - 遷入先のページ内では、{{domxref("Window.pagereveal_event", "pagereveal")}} イベントオブジェクトの {{domxref("PageRevealEvent.viewTransition")}} プロパティ。
+
+`startViewTransition()` の呼び出し（または MPA遷移におけるページナビゲーション）によってビュー遷移が発生すると、[ビュー遷移のプロセス](/ja/docs/Web/API/View_Transition_API#ビュー遷移のプロセス)で説明されている一連の段階が続きます。ここでは、それぞれのプロミスがいつ履行されるかについても説明されています。
 
 ## インスタンスプロパティ
 
-- {{domxref("ViewTransition.finished")}} {{Experimental_Inline}}
-  - : {{jsxref("Promise")}} で、トランジションのアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されます。
-- {{domxref("ViewTransition.ready")}} {{Experimental_Inline}}
-  - : {{jsxref("Promise")}} で、擬似要素ツリーが作成され、トランジションのアニメーションが始まろうとすると履行されます。
-- {{domxref("ViewTransition.updateCallbackDone")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.finished")}} {{ReadOnlyInline}}
+  - : {{jsxref("Promise")}} で、遷移のアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されます。
+- {{domxref("ViewTransition.ready")}} {{ReadOnlyInline}}
+  - : {{jsxref("Promise")}} で、擬似要素ツリーが作成され、遷移のアニメーションが始まろうとすると履行されます。
+- {{domxref("ViewTransition.types")}} {{ReadOnlyInline}}
+  - : {{domxref("ViewTransitionTypeSet")}} であり、ビュー遷移に設定された型を参照・変更することができます。
+- {{domxref("ViewTransition.updateCallbackDone")}} {{ReadOnlyInline}}
   - : {{jsxref("Promise")}} で、 {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} のコールバックが返すプロミスが履行されたときに履行されます。
 
 ## インスタンスメソッド
 
-- {{domxref("ViewTransition.skipTransition", "skipTransition()")}} {{Experimental_Inline}}
+- {{domxref("ViewTransition.skipTransition", "skipTransition()")}}
   - : ビュー遷移のアニメーション部分をスキップします。ただし、 DOM を更新する {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} コールバックの実行はスキップしません。
 
 ## 例
 
-次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
+次の SPA の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
 
 ```js
 // 最後のクリックイベントを保存
@@ -52,7 +60,7 @@ function spaNavigate(data) {
     Math.max(y, innerHeight - y),
   );
 
-  // トランジションを作成
+  // 遷移を作成
   const transition = document.startViewTransition(() => {
     updateTheDOMSomehow(data);
   });
@@ -103,4 +111,7 @@ function spaNavigate(data) {
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
+- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
+- [ビュー遷移型の使用](/ja/docs/Web/API/View_Transition_API/Using_types)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

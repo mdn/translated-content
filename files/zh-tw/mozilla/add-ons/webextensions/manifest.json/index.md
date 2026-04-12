@@ -100,6 +100,6 @@ browser.runtime.getManifest().version;
 
 ## 瀏覽器相容性
 
-若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 [完整 manifest.json 瀏覽器相容表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)。
+若想對所有的 manifest 鍵值及其子健有個完整的概念，可參見 [完整 manifest.json 瀏覽器相容表](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)。
 
 {{Compat}}

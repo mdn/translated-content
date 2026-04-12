@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única "tag de idioma" em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
+O [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única "tag de idioma" em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
 {{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
 
@@ -57,4 +57,4 @@ Para as pseudo-classes CSS {{cssxref(":lang")}}, dois nomes de idiomas inválido
 
 ## Veja também
 
-- Todos [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- Todos [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).

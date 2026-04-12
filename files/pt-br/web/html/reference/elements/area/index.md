@@ -8,15 +8,15 @@ original_slug: Web/HTML/Element/area
 
 O _HTML `<area>` elemento_ define uma região hot-spot em uma imagem, e, opcionalmente, associa-lo com um {{Glossary ("Hyperlink", "link de hipertexto")}}. Este elemento é usado somente dentro de um {{HTMLElement ("map")}} elemento.
 
-- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content) , [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) .
+- _[As categorias de conteúdo](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ [de conteúdo de fluxo](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content) , [conteúdo fraseado](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content) .
 - _Permitida conteúdo_ vazio; este é um elemento vazio.
 - _Tag omissão_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
-- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
+- _Permitida elementos pai_ Qualquer elemento que aceita [conteúdo fraseado](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content) . O `<area>` elemento deve ter um ancestral {{HTMLElement ("mapa")}}, mas ele não precisa ser um pai direta.
 - _Interface DOM_ {{domxref ("HTMLAreaElement")}}
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `accesskey`
   - : Especifica um acelerador de navegação pelo teclado para o elemento. Pressionando ALT ou uma chave semelhante, em associação com o caractere especificado seleciona a forma de controle correlacionada com a seqüência de teclas. Os projetistas de página são avisados para evitar sequências de teclas já vinculados aos navegadores. Este atributo é global desde HTML5.
@@ -25,7 +25,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `coords`
   - : Um conjunto de valores que especificam as coordenadas da região de hot-spot. O número e o significado dos valores dependem do valor especificado para a **forma** de atributo. Para um `rect` forma ou retângulo, o **coords** valor é de dois pares x, y: left, top, right, e bottom. Para um `círculo` forma, o valor é `x, y, r` onde `x, y` é um par especificando o centro do círculo e `r` é um valor para o raio. Para um `poli` ou polígono \<forma>, o valor é um conjunto de pares x, y de cada ponto no polígono: `X1, Y1, X2, Y2, x3, y3`, e assim por diante. Em HTML4, os valores são números de pixels ou porcentagens, se um sinal de porcentagem (%) é anexado; em HTML5, os valores são números de pixels CSS.
 - `download`
-  - : Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da [`download`](/pt-BR/docs/Web/HTML/Element/a#download) atributo.
+  - : Este atributo, se presente, indica que o autor tem a intenção que o hiperlink seja usado para o download de um recurso. Consulte {{HTMLElement ("a")}} para uma descrição completa da [`download`](/pt-BR/docs/Web/HTML/Reference/Elements/a#download) atributo.
 - `href`
   - : A meta de hyperlink para a área. Seu valor é uma URL válida. Em HTML4, quer este atributo ou o **nohref** atributo deve estar presente no elemento. Em HTML5, este atributo pode ser omitido; em caso afirmativo, o elemento de área não representa um hiperlink.
 - `hreflang`

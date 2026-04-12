@@ -7,7 +7,7 @@ slug: Web/API/HTMLBRElement
 
 **`HTMLBRElement`** 인터페이스는 HTML 줄바꿈 요소({{htmlelement("br")}})를 나타냅니다. {{domxref("HTMLElement")}}를 상속합니다.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 속성
 

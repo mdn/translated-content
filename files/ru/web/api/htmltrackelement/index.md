@@ -7,7 +7,7 @@ slug: Web/API/HTMLTrackElement
 
 **`HTMLTrackElement`**
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

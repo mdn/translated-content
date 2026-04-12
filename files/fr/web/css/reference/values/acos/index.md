@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`acos()`** est une fonction trigonométrique qui renvoie le cosinus inverse d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/Reference/Values/angle) entre `0deg` et `180deg`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`acos()`** est une fonction trigonométrique qui renvoie le cosinus inverse d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/Reference/Values/angle) entre `0deg` et `180deg`.
 
 ## Syntaxe
 

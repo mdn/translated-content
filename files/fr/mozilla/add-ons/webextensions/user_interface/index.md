@@ -21,7 +21,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
   <tbody>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_action"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
           >Bouton de la barre d'outils (action du navigateur)</a
         >
       </td>
@@ -37,7 +37,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     <tr>
       <td>
         Bouton de la barre d'outils du navigateur avec un
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">popup</a>
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>
       </td>
       <td>
         <p>
@@ -50,7 +50,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Page_actions"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
           >Bouton de la barre d'addresse</a
         >
         (action page)
@@ -67,7 +67,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     <tr>
       <td>
         Bouton de la barre d'addresse avec un
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">popup</a>
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">popup</a>
       </td>
       <td>
         <p>
@@ -80,7 +80,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Context_menu_items"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
           >Elément du menu contextuel</a
         >
       </td>
@@ -96,7 +96,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Sidebars"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >Barre latérale</a
         >
       </td>
@@ -113,7 +113,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >page d'options</a
         >
       </td>
@@ -129,7 +129,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/extension_pages"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/extension_pages"
           >Extension pages</a
         >
       </td>
@@ -144,7 +144,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Notifications"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
           >Notifications</a
         >
       </td>
@@ -161,7 +161,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Omnibox"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >Suggestions de la barre d'addresse</a
         >
       </td>
@@ -175,7 +175,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/devtools_panels"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >Panneaux d'outils de développement</a
         >
       </td>

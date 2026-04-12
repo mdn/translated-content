@@ -627,7 +627,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-         Compatible con todos los motores modernos. Muy alta legibilidad y mantenibilidad. <a href="/es/docs/Web/JavaScript/Reference/Classes/Private_properties">Propiedades privadas</a> son una característica sin reemplazo trivial en la herencia prototípica.
+         Compatible con todos los motores modernos. Muy alta legibilidad y mantenibilidad. <a href="/es/docs/Web/JavaScript/Reference/Classes/Private_elements">Propiedades privadas</a> son una característica sin reemplazo trivial en la herencia prototípica.
        </td>
     </tr>
     <tr>

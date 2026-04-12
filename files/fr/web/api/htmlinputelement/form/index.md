@@ -28,4 +28,4 @@ Un objet {{DOMxRef("HTMLFormElement")}} ou `null`.
 - L'interface {{DOMxRef("HTMLFormElement")}}
 - L'élément HTML {{HTMLElement("input")}}
 - L'attribut HTML [`form`](/fr/docs/Web/HTML/Reference/Attributes/form)
-- [Guide des formulaires HTML](/fr/docs/Learn/Forms)
+- [Guide des formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)

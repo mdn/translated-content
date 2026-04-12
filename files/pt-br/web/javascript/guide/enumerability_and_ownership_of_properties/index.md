@@ -43,7 +43,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna \[\[Enumer
               <td>
                 <code
                   ><a
-                    href="/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code
                 >
@@ -58,7 +58,7 @@ Propriedades enumeráveis são aquelas propriedades cuja flag interna \[\[Enumer
               <td>
                 <code
                   ><a
-                    href="/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code
                 >

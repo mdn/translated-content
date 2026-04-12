@@ -96,7 +96,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
         >
       </td>
       <td>
-        Nuestras páginas de <a href="/es/docs/Learn">aprende desarrollo web</a>
+        Nuestras páginas de <a href="/es/docs/Learn_web_development">aprende desarrollo web</a>
         obtienen más de un millón de visitas al mes y tienen
         <a href="https://discourse.mozilla.org/c/mdn/learn/250"
           >foros activos</a

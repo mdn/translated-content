@@ -272,7 +272,7 @@ a = b = 5;
       <td><code>… || …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Оператор нулевого слияния (??)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">Оператор нулевого слияния (??)</a></td>
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
@@ -327,7 +327,7 @@ a = b = 5;
       <td><code>… ??= …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Условный (тернарный) оператор</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Conditional_operator">Условный (тернарный) оператор</a></td>
       <td>справа налево</td>
       <td><code>… ? … : …</code></td>
     </tr>
@@ -342,7 +342,7 @@ a = b = 5;
     </tr>
     <tr>
       <td>1</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comma_Operator">Запятая / Последовательность</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comma_operator">Запятая / Последовательность</a></td>
       <td>слева направо</td>
       <td><code>… , …</code></td>
     </tr>

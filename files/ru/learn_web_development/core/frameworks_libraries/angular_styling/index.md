@@ -12,7 +12,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
     <tr>
       <th scope="row">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/ru/docs/Learn/HTML">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
       </td>
     </tr>
     <tr>

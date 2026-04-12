@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Element
 original_slug: Web/SVG/Element
 ---
 
-« [SVG](/pt-BR/docs/Web/SVG) / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Attribute) »
+« [SVG](/pt-BR/docs/Web/SVG) / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Reference/Attribute) »
 
 Os desenhos e imagens SVG são criados usando uma grande variedade de elementos dedicados a construção, desenho e leiaute de imagens e diagramas vetoriais. Aqui você encontrará documentação de referência para cada um dos elementos SVG.
 
@@ -242,8 +242,8 @@ Os desenhos e imagens SVG são criados usando uma grande variedade de elementos 
 
 ## Veja também
 
-- [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Attribute)
-- [SVG Tutorial](/pt-BR/docs/Web/SVG/Tutorial)
+- [Referência de atributos SVG](/pt-BR/docs/Web/SVG/Reference/Attribute)
+- [SVG Tutorial](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG interface reference](/pt-BR/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

@@ -169,4 +169,4 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 - [API Clipboard](/fr/docs/Web/API/Clipboard_API)
 - [API Permissions](/fr/docs/Web/API/Permissions_API)
 - [Rendre le contenu éditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
-- [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-contenteditable)
+- [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)

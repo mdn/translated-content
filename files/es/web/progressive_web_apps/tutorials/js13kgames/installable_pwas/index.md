@@ -3,7 +3,7 @@ title: Cómo hacer PWAs instalables
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 En el último artículo, leímos cómo la aplicación de ejemplo, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), funciona sin conexión gracias a su [servicio worker](/es/docs/Web/API/Service_Worker_API), pero podemos ir aún más lejos y permitir que los usuarios instalen la aplicación web en los navegadores móviles y de escritorio que lo admitan. Los usuarios pueden iniciar la aplicación web instalada como si fuera una aplicación nativa. Este artículo explica cómo lograr esto usando el manifiesto de la aplicación web.
 
@@ -114,6 +114,6 @@ Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía p
 
 Ahora pasemos a la última pieza del rompecabezas de PWA: usar notificaciones automáticas para compartir anuncios con el usuario y ayudarlo a volver a interactuar con tu aplicación.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

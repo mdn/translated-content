@@ -1,14 +1,13 @@
 ---
 title: z-index
 slug: Web/CSS/Reference/Properties/z-index
-original_slug: Web/CSS/z-index
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`z-index`** définit l'ordre d'empilement sur l'axe Z d'un élément [positionné](/fr/docs/Web/CSS/Reference/Properties/position) et de ses descendants ou des éléments flexibles et de grille. Les éléments qui se chevauchent avec un `z-index` plus élevé recouvrent ceux avec un `z-index` plus faible.
 
-La propriété **`z-index`** définit le «&nbsp;_z-order_&nbsp;» (NdT&nbsp;: «&nbsp;ordre z&nbsp;» n'est pas usité) d'un élément [positionné](/fr/docs/Web/CSS/Reference/Properties/position) et de ses éléments enfants ou de ses éléments flexibles. Lorsque des éléments se chevauchent, le _z-order_ détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de `z-index` est supérieure à celle du deuxième élément.
-
-{{InteractiveExample("CSS Demo: z-index")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: z-index")}}
 
 ```css interactive-example-choice
 z-index: auto;
@@ -32,7 +31,7 @@ z-index: 7;
 
 ```html interactive-example
 <section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
+  <div id="example-element">Changez mon z-index</div>
   <div class="block blue position1">z-index: 6</div>
   <div class="block blue position2">z-index: 4</div>
   <div class="block blue position3">z-index: 2</div>
@@ -49,7 +48,8 @@ z-index: 7;
   width: 180px;
   height: 230px;
   position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
+  /* centrer le texte pour qu'il soit visible même lorsque z-index est
+     défini sur auto */
   line-height: 215px;
   font-family: monospace;
   background-color: #fcfbe5;
@@ -75,7 +75,7 @@ z-index: 7;
 .blue {
   background-color: #e5e8fc;
   border: solid 5px #112382;
-  /* move text to the bottom of the box */
+  /* déplacer le texte en bas de la boîte */
   line-height: 55px;
 }
 
@@ -132,8 +132,7 @@ Pour les boîtes positionnées (celles pour lesquelles `position` est différent
 /* Avec un mot-clé */
 z-index: auto;
 
-/* valeurs entières */
-/* type <integer> */
+/* Valeur de type <integer> */
 z-index: 0;
 z-index: 3;
 z-index: 289;
@@ -143,25 +142,26 @@ z-index: -1; /* Valeurs négatives possibles pour indiquer une priorité inféri
 z-index: inherit;
 z-index: initial;
 z-index: revert;
+z-index: revert-layer;
 z-index: unset;
 ```
 
-La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâce à une valeur entière ([`<integer>`](#integer)).
+La propriété `z-index` est spécifiée soit par le mot-clé `auto`, soit par un entier (`<integer>`).
 
 ### Valeurs
 
 - `auto`
-  - : La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.
-- `<integer>`
-  - : L'entier fourni (type [`<integer>`](/fr/docs/Web/CSS/Reference/Values/integer)) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est `0`. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.
+  - : La boîte ne crée pas de nouveau contexte d'empilement local. Le niveau d'empilement de la boîte générée dans le contexte d'empilement courant est `0`.
+- {{CSSxRef("&lt;integer&gt;")}}
+  - : Cet entier ({{CSSxRef("&lt;integer&gt;")}}) est le niveau d'empilement de la boîte générée dans le contexte d'empilement courant. La boîte crée également un contexte d'empilement local. Cela signifie que les `z-index` des descendants ne sont pas comparés aux `z-index` des éléments en dehors de cet élément.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -214,7 +214,7 @@ La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâc
 
 #### Résultat
 
-{{EmbedLiveSample('Empiler_des_éléments_visuellement', '550', '200', '')}}
+{{EmbedLiveSample("Empiler des éléments visuellement", 550, 200)}}
 
 ## Spécifications
 
@@ -226,5 +226,5 @@ La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâc
 
 ## Voir aussi
 
-- La propriété CSS [`position`](/fr/docs/Web/CSS/Reference/Properties/position)
+- La propriété {{CSSxRef("position")}}
 - [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)

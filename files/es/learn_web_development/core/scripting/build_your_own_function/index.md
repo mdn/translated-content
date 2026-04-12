@@ -4,13 +4,13 @@ slug: Learn_web_development/Core/Scripting/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 Con la mayor parte de la teoría esencial tratada en el artículo anterior, este artículo proporciona experiencia práctica. Aquí obtendrás práctica construyendo tu propia función personalizada. En el camino, también explicaremos algunos detalles útiles sobre cómo tratar las funciones.
 
-| Prerequisites: | Conocimientos básicos de computación, una comprensión básica de HTML y CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn/JavaScript/Building_blocks/Functions). |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                                        |
+| Prerequisites: | Conocimientos básicos de computación, una comprensión básica de HTML y CSS, [JavaScript first steps](/es/docs/conflicting/Learn_web_development/Core/Scripting), [Functions — reusable blocks of code](/es/docs/Learn_web_development/Core/Scripting/Functions). |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                                            |
 
 ## Aprendizaje activo: construyamos una función
 
@@ -275,4 +275,4 @@ En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo confi
 
 ¡Felicidades por llegar al final! Este artículo lo llevó a través de todo el proceso de creación de una función personalizada y práctica, que con un poco más de trabajo podría trasplantarse en un proyecto real. En el siguiente artículo resumiremos las funciones explicando otro concepto esencial relacionado: valores de retorno.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

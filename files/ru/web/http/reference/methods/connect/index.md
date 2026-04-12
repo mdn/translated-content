@@ -39,7 +39,7 @@ slug: Web/HTTP/Reference/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/ru/docs/Web/Guide/HTML/Forms">HTML формах</a>
+        Допускается в <a href="/ru/docs/Learn_web_development/Extensions/Forms">HTML формах</a>
       </th>
       <td>Нет</td>
     </tr>

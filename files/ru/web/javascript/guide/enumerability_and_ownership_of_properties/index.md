@@ -44,7 +44,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code
@@ -60,7 +60,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty"
                     >hasOwnProperty</a
                   ></code

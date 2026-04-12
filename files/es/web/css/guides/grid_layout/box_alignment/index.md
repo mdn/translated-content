@@ -661,7 +661,7 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
    7. [Box alignment in grid layout](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
    8. [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
    9. [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/Guides/Grid_layout)
    11. [Realizing common layouts using grids](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 5. **Properties**

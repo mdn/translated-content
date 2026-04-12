@@ -9,7 +9,7 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
 
 Chaque option de position est nommée avec un {{CSSxRef("dashed-ident")}} et contient une liste de descripteurs spécifiant des déclarations qui définissent des informations telles que la position d'insertion, la marge, la taille et l'auto-alignement. Le `<dashed-ident>` est utilisé pour référencer l'option personnalisée dans la propriété {{CSSxRef("position-try-fallbacks")}} et le raccourci {{CSSxRef("position-try")}}.
 
-Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli, consultez la page du module [de positionnement par ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning) et le guide [d'options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+Pour des informations détaillées sur les fonctionnalités d'ancrage et l'utilisation des options de repli, consultez la page du module [de positionnement par ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) et le guide [d'options de repli et masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding).
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
 
 - `position-anchor`&nbsp;: Définit la valeur de la propriété {{CSSxRef("position-anchor")}} qui indique l'élément d'ancrage auquel l'élément positionné est attaché, en spécifiant une valeur {{CSSxRef("dashed-ident")}} identique à la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage.
 - `position-area`&nbsp;: Définit la valeur de la propriété {{CSSxRef("position-area")}} qui indique la position de l'élément positionné par rapport à l'ancre.
-- Descripteurs des propriétés d'insertion&nbsp;: Définit des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
+- Descripteurs des propriétés d'insertion&nbsp;: Définit des valeurs de fonction [`anchor()`](/fr/docs/Web/CSS/Reference/Values/anchor) qui définissent la position des bords de l'élément positionné par rapport aux bords de l'élément d'ancrage. Les descripteurs d'insertion peuvent représenter les propriétés suivantes&nbsp;:
   - {{CSSxRef("top")}}
   - {{CSSxRef("left")}}
   - {{CSSxRef("bottom")}}
@@ -52,7 +52,7 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
   - {{CSSxRef("margin")}}
   - {{CSSxRef("margin-block")}}
   - {{CSSxRef("margin-inline")}}
-- Descripteurs de taille&nbsp;: Définit des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
+- Descripteurs de taille&nbsp;: Définit des valeurs de fonction [`anchor-size()`](/fr/docs/Web/CSS/Reference/Values/anchor-size) qui définissent la taille de l'élément positionné par rapport à la taille de l'ancre. Les descripteurs de taille peuvent représenter les propriétés suivantes&nbsp;:
   - {{CSSxRef("width")}}
   - {{CSSxRef("height")}}
   - {{CSSxRef("min-width")}}
@@ -65,7 +65,7 @@ Les descripteurs définissent les valeurs des propriétés qui déterminent le c
   - {{CSSxRef("min-inline-size")}}
   - {{CSSxRef("max-block-size")}}
   - {{CSSxRef("max-inline-size")}}
-- Descripteurs d'auto-alignement&nbsp;: Définit la valeur [`anchor-center`](/fr/docs/Web/CSS/CSS_anchor_positioning/Using#centrer_sur_lancre_à_laide_de_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} peuvent prendre la valeur `anchor-center`.
+- Descripteurs d'auto-alignement&nbsp;: Définit la valeur [`anchor-center`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#centrer_sur_lancre_à_laide_de_anchor-center) pour aligner l'élément positionné par rapport au centre de l'ancre, dans la direction du bloc ou de l'axe inline. Les propriétés {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} peuvent prendre la valeur `anchor-center`.
 
 > [!NOTE]
 > Lorsqu'une option de position personnalisée est appliquée à un élément, les valeurs définies dans le descripteur de la règle `@position-try` prennent le dessus sur celles définies sur l'élément via les propriétés CSS standard.
@@ -221,7 +221,7 @@ Dans certains cas, il faut désactiver les valeurs initiales à l'intérieur des
 - La propriété {{CSSxRef("position-try")}}
 - La fonction {{CSSxRef("anchor()")}}
 - La fonction {{CSSxRef("anchor-size()")}}
-- Le module[de positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
-- [Guide pour utiliser le positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning/Using)
-- [Guide pour les options de repli et le masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- Le module[de positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
+- [Guide pour utiliser le positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using)
+- [Guide pour les options de repli et le masquage conditionnel en cas de débordement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
 - L'interface API {{DOMxRef("CSSPositionTryRule")}}

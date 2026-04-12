@@ -757,55 +757,55 @@ En este artículo hemos tenido una mirada muy rápida a través de la Especifica
 <ol>
  <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/es/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
+ <li><a href="/es/docs/Web/CSS/Guides/Grid_layout">CSS Grid Layout</a></li>
  <li data-default-state="open"><a href="#"><strong>Guías</strong></a>
   <ol>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Conceptos básicos del posicionamiento con cuadrículas</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relación con otros métodos de posicionamiento</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts">Conceptos básicos del posicionamiento con cuadrículas</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods">Relación con otros métodos de posicionamiento</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Posicionamiento basado en líneas</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Áreas de una plantilla de cuadrícula</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Posicionamiento usando líneas de cuadrícula con nombres</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Posicionamiento automático en grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Alineación de cajas en grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement">Posicionamiento automático en grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment">Alineación de cajas en grid layout</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">cuadrículas, valores lógicos y modos de escritura</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout y Accesibilidad</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout y Mejora Progresiva</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Layouts comunes utilizando CSS Grid</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts">Layouts comunes utilizando CSS Grid</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid">grid</a></li>
    <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-auto-columns">grid-auto-columns</a></li>
    <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-auto-rows">grid-auto-rows</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/column-gap">grid-column-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/gap">grid-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
    <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-areas">grid-template-areas</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-columns">grid-template-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-rows">grid-template-rows</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
   <ol>
    <li><a href="/es/docs/Glossary/Grid">cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_lines">Líneas de cuadrícula</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Lines">Líneas de cuadrícula</a></li>
    <li><a href="/es/docs/Glossary/Grid_tracks">Pistas de cuadrícula</a></li>
    <li><a href="/es/docs/Glossary/Grid_cell">Celda de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_areas">Áreas de cuadrícula</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Areas">Áreas de cuadrícula</a></li>
    <li><a href="/es/docs/Glossary/Gutters">Canaletas</a></li>
    <li><a href="/es/docs/Glossary/Grid_Axis">Ejes de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_rows">Fila de cuadrícula</a></li>
-   <li><a href="/es/docs/Glossary/Grid_column">Columna de cuadrícula</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Row">Fila de cuadrícula</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Column">Columna de cuadrícula</a></li>
   </ol>
  </li>
 </ol>

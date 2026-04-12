@@ -24,7 +24,7 @@ test(url, baseURL)
   - : 個々の URL の部分を記述するオブジェクトです。
     オブジェクトのメンバーは、`protocol`、`username`、`password`、`hostname`、`port`、`pathname`、`search`、`hash`、`baseURL` のいずれかです。
 - `url`
-  - : 絶対 URL または相対 URL を定義する文字列ｄせう。
+  - : 絶対 URL または相対 URL を定義する文字列です。
     相対 URL の場合、[`baseURL`](#baseurl) も同時に指定されなければならず、両者を合わせて絶対 URL として解決されなければなりません。
     入力値が解釈できなかった場合、またはベース URL のない相対 URL が指定された場合、このメソッドは `false` を返します。
 - `baseURL` {{optional_inline}}

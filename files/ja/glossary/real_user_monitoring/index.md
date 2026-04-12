@@ -11,6 +11,6 @@ Real User Monitoring (リアルユーザーモニタリング) または RUM は
 
 ## 関連項目
 
-- [リアルユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Rum-vs-Synthetic)
+- [リアルユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Guides/Rum-vs-Synthetic)
 - [Synthetic Monitoring (合成モニタリング)](/ja/docs/Glossary/Synthetic_monitoring)
 - [ビーコン](/ja/docs/Glossary/Beacon)

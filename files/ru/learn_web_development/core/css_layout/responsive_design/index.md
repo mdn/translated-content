@@ -291,7 +291,7 @@ It has also become much easier to achieve responsive designs with the help of th
 - [Positioning](/ru/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [Multiple-column layout](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Responsive design](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/ru/docs/Learn/CSS/CSS_layout/Media_queries)
+- [Beginner's guide to media queries](/ru/docs/Learn_web_development/Core/CSS_layout/Media_queries)
 - [Legacy layout methods](/ru/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
 - [Supporting older browsers](/ru/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
 - [Fundamental layout comprehension assessment](/ru/docs/Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension)

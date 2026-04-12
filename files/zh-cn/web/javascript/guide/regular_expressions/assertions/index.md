@@ -39,9 +39,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>^</code></td>
       <td>
         <p>
-          匹配输入的开头。如果多行模式设为 true，<code>^</code>
-          在换行符后也能立即匹配，比如 <code>/^A/</code> 匹配不了 "an A" 里面的
-          "A"，但是可以匹配 "An A" 里面第一个 "A"。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>起始输入边界断言</strong></a>：匹配输入的起始。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/^A/</code> 不匹配“an A”中的“A”，但是可以匹配“An A”中第一个“A”。
         </p>
         <div class="notecard note">
           <p>
@@ -58,9 +56,7 @@ console.log(text.match(regexpFoxQuality));
       <td><code>$</code></td>
       <td>
         <p>
-          匹配输入的结束。如果多行模式设为 true，<code>$</code>
-          在换行符前也能立即匹配，比如 <code>/t$/</code> 不能匹配 "eater" 中的
-          "t"，但是可以匹配 "eat" 中的 "t"。
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>终止输入边界断言</strong></a>：匹配输入的结束。如果启用了 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a>（m）标志，则也会匹配换行符之后的字符。比如 <code>/t$/</code> 不匹配“eater”中的“t”，但是可以匹配“eat”中的“t”。
         </p>
       </td>
     </tr>
@@ -195,6 +191,8 @@ console.log(text.match(regexpFoxQuality));
 
 ### 一般边界类型概述示例
 
+<!-- cSpell:ignore greon -->
+
 ```js
 // 使用正则表达式边界修复错误字符串
 buggyMultiline = `tey, ihe light-greon apple
@@ -217,34 +215,37 @@ fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
 console.log(4, fixedMultiline); // 修复 'greon' => 'green'，而不对 'on' 做改动。
 ```
 
-### 使用 ^（控制字符）匹配输入的开头
+### 使用控制字符 ^ 匹配输入的开头
 
-使用 `^`匹配输入的开头。在这个例子中，我们可以通过 `/^A/` 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有箭头函数的过滤方法。
+使用 `^` 匹配输入的开头。在这个例子中，我们可以通过 `/^A/` 正则表达式得到以 A 开头的水果。为了选择合适的水果，我们可以使用带有[箭头](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)函数的 [`filter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) 方法。
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// 使用正则 /^A/ 选择以'A'开头的水果。
-// 这里的 '^' 只有一种含义：匹配输入的开头。
+// 使用正则 /^A/ 选择以‘A’开头的水果。
+// 这里的‘^’只有一种含义：匹配输入的起始。
 
 const fruitsStartsWithA = fruits.filter((fruit) => /^A/.test(fruit));
 console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```
 
-在第二个示例中，`^` 既用于在输入开头进行匹配，也用于在[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中使用时创建字符类补集。
+在第二个示例中，`^` 既用于在输入起始进行匹配，也用于在[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)中使用时创建字符类补集。
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// 使用正则 /^[^A]/ 选择 不是以‘A’开头的水果
+// 使用正则表达式 /^[^A]/ 选择不是以‘A’开头的水果
 // 在这个例子中，“^”控制符号表示两种含义：
 // 1) 匹配输入的开头
-// 2) 一个否定的字符集：[^A]，意思是匹配不是‘A’的字符
+// 2) 一个否定的字符补集：[^A]
+// 也就是说，它匹配所有未被方括号包围的内容。
 
 const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
+
+在[输入边界断言](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)参考中查看更多示例。
 
 ### 匹配单词边界
 

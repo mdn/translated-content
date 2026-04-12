@@ -71,7 +71,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
       <td>
         一个表示媒体元素
         <a
-          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
+          href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
         <a href="/zh-CN/docs/HTML/CORS_settings_attributes"

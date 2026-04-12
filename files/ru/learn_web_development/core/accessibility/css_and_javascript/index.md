@@ -315,7 +315,7 @@ function createLink(testItem) {
 </div>
 ```
 
-Мы разберем данные атрибуты в следующей статье, которая подробно описывает [WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics).
+Мы разберем данные атрибуты в следующей статье, которая подробно описывает [WAI-ARIA](/ru/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 > [!NOTE]
 > Кто-то из читателей мог задуматься о том факте, что в HTML5 формах есть встроенные механизмы валидации, такие как атрибуты `required`, `min`/`minlength` и `max`/`maxlength` (смотрите подробнее на странице элемента {{htmlelement("input")}}). Мы не использовали их в примере, потому что поддержка браузерами у HTML5 валидации весьма варьируется (например, только IE10 и новее).
@@ -359,4 +359,4 @@ imgThumb.onblur = hideImg;
 
 Далее WAI-ARIA!
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
