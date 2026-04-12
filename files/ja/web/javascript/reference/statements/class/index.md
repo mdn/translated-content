@@ -7,9 +7,9 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`class`** 宣言は、指定された名前の新しい[class](/ja/docs/Web/JavaScript/Reference/Classes)を作成します。
+**`class`** 宣言は、指定された名前の新しい [class](/ja/docs/Web/JavaScript/Reference/Classes) を作成します。
 
-{{jsxref("Operators/class", "クラス式", "", 1)}}を使ってクラスを定義できます。
+{{jsxref("Operators/class", "クラス式", "", 1)}} を使ってクラスを定義できます。
 
 {{InteractiveExample("JavaScript デモ: Statement - Class")}}
 
@@ -37,13 +37,13 @@ class name extends otherName {
 
 ## 解説
 
-クラス宣言のクラス本体は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で実行されます。クラス宣言は {{jsxref("Statements/let", "let")}} と非常によく似ています。
+クラス宣言のクラス本体は [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) で実行されます。クラス宣言は {{jsxref("Statements/let", "let")}} と非常によく似ています。
 
 - `class` 宣言は、関数だけでなくブロックにもスコープされます。
 
-- `class` 宣言は、宣言された場所に到達した後にのみアクセスできます（[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)を参照）。このため、`class` 宣言は一般的に [非ホイスティング](/ja/docs/Glossary/Hoisting) とみなされます（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とは異なります）。
+- `class` 宣言は、宣言された場所に到達した後にのみアクセスできます（[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz) を参照）。このため、`class` 宣言は一般的に [非ホイスティング](/ja/docs/Glossary/Hoisting) とみなされます（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) とは異なります）。
 
-- スクリプトの最上位レベルで宣言された `class` 宣言は、{{jsxref("globalThis")}} にプロパティを作成しません（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とは異なります）。
+- スクリプトの最上位レベルで宣言された `class` 宣言は、{{jsxref("globalThis")}} にプロパティを作成しません（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) とは異なります）。
 
 - `class` 宣言は、同じスコープ内の他の宣言によって [再宣言](/ja/docs/Web/JavaScript/Reference/Statements/let#再宣言) できません。
 
