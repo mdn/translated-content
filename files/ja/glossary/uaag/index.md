@@ -15,4 +15,3 @@ _ユーザーエージェント {{glossary("Accessibility")}} ガイドライン
   - {{Glossary("Accessibility")}}
   - {{Glossary("WAI")}}
   - {{Glossary("WCAG")}}
-
