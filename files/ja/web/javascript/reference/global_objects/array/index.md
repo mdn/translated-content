@@ -28,7 +28,7 @@ arr.0; // 構文エラー
 
 JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
-`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
+`years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためです。このため、以下の例は `true` がログ出力されます。
 
 ```js
 console.log(years["2"] !== years["02"]);
