@@ -187,35 +187,35 @@ El módulo de valores y unidades también introduce los tipos de datos {{cssxref
 ## Guías
 
 - [CSS data types](/es/docs/Web/CSS/Reference/Values/Data_types)
-  - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
+  - : Introducción a los tipos de datos CSS que definen valores aceptados por propiedades y funciones CSS.
 
-- [Numeric data types](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
-  - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
+- [Tipo de dato Númericos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
+  - : Descripción general de los tipos de dato númericos, incluyendo enteros, numbero, porcentajes y dimensiones, junto con dimensiones absolutas y relativas, ángulos y unidades de tiempo.
 
-- [Textual data types](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
-  - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
+- [Tipo de dato Textuales](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
+  - : Descripción general de los tipos de dato textuales, incluye valores de palabras reservadas predefinidas, valores de palabras resesrvadas CSS globales y URLs.
 
 - [CSS value functions](/es/docs/Web/CSS/Reference/Values/Functions)
-  - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
+  - : Descripción general de declaraciones CSS que invocan procesamiento especial de datos o cálculos que regresan un valor CSS para una propiedad.
 
-- [Using CSS math functions](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
-  - : The CSS math functions that allow a property value to be written as a mathematical expression.
+- [Usando funciones matemáticas CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
+  - : Las funciones matemáticas CSS que permiten que los valores de propiedades se escriban como expresiones matemáticas.
 
-- [Value definition syntax](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-  - : The formal grammar used to define the set of valid values for CSS properties and functions.
+- [Sintaxis de definición de Valores](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+  - : La gramótica formal usada para definir un conjunto de valores válidos para propiedades y funciones CSS.
 
-- [Using CSS typed arithmetic](/es/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
-  - : An explanation of CSS typed arithmetic behavior and use cases enabled by it.
+- [Usando aritmética tipada CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
+  - : Una explicación del comportamiento del tipado aritmético CSS y casos de uso que éste habilita.
 
-- [Learn: Values and units](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-  - : A look at some of the most frequently used value types, what they are, and how they work.
+- [Aprende: Valores y unidades](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+  - : Una mirada a los tipos de valores usados más frecuentemente, cuáles son y cómo funcionan.
 
-- [CSS value serialization](/es/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
-  - : How [CSSOM APIs](/es/docs/Web/API/CSS_Object_Model) serialize color and other values into standardized string representations.
+- [Serialización de valores CSS](/es/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+  - : Como las [APIs CSSOM](/es/docs/Web/API/CSS_Object_Model) serializan color y otros valores en representaciones estándar.
 
 ## Relacionado
 
-- [CSS cascading and inheritance](/es/docs/Web/CSS/Guides/Cascade) module
+- [Cascada y herencia CSS](/es/docs/Web/CSS/Guides/Cascade)
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}
@@ -223,19 +223,19 @@ El módulo de valores y unidades también introduce los tipos de datos {{cssxref
   - {{cssxref("unset")}}
   - {{cssxref("all")}}
 
-- [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout) module
+- [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout)
   - {{cssxref("&lt;flex&gt;")}}
   - [Flex units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`)
 
-- [Reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules) module
+- [Reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules)
   - [Container units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
-- [Colores CSS](/es/docs/Web/CSS/Guides/Colors) module
+- [Colores CSS](/es/docs/Web/CSS/Guides/Colors)
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/es/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
-- [Imagenes CSS](/es/docs/Web/CSS/Guides/Images) module
+- [Imagenes CSS](/es/docs/Web/CSS/Guides/Images)
   - {{cssxref("image")}}
   - {{cssxref("gradient")}}
 
@@ -245,5 +245,5 @@ El módulo de valores y unidades también introduce los tipos de datos {{cssxref
 
 ## Vea también
 
-- [CSS syntax](/es/docs/Web/CSS/Guides/Syntax) module
-- [Selectores CSS](/es/docs/Web/CSS/Guides/Selectors) module
+- [Sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax)
+- [Selectores CSS](/es/docs/Web/CSS/Guides/Selectors)
