@@ -2,7 +2,7 @@
 title: "RangeError: BigInt negative exponent"
 slug: Web/JavaScript/Reference/Errors/BigInt_negative_exponent
 l10n:
-  sourceCommit: 
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 JavaScript の例外 "BigInt negative exponent" は、{{jsxref("BigInt")}} を負の BigInt 値でべき乗したときに発生します。
