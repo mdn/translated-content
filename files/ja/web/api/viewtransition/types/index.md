@@ -43,9 +43,9 @@ const slideBtn = document.getElementById("slide");
 const flipBtn = document.getElementById("flip");
 const content = document.querySelector("p");
 
-const first = "これが私の初めてのコンテンツです。気に入っていただけるといいなぁ。";
-const second =
-  "これが私の 2 つ目のコンテンツです。1 つ目より良いでしょう？";
+const first =
+  "これが私の初めてのコンテンツです。気に入っていただけるといいなぁ。";
+const second = "これが私の 2 つ目のコンテンツです。1 つ目より良いでしょう？";
 ```
 
 次に、ボタンに `click` イベントのリスナーを追加します。ボタンがクリックされると、`changeContent()` 関数が実行されます。
