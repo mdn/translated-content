@@ -84,11 +84,11 @@ El módulo de valores y unidades CSS también introduce las funciones `calc-mix(
 - {{cssxref("url_value", "&lt;url&gt;")}}
 - [`<url-modifier>`](/es/docs/Web/CSS/Reference/Values/url_function#url-modifier)
 
-El módulo de valores y unidades también introduce los tipos de datos {{cssxref("frequency")}} y {{cssxref("frequency-percentage")}}. Actualmente, ningún navegador soporta estos tipos de dato.
+El módulo de valores y unidades también introduce los tipos de dato {{cssxref("frequency")}} y {{cssxref("frequency-percentage")}}. Actualmente, ningún navegador soporta estos tipos de dato.
 
 #### Unidades
 
-- [`%` (percentage)](/es/docs/Web/CSS/Reference/Values/percentage)
+- [`%` (porcentaje)](/es/docs/Web/CSS/Reference/Values/percentage)
 - [`cap`](/es/docs/Web/CSS/Reference/Values/length#cap)
 - [`ch`](/es/docs/Web/CSS/Reference/Values/length#ch)
 - [`cm`](/es/docs/Web/CSS/Reference/Values/length#cm)
@@ -145,54 +145,54 @@ El módulo de valores y unidades también introduce los tipos de datos {{cssxref
 - [`vw`](/es/docs/Web/CSS/Reference/Values/length#vw)
 - [`x`](/es/docs/Web/CSS/Reference/Values/resolution#x)
 
-[Flex units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`) and [container units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) are defined in the [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout) and [CSS conditional rules](/es/docs/Web/CSS/Guides/Conditional_rules) modules, respectively.
+Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`) y las [unidades de contenedor](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) estan definidas en los módulos [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout) y [reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules) respectivamente.
 
 #### Categorización de las unidades
 
-- [Absolute length units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
-- [Angle units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
-- [Default viewport units](/es/docs/Web/CSS/Reference/Values/length#default_viewport_units) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [Dynamic viewport units](/es/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
-- [Frequency units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
-- [Large viewport-percentage units](/es/docs/Web/CSS/Reference/Values/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
-- [Local font-relative length units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
-- [Physical units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
-- [Relative length units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
-- [Resolution units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
-- [Root font-relative length units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
-- [Small viewport-percentage unit](/es/docs/Web/CSS/Reference/Values/length#small_viewport_units) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
-- [Time units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#time_units) (`ms`, `s`)
-- [Viewport units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [Visual angle unit](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`)
+- [Unidades de longitud absolutas](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
+- [Unidades de angulos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
+- [Unidades por defecto del viewport](/es/docs/Web/CSS/Reference/Values/length#default_viewport_units) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [Unidades dinamicas del viewport](/es/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
+- [Unidades de Frecuencia](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
+- [Unidades de porcentaje amplias del viewport](/es/docs/Web/CSS/Reference/Values/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
+- [Unidades de longitud relativas a la fuente local](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
+- [Unidades físicas](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `Q`)
+- [Unidades de longitud relativas](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`, `rem`, `rlh`, `vb`, `vh`, `vi`, `vmax`, `vmin`, `vw`)
+- [Unidades de resolución](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#resolution_units) (`dpcm`, `dpi` , `dppx`, `x`)
+- [Unidades de longitud relativas a la fuente de la Raíz](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#root_font-relative_lengths) (`rcap`, `rch`, `rem`, `rex`, `ric`, `rlh`)
+- [Unidades de porcentaje reducidas del viewport](/es/docs/Web/CSS/Reference/Values/length#small_viewport_units) (`svb`, `svh`, `svi`, `svmax`, `svmin`, `svw`)
+- [Unidades de tiempo](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#time_units) (`ms`, `s`)
+- [Unidades del Viewport](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#viewport_units) (`dvh`, `dvw`, `lvh`, `lvw`, `svh`, `svw`, `vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
+- [Unidades del ángulo visual](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`)
 
 ### Conceptos clave
 
-- {{glossary("Advance measure")}}
-- [Bracketed range notation](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#bracketed_range_notation_minmax)
-- [Component value combinators](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#component_value_combinators)
+- {{glossary("Advance measure", "Medida de avance")}}
+- [Notación de rango con corchetes](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#bracketed_range_notation_minmax)
+- [Tipos de valor de los componentes](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#tipos_de_valor_de_los_componentes)
 - [CSS-wide keywords](/es/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords)
-- {{glossary("Device pixel")}}
-- [Functional notation](/es/docs/Web/CSS/Reference/Values/Functions)
-- {{glossary("Identifier")}}
-- {{glossary("Interpolation")}}
-- {{glossary("Keyword")}}
-- [Math function](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
-- [Numeric data types](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
-- {{glossary("Origin")}}
+- {{glossary("Device pixel", "Pixeles del dispositivo")}}
+- [Notación funcional](/es/docs/Web/CSS/Reference/Values/Functions)
+- {{glossary("Identifier", "Identificador")}}
+- {{glossary("Interpolation", "Interpolación")}}
+- {{glossary("Keyword", "Palabra clave")}}
+- [Funciones matemáticas](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
+- [Tipos de dato Númerico](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
+- {{glossary("Origin", "Origen")}}
 - {{glossary("Pixel")}}
-- [Textual data types](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
+- [Tipos de dato Textual](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
 - {{glossary("URL")}}
-- [Value definition syntax](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [Sintaxis de definición de Valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 
 ## Guías
 
 - [CSS data types](/es/docs/Web/CSS/Reference/Values/Data_types)
   - : Introducción a los tipos de datos CSS que definen valores aceptados por propiedades y funciones CSS.
 
-- [Tipo de dato Númericos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
+- [Tipos de dato Númericos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
   - : Descripción general de los tipos de dato númericos, incluyendo enteros, numbero, porcentajes y dimensiones, junto con dimensiones absolutas y relativas, ángulos y unidades de tiempo.
 
-- [Tipo de dato Textuales](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
+- [Tipos de dato Textuales](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
   - : Descripción general de los tipos de dato textuales, incluye valores de palabras reservadas predefinidas, valores de palabras resesrvadas CSS globales y URLs.
 
 - [CSS value functions](/es/docs/Web/CSS/Reference/Values/Functions)
@@ -201,7 +201,7 @@ El módulo de valores y unidades también introduce los tipos de datos {{cssxref
 - [Usando funciones matemáticas CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
   - : Las funciones matemáticas CSS que permiten que los valores de propiedades se escriban como expresiones matemáticas.
 
-- [Sintaxis de definición de Valores](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
+- [Sintaxis de definición de Valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
   - : La gramótica formal usada para definir un conjunto de valores válidos para propiedades y funciones CSS.
 
 - [Usando aritmética tipada CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
