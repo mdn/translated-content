@@ -21,7 +21,7 @@ RangeError: 0 is an invalid divisor value. (Safari)
 
 ## エラーの原因
 
-[除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division) や [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) の除数が `0n` である場合に、このエラーが発生します。{{jsxref("Number")}} の計算では [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) が返されますが、BigInts には "infinity value" を表す値がないため、エラーになります。除算を行う前に、除数が `0n` でないことを確認してください。
+[除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division) や [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) の除数が `0n` である場合に、このエラーが発生します。{{jsxref("Number")}} の計算では [`Infinity`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) が返されますが、BigInt（値）には `Infinity`（無限大）を表す値がないため、エラーになります。除算を行う前に、除数が `0n` でないことを確認してください。
 
 ## 例
 
