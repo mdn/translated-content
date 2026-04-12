@@ -11,7 +11,6 @@ Cada declaración CSS, consiste en un par propiedad/valor. El valor puede tomar 
 > [!NOTE]
 > Esta página introduce un módulo CSS. Para encontrar una lista exaustiva de todos los valores, tipos y funciones definidas por la especificación de CSS, vea la página de referencia de los [valores](/es/docs/Web/CSS/Reference/Values).
 
-
 ## Referencia
 
 ### Propiedades
