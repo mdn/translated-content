@@ -2,10 +2,10 @@
 title: UI 擬似クラス
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 l10n:
-  sourceCommit: f6844f5e30882a6a4843da9b026bc0166ade9c41
+  sourceCommit: 76936e1d9ff271ac59307a0f858d0d7b57f3866a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 これまでの記事では、様々なフォームコントロールのスタイル設定について、一般的な方法で説明しました。これには、例えばチェックボックスが選択されたときだけターゲットにするために `:checked` を使用するような、擬似クラスの使用方法も記載しました。この記事では、さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて詳しく説明します。
 
@@ -34,7 +34,7 @@ l10n:
 
 ## 利用できる擬似クラスには何があるのか
 
-フォームに関連する、（[CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes) からの）元から利用できる擬似クラスは次の通りです。
+以下の擬似クラスは、すでによくご存じかもしれません。
 
 - {{cssxref(":hover")}}: マウスポインターを当てたときだけ要素を選択します。
 - {{cssxref(":focus")}}: フォーカスされているとき（キーボードからタブで移動しているとき）にのみ、要素を選択します。
@@ -45,7 +45,7 @@ l10n:
 - {{cssxref(':required')}} および {{cssxref(':optional')}}: 必須となりうる要素（HTML [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) 属性に対応している要素など）を、必須かオプションかに基づいて対象とします。
   必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
-- {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が設定された要素など）を対象にします。
+- {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML の [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) 属性が設定された要素など）を対象にします。
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Reference/Elements/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素に [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性が設定されているものなどが対象です。）
 
 他にもたくさんありますが、上に挙げたものが明らかに最も有用です。中にはとても特殊でニッチな問題を解決することを目的としたものもあります。上に挙げた UI 擬似クラスはブラウザーの対応が充実していますが、もちろん、対象とするユーザーに対して確実に動作するよう、フォームの実装を慎重にテストする必要があります。
@@ -57,54 +57,110 @@ l10n:
 
 クライアントサイドのフォーム検証に関する最も基本的な概念の一つは、フォームの入力が必須（フォームを送信する前に入力する必要がある）か任意（オプション）かです。
 
-{{htmlelement('input')}}、{{htmlelement('select')}}、{{htmlelement('textarea')}} の各要素には `required` 属性を利用することができ、設定すると、フォームが正常に送信される前にそのコントロールに入力しなければならないことを意味しています。例えば、
+{{htmlelement('input')}}、{{htmlelement('select')}}、{{htmlelement('textarea')}} の各要素には `required` 属性を利用することができ、設定すると、フォームが正常に送信される前にそのコントロールに入力しなければならないことを意味しています。
+例えば、以下のフォームでは苗字と名前の入力が必須ですが、メールアドレスは任意です。
 
-```html
+```html live-sample___optional-required-styles
 <form>
   <fieldset>
-    <legend>Feedback form</legend>
+    <legend>フィードバックフォーム</legend>
     <div>
-      <label for="fname">First name: </label>
+      <label for="fname">苗字: </label>
       <input id="fname" name="fname" type="text" required />
     </div>
     <div>
-      <label for="lname">Last name: </label>
+      <label for="lname">名前: </label>
       <input id="lname" name="lname" type="text" required />
     </div>
     <div>
-      <label for="email">
-        Email address (include if you want a response):
-      </label>
+      <label for="email"> メールアドレス（返信がほしい場合）: </label>
       <input id="email" name="email" type="email" />
     </div>
-    <div><button>Submit</button></div>
+    <div><button>送信</button></div>
   </fieldset>
 </form>
 ```
 
-ここでは、最初の名前と姓は必須ですが、電子メールアドレスは任意です。
-
 この 2 つの状態を一致させるには、 {{cssxref(':required')}} と {{cssxref(':optional')}} 擬似クラスが使用できます。例えば、上記の HTML に以下のような CSS を適用するとします。
 
-```css
-input:required {
-  border: 1px solid black;
+```css hidden live-sample___optional-required-styles
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 70%;
 }
 
-input:optional {
-  border: 1px solid silver;
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-size: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
 }
 ```
 
-必要な操作には黒い枠線が、オプションの操作には銀色の枠線が、このように表示されます。
+```css live-sample___optional-required-styles
+input:required {
+  border: 2px solid;
+}
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/basic-required-optional.html", '100%', 400)}}
+input:optional {
+  border: 2px dashed;
+}
+```
 
-また、フォームに入力せずに送信してみると、ブラウザーが既定で出すクライアントサイドの検証エラーメッセージを見ることができます。
+必須の入力項目には実線枠が、任意の入力項目には破線枠が表示されています。
+また、フォームに入力せずに送信すると、ブラウザーがデフォルトで表示するクライアント側検証のエラーメッセージを確認することもできます。
 
-上記のフォームは悪くはないのですが、とても良いわけではありません。第一に、必須とオプションの状態を色だけで表示していることです。これは色覚障碍者にとってはあまり良いことではありません。第二に、ウェブでの標準的な必須状態の表記は、アスタリスク (`*`)、または「必須」という言葉を該当する操作に関連付けることだからです。
+{{EmbedLiveSample("optional-required-styles", , "400px", , , , , "allow-forms")}}
 
-次の節では、 `:required` を使用して必須項目を示すより良い例を見ていきます。これは、生成コンテンツを使用することについても掘り下げます。
+一般的に、フォーム内の「必須」要素と「任意」要素を色だけで区別するスタイル設定は避けるべきです。色覚障害のある人々にとって、これは好ましくないからです。
+
+```css example-bad
+input:required {
+  border: 2px solid red;
+}
+
+input:optional {
+  border: 2px solid green;
+}
+```
+
+ウェブ上では、必須項目を示す際には、各入力欄にアスタリスク (`*`) を付けたり、「必須」という文字を関連付けたりするのが一般的な慣習です。
+次の節では、`:required` 属性と生成コンテンツを使用して、必須項目を示すより適切な例を見ていきます。
 
 > [!NOTE]
 > おそらく `:optional` 擬似クラスを使用することはあまりないでしょう。フォームコントロールは既定でオプションなので、オプションのスタイル設定を既定値で行い、必要なコントロールのスタイルを上から追加すればよいのです。
@@ -116,9 +172,9 @@ input:optional {
 
 これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/Guides/Generated_content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/Reference/Selectors/::before) と [`::after`](/ja/docs/Web/CSS/Reference/Selectors/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/Reference/Properties/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
+これは、{{cssxref("::before")}} と {{cssxref("::after")}} という擬似要素と {{cssxref("content")}} というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーによっては見えないかもしれません。擬似要素なので、実際の DOM ノードと同じ方法でスタイル設定の対象とすることができます。
 
-これは、すべてのユーザーのアクセシビリティを保証するため代替のインジケーターも利用できる場合に、ラベルやアイコンのような視覚的なインジケーターを要素に追加したい場合に実に有益です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときにカスタムラジオボタンの内側の円の配置とアニメーションを処理するために生成コンテンツを使用しています。
+これは、すべてのユーザーのアクセシビリティを保証するため代替のインジケーターも利用できる場合に、ラベルやアイコンのような視覚的なインジケーターを要素に追加したい場合に実に有益です。例えば、生成コンテンツを使用することで、ラジオボタンが選択された際の、カスタムラジオボタンの内側の円の配置やアニメーションを処理することができます。
 
 ```css
 input[type="radio"]::before {
@@ -144,21 +200,21 @@ input[type="radio"]:checked::before {
 
 すべての `<input>` 型が生成コンテンツを保有することに対応しているわけではありません。動的テキストを入力する `text`、`password`、`button` などの入力型は、すべて生成コンテンツを表示しません。他にも `range`、`color`、`checkbox` などがあり、これらは生成コンテンツを表示します。
 
-先ほどの必須/オプションの例に戻りますが、今回は入力フィールド自体の外観は変更しません。生成コンテンツを使用して、指示するラベルを追加します（[こちらでライブで確認](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)するか、[こちらでソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)を確認するかしてください。
+先ほどの必須/オプションの例に戻りますが、今回は入力フィールド自体の外観は変更しません。生成コンテンツを使用して、指示するラベルを追加します。
 
 まず最初に、フォームの一番上に、何を求めているのか、という段落を追加します。
 
 ```html
-<p>Required fields are labeled with "required".</p>
+<p>「必須」と表示されたフィールドは必須項目です。</p>
 ```
 
-スクリーンリーダーには、 "required" が追加情報として読み上げられ、目の見えるユーザーには、このラベルが表示されます。
+スクリーンリーダーには、「必須」が追加情報として読み上げられ、目の見えるユーザーには、このラベルが表示されます。
 
 前に述べたように、テキスト入力フィールドは生成コンテンツに対応していないので、生成コンテンツをぶら下げるために空の [`<span>`](/ja/docs/Web/HTML/Reference/Elements/span) を追加します。
 
 ```html
 <div>
-  <label for="fname">First name: </label>
+  <label for="fname">苗字: </label>
   <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
@@ -186,7 +242,7 @@ input + span {
 input:required + span::after {
   font-size: 0.7rem;
   position: absolute;
-  content: "required";
+  content: "必須";
   color: white;
   background-color: black;
   padding: 5px 10px;
@@ -197,9 +253,113 @@ input:required + span::after {
 
 ここでは `<span>` を `position: relative` に設定しているので、生成されるコンテンツを `position: absolute` に設定すると、位置は `<body>` ではなく `<span>` からの相対位置になります（位置決めのために生成コンテンツは生成要素の子ノードであるかのように動作します）。
 
-そして、生成コンテンツに、このラベルに書かせたい内容である "required" を与え、好きなようにスタイルと位置を設定します。結果は以下のようになります。
+そして、生成コンテンツに、このラベルに書かせたい内容である "required" を与え、好きなようにスタイルと位置を設定します。結果は以下のようになります（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/required-optional-generated.html", '100%', 430)}}
+```html hidden live-sample___required-optional-generated
+<form>
+  <fieldset>
+    <legend>フィードバックフォーム</legend>
+
+    <p>「必須」と表示されたフィールドは必須項目です。</p>
+    <div>
+      <label for="fname">苗字: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">名前: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >メールアドレス（返信してほしい場合に記入）:
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>送信</button></div>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___required-optional-generated
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "必須";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___required-optional-generated
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+{{EmbedLiveSample("required-optional-generated", "100%", 430, , , , , "allow-forms")}}
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
@@ -215,13 +375,13 @@ input:required + span::after {
 - 現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
-それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
+それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう。
 
 前の例と同様に、コンテンツを生成するための余分な `<span>` を保有しており、これを使用して、有効/無効なデータのインジケーターを提供していきます。
 
 ```html
 <div>
-  <label for="fname">First name: </label>
+  <label for="fname">苗字: </label>
   <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
@@ -260,13 +420,137 @@ input:valid + span::before {
 > [!NOTE]
 > ここで `::before` を使用してラベルを追加したのは、 `::after` を既に "required" ラベルのために使用していたからです。
 
-次のもので試してみてください。
+次の例で試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
+```html hidden live-sample___valid-invalid
+<form>
+  <fieldset>
+    <legend>フィードバックフォーム</legend>
 
-必須のテキスト入力フィールドは、空の状態では無効ですが、何か記入されている状態では有効であることに注目してください。一方、 email の入力フィールドは、必須でないため空の状態では有効ですが、適切なメールアドレスでないものが含まれていると無効となります。
+    <p>「必須」と表示されたフィールドは必須項目です。</p>
+    <div>
+      <label for="fname">苗字: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">名前: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >メールアドレス（返信してほしい場合に記入）:
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>送信</button></div>
+  </fieldset>
+</form>
+```
 
-### 範囲内と範囲外のデータ
+```css hidden live-sample___valid-invalid
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "必須";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___valid-invalid
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+{{EmbedLiveSample("valid-invalid", "100%", 430, , , , , "allow-forms")}}
+
+必須のテキスト入力フィールドは、空の状態では無効ですが、何か記入されている状態では有効であることに注目してください。一方、メールアドレスの入力フィールドは、必須でないため空の状態では有効ですが、適切なメールアドレスでないものが含まれていると無効となります。
+
+### 範囲内のデータと範囲外のデータ
 
 上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) によって範囲指定された数値入力フィールドに対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
@@ -275,13 +559,13 @@ input:valid + span::before {
 
 注目すべきは、データが範囲内にある入力フィールドは `:valid` 擬似クラスに一致し、データが範囲外である入力フィールドは `:invalid` 擬似クラスに一致することです。では、なぜこの 2 つが存在するのでしょうか？実に意味論上の問題です。範囲外であるということは無効であることを伝えるためのより具体的なものなので、入力が範囲外であるというと、単に「無効」と言うよりユーザーに役立つ可能性があります。両方を提供することもできます。
 
-まさにこれを行う例を見てみましょう。この [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) デモ（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html) も参照）は、前の例の上に構築されており、数値入力フィールドに対して範囲外である場合のメッセージと、それが必要であるかどうかを示しています。
+それでは、これを実際に行う例を見ていきましょう。前の例を基に、数値入力に対して範囲外のメッセージを提供するだけでなく、入力が必須かどうかを示すようにします。
 
 数値入力フィールドはこのようになります。
 
 ```html
 <div>
-  <label for="age">年齢（12 歳以上）:</label>
+  <label for="age">年齢（12 歳以上）: </label>
   <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
@@ -304,7 +588,7 @@ input + span::after {
 input:required + span::after {
   color: white;
   background-color: black;
-  content: "Required";
+  content: "必須";
   left: -70px;
 }
 
@@ -312,18 +596,153 @@ input:out-of-range + span::after {
   color: white;
   background-color: red;
   width: 155px;
-  content: "Outside allowable value range";
+  content: "値が指定可能な範囲外です";
   left: -182px;
 }
 ```
 
-これは以前の `:required` の例と同じような話ですが、ここでは `::after` の内容に適用される宣言を別のルールに分割し、 `:required` と `:out-of-range` 状態のための `::after` の内容に、それぞれ別のコンテンツとスタイルを保有するようにした点が異なっています。こちらで試すことができます。
+これは以前の `:required` の例と同じような話ですが、ここでは `::after` の内容に適用される宣言を別のルールに分割し、 `:required` と `:out-of-range` 状態のための `::after` の内容に、それぞれ別のコンテンツとスタイルを保有するようにした点が異なっています。こちらで試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
+```html hidden live-sample___out-of-range
+<form>
+  <fieldset>
+    <legend>フィードバックフォーム</legend>
+
+    <p>「必須」と表示されたフィールドは必須項目です。</p>
+    <div>
+      <label for="name">氏名: </label>
+      <input id="name" name="name" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="age">年齢（12 歳以上）: </label>
+      <input id="age" name="age" type="number" min="12" max="120" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email"
+        >メールアドレス（返信してほしい場合に記入）:
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>送信</button></div>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___out-of-range
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input + span {
+  position: relative;
+}
+
+input + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  padding: 5px 10px;
+  top: -26px;
+}
+
+input:required + span::after {
+  color: white;
+  background-color: black;
+  content: "必須";
+  left: -70px;
+}
+
+input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 155px;
+  content: "値が指定可能な範囲外です";
+  left: -182px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+```js hidden live-sample___out-of-range
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+{{EmbedLiveSample("out-of-range", "100%", 430, , , , , "allow-forms")}}
 
 数値の入力フィールドが必須であると同時に範囲外である可能性もありますが、その場合はどうなるのでしょうか？ `:out-of-range` のルールは `:required` のルールよりもソースコード上の後で現れるため、[カスケードルール](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#カスケードを理解する)が作用して、範囲外のメッセージが表示されます。
 
-これはとてもうまく動作します。最初にページを読み込むと、赤いバツ印と枠線とともに "Required" が表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力フィールドは有効になります。しかし、年齢を範囲外の値に変更すると、 "Required" の代わりに "Outside allowable value range" というメッセージが表示されます。
+これはとてもうまく動作します。最初にページを読み込んだばかりの時には、「必須」が赤いバツ印と枠線とともに表示されます。有効な年齢（12 ～ 120 歳の範囲）を入力すると、入力フィールドは有効になります。しかし、年齢を範囲外の値に変更すると、「必須」の代わりに「値が指定可能な範囲外です」というメッセージが表示されます。
 
 > [!NOTE]
 > 無効な値や範囲外の値を入力するには、実際にフォームにフォーカスを当てて、キーボードを使用して入力する必要があります。スピナーボタンでは、許容範囲外の値まで増加/減少させることはできません。
@@ -339,45 +758,45 @@ input:out-of-range + span::after {
 ```html
 <form>
   <fieldset id="shipping">
-    <legend>Shipping address</legend>
+    <legend>お届け先住所</legend>
     <div>
-      <label for="name1">Name: </label>
+      <label for="name1">氏名: </label>
       <input id="name1" name="name1" type="text" required />
     </div>
     <div>
-      <label for="address1">Address: </label>
+      <label for="address1">住所: </label>
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="zip-code1">Zip/postal code: </label>
+      <label for="zip-code1">郵便番号: </label>
       <input id="zip-code1" name="zip-code1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
-    <legend>Billing address</legend>
+    <legend>請求先住所</legend>
     <div>
-      <label for="billing-checkbox">Same as shipping address:</label>
+      <label for="billing-checkbox">お届け先住所と同じ</label>
       <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
-      <label for="name" class="billing-label disabled-label">Name: </label>
+      <label for="name" class="billing-label disabled-label">氏名: </label>
       <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
       <label for="address2" class="billing-label disabled-label">
-        Address:
+        住所:
       </label>
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
       <label for="zip-code2" class="billing-label disabled-label">
-        Zip/postal code:
+        郵便番号:
       </label>
       <input id="zip-code2" name="zip-code2" type="text" disabled required />
     </div>
   </fieldset>
 
-  <div><button>Submit</button></div>
+  <div><button>送信</button></div>
 </form>
 ```
 
@@ -385,62 +804,181 @@ input:out-of-range + span::after {
 
 ```css
 input[type="text"]:disabled {
-  background: #eee;
-  border: 1px solid #ccc;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
 }
 
 label:has(+ :disabled) {
-  color: #aaa;
+  color: #aaaaaa;
 }
 ```
 
-無効にしたい入力フィールドを、 `input[type="text"]:disabled` を使用して直接選択しましたが、対応するテキストラベルも灰色で表示したいと思います。これらは選択するのがそれほど簡単ではないので、スタイル設定を提供するためにクラスを使用しました。
+無効にしたい入力フィールドを、 `input[type="text"]:disabled` を使用して直接選択しましたが、対応するテキストラベルも灰色で表示したいと思います。ラベルは入力欄のすぐ前にあるため、{{cssxref(":has")}} 擬似クラスを使用して選択します。
 
 最後に、請求先住所フィールドの無効化を切り替えるために、いくらかの JavaScript を使用しました。
 
 ```js
-// Wait for the page to finish loading
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-    // Attach `change` event listener to checkbox
-    document
-      .getElementById("billing-checkbox")
-      .addEventListener("change", toggleBilling);
-  },
-  false,
-);
-
 function toggleBilling() {
-  // Select the billing text fields
+  // 請求先テキストフィールドを選択
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-  // Toggle the billing text fields
-  for (let i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
+  // 請求先テキストフィールドの状態を切り替え
+  for (const item of billingItems) {
+    item.disabled = !item.disabled;
   }
+}
+
+// `change` イベントリスナーをチェックボックスへ設定
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
+```
+
+ここでは [`change` イベント](/ja/docs/Web/API/HTMLElement/change_event)を使用して、ユーザーが請求先情報の入力欄の表示/非表示を切り替えたり、関連付けられたラベルのスタイル設定を変更したりできるようにしています。
+
+以下で実際の例を試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
+
+```html hidden live-sample___enabled-disabled-shipping
+<form>
+  <fieldset id="shipping">
+    <legend>お届け先住所</legend>
+    <div>
+      <label for="name1">氏名: </label>
+      <input id="name1" name="name1" type="text" required />
+    </div>
+    <div>
+      <label for="address1">住所: </label>
+      <input id="address1" name="address1" type="text" required />
+    </div>
+    <div>
+      <label for="zip-code1">郵便番号: </label>
+      <input id="zip-code1" name="zip-code1" type="text" required />
+    </div>
+  </fieldset>
+  <fieldset id="billing">
+    <legend>請求先住所</legend>
+    <div>
+      <label for="billing-checkbox">お届け先住所と同じ</label>
+      <input type="checkbox" id="billing-checkbox" checked />
+    </div>
+    <div>
+      <label for="name" class="billing-label">氏名: </label>
+      <input id="name" name="name" type="text" disabled required />
+    </div>
+    <div>
+      <label for="address2" class="billing-label">住所: </label>
+      <input id="address2" name="address2" type="text" disabled required />
+    </div>
+    <div>
+      <label for="zip-code2" class="billing-label">郵便番号: </label>
+      <input id="zip-code2" name="zip-code2" type="text" disabled required />
+    </div>
+  </fieldset>
+
+  <div><button>送信</button></div>
+</form>
+```
+
+```css hidden live-sample___enabled-disabled-shipping
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+button,
+label,
+input[type="text"] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input[type="text"]:disabled {
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+}
+
+label:has(+ :disabled) {
+  color: #aaaaaa;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
 }
 ```
 
-これは [`change`イベント](/ja/docs/Web/API/HTMLElement/change_event)を使用して、ユーザーが請求フィールドを有効/無効にしたり、関連するラベルのスタイルを切り替えたりできるようにします。
+```js hidden live-sample___enabled-disabled-shipping
+function toggleBilling() {
+  // 請求先テキストフィールドを選択
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-この例は以下で見ることができます（[ここでライブで見る](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html)ことや、[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)も見ることができます。
+  // 請求先テキストフィールドの状態を切り替え
+  for (const item of billingItems) {
+    item.disabled = !item.disabled;
+  }
+}
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html", '100%', 600)}}
+// `change` イベントリスナーをチェックボックスへ設定
+document
+  .getElementById("billing-checkbox")
+  .addEventListener("change", toggleBilling);
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+{{EmbedLiveSample("enabled-disabled-shipping", "100%", 580, , , , , "allow-forms")}}
 
 ### read-only と read-write
 
-disabled`と`:enabled`と同様に、`:read-only`および`:read-write` 擬似クラスは、フォーム入力フィールドが切り替えられる 2 つの状態を対象としています。 read-only は値をサーバーに送信しますが、ユーザーが編集することはできません。一方、 read-write は編集可能な状態、つまり既定の状態です。
+`:disabled` と `:enabled` と同様に、`:read-only` と `:read-write` 擬似クラスは、フォーム入力フィールドが切り替えられる 2 つの状態を対象としています。無効化された入力フィールドと同様に、ユーザーは read-only の入力フィールドを編集することはできません。ただし、無効化された入力フィールドとは異なり、読み取り専用の入力フィールドの値はサーバーに送信されます。read-write とは、編集が可能であることを意味し、これがデフォルトの状態です。
 
 入力フィールドは `readonly` 属性を使用して読み取り専用に設定されます。例として、開発者が前のページで入力された内容をこのページに送り、ユーザーに一箇所で確認してもらい、必要なデータを追加し、送信して注文を確定させることを目的とした確認ページを想像してください。この点で、すべての最終的なフォームデータを一度にサーバーに送信することができます。
 
-フォームがどのようなものか見てみましょう（ライブサンプルは [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) を参照してください。また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)も参照してください）。
+フォームがどのようなものか見てみましょう。
 
 HTML の一部を以下に示します。 readonly 属性に注意してください。
 
 ```html
 <div>
-  <label for="name">Name: </label>
+  <label for="name">氏名: </label>
   <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
@@ -456,14 +994,140 @@ textarea:read-only {
 }
 
 textarea:read-write {
-  box-shadow: inset 1px 1px 3px #ccc;
+  box-shadow: inset 1px 1px 3px #cccccc;
   border-radius: 5px;
 }
 ```
 
-完全な例は次のようになります。
+完全な例は次のようになります（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
+```html hidden live-sample___readonly-confirmation
+<form>
+  <fieldset>
+    <legend>お届け先の詳細の確認</legend>
+    <div>
+      <label for="name">氏名: </label>
+      <input id="name" name="name" type="text" value="Mr Soft" readonly />
+    </div>
+    <div>
+      <label for="address">住所: </label>
+      <textarea id="address" name="address" readonly>
+23 Elastic Way,
+Viscous,
+Bright Ridge,
+CA
+</textarea
+      >
+    </div>
+    <div>
+      <label for="zip-code">郵便番号: </label>
+      <input id="zip-code" name="zip-code" type="text" value="94708" readonly />
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>最終的な指示</legend>
+    <div>
+      <label for="sms-confirm">SMS で確認結果を送信</label>
+      <input id="sms-confirm" name="sms-confirm" type="checkbox" />
+    </div>
+    <div>
+      <label for="instructions">備考</label>
+      <textarea id="instructions" name="instructions"></textarea>
+    </div>
+  </fieldset>
+
+  <div><button type="button">詳細を修正</button></div>
+  <div><button type="submit">送信</button></div>
+</form>
+```
+
+```css hidden live-sample___readonly-confirmation
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button,
+label,
+input[type="text"],
+textarea {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  height: 30px;
+}
+
+input[type="text"],
+textarea {
+  width: 50%;
+}
+
+textarea {
+  height: 110px;
+  resize: none;
+}
+
+label {
+  width: 40%;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  background-color: #eeeeee;
+}
+
+button {
+  width: 60%;
+  margin: 20px auto;
+}
+
+input:read-only,
+textarea:read-only {
+  border: 0;
+  box-shadow: none;
+  background-color: white;
+}
+
+textarea:read-write {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+```
+
+```js hidden live-sample___readonly-confirmation
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+{{EmbedLiveSample("readonly-confirmation", "100%", 660, , , , , "allow-forms")}}
 
 > [!NOTE]
 > また、 `:enabled` と `:read-write` は、入力要素の既定の状態を記述する擬似クラスで、おそらくほとんど使用することはないでしょう。
@@ -479,9 +1143,9 @@ textarea:read-write {
 
 チェックされたときは、 {{cssxref(":checked")}} 擬似クラスで照合できます。
 
-これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/Reference/Properties/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。前回の記事で、[ラジオ/チェックボックスで `appearance: none` を使用する](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)について述べたときに、この例を見ました。
+これの最も一般的な使用方法は、 [`appearance: none;`](/ja/docs/Web/CSS/Reference/Properties/appearance) を使用してシステムの既定のスタイルを削除し、自分でスタイルを構築し直したい場合に、チェックボックスやラジオボタンがチェックされたとき、異なるスタイルを追加することです。以前の記事で、[`appearance` を使用したチェックボックスとラジオボタンのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling#appearance_を使用したチェックボックスとラジオボタンのスタイル設定)について述べたときに、この例を見ました。
 
-おさらいですが、 [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) の例の `:checked` コードは以下のようになっています。
+おさらいとして、ラジオボタンのスタイル設定の例にある `:checked` のコードは、次のようになっています。
 
 ```css
 input[type="radio"]::before {
@@ -503,11 +1167,71 @@ input[type="radio"]:checked::before {
 }
 ```
 
-こちらで試すことができます。
+こちらで試すことができます（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
+```html hidden live-sample___radios-styled
+<form>
+  <fieldset>
+    <legend>好きな果物を選んでください</legend>
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="cherry" />
+        サクランボ
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="banana" />
+        バナナ
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="fruit" value="strawberry" />
+        イチゴ
+      </label>
+    </p>
+  </fieldset>
+</form>
+```
 
-基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を [`transform`](/ja/docs/Web/CSS/Reference/Properties/transform) を設定します。次に、 [`transition`](/ja/docs/Web/CSS/Reference/Properties/transition) を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 [`width`](/ja/docs/Web/CSS/Reference/Properties/width)/[`height`](/ja/docs/Web/CSS/Reference/Properties/height) を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために [`transform-origin`](/ja/docs/Web/CSS/Reference/Properties/transform-origin) を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
+```css hidden live-sample___radios-styled
+input[type="radio"] {
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* チェックボックスの位置をテキストのベースライン上に調整 */
+  vertical-align: -2px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+```
+
+{{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
+
+基本的には、ラジオボタンの「内側の円」のスタイルを `::before` 擬似要素を使用して構築しますが、それに `scale(0)` を {{cssxref("transform")}} を設定します。次に、 {{cssxref("transition")}} を使用して、ラジオが選択/チェックされたときにラベルの生成コンテンツがうまくアニメーションして表示されるようにしています。 {{cssxref("width")}}/{{cssxref("height")}} を遷移させるのではなく、座標変換を使用することの利点は、円の角から伸びるように見えるのではなく、円の中心から伸びるようにするために {{cssxref("transform-origin")}} を使用することができ、かつボックスモデルプロパティ値を更新しないため、ジャンプする動作がないことです。
 
 ### :default と :indeterminate
 
@@ -526,7 +1250,7 @@ input[type="radio"]:checked::before {
 ```html
 <p>
   <input type="radio" name="fruit" value="cherry" id="cherry" />
-  <label for="cherry">Cherry</label>
+  <label for="cherry">サクランボ</label>
   <span></span>
 </p>
 ```
@@ -552,12 +1276,88 @@ input:default ~ span::after {
 
 これは、ページが読み込まれたときに最初に選択されたものの上に、小さな "Default" ラベルを提供しています。ここでは、次兄弟結合子 (`+`) ではなく、後続兄弟結合子 (`~`) を使用していることに注意してください。 `<span>` がソース順では `<input>` のすぐ後に来ないので、このようにする必要があるのです。
 
-以下のライブ結果を見てください。
+実行結果は次のようになります（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
+```html hidden live-sample___radios-checked-default
+<form>
+  <fieldset>
+    <legend>好きな果物を選んでください</legend>
+    <p>
+      <input type="radio" name="fruit" value="cherry" id="cherry" />
+      <label for="cherry">サクランボ</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="banana" id="banana" checked />
+      <label for="banana">バナナ</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+      <label for="strawberry">イチゴ</label>
+      <span></span>
+    </p>
+  </fieldset>
+</form>
+```
 
-> [!NOTE]
-> この例は GitHub の [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) でもライブで見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html) も参照してください）。
+```css hidden live-sample___radios-checked-default
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* チェックボックスの位置をテキストのベースライン上に調整 */
+  vertical-align: -2px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input ~ span {
+  position: relative;
+}
+
+input:default ~ span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Default";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  right: -65px;
+  top: -3px;
+}
+```
+
+{{EmbedLiveSample("radios-checked-default", "100%", 200, , , , , "allow-forms")}}
 
 `:indeterminate` の例では、既定値で選択されたラジオボタンがありません。これは重要なことで、もしあれば、スタイル設定する不定値の状態は存在しません。不確定なラジオボタンには以下の CSS でスタイルを設定しています。
 
@@ -580,15 +1380,91 @@ input[type="radio"]:indeterminate {
 
 これは、ラジオボタンにちょっと動く楽しい輪郭線を生成し、いずれかを選択する必要があることを期待します。
 
-以下のライブ結果をご覧ください。
+以下のライブ結果をご覧ください（**Play** ボタンを押すと、この例を MDN Playground で実行し、ソースコードを編集することができます）。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
+```html hidden live-sample___radios-checked-indeterminate
+<form>
+  <fieldset>
+    <legend>好きな果物を選んでください</legend>
+    <p>
+      <input type="radio" name="fruit" value="cherry" id="cherry" />
+      <label for="cherry">サクランボ</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="banana" id="banana" />
+      <label for="banana">バナナ</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="strawberry" id="strawberry" />
+      <label for="strawberry">イチゴ</label>
+      <span></span>
+    </p>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___radios-checked-indeterminate
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  /* チェックボックスの位置をテキストのベースライン上に調整 */
+  vertical-align: -2px;
+  outline: none;
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.2em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+
+input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-pulse;
+}
+
+@keyframes border-pulse {
+  from {
+    border: 2px solid red;
+  }
+
+  to {
+    border: 6px solid red;
+  }
+}
+```
+
+{{EmbedLiveSample("radios-checked-indeterminate", "100%", 200, , , , , "allow-forms")}}
 
 > [!NOTE]
-> この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
-
-> [!NOTE]
-> [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
+> [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#未決定状態のチェックボックス)が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
 ## その他の擬似クラス
 
@@ -601,19 +1477,10 @@ input[type="radio"]:indeterminate {
 以下のものも興味深いですが、まだブラウザーの対応が十分でありません。
 
 - {{cssxref(":blank")}} 擬似クラスは、空のフォームコントロールを選択します。 {{cssxref(":empty")}} も {{HTMLElement("input")}} のように子を持たない要素に一致しますが、より一般化されており、他の{{glossary("void element", "空要素")}}、例えば {{HTMLElement("br")}} や {{HTMLElement("hr")}} などにも一致します。 `:empty` はそれなりにブラウザーが対応しています。`:blank` 擬似クラスの仕様書はまだ完成していないので、どのブラウザーも対応しているわけではありません。
-- [`:user-invalid`](/ja/docs/Web/CSS/Reference/Selectors/:user-invalid) 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
-
-## 確認テスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[確認テスト：高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms)を見てください。
+- {{cssxref(":user-invalid")}} 擬似クラスは、対応されると {{cssxref(":invalid")}} に似ていますが、使い勝手がより良くなるでしょう。入力にフォーカスが当たった時に値が有効であれば、ユーザーがデータを入力フィールドする際に、その要素が `:invalid` に一致する可能性がありますが、フォーカスが外れた時には `:user-invalid` にのみ一致することになります。元々無効な値であった場合は、フォーカスがある間中、 `:invalid` と `:user-invalid` の両方に一致することになります。 `:invalid` と同様に、値が有効になると `:user-invalid` と一致しなくなります。
 
 ## まとめ
 
 これで、フォーム入力に関連する UI 擬似クラスについての説明は完全に終了しました。どんどん使って、楽しいフォームスタイルを作成してください。次は別のもの、[クライアントサイドフォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)に移動しましょう。
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
-
-### 高度なトピック
-
-- [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
