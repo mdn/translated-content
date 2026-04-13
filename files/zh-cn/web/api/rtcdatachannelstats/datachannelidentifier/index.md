@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCDataChannelStats")}} 字典的 **`dataChannelIdentifier`** 属性包含与提供这些统计信息的 {{domxref("RTCDataChannel.id", "id")}} 关联的 `RTCDataChannel` 的标识符。
+{{domxref("RTCDataChannelStats")}} 字典的 **`dataChannelIdentifier`** 属性包含与提供这些统计信息所关联的 `RTCDataChannel` 的 {{domxref("RTCDataChannel.id", "id")}}。
 
 通过使用 `dataChannelIdentifier`，你可以将此统计对象与特定的 {{domxref("RTCDataChannel")}} 相关联。
 
 ## 值
 
-包含与关联数据通道的 {{domxref("RTCDataChannel.id")}} 属性相同的值的字符串。
+包含与关联数据通道的 {{domxref("RTCDataChannel.id")}} 属性相同值的字符串。
 
 ## 规范
 
