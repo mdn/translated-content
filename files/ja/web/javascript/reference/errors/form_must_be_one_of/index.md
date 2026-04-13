@@ -21,7 +21,7 @@ RangeError: argument does not match any normalization form (Safari)
 
 ## エラーの原因
 
-{{jsxref("String.prototype.normalize()")}} メソッドの`form` 引数として指定できる値は、`"NFC"`、`"NFD"`、`"NFKC"`、`"NFKD"` の 4 つだけです。これ以外の値を渡すとエラーが発生します。各正規化形式の違いについては、`normalize()` のリファレンスを参照してください。
+{{jsxref("String.prototype.normalize()")}} メソッドの `form` 引数として指定できる値は、`"NFC"`、`"NFD"`、`"NFKC"`、`"NFKD"` の 4 つだけです。これ以外の値を渡すとエラーが発生します。各正規化形式の違いについては、`normalize()` のリファレンスを参照してください。
 
 ## 例
 
