@@ -56,7 +56,7 @@ const observer = new IntersectionObserver(callback, options);
 
 阈值为 1.0 意味着目标元素完全出现在 `root` 选项指定的元素中 100% 可见时，回调函数将会被执行。
 
-#### IntersectionObserver 选项
+#### 交叉观察器选项
 
 传递到 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} 构造函数的 `options` 对象，可以控制在什么情况下调用观察器的回调。它有以下字段：
 
@@ -71,7 +71,9 @@ const observer = new IntersectionObserver(callback, options);
 - `delay` {{experimental_inline}}
   - : 当跟踪目标可见性（[trackVisibility](#trackvisibility) 为 `true`）时，可用于设置此观察器通知之间的最小延迟（毫秒）。限制通知速率是可取的，因为可见性计算在计算上是密集的。如果跟踪可见性，则对于小于 100 的任何值，该值将被设置为 100，你应该使用可容忍的最大值。默认值为 0。
 - `trackVisibility` {{experimental_inline}}
-  - : 一个指示此 `IntersectionObserver` 是否跟踪目标可见性的变化的布尔值。当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
+  - : 一个指示此 `IntersectionObserver` 是否跟踪目标可见性的变化的布尔值。
+
+    当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
 
 #### 交集变化回调
 
@@ -144,7 +146,7 @@ observer.observe(target);
 - 如果交集根存在溢出剪切，根交集矩形就是根元素的内容区域。
 - 否则，根交集矩形就是交集根的客户端边界矩形（通过调用 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} 返回）。
 
-在创建 {{domxref("IntersectionObserver")}} 时，可以通过设置**根边距**（root margin）来进一步调整交叉点根矩形。`rootMargin` 中的值定义了添加到交叉点根边界框每一侧的偏移量，以创建最终的交叉点根边界（执行回调时将在 {{domxref("IntersectionObserverEntry.rootBounds")}} 中显示）。
+在创建 {{domxref("IntersectionObserver")}} 时，可以通过设置**根边距**（root margin，`rootMargin`）来进一步调整交叉点根矩形。`rootMargin` 中的值定义了添加到交叉点根边界框每一侧的偏移量，以创建最终的交叉点根边界（执行回调时将在 {{domxref("IntersectionObserverEntry.rootBounds")}} 中显示）。正值会增大方框，负值会缩小方框。每个偏移值只能以像素（px）或百分比（%）表示。
 
 使用根边距增大这个框的效果，以让溢出目标在变得可见之前就能与根相交。例如，这可以用来在图像即将进入视图时就开始加载，而不是等到它真正可见时再加载。
 
