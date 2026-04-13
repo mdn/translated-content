@@ -1,5 +1,5 @@
 ---
-title: RTCIceCandidateStats: lastPacketSentTimestamp 属性
+title: RTCIceCandidateStats：lastPacketSentTimestamp 属性
 short-title: lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
 l10n:
