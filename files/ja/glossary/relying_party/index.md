@@ -2,7 +2,7 @@
 title: Relying party
 slug: Glossary/Relying_party
 l10n:
-  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
+  sourceCommit: a2d0346638937e9c92c500dcb568803778e8354e
 ---
 
 **Relying party** (RP) とは、リソースへのアクセスを制御する必要のあるエンティティであり、そのためには、そのリソースにアクセスしようとする他のエンティティを認証する必要があります。ウェブ上で Relying party は通常、ユーザーがログインできるウェブサイトであり、アクセスを許可するかどうかを決定する前に、ユーザーを認証する必要があります (たとえば、パスワードを確認するなど)。
