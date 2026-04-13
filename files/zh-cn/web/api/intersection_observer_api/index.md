@@ -2,7 +2,7 @@
 title: 交叉观察器 API
 slug: Web/API/Intersection_Observer_API
 l10n:
-  sourceCommit: 450708eb6ad17ff17f6c3b393de91909260ecd26
+  sourceCommit: 26cfe9e86b714bdce65c58089f0496206b3436f3
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -24,7 +24,7 @@ l10n:
 
 交叉观察器 API 可令代码注册一个回调函数，当特定元素进入或退出与另一元素（或{{glossary("viewport", "视口")}}）的交集时，或者当两个元素之间的交集发生指定变化时，该函数就会被执行。这样，网站就不再需要在主线程上做任何事情来监视这种元素交集，浏览器也可以根据自己的需要优化交集管理。
 
-交叉观察器 API 无法提供重叠像素的确切数量或具体是哪些像素重叠；不过，它涵盖了“如果它们相交*N*%左右，我需要做什么”这种更常见的用例。
+交叉观察器 API 无法根据重叠像素的确切数量，或者具体来说是哪些像素来触发逻辑。它涵盖了“如果它们相交 _N_% 左右，我需要做什么”这种更常见的用例。
 
 ## 概念和用法
 
@@ -63,17 +63,17 @@ const observer = new IntersectionObserver(callback, options);
 - `root`
   - : 用作视口的元素，用于检查目标的可见性。必须是目标的祖先。如果未指定或为 `null`，则默认为浏览器视口。
 - `rootMargin`
-  - : 根周围的边距。其值可以类似于 CSS {{cssxref("margin")}} 属性，例如 `"10px 20px 30px 40px"`（上、右、下、左）。这些值只能是像素（`px`）或百分比（`%`）。在计算交叉点之前，这组值用于增大或缩小根元素边界框的每一侧。负值会缩小根元素的边界框，正值会扩大它。默认值为 `"0px 0px 0px 0px"`。
+  - : 根周围的边距。由一到四个值组成的字符串，类似于 CSS {{cssxref("margin")}} 属性，例如 `"10px 20px 30px 40px"`（上、右、下、左）。这些值只能以像素（`px`）或百分比（`%`）为单位。在计算交叉点之前，这组值用于增大或缩小根元素边界框的每一侧。负值会缩小根元素的边界框，正值会扩大它。默认值（如果未指定）为 `"0px 0px 0px 0px"`。
 - `scrollMargin`
-  - : 嵌套{{glossary("scroll container", "滚动容器")}}周围的边距，取值和默认值与 `rootMargin` 相同。这些边距在计算交集之前应用于嵌套的可滚动容器。正值会增大容器的剪切矩形，允许目标在可见之前就发生交集；负值会缩小剪切矩形。
+  - : 嵌套{{glossary("scroll container", "滚动容器")}}周围的边距，取值和默认值与 `rootMargin` 相同。这些边距在计算交集之前应用于嵌套的可滚动容器。正值会增大容器的剪切矩形，允许目标在可见之前就产生交叉；负值会缩小剪切矩形。
 - `threshold`
   - : 一个数字或一个数字数组，表示目标可见度达到多少百分比时，观察器的回调就应该执行。如果只想在能见度超过 50% 时检测，可以使用 0.5 的值。如果希望每次能见度超过 25% 时都执行回调，则需要指定数组 \[0, 0.25, 0.5, 0.75, 1]。默认值为 0（这意味着只要目标元素与根的边界相交或接触，回调就会运行，即使还没有像素可见）。值为 1.0 意味着在每个像素都可见之前，阈值不会被认为已通过。
 - `delay` {{experimental_inline}}
   - : 当跟踪目标可见性（[trackVisibility](#trackvisibility) 为 `true`）时，可用于设置此观察器通知之间的最小延迟（毫秒）。限制通知速率是可取的，因为可见性计算在计算上是密集的。如果跟踪可见性，则对于小于 100 的任何值，该值将被设置为 100，你应该使用可容忍的最大值。默认值为 0。
 - `trackVisibility` {{experimental_inline}}
-  - : 一个布尔值，指示此 `IntersectionObserver` 是否跟踪目标可见性的变化。当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
+  - : 一个指示此 `IntersectionObserver` 是否跟踪目标可见性的变化的布尔值。当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
 
-#### 交集变化回调
+#### 交叉变化回调
 
 传递给 `IntersectionObserver()` 构造函数的回调接收一个 {{domxref("IntersectionObserverEntry")}} 对象列表和观察器：
 
@@ -96,7 +96,7 @@ const callback = (entries, observer) => {
 
 请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果需要执行任何耗时的操作，请使用 {{domxref("Window.requestIdleCallback()")}}。
 
-下面的代码片段展示了一个回调，它会记录元素从与根不相交过渡到至少相交 75% 的次数。阈值为 0.0（默认值）时，当 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的布尔值发生变化时，回调将被[近似](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting)调用。因此，该代码段首先检查过渡是否为正值，然后确定 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 是否高于 75%，如果高于 75%，就会递增计数器。
+下面的代码片段展示了一个回调，它会记录元素从与根不相交过渡到至少相交 75% 的次数。阈值为 0.0（默认值）时，当 {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} 的布尔值发生变化时，回调将被近似调用。因此，该代码段首先检查过渡是否为正值，然后确定 {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} 是否高于 75%，如果高于 75%，就会递增计数器。
 
 ```js
 const intersectionCallback = (entries) => {
@@ -144,24 +144,134 @@ observer.observe(target);
 - 如果交集根存在溢出剪切，根交集矩形就是根元素的内容区域。
 - 否则，根交集矩形就是交集根的客户端边界矩形（通过调用 {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} 返回）。
 
-在创建 {{domxref("IntersectionObserver")}} 时，可以通过设置**根边距**（rootMargin）来进一步调整交叉点根矩形。`rootMargin` 中的值定义了添加到交叉点根边界框每一侧的偏移量，以创建最终的交叉点根边界（执行回调时将在 {{domxref("IntersectionObserverEntry.rootBounds")}} 中显示）。
+在创建 {{domxref("IntersectionObserver")}} 时，可以通过设置**根边距**（root margin）来进一步调整交叉点根矩形。`rootMargin` 中的值定义了添加到交叉点根边界框每一侧的偏移量，以创建最终的交叉点根边界（执行回调时将在 {{domxref("IntersectionObserverEntry.rootBounds")}} 中显示）。
+
+使用根边距增大这个框的效果，以让溢出目标在变得可见之前就能与根相交。例如，这可以用来在图像即将进入视图时就开始加载，而不是等到它真正可见时再加载。
+
+在下面的示例中，我们有一个可滚动的盒子，以及一个一开始位于视图之外的元素。
+你可以调整根的右边距，并看到：
+
+- 如果边距为正值，那么即使红色元素还不可见，它也会被视为与根相交，因为它与根的边距区域发生了交集。
+- 如果边距为负值，那么即使红色元素开始变得可见，它仍不会被视为与根相交，因为根的边界框被缩小了。
+
+```html hidden
+<div class="demo">
+  <div id="container">
+    <div id="elem"></div>
+    <div id="gutter"></div>
+  </div>
+  <div id="marginIndicator"></div>
+</div>
+<div class="controls">
+  <label>
+    设置根的右边距：<input id="margin" type="number" value="0" step="5" />px
+  </label>
+  <label>
+    你还可以使用此滑块滚动容器：<input
+      id="scrollAmount"
+      type="range"
+      min="0"
+      max="300"
+      value="0" />
+  </label>
+  <p>当前交叉比：<span id="output"></span></p>
+</div>
+```
+
+```css hidden
+.demo {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
+
+#marginIndicator {
+  position: relative;
+  height: 100px;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+#elem {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200px;
+}
+
+#gutter {
+  width: 500px;
+  height: 100px;
+}
+```
+
+```js hidden
+let observer;
+function createObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        output.textContent = entry.intersectionRatio.toFixed(2);
+      });
+    },
+    {
+      threshold: Array.from({ length: 1000 }, (_, i) => i / 1000),
+      root: container,
+      rootMargin: `0px ${margin.value}px 0px 0px`,
+    },
+  );
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+  observer.observe(elem);
+}
+createObserver();
+margin.addEventListener("input", () => {
+  createObserver();
+});
+scrollAmount.addEventListener("input", () => {
+  container.scrollLeft = scrollAmount.value;
+});
+```
+
+{{EmbedLiveSample("交集根与根边距", "", 200)}}
 
 #### 交集根与滚动边距
 
-考虑这样一种情况：你有一个根元素，其中包含嵌套的{{glossary("scroll container", "滚动容器")}}，并且你想要观察其中一个可滚动容器内的目标元素的交集。
+考虑这样一种情况：你有一个根元素，其中包含嵌套的{{glossary("scroll container", "滚动容器")}}，并且你想要观察其中一个可滚动容器内的目标元素的交集。默认情况下，当目标在根定义的区域内可见时，与目标元素的交集开始可以被观察到；换句话说，当容器在根中滚动到可见位置，并且目标在其容器的剪切矩形中滚动到可见位置时。
 
-默认情况下，当目标在根定义的区域内可见时，与目标元素的交集开始可以被观察到；换句话说，当容器在根中滚动到可见位置，并且目标在其容器的剪切矩形中滚动到可见位置时。
-
-你可以使用滚动边距（scroll margin）在目标在其滚动容器中滚动到可见位置之前或之后开始观察交集。该边距会添加到根中的所有嵌套滚动容器，包括根元素本身（如果它也是滚动容器），并且具有增大（正边距）或缩小（负边距）用于计算交集的剪切区域的效果。
+你可以使用滚动边距在目标在其滚动容器中滚动到可见位置之前或之后开始观察交集。该边距会添加到根中的所有嵌套滚动容器，包括根元素本身（如果它也是滚动容器），并且具有增大（正边距）或缩小（负边距）用于计算交集的剪切区域的效果。
 
 > [!NOTE]
-> 你可以在每个需要滚动边距的滚动容器上创建一个交集观察器，并使用根边距属性来达到类似的效果。使用滚动边距更符合人体工程学，因为在大多数情况下，你可以只为所有嵌套目标使用一个交集观察器。
+> 你可以在每个需要滚动边距的滚动容器上创建一个交叉观察器，并使用根边距属性来达到类似的效果。使用滚动边距更符合人体工程学，因为在大多数情况下，你可以只为所有嵌套目标使用一个交叉观察器。
 
-在下面的示例中，我们有一个可滚动的盒子和一个最初不可见的图片轮播。根元素上的观察器观察轮播中的图片元素目标。当图片元素开始与根元素相交时，图片会被加载，交集会被记录，观察器会被移除。
+在下面的示例中，我们有一个可滚动的盒子和一个最初不可见的图片轮播。根元素上的观察器观察轮播中的图片元素目标。当图片元素开始与根元素相交时，图片会被加载，交叉会被记录，观察器会被移除。
 
-向下滚动以显示轮播。可见的图片应该立即加载。如果你滚动轮播，你应该会观察到图片在元素变得可见时就会被加载。
+向下滚动以显示轮播图。可见的图片应该立即加载。如果你滚动轮播图，你应该会观察到图片在元素变得可见时就会被加载。
 
-重置示例后，你可以使用提供的控件来更改滚动边距百分比。如果你设置一个正值，如 20%，滚动容器的剪切矩形将增加 20%，你应该会观察到图片在进入视图之前就被检测到并加载。类似地，负值意味着交集只有在图片已经在视图中时才会被检测到。
+重置示例后，你可以使用提供的控件来更改滚动边距百分比。如果你设置一个正值，如 20%，滚动容器的剪切矩形将增加 20%，你应该会观察到图片在进入视图之前就被检测到并加载。类似地，负值意味着交叉只有在图片已经在视图中时才会被检测到。
 
 ```html hidden
 <button id="reset" type="button">重置</button>
