@@ -2,7 +2,7 @@
 title: Replay attack (リプレイ攻撃)
 slug: Glossary/Replay_attack
 l10n:
-  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
+  sourceCommit: a2d0346638937e9c92c500dcb568803778e8354e
 ---
 
 ウェブセキュリティにおいて、*リプレイ攻撃*とは、攻撃者が以前に送信されたメッセージを傍受し、後でそれを再送信し、元のメッセージと同じ認証情報を取得しようとする攻撃のことです。場合によっては、ペイロードや指示が異なります。
