@@ -645,7 +645,7 @@ IndexedDB API を使用した完全な例があります。この例では、出
 
 ### ライブラリー
 
-- [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB をに対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
+- [localForage](https://localforage.github.io/localForage/): クライアント側のデータストレージ向けに、シンプルな name:value 形式の構文を提供するポリフィルです。バックグラウンドで IndexedDB を使用しますが、IndexedDB に対応していないブラウザーでは Web SQL （非推奨）や localStorage にフォールバックします。
 - [Dexie.js](https://dexie.org/): 優良でシンプルな構文により高速なコード開発を可能にする、IndexedDB のラッパーです。
 - [JsStore](https://jsstore.net/): SQL 風の構文による IndexedDB のラッパーです。
 - [MiniMongo](https://github.com/mWater/minimongo): クライアント側のインメモリーの MongoDB で localstorage と server sync over http を元にしたもの。 MiniMongo は MeteorJS で使われています。

@@ -110,7 +110,7 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 新しい要素には [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性が与えられ、その値はカスタム要素のタグ名になります。
 
 > [!NOTE]
-> [カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)の以前のバージョンととの後方互換性のため、一部のブラウザーはオブジェクトの代わりに文字列を渡すことを認めており、この文字列はカスタム要素のタグ名です。
+> [カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)の以前のバージョンとの後方互換性のため、一部のブラウザーはオブジェクトの代わりに文字列を渡すことを認めており、この文字列はカスタム要素のタグ名です。
 
 ## 仕様書
 

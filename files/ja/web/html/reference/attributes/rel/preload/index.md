@@ -1,11 +1,9 @@
 ---
-title: rel=preload
+title: rel="preload"
 slug: Web/HTML/Reference/Attributes/rel/preload
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
 ---
-
-{{HTMLSidebar}}
 
 `preload` は {{htmlelement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性の値で、その HTML の {{htmlelement("head")}} の中で読み取りリクエストを宣言し、ページのライフサイクルの早期の、ブラウザーの主なレンダリング機構が起動する前に読み取りを始めたい、すぐに必要なリソースを指定することができます。これにより、そのリソースがより早く利用でき、ページのレンダリングがブロックされにくくなり、性能が向上します。名前には _load_ という言葉が含まれていますが、これはスクリプトを読み込んで実行するのではなく、ダウンロードとキャッシュをより高い優先度で行うようにスケジュールするだけです。
 
@@ -66,7 +64,7 @@ l10n:
 - `track`: WebVTT ファイル。
 
 > [!NOTE]
-> `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
+> `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用した取得](#cors_を使用した取得)を参照してください。
 
 > [!NOTE]
 > 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
@@ -101,7 +99,7 @@ l10n:
 
 ## CORS を使用した取得
 
-[CORS](/ja/docs/Web/HTTP/Guides/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/Reference/At-rules/@font-face)など)、 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
+[CORS](/ja/docs/Web/HTTP/Guides/CORS) を有効にして取得したリソースを事前読み込みする場合 ([`fetch()`](/ja/docs/Web/API/Window/fetch)、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest)、[フォント](/ja/docs/Web/CSS/Reference/At-rules/@font-face)など)、[`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性の設定に特別な注意を払う必要があります。この属性は、取得がオリジンを越えない場合でも、リソースの CORS や認証モードに合わせて設定する必要があります。
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 
@@ -136,7 +134,7 @@ l10n:
 
 ## media を含める
 
-`<link>` 要素の優れた機能のひとつが、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
+`<link>` 要素の優れた機能のひとつが、[`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を受け入れることができることです。この属性は、[メディア種別](/ja/docs/Web/CSS/Reference/At-rules/@media#メディア種別)や本格的な[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を受け付けることができるので、レスポンシブな事前読み込みを行うことができます。
 
 例を見てみましょう (GitHub 上の[ソースコード](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media)、[デモ](https://mdn.github.io/html-examples/link-rel-preload/media/))。
 
@@ -149,12 +147,12 @@ l10n:
     rel="preload"
     href="bg-image-narrow.png"
     as="image"
-    media="(max-width: 600px)" />
+    media="(width <= 600px)" />
   <link
     rel="preload"
     href="bg-image-wide.png"
     as="image"
-    media="(min-width: 601px)" />
+    media="(width > 600px)" />
 
   <link rel="stylesheet" href="main.css" />
 </head>
@@ -164,13 +162,13 @@ l10n:
   </header>
 
   <script>
-    const mediaQueryList = window.matchMedia("(max-width: 600px)");
+    const mediaQueryList = window.matchMedia("(width <= 600px)");
     const header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = "url(bg-image-narrow.png)";
+      header.style.backgroundImage = 'url("bg-image-narrow.png")';
     } else {
-      header.style.backgroundImage = "url(bg-image-wide.png)";
+      header.style.backgroundImage = 'url("bg-image-wide.png")';
     }
   </script>
 </body>
@@ -178,7 +176,7 @@ l10n:
 
 `media` 属性を `<link>` 要素に設定することで、ビューポートが狭い場合は幅の狭い画像を、ビューポートが広い場合は幅の広い画像を事前読み込みするようにします。このために {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} を使用しています（詳しくは[メディアクエリーのテスト](/ja/docs/Web/CSS/Guides/Media_queries/Testing)を参照）。
 
-これにより、ページのレンダリング時にそのフォントが利用できる可能性が高くなり、 FOUT （スタイル付け前のテキストの点滅）を減らすことができます。
+同じ手法が他の種類のリソースにも適用されます。例えば、フォントを使用する場合、事前読み込みを行うことで、レンダリング時にフォントが利用できる可能性が高まり、スタイルが適用されていないテキストが一時的に表示される現象 (FOUT) の発生を抑えることができます。
 
 これは、画像に限らず、同じ種類のファイルであっても、大きな意味を持ちます。帯域幅や CPU が限られている狭い画面では、シンプルな SVG の図を事前読み込みして表示したり、ユーザーのリソースに余裕がある場合は、複雑な JavaScript を事前読み込みし、それを使ってインタラクティブな 3D モデルをレンダリングしたりすることができるでしょう。
 
