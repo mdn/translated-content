@@ -73,7 +73,7 @@ const observer = new IntersectionObserver(callback, options);
 - `trackVisibility` {{experimental_inline}}
   - : 一个指示此 `IntersectionObserver` 是否跟踪目标可见性的变化的布尔值。当为 `false` 时，浏览器会在目标元素滚动到根元素的视口时报告交集。当为 `true` 时，浏览器还会检查目标是否实际可见，并且没有被其他元素覆盖，或可能被滤镜、降低的不透明度或某些变换扭曲或隐藏。默认值为 `false`，因为跟踪可见性在计算上是密集的。如果设置了此选项，还应设置 [`delay`](#delay)。
 
-#### 交叉变化回调
+#### 交集变化回调
 
 传递给 `IntersectionObserver()` 构造函数的回调接收一个 {{domxref("IntersectionObserverEntry")}} 对象列表和观察器：
 
