@@ -2,10 +2,8 @@
 title: "<article>: 記事コンテンツ要素"
 slug: Web/HTML/Reference/Elements/article
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
 ---
-
-{{HTMLSidebar}}
 
 **`<article>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書、ページ、アプリケーション、サイトなどの中で自己完結しており、（集合したものの中で）個別に配信や再利用を行うことを意図した構成物を表します。例えば、フォーラムの投稿、雑誌や新聞の記事、ブログの記事、商品カード、ユーザーが投稿したコメント、対話型のウィジェットやガジェット、その他の独立したコンテンツの項目が含まれます。
 
@@ -33,7 +31,7 @@ l10n:
 .forecast {
   margin: 0;
   padding: 0.3rem;
-  background-color: #eee;
+  background-color: #eeeeee;
 }
 
 .forecast > h1,
