@@ -123,7 +123,7 @@ mixedCharacters.match(/\p{sc=Cyrillic}/u); // Л
 
 ### Unicode 属性转义与字符类
 
-在 JavaScript 正则表达式中，也可以使用[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)，特别是 `\w` 或 `\d` 来匹配字母或数字。然而，此类形式仅匹配*拉丁*字母表中的字符（换言之，`\w` 匹配 `a` 到 `z` 以及 `A` 到 `Z`，`\d` 匹配 `0` 到 `9`）。如 [此示例](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#looking_for_a_word_from_unicode_characters) 所示，处理非拉丁文本时可能会有些笨拙。
+在 JavaScript 正则表达式中，也可以使用[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)，特别是 `\w` 或 `\d` 来匹配字母或数字。然而，此类形式仅匹配*拉丁*字母表中的字符（换言之，`\w` 匹配 `a` 到 `z` 以及 `A` 到 `Z`，`\d` 匹配 `0` 到 `9`）。如[此示例](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#寻找一个_unicode_字符的单词)所示，处理非拉丁文本时可能会有些笨拙。
 
 Unicode 属性转义类别涵盖了更多的字符，而 `\p{Letter}` 或 `\p{Number}` 适用于任何字符集。
 
