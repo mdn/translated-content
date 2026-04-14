@@ -3,7 +3,7 @@ title: Collision detection
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 10 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson10.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson10.html)完成本课程后找到源代码。
 
@@ -45,4 +45,4 @@ function ballHitBrick(ball, brick) {
 
 我们可以打砖块并删除它们，这已经是游戏的一个很好的补充。结果，更好地计算被毁砖增加[得分](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}

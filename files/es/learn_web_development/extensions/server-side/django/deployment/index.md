@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Deployment
 original_slug: Learn/Server-side/Django/Deployment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Local](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), querrás instalarlo en un servidor web público de manera que pueda ser accedido por el personal y los miembros de la biblioteca a través de Internet. Este artículo proporciona una visión general de cómo buscar un host para desplegar tu sitio web y de lo que necesitas hacer para conseguir que tu sitio esté listo en producción.
 
@@ -663,4 +663,4 @@ El siguiente paso sería leer nuestros últimos artículos, y finalmente complet
   - [Cómo servir aplicaciones Django con uWSGI y Nginx en Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Otros documentos de la comunidad Digital Ocean Django](https://www.digitalocean.com/community/tutorials?q=django)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django/web_application_security", "Learn_web_development/Extensions/Server-side/Django")}}

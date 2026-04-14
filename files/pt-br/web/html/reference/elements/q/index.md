@@ -58,7 +58,7 @@ original_slug: Web/HTML/Element/q
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.

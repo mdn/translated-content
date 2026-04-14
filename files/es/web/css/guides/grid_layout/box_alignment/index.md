@@ -4,7 +4,7 @@ slug: Web/CSS/Guides/Grid_layout/Box_alignment
 original_slug: Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
 ---
 
-Si estás familiarizado con [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
+Si estás familiarizado con [flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
 
 Cada método de diseño que implemente Box Alignment tendrá algunas diferencias debido a que cada método tiene características y restricciones diferentes (y acciones heredadas), por lo que es imposible hacer la alineación exactamente de la misma forma en todos los ámbitos. La especificación Box Alignment tiene detalles para cada método, sin embargo, te decepcionaría si intentaras alinear en muchos métodos en este momento, pues el soporte aún no está disponible para todos los navegadores. Donde sí tenemos soporte de navegador para las propiedades de alineación y distribución de espacio de la especificación Box Alignment es en grid layout.
 
@@ -96,7 +96,7 @@ En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo us
 
 {{ EmbedLiveSample('alignment_1', '500', '450') }}
 
-Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/es/docs/Web/CSS/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
+Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/es/docs/Web/CSS/Reference/Properties/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
 
 La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-self")}} para todos los elementos hijos de la cuadricula. Esto significa que puedes establecer la propiedad individualmente, usando `align-self` en cada elemento de la cuadricula.
 
@@ -248,7 +248,7 @@ Once again the default is `stretch`, other than for items with an intrinsic aspe
 
 As with {{cssxref("align-self")}} and {{cssxref("align-items")}}, you can apply {{cssxref("justify-items")}} to the grid container, to set the {{cssxref("justify-self")}} value for all items.
 
-The {{cssxref("justify-self")}} and {{cssxref("justify-items")}} properties are not implemented in flexbox. This is due to the one-dimensional nature of [flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout), and that there may be multiple items along the axis, making it impossible to justify a single item. To align items along the main, inline axis in flexbox you use the {{cssxref("justify-content")}} property.
+The {{cssxref("justify-self")}} and {{cssxref("justify-items")}} properties are not implemented in flexbox. This is due to the one-dimensional nature of [flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout), and that there may be multiple items along the axis, making it impossible to justify a single item. To align items along the main, inline axis in flexbox you use the {{cssxref("justify-content")}} property.
 
 ## Center an item in the area
 
@@ -650,39 +650,39 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
 
 1. [**CSS**](/es/docs/Web/CSS)
 2. [**CSS Reference**](/es/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
+3. [CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout)
 4. **Guides**
-   1. [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relationship to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   1. [Basics concepts of grid layout](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [Relationship to other layout methods](/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
    3. [Line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
    4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
    5. [Layout using named grid lines](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Auto-placement in grid layout](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Box alignment in grid layout](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   6. [Auto-placement in grid layout](/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+   7. [Box alignment in grid layout](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
    8. [Grids, logical values and writing modes](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
    9. [CSS Grid Layout and Accessibility](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   10. [CSS Grid Layout and Progressive Enhancement](/es/docs/Web/CSS/Guides/Grid_layout)
+   11. [Realizing common layouts using grids](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 5. **Properties**
-   1. [grid](/es/docs/Web/CSS/grid)
+   1. [grid](/es/docs/Web/CSS/Reference/Properties/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+   3. [grid-auto-columns](/es/docs/Web/CSS/Reference/Properties/grid-auto-columns)
    4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+   5. [grid-auto-rows](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows)
    6. [grid-column](/es/docs/Web/CSS/grid-column)
    7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/es/docs/Web/CSS/column-gap)
+   8. [grid-column-gap](/es/docs/Web/CSS/Reference/Properties/column-gap)
    9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/es/docs/Web/CSS/gap)
+   10. [grid-gap](/es/docs/Web/CSS/Reference/Properties/gap)
    11. [grid-row](/es/docs/Web/CSS/grid-row)
    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
    13. [grid-row-gap](/es/docs/Web/CSS/row-gap)
    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
    15. [grid-template](/es/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+   16. [grid-template-areas](/es/docs/Web/CSS/Reference/Properties/grid-template-areas)
+   17. [grid-template-columns](/es/docs/Web/CSS/Reference/Properties/grid-template-columns)
+   18. [grid-template-rows](/es/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 6. **Glossary**
    1. [Grid](/es/docs/Glossary/Grid)

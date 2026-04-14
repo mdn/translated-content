@@ -14,7 +14,7 @@ Este artículo muestra cómo definir modelos para el sitio web de la [Biblioteca
       <th scope="row">Pre-requisitos:</th>
       <td>
         <a
-          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website"
           >Tutorial Django Parte 2: Creación del esqueleto del sitio web</a
         >.
       </td>

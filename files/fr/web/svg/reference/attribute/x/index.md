@@ -11,7 +11,7 @@ L'attribut **`x`** définit une coordonnée en abscisse dans le système de coor
 Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 
 - [`<altGlyph>`](/fr/docs/Web/SVG/Element/altGlyph)
-- [`<cursor>`](/fr/docs/Web/SVG/Element/cursor)
+- [`<cursor>`](/fr/docs/Web/CSS/Reference/Properties/cursor)
 - [`<feBlend>`](/fr/docs/Web/SVG/Reference/Element/feBlend)
 - [`<feColorMatrix>`](/fr/docs/Web/SVG/Reference/Element/feColorMatrix)
 - [`<feComponentTransfer>`](/fr/docs/Web/SVG/Reference/Element/feComponentTransfer)
@@ -38,7 +38,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 - [`<feTurbulence>`](/fr/docs/Web/SVG/Reference/Element/feTurbulence)
 - [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter)
 - [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject)
-- [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef)
+- [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
 - [`<image>`](/fr/docs/Web/SVG/Reference/Element/image)
 - [`<mask>`](/fr/docs/Web/SVG/Reference/Element/mask)
 - [`<pattern>`](/fr/docs/Web/SVG/Reference/Element/pattern)
@@ -46,7 +46,7 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 - [`<svg>`](/fr/docs/Web/SVG/Reference/Element/svg)
 - [`<symbol>`](/fr/docs/Web/SVG/Reference/Element/symbol)
 - [`<text>`](/fr/docs/Web/SVG/Reference/Element/text)
-- [`<tref>`](/fr/docs/Web/SVG/Element/tref)
+- [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face)
 - [`<tspan>`](/fr/docs/Web/SVG/Reference/Element/tspan)
 - [`<use>`](/fr/docs/Web/SVG/Reference/Element/use)
 
@@ -700,9 +700,9 @@ Pour [`<foreignObject>`](/fr/docs/Web/SVG/Reference/Element/foreignObject), `x` 
 ## `<glyphRef>`
 
 > [!WARNING]
-> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef) est déprécié et ne devrait pas être utilisé.
+> À partir de SVG2, [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait pas être utilisé.
 
-Pour [`<glyphRef>`](/fr/docs/Web/SVG/Element/glyphRef), `x` définit l'abscisse du glyphe.
+Pour [`<glyphRef>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `x` définit l'abscisse du glyphe.
 
 <table class="properties">
   <tbody>
@@ -918,9 +918,9 @@ line {
 ## `<tref>`
 
 > [!WARNING]
-> Avec SVG2, [`<tref>`](/fr/docs/Web/SVG/Element/tref) est déprécié et ne devrait plus être utilisé.
+> Avec SVG2, [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne devrait plus être utilisé.
 
-Pour [`<tref>`](/fr/docs/Web/SVG/Element/tref), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
+Pour [`<tref>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), si l'élément contient une seule valeur, `x` définit l'abscisse où _la position du contenu texte_ doit être placée. _La position du contenu texte_ est généralement un point sur la ligne de base de la première ligne de texte. La valeur exacte de _la position du contenu texte_ est influencée par des propriétés comme [`text-anchor`](/fr/docs/Web/SVG/Reference/Attribute/text-anchor) ou [`direction`](/fr/docs/Web/CSS/Reference/Properties/direction).
 
 S'il a plusieurs valeurs, `x` définit l'abscisse individuelle de chaque glyphe du texte. S'il y a moins de valeurs que de glyphes, les glyphes restants sont placés dans la continuité du dernier glyphe positionné. S'il y a plus de valeurs que de glyphes, les valeurs supplémentaires sont ignorées.
 

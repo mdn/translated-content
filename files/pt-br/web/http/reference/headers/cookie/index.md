@@ -15,7 +15,7 @@ O cabeçalho `Cookie` é opicional e pode ser omitido se, por exemplo, as config
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

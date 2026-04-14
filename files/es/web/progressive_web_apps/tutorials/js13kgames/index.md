@@ -107,7 +107,7 @@ Una de las principales ventajas de las plataformas nativas es la facilidad con l
 
 ### Adaptable
 
-Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
+Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/Guides/Media_queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
 
 ### Segura
 

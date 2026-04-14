@@ -66,7 +66,7 @@ input {
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/Heading_Elements">見出し</a>
         （h1–h6 要素）
       </td>
     </tr>

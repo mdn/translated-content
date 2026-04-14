@@ -78,4 +78,4 @@ border-image-slice: unset;
 
 ## Véase también
 
-- [Illustrated description of the 1-to-4-value syntax](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [Illustrated description of the 1-to-4-value syntax](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties#tricky_edge_cases)

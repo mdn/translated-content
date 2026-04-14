@@ -1,12 +1,12 @@
 ---
 title: cubic-bezier()
 slug: Web/CSS/Reference/Values/easing-function/cubic-bezier
-original_slug: Web/CSS/easing-function/cubic-bezier
 l10n:
-  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
+  sourceCommit: e4fda00ba2b51b39024e0d92e2bd76593998cd01
 ---
 
-**`cubic-bezier()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3 次[ベジェ](/ja/docs/Glossary/Bezier_curve)曲線を使用してスムーズな遷移を作成します。 [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function) として、{{Glossary("Interpolation", "補間")}}の始まりと終わりをスムーズにすることができます。
+**`cubic-bezier()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3 次[ベジェ](/ja/docs/Glossary/Bezier_curve)曲線を使用してスムーズな遷移を作成します。
+イージング関数 ({{cssxref("easing-function")}}) として、{{Glossary("interpolation", "補間")}}の始まりと終わりを滑らかにすることができます。
 
 ## 構文
 
@@ -40,7 +40,7 @@ cubic-bezier(0, 0, 1, 1)
 
 ![入力の進行状況から出力の進行状況を示すグラフで、ベジェ制御点 P1(0.1, 0.6) と P2(0.7, 0.2) により、原点から (1, 1) まで湾曲する S 字型の線を表示させる。](cubic-bezier.svg)
 
-すべての 3 次ベジェ曲線がイージング関数として適切であるわけではありません。すべての曲線が[数学関数](<https://ja.wikipedia.org/wiki/関数_(数学)>)である、すなわち指定された X 軸座標に対して 0 個または 1 個の値があるとは限らないからです。 P0 と P3 が CSS の定義通りに固定されている場合、 3 次ベジェ曲線は関数になりますので、有効です。ただし、 P1 と P2 の x 軸座標がどちらも `[0, 1]` の範囲内にある場合に限ります。
+すべての 3 次ベジェ曲線がイージング関数として適切であるとは限りません。すべての曲線が[数学的な関数](<https://ja.wikipedia.org/wiki/関数_(数学)>)である、すなわち指定された X 軸座標に対して 0 個または 1 個の値があるとは限らないからです。 P0 と P3 が CSS の定義通りに固定されていれば、 3 次ベジェ曲線は関数になりますので、P1 と P2 の x 軸座標がどちらも [0, 1] の範囲内にある場合は有効です。
 
 3 次ベジェ曲線の P1 または P2 の座標が `[0, 1]` の範囲外になった場合は、最終状態よりもさらに遠くまで値が移動し、その後元に戻る可能性があります。アニメーションでは、これは一種の「跳ね返り」効果を生み出します。
 
@@ -140,4 +140,5 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 ## 関連情報
 
 - その他のイージング関数: {{cssxref("easing-function/linear", "linear()")}} と {{cssxref("easing-function/steps", "steps()")}}
-- [cubic-bezier.com](https://cubic-bezier.com/) by Lea Verou (2011)
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
+- [cubic-bezier.com](https://cubic-bezier.com/) - Lea Verou

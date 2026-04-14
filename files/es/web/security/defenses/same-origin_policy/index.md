@@ -71,7 +71,7 @@ Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado
 - Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
 - Plug-ins con [`<object>`](/es/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/es/docs/Web/HTML/Reference/Elements/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
-- Fuentes con [`@font-face`](/es/docs/Web/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
+- Fuentes con [`@font-face`](/es/docs/Web/CSS/Reference/At-rules/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
 - Cualquiera con [`<frame>`](/es/docs/Web/HTML/Reference/Elements/frame) and [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado

@@ -7,7 +7,7 @@ l10n:
 ---
 
 **CSS プロパティと値 API** (CSS properties and values API) モジュールは、モジュールは、新しい CSS プロパティを登録するための方法を定義し、プロパティのデータ型、継承動作、そしてオプションとして初期値を定義します。
-この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能をを拡張します。
+この API は、 [CSS 変数のカスケードのためのカスタムプロパティ](/ja/docs/Web/CSS/Guides/Cascading_variables)モジュールにおける、 CSS において[二重ダッシュ構文 (`--`)](/ja/docs/Web/CSS/Reference/Properties/--*) を使用したカスタムプロパティが定義できる機能を拡張します。
 CSS プロパティと値 API は API における [CSS Houdini](/ja/docs/Web/API/Houdini_APIs) の傘下にあります。
 
 カスタムプロパティを使用すると、プロジェクト全体で値を再利用できるため、複雑なスタイルシートや繰り返しの多いスタイルシートを簡素化できます。

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/::placeholder
 original_slug: Web/CSS/::placeholder
 ---
 
-El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
+El [pseudo-elemento CSS](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
 
 ```css
 ::placeholder {

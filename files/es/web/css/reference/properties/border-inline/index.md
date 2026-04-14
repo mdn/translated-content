@@ -6,7 +6,7 @@ original_slug: Web/CSS/border-inline
 
 {{SeeCompatTable}}
 
-La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline`** es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos.
+La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline`** es una [propiedad abreviada](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties) para establecer los valores lógicos individuales del borde de bloque en un solo lugar en la hoja de estilos.
 
 ```css
 border-inline: 1px;

@@ -98,6 +98,6 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
+    <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}
   </ol>
 </section>

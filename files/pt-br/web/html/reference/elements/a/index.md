@@ -28,7 +28,7 @@ li {
 
 ## Atributos
 
-Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `download`
   - : Leva o usuário a salvar a URL em vez de navegar até ela. Pode ser usado com ou sem um valor:
@@ -52,7 +52,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
     - Alguns navegadores talvez não aguentem certos arranjos em URL, para isso os websites fazem uso do [`registerProtocolHandler()`](/pt-BR/docs/Web/API/Navigator/registerProtocolHandler)
 
 - `hreflang`
-  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/pt-BR/docs/Web/HTML/Global_attributes/lang).
+  - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/pt-BR/docs/Web/HTML/Reference/Global_attributes/lang).
 - `ping`
   - : Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo `PING` para as URLs. Typically for tracking.
 - `referrerpolicy`{{Experimental_Inline}}
@@ -88,7 +88,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
     > [!NOTE]
-    > Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
+    > Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id) instead.
 
 - `rev`
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -104,16 +104,16 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Interactive_content"
           >interactive content</a
         >, palpable content.
       </td>
@@ -122,17 +122,17 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <th scope="row">Permitted content</th>
       <td>
         <a
-          href="/pt-BR/docs/Web/HTML/Content_categories#Transparent_content_model"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Transparent_content_model"
           >Transparent</a
         >, containing either
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >
         (excluding
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Interactive_content"
           >interactive content</a
         >) or
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -145,10 +145,10 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, or any element that accepts
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
       </td>
@@ -393,7 +393,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 <a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
-If an icon is used to signify link behavior, make sure it has [alt text](/pt-BR/docs/Web/HTML/Element/img#alt):
+If an icon is used to signify link behavior, make sure it has [alt text](/pt-BR/docs/Web/HTML/Reference/Elements/img#alt):
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">

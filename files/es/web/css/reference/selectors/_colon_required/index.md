@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:required
 original_slug: Web/CSS/:required
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo [`required`](/es/docs/Web/HTML/Reference/Elements/input#required) establecido en él.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:required`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} que tenga el atributo [`required`](/es/docs/Web/HTML/Reference/Elements/input#required) establecido en él.
 
 ```css
 /* Selecciona cualquier <input> requerido */

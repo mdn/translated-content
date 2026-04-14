@@ -8,6 +8,6 @@ original_slug: Web/CSS/:-moz-user-disabled
 
 ## Resumen
 
-La [pseudo-class](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-user-disabled` selecciona imágenes que no fueron cargadas porque en las preferencias del usuario las imagenes han sido totalmente desahabilitadas.
+La [pseudo-class](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-moz-user-disabled` selecciona imágenes que no fueron cargadas porque en las preferencias del usuario las imagenes han sido totalmente desahabilitadas.
 
 Está pensado para que, sobre todo, sea usado por desarrolladores de temas.

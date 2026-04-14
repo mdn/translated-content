@@ -14,7 +14,7 @@ HTTP **`Content-Security-Policy-Report-Only`**响应头允许 web 开发人员�
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
     <tr>

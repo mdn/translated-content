@@ -6,7 +6,7 @@ original_slug: Web/CSS/z-index
 
 ## Resumen
 
-La propiedad CSS `z-index` indica el orden de un elemento [posicionado](/es/docs/Web/CSS/position) y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.
+La propiedad CSS `z-index` indica el orden de un elemento [posicionado](/es/docs/Web/CSS/Reference/Properties/position) y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.
 
 Para una caja posicionada (es decir, una con cualquier `position` aparte de `static`), la propiedad `z-index` especifica:
 
@@ -58,4 +58,4 @@ z-index:  auto | <entero> | inherit
 ## Ver también
 
 - Propiedad CSS {{Cssxref("position")}}
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)

@@ -14,12 +14,12 @@ En este artículo se analiza lo que sucede cuando un usuario envía un formulari
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática, una
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >comprensión de HTML</a
         >
         , y conocimientos básicos de
-        <a href="/es/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
-        <a href="/es/docs/Learn/Server-side/First_steps"
+        <a href="/es/docs/conflicting/Web/HTTP">HTTP</a> y
+        <a href="/es/docs/Learn_web_development/Extensions/Server-side/First_steps"
           >programación del lado del servidor</a
         >
         .
@@ -294,7 +294,7 @@ Dependiendo de lo que estés haciendo, hay algunos problemas de seguridad muy co
 
 Cross-Site Scripting (XSS) y Cross-Site Request Falsification (CSRF) son tipos comunes de ataques que se producen cuando se muestran los datos enviados por un usuario y que son devueltos a otro usuario para otro uso.
 
-XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy) . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
+XSS permite a los atacantes inyectar secuencias de comandos del lado del cliente en páginas Web visitadas por otros usuarios. Una vulnerabilidad de secuencias de comandos entre sitios, puede ser utilizada por los atacantes para eludir los controles de acceso, como la [política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy) . El efecto de estos ataques pueden ir desde una pequeña molestia a un riesgo de seguridad.
 
 Los ataques CSRF son similares a los ataques XSS porque comienzan de la misma manera - mediante la inyección de comandos de cliente en páginas Web - pero su objetivo es diferente. Los atacantes CSRF tratan de escalar privilegios de un usuario de mayores privilegios (por ejemplo, un administrador de sitio) para realizar una acción que no deberían ser capaces de hacer (por ejemplo, el envío de datos a un usuario no fiable).
 

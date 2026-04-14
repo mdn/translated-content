@@ -8,7 +8,7 @@ original_slug: Web/CSS/-webkit-text-fill-color
 
 ## Resumen
 
-La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/Web/CSS/color_value) de relleno de las letras de un texto. Si la propiedad no está establecidad se usará el valor de la propiedad {{cssxref("color")}}.
+La propiedad CSS -**`webkit-text-fill-color`** especifica el [color](/es/docs/Web/CSS/Reference/Values/color_value) de relleno de las letras de un texto. Si la propiedad no está establecidad se usará el valor de la propiedad {{cssxref("color")}}.
 
 ## Especificaciones
 

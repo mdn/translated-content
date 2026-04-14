@@ -194,4 +194,4 @@ td {
 
 ## Véase también
 
-- [Uso de CSS transforms](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Uso de CSS transforms](/es/docs/Web/CSS/Guides/Transforms/Using)

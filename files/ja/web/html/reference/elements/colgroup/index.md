@@ -144,7 +144,7 @@ td {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性が存在する場合:
+        <a href="/ja/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a> 属性が存在する場合:
         なし。<br />
         この属性がない場合: 0 個以上の {{HTMLElement("col")}} 要素。
       </td>

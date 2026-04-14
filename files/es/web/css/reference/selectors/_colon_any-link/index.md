@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:any-link
 original_slug: Web/CSS/:any-link
 ---
 
-{{SeeCompatTable}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:any-link` de [CSS](/es/docs/Web/CSS) representa a un elemento que actúa como el ancla origen de un hipervínculo independientemente de si ha sido visitado, es decir, coincide con cualquier elemento {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un atributo `href`. Por lo tanto, coincide con todos los elementos que coincidan con {{cssxref(":link")}} o {{cssxref(":visited")}}.
+{{SeeCompatTable}}La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:any-link` de [CSS](/es/docs/Web/CSS) representa a un elemento que actúa como el ancla origen de un hipervínculo independientemente de si ha sido visitado, es decir, coincide con cualquier elemento {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un atributo `href`. Por lo tanto, coincide con todos los elementos que coincidan con {{cssxref(":link")}} o {{cssxref(":visited")}}.
 
 ```css
 /* Selecciona cualquier elemento que coincida con :link o :visited */

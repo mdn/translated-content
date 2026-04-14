@@ -48,7 +48,7 @@ svg {
     <tr>
       <th scope="row">値</th>
       <td>
-        <strong><a href="/ja/docs/Web/CSS/string">&#x3C;string></a></strong>
+        <strong><a href="/ja/docs/Web/CSS/Reference/Values/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>

@@ -28,7 +28,7 @@ Tiene un árbol DOM que se ve así:
 
 ![El DOM como una representación en forma de árbol de un documento que tiene una raíz y elementos de nodo que contienen contenido](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/CSS/CSS_text/Whitespace).
+Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/CSS/Guides/Text/Whitespace).
 
 Cuando un navegador web analiza un documento HTML, crea un árbol DOM y luego lo usa para mostrar el documento.
 
@@ -91,7 +91,7 @@ function change() {
 
 ## ¿Cómo puedo aprender más?
 
-Ahora que está familiarizado con los conceptos básicos del DOM, es posible que desee obtener más información sobre las características fundamentales de la API de Document leyendo [cómo recorrer una tabla HTML con interfaces JavaScript y DOM](/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
+Ahora que está familiarizado con los conceptos básicos del DOM, es posible que desee obtener más información sobre las características fundamentales de la API de Document leyendo [cómo recorrer una tabla HTML con interfaces JavaScript y DOM](/es/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree).
 
 ## Véase también
 

@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Design_and_accessibility/Thinking_before_codin
 original_slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">

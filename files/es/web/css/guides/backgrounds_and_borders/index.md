@@ -88,13 +88,13 @@ Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.co
 
 - [Aprende CSS: fondo y bordes](/es/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : Explica cómo implementar imágenes decorativas utilizando imágenes de fondo con CSS.
-- [Usando múltiples fondos](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Usando múltiples fondos](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
   - : Explica cómo configurar uno o más fondos en un elemento.
 - [Cambiar el tamaño de las imágenes de fondo](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : Describe cómo cambiar el tamaño y el comportamiento de repetición de las imágenes de fondo.
 - [Aprende CSS: el modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Explica cómo los bordes, junto con otras propiedades del modelo de caja, afectan el modelo de caja CSS.
-- [Usando gradientes de CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Usando gradientes de CSS](/es/docs/Web/CSS/Guides/Images/Using_gradients)
   - : Explica cómo crear imágenes de fondo degradadas con CSS.
 
 ## Conceptos relacionados
@@ -122,11 +122,11 @@ Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.co
 - Propiedad {{cssxref("text-shadow")}}
 
 - Función CSS {{cssxref("url", "url()")}}
-- Tipo de dato [`<color>`](/es/docs/Web/CSS/color)
-- Tipo de dato [`<image>`](/es/docs/Web/CSS/image)
-- Tipo de dato [`<position>`](/es/docs/Web/CSS/position)
+- Tipo de dato [`<color>`](/es/docs/Web/CSS/Reference/Properties/color)
+- Tipo de dato [`<image>`](/es/docs/Web/CSS/Reference/Values/image)
+- Tipo de dato [`<position>`](/es/docs/Web/CSS/Reference/Properties/position)
 
-- Palabra clave [`currentcolor`](/es/docs/Web/CSS/color_value#currentcolor_keyword)
+- Palabra clave [`currentcolor`](/es/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword)
 
 ## Especificaciones
 
@@ -135,8 +135,8 @@ Para ver el código de este ejemplo, [vea la fuente en GitHub](https://github.co
 ## Véase también
 
 - Herramientas interactivas que le permiten crear visualmente imágenes de bordes, esquinas redondeadas y sombras de caja:
-  - [Generador de bordes con imágenes](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [Generador de bordes con radio](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
+  - [Generador de bordes con imágenes](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-image_generator)
+  - [Generador de bordes con radio](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Border-radius_generator)
   - [Generador de sombra de caja](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
 - [Aplicando color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color), incluso para bordes.
 - La función de filtro [`drop-shadow()`](/es/docs/Web/CSS/filter-function/drop-shadow) que aplica un efecto de sombra a la imagen de entrada. La función es utilizada por las propiedades {{cssxref("filter")}} y {{cssxref("backdrop-filter")}}.

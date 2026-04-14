@@ -6,7 +6,7 @@ original_slug: Web/CSS/::-moz-list-bullet
 
 {{Non-standard_header}}
 
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-moz-list-bullet`** es una [extensión de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) que representa el marcador (normalmente una viñeta) de un elemento de lista ({{htmlelement("li")}}) en una lista desordenada ({{htmlelement ("ul")}}).
+El [pseudoelemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-moz-list-bullet`** es una [extensión de Mozilla](/es/docs/Web/CSS/Reference/Mozilla_extensions) que representa el marcador (normalmente una viñeta) de un elemento de lista ({{htmlelement("li")}}) en una lista desordenada ({{htmlelement ("ul")}}).
 
 ## Sintaxis
 

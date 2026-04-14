@@ -14,7 +14,7 @@ Um dos principais objetivos do HTML é dar estrutura de texto e significado, tam
       <th scope="row">Pré-requisitos:</th>
       <td>
         Familiaridade básica em HTML, tal como coberto
-        <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Iniciando com o HTML.</a
         >
       </td>
@@ -1040,7 +1040,7 @@ Aqui está a melhor regra geral: provavelmente é apropriado usar `<b>`, `<i>` o
 
 ## Teste suas habilidades!
 
-Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+Você chegou ao final deste artigo, mas consegue se lembrar das informações mais importantes? Você pode encontrar alguns testes adicionais para verificar se você absorveu essas informações antes de prosseguir — consulte [Teste suas habilidades: noções básicas de texto HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Resumo
 
