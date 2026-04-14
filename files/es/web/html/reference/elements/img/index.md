@@ -30,7 +30,7 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
           >contenido estático</a
         >,
         <a
-          href="/es/docs/Web/Guide/HTML/Content_categories#Embedded_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Embedded_content"
           >contenido incrustado</a
         >, contenido palpable. Si el elemento tiene un atributo
         <code>usemap</code>, it also is a part of the
@@ -155,7 +155,7 @@ El estándar de HTML no ofrece una lista de formatos de imagen soportados, de mo
 
 ## Interacción con CSS
 
-Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
+Respecto a CSS, `una <img>` es un [elemento de reemplazo](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties). No tiene base, asi que cuando las imágenes se usan en un contexto de formato en línea con {{cssxref("vertical-align")}}: `baseline`, el bajo de la imagen se posa sobre la base del contenedor.
 
 Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no necesariamente. Por ejempo, las imagenes SVG no tienen dimensiones intrínsecas.
 

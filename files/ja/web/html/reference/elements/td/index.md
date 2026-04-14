@@ -175,7 +175,7 @@ caption {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Cell_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role"
             >cell</a
           ></code
         >（{{HTMLElement("table")}} 要素の子孫である場合）

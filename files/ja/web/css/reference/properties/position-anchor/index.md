@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
 ---
 
-**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティをで設定された要素）のアンカー名を指定します。
+**`position-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、位置指定要素が関連付けられる**アンカー要素**（つまり、**アンカー名**が {{cssxref("anchor-name")}} プロパティで設定された要素）のアンカー名を指定します。
 
 ## 構文
 

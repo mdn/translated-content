@@ -12,7 +12,7 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -26,7 +26,7 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flujo de contenido</a
         >.
       </td>

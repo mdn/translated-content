@@ -58,7 +58,7 @@ svg {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/DOM/SVGRectElement) .
+Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/Web/API/SVGRectElement) .
 
 ## Compatibilité des navigateurs
 

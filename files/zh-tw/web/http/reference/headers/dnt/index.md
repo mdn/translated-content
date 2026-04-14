@@ -5,9 +5,9 @@ slug: Web/HTTP/Reference/Headers/DNT
 
 **`DNT`**（**D**o **N**ot **T**rack，**請勿追蹤**）請求標頭表明用戶針對追蹤程式的設定。它能讓用戶表達自己相較於個人化設定，更在乎個人隱私。
 
-| 標頭類型                              | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | 是                             |
+| 標頭類型                                 | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | 是                             |
 
 ## 語法
 

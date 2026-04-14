@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: HTML テキストの基礎"
-short-title: "試験: HTML テキストの基礎"
+short-title: "テスト: HTML テキストの基礎"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 l10n:
   sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09

@@ -176,7 +176,7 @@ Tenga en cuenta que éstas son propiedades personalizadas, no variables reales c
 
 ## Valores de sustitución (fallback) de propiedades personalizadas
 
-Utilizando [`var()`](/es/docs/Web/CSS/var) podemos definir múltiples **valores de sustitución (fallback)** que se usarán cuando la variable dada no está definida aún; esto puede ser útil cuando se trabaja con [Custom Elements](/es/docs/Web/API/Web_components/Using_custom_elements) y [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM).
+Utilizando [`var()`](/es/docs/Web/CSS/Reference/Values/var) podemos definir múltiples **valores de sustitución (fallback)** que se usarán cuando la variable dada no está definida aún; esto puede ser útil cuando se trabaja con [Custom Elements](/es/docs/Web/API/Web_components/Using_custom_elements) y [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM).
 
 > [!NOTE]
 > **Los valores de sustitución (fallback) no se usan para arreglar problemas de compatibilidad del navegador.** Si el navegador no tiene soporte para Propiedades Personalizadas de CSS, el valor de fallback no es de ayuda. **Es simplemente un respaldo para que aquellos navegadores que sí soportan Propiedades Personalizadas de CSS** puedan elegir un valor diferente en caso de que la variable no se haya definido o contenga un valor no válido.
@@ -269,4 +269,4 @@ element.style.setProperty("--my-var", jsVar + 4);
 
 ## Ver también
 
-- [`custom properties`](/es/docs/Web/CSS/--*)
+- [`custom properties`](/es/docs/Web/CSS/Reference/Properties/--*)

@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:defined
 original_slug: Web/CSS/:defined
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:defined`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que se haya definido. Esto incluye cualquier elemento estándar integrado en el navegador y elementos personalizados que se hayan definido correctamente (es decir, con el método {{domxref("CustomElementRegistry.define()")}}).
 
 ```css
 /* Selecciona cualquier elemento definido */

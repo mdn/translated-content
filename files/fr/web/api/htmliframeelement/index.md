@@ -9,7 +9,7 @@ l10n:
 
 L'interface **`HTMLIFrameElement`** fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{DOMxRef("HTMLElement")}} auxquelles elle peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'un cadre.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Propriétés d'instance
 

@@ -40,7 +40,7 @@ Cada propiedad es una cadena y se puede leer y escribir. En el caso anterior, es
 
 ## Acceso a través de CSS
 
-Tenga en cuenta que, debido a que los atributos de datos son atributos simples de HTML, incluso puede acceder a ellos desde [CSS](/es/docs/Web/CSS). Por ejemplo, para mostrar los `data-parent` en el artículo, puede usar el [contenido generado](/es/docs/Web/CSS/content) en CSS con la función {{cssxref("attr")}}:
+Tenga en cuenta que, debido a que los atributos de datos son atributos simples de HTML, incluso puede acceder a ellos desde [CSS](/es/docs/Web/CSS). Por ejemplo, para mostrar los `data-parent` en el artículo, puede usar el [contenido generado](/es/docs/Web/CSS/Reference/Properties/content) en CSS con la función {{cssxref("attr")}}:
 
 ```css
 article::before {
@@ -48,7 +48,7 @@ article::before {
 }
 ```
 
-También puede usar los [selectores de atributos](/es/docs/Web/CSS/Attribute_selectors) en CSS para cambiar los estilos de acuerdo a las priopiedades de datos:
+También puede usar los [selectores de atributos](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) en CSS para cambiar los estilos de acuerdo a las priopiedades de datos:
 
 ```css
 article[data-columns="3"] {

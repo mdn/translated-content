@@ -9,7 +9,7 @@ original_slug: Web/CSS/CSS_Properties_Reference
 La siguiente lista es una lista de la propiedades CSS más comunes junto con su equivalente en notación DOM que es cómo son normalmente accedidas desde JavaScript.
 
 > [!NOTE]
-> Es una lista incompleta. Para descubrir más propiedades CSS visita [la referencia principal CSS ](/es/docs/Web/CSS/Reference)y and [las Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions). Los artículos de referencia incluyen ejemplos sobre cómo usar todas estas propiedades.
+> Es una lista incompleta. Para descubrir más propiedades CSS visita [la referencia principal CSS ](/es/docs/Web/CSS/Reference)y and [las Extensiones CSS de Mozilla](/es/docs/Web/CSS/Reference/Mozilla_extensions). Los artículos de referencia incluyen ejemplos sobre cómo usar todas estas propiedades.
 
 | **CSS**               | **JavaScript**       |
 | --------------------- | -------------------- |

@@ -15,16 +15,16 @@ El conjunto de selectores que estudiaremos en este artículo se conocen como **p
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).
       </td>
     </tr>
     <tr>
@@ -59,9 +59,9 @@ Sin embargo, podría ser complicado de mantener. ¿Y si añadiésemos un párraf
 
 Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del documento que está en un estado determinado y se comportan como si se hubiera añadido una clase a su HTML. Echa un vistazo a otros ejemplos en MDN:
 
-- [`:last-child`](/es/docs/Web/CSS/:last-child)
-- [`:only-child`](/es/docs/Web/CSS/:only-child)
-- [`:invalid`](/es/docs/Web/CSS/:invalid)
+- [`:last-child`](/es/docs/Web/CSS/Reference/Selectors/:last-child)
+- [`:only-child`](/es/docs/Web/CSS/Reference/Selectors/:only-child)
+- [`:invalid`](/es/docs/Web/CSS/Reference/Selectors/:invalid)
 
 > [!NOTE]
 > Es válido escribir pseudoclases y pseudoelementos sin que les preceda un selector de elemento. En el ejemplo anterior, podría escribirse `:first-child` y la regla se aplicaríaa cualquier elemento que sea el primer hijo de un elemento `<article>`, no solo un párrafo primer hijo. `:first-child` equivale a `*:first-child`. Pero normalmente se quiere más control y hay que ser más específico.
@@ -70,8 +70,8 @@ Todas las pseudoclases se comportan del mismo modo. Seleccionan un fragmento del
 
 Algunas pseudoclases solo intervienen cuando el usuario interactúa con el documento de alguna manera. Estas pseudoclases de **acción de usuario**, que también reciben el nombre de **pseudoclases dinámicas**, actúan como si se añadiese una clase al elemento cuando el usuario interactúa con él. Algunos ejemplos son:
 
-- [`:hover`](/es/docs/Web/CSS/:hover): solo interviene si el usuario pasa el cursor sobre un elemento, normalmente un enlace.
-- [`:focus`](/es/docs/Web/CSS/:focus): solo interviene si el usuario selecciona el elemento con los controles del teclado.
+- [`:hover`](/es/docs/Web/CSS/Reference/Selectors/:hover): solo interviene si el usuario pasa el cursor sobre un elemento, normalmente un enlace.
+- [`:focus`](/es/docs/Web/CSS/Reference/Selectors/:focus): solo interviene si el usuario selecciona el elemento con los controles del teclado.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 
@@ -109,7 +109,7 @@ article p:first-child::first-line {
 
 ## Generar contenido con ::before y ::after
 
-Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de [`content`](/es/docs/Web/CSS/content) para introducir contenido en el documento usando el CSS.
+Hay un par de pseudoelementos especiales que se utilizan junto con la propiedad de [`content`](/es/docs/Web/CSS/Reference/Properties/content) para introducir contenido en el documento usando el CSS.
 
 Puedes utilizarlos para insertar una cadena de texto, como en el ejemplo siguiente. Intenta cambiar el valor del texto de la propiedad {{cssxref("content")}} y observa el cambio en la salida. También puedes cambiar el pseudoelemento `::before` por `::after` y verás que el texto se inserta al final del elemento, en lugar de al principio.
 
@@ -143,7 +143,7 @@ Hay un gran número de pseudoclases y pseudoelementos, así que resulta útil te
 | {{ Cssxref(":checked") }}           | Selecciona un botón de opción o casilla de verificación en el estado que determines.                                                                                                                                                                                                                                                                                                                                                                  |
 | {{ Cssxref(":current") }}           | Selecciona el elemento que se muestra en ese momento, o un ancestro de ese elemento.                                                                                                                                                                                                                                                                                                                                                                  |
 | {{ Cssxref(":default") }}           | Selecciona uno o más elementos de interfaz de usuario cuyo valor es el predeterminado de entre un conjunto de elementos similares.                                                                                                                                                                                                                                                                                                                    |
-| {{ Cssxref(":dir") }}               | Selecciona un elemento según su direccionalidad (valor del atributo [`dir`](/es/docs/Web/HTML/Reference/Global_attributes/dir) de HTML o propiedad [`direction`](/es/docs/Web/CSS/direction) de CSS).                                                                                                                                                                                                                                                 |
+| {{ Cssxref(":dir") }}               | Selecciona un elemento según su direccionalidad (valor del atributo [`dir`](/es/docs/Web/HTML/Reference/Global_attributes/dir) de HTML o propiedad [`direction`](/es/docs/Web/CSS/Reference/Properties/direction) de CSS).                                                                                                                                                                                                                            |
 | {{ Cssxref(":disabled") }}          | Selecciona elementos de la interfaz de usuario que están en estado inactivo.                                                                                                                                                                                                                                                                                                                                                                          |
 | {{ Cssxref(":empty") }}             | Selecciona un elemento que no tiene elementos hijo, excepto por algún espacio en blanco opcional.                                                                                                                                                                                                                                                                                                                                                     |
 | {{ Cssxref(":enabled") }}           | Selecciona elementos de la interfaz de usuario que están en estado activo.                                                                                                                                                                                                                                                                                                                                                                            |

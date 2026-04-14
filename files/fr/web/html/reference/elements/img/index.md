@@ -3,7 +3,7 @@ title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Reference/Elements/img
 original_slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
@@ -85,7 +85,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     Cet attribut est également utilisé pour copier/coller l'image vers du texte ou pour enregistrer un marque-page avec l'image associée.
 
 - `attributionsrc` {{Deprecated_Inline}}
-  - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
+  - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
 
     Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
 
@@ -95,7 +95,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Voir [l'API sur les rapports d'attribution](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
     Il existe deux versions de cet attribut&nbsp;:
-    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
+    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
     - Une valeur contenant une ou plusieurs URL, comme&nbsp;:
 
     ```html
@@ -106,7 +106,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
                          https://b.example/register-source" />
     ```
 
-    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) sera envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL pourront ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
+    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) sera envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL pourront ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
 
     > [!NOTE]
     > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
@@ -173,20 +173,22 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `eager`
       - : L'image est chargée immédiatement, que l'image soit située dans la zone d'affichage (<i lang="en">viewport</i>) visible ou non. Il s'agit de la valeur par défaut.
     - `lazy`
-      - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
+      - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage.
 
-      > [!NOTE]
-      > Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+        L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
-      > [!NOTE]
-      > Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
+    Bien que les attributs explicites [`width`](#width) et [`height`](#height) soient recommandés pour toutes les images afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour les images chargées de manière paresseuse. Les images chargées de manière paresseuse ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement pourrait le changer, car les images non chargées ont une `width` et une `height` de `0`. Cela crée une expérience des utilisateur·ice·s encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise au milieu de la lecture.
+
+    Les images chargées de manière paresseuse situées dans la zone d'affichage (<i lang="en">viewport</i> en anglais) visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des images chargées de manière anticipée — les images chargées de manière paresseuse ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
+
+    Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
 
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
     - `no-referrer`
-      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) n'est pas envoyé.
+      - : L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
     - `no-referrer-when-downgrade`
-      - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
+      - : L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
       - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL).
     - `origin-when-cross-origin`
@@ -211,7 +213,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Les valeurs de taille de source spécifient la taille d'affichage prévue de l'image. Les {{Glossary("user agent", "agents utilisateurs")}} utilisent la taille de source courante pour sélectionner l'une des sources fournies par l'attribut `srcset`, lorsque ces sources sont décrites à l'aide de descripteurs de largeur (`w`). La taille de source sélectionnée affecte la {{Glossary("intrinsic size", "taille intrinsèque")}} de l'image (la taille d'affichage de l'image si aucun style {{Glossary("CSS")}} n'est appliqué). Si l'attribut `srcset` est absent ou ne contient aucune valeur avec un descripteur de largeur, alors l'attribut `sizes` n'a aucun effet.
 
-    Une valeur de taille de source peut être n'importe quelle [longueur](/fr/docs/Web/CSS/Reference/Values/length) non négative. Elle ne doit pas utiliser de fonctions CSS autres que les [fonctions mathématiques](/fr/docs/Web/CSS/Reference/Values/Functions#math_functions). Les unités sont interprétées de la même manière que dans les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries), ce qui signifie que toutes les unités de longueur relative sont relatives à la racine du document et non à l'élément `<img>`. Par exemple, une valeur en `em` est relative à la taille de police racine, et non à la taille de police de l'image. Les valeurs en [pourcentage](/fr/docs/Web/CSS/Reference/Values/percentage) ne sont pas autorisées.
+    Une valeur de taille de source peut être n'importe quelle [longueur](/fr/docs/Web/CSS/Reference/Values/length) non négative. Elle ne doit pas utiliser de fonctions CSS autres que les [fonctions mathématiques](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_mathématiques). Les unités sont interprétées de la même manière que dans les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries), ce qui signifie que toutes les unités de longueur relative sont relatives à la racine du document et non à l'élément `<img>`. Par exemple, une valeur en `em` est relative à la taille de police racine, et non à la taille de police de l'image. Les valeurs en [pourcentage](/fr/docs/Web/CSS/Reference/Values/percentage) ne sont pas autorisées.
 
     Le mot-clé `auto` peut remplacer toute la liste des tailles ou la première entrée de la liste. Il n'est valide que lorsqu'il est combiné avec `loading="lazy"`, et il correspond à la [taille concrète](/fr/docs/Web/CSS/Reference/Values/image) de l'image. Comme la taille intrinsèque de l'image n'est pas encore connue, il est recommandé de spécifier aussi les attributs `width` et `height` (ou leurs équivalents CSS) pour éviter que le navigateur n'assume une largeur d'image par défaut de 300px.
     Pour une meilleure compatibilité avec les navigateurs qui ne prennent pas en charge `auto`, vous pouvez inclure des tailles de repli après `auto` dans l'attribut `sizes` :
@@ -332,7 +334,7 @@ Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'�
 
 ### Identifier le SVG comme une image
 
-En raison d'un [bug VoiceOver](https://webkit.org/b/216364), VoiceOver n'annonce pas correctement les images SVG comme des images. Ajoutez [`role="img"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) à tous les éléments `<img>` dont la source est un fichier SVG afin de garantir que les technologies d'assistance annoncent correctement le SVG comme contenu image.
+En raison d'un [bogue VoiceOver](https://webkit.org/b/216364), VoiceOver n'annonce pas correctement les images SVG comme des images. Ajoutez [`role="img"`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/img_role) à tous les éléments `<img>` dont la source est un fichier SVG afin de garantir que les technologies d'assistance annoncent correctement le SVG comme contenu image.
 
 ```html
 <img src="mdn.svg" alt="MDN" role="img" />

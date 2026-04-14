@@ -9,7 +9,7 @@ slug: Web/API/HTMLLIElement
 
 ( 정규 {{domxref("HTMLElement")}} 인터페이스의 상속을통해 사용이 가능합니다. )
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

@@ -254,7 +254,7 @@ function clipMargin() {
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : オーバーフローとは何か、どのように管理するかを学びます。
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
-  - : スクロールボタン、スクロールマーカー、および生成された段をを使用して、純粋な CSS によるカルーセル UI 機能を作成します。
+  - : スクロールボタン、スクロールマーカー、および生成された段を使用して、純粋な CSS によるカルーセル UI 機能を作成します。
 - [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
 

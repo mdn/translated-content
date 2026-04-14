@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/text-emphasis
 original_slug: Web/CSS/text-emphasis
 ---
 
-La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/text-emphasis-color), en una sola declaración.
+La **propiedad** **[CSS](/es/docs/Web/CSS)** de **text-emphasis**, es una propiedad _abreviada_ para establecer los valores de [text-empahasis-style](/es/docs/Web/CSS/text-emphasis-style) y [text-emphasis-color](/es/docs/Web/CSS/Reference/Properties/text-emphasis-color), en una sola declaración.
 
 Esta **propiedad** aplicara el énfasis a cada carácter especificado en el texto del elemento, a excepción de caracteres separados como espacios y caracteres de control .
 
@@ -34,9 +34,9 @@ text-emphasis: initial;
 text-emphasis: unset;
 ```
 
-La propiedad **text-emphasis** es diferente a la propiedad [text-decoration](/es/docs/Web/CSS/text-decoration).
+La propiedad **text-emphasis** es diferente a la propiedad [text-decoration](/es/docs/Web/CSS/Reference/Properties/text-decoration).
 
-[Text-decoration](/es/docs/Web/CSS/text-decoration) no hereda y la decoración se aplica atreves de todo el elemento. Sin embargo, la propiedad **test-emphasis** si hereda, lo que significa que es posible cambiar el **énfasis** para los descendientes.
+[Text-decoration](/es/docs/Web/CSS/Reference/Properties/text-decoration) no hereda y la decoración se aplica atreves de todo el elemento. Sin embargo, la propiedad **test-emphasis** si hereda, lo que significa que es posible cambiar el **énfasis** para los descendientes.
 
 The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
 

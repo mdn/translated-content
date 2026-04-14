@@ -14,7 +14,7 @@ Nesse artigo examinaremos nomes de domínios: o que são, como são estruturados
         Primeiro você precisa conhecer
         <strong
           ><a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
+            href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
             >como a Internet funciona</a
           ></strong
         >

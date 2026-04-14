@@ -10,7 +10,7 @@ Este módulo también define propiedades y valores lógicos para propiedades pre
 
 ### Dimensiones de bloque y en línea
 
-Las propiedades y valores lógicos usan los términos abstractos de bloque (_block)_ y en línea (_inline)_ para describir la dirección en la que fluyen. El sentido físico de estos términos depende del [modo de escritura](/es/docs/Web/CSS/CSS_writing_modes).
+Las propiedades y valores lógicos usan los términos abstractos de bloque (_block)_ y en línea (_inline)_ para describir la dirección en la que fluyen. El sentido físico de estos términos depende del [modo de escritura](/es/docs/Web/CSS/Guides/Writing_modes).
 
 - Dimensión de bloque
   - : Es la dimensión perpendicular al flujo del texto en línea, es decir, la dimensión vertical en un modo de escritura horizontal, y la dimensión horizontal en un modo de escritura vertical. Para el texto estándar en inglés, es la dimensión vertical.
@@ -103,10 +103,10 @@ Las propiedades y valores lógicos usan los términos abstractos de bloque (_blo
 
 ## Guías
 
-- [Conceptos básicos de propiedades y valores lógicos](/es/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-- [Propiedades Lógicas para dimensionamiento](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [Propiedades Lógicas para márgenes, bordes y relleno](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-- [Propiedades Lógicas para flotantes y posicionamiento](/es/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
+- [Conceptos básicos de propiedades y valores lógicos](/es/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)
+- [Propiedades Lógicas para dimensionamiento](/es/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
+- [Propiedades Lógicas para márgenes, bordes y relleno](/es/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
+- [Propiedades Lógicas para flotantes y posicionamiento](/es/docs/Web/CSS/Guides/Logical_properties_and_values/Sizing)
 
 ## Especificaciones
 

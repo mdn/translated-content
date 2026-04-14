@@ -101,7 +101,7 @@ Sin embargo, puede controlar el tamaño de estas filas con la propiedad `grid-au
 
 #### Usando `minmax()`
 
-Puede usar [`minmax()`](/es/docs/Web/CSS/minmax) en su valor para [`grid-auto-rows`](/es/docs/Web/CSS/grid-auto-rows) permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
+Puede usar [`minmax()`](/es/docs/Web/CSS/Reference/Values/minmax) en su valor para [`grid-auto-rows`](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows) permite la creación de filas de un tamaño mínimo pero luego crecer para ajustarse al contenido si es más alto.
 
 ```css hidden
 * {
@@ -197,7 +197,7 @@ También puede pasar una lista de pistas, esto se repetirá. La siguiente lista 
 
 ### Colocación automática por columna
 
-También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna. Usando la propiedad [`grid-auto-flow`](/es/docs/Web/CSS/grid-auto-flow) con un valor de `column` . En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando [`grid-template-rows`](/es/docs/Web/CSS/grid-template-rows) . Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita. Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático. Puede controlar el tamaño de las pistas de columna implícitas con [`grid-auto-columns`](/es/docs/Web/CSS/grid-auto-columns) , esto funciona de la misma manera que [`grid-auto-rows`](/es/docs/Web/CSS/grid-auto-rows) .
+También puede pedirle a la cuadrícula que coloque automáticamente los elementos por columna. Usando la propiedad [`grid-auto-flow`](/es/docs/Web/CSS/grid-auto-flow) con un valor de `column` . En este caso, la cuadrícula agregará elementos en las filas que haya definido utilizando [`grid-template-rows`](/es/docs/Web/CSS/Reference/Properties/grid-template-rows) . Cuando llena una columna, se moverá a la siguiente columna explícita o creará una nueva pista de columna en la cuadrícula implícita. Al igual que con las pistas de fila implícitas, estas pistas de columna tendrán el tamaño automático. Puede controlar el tamaño de las pistas de columna implícitas con [`grid-auto-columns`](/es/docs/Web/CSS/Reference/Properties/grid-auto-columns) , esto funciona de la misma manera que [`grid-auto-rows`](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows) .
 
 En el siguiente ejemplo, he creado una cuadrícula con tres pistas de fila de 200 píxeles de altura. Estoy colocando automáticamente por columna y las columnas creadas tendrán un ancho de columna de 300 píxeles, luego un ancho de columna de 100 píxeles hasta que haya suficientes pistas de columna para contener todos los elementos.
 
@@ -578,55 +578,55 @@ Puede ser que se te ocurran tus propios casos de uso para la colocación automá
 <ol>
  <li><a href="/es/docs/Web/CSS"><strong>CSS</strong></a></li>
  <li><a href="/es/docs/Web/CSS/Reference"><strong>CSS Reference</strong></a></li>
- <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a></li>
+ <li><a href="/es/docs/Web/CSS/Guides/Grid_layout">CSS Grid Layout</a></li>
  <li data-default-state="open"><a href="#"><strong>Guides</strong></a>
   <ol>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">Basics concepts of grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout">Relationship to other layout methods</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts">Basics concepts of grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods">Relationship to other layout methods</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Grid template areas</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">Layout using named grid lines</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">Auto-placement in grid layout</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Box alignment in grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement">Auto-placement in grid layout</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment">Box alignment in grid layout</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes">Grids, logical values and writing modes</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">CSS Grid Layout and Accessibility</a></li>
    <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement">CSS Grid Layout and Progressive Enhancement</a></li>
-   <li><a href="/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout">Realizing common layouts using grids</a></li>
+   <li><a href="/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts">Realizing common layouts using grids</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Properties</strong></a>
   <ol>
-   <li><a href="/es/docs/Web/CSS/grid">grid</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid">grid</a></li>
    <li><a href="/es/docs/Web/CSS/grid-area">grid-area</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-columns">grid-auto-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-auto-columns">grid-auto-columns</a></li>
    <li><a href="/es/docs/Web/CSS/grid-auto-flow">grid-auto-flow</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-auto-rows">grid-auto-rows</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-auto-rows">grid-auto-rows</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column">grid-column</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column-end">grid-column-end</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-column-gap">grid-column-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/column-gap">grid-column-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-column-start">grid-column-start</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-gap">grid-gap</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/gap">grid-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row">grid-row</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-end">grid-row-end</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-gap">grid-row-gap</a></li>
    <li><a href="/es/docs/Web/CSS/grid-row-start">grid-row-start</a></li>
    <li><a href="/es/docs/Web/CSS/grid-template">grid-template</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-areas">grid-template-areas</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-columns">grid-template-columns</a></li>
-   <li><a href="/es/docs/Web/CSS/grid-template-rows">grid-template-rows</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-areas">grid-template-areas</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-columns">grid-template-columns</a></li>
+   <li><a href="/es/docs/Web/CSS/Reference/Properties/grid-template-rows">grid-template-rows</a></li>
   </ol>
  </li>
  <li data-default-state="open"><a href="#"><strong>Glossary</strong></a>
   <ol>
    <li><a href="/es/docs/Glossary/Grid">Grid</a></li>
-   <li><a href="/es/docs/Glossary/Grid_lines">Grid lines</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Lines">Grid lines</a></li>
    <li><a href="/es/docs/Glossary/Grid_tracks">Grid tracks</a></li>
    <li><a href="/es/docs/Glossary/Grid_cell">Grid cell</a></li>
-   <li><a href="/es/docs/Glossary/Grid_areas">Grid areas</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Areas">Grid areas</a></li>
    <li><a href="/es/docs/Glossary/Gutters">Gutters</a></li>
    <li><a href="/es/docs/Glossary/Grid_Axis">Grid Axis</a></li>
-   <li><a href="/es/docs/Glossary/Grid_rows">Grid row</a></li>
-   <li><a href="/es/docs/Glossary/Grid_column">Grid column</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Row">Grid row</a></li>
+   <li><a href="/es/docs/Glossary/Grid_Column">Grid column</a></li>
   </ol>
  </li>
 </ol>

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5863b9e6635b304b96ef5f70937329e854957f73
 ---
 
-El [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) de [CSS](/es/docs/Web/CSS) **`::part`** representa cualquier elemento dentro de un [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que tiene un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) coincidente.
+El [pseudoelemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) de [CSS](/es/docs/Web/CSS) **`::part`** representa cualquier elemento dentro de un [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que tiene un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) coincidente.
 
 ```css
 custom-element::part(foo) {
@@ -110,4 +110,4 @@ globalThis.customElements.define(
 - Atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part)
 - Función pseudoclase {{CSSxRef(":state",":state()")}}
 - Atributo [`exportparts`](/es/docs/Web/HTML/Reference/Global_attributes#exportparts)
-- Módulo [shadow parts de CSS](/es/docs/Web/CSS/CSS_shadow_parts)
+- Módulo [shadow parts de CSS](/es/docs/Web/CSS/Guides/Shadow_parts)

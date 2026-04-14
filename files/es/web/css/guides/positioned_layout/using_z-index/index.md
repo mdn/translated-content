@@ -4,16 +4,16 @@ slug: Web/CSS/Guides/Positioned_layout/Using_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Using_z-index
 ---
 
-« [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/Guides/Positioned_layout/Understanding_z-index)
 
 ### Agregando {{ cssxref("z-index") }}
 
-El primer ejemplo, [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index), explica cómo es organizado el apilamiento por defecto. Si quieres especificar un orden diferente de apilamiento, debes posicionar un elemento y usar la propiedad z-index.
+El primer ejemplo, [Apilando sin z-index](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index), explica cómo es organizado el apilamiento por defecto. Si quieres especificar un orden diferente de apilamiento, debes posicionar un elemento y usar la propiedad z-index.
 
 Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál representa la posición del elemento en el eje-Z. Si no estás familiarizado con el eje-Z, imagina que la página tiene muchas capas una encima de la otra. Cada capa es numerada. Una capa con un número mayor es renderizada encima de las capas con números menores.
 
 > [!WARNING]
-> `z-index` solo tiene efecto si un elemento es [posicionado](/es/docs/Web/CSS/position).
+> `z-index` solo tiene efecto si un elemento es [posicionado](/es/docs/Web/CSS/Reference/Properties/position).
 
 - _bottom: el más lejano al observador_
 - ...
@@ -30,7 +30,7 @@ Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál r
 > [!NOTE]
 >
 > - Cuando la propiedad z-index no ha sido especificada, los elementos son renderizados en la capa de renderizado por defecto 0 (cero).
-> - Si varios elementos comparten el mismo valor z-index (_i.e._ están situados en la misma capa), las reglas de apilamiento explicadas en la sección [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) son aplicadas.
+> - Si varios elementos comparten el mismo valor z-index (_i.e._ están situados en la misma capa), las reglas de apilamiento explicadas en la sección [Apilando sin z-index](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index) son aplicadas.
 
 En el siguiente ejempo, el orden de apilamiento de las capas es organizado usando z-index. El z-index del DIV#5 no hace efecto ya que este no es un elemento posicionado.
 
@@ -145,12 +145,12 @@ En el siguiente ejempo, el orden de apilamiento de las capas es organizado usand
 
 ### También puedes ver
 
-- [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
-- [Apilamiento y float](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
-- [El contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
-- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
-- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
-- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
+- [Apilando sin z-index](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index) : Reglas de apilamiento por defecto
+- [Apilamiento y float](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements) : Cómo son manejados los elementos flotantes
+- [El contexto de apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) : Notas sobre el contexto de apilamiento
+- [Ejemplo 1 del contexto de apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1) : Jerarquía HTML de 2 niveles, z-index en el último nivel
+- [Ejemplo 2 del contexto de apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2) : Jerarquía HTML de 2 niveles, z-index en todos los niveles
+- [Ejemplo 3 del contexto de apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3) : Jerarquía HTML de 3 niveles, z-index en el segundo nivel
 
 ### Información del documento original
 

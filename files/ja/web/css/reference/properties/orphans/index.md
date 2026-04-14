@@ -1,14 +1,13 @@
 ---
 title: orphans
 slug: Web/CSS/Reference/Properties/orphans
-original_slug: Web/CSS/orphans
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Guides/Paged_media)、領域、[段](/ja/docs/Web/CSS/Guides/Multicol_layout)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
+**`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Guides/Paged_media)、領域、[段](/ja/docs/Web/CSS/Guides/Multicol_layout)の末尾に表示されるブロックコンテナーの最小行数を設定します。
 
-組版において、オルファン (_orphan_) とは段落の最初の行がページの末尾に単独で現れることです。 (段落は次のページへ続きます。)
+組版において、オルファン (_orphan_) とは（段落が次のページへ続いている場合に）段落の最初の行がページの末尾に単独で現れることです。
 
 ## 構文
 
@@ -28,7 +27,7 @@ orphans: unset;
 ### 値
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : 区切りの前の新しい断片の末尾に残すことができる最小行数です。値は正の数である必要があります。
+  - : 断片の末尾において、断片の分割の直前に単独で残ることができる最小行数です。
 
 ## 公式定義
 
@@ -48,7 +47,7 @@ orphans: unset;
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
   <p>
-    これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。
+    これは最初の段落よりも多くのテキストを含む第二の段落です。これはどの様に動作するのかを示すために用います。
   </p>
   <p>
     これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。

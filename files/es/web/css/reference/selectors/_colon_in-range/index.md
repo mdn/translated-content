@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:in-range
 original_slug: Web/CSS/:in-range
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Reference/Elements/input#min) y [`max`](/es/docs/Web/HTML/Reference/Elements/input#max).
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:in-range`** de [CSS](/es/docs/Web/CSS) representa un elemento {{htmlelement("input")}} cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos [`min`](/es/docs/Web/HTML/Reference/Elements/input#min) y [`max`](/es/docs/Web/HTML/Reference/Elements/input#max).
 
 ```css
 /* Selecciona cualquier <input>, pero solo cuando tiene un rango

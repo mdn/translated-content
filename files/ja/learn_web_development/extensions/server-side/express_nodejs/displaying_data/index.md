@@ -4,13 +4,13 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 これで[地域図書館](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)のウェブサイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。
 
-| 前提条件: | 以前のチュートリアルのトピック ([Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)を含む) を完了してください。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | async モジュールと Pug テンプレート言語の使い方、そしてコントローラ関数の URL からデータを取得する方法を理解すること。                                              |
+| 前提条件: | 以前のチュートリアルのトピック ([Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)を含む) を完了してください。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | async モジュールと Pug テンプレート言語の使い方、そしてコントローラ関数の URL からデータを取得する方法を理解すること。                                                                         |
 
 ## 概要
 
@@ -52,4 +52,4 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug ドキュメント)
 - [Moment](http://momentjs.com/docs/) (Moment ドキュメント)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

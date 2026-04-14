@@ -18,7 +18,7 @@ O **método HTTP GET** solicita uma representação do recurso especificado. Sol
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
+        <a href="/pt-BR/docs/Glossary/Safe"
           >Seguro</a
         >
       </th>
@@ -26,7 +26,7 @@ O **método HTTP GET** solicita uma representação do recurso especificado. Sol
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
+        <a href="/pt-BR/docs/Glossary/Idempotent"
           >Idempotente</a
         >
       </th>

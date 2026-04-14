@@ -22,7 +22,7 @@ Veja a página do cabeçalho [`Digest`](/pt-BR/docs/Web/HTTP/Reference/Headers/C
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

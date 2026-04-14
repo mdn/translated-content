@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/id
 original_slug: Web/XPath/Functions/id
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `id` recherche les nœuds correspondant aux identifiants `id` donnés et retourne un ensemble de nœuds contenant les nœuds identifiés.
 

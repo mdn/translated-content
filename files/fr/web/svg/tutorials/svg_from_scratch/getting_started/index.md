@@ -34,7 +34,7 @@ Quelques explications s'imposent quant au fonctionnement du rendu :
 1. Nous commençons avec l'élément {{SVGElement("svg")}} à la racine&nbsp;:
    - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
    - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, l'attribut `version` devait toujours être utilisé. Cet attribut est déprécié en SVG 2.
-   - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
+   - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Guides/Namespaces_crash_course)
 
 2. L'arrière-plan est défini par un rectangle rouge, déclaré grâce à la balise {{SVGElement("rect")}} qui recouvre l'intégralité de l'espace.
 3. Un cercle ({{SVGElement("circle")}}) vert d'un rayon de 80px est dessiné par-dessus le centre du rectangle rouge, avec un décalage de 30+120px vers l'intérieur et de 50+50px vers le haut.

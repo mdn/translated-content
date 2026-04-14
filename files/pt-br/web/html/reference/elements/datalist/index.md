@@ -10,15 +10,15 @@ O elemento HTML _Datalist_ (\<datalist>) contém um conjunto de elementos {{ HTM
 
 ## Contexto de uso
 
-| Conteúdo permitido        | [Phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                              |
-| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                |
-| Documento normativo       | [HTML5, section 4.10.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                  |
+| Conteúdo permitido        | [Phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content) ou qualquer quantidade de elementos {{ HTMLElement("option") }} (ou nenhum) |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omissão de tags           | Nenhuma, ambas as tags inicial e final são obrigatórias                                                                                                         |
+| Elementos pais permitidos | Qualquer elemento que aceite [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content)                                                |
+| Documento normativo       | [HTML5, section 4.10.10](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-datalist-element)                             |
 
 ## Atributos
 
-Esse elemento não tem nenhum atributo a não ser os [global attributes](/pt-BR/docs/HTML/Global_attributes), comuns para todos os elementos.
+Esse elemento não tem nenhum atributo a não ser os [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes), comuns para todos os elementos.
 
 ## Interface do DOM
 
@@ -54,5 +54,5 @@ Inclua este polyfill para fornecer suporte para navegadores mais antigos e atual
 
 ## Veja também
 
-- O elemento {{ HTMLElement("input") }}, especialmente seu atributo [`list`](/pt-BR/docs/Web/HTML/Element/input#list);
+- O elemento {{ HTMLElement("input") }}, especialmente seu atributo [`list`](/pt-BR/docs/Web/HTML/Reference/Elements/input#list);
 - O elemento {{ HTMLElement("option") }}.

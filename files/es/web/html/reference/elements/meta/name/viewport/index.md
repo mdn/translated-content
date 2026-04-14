@@ -16,7 +16,7 @@ Algunos dispositivos móviles y otras pantallas estrechas renderizan las página
 
 Esto se hace porque no todas las páginas están optimizadas para móviles y se rompen (o al menos se ven mal) cuando se renderizan en un ancho de viewport pequeño. Este viewport virtual es una forma de mejorar la apariencia de sitios no optimizados para móviles en dispositivos con pantallas estrechas.
 
-Sin embargo, este mecanismo no es tan bueno para las páginas optimizadas para pantallas estrechas usando [media queries](/es/docs/Web/CSS/CSS_media_queries), ya que si el viewport virtual es de 980px, por ejemplo, las consultas de medios que se activan a 640px o 480px o menos nunca se usarán, limitando la efectividad de estas técnicas de diseño responsivo. El elemento `<meta>` del viewport mitiga este problema en dispositivos con pantallas estrechas.
+Sin embargo, este mecanismo no es tan bueno para las páginas optimizadas para pantallas estrechas usando [media queries](/es/docs/Web/CSS/Guides/Media_queries), ya que si el viewport virtual es de 980px, por ejemplo, las consultas de medios que se activan a 640px o 480px o menos nunca se usarán, limitando la efectividad de estas técnicas de diseño responsivo. El elemento `<meta>` del viewport mitiga este problema en dispositivos con pantallas estrechas.
 
 ## Conceptos básicos del Viewport
 
@@ -31,9 +31,9 @@ No todos los dispositivos tienen el mismo ancho; debes asegurarte de que tus pá
 Los atributos básicos del elemento `<meta>` "viewport" incluyen:
 
 - `width`
-  - : Controla el tamaño (mínimo) del viewport (ver [ancho del viewport y ancho de la pantalla](#ancho_del_viewport_y_ancho_de_la_pantalla)). Puede establecerse en un número específico de píxeles como `width=600` o en el valor especial `device-width`, que es el tamaño físico de la pantalla del dispositivo en píxeles CSS. Este valor establece el valor de la unidad [`vw`](/es/docs/Web/CSS/length#longitudes_relativas_al_viewport). Mínimo: `1`. Máximo: `10000`. Valores negativos: ignorados.
+  - : Controla el tamaño (mínimo) del viewport (ver [ancho del viewport y ancho de la pantalla](#ancho_del_viewport_y_ancho_de_la_pantalla)). Puede establecerse en un número específico de píxeles como `width=600` o en el valor especial `device-width`, que es el tamaño físico de la pantalla del dispositivo en píxeles CSS. Este valor establece el valor de la unidad [`vw`](/es/docs/Web/CSS/Reference/Values/length#longitudes_relativas_al_viewport). Mínimo: `1`. Máximo: `10000`. Valores negativos: ignorados.
 - `height`
-  - : Controla el tamaño (mínimo) del viewport (ver [ancho del viewport y ancho de la pantalla](#ancho_del_viewport_y_ancho_de_la_pantalla)). Puede establecerse en un número específico de píxeles como `height=400` o en el valor especial `device-height`, que es el tamaño físico de la pantalla del dispositivo en píxeles CSS. Este valor establece el valor de la unidad [`vh`](/es/docs/Web/CSS/length#longitudes_relativas_al_viewport). Mínimo: `1`. Máximo: `10000`. Valores negativos: ignorados.
+  - : Controla el tamaño (mínimo) del viewport (ver [ancho del viewport y ancho de la pantalla](#ancho_del_viewport_y_ancho_de_la_pantalla)). Puede establecerse en un número específico de píxeles como `height=400` o en el valor especial `device-height`, que es el tamaño físico de la pantalla del dispositivo en píxeles CSS. Este valor establece el valor de la unidad [`vh`](/es/docs/Web/CSS/Reference/Values/length#longitudes_relativas_al_viewport). Mínimo: `1`. Máximo: `10000`. Valores negativos: ignorados.
 - `initial-scale`
   - : Controla el nivel de zoom cuando la página se carga por primera vez. Mínimo: `0.1`. Máximo: `10`. Predeterminado: `1`. Valores negativos: ignorados.
 - `minimum-scale`
@@ -85,7 +85,7 @@ Los valores permitidos son:
 <meta name="viewport" content="interactive-widget=resizes-content" />
 ```
 
-Cuando el {{Glossary("viewport")}} se redimensiona, el [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial también se redimensiona, afectando así el tamaño calculado de las [unidades de viewport](/es/docs/Web/CSS/length#longitudes_relativas_al_viewport).
+Cuando el {{Glossary("viewport")}} se redimensiona, el [bloque contenedor](/es/docs/Web/CSS/Containing_block) inicial también se redimensiona, afectando así el tamaño calculado de las [unidades de viewport](/es/docs/Web/CSS/Reference/Values/length#longitudes_relativas_al_viewport).
 
 ## Tamaños comunes de viewport para dispositivos móviles y tabletas
 
