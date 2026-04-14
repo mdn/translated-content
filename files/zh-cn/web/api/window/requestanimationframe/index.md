@@ -10,7 +10,7 @@ l10n:
 
 **`window.requestAnimationFrame()`** 方法会告诉浏览器你希望执行一个动画。它要求浏览器在下一次重绘之前，调用用户提供的回调函数。
 
-对回调函数的调用频率通常与显示器的刷新率相匹配。最常见的刷新率是 60hz（每秒 60 个周期/帧），不过 75hz、120hz 和 144hz 也被广泛使用。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`。
+对回调函数的调用频率通常与显示器的刷新率相匹配。虽然 75hz、120hz 和 144hz 也被广泛使用，但是最常见的刷新率还是 60hz（每秒 60 个周期/帧）。为了提高性能和电池寿命，大多数浏览器都会暂停在后台选项卡或者隐藏的 {{ HTMLElement("iframe") }} 中运行的 `requestAnimationFrame()`。
 
 > [!NOTE]
 > 若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用 `requestAnimationFrame()`。`requestAnimationFrame()` 是一次性的。
@@ -65,9 +65,9 @@ function step(timestamp) {
 requestAnimationFrame(step);
 ```
 
-以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧动画进度的基准。如果你想与外部时钟同步，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间（60Hz 时为 16.67ms）。回调的时间戳参数表示上一帧的结束时间，因此新计算的值最快会在下一帧中呈现。
+以下三个示例演示了设置时间零点（即每帧计算动画进度时的基准点）的不同方法。如果你想与外部时钟同步，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧时长，即 60Hz 下为 16.67ms。回调的时间戳参数表示上一帧的结束时间，因此新计算的值最快会在下一帧中呈现。
 
-此示例等待第一个回调执行后设置时间零点 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你不需要与任何外部内容（如音频）同步，则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
+此示例会等待第一个回调执行后再设置时间零点 `zero`。如果你的动画在开始时需要跳转到新值，则必须采用这种结构。如果你无需与任何外部元素（如音频）进行同步，则建议采用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会存在多帧的延迟。
 
 ```js
 let zero;
@@ -85,7 +85,7 @@ function animate(timestamp) {
 }
 ```
 
-此示例在首次调用 `requestAnimationFrame` 之前使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 设置零值。`document.timeline.currentTime` 与 `timestamp` 参数对齐，因此零值等同于第 0 帧的时间戳。
+此示例使用 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} 在首次调用 `requestAnimationFrame` 之前设置零值。`document.timeline.currentTime` 与 `timestamp` 参数保持一致，因此该零值等同于第 0 帧的时间戳。
 
 ```js
 const zero = document.timeline.currentTime;
@@ -99,7 +99,7 @@ function animate(timestamp) {
 }
 ```
 
-此示例使用 {{domxref("performance.now()")}} 而非回调的时间戳值来进行动画。你可以使用此方法实现稍高的同步精度，尽管额外精度是可变的且提升不大。
+此示例使用 {{domxref("performance.now()")}} 而非回调的时间戳值来实现动画效果。你可以使用这种方法来获得略高的同步精度，不过这种额外的精度提升程度不一，且增幅不大。
 
 > [!NOTE]
 > 此示例无法可靠地同步动画回调。
@@ -130,4 +130,4 @@ function animate() {
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
 - [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://testufo.com/#test=animation-time-graph)
-- [Firefox 将 requestAnimationFrame 的请求 ID 切换为 uint32_t 类型](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
+- [Firefox 将 requestAnimationFrame 的请求 ID 改为 uint32_t 类型](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
