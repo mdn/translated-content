@@ -3,7 +3,7 @@ title: Window：requestAnimationFrame() 方法
 short-title: requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 l10n:
-  sourceCommit: 14964f7b946f7e7f19c1a0a2f71e4e8db60ecd4a
+  sourceCommit: 90c1d8efd51c2f82d26e6b79e442f9dbcfafd048
 ---
 
 {{APIRef}}
@@ -35,13 +35,10 @@ requestAnimationFrame(callback)
 
 ### 返回值
 
-一个 `unsigned long` 整数值，即请求 ID，是在回调列表里的唯一标识符。这是一个非零值，但你不能对该值做任何其他假设。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
+一个 `unsigned long` 整数值，即请求 ID，用于唯一标识回调列表中的条目。不应该对该值做任何假设。你可以将此值传递给 {{domxref("window.cancelAnimationFrame()")}} 函数以取消该刷新回调请求。
 
 > [!WARNING]
-> 请求 ID 通常实现为每个窗口的递增计数器。因此，即使它从 1 开始计数，也可能会溢出并最终达到 0。虽然这不太可能对短期应用程序造成问题，但你应该避免使用 `0` 作为无效请求标识符 ID 的哨兵值，而应该使用无法达到的值，如 `null`。
-> 规范没有指定溢出行为，因此浏览器具有不同的行为。溢出时，该值要么回绕到 0，要么变为负值，要么抛出错误。
-> 除非溢出会抛出异常，否则请求 ID 也不是真正唯一的，因为对于可能无限多的回调函数，只有有限多个 32 位整数。
-> 但请注意，在 60Hz 渲染频率下，每帧调用一次 `requestAnimationFrame()`，大约需要 800 天才会出现此问题。
+> 请求 ID 通常实现为每个窗口的递增计数器。因此，即使它从 1 开始计数，也可能会溢出并最终达到 0。虽然这不太可能对短期应用程序造成问题，但你应该避免使用 `0` 作为无效请求标识符 ID 的哨兵值，而应该使用无法达到的值，如 `null`。规范没有指定溢出行为，因此浏览器具有不同的行为。溢出时，该值要么回绕到 0，要么变为负值，要么抛出错误。除非溢出会抛出异常，否则请求 ID 也不是真正唯一的，因为对于可能无限多的回调函数，只有有限多个 32 位整数。但请注意，在 60Hz 渲染频率下，每帧调用一次 `requestAnimationFrame()`，大约需要 800 天才会出现此问题。
 
 ## 示例
 
@@ -70,7 +67,7 @@ requestAnimationFrame(step);
 
 以下三个示例说明了设置时间零点的不同方法，时间零点是计算每帧动画进度的基准。如果你想与外部时钟同步，例如 {{domxref("BaseAudioContext.currentTime")}}，可用的最高精度是单帧的持续时间（60Hz 时为 16.67ms）。回调的时间戳参数表示上一帧的结束时间，因此新计算的值最快会在下一帧中呈现。
 
-此示例等待第一个回调执行时设置 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你不需要与任何外部内容（如音频）同步，则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
+此示例等待第一个回调执行后设置时间零点 `zero`。如果你的动画在开始时跳转到新值，则必须采用这种结构。如果你不需要与任何外部内容（如音频）同步，则建议使用此方法，因为某些浏览器在首次调用 `requestAnimationFrame()` 和首次调用回调函数之间会有多帧延迟。
 
 ```js
 let zero;
@@ -105,7 +102,7 @@ function animate(timestamp) {
 此示例使用 {{domxref("performance.now()")}} 而非回调的时间戳值来进行动画。你可以使用此方法实现稍高的同步精度，尽管额外精度是可变的且提升不大。
 
 > [!NOTE]
-> 此示例不允许你可靠地同步动画回调。
+> 此示例无法可靠地同步动画回调。
 
 ```js
 const zero = performance.now();
@@ -133,4 +130,4 @@ function animate() {
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
 - [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://testufo.com/#test=animation-time-graph)
-- [Firefox 切换到 uint32_t 作为 requestAnimationFrame 请求 ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
+- [Firefox 将 requestAnimationFrame 的请求 ID 切换为 uint32_t 类型](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
