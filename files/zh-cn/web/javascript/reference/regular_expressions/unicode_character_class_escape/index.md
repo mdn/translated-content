@@ -71,7 +71,6 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 
 它们可用于匹配字母、数字、符号、标点、空格等。如需查看更详尽的一般类别列表，请参阅 [Unicode 规范](https://unicode.org/reports/tr18/#General_Category_Property)。
 
-
 ```js
 // 匹配文本中所有的字母
 const story = "It's the Cheshire Cat: now I shall have somebody to talk to.";
@@ -94,7 +93,6 @@ story.match(/\p{Lu}|\p{Ll}|\p{Lt}|\p{Lm}|\p{Lo}/gu);
 某些语言使用不同的文字系统进行书写。例如，英语和西班牙语使用拉丁字母书写，而阿拉伯语和俄语则使用其他文字系统（分别是阿拉伯文和西里尔文）。Unicode 的 `Script` 和 `Script_Extensions` 属性允许正则表达式根据字符主要使用的文字系统（`Script`）或其所属的文字系统集合（`Script_Extensions`）来匹配字符。
 
 例如，`A` 属于 `Latin` 字符集，而 `ε` 属于 `Greek` 字符集。
-
 
 ```js
 const mixedCharacters = "aεЛ";
