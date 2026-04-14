@@ -15,7 +15,7 @@ API доступа к файлам и директориям имитирует 
 Существуют два очень похожих API в зависимости от того, хотите ли вы асинхронного или синхронного поведения. Синхронный API предназначен для использования внутри {{domxref("Worker")}} и будет возвращать желаемые значения. Асинхронный API не будет блокировать выполнение кода, а API не будет возвращать значения; вместо этого вам нужно будет предоставить колбэк-функцию для обработки одного или нескольких ответов.
 
 > [!WARNING]
-> Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки ([drag and drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. [Поддержка File System API в Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support))
+> Firefox реализация File System API очень ограничена: не поддерживается создание файлов. Доступ к файлам осуществляется только через {{HTMLElement("input")}} элемент (см. так же {{domxref("HTMLInputElement")}}) или путём перетаскивания файла/папки ([drag and drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)). Firefox также не реализует синхронный API. Внимательно проверьте совместимость браузера для любой части API, которую вы используете. ( см. [Поддержка File System API в Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API))
 
 ## Получение доступа к файловой системе
 
@@ -82,4 +82,4 @@ API доступа к файлам и директориям имитирует 
 ## Смотрите также
 
 - [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_System_API)
-- [File and Directory Entries API support in Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
+- [File and Directory Entries API support in Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API)

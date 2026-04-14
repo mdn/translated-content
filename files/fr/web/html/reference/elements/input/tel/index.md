@@ -4,8 +4,6 @@ slug: Web/HTML/Reference/Elements/input/tel
 original_slug: Web/HTML/Element/input/tel
 ---
 
-{{HTMLSidebar}}
-
 Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;tel&quot;&gt;", "tabbed-standard")}}
@@ -50,19 +48,19 @@ Bien que les champs de saisie de numéro de téléphone soient fonctionnellement
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente un numéro de téléphone ou qui est vide.
+        Une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>DOMString</code></a>) qui représente un numéro de téléphone ou qui est vide.
       </td>
     </tr>
     <tr>
       <td><strong>Évènements</strong></td>
       <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>
+        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/Element/input_event"><code>input</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-maxlength"><code>maxlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-minlength"><code>minlength</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-pattern"><code>pattern</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Element/Input#attr-size"><code>size</code></a>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>, <a href="/fr/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -84,7 +82,7 @@ Bien que les champs de saisie de numéro de téléphone soient fonctionnellement
 
 ## Valeur
 
-La valeur de ce champ, portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) est une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui peut être une chaîne vide ou un numéro de téléphone.
+La valeur de ce champ, portée par l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) est une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui peut être une chaîne vide ou un numéro de téléphone.
 
 ## Attributs supplémentaires
 
@@ -92,7 +90,7 @@ En plus des attributs présents pour tous les éléments [`<input>`](/fr/docs/We
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `maxlength`
 
@@ -108,12 +106,12 @@ Le champ [ne sera pas valide](/fr/docs/Web/HTML/Guides/Constraint_validation) si
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/HTML/Guides/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
 > [!NOTE]
-> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
+> On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Reference/Elements/input#title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
 Voir [Utiliser un format particulier](#utiliser_un_format_particulier) pour plus de détails et un exemple.
 
@@ -157,7 +155,7 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
 > [!NOTE]
-> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
+> [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Reference/Global_attributes/enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
 Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
@@ -207,7 +205,7 @@ On peut contrôler la taille physique allouée au contrôle ainsi que les longue
 
 #### La taille physique
 
-La taille physique de la boîte de saisie peut être contrôlée avec l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size). La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on pourra utiliser le code suivant&nbsp;:
+La taille physique de la boîte de saisie peut être contrôlée avec l'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size). La valeur de cet attribut indique le nombre de caractères que la boîte peut afficher simultanément. Si, par exemple, on souhaite que le contrôle mesure 20 caractères de large, on pourra utiliser le code suivant&nbsp;:
 
 ```html
 <input id="telNo" name="telNo" type="tel" size="20" />
@@ -217,7 +215,7 @@ La taille physique de la boîte de saisie peut être contrôlée avec l'attribut
 
 #### La longueur de la valeur
 
-L'attribut `size` ne contraint pas la taille de la valeur qui peut être saisie dans le contrôle. Si on souhaite avoir une longueur minimale (en nombre de caractères), on pourra utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#attr-minlength). De même, si on souhaite qu'un numéro de téléphone valide mesure au maximum X caractères, on pourra employer l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#attr-maxlength).
+L'attribut `size` ne contraint pas la taille de la valeur qui peut être saisie dans le contrôle. Si on souhaite avoir une longueur minimale (en nombre de caractères), on pourra utiliser l'attribut [`minlength`](/fr/docs/Web/HTML/Reference/Elements/input#minlength). De même, si on souhaite qu'un numéro de téléphone valide mesure au maximum X caractères, on pourra employer l'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength).
 
 Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de large et dont le contenu doit être plus long que 9 caractères et plus court que 14 caractères.
 
@@ -240,7 +238,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 
 #### Fournir une seule valeur par défaut avec l'attribut `value`
 
-Il est possible de fournir une valeur par défaut en renseignant au préalable l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)&nbsp;:
+Il est possible de fournir une valeur par défaut en renseignant au préalable l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value)&nbsp;:
 
 ```html
 <input id="telNo" name="telNo" type="tel" value="01 23 45 67 89" />
@@ -250,7 +248,7 @@ Il est possible de fournir une valeur par défaut en renseignant au préalable l
 
 #### Afficher des suggestions
 
-Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles on pourra choisir (on pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#attr-list) dont la valeur est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
+Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles on pourra choisir (on pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut [`list`](/fr/docs/Web/HTML/Reference/Elements/input#list) dont la valeur est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Reference/Elements/option) que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
 
 ```html
 <input id="telNo" name="telNo" type="tel" list="defaultTels" />
@@ -276,7 +274,7 @@ Comme évoqué ci-avant, il est difficile de fournir une solution qui convienne 
 
 ### Rendre la valeur obligatoire
 
-Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le formulaire. Pour cela, on utilisera l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required)&nbsp;:
+Il est possible de rendre la saisie obligatoire avant de pouvoir envoyer le formulaire. Pour cela, on utilisera l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required)&nbsp;:
 
 ```html
 <form>
@@ -330,7 +328,7 @@ Voici le résultat obtenu&nbsp;:
 
 ### Utiliser un format particulier
 
-Si on souhaite restreindre le format de la valeur qui peut être saisie, on peut utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) dont la valeur est une expression rationnelle que la valeur doit respecter pour être valide.
+Si on souhaite restreindre le format de la valeur qui peut être saisie, on peut utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) dont la valeur est une expression rationnelle que la valeur doit respecter pour être valide.
 
 Dans cet exemple, on utilisera la même feuille de style que précédemment mais le code HTML sera celui-ci&nbsp;:
 
@@ -392,7 +390,7 @@ Vous pouvez ici voir que la valeur est considérée comme invalide si elle ne su
 
 Dans cet exemple, on présente une interface simple avec un élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) permettant de choisir le pays dans lequel on se trouve puis un ensemble d'éléments `<input type="tel">` permettant de saisir ses différents numéros de téléphone.
 
-Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#attr-placeholder) qui indique le format pressenti. On utilise également l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) afin d'indiquer le nombre de caractères ainsi qu'un attribut `aria-label` qui pourra être lu par un lecteur d'écran et qui décrit quoi saisir dans le contrôle.
+Chaque boîte de saisie possède un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) qui indique le format pressenti. On utilise également l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#pattern) afin d'indiquer le nombre de caractères ainsi qu'un attribut `aria-label` qui pourra être lu par un lecteur d'écran et qui décrit quoi saisir dans le contrôle.
 
 ```html
 <form>

@@ -694,7 +694,7 @@ Les éléments ainsi positionnés «&nbsp;adhèrent&nbsp;» au plus proche ancê
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez évaluer ce que vous avez retenu avant de poursuivre&nbsp;: voir [Testez vos compétences&nbsp;: le positionnement](/fr/docs/Learn/CSS/CSS_layout/Position_skills).
+Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez évaluer ce que vous avez retenu avant de poursuivre&nbsp;: voir [Testez vos compétences&nbsp;: le positionnement](/fr/docs/Learn_web_development/Core/Styling_basics/CSS_layout/Position_skills).
 
 ## Résumé
 

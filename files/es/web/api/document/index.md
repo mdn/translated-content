@@ -127,9 +127,9 @@ _La interfaz `Document` se amplía con manejadores de eventos adicionales defini
 - {{DOMxRef("Document.onreadystatechange")}}
   - : Representa el código del manejador de eventos para el evento {{domxref("Document/readystatechange_event", "readystatechange")}}.
 - {{DOMxRef("GlobalEventHandlers.onselectionchange")}} {{Experimental_Inline}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/selectionchange_event", "selectionchange")}}.
+  - : Es un [manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events) que representa el código que se llamará cuando se genere el evento {{domxref("Document/selectionchange_event", "selectionchange")}}.
 - {{DOMxRef("Document.onvisibilitychange")}}
-  - : Es un [manejador de eventos](/es/docs/Web/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento {{domxref("Document/visibilitychange_event", "visibilitychange")}}.
+  - : Es un [manejador de eventos](/es/docs/Web/API/Document_Object_Model/Events) que representa el código que se llamará cuando se genere el evento {{domxref("Document/visibilitychange_event", "visibilitychange")}}.
 
 ### Propiedades obsoletas
 

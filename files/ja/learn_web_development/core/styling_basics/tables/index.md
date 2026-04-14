@@ -224,7 +224,7 @@ caption {
 
 {{embedlivesample("punk-style", "", "500")}}
 
-しかし、このデザインは少々派手すぎます。この記事では、[Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/) で概説されている、表デザインの最善の手法を使用し、この表を修正していきましょう。。
+しかし、このデザインは少々派手すぎます。この記事では、[Web Typography: designing tables to be read not looked at](https://alistapart.com/article/web-typography-tables/) で概説されている、表デザインの最善の手法を使用し、この表を修正していきましょう。
 
 ## 表のスタイル設定の手始め
 

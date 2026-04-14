@@ -69,7 +69,7 @@ Atribuir uma propriedade a um objeto cria uma propriedade nele. A única exceç�
 
 JavaScript não tem "métodos" como os que conhecemos em linguagens baseadas em classes. Em JavaScript, qualquer função pode ser adicionada em um objeto em forma de propriedade. Uma herança de funções age como a herança de quaisquer outras propriedades que não sejam funções, e podemos inclusive realizar sobre-escrita de função (_method overriding_)!
 
-Quando uma herança de função é executada, o valor de [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
+Quando uma herança de função é executada, o valor de [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this) aponta para o objeto que herdou as propriedades, não para o objeto prototype onde as propriedades foram escritas originalmente.
 
 ```js
 var o = {
@@ -121,7 +121,7 @@ function f() {
 
 ### Com um construtor
 
-Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/pt-BR/docs/JavaScript/Reference/Operators/new).
+Um "construtor" em JavaScript é "somente" uma função que passa a ser chamada com o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 function Graph() {
@@ -142,7 +142,7 @@ var g = new Graph();
 
 ### Com Object.create
 
-ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
+ECMAScript 5 introduziu o novo método: [Object.create](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create). Invocando este método podemos criar novos objetos. O prototype destes novos objetos é o primeiro argumento do método:
 
 ```js
 var a = { a: 1 };

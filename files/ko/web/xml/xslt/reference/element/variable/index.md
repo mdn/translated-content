@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/variable
 original_slug: Web/XSLT/Element/variable
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:variable>` 요소는 스타일시트에 전역 변수나 지역 변수를 선언하고 그 변수에 값을 줍니다. XSLT가 부작용(side-effect)을 허용하지 않기 때문에, 변수값을 한 번 주면 그 변수는 범위(scope)를 벗어날 때까지 같은 값입니다.
 

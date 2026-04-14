@@ -9,7 +9,7 @@ El interfaz de **`HTMLVideoElement`** provee propiedades especiales y metodos pa
 
 La lista de [supported media formats](/es/docs/Web/Media/Formats) (formatos de medios compatibles) varía de un navegador a otro. Debe proveer su video en un formato sencillo que sea compatible con todos los navegadores o proveer varias fuentes de videos in varios formatos, para que así todo navegador que necesite este cubierto.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Propiedades
 

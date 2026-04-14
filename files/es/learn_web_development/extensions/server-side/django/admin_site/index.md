@@ -15,7 +15,7 @@ Ahora que hemos creado modelos para el sitio web de la [BibliotecaLocal](/es/doc
       <td>
         Primero completa:
         <a
-          href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/Models"
+          href="/es/docs/Learn_web_development/Extensions/Server-side/Django/Models"
           >Tutorial Django Parte 3: Uso de modelos</a
         >.
       </td>

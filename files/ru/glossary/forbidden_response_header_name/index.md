@@ -10,4 +10,4 @@ slug: Glossary/Forbidden_response_header_name
 ## Смотрите также
 
 - [Fetch specification: forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
-- {{Glossary("Forbidden header name")}} (Glossary)
+- {{Glossary("Forbidden request header")}} (Glossary)

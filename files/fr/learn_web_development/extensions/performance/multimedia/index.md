@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/Multimedia
 original_slug: Learn/Performance/Multimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}
 
 Les fichiers média, et plus précisément les images et les vidéos, représentent plus de 70 % des octets téléchargés sur un site web classique. En termes de performance lors du téléchargement des ressources d'une page, la suppression des fichiers média et la réduction de la taille des fichiers est la solution de facilité pour produire des sites performants. Cet article s'intéresse à l'optimisation des images et des vidéos dans le but d'améliorer les performances.
 
@@ -15,11 +15,11 @@ Les fichiers média, et plus précisément les images et les vidéos, représent
       <td>
         Bases de l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base</a
         >
         installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >des technologies web opérant côté client</a
         >.
       </td>
@@ -107,7 +107,7 @@ Pour finir, si vous avez besoin d'afficher des images animées sur votre page, s
 
 #### Servir la taille optimale
 
-Dans le monde de la livraison d'images, l'approche « universelle » n'est pas celle qui donne les meilleurs résultats. En effet, pour les plus petits écrans, vous pourriez vouloir servir des images avec une résolution plus petite, et inversement pour les écrans les plus larges. En plus de cela, vous pourriez avoir envie de servir des images de haute résolution aux appareils qui ont un écran le plus de DPI (comme les écrans _Retina_). Ainsi, sauf si vous créez de nombreuses variations intermédiaires de vos images, vous allez aussi avoir besoin d'un moyen de servir le bon fichier pour le bon navigateur. Vous pouvez pour cela agrémenter vos éléments `<picture>` et `<source>` avec les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/source#attr-media) et/ou [`sizes`](/fr/docs/Web/HTML/Reference/Elements/source#attr-sizes). Un [article détaillé sur la combinaison de ces attributs peut être trouvé ici (en anglais)](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+Dans le monde de la livraison d'images, l'approche « universelle » n'est pas celle qui donne les meilleurs résultats. En effet, pour les plus petits écrans, vous pourriez vouloir servir des images avec une résolution plus petite, et inversement pour les écrans les plus larges. En plus de cela, vous pourriez avoir envie de servir des images de haute résolution aux appareils qui ont un écran le plus de DPI (comme les écrans _Retina_). Ainsi, sauf si vous créez de nombreuses variations intermédiaires de vos images, vous allez aussi avoir besoin d'un moyen de servir le bon fichier pour le bon navigateur. Vous pouvez pour cela agrémenter vos éléments `<picture>` et `<source>` avec les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/source#media) et/ou [`sizes`](/fr/docs/Web/HTML/Reference/Elements/source#sizes). Un [article détaillé sur la combinaison de ces attributs peut être trouvé ici (en anglais)](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
 
 Deux effets intéressants sont à garder en tête concernant les écrans à haut niveau de DPI :
 
@@ -132,4 +132,4 @@ Pour les images d'arrière-plan, il est important de mettre en place une valeur 
 
 Dans cette section nous avons vu l'optimisation des images. Vous avez maintenant une compréhension générale de la façon d'optimiser la bande passante de la moitié des sites web. Ce n'est qu'un des types d'optimisation consommant la bande passante des visiteurs et ralentissant le chargement des pages. Dans le prochain article, nous verrons l'optimisation du critère responsable de 20 % de la consommation de bande passante.
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn/Performance/video", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Measuring_performance", "Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance")}}

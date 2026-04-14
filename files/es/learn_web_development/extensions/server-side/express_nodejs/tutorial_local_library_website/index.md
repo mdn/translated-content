@@ -14,7 +14,7 @@ El primer artículo de nuestra serie de tutoriales prácticos explica lo que apr
       <th scope="row">Prerequisitos:</th>
       <td>
         Leer la
-        <a href="/es/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction"
           >Introducción a Express</a
         >.
         <span id="result_box" lang="es"

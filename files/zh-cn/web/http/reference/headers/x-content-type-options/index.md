@@ -11,9 +11,9 @@ slug: Web/HTTP/Reference/Headers/X-Content-Type-Options
 
 注意：`nosniff` 只应用于 "`script`" 和 "`style`" 两种类型。事实证明，将其应用于图片类型的文件会导致[与现有的站点冲突](https://github.com/whatwg/fetch/issues/395)。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 
