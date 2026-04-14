@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCDataChannelStats")}} 字典的 **`messagesReceived`** 属性返回与关联的 {{domxref("RTCDataChannel")}} 相关的已接收消息所触发的 [`message` 事件](/zh-CN/docs/Web/API/RTCDataChannel/message_event)的总数。
+{{domxref("RTCDataChannelStats")}} 字典的 **`messagesReceived`** 属性返回与之关联的 {{domxref("RTCDataChannel")}} 已接收消息所触发的 [`message` 事件](/zh-CN/docs/Web/API/RTCDataChannel/message_event)的总数。
 
 ## 值
 
-表示与关联数据通道的入站数据相关的 `message` 事件的总数的正整数值。
+表示与之关联数据通道的入站数据的 `message` 事件的总数的正整数值。
 
 ## 规范
 
