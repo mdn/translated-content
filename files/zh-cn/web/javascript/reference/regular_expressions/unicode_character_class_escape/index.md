@@ -176,7 +176,7 @@ Unicode 属性转义类别涵盖了更多的字符，而 `\p{Letter}` 或 `\p{Nu
 
 使用 `v` 标志时，`\p{…}` 可以利用字符串的特性，匹配可能长于一个字符的字符串：
 
-``js
+```js
 const flag = "🇺🇳";
 console.log(flag.length); // 2
 console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
@@ -204,7 +204,7 @@ console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 - [字符类转义：`\d`、`\D`、`\w`、`\W`、`\s`、`\S`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)
 - [字符转义：`\n`、`\u{...}`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)
 - [析取符：`|`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction)
-- 维基百科上的 [Unicode 字符类属性](https://en.wikipedia.org/wiki/Unicode_character_property)
+- 维基百科上的 [Unicode 字符属性](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [ES2018：RegExp Unicode 属性转义](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)，由 Dr. Axel Rauschmayer 撰写（2017）
 - [Unicode 正则表达式：属性章节](https://unicode.org/reports/tr18/#Categories)
 - [Unicode 工具集：UnicodeSet](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp)
