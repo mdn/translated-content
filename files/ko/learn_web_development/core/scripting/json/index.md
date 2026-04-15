@@ -14,10 +14,10 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
       <th scope="row">사전지식:</th>
       <td>
         컴퓨터 기초, HTML과 CSS에 대한 기본 지식, Javascript 기초 (<a
-          href="/ko/docs/Learn/JavaScript/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Scripting"
           >First steps</a
         >과
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >
         참조), OOJS 기초 (<a

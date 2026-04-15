@@ -17,23 +17,23 @@ l10n:
       <td>
         <p>
           이 장에 들어서기에 앞서 필요한 사전 지식에는
-          <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
             >HTML 시작하기</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata"
             >head 안에는 무엇이 있나? HTML 메타 데이터</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >HTML 텍스트 기본</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links"
             >하이퍼링크 만들기</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features"
             >텍스트 조작 고급기법</a
           >
           등이 있습니다.

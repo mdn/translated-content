@@ -20,7 +20,7 @@ l10n:
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >,
-        <a href="/ko/docs/Learn/Getting_started_with_the_web"
+        <a href="/ko/docs/Learn_web_development/Getting_started/Your_first_website"
           >클라이언트 사이드 웹 기술들</a
         >의 기본적인 지식.
       </td>

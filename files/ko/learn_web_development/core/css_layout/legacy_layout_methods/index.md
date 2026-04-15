@@ -15,12 +15,12 @@ original_slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
     <tr>
       <th scope="row">선결 사항:</th>
       <td>
-        HTML 기본 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 기본 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문</a
         >
         학습), CSS의 작동 방식
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS">CSS 입문 </a>및
-        (<a href="/ko/docs/Learn/CSS/Styling_boxes">박스 양식 지정</a> 학습)
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics">CSS 입문 </a>및
+        (<a href="/ko/docs/Learn_web_development/Core/Styling_basics">박스 양식 지정</a> 학습)
       </td>
     </tr>
     <tr>

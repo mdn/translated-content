@@ -15,11 +15,11 @@ l10n:
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        JavaScript 기본 (<a href="/ko/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        JavaScript 기본 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">first steps</a>,
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
-        <a href="/ko/docs/Learn/JavaScript/Objects">JavaScript objects</a>를 참고하세요.),
+        <a href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>를 참고하세요.),
         <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >Client-side APIs의 기본</a
         >
