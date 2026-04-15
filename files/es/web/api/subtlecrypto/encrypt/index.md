@@ -1,5 +1,6 @@
 ---
 title: "SubtleCrypto: método encrypt() "
+short-title: "encrypt()"
 slug: Web/API/SubtleCrypto/encrypt
 l10n:
   sourceCommit: 373b648fd3f8f742aac14180ebe4ab2e07f8dfab
@@ -22,7 +23,7 @@ encrypt(algorithm, key, data)
 
 - `algorithm`
   - : Un objeto que especifica el [algorithm](#supported_algorithms) que se va a utilizar y cualquier parámetro adicional necesario:
-    - Para usar [RSA-OAEP](#rsa-oaep), pasa un objeto{{domxref("RsaOaepParams")}}.
+    - Para usar [RSA-OAEP](#rsa-oaep), pasa un objeto {{domxref("RsaOaepParams")}}.
     - Para usar [AES-CTR](#aes-ctr), pasa un objeto {{domxref("AesCtrParams")}}.
     - Para usar [AES-CBC](#aes-cbc), pasa un objeto {{domxref("AesCbcParams")}}.
     - Para usar [AES-GCM](#aes-gcm), pasa un objeto {{domxref("AesGcmParams")}}.
@@ -42,7 +43,7 @@ Un objeto {{jsxref("Promise")}} que se resuelve con un {{jsxref("ArrayBuffer")}}
 La promesa se rechaza cuando se presentan las siguientes excepciones:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Se lanza cuando la operación solicitada no es válida para la clave proporcionada (por ejemplo, un algoritmo de crifrado no válido o una clave incompatible con el algoritmo especificado).
+  - : Se lanza cuando la operación solicitada no es válida para la clave proporcionada (por ejemplo, un algoritmo de cifrado no válido o una clave incompatible con el algoritmo especificado).
 - `OperationError` {{domxref("DOMException")}}
   - : Se lanza cuando la operación falla por un motivo específico (por ejemplo, parámetros del algoritmo con tamaños no válidos o un texto plano en AES-GCM más largo que 2<sup>39</sup>−256 bytes).
 
@@ -62,7 +63,7 @@ La Web Crypto API admite tres modos AES diferentes:
 
 Se recomienda encarecidamente utilizar _cifrado autenticado_, que incluye comprobaciones para asegurar que el texto cifrado no haya sido modificado por un atacante.
 La autenticación ayuda a proteger contra ataques de _texto-cifrado-elegido_ (chosen-ciphertext attacks), en los que un atacante puede solicitar al sistema que descifre mensajes arbitrarios para deducir información sobre la clave secreta.
-Si bien es posible añadir autenticación a los modos CTR y CBC, estos no la proporcionan por defecto y al implementarla manualmente, es fácil cometer errores sutiles,pero graves.
+Si bien es posible añadir autenticación a los modos CTR y CBC, estos no la proporcionan por defecto y al implementarla manualmente, es fácil cometer errores sutiles, pero graves.
 GCM proporciona autenticación integrada y, por esta razón, suele recomendarse por encima de los otros dos modos AES.
 
 ### RSA-OAEP
@@ -208,10 +209,10 @@ function encryptMessage(key) {
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
-- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
-- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CTR mode.
-- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CBC mode.
-- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) specifies GCM mode.
+- [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) especifica RSAOAEP.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) especifica GCM mode.
