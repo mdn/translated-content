@@ -1,27 +1,30 @@
 ---
 title: Array.prototype.findLast()
+short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
+l10n:
+  sourceCommit: f9fe909466736b335491bdd866701e4b023057d0
 ---
 
 **`findLast()`** 方法反向迭代数组，并返回满足提供的测试函数的第一个元素的值。如果没有找到对应元素，则返回 {{jsxref("undefined")}}。
 
-如果你需要找到：
+如果你需要查找：
 
-- *第一个*匹配的元素，使用 {{jsxref("Array/find", "find()")}}。
-- 数组中最后一个匹配元素的*索引*，使用 {{jsxref("Array/findLastIndex", "findLastIndex()")}}。
-- _某个值的索引_，使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
-- 该数组中是否*存在*一个值，使用 {{jsxref("Array/includes()", "includes()")}}。同样地，它检查每个元素是否和值相等，而不是使用一个测试函数。
-- 是否有任意一个元素满足提供的测试函数，使用 {{jsxref("Array/some()", "some()")}}。
+- *第一个*匹配的元素，请使用 {{jsxref("Array/find", "find()")}}。
+- 数组中最后一个匹配元素的*索引*，请使用 {{jsxref("Array/findLastIndex", "findLastIndex()")}}。
+- _某个值的索引_，请使用 {{jsxref("Array/indexOf", "indexOf()")}}。（它类似于 {{jsxref("Array/findIndex", "findIndex()")}}，但是会检查每个元素是否与值相等，而不是使用一个测试函数。）
+- 某个值是否*存在*该数组中，请使用 {{jsxref("Array/includes", "includes()")}}。同样地，它会检查每个元素是否与该值相等，而不是使用一个测试函数。
+- 是否有任意一个元素满足给定的测试函数，请使用 {{jsxref("Array/some", "some()")}}。
 
-{{InteractiveExample("JavaScript Demo: Array.findLast()", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
-const array1 = [5, 12, 50, 130, 44];
+const array = [5, 12, 50, 130, 44];
 
-const found = array1.findLast((element) => element > 45);
+const found = array.findLast((element) => element > 45);
 
 console.log(found);
-// Expected output: 130
+// 期望输出：130
 ```
 
 ## 语法
@@ -133,6 +136,43 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
 > [!NOTE]
 > `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
+### 查找最近完成的任务
+
+此示例演示了在处理按时间排序的数据时 `findLast()` 的一个实际应用场景。它从已按 `timestamp` 排序的列表中查找最近完成的任务。
+
+```js
+const tasks = [
+  { name: "搭建项目", completed: true, timestamp: 1609459200000 },
+  { name: "编写测试", completed: false, timestamp: 1609545600000 },
+  { name: "修复 bug #42", completed: true, timestamp: 1609632000000 },
+  { name: "部署到预发环境", completed: true, timestamp: 1609718400000 },
+  { name: "审查 PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask.name); // 部署到预发环境
+```
+
+这比对倒序数据使用 `find()` 更高效，因为它避免了创建新数组。
+
+### 使用回调函数的第三个参数
+
+如果你需要访问数组中的另一个元素，`array` 参数会非常有用，尤其是在没有现有的变量引用该数组时。以下示例首先使用 `filter()` 提取正数，然后使用 `findLast()` 查找小于其相邻元素的最后一个元素。
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const lastTrough = numbers
+  .filter((num) => num > 0)
+  .findLast((num, idx, arr) => {
+    // 如果没有 arr 参数，就无法轻松访问中间数组，除非将其保存到变量中。
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(lastTrough); // 2
+```
+
 ### 在稀疏数组上使用 findLast()
 
 稀疏数组中的空槽*被*访问，并被视为 `undefined`。
@@ -144,6 +184,7 @@ const array = [0, 1, , , , 5, 6];
 // 显示所有的索引（不只包括那些被赋值的）
 array.findLast((value, index) => {
   console.log(`访问索引 ${index}，值为 ${value}`);
+  return false;
 });
 // 访问索引 6，值为 6
 // 访问索引 5，值为 5
@@ -162,6 +203,7 @@ array.findLast((value, index) => {
   }
   // 元素 5 在被删除后，仍会被访问
   console.log(`访问索引 ${index}，值为 ${value}`);
+  return false;
 });
 // 删除值为 array[5]，其值为 5
 // 访问索引 6，值为 6
@@ -183,6 +225,7 @@ const arrayLike = {
   0: 2,
   1: 7.3,
   2: 4,
+  3: 3, // 被 findLast() 忽略，因为 length 是 3
 };
 console.log(
   Array.prototype.findLast.call(arrayLike, (x) => Number.isInteger(x)),
@@ -199,7 +242,8 @@ console.log(
 
 ## 参见
 
-- [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#array-find-from-last)
+- [`Array.prototype.findLast` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.findlast)
 - [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
