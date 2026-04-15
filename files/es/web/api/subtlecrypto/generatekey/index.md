@@ -183,7 +183,7 @@ button.addEventListener("click", () => {
   // Borra los registros
   logElement.innerText = "";
   logElement.scrollTop = logElement.scrollHeight;
-  // Ejecuta función test
+  // Ejecuta la función test
   test();
 });
 
