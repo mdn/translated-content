@@ -102,7 +102,7 @@ tfoot td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>

@@ -241,6 +241,6 @@ img {
 
 Если вы застряли, вы всегда можете сравнить свою работу с нашим [готовым примером кода на Github](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css).
 
-Здесь мы узнали только самую поверхность CSS. Чтобы узнать больше, перейдите на нашу [страницу изучения CSS](/ru/docs/Learn/CSS).
+Здесь мы узнали только самую поверхность CSS. Чтобы узнать больше, перейдите на нашу [страницу изучения CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}

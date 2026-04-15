@@ -143,7 +143,7 @@ function changeGridAutoFlow() {
    7. [Alinhamento de Box no grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
    8. [Grids, logical values e writing modes](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
    9. [CSS Grid Layout e Acessibilidade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout e Progressive Enhancement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   10. [CSS Grid Layout e Progressive Enhancement](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
    11. [Identificando layouts comuns usando grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propriedades**

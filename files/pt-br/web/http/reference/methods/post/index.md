@@ -34,7 +34,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Safe"
+        <a href="/pt-BR/docs/Glossary/Safe"
           >Seguro</a
         >
       </th>
@@ -42,7 +42,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     </tr>
     <tr>
       <th scope="row">
-        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Idempotent"
+        <a href="/pt-BR/docs/Glossary/Idempotent"
           >Idempotente</a
         >
       </th>
@@ -59,7 +59,7 @@ Quando a requisição `POST` é enviada através de um método diferente de um f
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulários HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulários HTML</a>
       </th>
       <td>Sim</td>
     </tr>

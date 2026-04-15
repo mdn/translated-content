@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco sobre e os casos de usos, configurar uma React toolchain no computador localmente, e criar e usar um app simples como partida, aprendendo um pouco sobre como os processos do React funcionam.
 
@@ -14,9 +14,9 @@ Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco so
       <th scope="row">Pré-requisitos:</th>
       <td>
         <p>
-          Familiaridade com <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e linguagem
-          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento de
+          Familiaridade com <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e linguagem
+          <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>, conhecimento de
           <a
             href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/linha de comandos.</a
@@ -456,4 +456,4 @@ No React
 - Alguns atributos de JSX são diferente dos atributos de HTML, isto é feito para que eles não entrem em conflito com palavras reservadas do JavaScript. Por exemplo. `class` no HTML transforma-se em `className` no JSX. Note que atributos com múltiplas palavras são escritos no padrão de formatação _camel-case_.
 - _Props_ são escritas bem como atributos dentro das invocações de componentes e são passadas para dentro de componentes.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

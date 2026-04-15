@@ -265,7 +265,7 @@ transform: rotate(90deg);
 ```
 
 > [!NOTE]
-> Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing).
+> Para mais informações em como lhe dar com propriedades prefixadas, veja [Lidando com problemas comuns em HTML e CSS — Lidando com prefixos CSS](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes) do nosso módulo [Teste Cross-browsing](/pt-BR/docs/Learn_web_development/Extensions/Testing).
 
 > [!NOTE]
 > Veja a página [Extenções CSS Mozilla](/pt-BR/docs/Web/CSS/Mozilla_Extensions) para mais informações sobre propriedades CSS prefixadas da Mozilla.

@@ -12,7 +12,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
   <tbody>
     <tr>
       <th>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>
@@ -23,7 +23,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
       <td>
         <p>Se o elemento é um {{HTMLElement("iframe")}}</p>
         <p>
-          <a href="/pt-BR/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>, ou se a informação
+          <a href="/pt-BR/docs/Web/HTML/Reference/Elements/iframe#srcdoc"><code>srcdoc</code></a>, ou se a informação
           do título está sendo avaliada desde um nivel alto do protocolo, zero
           ou mais elementos de conteúdo de metadados.
         </p>

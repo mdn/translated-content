@@ -96,7 +96,7 @@ Tal como as tabelas, grid layout permite ao autor alinhar os componentes da pág
 - [Alinhamento Box no CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Grid, Valores Lógicos e Modos de Escrita](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout e Acessibilidade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid e Aprimoramento Progressivo](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid e Aprimoramento Progressivo](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
 - [Realizando layouts comuns usando CSS Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Especificações

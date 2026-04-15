@@ -12,7 +12,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias do conteúdo</a
         >
       </th>

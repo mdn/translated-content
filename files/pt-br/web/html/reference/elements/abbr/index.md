@@ -157,15 +157,15 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_de_fluxo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_de_fluxo"
           >Conteúdo de fluxo</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >conteúdo fraseado</a
         >, conteúdo palpável
       </td>
@@ -173,7 +173,7 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >Conteúdo fraseado</a
         >
       </td>
@@ -186,7 +186,7 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >conteúdo fraseado</a
         >
       </td>

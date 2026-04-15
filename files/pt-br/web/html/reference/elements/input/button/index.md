@@ -67,8 +67,8 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -384,4 +384,4 @@ draw();
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/pt-BR/docs/Learn_web_development/Extensions/Forms)

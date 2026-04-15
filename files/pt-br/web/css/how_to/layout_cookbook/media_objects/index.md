@@ -55,7 +55,7 @@ O que você precisará fazer é remover as margens aplicadas ao item e as largur
 ## Recursos relevantes no MDN
 
 - [Layout Grade CSS](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
-- [Aprimoramento progressivo e Layout de Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [Aprimoramento progressivo e Layout de Grid](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
 - [Usando áreas de modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [Conteúdo Adequado](/pt-BR/docs/Web/CSS/fit-content)
 - [Áreas de Modelo de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)

@@ -79,7 +79,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>

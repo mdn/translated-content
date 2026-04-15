@@ -113,7 +113,7 @@ A tabela abaixo fornece uma lista completa dos caracteres especiais que podem se
           <br />Este caractere tem um significado diferente quando aparece como
           o primeiro caractere em um conjunto padrão de caracteres. Veja
           <a
-            href="/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#special-negated-character-set"
+            href="/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#special-negated-character-set"
             >conjunto de caracteres negados ou complementados</a
           >
           para detalhes e mais exemplos.

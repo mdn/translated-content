@@ -58,7 +58,7 @@ O conteúdo deste elemento é estático e não [editável](/pt-BR/docs/Web/HTML/
 
 A seguir um exemplo de como simular uma lista de seleção com opções editáveis, **mas esteja ciente** de que leitores de tela e dispositivos de acessibilidade _não_ interpretarão o formulário corretamente; este exemplo seria HTML inválido se os elementos corretos fossem usados:
 
-[Este é um exemplo](/files/4563/editable_select.html) de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/Web/HTML/Reference/Elements/input) e [caixas de texto](/pt-BR/docs/Web/HTML/Element/input) (**escrito somente com CSS**, sem JavaScript),
+[Este é um exemplo](/files/4563/editable_select.html) de um select editável usando um {{HTMLElement("fieldset")}} de [botões de opção](/pt-BR/docs/Web/HTML/Reference/Elements/input) e [caixas de texto](/pt-BR/docs/Web/HTML/Reference/Elements/input) (**escrito somente com CSS**, sem JavaScript),
 
 ## Especificações
 

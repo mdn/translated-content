@@ -42,7 +42,7 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos centrais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Atributos específicos
 
@@ -60,4 +60,4 @@ O elemento implementa a interface do [`SVGStyleElement`](/pt-BR/docs/DOM/SVGStyl
 
 ## Veja também
 
-- [Elemento \<style> no HTML](/pt-BR/docs/HTML/Element/style)
+- [Elemento \<style> no HTML](/pt-BR/docs/Web/HTML/Reference/Elements/style)

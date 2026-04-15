@@ -12,17 +12,17 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
   <tbody>
     <tr>
       <th>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories">Categoria</a> de
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Categoria</a> de
         conteúdo
       </th>
       <td>
         Conteúdo de metadado. Se o
-        <a href="/pt-BR/docs/Web/HTML/Element/meta#itemprop"><code>itemprop</code></a> atributo estiver
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/meta#itemprop"><code>itemprop</code></a> atributo estiver
         presente:
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -43,7 +43,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>:
         um elemento {{HTMLElement("head")}}. Se o
-        <a href="/pt-BR/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> não for uma
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/meta#http-equiv"><code>http-equiv</code></a> não for uma
         declaração de codificação, ele pode estar dentro de um elemento
         {{HTMLElement("noscript")}}, dentro de um elemento
         {{HTMLElement("head")}}.

@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Attribute/style
 original_slug: Web/SVG/Attribute/style
 ---
 
-« [Página inicial de referência do atributo SVG](/pt-BR/docs/SVG/Attribute)
+« [Página inicial de referência do atributo SVG](/pt-BR/docs/Web/SVG/Reference/Attribute)
 
 Este atributo especifica informação de estilo para o elemento atual. O atributo "style" especifica informação de estilo para um único elemento. As linguagem da folha de estilos para as regras de estilos em linhas é dada pelo valor do atributo {{ SVGAttr("contentStyleType") }} no elemento the {{ SVGElement("SVG") }}.
 

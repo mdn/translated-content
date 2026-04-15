@@ -17,11 +17,11 @@ Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. E
       <td>
         <p>
           Familiaridade básica em HTML, conforme
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
             >Começando com o HTML</a
           >. Formatação de texto em HTML, conforme
           <a
-            href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
+            href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >Fundamentos do texto em HTML</a
           >.
         </p>

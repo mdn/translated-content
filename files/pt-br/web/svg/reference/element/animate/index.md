@@ -42,17 +42,17 @@ svg {
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
 - [Other Animation attributes](/pt-BR/docs/Web/SVG/Reference/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [Animation event attributes](/docs/Web/SVG/Attribute/Events#Animation_Event_Attributes)
+- [Animation event attributes](/docs/Web/SVG/Reference/Attribute#Animation_Event_Attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ### Global attributes
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+- [Styling Attributes](/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
 - Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes)
+  - : [Global event attributes](/docs/Web/SVG/Reference/Attribute#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Reference/Attribute#Document_Element_Event_Attributes)
 
 ## Usage notes
 

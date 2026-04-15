@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 O objetivo desta lição é desenvolver sua compreensão de alguns dos conceitos mais fundamentais do CSS — a cascata, especificidade e herança — que controlam como o CSS é aplicado ao HTML e como os conflitos entre as declarações de estilo são resolvidos.
 
@@ -17,17 +17,17 @@ Embora trabalhar com esta lição possa parecer menos relevante imediatamente e 
       <td>
         Conhecimentos básicos em informática,
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conhecimentos básicos de
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabalhando com arquivos</a
         >, noções básicas de HTML (estudo
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
          >), e uma ideia de como funciona o CSS (estudo
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">Primeiros passos do CSS</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">Primeiros passos do CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -182,7 +182,7 @@ A quantidade de especificidade que um seletor tem é medida usando três valores
 - **Elementos**: Pontue um nesta coluna para cada seletor de elemento ou pseudoelemento contido no seletor geral.
 
 > [!NOTE]
-> O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
+> O seletor universal ([`*`](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' ') e seletor de ajuste de especificidade ([`:where()`](/pt-BR/docs/Web/CSS/:where)) juntamente com seus parâmetros, não têm efeito na especificidade.
 
 A negação ([`:not()`](/pt-BR/docs/Web/CSS/Reference/Selectors/:not)), seletor relacional ([`:has()`](/pt-BR/docs/Web/CSS /:has)), e as pseudoclasses matches-any ([`:is()`](/pt-BR/docs/Web/CSS/:is)) não têm efeito na especificidade, mas suas parâmetros fazem. A especificidade que cada um contribui para o algoritmo de especificidade é a especificidade do seletor no parâmetro que tem maior peso.
 
@@ -280,10 +280,10 @@ Você chegou ao final deste artigo, mas consegue se lembrar das informações ma
 
 ## Resumo
 
-Se você entendeu a maior parte deste artigo, então muito bem — você começou a se familiarizar com a mecânica fundamental do CSS. A seguir, examinaremos mais profundamente as [Camadas em cascata](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_layers).
+Se você entendeu a maior parte deste artigo, então muito bem — você começou a se familiarizar com a mecânica fundamental do CSS. A seguir, examinaremos mais profundamente as [Camadas em cascata](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Cascade_layers).
 
 Se você não entendeu totalmente a cascata, a especificidade e a herança, não se preocupe! Esta é definitivamente a coisa mais complicada que abordamos até agora no curso e é algo que mesmo os desenvolvedores web profissionais às vezes acham complicado. Aconselhamos que você retorne a este artigo algumas vezes ao longo do curso e continue pensando sobre isso.
 
 Volte aqui se você começar a encontrar problemas estranhos com estilos que não se aplicam conforme o esperado. Pode ser um problema de especificidade.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Cascade_layers", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}

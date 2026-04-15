@@ -23,7 +23,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 ### CSS
 
-- [Iniciando com o CSS](/pt-BR/docs/CSS/Getting_Started) — um guia para iniciantes sobre CSS, cobrindo os conceitos básicos e fundamentais.
+- [Iniciando com o CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics) — um guia para iniciantes sobre CSS, cobrindo os conceitos básicos e fundamentais.
 - [Guia de referência CSS](/pt-BR/docs/Web/CSS/Reference) — um guia completo para CSS com detalhes do nível de suporte do Gecko/Firefox para cada um deles.
 - [Introdução do W3C à estilização com CSS](https://www.w3.org/MarkUp/Guide/Style) — um breve guia para estilizar páginas da web para iniciantes.
 - [Perguntas comuns sobre CSS](/pt-BR/Common_CSS_Questions) — perguntas frequentes e respostas para iniciantes.
@@ -33,7 +33,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 #### Iniciante
 
-- [Iniciando com JavaScript](/pt-BR/docs/JavaScript/Getting_Started) — o que é Javascript e como ele pode ajudar você?
+- [Iniciando com JavaScript](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) — o que é Javascript e como ele pode ajudar você?
 - [Guia de referência JavaScript](/pt-BR/docs/Web/JavaScript/Guide) — um guia completo e regularmente atualizado de JavaScript para todos os níveis de aprendizado, do iniciante ao avançado.
 - [Crockford no JavaScript](https://www.youtube.com/playlist?list=PL7664379246A246CB) — uma série de vídeos aprofundada sobre a linguagem JavaScript.
 - [JavaScript Elouquente](https://eloquentjavascript.net/contents.html) — um guia completo para metodologias JavaScript intermediárias e avançadas.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 Nos primórdios do web design, páginas eram criadas para serem visualizadas em um tamanho de tela específico. Se o usuário tivesse uma tela maior ou menor do que o esperado, os resultados iam de barras de rolagem indesejadas, tamanhos de linha excessivamente longos e uso inadequado do espaço. À medida que diferentes tamanhos de tela foram aparecendo, surgiu o conceito de web design responsivo (RWD), um conjunto de práticas que permite que páginas da Web alterem seu layout e aparência para se adequarem a diferentes larguras, resoluções, etc. É uma ideia que mudou a forma de como projetamos para a Web com múltiplos dispositivos e, neste artigo, ajudaremos você a entender as principais técnicas que você precisa conhecer para dominá-la.
 
@@ -14,11 +14,11 @@ Nos primórdios do web design, páginas eram criadas para serem visualizadas em 
       <th scope="row">Prerrequisitos:</th>
       <td>
         HTML básico (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), e uma idea de como o CSS funciona (estude
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS first steps</a> e
-        <a href="/pt-BR/docs/Learn/CSS/Building_blocks">CSS building blocks</a
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS first steps</a> e
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333">CSS building blocks</a
         >.)
       </td>
     </tr>
@@ -299,4 +299,4 @@ Responsive design refers to a site or application design that responds to the en
 
 It has also become much easier to achieve responsive designs with the help of the layout methods you have learned in these lessons. If you are new to web development today you have many more tools at your disposal than in the early days of responsive design. It is therefore worth checking the age of any materials you are referencing. While the historical articles are still useful, modern use of CSS and HTML makes it far easier to create elegant and useful designs, no matter what device your visitor views the site with.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
