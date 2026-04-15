@@ -15,7 +15,7 @@ Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fo
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS,
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting"
           >Primeiros passos do JavaScript</a
         >,
         <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Functions"

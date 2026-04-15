@@ -58,10 +58,10 @@ svg {
 
 Para {{SVGElement('altGlyph')}}, `fill` é a apresentação do atributo que define a coloração de um glifo (figura, ícone, simbolo).
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -109,10 +109,10 @@ Para {{SVGElement('animateTransform')}}, o atributo `fill` define o estado final
 
 Para {{SVGElement('circle')}}, `fill` é o atributo de apresentação utilizado para definir a coloração de um círculo.
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -121,10 +121,10 @@ Para {{SVGElement('circle')}}, `fill` é o atributo de apresentação utilizado 
 
 Para {{SVGElement('ellipse')}}, `fill` é o atributo de apresentação utilizado para definir a cor de uma elipse.
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -133,10 +133,10 @@ Para {{SVGElement('ellipse')}}, `fill` é o atributo de apresentação utilizado
 
 Para {{SVGElement('path')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -145,10 +145,10 @@ Para {{SVGElement('path')}}, `fill` é um atributo de apresentação que define 
 
 Para {{SVGElement('polygon')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -157,10 +157,10 @@ Para {{SVGElement('polygon')}}, `fill` é um atributo de apresentação que defi
 
 For {{SVGElement('polyline')}}, `fill` é um atributo de apresentação que define a coloração do interior de uma forma. (O interior é definido pelo atributo _{{SVGAttr('fill-rule')}}_).
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -169,10 +169,10 @@ For {{SVGElement('polyline')}}, `fill` é um atributo de apresentação que defi
 
 Para {{SVGElement('rect')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um retângulo.
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -190,10 +190,10 @@ Para {{SVGElement('set')}}, o atributo `fill` define o estado final de uma anima
 
 Para {{SVGElement('text')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto.
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -202,10 +202,10 @@ Para {{SVGElement('text')}}, `fill` é o atributo de apresentação utilizado pa
 
 For {{SVGElement('textPath')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -217,10 +217,10 @@ For {{SVGElement('textPath')}}, `fill` é o atributo de apresentação utilizado
 
 Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.
@@ -229,10 +229,10 @@ Para {{SVGElement('tref')}}, `fill` é o atributo de apresentação utilizado pa
 
 Para {{SVGElement('tspan')}}, `fill` é o atributo de apresentação utilizado para definir a cor de um texto
 
-| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Content_type#paint)** |
-| ------------ | ------------------------------------------------------ |
-| Valor Padrão | `black`                                                |
-| Animável     | Sim                                                    |
+| Valor        | **[\<paint>](/pt-BR/docs/Web/SVG/Guides/Content_type#paint)** |
+| ------------ | ------------------------------------------------------------- |
+| Valor Padrão | `black`                                                       |
+| Animável     | Sim                                                           |
 
 > [!NOTE]
 > Por ser um atributo de apresentação, `fill` pode ser usado como uma propriedade CSS.

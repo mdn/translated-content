@@ -16,7 +16,7 @@ slug: Web/HTTP/Reference/Headers/Content-Type
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>нет</td>
     </tr>
     <tr>

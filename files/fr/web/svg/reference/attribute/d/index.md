@@ -67,9 +67,9 @@ Pour un [`<path>`](/fr/docs/Web/SVG/Reference/Element/path), `d` est une chaîne
 ## `<glyph>`
 
 > [!WARNING]
-> Depuis SVG2, [`<glyph>`](/fr/docs/Web/SVG/Element/glyph) est déprécié et ne doit plus être utilisé.
+> Depuis SVG2, [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne doit plus être utilisé.
 
-Pour un élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+Pour un élément [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
 
 <table class="properties">
   <tbody>
@@ -91,14 +91,14 @@ Pour un élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), `d` est une chaî
 </table>
 
 > [!NOTE]
-> Le point d'origine (situé aux coordonnées `0, 0`) correspond généralement au _coin en haut à gauche_ du contexte. Néanmoins, pour l'élément [`<glyph>`](/fr/docs/Web/SVG/Element/glyph), l'origine se situe dans le coin en bas à gauche de son enveloppe.
+> Le point d'origine (situé aux coordonnées `0, 0`) correspond généralement au _coin en haut à gauche_ du contexte. Néanmoins, pour l'élément [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), l'origine se situe dans le coin en bas à gauche de son enveloppe.
 
 ## `<missing-glyph>`
 
 > [!WARNING]
-> Depuis SVG2, [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph) est déprécié et ne doit plus être utilisé.
+> Depuis SVG2, [`<missing-glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face) est déprécié et ne doit plus être utilisé.
 
-Pour un élément [`<missing-glyph>`](/fr/docs/Web/SVG/Element/missing-glyph), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
+Pour un élément [`<missing-glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour du glyphe.
 
 <table class="properties">
   <tbody>

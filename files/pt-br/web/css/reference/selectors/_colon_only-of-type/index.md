@@ -8,7 +8,7 @@ original_slug: Web/CSS/:only-of-type
 
 ## Descrição
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) CSS `:only-of-type` representa qualquer elemento que não possui irmãos de um determinado tipo.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) CSS `:only-of-type` representa qualquer elemento que não possui irmãos de um determinado tipo.
 
 ## Sintaxe
 

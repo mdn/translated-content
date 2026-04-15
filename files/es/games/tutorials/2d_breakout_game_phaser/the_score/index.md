@@ -3,7 +3,7 @@ title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
 
 Este es el paso **11º** de 16 del tutorial de [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html).
 
@@ -64,4 +64,4 @@ Puede comprobar el código terminado de esta lección en la demo que aparece a c
 
 Ya tenemos un sistema de puntuación, pero para qué sirve jugar y mantener la puntuación si no se puede ganar. Veremos cómo podemos añadir la victoria, permitiendonos así ganar el juego.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}

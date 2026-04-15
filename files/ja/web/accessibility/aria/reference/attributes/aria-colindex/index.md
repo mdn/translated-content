@@ -115,6 +115,6 @@ ARIA 使用の最初のルールは、「要素を再利用し、それをアク
 - HTML {{HTMLElement('td')}} 要素
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

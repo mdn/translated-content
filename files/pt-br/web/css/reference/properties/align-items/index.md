@@ -281,8 +281,8 @@ display.addEventListener("change", function (evt) {
 
 ## Veja também
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
 - CSS Grid Guide: _[Box alignment in CSS Grid layouts](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS Box Alignment](/pt-BR/docs/Web/CSS/CSS_Box_Alignment)
 - The {{cssxref("align-self")}} property

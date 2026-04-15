@@ -36,21 +36,21 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenidos</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >Contenido dinámico</a
         >,
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_textual_o_estático"
           >contenido textual o estático</a
         >, contenido incrustado, contenido interactivo,
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_tangible"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_tangible"
           >contenido tangible</a
         >.
       </td>

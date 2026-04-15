@@ -18,9 +18,9 @@ Por defecto, solo se exponen las 7 cabeceras HTTP seguras ({{Glossary("CORS-safe
 
 Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarlas usando la cabecera `Access-Control-Expose-Headers`
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## Sintaxis
 

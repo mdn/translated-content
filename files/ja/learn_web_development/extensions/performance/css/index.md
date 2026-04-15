@@ -287,7 +287,7 @@ article {
 
 ## 関連情報
 
-- [CSS アニメーションのパフォーマンス](/ja/docs/Web/Performance/CSS_JavaScript_animation_performance)
+- [CSS アニメーションのパフォーマンス](/ja/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
 - [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)
 

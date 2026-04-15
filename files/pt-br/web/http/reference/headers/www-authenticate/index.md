@@ -15,7 +15,7 @@ O cabeçalho `WWW-Authenticate` é enviado junto a resposta {{HTTPStatus("401")}
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

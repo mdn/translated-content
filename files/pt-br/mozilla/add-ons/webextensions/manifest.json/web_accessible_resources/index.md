@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 
 As vezes, você precisa empacotar recursos — por exemplo, imagens, HTML, CSS ou Javascript — com a sua extensão e fazê-la acessível para as páginas web.
 
-Por exemplo, a [extensão de exemplo Beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos [`<img>`](/pt-BR/docs/Web/HTML/Element/img) cujo atributo `src` aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.
+Por exemplo, a [extensão de exemplo Beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img) cujo atributo `src` aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.
 
 With the `web_accessible_resources` key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.
 
@@ -52,7 +52,7 @@ my-extension-files/
         my-image.png
 ```
 
-To enable a web page to use an [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element whose `src` attribute points to this image, you would specify `web_accessible_resources` like this:
+To enable a web page to use an [`<img>`](/pt-BR/docs/Web/HTML/Reference/Elements/img) element whose `src` attribute points to this image, you would specify `web_accessible_resources` like this:
 
 ```json
 "web_accessible_resources": ["images/my-image.png"]

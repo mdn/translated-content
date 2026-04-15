@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Async_JS/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 Dans cet article, nous expliquerons ce qu'est la programmation asynchrone, en quoi elle est nécessaire et nous aborderons brièvement certaines des façons dont les fonctions asynchrones ont été implémentées en JavaScript au fil temps.
 
@@ -319,4 +319,4 @@ Lorsqu'on imbrique les fonctions de rappel ainsi, il devient très difficile de 
 
 C'est pour ces raisons que la plupart des API asynchrones modernes n'utilisent plus les <i lang="en">callbacks</i>. À la place, la programmation asynchrone en JavaScript utilise [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), et c'est ce que nous verrons dans le prochain article.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

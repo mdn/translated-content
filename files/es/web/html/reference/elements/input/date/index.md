@@ -59,10 +59,10 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a> y
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -520,4 +520,4 @@ daySelect.onchange = function () {
 - Los elementos {{HTMLElement("input")}} generícos y la interfaz usada para manipularlos, {{domxref("HTMLInputElement")}}
 - [Tutorial seleccionador de fechas](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)
 - [Formatos de fecha y tiempo usados en HTML](/es/docs/Web/HTML/Date_and_time_formats)
-- [Compatibilidad con las propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad con las propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)
