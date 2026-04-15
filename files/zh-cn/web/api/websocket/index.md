@@ -12,7 +12,7 @@ l10n:
 使用 [`WebSocket()`](/zh-CN/docs/Web/API/WebSocket/WebSocket) 构造函数来构造一个 `WebSocket`。
 
 > [!NOTE]
-> `WebSocket` API 无法应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压（backpressure）)，因此当消息到达速度超过应用程序的处理速度时，应用程序要么因缓冲这些消息而耗尽设备内存，要么因 100% CPU 使用率而变得无响应，甚至可能同时出现这两种情况。如需一种能提供自动背压的替代方案，请参阅 {{domxref("WebSocketStream")}}。
+> `WebSocket` API 无法应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压（backpressure）)，因此当消息到达速度超过应用程序的处理速度时，应用程序要么因缓冲这些消息而耗尽设备内存，要么因 100% CPU 使用率而变得无响应，甚至可能同时出现这两种情况。如需一种能提供自动背压的替代方案，请参见 {{domxref("WebSocketStream")}}。
 
 {{InheritanceDiagram}}
 
@@ -26,7 +26,7 @@ l10n:
 - {{domxref("WebSocket.binaryType")}}
   - : 使用二进制的数据类型连接。
 - {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
-  - : 未发送至服务器的字节数。
+  - : 队列中数据的字节数。
 - {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : 服务器选择的扩展。
 - {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
@@ -50,7 +50,7 @@ l10n:
 - {{domxref("WebSocket/close_event", "close")}}
   - : 当一个 `WebSocket` 连接被关闭时触发。也可以通过 `onclose` 属性使用。
 - {{domxref("WebSocket/error_event", "error")}}
-  - : 当一个 `WebSocket` 连接因错误而关闭时触发，例如无法发送数据时。也可以通过 `onerror` 属性使用。
+  - : 当一个 `WebSocket` 连接因错误（例如无法发送数据）而关闭时触发。也可以通过 `onerror` 属性使用。
 - {{domxref("WebSocket/message_event", "message")}}
   - : 当通过 `WebSocket` 收到数据时触发。也可以通过 `onmessage` 属性使用。
 - {{domxref("WebSocket/open_event", "open")}}
@@ -64,12 +64,12 @@ const socket = new WebSocket("ws://localhost:8080");
 
 // 连接打开
 socket.addEventListener("open", (event) => {
-  socket.send("Hello Server!");
+  socket.send("你好，服务器！");
 });
 
 // 监听消息
 socket.addEventListener("message", (event) => {
-  console.log("Message from server ", event.data);
+  console.log("来自服务器的消息：", event.data);
 });
 ```
 
