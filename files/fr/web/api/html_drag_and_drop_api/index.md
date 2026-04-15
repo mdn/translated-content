@@ -9,7 +9,7 @@ l10n:
 
 L'interface **HTML <i lang="en">Drag and Drop</i>** (pour glisser-déposer) permet à des applications d'utiliser des fonctionnalités de glisser-déposer dans le navigateur.
 
-L'utilisateur pourra sélectionner des éléments _déplaçables_ à la souris et les déplacer vers un élément où on peut _déposer_ en relâchant le bouton de la souris. Une représentation translucide de l'élément _déplacé_ suit le pointeur lors de l'opération.
+L'utilisateur·ice pourra sélectionner des éléments _déplaçables_ à la souris et les déplacer vers un élément où on peut _déposer_ en relâchant le bouton de la souris. Une représentation translucide de l'élément _déplacé_ suit le pointeur lors de l'opération.
 
 Vous pouvez personnaliser les éléments qui peuvent devenir _déplaçables_, le type de retour visuel que produisent les éléments _déplaçables_ et les éléments _déposables_.
 
@@ -32,6 +32,27 @@ Il n'est pas nécessaire que les trois soient sous votre contrôle, ni que vous 
 - Lors du déplacement hors de la page, aucune cible de dépôt n'a besoin d'être définie.
 
 Nous allons examiner comment chacun peut être défini et utilisé.
+
+### Évènements de déplacement
+
+Le glisser-déposer HTML utilise le [modèle d'évènements DOM](/fr/docs/Web/API/Event) et _[les évènements de déplacement](/fr/docs/Web/API/DragEvent)_ hérités des [évènements de souris](/fr/docs/Web/API/MouseEvent). Au cours des opérations de déplacement, plusieurs types d'évènements sont déclenchés, et certains évènements peuvent se produire plusieurs fois, comme les évènements {{DOMxRef("HTMLElement/drag_event", "drag")}} et {{DOMxRef("HTMLElement/dragover_event", "dragover")}}.
+
+| Évènement                                               | Se déclenche lorsque...                                                                                    |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}} | …[l'élément déplaçable](#éléments_déplaçables) commence à être déplacé.                                    |
+| {{DOMxRef("HTMLElement/drag_event", "drag")}}           | …l'élément déplaçable est en cours de déplacement, toutes les quelques centaines de millisecondes.         |
+| {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}} | …un élément déplaçable entre dans l'élément.                                                               |
+| {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}} | …un élément déplaçable quitte l'élément.                                                                   |
+| {{DOMxRef("HTMLElement/dragover_event", "dragover")}}   | …un élément déplaçable est déplacé au-dessus de l'élément, toutes les quelques centaines de millisecondes. |
+| {{DOMxRef("HTMLElement/drop_event", "drop")}}           | …l'élément est une [cible de dépôt](#cible_de_dépôt) et l'élément déplaçable y est déposé.                 |
+| {{DOMxRef("HTMLElement/dragend_event", "dragend")}}     | …l'élément déplaçable cesse d'être déplacé.                                                                |
+
+> [!NOTE]
+> Les évènements `dragstart`, `drag` et `dragend` sont déclenchés sur l'élément déplacé, et ne peuvent donc pas se produire lorsqu'on fait glisser un fichier depuis le système d'exploitation vers le navigateur.
+>
+> De même, les évènements `dragenter`, `dragleave`, `dragover` et `drop` sont déclenchés sur des éléments susceptibles d'être des cibles de dépôt, et ne peuvent donc pas se produire lorsqu'on fait glisser un élément hors du navigateur.
+
+Pour plus d'informations, consultez [Opérations de déplacement](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations).
 
 ### Éléments déplaçables
 
