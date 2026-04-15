@@ -539,4 +539,4 @@ lastsource.addEventListener(
 - [Web Audio API](/ko/docs/Web/API/Web_Audio_API)
 - [MediaStream Recording API](/ko/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/ko/docs/Web/API/MediaDevices/getUserMedia)
-- [Event 참고 > Media](/ko/docs/Web/Events#media)
+- [Event 참고 > Media](/ko/docs/Web/API/Document_Object_Model/Events#media)

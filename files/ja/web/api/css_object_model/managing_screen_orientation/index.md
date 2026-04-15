@@ -168,7 +168,7 @@ screen.orientation.lock();
 > [!NOTE]
 > 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
-> ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることでで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
+> ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
 
 ## 関連情報
 

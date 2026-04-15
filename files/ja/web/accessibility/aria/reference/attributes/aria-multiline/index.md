@@ -56,6 +56,6 @@ l10n:
 - ARIA [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ロール
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

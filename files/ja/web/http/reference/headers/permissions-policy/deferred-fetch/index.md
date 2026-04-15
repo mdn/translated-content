@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`deferred-fetch`** は {{HTTPHeader("Permissions-Policy")}} のディレクティブで、 [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API) の一部です。
+**`deferred-fetch`** は {{HTTPHeader("Permissions-Policy")}} のディレクティブで、 [`fetchLater()` API](/ja/docs/Web/API/Fetch_API) の一部です。
 
 このディレクティブは、 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} とともに、 640KiB のクォータ制限全体が、最上位のオリジンとその別オリジンのサブフレームとの間で、どのように分配されるかを決定します。既定では、最上位のオリジンには 512KiB が割り当てられ、別オリジンのサブフレームには残りの 128KiB から 8KiB が割り当てられます。 `deferred-fetch` 権限ポリシーでは、サブフレームのオリジンに、既定で割り当てられる 8KiB の最小クォータの代わりに、最上位の 512KiB のクォータからより大きな 64KiB のクォータを割り当てることができます。
 
@@ -71,6 +71,6 @@ Permissions-Policy: deferred-fetch-minimal=()
 ## 関連情報
 
 - [`fetchLater()` のクオータ](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas)
-- [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API)
+- [`fetchLater()` API](/ja/docs/Web/API/Fetch_API)
 - {{HTTPHeader("Permissions-Policy")}} ヘッダー
 - [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
