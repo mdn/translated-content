@@ -6,7 +6,7 @@ original_slug: Web/CSS/@layer
 
 {{CSSRef}}
 
-A [regra at (at-rule)](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
+A [regra at (at-rule)](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 
@@ -220,7 +220,7 @@ No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois s�
 
 ## Veja também
 
-- [`@import`](/pt-BR/docs/Web/CSS/@import)
+- [`@import`](/pt-BR/docs/Web/CSS/Reference/At-rules/@import)
 - [Cascata, especificidade e herança](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [`CSSLayerBlockRule`](/pt-BR/docs/Web/API/CSSLayerBlockRule)
 - [`CSSLayerStatementRule`](/pt-BR/docs/Web/API/CSSLayerStatementRule)

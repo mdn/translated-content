@@ -30,7 +30,7 @@ O conteúdo dentro das tags de abertura e fechamento `<video></video>` é exibid
 
 ## Atributos
 
-Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
@@ -52,7 +52,7 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
     Use o atributo [`disablepictureinpicture`](#disablepictureinpicture) se você quiser desabilitar o modo Picture-In-Picture (e o controle).
 
 - `crossorigin`
-  - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica se deve usar CORS para buscar o vídeo relacionado. [Recursos habilitados para CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image) podem ser reutilizados no elemento {{HTMLElement("canvas")}} sem serem _contaminados_. Os valores permitidos são:
+  - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica se deve usar CORS para buscar o vídeo relacionado. [Recursos habilitados para CORS](/pt-BR/docs/Web/HTML/How_to/CORS_enabled_image) podem ser reutilizados no elemento {{HTMLElement("canvas")}} sem serem _contaminados_. Os valores permitidos são:
     - `anonymous`
       Envia uma solicitação de origem cruzada sem uma credencial. Em outras palavras, ele envia o cabeçalho HTTP `Origin:` sem um cookie, certificado X.509 ou realizar uma autenticação HTTP Basic. Se o servidor não fornecer credenciais ao site de origem (não definindo o cabeçalho HTTP `Access-Control-Allow-Origin:`), o recurso será contaminado e seu uso restrito.
     - `use-credentials`
@@ -477,15 +477,15 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conteúdo_de_fluxo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conteúdo_de_fluxo"
           >Conteúdo de fluxo</a
         >, conteúdo de fraseado, conteúdo incorporado. Se possui o atributo
-        <a href="/pt-BR/docs/Web/HTML/Element/video#controls"><code>controls</code></a>: interactive
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/video#controls"><code>controls</code></a>: interactive
         conteúdo interativo e conteúdo palpável.
       </td>
     </tr>
@@ -493,7 +493,7 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
       <th scope="row">Conteúdo permitido</th>
       <td>
         <p>
-          Se o elemento possui um atributo <a href="/pt-BR/docs/Web/HTML/Element/video#src"><code>src</code></a>
+          Se o elemento possui um atributo <a href="/pt-BR/docs/Web/HTML/Reference/Elements/video#src"><code>src</code></a>
           : zero ou mais elementos {{HTMLElement("track")}},
           seguido de conteúdo transparente que não contém elementos de mídia – ou seja
           nenhum {{HTMLElement("audio")}} ou {{HTMLElement("video")}}.

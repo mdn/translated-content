@@ -12,16 +12,16 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >
         ,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Sectioning_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Sectioning_content"
           >conteúdo de seção</a
         >, conteúdo palpável.
       </td>
@@ -29,7 +29,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >.
       </td>
@@ -42,7 +42,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
       <th scope="row">Tags-pai permitidas</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >. Note que um elemento {{HTMLElement("section")}} não deve
         ser um descendente de um elemento {{HTMLElement("address")}}.
@@ -51,7 +51,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Regras ARIA permitidas</th>
       <td>
-        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role">alert</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
+        <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">alert</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/alertdialog_role">alertdialog</a></code>,
         <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/banner_role">banner</a></code>,
         <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/complementary_role">complementary</a></code>,
         <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/contentinfo_role">contentinfo</a></code>, <code><a href="/pt-BR/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a></code>,
@@ -71,7 +71,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

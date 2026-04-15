@@ -6,7 +6,7 @@ original_slug: Web/CSS/:checked
 
 {{CSSRef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:checked`** de um seletor CSS representa um elemento **radio** (`<input type="radio">`), **checkbox** (`<input type="checkbox">`) ou **option** ({{ HTMLElement("option") }} em um {{ HTMLElement("select") }}) que está marcada ou alternado para um estado ligado. O usuário pode mudar seu estado clicando no elemento, ou selecionando um valor diferente, nesse caso a pseudo-classe **:checked** não se aplica a esse elemento, mas vai para um elemento relevante.
 
 ## Sintaxe
 

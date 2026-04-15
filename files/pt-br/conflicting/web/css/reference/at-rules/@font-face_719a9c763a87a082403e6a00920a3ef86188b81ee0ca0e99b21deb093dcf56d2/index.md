@@ -18,7 +18,7 @@ A distância vertical entre dois glifos de fontes cima-para-baixo podem ser bem 
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Atributos específicos
 

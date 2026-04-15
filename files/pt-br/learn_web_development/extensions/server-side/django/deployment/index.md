@@ -16,7 +16,7 @@ Agora que criou (e testou) um fantástico website de Biblioteca Local, vai quere
         <p>
           Completar todos os tópicos do tutorial anterior, incluindo o
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Testing"
+            href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Testing"
             >Tutorial Django Parte 10: Testando uma aplicação web Django.</a
           >
         </p>

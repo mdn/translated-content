@@ -67,8 +67,8 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#type"><code>type</code></a>, e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a>, e
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -84,7 +84,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 
 ## Value
 
-Seu atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
+Seu atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
 
 ```html
 <input type="button" value="Click Me" />
@@ -138,9 +138,9 @@ O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} re
 
 ### Adicionando atalhos de teclados aos botões
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/pt-BR/docs/Web/HTML/Global_attributes#accesskey) global attribute.
+Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the [`accesskey`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#accesskey) global attribute.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/pt-BR/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
+In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/pt-BR/docs/Web/HTML/Reference/Global_attributes/accesskey) for a useful list of those).
 
 ```html
 <form>
@@ -173,7 +173,7 @@ function updateButton() {
 
 ### Desativando e ativando um botão
 
-To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Global_attributes#disabled) global attribute on it, like so:
+To disable a button, simply specify the [`disabled`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#disabled) global attribute on it, like so:
 
 ```html
 <input type="button" value="Disable me" disabled />
@@ -232,7 +232,7 @@ function disableButton() {
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
 > [!NOTE]
-> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
+> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Reference/Elements/button#autocomplete) attribute to control this feature.
 
 ## Validação
 
@@ -384,4 +384,4 @@ draw();
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibility of CSS properties](/pt-BR/docs/Learn_web_development/Extensions/Forms)

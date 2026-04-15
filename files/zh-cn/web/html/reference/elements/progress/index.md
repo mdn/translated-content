@@ -28,14 +28,14 @@ label {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容"
           >短语内容</a
         >、可关联标签内容、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
@@ -45,7 +45,7 @@ label {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >，但其后代元素不能有 <code>&#x3C;progress></code> 元素。
       </td>
@@ -57,7 +57,7 @@ label {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+        接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#可感知内容"
           >可感知内容</a
         >的任何元素。
       </td>

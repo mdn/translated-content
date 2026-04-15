@@ -71,7 +71,7 @@ La \<source> peut être une des suivantes :
 - `'unsafe-eval'`
   - : Permet l'usage de la fonction `eval()` et de méthodes similaires pour créer du code à partir de chaines de caractères. Vous devez mettre cette valeur entre guillemets.
 - `'unsafe-hashes'`
-  - : Permet l'usage de certains [écouteurs d'évènements](/fr/docs/Web/Events/Event_handlers) par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL `javascript:`, cette valeur est plus sécurisée que `unsafe-inline`.
+  - : Permet l'usage de certains [écouteurs d'évènements](/fr/docs/Web/API/Document_Object_Model/Events) par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL `javascript:`, cette valeur est plus sécurisée que `unsafe-inline`.
 - `'unsafe-inline'`
   - : Permet l'usage de ressources embarquées, tels que des éléments {{HTMLElement("script")}} (sans `src`), d'URL `javascript:`, de gestionnaire d'évènement par attributs (`on<eventName>`), et d'éléments {{HTMLElement("style")}}. Vous devez mettre cette valeur entre guillemets.
 - `'none'`

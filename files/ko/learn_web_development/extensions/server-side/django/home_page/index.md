@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Home_page
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/ko/docs/Learn/Server-side/Django/Introduction"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
           href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site"

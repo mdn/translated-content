@@ -9,7 +9,7 @@ HTML-элементы {{HTMLElement("script")}} предоставляют **`HT
 
 JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
 
-{{InheritanceDiagram}}
+{{InheritanceDiagram(600, 120)}}
 
 ## Свойства
 
@@ -29,7 +29,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Представляет тип MIME сценария. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#type"><code>type</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#type"><code>type</code></a>.
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Получает и отдаёт URL внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#src"><code>src</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#src"><code>src</code></a>.
       </td>
     </tr>
     <tr>
@@ -53,7 +53,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         Представляет кодировку символов внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#charset"><code>charset</code></a>.
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#charset"><code>charset</code></a>.
       </td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         {{domxref("DOMString")}}, отражающий
-        <a href="/ru/docs/Web/HTML/CORS_settings_attributes"
+        <a href="/ru/docs/Web/HTML/Reference/Attributes/crossorigin"
           >настройку CORS </a
         >для элементов скрипта. Для скриптов из других
         <a href="/ru/docs/Glossary/Origin">источников</a>, он контролирует,
@@ -196,7 +196,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td>{{domxref("DOMString")}}</td>
       <td>
         {{domxref("DOMString")}}, который отражает HTML атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#referrerpolicy"><code>referrerpolicy</code></a>
+        <a href="/ru/docs/Web/HTML/Reference/Elements/script#referrerpolicy"><code>referrerpolicy</code></a>
         указывающий, какой реферер использовать при извлечении скриптов и
         выборках, выполненных сценариев.
       </td>

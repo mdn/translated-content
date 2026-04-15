@@ -279,7 +279,7 @@ Les pages nommées permettent de réaliser une mise en page par page et d'ajoute
 
 Les pages nommées peuvent être appliquées à l'aide de la propriété {{CSSxRef("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
-Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/page#exemples).
+Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/Reference/Properties/page#exemples).
 
 ## Exemples
 

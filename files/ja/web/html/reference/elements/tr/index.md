@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
+**`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素を混在させることができます。
 
 {{InteractiveExample("HTML デモ: &lt;tr&gt;", "tabbed-taller")}}
 
@@ -609,7 +609,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Row_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role"
             >row</a
           ></code
         >

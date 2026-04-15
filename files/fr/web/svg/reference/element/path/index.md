@@ -60,4 +60,4 @@ Cet élément implémente l'interface [`SVGPathElement`](/fr/docs/DOM/SVGPathEle
 - {{ SVGElement("polygon") }}
 - {{ SVGElement("polyline") }}
 - {{ SVGElement("rect") }}
-- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/SVG/Tutorial/Paths)
+- [The MDN SVG "Getting Started" tutorial : Path](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)

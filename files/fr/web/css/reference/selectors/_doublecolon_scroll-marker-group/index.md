@@ -144,7 +144,7 @@ li::scroll-marker:target-current {
 
 ### Positionner le groupe de marqueurs avec le positionnement par ancrage
 
-Cet exemple étend le précédent en montrant l'utilisation du [positionnement par ancrage en CSS](/fr/docs/Web/CSS/CSS_anchor_positioning) pour positionner le groupe de marqueurs par rapport au carrousel.
+Cet exemple étend le précédent en montrant l'utilisation du [positionnement par ancrage en CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning) pour positionner le groupe de marqueurs par rapport au carrousel.
 
 #### CSS
 
@@ -187,6 +187,6 @@ ul::scroll-marker-group {
 - Le pseudo-élément {{CSSxRef("::column")}}
 - La pseudo-classe {{CSSxRef(":target-current")}}
 - [Créer des carrousels en CSS](/fr/docs/Web/CSS/Guides/Overflow/CSS_carousels)
-- Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)
+- Le module de [positionnement par ancrage CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)
 - Le module de [débordement CSS](/fr/docs/Web/CSS/Guides/Overflow)
 - [Galerie de carrousels CSS <sup>(angl.)</sup>](https://chrome.dev/carousel/) par chrome.dev (2025)

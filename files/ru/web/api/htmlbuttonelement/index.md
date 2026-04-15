@@ -7,7 +7,7 @@ slug: Web/API/HTMLButtonElement
 
 Интерфейс HTMLButtonElement предоставляет свойства и методы для управления элементами {{HTMLElement("button")}} (помимо обычного интерфейса {{domxref("HTMLElement")}}, он также доступен - по наследованию) .
 
-{{InheritanceDiagram}}
+{{InheritanceDiagram(600, 120)}}
 
 ## Свойства
 
@@ -58,7 +58,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         <p>
           URI ресурса, обрабатывающего информацию, отправленную кнопкой. Если
-          задан, то переопределяет <a href="/ru/docs/Web/HTML/Element/form#action"><code>action</code></a>
+          задан, то переопределяет <a href="/ru/docs/Web/HTML/Reference/Elements/form#action"><code>action</code></a>
           атрибут {{HTMLElement("form")}} элемента, который является
           его владельцем.
         </p>
@@ -70,7 +70,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         Тип содержимого, используемый для отправки формы на сервер. Если указан
         этот атрибут, то он переопределяет
-        <a href="/ru/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> атрибут элемента
+        <a href="/ru/docs/Web/HTML/Reference/Elements/form#enctype"><code>enctype</code></a> атрибут элемента
         {{HTMLElement("form")}}, который является владельцем этого
         элемента.
       </td>
@@ -81,7 +81,7 @@ _Наследует свойства от его родителя, {{domxref("HT
       <td>
         <p>
           HTTP метод, который браузер использует для отправки формы. Если задан,
-          тогда он переопределяет <a href="/ru/docs/Web/HTML/Element/form#method"><code>method</code></a>
+          тогда он переопределяет <a href="/ru/docs/Web/HTML/Reference/Elements/form#method"><code>method</code></a>
           атрибут {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -93,7 +93,7 @@ _Наследует свойства от его родителя, {{domxref("HT
         <p>
           Показывает что форма не будет проверена при отправке. Если задано,
           тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> атрибут
+          <a href="/ru/docs/Web/HTML/Reference/Elements/form#novalidate"><code>novalidate</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
@@ -105,7 +105,7 @@ _Наследует свойства от его родителя, {{domxref("HT
         <p>
           Имя или ключевое слово, указывающее, где должен отображаться ответ,
           полученный после отправки формы. Если задано, тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#target"><code>target</code></a> атрибут
+          <a href="/ru/docs/Web/HTML/Reference/Elements/form#target"><code>target</code></a> атрибут
           {{HTMLElement("form")}} своего владельца.
         </p>
       </td>
