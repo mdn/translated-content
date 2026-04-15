@@ -1,5 +1,6 @@
 ---
 title: "SubtleCrypto: generateKey() method"
+short-title: "generateKey()"
 slug: Web/API/SubtleCrypto/generateKey
 l10n:
   f1c0a3282b3e30892bd6ec382564774979611feb
