@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 어떤 프로그래밍 언어든 코드는 의사 결정을 내리고 입력 내용에 따라 작업을 수행해야 합니다. 예를 들어 게임에서 플레이어의 생명 수치가 0이면 게임이 종료됩니다. 날씨 앱에서는 아침에 해가 뜬 그림을 보여주고 밤에는 달과 별을 보여줍니다. 이 문서에서는 JavaScript에서 조건문이 작동하는 방법을 살펴 보겠습니다.
 
@@ -814,4 +814,4 @@ textarea.onkeyup = function () {
 - [if...else 참고서](/ko/docs/Web/JavaScript/Reference/Statements/if...else)
 - [삼항연산자 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

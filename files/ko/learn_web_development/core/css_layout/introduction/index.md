@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
 
 이 문서에서는 이전 모듈에서 이미 다뤘던 CSS 레이아웃 기능, 예를 들어 다양한 {{cssxref("display")}} 속성값의 차이 등을 복습하고, 이번 과정에서 다룰 몇 가지 CSS 개념을 소개합니다.
 
@@ -783,4 +783,4 @@ body {
 
 이 글에서는 알아야 할 모든 레이아웃 기술에 대해 간략하게 요약했습니다. 각 개별 기술에 대한 자세한 내용을 계속 읽어보세요!
 
-{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
+{{NextMenu("conflicting/Learn_web_development/Core/CSS_layout/Introduction", "Learn_web_development/Core/CSS_layout")}}
