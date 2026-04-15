@@ -6,10 +6,10 @@ l10n:
   sourceCommit: c8522f47d8123fe529f39851b13b9fc01345ffbf
 ---
 
-Cada declaración CSS, consiste en un par propiedad/valor. El valor puede tomar varias formas dependiendo de la propiedad, como puede ser un solo entero, una palabra clave, una función o una combinacion de elementos diferentes; algunos valores tienen unidades, mientras que otros no. Cada propiedad acepta también los valores de todo CSS. El módulo de valores y unidades, define los tipos de datos - valores y unidades - que las propiedades CSS aceptan. Este módulo también define la sintáxis de valores CSS, o la grámatica formal usada para definir un conjunto de valores validos para cada propiedad y función CSS.
+Cada declaración CSS, consiste en un par propiedad/valor. El valor puede tomar varias formas dependiendo de la propiedad, como puede ser un solo entero, una palabra clave, una función o una combinación de elementos diferentes; algunos valores tienen unidades, mientras que otros no. Cada propiedad acepta también los valores de todo CSS. El módulo de valores y unidades, define los tipos de datos - valores y unidades - que las propiedades CSS aceptan. Este módulo también define la sintaxis de valores CSS, o la gramática formal usada para definir un conjunto de valores válidos para cada propiedad y función CSS.
 
 > [!NOTE]
-> Esta página introduce un módulo CSS. Para encontrar una lista exaustiva de todos los valores, tipos y funciones definidas por la especificación de CSS, vea la página de referencia de los [valores](/es/docs/Web/CSS/Reference/Values).
+> Esta página introduce un módulo CSS. Para encontrar una lista exhaustiva de todos los valores, tipos y funciones definidas por la especificación de CSS, vea la página de referencia de los [valores](/es/docs/Web/CSS/Reference/Values).
 
 ## Referencia
 
@@ -144,14 +144,14 @@ El módulo de valores y unidades también introduce los tipos de dato {{cssxref(
 - [`vw`](/es/docs/Web/CSS/Reference/Values/length#vw)
 - [`x`](/es/docs/Web/CSS/Reference/Values/resolution#x)
 
-Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`) y las [unidades de contenedor](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) estan definidas en los módulos [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout) y [reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules) respectivamente.
+Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`) y las [unidades de contenedor](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`) están definidas en los módulos [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout) y [reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules) respectivamente.
 
 #### Categorización de las unidades
 
 - [Unidades de longitud absolutas](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`cm`, `in`, `mm`, `pc`, `pt`, `px`, `Q`)
-- [Unidades de angulos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
+- [Unidades de ángulos](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#angle_units) (`deg`, `grad`, `rad`, `turn`)
 - [Unidades por defecto del viewport](/es/docs/Web/CSS/Reference/Values/length#default_viewport_units) (`vb` , `vh`, `vi` , `vmax`, `vmin`, `vw`)
-- [Unidades dinamicas del viewport](/es/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
+- [Unidades dinámicas del viewport](/es/docs/Web/CSS/Reference/Values/length#dynamic_viewport_units) (`dvb`, `dvh`, `dvi`, `dvmax`, `dvmin`, `dvw`)
 - [Unidades de Frecuencia](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#frequency_units) (`Hz`, `kHz`)
 - [Unidades de porcentaje amplias del viewport](/es/docs/Web/CSS/Reference/Values/length#large_viewport_units) (`lvb`, `lvh`, `lvi`, `lvmax`, `lvmin`, `lvw`)
 - [Unidades de longitud relativas a la fuente local](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#local_font-relative_lengths) (`cap`, `ch`, `em`, `ex`, `ic`, `lh`)
@@ -170,7 +170,7 @@ Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#
 - [Notación de rango con corchetes](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#bracketed_range_notation_minmax)
 - [Tipos de valor de los componentes](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#tipos_de_valor_de_los_componentes)
 - [CSS-wide keywords](/es/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords)
-- {{glossary("Device pixel", "Pixeles del dispositivo")}}
+- {{glossary("Device pixel", "Píxeles del dispositivo")}}
 - [Notación funcional](/es/docs/Web/CSS/Reference/Values/Functions)
 - {{glossary("Identifier", "Identificador")}}
 - {{glossary("Interpolation", "Interpolación")}}
@@ -194,14 +194,14 @@ Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#
 - [Tipos de dato Textuales](/es/docs/Web/CSS/Guides/Values_and_units/Textual_data_types)
   - : Descripción general de los tipos de dato textuales, incluye valores de palabras reservadas predefinidas, valores de palabras resesrvadas CSS globales y URLs.
 
-- [CSS value functions](/es/docs/Web/CSS/Reference/Values/Functions)
+- [Funciones de valor CSS](/es/docs/Web/CSS/Reference/Values/Functions)
   - : Descripción general de declaraciones CSS que invocan procesamiento especial de datos o cálculos que regresan un valor CSS para una propiedad.
 
 - [Usando funciones matemáticas CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_math_functions)
   - : Las funciones matemáticas CSS que permiten que los valores de propiedades se escriban como expresiones matemáticas.
 
 - [Sintaxis de definición de Valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
-  - : La gramótica formal usada para definir un conjunto de valores válidos para propiedades y funciones CSS.
+  - : La gramática formal usada para definir un conjunto de valores válidos para propiedades y funciones CSS.
 
 - [Usando aritmética tipada CSS](/es/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic)
   - : Una explicación del comportamiento del tipado aritmético CSS y casos de uso que éste habilita.
@@ -224,17 +224,17 @@ Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#
 
 - [CSS grid layout](/es/docs/Web/CSS/Guides/Grid_layout)
   - {{cssxref("&lt;flex&gt;")}}
-  - [Flex units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`)
+  - [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#flex_units) (`fr`)
 
 - [Reglas condicionales CSS](/es/docs/Web/CSS/Guides/Conditional_rules)
-  - [Container units](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
+  - [Unidades de contenedor](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#container_units) (`cqb`, `cqh`, `cqi`, `cqmax`, `cqmin`, `cqw`)
 
 - [Colores CSS](/es/docs/Web/CSS/Guides/Colors)
   - {{cssxref("&lt;color&gt;")}}
   - {{cssxref("system-color")}}
   - [`color-mix()`](/es/docs/Web/CSS/Reference/Values/color_value/color-mix)
 
-- [Imagenes CSS](/es/docs/Web/CSS/Guides/Images)
+- [Imágenes CSS](/es/docs/Web/CSS/Guides/Images)
   - {{cssxref("image")}}
   - {{cssxref("gradient")}}
 
