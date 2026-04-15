@@ -14,7 +14,7 @@ l10n:
 
 이벤트는 해당 이벤트를 방출하는 JavaScript 객체에 대한 페이지 또는 페이지 아래에 문서화됩니다. 예를 들어 브라우저 창 또는 현재 문서에서 발생한 이벤트를 알아보려면 [`Window`](/ko/docs/Web/API/Window#events)와 [`Document`](/ko/docs/Web/API/Document#events)를 참조하십시오.
 
-[이벤트 참조](/ko/docs/Web/Events#Event_index)를 사용하여 애니메이션, 미디어 등 특정 API에 대한 이벤트를 시작하는 JavsScript 객체를 확인할 수 있습니다.
+[이벤트 참조](/ko/docs/Web/API/Document_Object_Model/Events#Event_index)를 사용하여 애니메이션, 미디어 등 특정 API에 대한 이벤트를 시작하는 JavsScript 객체를 확인할 수 있습니다.
 
 ## 이벤트 처리기 등록
 

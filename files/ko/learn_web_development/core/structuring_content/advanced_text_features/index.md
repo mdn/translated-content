@@ -776,6 +776,6 @@ HTML은 기계가 읽을 수 있는 형식(machine-readable)으로 시간과 날
 
 ## 요약
 
-HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Reference/Elements)를 살펴보십시오.([인라인 텍스트 시멘틱](/ko/docs/Web/HTML/Element#인라인 텍스트 시멘틱) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
+HTML 텍스트 의미론에 대한 스터디가 끝났습니다. 이 과정에서 학습한 내용이 HTML 텍스트 요소의 전부가 아님을 명심하십시오. 우리는 필수 요소를 위주로 다루고 싶었고, 여러분이 일반적인 상황에서 보거나 적어도 흥미롭게 다가올 수 있는 더 일반적인 것들 중 일부를 다루려고 했습니다. 더 많은 HTML 요소를 찾으려면 [HTML element reference](/ko/docs/Web/HTML/Reference/Elements)를 살펴보십시오.([인라인 텍스트 시멘틱](/ko/docs/Web/HTML/Element#인라인 텍스트 시멘틱) 섹션은 시작하기에 좋은 장소입니다). 다음 장에서는 [HTML 문서의 다른 부분을 구조화](/ko/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)하는 데 사용할 HTML 요소를 살펴 보겠습니다.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}

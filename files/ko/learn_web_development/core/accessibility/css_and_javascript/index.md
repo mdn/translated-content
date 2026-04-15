@@ -322,7 +322,7 @@ function createLink(testItem) {
 </div>
 ```
 
-이러한 속성에 대해서는 [WAI-ARIA](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)를 훨씬 더 자세히 다루는 다음 문서에서 설명하겠습니다.
+이러한 속성에 대해서는 [WAI-ARIA](/ko/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)를 훨씬 더 자세히 다루는 다음 문서에서 설명하겠습니다.
 
 > [!NOTE]
 > HTML 양식에 `required`, `min`/`minlength`, `max`/`maxlength` 속성과 같은 검증 메커니즘이 내장되어 있다는 사실을 생각해 보시는 분들도 있을 것입니다(자세한 내용은 {{htmlelement("input")}} 요소를 참고하세요). 여러 브라우저에서 지원이 고르지 않기 때문에 데모에서 사용하지 못했습니다(예: IE10 이상에만 지원).
@@ -366,4 +366,4 @@ imgThumb.onblur = hideImg;
 
 다음은 WAI-ARIA입니다!
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
