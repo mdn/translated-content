@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/math/highest
 original_slug: Web/EXSLT/math/highest
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
 `math:highest()` は、指定されたノードセットの最大値（[`math:max()`](/ja/docs/Web/XML/EXSLT/math/max) を使用して計算した最大値）を持つノードを返します。
 

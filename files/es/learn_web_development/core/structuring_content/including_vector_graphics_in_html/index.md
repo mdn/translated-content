@@ -14,11 +14,11 @@ Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen ta
       <th scope="row">Prerequisitos:</th>
       <td>
         Debe conocer los
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >conceptos básicos de HTML</a
         >
         y cómo
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >insertar imágenes en su documento</a
         >
       </td>

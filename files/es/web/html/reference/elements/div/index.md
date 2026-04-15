@@ -110,20 +110,20 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
-        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+        >, <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_palpable">contenido palpable</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >.<br />O (en {{glossary("WHATWG")}} HTML): Si el padre es un
         elemento {{HTMLElement("dl")}}: uno o más
@@ -140,7 +140,7 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >flujo de contenido</a
         >.<br />O (en {{glossary("WHATWG")}} HTML):
         Elemento {{HTMLElement("dl")}}.

@@ -3,7 +3,7 @@ title: Conceitos gerais da programação assíncrona
 slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Introducing", "Learn_web_development/Extensions/Async_JS")}}
 
 Neste artigo, nós vamos ver um número de conceitos importantes relativos à programação assíncrona e como ela se parece em navegadores modernos e em JavaScript. Você deve entender estes conceitos antes de trabalhar com outros artigos neste módulo.
 

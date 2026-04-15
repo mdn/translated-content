@@ -42,13 +42,13 @@ svg {
 
 - [Основные атрибуты](/ru/docs/Web/SVG/Reference/Attribute)
   - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Атрибуты стилизации](/docs/Web/SVG/Attribute/Styling)
+- [Атрибуты стилизации](/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Условные атрибуты](/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Условные атрибуты](/docs/Web/SVG/Reference/Attribute)
   - : Самые важные: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Атрибуты событий
-  - : [Атрибуты глобальных событий](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Атрибуты графических событий](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : [Атрибуты глобальных событий](/docs/Web/SVG/Reference/Attribute#Global_Event_Attributes), [Атрибуты графических событий](/docs/Web/SVG/Reference/Attribute#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - ARIA-атрибуты
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`

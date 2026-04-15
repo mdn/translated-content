@@ -38,7 +38,7 @@ l10n:
 
 {{domxref("PerformanceResourceTiming")}} インターフェイスには、リソースのサイズデータを取得するために使用できる 3 つのプロパティがあります。{{domxref('PerformanceResourceTiming.transferSize','transferSize')}} プロパティは、取得したリソースのサイズをバイト単位で返します。このサイズには、レスポンスヘッダーフィールドに加え、レスポンス内容本体も含みます。
 
-{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツエンコーディングが除去される**前**の、HTTP またはキャッシュから取得した内容本体のサイズをオクテット単位でを返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツエンコーディングが除去された**後**の、HTTP またはキャッシュから取得したメッセージ本体のサイズをオクテット単位で返します。
+{{domxref('PerformanceResourceTiming.encodedBodySize','encodedBodySize')}} プロパティは、適用されたコンテンツエンコーディングが除去される**前**の、HTTP またはキャッシュから取得した内容本体のサイズをオクテット単位で返します。{{domxref('PerformanceResourceTiming.decodedBodySize','decodedBodySize')}} は、適用されたコンテンツエンコーディングが除去された**後**の、HTTP またはキャッシュから取得したメッセージ本体のサイズをオクテット単位で返します。
 
 ## その他のプロパティ
 

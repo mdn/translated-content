@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Elements/input/date
 original_slug: Web/HTML/Element/input/date
 ---
 
-Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Element/input/time) e [`datetime-local`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
+Os elementos {{htmlelement("input")}} do tipo **`date`** cria campos de entrada que permite o usuário informar uma data, como também usar uma caixa de texto que valida automaticamente o conteúdo, ou usando uma interface de seleção de data especial. O valor resultante inclui ano, mês e dia, mas não o `horário`. Os tipos de entrada [time](/pt-BR/docs/Web/HTML/Reference/Elements/input/time) e [`datetime-local`](/pt-BR/docs/Web/HTML/Element/input/datetime-local) permitem informar horário e data/hora.
 
 A interface do usuário do controle varia geralmente de navegador para navegador; neste momento o suporte é irregular, veja [Browser compatibility](#browser_compatibility) para maiores detalhes. Nos navegadores sem suporte, o controle é rebaixado graciosamente para um [`<input type="text">`](/pt-BR/docs/Web/HTML/Element/input/text) simples.
 
@@ -44,10 +44,10 @@ O controle de data do Firefox se parece assim:
     <tr>
       <td><strong>Atributos Comuns Suportados</strong></td>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
-        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a> e
+        <a href="/pt-BR/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ O controle de data do Firefox se parece assim:
 
 ## Valores
 
-Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value), como:
+Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value), como:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />
@@ -123,7 +123,7 @@ O uso mais simples de `<input type="date">` envolve a combinação de um `<input
 
 ### Definindo data mínima e máxima
 
-Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir as datas que podem ser escolhidas pelo usuário. No próximo exemplo nós definimos uma data mínima como `2017-04-01` e data máxima como `2017-04-30`:
+Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) para restringir as datas que podem ser escolhidas pelo usuário. No próximo exemplo nós definimos uma data mínima como `2017-04-01` e data máxima como `2017-04-30`:
 
 ```html
 <form>
@@ -143,19 +143,19 @@ Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [
 
 O resultado aqui será apenas que as dias de Abril de 2017 serão selecionados — apenas a parte "dias" do texto será editável e datas fora de Abril não serão rolados na ferramenta de seleção de data.
 
-> **Note:** **Observação**: Você deve conhecer o uso do atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar o número de dias pulados cada vez que a data é incrementada (ex.: talvez você queira deixar que os Sábados sejam selecionáveis). Contudo, isto não parece funcionar eficiente de qualquer implementação em tempo de escrita.
+> **Note:** **Observação**: Você deve conhecer o uso do atributo [`step`](/pt-BR/docs/Web/HTML/Reference/Elements/input#step) para variar o número de dias pulados cada vez que a data é incrementada (ex.: talvez você queira deixar que os Sábados sejam selecionáveis). Contudo, isto não parece funcionar eficiente de qualquer implementação em tempo de escrita.
 
 ### Controlando o tamanho da entrada
 
-`<input type="date">` não suporta atributos de tamanho de formulário como [`size`](/pt-BR/docs/Web/HTML/Element/input#size). Você poderá recorrer ao [CSS](/pt-BR/docs/Web/CSS) para modificar o tamanho.
+`<input type="date">` não suporta atributos de tamanho de formulário como [`size`](/pt-BR/docs/Web/HTML/Reference/Elements/input#size). Você poderá recorrer ao [CSS](/pt-BR/docs/Web/CSS) para modificar o tamanho.
 
 ## Validação
 
 Por padrão `<input type="date">` não aplica nenhuma validação de entrada de valores. As implementações da interface geralmente não deixam você informar nada que não seja uma data — o que é útil — mas você pode continuar deixando o campo vazio ou (em navegadores onde a entrada converte para o tipo `text`) informar uma data inválida (ex.: o 32 de Abril).
 
-Se você usa [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir datas disponíveis (ver [Definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.
+Se você usa [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) para restringir datas disponíveis (ver [Definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.
 
-Adicionalmente, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.
+Adicionalmente, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Reference/Elements/input#required) para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.
 
 Vamos dar uma olhada em um exemplo — aqui nós definimos datas mínima e máxima e deixamos o campo como obrigatório:
 
@@ -233,7 +233,7 @@ O segundo problema é mais sério que os anterirores; como mencionamos antes, co
 - `mm-dd-yyyy`
 - `Month dd yyyy`
 
-Um jeito de contornar isso é colocar um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) na caixa de texto de data. Sempre que a caixa de texto de data não usá-lo, a caixa de texto devolverá um erro. Por exemplo, tente ver o que o seguinte exemplo faz num navegador sem suporte:
+Um jeito de contornar isso é colocar um atributo [`pattern`](/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern) na caixa de texto de data. Sempre que a caixa de texto de data não usá-lo, a caixa de texto devolverá um erro. Por exemplo, tente ver o que o seguinte exemplo faz num navegador sem suporte:
 
 ```html
 <form>
@@ -287,7 +287,7 @@ A melhor maneira de lidar com datas nos formulários de um modo entre navegadore
 
 ## Atributos
 
-Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/Web/HTML/Global_attributes).
+Beside the attributes listed below, this element can have any of the [global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `mozactionhint` {{non-standard_inline}}
   - : Specifies an "action hint" used to determine how to label the enter key on mobile devices with virtual keyboards. Supported values are `go`, `done`, `next`, `search`, and `send`; these automatically get mapped to the appropriate string (and are case-insensitive).
@@ -302,7 +302,7 @@ Beside the attributes listed below, this element can have any of the [global att
 - `formenctype`
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/pt-BR/docs/Web/HTML/Element/input#type) attribute set to `file`.
+    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) attribute set to `file`.
     - `text/plain`
 
     If this attribute is specified, it overrides the [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.

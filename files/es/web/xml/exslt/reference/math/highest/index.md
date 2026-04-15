@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/math/highest
 original_slug: Web/EXSLT/math/highest
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 `math:highest()` devuelve el nodo con el valor más alto (donde el valor más alto se calcula usando [`math:max()`](/es/docs/Web/XML/EXSLT/Reference/math/max)) del conjunto de nodos (node-set) especificado.
 
 Un nodo tiene este valor máximo si convierte su valor de cadena a un número igual al valor máximo.

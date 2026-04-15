@@ -5,13 +5,13 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Пришло время взглянуть на фреймворк от Google — Angular, еще один популярный вариант, с которым вы часто будете сталкиваться. В этой статье мы рассмотрим, что Angular может предложить, установим необходимые компоненты, запустим пример приложения, и разберём базовую архитектуру Angular.
 
-| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Настроить локальную среду разработки Angular, создать стартовое приложение, и понять основные принципы работы.                                                                                                                                                             |
+| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn_web_development/Core/Styling_basics), и [JavaScript](/ru/docs/Learn_web_development/Core/Scripting), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Цель:                | Настроить локальную среду разработки Angular, создать стартовое приложение, и понять основные принципы работы.                                                                                                                                                                                                                 |
 
 ## Что такое Angular?
 
@@ -246,7 +246,7 @@ export class AppComponent {
 
 Это ваше первое знакомство с Angular. На этом этапе всё должно быть настроено и готово к созданию Angular-приложения, а у вас быть базовое представление о том, как работает Angular. В следующей статье мы углубим эти знания и начнем создавать структуру вашего приложения списка дел.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 
@@ -288,7 +288,7 @@ export class AppComponent {
   - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - [Работа хранилищами в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - [Поддержка TypeScript в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Развертывание и следующие шаги](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Развертывание и следующие шаги](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next)
 
 - Angular
   - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)

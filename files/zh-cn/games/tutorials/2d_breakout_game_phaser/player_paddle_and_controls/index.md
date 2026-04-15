@@ -3,7 +3,7 @@ title: Player paddle and controls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_Phaser/Game_over")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 7 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
 
@@ -123,4 +123,4 @@ ball.body.velocity.set(150, -150);
 
 我们可以移动桨，并将球反弹，但是如果球从屏幕的底部边缘反弹，那又有什么意义？我们来介绍丢失的可能性 - 也称为[游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)逻辑。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_Phaser/Game_over")}}

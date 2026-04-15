@@ -12,7 +12,7 @@ O obsoleto cabeçalho de requisição HTTP **`Cookie2`** costumava aconselhar o 
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>
