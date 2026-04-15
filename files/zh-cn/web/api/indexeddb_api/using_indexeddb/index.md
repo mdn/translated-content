@@ -62,7 +62,7 @@ request.onsuccess = (event) => {
 
 如果请求成功，会触发 {{domxref("IDBRequest.success_event", "success")}} 事件，并调用赋给 `onsuccess` 参数的函数。请求失败时，会触发 {{domxref("IDBRequest.error_event", "error")}} 事件，并调用赋给 `onerror` 参数的函数。
 
-IndexedDB API 的设计目标之一是尽量减少你对错误处理的需求，因此你通常不会频繁遇到错误事件（至少在你熟悉 API 后是这样）。但在打开数据库时，确实有一些常见情况会触发错误事件。最常见的问题是：用户不允许你的 Web 应用创建数据库。IndexedDB 的核心设计目标之一，就是允许为离线使用存储大量数据。（关于各浏览器可用存储量，参见“浏览器存储配额与清理标准”中的[可存储多少数据？](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored)一文。）
+IndexedDB API 的设计目标之一是尽量减少你对错误处理的需求，因此你通常不会频繁遇到错误事件（至少在你熟悉 API 后是这样）。但在打开数据库时，确实有一些常见情况会触发错误事件。最常见的问题是：用户不允许你的 Web 应用创建数据库。IndexedDB 的核心设计目标之一，就是允许为离线使用存储大量数据。（关于各浏览器可用存储量，参见“浏览器存储限制与清理标准”中的[可以存储多少数据](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#可以存储多少数据)一节。）
 
 显然，浏览器不希望广告网络或恶意网站污染你的计算机，因此浏览器过去会在某个 Web 应用首次尝试打开 IndexedDB 进行存储时询问用户。用户可以允许或拒绝。另外，在浏览器隐私模式中，IndexedDB 存储只会在隐私会话未关闭前在内存中保留。
 
@@ -284,7 +284,7 @@ const transaction = db.transaction(["customers"], "readwrite");
 ```js
 // 当所有数据都添加到数据库后执行某些操作。
 transaction.oncomplete = (event) => {
-  console.log("All done!");
+  console.log("已经处理完了！");
 };
 
 transaction.onerror = (event) => {
@@ -587,9 +587,7 @@ function useDatabase(db) {
   // 一定要添加处理器：当其他页面请求版本变更时可收到通知。我们必须关闭数据库，以便另一个页面完成升级。否则升级会一直卡住，直到用户关闭当前标签页。
   db.onversionchange = (event) => {
     db.close();
-    console.log(
-      "本页面的一个新版本已就绪，请刷新网页以加载！",
-    );
+    console.log("本页面的一个新版本已就绪，请刷新网页以加载！");
   };
 
   // 使用数据库执行操作。
