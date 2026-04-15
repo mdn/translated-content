@@ -9,7 +9,7 @@ l10n:
 
 [事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)的触发用于通知“对变化感兴趣”的代码以影响代码的执行。这些事件可能来自用户的交互（例如：使用鼠标或调整窗口大小）、底层环境状态的改变（例如：电池电量不足或操作系统的媒体事件）和其他的情况。
 
-每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其他相关的信息。[事件 > 基于 `Event` 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
+每个事件都使用继承自 {{domxref("Event")}} 接口的对象来表示，可以包括额外的自定义成员属性及函数，以获取事件发生时相关的更多信息。本文为每个事件都提供了一个表格（靠近顶部的区域），其中包含了指向相关事件接口的链接和其他相关的信息。[事件 > 基于 Event 的接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)中完整地列出了不同的事件类型。
 
 本文提供了你可能感兴趣的主要事件类型（动画、剪切板、worker 等等）的索引，以及实现这些事件的主要的类。
 
@@ -27,7 +27,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/Web_Animations_API">Web Animation API</a
+          <a href="/zh-CN/docs/Web/API/Web_Animations_API">Web 动画 API</a
           > 相关的事件。
         </p>
         <p>
@@ -63,8 +63,7 @@ l10n:
       <td>剪切板</td>
       <td>
         <p>
-          与
-          <a href="/zh-CN/docs/Web/API/Clipboard_API">Clipboard API</a> 相关的事件。
+          与<a href="/zh-CN/docs/Web/API/Clipboard_API">剪切板 API</a> 相关的事件。
         </p>
         <p>用于在内容被剪切、复制或粘贴时发出通知。</p>
       </td>
@@ -150,7 +149,7 @@ l10n:
           <p>
             <strong>警告：</strong>
             <a href="/zh-CN/docs/Web/API/MutationEvent">突变事件</a>已被弃用。请使用 <a href="/zh-CN/docs/Web/API/MutationObserver"
-              >MutationObserver</a
+              >Mutation Observer</a
             > 代替。
           </p>
         </div>
@@ -212,7 +211,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/Fullscreen_API">Fullscreen API</a> 相关的事件。
+          <a href="/zh-CN/docs/Web/API/Fullscreen_API">全屏 API</a> 相关的事件。
         </p>
         <p>
           用于在全屏和窗口模式切换或切换期间发生错误时发送通知。
@@ -231,8 +230,7 @@ l10n:
       <td>游戏手柄（Gamepad）</td>
       <td>
         <p>
-          与
-          <a href="/zh-CN/docs/Web/API/Gamepad_API">Gamepad API</a> 相关的事件。
+          与<a href="/zh-CN/docs/Web/API/Gamepad_API">游戏手柄 API</a> 相关的事件。
         </p>
       </td>
       <td>
@@ -280,8 +278,7 @@ l10n:
       <td>History</td>
       <td>
         <p>
-          与
-          <a href="/zh-CN/docs/Web/API/History_API">History API</a>
+          与<a href="/zh-CN/docs/Web/API/History_API">历史记录 API</a>
           相关的事件。
         </p>
       </td>
@@ -379,7 +376,7 @@ l10n:
           与媒体使用（包括<a
             href="/zh-CN/docs/Web/API/Media_Capture_and_Streams_API#事件"
             >媒体捕捉与媒体流 API</a
-          >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#事件">Web Audio API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
+          >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#事件">Web 音频 API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
             >画中画 API</a
           >，等等）相关的事件。
         </p>
@@ -491,9 +488,9 @@ l10n:
       <td>性能</td>
       <td>
         <p>
-          与任何性能相关的规范分组为
-          <a href="/zh-CN/docs/Web/API/Performance_API"
-            >Performance API</a
+          与任何性能相关的规范分组为<a
+            href="/zh-CN/docs/Web/API/Performance_API"
+            >性能 API</a
           > 的相关事件。
         </p>
       </td>
@@ -553,7 +550,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/WebSockets_API">WebSockets API</a> 相关的事件。
+          <a href="/zh-CN/docs/Web/API/WebSockets_API">WebSocket API</a> 相关的事件。
         </p>
       </td>
       <td>
@@ -582,7 +579,7 @@ l10n:
       <td>文本选择</td>
       <td>
         <p>
-          与选择文本相关的 <a href="/zh-CN/docs/Web/API/Selection">Selection API</a> 事件。
+          与选择文本相关的<a href="/zh-CN/docs/Web/API/Selection">选择 API</a> 事件。
         </p>
       </td>
       <td>
@@ -596,8 +593,7 @@ l10n:
       <td>触控</td>
       <td>
         <p>
-          与
-          <a href="/zh-CN/docs/Web/API/Touch_events">Touch Events API</a> 相关的事件。
+          与<a href="/zh-CN/docs/Web/API/Touch_events">触摸事件 API</a> 相关的事件。
         </p>
         <p>
           在与触控屏交互（例如：用手指或触控笔）时发出通知。与
@@ -620,7 +616,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/WebXR_Device_API">WebXR Device API</a> 相关的事件。
+          <a href="/zh-CN/docs/Web/API/WebXR_Device_API">WebXR 设备 API</a> 相关的事件。
         </p>
         <div class="notecard warning">
           <p>
@@ -663,12 +659,11 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td>Server-sent 事件</td>
+      <td>服务器发送事件</td>
       <td>
         <p>
-          与
-          <a href="/zh-CN/docs/Web/API/Server-sent_events"
-            >server sent events API</a
+          与<a href="/zh-CN/docs/Web/API/Server-sent_events"
+            >服务器发送事件 API</a
           > 相关的事件。
         </p>
       </td>
@@ -684,7 +679,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/Web_Speech_API">Web Speech API</a> 相关的事件。
+          <a href="/zh-CN/docs/Web/API/Web_Speech_API">Web 语音 API</a> 相关的事件。
         </p>
       </td>
       <td>
@@ -699,7 +694,7 @@ l10n:
       <td>
         <p>
           与
-          <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers API</a>、<a href="/zh-CN/docs/Web/API/Service_Worker_API">Service Worker API</a
+          <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Worker API</a>、<a href="/zh-CN/docs/Web/API/Service_Worker_API">Service Worker API</a
           >、<a href="/zh-CN/docs/Web/API/Broadcast_Channel_API"
             >Broadcast Channel API</a
           > 和
@@ -755,23 +750,23 @@ elem.dispatchEvent(event);
 
 此代码示例使用了 [EventTarget.dispatchEvent()](/zh-CN/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-### 添加自定义数据 – CustomEvent()
+### 添加自定义数据——CustomEvent()
 
-要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，并通过**detail** 属性传递自定义数据。例如，可以这样创建事件：
+要向事件对象添加更多数据，可以使用 [CustomEvent](/zh-CN/docs/Web/API/CustomEvent) 接口，并通过 **detail** 属性传递自定义数据。例如，可以这样创建事件：
 
 ```js
 const event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
-这样你就可以在事件监听器中访问这些自定义的数据：
+这样你就可以在事件监听器中访问额外的数据：
 
 ```js
 function eventHandler(e) {
-  console.log(`The time is: ${e.detail}`);
+  console.log(`时间为：${e.detail}`);
 }
 ```
 
-### 添加自定义数据 – 继承 Event
+### 添加自定义数据——继承 Event
 
 [`Event`](/zh-CN/docs/Web/API/Event) 接口也可以被子类化。这对于代码复用、处理更复杂的自定义数据，甚至为事件添加方法都特别有用。
 
@@ -802,7 +797,7 @@ const event = new BuildEvent(elem.dataset.time);
 
 ```js
 function eventHandler(e) {
-  console.log(`The time is: ${e.buildTime}`);
+  console.log(`时间为：${e.buildTime}`);
 }
 ```
 
@@ -820,13 +815,13 @@ function eventHandler(e) {
 const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 
-// 创建一个新事件，允许冒泡，并在"detail"属性中传递任何你想要的数据
+// 创建一个新事件，允许冒泡，并在“detail”属性中传递任何你想要的数据
 const eventAwesome = new CustomEvent("awesome", {
   bubbles: true,
   detail: { text: () => textarea.value },
 });
 
-// form 元素监听自定义的"awesome"事件，然后输出传递的 text() 方法的结果
+// form 元素监听自定义的“awesome”事件，然后输出传递的 text() 方法的结果
 form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
 // 当用户输入时，form 内的 textarea 派发/触发事件，以自身为起点
@@ -851,7 +846,7 @@ form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
 textarea.addEventListener("input", function () {
   // 动态创建并派发/触发事件
-  // 注意：我们使用了"函数表达式"（而不是"箭头函数表达式"），这样"this"将代表该元素
+  // 注意：此外，我们还使用了“函数表达式”（而不是“箭头函数表达式”），这样“this”将代表该元素
   this.dispatchEvent(
     new CustomEvent("awesome", {
       bubbles: true,
@@ -876,27 +871,27 @@ function simulateClick() {
   const cancelled = !cb.dispatchEvent(event);
 
   if (cancelled) {
-    // 某个处理程序调用了 preventDefault。
-    alert("cancelled");
+    // 某个处理器调用了 preventDefault。
+    alert("已取消");
   } else {
-    // 没有处理程序调用 preventDefault。
-    alert("not cancelled");
+    // 没有处理器调用 preventDefault。
+    alert("未取消");
   }
 }
 ```
 
-## 注册事件处理程序
+## 注册事件处理器
 
-有两种推荐的方法来注册处理程序。可以通过将事件处理程序代码分配给目标元素的相应 _onevent_ 属性，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理程序注册为元素的监听器，从而使事件处理程序代码在事件触发时运行。无论哪种方式，处理程序都会收到一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)（或[派生接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)）的对象。主要区别在于，可以使用事件监听器方法可以添加（或删除）多个事件处理程序。
+有两种推荐的方法来注册处理器。可以通过将事件处理器代码分配给目标元素的相应 _onevent_ 属性，或者使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法将处理器注册为元素的监听器，从而使事件处理器代码在事件触发时运行。无论哪种方式，处理器都会收到一个符合 [`Event` 接口](/zh-CN/docs/Web/API/Event)（或[派生接口](/zh-CN/docs/Web/API/Event#基于_event_的接口)）的对象。主要区别在于，可以使用事件监听器方法可以添加（或删除）多个事件处理器。
 
 > [!WARNING]
-> 不建议使用第三种方法，即使用 HTML onevent 属性设置事件处理程序的方法！这种方法会增加标记的复杂度，降低代码的可读性，并增加调试难度。更多信息请参阅[内联事件处理器——不要使用](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理器——不要使用)。
+> 不建议使用第三种方法，即使用 HTML onevent 属性设置事件处理器的方法！这种方法会增加标记的复杂度，降低代码的可读性，并增加调试难度。更多信息请参阅[内联事件处理器](/zh-CN/docs/Learn_web_development/Core/Scripting/Events#内联事件处理器——不要使用)。
 
 ### 使用 onevent 属性
 
-按照惯例，触发事件的 JavaScript 对象都有相应的"onevent"属性（通过在事件名称前加上"on"来命名）。当事件被触发时，这些属性会被调用以运行相关的处理程序代码，也可以由你自己的代码直接调用。
+按照惯例，触发事件的 JavaScript 对象都有相应的“onevent”属性（通过在事件名称前加上“on”来命名）。当事件被触发时，这些属性会被调用以运行相关的处理器代码，也可以由你自己的代码直接调用。
 
-要设置事件处理程序代码，只需将其分配给相应的 onevent 属性即可。每个元素中的每个事件只能分配一个事件处理程序。如有需要，可以通过将另一个函数分配给同一属性来替换处理程序。
+要设置事件处理器代码，只需将其分配给相应的 onevent 属性即可。每个元素中的每个事件只能分配一个事件处理器。如有需要，可以通过将另一个函数分配给同一属性来替换处理器。
 
 以下示例展示了如何使用 `onclick` 属性为 `click` 事件设置 `greet()` 函数。
 
@@ -910,16 +905,16 @@ function greet(event) {
 btn.onclick = greet;
 ```
 
-请注意，表示事件的对象会作为第一个参数传递给事件处理程序。此事件对象实现或派生自 {{domxref("Event")}} 接口。
+请注意，表示事件的对象会作为第一个参数传递给事件处理器。此事件对象实现或派生自 {{domxref("Event")}} 接口。
 
 ### EventTarget.addEventListener
 
-在元素上设置事件处理程序最灵活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。这种方法允许为元素分配多个监听器，并且如果需要，可以使用 {{domxref("EventTarget.removeEventListener")}} 移除已注册的监听器。
+在元素上设置事件处理器最灵活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。这种方法允许为元素分配多个监听器，并且如果需要，可以使用 {{domxref("EventTarget.removeEventListener")}} 移除已注册的监听器。
 
 > [!NOTE]
-> 通过添加和移除事件处理程序，你可以实现例如让同一个按钮在不同情况下执行不同操作。此外，在更复杂的程序中，清理旧的或未使用的事件处理程序可以提高运行效率。
+> 通过添加和移除事件处理器，你可以实现例如让同一个按钮在不同情况下执行不同操作。此外，在更复杂的程序中，清理旧的或未使用的事件处理器可以提高运行效率。
 
-以下示例展示了如何将 `greet()` 函数设置为 `click` 事件的监听器/事件处理程序（如果需要，可以使用匿名函数表达式代替命名函数）。请再次注意，事件会作为第一个参数传递给事件处理程序。
+以下示例展示了如何将 `greet()` 函数设置为 `click` 事件的监听器/事件处理器（如果需要，可以使用匿名函数表达式代替命名函数）。请再次注意，事件会作为第一个参数传递给事件处理器。
 
 ```js
 const btn = document.querySelector("button");
@@ -935,9 +930,9 @@ btn.addEventListener("click", greet);
 
 #### 使用 AbortSignal
 
-事件监听器的一个显著特性是能够使用中止信号同时清理多个事件处理程序。
+事件监听器的一个显著特性是能够使用中止信号同时清理多个事件处理器。
 
-这是通过向所有你希望一起移除的事件处理程序的 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用传递相同的 {{domxref("AbortSignal")}} 来实现的。然后你可以调用拥有该 `AbortSignal` 的控制器的 {{domxref("AbortController/abort()", "abort()")}}，这将移除所有使用该信号添加的事件处理程序。例如，添加一个可以使用 `AbortSignal` 移除的事件处理程序：
+这是通过向所有你希望一起移除的事件处理器的 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 调用传递相同的 {{domxref("AbortSignal")}} 来实现的。然后你可以调用拥有该 `AbortSignal` 的控制器的 {{domxref("AbortController/abort()", "abort()")}}，这将移除所有使用该信号添加的事件处理器。例如，添加一个可以使用 `AbortSignal` 移除的事件处理器：
 
 ```js
 const controller = new AbortController();
@@ -948,20 +943,20 @@ btn.addEventListener(
     console.log("greet:", event);
   },
   { signal: controller.signal },
-); // 向此处理程序传递一个 AbortSignal
+); // 向此处理器传递 AbortSignal
 ```
 
-然后就可以像这样移除这个事件处理程序：
+然后就可以像这样移除这个事件处理器：
 
 ```js
-controller.abort(); // 移除与此控制器关联的任何/所有事件处理程序
+controller.abort(); // 移除与此控制器关联的任何/所有事件处理器
 ```
 
-### 多个事件处理程序的交互
+### 多个事件处理器的交互
 
-`onevent` IDL 属性（例如 `element.onclick = ...`）和 HTML `onevent` 内容属性（例如 `<button onclick="...">`）都指向同一个单一处理程序槽。由于 HTML 在 JavaScript 能够访问同一元素之前已加载完毕，因此通常 JavaScript 会覆盖 HTML 中指定的内容。使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 添加的处理程序是独立的。使用 `onevent` 不会移除或替换使用 `addEventListener()` 添加的监听器，反之亦然。
+`onevent` IDL 属性（例如 `element.onclick = ...`）和 HTML `onevent` 内容属性（例如 `<button onclick="...">`）都指向同一个单一处理器槽。由于 HTML 在 JavaScript 能够访问同一元素之前已加载完毕，因此通常 JavaScript 会覆盖 HTML 中指定的内容。使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 添加的处理器是独立的。使用 `onevent` 不会移除或替换使用 `addEventListener()` 添加的监听器，反之亦然。
 
-当事件被派发时，监听器会分阶段调用。共有两个阶段：*捕获*和*冒泡*。在捕获阶段，事件从最高祖先元素开始，沿 DOM 树向下移动，直到到达目标元素。在冒泡阶段，事件沿相反方向移动。事件监听器默认在冒泡阶段监听，可以通过在 `addEventListener()` 中指定 `capture: true` 来使其在捕获阶段监听。在同一个阶段内，监听器将按照它们被注册的顺序运行。`onevent` 处理程序在首次变为非 null 时即被注册；后续的重新赋值仅会改变其回调函数，不会改变其在顺序中的位置。
+当事件被派发时，监听器会分阶段调用。共有两个阶段：*捕获*和*冒泡*。在捕获阶段，事件从最高祖先元素开始，沿 DOM 树向下移动，直到到达目标元素。在冒泡阶段，事件沿相反方向移动。事件监听器默认在冒泡阶段监听，可以通过在 `addEventListener()` 中指定 `capture: true` 来使其在捕获阶段监听。在同一个阶段内，监听器将按照它们被注册的顺序运行。`onevent` 处理器在首次变为非 null 时即被注册；后续的重新赋值仅会改变其回调函数，不会改变其在顺序中的位置。
 
 调用 {{domxref("Event.stopPropagation()")}} 可以阻止在传播链后续环节中调用其他元素上的监听器。{{domxref("Event.stopImmediatePropagation()")}} 还会阻止调用同一元素上剩余的监听器。
 

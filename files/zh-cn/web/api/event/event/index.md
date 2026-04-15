@@ -28,7 +28,7 @@ new Event(type, options)
     - `cancelable` {{optional_inline}}
       - : 一个布尔值，表示该事件是否可以被取消。默认值为 `false`。
     - `composed` {{optional_inline}}
-      - : 一个布尔值，表示该事件是否会在影子 DOM 根节点之外触发侦听器（详见 {{domxref("Event.composed")}}）。默认值为 `false`。
+      - : 一个布尔值，表示该事件是否会在影子 DOM 根节点之外触发监听器（详见 {{domxref("Event.composed")}}）。默认值为 `false`。
 
 ### 返回值
 
