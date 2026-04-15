@@ -242,7 +242,7 @@ Las [Unidades Flex](/es/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#
 
 {{Specifications}}
 
-## Vea también
+## Véase también
 
 - [Sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax)
 - [Selectores CSS](/es/docs/Web/CSS/Guides/Selectors)
