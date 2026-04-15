@@ -1,6 +1,9 @@
 ---
 title: Object.is()
+short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
@@ -101,4 +104,5 @@ Object.is(NaN, Number.NaN); // true
 ## 参见
 
 - [`core-js` 中 `Object.is` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
+- [`Object.is` 的 es-shims polyfill](https://www.npmjs.com/package/object.is)
 - [JavaScript 中的相等性判断](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)——三种内置相等性工具的比较
