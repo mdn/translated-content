@@ -8,7 +8,7 @@ original_slug: Web/CSS/padding-left
 
 ## Resumo
 
-`A propriedade CSS padding-left` é um elemento que define o espaço de preenchimento obrigatório no lado esquerdo de um elemento. [padding area](/pt-BR/docs/CSS/box_model#padding) é o espaço entre o conteúdo do elemento e a borda. Um valor negativo não é permitido.
+`A propriedade CSS padding-left` é um elemento que define o espaço de preenchimento obrigatório no lado esquerdo de um elemento. [padding area](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction#padding) é o espaço entre o conteúdo do elemento e a borda. Um valor negativo não é permitido.
 
 {{cssinfo}}
 

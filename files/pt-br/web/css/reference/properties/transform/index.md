@@ -257,6 +257,6 @@ Translates the element by the given amount along the Y axis.
 
 ## See also
 
-- [Using CSS Transforms](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS Transforms](/pt-BR/docs/Web/CSS/Guides/Transforms/Using)
 - [More info](https://paulirish.com/2010/introducing-css3please/#comment-36380) on CSS3 Rotation / Matrix Filter issues in the comments on Paul Irish's blog.
 - A cross-browser 2D [transform plugin for jQuery](http://plugins.jquery.com/project/jquery-transform)

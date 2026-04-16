@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS
 original_slug: Learn/CSS/First_steps/What_is_CSS
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}
 
 Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets) permiten crear páginas web atractivas. Pero ¿cómo funcionan realmente? En este artículo explicaremos qué es el CSS con un ejemplo de sintaxis sencillo y describiremos algunos términos clave sobre este lenguaje.
 
@@ -15,15 +15,15 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
       <td>
         Conocimientos básicos de informática,
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >tener instalado el software básico</a
         >, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >
         y nociones de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>
@@ -119,4 +119,4 @@ Lo que sigue es el gráfico de datos de compatibilidad para la propiedad CSS [`f
 
 Ahora que comprendes mínimamente qué es el CSS, pasemos a [Comenzar con CSS](/es/docs/Learn_web_development/Core/Styling_basics/Getting_started), donde puedes empezar a escribir algo de CSS tú mismo.
 
-{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "conflicting/Learn_web_development/Core/Styling_basics")}}

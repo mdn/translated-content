@@ -175,7 +175,7 @@ _`Element` インターフェイスには、以下のプロパティもありま
 - {{domxref("Element.ariaValueText")}}
   - : 文字列で、[`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性を反映し、 range ウィジェットの aria-valuenow の代替となる人間が読めるテキストを定義します。
 - {{domxref("Element.role")}}
-  - : 明示的に設定された [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性をを反映する文字列。要素の意味的役割を提供します。
+  - : 明示的に設定された [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性を反映する文字列。要素の意味的役割を提供します。
 
 #### ARIA 要素参照から反映されるインスタンスプロパティ
 

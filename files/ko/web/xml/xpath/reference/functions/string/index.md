@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/string
 original_slug: Web/XPath/Functions/string
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `string` 함수는 인수를 문자열로 변환합니다.
 

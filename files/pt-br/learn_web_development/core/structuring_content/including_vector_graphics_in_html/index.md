@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Including_vector_graphics_i
 original_slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Vector graphics are very useful in many circumstances — they have small file sizes and are highly scalable, so they don't pixelate when zoomed in or blown up to a large size. In this article we'll show you how to include one in your webpage.
 
@@ -14,9 +14,9 @@ Vector graphics are very useful in many circumstances — they have small file s
       <th scope="row">Prerequisites:</th>
       <td>
         You should know the
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content">basics of HTML</a>
         and how to
-        <a href="/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >insert an image into your document</a
         >.
       </td>
@@ -121,7 +121,7 @@ To embed an SVG via an {{htmlelement("img")}} element, you just need to referenc
 
 ### Troubleshooting and cross-browser support
 
-For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/pt-BR/docs/Web/HTML/Element/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
+For browsers that don't support SVG (IE 8 and below, Android 2.3 and below), you could reference a PNG or JPG from your `src` attribute and use a [`srcset`](/pt-BR/docs/Web/HTML/Reference/Elements/img#srcset) attribute (which only recent browsers recognize) to reference the SVG. This being the case, only supporting browsers will load the SVG — older browsers will load the PNG instead:
 
 ```html
 <img
@@ -140,11 +140,11 @@ background-size: contain;
 
 Like the `<img>` method described above, inserting SVGs using CSS background images means that the SVG can't be manipulated with JavaScript, and is also subject to the same CSS limitations.
 
-If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started#a_word_on_webservers).
+If your SVGs aren't showing up at all, it might be because your server isn't set up properly. If that's the problem, this [article will point you in the right direction](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started#a_word_on_webservers).
 
 ### How to include SVG code inside your HTML
 
-You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your **SVG inline**, or **inlining SVG**. Make sure your SVG code snippet begins and ends with the [`<svg></svg>`](/pt-BR/docs/Web/SVG/Element/svg) tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:
+You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your **SVG inline**, or **inlining SVG**. Make sure your SVG code snippet begins and ends with the [`<svg></svg>`](/pt-BR/docs/Web/SVG/Reference/Element/svg) tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:
 
 ```html
 <svg width="300" height="200">
@@ -155,7 +155,7 @@ You can also open up the SVG file in a text editor, copy the SVG code, and paste
 #### Pros
 
 - Putting your SVG inline saves an HTTP request, and therefore can reduce a bit your loading time.
-- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Attribute#presentation_attributes) as a CSS property.
+- You can assign `class`es and `id`s to SVG elements and style them with CSS, either within the SVG or wherever you put the CSS style rules for your HTML document. In fact, you can use any [SVG presentation attribute](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation_attributes) as a CSS property.
 - Inlining SVG is the only approach that lets you use CSS interactions (like `:focus`) and CSS animations on your SVG image (even in your regular stylesheet.)
 - You can make SVG markup into a hyperlink by wrapping it in an {{htmlelement("a")}} element.
 
@@ -187,7 +187,7 @@ This is definitely not the best method to choose:
 
 ## Active Learning: Playing with SVG
 
-In this active learning section we'd like you to simply have a go at playing with some SVG for fun. In the _Input_ section below you'll see that we've already provided you with some samples to get you started. You can also go to the [SVG Element Reference](/pt-BR/docs/Web/SVG/Element), find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.
+In this active learning section we'd like you to simply have a go at playing with some SVG for fun. In the _Input_ section below you'll see that we've already provided you with some samples to get you started. You can also go to the [SVG Element Reference](/pt-BR/docs/Web/SVG/Reference/Element), find out more details about other toys you can use in SVG, and try those out too. This section is all about practising your research skills, and having some fun.
 
 If you get stuck and can't get your code working, you can always reset it using the _Reset_ button.
 
@@ -334,10 +334,10 @@ In the last article of this module we will explore responsive images in detail, 
 
 ## See also
 
-- [SVG tutorial](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started) on MDN
+- [SVG tutorial](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started) on MDN
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/General_embedding_technologies", "Web/HTML/Guides/Responsive_images", "conflicting/Learn_web_development/Core/Structuring_content")}}

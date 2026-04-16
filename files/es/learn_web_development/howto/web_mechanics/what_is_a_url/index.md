@@ -14,14 +14,14 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
       <th scope="row">Prerequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >Cómo funciona Internet</a
         >,
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >qué es un servidor Web</a
         >
         y
-        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks"
           >los conceptos detrás de los enlaces en la web</a
         >.
       </td>

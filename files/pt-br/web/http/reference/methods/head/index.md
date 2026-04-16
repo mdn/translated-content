@@ -35,7 +35,7 @@ Se a resposta de uma solicitação `HEAD` mostrar que um recurso armazenado em c
     <tr>
       <th scope="row">
         Permitido em
-        <a href="/pt-BR/docs/Web/Guide/HTML/Forms">formulário HTML</a>
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Forms">formulário HTML</a>
       </th>
       <td>Não</td>
     </tr>

@@ -94,7 +94,7 @@ Estos controladores de eventos se definen en el mixin {{DOMxRef("GlobalEventHand
 - {{DOMxRef("GlobalEventHandlers.onload")}}
   - : Is an [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) representing the code to be called when the [`load`](/es/docs/Web/API/Window/load_event) event is raised.
 - {{DOMxRef("GlobalEventHandlers.onloadeddata")}}
-  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadeddata `](/es/docs/Web/Reference/Events/loadeddata ).
+  - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadeddata `](/es/docs/Web/API/HTMLMediaElement/loadeddata_event ).
 - {{DOMxRef("GlobalEventHandlers.onloadedmetadata")}}
   - : Es un [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) que representa el código que se llamará cuando se genere el evento [`loadedmetadata`](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event).
 - {{DOMxRef("GlobalEventHandlers.onloadend")}}

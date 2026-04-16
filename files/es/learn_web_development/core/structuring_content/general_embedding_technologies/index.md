@@ -15,14 +15,14 @@ Ahora ya deberías estar acostumbrado a integrar cosas en tus páginas web, incl
       <td>
         Conocimientos básicos de informática,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manejo de archivos</a
         >, familiaridad con los fundamentos de HTML (visto en
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Iniciando en HTML</a
         >) y los artículos previos en este modulo.
       </td>

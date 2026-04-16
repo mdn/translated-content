@@ -15,7 +15,7 @@ O cabeçalho `Proxy-Authenticate` é enviado junto com um {{HTTPStatus("407")}} 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

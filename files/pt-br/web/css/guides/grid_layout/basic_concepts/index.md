@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-O [layout de grade CSS](/pt-BR/docs/Web/CSS/CSS_grid_layout) introduz um sistema de grade bidimensional ao CSS. As grades podem ser usadas para dispor áreas maiores da página ou pequenos elementos da interface da pessoa usuária. Este artigo apresenta o layout de grade CSS e a nova terminologia que faz parte da especificação Layout de Grade CSS Nível 1. Os recursos mostrados nesta visão geral serão então explicados em maiores detalhes nas demais seções deste guia.
+O [layout de grade CSS](/pt-BR/docs/Web/CSS/Guides/Grid_layout) introduz um sistema de grade bidimensional ao CSS. As grades podem ser usadas para dispor áreas maiores da página ou pequenos elementos da interface da pessoa usuária. Este artigo apresenta o layout de grade CSS e a nova terminologia que faz parte da especificação Layout de Grade CSS Nível 1. Os recursos mostrados nesta visão geral serão então explicados em maiores detalhes nas demais seções deste guia.
 
 ## O que é uma grade?
 
@@ -34,7 +34,7 @@ A grade contém recursos de alinhamento para que possamos controlar como os iten
 
 Mais de um item podem ser posicionados em uma célula ou área da grade e eles podem se sobrepor parcialmente. Essa disposição em camadas pode então ser controlada com a propriedade {{cssxref("z-index")}}.
 
-A grade é uma especificação poderosa que, quando combinada com outras partes do CSS, como [flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout), pode ajudar você a criar layouts que antes eram impossíveis de construir com CSS. Tudo começa criando uma grade no seu **contêiner de grade**.
+A grade é uma especificação poderosa que, quando combinada com outras partes do CSS, como [flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout), pode ajudar você a criar layouts que antes eram impossíveis de construir com CSS. Tudo começa criando uma grade no seu **contêiner de grade**.
 
 ## Contêiner de grade
 
@@ -786,4 +786,4 @@ Podemos controlar a ordem em que os itens são empilhados usando a propriedade `
 
 ## Próximos passos
 
-Neste artigo, demos uma olhada rápida nas possibilidades dos layouts de grade. Explore e brinque com os exemplos de código e, em seguida, passe para [a próxima parte deste guia](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), onde realmente começaremos a nos aprofundar nos detalhes do layout de grade CSS.
+Neste artigo, demos uma olhada rápida nas possibilidades dos layouts de grade. Explore e brinque com os exemplos de código e, em seguida, passe para [a próxima parte deste guia](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods), onde realmente começaremos a nos aprofundar nos detalhes do layout de grade CSS.

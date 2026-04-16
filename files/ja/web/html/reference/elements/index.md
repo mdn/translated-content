@@ -182,7 +182,7 @@ HTML は公式に対応しているマルチメディアコンテンツ以外の
 | {{HTMLElement("tfoot")}}    | 表の一連の行（{{HTMLElement("tr")}} 要素）をまとめ、表の列に関する情報を含む表の脚部であることを示します。これは通常、列の集計行、例えば、列に指定された数値の合計などです。                                                                                                               |
 | {{HTMLElement("th")}}       | {{HTMLElement("tr")}} 要素の子要素であり、表セルのグループの見出しとしてセルを定義します。このグループの性質は、 [`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope) および [`headers`](/ja/docs/Web/HTML/Reference/Elements/th#headers) 属性によって明示的に定義することができます。 |
 | {{HTMLElement("thead")}}    | 表の一連の行（{{HTMLElement("tr")}} 要素）をまとめ、表の列に関する情報を含む表の見出しであることを示します。これは通常、列見出し（{{HTMLElement("th")}} 要素）という形で形成されます。                                                                                                     |
-| {{HTMLElement("tr")}}       | 表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。                                                                                                                                 |
+| {{HTMLElement("tr")}}       | 表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素を混在させることができます。                                                                                                                                   |
 
 ## フォーム
 

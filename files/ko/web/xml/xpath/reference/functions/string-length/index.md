@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/string-length
 original_slug: Web/XPath/Functions/string-length
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `string-length` 함수는 인수로 준 문자열의 문자수를 반환합니다.
 

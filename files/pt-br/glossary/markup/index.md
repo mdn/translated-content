@@ -29,7 +29,7 @@ objetivo dessa parte do conteúdo.
   - : Usada especificamente para rotular partes do documento como elas são, e não como devem ser processadas. Sistemas conhecidos que fornecem muitos desses
     rótulos incluem LaTeX, HTML e XML. O objetivo é dissociar a estrutura do documento de qualquer tratamento ou representação particular. Essa marcação é
     frequentemente descrita como "semântica". Um exemplo de uma marcação descritiva seria a tag
-    [`<cite>`](/pt-BR/docs/Web/HTML/Element/cite) do HTML, usada para rotular uma citação. Essa marcação incentiva os autores a
+    [`<cite>`](/pt-BR/docs/Web/HTML/Reference/Elements/cite) do HTML, usada para rotular uma citação. Essa marcação incentiva os autores a
     escrever de uma maneira que descreva o material conceitualmente, em vez de apenas visualmente.
 
 Há um borrão considerável das linhas entre os tipos de marcação. Nos sistemas modernos de processamento de texto, a marcação de apresentação é geralmente

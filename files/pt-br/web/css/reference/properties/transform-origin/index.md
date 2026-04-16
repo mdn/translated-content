@@ -146,7 +146,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-A origem da transformação é o ponto em torno do qual uma transformação é aplicada. Por exemplo, a origem da transformação da função [`rotate()`](/pt-BR/docs/Web/CSS/transform-function/rotate) é o centro de rotação.
+A origem da transformação é o ponto em torno do qual uma transformação é aplicada. Por exemplo, a origem da transformação da função [`rotate()`](/pt-BR/docs/Web/CSS/Reference/Values/transform-function/rotate) é o centro de rotação.
 
 Na prática, essa propriedade envolve um par de translações em torno das outras transformações do elemento. A primeira translação move a origem da transformação para a origem real em <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>. Em seguida, as outras transformações são aplicadas e, porque a origem da transformação está em <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, essas transformações atuam em relação à origem da transformação. Por fim, a translação oposta é aplicada, movendo a origem da transformação de volta à sua localização original. Consequentemente, essa definição
 
@@ -205,7 +205,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value).
+A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37).
 
 Se um único valor {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} for definido, ele representa o deslocamento horizontal.
 
@@ -451,5 +451,5 @@ transform-origin: 100% -30%;
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/Guides/Transforms/Using)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

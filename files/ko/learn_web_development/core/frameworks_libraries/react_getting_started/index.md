@@ -15,7 +15,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_g
   <tr>
    <th scope="row">필요한 사전 지식:</th>
    <td>
-    <p>코어 <a href="/ko/docs/Learn/HTML">HTML</a>, <a href="/ko/docs/Learn/CSS">CSS</a>, 및 <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.</p>
+    <p>코어 <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, 및 <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.</p>
        <p>React는 JSX(JavaScript와 XML)라는 HTML-in-JavaScript 문법을 사용합니다. HTML와 JavaScript에 익숙하다면 JSX를 배우는 것에 도움이 됩니다. 또한 애플리케이션에서 발생하는 버그가 JavaScript와 관련이 있는지 아니면 React의 구체적인 도메인과 관련이 있는지 수월하게 식별하는 것에 도움이 됩니다.</p>
    </td>
   </tr>
