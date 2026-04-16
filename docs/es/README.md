@@ -50,6 +50,22 @@ Los dos repositorios con los que trabajamos:
 
 ## Abrir un Pull Request
 
+Tienes dos maneras de contribuir. Elige la que te sea más cómoda.
+
+### Opción A: Desde GitHub (sin instalar nada)
+
+Ideal para erratas, traducciones cortas o cambios en un solo archivo. Todo el flujo vive en el navegador, no necesitas clonar el repositorio.
+
+1. Entra al archivo que quieres modificar dentro de [`files/es/`](https://github.com/mdn/translated-content/tree/main/files/es).
+2. Pulsa el ícono de lápiz (**Edit this file**) en la parte superior derecha. GitHub te ofrecerá crear un _fork_ automáticamente, acepta.
+3. Edita el contenido directamente en el navegador.
+4. Al terminar, en la parte inferior rellena el mensaje de commit (añade el sufijo `[es]`) y pulsa **Propose changes**.
+5. GitHub abrirá la pantalla de **Compare & pull request**. Completa el título/descripción y envía el PR hacia `mdn/translated-content:main`.
+
+### Opción B: Desde tu computadora (recomendada para cambios grandes)
+
+Necesaria si vas a traducir páginas extensas, actualizar varios archivos o ejecutar los linters localmente.
+
 1. Haz _fork_ de <https://github.com/mdn/translated-content> a tu cuenta de GitHub.
 2. Clona tu _fork_:
 
