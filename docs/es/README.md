@@ -8,9 +8,9 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 
 - [¿Por dónde empezar?](#por-dónde-empezar)
 - [Tipos de contribución que preferimos](#tipos-de-contribución-que-preferimos)
-- [Requisitos](#requisitos)
-- [Configurar el entorno local](#configurar-el-entorno-local)
 - [Abrir un Pull Request](#abrir-un-pull-request)
+  - [Opción A: Desde GitHub (sin instalar nada)](#opción-a-desde-github-sin-instalar-nada)
+  - [Opción B: Desde tu computadora (recomendada para cambios grandes)](#opción-b-desde-tu-computadora-recomendada-para-cambios-grandes)
 - [Traducir un documento](#traducir-un-documento)
 - [Mantener el `l10n.sourceCommit` al día](#mantener-el-l10nsourcecommit-al-día)
 - [Convención de traducciones](#convención-de-traducciones)
@@ -44,27 +44,6 @@ Si es tu primera contribución, siéntete libre de empezar con un cambio pequeñ
 
 ---
 
-## Requisitos
-
-- **Node.js** >= 24 (ver [`.nvmrc`](https://github.com/mdn/translated-content/blob/main/.nvmrc) y [`.tool-versions`](https://github.com/mdn/translated-content/blob/main/.tool-versions)).
-- **npm** (la versión exacta se define en el campo `packageManager` de [`package.json`](https://github.com/mdn/translated-content/blob/main/package.json); `npm install` la respeta automáticamente con `corepack` habilitado).
-- Recomendamos un gestor de versiones de Node: [mise](https://mise.jdx.dev/), [fnm](https://github.com/Schniz/fnm) o [nvm](https://github.com/nvm-sh/nvm). Cualquiera de ellos leerá `.nvmrc` o `.tool-versions` automáticamente.
-
-Para traducir no necesitas levantar un servidor local: el bot genera una URL de previsualización en cada PR. `npm install` sólo hace falta si quieres correr los linters (`npm run lint:md`, `npm run fix:md`) antes de enviar el cambio.
-
----
-
-## Configurar el entorno local
-
-Tutorial en video: <https://youtu.be/pFeW0vUYbkg>
-
-Los dos repositorios con los que trabajamos:
-
-- **Inglés (fuente):** <https://github.com/mdn/content>
-- **Traducciones:** <https://github.com/mdn/translated-content>
-
----
-
 ## Abrir un Pull Request
 
 Tienes dos maneras de contribuir. Elige la que te sea más cómoda.
@@ -82,6 +61,18 @@ Ideal para erratas, traducciones cortas o cambios en un solo archivo. Todo el fl
 ### Opción B: Desde tu computadora (recomendada para cambios grandes)
 
 Necesaria si vas a traducir páginas extensas, actualizar varios archivos o ejecutar los linters localmente.
+
+> Tutorial en video: <https://youtu.be/pFeW0vUYbkg>
+
+#### Requisitos
+
+- **Node.js** >= 24 (ver [`.nvmrc`](https://github.com/mdn/translated-content/blob/main/.nvmrc) y [`.tool-versions`](https://github.com/mdn/translated-content/blob/main/.tool-versions)).
+- **npm** (la versión exacta se define en el campo `packageManager` de [`package.json`](https://github.com/mdn/translated-content/blob/main/package.json); `npm install` la respeta automáticamente con `corepack` habilitado).
+- Recomendamos un gestor de versiones de Node: [mise](https://mise.jdx.dev/), [fnm](https://github.com/Schniz/fnm) o [nvm](https://github.com/nvm-sh/nvm). Cualquiera de ellos leerá `.nvmrc` o `.tool-versions` automáticamente.
+
+No necesitas levantar un servidor local para traducir: el bot genera una URL de previsualización en cada PR. `npm install` sólo hace falta si quieres correr los linters (`npm run lint:md`, `npm run fix:md`) antes de enviar el cambio.
+
+#### Pasos
 
 1. Haz _fork_ de <https://github.com/mdn/translated-content> a tu cuenta de GitHub.
 2. Clona tu _fork_:
