@@ -3,6 +3,7 @@ title: "HTML: Lenguaje de Marcado de Hipertexto"
 short-title: HTML
 slug: Web/HTML
 l10n.sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
+sidebar: htmlsidebar
 ---
 
 HTML (Lenguaje de Marcado de Hipertexto, del inglés _HyperText Markup Language_) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, normalmente se utilizan otras tecnologías para describir la apariencia o presentación de una página web ([CSS](/es/docs/Web/CSS)) y su funcionalidad o comportamiento ([JavaScript](/es/docs/Web/JavaScript)).
@@ -11,7 +12,7 @@ El "hipertexto" hace referencia a los enlaces que conectan páginas web entre s�
 
 HTML utiliza "marcado" para etiquetar texto, imágenes y otros contenidos que se muestran en un navegador web. El marcado HTML incluye elementos como {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("search")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} y muchos otros.
 
-Un elemento HTML se diferencia del resto del contenido de un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por "<" y ">". El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, puede escribirse en mayúsculas, minúsculas o una combinación de ambas. Por ejemplo, la etiqueta "<title>" puede escribirse como "<Title>", "<TITLE>" o de cualquier otra forma. No obstante, la convención y la práctica recomendada es escribir las etiquetas en minúsculas.
+Un elemento HTML se diferencia del resto del contenido de un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por `<` y `>`. El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, puede escribirse en mayúsculas, minúsculas o una combinación de ambas. Por ejemplo, la etiqueta `<title>` puede escribirse como `<Title>`, `<TITLE>` o de cualquier otra forma. No obstante, la convención y la práctica recomendada es escribir las etiquetas en minúsculas.
 
 Los siguientes artículos pueden ayudarte a aprender más sobre HTML.
 
@@ -66,8 +67,12 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 **[Tipos y formatos de medios en la Web](/es/docs/Web/Media/Guides/Formats)**
 : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} permiten reproducir contenido multimedia de forma nativa sin necesidad de software adicional.
 
+---
+
+## Cómo...
+
 **[Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)**
-: HTML ofrece varias formas de representar definiciones, ya sea en línea o mediante glosarios estructurados.
+: HTML ofrece varias formas de representar definiciones, ya sea en línea o mediante glosarios estructurados. Proporciona contexto semántico a los términos para los lectores y los motores de búsqueda.
 
 **[Uso de atributos de datos](/es/docs/Web/HTML/How_to/Use_data_attributes)**
 : HTML5 permite asociar datos personalizados a elementos mediante atributos `data-*`, sin afectar a su significado semántico.
@@ -79,7 +84,7 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 : Los mapas de imagen permiten asociar enlaces a distintas áreas de una imagen.
 
 **[Crear páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)**
-: Una página optimizada mejora la experiencia del usuario y reduce la carga en los servidores y en la red.
+: Una página optimizada mejora la experiencia del usuario y reduce la carga en los servidores y en la red. También puede mejorar el posicionamiento en los motores de búsqueda de tu sitio web.
 
 **[Añadir JavaScript a una página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)**
 : Este artículo explica cómo integrar código JavaScript en un documento HTML.
@@ -91,10 +96,10 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 HTML está compuesto por elementos que pueden modificarse mediante atributos. Los documentos HTML se conectan entre sí mediante enlaces. Consulta la documentación completa de la [referencia HTML](/es/docs/Web/HTML/Reference).
 
 **[Elementos HTML](/es/docs/Web/HTML/Reference/Elements)**
-: Referencia de todos los {{glossary("Element", "elementos")}} HTML.
+: Referencia de todos los {{glossary("Element", "elementos")}} HTML. Incluye descripciones de cada elemento, además de los atributos que admiten.
 
 **[Atributos HTML](/es/docs/Web/HTML/Reference/Attributes)**
-: Referencia de todos los atributos HTML.
+: Referencia de todos los atributos HTML. Incluye descripciones de cada atributo y los elementos en los que se pueden utilizar.
 
 **[Atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)**
 : Atributos que pueden aplicarse a todos los elementos HTML, incluso a los no estándar.
