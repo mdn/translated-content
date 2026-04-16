@@ -162,16 +162,6 @@ Japan store ¥2000`;
 console.log(getPrices(str2)); // ["$19.99", "€18.99", "¥2000"]
 ```
 
-## 基本原理
-
-在 ES2018 之前，JavaScript 没有强有效的方式用匹配出不同`文字`(如马其顿语，希腊语，Georgian 等) 或不同 `属性名` (如 Emoji 等) 的字符。另见 [tc39 Proposal on Unicode Property Escapes](https://github.com/tc39/proposal-regexp-unicode-property-escapes).
-
-### Unicode 属性转移与字符类
-
-在 JavaScript 正则表达式中，也可以使用[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)，特别是 `\w` 或 `\d` 来匹配字母或数字。然而，此类形式仅匹配*拉丁*字母表中的字符（换言之，`\w` 匹配 `a` 到 `z` 以及 `A` 到 `Z`，`\d` 匹配 `0` 到 `9`）。如[此示例](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes#在_unicode_字符中寻找单词)所示，处理非拉丁文本时可能会有些笨拙。
-
-Unicode 属性转义类别涵盖了更多的字符，而 `\p{Letter}` 或 `\p{Number}` 适用于任何文字。
-
 ### 匹配字符串
 
 使用 `v` 标志时，`\p{…}` 可以利用字符串的特性，匹配可能长于一个字符的字符串：
