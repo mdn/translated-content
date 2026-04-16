@@ -1,5 +1,5 @@
 ---
-title: Como resolver problemas comunes
+title: Cómo resolver problemas comunes
 slug: Learn_web_development/Howto
 original_slug: Learn/Common_questions
 l10n:
@@ -10,6 +10,6 @@ Esta sección proveé soluciones a problemas comunes de front-end y a preguntas 
 
 {{subpageswithsummaries}}
 
-## Vease también
+## Véase también
 
 - [HTML Cheatsheet](/es/docs/Web/HTML/Guides/Cheatsheet)

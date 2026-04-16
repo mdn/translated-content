@@ -34,7 +34,7 @@ En este artículo se describe qué es Internet y cómo funciona.
 
 **Internet** es la columna vertebral de la Web, la infraestructura técnica que la hace posible. En su esencia, Internet es una gran red de computadoras que se comunican simultáneamente.
 
-[La historia de internet es algo oscura](http://en.wikipedia.org/wiki/Internet#History). Comenzó en la década de 1960 como un proyecto de investigación financiado por el ejercito de los EE.UU, y luego se convirtió en una infraestructura pública en la década de 1980 con el apoyo de muchas universidades públicas y empresas privadas. Las distintas tecnologías que soporta internet han evolucionado con el tiempo, pero la forma en que funciona no ha cambiado mucho: Internet es una forma de conectar las computadoras entre sí y asegurar que, pase lo que pase, encuentren una manera de mantenerse conectadas.
+[La historia de internet es algo oscura](https://en.wikipedia.org/wiki/Internet#History). Comenzó en la década de 1960 como un proyecto de investigación financiado por el ejercito de los EE.UU, y luego se convirtió en una infraestructura pública en la década de 1980 con el apoyo de muchas universidades públicas y empresas privadas. Las distintas tecnologías que soporta internet han evolucionado con el tiempo, pero la forma en que funciona no ha cambiado mucho: Internet es una forma de conectar las computadoras entre sí y asegurar que, pase lo que pase, encuentren una manera de mantenerse conectadas.
 
 ## Videos acerca del Internet
 
@@ -72,9 +72,9 @@ Puedes imaginar que podemos conectar conmutadores entre sí infinitamente, para 
 
 ![Conmutadores interconectados](internet-schema-5.png)
 
-En la realidad, esto lleva a muchos problemas de ingeniería. Entre más conmutadores un paquete tenga que pasar, le toma mas tiempo llegar a su destino. Y no puedes tener un solo árbol de conmutadores, porque entonces cuando uno solo falla podría desconectar una gran porción de dispositivos. Para resolver este problema, mantenemos cada red local tan pequeña como es posible y conectamos estas redes locales usando un dispositivo separado, llamado _enrutador_ o router (en Inglés). Un enrutador es un ordenador que sabe como reenviar mensajes entre redes. El enrutador is como una oficina postal: cuando un paquete llega, lee la dirección del recipiente y reenvia el paquete al recipiente correcto directamente sin pasar por capas de relevos.
+En la realidad, esto lleva a muchos problemas de ingeniería. Entre más conmutadores un paquete tenga que pasar, le toma mas tiempo llegar a su destino. Y no puedes tener un solo árbol de conmutadores, porque entonces cuando uno solo falla podría desconectar una gran porción de dispositivos. Para resolver este problema, mantenemos cada red local tan pequeña como es posible y conectamos estas redes locales usando un dispositivo separado, llamado _enrutador_ o router (en Inglés). Un enrutador es un ordenador que sabe como reenviar mensajes entre redes. El enrutador es como una oficina postal: cuando un paquete llega, lee la dirección del destinatario y reenvía el paquete al recipiente correcto directamente sin pasar por capas de relevos.
 
-Una red así se acerca mucho a lo que llamamos Internet. Solo necesitamos un medio físico (cables) para conectar todos estos enrutadores. Afortunadamente, dicha infrestructura ya existía previa al Internet, y es la red telefónica. Para conectar nuestra red a la infrestructura telefónica, necesitamos una pieza especial de equipo llamada _módem_. Este _módem_ convierte la información de nuestra red a información manejable por la infrestructura telefónica y viceversa.
+Una red así se acerca mucho a lo que llamamos Internet. Solo necesitamos un medio físico (cables) para conectar todos estos enrutadores. Afortunadamente, dicha infraestructura ya existía previa al Internet, y es la red telefónica. Para conectar nuestra red a la infraestructura telefónica, necesitamos una pieza especial de equipo llamada _módem_. Este _módem_ convierte la información de nuestra red a información manejable por la infraestructura telefónica y viceversa.
 
 ![Un enrutador conectado a un modem](internet-schema-6.png)
 
@@ -96,20 +96,20 @@ Para los ordenadores es un identificador simple, pero los humanos tenemos mayor 
 
 Como puedes notar, cuando navegamos por la web con un navegador, normalmente utilizamos el nombre de dominio para llegar a un sitio web. ¿Significa eso que Internet y la Web son la misma cosa? No es tan simple. Como vimos, Internet es una infraestructura técnica que permite que miles de millones de ordenadores estén conectadas entre sí. Algunos de estos ordenadores, llamados _servidores web_ son capaces de enviar mensajes inteligibles a los navegadores. Por tanto _Internet_ es una infraestructura, mientras que la _Web_ es un servicio construido sobre dicha infraestructura. Cabe señalar que existen otros servicios soportados por Internet, como es el correo electrónico e {{Glossary("IRC")}}.
 
-### Intranets and Extranets
+### Intranets y Extranets
 
-Las Intranets son redes _privadas_ que estan restringidas a miembros de una organización en particular.
-Son comunmente usadas para proveer un portal para que los miembros accedan a recursos compartidos, colabores y se comuniquen de manera segura.
-Por ejemplo, la intranet de una orfanizacion puede alojar paginas web para compartir información de un equipo o depratamento, unidades de almacenamiento compartidas para administrar documentos clave o archivos, portales para llevar acabo tareas administrativas, y herramientas de colaboracion como wikis, tableros de discución y sistemas de mensajería.
+Las Intranets son redes _privadas_ que están restringidas a miembros de una organización en particular.
+Son comúnmente usadas para proveer un portal para que los miembros accedan a recursos compartidos, colabores y se comuniquen de manera segura.
+Por ejemplo, la intranet de una organización puede alojar páginas web para compartir información de un equipo o departamento, unidades de almacenamiento compartidas para administrar documentos clave o archivos, portales para llevar acabo tareas administrativas, y herramientas de colaboración como wikis, tableros de discusión y sistemas de mensajería.
 
 Las Extranets son muy similares a las Intranets, excepto que éstas abren toda o parte de la red privada para permitir compartir o colaborar con otras organizaciones.
-Tipicamente son usadas para compartir información de manera segura con clientes y otras partes interesadas con quiernes trabajan de cerca.
-Muchas veces sus funciones son similares a las que provee una intranet: compartir información y archivos, herramientas de colaboración, tableros de discución, etc.
+Típicamente son usadas para compartir información de manera segura con clientes y otras partes interesadas con quienes trabajan de cerca.
+Muchas veces sus funciones son similares a las que provee una intranet: compartir información y archivos, herramientas de colaboración, tableros de discusión, etc.
 
 Ambas, Intranets y Extranets trabajan en el mismo tipo de infrestructura que el Internet y utilizan los mismos protocolos.
-Por lo tanto, puden ser accesadas por miembros autorizados, desde diferentes locaciones físicas.
+Por lo tanto, pueden ser accesadas por miembros autorizados, desde diferentes locaciones físicas.
 
-![Graphical Representation of how Extranet and Intranet work](internet-schema-8.png)
+![Representación gráfica de cómo funcionan las Intranets y Extranets](internet-schema-8.png)
 
 ## Próximos pasos
 
