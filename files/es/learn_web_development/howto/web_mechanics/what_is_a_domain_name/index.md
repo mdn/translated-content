@@ -13,10 +13,10 @@ l10n:
       <td>
         Primero necesitas saber
         <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
-          >cómo funciona Internet</a
+          >¿cómo funciona Internet?</a
         >
         y entender
-        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">qué son las URLs</a>.
+        <a href="/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL">¿qué son las URLs?</a>.
       </td>
     </tr>
     <tr>
@@ -33,29 +33,29 @@ l10n:
 
 Los nombres de dominio son una parte clave de la infraestructura de Internet. Proporcionan una dirección legible para cualquier servidor web disponible en Internet.
 
-Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, ya sea IPv4 (p. ej. `192.0.2.172`) o una IPv6 (p. ej. `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
+Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, ya sea IPv4 (p. ej., `192.0.2.172`) o IPv6 (p. ej., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
-Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quien es el servidor o que servicio ofrece. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
+Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quién es el servidor o qué servicio ofrece. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
 
-Para resolver todos estos problemas, usamos direcciones que las personas pueden leer, se denominan nombres de dominio.
+Para resolver todos estos problemas, usamos direcciones que las personas pueden leer; éstas se denominan nombres de dominio.
 
 ## Profundizar
 
 ### Estructura de los nombres de dominio
 
-Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
+Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres...), separadas por puntos y **se leen de derecha a izquierda**:
 
 ![Anatomía del nombre de dominio MDN](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
-  - : Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (`.com`, `.org`, `.net`) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
-    - TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - estan hechos para indicar que un recurso está en un idioma o país en particular.
+  - : Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (`.com`, `.org`, `.net`) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas, por lo que es más claro su propósito. Por ejemplo:
+    - TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - están hechos para indicar que un recurso está en un idioma o país en particular.
     - Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
     - Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
 
-    TLDs pueden contener tanto caracteres especiales como caracteres latinos. La longitud máxima de un TLD es de 63 caracteres, sin embargo la mayoría se tiene alrededor de 2-3.
+    TLDs pueden contener tanto caracteres especiales como caracteres latinos. La longitud máxima de un TLD es de 63 caracteres, sin embargo, la mayoría se tiene alrededor de 2-3.
 
     La lista completa de TLD es [administrada por ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
@@ -69,9 +69,9 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 
 #### ¿Quién es propietario de un nombre de dominio?
 
-No se puede "comprar un nombre de dominio". Esto es para que dominios que no se usan, eventualmente se vuelven disponibles para usarse nuevamente por alguien mas. Si cada nombre de dominio fuera comprado, la web se llenaría de nombres de dominio sin usar, que estarían bloqueados y no se podrían usar por nadie mas.
+No se puede "comprar un nombre de dominio". Esto es para que los dominios que no se usan, eventualmente se vuelvan disponibles para usarse nuevamente por alguien más. Si cada nombre de dominio fuera comprado, la web se llenaría de nombres de dominio sin usar, que estarían bloqueados y no se podrían usar por nadie más.
 
-Por el contrario, pagas por el derecho a usar un nombre de dominio, por uno o más años. Puedes renovar tu derecho, y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nuncá eres dueño del nombre de dominio.
+Por el contrario, pagas por el derecho a usar un nombre de dominio, por uno o más años. Puedes renovar tu derecho, y la renovación tiene prioridad sobre las aplicaciones de otras personas. Pero nunca eres dueño del nombre de dominio.
 
 Las compañías llamadas registradores utilizan los registros de nombres de dominio para realizar un seguimiento de la información técnica y administrativa que lo conecta con su nombre de dominio.
 
@@ -82,7 +82,7 @@ Las compañías llamadas registradores utilizan los registros de nombres de domi
 
 Para encontrar si un nombre de dominio dado está disponible,
 
-- Ir a un sitio web de registro de nombres de dominio. La mayoría de ellos, tienen un servicio "whois" que te dice si un nombre de dominio está disponible.
+- Ir a un sitio web de registro de nombres de dominio. La mayoría de ellos tienen un servicio "whois" que te dice si un nombre de dominio está disponible.
 - Alternativamente, si usted usa un sistema con un shell incorporado, escriba el comando `whois`, como se muestra aquí para `mozilla.org`:
 
 ```
@@ -139,7 +139,7 @@ Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos e
 
 ### ¿Cómo funciona una petición DNS?
 
-Como ya hemos visto, cuando usted quiere visualizar una página web en su navegador es más simple escribir un nombre de dominio que una dirección IP. Echemos un vistazo al proceso:
+Como ya hemos visto, cuando usted quiere visualizar una página web en su navegador, es más simple escribir un nombre de dominio que una dirección IP. Echemos un vistazo al proceso:
 
 1. Escriba `mozilla.org` en la barra de direcciones de su navegador.
 2. Su navegador le pregunta a su computadora si reconoce la dirección IP identificada por este nombre de dominio (usando una caché DNS local) Si lo hace, el nombre es traducido a la IP y el navegador gestiona el contenido con el servidor web. Fin de la historia.
