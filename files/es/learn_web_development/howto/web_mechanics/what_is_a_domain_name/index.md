@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
@@ -35,7 +34,7 @@ Los nombres de dominio son una parte clave de la infraestructura de Internet. Pr
 
 Cualquier computadora conectada a Internet puede ser alcanzada a partir de una dirección {{Glossary("IP_Address","IP")}} pública, ya sea IPv4 (p. ej., `192.0.2.172`) o IPv6 (p. ej., `2001:db8:8b73:0000:0000:8a2e:0370:1337`).
 
-Las computadoras pueden manejar estas direcciones fácilmente, pero las personas pasan trabajo para saber de quién es el servidor o qué servicio ofrece. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
+Las computadoras pueden manejar estas direcciones fácilmente, pero las personas tienen dificultades para saber de quién es el servidor o qué servicio ofrece. Las direcciones IP son difíciles de recordar y pueden cambiar con el tiempo.
 
 Para resolver todos estos problemas, usamos direcciones que las personas pueden leer; éstas se denominan nombres de dominio.
 
@@ -51,19 +50,19 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
   - : Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (`.com`, `.org`, `.net`) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas, por lo que es más claro su propósito. Por ejemplo:
-    - TLDs locales como `.us`, `.fr`, o `.se` pueden requerir el servicio en un determinado idioma o que esté alojado en un país específico - están hechos para indicar que un recurso está en un idioma o país en particular.
-    - Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
-    - Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
+    - TLDs locales como `.us`, `.fr`, o `.se` pueden requerir que el servicio sea proveído en un determinado idioma o que esté alojado en un país específico - están hechos para indicar que un recurso está en un idioma o país en particular.
+    - Los TLDs `.gov` solo está permitido para ser usado por departamentos de gobierno.
+    - Los TLDs `.edu` son para uso exclusivo para instituciones educativas y académicas.
 
     TLDs pueden contener tanto caracteres especiales como caracteres latinos. La longitud máxima de un TLD es de 63 caracteres, sin embargo, la mayoría se tiene alrededor de 2-3.
 
     La lista completa de TLD es [administrada por ICANN](https://www.icann.org/en/contracted-parties/registry-operators/resources/list-of-top-level-domains).
 
 - Etiqueta (o componente)
-  - : Las etiquetas son lo que siguen al TLD. Una etiqueta es una secuencia de caracteres sin distinguir minúsculas o mayúsculas con una longiutd entre uno y sesenta y tres caracteres, que contiene solo letras `A` a la `Z`, digitos `0` a `9` y el caracter '-' (que no puede encontrarse al inicio o al final de la etiqueta). `a`, `97` y `hola-persona-desconocida-16-como-estas` son ejemplos de etiquetas válidas.
+  - : Las etiquetas son lo que siguen al TLD. Una etiqueta es una secuencia de caracteres sin distinguir minúsculas o mayúsculas con una longitud entre uno y sesenta y tres caracteres, que contiene solo letras `A` a la `Z`, digitos `0` a `9` y el caracter '-' (que no puede encontrarse al inicio o al final de la etiqueta). `a`, `97` y `hola-persona-desconocida-16-como-estas` son ejemplos de etiquetas válidas.
 
     La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD).
-    Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio sobre el que se tenga control (p. ej. [mozilla.org](https://mozilla.org/es-ES/)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
+    Un nombre de dominio puede tener muchas etiquetas (o componentes). No es obligatorio, ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) es un nombre de dominio válido. Para cualquier dominio sobre el que se tenga control (p. ej. [mozilla.org](https://mozilla.org/es-ES/)), uno puede crear "subdominios" con diferente contenido ubicado en cada uno, por ejemplo [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), o [bugzilla.mozilla.org](https://bugzilla.mozilla.org/.
 
 ### Comprar un nombre de dominio
 
@@ -126,7 +125,7 @@ Como se observa, el dominio no existe en la base de datos de `whois` (en el mome
 El proceso es bastante sencillo:
 
 1. Ir a un sitio de registro.
-2. Generalmente hay un letrero que llama la atención que dice "Get a domain name". Hacer click en él.
+2. Usualmente hay una llamada a la acción destacada que dice "Get a domain name". Hacer clic en él.
 3. Rellenar el formulario con todos los detalles requeridos. Asegúrese de no haber escrito incorrectamente el nombre de dominio deseado. ¡Una vez que esté pagado, es muy tarde!.
 4. El registrador te permitirá conocer cuando un nombre de dominio esté correctamente registrado. Dentro de unas pocas horas, todos los servidores DNS habrán recibido su información de DNS.
 
@@ -135,7 +134,9 @@ El proceso es bastante sencillo:
 
 #### Actualización de DNS
 
-Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel". Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente). De esta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
+Las bases de datos DNS son almacenadas en cada servidor DNS del mundo, y todos ellos hacen referencia a unos pocos denominados "servidores de nombre autoritario" o "servidores DNS de primer nivel" - estos son como los servidores jefe que administran el sistema.
+
+Cuando su registrador crea o actualiza alguna información para un dominio dado, la información tiene que ser actualizada en cada base de datos DNS. Cada servidor DNS que conoce sobre un dominio dado almacena la información por algún tiempo antes de que sea automáticamente invalidada y luego actualizada ( el servidor DNS consulta un servidor autoritario nuevamente y extrae la información actualizada). De ésta manera, a los servidores DNS que conocen este nombre de dominio les toma algún tiempo poner la información al día.
 
 ### ¿Cómo funciona una petición DNS?
 
