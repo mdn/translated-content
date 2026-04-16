@@ -3,19 +3,19 @@ title: Function() 构造函数
 short-title: Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 l10n:
-  sourceCommit: fefa80c1e817377a0bbaf6a636ce6b8797f38fbb
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 > [!WARNING]
-> 传递给此构造函数的参数会被动态解析并作为 JavaScript 执行。此类 API 被称为[注入陷阱](/zh-CN/docs/Web/API/Trusted_Types_API#concepts_and_usage)，是[跨站脚本攻击（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)的潜在载体。
+> 传递给此构造函数的参数会被动态解析并作为 JavaScript 执行。此类 API 被称为[注入陷阱](/zh-CN/docs/Web/API/Trusted_Types_API#概念和用法)，是[跨站脚本攻击（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)的潜在载体。
 >
-> 你可以通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来降低此风险。
+> 你可以通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_来强制执行可信类型)来降低此风险。
 >
 > 详见[安全考虑](#安全考虑)章节。
 
-**`Function()`** 构造函数用于创建 {{jsxref("Function")}} 对象。直接调用构造函数可以动态创建函数，但会存在与 {{jsxref("Global_Objects/eval", "eval()")}} 类似的安全问题以及（虽然影响远小于 `eval`）的性能问题。不过，与可能访问本地作用域的 `eval` 不同，`Function` 构造函数创建的函数仅在全局作用域中执行。
+**`Function()`** 构造函数用于创建 {{jsxref("Function")}} 对象。直接调用构造函数可以动态创建函数，但会存在安全问题以及与 {{jsxref("Global_Objects/eval", "eval()")}} 类似（但远不那么严重的）的性能问题。不过，与可能访问本地作用域的 `eval` 不同，`Function` 构造函数创建的函数仅能在全局作用域中执行。
 
-{{InteractiveExample("JavaScript Demo: Function() 构造函数", "shorter")}}
+{{InteractiveExample("JavaScript 演示：Function() 构造函数", "shorter")}}
 
 ```js interactive-example
 const sum = new Function("a", "b", "return a + b");
@@ -43,7 +43,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 
 ### 参数
 
-- `arg1`, …, `argN` {{optional_inline}}
+- `arg1`、…、`argN` {{optional_inline}}
   - : {{domxref("TrustedScript")}} 实例或字符串，用于指定函数将作为形式参数名称使用的名称。该值必须对应于一个有效的 JavaScript 参数（可以是普通的[标识符](/zh-CN/docs/Glossary/Identifier)、[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)或[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)参数，也可选择使用[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)），或用逗号分隔的此类字符串的列表。
 
     由于参数的解析方式与函数表达式相同，所以接受空白和注释。例如：`"x", "theValue = 42", "[a, b] /* 数字 */"` 或 `"x, theValue = 42, [a, b] /* 数字 */"`。（`"x, theValue = 42", "[a, b]"` 也是正确的，虽然有些难以阅读。）
@@ -56,7 +56,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 - {{jsxref("SyntaxError")}}
   - : 函数参数无法被解析为有效的参数列表，或 `functionBody` 无法被解析为有效的 JavaScript 语句。
 - {{jsxref("TypeError")}}
-  - : 当[受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API)[通过 CSP 强制使用](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)且未定义默认策略时，任何参数均是字符串。
+  - : 当[通过 CSP 强制使用](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_来强制执行可信类型)[受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API)且未定义默认策略，而任意参数为字符串。
 
 ## 描述
 
@@ -90,12 +90,12 @@ const recursiveFn = new Function(
 );
 ```
 
-请注意，集合源的两个动态部分——参数列表 `args.join(",")` 和 `functionBody` 将首先被分别解析，以确保它们在语法上都是有效的。这可以防止类似注入的尝试。
+请注意，组装后的源代码的两个动态部分——参数列表 `args.join(",")` 和 `functionBody`——将首先被分别解析，以确保它们在语法上都是有效的。这可以防止类似注入的尝试。
 
 ```js
 new Function("/*", "*/) {");
 // SyntaxError: Unexpected end of arg string
-// 不会变成 "function anonymous(/*) {*/) {}"
+// 不会变成“function anonymous(/*) {*/) {}”
 ```
 
 ### 安全考虑
@@ -103,13 +103,13 @@ new Function("/*", "*/) {");
 该方法可用于执行传递给任何参数的任意输入。如果输入是用户提供的可能不安全的字符串，这是[跨站脚本攻击（XSS）](/zh-CN/docs/Web/Security/Attacks/XSS)的潜在载体。例如，以下示例假设 `untrustedCode` 是由用户提供的：
 
 ```js example-bad
-const untrustedCode = "alert('Potentially evil code!');";
+const untrustedCode = "alert('潜在的恶意代码！');";
 const adder = new Function("a", "b", untrustedCode);
 ```
 
-对于指定了 [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 或 [`default-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) 的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网站默认会阻止此类代码运行。如果你必须允许通过 `Function()` 运行脚本，可通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令来[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types)来缓解这些问题。这可以确保输入经过转换函数进行处理。
+对于指定了 [`script-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 或 [`default-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) 的[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网站默认会阻止此类代码运行。如果你必须允许通过 `Function()` 运行脚本，可通过始终传递 {{domxref("TrustedScript")}} 对象而不是字符串，并使用 [`require-trusted-types-for`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP 指令来[强制使用受信任类型](/zh-CN/docs/Web/API/Trusted_Types_API#使用_csp_来强制执行可信类型)以缓解这些问题。这可以确保输入经过转换函数进行处理。
 
-若要允许 `Function()` 运行，你还需要在 CSP 的 `script-src` 指令中指定 [`trusted-types-eval` 关键字](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)。[`unsafe-eval`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) 关键字也允许 `Function()`，但安全性远低于 `trusted-types-eval`，因为它甚至会在不支持受信任类型的浏览器上允许执行。
+要允许 `Function()` 运行，你还需要在 CSP 的 `script-src` 指令中指定 [`trusted-types-eval` 关键字](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)。[`unsafe-eval`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) 关键字也允许 `Function()`，但安全性远低于 `trusted-types-eval`，因为它甚至会在不支持受信任类型的浏览器上允许执行。
 
 例如，你的网站的 CSP 配置可能如下所示：
 
@@ -121,7 +121,7 @@ Content-Security-Policy: require-trusted-types-for 'script'; script-src '<你的
 
 ## 示例
 
-请注意，为了简洁起见，这些示例省略了受信任类型的使用。如需查看采用推荐方法的代码，请参阅 `eval()` 中的[使用 `TrustedScript`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript)。
+请注意，为了简洁起见，这些示例省略了受信任类型的使用。如需查看采用推荐方法的代码，请参阅 `eval()` 中的[使用 `TrustedScript`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#使用_trustedscript)。
 
 ### 与 Function 构造函数一同指定参数
 
@@ -140,7 +140,7 @@ adder(2, 6);
 
 参数 `a` 和 `b` 是在函数体 `return a + b` 中使用的正式参数名称。
 
-### 从函数声明或函数表达式创建一个函数对象
+### 通过函数声明或函数表达式创建函数对象
 
 ```js
 // 函数构造器可以接受多个分号分隔的语句。Function 表达式需要带有函数的返回语句
@@ -164,12 +164,12 @@ findLargestNumber.call({}).call({}, [2, 4, 1, 8, 5]);
 
 // 函数声明不需要返回语句
 const sayHello = new Function(
-  "return function (name) { return `Hello, ${name}` }",
+  "return function (name) { return `你好，${name}` }",
 )();
 
 // 调用函数
-sayHello("world");
-// Hello, world
+sayHello("世界");
+// 你好，世界
 ```
 
 ## 规范
@@ -182,7 +182,7 @@ sayHello("world");
 
 ## 参见
 
-- `eval()` 中的[使用函数构造器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#using_the_function_constructor)
+- `eval()` 中的[使用 Function 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval#使用_function_构造函数)
 - [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Functions", "函数", "", 1)}}
