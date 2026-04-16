@@ -6,6 +6,8 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 
 ## Tabla de contenido
 
+- [¿Por dónde empezar?](#por-dónde-empezar)
+- [Requisitos](#requisitos)
 - [Configurar el entorno local](#configurar-el-entorno-local)
 - [Abrir un Pull Request](#abrir-un-pull-request)
 - [Traducir un documento](#traducir-un-documento)
@@ -14,6 +16,24 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 - [Arreglar "flaws" (defectos)](#arreglar-flaws-defectos)
 - [Charla con nosotros](#charla-con-nosotros)
 - [Enlaces relevantes](#enlaces-relevantes)
+
+---
+
+## ¿Por dónde empezar?
+
+Si no sabes por dónde comenzar, revisa los [issues con la etiqueta `l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es). Allí publicamos documentos que necesitan traducción nueva, actualización o revisión. Comenta en el issue que te interese para evitar duplicar esfuerzos.
+
+También puedes revisar el [proyecto `ES` en GitHub](https://github.com/mdn/translated-content/projects/7) para ver el trabajo priorizado por la comunidad.
+
+---
+
+## Requisitos
+
+- **Node.js** >= 24 (ver [`.nvmrc`](https://github.com/mdn/translated-content/blob/main/.nvmrc) y [`.tool-versions`](https://github.com/mdn/translated-content/blob/main/.tool-versions)).
+- **npm** (la versión exacta se define en el campo `packageManager` de [`package.json`](https://github.com/mdn/translated-content/blob/main/package.json); `npm install` la respeta automáticamente con `corepack` habilitado).
+- Recomendamos un gestor de versiones de Node: [mise](https://mise.jdx.dev/), [fnm](https://github.com/Schniz/fnm) o [nvm](https://github.com/nvm-sh/nvm). Cualquiera de ellos leerá `.nvmrc` o `.tool-versions` automáticamente.
+
+Para traducir no necesitas levantar un servidor local: el bot genera una URL de previsualización en cada PR. `npm install` sólo hace falta si quieres correr los linters (`npm run lint:md`, `npm run fix:md`) antes de enviar el cambio.
 
 ---
 
@@ -37,6 +57,8 @@ Los dos repositorios con los que trabajamos:
    git clone git@github.com:TU_USUARIO/translated-content.git
    cd translated-content
    ```
+
+   > ⏳ El repositorio es grande (varios GB de historia). El primer `clone` puede tardar varios minutos dependiendo de tu conexión. Ten paciencia, sólo hay que hacerlo una vez.
 
 3. Crea una rama descriptiva:
 
