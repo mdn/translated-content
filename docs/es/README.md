@@ -7,6 +7,7 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 ## Tabla de contenido
 
 - [¿Por dónde empezar?](#por-dónde-empezar)
+- [Tipos de contribución que preferimos](#tipos-de-contribución-que-preferimos)
 - [Requisitos](#requisitos)
 - [Configurar el entorno local](#configurar-el-entorno-local)
 - [Abrir un Pull Request](#abrir-un-pull-request)
@@ -24,6 +25,22 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 Si no sabes por dónde comenzar, revisa los [issues con la etiqueta `l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es). Allí publicamos documentos que necesitan traducción nueva, actualización o revisión. Comenta en el issue que te interese para evitar duplicar esfuerzos.
 
 También puedes revisar el [proyecto `ES` en GitHub](https://github.com/mdn/translated-content/projects/7) para ver el trabajo priorizado por la comunidad.
+
+---
+
+## Tipos de contribución que preferimos
+
+No todas las contribuciones aportan el mismo valor al lector. Estas son nuestras preferencias para que planifiques tu PR:
+
+### 🥇 Preferido: actualización completa de un documento
+
+Un PR que traduce o actualiza una página entera para que coincida con la fuente en inglés más reciente (incluido el [`l10n.sourceCommit`](#mantener-el-l10nsourcecommit-al-día)). Este tipo de cambios cierra issues como los listados en [`l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es) y reduce la deuda de traducción.
+
+### ✅ También bienvenido: correcciones pequeñas
+
+Arreglar acentos, tildes, erratas o una frase mal traducida es una excelente puerta de entrada para quien está conociendo el proyecto. Estos PRs se aceptan y se revisan con el mismo cuidado.
+
+Si es tu primera contribución, siéntete libre de empezar con un cambio pequeño: nos importa más que te integres a la comunidad que el tamaño del PR. Eso sí, procura no abrir varios PRs minúsculos sobre el mismo archivo en días consecutivos; si detectas varios problemas en una misma página, agrúpalos en un único PR.
 
 ---
 
