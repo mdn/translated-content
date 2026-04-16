@@ -32,7 +32,7 @@ Ver [ejemplo de navigator.onLine](http://html5-demos.appspot.com/static/navigato
 Para comprobar una conexión a una red, usa `window.navigator.onLine`, de la siguiente manera:
 
 ```js
-console.log(navigator.onLine ? 'online' : 'offline')
+console.log(navigator.onLine ? "online" : "offline");
 ```
 
 Si el navegador no tiene soporte para `navigator.onLine`, el ejemplo anterior siempre devolverá `false`/`undefined`.
