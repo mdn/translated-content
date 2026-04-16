@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-`RTCDataChannelStats` 字典的 **`state`** 属性返回一个字符串，指示数据通道底层数据连接的 {{domxref("RTCDataChannel.readyState","readyState")}} 状态：`connecting`、`open`、`closing` 或 `closed`。
+`RTCDataChannelStats` 字典的 **`state`** 属性返回一个指示数据通道底层数据连接的 {{domxref("RTCDataChannel.readyState","readyState")}} 的字符串：`connecting`、`open`、`closing` 或 `closed`。
 
 请注意，该属性是必需的。
 
