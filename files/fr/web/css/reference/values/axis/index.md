@@ -2,7 +2,7 @@
 title: <axis>
 slug: Web/CSS/Reference/Values/axis
 l10n:
-  sourceCommit: 12b296d2b3937c45b2363f34ed8afadcf00ed166
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 Le type de donnée {{Glossary("enumerated", "énuméré")}} **`<axis>`** définit l'axe de défilement du {{Glossary("scroll container", "conteneur de défilement")}} qui pilote une [timeline de défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines).
