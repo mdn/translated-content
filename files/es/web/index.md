@@ -3,12 +3,8 @@ title: Tecnología web para desarrolladores
 short-title: Web
 slug: Web
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
-
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
 
 La web abierta ofrece increíbles oportunidades para los desarrolladores. Para aprovechar al máximo estas tecnologías, es necesario saber cómo usarlas. A continuación, encontrarás enlaces a nuestra documentación sobre tecnología web.
 
