@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar}}
-
 Esta referencia [HTML](/es/docs/Web/HTML) describe todos los **elementos** y **atributos** de HTML, incluyendo los **atributos globales** que se aplican a todos los elementos.
 
 - [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)

@@ -21,51 +21,51 @@ Los siguientes artículos pueden ayudarte a obtener más información sobre HTML
 Nuestros [Módulos centrales de aprendizaje](/es/docs/Learn_web_development/Core) contienen tutoriales modernos y actualizados que cubren los fundamentos de HTML.
 
 - [Tú primer sitio web: Creando el contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) 
-  - : Este artículo proveé un breve tour acerca de qué es HTML y cómo usarlo. Enfocado para personas que son completamente nuevas en el desarrollo web.
+  - : Este artículo provee un breve tour acerca de qué es HTML y cómo usarlo. Enfocado para personas que son completamente nuevas en el desarrollo web.
 - [Estructurando contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content).
-  - : Este módulo cubre los fundamentos de el lenguaje HTML, antes de ver areas clave como estructura del documento, enlaces, listas, imagenes, formularios y más.
+  - : Este módulo cubre los fundamentos de el lenguaje HTML, antes de ver areas clave como estructura del documento, enlaces, listas, imágenes, formularios y más.
 - [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
-  - : Los formularios son una parte muy importante de la Web - estos proveén mucha de la funcionalidad que necesitas para interactuar con sitios web, p. ej., registrarte e iniciar sesión, enviar retroalimentación, comprar productos y más. Este módulo te ayuda a iniciar a crear las partes de formularios para la interfaz de usuario.
+  - : Los formularios son una parte muy importante de la Web - estos proveen mucha de la funcionalidad que necesitas para interactuar con sitios web, p. ej., registrarte e iniciar sesión, enviar retroalimentación, comprar productos y más. Este módulo te ayuda a iniciar a crear las partes de formularios para la interfaz de usuario.
 
 ## Guías
 
-Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en la web. Cubren temas como, formularios, CORS, precarga de contenido e imagenes responsivas.
+Las [Guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a construir con HTML en la web. Cubren temas como, formularios, CORS, precarga de contenido e imágenes responsivas.
 
 - [Hoja de referencia para sintaxis y tareas comunes HTML](/es/docs/Web/HTML/Guides/Cheatsheet)
   - : Referencia rápida para sintaxis y tareas comuned de HTML.
 - [Usando comentarios HTML `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)
   - : Los comentarios HTML son usados para agregar explicaciones a las etiquetas o para prevenir que el navegador interprete partes del documento.
 - [Usando validación de formularios HTML y la API de validación de restricciones](/es/docs/Web/HTML/Guides/Constraint_validation)
-  - : HTML5 introdujo la validación de restricciones para facilitar la validación de formularios en el lado del cliente. Restricciones básicas puedes ser validadas sin JavaScript agregando atributos a los elementos de formulario.
+  - : HTML5 introdujo la validación de restricciones para facilitar la validación de formularios en el lado del cliente. Restricciones básicas pueden ser validadas sin JavaScript agregando atributos a los elementos de formulario.
 - [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories)
   - : HTML se compone de diferentes tipos de contenido, a cada cual se le permite ser usado en ciertos contextos y no se le permite en otros. De igual manera, cada contexto tiene un conjunto de categorías de otro contenido que puede contener y elementos que pueden o no ser usados en éstas. Esta es una guía para estas categorías.
-- [Usando formatos de fechas y tiempo en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
-  - : Certain HTML elements use date and/or time values. This guide describes the formats of the strings that specify these values.
+- [Usando formatos de fechas y horas en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
+  - : Ciertos elementos usan valores de fechas y/u horas. Esta guía describe los formatos de las cadenas de caracteres que especifican estos valores.
 - [Usando microdatos en HTML](/es/docs/Web/HTML/Guides/Microdata)
-  - : Microdata is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata to provide a richer browsing experience.
+  - : Los microdatos son utilizados para anidar metadatos dentro de contenido existente en las páginas web. Los motores de busqueda y rastreadores web pueden extraer y procesar microdatos para proveer una experiencia de navegación más enriquecedora.
 - [Usando microformatos en HTML](/es/docs/Web/HTML/Guides/Microformats)
-  - : Microformats are standards used to embed semantics and structured data in HTML for use by social web applications, search engines, aggregators, and other tools.
+  - : Los microformatos son estándares utilizaods para fijar datos semánticos y estructurados en HTML para ser usados por aplicaciones web sociales, motores de busqueda, agregadores y otras herramientas.
 - [Comprende los modos quirk y estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
-  - : Historical information on quirks mode and standards mode.
+  - : Información historica acerca de el modo quirk y el modo estándar.
 - [Usando imágenes responsivas en HTML](/es/docs/Web/HTML/Guides/Responsive_images)
-  - : Learn about responsive images that work well on devices with widely differing screen sizes, resolutions, and other features, improving performance across different devices.
+  - : Aprende acerca de imágenes responsivas que funcionan bien en dispositivos con un amplia variedad de tamaños de pantalla, resoluciones y otras características, mejorando el rendimiento en diferentes dispositivos.
 - [Tipos de medios y formatos en la web](/es/docs/Web/Media/Guides/Formats)
-  - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
+  - : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} permiten reproducir medios de audio y video nativamente dentro de tú contenido, sin la necesidad de software de soporte externo.
 
 ## Cómo hacer
 
 - [Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)
-  - : HTML provides several ways to convey description semantics, whether inline or as structured glossaries. This article shows how to properly mark up keywords when defining them.
+  - : HTML provee multiples maneras de transmitir descipciones semánticas, ya sea en linea o como glosarios estructurados. Este artículo muestra cómo marcar apropiadamente palabras clave al definirlos.
 - [Usar atributos data](/es/docs/Web/HTML/How_to/Use_data_attributes)
-  - : HTML5 is designed with extensibility in mind for data that should be associated with a particular element but need not have any defined meaning. `data-*` attributes allow us to store extra information on standard, semantic HTML elements.
-- [Usar imagenes cross-origin en canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
-  - : Algunos elementos HTML proveén soporte para [CORS](/es/docs/Web/HTTP/Guides/CORS), tales como {{HTMLElement("img")}} o {{HTMLElement("video")}}, que tienen un atributo `crossorigin` (propiedad `crossOrigin`), la cual te permite configurar las solicitudes CORS para los datos traidos del elemento.
+  - : HTML5 esta diseñado con extensibilidad en mente para datos que debería asociarse con un elemento en particular, pero que no necesita tener algún significado definido. Los atributos `data-*` nos permiten guardar información extra en elementos HTML semanticos estándar.
+- [Usar imágenes cross-origin en canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : Algunos elementos HTML proveen soporte para [CORS](/es/docs/Web/HTTP/Guides/CORS), tales como {{HTMLElement("img")}} o {{HTMLElement("video")}}, que tienen un atributo `crossorigin` (propiedad `crossOrigin`), la cual te permite configurar las solicitudes CORS para los datos traidos del elemento.
 - [Agregar un hitmap sobre una imagen](/es/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
-  - : Image maps allow hyperlinks to be associated with different parts of an image. This article shows how to create and implement them.
+  - : Los mapas de imágenes permiten asociar hiperenlaces con diferentes partes de una imágen. Este artículo muestra cómo se les puede crear e implementar.
 - [Crea páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
-  - : These tips are based on common knowledge and experimentation. An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection.
+  - : Estos consejos están basados en conocmiento común y experimentación. Una página web optimizada, no solo provee un sitio más responsivo para tús visitantes, pero también reduce la carga en tús servidores web y la conección de internet.
 - [Agregar JavaScript a tu página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
-  - : This article explains how to add JavaScript code to an HTML file.
+  - : Este artículo explica cómo agregar código JavaScript a un archivo HTML.
 
 ## Referencia
 
@@ -76,7 +76,7 @@ HTML consiste en **elementos**, cada uno de los cuales puede ser modificado por 
 - [Atributos HTML](/es/docs/Web/HTML/Reference/Attributes)
   - : Referencia para todos los atributos. Los atributos, son valores adicionales que configuran o ajustan el comportamiento de los elementos de varias maneras.
 - [Atributos Globales](/es/docs/Web/HTML/Reference/Global_attributes)
-  - : Reference for global attributes that may be specified on all HTML elements, _even those not specified in the standard_. This means that any non-standard elements must still permit these attributes, even though those elements make the document HTML5-noncompliant.
+  - : Referencia de atributos globales que pueden ser especificados en todos los elementos HTML, _inclusive aquellos que no están especificados en el estándar_. Esto significa que cualquier elemento no estándar aún debe permitir estos atributos, a pesar que esos elementos hacen que el documento no este conforme al estándar HTML5.
 
 ### Atributos por elemento
 
@@ -84,8 +84,8 @@ HTML consiste en **elementos**, cada uno de los cuales puede ser modificado por 
   - : Utilizado para crear controles interactivos para formularios basados en la web.
 - [Tipos script](/es/docs/Web/HTML/Reference/Elements/script/type)
   - : Indica el tipo de script representado por el elemento.
-- [meta name](/es/docs/Web/HTML/Reference/Elements/meta/name)
-  - : Provides metadata in name-value pairs for the whole page.
+- [atributo name de elementos meta](/es/docs/Web/HTML/Reference/Elements/meta/name)
+  - : Provee metadatos en pares nombre-valor para la página entera.
 
 ### Valores de Atributos
 
@@ -94,5 +94,5 @@ HTML consiste en **elementos**, cada uno de los cuales puede ser modificado por 
 
 ## Temas relacionados
 
-- [Aplicando color a elementos HTML usando CSS](/es/docs/Web/CSS/Guides/Colors/Applying_color)
+- [Aplicando color a elementos HTML mediante CSS](/es/docs/Web/CSS/Guides/Colors/Applying_color)
   - : Este artículo cubre la mayoría de las formas en que puedes agregar color al contenido de HTML, lista a que partes de los documentos HTML se les puede agregar color y que propiedades de CSS usar para hacerlo.
