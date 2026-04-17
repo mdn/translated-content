@@ -130,7 +130,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - [`speculationrules`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{Experimental_Inline}}
       - : Cette valeur indique que le contenu de l'élément contient des règles de spéculation.
         Les règles de spéculation prennent la forme d'un objet JSON qui détermine quelles ressources doivent être préchargées ou pré-rendues par le navigateur.
-        Cela fait partie de {{DOMxRef("l'API Speculation Rules", "", "", 1)}}.
+        Cela fait partie de {{DOMxRef("Speculation Rules API", "l'API Speculation Rules", "", 1)}}.
     - **Toute autre valeur**
       - : Le contenu embarqué est traité comme un bloc de données et ne sera pas traité par le navigateur.
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.
