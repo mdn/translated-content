@@ -63,7 +63,6 @@ La magie opère dans le CSS.
 
 - L'[API <i lang="en">Picture-in-picture</i>](/fr/docs/Web/API/Picture-in-Picture_API)
 - La méthode API {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- La propriété API {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - La propriété API {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - La propriété API {{DOMxRef("Document.pictureInPictureEnabled")}}
 - La méthode API {{DOMxRef("Document.exitPictureInPicture()")}}
