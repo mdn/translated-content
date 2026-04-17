@@ -1,11 +1,11 @@
 ---
-title: <input type="number">
+title: Valeur d'attribut HTML `<input type="number">`
 slug: Web/HTML/Reference/Elements/input/number
 l10n:
-  sourceCommit: c601bb5553d19f854792c78ab89624466ce2181d
+  sourceCommit: 1bc1971a1265d1792c94b99b736c5accec1fec6d
 ---
 
-Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`number`** permettent à un·e utilisateur·ice de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs non-numériques.
+Les éléments {{HTMLElement("input")}} de type **`number`** permettent à un·e utilisateur·ice de saisir des nombres dans un formulaire. De tels contrôles incluent des mécanismes de validation natifs afin de rejeter les valeurs qui ne sont pas numériques.
 
 Le navigateur peut agrémenter le contrôle avec des flèches afin d'incrémenter/décrémenter la valeur grâce à la souris ou avec le doigt.
 
