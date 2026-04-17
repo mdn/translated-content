@@ -29,7 +29,7 @@ requestAnimationFrame(callback)
 - `callback`
   - : 该函数会在下一次重绘更新你的动画时被调用到。这个回调函数只会传递一个参数：
     - `timestamp`
-      - : 一个 {{domxref("DOMHighResTimeStamp")}} 参数，用于表示上一帧渲染的结束时间（从[起始时间](/zh-CN/docs/Web/API/Performance/timeOrigin)开始的毫秒数）。时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window` 对象（而非 `worker`）来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的 `window`，更重要的是同源的 `iframe`）运行的所有窗口之间共享——它允许在多个 `requestAnimationFrame` 回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
+      - : 一个 {{domxref("DOMHighResTimeStamp")}} 参数，用于表示上一帧渲染的结束时间（从[起始时间](/zh-CN/docs/Web/API/Performance/timeOrigin)开始的毫秒数）。时间戳是一个以毫秒为单位的十进制数字，最小精度为 1 毫秒。对于 `Window`（而非 `Workers`）对象来说，它等同于 {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}。此时间戳在同一代理上（所有同源的 `window`，更重要的是同源的 `iframe`）运行的所有窗口之间共享——它允许在多个 `requestAnimationFrame` 回调函数中执行同步动画。此时间戳值也近似于在回调函数开始时调用 {{domxref('performance.now()')}}，但它们永远都不会是相同的值。
 
         当 `requestAnimationFrame()` 队列中的多个回调开始在同一帧中触发时，它们都会收到相同的时间戳，即便在计算前一个回调函数工作量时这一帧的时间已经过去。
 
@@ -130,4 +130,4 @@ function animate() {
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [用 JavaScript 做动画：从 setInterval 到 requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/)——博文
 - [TestUFO：测试你的 web 浏览器 requestAnimationFrame() 的时间偏差](https://testufo.com/#test=animation-time-graph)
-- [Firefox 将 requestAnimationFrame 的请求 ID 改为 uint32_t 类型](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
+- [Firefox 将 requestAnimationFrame 的请求 ID 切换为 uint32_t 类型](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)
