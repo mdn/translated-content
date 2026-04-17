@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donné (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
 
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
@@ -130,7 +130,7 @@ fit-content(40%)
 
 ## Voir aussi
 
-- Les mots-clés pour le dimensionnement&nbsp;: [`min-content`](/fr/docs/Web/CSS/min-content), [`max-content`](/fr/docs/Web/CSS/max-content)
+- Les mots-clés pour le dimensionnement&nbsp;: [`min-content`](/fr/docs/Web/CSS/Reference/Values/min-content), [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content)
 - Les propriétés correspondantes des grilles CSS&nbsp;:
   - [`grid-template`](/fr/docs/Web/CSS/Reference/Properties/grid-template)
   - [`grid-template-rows`](/fr/docs/Web/CSS/Reference/Properties/grid-template-rows)

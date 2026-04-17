@@ -78,7 +78,7 @@ La clé background est un objet qui peut avoir l'une des deux propriétés suiva
             également modifier la clé
             <code
               ><a
-                href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy"
+                href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy"
                 >content_security_policy</a
               ></code
             >

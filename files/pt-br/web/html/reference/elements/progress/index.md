@@ -8,7 +8,7 @@ o elemento HTML progress (\<progress>) é usado para visualizar o progresso de u
 
 ## Contexto de uso
 
-| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/docs/HTML/Content_categories#phrasing_content)                                                         |
+| Conteúdo permitido     | [Conteúdo de texto](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content)                                              |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de Tag         | Nenhum, ambas as tags (abertura e encerramento) são obrigatórias                                                                  |
 | Elemento pai permitido | Conteúdo fraseado (phrasing content), mas não deve haver descendentes do elemento progress                                        |

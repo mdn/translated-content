@@ -12,7 +12,7 @@ O obsoleto cabeçalho de resposta HTTP **`Set-Cookie2`** usado para enviar _cook
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

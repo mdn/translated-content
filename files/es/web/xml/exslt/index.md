@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT
 original_slug: Web/EXSLT
 ---
 
-{{XsltRef}}EXSLT es un conjunto de extensiones de [XSLT](/es/XSLT). Existen varios módulos; aquellos que están implementados por Firefox se listan a continuación:
+EXSLT es un conjunto de extensiones de [XSLT](/es/XSLT). Existen varios módulos; aquellos que están implementados por Firefox se listan a continuación:
 
 - [Common](#common) (`exsl`)
   - : Proporciona elementos y funciones de extensión básicas.

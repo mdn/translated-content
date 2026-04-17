@@ -16,11 +16,11 @@ En este primer articulo de Express resolveremos las preguntas "¿Qué es Node?" 
         <p>
           Conocimientos básicos de informática. Noción general sobre
           <a
-            href="https://developer.mozilla.org/es/docs/Learn/Server-side/Primeros_pasos"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/First_steps"
             >programación lado servidor de sitios web</a
           >, y en particular los mecanismos de las interacciones
           <a
-            href="/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview"
             >cliente-servidor en sitios web</a
           >.
         </p>
@@ -501,4 +501,4 @@ Por supuesto, Express es deliberadamente un un framework de aplicaciones web muy
 - [Serving static files in Express](https://expressjs.com/en/starter/static-files.html) (Express docs)
 - [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 1eabeec088d52723d74386bad44296bbbbe9b5f3
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}
 
 MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다!
 이 글에서는 "JavaScript는 무엇인가요?", "JavaScript로 무엇을 할 수 있나요?"와 같은 질문에 답하며 JavaScript의 용도에 익숙해지도록 높은 수준에서 JavaScript를 살펴볼 것입니다.
@@ -489,4 +489,4 @@ for (const button of buttons) {
 지금 당장은 JavaScript가 약간 버겁게 느껴질지도 모르겠지만, 너무 걱정하지 마세요. 이 과정에 걸친 간단한 단계들을 밟다 보면 전체적인 모습이 보일겁니다.
 다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn_web_development/Core/Scripting/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "conflicting/Learn_web_development/Core/Scripting")}}

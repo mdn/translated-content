@@ -14,7 +14,7 @@ original_slug: Learn/CSS/First_steps/Styling_a_biography_page
       <th scope="row">전제조건:</th>
       <td>
         이 평가를 시도하기 전에 나머지 CSS 기본 과목을 살펴보고 HTML 기본 사항
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML 소개</a>
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML 소개</a>
         학습) 을 이해해야 합니다.
       </td>
     </tr>

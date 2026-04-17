@@ -78,7 +78,7 @@ NaN ** 0; // 1
 2n ** 1024n; // 巨大な数値であるが、 Infinity ではない
 ```
 
-べき乗計算では、長整数とと数値のオペランドを混在させることはできません。
+べき乗計算では、長整数と数値のオペランドを混在させることはできません。
 
 ```js example-bad
 2n ** 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions

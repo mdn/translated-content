@@ -51,7 +51,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
 - Extensões para criação de elementos built-in customizados
   - : The following extensions are defined:
-    - O atributo HTML global [`is`](/pt-BR/docs/Web/HTML/Global_attributes#is): Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
+    - O atributo HTML global [`is`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#is): Permite especificar que um elemento HTML padrão deve se comportar como um elemento built-in customizado registrado.
     - A opção "is" do método {{domxref("Document.createElement()")}}: Permite criar uma instância de um elemento HTML standard que se comporta como um determinado elemento built-in customizado registrado.
 
 - CSS pseudo-classes
@@ -63,7 +63,7 @@ A abordagem básica para se implementar um componente web geralmente se parece c
 
 - CSS pseudo-elementos
   - : Pseudo-elementos relacionados especificamente a elementos customizados:
-    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Global_attributes#part) correspondente.
+    - {{cssxref("::part")}}: Representa qualquer elemento dentro de uma [shadow tree](/pt-BR/docs/Web/API/Web_components/Using_shadow_DOM) que tenha um atributo [`part`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#part) correspondente.
 
 ### Shadow DOM
 

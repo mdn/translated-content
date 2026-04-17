@@ -16,7 +16,7 @@ O cabeçalho de resposta HTTP **`Cross-Origin-Resource-Policy`** indica um desej
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>
