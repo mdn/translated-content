@@ -100,7 +100,7 @@ text-indent: unset;
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-indent`** définit la longueur de l'espace vide (indentation) qui est placé avant les lignes de texte dans un conteneur de bloc. L'indentation définie par la propriété se produit au niveau du bord de début en ligne de la boîte de contenu. La valeur est un {{CSSxRef("&lt;length-percentage&gt;")}}, éventuellement avec un ou les deux mots-clés `each-line` et/ou `hanging`. La valeur initiale est `0`.
 
-Les valeurs en pourcentage sont relatives à la taille intérieure de l'axe en ligne du conteneur de bloc, qui est la dimension de la zone de contenu uniquement, excluant le padding et la bordure du conteneur.
+Les valeurs en pourcentage sont relatives à la taille intérieure de l'axe en ligne du conteneur de bloc, qui est la dimension de la zone de contenu uniquement, excluant le remplissage et la bordure du conteneur.
 
 La propriété `<length-percentage>` peut prendre une valeur positive ou négative. Une valeur négative crée un retrait égal à la valeur absolue correspondante à la valeur positive de `<length-percentage>`. Une valeur négative repousse effectivement le texte d'une distance égale à la valeur, mais dans la direction opposée. Par exemple, `text-indent: 3%;` indente la première ligne de texte, en ajoutant un espace blanc correspondant à 3% de la taille intérieure du conteneur avant le texte, repoussant ainsi la première ligne de contenu vers la fin de la ligne. Définir `text-indent: -3%` décale la première ligne de texte vers l'extérieur, repoussant le début de la première ligne de texte de 3% de la taille intérieure du conteneur au-delà du début de la zone de contenu, dans le remplissage et la bordure, ce qui peut entraîner un débordement du conteneur.
 
