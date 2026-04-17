@@ -2,7 +2,7 @@
 title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 l10n:
-  sourceCommit: 21b975609b233dbc6fde334ff97ee9cde75e7c0f
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`letter-spacing`** définit l'espacement entre les caractères du texte. Cette valeur s'ajoute à l'espacement naturel entre les caractères lors du rendu du texte. Des valeurs positives de `letter-spacing` écartent davantage les caractères, tandis que des valeurs négatives de `letter-spacing` rapprochent les caractères.
@@ -190,7 +190,7 @@ Notre CSS commence par appliquer des valeurs de {{CSSxRef("font-size")}} croissa
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 
