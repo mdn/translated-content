@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: HTML 画像"
-short-title: "試験: 画像"
+short-title: "テスト: 画像"
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
 l10n:
   sourceCommit: 1cf3cb0fb22bf89c780fefe74c3db7f1b9e8ca09

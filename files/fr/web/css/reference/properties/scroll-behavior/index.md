@@ -1,14 +1,13 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/Reference/Properties/scroll-behavior
-original_slug: Web/CSS/scroll-behavior
+l10n:
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
 
-La propriété **`scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
-
-{{InteractiveExample("CSS Demo: scroll-behavior")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-behavior")}}
 
 ```css interactive-example-choice
 scroll-behavior: auto;
@@ -22,7 +21,7 @@ scroll-behavior: smooth;
 <section id="default-example">
   <div class="container">
     <p class="nav">
-      Scroll to:
+      Défilement vers&nbsp;:
       <a href="#pageA">A</a>
       <a href="#pageB">B</a>
       <a href="#pageC">C</a>
@@ -37,7 +36,6 @@ scroll-behavior: smooth;
 ```
 
 ```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
 .container {
   flex-direction: column;
 }
@@ -63,7 +61,7 @@ scroll-page {
 }
 ```
 
-Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i>). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage (<i lang="en">viewport</i>).
+Pour les autres défilements, tels que ceux appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<i lang="en">viewport</i> en anglais). Lorsque cette propriété est indiquée sur l'élément `body`, elle _ne se propage pas_ à la zone d'affichage.
 
 Les agents utilisateur peuvent choisir d'ignorer cette propriété.
 
@@ -78,6 +76,7 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
+scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
@@ -96,11 +95,11 @@ La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Définition d'un défilement doux
+### Définir un défilement doux
 
 #### HTML
 
@@ -125,27 +124,23 @@ a {
   width: 50px;
   text-decoration: none;
 }
-
 nav,
 .scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-
 nav {
   width: 339px;
   padding: 5px;
   border: 1px solid black;
 }
-
 .scroll-container {
   width: 350px;
   height: 200px;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-
 .scroll-page {
   display: flex;
   align-items: center;
@@ -157,7 +152,7 @@ nav {
 
 #### Résultat
 
-{{EmbedLiveSample("", "100%", 250)}}
+{{EmbedLiveSample("Définir un défilement doux", "100%", 250)}}
 
 ## Spécifications
 

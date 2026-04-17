@@ -7,7 +7,7 @@ slug: Web/API/HTMLMediaElement
 
 La interfaz HTMLMediaElement añade a {{domxref("HTMLElement")}} las propiedades y métodos necesarios para soportar las capacidades básicas relacionadas con los medios de comunicación que son comunes en audio y vídeo. Los elementos {{domxref("HTMLVideoElement")}} y {{domxref("HTMLAudioElement")}} heredan esta interfaz.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Properties
 

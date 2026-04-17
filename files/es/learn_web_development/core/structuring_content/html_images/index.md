@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadamente, no pasó mucho tiempo antes de que se añadiera la capacidad de insertar imágenes (y otros tipos de contenido más interesantes) en las páginas web. Hay otros tipos de elementos multimedia que tener en cuenta, pero es lógico comenzar con el humilde elemento {{htmlelement("img")}} utilizado para insertar una imagen simple en una página web. En este artículo, veremos en detalle cómo usar este elemento, incluidos sus conceptos básicos y cómo añadir pies de imagen usando {{htmlelement("figure")}} y explicaremos cómo se relaciona con las imágenes de fondo en <a class="glossaryLink" href="/es/docs/Glossary/CSS" title="CSS: CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.">CSS</a>.
 
@@ -17,15 +17,15 @@ Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadame
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, estar familiarizado con los principios básicos de HTML (como se
         describe en
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML/iniciar"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Empezar con el HTML</a
         >).
       </td>
@@ -120,7 +120,7 @@ La forma más fácil de probar el texto `alt` es escribir mal el nombre de archi
 - **Decoración.** Para las imágenes decorativas deberían utilizarse [imágenes de fondo CSS](#imágenes_de_fondo_css). Pero si es inevitable usar HTML, la mejor forma de hacerlo es con `alt=""`. Si la imagen no es parte del contenido, el lector de pantalla no debería malgastar el tiempo en leerla.
 - **Contenido.** Si tu imagen proporciona información significativa, proporciona la misma información en un texto alternativo (`alt`) breve. O mejor aún, en el texto principal que todos pueden ver. No escribas texto alternativo redundante. ¿Acaso no resultaría molesto para un usuario con visión ordinaria si todos los párrafos se escribieran dos veces en el contenido principal? Si la imagen se describe en el cuerpo principal del texto de modo adecuado, puedes simplemente usar `alt=""`.
 - **Enlace.** Al poner una imagen dentro de una etiqueta `<a>` para convertirla en un enlace, aun debes proporcionar [texto de enlace accesible](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links#claridad_en_las_palabras). En tal caso podrías escribirlo dentro del mismo elemento `<a>`, o dentro del atributo `alt` de la imagen. Lo que mejor funcione en tu caso.
-- **Texto.** No deberías poner tu texto en imágenes. Si tu título de encabezado principal necesita, por ejemplo, un sombreado paralelo, [usa CSS](/es/docs/Web/CSS/text-shadow) para ello en vez de poner el texto en una imagen. Pero, _si realmente no puedes evitarlo_, deberías proporcionar el texto en el atributo `alt`.
+- **Texto.** No deberías poner tu texto en imágenes. Si tu título de encabezado principal necesita, por ejemplo, un sombreado paralelo, [usa CSS](/es/docs/Web/CSS/Reference/Properties/text-shadow) para ello en vez de poner el texto en una imagen. Pero, _si realmente no puedes evitarlo_, deberías proporcionar el texto en el atributo `alt`.
 
 En el fondo, la clave es ofrecer una experiencia usable, incluso cuando las imágenes no puedan verse. Esto asegura que ningún usuario pierda ninguna parte del contenido. Desactiva las imágenes en tu navegador y observa cómo se ven las cosas. Te darás cuenta de lo útil que resulta el texto alternativo cuando no es posible ver la imagen.
 
@@ -525,4 +525,4 @@ En resumen: si una imagen tiene significado en términos del contenido de tu pá
 
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

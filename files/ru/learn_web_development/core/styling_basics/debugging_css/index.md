@@ -178,4 +178,4 @@ As you become more experienced with CSS, you will find that you get faster at fi
 9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
 10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
 11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
-12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)
+12. [Organizing your CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Organizing)

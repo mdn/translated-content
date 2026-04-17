@@ -28,7 +28,7 @@ slug: Mozilla/Firefox/Releases/82
 
 #### 廃止
 
-- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
+- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
 
 ### HTTP
 

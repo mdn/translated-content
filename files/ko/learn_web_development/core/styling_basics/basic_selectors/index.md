@@ -21,15 +21,15 @@ l10n:
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습) 및 CSS 작동 방식에 대한 이해 (<a
-          href="/ko/docs/Learn/CSS/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >CSS 첫 단계</a
         >
         학습)

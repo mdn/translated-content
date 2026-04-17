@@ -16,7 +16,7 @@ O cabeçalho **`Keep-Alive`** permite que o remetente indique como a conexão de
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

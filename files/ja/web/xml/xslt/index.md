@@ -4,8 +4,6 @@ slug: Web/XML/XSLT
 original_slug: Web/XSLT
 ---
 
-{{XSLTRef}}
-
 1. **[XSLT](/ja/docs/Web/XML/XSLT)**
 2. **[EXSLT](/ja/docs/Web/XML/EXSLT)**
 3. **[XPath](/ja/docs/Web/XML/XPath)**

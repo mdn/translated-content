@@ -35,7 +35,7 @@ l10n:
 
 ### プライバシー
 
-- [厳格な強化型トラッキング防止機能](https://support.mozilla.org/ja/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) で、すべての [サードパーティ Cookie](/ja/docs/Web/Privacy/Third-party_cookies) をブロックするようになりました ([Firefox bug 1918037](https://bugzil.la/1918037))。
+- [厳格な強化型トラッキング防止機能](https://support.mozilla.org/ja/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) で、すべての [サードパーティ Cookie](/ja/docs/Web/Privacy/Guides/Third-party_cookies) をブロックするようになりました ([Firefox bug 1918037](https://bugzil.la/1918037))。
 
 ### API
 

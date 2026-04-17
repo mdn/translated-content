@@ -75,7 +75,7 @@ original_slug: Web/Tutorials
             사용합니다.
           </dd>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/HTML/Element"
+            <a href="/ko/docs/Web/HTML/Reference/Elements"
               >MDN HTML 요소 참조</a
             >
           </dt>
@@ -96,7 +96,7 @@ original_slug: Web/Tutorials
         <dl>
           <dt>
             <a
-              href="https://developer.mozilla.org/ko/docs/Tips_for_Authoring_Fast-loading_HTML_Pages"
+              href="/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages"
               >HTML 페이지를 빠르게 로드할 수 있게 만드는 팁</a
             >
           </dt>
@@ -211,7 +211,7 @@ original_slug: Web/Tutorials
         <dl>
           <dt>
             <a
-              href="https://developer.mozilla.org/ko/docs/A_re-introduction_to_JavaScript"
+              href="/ko/docs/Web/JavaScript/Guide/Language_overview"
               >JavaScript 다시 소개하기</a
             >
           </dt>
@@ -323,7 +323,7 @@ original_slug: Web/Tutorials
             제공합니다.
           </dd>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/JavaScript/Guide"
+            <a href="/ko/docs/Web/JavaScript/Guide"
               >JavaScript 가이드</a
             >
           </dt>
@@ -346,7 +346,7 @@ original_slug: Web/Tutorials
         <h3 id="입문_3">입문</h3>
         <dl>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/CSS/Getting_Started"
+            <a href="/ko/docs/Learn_web_development/Core/Styling_basics"
               >CSS 시작하기</a
             >
           </dt>
@@ -480,7 +480,7 @@ original_slug: Web/Tutorials
           <dd>CSS3 도입 된핵심 기능 중 일부에 대한 간단한 소개.</dd>
           <dt>
             <a
-              href="https://developer.mozilla.org/ko/docs/CSS/Using_CSS_transforms"
+              href="/ko/docs/Web/CSS/Guides/Transforms/Using"
               >CSS를 사용한 변환</a
             >
           </dt>

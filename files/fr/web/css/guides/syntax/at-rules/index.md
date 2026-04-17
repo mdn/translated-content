@@ -61,7 +61,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 - {{cssxref("@page")}}
   - : Spécifie les aspects d'une page à imprimer, comme ses dimensions, son orientation et ses marges ([Média paginé CSS](/fr/docs/Web/CSS/Guides/Paged_media)).
 - {{cssxref("@position-try")}}
-  - : Définit des options de position personnalisées pouvant servir à définir des options de positionnement et d'alignement de secours pour les éléments ancrés ([Positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning)).
+  - : Définit des options de position personnalisées pouvant servir à définir des options de positionnement et d'alignement de secours pour les éléments ancrés ([Positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning)).
 - {{cssxref("@property")}}
   - : Définit une [propriété personnalisée CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), permettant la vérification de type, la contrainte, la définition de valeurs par défaut et le contrôle de l'héritage ([Propriétés personnalisées pour les variables CSS](/fr/docs/Web/CSS/Guides/Cascading_variables)).
 - {{cssxref("@scope")}}
@@ -101,7 +101,7 @@ Les règles @ de bloc se terminent par un bloc `{}` qui contient des règles imb
 
 ## Voir aussi
 
-- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions de règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - [Imbrication des règles @ CSS](/fr/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
 - [Instructions CSS](/fr/docs/Web/CSS/Guides/Syntax/Introduction#instructions_css)
 - L'[interface CSSRule](/fr/docs/Web/API/CSSRule)

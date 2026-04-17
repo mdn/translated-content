@@ -2,8 +2,10 @@
 title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 l10n:
-  sourceCommit: 739c9994ad2e83809110f601d8941f61d6785f29
+  sourceCommit: 76e6e5407fd7cb49fb54dc51c7790a8b71ecec7f
 ---
+
+{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat-y`** définit comment les images de fond sont répétées, ou non, le long de l'axe vertical.
 

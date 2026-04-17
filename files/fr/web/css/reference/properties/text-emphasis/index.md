@@ -1,14 +1,13 @@
 ---
 title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
-original_slug: Web/CSS/text-emphasis
+l10n:
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-emphasis`** applique des marques d'emphase au texte (sauf les espaces et les caractères de contrôle). C'est une propriété raccourcie pour {{CSSxRef("text-emphasis-style")}} et {{CSSxRef("text-emphasis-color")}}.
 
-La propriété **`text-emphasis`** est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.
-
-{{InteractiveExample("CSS Demo: text-emphasis")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: text-emphasis")}}
 
 ```css interactive-example-choice
 text-emphasis: none;
@@ -29,9 +28,11 @@ text-emphasis: filled double-circle #ffb703;
 ```html interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    Je préfère être
+    <span class="transition-all" id="example-element"
+      >heureux que d'avoir raison</span
+    >
+    n'importe quel jour.
   </p>
 </section>
 ```
@@ -42,12 +43,12 @@ p {
 }
 ```
 
-La propriété `text-emphasis` est différente de {{cssxref("text-decoration")}}. La propriété `text-decoration` n'a pas d'héritage et la décoration est appliquée sur tout l'élément. Cependant, `text-emphasis` a un héritage et il est donc possible de changer la marque selon les « descendants » d'un élément.
+La propriété `text-emphasis` est assez différente de {{CSSxRef("text-decoration")}}. La propriété `text-decoration` n'est pas héritée, et la décoration définie est appliquée à l'ensemble de l'élément. Cependant, l'emphase de texte est héritée, ce qui signifie qu'il est possible de changer les marques d'emphase pour les descendants.
 
-La taille du symbole d'emphase, comme celle des symboles Ruby, représente environ 50% de la taille de la police du texte. `text-emphasis` peut modifier la hauteur de la ligne lorsque l'interlignage n'est pas suffisant pour placer les marques.
+La taille du symbole d'emphase, comme les symboles ruby, est d'environ 50% de la taille de la police, et `text-emphasis` peut affecter la hauteur de ligne lorsque l'interligne courant n'est pas suffisant pour les marques.
 
 > [!NOTE]
-> `text-emphasis` ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.
+> `text-emphasis` ne réinitialise pas la valeur de {{CSSxRef("text-emphasis-position")}}. En effet, si le style et la couleur des marques d'emphase peuvent varier dans un texte, il est extrêmement rare que leur position varie. Dans les très rares cas où cela est nécessaire, utilisez la propriété {{CSSxRef("text-emphasis-position")}}.
 
 ## Syntaxe
 
@@ -55,28 +56,27 @@ La taille du symbole d'emphase, comme celle des symboles Ruby, représente envir
 /* Valeur initiale */
 text-emphasis: none; /* Pas de marque */
 
-/* Chaîne de caractères */
-/* Type <string>        */
+/* Valeurs de type <string> */
 text-emphasis: "x";
 text-emphasis: "点";
 text-emphasis: "\25B2";
 text-emphasis: "*" #555;
-/* À ne pas utiliser, cela pourra être */
-/* considéré comme 't' uniquement      */
-text-emphasis: "toto";
+text-emphasis: "toto"; /* À ne pas utiliser, cela pourra être considéré comme 't' uniquement */
 
-/* Valeurs avec mot(s)-clé(s) */
+/* Valeurs avec un(des) mot(s)-clé(s) */
 text-emphasis: filled;
 text-emphasis: open;
 text-emphasis: filled sesame;
 text-emphasis: open sesame;
 
 /* Valeurs avec mots-clés, combinés à une couleur */
-text-emphasis: filled sesame #555;
+text-emphasis: filled sesame #555555;
 
 /* Valeurs globales */
 text-emphasis: inherit;
 text-emphasis: initial;
+text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -99,7 +99,7 @@ text-emphasis: unset;
 - `sesame`
   - : La forme de la marque est un sésame. Le sésame plein correspond au caractère `'﹅'` (`U+FE45`) et celui du sésame évidé correspond à `'﹆'` (`U+FE46`). Lorsqu'aucune forme n'a été définie, c'est la forme par défaut qui est utilisée pour les marques d'emphase pour les modes d'écriture verticaux.
 - `<string>`
-  - : La marque affichée sera la chaîne de caractères. Attention à n'utiliser que des chaînes d'un seul caractère. L'agent utilisateur peut tronquer ou ignorer les chaînes qui comportent plusieurs graphèmes.
+  - : Affiche la chaîne de caractères donnée comme marques. Les auteur·ice·s ne doivent pas définir plus d'un _caractère_ dans `<string>`. L'agent utilisateur peut tronquer ou ignorer les chaînes de caractères comportant plus d'un groupe de graphèmes.
 - `<color>`
   - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera `currentColor`.
 
@@ -113,23 +113,27 @@ text-emphasis: unset;
 
 ## Exemples
 
-### HTML
+### Un titre avec forme et couleur d'emphase
 
-```html
-<p><em>Coucou</em>, je suis <em>là</em></p>
-```
+Cet exemple montre un titre avec des triangles utilisés pour mettre en évidence chaque caractère.
 
-### CSS
+#### CSS
 
 ```css
-em {
-  text-emphasis: sesame blue;
+h2 {
+  text-emphasis: triangle #dd5555;
 }
 ```
 
-### Résultat
+#### HTML
 
-{{EmbedLiveSample("Exemples")}}
+```html
+<h2>Ceci est important&nbsp;!</h2>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Un titre avec forme et couleur d'emphase", 500, 90)}}
 
 ## Spécifications
 
@@ -141,6 +145,5 @@ em {
 
 ## Voir aussi
 
-- {{cssxref('text-emphasis-style')}}
-- {{cssxref('text-emphasis-color')}}
-- {{cssxref('text-emphasis-position')}}
+- Les propriétés longues {{CSSxRef('text-emphasis-style')}}, {{CSSxRef('text-emphasis-color')}}.
+- La propriété {{CSSxRef('text-emphasis-position')}} permet de définir la position des marques d'emphase.

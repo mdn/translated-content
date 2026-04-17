@@ -1,7 +1,7 @@
 ---
 title: Gérer les fichiers
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
-original_slug: Learn/Getting_started_with_the_web/Dealing_with_files
+original_slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 l10n:
   sourceCommit: 62ab95d20f246369cfab654c5a7a8727deb21ea6
 ---

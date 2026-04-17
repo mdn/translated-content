@@ -2,7 +2,7 @@
 title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
 l10n:
-  sourceCommit: a397ab763a6686a4056af755e4da32ac735b9fa5
+  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/Guides/Transitions).
@@ -154,8 +154,10 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
 ## Voir aussi
 
 - La propriété {{CSSxRef("animation-range")}}
-- [Animation déclenchée par le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
-- Le module d'[animations CSS](/fr/docs/Web/CSS/Guides/Animations)
-- [Animer les éléments lors du défilement avec les animations déclenchées par le défilement <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
+- Le module [d'animations CSS](/fr/docs/Web/CSS/Guides/Animations)
+- Le module [des chronologies d'animations basées sur le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+- Le module [des animations basées sur le défilement en CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations)
+- [Animer les éléments lors du défilement avec les animations basées sur le défilement](https://developer.chrome.com/docs/css-ui/scroll-driven-animations?hl=fr)
 - L'interface API {{DOMxRef("AnimationEvent")}}

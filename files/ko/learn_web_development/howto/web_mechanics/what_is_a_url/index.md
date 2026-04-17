@@ -16,14 +16,14 @@ l10n:
       <th scope="row">사전 지식</th>
       <td>
         먼저
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >인터넷은 어떻게 동작하는 방법</a
         >,
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
           >웹 서버</a
         >
         그리고
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks"
           >웹 링크 뒤에 있는 개념</a
         >을 알아야 합니다.
       </td>
@@ -75,7 +75,7 @@ URL의 첫 번째 부분은 브라우저가 리소스를 요청하는 데 사용
 
 그 다음에는 권한(authority)이 뒤따르며 문자 패턴 `://`에 의해 스키마와 구분됩니다. 만약 존재한다면 권한에는 콜론으로 구분된 도메인(예: `www.example.com`)과 포트(`80`)가 모두 포함됩니다.
 
-- 도메인은 요청하는 웹 서버를 나타냅니다. 도메인은 일반적으로 [도메인 이름](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)이지만 IP 주소도 사용될 수 있습니다. (그러나 이것은 훨씬 불편하기 때문에 자주 사용하지 않습니다.)
+- 도메인은 요청하는 웹 서버를 나타냅니다. 도메인은 일반적으로 [도메인 이름](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)이지만 IP 주소도 사용될 수 있습니다. (그러나 이것은 훨씬 불편하기 때문에 자주 사용하지 않습니다.)
 - 포트는 웹 서버의 리소스에 접근하는 데 사용되는 기술적인 "게이트"를 나타냅니다. 웹 서버가 리소스에 대한 액세스 권한을 부여하기 위해 HTTP 프로토콜의 표준 포트(HTTP의 경우 80, HTTPS의 경우 443)를 사용하는 경우엔 일반적으로 생략합니다. 그렇지 않으면 필수입니다.
 
 > [!NOTE]

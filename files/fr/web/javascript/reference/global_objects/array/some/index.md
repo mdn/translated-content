@@ -3,7 +3,7 @@ title: "Array : méthode some()"
 short-title: some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 l10n:
-  sourceCommit: 4bfeb5a89c1528da7cb7847a9ccb93f9b00290f0
+  sourceCommit: dd88a6eb2176fa31f5b744d8964efecf3f1f425b
 ---
 
 La méthode **`some()`** des instances {{JSxRef("Array")}} retourne `true` si elle trouve un élément dans le tableau qui satisfait la fonction de test fournie. Sinon, elle retourne `false`.

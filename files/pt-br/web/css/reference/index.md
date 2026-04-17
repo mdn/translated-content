@@ -5,7 +5,7 @@ slug: Web/CSS/Reference
 
 {{CSSRef}}
 
-Use esta **referência de CSS** para navegar por um índice alfabético das propriedades padrão do [CSS](/pt-BR/docs/Web/CSS), [pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes), [pseudo-elementos](/pt-BR/docs/CSS/Pseudo-elements), tipos de dados e [@-rules](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule).
+Use esta **referência de CSS** para navegar por um índice alfabético das propriedades padrão do [CSS](/pt-BR/docs/Web/CSS), [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes), [pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements), tipos de dados e [@-rules](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules).
 
 Esta referência lista não somente as propriedades do CSS1 e CSS2.1, mas também referências para qualquer propriedade, conceito padronizado ou estabilizado do CSS3.
 
@@ -16,11 +16,11 @@ Veja também [Extensões CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Exte
 ## Seletores
 
 - Seletores básicos
-  - [Seletores de tipo](/pt-BR/docs/CSS/Type_selectors) `elementname`
+  - [Seletores de tipo](/pt-BR/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
   - [Seletores de classe](/en-US/CSS/Class_selectors) `.classname`
   - [Seletores de ID](/en-US/CSS/ID_selectors) `#idname`
-  - [Seletores universais](/pt-BR/docs/CSS/Universal_selectors) `* ns|* *|*`
-  - [Seletores de atributo](/pt-BR/docs/CSS/Attribute_selectors)
+  - [Seletores universais](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors) `* ns|* *|*`
+  - [Seletores de atributo](/pt-BR/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
     - `[attribute]`
     - `[attribute="value"]`
     - `[attribute~="value"]`
@@ -34,29 +34,29 @@ Veja também [Extensões CSS Mozilla](/pt-BR/docs/CSS/CSS_Reference/Mozilla_Exte
   - [Combinadores equivalentes adjacentes](/pt-BR/docs/CSS/Adjacent_sibling_selectors) `A + B`
   - [Combinadores equivalentes gerais](/en-US/CSS/General_sibling_selectors) `A ~ B`
   - [Combinadores filhos](/pt-BR/docs/CSS/Child_selectors) `A > B`
-  - [Combinadores descendentes](/pt-BR/docs/CSS/Descendant_selectors) `A B`
+  - [Combinadores descendentes](/pt-BR/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-- [Pseudo-elementos](/pt-BR/docs/CSS/Pseudo-elements)
-- [Pseudo-classes](/pt-BR/docs/CSS/Pseudo-classes)
+- [Pseudo-elementos](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [Pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 
 ## Miscelânea
 
 - {{ Cssxref("Comments") }}
-- [Consultas de mídias](/pt-BR/docs/CSS/Media_queries)
+- [Consultas de mídias](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using)
 - [Contadores](/pt-BR/CSS_Counters)
 - [Gradientes](/pt-BR/docs/CSS/Using_CSS_gradients)
 - [Transformações](/en-US/CSS/Using_CSS_transforms)
 
 ## Conceitos
 
-- [Sintaxe do CSS](/pt-BR/docs/CSS/Syntax)
-- [Regra At](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule)
+- [Sintaxe do CSS](/pt-BR/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Regra At](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Comentários](/pt-BR/docs/CSS/Comments)
-- [Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity)
-- [Valor inicial](/pt-BR/docs/CSS/initial_value)
-- [Herança](/pt-BR/docs/CSS/inheritance)
-- [Valor especificado](/pt-BR/docs/CSS/specified_value)
-- [Valor computado](/pt-BR/docs/CSS/computed_value)
-- [Valor usado](/pt-BR/docs/CSS/used_value)
-- [Valor corrente](/pt-BR/docs/CSS/actual_value)
-- [Modelo de caixa](/pt-BR/docs/CSS/box_model)
+- [Especificidade](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Valor inicial](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Herança](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [Valor especificado](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor computado](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor usado](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Valor corrente](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+- [Modelo de caixa](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction)

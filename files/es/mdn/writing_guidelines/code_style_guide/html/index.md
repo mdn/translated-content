@@ -63,7 +63,7 @@ Finalmente, siempre debes agregar la metaetiqueta viewport en tu HTML {{HTMLElem
 <meta name="viewport" content="width=device-width" />
 ```
 
-Para mas detalles ver: [Uso de la metaetiqueta viewport para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Guides/Viewport_meta_element).
+Para mas detalles ver: [Uso de la metaetiqueta viewport para controlar el diseño en navegadores móviles](/es/docs/Web/HTML/Reference/Elements/meta/name/viewport).
 
 ## Atributos
 

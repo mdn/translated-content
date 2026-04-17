@@ -17,7 +17,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
         <dl>
           <dt>
             <a
-              href="/ru/docs/Web/WebGL/Getting_started_with_WebGL"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL"
               title="/en-US/docs/WebGL/Getting started with WebGL"
               >Начало работы с WebGL</a
             >
@@ -25,7 +25,7 @@ WebGL (Web Graphics Library) - программная библиотека дл�
           <dd>Как настроить контекст WebGL .</dd>
           <dt>
             <a
-              href="/ru/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context"
+              href="/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context"
               title="/en-US/docs/WebGL/Adding 2D content to a WebGL context"
               >Добавление 2D контента в контекст WebGL</a
             >

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 이제 우리가 배울 세 번째 프레임워크인 Vue를 소개하겠습니다. 이 글에서 우리는 Vue에 대한 간단한 배경지식을 얻고, Vue를 설치하고 새로운 프로젝트를 만드는 방법을 배웁니다. 또한 전체 프로젝트와 컴포넌트의 주요 구조를 공부하고, 로컬에서 프로젝트를 실행하는 방법을 살펴본 후 예제 프로젝트를 구성해봅니다.
 
@@ -14,9 +14,9 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_get
       <th scope="row">사전 요구 사항:</th>
       <td>
         <p>
-          코어 <a href="/ko/docs/Learn/HTML">HTML</a>,
-          <a href="/ko/docs/Learn/CSS">CSS</a> 및
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙함.
+          코어 <a href="/ko/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> 및
+          <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a> 언어에 익숙함.
           터미널/커맨드라인에 대한 지식.<br /><br />Vue 컴포넌트는 앱의 데이터를
           관리하는 JavaScript 객체와 기본 DOM 구조에 매핑되는 HTML 기반 템플릿
           구문을 조합해 작성된다. Vue를 설치하고 고급 기능(예: 단일 파일
@@ -280,4 +280,4 @@ components: {
 
 다음 글에서는 우리의 첫 커스텀 컴포넌트를 작성하고, props 전달 및 데이터 상태 저장과 같은 몇 가지 중요한 개념을 살펴보겠습니다.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_resources","Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}

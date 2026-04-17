@@ -148,7 +148,7 @@ p.fancy {
 - `allow`
   - : {{HTMLElement("iframe")}} の `allow` 属性。これはオプションであり、既定では許可された機能は存在しません。
 - `sandbox`
-  - : 例がに指定されるべき `sandbox` 属性の文字列が入ります。
+  - : 例に指定されるべき `sandbox` 属性の文字列が入ります。
     許可されている値は `allow-modals`, `allow-forms`, `allow-popups` です。
     `"allow-modals allow-popups"` のように、複数の値を指定することができます。
 

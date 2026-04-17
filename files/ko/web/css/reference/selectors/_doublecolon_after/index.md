@@ -88,7 +88,7 @@ a::after {
 
 다음 예제는 `::after`와 함께 CSS {{cssxref("attr", "attr()")}} 표현식, `data-descr` [사용자 설정 데이터 속성](/ko/docs/Web/HTML/Reference/Global_attributes/data-*)을 사용해 툴팁을 구현합니다. JavaScript 없이요!
 
-`tabindex="0"`을 추가해 각 `span`에 포커스가 갈 수 있도록 지정한 후, CSS `:focus` 선택자를 추가하여 키보드 사용자도 지원할 수 있습니다. 예제를 통해 ::before와 ::after가 얼마나 유연한지 확인할 수 있지만, 가장 접근성이 뛰어난 구현을 위해서라면 [요약과 세부 요소](/ko/docs/Web/HTML/Element/details)처럼 의미를 담은 요소를 활용하는 편이 좋습니다.
+`tabindex="0"`을 추가해 각 `span`에 포커스가 갈 수 있도록 지정한 후, CSS `:focus` 선택자를 추가하여 키보드 사용자도 지원할 수 있습니다. 예제를 통해 ::before와 ::after가 얼마나 유연한지 확인할 수 있지만, 가장 접근성이 뛰어난 구현을 위해서라면 [요약과 세부 요소](/ko/docs/Web/HTML/Reference/Elements/details)처럼 의미를 담은 요소를 활용하는 편이 좋습니다.
 
 #### HTML
 

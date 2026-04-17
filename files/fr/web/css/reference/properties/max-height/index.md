@@ -1,14 +1,13 @@
 ---
 title: max-height
 slug: Web/CSS/Reference/Properties/max-height
-original_slug: Web/CSS/max-height
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`max-height`** définit la hauteur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("height")}} de devenir supérieure à la valeur définie pour `max-height`.
 
-La propriété **`max-height`** est utilisée pour définir la hauteur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("height")}} de devenir supérieure à la valeur spécifiée par `max-height` (autrement dit, `max-height` est une borne supérieure pour `height`).
-
-{{InteractiveExample("CSS Demo: max-height")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: max-height")}}
 
 ```css interactive-example-choice
 max-height: 150px;
@@ -29,8 +28,8 @@ max-height: 10px;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum height. <br />This will limit
-    how tall the box can be, potentially causing an overflow.
+    Ceci est une boîte où vous pouvez changer la hauteur maximale. <br />Cela
+    limitera la hauteur de la boîte, pouvant provoquer un débordement.
   </div>
 </section>
 ```
@@ -41,52 +40,67 @@ max-height: 10px;
   flex-direction: column;
   background-color: #5b6dcd;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
-La valeur de `max-height` surcharge la valeur de {{cssxref("height")}} mais elle est surchargée par {{cssxref("min-height")}}.
+La valeur de `max-height` surcharge la valeur de {{CSSxRef("height")}} mais elle est surchargée par {{CSSxRef("min-height")}}.
 
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* Valeur de type <length> */
 max-height: 3.5em;
+max-height: anchor-size(height);
+max-height: calc(anchor-size(--my-anchor self-block, 250px) + 2em);
 
-/* Valeurs relatives */
-/* Type <percentage> */
-max-height: 10%;
+/* Valeurs de type <percentage> */
+max-height: 75%;
 
 /* Valeurs avec un mot-clé */
 max-height: none;
 max-height: max-content;
 max-height: min-content;
 max-height: fit-content;
-max-height: fill-available;
+max-height: fit-content(20em);
+max-height: stretch;
 
 /* Valeurs globales */
 max-height: inherit;
 max-height: initial;
+max-height: revert;
+max-height: revert-layer;
 max-height: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : La hauteur maximale fixée, exprimée comme une valeur absolue. Voir {{cssxref("&lt;length&gt;")}} pour les unités qu'on peut utiliser.
-- `<percentage>`
-  - : La hauteur maximale fixée, exprimée comme un fraction de la hauteur du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} sur les valeurs possibles avec ce type.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Définit la hauteur maximale (`max-height`) comme une valeur absolue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Définit la hauteur maximale (`max-height`) comme un pourcentage de la hauteur du bloc englobant.
 - `none`
-  - : Il n'y pas de limite à la hauteur que peut prendre la boîte.
-- `max-content` {{experimental_inline}}
-  - : La hauteur intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La hauteur intrinsèque minimale.
-- `fill-available`{{experimental_inline}}
-  - : La hauteur du bloc englobant moins la marge verticale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
-- `fit-content` {{experimental_inline}}
-  - : Un synonyme pour `max-content`.
+  - : Aucune limite à la taille de la boîte.
+- {{CSSxRef("max-content")}}
+  - : La hauteur maximale (`max-height`) intrinsèque préférée.
+- {{CSSxRef("min-content")}}
+  - : La hauteur maximale (`max-height`) intrinsèque minimale.
+- {{CSSxRef("fit-content")}}
+  - : Utilise l'espace disponible, mais pas plus que {{CSSxRef("max-content")}}, c'est-à-dire `min(max-content, max(min-content, stretch))`.
+- [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument défini, c'est-à-dire `min(max-content, max(min-content, argument))`.
+- `stretch`
+  - : Limite la hauteur maximale de la [marge de la boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_composants_dune_boîte) de l'élément à la hauteur de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant). Elle tente de faire en sorte que la marge de la boîte remplisse l'espace disponible dans le bloc englobant, se comportant ainsi de manière similaire à `100%` mais en appliquant la taille résultante à la marge de la boîte plutôt qu'à la boîte déterminée par {{CSSxRef("box-sizing")}}.
+
+    > [!NOTE]
+    > Pour vérifier les alias utilisés par les navigateurs pour la valeur `stretch` et son état d'implémentation, consultez la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs).
+
+## Accessibilité
+
+Assurez-vous que les éléments définis avec une `max-height` ne sont pas tronqués et/ou ne masquent pas d'autres contenus lorsque la page est zoomée pour augmenter la taille du texte.
+
+- [Comprendre le WCAG sur MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre les critères de succès 1.4.4 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Définition formelle
 
@@ -98,42 +112,17 @@ max-height: unset;
 
 ## Exemples
 
-### HTML
-
-```html
-<div>
-  Lorem ipsum tralala sit amet, consectetur adipisicing
-  <p>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
-  </p>
-</div>
-```
-
-### CSS
+### Définir la hauteur maximale en utilisant des valeurs en pourcentage et des mots-clés
 
 ```css
-div {
-  height: 250px;
-  border: solid 1px red;
+table {
+  max-height: 75%;
 }
 
-p {
-  max-height: 30%;
-  border: solid 1px blue;
+form {
+  max-height: none;
 }
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
-
-## Accessibilité
-
-Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-height` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
-
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
 
@@ -145,7 +134,10 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-h
 
 ## Voir aussi
 
-- {{cssxref("height")}}
-- {{cssxref("min-height")}}
-- {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model)
+- La propriété {{CSSxRef("min-height")}}
+- La propriété {{CSSxRef("height")}}
+- La propriété {{CSSxRef("max-inline-size")}}
+- La propriété {{CSSxRef("max-block-size")}}
+- La propriété {{CSSxRef("box-sizing")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)
