@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-progress-inner-element`"
+title: Pseudo-élément CSS `::-webkit-progress-inner-element`
 short-title: ::-webkit-progress-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-inner-element
 l10n:

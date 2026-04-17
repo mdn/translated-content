@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::backdrop`"
+title: Pseudo-élément CSS `::backdrop`
 short-title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-meter-bar`"
+title: Pseudo-élément CSS `::-webkit-meter-bar`
 short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 l10n:

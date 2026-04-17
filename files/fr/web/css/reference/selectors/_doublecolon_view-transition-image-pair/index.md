@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::view-transition-image-pair()`"
+title: Pseudo-élément CSS `::view-transition-image-pair()`
 short-title: ::view-transition-image-pair()
 slug: Web/CSS/Reference/Selectors/::view-transition-image-pair
 l10n:

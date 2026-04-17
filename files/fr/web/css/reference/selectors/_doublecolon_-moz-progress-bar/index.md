@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-progress-bar`"
+title: Pseudo-élément CSS `::-moz-progress-bar`
 short-title: ::-moz-progress-bar
 slug: Web/CSS/Reference/Selectors/::-moz-progress-bar
 l10n:

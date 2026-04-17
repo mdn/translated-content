@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-range-progress`"
+title: Pseudo-élément CSS `::-moz-range-progress`
 short-title: ::-moz-range-progress
 slug: Web/CSS/Reference/Selectors/::-moz-range-progress
 l10n:

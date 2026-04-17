@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::part()`"
+title: Pseudo-élément CSS `::part()`
 short-title: ::part()
 slug: Web/CSS/Reference/Selectors/::part
 l10n:

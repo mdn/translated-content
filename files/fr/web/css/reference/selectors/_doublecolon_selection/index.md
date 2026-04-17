@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::selection`"
+title: Pseudo-élément CSS `::selection`
 short-title: ::selection
 slug: Web/CSS/Reference/Selectors/::selection
 l10n:

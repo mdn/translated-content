@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::after`"
+title: Pseudo-élément CSS `::after`
 short-title: ::after
 slug: Web/CSS/Reference/Selectors/::after
 l10n:

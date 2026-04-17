@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::details-content`"
+title: Pseudo-élément CSS `::details-content`
 short-title: ::details-content
 slug: Web/CSS/Reference/Selectors/::details-content
 l10n:

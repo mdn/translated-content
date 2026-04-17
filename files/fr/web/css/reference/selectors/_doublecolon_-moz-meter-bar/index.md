@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-meter-bar`"
+title: Pseudo-élément CSS `::-moz-meter-bar`
 short-title: ::-moz-meter-bar
 slug: Web/CSS/Reference/Selectors/::-moz-meter-bar
 l10n:

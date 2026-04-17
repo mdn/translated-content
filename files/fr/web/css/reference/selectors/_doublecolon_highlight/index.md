@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::highlight()`"
+title: Pseudo-élément CSS `::highlight()`
 short-title: ::highlight()
 slug: Web/CSS/Reference/Selectors/::highlight
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-slider-runnable-track`"
+title: Pseudo-élément CSS `::-webkit-slider-runnable-track`
 short-title: ::-webkit-slider-runnable-track
 slug: Web/CSS/Reference/Selectors/::-webkit-slider-runnable-track
 l10n:

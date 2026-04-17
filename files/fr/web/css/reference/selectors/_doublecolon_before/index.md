@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::before`"
+title: Pseudo-élément CSS `::before`
 short-title: ::before
 slug: Web/CSS/Reference/Selectors/::before
 l10n:

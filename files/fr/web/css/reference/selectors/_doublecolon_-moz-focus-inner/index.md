@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-focus-inner`"
+title: Pseudo-élément CSS `::-moz-focus-inner`
 short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
 l10n:

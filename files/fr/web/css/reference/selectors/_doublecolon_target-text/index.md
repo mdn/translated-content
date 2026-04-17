@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::target-text`"
+title: Pseudo-élément CSS `::target-text`
 short-title: ::target-text
 slug: Web/CSS/Reference/Selectors/::target-text
 l10n:

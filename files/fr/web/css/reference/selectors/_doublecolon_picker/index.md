@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::picker()`"
+title: Pseudo-élément CSS `::picker()`
 short-title: ::picker()
 slug: Web/CSS/Reference/Selectors/::picker
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-inner-spin-button`"
+title: Pseudo-élément CSS `::-webkit-inner-spin-button`
 short-title: ::-webkit-inner-spin-button
 slug: Web/CSS/Reference/Selectors/::-webkit-inner-spin-button
 l10n:

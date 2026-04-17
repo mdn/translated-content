@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::cue`"
+title: Pseudo-élément CSS `::cue`
 short-title: ::cue
 slug: Web/CSS/Reference/Selectors/::cue
 l10n:

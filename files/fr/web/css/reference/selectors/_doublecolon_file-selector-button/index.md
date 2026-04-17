@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::file-selector-button`"
+title: Pseudo-élément CSS `::file-selector-button`
 short-title: ::file-selector-button
 slug: Web/CSS/Reference/Selectors/::file-selector-button
 l10n:

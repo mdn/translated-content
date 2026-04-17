@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-meter-optimum-value`"
+title: Pseudo-élément CSS `::-webkit-meter-optimum-value`
 short-title: ::-webkit-meter-optimum-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value
 l10n:

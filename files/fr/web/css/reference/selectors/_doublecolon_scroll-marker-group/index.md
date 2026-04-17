@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::scroll-marker-group`"
+title: Pseudo-élément CSS `::scroll-marker-group`
 short-title: ::scroll-marker-group
 slug: Web/CSS/Reference/Selectors/::scroll-marker-group
 l10n:

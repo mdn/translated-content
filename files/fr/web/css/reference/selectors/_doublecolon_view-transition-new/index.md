@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::view-transition-new()`"
+title: Pseudo-élément CSS `::view-transition-new()`
 short-title: ::view-transition-new()
 slug: Web/CSS/Reference/Selectors/::view-transition-new
 l10n:

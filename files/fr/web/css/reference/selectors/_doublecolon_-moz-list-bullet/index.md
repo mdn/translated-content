@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-list-bullet`"
+title: Pseudo-élément CSS `::-moz-list-bullet`
 short-title: ::-moz-list-bullet
 slug: Web/CSS/Reference/Selectors/::-moz-list-bullet
 l10n:

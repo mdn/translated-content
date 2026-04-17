@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-range-track`"
+title: Pseudo-élément CSS `::-moz-range-track`
 short-title: ::-moz-range-track
 slug: Web/CSS/Reference/Selectors/::-moz-range-track
 l10n:

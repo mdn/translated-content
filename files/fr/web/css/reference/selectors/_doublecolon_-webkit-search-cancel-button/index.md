@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-search-cancel-button`"
+title: Pseudo-élément CSS `::-webkit-search-cancel-button`
 short-title: ::-webkit-search-cancel-button
 slug: Web/CSS/Reference/Selectors/::-webkit-search-cancel-button
 l10n:

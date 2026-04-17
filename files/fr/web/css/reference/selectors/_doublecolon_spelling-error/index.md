@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::spelling-error`"
+title: Pseudo-élément CSS `::spelling-error`
 short-title: ::spelling-error
 slug: Web/CSS/Reference/Selectors/::spelling-error
 l10n:

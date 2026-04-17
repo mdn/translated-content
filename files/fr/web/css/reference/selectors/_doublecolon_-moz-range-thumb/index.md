@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-range-thumb`"
+title: Pseudo-élément CSS `::-moz-range-thumb`
 short-title: ::-moz-range-thumb
 slug: Web/CSS/Reference/Selectors/::-moz-range-thumb
 l10n:

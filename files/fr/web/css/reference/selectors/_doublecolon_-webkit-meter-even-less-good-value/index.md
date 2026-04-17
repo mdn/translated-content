@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-meter-even-less-good-value`"
+title: Pseudo-élément CSS `::-webkit-meter-even-less-good-value`
 short-title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
 l10n:

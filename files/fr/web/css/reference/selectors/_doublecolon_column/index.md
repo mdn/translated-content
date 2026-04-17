@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::column`"
+title: Pseudo-élément CSS `::column`
 short-title: ::column
 slug: Web/CSS/Reference/Selectors/::column
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-scrollbar`"
+title: Pseudo-élément CSS `::-webkit-scrollbar`
 short-title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
 l10n:

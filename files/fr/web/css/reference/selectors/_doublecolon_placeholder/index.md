@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::placeholder`"
+title: Pseudo-élément CSS `::placeholder`
 short-title: ::placeholder
 slug: Web/CSS/Reference/Selectors/::placeholder
 l10n:

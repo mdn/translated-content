@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::slotted()`"
+title: Pseudo-élément CSS `::slotted()`
 short-title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-progress-bar`"
+title: Pseudo-élément CSS `::-webkit-progress-bar`
 short-title: ::-webkit-progress-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-bar
 l10n:

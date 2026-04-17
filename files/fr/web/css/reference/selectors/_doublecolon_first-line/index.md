@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::first-line`"
+title: Pseudo-élément CSS `::first-line`
 short-title: ::first-line
 slug: Web/CSS/Reference/Selectors/::first-line
 l10n:

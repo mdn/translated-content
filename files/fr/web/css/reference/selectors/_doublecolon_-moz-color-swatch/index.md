@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-color-swatch`"
+title: Pseudo-élément CSS `::-moz-color-swatch`
 short-title: ::-moz-color-swatch
 slug: Web/CSS/Reference/Selectors/::-moz-color-swatch
 l10n:

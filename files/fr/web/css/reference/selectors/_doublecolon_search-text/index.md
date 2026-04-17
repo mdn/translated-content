@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::search-text`"
+title: Pseudo-élément CSS `::search-text`
 short-title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 l10n:

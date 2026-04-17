@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::first-letter`"
+title: Pseudo-élément CSS `::first-letter`
 short-title: ::first-letter
 slug: Web/CSS/Reference/Selectors/::first-letter
 l10n:

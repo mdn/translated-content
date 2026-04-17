@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::picker-icon`"
+title: Pseudo-élément CSS `::picker-icon`
 short-title: ::picker-icon
 slug: Web/CSS/Reference/Selectors/::picker-icon
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-meter-inner-element`"
+title: Pseudo-élément CSS `::-webkit-meter-inner-element`
 short-title: ::-webkit-meter-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-inner-element
 l10n:

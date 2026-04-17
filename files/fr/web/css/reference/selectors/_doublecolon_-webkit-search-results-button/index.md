@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-search-results-button`"
+title: Pseudo-élément CSS `::-webkit-search-results-button`
 short-title: ::-webkit-search-results-button
 slug: Web/CSS/Reference/Selectors/::-webkit-search-results-button
 l10n:

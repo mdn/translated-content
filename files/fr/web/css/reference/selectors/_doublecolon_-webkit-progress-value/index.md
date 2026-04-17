@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-webkit-progress-value`"
+title: Pseudo-élément CSS `::-webkit-progress-value`
 short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
 l10n:

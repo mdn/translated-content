@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::scroll-button()`"
+title: Pseudo-élément CSS `::scroll-button()`
 short-title: ::scroll-button()
 slug: Web/CSS/Reference/Selectors/::scroll-button
 l10n:

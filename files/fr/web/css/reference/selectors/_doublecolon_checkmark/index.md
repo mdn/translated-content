@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::checkmark`"
+title: Pseudo-élément CSS `::checkmark`
 short-title: ::checkmark
 slug: Web/CSS/Reference/Selectors/::checkmark
 l10n:

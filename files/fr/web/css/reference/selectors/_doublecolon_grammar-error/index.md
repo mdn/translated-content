@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::grammar-error`"
+title: Pseudo-élément CSS `::grammar-error`
 short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
 l10n:

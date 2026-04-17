@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::marker`"
+title: Pseudo-élément CSS `::marker`
 short-title: ::marker
 slug: Web/CSS/Reference/Selectors/::marker
 l10n:

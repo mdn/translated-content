@@ -1,5 +1,5 @@
 ---
-title: "Pseudo-élément CSS `::-moz-list-number`"
+title: Pseudo-élément CSS `::-moz-list-number`
 short-title: ::-moz-list-number
 slug: Web/CSS/Reference/Selectors/::-moz-list-number
 l10n:
