@@ -1,5 +1,5 @@
 ---
-title: "Permissions-Policy: deferred-fetch 指令"
+title: Permissions-Policy：deferred-fetch 指令
 short-title: deferred-fetch
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 **`deferred-fetch`** 指令是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的一部分。
+HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 **`deferred-fetch`** 指令属于 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)。
 
 此指令与 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 一起，决定了 640KiB 的总配额限制如何在顶级源及其跨源子框架之间分配。默认情况下，顶级源获得 512KiB，每个跨源子框架从剩余的 128KiB 中获得 8KiB。`deferred-fetch` 权限策略可以允许子框架源从顶级 512KiB 配额中获得更大的 64KiB 配额，以替代默认情况下它们会收到的 8KiB 最小配额。
 
@@ -23,11 +23,11 @@ Permissions-policy: deferred-fetch=(<url-list>)
 ```
 
 - `<url-list>`
-  - : 一个以空格分隔的源列表（每个源都用引号括起来），这些源被授予从父级主配额中获取的更大 64KiB 配额。64KiB 配额在子框架创建时分配。
+  - : 一个以空格分隔的来源列表（每个来源都用引号括起来），这些来源被授予从父级主配额中获取的更大 64KiB 配额。64KiB 配额在子框架创建时分配。
 
-跨源子框架可以将 `deferred-fetch` 授予其跨源子框架后代，委托其全部配额。这仅在当前未使用任何配额时才有效。
+跨源子框架可以将 `deferred-fetch` 授予其跨源子框架后代，委派其全部配额。这仅在当前未使用任何配额时才有效。
 
-权限策略检查与配额检查无法区分。无论配额是否实际超出，还是该源通过权限策略被限制了配额，调用 `fetchLater()` 都会抛出 `QuotaExceededError`。
+权限策略检查与配额检查无法区分。无论配额是否实际超出，还是该来源通过权限策略被限制了配额，调用 `fetchLater()` 都会抛出 `QuotaExceededError`。
 
 ## 默认策略
 
@@ -45,9 +45,9 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 
 1. `b.com` 的子框架在创建时从顶级的 512KiB 配额限制中获得 64KiB。
 2. `c.com` 的子框架未在列表中，因此在创建时从 128KiB 共享配额限制中获得 8KiB。
-3. 另外 15 个不同源的子框架在创建时会获得 8KiB（类似于 `c.com`）。
+3. 另外 15 个不同来源的子框架在创建时会获得 8KiB（类似于 `c.com`）。
 4. 下一个子框架将不会被授予任何配额。
-5. 如果其中一个子框架被移除，其延迟 fetch 将被发送。
+5. 如果其中一个子框架被移除，其延迟获取（fetch）将被发送。
 6. 下一个子框架将获得 8KiB 配额，因为又有配额可用了。
 
 ## 完全撤销最小配额

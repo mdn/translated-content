@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-Fetch API 提供了一个用于获取资源（包括跨网络通信）的接口。它比 {{DOMxRef("XMLHttpRequest")}} 更强大、更灵活。
+Fetch API 提供了一个用于获取资源（包括跨网络通信）的接口。它是 {{DOMxRef("XMLHttpRequest")}} 的一个更强大、更灵活的替代。
 
 ## 概念和用法
 
@@ -25,20 +25,20 @@ Fetch API 使用 {{DOMxRef("Request")}} 和 {{DOMxRef("Response")}} 对象（以
 
 ### 延迟 Fetch
 
-{{domxref("Window/fetchLater", "fetchLater()")}} API 允许开发者请求一个*延迟 fetch*，它可以在指定的时间段之后发送，或者在页面关闭或导航离开时发送。参见[使用延迟 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
+{{domxref("Window/fetchLater", "fetchLater()")}} API 允许开发者请求*延迟获取*，它可以在指定的时间段之后发送，或者在页面关闭或导航离开时发送。参见[使用延迟 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch)。
 
 ## 接口
 
 - {{domxref("Window.fetch()")}} 和 {{domxref("WorkerGlobalScope.fetch()")}}
   - : 用于获取资源的 `fetch()` 方法。
 - {{domxref("Window.fetchLater()")}}
-  - : 用于发起延迟 fetch 请求。
+  - : 用于发起延迟获取请求。
 - {{domxref("DeferredRequestInit")}}
-  - : 表示可用于配置延迟 fetch 请求的选项集合。
+  - : 表示可用于配置延迟获取请求的选项集合。
 - {{domxref("FetchLaterResult")}}
-  - : 表示请求延迟 fetch 的结果。
+  - : 表示请求延迟获取的结果。
 - {{DOMxRef("Headers")}}
-  - : 表示响应/请求的标头信息，允许你查询这些头信息，并根据结果采取不同的操作。
+  - : 表示响应/请求的标头信息，允许你查询这些信息，并根据结果采取不同的操作。
 - {{DOMxRef("Request")}}
   - : 表示资源请求。
 - {{DOMxRef("Response")}}

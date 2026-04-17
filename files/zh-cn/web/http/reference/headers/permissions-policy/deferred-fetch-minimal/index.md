@@ -1,5 +1,5 @@
 ---
-title: "Permissions-Policy: deferred-fetch-minimal 指令"
+title: Permissions-Policy：deferred-fetch-minimal 指令
 short-title: deferred-fetch-minimal
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/deferred-fetch-minimal
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 **`deferred-fetch-minimal`** 指令是 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的一部分。
+HTTP {{HTTPHeader("Permissions-Policy")}} 标头的 **`deferred-fetch-minimal`** 指令属于 [Fetch API](/zh-CN/docs/Web/API/Fetch_API)。
 
 此指令与 {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} 一起，决定了 640KiB 的总配额限制如何在顶级源及其跨源子框架之间分配。默认情况下，顶级源获得 512KiB，每个跨源子框架从剩余的 128KiB 中获得 8KiB。`deferred-fetch-minimal` 权限策略还可以阻止所有源；这将把 128KiB 共享配额重新分配给顶级源，使其能够访问完整的 640KiB 配额。
 
@@ -24,7 +24,7 @@ Permissions-policy: deferred-fetch-minimal=(<url-list>)
 ```
 
 - `<url-list>`
-  - : 一个由空格分隔的源列表，这些源被允许使用次级的 128KiB 配额（每个子框架最多 8KiB）。
+  - : 一个由空格分隔的来源列表，这些来源被允许使用次级的 128KiB 配额（每个子框架最多 8KiB）。
 
 将 `deferred-fetch-minimal` 权限设置为 `self` 或 `()` 的顶级框架完全不允许跨源子框架使用默认的共享 128KiB 配额。相反，子框架的 128KiB 配额将计入其常规配额中。
 
@@ -46,7 +46,7 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 2. `c.com` 的子框架未在列表中，因此在创建时从 128KiB 共享配额中获得 8KiB 的配额。
 3. 另外 15 个子框架在创建时会获得 8KiB（类似于 `c.com`，另一个 `c.com` 子框架也会获得另一个 8KiB 的配额）。
 4. 下一个子框架将不会被授予任何配额。
-5. 如果其中一个子框架被移除，其延迟 fetch 将被发送。
+5. 如果其中一个子框架被移除，其延迟获取（fetch）将被发送。
 6. 下一个子框架将获得 8KiB 的配额，因为又有配额可用了。
 
 ### 完全撤销最小配额（有例外）
@@ -69,7 +69,7 @@ Permissions-Policy: deferred-fetch-minimal=()
 1. 顶级文档及其同源后代可以使用最多 640KiB 的配额。
 2. 子框架不会被分配任何配额，无法使用 `fetchLater()`。
 
-### 将最小配额限制为指定源
+### 将最小配额限制为指定来源
 
 ```http
 Permissions-Policy: deferred-fetch=(self "https://b.com")

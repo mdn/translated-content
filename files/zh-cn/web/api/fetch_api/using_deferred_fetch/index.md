@@ -7,13 +7,13 @@ l10n:
 
 {{DefaultAPISidebar("Fetch API")}}
 
-**`fetchLater()` API** 提供了一个接口，用于请求延迟加载，该请求可在指定时间后发送，或者在页面关闭或导航离开时发送。
+**`fetchLater()` API** 提供了一个用于请求延迟获取（fetch）的接口，该请求可在指定时间后发送，或者在页面关闭或导航离开时发送。
 
 ## 概述
 
-开发者通常需要将数据发回（或发送信标）至服务器，尤其是在用户访问页面结束时——例如，用于分析服务。实现这一目标的方法有多种：从向页面添加 1 像素的 {{HTMLElement("img")}} 元素，到使用 {{domxref("XMLHttpRequest")}}，再到专用的 {{domxref("Beacon API", "Beacon API", "", "nocode")}}，以及 {{domxref("Fetch API", "Fetch API", "", "nocode")}} 本身。
+开发者通常需要将数据发回（或发送信标）至服务器，尤其是在用户访问页面结束时——例如，用于分析服务。实现这一目标的方法有多种：从向页面添加 1 像素的 {{HTMLElement("img")}} 元素，到使用 {{domxref("XMLHttpRequest")}}，再到专用的{{domxref("Beacon API", "信标 API", "", "nocode")}}，以及 {{domxref("Fetch API", "Fetch API", "", "nocode")}} 本身。
 
-问题在于，所有这些方法在处理访问结束时的信标发送时都存在可靠性问题。虽然 Beacon API 和 Fetch API 的 {{domxref("Request.keepalive", "keepalive")}} 属性在文档被销毁时仍尝试发送数据（在此情境下已尽最大努力），但这仅解决了部分问题。
+问题在于，所有这些方法在处理访问结束时的信标发送时都存在可靠性问题。虽然信标 API 和 Fetch API 的 {{domxref("Request.keepalive", "keepalive")}} 属性在文档被销毁时仍尝试发送数据（在此情境下已尽最大努力），但这仅解决了部分问题。
 
 另一个更难解决的部分在于确定*何时*发送数据，因为在页面的生命周期中，并没有一个理想的时机来调用 JavaScript 调用发送信标：
 
@@ -27,26 +27,26 @@ l10n:
 - 在指定的截止时间后发送信标，且不再收集后续数据。
 - 在页面生命周期结束时发送信标，但接受这种做法有时可能不可靠。
 
-`fetchLater()` API 扩展了 {{domxref("Fetch API", "Fetch API", "", "nocode")}}，允许提前设置 fetch 请求。这些延迟 fetch 在发送之前可以更新，从而使有效载荷反映要发送的最新数据。
+`fetchLater()` API 扩展了 {{domxref("Fetch API", "Fetch API", "", "nocode")}}，允许提前设置获取请求。这些延迟获取在发送之前可以更新，从而使有效载荷反映要发送的最新数据。
 
 随后，当标签页关闭或导航离开时，浏览器会发送信标，若指定了时间，则会在设定时间后发送。这既避免了多次发送信标，又在合理预期范围内确保了信标的可靠性（即排除浏览器进程因崩溃而意外关闭的情况）。
 
-如果不再需要延迟 fetch，也可以使用 {{domxref("AbortController")}} 中止，从而避免进一步的不必要开销。
+如果不再需要延迟获取，也可以使用 {{domxref("AbortController")}} 中止，从而避免进一步的不必要开销。
 
 ## 配额
 
-延迟 fetch 会被批量处理，并在标签页关闭时一次性发送；此时，用户无法中止它们。为防止文档滥用此带宽在网络上发送无限量的数据，顶级文档的总配额上限为 640KiB。
+延迟获取会在标签页关闭时被批量处理，并被一次性发送；此时，用户无法中止它们。为防止文档滥用此带宽在网络上发送无限量的数据，顶级文档的总配额上限为 640KiB。
 
 `fetchLater()` 的调用者应该采取防御性措施，并在几乎所有情况下捕获 `QuotaExceededError` 错误，特别是如果他们嵌入了第三方 JavaScript。
 
-由于此上限使延迟 fetch 带宽成为一种稀缺资源，且需要由多个报告源（例如，多个 RUM 库）以及来自多个源的子框架共享，因此平台提供了该配额的合理默认分配方案。此外，它还提供了 {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} 和 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)指令，以便在需要时进行不同的分配。
+由于此上限使延迟获取带宽成为一种稀缺资源，且需要由多个报告源（例如，多个 RUM 库）以及来自多个源的子框架共享，因此平台提供了该配额的合理默认分配方案。此外，它还提供了 {{HTTPHeader("Permissions-Policy/deferred-fetch", "deferred-fetch")}} 和 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)指令，以便在需要时进行不同的分配。
 
 `fetchLater()` 的总体配额为每个文档 640KiB。默认情况下，这被分为 512KiB 的顶级配额和 128KiB 的共享配额：
 
 - 默认情况下，512KiB 的顶级配额用于顶级文档以及使用该源的直接子框架发出的任何 `fetchLater()` 请求。
 - 默认情况下，128KiB 共享配额默认用于在跨源子框架（例如，`<iframe>`、`<object>`、`<embed>` 和 `<frame>` 元素）中发出的任何 `fetchLater()` 请求。
 
-`fetchLater()` 请求可以发送到任何 URL，并不受限于与文档或子框架相同的源，因此必须区分在顶级文档内容中发出的请求（无论是针对第一方还是第三方源）与在子框架中发出的请求。。
+`fetchLater()` 请求可以发送到任何 URL，并不受限于与文档或子框架相同的源，因此必须区分在顶级文档内容中发出的请求（无论是针对第一方还是第三方源）与在子框架中发出的请求。
 
 例如，如果顶级 `a.com` 文档包含一个向 `analytics.example.com` 发出 `fetchLater()` 请求的 `<script>`，则此请求将受顶级文档 512KiB 限制的约束。反之，如果顶级文档嵌入了一个源为 `analytics.example.com` 的 `<iframe>`，该 iframe 发出 `fetchLater()` 请求，则该请求将受 128KiB 限制的约束。
 
@@ -62,7 +62,7 @@ l10n:
 
 ### 限制共享配额
 
-顶级源还可以通过在 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 权限策略中列出特定源，将 128KiB 共享配额限制为指定的跨源子框架。此外，它还可以通过将 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 权限策略设置为 `()` 来撤销整个 128KiB 默认子框架配额，并将完整的 640KiB 配额保留给自己和任何指定的 `deferred-fetch` 跨源。
+顶级源还可以通过在 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 权限策略中列出特定源，将 128KiB 共享配额限制为指定的跨源子框架。此外，它还可以通过将 {{HTTPHeader("Permissions-Policy/deferred-fetch-minimal", "deferred-fetch-minimal")}} 权限策略设置为 `()` 来撤销整个 128KiB 默认子框架配额，并将完整的 640KiB 配额保留给自己和任何指定的 `deferred-fetch` 多个来源。
 
 ### 将配额委托给子框架的子框架
 
@@ -84,11 +84,11 @@ l10n:
 Permissions-Policy: deferred-fetch=(self "https://b.com")
 ```
 
-1. 当 `<iframe src="https://b.com/page">` 在添加到顶级文档时，会从顶级的 512KiB 限制中获得 64KiB。
+1. 当 `<iframe src="https://b.com/page">` 被添加到顶级文档时，会从顶级的 512KiB 限制中获得 64KiB。
 2. 一个 `<iframe src="https://c.com/page">` 未被列入列表，因此在添加到顶级文档时，将从 128KiB 共享限制中获得 8KiB。
 3. 另外 15 个跨源 iframe 在添加到顶级文档时各自获得 8KiB（类似于 `c.com`）。
 4. 下一个跨源 iframe 将不会获得任何配额。
-5. 如果其中一个跨源 iframe 被移除，其延迟 fetch 将被发送。
+5. 如果其中一个跨源 iframe 被移除，其延迟获取将被发送。
 6. 由于配额再次可用，下一个跨源 iframe *将*获得 8KiB 配额。
 
 ### 将最小配额限制为指定源
@@ -97,8 +97,8 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 Permissions-Policy: deferred-fetch-minimal=("https://b.com")
 ```
 
-1. `<iframe src="https://b.com/page">` 在添加到顶级文档时获得 8KiB。
-2. `<iframe src="https://c.com/page">` 在添加到顶级文档时未被分配配额。
+1. `<iframe src="https://b.com/page">` 被添加到顶级文档时获得 8KiB。
+2. `<iframe src="https://c.com/page">` 被添加到顶级文档时未被分配配额。
 3. 顶级文档及其同源后代最多可以使用 512KiB。
 
 ### 通过顶级例外完全撤销最小配额
@@ -108,8 +108,8 @@ Permissions-Policy: deferred-fetch=(self "https://b.com")
 Permissions-Policy: deferred-fetch-minimal=()
 ```
 
-1. `<iframe src="https://b.com/page">` 在添加到顶级文档时获得 64KiB。
-2. `<iframe src="https://c.com/page">` 在添加到顶级文档时不获得任何配额。
+1. `<iframe src="https://b.com/page">` 被添加到顶级文档时获得 64KiB。
+2. `<iframe src="https://c.com/page">` 被添加到顶级文档时不获得任何配额。
 3. 顶级文档及其同源后代最多可以使用完整的 640KiB，但如果创建 `b.com` 子框架，则减少到 574KiB（如果创建多个 `b.com` 子框架，每个将被分配 64KiB 配额，则配额会更少）。
 
 ### 完全撤销最小配额且不作任何例外
@@ -126,10 +126,10 @@ Permissions-Policy: deferred-fetch-minimal=()
 假设 `a.com` 上的顶级文档，嵌入了一个 `a.com` 的子框架，该子框架又嵌入了一个 `b.com` 的子框架，且没有明确的权限策略。
 
 1. `a.com` 的顶级文档具有默认的 512KiB 配额。
-2. `<iframe src="https://a.com/embed">` 在添加到顶级文档时共享 512KiB 配额。
-3. `<iframe src="https://b.com/embed">` 在添加到顶级文档时获得 8KiB 配额。
+2. `<iframe src="https://a.com/embed">` 被添加到顶级文档时共享 512KiB 配额。
+3. `<iframe src="https://b.com/embed">` 被添加到顶级文档时获得 8KiB 配额。
 
-### 同源子框架被跨源子框架分隔时不能与顶级共享配额
+### 同源子框架被跨源子框架分隔时不能与顶级文档共享配额
 
 假设 `a.com` 上的顶级文档，嵌入了一个 `<iframe src="https://b.com/">`，该子框架又嵌入了一个 `<iframe src="https://a.com/embed">`，且没有明确的权限策略。
 
@@ -182,7 +182,7 @@ Permissions-Policy: deferred-fetch=("https://c.com")
 <iframe src="https://www.example.com/iframe" sandbox="allow-scripts"></iframe>
 ```
 
-这不会被认为是"同源"，尽管它与顶级文档托管在同一源上，但由于 `<iframe>` 处于沙箱化环境中。因此，默认情况下，应从总计 128KiB 的共享配额中为其分配 8KiB 的配额。
+这不会被认为是“同源”，尽管它与顶级文档托管在同一源上，但由于 `<iframe>` 处于沙箱化环境中。因此，默认情况下，应从总计 128KiB 的共享配额中为其分配 8KiB 的配额。
 
 ### 禁止 iframe 使用 `fetchLater()`
 
@@ -200,14 +200,14 @@ Permissions-Policy: deferred-fetch=("https://c.com")
 
 ```js
 // 每个源最多 64KiB
-const url = "<72KiB of characters>";
+const url = "<72KiB 的字符>";
 fetchLater(url);
 
 // 每个源最多 64KiB，包括标头
 fetchLater("https://origin.example.com", { headers: headersExceeding64KiB });
 
 // 每个源最多 64KiB，包括正文和标头
-fetchLater("<32KiB of characters>", { headers: headersExceeding32KiB });
+fetchLater("<32KiB 的字符>", { headers: headersExceeding32KiB });
 
 // 每个源最多 64KiB，包括正文
 fetchLater("https://origin.example.com", {
@@ -216,7 +216,7 @@ fetchLater("https://origin.example.com", {
 });
 
 // 每个源最多 64KiB，包括正文和自动添加的标头
-fetchLater("<62KiB of characters>" /* with a 3kb referrer */);
+fetchLater("<62KiB 的字符>" /* 包含 3kb referrer */);
 ```
 
 ### 最终抛出 `QuotaExceededError` 的示例
