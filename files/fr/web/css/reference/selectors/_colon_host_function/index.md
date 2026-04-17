@@ -1,8 +1,9 @@
 ---
-title: :host()
+title: Pseudo-classe CSS `:host()`
+short-title: :host()
 slug: Web/CSS/Reference/Selectors/:host_function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:host()`** sélectionne l'hôte du [DOM d'ombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser à l'intérieur (vous pouvez donc sélectionner un élément personnalisé depuis l'intérieur de son DOM d'ombre) — mais uniquement si le sélecteur donné en paramètre de la fonction correspond à l'hôte d'ombre. **`:host()`** n'a aucun effet lorsqu'il est utilisé en dehors d'un DOM d'ombre.
