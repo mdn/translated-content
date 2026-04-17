@@ -1,8 +1,9 @@
 ---
-title: ::picker-icon
+title: "Pseudo-élément CSS `::picker-icon`"
+short-title: ::picker-icon
 slug: Web/CSS/Reference/Selectors/::picker-icon
 l10n:
-  sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::picker-icon`** cible l'icône de sélection à l'intérieur des contrôles de formulaire qui ont une icône associée. Dans le cas d'un [élément `<select>` personnalisable](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), il sélectionne l'icône de flèche affichée sur l'élément `<select>` qui pointe vers le bas lorsqu'il est fermé.

@@ -1,8 +1,9 @@
 ---
-title: ::scroll-marker
+title: "Pseudo-élément CSS `::scroll-marker`"
+short-title: ::scroll-marker
 slug: Web/CSS/Reference/Selectors/::scroll-marker
 l10n:
-  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}

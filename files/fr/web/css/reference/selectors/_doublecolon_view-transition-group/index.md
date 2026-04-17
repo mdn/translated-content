@@ -1,8 +1,9 @@
 ---
-title: ::view-transition-group()
+title: "Pseudo-élément CSS `::view-transition-group()`"
+short-title: ::view-transition-group()
 slug: Web/CSS/Reference/Selectors/::view-transition-group
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-group()`** représente un groupe instantané de transition de vue.

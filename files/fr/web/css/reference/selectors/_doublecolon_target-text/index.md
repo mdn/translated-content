@@ -1,8 +1,9 @@
 ---
-title: ::target-text
+title: "Pseudo-élément CSS `::target-text`"
+short-title: ::target-text
 slug: Web/CSS/Reference/Selectors/::target-text
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::target-text`** représente le texte vers lequel l'écran vient de défiler, dans le cas où le navigateur prend en charge les [fragments de texte](/fr/docs/Web/URI/Reference/Fragment/Text_fragments). Il permet aux auteur·ice·s de mettre en évidence cette section de texte.

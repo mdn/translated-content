@@ -1,8 +1,9 @@
 ---
-title: ::view-transition-old()
+title: "Pseudo-élément CSS `::view-transition-old()`"
+short-title: ::view-transition-old()
 slug: Web/CSS/Reference/Selectors/::view-transition-old
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-old()`** représente l'état de vue «&nbsp;<i lang="en">old</i>&nbsp;» d'une transition de vue — une représentation instantanée de l'état avant la transition.

@@ -1,8 +1,9 @@
 ---
-title: ::slotted()
+title: "Pseudo-élément CSS `::slotted()`"
+short-title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 La [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (voir [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).

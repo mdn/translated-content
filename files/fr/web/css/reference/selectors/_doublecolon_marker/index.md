@@ -1,8 +1,9 @@
 ---
-title: ::marker
+title: "Pseudo-élément CSS `::marker`"
+short-title: ::marker
 slug: Web/CSS/Reference/Selectors/::marker
 l10n:
-  sourceCommit: 618d480ec934c834d8a37796dc691061c401ed5d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::marker`** représente le marqueur d'un élément d'une liste à puces ou numérotée. Il fonctionne sur tout élément ou pseudo-élément défini avec [`display: list-item`](/fr/docs/Web/CSS/Reference/Properties/display), tel que les éléments {{HTMLElement("li")}} et {{HTMLElement("summary")}}.

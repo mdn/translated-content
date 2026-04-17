@@ -1,8 +1,9 @@
 ---
-title: ::after
+title: "Pseudo-élément CSS `::after`"
+short-title: ::after
 slug: Web/CSS/Reference/Selectors/::after
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::after`** crée un pseudo-élément qui sera le dernier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{CSSxRef("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).

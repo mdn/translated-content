@@ -1,8 +1,9 @@
 ---
-title: ::grammar-error
+title: "Pseudo-élément CSS `::grammar-error`"
+short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.

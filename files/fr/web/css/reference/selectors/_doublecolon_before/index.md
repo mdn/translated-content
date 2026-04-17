@@ -1,8 +1,9 @@
 ---
-title: ::before
+title: "Pseudo-élément CSS `::before`"
+short-title: ::before
 slug: Web/CSS/Reference/Selectors/::before
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::before`** crée un pseudo-élément qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{CSSxRef("content")}}. Par défaut, l'élément créé est de type en-ligne (<i lang="en">inline</i> en anglais).

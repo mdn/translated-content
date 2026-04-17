@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-meter-optimum-value
+title: "Pseudo-élément CSS `::-webkit-meter-optimum-value`"
+short-title: ::-webkit-meter-optimum-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value
 l10n:
-  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}

@@ -1,8 +1,9 @@
 ---
-title: ::view-transition
+title: "Pseudo-élément CSS `::view-transition`"
+short-title: ::view-transition
 slug: Web/CSS/Reference/Selectors/::view-transition
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition`** représente la racine de la superposition des [transitions de vue](/fr/docs/Web/API/View_Transition_API), qui contient tous les groupes de vue instantanées de transition de vue et se trouve au-dessus de tout le reste du contenu de la page.
