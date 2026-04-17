@@ -2,7 +2,7 @@
 title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 7972cd926c2feb93bfc155d05aadd54786a7f66b
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation`** permet d'appliquer une animation entre des styles. Il s'agit d'une propriété raccourcie pour {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}.
@@ -55,15 +55,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 C'est une propriété qui synthétise les propriétés suivantes&nbsp;:
 
+- {{CSSxRef("animation-name")}}
+- {{CSSxRef("animation-duration")}}
+- {{CSSxRef("animation-timing-function")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
-- {{CSSxRef("animation-duration")}}
-- {{CSSxRef("animation-fill-mode")}}
 - {{CSSxRef("animation-iteration-count")}}
-- {{CSSxRef("animation-name")}}
+- {{CSSxRef("animation-fill-mode")}}
 - {{CSSxRef("animation-play-state")}}
 - {{CSSxRef("animation-timeline")}}
-- {{CSSxRef("animation-timing-function")}}
 
 ## Syntaxe
 
@@ -81,48 +81,64 @@ animation:
   3s ease-out 5s slide-out;
 ```
 
-La propriété `animation` se définit grâce à une ou plusieurs animations, séparées par des virgules.
-
-Chaque animation se définit comme&nbsp;:
-
-- zéro, une ou deux occurrences de la valeur {{CSSxRef("&lt;time&gt;")}}.
-
-- zéro ou une valeur du type&nbsp;:
-  - [`<single-easing-function>`](#single-easing-function)
-  - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
-  - [`<single-animation-direction>`](#single-animation-direction)
-  - [`<single-animation-fill-mode>`](#single-animation-fill-mode)
-  - [`<single-animation-play-state>`](#single-animation-play-state)
-
-- un nom optionnel pour l'animation, qui peut être `none`, un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) ou une chaîne de caractères ({{CSSxRef("&lt;string&gt;")}}).
-
-> [!NOTE]
-> {{CSSxRef("animation-timeline")}}, {{CSSxRef("animation-range-start")}} et {{CSSxRef("animation-range-end")}} ne sont pas incluses dans cette liste actuellement, car les implémentations actuelles ne permettent que leur réinitialisation. Cela signifie qu'utiliser `animation` réinitialise une valeur `animation-timeline` précédemment déclarée à `auto` et les valeurs `animation-range-start` et `animation-range-end` à `normal`, mais ces propriétés ne peuvent pas être définies via `animation`. Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), vous devez déclarer ces propriétés après toute propriété raccourcie `animation` pour qu'elles prennent effet.
-
 ### Valeurs
 
-- `<single-easing-function>`
-  - : Détermine le type de transition. La valeur doit être l'une de celles disponibles dans {{CSSxRef("easing-function")}}.
-- `<single-animation-iteration-count>`
-  - : Le nombre de fois où l'animation est jouée, cf. {{CSSxRef("animation-iteration-count")}}.
+Une ou plusieurs déclarations `<animation>`, séparées par des virgules, chaque `<animation>` incluant&nbsp;:
+
+- `<keyframes-name>` ou `none`
+  - : Le nom d'une règle {{CSSxRef("@keyframes")}} qui définit l'animation à appliquer à un élément. La valeur initiale pour {{CSSxRef("animation-name")}} est `none`.
+- `<animation-duration>`
+  - : Détermine la durée nécessaire pour qu'une animation complète un cycle. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-duration")}}. La valeur initiale est `0s`.
+- `<easing-function>`
+  - : Détermine le type de transition. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-timing-function")}}. La valeur initiale est `ease`.
+- `<animation-delay>`
+  - : Détermine le temps à attendre après l'application de l'animation à un élément avant de commencer à exécuter l'animation. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-delay")}}. La valeur initiale est `0s`.
 - `<single-animation-direction>`
-  - : La direction dans laquelle s'effectue l'animation, cf. {{CSSxRef("animation-direction")}}.
+  - : La direction dans laquelle l'animation est jouée. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-direction")}}. La valeur initiale pour {{CSSxRef("animation-direction")}} est `normal`.
+- `<single-animation-iteration-count>`
+  - : Le nombre de fois que l'animation est jouée. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-iteration-count")}}. La valeur initiale pour {{CSSxRef("animation-iteration-count")}} est `1`.
 - `<single-animation-fill-mode>`
-  - : La façon dont les styles sont appliquées à la cible de l'animation, avant et après son exécution, cf. {{CSSxRef("animation-fill-mode")}}.
+  - : Détermine comment les styles doivent être appliqués à la cible de l'animation avant et après son exécution. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-fill-mode")}}. La valeur initiale pour {{CSSxRef("animation-fill-mode")}} est `none`.
 - `<single-animation-play-state>`
-  - : Si l'animation est lancée ou non, cf. {{CSSxRef("animation-play-state")}}.
+  - : Détermine si l'animation est en cours de lecture ou non. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-play-state")}}. La valeur initiale pour {{CSSxRef("animation-play-state")}} est `running`.
+- `<single-animation-timeline>`
+  - : Détermine la chronologie utilisée pour contrôler la progression de l'animation. La valeur doit être l'une de celles disponibles dans {{CSSxRef("animation-timeline")}}. La valeur initiale est `auto`.
 
 ## Description
 
-L'ordre des valeurs de temps dans chaque définition d'animation est important&nbsp;: la première valeur pouvant être analysée comme {{CSSxRef("&lt;time&gt;")}} est affectée à {{CSSxRef("animation-duration")}} et la seconde à {{CSSxRef("animation-delay")}}.
+La propriété `animation` est définie sous la forme d'une ou plusieurs animations distinctes, séparées par des virgules. Chaque `animation` de la liste d'animations séparées par des virgules définit {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}. Si l'une des composantes n'est pas incluse dans une déclaration `animation`, la valeur de la composante est définie sur la valeur initiale de la composante.
 
-L'ordre des autres valeurs dans chaque définition d'animation est aussi important pour distinguer une valeur de {{CSSxRef("animation-name")}} des autres valeurs. Si une valeur dans la propriété raccourcie `animation` peut être analysée comme une valeur pour une propriété d'animation autre que `animation-name`, alors la valeur sera appliquée à cette propriété en priorité et non à `animation-name`. Pour cette raison, il est recommandé d'indiquer la valeur de `animation-name` en dernier dans la liste lors de l'utilisation de la propriété raccourcie `animation`&nbsp;; cela reste vrai même lorsque vous définissez plusieurs animations séparées par des virgules avec la propriété raccourcie `animation`.
+### `animation-name`
 
-Bien qu'un nom de l'animation doive être défini pour qu'une animation soit appliquée, toutes les valeurs de la propriété raccourcie `animation` sont optionnelles et prennent par défaut la valeur initiale de chaque composant long. La valeur initiale de `animation-name` est `none`, ce qui signifie que si aucune valeur `animation-name` n'est déclarée dans la propriété raccourcie `animation`, aucune animation ne sera appliquée à aucune propriété.
+Le composant `<animation-name>` de chaque animation correspond au nom de l'animation, qui peut être `none`, un {{CSSxRef("&lt;custom-ident&gt;")}}, ou un {{CSSxRef("&lt;string&gt;")}}. La valeur initiale de `animation-name` est `none`, ce qui signifie que si aucune valeur `animation-name` n'est déclarée dans la propriété raccourcie `animation`, aucune animation n'est appliquée à aucune des propriétés.
 
-Lorsque la valeur de `animation-duration` est omise dans la propriété raccourcie `animation`, la valeur de cette propriété est par défaut `0s`. Dans ce cas, l'animation aura tout de même lieu (les évènements [`animationStart`](/fr/docs/Web/API/Element/animationstart_event) et [`animationEnd`](/fr/docs/Web/API/Element/animationend_event) seront déclenchés) mais aucune animation ne sera visible.
+L'ordre des autres valeurs dans une définition d'animation est important pour distinguer une valeur {{CSSxRef("animation-name")}} des autres valeurs. Si une valeur dans la notation raccourcie `animation` peut être analysée comme une valeur pour une propriété d'animation autre que `animation-name`, alors la valeur sera appliquée d'abord à cette propriété et non à `animation-name`. Pour cette raison, il est recommandé de définir une valeur pour `animation-name` comme dernière valeur d'une liste lors de l'utilisation de la notation raccourcie `animation`&nbsp;; cela reste vrai même lorsque vous définissez plusieurs animations séparées par des virgules en utilisant la notation raccourcie `animation`.
 
-Dans le cas de la valeur [forwards](/fr/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) pour `animation-fill-mode`, les propriétés animées se comportent comme si elles étaient incluses dans une propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement est créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
+### Valeurs temporelles
+
+Chaque animation peut inclure zéro, une ou deux occurrences de la valeur {{CSSxRef("&lt;time&gt;")}}. L'ordre des valeurs temporelles dans chaque définition d'animation est important&nbsp;: la première valeur pouvant être analysée comme une {{CSSxRef("&lt;time&gt;")}} est affectée à {{CSSxRef("animation-duration")}}, et la seconde est affectée à {{CSSxRef("animation-delay")}}.
+
+Si aucune valeur `animation-duration` n'est définie dans la propriété raccourcie `animation`, la durée prend la valeur par défaut `0s`. Dans ce cas, l'animation aura quand même lieu (les évènements [`animationStart`](/fr/docs/Web/API/Element/animationstart_event) et [`animationEnd`](/fr/docs/Web/API/Element/animationend_event) seront déclenchés), mais aucune animation ne sera visible pour l'utilisateur·ice.
+
+### animation-timeline
+
+Les implémentations actuelles de `animation` sont en mode réinitialisation uniquement&nbsp;: si aucun `<animation-timeline>` n'est inclus dans la notation raccourcie `animation`, la déclaration raccourcie réinitialisera toutes les valeurs `animation-timeline` précédemment déclarées à `auto`.
+
+Par défaut, `animation-timeline` est le {{DOMxRef("documentTimeline")}}. Si une valeur est incluse, mais que l'agent utilisateur ne prend pas en charge les valeurs `<animation-timeline>` dans la notation raccourcie, la déclaration est invalide et est ignorée.
+
+Cela signifie que, lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), vous devez déclarer la propriété `animation-timeline` après avoir déclaré toute notation raccourcie `animation` pour qu'elle prenne effet.
+
+Alternativement, la propriété `animation-timeline` peut être utilisée dans la notation raccourcie `animation` au sein d'un bloc CSS {{CSSxRef("@supports")}}, par exemple&nbsp;:
+
+```css
+@supports (animation: view()) {
+  /* CSS pour les navigateurs qui prennent en charge la définition de <animation-timeline> dans la notation raccourcie animation */
+}
+```
+
+### `animation-fill-mode` et nouveaux contextes d'empilement
+
+Dans le cas de la valeur [`forwards`](/fr/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) pour `animation-fill-mode`, les propriétés animées se comportent comme si elles étaient incluses dans une propriété {{CSSxRef("will-change")}}. Si un nouveau contexte d'empilement est créé pendant l'animation, l'élément cible conserve ce contexte d'empilement après la fin de l'animation.
 
 ## Accessibilité
 
@@ -130,11 +146,11 @@ Les animations qui clignotent ou scintillent sont problématiques, notamment pou
 
 Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [la requête média pour la préférence de réduction des animations](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour offrir une expérience complémentaire aux utilisateur·ice·s qui ont exprimé une préférence pour la réduction des animations.
 
-- [Concevoir des animations web plus sûres pour la sensibilité au mouvement · Article de An A List Apart <sup>(angl.)</sup>](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
+- [Concevoir des animations web plus sûres pour la sensibilité au mouvement · Article de A List Apart <sup>(angl.)</sup>](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [Introduction à la requête média pour la réduction des animations | CSS-Tricks <sup>(angl.)</sup>](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Responsive Design for Motion | WebKit <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Explications MDN sur la directive 2.2 des WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.2_—_temps_suffisant_donner_aux_utilisateurs_et_utilisatrices_assez_de_temps_pour_lire_et_utiliser_le_contenu)
-- [Comprendre le critère de succès 2.2.2 | W3C Understanding WCAG 2.0 <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Conception réactive pour le mouvement | WebKit <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [Explications WCAG sur MDN, explications de la règle 2.2 des WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.2_—_temps_suffisant_donner_aux_utilisateurs_et_utilisatrices_assez_de_temps_pour_lire_et_utiliser_le_contenu)
+- [Comprendre le critère de succès 2.2.2 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## Définition formelle
 

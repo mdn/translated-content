@@ -2,7 +2,7 @@
 title: stroke
 slug: Web/CSS/Reference/Properties/stroke
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke`** définit la couleur ou le serveur de peinture SVG utilisé pour dessiner le contour d'un élément. En tant que telle, `stroke` n'a d'effet que sur les éléments pouvant recevoir un contour (par exemple, {{SVGElement('rect')}} ou {{SVGElement('ellipse')}})&nbsp;; voir la page sur l'attribut SVG {{SVGAttr('stroke')}} pour une liste complète. Lorsqu'elle est déclarée, la valeur CSS remplace toute valeur de l'attribut SVG {{SVGAttr("stroke")}} de l'élément.
@@ -15,7 +15,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`stroke`** définit la couleur ou le se
 ```css
 /* Valeurs de couleur variées */
 stroke: rgb(153 51 102 / 1);
-stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%));
+stroke: color-mix(in lch, var(--primaryColor) 35%, gray 15%);
 stroke: dodgerblue;
 stroke: currentColor;
 stroke: transparent;
@@ -35,10 +35,10 @@ stroke: unset;
   - : Définit la peinture du contour avec n'importe quelle valeur de couleur CSS valide.
 
 - `<image>`
-  - : Définit la peinture du contour avec ce que SVG appelle un [_paint server_ <sup>(angl.)</sup>](https://svgwg.org/svg2-draft/pservers.html), c'est‑à‑dire un dégradé ou un motif SVG. Les dégradés CSS ne peuvent pas être utilisés avec la propriété `stroke`.
+  - : Définit la peinture du contour avec ce que SVG appelle un [_paint server_ <sup>(angl.)</sup>](https://w3c.github.io/svgwg/svg2-draft/pservers.html), c'est‑à‑dire un dégradé ou un motif SVG. Les dégradés CSS ne peuvent pas être utilisés avec la propriété `stroke`.
 
 - `context-stroke`
-  - : Fait en sorte qu'un élément «&nbsp;hérite&nbsp;» sa définition de contour depuis son [_élément de contexte_ <sup>(angl.)</sup>](https://svgwg.org/svg2-draft/painting.html#TermContextElement). S'il n'existe pas d'élément de contexte valide, cette valeur entraîne l'absence de peinture pour le contour.
+  - : Fait en sorte qu'un élément «&nbsp;hérite&nbsp;» sa définition de contour depuis son [_élément de contexte_ <sup>(angl.)</sup>](https://w3c.github.io/svgwg/svg2-draft/painting.html#TermContextElement). S'il n'existe pas d'élément de contexte valide, cette valeur entraîne l'absence de peinture pour le contour.
 
 ## Définition formelle
 

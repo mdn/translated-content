@@ -2,7 +2,7 @@
 title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
+  sourceCommit: 2b6ef419bcd9bcc4316ae59c41b3a956c8fa5749
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-start`** définit le point sur la chronologie où une animation doit commencer.
@@ -60,9 +60,9 @@ La propriété `animation-range-start`, ainsi que la propriété {{CSSxRef("anim
 
 ## Exemples
 
-### Créer une chronologie de progression de vue pilotée par le défilement avec un début de plage
+### Créer une chronologie de progression pilotée par le défilement avec un début de plage
 
-Dans cet exemple, la propriété `animation-range-start` est appliquée à un élément animé via une chronologie de progression de défilement. Cela permet à l'animation de commencer bien avant que l'élément n'entre dans la zone de défilement.
+Dans cet exemple, la propriété `animation-range-start` est appliquée à un élément animé par une chronologie de progression de défilement. Cela permet à l'animation de commencer bien avant que l'élément n'entre dans la zone de défilement.
 
 #### HTML
 
@@ -183,7 +183,7 @@ p {
 
 Faites défiler pour voir l'élément s'animer. Remarquez que l'élément est déjà mis à l'échelle et semi-opaque lorsqu'il entre dans la zone d'affichage. Cela s'explique par le fait que l'élément a commencé à s'animer bien avant d'entrer dans la zone d'affichage.
 
-{{EmbedLiveSample("Créer une chronologie de progression de vue pilotée par le défilement avec un début de plage", "100%", 480)}}
+{{EmbedLiveSample("Créer une chronologie de progression pilotée par le défilement avec un début de plage", "100%", 480)}}
 
 ## Spécifications
 

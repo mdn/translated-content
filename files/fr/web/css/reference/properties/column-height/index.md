@@ -2,7 +2,7 @@
 title: column-height
 slug: Web/CSS/Reference/Properties/column-height
 l10n:
-  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 {{SeeCompatTable}}
@@ -448,7 +448,7 @@ html {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {

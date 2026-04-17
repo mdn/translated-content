@@ -2,7 +2,7 @@
 title: grid
 slug: Web/CSS/Reference/Properties/grid
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 1e6d11fd99ab29e970924e68cfbc011d8c338bff
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid`** permet de définir toutes les propriétés de grille explicites et implicites en une seule déclaration.
@@ -81,14 +81,14 @@ grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
    [ auto-flow && dense? ] <'grid-auto-columns'>? values */
 grid: 200px / auto-flow;
 grid: 30% / auto-flow dense;
-grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
+grid: repeat(3, 200px) / auto-flow 300px;
 grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
 
 /* [ auto-flow && dense? ] <'grid-auto-rows'>? /
    <'grid-template-columns'> values */
 grid: auto-flow / 200px;
 grid: auto-flow dense / 30%;
-grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
+grid: auto-flow 300px / repeat(3, 200px);
 grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 
 /* Valeurs globales */
