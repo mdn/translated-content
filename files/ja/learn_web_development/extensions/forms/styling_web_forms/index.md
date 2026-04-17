@@ -386,4 +386,4 @@ button:focus {
 
 - [カスタムフォームコントロールの作成方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn_web_development/Extensions/Forms/Property_compatibility_table_for_form_controls)
+- [フォームウィジェット向けのプロパティの互換性一覧表](/ja/docs/Learn_web_development/Extensions/Forms)

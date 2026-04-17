@@ -44,7 +44,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
   - : `string`: **Retorna / Define** o atributo [`step`](/pt-BR/docs/Web/HTML/Reference/Elements/input#step) do elemento, que funciona com [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) para limitar os incrementos nos quais um número ou data - valor de tempo pode ser definido. Pode ser a string `any` ou um número de ponto flutuante positivo. Se isso não for definido como `any`, o controle aceitará apenas valores em múltiplos do valor da etapa maior que o mínimo.
 
 - {{domxref("HTMLInputElement.type", "type")}}
-  - : `string`: **Retorna / Define** o atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) do elemento, indicando o tipo de controle a ser exibido. Para valores possíveis, consulte a documentação do atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
+  - : `string`: **Retorna / Define** o atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) do elemento, indicando o tipo de controle a ser exibido. Para valores possíveis, consulte a documentação do atributo [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type).
 
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
   - : `string`: **Representa** um mapa de imagem do lado do cliente.
@@ -81,7 +81,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 ### Propriedades de instância que se aplicam a qualquer tipo de elemento de entrada que não esteja oculto
 
 - {{domxref("HTMLInputElement.autofocus", "autofocus")}}
-  - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Reference/Elements/input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Element/input#autofocus).
+  - : `boolean`: **Retorna / Define** o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Reference/Elements/input#autofocus) do elemento, que especifica que um controle de formulário deve ter foco de entrada quando a página é carregada, a menos que o usuário a substitua, por exemplo, digitando um controle diferente. Apenas um elemento de formulário em um documento pode ter o atributo [`autofocus`](/pt-BR/docs/Web/HTML/Reference/Elements/input#autofocus).
 
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
   - : `boolean`: **Retorna / Define** o atributo [`disabled`](/pt-BR/docs/Web/HTML/Reference/Elements/input#disabled) do elemento, indicando que o controle não está disponível para interação. Os valores de entrada não serão enviados com o formulário. Veja também [`readonly`](/pt-BR/docs/Web/HTML/Reference/Elements/input#readonly).
@@ -176,7 +176,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
   - : `string`: **Retorna / Define** a direção em que a seleção ocorreu. Os valores possíveis são: `forward` (a seleção foi realizada na direção de início a fim do local atual), `backward` (a direção oposta) ou `none` (a direção é desconhecida).
 
 - {{domxref("HTMLInputElement.size", "size")}}
-  - : `unsigned long`: **Retorna / Define** o atributo [`size`](/pt-BR/docs/Web/HTML/Reference/Elements/input#size) do elemento, contendo o tamanho visual do controle. Este valor está em pixels, a menos que o valor de [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) seja `text` ou `password`, caso em que é um número inteiro indicando o número de caracteres. Aplica-se somente quando [`type`](/pt-BR/docs/Web/HTML/Element/input#type) é definido como `text`, `search`, `tel`, `url`, `email` ou `senha`.
+  - : `unsigned long`: **Retorna / Define** o atributo [`size`](/pt-BR/docs/Web/HTML/Reference/Elements/input#size) do elemento, contendo o tamanho visual do controle. Este valor está em pixels, a menos que o valor de [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) seja `text` ou `password`, caso em que é um número inteiro indicando o número de caracteres. Aplica-se somente quando [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/input#type) é definido como `text`, `search`, `tel`, `url`, `email` ou `senha`.
 
 ## Métodos de instância
 

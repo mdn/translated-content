@@ -106,7 +106,7 @@ slug: Web/API/Element/keypress_event
           printed representation, this attribute's value is the same as the
           <code>char</code> property. Otherwise, it's one of the key value
           strings specified in
-          <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values"
+          <a href="/ru/docs/Web/API/UI_Events/Keyboard_event_key_values"
             >Key values</a
           >. If the key can't be identified, its value is the string
           "Unidentified". See

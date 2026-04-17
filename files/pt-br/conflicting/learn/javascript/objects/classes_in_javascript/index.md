@@ -14,9 +14,9 @@ Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientad
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS, familiaridade com o básico do JavaScript (consulte
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Blocos de construção</a
         >) e noções básicas do OOJS (consulte
         <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"

@@ -170,6 +170,6 @@ A saída HTML acima será:
   - a propriedade [list-style](/pt-BR/docs/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
   - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
   - a propriedade [line-height](/pt-BR/docs/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](#compact),
-  - a propriedade [margin](/pt-BR/docs/CSS/margin), proveitosa para controlar a indentação da lista.
+  - a propriedade [margin](/pt-BR/docs/Web/CSS/Reference/Properties/margin), proveitosa para controlar a indentação da lista.
 
 {{ HTMLSidebar }}

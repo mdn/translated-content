@@ -1,6 +1,8 @@
 ---
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,11 +11,11 @@ L'interface **`HTMLUnknownElement`** représente un élément HTML invalide et d
 
 {{InheritanceDiagram}}
 
-## Propriétés
+## Propriétés d'instance
 
 _Pas de propriété spécifique&nbsp;; hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
-## Méthodes
+## Méthodes d'instance
 
 _Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
@@ -24,8 +26,3 @@ _Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxR
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- Les éléments HTML obsolètes ou non standard implémentant cette interface&nbsp;: {{HTMLElement("bgsound")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
-- {{DOMxRef("SVGUnknownElement")}}

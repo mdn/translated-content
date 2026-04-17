@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
 original_slug: Learn/Accessibility/HTML
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
 Uma grande parte do conteúdo presente na internet pode se tornar acessível apenas com a utilização correta dos elementos HTML. Esse artigo mostra em detalhes como o HTML pode ser utilizado para garantir o máximo de acessibilidade.
 
@@ -15,7 +15,7 @@ Uma grande parte do conteúdo presente na internet pode se tornar acessível ape
       <td>
         <p>
           Conceitos básicos de computadores, entendimento básico de HTML (veja
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
             >Introdução ao HTML</a
           >), e entendimento do
           <a href="/pt-BR/docs/Learn/Accessibility/What_is_accessibility"
@@ -557,4 +557,4 @@ A razão para usar um `alt` vazio ao invés de não incluí-lo é porque muitos 
 
 Agora você deve estar familiarizado com a escrita de HTML acessível para a maioria das ocasiões. Nosso artigo básico do WAI-ARIA também preencherá algumas lacunas nesse conhecimento, mas este artigo cuidou do básico. Em seguida, exploraremos CSS e JavaScript e como a acessibilidade é afetada por seu uso bom ou ruim.
 
-{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}

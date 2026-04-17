@@ -3,9 +3,9 @@ title: Адаптивные изображения
 slug: Web/HTML/Guides/Responsive_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
-В данной статье мы изучим концепцию гибких (responsive) изображений — таких, которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками — и рассмотрим инструменты, которые имеются в HTML для их реализации. Responsive images - только одна часть (и хорошее начало) гибкого веб-дизайна, темы, которая будет рассмотрена подробнее в будущем модуле на тему [CSS](/ru/docs/Learn/CSS).
+В данной статье мы изучим концепцию гибких (responsive) изображений — таких, которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками — и рассмотрим инструменты, которые имеются в HTML для их реализации. Responsive images - только одна часть (и хорошее начало) гибкого веб-дизайна, темы, которая будет рассмотрена подробнее в будущем модуле на тему [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 | Требования: | Предполагается, что вы уже знакомы с [основами HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content) и умеете [добавлять статичные изображения на веб-страницу](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images). |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -86,7 +86,7 @@ slug: Web/HTML/Guides/Responsive_images
 
 **`sizes`** определяет перечень медиавыражений (например, ширину экрана) и указывает предпочтительную ширину изображения, когда определённое медиавыражение истинно — это то, о чём мы говорили выше. В нашем случае, перед каждой запятой мы пишем:
 
-1. **Медиа-условие** (`(max-width:480px)`) — вы можете больше узнать об этом в [CSS topic](/ru/docs/Learn/CSS), но сейчас давайте скажем, что медиа-условие описывает возможное состояние экрана. В этом случае, мы говорим "когда viewport width меньше или равен 480 пикселям".
+1. **Медиа-условие** (`(max-width:480px)`) — вы можете больше узнать об этом в [CSS topic](/ru/docs/Learn_web_development/Core/Styling_basics), но сейчас давайте скажем, что медиа-условие описывает возможное состояние экрана. В этом случае, мы говорим "когда viewport width меньше или равен 480 пикселям".
 2. Пробел.
 3. **Ширину слота** (в оригинале "width of the slot"), занимаемую изображением, когда медиа-условие истинно. (`440px`)
 
@@ -215,7 +215,7 @@ img {
 - **Художественное оформление**: Проблема, при которой вы хотите использовать обрезанные изображения для различных макетов - например, ландшафтное изображение для полных экранов на макете компьютера и портретное изображение, показывающее увеличенный основной объект, для мобильного макета. Всё это может быть решено с помощью {{htmlelement("picture")}} элемента.
 - **Переключение разрешений**: Проблема, при которой вы хотите использовать файлы изображений меньшего размера на устройствах с узким экраном, поскольку им не нужны огромные изображения, как на настольных дисплеях, а также дополнительно, что вы хотите использовать изображения разного разрешения для экранов с высокой/низкой плотностью. Эту проблему можно решить с помощью [векторной графики](/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) (SVG изображений), и [`srcset`](/ru/docs/Web/HTML/Reference/Elements/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Reference/Elements/img#sizes) атрибуты.
 
-Это так же подводит нас к окончанию целого модуля ["Мультимедиа и встраивание"](/ru/docs/Learn/HTML/Multimedia_and_embedding)! Единственное, что вам осталось сейчас сделать перед тем, как двигаться дальше - это попробовать наше мультимедийное задание и посмотреть, как вы усвоили материал. Веселитесь!
+Это так же подводит нас к окончанию целого модуля ["Мультимедиа и встраивание"](/ru/docs/Learn_web_development/Core/Structuring_content)! Единственное, что вам осталось сейчас сделать перед тем, как двигаться дальше - это попробовать наше мультимедийное задание и посмотреть, как вы усвоили материал. Веселитесь!
 
 ## Посмотрите так же
 
@@ -225,4 +225,4 @@ img {
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}

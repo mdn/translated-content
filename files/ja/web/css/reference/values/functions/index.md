@@ -97,7 +97,7 @@ CSS における {{CSSxRef("&lt;transform-function&gt;")}} [データ型](/ja/do
 ### 基本演算
 
 - {{cssxref("calc()")}}
-  - : 数値に対して基本的な算術計算をを行います。
+  - : 数値に対して基本的な算術計算を行います。
 - {{cssxref("calc-size()")}}
   - : `auto`、`fit-content`、`max-content` などの内在サイズ値の計算を行います。これらの値は、`calc()` 関数では対応していません。
 

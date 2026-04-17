@@ -15,12 +15,12 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
       <td>
         Alfabetização básica em informática,
         <a
-          href="/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >,
         conhecimento básico de
             <a
-              href="/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
+              href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
               >trabalhar com arquivos</a
             >
         ,
@@ -28,7 +28,7 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
         >
         (Como coberto em
             <a
-              href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+              href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
               >Introdução ao HTML</a
             >) e
         <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images"

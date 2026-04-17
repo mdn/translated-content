@@ -15,15 +15,15 @@ o {{glossary("HTML")}} também conta com vários elementos de nível de bloco us
       <td>
         <p>
           Familiaridade básica com HTML, como mostrado em
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
             >Iniciando com HTML</a
           >. Formatação de texto HTML, como mostrado em
           <a
-            href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
+            href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >Fundamentos do texto em HTML</a
           >. O funcionamento de hiperlinks, como visto em
           <a
-            href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks"
+            href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links"
             >Criando hyperlinks</a
           >.
         </p>

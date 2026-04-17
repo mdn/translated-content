@@ -14,11 +14,11 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler o tópico "<a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps/Website_security"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security"
           >Website security</a
         >" de Programação Server-side. Conclua os tópicos do tutorial Django
         tutorial até (e incluindo) pelos menos
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>
@@ -190,7 +190,7 @@ Django tem proteções eficazes contra uma série de ameaças comuns, incluindo 
 
 Esta foi uma incursão muito breve em segurança web. Nós recomendamos fortemente que você leia [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) para obter um entendimento mais profundo.
 
-A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de avaliação](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog).
+A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de avaliação](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog).
 
 ## Veja também
 
@@ -199,4 +199,4 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Segurança web](/pt-BR/docs/Web/Security) (MDN)
 - [Protegendo seu site](/pt-BR/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}

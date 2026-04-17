@@ -92,4 +92,4 @@ Você pode verificar se o seu servidor está enviando os cabeçalhos HTTP corret
 
 A configuração incorreta do servidor é um motivo muito comum para o SVG não carregar, portanto, verifique a sua. Se o seu servidor não estiver configurado para enviar os cabeçalhos corretos com os arquivos SVG que está servindo, o Firefox provavelmente marcará os arquivos como texto ou lixo codificado, ou até mesmo pedirá ao usuário que escolha um aplicativo para abri-los.
 
-{{ PreviousNext("SVG/Tutorial/Introduction", "SVG/Tutorial/Positions") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Introduction", "Web/SVG/Tutorials/SVG_from_scratch/Positions") }}

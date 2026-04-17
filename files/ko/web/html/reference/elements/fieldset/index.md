@@ -114,15 +114,15 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >, 구획 루트,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#양식_관련_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#양식_관련_콘텐츠"
           >양식 관련 콘텐츠</a
-        >(<a href="/ko/docs/Web/Guide/HTML/Content_categories#나열됨">나열됨</a
+        >(<a href="/ko/docs/Web/HTML/Guides/Content_categories#나열됨">나열됨</a
         >), 뚜렷한 콘텐츠.
       </td>
     </tr>
@@ -130,7 +130,7 @@ input {
       <th scope="row">가능한 콘텐츠</th>
       <td>
         선택적인 {{HTMLElement("legend")}} 요소와 그 이후의
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >.
       </td>
@@ -142,7 +142,7 @@ input {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

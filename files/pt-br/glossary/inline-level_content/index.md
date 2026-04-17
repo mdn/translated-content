@@ -18,11 +18,11 @@ slug: Glossary/Inline-level_content
 
 Listagem dos elementos que são "inline":
 
-- [b](/pt-BR/docs/HTML/Element/b), [big](/pt-BR/docs/HTML/Element/big), [i](/pt-BR/docs/HTML/Element/i), [small](/pt-BR/docs/HTML/Element/small), [tt](/pt-BR/docs/HTML/Element/tt)
-- [abbr](/pt-BR/docs/Web/HTML/Reference/Elements/abbr), [acronym](/pt-BR/docs/Web/HTML/Reference/Elements/acronym), [cite](/pt-BR/docs/HTML/Element/cite), [code](/pt-BR/docs/HTML/Element/code), [dfn](/pt-BR/docs/Web/HTML/Reference/Elements/dfn), [em](/pt-BR/docs/HTML/Element/em), [kbd](/pt-BR/docs/HTML/Element/kbd), [strong](/pt-BR/docs/HTML/Element/strong), [samp](/pt-BR/docs/HTML/Element/samp), [var](/pt-BR/docs/HTML/Element/var)
-- [a](/pt-BR/docs/Web/HTML/Reference/Elements/a), [bdo](/pt-BR/docs/HTML/Element/bdo), [br](/pt-BR/docs/HTML/Element/br), [img](/en-US/HTML/Element/Img), [map](/pt-BR/docs/Web/HTML/Reference/Elements/map), [object](/pt-BR/docs/HTML/Element/object), [q](/pt-BR/docs/HTML/Element/q), [script](/en-US/HTML/Element/Script), [span](/pt-BR/docs/Web/HTML/Reference/Elements/span), [sub](/pt-BR/docs/HTML/Element/sub), [sup](/pt-BR/docs/HTML/Element/sup)
-- [button](/pt-BR/docs/HTML/Element/button), [input](/pt-BR/docs/Web/HTML/Reference/Elements/input), [label](/pt-BR/docs/HTML/Element/label), [select](/pt-BR/docs/HTML/Element/select), [textarea](/pt-BR/docs/HTML/Element/textarea)
+- [b](/pt-BR/docs/Web/HTML/Reference/Elements/b), [big](/pt-BR/docs/Web/HTML/Reference/Elements/big), [i](/pt-BR/docs/Web/HTML/Reference/Elements/i), [small](/pt-BR/docs/HTML/Element/small), [tt](/pt-BR/docs/HTML/Element/tt)
+- [abbr](/pt-BR/docs/Web/HTML/Reference/Elements/abbr), [acronym](/pt-BR/docs/Web/HTML/Reference/Elements/acronym), [cite](/pt-BR/docs/Web/HTML/Reference/Elements/cite), [code](/pt-BR/docs/Web/HTML/Reference/Elements/code), [dfn](/pt-BR/docs/Web/HTML/Reference/Elements/dfn), [em](/pt-BR/docs/Web/HTML/Reference/Elements/em), [kbd](/pt-BR/docs/HTML/Element/kbd), [strong](/pt-BR/docs/Web/HTML/Reference/Elements/strong), [samp](/pt-BR/docs/HTML/Element/samp), [var](/pt-BR/docs/Web/HTML/Reference/Elements/var)
+- [a](/pt-BR/docs/Web/HTML/Reference/Elements/a), [bdo](/pt-BR/docs/Web/HTML/Reference/Elements/bdo), [br](/pt-BR/docs/Web/HTML/Reference/Elements/br), [img](/en-US/HTML/Element/Img), [map](/pt-BR/docs/Web/HTML/Reference/Elements/map), [object](/pt-BR/docs/HTML/Element/object), [q](/pt-BR/docs/Web/HTML/Reference/Elements/q), [script](/en-US/HTML/Element/Script), [span](/pt-BR/docs/Web/HTML/Reference/Elements/span), [sub](/pt-BR/docs/HTML/Element/sub), [sup](/pt-BR/docs/HTML/Element/sup)
+- [button](/pt-BR/docs/Web/HTML/Reference/Elements/button), [input](/pt-BR/docs/Web/HTML/Reference/Elements/input), [label](/pt-BR/docs/Web/HTML/Reference/Elements/label), [select](/pt-BR/docs/Web/HTML/Reference/Elements/select), [textarea](/pt-BR/docs/Web/HTML/Reference/Elements/textarea)
 
 ### Ver também
 
-- [Elementos de nível de bloco](/pt-BR/docs/HTML/Block-level_elements)
+- [Elementos de nível de bloco](/pt-BR/docs/Glossary/Block-level_content)

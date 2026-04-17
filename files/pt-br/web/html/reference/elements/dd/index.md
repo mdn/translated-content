@@ -10,7 +10,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
@@ -20,7 +20,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conte%C3%BAdo_de_fluxo"
           >Conteúdo de fluxo</a
         >.
       </td>

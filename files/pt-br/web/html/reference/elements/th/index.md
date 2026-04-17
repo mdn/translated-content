@@ -80,7 +80,7 @@ caption {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias do conteúdo</a
         >
       </th>
@@ -89,7 +89,7 @@ caption {
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >, mas sem descendentes de cabeçalho, rodapé, conteúdo de seção ou
         conteúdo de cabeçalho.
