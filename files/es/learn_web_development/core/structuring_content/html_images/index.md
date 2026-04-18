@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 Al principio, la web solo era texto y resultaba más bien aburrido. Afortunadamente, no pasó mucho tiempo antes de que se añadiera la capacidad de insertar imágenes (y otros tipos de contenido más interesantes) en las páginas web. Hay otros tipos de elementos multimedia que tener en cuenta, pero es lógico comenzar con el humilde elemento {{htmlelement("img")}} utilizado para insertar una imagen simple en una página web. En este artículo, veremos en detalle cómo usar este elemento, incluidos sus conceptos básicos y cómo añadir pies de imagen usando {{htmlelement("figure")}} y explicaremos cómo se relaciona con las imágenes de fondo en <a class="glossaryLink" href="/es/docs/Glossary/CSS" title="CSS: CSS (Cascading Style Sheets) is a declarative language that controls how webpages look in the browser.">CSS</a>.
 
@@ -525,4 +525,4 @@ En resumen: si una imagen tiene significado en términos del contenido de tu pá
 
 Esto es todo por ahora. Hemos expuesto en detalle los conceptos relativos a imágenes y subtítulos de imagen. En el próximo artículo, subiremos un nivel para insertar vídeo y audio en páginas web con HTML.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

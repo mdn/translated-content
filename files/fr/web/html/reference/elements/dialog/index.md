@@ -26,7 +26,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `closerequest`
       - : Le dialogue peut être fermé par une action spécifique à la plateforme ou un mécanisme défini par le·la développeur·euse.
     - `none`
-    - : Le dialogue ne peut être fermé que par un mécanisme défini par le·la développeur·euse.
+      - : Le dialogue ne peut être fermé que par un mécanisme défini par le·la développeur·euse.
 
     Si l'élément `<dialog>` ne possède pas de valeur `closedby` valide&nbsp;:
     - s'il a été ouvert avec {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}, il se comporte comme si la valeur était `"closerequest"`

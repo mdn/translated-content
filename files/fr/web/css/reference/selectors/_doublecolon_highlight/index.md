@@ -1,13 +1,14 @@
 ---
-title: ::highlight()
+title: Pseudo-élément CSS `::highlight()`
+short-title: ::highlight()
 slug: Web/CSS/Reference/Selectors/::highlight
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::highlight()`** applique des styles à une mise en évidence personnalisée.
 
-Une mise en évidence personnalisée est une collection d'objets {{DOMxRef("Range")}} et est enregistrée sur une page Web à l'aide de {{DOMxRef("HighlightRegistry")}}.
+Une mise en évidence personnalisée est une collection d'objets {{DOMxRef("AbstractRange")}} et est enregistrée sur une page Web à l'aide de {{DOMxRef("HighlightRegistry")}}.
 
 Le pseudo-élément `::highlight()` suit un modèle d'héritage spécial commun à tous les pseudo-éléments de mise en évidence. Pour plus de détails sur le fonctionnement de cet héritage, consultez la section [Héritage des pseudo-éléments mise en évidence](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#héritage_des_pseudo-éléments_de_mise_en_évidence).
 
@@ -31,7 +32,7 @@ En particulier, {{CSSxRef("background-image")}} est ignoré.
 
 ## Exemples
 
-### Mise en évidence des caractères
+### Mettre en évidence des caractères
 
 #### HTML
 
@@ -116,7 +117,7 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 
 #### Résultat
 
-{{ EmbedLiveSample("mise_en_évidence_des_caractères") }}
+{{EmbedLiveSample("Mettre en évidence des caractères")}}
 
 ## Spécifications
 
@@ -129,5 +130,5 @@ for (let i = 0; i < textNode.textContent.length; i++) {
 ## Voir aussi
 
 - Le module CSS de [Mise en évidence personnalisée](/fr/docs/Web/CSS/CSS_custom_highlight_API)
-- L'[API CSS de mise en évidence personnalisée](/fr/docs/Web/API/CSS_Custom_Highlight_API)
+- [L'API CSS de mise en évidence personnalisée](/fr/docs/Web/API/CSS_Custom_Highlight_API)
 - Le module de [pseudo-éléments CSS](/fr/docs/Web/CSS/CSS_pseudo-elements)

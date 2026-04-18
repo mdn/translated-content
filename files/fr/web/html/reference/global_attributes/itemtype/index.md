@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : itemtype"
+title: "Attribut HTML universel : `itemtype`"
 short-title: itemtype
 slug: Web/HTML/Reference/Global_attributes/itemtype
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les `itemprop` (propriétés d'élément) dans la structure de données.

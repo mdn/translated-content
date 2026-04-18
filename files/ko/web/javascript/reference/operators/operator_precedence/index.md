@@ -589,7 +589,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
           >널 병합 연산자</a
         >
       </td>
@@ -600,7 +600,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td>3</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >조건 (삼항)</a
         >
       </td>
@@ -675,7 +675,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>1</td>
       <td>
-        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Comma_operator"
           >쉼표 / 시퀀스</a
         >
       </td>

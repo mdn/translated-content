@@ -3,7 +3,7 @@ title: <script type="importmap">
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 16c2dc9c347065f648a0d6204b814657480ed25b
 ---
 
 La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) pour l'élément HTML {{HTMLElement("script")}} indique que le contenu de l'élément contient une carte d'import (<i lang="en">import map</i>).
@@ -164,6 +164,8 @@ Par exemple, la carte ci-dessous définit des métadonnées d'intégrité pour l
 ```
 
 ### Fusion de plusieurs cartes d'import
+
+Les navigateurs prenant en charge cette fonctionnalité peuvent déclarer une ou plusieurs cartes d'import n'importe où dans le document, à condition qu'elles soient définies avant tout module qui en dépend (certaines [versions de navigateurs](#compatibilité_des_navigateurs) n'autorisent qu'une seule déclaration de carte d'import, qui doit apparaître avant tout module chargé).
 
 En interne, les navigateurs maintiennent une seule représentation globale de la carte d'import. Lorsque plusieurs cartes d'import sont incluses dans un document, leur contenu est fusionné dans la carte d'import globale lors de leur enregistrement.
 

@@ -47,7 +47,7 @@ JavaScript, CSS, HTML을 더 작은 덩어리로 분할할 수 있습니다. 이
 <link href="print.css" rel="stylesheet" media="print" />
 ```
 
-이를 달성하기 위해 몇몇 [CSS 최적화](/ko/docs/Learn/Performance/CSS)를 수행할 수 있습니다.
+이를 달성하기 위해 몇몇 [CSS 최적화](/ko/docs/Learn_web_development/Extensions/Performance/CSS)를 수행할 수 있습니다.
 
 ### 폰트
 

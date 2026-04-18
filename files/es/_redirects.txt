@@ -1932,7 +1932,6 @@
 /es/docs/Web/API/PushManager/supportedContentEncodings	/es/docs/Web/API/PushManager/supportedContentEncodings_static
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/Range/collapsed	/es/docs/Web/API/AbstractRange/collapsed
-/es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Reference/Headers/Content-Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/Web/API/URL/createObjectURL	/es/docs/Web/API/URL/createObjectURL_static
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL

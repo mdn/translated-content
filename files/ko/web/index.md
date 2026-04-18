@@ -36,7 +36,7 @@ slug: Web
   - : JavaScript는 웹의 기본 프로그래밍 언어입니다.
 - [WebAssembly](/ko/docs/WebAssembly)
   - : WebAssembly는 C, C++, Rust, Swift, C#, Go 등으로 작성한 프로그램을 웹에서 구동할 수 있도록 합니다.
-- [Events](/ko/docs/Web/Events)
+- [Events](/ko/docs/Web/API/Document_Object_Model/Events)
   - : 이벤트는 웹 페이지 로드가 완료되거나 사용자가 무언가를 선택하거나 키를 누르거나 창 크기를 조정하거나 양식을 제출하거나 비디오를 일시 중지할 때 여러분이 만든 웹 앱이 반응해야하는 것 입니다.
 - [HTTP](/ko/docs/Web/HTTP)
   - : HTTP는 웹을 통해 문서, 스타일시트, 스크립트, 이미지, 비디오, 글꼴 및 기타 리소스를 가져오고 웹 서버로 다시 보내기 위한 기본적인 인터넷 프로토콜입니다.

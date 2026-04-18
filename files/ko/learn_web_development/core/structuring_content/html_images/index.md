@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 초창기 웹에는 텍스트만 있었고 꽤 지루했습니다. 다행히도 웹 페이지 안에 이미지 (및 보다 흥미로운 유형의 컨텐츠)를 삽입하는 기능이 추가되기까지는 오래 걸리지 않았습니다. 고려해 볼 수 있는 다른 유형의 멀티미디어가 있지만 단순한 이미지를 웹 페이지에 삽입하는 데 사용되는 {{htmlelement("img")}} 요소로 쉽게 시작해 보겠습니다. 이 글에서는 기초 내용부터 심층적으로 사용하는 방법, {{htmlelement("figure")}}를 사용하여 캡션을 주석으로 추가하는 방법, {{glossary("CSS")}} 배경 이미지와 관련된 사용 방법을 자세히 설명합니다.
 
@@ -22,10 +22,10 @@ l10n:
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 지식 숙지 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 설명)
       </td>
@@ -629,4 +629,4 @@ p {
 
 여기까지입니다. 이미지와 캡션에 대해 자세히 알아보았습니다. 다음 기사에서는 웹 페이지에 [비디오와 오디오 콘텐츠](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)를 삽입하는 방법에 대해 알아보겠습니다.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

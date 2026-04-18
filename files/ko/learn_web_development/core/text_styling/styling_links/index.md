@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        기본적인 컴퓨터 활용 능력, HTML 기초(<a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML 입문L</a> 학습), CSS 기초(<a href="/ko/docs/Learn/CSS/First_steps">CSS 입문</a> 학습), <a href="/ko/docs/Learn/CSS/Styling_text/Fundamentals">CSS 텍스트 및 글꼴 기초</a>를 학습합니다.
+        기본적인 컴퓨터 활용 능력, HTML 기초(<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML 입문L</a> 학습), CSS 기초(<a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS 입문</a> 학습), <a href="/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals">CSS 텍스트 및 글꼴 기초</a>를 학습합니다.
       </td>
     </tr>
     <tr>

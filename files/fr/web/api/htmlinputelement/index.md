@@ -2,7 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 l10n:
-  sourceCommit: 6d4ac4a04fd5c01adc690b9c95de3d9261570212
+  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
 ---
 
 {{APIRef("HTML DOM")}}
@@ -23,7 +23,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - {{DOMxRef("HTMLInputElement.alpha")}} {{Experimental_Inline}}
   - : Un booléen qui représente l'attribut [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) de l'élément, indiquant si la composante alpha de la couleur peut être manipulée par l'utilisateur·ice et n'a pas besoin d'être complètement opaque.
 
-- {{DOMxRef("HTMLInputElement.colorSpace")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLInputElement.colorSpace")}}
   - : Une chaîne de caractères qui représente l'attribut [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace) de l'élément, indiquant le {{Glossary("color space", "espace colorimétrique")}} de la couleur CSS sérialisée (sRGB ou display-p3).
 
 - {{DOMxRef("HTMLInputElement.defaultValue")}}

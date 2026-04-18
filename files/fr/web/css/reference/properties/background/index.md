@@ -2,7 +2,7 @@
 title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: 17fe7cfd4967960c9ee8ec2c423aaf27c66575ba
+  sourceCommit: 8e7f97c52ea28a2f02b035ca2f3a8a42d41d9e9f
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.
@@ -117,7 +117,7 @@ Comme certaines propriétés constitutives partagent des types de valeurs, l'ord
 
 La valeur `<bg-size>` ne peut être incluse qu'immédiatement après `<bg-position>`, séparée par le caractère `/`. Par exemple&nbsp;: `10px 10px / 80% 80%` signifie que l'image d'arrière-plan mesure `80%` de la hauteur et de la largeur de l'élément, et sera positionnée à `10px` du haut et à `10px` de la gauche du coin supérieur gauche de l'élément. Dans `<bg-position>`, si les deux valeurs sont des longueurs, ou si l'une est une longueur et l'autre `center`, la première valeur correspond à la position horizontale et la seconde à la position verticale.
 
-Chaque couche d'arrière-plan peut inclure zéro, une ou deux valeurs [`<visual-box>`](/fr/docs/Web/CSS/Reference/Values/box-edge#visual-box). Si une seule valeur est incluse, elle définit à la fois {{CSSxRef("background-origin")}} et {{CSSxRef("background-clip")}}. Si deux valeurs sont présentes, la première occurrence définit `background-origin` et la seconde définit `background-clip`. Si aucune valeur `<visual-box>` n'est présente, `background-origin` prend la valeur par défaut `border-box` et `background-clip` prend la valeur par défaut `padding-box`.
+Chaque couche d'arrière-plan peut inclure zéro, une ou deux valeurs [`<visual-box>`](/fr/docs/Web/CSS/Reference/Values/box-edge#visual-box). Si une seule valeur est incluse, elle définit à la fois {{CSSxRef("background-origin")}} et {{CSSxRef("background-clip")}}. Si deux valeurs sont présentes, la première occurrence définit `background-origin` et la seconde définit `background-clip`. Si aucune valeur `<visual-box>` n'est présente, `background-origin` prend la valeur par défaut `padding-box` et `background-clip` prend la valeur par défaut `border-box`.
 
 Bien qu'il n'y ait pas d'exigence d'ordre pour les autres propriétés d'arrière-plan, l'ordre suivant est recommandé pour la cohérence et la lisibilité&nbsp;; rappelez‑vous qu'aucune des valeurs n'est obligatoire&nbsp;:
 

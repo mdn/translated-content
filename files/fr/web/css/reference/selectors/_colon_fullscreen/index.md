@@ -1,8 +1,9 @@
 ---
-title: :fullscreen
+title: Pseudo-classe CSS `:fullscreen`
+short-title: :fullscreen
 slug: Web/CSS/Reference/Selectors/:fullscreen
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.

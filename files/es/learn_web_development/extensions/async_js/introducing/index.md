@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 En este artículo, explicaremos qué es la programación asíncrona, por qué la necesitamos, y discutiremos brevemente algunas de las formas en que las funciones asíncronas se han implementado históricamente en JavaScript.
 
@@ -328,4 +328,4 @@ Cuando anidamos devoluciones de llamada de esta manera, también puede ser muy d
 
 Por estas razones, la mayoría de las APIs asíncronas modernas no utilizan _callbacks_. En su lugar, la base de la programación asíncrona en JavaScript es la {{jsxref("Promise")}}, y ese es el tema del siguiente artículo.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn_web_development/Extensions/Async_JS")}}

@@ -1,12 +1,11 @@
 ---
 title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
-original_slug: Web/CSS/color_value/lch
 l10n:
-  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{cssxref("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{CSSxRef("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).
 
 ## Syntaxe
 
@@ -40,25 +39,25 @@ lch(L C H[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%`). Le nombre `0` correspond à `0%` (noir), et le nombre `100` correspond à `100%` (blanc). Cette valeur définit la luminosité de la couleur dans l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%`). Le nombre `0` correspond à `0%` (noir), et le nombre `100` correspond à `100%` (blanc). Cette valeur définit la luminosité de la couleur dans l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab).
 
     > [!NOTE]
     > Le `L` dans `lch()` représente la luminosité perçue, qui fait référence à la «&nbsp;luminosité&nbsp;» que nous percevons visuellement avec nos yeux. Cela diffère du `L` dans `hsl()`, où il représente la luminosité par rapport à d'autres couleurs.
 
 - `C`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}), un pourcentage ({{CSSXref("&lt;percentage&gt;")}},) ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur est une mesure de la chroma de la couleur (représentant approximativement la « quantité de couleur »). Sa valeur minimale utile est `0%`, ou `0`, tandis que son maximum est théoriquement illimité (mais ne dépasse pas `230` en pratique), avec `100%` étant équivalent à `150`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}},) ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur est une mesure de la chroma de la couleur (représentant approximativement la « quantité de couleur »). Sa valeur minimale utile est `0%`, ou `0`, tandis que son maximum est théoriquement illimité (mais ne dépasse pas `230` en pratique), avec `100%` étant équivalent à `150`.
 
 - `H`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}), un {{CSSXref("&lt;angle&gt;")}}, ou le mot-clé `none` (équivalent à `0deg`) représentant l'angle de {{CSSXref("&lt;hue&gt;", "teinte")}} de la couleur.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un {{CSSxRef("&lt;angle&gt;")}}, ou le mot-clé `none` (équivalent à `0deg`) représentant l'angle de {{CSSxRef("&lt;hue&gt;", "teinte")}} de la couleur.
 
     > [!NOTE]
-    > Les angles correspondant à des teintes particulières diffèrent entre les espaces de couleur sRGB (utilisé par {{CSSXref("color_value/hsl", "hsl()")}} et {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (utilisé par `lch()`), et Oklab (utilisé par {{CSSXref("color_value/oklch", "oklch()")}}). Consultez l'exemple [teintes dans LCH](#teintes_dans_lch) ci-dessous et la page de référence {{CSSXref("&lt;hue&gt;")}} pour plus de détails et d'exemples.
+    > Les angles correspondant à des teintes particulières diffèrent entre les espaces de couleur sRGB (utilisé par {{CSSxRef("color_value/hsl", "hsl()")}} et {{CSSxRef("color_value/hwb", "hwb()")}}), CIELAB (utilisé par `lch()`), et Oklab (utilisé par {{CSSxRef("color_value/oklch", "oklch()")}}). Consultez l'exemple [teintes dans LCH](#teintes_dans_lch) ci-dessous et la page de référence {{CSSxRef("&lt;hue&gt;")}} pour plus de détails et d'exemples.
 
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Consultez [Composantes de couleur manquantes](/fr/docs/Web/CSS/Reference/Values/color_value#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -69,19 +68,19 @@ lch(from <color> L C H[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la **couleur d'origine**. C'est la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la **couleur d'origine**. C'est la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%`). Le nombre `0` correspond à `0%` (noir), et le nombre `100` correspond à `100%` (blanc). Cette valeur définit la luminosité de la couleur dans l'espace de couleur CIELab.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%`). Le nombre `0` correspond à `0%` (noir), et le nombre `100` correspond à `100%` (blanc). Cette valeur définit la luminosité de la couleur dans l'espace de couleur CIELab.
 
 - `C`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}), un pourcentage ({{CSSXref("&lt;percentage&gt;")}},) ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la valeur de chroma de la couleur de sortie (représentant approximativement la « quantité de couleur »). Sa valeur minimale utile est `0%`, ou `0`, tandis que son maximum est théoriquement illimité (mais ne dépasse pas `230` en pratique), avec `100%` étant équivalent à `150`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}},) ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la valeur de chroma de la couleur de sortie (représentant approximativement la « quantité de couleur »). Sa valeur minimale utile est `0%`, ou `0`, tandis que son maximum est théoriquement illimité (mais ne dépasse pas `230` en pratique), avec `100%` étant équivalent à `150`.
 
 - `H`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}), un {{CSSXref("&lt;angle&gt;")}}, ou le mot-clé `none` (équivalent à `0deg`) représentant l'angle de {{CSSXref("&lt;hue&gt;", "teinte")}} de la couleur de sortie. Consultez l'[exemple de teinte](#result_3) ci-dessous.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un {{CSSxRef("&lt;angle&gt;")}}, ou le mot-clé `none` (équivalent à `0deg`) représentant l'angle de {{CSSxRef("&lt;hue&gt;", "teinte")}} de la couleur de sortie. Consultez l'[exemple de teinte](#result_3) ci-dessous.
 
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 #### Définition des composants des canaux de couleur de sortie relative
 
@@ -141,7 +140,7 @@ lch(from hsl(0 100% 50% / 0.8) l c h / 0.5)
 /* Couleur de sortie calculée : lch(54.29 106.854 40.856 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `lch()` — `lch(54.29 106.854 40.856)`. Les calculs {{cssxref("calc")}} sont appliqués aux valeurs `L`, `C`, `H`, et `A`, résultant en une couleur de sortie de `lch(74.29 86.8541 0.856018 / 0.9)`&nbsp;:
+Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `lch()` — `lch(54.29 106.854 40.856)`. Les calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `L`, `C`, `H`, et `A`, résultant en une couleur de sortie de `lch(74.29 86.8541 0.856018 / 0.9)`&nbsp;:
 
 ```css
 lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0.1))
@@ -152,7 +151,7 @@ lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -226,7 +225,7 @@ div {
 
 {{EmbedLiveSample("Ajustement de la luminosité d'une couleur", "", "200")}}
 
-### Ajustement de l'intensité des couleurs via la chroma
+### Ajustement de l'intensité des couleurs par la chroma
 
 Cet exemple montre l'effet de la variation de la valeur `C` (chroma) de la notation fonctionnelle `lch()`, avec des couleurs diminuant en intensité à mesure que la valeur `C` diminue, passant d'une saturation complète à presque du gris.
 
@@ -308,7 +307,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Ajustement de l'intensité des couleurs via la chroma", '', '200')}}
+{{EmbedLiveSample("Ajustement de l'intensité des couleurs par la chroma", "", 200)}}
 
 Si nous avions utilisé `0` au lieu de `3` et `2%`, avec les mêmes valeurs de luminosité, les couleurs auraient toutes été de la même nuance de gris. Dans cet exemple, elles sont presque grises.
 
@@ -433,7 +432,7 @@ et ainsi de suite.
 
 {{EmbedLiveSample("Teintes dans lch")}}
 
-Les angles de teinte dans `lch()` sont différents de ceux dans {{CSSXref("color_value/hsl", "hsl()")}}. Voir {{cssxref("hue")}} pour plus d'informations. Dans `hsl()`, la couleur sRGB `0deg` représente le rouge. Cependant, dans l'espace colorimétrique CIELab, `0deg` correspond au magenta, tandis que le rouge est approximativement `41deg`.
+Les angles de teinte dans `lch()` sont différents de ceux dans {{CSSxRef("color_value/hsl", "hsl()")}}. Voir {{CSSxRef("hue")}} pour plus d'informations. Dans `hsl()`, la couleur sRGB `0deg` représente le rouge. Cependant, dans l'espace colorimétrique CIELab, `0deg` correspond au magenta, tandis que le rouge est approximativement `41deg`.
 
 ### Ajustement de l'opacité avec `lch()`
 
@@ -483,9 +482,9 @@ div {
 
 ### Utilisation des couleurs relatives avec `lch()`
 
-Cet exemple stylise trois éléments {{htmlelement("div")}} avec différentes couleurs de fond, démontrant l'utilisation des couleurs relatives pour changer la luminosité d'une couleur en utilisant la fonction de couleur `lch()`. Le `<div>` du milieu conserve la `--base-color` d'origine, tandis que les `<div>` de gauche et de droite reçoivent des variantes éclaircies et assombries de la `--base-color`.
+Cet exemple stylise trois éléments {{HTMLElement("div")}} avec différentes couleurs de fond, démontrant l'utilisation des couleurs relatives pour changer la luminosité d'une couleur en utilisant la fonction de couleur `lch()`. Le `<div>` du milieu conserve la `--base-color` d'origine, tandis que les `<div>` de gauche et de droite reçoivent des variantes éclaircies et assombries de la `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lch()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lch()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré avec une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
 
 ```html hidden
 <div id="container">
@@ -548,5 +547,5 @@ Le résultat est le suivant&nbsp;:
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
-- Le type de donnée {{CSSXref("&lt;hue&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
 - [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;? <sup>(angl.)</sup>](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) par Lea Verou (2020)

@@ -1,8 +1,9 @@
 ---
-title: ::view-transition-new()
+title: Pseudo-élément CSS `::view-transition-new()`
+short-title: ::view-transition-new()
 slug: Web/CSS/Reference/Selectors/::view-transition-new
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::view-transition-new()`** représente l'état de vue «&nbsp;<i lang="en">new</i>&nbsp;» d'une transition de vue — une représentation instantanée en direct de l'état après la transition.

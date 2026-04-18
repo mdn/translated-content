@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
 El objetivo de este artículo es desarrollar la comprensión de algunos de los conceptos fundamentales de CSS (cascada, especificidad y herencia) que controlan cómo se aplica el CSS al HTML y cómo se resuelven los conflictos.
 
@@ -253,4 +253,4 @@ Si todavía no tienes una comprensión completa de los conceptos de cascada, esp
 
 Regresa a esta página si empiezas a toparte con problemas extraños o con que los estilos no se aplican de la forma que esperas. Podría ser un problema de especificidad.
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : inert"
+title: "Attribut HTML universel : `inert`"
 short-title: inert
 slug: Web/HTML/Reference/Global_attributes/inert
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`inert`** est un attribut booléen qui indique que l'élément et tous ses descendants dans l'arbre plat deviennent _inertes_. L'attribut `inert` peut être ajouté à des sections de contenu qui ne doivent pas être interactives. Lorsqu'un élément est inerte, lui et tous ses descendants, y compris les éléments normalement interactifs comme les liens, boutons et contrôles de formulaire, sont désactivés car ils ne peuvent pas recevoir la sélection ni être cliqués. L'attribut `inert` peut aussi être ajouté à des éléments qui doivent être hors écran ou masqués. Un élément inerte, ainsi que ses descendants, est retiré de l'ordre de tabulation et de l'arbre d'accessibilité.

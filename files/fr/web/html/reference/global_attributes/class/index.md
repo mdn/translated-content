@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : class"
+title: "Attribut HTML universel : `class`"
 short-title: class
 slug: Web/HTML/Reference/Global_attributes/class
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`class`** est une liste des classes de l'élément, séparées par des [espaces ASCII](/fr/docs/Glossary/Whitespace#en_html).

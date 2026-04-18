@@ -1,8 +1,9 @@
 ---
-title: :open
+title: Pseudo-classe CSS `:open`
+short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
 l10n:
-  sourceCommit: 20bccf73111b44f1424dbfa21f77b3a11b541cca
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:open`** représente un élément qui a des états ouverts et fermés, uniquement lorsqu'il est actuellement dans l'état ouvert.

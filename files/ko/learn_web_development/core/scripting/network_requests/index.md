@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 현대의 웹사이트와 애플리케이션에서 매우 흔한 또 다른 작업은 새 페이지 전체를 불러올 필요 없이 웹페이지의 섹션을 갱신하기 위해 서버에서 개별 데이터 항목을 검색하는 것입니다. 이것은 사소해 보이지만 사이트의 성능과 동작에 큰 영향을 미쳤기 때문에 이 문서에서는 개념을 설명하고 이를 가능하게 하는 기술, 특히 [Fetch API](/ko/docs/Web/API/Fetch_API)를 살펴보도록 하겠습니다.
 
@@ -15,11 +15,11 @@ l10n:
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        JavaScript 기본 (<a href="/ko/docs/Learn/JavaScript/First_steps">first steps</a>,
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        JavaScript 기본 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">first steps</a>,
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >building blocks</a
         >,
-        <a href="/ko/docs/Learn/JavaScript/Objects">JavaScript objects</a>를 참고하세요.),
+        <a href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects">JavaScript objects</a>를 참고하세요.),
         <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >Client-side APIs의 기본</a
         >
@@ -48,7 +48,7 @@ l10n:
 
 ![fetch를 사용하여 페이지 업데이트](fetch-update.svg)
 
-여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn_web_development/Core/Scripting/JSON)인 경우가 많지만, HTML이거나 텍스트일 수도 있습니다.
+여기서 주요 API는 [Fetch API](/ko/docs/Web/API/Fetch_API)입니다. 이를 통해 페이지에서 실행되는 JavaScript가 특정 리소스를 검색하기 위해 서버에 [HTTP](/ko/docs/Web/HTTP) 요청을 할 수 있습니다. 서버가 이를 제공하면 JavaScript는 일반적으로 [DOM 조작 API](/ko/docs/Learn_web_development/Core/Scripting/DOM_scripting)를 사용하여 페이지를 업데이트하기 위한 데이터를 사용할 수 있습니다. 요청되는 데이터는 구조화된 데이터를 전송하는 데 적합한 형식인 [JSON](/ko/docs/Learn_web_development/Core/Scripting/JSON)인 경우가 많지만, HTML이거나 텍스트일 수도 있습니다.
 
 이는 Amazon, YouTube, eBay 등과 같은 데이터 기반 사이트에서 흔히 볼 수 있는 패턴입니다.
 
@@ -266,4 +266,4 @@ Fetch API가 이보다 더 개선된 것이라고 생각하기를 바랍니다. 
 - [HTTP 개요](/ko/docs/Web/HTTP/Guides/Overview)
 - [Server-side 웹 사이트 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

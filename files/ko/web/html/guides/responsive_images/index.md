@@ -15,11 +15,11 @@ l10n:
     <tr>
       <th scope="row">전제조건</th>
       <td>
-        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML">
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">
           HTML의 기본 사항
         </a>
         과
-        <a href="https://developer.mozilla.org/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images">
           웹 페이지에 정적 이미지를 추가하는 방법
         </a>
         을 이미 알고 있어야 합니다.
@@ -28,7 +28,7 @@ l10n:
     <tr>
       <th scope="row">목표</th>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/img#srcset">
+        <a href="/ko/docs/Web/HTML/Reference/Elements/img#srcset">
           <code>srcset</code>
         </a>
         및 {{htmlelement("picture")}} 요소와 같은 기능을 사용하여 웹사이트에 반응형 이미지 솔루션을 구현하는 방법을 알아보세요.
@@ -200,7 +200,7 @@ img {
 - **아트 디렉션**: 데스크톱 레이아웃에는 전체 장면을 보여주는 가로 이미지를, 모바일 레이아웃에는 주요 피사체를 확대하여 보여주는 세로 이미지를 제공하는 등 다양한 레이아웃에 맞게 잘린 이미지를 제공하려는 경우 문제가 발생할 수 있습니다. 이 문제는 {{htmlelement("picture")}} 요소를 사용하여 해결할 수 있습니다.
 - **해상도 전환**: 데스크톱 디스플레이처럼 큰 이미지가 필요하지 않은 좁은 화면 기기에는 작은 이미지 파일을 제공하고, 고밀도/저밀도 화면에는 서로 다른 해상도의 이미지를 제공하려는 경우 문제가 발생할 수 있습니다. [`벡터 그래픽`](/ko/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)(SVG 이미지)과 [`sizes`](/ko/docs/Web/HTML/Reference/Elements/img#sizes) 속성이 있는 [`srcset`](/ko/docs/Web/HTML/Reference/Elements/img#srcset)을 사용하여 이 문제를 해결할 수 있습니다.
 
-이것으로 [멀티미디어 및 임베딩](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) 모듈 전체가 끝났습니다! 이제 다음 단계로 넘어가기 전에 해야 할 일은 [멀티미디어 및 임베딩 평가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)에 도전해보고 여러분의 실력을 확인하는 것입니다. 즐거운 시간 보내세요!
+이것으로 [멀티미디어 및 임베딩](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) 모듈 전체가 끝났습니다! 이제 다음 단계로 넘어가기 전에 해야 할 일은 [멀티미디어 및 임베딩 평가](/ko/docs/Learn_web_development/Core/Structuring_content/Splash_page)에 도전해보고 여러분의 실력을 확인하는 것입니다. 즐거운 시간 보내세요!
 
 ## 같이 보기
 
@@ -210,4 +210,4 @@ img {
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

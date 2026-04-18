@@ -3,7 +3,7 @@ title: Référence des attributs HTML
 short-title: Attributs
 slug: Web/HTML/Reference/Attributes
 l10n:
-  sourceCommit: ca28b2bcdde45055e29c568c981fcde0684fba3b
+  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
 ---
 
 Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateur·ice·s.
@@ -731,16 +731,12 @@ Les éléments HTML ont des **attributs**&nbsp;; ce sont des valeurs supplément
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity"
-          ><code>integrity</code></a
-        >
+        <a href="/fr/docs/Web/HTML/Reference/Attributes/integrity"><code>integrity</code></a>
       </td>
       <td>{{HTMLElement("link")}}, {{HTMLElement("script")}}</td>
       <td>
         <p>
-          Définit une valeur
-          <a href="/fr/docs/Web/Security/Defenses/Subresource_Integrity">Subresource Integrity</a>
-          qui permet aux navigateurs de vérifier ce qu'ils récupèrent.
+          Cet attribut contient un ou plusieurs {{Glossary("Hash_function", "hachages")}} de la ressource, et est utilisé pour s'assurer que le contenu de la ressource est conforme à ce que le développeur attend, et n'a pas été remplacé par une copie malveillante dans le cadre d'une <a href="/fr/docs/Web/Security/Attacks/Supply_chain_attacks">attaque de la chaîne d'approvisionnement</a>.
         </p>
       </td>
     </tr>

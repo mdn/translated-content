@@ -16,7 +16,7 @@ l10n:
       <th scope="row">사전 요구 사항</th>
       <td>
         기본 컴퓨터 지식과 기본
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 이해</a
         >가 필요합니다.
       </td>
@@ -184,17 +184,17 @@ http://foo.com?pos.x=123&pos.y=456
 
 폼 컨트롤을 정의하는데 사용되는 많은 요소들은 고유한 특정 속성들을 가지고 있습니다. 그러나 모든 폼 요소에 공통으로 적용되는 속성들이 있습니다. 아래에는 이미 알고 있는 것들을 포함한 그러한 공통 속성들의 목록이 있습니다.
 
-| 속성 이름                                                   | 기본 값 | 설명                                                                                                                                                                                                                                                          |
-| ----------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [autofocus](/ko/docs/Web/HTML/Global_attributes/autofocus)  | false   | 이 부울 속성은 페이지가 로드될 때 요소가 자동으로 입력 포커스를 가져야 함을 지정합니다. 문서에 이 속성을 지정할 수 있는 폼 관련 요소는 하나뿐입니다.                                                                                                          |
-| [disabled](/ko/docs/Web/HTML/Reference/Attributes/disabled) | false   | 이 부울 속성은 사용자가 요소와 상호 작용할 수 없음을 나타냅니다. 이 속성이 지정되지 않으면 요소는 포함하는 요소, 예를 들어, {{HTMLElement("fieldset")}}의 설정을 상속합니다. `disabled` 속성이 설정된 포함 요소가 없으면 요소는 활성화됩니다.                 |
-| [form](/ko/docs/Web/HTML/Reference/Elements/form)           |         | 위젯이 연결된 <code>&#x3C;form></code> 요소, 중첩되어 있지 않은 경우에 사용됩니다. 속성의 값은 같은 문서의 {{HTMLElement("form")}} 요소의 <code>id</code> 속성이어야 합니다. 이를 통해 폼 컨트롤을 다른 폼 요소 내부에 있더라도 해당 폼과 연결할 수 있습니다. |
-| [name](/ko/docs/Web/HTML/Element/input#name)                |         | 요소의 이름입니다. 이것은 폼 데이터와 함께 제출됩니다.                                                                                                                                                                                                        |
-| [value](/ko/docs/Web/HTML/Element/input#value)              |         | 요소의 초기 값입니다.                                                                                                                                                                                                                                         |
+| 속성 이름                                                            | 기본 값 | 설명                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [autofocus](/ko/docs/Web/HTML/Reference/Global_attributes/autofocus) | false   | 이 부울 속성은 페이지가 로드될 때 요소가 자동으로 입력 포커스를 가져야 함을 지정합니다. 문서에 이 속성을 지정할 수 있는 폼 관련 요소는 하나뿐입니다.                                                                                                          |
+| [disabled](/ko/docs/Web/HTML/Reference/Attributes/disabled)          | false   | 이 부울 속성은 사용자가 요소와 상호 작용할 수 없음을 나타냅니다. 이 속성이 지정되지 않으면 요소는 포함하는 요소, 예를 들어, {{HTMLElement("fieldset")}}의 설정을 상속합니다. `disabled` 속성이 설정된 포함 요소가 없으면 요소는 활성화됩니다.                 |
+| [form](/ko/docs/Web/HTML/Reference/Elements/form)                    |         | 위젯이 연결된 <code>&#x3C;form></code> 요소, 중첩되어 있지 않은 경우에 사용됩니다. 속성의 값은 같은 문서의 {{HTMLElement("form")}} 요소의 <code>id</code> 속성이어야 합니다. 이를 통해 폼 컨트롤을 다른 폼 요소 내부에 있더라도 해당 폼과 연결할 수 있습니다. |
+| [name](/ko/docs/Web/HTML/Element/input#name)                         |         | 요소의 이름입니다. 이것은 폼 데이터와 함께 제출됩니다.                                                                                                                                                                                                        |
+| [value](/ko/docs/Web/HTML/Element/input#value)                       |         | 요소의 초기 값입니다.                                                                                                                                                                                                                                         |
 
 ## 실력을 시험해 보세요!
 
-이 글의 끝에 도달했지만, 가장 중요한 정보를 기억하고 있나요? 이 정보를 기억하고 있는지 확인하기 위한 추가 테스트를 찾을 수 있습니다 — [지식 테스트: 기본 컨트롤](/ko/docs/Learn/Forms/Test_your_skills:_Basic_controls)를 참조하세요.
+이 글의 끝에 도달했지만, 가장 중요한 정보를 기억하고 있나요? 이 정보를 기억하고 있는지 확인하기 위한 추가 테스트를 찾을 수 있습니다 — [지식 테스트: 기본 컨트롤](/ko/docs/Learn_web_development/Extensions/Forms)를 참조하세요.
 
 ## 요약
 
@@ -206,4 +206,4 @@ http://foo.com?pos.x=123&pos.y=456
 
 - [How to build custom form controls](/ko/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/ko/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ko/docs/Learn_web_development/Extensions/Forms)
