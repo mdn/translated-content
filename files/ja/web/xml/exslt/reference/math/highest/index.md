@@ -1,7 +1,8 @@
 ---
 title: math:highest()
 slug: Web/XML/EXSLT/Reference/math/highest
-original_slug: Web/EXSLT/math/highest
+l10n:
+  sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
@@ -27,4 +28,4 @@ math:highest(nodeSet)
 
 ## 仕様書
 
-[EXSLT - MATH:HIGHEST](http://exslt.org/math/functions/highest/index.html)
+[EXSLT - MATH:HIGHEST](https://exslt.github.io/math/functions/highest/index.html)
