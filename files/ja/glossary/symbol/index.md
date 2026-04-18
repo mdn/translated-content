@@ -7,7 +7,7 @@ l10n:
 
 **Symbol(シンボル)** とは、一意で偽造不可能な識別子を表すデータ型です。これらは _アトム_ と呼ばれることもあります。
 
-Because a symbol is unique and unforgeable, you can only read a property value associated with a symbol if you have a reference to the original identifier.
+Symbol(シンボル) は一意であり偽造不可能であるため、Symbol(シンボル) に関連付けられたプロパティ値を読み取るには、元の識別子への参照が必要です。
 
 In JavaScript, `symbol` is one of the {{Glossary("primitive", "primitive types")}} and can be created using the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) factory method that returns a different symbol each time. They can be used as keys for objects which can never accidentally collide with other properties.
 
