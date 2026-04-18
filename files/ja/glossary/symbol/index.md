@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-A **symbol** is a data type that represents unique, unforgeable identifiers. They are sometimes called _atoms_.
+**Symbol(シンボル)** とは、一意で偽造不可能な識別子を表すデータ型です。これらは _アトム_ と呼ばれることもあります。
 
 Because a symbol is unique and unforgeable, you can only read a property value associated with a symbol if you have a reference to the original identifier.
 
