@@ -9,7 +9,7 @@ l10n:
 
 Symbol(シンボル) は一意であり偽造不可能であるため、Symbol(シンボル) に関連付けられたプロパティ値を読み取るには、元の識別子への参照が必要です。
 
-In JavaScript, `symbol` is one of the {{Glossary("primitive", "primitive types")}} and can be created using the [`Symbol()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) factory method that returns a different symbol each time. They can be used as keys for objects which can never accidentally collide with other properties.
+JavaScript では、`Symbol(シンボル)` は {{Glossary("primitive", "Primitive (プリミティブ)")}} の 1 つであり、毎回異なる Symbol(シンボル) を返すファクトリ メソッド [`Symbol()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) を使用して作成できます。これらは、他のプロパティと誤って衝突することのないオブジェクトのキーとして使用できます。
 
 JavaScript also defines two other categories of symbols: well-known symbols and registered symbols. Read the {{jsxref("Symbol")}} reference for more information.
 
