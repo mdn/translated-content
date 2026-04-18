@@ -13,8 +13,8 @@ JavaScript では、`Symbol(シンボル)` は {{Glossary("primitive", "Primitiv
 
 JavaScript には、他に 2 種類のシンボルが定義されています。それは、よく知られた Symbol(シンボル) と登録済みの Symbol(シンボル) です。詳しくは、{{jsxref("Symbol")}} のリファレンスを参照してください。
 
-## See also
+## 関連情報
 
-- [Data types](https://en.wikipedia.org/wiki/Data_type) on Wikipedia
-- [Symbol](<https://en.wikipedia.org/wiki/Symbol_(programming)>) on Wikipedia
-- The JavaScript global object {{jsxref("Symbol")}}
+- ウィキペディアの [データ型](https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B)
+- ウィキペディアの [Symbol(シンボル)](https://ja.wikipedia.org/wiki/Symbol)
+- JavaScript のグローバルオブジェクト {{jsxref("Symbol")}}
