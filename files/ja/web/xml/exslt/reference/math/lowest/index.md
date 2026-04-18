@@ -1,7 +1,8 @@
 ---
 title: math:lowest()
 slug: Web/XML/EXSLT/Reference/math/lowest
-original_slug: Web/EXSLT/math/lowest
+l10n:
+  sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
@@ -27,4 +28,4 @@ math:lowest(nodeSet)
 
 ## 仕様書
 
-[EXSLT - MATH:LOWEST](http://exslt.org/math/functions/lowest/index.html)
+[EXSLT - MATH:LOWEST](https://exslt.github.io/math/functions/lowest/index.html)
