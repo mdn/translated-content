@@ -1,8 +1,8 @@
 ---
-title: Symbol
+title: Symbol(シンボル)
 slug: Glossary/Symbol
-page-type: glossary-definition
-sidebar: glossarysidebar
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 A **symbol** is a data type that represents unique, unforgeable identifiers. They are sometimes called _atoms_.
