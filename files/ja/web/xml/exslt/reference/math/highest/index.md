@@ -1,6 +1,7 @@
 ---
 title: math:highest()
 slug: Web/XML/EXSLT/Reference/math/highest
+original_slug: Web/EXSLT/math/highest
 l10n:
   sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
