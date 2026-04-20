@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: 1ad93c0731806b155441afe9e44e971d8b2b0e2a
+  sourceCommit: ce29b1c36065db92c2a59ba507a4941fbf0a5159
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.

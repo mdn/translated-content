@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 291993c57c245249cf27c80f33f3dd22f8dd140d
+  sourceCommit: ce29b1c36065db92c2a59ba507a4941fbf0a5159
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.
@@ -15,6 +15,7 @@ Firefox 150 est sorti le [21 avril 2026 <sup>(angl.)</sup>](https://whattrainisi
 
 - Un message spécifique est désormais affiché dans [_l'onglet Réponse_ du panneau Réseau <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response-tab) pour indiquer pourquoi il n'y a pas de données de réponse lorsqu'une requête a été redirigée.
   ([bogue Firefox 2016679 <sup>(angl.)</sup>](https://bugzil.la/2016679)).
+- Une nouvelle section «&nbsp;Pseudo-classes spécifiques aux éléments&nbsp;» a été ajoutée au [panneau de bascule des pseudo-classes <sup>(angl.)</sup>](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-common-pseudo-classes), incluant une bascule pour la pseudo-classe {{CSSxRef(":open")}}, qui n'est disponible que pour les éléments ayant un état ouvert comme les éléments `<dialog>`. La bascule existante pour la pseudo-classe {{CSSxRef(":visited")}} a également été déplacée, car elle ne s'applique qu'aux éléments `<a>` et `<area>`. ([bogue Firefox 2014442 <sup>(angl.)</sup>](https://bugzil.la/2014442)).
 
 ### HTML
 
@@ -39,9 +40,7 @@ Firefox 150 est sorti le [21 avril 2026 <sup>(angl.)</sup>](https://whattrainisi
 
 ### JavaScript
 
-- Le [calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) `"islamic-umalqura"` est désormais pris en charge par {{JSxRef("Intl")}}.
-  Cette chaîne de caractères sera dans la liste des calendriers retournés par {{JSxRef("Intl.supportedValuesOf()")}}, et peut être définie comme paramètre [`options.calendar`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#calendar) dans le [constructeur `DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat).
-  ([bogue Firefox 2011505 <sup>(angl.)</sup>](https://bugzil.la/2011505)).
+Pas de changements notables.
 
 ### APIs
 
