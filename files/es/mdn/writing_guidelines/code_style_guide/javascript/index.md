@@ -1,38 +1,30 @@
 ---
-title: Pautas para dar estilos a ejemplos de código JavaScript
+title: Directrices para escribir ejemplos de código JavaScript
+short-title: Ejemplos JavaScript
 slug: MDN/Writing_guidelines/Code_style_guide/JavaScript
-original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
+l10n:
+  sourceCommit: 359d3c9cea9b2caa691c63ed3b01714ad4416372
 ---
 
-{{MDNSidebar}}
+Las siguientes directrices cubren cómo escribir código de ejemplo de JavaScript para MDN Web Docs. Este artículo es una lista de reglas para escribir ejemplos concisos que serán comprensibles para la mayor cantidad de personas posible.
 
-Las siguientes pautas cubren la escritura de código de ejemplo JavaScript para los documentos web de MDN.
-Este artículo es una lista de reglas para escribir ejemplos concisos que sean comprensibles para la mayor cantidad de personas posible.
+## Directrices generales para ejemplos de código JavaScript
 
-## Pautas generales para ejemplos de código JavaScript
+Esta sección explica las directrices generales a tener en cuenta al escribir ejemplos de código JavaScript. Las secciones posteriores cubrirán detalles más específicos.
 
-Esta sección explica las pautas generales a tener en cuenta al escribir ejemplos de código JavaScript.
-Las secciones posteriores cubrirán detalles más específicos.
+### Elección de un formato
 
-### Eligiendo un formato
+Las opiniones sobre la sangría correcta, el espacio en blanco y las longitudes de línea siempre han sido controvertidas. Las discusiones sobre estos temas son una distracción para crear y mantener contenido.
 
-Opiniones sobre la sangría correcta, espacio en blanco, y las longitudes de línea siempre han sido controvertidas.
-Las discusiones sobre estos temas son una distracción para la creación y mantenimiento de contenido.
+En MDN Web Docs, usamos [Prettier](https://prettier.io/) como formateador de código para mantener el estilo de código consistente (y evitar discusiones fuera de tema). Puede consultar nuestro [archivo de configuración](https://github.com/mdn/content/blob/main/.prettierrc.json) para conocer las reglas actuales y leer la [documentación de Prettier](https://prettier.io/docs/index.html).
 
-En documentos web de MDN, usamos [Prettier](https://prettier.io/) como formateador de código para mantener la consistencia del estilo del código (y para evitar discusiones fuera del tema).
-Puedes consultar nuestro [Archivo de configuración](https://github.com/mdn/content/blob/main/.prettierrc.json) para conocer las normas vigentes, y leer la [Documentación Prettier](https://prettier.io/docs/en/index.html).
+Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo, hay algunas reglas adicionales que debe seguir.
 
-Prettier formatea todo el código y mantiene el estilo consistente. Sin embargo, hay algunas reglas adicionales que usted debe seguir.
+### Use características modernas de JavaScript cuando sean compatibles
 
-### Uso de características modernas de JavaScript
+Puede usar características nuevas una vez que todos los navegadores principales (Chrome, Edge, Firefox y Safari) las admitan (también conocido como {{glossary("Baseline")}}).
 
-Usted puede usar nuevas funciones una vez que cada navegador principal — Chrome, Edge, Firefox, y Safari — las soporte.
-
-### Espaciado y sangría
-
-Marque la sangría con _2 espacios_. No use el carácter de tabulación. El carácter de fin de línea es `\n`, la convención de Unix.
-Para ayudarle, hemos incluido un archivo [`.editorconfig`](https://editorconfig.org/) en el repositorio.
-Muchos editores leen su contenido y lo utilizan para configurar su comportamiento.
+Esta regla no se aplica a la característica de JavaScript que se está documentando en la página (que se dicta en su lugar por los [criterios de inclusión](/es/docs/MDN/Writing_guidelines/Criteria_for_inclusion)). Por ejemplo, puede documentar características [no estándar o experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) y escribir ejemplos completos que demuestren su comportamiento, pero debe abstenerse de usar estas características en las demostraciones de otras características no relacionadas, como una API web.
 
 ## Matrices
 
@@ -40,13 +32,13 @@ Muchos editores leen su contenido y lo utilizan para configurar su comportamient
 
 Para crear matrices, use literales y no constructores.
 
-Crear matrices como esta:
+Cree matrices así:
 
 ```js example-good
 const ciudadesVisitadas = [];
 ```
 
-No hacer esto al crear matrices:
+No haga esto al crear matrices:
 
 ```js example-bad
 const ciudadesVisitadas = new Array(length);
@@ -54,20 +46,19 @@ const ciudadesVisitadas = new Array(length);
 
 ### Adición de elementos
 
-Al agregar elementos a una matriz, use [`push()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push) y no asignación directa.
-Considere la siguiente matriz:
+Al agregar elementos a una matriz, use [`push()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/push) y no asignación directa. Considere la siguiente matriz:
 
 ```js
 const mascotas = [];
 ```
 
-Adicione elementos a la matriz de esta forma:
+Agregue elementos a la matriz así:
 
 ```js example-good
 mascotas.push("gato");
 ```
 
-No adicione elementos a la matriz de esta forma:
+No agregue elementos a la matriz así:
 
 ```js example-bad
 mascotas[mascotas.length] = "gato";
@@ -75,24 +66,18 @@ mascotas[mascotas.length] = "gato";
 
 ## Métodos asíncronos
 
-Escribir código asincrónico mejora el rendimiento y debe usarse cuando sea posible.
-En particular, puede utilizar:
+Escribir código asíncrono mejora el rendimiento y debe usarse cuando sea posible. En particular, puede usar:
 
-- [Promise](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Promesas](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [`async`](/es/docs/Web/JavaScript/Reference/Statements/async_function)/[`await`](/es/docs/Web/JavaScript/Reference/Operators/await)
 
-Cuando ambas técnicas son posibles, preferimos usar la sintaxis más simple `async`/`await`.
-Desafortunadamente, no se puede utilizar `await` en el nivel superior a menos que esté en un módulo ECMAScript.
-Los módulos CommonJS utilizados por Node.js no son módulos ES.
-Si su ejemplo está destinado a ser usado en todas partes, evite el nivel superior `await`.
+Cuando ambas técnicas son posibles, preferimos usar la sintaxis más simple `async`/`await`. Desafortunadamente, no puede usar `await` en el nivel superior a menos que esté en un módulo ECMAScript. Los módulos CommonJS usados por Node.js no son módulos ES. Si su ejemplo está destinado a usarse en todas partes, evite el `await` de nivel superior.
 
 ## Comentarios
 
-Los comentarios son fundamentales para escribir buenos ejemplos de código.
-Aclaran la intención del código y ayudan a los desarrolladores a entenderlo.
-Préstale especial atención.
+Los comentarios son críticos para escribir buenos ejemplos de código. Aclaran la intención del código y ayudan a los desarrolladores a entenderlo. Preste especial atención a ellos.
 
-- Si el propósito o la lógica del código no es obvio, añade un comentario con tu intención, como se muestra debajo:
+- Si el propósito o la lógica del código no es obvio, agregue un comentario con su intención, como se muestra a continuación:
 
   ```js example-good
   let total = 0;
@@ -110,7 +95,7 @@ Préstale especial atención.
 
   // Bucle de 1 a 4
   for (let i = 0; i < 4; i++) {
-    // Adicionar valor al total
+    // Agrega valor al total
     total += arr[i];
   }
   ```
@@ -124,33 +109,27 @@ Préstale especial atención.
   No escriba:
 
   ```js example-bad
-  closeConnection(); // Cierra la conexión
+  closeConnection(); // Cerrando la conexión
   ```
 
-### Usar comentarios de una sola línea
+### Use comentarios de una sola línea
 
 Los comentarios de una sola línea se marcan con `//`, a diferencia de los comentarios en bloque encerrados entre `/* … */`.
 
-En general, use comentarios de una sola línea para comentar el código.
-Los desarrolladores deben marcar cada línea del comentario con `//`, para que sea más fácil notar visualmente el código comentado.
-Además, esta convención permite comentar secciones de código utilizando `/* … */` mientras se depura.
+En general, use comentarios de una sola línea para comentar código. Los escritores deben marcar cada línea del comentario con `//`, para que sea más fácil notar visualmente el código comentado. Además, esta convención permite comentar secciones de código usando `/* … */` mientras se depura.
 
-- Deje un espacio entre las barras y el comentario.
-  Comienza con una letra mayúscula, como una oración, pero no termines el comentario con un punto.
+- Deje un espacio entre las barras y el comentario. Comience con una letra mayúscula, como una oración, pero no termine el comentario con un punto.
 
   ```js example-good
-  // Este es un comentario de una sola línea bien escrito.
+  // Este es un comentario de una sola línea bien escrito
   ```
 
-- Si un comentario no comienza inmediatamente después de un nuevo nivel de sangría, agregue una línea vacía y luego agregue el comentario.
-  Creará un bloque de código, haciendo obvio a qué se refiere el comentario.
-  Además, coloque sus comentarios en líneas separadas antes del código al que se refieren.
-  Esto se muestra en el siguiente ejemplo:
+- Si un comentario no comienza inmediatamente después de un nuevo nivel de sangría, agregue una línea vacía y luego agregue el comentario. Creará un bloque de código, haciendo obvio a qué se refiere el comentario. Además, coloque sus comentarios en líneas separadas antes del código al que se refieren. Esto se muestra en el siguiente ejemplo:
 
   ```js example-good
-  function verificar(precioMercancias, precioEnvio, impuestos) {
+  function checkout(precioMercancia, precioEnvio, impuestos) {
     // Calcula el precio total
-    const total = precioMercancias + precioEnvio + impuestos;
+    const total = precioMercancia + precioEnvio + impuestos;
 
     // Crea y agrega un nuevo párrafo al documento
     const parrafo = document.createElement("p");
@@ -161,43 +140,40 @@ Además, esta convención permite comentar secciones de código utilizando `/* �
 
 ### Salida de registros
 
-- En el código destinado a ejecutarse en un entorno de producción, rara vez necesita comentar cuando registra algunos datos.
-  En ejemplos de código, a menudo usamos `console.log()`, `console.error()`, o funciones similares para mostrar valores importantes.
-  Para ayudar al lector a comprender lo que sucederá sin ejecutar el código, puede colocar un comentario _después_ de la función con el registro que se producirá. Escriba:
+- En código destinado a ejecutarse en un entorno de producción, rara vez necesita comentar cuando registra algunos datos. En ejemplos de código, a menudo usamos `console.log()`, `console.error()` o funciones similares para generar valores importantes. Para ayudar al lector a entender qué sucederá sin ejecutar el código, puede poner un comentario _después_ de la función con el registro que se producirá. Escriba:
 
   ```js example-good
-  function funcionEjemplo(canastaDeFrutas) {
-    console.log(canastaDeFrutas); // ['banana', 'mango', 'naranja']
+  function funcionEjemplo(canastaFrutas) {
+    console.log(canastaFrutas); // ['banana', 'mango', 'naranja']
   }
   ```
 
   No escriba:
 
   ```js example-bad
-  function funcionEjemplo(canastaDeFrutas) {
-    // Registro: ['banana', 'mango', 'naranja']
-    console.log(canastaDeFrutas);
+  function funcionEjemplo(canastaFrutas) {
+    // Registros: ['banana', 'mango', 'naranja']
+    console.log(canastaFrutas);
   }
   ```
 
 - En caso de que la línea se vuelva demasiado larga, coloque el comentario _después_ de la función, así:
 
   ```js example-good
-  function funcionEjemplo(canastaDeFrutas) {
-    console.log(canastaDeFrutas);
+  function funcionEjemplo(canastaFrutas) {
+    console.log(canastaFrutas);
     // ['banana', 'mango', 'naranja', 'manzana', 'pera', 'durian', 'limón']
   }
   ```
 
 ### Comentarios de varias líneas
 
-Los comentarios cortos suelen ser mejores, así que trate de mantenerlos en una línea de 60 a 80 caracteres.
-Si esto no es posible, utilice `//` al principio de cada línea:
+Los comentarios cortos suelen ser mejores, así que intente mantenerlos en una línea de 60 a 80 caracteres. Si esto no es posible, use `//` al comienzo de cada línea:
 
 ```js example-good
 // Este es un ejemplo de un comentario de varias líneas.
-// La función imaginaria que sigue, tiene algo inusual.
-// Limitaciones que quiero llamar.
+// La función imaginaria que sigue tiene algunas limitaciones inusuales
+// que quiero señalar.
 // Limitación 1
 // Limitación 2
 ```
@@ -206,31 +182,28 @@ No use `/* … */`:
 
 ```js example-bad
 /* Este es un ejemplo de un comentario de varias líneas.
-  La función imaginaria que sigue, tiene algo inusual.
-  Limitaciones que quiero llamar.
+  La función imaginaria que sigue tiene algunas limitaciones inusuales
+  que quiero señalar.
   Limitación 1
   Limitación 2 */
 ```
 
-### Usar comentarios para marcar puntos suspensivos
+### Use comentarios para marcar puntos suspensivos
 
-Omitir código redundante usando puntos suspensivos (…) es necesario para mantener los ejemplos cortos.
-Aun así, los escritores deben hacerlo cuidadosamente, ya que los desarrolladores con frecuencia copian y pegan ejemplos en su código, y todas nuestras muestras de código JavaScript deben ser válidas.
+Omitir código redundante usando puntos suspensivos (…) es necesario para mantener los ejemplos cortos. Sin embargo, los escritores deben hacerlo cuidadosamente, ya que los desarrolladores frecuentemente copian y pegan ejemplos en su código, y todas nuestras muestras de código deben ser JavaScript válido.
 
-En JavaScript, debes poner los puntos suspensivos (`…`) en un comentario.
-Cuando sea posible, indique qué acción se espera que agregue quien reutilice este fragmento.
+En JavaScript, debe poner los puntos suspensivos (`…`) en un comentario. Cuando sea posible, indique qué acción se espera que agregue quien reutilice este fragmento.
 
-Usar un comentario para los puntos suspensivos (…) es mas explícito, previene errores cuando un desarrollador copia y pega un código de muestra.
-Escriba:
+Usar un comentario para los puntos suspensivos (…) es más explícito, previniendo errores cuando un desarrollador copia y pega un código de muestra. Escriba:
 
 ```js example-good
 function funcionEjemplo() {
-  // Agrega tu código aquí
+  // Agregue su código aquí
   // …
 }
 ```
 
-No uses puntos suspensivos (…) así:
+No use puntos suspensivos (…) así:
 
 ```js example-bad
 function funcionEjemplo() {
@@ -240,11 +213,9 @@ function funcionEjemplo() {
 
 ### Comentar parámetros
 
-Al escribir código, generalmente omite parámetros que no necesitas.
-Pero en algunos ejemplos de código, quieres demostrar que no utilizaste algunos posibles parámetros.
+Al escribir código, generalmente omite parámetros que no necesita. Pero en algunos ejemplos de código, quiere demostrar que no usó algunos parámetros posibles.
 
-Para hacerlo, utilice `/* … */` en la lista de parámetros.
-Esta es una excepción a la regla de usar solo comentarios de una sola línea. (`//`).
+Para hacerlo, use `/* … */` en la lista de parámetros. Esta es una excepción a la regla de usar solo comentarios de una sola línea (`//`).
 
 ```js
 array.forEach((valor /* , índice, matriz */) => {
@@ -256,14 +227,13 @@ array.forEach((valor /* , índice, matriz */) => {
 
 ### Nombres de funciones
 
-Para nombres de funciones, use camelCase, comenzando con un carácter en minúscula.
-Utilice nombres concisos, legibles por humanos y semánticos cuando sea apropiado.
+Para nombres de funciones, use {{Glossary("camel_case", "camel case")}}, comenzando con un carácter en minúscula. Use nombres concisos, legibles por humanos y semánticos cuando sea apropiado.
 
 El siguiente es un ejemplo correcto de un nombre de función:
 
 ```js example-good
 function decirHola() {
-  console.log("Hola!");
+  console.log("¡Hola!");
 }
 ```
 
@@ -271,19 +241,19 @@ No use nombres de funciones como estos:
 
 ```js example-bad
 function DecirHola() {
-  console.log("Hola!");
+  console.log("¡Hola!");
 }
 
 function hazlo() {
-  console.log("Hola!");
+  console.log("¡Hola!");
 }
 ```
 
-### Declaración de funciones
+### Declaraciones de funciones
 
 - Siempre que sea posible, use la declaración de función sobre expresiones de función para definir funciones.
 
-  Esta es la forma recomendada de declarar una función:
+  Así es la forma recomendada de declarar una función:
 
   ```js example-good
   function suma(a, b) {
@@ -291,7 +261,7 @@ function hazlo() {
   }
   ```
 
-  Esta no es una buena forma de declarar una función:
+  Esta no es una buena forma de definir una función:
 
   ```js example-bad
   let suma = function (a, b) {
@@ -299,27 +269,25 @@ function hazlo() {
   };
   ```
 
-- Al usar funciones anónimas como callback (una función pasada a otra invocación de método), si no necesitas acceder a `this`, use una función de flecha para hacer el código más corto y limpio.
+- Al usar funciones anónimas como callback (una función pasada a otra invocación de método), si no necesita acceder a `this`, use una función de flecha para hacer el código más corto y limpio.
 
-  Esta es la forma recomendada:
+  Así es la forma recomendada:
 
   ```js example-good
-  const numeros = [1, 2, 3, 4];
-  const suma = numeros.reduce((a, b) => a + b);
+  const matriz = [1, 2, 3, 4];
+  const suma = matriz.reduce((a, b) => a + b);
   ```
 
   En lugar de esto:
 
   ```js example-bad
-  const numeros = [1, 2, 3, 4];
-  const suma = numeros.reduce(function (a, b) {
+  const matriz = [1, 2, 3, 4];
+  const suma = matriz.reduce(function (a, b) {
     return a + b;
   });
   ```
 
-- Considere evitar usar la función de flecha para asignar una función a un identificador.
-  En particular, no utilice funciones flecha para los métodos.
-  Use declaración de funciones con la palabra clave `function`:
+- Considere evitar usar la función de flecha para asignar una función a un identificador. En particular, no use funciones de flecha para los métodos. Use declaraciones de función con la palabra clave `function`:
 
   ```js example-good
   function x() {
@@ -327,7 +295,7 @@ function hazlo() {
   }
   ```
 
-  No lo hagas así:
+  No haga esto:
 
   ```js example-bad
   const x = () => {
@@ -335,7 +303,7 @@ function hazlo() {
   };
   ```
 
-- Cuando utilice funciones flecha, utilice [retorno implícito](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions#cuerpo_de_función) (también conocido como _cuerpo conciso_) cuando sea posible:
+- Cuando use funciones de flecha, use [retorno implícito](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (también conocido como _cuerpo de expresión_) cuando sea posible:
 
   ```js example-good
   matriz.map((e) => e.id);
@@ -353,10 +321,9 @@ function hazlo() {
 
 ### Inicialización de bucle
 
-Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son requeridos, elegir el apropiado entre [`for(;;)`](/es/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/es/docs/Web/JavaScript/Reference/Statements/while), etc.
+Cuando se requieren [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops), elija el apropiado entre [`for(;;)`](/es/docs/Web/JavaScript/Reference/Statements/for), [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [`while`](/es/docs/Web/JavaScript/Reference/Statements/while), etc.
 
-- Al iterar a través de todos los elementos de la colección, evite usar el clásico bucle `for (;;)`; es preferible `for...of` o `forEach()`.
-  Tenga en cuenta que si está utilizando una colección que no es un `Array`, tienes que comprobar que `for...of` es realmente compatible (requiere que la variable sea iterable), o que el método `forEach()` está realmente presente.
+- Al iterar a través de todos los elementos de la colección, evite usar el bucle clásico `for (;;)`; prefiera `for...of` o `forEach()`. Tenga en cuenta que si está usando una colección que no es una `Array`, tiene que verificar que `for...of` realmente es compatible (requiere que la variable sea iterable), o que el método `forEach()` realmente está presente.
 
   Use `for...of`:
 
@@ -376,8 +343,7 @@ Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son req
   });
   ```
 
-  No use `for (;;)` — no solo tienes que agregar un índice extra, `i`, sino que también tienes que rastrear la longitud de la matriz.
-  Esto puede ser propenso a errores para principiantes.
+  No use `for (;;)` — no solo tiene que agregar un índice extra, `i`, sino que también tiene que rastrear la longitud de la matriz. Esto puede ser propenso a errores para principiantes.
 
   ```js example-bad
   const perros = ["Rex", "Lassie"];
@@ -386,9 +352,7 @@ Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son req
   }
   ```
 
-- Asegúrese de definir correctamente el inicializador utilizando la palabra clave `const` para `for...of` o `let` para los otros bucles.
-  No lo omitas.
-  Estos son ejemplos correctos:
+- Asegúrese de definir el inicializador correctamente usando la palabra clave `const` para `for...of` o `let` para los otros bucles. No lo omita. Estos son ejemplos correctos:
 
   ```js example-good
   const gatos = ["Athena", "Luna"];
@@ -401,7 +365,7 @@ Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son req
   }
   ```
 
-  El siguiente ejemplo no sigue las pautas recomendadas para la inicialización (implícitamente crea una variable global y fallará en modo estricto):
+  El siguiente ejemplo no sigue las directrices recomendadas para la inicialización (crea implícitamente una variable global y fallará en modo estricto):
 
   ```js example-bad
   const gatos = ["Athena", "Luna"];
@@ -429,26 +393,25 @@ Cuando los [bucles](/es/docs/Learn_web_development/Core/Scripting/Loops) son req
   ```
 
 > [!WARNING]
-> Nunca utilice `for...in` en matrices y cadenas.
+> Nunca use `for...in` con matrices y cadenas.
 
 > [!NOTE]
-> Considere no usar un bucle `for` en absoluto. Si estás utilizando un [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) (o un [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) para algunas operaciones), considere usar más métodos de iteración semántica en su lugar, como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), y muchos más.
+> Considere no usar un bucle `for` en absoluto. Si está usando un [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) (o un [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String) para algunas operaciones), considere usar métodos de iteración más semánticos en su lugar, como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`every()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`findIndex()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex), [`find()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find), [`includes()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), y muchos más.
 
 ### Sentencias de control
 
-Hay un caso notable a tener en cuenta para las sentencias de control `if...else`.
-Si la declaración `if` termina con `return`, no agregue una declaración `else`.
+Hay un caso notable a tener en cuenta para las sentencias de control `if...else`. Si la sentencia `if` termina con `return`, no agregue una sentencia `else`.
 
-Continúe justo después de la instrucción `if`. Escriba:
+Continúe justo después de la sentencia `if`. Escriba:
 
 ```js example-good
 if (prueba) {
-  // Realizar algo si la prueba es verdadera
+  // Realiza algo si la prueba es verdadera
   // …
   return;
 }
 
-// Realizar algo si la prueba es falsa
+// Realiza algo si la prueba es falsa
 // …
 ```
 
@@ -456,22 +419,21 @@ No escriba:
 
 ```js example-bad
 if (prueba) {
-  // Realizar algo si la prueba es verdadera
+  // Realiza algo si la prueba es verdadera
   // …
   return;
 } else {
-  // Realizar algo si la prueba es falsa
+  // Realiza algo si la prueba es falsa
   // …
 }
 ```
 
 ### Use llaves con sentencias de flujo de control y bucles
 
-Si bien las declaraciones de flujo de control como `if`, `for` y `while` no requieren el uso de llaves cuando el contenido se compone de una sola declaración, siempre debe usar llaves.
-Escriba:
+Aunque las sentencias de flujo de control como `if`, `for` y `while` no requieren el uso de llaves cuando el contenido se compone de una sola sentencia, siempre debe usar llaves. Escriba:
 
 ```js example-good
-for (const carro of carrosAlmacenados) {
+for (const carro de carrosAlmacenados) {
   carro.pintar("rojo");
 }
 ```
@@ -479,17 +441,16 @@ for (const carro of carrosAlmacenados) {
 No escriba:
 
 ```js example-bad
-for (const carro of carrosAlmacenados) carro.pintar("rojo");
+for (const carro de carrosAlmacenados) carro.pintar("rojo");
 ```
 
-Esto evita olvidarse de agregar las llaves al agregar más declaraciones.
+Esto evita olvidarse de agregar las llaves al agregar más sentencias.
 
 ### Sentencias switch
 
 Las sentencias `switch` pueden ser un poco complicadas.
 
-- No agregue una declaración `break` después de una declaración `return` en un caso específico.
-  En su lugar, escriba instrucciones `return` como esta:
+- No agregue una sentencia `break` después de una sentencia `return` en un caso específico. En su lugar, escriba sentencias `return` así:
 
   ```js example-good
   switch (especies) {
@@ -502,7 +463,7 @@ Las sentencias `switch` pueden ser un poco complicadas.
   }
   ```
 
-  Si agrega una declaración `break`, será inalcanzable. No escriba:
+  Si agrega una sentencia `break`, será inalcanzable. No escriba:
 
   ```js example-bad
   switch (especies) {
@@ -517,8 +478,7 @@ Las sentencias `switch` pueden ser un poco complicadas.
   }
   ```
 
-- Use `default` como el último caso, y no lo termine con una declaración `break`.
-  Si necesita hacerlo de otra manera, agregue un comentario explicando por qué.
+- Use `default` como el último caso, y no lo termine con una sentencia `break`. Si necesita hacerlo de manera diferente, agregue un comentario explicando por qué.
 
 - Recuerde que cuando declara una variable local para un caso, necesita usar llaves para definir un alcance:
 
@@ -539,8 +499,7 @@ Las sentencias `switch` pueden ser un poco complicadas.
 
 ### Manejo de errores
 
-- Si ciertos estados de su programa arrojan errores no detectados, detendrán la ejecución y reducirán potencialmente la utilidad del ejemplo.
-  Por lo tanto, debe detectar errores utilizando un bloque [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch), Como se muestra debajo:
+- Si ciertos estados de su programa arrojan errores no detectados, detendrán la ejecución y potencialmente reducirán la utilidad del ejemplo. Por lo tanto, debe detectar errores usando un bloque [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch), como se muestra a continuación:
 
   ```js example-good
   try {
@@ -556,21 +515,20 @@ Las sentencias `switch` pueden ser un poco complicadas.
   try {
     console.log(obtenerResultado());
   } catch {
-    console.error("Ocurrió un error!");
+    console.error("¡Ocurrió un error!");
   }
   ```
 
 > [!NOTE]
-> Tenga en cuenta que solo los errores _recuperables_ deben detectarse y manejarse.
-> Todos los errores no recuperables deben dejarse pasar y aumentar la pila de llamadas.
+> Tenga en cuenta que solo los errores _recuperables_ deben detectarse y manejarse. Todos los errores no recuperables deben dejarse pasar y subir por la pila de llamadas.
 
 ## Objetos
 
-### Nombre de objetos
+### Nombres de objetos
 
-- Al definir una clase, use _PascalCase_ (comenzando con una letra mayúscula) para el nombre de la clase y _camelCase_ (comenzando con una letra minúscula) para la propiedad del objeto y los nombres de los métodos.
+- Al definir una clase, use _PascalCase_ (comenzando con una letra mayúscula) para el nombre de la clase y _camelCase_ (comenzando con una letra minúscula) para los nombres de propiedades y métodos del objeto.
 
-- Al definir una instancia de objeto, ya sea un literal o mediante un constructor, use _camelCase_, comenzando con un carácter en minúsculas, para el nombre de la instancia. Por ejemplo:
+- Al definir una instancia de objeto, ya sea un literal o mediante un constructor, use _camelCase_, comenzando con un carácter en minúscula, para el nombre de la instancia. Por ejemplo:
 
   ```js example-good
   const hanSolo = new Person("Han Solo", 25, "he/him");
@@ -584,15 +542,15 @@ Las sentencias `switch` pueden ser un poco complicadas.
 
 ### Creación de objetos
 
-Para crear objetos generales (es decir, cuando las clases no están involucradas), use literales y no constructores.
+Para crear objetos generales (es decir, cuando no están involucradas las clases), use literales y no constructores.
 
-Por ejemplo, haz esto:
+Por ejemplo, haga esto:
 
 ```js example-good
 const objeto = {};
 ```
 
-No crees un objeto general como este:
+No cree un objeto general así:
 
 ```js example-bad
 const objeto = new Object();
@@ -613,12 +571,12 @@ const objeto = new Object();
     }
 
     greeting() {
-      console.log(`Hola! Yo soy ${this.nombre}`);
+      console.log(`¡Hola! Soy ${this.nombre}`);
     }
   }
   ```
 
-- Usar `extends` para la herencia:
+- Use `extends` para la herencia:
 
   ```js example-good
   class Profesor extends Persona {
@@ -628,7 +586,7 @@ const objeto = new Object();
 
 ### Métodos
 
-Para definir métodos, utilice la sintaxis de definición de métodos:
+Para definir métodos, use la sintaxis de definición de métodos:
 
 ```js example-good
 const obj = {
@@ -679,8 +637,7 @@ Esta sección enumera nuestras recomendaciones sobre qué operadores usar y cuá
 
 ### Operadores condicionales
 
-Cuando desee almacenar en una variable un valor literal dependiendo de una condición, use un [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator) en lugar de una sentencia `if...else`.
-Esta regla también se aplica cuando se devuelve un valor. Escriba:
+Cuando desee almacenar en una variable un valor literal dependiendo de una condición, use un [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator) en lugar de una sentencia `if...else`. Esta regla también se aplica al devolver un valor. Escriba:
 
 ```js example-good
 const x = condicion ? 1 : 2;
@@ -697,87 +654,68 @@ if (condicion) {
 }
 ```
 
-El operador condicional es útil al crear cadenas para registrar información.
-En tales casos, el uso de una instrucción regular `if...else` conduce a largos bloques de código para una operación secundaria como el registro, ofuscando el punto central del ejemplo.
+El operador condicional es útil al crear cadenas para registrar información. En tales casos, el uso de una sentencia regular `if...else` conduce a bloques de código largos para una operación secundaria como el registro, ofuscando el punto central del ejemplo.
 
 ### Operador de igualdad estricta
 
-Preferir los operadores de [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators/Strict_equality) `===` y de desigualdad `!==` sobre los operadores de igualdad flexible `==` y de desigualdad `!=`.
+Prefiera los operadores de [igualdad estricta](/es/docs/Web/JavaScript/Reference/Operators/Strict_equality) (triple igual) y de desigualdad sobre los operadores de igualdad flexible (doble igual) y de desigualdad.
 
-Use los operadores estrictos de igualdad y desigualdad de esta forma:
+Use los operadores de igualdad y desigualdad estrictos así:
 
 ```js example-good
 nombre === "Shilpa";
 edad !== 25;
 ```
 
-No use los operadores sueltos de igualdad y desigualdad, como se muestra a continuación:
+No use los operadores de igualdad y desigualdad flexibles, como se muestra a continuación:
 
 ```js example-bad
 nombre == "Shilpa";
 edad != 25;
 ```
 
-Si necesita usar `==` o `!=`, recuerde que `== null` es el único caso aceptable.
-Como TypeScript fallará en todos los demás casos, no queremos tenerlos en nuestro código de ejemplo.
-Considere agregar un comentario para explicar por qué lo necesita.
+Si necesita usar `==` o `!=`, recuerde que `== null` es el único caso aceptable. Como TypeScript fallará en todos los demás casos, no queremos tenerlos en nuestro código de ejemplo. Considere agregar un comentario para explicar por qué lo necesita.
 
 ### Atajos para pruebas booleanas
 
-Prefiera atajos para las pruebas booleanas. Por ejemplo, use `if (x)` y `if (!x)`, no use `if (x === true)` y `if (x === false)`, a menos que diferentes tipos de valores verdaderos o falsos se manejen de forma diferente.
+Prefiera atajos para las pruebas booleanas. Por ejemplo, use `if (x)` y `if (!x)`, no use `if (x === true)` y `if (x === false)`, a menos que diferentes tipos de valores verdaderos o falsos se manejen de manera diferente.
 
 ## Cadenas
 
-Las cadenas literales se pueden encerrar entre comillas simples, como en `'Una cadena'`, o entre comillas dobles, como en `"Una cadena"`.
-No se preocupe por cuál usar, Prettier lo mantiene consistente.
+Las cadenas literales pueden encerrarse entre comillas simples, como en `'Una cadena'`, o entre comillas dobles, como en `"Una cadena"`. No se preocupe por cuál usar; Prettier lo mantiene consistente.
 
-### Template literals
+### Plantillas literales
 
-Para insertar valores en cadenas, use [Plantillas literales](/es/docs/Web/JavaScript/Reference/Template_literals).
+Para insertar valores en cadenas, use [plantillas literales](/es/docs/Web/JavaScript/Reference/Template_literals).
 
-- Aquí hay un ejemplo de la forma recomendada de usar plantillas literales.
-  Su uso evita muchos errores de espaciado.
+- Aquí hay un ejemplo de la forma recomendada de usar plantillas literales. Su uso evita muchos errores de espaciado.
 
   ```js example-good
   const nombre = "Shilpa";
   console.log(`¡Hola! Soy ${nombre}!`);
   ```
 
-  No concatenes cadenas así:
+  No concatene cadenas así:
 
   ```js example-bad
   const nombre = "Shilpa";
   console.log("¡Hola! Soy" + nombre + "!"); // ¡Hola! SoyShilpa!
   ```
 
-- No abuses de las plantillas literales.
-  Si no hay sustituciones, use una cadena literal normal en su lugar.
+- No abuse de las plantillas literales. Si no hay sustituciones, use una cadena literal normal en su lugar.
 
 ## Variables
 
-### Nombre de Variables
+### Nombres de variables
 
-Los buenos nombres de variables son esenciales para comprender el código.
+Los buenos nombres de variables son esenciales para entender el código.
 
-- Use identificadores cortos y evite abreviaturas no comunes.
-  Los buenos nombres de variables suelen tener entre 3 y 10 caracteres, pero solo como sugerencia.
-  Por ejemplo, 'acelerómetro' es más descriptivo que abreviar como 'aclmtr' por el bien de la longitud de los caracteres.
-- Trate de usar ejemplos relevantes del mundo real donde cada variable tenga una semántica clara.
-  Solo recurra a nombres de marcadores de posición como `foo` y `bar` cuando el ejemplo sea simple y artificial.
-- No utilice la convención de nomenclatura [Notación húngara](https://es.wikipedia.org/wiki/Notaci%C3%B3n_h%C3%BAngara).
-  No prefije el nombre de la variable con su tipo.
-  Por ejemplo, escriba `bought = car.buyer !== null` en lugar de `bBought = oCar.sBuyer != null` o `name = "John Doe"` en lugar de `sName = "John Doe"`.
-- Para colecciones, evite agregar el tipo como lista, matriz, cola en el nombre.
-  Use el nombre del contenido en plural.
-  Por ejemplo, para una matriz de autos, utilice `cars` y no `carArray` o `carList`.
-  Puede haber excepciones, como cuando desea mostrar la forma abstracta de una función sin el contexto de una aplicación en particular.
-- Para valores primitivos, use _camelCase_, comenzando con un carácter en minúscula.
-  No use `_`.
-  Utilice nombres concisos, legibles por humanos y semánticos cuando sea apropiado.
-  Por ejemplo, use `currencyName` en lugar de `currency_name`.
-- Evite el uso de artículos y posesivos.
-  Por ejemplo, utilice `car` en lugar de `myCar` o `aCar`.
-  Puede haber excepciones, como cuando se describe una característica en general sin un contexto práctico.
+- Use identificadores cortos y evite abreviaturas no comunes. Los buenos nombres de variables suelen tener entre 3 y 10 caracteres de longitud, pero solo como sugerencia. Por ejemplo, `acelerómetro` es más descriptivo que abreviar como `aclmtr` por el bien de la longitud de los caracteres.
+- Intente usar ejemplos relevantes del mundo real donde cada variable tenga una semántica clara. Solo recurra a nombres de marcador de posición como `foo` y `bar` cuando el ejemplo sea simple e artificial.
+- No use la convención de nomenclatura [notación húngara](https://es.wikipedia.org/wiki/Notaci%C3%B3n_h%C3%BAngara). No prefije el nombre de la variable con su tipo. Por ejemplo, escriba `bought = car.buyer !== null` en lugar de `bBought = oCar.sBuyer != null` o `name = "María Sánchez"` en lugar de `sName = "María Sánchez"`.
+- Para colecciones, evite agregar el tipo como lista, matriz, cola en el nombre. Use el nombre del contenido en forma plural. Por ejemplo, para una matriz de autos, use `cars` y no `carArray` o `carList`. Puede haber excepciones, como cuando desea mostrar la forma abstracta de una característica sin el contexto de una aplicación particular.
+- Para valores primitivos, use _camelCase_, comenzando con un carácter en minúscula. No use `_`. Use nombres concisos, legibles por humanos y semánticos cuando sea apropiado. Por ejemplo, use `currencyName` en lugar de `currency_name`.
+- Evite el uso de artículos y posesivos. Por ejemplo, use `car` en lugar de `myCar` o `aCar`. Puede haber excepciones, como cuando se describe una característica en general sin un contexto práctico.
 - Use nombres de variables como se muestra aquí:
 
   ```js example-good
@@ -785,7 +723,7 @@ Los buenos nombres de variables son esenciales para comprender el código.
   const speed = distance / time;
   ```
 
-  No nombre variables de esta forma:
+  No nombre variables así:
 
   ```js example-bad
   const thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
@@ -793,12 +731,11 @@ Los buenos nombres de variables son esenciales para comprender el código.
   ```
 
 > [!NOTE]
-> El único lugar donde está permitido no usar nombres semánticos legibles por humanos es donde existe una convención comúnmente reconocida, como usar `i` y `j` para iteradores de bucle.
+> El único lugar donde está permitido no usar nombres semánticos legibles por humanos es donde existe una convención muy comúnmente reconocida, como usar `i` y `j` para iteradores de bucle.
 
-### Declaración de Variables
+### Declaración de variables
 
-Al declarar variables y constantes, use las palabras clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), no [`var`](/es/docs/Web/JavaScript/Reference/Statements/var).
-Los siguientes ejemplos muestran lo que se recomienda y lo que no en los documentos web de MDN:
+Al declarar variables y constantes, use las palabras clave [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y [`const`](/es/docs/Web/JavaScript/Reference/Statements/const), no [`var`](/es/docs/Web/JavaScript/Reference/Statements/var). Los siguientes ejemplos muestran lo que se recomienda y lo que no en MDN Web Docs:
 
 - Si una variable no se reasignará, prefiera `const`, así:
 
@@ -815,16 +752,14 @@ Los siguientes ejemplos muestran lo que se recomienda y lo que no en los documen
   console.log("¡Feliz cumpleaños!");
   ```
 
-- El siguiente ejemplo usa `let` donde debería ser `const`.
-  El código funcionará, pero queremos evitar este uso en los ejemplos de código de los documentos web de MDN.
+- El siguiente ejemplo usa `let` donde debería ser `const`. El código funcionará, pero queremos evitar este uso en los ejemplos de código de MDN Web Docs.
 
   ```js example-bad
   let nombre = "Shilpa";
   console.log(nombre);
   ```
 
-- El siguiente ejemplo usa `const` para una variable que se reasigna.
-  La reasignación arrojará un error.
+- El siguiente ejemplo usa `const` para una variable que se reasigna. La reasignación arrojará un error.
 
   ```js example-bad
   const edad = 40;
@@ -848,8 +783,7 @@ Los siguientes ejemplos muestran lo que se recomienda y lo que no en los documen
   let var4 = var3;
   ```
 
-  No declare múltiples variables en una línea, separándolas con comas o usando declaraciones en cadena.
-  Evite declarar variables así:
+  No declare múltiples variables en una línea, separándolas con comas o usando declaraciones en cadena. Evite declarar variables así:
 
   ```js-nolint example-bad
   let var1, var2;
@@ -858,8 +792,7 @@ Los siguientes ejemplos muestran lo que se recomienda y lo que no en los documen
 
 ### Coerción de tipos
 
-Evite las coacciones de tipo implícito. En particular, evite `+val` para forzar un valor a un número y `"" + val` para forzarlo a una cadena.
-Utilice `Number()` y `String()`, sin `new`, en su lugar. Escriba:
+Evite las coerciones de tipo implícitas. En particular, evite `+val` para forzar un valor a un número y `"" + val` para forzarlo a una cadena. Use `Number()` y `String()`, sin `new`, en su lugar. Escriba:
 
 ```js example-good
 class Person {
@@ -889,11 +822,11 @@ class Person {
 
 ## APIs web para evitar
 
-Además de estas características del lenguaje JavaScript, recomendamos tener en cuenta algunas pautas relacionadas con las API web.
+Además de estas características del lenguaje JavaScript, recomendamos tener en cuenta algunas directrices relacionadas con las APIs web.
 
 ### Evite los prefijos del navegador
 
-Si todos los principales navegadores (Chrome, Edge, Firefox y Safari) soportan una función, no agregue el prefijo de la función. Escriba:
+Si todos los navegadores principales (Chrome, Edge, Firefox y Safari) admiten una característica, no agregue el prefijo de la característica. Escriba:
 
 ```js example-good
 const context = new AudioContext();
@@ -910,24 +843,21 @@ La misma regla se aplica a los prefijos CSS.
 
 ### Evite las API en desuso
 
-Cuando un método, una propiedad o una interfaz completa está en desuso, no lo use (fuera de su documentación).
-En su lugar, utilice la API moderna.
+Cuando un método, una propiedad o una interfaz completa está en desuso, no lo use (fuera de su documentación). En su lugar, use la API moderna.
 
-Aquí hay una lista no exhaustiva de API web para evitar y con qué reemplazarlas:
+Aquí hay una lista no exhaustiva de APIs web para evitar y con qué reemplazarlas:
 
 - Use `fetch()` en lugar de XHR (`XMLHttpRequest`).
 - Use `AudioWorklet` en lugar de `ScriptProcessorNode`, en la API de Audio Web.
 
 ### Use API seguras y confiables
 
-- No utilice {{DOMxRef("Element.innerHTML")}} para insertar contenido puramente textual en un elemento; use {{DOMxRef("Node.textContent")}} en su lugar.
-  La propiedad `innerHTML` genera problemas de seguridad si un desarrollador no controla el parámetro.
-  Cuanto más evitamos usarlo como escritores, menos fallas de seguridad se crean cuando un desarrollador copia y pega nuestro código.
+- No use {{DOMxRef("Element.innerHTML")}} para insertar contenido puramente textual en un elemento; use {{DOMxRef("Node.textContent")}} en su lugar. La propiedad `innerHTML` conduce a problemas de seguridad si un desarrollador no controla el parámetro. Cuanto más evitemos usarlo como escritores, menos fallas de seguridad se crearán cuando un desarrollador copia y pega nuestro código.
 
   El siguiente ejemplo demuestra el uso de `textContent`.
 
   ```js example-good
-  const text = "Hello to all you good people";
+  const text = "Hola a todas las buenas personas";
   const para = document.createElement("p");
   para.textContent = text;
   ```
@@ -935,23 +865,18 @@ Aquí hay una lista no exhaustiva de API web para evitar y con qué reemplazarla
   No use `innerHTML` para insertar _texto puro_ en los nodos DOM.
 
   ```js example-bad
-  const text = "Hello to all you good people";
+  const text = "Hola a todas las buenas personas";
   const para = document.createElement("p");
   para.innerHTML = text;
   ```
 
-- La función `alert()` no es fiable.
-  No funciona en ejemplos en vivo en MDN Web Docs que están dentro de un {{HTMLElement("iframe")}}.
-  Además, es modal para toda la ventana, lo cual es molesto.
-  En ejemplos de código estático, use `console.log()` o `console.error()`.
-  En [ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples), evite `console.log()` y `console.error()` porque no se muestran.
-  Utilice un elemento de interfaz de usuario dedicado.
+- La función `alert()` no es confiable. No funciona en ejemplos en vivo en MDN Web Docs que están dentro de un {{HTMLElement("iframe")}}. Además, es modal para toda la ventana, lo cual es molesto. En ejemplos de código estáticos, use `console.log()` o `console.error()`. En [ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples), evite `console.log()` y `console.error()` porque no se muestran. Use un elemento de interfaz de usuario dedicado.
 
-### Utilice el método de registro adecuado
+### Use el método de registro apropiado
 
-- Al registrar un mensaje, utilice `console.log()`.
-- Cuando registre un error, use `console.error()`.
+- Al registrar un mensaje, use `console.log()`.
+- Al registrar un error, use `console.error()`.
 
-## Vea también
+## Véase también
 
 [Referencia del lenguaje JavaScript](/es/docs/Web/JavaScript/Reference) - navegue a través de nuestras páginas de referencia de JavaScript para ver algunos fragmentos de JavaScript buenos, concisos y significativos.
