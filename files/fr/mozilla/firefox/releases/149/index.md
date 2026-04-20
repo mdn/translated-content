@@ -3,7 +3,7 @@ title: Firefox 149 note de version pour les développeurs
 short-title: Firefox 149
 slug: Mozilla/Firefox/Releases/149
 l10n:
-  sourceCommit: d1d2fb19fa649240ce6e25c4d79e21d9a5f6de37
+  sourceCommit: 1ad93c0731806b155441afe9e44e971d8b2b0e2a
 ---
 
 Cet article présente les informations concernant les changements de Firefox 149 qui concernent les développeur·euse·s.
@@ -22,7 +22,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 ### CSS
 
-- La propriété CSS {{CSSxRef("shape-outside")}} prend désormais en charge la fonction {{CSSxRef("basic-shape/xywh", "xywh()")}} comme valeur. Cela permet de définir une forme autour de laquelle le contenu en ligne peut s'enrouler, en utilisant les distances par rapport aux bords gauche (`x`) et supérieur (`y`) du bloc contenant, ainsi qu'une largeur (`w`) et une hauteur (`h`). ([bogue Firefox 1983187 <sup>(angl.)</sup>](https://bugzil.la/1983187)).
+- La propriété CSS {{CSSxRef("shape-outside")}} prend désormais en charge la fonction {{CSSxRef("basic-shape/xywh", "xywh()")}} et {{CSSxRef("basic-shape/rect", "rect()")}} comme valeurs. Ces fonctions étaient déjà implémentées pour les propriétés {{CSSxRef("clip-path")}} et {{CSSxRef("offset-path")}}, et sont maintenant également disponibles pour `shape-outside`. ([bogue Firefox 1983187 <sup>(angl.)</sup>](https://bugzil.la/1983187)).
 
 - La propriété CSS {{CSSxRef("vertical-align")}} est désormais une propriété raccourcie pour les propriétés {{CSSxRef("alignment-baseline")}}, {{CSSxRef("baseline-shift")}} et {{CSSxRef("baseline-source")}}. ([bogue Firefox 1830771 <sup>(angl.)</sup>](https://bugzil.la/1830771)).
 
@@ -47,7 +47,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
   Une version sérialisée des objets de rapport peut également être envoyée à un serveur de rapport défini dans l'en-tête HTTP correspondant — les noms des points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
   ([bogue Firefox 1976074 <sup>(angl.)</sup>](https://bugzil.la/1976074), [bogue Firefox 2008916 <sup>(angl.)</sup>](https://bugzil.la/2008916)).
 
-- Jusqu'à Firefox 148, `structuredClone.call(iframe.contentWindow)` créait incorrectement des objets dans le [domaine d'exécution](/fr/docs/Web/JavaScript/Reference/Execution_model#domaine_dexécution_realm) de l'appelant au lieu du domaine d'exécution du cadre intégré (<i lang="en">iframe</i> en anglais). L'implémentation crée désormais des objets dans le domaine d'exécution de `this`, de sorte que le comportement de la méthode correspond davantage à la spécification.
+- Jusqu'à Firefox 148, `structuredClone.call(iframe.contentWindow)` créait incorrectement des objets dans le [domaine d'exécution](/fr/docs/Web/JavaScript/Reference/Execution_model#domaine_dexécution_realm) de l'appelant au lieu du domaine d'exécution du cadre intégré (<i lang="en">iframe</i> en anglais). L'implémentation crée désormais des objets dans le domaine d'exécution de `this`, de sorte que le comportement de la méthode correspond davantage à la spécification ([bogue Firefox 2017797 <sup>(angl.)</sup>](https://bugzil.la/2017797)).
 
 #### DOM
 
@@ -88,8 +88,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 - Ajout du support pour `tabId` en tant que paramètre de niveau supérieur dans {{WebExtAPIRef("action.isEnabled")}} et {{WebExtAPIRef("browserAction.isEnabled")}}. Ce changement assure la compatibilité avec l'implémentation Chrome de `action.isEnabled`. ([bogue Firefox 2013477 <sup>(angl.)</sup>](https://bugzil.la/2013477))
 - Un geste de l'utilisateur·ice n'est plus requis pour {{WebExtAPIRef("action.openPopup")}} et {{WebExtAPIRef("browserAction.openPopup")}} pour ouvrir une fenêtre affichée par dessus le contenu (<i lang="en">popup</i> en anglais). Cette fonctionnalité était disponible derrière la préférence `extensions.openPopupWithoutUserGesture.enabled` depuis Firefox 108. Ce changement aligne le comportement de Firefox avec Chrome et Safari. ([bogue Firefox 1799344 <sup>(angl.)</sup>](https://bugzil.la/1799344))
 - Si `windowId` est passé dans {{WebExtAPIRef("action.openPopup")}} ou {{WebExtAPIRef("browserAction.openPopup")}}, la fenêtre doit être sélectionnée (active) pour que l'élément affiché par dessus le contenu s'ouvre. Pour ouvrir un élément par dessus le contenu dans une fenêtre qui n'est pas sélectionnée, {{WebExtAPIRef("windows.update","windows.update(windowId, { focused: true })")}} doit être appelé en premier. Ce changement aligne le comportement de Firefox avec Chrome. ([bogue Firefox 2011516 <sup>(angl.)</sup>](https://bugzil.la/2011516))
-- L'implémentation de {{DOMxRef("structuredClone")}} a été modifiée pour instancier des objets dans le domaine d'exécution de `this` au lieu du domaine d'exécution de l'appelant. Pour des raisons de compatibilité, la portée globale des scripts de contenu inclut désormais sa propre méthode `structuredClone` qui masque la méthode `window.structuredClone`. Pour plus d'informations, voir [`structuredClone` dans Partage d'objets avec les scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
-
+- L'implémentation de {{DOMxRef("structuredClone")}} a été modifiée pour instancier des objets dans le domaine d'exécution de `this` au lieu du domaine d'exécution de l'appelant. Pour des raisons de compatibilité, la portée globale des scripts de contenu inclut désormais sa propre méthode `structuredClone` qui masque la méthode `window.structuredClone`. Pour plus d'informations, voir [`structuredClone` dans Partage d'objets avec les scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone) ([bogue Firefox 2017797 <sup>(angl.)</sup>](https://bugzil.la/2017797)).
 - La capacité des extensions à exécuter dynamiquement du code dans leurs documents `moz-extension:` avec {{WebExtAPIRef("tabs.executeScript")}}, {{WebExtAPIRef("tabs.insertCSS")}}, {{WebExtAPIRef("tabs.removeCSS")}}, {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, et {{WebExtAPIRef("scripting.removeCSS")}} est désormais obsolète. ([bogue Firefox 2011234 <sup>(angl.)</sup>](https://bugzil.la/2011234)) La fonctionnalité n'est plus disponible dans Firefox Nightly, et les versions bêta et release de Firefox affichent un avertissement dans la console de l'onglet. Cette restriction s'appliquera à toutes les versions de Firefox 152 et ultérieures. ([bogue Firefox 2015559 <sup>(angl.)</sup>](https://bugzil.la/2015559)) En alternative, une extension peut exécuter du code dans ses documents de manière dynamique en enregistrant un écouteur {{WebExtAPIRef("runtime.onMessage")}} dans le script du document, puis en envoyant un message pour déclencher l'exécution du code requis.
 - Le filtre CSS implicite appliqué aux icônes SVG des [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sur les thèmes sombres est désactivé dans les versions Nightly ([bogue Firefox 2001318 <sup>(angl.)</sup>](https://bugzil.la/2001318)) et sera désactivé dans les autres éditions de Firefox à partir de la version 152 ([bogue Firefox 2016509 <sup>(angl.)</sup>](https://bugzil.la/2016509)). Vous pouvez tester les icônes SVG des actions de page avec le filtre CSS désactivé dans d'autres éditions de Firefox en créant une préférence booléenne `about:config` appelée `extensions.webextensions.pageActionIconDarkModeFilter.enabled` et en la définissant sur `false`.
 
@@ -111,7 +110,7 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 #### Marionette
 
-- Amélioration de plusieurs commandes WebDriver classiques pour gérer les délais d'attente `implicit` et `pageLoad` conformément au délai d'attente du script, permettant aux valeurs `null` de désactiver les délais d'attente. ([bogue Firefox 2008345](https://bugzil.la/2008345)).
+- Amélioration de plusieurs commandes WebDriver classiques pour gérer les délais d'attente `implicit` et `pageLoad` conformément au délai d'attente du script, permettant aux valeurs `null` de désactiver les délais d'attente. ([bogue Firefox 2008345 <sup>(angl.)</sup>](https://bugzil.la/2008345)).
 
 ## Fonctionnalités web expérimentales
 
