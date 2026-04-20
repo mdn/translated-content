@@ -1,112 +1,122 @@
 ---
-title: Plantilla de página de selectores CSS
+title: Plantilla de página de selector CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: 88088f2473cb93b489b1a4650b9840ac078c7ff3
+  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
 
-{{MDNSidebar}}
-
 > [!NOTE]
-> _Elimine toda esta nota explicativa antes de publicar_
+> _Elimina toda esta nota explicativa antes de publicar._
 >
 > ---
 >
-> **Metadatos de la página:**
+> **Front matter de la página:**
 >
-> Los campos en la parte superior de la página se utiliza para definir "metadatos de página".
+> El front matter en la parte superior de la página se usa para definir "metadatos de la página".
 > Los valores deben actualizarse adecuadamente para el selector en particular.
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
-> page-type: css-selector Ó css-pseudo-class Ó css-pseudo-element Ó css-combinator
+> title: :nombre-del-selector
+> slug: Web/CSS/Reference/Selectors/:nombre-del-selector
+> page-type: css-selector OR css-pseudo-class OR css-pseudo-element OR css-combinator
 > status:
->   - experimental
 >   - deprecated
->   - no-estandar
-> browser-compat: css.selectors.NameOfTheSelector
+>   - experimental
+>   - non-standard
+> browser-compat: css.selectors.nombre-del-selector
+> sidebar: cssref
 > ---
 > ```
 >
 > - **title**
->   - : Título que se muestra en la parte superior de la página. Formatear como _:NameOfTheSelector_.
->     Por ejemplo, el selector [`:hover`](/es/docs/Web/CSS/Reference/Selectors/:hover) tiene el título de _:hover_.
+>   - : Título que se muestra en la parte superior de la página. Formato como _:NombreDelSelector_.
+>     Por ejemplo, el selector {{cssxref(":hover")}} tiene un título de _:hover_.
 > - **slug**
->   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`). Se formateará como `Web/CSS/:NameOfTheSelector`.
->     Por ejemplo, el slug del selector [`:hover`](/es/docs/Web/CSS/Reference/Selectors/:hover) es `Web/CSS/:hover`.
+>   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`). Se formateará como `Web/CSS/Reference/Selectors/:nombre-del-selector`.
+>     Por ejemplo, el slug del selector {{cssxref(":hover")}} es `Web/CSS/Reference/Selectors/:hover`.
 > - **page-type**
->   - : El valor de `page-type` para las propiedades CSS puede ser `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es un [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements), un [combinador](/es/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), o un [selector básico](/es/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
+>   - : La clave `page-type` para las propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements), un [combinador](/es/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators#combinators) o un [selector simple](/es/docs/Web/CSS/Guides/Selectors/Selector_structure#simple_selector).
 > - **status**
->   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
+>   - : Indicadores que describen el estado de esta característica. Un array que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se agregan o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->   - : Reemplace el valor del marcador de posición `css.selectors.NameOfTheSelector` con la cadena de consulta para el selector en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
->     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad con los navegadores y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en esas secciones, respectivamente).
+>   - : Reemplaza el valor de marcador de posición <code>css.selectors.NombreDelSelector</code> con la cadena de consulta para el selector en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
+>     La cadena de herramientas usa automáticamente la clave para poblar las secciones de compatibilidad y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en esas secciones, respectivamente).
 >
->     Tenga en cuenta que es posible que primero necesite crear/actualizar una entrada para el selector y su especificación en nuestro [repositorio de datos compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
->     Consulta nuestra [guía sobre cómo hacerlo](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el selector y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad del navegador</a>.
+>     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
+>
+> - **sidebar**
+>   - : Es `cssref` para todas las páginas de guía y referencia de CSS.
+>     Consulta [Estructuras de página: Barras laterales](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para obtener más detalles.
 >
 > ---
 >
-> **Macros al principio de la página**
+> **Macros en la parte superior de la página**
 >
-> Varias llamadas de macro aparecen en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos).
-> Debes actualizarlos o eliminarlos de acuerdo con los siguientes consejos:
+> Aparecen varias macros en la parte superior de la sección de contenido inmediatamente después del front matter de la página.
+> Estas macros se agregan automáticamente mediante la cadena de herramientas, así que evita agregarlas o eliminarlas:
 >
-> - `\{{SeeCompatTable}}` — esto genera un **banner de tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que está documentando no es experimental, puede eliminarla.
->   Si es experimental y la tecnología está oculta detrás de alguna preferencia en Firefox, también debes completar una entrada para ello en la página [Funciones experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
-> - `\{{Deprecated_Header}}` — esto genera un banner de **Desaprobado** que indica que el uso de la tecnología está [desaprobada](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo es, puede eliminar la llamada de macro.
-> - `\{{CSSRef}}` — esto debe estar presente en cada página del selector de CSS. Genera una barra lateral CSS adecuada, dependiendo de qué etiquetas se incluyan en la página.
->   Recuerde eliminar la macro `\{{MDNSidebar}}` cuando copie esta página.
+> - `\{{SeeCompatTable}}` — esto genera un banner **Esta es una tecnología experimental** que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+>   Si es experimental, y la tecnología está oculta detrás de una preferencia en Firefox, también debes llenar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
+> - `\{{Deprecated_Header}}` — esto genera un banner **Desaprobado** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+> - `\{{Non-standard_Header}}` — esto genera un banner **No estándar** que indica que la característica no es parte de ninguna especificación.
+>
+> Debes actualizar o eliminar las siguientes macros según el consejo a continuación:
+>
+> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se agregan o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para agregar estos estados a la página.
+>
+> Los ejemplos de los banners **Experimental**, **Desaprobado** y **No estándar** se muestran justo después de este bloque de notas.
 >
 > ---
 >
 > **Sección de sintaxis (`\{{CSSSyntax}}`)**
 >
-> El contenido de la sección Sintaxis se genera utilizando la macro `\{{CSSSyntax}}`.
-> Para que estos se rellenen, debe asegurarse de que se haya completado una entrada adecuada para el selector en nuestro archivo de datos [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json).
+> El contenido de la sección de Sintaxis se genera usando la macro `\{{CSSSyntax}}`.
+> Para que se llenen, debes asegurarte de que se haya llenado una entrada apropiada para el selector en nuestro archivo de datos [selectors.json](https://github.com/mdn/data/blob/main/css/selectors.json).
 > Consulta [selectors.md](https://github.com/mdn/data/blob/main/css/selectors.md) para obtener más información.
 >
-> _Recuerde eliminar toda esta nota explicativa antes de publicar_
+> _Recuerda eliminar toda esta nota explicativa antes de publicar._
 
-{{SeeCompatTable}}{{Deprecated_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-El párrafo de resumen: comience nombrando el selector y diciendo lo que hace. Idealmente, esto debería consistir en 1 o 2 oraciones cortas.
+El párrafo de resumen — comienza nombrando el selector y diciendo qué hace. Idealmente, esto debe ser una o dos oraciones cortas.
 
 ```css
-/* Insertar bloque de código que muestre casos de uso comunes */
+/* Insertar bloque de código mostrando casos de uso comunes */
 ```
 
 ## Sintaxis
 
 `\{{CSSSyntax}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
+
+## Accesibilidad
+
+Esta es una sección opcional. Incluye pautas de accesibilidad, mejores prácticas y preocupaciones potenciales que los desarrolladores deben tener en cuenta al usar esta propiedad. También puedes incluir soluciones alternativas donde corresponda.
 
 ## Ejemplos
 
-Tenga en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+Ten en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
 
 ### Un encabezado descriptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
+Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
 
-Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
+Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
 > [!NOTE]
-> A veces, querrás vincular a ejemplos dados en otra página.
+> A veces, querrás enlazar a ejemplos dados en otra página.
 >
-> **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
+> **Escenario 1:** Si tienes algunos ejemplos en esta página y más ejemplos en otra página:
 >
-> Incluya un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puede vincular los ejemplos en otras páginas. Por ejemplo:
+> Incluye un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", debajo del cual puedes enlazar a los ejemplos en otras páginas. Por ejemplo:
 >
 > ```md
 > ## Ejemplos
 >
-> ### Uso de la API fetch
+> ### Usar la API fetch
 >
 > Ejemplo de Fetch
 >
@@ -117,34 +127,29 @@ Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Wr
 >
 > **Escenario 2:** Si _solo_ tienes ejemplos en otra página y ninguno en esta página:
 >
-> No añada ningún encabezado H3; solo añada los enlaces directamente debajo del encabezado H2 "Ejemplos". Por ejemplo:
+> No agregues ningún encabezado H3; solo agrega los enlaces directamente bajo el encabezado H2 "Ejemplos". Por ejemplo:
 >
 > ```md
 > ## Ejemplos
 >
-> Para ver ejemplos de esta API, consulte [la página en fetch()](https://example.org).
+> Para ejemplos de esta API, consulta [la página sobre fetch()](https://example.org/).
 > ```
-
-## Problemas de accesibilidad
-
-Opcionalmente, advierte sobre cualquier posible problema de accesibilidad con el uso de este selector y cómo solucionarlo.
-Elimine esta sección si no hay una lista.
 
 ## Especificaciones
 
 `\{{Specifications}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
 `\{{Compat}}`
 
-_Para usar esta macro, elimine las comillas invertidas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
 
-## Veáse también
+## Véase también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con el selector actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el selector actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
