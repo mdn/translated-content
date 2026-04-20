@@ -1,8 +1,9 @@
 ---
-title: font-variation-settings
+title: Propriété CSS `font-variation-settings`
+short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variation-settings`** permet de contrôler de façon fine les caractéristiques des [polices variables](/fr/docs/Web/CSS/Guides/Fonts/Variable_fonts) en définissant les noms d'axes à quatre lettres des caractéristiques à faire varier ainsi que leurs valeurs.

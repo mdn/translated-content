@@ -1,8 +1,9 @@
 ---
-title: clip-rule
+title: Propriété CSS `clip-rule`
+short-title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
 l10n:
-  sourceCommit: 13f5bce7caf7be6e4156655d827e5927091310b9
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clip-rule`** détermine, lorsque des parties du chemin se superposent à d'autres, quels pixels dans la boîte du masque sont à l'intérieur de la forme de découpe définie par un [chemin de découpe](/fr/docs/Web/CSS/Reference/Properties/clip-path) et lesquels sont à l'extérieur.

@@ -1,8 +1,9 @@
 ---
-title: border-left-style
+title: Propriété CSS `border-left-style`
+short-title: border-left-style
 slug: Web/CSS/Reference/Properties/border-left-style
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-left-style`** permet de définir le style de ligne de la {{CSSxRef("border")}} à gauche d'un élément.
