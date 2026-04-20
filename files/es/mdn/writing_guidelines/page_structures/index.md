@@ -8,6 +8,6 @@ l10n:
 {{MDNSidebar}}
 
 A lo largo de MDN existen estructuras de documentos que se utilizan para proporcionar una presentación coherente de la información en los artículos de MDN.
-Esta página enumera artículos que describen estas estructuras para que pueda modificar el contenido de la página de manera adecuada para los documentos que escribe, edita o traduce.
+Esta página enumera artículos que describen estas estructuras para que puedas modificar el contenido de la página de manera adecuada para los documentos que escribe, edita o traduce.
 
 {{LandingPageListSubPages()}}

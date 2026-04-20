@@ -2,7 +2,7 @@
 title: Guías de escritura
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{MDNSidebar}}
@@ -55,10 +55,10 @@ MDN Web Docs es un proyecto de código abierto. Las secciones que se describen a
       - : Hay muchas maneras diferentes de incluir ejemplos de código en las páginas. Esta sección los describe y proporciona pautas de sintaxis para los diferentes lenguajes.
 
     - [Banners y avisos](/es/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
-      - : A veces, un artículo necesita que se le agregue un aviso especial. Esto podría suceder si la página cubre tecnología obsoleta u otro material que no debería usarse en el código de producción. Este artículo cubre los casos más comunes y cómo manejarlos.
+      - : A veces, un artículo necesita que se le agregue un aviso especial. Esto podría suceder si la página cubre tecnología obsoleta u otro material que no debe usarse en el código de producción. Este artículo cubre los casos más comunes y cómo manejarlos.
 
     - [Tablas de especificaciones](/es/docs/MDN/Writing_guidelines/Page_structures/Specification_tables)
-      - : Cada página de referencia en MDN Web Docs debe proporcionar información sobre la especificación o especificaciones en las que se definió esa API o tecnología. Este artículo muestra el aspecto de estas tablas y explica cómo agregarlas.
+      - : Cada página de referencia en MDN Web Docs debes proporcionar información sobre la especificación o especificaciones en las que se definió esa API o tecnología. Este artículo muestra el aspecto de estas tablas y explica cómo agregarlas.
 
     - [Tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)
       - : MDN Web Docs tiene un formato estándar para tablas de compatibilidad para nuestra documentación web abierta. Este artículo explica cómo agregar y mantener la base de datos que se utiliza para generar las tablas de compatibilidad y cómo integrar las tablas en los artículos.

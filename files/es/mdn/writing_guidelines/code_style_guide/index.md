@@ -3,7 +3,7 @@ title: Directrices para escribir ejemplos de código
 slug: MDN/Writing_guidelines/Code_style_guide
 original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 l10n:
-  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
+  sourceCommit: 7ff752fba26e0bb950998bb5476157ff96c7d314
 ---
 
 {{MDNSidebar}}
@@ -26,7 +26,7 @@ Los ejemplos de código que agregues a MDN Web Docs deben ser:
 - lo suficientemente simples como para ser comprensibles, pero
 - lo suficientemente complejos como para hacer algo interesante, y preferiblemente útiles.
 
-Existe una consideración general que debes tener en cuenta: **Los lectores copiarán y pegarán el fragmento de código en su propio código y es posible que lo utilicen en producción.**
+Existe una consideración general que debes tener en cuenta: **Los lectores copiarán y pegarán el fragmento de código en su propio código y es posible que lo usan en producción.**
 
 Por lo tanto, debes asegurarte de que el ejemplo de código sea utilizable, siga las mejores prácticas generalmente aceptadas y **no** realice acciones que puedan hacer que una aplicación sea insegura, ineficiente, abultada o inaccesible. Si el ejemplo de código no es ejecutable o no es apto para producción, asegúrate de incluir una advertencia en un comentario de código y en el texto explicativo; por ejemplo, si es solo un fragmento y no un ejemplo completo, deja esto claro. Esto también significa que debes proporcionar **toda** la información necesaria para ejecutar el ejemplo, incluidas las dependencias e información de configuración.
 
@@ -34,8 +34,8 @@ Los ejemplos de código deben ser lo más autosuficientes y comprensibles posibl
 
 Algunas mejores prácticas adicionales incluyen:
 
-- El ejemplo de código debe ser corto y mostrar idealmente solo la característica que te interesa de inmediato.
-- **Solo** incluye el código que es esencial para el ejemplo. Una gran cantidad de código no relevante puede distraer o confundir fácilmente al lector. Si deseas proporcionar un ejemplo completo y más extenso, colócalo en uno de nuestros [repositorios de GitHub](https://github.com/mdn/) (o en JSBin, Codepen u otro similar) y luego proporciona el enlace a la versión completa arriba o debajo del fragmento.
+- El ejemplo de código debes ser corto y mostrar idealmente solo la característica que te interesa de inmediato.
+- **Solo** incluye el código que es esencial para el ejemplo. Una gran cantidad de código no relevante puedes distraer o confundir fácilmente al lector. Si quieres proporcionar un ejemplo completo y más extenso, colócalo en uno de nuestros [repositorios de GitHub](https://github.com/mdn/) (o en JSBin, Codepen u otro similar) y luego proporciona el enlace a la versión completa arriba o debajo del fragmento.
 - No incluyas código innecesario del lado del servidor, bibliotecas, marcos de trabajo (_frameworks_), preprocesadores y otras dependencias similares. Esto dificulta la portabilidad y la comprensión del código. Usa código simple siempre que sea posible.
 - No asumas el conocimiento de los lectores sobre bibliotecas, marcos, preprocesadores u otras características no nativas. Por ejemplo, utiliza nombres de clases que tengan sentido dentro del ejemplo en lugar de nombres de clases que tengan sentido para usuarios de BEM o Bootstrap.
 - Escribe tu código de manera limpia y comprensible, incluso si no es la forma más eficiente de escribirlo.
@@ -60,7 +60,7 @@ Para garantizar el formato adecuado y el resaltado de sintaxis de los bloques de
 Si el bloque de código es pseudocódigo, la salida de un comando, o de alguna manera no es un lenguaje de programación, establece explícitamente el lenguaje como `plain`.
 
 > [!WARNING]
-> Si el lenguaje deseado aún no es compatible con MDN, **no** establezcas el lenguaje de un bloque de código en un lenguaje similar, ya que hacerlo puede tener efectos secundarios no deseados con el formato de Prettier y el resaltado de sintaxis.
+> Si el lenguaje deseado aún no es compatible con MDN, **no** establezcas el lenguaje de un bloque de código en un lenguaje similar, ya que hacerlo puedes tener efectos secundarios no deseados con el formato de Prettier y el resaltado de sintaxis.
 
 ### Longitud de línea de código
 

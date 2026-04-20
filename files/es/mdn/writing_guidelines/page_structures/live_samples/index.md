@@ -9,7 +9,7 @@ l10n:
 
 MDN admite la visualización de bloques de código dentro de los artículos como _ejemplos en vivo_, lo que permite a los lectores ver tanto el código como su salida tal como se vería en una página web. Esta característica permite a los lectores comprender exactamente qué produciría el código ejecutado, haciendo que la documentación sea dinámica e instructiva. También permite a los autores asegurarse de que los bloques de código en la documentación tengan la salida esperada y funcionen correctamente cuando se usen con diferentes navegadores.
 
-El sistema de ejemplos en vivo puede procesar bloques de código escritos en HTML, CSS y JavaScript, sin importar el orden en el que estén escritos en la página. Esto garantiza que la salida corresponda al código fuente combinado porque el sistema ejecuta el código directamente dentro de la página.
+El sistema de ejemplos en vivo puedes procesar bloques de código escritos en HTML, CSS y JavaScript, sin importar el orden en el que estén escritos en la página. Esto garantiza que la salida corresponda al código fuente combinado porque el sistema ejecuta el código directamente dentro de la página.
 
 A diferencia de los [ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#%C2%BFqu%C3%A9_tipos_de_ejemplos_de_c%C3%B3digo_est%C3%A1n_disponibles), los ejemplos en vivo no proporcionan soporte integrado para capturar registros de consola o restablecer ejemplos que han sido modificados por la entrada del usuario. La sección [Ejemplos](#ejemplos) muestra cómo puedes implementar estas y otras características útiles.
 
@@ -20,7 +20,7 @@ El sistema de ejemplos en vivo agrupa bloques de código, los combina en HTML y 
 - Uno o más bloques de código agrupados juntos
 - Una llamada a una macro que muestra el resultado de los bloques de código combinados en un {{HTMLElement("iframe")}}
 
-Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) que contiene código para la salida tiene un identificador de lenguaje—`html`, `css` o `js`—que especifica si es código HTML, CSS o JavaScript. Los identificadores de lenguaje deben estar en los bloques de código correspondientes, y debe haber una llamada a la macro (`EmbedLiveSample`) en la página para mostrar la salida:
+Cada [bloque de código](/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) que contiene código para la salida tiene un identificador de lenguaje—`html`, `css` o `js`—que especifica si es código HTML, CSS o JavaScript. Los identificadores de lenguaje deben estar en los bloques de código correspondientes, y debes haber una llamada a la macro (`EmbedLiveSample`) en la página para mostrar la salida:
 
 ````md
 ## Ejemplos
@@ -80,7 +80,7 @@ Solo el elemento `<p>` con `class="fancy"` se estilizará en `red`.
 - Si el ID pertenece a un elemento de bloque, el grupo incluye todos los bloques de código dentro del elemento de bloque que tenga el ID utilizado.
 - Si el ID pertenece a un encabezado, el grupo incluye todos los bloques de código que están después de ese encabezado y antes del siguiente encabezado del mismo nivel. Ten en cuenta que los bloques de código bajo subencabezados del encabezado especificado también se incluyen; si este no es el efecto que deseas, usa un ID en un elemento de bloque o utiliza un identificador de cadena en su lugar.
 
-Para agrupar bloques de código utilizando un identificador, agrega una cadena en el formato `live-sample___{IDENTIFICADOR}` a la cadena de información del bloque de código. El identificador debe ser único para los bloques de código que deseas agrupar. Por ejemplo, `live-sample___color-picker` usa `color-picker` como identificador para el sistema de muestra en vivo, y todos los bloques de código con `live-sample___color-picker` en su cadena de información se combinan en la muestra en vivo.
+Para agrupar bloques de código utilizando un identificador, agrega una cadena en el formato `live-sample___{IDENTIFICADOR}` a la cadena de información del bloque de código. El identificador debes ser único para los bloques de código que deseas agrupar. Por ejemplo, `live-sample___color-picker` usa `color-picker` como identificador para el sistema de muestra en vivo, y todos los bloques de código con `live-sample___color-picker` en su cadena de información se combinan en la muestra en vivo.
 
 El siguiente ejemplo agrupa un bloque de código CSS y uno de JavaScript usando el identificador `color-picker`:
 
@@ -110,7 +110,7 @@ Solo el elemento `<p>` con `class="fancy"` se mostrará en rojo:
 
 La macro usa una URL especial que incluye el ID para obtener el resultado de un grupo de bloques de código determinado. Nunca debes codificar manualmente esta URL en el contenido; si necesitas enlazar al ejemplo, usa la macro [`LiveSampleLink`](#livesamplelink_macro).
 
-El marco resultante (o página) está en modo sandbox, es seguro y técnicamente puede hacer cualquier cosa que funcione en la web. Por supuesto, en la práctica, el código debe ser relevante para el contenido de la página; cualquier material no relacionado está sujeto a eliminación por parte de la comunidad editorial de MDN.
+El marco resultante (o página) está en modo sandbox, es seguro y técnicamente puedes hacer cualquier cosa que funcione en la web. Por supuesto, en la práctica, el código debes ser relevante para el contenido de la página; cualquier material no relacionado está sujeto a eliminación por parte de la comunidad editorial de MDN.
 
 El sistema de muestras en vivo tiene muchas opciones disponibles, y trataremos de desglosarlas paso a paso.
 
@@ -121,7 +121,7 @@ Hay dos macros que puedes usar para mostrar muestras en vivo:
 - [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) incrusta una muestra en vivo en una página.
 - [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) crea un enlace que abre la muestra en vivo en una nueva página.
 
-En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a las páginas con poco o ningún trabajo adicional. Siempre que la muestra pueda identificarse mediante el ID de un encabezado o esté en un bloque con un ID que puedas usar, agregar la macro debería ser suficiente.
+En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a las páginas con poco o ningún trabajo adicional. Siempre que la muestra pueda identificarse mediante el ID de un encabezado o esté en un bloque con un ID que puedas usar, agregar la macro debesría ser suficiente.
 
 #### Macro EmbedLiveSample
 
@@ -130,13 +130,13 @@ En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a 
 ```
 
 - `sample_id`
-  - : Requerido: Puede ser el identificador de cadena de la muestra o el ID del encabezado o bloque contenedor de donde extraer el código. Para verificar si tiene el ID de encabezado correcto, mire la URL de la sección en la tabla de contenido de la página; también puede comprobarlo viendo el código fuente de la página.
+  - : Requerido: Puedes ser el identificador de cadena de la muestra o el ID del encabezado o bloque contenedor de donde extraer el código. Para para verificar si tienes el ID de encabezado correcto, mira la URL de la sección en la tabla de contenido de la página; también puedes comprobarlo viendo el código fuente de la página.
 - `width` {{deprecated_inline}}
   - : Atributo `width` del {{HTMLElement("iframe")}}, especificado en `px`. Ya no tiene efecto: las muestras en vivo siempre ocupan todo el ancho del área de contenido.
 - `height`
-  - : Atributo `height` del {{HTMLElement("iframe")}}, especificado en `px`. Debe ser al menos `60`. Es opcional; se usará un valor predeterminado razonable si se omite.
+  - : Atributo `height` del {{HTMLElement("iframe")}}, especificado en `px`. Debes ser al menos `60`. Es opcional; se usará un valor predeterminado razonable si se omite.
 - `screenshot_URL` {{deprecated_inline}}
-  - : URL de una captura de pantalla que muestra cómo debería verse la muestra en vivo. Obsoleto; solo agregue muestras en vivo si existe un soporte razonable del navegador.
+  - : URL de una captura de pantalla que muestra cómo debesría verse la muestra en vivo. Obsoleto; solo agregue muestras en vivo si existe un soporte razonable del navegador.
 - `page_slug` {{deprecated_inline}}
   - : Identificador de la página que contiene la muestra. Si se omite, se toma de la misma página donde se usa la macro. Obsoleto; solo incluya muestras en vivo si el código está en la misma página.
 - `class_name` {{deprecated_inline}}
@@ -151,7 +151,7 @@ En muchos casos, puedes agregar la macro `EmbedLiveSample` o `LiveSampleLink` a 
 ```
 
 - `block_ID`
-  - : ID del encabezado o bloque contenedor de donde extraer el código. La mejor forma de asegurarse de que tiene el ID correcto es mirar la URL de la sección en la tabla de contenidos de la página; también puede comprobarlo viendo el código fuente de la página.
+  - : ID del encabezado o bloque contenedor de donde extraer el código. La mejor forma de asegurarse de que tiene el ID correcto es mirar la URL de la sección en la tabla de contenidos de la página; también puedes comprobarlo viendo el código fuente de la página.
 - `link_text`
   - : Cadena de texto a utilizar como texto del enlace.
 
@@ -176,7 +176,7 @@ Si no usas un tipo de lenguaje en particular (por ejemplo, si no usas JavaScript
 
 ### Ocultando código
 
-A veces, solo deseas mostrar el bloque de código estático correspondiente al ejemplo representado dentro de una página. Sin embargo, aún necesita los bloques de código HTML, CSS y JavaScript para representar dicho ejemplo.
+A veces, solo deseas mostrar el bloque de código estático correspondiente al ejemplo representado dentro de una página. Sin embargo, aún necesitas los bloques de código HTML, CSS y JavaScript para representar dicho ejemplo.
 
 Para lograrlo, puedes ocultar los bloques de código que no sean relevantes agregando la cadena de información `hidden` al identificador de lenguaje. Si lo haces, omite los encabezados `### HTML/CSS/JavaScript` para los bloques de código ocultos.
 
@@ -214,16 +214,16 @@ Solo el elemento `<p>` con `class="fancy"` se mostrará en rojo.
 Un caso de uso común es tomar fragmentos de código ya mostrados en MDN y convertirlos en ejemplos en vivo.
 El primer paso es agregar fragmentos de código o asegurarse de que los existentes estén listos para usarse como ejemplos en vivo, tanto en términos de contenido como de marcado. Los fragmentos de código, en conjunto, deben constituir un ejemplo completo y ejecutable. Por ejemplo, si el fragmento existente solo muestra CSS, es posible que necesites agregar un fragmento de HTML para que el CSS tenga un elemento sobre el cual aplicarse.
 
-Cada pieza de código debe estar en un bloque de código separado para cada lenguaje, correctamente marcado con su tipo de lenguaje. La mayor parte del tiempo, esto ya estará hecho, pero siempre es bueno verificar que cada pieza de código esté configurada con la sintaxis correcta. Esto se hace con un identificador de lenguaje en el bloque de código del tipo `language-type`, donde _language-type_ es el tipo de lenguaje que contiene el bloque, por ejemplo, `html`, `css` o `js`.
+Cada pieza de código debes estar en un bloque de código separado para cada lenguaje, correctamente marcado con su tipo de lenguaje. La mayor parte del tiempo, esto ya estará hecho, pero siempre es bueno verificar que cada pieza de código esté configurada con la sintaxis correcta. Esto se hace con un identificador de lenguaje en el bloque de código del tipo `language-type`, donde _language-type_ es el tipo de lenguaje que contiene el bloque, por ejemplo, `html`, `css` o `js`.
 
 > [!NOTE]
-> Puedes tener más de un bloque para cada lenguaje; todos se concatenan juntos. Esto permite tener un fragmento de código seguido de una explicación de su funcionamiento, luego otro fragmento, y así sucesivamente. Esto facilita la creación de tutoriales y otros contenidos que utilicen ejemplos en vivo intercalados con texto explicativo.
+> Puedes tener más de un bloque para cada lenguaje; todos se concatenan juntos. Esto permite tener un fragmento de código seguido de una explicación de su funcionamiento, luego otro fragmento, y así sucesivamente. Esto facilita la creación de tutoriales y otros contenidos que usan ejemplos en vivo intercalados con texto explicativo.
 
 Asegúrate de que los bloques de código para tu HTML, CSS y/o JavaScript estén configurados correctamente para el resaltado de sintaxis del lenguaje correspondiente, y estarás listo para continuar.
 
 ## Ejemplos
 
-Esta sección contiene ejemplos que muestran cómo se puede usar el sistema de ejemplos en vivo, incluidas las diferentes formas de agrupar los bloques de código que componen un ejemplo y cómo mostrar la salida del registro en los ejemplos.
+Esta sección contiene ejemplos que muestran cómo se puedes usar el sistema de ejemplos en vivo, incluidas las diferentes formas de agrupar los bloques de código que componen un ejemplo y cómo mostrar la salida del registro en los ejemplos.
 
 Ten en cuenta que los encabezados de los bloques de código ("HTML", "CSS" o "JavaScript") se usan por convención en la mayoría de los ejemplos de MDN, pero no son estrictamente necesarios para la macro de ejemplo en vivo.
 
@@ -349,7 +349,7 @@ Resultado de `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
 
 ### Permitir caracterísitcas
 
-El parámetro `allow` se puede usar para especificar las funciones permitidas en el elemento `<iframe>` que contiene la salida del ejemplo en vivo. Los valores disponibles provienen de la [sintaxis de política de permisos para iframes](/es/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+El parámetro `allow` se puedes usar para especificar las funciones permitidas en el elemento `<iframe>` que contiene la salida del ejemplo en vivo. Los valores disponibles provienen de la [sintaxis de política de permisos para iframes](/es/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
 
 ```html
 <div id="fullscreen-content">
@@ -382,7 +382,7 @@ Resultado de `\{{EmbedLiveSample("Permitir_caracterísitcas", "", "60")}}`:
 
 Este ejemplo muestra cómo implementar un registro de entrada único en tu muestra en vivo, donde el valor anterior se reemplaza cada vez que se agrega una nueva entrada al registro.
 
-Para mayor claridad, este ejemplo separa el código de registro del código que lo usa y muestra primero el código de registro. Generalmente, cuando implementes tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
+Para mayor claridad, este ejemplo separa el código de registro del código que lo usa y muestra primero el código de registro. Generalmente, cuando implementes tus propios ejemplos, debesrías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
 
 > [!NOTE]
 > Mostrar la salida del registro como parte del ejemplo proporciona una mejor experiencia de usuario que usar `console.log()`.
@@ -420,7 +420,7 @@ El CSS establece la altura del elemento de registro.
 
 #### Código de prueba del registro
 
-Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante. Se implementa trivialmente como un botón que el usuario puede presionar para incrementar un valor.
+Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante. Se implementa trivialmente como un botón que el usuario puedes presionar para incrementar un valor.
 
 ```html
 <button id="increment" type="button">Presióname varias veces</button>
@@ -447,7 +447,7 @@ Este ejemplo muestra cómo implementar una simple "consola de registro" en tu ej
 La consola agrega una nueva línea al final de la salida cada vez que se añade un nuevo registro, desplazando el nuevo elemento a la vista.
 
 Para mayor claridad, este ejemplo separa el código de registro del código que lo utiliza y muestra primero el código de registro.
-Generalmente, al implementar tus propios ejemplos, deberías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
+Generalmente, al implementar tus propios ejemplos, debesrías colocar los elementos de registro debajo de otros elementos de la interfaz de usuario.
 
 > [!NOTE]
 > Mostrar la salida del registro como parte del ejemplo proporciona una experiencia de usuario mucho mejor que usar `console.log()`.
@@ -496,7 +496,7 @@ Ten en cuenta que el código JavaScript anterior asegura que, si el contenido de
 #### Código de prueba de registro
 
 Este ejemplo está diseñado para mostrar "cómo registrar", por lo que "lo que se registra" no es tan importante.
-Por lo tanto, se implementa de manera trivial como un botón que el usuario puede presionar para incrementar un valor.
+Por lo tanto, se implementa de manera trivial como un botón que el usuario puedes presionar para incrementar un valor.
 
 ```html
 <button id="increment" type="button">Presióname varias veces</button>
@@ -519,8 +519,8 @@ Presiona el botón para agregar un nuevo contenido de registro.
 
 ### Mostrar un botón de reinicio
 
-Un botón de reinicio puede ser útil para ejemplos que no pueden restaurarse a su estado inicial sin recargar la página.
-Por ejemplo, el [ejemplo de `Highlight.priority` "estableciendo prioridad"](/es/docs/Web/API/Highlight/priority#resultado_2) necesita un botón de reinicio, ya que una vez que se ha establecido cualquier prioridad, el estado inicial ya no está disponible.
+Un botón de reinicio puedes ser útil para ejemplos que no puedesn restaurarse a su estado inicial sin recargar la página.
+Por ejemplo, el [ejemplo de `Highlight.priority` "estableciendo prioridad"](/es/docs/Web/API/Highlight/priority#resultado_2) necesitas un botón de reinicio, ya que una vez que se ha establecido cualquier prioridad, el estado inicial ya no está disponible.
 
 Este ejemplo muestra cómo agregar un botón de reinicio al ejemplo [Mostrar un registro que agrega elementos](#mostrar_un_registro_que_agrega_elementos) anterior.
 Ten en cuenta que el código JavaScript y CSS para el registro es el mismo que en el ejemplo anterior, por lo que ese código se oculta.
@@ -581,8 +581,8 @@ Reinicia el ejemplo presionando el botón "Reiniciar".
 ### Convenciones sobre muestras en vivo
 
 - Orden de los bloques de código
-  - : Al agregar una muestra en vivo, los bloques de código deben estar ordenados de manera que el primero corresponda al lenguaje principal de la muestra (si lo hay). Por ejemplo, cuando se agrega una muestra en vivo para la referencia de HTML, el primer bloque debe ser HTML; cuando se agrega una muestra para la referencia de CSS, debe ser CSS, y así sucesivamente.
+  - : Al agregar una muestra en vivo, los bloques de código deben estar ordenados de manera que el primero corresponda al lenguaje principal de la muestra (si lo hay). Por ejemplo, cuando se agrega una muestra en vivo para la referencia de HTML, el primer bloque debes ser HTML; cuando se agrega una muestra para la referencia de CSS, debes ser CSS, y así sucesivamente.
 - Nombres de los encabezados
-  - : Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puede usar un título más descriptivo.
+  - : Cuando no haya ambigüedad (por ejemplo, si la muestra está en una sección "Ejemplos"), los encabezados deben ser directos y usar solo el nombre del lenguaje correspondiente: HTML, CSS, JavaScript, SVG, etc. (ver arriba). No se deben usar encabezados como "Contenido HTML" o "Contenido JavaScript". Sin embargo, si un encabezado tan corto hace que el contenido sea poco claro, se puedes usar un título más descriptivo.
 - Uso de un bloque "Resultado"
   - : Después de los diferentes bloques de código, por favor usa un último bloque "Resultado" antes de utilizar la macro `EmbedLiveSample` (ver arriba). De esta manera, la semántica del ejemplo es más clara tanto para el lector como para cualquier herramienta que analice la página (por ejemplo, lectores de pantalla, rastreadores web).

@@ -15,7 +15,7 @@ l10n:
 > **Metadatos de la página:**
 >
 > La información al inicio de la página se utiliza para definir "metadatos de la página".
-> Los valores deben actualizarse apropiadamente para la propiedad particular.
+> Los valores debesn actualizarse apropiadamente para la propiedad particular.
 >
 > ```md
 > ---
@@ -35,13 +35,13 @@ l10n:
 >     Por ejemplo, la propiedad [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) tiene un título de _background-color_.
 > - **slug**
 >   - : El valor de `slug` es el final de la ruta URL después de `https://developer.mozilla.org/es/docs/`. Esto se formateará como `Web/CSS/NombreDeLaPropiedad`.
->     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debería usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
+>     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debesría usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
 > - **page-type**
 >   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/Reference/Properties/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/Reference/Properties/animation-delay) es `css-property`.
 > - **status**
->   - : Si corresponde, el valor de la clave de tecnología `status` puede ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
+>   - : Si corresponde, el valor de la clave de tecnología `status` puedes ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
 > - **browser-compat**
->   - : Reemplace el valor de marcador de posición <code>css.properties.NombreDeLaPropiedad</code> con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Consulte la sección _Otros macros en la página_ de este bloque de nota para ver cómo se utiliza esta clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con el navegador_.
+>   - : Reemplace el valor de marcador de posición <code>css.properties.NombreDeLaPropiedad</code> con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/properties). Consulta la sección _Otros macros en la página_ de este bloque de nota para ver cómo se utiliza esta clave-valor para generar contenido para las secciones _Especificaciones_ y _Compatibilidad con el navegador_.
 >
 > ---
 >
@@ -51,12 +51,12 @@ l10n:
 > Debe actualizarlos o eliminarlos según el consejo a continuación:
 >
 > - `\{{SeeCompatTable}}`: Esta macro genera un banner **Experimental**, que indica que la tecnología está [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   Si la tecnología que está documentando no es experimental, puede eliminar esta macro.
->   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debe completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
+>   Si la tecnología que está documentando no es experimental, puedes eliminar esta macro.
+>   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
 > - `\{{Deprecated_Header}}`: Esta macro genera un banner **Deprecated**, que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   Si no lo está, entonces puede eliminar la llamada a la macro.
-> - `\{{CSSRef}}`: Esta macro debe estar presente en cada página de propiedad de CSS. Genera una barra lateral de CSS adecuada, dependiendo de las etiquetas incluidas en la página.
->   Recuerde eliminar la macro `\{{MDNSidebar}}` cuando use esta plantilla.
+>   Si no lo está, entonces puedes eliminar la llamada a la macro.
+> - `\{{CSSRef}}`: Esta macro debes estar presente en cada página de propiedad de CSS. Genera una barra lateral de CSS adecuada, dependiendo de las etiquetas incluidas en la página.
+>   Recuerda eliminar la macro `\{{MDNSidebar}}` cuando use esta plantilla.
 >
 > Se muestran ejemplos de los banners **Experimental** y **Deprecated** justo después de este bloque de nota.
 >
@@ -65,17 +65,17 @@ l10n:
 > **Otras macros en la página**
 >
 > - Sección de sintaxis formal: El contenido de la sección _Sintaxis formal_ se genera utilizando la macro `\{{CSSSyntax}}`. Esta macro obtiene datos de las especificaciones utilizando el paquete npm [@webref/css](https://www.npmjs.com/package/@webref/css).
-> - Sección de definición formal: El contenido de la sección _Definición formal_ se genera utilizando la macro `\{{CSSInfo}}`. Para que esta sección tenga datos, debe asegurarse de que se haya completado una entrada adecuada para la propiedad correspondiente en el archivo de datos [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) en el repositorio `mdn/data`. Consulte la página [Properties](https://github.com/mdn/data/blob/main/css/properties.md) para obtener más información.
+> - Sección de definición formal: El contenido de la sección _Definición formal_ se genera utilizando la macro `\{{CSSInfo}}`. Para que esta sección tenga datos, debes asegurarse de que se haya completado una entrada adecuada para la propiedad correspondiente en el archivo de datos [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) en el repositorio `mdn/data`. Consulta la página [Properties](https://github.com/mdn/data/blob/main/css/properties.md) para obtener más información.
 > - Secciones de Especificaciones y Compatibilidad con el navegador: La herramienta de compilación utiliza automáticamente el par clave-valor `browser-compat` de los metadatos de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con el navegador_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
 >
->   Tenga en cuenta que puede que primero necesite crear/actualizar una entrada para la propiedad y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad con navegadores</a>.
->   Consulte nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo agregar o editar entradas.
+>   Ten en cuenta que puede que primero necesite crear/actualizar una entrada para la propiedad y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad con navegadores</a>.
+>   Consulta nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo agregar o editar entradas.
 >
-> _Recuerde eliminar este bloque de nota antes de publicar._
+> _Recuerda eliminar este bloque de nota antes de publicar._
 
 {{SeeCompatTable}}{{deprecated_header}}
 
-Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y diga qué hace. Idealmente, esto debería ser una o dos frases cortas.
+Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y diga qué hace. Idealmente, esto debesría ser una o dos frases cortas.
 
 ## Pruébalo
 
@@ -127,7 +127,7 @@ Nota que usamos el plural "Ejemplos" incluso si la página solo contiene un ejem
 
 ### Agregar un título descriptivo
 
-Cada ejemplo debe tener un título H3 (`###`) que nombre el ejemplo. El título debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen título. El título debe ser conciso. Para una descripción más larga, usa el párrafo después del título.
+Cada ejemplo debes tener un título H3 (`###`) que nombre el ejemplo. El título debes ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen título. El título debes ser conciso. Para una descripción más larga, usa el párrafo después del título.
 
 Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
@@ -162,7 +162,7 @@ Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Wr
 
 ## Preocupaciones de accesibilidad
 
-Esta es una sección opcional. Puedes incluir cualquier advertencia aquí para las preocupaciones de accesibilidad que los desarrolladores deben tener en cuenta al usar esta propiedad. También puedes incluir soluciones alternativas para estas preocupaciones de accesibilidad si las hay.
+Esta es una sección opcional. Puedes incluir cualquier advertencia aquí para las preocupaciones de accesibilidad que los desarrolladores debesn tener en cuenta al usar esta propiedad. También puedes incluir soluciones alternativas para estas preocupaciones de accesibilidad si las hay.
 
 ## Especificaciones
 

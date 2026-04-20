@@ -11,13 +11,13 @@ l10n:
 
 ### Title y slug
 
-Una página de rol de ARIA debe tener un `title` y un `slug` de `ARIA: Nombre del rol`. Por ejemplo, el [rol de botón](/es/docs/Web/Accessibility/ARIA/Roles/button_role) tiene un `title` y `slug` de `ARIA/NameOfTheRole_role` y el atributo [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) tiene un `title` de `aria-labelledby`.
+Una página de rol de ARIA debes tener un `title` y un `slug` de `ARIA: Nombre del rol`. Por ejemplo, el [rol de botón](/es/docs/Web/Accessibility/ARIA/Roles/button_role) tiene un `title` y `slug` de `ARIA/NameOfTheRole_role` y el atributo [aria-labelledby](/es/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) tiene un `title` de `aria-labelledby`.
 
 ### Principales macros
 
 Aparecen varias llamadas a macros en la parte superior de la sección de contenido. Debes actualizarlos o eliminarlos de acuerdo con los siguientes consejos:
 
-- \\{{deprecated_header}}: genera un banner de **Obsoleto** que indica que la tecnología está [obsoleta](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Si no es así, puede eliminar la llamada de macro.
+- \\{{deprecated_header}}: genera un banner de **Obsoleto** que indica que la tecnología está [obsoleta](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated). Si no es así, puedes eliminar la llamada de macro.
 - \\{{ariaref}}: genera un menú lateral ARIA adecuado, dependiendo de las etiquetas que se incluyan en la página.
 
 ### Etiquetas
@@ -38,17 +38,17 @@ Recursos adicionales:
 
 ## Plantilla de página
 
-El párrafo de resumen comienza nombrando el rol o atributo y diciendo lo que hace. Idealmente, esto debería consistir en 1 o 2 oraciones cortas. Este contenido aparece como una sugerencia de herramienta en los enlaces a esta página, así que elabóralo bien.
+El párrafo de resumen comienza nombrando el rol o atributo y diciendo lo que hace. Idealmente, esto debesría consistir en 1 o 2 oraciones cortas. Este contenido aparece como una sugerencia de herramienta en los enlaces a esta página, así que elabóralo bien.
 
 ```html
 <!-- Insertar bloque de código que muestre casos de uso comunes-->
 ```
 
-(Opcional) Incluya una breve descripción del ejemplo anterior.
+(Opcional) Incluye una breve descripción del ejemplo anterior.
 
 ## Descripción
 
-Incluya una descripción completa del atributo o rol.
+Incluye una descripción completa del atributo o rol.
 
 ### Roles, estados y propiedades de ARIA asociados
 
@@ -71,20 +71,20 @@ Incluya una descripción completa del atributo o rol.
 
 ## Ejemplos
 
-Tenga en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
+Ten en cuenta que usamos el plural "Ejemplos" incluso si la página solo contiene un ejemplo.
 
 ### Un encabezado descriptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
+Cada ejemplo debes tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debes ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debes ser conciso. Para una descripción más larga, use el párrafo después del encabezado.
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 
 > [!NOTE]
 > A veces querrás enlazar a ejemplos dados en otra página.
 >
-> **Escenario 1:** Si tiene algunos ejemplos en esta página y algunos ejemplos más en otra página:
+> **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos ejemplos más en otra página:
 >
-> Incluya un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puede vincular los ejemplos en otras páginas. Por ejemplo:
+> Incluye un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 final (`###`) con el texto "Más ejemplos", bajo el cual puedes vincular los ejemplos en otras páginas. Por ejemplo:
 >
 > ```md
 > ## Ejemplos
@@ -105,7 +105,7 @@ Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Wr
 > ```md
 > ## Ejemplos
 >
-> Para ver ejemplos de esta API, consulte [la página en fetch()](https://example.org).
+> Para ver ejemplos de esta API, consulta [la página en fetch()](https://example.org).
 > ```
 
 ## Problemas de accesibilidad
@@ -127,7 +127,7 @@ Cualquier beneficio adicional que esta función tenga para los usuarios no típi
 
 `\{{Specifications}}`
 
-_Recuerde eliminar las comillas invertidas y la barra invertida para usar esta macro._
+_Recuerda eliminar las comillas invertidas y la barra invertida para usar esta macro._
 
 ## Orden de precedencia
 
@@ -135,9 +135,9 @@ _Recuerde eliminar las comillas invertidas y la barra invertida para usar esta m
 
 ## Compatibilidad con lectores de pantalla
 
-## Vease también
+## Ve ase también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con el rol o atributo actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el rol o atributo actual. Para obtener más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo_.
 
 - link1
 - link2

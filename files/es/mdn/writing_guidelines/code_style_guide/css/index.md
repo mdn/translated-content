@@ -3,7 +3,7 @@ title: Directrices para escribir ejemplos de código CSS
 slug: MDN/Writing_guidelines/Code_style_guide/CSS
 original_slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 l10n:
-  sourceCommit: 4680281518d584657960f984b3b720d79b3119ab
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{MDNSidebar}}
@@ -26,11 +26,11 @@ Antes de sumergirte y escribir grandes fragmentos de CSS, planifica cuidadosamen
 
 ### Utiliza unidades flexibles/relativas
 
-Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, es una buena idea dimensionar contenedores, rellenos, etc., utilizando unidades relativas como ems y rems o porcentajes y unidades de la ventana gráfica (viewport units) si deseas que varíen según el ancho de la ventana gráfica. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
+Para obtener la máxima flexibilidad en la mayor cantidad posible de dispositivos, es una buena idea dimensionar contenedores, rellenos, etc., utilizando unidades relativas como ems y rems o porcentajes y unidades de la ventana gráfica (viewport units) si quieres que varíen según el ancho de la ventana gráfica. Puedes obtener más información sobre esto en nuestra [guía de valores y unidades CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#relative_length_units).
 
 ### No uses preprocesadores
 
-No utilices la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/), [Less](https://lesscss.org/) o [Stylus](https://stylus-lang.com/), en el código de ejemplo. En MDN Web Docs, documentamos el lenguaje CSS puro. El uso de preprocesadores solo dificultará la comprensión de los ejemplos, potencialmente confundiendo a los lectores.
+No usas la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/), [Less](https://lesscss.org/) o [Stylus](https://stylus-lang.com/), en el código de ejemplo. En MDN Web Docs, documentamos el lenguaje CSS puro. El uso de preprocesadores solo dificultará la comprensión de los ejemplos, potencialmente confundiendo a los lectores.
 
 ### No uses metodologías CSS específicas
 
@@ -122,7 +122,7 @@ Por lo general, al enseñar los detalles de la sintaxis de CSS, es más claro y 
   animation: 3s ease-in 1s 2 reverse both paused slidein;
   ```
 
-En este ejemplo, el primer valor que se puede analizar como un [`<time>`](/es/docs/Web/CSS/Reference/Values/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/Reference/Properties/animation-duration), y el segundo valor que se puede analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/Reference/Properties/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/Reference/Properties/animation#syntax).)
+En este ejemplo, el primer valor que se puedes analizar como un [`<time>`](/es/docs/Web/CSS/Reference/Values/time) se asigna a la propiedad [`animation-duration`](/es/docs/Web/CSS/Reference/Properties/animation-duration), y el segundo valor que se puedes analizar como tiempo se asigna a [`animation-delay`](/es/docs/Web/CSS/Reference/Properties/animation-delay). (Para obtener más información, consulta los detalles de la [sintaxis de animación](/es/docs/Web/CSS/Reference/Properties/animation#syntax).)
 
 ## Media queries centradas en móviles
 

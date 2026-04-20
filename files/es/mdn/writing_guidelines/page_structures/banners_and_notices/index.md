@@ -32,7 +32,7 @@ browser-compat: api.Ink
 ```
 
 Una página que tiene un banner generalmente también tendrá metadatos de página "complementarios".
-Por ejemplo, una página que tiene `\{{SeeCompatTable}}` generalmente también debe tener el estado `experimental` agregado (como se muestra arriba) para garantizar que tenga los íconos apropiados en el menú lateral.
+Por ejemplo, una página que tiene `\{{SeeCompatTable}}` generalmente también debes tener el estado `experimental` agregado (como se muestra arriba) para garantizar que tenga los íconos apropiados en el menú lateral.
 
 > [!NOTE]
 > Las macros de banner no _dependen_ de los metadatos, pero sí lo hacen algunos otros contenidos insertados con macros.

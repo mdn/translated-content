@@ -9,14 +9,14 @@ l10n:
 {{MDNSidebar}}
 
 > [!NOTE]
-> _Recuerde eliminar este bloque de notas antes de publicar._
+> _Recuerda eliminar este bloque de notas antes de publicar._
 >
 > ---
 >
 > **Metadatos de la página:**
 >
 > La parte superior de la página se utiliza para definir "metadatos de página".
-> Los valores deben actualizarse adecuadamente para el módulo en particular.
+> Los valores debesn actualizarse adecuadamente para el módulo en particular.
 >
 > ```md
 > ---
@@ -52,15 +52,15 @@ l10n:
 > **Macros al principio de la pagina**
 >
 > La macro llamada `\{{CSSRef}}` aparece en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos).
-> Esta macro debe estar presente en cada página de destino del módulo CSS. Genera una barra lateral CSS adecuada, dependiendo de las etiquetas incluidas en la página.
-> Elimine la macro `\{{MDNSidebar}}` cuando utilice esta plantilla.
+> Esta macro debes estar presente en cada página de destino del módulo CSS. Genera una barra lateral CSS adecuada, dependiendo de las etiquetas incluidas en la página.
+> Elimine la macro `\{{MDNSidebar}}` cuando usa esta plantilla.
 >
 > ---
 >
-> _Recuerde eliminar este bloque de notas antes de publicar._
+> _Recuerda eliminar este bloque de notas antes de publicar._
 
 Comience el contenido de la página con un párrafo introductorio, que nombra el módulo y dice lo que hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+Idealmente, esto debesría ser una o dos oraciones cortas.
 
 ## NombreDelModulo en acción
 
@@ -71,7 +71,7 @@ Proporcione una breve descripción de cómo los lectores pueden interactuar con 
 
 ## Referencia
 
-Cree las subsecciones relevantes para enumerar las propiedades, funciones, tipos de datos, etc. relacionados.
+Crea las subsecciones relevantes para enumerar las propiedades, funciones, tipos de datos, etc. relacionados.
 
 ### Propiedades
 
@@ -112,11 +112,11 @@ Especificaciones
 
 `\{{Specifications}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimina las comillas inveritdas y la barra invertida en el archivo de markdown._
 
-Vease también
+Ve ase también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.
+Incluye enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Ve ase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.
 
 - enlace1
 - enlace2

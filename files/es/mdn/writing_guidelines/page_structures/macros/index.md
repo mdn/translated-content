@@ -25,14 +25,14 @@ Para utilizar una macro, encierre la llamada a la macro en un par de llaves dobl
 
 Algunos apuntes sobre la llamada a las macros
 
-- Los nombres de las macros son _case-sensitive_ (sensibles a mayúsculas), es decir distinguen entre minúsculas y mayúsculas, pero se intentan corregir los errores comunes de mayúsculas. Puede escribir el nombre completo de una macro en minúsculas incluso si el nombre de la macro utiliza mayúsculas en su interior. Del mismo modo, puede comenzar el nombre de una macro en mayúsculas,incluso cuando éstas generalmente suelen comenzar con una letra minúscula.
-- Los parámetros deben ir separados por comas.
-- Si no hay parámetros, puede omitir por completo los paréntesis. `\{{nombredelamacro()}}` y `\{{nombredelamacro}}` son idénticos.
-- Los parámetros numéricos puede ir entre comillas o no. Depende de ti (sin embargo, si tiene un número de versión con varios decimales, debe ir entre comillas).
+- Los nombres de las macros son _case-sensitive_ (sensibles a mayúsculas), es decir distinguen entre minúsculas y mayúsculas, pero se intentan corregir los errores comunes de mayúsculas. Puedes escribir el nombre completo de una macro en minúsculas incluso si el nombre de la macro utiliza mayúsculas en su interior. Del mismo modo, puedes comenzar el nombre de una macro en mayúsculas,incluso cuando éstas generalmente suelen comenzar con una letra minúscula.
+- Los parámetros debesn ir separados por comas.
+- Si no hay parámetros, puedes omitir por completo los paréntesis. `\{{nombredelamacro()}}` y `\{{nombredelamacro}}` son idénticos.
+- Los parámetros numéricos puedes ir entre comillas o no. Depende de ti (sin embargo, si tienes un número de versión con varios decimales, debes ir entre comillas).
 - Si obtienes errores, revisa tu código cuidadosamente. Si sigues sin poder averiguar qué está pasando, consulta [Solución de errores de KumaScript](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md) para obtener ayuda.
 
 Las macros son almacenadas en caché de forma considerable. Para cualquier conjunto de valores de entrada (tanto parámetros y valores de entorno como la URL para la que se ejecutó la macro), los resultados se almacenan y se reutilizan. Esto significa que la macro realmente sólo se ejecuta cuando las entradas cambian.
 
-Una macro puede ser algo tan sencillo como insertar un bloque de texto más grande, intercambiar contenidos de otra parte de MDN. Pero también puede ser algo complejo, como crear un índice de contenidos completo para buscar a través de las diferentes secciones del sitio, estilizando el resultado y añadiendo enlaces.
+Una macro puedes ser algo tan sencillo como insertar un bloque de texto más grande, intercambiar contenidos de otra parte de MDN. Pero también puedes ser algo complejo, como crear un índice de contenidos completo para buscar a través de las diferentes secciones del sitio, estilizando el resultado y añadiendo enlaces.
 
-Puede consultar las macros más utilizadas en la página [Macros usadas comúnmente](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros). También puede consultar las [Fuenetes completas para todas las macros](https://github.com/mdn/yari/tree/main/kumascript/macros). La mayoría de las fuentes de macros tienen documentación incorporada en forma de comentarios en la parte superior.
+Puedes consultar las macros más utilizadas en la página [Macros usadas comúnmente](/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros). También puedes consultar las [Fuenetes completas para todas las macros](https://github.com/mdn/yari/tree/main/kumascript/macros). La mayoría de las fuentes de macros tienen documentación incorporada en forma de comentarios en la parte superior.

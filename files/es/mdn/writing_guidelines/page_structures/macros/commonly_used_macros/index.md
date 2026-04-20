@@ -19,7 +19,7 @@ En general, no es necesario utilizar macros para crear enlaces arbitrarios. Util
 
   Ejemplos:
   1. El nombre del término (tal como "HTML").
-  2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debe usar con poca frecuencia).{{Optional_Inline}}
+  2. El texto que se mostrará en el artículo en lugar del nombre del término (esto se debes usar con poca frecuencia).{{Optional_Inline}}
   3. Si se especifica este parámetro y no es cero, no se aplica el estilo personalizado que normalmente se aplica a los enlaces del glosario.{{Optional_Inline}}
   - `\{{Glossary("HTML")}}` produce {{Glossary("HTML")}}
   - `\{{Glossary("CSS", "Hojas de estilo en cascada")}}` produce {{Glossary("CSS", "Hojas de estilo en cascada")}}
@@ -31,7 +31,7 @@ Hay varias macros para vincular páginas en áreas de referencia específicas de
 
 - [`cssxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs) links to a page in the [CSS Reference](/es/docs/Web/CSS/Reference).
   Ejemplo: `\{{CSSxRef("cursor")}}`, da como resultado: {{CSSxRef("cursor")}}.
-- [`DOMxRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs) enlaces a páginas en la referencia DOM; si incluyes paréntesis al final, la plantilla sabe que debe mostrar el enlace para que aparezca el nombre de una función. Por ejemplo, `\{{DOMxRef("document.getElementsByName()")}}` da como resultado: {{DOMxRef("document.getElementsByName()")}} mientras que `\{{DOMxRef("Node")}}` da como resultado: {{DOMxRef("Node")}}.
+- [`DOMxRef`](https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs) enlaces a páginas en la referencia DOM; si incluyes paréntesis al final, la plantilla sabe que debes mostrar el enlace para que aparezca el nombre de una función. Por ejemplo, `\{{DOMxRef("document.getElementsByName()")}}` da como resultado: {{DOMxRef("document.getElementsByName()")}} mientras que `\{{DOMxRef("Node")}}` da como resultado: {{DOMxRef("Node")}}.
 - [`HTMLElement`](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs) enlaza a un elemento HTML en la Referencia HTML.
 - [`jsxref`](https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs) enlaza a una página en la {{JSxRef("Referencia", "Referencia de JavaScript")}}.
 - [`SVGAttr`](https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs) enlaza a un atributo SVG específico. Por ejemplo, `\{{SVGAttr("d")}}` crea este enlace: {{SVGAttr("d")}}.
@@ -90,7 +90,7 @@ Uso: `\{{Optional_Inline}}` o `\{{ReadOnlyInline}}`. Ejemplo:
 
 #### Experimental
 
-[`experimental_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/experimental_inline.ejs) inserta una marca en línea que indica que la API no está ampliamente implementada y puede cambiar en el futuro.
+[`experimental_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/experimental_inline.ejs) inserta una marca en línea que indica que la API no está ampliamente implementada y puedes cambiar en el futuro.
 
 ##### Sintaxis
 
@@ -102,13 +102,13 @@ Uso: `\{{Optional_Inline}}` o `\{{ReadOnlyInline}}`. Ejemplo:
 
 ### Indicadores en línea que apoyan la especificación de la tecnología
 
-En estas macros, el parámetro (cuando se especifica) debe ser una de las cadenas "html", "js", "css" o "gecko", seguida del número de versión.
+En estas macros, el parámetro (cuando se especifica) debes ser una de las cadenas "html", "js", "css" o "gecko", seguida del número de versión.
 
 #### Desaprobado
 
-[`Deprecated_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Inline.ejs) inserta una marca desaprobado en línea (`Deprecated_Inline`) para desalentar el uso de una API que oficialmente está en desuso. **Nota**: "Desaprobado" significa que el elemento ya no se debe utilizar, pero sigue funcionando. Si quieres decir que ya no funciona, utiliza el término "obsoleto".
+[`Deprecated_Inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Inline.ejs) inserta una marca desaprobado en línea (`Deprecated_Inline`) para desalentar el uso de una API que oficialmente está en desuso. **Nota**: "Desaprobado" significa que el elemento ya no se debes utilizar, pero sigue funcionando. Si quieres decir que ya no funciona, utiliza el término "obsoleto".
 
-No utilices el parámetro en ningún área independiente del navegador (HTML, API, JS, CSS, …).
+No usas el parámetro en ningún área independiente del navegador (HTML, API, JS, CSS, …).
 
 ##### Sintaxis
 
@@ -124,12 +124,12 @@ Estas macros se utilizan principalmente en la página [WebAPI](/es/docs/Web/API)
 
 ### Indicadores de encabezado de página o sección
 
-Estas plantillas tienen la misma semántica que sus contrapartes en línea descritas anteriormente. Las plantillas se deben colocar directamente debajo del título de la página principal (o la ruta de navegación si está disponible) en la página de referencia. También se pueden utilizar para marcar una sección en una página.
+Estas plantillas tienen la misma semántica que sus contrapartes en línea descritas anteriormente. Las plantillas se debesn colocar directamente debajo del título de la página principal (o la ruta de navegación si está disponible) en la página de referencia. También se pueden utilizar para marcar una sección en una página.
 
 - [`Non-standard_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
+- [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debes usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
+- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No usas el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - [`secureContext_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/secureContext_header.ejs): `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### Indica que una función está disponible en `workers` web

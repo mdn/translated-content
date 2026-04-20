@@ -15,16 +15,16 @@ Si tienes dudas o descubres problemas, te invitamos a [pedir ayuda](/es/docs/MDN
 
 ## Uso de los datos de BCD en páginas MDN
 
-Una vez que se han incluido los datos en el repositorio [`browser-compat-data`](https://github.com/mdn/browser-compat-data), puede comenzar a incluir dinámicamente las tablas de especificación y compatibilidad con los navegadores basadas en esos datos dentro de páginas MDN.
+Una vez que se han incluido los datos en el repositorio [`browser-compat-data`](https://github.com/mdn/browser-compat-data), puedes comenzar a incluir dinámicamente las tablas de especificación y compatibilidad con los navegadores basadas en esos datos dentro de páginas MDN.
 
-Para comenzar con los datos de BCD en páginas MDN, use la cadena de consulta especificada en el archivo fuente de BCD para los datos relevantes que desea incluir.
+Para comenzar con los datos de BCD en páginas MDN, use la cadena de consulta especificada en el archivo fuente de BCD para los datos relevantes que deseas incluir.
 Por ejemplo:
 
-- {{domxref("AbortController")}} los datos de compatibilidad se definen en [api/AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) y se puede consultar usando `api.AbortController`.
-- {{HTTPHeader("Content-Type")}} Los datos de compatibilidad de la cabecera HTTP se definen en [http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) y se puede consultar usando `http.headers.Content-Type`.
-- {{domxref("VRDisplay.capabilities")}} los datos de compatibilidad de propiedades se definen en [api/VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) y se puede consultar usando `api.VRDisplay.capabilities`.
+- {{domxref("AbortController")}} los datos de compatibilidad se definen en [api/AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) y se puedes consultar usando `api.AbortController`.
+- {{HTTPHeader("Content-Type")}} Los datos de compatibilidad de la cabecera HTTP se definen en [http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) y se puedes consultar usando `http.headers.Content-Type`.
+- {{domxref("VRDisplay.capabilities")}} los datos de compatibilidad de propiedades se definen en [api/VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) y se puedes consultar usando `api.VRDisplay.capabilities`.
 
-La consulta de datos de compatibilidad debe especificarse en los metadatos de la página en la clave `browser-compat`.
+La consulta de datos de compatibilidad debes especificarse en los metadatos de la página en la clave `browser-compat`.
 Por ejemplo, {{domxref("AbortController")}} se agregaría como se muestra a continuación:
 
 ```md
@@ -38,7 +38,7 @@ browser-compat: api.AbortController
 
 Las tablas de compatibilidad y especificación correspondientes a la clave se representan automáticamente en lugar de las macros `\{{Compat}}` y `\{{Specifications}}` en el código fuente.
 
-Si se requieren varias tablas de compatibilidad/especificaciones en la misma página, puede especificar el valor de `browser-compat` como una matriz. Por ejemplo, para la [API de mensajería de canal](/es/docs/Web/API/Channel_Messaging_API) esto se agregaría como se muestra a continuación:
+Si se requieren varias tablas de compatibilidad/especificaciones en la misma página, puedes especificar el valor de `browser-compat` como una matriz. Por ejemplo, para la [API de mensajería de canal](/es/docs/Web/API/Channel_Messaging_API) esto se agregaría como se muestra a continuación:
 
 ```md
 ---

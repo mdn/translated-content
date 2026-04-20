@@ -11,7 +11,7 @@ l10n:
 
 Para agregar una imagen a un documento, añade el archivo de imagen a la carpeta del documento y luego referencia la imagen desde dentro del archivo `index.md` del documento usando [la sintaxis de imagen de Markdown](https://github.github.com/gfm/#images) o el elemento HTML `<img>` equivalente.
 
-Veamos un ejemplo:
+Ve amos un ejemplo:
 
 1. Comienza con una nueva rama de trabajo con el contenido más reciente de la rama `main` del repositorio remoto `mdn`.
 
@@ -59,21 +59,21 @@ Veamos un ejemplo:
 
 ## Agregando texto alternativo a las imágenes
 
-Cada imagen, `![]` y `<img>`, debe incluir texto `alt`.
-Los atributos `alt` deben ser cortos, proporcionando toda la información relevante que la imagen transmite.
+Cada imagen, `![]` y `<img>`, debes incluir texto `alt`.
+Los atributos `alt` debesn ser cortos, proporcionando toda la información relevante que la imagen transmite.
 Al escribir la descripción de la imagen, piensa en la información valiosa de la imagen y cómo transmitirías esa información a alguien que pueda leer el contenido de la página pero no pueda cargar imágenes.
 
 Asegúrate de que el texto alternativo para la imagen esté basado en su contexto.
 Si la foto de Fluffy, el perro, es un avatar junto a una reseña de la comida para perros Yuckymeat, `alt="Fluffy"` es apropiado.
 Si la misma foto es parte de la página de adopción de rescate de animales de Fluffy, la información transmitida en la imagen es relevante para los futuros padres de perros, como `alt="Fluffy, un terrier tricolor con pelo muy corto, con una pelota de tenis en la boca."`.
 Es probable que el texto circundante tenga el tamaño y la raza de Fluffy, por lo que incluirlo sería redundante.
-Evita describir la imagen en demasiado detalle: el futuro padre no necesita saber si el perro está adentro o afuera o tiene un collar rojo y una correa azul.
+Evita describir la imagen en demasiado detalle: el futuro padre no necesitas saber si el perro está adentro o afuera o tiene un collar rojo y una correa azul.
 
-Con capturas de pantalla, escribe lo que aprendes de la imagen, no detalles del contenido de la captura de pantalla, y omite información que los lectores no necesitan o ya conocen.
+Con capturas de pantalla, escribe lo que aprendes de la imagen, no detalles del contenido de la captura de pantalla, y omite información que los lectores no necesitasn o ya conocen.
 Por ejemplo, si estás en una página sobre cómo cambiar la configuración en Bing, si tienes una captura de pantalla de un resultado de búsqueda de Bing, no incluyas el término de búsqueda o el número de resultados, etc., ya que no son el punto de la imagen.
 Limita el texto alternativo al tema en cuestión: cómo cambiar la configuración en Bing.
 El texto alternativo podría ser `alt="El ícono de configuración está en la barra de navegación debajo del campo de búsqueda."`.
-No incluyas "captura de pantalla" o "Bing" ya que el usuario no necesita saber que es una captura de pantalla y ya sabe que es Bing ya que está en una página que explica cómo cambiar la configuración de Bing.
+No incluyas "captura de pantalla" o "Bing" ya que el usuario no necesitas saber que es una captura de pantalla y ya sabe que es Bing ya que está en una página que explica cómo cambiar la configuración de Bing.
 
 La sintaxis en markdown y HTML:
 
@@ -89,7 +89,7 @@ Ejemplo:
 <img alt="OpenWebDocs Logo: Carle el ratón de biblioteca" src="carle.png" />
 ```
 
-Si bien las imágenes puramente decorativas deberían tener un atributo `alt` vacío, las imágenes agregadas a la documentación de MDN deben tener un propósito, y por lo tanto requieren una descripción no vacía.
+Si bien las imágenes puramente decorativas debesrían tener un atributo `alt` vacío, las imágenes agregadas a la documentación de MDN debesn tener un propósito, y por lo tanto requieren una descripción no vacía.
 
 ## Compresión de imágenes
 
@@ -122,13 +122,13 @@ Existen varios argumentos en contra de usar contenido de video para la documenta
 - Siguiendo con el último punto, el video es mucho más difícil de editar/actualizar/mantener que el contenido de texto.
 
 > [!NOTE]
-> Vale la pena tener estos problemas en mente incluso cuando estás haciendo videos, para que puedas tratar de mitigar algunos de ellos.
+> Vale la pena tener estos problemas en mente incluso cuando estás haciendo videos, para que puedass tratar de mitigar algunos de ellos.
 
 Hay muchos sitios de video populares que proporcionan muchos tutoriales en video.
 MDN Web Docs no es un sitio impulsado por video, pero el video tiene un lugar en MDN Web Docs en ciertos contextos.
 
 Tendemos a usar más comúnmente el video cuando se describe algún tipo de secuencia de instrucciones o flujo de trabajo de múltiples pasos que sería difícil de describir de manera concisa en palabras: _"haz esto, luego haz eso, luego esto sucederá"_.
-Es especialmente útil cuando se intenta describir procesos que cruzan múltiples aplicaciones o ventanas e incluyen interacciones GUI que pueden no ser simples de describir: _"ahora haz clic en el botón cerca de la parte superior izquierda que se parece un poco a un pato"_.
+Es especialmente útil cuando se intenta describir procesos que cruzan múltiples aplicaciones o ventanas e incluyen interacciones GUI que puedesn no ser simples de describir: _"ahora haz clic en el botón cerca de la parte superior izquierda que se parece un poco a un pato"_.
 
 En tales casos, a menudo es más efectivo simplemente **mostrar** lo que quieres decir.
 
@@ -136,7 +136,7 @@ En tales casos, a menudo es más efectivo simplemente **mostrar** lo que quieres
 
 ## Directrices para el contenido de video
 
-El contenido de video para MDN Web Docs debe ser:
+El contenido de video para MDN Web Docs debes ser:
 
 - **Corto**: Intenta mantener los videos por debajo de los 30 segundos, idealmente por debajo de los 20 segundos.
   Esto es lo suficientemente corto como para no hacer grandes demandas en la atención de los lectores.
@@ -146,7 +146,7 @@ El contenido de video para MDN Web Docs debe ser:
   Además, tener que explicar lo que estás haciendo hace que los videos sean mucho más largos y aumenta los costos (tanto financieros como en términos de tiempo) de la localización.
 
 Para explicar algo más complejo, puedes usar una combinación de videos cortos y capturas de pantalla, intercaladas con texto.
-El texto puede ayudar a reforzar los puntos hechos en el video, y el usuario puede confiar en el texto o el video según su elección.
+El texto puedes ayudar a reforzar los puntos hechos en el video, y el usuario puedes confiar en el texto o el video según su elección.
 Consulta [Trabajando con el Inspector de Animación](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#animation-inspector) para ver un buen ejemplo.
 
 Además, debes considerar los siguientes consejos:
@@ -180,7 +180,7 @@ La siguiente tabla proporciona algunas recomendaciones de buenas herramientas pa
 
 ### Consejos para QuickTime Player
 
-Si estás usando macOS, deberías tener disponible QuickTime Player.
+Si estás usando macOS, debesrías tener disponible QuickTime Player.
 Los pasos de grabación usando esta herramienta son bastante simples:
 
 1. Elige _Archivo_ > _Nueva grabación de pantalla_ en el menú principal.
@@ -231,7 +231,7 @@ Recuerda hacer una pausa durante uno o dos segundos al final para mostrar el res
 
 ### Post-procesamiento
 
-Podrás resaltar momentos clave en la postproducción. Un resaltado puede consistir en un par de cosas, que a menudo combinarás, como:
+Podrás resaltar momentos clave en la postproducción. Un resaltado puedes consistir en un par de cosas, que a menudo combinarás, como:
 
 - Hacer zoom en partes de la pantalla.
 - Desvanecer el fondo.

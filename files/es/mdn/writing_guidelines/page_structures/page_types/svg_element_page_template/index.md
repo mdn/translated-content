@@ -15,7 +15,7 @@ l10n:
 > **Metadatos de la página:**
 >
 > Los metadatos en la parte superior de la página se utilizan para definir "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el elemento en particular.
+> Los valores debesn actualizarse adecuadamente para el elemento en particular.
 >
 > ```md
 > ---
@@ -45,7 +45,7 @@ l10n:
 >   - : Reemplaza el valor de marcador de posición `svg.elements.NombreDelElemento` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >
->     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el elemento en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
+>     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para el elemento en nuestro [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data), y la entrada debes incluir información de especificación.
 >     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > ---
@@ -74,7 +74,7 @@ l10n:
 {{SeeCompatTable}}{{deprecated_header}}{{SVGRef}}
 
 Comienza el contenido en la página con un párrafo introductorio — comienza nombrando el elemento y diciendo qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+Idealmente, esto debesría ser una o dos oraciones cortas.
 
 ## Contexto de uso
 
@@ -100,7 +100,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 - Incluye una lista con viñetas
 - de todos los atributos SVG
-- que puede tomar
+- que puedes tomar
 
 ## Interfaz DOM
 
@@ -112,7 +112,7 @@ Ten en cuenta que usamos el plural "Ejemplos" incluso si la página contiene sol
 
 ### Un encabezado descriptivo
 
-Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debe describir lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
+Cada ejemplo debes tener un encabezado H3 (`###`) que nombre el ejemplo. El encabezado debes describir lo que hace el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y, por lo tanto, no es un buen encabezado. El encabezado debes ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
 
 Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 

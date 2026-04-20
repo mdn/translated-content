@@ -7,9 +7,9 @@ l10n:
 
 {{MDNSidebar}}
 
-La [Referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) en MDN Web Docs es un proyecto para ayudar a los desarrolladores web con los errores que ocurren en la [Consola de desarrollador](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Para este proyecto, necesitamos escribir más documentación de errores en MDN Web Docs para que podamos agregar más enlaces a las herramientas donde se lanzan los mensajes. Este artículo explica cómo documentar los errores web.
+La [Referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) en MDN Web Docs es un proyecto para ayudar a los desarrolladores web con los errores que ocurren en la [Consola de desarrollador](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Para este proyecto, necesitasmos escribir más documentación de errores en MDN Web Docs para que podamos agregar más enlaces a las herramientas donde se lanzan los mensajes. Este artículo explica cómo documentar los errores web.
 
-Los errores de JavaScript contienen un enlace de "Más información" que lo lleva a la referencia de errores de JavaScript que contiene consejos adicionales para solucionar problemas. Para poder documentar los errores de la web, necesitará saber o poder sumergirse algo en [JavaScript](/es/docs/Web/JavaScript).
+Los errores de JavaScript contienen un enlace de "Más información" que lo lleva a la referencia de errores de JavaScript que contiene consejos adicionales para solucionar problemas. Para poder documentar los errores de la web, necesitasrá saber o poder sumergirse algo en [JavaScript](/es/docs/Web/JavaScript).
 
 ## Paso 1 – Determina el error a documentar
 
@@ -19,8 +19,8 @@ Los errores de JavaScript contienen un enlace de "Más información" que lo llev
 
 ## Paso 2: Verifica la documentación del error existente
 
-- Vea la [referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) existentes y vea cómo se documentan los errores.
-- Según el tipo de error sobre el que desee escribir, puede echar un vistazo más de cerca a estas páginas.
+- Ve a la [referencia de errores de JavaScript](/es/docs/Web/JavaScript/Reference/Errors) existentes y vea cómo se documentan los errores.
+- Según el tipo de error sobre el que desee escribir, puedes echar un vistazo más de cerca a estas páginas.
 - Es posible que desee copiar el contenido de una página existente para iniciar su nueva página.
 
 ## Paso 3: Crea la nueva página del error
@@ -30,12 +30,12 @@ Los errores de JavaScript contienen un enlace de "Más información" que lo llev
 
 ## Paso 4: Documenta el error
 
-- Utilice una estructura copiada de uno de los documentos de error existentes o comience desde cero. ¡Tu elección!
+- Usa una estructura copiada de uno de los documentos de error existentes o comience desde cero. ¡Tu elección!
 - Deberías tener al menos:
   - Un cuadro de sintaxis que contiene el mensaje tal como se lanza en diferentes navegadores.
   - El tipo de error.
   - Un texto que explica por qué ocurrió este error y cuáles son sus consecuencias. Ir más allá del mensaje lanzado.
-  - Ejemplos que muestran el error (¡puede haber más de uno!) y un ejemplo que muestra cómo corregir el código.
+  - Ejemplos que muestran el error (¡puedes haber más de uno!) y un ejemplo que muestra cómo corregir el código.
   - Enlaces a otro material de referencia en MDN Web Docs.
 
 ## Paso 5: Conseguir que se revise el contenido

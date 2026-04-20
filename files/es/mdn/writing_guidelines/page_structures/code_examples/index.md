@@ -27,16 +27,16 @@ Discutiremos cada uno en secciones posteriores.
 
 Cada tipo de ejemplo de código tiene sus propios casos de uso. ¿Cuándo debes usar cada uno?
 
-- Los ejemplos estáticos son útiles si solo necesitas mostrar algún código y no es crucial mostrar cuál es el resultado en vivo. Algunas personas solo quieren algo para copiar y pegar. Tal vez solo estás mostrando un paso intermedio, o el código fuente es suficiente. (Por ejemplo, el artículo es para una audiencia avanzada y solo necesitan ver el código). También podrías estar demostrando una característica de la API que no funciona bien como un ejemplo incrustado, que podría necesitar su propia página independiente para enlazar.
+- Los ejemplos estáticos son útiles si solo necesitas mostrar algún código y no es crucial mostrar cuál es el resultado en vivo. Algunas personas solo quieren algo para copiar y pegar. Tal vez solo estás mostrando un paso intermedio, o el código fuente es suficiente. (Por ejemplo, el artículo es para una audiencia avanzada y solo necesitasn ver el código). También podrías estar demostrando una característica de la API que no funciona bien como un ejemplo incrustado, que podría necesitasr su propia página independiente para enlazar.
 - Los ejemplos interactivos son excelentes ya que los lectores pueden modificar valores sobre la marcha; esto es muy valioso para aprender. Sin embargo, son más complejos de configurar que las otras formas, con más limitaciones, y están destinados a propósitos específicos.
-- Las muestras en vivo tradicionales son útiles si deseas mostrar el código fuente en una página, luego mostrarlo ejecutándose, y no te importa mucho que sea accesible como un ejemplo independiente. Este enfoque también tiene la ventaja de que si estás mostrando código fuente y ejemplos en vivo uno al lado del otro, solo necesitas actualizar el código una vez para actualizar ambos. Sin embargo, pueden ser incómodos de editar y hacer funcionar.
+- Las muestras en vivo tradicionales son útiles si quieres mostrar el código fuente en una página, luego mostrarlo ejecutándose, y no te importa mucho que sea accesible como un ejemplo independiente. Este enfoque también tiene la ventaja de que si estás mostrando código fuente y ejemplos en vivo uno al lado del otro, solo necesitas actualizar el código una vez para actualizar ambos. Sin embargo, pueden ser incómodos de editar y hacer funcionar.
 - Las muestras en vivo de GitHub son útiles cuando tienes un ejemplo existente que deseas incrustar, no deseas mostrar el código fuente y/o deseas asegurarte de que el ejemplo esté disponible en forma independiente. Tienen un mejor flujo de trabajo de contribución, pero requiere que conozcas GitHub. Además, debido a que el código en la página y el código fuente están en dos lugares diferentes, es más fácil que se desincronicen.
 
 ## Pautas generales
 
 Además del sistema específico para presentar los ejemplos en vivo, hay consideraciones de estilo y contenido a tener en cuenta al agregar o actualizar ejemplos en MDN.
 
-- Al colocar ejemplos en una página, intenta asegurarte de que se cubran todas las características u opciones de la API o concepto sobre el que estás escribiendo. Como mínimo, al menos las opciones o propiedades más comunes deben incluirse en los ejemplos.
+- Al colocar ejemplos en una página, intenta asegurarte de que se cubran todas las características u opciones de la API o concepto sobre el que estás escribiendo. Como mínimo, al menos las opciones o propiedades más comunes debesn incluirse en los ejemplos.
 - Antecede cada ejemplo con una explicación de lo que hace y por qué es interesante o útil.
 - Sigue cada fragmento de código con una explicación de lo que hace.
 - Cuando sea posible, divide ejemplos grandes en fragmentos más pequeños. Por ejemplo, el sistema de "ejemplos en vivo" concatenará automáticamente todo tu código en una pieza antes de ejecutar el ejemplo, por lo que puedes dividir tu JavaScript, HTML y/o CSS en fragmentos más pequeños con texto descriptivo después de cada fragmento si eliges hacerlo. Esta es una excelente manera de ayudar a explicar tramos de código largos o complicados de manera más clara.
@@ -60,12 +60,12 @@ Opcionalmente, es posible que desees mostrar una imagen estática de la salida r
 
 Los ejemplos interactivos están destinados a usarse en la parte superior de las páginas de referencia de MDN; nuestro objetivo es proporcionarlos para mejorar su valor para principiantes y otros lectores que desean tomar y jugar con un ejemplo rápidamente antes de ver todos los detalles de lo que están buscando. Hay algunas limitaciones importantes que debes tener en cuenta acerca de los ejemplos interactivos:
 
-- Están especializados para una tecnología específica; la interfaz de usuario para JavaScript es diferente de la interfaz de usuario para CSS, y solo ilustran una tecnología de forma aislada. No son apropiados si deseas mostrar, por ejemplo, cómo combinar una estructura HTML/CSS/JS específica.
+- Están especializados para una tecnología específica; la interfaz de usuario para JavaScript es diferente de la interfaz de usuario para CSS, y solo ilustran una tecnología de forma aislada. No son apropiados si quieres mostrar, por ejemplo, cómo combinar una estructura HTML/CSS/JS específica.
 - Los ejemplos interactivos en vivo actualmente solo están configurados para mostrar CSS y JavaScript. Para otras tecnologías, tendrás que esperar.
 - La interfaz de usuario es más intensiva en rendimiento que otros ejemplos de código; no debes poner más de uno en cada artículo de MDN al que los apliques.
 - No están destinados para ejemplos de código grandes; la interfaz de usuario admite una variedad de tamaños fijos, que realmente solo funcionan bien para ejemplos cortos (digamos, de 10 a 15 líneas).
 
-Si deseas enviar un ejemplo, puedes obtener información en la [guía de contribución del repositorio de ejemplos interactivos](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md).
+Si quieres enviar un ejemplo, puedes obtener información en la [guía de contribución del repositorio de ejemplos interactivos](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md).
 
 Si encuentras una página que no tiene un ejemplo interactivo asociado, ¡eres bienvenido a contribuir con uno!
 
@@ -81,7 +81,7 @@ Las muestras en vivo tradicionales se insertan en la página mediante el macro [
 
 ## Muestras en vivo de GitHub
 
-Las muestras en vivo de GitHub se insertan en la página mediante el macro [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs). Una llamada \\{{EmbedGHLiveSample}} captura dinámicamente el documento en una URL especificada (que debe estar dentro de la organización **mdn** en GitHub) y lo inserta en la página dentro de un {{htmlelement("iframe")}}.
+Las muestras en vivo de GitHub se insertan en la página mediante el macro [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs). Una llamada \\{{EmbedGHLiveSample}} captura dinámicamente el documento en una URL especificada (que debes estar dentro de la organización **mdn** en GitHub) y lo inserta en la página dentro de un {{htmlelement("iframe")}}.
 
 Estas funcionan de manera muy similar a las muestras en vivo tradicionales, pero son mucho más simples:
 
@@ -89,11 +89,11 @@ No tienes que preocuparte por la ubicación de los bloques de código en la pág
 
 El macro solo tiene tres parámetros:
 
-1. La URL del documento a incrustar, que es relativa a la organización MDN, cuyo directorio de nivel superior está en `https://mdn.github.io/`. Por lo tanto, este parámetro debe contener la parte de la URL después de eso, por ejemplo, `mi-subdirectorio/ejemplo.html`. Puedes omitir el nombre del archivo si se llama `index.html`.
-2. El ancho del `<iframe>`, que se puede expresar como un porcentaje o en píxeles.
-3. La altura del `<iframe>`, que se puede expresar como un porcentaje o en píxeles.
+1. La URL del documento a incrustar, que es relativa a la organización MDN, cuyo directorio de nivel superior está en `https://mdn.github.io/`. Por lo tanto, este parámetro debes contener la parte de la URL después de eso, por ejemplo, `mi-subdirectorio/ejemplo.html`. Puedes omitir el nombre del archivo si se llama `index.html`.
+2. El ancho del `<iframe>`, que se puedes expresar como un porcentaje o en píxeles.
+3. La altura del `<iframe>`, que se puedes expresar como un porcentaje o en píxeles.
 
-Veamos un ejemplo. Digamos que queremos incrustar el código en <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. Podríamos usar la siguiente llamada:
+Ve amos un ejemplo. Digamos que queremos incrustar el código en <https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/>. Podríamos usar la siguiente llamada:
 
 \\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}
 
@@ -103,5 +103,5 @@ Esto se ve así cuando se renderiza:
 
 ### Consejos para usar muestras en vivo de GitHub
 
-- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debe hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
-- Tu ejemplo de código debe ser adecuado para mostrar lo que estás tratando de demostrar; debe contener un ejemplo simple que haga una cosa bien, no debe contener contenido ofensivo y debe seguir las [pautas de ejemplos de código](/es/docs/MDN/Writing_guidelines/Code_style_guide) de MDN.
+- Obviamente, primero debes obtener un ejemplo de código adecuado en la [organización GitHub de MDN](https://github.com/mdn/). Esto debes hacerse utilizando Git. Si no estás familiarizado con Git, consulta nuestro artículo [¿Cómo uso GitHub Pages?](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) y [Preparación para agregar los datos](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para usos más avanzados.
+- Tu ejemplo de código debes ser adecuado para mostrar lo que estás tratando de demostrar; debes contener un ejemplo simple que haga una cosa bien, no debes contener contenido ofensivo y debes seguir las [pautas de ejemplos de código](/es/docs/MDN/Writing_guidelines/Code_style_guide) de MDN.

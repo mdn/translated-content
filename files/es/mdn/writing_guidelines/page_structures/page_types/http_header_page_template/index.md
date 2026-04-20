@@ -15,7 +15,7 @@ l10n:
 > **Metadatos de la página:**
 >
 > Los metadatos en la parte superior de la página se utilizan para definir "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el elemento en particular.
+> Los valores debesn actualizarse adecuadamente para el elemento en particular.
 >
 > ```md
 > ---
@@ -36,14 +36,14 @@ l10n:
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Reference/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
 > - **page-type**
->   - : Para cabeceras HTTP, debe ser `http-header`. Para otros valores HTTP de `page-type`, consulte la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
+>   - : Para cabeceras HTTP, debes ser `http-header`. Para otros valores HTTP de `page-type`, consulta la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
 > - **status**
->   - : Banderas que describen el estado de esta característica. Puede contener uno o más de los siguiente valores: `experimental`, `deprecated`, `non-standard` Este valor no debe configurarse manualmente: se configura automáticamente en función de los valores de los datos de compatibilidad del navegador para la característica. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Banderas que describen el estado de esta característica. Puedes contener uno o más de los siguiente valores: `experimental`, `deprecated`, `non-standard` Este valor no debes configurarse manualmente: se configura automáticamente en función de los valores de los datos de compatibilidad del navegador para la característica. Consulta ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
 >   - : Reemplaza el valor de marcador de posición `path.to.feature.NameOfTheHeader` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar la sección de compatibilidad (reemplazando la macro `\{{Compat}}`).
 >
->     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para la cabecera HTTP en nuestro [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data), y la entrada debe incluir información de especificación.
+>     Ten en cuenta que es posible que primero necesites crear/actualizar una entrada para la cabecera HTTP en nuestro [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data), y la entrada debes incluir información de especificación.
 >     Consulta nuestra [guía sobre cómo hacer esto](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
 >
 > ---
@@ -60,7 +60,7 @@ l10n:
 >   Si no lo está, puedes eliminar la llamada a la macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
 >
->   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
+>   No proporcione macros de encabezado de estado manualmente. Consulta ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
 >
@@ -69,7 +69,7 @@ l10n:
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comienza el contenido en la página con un párrafo introductorio — comienza nombrando la cabecera http y diciendo qué hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+Idealmente, esto debesría ser una o dos oraciones cortas.
 
 <table class="properties">
   <tbody>
@@ -105,7 +105,7 @@ NombreDeLaCabecera: <directiva1>
 NombreDeLaCabecera: <directiva1>, <directiva2>, …
 ```
 
-Las directivas no distinguen mayúsculas de minúsculas y tienen un argumento opcional, que puede usar tanto la sintaxis de token como la de cadena entre comillas.
+Las directivas no distinguen mayúsculas de minúsculas y tienen un argumento opcional, que puedes usar tanto la sintaxis de token como la de cadena entre comillas.
 Las múltiples directivas están separadas por comas (elimina la información según corresponda).
 
 ## Directivas
@@ -124,7 +124,7 @@ Nota que usamos el plural "Ejemplos" incluso si la página solo contiene un ejem
 
 ### Un encabezado descriptivo
 
-Cada ejemplo debe tener un encabezado H3 (###) que nombre el ejemplo. El encabezado debe ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen encabezado. El encabezado debe ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
+Cada ejemplo debes tener un encabezado H3 (###) que nombre el ejemplo. El encabezado debes ser descriptivo de lo que está haciendo el ejemplo. Por ejemplo, "Un ejemplo simple" no dice nada sobre el ejemplo y por lo tanto, no es un buen encabezado. El encabezado debes ser conciso. Para una descripción más larga, usa el párrafo después del encabezado.
 
 Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para obtener más información.
 

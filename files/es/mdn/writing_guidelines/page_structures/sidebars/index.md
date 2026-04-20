@@ -14,8 +14,8 @@ Este artículo describe cómo crear enlaces rápidos.
 
 Los enlaces rápidos para una página se proporcionan mediante la creación de un bloque {{HTMLElement("section")}} con el ID "Quick_links".
 Luego coloca los contenidos que van en el cuadro de enlaces rápidos dentro de la sección.
-Estos deben formatearse como una lista ordenada {{HTMLElement("ol")}} (opcionalmente anidada).
-Puede hacerlo utilizando el botón de lista numerada en la barra de herramientas del editor.
+Estos debesn formatearse como una lista ordenada {{HTMLElement("ol")}} (opcionalmente anidada).
+Puedes hacerlo utilizando el botón de lista numerada en la barra de herramientas del editor.
 Por ejemplo, su HTML de enlaces rápidos podría verse así:
 
 ```html
@@ -62,15 +62,15 @@ Por ejemplo, su HTML de enlaces rápidos podría verse así:
 
 Las cosas importantes a tener en cuenta:
 
-- La lista **debe** ser una lista ordenada.
-- Puede tener listas anidadas usando un elemento {{HTMLElement("details")}} que contiene otra lista ordenada **dentro** del mismo bloque {{HTMLElement("li")}}.
+- La lista **debes** ser una lista ordenada.
+- Puedes tener listas anidadas usando un elemento {{HTMLElement("details")}} que contiene otra lista ordenada **dentro** del mismo bloque {{HTMLElement("li")}}.
 
 ## Uso de macros para crear enlaces rápidos
 
-Vale la pena señalar que puede (y a menudo **debe**) usar macros para generar enlaces rápidos.
-Cada vez que necesite usar el mismo conjunto de enlaces rápidos en más de una página, debe convertirlos en una macro.
+Vale la pena señalar que puedes (y a menudo **debes**) usar macros para generar enlaces rápidos.
+Cada vez que necesite usar el mismo conjunto de enlaces rápidos en más de una página, debes convertirlos en una macro.
 
-Tu macro puede ser tan simple o tan compleja como sea necesario; necesita generar un HTML similar al que se muestra en [Sintaxis de enlaces rápidos](#sintaxis_de_enlaces_rápidos) arriba.
+Tu macro puedes ser tan simple o tan compleja como sea necesario; necesitas generar un HTML similar al que se muestra en [Sintaxis de enlaces rápidos](#sintaxis_de_enlaces_rápidos) arriba.
 
 ### Macros de enlaces rápidos estándar
 

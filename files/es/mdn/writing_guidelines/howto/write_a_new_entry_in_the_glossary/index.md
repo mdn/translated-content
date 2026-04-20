@@ -12,7 +12,7 @@ También proporciona pautas sobre el diseño y el contenido de las entradas del 
 El glosario proporciona definiciones para todos los términos, jerga, abreviaturas y acrónimos que encontrará al leer contenido de MDN sobre la web y el desarrollo web.
 
 Es posible que el glosario nunca esté completo porque la web siempre está cambiando.
-Al contribuir con nuevas entradas o solucionar problemas, puede ayudarnos a actualizar el glosario y llenar los vacíos.
+Al contribuir con nuevas entradas o solucionar problemas, puedes ayudarnos a actualizar el glosario y llenar los vacíos.
 
 Contribuir al glosario es una manera fácil de ayudar a que la web sea más comprensible para todos.
 No necesitas habilidades técnicas de alto nivel.
@@ -21,19 +21,19 @@ Las entradas del glosario pretenden ser sencillas y breves.
 ## Cómo escribir una entrada
 
 Primero, elija el tema para el que le gustaría escribir una entrada en el glosario.
-Si está buscando temas que necesitan una entrada en el glosario, consulte la lista de términos en la barra lateral de la [página de destino del glosario](/es/docs/Glossary).
+Si está buscando temas que necesitasn una entrada en el glosario, consulta la lista de términos en la barra lateral de la [página de destino del glosario](/es/docs/Glossary).
 
-Si tiene una idea para una nueva entrada del glosario, [cree una nueva página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) debajo de la [página de destino del glosario](https://github.com/mdn/content/tree/main/files/es/glosario).
+Si tienes una idea para una nueva entrada del glosario, [cree una nueva página](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) debajo de la [página de destino del glosario](https://github.com/mdn/content/tree/main/files/es/glosario).
 
 ### Escribe un resumen
 
 El primer párrafo de cualquier página del glosario es una descripción breve y sencilla del término.
-Preferiblemente, esto no debe ser más de dos oraciones.
-Asegúrese de que cualquier persona que lea la descripción pueda comprender inmediatamente el término definido.
+Preferiblemente, esto no debes ser más de dos oraciones.
+Asegúrate de que cualquier persona que lea la descripción pueda comprender inmediatamente el término definido.
 
 > [!NOTE]
 > Por favor, no copie y pegue de otras definiciones o contenido en Internet.
-> (Y especialmente no de Wikipedia, ya que su rango de versiones de licencia es más pequeño e incompatible con MDN). La entrada de su glosario debe ser contenido original.
+> (Y especialmente no de Wikipedia, ya que su rango de versiones de licencia es más pequeño e incompatible con MDN). La entrada de su glosario debes ser contenido original.
 
 #### Escribir una buena entrada de glosario
 
@@ -43,17 +43,17 @@ Si no está seguro de dónde colocar su artículo, no dude en [comunicarse para 
 
 Hay algunas pautas simples a considerar para escribir una mejor entrada de glosario:
 
-- Cuando use términos en la descripción del término del glosario o cuando use abreviaturas, debe crear los enlaces apropiados.
+- Cuando use términos en la descripción del término del glosario o cuando use abreviaturas, debes crear los enlaces apropiados.
   A menudo, esto solo implica crear enlaces a otras páginas del glosario.
-- Use términos relacionados apropiados (con enlaces) en la entrada del glosario, si puede hacerlo sin dificultar el seguimiento del artículo.
+- Use términos relacionados apropiados (con enlaces) en la entrada del glosario, si puedes hacerlo sin dificultar el seguimiento del artículo.
   Tener una buena red de enlaces útiles y relacionados hace que una página, o un conjunto de páginas, sea mucho más fácil de usar.
 - Piense en los términos de búsqueda que elegiría si quisiera encontrar esta página.
   Trate de usar todas las palabras que usaría para buscar el término, pero sin que la entrada del glosario sea absurda, larga o difícil de leer.
 
 ### Ampliar con enlaces
 
-Una entrada del glosario siempre debe terminar con una sección _Véase también_.
-Esta sección debe contener enlaces para ayudar al lector a avanzar: descubrir más detalles; aprender a utilizar la tecnología pertinente.
+Una entrada del glosario siempre debes terminar con una sección _Véase también_.
+Esta sección debes contener enlaces para ayudar al lector a avanzar: descubrir más detalles; aprender a utilizar la tecnología pertinente.
 
 Es una buena práctica organizar los enlaces en tres grupos:
 
@@ -70,11 +70,11 @@ Es una buena práctica organizar los enlaces en tres grupos:
 Algunos términos pueden tener múltiples significados dependiendo del contexto.
 Para resolver la ambigüedad, siga estas pautas:
 
-- La página principal del término debe ser una página de desambiguación que contenga la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
+- La página principal del término debes ser una página de desambiguación que contenga la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
 - El término tiene subpáginas que definen el término para diferentes contextos.
 
 Ilustremos esto con un ejemplo.
-El término _signature_ puede tener diferentes significados en al menos dos contextos diferentes: seguridad y función.
+El término _signature_ puedes tener diferentes significados en al menos dos contextos diferentes: seguridad y función.
 
 1. La página [Glossary/Signature](/es/docs/Glossary/Signature) es la página de desambiguación con la macro [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs).
 2. La página [Glossary/Signature/Security](/es/docs/Glossary/Signature/Security) es la página que define una firma en un contexto de seguridad.

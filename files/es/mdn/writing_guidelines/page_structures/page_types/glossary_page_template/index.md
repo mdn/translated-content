@@ -15,7 +15,7 @@ l10n:
 > **Metadatos de la página (_frontmatter_):**
 >
 > El _frontmatter_ en la parte superior de la página se usa para definir los "metadatos de la página".
-> Los valores deben actualizarse adecuadamente para el método en particular.
+> Los valores debesn actualizarse adecuadamente para el método en particular.
 >
 > ```md
 > ---
@@ -40,11 +40,11 @@ l10n:
 
 El **Término en proceso de definición** es _(incluye una definición concisa del término)_.
 
-Incluya más información de respaldo según sea necesario, pero no mucha, no más de 2 párrafos pequeños. Cualquier información más detallada, ejemplos de código, tutoriales, etc. deben ir en artículos separados.
+Incluye más información de respaldo según sea necesario, pero no mucha, no más de 2 párrafos pequeños. Cualquier información más detallada, ejemplos de código, tutoriales, etc. debesn ir en artículos separados.
 
 ## Véase también
 
-Incluya una lista de enlaces que apunten a información general y técnica más detallada. Por ejemplo, puede agregar enlaces a artículos de Wikipedia, otras entradas de enciclopedia, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo agregar esta lista de enlaces, consulte la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#véase_también) en la _Guía de estilo de escritura_.
+Incluye una lista de enlaces que apunten a información general y técnica más detallada. Por ejemplo, puedes agregar enlaces a artículos de Wikipedia, otras entradas de enciclopedia, tutoriales técnicos y especificaciones. Para obtener pautas sobre cómo agregar esta lista de enlaces, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
