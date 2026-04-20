@@ -1,8 +1,9 @@
 ---
-title: hyphenate-limit-chars
+title: Propriété CSS `hyphenate-limit-chars`
+short-title: hyphenate-limit-chars
 slug: Web/CSS/Reference/Properties/hyphenate-limit-chars
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`hyphenate-limit-chars`** définit la longueur minimale d'un mot pour permettre la coupure par trait d'union, ainsi que le nombre minimal de caractères avant et après le trait d'union.

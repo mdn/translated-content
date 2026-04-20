@@ -1,8 +1,9 @@
 ---
-title: user-select
+title: Propriété CSS `user-select`
+short-title: user-select
 slug: Web/CSS/Reference/Properties/user-select
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`user-select`** contrôle si l'utilisateur·ice peut sélectionner du texte. Cela n'a aucun effet sur le contenu chargé dans l'interface utilisateur d'un navigateur (son {{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.

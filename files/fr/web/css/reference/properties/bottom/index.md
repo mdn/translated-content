@@ -1,8 +1,9 @@
 ---
-title: bottom
+title: Propriété CSS `bottom`
+short-title: bottom
 slug: Web/CSS/Reference/Properties/bottom
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`bottom`** participe à la définition de la position verticale d'un [élément positionné](/fr/docs/Web/CSS/Reference/Properties/position). Cette {{Glossary("inset properties", "propriété d'encart")}} n'a aucun effet sur les éléments qui ne sont pas positionnés.

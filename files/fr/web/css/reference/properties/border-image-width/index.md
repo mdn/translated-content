@@ -1,8 +1,9 @@
 ---
-title: border-image-width
+title: Propriété CSS `border-image-width`
+short-title: border-image-width
 slug: Web/CSS/Reference/Properties/border-image-width
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-width`** définit la largeur de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) d'un élément.

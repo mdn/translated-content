@@ -1,8 +1,9 @@
 ---
-title: object-fit
+title: Propriété CSS `object-fit`
+short-title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
 l10n:
-  sourceCommit: 113e0681c10e794aaf242faf50a152a1c7cd5d12
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`object-fit`** définit la façon dont le contenu d'un {{ Glossary("replaced elements", "élément remplacé")}}, tel qu'une {{HTMLElement("img")}} ou une {{HTMLElement("video")}}, doit être redimensionné pour s'adapter à son conteneur.

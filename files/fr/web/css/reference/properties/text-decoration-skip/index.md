@@ -1,8 +1,9 @@
 ---
-title: text-decoration-skip
+title: Propriété CSS `text-decoration-skip`
+short-title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
 l10n:
-  sourceCommit: aea2d29336c910940abb1f8e71e02158ac51e7c4
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Deprecated_Header}}

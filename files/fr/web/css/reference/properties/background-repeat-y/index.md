@@ -1,8 +1,9 @@
 ---
-title: background-repeat-y
+title: Propriété CSS `background-repeat-y`
+short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 l10n:
-  sourceCommit: 76e6e5407fd7cb49fb54dc51c7790a8b71ecec7f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

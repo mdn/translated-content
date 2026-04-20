@@ -1,8 +1,9 @@
 ---
-title: visibility
+title: Propriété CSS `visibility`
+short-title: visibility
 slug: Web/CSS/Reference/Properties/visibility
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`visibility`** affiche ou masque un élément sans modifier la disposition d'un document. La propriété peut également masquer des lignes ou des colonnes dans un tableau ({{HTMLElement("table")}}).

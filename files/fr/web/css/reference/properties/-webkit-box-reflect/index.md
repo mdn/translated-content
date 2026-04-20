@@ -1,8 +1,9 @@
 ---
-title: -webkit-box-reflect
+title: Propriété CSS `-webkit-box-reflect`
+short-title: -webkit-box-reflect
 slug: Web/CSS/Reference/Properties/-webkit-box-reflect
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_Header}}

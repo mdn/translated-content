@@ -1,8 +1,9 @@
 ---
-title: mask-border-mode
+title: Propriété CSS `mask-border-mode`
+short-title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-mode`** définit le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border).

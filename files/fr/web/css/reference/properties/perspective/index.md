@@ -1,8 +1,9 @@
 ---
-title: perspective
+title: Propriété CSS `perspective`
+short-title: perspective
 slug: Web/CSS/Reference/Properties/perspective
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`perspective`** détermine la distance entre le plan d'équation `z = 0` et la position de l'utilisateur·ice afin de donner une perspective aux éléments positionnés en 3D.

@@ -1,8 +1,9 @@
 ---
-title: letter-spacing
+title: Propriété CSS `letter-spacing`
+short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`letter-spacing`** définit l'espacement entre les caractères du texte. Cette valeur s'ajoute à l'espacement naturel entre les caractères lors du rendu du texte. Des valeurs positives de `letter-spacing` écartent davantage les caractères, tandis que des valeurs négatives de `letter-spacing` rapprochent les caractères.

@@ -1,8 +1,9 @@
 ---
-title: min-inline-size
+title: Propriété CSS `min-inline-size`
+short-title: min-inline-size
 slug: Web/CSS/Reference/Properties/min-inline-size
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne selon le mode d'écriture utilisé. Elle correspond à la propriété {{CSSxRef("min-width")}} ou {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.

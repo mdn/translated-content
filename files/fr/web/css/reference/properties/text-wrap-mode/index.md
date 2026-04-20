@@ -1,8 +1,9 @@
 ---
-title: text-wrap-mode
+title: Propriété CSS `text-wrap-mode`
+short-title: text-wrap-mode
 slug: Web/CSS/Reference/Properties/text-wrap-mode
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-wrap-mode`** contrôle si le texte à l'intérieur d'un élément est renvoyé à la ligne. Les différentes valeurs offrent des façons alternatives d'envelopper le contenu d'un élément de bloc. Elle peut également être définie et réinitialisée à l'aide de la propriété raccourcie {{CSSxRef("text-wrap")}} ou de la propriété raccourcie {{CSSxRef("white-space")}}.

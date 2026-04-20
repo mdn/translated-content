@@ -1,8 +1,9 @@
 ---
-title: justify-self
+title: Propriété CSS `justify-self`
+short-title: justify-self
 slug: Web/CSS/Reference/Properties/justify-self
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`justify-self`** définit la façon dont une boîte est alignée sur l'axe en ligne du conteneur.

@@ -1,8 +1,9 @@
 ---
-title: min-block-size
+title: Propriété CSS `min-block-size`
+short-title: min-block-size
 slug: Web/CSS/Reference/Properties/min-block-size
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`min-block-size`** définit la taille minimale horizontale ou verticale du bloc d'un élément, en fonction de son mode d'écriture. Elle correspond soit à la propriété {{CSSxRef("min-width")}}, soit à la propriété {{CSSxRef("min-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.

@@ -1,8 +1,9 @@
 ---
-title: font-width
+title: Propriété CSS `font-width`
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: 3e97bf7d99f829a3cab9676837e8d9beabf9a1de
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}
