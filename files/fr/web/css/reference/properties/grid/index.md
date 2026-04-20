@@ -1,8 +1,9 @@
 ---
-title: grid
+title: Propriété CSS `grid`
+short-title: grid
 slug: Web/CSS/Reference/Properties/grid
 l10n:
-  sourceCommit: 1e6d11fd99ab29e970924e68cfbc011d8c338bff
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid`** permet de définir toutes les propriétés de grille explicites et implicites en une seule déclaration.

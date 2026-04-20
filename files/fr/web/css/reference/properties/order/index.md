@@ -1,8 +1,9 @@
 ---
-title: order
+title: Propriété CSS `order`
+short-title: order
 slug: Web/CSS/Reference/Properties/order
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`order`** définit l'ordre dans lequel un élément est disposé dans un conteneur flexible ou une grille. Les éléments d'un conteneur sont triés par valeur croissante de `order`, puis par leur ordre dans le code source. Les éléments auxquels aucune valeur explicite de `order` n'est attribuée reçoivent la valeur par défaut de `0`.
