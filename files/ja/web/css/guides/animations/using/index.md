@@ -3,14 +3,14 @@ title: CSS アニメーションの使用
 short-title: アニメーションの使用
 slug: Web/CSS/Guides/Animations/Using
 l10n:
-  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 **CSS アニメーション**により、ある CSS のスタイル設定を別の設定へと遷移させることができます。アニメーションは、2 種類の要素で構成されています。 それは、アニメーションについて記述するスタイルと、アニメーションの先頭と末尾の CSS スタイルを示すキーフレームです。 同様に、アニメーション途中の通過点となるスタイルを示すこともできます。
 
 CSS アニメーションは、従来のスクリプトによるアニメーションに比べて 3 つの長所があります。
 
-1. 基本的なアニメーションには使いやすくできています。 つまり、 JavaScript を知らなくてもアニメーションを作ることができます。
+1. 数行の CSS だけで基本的なアニメーションを作成できます。JavaScript は不要です。
 2. アニメーションは中程度以下のシステム負荷で、良く動作します。単純なアニメーションの場合、JavaScript ではシステムの負荷を高めてしまうことがよくあります。 レンダリングエンジンは可能な限りパフォーマンスをなめらかに保つため、フレームを省略するなどの技術を用いることができます。
 3. ブラウザーはアニメーションの流れを制御して、パフォーマンスや効率を最適化します。 例えば、アクティブではないタブで動作しているアニメーションの更新の頻度を減らしたりします。
 
@@ -31,7 +31,7 @@ CSS アニメーションの流れ (シーケンス) を作成するには、ア
 - {{cssxref("animation-fill-mode")}}
   - : アニメーションの実行前後に、指定したスタイルを適用するかを設定します。
     > [!NOTE]
-    > アニメーションが [forwards](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) フィルモードの場合、アニメーション対象のプロパティは、[`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティの値に含まれているかのように振る舞います。アニメーション中に新しい重ね合わせコンテキストが作成された場合、ターゲット要素はアニメーション終了後もその重ね合わせコンテキストを保持します。
+    > アニメーションが [forwards](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) フィルモードの場合、アニメーション対象のプロパティは、{{cssxref("will-change")}} プロパティの値に含まれているかのように振る舞います。アニメーション中に新しい重ね合わせコンテキストが作成された場合、ターゲット要素はアニメーション終了後もその重ね合わせコンテキストを保持します。
 - {{cssxref("animation-iteration-count")}}
   - : アニメーションを繰り返す回数を設定します。 アニメーションを無限に繰り返すには `infinite` を指定してください。
 - {{cssxref("animation-name")}}
@@ -389,7 +389,7 @@ function listener(event) {
 
 ### display と content-visibility のアニメーション
 
-この例は、[`display`](/ja/docs/Web/CSS/Reference/Properties/display) と [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) をアニメーションさせる方法を示してあります。この動作は、例えばコンテナーを `display: none` で DOM から削除したいが、即座に消えるのではなく [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) を使って滑らかにフェードアウトさせたいといった、出現/消失アニメーションの作成に有用です。
+この例は、{{cssxref("display")}} と {{cssxref("content-visibility")}} をアニメーションさせる方法を示してあります。この動作は、例えばコンテナーを `display: none` で DOM から削除したいが、即座に消えるのではなく {{cssxref("opacity")}} を使って滑らかにフェードアウトさせたいといった、出現/消失アニメーションの作成に有用です。
 
 対応しているブラウザーでは、`display` と `content-visibility` のアニメーションを、[離散アニメーション型](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete)の一種を用いて実現します。これは一般的に、プロパティが 2 つの値の間をアニメーションする過程で、中間点（50% 地点）で値を切り替えることを意味します。
 
