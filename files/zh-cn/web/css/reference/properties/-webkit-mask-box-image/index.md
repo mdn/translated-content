@@ -1,8 +1,9 @@
 ---
-title: -webkit-mask-box-image
+title: `-webkit-mask-box-image` CSS 属性
+short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{ Non-standard_header() }}
