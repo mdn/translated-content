@@ -7,7 +7,7 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<base>`** définit l'URL de base à utiliser pour toutes les URL _relatives_ d'un document. Il ne peut y avoir qu'un seul élément `<base>` dans un document.
 
-L'URL de base utilisée par un document peut être obtenue par les scripts avec {{DOMxRef('Node.baseURI')}}. Si le document ne contient aucun élément `<base>`, alors `baseURI` prend la valeur de {{DOMxRef("location.href")}}.
+L'URL de base utilisée par un document peut être obtenue par les scripts avec {{DOMxRef("Node.baseURI")}}. Si le document ne contient aucun élément `<base>`, alors `baseURI` prend la valeur de {{DOMxRef("location.href")}}.
 
 ## Attributs
 
@@ -15,7 +15,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 > [!WARNING]
 > Un élément `<base>` doit avoir un attribut `href`, un attribut `target` ou les deux.
-> Si au moins un de ces attributs est spécifié, l'élément `<base>` **doit** précéder les autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` d'un élément {{HTMLElement("link")}}.
+> Si au moins un de ces attributs est défini, l'élément `<base>` **doit** précéder les autres éléments dont les valeurs d'attribut sont des URL, comme l'attribut `href` d'un élément {{HTMLElement("link")}}.
 
 - `href`
   - : L'URL de base à utiliser dans tout le document pour les URL relatives.

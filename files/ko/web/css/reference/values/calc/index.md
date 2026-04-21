@@ -99,7 +99,7 @@ input {
 
 ### CSS 변수와 중첩 `calc()`
 
-[CSS 변수](/ko/docs/Web/CSS/CSS_cascading_variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
+[CSS 변수](/ko/docs/Web/CSS/Guides/Cascading_variables)도 `calc()`와 같이 사용할 수 있습니다. 다음 코드를 살펴보세요.
 
 ```css
 .foo {
@@ -114,7 +114,7 @@ input {
 
 ## 접근성 고려사항
 
-`calc()`를 사용해 글씨 크기를 조절할땐 아래 코드처럼 피연산자 중 하나로 꼭 [상대길이 단위](/ko/docs/Web/CSS/length#상대길이_단위)를 사용해주세요.
+`calc()`를 사용해 글씨 크기를 조절할땐 아래 코드처럼 피연산자 중 하나로 꼭 [상대길이 단위](/ko/docs/Web/CSS/Reference/Values/length#상대길이_단위)를 사용해주세요.
 
 ```css
 h1 {

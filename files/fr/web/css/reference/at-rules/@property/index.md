@@ -1,129 +1,123 @@
 ---
 title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
-original_slug: Web/CSS/@property
 l10n:
-  sourceCommit: 943a9ba8905fbdb3966f0dd6d49f7652e3de94b3
+  sourceCommit: cd5ad7b2d4aa2596b19e6875fbe7736dde47ee82
 ---
 
-La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs). Elle permet aux développeur·euse·s de définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
+La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** est utilisée pour définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
 
-La règle `@property` permet d'enregistrer une propriété personnalisée directement dans une feuille de style, sans avoir à exécuter de JavaScript. Une règle `@property` valide enregistre une propriété personnalisée, ce qui équivaut à appeler {{domxref('CSS.registerProperty_static', 'registerProperty()')}} avec des paramètres équivalents.
+> [!NOTE]
+> La méthode JavaScript {{DOMxRef('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`.
 
 ## Syntaxe
 
 ```css
+@property --peutEtreNimporteQuoi {
+  syntax: "*";
+  inherits: true;
+}
+
 @property --rotation {
   syntax: "<angle>";
   inherits: false;
   initial-value: 45deg;
 }
+
+@property --defaultSize {
+  syntax: "<length> | <percentage>";
+  inherits: true;
+  initial-value: 200px;
+}
 ```
 
-Le nom de la propriété personnalisée est un [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident) qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
+Le nom de la propriété personnalisée est un {{CSSxRef("dashed-ident")}} qui commence par `--` et est suivi d'un identifiant valide défini par l'utilisateur·ice. Il est sensible à la casse.
 
 ### Descripteurs
 
+- {{CSSxRef("@property/syntax","syntax")}}
+  - : Une chaîne de caractères qui décrit les types de valeurs autorisées pour la propriété personnalisée enregistrée.
+- {{CSSxRef("@property/inherits","inherits")}}
+  - : Un booléen qui contrôle si l'enregistrement de la propriété personnalisée défini par `@property` est hérité par défaut.
+- {{CSSxRef("@property/initial-value","initial-value")}}
+  - : Une valeur qui définit la valeur de départ de la propriété.
+
+## Description
+
+La règle `@property` fait partie de l'ensemble d'API [CSS Houdini](/fr/docs/Web/API/Houdini_APIs). Elle permet aux développeur·euse·s de définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.
+
+La règle `@property` permet d'enregistrer des propriétés personnalisées directement dans les feuilles de style sans nécessiter de JavaScript. Les règles `@property` valides produisent des propriétés personnalisées enregistrées, ce qui a le même effet que d'appeler {{DOMxRef('CSS.registerProperty_static', 'registerProperty()')}} avec des paramètres équivalents.
+
 Les conditions suivantes doivent être respectées pour que la règle `@property` soit valide&nbsp;:
 
-- La règle `@property` doit inclure les descripteurs {{cssxref("@property/syntax","syntax")}} et {{cssxref("@property/inherits","inherits")}}.
+- La règle `@property` doit inclure les descripteurs {{CSSxRef("@property/syntax","syntax")}} et {{CSSxRef("@property/inherits","inherits")}}.
   Si l'un des deux manque, la règle entière est invalide et ignorée.
-- Le descripteur {{cssxref("@property/initial-value","initial-value")}} est optionnel si la valeur du descripteur `syntax` est la définition universelle (`syntax: "*"`).
+
+- Le descripteur `syntax` peut être un nom de type de donnée (comme `<color>`, `<length>`, ou `<number>`, etc.), avec des multiplicateurs (`+`, `#`) et des combinateurs (`|`), un identifiant personnalisé, ou la définition universelle (`*`), ce qui signifie que la syntaxe peut être n'importe quel flux de jetons valide. La valeur est une chaîne de caractères ({{CSSxRef("string")}}). Elle doit donc être placée entre guillemets.
+- Le descripteur {{CSSxRef("@property/initial-value","initial-value")}} est optionnel si la valeur du descripteur `syntax` est la définition universelle (`syntax: "*"`).
   Si le descripteur `initial-value` est requis mais omis, la règle entière est invalide et ignorée.
-- Si la valeur du descripteur `syntax` n'est pas la définition universelle, le descripteur {{cssxref("@property/initial-value","initial-value")}} doit être une valeur [indépendante du calcul](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent)<sup>(angl.)</sup>.
+- Si la valeur du descripteur `syntax` n'est pas la définition universelle, le descripteur {{CSSxRef("@property/initial-value","initial-value")}} doit être une valeur [indépendante du calcul](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent)<sup>(angl.)</sup>.
   Cela signifie que la valeur peut être convertie en valeur calculée sans dépendre d'autres valeurs, sauf pour les définitions «&nbsp;globales&nbsp;» indépendantes de CSS.
-  Par exemple, `10px` est indépendant du calcul&nbsp;: il ne change pas lors de la conversion en valeur calculée. `2in` est aussi valide, car `1in` équivaut toujours à `96px`. En revanche, `3em` n'est pas valide, car la valeur d'un `em` dépend de la propriété {{cssxref("font-size")}} du parent.
+  Par exemple, `10px` est indépendant du calcul&nbsp;: il ne change pas lors de la conversion en valeur calculée. `2in` est aussi valide, car `1in` équivaut toujours à `96px`. En revanche, `3em` n'est pas valide, car la valeur d'un `em` dépend de la propriété {{CSSxRef("font-size")}} du parent.
 - Les descripteurs inconnus sont invalides et ignorés, mais n'invalident pas la règle `@property`.
+
+Si plusieurs règles `@property` valides sont définies avec le même nom, la dernière dans l'ordre de la feuille de style «&nbsp;prend le dessus&nbsp;». Si des propriétés personnalisées sont enregistrées avec le même nom en utilisant `@property` en CSS et `CSS.registerProperty()` en JavaScript, l'enregistrement JavaScript prévaut.
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Utiliser `@property` pour enregistrer et utiliser une propriété personnalisée
+### Exemple simple
 
-Dans cet exemple, on définit deux propriétés personnalisées, `--item-size` et `--item-color`, qui serviront à définir la taille (largeur et hauteur) et la couleur d'arrière-plan des trois éléments suivants.
+Dans cet exemple, nous utilisons la règle `@property` pour déclarer deux propriétés personnalisées, puis nous utilisons ces propriétés dans nos déclarations de style.
+
+#### HTML
 
 ```html
-<div class="container">
-  <div class="item one">Élément un</div>
-  <div class="item two">Élément deux</div>
-  <div class="item three">Élément trois</div>
-</div>
+<p>Bonjour le monde&nbsp;!</p>
 ```
 
-Le code suivant utilise la règle CSS `@property` pour définir une propriété personnalisée nommée `--item-size`. La propriété définit la valeur initiale à `40%` et limite les valeurs valides aux valeurs de type {{cssxref("percentage")}} uniquement. Cela signifie que, lorsqu'elle est utilisée pour la taille d'un élément, sa taille sera toujours relative à celle de son parent. La propriété est héritée.
+#### CSS
 
 ```css
-@property --item-size {
-  syntax: "<percentage>";
+@property --myColor {
+  syntax: "<color>";
   inherits: true;
-  initial-value: 40%;
+  initial-value: rebeccapurple;
+}
+
+@property --myWidth {
+  syntax: "<length> | <percentage>";
+  inherits: true;
+  initial-value: 200px;
+}
+
+p {
+  background-color: var(--myColor);
+  width: var(--myWidth);
+  color: white;
 }
 ```
 
-On définit une seconde propriété personnalisée, `--item-color`, en utilisant [JavaScript](/fr/docs/Web/JavaScript) au lieu de CSS. La méthode JavaScript {{domxref('CSS.registerProperty_static', 'registerProperty()')}} est équivalente à la règle `@property`. La propriété est définie avec une valeur initiale `aqua`, n'accepte que des valeurs de type [`<color>`](/fr/docs/Web/CSS/Reference/Values/color_value), et n'est pas héritée.
+#### Résultats
 
-```js
-window.CSS.registerProperty({
-  name: "--item-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "aqua",
-});
-```
+{{EmbedLiveSample("Exemple simple", "100%", 60)}}
 
-On utilise les deux propriétés personnalisées pour mettre en forme les éléments&nbsp;:
-
-```css
-.container {
-  display: flex;
-  height: 200px;
-  border: 1px dashed black;
-
-  /* valeurs des propriétés personnalisées sur le parent */
-  --item-size: 20%;
-  --item-color: orange;
-}
-
-/* utilisation des propriétés personnalisées pour la taille et la couleur d'arrière-plan */
-.item {
-  width: var(--item-size);
-  height: var(--item-size);
-  background-color: var(--item-color);
-}
-
-/* valeurs des propriétés personnalisées sur l'élément lui-même */
-.two {
-  --item-size: initial;
-  --item-color: inherit;
-}
-
-.three {
-  /* valeurs invalides */
-  --item-size: 1000px;
-  --item-color: xyz;
-}
-```
-
-{{ EmbedLiveSample('utiliser_property_pour_enregistrer_et_utiliser_une_propriété_personnalisée', '100%', '250px') }}
-
-Les deux propriétés personnalisées, `--item-size: 20%` et `--item-color: orange;`, sont définies sur le parent `container`, ce qui remplace les valeurs par défaut `40%` et `aqua` définies lors de la création de ces propriétés. La taille est héritée, la couleur ne l'est pas.
-
-Pour l'élément un, aucune de ces propriétés personnalisées n'a été définie. La propriété `--item-size` est héritée, donc la valeur `20%` définie sur le parent `container` est utilisée. En revanche, la propriété `--item-color` n'est pas héritée, donc la valeur `orange` du parent n'est pas prise en compte. À la place, la valeur initiale par défaut `aqua` est utilisée.
-
-Pour l'élément deux, des mots-clés globaux CSS sont définis pour les deux propriétés personnalisées, ce qui sont des valeurs valides pour tous les types et donc valides quel que soit le descripteur `syntax`. La propriété `--item-size` est définie sur `initial` et utilise la valeur `initial-value: 40%;` définie dans la déclaration `@property`. La valeur `initial` signifie que la valeur `initialValue` de la propriété est utilisée. La propriété `--item-color` est définie sur `inherit`, héritant explicitement la valeur `orange` du parent même si la propriété personnalisée n'est pas censée être héritée. C'est pourquoi l'élément deux est orange.
-
-Pour l'élément trois, la valeur de `--item-size` est définie sur `1000px`. Bien que `1000px` soit une valeur de type {{cssxref("length")}}, la déclaration `@property` exige une valeur de type `<percentage>`, donc la déclaration est invalide et ignorée, ce qui fait que la valeur héritée `20%` du parent est utilisée. La valeur `xyz` est également invalide. Comme `registerProperty()` a défini `--item-color` comme non héritée, la valeur initiale par défaut `aqua` est utilisée et non la valeur `orange` du parent.
+Le paragraphe devrait avoir une largeur de `200px`, un arrière-plan violet et un texte blanc.
 
 ### Animer la valeur d'une propriété personnalisée
 
-Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+Dans cet exemple, on définit une propriété personnalisée appelée `--progress` avec `@property`&nbsp;: elle accepte des valeurs de type {{CSSxRef("&lt;percentage&gt;")}} et a une valeur initiale de `25%`. On utilise `--progress` pour définir la position des arrêts de couleur dans un {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, spécifiant où le vert s'arrête et où le noir commence. On anime ensuite la valeur de `--progress` jusqu'à `100%` sur 2,5 secondes, ce qui donne l'effet d'une barre de progression animée.
+
+#### HTML
 
 ```html
 <div class="bar"></div>
 ```
+
+#### CSS
 
 ```css
 @property --progress {
@@ -152,7 +146,9 @@ Dans cet exemple, on définit une propriété personnalisée appelée `--progres
 }
 ```
 
-{{ EmbedLiveSample('animer_la_valeur_dune_propriété_personnalisée', '100%', '60px') }}
+#### Résultats
+
+{{EmbedLiveSample("Animer la valeur d'une propriété personnalisée", "100%", 60)}}
 
 ## Spécifications
 
@@ -164,10 +160,10 @@ Dans cet exemple, on définit une propriété personnalisée appelée `--progres
 
 ## Voir aussi
 
-- {{cssxref("var")}}
-- [API Propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
-- [API Peinture CSS](/fr/docs/Web/API/CSS_Painting_API)
-- [API Typage de modèle d'objet CSS](/fr/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/fr/docs/Web/API/Houdini_APIs)
+- La fonction {{CSSxRef("var()")}}
+- [Propriétés personnalisées (`--*`)](/fr/docs/Web/CSS/Reference/Properties/--*)
+- [Enregistrement des propriétés personnalisées CSS](/fr/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)
+- Le module [de l'API des propriétés et valeurs CSS](/fr/docs/Web/CSS/Guides/Properties_and_values_API)
+- La documentation API [des propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
 - [Guide d'utilisation des propriétés CSS personnalisées (variables)](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
-- [Module des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)
+- Le module [des propriétés CSS personnalisées pour les variables en cascade](/fr/docs/Web/CSS/Guides/Cascading_variables)

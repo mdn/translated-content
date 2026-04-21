@@ -1,9 +1,8 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/Reference/Values/length-percentage
-original_slug: Web/CSS/length-percentage
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。
@@ -20,7 +19,7 @@ l10n:
 
 ### length-percentage の例
 
-以下の簡単な例では、`<length-percentage>` の値を使用するいくつかのプロパティを示しています。
+この例では、`<length-percentage>` の値を使用するいくつかのプロパティを示しています。
 
 #### HTML
 
@@ -57,7 +56,7 @@ p {
 
 ### calc() での使用
 
-許可されている型として `<length-percentage>` が指定されているところでは、これはパーセント値が長さとして解決されるので、 {{cssxref("calc", "calc()")}} の式で利用することができます。したがって、以下のすべての値が {{cssxref("width")}} で利用できます。
+許可されている型として `<length-percentage>` が指定されているところでは、これはパーセント値が長さとして解決されるので、 {{cssxref("calc()")}} の式で利用することができます。したがって、以下のすべての値が {{cssxref("width")}} で利用できます。
 
 ```css example-good
 width: 200px;
@@ -77,4 +76,4 @@ width: calc(100% - 200px);
 
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;length&gt;")}}
-- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)
+- [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュール

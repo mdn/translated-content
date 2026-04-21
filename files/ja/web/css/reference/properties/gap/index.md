@@ -1,9 +1,8 @@
 ---
 title: gap
 slug: Web/CSS/Reference/Properties/gap
-original_slug: Web/CSS/gap
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)、[フレックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)コンテナーに適用します。
@@ -53,7 +52,7 @@ gap: calc(20px + 10%);
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
@@ -121,7 +120,7 @@ gap: unset;
 
 段組みコンテナーでは、最初の値で段間のすき間を定義します。 {{cssxref("column-rule-style")}} プロパティまたは {{cssxref("column-rule")}} 一括指定を用いることで、そうでなければ「空の空間」に区切り線を追加することができます。
 
-パーセント値のすき間は、常にコンテナー要素の[コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)のサイズに対して計算されます。コンテナーサイズを定義している場合、この挙動はレイアウトモードによらず、明確に定義され一貫しています。これら 3 つのレイアウトモード（段組み、フレックス、グリッド）は、周期的パーセント値の扱いが異なるので、 `gap` もそうなります。グリッドレイアウトでは、周期的パーセント値は、{{glossary("intrinsic size","内在サイズ")}}の寄与を決定するためにゼロに対して解決しますが、コンテンツをレイアウトするときには要素のコンテンツボックスに対して解決します。下記 2 つの例では、[明示的コンテナーサイズ](#パーセント値の_gap_値と明示的なコンテナーサイズ)と[暗黙的コンテナーサイズ](#パーセント値の_gap_値と暗黙的なコンテナーサイズ)によるパーセント値によるすき間をを例の節で示します。
+パーセント値のすき間は、常にコンテナー要素の[コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)のサイズに対して計算されます。コンテナーサイズを定義している場合、この挙動はレイアウトモードによらず、明確に定義され一貫しています。これら 3 つのレイアウトモード（段組み、フレックス、グリッド）は、周期的パーセント値の扱いが異なるので、 `gap` もそうなります。グリッドレイアウトでは、周期的パーセント値は、{{glossary("intrinsic size","内在サイズ")}}の寄与を決定するためにゼロに対して解決しますが、コンテンツをレイアウトするときには要素のコンテンツボックスに対して解決します。下記 2 つの例では、[明示的コンテナーサイズ](#パーセント値の_gap_値と明示的なコンテナーサイズ)と[暗黙的コンテナーサイズ](#パーセント値の_gap_値と暗黙的なコンテナーサイズ)によるパーセント値によるすき間を例の節で示します。
 
 仕様書の初期バージョンでは、このプロパティは `grid--gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid--gap` を `gap` の別名として受け入れます。
 
@@ -215,10 +214,9 @@ gap: unset;
 
 #### HTML
 
-```html live-sample___multi-column_layout
+```html-nolint live-sample___multi-column_layout
 <p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
+  これは CSS の <code>gap</code> プロパティで作成した、40px の列間隔を持つ段組みのテキストです。これって楽しくて期待しませんか？私はそう思います！
 </p>
 ```
 
@@ -260,7 +258,7 @@ gap: unset;
 
 ```css hidden live-sample___explicit_container_size
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
   flex-flow: column;
 }
@@ -316,7 +314,7 @@ body > div {
 
 ```css hidden live-sample___implicit_container_size
 body > div {
-  background-color: #ccc;
+  background-color: #cccccc;
   width: 200px;
 }
 

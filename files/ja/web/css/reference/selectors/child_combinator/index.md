@@ -1,9 +1,8 @@
 ---
 title: 子結合子
 slug: Web/CSS/Reference/Selectors/Child_combinator
-original_slug: Web/CSS/Child_combinator
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **子結合子** (child combinator) (`>`) は 2 つの CSS セレクターの間に配置されます。 2 つ目のセレクターが 1 つ目のセレクターの直接の子要素の場合にのみ一致します。

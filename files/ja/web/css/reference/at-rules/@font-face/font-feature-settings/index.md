@@ -1,12 +1,11 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-feature-settings
-original_slug: Web/CSS/@font-face/font-feature-settings
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-**`font-feature-settings`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールで定義されたフォントに使用する初期設定を定義します。さらに、この記述子を使用して、 `@font-face` で定義されたフォントの合字、スモールキャップ、スワッシュなどの字体フォント機能を制御することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxref("font-feature-settings")}} プロパティと同じです。
+**`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@font-face")}} アットルールで定義されたフォントに使用する初期設定を定義します。さらに、この記述子を使用して、 `@font-face` で定義されたフォントの合字、スモールキャップ、スワッシュなどの字体フォント機能を制御することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxref("font-feature-settings")}} プロパティと同じです。
 
 この記述子は、要素全体ではなく `@font-face` アットルールのフォントオブジェクトに機能値を設定するので、この記述子を使用してレンダリングされるのは要素内の一部の字体だけかもしれません。
 

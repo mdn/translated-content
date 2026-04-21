@@ -1,9 +1,8 @@
 ---
 title: inset-block
 slug: Web/CSS/Reference/Properties/inset-block
-original_slug: Web/CSS/inset-block
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
@@ -77,7 +76,7 @@ inset-block: 3px 10px;
 inset-block: 2.4em 3em;
 inset-block: 10px; /* 値が先頭と末尾の両方に適用される */
 inset-block: auto anchor(start);
-inset-block: 10em anchor-size(--myAnchor height, 10%);
+inset-block: 10em anchor-size(--my-anchor height, 10%);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-block: 10% 5%;

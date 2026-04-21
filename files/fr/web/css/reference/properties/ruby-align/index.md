@@ -1,12 +1,14 @@
 ---
-title: ruby-align
+title: Propriété CSS `ruby-align`
+short-title: ruby-align
 slug: Web/CSS/Reference/Properties/ruby-align
-original_slug: Web/CSS/ruby-align
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.
 
-La propriété **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.
+## Syntaxe
 
 ```css
 /* Valeur avec un mot-clé */
@@ -18,10 +20,10 @@ ruby-align: space-around;
 /* Valeurs globales */
 ruby-align: inherit;
 ruby-align: initial;
+ruby-align: revert;
+ruby-align: revert-layer;
 ruby-align: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -44,7 +46,9 @@ ruby-align: unset;
 
 ## Exemples
 
-Ce fragment HTML sera affiché différemment en fonction des valeurs de `ruby-align` :
+### Ruby aligné au début du texte de base
+
+#### HTML
 
 ```html
 <ruby>
@@ -53,14 +57,7 @@ Ce fragment HTML sera affiché différemment en fonction des valeurs de `ruby-al
 </ruby>
 ```
 
-### Alignement par rapport au début du texte de base
-
-```html hidden
-<ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
-</ruby>
-```
+#### CSS
 
 ```css
 ruby {
@@ -68,18 +65,22 @@ ruby {
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+#### Résultat
 
-{{EmbedLiveSample("Alignement_par_rapport_au_début_du_texte_de_base", 180, 40)}}
+{{EmbedLiveSample("Ruby aligné au début du texte de base", 180, 40)}}
 
-### Alignement par rapport au centre
+### Ruby aligné au centre du texte de base
 
-```html hidden
+#### HTML
+
+```html
 <ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+  <rb>Ceci est un long texte pour tester</rb>
+  <rp>（</rp><rt>un petit ruby</rt><rp>）</rp>
 </ruby>
 ```
+
+#### CSS
 
 ```css
 ruby {
@@ -87,18 +88,22 @@ ruby {
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+#### Résultat
 
-{{EmbedLiveSample("Alignement_par_rapport_au_centre", 180, 40)}}
+{{EmbedLiveSample("Ruby aligné au centre du texte de base", 180, 40)}}
 
 ### Un espace supplémentaire entre les éléments ruby
 
-```html hidden
+#### HTML
+
+```html
 <ruby>
-  <rb>This is a long text to check</rb>
-  <rp>（</rp><rt>short ruby</rt><rp>）</rp>
+  <rb>Ceci est un long texte pour tester</rb>
+  <rp>（</rp><rt>un petit ruby</rt><rp>）</rp>
 </ruby>
 ```
+
+#### CSS
 
 ```css
 ruby {
@@ -106,11 +111,22 @@ ruby {
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+#### Résultat
 
-{{EmbedLiveSample("Un_espace_supplémentaire_entre_les_éléments_ruby", 180, 40)}}
+{{EmbedLiveSample("Un espace supplémentaire entre les éléments ruby", 180, 40)}}
 
 ### Un espace supplémentaire entre et autour des éléments ruby
+
+#### HTML
+
+```html
+<ruby>
+  <rb>Ceci est un long texte pour tester</rb>
+  <rp>（</rp><rt>un petit ruby</rt><rp>）</rp>
+</ruby>
+```
+
+#### CSS
 
 ```css
 ruby {
@@ -118,9 +134,9 @@ ruby {
 }
 ```
 
-Avec ce CSS, on obtient le résultat suivant :
+#### Résultat
 
-{{EmbedLiveSample("Un_espace_supplémentaire_entre_et_autour_des_éléments_ruby", 180, 40)}}
+{{EmbedLiveSample("Un espace supplémentaire entre et autour des éléments ruby", 180, 40)}}
 
 ## Spécifications
 
@@ -132,5 +148,6 @@ Avec ce CSS, on obtient le résultat suivant :
 
 ## Voir aussi
 
-- Les éléments HTML liés aux notations Ruby : {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}} et {{HTMLElement("rtc")}}.
-- Les propriétés CSS liées aux notations Ruby : {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.
+- La propriété {{CSSxRef("ruby-position")}}
+- Le module [de disposition ruby CSS](/fr/docs/Web/CSS/Guides/Ruby_layout)
+- Les éléments HTML Ruby&nbsp;: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}} et {{HTMLElement("rtc")}}

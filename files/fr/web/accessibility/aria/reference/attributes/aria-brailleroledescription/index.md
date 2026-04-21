@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-brailleroledescription"
 short-title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 L'attribut global `aria-brailleroledescription` définit une description abrégée, lisible par un·e humain·e et localisée par l'auteur·ice, du rôle d'un élément, destinée à être convertie en braille.
@@ -26,7 +26,7 @@ En résumé, la valeur de `aria-brailleroledescription` est une version abrégé
 </article>
 ```
 
-La plupart des technologies d'assistance, comme les lecteurs d'écran, liront l'exemple ci-dessus comme «&nbsp;diapositive, bienvenue à ma présentation. Image, Moi.&nbsp;». Les technologies d'assistance braille présenteront «&nbsp;dps bienvenue à ma présentation gra moi&nbsp;» en braille. L'élément sémantique {{HTMLElement('article')}} reçoit le rôle «&nbsp;diapositive&nbsp;» via l'attribut `aria-roledescription`&nbsp;; «&nbsp;diapositive&nbsp;» n'est pas un rôle défini dans la spécification, mais c'est un rôle courant pour les diapositives d'une présentation. En braille, le rôle est présenté sous la forme abrégée «&nbsp;dps&nbsp;». «&nbsp;gra&nbsp;» est l'abréviation de «&nbsp;graphique&nbsp;», qui est la façon dont le rôle «&nbsp;image&nbsp;» est raccourci en braille.
+La plupart des technologies d'assistance, comme les lecteurs d'écran, liront l'exemple ci-dessus comme «&nbsp;diapositive, bienvenue à ma présentation. Image, Moi.&nbsp;». Les technologies d'assistance braille présenteront «&nbsp;dps bienvenue à ma présentation gra moi&nbsp;» en braille. L'élément sémantique {{HTMLElement('article')}} reçoit le rôle «&nbsp;diapositive&nbsp;» avec l'attribut `aria-roledescription`&nbsp;; «&nbsp;diapositive&nbsp;» n'est pas un rôle défini dans la spécification, mais c'est un rôle courant pour les diapositives d'une présentation. En braille, le rôle est présenté sous la forme abrégée «&nbsp;dps&nbsp;». «&nbsp;gra&nbsp;» est l'abréviation de «&nbsp;graphique&nbsp;», qui est la façon dont le rôle «&nbsp;image&nbsp;» est raccourci en braille.
 
 L'attribut `aria-brailleroledescription` ne doit être utilisé que pour clarifier le but de rôles de conteneur non interactifs comme «&nbsp;groupe&nbsp;» ou «&nbsp;région&nbsp;», ou pour fournir une description plus précise d'un widget dans un contexte braille.
 
@@ -71,6 +71,6 @@ Utilisé dans **TOUS** les rôles (sauf [`generic`](/fr/docs/Web/Accessibility/A
 
 ## Voir aussi
 
-- {{domxref("Element.ariaBrailleRoleDescription")}}
+- La propriété API {{DOMxRef("Element.ariaBrailleRoleDescription")}}
 - L'attribut ARIA [`aria-roledescription`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription).
-- [`Element.ariaRoleDescription`](/fr/docs/Web/API/Element/ariaRoleDescription)
+- La propriété API {{DOMxRef("Element.ariaRoleDescription")}}

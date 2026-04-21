@@ -1,9 +1,8 @@
 ---
 title: 後続兄弟結合子
 slug: Web/CSS/Reference/Selectors/Subsequent-sibling_combinator
-original_slug: Web/CSS/Subsequent-sibling_combinator
 l10n:
-  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **後続兄弟結合子** (subsequent-sibling combinator, `~`) は 2 個のセレクターを結びつけ、 1 つ目の要素の後に 2 つ目の要素があり（直後である必要はない）、かつ両者が同じ親要素の子であるすべてのパターンに一致します。
@@ -56,14 +55,14 @@ p ~ span {
 
 {{EmbedLiveSample("Using the combinator with simple selectors", "auto", 300)}}
 
-### 複合セレクターによる結合子の使用
+### 複雑セレクターによる結合子の使用
 
-この例には2つの[複合セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector)があり、どちらも後続兄弟結合子 `.foo p ~ span` と `.foo p ~ .foo span` を使用しています。
+この例には 2 つの[複雑セレクター](/ja/docs/Web/CSS/Guides/Selectors/Selector_structure#複雑セレクター)があり、どちらも後続兄弟結合子 `.foo p ~ span` と `.foo p ~ .foo span` を使用しています。
 
-- 最初の複合セレクターである `.foo p ~ span` は、もし span と段落の親が同じで、**かつ**その親またはその親の祖先がクラス `.foo` を持っている場合、段落の後に来るすべての span に一致します。
-- 2 つ目の複合セレクター `.foo p ~ .foo span` は、クラス `.foo` を持っている要素の子孫であるすべての span に一致します。
+- 最初の複雑セレクターである `.foo p ~ span` は、もし span と段落の親が同じで、**かつ**その親またはその親の祖先がクラス `.foo` を持っている場合、段落の後に来るすべての span に一致します。
+- 2 つ目の複雑セレクター `.foo p ~ .foo span` は、クラス `.foo` を持っている要素の子孫であるすべての span に一致します。
 
-下記の例は、複合セレクターの対象要素は、複合セレクターの初期要素と同じ親を示さなければならないことを示しています。
+下記の例は、複雑セレクターの対象要素は、複雑セレクターの初期要素と同じ親を示さなければならないことを示しています。
 
 ```html
 <h1>夢は大きく</h1>

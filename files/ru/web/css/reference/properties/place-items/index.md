@@ -6,7 +6,7 @@ original_slug: Web/CSS/place-items
 
 {{CSSRef}}
 
-Сокращённое свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет одновременно выравнивать элементы и колонки, и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/CSS_grid_layout) или [флексбоксы](/ru/docs/Web/CSS/CSS_flexible_box_layout). Если задано одно значение, оно используется для выравнивания и в колонке, и в ряду.
+Сокращённое свойство [CSS](/ru/docs/Web/CSS) **`place-items`** позволяет одновременно выравнивать элементы и колонки, и ряда (т.е. по свойствам {{CSSxRef("align-items")}} и {{CSSxRef("justify-items")}}) в соответствующей системе раскладки, такой как [гриды](/ru/docs/Web/CSS/Guides/Grid_layout) или [флексбоксы](/ru/docs/Web/CSS/Guides/Flexible_box_layout). Если задано одно значение, оно используется для выравнивания и в колонке, и в ряду.
 
 {{InteractiveExample("CSS Demo: place-items")}}
 
@@ -350,10 +350,10 @@ values.addEventListener("change", function (evt) {
 
 ## Смотрите также
 
-- Руководство по флексбоксу: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- Руководство по флексбоксу: _[Выравнивание элементов во флекс-контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- Руководство по гридам: _[Выравнивание блоков в грид-раскладке](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_box_alignment)
+- Руководство по флексбоксу: _[Основные понятия Flexbox](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
+- Руководство по флексбоксу: _[Выравнивание элементов во флекс-контейнере](/ru/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)_
+- Руководство по гридам: _[Выравнивание блоков в грид-раскладке](/ru/docs/Web/CSS/Guides/Grid_layout/Box_alignment)_
+- [Выравнивание полей CSS](/ru/docs/Web/CSS/Guides/Box_alignment)
 - Свойство {{CSSxRef("align-items")}}
 - Свойство {{CSSxRef("align-self")}}
 - Свойство {{CSSxRef("justify-items")}}

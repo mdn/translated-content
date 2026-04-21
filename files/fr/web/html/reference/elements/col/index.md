@@ -2,7 +2,7 @@
 title: "<col> : l'élément représentant une colonne"
 slug: Web/HTML/Reference/Elements/col
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<col>`** définit une ou plusieurs colonnes dans un groupe de colonnes représenté par son élément parent {{HTMLElement("colgroup")}}. L'élément `<col>` n'est valide qu'en tant qu'enfant d'un élément {{HTMLElement("colgroup")}} qui n'a pas d'attribut [`span`](/fr/docs/Web/HTML/Reference/Elements/colgroup#span) défini.
@@ -214,7 +214,7 @@ table {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemples', 650, 170)}}
+{{EmbedLiveSample("Exemples", 650, 170)}}
 
 ## Résumé technique
 

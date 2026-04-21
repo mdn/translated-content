@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 original_slug: Learn/HTML/Tables/Advanced
 ---
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
 
@@ -14,7 +14,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >).
       </td>
@@ -48,7 +48,7 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 Le titre est placé directement sous la balise `<table>`.
 
 > [!NOTE]
-> L'attribut [`summary`](/fr/docs/Web/HTML/Reference/Elements/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
+> L'attribut [`summary`](/fr/docs/Web/HTML/Reference/Elements/table#summary) peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`, car `summary` est considéré comme obsolète par la norme HTML5, et ne peut être lu par l'utilisateur courant (il n'apparaît pas dans la page).
 
 ### Apprentissage actif&nbsp;: Ajouter un titre
 
@@ -435,4 +435,4 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn_web_development/Core/Styling_basics/Tables).
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

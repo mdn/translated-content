@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:focus-within
 original_slug: Web/CSS/:focus-within
 ---
 
-[CSS](/ko/docs/Web/CSS) **`:focus-within`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 포커스를 받았거나, 포커스를 받은 요소를 포함하는 요소를 나타냅니다. 즉 스스로 {{CSSxRef(":focus")}} 의사 클래스와 일치하거나, 그 자손 중 하나가 `:focus`와 일치하는 요소를 나타냅니다. ([섀도 트리](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내부도 포함)
+[CSS](/ko/docs/Web/CSS) **`:focus-within`** [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 포커스를 받았거나, 포커스를 받은 요소를 포함하는 요소를 나타냅니다. 즉 스스로 {{CSSxRef(":focus")}} 의사 클래스와 일치하거나, 그 자손 중 하나가 `:focus`와 일치하는 요소를 나타냅니다. ([섀도 트리](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내부도 포함)
 
 ```css
 /* Selects a <div> when one of its descendants is focused */

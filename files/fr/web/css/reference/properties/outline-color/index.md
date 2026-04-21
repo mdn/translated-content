@@ -1,14 +1,14 @@
 ---
-title: outline-color
+title: Propriété CSS `outline-color`
+short-title: outline-color
 slug: Web/CSS/Reference/Properties/outline-color
-original_slug: Web/CSS/outline-color
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`outline-color`** définit la couleur du contour d'un élément.
 
-La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le contour de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) et peut être utilisé pour faire ressortir l'élément.
-
-{{InteractiveExample("CSS Demo: outline-color")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: outline-color")}}
 
 ```css interactive-example-choice
 outline-color: red;
@@ -19,21 +19,21 @@ outline-color: #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline-color: rgba(170, 50, 220, 0.6);
+outline-color: rgb(170 50 220 / 0.6);
 ```
 
 ```css interactive-example-choice
-outline-color: hsla(60, 90%, 50%, 0.8);
+outline-color: hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
-outline-color: currentcolor;
+outline-color: currentColor;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    Ceci est une boîte avec un contour autour.
   </div>
 </section>
 ```
@@ -47,23 +47,19 @@ outline-color: currentcolor;
 }
 ```
 
-À la différence de la bordure, le contour est tracé en dehors du cadre de l'élément et peut donc chevaucher d'autres contenus. La bordure, en revanche, modifiera la disposition de la page afin de s'assurer qu'aucun chevauchement involontaire ne se produit.La propriété `outline-color` est également synthétisée avec la propriété raccourcie {{cssxref("outline")}}.
-
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé */
-outline-color: invert;
-
-/* Valeurs de couleur */
-/* Type <color>       */
-outline-color: red;
+/* Valeurs de type <color> */
 outline-color: #f92525;
-outline-color: rgb(30, 222, 121);
+outline-color: rgb(30 222 121);
+outline-color: blue;
 
 /* Valeurs globales */
 outline-color: inherit;
 outline-color: initial;
+outline-color: revert;
+outline-color: revert-layer;
 outline-color: unset;
 ```
 
@@ -71,10 +67,26 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 
 ### Valeurs
 
-- `<color>`
-  - : Voir la page {{cssxref("&lt;color&gt;")}} pour plus d'informations sur les valeurs utilisables avec ce type.
-- `invert`
-  - : Afin de s'assurer que la bordure est visible, on applique une inversion de couleur avec l'arrière-plan. Cela permet de renforcer le contraste, quelle que soit la couleur de l'arrière-plan. Cette valeur ne doit pas nécessairement être supportée par les navigateurs. Si elle ne l'est pas, ils considèreront la règle comme invalide.
+- {{CSSxRef("&lt;color&gt;")}}
+  - : La couleur du contour, définie comme un `<color>`.
+
+La spécification liste également une valeur supplémentaire, `auto`, qui n'est actuellement prise en charge par aucun navigateur. Lorsqu'elle sera implémentée, `auto` sera calculée comme [`currentColor`](/fr/docs/Web/CSS/Reference/Values/color_value#mot-clé_currentcolor) sauf si {{CSSxRef("outline-style")}} est défini sur `auto`, auquel cas elle sera calculée comme la [couleur d'accentuation](/fr/docs/Web/CSS/Reference/Properties/accent-color).
+
+## Description
+
+Un contour est une ligne tracée autour d'un élément, à l'extérieur de la bordure ({{CSSxRef("border")}}). Contrairement à la bordure de l'élément, le contour est tracé à l'extérieur du cadre de l'élément et peut chevaucher d'autres contenus. La bordure, en revanche, modifie réellement la mise en page de la page pour s'assurer qu'elle s'adapte sans chevaucher quoi que ce soit d'autre (sauf si vous la configurez explicitement pour chevaucher).
+
+Il est souvent plus pratique d'utiliser la propriété raccourcie {{CSSxRef("outline")}} lors de la définition de l'apparence d'un contour.
+
+## Accessibilité
+
+Les styles de [sélection personnalisés](/fr/docs/Web/CSS/Reference/Selectors/:focus) impliquent souvent des ajustements de la propriété {{CSSxRef("outline")}}. Si la couleur du contour est modifiée, il est important de s'assurer que le contraste entre celle-ci et l'arrière-plan sur lequel le contour est placé est suffisamment élevé pour que les personnes ayant une vision réduite puissent le percevoir.
+
+Le ratio de contraste des couleurs est déterminé en comparant la luminosité des valeurs de couleur du texte et de l'arrière-plan. Pour respecter les [Directives pour l'accessibilité des contenus Web (WCAG) <sup>(angl.)</sup>](https://www.w3.org/WAI/standards-guidelines/wcag/), un ratio de 4,5:1 est requis pour le contenu textuel et de 3:1 pour le texte plus grand, comme les titres. Le texte de grande taille est défini comme ayant une taille de `18.66px` et [gras](/fr/docs/Web/CSS/Reference/Properties/font-weight) ou plus, ou `24px` ou plus.
+
+- [WebAIM&nbsp;: Vérificateur de contraste des couleurs <sup>(angl.)</sup>](https://webaim.org/resources/contrastchecker/)
+- [Comprendre le WCAG sur le MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le critère de succès 1.4.3 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Définition formelle
 
@@ -86,39 +98,27 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 
 ## Exemples
 
-### HTML
+### Définir un contour bleu solide
+
+#### HTML
 
 ```html
-<p class="exemple">Mon contour est blue, da ba dee.</p>
+<p>Mon contour est bleu, comme vous pouvez le voir.</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
-.exemple {
-  /* Tout d'abord on utiliser outline */
-  /* pour définir le contour          */
-  outline: 2px solid;
-
-  /* Ensuite on précise sa couleur avec */
-  /* outline-color                      */
-  outline-color: #0000ff;
+p {
+  outline: 2px solid; /* Définir la largeur et le style du contour */
+  outline-color: blue; /* Définir la couleur du contour */
+  margin: 5px;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples","100%","100%")}}
-
-## Accessibilité
-
-[L'utilisation d'un focus personnalisé](/fr/docs/Web/CSS/Reference/Selectors/:focus) s'accompagne généralement d'une modification de la propriété {{cssxref("outline")}}. Si la couleur du contour est modifiée, il est nécessaire de vérifier que le contraste entre le contour et l'arrière-plan est suffisant afin que le contour puisse clairement être distingué.
-
-Le ratio de contraste est déterminé en comparaisant les luminosités des deux couleurs. Pour le contraste entre un texte et son arrière-plan, les recommandations [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) requièrent un ratio de 4.5:1 pour le contenu textuel et un ratio de 3:1 pour les titres ou les textes plus grands (18.66px et en gras ou 24px ou plus grand).
-
-- [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
+{{EmbedLiveSample("Définir un contour bleu solide")}}
 
 ## Spécifications
 
@@ -130,6 +130,8 @@ Le ratio de contraste est déterminé en comparaisant les luminosités des deux 
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
-- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
-- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/Guides/Colors/Applying_color)
+- La propriété raccourcie {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("outline-width")}}
+- La propriété {{CSSxRef("outline-style")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Autres propriétés associées aux couleurs&nbsp;: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("border-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}} et {{CSSxRef("column-rule-color")}}

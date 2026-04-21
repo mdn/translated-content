@@ -1,14 +1,14 @@
 ---
-title: outline-offset
+title: Propriété CSS `outline-offset`
+short-title: outline-offset
 slug: Web/CSS/Reference/Properties/outline-offset
-original_slug: Web/CSS/outline-offset
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`outline-offset`** définit l'espace entre un [contour](/fr/docs/Web/CSS/Reference/Properties/outline) et le bord ou la bordure d'un élément.
 
-La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
-
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: outline-offset")}}
 
 ```css interactive-example-choice
 outline-offset: 4px;
@@ -26,7 +26,7 @@ outline: 5px dashed blue;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    Ceci est une boîte avec un contour autour.
   </div>
 </section>
 ```
@@ -44,21 +44,26 @@ outline: 5px dashed blue;
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
+/* Valeurs de type <length> */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
 /* Valeurs globales */
 outline-offset: inherit;
 outline-offset: initial;
+outline-offset: revert;
+outline-offset: revert-layer;
 outline-offset: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La largeur de l'espace entre l'élément et son contour. Une valeur négative place le contour à l'intérieur de l'élément. Une valeur de `0` place le contour de manière à ce qu'il n'y ait pas d'espace entre lui et l'élément.
+
+## Description
+
+Un contour est une ligne tracée autour d'un élément, à l'extérieur du bord de la bordure. L'espace entre un élément et son contour est transparent. En d'autres termes, il est identique à l'arrière-plan de l'élément parent.
 
 ## Définition formelle
 
@@ -70,28 +75,29 @@ outline-offset: unset;
 
 ## Exemples
 
-### CSS
+### Définir un décalage de contour en pixels
+
+#### HTML
+
+```html
+<p>Gallia est omnis divisa in partes tres.</p>
+```
+
+#### CSS
 
 ```css
-.exemple {
+p {
   outline: 1px dashed red;
-  /* On décale la ligne de 10px */
   outline-offset: 10px;
   background: yellow;
+  border: 1px solid blue;
   margin: 15px;
-  border: 1px solid black;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p class="exemple">La bordure est décalée</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Définir un décalage de contour en pixels")}}
 
 ## Spécifications
 
@@ -100,3 +106,10 @@ outline-offset: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("outline")}}
+- La propriété {{CSSxRef("outline-width")}}
+- La propriété {{CSSxRef("outline-style")}}
+- La propriété {{CSSxRef("outline-color")}}

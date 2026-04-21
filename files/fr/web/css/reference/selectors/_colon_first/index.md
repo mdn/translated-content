@@ -1,12 +1,12 @@
 ---
-title: :first
+title: Pseudo-classe CSS `:first`
+short-title: :first
 slug: Web/CSS/Reference/Selectors/:first
-original_slug: Web/CSS/:first
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first`**, liée à la règle @ {{CSSxRef("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{CSSxRef(":first-child")}} pour le premier élément d'un noeud )
 
 ```css
 /* Cible le contenu de la première page */
@@ -18,7 +18,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 ```
 
 > [!NOTE]
-> Vous ne pouvez pas modifier toutes les propriétés CSS avec cette pseudo-classe. Vous pouvez uniquement modifier les marges, {{cssxref("orphans")}}, {{cssxref("widows")}} et les sauts de page du document. De plus, vous ne pouvez utiliser que des unités de [longueur absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) pour définir les marges. Toutes les autres propriétés seront ignorées.
+> Vous ne pouvez pas modifier toutes les propriétés CSS avec cette pseudo-classe. Vous pouvez uniquement modifier les marges, {{CSSxRef("orphans")}}, {{CSSxRef("widows")}} et les sauts de page du document. De plus, vous ne pouvez utiliser que des unités de [longueur absolues](/fr/docs/Web/CSS/Reference/Values/length#absolute_length_units) pour définir les marges. Toutes les autres propriétés seront ignorées.
 
 ## Syntaxe
 
@@ -71,7 +71,7 @@ document.querySelector("button").addEventListener("click", () => {
 
 ## Voir aussi
 
-- {{cssxref("@page")}}
+- La règle {{CSSxRef("@page")}}
 - Les autres pseudo-classes liées à la mise en page&nbsp;:
-  - {{cssxref(":left")}}
-  - {{cssxref(":right")}}
+  - {{CSSxRef(":left")}}
+  - {{CSSxRef(":right")}}

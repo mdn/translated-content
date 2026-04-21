@@ -52,5 +52,5 @@ Placeholder는 보조 기술을 사용하지 않는 사용자에게도 label을 
 ## 같이 보기
 
 - HTML [`title`](/ko/docs/Web/HTML/Reference/Global_attributes/title)
-- CSS [`:placeholder-shown`](/ko/docs/Web/CSS/:placeholder-shown) 가상 클래스 선택자
-- CSS [`::placeholder`](/ko/docs/Web/CSS/::placeholder) 가상 요소 선택자
+- CSS [`:placeholder-shown`](/ko/docs/Web/CSS/Reference/Selectors/:placeholder-shown) 가상 클래스 선택자
+- CSS [`::placeholder`](/ko/docs/Web/CSS/Reference/Selectors/::placeholder) 가상 요소 선택자

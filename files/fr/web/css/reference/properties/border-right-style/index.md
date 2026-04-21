@@ -1,14 +1,17 @@
 ---
-title: border-right-style
+title: Propriété CSS `border-right-style`
+short-title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
-original_slug: Web/CSS/border-right-style
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`border-right-style`** permet de définir le style de ligne de la {{CSSxRef("border")}} droite d'un élément.
 
-La propriété **`border-right-style`** définit le style de ligne utilisé pour mettre en forme la bordure sur le côté droit d'une boîte.
+> [!NOTE]
+> La spécification ne définit pas comment les bordures de styles différents se rejoignent dans les coins.
 
-{{InteractiveExample("CSS Demo: border-right-style")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: border-right-style")}}
 
 ```css interactive-example-choice
 border-right-style: none;
@@ -37,15 +40,15 @@ border-right-style: inset;
 ```html interactive-example
 <section id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    Ceci est une boîte avec une bordure autour.
   </div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
-  background-color: #eee;
-  color: #000;
+  background-color: #eeeeee;
+  color: black;
   border: 0.75em solid;
   padding: 0.75em;
   width: 80%;
@@ -53,12 +56,9 @@ border-right-style: inset;
 }
 
 body {
-  background-color: #fff;
+  background-color: white;
 }
 ```
-
-> [!NOTE]
-> La spécification ne définit pas la façon dont les bordures de différents styles se rejoignent dans les coins.
 
 ## Syntaxe
 
@@ -79,10 +79,11 @@ border-right-style: outset;
 border-right-style: inherit;
 border-right-style: initial;
 border-right-style: revert;
+border-right-style: revert-layer;
 border-right-style: unset;
 ```
 
-La propriété `border-right-style` se définit avec l'un des mots-clés utilisés par la propriété [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
+La propriété `border-right-style` se définit avec un seul mot-clé de type {{CSSxRef("&lt;line-style&gt;")}}.
 
 ## Définition formelle
 
@@ -90,7 +91,7 @@ La propriété `border-right-style` se définit avec l'un des mots-clés utilis�
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -165,7 +166,7 @@ td {
 
 ### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -177,6 +178,5 @@ td {
 
 ## Voir aussi
 
-- Les autres propriétés liées au style des bordures&nbsp;: [`border-left-style`](/fr/docs/Web/CSS/Reference/Properties/border-left-style), [`border-top-style`](/fr/docs/Web/CSS/Reference/Properties/border-top-style), [`border-bottom-style`](/fr/docs/Web/CSS/Reference/Properties/border-bottom-style), [`border-style`](/fr/docs/Web/CSS/Reference/Properties/border-style).
-
-- Les autres propriétés liées à la bordure droite&nbsp;: [`border-right`](/fr/docs/Web/CSS/Reference/Properties/border-right), [`border-right-color`](/fr/docs/Web/CSS/Reference/Properties/border-right-color), [`border-right-width`](/fr/docs/Web/CSS/Reference/Properties/border-right-width).
+- Les autres propriétés liées au style des bordures&nbsp;: {{CSSxRef("border-bottom-style")}}, {{CSSxRef("border-left-style")}}, {{CSSxRef("border-top-style")}} et {{CSSxRef("border-style")}}.
+- Les autres propriétés liées à la bordure droite&nbsp;: {{CSSxRef("border-right")}}, {{CSSxRef("border-right-color")}} et {{CSSxRef("border-right-width")}}.

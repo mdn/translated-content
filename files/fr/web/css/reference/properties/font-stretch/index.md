@@ -1,14 +1,17 @@
 ---
-title: font-stretch
+title: Propriété CSS `font-stretch`
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
-original_slug: Web/CSS/font-stretch
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+> [!NOTE]
+> La propriété `font-stretch` a été renommée en {{CSSxRef("font-width")}} dans la [spécification CSS Fonts <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts/#font-stretch-prop). Pour préserver la compatibilité, la spécification conserve `font-stretch` comme un alias hérité de la propriété `font-width`.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet de choisir entre la forme normale, condensée ou étendue d'une police.
 
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: font-stretch")}}
 
 ```css interactive-example-choice
 font-stretch: condensed;
@@ -37,11 +40,12 @@ font-stretch: 150%;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <p class="transition-all" id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+    Londres. Le trimestre de la Saint-Michel vient de se terminer, et le Lord
+    Chancelier siège dans le Lincoln's Inn Hall. Un temps de novembre
+    implacable. Autant de boue dans les rues que si les eaux venaient tout juste
+    de se retirer de la surface de la terre, et il ne serait pas étonnant de
+    croiser un Mégalosaure, long d'une quarantaine de pieds, se dandinant comme
+    un lézard éléphantesque sur Holborn Hill.
   </p>
 </section>
 ```
@@ -49,15 +53,14 @@ font-stretch: 150%;
 ```css interactive-example
 @font-face {
   src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
-  font-family: League;
+  font-family: "League";
   font-style: normal;
-  font-weight: 400;
-  font-stretch: 50% 200%; /* Required by Chrome - allow 50% to 200% */
+  font-weight: normal;
 }
 
 section {
   font-size: 1.2em;
-  font-family: League, sans-serif;
+  font-family: "League", sans-serif;
 }
 ```
 
@@ -65,11 +68,11 @@ section {
 
 ```css
 /* Valeurs avec un mot-clé */
+font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
 font-stretch: semi-condensed;
-font-stretch: normal;
 font-stretch: semi-expanded;
 font-stretch: expanded;
 font-stretch: extra-expanded;
@@ -84,23 +87,22 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: revert;
+font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)).
+Cette propriété peut être définie avec un seul mot-clé de type pourcentage ({{CSSxRef("&lt;percentage&gt;")}}).
 
 ### Valeurs
 
 - `normal`
-  - : Permet de choisir une fonte normale.
+  - : Définit une fonte normalement condensée.
 - `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
-  - : Permet de choisir une fonte plus resserrée que la normale, `ultra-condensed` correspond à la forme la plus condensée.
+  - : Définit une fonte plus condensée que la normale, `ultra-condensed` étant la plus condensée.
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
-  - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
-- `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage) entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
-
-Dans les anciennes versions de la spécification de `font-stretch`, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification [_CSS Fonts_ de niveau 4](https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch), cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `wdth` qui implémente ces largeurs variables. Attention toutefois à la compatibilité, car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. [la section en fin d'article sur la compatibilité des navigateurs](#compatibilité_des_navigateurs)).
+  - : Définit une fonte plus étendue que la normale, `ultra-expanded` étant la plus étendue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Une valeur de type {{CSSxRef("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
 
 ### Correspondance entre les mots-clés et les valeurs numériques
 
@@ -126,11 +128,96 @@ Certaines polices possèdent différentes fontes pour lesquelles les caractères
 
 ### Sélection de la fonte
 
-La fonte sélectionnée pour une valeur `font-stretch` dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.
+La fonte sélectionnée pour une valeur donnée de `font-stretch` dépend des fontes prises en charge par la police en question. Si la police ne fournit pas de fonte correspondant exactement à la valeur donnée, les valeurs inférieures à `100%` correspondent à une fonte condensée, et les valeurs supérieures ou égales à `100%` correspondent à une fonte étendue.
 
-Le tableau qui suit illustre l'effet des différents pourcentages avec deux polices possédant différentes fontes&nbsp;:
+Le tableau ci-dessous illustre l'effet de la définition de différentes valeurs en pourcentage de `font-stretch` sur deux polices différentes&nbsp;:
 
-<table class="standard-table">
+```css hidden
+@font-face {
+  font-family: "Inconsolata";
+  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Anek Malayalam";
+  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+    format("woff2");
+}
+
+body {
+  font-family: system-ui;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody th {
+  text-align: right;
+}
+
+th,
+td {
+  padding: 0.25rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+td {
+  border: solid;
+  border-width: 1px;
+  font-size: 5rem;
+}
+
+.inconsolata {
+  font-family: "Inconsolata", sans-serif;
+}
+
+.anek-malayalam {
+  font-family: "Anek Malayalam", sans-serif;
+}
+
+td:nth-child(2) {
+  font-stretch: 50%;
+}
+
+td:nth-child(3) {
+  font-stretch: 62.5%;
+}
+
+td:nth-child(4) {
+  font-stretch: 75%;
+}
+
+td:nth-child(5) {
+  font-stretch: 87.5%;
+}
+
+td:nth-child(6) {
+  font-stretch: 100%;
+}
+
+td:nth-child(7) {
+  font-stretch: 112.5%;
+}
+
+td:nth-child(8) {
+  font-stretch: 125%;
+}
+
+td:nth-child(9) {
+  font-stretch: 150%;
+}
+
+td:nth-child(10) {
+  font-stretch: 200%;
+}
+```
+
+```html hidden
+<table>
   <thead>
     <tr>
       <th scope="row"></th>
@@ -146,52 +233,88 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Helvetica Neue</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+    <tr class="inconsolata">
+      <th scope="row">Inconsolata</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
-    <tr>
-      <th scope="row">League Mono Variable</th>
-      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
-      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
-      <td><img alt="" src="l-100.png" /></td>
-      <td><img alt="" src="l-112.5.png" /></td>
-      <td><img alt="" src="l-125.png" /></td>
-      <td><img alt="" src="l-150.png" /></td>
-      <td><img alt="" src="l-200.png" /></td>
+    <tr class="anek-malayalam">
+      <th scope="row">Anek Malayalam</th>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
+      <td>e</td>
     </tr>
   </tbody>
 </table>
+```
 
-- Helvetica Neue est installée par défaut sur macOS et possède une seule fonte condensée en plus de la fonte normale. On voit dans ce tableau que les valeurs de `font-stretch` inférieures à 100% utilisent une fonte condensée alors que les autres valeurs utilisent la fonte normale.
-- [League Mono Variable](https://tylerfinck.com/leaguemonovariable/) est une police variable qui offre plusieurs variantes de fontes sur cet axe et on peut alors observer les variations de `font-stretch` selon les pourcentages choisis.
+{{EmbedLiveSample("Sélection de la fonte", "100%", 250)}}
 
-### Syntaxe formelle
+- [Inconsolata <sup>(angl.)</sup>](https://fonts.google.com/specimen/Inconsolata) est une police variable qui propose une plage continue de largeurs de 50% à 200%.
+- [Anek Malayalam <sup>(angl.)</sup>](https://fonts.google.com/specimen/Anek+Malayalam) est une police variable Google qui prend en charge des largeurs de 75% à 125%. Les valeurs en dehors de cette plage sélectionnent la fonte la plus proche.
 
-{{csssyntax}}
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax("font-stretch")}}
 
 ## Exemples
 
-### Avec un pourcentage
+### Définir les pourcentages d'étirement de police
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
+```html
+<p class="condensed">un lézard éléphantesque</p>
+<p class="normal">un lézard éléphantesque</p>
+<p class="expanded">un lézard éléphantesque</p>
+```
+
+```css
+@font-face {
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
+  font-family: "LeagueMonoVariable";
+  font-style: normal;
+}
+
+p {
+  font:
+    1.5rem "LeagueMonoVariable",
+    sans-serif;
+}
+
+.condensed {
+  font-stretch: 50%;
+}
+
+.normal {
+  font-stretch: 100%;
+}
+
+.expanded {
+  font-stretch: 200%;
+}
+```
+
+{{EmbedLiveSample("Définir les pourcentages d'étirement de police", "100%", 200)}}
 
 ## Spécifications
 
 {{Specifications}}
-
-> [!NOTE]
-> La propriété CSS `font-stretch` fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.
 
 ## Compatibilité des navigateurs
 
@@ -199,6 +322,10 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 
 ## Voir aussi
 
-- [`font-style`](/fr/docs/Web/CSS/Reference/Properties/font-style)
-- [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight)
-- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- Le descripteur {{CSSxRef("@font-face/font-stretch")}} pour {{CSSxRef("@font-face")}}
+- La propriété {{CSSxRef("font-width")}} moderne, remplaçant `font-stretch`
+- La propriété {{CSSxRef("font-style")}}
+- La propriété {{CSSxRef("font-weight")}}
+- L'attribut SVG {{SVGAttr("font-stretch")}}
+- [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
+- Le module [de polices CSS](/fr/docs/Web/CSS/Guides/Fonts)

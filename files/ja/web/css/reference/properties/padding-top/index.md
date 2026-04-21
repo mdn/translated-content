@@ -1,9 +1,8 @@
 ---
 title: padding-top
 slug: Web/CSS/Reference/Properties/padding-top
-original_slug: Web/CSS/padding-top
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`padding-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#パディング領域)における上側の高さを設定します。
@@ -104,7 +103,7 @@ padding-top: unset;
 .content {
   padding-top: 5%;
 }
-.sidebox {
+.side-box {
   padding-top: 10px;
 }
 ```
@@ -119,6 +118,9 @@ padding-top: unset;
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)
-- {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}} および {{cssxref("padding")}} 一括指定
-- 対応付けられる論理的プロパティ: {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} および一括指定の {{cssxref("padding-block")}} と {{cssxref("padding-inline")}}
+- {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}
+- 一括指定の {{cssxref("padding")}}
+- {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}}
+- 一括指定の {{cssxref("padding-block")}} および {{cssxref("padding-inline")}}
+- [CSS 基本ボックスモデル入門](/ja/docs/Web/CSS/Guides/Box_model/Introduction)ガイド
+- [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール

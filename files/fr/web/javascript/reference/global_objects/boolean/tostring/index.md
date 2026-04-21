@@ -1,53 +1,66 @@
 ---
-title: Boolean.prototype.toString()
+title: "Boolean : méthode toString()"
+short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`toString()`** des valeurs {{JSxRef("Boolean")}} retourne une chaîne de caractères représentant la valeur booléenne spécifiée.
 
-La méthode **`toString()`** renvoie une chaine de caractères correspondant à l'objet `Boolean` courant.
-
-{{InteractiveExample("JavaScript Demo: Boolean.toString()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Boolean.prototype.toString()")}}
 
 ```js interactive-example
 const flag1 = new Boolean(true);
 
 console.log(flag1.toString());
-// Expected output: "true"
+// Sortie attendue : "true"
 
 const flag2 = new Boolean(1);
 
 console.log(flag2.toString());
-// Expected output: "true"
+// Sortie attendue : "true"
 ```
 
 ## Syntaxe
 
-```js
-bool.toString();
+```js-nolint
+toString()
 ```
+
+### Paramètres
+
+Aucun.
 
 ### Valeur de retour
 
-Une chaîne de caractères qui représente l'objet {{jsxref("Boolean")}}.
+Une chaîne de caractères qui représente l'objet {{JSxRef("Boolean")}}.
 
 ## Description
 
-L'objet {{jsxref("Boolean")}} surcharge la méthode `toString()` de l'objet {{jsxref("Object")}} ; il n'hérite pas de la méthode {{jsxref("Object.prototype.toString()")}}. Pour les objets de type `Boolean`, la méthode `toString()` renvoie une chaine de caractère representative de l'objet.
+L'objet {{JSxRef("Boolean")}} surcharge la méthode `toString` de {{JSxRef("Object")}}&nbsp;; il n'hérite pas de
+{{JSxRef("Object.prototype.toString()")}}. Pour les valeurs de type `Boolean`, la méthode `toString` retourne une représentation sous forme de chaîne de caractères de la valeur booléenne, qui est soit `"true"` soit `"false"`.
 
-La méthode `toString()` est automatiquement appelée quand le `Boolean` doit être representé comme une texte ou lorsque qu'il est concaténé avec une chaine de caractères.
+La méthode `toString()` exige que sa valeur `this` soit une valeur primitive ou un objet enveloppe `Boolean`. Elle lève une exception {{JSxRef("TypeError")}} pour d'autres valeurs de `this` sans tenter de les convertir en booléen.
 
-Pour les objets de type `Boolean` , la fonction native `toString()` renvoie la chaine de caractère "`true`" ou "`false`" en fonction de la valeur de l'objet.
+Parce que `Boolean` ne possède pas de méthode [`[Symbol.toPrimitive]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive), JavaScript appelle automatiquement la méthode `toString()` lorsqu'un _objet_ `Boolean` est utilisé dans un contexte où une chaîne de caractères est attendue, comme dans un [littéral de gabarit](/fr/docs/Web/JavaScript/Reference/Template_literals). Cependant, les valeurs _primitives_ booléennes n'utilisent pas la méthode `toString()` pour être [converties en chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String#conversion_en_chaîne_de_caractères) — elles sont directement converties en utilisant le même algorithme que l'implémentation initiale de `toString()`.
+
+```js
+Boolean.prototype.toString = () => "Surchargé";
+console.log(`${true}`); // "true"
+console.log(`${new Boolean(true)}`); // "Surchargé"
+```
 
 ## Exemples
 
 ### Utiliser `toString()`
 
-Dans ce code, `flag.toString()` renvoie "`true`" :
+Dans ce code, `flag.toString()` retourne `"true"`&nbsp;:
 
 ```js
-var flag = new Boolean(true);
-var maVar = flag.toString();
+const flag = new Boolean(true);
+console.log(flag.toString()); // "true"
+console.log(false.toString()); // "false"
 ```
 
 ## Spécifications
@@ -60,4 +73,4 @@ var maVar = flag.toString();
 
 ## Voir aussi
 
-- {{jsxref("Object.prototype.toString()")}}
+- La méthode {{JSxRef("Object.prototype.toString()")}}

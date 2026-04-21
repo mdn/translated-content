@@ -1,9 +1,9 @@
 ---
-title: :scope
+title: Pseudo-classe CSS `:scope`
+short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
-original_slug: Web/CSS/:scope
 l10n:
-  sourceCommit: 277a8954951c900ef60a5175503976284c1d328d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.
@@ -154,6 +154,6 @@ La portée de `context` est l'élément avec l'attribut [`id`](/fr/docs/Web/HTML
 - La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@scope")}}
 - La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) {{CSSxRef(":root")}}
 - [Sélection et parcours de l'arbre DOM](/fr/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
-- {{DOMxRef("Element.querySelector()")}} et {{DOMxRef("Element.querySelectorAll()")}}
-- {{DOMxRef("Document.querySelector()")}} et {{DOMxRef("Document.querySelectorAll()")}}
-- {{DOMxRef("DocumentFragment.querySelector()")}} et {{DOMxRef("DocumentFragment.querySelectorAll()")}}
+- Les méthodes DOM {{DOMxRef("Element.querySelector()")}} et {{DOMxRef("Element.querySelectorAll()")}}
+- Les méthodes DOM {{DOMxRef("Document.querySelector()")}} et {{DOMxRef("Document.querySelectorAll()")}}
+- Les méthodes DOM {{DOMxRef("DocumentFragment.querySelector()")}} et {{DOMxRef("DocumentFragment.querySelectorAll()")}}

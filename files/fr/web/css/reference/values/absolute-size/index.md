@@ -3,7 +3,7 @@ title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
 original_slug: Web/CSS/absolute-size
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 2645539130f36327a0f2d6f1040c3945098da234
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<absolute-size>`** décrit les mots-clés de taille absolue. Ce type de donnée est utilisé dans les propriétés abrégées {{CSSxRef("font")}} et {{CSSxRef("font-size")}}.

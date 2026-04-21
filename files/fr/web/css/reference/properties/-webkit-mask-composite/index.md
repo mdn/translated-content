@@ -1,17 +1,17 @@
 ---
-title: -webkit-mask-composite
+title: Propriété CSS `-webkit-mask-composite`
+short-title: -webkit-mask-composite
 slug: Web/CSS/Reference/Properties/-webkit-mask-composite
-original_slug: Web/CSS/-webkit-mask-composite
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{CSSxRef("mask-image", "-webkit-mask-image")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-composite`** définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{CSSxRef("mask-image", "-webkit-mask-image")}}.
 
 > [!NOTE]
-> La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
+> La propriété {{CSSxRef("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
 
 ## Syntaxe
 
@@ -72,6 +72,8 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 
 ## Exemples
 
+### Composer avec XOR
+
 ```css
 .exemple {
   -webkit-mask-image: url(mask1.png), url("mask2.png");
@@ -89,4 +91,4 @@ Cette propriété ne fait partie d'aucun standard. Cette propriété est spécif
 
 ## Voir aussi
 
-- {{cssxref("mask-composite")}}
+- La propriété {{CSSxRef("mask-composite")}}

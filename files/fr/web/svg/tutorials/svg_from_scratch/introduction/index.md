@@ -1,49 +1,43 @@
 ---
 title: Introduction
 slug: Web/SVG/Tutorials/SVG_from_scratch/Introduction
-original_slug: Web/SVG/Tutorial/Introduction
+l10n:
+  sourceCommit: 12f1c2ad8d4378d332a625b2601c575ca773cf26
 ---
 
-{{SVGRef}}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started")}}
 
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+[SVG](/fr/docs/Web/SVG) est un langage [XML](/fr/docs/Web/XML), similaire à [XHTML](/fr/docs/Glossary/XHTML), qui permet de dessiner des graphiques vectoriels, comme celui présenté ci-dessous. Il peut servir à créer une image en spécifiant toutes les lignes et formes nécessaires, en modifiant des images matricielles existantes, ou par une combinaison des deux. L'image et ses composants peuvent aussi être transformés, composés ensemble ou filtrés pour changer complètement leur apparence.
 
-SVG est un langage [XML](/fr/XML), assez similaire au [XHTML](/fr/XHTML). Ce langage peut être utilisé pour dessiner des choses complexes, comme le petit lion sur la gauche. Je l'ai dit en présentation de ce tutoriel, le SVG est un langage vectoriel. En gros, cela veut dire que l'image peut être transformée, rétrécie, agrandie, bref, manipulée, sans perte de qualité.
+![Logo dinosaure Mozilla](dino.svg)
 
-La seconde particularité est que vous allez pouvoir lire le code. Stop ! Lire une image ? Et oui, cela vient du fait que SVG dérive du XML. Nous verrons dans ce tutoriel que le code SVG reste (la plupart du temps) humainement lisible. C'est aussi sympa car on va pouvoir le transformer en arbre DOM et ainsi le manipuler, avec du CSS et / ou du Javascript.
-
-SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](https://www.w3.org) sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
+SVG est apparu en 1999 après que plusieurs formats concurrents ont été soumis au [W3C <sup>(angl.)</sup>](https://www.w3.org/) sans être pleinement ratifiés. SVG est pris en charge par tous les principaux [navigateurs <sup>(angl.)</sup>](https://caniuse.com/#search=svg). Un inconvénient est que le chargement du SVG peut être lent. SVG offre des avantages, dont la disponibilité d'une [interface DOM](/fr/docs/Web/API) et l'absence de besoin d'extensions tierces. Son utilisation dépend souvent de votre cas d'usage spécifique.
 
 ## Les ingrédients de base
 
-HTML founit des éléments pour définir des titres, paragraphes, tableaux, etc. De la même manière, SVG fournit des éléments pour dessiner des cercles, des rectangles, des courbes simples ou complexes, etc.
+[HTML](/fr/docs/Web/HTML) fournit des éléments pour définir des titres, des paragraphes, des tableaux, etc. De la même manière, SVG fournit des éléments pour dessiner des cercles, des rectangles, des courbes simples ou complexes. Un document SVG de base se compose simplement de l'élément racine {{SVGElement('svg')}} et de plusieurs formes de base qui composent le graphique. Il existe aussi l'élément {{SVGElement('g')}}, qui sert à regrouper plusieurs formes de base.
 
-Un simple document SVG se compose de l'élément racine {{ SVGElement('svg') }}, à l'intérieur de laquelle vont être placées divers éléments. L'élément {{ SVGElement('g') }} permet de regrouper plusieurs éléments ensemble, un peu à la manière d'un div en HTML. À partir de là, l'image SVG peut devenir aussi complexe qu'on le veut.
+À partir de cette structure de base, l'image SVG peut devenir aussi complexe qu'on le souhaite. SVG prend en charge les dégradés, les rotations, les effets de filtre, les animations, l'interactivité avec JavaScript, etc. Mais toutes ces fonctionnalités supplémentaires reposent sur ce petit ensemble d'éléments pour définir la zone graphique.
 
-SVG prend en charge les dégradés, les rotations, les effets de filtre, les animations, l'interactivité avec JavaScript... Mais toutes ces fonctionnalités reposent sur un petit nombre d'éléments de base.
+## Avant de commencer
 
-## Les bons outils
+Il existe de nombreux logiciels de dessin, comme [Inkscape <sup>(angl.)</sup>](https://inkscape.org/), qui sont gratuits et utilisent SVG comme format natif. Cependant, ce tutoriel s'appuiera sur le bon vieux éditeur XML ou texte (à votre convenance). L'idée est d'expliquer les mécanismes internes de SVG à celles et ceux qui veulent les comprendre, et cela se fait mieux en manipulant un peu de balisage. Pensez à votre objectif final. Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exactement de la même manière dans une autre, simplement parce qu'ils prennent en charge différents niveaux de la spécification SVG ou une autre spécification utilisée avec SVG (comme [JavaScript](/fr/docs/Web/JavaScript) ou [CSS](/fr/docs/Web/CSS)).
 
-Il y a un certain nombre de logiciels de dessin disponibles qui utilisent SVG comme format natif. Certains, comme [Inkscape](https://www.inkscape.org/), sont libres et gratuits. Néanmoins, ce tutoriel se basera sur le XML et un simple éditeur de texte. Le but est d'enseigner les mécanismes de SVG à ceux qui veulent les comprendre, et la meilleure façon de le faire est de mettre les mains dans le cambouis avec un peu de balisage.
+SVG est pris en charge dans tous les navigateurs modernes, et même dans quelques versions antérieures dans certains cas. Un tableau assez complet de la compatibilité navigateur est disponible sur [<i lang="en">Can I use</i> <sup>(angl.)</sup>](https://caniuse.com/svg). Firefox prend en charge certains contenus SVG depuis la version 1.5, et ce support s'est amélioré à chaque version. Espérons qu'avec ce tutoriel, MDN aidera les développeur·euse·s à suivre les différences entre Gecko et d'autres grandes implémentations.
 
-> [!NOTE]
-> Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
+Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme HTML. Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en tête&nbsp;:
 
-Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/docs/Web/HTML). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
+- Les éléments et attributs SVG doivent être saisis avec la casse indiquée ici, car XML est sensible à la casse (contrairement au HTML).
+- Les valeurs d'attributs en SVG doivent être placées entre guillemets, même si ce sont des nombres.
 
-- Les éléments et attributs SVG sont sensibles à la casse (contrairement au HTML et doivent donc tous être entrés avec la casse indiquée ici).
-- Les valeurs des attributs en SVG doivent être placées entre guillemets même si ce sont des nombres.
-
-La [spécification du langage SVG (en)](https://www.w3.org/Graphics/SVG/) est énorme. Ce tutoriel a pour but d'en traiter juste assez pour pouvoir commencer. Une fois que vous serez à l'aise avec les bases du SVG, vous devriez être capables d'utiliser les [références d'éléments](/fr/docs/SVG/Référence_d'éléments) et les [références d'interfaces](/fr/docs/SVG/Référence_d'interfaces) pour découvrir tout ce que vous aurez besoin de connaître.
+SVG est une spécification très vaste. Ce tutoriel tente d'en couvrir les bases. Une fois à l'aise, vous pourrez utiliser la [référence des éléments](/fr/docs/Web/SVG/Reference/Element) et la [référence des interfaces](/fr/docs/Web/API/Document_Object_Model#dom_svg) pour trouver tout ce dont vous aurez besoin.
 
 ## Les versions SVG
 
-La version "complète" la plus récente de SVG est la 1.1 (devenue recommendation en 2003). Elle s'appuie sur SVG 1.0 mais ajoute davantage de modularisation pour faciliter l'implémentation. [La seconde édition de SVG 1.1](https://www.w3.org/TR/SVG/), est devenue recommendation en 2011.
+Depuis qu'il est devenu une recommandation en 2003, la version «&nbsp;complète&nbsp;» la plus récente de SVG est la 1.1. Elle s'appuie sur SVG 1.0 mais ajoute davantage de modularisation pour faciliter l'implémentation. [La seconde édition de SVG 1.1 <sup>(angl.)</sup>](https://www.w3.org/TR/SVG11/) est devenue recommandation en 2011. SVG 1.2 «&nbsp;complète&nbsp;» devait être la prochaine version majeure de SVG, mais elle a été abandonnée au profit de la spécification [SVG 2.0 <sup>(angl.)</sup>](https://svgwg.org/svg2-draft/), qui est devenue recommandation candidate en 2018 et constitue la norme actuelle. SVG 2.0 suit une approche similaire à CSS et elle divise les composants en plusieurs spécifications faiblement couplées, comme [SVG strokes <sup>(angl.)</sup>](https://svgwg.org/specs/strokes/), [SVG paths <sup>(angl.)</sup>](https://svgwg.org/specs/paths/), et [SVG markers <sup>(angl.)</sup>](https://svgwg.org/specs/markers/).
 
-SVG 1.2 devait être la prochaine version majeure de SVG mais celle-ci a été abandonnée pour le prochain [SVG 2.0](https://www.w3.org/TR/SVG2/), qui est actuellement en cours de développement. SVG 2.0 suit une approche similaire à CSS3: il divise les composants en plusieurs spécifications librement couplées.
+En dehors des recommandations SVG complètes, le groupe de travail du W3C a introduit SVG Tiny et SVG Basic en 2003. Ces deux profils sont principalement destinés aux appareils mobiles. SVG Tiny doit permettre d'obtenir des primitives graphiques pour les petits appareils à faibles capacités. SVG Basic offre de nombreuses fonctionnalités de SVG complet, mais n'inclut pas celles qui sont difficiles à implémenter ou lourdes à restituer (comme les animations). En 2008, SVG Tiny 1.2 est devenu une recommandation du W3C.
 
-Outre les recommendations complètes de SVG, le groupe de travail du W3C a introduit SVG Tiny et SVG basic en 2003. Ces deux profils s'adressent principalement aux mobiles. SVG Tiny devrait permettre d'obtenir des graphiques simples pour les périphériques qui ont de faibles capacités. SVG Basic, lui, offre de nombreuses fonctionnalités de SVG, mais n'inclut pas celles qui sont difficiles à implémenter ou lourdes à restituer (comme les animations). En 2008, SVG Tiny 1.2 est devenu une recommendation du W3C.
+Une spécification SVG Print était prévue, qui aurait ajouté la prise en charge de plusieurs pages et une gestion améliorée des couleurs. Ce travail a été interrompu.
 
-Une spécification SVG Print était prévue, qui ajouterait la prise en charge de plusieurs pages et une gestion améliorée des couleurs. Ce travail a été interrompu.
-
-{{ PreviousNext("SVG/Tutoriel", "SVG/Tutoriel/Premiers_pas") }}
+{{PreviousNext("Web/SVG/Tutorials/SVG_from_scratch", "Web/SVG/Tutorials/SVG_from_scratch/Getting_started")}}

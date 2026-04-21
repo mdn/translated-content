@@ -1,27 +1,37 @@
 ---
-title: HTMLFormElement.length
+title: "HTMLFormElement : propriété length"
+short-title: length
 slug: Web/API/HTMLFormElement/length
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre de contrôles présents dans l'élément {{HTMLElement("Form")}}.
+La propriété en lecture seule **`length`** de l'interface {{DOMxRef("HTMLFormElement")}} retourne le nombre de contrôles contenus dans l'élément HTML {{HTMLElement("form")}}.
 
-## Syntaxe
+Vous pouvez accéder à la liste des contrôles du formulaire à l'aide de la propriété {{DOMxRef("HTMLFormElement.elements", "elements")}}.
 
-```js
-integer = form.length;
-```
+Cela inclut à la fois les éléments descendants de l'élément `<form>` et les éléments qui sont associés au formulaire via leur attribut `form`.
+
+Les éléments pris en compte pour cette propriété sont&nbsp;: {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} (à l'exception de ceux dont le type est `"image"`, omis pour des raisons historiques), {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+
+## Valeur
+
+Un nombre.
 
 ## Exemple
 
 ```js
 if (document.getElementById("form1").length > 1) {
-  // more than one form control here
+  // plus d'un contrôle de formulaire ici
 }
 ```
 
 ## Spécifications
 
-- [HTML 5, Section 4.10.3, The form Element](https://www.w3.org/TR/html5/forms.html#dom-form-length)
-- [DOM Level 2: length](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#HTML-HTMLFormElement-length)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

@@ -138,15 +138,15 @@ function NavigatorExample() {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >.
       </td>
@@ -155,7 +155,7 @@ function NavigatorExample() {
       <th scope="row">許可されている内容</th>
       <td>
         {{HTMLElement("figcaption")}} 要素とそれに続く<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、またはフローコンテンツとそれに続く
         {{HTMLElement("figcaption")}} 要素、またはフローコンテンツ
@@ -168,7 +168,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -176,7 +176,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Figure_Role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/figure_role"
           >figure</a
         >
       </td>
@@ -185,7 +185,7 @@ function NavigatorExample() {
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         子孫に
-        <a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/figcaption">figcaption</a>
         がない場合:
         <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a
         >、それ以外の場合は許可されているロールなし

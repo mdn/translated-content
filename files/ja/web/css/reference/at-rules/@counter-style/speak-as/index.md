@@ -1,9 +1,8 @@
 ---
 title: speak-as
 slug: Web/CSS/Reference/At-rules/@counter-style/speak-as
-original_slug: Web/CSS/@counter-style/speak-as
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`speak-as`** 記述子は、与えられた {{cssxref('@counter-style')}} で構築されたカウンター記号が、話し言葉でどのように表現されるかを指定します。例えば、カウンター記号を数値として話すか、あるいは単にオーディオキューで表現するかを指定することができます。
@@ -107,6 +106,6 @@ speak-as: <counter-style-name>;
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- {{cssxref("symbols()")}}: 無名のカウンタースタイルを生成する関数記法。
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール

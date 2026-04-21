@@ -1,12 +1,13 @@
 ---
 title: align-self
 slug: Web/CSS/Reference/Properties/align-self
-original_slug: Web/CSS/align-self
 l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
 ---
 
 **`align-self`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッドやフレックスのアイテムの {{cssxref("align-items")}} の値を上書きします。グリッドでは、アイテムは{{glossary("Grid Areas", "グリッド領域")}}内で配置されます。フレックスボックスでは、アイテムは{{glossary("cross axis", "交差軸")}}上で配置されます。
+
+このプロパティは、ブロックレベルのボックスやテーブルのセルには適用されません。フレックスボックスの交差軸のマージンが `auto` の場合、`align-self` は無視されます。
 
 {{InteractiveExample("CSS デモ: align-self")}}
 
@@ -47,12 +48,10 @@ align-self: end;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 ```
-
-このプロパティは、ブロックレベルのボックスやテーブルのセルには適用されません。フレックスボックスの交差軸のマージンが `auto` の場合、`align-self` は無視されます。
 
 ## 構文
 
@@ -116,7 +115,7 @@ align-self: unset;
   - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
 - `stretch`
-  - : アイテムの交差軸方向の寸法の合計値が、配置コンテナーの寸法よりも小さく、アイテムの寸法が `auto` であった場合、アイテムの寸法は {{cssxref("max-height")}}/{{cssxref("max-width")}} (または同等の機能) で課された制約を尊重しつつ、均等の寸法 (比例的ではない) に拡大されるので、 `auto` が指定されたアイテムすべての寸法の合計は、ちょうど配置コンテナーの交差軸方向を埋めるようになります。
+  - : アイテムの交差軸サイズが `auto` の場合、使用されているサイズはアイテムの幅と高さの制限を尊重しつつ、可能な限りコンテナーを埋めるのに必要な大きさに設定されます。アイテムが自動サイズ設定されていない場合、この値は `flex-start` に代替され、コンテナーの {{cssxref("align-content")}} が `first baseline`（または `baseline`）もしくは `last baseline` の場合には `self-start` または `self-end` に代替されます。
 - `anchor-center`
   - : [アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)要素の場合、関連付けられたアンカー要素のブロック方向の中心にアイテムを配置します。 [`anchor-center` を使用してアンカーの中央に配置](/ja/docs/Web/CSS/Guides/Anchor_positioning/Using#anchor-center_を使用してアンカーの中央に配置)を参照してください。
 - `safe`
@@ -182,6 +181,8 @@ div:nth-child(3) {
 
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
+- [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)
-- {{cssxref("align-items")}} プロパティ
+- {{cssxref("align-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("place-self")}}

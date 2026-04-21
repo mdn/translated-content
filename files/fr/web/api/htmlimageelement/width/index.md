@@ -3,19 +3,19 @@ title: "HTMLImageElement : propriété width"
 short-title: width
 slug: Web/API/HTMLImageElement/width
 l10n:
-  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
+  sourceCommit: 1f00512e3c9a20b5bb927db529bb5d639e346d96
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`width`** de l'interface {{domxref("HTMLImageElement")}} indique la largeur à laquelle une image est affichée en {{Glossary("CSS pixel", "pixels CSS")}} si elle est rendue sur un support visuel (écran ou imprimante). Sinon, il s'agit de la largeur intrinsèque de l'image, corrigée selon la densité de pixels.
+La propriété **`width`** de l'interface {{DOMxRef("HTMLImageElement")}} indique la largeur à laquelle une image est affichée en {{Glossary("CSS pixel", "pixels CSS")}} si elle est rendue sur un support visuel (écran ou imprimante). Sinon, il s'agit de la largeur intrinsèque de l'image, corrigée selon la densité de pixels.
 
 ## Valeur
 
-Un entier qui indique la largeur de l'image.
+Une valeur entière indiquant la largeur de l'image. La façon dont la largeur est définie dépend du fait que l'image est rendue sur un support visuel ou non.
 
 - Si l'image est affichée sur un support visuel, la largeur est exprimée en {{Glossary("CSS pixel", "pixels CSS")}}.
-- Sinon, la largeur correspond à la largeur intrinsèque de l'image, ajustée selon la densité d'affichage (voir {{domxref("HTMLImageElement.naturalWidth", "naturalWidth")}}).
+- Sinon, la largeur correspond à la largeur intrinsèque de l'image, ajustée selon la densité d'affichage (voir {{DOMxRef("HTMLImageElement.naturalWidth", "naturalWidth")}}).
 
 ## Exemples
 
@@ -42,7 +42,7 @@ Pour une zone d'affichage jusqu'à 400px de large, l'image est affichée à 200p
 
 ### JavaScript
 
-Le code suivant lit la propriété `width` pour obtenir la largeur de l'image. Il s'exécute lors des événements {{domxref("Window.load_event", "load")}} et {{domxref("Window.resize_event", "resize")}} afin d'afficher la largeur actuelle.
+Le code suivant lit la propriété `width` pour obtenir la largeur de l'image. Il s'exécute lors des événements {{DOMxRef("Window.load_event", "load")}} et {{DOMxRef("Window.resize_event", "resize")}} afin d'afficher la largeur actuelle.
 
 ```js
 const clockImage = document.querySelector("img");
@@ -58,9 +58,9 @@ window.addEventListener("resize", updateWidth);
 
 ### Résultat
 
-{{EmbedLiveSample("exemples", 640, 450)}}
+{{EmbedLiveSample("Exemples", 640, 450)}}
 
-Vous pouvez aussi essayer cet exemple {{LiveSampleLink('exemples', 'dans sa propre fenêtre')}}.
+Vous pouvez aussi essayer cet exemple {{LiveSampleLink('Exemples', 'dans sa propre fenêtre')}}.
 
 ## Spécifications
 
@@ -72,9 +72,11 @@ Vous pouvez aussi essayer cet exemple {{LiveSampleLink('exemples', 'dans sa prop
 
 ## Voir aussi
 
-- {{domxref("HTMLCanvasElement.width")}}
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLIFrameElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
-- {{domxref("HTMLVideoElement.width")}}
+- La propriété {{DOMxRef("HTMLImageElement.height")}}
+- La propriété {{DOMxRef("HTMLImageElement.naturalWidth")}}
+- La propriété {{DOMxRef("HTMLCanvasElement.width")}}
+- La propriété {{DOMxRef("HTMLEmbedElement.width")}}
+- La propriété {{DOMxRef("HTMLIFrameElement.width")}}
+- La propriété {{DOMxRef("HTMLObjectElement.width")}}
+- La propriété {{DOMxRef("HTMLSourceElement.width")}}
+- La propriété {{DOMxRef("HTMLVideoElement.width")}}

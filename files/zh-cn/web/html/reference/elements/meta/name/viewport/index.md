@@ -28,9 +28,9 @@ slug: Web/HTML/Reference/Elements/meta/name/viewport
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
-  - : 控制视口的大小。这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
+  - : 控制视口的（最小）像素宽度（参见[视口宽度和屏幕宽度](#视口宽度和屏幕宽度)）。这可以设置为 1 到 10000 之间的正整数像素值（如 `width=600`）；也可以设置为特殊值 `device-width`，表示设备屏幕的物理尺寸（以 CSS 像素为单位）。此值决定了 [`vw`](/zh-CN/docs/Web/CSS/Reference/Values/length#基于视口的相对长度单位) 单位的值。
 - `height`
-  - : 控制视口的大小。这可以设置为特定像素数（如 `height=400`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/Reference/Values/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
+  - : 控制视口的（最小）像素高度（参见[视口宽度和屏幕宽度](#视口宽度和屏幕宽度)）。这可以设置为 1 到 10000 之间的正整数像素值（如 `height=400`）；也可以设置为特殊值 `device-height`，表示设备屏幕的物理尺寸（以 CSS 像素为单位）。此值决定了 [`vh`](/zh-CN/docs/Web/CSS/Reference/Values/length#基于视口的相对长度单位) 单位的值。
 - `initial-scale`
   - : 控制页面首次加载时显示的缩放倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
 - `minimum-scale`
@@ -41,6 +41,11 @@ slug: Web/HTML/Reference/Elements/meta/name/viewport
   - : 控制是否允许页面上的放大和缩小操作。有效值为 `0`、`1`、`yes` 或 `no`。默认值为 `1`，与 `yes` 相同。将值设置为 `0`（即与 `no` 相同）将违反 Web 内容无障碍指南（WCAG）。
 - `interactive-widget`
   - : 指定交互式 UI 组件（如虚拟键盘）对页面视口的影响。有效值：`resizes-visual`、`resizes-content` 或 `overlays-content`。默认值：`resizes-visual`。
+- `viewport-fit`
+  - : 定义网页的可视区域。它可以是以下关键字之一：`auto`、`contain` 或 `cover`。
+    - `auto`：不影响初始布局视口，整个网页都是可视的。
+    - `contain`：视口被缩放，以适配显示区域内可内接的最大矩形。
+    - `cover`：视口被缩放以填充设备显示区域。强烈建议使用[安全区域内偏移](/zh-CN/docs/Web/CSS/Reference/Values/env)变量，以确保重要内容不会超出显示区域。
 
 > [!WARNING]
 > 使用 `user-scalable=no` 会给有视觉障碍的用户造成无障碍问题，如弱视力。[WCAG](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) 要求至少有 2 倍的缩放；然而，最佳做法是启用 5 倍的缩放。

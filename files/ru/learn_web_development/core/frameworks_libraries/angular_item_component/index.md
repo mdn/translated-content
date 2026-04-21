@@ -3,7 +3,7 @@ title: Создание компонента элемента (item component)
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Компоненты представляют способ для организации вашего приложения. В этой статье описывается создание компонента для обработки отдельных элементов в списке и добавление функций проверки, редактирования и удаления.
 
@@ -12,7 +12,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_item_component
     <tr>
       <th scope="row">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/ru/docs/Learn/HTML">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a> и <a href="/ru/docs/Learn/JavaScript">JavaScript</a> знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a> и <a href="/ru/docs/Learn/JavaScript">JavaScript</a> знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
       </td>
     </tr>
     <tr>
@@ -405,7 +405,7 @@ Angular позволяет использовать `<ng-template>`, если в
 Теперь у вас должен быть стилизованный Angular-компонент приложения списка дел, позволяющий добавлять, редактировать и удалять элементы.
 Следующий шаг — добавление фильтрации, чтобы можно было просматривать элементы соответствующие определённым критериям.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_styling","Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

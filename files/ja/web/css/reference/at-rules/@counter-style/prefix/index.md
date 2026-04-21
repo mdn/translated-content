@@ -1,9 +1,8 @@
 ---
 title: prefix
 slug: Web/CSS/Reference/At-rules/@counter-style/prefix
-original_slug: Web/CSS/@counter-style/prefix
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 {{cssxref('@counter-style')}} ルールの **`prefix`** 記述子は、カウンターのマーカー表現の先頭に追加されるコンテンツを指定します。
@@ -24,7 +23,7 @@ prefix: url(bullet.png);
 **`prefix`** 記述子は、その値として単一の `<symbol>` を取ります。
 
 - `<symbol>`
-  - : マーカーに先立って表示される `<symbol>` を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;custom-ident&gt;")}} の何れかです。
+  - : マーカーに先立って表示される `<symbol>` を指定します。 {{cssxref("&lt;string&gt;")}}, {{cssxref("image")}}, {{cssxref("&lt;custom-ident&gt;")}} のいずれかです。
 
 ## 公式定義
 
@@ -84,6 +83,6 @@ prefix: url(bullet.png);
 
 - {{cssxref("@counter-style")}} 記述子: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - リストスタイルのプロパティ: {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
+- {{cssxref("symbols()")}}, 無名のカウンタースタイルを生成する関数記法。
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/Guides/Counter_styles)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/Guides/Lists)モジュール

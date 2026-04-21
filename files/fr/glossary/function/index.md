@@ -2,14 +2,14 @@
 title: Fonction
 slug: Glossary/Function
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
 ---
 
 Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une {{Glossary("variable")}} qui se réfère à la fonction. Lorsqu'une fonction est appelée, des {{Glossary("Argument", "arguments")}} lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En {{Glossary("JavaScript")}}, une fonction est aussi un {{Glossary("object", "objet")}}.
 
 Un nom de fonction est un {{Glossary("identifier", "identifiant")}} déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte {{Glossary("scope", "la portée")}} du nom de fonction.
 
-### Différents types de fonctions
+## Différents types de fonctions
 
 Une **fonction anonyme** est une fonction sans nom de fonction. Seules les expressions de fonction peuvent être anonymes. Les déclarations de fonctions doivent avoir un nom&nbsp;:
 

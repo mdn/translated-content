@@ -1,14 +1,14 @@
 ---
-title: transition-duration
+title: Propriété CSS `transition-duration`
+short-title: transition-duration
 slug: Web/CSS/Reference/Properties/transition-duration
-original_slug: Web/CSS/transition-duration
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
 
-La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
-
-{{InteractiveExample("CSS Demo: transition-duration")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: transition-duration")}}
 
 ```css interactive-example-choice
 transition-duration: 500ms;
@@ -32,14 +32,14 @@ transition-property: margin-right, color;
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">Survolez pour voir<br />la transition.</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -48,19 +48,18 @@ transition-property: margin-right, color;
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
 
-Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{cssxref("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.
+Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{CSSxRef("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.
 
 ## Syntaxe
 
 ```css
-/* Valeurs temporelles */
-/* Type <time> */
+/* Valeurs de type <time> */
 transition-duration: 6s;
 transition-duration: 120ms;
 transition-duration: 1s, 15s;
@@ -69,13 +68,15 @@ transition-duration: 10s, 30s, 230ms;
 /* Valeurs globales */
 transition-duration: inherit;
 transition-duration: initial;
+transition-duration: revert;
+transition-duration: revert-layer;
 transition-duration: unset;
 ```
 
 ### Valeurs
 
-- `<time>`
-  - : Une valeur {{cssxref("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de `0s` qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.
+- {{CSSxRef("&lt;time&gt;")}}
+  - : Une valeur {{CSSxRef("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de `0s` qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.
 
 ## Définition formelle
 
@@ -154,7 +155,7 @@ changeButton.addEventListener("click", change);
 
 #### Résultat
 
-{{EmbedLiveSample("Exemples",275,200)}}
+{{EmbedLiveSample("Exemple illustrant différentes durées", 275, 200)}}
 
 ## Spécifications
 
@@ -167,4 +168,8 @@ changeButton.addEventListener("click", change);
 ## Voir aussi
 
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
-- {{domxref("TransitionEvent")}}
+- La propriété {{CSSxRef('transition')}}
+- La propriété {{CSSxRef('transition-property')}}
+- La propriété {{CSSxRef('transition-timing-function')}}
+- La propriété {{CSSxRef('transition-delay')}}
+- L'interface API {{DOMxRef("TransitionEvent")}}

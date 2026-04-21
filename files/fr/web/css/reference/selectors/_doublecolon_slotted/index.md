@@ -1,19 +1,19 @@
 ---
-title: ::slotted()
+title: Pseudo-élément CSS `::slotted()`
+short-title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
-original_slug: Web/CSS/::slotted
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
+La [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (voir [Utiliser les gabarits et les emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots) pour plus d'informations).
 
-Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le [le DOM fantôme (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM). On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
+Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{HTMLElement("template")}} et/ou dans le [le DOM d'ombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM). On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::slotted()", "tabbed-shorter")}}
 
 ```css interactive-example
-/* Ce CSS est appliqué à l'intérieur du shadow DOM. */
+/* Ce CSS est appliqué à l'intérieur du DOM d'ombre. */
 
 ::slotted(.content) {
   background-color: aqua;
@@ -34,7 +34,7 @@ h2 ::slotted(span) {
 
 <my-card>
   <span slot="caption">Erreur</span>
-  <p class="content" slot="content">Échec de la construction !</p>
+  <p class="content" slot="content">Échec de la construction&nbsp;!</p>
 </my-card>
 ```
 
@@ -137,7 +137,7 @@ customElements.define(
 );
 ```
 
-On voit ici que, lorsqu'on renseigne le `style` de l'élément, on sélectionne tous les éléments présents dans les emplacements (`::slotted(*)`) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleur vision des emplacements qui ne sont pas encore occupés.
+On voit ici que, lorsqu'on renseigne le `style` de l'élément, on sélectionne tous les éléments présents dans les emplacements (`::slotted(*)`) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleure vision des emplacements qui ne sont pas encore occupés.
 
 Notre balisage comprend trois éléments personnalisés, dont un élément personnalisé avec un nom de `slot` invalide dans un ordre source différent de celui du `<template>`&nbsp;:
 
@@ -163,7 +163,7 @@ Notre balisage comprend trois éléments personnalisés, dont un élément perso
 
 #### Result
 
-{{EmbedLiveSample('mise_en_évidence_des_éléments_dans_les_emplacements', 500, 500)}}
+{{EmbedLiveSample("Mise en évidence des éléments dans les emplacements", 500, 500)}}
 
 ## Spécifications
 
@@ -175,12 +175,12 @@ Notre balisage comprend trois éléments personnalisés, dont un élément perso
 
 ## Voir aussi
 
-- {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
-- {{cssxref(":has-slotted")}}
-- Le module de [définition de la portée CSS](/fr/docs/Web/CSS/CSS_scoping)
-- L'attribut HTML [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
+- La pseudo-classe {{CSSxRef(":host")}}
+- La pseudo-classe {{CSSxRef(":host_function", ":host()")}}
+- La pseudo-classe {{CSSxRef(":host-context", ":host-context()")}}
+- La pseudo-classe {{CSSxRef(":has-slotted")}}
+- Le module [de définition de la portée CSS](/fr/docs/Web/CSS/CSS_scoping)
+- L'attribut HTML universel [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
 - L'élément HTML {{HTMLElement("slot")}}
 - L'élément HTML {{HTMLElement("template")}}
 - [Les composants web](/fr/docs/Web/API/Web_components)

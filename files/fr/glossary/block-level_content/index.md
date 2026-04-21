@@ -2,7 +2,7 @@
 title: Éléments de niveau bloc
 slug: Glossary/Block-level_content
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
 ---
 
 En CSS, le contenu qui participe à la mise en page en bloc est appelé **contenu de niveau bloc**.

@@ -80,7 +80,7 @@ En général, les navigateurs appliquent un style italique au contenu d'un élé
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', 640, 80)}}
+{{EmbedLiveSample("Exemples", 640, 80)}}
 
 ## Résumé technique
 

@@ -2,7 +2,7 @@
 title: "<blockquote> : l'élément de bloc de citation"
 slug: Web/HTML/Reference/Elements/blockquote
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<blockquote>`** indique que le texte qu'il contient est une citation longue. Habituellement, cela s'affiche visuellement par une indentation (voir [Notes](#notes_dutilisation) pour savoir comment la modifier). Une URL pour la source de la citation peut être donnée avec l'attribut `cite`, tandis qu'une représentation textuelle de la source peut être donnée avec l'élément HTML {{HTMLElement("cite")}}.
@@ -151,6 +151,6 @@ Cet exemple montre l'utilisation de l'élément `<blockquote>` pour citer un pas
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("q")}} qui permet de placer des citations en incise dans une ligne de texte.
-- L'élément HTML {{HTMLElement("cite")}} qui permet d'indiquer la source de la citation.
+- L'élément {{HTMLElement("q")}} qui permet de placer des citations en incise dans une ligne de texte.
+- L'élément {{HTMLElement("cite")}} qui permet d'indiquer la source de la citation.
 - [L'élément blockquote <sup>(angl.)</sup>](https://heydonworks.com/article/the-blockquote-element/) sur heydonworks.com (2024)

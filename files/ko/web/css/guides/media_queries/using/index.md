@@ -10,9 +10,9 @@ l10n:
 
 미디어 쿼리는 다음과 같은 상황에 사용할 수 있습니다.
 
-- [CSS](/ko/docs/Web/CSS) {{cssxref("@media")}}와 {{cssxref("@import")}} [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)을 사용해 특정 조건에 따라 스타일을 적용할 때.
+- [CSS](/ko/docs/Web/CSS) {{cssxref("@media")}}와 {{cssxref("@import")}} [@규칙](/ko/docs/Web/CSS/Guides/Syntax/At-rules)을 사용해 특정 조건에 따라 스타일을 적용할 때.
 - {{htmlelement("style")}}, {{htmlelement("link")}}, {{htmlelement("source")}}, 기타 다른 [HTML](/ko/docs/Web/HTML) 요소에 `media` 특성을 사용해 특정 매체만 가리키게 할 때.
-- {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)할 때.
+- {{domxref("Window.matchMedia()")}}와 {{domxref("MediaQueryList.addListener()")}} [JavaScript](/ko/docs/Web/JavaScript) 메서드를 사용해 [미디어 상태를 판별하고 관측](/ko/docs/Web/CSS/Guides/Media_queries/Testing)할 때.
 
 > [!NOTE]
 > 이 페이지의 CSS는 시연용으로 `@media`를 사용했지만, 기본적인 구문은 모든 미디어 쿼리가 동일합니다.
@@ -21,11 +21,11 @@ l10n:
 
 미디어 쿼리는 선택 사항인 미디어 유형과, 자유로운 수의 미디어 특성 표현식으로 이루어집니다. 논리 연산자를 사용해 다수의 쿼리를 다양한 방법으로 결합할 수도 있습니다. 미디어 쿼리는 대소문자를 구분하지 않습니다.
 
-- [미디어 유형](/ko/docs/Web/CSS/@media#media_types) 은 `all`, `print`, `screen` 으로 미디어 쿼리가 적용되는 장치의 범주를 정의합니다.
+- [미디어 유형](/ko/docs/Web/CSS/Reference/At-rules/@media#media_types) 은 `all`, `print`, `screen` 으로 미디어 쿼리가 적용되는 장치의 범주를 정의합니다.
 
   미디어 유형은 `not`이나 `only` 논리연산자를 사용할 때를 제외하면 선택사항이며 지정하지 않으면 `all`을 사용합니다.
 
-- [미디어 특성](/ko/docs/Web/CSS/@media#media_features) 은 {{glossary("user agent", "사용자 에이전트")}}, 출력 장치, 환경 등의 특징을 나타냅니다.
+- [미디어 특성](/ko/docs/Web/CSS/Reference/At-rules/@media#media_features) 은 {{glossary("user agent", "사용자 에이전트")}}, 출력 장치, 환경 등의 특징을 나타냅니다.
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
@@ -60,7 +60,7 @@ l10n:
   예를 들어, {{cssxref("@media/hover", "hover")}} 기능은 요소 위에서 호버를 했을 때 장치가 이를 지원하는지 확인하는 쿼리를 허용합니다.
   미디어 특성 표현식은 선택 사항이며 특성의 존재 여부와 값을 판별합니다. 각각의 미디어 특성 표현식은 괄호로 감싸야 합니다.
 
-- `not`, `and`, `only` 와 같은 [논리 연산자](/ko/docs/Web/CSS/@media#logical_operators) 를 사용해 복잡한 쿼리를 조합할 수 있습니다. 여러 미디어 쿼리를 쉼표로 구분해서 하나의 규칙으로 만들 수도 있습니다.
+- `not`, `and`, `only` 와 같은 [논리 연산자](/ko/docs/Web/CSS/Reference/At-rules/@media#logical_operators) 를 사용해 복잡한 쿼리를 조합할 수 있습니다. 여러 미디어 쿼리를 쉼표로 구분해서 하나의 규칙으로 만들 수도 있습니다.
 
 미디어 쿼리는 (유형을 지정했다면) 문서를 보여주는 미디어의 유형이 일치하고 모든 미디어 특성 표현식의 계산 값이 참일 때 `true`로 계산됩니다.
 특정할 수 없는 미디어 유형을 가진 쿼리는 언제나 거짓으로 계산됩니다.
@@ -294,9 +294,9 @@ l10n:
 
 ## 같이 보기
 
-- [@media](/ko/docs/Web/CSS/@media)
+- [@media](/ko/docs/Web/CSS/Reference/At-rules/@media)
 - [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)
-- [프로그래밍으로 미디어 쿼리 판별하기](/ko/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [프로그래밍으로 미디어 쿼리 판별하기](/ko/docs/Web/CSS/Guides/Media_queries/Testing)
 - [CSS 미디어 쿼리와 애니메이션](https://davidwalsh.name/animate-media-queries)
 - [Mozilla 미디어 기능 확장](/ko/docs/Web/CSS/Mozilla_Extensions#Media_features)
 - [WebKit 미디어 기능 확장](/ko/docs/Web/CSS/Webkit_Extensions#Media_features)

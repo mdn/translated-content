@@ -7,9 +7,9 @@ slug: Web/HTTP/Reference/Headers/Cookie
 
 `Cookie` 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | yes                            |
 
 ## Syntax
 

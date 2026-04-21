@@ -1,14 +1,14 @@
 ---
-title: scroll-snap-type
+title: Propriété CSS `scroll-snap-type`
+short-title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
-original_slug: Web/CSS/scroll-snap-type
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-type`** est définie sur un {{Glossary("scroll container", "conteneur de défilement")}}, l'optant pour l'accrochage au défilement en définissant la direction et la rigueur de l'application des points d'accroche dans le [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage).
 
-La propriété **`scroll-snap-type`** définit la force d'adhérence aux points d'accroche en cas de défilement d'un conteneur.
-
-{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-snap-type")}}
 
 ```css interactive-example-choice
 scroll-snap-type: none;
@@ -29,7 +29,7 @@ scroll-snap-type: x proximity;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -58,7 +58,7 @@ scroll-snap-type: x proximity;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -67,54 +67,62 @@ scroll-snap-type: x proximity;
 }
 
 #example-element > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
 
-La gestion précise des animations et de la physique pour respecter ces points d'accroche n'est pas décrite par cette propriété et est laissée à la discrétion de l'agent utilisateur.
+Si le contenu dans le port de défilement change — par exemple, si du contenu est ajouté, déplacé, supprimé ou redimensionné — le conteneur de défilement se repositionnera sur le contenu précédemment accroché si ce contenu est toujours présent.
+
+Si la valeur d'une propriété liée à l'accrochage au défilement, telle que `scroll-snap-type` ou {{CSSxRef("scroll-margin")}}, est modifiée, le conteneur de défilement se repositionnera en fonction de la valeur actuelle de `scroll-snap-type`.
+
+La spécification de toute animation ou physique précise utilisée pour appliquer ces points d'accroche n'est pas couverte par cette propriété, mais laissée à la discrétion de l'agent utilisateur.
+
+## Syntaxe
 
 ```css
-/* Valeur avec un mot-clé */
+/* Aucun accrochage */
 scroll-snap-type: none;
+
+/* Valeur avec un mot-clé */
 scroll-snap-type: x;
 scroll-snap-type: y;
 scroll-snap-type: block;
 scroll-snap-type: inline;
 scroll-snap-type: both;
 
-/* Ajout du mot-clé optionnel mandatory ou proximity*/
+/* Valeurs optionnelles pour la rigueur de l'accrochage */
+/* mandatory | proximity */
 scroll-snap-type: x mandatory;
 scroll-snap-type: y proximity;
 scroll-snap-type: both mandatory;
-/* etc. */
 
 /* Valeurs globales */
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
+scroll-snap-type: revert;
+scroll-snap-type: revert-layer;
 scroll-snap-type: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
 - `none`
-  - : Lorsque le {{Glossary("viewport")}} du conteneur défile, on ignore les points d'accroche.
+  - : Lorsque la {{Glossary("viewport", "zone d'affichage")}} visuelle de ce conteneur de défilement est défilée, elle doit ignorer les points d'accrochage.
 - `x`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe horizontal uniquement.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe horizontal.
 - `y`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe vertical uniquement.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe vertical.
 - `block`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe de bloc (celui orthogonal à l'axe de lecture) uniquement.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe de bloc.
 - `inline`
-  - : Le conteneur qui défile s'accroche aux positions sur l'axe en ligne (correspondant à au sens de lecteure) uniquement.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage uniquement sur son axe en ligne.
 - `both`
-  - : Le conteneur qui défile s'accroche aux positions sur les deux axes de façon indépendante.
+  - : Le conteneur de défilement s'accroche aux positions d'accrochage sur ses deux axes indépendamment (il peut s'accrocher à des éléments différents selon chaque axe).
 - `mandatory`
-  - : Le _viewport_ visuel du conteneur doit s'arrêter sur les points d'accroche s'il n'est pas en cours de défilement. Cela signifie qu'il accroche sur ce point quand le défilement s'arrête. Si du contenu est ajouté, déplacé, supprimé ou redimensionné, le décalage induit doit être ajusté pour rester sur ce point d'accroche.
+  - : La zone d'affichage visuelle de ce conteneur de défilement doit s'accrocher à une position d'accrochage si elle n'est pas actuellement défilée.
 - `proximity`
-  - : Le _viewport_ visuel du conteneur peut s'accrocher à un point d'accroche si aucun défilement n'est en cours, selon les paramètres de défilement de l'agent utilisateur. Si du contenu est ajouté, déplacé, supprimé ou redimensionne, le décalage induit peut être ajusté pour rester sur ce point d'accroche.
+  - : La zone d'affichage visuelle de ce conteneur de défilement peut s'accrocher à une position d'accrochage si elle n'est pas actuellement défilée. L'agent utilisateur décide s'il s'accroche en fonction des paramètres de défilement. Il s'agit de la rigueur d'accrochage par défaut si un axe d'accrochage est défini.
 
 ## Définition formelle
 
@@ -126,165 +134,156 @@ scroll-snap-type: unset;
 
 ## Exemples
 
-### CSS
+### Accrochage sur différents axes
 
-```css
-/* setup */
-html,
-body,
-.holster {
-  height: 100%;
-}
-.holster {
+#### HTML
+
+```html
+<main>
+  <section class="x mandatory-scroll-snapping" dir="ltr">
+    <div>X Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="x proximity-scroll-snapping" dir="ltr">
+    <div>X Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="ltr">
+    <div>Y Mand. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="y proximity-scroll-snapping" dir="ltr">
+    <div>Y Prox. LTR</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="x mandatory-scroll-snapping" dir="rtl">
+    <div>X Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="x proximity-scroll-snapping" dir="rtl">
+    <div>X Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="rtl">
+    <div>Y Mand. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+  <section class="y proximity-scroll-snapping" dir="rtl">
+    <div>Y Prox. RTL</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </section>
+</main>
+```
+
+#### CSS
+
+```css hidden
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-flow: column nowrap;
   font-family: monospace;
 }
-
-.container {
+section {
   display: flex;
-  overflow: auto;
+  margin: 1em auto;
   outline: 1px dashed lightgray;
   flex: none;
+  overflow: auto;
 }
-
-.container.x {
+.x {
   width: 100%;
   height: 128px;
   flex-flow: row nowrap;
+  overflow-y: hidden;
 }
-
-.container.y {
+.y {
   width: 256px;
   height: 256px;
   flex-flow: column nowrap;
+  overflow-x: hidden;
 }
+```
+
+```css
 /* scroll-snap */
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
-
 .x.proximity-scroll-snapping {
   scroll-snap-type: x proximity;
 }
-
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
 .y.proximity-scroll-snapping {
   scroll-snap-type: y proximity;
 }
 
-.container > div {
+div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
 }
+```
 
-.x.container > div {
+```css hidden
+.x div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
-
-.y.container > div {
+.y div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 100%;
 }
+
 /* appearance fixes */
-.y.container > div:first-child {
+.y div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
+
 /* coloration */
-.container > div:nth-child(even) {
+div:nth-child(even) {
   background-color: #87ea87;
 }
-
-.container > div:nth-child(odd) {
+div:nth-child(odd) {
   background-color: #87ccea;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div class="holster">
-  <div class="container x mandatory-scroll-snapping" dir="ltr">
-    <div>X Mand. LTR</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container x proximity-scroll-snapping" dir="ltr">
-    <div>X Prox. LTR</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container y mandatory-scroll-snapping" dir="ltr">
-    <div>Y Mand. LTR</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container y proximity-scroll-snapping" dir="ltr">
-    <div>Y Prox. LTR</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container x mandatory-scroll-snapping" dir="rtl">
-    <div>X Mand. RTL</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container x proximity-scroll-snapping" dir="rtl">
-    <div>X Prox. RTL</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container y mandatory-scroll-snapping" dir="rtl">
-    <div>Y Mand. RTL</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-
-  <div class="container y proximity-scroll-snapping" dir="rtl">
-    <div>Y Prox. RTL</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </div>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", "100%", "1630")}}
+{{EmbedLiveSample("Exemples", "100%", 1800)}}
 
 ## Spécifications
 
@@ -293,3 +292,12 @@ body,
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Autres propriétés de la zone de défilement&nbsp;: {{CSSxRef("scroll-margin")}}, {{CSSxRef("scroll-padding")}}
+- Propriétés des enfants de défilement&nbsp;: {{CSSxRef("scroll-snap-align")}}, {{CSSxRef("scroll-margin")}}, {{CSSxRef("scroll-snap-stop")}}
+- [Concepts de base de l'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
+- [Utilisation des évènements d'accrochage au défilement](/fr/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

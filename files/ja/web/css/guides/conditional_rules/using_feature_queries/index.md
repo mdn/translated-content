@@ -1,22 +1,21 @@
 ---
 title: 機能クエリーの使用
 slug: Web/CSS/Guides/Conditional_rules/Using_feature_queries
-original_slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 l10n:
-  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **機能クエリー** は、ユーザーエージェントが CSS プロパティやプロパティ値など、1 つ以上の CSS 機能に対応しているかどうかを検査する条件付きグループルールです。機能クエリーは、ウェブ開発者にある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法を提供します。このガイドでは、機能クエリーを使用してプログレッシブエンハンスメントを実装する方法を学びます。
 
-機能クエリーは、 CSS の [`@supports`](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルール（または [`@import`](/ja/docs/Web/CSS/Reference/At-rules/@import) アットルール内の `supports()` 関数）を使用して作成されます。
+機能クエリーは、 CSS の {{cssxref("@supports")}} アットルール（または {{cssxref("@import")}} アットルール内の `supports()` 関数）を使用して作成されます。
 
 ## 構文
 
-CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/Reference/At-rules/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
+CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/Guides/Conditional_rules)モジュールの一部で、ここにはメディアクエリーの {{cssxref("@media")}} アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
 
 機能クエリーは、`@supports` アットルールと、その後に続く対応条件、または `@import` アットルール宣言内の `supports()` 関数と宣言引数で構成されます。
 
-```css
+```plain
 /* `@supports` アットルール */
 @supports <support-condition> {
   /* 適用する CSS ルール */
@@ -203,7 +202,7 @@ body {
 
 ```css
 /* `selector()` を `supports()` 関数内で使用 */
-@import `/css/webkitShadowStyles.css`
+@import "/css/webkitShadowStyles.css"
   supports(selector(::-webkit-inner-spin-button));
 ```
 
@@ -217,8 +216,7 @@ body {
 
 ```html-nolint
 <p class="accentcolor">
-  Your browser does <span>not</span> support <code>AccentColor</code> as a color
-  value.
+  このブラウザーは色値として <code>AccentColor</code> に対応して<span>いません</span>。
 </p>
 ```
 
@@ -253,7 +251,7 @@ p {
 
 ## 機能クエリーの制限
 
-`@support` ルールは、ブラウザーが 1 つ以上のプロパティと値の組を解釈できるかどうか、つまり、その機能に対応していると主張するかどうかを確認するために使用します。もしブラウザーがそのプロパティと値のペアを理解できれば、肯定的な応答を返します。したがって、ブラウザーがある機能に正しく、バグなく対応しているかどうかを確認するために、機能クエリーを使用することはできないのです。機能クエリーはは「部分的な実装」を検査することもできません。
+`@support` ルールは、ブラウザーが 1 つ以上のプロパティと値の組を解釈できるかどうか、つまり、その機能に対応していると主張するかどうかを確認するために使用します。もしブラウザーがそのプロパティと値のペアを理解できれば、肯定的な応答を返します。したがって、ブラウザーがある機能に正しく、バグなく対応しているかどうかを確認するために、機能クエリーを使用することはできないのです。機能クエリーは「部分的な実装」を検査することもできません。
 
 ## まとめ
 

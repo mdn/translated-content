@@ -1,9 +1,9 @@
 ---
-title: :only-of-type
+title: Pseudo-classe CSS `:only-of-type`
+short-title: :only-of-type
 slug: Web/CSS/Reference/Selectors/:only-of-type
-original_slug: Web/CSS/:only-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.

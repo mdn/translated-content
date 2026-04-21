@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/Mobile
 original_slug: Learn/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 L'accès Web sur les appareils mobiles étant si populaire et les plates-formes populaires telles qu'IOS et Android disposant d'outils d'aide à l'accessibilité complets, il est important de prendre en compte l'accessibilité de votre contenu Web sur ces plates-formes. Cet article examine les considérations relatives à l'accessibilité spécifiques aux mobiles.
 
@@ -15,7 +15,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
       <td>
         Connaissances de base en informatique, compréhension de base de HTML,
         CSS et JavaScript et compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
+          href="/fr/docs/Learn_web_development/Core/Accessibility"
           >previous articles in the course</a
         >.
       </td>
@@ -255,7 +255,7 @@ Il est également utile d'envisager l'utilisation de types de saisie de formulai
 - Les types `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
 - Les types `time` et `date` affichent des sélecteurs appropriés pour la sélection des heures et des dates. .
 
-Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à [input types](http://diveinto.html5doctor.com/detect.html#input-types) pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
+Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à [input types](http://diveinto.html5doctor.com/detect.html#input-types) pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection) pour en savoir plus. .
 
 ## Résumé
 
@@ -266,4 +266,4 @@ Dans cet article, nous vous avons fourni des détails sur les problèmes courant
 - [Guidelines For Mobile Web Development](https://www.smashingmagazine.com/guidelines-for-mobile-web-development/) — Une liste d'articles dans Smashing Magazine couvrant différentes techniques de conception de sites Web mobiles.
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Article utile sur l'utilisation d'événements tactiles pour que les interactions fonctionnent sur les appareils mobiles.
 
-{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}

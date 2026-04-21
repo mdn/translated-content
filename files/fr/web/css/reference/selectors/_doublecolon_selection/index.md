@@ -1,9 +1,9 @@
 ---
-title: ::selection
+title: Pseudo-élément CSS `::selection`
+short-title: ::selection
 slug: Web/CSS/Reference/Selectors/::selection
-original_slug: Web/CSS/::selection
 l10n:
-  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur·ice (par exemple en cliquant et en faisant glisser la souris sur le texte).
@@ -109,4 +109,4 @@ p::selection {
 
 ## Voir aussi
 
-- {{cssxref("pointer-events")}} qui contrôle les évènements actifs sur l'élément
+- {{CSSxRef("pointer-events")}} qui contrôle les évènements actifs sur l'élément

@@ -3,34 +3,14 @@ title: "HTTP : HyperText Transfer Protocol"
 short-title: HTTP
 slug: Web/HTTP
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
 ---
 
-**_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) qui permet de transmettre des documents hypermédias, comme HTML. Il est conçu pour la communication entre les navigateurs web et les serveurs web, mais s'utilise aussi dans d'autres contextes.
+**_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) qui permet de transmettre des documents hypermédias, comme HTML.
+Il est conçu pour la communication entre les navigateurs web et les serveurs web, mais s'utilise aussi dans d'autres contextes.
 
-HTTP suit le modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur)&nbsp;: un·e client·e ouvre une connexion, effectue une requête et attend de recevoir une réponse. C'est aussi un [protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_état), ce qui signifie que le serveur ne conserve aucune donnée (état) entre deux requêtes.
-
-## Référence
-
-La documentation de la [référence HTTP](/fr/docs/Web/HTTP/Reference) contient des informations détaillées sur les en-têtes, les méthodes de requête, les codes de réponse et recense les spécifications et documents de référence pertinents.
-
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
-  - : Les en-têtes de message servent à transmettre des métadonnées sur une ressource ou un message HTTP, et à décrire le comportement du client ou du serveur.
-- [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
-  - : Les méthodes de requête indiquent l'objectif de la requête et ce qui est attendu en cas de succès.
-    Les méthodes les plus courantes sont {{HTTPMethod("GET")}} et {{HTTPMethod("POST")}} pour récupérer et envoyer des données aux serveurs, respectivement, mais d'autres méthodes existent pour d'autres usages.
-- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
-  - : Les codes de réponse HTTP indiquent si une requête HTTP aboutit. Les réponses se regroupent en cinq classes&nbsp;: réponses informationnelles, succès, redirections, erreurs client et erreurs serveur.
-- [Ressources et spécifications HTTP](/fr/docs/Web/HTTP/Reference/Resources_and_specifications)
-  - : Cette page recense les ressources pertinentes sur HTTP depuis sa première spécification au début des années 1990.
-
-Les sous-sections suivantes sont également notables&nbsp;:
-
-- [Directives CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-  - : Les champs de l'en-tête de réponse [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) permettent d'encadrer les ressources accessibles pour un·e utilisateur·ice sur une page donnée. Il s'agit en général de directives sur l'origine du serveur et les points de terminaison des scripts.
-- [Directives Permissions-Policy](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
-  - : L'en-tête de réponse {{HTTPHeader("Permissions-Policy")}} permet d'autoriser ou d'interdire l'utilisation de fonctionnalités du navigateur dans un document ou dans tout élément {{HTMLElement("iframe")}} du document.
-    Cette section liste les directives utilisables dans un en-tête Permissions-Policy, avec des pages de documentation qui expliquent leur fonctionnement et leur usage.
+HTTP suit un modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur), avec un·e client·e qui ouvre une connexion pour effectuer une requête, puis attend jusqu'à ce qu'il·elle reçoive une réponse du serveur.
+HTTP est un [protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_état), ce qui signifie que le serveur ne conserve aucune donnée de session entre deux requêtes, bien que l'ajout ultérieur des [cookies](/fr/docs/Web/HTTP/Guides/Cookies) ajoute un état à certaines interactions client-serveur.
 
 ## Guides
 
@@ -90,12 +70,29 @@ Nous vous conseillons de commencer par les guides fondamentaux avant d'explorer 
 - [Indications client HTTP](/fr/docs/Web/HTTP/Guides/Client_hints)
   - : Les indications client (<i lang="en">Client Hints</i> en anglais) sont un ensemble d'en-têtes de réponse qu'un serveur peut utiliser pour demander de façon proactive des informations au client sur l'appareil, le réseau, l'utilisateur·ice et les préférences propres à l'agent utilisateur.
     Le serveur détermine alors quelles ressources envoyer, selon les informations que le client choisit de fournir.
-- [Journalisation des erreurs réseau](/fr/docs/Web/HTTP/Guides/Network_Error_Logging) {{experimental_inline}}
+- [Journalisation des erreurs réseau](/fr/docs/Web/HTTP/Guides/Network_Error_Logging) {{Experimental_Inline}}
   - : La journalisation des erreurs réseau (<i lang="en">Network Error Logging</i> en anglais) est un mécanisme configurable via l'en-tête de réponse `NEL`.
     Cet en-tête expérimental permet aux sites et applications de recevoir des rapports sur les échecs (ou les succès) de récupération réseau depuis les navigateurs compatibles.
 - [Détection du navigateur via l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
   - : Il est très rarement pertinent d'utiliser la détection de l'agent utilisateur pour identifier un navigateur, mais certains cas limites l'exigent.
     Ce guide explique comment procéder aussi correctement que possible lorsque cela s'avère nécessaire, en insistant sur les précautions à prendre avant d'adopter cette approche.
+
+### Sécurité et vie privée
+
+- [Politique d'autorisations](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
+  - : La politique d'autorisations (<i lang="en">Permissions Policy</i> en anglais) fournit aux développeur·euse·s web des mécanismes pour déclarer explicitement quelles fonctionnalités peuvent ou non être utilisées sur un site web.
+    Vous définissez un ensemble de «&nbsp;politiques&nbsp;» qui restreignent les API auxquelles le code du site peut accéder ou modifient le comportement par défaut du navigateur pour certaines fonctionnalités.
+- [Partage de ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
+  - : Les requêtes HTTP intersites sont des requêtes pour des ressources provenant d'un domaine différent de celui de la ressource effectuant la requête.
+    Les pages web chargent aujourd'hui très fréquemment des ressources intersites, par exemple, une page du «&nbsp;Domaine A&nbsp;» (`http://domaina.example/`) demande une image sur le «&nbsp;Domaine B&nbsp;» (`http://domainb.foo/image.jpg`) via l'élément `img`.
+    CORS permet aux développeur·euse·s web de contrôler la façon dont leur site réagit aux requêtes intersites.
+- [Politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP)
+  - : CSP permet aux administrateur·ice·s de sites web d'utiliser l'en-tête de réponse {{HTTPHeader("Content-Security-Policy")}} pour contrôler quelles ressources le client est autorisé à charger pour une page donnée.
+    Le guide CSP décrit le mécanisme général de la politique de sécurité du contenu, qui aide à détecter et à atténuer certains types d'attaques, notamment les attaques par injection de données et de scripts intersites (XSS).
+- [Politique de ressources entre origines (CORP)](/fr/docs/Web/HTTP/Guides/Cross-Origin_Resource_Policy)
+  - : CORP permet aux sites et applications de choisir d'activer une protection contre des requêtes spécifiques provenant d'autres origines (comme celles effectuées avec des éléments `<script>` et `<img>`), afin d'atténuer les attaques spéculatives par canal auxiliaire.
+- [Recommandations de sécurité web de Mozilla <sup>(angl.)</sup>](https://infosec.mozilla.org/guidelines/web_security)
+  - : Un ensemble de conseils pour aider les équipes opérationnelles à créer des applications web sécurisées.
 
 ### Ressources associées
 
@@ -122,3 +119,25 @@ Outils utiles pour comprendre et déboguer HTTP.
     Prend en charge HTTP, HTTPS, WS, WSS, ainsi que de nombreux autres protocoles.
 - [How Browsers Work (2011) <sup>(angl.)</sup>](https://web.dev/articles/howbrowserswork)
   - : Un article détaillé sur le fonctionnement d'un navigateur et l'organisation des requêtes HTTP durant la navigation.
+
+## Référence
+
+La documentation de la [référence HTTP](/fr/docs/Web/HTTP/Reference) contient des informations détaillées sur les en-têtes, les méthodes de requête, les codes de réponse et recense les spécifications et documents de référence pertinents.
+
+- [En-têtes HTTP](/fr/docs/Web/HTTP/Reference/Headers)
+  - : Les en-têtes de message servent à transmettre des métadonnées sur une ressource ou un message HTTP, et à décrire le comportement du client ou du serveur.
+- [Méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
+  - : Les méthodes de requête indiquent l'objectif de la requête et ce qui est attendu en cas de succès.
+    Les méthodes les plus courantes sont {{HTTPMethod("GET")}} et {{HTTPMethod("POST")}} pour récupérer et envoyer des données aux serveurs, respectivement, mais d'autres méthodes existent pour d'autres usages.
+- [Codes de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
+  - : Les codes de réponse HTTP indiquent si une requête HTTP aboutit. Les réponses se regroupent en cinq classes&nbsp;: réponses informationnelles, succès, redirections, erreurs client et erreurs serveur.
+- [Ressources et spécifications HTTP](/fr/docs/Web/HTTP/Reference/Resources_and_specifications)
+  - : Cette page recense les ressources pertinentes sur HTTP depuis sa première spécification au début des années 1990.
+
+Les sous-sections suivantes sont également notables&nbsp;:
+
+- [Directives CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+  - : Les champs de l'en-tête de réponse [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) permettent d'encadrer les ressources accessibles pour un·e utilisateur·ice sur une page donnée. Il s'agit en général de directives sur l'origine du serveur et les points de terminaison des scripts.
+- [Directives Permissions-Policy](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#directives)
+  - : L'en-tête de réponse {{HTTPHeader("Permissions-Policy")}} permet d'autoriser ou d'interdire l'utilisation de fonctionnalités du navigateur dans un document ou dans tout élément {{HTMLElement("iframe")}} du document.
+    Cette section liste les directives utilisables dans un en-tête Permissions-Policy, avec des pages de documentation qui expliquent leur fonctionnement et leur usage.

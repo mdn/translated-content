@@ -2,7 +2,7 @@
 title: TransitionEvent
 slug: Web/API/TransitionEvent
 l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{APIRef("CSSOM")}}
@@ -54,3 +54,4 @@ _親である {{domxref("Event")}} から継承したプロパティもありま
 
 - [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
 - CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- CSS アットルール: {{cssxref("@starting-style")}}

@@ -1,13 +1,14 @@
 ---
-title: CSSTransformValue.entries()
+title: "CSSTransformValue: entries() メソッド"
+short-title: entries()
 slug: Web/API/CSSTransformValue/entries
 l10n:
   sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed OM")}}
 
-**`CSSTransformValue.entries()`** メソッドは、指定されたオブジェクト自身で列挙可能なプロパティ `[key, value]`のペアを {{jsxref("for...in")}} ループによって提供されるのと同じ順序の配列で返します（違いは for-in ループがプロトタイプチェーンでも同様に列挙するところです）。
+**`CSSTransformValue.entries()`** メソッドは、指定されたオブジェクト自身で列挙可能なプロパティ `[key, value]`のペアを [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループによって提供されるのと同じ順序の配列で返します（違いは for-in ループがプロトタイプチェーンでも同様に列挙するところです）。
 
 ## 構文
 

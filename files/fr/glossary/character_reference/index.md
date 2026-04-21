@@ -2,7 +2,7 @@
 title: Référence de caractère
 slug: Glossary/Character_reference
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
 ---
 
 Une **référence de caractère** {{Glossary("HTML")}} est une {{Glossary("escape character", "séquence d'échappement")}} composée de {{Glossary("character", "caractères")}} utilisée pour représenter un autre caractère dans la page web affichée.

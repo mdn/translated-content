@@ -7,7 +7,7 @@ slug: Web/API/HTMLImageElement
 
 **`HTMLImageElement`** 接口提供了特别的属性和方法 (在常规的 {{domxref("HTMLElement")}}之外，它也能通过继承使用) 来操纵 {{HTMLElement("img")}} 元素的布局和图像。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 

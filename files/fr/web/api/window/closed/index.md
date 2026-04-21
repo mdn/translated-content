@@ -1,69 +1,59 @@
 ---
-title: window.closed
+title: "Window : propriété closed"
+short-title: closed
 slug: Web/API/Window/closed
+l10n:
+  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-### Résumé
+La propriété en lecture seule **`closed`** de l'interface {{DOMxRef("Window")}} indique si la fenêtre référencée est fermée ou non.
 
-Cette propriété indique si la fenêtre référencée est fermée ou non.
+## Valeur
 
-### Syntaxe
+Une valeur booléenne. Valeurs possibles&nbsp;:
 
-```js
-isClosed = window.closed;
-```
-
-Cette propriété est en lecture seule.
-
-### Valeur renvoyée
-
-- `isClosed`
-  - : Un booléen. Les valeurs possibles sont&nbsp;:
-
-<!---->
-
-- `false`&nbsp;: La fenêtre est ouverte.
 - `true`&nbsp;: La fenêtre a été fermée.
+- `false`&nbsp;: La fenêtre est ouverte.
 
-### Exemples
+## Exemples
 
-#### Chargement d'une page dans la fenêtre principale depuis un popup
+### Changer l'URL d'une fenêtre depuis une fenêtre contextuelle
 
-L'exemple suivant montre comment un popup peut transmettre un choix de l'utilisateur à la fenêtre principale en y ouvrant une URL différente. Mais il faut d'abord vérifier que la fenêtre principale et encore ouverte.
+L'exemple suivant montre comment une fenêtre contextuelle peut changer l'URL de la fenêtre qui l'a ouverte. Avant d'essayer de changer l'URL, il vérifie que la fenêtre courante a un opener à l'aide de la propriété {{DOMxRef("window.opener")}} et que l'opener n'est pas fermé&nbsp;:
 
 ```js
-if (!window.opener.closed) {
-  // La fenêtre principale est encore là,
-  // on peut donc y charger une autre page
-  window.opener.location.href = newURL;
+// Vérifie qu'un opener existe et n'est pas fermé
+if (window.opener && !window.opener.closed) {
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 
-#### Appel d'une fonction dans un popup ouvert précédemment
+Notez que les fenêtres contextuelles ne peuvent accéder qu'à la fenêtre qui les a ouvertes.
 
-Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans le popup pour rafraichir son contenu. Cependant, si le popup n'a pas encore été ouvert ou si l'utilisateur l'a fermé, un nouveau popup est ouvert.
+### Rafraîchir une fenêtre contextuelle ouverte précédemment
+
+Dans cet exemple, la fonction `refreshPopupWindow()` appelle la méthode `reload()` de l'objet location de la fenêtre contextuelle pour rafraîchir ses données. Si la fenêtre contextuelle n'a pas encore été ouverte ou si l'utilisateur·ice l'a fermée, une nouvelle fenêtre est ouverte.
 
 ```js
-var popupWindow = null;
+let popupWindow = null;
 
 function refreshPopupWindow() {
   if (popupWindow && !popupWindow.closed) {
-    // Le popup a déjà été ouvert et il l'est encore.
-    // On peut donc appeler sa fonction doRefresh().
-    popupWindow.doRefresh();
+    // La fenêtre contextuelle est ouverte, on la rafraîchit
+    popupWindow.location.reload(true);
   } else {
-    // Il est nécessaire d'ouvrir d'abord le popup.
-    popupWindow = window.open("popup.html");
+    // Ouvre une nouvelle fenêtre contextuelle
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
 
-### Spécification
+## Spécifications
 
-DOM Level 0. `window.closed` ne fait partie d'aucune spécification ou recommandation technique du W3C.
+{{Specifications}}
 
-### Référence supplémentaire
+## Compatibilité des navigateurs
 
-- [window.closed sur MSDN](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/properties/closed.asp)
+{{Compat}}

@@ -1,9 +1,9 @@
 ---
 title: CSS ボックス配置の概要
+short-title: 概要
 slug: Web/CSS/Guides/Box_alignment/Overview
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment
 l10n:
-  sourceCommit: f3d3298130d8e22fb89ba123a0648ad3cb7b3655
+  sourceCommit: 32bdfdb82cf91ce9942b694286dec62be2cc20aa
 ---
 
 [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュールは、さまざまな CSS ボックスレイアウトモデルにおけるボックスの配置に関連する CSS 機能を指定します。このモジュールは、 CSS 全体で一貫した整列方法を作成することを目的としています。 CSS ボックス配置プロパティは、完全な水平方向と垂直方向の配置機能を提供します。
@@ -36,7 +36,7 @@ l10n:
 - {{cssxref("align-self")}}
 - {{cssxref("align-content")}}
 
-フレックスボックスでは、 {{cssxref("flex-direction")}} が `row` に設定されているときに上記が成り立つという複雑さが加わります。フレックスボックスが `column` に設定されている場合は、プロパティが入れ替わります。したがって、フレックスボックスで作業するときは、インラインとブロックではなく、主軸と交差軸について考える方が簡単です。 `justify-` プロパティは常に主軸の配置に使用され、 `align-` プロパティは交差軸の配置に使用されます。
+フレックスボックスでは、 {{cssxref("flex-direction")}} が `row` に設定されているときに上記が成り立つという複雑さが加わります。フレックスボックスが `column` に設定されている場合は、プロパティが入れ替わります。したがって、フレックスボックスで作業するときは、ふつうはインラインとブロックではなく、主軸と交差軸について考える方が簡単です。 `justify-` プロパティは常に主軸の配置に使用され、 `align-` プロパティは交差軸の配置に使用されます。
 
 ### 配置対象物
 
@@ -280,9 +280,10 @@ CSS のボックス配置プロパティは、操作する仕様によって異�
 
 ## 関連情報
 
+- [CSS ボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment)モジュール
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
 - [CSS 表示方法](/ja/docs/Web/CSS/Guides/Display)モジュール
 - [CSS フレックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール
 - [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [フレックスこてなーでのアイテム配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout) module
-- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [フレックスコンテナーでのアイテム配置](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール

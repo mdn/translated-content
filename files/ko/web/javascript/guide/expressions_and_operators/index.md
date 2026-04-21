@@ -3,7 +3,7 @@ title: 표현식과 연산자
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 이번 장에서는 JavaScript의 표현식과 함께 할당, 비교, 산술, 비트 계산, 논리, 문자열, 삼항 등 다양한 연산자를 살펴보겠습니다.
 
@@ -305,7 +305,7 @@ const var2 = 4;
       <td>
         두 피연산자의 값과 타입이 모두 같은 경우 <code>true</code>를 반환합니다.
         {{jsxref("Object.is")}}와
-        <a href="/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+        <a href="/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness"
           >JavaScript에서의 같음</a
         >을 참고하세요.
       </td>
@@ -1071,4 +1071,4 @@ super([arguments]); // 부모 생성자 호출
 super.functionOnParent([arguments]);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

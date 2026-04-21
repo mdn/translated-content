@@ -1,86 +1,153 @@
 ---
-title: Mettre en œuvre vos connaissances
+title: "Défi : Mettre en forme une page de biographie"
+short-title: "Défi : Page de biographie"
 slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
-original_slug: Learn/CSS/First_steps/Styling_a_biography_page
+l10n:
+  sourceCommit: 9381ac06accc1f6340cda5c90cec69cc66f67136
 ---
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
-Le temps est venu d'évaluer tout ce que vous avez appris dans les leçons précécentes : vous savez comment mettre en forme des documents texte simples à l'aide de CSS.
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
-      <td>
-        Avant de vous soumettre à cette évaluation, vous avez suivi le module
-        sur les bases de CSS ; vous maîtrisez par ailleurs les bases de HTML
-        (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >).
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>Tester vos connaissances en mettant à l'œuvre CSS.</td>
-    </tr>
-  </tbody>
-</table>
+Dans ce défi, vous allez mettre en forme une page de biographie simple, ce qui vous permettra de tester certaines des compétences acquises lors des dernières leçons, notamment l'écriture de sélecteurs, la coloration des arrière-plans et la mise en forme du texte. Nous vous inviterons aussi à rechercher quelques fonctionnalités CSS de base que nous n'avons pas abordées, pour tester vos compétences de recherche.
 
 ## Point de départ
 
-Vous pouvez travailler dans l'éditeur ci-dessous ou [télécharger le point de départ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) pour travailler en local sur votre machine, avec votre propre éditeur de code. Ce point de départ est une page HTML avec le CSS interne écrit dans la section `<head>`. Sur votre machine, n'hésitez pas à travailler avec une feuille de style externe. Vous pouvez aussi utiliser des éditeurs en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour travailler sur les tâches proposées.
+Pour commencer, cliquez sur le bouton **Exécuter** dans l'un des panneaux de code ci-dessous pour ouvrir l'exemple fourni dans le MDN Playground. Vous suivrez ensuite les instructions des sections suivantes pour mettre en forme la page comme il se doit.
 
-> [!NOTE]
-> Ne restez pas coincé, appelez à l'aide — voir la section [Evaluation et comment obtenir de l'aide](#evaluation) au bas de cette page.
+```html live-sample___style-bio-start live-sample___style-bio-finish
+<h1>Jane Doe</h1>
+<div class="job-title">Développeuse web</div>
+<p>
+  Loin, très loin, derrière les montagnes de mots, loin des pays de Vokalia et
+  Consonantia, vivent les textes aveugles. Séparés, ils vivent à Bookmarksgrove
+  juste au bord de la mer des Sémantiques, un vaste océan de langues.
+</p>
 
-## Travailler avec CSS
+<p>
+  Une petite rivière nommée Duden passe par leur endroit et leur fournit la
+  régélialia nécessaire. C'est un pays paradisiaque, où des morceaux rôtis de
+  phrases volent jusque dans votre bouche.
+</p>
 
-L'exemple ci-dessous propose de retravailler la mise en forme d'une biographie stylée avec CSS. Les propriétés utilisées sont les suivantes — chacune renvoie vers sa page MDN pour plus d'exemples d'usages :
+<h2>Informations de contact</h2>
+<ul>
+  <li>Email&nbsp;: <a href="mailto:jane@example.com">jane@example.com</a></li>
+  <li>Web&nbsp;: <a href="http://example.com">http://example.com</a></li>
+  <li>Tél.&nbsp;: <a href="tel:12345678">123 45678</a></li>
+</ul>
+```
 
-- {{cssxref("font-family")}}
-- {{cssxref("color")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("font-size")}}
-- {{cssxref("text-decoration")}}
+```css live-sample___style-bio-start
+html {
+  background-color: white;
+}
 
-J'ai utilisé un mélange de sélecteurs, d'éléments HTML comme `h1` et `h2` ; j'ai aussi créé une classe `job-title`.
+body {
+  font: 1.2em / 1.5 system-ui;
+}
+```
 
-Utilisez CSS pour changer l'apparence de cette biographie en modifiant les valeurs des propriétés CSS utilisées :
+{{EmbedLiveSample("style-bio-start", "100%", 400)}}
 
-1. Affichez le titre de niveau 1 en `hotpink` ;
-2. Donnez au titre un {{cssxref("border-bottom")}} de `10px dotted` de couleur `purple` ;
-3. Affichez le titre de niveau 2 en italique ;
-4. Colorez la `ul` des détails de contacts en {{cssxref("background-color")}} `#eeeeee`, avec un {{cssxref("border")}} de `5px solid purple`. Utilisez la propriété {{cssxref("padding")}} pour éloigner le contenu du bord.
-5. Faites que les liens apparaissent en `green` lors d'un survol du curseur.
+## Cahier des charges
 
-Vous devriez obtenir un rendu qui ressemble à cela :
+Suivez les instructions ci-dessous pour mettre en forme la biographie. Essayez de rechercher les fonctionnalités CSS dont vous aurez besoin dans la [référence CSS de MDN](/fr/docs/Web/CSS/Reference).
 
-![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
+### Styles de boîte
 
-Une fois cette tâche accomplie, n'hésitez pas à explorer des propriétés rencontrées dans la [référence CSS sur MDN](/fr/docs/Web/CSS/Reference)&nbsp;!
+1. Donnez à l'élément `<body>` une marge intérieure (`padding`) de `20px` de tous les côtés et une largeur de `500px`.
+2. Donnez à l'élément `<body>` une couleur de fond `#efefef` (une valeur {{CSSxRef("&lt;hex-color>")}} gris clair).
+3. Centrez l'élément `<body>` dans la fenêtre en définissant les marges supérieure et inférieure à `0`, et les marges gauche et droite à `auto`.
+4. Donnez à la `<ul>` utilisée pour les détails de contact une couleur de fond blanche, une bordure de `5px solid purple` sur tous les côtés. Ajoutez une marge intérieure de `30px` sur tous les côtés pour éloigner le contenu de la bordure.
+5. Donnez à la `<ul>` un rayon de bordure de `20px`.
 
-À ce stade, il n'y a pas de réponse incorrecte — autorisez vous un peu de fantaisie.
+### Styles de texte
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
+1. Affichez le titre de niveau un en gris foncé, en utilisant le mot-clé de couleur CSS `darkslategray`, et donnez-lui une bordure inférieure de `10px` en pointillés de couleur `purple`.
+2. Affichez le titre de niveau deux en italique.
+3. Donnez au titre de niveau un une taille de police de `2rem` et au titre de niveau deux une taille de police de `1.5rem`.
+4. Sélectionnez le `<div>` à l'aide d'un sélecteur de classe, et donnez-lui une couleur `darkslategray` et une graisse de police en gras.
+5. Affichez les liens en `green`.
+6. Affichez les liens en `darkgreen` lors du survol de la souris ou de la sélection au clavier (vous devrez utiliser quelques [pseudo-classes](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) pour cela).
+7. Supprimez le soulignement des liens lors du survol ou de la sélection.
 
-## Evaluation ou compléments d'information
+## Astuces et conseils
 
-Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et recherchez de l'aide :
+- Utilisez le [validateur CSS du W3C <sup>(angl.)</sup>](https://jigsaw.w3.org/css-validator/) pour détecter les erreurs involontaires dans votre CSS — des erreurs que vous auriez pu manquer — afin de pouvoir les corriger.
+- Essayez de rechercher des fonctionnalités CSS plus avancées (encore une fois, la [référence CSS de MDN](/fr/docs/Web/CSS/Reference) vous sera utile ici) et ajoutez d'autres styles à votre solution. Osez expérimenter&nbsp;!
+- Rappelez-vous qu'il n'y a pas de mauvaise réponse ici — à ce stade de votre apprentissage, vous pouvez vous permettre de vous amuser un peu.
 
-1. Publiez votre code dans un éditeur en ligne tel [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Si vous êtes à l'aise en anglais :
-   1. Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning" à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
-      - Un titre parlant comme "Assessment wanted for CSS First Steps".
-      - Des détails sur ce que vous voudriez que l'on fasse — par exemple, ce que vous avez déjà essayé si vous êtes coincé et demandez de l'aide.
-      - Un lien vers l'exemple dans l'éditeur en ligne, sur lequel vous demandez une évaluation ou de l'aide : voilà une bonne pratique — il n'est pas commode d'aider quelqu'un coincé sur son code quand on ne peut pas voir ce code...
-      - Un lien vers cette page d'évaluation afin que nous puissions voir la question sur laquelle vous demandez de l'aide.
+## Exemple
 
-3. Sinon, n'hésitez pas à contacter @MDNfr sur Twitter.
+Votre exemple final devrait ressembler à ceci&nbsp;:
 
-## La suite ?
+{{EmbedLiveSample("style-bio-finish", "100%", 400)}}
 
-Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/Learn_web_development/Core/Styling_basics), nous approfondirons de nombreux points.
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Apprendre/CSS/Premiers_pas")}}
+Le CSS appliqué à l'exemple final ressemble à ceci&nbsp;:
+
+```css live-sample___style-bio-finish
+html {
+  background-color: white;
+}
+
+body {
+  font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  background-color: #efefef;
+  margin: 0 auto;
+}
+
+h1 {
+  color: darkslategray;
+  border-bottom: 10px dotted purple;
+  font-size: 2rem;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.job-title {
+  color: darkslategray;
+  font-weight: bold;
+}
+
+ul {
+  background-color: white;
+  border: 5px solid purple;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+a {
+  color: green;
+}
+
+a:hover,
+a:focus {
+  color: darkgreen;
+  text-decoration: none;
+}
+```
+
+Les propriétés CSS utilisées pour résoudre ce défi sont les suivantes — chacune renvoie vers sa page de propriété sur MDN, qui vous donnera plus d'exemples d'utilisation.
+
+- {{CSSxRef("background-color")}}
+- {{CSSxRef("border")}} ou propriétés détaillées associées.
+- {{CSSxRef("color")}}
+- {{CSSxRef("font-size")}}
+- {{CSSxRef("font-style")}}
+- {{CSSxRef("font-weight")}}
+- {{CSSxRef("margin")}} ou propriétés détaillées associées.
+- {{CSSxRef("padding")}} ou propriétés détaillées associées.
+- {{CSSxRef("text-decoration")}}
+- {{CSSxRef("width")}}
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

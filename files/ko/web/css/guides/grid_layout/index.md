@@ -127,16 +127,16 @@ original_slug: Web/CSS/CSS_grid_layout
 
 ## 가이드
 
-- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [그리드 레이아웃과 다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [그리드 레이아웃과 다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
 - [Auto-placement in CSS Grid Layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Box alignment in CSS Grid Layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Grid, Logical Values and Writing Modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid and progressive enhancement](/ko/docs/Web/CSS/Guides/Grid_layout)
 - [Realising common layouts using CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## 외부 문서
@@ -150,16 +150,16 @@ original_slug: Web/CSS/CSS_grid_layout
 
 ## 안내서
 
-- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+- [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
+- [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [그리드 템플릿 영역](/ko/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas)
+- [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
 - [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Grids, logical values and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/Guides/Grid_layout)
 - [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 - [Subgrid](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
 - [Masonry layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}

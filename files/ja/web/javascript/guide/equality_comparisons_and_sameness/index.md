@@ -2,10 +2,8 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Intermediate")}}
 
 JavaScript には、異なる値の比較演算が 3 つあります。
 

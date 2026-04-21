@@ -149,7 +149,7 @@ clip-path: unset;
   - : Область не создается.
 
 > [!NOTE]
-> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
+> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
 
 ## Формальное определение
 

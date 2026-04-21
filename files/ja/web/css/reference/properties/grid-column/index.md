@@ -1,12 +1,11 @@
 ---
 title: grid-column
 slug: Web/CSS/Reference/Properties/grid-column
-original_slug: Web/CSS/grid-column
 l10n:
-  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`grid-column`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
+**`grid-column`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid column", "グリッド列")}}内での位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。
 
 {{InteractiveExample("CSS デモ: grid-column")}}
 
@@ -47,12 +46,12 @@ grid-column: 1 / span 2;
 }
 
 .example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
 }
 
 #example-element {
-  background-color: rgba(255, 0, 200, 0.2);
+  background-color: rgb(255 0 200 / 0.2);
   border: 3px solid rebeccapurple;
 }
 ```
@@ -61,8 +60,8 @@ grid-column: 1 / span 2;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`grid-column-end`](/ja/docs/Web/CSS/Reference/Properties/grid-column-end)
-- [`grid-column-start`](/ja/docs/Web/CSS/Reference/Properties/grid-column-start)
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column-start")}}
 
 ## 構文
 

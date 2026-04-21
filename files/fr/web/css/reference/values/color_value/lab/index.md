@@ -1,12 +1,11 @@
 ---
 title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
-original_slug: Web/CSS/color_value/lab
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} CIE L\*a\*b\*.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} CIE L\*a\*b\*.
 
 Lab représente toute la gamme de couleurs que les humains peuvent voir en définissant la luminosité de la couleur, une valeur d'axe rouge/vert, une valeur d'axe bleu/jaune, et une valeur alpha de transparence optionnelle.
 
@@ -26,7 +25,7 @@ lab(from hsl(180 100% 50%) calc(l - 10) a b)
 
 ### Valeurs
 
-Ci-dessous sont décrites les valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors).
+Ci-dessous sont décrites les valeurs autorisées pour les [couleurs absolues et relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
 
 #### Syntaxe de valeur absolue
 
@@ -37,16 +36,16 @@ lab(L a b[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la luminosité de la couleur. Ici, le nombre `0` correspond à `0%` (noir) et le nombre `100` correspond à `100%` (blanc).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la luminosité de la couleur. Ici, le nombre `0` correspond à `0%` (noir) et le nombre `100` correspond à `100%` (blanc).
 - `a`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `a`, qui détermine si la couleur tire vers le vert (en se rapprochant de `-125`) ou vers le rouge (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `a`, qui détermine si la couleur tire vers le vert (en se rapprochant de `-125`) ou vers le rouge (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
 - `b`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `b`, qui détermine si la couleur tire vers le bleu (en se rapprochant de `-125`) ou vers le jaune (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `b`, qui détermine si la couleur tire vers le bleu (en se rapprochant de `-125`) ou vers le jaune (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle vaut par défaut 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Voir [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Voir [Composantes de couleur manquantes](/fr/docs/Web/CSS/Reference/Values/color_value#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe de valeur relative
 
@@ -57,15 +56,15 @@ lab(from <color> L a b[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la **couleur d'origine**. Il s'agit de la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la **couleur d'origine**. Il s'agit de la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur de sortie. Ici, le nombre `0` correspond à `0%` (noir) et le nombre `100` correspond à `100%` (blanc).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `100`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur de sortie. Ici, le nombre `0` correspond à `0%` (noir) et le nombre `100` correspond à `100%` (blanc).
 - `a`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `a`, qui détermine si la couleur tire vers le vert (en se rapprochant de `-125`) ou vers le rouge (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `a`, qui détermine si la couleur tire vers le vert (en se rapprochant de `-125`) ou vers le rouge (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
 - `b`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `b`, qui détermine si la couleur tire vers le bleu (en se rapprochant de `-125`) ou vers le jaune (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-125` et `125`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `b`, qui détermine si la couleur tire vers le bleu (en se rapprochant de `-125`) ou vers le jaune (en se rapprochant de `+125`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement non bornées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±125` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±160`.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (complètement transparent) et `1` correspond à `100%` (complètement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
 > Habituellement, lorsque les valeurs de pourcentage ont un équivalent numérique en CSS, `100%` est égal au nombre `1`. Ce n'est pas toujours le cas pour la luminosité et les axes `a` et `b` de Lab, comme mentionné ci-dessus. Avec `L`, la plage va de 0 à 100, avec `100%` égal à `100`. Les valeurs `a` et `b` prennent en charge les valeurs négatives et positives, avec `100%` égal à `125` et `-100%` égal à `-125`.
@@ -127,7 +126,7 @@ lab(from hsl(0 100% 50% / 0.8) l a b / 0.5)
 /* Couleur de sortie calculée : lab(54.29 80.8198 69.8997 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `lab()` — `lab(54.29 80.8198 69.8997)`. Des calculs {{cssxref("calc")}} sont appliqués aux valeurs `L`, `a`, `b`, et `A`, ce qui donne une couleur de sortie de `lab(74.29 60.8198 29.8997 / 0.9)`&nbsp;:
+Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `lab()` — `lab(54.29 80.8198 69.8997)`. Des calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `L`, `a`, `b`, et `A`, ce qui donne une couleur de sortie de `lab(74.29 60.8198 29.8997 / 0.9)`&nbsp;:
 
 ```css
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))
@@ -235,7 +234,7 @@ Cet exemple démontre les effets de la définition des valeurs `a` et `b` de la 
 
 #### CSS
 
-L'utilisation de la propriété CSS {{cssxref("background-color")}} permet de faire varier les valeurs `a` et `b` de la fonction de couleur `lab()` le long des axes `a` et `b`, montrant les effets des valeurs maximales, des points médians et des valeurs minimales dans chaque cas.
+L'utilisation de la propriété CSS {{CSSxRef("background-color")}} permet de faire varier les valeurs `a` et `b` de la fonction de couleur `lab()` le long des axes `a` et `b`, montrant les effets des valeurs maximales, des points médians et des valeurs minimales dans chaque cas.
 
 ```css hidden
 body {
@@ -362,7 +361,7 @@ span {
 #### Résultat
 
 {{EmbedLiveSample("Dégradés linéaires le long des axes a et b
-", '', '420')}}
+", "", 420)}}
 
 ### Ajustement de l'opacité
 
@@ -408,13 +407,13 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample('Ajustement de l'opacité')}}
+{{EmbedLiveSample("Ajustement de l'opacité")}}
 
 ### Utilisation des couleurs relatives avec `lab()`
 
 Cet exemple met en forme trois éléments HTML {{HTMLElement("div")}} avec différentes couleurs d'arrière-plan. Celui du milieu reçoit la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircie et assombrie de cette `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `lab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré avec une fonction `calc()`. La couleur éclaircie a 15 % ajoutés au canal de luminosité, et la couleur assombrie a 15 % soustraits du canal de luminosité.
 
 ```html hidden
 <div id="container">
@@ -463,7 +462,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 
 Le résultat est le suivant&nbsp;:
 
-{{ EmbedLiveSample("Utilisation des couleurs relatives avec `lab()`", "100%", "200") }}
+{{EmbedLiveSample("Utilisation des couleurs relatives avec `lab()`", "100%", 200)}}
 
 ## Spécifications
 
@@ -475,9 +474,9 @@ Le résultat est le suivant&nbsp;:
 
 ## Voir aussi
 
-- Le type de donnée {{cssxref("&lt;color&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
 - Le type de donnée [`<color-function>`](/fr/docs/Web/CSS/Guides/Colors#fonctions)
-- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Les couleurs LCH en CSS&nbsp;: qu'est-ce que c'est, pourquoi et comment&nbsp;? <sup>(angl.)</sup>](https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/) par Lea Verou (2020)
-- [Notes de version pour Safari Technology Preview 122 <sup>(angl.)</sup>](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/)&nbsp;: contient `lab()` et les couleurs {{cssxref("color_value/lch",'lch()')}}
+- [Notes de version pour Safari Technology Preview 122 <sup>(angl.)</sup>](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/)&nbsp;: contient `lab()` et les couleurs {{CSSxRef("color_value/lch",'lch()')}}

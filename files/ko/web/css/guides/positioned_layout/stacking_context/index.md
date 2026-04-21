@@ -10,7 +10,7 @@ l10n:
 
 ## 설명
 
-이전 글 [z-index 사용하기](/ko/docs/Web/CSS/CSS_positioned_layout/Using_z-index)에서 보았듯, 특정 요소의 렌더링 순서는 자신의 `z-index` 속성 값에 영향을 받습니다. 이는 그 요소들이 가진 특별한 속성으로 인해 **쌓임 맥락**이 생성되기 때문입니다.
+이전 글 [z-index 사용하기](/ko/docs/Web/CSS/Guides/Positioned_layout/Using_z-index)에서 보았듯, 특정 요소의 렌더링 순서는 자신의 `z-index` 속성 값에 영향을 받습니다. 이는 그 요소들이 가진 특별한 속성으로 인해 **쌓임 맥락**이 생성되기 때문입니다.
 
 쌓임 맥락은, 문서 어디에서나, 다음 조건을 만족하는 요소가 생성합니다.
 
@@ -211,10 +211,10 @@ h1 {
 
 ## 같이 보기
 
-- [z-index가 없는 경우의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : 기본 쌓임 규칙
-- [floating 엘리먼트의 쌓임](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements) : floating 엘리먼트들은 어떻게 다루어지는가
-- [z-index 적용](/ko/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
-- [쌓임 맥락 예제1](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
-- [쌓임 맥락 예제2](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
-- [쌓임 맥락 예제3](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
+- [z-index가 없는 경우의 쌓임](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_without_z-index) : 기본 쌓임 규칙
+- [floating 엘리먼트의 쌓임](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_floating_elements) : floating 엘리먼트들은 어떻게 다루어지는가
+- [z-index 적용](/ko/docs/Web/CSS/Guides/Positioned_layout/Using_z-index) : 기본 쌓임 순서를 변경하기 위해 z-index 사용하기
+- [쌓임 맥락 예제1](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_1) : 2레벨 HTML 계층구조, 마지막 레벨에서 z-index가 지정된 경우
+- [쌓임 맥락 예제2](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_2) : 2레벨 HTML 계층구조, 모든 레벨에서 z-index가 지정된 경우
+- [쌓임 맥락 예제3](/ko/docs/Web/CSS/Guides/Positioned_layout/Stacking_context/Example_3) : 3레벨 HTML 계층구조, 두번째 레벨에서 z-index가 지정된 경우
 - [Top layer](/ko/docs/Glossary/Top_layer)

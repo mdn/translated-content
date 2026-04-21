@@ -2,7 +2,7 @@
 title: "<audio> : l'élément audio embarqué"
 slug: Web/HTML/Reference/Elements/audio
 l10n:
-  sourceCommit: b0c2ce683687410406fa7ccdef391ff1d41503bb
+  sourceCommit: 743ba8b257cd06449b192818df120e609f6e16d2
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<audio>`** est utilisé pour intégrer du contenu sonore dans des documents. Il peut contenir une ou plusieurs sources audio, représentées à l'aide de l'attribut `src` ou de l'élément {{HTMLElement("source")}}&nbsp;: le navigateur choisira la plus appropriée.
@@ -42,6 +42,9 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur·ice.
     > Consultez notre [guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction _autoplay_.
 
+    > [!NOTE]
+    > L'audio avec l'attribut [`loading="lazy"`](#loading) défini ne commencera pas à se télécharger et à se lire automatiquement tant que les contrôles pour le média ne sont pas proches ou dans la zone d'affichage de la fenêtre. L'audio chargé paresseusement sans l'attribut `controls` ne sera pas lu automatiquement.
+
 - `controls`
   - : Si cet attribut est présent, le navigateur affichera des contrôles permettant à l'utilisateur·ice de contrôler la lecture audio, y compris le volume, la navigation et la mise en pause/reprise de la lecture.
 
@@ -57,12 +60,31 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `use-credentials`
       - : Envoie une requête cross-origin avec information d'identification. Autrement dit, il envoie l'en-tête HTTP `Origin:` avec un cookie, un certificat ou une authentification HTTP Basic. Si le serveur ne fournit pas d'identifiants au site d'origine (via l'en-tête HTTP `Access-Control-Allow-Credentials:`), la ressource sera _contaminées_ et son utilisation sera restreinte.
 
-    Si l'attribut n'est pas présent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête HTTP `Origin:`), ce qui empêche son utilisation non contaminée dans les éléments {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est traitée comme si le mot-clé énuméré **anonymous** était utilisé. Voir [attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
+    Si l'attribut n'est pas présent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête HTTP `Origin:`), ce qui empêche son utilisation non contaminée dans les éléments {{HTMLElement("canvas")}}. Si la valeur est invalide, elle est traitée comme si le mot-clé énuméré **anonymous** était utilisé. Voir [attributs de configuration CORS](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour plus d'informations.
 
 - `disableremoteplayback`
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance sur les appareils connectés via des technologies filaires (HDMI, DVI, etc.) ou sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir la [spécification de l'API Remote Playback <sup>(angl.)</sup>](https://w3c.github.io/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
 
     Avec Safari, vous pouvez utiliser [`x-webkit-airplay="deny"` <sup>(angl.)</sup>](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) comme solution de repli.
+
+- `loading` {{Experimental_Inline}}
+  - : Indique comment le navigateur doit charger l'audio&nbsp;:
+    - `eager`
+      - : Charge l'audio immédiatement, que l'audio soit actuellement dans la zone d'affichage (<i lang="en">viewport</i> en anglais) visible ou non (c'est la valeur par défaut).
+    - `lazy`
+      - : Diffère le chargement de l'audio jusqu'à ce que les contrôles atteignent une distance calculée par rapport à la zone d'affichage, telle que définie par le navigateur.
+
+        > [!NOTE]
+        > Pour que les éléments audio intersectent visiblement avec la zone d'affichage, ils doivent être visibles. Les navigateurs utilisent l'attribut `controls` pour rendre les éléments audio visibles, il est donc nécessaire pour le chargement différé. L'audio chargé de manière différée sans l'attribut `controls` ne sera pas chargé.
+
+        Le chargement différé évite l'utilisation de la bande passante réseau et de stockage nécessaire pour gérer l'audio jusqu'à ce qu'il soit raisonnablement certain qu'il sera nécessaire. Cela améliore les performances dans la plupart des cas d'utilisation typiques.
+
+        L'audio chargé de manière différée et situé dans la zone d'affichage visuelle peut ne pas encore être téléchargé lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché uniquement en fonction de l'audio chargé de manière anticipée — l'audio chargé de manière différée n'est pas pris en compte, même s'il se trouve dans la zone d'affichage visuelle lors du chargement initial de la page.
+
+        Le chargement différé n'est activé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-tracking, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait encore possible pour un site de suivre la position de défilement approximative d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement de l'audio dans le balisage d'une page de manière à ce qu'un serveur puisse suivre combien de requêtes audio sont effectuées et quand.
+
+        > [!NOTE]
+        > L'attribut `loading="lazy"` impacte également l'attribut [`autoplay`](#autoplay) comme décrit dans cette section de la page.
 
 - `loop`
   - : Un attribut booléen&nbsp;: s'il est défini, la lecture recommence automatiquement depuis le début lorsque la fin est atteinte.
@@ -79,6 +101,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     > [!NOTE]
     >
+    > - L'audio avec l'attribut [`loading="lazy"`](#loading) défini n'appliquera le comportement `preload` que lorsque les contrôles audio seront proches ou dans la zone d'affichage.
     > - L'attribut `autoplay` a priorité sur `preload`. Si `autoplay` est défini, le navigateur devra évidemment commencer à télécharger l'audio pour la lecture.
     > - Le navigateur n'est pas obligé par la spécification de suivre la valeur de cet attribut&nbsp;; il s'agit d'une simple indication.
 
@@ -150,7 +173,7 @@ La source audio peut être définie sur n'importe quelle [URL](/fr/docs/Web/URI)
 
 Lorsque vous utilisez des éléments {{HTMLElement("source")}}, le navigateur tente de charger chaque source séquentiellement. Si une source échoue (par exemple, à cause d'une URL invalide ou d'un format non pris en charge), la suivante est essayée, et ainsi de suite. Un évènement `error` est déclenché sur l'élément `<audio>` après l'échec de toutes les sources&nbsp;; les évènements `error` ne sont pas déclenchés sur chaque élément `<source>` individuellement.
 
-Vous pouvez également utiliser l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) pour générer et manipuler directement des flux audio à partir du code JavaScript, plutôt que de diffuser des fichiers audio préexistants. Vous pouvez définir [`srcObject`](/fr/docs/Web/API/HTMLMediaElement/srcObject) en JavaScript sur un objet {{DOMxRef("MediaStream")}}. Cela est couramment utilisé pour des flux audio en direct ou du traitement audio en temps réel.
+Vous pouvez également utiliser [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API) pour générer et manipuler directement des flux audio à partir du code JavaScript, plutôt que de diffuser des fichiers audio préexistants. Vous pouvez définir [`srcObject`](/fr/docs/Web/API/HTMLMediaElement/srcObject) en JavaScript sur un objet {{DOMxRef("MediaStream")}}. Cela est couramment utilisé pour des flux audio en direct ou du traitement audio en temps réel.
 
 ```js
 const audioElement = document.querySelector("audio");
@@ -223,7 +246,7 @@ Vous pouvez aussi utiliser {{DOMxRef("EventTarget.addEventListener", "addEventLi
 
 ## Accessibilité
 
-Les éléments audio contenant des dialogues parlés doivent fournir des sous-titres et des transcriptions qui décrivent précisément le contenu. Les sous-titres, qui sont spécifiés à l'aide de [WebVTT](/fr/docs/Web/API/WebVTT_API), ils permettent aux personnes souffrant de troubles auditifs ou ne pouvant pas utiliser le son de l'appareil de lire le fichier. Les transcriptions permettent aux personnes ayant besoin de plus de temps pour lire le contenu d'utiliser un format plus adéquat.
+Les éléments audio contenant des dialogues parlés doivent fournir des sous-titres et des transcriptions qui décrivent précisément le contenu. Les sous-titres, qui sont définis à l'aide de [WebVTT](/fr/docs/Web/API/WebVTT_API), ils permettent aux personnes souffrant de troubles auditifs ou ne pouvant pas utiliser le son de l'appareil de lire le fichier. Les transcriptions permettent aux personnes ayant besoin de plus de temps pour lire le contenu d'utiliser un format plus adéquat.
 
 Si un service de sous-titre automatique est utilisé, il est nécessaire de vérifier le contenu généré afin de s'assurer qu'il correspond correctement à la source audio.
 
@@ -370,7 +393,7 @@ Dans l'exemple qui suit, le navigateur essaiera de jouer le premier fichier corr
 - [Technologies média Web](/fr/docs/Web/Media)
   - [Formats des conteneurs médias (types de fichiers)](/fr/docs/Web/Media/Formats/Containers)
   - [Guide des codecs audio utilisés sur le web](/fr/docs/Web/Media/Formats/Audio_codecs)
-- L'[API Web Audio](/fr/docs/Web/API/Web_Audio_API)
+- [L'API Web Audio](/fr/docs/Web/API/Web_Audio_API)
 - L'interface {{DOMxRef("HTMLAudioElement")}}
 - L'élément {{HTMLElement("source")}}
 - L'élément {{HTMLElement("video")}}

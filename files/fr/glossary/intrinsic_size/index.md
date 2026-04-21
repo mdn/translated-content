@@ -2,7 +2,7 @@
 title: Taille intrinsèque
 slug: Glossary/Intrinsic_Size
 l10n:
-  sourceCommit: bbff081938f76bdd6c6fdbf59d2e25e0a7a1cf2a
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 En CSS, la **taille intrinsèque** d'un élément est la taille qu'il aurait uniquement en fonction de son contenu, sans tenir compte des effets du contexte de mise en page dans lequel il apparaît. C'est l'opposé de la {{Glossary("extrinsic size", "taille extrinsèque")}} d'un élément, qui est déterminée par des contraintes externes comme la taille du conteneur. Les tailles intrinsèques d'un élément sont représentées par ses tailles {{CSSxRef("min-content")}} et {{CSSxRef("max-content")}}.
@@ -15,7 +15,7 @@ La taille intrinsèque a la même signification pour les images que pour le text
 
 La densité de pixels et la résolution influent sur la taille intrinsèque. Par défaut, les images sont supposées avoir une densité de pixels «&nbsp;1x&nbsp;» (1 pixel matériel = 1 pixel CSS), auquel cas la taille intrinsèque correspond simplement à la hauteur et à la largeur en pixels. La taille intrinsèque et la résolution d'une image peuvent être explicitement spécifiées dans ses données {{Glossary("EXIF")}}. La densité de pixels d'une image peut aussi être définie via l'attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset). Notez que si les deux mécanismes sont utilisés, la valeur de `srcset` est appliquée «&nbsp;par-dessus&nbsp;» la valeur EXIF.
 
-Les tailles intrinsèques et leur mode de calcul sont définis dans le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_sizing).
+Les tailles intrinsèques et leur mode de calcul sont définis dans le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing).
 
 ## Taille intrinsèque minimale
 
@@ -66,5 +66,5 @@ p {
 - La propriété CSS {{CSSxRef("interpolate-size")}}
 - La propriété CSS {{CSSxRef("aspect-ratio")}}
 - La fonction CSS {{CSSxRef("calc-size()")}}
-- [Module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_sizing)
+- [Module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
 - Spécification du module CSS [de dimensionnement des boîtes niveau 3 <sup>(angl.)</sup>](https://drafts.csswg.org/css-sizing-3/#intrinsic-sizes)

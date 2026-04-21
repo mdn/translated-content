@@ -1,9 +1,9 @@
 ---
 title: CSS 表示方法
+short-title: 表示方法
 slug: Web/CSS/Guides/Display
-original_slug: Web/CSS/CSS_display
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS 表示方法** (CSS display) モジュールは、 CSS の整形ボックスツリーがどのように文書の要素ツリーから生成されるかを定義し、制御するプロパティを定義します。
@@ -15,6 +15,8 @@ l10n:
 - {{CSSxRef("display")}}
 - {{CSSxRef("order")}}
 - {{CSSxRef("visibility")}}
+- {{cssxref("reading-flow")}}
+- {{cssxref("reading-order")}}
 
 ### データ型
 
@@ -27,16 +29,13 @@ l10n:
 
 ### 用語集
 
-- {{glossary("Block/CSS", "ブロック")}}
+- {{glossary("block/css", "ブロック")}}
 - [ブロック整形コンテキスト (BFC)](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - {{glossary("Block-level content", "ブロックレベルコンテンツ")}}
 - [包含ブロック](/ja/docs/Web/CSS/Guides/Display/Containing_block)
-- {{glossary("Flex", "フレックス")}}
 - [フローレイアウト](/ja/docs/Web/CSS/Guides/Display/Flow_layout)
-- {{glossary("Grid", "グリッド")}}
-- [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
-- {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
-- [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+- {{glossary("Reading order")}}
+- {{glossary("Replaced elements", "置換要素")}}
 - {{glossary("Ruby", "ルビ")}}
 
 ## ガイド
@@ -58,8 +57,15 @@ l10n:
 
 ### プロパティ
 
-- {{cssxref("transition-behavior")}}
 - {{cssxref("overflow")}}
+- {{cssxref("transition-behavior")}}
+
+### 用語集
+
+- {{glossary("Flex", "フレックス")}}
+- {{glossary("Grid", "グリッド")}}
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
+- {{glossary("Inline-level content", "インラインレベルコンテンツ")}}
 
 ### ガイド
 

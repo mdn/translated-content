@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Forms
 original_slug: Learn/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Dans cette formation, nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web [LocalLibrary](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs.
 
@@ -13,7 +13,7 @@ Dans cette formation, nous allons vous montrer comment travailler avec les formu
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Avoir terminé les formations précédentes, y compris <a href="/fr/docs/Learn/Server-side/Django/authentication_and_sessions">Django didactique - section 8&nbsp;: Authentification de l'utilisateur et permissions</a>.
+        Avoir terminé les formations précédentes, y compris <a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Authentication">Django didactique - section 8&nbsp;: Authentification de l'utilisateur et permissions</a>.
       </td>
     </tr>
     <tr>
@@ -27,7 +27,7 @@ Dans cette formation, nous allons vous montrer comment travailler avec les formu
 
 ## Vue d'ensemble
 
-Un [formulaire HTML](/fr/docs//Learn_web_development/Extensions/Forms\) regroupe au moins un champ remplissable et des composants élémentaires d'interface web. Il peut être utilisé pour réunir des saisies de la part des utilisateurs avant envoi vers un serveur. Les formulaires sont souples : ils s'adaptent à plusieurs modes de saisie. En effet, il existe des composants élémentaires d'interface graphique pour des modes de saisie non contrainte avec une zone de saisie de texte, ou restreinte au type `date` avec un sélecteur de date (<i lang="en">date picker</i>), la saisie d'un variable optionnelle via une boîte à cocher, d'un choix à faire parmi plusieurs valeurs possibles avec les boutons radio, etc. Les formulaires permettent de partager des informations avec le serveur de manière relativement sécurisée, car ils permettent d'envoyer des requêtes de type `POST` avec une protection contre la falsification des requêtes inter-site.
+Un [formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms) regroupe au moins un champ remplissable et des composants élémentaires d'interface web. Il peut être utilisé pour réunir des saisies de la part des utilisateurs avant envoi vers un serveur. Les formulaires sont souples : ils s'adaptent à plusieurs modes de saisie. En effet, il existe des composants élémentaires d'interface graphique pour des modes de saisie non contrainte avec une zone de saisie de texte, ou restreinte au type `date` avec un sélecteur de date (<i lang="en">date picker</i>), la saisie d'un variable optionnelle via une boîte à cocher, d'un choix à faire parmi plusieurs valeurs possibles avec les boutons radio, etc. Les formulaires permettent de partager des informations avec le serveur de manière relativement sécurisée, car ils permettent d'envoyer des requêtes de type `POST` avec une protection contre la falsification des requêtes inter-site.
 
 Bien que nous n'ayons pas encore créé de formulaire au cours de cette formation, nous en avons déjà rencontré sur l'interface d'administration Django Admin — par exemple, la capture d'écran ci-dessous montre un formulaire d'édition de l'un de nos modèles de [Book](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Models) (livre), comprenant des composants élémentaires d'interface graphique de choix de valeur parmi une liste proposée, et des zones de saisie de texte.
 
@@ -39,7 +39,7 @@ Dans cette formation, nous allons vous montrer quelques-unes des manières de cr
 
 ## Formulaires HTML
 
-D'abord, un premier aperçu des [formulaires HTML](/fr/docs//Learn_web_development/Extensions/Forms\). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte, présent pour y entrer le nom d'une «&nbsp;équipe&nbsp;» quelconque et sa description dans l'étiquette associée&nbsp;:
+D'abord, un premier aperçu des [formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte, présent pour y entrer le nom d'une «&nbsp;équipe&nbsp;» quelconque et sa description dans l'étiquette associée&nbsp;:
 
 ![Champ textuel simple d'un formulaire HTML pour saisir un nom](form_example_name_field.png)
 
@@ -685,4 +685,4 @@ Il y a bien d'autres choses qui peuvent être faites avec les formulaires (regar
 - [Création de formulaires à partir de modèles](https://docs.djangoproject.com/fr/3.1/topics/forms/modelforms/) (Documentation de Django)
 - [Vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) (Documentation de Django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

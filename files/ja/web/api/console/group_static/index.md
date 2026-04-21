@@ -1,19 +1,20 @@
 ---
-title: console.group()
+title: "console: group() 静的メソッド"
+short-title: group()
 slug: Web/API/console/group_static
+l10n:
+  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
 
-{{APIRef("Console API")}}
+{{APIRef("Console API")}} {{AvailableInWorkers}}
 
-**`console.group()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)のログに、新たなインライングループを作成します。{{domxref("console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
-
-{{AvailableInWorkers}}
+**`console.group()`** 静的メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)のログに、新たなインライングループを作成します。{{domxref("console/groupEnd_static", "console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
 
 ## 構文
 
-```js
-group();
-group(label);
+```js-nolint
+console.group()
+console.group(label)
 ```
 
 ### 引数
@@ -46,9 +47,9 @@ console.log("Back to the outer level");
 
 出力は以下のようになります。
 
-![A screenshot of messages nested in the console output.](nesting.png)
+![コンソール出力に入れ子になっているメッセージのスクリーンショット。](nesting.png)
 
-詳しくは、{{domxref("console")}} のドキュメントで [コンソールでのグループの使用](/ja/docs/Web/API/console#コンソールでのグループの使用)をご覧ください。
+詳しくは、[コンソールでのグループの使用](/ja/docs/Web/API/console#コンソールでのグループの使用)（{{domxref("console")}} のドキュメント）をご覧ください。
 
 ## 仕様書
 
@@ -60,4 +61,8 @@ console.log("Back to the outer level");
 
 ## 関連情報
 
-- {{domxref("console.groupEnd()")}}
+- {{domxref("console/groupEnd_static", "console.groupEnd()")}}
+- {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
+- [Microsoft Edge's documentation for `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#group)
+- [Node.js documentation for `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
+- [Google Chrome's documentation for `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)

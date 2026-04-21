@@ -1,14 +1,14 @@
 ---
-title: transition-timing-function
+title: Propriété CSS `transition-timing-function`
+short-title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
-original_slug: Web/CSS/transition-timing-function
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées.
 
-La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
-
-{{InteractiveExample("CSS Demo: transition-timing-function")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: transition-timing-function")}}
 
 ```css interactive-example-choice
 transition-timing-function: linear;
@@ -28,14 +28,14 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 
 ```html interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">Survolez pour voir<br />la transition.</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -44,20 +44,17 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
 
-Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.
+Cela vous permet, en substance, de définir une courbe d'accélération afin que la vitesse de la transition puisse varier au cours de sa durée.
 
-Il est possible de définir plusieurs fonctions de temporisation dans une même déclaration ; chacune sera appliquée à la propriété correspondante listée avec la propriété {{cssxref("transition-property")}}, qui agit comme liste maîtresse :
+Cette courbe d'accélération est définie à l'aide d'une {{CSSxRef("easing-function")}} pour chaque propriété à faire transiter.
 
-- S'il y a moins de fonctions définies que d'éléments dans la liste, les valeurs manquantes sont remplacées par la valeur par défaut (`ease`).
-- S'il y a trop de fonctions de temporisation, la liste est simplement tronquée à la bonne dimension.
-
-Dans les deux cas, la déclaration CSS reste valide.
+Vous pouvez définir plusieurs fonctions d'accélération&nbsp;; chacune sera appliquée à la propriété correspondante telle que définie par la propriété {{CSSxRef("transition-property")}}, qui agit comme une liste de `transition-property`. Si moins de fonctions d'accélération sont définies que d'éléments dans la liste `transition-property`, l'agent utilisateur doit calculer la valeur utilisée en répétant la liste de valeurs jusqu'à ce qu'il y en ait une pour chaque propriété en transition. Si davantage de fonctions d'accélération sont définies, la liste est tronquée à la bonne taille. Dans les deux cas, la déclaration CSS reste valide.
 
 ## Syntaxe
 
@@ -89,29 +86,31 @@ transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 /* Valeurs globales */
 transition-timing-function: inherit;
 transition-timing-function: initial;
+transition-timing-function: revert;
+transition-timing-function: revert-layer;
 transition-timing-function: unset;
 ```
 
 ### Valeurs
 
-- `<timing-function>`
-  - : Chaque valeur {{cssxref("&lt;timing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{cssxref("transition-property")}}.
+- `<easing-function>`
+  - : Chaque valeur {{CSSxRef("&lt;easing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{CSSxRef("transition-property")}}.
 
-    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser la transition en intervalles de même durée.
+    Les valeurs des mots-clés qui ne sont pas des étapes (`ease`, `linear`, `ease-in-out`, etc.) représentent chacune une courbe de Bézier cubique avec quatre points de contrôle fixes, tandis que la fonction `cubic-bezier()` permet d'utiliser une valeur non prédéfinie. Les fonctions d'accélération par étapes divisent la durée d'entrée en un nombre spécifié d'intervalles de durée égale. Elles sont définies par un nombre d'étapes et une position d'étape.
     - `ease`
-      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.
+      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)`, c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.
     - `linear`
-      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : la transition s'effectue à vitesse constante.
+      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)`, la transition s'effectue à vitesse constante.
     - `ease-in`
-      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)`, la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
     - `ease-out`
-      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : la transition commence rapidement puis ralentit jusqu'à la fin.
+      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)`, la transition commence rapidement puis ralentit jusqu'à la fin.
     - `ease-in-out`
-      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.
+      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)`, la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.
     - `cubic-bezier(p1, p2, p3, p4)`
       - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
     - `steps( n, <jumpterm>)`
-      - : La transition s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, la transition se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+      - : Affiche la transition le long de _n étapes le long de la transition, affichant chaque étape pendant_ des durées égales. Par exemple, si _n_ est 5, il y a 5 étapes. Que la transition se maintienne temporairement à 0%, 20%, 40%, 60% et 80%, ou à 20%, 40%, 60%, 80% et 100%, ou fasse 5 arrêts entre 0% et 100% le long de la transition, ou fasse 5 arrêts incluant les marques 0% et 100% (à 0%, 25%, 50%, 75% et 100%) dépend du terme de saut utilisé&nbsp;:
         - `jump-start`
           - : La fonction est continue à gauche et le premier saut se produit au début de la transition.
         - `jump-end`
@@ -129,6 +128,12 @@ transition-timing-function: unset;
       - : Synonyme de `steps(1, jump-start)`
     - `step-end`
       - : Synonyme de `steps(1, jump-end)`
+
+## Accessibilité
+
+Certaines animations permettent de guider les utilisateur·ice·s vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateur·ice·s quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
+
+Prévoyez un mécanisme permettant de mettre en pause ou de désactiver l'animation, ainsi que d'utiliser la [requête média sur la réduction des mouvements](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) (ou l'équivalent [à l'indication du client de l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#indications_du_client_sur_lagent_utilisateur) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) pour offrir une expérience adaptée aux utilisateur·ice·s ayant exprimé une préférence pour moins d'animations.
 
 ## Définition formelle
 
@@ -209,7 +214,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 ```
 
-{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+{{EmbedLiveSample("Courbes de Bézier cubiques")}}
 
 ### Fonctions en créneaux
 
@@ -280,13 +285,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 ```
 
-{{EmbedLiveSample("Fonctions_en_créneaux")}}
-
-## Accessibilité
-
-Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateurs quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
-
-Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de [la requête média sur la réduction de mouvements](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.
+{{EmbedLiveSample("Fonctions en créneaux")}}
 
 ## Spécifications
 
@@ -299,4 +298,10 @@ Toutefois, certaines animations s'avèrent problématiques pour les personnes so
 ## Voir aussi
 
 - [Utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
-- {{domxref("TransitionEvent")}}
+- Le type de donnée {{CSSxRef("&lt;easing-function&gt;")}}
+- Le module [des fonctions d'accélération CSS](/fr/docs/Web/CSS/Guides/Easing_functions)
+- La propriété {{CSSxRef('transition')}}
+- La propriété {{CSSxRef('transition-property')}}
+- La propriété {{CSSxRef('transition-duration')}}
+- La propriété {{CSSxRef('transition-delay')}}
+- L'interface API {{DOMxRef("TransitionEvent")}}

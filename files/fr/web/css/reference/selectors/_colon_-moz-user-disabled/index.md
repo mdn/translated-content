@@ -1,10 +1,12 @@
 ---
-title: :-moz-user-disabled
+title: Pseudo-classe CSS `:-moz-user-disabled`
+short-title: :-moz-user-disabled
 slug: Web/CSS/Reference/Selectors/:-moz-user-disabled
-original_slug: Web/CSS/:-moz-user-disabled
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) `:-moz-user-disabled` est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur·ice.
 
@@ -36,6 +38,6 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref(":-moz-broken")}}
-- {{cssxref(":-moz-loading")}}
-- {{cssxref(":-moz-suppressed")}}
+- La pseudo-classe {{CSSxRef(":-moz-broken")}}
+- La pseudo-classe {{CSSxRef(":-moz-loading")}}
+- La pseudo-classe {{CSSxRef(":-moz-suppressed")}}

@@ -3,10 +3,10 @@ title: "Element: animationstart イベント"
 short-title: animationstart
 slug: Web/API/Element/animationstart_event
 l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{APIRef}}
+{{APIRef("Web Animations")}}
 
 **`animationstart`** イベントは、 [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations)が開始したときに発生します。 {{cssxref("animation-delay")}} がある場合、このイベントは待ち時間が経過したときに一度発生します。待ち時間が負の数の場合、イベントは {{domxref("AnimationEvent/elapsedTime", "elapsedTime")}} が待ち時間の絶対値と等しくなったときに発生します（および、関連して、アニメーションはシーケンスの中でそのタイムインデックスに再生が始まります）。
 
@@ -14,10 +14,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("animationstart", (event) => {});
+```js-nolint
+addEventListener("animationstart", (event) => { })
 
-onanimationstart = (event) => {};
+onanimationstart = (event) => { }
 ```
 
 ## イベント型
@@ -63,12 +63,12 @@ animated.onanimationstart = () => {
 
 #### HTML
 
-```html
+```html-nolint
 <div class="animation-example">
   <div class="container">
-    <p class="animation">You chose a cold night to visit our planet.</p>
+    <p class="animation">あなたは私たちの惑星を訪れるのに、寒い夜を選びました。</p>
   </div>
-  <button class="activate" type="button">Activate animation</button>
+  <button class="activate" type="button">アニメーションを有効化</button>
   <div class="event-log"></div>
 </div>
 ```
@@ -117,22 +117,22 @@ const applyAnimation = document.querySelector(
 let iterationCount = 0;
 
 animation.addEventListener("animationstart", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation started' `;
+  animationEventLog.textContent = `${animationEventLog.textContent}'アニメーション開始' `;
 });
 
 animation.addEventListener("animationiteration", () => {
   iterationCount++;
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation iterations: ${iterationCount}' `;
+  animationEventLog.textContent = `${animationEventLog.textContent}'アニメーション反復: ${iterationCount}' `;
 });
 
 animation.addEventListener("animationend", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation ended'`;
+  animationEventLog.textContent = `${animationEventLog.textContent}'アニメーション終了'`;
   animation.classList.remove("active");
-  applyAnimation.textContent = "Activate animation";
+  applyAnimation.textContent = "アニメーションを有効化";
 });
 
 animation.addEventListener("animationcancel", () => {
-  animationEventLog.textContent = `${animationEventLog.textContent}'animation canceled'`;
+  animationEventLog.textContent = `${animationEventLog.textContent}'アニメーションキャンセル'`;
 });
 
 applyAnimation.addEventListener("click", () => {
@@ -141,8 +141,8 @@ applyAnimation.addEventListener("click", () => {
   iterationCount = 0;
   const active = animation.classList.contains("active");
   applyAnimation.textContent = active
-    ? "Cancel animation"
-    : "Activate animation";
+    ? "アニメーションをキャンセル"
+    : "アニメーションを有効化";
 });
 ```
 

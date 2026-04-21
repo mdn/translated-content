@@ -1,12 +1,11 @@
 ---
 title: orientation
 slug: Web/CSS/Reference/At-rules/@media/orientation
-original_slug: Web/CSS/@media/orientation
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`orientation`** permet de tester l'orientation de la {{glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour les [médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)).
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`orientation`** permet de tester l'orientation de la {{Glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour les [médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)).
 
 > [!NOTE]
 > Cette caractéristique ne correspond pas à l'orientation _de l'appareil_. Ouvrir le clavier virtuel sur de nombreux appareils en mode portrait peut rendre la zone d'affichage plus large que haute, ce qui amènera le navigateur à utiliser les styles paysage au lieu de portrait.

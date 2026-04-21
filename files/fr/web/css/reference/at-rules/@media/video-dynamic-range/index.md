@@ -1,12 +1,11 @@
 ---
 title: video-dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/video-dynamic-range
-original_slug: Web/CSS/@media/video-dynamic-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`video-dynamic-range`** permet de tester la combinaison de la luminosité, du rapport de contraste et de la profondeur de couleur pris en charge par le plan vidéo de l'{{glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.
+La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`video-dynamic-range`** permet de tester la combinaison de la luminosité, du rapport de contraste et de la profondeur de couleur pris en charge par le plan vidéo de l'{{Glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.
 
 Certains agents utilisateur, notamment de nombreux téléviseurs, affichent la vidéo et les graphismes sur deux plans distincts (bi-plan) avec des caractéristiques d'écran différentes. La caractéristique `video-dynamic-range` permet de tester les caractéristiques du plan vidéo.
 
@@ -30,4 +29,4 @@ La caractéristique `video-dynamic-range` se définit à l'aide d'une valeur-cl�
 ## Voir aussi
 
 - [Utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
-- {{cssxref("@media")}}
+- La règle {{CSSxRef("@media")}}

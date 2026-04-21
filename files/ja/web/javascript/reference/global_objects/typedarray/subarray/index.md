@@ -1,24 +1,23 @@
 ---
 title: TypedArray.prototype.subarray()
+short-title: subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`subarray()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、同じ {{jsxref("ArrayBuffer")}} ストアにおいて、この型付き配列オブジェクトと同じ要素の型をもつ新しい型付き配列を返します。先頭のオフセットは**含み**、末尾のオフセットは**含みません**。
 
-{{InteractiveExample("JavaScript デモ: TypedArray.subarray()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.subarray()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
 
 console.log(uint8.subarray(1, 3));
-// Expected output: Uint8Array [20, 30]
+// 予想される結果: Uint8Array [20, 30]
 
 console.log(uint8.subarray(1));
-// Expected output: Uint8Array [20, 30, 40, 50]
+// 予想される結果: Uint8Array [20, 30, 40, 50]
 ```
 
 ## 構文
@@ -73,6 +72,6 @@ console.log(sub); // Uint8Array [ 1, 2, 3, 0 ]
 ## 関連情報
 
 - [`TypedArray.prototype.subarray` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}

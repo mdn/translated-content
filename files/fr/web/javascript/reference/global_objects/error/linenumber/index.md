@@ -1,35 +1,46 @@
 ---
-title: Error.prototype.lineNumber
+title: "Error : propriété lineNumber"
+short-title: lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`lineNumber`** contient le numéro de la ligne qui a déclenché l'erreur dans le fichier.
+La propriété **`lineNumber`** d'une instance de {{JSxRef("Error")}} contient le numéro de la ligne qui a déclenché l'erreur dans le fichier.
+
+## Valeur
+
+Un entier positif.
+
+{{js_property_attributes(1, 0, 1)}}
 
 ## Exemples
 
-### Utiliser `lineNumber`
+### Utiliser la propriété `lineNumber`
 
 ```js
-var e = new Error("Ne peut pas lire la donnée");
-throw e;
-console.log(e.lineNumber); // 2
+try {
+  throw new Error("Ne peut pas lire la donnée");
+} catch (err) {
+  console.log(err.lineNumber); // 2
+}
 ```
 
-### Alternative en utilisant l'événement `error`
+### Alternative en utilisant l'évènement `error`
 
 ```js
-window.addEventListener("error", function (e) {
+window.addEventListener("error", (e) => {
   console.log(e.lineNumber); //5
 });
-var e = new Error("Ne peut pas lire la donnée");
+const e = new Error("Ne peut pas lire la donnée");
 throw e;
 ```
 
 ## Spécifications
 
-Ne fait partie d'aucune spécification. Non standard.
+Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
@@ -37,6 +48,6 @@ Ne fait partie d'aucune spécification. Non standard.
 
 ## Voir aussi
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- La propriété {{JSxRef("Error.prototype.stack")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.columnNumber")}} {{Non-standard_Inline}}
+- La propriété {{JSxRef("Error.prototype.fileName")}} {{Non-standard_Inline}}

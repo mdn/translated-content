@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de estilos a textos con {{glossary("CSS")}}. Aquí trataremos en detalle todos los fundamentos básicos del diseño del texto y las fuentes tipográficas, incluyendo la configuración de su grosor, la familia y el estilo de letra, las propiedades abreviadas para los tipos de letra, la alineación del texto, el espaciado entre líneas y letras, y otros efectos.
 
@@ -15,10 +15,10 @@ En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de esti
       <td>
         Conocimientos básicos de informática, conceptos básicos de HTML (estudio
         de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), conceptos básicos de CSS (estudio de
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
       </td>
     </tr>
     <tr>
@@ -44,7 +44,7 @@ Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse
 - **Estilos de disposición del texto**: Propiedades que afectan al espaciado y otras características relativas a la disposición del texto, lo que permite la elección de, por ejemplo, el espacio entre líneas y letras, y el modo como el texto se alinea dentro de la caja contenedora.
 
 > [!NOTE]
-> Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como [::first-letter](/es/docs/Web/CSS/::first-letter) (selecciona la primera letra del texto de un elemento), [::first-line](/es/docs/Web/CSS/::first-line) (selecciona la primera línea del texto de un elemento), o [::selection](/es/docs/Web/CSS/::selection) (selecciona el texto que está resaltado por el cursor).
+> Ten en cuenta que el efecto se aplica sobre todo el texto que hay dentro de un elemento como si fuera una única entidad. No puedes seleccionar y dar estilo a subsecciones de texto, a menos que las delimites con algún elemento apropiado (como {{htmlelement("span")}} o {{htmlelement("strong")}}), o con un pseudoelemento específico para el texto como [::first-letter](/es/docs/Web/CSS/Reference/Selectors/::first-letter) (selecciona la primera letra del texto de un elemento), [::first-line](/es/docs/Web/CSS/Reference/Selectors/::first-line) (selecciona la primera línea del texto de un elemento), o [::selection](/es/docs/Web/CSS/Reference/Selectors/::selection) (selecciona el texto que está resaltado por el cursor).
 
 ## Tipos de letra
 
@@ -739,4 +739,4 @@ window.addEventListener("load", drawOutput);
 
 Esperamos que hayas disfrutado jugando con el texto en este artículo. El próximo artículo te enseñará todo lo que necesitas saber sobre la aplicación de estilos de lista en HTML.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

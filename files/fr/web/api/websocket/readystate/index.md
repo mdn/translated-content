@@ -1,51 +1,27 @@
 ---
-title: WebSocket.readyState
+title: "WebSocket : propriété readyState"
+short-title: readyState
 slug: Web/API/WebSocket/readyState
+l10n:
+  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
 
-La propriété en lecture seule **`WebSocket.readyState`** renvoie l'état courant de la connexion [`WebSocket`](/fr/docs/Web/API/WebSocket).
-
-## Syntaxe
-
-```js
-var readyState = uneWebSocket.readyState;
-```
+La propriété en lecture seule **`readyState`** de l'interface {{DOMxRef("WebSocket")}} retourne l'état courant de la connexion {{DOMxRef("WebSocket")}}.
 
 ## Valeur
 
-Cette propriété peut valoir l'une des valeurs de type `unsigned short` suivantes :
+Un nombre correspondant à l'une des quatre constantes d'état définies sur l'interface {{DOMxRef("WebSocket")}}&nbsp;:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Valeur</td>
-      <td class="header">État</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>0</code></td>
-      <td><code>CONNECTING</code></td>
-      <td>La socket a été créée. La connexion n'est pas encore ouverte.</td>
-    </tr>
-    <tr>
-      <td><code>1</code></td>
-      <td><code>OPEN</code></td>
-      <td>La connexion est ouverte et prête pour la communication.</td>
-    </tr>
-    <tr>
-      <td><code>2</code></td>
-      <td><code>CLOSING</code></td>
-      <td>La connexion est en cours de fermeture.</td>
-    </tr>
-    <tr>
-      <td><code>3</code></td>
-      <td><code>CLOSED</code></td>
-      <td>La connexion est fermée ou n'a pas pu être ouverte.</td>
-    </tr>
-  </tbody>
-</table>
+- `WebSocket.CONNECTING` (0)
+  - : Le socket a été créé. La connexion n'est pas encore ouverte.
+- `WebSocket.OPEN` (1)
+  - : La connexion est ouverte et prête à communiquer.
+- `WebSocket.CLOSING` (2)
+  - : La connexion est en cours de fermeture.
+- `WebSocket.CLOSED` (3)
+  - : La connexion est fermée ou n'a pas pu être ouverte.
 
 ## Spécifications
 

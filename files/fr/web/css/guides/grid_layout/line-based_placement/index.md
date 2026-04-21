@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 {{CSSRef}}
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Basic_concepts", "Web/CSS/Guides/Grid_layout/Grid_template_areas","Web/CSS/Guides/Grid_layout")}}
 
 Dans [l'article sur les concepts de base](/fr/docs/Web/CSS/Guides/Grid_layout/Basic_concepts), nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.
 
@@ -618,4 +618,4 @@ Pour vous familiariser avec le positionnement des éléments d'une grille en uti
 
 Il faut aussi se rappeler que lorsqu'on place les éléments explicitement sur la grille, ceux-ci peuvent se chevaucher. Cela permet d'obtenir certains effets mais attention aux erreurs lorsque c'est la mauvaise ligne de début ou de fin qui est indiquée. Pour régler ce problème, on peut utiliser [l'outil de mise en évidence de la grille CSS dans Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) pour analyser une grille compliquée.
 
-{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}
+{{PreviousMenuNext("Web/CSS/Guides/Grid_layout/Basic_concepts", "Web/CSS/Guides/Grid_layout/Grid_template_areas","Web/CSS/Guides/Grid_layout")}}

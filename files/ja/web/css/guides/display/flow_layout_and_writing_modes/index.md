@@ -1,9 +1,8 @@
 ---
 title: フローレイアウトと書字方向
 slug: Web/CSS/Guides/Display/Flow_layout_and_writing_modes
-original_slug: Web/CSS/CSS_display/Flow_layout_and_writing_modes
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 通常フローの動きについて詳細を説明している CSS 2.1 仕様書は、横書きを想定しています。[レイアウト](/ja/docs/Web/CSS/Guides/Display/Block_and_inline_layout)プロパティは縦書きモードでも同様に動作するべきです。このガイドでは、異なる文書の書字方向が使われた場合のフローレイアウトの動作を見てみましょう。

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Floats
 original_slug: Learn/CSS/CSS_layout/Floats
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}
 
 À l'origine conçue pour faire flotter des images à l'intérieur d'un bloc de texte, la propriété [`float`](/fr/docs/Web/CSS/Reference/Properties/float) est devenue un des outils les plus communément utilisés pour créer des dispositions sur plusieurs colonnes dans des pages web. Avec la venue de Flexbox et des grilles CSS, cette propriété est maintenant revenue à sa destination initiale, comme l'explique l'article.
 
@@ -14,9 +14,9 @@ original_slug: Learn/CSS/CSS_layout/Floats
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Introduction au HTML</a
         >), et une idée de la manière dont fonctionne CSS (étudiez
-        <a href="/fr/docs/Learn/CSS/First_steps">Introduction au CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Introduction au CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -658,10 +658,10 @@ body {
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats_skills).
+Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: les boîtes flottantes](/fr/docs/Learn_web_development/Core/Styling_basics/CSS_layout/Floats_skills).
 
 ## Résumé
 
 Vous savez maintenant tout ce qu'il y a à savoir à propos des boîtes flottantes dans le développement web moderne. Voyez l'article sur les [Méthodes anciennes de mise en page](/fr/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods) pour toute information sur la façon dont elles étaient utilisées autrefois, ce qui pourrait se révéler utile si vous travaillez sur des projets anciens.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Positioning", "Learn_web_development/Core/CSS_layout")}}

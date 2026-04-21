@@ -1,9 +1,8 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/Reference/At-rules/@media/prefers-contrast
-original_slug: Web/CSS/@media/prefers-contrast
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: c4d3b34b77fcfc28dd1d1a7ecb051ee912d9d3dd
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web soit présenté avec un contraste plus faible ou plus élevé.
@@ -17,7 +16,7 @@ La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caracté
 - `less`
   - : Indique que l'utilisateur·ice a signalé au système qu'il·elle préfère une interface avec un contraste plus faible.
 - `custom`
-  - : Indique que l'utilisateur·ice a signalé au système l'utilisation d'un jeu de couleurs spécifique, et que le contraste impliqué par ces couleurs ne correspond ni à «&nbsp;more&nbsp;» ni à «&nbsp;less&nbsp;». Cette valeur correspond à la palette de couleurs définie par les utilisateur·ice·s de [`forced-colors: active`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors).
+  - : Indique que l'utilisateur·ice a signalé au système l'utilisation d'un jeu de couleurs spécifique, et que le contraste impliqué par ces couleurs ne correspond ni à `more` ni à `less`. Cette valeur correspond à la palette de couleurs définie par les utilisateur·ice·s de [`forced-colors: active`](/fr/docs/Web/CSS/Reference/At-rules/@media/forced-colors).
 
 ## Préférences utilisateur
 
@@ -25,7 +24,7 @@ Les différents systèmes d'exploitation prennent en charge des réglages de con
 
 ## Exemples
 
-Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
+Cet exemple inclut une boîte avec une ligne externe ({{CSSxRef("outline")}}) en pointillés appliquée par défaut. Lorsque la requête média `prefers-contrast: more` correspond, le contour appliqué reçoit un style `solid` à contraste plus élevé à la place.
 
 ### HTML
 
@@ -37,6 +36,7 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ```css
 .contrast {
+  margin: 5px;
   width: 100px;
   height: 100px;
   outline: 2px dashed black;

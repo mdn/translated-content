@@ -2,9 +2,8 @@
 title: "ARIA : rôle switch"
 short-title: switch
 slug: Web/Accessibility/ARIA/Reference/Roles/switch_role
-original_slug: Web/Accessibility/ARIA/Roles/switch_role
 l10n:
-  sourceCommit: 6036cd414b2214f85901158bdf3e3a96123d4553
+  sourceCommit: 9f7e7e9075e9f2b1937d2c8000f52a8ff76bff52
 ---
 
 Le rôle **`switch`** est fonctionnellement identique au rôle [checkbox](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role), sauf qu'au lieu de représenter les états «&nbsp;coché&nbsp;» et «&nbsp;non coché&nbsp;», qui sont assez génériques, le rôle `switch` représente les états «&nbsp;activé&nbsp;» et «&nbsp;désactivé&nbsp;».
@@ -19,7 +18,7 @@ Cet exemple crée un widget et lui attribue le rôle ARIA `switch`.
   id="speakerPower"
   class="switch">
   <span aria-hidden="true">éteint</span>
-  <span aria-hidden="true">allumé</span>
+  <span aria-hidden="false">allumé</span>
 </button>
 <label for="speakerPower" class="switch">Alimentation du haut-parleur</label>
 ```
@@ -73,8 +72,8 @@ Du point de vue de l'utilisateur·ice de technologie d'assistance, le titre n'ex
 Lorsque le rôle `switch` est ajouté à un élément, l'{{Glossary("user agent", "agent utilisateur")}} le gère ainsi&nbsp;:
 
 - L'élément est exposé à l'infrastructure d'accessibilité du système comme ayant le rôle `switch`.
-- Lorsque la valeur de l'attribut `aria-checked` change, un événement d'accessibilité est déclenché via l'API d'accessibilité du système si elle existe et prend en charge le rôle `switch`.
-- Tous les éléments descendants d'un élément auquel le rôle `switch` est appliqué reçoivent automatiquement le rôle `presentation`. Cela empêche les éléments utilisés pour construire le switch d'être interagis individuellement par les technologies d'assistance. Le texte de ces éléments reste visible pour l'agent utilisateur·ice et peut être lu ou transmis à l'utilisateur·ice, sauf s'il est explicitement masqué via {{cssxref("display", "display: none")}} ou `aria-hidden="true"`.
+- Lorsque la valeur de l'attribut `aria-checked` change, un événement d'accessibilité est déclenché avec l'API d'accessibilité du système si elle existe et prend en charge le rôle `switch`.
+- Tous les éléments descendants d'un élément auquel le rôle `switch` est appliqué reçoivent automatiquement le rôle `presentation`. Cela empêche les éléments utilisés pour construire le switch d'être interagis individuellement par les technologies d'assistance. Le texte de ces éléments reste visible pour l'agent utilisateur·ice et peut être lu ou transmis à l'utilisateur·ice, sauf s'il est explicitement masqué avec {{CSSxRef("display", "display: none")}} ou `aria-hidden="true"`.
 
 La technologie d'assistance, si elle prend en charge le rôle `switch`, réagit ainsi&nbsp;:
 
@@ -171,7 +170,7 @@ label.switch {
 }
 ```
 
-La partie la plus intéressante est probablement l'utilisation des sélecteurs d'attributs et des pseudo-classes {{cssxref(":first-child")}} et {{cssxref(":last-child")}} pour modifier l'apparence du switch selon qu'il est activé ou désactivé.
+La partie la plus intéressante est probablement l'utilisation des sélecteurs d'attributs et des pseudo-classes {{CSSxRef(":first-child")}} et {{CSSxRef(":last-child")}} pour modifier l'apparence du switch selon qu'il est activé ou désactivé.
 
 #### Résultat
 

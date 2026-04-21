@@ -2,7 +2,7 @@
 title: xlink:href
 slug: Web/SVG/Reference/Attribute/xlink:href
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 {{Deprecated_Header}}
@@ -10,7 +10,7 @@ l10n:
 **`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
 
 > [!NOTE]
-> SVG 2 では、 `xlink` 名前空間は除去されたため、 `xlink:href` の代わりに {{SVGAttr("href")}} を使用してください。以前のバージョンのブラウザーに対応する必要がある場合は、非推奨の `xlink:href` 属性を `href` 属性に加えて予備として使用することができます。例えば、 `<use href="some-id" xlink:href="some-id" x="5" y="5" />` のようにしますです。
+> SVG 2 では、 `xlink` 名前空間は除去されたため、 `xlink:href` の代わりに {{SVGAttr("href")}} を使用してください。以前のバージョンのブラウザーに対応する必要がある場合は、非推奨の `xlink:href` 属性を `href` 属性に加えて予備として使用することができます。例えば、 `<use href="some-id" xlink:href="some-id" x="5" y="5" />` のようにします。
 
 この属性は、次の SVG 要素に従うことで使用することができます。
 
@@ -18,11 +18,8 @@ l10n:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("cursor")}}
 - {{SVGElement("feImage")}}
 - {{SVGElement("filter")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("glyphRef")}}
 - {{SVGElement("image")}}
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("mpath")}}
@@ -31,7 +28,6 @@ l10n:
 - {{SVGElement("script")}}
 - {{SVGElement("set")}}
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("use")}}
 
 ## 例
@@ -69,7 +65,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -102,39 +98,12 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
       <td>不可</td>
-    </tr>
-  </tbody>
-</table>
-
-## cursor
-
-{{SVGElement("cursor")}} では、 `xlink:href` はカーソルの画像を提供するファイルまたは要素の参照を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#funciri"
-            >&#x3C;FuncIRI></a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
     </tr>
   </tbody>
 </table>
@@ -154,7 +123,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -179,62 +148,12 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
       <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## font-face-uri
-
-{{SVGElement("font-face-uri")}} では、 `xlink:href` は参照するフォントの場所を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>不可</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyphRef
-
-{{SVGElement("glyphRef")}} では、 `xlink:href` は SVG 文書フラグメントの {{SVGElement("glyph")}} 要素を定義します。参照される `<glyph>` は別な字形として描画されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>不可</td>
     </tr>
   </tbody>
 </table>
@@ -254,7 +173,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -279,7 +198,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -304,7 +223,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -329,7 +248,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -354,7 +273,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -379,7 +298,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -404,7 +323,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>
@@ -429,32 +348,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
-      <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## tref
-
-{{SVGElement("tref")}} では、 `xlink:href` は、文字データコンテンツをこの `<tref>` 要素の文字データとして使用する要素への参照を定義します。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/SVG/Guides/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><em>なし</em></td>
     </tr>
     <tr>

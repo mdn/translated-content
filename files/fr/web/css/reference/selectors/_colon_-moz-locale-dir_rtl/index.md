@@ -1,10 +1,12 @@
 ---
-title: :-moz-locale-dir(rtl)
+title: Pseudo-classe CSS `:-moz-locale-dir(rtl)`
+short-title: :-moz-locale-dir(rtl)
 slug: Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl
-original_slug: Web/CSS/:-moz-locale-dir_rtl
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-locale-dir(rtl)`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence `intl.uidirection.locale` (où `locale` est la langue courante) qui est fixée à `"rtl"`.
 
@@ -50,5 +52,5 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{CSSxRef(":dir", ":dir(…)")}}
-- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- La pseudo-classe {{CSSxRef(":dir", ":dir(…)")}}
+- La pseudo-classe {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}

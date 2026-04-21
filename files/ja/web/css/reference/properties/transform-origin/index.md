@@ -1,9 +1,8 @@
 ---
 title: transform-origin
 slug: Web/CSS/Reference/Properties/transform-origin
-original_slug: Web/CSS/transform-origin
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: e316a03cc74a78004dbba837c9d5df297e2eb0aa
 ---
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
@@ -23,14 +22,14 @@ transform-origin: 50px 50px;
 ```
 
 ```css interactive-example-choice
-/* 3D rotation with z-axis origin */
+/* Z 軸を原点とした 3D 回転 */
 transform-origin: bottom right 60px;
 ```
 
 ```html interactive-example
 <section id="default-example">
   <div id="example-container">
-    <div id="example-element">Rotate me!</div>
+    <div id="example-element">回転します！</div>
     <img
       alt=""
       id="crosshair"
@@ -54,7 +53,7 @@ transform-origin: bottom right 60px;
 
 @keyframes rotate3d {
   from {
-    transform: rotate3d(0);
+    transform: rotate3d(0, 0, 0, 0);
   }
 
   to {
@@ -76,7 +75,7 @@ transform-origin: bottom right 60px;
   align-items: center;
   justify-content: center;
   background: #f7ebee;
-  color: #000000;
+  color: black;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
@@ -105,45 +104,41 @@ transform-origin: bottom right 60px;
 ```
 
 ```js interactive-example
-"use strict";
+const crosshair = document.getElementById("crosshair");
+const el = document.getElementById("example-element");
 
-window.addEventListener("load", () => {
-  function update() {
-    const selected = document.querySelector(".selected");
+function update() {
+  const selected = document.querySelector(".selected");
 
-    /* Restart the animation
-           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
-    el.className = "";
+  /* アニメーションを再スタート
+           https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Tips */
+  el.className = "";
+  window.requestAnimationFrame(() => {
     window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className =
-          el.style.transformOrigin.split(" ")[2] === "60px"
-            ? "rotate3d"
-            : "rotate";
-      });
+      el.className =
+        el.style.transformOrigin.split(" ")[2] === "60px"
+          ? "rotate3d"
+          : "rotate";
     });
-
-    const transformOrigin = getComputedStyle(el).transformOrigin;
-    const pos = transformOrigin.split(/\s+/);
-    crosshair.style.left = `calc(${pos[0]} - 12px)`;
-    crosshair.style.top = `calc(${pos[1]} - 12px)`;
-  }
-
-  const crosshair = document.getElementById("crosshair");
-  const el = document.getElementById("example-element");
-
-  const observer = new MutationObserver(() => {
-    update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
-  });
+  const transformOrigin = getComputedStyle(el).transformOrigin;
+  const pos = transformOrigin.split(/\s+/);
+  crosshair.style.left = `calc(${pos[0]} - 12px)`;
+  crosshair.style.top = `calc(${pos[1]} - 12px)`;
+}
 
+const observer = new MutationObserver(() => {
   update();
-  crosshair.style.opacity = "1";
 });
+
+observer.observe(el, {
+  attributes: true,
+  attributeFilter: ["style"],
+});
+
+update();
+crosshair.style.opacity = "1";
 ```
 
 座標変換の原点とは、それを中心に座標変換が適用される点です。例えば、 [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate) 関数における座標変換の原点は、回転の中心です。
@@ -239,13 +234,13 @@ transform-origin: unset;
 
 キーワードは便利な速記形であり、次の {{cssxref("&lt;percentage&gt;")}} 値に相当します。
 
-| Keyword  | Value  |
-| -------- | ------ |
-| `left`   | `0%`   |
-| `center` | `50%`  |
-| `right`  | `100%` |
-| `top`    | `0%`   |
-| `bottom` | `100%` |
+| キーワード | 値     |
+| ---------- | ------ |
+| `left`     | `0%`   |
+| `center`   | `50%`  |
+| `right`    | `100%` |
+| `top`      | `0%`   |
+| `bottom`   | `100%` |
 
 ## 公式定義
 
@@ -262,7 +257,7 @@ transform-origin: unset;
 
 ### 様々な座標変換値のデモ
 
-この例は、様々な変換関数で様々なt `transform-origin` の値を選択した場合の効果を表します。
+この例は、様々な座標変換関数で様々なt `transform-origin` の値を選択した場合の効果を表します。
 
 ```html hidden
 <div class="container">
@@ -452,4 +447,5 @@ transform-origin: 100% -30%;
 ## 関連情報
 
 - [CSS 座標変換の使用](/ja/docs/Web/CSS/Guides/Transforms/Using)
+- SVG の {{SVGAttr("transform-origin")}} 属性
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

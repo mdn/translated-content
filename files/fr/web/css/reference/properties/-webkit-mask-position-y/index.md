@@ -1,14 +1,14 @@
 ---
-title: -webkit-mask-position-y
+title: Propriété CSS `-webkit-mask-position-y`
+short-title: -webkit-mask-position-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-y
-original_slug: Web/CSS/-webkit-mask-position-y
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-La propriété **`-webkit-mask-position-y`** permet de définir la position verticale initiale d'une image de masque.
+La propriété [CSS](/fr/docs/Web/CSS) **`-webkit-mask-position-y`** permet de définir la position verticale initiale d'une image de masque.
 
 ## Syntaxe
 
@@ -65,6 +65,8 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 
 ## Exemples
 
+### Positionner verticalement une image de masque
+
 ```css
 .exempleUn {
   -webkit-mask-image: url(mask.png);
@@ -87,6 +89,6 @@ Cette propriété ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("mask-position", "-webkit-mask-position")}}
-- {{cssxref("-webkit-mask-position-x")}}
-- {{cssxref("mask-origin", "-webkit-mask-origin")}}
+- La propriété {{CSSxRef("mask-position", "-webkit-mask-position")}}
+- La propriété {{CSSxRef("-webkit-mask-position-x")}}
+- La propriété {{CSSxRef("mask-origin", "-webkit-mask-origin")}}

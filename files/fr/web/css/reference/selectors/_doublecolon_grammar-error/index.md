@@ -1,9 +1,9 @@
 ---
-title: ::grammar-error
+title: Pseudo-élément CSS `::grammar-error`
+short-title: ::grammar-error
 slug: Web/CSS/Reference/Selectors/::grammar-error
-original_slug: Web/CSS/::grammar-error
 l10n:
-  sourceCommit: 37482c6bb0894d047a225c24f102352f89788523
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::grammar-error`** représente une portion de texte que le navigateur signale comme contenant une ou plusieurs erreurs de grammaire.
@@ -14,14 +14,14 @@ Le pseudo-élément `::grammar-error` suit un modèle d'héritage spécial commu
 
 Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une règle contenant `::grammar-error`&nbsp;:
 
-- {{cssxref("background-color")}},
-- {{cssxref("caret-color")}},
-- {{cssxref("color")}},
-- {{cssxref("cursor")}},
-- {{cssxref("outline")}} et les propriétés détaillées associées,
-- {{cssxref("text-decoration")}} et les propriétés détaillées associées.
-- {{cssxref("text-emphasis-color")}},
-- {{cssxref("text-shadow")}}
+- {{CSSxRef("background-color")}},
+- {{CSSxRef("caret-color")}},
+- {{CSSxRef("color")}},
+- {{CSSxRef("cursor")}},
+- {{CSSxRef("outline")}} et les propriétés détaillées associées,
+- {{CSSxRef("text-decoration")}} et les propriétés détaillées associées.
+- {{CSSxRef("text-emphasis-color")}},
+- {{CSSxRef("text-shadow")}}
 
 ## Syntaxe
 
@@ -66,5 +66,5 @@ Dans cet exemple, les navigateurs prenant en charge cette fonctionnalité devrai
 
 ## Voir aussi
 
-- {{cssxref("::spelling-error")}}
-- {{cssxref("text-decoration-line")}}
+- Le pseudo-élément {{CSSxRef("::spelling-error")}}
+- La propriété {{CSSxRef("text-decoration-line")}}

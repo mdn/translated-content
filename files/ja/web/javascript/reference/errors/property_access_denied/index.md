@@ -19,7 +19,7 @@ Error: Permission denied to access property "x"
 
 ## エラーの原因
 
-権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に違反する場合などです。
+権限がない状態でオブジェクトへのアクセスの試行がありました。これは異なるドメインから読み込んだ {{HTMLElement("iframe")}} 要素が[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に違反する場合などです。
 
 ## 例
 
@@ -46,4 +46,4 @@ Error: Permission denied to access property "x"
 ## 関連情報
 
 - {{HTMLElement("iframe")}}
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- [同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)

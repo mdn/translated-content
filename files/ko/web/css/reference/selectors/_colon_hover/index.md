@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:hover
 original_slug: Web/CSS/:hover
 ---
 
-**`:hover`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 사용자가 포인팅 장치를 사용해 상호작용 중인 요소를 선택합니다. 보통 사용자의 커서(마우스 포인터)가 요소 위에 올라가 있으면 선택됩니다.
+**`:hover`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-classes)는 사용자가 포인팅 장치를 사용해 상호작용 중인 요소를 선택합니다. 보통 사용자의 커서(마우스 포인터)가 요소 위에 올라가 있으면 선택됩니다.
 
 ```css
 /* "호버링" 중인 <a> 요소 선택 */

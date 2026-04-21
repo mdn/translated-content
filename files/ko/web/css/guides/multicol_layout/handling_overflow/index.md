@@ -36,10 +36,10 @@ l10n:
 
 웹에서 다단 레이아웃을 사용할 때 발생할 수 있는 문제 중 하나는 열이 뷰포트보다 높으면 사용자가 페이지를 위아래로 스크롤해야 한다는 점입니다. 이는 좋은 사용자 경험을 제공하지 못합니다. 이를 피하는 한 가지 방법은 수직 공간이 충분할 때만 열 속성을 적용하는 것입니다.
 
-아래 예시에서는 {{CSSXref("min-height")}}와 [@미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 쿼리를 사용하여 열 속성을 적용하기 전에 수직 공간이 충분한지 확인합니다.
+아래 예시에서는 {{CSSXref("min-height")}}와 [@미디어 쿼리](/ko/docs/Web/CSS/Guides/Media_queries/Using) 쿼리를 사용하여 열 속성을 적용하기 전에 수직 공간이 충분한지 확인합니다.
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
 
 ## 다음 단계
 
-이 시리즈의 마지막 안내서에서는 [다단 레이아웃에서 콘텐츠 분리가 어떻게 작동하는지 살펴보고](/ko/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout), 열 사이에서 콘텐츠가 어떻게 나뉘는지 제어하는 방법을 알아봅니다.
+이 시리즈의 마지막 안내서에서는 [다단 레이아웃에서 콘텐츠 분리가 어떻게 작동하는지 살펴보고](/ko/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks), 열 사이에서 콘텐츠가 어떻게 나뉘는지 제어하는 방법을 알아봅니다.

@@ -57,7 +57,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 ![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > [!NOTE]
-> Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в [Замещаемых элементах](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties).
+> Такие элементы как {{htmlelement("img")}} и {{htmlelement("video")}} иногда называются замещаемыми элементами. Это потому что содержание элемента и размер, определяет внешний ресурс (как изображение или видео файл), а не содержание самого элемента. Вы можете узнать о них больше в [Замещаемых элементах](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties).
 
 > [!NOTE]
 > Вы можете найти готовый пример этого раздела, [размещённый на Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (смотрите также [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)).
@@ -116,7 +116,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 Однако, вы не должны изменять размеры ваших изображений используя HTML атрибуты. Если вы установите размер изображения слишком большим, то в конечном итоге вы столкнётесь с изображениями, которые выглядят зернистыми, размытыми или слишком маленькими, и потратите трафик для загрузки изображения, которое не будет соответствовать нуждам пользователя. Конечное изображение может также выглядеть искажённым, если вы не сохраните правильное [соотношение сторон](<https://en.wikipedia.org/wiki/Aspect_ratio_(image)>). Рекомендуется использовать графический редактор для подгонки изображения к нужному размеру, перед вставкой его на вашу веб-страницу.
 
 > [!NOTE]
-> Если вам действительно нужно изменить размер изображения, вы должны использовать вместо этого [CSS](/ru/docs/Learn/CSS).
+> Если вам действительно нужно изменить размер изображения, вы должны использовать вместо этого [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 ### Заголовок изображения
 
@@ -340,7 +340,7 @@ p {
 Итог: если изображение имеет важность, в контексте содержимого вашей страницы, вам следует использовать HTML изображения. Если же картинка является банальной декорацией, используйте фоновые изображения CSS.
 
 > [!NOTE]
-> Вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn/CSS).
+> Вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 ## Проверьте свои навыки!
 

@@ -1,14 +1,14 @@
 ---
-title: max-width
+title: Propriété CSS `max-width`
+short-title: max-width
 slug: Web/CSS/Reference/Properties/max-width
-original_slug: Web/CSS/max-width
 l10n:
-  sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété [`width`](/fr/docs/Web/CSS/Reference/Properties/width) de devenir supérieure à la valeur spécifiée par `max-width`.
+La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("width")}} de devenir supérieure à la valeur définie par `max-width`.
 
-{{InteractiveExample("CSS Demo: max-width")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: max-width")}}
 
 ```css interactive-example-choice
 max-width: 150px;
@@ -29,7 +29,7 @@ max-width: 20ch;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    Change the maximum width.
+    Changez la largeur maximale.
   </div>
 </section>
 ```
@@ -41,28 +41,30 @@ max-width: 20ch;
   background-color: #5b6dcd;
   height: 80%;
   justify-content: center;
-  color: #ffffff;
+  color: white;
 }
 ```
 
-La valeur de `max-width` surcharge la valeur de [`width`](/fr/docs/Web/CSS/Reference/Properties/width), mais `max-width` est, elle, surchargée par [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width).
+`max-width` surcharge {{CSSxRef("width")}}, mais {{CSSxRef("min-width")}} surcharge `max-width`.
 
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length>      */
+/* Valeur de type <length> */
 max-width: 3.5em;
+max-width: anchor-size(--my-anchor inline, 245px);
+max-width: calc(anchor-size(width) + 4em);
 
-/* Valeurs relatives */
-/* Type <percentage> */
+/* Valeursde type <percentage> */
 max-width: 75%;
 
 /* Valeurs avec un mot-clé */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
+max-width: fit-content;
 max-width: fit-content(20em);
+max-width: stretch;
 
 /* Valeurs globales */
 max-width: inherit;
@@ -74,25 +76,32 @@ max-width: unset;
 
 ### Valeurs
 
-- [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)
-  - : Définit la largeur maximale avec une valeur absolue.
-- [`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)
-  - : Définit la largeur maximale avec une valeur relative à la largeur du bloc englobant.
-- <code>fit-content(<a href="/fr/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a>)</code>
-  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument fourni, c'est-à-dire `min(max-content, max(min-content, argument))`.
-- `max-content` {{experimental_inline}}
-  - : La largeur maximale intrinsèque préférée.
-- `min-content` {{experimental_inline}}
-  - : La valeur minimale intrinsèque pour la largeur maximale.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Définit la largeur maximale (`max-width`) avec une valeur absolue.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Définit la largeur maximale (`max-width`) en pourcentage de la largeur du bloc englobant.
 - `none`
-  - : Il n'y a pas de maximum pour la largeur.
+  - : Aucune limite sur la taille de la boîte.
+- {{CSSxRef("max-content")}}
+  - : La largeur maximale (`max-width`) intrinsèque préférée.
+- {{CSSxRef("min-content")}}
+  - : La largeur maximale (`max-width`) intrinsèque minimale.
+- {{CSSxRef("fit-content")}}
+  - : Utilise l'espace disponible, mais pas plus que {{CSSxRef("max-content")}}, c'est-à-dire `min(max-content, max(min-content, stretch))`.
+- [`fit-content(<length-percentage>)`](/fr/docs/Web/CSS/Reference/Values/fit-content_function) {{Experimental_Inline}}
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument défini, c'est-à-dire `min(max-content, max(min-content, argument))`.
+- `stretch`
+  - : Limite la largeur maximale de la [marge de la boîte](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model#les_composants_dune_boîte) de l'élément à la largeur de son [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block#identifier_le_bloc_englobant). Elle tente de faire en sorte que la marge remplisse l'espace disponible dans le bloc englobant, se comportant ainsi de manière similaire à `100%`, mais en appliquant la taille résultante à la marge plutôt qu'à la boîte déterminée par {{CSSxRef("box-sizing")}}.
+
+    > [!NOTE]
+    > Pour vérifier les alias utilisés par les navigateurs pour la valeur `stretch` et son état d'implémentation, consultez la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
 ## Accessibilité
 
 Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-width` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [Comprendre le WCAG sur MDN, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre les critères de succès 1.4.4 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Définition formelle
 
@@ -106,7 +115,7 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 
 ### Définir une largeur maximale en pixels
 
-Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 et celle de l'élément `parent`.
+Dans cet exemple, l'élément «&nbsp;enfant&nbsp;» aura la largeur la plus petite entre 150 et celle de l'élément «&nbsp;parent&nbsp;».
 
 #### HTML
 
@@ -135,7 +144,7 @@ Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 
 
 #### Résultat
 
-{{EmbedLiveSample("", 350, 100)}}
+{{EmbedLiveSample("Définir une largeur maximale en pixels", 350, 100)}}
 
 ## Spécifications
 
@@ -147,6 +156,10 @@ Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 
 
 ## Voir aussi
 
-- [Le modèle de boîtes](/fr/docs/Web/CSS/Guides/Box_model/Introduction) et [`box-sizing`](/fr/docs/Web/CSS/Reference/Properties/box-sizing)
-- [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width)
-- Les propriétés logiques correspondantes [`max-block-size`](/fr/docs/Web/CSS/Reference/Properties/max-block-size) et [`max-inline-size`](/fr/docs/Web/CSS/Reference/Properties/max-inline-size)
+- La propriété {{CSSxRef("min-width")}}
+- La propriété {{CSSxRef("width")}}
+- La propriété {{CSSxRef("max-inline-size")}}
+- La propriété {{CSSxRef("max-block-size")}}
+- La propriété {{CSSxRef("box-sizing")}}
+- Le guide [d'introduction au modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model/Introduction)
+- Le module [du modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)

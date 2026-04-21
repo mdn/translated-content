@@ -1,15 +1,14 @@
 ---
 title: white-space-collapse
 slug: Web/CSS/Reference/Properties/white-space-collapse
-original_slug: Web/CSS/white-space-collapse
 l10n:
-  sourceCommit: 63e23080dd90d7802be807ac9beca286f6f31f7f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}を統合する方法を制御します。
 
 > [!NOTE]
-> `white-space-collapse` および {{CSSxRef("text-wrap")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
+> `white-space-collapse` および {{CSSxRef("text-wrap-mode")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
 
 ## 構文
 
@@ -34,7 +33,7 @@ white-space-collapse: unset;
 ### 値
 
 - `collapse`
-  - : 連続したホワイトスペースを[統合します](#ホワイトスペースの統合)。
+  - : 連続したホワイトスペースを[統合します](/ja/docs/Web/CSS/Guides/Text/Whitespace#統合と変換)。
 - `preserve`
   - : 連続したホワイトスペースと区間区切り文字を維持します。
 - `preserve-breaks`
@@ -50,18 +49,8 @@ white-space-collapse: unset;
 > [!NOTE]
 > _区間区切り文字_ とは、テキストを新しい行に改行させる行送り文字などのことです。
 
-## ホワイトスペースの統合
-
-ユーザーエージェントは、以下のようにホワイトスペースの統合を処理します。
-
-- タブは一般に空白に変換します。
-- 区間区切り文字が統合される場合は、次のようになります。
-  - 連続した区間区切り文字は、単一の区間区切り文字に統合されます。
-  - 空白で単語を区切る言語（英語など）の場合は空白に変換し、空白で単語を区切らない言語（中国語など）の場合は完全に除去します。
-- 空白が統合される場合は、次のようになります。
-  - 区間区切り文字の前後の空白またはタブは除去されます。
-  - 連続した空白は、単一の空白に変換、または「統合」ます。
-- 空白が維持される場合、連続した空白はそれぞれの並びの末尾でソフト折り返しされることを除けば、改行されないものとして扱われます。つまり、次の行は常に次の空白でない文字から始まります。ただし、`break-spaces` 値の場合、それぞれの空白の後にソフト折り返しが発生する可能性があるので、次の行は 1 つ以上の空白で始まる可能性があります。
+> [!NOTE]
+> [CSS テキスト](/ja/docs/Web/CSS/Guides/Text)モジュールは、`white-space-collapse` プロパティに `discard` 値を定義しており、これは要素内のすべての空白を破棄します。ただし、これはどのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -88,6 +77,10 @@ white-space-collapse: unset;
 <h2 class="preserve-breaks">In this case only
   the   line breaks  are  preserved
   in    the          heading       .</h2>
+
+<h2 class="preserve-spaces">In this case only
+  the   spaces       are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 
@@ -106,9 +99,14 @@ white-space-collapse: unset;
   white-space-collapse: preserve-breaks;
 }
 
+.preserve-spaces {
+  white-space-collapse: preserve-spaces;
+}
+
 h2 {
   font-size: 1.6rem;
   font-family: monospace;
+  border-bottom: 1px dotted #cccccc;
 }
 ```
 
@@ -128,3 +126,4 @@ h2 {
 
 - `white-space-collapse` と {{CSSxRef("text-wrap")}} の一括指定: {{CSSxRef("white-space")}} プロパティ
 - [CSS テキストモジュール](/ja/docs/Web/CSS/Guides/Text)
+- [CSS でのホワイトスペースの扱い](/ja/docs/Web/CSS/Guides/Text/Whitespace)

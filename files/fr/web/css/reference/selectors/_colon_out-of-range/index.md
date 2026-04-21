@@ -1,9 +1,9 @@
 ---
-title: :out-of-range
+title: Pseudo-classe CSS `:out-of-range`
+short-title: :out-of-range
 slug: Web/CSS/Reference/Selectors/:out-of-range
-original_slug: Web/CSS/:out-of-range
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:out-of-range`** cible un élément {{HTMLElement("input")}} lorsque la valeur de son attribut `value` est en dehors de l'intervalle autorisé par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max). Ceci permet d'informer l'utilisateur·ice que la valeur actuellement renseignée dans l'élément est hors des limites acceptables.
@@ -126,5 +126,5 @@ input:out-of-range + label::after {
 
 ## Voir aussi
 
-- {{cssxref(":in-range")}}
+- La pseudo-classe {{CSSxRef(":in-range")}}
 - [Le guide de validation des données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)

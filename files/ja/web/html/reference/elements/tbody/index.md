@@ -83,7 +83,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categoriesegories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
@@ -110,7 +110,7 @@ td {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Rowgroup_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role"
             >rowgroup</a
           ></code
         >

@@ -137,7 +137,7 @@ Un exemple de requête HTTP :
 
 Une requête comprend les éléments suivants :
 
-- Une [méthode](/fr/docs/Web/HTTP/Reference/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs//Learn_web_development/Extensions/Forms\) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
+- Une [méthode](/fr/docs/Web/HTTP/Reference/Methods) HTTP : généralement un verbe tel que {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} ou un nom comme {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} qui définit l'opération que le client souhaite effectuer. Par exemple, un client souhaite accéder à une ressource (en utilisant GET) ou téléverser le résultat d'un [formulaire HTML](/fr/docs/Learn_web_development/Extensions/Forms) (en utilisant `POST`), bien que d'autres opérations puissent être nécessaires dans d'autres cas.
 - Le chemin de la ressource à extraire : l'URL de la ressource à laquelle on a retiré les éléments déductibles du contexte, par exemple le {{glossary ("protocole")}} (http\://), le {{glossary ("domaine")}} (ici .mozilla.org), ou le {{glossary ("port")}} TCP (ici 80).
 - La version du protocole HTTP.
 - Les [en-têtes](/fr/docs/Web/HTTP/Reference/Headers) optionnels qui transmettent des informations supplémentaires pour les serveurs.

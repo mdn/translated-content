@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/flex-flow
 original_slug: Web/CSS/flex-flow
 ---
 
-**`flex-flow`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("flex-direction")}}, {{cssxref("flex-wrap")}} 속성의 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)입니다.
+**`flex-flow`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("flex-direction")}}, {{cssxref("flex-wrap")}} 속성의 [단축 속성](/ko/docs/Web/CSS/Guides/Cascade/Shorthand_properties)입니다.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 
@@ -105,5 +105,5 @@ element {
 
 ## 같이 보기
 
-- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS 플렉스박스 가이드: _[Ordering flex items](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

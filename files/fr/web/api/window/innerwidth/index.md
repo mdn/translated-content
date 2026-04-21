@@ -1,49 +1,78 @@
 ---
-title: window.innerWidth
+title: "Window : propriété innerWidth"
+short-title: innerWidth
 slug: Web/API/Window/innerWidth
+l10n:
+  sourceCommit: 277e1432bea11473d0c638cd720130c44b26b3f4
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
-## Résumé
+La propriété en lecture seule **`innerWidth`** de l'interface {{DOMxRef("Window")}} retourne la largeur intérieure de la fenêtre en pixels, c'est-à-dire la largeur de la {{Glossary("layout viewport", "disposition de la zone d'affichage")}} de la fenêtre. Cela inclut la largeur de la barre de défilement verticale, si elle est présente.
 
-Récupère la largeur du contenu visible de la fenêtre de navigation en incluant, s'il est visible, l'ascenseur vertical.
-Permet également de fixer une largeur pour le domaine d'affichage de la fenêtre.
+De même, la hauteur intérieure de la fenêtre (c'est-à-dire la hauteur de la disposition de la zone d'affichage) peut être obtenue en utilisant la propriété {{DOMxRef("Window.innerHeight", "innerHeight")}}. Cette mesure prend également en compte la hauteur de la barre de défilement horizontale, si elle est visible.
 
-## Syntaxe
+## Valeur
 
-```js
-var largeur = window.innerWidth;
-```
+Une valeur entière indiquant la largeur de la zone d'affichage de la fenêtre en pixels. La propriété est en lecture seule et n'a pas de valeur par défaut.
 
-Voir aussi&nbsp;: [window.innerHeight](/fr/docs/Web/API/Window/innerHeight), [window.outerHeight](/fr/docs/Web/API/Window/outerHeight) and [window.outerWidth](/fr/docs/Web/API/Window/outerWidth).
+Pour modifier la largeur de la fenêtre, utilisez l'une des méthodes de redimensionnement de {{DOMxRef("Window")}}, telles que {{DOMxRef("Window.resizeBy", "resizeBy()")}} ou {{DOMxRef("Window.resizeTo", "resizeTo()")}}.
 
-## Valeur renvoyée
+## Notes d'utilisation
 
-- `innerWidth`
-  - : un entier (nombre de pixels);
+Si vous avez besoin d'obtenir la largeur de la fenêtre moins la barre de défilement et les bordures, utilisez plutôt la propriété {{DOMxRef("Element.clientWidth", "clientWidth")}} de l'élément racine {{HTMLElement("html")}}.
 
-## Notes
+La propriété `innerWidth` est disponible sur n'importe quelle fenêtre ou tout objet qui se comporte comme une fenêtre, tel qu'un cadre ou un onglet.
 
-La propriété `innerWidth` est supportée par tous les objet "window" comme par exemple une fenêtre, une frame, un frameset, ou une fenêtre secondaire.
-
-## Example
+## Exemples
 
 ```js
-// Retourne la largeur de la fenêtre
-var largeur = window.innerWidth;
+// Cela affichera la largeur de la zone d'affichage
+console.log(window.innerWidth);
 
-// Retourn la largeur de la fenêtre à l'intérieur d'une "frameset"
-var largeur = self.innerWidth;
+// Cela affichera la largeur de la zone d'affichage du cadre dans un frameset
+console.log(self.innerWidth);
 
-// Retourne la largeur de la fenêtre du "frameset" parent
-var largeurDeLaFrame = parent.innerWidth;
+// Cela affichera la largeur de la zone d'affichage du frameset le plus proche
+console.log(parent.innerWidth);
 
-// Retourne la largeur de la fenêtre du "frameset" principal
-var largeurDuFrameset = top.innerWidth;
+// Cela affichera la largeur de la zone d'affichage du frameset le plus éloigné
+console.log(top.innerWidth);
 ```
 
-Pour changer la taille de la fenêtre, voir {{domxref("window.resizeBy")}} and {{domxref("window.resizeTo")}}.
+## Démonstration
+
+### HTML
+
+```html
+<p>
+  Redimensionnez la fenêtre du navigateur pour déclencher l'événement
+  <code>resize</code>.
+</p>
+<p>Hauteur de la fenêtre&nbsp;: <span id="height"></span></p>
+<p>Largeur de la fenêtre&nbsp;: <span id="width"></span></p>
+```
+
+### JavaScript
+
+```js
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function updateSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+updateSize();
+window.addEventListener("resize", updateSize);
+```
+
+### Résultat
+
+{{EmbedLiveSample("Démonstration")}}
+
+Vous pouvez également {{LiveSampleLink("Démonstration", "voir les résultats du code de démonstration dans une page séparée")}}.
 
 ## Spécifications
 
@@ -52,3 +81,9 @@ Pour changer la taille de la fenêtre, voir {{domxref("window.resizeBy")}} and {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{DOMxRef("Window.outerWidth")}}
+- La propriété {{DOMxRef("Window.innerHeight")}}
+- La propriété {{DOMxRef("Window.outerHeight")}}

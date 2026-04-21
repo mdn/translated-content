@@ -3,7 +3,7 @@ title: Сборка Angular приложений и другие ресурсы
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 В финальной статье об Angular рассказывается, как создать полностью готовое приложение и предоставляются дополнительные ресурсы, которые помогут вам продолжить обучение
 
@@ -12,7 +12,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
     <tr>
       <th scope="row">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/ru/docs/Learn/HTML">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
       </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@ CLI компилирует приложение и помещает резуль
 
 На этом пока все. Надеемся, вам понравилось работать с Angular!
 
-{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 ## В это модуле
 

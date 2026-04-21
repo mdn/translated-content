@@ -11,7 +11,7 @@ l10n:
 
 `DisposableStack` は、そのインターフェイスの観点から見ると、厳密には「スタック」ではありません。ディスポーザーをスタックにプッシュするためのメソッドはいくつかありますが、ディスポーザーを一つポップする方法はありません。それどころか、スタックが破棄されるときに _すべての_ ディスポーザーが一つずつポップされて実行されます。
 
-`DisposableStack`に[処分可能なリソース](/ja/docs/Web/JavaScript/Guide/Resource_management)を登録するには、{{jsxref("DisposableStack/use", "use()")}}、{{jsxref("DisposableStack/adopt", "adopt()")}}、または{{jsxref("DisposableStack/defer", "defer()")}}メソッドを使用します。
+`DisposableStack`に[破棄可能なリソース](/ja/docs/Web/JavaScript/Guide/Resource_management)を登録するには、{{jsxref("DisposableStack/use", "use()")}}、{{jsxref("DisposableStack/adopt", "adopt()")}}、または{{jsxref("DisposableStack/defer", "defer()")}}メソッドを使用します。
 
 ```js
 using disposer = new DisposableStack();

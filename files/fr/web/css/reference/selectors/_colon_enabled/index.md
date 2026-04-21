@@ -1,9 +1,9 @@
 ---
-title: :enabled
+title: Pseudo-classe CSS `:enabled`
+short-title: :enabled
 slug: Web/CSS/Reference/Selectors/:enabled
-original_slug: Web/CSS/:enabled
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:enabled`** permet de cibler un élément activé. Un élément est activé s'il peut être sélectionné, si on peut cliquer dessus ou si on peut y saisir du texte ou y passer le focus (un élément peut également être dans un état désactivé).
@@ -96,4 +96,4 @@ input:disabled {
 
 ## Voir aussi
 
-- {{cssxref(":disabled")}}
+- La pseudo-classe {{CSSxRef(":disabled")}}

@@ -3,7 +3,7 @@ title: Шаблоны
 slug: Web/SVG/Tutorials/SVG_from_scratch/Patterns
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
+{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Gradients", "Web/SVG/Tutorials/SVG_from_scratch/Texts") }}
 
 ## Шаблоны (Patterns)
 
@@ -80,4 +80,4 @@ Patterns, по моему мнению, одни из самых запутан�
 
 ![](svg_pattern_comparison_of_units.png)
 
-{{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Gradients", "Web/SVG/Tutorials/SVG_from_scratch/Texts") }}

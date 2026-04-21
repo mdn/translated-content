@@ -1,10 +1,9 @@
 ---
-title: "Attribut HTML : readonly"
+title: "Attribut HTML : `readonly`"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
-original_slug: Web/HTML/Attributes/readonly
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur·ice ne peut pas modifier le contrôle.
@@ -79,7 +78,7 @@ Comme un champ en lecture seule ne peut pas voir sa valeur modifiée par une int
 La seule façon de modifier dynamiquement la valeur de l'attribut readonly est via un script.
 
 > [!NOTE]
-> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est spécifié.
+> L'attribut `required` n'est pas autorisé sur les entrées pour lesquelles l'attribut `readonly` est défini.
 
 ### Utilisabilité
 
@@ -89,40 +88,36 @@ Les navigateurs affichent l'attribut `readonly`.
 
 Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être mise à jour par l'utilisateur·ice et ne participe pas à la validation des contraintes.
 
-## Exemple
+## Exemples
 
 ### HTML
 
 ```html
 <div class="group">
-  <input type="text" value="Une valeur" readonly="readonly" id="text" />
+  <input type="text" value="Une valeur" readonly id="text" />
   <label for="text">Zone de texte</label>
 </div>
 <div class="group">
-  <input type="date" value="2020-01-01" readonly="readonly" id="date" />
+  <input type="date" value="2020-01-01" readonly id="date" />
   <label for="date">Date</label>
 </div>
 <div class="group">
-  <input
-    type="email"
-    value="exemple@domaine.fr"
-    readonly="readonly"
-    id="email" />
+  <input type="email" value="exemple@domaine.fr" readonly id="email" />
   <label for="email">Courriel</label>
 </div>
 <div class="group">
-  <input type="password" value="MotDePasse123" readonly="readonly" id="pwd" />
+  <input type="password" value="MotDePasse123" readonly id="pwd" />
   <label for="pwd">Mot de passe</label>
 </div>
 <div class="group">
-  <textarea readonly="readonly" id="ta">Un message</textarea>
+  <textarea readonly id="ta">Un message</textarea>
   <label for="ta">Message</label>
 </div>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample('Exemple')}}
+{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -134,6 +129,6 @@ Si l'élément est en lecture seule, la valeur de l'élément ne peut pas être 
 
 ## Voir aussi
 
-- Les pseudo-classses {{CSSxRef(':read-only')}} et {{CSSxRef(':read-write')}}
-- L'élément {{HTMLElement('input')}}
-- L'élément {{HTMLElement('select')}}
+- Les pseudo-classses CSS {{CSSxRef(":read-only")}} et {{CSSxRef(":read-write")}}
+- L'élément {{HTMLElement("input")}}
+- L'élément {{HTMLElement("select")}}

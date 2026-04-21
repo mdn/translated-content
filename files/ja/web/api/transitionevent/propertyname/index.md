@@ -3,7 +3,7 @@ title: "TransitionEvent: propertyName プロパティ"
 short-title: propertyName
 slug: Web/API/TransitionEvent/propertyName
 l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{ apiref("CSSOM") }}

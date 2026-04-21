@@ -2,7 +2,7 @@
 title: "<colgroup> : l'élément regroupant des colonnes"
 slug: Web/HTML/Reference/Elements/colgroup
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<colgroup>`** définit un groupe de colonnes au sein d'un tableau.
@@ -217,7 +217,7 @@ table {
 
 #### Résultat
 
-{{EmbedLiveSample('Exemples', 650, 170)}}
+{{EmbedLiveSample("Exemples", 650, 170)}}
 
 ## Résumé technique
 

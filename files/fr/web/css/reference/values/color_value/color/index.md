@@ -1,12 +1,11 @@
 ---
 title: color()
 slug: Web/CSS/Reference/Values/color_value/color
-original_slug: Web/CSS/color_value/color
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`color()`** permet de définir une couleur dans un {{Glossary("color space", "espace colorimétrique")}} particulier, au lieu de l'espace colorimétrique sRGB implicite utilisé par la plupart des autres fonctions de couleur.
 
 Vous pouvez détecter la prise en charge d'un espace colorimétrique particulier avec la fonctionnalité média CSS [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut).
 
@@ -24,7 +23,7 @@ color(from #123456 xyz calc(x + 0.75) y calc(z - 0.35))
 
 ### Valeurs
 
-Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors).
+Vous trouverez ci-dessous la description des valeurs autorisées pour les couleurs absolues et [relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors).
 
 #### Syntaxe de valeur absolue
 
@@ -35,13 +34,13 @@ color(colorspace c1 c2 c3[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `colorspace`
-  - : Un {{CSSXref("&lt;ident&gt;")}} indiquant un des espaces colorimétriques prédéfinis&nbsp;: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50` ou `xyz-d65`.
+  - : Un {{CSSxRef("&lt;ident&gt;")}} indiquant un des espaces colorimétriques prédéfinis&nbsp;: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50` ou `xyz-d65`.
 
 - `c1`, `c2`, `c3`
-  - : Chaque valeur peut être écrite comme un nombre ({{CSSXref("number")}}), un pourcentage ({{CSSXref("percentage")}}), ou le mot-clé `none` (équivalent à `0` dans ce cas). Ces valeurs représentent les composantes pour l'espace colorimétrique. Avec une valeur `<number>`, généralement, `0` à `1` représente les bornes de l'espace colorimétrique. Les valeurs hors de cette plage sont autorisées mais seront hors du {{Glossary("gamut")}} de l'espace colorimétrique donné. Avec une valeur en pourcentage, `100%` représente `1` et `0%` représente `0`.
+  - : Chaque valeur peut être écrite comme un nombre ({{CSSxRef("number")}}), un pourcentage ({{CSSxRef("percentage")}}), ou le mot-clé `none` (équivalent à `0` dans ce cas). Ces valeurs représentent les composantes pour l'espace colorimétrique. Avec une valeur `<number>`, généralement, `0` à `1` représente les bornes de l'espace colorimétrique. Les valeurs hors de cette plage sont autorisées mais seront hors du {{Glossary("gamut")}} de l'espace colorimétrique donné. Avec une valeur en pourcentage, `100%` représente `1` et `0%` représente `0`.
 
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). Le mot-clé `none` peut aussi être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle vaut par défaut 100%. Si elle est présente, elle est précédée d'un slash (`/`).
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). Le mot-clé `none` peut aussi être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle vaut par défaut 100%. Si elle est présente, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
 > Voir les [Composantes de couleur manquantes](#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
@@ -55,13 +54,13 @@ color(from <color> colorspace c1 c2 c3[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot-clé `from` est toujours présent lors de la définition d'une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la **couleur d'origine**. Il s'agit de la couleur de base sur laquelle la couleur relative est fondée. La couleur d'origine peut être n'importe quelle syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot-clé `from` est toujours présent lors de la définition d'une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la **couleur d'origine**. Il s'agit de la couleur de base sur laquelle la couleur relative est fondée. La couleur d'origine peut être n'importe quelle syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `colorspace`
-  - : Un {{CSSXref("&lt;ident&gt;")}} indiquant l'{{Glossary("color space", "espace colorimétrique")}} de la couleur de sortie, généralement un des espaces prédéfinis&nbsp;: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50` ou `xyz-d65`.
+  - : Un {{CSSxRef("&lt;ident&gt;")}} indiquant l'{{Glossary("color space", "espace colorimétrique")}} de la couleur de sortie, généralement un des espaces prédéfinis&nbsp;: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50` ou `xyz-d65`.
 - `c1`, `c2`, `c3`
-  - : Chaque valeur peut être écrite comme un nombre ({{CSSXref("number")}}), un pourcentage ({{CSSXref("percentage")}}), ou le mot-clé `none` (équivalent à `0` dans ce cas). Ces valeurs représentent les composantes de la couleur de sortie. Avec une valeur `<number>`, généralement `0` à `1` représente les bornes de l'espace colorimétrique. Les valeurs hors de cette plage sont autorisées mais seront hors du {{Glossary("gamut")}} de l'espace colorimétrique donné. Avec une valeur en pourcentage, `100%` représente `1` et `0%` représente `0`.
-- `A` {{optional_inline}}
-  - : Un {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). Le mot-clé `none` peut aussi être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend la valeur du canal alpha de la couleur d'origine. Si elle est présente, elle est précédée d'un slash (`/`).
+  - : Chaque valeur peut être écrite comme un nombre ({{CSSxRef("number")}}), un pourcentage ({{CSSxRef("percentage")}}), ou le mot-clé `none` (équivalent à `0` dans ce cas). Ces valeurs représentent les composantes de la couleur de sortie. Avec une valeur `<number>`, généralement `0` à `1` représente les bornes de l'espace colorimétrique. Les valeurs hors de cette plage sont autorisées mais seront hors du {{Glossary("gamut")}} de l'espace colorimétrique donné. Avec une valeur en pourcentage, `100%` représente `1` et `0%` représente `0`.
+- `A` {{Optional_Inline}}
+  - : Un {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (totalement transparent) et `1` à `100%` (totalement opaque). Le mot-clé `none` peut aussi être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend la valeur du canal alpha de la couleur d'origine. Si elle est présente, elle est précédée d'un slash (`/`).
 
 #### Définir les composantes de sortie d'une couleur relative
 
@@ -113,11 +112,11 @@ color(from hsl(0 100% 50%) xyz x y 0.5)
 ```
 
 > [!NOTE]
-> Si le modèle de couleur de sortie diffère de celui de la couleur d'origine, la couleur d'origine est convertie en interne pour correspondre au modèle de sortie (mêmes canaux). Par exemple, la couleur {{cssxref("color_value/hsl", "hsl()")}} `hsl(0 100% 50%)` est convertie en `color(srgb 1 0 0)` dans le premier cas et `color(xyz 0.412426 0.212648 0.5)` dans le second.
+> Si le modèle de couleur de sortie diffère de celui de la couleur d'origine, la couleur d'origine est convertie en interne pour correspondre au modèle de sortie (mêmes canaux). Par exemple, la couleur {{CSSxRef("color_value/hsl", "hsl()")}} `hsl(0 100% 50%)` est convertie en `color(srgb 1 0 0)` dans le premier cas et `color(xyz 0.412426 0.212648 0.5)` dans le second.
 
-Dans les exemples que nous avons vus jusqu'à présent dans cette section, les canaux alpha n'ont pas été explicitement spécifiés pour les couleurs d'origine ou de sortie. Lorsque le canal alpha de la couleur de sortie n'est pas spécifié, il prend la même valeur que le canal alpha de la couleur d'origine. Lorsque le canal alpha de la couleur d'origine n'est pas spécifié (et qu'il ne s'agit pas d'une couleur relative), il prend la valeur `1`. Par conséquent, les valeurs du canal alpha d'origine et de sortie sont `1` pour les exemples ci-dessus.
+Dans les exemples que nous avons vus jusqu'à présent dans cette section, les canaux alpha n'ont pas été explicitement définis pour les couleurs d'origine ou de sortie. Lorsque le canal alpha de la couleur de sortie n'est pas défini, il prend la même valeur que le canal alpha de la couleur d'origine. Lorsque le canal alpha de la couleur d'origine n'est pas défini (et qu'il ne s'agit pas d'une couleur relative), il prend la valeur `1`. Par conséquent, les valeurs du canal alpha d'origine et de sortie sont `1` pour les exemples ci-dessus.
 
-Voyons quelques exemples qui spécifient les valeurs du canal alpha d'origine et de sortie. Le premier spécifie que la valeur du canal alpha de sortie est la même que la valeur du canal alpha d'origine, tandis que le second spécifie une valeur différente du canal alpha de sortie, sans rapport avec la valeur du canal alpha d'origine.
+Voyons quelques exemples qui définissent les valeurs du canal alpha d'origine et de sortie. Le premier définit que la valeur du canal alpha de sortie est la même que la valeur du canal alpha d'origine, tandis que le second définit une valeur différente du canal alpha de sortie, sans rapport avec la valeur du canal alpha d'origine.
 
 ```css
 color(from hsl(0 100% 50% / 0.8) srgb r g b / alpha)
@@ -127,7 +126,7 @@ color(from hsl(0 100% 50% / 0.8) xyz x y z / 0.5)
 /* Couleur calculée : color(xyz-d65 0.412426 0.212648 0.0193173 / 0.5) */
 ```
 
-Les exemples suivants utilisent les fonctions {{cssxref("calc")}} pour calculer de nouvelles valeurs de canal pour les couleurs de sortie qui sont relatives aux valeurs de canal de couleur d'origine.
+Les exemples suivants utilisent les fonctions {{CSSxRef("calc")}} pour calculer de nouvelles valeurs de canal pour les couleurs de sortie qui sont relatives aux valeurs de canal de couleur d'origine.
 
 ```css
 color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6) / calc(alpha - 0.1))
@@ -293,9 +292,9 @@ div {
 
 ### Utiliser les couleurs relatives avec `color()`
 
-Cet exemple applique trois couleurs de fond différentes à des éléments {{htmlelement("div")}}. Celui du milieu utilise la couleur `--base-color` telle quelle, tandis que les deux autres utilisent des variantes éclaircies et assombries de cette couleur, définies avec des couleurs relatives.
+Cet exemple applique trois couleurs de fond différentes à des éléments {{HTMLElement("div")}}. Celui du milieu utilise la couleur `--base-color` telle quelle, tandis que les deux autres utilisent des variantes éclaircies et assombries de cette couleur, définies avec des couleurs relatives.
 
-Les variantes sont définies en passant la propriété personnalisée [--base-color](/fr/docs/Web/CSS/Reference/Properties/--*) à la fonction `color()`, puis en modifiant les canaux `g` et `b` via `calc()`. La couleur éclaircie ajoute 15% à ces canaux, la couleur assombrie en retire 15%.
+Les variantes sont définies en passant la propriété personnalisée [--base-color](/fr/docs/Web/CSS/Reference/Properties/--*) à la fonction `color()`, puis en modifiant les canaux `g` et `b` avec `calc()`. La couleur éclaircie ajoute 15% à ces canaux, la couleur assombrie en retire 15%.
 
 ```html hidden
 <div id="container">
@@ -375,10 +374,10 @@ Le résultat est le suivant&nbsp;:
 
 ## Voir aussi
 
-- La propriété {{CSSXref("color")}}
+- La propriété {{CSSxRef("color")}}
 - [Le type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour la liste de toutes les notations de couleur
-- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/CSS_colors/Relative_colors)
+- [Utiliser les couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - [Outil de conversion de format de couleur](/fr/docs/Web/CSS/Guides/Colors/Color_format_converter)
-- [Module des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
+- Le module [des couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - Fonctionnalité média [`color-gamut`](/fr/docs/Web/CSS/Reference/At-rules/@media/color-gamut)
 - [Large gamme de couleurs en CSS avec Display-p3 <sup>(angl.)</sup>](https://webkit.org/blog/10042/wide-gamut-color-in-css-with-display-p3/)

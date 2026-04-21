@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}
 
 Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordures en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web a tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le français) que celles qui se lisent de droite à gauche (comme l'arabe).
 
@@ -17,16 +17,16 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
       <td>
         Notions informatiques de base,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >avoir installé les logiciels de base</a
         >, notions élémentaires sur
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >la manipulation des fichiers</a
         >, notions élémentaires sur HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >l'introduction à HTML</a
         >), et une idée du fonctionnement de CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">les premiers pas en CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">les premiers pas en CSS</a>.)
       </td>
     </tr>
     <tr>
@@ -133,7 +133,7 @@ Les propriétés logiques et les valeurs correspondantes sont plus récentes que
 
 ## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks).
+Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 ## Résumé
 
@@ -141,4 +141,4 @@ Les concepts expliqués ici revêtent une importance croissante en CSS. Comprend
 
 Dans le prochain module, nous verrons comment les dépassements sont gérés en CSS.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics")}}

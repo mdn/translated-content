@@ -3,7 +3,7 @@ title: "ARIA : rôle scrollbar"
 short-title: scrollbar
 slug: Web/Accessibility/ARIA/Reference/Roles/scrollbar_role
 l10n:
-  sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 Le rôle `scrollbar` est un objet graphique qui contrôle le défilement du contenu à l'intérieur d'une zone d'affichage.
@@ -24,7 +24,7 @@ Si vous ne voyez pas de barre de défilement actuellement, c'est peut‑être pa
 
 ### Rôle ARIA `scrollbar`
 
-Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSXref('overflow')}} pour garantir l'apparition des barres de défilement natives. Une [spécification CSS pour les barres de défilement <sup>(angl.)</sup>](https://drafts.csswg.org/css-scrollbars/) est en cours d'élaboration. Certains navigateurs autorisent [le style des barres via des pseudo-éléments préfixés](/fr/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar).
+Il est toujours préférable d'utiliser les barres de défilement natives. Vous pouvez utiliser la propriété CSS {{CSSxRef('overflow')}} pour garantir l'apparition des barres de défilement natives. Une [spécification CSS pour les barres de défilement <sup>(angl.)</sup>](https://drafts.csswg.org/css-scrollbars/) est en cours d'élaboration. Certains navigateurs autorisent [le style des barres avec des pseudo-éléments préfixés](/fr/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar).
 
 Comme le style des barres natives a historiquement été limité, vous pouvez rencontrer des barres de défilement implémentées en JavaScript que vous devez prendre en charge et rendre totalement accessibles. Pour cela, vous pouvez utiliser le rôle `scrollbar` afin d'indiquer aux technologies d'assistance qu'un contrôle d'interface utilisateur est une barre de défilement interactive.
 
@@ -34,7 +34,7 @@ L'élément `scrollbar` a deux attributs requis&nbsp;: [`aria-controls`](/fr/doc
 
 Alors que `aria-valuenow` est toujours requis, les propriétés [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) n'ont besoin d'être définies pour le rôle `scrollbar` que lorsque la valeur minimale du `scrollbar` n'est pas 0 ou que la valeur maximale n'est pas 100. La valeur de `aria-valuenow` doit toujours être comprise entre les valeurs minimale et maximale incluses, ou entre `0` et `100` inclus si les valeurs minimale et maximale par défaut sont `0` et `100` respectivement. `aria-valuenow` indique la proximité de la zone d'affichage par rapport au bas du document. Pensez‑y comme à une barre de progression, où le début du document est la valeur minimale et la fin du document la valeur maximale.
 
-Une `scrollbar` représente la valeur courante et l'éventail des valeurs possibles via la taille de la barre et la position du pouce par rapport à la plage visible de l'orientation (horizontale ou verticale) qu'elle contrôle. Autrement dit, la longueur de la `scrollbar` (hauteur ou largeur) représente l'ensemble du contenu d'une zone d'affichage. La valeur `aria-valuemin` représente le début du contenu et de la barre, la valeur `aria-valuemax` représente la fin du contenu et de la barre. `aria-valuenow` représente le contenu actuellement visible dans la zone d'affichage et la position courante, ou valeur, du pouce mobile. La valeur `aria-valuenow` sera généralement exposée comme un pourcentage entre `aria-valuemin` et `aria-valuemax` calculé par les technologies d'assistance.
+Une `scrollbar` représente la valeur courante et l'éventail des valeurs possibles avec la taille de la barre et la position du pouce par rapport à la plage visible de l'orientation (horizontale ou verticale) qu'elle contrôle. Autrement dit, la longueur de la `scrollbar` (hauteur ou largeur) représente l'ensemble du contenu d'une zone d'affichage. La valeur `aria-valuemin` représente le début du contenu et de la barre, la valeur `aria-valuemax` représente la fin du contenu et de la barre. `aria-valuenow` représente le contenu actuellement visible dans la zone d'affichage et la position courante, ou valeur, du pouce mobile. La valeur `aria-valuenow` sera généralement exposée comme un pourcentage entre `aria-valuemin` et `aria-valuemax` calculé par les technologies d'assistance.
 
 > [!NOTE]
 > Les technologies d'assistance rendent généralement la valeur de `aria-valuenow` comme un pourcentage de la plage entre `aria-valuemin` et `aria-valuemax`, sauf si [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) est défini. Il est recommandé de définir `aria-valuemin`, `aria-valuemax` et `aria-valuenow` de manière appropriée pour ce calcul.
@@ -83,7 +83,7 @@ Du point de vue de la personne utilisant une technologie d'assistance, le titre 
 ### Propriétés, états et attributs WAI-ARIA associés
 
 - [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) (Requis)
-  - : Identifie la zone d'affichage, via son `id`, dont le contenu est contrôlé par la barre de défilement.
+  - : Identifie la zone d'affichage, avec son `id`, dont le contenu est contrôlé par la barre de défilement.
 - [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) (Requis)
   - : Doit être défini sur une valeur décimale comprise entre `0` (ou `aria-valuemin` si présent) et `aria-valuemax`, indiquant la valeur courante de la barre.
 - [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
@@ -170,4 +170,4 @@ Le CSS ci‑dessus force l'apparition d'une barre de défilement native lorsque 
   - [ARIA&nbsp;: rôle `separator`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) (si sélectionnable)
   - [ARIA&nbsp;: rôle `progressbar`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
   - [ARIA&nbsp;: rôle `spinbutton`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
-- [Événement `scroll` du Document](/fr/docs/Web/API/Document/scroll_event)
+- [L'évènement `scroll` du Document](/fr/docs/Web/API/Document/scroll_event)

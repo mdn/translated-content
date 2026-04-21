@@ -1,9 +1,12 @@
 ---
-title: CanvasRenderingContext2D.fillRect()
+title: "CanvasRenderingContext2D: fillRect() メソッド"
+short-title: fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 **`CanvasRenderingContext2D.fillRect()`** はキャンバス 2D API のメソッドで、塗りつぶした矩形を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} に基づいて描きます。
 
@@ -11,8 +14,8 @@ slug: Web/API/CanvasRenderingContext2D/fillRect
 
 ## 構文
 
-```js
-void ctx.fillRect(x, y, width, height);
+```js-nolint
+fillRect(x, y, width, height)
 ```
 
 `fillRect()` メソッドは塗りつぶした矩形を、 `(x, y)` を始点とし、 `width` と `height` でサイズを指定しで描画します。塗りつぶしのスタイルは、現在の `fillStyle` 属性によって決定されます。
@@ -27,6 +30,10 @@ void ctx.fillRect(x, y, width, height);
   - : 矩形の幅です。正の数であれば右方向、負の数であれば左方向です。
 - `height`
   - : 矩形の高さです。正の数であれば下方向、負の数であれば上方向です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

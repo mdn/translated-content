@@ -8,7 +8,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`::view-transition`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 모든 [뷰 전환](/ko/docs/Web/API/View_Transition_API) 스냅샷 그룹을 포함하고, 페이지의 모든 다른 콘텐츠 위에 위치하는 뷰 전환의 오버레이의 루트를 나타냅니다.
+**`::view-transition`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 모든 [뷰 전환](/ko/docs/Web/API/View_Transition_API) 스냅샷 그룹을 포함하고, 페이지의 모든 다른 콘텐츠 위에 위치하는 뷰 전환의 오버레이의 루트를 나타냅니다.
 
 뷰 전환이 이루어지는 동안, `::view-transition` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 트리의 최상위 레벨 노드이며 하나 또는 하나 이상의 {{cssxref("::view-transition-group")}} 를 자식 요소로 가집니다.
 

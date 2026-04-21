@@ -2,12 +2,10 @@
 title: 位置指定
 slug: Learn_web_development/Core/CSS_layout/Positioning
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}
 
 位置指定を使用すると、文書の通常のレイアウトフローから要素を取り出して異なるふるまいをさせることができます。 例えば、互いの上に重なったり、常にブラウザーのビューポート内の同じ場所に留まったりします。 この記事では、さまざまな {{cssxref("position")}} の値とその使い方について説明します。
 
@@ -112,7 +110,9 @@ left: 30px;
 <p>
   この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
   インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
-  <img src="long.jpg" alt="布切れ" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="布切れ" />
 </p>
 ```
 
@@ -181,7 +181,9 @@ position: absolute;
 <p>
   この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
   インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
-  <img src="long.jpg" alt="布切れ" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="布切れ" />
 </p>
 ```
 
@@ -258,7 +260,9 @@ position: relative;
 <p>
   この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
   インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
-  <img src="long.jpg" alt="布切れ" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="布切れ" />
 </p>
 ```
 
@@ -343,7 +347,9 @@ z-index: 1;
 <p>
   この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
   インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
-  <img src="long.jpg" alt="布切れ" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="布切れ" />
 </p>
 ```
 
@@ -446,7 +452,9 @@ p:nth-of-type(1) {
 <p>
   この<span>インライン要素</span>や<span>このインライン要素</span>は、同じ行に空間がある場合、隣接するテキストノードとともに同じ行に配置されます。
   インライン要素がオーバーフローすると、<span>可能な場合は（テキストを含むこの要素のように）新しい行に折り返されます</span>。そうでない場合は、この画像のように、新しい行にそのまま続きます。
-  <img src="long.jpg" alt="布切れ" />
+  <img
+    src="https://mdn.github.io/shared-assets/images/examples/long.jpg"
+    alt="布切れ" />
 </p>
 ```
 
@@ -625,17 +633,15 @@ body {
 > [!NOTE]
 > このライブ例は [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) にあります（[ソースコードを見る](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html)）。
 
-## スキルテスト
-
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position)を参照してください。
-
 ## まとめ
 
-私はあなたが基本的な位置指定と一緒に遊ぶことができて楽しかったと確信しています。 これは、レイアウト全体に使用する方法ではありませんが、ご覧のとおり、それが適しているタスクはたくさんあります。
+私はあなたが基本的な位置指定と一緒に遊ぶことができて楽しかったと確信しています。 これは、レイアウト全体に使用する方法ではありませんが、ご覧のとおり、これが適しているタスクはたくさんあります。
+
+次の記事では、これらの情報をどれだけ理解し、記憶できているかを調べるためのテストをいくつかご紹介します。
 
 ## 関連情報
 
 - {{cssxref("position")}} プロパティのリファレンス。
 - いくつかのより有用なアイデアのための[実用的な位置指定の例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)。
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Floats", "Learn_web_development/Core/CSS_layout/Test_your_skills/Position", "Learn_web_development/Core/CSS_layout")}}

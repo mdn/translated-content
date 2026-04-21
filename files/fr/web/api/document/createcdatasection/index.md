@@ -1,39 +1,51 @@
 ---
-title: Document.createCDATASection()
+title: "Document : méthode createCDATASection()"
+short-title: createCDATASection()
 slug: Web/API/Document/createCDATASection
+l10n:
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("DOM")}}
 
-`createCDATASection()` crée un nouveau noeud de section CDATA et le renvoie.
+La méthode **`createCDATASection()`** de l'interface {{DOMxRef("Document")}} crée un nouveau nœud de section CDATA et le retourne.
 
 ## Syntaxe
 
-```js
-CDATASectionNode = document.createCDATASection(data);
+```js-nolint
+createCDATASection(data)
 ```
 
-- `CDATASectionNode` est un noeud de [Section CDATA](/fr/docs/Web/API/CDATASection).
-- `data` est une string (_chaîne de caractères_) contenant les données à ajouter à la section CDATA.
+### Paramètres
 
-## Exemple
+- `data`
+  - : Une chaîne de caractères contenant les données à ajouter à la section CDATA.
+
+### Valeur de retour
+
+Un nœud de [Section CDATA](/fr/docs/Web/API/CDATASection).
+
+## Exemples
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-
-var cdata = docu.createCDATASection("Some <CDATA> data & then some");
-
-docu.getElementsByTagName("xml")[0].appendChild(cdata);
-
-alert(new XMLSerializer().serializeToString(docu));
-// Affiche : <xml><![CDATA[Some <CDATA> data & then some]]></xml>
+const doc = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const cdata = doc.createCDATASection(
+  "Quelques données <CDATA>, et bien d'autres",
+);
+doc.querySelector("xml").appendChild(cdata);
+console.log(new XMLSerializer().serializeToString(doc));
+// Affiche : <xml><![CDATA[Quelques données <CDATA>, et bien d'autres]]></xml>
 ```
 
 ## Notes
 
-- Cela fonctionnera uniquement avec XML, pas avec les documents HTML (car les documents HTML ne supportent pas les sections CDATA) ; le tenter sur un document HTML va lancer une exception `NOT_SUPPORTED_ERR`.
-- Va lancer une exception `NS_ERROR_DOM_INVALID_CHARACTER_ERR` si on essaye de soumettre la séquence CDATA de fermeture ("]]>") en tant que partie des données ; les données fournies par l'utilisateur non échappées, ne peuvent pas être utilisées en toute sécurité sans qu'avec cette méthode on obtienne cette exception ([`createTextNode()`](/fr/docs/Web/API/Document/createTextNode) peut souvent être utilisé à sa place).
+- Cela fonctionne uniquement avec les documents XML, pas avec les documents HTML (les documents HTML ne prennent pas en charge les sections CDATA)&nbsp;; tenter cette opération sur un document HTML produira une erreur `NOT_SUPPORTED_ERR`.
+- Une exception `NS_ERROR_DOM_INVALID_CHARACTER_ERR` sera levée si vous essayez de soumettre la séquence de fermeture CDATA (`]]>`) dans les données&nbsp;; il n'est donc pas possible d'utiliser des données fournies par l'utilisateur·ice sans échappement, sans quoi cette méthode produira cette exception ({{DOMxRef("document.createTextNode", "createTextNode()")}} peut souvent être utilisée à la place).
 
-## Spécification
+## Spécifications
 
-- [createCDATASection](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createCDATASection)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

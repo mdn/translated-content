@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 {{LearnSidebar}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.
 
@@ -15,16 +15,7 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
     <tr>
       <th scope="row">Prérequis:</th>
       <td>
-        Notions de bases de JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas</a>,
-        <a href="/fr/Apprendre/JavaScript/Building_blocks"
-          >les briques JavaScript</a
-        >,
-        <a href="/fr/docs/Learn/JavaScript/Objects">les objets JavaScript</a>),
-        les
-        <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
-          >notions de base des APIs côté client</a
-        >
+        Connaissances de base en <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>, en particulier <a href="/fr/docs/Learn_web_development/Core/Scripting/Object_basics">les bases des objets JavaScript</a> et la couverture des API de base telles que <a href="/fr/docs/Learn_web_development/Core/Scripting/DOM_scripting">le scripting DOM</a> et <a href="/fr/docs/Learn_web_development/Core/Scripting/Network_requests">les requêtes réseau</a>.
       </td>
     </tr>
     <tr>
@@ -803,4 +794,4 @@ C'est tout pour l'instant. Nous espérons que vous avez trouvé notre récapitul
 - [Cookies](/fr/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/fr/docs/Web/API/Service_Worker_API)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

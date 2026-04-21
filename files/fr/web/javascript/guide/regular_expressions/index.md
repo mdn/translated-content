@@ -3,7 +3,7 @@ title: Expressions rationnelles
 slug: Web/JavaScript/Guide/Regular_expressions
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}
+{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.replaceAll", "replaceAll")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « _RegExp_ »).
 
@@ -976,4 +976,4 @@ L'événement `Change`, provoqué quand l'utilisateur appuie sur Entrée, rensei
 </html>
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}
+{{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Indexed_collections")}}

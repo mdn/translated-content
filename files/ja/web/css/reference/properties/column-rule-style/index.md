@@ -1,9 +1,8 @@
 ---
 title: column-rule-style
 slug: Web/CSS/Reference/Properties/column-rule-style
-original_slug: Web/CSS/column-rule-style
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線（段間罫）のスタイルを設定します。
@@ -28,7 +27,7 @@ column-rule-style: double;
 
 ```css interactive-example-choice
 column-rule-style: ridge;
-column-rule-color: #88f;
+column-rule-color: #8888ff;
 ```
 
 ```html-nolint interactive-example

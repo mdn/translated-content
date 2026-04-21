@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/SVG_and_CSS
 
 {{SVGRef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG") }}
 
 Cette page illustre l'application de CSS sur des documents [SVG](/fr/docs/Web/SVG), le langage spécialisé dans la création d'éléments graphiques vectoriels.
 
@@ -393,7 +393,7 @@ Notes sur cette démonstration :
 > [!NOTE]
 > Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.<!--</p-->
 
-[Voir une solution à ce défi.](/fr/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css)
+[Voir une solution à ce défi.](/fr/docs/Learn_web_development/Core#svg_and_css)
 
 ## Structure simplifiée
 

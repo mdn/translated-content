@@ -33,7 +33,7 @@ Le `Referer` doit également être envoyé dans les requêtes suivant une répon
       <td>{{Glossary("Request header", "En-tête de requête")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "Nom d'en-tête interdit")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "En-tête de requête interdit")}}</th>
       <td>Oui</td>
     </tr>
   </tbody>

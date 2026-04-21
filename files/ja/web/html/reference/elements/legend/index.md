@@ -53,7 +53,7 @@ input {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -62,11 +62,11 @@ input {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
         および
-        <a href="/ja/docs/Web/HTML/Element/Heading_Elements">見出し</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/Heading_Elements">見出し</a>
         （h1–h6 要素）
       </td>
     </tr>

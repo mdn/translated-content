@@ -1,13 +1,14 @@
 ---
-title: Document.createExpression()
+title: "Document : méthode createExpression()"
+short-title: createExpression()
 slug: Web/API/Document/createExpression
 l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Cette méthode compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
+La méthode **`createExpression()`** de l'interface {{DOMxRef("Document")}} compile une expression {{DOMxRef("XPathExpression")}} qui peut ensuite être utilisée pour des évaluations (répétées).
 
 Cette méthode doit être appelée sur le même document que celui sur lequel on exécutera l'expression.
 
@@ -26,17 +27,21 @@ createExpression(xpathText, namespaceURLMapper)
 
 ### Valeur de retour
 
-[`XPathExpression`](/fr/docs/Web/API/XPathExpression)
+Un objet {{DOMxRef("XPathExpression")}}.
 
 ## Exemples
 
 ```js
 const xpathExpr = document.createExpression("//div");
-const xpathResult = xpathExpr.evaluate(document); // renvoie un objet XPathResult
+const xpathResult = xpathExpr.evaluate(document); // retourne un objet XPathResult
 const nodeContext = document.querySelector("nav");
 // Réutilise l'expression XPathExpression "xpathExpr"
-const otherResult = xpathExpr.evaluate(nodeContext); // renvoie un objet XPathResult
+const otherResult = xpathExpr.evaluate(nodeContext); // retourne un objet XPathResult
 ```
+
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
@@ -44,5 +49,5 @@ const otherResult = xpathExpr.evaluate(nodeContext); // renvoie un objet XPathRe
 
 ## Voir aussi
 
-- [`Document.evaluate()`](/fr/docs/Web/API/Document/evaluate)
-- [`XPathExpression`](/fr/docs/Web/API/XPathExpression)
+- La méthode {{DOMxRef("Document.evaluate()")}}
+- L'interface {{DOMxRef("XPathExpression")}}

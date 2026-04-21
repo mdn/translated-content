@@ -1,9 +1,9 @@
 ---
 title: CSS トランジションの使用
+short-title: トランジションの使用
 slug: Web/CSS/Guides/Transitions/Using
-original_slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS トランジション**は、 CSS プロパティが変化する際のアニメーションの速度を操作する手段を提供します。プロパティの変更を直ちに有効にするのではなく、プロパティの変更を一定期間にわたって発生させることを可能にします。例えば、ある要素の前景色を白色から黒色に変更した場合、通常は即座に前景色が替わります。 CSS トランジションを有効にすると、加速カーブに従った時間間隔で変更が行われ、その変化のすべてをカスタマイズすることができます。
@@ -12,7 +12,7 @@ l10n:
 
 ![CSS トランジションは、初期状態と最終状態の間にある中間状態を描画することで、ユーザーにスムーズな遷移を見せるものです。](transitionsprinciple.png)
 
-CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/Reference/Properties/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/Reference/Properties/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/Reference/Properties/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/Reference/Properties/transition-duration)を定義することで）を決めることができます。
+CSS トランジションでは、どのプロパティをアニメーションさせるか（[_明示的に列挙する_](/ja/docs/Web/CSS/Reference/Properties/transition-property)ことで）、いつアニメーションを始めるか（[_delay_](/ja/docs/Web/CSS/Reference/Properties/transition-delay) を設定することで）、どれくらいの時間でトランジションさせるか（[_duration_](/ja/docs/Web/CSS/Reference/Properties/transition-duration) を設定することで）、どのようにトランジションさせるか、例えば、直線的に実行するか、始めはすばやく、終わりはゆっくりと実行するか（[_イージング関数_](/ja/docs/Web/CSS/Reference/Properties/transition-timing-function)を定義することで）を決めることができます。
 
 ## どの CSS プロパティがトランジション可能か
 
@@ -32,16 +32,14 @@ CSS トランジションは一括指定の {{cssxref("transition")}} プロパ�
 - {{cssxref("transition-duration")}}
   - : トランジションの実行にかかる再生時間を指定します。単一の値を指定すると、すべてのプロパティのトランジションの再生時間として適用されます。または複数の値を指定すると、プロパティごとにトランジションの再生時間として異なる値を指定することができます。
 - {{cssxref("transition-timing-function")}}
-  - : プロパティの中間の値を計算する方法を定義する関数を指定します。*イージング関数*はトランジションの中間の値がどのように計算されるかを定義します。多くの[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)は対応する関数のグラフを提供することで指定され、これは三次ベジェ関数を定義する 4 つの点で定義されます。 [Easing functions cheat sheet](https://easings.net/) からイージングを選択することもできます。
+  - : プロパティの中間の値を計算する方法を定義する関数を指定します。イージング関数はトランジションの中間の値がどのように計算されるかを定義します。多くの[イージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function)は、4 つの点で定義される三次ベジエ曲線に対応する関数のグラフを指定することで設定できます。 [Easing functions cheat sheet](https://easings.net/) からイージングを選択することもできます。
 - {{cssxref("transition-delay")}}
   - : プロパティが変化した時点から、トランジションが実際に始まるまでの待ち時間を定義します。
 
 `transition` の一括指定 CSS の構文は以下のように書きます。
 
-```css
-div {
-  transition: <property> <duration> <timing-function> <delay>;
-}
+```plain
+transition: <property> <duration> <timing-function> <delay>;
 ```
 
 ## 例
@@ -83,7 +81,7 @@ div {
   display: block;
   width: 100px;
   height: 100px;
-  background-color: #0000ff;
+  background-color: blue;
   transition:
     width 2s,
     height 2s,
@@ -164,8 +162,8 @@ nav {
 
 a {
   flex: 1;
-  background-color: #333;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   border: 1px solid;
   padding: 0.5rem;
   text-align: center;
@@ -175,8 +173,8 @@ a {
 
 a:hover,
 a:focus {
-  background-color: #fff;
-  color: #333;
+  background-color: white;
+  color: #333333;
 }
 ```
 
@@ -186,20 +184,20 @@ a:focus {
 
 ### display と content-visibility のトランジション
 
-この例では、 [`display`](/ja/docs/Web/CSS/Reference/Properties/display) と [`content-visibility`](/ja/docs/Web/CSS/Reference/Properties/content-visibility) がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、[`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity) でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
+この例では、{{cssxref("display")}} と {{cssxref("content-visibility")}} がどのように遷移するかを示します。この動作は、例えば `display: none` でコンテナーを DOM から除去するものの、すぐに消えるのではなく、{{cssxref("opacity")}} でフェードアウトさせるような出現・消滅アニメーションを作成する場合に便利です。
 
 対応しているブラウザーは、 `display` と `content-visibility` を[離散アニメーション値](/ja/docs/Web/CSS/Guides/Animations/Animatable_properties#離散)の一種としてトランジションさせます。これは一般的に、プロパティが 2 つの値の間をアニメーションの 50% で切り替えるという意味になります。
 
-ただし例外があり、それは `display: none` または `content-visibility: hidden` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
+ただし、例外は `display: none` または `content-visibility: hidden` との間でアニメーションする場合です。この場合、ブラウザーはアニメーションの間中、トランジションしたコンテンツが表示されるように、 2 つの値を切り替えます。
 
 従って、例えば次のようになります。
 
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせるときは、値が `block` に切り替わるのはアニメーションの `0%` であり、期間中ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせるときは、値は `none` に切り替わるのはアニメーションの `100%` です。
 
-これらのプロパティをトランジションさせる場合は、 [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
+これらのプロパティをトランジションさせる場合は、[`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/Reference/Properties/transition-behavior) をトランジションに設定する必要があります。これにより、効果的に `display`/`content-visibility` トランジションを行うことができます。
 
-`display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために [`@starting-style`](/ja/docs/Web/CSS/Reference/At-rules/@starting-style) が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
+`display` をトランジションさせる場合、その要素が最初のスタイル更新を受けたときに、そのプロパティからトランジションさせるために要素に設定するプロパティ群の開始値を提供するために {{cssxref("@starting-style")}} が必要です。これは予期しない動作を避けるために必要です。既定では、CSS のトランジションは、要素が最初に DOM に現れたとき、つまり `display` が `none` から他の状態に変わったときを含め、要素の最初のスタイル更新では発生しません。 `content-visibility` のアニメーションは `@starting-style` ブロックで開始値を指定する必要はありません。これは `content-visibility` が `display` のように DOM から要素を隠すのではなく、要素のコンテンツのレンダリングをスキップするだけだからです。
 
 #### HTML
 
@@ -215,7 +213,7 @@ HTML は 2 つの {{htmlelement("p")}} 要素を持っており、その間に {
 </div>
 
 <p>
-  これは、上記の <code>&lt;div&gt;</code> に <code>display: none; </code> が適用され、除去されていることを示すための別の段落です。 <code>opacity</code> が変更されるだけなら、常に DOM に空間が取られるでしょう。
+  これは、上記の <code>display: none;</code> が <code>&lt;div&gt;</code> に適用され、除去されていることを示すための別の段落です。<code>opacity</code> が変更されるだけなら、常に DOM に空間が取られるでしょう。
 </p>
 ```
 
@@ -285,39 +283,63 @@ function showHide() {
 > - `.appendChild()` を使用して DOM に要素を追加したとき
 > - 要素の `display: none;` プロパティを外したとき
 >
-> この場合、初期の状態が発生せず、要素が常に最後の状態であるかのように扱われます。この制限を解決する簡単な方法は、トランジションを行いたい CSS プロパティを変更する前に、数ミリ秒の `setTimeout()` を適用することです。
+> この場合、初期の状態が発生せず、要素が常に最後の状態であるかのように扱われます。この制限を解決するには、トランジションを行いたい CSS プロパティを変更する前に、数ミリ秒の `setTimeout()` を適用するのが一つの方法です。
 
 ### JavaScript の機能をスムーズにするためのトランジション
 
 トランジションは、 JavaScript による機能に対して何も行うことなしに、よりスムーズにさせることができる素晴らしいツールです。以下の例をご覧ください。
 
-```html
+```html live-sample___js-transitions
 <p>どこかをクリックするとボールを移動します</p>
 <div id="foo" class="ball"></div>
 ```
 
-JavaScript を使用して、ある場所にボールを移動させる効果を作ることができます。
-
-```js
+```js live-sample___js-transitions
+// 指定の位置までボールを移動する
 const f = document.getElementById("foo");
-document.addEventListener(
-  "click",
-  (ev) => {
-    f.style.transform = `translateY(${ev.clientY - 25}px)`;
-    f.style.transform += `translateX(${ev.clientX - 25}px)`;
-  },
-  false,
-);
+document.addEventListener("click", (ev) => {
+  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+});
 ```
 
-CSS により余分な努力をせずに、上記の効果をスムーズにさせることができます。単に要素へトランジションを追加すると、変化がスムーズに発生するようになります。
+CSS を使用すれば、JavaScript を通じて適用されるスタイルを滑らかに調整することが可能になります。単に要素へトランジションを追加すると、変化がスムーズに発生するようになります。
 
-```css
+```css hidden live-sample___js-transitions
+body {
+  background-color: white;
+  color: #333333;
+  font:
+    1.2em / 1.5 "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: 3em;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 660px;
+  height: 400px;
+  border: 1px solid #cccccc;
+  padding: 20px;
+}
+```
+
+```css live-sample___js-transitions
 .ball {
   border-radius: 25px;
   width: 50px;
   height: 50px;
-  background: #c00;
+  background: #cc0000;
   position: absolute;
   top: 0;
   left: 0;
@@ -325,7 +347,7 @@ CSS により余分な努力をせずに、上記の効果をスムーズにさ�
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
+{{EmbedLiveSample("js-transitions", "", "400px")}}
 
 ### トランジションの開始と完了の検出
 
@@ -339,18 +361,18 @@ CSS により余分な努力をせずに、上記の効果をスムーズにさ�
 通常は、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用してこのイベントを監視することができます。
 
 ```js
-el.addEventListener("transitionend", updateTransition, true);
+el.addEventListener("transitionend", updateTransition);
 ```
 
-トランジションの開始は {{domxref("Element/transitionrun_event", "transitionrun")}} (遅延の前に発行) および {{domxref("Element/transitionstart_event", "transitionstart")}} (遅延の後に発行) を使用して、同じ形で検出することができます。
+トランジションの開始は {{domxref("Element/transitionrun_event", "transitionrun")}} （待ち時間前に発行）および {{domxref("Element/transitionstart_event", "transitionstart")}} （待ち時間後に発行）を使用して、同じ形で検出することができます。
 
 ```js
-el.addEventListener("transitionrun", signalStart, true);
-el.addEventListener("transitionstart", signalStart, true);
+el.addEventListener("transitionrun", signalStart);
+el.addEventListener("transitionstart", signalStart);
 ```
 
 > [!NOTE]
-> `transitionend` イベントは、要素に {{cssxref("display")}}`: none` が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発行されません。
+> `transitionend` イベントは、要素に {{cssxref("display", "display: none")}} が適用されたりアニメーション中のプロパティの値が変更されたりして、トランジションが完了する前に中止された場合は発行されません。
 
 ## 仕様書
 
@@ -359,4 +381,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## 関連情報
 
 - {{domxref("TransitionEvent")}} インターフェイスと {{domxref("Element/transitionend_event", "transitionend")}} イベント
-- [CSS アニメーションの使い方](/ja/docs/Web/CSS/Guides/Animations/Using)
+- [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using)

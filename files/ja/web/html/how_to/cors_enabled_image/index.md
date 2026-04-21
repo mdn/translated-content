@@ -104,7 +104,7 @@ function imageReceived() {
 }
 ```
 
-`imageReceived()` は `HTMLImageElement` 上でダウンロードした画像を受け取ったことを表す `"load"` イベントを扱うために呼び出されます。このイベントは、ダウンロードしたデータがすべて利用可能になったら一度呼び出されます。新しい {{HTMLElement("canvas")}} 要素を作成することから始まり、画像をデータ URL に変換して、キャンバスの二次元描画コンテキスト ({{domxref("CanvasRenderingContext2D")}}) がある変数 `context` へのアクセスを取得します。
+`imageReceived()` は `HTMLImageElement` 上でダウンロードした画像を受け取ったことを表す `"load"` イベントを扱うために呼び出されます。このイベントは、ダウンロードしたデータがすべて利用可能になったら一度呼び出されます。新しい {{HTMLElement("canvas")}} 要素を作成することから始まり、画像を data URL に変換して、キャンバスの二次元描画コンテキスト ({{domxref("CanvasRenderingContext2D")}}) がある変数 `context` へのアクセスを取得します。
 
 キャンバスの寸法は受信した画像に合うよう調整され、それから {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} を使って画像をキャンバスに描画します。それからキャンバスが文書に挿入され、画像が見えるようになります。
 

@@ -1,14 +1,13 @@
 ---
 title: system
 slug: Web/CSS/Reference/At-rules/@counter-style/system
-original_slug: Web/CSS/@counter-style/system
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`system`** permet de spécifier l'algorithme à utiliser pour convertir la valeur entière d'un compteur en une représentation sous forme de chaîne de caractères. Il est utilisé dans une règle {{cssxref("@counter-style")}} pour définir le comportement du style défini.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`system`** permet de définir l'algorithme à utiliser pour convertir la valeur entière d'un compteur en une représentation sous forme de chaîne de caractères. Il est utilisé dans une règle {{CSSxRef("@counter-style")}} pour définir le comportement du style défini.
 
-Si l'algorithme spécifié dans le descripteur `system` ne peut pas construire la représentation pour une certaine valeur du compteur, alors la représentation de cette valeur sera construite en utilisant le système de repli fourni.
+Si l'algorithme défini dans le descripteur `system` ne peut pas construire la représentation pour une certaine valeur du compteur, alors la représentation de cette valeur sera construite en utilisant le système de repli fourni.
 
 ## Syntaxe
 
@@ -38,31 +37,31 @@ Ce descripteur peut prendre l'une des trois formes suivantes&nbsp;:
 Les valeurs incluent&nbsp;:
 
 - `cyclic`
-  - : Parcourt la liste des symboles fournie dans le descripteur [`symbols`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols). Une fois la fin de la liste atteinte, le cycle recommence au début. Cette valeur est utile aussi bien pour les styles de puces simples avec un seul symbole que pour les styles avec plusieurs symboles. Au moins un symbole doit être spécifié dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
+  - : Parcourt la liste des symboles fournie dans le descripteur [`symbols`](/fr/docs/Web/CSS/Reference/At-rules/@counter-style/symbols). Une fois la fin de la liste atteinte, le cycle recommence au début. Cette valeur est utile aussi bien pour les styles de puces simples avec un seul symbole que pour les styles avec plusieurs symboles. Au moins un symbole doit être défini dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
 
 - `numeric`
   - : Interprète les symboles du compteur comme des chiffres dans un système de numérotation à valeur de position (<i lang="en">place-value numbering system</i>). Le système numérique est similaire au système `alphabetic` décrit ci-dessus. La principale différence est que dans le système `alphabetic`, le premier symbole du compteur donné dans le descripteur `symbols` est interprété comme `1`, le suivant comme `2`, etc. Cependant, dans le système numérique, le premier symbole du compteur est interprété comme 0, le suivant comme `1`, puis `2`, etc.
 
-    Au moins deux symboles de compteur doivent être spécifiés dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
+    Au moins deux symboles de compteur doivent être définis dans le descripteur `symbols`, sinon le style de compteur n'est pas valide.
 
 - `alphabetic`
-  - : Interprète les symboles spécifiés comme des chiffres, dans un système de numérotation alphabétique. Si les caractères de `"a"` à `"z"` sont spécifiés comme symboles dans un style de compteur avec le système `alphabetic`, alors les 26 premières représentations du compteur seront `"a"`, `"b"` jusqu'à `"z"`. Jusqu'à ce point, le comportement est le même que celui du système `symbolic` décrit ci-dessus. Cependant, après `"z"`, cela continue avec `"aa"`, `"ab"`, `"ac"`, etc.
+  - : Interprète les symboles définis comme des chiffres, dans un système de numérotation alphabétique. Si les caractères de `"a"` à `"z"` sont définis comme symboles dans un style de compteur avec le système `alphabetic`, alors les 26 premières représentations du compteur seront `"a"`, `"b"` jusqu'à `"z"`. Jusqu'à ce point, le comportement est le même que celui du système `symbolic` décrit ci-dessus. Cependant, après `"z"`, cela continue avec `"aa"`, `"ab"`, `"ac"`, etc.
 
     Le descripteur `symbols` doit contenir au moins deux symboles, sinon le style de compteur n'est pas valide. Le premier symbole du compteur fourni dans le descripteur `symbols` est interprété comme `1`, le suivant comme `2`, etc. Ce système ne fonctionne que pour les valeurs positives du compteur.
 
 - `symbolic`
-  - : Parcourt la liste des symboles fournie dans le descripteur `symbols` de façon répétée, doublant, triplant, etc., les symboles à chaque passage dans la liste. Par exemple, si deux symboles «&nbsp;◽&nbsp;» et «&nbsp;◾&nbsp;» sont spécifiés dans le descripteur `symbols`, à chaque passage, ils deviendront «&nbsp;◽◽&nbsp;» et «&nbsp;◾◾&nbsp;», puis «&nbsp;◽◽◽&nbsp;» et «&nbsp;◾◾◾&nbsp;», et ainsi de suite. Au moins un symbole doit être spécifié dans le descripteur `symbols`, sinon le style de compteur n'est pas valide. Ce système de compteur fonctionne uniquement pour les valeurs positives du compteur.
+  - : Parcourt la liste des symboles fournie dans le descripteur `symbols` de façon répétée, doublant, triplant, etc., les symboles à chaque passage dans la liste. Par exemple, si deux symboles «&nbsp;◽&nbsp;» et «&nbsp;◾&nbsp;» sont définis dans le descripteur `symbols`, à chaque passage, ils deviendront «&nbsp;◽◽&nbsp;» et «&nbsp;◾◾&nbsp;», puis «&nbsp;◽◽◽&nbsp;» et «&nbsp;◾◾◾&nbsp;», et ainsi de suite. Au moins un symbole doit être défini dans le descripteur `symbols`, sinon le style de compteur n'est pas valide. Ce système de compteur fonctionne uniquement pour les valeurs positives du compteur.
 
 - `additive`
   - : Utilisé pour représenter les systèmes de numérotation à valeur de signe (<i lang="en">sign-value numbering systems</i>), comme les chiffres romains, qui, au lieu de réutiliser des chiffres à différentes positions pour obtenir différentes valeurs, définissent des chiffres supplémentaires pour les valeurs plus grandes. La valeur d'un nombre dans un tel système s'obtient en additionnant les chiffres du nombre.
 
-    Un descripteur supplémentaire appelé `additive-symbols` doit être spécifié avec au moins un _tuple additif_, sinon la règle de style de compteur n'est pas valide. Un tuple additif est similaire à un symbole de compteur composite, composé de deux parties&nbsp;: un symbole de compteur normal et un poids entier positif ou nul. Les tuples additifs doivent être spécifiés dans l'ordre décroissant de leurs poids, sinon le système est invalide.
+    Un descripteur supplémentaire appelé `additive-symbols` doit être défini avec au moins un _tuple additif_, sinon la règle de style de compteur n'est pas valide. Un tuple additif est similaire à un symbole de compteur composite, composé de deux parties&nbsp;: un symbole de compteur normal et un poids entier positif ou nul. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids, sinon le système est invalide.
 
 - `fixed` ou `fixed <integer>`
-  - : Définit un ensemble fini de symboles, en parcourant une seule fois la liste des symboles fournie dans le descripteur `symbols`. Une fois les symboles spécifiés parcourus, le style de compteur de repli est utilisé. Cette valeur clé est utile dans les cas où les valeurs du style de compteur sont finies. Au moins un symbole doit être spécifié dans le descripteur `symbols`, sinon le style de compteur n'est pas valide. Le mot-clé `fixed` peut être suivi d'une valeur {{cssxref("&lt;integer&gt;")}} optionnelle. Si elle est spécifiée, la valeur `<integer>` indique l'élément de la liste qui recevra le premier symbole de la liste des symboles. Si elle est omise, la valeur par défaut de `integer` est `1`, ce qui donne le premier symbole au premier élément de la liste.
+  - : Définit un ensemble fini de symboles, en parcourant une seule fois la liste des symboles fournie dans le descripteur `symbols`. Une fois les symboles définis parcourus, le style de compteur de repli est utilisé. Cette valeur clé est utile dans les cas où les valeurs du style de compteur sont finies. Au moins un symbole doit être défini dans le descripteur `symbols`, sinon le style de compteur n'est pas valide. Le mot-clé `fixed` peut être suivi d'une valeur {{CSSxRef("&lt;integer&gt;")}} optionnelle. Si elle est définie, la valeur `<integer>` indique l'élément de la liste qui recevra le premier symbole de la liste des symboles. Si elle est omise, la valeur par défaut de `integer` est `1`, ce qui donne le premier symbole au premier élément de la liste.
 
 - `extends`
-  - : Étend l'algorithme d'un autre style de compteur défini par le navigateur ou l'auteur·ice, en permettant de modifier certains aspects du style de compteur étendu. Tout descripteur ou valeur non spécifié sera hérité du style de compteur étendu indiqué. Si le nom du style de compteur spécifié avec `extends` n'est pas encore défini, le style de compteur `decimal` sera étendu par défaut.
+  - : Étend l'algorithme d'un autre style de compteur défini par le navigateur ou l'auteur·ice, en permettant de modifier certains aspects du style de compteur étendu. Tout descripteur ou valeur non défini sera hérité du style de compteur étendu indiqué. Si le nom du style de compteur défini avec `extends` n'est pas encore défini, le style de compteur `decimal` sera étendu par défaut.
 
     Il ne doit pas contenir de descripteur `symbols` ou `additive-symbols`, sinon la règle de style de compteur sera invalide. Si une ou plusieurs définitions de styles de compteur forment un cycle avec leurs valeurs `extends`, le navigateur considérera que tous les styles de compteur concernés étendent le style `decimal`.
 
@@ -71,11 +70,11 @@ Les valeurs incluent&nbsp;:
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -110,7 +109,7 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_cyclique') }}
+{{EmbedLiveSample("Compteurcyclique")}}
 
 ### Compteur fixe
 
@@ -143,7 +142,7 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_fixe') }}
+{{EmbedLiveSample("Compteur fixe")}}
 
 ### Compteur symbolique
 
@@ -178,7 +177,7 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_symbolique') }}
+{{EmbedLiveSample("Compteur symbolique")}}
 
 ### Compteur alphabétique
 
@@ -211,7 +210,7 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_alphabétique') }}
+{{EmbedLiveSample("Compteur alphabétique")}}
 
 ### Compteur numérique
 
@@ -246,11 +245,11 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_numérique') }}
+{{EmbedLiveSample("Compteur numérique")}}
 
 ### Compteur numérique avec symboles numériques
 
-Comme le montre l'exemple suivant, si les chiffres de `0` à `9` sont spécifiés comme symboles, ce style de compteur affichera les symboles comme le style de compteur décimal.
+Comme le montre l'exemple suivant, si les chiffres de `0` à `9` sont définis comme symboles, ce style de compteur affichera les symboles comme le style de compteur décimal.
 
 #### CSS
 
@@ -283,11 +282,11 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_numérique_avec_symboles_numériques') }}
+{{EmbedLiveSample("Compteur numérique avec symboles numériques")}}
 
 ### Compteur additif
 
-Cet exemple affiche une liste en chiffres romains. Notez qu'une plage `range` est spécifiée. Cela s'explique par le fait que la représentation produira des chiffres romains corrects uniquement jusqu'à la valeur de compteur `3999`. Au-delà de cette plage, les autres représentations du compteur seront basées sur le style `decimal`, qui sert de repli. Si vous souhaitez représenter des valeurs de compteur en chiffres romains, vous pouvez utiliser l'un des styles de compteur prédéfinis, `upper-roman` ou `lower-roman`, plutôt que de recréer la règle vous-même.
+Cet exemple affiche une liste en chiffres romains. Notez qu'une plage `range` est définie. Cela s'explique par le fait que la représentation produira des chiffres romains corrects uniquement jusqu'à la valeur de compteur `3999`. Au-delà de cette plage, les autres représentations du compteur seront basées sur le style `decimal`, qui sert de repli. Si vous souhaitez représenter des valeurs de compteur en chiffres romains, vous pouvez utiliser l'un des styles de compteur prédéfinis, `upper-roman` ou `lower-roman`, plutôt que de recréer la règle vous-même.
 
 #### HTML
 
@@ -335,11 +334,11 @@ ol {
 
 #### Résultat
 
-{{ EmbedLiveSample('compteur_additif', '') }}
+{{EmbedLiveSample("Compteur additif")}}
 
 ### Extension d'un compteur
 
-Cet exemple utilise l'algorithme, les symboles et autres propriétés de [`lower-alpha`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#lower-alpha), l'une des nombreuses valeurs natives de {{CSSXref("list-style-type")}}, mais l'étend en supprimant le point (`'.'`) après la représentation du compteur et en entourant les caractères de parenthèses, comme `(a)` et `(b)`.
+Cet exemple utilise l'algorithme, les symboles et autres propriétés de [`lower-alpha`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#lower-alpha), l'une des nombreuses valeurs natives de {{CSSxRef("list-style-type")}}, mais l'étend en supprimant le point (`'.'`) après la représentation du compteur et en entourant les caractères de parenthèses, comme `(a)` et `(b)`.
 
 #### HTML
 
@@ -369,7 +368,7 @@ ul {
 
 #### Résultat
 
-{{ EmbedLiveSample('extension_dun_compteur') }}
+{{EmbedLiveSample("Extension d'un compteur")}}
 
 ## Spécifications
 
@@ -381,8 +380,8 @@ ul {
 
 ## Voir aussi
 
-- Les descripteurs de {{cssxref("@counter-style")}}&nbsp;: {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}} et {{cssxref("@counter-style/fallback", "fallback")}}
-- Propriétés de style de liste&nbsp;: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- La fonction {{cssxref("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
+- Les descripteurs de {{CSSxRef("@counter-style")}}&nbsp;: {{CSSxRef("@counter-style/symbols", "symbols")}}, {{CSSxRef("@counter-style/additive-symbols", "additive-symbols")}}, {{CSSxRef("@counter-style/negative", "negative")}}, {{CSSxRef("@counter-style/prefix", "prefix")}}, {{CSSxRef("@counter-style/suffix", "suffix")}}, {{CSSxRef("@counter-style/range", "range")}}, {{CSSxRef("@counter-style/pad", "pad")}}, {{CSSxRef("@counter-style/speak-as", "speak-as")}} et {{CSSxRef("@counter-style/fallback", "fallback")}}
+- Propriétés de style de liste&nbsp;: {{CSSxRef("list-style")}}, {{CSSxRef("list-style-image")}}, {{CSSxRef("list-style-position")}}
+- La fonction {{CSSxRef("symbols", "symbols()")}} pour créer des styles de compteur anonymes.
 - Le module de [styles de compteur CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
 - Le module de [listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)

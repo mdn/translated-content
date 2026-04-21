@@ -1,12 +1,11 @@
 ---
 title: animation
 slug: Web/CSS/Reference/Properties/animation
-original_slug: Web/CSS/animation
 l10n:
-  sourceCommit: 32142cbf6ab60da6987aee2e11f59c5ee916ea49
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
-**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
+**`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、スタイル間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
 
 {{InteractiveExample("CSS デモ: animation")}}
 
@@ -36,7 +35,7 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 #example-element {
   background-color: #1766aa;
   margin: 20px;
-  border: 5px solid #333;
+  border: 5px solid #333333;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -56,15 +55,15 @@ animation: 0.5s linear 1s infinite alternate slide-in;
 
 このプロパティは以下のプロパティの一括指定です。
 
-- [`animation-delay`](/ja/docs/Web/CSS/Reference/Properties/animation-delay)
-- [`animation-direction`](/ja/docs/Web/CSS/Reference/Properties/animation-direction)
-- [`animation-duration`](/ja/docs/Web/CSS/Reference/Properties/animation-duration)
-- [`animation-fill-mode`](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode)
-- [`animation-iteration-count`](/ja/docs/Web/CSS/Reference/Properties/animation-iteration-count)
-- [`animation-name`](/ja/docs/Web/CSS/Reference/Properties/animation-name)
-- [`animation-play-state`](/ja/docs/Web/CSS/Reference/Properties/animation-play-state)
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
-- [`animation-timing-function`](/ja/docs/Web/CSS/Reference/Properties/animation-timing-function)
+- {{cssxref("animation-delay")}}
+- {{cssxref("animation-direction")}}
+- {{cssxref("animation-duration")}}
+- {{cssxref("animation-fill-mode")}}
+- {{cssxref("animation-iteration-count")}}
+- {{cssxref("animation-name")}}
+- {{cssxref("animation-play-state")}}
+- {{cssxref("animation-timeline")}}
+- {{cssxref("animation-timing-function")}}
 
 ## 構文
 
@@ -123,7 +122,7 @@ animation:
 
 `animation-duration` 値が `animation` 一括指定プロパティにおいて除外された場合、このプロパティの値は `0s` が既定値となります。この場合、アニメーションは発生しますが（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントは発行されますが）、アニメーションは表示されません。
 
-`animation-fill-mode` の値が [forwards](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) の場合、アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/Reference/Properties/will-change) プロパティの値に記載されているかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションの完了後も、対象要素は重ね合わせコンテキストを保持します。
+`animation-fill-mode` の値が [forwards](/ja/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) の場合、アニメーションするプロパティは、設定された {{cssxref("will-change")}} プロパティの値に記載されているかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションの完了後も、対象要素は重ね合わせコンテキストを保持します。
 
 ## アクセシビリティ
 
@@ -148,7 +147,7 @@ animation:
 ## 例
 
 > [!NOTE]
-> [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。
+> [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model) プロパティのアニメーションは推奨されません。ボックスモデルのプロパティをアニメーションさせると、本質的に CPU に負荷がかかります。代わりに [transform](/ja/docs/Web/CSS/Reference/Properties/transform) プロパティのアニメーションを検討してください。
 
 ### 日の出
 
@@ -330,7 +329,7 @@ animation:
 
 {{EmbedLiveSample('Cascading Multiple Animations')}}
 
-これ以外の例は [CSS アニメーション](/ja/docs/Web/CSS/Guides/Animations/Using)を参照してください。
+これ以外の例は [CSS アニメーションの使用](/ja/docs/Web/CSS/Guides/Animations/Using#例)を参照してください。
 
 ## 仕様書
 

@@ -1,9 +1,8 @@
 ---
 title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
-original_slug: Web/CSS/@scope
 l10n:
-  sourceCommit: 943a9ba8905fbdb3966f0dd6d49f7652e3de94b3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
@@ -22,7 +21,7 @@ La règle `@scope` contient un ou plusieurs ensembles de règles (appelées **r�
    }
    ```
 
-2. Comme styles en ligne inclus dans un élément {{htmlelement("style")}} de votre HTML, auquel cas le prélude est omis et l'ensemble de règles inclus est automatiquement porté sur l'élément parent englobant du `<style>`.
+2. Comme styles en ligne inclus dans un élément HTML {{HTMLElement("style")}} de votre HTML, auquel cas le prélude est omis et l'ensemble de règles inclus est automatiquement porté sur l'élément parent englobant du `<style>`.
 
    ```html
    <parent-element>
@@ -61,7 +60,7 @@ body
       └─ img
 ```
 
-Si vous souhaitez sélectionner l'élément {{htmlelement("img")}} à l'intérieur d'une {{htmlelement("section")}} ayant la classe `article-body`, vous pouvez procéder ainsi&nbsp;:
+Si vous souhaitez sélectionner l'élément HTML {{HTMLElement("img")}} à l'intérieur d'une {{HTMLElement("section")}} ayant la classe `article-body`, vous pouvez procéder ainsi&nbsp;:
 
 - Écrire un sélecteur comme `.feature > .article-body > img`. Cependant, celui-ci a une spécificité élevée et est donc difficile à surcharger, et il est aussi fortement lié à la structure du DOM. Si votre structure HTML change à l'avenir, vous devrez peut-être réécrire votre CSS.
 - Écrire quelque chose de moins spécifique comme `.article-body img`. Cependant, cela sélectionnera toutes les images à l'intérieur de la `section`.
@@ -77,7 +76,7 @@ C'est là que `@scope` est utile. Elle permet de définir une portée précise d
 }
 ```
 
-Le sélecteur de racine de portée `.article-body` définit la borne supérieure de la portée de l'arbre DOM dans laquelle l'ensemble de règles sera appliqué, et le sélecteur de limite de portée `figure` définit la borne inférieure. Ainsi, seuls les éléments {{htmlelement("img")}} à l'intérieur d'une `<section>` avec la classe `article-body`, mais pas à l'intérieur d'un élément {{htmlelement("figure")}}, seront sélectionnés.
+Le sélecteur de racine de portée `.article-body` définit la borne supérieure de la portée de l'arbre DOM dans laquelle l'ensemble de règles sera appliqué, et le sélecteur de limite de portée `figure` définit la borne inférieure. Ainsi, seuls les éléments HTML {{HTMLElement("img")}} à l'intérieur d'une `<section>` avec la classe `article-body`, mais pas à l'intérieur d'un élément HTML {{HTMLElement("figure")}}, seront sélectionnés.
 
 > [!NOTE]
 > Ce type de portée — avec une borne supérieure et une borne inférieure — est couramment appelé **portée en anneau**.
@@ -113,11 +112,11 @@ Ou vous pouvez inclure votre bloc `@scope` en ligne dans un élément `<style>`,
 ```
 
 > [!NOTE]
-> Il est important de comprendre que, bien que `@scope` vous permette d'isoler l'application des sélecteurs à des sous-arbres DOM spécifiques, elle n'isole pas complètement les styles appliqués à l'intérieur de ces sous-arbres. Cela se remarque surtout avec l'héritage&nbsp;: les propriétés héritées par les enfants (par exemple {{cssxref("color")}} ou {{cssxref("font-family")}}) seront toujours héritées, au-delà de toute limite de portée définie.
+> Il est important de comprendre que, bien que `@scope` vous permette d'isoler l'application des sélecteurs à des sous-arbres DOM spécifiques, elle n'isole pas complètement les styles appliqués à l'intérieur de ces sous-arbres. Cela se remarque surtout avec l'héritage&nbsp;: les propriétés héritées par les enfants (par exemple {{CSSxRef("color")}} ou {{CSSxRef("font-family")}}) seront toujours héritées, au-delà de toute limite de portée définie.
 
 ### Pseudo-classe `:scope` dans les blocs `@scope`
 
-Dans le contexte d'un bloc `@scope`, la pseudo-classe {{cssxref(":scope")}} offre un moyen pratique d'appliquer directement des styles à la racine de la portée, comme ceci&nbsp;:
+Dans le contexte d'un bloc `@scope`, la pseudo-classe {{CSSxRef(":scope")}} offre un moyen pratique d'appliquer directement des styles à la racine de la portée, comme ceci&nbsp;:
 
 ```css
 @scope (.feature) {
@@ -166,8 +165,8 @@ Voici quelques points à considérer pour `:scope` dans les blocs `@scope`&nbsp;
 
 ### Spécificité dans `@scope`
 
-À l'intérieur d'une règle `@scope`, les sélecteurs simples et le sélecteur d'imbrication [`&`](/fr/docs/Web/CSS/Nesting_selector) se comportent comme si `:where(:scope)` était préfixé au sélecteur.
-Comme {{cssxref(":where", ":where()")}} a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) nulle, les sélecteurs simples et `&` n'ajoutent aucun poids. Le poids de spécificité est déterminé par le reste du sélecteur.
+À l'intérieur d'une règle `@scope`, les sélecteurs simples et le sélecteur d'imbrication [`&`](/fr/docs/Web/CSS/Reference/Selectors/Nesting_selector) se comportent comme si `:where(:scope)` était préfixé au sélecteur.
+Comme {{CSSxRef(":where", ":where()")}} a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) nulle, les sélecteurs simples et `&` n'ajoutent aucun poids. Le poids de spécificité est déterminé par le reste du sélecteur.
 Par exemple, la spécificité du sélecteur `& img` est équivalente à celle de `:where(:scope) img` (0-0-1).
 
 > [!WARNING]
@@ -204,7 +203,7 @@ Dans le bloc de code suivant, `:scope img` a une spécificité de 0-1-1&nbsp;:
 
 ### Résolution des conflits `@scope`
 
-`@scope` ajoute un nouveau critère à la [cascade CSS](/fr/docs/Web/CSS/CSS_cascade)&nbsp;: la **proximité de portée**. Cela signifie que lorsque deux portées ont des styles en conflit, le style ayant le plus petit nombre de sauts dans la hiérarchie de l'arbre DOM jusqu'à la racine de la portée est appliqué. Voyons un exemple pour illustrer ce principe.
+`@scope` ajoute un nouveau critère à la [cascade CSS](/fr/docs/Web/CSS/Guides/Cascad)&nbsp;: la **proximité de portée**. Cela signifie que lorsque deux portées ont des styles en conflit, le style ayant le plus petit nombre de sauts dans la hiérarchie de l'arbre DOM jusqu'à la racine de la portée est appliqué. Voyons un exemple pour illustrer ce principe.
 
 Prenons l'extrait HTML suivant, où des cartes de thèmes différents sont imbriquées les unes dans les autres&nbsp;:
 
@@ -267,17 +266,17 @@ Pour corriger cela, vous pouvez utiliser `@scope` comme suit&nbsp;:
 Désormais, le paragraphe le plus à l'intérieur est correctement coloré en noir. Cela s'explique par le fait qu'il n'est qu'à un niveau de hiérarchie du DOM de la racine de portée `.light-theme`, mais à deux niveaux de la racine de portée `.dark-theme`. Ainsi, le style clair l'emporte.
 
 > [!NOTE]
-> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity).
+> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/Reference/Values/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### Style de base dans les racines de portée
+### Style simple dans les racines de portée
 
-Dans cet exemple, nous utilisons deux blocs `@scope` distincts pour cibler les liens à l'intérieur des éléments ayant respectivement la classe `.light-scheme` et `.dark-scheme`. Notez comment `:scope` est utilisé pour sélectionner et mettre en forme les racines de portée elles-mêmes. Ici, les racines de portée sont les éléments {{htmlelement("div")}} auxquels les classes sont appliquées.
+Dans cet exemple, nous utilisons deux blocs `@scope` distincts pour cibler les liens à l'intérieur des éléments ayant respectivement la classe `.light-scheme` et `.dark-scheme`. Notez comment `:scope` est utilisé pour sélectionner et mettre en forme les racines de portée elles-mêmes. Ici, les racines de portée sont les éléments HTML {{HTMLElement("div")}} auxquels les classes sont appliquées.
 
 #### HTML
 
@@ -334,13 +333,13 @@ div {
 
 Le code ci-dessus s'affiche ainsi&nbsp;:
 
-{{EmbedLiveSample("style_de_base_dans_les_racines_de_portée", "100%", "150")}}
+{{EmbedLiveSample("Style simple dans les racines de portée", "100%", 150)}}
 
 ### Racines de portée et limites de portée
 
-Dans cet exemple, nous avons un extrait HTML qui correspond à la structure DOM évoquée plus haut dans la [description](#description). Cette structure représente un résumé d'article typique. Les éléments clés à noter sont les {{htmlelement("img")}}, qui sont imbriqués à différents niveaux dans la structure.
+Dans cet exemple, nous avons un extrait HTML qui correspond à la structure DOM évoquée plus haut dans la [description](#description). Cette structure représente un résumé d'article typique. Les éléments clés à noter sont les {{HTMLElement("img")}}, qui sont imbriqués à différents niveaux dans la structure.
 
-L'objectif de cet exemple est de montrer comment utiliser une racine et une limite de portée pour mettre en forme les éléments `<img>` depuis le haut de la hiérarchie, mais seulement jusqu'à (et sans inclure) l'élément `<img>` à l'intérieur du {{htmlelement("figure")}} — créant ainsi une portée en anneau.
+L'objectif de cet exemple est de montrer comment utiliser une racine et une limite de portée pour mettre en forme les éléments `<img>` depuis le haut de la hiérarchie, mais seulement jusqu'à (et sans inclure) l'élément `<img>` à l'intérieur du {{HTMLElement("figure")}} — créant ainsi une portée en anneau.
 
 #### HTML
 
@@ -443,9 +442,9 @@ Dans notre CSS, nous avons deux blocs `@scope`&nbsp;:
 
 #### Résultat
 
-Dans le code affiché, notez que tous les éléments `<img>` sont stylisés avec la bordure épaisse et le fond doré, sauf celui à l'intérieur de l'élément `<figure>` (intitulé «&nbsp;Mon infographie&nbsp;»).
+Dans le code affiché, notez que tous les éléments `<img>` sont mis en forme avec la bordure épaisse et le fond doré, sauf celui à l'intérieur de l'élément `<figure>` (intitulé «&nbsp;Mon infographie&nbsp;»).
 
-{{EmbedLiveSample("racines_de_portée_et_limites_de_portée", "100%", "400")}}
+{{EmbedLiveSample("Racines de portée et limites de portée", "100%", 400)}}
 
 ## Spécifications
 
@@ -457,8 +456,8 @@ Dans le code affiché, notez que tous les éléments `<img>` sont stylisés avec
 
 ## Voir aussi
 
-- {{CSSxRef(":scope")}}
-- {{DOMxRef("CSSScopeRule")}}
+- La pseudo-classe {{CSSxRef(":scope")}}
+- L'interface API {{DOMxRef("CSSScopeRule")}}
 - La [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity)
 - [Définir le sélecteur `&` dans une règle `@scope` <sup>(angl.)</sup>](https://css.oddbird.net/scope/parent-selector/) sur css.oddbird.net (2025)
 - [Limiter la portée de vos sélecteurs avec la règle @ CSS `@scope` <sup>(angl.)</sup>](https://developer.chrome.com/docs/css-ui/at-scope) sur developer.chrome.com (2023)

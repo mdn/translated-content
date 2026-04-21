@@ -1,12 +1,12 @@
 ---
-title: :-moz-window-inactive
+title: Pseudo-classe CSS `:-moz-window-inactive`
+short-title: :-moz-window-inactive
 slug: Web/CSS/Reference/Selectors/:-moz-window-inactive
-original_slug: Web/CSS/:-moz-window-inactive
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:-moz-window-inactive`** est une [extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
 
@@ -51,7 +51,7 @@ Cet exemple illustre la modification de l'apparence de l'arrière-plan d'une bo�
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","220","220")}}
+{{EmbedLiveSample("Exemples", 220, 220)}}
 
 ## Spécifications
 
@@ -64,7 +64,6 @@ Cette pseudo-classe ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Extensions CSS de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- Sélecteurs CSS connexes :
-  - [`:active`](/fr/docs/Web/CSS/Reference/Selectors/:active)
-
-- La propriété {{domxref("Document.activeElement")}} pour le DOM régulier, et la propriété {{domxref("ShadowRoot.activeElement")}} pour les racines du [DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).
+- Sélecteurs CSS associés&nbsp;:
+  - {{CSSxRef(":active")}}
+- La propriété API {{DOMxRef("Document.activeElement")}} pour le DOM régulier, et la propriété {{DOMxRef("ShadowRoot.activeElement")}} pour les racines du [DOM d'ombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM).

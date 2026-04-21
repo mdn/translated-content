@@ -1,11 +1,14 @@
 ---
-title: HTMLElement.tabIndex
+title: "HTMLElement : propriété tabIndex"
+short-title: tabIndex
 slug: Web/API/HTMLElement/tabIndex
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`tabIndex`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), représente l'ordre de tabulation de l'élément
+La propriété **`tabIndex`** de l'interface {{DOMxRef("HTMLElement")}} représente l'ordre de tabulation de l'élément actuel.
 
 L'ordre de tabulation fonctionne selon l'algorithme suivant&nbsp;:
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_buildi
 original_slug: Learn/JavaScript/Objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.
 
@@ -16,11 +16,11 @@ Dans l'article précédent, nous avons passé en revue l'essentiel de la théori
         <p>
           Connaissance basique de l'informatique, une compréhension basique du
           HTML et du CSS, une familiarité avec les bases du JavaScript (voir
-          <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
-          <a href="/fr/docs/Learn/JavaScript/Building_blocks"
+          <a href="/fr/docs/Learn_web_development/Core/Scripting">Premiers pas</a> et
+          <a href="/fr/docs/Learn_web_development/Core/Scripting/Building_blocks"
             >Les blocs de construction</a
           >) et les bases de la programmation objet en JavaScript (voir <a
-            href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
+            href="/fr/docs/Learn_web_development/Core/Scripting/Object-oriented/Introduction"
             >Introduction aux objets</a
           >).
         </p>
@@ -48,7 +48,7 @@ Cet exemple utilise l'[API Canvas](/fr/docs/Learn_web_development/Extensions/Cli
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
-1. Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
+1. Un document HTML très simple contenant un élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
 2. Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
 3. Un peu de JavaScript qui sert à paramétrer l'élément `<canvas>` et fournir les fonctions globales que nous utiliserons.
 
@@ -316,4 +316,4 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 - [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.
 - [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

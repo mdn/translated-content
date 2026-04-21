@@ -82,4 +82,4 @@ l10n:
 - {{Glossary("Transient activation")}}
 - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation")}} API
-- [보안 컨텍스트로 제한된 기능들](/ko/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [보안 컨텍스트로 제한된 기능들](/ko/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)

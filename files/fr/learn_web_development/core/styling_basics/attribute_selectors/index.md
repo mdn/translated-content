@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b580c9fe8f354fb00dfe55d9d1fc4083bb49fab8
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
 En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, qui leur fournissent des détails supplémentaires. En CSS, on peut utiliser les sélecteurs d'attribut afin de cibler les éléments qui possèdent certains attributs. Dans cet article, nous verrons comment utiliser ces sélecteurs.
 
@@ -14,7 +14,7 @@ En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, 
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td><a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>.)</td>
+      <td><a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn_web_development/Core/Structuring_content">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas en CSS</a>.)</td>
     </tr>
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
@@ -105,4 +105,4 @@ Dans l'exemple qui suit, le premier sélecteur cible l'élément dont la valeur 
 
 Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}

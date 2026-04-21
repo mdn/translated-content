@@ -2,17 +2,19 @@
 title: サイドバー
 slug: MDN/Writing_guidelines/Page_structures/Sidebars
 l10n:
-  sourceCommit: b16d05494dd1252531451ebc3e995ea0f2a9007b
+  sourceCommit: 0ff7ba5177bf2e66214bd90b58590c6bf3acb758
 ---
 
-すべての MDN のページにはサイドバーを付けます。
+すべての MDN のページにはサイドバーを付けるべきです。
 そのほとんどは、 YAML ファイルでデータ構造を定義し、フロントマターまたはマクロによってページにサイドバーを記載するシステムを使用して作成されています。
 
 このガイドでは、サイドバーがどのように動作するのかを学び、必要に応じて既存のサイドバーを編集したり、新しいサイドバーを作成したりする方法を学びます。
 
 > [!NOTE]
-> サイドバーを編集している場合は、書式化とリダイレクトの同期に `yarn tool` コマンドを使用することができます。
-> 詳しくは [Yari の CLI ツール](https://github.com/mdn/yari/blob/main/docs/cli-tool.md)のドキュメントを参照してください。
+> サイドバーを編集している場合は、`npm run content` コマンドを使用することができます。
+>
+> - `npm run content -- fmt-sidebars` を実行すると、サイドバーを整形します。
+> - `npm run content -- sync-sidebars` を実行すると、リダイレクトを同期します。
 
 ## サイドバーの働き
 
@@ -114,7 +116,6 @@ sidebar:
         children:
           - /MDN/Community
           - /MDN/Community/Getting_started
-          - /MDN/Community/Security_vulnerability_response
       - /MDN/Community/Open_source_etiquette
       - /MDN/Community/Communication_channels
       - /MDN/Community/Discussions
@@ -265,16 +266,17 @@ l10n:
 
 MDN のロケールにアクセスし、特定のプレースホルダに対して値が定義されていない場合、既定では `en-US` バージョンが使用されます。 `en-US` バージョンが定義されていない場合、リテラルプレースホルダテキストが表示されます（上記の場合、 `Input_types` となります）。
 
-## 標準外のサイドバー
+## 独自のサイドバー
 
-MDN で使用されているサイドバーの中には、上記で説明されている標準システムを使用していないものもあります。これらは複雑な完全に自動化されたマクロであり、変更する必要が頻繁にあるわけではありません。
+MDN で、上記の標準システムを使用しないサイドバーがいくつか存在します。これらはより複雑なマクロであり、特別な処理が必要です。
 
 - `\{{APIRef("<API>")}}`
   - : [API リファレンスページ](/ja/docs/Web/API#インターフェイス)に表示される API サイドバー。それぞれのインターフェイスに対して、マクロはインターフェイスで定義されたメンバー（プロパティ、メソッド、イベントなど）へのリンクを自動生成します。単一の引数は、 [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルで定義された関連する API グループの名前です。サイドバーの下部に表示される関連ページを編集するには、その API の GroupData 項目を編集します。
 - `\{{DefaultAPISidebar("<API>")}}`
   - : [API ランディングページ](/ja/docs/Web/API#仕様書)に表示される API サイドバー。単一の引数は、 [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルで定義された関連する API グループの名前です。具体的な API のサイドバーにリンクされたガイド、インターフェイスなどを編集するには、その API の GroupData 項目を編集します。
-- `\{{JSRef("<JS_topic>")}}`
-  - : [JavaScript リファレンスページ](/ja/docs/Web/JavaScript/Reference)のサイドバー。単一の引数は、リンクを作成したいディレクトリーです。
+- `sidebar: jsref`
+  - : フロントマターに含まれる [JavaScript リファレンスページ](/ja/docs/Web/JavaScript/Reference)のサイドバーです。
+    `jsref` の内容は、rari の [`jsref.rs`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/sidebars/jsref.rs) で定義されています。
 
 これらのうちの 1 つが更新されるべきであるとお考えの場合は、[通常の方法](/ja/docs/MDN/Community/Communication_channels)で私たちにご連絡ください。
 

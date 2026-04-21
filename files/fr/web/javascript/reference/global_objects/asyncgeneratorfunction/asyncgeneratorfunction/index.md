@@ -3,8 +3,16 @@ title: Constructeur AsyncGeneratorFunction()
 short-title: AsyncGeneratorFunction()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: fefa80c1e817377a0bbaf6a636ce6b8797f38fbb
 ---
+
+> [!WARNING]
+> Les arguments passés à ce constructeur sont analysés et exécutés dynamiquement en tant que JavaScript.
+> Les API de ce type sont connues sous le nom de [points d'injection](/fr/docs/Web/API/Trusted_Types_API#concepts_et_utilisation) et peuvent potentiellement être un vecteur pour des attaques de [cross-site-scripting (XSS)](/fr/docs/Web/Security/Attacks/XSS).
+>
+> Vous pouvez atténuer ce risque en passant toujours des objets {{DOMxRef("TrustedScript")}} au lieu de chaînes de caractères et en [appliquant des types de confiance](/fr/docs/Web/API/Trusted_Types_API#utiliser_une_csp_pour_appliquer_les_types_de_confiance).
+>
+> Voir [les considérations de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/Function#considérations_de_sécurité) dans la référence du constructeur `Function()` pour plus d'informations.
 
 Le constructeur **`AsyncGeneratorFunction()`** crée des objets {{JSxRef("AsyncGeneratorFunction")}}.
 
@@ -31,13 +39,15 @@ AsyncGeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > [!NOTE]
-> `AsyncGeneratorFunction()` peut être appelé avec ou sans [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Les deux créent une nouvelle instance de `AsyncGeneratorFunction`.
+> `AsyncGeneratorFunction()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `AsyncGeneratorFunction`.
 
 ### Paramètres
 
 Voir {{JSxRef("Function/Function", "Function()")}}.
 
 ## Exemples
+
+On notera que ces exemples omettent l'utilisation des types de confiance pour des raisons de concision. Pour un code montrant l'approche recommandée, voir [Utiliser `TrustedScript`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval#utiliser_trustedscript) dans `eval()`.
 
 ### Utilisation du constructeur
 

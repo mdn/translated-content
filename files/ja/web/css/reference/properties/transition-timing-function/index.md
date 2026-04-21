@@ -1,9 +1,8 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
-original_slug: Web/CSS/transition-timing-function
 l10n:
-  sourceCommit: 2c49a844f820f191f98b13130e0075bbeed530f3
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/Guides/Transitions/Using)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
@@ -26,16 +25,16 @@ transition-timing-function: steps(6, end);
 transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+  <div id="example-element">トランジションを見るには<br />ポインターを当ててください</div>
 </section>
 ```
 
 ```css interactive-example
 #example-element {
   background-color: #e4f0f5;
-  color: #000;
+  color: black;
   padding: 1rem;
   border-radius: 0.5rem;
   font: 1em monospace;
@@ -44,15 +43,15 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 }
 
 #default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
+  background-color: #990099;
+  color: white;
   margin-right: 40%;
 }
 ```
 
 このプロパティは、簡単に言えば加速曲線を定義するもので、それによりトランジション実行中の値の変更速度を操作することができます。
 
-この加速曲線は、トランジションが行われるプロパティごとに 1 つの {{cssxref("&lt;easing-function&gt;")}} を用いて定義されます。
+この加速曲線は、トランジションが行われるプロパティごとに 1 つの {{cssxref("easing-function")}} を用いて定義されます。
 
 複数のイージング関数を指定することができます。それぞれのイージング関数は、 {{ cssxref("transition-property") }} で指定されたように対応するプロパティに適用され、 `transition-property` のリストとして振るまいます。指定されたイージング関数が `transition-property` のリストより少ない場合は、ユーザーエージェントはリスト内の値をそれぞれのトランジションプロパティのうちの値になるまで繰り返してどの値が使用されるかを計算します。関数の数が多い場合は、リストを適切な長さに切り詰めます。どちらの場合も、 CSS の宣言として妥当です。
 
@@ -94,7 +93,7 @@ transition-timing-function: unset;
 ### 値
 
 - `<easing-function>`
-  - : 各々の {{cssxref("&lt;easing-function&gt;")}} は {{ cssxref("transition-property") }} で指定された、トランジションを行うプロパティに対応するイージング関数を表します。
+  - : それぞれの {{cssxref("easing-function")}} は {{ cssxref("transition-property") }} で指定された、トランジションを行うプロパティに対応するイージング関数を表します。
 
     段階のないキーワード値 (ease、linear、ease-in-out、など) はそれぞれ 4 つの固定点による三次ベジェ曲線を表しており、 cubic-bezier() 関数の値は定義済みの値以外を使用することができます。段階のあるイージング関数は、入力の時間を時間的に等しい間隔で指定された数に分割します。これは、ステップ数とステップ位置によって定義されます。
     - `ease`
@@ -185,8 +184,8 @@ transition-timing-function: unset;
 ```js hidden
 function updateTransition() {
   const els = document.querySelectorAll(".parent > div[class]");
-  for (let i = 0; i < els.length; i++) {
-    els[i].classList.toggle("box1");
+  for (const el of els) {
+    el.classList.toggle("box1");
   }
 }
 
@@ -256,8 +255,8 @@ const intervalID = setInterval(updateTransition, 10000);
 ```js hidden
 function updateTransition() {
   const els = document.querySelectorAll(".parent > div[class]");
-  for (let i = 0; i < els.length; i++) {
-    els[i].classList.toggle("box1");
+  for (const el of els) {
+    el.classList.toggle("box1");
   }
 }
 
@@ -298,7 +297,8 @@ const intervalID = setInterval(updateTransition, 10000);
 ## 関連情報
 
 - [CSS トランジションの使用](/ja/docs/Web/CSS/Guides/Transitions/Using)
-- [`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function)
+- {{cssxref("easing-function")}}
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

@@ -1,9 +1,8 @@
 ---
 title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
-original_slug: Web/CSS/@font-face
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 7d6315943bf1032e19c65bca591e28d2117e9bec
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.
@@ -17,37 +16,37 @@ La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) *
     local("Trickster"),
     url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
     url("trickster-outline.otf") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+    url("trickster-outline.woff2") format("woff2");
 }
 ```
 
 ### Descripteurs
 
-- {{cssxref("@font-face/ascent-override", "ascent-override")}}
+- {{CSSxRef("@font-face/ascent-override", "ascent-override")}}
   - : Définit la hauteur d'ascendante pour la police.
-- {{cssxref("@font-face/descent-override", "descent-override")}}
+- {{CSSxRef("@font-face/descent-override", "descent-override")}}
   - : Définit la hauteur de descendante pour la police.
-- {{cssxref("@font-face/font-display", "font-display")}}
+- {{CSSxRef("@font-face/font-display", "font-display")}}
   - : Ce descripteur détermine la façon dont une police est affichée selon qu'elle a été téléchargée et/ou si elle est prête à être utilisée.
-- {{cssxref("@font-face/font-family", "font-family")}}
+- {{CSSxRef("@font-face/font-family", "font-family")}}
   - : Ce descripteur définit un nom qui sera utilisé pour désigner cette police dans les différentes règles associées.
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
   - : Une valeur [`font-stretch`](/fr/docs/Web/CSS/Reference/Properties/font-stretch). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-stretch: 50% 200%;`.
-- {{cssxref("@font-face/font-style", "font-style")}}
+- {{CSSxRef("@font-face/font-style", "font-style")}}
   - : Une valeur [`font-style`](/fr/docs/Web/CSS/Reference/Properties/font-style). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-style: oblique 20deg 50deg;`.
-- {{cssxref("@font-face/font-weight", "font-weight")}}
+- {{CSSxRef("@font-face/font-weight", "font-weight")}}
   - : Une valeur [`font-weight`](/fr/docs/Web/CSS/Reference/Properties/font-weight). Il est possible d'utiliser deux valeurs afin d'indiquer l'intervalle pris en charge par une police, par exemple&nbsp;: `font-weight: 100 400;`.
-- {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
+- {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
   - : Ce descripteur permet d'avoir un contrôle avancé sur les fonctionnalités typographiques relatives aux polices OpenType.
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
+- {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Ce descripteur permet d'avoir un contrôle de bas niveau sur les variations des polices OpenType et TrueType en indiquant les noms des axes et des fonctionnalités à faire varier.
-- {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
+- {{CSSxRef("@font-face/line-gap-override", "line-gap-override")}}
   - : Définit la métrique pour l'interlignage de la police.
-- {{cssxref("@font-face/size-adjust", "size-adjust")}}
+- {{CSSxRef("@font-face/size-adjust", "size-adjust")}}
   - : Définit un multiplicateur pour les contours des glyphes et les métriques associées à cette police. Cela permet de simplifier l'harmonisation de différentes polices lorsqu'elles sont affichées avec le même corps.
-- {{cssxref("@font-face/src", "src")}}
+- {{CSSxRef("@font-face/src", "src")}}
   - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
-- {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- {{CSSxRef("@font-face/unicode-range", "unicode-range")}}
   - : L'intervalle des points de code Unicode pour lesquels la règle `@font-face` s'applique.
 
 ## Description
@@ -57,6 +56,8 @@ On utilise fréquemment une combinaison de `url()` et de `local()` afin d'utilis
 Si la fonction `local()` est fournie, on lui passera un nom de police à rechercher sur l'appareil. Lorsque l'agent utilisateur trouve une correspondance, c'est cette police locale qui est utilisée. Sinon, le navigateur télécharge la police pointée par la fonction `url()` et l'utilise.
 
 Les navigateurs tentent le téléchargement des ressources selon leur ordre de déclaration. Aussi, on écrira généralement `local()` avant `url()`. Les deux fonctions sont optionnelles et on peut donc avoir un bloc de règle contenant un ou plusieurs appels à `local()`, sans `url()`. On peut utiliser les fonctions `format()` ou `tech()` afin de cibler des polices plus spécifiques. Dans ce cas, on doit lister ces versions _avant_ celles qui n'utilisent pas ces valeurs. En effet, dans le cas contraire, ce seraient les versions moins spécifiques qui seraient tentées et utilisées.
+
+Pour la diffusion sur le Web, il est généralement préférable de fournir les polices au format WOFF2, car il compresse les polices plus efficacement que les formats plus anciens comme WOFF ou OpenType, ce qui réduit la taille des fichiers et améliore les temps de chargement. WOFF2 est également bien pris en charge par les navigateurs modernes, ce qui en fait un choix par défaut sûr pour la plupart des sites.
 
 En permettant de fournir ses propres polices, `@font-face` permet de concevoir du contenu qui ne soit pas limité aux polices universellement disponibles. En permettant d'indiquer le nom d'une police locale, on peut personnaliser le contenu sans pour autant avoir besoin d'une connexion Internet.
 
@@ -85,7 +86,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
       font-family: "MyHelvetica";
       src:
         local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-        url("MgOpenModernaBold.ttf");
+        url("MgOpenModernaBold.woff2");
       font-weight: bold;
     }
   }
@@ -93,7 +94,7 @@ La règle @ `@font-face` peut être utilisé au niveau le plus haut d'une feuill
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -114,7 +115,7 @@ Dans cet exemple, on indique une police téléchargeable à utiliser et on l'app
 ```css live-sample___web-font-example
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/FiraSans-Regular.woff2");
 }
 
 body {
@@ -124,18 +125,18 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("web-font-example", "", "100px")}}
+{{EmbedLiveSample("web-font-example", "", 100)}}
 
 ### Indiquer des polices alternatives locales
 
-Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui est utilisé. Si elle n'est pas disponible sur l'appareil malgré les deux noms tentés, c'est une police distante avec le fichier `MgOpenModernaBold.ttf` qui est utilisée à la place&nbsp;:
+Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui est utilisé. Si elle n'est pas disponible sur l'appareil malgré les deux noms tentés, c'est une police distante avec le fichier `MgOpenModernaBold.woff2` qui est utilisée à la place&nbsp;:
 
 ```css
 @font-face {
   font-family: "MyHelvetica";
   src:
     local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url("MgOpenModernaBold.ttf");
+    url("MgOpenModernaBold.woff2");
   font-weight: bold;
 }
 ```
@@ -150,7 +151,7 @@ Dans cet exemple, c'est l'exemplaire local de la police Helvetica Neue Bold qui 
 
 ## Voir aussi
 
-- [À propos de WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
+- [À propos de WOFF](/fr/docs/Web/CSS/Guides/Fonts/WOFF)
 - [Générateur `@font-face` de FontSquirrel <sup>(angl.)</sup>](https://www.fontsquirrel.com/tools/webfont-generator)
 - Le billet de blog [De belles polices avec @font-face <sup>(angl.)</sup>](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/) de Mozilla (2009)
 - [<i lang="en">Font Library</i> <sup>(angl.)</sup>](https://fontlibrary.org/), un site cataloguant des polices

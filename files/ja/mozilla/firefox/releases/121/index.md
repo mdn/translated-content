@@ -17,7 +17,7 @@ l10n:
 ### CSS
 
 - {{CSSXRef("text-wrap")}} プロパティを、値 `balance` および `stable` をサポートするように更新しました。値 `balance` は見出しなど短いブロックのコンテンツで使用するもので、コンテンツが複数行にまたがるときにバランスがとれて読みやすくなります。値 `stable` は、編集可能なコンテンツをユーザーが編集するときにリフローしなくなります ([Firefox bug 1731541](https://bugzil.la/1731541))。
-- よく親セレクターと呼ばれる、{{cssxref(":has", ":has()")}} セレクターをサポートしました。これは開発者が、関連する要素に基づいて要素にスタイルを適用することを可能にします。たとえば `li:has(ul)` はサブリストをを持つリストに、`h1:has(+ p)` は直後に段落を持つ見出しにマッチします。
+- よく親セレクターと呼ばれる、{{cssxref(":has", ":has()")}} セレクターをサポートしました。これは開発者が、関連する要素に基づいて要素にスタイルを適用することを可能にします。たとえば `li:has(ul)` はサブリストを持つリストに、`h1:has(+ p)` は直後に段落を持つ見出しにマッチします。
 - [`text-indent`](/ja/docs/Web/CSS/Reference/Properties/text-indent) CSS プロパティで、値 [`each-line`](/ja/docs/Web/CSS/Reference/Properties/text-indent#each-line) および [`hanging`](/ja/docs/Web/CSS/Reference/Properties/text-indent#hanging) をサポートしました ([Firefox bug 784648](https://bugzil.la/784648))。開発者は、特定のテキストインデントスタイルをより簡単に指定できます。また開発者はより創造的に、`text-indent` プロパティで複数の値を組み合わせることが可能になりました。例: `text-indent: 3em hanging each-line`
 
 ### JavaScript
@@ -48,7 +48,7 @@ l10n:
 
 ### WebAssembly
 
-- WebAssembly で、新たに `return_call` および `return_call_indirect` 命令が [`call`](/ja/docs/WebAssembly/Reference/Control_flow/call) 命令をを置き換えることによって末尾呼び出し最適化をサポートしました。これはパフォーマンスの向上、スタック領域使用量の削減、末尾呼び出しを使用するプログラミング言語との互換性向上をもたらします。([Firefox bug 1858855](https://bugzil.la/1846789)).
+- WebAssembly で、新たに `return_call` および `return_call_indirect` 命令が [`call`](/ja/docs/WebAssembly/Reference/Control_flow/call) 命令を置き換えることによって末尾呼び出し最適化をサポートしました。これはパフォーマンスの向上、スタック領域使用量の削減、末尾呼び出しを使用するプログラミング言語との互換性向上をもたらします。([Firefox bug 1858855](https://bugzil.la/1846789)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

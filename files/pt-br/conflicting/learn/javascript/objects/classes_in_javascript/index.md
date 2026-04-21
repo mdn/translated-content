@@ -3,7 +3,7 @@ title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientado a objetos (OOJS) — Este artigo apresenta uma visão básica da teoria de programação orientada a objeto (OOP), em seguida, explora como o JavaScript emula as classes de objetos através de funções de construtor e como criar instâncias de objeto.
 
@@ -14,9 +14,9 @@ Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientad
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS, familiaridade com o básico do JavaScript (consulte
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Blocos de construção</a
         >) e noções básicas do OOJS (consulte
         <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
@@ -299,7 +299,7 @@ Este artigo forneceu uma visão simplificada da teoria orientada a objetos — i
 
 No próximo artigo, vamos explorar os protótipos de objetos JavaScript.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ## Neste módulo
 

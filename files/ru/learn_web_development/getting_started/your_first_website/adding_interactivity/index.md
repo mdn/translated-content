@@ -3,7 +3,7 @@ title: Основы JavaScript
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript – это язык программирования, который добавляет интерактивность на ваш веб-сайт (например: игры, отклик при нажатии кнопок или при вводе данных в формы, динамические стили, анимация). Эта статья поможет вам начать работать с этим захватывающим языком и даст вам представление о том, на что он способен.
 
@@ -19,7 +19,7 @@ JavaScript сам по себе довольно компактный, но оч
 - Сторонние API позволяют разработчикам внедрять функциональность в свои сайты от других разработчиков, таких как Twitter или Facebook.
 - Также вы можете применить к вашему HTML сторонние фреймворки и библиотеки, что позволит вам ускорить создание сайтов и приложений.
 
-Поскольку эта статья должна быть только лёгким введением в JavaScript, мы не собираемся путать вас на этом этапе, подробно рассказывая о том, какая разница между основным языком JavaScript и различными инструментами, перечисленными выше. Вы можете подробно изучить все это позже, в нашей [учебной области JavaScript](/ru/docs/Learn/JavaScript) и в остальной части MDN.
+Поскольку эта статья должна быть только лёгким введением в JavaScript, мы не собираемся путать вас на этом этапе, подробно рассказывая о том, какая разница между основным языком JavaScript и различными инструментами, перечисленными выше. Вы можете подробно изучить все это позже, в нашей [учебной области JavaScript](/ru/docs/Learn_web_development/Core/Scripting) и в остальной части MDN.
 
 Ниже мы познакомим вас с некоторыми аспектами основного языка, и вы также будете играть с несколькими функциями API браузера. Веселитесь!
 
@@ -330,6 +330,6 @@ myHTML.onclick = function () {};
 
 Если вы застряли, вы всегда можете сравнить свою работу с нашим [готовым примером кода на Github](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 
-Здесь мы узнали только самую поверхность JavaScript. Если вам понравился этот язык и вы хотите изучить его поглубже, перейдите к нашему разделу [изучение JavaScript](/ru/docs/Learn/JavaScript).
+Здесь мы узнали только самую поверхность JavaScript. Если вам понравился этот язык и вы хотите изучить его поглубже, перейдите к нашему разделу [изучение JavaScript](/ru/docs/Learn_web_development/Core/Scripting).
 
-{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}

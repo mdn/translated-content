@@ -3,7 +3,7 @@ title: "ARIA : attribut aria-labelledby"
 short-title: aria-labelledby
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
 l10n:
-  sourceCommit: 16872c1ba8d44b5ff5f016497e52e0d4682467dc
+  sourceCommit: 2f20bc484496536ba975dc33d9af4e4fb6b9413b
 ---
 
 L'attribut `aria-labelledby` identifie l'élément (ou les éléments) qui servent de libellé à l'élément sur lequel il est appliqué.
@@ -18,7 +18,7 @@ Tous les éléments interactifs doivent avoir un nom accessible. `aria-labelledb
 
 S'il n'existe aucun contenu pouvant être référencé pour créer un nom accessible, il faut utiliser l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) à la place.
 
-Le but de `aria-labelledby` est le même que celui de `aria-label`. Il fournit à l'utilisateur·ice un nom accessible reconnaissable pour un élément interactif. Si un élément possède les deux attributs, c'est `aria-labelledby` qui sera utilisé. `aria-labelledby` a la priorité sur toutes les autres méthodes pour fournir un nom accessible, y compris `aria-label`, {{HTMLElement('label')}} et le texte interne de l'élément.
+Le but de `aria-labelledby` est le même que celui de `aria-label`. Il fournit à l'utilisateur·ice un nom accessible reconnaissable pour un élément interactif. Si un élément possède les deux attributs, c'est `aria-labelledby` qui sera utilisé. `aria-labelledby` prévaut également sur la plupart des autres méthodes permettant de fournir un nom accessible, comme {{HTMLElement("label")}} et le texte interne de l'élément. Notez que {{DOMxRef("Element.ariaLabelledByElements")}} a la priorité la plus élevée pour définir le libellé ARIA.
 
 Les attributs `aria-labelledby` et [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) référencent tous deux d'autres éléments pour calculer des alternatives textuelles. `aria-labelledby` doit référencer un texte court qui fournit à l'élément un nom accessible. `aria-describedby` sert à référencer un contenu plus long qui fournit une description. S'il n'existe aucun élément dans le DOM qui fournit un libellé bref approprié pour un nom accessible d'un élément interactif, utilisez `aria-label` pour définir le nom accessible de cet élément.
 
@@ -36,7 +36,11 @@ L'exemple suivant utilise `aria-labelledby` pour fournir un nom accessible à un
 <span id="tac">J'accepte les conditions générales.</span>
 ```
 
-Notez que l'utilisation de `aria-labelledby` est similaire dans cette situation à l'utilisation d'un élément HTML {{HTMLElement('label')}} avec l'attribut `for`, mais il existe des différences importantes. L'attribut `aria-labelledby` ne définit que le nom accessible. Il ne fournit pas les autres fonctionnalités de `<label>`, comme le fait que cliquer sur l'élément de libellé active l'entrée associée. Il faut ajouter ce comportement avec JavaScript.
+> [!NOTE]
+> Les éléments {{HTMLElement("span")}} ont par défaut le [rôle `generic`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) et ne peuvent pas utiliser `aria-labelledby` sauf s'ils définissent aussi un rôle qui peut fournir un nom accessible.
+> Ici, nous le faisons avec `role="checkbox"`.
+
+Bien que l'utilisation de `aria-labelledby` soit similaire dans cette situation à l'utilisation d'un élément HTML {{HTMLElement('label')}} avec l'attribut `for`, il existe des différences importantes. L'attribut `aria-labelledby` ne définit que le nom accessible. Il ne fournit pas les autres fonctionnalités de `<label>`, comme le fait que cliquer sur l'élément de libellé active l'entrée associée. Il faut ajouter ce comportement avec JavaScript.
 
 Heureusement, l'élément HTML {{HTMLElement('input')}} avec `type="checkbox"` fonctionne nativement avec `<label>`. Lorsque cela est possible, privilégiez la solution suivante&nbsp;:
 

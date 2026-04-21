@@ -1,12 +1,12 @@
 ---
-title: :read-only
+title: Pseudo-classe CSS `:read-only`
+short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
-original_slug: Web/CSS/:read-only
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-only`** permet de cibler les éléments (tels que certains types de {{htmlelement("input")}} et {{htmlelement("textarea")}}) qui ne sont pas modifiables par l'utilisateur·ice. Les éléments sur lesquels l'attribut HTML [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) n'a pas d'effet (tels que [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et tous les autres éléments non liés à un formulaire) sont également sélectionnés par la pseudo-classe `:read-only`. En fait, `:read-only` correspond à tout ce qui ne correspond pas à {{cssxref(":read-write")}}, ce qui le rend équivalent à `:not(:read-write)`.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-only`** permet de cibler les éléments (tels que certains types de {{HTMLElement("input")}} et {{HTMLElement("textarea")}}) qui ne sont pas modifiables par l'utilisateur·ice. Les éléments sur lesquels l'attribut HTML [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) n'a pas d'effet (tels que [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et tous les autres éléments non liés à un formulaire) sont également sélectionnés par la pseudo-classe `:read-only`. En fait, `:read-only` correspond à tout ce qui ne correspond pas à {{CSSxRef(":read-write")}}, ce qui le rend équivalent à `:not(:read-write)`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :read-only", "tabbed-shorter")}}
 
@@ -226,5 +226,5 @@ p:read-write {
 
 ## Voir aussi
 
-- {{cssxref(":read-write")}}
+- La pseudo-classe {{CSSxRef(":read-write")}}
 - L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable)

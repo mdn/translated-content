@@ -1,12 +1,11 @@
 ---
 title: Gérer les problèmes courants en JavaScript
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
   sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Extensions/Testing")}}
 
 Dans cet article, nous verrons certains problèmes fréquents qui se posent entre les différents navigateurs avec JavaScript, et aussi comment les résoudre.
 
@@ -16,7 +15,7 @@ Pour cela, nous aborderons entre autres les outils de développement des navigat
   <tbody>
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaissance des bases de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">des principes de tests entre les différents navigateurs</a>.
+      <td>Connaissance des bases de <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>, <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn_web_development/Extensions/Testing/Introduction">des principes de tests entre les différents navigateurs</a>.
       </td>
     </tr>
     <tr>
@@ -95,7 +94,7 @@ npm install -g eslint
 
 On peut alors utiliser la commande `eslint` dans un projet pour en analyser les fichiers.
 
-Ces outils peuvent être utilisés avec les outils de compilation comme [Gulp](https://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour analyser automatiquement le code JavaScript lors du développement (voir comment [Utiliser un agent pour automatiser les tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) dans un article suivant). Voir la page sur [les intégrations ESLint avec les outils de compilation](https://eslint.org/docs/latest/use/integrations#build-tools).
+Ces outils peuvent être utilisés avec les outils de compilation comme [Gulp](https://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour analyser automatiquement le code JavaScript lors du développement (voir comment [Utiliser un agent pour automatiser les tests](/fr/docs/Learn_web_development/Extensions/Testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) dans un article suivant). Voir la page sur [les intégrations ESLint avec les outils de compilation](https://eslint.org/docs/latest/use/integrations#build-tools).
 
 ### Les outils de développement des navigateurs
 
@@ -413,4 +412,4 @@ Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec 
 
 Et voilà pour JavaScript. Ce n'est pas si simple, mais cet article devrait vous donner quelques points de départ et idées pour diagnostiquer et résoudre certains problèmes JavaScript que vous pourriez rencontrer à l'avenir.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/HTML_and_CSS","Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Extensions/Testing")}}

@@ -72,7 +72,7 @@ exampleSocket.send(
 );
 ```
 
-Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/docs/JavaScript_typed_arrays/ArrayBuffer).
+Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
 
 > [!NOTE]
 > Nas versões anteriores à 11, o Firefox suporta apenas o envio de dados como string.
@@ -176,7 +176,7 @@ exampleSocket.onmessage = function (event) {
 };
 ```
 
-Aqui utilizamos [`JSON.parse()`](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
+Aqui utilizamos [`JSON.parse()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) para conveter o objeto JSON de volta ao objeto original, em seguida, examine e aja de acordo com seu conteúdo.
 
 ### Formato de dados de texto
 

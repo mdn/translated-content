@@ -1,9 +1,8 @@
 ---
 title: palette-mix()
 slug: Web/CSS/Reference/Properties/font-palette/palette-mix
-original_slug: Web/CSS/font-palette/palette-mix
 l10n:
-  sourceCommit: 879e0a9c9d60831afcc7f66ea1b5f43ea0cd4361
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -39,7 +38,7 @@ palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 
 - `method`
-  - : 混合する伊六区間を指定する {{cssxref("&lt;color-interpolation-method&gt;")}} です。
+  - : 混合する色空間を指定する {{cssxref("&lt;color-interpolation-method&gt;")}} です。
 - `palette1`, `palette2`
   - : 互いに混合する {{cssxref("font-palette")}} 値です。これは任意の `font-palette` 値を取ることができます。 `palette-mix()` 関数、`normal`、`dark`、`light` などです。
 - `p1`, `p2` {{optional_inline}}
@@ -49,6 +48,10 @@ palette-mix(method, palette1 [p1], palette2 [p2])
     - `p2` が省略された場合は、 `p2 = 100% - p1` となります。
     - `p1 = p2 = 0%` であった場合は、この関数は無効になります。
     - `p1 + p2 ≠ 100%` であった場合は、 `p1' = p1 / (p1 + p2)` および `p2' = p2 / (p1 + p2)` となります。ここで、 `p1'` と `p2'` は正規化された結果です。
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -71,35 +74,35 @@ HTML には、フォント情報を適用するための 3 つの段落があり
 CSS では、 Google Fonts からカラーフォントをインポートし、 {{cssxref("@font-palette-values")}} アットルールを使って 2 つのカスタムフォントパレット値を定義します。次に、段落に 3 つの異なる `font-palette` 値（`--yellow`、`--blue`、そして `palette-mix()` を使って青色と黄色のパレットを混合して作成した新しい緑色のパレット）を適用します。
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Nabla&display=swap";
 
-@font-palette-values --blueNabla {
-  font-family: Nabla;
+@font-palette-values --blue-nabla {
+  font-family: "Nabla";
   base-palette: 2; /* これは Nabla の青いパレット */
 }
 
-@font-palette-values --yellowNabla {
-  font-family: Nabla;
+@font-palette-values --yellow-nabla {
+  font-family: "Nabla";
   base-palette: 7; /* これは Nabla の黄色いパレット */
 }
 
 p {
-  font-family: "Nabla";
+  font-family: "Nabla", fantasy;
   font-size: 4rem;
   text-align: center;
   margin: 0;
 }
 
 .yellowPalette {
-  font-palette: --yellowNabla;
+  font-palette: --yellow-nabla;
 }
 
 .bluePalette {
-  font-palette: --blueNabla;
+  font-palette: --blue-nabla;
 }
 
 .mixedPalette {
-  font-palette: palette-mix(in lch, --blueNabla 55%, --yellowNabla 45%);
+  font-palette: palette-mix(in lch, --blue-nabla 55%, --yellow-nabla 45%);
 }
 ```
 
@@ -122,5 +125,5 @@ p {
 - {{cssxref("font-palette")}}
 - {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
-- [CSS 色値](/ja/docs/Web/CSS/CSS_colors/Color_values)ガイド
-- {{glossary("Color space","色空間")}}
+- [CSS 色値](/ja/docs/Web/CSS/Guides/Colors/Color_values)ガイド
+- {{glossary("Color space", "色空間")}}

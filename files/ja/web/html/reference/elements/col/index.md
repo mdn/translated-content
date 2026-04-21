@@ -137,7 +137,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -155,7 +155,7 @@ td {
       <th scope="row">許可されている親要素</th>
       <td>
         {{HTMLElement("colgroup")}} のみ。ただし開始タグが必須ではないため暗黙的に定義されることがあります。
-        {{HTMLElement("colgroup")}} 要素は <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性を持っていてはいけません。
+        {{HTMLElement("colgroup")}} 要素は <a href="/ja/docs/Web/HTML/Reference/Elements/colgroup#span"><code>span</code></a> 属性を持っていてはいけません。
       </td>
     </tr>
     <tr>

@@ -1,12 +1,11 @@
 ---
 title: base-palette
 slug: Web/CSS/Reference/At-rules/@font-palette-values/base-palette
-original_slug: Web/CSS/@font-palette-values/base-palette
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{cssxref("@font-palette-values")}} est utilisé pour spécifier le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 sera utilisée.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`base-palette`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour spécifier le nom ou l'index d'une palette prédéfinie à utiliser pour créer une nouvelle palette. Si la `base-palette` indiquée n'existe pas, alors la palette définie à l'index 0 sera utilisée.
 
 ## Syntaxe
 
@@ -25,11 +24,11 @@ Le descripteur `base-palette` se spécifie avec un index basé sur zéro des pal
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -90,8 +89,8 @@ h2 {
 
 ## Voir aussi
 
-- {{cssxref("@font-palette-values", "@font-palette-values")}}
-- Le descripteur {{cssxref("@font-palette-values/font-family", "font-family")}}
-- Le descripteur {{cssxref("@font-palette-values/override-colors", "override-colors")}}
-- La propriété {{cssxref("font-palette", "font-palette")}}
-- {{domxref("CSSFontPaletteValuesRule.basePalette")}}
+- La règle {{CSSxRef("@font-palette-values")}}
+- Le descripteur {{CSSxRef("@font-palette-values/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-palette-values/override-colors", "override-colors")}}
+- La propriété {{CSSxRef("font-palette")}}
+- La propriété API {{DOMxRef("CSSFontPaletteValuesRule.basePalette")}}

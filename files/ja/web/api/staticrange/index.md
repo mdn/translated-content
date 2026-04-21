@@ -2,7 +2,7 @@
 title: StaticRange
 slug: Web/API/StaticRange
 l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+  sourceCommit: f314991b236fce81b712a6df59e4643de0f98449
 ---
 
 {{APIRef("DOM")}}
@@ -18,22 +18,11 @@ l10n:
 ## コンストラクター
 
 - {{domxref("StaticRange.StaticRange", "StaticRange()")}}
-  - : プロパティの既定値を指定したオブジェクトを指定して、新しい `StaticRange` オブジェクトを作成します。
+  - : プロパティのデフォルト値を指定するオプションから、新しい `StaticRange` オブジェクトを作成します。
 
 ## インスタンスプロパティ
 
-_以下のプロパティは親インターフェイスである {{domxref("AbstractRange")}} から継承しています。_
-
-- {{domxref("StaticRange.collapsed")}} {{ReadOnlyInline}}
-  - : 論理値で、範囲が折りたたまれている場合は `true` となります。折りたたまれた範囲とは、開始位置と末尾位置が同じで、 0 文字の長さの範囲です。
-- {{domxref("StaticRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
-  - : `endOffset` プロパティで指定された範囲の末尾がある場所の {{domxref("Node")}} オブジェクトです。
-- {{domxref("StaticRange.endOffset")}} {{ReadOnlyInline}}
-  - : ノードの内容の先頭から、この範囲オブジェクトで表す範囲の先頭までのオフセットを文字数で表した整数値です。この値は `endContainer` ノードの長さよりも小さくなければなりません。
-- {{domxref("StaticRange.startContainer")}} {{ReadOnlyInline}}
-  - : `startOffset` プロパティで指定された範囲の先頭がある場所の {{domxref("Node")}} オブジェクトです。
-- {{domxref("StaticRange.startOffset")}} {{ReadOnlyInline}}
-  - : ノードの内容の先頭から、範囲オブジェクトが参照する内容の先頭の文字までのオフセットを文字数で表した整数値です。この値は `startContainer` で示すノードの長さよりも小さくなければなりません。
+_親インターフェイスである {{domxref("AbstractRange")}} から継承したプロパティがあります。_
 
 ## 使用上のメモ
 

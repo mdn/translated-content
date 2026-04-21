@@ -56,6 +56,6 @@ recognition.onerror = function (event) {
   "type": "privileged"
 ```
 
-## 関連項目
+## 関連情報
 
 - [Web Speech API](/ja/docs/Web/API/Web_Speech_API)

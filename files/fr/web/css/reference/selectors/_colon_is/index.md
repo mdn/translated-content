@@ -1,17 +1,17 @@
 ---
-title: :is()
+title: Pseudo-classe CSS `:is()`
+short-title: :is()
 slug: Web/CSS/Reference/Selectors/:is
-original_slug: Web/CSS/:is
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.
 
 > [!NOTE]
-> Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258](https://github.com/w3c/csswg-drafts/issues/3258).
+> Cette pseudo-classe avait d'abord été intitulée `:matches()` (puis `:any()`), avant d'être renommée en `:is()` avec [le ticket CSSWG n°3258 <sup>(angl.)</sup>](https://github.com/w3c/csswg-drafts/issues/3258).
 
-{{InteractiveExample("Démonstration CSS&nbsp;: :is", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: :is()", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {
@@ -19,7 +19,6 @@ ol {
   color: darkblue;
 }
 
-/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :is(ol, ul, menu:unsupported) :is(ol, ul) {
   color: green;
 }
@@ -66,15 +65,15 @@ ol {
 
 ### Paramètres
 
-La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), une liste séparée par des virgules d'un ou plusieurs sélecteurs comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
+La pseudo-classe `:is()` nécessite une [liste de sélecteurs](/fr/docs/Web/CSS/Guides/Selectors/Selector_structure#liste_de_sélecteurs), une liste séparée par des virgules d'un ou plusieurs sélecteurs comme argument. La liste ne doit pas contenir de [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements), mais tout autre sélecteur simple, composé ou complexe est autorisé.
 
 ### Différence entre `:is()` et `:where()`
 
-Contrairement à [`:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where) dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique)). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where#examples).
+Contrairement à {{CSSxRef(":where()")}} dont la spécificité vaut 0, `:is()` participe à la spécificité du sélecteur (elle prend la spécificité de son argument le plus spécifique). Vous pouvez observer cette différence sur [l'exemple de la page sur `:where()`](/fr/docs/Web/CSS/Reference/Selectors/:where#exemples).
 
 ### Analyse permissive de la liste des sélecteurs
 
-`:is()` et `:where()` acceptent une liste permissive de sélecteurs ([voir la spécification](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)).
+La spécification définit `:is()` et `:where()` comme acceptant une [liste de sélecteurs tolérante <sup>(angl.)</sup>](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
 
 En CSS, lorsque vous utilisez une liste de sélecteurs, si l'un des sélecteurs n'est pas valide, toute la liste est considérée comme non valide. Lorsque vous utilisez `:is()` ou `:where()`, au lieu que toute la liste de sélecteurs soit considérée comme non valide si l'un d'entre eux ne peut être analysé, le sélecteur incorrect ou non pris en charge sera ignoré et les autres seront utilisés.
 
@@ -166,9 +165,9 @@ On pourra remplacer ce bloc avec&nbsp;:
 
 ### Simplifier les sélecteurs de section
 
-La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). En effet, les éléments {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
+La pseudo-classe `:is()` est notamment utile lorsqu'on manipule [les sections et titres HTML](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements). En effet, les éléments HTML {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} sont généralement imbriqués les uns avec les autres. Sans `:is()`, leur mise en forme à différents niveaux peut s'avérer délicate.
 
-Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments {{HTMLElement("Heading_Elements", "h1")}} situés à différentes profondeurs&nbsp;:
+Ainsi, sans `:is()`, il serait très compliqué de cibler tous les éléments `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}` situés à différentes profondeurs&nbsp;:
 
 ```css
 /* Niveau 0 */
@@ -269,6 +268,6 @@ un-element::after {
 
 ## Voir aussi
 
-- {{CSSxRef(":where", ":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) qui vaut 0.
+- {{CSSxRef(":where()")}}&nbsp;: comme `:is()`, mais avec [une spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) qui vaut 0.
 - [Liste de sélecteurs](/fr/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [Composants web](/fr/docs/Web/API/Web_components)

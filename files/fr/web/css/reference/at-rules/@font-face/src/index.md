@@ -1,12 +1,11 @@
 ---
 title: src
 slug: Web/CSS/Reference/At-rules/@font-face/src
-original_slug: Web/CSS/@font-face/src
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
 ---
 
-Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`src`** pour la règle {{cssxref("@font-face")}} spécifie la ressource contenant les données de la police. Il est obligatoire pour que la règle `@font-face` soit valide.
+Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`src`** pour la règle {{CSSxRef("@font-face")}} spécifie la ressource contenant les données de la police. Il est obligatoire pour que la règle `@font-face` soit valide.
 
 ## Syntaxe
 
@@ -44,7 +43,7 @@ src:
 ### Valeurs
 
 - `url()`
-  - : Définit une référence externe composée d'une {{cssxref("url_value", "&lt;url&gt;")}}, suivie éventuellement d'indices via les composants `format()` et `tech()` qui précisent le format et la technologie de la police référencée par l'URL. Les composants `format()` et `tech()` sont une liste de chaînes séparées par des virgules correspondant à des [formats de police](#formats_de_police) et des technologies connus. Si un agent utilisateur ne prend pas en charge la technologie ou le format, il ignore le téléchargement de la ressource. Si aucun indice n'est fourni, la ressource est toujours téléchargée.
+  - : Définit une référence externe composée d'une {{CSSxRef("url_value", "&lt;url&gt;")}}, suivie éventuellement d'indices via les composants `format()` et `tech()` qui précisent le format et la technologie de la police référencée par l'URL. Les composants `format()` et `tech()` sont une liste de chaînes séparées par des virgules correspondant à des [formats de police](#formats_de_police) et des technologies connus. Si un agent utilisateur ne prend pas en charge la technologie ou le format, il ignore le téléchargement de la ressource. Si aucun indice n'est fourni, la ressource est toujours téléchargée.
 
 - `format()`
   - : Déclaration optionnelle qui suit la valeur `url()` et donne une indication à l'agent utilisateur sur le format de la police. Si la valeur n'est pas prise en charge ou invalide, le navigateur peut ne pas télécharger la ressource, ce qui permet d'économiser de la bande passante. Si elle est omise, le navigateur télécharge la ressource et détecte le format. Si vous incluez une source de police pour la rétrocompatibilité qui n'est pas dans la liste des [mots-clés définis](#syntaxe_formelle), mettez la chaîne de format entre guillemets. Les valeurs possibles sont décrites dans la section [Formats de police](#formats_de_police) ci-dessous.
@@ -59,7 +58,7 @@ src:
     > [!NOTE]
     > Les polices disponibles localement peuvent avoir été préinstallées sur l'appareil de l'utilisateur·rice ou installées activement par celle·celui-ci.
     >
-    > Alors que l'ensemble des polices préinstallées est probablement identique pour tous les utilisateur·ice·s d'un même appareil, l'ensemble des polices installées par l'utilisateur·rice ne l'est pas. En découvrant cet ensemble, un site peut donc établir une {{glossary("fingerprinting", "empreinte")}} pour l'appareil, ce qui aide le site à suivre les utilisateur·ice·s sur le web.
+    > Alors que l'ensemble des polices préinstallées est probablement identique pour tous les utilisateur·ice·s d'un même appareil, l'ensemble des polices installées par l'utilisateur·rice ne l'est pas. En découvrant cet ensemble, un site peut donc établir une {{Glossary("fingerprinting", "empreinte")}} pour l'appareil, ce qui aide le site à suivre les utilisateur·ice·s sur le web.
     >
     > Pour éviter cela, les agents utilisateurs peuvent ignorer les polices installées par l'utilisateur·rice lors de l'utilisation de `local()`.
 
@@ -67,12 +66,12 @@ src:
   - : Définit le nom complet ou le nom Postscript d'une fonte installée localement via la valeur `local()`, ce qui identifie de façon unique une fonte au sein d'une famille plus large. Le nom peut être entouré de guillemets. Le nom de la fonte [n'est pas sensible à la casse](https://drafts.csswg.org/css-fonts-3/#font-family-casing).
 
 > [!NOTE]
-> L'{{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}} permet d'accéder aux données des polices installées localement par l'utilisateur·rice&nbsp;: cela inclut des détails de haut niveau comme les noms, styles et familles, ainsi que les octets bruts des fichiers de police sous-jacents.
+> L'{{DOMxRef("Local Font Access API", "API Local Font Access", "", "nocode")}} permet d'accéder aux données des polices installées localement par l'utilisateur·rice&nbsp;: cela inclut des détails de haut niveau comme les noms, styles et familles, ainsi que les octets bruts des fichiers de police sous-jacents.
 
 ## Description
 
 La valeur de ce descripteur est une liste priorisée, séparée par des virgules, de références externes ou de noms de fontes installées localement, où chaque ressource est spécifiée via `url()` ou `local()`.
-Lorsqu'une police est nécessaire, l'{{glossary("user agent", "agent utilisateur")}} parcourt la liste des références et utilise la première qu'il peut activer avec succès.
+Lorsqu'une police est nécessaire, l'{{Glossary("user agent", "agent utilisateur")}} parcourt la liste des références et utilise la première qu'il peut activer avec succès.
 Les polices contenant des données invalides ou les fontes locales introuvables sont ignorées et l'agent utilisateur charge la police suivante de la liste.
 
 Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
@@ -98,7 +97,7 @@ src: url("fonts.svg#WhichFont");
 ### Formats de police
 
 Le tableau suivant présente les mots-clés valides et leurs formats de police correspondants.
-Pour vérifier si un format de police est pris en charge par un navigateur en CSS, utilisez la règle {{cssxref("@supports", "@supports")}}.
+Pour vérifier si un format de police est pris en charge par un navigateur en CSS, utilisez la règle {{CSSxRef("@supports", "@supports")}}.
 
 | Mot-clé             | Format de police      | Extensions courantes |
 | ------------------- | --------------------- | -------------------- |
@@ -127,7 +126,7 @@ Les anciennes valeurs non normalisées de `format()` ont la syntaxe équivalente
 ### Technologies de police
 
 Le tableau suivant présente les valeurs valides pour le descripteur `tech()` et leurs technologies de police correspondantes.
-Pour vérifier si une technologie de police est prise en charge par un navigateur en CSS, utilisez la règle {{cssxref("@supports", "@supports")}}.
+Pour vérifier si une technologie de police est prise en charge par un navigateur en CSS, utilisez la règle {{CSSxRef("@supports", "@supports")}}.
 
 | Mot-clé             | Description                                                                                        |
 | :------------------ | :------------------------------------------------------------------------------------------------- |
@@ -145,7 +144,7 @@ Pour vérifier si une technologie de police est prise en charge par un navigateu
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
@@ -243,7 +242,7 @@ Certains navigateurs n'[ignorent pas encore les éléments invalides](#compatibi
 
 ### Vérifier si l'agent utilisateur prend en charge une police
 
-L'exemple suivant montre comment vérifier si l'agent utilisateur prend en charge une technologie de police avec la règle {{cssxref("@supports")}}. Le bloc CSS à l'intérieur de `@supports` sera appliqué si l'agent utilisateur prend en charge la technologie `color-COLRv1`.
+L'exemple suivant montre comment vérifier si l'agent utilisateur prend en charge une technologie de police avec la règle {{CSSxRef("@supports")}}. Le bloc CSS à l'intérieur de `@supports` sera appliqué si l'agent utilisateur prend en charge la technologie `color-COLRv1`.
 
 ```css
 @supports font-tech(color-COLRv1) {
@@ -268,13 +267,13 @@ L'exemple suivant montre comment vérifier si l'agent utilisateur prend en charg
 
 ## Voir aussi
 
-- {{cssxref("@font-face", "@font-face")}}
-- {{cssxref("@supports", "@supports")}}
-- {{cssxref("@font-face/font-display", "font-display")}}
-- {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
-- {{cssxref("@font-face/font-style", "font-style")}}
-- {{cssxref("@font-face/font-weight", "font-weight")}}
-- {{cssxref("font-feature-settings", "font-feature-settings")}}
-- {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
-- Le descripteur {{cssxref("@font-face/unicode-range", "unicode-range")}}
+- La règle {{CSSxRef("@font-face", "@font-face")}}
+- La règle {{CSSxRef("@supports", "@supports")}}
+- Le descripteur {{CSSxRef("@font-face/font-display", "font-display")}}
+- Le descripteur {{CSSxRef("@font-face/font-family", "font-family")}}
+- Le descripteur {{CSSxRef("@font-face/font-stretch", "font-stretch")}}
+- Le descripteur {{CSSxRef("@font-face/font-style", "font-style")}}
+- Le descripteur {{CSSxRef("@font-face/font-weight", "font-weight")}}
+- Le descripteur {{CSSxRef("@font-face/font-feature-settings", "font-feature-settings")}}
+- Le descripteur {{CSSxRef("@font-face/font-variation-settings", "font-variation-settings")}}
+- Le descripteur {{CSSxRef("@font-face/unicode-range", "unicode-range")}}

@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 {{LearnSidebar}}
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. Este artigo mostra a sintaxe necessária para criar um link e discute as suas melhores práticas.
 
@@ -17,11 +17,11 @@ Os hiperlinks são realmente importantes — são o que torna a Web uma _web_. E
       <td>
         <p>
           Familiaridade básica em HTML, conforme
-          <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
+          <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
             >Começando com o HTML</a
           >. Formatação de texto em HTML, conforme
           <a
-            href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML"
+            href="/pt-BR/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >Fundamentos do texto em HTML</a
           >.
         </p>
@@ -50,7 +50,7 @@ A página inicial da BBC, por exemplo, contém um grande número de links que ap
 
 ## Anatomia de um link
 
-Um link básico é criado envolvendo o texto (ou outro conteúdo, veja [Block level links](#block_level_links)) que você quer transformar em um link dentro de um elemento {{htmlelement("a")}}, e dando-lhe um atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href), (também conhecido como **Hypertext Reference**, ou **target**) que conterá o endereço da Web para o qual você deseja que o link aponte.
+Um link básico é criado envolvendo o texto (ou outro conteúdo, veja [Block level links](#block_level_links)) que você quer transformar em um link dentro de um elemento {{htmlelement("a")}}, e dando-lhe um atributo [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/a#href), (também conhecido como **Hypertext Reference**, ou **target**) que conterá o endereço da Web para o qual você deseja que o link aponte.
 
 ```html
 <p>
@@ -309,7 +309,7 @@ Na sua forma mais comum, um `mailto:` simplesmente indica o endereço de e-mail 
 
 Isso resulta em um _link_ que se parece com isto: [Enviar e-mail para lugar nenhum.](mailto:nowhere@mozilla.org)
 
-Na verdade, o endereço de e-mail é opcional. Se você deixar de fora (ou seja, seu [`href`](/pt-BR/docs/Web/HTML/Element/a#href) for simplesmente "mailto:"), uma nova janela de e-mail de saída será aberta pelo aplicativo de e-mail do usuário sem um destinatário. Isso geralmente é útil como "Compartilhar" _links_ que os usuários podem clicar para enviar um e-mail para um endereço escolhido.
+Na verdade, o endereço de e-mail é opcional. Se você deixar de fora (ou seja, seu [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/a#href) for simplesmente "mailto:"), uma nova janela de e-mail de saída será aberta pelo aplicativo de e-mail do usuário sem um destinatário. Isso geralmente é útil como "Compartilhar" _links_ que os usuários podem clicar para enviar um e-mail para um endereço escolhido.
 
 ### Especificando detalhes
 
@@ -339,4 +339,4 @@ Aqui estão alguns outros exemplos de URLs de `mailto:`
 
 Por enquanto isto é tudo sobre links! Você retornará aos links mais tarde no curso quando começar a analisar o estilo deles. Em seguida, em HTML, retornaremos à semântica de texto e veremos alguns recursos mais avançados/incomuns que você achará úteis — No próximo artigo você verá a formatação avançada de texto.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

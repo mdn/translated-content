@@ -301,4 +301,4 @@ background-position:
 
 В следующем уроке мы узнаем, как Режим написания вашего документа взаимодействует с вашим CSS. Что происходит, если текст не перетекает слева направо?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_different_text_directions", "Learn_web_development/Core/Styling_basics")}}

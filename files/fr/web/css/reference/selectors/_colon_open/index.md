@@ -1,9 +1,9 @@
 ---
-title: :open
+title: Pseudo-classe CSS `:open`
+short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
-original_slug: Web/CSS/:open
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:open`** représente un élément qui a des états ouverts et fermés, uniquement lorsqu'il est actuellement dans l'état ouvert.
@@ -20,17 +20,17 @@ La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/f
 
 La pseudo-classe `:open` sélectionne tout élément actuellement dans l'état ouvert, ce qui inclut les éléments suivants&nbsp;:
 
-- Les éléments {{htmlelement("details")}} et {{htmlelement("dialog")}} qui sont dans un état ouvert, c'est-à-dire qu'ils ont l'attribut `open` défini.
-- Les éléments {{htmlelement("input")}} qui affichent une interface de sélection pour que l'utilisateur·ice choisisse une valeur (par exemple [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)), lorsque le sélecteur est affiché.
-- Les éléments {{htmlelement("select")}} qui affichent un sélecteur déroulant pour que l'utilisateur·ice choisisse une valeur, lorsque le sélecteur est affiché. Notez que lors de l'implémentation d'[éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), le sélecteur lui-même peut être sélectionné à l'aide du pseudo-élément {{cssxref("::picker()", "::picker(select)")}}.
+- Les éléments {{HTMLElement("details")}} et {{HTMLElement("dialog")}} qui sont dans un état ouvert, c'est-à-dire qu'ils ont l'attribut `open` défini. Cette sélection peut également être effectuée à l'aide d'un sélecteur d'attribut&nbsp;: `details[open]`.
+- Les éléments {{HTMLElement("input")}} qui affichent une interface de sélection pour que l'utilisateur·ice choisisse une valeur (par exemple [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)), lorsque le sélecteur est affiché.
+- Les éléments {{HTMLElement("select")}} qui affichent un sélecteur déroulant pour que l'utilisateur·ice choisisse une valeur, lorsque le sélecteur est affiché. Notez que lors de l'implémentation [d'éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), le sélecteur lui-même peut être sélectionné à l'aide du pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}.
 
-Notez que les états ouvert et fermé sont des états sémantiques, et ne correspondent pas nécessairement à la visibilité de l'élément en question. Par exemple, un élément `<details>` qui est développé pour afficher son contenu est ouvert, et sera sélectionné par le sélecteur `details:open`, même s'il est masqué avec une valeur {{cssxref("visibility")}} de `hidden`.
+Notez que les états ouvert et fermé sont des états sémantiques, et ne correspondent pas nécessairement à la visibilité de l'élément en question. Par exemple, un élément `<details>` qui est développé pour afficher son contenu est ouvert, et sera sélectionné par le sélecteur `details:open`, même s'il est masqué avec une valeur {{CSSxRef("visibility")}} de `hidden`.
 
-Les éléments {{domxref("Popover API", "Popover", "", "nocode")}} (c'est-à-dire, les éléments avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) défini sur eux) ont des états sémantiques distincts représentant des popovers qui sont affichés ou masqués, qui peuvent coexister avec des états ouverts et fermés. Pour cibler un élément popover dans un état affiché, utilisez la pseudo-classe {{cssxref(":popover-open")}} à la place.
+Les éléments {{DOMxRef("Popover API", "de fenêtre contextuelle", "", 1)}} (c'est-à-dire, les éléments avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) défini sur eux) ont des états sémantiques distincts représentant des popovers qui sont affichés ou masqués, qui peuvent coexister avec des états ouverts et fermés. Pour cibler un élément popover dans un état affiché, utilisez la pseudo-classe {{CSSxRef(":popover-open")}} à la place.
 
 ## Exemples
 
-### Utilisation de base de `:open`
+### Utilisation simple de `:open`
 
 Cet exemple démontre certains des éléments HTML qui ont un état ouvert.
 
@@ -49,7 +49,7 @@ details:open > summary {
 ```css hidden
 @supports not selector(:open) {
   body::before {
-    content: "Your browser doesn't support :open selector.";
+    content: "Votre navigateur ne prend pas en charge le sélecteur :open.";
     background-color: wheat;
     display: block;
     width: 100%;
@@ -88,11 +88,11 @@ details:open > summary {
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_base_de_open", 300, 200)}}
+{{EmbedLiveSample("Utilisation simple de `:open`", 300, 200)}}
 
-### Personnalisation du style de `<select>` avec `:open`
+### Personnaliser le style de `<select>` avec `:open`
 
-Dans cet exemple, nous donnons un style de base à un élément {{htmlelement("select")}}. La pseudo-classe `:open` est utilisée pour appliquer une amélioration de style à son état ouvert — lorsque le menu déroulant est affiché.
+Dans cet exemple, nous donnons un style de base à un élément HTML {{HTMLElement("select")}}. La pseudo-classe `:open` est utilisée pour appliquer une amélioration de style à son état ouvert — lorsque le menu déroulant est affiché.
 
 #### HTML
 
@@ -118,13 +118,13 @@ Il n'y a rien de spécial dans notre sélecteur de fruits.
 ```
 
 > [!NOTE]
-> Nous n'utilisons pas un `<select>` multi-lignes (c'est-à-dire, un avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) défini) — ceux-ci ont tendance à s'afficher sous forme de zone de liste déroulante plutôt que de menu déroulant, donc n'ont pas d'état ouvert.
+> Nous n'utilisons pas un `<select>` multi-lignes (c'est-à-dire, un avec l'attribut HTML [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) défini) — ceux-ci ont tendance à s'afficher sous forme de zone de liste déroulante plutôt que de menu déroulant, donc n'ont pas d'état ouvert.
 
 #### CSS
 
-Dans le CSS, nous définissons une valeur {{cssxref("appearance")}} de `none` sur notre élément `<select>` pour supprimer le style OS par défaut de la boîte de sélection, et fournir quelques styles de base à nous. Plus précisément, nous définissons une image de fond {{glossary("SVG")}} d'une flèche vers le bas sur le côté droit — les utilisateur·ice·s ont tendance à reconnaître les éléments `<select>` par la flèche vers le bas, donc c'est une bonne idée de l'inclure.
+Dans le CSS, nous définissons une valeur {{CSSxRef("appearance")}} de `none` sur notre élément `<select>` pour supprimer le style OS par défaut de la boîte de sélection, et fournir quelques styles de base à nous. Plus précisément, nous définissons une image de fond {{Glossary("SVG")}} d'une flèche vers le bas sur le côté droit — les utilisateur·ice·s ont tendance à reconnaître les éléments `<select>` par la flèche vers le bas, donc c'est une bonne idée de l'inclure.
 
-Nous définissons ensuite un peu de {{cssxref("padding")}} sur l'élément {{htmlelement("label")}} environnant, et une bordure transparente pour garder la mise en page cohérente lorsque nous ajoutons plus tard une bordure colorée.
+Nous définissons ensuite un peu de {{CSSxRef("padding")}} sur l'élément HTML {{HTMLElement("label")}} environnant, et une bordure transparente pour garder la mise en page cohérente lorsque nous ajoutons plus tard une bordure colorée.
 
 ```css
 select {
@@ -148,7 +148,7 @@ label {
 }
 ```
 
-Quand le `<select>` est ouvert, nous utilisons la pseudo-classe `:open` pour définir une couleur de fond différente et changer l'image de fond en une flèche vers le haut. Nous définissons également une couleur de fond et une bordure différentes sur l'élément `<label>` environnant en utilisant une combinaison des pseudo-classes `:open` et {{cssxref(":has()")}} pour créer un sélecteur parent. Nous disons littéralement «&nbsp;sélectionnez le `<label>`, mais seulement lorsque son descendant `<select>` est ouvert&nbsp;».
+Quand le `<select>` est ouvert, nous utilisons la pseudo-classe `:open` pour définir une couleur de fond différente et changer l'image de fond en une flèche vers le haut. Nous définissons également une couleur de fond et une bordure différentes sur l'élément `<label>` environnant en utilisant une combinaison des pseudo-classes `:open` et {{CSSxRef(":has()")}} pour créer un sélecteur parent. Nous disons littéralement «&nbsp;sélectionnez le `<label>`, mais seulement lorsque son descendant `<select>` est ouvert&nbsp;».
 
 ```css
 select:open {
@@ -166,7 +166,7 @@ label:has(select:open) {
 
 Le résultat est le suivant. Essayez d'ouvrir le menu déroulant `<select>` pour voir l'effet sur le style&nbsp;:
 
-{{ EmbedLiveSample("Personnalisation_du_style_de_select_avec_open", "100%", "100") }}
+{{EmbedLiveSample("Personnaliser le style de `<select>` avec `:open`", "100%", 100)}}
 
 ## Spécifications
 
@@ -178,6 +178,6 @@ Le résultat est le suivant. Essayez d'ouvrir le menu déroulant `<select>` pour
 
 ## Voir aussi
 
-- Les éléments HTML {{htmlelement("details")}}, {{htmlelement("dialog")}}, {{htmlelement("select")}} et {{htmlelement("input")}}
-- La pseudo-classe {{cssxref(":popover-open")}}
-- {{Cssxref(":modal")}}
+- Les éléments HTML {{HTMLElement("details")}}, {{HTMLElement("dialog")}}, {{HTMLElement("select")}} et {{HTMLElement("input")}}
+- La pseudo-classe {{CSSxRef(":popover-open")}}
+- La pseudo-classe {{CSSxRef(":modal")}}

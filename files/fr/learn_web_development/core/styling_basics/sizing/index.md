@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Sizing
 original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.
 
 <table class="standard-table">
   <tbody>
@@ -14,17 +14,17 @@ original_slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
         <p>
           Maîtrise élémentaire de l'informatique,
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
             >suite logicielle de base installée</a
           >, compétences élémentaires pour
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
             >travailler avec des fichiers</a
           >, connaissance de base du HTML (cf.
-          <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
             >Introduction à HTML</a
           >), et une idée de
-          <a href="/fr/docs/Learn/CSS/First_steps">Comment fonctionne CSS</a>.
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Comment fonctionne CSS</a>.
         </p>
       </td>
     </tr>
@@ -114,10 +114,10 @@ Dimensionner les objets en fonction de la fenêtre peut s'avérer utile. Par exe
 
 ## Testez vos compétences !
 
-Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez retenu ces informations avant de passer à autre chose — voir [Tester vos compétences : Dimensionnement](/fr/docs/Learn/CSS/Building_blocks/Sizing_tasks).
+Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez retenu ces informations avant de passer à autre chose — voir [Tester vos compétences : Dimensionnement](/fr/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks).
 
 ## Résumé
 
 Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn_web_development/Core/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}

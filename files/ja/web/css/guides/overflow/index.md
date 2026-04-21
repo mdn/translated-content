@@ -1,9 +1,9 @@
 ---
 title: CSS オーバーフロー
+short-title: オーバーフロー
 slug: Web/CSS/Guides/Overflow
-original_slug: Web/CSS/CSS_overflow
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **CSS オーバーフロー**モジュールのプロパティを使用すると、視覚メディアでスクロール可能なオーバーフローを処理することができます。
@@ -35,7 +35,7 @@ l10n:
     </label>
     <label>
       <code>overflow-clip-margin</code>:
-      <input type="number" id="ocm" value="1" min="0" max="10" size="2" />
+      <input type="number" id="ocm" value="1" min="0" max="10" />
       <code>em</code>
     </label>
     <label
@@ -109,43 +109,43 @@ pre {
 }
 
 .hidden {
-  overflow: hidden hidden;
+  overflow: hidden;
 }
 .hidden::before {
   content: "hidden: ";
 }
 
 .clip {
-  overflow: clip clip;
+  overflow: clip;
 }
 .clip::before {
   content: "clip: ";
 }
 
 .scroll {
-  overflow: scroll scroll;
+  overflow: scroll;
 }
 .scroll::before {
   content: "scroll: ";
 }
 
 .auto {
-  overflow: auto auto;
+  overflow: auto;
 }
 .auto::before {
   content: "auto: ";
 }
 
 .overlay {
-  overflow: clip clip;
-  overflow: overlay overlay;
+  overflow: clip;
+  overflow: overlay;
 }
 .overlay::before {
   content: "overlay (or clip if not supported): ";
 }
 
 .visible {
-  overflow: visible visible;
+  overflow: visible;
 }
 .visible::before {
   content: "visible: ";
@@ -224,29 +224,37 @@ function clipMargin() {
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("scroll-behavior")}}
 - {{cssxref("scroll-marker-group")}}
+- {{cssxref("scroll-target-group")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
 
 > [!NOTE]
-> CSS オーバーフローモジュールレベル 4 では、 `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` の各プロパティが導入されました。これらはまだ実装されていません。
+> CSS オーバーフローモジュールレベル 4 では、 `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` の各プロパティも導入されています。今のところ、これらの機能に対応しているブラウザーはありません。
 
 ### セレクターと擬似要素
 
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref("::scroll-marker-group")}}
+- {{cssxref(":target-after")}}
+- {{cssxref(":target-before")}}
 - {{cssxref(":target-current")}}
 
 ### データ型
 
-- [`<overflow>`](/ja/docs/Web/CSS/Reference/Values/overflow_value) 列挙値
+- {{cssxref("&lt;overflow&gt;")}} 列挙値
+
+### 用語と定義
+
+- {{glossary("Scroll container", "スクロールコンテナー")}}
+- [スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)
 
 ## ガイド
 
 - [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : オーバーフローとは何か、どのように管理するかを学びます。
 - [CSS によるカルーセルの作成](/ja/docs/Web/CSS/Guides/Overflow/Carousels)
-  - : スクロールボタン、スクロールマーカー、および生成された段をを使用して、純粋な CSS によるカルーセル UI 機能を作成します。
+  - : スクロールボタン、スクロールマーカー、および生成された段を使用して、純粋な CSS によるカルーセル UI 機能を作成します。
 - [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/Reference/Properties/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
 

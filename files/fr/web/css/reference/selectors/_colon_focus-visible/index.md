@@ -1,12 +1,12 @@
 ---
-title: :focus-visible
+title: Pseudo-classe CSS `:focus-visible`
+short-title: :focus-visible
 slug: Web/CSS/Reference/Selectors/:focus-visible
-original_slug: Web/CSS/:focus-visible
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{cssxref(":focus")}} et que l'{{glossary("User Agent", "agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:focus-visible`** s'applique lorsqu'un élément correspond à la pseudo-classe {{CSSxRef(":focus")}} et que {{Glossary("User Agent", "l'agent utilisateur")}} détermine, via une heuristique, que le focus devrait être mis en évidence sur l'élément (la plupart des navigateurs affichent un contour en surbrillance par défaut).
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :focus-visible", "tabbed-shorter")}}
 
@@ -30,10 +30,10 @@ select:focus-visible {
 
 ```html interactive-example
 <form>
-  <p>Quelle saveur souhaitez-vous commander ?</p>
+  <p>Quelle saveur souhaitez-vous commander&nbsp;?</p>
   <label>Nom complet : <input name="firstName" type="text" /></label>
   <label
-    >Saveur :
+    >Saveur&nbsp;:
     <select name="flavor">
       <option>Cerise</option>
       <option>Thé vert</option>
@@ -62,13 +62,13 @@ Les navigateurs n'indiquent plus visiblement le focus (comme en traçant un «&n
 
 La pseudo-classe `:focus` correspond toujours à l'élément actuellement en focus. La pseudo-classe `:focus-visible` correspond également à l'élément en focus, mais uniquement si l'utilisateur·ice doit être informé de l'emplacement actuel du focus. Parce que la pseudo-classe `:focus-visible` correspond à l'élément en focus lorsque cela est nécessaire, l'utilisation de `:focus-visible` (au lieu de la pseudo-classe `:focus`) permet aux auteur·ice·s de modifier l'apparence de l'indicateur de focus sans changer le moment où l'indicateur de focus apparaît.
 
-Lorsque la pseudo-classe [`:focus`](/fr/docs/Web/CSS/Reference/Selectors/:focus) est utilisée, elle cible toujours l'élément actuellement en focus. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de focus visible apparaît autour de l'élément en focus, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de focus sélectif des agents utilisateur·ice·s tout en permettant la personnalisation de l'indicateur de focus.
+Lorsque la pseudo-classe {{CSSxRef(":focus")}} est utilisée, elle cible toujours l'élément actuellement en focus. Cela signifie que lorsque l'utilisateur·ice utilise un dispositif de pointage, un contour de focus visible apparaît autour de l'élément en focus, ce que certains considèrent comme intrusif. La pseudo-classe `:focus-visible` respecte le comportement d'indication de focus sélectif des agents utilisateur·ice·s tout en permettant la personnalisation de l'indicateur de focus.
 
 ## Accessibilité
 
 ### Troubles de la vision
 
-Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 Non-Text Contrast <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
+Il faut s'assurer que l'indicateur visuel de focus puisse être vu par des personnes ayant une vision faible. Cela pourra d'autant plus bénéficier aux personnes qui consultent le document dans un endroit fortement éclairé (dehors au soleil par exemple). La recommandation [WCAG 2.1 SC 1.4.11 pour le contraste non textuel <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) nécessite un contraste minimum de 3 à 1.
 
 - Indicateurs visuels de focus accessibles&nbsp;: [Conseils sur la conception d'indicateurs utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 
@@ -78,9 +78,9 @@ L'apparition ou la disparition d'un indicateur de focus peut être source de con
 
 ## Exemples
 
-### Comparaison de :focus et :focus-visible
+### Comparaison de `:focus` et `:focus-visible`
 
-Cet exemple présente trois paires de contrôles. Chaque paire se compose d'un champ de saisie [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) et d'un bouton.
+Cet exemple présente trois paires de contrôles. Chaque paire se compose d'un champ de saisie de type [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) et d'un bouton.
 
 - La première paire n'ajoute aucun style personnalisé pour les états de focus et affiche le cas par défaut.
 - La deuxième paire ajoute des styles à l'aide de la pseudo-classe `:focus`.
@@ -95,7 +95,8 @@ Cet exemple présente trois paires de contrôles. Chaque paire se compose d'un c
 <input class="focus-only" type="text" value=":focus" /><br />
 <button class="focus-only">:focus only</button><br />
 
-<input class="focus-visible-only" type="text" value=":focus-visible" /><br />
+<input class="focus-visible-only" type="text" value=":focus-visible" />
+<br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
@@ -122,11 +123,11 @@ Si vous parcourez ensuite chaque élément à l'aide de la touche Tab, vous cons
 
 Cela montre comment `:focus-visible` permet à un·e concepteur·rice de suivre la logique du navigateur pour déterminer quand un anneau de focus doit être affiché.
 
-{{EmbedLiveSample('Comparaison_de_focus_et_focus-visible', '100%', '300')}}
+{{EmbedLiveSample("Comparaison de `:focus` et `:focus-visible`", "100%", 300)}}
 
-### Fournir un :focus de repli
+### Fournir un `:focus` de repli
 
-Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{cssxref('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
+Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne prennent pas en charge `:focus-visible`, vérifiez la prise en charge de `:focus-visible` avec {{CSSxRef('@supports')}} et répétez le même style de mise en évidence, mais à l'intérieur d'une règle `:focus`. Notez que même si vous ne spécifiez rien du tout pour `:focus`, les anciens navigateurs afficheront simplement le contour natif, ce qui peut être suffisant.
 
 ```html
 <button class="button with-fallback" type="button">
@@ -159,7 +160,7 @@ Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne p
 }
 ```
 
-{{EmbedLiveSample("Fournir_un_focus_de_repli", '100%', 72)}}
+{{EmbedLiveSample("Fournir un `:focus` de repli", "100%", 72)}}
 
 ## Spécifications
 
@@ -171,5 +172,5 @@ Si votre code doit fonctionner dans d'anciennes versions de navigateurs qui ne p
 
 ## Voir aussi
 
-- {{cssxref(":focus")}}
-- {{cssxref(":focus-within")}}
+- La pseudo-classe {{CSSxRef(":focus")}}
+- La pseudo-classe {{CSSxRef(":focus-within")}}

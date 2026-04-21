@@ -1,140 +1,41 @@
 ---
-title: spellcheck
+title: "Attribut HTML universel : `spellcheck`"
+short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
-original_slug: Web/HTML/Global_attributes/spellcheck
+l10n:
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+[L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`spellcheck`** est un attribut [énuméré](/fr/docs/Glossary/Enumerated) qui définit si l'élément peut être vérifié pour les erreurs d'orthographe.
 
-L'attribut universel **`spellcheck`** est un attribut à valeur contrainte qui définit si l'orthographe du contenu de l'élément doit être vérifiée.
+> [!NOTE]
+> Cet attribut n'est qu'une indication pour le navigateur&nbsp;: les navigateurs ne sont pas tenus de vérifier les fautes d'orthographe. En général, les éléments non modifiables ne sont pas vérifiés, même si l'attribut `spellcheck` est défini sur `true` et que le navigateur prend en charge la vérification orthographique.
 
-{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: spellcheck", "tabbed-shorter")}}
 
 ```html interactive-example
 <textarea spellcheck="true">
-This exampull will be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will be checkd fur spellung when you try to edit it.
+</textarea>
 
 <textarea spellcheck="false">
-This exampull will nut be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will nut be checkd fur spellung when you try to edit it.
+</textarea>
 ```
 
-Les valeurs autorisées pour cet attribut sont :
+Les valeurs autorisées pour cet attribut sont&nbsp;:
 
-- `true` : cette valeur indique que, si possible, l'orthographe de l'élément doit être vérifiée avec le correcteur orthographique.
-- `false` : cette valeur indique que l'orthographe de l'élément ne doit pas être vérifié.
+- une chaîne de caractères vide ou `true`, indique que l'élément peut, si possible, vérifier l'orthographe avec le correcteur orthographique&nbsp;;
+- `false`, indique que l'élément ne doit pas vérifier les fautes d'orthographe.
 
-La valeur par défaut de l'attribut (utilisée si elle n'est pas définie explicitement) sera fonction du navigateur et du type d'élément. Cette valeur par défaut peut également être héritée (autrement dit, la valeur utilisée pour l'élément courant sera la valeur explicite définie pour son plus proche ancêtre dans l'arbre des éléments).
+Si cet attribut n'est pas défini, sa valeur par défaut est définie par le type d'élément et le navigateur. Cette valeur par défaut peut également être _héritée_, ce qui signifie que le contenu de l'élément ne sera vérifié pour les fautes d'orthographe que si son ancêtre le plus proche a un état _spellcheck_ de `true`.
 
-Cet attribut est un attribut à valeur contrainte, ce n'est pas un attribut booléen. Il faut donc utiliser explicitement les valeurs `true` ou `false`. Ainsi :
+## Problèmes de sécurité et de confidentialité
 
-```html example-bad
-<label spellcheck>Label exemple</label>
-```
+L'utilisation de la vérification orthographique peut avoir des conséquences sur la sécurité et la confidentialité des utilisateurs.
+La spécification ne régule pas _comment_ la vérification orthographique est effectuée et le contenu de l'élément peut être envoyé à un tiers pour obtenir les résultats de la vérification orthographique (voir [vérification orthographique améliorée et le «&nbsp;vol d'orthographe&nbsp;» <sup>(angl.)</sup>](https://www.comparitech.com/blog/information-security/what-is-spell-jacking/)).
 
-sera invalide, la formulation correcte étant :
-
-```html example-good
-<label spellcheck="true">Label exemple</label>
-```
-
-Cet attribut n'est qu'une indication à destination du navigateur : il n'est pas obligatoire qu'un navigateur puisse vérifier l'orthographe. Les éléments non-éditables ne sont généralement pas vérifiés, même lorsque **`spellcheck`** vaut `true` et que le navigateur possède une fonctionnalité de vérification orthographique.
-
-La valeur par défaut sera différente selon l'élément et le navigateur :
-
-<table class="fullwidth-table">
-  <tbody>
-    <tr>
-      <th>Navigateur</th>
-      <th>{{HTMLElement("html")}}</th>
-      <th>{{HTMLElement("textarea")}}</th>
-      <th>{{HTMLElement("input")}}</th>
-      <th>Autres</th>
-      <th>Commentaires</th>
-    </tr>
-    <tr>
-      <td rowspan="3">Firefox / Gecko</td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><code>false</code></td>
-      <td><em>hérité</em></td>
-      <td>Lorsque <code>layout.spellcheckDefault</code> vaut <code>0</code></td>
-    </tr>
-    <tr>
-      <td>
-        <strong><code>false</code></strong>
-      </td>
-      <td>
-        <strong><code>true</code></strong>
-      </td>
-      <td>
-        <strong><em>hérité</em></strong>
-      </td>
-      <td>
-        <strong><em>hérité</em></strong>
-      </td>
-      <td>
-        <strong
-          >Lorsque <code>layout.spellcheckDefault</code> vaut
-          <code>1</code> (valeur par défaut)</strong
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td><code>true</code></td>
-      <td><em>hérité</em></td>
-      <td>Lorsque <code>layout.spellcheckDefault</code> vaut <code>2</code></td>
-    </tr>
-    <tr>
-      <td>Chrome</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Internet Explorer</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Opera</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-    <tr>
-      <td>Safari</td>
-      <td><code>false</code></td>
-      <td><code>true</code></td>
-      <td>?</td>
-      <td><em>hérité</em></td>
-    </tr>
-  </tbody>
-</table>
-
-## Exemples
-
-### HTML
-
-```html
-<!-- La valeur par défaut -->
-<textarea>Saisissay un texte issy</textarea>
-
-<!-- Les valeurs explicites -->
-<textarea spellcheck="true">Saisissay un texte issy</textarea>
-<textarea spellcheck="false">Saisissay un texte issy</textarea>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","200","300")}}
+Vous devriez envisager de définir `spellcheck` sur `false` pour les éléments pouvant contenir des informations sensibles.
 
 ## Spécifications
 
@@ -146,4 +47,5 @@ La valeur par défaut sera différente selon l'élément et le navigateur :
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- [Tous les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
+- L'attribut HTML universel [`autocorrect`](/fr/docs/Web/HTML/Reference/Global_attributes/autocorrect)

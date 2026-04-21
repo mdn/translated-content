@@ -144,6 +144,6 @@ main > aside {
 
 ## 같이 보기
 
-- CSS 플렉스박스 안내서: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 안내서: _[플렉스박스의 기본 개념](/ko/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS 플렉스박스 안내서: _[플렉스 아이템의 순서 정하기](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
 - CSS 그리드 안내서: _[CSS 그리드 레이아웃과 접근성](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_

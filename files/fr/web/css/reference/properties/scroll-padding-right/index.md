@@ -1,16 +1,14 @@
 ---
-title: scroll-padding-right
+title: Propriété CSS `scroll-padding-right`
+short-title: scroll-padding-right
 slug: Web/CSS/Reference/Properties/scroll-padding-right
-original_slug: Web/CSS/scroll-padding-right
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-right`** définit des décalages pour le bord droit dans la dimension en ligne de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.
 
-La propriété **`scroll-padding-right`** est une propriété qui permet de définir le remplissage sur le côté droit entre l'élément et la zone de défilement.
-
-Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
-
-{{InteractiveExample("CSS Demo: scroll-padding-right")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding-right")}}
 
 ```css interactive-example-choice
 scroll-padding-right: 0;
@@ -31,7 +29,7 @@ scroll-padding-right: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -61,7 +59,7 @@ scroll-padding-right: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -70,7 +68,7 @@ scroll-padding-right: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -81,8 +79,7 @@ scroll-padding-right: 2em;
 /* Valeurs avec un mot-clé */
 scroll-padding-right: auto;
 
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 scroll-padding-right: 10px;
 scroll-padding-right: 1em;
 scroll-padding-right: 10%;
@@ -90,6 +87,8 @@ scroll-padding-right: 10%;
 /* Valeurs globales */
 scroll-padding-right: inherit;
 scroll-padding-right: initial;
+scroll-padding-right: revert;
+scroll-padding-right: revert-layer;
 scroll-padding-right: unset;
 ```
 
@@ -115,3 +114,8 @@ scroll-padding-right: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

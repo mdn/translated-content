@@ -12,7 +12,7 @@ slug: Web/HTTP/Reference/Headers/Origin
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>yes</td>
     </tr>
   </tbody>
@@ -54,4 +54,4 @@ Origin: https://developer.mozilla.org
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [Same-origin policy](/ru/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/ru/docs/Web/Security/Defenses/Same-origin_policy)

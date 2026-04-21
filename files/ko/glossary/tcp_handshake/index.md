@@ -17,6 +17,6 @@ TCP 세션을 협상하고 시작하기 위해 TCP가 전송하는 세 가지 �
 
 ## 같이 보기
 
-- [전송 계층 보안 (Transport Layer Security, TLS)프로토콜](/ko/docs/Web/Security/Transport_Layer_Security)
+- [전송 계층 보안 (Transport Layer Security, TLS)프로토콜](/ko/docs/Web/Security/Defenses/Transport_Layer_Security)
 - {{Glossary("HTTPS")}}
 - 위키백과의 [전송 계층 보안](https://en.wikipedia.org/wiki/Transport_Layer_Security)

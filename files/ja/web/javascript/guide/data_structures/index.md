@@ -2,10 +2,8 @@
 title: JavaScript のデータ型とデータ構造
 slug: Web/JavaScript/Guide/Data_structures
 l10n:
-  sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("More")}}
 
 プログラミング言語には、どれにも組み込みデータ構造がありますが、ふつうは言語ごとに異なります。この記事では、JavaScript で使用可能な組み込みデータ構造の一覧と、他のデータ構造の構築にも使えるように、それらがどのような性質を持ち合わせているかについて述べることにします。
 
@@ -82,12 +80,12 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 表現可能な範囲外の値は、自動的に次のように変換されます。
 
-- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `+Infinity` に変換されます。
-- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `+0` に変換されます。
+- {{jsxref("Number.MAX_VALUE")}} より大きな正の数は `Infinity` に変換されます。
+- {{jsxref("Number.MIN_VALUE")}} より小さな正の数は `0` に変換されます。
 - -{{jsxref("Number.MAX_VALUE")}} より小さな負の数は `-Infinity` に変換されます。
 - -{{jsxref("Number.MIN_VALUE")}} より大きな負の数は `-0` に変換されます。
 
-`+Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
+`Infinity` と `-Infinity` は数学的な無限大と同じような振る舞いをしますが、若干の違いがあります。詳しくは {{jsxref("Number.POSITIVE_INFINITY")}} と {{jsxref("Number.NEGATIVE_INFINITY")}} を参照してください．
 
 数値型には、複数の表現を持つ値が1つだけあります。`0` は `-0` と `+0` の両方で表します（`0` は `+0` の別名です）。実際には、異なる表現にほとんど違いはありません。例えば、`+0 === -0` は `true` です。ただし、ゼロで割ったときには気づくことができるようになっています。
 
@@ -254,7 +252,7 @@ console.log({} + []); // "[object Object]"
 
 数値の型には[数値型](#数値型)と[長整数型](#長整数型)の 2 種類があります。言語が数値か長整数かを具体的に指定する場合もあります（{{jsxref("Array.prototype.slice()")}} は添字が数値でなければならないなど）。他にも、どちらかを許容し、オペランドの種類によって異なる処理を行う場合もあります。他にも暗黙の変換を許さない厳密な強制処理については、[数値型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)や[長整数型への変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt#長整数型への変換)を参照して下さい。
 
-数値変換は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)とほぼ同じですが、長整数の場合はは {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。すべての算術演算子は、数値型と長整数型の両方がオーバーロードされているため、数値変換が行わわれます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への変換を行います。
+数値変換は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値型への変換)とほぼ同じですが、長整数の場合は {{jsxref("TypeError")}} を発生させずにそのまま返す点が異なります。すべての算術演算子は、数値型と長整数型の両方がオーバーロードされているため、数値変換が行わわれます。唯一の例外は[単項プラス](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)で、これは常に数値型への変換を行います。
 
 ### その他の変換
 

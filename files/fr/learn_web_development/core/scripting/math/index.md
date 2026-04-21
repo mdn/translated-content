@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Math
 original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 À ce point du didacticiel, nous parlerons des mathématiques en JavaScript, de comment utiliser les [opérateurs](/fr/docs/Glossary/Operator) et d'autres fonctionnalités pour manipuler les nombres à notre guise.
 
@@ -95,7 +95,7 @@ partieDecimaleAdeuxChiffres;
 
 ### Convertir des valeurs en type numérique
 
-Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs//Learn_web_development/Extensions/Forms\), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
+Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîne de caractères, et il sera alors plus difficile d'effectuer des calculs avec. Cela arrive le plus souvent lorsqu'une donnée est entrée dans une entrée de [formulaire](/fr/docs/Learn_web_development/Extensions/Forms), et que le [type de donnée entré est du texte](/fr/docs/Web/HTML/Reference/Elements/input/text). Il existe une façon de résoudre ce problème&nbsp;: passer la valeur qu'est la chaîne de caractères au constructeur [`Number()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) pour retourner une version numérique de la même valeur.
 
 Par exemple, essayez de taper ces lignes dans votre console&nbsp;:
 
@@ -384,7 +384,7 @@ Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonct
 
 ## Testez vos compétences&nbsp;!
 
-Vous voilà parvenu⋅e à la fin de cet article. Mais saurez-vous vous rappeler des informations les plus importantes&nbsp;? Vous pouvez passer quelques tests afin de vérifier que vous avez retenu les concepts importants avant de continuer. Voir [Testez vos compétences&nbsp;: les mathématiques](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Math).
+Vous voilà parvenu⋅e à la fin de cet article. Mais saurez-vous vous rappeler des informations les plus importantes&nbsp;? Vous pouvez passer quelques tests afin de vérifier que vous avez retenu les concepts importants avant de continuer. Voir [Testez vos compétences&nbsp;: les mathématiques](/fr/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
 
 ## Résumé
 
@@ -395,4 +395,4 @@ Dans l'article suivant, nous étudierons le texte et les façons dont JavaScript
 > [!NOTE]
 > Si les maths vous plaisent et que vous souhaitez en savoir plus sur la manière dont elles sont implémentées en JavaScript, vous trouverez plus de précisions dans la section principale JavaScript de MDN. Pour commencer, nous vous conseillons [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_strings) et [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_operators).
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 12b296d2b3937c45b2363f34ed8afadcf00ed166
 ---
 
-在 [CSS 声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) ***属性***用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
+在 [CSS 声明](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction#css_声明) 中，[CSS](/zh-CN/docs/Web/CSS) ***属性***用于设置选中元素某些样式参数的内容。例如，{{CSSxRef("opacity")}} 属性用于设置选中元素的不透明度，从而可以控制该元素后面的内容是否可见：
 
 ```css
 /* 设置 <img> 元素的不透明度为 0.8 */
@@ -38,7 +38,7 @@ CSS 规范定义的标准属性包括以下几种：
 
 ### 杂项
 
-- [自定义属性（`--*`）：CSS 变量](/zh-CN/docs/Web/CSS/--*)
+- [自定义属性（`--*`）：CSS 变量](/zh-CN/docs/Web/CSS/Reference/Properties/--*)
 
 ### A
 
@@ -623,8 +623,8 @@ CSS 规范定义的标准属性包括以下几种：
 
 ## 参见
 
-- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
-- [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)
-- [具有 Firefox 浏览器引擎前缀（-moz-）的 CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
-- [具有 WebKit 浏览器引擎前缀（-webkit-）的 CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
+- [CSS 语法](/zh-CN/docs/Web/CSS/Guides/Syntax/Introduction)
+- [伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
+- [具有 Firefox 浏览器引擎前缀（-moz-）的 CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)
+- [具有 WebKit 浏览器引擎前缀（-webkit-）的 CSS 扩展](/zh-CN/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix", "浏览器引擎前缀")}}

@@ -1,17 +1,17 @@
 ---
-title: ::-webkit-progress-value
+title: Pseudo-élément CSS `::-webkit-progress-value`
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
-original_slug: Web/CSS/::-webkit-progress-value
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de représenter la portion «&nbsp;remplie&nbsp;» de la barre d'un élément {{HTMLElement("progress")}}. C'est un pseudo-élément enfant du pseudo-élément {{cssxref("::-webkit-progress-bar")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-webkit-progress-value`** est une [extension de WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui permet de représenter la portion «&nbsp;remplie&nbsp;» de la barre d'un élément {{HTMLElement("progress")}}. C'est un pseudo-élément enfant du pseudo-élément {{CSSxRef("::-webkit-progress-bar")}}.
 
 > [!NOTE]
-> Afin que `::-webkit-progress-value` ait un effet, il faut que {{cssxref("-webkit-appearance")}} vaille `none` sur l'élément `<progress>`.
+> Afin que `::-webkit-progress-value` ait un effet, il faut que {{CSSxRef("-webkit-appearance")}} vaille `none` sur l'élément `<progress>`.
 
 ## Syntaxe
 
@@ -60,7 +60,6 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 ## Voir aussi
 
 - Les pseudo-éléments relatifs à WebKit/Blink qui permettent de mettre en forme les autres parties des éléments {{HTMLElement("progress")}}&nbsp;:
-  - {{cssxref("::-webkit-progress-bar")}}
-  - {{cssxref("::-webkit-progress-inner-element")}}
-
-- {{cssxref("::-moz-progress-bar")}}
+  - {{CSSxRef("::-webkit-progress-bar")}}
+  - {{CSSxRef("::-webkit-progress-inner-element")}}
+- Le pseudo-élément {{CSSxRef("::-moz-progress-bar")}}

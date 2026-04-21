@@ -1,9 +1,9 @@
 ---
-title: :checked
+title: Pseudo-classe CSS `:checked`
+short-title: :checked
 slug: Web/CSS/Reference/Selectors/:checked
-original_slug: Web/CSS/:checked
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`).
@@ -221,4 +221,4 @@ Cet exemple utilise la pseudo-classe `:checked` pour permettre à l'utilisateur�
 - [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Mise en forme des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - Les éléments HTML associés&nbsp;: [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), {{HTMLElement("select")}} et {{HTMLElement("option")}}
-- L'entrée de glossaire {{glossary("Replaced elements", "Éléments remplacés")}}
+- L'entrée de glossaire {{Glossary("Replaced elements", "Éléments remplacés")}}

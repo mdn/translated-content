@@ -1,13 +1,12 @@
 ---
-title: "Attribut HTML : autocomplete"
+title: "Attribut HTML : `autocomplete`"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
-original_slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
-L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, l'{{Glossary("user agent", "agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
+L'attribut `autocomplete` permet aux développeur·euse·s web de définir si, et dans quelle mesure, {{Glossary("user agent", "l'agent utilisateur")}} est autorisé à fournir une aide automatisée pour remplir les champs d'un formulaire, ainsi que d'indiquer au navigateur le type d'information attendu dans le champ.
 
 Il est disponible sur les éléments HTML {{HTMLElement("input")}} qui acceptent une valeur textuelle ou numérique, sur les éléments HTML {{HTMLElement("textarea")}}, {{HTMLElement("select")}} et {{HTMLElement("form")}}.
 
@@ -38,7 +37,7 @@ L'attribut `autocomplete` fournit une indication à l'agent utilisateur sur la f
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
@@ -49,20 +48,20 @@ Si un élément {{HTMLElement("input")}}, {{HTMLElement("select")}} ou {{HTMLEle
 >
 > 1. aient un attribut `name` et/ou `id`
 > 2. soient descendants d'un élément `<form>`
-> 3. appartiennent à un formulaire ayant un bouton {{HTMLElement("input/submit", "submit")}}
+> 3. appartiennent à un formulaire ayant un bouton `{{HTMLElement("input/submit", "submit")}}`
 
 Si la même liste de jetons est utilisée dans plusieurs contrôles de formulaire, l'agent utilisateur remplira automatiquement toutes les occurrences de la même valeur `autocomplete` avec la même donnée.
 
 Certains jetons peuvent être utilisés plusieurs fois avec des valeurs attendues différentes, comme le jeton `zip-code` dans un formulaire contenant à la fois une adresse de livraison et de facturation. Inclure plusieurs jetons différents dans une liste séparée par des espaces permet d'attribuer des valeurs d'autocomplétion uniques&nbsp;: par exemple, `autocomplete="shipping zip-code"` et `autocomplete="billing zip-code"`.
 
-Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping zip-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours "section-", suivis d'une chaîne alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
+Certaines valeurs d'autocomplétion peuvent devoir être réutilisées plusieurs fois. Par exemple, un formulaire peut contenir plusieurs adresses de livraison et donc plusieurs occurrences de `"shipping zip-code"` tout en attendant des valeurs différentes. Pour rendre la valeur unique, le premier jeton de la liste peut être un jeton `section-*`, où les huit premiers caractères sont toujours "section-", suivis d'une chaîne de caractères alphanumérique. Tous les champs de formulaire ayant le même jeton `section-*` appartiennent au même **groupe nommé**.
 
 Si vous ajoutez l'attribut `autocomplete` sur un champ {{HTMLElement("input/hidden", "hidden")}} (`<input type="hidden">`), sa valeur doit être une liste ordonnée de jetons séparés par des espaces&nbsp;; les mots-clés `on` et `off` ne sont pas autorisés.
 
 La source des valeurs suggérées dépend généralement du navigateur&nbsp;: il s'agit en général des valeurs précédemment saisies par l'utilisateur·rice, mais elles peuvent aussi provenir de valeurs préconfigurées. Par exemple, un navigateur peut permettre à l'utilisateur·rice d'enregistrer son nom, son adresse, son numéro de téléphone et ses adresses e-mail pour l'autocomplétion. Il peut aussi proposer d'enregistrer des informations de carte bancaire chiffrées, pour un remplissage automatique après authentification.
 
 > [!NOTE]
-> L'attribut `autocomplete` contrôle aussi, dans Firefox (contrairement aux autres navigateurs), [la persistance de l'état désactivé ou coché d'un champ `<input>`, `<textarea>` ou d'un `<form>` entier lors d'un rechargement de page <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). Cette fonctionnalité est activée par défaut. Définir `autocomplete="off"` la désactive, même si l'attribut ne devrait normalement pas s'appliquer selon le type de champ. Voir [bug 654072 de Firefox <sup>(angl.)</sup>](https://bugzil.la/654072).
+> L'attribut `autocomplete` contrôle aussi, dans Firefox (contrairement aux autres navigateurs), [la persistance de l'état désactivé ou coché d'un champ `<input>`, `<textarea>` ou d'un `<form>` entier lors d'un rechargement de page <sup>(angl.)</sup>](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). Cette fonctionnalité est activée par défaut. Définir `autocomplete="off"` la désactive, même si l'attribut ne devrait normalement pas s'appliquer selon le type de champ. Voir le [bogue 654072 de Firefox <sup>(angl.)</sup>](https://bugzil.la/654072).
 
 ## Valeurs
 
@@ -72,7 +71,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
     > [!NOTE]
-    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir [l'article sur l'autoremplissage des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
+    > Dans la plupart des navigateurs modernes, définir `autocomplete` à `"off"` n'empêchera pas un gestionnaire de mots de passe de demander à l'utilisateur·rice s'il·elle souhaite enregistrer le nom d'utilisateur·ice et le mot de passe, ou de remplir automatiquement ces informations dans un formulaire de connexion. Voir la section [Gérer le remplissage automatique des champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#gérer_le_remplissage_automatique_des_champs_de_connexion).
 
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
@@ -80,7 +79,7 @@ La valeur de l'attribut est soit le mot-clé `off` ou `on`, soit une `<token-lis
 - `<token-list>`
   - : Un ensemble ordonné de [jetons séparés par des espaces](#jetons_de_la_liste_de_jetons) composé de jetons de détail d'autoremplissage, précédés éventuellement de jetons de section et de regroupement «&nbsp;billing&nbsp;» (facturation) ou «&nbsp;shipping&nbsp;» (livraison). Les numéros de téléphone, adresses e-mail et protocoles de messagerie sont précédés d'un jeton identifiant le type de destinataire.
 
-Voir [la spécification WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
+Voir [la spécification WHATWG <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/forms.html#autofill) pour plus de détails.
 
 ### Jetons de la liste de jetons
 
@@ -96,7 +95,7 @@ Les options de `<token-list>` incluent, dans l'ordre&nbsp;:
 Pour créer un groupe nommé de champs de formulaire, on peut utiliser le jeton optionnel `section-*`. S'il est présent, ce jeton doit être le premier de la liste de jetons séparés par des espaces.
 
 - `section-*`
-  - : Définit le nom d'un groupe de contrôles de formulaire. Il s'agit d'un jeton dont les huit premiers caractères sont la chaîne «&nbsp;section-&nbsp;» (insensible à la casse), suivie de caractères supplémentaires. Tous les contrôles de formulaire commençant par le même jeton appartiennent au même groupe nommé.
+  - : Définit le nom d'un groupe de contrôles de formulaire. Il s'agit d'un jeton dont les huit premiers caractères sont la chaîne de caractères «&nbsp;section-&nbsp;» (insensible à la casse), suivie de caractères supplémentaires. Tous les contrôles de formulaire commençant par le même jeton appartiennent au même groupe nommé.
 
 #### Identifiant de regroupement
 
@@ -123,7 +122,7 @@ Les jetons qui identifient le type de destinataire incluent&nbsp;:
   - : Le type de contact identifié par les jetons suivants sert à contacter le·la destinataire quel que soit l'endroit.
 - `fax`
   - : Le destinataire identifié par les jetons suivants est un télécopieur.
-- `page`
+- `pager`
   - : Le destinataire identifié par les jetons suivants est un téléavertisseur ou un bip.
 
 ##### Jetons de contact numérique
@@ -168,7 +167,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
       - : Un surnom ou pseudonyme.
 
 - `username`
-  - : Un nom d'utilisateur ou de compte.
+  - : Un nom d'utilisateur·ice ou de compte.
 - `new-password`
   - : Un nouveau mot de passe. Lors de la création d'un compte ou d'un changement de mot de passe, cela doit être utilisé pour un champ «&nbsp;Saisissez votre nouveau mot de passe&nbsp;» ou «&nbsp;Confirmez le nouveau mot de passe&nbsp;», par opposition à un champ général «&nbsp;Saisissez votre mot de passe actuel&nbsp;». Cela peut être utilisé par le navigateur pour éviter de remplir accidentellement un mot de passe existant et pour proposer une aide à la création d'un mot de passe sécurisé.
 - `current-password`
@@ -184,13 +183,13 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
     - `address-line1`, `address-line2`, `address-line3`
       - : Chaque ligne individuelle de l'adresse postale. Ces champs ne doivent être présents que si `street-address` n'est pas utilisé.
 - `address-level4`
-  - : Le niveau administratif le plus fin ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant quatre niveaux.
+  - : Le [niveau administratif](#les_niveaux_administratifs_pour_les_adresses) le plus fin, pour les adresses comportant quatre niveaux.
 - `address-level3`
-  - : Le troisième niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant au moins trois niveaux.
+  - : Le troisième [niveau administratif](#les_niveaux_administratifs_pour_les_adresses), pour les adresses comportant au moins trois niveaux.
 - `address-level2`
-  - : Le deuxième niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)), pour les adresses comportant au moins deux niveaux. Pour les pays à deux niveaux administratifs, cela correspond généralement à la ville, au village ou à la localité où se situe l'adresse.
+  - : Le deuxième [niveau administratif](#les_niveaux_administratifs_pour_les_adresses), pour les adresses comportant au moins deux niveaux. Pour les pays à deux niveaux administratifs, cela correspond généralement à la ville, au village ou à la localité où se situe l'adresse.
 - `address-level1`
-  - : Le premier niveau administratif ([niveau administratif](#les_niveaux_administratifs_pour_les_adresses)) de l'adresse. Il s'agit généralement de la région ou de la province où se situe l'adresse. Aux États-Unis, il s'agit de l'État. En Suisse, du canton. Au Royaume-Uni, du comté.
+  - : Le premier [niveau administratif](#les_niveaux_administratifs_pour_les_adresses) de l'adresse. Il s'agit généralement de la région ou de la province où se situe l'adresse. Aux États-Unis, il s'agit de l'État. En Suisse, du canton. Au Royaume-Uni, du comté.
 - `country`
   - : Un code de pays ou de territoire.
 - `country-name`
@@ -221,7 +220,7 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 - `transaction-currency`
   - : La devise dans laquelle la transaction doit être effectuée.
 - `transaction-amount`
-  - : Le montant, exprimé dans la devise spécifiée par `transaction-currency`, de la transaction pour un formulaire de paiement.
+  - : Le montant, exprimé dans la devise définie par `transaction-currency`, de la transaction pour un formulaire de paiement.
 - `language`
   - : Une langue préférée, indiquée sous la forme d'une {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}} valide.
 - `bday`
@@ -244,7 +243,21 @@ Lorsque le champ de formulaire n'est pas un numéro de téléphone, une adresse 
 Avec {{HTMLElement("input")}} et {{HTMLElement("textarea")}}, le jeton `webauthn` peut être inclus en dernier pour indiquer à l'agent utilisateur d'afficher les identifiants à clé publique lorsque l'utilisateur·rice interagit avec le contrôle.
 
 - `webauthn`
-  - : Les clés d'accès générées par l'[API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès via l'autoremplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.
+  - : Les clés d'accès générées par [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API), comme demandé par un appel conditionnel à {{DOMxRef("CredentialsContainer.get()", "navigator.credentials.get()")}} (c'est-à-dire un appel incluant `mediation: 'conditional'`). Si ce jeton est inclus, il doit être le dernier de la liste de jetons séparés par des espaces. Voir [Se connecter avec une clé d'accès via l'autoremplissage de formulaire <sup>(angl.)</sup>](https://web.dev/articles/passkey-form-autofill) pour plus de détails.
+
+## Accessibilité
+
+L'utilisation de valeurs `autocomplete` appropriées aide les utilisateur·ice·s ayant des troubles cognitifs, des limitations motrices ou d'autres conditions à remplir les formulaires plus rapidement et avec plus de précision, en réduisant la nécessité de saisir et de mémoriser des informations. Lorsque le navigateur peut identifier la finalité d'un champ de formulaire grâce à sa valeur `autocomplete`, il peut proposer des données enregistrées telles que des noms, des adresses et des informations de paiement, ce qui profite à tou·te·s les utilisateur·ice·s mais est particulièrement important pour celles et ceux qui rencontrent des difficultés à saisir manuellement des données.
+
+Fournir des jetons autocomplete valides permet également de satisfaire au [Critère de succès 1.3.5 de la WCAG 2.2&nbsp;: Identifier la finalité de la saisie <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) (Niveau AA), qui exige que la finalité des champs de saisie collectant des informations utilisateur·ice·s puisse être déterminée de manière programmatique. Cela permet aux agents utilisateur et aux technologies d'assistance d'appliquer des présentations personnalisées, comme l'affichage d'icônes familières à côté des champs, pour aider les utilisateur·ice·s à comprendre et à compléter les formulaires.
+
+### Éviter de désactiver l'autocomplétion
+
+Définir `autocomplete="off"` empêche le navigateur de proposer des données enregistrées pour un champ. Les développeur·euse·s utilisent parfois cette option pour empêcher l'autoremplissage pour des raisons de sécurité (comme pour des codes à usage unique), mais cela supprime une fonctionnalité dont de nombreux·ses utilisateur·ice·s dépendent. Les utilisateur·ice·s ayant des troubles cognitifs peuvent s'appuyer sur l'autocomplétion pour se souvenir de leurs informations personnelles, et les utilisateur·ice·s ayant des limitations motrices bénéficient d'une saisie réduite. Les navigateurs peuvent également ignorer `autocomplete="off"` sur les champs de connexion afin de prendre en charge les gestionnaires de mots de passe.
+
+### Éviter les valeurs autocomplete invalides
+
+L'utilisation de valeurs invalides ou non standard (comme des chaînes de caractères inventées pour contourner l'autoremplissage) a un effet similaire&nbsp;: le navigateur ne peut associer le champ à aucune finalité connue et ne peut donc pas proposer de suggestions pertinentes. Cela ne répond également plus à l'exigence WCAG ci-dessus, car la finalité de la saisie n'est alors plus déterminable de manière programmatique. Si vous devez désactiver l'autoremplissage pour un champ spécifique, envisagez d'utiliser `autocomplete="off"` uniquement lorsque cela est réellement nécessaire (par exemple pour un champ CAPTCHA ou un champ de jeton à usage unique) plutôt que de l'appliquer à l'ensemble d'un formulaire.
 
 ## Exemples
 
@@ -263,7 +276,7 @@ Les quatre niveaux administratifs pour les adresses (`address-level1` jusqu'à `
 
 ### Disposition du formulaire
 
-Étant donné qu'une adresse s'écrit différemment selon le pays, il peut être utile, si possible, de fournir différentes dispositions de formulaires pour les utilisateurs (éventuellement en fonction de leur locale) pour faciliter la saisie de leur adresse pour leur pays.
+Étant donné qu'une adresse s'écrit différemment selon le pays, il peut être utile, si possible, de fournir différentes dispositions de formulaires pour les utilisateur·ice·s (éventuellement en fonction de leur locale) pour faciliter la saisie de leur adresse pour leur pays.
 
 ### Variations
 
@@ -329,9 +342,9 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 ## Voir aussi
 
-- L'élément HTML {{HTMLElement("input")}}
-- L'élément HTML {{HTMLElement("select")}}
-- L'élément HTML {{HTMLElement("textarea")}}
-- L'élément HTML {{HTMLElement("form")}}
+- L'élément {{HTMLElement("input")}}
+- L'élément {{HTMLElement("select")}}
+- L'élément {{HTMLElement("textarea")}}
+- L'élément {{HTMLElement("form")}}
 - [Les formulaires HTML](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)

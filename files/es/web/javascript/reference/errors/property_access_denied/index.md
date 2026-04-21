@@ -17,7 +17,7 @@ Error: Permission denied to access property "x"
 
 ## ¿Cuál es el problema?
 
-Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es un elemento {{HTMLElement("iframe")}} cargado de otro dominio en el cual violaste la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy).
+Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es un elemento {{HTMLElement("iframe")}} cargado de otro dominio en el cual violaste la [política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy).
 
 ## Ejemplos
 
@@ -42,4 +42,4 @@ Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es 
 ## Véase también
 
 - {{HTMLElement("iframe")}}
-- [Política del mismo origen](/es/docs/Web/Security/Same-origin_policy)
+- [Política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy)

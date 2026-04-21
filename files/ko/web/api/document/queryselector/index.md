@@ -41,7 +41,7 @@ document.querySelector(selectors);
 
 만약 `selector`가 ID 선택자인데, 해당 ID를 잘못 사용하여 문서 내에 여러 번 사용했으면 첫 번째로 그 ID를 사용한 요소를 반환합니다.
 
-[CSS 의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 [선택자 API](https://www.w3.org/TR/selectors-api/#grammar)가 명시한 대로 어떠한 요소도 반환하지 않습니다.
+[CSS 의사 요소](/ko/docs/Web/CSS/Reference/Selectors/Pseudo-elements)는 [선택자 API](https://www.w3.org/TR/selectors-api/#grammar)가 명시한 대로 어떠한 요소도 반환하지 않습니다.
 
 ### 특수 문자 이스케이프
 

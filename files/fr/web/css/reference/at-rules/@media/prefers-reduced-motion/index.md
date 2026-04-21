@@ -1,9 +1,8 @@
 ---
 title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
-original_slug: Web/CSS/@media/prefers-reduced-motion
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: 77445f9812d0644dfe6975234f8ff3450efcf142
 ---
 
 > [!WARNING]
@@ -27,7 +26,11 @@ Pour Firefox, la demande `reduce` est prise en compte si&nbsp;:
 - Sous GTK/GNOME&nbsp;: Paramètres > Accessibilité > Vue > Réduction des animations activée.
   - Dans les anciennes versions de GNOME&nbsp;: Outils GNOME > onglet Général (ou Apparence selon la version) > Animations désactivées.
   - Ou bien, ajouter `gtk-enable-animations = false` dans le bloc `[Settings]` du [fichier de configuration GTK 3 <sup>(angl.)</sup>](https://wiki.archlinux.org/title/GTK#Configuration).
+  - Vous pouvez également essayer d'exécuter `gsettings set org.gnome.desktop.interface enable-animations false` pour que Firefox (et les autres programmes utilisant GTK version 4) respecte le réglage `reduce`.
+
 - Sous Plasma/KDE&nbsp;: Paramètres système > Comportement de l'espace de travail > Comportement général > «&nbsp;Vitesse d'animation&nbsp;» réglée complètement à droite sur «&nbsp;Instantané&nbsp;».
+  - Vous pouvez aussi ajouter `AnimationDurationFactor=0` dans le bloc `[KDE]` du fichier `~/.config/kdeglobals`.
+  - Ou simplement exécuter `kwriteconfig6 --key AnimationDurationFactor 0` dans votre terminal.
 - Sous Windows 10&nbsp;: Paramètres > Options d'ergonomie > Affichage > Afficher les animations dans Windows.
 - Sous Windows 11&nbsp;: Paramètres > Accessibilité > Effets visuels > Effets d'animation.
 - Sous macOS&nbsp;: Préférences Système > Accessibilité > Affichage > Réduire les animations.
@@ -108,7 +111,7 @@ Cet exemple utilise une animation de mise à l'echelle pour illustrer `prefers-r
 
 #### Résultat
 
-{{EmbedLiveSample("atténuer_lanimation_de_mise_à_lechelle")}}
+{{EmbedLiveSample("Atténuer l'animation de mise à l'echelle")}}
 
 Vous pouvez activer la réduction des animations sur [votre appareil](#preferences_utilisateurs) pour observer le changement d'animation. Cet exemple utilise la couleur de fond et la ligne au-dessus du texte pour mettre en évidence le passage d'une animation à l'autre selon que la préférence est activée ou non.
 

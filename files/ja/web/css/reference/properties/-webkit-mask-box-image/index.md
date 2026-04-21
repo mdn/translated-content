@@ -46,13 +46,16 @@ original_slug: Web/CSS/-webkit-mask-box-image
 - stretch
   - : マスク画像は、境界ボックスを正確に含むように引き伸ばされます。
 - round
-  - : マスク画像は多少引き伸ばされ、教秋ボックスの端にマスク画像の一部が残らないように繰り返されます。
+  - : マスク画像は多少引き伸ばされ、境界ボックスの端にマスク画像の一部が残らないように繰り返されます。
 - space
   - : マスク画像は引き伸ばされることなく何度でも繰り返されます。境界ボックスの端に、部分的なマスク画像は置かれません。
 
 ## 公式定義
 
-{{CSSInfo}}
+- [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値): `none`
+- 適用対象: すべての要素
+- [継承](/ja/docs/Web/CSS/Guides/Cascade/Inheritance): いいえ
+- [計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値): 指定どおり
 
 ## 形式文法
 

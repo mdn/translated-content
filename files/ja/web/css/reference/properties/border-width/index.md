@@ -1,9 +1,8 @@
 ---
 title: border-width
 slug: Web/CSS/Reference/Properties/border-width
-original_slug: Web/CSS/border-width
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
 ---
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
@@ -33,7 +32,7 @@ border-width: 0 4px 8px 12px;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界があるボックスです。
   </div>
 </section>
 ```
@@ -41,7 +40,7 @@ border-width: 0 4px 8px 12px;
 ```css interactive-example
 #example-element {
   background-color: palegreen;
-  color: #000;
+  color: black;
   border: 0 solid crimson;
   padding: 0.75em;
   width: 80%;
@@ -53,10 +52,10 @@ border-width: 0 4px 8px 12px;
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-bottom-width`](/ja/docs/Web/CSS/Reference/Properties/border-bottom-width)
-- [`border-left-width`](/ja/docs/Web/CSS/Reference/Properties/border-left-width)
-- [`border-right-width`](/ja/docs/Web/CSS/Reference/Properties/border-right-width)
-- [`border-top-width`](/ja/docs/Web/CSS/Reference/Properties/border-top-width)
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-left-width")}}
+- {{cssxref("border-right-width")}}
+- {{cssxref("border-top-width")}}
 
 ## 構文
 
@@ -136,7 +135,7 @@ border-width: unset;
 
 ```css live-sample___a_mix_of_values_and_lengths
 #one-value {
-  border: ridge #ccc;
+  border: ridge #cccccc;
   border-width: 6px;
 }
 #two-values {

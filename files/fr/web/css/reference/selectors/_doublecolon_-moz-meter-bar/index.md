@@ -1,12 +1,12 @@
 ---
-title: ::-moz-meter-bar
+title: Pseudo-élément CSS `::-moz-meter-bar`
+short-title: ::-moz-meter-bar
 slug: Web/CSS/Reference/Selectors/::-moz-meter-bar
-original_slug: Web/CSS/::-moz-meter-bar
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{Non-standard_header}}
+{{Non-standard_Header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-meter-bar`** représente la jauge de mesure dans un élément {{HTMLElement("meter")}}. Il est utilisé pour sélectionner et appliquer des styles à la jauge à l'intérieur d'un élément de mesure.
 
@@ -55,6 +55,6 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 
 ## Voir aussi
 
-- {{cssxref("::-webkit-meter-bar")}}
-- {{cssxref("appearance")}}
-- {{cssxref("accent-color")}}
+- Le pseudo-élément {{CSSxRef("::-webkit-meter-bar")}}
+- La propriété {{CSSxRef("appearance")}}
+- La propriété {{CSSxRef("accent-color")}}

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Styling_links
 original_slug: Learn/CSS/Styling_text/Styling_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), es importante comprender cómo utilizar las pseudoclases para diseñar los estados de un enlace de manera efectiva y cómo diseñar enlaces para su uso en diversas funciones de interfaz comunes, como menús y pestañas de navegación. Veremos todos estos temas en este artículo.
 
@@ -14,11 +14,11 @@ A la hora de dar estilo a los [enlaces](/es/docs/Learn_web_development/Core/Stru
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática, conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >), conocimientos básicos de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>),
-        <a href="/es/docs/Learn/CSS/Styling_text/Fundamentals"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>),
+        <a href="/es/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >nociones de aplicación de estilo con CSS a textos y tipos de letra</a
         >.
       </td>
@@ -455,4 +455,4 @@ Vamos a explicar qué pasa aquí, y nos vamos a centrar en los aspectos más int
 
 Esperamos que este artículo te haya proporcionado todo lo que necesitas saber acerca de los enlaces... ¡por ahora! En el artículo final de nuestro módulo de aplicar estilo al texto detallaremos cómo usar tipos de letra personalizados para sitios web (o tipos de letra para web, como se les conoce comúnmente).
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}

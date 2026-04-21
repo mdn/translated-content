@@ -1,9 +1,9 @@
 ---
-title: font-variant-caps
+title: Propriété CSS `font-variant-caps`
+short-title: font-variant-caps
 slug: Web/CSS/Reference/Properties/font-variant-caps
-original_slug: Web/CSS/font-variant-caps
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-caps`** contrôle l'utilisation de glyphes alternatifs pour les petites capitales (<i lang="en">small caps</i>), les très petites capitales (<i lang="en">petite caps</i>) ou les capitales de titrage.
@@ -25,7 +25,7 @@ font-variant-caps: all-small-caps;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    <p>Gaufres difficiles</p>
+    <p>La difficulté des gauffres</p>
   </div>
 </section>
 ```
@@ -46,18 +46,6 @@ section {
   font-size: 1.5em;
 }
 ```
-
-Lorsqu'une police comprend des glyphes de capitales à plusieurs tailles, cette propriété sélectionne les plus appropriés. Si les glyphes de très petites capitales ne sont pas disponibles, ils sont rendus avec des petites capitales. S'ils ne sont pas présents non plus, le navigateur les synthétise à partir des capitales.
-
-Les polices incluent parfois des glyphes spécifiques pour divers caractères sans casse (comme la ponctuation) afin de mieux s'accorder aux caractères en capitales alentours. Cependant, des glyphes de petites capitales ne sont jamais synthétisés pour les caractères sans casse.
-
-### Règles spécifiques à la langue
-
-Cette propriété tient compte des règles de mise en casse propres à certaines langues. Par exemple&nbsp;:
-
-- En langues turques, comme le turc (`tr`), l'azerbaïdjanais (`az`), le tatar de Crimée (`crh`), le tatar de la Volga (`tt`) et le bachkir (`ba`), il existe deux types de `i` (avec point et sans point) et deux associations de casse&nbsp;: `i`/`İ` et `ı`/`I`.
-- En allemand (`de`), le `ß` peut devenir `ẞ` (U+1E9E) en majuscules.
-- En grec (`el`), les voyelles perdent leur accent lorsque tout le mot est en majuscules (`ά`/`Α`), sauf pour l'éta disjonctif (`ή`/`Ή`). De même, les diphtongues avec un accent sur la première voyelle perdent l'accent et gagnent un diacritique sur la seconde (`άι`/`ΑΪ`).
 
 ## Syntaxe
 
@@ -98,20 +86,34 @@ La propriété `font-variant-caps` se définit avec un seul mot‑clé de la lis
 - `titling-caps`
   - : Active l'affichage des capitales de titrage (fonction OpenType&nbsp;: `titl`). Les glyphes majuscules sont souvent conçus pour l'usage avec des minuscules. Utilisés en titres tout en capitales, ils peuvent paraître trop appuyés. Les capitales de titrage sont conçues pour ce cas.
 
+## Description
+
+Lorsqu'une police comprend des glyphes de capitales à plusieurs tailles, cette propriété sélectionne les plus appropriés. Si les glyphes de très petites capitales ne sont pas disponibles, ils sont rendus avec des petites capitales. S'ils ne sont pas présents non plus, le navigateur les synthétise à partir des capitales.
+
+Les polices incluent parfois des glyphes spécifiques pour divers caractères sans casse (comme la ponctuation) afin de mieux s'accorder aux caractères en capitales alentours. Cependant, des glyphes de petites capitales ne sont jamais synthétisés pour les caractères sans casse.
+
+### Règles spécifiques à la langue
+
+Cette propriété tient compte des règles de mise en casse propres à certaines langues. Par exemple&nbsp;:
+
+- En langues turques, comme le turc (`tr`), l'azerbaïdjanais (`az`), le tatar de Crimée (`crh`), le tatar de la Volga (`tt`) et le bachkir (`ba`), il existe deux types de `i` (avec point et sans point) et deux associations de casse&nbsp;: `i`/`İ` et `ı`/`I`.
+- En allemand (`de`), le `ß` peut devenir `ẞ` (U+1E9E) en majuscules.
+- En grec (`el`), les voyelles perdent leur accent lorsque tout le mot est en majuscules (`ά`/`Α`), sauf pour l'éta disjonctif (`ή`/`Ή`). De même, les diphtongues avec un accent sur la première voyelle perdent l'accent et gagnent un diacritique sur la seconde (`άι`/`ΑΪ`).
+
 ## Accessibilité
 
 De larges sections de texte avec une valeur `font-variant` de `all-small-caps` ou `all-petite-caps` peuvent être difficiles à lire pour des personnes avec certains troubles cognitifs comme la dyslexie.
 
-- [Comprendre les WCAG, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_faciliter_la_perception_et_lécoute_du_contenu_y_compris_la_séparation_du_premier_plan_et_de_larrière_plan)
+- [Comprendre les WCAG, explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
 - [W3C Understanding WCAG 2.2 <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#visual-presentation)
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -120,8 +122,8 @@ De larges sections de texte avec une valeur `font-variant` de `all-small-caps` o
 #### HTML
 
 ```html
-<p class="small-caps">Firefox rocks, small caps!</p>
-<p class="normal">Firefox rocks, normal caps!</p>
+<p class="small-caps">Firefox en petites capitales&nbsp;!</p>
+<p class="normal">Firefox en capitales normales&nbsp;!</p>
 ```
 
 #### CSS
@@ -139,7 +141,7 @@ De larges sections de texte avec une valeur `font-variant` de `all-small-caps` o
 
 #### Résultat
 
-{{ EmbedLiveSample('définir_la_variante_petites_capitales') }}
+{{EmbedLiveSample('Définir la variante petites capitales')}}
 
 ## Spécifications
 
@@ -151,10 +153,10 @@ De larges sections de texte avec une valeur `font-variant` de `all-small-caps` o
 
 ## Voir aussi
 
-- [`font-variant`](/fr/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/fr/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-east-asian`](/fr/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/fr/docs/Web/CSS/font-variant-emoji)
-- [`font-variant-ligatures`](/fr/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/fr/docs/Web/CSS/Reference/Properties/font-variant-numeric)
-- [`font-variant-position`](/fr/docs/Web/CSS/Reference/Properties/font-variant-position)
+- La propriété raccourcie {{CSSxRef("font-variant")}}
+- La propriété {{CSSxRef("font-variant-alternates")}}
+- La propriété {{CSSxRef("font-variant-east-asian")}}
+- La propriété {{CSSxRef("font-variant-emoji")}}
+- La propriété {{CSSxRef("font-variant-ligatures")}}
+- La propriété {{CSSxRef("font-variant-numeric")}}
+- La propriété {{CSSxRef("font-variant-position")}}

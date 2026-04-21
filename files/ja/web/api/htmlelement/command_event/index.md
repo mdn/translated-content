@@ -35,7 +35,7 @@ const popover = document.getElementById("mypopover");
 // …
 
 popover.addEventListener("command", (event) => {
-  if (event.action === "show-popover") {
+  if (event.command === "show-popover") {
     console.log("ポップオーバーが表示されようとしています");
   }
 });

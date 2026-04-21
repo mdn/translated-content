@@ -1,9 +1,8 @@
 ---
 title: rel="preload"
 slug: Web/HTML/Reference/Attributes/rel/preload
-original_slug: Web/HTML/Attributes/rel/preload
 l10n:
-  sourceCommit: 7acfa06975b187f5dd640c19d4a10f76badcb094
+  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
 ---
 
 La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément HTML {{HTMLElement("link")}} permet de déclarer des requêtes à récupérer dans la partie {{HTMLElement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.
@@ -55,7 +54,7 @@ Dans l'exemple ci-dessus, nous préchargeons nos fichiers CSS et JavaScript afin
 - appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/Guides/CSP) aux ressources&nbsp;;
 - mettre en place les bons en-têtes de requêtes {{HTTPHeader("Accept")}} pour les ressources.
 
-### Quels types de contenu peuvent être préchargés&nbsp;?
+### Quels types de contenu peuvent être préchargés ?
 
 De nombreux différents types de contenu peuvent être préchargés. Les valeurs possibles de l'attribut `as` sont les suivantes&nbsp;:
 
@@ -98,11 +97,11 @@ Notez que pour les utilisateur·ice·s dont le navigateur prend en charge à la 
 
 Il est donc déconseillé d'indiquer le préchargement pour plusieurs types d'une même ressource. La bonne pratique est d'indiquer le préchargement uniquement pour le type que la majorité des utilisateur·ice·s va réellement utiliser. C'est pourquoi le code de l'exemple ci-dessus n'indique pas le préchargement pour l'image au format `image/webp`.
 
-Cependant, l'absence de préchargement n'empêche pas l'image `image/webp` d'être réellement utilisée par celles et ceux qui en ont besoin : pour les utilisateur·ice·s dont le navigateur ne prend pas en charge `image/avif` mais prend en charge `image/webp`, le code de l'exemple ci-dessus fait toujours que l'image au format `image/webp` est utilisée — mais cela se fait sans aussi indiquer le préchargement inutilement pour la majorité des autres utilisateur·ice·s.
+Cependant, l'absence de préchargement n'empêche pas l'image `image/webp` d'être réellement utilisée par celles et ceux qui en ont besoin&nbsp;: pour les utilisateur·ice·s dont le navigateur ne prend pas en charge `image/avif` mais prend en charge `image/webp`, le code de l'exemple ci-dessus fait toujours que l'image au format `image/webp` est utilisée — mais cela se fait sans aussi indiquer le préchargement inutilement pour la majorité des autres utilisateur·ice·s.
 
 ## Récupération de l'activation du <i lang="en">CORS</i>
 
-Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/Guides/CORS) (partage des ressources entre origines multiples), comme par exemple {{DOMxRef("Window.fetch", "fetch()")}}, {{DOMxRef("XMLHttpRequest")}} ou [fonts](/fr/docs/Web/CSS/Reference/At-rules/@font-face)), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) sur l'élément {{HTMLElement("link")}}. L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
+Lors du préchargement des ressources analysées par des fonctions activant le [CORS](/fr/docs/Web/HTTP/Guides/CORS) (partage des ressources entre origines multiples), comme par exemple {{DOMxRef("Window.fetch", "fetch()")}}, {{DOMxRef("XMLHttpRequest")}} ou [fonts](/fr/docs/Web/CSS/Reference/At-rules/@font-face), une attention particulière doit être portée à la mise en place de l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Elements/link#crossorigin) sur l'élément {{HTMLElement("link")}}. L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.
 
 Comme mentionné ci-dessus, un cas de figure intéressant est celui qui s'applique aux fichiers de polices. Pour plusieurs raisons, celles-ci doivent être analysées en utilisant le mode anonyme du <i lang="en">CORS</i> (voir cet article en anglais&nbsp;: [<i lang="en">Font fetching requirements</i> <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
@@ -137,7 +136,7 @@ En plus de fournir un type MIME avec l'attribut `type`, ce code utilise un attri
 
 ## Inclure des médias
 
-Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/Reference/At-rules/@media#media_types) ou encore des [<i lang="en">media queries</i>](/fr/docs/Web/CSS/Guides/Media_queries/Using) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
+Une autre belle fonctionnalité de l'élément `<link>` concerne leur capacité à accepter les attributs [`media`](/fr/docs/Web/HTML/Reference/Elements/link#media). Il peut accepter les requêtes de [types de médias](/fr/docs/Web/CSS/Reference/At-rules/@media#media_types) ou encore des [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using) complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i>&nbsp;!
 
 Voici un exemple. Vous pouvez consulter son [code source sur GitHub <sup>(angl.)</sup>](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media) ou étudier un [exemple de démonstration <sup>(angl.)</sup>](https://mdn.github.io/html-examples/link-rel-preload/media/)&nbsp;:
 
@@ -181,7 +180,7 @@ Dans cet exemple nous incluons les attributs `media` dans notre élément `<link
 
 Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit «&nbsp;flash de texte sans mis en forme&nbsp;» en français).
 
-Il sera dommage de limiter le préchargement aux images, voyez plus loin&nbsp;! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le visiteur se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources du visiteur sont suffisantes.
+Il sera dommage de limiter le préchargement aux images, voyez plus loin&nbsp;! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le·a visiteur·euse se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources de la visiteuse ou du visiteur sont suffisantes.
 
 ## Scripts et préchargement
 

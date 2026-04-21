@@ -1,9 +1,9 @@
 ---
-title: :invalid
+title: Pseudo-classe CSS `:invalid`
+short-title: :invalid
 slug: Web/CSS/Reference/Selectors/:invalid
-original_slug: Web/CSS/:invalid
 l10n:
-  sourceCommit: 7f460077d6f16c939718e9482a8270166f6d9abd
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur·ice à identifier et à corriger les erreurs.
@@ -131,7 +131,7 @@ Si un quelconque bouton radio dans un groupe (c'est-à-dire, avec la même valeu
 
 ### Gestion dans Gecko
 
-Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:invalid` . Toutefois un style différent est appliqué (un halo rouge utilisant la propriété {{cssxref("box-shadow")}}) via la pseudo-classe {{cssxref(":user-invalid")}}, qui s'applique dans un sous-ensemble des cas de `:invalid`.
+Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:invalid`. Toutefois un style différent est appliqué (un halo rouge utilisant la propriété {{CSSxRef("box-shadow")}}) via la pseudo-classe {{CSSxRef(":user-invalid")}}, qui s'applique dans un sous-ensemble des cas de `:invalid`.
 
 ## Spécifications
 
@@ -144,11 +144,11 @@ Par défaut, Gecko n'applique pas de style particulier à la pseudo-classe `:inv
 ## Voir aussi
 
 - Autres pseudo-classes liées à la validation&nbsp;:
-  - {{ cssxref(":required") }}
-  - {{ cssxref(":optional") }}
-  - {{ cssxref(":valid") }}
+  - {{CSSxRef(":required")}}
+  - {{CSSxRef(":optional")}}
+  - {{CSSxRef(":valid")}}
 - Pseudo-classes Mozilla liées&nbsp;:
-  - {{cssxref(":user-invalid")}}
-  - {{cssxref(":-moz-submit-invalid")}}
+  - {{CSSxRef(":user-invalid")}}
+  - {{CSSxRef(":-moz-submit-invalid")}}
 - [Validation des données de formulaire](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - Accéder à l'[état de validité](/fr/docs/Web/API/ValidityState) depuis JavaScript

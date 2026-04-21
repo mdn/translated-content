@@ -38,4 +38,4 @@ The various layout methods have different browser support. See the charts below 
 
 ## Смотрите также
 
-- [CSS Flexible Box Layout](/ru/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS Flexible Box Layout](/ru/docs/Web/CSS/Guides/Flexible_box_layout)

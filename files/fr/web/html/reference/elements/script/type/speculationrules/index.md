@@ -3,7 +3,7 @@ title: <script type="speculationrules">
 short-title: speculationrules
 slug: Web/HTML/Reference/Elements/script/type/speculationrules
 l10n:
-  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 {{SeeCompatTable}}
@@ -588,4 +588,4 @@ Il n'est pas nécessaire pour les règles de type document (qui utilisent `where
 
 - [Prérendre des pages dans Chrome pour des navigations instantanées](https://developer.chrome.com/docs/web-platform/prerender-pages?hl=fr) sur developer.chrome.com
 - [Chargement spéculatif](/fr/docs/Web/Performance/Guides/Speculative_loading)
-- [API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API)
+- [L'API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API)

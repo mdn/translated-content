@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 Dans l'article précédent, nous avons traité essentiellement de la théorie. Le présent article fournira une expérience pratique. Ici vous allez mettre en pratique ces connaissances en construisant vos propres fonctions. Tout au long, nous expliquerons également quelques détails supplémentaires concernant les fonctions.
 
@@ -14,10 +14,10 @@ Dans l'article précédent, nous avons traité essentiellement de la théorie. L
       <th scope="row">Prérequis :</th>
       <td>
         Savoir-faire de base, une compréhension minimale HTML et CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting"
           >premiers pas en JavaScript</a
         >,
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/fr/docs/Learn_web_development/Core/Scripting/Functions"
           >Fonctions — blocs de code réutilisables</a
         >.
       </td>
@@ -117,7 +117,7 @@ closeBtn.textContent = "x";
 panel.appendChild(closeBtn);
 ```
 
-Finalement, nous utilisons un gestionnaire d'évènements {{domxref("GlobalEventHandlers.onclick")}} de sorte qu'un clic sur le bouton déclenche le bout de code chargé de supprimer la totalité du panneau de la page — c'est-à-dire fermer la boîte de message.
+Finalement, nous utilisons un gestionnaire d'évènements {{DOMxRef("Element/click_event", "click")}} de sorte qu'un clic sur le bouton déclenche le bout de code chargé de supprimer la totalité du panneau de la page — c'est-à-dire fermer la boîte de message.
 
 Le gestionnaire `onclick` est une propriété disponible sur le bouton (en fait, sur n'importe quel élément de la page) qui pourra se voir transmettre une fonction en paramètre pour spécifier quel morceau de code sera déclenché quand le bouton sera cliqué. Vous en apprendrez bien plus dans notre article sur les évènements. Nous avons passé à notre gestionnaire `onclick` une fonction anonyme, qui contient le code exécuté quand le bouton est cliqué. L'instruction définie dans la fonction utilise la fonction de l'API DOM {{domxref("Node.removeChild()")}} pour indiquer que nous tenons à supprimer un élément enfant spécifique de l'élément HTML — dans notre cas le panneau `<div>`.
 
@@ -298,4 +298,4 @@ Passons au paramètre suivant. Celui-ci va demander un peu plus de travail — s
 
 Vous êtes venu à bout de cette activité, félicitations&nbsp;! Cet article vous a amené à travers tout le processus de construction d'une fonction pratique personnalisée, qui avec un peu plus de travail pourrait être transposée dans un projet réel. Dans l'article suivant, nous allons conclure l'apprentissage des fonctions en expliquant un autre concept connexe essentiel — les valeurs de retour.
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}

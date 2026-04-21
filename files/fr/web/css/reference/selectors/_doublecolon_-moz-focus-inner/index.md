@@ -1,14 +1,14 @@
 ---
-title: ::-moz-focus-inner
+title: Pseudo-élément CSS `::-moz-focus-inner`
+short-title: ::-moz-focus-inner
 slug: Web/CSS/Reference/Selectors/::-moz-focus-inner
-original_slug: Web/CSS/::-moz-focus-inner
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-{{non-standard_header}}{{deprecated_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour le focus sur l'élément {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::-moz-focus-inner`** est [une extension de Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions) qui représente le contour interne pour le focus sur l'élément HTML {{HTMLElement("button")}} ainsi que les boutons {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}} et {{HTMLElement("input/color","color")}} de l'élément {{HTMLElement("input")}}.
 
 > [!NOTE]
 > Utiliser `::-moz-focus-inner` sur un autre élément que les types de boutons pris en charge n'aura aucun effet.
@@ -47,7 +47,7 @@ input[type="submit"]::-moz-focus-inner {
 
 ### Résultat
 
-{{EmbedLiveSample("", 300, 50)}}
+{{EmbedLiveSample("Exemple", 300, 50)}}
 
 ## Spécifications
 
@@ -56,10 +56,8 @@ Ce pseudo-élément ne fait partie d'aucun standard.
 ## Voir aussi
 
 - [Les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Reference/Mozilla_extensions)
-- Propriétés CSS associées&nbsp;:
-  - {{cssxref("-moz-user-focus")}}
-
+- La propriété {{CSSxRef("-moz-user-focus")}}
 - Les sélecteurs CSS associés&nbsp;:
-  - {{cssxref(":focus")}}
-  - {{cssxref(":focus-visible")}}
-  - {{cssxref(":focus-within")}}
+  - {{CSSxRef(":focus")}}
+  - {{CSSxRef(":focus-visible")}}
+  - {{CSSxRef(":focus-within")}}

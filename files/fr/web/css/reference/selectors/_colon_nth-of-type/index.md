@@ -1,9 +1,9 @@
 ---
-title: :nth-of-type
+title: Pseudo-classe CSS `:nth-of-type()`
+short-title: :nth-of-type()
 slug: Web/CSS/Reference/Selectors/:nth-of-type
-original_slug: Web/CSS/:nth-of-type
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-of-type()`** permet de cibler les éléments selon leur position parmi les voisins du même type (les mêmes noms de balise).
@@ -108,5 +108,5 @@ p.fancy:nth-of-type(2n + 1) {
 
 ## Voir aussi
 
-- [`:nth-child`](/fr/docs/Web/CSS/Reference/Selectors/:nth-child)
-- [`:nth-last-of-type`](/fr/docs/Web/CSS/Reference/Selectors/:nth-last-of-type)
+- La pseudo-classe {{CSSxRef(":nth-child")}}
+- La pseudo-classe {{CSSxRef(":nth-last-of-type")}}

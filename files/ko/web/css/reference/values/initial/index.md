@@ -4,10 +4,10 @@ slug: Web/CSS/Reference/Values/initial
 original_slug: Web/CSS/initial
 ---
 
-[CSS](/ko/docs/Web/CSS) **`initial`** 키워드는 속성의 [초깃값(기본값)](/ko/docs/Web/CSS/CSS_cascade/Value_processing)을 요소에 적용합니다. 초깃값은 브라우저가 지정합니다. 모든 속성에서 사용할 수 있으며, {{cssxref("all")}}에 지정할 경우 모든 CSS 속성을 초깃값으로 재설정합니다.
+[CSS](/ko/docs/Web/CSS) **`initial`** 키워드는 속성의 [초깃값(기본값)](/ko/docs/Web/CSS/Guides/Cascade/Property_value_processing)을 요소에 적용합니다. 초깃값은 브라우저가 지정합니다. 모든 속성에서 사용할 수 있으며, {{cssxref("all")}}에 지정할 경우 모든 CSS 속성을 초깃값으로 재설정합니다.
 
 > [!NOTE]
-> [상속 속성](/ko/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)의 초깃값은 예상치 못한 값일 수도 있습니다. 따라서, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}} 키워드의 사용을 대신 고려해보세요.
+> [상속 속성](/ko/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties)의 초깃값은 예상치 못한 값일 수도 있습니다. 따라서, {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}} 키워드의 사용을 대신 고려해보세요.
 
 ## 예제
 

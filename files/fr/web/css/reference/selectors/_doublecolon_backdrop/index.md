@@ -1,12 +1,12 @@
 ---
-title: ::backdrop
+title: Pseudo-élément CSS `::backdrop`
+short-title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
-original_slug: Web/CSS/::backdrop
 l10n:
-  sourceCommit: e82803beedb7f1d8a8e918c1071752f18e1e3f28
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{glossary("top layer", "couche supérieure")}}.
+Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{Glossary("top layer", "couche supérieure")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: ::backdrop", "tabbed-shorter")}}
 
@@ -53,9 +53,9 @@ showDialogBtn.addEventListener("click", () => favDialog.showModal());
 
 Les arrière-plans apparaissent dans les cas suivants&nbsp;:
 
-- Les éléments qui ont été placés en mode plein écran à l'aide de la méthode [Fullscreen API](/fr/docs/Web/API/Fullscreen_API) {{domxref("Element.requestFullscreen()")}}.
-- Les éléments {{HTMLElement("dialog")}} qui ont été affichés dans la couche supérieure via un appel à {{domxref("HTMLDialogElement.showModal()")}}.
-- Les éléments {{domxref("Popover API", "Popover", "", "nocode")}} qui ont été affichés dans la couche supérieure via un appel à {{domxref("HTMLElement.showPopover()")}}.
+- Les éléments qui ont été placés en mode plein écran à l'aide de la méthode [Fullscreen API](/fr/docs/Web/API/Fullscreen_API) {{DOMxRef("Element.requestFullscreen()")}}.
+- Les éléments {{HTMLElement("dialog")}} qui ont été affichés dans la couche supérieure via un appel à {{DOMxRef("HTMLDialogElement.showModal()")}}.
+- Les éléments {{DOMxRef("Popover API", "Popover", "", "nocode")}} qui ont été affichés dans la couche supérieure via un appel à {{DOMxRef("HTMLElement.showPopover()")}}.
 
 Lorsque plusieurs éléments ont été placés dans la couche supérieure, chacun d'eux a son propre pseudo-élément `::backdrop`.
 
@@ -75,11 +75,11 @@ Les éléments sont placés dans une pile last-in/first-out (LIFO) dans la couch
 
 ### Mettre en forme l'arrière-plan d'une boîte de dialogue
 
-Dans cet exemple, nous utilisons le pseudo-élément `::backdrop` pour styliser l'arrière-plan utilisé lorsqu'un modal {{htmlelement("dialog")}} est affiché.
+Dans cet exemple, nous utilisons le pseudo-élément `::backdrop` pour styliser l'arrière-plan utilisé lorsqu'un modal {{HTMLElement("dialog")}} est affiché.
 
 #### HTML
 
-Nous incluons un {{htmlelement("button")}} qui, lorsqu'il est cliqué, ouvrira le `<dialog>` inclus. Lorsque le `<dialog>` est ouvert, nous donnons le focus au bouton qui ferme la boîte de dialogue&nbsp;:
+Nous incluons un {{HTMLElement("button")}} qui, lorsqu'il est cliqué, ouvrira le `<dialog>` inclus. Lorsque le `<dialog>` est ouvert, nous donnons le focus au bouton qui ferme la boîte de dialogue&nbsp;:
 
 ```html
 <dialog>
@@ -152,7 +152,7 @@ closeButton.addEventListener("click", () => {
 
 ## Voir aussi
 
-- La pseudo-classe {{cssxref(":fullscreen")}}
+- La pseudo-classe {{CSSxRef(":fullscreen")}}
 - L'élément HTML {{HTMLElement("dialog")}}
 - L'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
 - L'attribut HTML global [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)

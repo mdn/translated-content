@@ -1,9 +1,9 @@
 ---
-title: :indeterminate
+title: Pseudo-classe CSS `:indeterminate`
+short-title: :indeterminate
 slug: Web/CSS/Reference/Selectors/:indeterminate
-original_slug: Web/CSS/:indeterminate
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:indeterminate`** permet de cibler un élément de formulaire dont l'état est indéterminé.
@@ -140,5 +140,5 @@ progress:indeterminate {
 - [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn_web_development/Extensions/Forms)
 - [Mise en forme des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - La propriété [`indeterminate`](/fr/docs/Web/API/HTMLInputElement/indeterminate) de l'élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)
-- L'élément {{HTMLElement("input")}} et l'interface {{domxref("HTMLInputElement")}} qui l'implémente.
-- Le sélecteur CSS {{cssxref(":checked")}} vous permet de mettre en forme les cases à cocher en fonction de leur état (coche ou non)
+- L'élément {{HTMLElement("input")}} et l'interface {{DOMxRef("HTMLInputElement")}} qui l'implémente.
+- Le sélecteur CSS {{CSSxRef(":checked")}} vous permet de mettre en forme les cases à cocher en fonction de leur état (coche ou non)

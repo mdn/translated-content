@@ -1,18 +1,17 @@
 ---
 title: フィルター効果の使用
 slug: Web/CSS/Guides/Filter_effects/Using
-original_slug: Web/CSS/CSS_filter_effects/Using_filter_effects
 l10n:
-  sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 モノクロまたはセピア調の画像にカーソルを当てると、フルカラーの画像が瞬時に表示されたことはありませんか？背景画像の一部分が小さくぼやけていることで、その上に表示されたテキストがより読みやすくなるという経験はありませんか？ 以前は、このような操作を行うには画像編集ソフトウェア、時間、追加の HTTP リクエストなどが必要でした。
 
 ## CSS フィルター効果を使用する利点
 
-CSS の[フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュールが提供するプロパティと関数を使用すれば、Photoshopを使用したり、余分なHTTPリクエストを送信することなく、上述の視覚効果を適用することができます。必要なソフトウェアはユーザーのブラウザーだけです。さらに、 CSS のフィルター効果は、あらかじめ設定された画像効果とは異なり、レスポンシブでアニメーションが可能です。
+CSS の[フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)モジュールが提供するプロパティと関数を使用すれば、Photoshop を使用したり、余分な HTTP リクエストを送信することなく、上述の視覚効果を適用することができます。必要なソフトウェアはユーザーのブラウザーだけです。さらに、 CSS のフィルター効果は、あらかじめ設定された画像効果とは異なり、レスポンシブでアニメーションが可能です。
 
-CSS フィルター効果モジュールでは、テキスト、画像、背景、境界線、またはこれらのプロパティを適用するその他の要素のレンダリングに影響を与えるために使用できる {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティが提供されています。 このモジュールでは、不鮮明化や色変化などのグラフィック効果を追加できる {{cssxref("&lt;filter-function&gt;")}} データ型も定義しています。 フィルター関数を使用すると、要素の外観を変更できるだけでなく、作成したフィルターを使用して SVG フィルターを参照することもできます。
+CSS フィルター効果モジュールでは、テキスト、画像、背景、境界線、またはこれらのプロパティを適用するその他の要素のレンダリングに影響を与えるために使用できる {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティが提供されています。 このモジュールでは、不鮮明化や色変化などのグラフィック効果を追加できる {{cssxref("filter-function")}} データ型も定義しています。 フィルター関数を使用すると、要素の外観を変更できるだけでなく、作成したフィルターを使用して SVG フィルターを参照することもできます。
 
 ## フィルター効果のプロパティ
 
@@ -26,22 +25,22 @@ CSS フィルター効果モジュールの以下の 2 つのフィルタープ�
 
 ## フィルター関数
 
-CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/ja/docs/Web/CSS/Reference/Properties/filter#functions) 関数を提供するとともに、 `url()` 参照を使用して適用する SVG フィルターを使用して、無限に近い配列効果を定義する機能も提供します。
+CSS フィルター効果モジュールは、 10 個の {{cssxref("filter-function")}} 関数を提供するとともに、`url()` 参照を使用して適用する SVG フィルターを使用して、無限に近い配列効果を定義する機能も提供します。
 
 次の表には、 10 個のフィルター関数と、それらの値の型、該当する場合は最小有効値、効果を作成する最大値、および[補間](/ja/docs/Glossary/Interpolation)に使用される初期値が掲載されています。
 
-| フィルター関数                                              | 引数の型                                                               | 最小値 | 最大効果 | 補間値               | 既定値（効果なし）                        |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------- | ------ | -------- | -------------------- | ----------------------------------------- |
-| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                          | `0`    |          | `0`                  | `blur(0)`                                 |
-| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    |          | `1`                  | `brightness(1)` または `brightness(100%)` |
-| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                          | `0`    |          | `1`                  | `contrast(1)` または `contrast(100%)`     |
-| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                             |        |          | `0 0 0 currentcolor` | `drop-shadow(0 0 0 currentcolor)`         |
-| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0`                  | `grayscale(0)` または `grayscale(0%)`     |
-| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("&lt;angle&gt;")}}                                           |        |          | `0`                  | `hue-rotate(0deg)`                        |
-| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0`                  | `invert(0)` または `invert(0%)`           |
-| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `1`                  | `opacity(1)` または `opacity(100%)`       |
-| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `1`                  | `saturate(100%)`                          |
-| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0`                  | `sepia(0%)`                               |
+| フィルター関数                                              | 引数の型                                                               | 最小値 | 最大効果 | 既定値（効果なし）   |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------- | ------ | -------- | -------------------- |
+| {{cssxref("filter-function/blur", "blur()")}}               | {{cssxref("&lt;length&gt;")}}                                          | `0`    |          | `0`                  |
+| {{cssxref("filter-function/brightness", "brightness()")}}   | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    |          | `1` または `100%`    |
+| {{cssxref("filter-function/contrast", "contrast()")}}       | {{cssxref("&lt;length&gt;")}}                                          | `0`    |          | `1` または `100%`    |
+| {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} | `<shadow>`                                                             |        |          | `0 0 0 currentColor` |
+| {{cssxref("filter-function/grayscale", "grayscale()")}}     | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0` または `0%`      |
+| {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}   | {{cssxref("angle")}}                                                   |        |          | `0deg`               |
+| {{cssxref("filter-function/invert", "invert()")}}           | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0` または `0%`      |
+| {{cssxref("filter-function/opacity", "opacity()")}}         | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `1` または `100%`    |
+| {{cssxref("filter-function/saturate", "saturate()")}}       | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `100%`               |
+| {{cssxref("filter-function/sepia", "sepia()")}}             | {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} | `0`    | `100%`   | `0%`                 |
 
 最小値のあるフィルター関数は、最小値が含まれます。最小値未満の値をフィルター関数に指定すると、カンマ区切りのリストにある問題のフィルター関数だけでなく、プロパティ宣言全体が不正なものとなります。
 
@@ -57,7 +56,7 @@ CSS フィルター効果モジュールは、 10 個の [`<filter-function>`](/
 
 下のセピア調の画像にカーソルを当てると、フルカラーの画像が即座に表示されます。
 
-画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/Reference/Values/filter-function/sepia) フィルター関数を指定します。 [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) および [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) の時には、 `filter: none` を設定することでィルターが除去されます。
+画像をセピア調にするには、 `filter` プロパティの値として [`sepia()`](/ja/docs/Web/CSS/Reference/Values/filter-function/sepia) フィルター関数を指定します。 {{cssxref(":hover")}} および {{cssxref(":focus")}} の時には、 `filter: none` を設定することでィルターが除去されます。
 
 ```html
 <img tabindex="0" alt="Four trans-people, circa 1912" src="activists.jpg" />
@@ -82,7 +81,7 @@ img {
 }
 ```
 
-{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 300)}}
+{{EmbedLiveSample("Applying_sepia_filter_effect", 600, 550)}}
 
 ### 他の要素へのフィルター効果の適用
 
@@ -118,7 +117,8 @@ h1 {
 
 ```css
 .container {
-  background: url(image.jpg) no-repeat left / contain goldenrod;
+  background: url("/shared-assets/images/examples/listen_to_black_women.jpg")
+    no-repeat left / contain goldenrod;
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
@@ -134,23 +134,21 @@ p {
 }
 p {
   padding: 0.5rem;
-  color: #ffffff;
+  color: white;
   font-size: 2rem;
   font-family: sans-serif;
 }
 ```
 
 ```html hidden
-<div
-  class="container"
-  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
+<div class="container">
   <p>
-    画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティがない場合があります。
+    画像上のテキストは、ドロップシャドウがあっても読みにくく、アクセシビリティに欠ける場合があります。
   </p>
 </div>
 ```
 
-{{EmbedLiveSample('Applying_multiple_filters','100%','280')}}
+{{EmbedLiveSample('Applying_multiple_filters','100%','300')}}
 
 ### 反復フィルターの適用
 
@@ -167,12 +165,10 @@ img {
 }
 ```
 
-```css nolint
+```css
 img {
-  filter: drop-shadow(2px 2px 0 hsl(300deg 100% 50%))
-    drop-shadow(-2px -2px 0 hsl(210deg 100% 50%))
-    drop-shadow(2px 2px 0 hsl(120deg 100% 50%))
-    drop-shadow(-2px -2px 0 hsl(30deg 100% 50%));
+  filter: drop-shadow(2px 2px 0 magenta) drop-shadow(-2px -2px 0 royalblue)
+    drop-shadow(2px 2px 0 lime) drop-shadow(-2px -2px 0 darkorange);
 }
 img + img {
   filter: none;
@@ -218,7 +214,7 @@ h1 {
 
 同じフィルターが両方のテキスト行に適用されますが、順序は異なります。最初の行では、影が適用される前にテキストの色相が変更されるため、影は `magenta` になります。 2 つ目の行では、濃い青色のテキストにドロップシャドウが追加され、その後、テキストと影の色相が変更されます。
 
-3 行目にはフィルター効果を適用せず、比較用に元の効果を表示させています。そのため、3行目は `midnightblue` または `#191970` のままです。 `hue-rotate(180deg)` フィルターは、最初の 2 行のテキストを `#252500` に変更します。
+3 行目にはフィルター効果を適用せず、比較用に元の効果を表示させています。そのため、3 行目は `midnightblue` または `#191970` のままです。 `hue-rotate(180deg)` フィルターは、最初の 2 行のテキストを `#252500` に変更します。
 
 > [!NOTE]
 > 16 進数表記の RGB 色 `#191970` は `hsl(240deg 63.5% 26.9%)` と等しく、一方、`#252500` は `hsl(60deg 100% 7.3%)` です。[色の回転は sRGB 色空間で行われる](/ja/docs/Web/CSS/Reference/Values/color_value#補間)ため、彩度が同じ値を示さない場合でも、色相は予想通りに変化します。
@@ -248,7 +244,7 @@ h1 {
 インラインおよび外部の SVG のどちらの `url()` でも、フィルターの `id` が参照されます。
 
 ```css
-filter: url(#blur3);
+filter: url("#blur3");
 filter: url("https://example.com/svg/filters.svg#blur3");
 ```
 
@@ -261,7 +257,7 @@ filter: url("https://example.com/svg/filters.svg#blur3");
 [`<filter>`](/ja/docs/Web/SVG/Reference/Element/filter) の {{SVGAttr("stdDeviation")}} 属性は、最大 2 つの値を受け入れ、より複雑なぼかし値を作成することができます。同等のぼかしを作成するには、 `stdDeviation` に 1 つの値を記載します。
 
 ```html hidden
-<table cellpadding="5">
+<table>
   <thead>
     <tr>
       <th>CSS の例</th>
@@ -304,23 +300,30 @@ filter: url("https://example.com/svg/filters.svg#blur3");
 </svg>
 ```
 
-SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Reference/Element/image) 要素の [`filter`](/ja/docs/Web/SVG/Reference/Attribute/filter) 属性の値として、または CSS　の `filter` および `backdrop-filter` プロパティの数値の一部として含めることができます。
+SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Reference/Element/image) 要素の [`filter`](/ja/docs/Web/SVG/Reference/Attribute/filter) 属性の値として、または CSS 　の `filter` および `backdrop-filter` プロパティの数値の一部として含めることができます。
+
+```css hidden
+th,
+td {
+  padding: 5px;
+}
+```
 
 ```css
 .filter {
   filter: blur(3.5px);
 }
 .svgFilter {
-  filter: url(#blur);
+  filter: url("#blur");
 }
 ```
 
-{{EmbedLiveSample('blur_example','100%','280')}}
+{{EmbedLiveSample('blur_example','100%','550')}}
 
 ## 関連情報
 
 - {{cssxref("mask")}}
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS フィルター効果](/ja/docs/Web/CSS/Guides/Filter_effects)
-- SVG の {{SVGElement("filter")}} 要素、 SVG の {{SVGAttr("filter")}} 属性 '[SVG](/ja/docs/Web/SVG))
-- [Applying SVG effects to HTML content](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
+- [SVG](/ja/docs/Web/SVG) の {{SVGElement("filter")}} 要素、{{SVGAttr("filter")}} 属性
+- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

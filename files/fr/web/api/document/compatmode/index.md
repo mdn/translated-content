@@ -1,37 +1,26 @@
 ---
-title: document.compatMode
+title: "Document : propriété compatMode"
+short-title: compatMode
 slug: Web/API/Document/compatMode
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}
 
-Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)) ou dans le respect des standards.
+La propriété en lecture seule **`compatMode`** de l'interface {{DOMxRef("Document")}} indique si le document est rendu en [mode Quirks](/fr/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) ou en mode Standards.
 
-## Syntaxe
+## Valeur
 
-```js
-mode = document.compatMode;
-```
+Une chaîne de caractères qui est l'une des suivantes&nbsp;:
 
-## Valeurs
-
-- `"BackCompat"` si le document est a ffiché en mode "quirks" ;
-
-<!---->
-
-- mode
-  - : est une valeur énumérée qui peut être :
-
-<!---->
-
-- `"CSS1Compat"` si le document est affiché en mode "no-quirks" (aussi connu sous le nom de mode "standard") ou "limited-quirks" (mo de "proche du standard").
-
-<!---->
+- `"BackCompat"` si le document est en mode Quirks.
+- `"CSS1Compat"` si le document est en mode sans Quirks (également connu sous le nom de «&nbsp;standards&nbsp;») ou en mode Quasi-standards (également connu sous le nom de «&nbsp;quasi standards&nbsp;»).
 
 > [!NOTE]
-> Tous ces modes sont maintenant définis dans les normes, de sorte que les anciens «standards» et «presque standards» sont absurdes et ne sont plus utilisés dans les normes.
+> Tous ces modes sont désormais standardisés, donc les anciens noms «&nbsp;standards&nbsp;» et «&nbsp;quasi standards&nbsp;» sont obsolètes et ne sont plus utilisés dans les standards.
 
-## Exemple
+## Exemples
 
 ```js
 if (document.compatMode == "BackCompat") {
@@ -41,4 +30,8 @@ if (document.compatMode == "BackCompat") {
 
 ## Spécifications
 
-- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
