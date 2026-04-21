@@ -1,8 +1,9 @@
 ---
-title: inset-block
+title: Propriété CSS `inset-block`
+short-title: inset-block
 slug: Web/CSS/Reference/Properties/inset-block
 l10n:
-  sourceCommit: 2fe84cf3af6fab1d4009fe99b4a69332e1629838
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`inset-block`** définit les décalages logiques de début et de fin de bloc d'un élément, qui correspondent à des décalages physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("top")}} et {{CSSxRef("bottom")}}, ou {{CSSxRef("right")}} et {{CSSxRef("left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.

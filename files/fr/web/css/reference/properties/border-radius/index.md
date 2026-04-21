@@ -1,8 +1,9 @@
 ---
-title: border-radius
+title: Propriété CSS `border-radius`
+short-title: border-radius
 slug: Web/CSS/Reference/Properties/border-radius
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet d'arrondir les coins du bord extérieur d'un élément. Vous pouvez définir un seul rayon pour obtenir des coins circulaires, ou deux rayons pour obtenir des coins elliptiques.

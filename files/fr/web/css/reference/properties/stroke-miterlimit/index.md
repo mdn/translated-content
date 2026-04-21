@@ -1,8 +1,9 @@
 ---
-title: stroke-miterlimit
+title: Propriété CSS `stroke-miterlimit`
+short-title: stroke-miterlimit
 slug: Web/CSS/Reference/Properties/stroke-miterlimit
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-miterlimit`** définit une limite sur le rapport entre la longueur de l'onglet et la largeur du contour ({{CSSxRef("stroke-width")}}) lorsque la forme utilisée aux coins du tracé d'un élément [SVG](/fr/docs/Web/SVG) est une jonction en onglet. Si la limite définie par cette propriété est dépassée, la jonction est convertie de `miter` à `bevel`, ce qui donne à l'angle un aspect tronqué.

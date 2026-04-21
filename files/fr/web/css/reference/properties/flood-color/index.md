@@ -1,8 +1,9 @@
 ---
-title: flood-color
+title: Propriété CSS `flood-color`
+short-title: flood-color
 slug: Web/CSS/Reference/Properties/flood-color
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flood-color`** définit la couleur de la sous-région primitive du filtre en cours dans les éléments SVG {{SVGElement("feFlood")}} et {{SVGElement("feDropShadow")}} à l'intérieur d'un {{SVGElement("filter")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("flood-color")}} de l'élément.

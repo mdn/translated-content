@@ -1,8 +1,9 @@
 ---
-title: animation-range-end
+title: Propriété CSS `animation-range-end`
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:
-  sourceCommit: 2b6ef419bcd9bcc4316ae59c41b3a956c8fa5749
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-end`** définit le point sur la chronologie où une animation doit se terminer.

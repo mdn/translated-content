@@ -1,8 +1,9 @@
 ---
-title: timeline-scope
+title: Propriété CSS `timeline-scope`
+short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`timeline-scope`** modifie la portée d'une chronologie d'animation nommée.
