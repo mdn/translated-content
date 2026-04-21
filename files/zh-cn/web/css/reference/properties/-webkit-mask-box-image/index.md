@@ -1,5 +1,5 @@
 ---
-title: `-webkit-mask-box-image` CSS 属性
+title: "`-webkit-mask-box-image` CSS 属性"
 short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 l10n:
