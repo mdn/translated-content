@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@counter-style`"
+title: Règle CSS `@counter-style`
 short-title: "@counter-style"
 slug: Web/CSS/Reference/At-rules/@counter-style
 l10n:

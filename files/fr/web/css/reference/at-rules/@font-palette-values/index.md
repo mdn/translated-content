@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@font-palette-values`"
+title: Règle CSS `@font-palette-values`
 short-title: "@font-palette-values"
 slug: Web/CSS/Reference/At-rules/@font-palette-values
 l10n:

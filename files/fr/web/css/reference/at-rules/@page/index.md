@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@page`"
+title: Règle CSS `@page`
 short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 l10n:

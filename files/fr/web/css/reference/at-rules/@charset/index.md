@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@charset`"
+title: Règle CSS `@charset`
 short-title: "@charset"
 slug: Web/CSS/Reference/At-rules/@charset
 l10n:

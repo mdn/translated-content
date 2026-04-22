@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@import`"
+title: Règle CSS `@import`
 short-title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 l10n:

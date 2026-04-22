@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@document`"
+title: Règle CSS `@document`
 short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 l10n:

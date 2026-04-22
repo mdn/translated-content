@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@container`"
+title: Règle CSS `@container`
 short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:

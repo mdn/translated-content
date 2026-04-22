@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@view-transition`"
+title: Règle CSS `@view-transition`
 short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 l10n:

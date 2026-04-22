@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@color-profile`"
+title: Règle CSS `@color-profile`
 short-title: "@color-profile"
 slug: Web/CSS/Reference/At-rules/@color-profile
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@scope`"
+title: Règle CSS `@scope`
 short-title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
 l10n:

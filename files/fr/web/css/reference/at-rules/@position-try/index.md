@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@position-try`"
+title: Règle CSS `@position-try`
 short-title: "@position-try"
 slug: Web/CSS/Reference/At-rules/@position-try
 l10n:

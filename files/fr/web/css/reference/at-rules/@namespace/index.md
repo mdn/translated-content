@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@namespace`"
+title: Règle CSS `@namespace`
 short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
 l10n:

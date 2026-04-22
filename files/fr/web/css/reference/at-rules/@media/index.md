@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@media`"
+title: Règle CSS `@media`
 short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 l10n:

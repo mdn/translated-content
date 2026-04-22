@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@function`"
+title: Règle CSS `@function`
 short-title: "@function"
 slug: Web/CSS/Reference/At-rules/@function
 l10n:

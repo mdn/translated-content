@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@starting-style`"
+title: Règle CSS `@starting-style`
 short-title: "@starting-style"
 slug: Web/CSS/Reference/At-rules/@starting-style
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@supports`"
+title: Règle CSS `@supports`
 short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 l10n:

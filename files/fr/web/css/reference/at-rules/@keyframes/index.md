@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@keyframes`"
+title: Règle CSS `@keyframes`
 short-title: "@keyframes"
 slug: Web/CSS/Reference/At-rules/@keyframes
 l10n:

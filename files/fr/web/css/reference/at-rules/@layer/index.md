@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@layer`"
+title: Règle CSS `@layer`
 short-title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 l10n:

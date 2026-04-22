@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@font-feature-values`"
+title: Règle CSS `@font-feature-values`
 short-title: "@font-feature-values"
 slug: Web/CSS/Reference/At-rules/@font-feature-values
 l10n:

@@ -1,5 +1,5 @@
 ---
-title: "Règle CSS `@property`"
+title: Règle CSS `@property`
 short-title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 l10n:
