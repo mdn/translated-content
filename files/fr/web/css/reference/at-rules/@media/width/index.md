@@ -1,8 +1,9 @@
 ---
-title: width
+title: Fonction CSS `width`
+short-title: width
 slug: Web/CSS/Reference/At-rules/@media/width
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`width`** peut être utilisée pour tester la largeur de la {{Glossary("viewport", "zone d'affichage")}} (ou de la boîte de page, pour [les médias paginés](/fr/docs/Web/CSS/Guides/Paged_media)).

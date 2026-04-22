@@ -1,8 +1,9 @@
 ---
-title: device-height
+title: Fonction CSS `device-height`
+short-title: device-height
 slug: Web/CSS/Reference/At-rules/@media/device-height
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{Deprecated_Header}}

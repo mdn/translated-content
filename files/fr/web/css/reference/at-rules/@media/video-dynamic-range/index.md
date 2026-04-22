@@ -1,8 +1,9 @@
 ---
-title: video-dynamic-range
+title: Fonction CSS `video-dynamic-range`
+short-title: video-dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/video-dynamic-range
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`video-dynamic-range`** permet de tester la combinaison de la luminosité, du rapport de contraste et de la profondeur de couleur pris en charge par le plan vidéo de l'{{Glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.

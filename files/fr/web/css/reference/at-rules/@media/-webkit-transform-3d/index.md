@@ -1,8 +1,9 @@
 ---
-title: -webkit-transform-3d
+title: Fonction CSS `-webkit-transform-3d`
+short-title: -webkit-transform-3d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-3d
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-3d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 3D {{CSSxRef("transform")}} préfixées sont prises en charge.
