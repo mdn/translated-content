@@ -1,8 +1,9 @@
 ---
-title: override-colors
+title: Descripteur de règle CSS `override-colors`
+short-title: override-colors
 slug: Web/CSS/Reference/At-rules/@font-palette-values/override-colors
 l10n:
-  sourceCommit: 0b926fc3e79782401461d389fc9f17d522b39ed3
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`override-colors`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-palette-values")}} est utilisé pour remplacer les couleurs de la [palette de base](/fr/docs/Web/CSS/Reference/At-rules/@font-palette-values/base-palette) choisie pour une police couleur.

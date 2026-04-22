@@ -1,8 +1,9 @@
 ---
-title: font-family
+title: Descripteur de règle CSS `font-family`
+short-title: font-family
 slug: Web/CSS/Reference/At-rules/@font-face/font-family
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-family`** définit la famille de polices pour une police spécifiée dans une [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}.

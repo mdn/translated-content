@@ -1,8 +1,9 @@
 ---
-title: additive-symbols
+title: Descripteur de règle CSS `additive-symbols`
+short-title: additive-symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/additive-symbols
 l10n:
-  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`additive-symbols`** de la règle {{CSSxRef('@counter-style')}} est utilisé pour définir les symboles du compteur lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} de `@counter-style` est définie sur `additive`. Le système additif permet de construire des systèmes de numérotation à valeur de signe (<i lang="en">sign-value numbering</i>) comme les chiffres romains.
