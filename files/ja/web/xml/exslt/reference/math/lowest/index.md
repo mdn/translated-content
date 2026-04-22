@@ -1,7 +1,6 @@
 ---
 title: math:lowest()
 slug: Web/XML/EXSLT/Reference/math/lowest
-original_slug: Web/EXSLT/math/lowest
 l10n:
   sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
