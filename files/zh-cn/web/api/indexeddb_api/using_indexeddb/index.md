@@ -188,7 +188,7 @@ request.onerror = (event) => {
 request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
-  // 创建对象存储保存客户信息。我们将使用 "ssn" 作为键路径，因为它保证唯一——至少项目启动会是这么说的。
+  // 创建对象存储保存客户信息。我们将使用“ssn”作为键路径，因为它保证唯一——至少项目启动会是这么说的。
   const objectStore = db.createObjectStore("customers", { keyPath: "ssn" });
 
   // 按姓名创建索引。姓名可能重复，所以不能使用唯一索引。
