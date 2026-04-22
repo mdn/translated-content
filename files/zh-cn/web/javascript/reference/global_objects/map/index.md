@@ -1,34 +1,36 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
+l10n:
+  sourceCommit: c5a0ee66baf779b702ffae6d964d1f365381767c
 ---
 
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为键或值。
 
-{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+{{InteractiveExample("JavaScript 演示：Map", "taller")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", 1);
-map1.set("b", 2);
-map1.set("c", 3);
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
 
-console.log(map1.get("a"));
-// Expected output: 1
+console.log(map.get("a"));
+// 期望输出：1
 
-map1.set("a", 97);
+map.set("a", 97);
 
-console.log(map1.get("a"));
-// Expected output: 97
+console.log(map.get("a"));
+// 期望输出：97
 
-console.log(map1.size);
-// Expected output: 3
+console.log(map.size);
+// 期望输出：3
 
-map1.delete("b");
+map.delete("b");
 
-console.log(map1.size);
-// Expected output: 2
+console.log(map.size);
+// 期望输出：2
 ```
 
 ## 描述
@@ -39,7 +41,7 @@ console.log(map1.size);
 
 ### 键的相等
 
-键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#browser_compatibility)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。
+键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
 
 ### `Object` 和 `Map` 的比较
 
@@ -79,7 +81,7 @@ console.log(map1.size);
       </td>
       <td>
         <p>
-          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>。就像意外的键问题一样，这也可以通过使用 <code>null</code> 原型对象来缓解。
+          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>或<a href="/zh-CN/docs/Web/Security/Attacks/Prototype_pollution">原型污染攻击</a>。就像意外的键问题一样，这也可以通过使用 <code>null</code> 原型对象来缓解。
         </p>
       </td>
     </tr>
