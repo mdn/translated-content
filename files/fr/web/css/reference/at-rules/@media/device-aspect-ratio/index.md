@@ -1,8 +1,9 @@
 ---
-title: device-aspect-ratio
+title: Fonction CSS `device-aspect-ratio`
+short-title: device-aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/device-aspect-ratio
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{Deprecated_Header}}

@@ -1,8 +1,9 @@
 ---
-title: device-posture
+title: Fonction CSS `device-posture`
+short-title: device-posture
 slug: Web/CSS/Reference/At-rules/@media/device-posture
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}
