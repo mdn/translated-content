@@ -1,8 +1,9 @@
 ---
-title: syntax
+title: Descripteur de règle CSS `syntax`
+short-title: syntax
 slug: Web/CSS/Reference/At-rules/@property/syntax
 l10n:
-  sourceCommit: 98bbdcd90e5487539cebe19b12fe3d731fb5a03e
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`syntax`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} définit les types de valeurs autorisées pour la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée.
