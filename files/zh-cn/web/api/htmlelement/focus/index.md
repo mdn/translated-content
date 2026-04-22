@@ -40,8 +40,8 @@ focus(options)
 #### HTML
 
 ```html
-<input id="myTextField" value="Text field." />
-<button id="focusButton">Click to set focus on the text field</button>
+<input id="myTextField" value="文本字段。" />
+<button id="focusButton">点击以将焦点设置到文本字段</button>
 ```
 
 #### JavaScript
@@ -58,7 +58,7 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 选择按钮即可将焦点设置到文本框上。
 
-{{ EmbedLiveSample('Focus_on_a_text_field') }}
+{{ EmbedLiveSample('聚焦文本框') }}
 
 ### 聚焦按钮
 
@@ -69,10 +69,10 @@ document.getElementById("focusButton").addEventListener("click", () => {
 首先定义三个按钮。中间和右侧的按钮会将焦点设置到最左侧的按钮上，最右侧的按钮还会指定 `focusVisible`。
 
 ```html
-<button id="myButton">Button</button>
-<button id="focusButton">Click to set focus on "Button"</button>
+<button id="myButton">按钮</button>
+<button id="focusButton">点击以在“按钮”上设置焦点</button>
 <button id="focusButtonVisibleIndication">
-  Click to set focus and focusVisible on "Button"
+  点击以在“按钮”上设置焦点和 focusVisible
 </button>
 ```
 
@@ -98,7 +98,7 @@ document
 
 浏览器通常不会在以编程方式聚焦按钮元素时显示可见焦点指示，因此选择中间按钮的效果可能不太明显。但如果你的浏览器支持 `focusVisible` 选项，选择最右侧的按钮时应能看到最左侧按钮的焦点变化。
 
-{{ EmbedLiveSample('Focus_on_a_button') }}
+{{ EmbedLiveSample('聚焦按钮') }}
 
 ### 聚焦时是否滚动
 
@@ -109,29 +109,27 @@ document
 HTML 定义了两个按钮，用于将焦点设置到屏幕外的第三个按钮上。
 
 ```html
-<button id="focus_scroll">Click to set focus on off-screen button</button>
-<button id="focus_no_scroll">
-  Click to set focus on offscreen button without scrolling
-</button>
+<button id="focus_scroll">点击以将焦点设置在屏幕外按钮上</button>
+<button id="focus_no_scroll">点击以将焦点设置在屏幕外按钮上且不滚动</button>
 
 <div id="container">
-  <button id="myButton">Button</button>
+  <button id="myButton">按钮</button>
 </div>
 ```
 
 ```css hidden
 #myButton {
-  margin-top: 500px; /* Push the button off-screen */
+  margin-top: 500px; /* 将按钮推到屏幕外 */
 }
 ```
 
 #### JavaScript
 
-以下代码为第一个和第二个按钮设置了点击事件处理器，以将焦点设置到最后一个按钮上。请注意，第一个处理器未指定 `preventScroll` 选项，因此会启用滚动到获得焦点的元素。
+以下代码为第一个和第二个按钮设置了点击事件处理器，以将焦点设置到最后一个按钮上。请注意，第一个处理器未指定 `preventScroll` 选项，因此滚动到获得焦点的元素的操作可用。
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus(); // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // 默认：{preventScroll:false}
 });
 
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
@@ -143,7 +141,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 
 选择第一个按钮可以聚焦并滚动到屏幕外的按钮。选择第二个按钮可以聚焦，但不会发生滚动。
 
-{{ EmbedLiveSample('Focus with and without scrolling') }}
+{{ EmbedLiveSample('聚焦时是否滚动') }}
 
 ## 规范
 
@@ -152,7 +150,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 ## 备注
 
 - 如果在 mousedown 事件处理器中调用 `HTMLElement.focus()`，则必须调用 `event.preventDefault()` 以防止焦点离开 `HTMLElement`。
-- 与不同 HTML 特性（如 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 或{{Glossary("shadow tree", "影子 DOM")}}）相关的焦点行为，此前一直未被充分定义，已于 2019 年 10 月更新。更多信息请参阅 [WHATWG 博客](https://blog.whatwg.org/focusing-on-focus)。
+- 与不同 HTML 特性（如 [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 或{{Glossary("shadow tree", "影子 DOM")}}）相关的焦点行为（此前一直未被充分定义）已于 2019 年 10 月更新。更多信息请参阅 [WHATWG 博客](https://blog.whatwg.org/focusing-on-focus)。
 
 ## 浏览器兼容性
 
