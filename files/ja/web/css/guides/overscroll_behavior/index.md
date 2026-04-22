@@ -72,7 +72,7 @@ l10n:
 
 ## 関連情報
 
-- [CSS スクロール固定](/en-US/docs/Web/CSS/Guides/Scroll_anchoring)モジュール
+- [CSS スクロール固定](/ja/docs/Web/CSS/Guides/Scroll_anchoring)モジュール
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
