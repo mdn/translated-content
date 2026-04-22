@@ -8,21 +8,21 @@ l10n:
 
 **`Object.is()`** 静态方法确定两个值是否为[相同值](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)。
 
-{{InteractiveExample("JavaScript Demo: Object.is()")}}
+{{InteractiveExample("JavaScript 演示：Object.is()")}}
 
 ```js interactive-example
 console.log(Object.is("1", 1));
-// Expected output: false
+// 期望输出：false
 
 console.log(Object.is(NaN, NaN));
-// Expected output: true
+// 期望输出：true
 
 console.log(Object.is(-0, 0));
-// Expected output: false
+// 期望输出：false
 
 const obj = {};
 console.log(Object.is(obj, {}));
-// Expected output: false
+// 期望输出：false
 ```
 
 ## 语法
