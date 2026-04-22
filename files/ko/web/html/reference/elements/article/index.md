@@ -70,14 +70,14 @@ original_slug: Web/HTML/Element/article
       </th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#구획_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구획_콘텐츠"
           >구획 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#뚜렷한_컨텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#뚜렷한_컨텐츠"
           >뚜렷한 콘텐츠</a
         >.
       </td>
@@ -86,7 +86,7 @@ original_slug: Web/HTML/Element/article
       <th scope="row"><dfn>가능한 콘텐츠</dfn></th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >.
@@ -99,7 +99,7 @@ original_slug: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.

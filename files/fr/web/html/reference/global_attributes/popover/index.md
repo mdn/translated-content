@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : popover"
+title: "Attribut HTML universel : `popover`"
 short-title: popover
 slug: Web/HTML/Reference/Global_attributes/popover
 l10n:
-  sourceCommit: d35f07a74f76374a6d98aa07b0b42e79322b02ec
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`popover`** permet de désigner un élément qui sera affiché par-dessus le contenu actuel.

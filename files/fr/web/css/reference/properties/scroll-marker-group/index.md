@@ -1,8 +1,9 @@
 ---
-title: scroll-marker-group
+title: Propriété CSS `scroll-marker-group`
+short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 l10n:
-  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

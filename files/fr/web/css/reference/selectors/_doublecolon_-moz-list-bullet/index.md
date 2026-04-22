@@ -1,8 +1,9 @@
 ---
-title: ::-moz-list-bullet
+title: Pseudo-élément CSS `::-moz-list-bullet`
+short-title: ::-moz-list-bullet
 slug: Web/CSS/Reference/Selectors/::-moz-list-bullet
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}{{SeeCompatTable}}

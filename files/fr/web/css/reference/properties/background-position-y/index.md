@@ -1,8 +1,9 @@
 ---
-title: background-position-y
+title: Propriété CSS `background-position-y`
+short-title: background-position-y
 slug: Web/CSS/Reference/Properties/background-position-y
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à la couche de position définie par {{CSSxRef("background-origin")}}.

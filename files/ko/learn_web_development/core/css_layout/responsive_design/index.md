@@ -16,13 +16,13 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML의 기초인 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문서</a
         >를 공부하세요), 그리고 CSS의 작동 방식을 파악하기 위해 (<a
-          href="/ko/docs/Learn/CSS/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >CSS 첫걸음</a
         >과
-        <a href="/ko/docs/Learn/CSS/Building_blocks">CSS 구성 블록</a>를
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics">CSS 구성 블록</a>를
         공부하세요.)
       </td>
     </tr>

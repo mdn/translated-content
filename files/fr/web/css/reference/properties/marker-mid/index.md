@@ -1,8 +1,9 @@
 ---
-title: marker-mid
+title: Propriété CSS `marker-mid`
+short-title: marker-mid
 slug: Web/CSS/Reference/Properties/marker-mid
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`marker-mid`** pointe vers un marqueur qui sera dessiné sur les sommets intermédiaires du chemin de l'élément&nbsp;; c'est-à-dire à chacun de ses sommets entre les sommets de début et de fin. Le marqueur doit avoir été défini à l'aide d'un élément SVG {{SVGElement("marker")}} et ne peut être référencé qu'avec une valeur {{CSSxRef("url_value", "&lt;url&gt;")}}. La valeur de la propriété CSS remplace toute valeur de l'attribut `marker-mid` dans le SVG.

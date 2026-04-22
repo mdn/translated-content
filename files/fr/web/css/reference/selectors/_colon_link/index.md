@@ -1,8 +1,9 @@
 ---
-title: :link
+title: Pseudo-classe CSS `:link`
+short-title: :link
 slug: Web/CSS/Reference/Selectors/:link
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:link`** représente un élément qui n'a pas encore été visité. Il correspond à chaque élément {{HTMLElement('a')}} ou {{HTMLElement('area')}} non visité qui possède un attribut `href`.

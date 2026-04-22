@@ -1,8 +1,9 @@
 ---
-title: padding-left
+title: Propriété CSS `padding-left`
+short-title: padding-left
 slug: Web/CSS/Reference/Properties/padding-left
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-left`** définit la largeur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) à gauche d'un élément.

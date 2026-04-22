@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Introduction
 original_slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 En primer lugar empezaremos echando un vistazo a las APIS desde un nivel superior — ¿qué son, cómo funcionan, cómo usarlas en el código, y cómo están estructuradas?. También echaremos un vistazo a cuáles son los principales tipos de APIs, y para qué se usan.
 
@@ -263,4 +263,4 @@ Estos diálogos solicitando permiso se muestran al usuario por motivos de seguri
 
 En este punto, deberías tener ya una buena idea de los que son las APIs, cómo trabajan y qué puedes hacer con ellas en tu código JavaScript. Seguramente estarás con ganas de comenzar a hacer cosas divertidas con algunas APIs específicas, así que ¡vamos allá! A continuación veremos cómo manipular documentos con el Modelo de Objetos del Documento (DOM).
 
-{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
+{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn_web_development/Extensions/Client-side_APIs")}}

@@ -16,11 +16,11 @@ l10n:
       <th scope="row">사전 지식:</th>
       <td>
         기본 컴퓨터 활용 능력, HTML 기초
-        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         > 공부하기), CSS 기초
-        (<a href="/ko/docs/Learn/CSS/First_steps">CSS 소개</a> 공부하기),
-        <a href="/ko/docs/Learn/CSS/Styling_text/Fundamentals"
+        (<a href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS 소개</a> 공부하기),
+        <a href="/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals"
           >CSS 텍스트 및 폰트 기본 사항</a
         >.
       </td>

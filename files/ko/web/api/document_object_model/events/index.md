@@ -161,8 +161,8 @@ function simulateClick() {
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/Events">이벤트 입문</a></li>
-    <li><a href="/ko/docs/Web/Events/Event_handlers">Event handlers (overview)</a></li>
+    <li><a href="/ko/docs/Learn_web_development/Core/Scripting/Events">이벤트 입문</a></li>
+    <li><a href="/ko/docs/conflicting/Web/API/Document_Object_Model/Events">Event handlers (overview)</a></li>
     <li><a href="/ko/docs/Web/Events">Event reference</a></li>
   </ol>
 </section>

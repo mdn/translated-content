@@ -1,8 +1,9 @@
 ---
-title: :autofill
+title: Pseudo-classe CSS `:autofill`
+short-title: :autofill
 slug: Web/CSS/Reference/Selectors/:autofill
 l10n:
-  sourceCommit: 1c68ccea9621d3b67d9e3bff8f9f2e948e4e7e54
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.

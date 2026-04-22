@@ -1,8 +1,9 @@
 ---
-title: :where()
+title: Pseudo-classe CSS `:where()`
+short-title: :where()
 slug: Web/CSS/Reference/Selectors/:where
 l10n:
-  sourceCommit: 235f91c4deeb3a62492fdc82565afc56c11ec153
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:where()`** prend une liste de sélecteurs en argument et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
