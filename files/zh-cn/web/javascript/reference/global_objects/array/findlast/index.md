@@ -57,15 +57,6 @@ findLast(callbackFn, thisArg)
 
 `callbackFn` 会被数组中的*每个*元素调用，而不仅仅是那些被赋值的元素。对于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)来说，空槽行为和 `undefined` 相同。
 
-`findLast()` 方法不会改变调用它的数组，但是提供的 `callbackFn` 可以。但是请注意，数组的长度是在第一次调用 `callbackFn` *之前*保存的。因此：
-
-- `callbackFn` 不会访问在调用 `findLast()` 开始后才添加到数组中的任何元素。
-- 给已访问过的索引重新赋值将不会被 `callbackFn` 重新访问。
-- 如果 `callbackFn` 更改了数组中现有的、尚未访问的元素，则其传递给 `callbackFn` 的值将是 `findLast()` 访问该元素索引时的值。[已删除](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)的元素会被当做 `undefined` 来访问。
-
-> [!WARNING]
-> 上一段描述的并发修改的情况经常导致难以理解的代码，通常应该避免（特殊情况除外）。
-
 `findLast()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键的属性。
 
 ## 示例
@@ -217,7 +208,7 @@ array.findLast((value, index) => {
 
 ### 在非数组对象上调用 findLast()
 
-`findLast()` 方法读取 `this` 的 `length` 属性，然后访问每个整数索引。
+`findLast()` 方法读取 `this` 的 `length` 属性，然后访问每个键为小于 `length` 的非负整数的属性。
 
 ```js
 const arrayLike = {
@@ -244,7 +235,7 @@ console.log(
 
 - [`core-js` 中 `Array.prototype.findLast` 的 polyfill](https://github.com/zloirock/core-js#array-find-from-last)
 - [`Array.prototype.findLast` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.findlast)
-- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}
