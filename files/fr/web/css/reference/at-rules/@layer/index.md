@@ -1,8 +1,9 @@
 ---
-title: "@layer"
+title: "Règle CSS `@layer`"
+short-title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 l10n:
-  sourceCommit: 5005d73d35175d72a470c2285f1c3953a54e3688
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.

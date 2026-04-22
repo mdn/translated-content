@@ -1,8 +1,9 @@
 ---
-title: "@custom-media"
+title: "Règle CSS `@custom-media`"
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 l10n:
-  sourceCommit: ad20400adefa435897ee28e55cb8dfa7419e29f8
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 {{SeeCompatTable}}

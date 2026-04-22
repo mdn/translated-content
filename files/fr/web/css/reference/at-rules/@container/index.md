@@ -1,8 +1,9 @@
 ---
-title: "@container"
+title: "Règle CSS `@container`"
+short-title: "@container"
 slug: Web/CSS/Reference/At-rules/@container
 l10n:
-  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@container`** est une règle conditionnelle de groupe qui applique des styles à un [contexte de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries#nommer_les_contextes_de_conteneur).
@@ -76,6 +77,23 @@ Si aucun `<container-query>` n'est défini, les conteneurs nommés sont sélecti
   h2 {
     font-size: 1.5em;
   }
+}
+
+/* Requêtes de style() booléennes */
+@container style(--theme: one) or style(--theme: two) {
+  /* styles de conteneur correspondants */
+}
+@container style((--theme: one) or (--theme: two)) {
+  /* styles de conteneur correspondants */
+}
+@container style(--theme: one) and style(--theme: two) {
+  /* styles de conteneur correspondants */
+}
+@container style((--theme: one) and (--theme: two)) {
+  /* styles de conteneur correspondants */
+}
+@container not style(--theme: one) {
+  /* styles de conteneur correspondants */
 }
 ```
 

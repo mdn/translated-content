@@ -1,8 +1,9 @@
 ---
-title: "@position-try"
+title: "Règle CSS `@position-try`"
+short-title: "@position-try"
 slug: Web/CSS/Reference/At-rules/@position-try
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@position-try`** permet de définir une option personnalisée de repli de position, utilisée pour définir le positionnement et l'alignement des éléments ancrés. Un ou plusieurs ensembles d'options de repli peuvent être appliqués à l'élément ancré via la propriété {{CSSxRef("position-try-fallbacks")}} ou le raccourci {{CSSxRef("position-try")}}. Lorsque l'élément positionné est déplacé à un endroit où il commence à déborder de son bloc conteneur ou de la zone d'affichage (<i lang="en">viewport</i> en anglais), le navigateur sélectionne la première option de repli qui permet de replacer l'élément entièrement à l'écran.

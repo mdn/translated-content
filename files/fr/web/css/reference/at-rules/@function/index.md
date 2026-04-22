@@ -1,8 +1,9 @@
 ---
-title: "@function"
+title: "Règle CSS `@function`"
+short-title: "@function"
 slug: Web/CSS/Reference/At-rules/@function
 l10n:
-  sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 {{SeeCompatTable}}

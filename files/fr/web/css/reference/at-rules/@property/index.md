@@ -1,8 +1,9 @@
 ---
-title: "@property"
+title: "Règle CSS `@property`"
+short-title: "@property"
 slug: Web/CSS/Reference/At-rules/@property
 l10n:
-  sourceCommit: cd5ad7b2d4aa2596b19e6875fbe7736dde47ee82
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@property`** est utilisée pour définir explicitement des [propriétés CSS personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*), avec vérification et contrainte de type, définition de valeurs par défaut et choix de l'héritage ou non de la propriété personnalisée.

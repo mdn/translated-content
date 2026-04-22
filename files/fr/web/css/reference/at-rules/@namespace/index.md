@@ -1,8 +1,9 @@
 ---
-title: "@namespace"
+title: "Règle CSS `@namespace`"
+short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
 l10n:
-  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@namespace`** définie [les espaces de noms XML](/fr/docs/Glossary/Namespace) utilisés dans une feuille de style CSS. Les espaces de noms définis sont alors utilisés pour restreindre les sélecteurs [universels](/fr/docs/Web/CSS/Reference/Selectors/Universal_selectors), [de type](/fr/docs/Web/CSS/Reference/Selectors/Type_selectors), et [d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) afin que ceux-ci ne sélectionnent que les éléments contenus dans cet espace de nom. La règle `@namespace` est généralement utilisée lorsqu'on manipule des documents entremêlant différents espaces de noms (par exemple, un document HTML5 qui contient du SVG en ligne ou du MathML ou alors un fichier XML qui est composé de plusieurs vocabulaires).

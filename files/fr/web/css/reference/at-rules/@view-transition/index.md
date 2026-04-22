@@ -1,8 +1,9 @@
 ---
-title: "@view-transition"
+title: "Règle CSS `@view-transition`"
+short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 l10n:
-  sourceCommit: b88f711ce4944f97162d7f1a7bcb8283af06f690
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@view-transition`** est utilisée pour choisir les documents actuels et de destination qui subiront [une transition d'affichage](/fr/docs/Web/API/View_Transition_API), dans le cas d'une navigation entre plusieurs documents.

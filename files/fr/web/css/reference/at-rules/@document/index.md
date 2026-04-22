@@ -1,8 +1,9 @@
 ---
-title: "@document"
+title: "Règle CSS `@document`"
+short-title: "@document"
 slug: Web/CSS/Reference/At-rules/@document
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 {{Deprecated_Header}}{{Non-standard_Header}}
