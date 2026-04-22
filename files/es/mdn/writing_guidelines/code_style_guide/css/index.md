@@ -42,7 +42,7 @@ No utilices la sintaxis de preprocesadores, como [Sass](https://sass-lang.com/),
 
 ### No uses metodologías CSS específicas
 
-En el mismo espíritu que la directriz anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
+En el mismo espíritu que la guía anterior, no escribas códigos de ejemplo en MDN Web Docs utilizando una metodología CSS específica como [BEM](https://getbem.com/naming/) o [SMACSS](https://smacss.com/). Aunque son sintaxis CSS válidas, las convenciones de nombres pueden resultar confusas para personas que no están familiarizadas con esas metodologías.
 
 ### No uses reinicios (resets)
 
@@ -468,4 +468,4 @@ Con la regla-at `@import`, especifica la ruta del módulo como una cadena, no co
 
 ## Véase también
 
-[Índice de referencia de CSS](/es/docs/Web/CSS/Reference#index) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" generalmente están escritos siguiendo las directrices descritas en esta página.
+[Índice de referencia de CSS](/es/docs/Web/CSS/Reference#index) - navega por nuestras páginas de referencia de propiedades CSS para ver algunos fragmentos de CSS buenos, concisos y significativos. Nuestros ejemplos interactivos en la sección "Pruébalo" generalmente están escritos siguiendo las pautas descritas en esta página.
