@@ -1,148 +1,41 @@
 ---
-title: Intl.Locale.prototype.calendar
+title: "Intl.Locale : propriété calendar"
+short-title: calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
+l10n:
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.calendar`** est une propriété (via un accesseur) qui renvoie le type de calendrier utilisé par l'instance de `Locale`.
+La propriété d'accesseur **`calendar`** des instances de {{JSxRef("Intl.Locale")}} retourne le type de calendrier pour cette locale.
 
 ## Description
 
-La propriété `calendar` renvoie la partie de la locale qui indique le calendrier utilisé. Bien que la plupart des régions utilise le calendrier grégorien, il existe différents calendriers utilisés. Le tableau qui suit indique les clés Unicode pour les différents calendriers ainsi qu'une description.
+Bien que la plupart du monde utilise le calendrier grégorien, il existe plusieurs ères de calendriers régionaux utilisées dans le monde. Pour une liste des types de calendriers pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge).
 
-<table class="standard-table">
-  <caption>
-    Clés Unicode pour les calendriers
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Clé Unicode</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>buddhist</code></td>
-      <td>Calendrier bouddhiste</td>
-    </tr>
-    <tr>
-      <td><code>chinese</code></td>
-      <td>Calendrier chinois traditionnel</td>
-    </tr>
-    <tr>
-      <td><code>coptic</code></td>
-      <td>Calendrier copte</td>
-    </tr>
-    <tr>
-      <td><code>dangi</code></td>
-      <td>Calendrier coréen traditionnel</td>
-    </tr>
-    <tr>
-      <td><code>ethioaa</code></td>
-      <td>
-        Calendrier éthiopique, Amete Alem (an 0 situé environ à 5493 ans avant
-        notre ère)
-      </td>
-    </tr>
-    <tr>
-      <td><code>ethiopic</code></td>
-      <td>
-        Calendrier éthiopique, Amete Mihret (an 0 situé environ à 8 ans de notre
-        ère)
-      </td>
-    </tr>
-    <tr>
-      <td><code>gregory</code></td>
-      <td>Calendrier grégorien</td>
-    </tr>
-    <tr>
-      <td><code>hebrew</code></td>
-      <td>Calendrier traditionnel hébreux</td>
-    </tr>
-    <tr>
-      <td><code>indian</code></td>
-      <td>Calendrier indien</td>
-    </tr>
-    <tr>
-      <td><code>islamic</code></td>
-      <td>Calendrier islamique</td>
-    </tr>
-    <tr>
-      <td><code>islamic-umalqura</code></td>
-      <td>Calendrier islamique, Umm al-Qura</td>
-    </tr>
-    <tr>
-      <td><code>islamic-tbla</code></td>
-      <td>
-        Calendrier islamique tabulaire (années intercalaires
-        [2,5,7,10,13,16,18,21,24,26,29] - origine des temps astronomique)
-      </td>
-    </tr>
-    <tr>
-      <td><code>islamic-civil</code></td>
-      <td>
-        Calendrier islamique tabulaire (années intercalaires
-        [2,5,7,10,13,16,18,21,24,26,29] - origine des temps civile)
-      </td>
-    </tr>
-    <tr>
-      <td><code>islamic-rgsa</code></td>
-      <td>Calendrier islamique vu de l'Arabie saoudite</td>
-    </tr>
-    <tr>
-      <td><code>iso8601</code></td>
-      <td>
-        Calendrier ISO (calendrier grégorien utilisant la numérotation des
-        semaines ISO 8601)
-      </td>
-    </tr>
-    <tr>
-      <td><code>japanese</code></td>
-      <td>Calendrier japonais impérial</td>
-    </tr>
-    <tr>
-      <td><code>persian</code></td>
-      <td>Calendrier perse</td>
-    </tr>
-    <tr>
-      <td><code>roc</code></td>
-      <td>Calendrier de la République de Chine</td>
-    </tr>
-    <tr>
-      <td>
-        <div class="warning">
-          <p>
-            <strong>Attention :</strong> La clé <code>islamicc</code> est
-            désormais dépréciée et il faut utiliser <code>islamic-civil</code> à
-            la place.
-          </p>
-        </div>
-        <p><code>islamicc</code></p>
-      </td>
-      <td>Calendrier arabe civil (algorithmique)</td>
-    </tr>
-  </tbody>
-</table>
+La valeur de la propriété `calendar` est définie au moment de la construction, soit par la clé `ca` de l'identifiant de locale, soit par l'option `calendar` du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}. Cette dernière prend le pas si les deux sont présentes&nbsp;; et si aucune n'est présente, la propriété a pour valeur `undefined`.
+
+Le mutateur d'accesseur de `calendar` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
-### Indiquer le calendrier via la chaîne de définition de la locale
+Comme pour les autres sous-balises de locale, le type de calendrier peut être ajouté à l'objet {{JSxRef("Intl.Locale")}} par la chaîne de caractères de locale, soit par un objet de configuration passé en argument au constructeur.
 
-Les calendriers font partie des « clés d'extension ». Ces clés permettent d'ajouter des informations supplémentaires aux locales et sont ajoutées via l'extension `-u`. Ainsi, on peut indiquer le calendrier utilisé via la chaîne de locale passée comme argument au constructeur {{jsxref("Locale", "Intl.Locale")}}. Pour ce faire, on ajoutera d'abord `-u` à la chaîne « courte » de la locale puis `-ca` afin d'indiquer qu'on précise le calendrier et enfin la chaîne représentant la clé du calendrier.
+### Ajouter un type de calendrier à la chaîne de caractères de locale
+
+Dans la [spécification des chaînes de caractères de locale Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/), `calendar` est un «&nbsp;sous-balise d'extension&nbsp;». Ces sous-balises ajoutent des informations supplémentaires sur la locale et sont ajoutés aux identifiants de locale en utilisant la clé d'extension `-u`. Pour ajouter le type de calendrier à la chaîne d'identifiant de locale initiale passée au constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}, ajoutez d'abord la clé d'extension `-u` si elle n'existe pas. Ensuite, ajoutez l'extension `-ca` pour indiquer que vous ajoutez un type de calendrier. Enfin, ajoutez le type d'ère du calendrier.
 
 ```js
-let frBuddhist = new Intl.Locale("fr-FR-u-ca-buddhist");
-console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
+const locale = new Intl.Locale("fr-FR-u-ca-buddhist");
+console.log(locale.calendar); // "buddhist"
 ```
 
-### Spécifier un calendrier grâce à un objet de configuration
+### Ajouter un type de calendrier à l'objet de configuration
 
-Le constructeur {{jsxref("Locale", "Intl.Locale")}} peut utiliser un argument optionnel qui est un objet permettant de configurer la locale via différentes extensions dont les calendriers. En utilisant la propriété `calendar` de cet objet, on définit le calendrier qui sera utilisé :
+Le constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} accepte un argument optionnel de type objet de configuration, qui peut contenir plusieurs types d'extensions, y compris les calendriers. Définissez la propriété `calendar` de l'objet de configuration sur l'ère de calendrier souhaitée, puis passez-le au constructeur.
 
 ```js
-let frBuddhist = new Intl.Locale("fr-FR", { calendar: "buddhist" });
-console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
+const locale = new Intl.Locale("fr-FR", { calendar: "buddhist" });
+console.log(locale.calendar); // "buddhist"
 ```
 
 ## Spécifications
@@ -155,5 +48,6 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- [Identifiants Unicode pour les calendriers](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier)
+- L'objet {{JSxRef("Intl.Locale")}}
+- La méthode {{JSxRef("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}
+- [Identifiants Unicode pour les calendriers <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeCalendarIdentifier) dans la spécification Unicode du langage de balisage des données de locale Unicode
