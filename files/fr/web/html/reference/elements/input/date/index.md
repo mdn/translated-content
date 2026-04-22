@@ -1,8 +1,9 @@
 ---
-title: <input type="date">
+title: Valeur d'attribut HTML `<input type="date">`
+short-title: <input type="date">
 slug: Web/HTML/Reference/Elements/input/date
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de **`type="date"`** créent des champs de saisie permettant à l'utilisateur·ice d'entrer une date. L'apparence de l'interface du sélecteur de date varie selon le navigateur et le système d'exploitation. La valeur est normalisée au format `yyyy-mm-dd`.
