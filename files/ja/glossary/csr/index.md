@@ -2,7 +2,7 @@
 title: Client-side rendering (クライアントサイドレンダリング) (CSR)
 slug: Glossary/CSR
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
 **クライアントサイドレンダリング** (CSR) はブラウザー内で JavaScript を使用して HTML コンテンツを作る手法を指します。 CSR は、サーバーが HTML コンテンツを作る {{glossary("SSR", "server-side rendering")}} と対照的です。これらの 2 つの技術は互いに排他的でなく、同じアプリケーションで使えます。
