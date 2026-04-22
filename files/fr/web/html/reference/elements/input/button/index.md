@@ -1,8 +1,9 @@
 ---
-title: <input type="button">
+title: Valeur d'attribut HTML `<input type="button">`
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement {{DOMxRef("Element/click_event", "click")}}).

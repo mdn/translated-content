@@ -1,8 +1,9 @@
 ---
-title: <input type="tel">
+title: Valeur d'attribut HTML `<input type="tel">`
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 l10n:
-  sourceCommit: 6e3b5b1a28e717aedd42b5e27b61bd80664ae3af
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Reference/Elements/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.

@@ -1,8 +1,9 @@
 ---
-title: <input type="file">
+title: Valeur d'attribut HTML `<input type="file">`
+short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
