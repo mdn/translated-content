@@ -16,7 +16,7 @@ l10n:
 - 某个值是否*存在*该数组中，请使用 {{jsxref("Array/includes", "includes()")}}。同样地，它会检查每个元素是否与该值相等，而不是使用一个测试函数。
 - 是否有任意一个元素满足给定的测试函数，请使用 {{jsxref("Array/some", "some()")}}。
 
-{{InteractiveExample("JavaScript Demo: Array.prototype.findLast()", "shorter")}}
+{{InteractiveExample("JavaScript 演示：Array.prototype.findLast()", "shorter")}}
 
 ```js interactive-example
 const array = [5, 12, 50, 130, 44];
