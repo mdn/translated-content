@@ -1,9 +1,9 @@
 ---
-title: <calc-keyword>
+title: Type CSS `<calc-keyword>`
+short-title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
-original_slug: Web/CSS/calc-keyword
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-keyword>`** représente des constantes bien définies comme `e` et `pi`. Plutôt que d'obliger les auteur·ice·s à saisir manuellement plusieurs chiffres de ces constantes mathématiques ou à les calculer, certaines d'entre elles sont directement fournies par CSS pour plus de commodité.

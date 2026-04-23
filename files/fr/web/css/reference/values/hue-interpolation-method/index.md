@@ -1,9 +1,9 @@
 ---
-title: <hue-interpolation-method>
+title: Type CSS `<hue-interpolation-method>`
+short-title: <hue-interpolation-method>
 slug: Web/CSS/Reference/Values/hue-interpolation-method
-original_slug: Web/CSS/hue-interpolation-method
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<hue-interpolation-method>`** représente l'algorithme utilisé pour l'interpolation entre des valeurs de type {{CSSxRef("&lt;hue&gt;")}}.
