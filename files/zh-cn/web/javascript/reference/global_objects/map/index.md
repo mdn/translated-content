@@ -41,7 +41,7 @@ console.log(map.size);
 
 ### 键的相等
 
-键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
+键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
 
 ### `Object` 和 `Map` 的比较
 
@@ -408,7 +408,7 @@ console.log(original === clone); // false. 浅比较 不为同一个对象的引
 ```
 
 > [!NOTE]
-> 请记住，*数据本身*未被克隆。
+> 请记住，*数据本身*未被克隆。换句话说，这只是对 `Map` 的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。
 
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 
@@ -466,7 +466,7 @@ console.log(merged.get(3)); // three
 ## 参见
 
 - [`core-js` 中 `Map` 的 polyfill](https://github.com/zloirock/core-js#map)
-- [es-shims 中 `Map` 的 polyfill](https://www.npmjs.com/package/es-map)
+- [`Map` 的 es-shims polyfill](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
