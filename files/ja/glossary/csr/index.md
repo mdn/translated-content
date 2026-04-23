@@ -11,7 +11,7 @@ l10n:
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja-JP">
   <head>
     <title>My App</title>
     <script src="bundle.js"></script>
