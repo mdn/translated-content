@@ -1,8 +1,9 @@
 ---
-title: scroll-timeline
+title: Propriété CSS `scroll-timeline`
+short-title: scroll-timeline
 slug: Web/CSS/Reference/Properties/scroll-timeline
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** est utilisée pour définir une [chronologie de progression de défilement nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou de gauche à droite).

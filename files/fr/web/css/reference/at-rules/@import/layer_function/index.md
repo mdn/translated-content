@@ -1,8 +1,9 @@
 ---
-title: layer()
+title: Fonction CSS `layer()`
+short-title: layer()
 slug: Web/CSS/Reference/At-rules/@import/layer_function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`layer()`** est utilisée avec la [règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@import")}} pour placer la ressource importée dans une [couche de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer) nommée distincte.

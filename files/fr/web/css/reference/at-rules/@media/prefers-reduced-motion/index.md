@@ -1,8 +1,9 @@
 ---
-title: prefers-reduced-motion
+title: Fonction CSS `prefers-reduced-motion`
+short-title: prefers-reduced-motion
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
 l10n:
-  sourceCommit: 77445f9812d0644dfe6975234f8ff3450efcf142
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!WARNING]

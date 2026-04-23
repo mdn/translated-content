@@ -1,8 +1,9 @@
 ---
-title: position-visibility
+title: Propriété CSS `position-visibility`
+short-title: position-visibility
 slug: Web/CSS/Reference/Properties/position-visibility
 l10n:
-  sourceCommit: 295f308ff9562fb5dff29f78268320a8ba759c8f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-visibility`** permet de masquer conditionnellement un élément positionné par ancre en fonction, par exemple, de son débordement par rapport à son élément contenant ou à la fenêtre d'affichage.

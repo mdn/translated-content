@@ -1,8 +1,9 @@
 ---
-title: :left
+title: Pseudo-classe CSS `:left`
+short-title: :left
 slug: Web/CSS/Reference/Selectors/:left
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:left`**, liée à la règle {{CSSxRef("@page")}}, permet de cibler les pages de gauche lors d'une impression.

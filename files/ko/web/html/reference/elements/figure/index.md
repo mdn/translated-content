@@ -55,7 +55,7 @@ figcaption {
       </th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >, 구획 루트, 뚜렷한 콘텐츠.
@@ -66,7 +66,7 @@ figcaption {
       <td>
         <p>
           {{htmlelement("figcaption")}}과 뒤따르는
-          <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
             >플로우 콘텐</a
           >츠.<br />혹은 플로우 콘텐츠를 뒤따르는
           <code>&#x3C;figcaption></code>.<br />혹은 플로우 콘텐츠.
@@ -81,7 +81,7 @@ figcaption {
       <th scope="row">가능한 부모 요소</th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.

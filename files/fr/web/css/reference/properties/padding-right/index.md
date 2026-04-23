@@ -1,8 +1,9 @@
 ---
-title: padding-right
+title: Propriété CSS `padding-right`
+short-title: padding-right
 slug: Web/CSS/Reference/Properties/padding-right
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-right`** définit la largeur de la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) à droite d'un élément.

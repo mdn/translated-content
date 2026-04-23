@@ -1,8 +1,9 @@
 ---
-title: scrollbar-width
+title: Propriété CSS `scrollbar-width`
+short-title: scrollbar-width
 slug: Web/CSS/Reference/Properties/scrollbar-width
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-width`** permet aux auteur·ice·s de définir l'épaisseur souhaitée des barres de défilement d'un élément lorsqu'elles sont affichées.

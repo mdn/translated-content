@@ -3,26 +3,26 @@ title: "ViewTransition: finished プロパティ"
 short-title: finished
 slug: Web/API/ViewTransition/finished
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transition API")}}
 
 **`finished`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用のプロパティで、ビュー遷移のアニメーションが完了し、新しいページビューがユーザーに表示され操作可能になると履行されるプロミス ({{jsxref("Promise")}}) です。
 
-`finished` は {{domxref("Document.startViewTransition()", "document.startViewTransition()")}} に渡されたコールバックが例外を発生するか、拒否されてページの新しい状態が作成されなかったことを示すプロミスを返した場合にのみ拒否されます。
+`finished` は、同一文書 (SPA) 間の遷移においてのみ、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} に渡されたコールバックが例外を発生させるか、拒否されたプロミスを返した場合にのみ拒否されます。これは、ページの新しい状態が生成されなかったことを示します。
 
-トランジションのアニメーションが開始されなかったり、 {{domxref("ViewTransition.skipTransition()")}} を使用してアニメーション中にスキップされた場合でも、終了状態に到達しているため、 `finished` は履行されます。
+遷移のアニメーションが開始されなかったり、{{domxref("ViewTransition.skipTransition()")}} を使用して遷移中にスキップされた場合でも、終了状態に到達しているため、 `finished` は履行されます。
 
 ## 値
 
-プロミスです。
+プロミス ({{jsxref("Promise")}}) です。
 
 ## 例
 
-### 様々な操作に様々なトランジション
+### 様々な操作に様々な遷移
 
-特定のナビゲーションで、固有のトランジションが要求されることがあります。例えば、「戻る」ナビゲーションは「進む」ナビゲーションとは異なるトランジションが必要かもしれません。このようなケースを処理する最良の方法は、 `<html>` 要素にクラス名を設定し、ビュー遷移のアニメーションを使用しながらトランジションを処理し、トランジションが完了したらクラス名を除去することです。
+特定のナビゲーションで、固有の遷移が要求されることがあります。例えば、「戻る」ナビゲーションは「進む」ナビゲーションとは異なる遷移が必要かもしれません。このようなケースを処理する最良の方法は、 `<html>` 要素にクラス名を設定し、ビュー遷移のアニメーションを使用しながら遷移を処理し、遷移が完了したらクラス名を除去することです。
 
 ```js
 async function handleTransition() {
@@ -55,4 +55,4 @@ async function handleTransition() {
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

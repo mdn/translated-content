@@ -1,8 +1,9 @@
 ---
-title: lighting-color
+title: Propriété CSS `lighting-color`
+short-title: lighting-color
 slug: Web/CSS/Reference/Properties/lighting-color
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`lighting-color`** définit la couleur de la source lumineuse pour les primitives de filtre d'éclairage SVG {{SVGElement("feDiffuseLighting")}} et {{SVGElement("feSpecularLighting")}} à l'intérieur d'un filtre ({{SVGElement("filter")}}) SVG. Si elle est présente, elle remplace l'attribut {{SVGAttr("lighting-color")}} de l'élément.

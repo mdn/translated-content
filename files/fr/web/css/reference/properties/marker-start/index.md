@@ -1,8 +1,9 @@
 ---
-title: marker-start
+title: Propriété CSS `marker-start`
+short-title: marker-start
 slug: Web/CSS/Reference/Properties/marker-start
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`marker-start`** pointe vers un marqueur qui sera dessiné sur le premier sommet du chemin de l'élément&nbsp;; c'est-à-dire à son sommet initial. Le marqueur doit avoir été défini à l'aide d'un élément SVG {{SVGElement("marker")}} et ne peut être référencé qu'avec une valeur {{CSSxRef("url_value", "&lt;url&gt;")}}. La valeur de la propriété CSS remplace toute valeur de l'attribut `marker-start` dans le SVG.

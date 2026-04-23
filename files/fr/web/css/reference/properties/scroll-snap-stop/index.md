@@ -1,8 +1,9 @@
 ---
-title: scroll-snap-stop
+title: Propriété CSS `scroll-snap-stop`
+short-title: scroll-snap-stop
 slug: Web/CSS/Reference/Properties/scroll-snap-stop
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-stop`** définit si le conteneur de défilement est autorisé ou non à «&nbsp;passer sur&nbsp;» les positions d'accrochage possibles.

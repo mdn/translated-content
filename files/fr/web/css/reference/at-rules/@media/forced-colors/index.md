@@ -1,8 +1,9 @@
 ---
-title: forced-colors
+title: Fonction CSS `forced-colors`
+short-title: forced-colors
 slug: Web/CSS/Reference/At-rules/@media/forced-colors
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`forced-colors`** permet de détecter si l'{{Glossary("user agent", "agent utilisateur")}} a activé un mode couleurs forcées, dans lequel il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page. Un exemple de mode couleurs forcées est le mode contraste élevé de Windows.

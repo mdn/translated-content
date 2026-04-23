@@ -1,8 +1,9 @@
 ---
-title: touch-action
+title: Propriété CSS `touch-action`
+short-title: touch-action
 slug: Web/CSS/Reference/Properties/touch-action
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`touch-action`** définit comment la zone d'un élément peut être manipulée par un·e utilisateur·ice d'écran tactile (par exemple, en utilisant les fonctionnalités de zoom intégrées au navigateur).

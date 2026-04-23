@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : contenteditable"
+title: "Attribut HTML universel : `contenteditable`"
 short-title: contenteditable
 slug: Web/HTML/Reference/Global_attributes/contenteditable
 l10n:
-  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** est un attribut énuméré qui indique si l'élément doit être éditable par l'utilisateur·ice. Si c'est le cas, le navigateur modifie son widget pour permettre l'édition.

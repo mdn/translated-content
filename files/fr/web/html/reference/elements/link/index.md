@@ -2,7 +2,7 @@
 title: "<link> : l'élément de lien vers des ressources externes"
 slug: Web/HTML/Reference/Elements/link
 l10n:
-  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
+  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers {{Glossary("CSS", "une feuille de style")}}, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
@@ -223,10 +223,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : Pour `rel="preload"` et `as="image"` uniquement, l'attribut `imagesizes` utilise une syntaxe et une sémantique similaires à l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes), ce qui permet de précharger la ressource appropriée utilisée par un élément `img` avec des valeurs correspondantes pour ses attributs `srcset` et `sizes`.
 - `imagesrcset`
   - : Pour `rel="preload"` et `as="image"` uniquement, l'attribut `imagesrcset` utilise une syntaxe et une sémantique similaires à l'attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset), ce qui permet de précharger la ressource appropriée utilisée par un élément `img` avec des valeurs correspondantes pour ses attributs `srcset` et `sizes`.
-- `integrity`
-  - : Contient des métadonnées en ligne&nbsp;: une empreinte cryptographique (hachage base64) de la ressource (fichier) que vous demandez au navigateur de récupérer.
-    Le navigateur peut utiliser cette empreinte pour vérifier que la ressource récupérée n'a pas été modifiée de façon inattendue.
-    Cet attribut ne doit être utilisé que lorsque l'attribut `rel` vaut `stylesheet`, `preload` ou `modulepreload`.
+- [`integrity`](/fr/docs/Web/HTML/Reference/Attributes/integrity)
+  - : Cet attribut contient une ou plusieurs {{Glossary("hash function", "hachage")}} de la ressource. Il est utilisé pour s'assurer que le contenu de la ressource est conforme à ce que le·la développeur·euse attend et n'a pas été remplacé par une copie malveillante dans le cadre d'une [attaque de la chaîne d'approvisionnement](/fr/docs/Web/Security/Attacks/Supply_chain_attacks). Cet attribut ne doit être utilisé que lorsque l'attribut `rel` est défini sur `stylesheet`, `preload` ou `modulepreload`.
     Voir [Subresource Integrity](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être un type de média ou une [requête média](/fr/docs/Web/CSS/Guides/Media_queries).

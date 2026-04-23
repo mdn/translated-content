@@ -1,8 +1,9 @@
 ---
-title: <input type="color">
+title: Valeur d'attribut HTML `<input type="color">`
+short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`color`** fournissent un élément d'interface utilisateur permettant à l'utilisateur·ice de définir une couleur, soit en utilisant une interface visuelle de sélection de couleur, soit en saisissant la couleur dans un champ texte au format [valeur de couleur CSS](/fr/docs/Web/CSS/Reference/Values/color_value).

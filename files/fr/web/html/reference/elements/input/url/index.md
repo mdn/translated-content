@@ -1,8 +1,9 @@
 ---
-title: <input type="url">
+title: Valeur d'attribut HTML `<input type="url">`
+short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 l10n:
-  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`url`** sont employées afin de permettre à un·e utilisateur·ice de saisir ou d'éditer une URL.

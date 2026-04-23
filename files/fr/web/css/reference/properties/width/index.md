@@ -1,8 +1,9 @@
 ---
-title: width
+title: Propriété CSS `width`
+short-title: width
 slug: Web/CSS/Reference/Properties/width
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`width`** définit la largeur d'un élément. Par défaut, elle définit la largeur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu), mais si {{CSSxRef("box-sizing")}} est définie sur `border-box`, elle définit la largeur de la [zone de bordure](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_bordure).

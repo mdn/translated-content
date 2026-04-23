@@ -1,8 +1,9 @@
 ---
-title: -webkit-transition
+title: Fonction CSS `-webkit-transition`
+short-title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 l10n:
-  sourceCommit: b868534a020a9efb06cba1846cf139f1c8b79aba
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{Deprecated_Header}}{{Non-standard_Header}}
@@ -60,7 +61,6 @@ Ne fait partie d'aucun standard.
 - La caractéristique média {{CSSxRef("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
-- [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - La propriété {{CSSxRef("transition")}} et [utiliser les transitions CSS](/fr/docs/Web/CSS/Guides/Transitions/Using)
 - La règle {{CSSxRef("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - La règle {{CSSxRef("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
