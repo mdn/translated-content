@@ -37,7 +37,7 @@ console.log(map.size);
 
 `Map` 对象是键值对的集合。`Map` 中的一个键**只能出现一次**；它在 `Map` 的集合中是独一无二的。`Map` 对象按键值对迭代——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key, value]` 的数组。迭代按*插入顺序*进行，即键值对按 [`set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/set) 方法首次插入到集合中的顺序（也就是说，当调用 `set()` 时，map 中没有具有相同值的键）进行迭代。
 
-规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（使用 O(1) 查找）、搜索树（使用 O(log(N)) 查找）或任何其他数据结构，只要复杂度小于 O(N)。
+规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（查找效率为 O(1)）、搜索树（查找效率为 O(log(N))）或任何其他数据结构，只要复杂度小于 O(N)。
 
 ### 键的相等
 
@@ -218,8 +218,8 @@ interface RTCStatsReport {
 
 类 `Map` 对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`[Symbol.iterator]()`](#map.prototypesymbol.iterator)。
-- 可写的类 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
+- 只读的类 `Map` 对象具有 {{jsxref("Map/size", "size")}} 属性，以及这些方法：{{jsxref("Map/entries", "entries()")}}、{{jsxref("Map/forEach", "forEach()")}}、{{jsxref("Map/get", "get()")}}、{{jsxref("Map/has", "has()")}}、{{jsxref("Map/keys", "keys()")}}、{{jsxref("Map/values", "values()")}} 和 [`Symbol.iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)。
+- 可写的类 `Map` 对象还额外具有这些方法：{{jsxref("Map/clear", "clear()")}}、{{jsxref("Map/delete", "delete()")}} 和 {{jsxref("Map/set", "set()")}}。
 
 除了对键和值类型的限制外，其方法和属性的行为与 `Map` 中的对应实体相同。
 
@@ -409,7 +409,7 @@ const original = new Map([[1, "one"]]);
 const clone = new Map(original);
 
 console.log(clone.get(1)); // one
-console.log(original === clone); // false. 浅比较 不为同一个对象的引用
+console.log(original === clone); // false（适用于浅比较）
 ```
 
 > [!NOTE]
