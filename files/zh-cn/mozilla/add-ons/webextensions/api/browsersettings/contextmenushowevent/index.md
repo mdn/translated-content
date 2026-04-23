@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，用于确定浏览器的上下文菜单是在 mouseup 事件还是 mousedown 事件显示。
 
 其底层值是一个字符串，可以是“mouseup”或“mousedown”。

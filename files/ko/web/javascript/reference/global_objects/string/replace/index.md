@@ -140,7 +140,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 이는 `'Twas the night before Christmas...'`를 출력합니다.
 
-> **참고:** [정규 표현식 안내서](/ko/docs/Web/JavaScript/Guide/Regular_expressions)를 보시면 정규 표현식에 대해 더 많은 설명을 보실 수 있습니다.
+> [!NOTE]
+> [정규 표현식 안내서](/ko/docs/Web/JavaScript/Guide/Regular_expressions)를 보시면 정규 표현식에 대해 더 많은 설명을 보실 수 있습니다.
 
 ### 전역 그리고 대소문자 구분 무시 플래그와 함께 replace() 사용하기
 

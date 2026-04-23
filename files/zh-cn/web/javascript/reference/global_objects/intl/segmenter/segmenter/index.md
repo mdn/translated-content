@@ -3,8 +3,6 @@ title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 ---
 
-{{JSRef}}
-
 **`Intl.Segmenter()`** 构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
 
 {{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
@@ -30,7 +28,8 @@ new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
 ```
 
-> **备注：** `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来构建。如果尝试不使用 `new` 操作符来构建，将会抛出一个 {{jsxref("TypeError")}} 错误。
+> [!NOTE]
+> `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来构建。如果尝试不使用 `new` 操作符来构建，将会抛出一个 {{jsxref("TypeError")}} 错误。
 
 ### 参数
 

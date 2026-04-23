@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Operators")}}
-
 **`new`** 运算符允许开发人员创建一个用户定义的对象类型的实例或具有构造函数的内置对象的实例。
 
 {{InteractiveExample("JavaScript Demo: Expressions - new operator")}}

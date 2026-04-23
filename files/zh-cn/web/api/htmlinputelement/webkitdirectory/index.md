@@ -19,26 +19,20 @@ slug: Web/API/HTMLInputElement/webkitdirectory
 在用户进行选择后，`files` 里的每个 {{domxref("File")}} 对象都会将其 {{domxref("File.webkitRelativePath")}} 属性设置为所选目录内文件所在的相对路径。例如，考虑以下文件系统：
 
 - PhotoAlbums
-
   - Birthdays
-
     - Jamie's 1st birthday
-
       - PIC1000.jpg
       - PIC1004.jpg
       - PIC1044.jpg
 
     - Don's 40th birthday
-
       - PIC2343.jpg
       - PIC2344.jpg
       - PIC2355.jpg
       - PIC2356.jpg
 
   - Vacations
-
     - Mars
-
       - PIC5533.jpg
       - PIC5534.jpg
       - PIC5556.jpg

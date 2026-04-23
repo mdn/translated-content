@@ -3,8 +3,6 @@ title: HTTP
 slug: Web/HTTP
 ---
 
-{{HTTPSidebar}}
-
 **_超文本傳輸協定 (HTTP)_** 是一種用來傳輸超媒體文件（像是 HTML 文件）的[應用層](https://zh.wikipedia.org/wiki/应用层)協定，被設計來讓瀏覽器和伺服器進行溝通，但也可做其他用途。HTTP 遵循標準[客戶端—伺服器](https://zh.wikipedia.org/wiki/客户端-服务器架构)模式，由客戶端連線以發送請求，然後等待接收回應。HTTP 是一種[無狀態協定](https://zh.wikipedia.org/wiki/无状态协议)，意思是伺服器不會保存任兩個請求間的任何資料 (狀態)。儘管作為 TCP/IP 的應用層，HTTP 亦可應用於其他可靠的[傳輸層](https://zh.wikipedia.org/wiki/传输层)（例如 [UDP](https://zh.wikipedia.org/wiki/用户数据报协议)），只要不會無聲無息地遺失訊息即可。
 
 ## 教學

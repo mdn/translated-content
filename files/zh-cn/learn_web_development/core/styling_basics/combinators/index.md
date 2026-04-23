@@ -3,7 +3,7 @@ title: 关系选择器
 slug: Learn_web_development/Core/Styling_basics/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
@@ -34,7 +34,7 @@ slug: Learn_web_development/Core/Styling_basics/Combinators
 
 ## 后代选择器
 
-后代选择器——典型用单个空格（" "）字符——组合两个选择器，比如，第二个选择器匹配的元素被选择，如果他们有一个祖先（父亲，父亲的父亲，父亲的父亲的父亲，等等）元素匹配第一个选择器。选择器利用后代组合符被称作后代选择器。
+**后代选择器**通常用单个空格（<code> </code>）字符来组合两个选择器。当第二个选择器匹配的元素存在一个祖先元素（父元素、祖父元素等）与第一个选择器匹配时，该元素就会被选中。通过这种方式组合出的选择器被称作*后代选择器*。
 
 ```css
 body article p

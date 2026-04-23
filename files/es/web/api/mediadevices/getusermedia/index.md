@@ -26,7 +26,6 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
 ### Parámetros
 
 - `constraints`
-
   - : Es un objeto {{domxref("MediaStreamConstraints")}} que especifica los tipos de recursos a solicitar, junto con cualquier requerimiento para cada tipo.
 
     El parámetro constraints es un objeto `MediaStreamConstaints` con dos miembros: `video` y `audio`, que describen los tipos de recurso solicitados. Debe especificarse uno o ambos. Si el navegador no puede encontrar todas las pistas de recursos con los tipos especificados que reúnan las restricciones dadas, entonces el promise retornado es rechazado con `NotFoundError`.

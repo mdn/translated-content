@@ -3,8 +3,6 @@ title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 Запрос "HTTP Expect" указывает ожидания, которые должен выполнить сервер, чтобы правильно обработать запрос.
 
 Единственным ожиданием, определённым в спецификации, является "Expect: 100-continue", на который сервер должен ответить:
@@ -23,7 +21,7 @@ slug: Web/HTTP/Reference/Headers/Expect
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

@@ -15,7 +15,6 @@ for ([inicialização]; [condição]; [expressão final])
 ```
 
 - `inicialização`
-
   - : Uma expressão (incluindo expressões de atribuição) ou declarações variáveis. Geralmente usada para iniciar o contador de variáveis. Esta expressão pode, opcionalmente, declarar novas variáveis com a palavra chave `var`. Essas variáveis não são locais no loop, isto é, elas estão no mesmo escopo que o loop `for` está. Variáveis declaradas com let são locais para a declaração.
 
     O resultado desta expressão é descartado.
@@ -91,8 +90,7 @@ function showOffsetPos(sId) {
     nLeft += oItNode.offsetLeft,
       nTop += oItNode.offsetTop,
       oItNode = oItNode.offsetParent // expressão final
-    /* empty statement */
-  );
+  ); /* empty statement */
 
   console.log(
     'Offset position of "' +

@@ -1,23 +1,32 @@
 ---
-title: Document.clear()
+title: "Document : méthode clear()"
+short-title: clear()
 slug: Web/API/Document/clear
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
-Cette méthode est utilisée pour effacer entièrement le document visé dans les anciennes versions (pre-1.0) de Mozilla.
-
-Dans les versions récentes des applications basées sur Mozilla ainsi que sur Internet Explorer et Netscape 4, cette méthode ne fait rien.
+La méthode **`clear()`** de l'interface {{DOMxRef("Document")}} ne fait rien, mais ne génère pas d'erreur.
 
 ## Syntaxe
 
-```js
-document.clear();
+```js-nolint
+clear()
 ```
+
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Spécifications
 
-- [HTML5](https://www.whatwg.org/html/#dom-document-clear)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

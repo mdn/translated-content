@@ -10,7 +10,7 @@ l10n:
 
 **`<menu>`** は [HTML](/ja/docs/Web/HTML) の要素で、HTML 仕様書では {{HTMLElement("ul")}} とは異なる意味づけとして記述されていますが、ブラウザーでは {{HTMLElement("ul")}} と違いのないものとして扱われます（そしてアクセシビリティツリーで公開されます）。これは（{{HTMLElement("li")}} 要素で表現される）項目の順序のないリストを表します。
 
-{{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;menu&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="news">
@@ -105,17 +105,17 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
         <p>
-          <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
             >フローコンテンツ</a
           >。この要素の子に 1 個以上の {{HTMLElement("li")}}
           要素がある場合は<a
-            href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+            href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
             >知覚可能コンテンツ</a
           >。
         </p>
@@ -138,7 +138,7 @@ button {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -147,7 +147,7 @@ button {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 当扩展被授予新权限时触发。
 
 ## 语法
@@ -31,9 +29,7 @@ browser.permissions.onAdded.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当事件发生时调用的函数。该函数接收以下参数：
-
     - `permissions`
       - : 包含被授予的权限的 {{WebExtAPIRef("permissions.Permissions")}} 对象。
 

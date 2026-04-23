@@ -15,6 +15,5 @@ SIMD ("sim-dee"로 발음합니다)는 [컴퓨터 구조 분류](https://en.wiki
 
 - 위키백과의 [SIMD](https://en.wikipedia.org/wiki/SIMD)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("SIMD")}}
   - {{Glossary("SISD")}}

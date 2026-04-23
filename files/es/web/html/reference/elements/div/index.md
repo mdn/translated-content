@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) a su elemento principal).
+El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico para el contenido. No tiene efecto en el contenido o en el diseño hasta que se le aplica un estilo de alguna manera usando {{glossary("CSS")}} (p. ej. se le aplica un estilo directamente o se aplica algún tipo de modelo de diseño como [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) a su elemento principal).
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
@@ -40,14 +40,14 @@ El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico 
 }
 ```
 
-Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang)), y así sucesivamente.
+Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Reference/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes#lang)), y así sucesivamente.
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
+> El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
 
 ## Notas de uso
 
@@ -76,7 +76,7 @@ El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR
 
 ### Un ejemplo con estilos
 
-Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
+Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Reference/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
 
 #### HTML
 
@@ -110,20 +110,20 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
-        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+        >, <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_palpable">contenido palpable</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >.<br />O (en {{glossary("WHATWG")}} HTML): Si el padre es un
         elemento {{HTMLElement("dl")}}: uno o más
@@ -140,7 +140,7 @@ Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS.
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >flujo de contenido</a
         >.<br />O (en {{glossary("WHATWG")}} HTML):
         Elemento {{HTMLElement("dl")}}.

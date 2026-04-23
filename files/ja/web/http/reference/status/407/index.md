@@ -1,14 +1,11 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Reference/Status/407
-original_slug: Web/HTTP/Status/407
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
-HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("Proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。
+HTTP の **`407 Proxy Authentication Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、ブラウザーとリクエストされたリソースにアクセスできるサーバーとの間にある{{Glossary("proxy server", "プロキシーサーバー")}}に有効な認証情報が不足しているため、リクエストが成功されていないことを示します。
 
 このレスポンスは、リクエストを正しく認証する方法に関する情報が含まれている {{HTTPHeader("Proxy-Authenticate")}} ヘッダーと共に送信されます。
 クライアントは {{HTTPHeader("Proxy-Authorization")}} ヘッダーフィールドを新しく付けたり、置換したりしてリクエストを繰り返すことができます。

@@ -22,9 +22,7 @@ decode(buffer, options)
 - `buffer` {{Optional_Inline}}
   - : 一个 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)、{{jsxref("TypedArray")}} 或包含要解码的编码文本的 {{jsxref("DataView")}} 对象。
 - `options` {{Optional_Inline}}
-
   - : 具有以下属性的对象：
-
     - `stream`
       - : 一个布尔标志，表示在后续调用 `decode()` 将跟随附加数据。如果以分块的形式处理数据，则设置为 `true`；如果是最终的分块或者数据没有分块，则设置为 `false`。默认是 `false`。
 

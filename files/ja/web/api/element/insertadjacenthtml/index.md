@@ -19,9 +19,7 @@ insertAdjacentHTML(position, text)
 ### 引数
 
 - `position`
-
   - : 文字列で、要素の相対的な位置を表します。以下のいずれかでなければなりません。
-
     - `"beforebegin"`
       - : 要素の前。要素が DOM ツリー内にあり、親要素がある場合にのみ有効です。
     - `"afterbegin"`

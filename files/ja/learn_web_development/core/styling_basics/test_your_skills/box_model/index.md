@@ -1,36 +1,44 @@
 ---
-title: "スキルテスト: ボックスモデル"
+title: "確認テスト: ボックスモデル"
+short-title: "テスト: ボックスモデル"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
-original_slug: Learn_web_development/Core/Styling_basics/Box_Model_Tasks
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
-このスキルテストの目的は、 [CSS ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を理解しているかどうかを評価することです。
+この確認テストの目的は、 [CSS ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)を理解しているかどうかを評価することです。
 
 > [!NOTE]
-> 以下のコードブロックで **"Play"** をクリックすると、 MDN Playground で例を編集することができます。
-> コードをコピー（クリップボードアイコンをクリック）し、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターに貼り付けることもできます。
-> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
+> 手助けが必要な場合は、[確認テスト](/ja/docs/Learn_web_development#確認テスト)使用ガイドをお読みください。また、[コミュニケーションチャネル](/ja/docs/MDN/Community/Communication_channels)のいずれかを使用して、私たちに連絡することもできます。
 
-## 課題 1
+<!--
+## 対話型チャレンジ
+
+まず最初に、[学習パートナー](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)である [Scrimba](https://scrimba.com/home) が作成した、マージンの一括指定を使った楽しくインタラクティブな課題をご紹介します。
+
+埋め込みのスクリームを見て、指示に従ってコードを編集し、タイムライン上の課題（小さな幽霊のアイコン）を完了してください。完了したら、スクリームの再生を再開して、教師の解答が自分の解答と一致するかどうかを調べることができます。
+
+<mdn-scrim-inline url="https://scrimba.com/learn-html-and-css-c0p/~01s" scrimtitle="Margin shorthand" survey="true"></scrim-inline>
+-->
+
+## ボックスモデル 1
 
 この課題では、下記の 2 種類のボックスがあり、 1 つは標準ボックスモデル、もう 1 つは代替ボックスモデルを使用しています。 `.alternate` クラスに宣言を追加して 2 つ目のボックスの幅を変更し、最初のボックスの視覚的な幅と一致するようにしましょう。
 
-最終的には下記画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![2 つの同じ大きさのボックス](mdn-box-model1.png)
+{{EmbedLiveSample("box-model1-start", "", "540px")}}
 
-下記のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___box-models
+```html live-sample___box-model1-start live-sample___box-model1-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
 <div class="box alternate">代替ボックスモデルを使用しています。</div>
 ```
 
-```css live-sample___box-models
+```css live-sample___box-model1-start live-sample___box-model1-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -48,24 +56,25 @@ body {
 }
 ```
 
-{{EmbedLiveSample("box-models", "", "540px")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("box-model1-finish", "", "540px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 2 つ目のブロックの高さと幅を大きくし、パディングと境界線のサイズを追加する必要があります。
 
-```css
+```css live-sample___box-model1-finish
 .alternate {
   box-sizing: border-box;
   width: 390px;
-  height: 240px;
 }
 ```
 
 </details>
 
-## 課題 2
+## ボックスモデル 2
 
 この課題では、ボックスに次のものを追加してください。
 
@@ -76,17 +85,17 @@ body {
 - 2em の左マージン
 - すべての辺に 1em のパディング
 
-最終的には下記画像のようになるはずです。
+この課題の出発点は次のようなものです。
 
-![点線の境界線の付いたボックス](mdn-box-model2.png)
+{{EmbedLiveSample("box-model2-start", "100%", "100px")}}
 
-下記のライブコードを更新して、完成例を再現してみてください。
+基盤となる出発点のコードは次の通りです。
 
-```html live-sample___mbp
+```html live-sample___box-model2-start live-sample___box-model2-finish
 <div class="box">標準ボックスモデルを使用しています。</div>
 ```
 
-```css live-sample___mbp
+```css live-sample___box-model2-start live-sample___box-model2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -95,15 +104,17 @@ body {
 }
 ```
 
-{{EmbedLiveSample("mbp")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("box-model2-finish", "100%", "140px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 この作業には、マージン、境界線、パディングのプロパティを正しく使用することが含まれます。
 個別指定プロパティ（{{cssxref("margin-top")}}、{{cssxref("margin-right")}} など）を使用することもできますが、すべての辺にマージンとパディングを設定する場合は、一括指定を使用するのがより良い選択でしょう。
 
-```css
+```css live-sample___box-model2-finish
 .box {
   border: 5px dotted black;
   margin: 20px 1em 40px 2em;
@@ -113,17 +124,19 @@ body {
 
 </details>
 
-## 課題 3
+## ボックスモデル 3
 
-この課題では、インライン要素にマージン、パディング、境界線があります。しかし、上下の行が重なっています。要素をインラインに保ちつつ、マージン、パディング、境界線のサイズが他の行から尊重されるようにするには、 CSS に何を追加すればよいでしょうか？
+この課題では、インライン要素にマージン、パディング、境界線があります。しかし、上下の行が重なっています。
 
-最終的には下記画像のようになるはずです。
+この課題を完了するには、要素をインラインのまま維持しながら、マージン、パディング、および境界線のサイズが他の行でも尊重されるように CSS を更新してください。
 
-![インラインボックスとその周りのテキストの間に空間があります。](mdn-box-model3.png)
+この課題の出発点は次のようなものです。
 
-下記のライブコードを更新して、完成例を再現してみてください。
+{{EmbedLiveSample("box-model3-start", "100%", "220px")}}
 
-```html live-sample___inline-block
+基盤となる出発点のコードは次の通りです。
+
+```html live-sample___box-model3-start live-sample___box-model3-finish
 <div class="box">
   <p>
     Veggies es bonus vobis, <span>proinde vos postulo</span> essum magis
@@ -139,7 +152,7 @@ body {
 </div>
 ```
 
-```css live-sample___inline-block
+```css live-sample___box-model3-start live-sample___box-model3-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -151,15 +164,17 @@ body {
 }
 ```
 
-{{EmbedLiveSample("inline-block")}}
+スタイル設定を更新すると、このようになります。
+
+{{EmbedLiveSample("box-model3-finish", "100%", "260px")}}
 
 <details>
-<summary>ここをクリックすると、解決策を表示します。</summary>
+<summary>ここをクリックすると、模範解答を表示します。</summary>
 
 この課題を解決するには、異なる {{cssxref("display")}} 値を使用するタイミングを理解することが要求されます。
 `display: inline-block` を追加すると、ブロック方向のマージン、境界線、パディングにより、他にも行が要素から押し出されるようになります。
 
-```css
+```css live-sample___box-model3-finish
 .box span {
   background-color: pink;
   border: 5px solid black;
@@ -170,6 +185,4 @@ body {
 
 </details>
 
-## 関連情報
-
-- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}

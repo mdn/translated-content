@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 在本文中，我们将教你如何搭建自己的自动化测试环境，并使用 Selenium/WebDriver 以及一种测试库（如 selenium-webdriver for Node）来运行测试。我们还将探讨如何将本地测试环境与上一篇文章中提到的商业工具集成。
 
@@ -506,7 +506,8 @@ driver.quit();
 
 4. 使用 `--no-timeouts` 参数确保测试不会因 Mocha 的 3 秒超时时限而中途失败退出。
 
-> **备注：** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) 中包含了一些关于如何配置不同测试/断言工具组合的有用示例。
+> [!NOTE]
+> [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) 中包含了一些关于如何配置不同测试/断言工具组合的有用示例。
 
 ## 运行远程测试
 

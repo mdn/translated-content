@@ -3,9 +3,7 @@ title: Game over
 slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 8 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson08.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson08.html)完成本课后，你可以找到源代码。
 
@@ -41,4 +39,4 @@ ball.events.onOutOfBounds.add(function () {
 
 现在的基本游戏就是让我们通过引入砖块来更有趣的是 - 现在是[建造砖块](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)的时候了。
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls", "Games/Workflows/2D_Breakout_game_Phaser/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field")}}

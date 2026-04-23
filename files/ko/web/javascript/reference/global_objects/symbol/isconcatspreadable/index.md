@@ -89,7 +89,8 @@ const fakeArray = {
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
-> **참고:** `length` 속성은 추가할 객체 속성의 수를 제어하는 데 사용됩니다.
+> [!NOTE]
+> `length` 속성은 추가할 객체 속성의 수를 제어하는 데 사용됩니다.
 > 위의 예제에서 `length:2`는 2개의 속성이 추가되었다는 것을 가리킵니다.
 
 ## 명세서

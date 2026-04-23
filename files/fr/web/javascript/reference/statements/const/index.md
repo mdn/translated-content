@@ -72,12 +72,11 @@ var MA_FAV = 20;
 // cela renvoie également une erreur
 let MA_FAV = 20;
 
-
 // On notera l'importance de la portée de bloc :
 if (MA_FAV === 7) {
   // cela fonctionne sans problème et crée
   // une nouvelle variable dans cette portée
-  let MA_FAV =  20;
+  let MA_FAV = 20;
 
   // Ici, MA_FAV vaut 20
   console.log("mon nombre préféré est " + MA_FAV);
@@ -85,7 +84,6 @@ if (MA_FAV === 7) {
   // L'instruction suivante est remontée dans le
   // contexte global et provoque une erreur !
   var MA_FAV = 20;
-
 }
 
 // MA_FAV vaut toujours 7
@@ -95,10 +93,10 @@ console.log("mon nombre favori est " + MA_FAV);
 const TOTO; // SyntaxError: Missing initializer in const
 
 // const fonctionne également avec les objects
-const monObjet = {"clé": "valeur"};
+const monObjet = { clé: "valeur" };
 
 // Écraser l'objet échouera comme précédemment
-monObjet = {"autreClé": "valeur"};
+monObjet = { autreClé: "valeur" };
 
 // En revanche, les clés d'un objet ne sont pas
 // protégés et on peut donc, de façon valide, avoir

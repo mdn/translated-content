@@ -1,67 +1,76 @@
 ---
-title: Document.elementFromPoint()
+title: "Document : méthode elementFromPoint()"
+short-title: elementFromPoint()
 slug: Web/API/Document/elementFromPoint
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
 
-La méthode **`elementFromPoint()`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus haut niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).
+La méthode **`elementFromPoint()`** de l'interface {{DOMxRef("Document")}} retourne l'élément {{DOMxRef("Element")}} le plus haut situé aux coordonnées définies (relativement à la zone d'affichage).
 
-Si l'élément placé au point indiqué appartient à un autre document (par exemple le document situé dans un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)), c'est l'élément parent (par exemple l'élément `<iframe>` même) qui est renvoyé. Si l'élément situé au point indiqué est du contenu anonyme (par exemple les barres de défilement d'une boîte de texte), c'est le premier élément ancêtre non anonyme (par exemple la boîte de texte) qui est renvoyée.
+Si l'élément au point défini appartient à un autre document (par exemple, le document d'un {{HTMLElement("iframe")}}), l'élément parent de ce document est retourné (l'élément `<iframe>` lui-même). Si l'élément au point donné est un contenu anonyme ou généré par XBL, comme les barres de défilement d'une zone de texte, alors le premier ancêtre non anonyme (par exemple, la zone de texte) est retourné.
 
-Les éléments pour lesquels [`pointer-events`](/fr/docs/Web/CSS/pointer-events) vaut `none` seront ignorés et ce sera l'élément situé en dessous sera renvoyé.
+Les éléments avec {{CSSxRef("pointer-events")}} défini à `none` seront ignorés, et l'élément situé en dessous sera retourné.
 
-Si la méthode est exécutée sur un autre document (par exemple dans le sous-document chargé dans un élément `<iframe>`), les coordonnées seront relatives au document où la méthode est appelée.
+Si la méthode est exécutée sur un autre document (comme le sous-document d'un `<iframe>`), les coordonnées sont relatives au document où la méthode est appelée.
 
-Si le point indiqué est situé en dehors des limites visibles du document ou que l'une des coordonnées est négative, le résultat fourni par la méthode sera `null`.
+Si le point défini est en dehors des bornes visibles du document ou si l'une des coordonnées est négative, le résultat est `null`.
 
-Pour connaître la position précise à l'intérieur de l'élément, on utilisera la méthode [`Document.caretPositionFromPoint()`](/fr/docs/Web/API/Document/caretPositionFromPoint).
+Si vous devez trouver la position exacte à l'intérieur de l'élément, utilisez {{DOMxRef("Document.caretPositionFromPoint()")}}.
 
 ## Syntaxe
 
-```js
-elementFromPoint(x, y);
+```js-nolint
+elementFromPoint(x, y)
 ```
 
 ### Paramètres
 
 - `x`
-  - : L'abscisse du point relativement au bord gauche de la zone d'affichage ([<i lang="en">viewport</i>](/fr/docs/Glossary/Viewport)) courante.
+  - : La coordonnée horizontale d'un point, relative au bord gauche de la {{Glossary("viewport", "zone d'affichage")}} actuelle.
 - `y`
-  - : L'ordonnée du point relativement au bord haut de la zone d'affichage courante.
+  - : La coordonnée verticale d'un point, relative au bord haut de la zone d'affichage actuelle.
 
 ### Valeur de retour
 
-L'élément (l'objet [`Element`](/fr/docs/Web/API/Element)) de plus haut niveau situé aux coordonnées indiquées.
+L'objet {{DOMxRef("Element")}} de plus haut niveau situé aux coordonnées définies.
 
 ## Exemples
 
 Dans cet exemple, on crée deux boutons qui permettent de définir la couleur du texte du paragraphe situé aux coordonnées `(2, 2)`.
 
-### JavaScript
-
-```js
-function changeColor(nouvelleCouleur) {
-  elem = document.elementFromPoint(2, 2);
-  elem.style.color = nouvelleCouleur;
-}
-```
-
-La méthode `changeColor()` récupère l'élément situé au point indiqué puis modifie la valeur de la propriété [`color`](/fr/docs/Web/CSS/color) avec la nouvelle couleur passée en argument.
-
 ### HTML
 
 ```html
 <p id="para1">Un texte ici</p>
-<button onclick="changeColor('blue');">Bleu</button>
-<button onclick="changeColor('red');">Rouge</button>
+<button>blue</button>
+<button>red</button>
 ```
 
-Ce fragment HTML fournit le paragraphe dont la couleur sera modifiée ainsi que deux boutons pour changer la couleur (un pour le bleu et l'autre pour le rouge).
+Le HTML fournit le paragraphe dont la couleur sera modifiée ainsi que deux boutons&nbsp;: l'un pour changer la couleur en bleu, et l'autre pour changer la couleur en rouge.
+
+### JavaScript
+
+```js
+function changerCouleur(nouvelleCouleur) {
+  const elem = document.elementFromPoint(2, 2);
+  elem.style.color = nouvelleCouleur;
+}
+
+document.querySelectorAll("button").forEach((bouton) => {
+  bouton.addEventListener("click", (event) => {
+    changerCouleur(event.target.textContent.toLowerCase());
+  });
+});
+```
+
+La méthode `changerCouleur()` obtient l'élément situé au point défini, puis définit la propriété {{CSSxRef("color")}} de premier plan de cet élément sur la couleur définie par le paramètre `nouvelleCouleur`.
 
 ### Résultat
 
-{{EmbedLiveSample('', 400, 120)}}
+{{EmbedLiveSample("Exemples", 400, 120)}}
 
 ## Spécifications
 
@@ -73,4 +82,4 @@ Ce fragment HTML fournit le paragraphe dont la couleur sera modifiée ainsi que 
 
 ## Voir aussi
 
-- [`Document.elementsFromPoint()`](/fr/docs/Web/API/Document/elementsFromPoint)
+- La méthode {{DOMxRef("Document.elementsFromPoint()")}}

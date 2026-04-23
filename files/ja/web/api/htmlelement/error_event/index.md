@@ -120,6 +120,5 @@ imgError.addEventListener("click", () => {
 ## 関連情報
 
 - 関連イベント:
-
   - Window: {{domxref("Window/error_event", "error")}} イベント
   - HTMLElement: {{domxref("HTMLElement/load_event", "load")}} イベント

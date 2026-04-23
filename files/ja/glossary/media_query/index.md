@@ -2,7 +2,7 @@
 title: Media query (メディアクエリー)
 slug: Glossary/Media_query
 l10n:
-  sourceCommit: 9ff83eb7950a8d4e2d55d61fcf9b06cf82eae6bf
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{GlossarySidebar}}
@@ -21,5 +21,5 @@ l10n:
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)モジュール
+- [メディアクエリーの使用](/ja/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)モジュール

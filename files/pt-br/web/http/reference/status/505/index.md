@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/505
 original_slug: Web/HTTP/Status/505
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta de status HTTP **`505 HTTP Version Not Supported`** indica que a versão HTTP utilizada na requisição não é suportada pelo servidor.
 
 ## Status

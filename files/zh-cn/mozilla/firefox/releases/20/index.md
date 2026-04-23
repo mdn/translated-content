@@ -3,8 +3,6 @@ title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ## Web 开发者需要注意的变化
@@ -23,7 +21,7 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ### CSS
 
-- [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)默认开启，不需要设置 about:config.
+- [CSS Flexbox](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)默认开启，不需要设置 about:config.
 - 实现了 [CSS Masking specification](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) 中的 `mask-type` 属性（[Firefox bug 793617](https://bugzil.la/793617)）。
 
 ### DOM

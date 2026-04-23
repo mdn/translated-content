@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Redirections
 original_slug: Web/HTTP/Redirections
 ---
 
-{{HTTPSidebar}}
-
 Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma técnica que à uma página, formulário ou uma aplicação web inteira, mais de um endereço de URL. HTTP fornece uma espécie especial de respostas, _**HTTP redirects**_, executar esta operação é utilizada para vários objetivos: redirecionamento temporário enquanto está sendo feita a manutenção do web site, redirecionamento permanente para manter links externos funcionando após alterações na arquitetura do web site, páginas de progresso enquanto é feito o envio de um arquivo, e assim por diante.
 
 ## Princípio
@@ -54,7 +52,7 @@ HTTP redirects aren't the only way to define redirections. There are two other m
 
 ### HTML redirections
 
-HTTP redirects are the preferred way to create redirections, but sometimes the Web developer doesn't have control over the server or cannot configure it. For these specific cases, the Web developers can craft an HTML page with a {{HTMLElement("meta")}} element and the [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) attribute set to `refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will find this element and will go to the indicated page.
+HTTP redirects are the preferred way to create redirections, but sometimes the Web developer doesn't have control over the server or cannot configure it. For these specific cases, the Web developers can craft an HTML page with a {{HTMLElement("meta")}} element and the [`http-equiv`](/pt-BR/docs/Web/HTML/Reference/Elements/meta#http-equiv) attribute set to `refresh` in the {{HTMLElement("head")}} of the page. When displaying the page, the browser will find this element and will go to the indicated page.
 
 ```html
 <head>
@@ -62,7 +60,7 @@ HTTP redirects are the preferred way to create redirections, but sometimes the W
 </head>
 ```
 
-The [`content`](/pt-BR/docs/Web/HTML/Global_attributes#content) attribute starts with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0`, for better accessibility.
+The [`content`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#content) attribute starts with a number indicating how many seconds the browser should wait before redirecting to the given URL. Always set it to `0`, for better accessibility.
 
 Obviously, this method only works with HTML pages (or similar) and cannot be used for images or any other type of content.
 

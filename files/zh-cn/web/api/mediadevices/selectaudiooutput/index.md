@@ -23,11 +23,8 @@ selectAudioOutput(options)
 ### 参数
 
 - `options` {{Optional_Inline}}
-
   - : 对象，用于配置可以在用户提示中提供的设备。
-
     - `deviceId` {{Optional_Inline}}
-
       - : 表示单个先前公开或允许设备的 ID 的字符串。如果未设置，则会显示包含所有可用音频输出设备的提示。
 
         该选项适用于希望存储设备 ID 以便将来会话中默认使用同一设备的应用程序。注意，方法可能会返回同一设备的新 ID，并且持久化的 ID 必须在 {{domxref("HTMLMediaElement.setSinkId","setSinkId()")}} 成功地通过 `selectAudioOutput()` 传递后才能使用。
@@ -54,8 +51,8 @@ selectAudioOutput(options)
 
 对此 API 的访问受以下约束：
 
-- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
-- 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。
+- 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Defenses/Secure_Contexts)中调用。
+- 需要[瞬态用户激活](/zh-CN/docs/Web/Security/Defenses/User_activation)。
   用户必须与页面或 UI 元素进行交互，才能使用此特性。
 - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的控制。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
-
 **`tabs.PageSettings`** 类型用于控制通过 {{WebExtAPIRef("tabs.saveAsPDF()")}} 方法将标签渲染为 PDF 时的输出格式。
 
 所有属性均为可选。

@@ -3,7 +3,7 @@ title: Прототипы объектов
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. В этой статье мы объясним, как работают цепочки прототипов, и рассмотрим, как свойство prototype можно использовать для добавления методов к существующим конструкторам.
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}Прототипы - это механизм, с помощью которого объекты JavaScript наследуют свойства друг от друга. В этой статье мы объясним, как работают цепочки прототипов, и рассмотрим, как свойство prototype можно использовать для добавления методов к существующим конструкторам.
 
 | Необходимые знания: | Базовая компьютерная грамотность, базовое понимание HTML и CSS, знакомство с основами JavaScript (см. [Первые шаги](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8) и [Строительные блоки](/ru/docs/Learn_web_development/Core/Scripting)) и основы OOJS (см. [Введение в объекты](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)). |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +98,8 @@ var myString = "This is my string.";
 
 В `myString` сразу есть множество полезных методов, таких как [`split()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/replace) и т. д.
 
-> **Предупреждение:** **Важно**: Свойство `prototype` является одной из наиболее противоречивых названий частей JavaScript - вы можете подумать, что `this` указывает на объект прототипа текущего объекта, но это не так (это внутренний объект, к которому можно получить доступ `__proto__`, помните ?). `prototype` вместо этого - свойство, содержащее объект, на котором вы определяете членов, которые вы хотите наследовать.
+> [!WARNING]
+> Свойство `prototype` является одной из наиболее противоречивых названий частей JavaScript - вы можете подумать, что `this` указывает на объект прототипа текущего объекта, но это не так (это внутренний объект, к которому можно получить доступ `__proto__`, помните ?). `prototype` вместо этого - свойство, содержащее объект, на котором вы определяете членов, которые вы хотите наследовать.
 
 ## Снова create()
 
@@ -200,4 +201,4 @@ Test.prototype.y = function() { ... };
 
 В следующей статье мы рассмотрим то, как вы можете реализовать наследование функциональности между двумя собственными настраиваемыми объектами.
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

@@ -34,8 +34,8 @@ slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Icon.html
     .icon {width: 120px !important;}
     ```
 
-    また、[width](/ja/docs/Web/CSS/width)プロパティを「auto」で指定し、数値の変動に合わせ、表示領域も変動するように指定する方法もよいです。
-    ただし、「auto」で指定した場合は、他のアイコンが折り返される可能性があるので、他のアイコンを[margin](/ja/docs/Web/CSS/margin)プロパティ等で表示位置を調整する必要があります。
+    また、[width](/ja/docs/Web/CSS/Reference/Properties/width)プロパティを「auto」で指定し、数値の変動に合わせ、表示領域も変動するように指定する方法もよいです。
+    ただし、「auto」で指定した場合は、他のアイコンが折り返される可能性があるので、他のアイコンを[margin](/ja/docs/Web/CSS/Reference/Properties/margin)プロパティ等で表示位置を調整する必要があります。
 
     ```css
     .icon {width: auto;}

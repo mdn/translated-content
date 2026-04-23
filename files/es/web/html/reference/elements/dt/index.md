@@ -47,7 +47,7 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -57,7 +57,7 @@ dd {
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >Contenido de flujo</a
         >, pero sin {{HTMLElement("header")}},
         {{HTMLElement("footer")}}, contenido seccionado o encabezados
@@ -100,11 +100,11 @@ dd {
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Ejemplo
 
-Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Element/dl#examples).
+Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Especificaciones
 

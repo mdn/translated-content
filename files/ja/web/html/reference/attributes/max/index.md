@@ -2,9 +2,8 @@
 title: "HTML 属性: max"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
-original_slug: Web/HTML/Attributes/max
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{HTMLSidebar}}
@@ -60,14 +59,14 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="number" min="0" step="5" max="100"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code>&#x3C;input type="range" min="60" step="5" max="100"></code>
       </td>
@@ -96,7 +95,7 @@ l10n:
   <tbody>
     <tr>
       <td>{{HTMLElement("progress")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;progress id="file" max="100" value="70"> 70%
@@ -106,7 +105,7 @@ l10n:
     </tr>
     <tr>
       <td>{{HTMLElement("meter")}}</td>
-      <td><a href="/ja/docs/Web/CSS/number">&#x3C;number></a></td>
+      <td><a href="/ja/docs/Web/CSS/Reference/Values/number">&#x3C;number></a></td>
       <td>
         <code
           >&#x3C;meter id="fuel" min="0" max="100" low="33" high="66"

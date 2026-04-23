@@ -1,35 +1,43 @@
 ---
-title: window.requestIdleCallback()
+title: "Window : méthode requestIdleCallback()"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-La méthode **`window.requestIdleCallback()`** mémorise une fonction qui sera appelée lorsque le navigateur n'aura plus aucune autre tâche en cours. Cela offre au développeur la possibilité de réaliser des tâches à basse priorité en arrière-plan sur la boucle d'évènements principale, sans impacter l'expérience utilisateur (ralentissement des animations, etc). L'ordre des appels aux fonctions est généralement premier entré, premier sorti, sauf si le `timeout` défini au moment de l'enregistrement est atteint avant que le navigateur n'ait eu le temps d'appeler la fonction en question.
+La méthode **`requestIdleCallback()`** de l'interface {{DOMxRef("Window")}} mémorise une fonction qui sera appelée lorsque le navigateur n'aura plus aucune tâche critique à exécuter. Cela permet aux développeur·euse·s de réaliser des travaux en arrière-plan et à faible priorité sur le processus principal, sans impacter les évènements sensibles à la latence tels que l'animation et la réponse aux entrées. Les fonctions sont généralement appelées dans l'ordre premier entré, premier sorti&nbsp;; cependant, les rappels ayant un `timeout` défini peuvent être appelés hors ordre si nécessaire pour s'exécuter avant l'expiration du délai.
+
+Vous pouvez appeler `requestIdleCallback()` à l'intérieur d'une fonction de rappel inoccupée pour planifier un autre rappel qui se produira au plus tôt lors du prochain passage dans la boucle d'évènements.
+
+> [!NOTE]
+> Il est fortement recommandé de définir une option `timeout` pour les travaux requis, sinon il est possible que plusieurs secondes s'écoulent avant que le rappel ne soit exécuté.
 
 ## Syntaxe
 
-```js
-var idleCallbackId = window.requestIdleCallback(fonction[, options])
+```js-nolint
+requestIdleCallback(callback)
+requestIdleCallback(callback, options)
 ```
-
-### Retour de l'appel
-
-Un entier long non-signé qui peut être utilisé pour annulé l'appel à la fonction via la méthode {{domxref("window.cancelIdleCallback()")}}.
 
 ### Paramètres
 
-- fonction
+- `callback`
+  - : Une référence à une fonction qui doit être appelée dans un futur proche, lorsque la boucle d'évènements est inoccupée. La fonction de rappel reçoit un objet {{DOMxRef("IdleDeadline")}} décrivant la quantité de temps disponible et si la fonction de rappel a été exécutée en raison de l'expiration de la période de délai.
+- `options` {{Optional_Inline}}
+  - : Objet contenant des paramètres de configuration optionnels. Seule une propriété est actuellement définie&nbsp;:
+    - `timeout`
+      - : Si le nombre de millisecondes représenté par ce paramètre s'est écoulé et que la fonction de rappel n'a pas encore été appelée, alors une tâche pour exécuter la fonction de rappel est mise en file d'attente dans la boucle d'événements (même si cela risque de provoquer un impact négatif sur les performances). `timeout` doit être une valeur positive ou il est ignoré.
 
-  - : La référence d'une fonction qui devrait être appellée dans un futur proche. La fonction en question recevra en argument un objet de type temps restant avec les propriétés suivantes :
+### Valeur de retour
 
-    - `timeRemaining`&nbsp;: fonction qui retourne un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant le temps restant estimé par le navigateur pour exécuter la tâche, ayant pour valeur minimale zéro. Les tâches nécessitant un temps d'exécution relativement long sont susceptibles de recourir à plusieurs appels à cette méthode s'il reste du travail à effectuer, rendant la main au navigateur peu avant que le compteur n'atteigne zéro. `timeRemaining()` retournera toujours zéro si `didTimeout` est positionné à `true` (par exemple, la fonction n'a pas été appelée durant la période de repos du navigateur). La limite de temps est limitée à 50ms, même si le navigateur reste n'a pas d'autre tâche à exécuter pendant une durée plus longue.
-    - `didTimeout`&nbsp;: un booléen positionné à `true` si la fonction est appelée car le timeout a été atteint, et `false` si elle a été appelée par le navigateur durant une période de repos.
+Un ID qui peut être utilisé pour annuler le rappel en le passant à la méthode {{DOMxRef("window.cancelIdleCallback()")}}.
 
-- `options` {{optional_inline}}
+## Exemples
 
-  - : Objet contenant des paramètres de configuration optionnels. Les propriétés sont les suivantes :
-    - `timeout`&nbsp;: si `timeout` est spécifié et possède une valeur positive, la fonction sera appelée au bout de au moins `timeout` millisecondes si elle n'a pas été appelée par le navigateur au préalable.
+Voir notre [exemple complet](/fr/docs/Web/API/Background_Tasks_API#exemples) dans l'article [de l'API de planification coopérative des tâches en arrière-plan](/fr/docs/Web/API/Background_Tasks_API).
 
 ## Spécifications
 
@@ -41,8 +49,8 @@ Un entier long non-signé qui peut être utilisé pour annulé l'appel à la fon
 
 ## Voir aussi
 
-- {{domxref("window.cancelIdleCallback()")}}
-- {{domxref("IdleDeadline")}}
-- {{domxref("window.setTimeout()")}}
-- {{domxref("window.setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
+- La méthode {{DOMxRef("Window.cancelIdleCallback()")}}
+- L'interface {{DOMxRef("IdleDeadline")}}
+- La méthode {{DOMxRef("Window.setTimeout()")}}
+- La méthode {{DOMxRef("Window.setInterval()")}}
+- La méthode {{DOMxRef("Window.requestAnimationFrame()")}}

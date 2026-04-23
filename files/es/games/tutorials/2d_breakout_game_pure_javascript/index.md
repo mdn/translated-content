@@ -3,9 +3,7 @@ title: Famoso juego 2D usando JavaScript puro
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
-{{Next("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 En este tutorial paso a paso creamos un juego de la MDN, sencillo y muy famoso, escrito íntegramente en JavaScript puro. Todos los elementos gráficos aparecerán dentro de la etiqueta {{htmlelement("canvas")}} de HTML5.
 
@@ -42,4 +40,4 @@ Empezar con JavaScript puro es la mejor forma de adquirir un conocimiento sólid
 
 Vale, ¡vamos a empezar! Dirígete hacia el primer tema — [Crea el lienzo (canvas) y dibuja en él](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it).
 
-{{Next("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it")}}
+{{Next("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}

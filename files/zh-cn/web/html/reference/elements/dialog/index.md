@@ -3,20 +3,18 @@ title: <dialog>：对话框元素
 slug: Web/HTML/Reference/Elements/dialog
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<dialog>`** 元素表示一个对话框或其他交互式组件，例如一个可关闭警告、检查器或者窗口。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式元素</a
         >、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#sectioning_roots"
           >分段内容</a
@@ -26,7 +24,7 @@ slug: Web/HTML/Reference/Elements/dialog
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式元素"
           >流式元素</a
         >
       </td>
@@ -38,7 +36,7 @@ slug: Web/HTML/Reference/Elements/dialog
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式元素</a
         >的元素
       </td>
@@ -66,7 +64,8 @@ slug: Web/HTML/Reference/Elements/dialog
 
 这个元素包含了[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
+> [!WARNING]
+> `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
 - `open`
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。

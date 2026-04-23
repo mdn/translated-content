@@ -25,7 +25,8 @@ new URL(url, base)
 - `base` {{optional_inline}}
   - : 一个表示基准 URL 的字符串，当 `url` 为相对 URL 时，它才会生效。如果未指定，它默认为 `undefined`。
 
-> **备注：** `url` 和 `base` 参数将从任意对象转换为字符串，就像其他接受字符串的 Web API 一样。特别地，你可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将被转换为该对象的 {{domxref("URL.href", "href")}} 属性。
+> [!NOTE]
+> `url` 和 `base` 参数将从任意对象转换为字符串，就像其他接受字符串的 Web API 一样。特别地，你可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将被转换为该对象的 {{domxref("URL.href", "href")}} 属性。
 
 ### 异常
 

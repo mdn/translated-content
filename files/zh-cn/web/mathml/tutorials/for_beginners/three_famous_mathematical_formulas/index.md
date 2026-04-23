@@ -3,7 +3,7 @@ title: 三个著名的数学公式
 slug: Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 ---
 
-{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}
 
 <table>
   <tbody>
@@ -118,4 +118,4 @@ slug: Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas
 - 使用 [W3C 验证器](https://validator.w3.org/nu/)检查你的 HTML/MathML 标记中是否有意外的错误。
 - 如果你陷入困境，或感到手动编写 MathML 有多么痛苦，请随时使用[编写 MathML 的工具](/zh-CN/docs/Web/MathML/Guides/Authoring)（如 [TeXZilla](https://fred-wang.github.io/TeXZilla/)）。
 
-{{PreviousMenu("Web/MathML/Guides/Tables", "Web/MathML/Guides")}}
+{{PreviousMenu("Web/MathML/Tutorials/For_beginners/Tables", "Web/MathML/Tutorials/For_beginners")}}

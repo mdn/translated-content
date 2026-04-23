@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling/Web_fonts", "Learn_web_development/Core/Text_styling")}}
 
 当为[链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)添加样式时，理解利用伪类有效地建立链接状态是很重要的，以及如何为链接添加样式来实现常用的功能（如导航菜单和选项卡）。我们将在本文中关注所有这些主题。
 
@@ -392,7 +392,8 @@ a[href^="http"] {
 
 就是这样。重温上文的动手练习部分，试试这种新技巧吧！
 
-> **备注：** `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
+> [!NOTE]
+> `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
 
 > [!NOTE]
 > 如果你对[背景](/zh-CN/docs/Learn_web_development/Core/Styling_basics)和[响应式 web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)还不熟悉，也不用担心，其他地方会有解释。

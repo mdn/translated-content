@@ -1,12 +1,10 @@
 ---
-title: Access-Control-Allow-Origin
+title: Access-Control-Allow-Origin ヘッダー
+short-title: Access-Control-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
-original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 l10n:
-  sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 **`Access-Control-Allow-Origin`** は{{Glossary("response header", "レスポンスヘッダー")}}で、指定された{{Glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。
 
@@ -40,10 +38,9 @@ Access-Control-Allow-Origin: null
 - `<origin>`
   - : 単一のオリジンを指定します。サーバーが複数のオリジンからのクライアントに対応している場合、リクエストを行った特定のクライアントのオリジンを返さなければなりません。
 - `null`
-
   - : オリジンを "null" に指定します。
-
-    > **メモ:** `null` は使用しないでください。 `Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて `null` となるように定義されています。
+    > [!NOTE]
+    > `null` は使用しないでください。 `Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて `null` となるように定義されています。
     > 多くのブラウザーは、そのような文書に `Access-Control-Allow-Origin: null` ヘッダーが付いているとアクセスを許可するので、あらゆるオリジンが `null` を持つ悪意のある文書を生成する可能性があります。したがって、 `null` 値を `Access-Control-Allow-Origin` ヘッダーで使用することは避けるべきです。
 
 ## 例
@@ -83,5 +80,5 @@ Vary: Origin
 
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Vary")}}
-- [Cross-Origin Resource Sharing (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}

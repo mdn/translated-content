@@ -26,9 +26,7 @@ importNode(externalNode, deep)
 - `externalNode`
   - : 現在の文書にインポートする、外部の {{domxref("Node")}} または {{domxref("DocumentFragment")}} です。
 - `deep` {{optional_inline}}
-
   - : 論理値のフラグで、既定値は `false` であり、`externalNode` の DOM サブツリー全体をインポートするかどうかを制御します。
-
     - `deep` が `true` に設定された場合、 `externalNode` およびその子孫全てが複製されます。
     - `deep` が `false` に設定された場合、 `externalNode` のみがインポートされます — 新しいノードには子ノードはない状態になります。
 
@@ -36,7 +34,8 @@ importNode(externalNode, deep)
 
 インポートする側の文書のスコープにコピーされた `importedNode` です。
 
-> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
+> [!NOTE]
+> `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
 
 ## 例
 

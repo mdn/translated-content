@@ -16,12 +16,10 @@ El botón de la barra de direcciones (o página de acción) es muy parecida al b
 Las diferencias son:
 
 - **La localización del botón:**
-
   - La acción de página es mostrado dentro de la barra de direcciones del navegador.
   - La acción del navegador es mostrado fuera de la barra de direcciones, exactamente en la barra de herramientas del navegador.
 
 - **La visibilidad del botón:**
-
   - La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades `show_matches` y `hide_matches` [manifest key](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)), y tu puedes llamar [`pageAction.show()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) y [`pageAction.hide()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) para mostrar o ocultar esto en pestañas especificas.
   - La acción del navegador siempre esta mostrada.
 

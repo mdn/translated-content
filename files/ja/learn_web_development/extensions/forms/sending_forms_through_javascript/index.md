@@ -23,7 +23,7 @@ l10n:
 
 しかし、サーバーエンドポイントがフォームの送信を期待している場合、ウェブアプリはデータを具体的な方法でエンコードする必要があります。例えば、データがテキストのみの場合、 URL エンコード方式でキーと値の組が掲載されているリストを作成し、 {{httpheader("Content-Type")}} を `application/x-www-form-urlencoded` として送信します。フォームにバイナリーデータが含まれている場合、 `multipart/form-data` コンテンツタイプを使用して送信する必要があります。
 
-{{domxref("FormData")}} インターフェイスは、データのエンコード処理をこのように行います。この記事の残りの部分では、 `FormData` の概要を簡単に説明します。詳細は、 [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)ガイドをご覧ください。
+{{domxref("FormData")}} インターフェイスは、データのエンコード処理をこのように行います。この記事の残りの部分では、 `FormData` の概要を簡単に説明します。詳細は、 [FormData オブジェクトの使い方](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)ガイドをご覧ください。
 
 ## `FormData` オブジェクトを手動で構築
 

@@ -3,8 +3,6 @@ title: Object.getOwnPropertyDescriptor()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 ---
 
-{{JSRef}}
-
 **`Object.getOwnPropertyDescriptor()`** 静态方法返回一个对象，该对象描述给定对象上特定属性（即直接存在于对象上而不在对象的原型链中的属性）的配置。返回的对象是可变的，但对其进行更改不会影响原始属性的配置。
 
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}

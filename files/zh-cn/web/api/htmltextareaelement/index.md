@@ -7,7 +7,7 @@ slug: Web/API/HTMLTextAreaElement
 
 **`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
@@ -179,7 +179,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vita
 </form>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
+{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300, , , , , 'allow-modals')}}
 
 ### Maximum length and number of lines example
 

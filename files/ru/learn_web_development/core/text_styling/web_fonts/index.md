@@ -3,7 +3,7 @@ title: Веб-шрифты
 slug: Learn_web_development/Core/Text_styling/Web_fonts
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}
 
 В первой статье модуля, мы изучали основные функции CSS доступные для стилизации шрифтов и текста. В этой статье мы продвинемся дальше изучая веб-шрифты в деталях — они позволяют вам загружать пользовательские шрифты вместе с вашей веб-страницей, чтобы обеспечить более разнообразный, индивидуальный стиль текста.
 
@@ -115,11 +115,11 @@ font-family: "zantrokeregular", serif;
 
 ## Использование онлайн-сервиса шрифтов
 
-Онлайн-сервисы шрифтов обычно хранят и обслуживают шрифты для вас, поэтому вам не надо переживать о написании `@font-face` кода и обычно необходимо просто вставить строчку или две простого кода в ваш сайт для того чтобы все работало. Примеры включают [Adobe Fonts](https://fonts.adobe.com/) и [Cloud.typography](http://www.typography.com/cloud/welcome/). Большинство из этих услуг на основе подписки, за исключением [Google Fonts](https://www.google.com/fonts), полезный бесплатный сервис, особенно для быстрого тестирования работы и написания демо.
+Онлайн-сервисы шрифтов обычно хранят и обслуживают шрифты для вас, поэтому вам не надо переживать о написании `@font-face` кода и обычно необходимо просто вставить строчку или две простого кода в ваш сайт для того чтобы все работало. Примеры включают [Adobe Fonts](https://fonts.adobe.com/) и [Cloud.typography](http://www.typography.com/cloud/welcome/). Большинство из этих услуг на основе подписки, за исключением [Google Fonts](https://fonts.google.com), полезный бесплатный сервис, особенно для быстрого тестирования работы и написания демо.
 
 Большинство из этих сервисов легки в использовании, поэтому мы не будем освещать их в деталях. Давайте кратко рассмотрим Google fonts, чтобы вы понимали идею. И снова, используйте копии `web-font-start.html` и `web-font-start.css` в качестве отправной точки.
 
-1. Отправляйтесь на [Google Fonts](https://www.google.com/fonts).
+1. Отправляйтесь на [Google Fonts](https://fonts.google.com).
 2. Используйте фильтры с правой стороны чтобы отобразить типы шрифтов, которые вы хотите выбрать и выберите пару шрифтов, которые вам понравятся.
 3. Для выбора семейства шрифтов нажмите на кнопку ⊕ рядом с ним.
 4. Когда вы выбрали семейства шрифтов, нажмите на панель _\[Number] Families Selected_ в низу страницы.
@@ -169,4 +169,4 @@ font-family: "zantrokeregular", serif;
 
 Теперь, когда вы ознакомились с нашими статьями об основах стилизации текста, пришло время проверить ваше понимание нашей оценкой модуля «Задание: стилизация школьного сайта».
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling/Typesetting_a_homepage", "Learn_web_development/Core/Text_styling")}}

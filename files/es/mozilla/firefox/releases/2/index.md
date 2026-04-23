@@ -3,8 +3,6 @@ title: Firefox 2 para desarrolladores
 slug: Mozilla/Firefox/Releases/2
 ---
 
-{{FirefoxSidebar}}
-
 ## Nuevas características para desarrolladores en Firefox 2
 
 Firefox 2 aporta gran cantidad de funcionalidades nuevas, este artículo proporciona enlaces que describen estas nuevas capacidades.

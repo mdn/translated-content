@@ -75,13 +75,14 @@ l10n:
 
 4. `aria-labelledby` プロパティはその値の中で `id` が繰り返されると無視します。要素が複数の時点で参照された場合、最初の参照のみが処理されます。 `aria-labelledby="attr attr rm13 rm13">` は `aria-labelledby="attr rm13">` として扱われます。
 
-5. `aria-labelledby` プロパティの値は、表示されていない要素のコンテンツを含めることができます。支援技術のユーザーには、他のすべてのユーザーと同じコンテンツを提供すべきですが、HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性、CSS の [`display: none`](/ja/docs/Web/CSS/display) 属性、CSS の [`visibility: hidden`](/ja/docs/Web/CSS/visibility) 属性を持つ要素のコンテンツを計算された名前の文字列に含めることができます。
+5. `aria-labelledby` プロパティの値は、表示されていない要素のコンテンツを含めることができます。支援技術のユーザーには、他のすべてのユーザーと同じコンテンツを提供すべきですが、HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性、CSS の [`display: none`](/ja/docs/Web/CSS/Reference/Properties/display) 、CSS の [`visibility: hidden`](/ja/docs/Web/CSS/Reference/Properties/visibility) を持つ要素のコンテンツを計算された名前の文字列に含めることができます。
 
 6. `aria-labelledby` プロパティは入力要素の値を取り込みます。値が `<input>` を参照している場合、あるフォームコントロールの現在の値が計算された名前文字列に含まれ、値が更新されると変更されます。
 
 7. `aria-labelledby` プロパティを連鎖させることはできません。 `aria-labelledby` を持つ要素が、これも `aria-labelledby` を持つ他の要素を参照している場合、参照されている要素の `aria-labelledby` 属性は無視されます。
 
-> **警告:** `aria-labelledby` で要素の名前を計算するのは複雑で、隠されたコンテンツを参照することがあるため、確実に期待する名前をユーザーに表示していることを支援技術でテストすることはとても重要です。
+> [!WARNING]
+> `aria-labelledby` で要素の名前を計算するのは複雑で、隠されたコンテンツを参照することがあるため、確実に期待する名前をユーザーに表示していることを支援技術でテストすることはとても重要です。
 
 ## 値
 
@@ -94,8 +95,8 @@ l10n:
 
 `aria-labelledby`属性は以下の場所では対応していません。
 
-- [`code`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`caption`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`code`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`deletion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
@@ -105,8 +106,8 @@ l10n:
 - [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
 - [`strong`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`subscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
-- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
+- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
 - [`time`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
@@ -123,6 +124,6 @@ l10n:
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA states and properties</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

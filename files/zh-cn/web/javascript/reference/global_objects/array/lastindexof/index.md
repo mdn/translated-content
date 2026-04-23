@@ -3,10 +3,6 @@ title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 ---
 
-{{JSRef}}
-
-## 概述
-
 **`lastIndexOf()`** 方法返回数组中给定元素最后一次出现的索引，如果不存在则返回 -1。该方法从 `fromIndex` 开始向前搜索数组。
 
 {{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}

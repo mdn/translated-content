@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 如果浏览器操作已启用，则返回 `true`。
 
 > [!NOTE]
@@ -25,9 +23,7 @@ let gettingIsEnabled = browser.action.isEnabled(
 ### 参数
 
 - `details`
-
   - : `object`。可选的包含要检查的 `tabId` 或 `windowId` 的对象。
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要检查的标签页的 id。
     - `windowId` {{optional_inline}}

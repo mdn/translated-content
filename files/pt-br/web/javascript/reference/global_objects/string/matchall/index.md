@@ -31,7 +31,6 @@ str.matchAll(regexp)
 ### Parâmetros
 
 - `regexp`
-
   - : Um objeto de expressão regular.
 
     Se um objeto _`obj`_ não-RegExp for passado, ele será convertido implicitamente em um {{jsxref("RegExp")}} usando `new RegExp(obj)`.

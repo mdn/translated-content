@@ -40,17 +40,13 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 - `locale`
   - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
 - `style`
-
   - : La longueur du message internationalisé. Les valeurs possibles sont :
-
     - `"long"` : la valeur par défaut, peu concise (par exemple `in 1 month`)
     - `"short"` : une valeur plus courte (par exemple `in 1 mo.`),
     - `"narrow"` : une valeur encore plus courte (pouvant être ambigüe selon les locales) (par exemple `in 1 mo.`). Les styles `narrow` et `short` peuvent être similaires voire identiques pour certaines locales.
 
 - `numeric`
-
   - : Le format du message produit. Les valeurs possibles sont :
-
     - `"always"` : la valeur par défaut (par exemple `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 

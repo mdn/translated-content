@@ -3,8 +3,6 @@ title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain

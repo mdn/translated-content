@@ -1,5 +1,6 @@
 ---
-title: call
+title: call：Wasm 文本指令
+short-title: call
 slug: WebAssembly/Reference/Control_flow/call
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
@@ -11,7 +12,7 @@ l10n:
 
 使用 `call` 调用从 JavaScript 中导入的 `greet` 函数：
 
-{{InteractiveExample("Wat Demo: call", "tabbed-standard")}}
+{{InteractiveExample("Wat 演示：call", "tabbed-standard")}}
 
 ```wat interactive-example
 (module
@@ -34,7 +35,7 @@ await WebAssembly.instantiateStreaming(fetch(url), {
   env: {
     greet: function () {
       console.log("你好");
-      // 期望的输出：“你好”
+      // 期望输出：“你好”
     },
   },
 });
@@ -42,7 +43,7 @@ await WebAssembly.instantiateStreaming(fetch(url), {
 
 使用 `return_call` 计算一个数的阶乘，并打印导出的 `fac` 函数的调用结果：
 
-{{InteractiveExample("Wat Demo: return_call", "tabbed-standard")}}
+{{InteractiveExample("Wat 演示：return_call", "tabbed-standard")}}
 
 ```wat interactive-example
 (module
@@ -75,7 +76,7 @@ const { instance } = await WebAssembly.instantiateStreaming(fetch(url));
 const result = instance.exports.fac(5n);
 
 console.log(result);
-// 期望的输出：120n
+// 期望输出：120n
 ```
 
 ## 语法

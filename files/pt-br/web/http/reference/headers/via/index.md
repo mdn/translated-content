@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Via
 original_slug: Web/HTTP/Headers/Via
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho geral **`Via`** é adicionado por proxies, ambos diretos e reversos, e pode aparecer em cabeçalhos de requisição e de cabeçalhos de resposta. Ele é usado para rastrear mensagens direcionadas, evitando laços de requisição, e identificando as capacidades dos protocolos dos remetentes ao longo da cadeia de requisição/resposta.
 
 <table class="properties">
@@ -15,7 +13,7 @@ O cabeçalho geral **`Via`** é adicionado por proxies, ambos diretos e reversos
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

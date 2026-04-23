@@ -48,5 +48,5 @@ xhr.send();
 
 ## Voir aussi
 
-- Liste des [HTTP response codes](/fr/docs/Web/HTTP/Status)
+- Liste des [HTTP response codes](/fr/docs/Web/HTTP/Reference/Status)
 - [HTTP](/fr/docs/Web/HTTP)

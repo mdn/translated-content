@@ -25,7 +25,8 @@ if (foo.hasChildNodes()) {
 }
 ```
 
-> **备注：** `Node.hasChildNodes`是个方法，而不是普通属性，使用时必须加括号才能调用。
+> [!NOTE]
+> `Node.hasChildNodes`是个方法，而不是普通属性，使用时必须加括号才能调用。
 
 ## 总结
 

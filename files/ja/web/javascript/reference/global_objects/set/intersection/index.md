@@ -1,11 +1,10 @@
 ---
 title: Set.prototype.intersection()
+short-title: intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 l10n:
-  sourceCommit: 50d5e7cdb972c64a8f02a34a229bbc5ed7305c24
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`intersection()`** は {{jsxref("Set")}} インスタンスのメソッドで、集合を受け取り、この Set と指定された集合の両方にある要素の入った新しい Set を返します。
 
@@ -69,6 +68,7 @@ console.log(odds.intersection(squares)); // Set(2) { 1, 9 }
 ## 関連情報
 
 - [`Set.prototype.intersection` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#new-set-methods)
+- [es-shims による `Set.prototype.intersection` のポリフィル](https://www.npmjs.com/package/set.prototype.intersection)
 - {{jsxref("Set.prototype.difference()")}}
 - {{jsxref("Set.prototype.isDisjointFrom()")}}
 - {{jsxref("Set.prototype.isSubsetOf()")}}

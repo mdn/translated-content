@@ -1,33 +1,35 @@
 ---
 title: Reflect.get()
+short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+**`Reflect.get()`** は静的メソッドで、[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文と同様に実装されていますが、関数として存在します。
 
-静的な **`Reflect.get()`** メソッドは、オブジェクト (`target[propertyKey]`) からプロパティを関数として取得するように動作します。
-
-{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.get()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   x: 1,
   y: 2,
 };
 
-console.log(Reflect.get(object1, "x"));
-// Expected output: 1
+console.log(Reflect.get(object, "x"));
+// 予想される結果: 1
 
-const array1 = ["zero", "one"];
+const array = ["zero", "one"];
 
-console.log(Reflect.get(array1, 1));
-// Expected output: "one"
+console.log(Reflect.get(array, 1));
+// 予想される結果: "one"
 ```
 
 ## 構文
 
-```js
-Reflect.get(target, propertyKey[, receiver])
+```js-nolint
+Reflect.get(target, propertyKey)
+Reflect.get(target, propertyKey, receiver)
 ```
 
 ### 引数
@@ -37,7 +39,7 @@ Reflect.get(target, propertyKey[, receiver])
 - `propertyKey`
   - : 設定するプロパティ名。
 - `receiver` {{optional_inline}}
-  - : ゲッターがあった場合、 `target` への呼び出しで使用する `this` の値を提供します。 {{jsxref("Proxy")}} とともに使用すると、 `target` から継承しているオブジェクトにすることができます。
+  - : ゲッターがあった場合、 `target` への呼び出しで使用する `this` の値を提供します。
 
 ### 返値
 
@@ -45,44 +47,54 @@ Reflect.get(target, propertyKey[, receiver])
 
 ### 例外
 
-`target` が {{jsxref("Object")}} でなかった場合、 {{jsxref("TypeError")}} が発生します。
+- {{jsxref("TypeError")}}
+  - : `target` がオブジェクトではなかった場合。
 
 ## 解説
 
-`Reflect.get` メソッドはオブジェクトのプロパティを取得します。機能としては[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)構文と似ています。
+`Reflect.get()` は[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)の反射的意味づけを提供します。つまり、`Reflect.get(target, propertyKey, receiver)` は意味的に次のものと同等です：
+
+```js
+target[propertyKey];
+```
+
+通常のプロパティアクセスでは、`target` と `receiver` は明らかに同一のオブジェクトであることに注意してください。
+
+`Reflect.get()` は、`target` の `[[Get]]` [オブジェクト内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods) を呼び出します。
 
 ## 例
 
-### `Reflect.get()` の使用
+### Reflect.get() の使用
 
 ```js
 // オブジェクト
-let obj = { x: 1, y: 2 };
-Reflect.get(obj, "x"); // 1
+const obj1 = { x: 1, y: 2 };
+Reflect.get(obj1, "x"); // 1
 
 // 配列
 Reflect.get(["zero", "one"], 1); // "one"
 
-// Proxy with a get handler
-let x = { p: 1 };
-
-let obj = new Proxy(x, {
-  get(t, k, r) {
-    return k + "bar";
+// 取得ハンドラー付きプロキシー
+const obj2 = new Proxy(
+  { p: 1 },
+  {
+    get(t, k, r) {
+      return `${k}bar`;
+    },
   },
-});
-Reflect.get(obj, "foo"); // "foobar"
+);
+Reflect.get(obj2, "foo"); // "foobar"
 
-//Proxy with get handler and receiver
-let x = { p: 1, foo: 2 };
-let y = { foo: 3 };
-
-let obj = new Proxy(x, {
-  get(t, prop, receiver) {
-    return receiver[prop] + "bar";
+// 取得ハンドラー及びレシーバー付きプロキシー
+const obj3 = new Proxy(
+  { p: 1, foo: 2 },
+  {
+    get(t, prop, receiver) {
+      return `${receiver[prop]}bar`;
+    },
   },
-});
-Reflect.get(obj, "foo", y); // "3bar"
+);
+Reflect.get(obj3, "foo", { foo: 3 }); // "3bar"
 ```
 
 ## 仕様書
@@ -95,5 +107,7 @@ Reflect.get(obj, "foo", y); // "3bar"
 
 ## 関連情報
 
+- [`Reflect.get` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [`handler.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)

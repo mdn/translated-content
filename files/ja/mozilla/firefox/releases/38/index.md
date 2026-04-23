@@ -3,8 +3,6 @@ title: Firefox 38 for developers
 slug: Mozilla/Firefox/Releases/38
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -30,7 +28,6 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - 定義済みスタイル {{cssxref("list-style-type", "ethiopic-numeric")}} の接尾辞は最近の仕様書の変更に合わせて、ドットに代わり空白文字を使用するようになりました ([Firefox バグ 1120721](https://bugzil.la/1120721))。
 - インライン要素とブロック要素の両方に分けて生成した Generated Content ({{cssxref("::before")}} や {{cssxref("::after")}} による) の CSS Transitions が、仕様書で要求されているとおりに動作するようになりました ([Firefox バグ 1110277](https://bugzil.la/1110277))。
 - CSS 論理的プロパティの実装が大きく前進しました。 `layout.css.vertical-text.enabled` フラグの設定 (既定値は `false`) により、以下のプロパティを使用できます。
-
   - 書字方向に依存しない {{cssxref("width")}} および {{cssxref("height")}}: {{cssxref("block-size")}} および {{cssxref("inline-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
   - 書字方向に依存しない {{cssxref("min-width")}} および {{cssxref("min-height")}}: {{cssxref("min-block-size")}} および {{cssxref("min-inline-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
   - 書字方向に依存しない {{cssxref("max-width")}} および {{cssxref("max-height")}}: {{cssxref("max-block-size")}} および {{cssxref("max-block-size")}} ([Firefox バグ 1117983](https://bugzil.la/1117983))。
@@ -39,7 +36,7 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
   - 書字方向に依存しない {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} および幅、スタイル、色の個別指定プロパティ: {{cssxref("border-block-start")}}、{{cssxref("border-block-start-width")}}、{{cssxref("border-block-start-style")}}、{{cssxref("border-block-start-color")}}、{{cssxref("border-block-end")}}、{{cssxref("border-block-end-width")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-block-end-color")}}、{{cssxref("border-inline-start")}}、{{cssxref("border-inline-start-width")}}、{{cssxref("border-inline-start-style")}}、{{cssxref("border-inline-start-color")}}、{{cssxref("border-inline-end")}}、{{cssxref("border-inline-end-width")}}、{{cssxref("border-inline-end-style")}}、{{cssxref("border-inline-end-color")}} ([Firefox バグ 649142](https://bugzil.la/649142))。
   - 書字方向に依存しない {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}}: {{cssxref("inset-block-start")}}、`offset-block-end`、`offset-inline-start`、`offset-inline-end` ([Firefox バグ 1120283](https://bugzil.la/1120283))。
 
-- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
+- ブラウザー間で相互運用性がある動作を目指して、 [CSS トランジション](/ja/docs/Web/CSS/Guides/Transitions/Using)の始まり方を、最近の仕様変更に合致するよう変更しました ([Firefox バグ 960465](https://bugzil.la/960465))。
 
 ### HTML
 
@@ -53,7 +50,6 @@ Firefox 38 は、米国時間 2015 年 5 月 12 日にリリースされまし�
 - {{jsxref("Functions/set", "セッター", "", 1)}}が{{jsxref("Functions/rest_parameters", "残余引数", "", 1)}}を持っている場合に{{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1089632](https://bugzil.la/1089632))。
 - 関数の {{jsxref("Function/name", "name")}} プロパティが構成可能になりました ([Firefox バグ 1084019](https://bugzil.la/1084019))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) にも実装しました。
-
   - {{jsxref("TypedArray.of", "of()")}} メソッドと {{jsxref("TypedArray.from", "from()")}} メソッド ([Firefox バグ 896608](https://bugzil.la/896608))。
   - {{jsxref("TypedArray.forEach", "forEach()")}} メソッド ([Firefox バグ 1107645](https://bugzil.la/1107645))。
   - {{jsxref("TypedArray.filter", "filter()")}} メソッドと {{jsxref("TypedArray.map", "map()")}} メソッド ([Firefox バグ 1121936](https://bugzil.la/1121936))。

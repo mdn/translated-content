@@ -5,7 +5,7 @@ slug: Web/API/Element/animationend_event
 
 {{APIRef}}
 
-**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
+**`animationend`**（**动画结束**）事件在 [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)完成时触发。如果在动画完成前中止了动画，例如将元素从 DOM 中移除，或将动画从元素上移除，`animationend` 事件不会触发。
 
 ## 语法
 
@@ -32,7 +32,7 @@ _也从其父接口 {{domxref("Event")}} 继承属性_。
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : 一个浮点数（`float`），表示动画运行的时间（以秒为单位）。此事件的这个属性并不包括动画暂停的时间。对于 `animationstart` 事件，`elapsedTime` 的值为 `0.0`（除非将 {{cssxref("animation-delay")}} 设置成了一个负值，在这种情况下，`elapsedTime` 为 `(-1 * delay)`）。
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : 一个字符串，以 `'::'` 开头，包含了动画运行时所在的[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的名称。如果动画不是在伪元素而是在元素上运行，则为空字符串：`''`。
+  - : 一个字符串，以 `'::'` 开头，包含了动画运行时所在的[伪元素](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-elements)的名称。如果动画不是在伪元素而是在元素上运行，则为空字符串：`''`。
 
 ## 示例
 
@@ -158,8 +158,8 @@ applyAnimation.addEventListener("click", () => {
 
 ## 参见
 
-- [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/Guides/Animations/Using)
 - {{domxref("AnimationEvent")}}
 - 相关事件：{{domxref("Element/animationstart_event", "animationstart")}}, {{domxref("Element/animationcancel_event", "animationcancel")}}, {{domxref("Element/animationiteration_event", "animationiteration")}}
 - 以 {{domxref("Document")}} 为目标的此事件：{{domxref("Document/animationend_event", "animationend")}}

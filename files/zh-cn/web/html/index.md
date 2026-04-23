@@ -3,8 +3,6 @@ title: HTML（超文本标记语言）
 slug: Web/HTML
 ---
 
-{{HTMLSidebar}}
-
 **HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其他技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
 
 “超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
@@ -71,5 +69,5 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 
 ## 相关主题
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/Guides/Colors/Applying_color)
   - : 这篇文章涵盖了大多数使用 CSS 为 HTML 内容增加颜色的方式，并列举了 HTML 文档里哪些部分可以进行上色以及这一操作需要使用哪些 CSS 属性。它包含了一些示例，配色建构工具的链接，以及其他内容。

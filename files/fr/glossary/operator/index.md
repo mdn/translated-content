@@ -1,18 +1,13 @@
 ---
 title: Opérateur
 slug: Glossary/Operator
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Syntaxe réservée **constituée** de signes de ponctuation ou de caractères alphanumériques qui exécute des fonctionnalités intégrées. Par exemple, en JavaScript l'opérateur d'addition («&nbsp;+&nbsp;») additionne des nombres et concatène des chaînes, tandis que l'opérateur de négation («&nbsp;!&nbsp;») nie une expression — par exemple en faisant retourner `true` en `false`.
 
-**Syntaxe** réservée constituée de caractères alphanumériques ou de ponctuation apportant des fonctionnalités intégrées. Par exemple, "+" représente l'opérateur d'addition de nombres et de concatenation de chaînes de caractères, alors que l'opération "non", "!", est la négation d'une expression — par exemple, une déclaration vraie returnera false.
+## Voir aussi
 
-## Pour en savoir plus
-
-### Culture générale
-
-- [Opérateur](<https://fr.wikipedia.org/wiki/Opérateur_(informatique)>) sur Wikipédia
-
-### Référence technique
-
+- [Opérateur (informatique](<https://fr.wikipedia.org/wiki/Opérateur_(informatique)>) sur Wikipédia
 - [Opérateurs JavaScript](/fr/docs/Web/JavaScript/Reference/Operators)

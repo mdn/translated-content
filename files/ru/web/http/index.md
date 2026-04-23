@@ -3,8 +3,6 @@ title: HTTP
 slug: Web/HTTP
 ---
 
-{{HTTPSidebar}}
-
 **Протокол передачи гипертекста (_Hypertext Transfer Protocol - HTTP)_** - это [прикладной протокол](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D1%8B_%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D1%83%D1%80%D0%BE%D0%B2%D0%BD%D1%8F) для передачи гипертекстовых документов, таких как HTML. Он создан для связи между веб-браузерами и веб-серверами, хотя в принципе HTTP может использоваться и для других целей. Протокол следует классической [клиент-серверной модели](https://ru.wikipedia.org/wiki/%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80), когда клиент открывает соединение для создания запроса, а затем ждёт ответа. HTTP - это [протокол без сохранения состояния](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB_%D0%B1%D0%B5%D0%B7_%D1%81%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F), то есть сервер не сохраняет никаких данных (состояние) между двумя парами "запрос-ответ". Несмотря на то, что HTTP основан на TCP/IP, он также может использовать любой другой протокол [транспортного уровня](https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%BD%D1%8B%D0%B9_%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C) с гарантированной доставкой.
 
 ## Учебники
@@ -39,9 +37,7 @@ slug: Web/HTTP
 - [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Reference/Headers)
   - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Методы HTTP-запроса](/ru/docs/Web/HTTP/Reference/Methods)
-
   - : Различные операции, которые выполняются с HTTP:
-
     - {{HTTPMethod("GET")}}
     - {{HTTPMethod("POST")}}
     - {{HTTPMethod("OPTIONS")}}

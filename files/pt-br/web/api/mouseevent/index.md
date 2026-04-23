@@ -21,7 +21,6 @@ Vários eventos mais específicos derivam de **`MouseEvent`** como: [`WheelEvent
 _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs/Web/API/UIEvent) e [`Event`](/pt-BR/docs/Web/API/Event)._
 
 - **[`MouseEvent.altKey`](/pt-BR/docs/Web/API/MouseEvent/altKey)** Read only
-
   - : Retorna `true`se a tecla
 
     <kbd>alt</kbd>
@@ -37,7 +36,6 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 - [`MouseEvent.clientY`](/pt-BR/docs/Web/API/MouseEvent/clientY)Read only
   - : A coordenada Y do ponteiro do mouse em coordenadas locais (conteúdo **DOM**).
 - [`MouseEvent.ctrlKey`](/pt-BR/docs/Web/API/MouseEvent/ctrlKey) Read only
-
   - : Retorna `true` se a tecla
 
     <kbd>control</kbd>
@@ -45,7 +43,6 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
     estava pressionada quando o evento do mouse foi disparado.
 
 - [`MouseEvent.metaKey`](/pt-BR/docs/Web/API/MouseEvent/metaKey) Read only
-
   - : Retorna `true` se a tecla
 
     <kbd>meta</kbd>
@@ -73,7 +70,6 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 - [`MouseEvent.screenY`](/pt-BR/docs/Web/API/MouseEvent/screenY) Read only
   - : A coordenada Y do ponteiro do mouse em coordenadas globais (tela).
 - [MouseEvent.shiftKey](/pt-BR/docs/Web/API/MouseEvent/shiftKey) Read only
-
   - : Retorna `true` se a tecla
 
     <kbd>shift</kbd>
@@ -85,7 +81,6 @@ _Essa interface também herda propriedades de seus pais, [`UIEvent`](/pt-BR/docs
 - `MouseEvent.mozPressure` Read only
   - : A quantidade de pressão aplicada a um dispositivo de toque ou tablet ao gerar o evento; este valor varia entre `0.0` (pressão mínima) e `1.0` (pressão máxima).
 - [`MouseEvent.mozInputSource`](/pt-BR/docs/Web/API/MouseEvent/mozInputSource) Read only
-
   - : O tipo de dispositivo que gerou o evento (uma das constantes `MOZ_SOURCE_*` listadas abaixo). Isso permite, por exemplo, determinar se um evento de mouse foi gerado por um mouse real ou por um evento de toque (o que pode afetar o grau de precisão com que você interpreta as coordenadas associadas ao evento).
 
 - [`MouseEvent.webkitForce`](/pt-BR/docs/Web/API/MouseEvent/webkitForce) Read only

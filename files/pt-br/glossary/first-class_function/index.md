@@ -21,7 +21,8 @@ foo();
 
 Nós atribuímos uma `Função Anônima` à uma `Variável`, então usamos a variável pra chamar a função adicionando parênteses `()` no fim.
 
-> **Nota:** **Mesmo se sua função for nomeada,** você pode usar o nome da variável pra chamá-la. Nomeá-la será útil quando for debugar seu código. _Mas não afetará a maneira que à chamamos._
+> [!NOTE]
+> **Mesmo se sua função for nomeada,** você pode usar o nome da variável pra chamá-la. Nomeá-la será útil quando for debugar seu código. _Mas não afetará a maneira que à chamamos._
 
 ## Exemplo | Passar uma função como um Argumento
 

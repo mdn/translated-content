@@ -3,9 +3,7 @@ title: 게임 오버
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 이것은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 의 다섯 번째 학습입니다. 이 학습을 통해 완성된 코드는 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 에서 확인할 수 있습니다.
 
@@ -61,10 +59,11 @@ if (y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/z4zy79fo/","","395")}}
 
-> **참고:** **연습**: 공이 패들에 닿았을 때 공의 속도를 빠르게 만들어봅시다.
+> [!NOTE]
+> **연습**: 공이 패들에 닿았을 때 공의 속도를 빠르게 만들어봅시다.
 
 ## 다음 단계
 
 지금까지 아주 잘 하고 있습니다. 게임은 플레이 할 가치가 생겼고 이젠 게임이 끝날 수도 있습니다. 하지만 뭔가가 빠졌습니다. 여섯 번째 학습 — [벽돌 영역을 만들어보기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — 로 이동해서 몇 개의 벽돌을 만들어 봅시다.
 
-{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}

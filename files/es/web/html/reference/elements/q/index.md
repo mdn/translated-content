@@ -30,15 +30,15 @@ q {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flujo de contenido</a
         >,
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >redacción de contenido</a
         >, contenido palpable.
       </td>
@@ -46,7 +46,7 @@ q {
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Redacción de contenido</a
         >.
       </td>
@@ -59,7 +59,7 @@ q {
       <th scope="row">Padres autorizados</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >redacción de contenido</a
         >.
       </td>
@@ -88,7 +88,7 @@ q {
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.

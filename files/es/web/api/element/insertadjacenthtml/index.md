@@ -16,9 +16,7 @@ element.insertAdjacentHTML(posición, texto);
 ### Parámetros
 
 - `posición`
-
   - : Un {{domxref("DOMString")}} que representa la posición relativa al `elemento`, y deberá ser una de las siguientes cadenas:
-
     - `'beforebegin'`: Antes que el propio `elemento`.
     - `'afterbegin'`: Justo dentro del `elemento`, antes de su primer elemento hijo.
     - `'beforeend'`: Justo dentro del `elemento`, después de su último elemento hijo.

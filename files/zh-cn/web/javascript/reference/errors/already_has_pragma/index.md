@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
-{{jsSidebar("Errors")}}
-
 当给定的 JavaScript 源文件被指定了多次源码映射时，JavaScript 会发出“-file- is being assigned a //# sourceMappingURL, but already has one.”警告。
 
 ## 错误信息

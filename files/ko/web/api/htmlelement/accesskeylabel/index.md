@@ -53,4 +53,4 @@ node.onclick = function () {
 ## 함께 보기
 
 - {{domxref("element.accessKey")}}
-- [accesskey](/ko/docs/Web/HTML/Global_attributes/accesskey) 전역 속성.
+- [accesskey](/ko/docs/Web/HTML/Reference/Global_attributes/accesskey) 전역 속성.

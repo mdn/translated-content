@@ -11,11 +11,11 @@ CSS é uma das principais linguagens da **open web** e é padronizada em navegad
 
 - Introdução CSS
 
-  Se você é novo no desenvolvimento web, certifique-se de ler nosso artigo [CSS básico](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics) para aprender o que é CSS e como usá-lo.
+  Se você é novo no desenvolvimento web, certifique-se de ler nosso artigo [CSS básico](/pt-BR/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) para aprender o que é CSS e como usá-lo.
 
 - Tutoriais CSS
 
-  Nossa [área de aprendizado CSS](/pt-BR/docs/Learn/CSS) contém diversos tutoriais para levá-lo do nível iniciante ao avançado, cobrindo todos os fundamentos.
+  Nossa [área de aprendizado CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) contém diversos tutoriais para levá-lo do nível iniciante ao avançado, cobrindo todos os fundamentos.
 
 - Referências CSS
 
@@ -23,21 +23,21 @@ CSS é uma das principais linguagens da **open web** e é padronizada em navegad
 
 ## Tutoriais
 
-Nossa [área de aprendizado CSS](/pt-BR/docs/Learn/CSS) contempla múltiplos módulos que ensinam CSS desde o início — não é necessário conhecimento prévio.
+Nossa [área de aprendizado CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) contempla múltiplos módulos que ensinam CSS desde o início — não é necessário conhecimento prévio.
 
-**[Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps)**
+**[Introdução ao CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics)**
 
 Esse módulo inicia com o funcionamento básico do CSS, incluindo seletores e propriedades, escrever regras CSS, aplicar CSS ao HTML, como especificar comprimento, cor, e outras unidades em CSS, cascata e herança, o básico do modelo de caixas, e depuração de CSS.
 
-**[Estilização do texto](/pt-BR/docs/Learn/CSS/Styling_text)**
+**[Estilização do texto](/pt-BR/docs/Learn_web_development/Core/Text_styling)**
 
 Esse módulo discute os fundamentos da estilização de textos, incluindo a definição de fontes, negritos, itálicos, linhas e espaçamentos de letras, sombras e outras propriedades de textos.
 
-**[Estilização de caixas](/pt-BR/docs/Learn/CSS/Building_blocks)**
+**[Estilização de caixas](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333)**
 
 Esse módulo foca na estilização de caixas, um dos passos fundamentais para o layout de uma página web. Nesse módulo nós recapitulamos o modelo de caixas, então abordamos o controle do layout das caixas definindo margens, bordas e preenchimento, cores de fundo customizadas, imagens e outras características extravagantes como sombras e filtros em caixas.
 
-**[Layout CSS](/pt-BR/docs/Learn/CSS/CSS_layout)**
+**[Layout CSS](/pt-BR/docs/Learn_web_development/Core/CSS_layout)**
 
 Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estilizar e manipular caixas que contém seu conteúdo. Agora veremos como posicionar suas caixas no lugar certo em relação à janela de exibição e um ao outro. Nós cobrimos os pré-requisitos necessários e agora você pode se aprofundar no layout do CSS com diferentes configurações de exibição, métodos tradicionais de layout envolvendo float e posicionamento, e modernas ferramentas para layout como flexbox.
 
@@ -45,21 +45,20 @@ Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estiliz
 
 - [Referências CSS](/pt-BR/docs/Web/CSS/Reference): Essa extensa referência para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.
 - Conceitos chave do CSS:
-
-  - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/Syntax)
-  - [Especificidade](/pt-BR/docs/Web/CSS/Specificity), [herança](/pt-BR/docs/Web/CSS/Inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
-  - [Box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) e [colapso de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Especificidade](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity), [herança](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
+  - [Box model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction) e [colapso de margem](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - O [containing block](/pt-BR/docs/Web/CSS/Containing_block)
   - [Empilhamento](/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento) e [block-formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - Valores [iniciais](/pt-BR/docs/Web/CSS/initial_value), [computados](/pt-BR/docs/Web/CSS/computed_value), [usados](/pt-BR/docs/Web/CSS/used_value) e [reais](/pt-BR/docs/Web/CSS/actual_value)
-  - [Propriedades abreviadas do CSS](/pt-BR/docs/Web/CSS/Shorthand_properties)
-  - [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-  - [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries)
+  - Valores [iniciais](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37), [computados](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing) e [reais](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+  - [Propriedades abreviadas do CSS](/pt-BR/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [CSS Grid Layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
+  - [Media queries](/pt-BR/docs/Web/CSS/Guides/Media_queries)
 
 ## Livro de receitas
 
-O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/Layout_cookbook) tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.
+O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/How_to/Layout_cookbook) tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.
 
 ## Ferramentas para desenvolvimento de CSS
 

@@ -3,21 +3,17 @@ title: Améliorations XUL dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi que des améliorations sur des éléments existants. Bien que ces éléments soient documentés ailleurs, cet article offre une liste pratique des améliorations ainsi que des liens vers la documentation détaillée.
 
 ### Nouveaux éléments
 
 - [Contrôles numériques](/fr/Tutoriel_XUL/Les_contrôles_numériques)&nbsp;:
-
   - Le nouvel élément [`<scale>`](/fr/XUL/scale) permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. [Référence de `scale`](/fr/XUL/scale) ([bug Firefox 290255](https://bugzil.la/290255))
   - Une nouvelle valeur `'number'` pour l'attribut `type` des élément `textbox` crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. ([bug Firefox 345510](https://bugzil.la/345510))
   - Un élément [`<spinbuttons>`](/fr/XUL/spinbuttons) a été ajouté, qui peut être utilisé pour créer des contrôles à l'aide de liaisons XBL. ([bug Firefox 155053](https://bugzil.la/155053))
   - Deux contrôles, [`<datepicker>`](/fr/XUL/datepicker) et [`<timepicker>`](/fr/XUL/timepicker), peuvent être utilisés pour permettre l'entrée de dates et d'heures. Le sélecteur de tdate est disponible en plusieurs styles selon l'attribut `type`, et permet des entrées via des boîtes de texte ou un calendrier. [Référence sur `datepicker`](/fr/XUL/datepicker)
 
 - Un [guide](/fr/XUL/Guide_des_popups) a été créé pour décrire les nouvelles fonctionnalités disponibles pour les menus et les popups.
-
   - Un élément [`<dropmarker>`](/fr/XUL/dropmarker) a été ajouté, qui peut être utile pour créer des contrôles semblables à des menus à l'aide de liaisons XBL. ([bug Firefox 348614](https://bugzil.la/348614))
   - Le nouvel élément [`<panel>`](/fr/XUL/panel) est destiné aux popups qui ne sont pas des menus. Il peut supporter n'importe quel type de contenu. L'élément \<menupopup> devrait être utilisé pour des menus. Les menus fournissent la navigation par le clavier et l'ouverture/fermeture des sous-menus.
 
@@ -46,7 +42,6 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 - L'élément `<textbox>` dispose d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour retrouver et modifier cette valeur par défaut. ([bug Firefox 312867](https://bugzil.la/312867))
 - Une propriété `editor` permet d'obtenir le [nsIEditor](/fr/NsIEditor) internet pour le champ texte. ([bug Firefox 312867](https://bugzil.la/312867))
 - textbox dispose d'un attribut `newlines` spécifiant comment les retours à la ligne dans les textes collés seront traités. ([bug Firefox 253481](https://bugzil.la/253481)) Les valeurs possibles sont&nbsp;:
-
   - `pasteintact` — tout coller tel quel
   - `pastetofirst` — (valeur par défaut) coller uniquement ce qui précède le premier retour à la ligne
   - `replacewithspaces` — remplacer les retours à la ligne par des espaces

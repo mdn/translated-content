@@ -21,9 +21,7 @@ arr.every(callback(currentValue[, index[, array]])[, thisArg])
 ### Параметры
 
 - `callback`
-
   - : Функция проверки каждого элемента, принимает три аргумента:
-
     - `currentValue`
       - : Текущий обрабатываемый элемент массива.
     - `index`{{Optional_inline}}

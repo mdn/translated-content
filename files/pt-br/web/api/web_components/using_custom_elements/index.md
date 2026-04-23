@@ -50,7 +50,7 @@ Você aprenderá mais sobre eles na seção [Using the lifecycle callbacks](#usi
 Existem dois tipos de custom elements:
 
 - **Autonomous custom elements** são autonômos — eles não herdam de elementos HTML padrão. Você os usa em uma página, literalmente escrevendo-os como um elemento HTML. Por exemplo `<popup-info>`, ou `document.createElement("popup-info")`.
-- **Customized built-in elements** herdam de elementos HTML básicos. Para criar um deles, você deve especificar qual elemento eles estendem (como implícito nos exemplos acima), e eles são usados escrevendo o elemento básico, mas especificando o nome do elemento personalizado no atributo [`is`](/pt-BR/docs/Web/HTML/Global_attributes#is) (ou propriedade). Por exemplo `<p is="word-count">`, ou `document.createElement("p", { is: "word-count" })`.
+- **Customized built-in elements** herdam de elementos HTML básicos. Para criar um deles, você deve especificar qual elemento eles estendem (como implícito nos exemplos acima), e eles são usados escrevendo o elemento básico, mas especificando o nome do elemento personalizado no atributo [`is`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#is) (ou propriedade). Por exemplo `<p is="word-count">`, ou `document.createElement("p", { is: "word-count" })`.
 
 ## Trabalhando com alguns exemplos simples
 
@@ -195,7 +195,8 @@ Você pode definir vários retornos de chamada diferentes dentro da definição 
 
 - `connectedCallback`: Chamado sempre que o custom element é anexado a um elemento conectado ao documento. Isso acontecerá sempre que o nó for movido e pode acontecer antes que o conteúdo do elemento tenha sido totalmente analisado.
 
-  > **Nota:** `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
+  > [!NOTE]
+  > `connectedCallback` pode ser chamado assim que seu elemento não estiver mais conectado, use {{domxref("Node.isConnected")}} para ter certeza.
 
 - `disconnectedCallback`: Invocado sempre que o custom element é desconectado do documento DOM.
 - `adoptedCallback`: Invocado sempre que o custom element é movido para um novo documento.

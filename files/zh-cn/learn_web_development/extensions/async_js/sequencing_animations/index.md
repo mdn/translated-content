@@ -3,8 +3,6 @@ title: 挑战：序列动画
 slug: Learn_web_development/Extensions/Async_JS/Sequencing_animations
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenu("Learn_web_development/Extensions/Async_JS/Introducing_workers", "Learn_web_development/Extensions/Async_JS")}}
 
 在本测验中，你将使用我们在[如何使用 Promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises) 中学习的一些技术来更新页面，使它能够按顺序播放一系列动画。

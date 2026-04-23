@@ -1,0 +1,87 @@
+---
+title: CSS Overflow
+slug: Web/CSS/Guides/Overflow
+original_slug: Web/CSS/CSS_overflow
+---
+
+{{CSSRef}}
+Le module de spécification **_CSS Overflow_** décrit les fonctionnalités CSS relatives au dépassement et au défilement du contenu pour les médias visuels. En CSS, le dépassement se produit lorsque le contenu d'une boîte s'étend au-delà des bords de la boîte.
+
+## Dépassement au dessin (_ink overflow_) et dépassement défilable (_scrollable overflow_)
+
+Il existe deux types de dépassement en CSS. Le premier, intitulé en anglais **_ink overflow_** (qu'on pourrait traduire par « dépassement pour le dessin ») indique le dépassement des effets visuels qui ne modifient pas la disposition ou le dimensionnement (ex. les ombres des boîtes, les bordures des images, les décorations du texte, les caractères avec un jambage qui dépasse, etc.).
+
+Le second type de dépassement, **_scrollable overflow_** (ou dépassement défilable) se produit lorsque du contenu se situe hors de la boîte et qu'il est nécessaire de fournir un mécanisme pour faire défiler le contenu afin de pouvoir le consulter. Les propriétés de ce module de spécification décrivent ce qui se passe lorsque le contenu dépasse d'une boîte.
+
+## Exemple
+
+L'exempel interactif suivant illustre comment la modification de la valeur de la propriété `overflow` change la façon dont est géré le dépassement pour une boîte avec une hauteur fixe.
+
+{{InteractiveExample("CSS Demo: overflow")}}
+
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
+
+## Référence
+
+### Propriétés CSS
+
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("overflow-block")}}
+- {{CSSxRef("overflow-inline")}}
+- {{CSSxRef("overflow-x")}}
+- {{CSSxRef("overflow-y")}}
+- {{CSSxRef("text-overflow")}}
+- {{CSSxRef("block-overflow")}} {{experimental_inline}}
+- {{CSSxRef("line-clamp")}} {{experimental_inline}}
+- {{CSSxRef("max-lines")}} {{experimental_inline}}
+- {{CSSxRef("continue")}} {{experimental_inline}}
+
+### Propriétés spécifiques
+
+- {{CSSxRef("-webkit-line-clamp")}} {{non-standard_inline}}
+
+## Spécifications
+
+{{Specifications}}
+
+## Voir aussi
+
+- Les propriétés qui permettent de mettre en forme les barres de défilement/ascenceurs : {{CSSxRef("scrollbar-width")}} et {{CSSxRef("scrollbar-color")}}

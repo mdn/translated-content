@@ -42,15 +42,16 @@ Sec-WebSocket-Version: 13
 
 El cliente puede solicitar aquí extensiones y/o sub protocolos; vea [Misceláneos](#miscellaneous) para más detalles. También, cabeceras comunes como `User-Agent`, `Referer`, `Cookie`, or cabeceras de autenticación podrían ser incluidos. Haz lo que quieras con ellos; no pertencen a WebSocket. También puedes ignorarlos. En muchas configuraciones comunes, un proxy inverso ya ha tratado con ellos.
 
-Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe responder "[400 Bad Request](/es/docs/Web/HTTP/Status#400)" e inmediatamente cerrar la conexión. Normalmente, también puede dar la razón porque falló el _handshake_ en el cuerpo de la respuesta HTTP, pero el mensaje podría no ser mostrado (el browser no lo muestra). Si el servidor no comprende que la versión del WebSockets, debería enviar una cabecera `Sec-WebSocket-Version` que contenga la(s) versión(es) no entendidas. (Esta guía explica v13, la más nueva). Ahora, vamos a ver la cabecera más curiosa, `Sec-WebSocket-Key`.
+Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe responder "[400 Bad Request](/es/docs/Web/HTTP/Reference/Status#400)" e inmediatamente cerrar la conexión. Normalmente, también puede dar la razón porque falló el _handshake_ en el cuerpo de la respuesta HTTP, pero el mensaje podría no ser mostrado (el browser no lo muestra). Si el servidor no comprende que la versión del WebSockets, debería enviar una cabecera `Sec-WebSocket-Version` que contenga la(s) versión(es) no entendidas. (Esta guía explica v13, la más nueva). Ahora, vamos a ver la cabecera más curiosa, `Sec-WebSocket-Key`.
 
 > [!NOTE]
-> Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/Web/HTTP/CORS#origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/Web/HTTP/Status#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
+> Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/Web/HTTP/Guides/CORS#origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/Web/HTTP/Reference/Status#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
 
 > [!NOTE]
 > The request-uri (`/chat` here) has no defined meaning in the spec. So many people cleverly use it to let one server handle multiple WebSocket applications. For example, `example.com/chat` could invoke a multiuser chat app, while `/game` on the same server might invoke a multiplayer game.
 
-> **Nota:** [Regular HTTP status codes](/es/docs/Web/HTTP/Status) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
+> [!NOTE]
+> [Regular HTTP status codes](/es/docs/Web/HTTP/Reference/Status) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
 ### Respuesta de Handshake del servidor
 
@@ -176,7 +177,8 @@ WebSocket extensions and subprotocols are negotiated via headers during [the han
 
 ### Extensions
 
-> **Nota:** **This section needs expansion. Please edit if you are equipped to do so.**
+> [!NOTE]
+> **This section needs expansion. Please edit if you are equipped to do so.**
 
 Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 

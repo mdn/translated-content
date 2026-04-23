@@ -16,7 +16,6 @@ var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDe
 ```
 
 - `nombreDeVariableN`
-
   - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
 
 - `valorN`

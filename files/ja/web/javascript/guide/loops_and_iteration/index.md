@@ -2,10 +2,9 @@
 title: ループと反復処理
 slug: Web/JavaScript/Guide/Loops_and_iteration
 l10n:
-  sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-{{jsSidebar("JavaScript Guide")}}
 {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 ループは、何かを繰り返して行う手軽で簡単な方法を提供します。 [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)の本章では、 JavaScript で利用可能な反復処理を行う数々の反復文を紹介します。
@@ -66,7 +65,7 @@ for (初期化式; 条件式; 加算式)
     >好きな音楽のジャンルをいくつか選び、下のボタンをクリックしてください。</label
   >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>
@@ -289,7 +288,7 @@ checkIandJ: while (i < 4) {
     console.log(j);
     j -= 1;
     if (j % 2 === 0) {
-      continue checkJ;
+      continue;
     }
     console.log(j, "is odd.");
   }
@@ -361,7 +360,7 @@ for (const i of arr) {
 // Logs: 3 5 7
 ```
 
-`for...of` および `for...in` 文は、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
+`for...of` および `for...in` 文は、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
 
 ```js
 const obj = { foo: 1, bar: 2 };

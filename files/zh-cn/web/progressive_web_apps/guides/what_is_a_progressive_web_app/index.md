@@ -40,14 +40,12 @@ PWA 具有网站的优势，包括：
 PWA 也具有平台特定应用程序的许多优势，包括：
 
 - [**PWA 可以安装在设备上**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)。这意味着：
-
   - PWA 可以从平台的应用商店安装，也可以直接从 web 安装。
   - PWA 可以像平台特定的应用程序一样安装，并可以自定义安装过程。
   - 一旦安装，PWA 会在设备上得到一个应用图标，与平台特定应用程序一样。
   - 一旦安装，PWA 可以作为独立的应用程序启动，而不是作为浏览器中的网站。
 
 - [**PWA 可以在后台与离线操作**](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)：一个典型的网站只在被浏览器加载后才处于活动状态。PWA 可以：
-
   - 在设备没有网络连接时工作。
   - 在后台更新内容。
   - 对来自服务器的[推送消息](/zh-CN/docs/Web/API/Push_API)做出响应。

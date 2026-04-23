@@ -3,8 +3,6 @@ title: POST
 slug: Web/HTTP/Reference/Methods/POST
 ---
 
-{{HTTPSidebar}}
-
 **HTTP-метод `POST`** предназначен для отправки данных на сервер. Тип тела запроса указывается в заголовке {{HTTPHeader("Content-Type")}}.
 
 Разница между {{HTTPMethod("PUT")}} и `POST` состоит в том, что `PUT` является идемпотентным: повторное его применение даёт тот же результат, что и при первом применении (то есть у метода нет _побочных эффектов_), тогда как повторный вызов одного и того же метода `POST` может иметь такие эффекты, как например, оформление одного и того же заказа несколько раз.
@@ -35,7 +33,7 @@ slug: Web/HTTP/Reference/Methods/POST
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Safe", "Безопасный")}}
+        {{Glossary("Safe/HTTP", "Безопасный")}}
       </th>
       <td>Нет</td>
     </tr>
@@ -53,7 +51,7 @@ slug: Web/HTTP/Reference/Methods/POST
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+        Допускается в <a href="/ru/docs/Learn_web_development/Extensions/Forms">HTML-формах</a>
       </th>
       <td>Да</td>
     </tr>

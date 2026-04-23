@@ -3,8 +3,6 @@ title: HTTP
 slug: Web/HTTP
 ---
 
-{{HTTPSidebar}}
-
 **_Hypertext Transfer Protocol (HTTP)_** (o **_Protocolo de Transferencia de Hipertexto en español)_** es un protocolo de la [capa de aplicación](http://es.wikipedia.org/wiki/Capa_de_aplicaci%C3%B3n) para la transmisión de documentos hipermedia, como HTML. Fue diseñado para la comunicación entre los navegadores y servidores web, aunque se puede utilizar para otros propósitos también. Sigue el clásico [modelo cliente-servidor](http://es.wikipedia.org/wiki/Cliente-servidor), en el que un cliente establece una conexión con el servidor, realiza una petición y espera hasta que recibe una respuesta del mismo. Se trata de un [protocolo sin estado](http://es.wikipedia.org/wiki/Protocolo_sin_estado), lo cual significa que el servidor no guarda ningún dato (estado) entre dos peticiones. Aunque en la mayoría de casos se basa en una conexión del tipo TCP/IP, se puede usar sobre cualquier [capa de transporte](http://es.wikipedia.org/wiki/Capa_de_transporte) segura o de confianza, es decir, sobre cualquier protocolo que no pierda mensajes silenciosamente, tal como UDP.
 
 ## Tutoriales

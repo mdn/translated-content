@@ -18,9 +18,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Argumento objeto
 ### Parámetros
 
 - `alignToTop`
-
   - : Es un valor {{jsxref("Boolean")}}:
-
     - Si es `true`, la parte superior del elemento se alineará con la parte superior del área visible del elemento desplazable antecesor.
     - Si es `false`, la parte inferior del elemento se alineará con la parte inferior del área visible del elemento desplazable antecesor.
 

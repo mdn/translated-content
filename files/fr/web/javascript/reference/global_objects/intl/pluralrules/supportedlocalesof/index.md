@@ -18,9 +18,7 @@ Intl.PluralRules.supportedLocalesOf(locales[, options])
 - `locales`
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou bien un tableau de telles chaînes. Pour la forme générale de l'argument `locales`, se référer à la page {{jsxref("Intl", "Intl", "#Identification_et_choix_de_la_locale", 1)}}.
 - `options` {{optional_inline}}
-
   - : Optionnel. Un objet pouvant contenir la propriété suivante :
-
     - `localeMatcher`
       - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.
 

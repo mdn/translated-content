@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 {{AddonSidebar}}
 
-Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
+Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou à un [bouton de la barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
 
 ![](page_action_popup.png)
 
@@ -40,9 +40,9 @@ Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le d�
 Le redimensionnement automatique des fenêtres contextuelles correspond à leur contenu.
 L'algorithme pour cela peut être différent d'un navigateur à l'autre.
 
-Dans Firefox, la taille est calculée juste avant que le popup ne s'affiche, et au plus, 10 fois par seconde après les mutations DOM. Pour les documents de mode strict, la taille est calculée en fonction de la taille de l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
+Dans Firefox, la taille est calculée juste avant que le popup ne s'affiche, et au plus, 10 fois par seconde après les mutations DOM. Pour les documents de mode strict, la taille est calculée en fonction de la taille de l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 
-Pour le mode quirks, c'est l'élément [`<html>`](/fr/docs/Web/HTML/Element/html). Firefox calcule la largeur préférée du contenu de cet élément, le renvoie à cette largeur, puis redimensionne de sorte qu'il n'y a pas de défilement vertical. Il atteindra une taille de **800x600 pixels** au maximum si cela correspond à l'écran de l'utilisateur. (Avant Firefox 60, c'était seulement 680px.) . Si l'utilisateur [déplace le bouton du complément dans le menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) ou il apparaît dans le dépassement de la barre d'outils, la fenêtre apparaît dans le panneau du menu avec une largeur fixe.
+Pour le mode quirks, c'est l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html). Firefox calcule la largeur préférée du contenu de cet élément, le renvoie à cette largeur, puis redimensionne de sorte qu'il n'y a pas de défilement vertical. Il atteindra une taille de **800x600 pixels** au maximum si cela correspond à l'écran de l'utilisateur. (Avant Firefox 60, c'était seulement 680px.) . Si l'utilisateur [déplace le bouton du complément dans le menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) ou il apparaît dans le dépassement de la barre d'outils, la fenêtre apparaît dans le panneau du menu avec une largeur fixe.
 
 Dans Firefox Android 57, la popup s'ouvre comme une page web dans un nouvel onglet.
 

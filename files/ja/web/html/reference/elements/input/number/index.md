@@ -11,7 +11,7 @@ l10n:
 
 ブラウザーによっては、マウスや指先のタップを使用して、値をユーザーが値を増減させるための矢印を提供していることもあります。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="tentacles">Number of tentacles (10-100):</label>
@@ -123,7 +123,8 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 数値入力は空の場合と単一の数値が入力された場合に妥当とみなされますが、それ以下は無効とみなされます。 [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が使用された場合は、入力欄が空の場合に妥当とみなされなくなります。
 
-> **メモ:** [有効な浮動小数点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（つまり、 [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) でも [Infinity](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) でもないもの）であれば、どのような数値でも受け入れられます。
+> [!NOTE]
+> [有効な浮動小数点数](https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number)（つまり、 [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) でも [Infinity](/ja/docs/Web/JavaScript/Reference/Global_Objects/Infinity) でもないもの）であれば、どのような数値でも受け入れられます。
 
 ### プレイスホルダー
 

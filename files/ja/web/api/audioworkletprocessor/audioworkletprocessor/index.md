@@ -11,7 +11,8 @@ l10n:
 
 ## 構文
 
-> **メモ:** `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。
+> [!NOTE]
+> `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。
 
 ```js-nolint
 new AudioWorkletProcessor(options)
@@ -20,12 +21,10 @@ new AudioWorkletProcessor(options)
 ### 引数
 
 - `options`
-
   - : {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode のコンストラクター")}} の引数 `options` に渡されたオブジェクトです。[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を経由して渡されます。
     以下のプロパティが利用できます。
 
     <!-- 仕様書ではこのオブジェクトを AudioWorkletNodeOptions と呼んでいます -->
-
     - `numberOfInputs` {{optional_inline}}
       - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
     - `numberOfOutputs` {{optional_inline}}

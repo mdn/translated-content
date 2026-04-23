@@ -2,10 +2,8 @@
 title: HTML 參考
 slug: Web/HTML/Reference
 l10n:
-  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 這裡的 [HTML](/zh-TW/docs/Web/HTML) 參考描述了 HTML 所有的**元素**與**屬性**，包括為所有元素接受的**全域屬性**。
 

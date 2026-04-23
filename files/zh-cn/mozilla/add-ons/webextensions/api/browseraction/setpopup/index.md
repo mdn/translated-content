@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 设置在用户点击浏览器操作图标时，将会以弹出窗口的形式打开的 HTML 文档。没有指定特定弹出窗口的标签页将继承全局弹出窗口，该弹出窗口默认为清单（manifest）文件中指定的 [`default_popup`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)。
 
 ## 语法
@@ -20,19 +18,14 @@ browser.browserAction.setPopup(
 ### 参数
 
 - `details`
-
   - : 一个包含以下属性的对象：
-
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为特定标签页设置弹出窗口。当用户将此标签页导航到新页面时，弹出窗口会重置。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。仅为指定窗口设置弹出窗口。
 
     - `popup`
-
       - : `string` 或 `null`。指定为 URL 的 HTML 文件。
 
         这可以指向扩展程序内打包的文件（例如，使用 {{WebExtAPIRef("extension.getURL")}} 创建的文件），或者是一个远程文档（例如 `https://example.org/`）。
@@ -40,7 +33,6 @@ browser.browserAction.setPopup(
         如果这里传递了一个空字符串（`""`），弹出窗口将被禁用，扩展程序将接收到 {{WebExtAPIRef("browserAction.onClicked")}} 事件。
 
         如果 `popup` 为 `null`：
-
         - 如果指定了 `tabId`，则移除特定标签页的弹出窗口，使该标签页继承全局弹出窗口。
         - 如果指定了 `windowId`，则移除特定窗口的弹出窗口，使该窗口继承全局弹出窗口。
         - 如果 `tabId` 和 `windowId` 都省略，则将全局弹出窗口恢复为默认值。

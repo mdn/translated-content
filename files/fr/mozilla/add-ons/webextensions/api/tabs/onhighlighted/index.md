@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `highlightInfo`
       - : [`object`](#highlightinfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
 

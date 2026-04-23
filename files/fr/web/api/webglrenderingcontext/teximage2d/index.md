@@ -29,9 +29,7 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
 ### Paramètres
 
 - `cible`
-
   - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible) de la texture active. Valeurs possibles :
-
     - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X` : face X positive pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`&nbsp;: face X négative pour une texture mappée sur un cube ;
@@ -43,26 +41,21 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
 - `niveau`
   - : Un {{domxref ("GLint")}} indiquant le niveau de détail. Le niveau 0 est le niveau de l'image de base et le niveau n est le n-ième niveau de réduction du mipmap.
 - `formatinterne`
-
   - : Un {{domxref ("GLint")}} indiquant les composantes de couleur dans la texture. Valeurs possibles :
-
     - `gl.ALPHA` : ignore les composantes rouge, vert et bleu, et lit la composante alpha ;
     - `gl.RGB`&nbsp;: ignore la composante alpha et lit les composantes rouge, vert et bleu ;
     - `gl.RGBA`&nbsp;: les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
     - `gl.LUMINANCE`&nbsp;: chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
     - `gl.LUMINANCE_ALPHA`&nbsp;: chaque composante est une composante de luminance/alpha ;
     - lors de l'utilisation de l'extension {{domxref("WEBGL_depth_texture")}} :
-
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`
 
     - lors de l'utilisation de l'extension {{domxref("EXT_sRGB")}} :
-
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
 
     - Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
       - `gl.R8`
       - `gl.R16F`
       - `gl.R32F`
@@ -99,29 +92,23 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
 - `format`
   - : Un {{domxref("GLenum")}} indiquant le format des données de texel. En WebGL 1, cela doit être identique à `formatinterne` (voir ci-dessus). En WebGL 2, les combinaisons sont répertoriées dans [ce tableau](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE).
 - `type`
-
   - : Un {{domxref("GLenum")}} indiquant le type de données des données de texel. Valeurs possibles :
-
     - `gl.UNSIGNED_BYTE`&nbsp;: 8 bits par canal pour `gl.RGBA` ;
     - `gl.UNSIGNED_SHORT_5_6_5`&nbsp;: 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
     - `gl.UNSIGNED_SHORT_4_4_4_4`&nbsp;: 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
     - `gl.UNSIGNED_SHORT_5_5_5_1`&nbsp;: 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
     - lors de l'utilisation de l'extension {{domxref ("WEBGL_depth_texture")}} :
-
       - `gl.UNSIGNED_SHORT`
       - `gl.UNSIGNED_INT`
       - `ext.UNSIGNED_INT_24_8_WEBGL` (constante fournie par l'extension)
 
     - lors de l'utilisation de l'extension {{domxref("OES_texture_float")}} :
-
       - `gl.FLOAT`
 
     - lors de l'utilisation de l'extension {{domxref("OES_texture_half_float")}} :
-
       - `ext.HALF_FLOAT_OES` (constante fournie par l'extension)
 
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
-
       - `gl.BYTE`
       - `gl.UNSIGNED_SHORT`
       - `gl.SHORT`
@@ -136,11 +123,8 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
       - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("null")}})
 
 - `pixels`
-
   - : L'un des objets suivants peut être utilisé comme source de pixels pour la texture :
-
     - {{domxref("ArrayBufferView")}},
-
       - un {{jsxref("Uint8Array")}} doit être utilisé si `type` est `gl.UNSIGNED_BYTE` ;
       - un {{jsxref("Uint16Array")}} doit être utilisé si `type` est `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` ou `ext.HALF_FLOAT_OES` ;
       - un {{jsxref("Uint32Array")}} doit être utilisé si `type` est `gl.UNSIGNED_INT` ou `ext.UNSIGNED_INT_24_8_WEBGL` ;

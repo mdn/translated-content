@@ -25,7 +25,7 @@ l10n:
 ## 例
 
 この CSS は 1 つのスタイルルールを含んでいます。これは最初の {{domxref("CSSRule")}} となり、 `document.styleSheets[0].cssRules` で返されます。
-従って、 `myRules[0].style` は `h1` に定義された宣言を表す {{domxref("CSSStyleDeclaration")}} をを返します。
+従って、 `myRules[0].style` は `h1` に定義された宣言を表す {{domxref("CSSStyleDeclaration")}} を返します。
 
 ```css
 h1 {

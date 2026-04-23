@@ -1,16 +1,13 @@
 ---
 title: "<h1>–<h6>: HTML の見出し要素"
 slug: Web/HTML/Reference/Elements/Heading_Elements
-original_slug: Web/HTML/Element/Heading_Elements
 l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。既定では、すべての見出し要素は[ブロックレベル](/ja/docs/Glossary/Block-level_content)ボックスを作成し、改行して始まり、その包含ブロックの中で利用できる幅いっぱいに広がります。
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;h1-h6&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Beetles</h1>
@@ -63,53 +60,36 @@ h4 {
 
 ### 1 つのページに複数の `<h1>` 要素を使用しない
 
-1 つのページに複数の `<h1>` 要素を使用することは HTML 標準では認められていますが（[入れ子](#入れ子)でない限り）、これはよい習慣とはみなされません。1 つのページには、ページの内容を説明する 1 つの `<h1>` 要素（文書の [`<title> 要素`](/ja/docs/Web/HTML/Reference/Elements/title)と同様）を置くのが一般的です。
+1 つのページに複数の `<h1>` 要素を使用することは HTML 標準では認められていますが（[入れ子](#入れ子)でない限り）、これはよい習慣とはみなされません。1 つのページには、ページの内容を説明する 1 つの `<h1>` 要素（文書の [`<title>`](/ja/docs/Web/HTML/Reference/Elements/title) 要素と同様）を置くのが一般的です。
 
 > [!NOTE]
 > 入れ子になった[コンテンツ区分要素](/ja/docs/Web/HTML/Reference/Elements#コンテンツ区分)の中で複数の `<h1>` 要素を入れ子にすることは、HTML 標準の古いバージョンでは認められていました。しかし、これはよい習慣とはみなされず、現在は非適合となっています。詳しくは、[There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html) をご覧ください。
 
-1 ページに 1 つの `<h1>` を使用し、レベルをスキップせずに[見出しを入れ子](#入れ子)にすることを推奨します。
+1 ページに 1 つの `<h1>` を使用し、レベルを飛ばさずに[見出しを入れ子](#入れ子)にすることを推奨します。
 
-## 例
+### `<h1>` 要素に対して統一されたフォントサイズを指定
 
-### すべての見出し
+2025 年 5 月以前、[HTML 標準](https://html.spec.whatwg.org/multipage/rendering.html#sections-and-headings)では、 `<h1>` 要素は `<section>`、 `<article>`、`<aside>`、`<nav>` 要素内にある時は、 `<h2>` として（{{cssxref("font-size")}} が小さめであり、調整された {{cssxref("margin-block")}}）、さらに 1 階層内包されている場合は `<h3>` として、というようにレンダリングされるべきであると規定していました。この特別な文脈依存の既定のスタイルは、現在[削除されました](https://github.com/whatwg/html/issues/7867)。
 
-以下のコードでは、すべての見出しレベルを示しています。
+古いコンテキスト依存の既定のスタイルを実装するブラウザーで `<h1>` のレンダリングを統一するには、次のスタイルルールを使用してください。
 
-```html
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
-<h5>Heading level 5</h5>
-<h6>Heading level 6</h6>
+```css
+h1 {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
 ```
 
-{{EmbedLiveSample('All_headings', '280', '300')}}
+あるいは、`<h1>` を対象とする他のスタイルルールを上書きしないようにするには、特異性がゼロの {{cssxref(":where()")}} を使用できます。
 
-### ページの例
-
-以下のコードでは、いくつかの見出しとその配下のコンテンツを示しています。
-
-```html
-<h1>Heading elements</h1>
-<h2>Summary</h2>
-<p>Some text here…</p>
-
-<h2>Examples</h2>
-<h3>Example 1</h3>
-<p>Some text here…</p>
-
-<h3>Example 2</h3>
-<p>Some text here…</p>
-
-<h2>See also</h2>
-<p>Some text here…</p>
+```css
+:where(h1) {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
 ```
 
-{{EmbedLiveSample('Example_page', '280', '480')}}
-
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ### ナビゲーション
 
@@ -118,42 +98,65 @@ h4 {
 **悪い例:**
 
 ```html example-bad
-<h1>Heading level 1</h1>
-<h3>Heading level 3</h3>
-<h4>Heading level 4</h4>
+<h1>見出しレベル 1</h1>
+<h3>見出しレベル 3</h3>
+<h4>見出しレベル 4</h4>
 ```
 
 **良い例:**
 
 ```html example-good
-<h1>Heading level 1</h1>
-<h2>Heading level 2</h2>
-<h3>Heading level 3</h3>
+<h1>見出しレベル 1</h1>
+<h2>見出しレベル 2</h2>
+<h3>見出しレベル 3</h3>
 ```
 
 #### 入れ子
 
-見出しはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くのスクリーンリーダーはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
+見出しはページのコンテンツの構造を反映して、節として入れ子になることがあります。ほとんどのスクリーンリーダーは、ページ上のすべての見出しを番号付きリストとして生成することもできます。これにより、ユーザーはコンテンツの階層構造をすばやく把握し、様々な見出しに移動することができます。
+
+以下のページ構造があった場合、
+
+```html
+<h1>Beetles</h1>
+
+<h2>Etymology</h2>
+
+<h2>Distribution and Diversity</h2>
+
+<h2>Evolution</h2>
+<h3>Late Paleozoic</h3>
+<h3>Jurassic</h3>
+<h3>Cretaceous</h3>
+<h3>Cenozoic</h3>
+
+<h2>External Morphology</h2>
+<h3>Head</h3>
+<h4>Mouthparts</h4>
+<h3>Thorax</h3>
+<h4>Prothorax</h4>
+<h4>Pterothorax</h4>
+<h3>Legs</h3>
+<h3>Wings</h3>
+<h3>Abdomen</h3>
+```
+
+スクリーンリーダーは次のようなリストを生成します。
 
 1. `h1` Beetles
-
    1. `h2` Etymology
    2. `h2` Distribution and Diversity
    3. `h2` Evolution
-
       1. `h3` Late Paleozoic
       2. `h3` Jurassic
       3. `h3` Cretaceous
       4. `h3` Cenozoic
 
    4. `h2` External Morphology
-
       1. `h3` Head
-
          1. `h4` Mouthparts
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 
@@ -166,7 +169,7 @@ h4 {
 - [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 - [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.4_—_ナビゲート可能_ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
@@ -182,8 +185,8 @@ h4 {
 ```html
 <header>
   <nav aria-labelledby="primary-navigation">
-    <h2 id="primary-navigation">Primary navigation</h2>
-    <!-- navigation items -->
+    <h2 id="primary-navigation">主要ナビゲーション</h2>
+    <!-- ナビゲーションアイテム -->
   </nav>
 </header>
 
@@ -191,7 +194,7 @@ h4 {
 
 <footer>
   <nav aria-labelledby="footer-navigation">
-    <h2 id="footer-navigation">Footer navigation</h2>
+    <h2 id="footer-navigation">フッターナビゲーション</h2>
     <!-- navigation items -->
   </nav>
 </footer>
@@ -204,18 +207,57 @@ h4 {
 - [aria-labelledby 属性の利用](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
+## 例
+
+### すべての見出し
+
+以下のコードでは、すべての見出しレベルを示しています。
+
+```html
+<h1>見出しレベル 1</h1>
+<h2>見出しレベル 2</h2>
+<h3>見出しレベル 3</h3>
+<h4>見出しレベル 4</h4>
+<h5>見出しレベル 5</h5>
+<h6>見出しレベル 6</h6>
+```
+
+{{EmbedLiveSample('All_headings', '280', '300')}}
+
+### ページの例
+
+以下のコードでは、いくつかの見出しとその配下のコンテンツを示しています。
+
+```html
+<h1>見出し要素</h1>
+<h2>概要</h2>
+<p>ここにテキストを書く…</p>
+
+<h2>例</h2>
+<h3>例 1</h3>
+<p>ここにテキストを書く…</p>
+
+<h3>例 2</h3>
+<p>ここにテキストを書く…</p>
+
+<h2>See also</h2>
+<p>ここにテキストを書く…</p>
+```
+
+{{EmbedLiveSample('Example_page', '280', '480')}}
+
 ## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 見出しコンテンツ, 知覚可能コンテンツ
       </td>
@@ -223,7 +265,7 @@ h4 {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -235,7 +277,7 @@ h4 {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素。
       </td>

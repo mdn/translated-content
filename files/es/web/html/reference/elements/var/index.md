@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/var
 ### Definición
 
 - Marca variables de programas y similares.
-
   - : **Sus etiquetas son**: \<var> y \</var> (ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).

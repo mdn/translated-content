@@ -21,9 +21,7 @@ register(tag, options)
 - `tag`
   - : 固有の[文字列](Web/JavaScript/Data_structures#文字列型)の識別子です。
 - `options` {{optional_inline}}
-
   - : 以下のオプションデータを含む {{jsxref('Object')}} です。
-
     - `minInterval`
       - : 定期的な同期を行う最小間隔時間をミリ秒単位で指定します。
 

@@ -1,15 +1,14 @@
 ---
 title: TypedArray.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 l10n:
-  sourceCommit: d9e66eca59d82c65166c65e7946332650da8f48f
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`reduceRight()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、アキュームレーターと型付き配列のそれぞれの値に対して（右から左へ）関数を適用していき、単一の値にまとめます。このメソッドは、{{jsxref("Array.prototype.reduceRight()")}}と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.reduceRight()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype.reduceRight()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);
@@ -19,7 +18,7 @@ const result = uint8.reduceRight(
 );
 
 console.log(result);
-// Expected output: "30, 20, 10"
+// 予想される結果: "30, 20, 10"
 ```
 
 ## 構文
@@ -32,7 +31,6 @@ reduceRight(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
-
   - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduce()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
       - : 前回 `callbackFn` を呼び出した結果の値。最初の呼び出しでは、後で `initialValue` を指定した場合はその値になり、指定されなかった場合は型付き配列の最後の要素になります。

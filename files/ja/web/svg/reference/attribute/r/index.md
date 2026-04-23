@@ -84,7 +84,8 @@ svg {
   </tbody>
 </table>
 
-> **メモ:** `<circle>` の半径の大きさは、 {{cssxref("r")}} 幾何プロパティで定義することもできます。
+> [!NOTE]
+> `<circle>` の半径の大きさは、 {{cssxref("r")}} 幾何プロパティで定義することもできます。
 
 ## radialGradient
 

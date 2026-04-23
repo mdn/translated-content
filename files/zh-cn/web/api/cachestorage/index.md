@@ -14,7 +14,8 @@ slug: Web/API/CacheStorage
 > [!NOTE]
 > CacheStorage 总是对不受信任的源（即那些不使用 HTTPS，尽管此定义将来很可能变得更加复杂。）使用 `SecurityError` reject. 测试时，你可以在 Firefox Devtools 选项/齿轮菜单中通过选中"通过 HTTP 启用 Service Workers (当工具箱打开时)" 选项来绕开这个限制。
 
-> **备注：** {{domxref("CacheStorage.match()")}} 是一个便捷方法。匹配 cache 条目的同等功能可以通过执行 {{domxref("CacheStorage.open()")}} 打开 cache，使用 {{domxref("CacheStorage.keys()")}} 返回它包含的条目，并将你所需的条目与 {{domxref("CacheStorage.match()")}} 匹配。
+> [!NOTE]
+> {{domxref("CacheStorage.match()")}} 是一个便捷方法。匹配 cache 条目的同等功能可以通过执行 {{domxref("CacheStorage.open()")}} 打开 cache，使用 {{domxref("CacheStorage.keys()")}} 返回它包含的条目，并将你所需的条目与 {{domxref("CacheStorage.match()")}} 匹配。
 
 ## 方法
 

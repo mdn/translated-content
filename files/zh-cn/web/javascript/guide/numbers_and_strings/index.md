@@ -3,7 +3,7 @@ title: 数字和字符串
 slug: Web/JavaScript/Guide/Numbers_and_strings
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
 
 本章节介绍了在 JavaScript 中使用数字和日期来处理和执行计算的概念，对象和函数。
 

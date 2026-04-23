@@ -1,12 +1,9 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Reference/Status/202
-original_slug: Web/HTTP/Status/202
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`202 Accepted`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストを受け取ったが、処理が完了していないことを表します。
 実際には、処理はまだ始まっていない可能性もあります。サーバーが処理しようとした際に、タスクやアクションが失敗したり、許可されなかったりする場合があります。

@@ -22,9 +22,7 @@ match(request, options)
 - `request`
   - : {{domxref("Cache")}} 内でレスポンスを見つけようとしている {{domxref("Request")}}。 これは、{{domxref("Request")}} オブジェクトまたは URL です。
 - `options` {{optional_inline}}
-
   - : `match` 操作のオプションを設定するオブジェクト。 使用可能なオプションは次のとおりです。
-
     - `ignoreSearch`
       - : 論理値で、URL のクエリー文字列を無視するかどうかを指定します。 例えば、`true` に設定すると、`http://foo.com/?value=bar` の `?value=bar` の部分は、照合の実行時に無視されます。 既定値は `false` です。
     - `ignoreMethod`
@@ -36,7 +34,8 @@ match(request, options)
 
 リクエストに一致した最初の {{domxref("Response")}} に解決し、一致するものが見つからない場合は {{jsxref("undefined")}} に解決する {{jsxref("Promise")}} です。
 
-> **メモ:** `Cache.match()` は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致したレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に {{domxref("Cache.matchAll()")}} と同じです。
+> [!NOTE]
+> `Cache.match()` は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致したレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に {{domxref("Cache.matchAll()")}} と同じです。
 
 ## 例
 

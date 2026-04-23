@@ -23,10 +23,8 @@ createPattern(image, repetition)
 ### 引数
 
 - `image`
-
   - : パターンの画像として使用する画像。
     以下のいずれかになります。
-
     - {{domxref("HTMLImageElement")}} ({{HTMLElement("img")}})
     - {{domxref("SVGImageElement")}} ({{SVGElement("image")}})
     - {{domxref("HTMLVideoElement")}} （動画のキャプチャに使用する {{HTMLElement("video")}}）
@@ -36,10 +34,8 @@ createPattern(image, repetition)
     - {{domxref("VideoFrame")}}
 
 - `repetition`
-
   - : 文字列で、パターンの画像の反復方法を示します。
     取りうる値は次の通りです。
-
     - `"repeat"`（水平・垂直方向両方）
     - `"repeat-x"`（水平方向のみ）
     - `"repeat-y"`（垂直方向のみ）

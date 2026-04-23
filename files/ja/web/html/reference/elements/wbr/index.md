@@ -10,7 +10,7 @@ l10n:
 
 **`<wbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
 
-{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;wbr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div id="example-paragraphs">
@@ -60,15 +60,15 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -86,7 +86,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121014054923/http://style
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

@@ -3,8 +3,6 @@ title: <select>
 slug: Web/HTML/Reference/Elements/select
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<select>` 元素**表示一个提供选项菜单的控件：
 
 {{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
@@ -144,7 +142,7 @@ select {
 
 ## 应用 CSS 样式
 
-众所周知，`<select>`元素很难用 CSS 进行高效的设计。你可以像其他元素一样改变某些方面——例如，调整 [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)、[显示的字体](/zh-CN/docs/Web/CSS/CSS_fonts) 等，你还可以使用 {{cssxref("appearance")}} 属性来去除默认的系统外观。
+众所周知，`<select>`元素很难用 CSS 进行高效的设计。你可以像其他元素一样改变某些方面——例如，调整 [盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model)、[显示的字体](/zh-CN/docs/Web/CSS/Guides/Fonts) 等，你还可以使用 {{cssxref("appearance")}} 属性来去除默认的系统外观。
 
 但是，这些属性的表现在不同浏览器之间并不一致，而且有些事情难以很好地处理，例如在一列中顺序排列不同类型的表单元素。 `<select>`元素的内部结构复杂，难以控制。如果你想完全控制，你应该考虑使用一个在修改表单部件样式方面拥有强大能力的库，或者尝试使用非语义元素和 JavaScript 来制作下拉菜单，再使用 [WAI-ARIA](/zh-CN/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) 来提供语义。
 

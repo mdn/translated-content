@@ -446,7 +446,7 @@ var myRequest = new XMLHttpRequest();
             title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/ru/docs/WebSockets" title="/ru/docs/WebSockets"
+          <a href="/ru/docs/Web/API/WebSockets_API" title="/ru/docs/WebSockets"
             >Web Sockets</a
           >, or <code>responseText</code> from progress events instead.
         </p>
@@ -491,9 +491,7 @@ XMLHttpRequest (
 ##### Параметры (нестандартные)
 
 - `objParameters`
-
   - : Вы можете использовать два флага:
-
     - `mozAnon`
       - : Boolean: Использование этого флага уберёт из запроса заголовки origin, и [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials). Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.
     - `mozSystem`
@@ -521,7 +519,8 @@ DOMString? getResponseHeader(DOMString header);
 
 Возвращает значение указанного заголовка из полученного ответа, или `null` в случает если ответ не получен, или такого заголовка в ответе нет. Возвращаемая строка имеет кодировку UTF.
 
-> **Примечание:** `Примечание: Если в ответе есть заголовки с одни названием, то значения этих заголовков будут объеденены в одну строку, разделённую запятой и пробелом.`
+> [!NOTE]
+> Если в ответе есть заголовки с одни названием, то значения этих заголовков будут объеденены в одну строку, разделённую запятой и пробелом.
 
 ### open()
 
@@ -547,7 +546,6 @@ void open(
 - `url`
   - : URL адрес, на который будет отправлено сообщение.
 - `async`
-
   - : Необязательный boolean параметр, по умолчанию равный `true`. Определяет, будет ли запрос отправлен асинхронно. Если значение равно `false`, метод `send()` вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых обработчиков событий. В случае, если используется отправка `multipart` запроса, то этот атрибут **должен** быть `true`, или будет выброшено исключение.
 
     > [!NOTE]
@@ -597,7 +595,7 @@ void send(FormData data);
 
 If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
 
-The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [Blobs](/ru/docs/Web/API/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
+The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or [Blobs](/ru/docs/Web/API/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/Web/API/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
 
 ### setRequestHeader()
 
@@ -623,7 +621,8 @@ void setRequestHeader(
 
 Инициализирует объект для использования с C++ кодом.
 
-> **Предупреждение:** **Внимание:** Этот метод **_нельзя_** вызывать из JavaScript.
+> [!WARNING]
+> Этот метод **нельзя** вызывать из JavaScript.
 
 ```
 [noscript] void init(
@@ -728,14 +727,12 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 ## Смотрите также
 
 - MDN articles about XMLHttpRequest:
-
   - [AJAX - Getting Started](/en-US/AJAX/Getting_Started)
   - [Using XMLHttpRequest](/en-US/DOM/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/en-US/HTML_in_XMLHttpRequest)
   - [`FormData`](/en-US/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest references from W3C and browser vendors:
-
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
   - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
@@ -746,6 +743,5 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 - [HTML5 Rocks - New Tricks in XMLHttpRequest2](https://www.html5rocks.com/en/tutorials/file/xhr2/)
 - [Thread on the naming convention of `XMLHttpRequest`](http://programmers.stackexchange.com/questions/157375/why-does-xmlhttprequest-not-seem-to-follow-a-naming-convention)
 - `Chrome scope availability` - how to access from JSM modules etc which do not have access to DOM
-
   - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
   - [nsIXMLHttpRequest \[en-US\]](/ru/docs/nsIXMLHttpRequest)

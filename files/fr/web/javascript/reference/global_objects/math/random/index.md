@@ -24,7 +24,8 @@ console.log(Math.random());
 // Expected output: a number from 0 to <1
 ```
 
-> **Note :** `Math.random()` **ne fournit pas** de nombres aléatoires propres à une cryptographie sécurisée. Les résultats de cette méthode ne doivent pas être utilisées dans des applications liées à la sécurité. À la place, on préfèrera utiliser l'API Web Crypto et plus précisément la méthode {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
+> [!NOTE]
+> `Math.random()` **ne fournit pas** de nombres aléatoires propres à une cryptographie sécurisée. Les résultats de cette méthode ne doivent pas être utilisées dans des applications liées à la sécurité. À la place, on préfèrera utiliser l'API Web Crypto et plus précisément la méthode {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.
 
 ## Syntaxe
 

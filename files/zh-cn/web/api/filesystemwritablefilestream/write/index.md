@@ -20,12 +20,9 @@ write(data)
 ### 参数
 
 - `data`
-
   - : 可以是以下之一：
-
     - 用于写入的文件数据，可以是 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref('Blob')}} 或字符串。
     - 一个包含以下属性的对象：
-
       - `type`
         - : 一个字符串，值为 `"write"`、`"seek"` 或 `"truncate"` 之一。
       - `data`

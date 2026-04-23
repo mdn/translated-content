@@ -2,10 +2,8 @@
 title: API
 slug: Glossary/API
 l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
-
-{{GlossarySidebar}}
 
 **API**（Application Programming Interface）是軟體（應用程序）擁有的功能和規則，允許通過它與其他程序交互（與用戶圖形介面相對）。API 可以被看作是一個提供它的應用程序與其他軟、硬體間的簡單的合約（介面）。
 

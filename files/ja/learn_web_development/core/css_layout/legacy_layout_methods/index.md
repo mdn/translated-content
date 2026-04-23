@@ -2,10 +2,8 @@
 title: 古いレイアウト方法
 slug: Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-
-{{LearnSidebar}}
 
 グリッドシステムは CSS レイアウトで使用される非常に一般的な機能で、CSS グリッドレイアウト以前は浮動ボックスや他のレイアウト機能を使用して実装される傾向がありました。 レイアウトをいくつかの列（例えば 4、6、12）として想像し、そしてコンテンツの列をこれらの想像上の列の中に合わせてみてください。この記事では、古いプロジェクトで作業した場合に、それらがどう使われたかを理解するために、これらの古い方法がどのように機能するのかを説明します。
 
@@ -380,7 +378,7 @@ body {
 
 ### calc() 関数を使ったより簡単な計算
 
-CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を行うことができます — これは CSS の値に簡単な数学の方程式を挿入して、値が何であるべきかを計算することを可能にします。 複雑な計算が必要な場合に特に便利です。 例えば、「この要素の高さは、常に親の高さの 100% から 50px を引いた値です」など、さまざまな単位を使用した計算も計算できます。 [MediaStream 収録 API のチュートリアルからこの例](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#calc_で、機器の高さに関係なく、インターフェイスをビューポートに制限)を参照してください。
+CSS のすぐ内側で {{cssxref("calc()")}} 関数を使って数学を行うことができます — これは CSS の値に簡単な数学の方程式を挿入して、値が何であるべきかを計算することを可能にします。 複雑な計算が必要な場合に特に便利です。 例えば、「この要素の高さは、常に親の高さの 100% から 50px を引いた値です」など、さまざまな単位を使用した計算も計算できます。 [MediaStream 収録 API のチュートリアルからこの例](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#calc_で、機器の高さに関係なく、インターフェイスをビューポートに制限)を参照してください。
 
 とにかく、私たちのグリッドに戻りましょう！ グリッドの複数の列にまたがる列は、合計幅が 6.25% x またがる列の数 + 2.08333333% x 溝の数（常に列の数 - 1）になります。 `calc()` 関数を使用すると、`width` の値の内側でこの計算を実行できます。 そのため、例えば、4 列にまたがる項目であれば、次のようにします。
 
@@ -428,7 +426,8 @@ CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を
 }
 ```
 
-> **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
+> [!NOTE]
+> [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
 ### 意味論的グリッドシステム対「意味論的でない」グリッドシステム
 
@@ -442,7 +441,8 @@ CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を
 }
 ```
 
-> **メモ:** [Sass](https://sass-lang.com/) などのプリプロセッサーを使用する場合は、単純な mixin を作成してその値を挿入することができます。
+> [!NOTE]
+> [Sass](https://sass-lang.com/) などのプリプロセッサーを使用する場合は、単純な mixin を作成してその値を挿入することができます。
 
 ### グリッドでオフセットしたコンテナーを使えるようにする
 
@@ -565,7 +565,8 @@ body {
 
 Skeleton にはグリッドシステム以上のものが含まれています — タイポグラフィや、出発点として使用できるその他のページ要素の CSS も含んでいます。 ただし、これらはデフォルトのままにします — ここで本当に関心があるのはグリッドです。
 
-> **メモ:** [Normalize](https://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリーです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
+> [!NOTE]
+> [Normalize](https://necolas.github.io/normalize.css/) は Nicolas Gallagher によって書かれた本当に便利で小さな CSS ライブラリーです。 これは基本的ないくつかの基本的なレイアウトの修正を自動的に行い、ブラウザー間でデフォルトの要素のスタイル設定をより一貫させます。
 
 前の例と同様の HTML を使用します。 HTML の `body` に次を追加してください。
 

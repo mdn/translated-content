@@ -2,25 +2,20 @@
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 l10n:
-  sourceCommit: 1931ea17c117b5eafa315c638e70429e500bdca9
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Objects")}}
-
-> **警告:** `unescape()` は厳密には (「ウェブ標準から削除された」という意味では) 非推奨になっていませんが、 ECMA-262 標準の [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) において定義されており、導入部で次のように位置付けられています。
->
-> > … この附属書で規定されているすべての言語機能および動作は、1 つ以上の望ましくない特性を有しており、古い使用例がない場合には，この仕様から削除される。 …
-> > … プログラマーは、新しい ECMAScript コードを書く際に、これらの機能や動作の存在を利用したり、仮定したりしてはいけない。 …
-
-**`unescape()`** 関数は 16 進数エスケープシーケンスを、それが表す文字列に置換します。エスケープシーケンスは {{jsxref("escape")}} などの関数によって生成されます。通常は {{jsxref("decodeURI")}} または {{jsxref("decodeURIComponent")}} が `unescape` よりも推奨されます。
+{{Deprecated_Header}}
 
 > [!NOTE]
-> URI のデコードに `unescape` を使用しないでください。代わりに `decodeURI` を使用してください。
+> `unescape()` は、ブラウザーによって実装されている標準外の関数であり、エンジン間の互換性のためにのみ標準化されています。すべての JavaScript エンジンで実装されているとは限らず、すべての環境で動作するとは限りません。可能であれば、{{jsxref("decodeURIComponent()")}} または {{jsxref("decodeURI()")}} を使用してください。
+
+**`unescape()`** 関数は、16 進エスケープシーケンスをそれらが表す文字に置き換えた新しい文字列を計算します。エスケープシーケンスは、 {{jsxref("escape()")}} のような関数によって導入される場合があります。
 
 ## 構文
 
-```js
-unescape(str);
+```js-nolint
+unescape(str)
 ```
 
 ### 引数
@@ -34,7 +29,12 @@ unescape(str);
 
 ## 解説
 
-`unescape` 関数は*グローバルオブジェクト*のプロパティです。
+`unescape` 関数はグローバルオブジェクトのプロパティです。
+
+`unescape()` 関数は、エスケープシーケンスを、それが表す文字に置き換えます。具体的には、`%XX` または `%uXXXX` (ここで `X` は 1 桁の 16 進数) という形のエスケープシーケンスを、16 進値 `XX`/`XXXX` を持つ文字に置き換えます。エスケープシーケンスが有効なエスケープシーケンスでない場合（例えば、`%` の後に 1 桁または 0 桁の 16 進数字が続く場合）、そのまま残されます。
+
+> [!NOTE]
+> この関数は主に{{Glossary("Percent-encoding", "パーセントエンコード")}}に使用され、 {{rfc(1738)}} のエスケープ形式を部分的に基にしています。エスケープ形式は、文字列リテラルにおける[エスケープシーケンス](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#エスケープシーケンス)ではありません。 `\xXX` を `%XX`、`\uXXXX` を `%uXXXX` に置き換えることで、 `unescape()` で処理できる文字列を取得することができます。
 
 ## 例
 

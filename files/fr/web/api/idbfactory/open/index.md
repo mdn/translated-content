@@ -34,7 +34,6 @@ var IDBOpenDBRequest = indexedDB.open(nom, version);
 #### Objet options expérimental de Gecko
 
 - `options` (`version` et `storage`) {{optional_inline}} {{deprecated_inline}}
-
   - : Dans Gecko, à partir de [la version 26](/fr/docs/Mozilla/Firefox/Releases/26), il est possible de passer en paramètre un objet `options` non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre `version` définit ci-avant), et également une valeur `storage` qui décrit si on souhaite utiliser un stockage permanent (avec la valeur `persistent`) ou un stockage temporaire (avec la valeur `temporary`).
 
     > [!WARNING]

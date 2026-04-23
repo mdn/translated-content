@@ -21,9 +21,7 @@ createSyncAccessHandle(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个具有以下属性的对象：
-
     - `mode` {{optional_inline}} {{non-standard_inline}}
       - : 指定访问句柄的锁定模式的字符串。默认值为 `"readwrite"`。可能的值包括：
         - `"read-only"`

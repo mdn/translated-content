@@ -17,10 +17,10 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
         <p>
           Habituellement, non (mais voir aussi
           <a
-            href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
             >Quand avez-vous besoin d'un identifiant complémentaire</a
           ><a
-            href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
             >?</a
           >). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.
         </p>
@@ -54,7 +54,7 @@ Actuellement, elle contient uniquement une clé, `gecko`, qui est structurée ai
 - `id` est l'ID de l'extension. Facultatif à partir de Firefox 48, obligatoire avant Firefox 48. Voir les [WebExtensions et l'ID des extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) pour voir quand vous devez spécifier un identifiant complémentaire.
 - `strict_min_version` : la version minimum de Gecko supportée. Les versions contenant un "\*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".
 - `strict_max_version` : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "\*", qui désactive la vérification d'une version maximale.
-- `update_url` est lien vers un [manifeste de mise à jour personnalisé](/fr/Add-ons/Install_Manifests#updateurl). Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).
+- `update_url` est lien vers un [manifeste de mise à jour personnalisé](/fr/docs/Mozilla/Add-ons/Install_Manifests#updateurl). Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).
 
 Vois la liste des [versions Gecko valides](https://addons.mozilla.org/en-US/firefox/pages/appversions/).
 
@@ -85,9 +85,7 @@ Par exemple :
 Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé `edge`, qui possède les propriétés suivantes :
 
 - `browser_action_next_to_addressbar`
-
   - : Propriété booléenne qui contrôle le placement de l'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).
-
     - `true` est équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `navbar`.
     - `false` is équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `menupanel`.
 

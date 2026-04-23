@@ -48,7 +48,6 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : 当用户在触摸平面上放置了一个触点时触发。事件的目标将是发生触摸的{{domxref("element", "元素", "", 1)}}。
 - {{domxref("Element/touchend_event", "touchend")}}
-
   - : 当一个触点被用户从触摸平面上移除（即用户的一个手指或手写笔离开触摸平面）时触发。当触点移出触摸平面的边界时也将触发。例如用户将手指划出屏幕边缘。
 
     事件的目标与收到对应触点的 `touchstart` 事件的{{domxref("element", "元素", "", 1)}}相同，即使触点已经移出了该元素。
@@ -56,17 +55,15 @@ _此接口继承了父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 的
     已经被从触摸平面上移除的触点，可以在 `changedTouches` 属性定义的 {{domxref("TouchList")}} 中找到。
 
 - {{domxref("Element/touchmove_event", "touchmove")}}
-
   - : 当用户在触摸平面上移动触点时触发。事件的目标与收到对应出点的 `touchstart` 事件的{{domxref("element", "元素", "", 1)}}相同，即使触点已经移出了该元素。
 
     当触点的半径、旋转角度以及压力大小发生变化时，也将触发此事件。
 
-    > **备注：** `touchmove` 事件的触发频率因浏览器而异，其还与用户硬件设备的性能有关。你不能依赖于这些事件的特定粒度。
+    > [!NOTE]
+    > `touchmove` 事件的触发频率因浏览器而异，其还与用户硬件设备的性能有关。你不能依赖于这些事件的特定粒度。
 
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
-
   - : 当触点由于某些原因被中断时触发。发生这种情况的可能原因有几种（具体的原因根据不同的设备和浏览器有所不同）：
-
     - 由于某个事件出现而取消了触摸；如果在交互过程中弹出模态警告框，则可能会发生这种情况。
     - 触点离开了文档窗口，而进入了浏览器的界面元素、插件或者其他外部内容区域。
     - 当用户产生的触点个数超过了设备支持的个数，从而导致 {{domxref("TouchList")}} 中最早的 {{domxref("Touch")}} 对象被取消。

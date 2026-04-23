@@ -1,48 +1,51 @@
 ---
-title: Window.alert()
+title: "Window : méthode alert()"
+short-title: alert()
 slug: Web/API/Window/alert
+l10n:
+  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
 {{APIRef}}
 
-`window.alert()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel, et d'attendre que la personne ferme cette boîte de dialogue.
+La méthode **`alert()`** de l'interface {{DOMxRef("Window")}} indique au navigateur d'afficher une boîte de dialogue avec un message optionnel, et d'attendre que la personne ferme cette boîte de dialogue.
 
-Sous certaines conditions, par exemple au changement d'onglet, le navigateur pourra ne pas afficher la boîte de dialogue ou ne pas attendre que la personne la ferme.
+Dans certaines conditions — par exemple, lorsque l'utilisateur·ice change d'onglet — le navigateur peut ne pas afficher réellement une boîte de dialogue, ou peut ne pas attendre que l'utilisateur·ice ferme la boîte.
 
 ## Syntaxe
 
-```js
-alert();
-alert(message);
+```js-nolint
+alert()
+alert(message)
 ```
 
 ### Paramètres
 
-- `message` {{optional_inline}}
+- `message` {{Optional_Inline}}
   - : Une chaîne de caractères qu'on souhaite afficher dans la boîte de dialogue. Si la valeur fournie est un objet, elle sera convertie en chaîne de caractères puis affichée.
 
 ### Valeur de retour
 
-Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+Aucune ({{JSxRef("undefined")}}).
 
 ## Exemples
 
 ```js
-window.alert("Hello world!");
-alert("Hello world!");
+window.alert("Bonjour le monde !");
+alert("Bonjour le monde !");
 ```
 
 produiront tous les deux ce qui suit&nbsp;:
 
-![](alerthelloworld.png)
+![La boîte de dialogue d'alerte noire. En haut à gauche, une petite icône en forme de cercle suivie de crochets blancs contenant ce texte blanc : Application JavaScript. En dessous, à gauche, le texte blanc Bonjour le monde ! Et en bas à droite, un petit bouton bleu. Le texte du bouton est : ok en noir.](alerthelloworld.png)
 
 ## Notes
 
-Les boîtes de dialogue créées avec `alert()` ne doivent pas nécessiter de réponse de la part de l'utilisatrice ou de l'utilisateur, en dehors de l'acquittement du message.
+La boîte de dialogue d'alerte doit être utilisée pour les messages qui ne nécessitent aucune réponse de la part de l'utilisateur·ice, autre que la reconnaissance du message.
 
-Ces boîtes de dialogue sont des fenêtres modales qui empêchent d'accéder au reste de l'interface utilisateur du programme, à moins que la boîte de dialogue soit fermée. Aussi, il ne faut pas abuser de cette fonction.
+Les boîtes de dialogue sont des fenêtres qui bloquent l'accès — elles empêchent l'utilisateur·ice d'accéder au reste de l'interface du programme tant que la boîte de dialogue n'est pas fermée. Pour cette raison, il ne faut pas abuser des fonctions qui créent une boîte de dialogue (ou une fenêtre qui bloque l'accès).
 
-Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) afin d'afficher des alertes.
+L'élément HTML {{HTMLElement("dialog")}} peut également être utilisé pour afficher des alertes.
 
 ## Spécifications
 
@@ -54,6 +57,6 @@ Une autre méthode consiste à utiliser l'élément [`<dialog>`](/fr/docs/Web/HT
 
 ## Voir aussi
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
-- [`confirm`](/fr/docs/Web/API/Window/confirm)
-- [`prompt`](/fr/docs/Web/API/Window/prompt)
+- L'élément HTML {{HTMLElement("dialog")}}
+- La méthode {{DOMxRef("window.confirm","confirm()")}}
+- La méthode {{DOMxRef("window.prompt","prompt()")}}

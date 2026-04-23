@@ -3,12 +3,14 @@ title: "IntersectionObserverEntry: isIntersecting プロパティ"
 short-title: isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: fe47429d64ffaacb24f5130523442aeaabf26ac6
 ---
 
 {{APIRef("Intersection Observer API")}}
 
-{{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用の **`isIntersecting`** プロパティは、対象要素が交差オブザーバーのルートと交差している場合に `true` になる論理値です。この値が `true` の場合、 `IntersectionObserverEntry` は交差状態への変わり目にあります。 `false` の場合、交差ありから交差なしへの変わり目であることがわかります。
+**`isIntersecting`** は {{domxref("IntersectionObserverEntry")}} インターフェイスの読み取り専用のプロパティで、対象要素が交差オブザーバーのルートと交差している場合に `true` になる論理値です。
+
+この値が `true` の場合、 `IntersectionObserverEntry` は交差状態への変わり目にあります。 `false` の場合、交差ありから交差なしへの変わり目であることがわかります。
 
 ## 値
 

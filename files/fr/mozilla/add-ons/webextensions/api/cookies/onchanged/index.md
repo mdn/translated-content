@@ -36,13 +36,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
-
     - `changeInfo`
-
       - : Un `objet` contenant les détails de la modification survenue. Ses propriétés sont les suivantes :
-
         - `removed`
           - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon false.
         - `cookie`
@@ -77,8 +73,6 @@ browser.cookies.onChanged.addListener(function (changeInfo) {
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

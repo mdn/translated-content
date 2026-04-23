@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial
 
 {{DefaultAPISidebar("Canvas API")}}
 
-**[`<canvas>`](/fr/docs/Web/HTML/Element/canvas)** est un nouvel élément [HTML](/fr/docs/Web/HTML) qui peut être utilisé pour dessiner des éléments graphiques à l'aide de scripts (habituellement [JavaScript](/fr/docs/Glossary/JavaScript)). Il permet par exemple de dessiner des graphiques, de réaliser des compositions de photographies ou des animations simples (voire [pas si simples](/fr/docs/Un_raycaster_basique_avec_canvas)). Les images à droite montrent quelques exemples d'implémentations utilisant `<canvas>` que nous verrons plus tard dans ce tutoriel.
+**[`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)** est un nouvel élément [HTML](/fr/docs/Web/HTML) qui peut être utilisé pour dessiner des éléments graphiques à l'aide de scripts (habituellement [JavaScript](/fr/docs/Glossary/JavaScript)). Il permet par exemple de dessiner des graphiques, de réaliser des compositions de photographies ou des animations simples (voire [pas si simples](/fr/docs/Un_raycaster_basique_avec_canvas)). Les images à droite montrent quelques exemples d'implémentations utilisant `<canvas>` que nous verrons plus tard dans ce tutoriel.
 
 Ce tutoriel explique comment utiliser l'élément `<canvas>` pour dessiner des graphiques 2D, en commençant par les bases. Les exemples fournis devraient vous donner des idées claires sur ce que vous pouvez faire avec la toile et fournir des extraits de code qui peuvent vous aider à créer votre propre contenu.
 
@@ -36,4 +36,4 @@ L'utilisation de l'élément `<canvas>` n'a rien de très compliqué, mais néce
 - [Page du sujet canvas](/fr/docs/Web/API/Canvas_API)
 - [HTML5CanvasTutorials](https://www.html5canvastutorials.com/) (en)
 
-{{ Next("Tutoriel_canvas/Utilisation_de_base") }}
+{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66de1f47585ccf1539d5c1cd2b051de7bc19f59d
 ---
 
-{{GlossarySidebar}}
-
 **创作工具{{glossary("Accessibility", "无障碍")}}指南**（ATAG）是 {{Glossary("W3C")}} 为构建能够产生无障碍内容的无障碍创作工具的推荐。
 
 创作工具是人们用于创作 Web 内容的软件程序。ATAG 具体阐述了如何：

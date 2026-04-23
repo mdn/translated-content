@@ -140,7 +140,8 @@ btnReset.addEventListener("click", (e) => {
 
 {{EmbedLiveSample('KeyboardEvent_sequence_example')}}
 
-> **참고:** {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} 과 {{domxref("HTMLElement/input_event", "input")}} 이벤트에 사용되는 {{domxref("InputEvent")}} 인터페이스가 완전히 구현되지 않은 브라우저에서는 잘못된 출력 결과를 얻을 수도 있습니다.
+> [!NOTE]
+> {{domxref("HTMLElement/beforeinput_event", "beforeinput")}} 과 {{domxref("HTMLElement/input_event", "input")}} 이벤트에 사용되는 {{domxref("InputEvent")}} 인터페이스가 완전히 구현되지 않은 브라우저에서는 잘못된 출력 결과를 얻을 수도 있습니다.
 
 ### Case 1
 

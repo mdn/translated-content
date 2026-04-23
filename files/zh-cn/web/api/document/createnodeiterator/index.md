@@ -22,7 +22,6 @@ createNodeIterator(root, whatToShow, filter)
 - `root`
   - : {{domxref("NodeIterator")}} 遍历起始处的根节点。
 - `whatToShow` {{optional_inline}}
-
   - : 是一个可选的无符号长整型（`unsigned long`），是由节点过滤器（[`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter)）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 `0xFFFFFFFF`，代表 `SHOW_ALL` 常量。
 
     | 常量                                                     | 数字值                                    | 描述                                                                                                                                                                                                                                                        |

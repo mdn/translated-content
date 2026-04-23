@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a6313e45a6ae4c356325f06d0e7e8919bab251a8
 ---
 
-{{AddonSidebar}}
-
 获取具有指定属性的所有标签页，如果未指定任何属性，则获取所有标签页。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -20,11 +18,9 @@ let querying = browser.tabs.query(queryInfo)
 ### 参数
 
 - `queryInfo`
-
   - : `object`。`query()` 函数将仅获取其属性与此处包含的属性相匹配的标签页。
 
     请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档以了解有关这些属性的详细信息。
-
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否在窗口中处于活动状态。
     - `attention` {{optional_inline}}

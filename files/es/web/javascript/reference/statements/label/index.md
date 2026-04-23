@@ -18,7 +18,6 @@ etiqueta :sentencia
 ```
 
 - `etiqueta`
-
   - : Cualquier identificador JavaScript que no sea una palabra reservada.
 
 - `sentencia`

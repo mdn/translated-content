@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Scripting/What_is_JavaScript
 
 ## Определение высокого уровня
 
-JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript. Это третий слой слоёного пирога стандартных web технологий, два из которых ([HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn/CSS)) мы детально раскрыли в других частях учебного пособия.
+JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript. Это третий слой слоёного пирога стандартных web технологий, два из которых ([HTML](/ru/docs/Learn_web_development/Core/Structuring_content) и [CSS](/ru/docs/Learn_web_development/Core/Styling_basics)) мы детально раскрыли в других частях учебного пособия.
 
 ![Три слоя стандартных веб-технологий: HTML, CSS и JavaScript](cake.png)
 
@@ -61,7 +61,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80) }}
+{{ EmbedLiveSample('A_high-level_definition', '100%', 80, , , , , 'allow-modals') }}
 
 Попробуйте кликнуть по тексту чтобы увидеть, что произойдёт (Вы так же можете найти это демо на GitHub — смотрите [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html), или [запустите вживую](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html))!
 

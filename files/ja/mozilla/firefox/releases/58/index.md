@@ -3,8 +3,6 @@ title: Firefox 58 for developers
 slug: Mozilla/Firefox/Releases/58
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 58 は、米国時間 2018 年 1 月 23 日にリリースされました。このページでは、開発者に影響する Firefox 58 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -42,7 +40,6 @@ _変更なし。_
 #### 新規 API
 
 - {{domxref("PerformanceNavigationTiming")}} API を実装しました ([Firefox バグ 1263722](https://bugzil.la/1263722))。
-
   - 必要に応じてこのインターフェイスを無効化できる設定項目 `dom.enable_performance_navigation_timing` (既定値は `true`) を Gecko に追加しました ([Firefox バグ 1403926](https://bugzil.la/1403926))。
 
 #### DOM
@@ -65,7 +62,6 @@ _変更なし。_
 #### Canvas と WebGL
 
 - 接頭辞つき WebGL 拡張のサポートを廃止しました ([Firefox バグ 1403413](https://bugzil.la/1403413)):
-
   - `MOZ_WEBGL_compressed_texture_atc` の代わりに {{domxref("WEBGL_compressed_texture_atc")}} を使用してください。
   - `MOZ_WEBGL_compressed_texture_pvrtc` の代わりに {{domxref("WEBGL_compressed_texture_pvrtc")}} を使用してください。
   - `MOZ_WEBGL_compressed_texture_s3tc` の代わりに {{domxref("WEBGL_compressed_texture_s3tc")}} を使用してください。
@@ -100,7 +96,6 @@ _変更なし。_
 ### CSS
 
 - Mozilla 独自仕様である以下の system metric 擬似クラスが、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
-
   - {{Cssxref(":-moz-system-metric(images-in-menus)")}}
   - {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
   - {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}}
@@ -112,7 +107,6 @@ _変更なし。_
   - {{Cssxref(":-moz-system-metric(windows-default-theme)")}}
 
 - Mozilla 独自仕様である以下の media feature が、ウェブコンテンツで使用できなくなりました ([Firefox バグ 1396066](https://bugzil.la/1396066)):
-
   - `-moz-color-picker-available`
   - `-moz-is-glyph`
   - [`-moz-mac-graphite-theme`](/ja/docs/Web/CSS/@media/-moz-mac-graphite-theme)
@@ -157,21 +151,17 @@ _変更なし。_
 ### WebExtensions
 
 - [browserSettings](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [browserSettings.webNotificationsDisabled](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled) を実装しました ([Firefox バグ 1364942](https://bugzil.la/1364942))
 
 - [browsingData](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [browsingData.localStorage](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage) で、ホストによる localStorage の削除をサポートしました ([Firefox バグ 1388428](https://bugzil.la/1388428))
 
 - セキュリティデバイスを管理するための [pkcs11](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API をサポートしました ([Firefox バグ 1357391](https://bugzil.la/1357391))
 - プライバシー
-
   - firstPartyIsolate で、ファーストパーティー分離の切り替えが可能になりました ([Firefox バグ 1409045](https://bugzil.la/1409045))
   - resistFingerprinting で、フィンガープリンティング対策の設定の切り替えが可能になりました ([Firefox バグ 1397611](https://bugzil.la/1397611))
 
 - タブ
-
   - [tabs.discard](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) を実装しました ([Firefox バグ 1322485](https://bugzil.la/1322485))
   - タブの isArticle、isInReaderMode プロパティを実装しました ([Firefox バグ 1381992](https://bugzil.la/1381992))
   - [toggleReaderMode](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)() メソッドを実装しました ([Firefox バグ 1381992](https://bugzil.la/1381992))
@@ -179,14 +169,12 @@ _変更なし。_
   - tabs.onUpdated が、リーダービューを出入りするときに通知を発するようになりました ([Firefox バグ 1402921](https://bugzil.la/1402921))
 
 - テーマ
-
   - 現在のテーマの属性を取得するための [getCurrent](/ja/docs/Mozilla/Add-ons/WebExtensions/API/theme/getCurrent)() メソッドをサポートしました ([Firefox バグ 1349944](https://bugzil.la/1349944))
   - WebExtension のテーマの更新を受け取る onUpdated メソッドをサポートしました ([Firefox バグ 1349944](https://bugzil.la/1349944))
   - colors.toolbar_text の別名として colors.bookmark_text をサポートしました ([Firefox バグ 1412595](https://bugzil.la/1412595))
   - colors.toolbar_top_separator、colors.toolbar_bottom_separator、colors.toolbar_vertical_separator を実装しました ([Firefox バグ 1347190](https://bugzil.la/1347190))
 
 - webRequest
-
   - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" 引数を持つようになりました
 
 ## 関連情報

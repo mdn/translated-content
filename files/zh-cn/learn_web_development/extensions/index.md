@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
 
-{{LearnSidebar}}
-
 我们的**扩展模块**包含了 web 开发人员开始扩展知识和发展专业时需要学习的有用的额外技能。
 
 ## 前提
@@ -33,7 +31,7 @@ l10n:
   - : 创建网站需要 HTML、CSS 和 JavaScript。要创建人们愿意使用的网站和应用程序，吸引并留住用户，就需要创建良好的用户体验。良好用户体验的一部分就是确保内容能够快速加载并响应用户交互。这就是所谓的 **web 性能**，在本模块中，你将重点学习如何创建性能良好的网站的基础知识。
 - [测试](/zh-CN/docs/Learn_web_development/Extensions/Testing)
   - : 任何超过一定复杂程度的代码库都需要有一套与之相关的测试系统，以确保在添加新代码后，代码库仍能正确运行，性能良好，并继续满足用户的需求。本模块列出了应从哪些基础知识入手。
-- [CSS 变换与动画化](/zh-CN/docs/Learn_web_development/Extensions/Transform_animate)
+- [CSS 变换与动画化](/zh-CN/docs/Learn_web_development/Extensions)
   - : 动画是良好用户体验的重要组成部分。巧妙地使用动画可以使页面设计更有趣、更吸引人，还能提高可用性和感知性能。
-- [安全与隐私](/zh-CN/docs/Learn_web_development/Extensions/Security_privacy)
+- [安全与隐私](/zh-CN/docs/Web/Security)
   - : 了解如何保护你的数据和用户数据，使其免遭可能的攻击者窃取，这一点至关重要。本模块包括加固网站以增加数据窃取难度，以及以尊重用户的方式收集用户数据，避免跟踪用户或与不合适的第三方共享数据。

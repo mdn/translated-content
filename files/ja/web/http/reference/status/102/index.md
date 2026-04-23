@@ -1,12 +1,11 @@
 ---
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
-original_slug: Web/HTTP/Status/102
 l10n:
-  sourceCommit: bd4d7bc4176d9f67297e3940ae7163a258f07ef5
+  sourceCommit: 67a409e7944352612272e095a26bf325ecfae822
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 HTTP の **`102 Processing`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、リクエスト全体が受信され、サーバーがそれを処理中であることをクライアントに示します。
 このステータスコードは、リクエストの処理に長時間かかるとサーバーが判断した場合のみ送信されます。
@@ -17,7 +16,7 @@ HTTP の **`102 Processing`** は[情報レスポンス](/ja/docs/Web/HTTP/Refer
 
 ## ステータス
 
-```plain
+```http
 102 Processing
 ```
 
@@ -27,7 +26,7 @@ HTTP の **`102 Processing`** は[情報レスポンス](/ja/docs/Web/HTTP/Refer
 
 ## ブラウザーの互換性
 
-この機能は非推奨であり、ブラウザーは、このレスポンスヘッダーを無視します。
+この機能は非推奨であり、ブラウザーは、このレスポンスステータスコードを無視します。
 
 ## 関連情報
 

@@ -2,10 +2,8 @@
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: 50fc90b65f77385a8420729039e2a56bca64c3fe
 ---
-
-{{jsSidebar("Functions")}}
 
 **アロー関数式**は、従来の[関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)の簡潔な代替構文ですが、意味的な違いや意図的な使用上の制限もあります。
 
@@ -13,13 +11,13 @@ l10n:
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけて呼び出すと {{jsxref("TypeError")}} が発生します。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードにアクセスすることもできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することができず、ジェネレーター関数として作成することもできません。
 
-{{InteractiveExample("JavaScript Demo: Functions =>")}}
+{{InteractiveExample("JavaScript デモ: アロー関数式")}}
 
 ```js interactive-example
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
 console.log(materials.map((material) => material.length));
-// Expected output: Array [8, 6, 7, 9]
+// 予想される結果: Array [8, 6, 7, 9]
 ```
 
 ## 構文
@@ -46,7 +44,7 @@ console.log(materials.map((material) => material.length));
 }
 ```
 
-引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
+引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
 
 ```js-nolint
 (a, b, ...r) => 式
@@ -91,7 +89,7 @@ a => a + 100;
 
 上の例では、引数を囲む括弧と関数本体を囲む中括弧の両方を省略することができます。ただし、省略できるのは特定の場合のみです。
 
-括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、分割代入、残余引数がある場合は、引数リストを括弧で囲む必要があります。
+括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、構造分解、残余引数がある場合は、引数リストを括弧で囲む必要があります。
 
 ```js
 // 従来の無名関数
@@ -114,7 +112,7 @@ const b = 2;
 () => a + b + 100;
 ```
 
-中括弧を省略できるのは、関数が直接式を返す場合だけです。本体に文がある場合は中括弧が必要となり、 `return` キーワードも必要となります。アロー関数はいつ何を返すかを推測することはできません。
+中括弧を省略できるのは、関数が直接式を返す場合だけです。本体に文がある場合は中括弧が必要となります。この場合、返値を明示的に `return` キーワードで指定する必要があります。アロー関数はいつ何を返すかを推測することはできません。
 
 ```js
 // 従来の関数
@@ -146,16 +144,23 @@ const bob2 = (a) => a + 100;
 
 アロー関数は、式本体 (expression body) か、もしくはより一般的なブロック本体 (block body) のどちらかを使用することができます。
 
-式本体においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック本体においては、明示的に `return` 文を使用する必要があります。
+式本体においては、単一の式しか記述できないので、その式が暗黙的に返値になります。 ブロック本体は従来の関数本体と同様であり、返値は `return` キーワードを用いて明示的に指定しなければなりません。アロー関数は値を返さなければならないわけではありません。ブロック本体の実行が `return` 文に遭遇することなく到達した場合、その関数は他の関数と同様に `undefined` を返します。 return される値となります。しかし、ブロック本体においては、明示的に `return` 文を使用する必要があります。
 
 ```js
-const func = (x) => x * x;
-// 式本体の場合、暗黙の "return" があります
+// 式本体
+const add = (a, b) => a + b; // 暗黙に a + b を返す
 
-const func2 = (x, y) => {
-  return x + y;
+// ブロック本体
+const add2 = (a, b) => {
+  console.log(a, b);
+  return a + b; // 明示的に値を返す必要がある
 };
-// ブロック本体では、明示的な "return" が必要です
+
+// 返値なし
+const add3 = (b) => {
+  a += b;
+  // return 文がないので、undefined を返す
+};
 ```
 
 式本体 `(params) => { object: literal }` を使ってオブジェクトリテラルを返そうとしても、期待通りに動作しないことに注意しましょう。
@@ -263,8 +268,6 @@ function foo(n) {
 
 foo(3); // 3 + 3 = 6
 ```
-
-> **メモ:** `arguments` という変数は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#eval_および_arguments_の単純化)では宣言できないので、上のコードは構文エラーになります。これにより、 `arguments` のスコープ効果がより理解しやすくなります。
 
 多くの場合、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)が `arguments` オブジェクトの代わりに使えます。
 
@@ -378,7 +381,7 @@ promise
     // …
   });
 
-// 見た目に解析が簡単な引数なしのアロー関数
+// 引数なしのアロー関数
 setTimeout(() => {
   console.log("I happen sooner");
   setTimeout(() => {
@@ -401,9 +404,9 @@ const obj = {
 globalThis.num = 42;
 
 // 単純な従来の関数で "this" を運用する
-const add = function (a, b, c) {
+function add(a, b, c) {
   return this.num + a + b + c;
-};
+}
 
 console.log(add.call(obj, 1, 2, 3)); // 106
 console.log(add.apply(obj, [1, 2, 3])); // 106

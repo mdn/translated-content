@@ -19,9 +19,7 @@ new BarcodeDetector(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 包含一系列 `BarcodeFormats` 的选项对象，用于在后续调用 {{domxref('BarcodeDetector.detect()','detect()')}} 中搜索。选项有：
-
     - `formats` {{optional_inline}}
       - : 一个表示条形码格式的字符串 {{jsxref('Array')}}。如果未提供，调用 `detect()` 方法时将搜索所有支持的格式。因此，出于性能原因，建议限制为具体的格式。要查看支持格式的完整列表，请参阅[受支持的条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#支持的条形码格式)。
 

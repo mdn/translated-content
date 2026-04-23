@@ -12,15 +12,15 @@ original_slug: Web/HTML/Element/slot
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorias de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
       </td>
@@ -71,10 +71,9 @@ original_slug: Web/HTML/Element/slot
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
-
   - : El nombre del slot.
 
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.

@@ -3,8 +3,6 @@ title: "<picture>: The Picture element"
 slug: Web/HTML/Reference/Elements/picture
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<picture>` 元素** 包含了零或零以上個 {{HTMLElement("source")}} 元素以及一個 {{HTMLElement("img")}} 元素，以為不同顯示器/裝置提供同張圖片的不同版本。
 
 瀏覽器將會考慮每個 `<source>` 元素，並且在其中選出最適當的選項。如果沒有找到最適當的選項——或是瀏覽器不支援 `<picture>` 元素——則 `<img>` 屬性的 URL 會被選擇。被選擇的圖片將會在 `<img>` 元素存在的位置顯示。

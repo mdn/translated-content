@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **跨站请求伪造**（CSRF）是一种冒充受信任用户，向服务器发送非预期请求的攻击方式。
 
 例如，攻击可以通过在跳转链接后的 {{glossary("URL")}} 中加入恶意参数来完成：

@@ -3,8 +3,6 @@ title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 ---
 
-{{JSRef}}
-
 **`Date.UTC()`** 方法接受的参数同 {{jsxref("Date")}} 构造函数接受最多参数时一样，但该前者会视它们为 UTC 时间，其返回从 1970 年 1 月 1 日 00:00:00 UTC 到指定时间的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.UTC()")}}
@@ -35,7 +33,6 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
 ## 参数
 
 - `year`
-
   - : 一个表示年份的整数值。
 
     从 `0` 到 `99` 的值会被映射到 `1900` 至 `1999` 年。其他的值则代表实际的年份。参见[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#例子：将两位数年份映射为_1900_-_1999_年)。

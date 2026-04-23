@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c9f7361807d9b0fbf0fcf0ccc5cc166bf33d307d
 ---
 
-{{JSRef}}
-
 **`ArrayBuffer`** 对象用来表示通用的原始二进制数据缓冲区。
 
 它是一个字节数组，通常在其他语言中称为“byte array”。你不能直接操作 `ArrayBuffer` 中的内容；而是要通过[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。

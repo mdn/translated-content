@@ -3,8 +3,6 @@ title: Firefox 29 pour les développeurs
 slug: Mozilla/Firefox/Releases/29
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour es développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
 ## Changements pour les développeurs Web
@@ -25,7 +23,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 
 ### CSS
 
-- Des [variables CSS](/fr/docs/Web/CSS/Using_CSS_custom_properties) ont été implémentées ([bug Firefox 773296](https://bugzil.la/773296)). L'article Mozilla Hacks peut être trouvé [ici](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). Ils sont activés par défaut uniquement pour les versions non publiées (sur les versions publiées, retournez le pref `layout.css.variables.enabled` à `true` si vous voulez jouer avec).
+- Des [variables CSS](/fr/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) ont été implémentées ([bug Firefox 773296](https://bugzil.la/773296)). L'article Mozilla Hacks peut être trouvé [ici](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/). Ils sont activés par défaut uniquement pour les versions non publiées (sur les versions publiées, retournez le pref `layout.css.variables.enabled` à `true` si vous voulez jouer avec).
 - Les Flexbox prennent désormais en charge {{cssxref("visibility")}}`: collapse` ([bug Firefox 783470](https://bugzil.la/783470)).
 - La propriété {{cssxref("box-sizing")}} n'a pas de préfixe ([bug Firefox 243412](https://bugzil.la/243412)).
 - La propriété {{cssxref("will-change")}}, un indice indiquant que quelque chose va s'animer a été ajoutée. La préférence `layout.css.will-change.enabled` doit être définie sur `true` pour l'activer. ([bug Firefox 940842](https://bugzil.la/940842))
@@ -45,15 +43,12 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 
 - Nouvelles méthodes de chaîne ECMAScript 6 : {{jsxref("String.prototype.codePointAt()")}} et {{jsxref("String.prototype.fromCodePoint()")}} ont été implémentées ([bug Firefox 918879](https://bugzil.la/918879)).
 - L'[API d'internationalisation ECMAScript (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) a été implémentée et est désormais activée par défaut dans Firefox Desktop ([bug Firefox 853301](https://bugzil.la/853301)):
-
   - Nouveaux objets dans le nouvel espace de noms d'objet {{jsxref("Intl")}} :
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - Les méthodes suivantes de {{jsxref("String")}}, {{jsxref("Number")}} et {{jsxref("Date")}} ont été mises à jour pour inclure les arguments `locales` et `options` selon ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}

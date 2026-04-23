@@ -182,7 +182,6 @@ JavaScript는 본질적으로 [single-threaded](/ko/docs/Glossary/Thread)이므�
 ## 정적 메서드
 
 - {{jsxref("Promise.all", "Promise.all(iterable)")}}
-
   - : 주어진 모든 프로미스가 이행하거나, 한 프로미스가 거부될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
     반환하는 프로미스가 이행한다면, 매개변수로 제공한 프로미스 각각의 이행 값을 모두 모아놓은 배열로 이행합니다. 배열 요소의 순서는 매개변수에 지정한 프로미스의 순서를 유지합니다.
@@ -190,7 +189,6 @@ JavaScript는 본질적으로 [single-threaded](/ko/docs/Glossary/Thread)이므�
     반환하는 프로미스가 거부된다면, 매개변수의 프로미스 중 거부된 첫 프로미스의 사유를 그대로 사용합니다.
 
 - {{JSxRef("Promise.allSettled", "Promise.allSettled(iterable)")}}
-
   - : 주어진 모든 프로미스가 처리(이행 또는 거부)될 때까지 대기하는 새로운 프로미스를 반환합니다.
 
     `Promise.allSettled()`가 반환하는 프로미스는 매개변수로 제공한 모든 프로미스 각각의 상태와 값(또는 거부 사유)을 모아놓은 배열로 이행합니다.
@@ -198,7 +196,6 @@ JavaScript는 본질적으로 [single-threaded](/ko/docs/Glossary/Thread)이므�
 - {{JSxRef("Promise.any", "Promise.any(iterable)")}}
   - : 주어진 모든 프로미스 중 하나라도 이행하는 순간, 즉시 그 프로미스의 값으로 이행하는 새로운 프로미스를 반환합니다.
 - {{jsxref("Promise.race", "Promise.race(iterable)")}}
-
   - : 주어진 모든 프로미스 중 하나라도 처리될 때까지 대기하는 프로미스를 반환합니다.
 
     반환하는 프로미스가 이행한다면, 매개변수의 프로미스 중 첫 번째로 이행한 프로미스의 값으로 이행합니다.
@@ -208,7 +205,6 @@ JavaScript는 본질적으로 [single-threaded](/ko/docs/Glossary/Thread)이므�
 - {{JSxRef("Promise.reject", "Promise.reject(reason)")}}
   - : 주어진 사유로 거부하는 `Promise` 객체를 반환합니다.
 - {{jsxref("Promise.resolve()")}}
-
   - : 주어진 값으로 이행하는 `Promise` 객체를 반환합니다. 이때 지정한 값이 `then` 가능한(`then` 메서드를 가지는) 값인 경우, `Promise.resolve()`가 반환하는 프로미스는 `then` 메서드를 "따라가서" 자신의 최종 상태를 결정합니다. 그 외의 경우, 반환된 프로미스는 주어진 값으로 이행합니다.
 
     어떤 값이 프로미스인지 아닌지 알 수 없는 경우, 보통 일일이 두 경우를 나눠서 처리하는 대신 `Promise.resolve()`로 값을 감싸서 항상 프로미스가 되도록 만든 후 작업하는 것이 좋습니다.

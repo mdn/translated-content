@@ -3,8 +3,6 @@ title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
 
-{{JSRef}}
-
 **`Number.isInteger()`** 静态方法判断传入值是否为整数。
 
 {{InteractiveExample("JavaScript Demo: Number.isInteger()")}}

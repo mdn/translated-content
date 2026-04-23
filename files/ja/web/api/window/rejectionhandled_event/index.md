@@ -1,60 +1,69 @@
 ---
 title: "Window: rejectionhandled イベント"
+short-title: rejectionhandled
 slug: Web/API/Window/rejectionhandled_event
+l10n:
+  sourceCommit: 2ccbd062264d0a2a34f185a3386cb272f42c50f5
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`rejectionhandled`** イベントは、 JavaScript の {{jsxref("Promise")}} が拒否されたものの、その後で Promise の拒否が処理された場合にスクリプトのグローバルスコープ (ふつうは {{domxref("window")}} だが {{domxref("Worker")}} の場合もある) に送られます。これは、 Promise が拒否されたが拒否の手助けがないときに送信される {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントと並行して、デバッグや一般的なアプリケーションの回復に使用できます。
+**`rejectionhandled`** イベントは、拒否された JavaScript の {{jsxref("Promise")}} が遅れて処理されるたびに、スクリプトのグローバルスコープ（通常は {{domxref("window")}} ですが、{{domxref("Worker")}} でも同様です）に送信されます。これは、その拒否によって {{domxref("Window.unhandledrejection_event", "unhandledrejection")}} イベントが発生した後に、そのプロミスにハンドラーが添付された場合です。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+これは、デバッグや一般的なアプリケーションの回復力向上のために使用することができます。これは、プロミスが拒否されたが、その時点で拒否に対するハンドラーが存在しない場合に送信される `unhandledrejection` イベントと組み合わせて使用します。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js-nolint
+addEventListener("rejectionhandled", (event) => { })
+
+onrejectionhandled = (event) => { }
+```
+
+## イベント型
+
+{{domxref("PromiseRejectionEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("PromiseRejectionEvent")}}
+
+## イベントプロパティ
+
+- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
+  - : JavaScript の {{jsxref("Promise")}} で、拒否されたもの。
+- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
+  - : 値または {{jsxref("Object")}} で、プロミスが拒否された理由を示します。これは、{{jsxref("Promise.reject()")}} に渡されたものです。
+
+## イベントハンドラーの別名
+
+`Window` インターフェイスに加えて、イベントハンドラープロパティ `onrejectionhandled` は以下のターゲットでも利用可能です。
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## 例
 
-`rejectionhandled` イベントを使用して、拒否された Promise を、拒否された理由を添えてコンソールに出力することができます。
+`rejectionhandled` イベントを使用して、拒否されたプロミスを、拒否された理由を添えてコンソールに出力することができます。
 
 ```js
-window.addEventListener(
-  "rejectionhandled",
-  (event) => {
-    console.log("Promise rejected; reason: " + event.reason);
-  },
-  false,
-);
+window.addEventListener("rejectionhandled", (event) => {
+  console.log(`プロミスが拒否されました。理由: ${event.reason}`);
+});
 ```
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#%E3%83%97%E3%83%AD%E3%83%9F%E3%82%B9%E3%81%AE%E6%8B%92%E5%90%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88)
+- [プロミスの拒否イベント](/ja/docs/Web/JavaScript/Guide/Using_promises#プロミスの拒否イベント)
 - {{domxref("PromiseRejectionEvent")}}
 - {{jsxref("Promise")}}
 - {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}

@@ -3,8 +3,6 @@ title: Introdução ao desenvolvimento de jogos para a Web
 slug: Games/Introduction
 ---
 
-{{GamesSidebar}}
-
 A web moderna rapidamente tem se tornado uma plataforma não só para criar jogos esplêndidos de alta qualidade, mas também para a distribuição desses mesmos jogos.
 
 A gama de jogos que podem ser criados é compatível com as partes equivalentes de Desktop e contrapartes nativas de SO. Com modernas tecnologias da Web e um navegador recente, é perfeitamente possível fazer jogos impressionantes e de primeira qualidade para a Web. E não estamos falando de jogos de cartas simples ou de jogos sociais multijogadores que, nos tempos antigos, foram feitos usando Flash®. Estamos falando de FPS de ação 3D, RPGs e mais. Graças às melhorias de desempenho macias em tecnologia de compilação just-in-time de JavaScript e novas APIs, você pode construir jogos que são executados no navegador (ou em dispositivos com HTML5 como aqueles baseados no sistema operacional Firefox) sem compromissos.
@@ -45,7 +43,7 @@ Para as pessoas de tecnologia, vamos cavar as APIs que a Web traz à mesa que at
   - : Se você quiser que seus usuários possam usar gamepads ou outros controladores de jogos para trabalhar seu jogo, você precisará desta API.
 - [HTML](/pt-BR/docs/Web/HTML) e [CSS](/pt-BR/docs/Web/CSS)
   - : Juntas, essas duas tecnologias permitem que você possa criar, estilizar e definir a interface do usuário do seu jogo. Parte do HTML é o {{HTMLElement("canvas")}} elemento, que fornece uma maneira de fazer gráficos 2D.
-- [HTML audio](/pt-BR/docs/Web/HTML/Element/audio)
+- [HTML audio](/pt-BR/docs/Web/HTML/Reference/Elements/audio)
   - : O {{HTMLElement("audio")}} elemento permite reproduzir facilmente efeitos sonoros e música. Se suas necessidades estão mais envolvidas, confira a [API Web Áudio](/pt-BR/docs/Web/API/Web_Audio_API) para obter poder real de processamento de áudio!
 - [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API)
   - : Uma poderosa API de armazenamento de dados para manter os dados do usuário em seu próprio computador ou dispositivo. Uma ótima maneira de salvar o estado do jogo e outras informações localmente, portanto não precisa ser baixado sempre que for necessário. Também é útil para ajudar a tornar o seu jogo jogável mesmo quando o usuário não está conectado à Web (como quando estão presos em um avião por horas a fio).
@@ -54,7 +52,6 @@ Para as pessoas de tecnologia, vamos cavar as APIs que a Web traz à mesa que at
 - [Pointer Lock API](/pt-BR/docs/Web/API/Pointer_Lock_API)
   - : O Pointer Lock API permite bloquear o mouse ou outro dispositivo apontador na interface do seu jogo, de modo que, em vez do posicionamento absoluto do cursor, você receba deltas de coordenadas que lhe dê medidas mais precisas sobre o que o usuário está fazendo e evite que o usuário envie acidentalmente sua entrada para outro lugar. Falta de uma ação importante.
 - [SVG](/pt-BR/docs/Web/SVG) (Scalable Vector Graphics)
-
   - : Permite criar gráficos vetoriais que se dimensionem sem problemas, independentemente do tamanho ou resolução da exibição do usuário.
 
 - [Typed Arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)

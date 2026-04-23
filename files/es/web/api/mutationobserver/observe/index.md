@@ -31,9 +31,7 @@ mutationObserver.observe(target[, options])
 ### Excepciones
 
 - `TypeError`
-
   - : llamado en cualquiera de las siguientes circunstancias
-
     - Las opciones han sido configuradas de tal modo que no existe nada que monitorizar (por ejemplo, si {{domxref("MutationObserverInit.childList")}}, {{domxref("MutationObserverInit.attributes")}}, y {{domxref("MutationObserverInit.characterData")}} son **false**)
     - La opcion `attributes` es `false` (indicando que los cambios en los atributos no son monitorizados) y `attributeOldValue` es `true` y/o `attributeFilter` está presente.
     - Las opciones {{domxref("MutaitonObserverInit.characterDataOldValue", "characterDataOldValue")}} son `true` pero {{domxref("MutationObserverInit.characterData")}} es `false` (indicando que los cambios en los caracteres no se guardan).

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c7ee557d776d91998eeec005b6c794f03d6079ad
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 值的 **`concat()`** 方法将字符串参数连接到调用的字符串上，并返回一个新的字符串。
 
 {{InteractiveExample("JavaScript Demo: String.concat()")}}

@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.push()
+short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 l10n:
   sourceCommit: 2d337c37fb3ae7d7a32b5c372366bc7f97ff2602
@@ -10,7 +11,7 @@ l10n:
 {{jsxref("Array")}} 인스턴스의 **`push()`** 메서드는 배열의 끝에
 명시된 요소를 추가하고 배열의 새로운 길이를 반환합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.push()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.push()")}}
 
 ```js interactive-example
 const animals = ["pigs", "goats", "sheep"];

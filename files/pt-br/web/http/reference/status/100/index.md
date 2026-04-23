@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/100
 original_slug: Web/HTTP/Status/100
 ---
 
-{{HTTPSidebar}}
-
 O Status HTTP **`100 Continue`** indica que até o momento tudo está OK e que o cliente pode continuar com a requisição ou ignorar caso já tenha terminado.
 
 Para ter uma verificação pelo servidor o cliente deve enviar o header {{HTTPHeader("Expect")}}: `100-continue` na requisição inicial e receber o status `100 Continue` antes de enviar o body da requisição.

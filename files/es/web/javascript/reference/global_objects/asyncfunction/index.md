@@ -25,7 +25,6 @@ new AsyncFunction(arg0, arg1, ...argN, functionBody);
 ### Parámetros
 
 - `arg1, arg2, ... argN`
-
   - : Nombres a ser usados por la función como los nombres de los argumentos. Cada uno debe ser una cadena que corresponda a un identificador válido en JavaScript (cualquier [identificador](/es/docs/Glossary/Identifier), [parámetro rest](/es/docs/Web/JavaScript/Reference/Functions/rest_parameters), o [parámetro desestructurado](/es/docs/Web/JavaScript/Reference/Operators/Destructuring), opcionalmente con un valor por defecto), o una lista de tales cadenas separadas por comas.
 
     Así mismo, los parámetros se procesan de la misma manera que las declaraciones de funciones, aceptando espacios y comentarios. Por ejemplo: `"x", "theValue = 42", "[a, b] /* numbers */"` — o `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` es también correcto, pero muy confuso para leer).

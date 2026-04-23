@@ -1,8 +1,9 @@
 ---
-title: DataTransferItem.getAsFile()
+title: "DataTransferItem: getAsFile() メソッド"
+short-title: getAsFile()
 slug: Web/API/DataTransferItem/getAsFile
 l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+  sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
@@ -21,37 +22,32 @@ getAsFile()
 
 ### 返値
 
-- {{domxref("File")}}
-  - : ドラッグデータ項目がファイルである場合、 {{domxref("File")}} オブジェクトが返されます。それ以外の場合は `null` が返されます。
+ドラッグデータ項目がファイルである場合、 {{domxref("File")}} オブジェクトが返されます。それ以外の場合は `null` が返されます。
 
 ## 例
 
 この例が、 `getAsFile()` メソッドを {{domxref("HTMLElement/drop_event", "drop")}} イベントハンドラー内で使用するものです。
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  const data = ev.dataTransfer.items;
-  for (let i = 0; i < data.length; i += 1) {
-    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match("^text/plain")) {
       // This item is the target node
-      data[i].getAsString((s) => {
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type.match("^text/html")) {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (
-      data[i].kind === "string" &&
-      data[i].type.match("^text/uri-list")
-    ) {
+    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
       // Drag data item is URI
       console.log("… Drop: URI");
-    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.match("^image/")) {
       // Drag data item is an image file
-      const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      const f = item.getAsFile();
+      console.log("… Drop: File");
     }
   }
 }

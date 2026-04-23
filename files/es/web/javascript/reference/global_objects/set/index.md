@@ -56,7 +56,6 @@ El método [`has`](/es/docs/Web/JavaScript/Reference/Global_Objects/Set/has) de 
 - {{jsxref("Set.prototype.values", " Set.prototype.keys()")}}
   - : Un alias para {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
   - : Devuelve un nuevo objeto iterador que contiene **un arreglo de `[value, value]`** para cada elemento del objeto `Set`, en orden de inserción.
 
     Esto es similar al objeto {{jsxref("Map")}}, de modo que la _clave_ de cada entrada es la misma que su _valor_ para un `Set`.

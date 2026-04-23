@@ -19,9 +19,7 @@ scrollIntoViewIfNeeded(centerIfNeeded)
 ### 参数
 
 - `centerIfNeeded` {{optional_inline}}
-
   - : 一个可选的布尔值，默认为`true`：
-
     - 如果为 `true`，则元素将在其所在滚动区的可视区域中居中对齐。
     - 如果为 `false`，则元素将与其所在滚动区的可视区域最近的边缘对齐。根据可见区域最靠近元素的哪个边缘，元素的顶部将与可见区域的顶部边缘对准，或者元素的底部边缘将与可见区域的底部边缘对准。
 

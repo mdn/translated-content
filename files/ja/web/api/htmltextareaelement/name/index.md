@@ -1,8 +1,9 @@
 ---
 title: "HTMLTextAreaElement: name プロパティ"
+short-title: name
 slug: Web/API/HTMLTextAreaElement/name
 l10n:
-  sourceCommit: d064784c78ec30c87ec3c3d9681b147999fd782f
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ApiRef("HTML DOM")}}

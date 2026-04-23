@@ -7,6 +7,9 @@ l10n:
 
 **`WebAssembly.Module`** 对象包含已经由浏览器编译的无状态 WebAssembly 代码，可以高效地[与 Worker 共享](/zh-CN/docs/Web/API/Worker/postMessage)和多次实例化。
 
+> [!NOTE]
+> `WebAssembly.Module` 对象与 Emscripten 使用的 [`Module`](https://emscripten.org/docs/api_reference/module.html) 没有关系。
+
 ## 构造函数
 
 - [`WebAssembly.Module()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module/Module)

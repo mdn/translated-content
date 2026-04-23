@@ -4,13 +4,12 @@ slug: Web/HTTP/Reference/Status/410
 original_slug: Web/HTTP/Status/410
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta HTTP **`410 Gone`** de erro do cliente indica que o acesso ao recurso não está mais disponível no servidor de origem, e que esta condição tende a ser permanente.
 
 Se você não sabe se a ausência do recurso é temporária ou permanente, o código de status {{HTTPStatus(404)}} deverá ser utilizado.
 
-> **Nota:**Uma resposta 410 response é armazenada em cache por default.
+> [!NOTE]
+> Uma resposta 410 response é armazenada em cache por default.
 
 ## Status
 

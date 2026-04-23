@@ -1,16 +1,13 @@
 ---
 title: <mpath>
 slug: Web/SVG/Reference/Element/mpath
-original_slug: Web/SVG/Element/mpath
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
+**`<mpath>`** は [SVG](/ja/docs/Web/SVG) における {{SVGElement("animateMotion")}} 要素のサブ要素で、モーションパスの定義として外部の {{SVGElement("path")}} 要素を参照する機能を提供します。
 
-**`<mpath>`** は {{SVGElement("animateMotion")}} 要素のサブ要素で、モーションパスの定義として外部の {{SVGElement("path")}} 要素を参照する機能を提供します。
-
-## 使用可能な場所
+## 使用コンテキスト
 
 {{svginfo}}
 

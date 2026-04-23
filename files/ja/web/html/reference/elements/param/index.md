@@ -21,9 +21,7 @@ l10n:
 - `type` {{deprecated_inline}}
   - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
 - `valuetype` {{deprecated_inline}}
-
   - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
-
     - `data`: 既定値。値は文字列としてオブジェクトの実装に渡されます。
     - `ref`: 値は、実行時の値が格納されているリソースへの URI です。
     - `object`: 同一文書内の他の {{HTMLElement("object")}} 要素の ID です。
@@ -34,7 +32,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -54,7 +52,7 @@ l10n:
       <th scope="row">許可されている親要素</th>
       <td>
         {{HTMLElement("object")}} の子として、他の<a
-          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >より前に配置可能。
       </td>

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 웹 성능은 느린 처리 속도를 빠르게 보이게 하는 것을 포함해 웹사이트를 빠르게 만드는 모든 것입니다. 이 기사에서는 왜 웹 성능이 사이트 방문자와 당신의 사업적 목표에 중요한지 소개합니다.
 
@@ -20,7 +20,7 @@ l10n:
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >기본 소프트웨어 설치</a
         >,
-        <a href="/ko/docs/Learn/Getting_started_with_the_web"
+        <a href="/ko/docs/Learn_web_development/Getting_started/Your_first_website"
           >클라이언트 사이드 웹 기술들</a
         >의 기본적인 지식.
       </td>
@@ -67,7 +67,7 @@ l10n:
 
 사람들이 사용하고 싶어 하는 웹사이트와 애플리케이션을 구축하고, 사이트 방문자들을 유치하고 유지하려면 사용자 경험이 좋은 접근성 있는 사이트를 만들어야 합니다. 웹사이트를 구축하려면 일반적으로 이미지나 비디오 같은 이진 파일 유형을 포함하여 HTML, CSS, Javascript 가 필요합니다. 당신이 사이트를 구축할 때 내리는 결정 및 도구 선택은 완성된 결과물의 성능에 큰 영향을 줄 수 있습니다.
 
-좋은 성능은 자산입니다. 나쁜 성능에는 책임이 따릅니다. 사이트 속도는 이탈률, 전환율, 수익, 사용자 만족 및 검색 엔진 순위에 직접적인 영향을 줍니다. 성능이 우수한 사이트는 방문자 유지율과 사용자 만족도를 높이는것으로 나타났습니다. 느린 컨텐츠는 사이트 이탈로 이어지고 일부 사용자들은 다시는 돌아오지 않는 것으로 나타났습니다. 클라이언트와 서버 간의 전송되는 데이터의 양을 줄이면 모든 당사자들의 비용이 줄어듭니다. HTML/CSS/JavaScript 및 미디어 파일들의 사이즈를 줄이는 것은 사이트의 불러오는 시간과 전력 소비가 모두 줄어듭니다. ([성능 예산](/ko/docs/Web/Performance/Performance_budgets)을 확인해 주세요.)
+좋은 성능은 자산입니다. 나쁜 성능에는 책임이 따릅니다. 사이트 속도는 이탈률, 전환율, 수익, 사용자 만족 및 검색 엔진 순위에 직접적인 영향을 줍니다. 성능이 우수한 사이트는 방문자 유지율과 사용자 만족도를 높이는것으로 나타났습니다. 느린 컨텐츠는 사이트 이탈로 이어지고 일부 사용자들은 다시는 돌아오지 않는 것으로 나타났습니다. 클라이언트와 서버 간의 전송되는 데이터의 양을 줄이면 모든 당사자들의 비용이 줄어듭니다. HTML/CSS/JavaScript 및 미디어 파일들의 사이즈를 줄이는 것은 사이트의 불러오는 시간과 전력 소비가 모두 줄어듭니다. ([성능 예산](/ko/docs/Web/Performance/Guides/Performance_budgets)을 확인해 주세요.)
 
 성능을 추적하는것은 중요합니다. 네트워크 속도 및 디바이스 기능들을 포함하여 다양한 요인이 성능에 영향을 미칩니다. 단일 성능 지표는 없습니다. 그리고 비즈니스 목표가 다르면, 사이트가 지원하는 조직이나 사이트의 목표와 더 관련 있는 지표가 다를 수 있습니다. 사이트의 성능이 어떻게 인식되는지는 사용자 경험입니다!
 
@@ -75,4 +75,4 @@ l10n:
 
 웹 성능은 접근성뿐만 아니라 조직 또는 비즈니스의 목표에 부합하는 다른 웹사이트 지표에도 중요합니다. 웹 사이트 성능의 좋고 나쁨은 유저 경험뿐만 아니라 대부분의 사이트의 전반적인 효율성과도 밀접하게 관련되어 있습니다. 이것이 당신이 웹 성능에 신경 써야 하는 이유입니다.
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{NextMenu("Learn/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}

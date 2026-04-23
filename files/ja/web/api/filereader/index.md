@@ -29,7 +29,6 @@ File オブジェクトは、{{HTMLElement("input")}} 要素を使用してフ�
 - {{domxref("FileReader.error")}} {{ReadOnlyInline}}
   - : ファイルの読み込み中に発生したエラーを表す {{domxref("DOMException")}} です。
 - {{domxref("FileReader.readyState")}} {{ReadOnlyInline}}
-
   - : `FileReader` の状態を示す数値。以下のいずれかになります。
 
     | 名前      | 値  | 説明                                     |

@@ -205,7 +205,8 @@ volumeControl.addEventListener(
 
 如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。
 
-> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
+> [!NOTE]
+> `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
 
 为了使其可视化，我们将使我们的音频图如下：
 

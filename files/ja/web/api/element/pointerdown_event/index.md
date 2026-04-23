@@ -10,7 +10,8 @@ l10n:
 
 `pointerdown` イベントは、ポインターがアクティブになったときに発生します。マウスでは、その機器のボタンが押されていない状態から 1 つ以上のボタンが押されている状態に遷移したときに発生します。タッチ操作では、デジタイザーに物理的な接触が行われたときに発生します。ペンでは、スタイラスがデジタイザーに物理的に接触したときに発生します。
 
-> **メモ:** [直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)ができるタッチ画面のブラウザーでは、 `pointerdown` イベントで[暗黙的なポインターキャプチャ](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)が発生するため、ターゲットが以降のすべてのポインターイベントをキャプチャし、キャプチャターゲット上で発生したかのように扱います。そのため、 `pointerover`, `pointerenter`, `pointerleave`, `pointerout` はこのキャプチャーが発生している間は**発生しません**。このキャプチャはターゲット要素上で {{domxref('element.releasePointerCapture')}} を呼び出すことで手動で解除することができ、 `pointerup` または `pointercancel` イベントの後で暗黙的に解除されます。
+> [!NOTE]
+> [直接操作](https://w3c.github.io/pointerevents/#dfn-direct-manipulation)ができるタッチ画面のブラウザーでは、 `pointerdown` イベントで[暗黙的なポインターキャプチャ](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture)が発生するため、ターゲットが以降のすべてのポインターイベントをキャプチャし、キャプチャターゲット上で発生したかのように扱います。そのため、 `pointerover`, `pointerenter`, `pointerleave`, `pointerout` はこのキャプチャーが発生している間は**発生しません**。このキャプチャはターゲット要素上で {{domxref('element.releasePointerCapture')}} を呼び出すことで手動で解除することができ、 `pointerup` または `pointercancel` イベントの後で暗黙的に解除されます。
 
 ## 構文
 
@@ -90,7 +91,6 @@ para.onpointerdown = (event) => {
 ## 関連情報
 
 - 関連イベント
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

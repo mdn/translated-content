@@ -3,8 +3,6 @@ title: handler.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
 
-{{JSRef}}
-
 **`handler.defineProperty()`** 用于拦截对象的 {{jsxref("Object.defineProperty()")}} 操作。
 
 ## 语法

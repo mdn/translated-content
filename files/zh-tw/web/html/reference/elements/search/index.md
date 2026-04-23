@@ -3,8 +3,6 @@ title: <search>：通用搜尋元素
 slug: Web/HTML/Reference/Elements/search
 ---
 
-{{HTMLSidebar}}
-
 **`<search>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個容器，代表文件或應用程式中具有與執行搜尋或過濾操作相關的表單控制項或其他內容的部分。`<search>` 元素在語義上標識元素內容的目的，即具有搜尋或過濾功能。搜尋或過濾功能可以用於網站或應用程式、當前網頁或文件，或整個互聯網或其子部分。
 
 ## 屬性

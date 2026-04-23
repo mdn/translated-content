@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 {{AddonSidebar}}
 
-Une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) est une icône cliquable dans la barre d'adresse du navigateur.
+Une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) est une icône cliquable dans la barre d'adresse du navigateur.
 
 ![](page-action.png)
 
-Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups) qui s'ouvre lorsque l'icone est cliquée.
+Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) qui s'ouvre lorsque l'icone est cliquée.
 
 Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.
 
@@ -57,8 +57,6 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

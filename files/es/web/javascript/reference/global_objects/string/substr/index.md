@@ -23,7 +23,6 @@ cadena.substr(inicio[, longitud])
 ### Parámetros
 
 - `inicio`
-
   - : Localización en la cual se empiezan a extraer caracteres. Si se da un número negativo, se trata como `longCad + inicio` donde `longCad` es la longitud de la cadena (por ejemplo, si `inicio` es -3 se trata como `longCad - 3`).
 
 - `longitud`

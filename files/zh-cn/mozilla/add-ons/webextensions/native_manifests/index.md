@@ -3,8 +3,6 @@ title: 原生应用清单
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 ---
 
-{{AddonSidebar}}
-
 原生应用清单是一个符合特定规则的 JSON 文件，它应该使用与扩展不同的安装方式存放在用户的计算机上。举个例子，原生应用清单是由设备管理员或者通过原生应用安装器提供的。
 
 有三种不同的原生应用清单：

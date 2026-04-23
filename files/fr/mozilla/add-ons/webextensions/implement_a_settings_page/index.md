@@ -47,7 +47,7 @@ document.body.style.border = "10px solid blue";
 
 Ça ajoute une bordure bleue à la page.
 
-Maintenant, [installez la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et testez la — ouvrez la page que vous voulez :
+Maintenant, [installez la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et testez la — ouvrez la page que vous voulez :
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -184,7 +184,7 @@ settings/
 
 Maintenant :
 
-- [Rechargez la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
+- [Rechargez la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
 - Chargez un page web
 - Ouvrez la page de paramètres et changez la couleur de la bordure
 - Rechargez la page pour voir la différence
@@ -199,5 +199,4 @@ Dans Firefox vous pouvez accéder à la page des paramètres en visitant about:a
 - [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) documentation de référence sur l'API
 - Ouvrez la page de paramètres directement depuis votre extension en utilisant l'API [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
 - Exemple de page de paramètres :
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

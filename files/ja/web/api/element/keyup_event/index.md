@@ -12,7 +12,7 @@ l10n:
 
 [`keydown`](/ja/docs/Web/API/Element/keydown_event) と `keyup` イベントは、どのキーが押されたかを示すコードを提供し、 `keypress` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypress` では 97 と報告されます。大文字の "A" は、どのイベントでも 65 と報告されます。
 
-キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を {{domxref("Document")}} に達するまでバブリングします。
+キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/Web/API/Document_Object_Model#dom_ツリーとは)を {{domxref("Document")}} に達するまでバブリングします。
 
 イベントのターゲットは、異なるキーイベント間で変更されることがあります。例えば、 <kbd>Tab</kbd> キーを押したときの `keydown` のターゲットは、 `keyup` のターゲットとは異なるものになるでしょう。フォーカスが変更されるからです。
 
@@ -37,18 +37,15 @@ onkeyup = (event) => {};
 _このインターフェイスには親である {{domxref("UIEvent")}} や {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
     > [!WARNING]
     > これはユーザーのキーボードレイアウトを無視します。つまり、ユーザーが QWERTY キーボードレイアウトの "Y" の位置（ホーム行の上の行の中央付近）でキーを押した場合、ユーザーが QWERTZ キーボード（これはユーザーが "Z" を期待し、他のすべてのプロパティが "Z" を示すことになる）または Dvorak キーボードレイアウト（これはユーザーが "F" を期待する）であっても、常に "KeyY" を返します。ユーザーに正しいキーストロークを表示したい場合は、 {{domxref("Keyboard.getLayoutMap()")}} を使用してください。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -58,13 +55,11 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、[キーボード上の位置](/ja/docs/Web/API/KeyboardEvent#キーボード上の位置)にあります。
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
 
 ## 例
@@ -104,7 +99,8 @@ eventTarget.addEventListener("keyup", (event) => {
 });
 ```
 
-> **メモ:** `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
+> [!NOTE]
+> `keydown` とは異なり、 `keyup` イベントには IME イベントのための即別な {{domxref("KeyboardEvent/keyCode", "keyCode")}} 値がありません。しかし、 `keydown` と同様に、 IME を開くための最初の文字を入力したときに、 `compositionstart` が `keyup` の後に発行されたり、 `compositionend` が `keyup` の前に発行されたりすることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。
 
 ## 仕様書
 

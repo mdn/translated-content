@@ -3,8 +3,6 @@ title: Apple Safari
 slug: Glossary/Apple_Safari
 ---
 
-{{GlossarySidebar}}
-
 [Safari](https://www.apple.com/safari/) 是由蘋果開發的{{Glossary("Browser","網頁瀏覽器")}}，與 macOS、iPadOS 和 iOS 捆綁發行。它基於開源的 [WebKit](https://www.webkit.org/) 引擎。
 
 ## 參見

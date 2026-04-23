@@ -3,8 +3,6 @@ title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
 
-{{JSRef}}
-
 **`handler.ownKeys()`** 方法用于拦截 {{jsxref("Reflect.ownKeys()")}}.
 
 {{InteractiveExample("JavaScript Demo: handler.ownKeys()", "taller")}}

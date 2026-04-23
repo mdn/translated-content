@@ -50,7 +50,7 @@ Headers のすべてのメソッドは、[有効な HTTP ヘッダー名](https:
 - {{domxref("Headers.forEach()")}}
   - : 指定された関数を、この `Headers` オブジェクトのキー/値のペアそれぞれに対して一度ずつ実行します。
 - {{domxref("Headers.get()")}}
-  - : `Headers` オブジェクトにある指定された名前を持つ、ヘッダーのすべての値を示す文字列の配列を返します。
+  - : `Headers` オブジェクト内の指定された名前のヘッダーのすべての値を繋げた文字列を返します。
 - {{domxref("Headers.getSetCookie()")}}
   - : レスポンスに関連付けられたすべての {{httpheader("Set-Cookie")}} ヘッダーの値の入った配列を返します。
 - {{domxref("Headers.has()")}}
@@ -62,7 +62,8 @@ Headers のすべてのメソッドは、[有効な HTTP ヘッダー名](https:
 - {{domxref("Headers.values()")}}
   - : このオブジェクトに含まれるキー/値のペアのすべての値を通して処理するための{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 
-> **メモ:** {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダーが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
+> [!NOTE]
+> {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダーが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
 
 > [!NOTE]
 > ヘッダーを反復処理する時は、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
@@ -99,7 +100,7 @@ myHeaders.get("Content-Type"); // 'text/xml' が返される
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)

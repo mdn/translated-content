@@ -32,7 +32,6 @@ Um `AudioContext`pode ser um alvo de eventos, portanto, ele implementa a interfa
 ### Manipuladores de eventos
 
 - {{domxref("AudioContext.onstatechange")}}
-
   - : Um manipulador de evento que é executado quando um evento do tipo [`statechange`](/pt-BR/docs/Web/API/RTCIceTransport/statechange_event) dispara.
 
     Isso ocorre quando o estado `AudioContext` muda, devido ao chamado de um dos métodos de mudança de estado ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, or {{domxref("AudioContext.close")}}).

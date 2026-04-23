@@ -106,7 +106,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-Dans ce script, nous créons un [élément de menu contextuel](/fr/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create), lui donnant un identifiant et un titre précis (le texte à afficher dans le menu contextuel). Ensuite, nous mettons en place une écoute d'événements afin que l'utilisateur clique sur un élément de menu contextuel, nous vérifions si c'est notre élément de la page. Si c'est le cas, nous injectons "page-eater.js" dans l'onglet actuel à l'aide de l'API [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Cette API prend facultativement un ID de tabulation en tant qu'argument: nous avons omis l'ID de l'onglet, ce qui signifie que le script est injecté dans l'onglet actuellement actif.
+Dans ce script, nous créons un [élément de menu contextuel](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/create), lui donnant un identifiant et un titre précis (le texte à afficher dans le menu contextuel). Ensuite, nous mettons en place une écoute d'événements afin que l'utilisateur clique sur un élément de menu contextuel, nous vérifions si c'est notre élément de la page. Si c'est le cas, nous injectons "page-eater.js" dans l'onglet actuel à l'aide de l'API [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Cette API prend facultativement un ID de tabulation en tant qu'argument: nous avons omis l'ID de l'onglet, ce qui signifie que le script est injecté dans l'onglet actuellement actif.
 
 A ce stade, l'extension devrait ressembler à ceci :
 
@@ -141,14 +141,14 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
       <th scope="row">Envoyer un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -158,14 +158,14 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
       <th scope="row">Reçevoir un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
@@ -242,13 +242,11 @@ Si nous voulions envoyer des messages du script de contenu à la page d'arrière
 - [`runtime.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Examples using `content_scripts`:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - Examples using `tabs.executeScript()`:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)

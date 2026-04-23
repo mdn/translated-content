@@ -12,7 +12,8 @@ l10n:
 
 이 기능은 사용자의 데스크탑에서 브라우저로 파일을 드래그하기 위해 사용될 수 있습니다.
 
-> **참고:** [`DataTransfer`](/ko/docs/Web/API/DataTransfer) 객체의 `files` 속성은 `drop` 이벤트 내에서만 접근될 수 있습니다. 모든 다른 이벤트의 경우 기본 데이터 저장소가 [보호 모드](https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store)이기 때문에 `files` 속성은 비어 있을 것입니다.
+> [!NOTE]
+> [`DataTransfer`](/ko/docs/Web/API/DataTransfer) 객체의 `files` 속성은 `drop` 이벤트 내에서만 접근될 수 있습니다. 모든 다른 이벤트의 경우 기본 데이터 저장소가 [보호 모드](https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store)이기 때문에 `files` 속성은 비어 있을 것입니다.
 
 ## 값
 

@@ -1,21 +1,22 @@
 ---
 title: Object.prototype.__lookupSetter__()
+short-title: __lookupSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 l10n:
-  sourceCommit: fd326b574aadcd78924a5a223f15e289e45a7f1d
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!NOTE]
 > この機能は非推奨となり、 {{jsxref("Object.getOwnPropertyDescriptor()")}} API に置き換えられました。このメソッドの動作はウェブの互換性だけのために仕様化されたものであり、どのプラットフォームでも実装することを要求されているわけではありません。どこでも動作するとは限りません。
 
-**`__lookupSetter()__`** は {{jsxref("Object")}} インスタンスのメソッドで、指定されたプロパティに結びつけられているセッター関数を返します。
+**`__lookupSetter__()`** は {{jsxref("Object")}} インスタンスのメソッドで、指定されたプロパティに結びつけられているセッター関数を返します。
 
 ## 構文
 
 ```js-nolint
-__lookupSetter__(prop);
+__lookupSetter__(prop)
 ```
 
 ### 引数
@@ -41,14 +42,13 @@ __lookupSetter__(prop);
 
 ```js
 const obj = {
-  get foo() {
-    return Math.random() > 0.5 ? "foo" : "bar";
+  set foo(value) {
+    this.bar = value;
   },
 };
 
-// 標準外かつ非推奨の方法
 obj.__lookupSetter__("foo");
-// (function(value) { this.bar = value; })
+// [Function: set foo]
 ```
 
 ### 標準の方法でセッタープロパティを参照

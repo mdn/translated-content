@@ -3,8 +3,6 @@ title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 
-{{JSRef}}
-
 **catch()** 方法只處理 Promise 的被拒絕狀態，並回傳一個新的 `Promise` 物件。此方法的行為等同於呼叫 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}。
 
 ## 語法
@@ -20,9 +18,7 @@ p.catch(function (reason) {
 ### 參數
 
 - onRejected
-
   - : 一個 {{jsxref("Function")}} ，在 `Promise` 被拒絕時被呼叫。這個函式有一個引數：
-
     - `reason`
       - : 失敗訊息。
 

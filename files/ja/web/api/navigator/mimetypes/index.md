@@ -23,7 +23,7 @@ PDF ファイルがインラインで表示できる場合は、`application/pdf
 
 ## 値
 
-`MimeTypeArray` オブジェクトには、`length` プロパティのほか、`item(index)` および `namedItem(name)` メソッドがあります。
+`MimeTypeArray` オブジェクトには、 `length` プロパティのほか、`item(index)` および `namedItem(name)` メソッドがあります。
 
 PDF のインライン表示に対応している場合、MIME タイプ `application/pdf` と `text/pdf` の項目があります。
 それ以外の場合は、空の `MimeTypeArray` が返されます。
@@ -35,11 +35,11 @@ PDF のインライン表示に対応している場合、MIME タイプ `applic
 
 ```js
 if ("application/pdf" in navigator.mimeTypes) {
-  // browser supports inline viewing of PDF files.
+  // ブラウザーが PDF ファイルのインライン表示に対応しています。
 
   const { description, suffixes } = navigator.mimeTypes["application/pdf"];
   console.log(`Description: ${description}, Suffix: ${suffixes}`);
-  // expected output: Description: Portable Document Format, Suffix: pdf
+  // 予想される結果: Description: Portable Document Format, Suffix: pdf
 }
 ```
 

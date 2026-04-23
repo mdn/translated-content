@@ -3,8 +3,6 @@ title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use 
 slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain

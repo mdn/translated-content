@@ -1,67 +1,67 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{AddonSidebar}}
+{{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类型表示一个被下载的文件。
 
-{{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类代表了一个被下载的文件。
+## 类型
 
-## Type
-
-这个类型的值是对象，包含了以下属性：
+这个类型的值是包含以下属性的对象：
 
 - `byExtensionId`{{optional_inline}}
-  - : 一个代表了触发此下载的扩展的 ID 的 `string` （如果是被扩展触发的话）。一旦设置，不会改变。如果下载不是由扩展触发的，则为 undefined。
+  - : 一个代表了触发此下载的扩展的 ID 的 `string`（如果下载是由扩展触发的）。一旦设置，不会改变。如果下载不是由扩展触发的，则为 undefined。
 - `byExtensionName`{{optional_inline}}
-  - : 一个代表了触发此下载的扩展的名字的 `string` （如果是被扩展触发的话）。如果用户改变了扩展的语言环境，则这个属性的值也可能变化。如果下载不是由扩展触发的，则为 undefined。
+  - : 一个代表了触发此下载的扩展的名字的 `string`（如果下载是由扩展触发的）。如果用户改变了扩展的语言环境，则这个属性的值也可能变化。如果下载不是由扩展触发的，则为 undefined。
 - `bytesReceived`
-  - : 一个代表了在下载过程中从主机接收到的字节数的 `number` ；不考虑文件压缩。
+  - : 一个代表了在下载过程中从主机接收到的字节数的 `number`；此处不考虑文件的压缩。
 - `canResume`
-  - : 一个标识当前中断（例如暂停）的下载是否可以从当前位置恢复的 `boolean`。
+  - : 一个标识当前中断（例如暂停）的下载是否可以从当前位置恢复的 `boolean`，如果可以恢复则为 `true`，否则为 `false`。
+- `cookieStoreId` {{optional_inline}}
+  - : 进行下载操作的[场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `danger`
-  - : 一个标识这个下载是否通过一个不安全的或已知的可疑的站点。可能被设置为 {{WebExtAPIRef('downloads.DangerType')}} 类型。
+  - : 一个 `string`，标识这个下载是否通过一个不安全的或已知的可疑的站点。其可能的值在 {{WebExtAPIRef('downloads.DangerType')}} 类型中定义。
 - `endTime`{{optional_inline}}
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download ended. This is undefined if the download has not yet finished.
+  - : 一个 `string`（采用 [ISO 8601](https://zh.wikipedia.org/wiki/ISO_8601) 格式），表示从 UNIX 纪元到此下载结束时的毫秒数。如果下载尚未完成，则为 undefined。
 - `error`{{optional_inline}}
-  - : A string indicating why a download was interrupted. Possible values are defined in the {{WebExtAPIRef('downloads.InterruptReason')}} type. This is undefined if an error has not occurred.
+  - : 一个 `string`，指示下载中断的原因。可能的值在 {{WebExtAPIRef('downloads.InterruptReason')}} 类型中定义。如果未发生错误，则为 undefined。
 - `estimatedEndTime`{{optional_inline}}
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the estimated number of milliseconds between the UNIX epoch and when this download is estimated to be completed. This is undefined if it is not known (in particular, it is undefined in the `DownloadItem` that's passed into {{WebExtAPIRef("downloads.onCreated")}}).
+  - : 一个 `string`（采用 [ISO 8601](https://zh.wikipedia.org/wiki/ISO_8601) 格式），表示从 UNIX 纪元到预计下载完成时的毫秒数。如果未知（特别是在传递给 {{WebExtAPIRef("downloads.onCreated")}} 的 `DownloadItem` 中），则为 undefined。
 - `exists`
-  - : A `boolean` indicating whether a downloaded file still exists (`true`) or not (`false`). This information might be out-of-date, as browsers do not automatically watch for file removal — to check whether a file exists, call the {{WebExtAPIRef('downloads.search()')}} method, filtering for the file in question.
+  - : 一个 `boolean`，指示下载的文件是否仍然存在（`true`）或不存在（`false`）。此信息可能已过时，因为浏览器不会自动监视文件删除情况——要检查文件是否存在，请调用 {{WebExtAPIRef('downloads.search()')}} 方法，并过滤相关文件。
 - `filename`
-  - : A `string` representing the file's absolute local path.
+  - : 一个 `string`，表示文件的本地绝对路径。
 - `fileSize`
-  - : A `number` indicating the total number of bytes in the whole file, after decompression. A value of -1 here means that the total file size is unknown.
+  - : 一个 `number`，表示整个文件的总字节数（解压后）。如果此处的值为 -1，则表示文件的总大小未知。
 - `id`
-  - : An `integer` representing a unique identifier for the downloaded file that is persistent across browser sessions.
+  - : 一个 `integer`，表示下载文件的唯一标识符，该标识符在浏览器会话之间保持不变。
 - `incognito`
-  - : A `boolean` that indicates whether the download is recorded in the browser's history (`false`), or not (`true`).
+  - : 一个 `boolean`，指示下载是否记录在浏览器的历史记录中（`false`），或未记录（`true`）。
 - `mime`
-  - : A `string` representing the downloaded file's MIME type.
+  - : 一个 `string`，表示下载文件的 MIME 类型。
 - `paused`
-  - : A `boolean` indicating whether the download is paused, i.e. if the download has stopped reading data from the host but has kept the connection open. If so, the value is `true`, `false` if not.
+  - : 一个 `boolean`，指示下载是否已暂停，即下载是否已停止从主机读取数据但保持连接打开。如果是，则值为 `true`，否则为 `false`。
 - `referrer`
-  - : A `string` representing the downloaded file's referrer.
+  - : 一个 `string`，表示下载文件的引用来源。
 - `startTime`
-  - : A `string` (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format) representing the number of milliseconds between the UNIX epoch and when this download began.
+  - : 一个 `string`（采用 [ISO 8601](https://zh.wikipedia.org/wiki/ISO_8601) 格式），表示从 UNIX 纪元到此下载开始时的毫秒数。
 - `state`
-  - : A `string` Indicating whether the download is progressing, interrupted, or complete. Possible values are defined in the {{WebExtAPIRef('downloads.State')}} type.
+  - : 一个 `string`，指示下载是正在进行中、中断还是已完成。可能的值在 {{WebExtAPIRef('downloads.State')}} 类型中定义。
 - `totalBytes`
-  - : A `number` indicating the total number of bytes in the file being downloaded. This does not take file compression into consideration. A value of -1 here means that the total number of bytes is unknown.
+  - : 一个 `number`，表示正在下载的文件的总字节数。此处不考虑文件的压缩。如果此处的值为 -1，则表示文件的总字节数未知。
 - `url`
-  - : A `string` representing the absolute URL from which the file was downloaded.
+  - : 一个 `string`，表示文件下载的绝对 URL。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

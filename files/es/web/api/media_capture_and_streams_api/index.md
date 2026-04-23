@@ -64,9 +64,7 @@ Una _MediaStreamTrack_ puede ser de dos tipos, de audio o video, y representa el
 - `onunmute`: EventHandler
   - : Manjea el evento sin enmudecer cuando se lo activa en el objeto MediaStreamTrack.
 - `readyState`: unsigned short, read-only
-
   - : Valores para la pista lista:
-
     - live - la pista está activa; la salida se puede activar _on_ y _off_ con el atributo habilitado.
     - muted - el origen del medio subyacente de la pista no puede proveer temporalmente datos en tiempo real.
 
@@ -86,9 +84,7 @@ Una _MediaStreamTrack_ puede ser de dos tipos, de audio o video, y representa el
 - `overconstrained`: Event
   - : El origen del objeto MediaStreamTrack no puede ser confugurado para que encaje en las restricciones impuestas por la pista. Esto podría ocurrir con la altura en el caso de un video, entre otras posibilidades.
 - `ended`: Event
-
   - : El origen del objeto MediaStreamTrack no proveerá datos; puede ocurrir por lo siguiente:
-
     - el usuario a deshabilitado los permisos de la aplicación
     - el dispositivo de origen está desconectado
     - el _peer_ remoto no transmite datos
@@ -99,7 +95,6 @@ Una _MediaStreamTrack_ puede ser de dos tipos, de audio o video, y representa el
 Agrega la restricción al final de la lista. Esto sólo es un método para añadir restricciones optativas.
 
 - Parámetros
-
   - : constraintName **DOMString**, required.
 
     constraintValue **Primitive (DOMString, float, etc.)** or **MinMaxConstraint**, required.
@@ -142,7 +137,6 @@ Trae una restricción específica, por nombre, de la pista. Este método puede d
 <!---->
 
 - Parámetros
-
   - : constraintName **DOMString**, required.
 
     mandatory **boolean**, optional, default false.

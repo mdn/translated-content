@@ -18,9 +18,7 @@ var myAudioSource = new MediaStreamAudioSourceNode(context, options);
 - _context_
   - : 一个用来使用 node 的音频环境{{domxref("AudioContext")}}。
 - _options_
-
   - : `MediaStreamAudioSourceOptions`，一个 map 对象，定义`MediaStreamAudioSourceNode`的属性：
-
     - `mediaStream`: 需要使用的音频流
 
 ## 示例

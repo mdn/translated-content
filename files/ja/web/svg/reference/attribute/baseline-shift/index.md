@@ -11,7 +11,7 @@ l10n:
 > プレゼンテーション属性であるため、 `baseline-shift` には対応する CSS プロパティ {{cssxref("baseline-shift")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 > [!NOTE]
-> このプロパティは非推奨になる予定であり、代わりに [`vertical-align`](/ja/docs/Web/CSS/vertical-align) を使用する事が推奨されています。
+> このプロパティは非推奨になる予定であり、代わりに [`vertical-align`](/ja/docs/Web/CSS/Reference/Properties/vertical-align) を使用する事が推奨されています。
 
 この属性は以下の SVG 要素で使用できます。
 
@@ -46,7 +46,6 @@ l10n:
 - `super`
   - : 主要ベースラインは、上付き文字の既定の位置に移動します。
 - `<length-percentage>`
-
   - : 長さの値は、親テキストコンテンツ要素の主要ベースラインを指定した長さ分だけ上下されます（正の値の場合は上昇、負の値の場合は下降）。
 
     パーセント値は、親テキストコンテンツ要素の主要ベースラインを、 {{SVGAttr("line-height")}} の指定したパーセント値分、正の値で上げたり、負の値で下げたりします。

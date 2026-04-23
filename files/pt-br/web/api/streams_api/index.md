@@ -62,7 +62,8 @@ Você também pode gravar dados em streams usando {{domxref("WritableStream")}}.
 
 ### ByteStream-related interfaces
 
-> **Aviso:** **Important**: these are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.
+> [!WARNING]
+> **Important**: these are not implemented anywhere as yet, and questions have been raised as to whether the spec details are in a finished enough state for them to be implemented. This may change over time.
 
 - {{domxref("ReadableStreamBYOBReader")}}
   - : Represents a BYOB ("bring your own buffer") reader that can be used to read stream data supplied by the developer (e.g. a custom {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor).

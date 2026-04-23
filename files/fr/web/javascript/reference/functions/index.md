@@ -190,7 +190,8 @@ L'invocation du constructeur `Function` en tant que fonction (sans utiliser l'op
 
 ### Le constructeur `GeneratorFunction`
 
-> **Note :** `GeneratorFunction` n'est pas un objet global mais pourrait être obtenu à partir de l'instance de la fonction génératrice (voir la page {{jsxref("GeneratorFunction")}} pour plus de détails).
+> [!NOTE]
+> `GeneratorFunction` n'est pas un objet global mais pourrait être obtenu à partir de l'instance de la fonction génératrice (voir la page {{jsxref("GeneratorFunction")}} pour plus de détails).
 
 > [!NOTE]
 > Le constructeur `GeneratorFunction` ne doit pas être utilisé pour créer des fonctions. En effet, il utilise une chaîne pour former le corps de la fonction et cela peut empêcher certaines optimisations du moteur JavaScript ainsi que provoquer d'autres problèmes.
@@ -468,7 +469,6 @@ Comparons les exemples suivants :
 Tous ces exemples effectuent à peu près la même chose, mais différent sur quelques points :
 
 - Il y a une distinction entre le nom de la fonction et la variable à laquelle elle est affectée :
-
   - le nom de la fonction ne peut être changé alors que la variable à laquelle la fonction a été assignée peut être réassignée.
   - le nom de la fonction ne peut-être utilisé qu'à l'intérieur du corps de la fonction. Toute tentative d'utilisation en dehors du corps de la fonction entraînera une erreur (ou `undefined` si le nom de la fonction a été déclaré auparavant avec une instruction `var`). Ainsi :
 

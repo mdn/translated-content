@@ -3,8 +3,6 @@ title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatibilidad para los desarrolladores de complementos. Sin embargo, hay algunos elementos que pueden ser problematicos, así que vamos a echarles un vistazo.
 
 ## ¿Es necesario hacer algo?
@@ -47,7 +45,7 @@ Las preferencia `geo.wifi.*` no tendrán valores por defecto, aunque son respeta
 ## Cambios en el DOM
 
 - El hace tiempo obsoleto `Navigator.taintEnabled()` ha sido removido. No ha sido útil por mucho tiempo, pero era comúnmente utilizado en la deteción de script en navegadores, ya que era algo específico de Netscape. Llamar a este método arrojará una excepción en Firefox 9.
-- Los manejadores de eventos ahora son implementados como un estándar de interfaz IDL. En muchos casos, esto no te afectará, pero [existen excepciones](/es/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Los manejadores de eventos ahora son implementados como un estándar de interfaz IDL. En muchos casos, esto no te afectará, pero [existen excepciones](/es/docs/Web/API/Document_Object_Model/Events#event_handler_changes_in_firefox_9).
 
 ## Otros cambios que puedan afectar a la compatibilidad binaria
 

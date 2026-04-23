@@ -3,8 +3,6 @@ title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
 ---
 
-{{jsSidebar("Objects")}}
-
 全局属性 **`Infinity`** 是一个数值，表示无穷大。
 
 {{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}

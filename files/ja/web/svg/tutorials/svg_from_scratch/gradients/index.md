@@ -1,14 +1,11 @@
 ---
 title: SVG におけるグラデーション
 slug: Web/SVG/Tutorials/SVG_from_scratch/Gradients
-original_slug: Web/SVG/Tutorial/Gradients
 l10n:
-  sourceCommit: 247f3ac885cd660e6b8c29efb69af4259eeed5dc
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}
 
 単なる塗り潰しや線だけではなく、グラデーション (gradients) も塗り潰しや線として作成・適用できるのが魅力です。
 
@@ -36,7 +33,7 @@ l10n:
   </defs>
   <style>
     #rect1 {
-      fill: url(#Gradient1);
+      fill: url("#Gradient1");
     }
     .stop1 {
       stop-color: red;
@@ -70,11 +67,13 @@ l10n:
 <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-グラデーションを使用するには、オブジェクトの `fill` または `stroke` 属性から参照する必要があります。これは、 CSS で要素を参照するのと同様に、 `url` を使って行います。今回の場合は、 url はグラデーションへの参照であり、クリエイティブ ID として "Gradient1" を与えました。これを参照するには、 `fill` を `url(#Gradient1)` に設定してください。これでオブジェクトが多色になりました。 `stroke` でも同じことができます。
+グラデーションを使用するには、オブジェクトの `fill` または `stroke` 属性から参照する必要があります。これは、 CSS で要素を参照するのと同様に、 `url` を使って行います。今回の場合は、 url はグラデーションへの参照であり、クリエイティブ ID として "Gradient1" を与えました。これを参照するには、 `fill` を `url("#Gradient1")` に設定してください。これでオブジェクトが多色になりました。 `stroke` でも同じことができます。
 
 ```svg
 <style>
-  #rect1 { fill: url(#Gradient1); }
+  #rect1 {
+    fill: url("#Gradient1");
+  }
 </style>
 ```
 
@@ -294,6 +293,6 @@ l10n:
 
 `gradientTransform` 属性を用いてグラデーションを変形させることもできますが、まだ[座標変換の紹介](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)を行っていないため、後で説明します。
 
-以上の他に、オブジェクトを包み込むボックスが長方形ではない場合に `gradientUnits="objectBoundingBox"` で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。
+以上の他に、オブジェクトを包み込むボックスが矩形ではない場合に `gradientUnits="objectBoundingBox"` で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。
 
-{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
+{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes", "Web/SVG/Tutorials/SVG_from_scratch/Patterns") }}

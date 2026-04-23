@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
 
-{{HTMLSidebar}}
-
 **`step`** 属性是值必须遵循的粒度数值，或关键字 `any`。此属性对数值输入类型有效，包括 {{HTMLElement("input/date", "date")}}、{{HTMLElement("input/month", "month")}}、{{HTMLElement("input/week", "week")}}、{{HTMLElement("input/time", "time")}}、{{HTMLElement("input/datetime-local", "datetime-local")}}、{{HTMLElement("input/number", "number")}} 和 {{HTMLElement("input/range", "range")}} 类型。
 
 `step` 设置了点击上下旋转按钮、在范围上左右移动滑块以及验证不同日期类型时的*步进间隔*。如果没有明确指定，`number` 和 `range` 的 `step` 默认为 1，日期/时间输入类型的 `step` 默认为 1 个单位类型（分、周、月、日）。值必须是正数（整数或浮点数）或特殊值 `any`，这意味着不隐含步进，允许任何值（除其他限制外，如 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)）。

@@ -1,46 +1,56 @@
 ---
-title: Document.enableStyleSheetsForSet()
+title: "Document : méthode enableStyleSheetsForSet()"
+short-title: enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
+l10n:
+  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
+La méthode **`enableStyleSheetsForSet()`** de l'interface {{DOMxRef("Document")}} active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
 
 ## Syntaxe
 
-```js
-document.enableStyleSheetsForSet(name);
+```js-nolint
+enableStyleSheetsForSet(name)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Le nom des feuilles de styles à activer. Toutes les feuilles de styles dont le titre correspond à ce nom seront activées, tandis que toutes celles possédant un autre titre seront désactivées. Spécifiez une chaîne vide dans le paramètre `name` pour supprimer toutes les feuilles de styles alternatives et préférées (mais pas les feuilles de styles persistantes, c'est-à-dire, celles sans attribut `title` (_titre_)).
+  - : Le nom des feuilles de style à activer. Toutes les feuilles de style dont le titre correspond à ce nom seront activées, tandis que toutes les autres qui ont un titre seront désactivées.
+    Définissez une chaîne de caractères pour le paramètre _name_ afin de désactiver toutes les feuilles de style alternatives et préférées (mais pas les feuilles de style persistantes&nbsp;; c'est-à-dire celles qui n'ont pas d'attribut `title`).
+
+### Valeur de retour
+
+Aucune ({{JSxRef("undefined")}}).
 
 ## Notes
 
 - Les correspondances de titre sont sensibles à la casse.
-- L'appel de cette méthode avec un `name` `null` n'a pas d'effet ; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser "", la chaîne vide.
+- L'appel de cette méthode avec un `name` qui vaut `null` n'a pas d'effet&nbsp;; si vous voulez désactiver toutes les feuilles de styles alternatives et préférées, vous **devez** utiliser `""`, la chaîne de caractères vide.
 - Les feuilles de styles qui n'ont pas de titre ne sont jamais affectées par cette méthode.
-- Cette méthode n'affecte jamais les valeurs de {{ domxref("document.lastStyleSheetSet") }} ou {{ domxref("document.preferredStyleSheetSet") }}.
+- Cette méthode n'affecte jamais les valeurs de {{DOMxRef("document.lastStyleSheetSet")}} ou {{DOMxRef("document.preferredStyleSheetSet")}}.
 
-## Exemple
+## Exemples
 
 ```js
-document.enableStyleSheetsForSet("Some style sheet set name");
+document.enableStyleSheetsForSet("Un nom de jeu de feuilles de style");
 ```
 
 ## Spécifications
 
-- [HTML5 : Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+Ne fait partie d'aucune spécification.
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 
-- {{ domxref("Stylesheet") }}
-- {{ domxref("document.styleSheets") }}
-- {{ domxref("document.lastStyleSheetSet") }}
-- {{ domxref("document.preferredStyleSheetSet") }}
-- {{ domxref("document.selectedStyleSheetSet") }}
-- {{ domxref("document.enableStyleSheetsForSet()") }}
-- [Utiliser des titres corrects avec des feuilles de styles externes](/fr/docs/Archive/Standards_du_Web/Utiliser_des_titres_corrects_avec_des_feuilles_de_styles_externes)
+- L'interface {{DOMxRef("Stylesheet")}}
+- La propriété {{DOMxRef("Document.styleSheets")}}
+- La propriété {{DOMxRef("Document.lastStyleSheetSet")}}
+- La propriété {{DOMxRef("Document.preferredStyleSheetSet")}}
+- La propriété {{DOMxRef("Document.selectedStyleSheetSet")}}

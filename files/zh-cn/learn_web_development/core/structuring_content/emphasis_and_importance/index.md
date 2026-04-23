@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Headings_and_paragraphs", "Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content")}}
 
 上一篇文章探讨了语义在 HTML 中的重要性，重点是标题和段落。本文将继续以语义为主题，探讨对文本进行强调和重要性处理的 HTML 元素（与印刷媒体中的斜体和粗体文字类似）。

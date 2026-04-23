@@ -20,7 +20,8 @@ addCue(cue)
 - `cue`
   - : {{domxref("TextTrackCue")}} です。
 
-> **メモ:** {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `TextTrackCue` を継承したキュー型のいずれかを使用することになります。
+> [!NOTE]
+> {{domxref("TextTrackCue")}} インターフェイスは、 {{domxref("VTTCue")}} などの他のキューインターフェイスの親クラスとして使用される抽象的なクラスです。したがって、キューを追加する場合は `TextTrackCue` を継承したキュー型のいずれかを使用することになります。
 
 ### 返値
 

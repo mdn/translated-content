@@ -36,11 +36,9 @@ Esta página documenta os [Métodos](#métodos) disponíveis no objeto `console`
 - {{domxref("console.profile()", "console.profile( [profileLabel] )")}}
   - : Inicia o [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html). Você pode especificar qualquer label opcional para o perfil.
 - {{domxref("console.profileEnd()")}}
-
   - : Interrompe o profiler. Você pode ver o profile resultante no [JavaScript profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html).
 
 - {{domxref("Console.table()")}}
-
   - : Exibe dados, como objeto e array, como uma tabela.
 
 - {{domxref("console.time()", "console.time(label)")}}

@@ -3,8 +3,6 @@ title: 小于（<）
 slug: Web/JavaScript/Reference/Operators/Less_than
 ---
 
-{{jsSidebar("Operators")}}
-
 **小于**（`<`）运算符在左操作数比右操作数小时返回 `true`，否则返回 `false`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}
@@ -59,7 +57,8 @@ x > y === y < x;
 x >= y === y <= x;
 ```
 
-> **备注：** `<` 和 `>` 之间一个明显区别是强制的顺序，特别是当强制转化为原始值有副作用时。所有的比较操作符都是先强制转化左操作数再强制转化右操作数。
+> [!NOTE]
+> `<` 和 `>` 之间一个明显区别是强制的顺序，特别是当强制转化为原始值有副作用时。所有的比较操作符都是先强制转化左操作数再强制转化右操作数。
 
 ## 示例
 

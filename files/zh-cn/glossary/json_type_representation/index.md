@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eb99a4597802f746275e0d61b31cd2f42b398eab
 ---
 
-{{GlossarySidebar}}
-
 {{glossary("JSON")}} 是一种方便且广泛使用的格式，用于序列化对象、数组、数字、字符串、布尔值和 null。[JSON 不支持 JavaScript 允许的所有数据类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON#javascript_and_json_differences)，意味着使用这些不兼容类型的 JavaScript 对象不能直接被序列化为 JSON。
 
 JSON 的不兼容对象的 *JSON 类型表示*是一个等效的 JavaScript 对象，其属性经过编码，使得这些信息*可以*序列化为 JSON。对于兼容的数据类型，这通常具有与原始对象相同的属性，而不兼容的属性则被转换/序列化为兼容的类型。例如，原始对象中的缓冲区属性可能会在 JSON 类型表示中被 [base64url](/zh-CN/docs/Glossary/Base64) 编码为字符串。

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 93cdfac022b2a46b2b1297e4d0cda4ebb0eca147
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<acronym>`** 元素允许作者明确声明一个构成单词首字母缩略字或缩写的字符序列。
 

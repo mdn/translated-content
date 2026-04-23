@@ -1,30 +1,33 @@
 ---
 title: Math.log10()
+short-title: log10()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log10
 l10n:
-  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`Math.log10()`** 静的メソッドは、数値の 10 を底とした対数を返します。すなわち次の値です。
 
-<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝟶</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0,\;\mathtt{\operatorname{Math.log10}(x)} = \log\_{10}(x) = \text{the unique } y \text{ such that } 10^y = x</annotation></semantics></math>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚕𝚘𝚐𝟷𝟶</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>10</mn></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mtext>&nbsp;such that&nbsp;</mtext><msup><mn>10</mn><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0,\;\mathtt{\operatorname{Math.log10}(x)} = \log_{10}(x) = \text{the unique } y \text{ such that } 10^y = x</annotation></semantics>
+</math>
+<!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log10()")}}
+{{InteractiveExample("JavaScript デモ: Math.log10()")}}
 
 ```js interactive-example
 console.log(Math.log10(100000));
-// Expected output: 5
+// 予想される結果: 5
 
 console.log(Math.log10(2));
-// Expected output: 0.3010299956639812
+// 予想される結果: 0.3010299956639812
 
 console.log(Math.log10(1));
-// Expected output: 0
+// 予想される結果: 0
 
 console.log(Math.log10(0));
-// Expected output: -Infinity
+// 予想される結果: -Infinity
 ```
 
 ## 構文
@@ -73,6 +76,7 @@ Math.log10(Infinity); // Infinity
 ## 関連情報
 
 - [`Math.log10` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
+- [es-shims による `Math.log10` のポリフィル](https://www.npmjs.com/package/math.log10)
 - {{jsxref("Math.exp()")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.log1p()")}}

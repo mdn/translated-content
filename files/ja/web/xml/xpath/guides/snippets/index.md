@@ -42,7 +42,7 @@ function evaluateXPath(aNode, aExpr) {
 
 #### 使用例
 
-次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）があるとします。
+次の XML ドキュメント（[DOM ツリーの作成方法](/ja/docs/Web/API/Document_Object_Model)と[XML の解釈とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)も参照してください）があるとします。
 
 ##### 例: カスタム `evaluateXPath()` ユーティリティ関数と一緒に使用する XML 文書
 

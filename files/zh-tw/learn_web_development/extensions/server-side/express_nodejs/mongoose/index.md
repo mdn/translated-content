@@ -225,7 +225,6 @@ var schema = new Schema({
 
 - 字段名稱和類型作為鍵值對（即是，像上面的`name`, `binary` and `living`）。
 - 字段名稱後跟一個定義類型`type`的對象，以及該字段的任何其他選項。選項包括如下內容：
-
   - 默認值。
   - 內置驗證器（例如最大/最小值）和自定義驗證功能。
   - 該字段是否為必要
@@ -242,7 +241,6 @@ Mongoose 提供內置和自定義驗證器，以及同步和異步驗證器。�
 - 所有[SchemaTypes](http://mongoosejs.com/docs/schematypes.html)都具有內置的[必需](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required)驗證器。這用於指定，是否必須提供該字段才能保存文檔。
 - [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) 數字有最小[min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)和最大[max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)驗證器。
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js)字符串有：
-
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum)枚舉：指定該字段的允許值集合。
   - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match) :指定字符串必須匹配的正則表達式。
   - 字符串的最大長度[maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength)和最小長度[minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength)
@@ -515,7 +513,6 @@ SomeModel.find(callback_function);
 1. 單擊 _MongoDB Deployments_ 部分中的 **Create New**。![](mlabcreatenewdeployment.png)
 2. 這將打開「雲提供商」Cloud Provider 選擇畫面。
    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
-
    - 從「計劃類型」_Plan Type_ 部分中，選擇「SANDBOX（免費）」計劃。
    - 從「雲提供商」_Cloud Provider_ 部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
    - 單擊「繼續」**Continue** 按鈕。
@@ -523,17 +520,14 @@ SomeModel.find(callback_function);
 3. 這將打開「選擇區域」_Select Region_ 畫面。
 
    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
-
    - 選擇離你最近的地區，然後選擇繼續 **Continue**。
 
 4. 這將打開 Final Details 畫面。
    ![New deployment database name](mlab_new_deployment_final_details.png)
-
    - 輸入新數據庫的名稱 `local_library`，然後選擇繼續 **Continue**。
 
 5. 這將打開訂單確認畫面。
    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
-
    - 單擊「提交訂單」**Submit Order** 以創建數據庫。
 
 6. 你將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。

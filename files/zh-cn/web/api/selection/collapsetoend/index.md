@@ -1,21 +1,28 @@
 ---
-title: Selection.collapseToEnd()
+title: Selection：collapseToEnd() 方法
+short-title: collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+{{ ApiRef("DOM") }}
 
-**`Selection.collapseToEnd()`** 方法的作用是取消当前选区，并把光标定位在原选区的最末尾处，如果此时光标所处的位置是可编辑的，且它获得了焦点，则光标会在原地闪烁。
+**`Selection.collapseToEnd()`** 方法会将选区折叠至选区中最后一个范围的末尾。如果选区内容处于焦点且可编辑，插入点（光标）将会在该位置闪烁。
 
 ## 语法
 
-```plain
-sel.collapseToEnd()
+```js-nolint
+collapseToEnd()
 ```
 
 ### 参数
 
-无
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
@@ -25,6 +32,6 @@ sel.collapseToEnd()
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}
+- 所属的 {{domxref("Selection")}} 接口。

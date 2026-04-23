@@ -14,7 +14,8 @@ l10n:
 
 このイベントはキャンセル不可で、バブリングしません。
 
-> **メモ:** `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
+> [!NOTE]
+> `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
 
 ## 構文
 
@@ -93,9 +94,7 @@ video.onended = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-
   - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-
   - [ウェブオーディオ API: ended イベント](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)

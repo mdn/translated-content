@@ -47,7 +47,7 @@ var charge = function () {
 };
 ```
 
-Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions qui sont appelées immédiatement, [les fermetures](/fr/docs/Web/JavaScript/Closures) ou d'autres formes qui utilisent de nombreuses parenthèses et/ou accolades comme par exemple :
+Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions qui sont appelées immédiatement, [les fermetures](/fr/docs/Web/JavaScript/Guide/Closures) ou d'autres formes qui utilisent de nombreuses parenthèses et/ou accolades comme par exemple :
 
 ```js example-bad
 (function() { if (true) { return false; } );

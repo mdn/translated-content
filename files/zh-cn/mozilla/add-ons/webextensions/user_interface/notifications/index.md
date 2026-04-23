@@ -3,8 +3,6 @@ title: 通知
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
 
-{{AddonSidebar}}
-
 通知允许你使用底层操作系统提供的通知服务来传达有关你的扩展或其内容的信息。
 
 ![](notify-shadowed.png)

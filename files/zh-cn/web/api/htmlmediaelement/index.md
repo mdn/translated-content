@@ -71,7 +71,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
       <td>
         一个表示媒体元素
         <a
-          href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
+          href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
         <a href="/zh-CN/docs/HTML/CORS_settings_attributes"
@@ -582,7 +582,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 
 ## Events
 
-Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Events#media).
+Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/API/Document_Object_Model/Events#media).
 
 ## Specifications
 
@@ -595,12 +595,10 @@ Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web
 ## See also
 
 - References
-
   - {{ HTMLElement("video") }} and {{HTMLElement("audio")}} HTML elements.
   - {{ domxref("HTMLVideoElement") }} and {{ domxref("HTMLAudioElement") }} interfaces, derived from `HTMLMediaElement`.
 
 - Articles
-
   - [Using HTML5 audio and video](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Media formats supported by the audio and video elements](/zh-CN/docs/Web/Media/Guides/Formats)
   - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

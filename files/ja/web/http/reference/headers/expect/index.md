@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect
 original_slug: Web/HTTP/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Expect`** リクエストヘッダーは、リクエストを正しく扱うためにサーバーが実行する必要があると期待されていることを示します。
 
 仕様書で定義されている期待は `Expect: 100-continue` だけで、サーバーが応答するべきことは以下の通りです。
@@ -69,7 +67,7 @@ Expect: 100-continue
 | ---------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Expect", "5.1.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 

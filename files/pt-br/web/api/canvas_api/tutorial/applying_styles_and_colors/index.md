@@ -105,7 +105,6 @@ O resultado se parece com isto:
 Além de desenhar formas opacas na tela, também podemos desenhar formas semi-transparentes (ou translúcidas). Isso é feito definindo a propriedade globalAlpha ou atribuindo uma cor semitransparente ao estilo de stroke e / ou fill style.
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
-
   - : Aplica o valor de transparência especificado a todas as formas futuras desenhadas na tela. O valor deve estar entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco). Este valor é 1.0 (totalmente opaco) por padrão.
 
 A propriedade globalAlpha pode ser útil se você quiser desenhar muitas formas na tela com transparência semelhante, mas, caso contrário, geralmente é mais útil definir a transparência em formas individuais ao definir suas cores.
@@ -258,7 +257,8 @@ Se você considerar um caminho de (3,1) a (3,5) com uma espessura de linha de 1,
 
 Para corrigir isso, você precisa ser muito preciso na criação do seu caminho. Sabendo que uma linha de largura 1,0 estenderá meia unidade para ambos os lados do caminho, criar o caminho de (3,5,1) a (3,5,5) resulta na situação da terceira imagem - a largura da linha 1,0 termina completamente e preenchendo com precisão uma única linha vertical de pixel.
 
-> **Nota:** **Nota: Esteja ciente de que, no nosso exemplo de linha vertical, a posição Y ainda faz referência a uma posição de linha de grade inteira - se não tivesse, veríamos pixels com meia cobertura nos pontos de extremidade (mas observe também que esse comportamento depende do estilo lineCap atual cujo valor padrão é butt; você pode calcular traçados consistentes com coordenadas de meio pixel para linhas de largura ímpar, configurando o estilo lineCap como quadrado, para que a borda externa do traçado ao redor do ponto de extremidade seja estendida automaticamente para cobrir o pixel inteiro exatamente).**
+> [!NOTE]
+> **Nota: Esteja ciente de que, no nosso exemplo de linha vertical, a posição Y ainda faz referência a uma posição de linha de grade inteira - se não tivesse, veríamos pixels com meia cobertura nos pontos de extremidade (mas observe também que esse comportamento depende do estilo lineCap atual cujo valor padrão é butt; você pode calcular traçados consistentes com coordenadas de meio pixel para linhas de largura ímpar, configurando o estilo lineCap como quadrado, para que a borda externa do traçado ao redor do ponto de extremidade seja estendida automaticamente para cobrir o pixel inteiro exatamente).**
 >
 > Observe também que apenas os pontos de extremidade inicial e final de um caminho são afetados: se um caminho for fechado com closePath (), não haverá ponto inicial e final; em vez disso, todos os pontos de extremidade no caminho são conectados ao segmento anterior e ao próximo anexado usando a configuração atual do estilo lineJoin, cujo valor padrão é mitra, com o efeito de estender automaticamente as bordas externas dos segmentos conectados ao seu ponto de interseção. que o traçado renderizado cobrirá exatamente os pixels completos centralizados em cada ponto final se esses segmentos conectados forem horizontais e / ou verticais). Veja as próximas duas seções para demonstrações desses estilos de linha adicionais.
 

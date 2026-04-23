@@ -35,7 +35,7 @@ undefined.bar;
 // TypeError: undefined has no properties
 ```
 
-## 関連項目
+## 関連情報
 
 - [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - {{jsxref("undefined")}}

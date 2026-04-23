@@ -1,11 +1,9 @@
 ---
-title: Server
+title: Server 標頭
 slug: Web/HTTP/Reference/Headers/Server
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Server`** {{Glossary("response header", "回應標頭")}}描述了處理請求並產生回應的原始伺服器所使用的軟體。
 

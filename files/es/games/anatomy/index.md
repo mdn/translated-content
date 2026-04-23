@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4b9fefebc6d21e003c8f31b40d98136a7a4b5a95
 ---
 
-{{GamesSidebar}}
-
 Este artículo examina la anatomía y el flujo de trabajo de un videojuego promedio desde un punto de vista técnico, en términos de cómo debe ejecutarse el bucle principal. Ayuda a los principiantes en el desarrollo de videojuegos modernos a entender qué se necesita para crear un juego y cómo los estándares web como JavaScript se prestan a ser herramientas. Los programadores de juegos experimentados que son nuevos en el desarrollo web también podrían beneficiarse.
 
 ## Presentar, aceptar, interpretar, calcular, repetir
@@ -220,15 +218,12 @@ Existen otros métodos para abordar el problema.
 Una técnica habitual consiste en actualizar la simulación con una frecuencia constante y, a continuación, dibujar la mayor cantidad (o la menor) posible de fotogramas reales. El método de actualización puede continuar en bucle sin preocuparse de lo que ve el usuario. El método `draw` puede ver la última actualización y cuándo ocurrió. Dado que dibujar sabe cuando representa, y el tiempo de simulación de la última actualización, puede predecir un fotograma plausible para dibujar para el usuario. No importa si esto es más frecuente que el bucle de actualización oficial (o incluso menos frecuente). El método de actualización establece puntos de control y, tan frecuentemente como el sistema lo permita, el método de renderizado dibuja instantes de tiempo alrededor de ellos. Hay muchas formas de separar el método de actualización en los estándares web:
 
 - Dibuja en `requestAnimationFrame` y actualiza en un {{ domxref("setInterval()") }} o {{ domxref("setTimeout()") }}.
-
   - Esto utiliza tiempo del procesador incluso cuando está desenfocado o minimizado, acapara el hilo principal, y es probablemente un artefacto de los bucles de juego tradicionales (pero es simple).
 
 - Dibujar en `requestAnimationFrame` y actualizar en un `setInterval` o `setTimeout` en un [Web Worker](/es/docs/Web/API/Web_Workers_API/Using_web_workers).
-
   - Esto es lo mismo que lo anterior, excepto que la actualización no acapara el hilo principal (ni el hilo principal lo acapara a él). Esta es una solución más compleja, y podría ser demasiada sobrecarga para actualizaciones simples.
 
 - Dibuja en `requestAnimationFrame` y úsalo para dar un toque a un Web Worker que contenga el método `update` con el número de `ticks` a calcular, si los hay.
-
   - Esto duerme hasta que `requestAnimationFrame` es llamado y no contamina el hilo principal, además de que no estás dependiendo de métodos anticuados. Una vez más, esto es un poco más complejo que las dos opciones anteriores, y _el inicio_ de cada actualización se bloqueará hasta que el navegador decida activar las devoluciones de llamada de rAF.
 
 Cada uno de estos métodos tiene ventajas y desventajas similares:
@@ -324,15 +319,12 @@ Cualquiera de las opciones anteriores, o ninguna de ellas, podría ser la mejor 
 Una cosa importante a recordar para plataformas gestionadas, como la web, es que tu bucle puede detener la ejecución durante periodos significativos de tiempo. Esto podría ocurrir cuando el usuario deselecciona tu pestaña y el navegador duerme (o ralentiza) su intervalo de callback `requestAnimationFrame`. Tienes muchas maneras de lidiar con esta situación y esto podría depender de si tu juego es de un solo jugador o multijugador. Algunas opciones son:
 
 - Considera el vacío como "una pausa" y sáltate el tiempo.
-
   - Probablemente puedes ver cómo esto es problemático para la mayoría de los juegos multijugador.
 
 - Puedes simular el vacío para ponerte al día.
-
   - Esto puede ser un problema para caídas largas y/o actualizaciones complejas.
 
 - Puedes recuperar el estado del juego de un peer o del servidor.
-
   - Esto es ineficaz si tus compañeros o el servidor están desactualizados también, o no existen porque el juego es de un solo jugador y no tiene servidor.
 
 Una vez que se ha desarrollado el bucle principal y se ha decidido un conjunto de suposiciones y compensaciones que se adapten a su juego, ahora es sólo cuestión de utilizar sus decisiones para calcular cualquier física aplicable, IA, sonidos, sincronización de red y cualquier otra cosa que su juego pueda requerir.

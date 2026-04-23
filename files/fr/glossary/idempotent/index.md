@@ -1,48 +1,48 @@
 ---
 title: Idempotente
 slug: Glossary/Idempotent
+l10n:
+  sourceCommit: 99d723c4f77d7f537292a07dd7b5e5c13cb610da
 ---
 
-{{GlossarySidebar}}
+Une méthode HTTP est **idempotente** si l'effet prévu sur le serveur d'une seule requête est le même que l'effet de plusieurs requêtes identiques.
 
-Une méthode HTTP est **idempotente** si une requête identique peut être faite une ou plusieurs fois de suite avec le même effet, tout en laissant le serveur dans le même état. En d'autres termes, une méthode idempotente ne doit pas avoir d'effets secondaires (sauf dans la tenue de statistiques). Implémentées correctement, les méthodes {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}} et {{HTTPMethod("DELETE")}} sont idempotentes, mais pas la méthode {{HTTPMethod("POST")}}. Toutes les méthodes {{glossary("Safe","sécurisées")}} sont également idempotentes.
+La spécification HTTP définit plusieurs méthodes et leur sémantique, y compris si elles sont idempotentes ou non. Toutes les méthodes {{Glossary("Safe/HTTP", "safe")}} sont idempotentes, de même que {{HTTPMethod("PUT")}} et {{HTTPMethod("DELETE")}}. Les méthodes {{HTTPMethod("POST")}} et {{HTTPMethod("PATCH")}} ne sont pas garanties idempotentes.
 
-L'idempotence implique que seul l'état réel du serveur est pris en compte et le code d'état renvoyé par chaque requête peut différer : le premier appel d'un {{HTTPMethod("DELETE")}} retournera probablement un code {{HTTPStatus("200")}}, tandis que les lancements successifs retourneront probablement un code {{HTTPStatus("404")}}. Une autre implication, {{HTTPMethod("DELETE")}} étant idempotente, les développeurs ne doivent pas implémenter d'API RESTful avec une fonctionnalité de suppression de la dernière entrée utilisant la méthode DELETE.
+Un client peut retenter en toute sécurité une requête utilisant une méthode idempotente, par exemple lorsqu'il existe un doute sur le fait que la requête a bien atteint le serveur. Si plusieurs requêtes identiques atteignent le serveur, tant que la méthode est idempotente, cela ne pose pas de problème.
 
-À noter : l'idempotence d'une méthode n'est pas garantie par le serveur et certaines applications peuvent incorrectement rompre la contrainte d'idempotence.
+La spécification HTTP définit l'idempotence uniquement en termes de l'effet _prévu_ du client sur le serveur. Par exemple, une requête `POST` a pour intention d'envoyer des données au serveur, tandis qu'une requête `DELETE` a pour intention de supprimer une ressource sur le serveur. En pratique, il revient au serveur de veiller à ce que les routes qu'il expose respectent ces sémantiques.
 
-`GET /pageX HTTP/1.1` est idempotente. Appelée plusieurs fois de suite, le client obtient les mêmes résultats :
+> [!NOTE]
+> Les serveurs sont fortement encouragés à respecter la sémantique définie par la spécification HTTP, mais celle-ci ne l'impose pas. Rien n'empêche un serveur d'exposer un point de terminaison non idempotent sous une méthode HTTP idempotente, même si cela peut surprendre les clients.
 
-```
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-GET /pageX HTTP/1.1
-```
+À garder à l'esprit&nbsp;:
 
-`POST /add_row HTTP/1.1` n'est pas idempotente ; si elle est appelée plusieurs fois, elle ajoute plusieurs lignes :
+- Une requête avec une méthode idempotente ne signifie pas nécessairement qu'elle n'a _aucun_ effet secondaire sur le serveur, seulement que le client n'en a pas l'intention&nbsp;: par exemple, le serveur peut enregistrer l'heure de chaque requête reçue.
+- La réponse renvoyée par chaque requête peut différer&nbsp;: par exemple, le premier appel à {{HTTPMethod("DELETE")}} retournera probablement un {{HTTPStatus("200")}}, tandis que les suivants retourneront probablement un {{HTTPStatus("404")}}.
 
-```
+## Exemples
+
+`GET /pageX HTTP/1.1` est idempotente, car il s'agit d'une méthode sûre (lecture seule). Des appels successifs peuvent retourner des données différentes au client si les données sur le serveur ont été modifiées entre-temps.
+
+`POST /add_row HTTP/1.1` n'est pas idempotente&nbsp;: si elle est appelée plusieurs fois, elle ajoute plusieurs lignes&nbsp;:
+
+```http
 POST /add_row HTTP/1.1
-POST /add_row HTTP/1.1   -> ajoute une 2nde ligne
-POST /add_row HTTP/1.1   -> ajoute une 3ème ligne
+POST /add_row HTTP/1.1   -> Ajoute une 2<sup>e</sup> ligne
+POST /add_row HTTP/1.1   -> Ajoute une 3<sup>e</sup> ligne
 ```
 
-`DELETE /idX/delete HTTP/1.1` est idempotente, même si le code d'état renvoyé peut changer entre les demandes :
+`DELETE /idX/delete HTTP/1.1` est idempotente, même si le code d'état renvoyé peut changer entre les requêtes&nbsp;:
 
-```
+```http
 DELETE /idX/delete HTTP/1.1   -> Retourne 200 si idX existe
-DELETE /idX/delete HTTP/1.1   -> Retourne 404 comme il vient d'être supprimé
+DELETE /idX/delete HTTP/1.1   -> Retourne 404 car il vient d'être supprimé
 DELETE /idX/delete HTTP/1.1   -> Retourne 404
 ```
 
 ## Voir aussi
 
-### Culture générale
-
 - Définition d'[idempotent](https://tools.ietf.org/html/rfc7231#section-4.2.2) dans la spécification HTTP (en).
-
-### Savoir technique
-
 - Description de méthodes idempotentes courantes : {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("OPTIONS")}}
 - Description d'une méthode non idempotente courante : {{HTTPMethod("POST")}}

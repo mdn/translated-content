@@ -24,9 +24,7 @@ getHTML(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のオプション引数を持つオプションオブジェクトです。
-
     - `serializableShadowRoots`
       - : 論理値で、{{domxref("ShadowRoot/serializable","serializable")}} なシャドウルートを含めるかどうかを指定します。
         既定値は `false` です。

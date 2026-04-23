@@ -125,7 +125,8 @@ Host: foo.com
 > [!NOTE]
 > この例は GitHub にあります。— [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) を参照してください （[ライブはこちら](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)）.
 
-> **メモ:** `action` の URL スキームが `file:` などのクエリーを処理しないものであった場合は、データは追加されません。
+> [!NOTE]
+> `action` の URL スキームが `file:` などのクエリーを処理しないものであった場合は、データは追加されません。
 
 #### POST メソッド
 
@@ -165,7 +166,8 @@ say=Hi&to=Mom
 > [!NOTE]
 > この例は GitHub で見つけることができます。— [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) を参照してください ([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html))。
 
-> **メモ:** `action` の URL スキームが `data:` などのリクエスト本体を処理できないものであった場合は、代わりに `GET` メソッドが使用されます。
+> [!NOTE]
+> `action` の URL スキームが `data:` などのリクエスト本体を処理できないものであった場合は、代わりに `GET` メソッドが使用されます。
 
 ### HTTP リクエストの表示
 

@@ -3,8 +3,6 @@ title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!
 
 ## Изменения для Web Разработчиков
@@ -38,7 +36,6 @@ slug: Mozilla/Firefox/Releases/32
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}

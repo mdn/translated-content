@@ -3,8 +3,6 @@ title: Firefox 7 pour les développeurs
 slug: Mozilla/Firefox/Releases/7
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
 
 ## Changements pour les développeurs Web
@@ -14,17 +12,17 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 - La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
-- L'attribut [`background`](/fr/docs/Web/HTML/Element/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
-- L'attribut [`label`](/fr/docs/Web/HTML/Element/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
+- L'attribut [`background`](/fr/docs/Web/HTML/Reference/Elements/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
+- L'attribut [`label`](/fr/docs/Web/HTML/Reference/Elements/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
 
 #### Canvas
 
 - Dans le cadre du [projet Azure](https://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/), le Backend Azure Direct2D [a été implémenté](https://bugzilla.mozilla.org/show_bug.cgi?id=651858) et améliore considérablement les performances des canvas 2D.
 - La spécification de valeurs invalides lors de l'appel de `setTransform()`, `bezierCurveTo()` ou `arcTo()` ne renvoie plus d'exception, ces appels sont à présent ignorés silencieusement.
-- La méthode [`isPointInPath()`](</fr/docs/DOM/CanvasRenderingContext2D#isPointInPath()>) considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.
+- La méthode [`isPointInPath()`](</fr/docs/Web/API/CanvasRenderingContext2D#isPointInPath()>) considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.
 - L'appel de `strokeRect()` avec une largeur et une hauteur de zéro n'a désormais plus aucun effet.
-- L'appel de [`drawImage()`](</fr/docs/DOM/CanvasRenderingContext2D#drawImage()>) avec une largeur ou hauteur {{HTMLElement("canvas")}} de zéro lance désormais `INVALID_STATE_ERR`.
-- L'appel de [`drawImage()`](</fr/docs/DOM/CanvasRenderingContext2D#drawImage()>) avec des coordonnées non-finies ne renvoie plus d'exception.
+- L'appel de [`drawImage()`](</fr/docs/Web/API/CanvasRenderingContext2D#drawImage()>) avec une largeur ou hauteur {{HTMLElement("canvas")}} de zéro lance désormais `INVALID_STATE_ERR`.
+- L'appel de [`drawImage()`](</fr/docs/Web/API/CanvasRenderingContext2D#drawImage()>) avec des coordonnées non-finies ne renvoie plus d'exception.
 - La méthode `toDataURL()` accepte désormais un second paramètre pour contrôler la qualité JPEG.
 - Le support des opérations non-standards `clear` et `over` de `globalCompositeOperation` a été enlevé.
 - [Les ombres](/fr/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows) sont désormais uniquement dessinées pour les opérations de composition de `source-over`.
@@ -44,7 +42,7 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 - L'élément de premier niveau {{MathMLElement("math")}} accepte maintenant tous les atributs de l'élément {{MathMLElement("mstyle")}}.
 - Le support des polices [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) a été ajouté.
 - L'épaisseur des lignes `medium` des barres de fraction des éléments {{MathMLElement("mfrac")}} a été corrigé pour correspondre à l'épaisseur par défaut.
-- [Les noms des espaces négatifs](</fr/docs/MathML/Attributes/Values#Constants_(namedspaces)>) sont maintenant supportés.
+- [Les noms des espaces négatifs](</fr/docs/Web/MathML/Reference/Values#Constants_(namedspaces)>) sont maintenant supportés.
 
 ### DOM
 
@@ -98,7 +96,7 @@ Ces changements affectent les développeurs d'extensions ainsi que les développ
 
 #### AddonManager.jsm
 
-- Le gestionnaire de modules complémentaires a de nouvelles méthodes pour gérer les listes d'extensions qui ont changé durant le démarrage des applications : [`AddonManager.addStarupChange()`](</fr/Add-ons/Add-on_Manager/AddonManager#addStartupChange()>), [`AddonManager.removeStartupChange()`](</fr/Add-ons/Add-on_Manager/AddonManager#removeStartupChange()>) et [`AddonManager.getStartupChanges()`](</fr/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()>).
+- Le gestionnaire de modules complémentaires a de nouvelles méthodes pour gérer les listes d'extensions qui ont changé durant le démarrage des applications : [`AddonManager.addStarupChange()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#addStartupChange()>), [`AddonManager.removeStartupChange()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#removeStartupChange()>) et [`AddonManager.getStartupChanges()`](</fr/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager#getStartupChanges()>).
 - .
 
 ### XUL

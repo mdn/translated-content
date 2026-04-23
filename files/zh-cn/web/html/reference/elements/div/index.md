@@ -5,9 +5,7 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
-**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
+**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout)），否则它对内容或布局没有影响。
 
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
@@ -46,7 +44,7 @@ l10n:
 这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 > [!NOTE]
-> 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
+> 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/Guides/Grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
 
 ## 使用说明
 

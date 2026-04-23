@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
-
 **`Atomics.sub()`** 静态方法对数组中的指定位置减去给定的值，并返回该位置的旧值。此原子操作保证在修改后的值写回之前不会发生其他写操作。
 
 {{InteractiveExample("JavaScript Demo: Atomics.sub()")}}

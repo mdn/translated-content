@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 一个 {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} 对象，用于更改浏览器处理动画图像（例如 GIF）的方式。
 
 其底层值是一个字符串，可以取三个值中的一个：

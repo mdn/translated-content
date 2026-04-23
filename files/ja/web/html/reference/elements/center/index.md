@@ -55,7 +55,8 @@ l10n:
 
 {{EmbedLiveSample("Example 3 (CSS alternative)")}}
 
-> **メモ:** {{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
+> [!NOTE]
+> {{Cssxref("text-align")}}`:center` を {{HTMLElement("div")}} または {{HTMLElement("p")}} 要素に適用すると、その*コンテンツ*を中央揃えにしますが、コンテンツの寸法はどれも変更されません。
 
 <!-- ## Technical summary -->
 

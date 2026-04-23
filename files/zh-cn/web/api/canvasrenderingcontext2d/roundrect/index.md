@@ -9,7 +9,7 @@ l10n:
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.roundRect()`** 方法用于在当前路径中添加一个圆角矩形。
 
-角的半径可以像 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 属性一样指定。
+角的半径可以像 CSS [`border-radius`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) 属性一样指定。
 
 像其他修改当前路径的方法一样，此方法不会直接渲染任何内容。要将圆角矩形绘制到画布上，你可以使用 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} 或 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法。
 
@@ -30,9 +30,7 @@ roundRect(x, y, width, height, radii)
 - `height`
   - : 矩形的高度。正值向下，负值向上。
 - `radii`
-
-  - : 指定用于矩形角的圆弧半径的数字或列表。其数量和顺序与 `width` 和 `height` 为正值时的 [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) CSS 属性相同：
-
+  - : 指定用于矩形角的圆弧半径的数字或列表。其数量和顺序与 `width` 和 `height` 为正值时的 [`border-radius`](/zh-CN/docs/Web/CSS/Reference/Properties/border-radius) CSS 属性相同：
     - `all-corners`
     - `[all-corners]`
     - `[top-left-and-bottom-right, top-right-and-bottom-left]`

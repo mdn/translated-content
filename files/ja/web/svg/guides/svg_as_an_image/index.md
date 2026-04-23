@@ -1,14 +1,16 @@
 ---
 title: 画像としての SVG
 slug: Web/SVG/Guides/SVG_as_an_image
-original_slug: Web/SVG/SVG_as_an_Image
 l10n:
-  sourceCommit: f4f8e2f18ccf19a0bee59e1fe78753e276b98232
+  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
-{{SVGRef}}
+SVG は、HTML、CSS、特定の SVG 要素、およびキャンバス API を通じて、画像形式として使用することができます。
+このページには、SVG を画像ソースとして指定できる機能の一覧が掲載されています。
 
-SVG 画像は、様々な場面で画像形式の一つとして使用することができます。多くのブラウザーは SVG 画像を以下の場所で対応しています。
+## SVG に対応している機能
+
+ブラウザーは以下の場所で SVG 画像に対応しています。
 
 - HTML の {{HTMLElement("img")}} または {{SVGElement("svg")}} 要素
 - CSS の {{cssxref("background-image")}}
@@ -18,21 +20,18 @@ SVG 画像は、様々な場面で画像形式の一つとして使用するこ�
 - SVG の {{SVGElement("feImage")}} 要素
 - キャンバスの [`drawImage`](/ja/docs/Web/API/Canvas_API/Tutorial/Using_images#画像の描画) 関数
 
-### 制限
+## 制限
 
-セキュリティ上の目的で、 Gecko は SVG コンテンツを画像として扱う場合にいくつかの制限を設けています。
+セキュリティ上の理由から、一部のブラウザーでは、SVG コンテンツが画像として使用されている場合に制限がかけられています。
+具体的には、次の制限が適用される場合があります。
 
 - [JavaScript](/ja/docs/Web/JavaScript) は無効になります。
-- 外部のリソース（画像やスタイルシートなど）を読み込むことはできませんが、 data: URI を使用してインライン化されていれば可能です。
+- 外部のリソース（画像やスタイルシートなど）を読み込むことはできませんが、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) を使用してインライン化されていれば可能です。
 - {{cssxref(":visited")}} のリンクスタイルは描画されません。
-- プラットフォームネイティブのウィジェットのスタイル付け（OS のテーマに基づくもの）は無効です。
+- プラットフォームネイティブのウィジェットのスタイル付け（OS のテーマに基づくもの）は無効になります。
 
 なお、上記の制限は画像のコンテキストに限定されたものです。 SVG コンテンツが直接表示された場合、または {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}} の何れかの要素を使用して文書として埋め込まれた場合には適用されません。
 
 ## 仕様書
 
 {{Specifications}}
-
-## 関連情報
-
-- [HTML 内の SVG 入門](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction)

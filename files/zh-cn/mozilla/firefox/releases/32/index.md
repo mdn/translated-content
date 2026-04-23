@@ -3,8 +3,6 @@ title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
 ---
 
-{{FirefoxSidebar}}
-
 ## 普通 Web 开发者应该注意的变化
 
 ### 开发者工具

@@ -50,7 +50,8 @@ Um {{jsxref("TypeError")}}, se `target` não for um {{jsxref("Object")}}.
 
 O método `Reflect.defineProperty` permite a adição precisa ou a modificação de uma propriedade em um objeto. Para mais detalhes veja o {{jsxref("Object.defineProperty")}}, que é semelhante.
 
-> **Nota:** **Uma diferença fundamental:** `Object.defineProperty` retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. `Reflect.defineProperty`, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
+> [!NOTE]
+> **Uma diferença fundamental:** `Object.defineProperty` retorna o objeto ou lança um {{jsxref ("TypeError")}} se a propriedade não tiver sido definida com êxito. `Reflect.defineProperty`, no entanto, simplesmente retorna um {{jsxref ("Boolean")}} indicando se a propriedade foi ou não definida com êxito.
 
 ## Exemplos
 

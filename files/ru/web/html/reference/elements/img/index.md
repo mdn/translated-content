@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Elements/img
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties).
+**HTML-элемент `<img>`** встраивает изображение в документ. Это [замещаемый элемент](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties).
 
 {{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
 
@@ -115,9 +115,7 @@ slug: Web/HTML/Reference/Elements/img
 - `src`
   - : {{glossary("URL")}} изображения. Этот атрибут является обязательным для элемента `<img>`. В браузерах, поддерживающих `srcset`, `src` обрабатывается как изображение-кандидат с дескриптором плотности пикселей `1x`, если только изображение с этим дескриптором уже не определено в `srcset` или если `srcset` не содержит дескрипторы '`w`'.
 - `srcset`
-
   - : Список из одной или нескольких строк, разделённых запятыми, указывающих набор возможным источников изображения для использования {{glossary("user agent", "пользовательскими агентами")}}. Каждая строка состоит из:1. {{glossary("URL")}} изображения. 2. Необязательного, пробела, сопровождаемого:
-
     - дескриптором ширины или положительным целым числом, за которым сразу же следует '`w`'. Дескриптор ширины делится на размер источника, полученный из атрибута `sizes`, для расчёта эффективной плотности пикселей;
     - дескриптором плотности пикселей, который является положительным числом с плавающей точкой за которым сразу же следует '`x`'.Если не указано ни одного дескриптора, то источнику присваивается дескриптор по умолчанию: `1x`.Нельзя смешивать дескрипторы ширины с дескрипторами плотности пикселей в одном атрибуте `srcset`. Повторение дескрипторов (например, два источника в одном `srcset` с одинаковым дескриптором '`2x`') так же является недопустимым.{{glossary("user agent", "Пользовательские агенты")}} выбирают любой из доступных источников на своё усмотрение. Это предоставляет им значительную свободу действий для адаптации их выбора на основе таких вещей, как предпочтения пользователя или {{glossary("bandwidth", "пропускная способность")}}. Смотрите наше руководство "[Адаптивные изображения](/ru/docs/Web/HTML/Guides/Responsive_images)" для примера.
 
@@ -152,7 +150,7 @@ slug: Web/HTML/Reference/Elements/img
 
 ## Взаимодействие с CSS
 
-`<img>` является [замещаемым элементом](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties); по умолчанию он имеет значение свойства {{cssxref("display")}} равное `inline`, но его размеры по умолчанию определяются внутренними значениями (см. {{glossary("Intrinsic Size", "внутренний размер")}}) встроенного изображения. Вы можете установить на изображение такие свойства, как {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}/{{cssxref("height")}} и так далее.
+`<img>` является [замещаемым элементом](/ru/docs/Web/CSS/Guides/Images/Replaced_element_properties); по умолчанию он имеет значение свойства {{cssxref("display")}} равное `inline`, но его размеры по умолчанию определяются внутренними значениями (см. {{glossary("Intrinsic Size", "внутренний размер")}}) встроенного изображения. Вы можете установить на изображение такие свойства, как {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}/{{cssxref("height")}} и так далее.
 
 Однако, часто бывает полезно установить для изображений свойство {{cssxref("display")}} в значение `block`, так что вы имеете максимальный контроль над стилизацией (например, `margin: 0 auto` не работает на изображениях с `display: inline`, легче размещать изображения в контексте с окружающими элементами, когда они являются [блочными](/ru/docs/Glossary/Block-level_content)).
 
@@ -170,7 +168,7 @@ slug: Web/HTML/Reference/Elements/img
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="Логотип MDN - изображение динозавра с текстом MDN web docs" />
 ```
 
@@ -183,7 +181,7 @@ slug: Web/HTML/Reference/Elements/img
 ```html
 <a href="https://developer.mozilla.org">
   <img
-    src="https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg"
+    src="/shared-assets/images/examples/web-docs-sprite.svg"
     alt="Посетить сайт MDN" />
 </a>
 ```

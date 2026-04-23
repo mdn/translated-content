@@ -1,28 +1,33 @@
 ---
-title: API de Estado de Bateria
+title: API de Battery Status
 slug: Web/API/Battery_Status_API
+l10n:
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
-{{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
+{{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
 
-La **API de Estado de Batería**, también conocida como "**Battery API**", provee información acerca del sistema de carga de la batería y permite notificar mediante eventos que son enviados cuando el nivel de la batería cambia. Este puede ser usado para ajustar el uso de recursos por parte de una aplicación y evitar un gasto innecesario de energía cuando la batería esta baja o para guardar cambios en un archivo antes de que la batería se agote y así prevenir perdida de información.
+La **API de Battery Status**, más comúnmente referida como la **API de la batería**, proporciona información sobre el estado de carga de la batería del sistema y te permite ser notificado por eventos que se envían cuando el nivel de la batería o su estado de carga cambia. Esto se puede usar para ajustar el uso de recursos de tu aplicación para reducir el drenaje de batería cuando es baja, o para guardar los cambios antes de que se acabe la batería para prevenir pérdida de datos.
 
 > [!NOTE]
-> Esta API _no está disponible_ en los [Web Workers](/es/docs/Web/API/Web_Workers_API) (no está expuesta en {{domxref("WorkerNavigator")}}).
+> Esta API _no está disponible_ en los [Web Workers](/es/docs/Web/API/Web_Workers_API) (no se expone a través de {{domxref("WorkerNavigator")}}).
 
 ## Interfaces
 
 - {{domxref("BatteryManager")}}
-  - : Provee información acerca del nivel de carga de batería del sistema.
-- {{domxref("navigator.getBattery()")}}{{readonlyInline}}
-  - : Retorna una {{JSxRef("Promise")}} que se resuelve con un objeto {{DOMxRef("BatteryManager")}}.
+  - : Proporciona información sobre el nivel de carga de la batería del sistema.
+
+### Extensiones a otras interfaces
+
+- {{domxref("Navigator.getBattery()")}}
+  - : Devuelve una {{JSxRef("Promise")}} que se resuelve con un objeto {{DOMxRef("BatteryManager")}}.
 
 ## Ejemplo
 
-En este ejemplo, observamos los cambios en el estado de la carga (este o no conectado y cargando) y en el nivel de la batería. Esto se hace escuchando los eventos [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), [`levelchange`](/es/docs/Web/Reference/Events/levelchange), [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange) y [`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange).
+En este ejemplo, observamos los cambios en el estado de carga (esté o no enchufado y cargando) y en el nivel y la sincronización de la batería. Esto se hace escuchando por los eventos {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}, {{domxref("BatteryManager.levelchange_event", "levelchange")}}, {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}} y {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}.
 
 ```js
-navigator.getBattery().then(function (battery) {
+navigator.getBattery().then((battery) => {
   function updateAllBatteryInfo() {
     updateChargeInfo();
     updateLevelInfo();
@@ -31,54 +36,50 @@ navigator.getBattery().then(function (battery) {
   }
   updateAllBatteryInfo();
 
-  battery.addEventListener("chargingchange", function () {
+  battery.addEventListener("chargingchange", () => {
     updateChargeInfo();
   });
   function updateChargeInfo() {
-    console.log(
-      "La batería esta cargando? " + (battery.charging ? "Si" : "No"),
-    );
+    console.log(`¿Cargándose la batería? ${battery.charging ? "Sí" : "No"}`);
   }
 
-  battery.addEventListener("levelchange", function () {
+  battery.addEventListener("levelchange", () => {
     updateLevelInfo();
   });
   function updateLevelInfo() {
-    console.log("Nivel de la batería: " + battery.level * 100 + "%");
+    console.log(`Nivel de la batería: ${battery.level * 100} %`);
   }
 
-  battery.addEventListener("chargingtimechange", function () {
+  battery.addEventListener("chargingtimechange", () => {
     updateChargingInfo();
   });
   function updateChargingInfo() {
     console.log(
-      "Tiempo de carga de la batería: " + battery.chargingTime + " segundos",
+      `Tiempo de carga de la batería: ${battery.chargingTime} segundos`,
     );
   }
 
-  battery.addEventListener("dischargingtimechange", function () {
+  battery.addEventListener("dischargingtimechange", () => {
     updateDischargingInfo();
   });
   function updateDischargingInfo() {
     console.log(
-      "Tiempo de descarga de la batería: " +
-        battery.dischargingTime +
-        " segundos",
+      `Tiempo de descarga de la batería: ${battery.dischargingTime} segundos`,
     );
   }
 });
 ```
 
-Vea también: [El ejemplo en las especificaciones](https://www.w3.org/TR/battery-status/#examples).
+Consulta también [el ejemplo en la especificación](https://w3c.github.io/battery/#examples).
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad del Navegador
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Vea también
+## Véase también
 
-- [Hacks blog post - Usando la API de Batería](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)
+- [Hacks blog post - Using the Battery API](https://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

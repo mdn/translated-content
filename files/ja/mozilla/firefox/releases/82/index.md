@@ -3,8 +3,6 @@ title: Firefox 82 for developers
 slug: Mozilla/Firefox/Releases/82
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 82 の変更点をまとめています。Firefox 82 は、2020 年 10 月 20 日にリリースされました。
 
 > [!NOTE]
@@ -30,11 +28,11 @@ slug: Mozilla/Firefox/Releases/82
 
 #### 廃止
 
-- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
+- 独自仕様である [`:-moz-user-disabled`](/ja/docs/Web/CSS/Reference/Selectors/:-moz-user-disabled) 擬似クラスを削除しました ([Firefox バグ 1664432](https://bugzil.la/1664432))。
 
 ### HTTP
 
-- HTML [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素で `download` 属性が設定されている場合 ([同一オリジンの URL](/ja/docs/Web/Security/Same-origin_policy)) に、[`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーの `inline` ディレクティブが無視されるようになりました。`Content-Disposition` ヘッダーの `filename` を設定すると、`download` 属性で指定したファイル名より優先して使用されますので注意してください ([Firefox バグ 1658877](https://bugzil.la/1658877))。
+- HTML [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素で `download` 属性が設定されている場合 ([同一オリジンの URL](/ja/docs/Web/Security/Defenses/Same-origin_policy)) に、[`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) ヘッダーの `inline` ディレクティブが無視されるようになりました。`Content-Disposition` ヘッダーの `filename` を設定すると、`download` 属性で指定したファイル名より優先して使用されますので注意してください ([Firefox バグ 1658877](https://bugzil.la/1658877))。
 
 ### API
 

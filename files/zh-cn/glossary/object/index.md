@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 在 JavaScript 中，对象可以看作是属性的集合。使用[对象字面量语法](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#对象字面量)，可以初始化一组有限的属性，然后可以添加和删除属性。属性值可以是任何类型的值，包括其他对象，这使得构建复杂的数据结构成为可能。属性通过*键*值来标识。*键*值可以是{{Glossary("String", "字符串值")}}或 [Symbol 值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
 
 对象属性有两种类型：[*数据*属性](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#数据属性)和[*访问器*属性](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#访问器属性)。

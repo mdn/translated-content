@@ -1,14 +1,11 @@
 ---
 title: C/C++ から WebAssembly へのコンパイル
 slug: WebAssembly/Guides/C_to_Wasm
-original_slug: WebAssembly/C_to_Wasm
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
 ---
 
-{{WebAssemblySidebar}}
-
-C / C ++のような言語でコードを書いたら、[Emscripten](https://emscripten.org/) のようなツールを使って WebAssembly にコンパイルすることができます。 どのように動作するかを見てみましょう。
+C/C++ のような言語でコードを書いたら、[Emscripten](https://emscripten.org/) などのツールを使って WebAssembly にコンパイルすることができます。どのように作業するかを見てみましょう。
 
 ## Emscripten の環境設定
 
@@ -33,7 +30,7 @@ Emscripten SDK を取得します。以下の指示に従ってください。<h
 
 1. まずはコンパイルするためのサンプルコードを用意します。以下の C のサンプルコードをコピーして `hello.c` としてローカルドライブの新しいディレクトリーに保存してください。
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -74,7 +71,7 @@ WebAssembly に対応しているブラウザーで `hello.html` を読み込む
 
 1. まず、次の C のコードを `hello2.c` として新しいディレクトリーに保存します。
 
-   ```cpp
+   ```c
    #include <stdio.h>
 
    int main() {
@@ -91,7 +88,6 @@ WebAssembly に対応しているブラウザーで `hello.html` を読み込む
    ```
 
    今回渡したオプションは少しだけ異なります。
-
    - `-o hello2.html` と指定したことで、今回コンパイラーは JavaScript グルーコードと `.html` を出力します。
    - `-O3` はコードを最適化するために使用されます。 Emcc には他の C コンパイラと同様に、最適化レベルとして `-O0`（最適化しない）、`-O1`、`-O2`、`-Os`、`-Oz`、`-Og`、`-O3` があります。 `-O3` は、リリースビルドに適した設定です。
    - さらに `--shell-file html_template/shell_minimal.html` と指定しました — これは例を実行する HTML を生成するための、HTML テンプレートパスです。
@@ -105,11 +101,11 @@ WebAssembly に対応しているブラウザーで `hello.html` を読み込む
 
 ### C で定義されたカスタム関数を呼び出す
 
-C で定義された関数があって、それを JavaScript から呼び出したい場合、 Emscripten の `ccall()` 関数と `EMSCRIPTEN_KEEPALIVE` 宣言（対象の関数をエクスポートする関数リストに加えるものです（[Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process) を参照））を使用します。これがどのように動作するか見てみましょう。
+C で定義された関数があって、それを JavaScript から呼び出したい場合、 Emscripten の `ccall()` 関数と `EMSCRIPTEN_KEEPALIVE` 宣言（対象の関数をエクスポートする関数リストに加えるものです（[Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-webassembly) を参照））を使用します。これがどのように動作するか見てみましょう。
 
 1. はじめに、次のコードを `hello3.c` として新しいディレクトリーに保存します。
 
-   ```cpp
+   ```c
    #include <stdio.h>
    #include <emscripten/emscripten.h>
 
@@ -131,7 +127,8 @@ C で定義された関数があって、それを JavaScript から呼び出し
 
    既定では、 Emscripten が生成したコードは常に `main()` を呼び出し、他のデッドコードは削除されます。関数名の前に `EMSCRIPTEN_KEEPALIVE` を置くことによって、これが起こらなくなります。また、`EMSCRIPTEN_KEEPALIVE` を使用するために `emscripten.h` をインポートする必要があります。
 
-   > **メモ:** `#ifdef` ブロックを加えたことによって、C++ のコードからこの例をインクルードしようとしても動作するでしょう。 C と C++ の間でのマングリング規則によって、他の場合では壊れることもありますが、ここでは C++ を使用している場合に、外部の C の関数として扱うように設定しています。
+   > [!NOTE]
+   > `#ifdef` ブロックを加えたことによって、C++ のコードからこの例をインクルードしようとしても動作するでしょう。 C と C++ の間でのマングリング規則によって、他の場合では壊れることもありますが、ここでは C++ を使用している場合に、外部の C の関数として扱うように設定しています。
 
 2. 便宜上、この新しいディレクトリーに `html_template/shell_minimal.html` （もちろん、このファイルはあなたの実際の開発環境に置きます）を加えます。
 3. さて、再びコンパイル手順を実行しましょう。最新のディレクトリーの中（そして、Emscripten コンパイラー環境の入っているターミナルウィンドウの中）で、次のようにして C のコードをコンパイルします。`NO_EXIT_RUNTIME` オプションを付与してコンパイルする必要があることに注意してください。そうしないと、`main()` 関数が存在した場合、ランタイムがシャットダウンされ、コンパイルされたコードが正しく呼び出されません。これは適切に C をエミュレーションするのに、例えば [`atexit()`](https://en.cppreference.com/w/c/program/atexit) 関数を呼び出せるようにするために必要です。
@@ -142,16 +139,16 @@ C で定義された関数があって、それを JavaScript から呼び出し
 
 4. 例をブラウザーで読み込んだら、前と同じものが見られるでしょう。
 5. JavaScript から新しい `myFunction()` 関数を呼び出す必要があります。まずは、 hello3.html ファイルをテキストエディターで開いてください。
-6. 以下のような {{HTMLElement("button")}} を最初の `<script type='text/javascript'>` タグの上に加えましょう。
+6. 以下のような {{HTMLElement("button")}} を最初の `<script type="text/javascript">` タグの上に加えましょう。
 
    ```html
-   <button id="mybutton">Run myFunction</button>
+   <button id="my-button">Run myFunction</button>
    ```
 
 7. そして、 {{HTMLElement("script")}} 要素内の最後に次のコードを追加します。
 
    ```js
-   document.getElementById("mybutton").addEventListener("click", () => {
+   document.getElementById("my-button").addEventListener("click", () => {
      alert("check console");
      const result = Module.ccall(
        "myFunction", // name of C function
@@ -169,5 +166,4 @@ C で定義された関数があって、それを JavaScript から呼び出し
 - [emscripten.org](https://emscripten.org/) — Emscripten とそれの多種多様なオプションについての詳細を確認してください。
 - [Calling compiled C functions from JavaScript using ccall/cwrap](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://emscripten.org/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/)
 - [既存の C モジュールから WebAssembly へのコンパイル](/ja/docs/WebAssembly/Guides/Existing_C_to_Wasm)

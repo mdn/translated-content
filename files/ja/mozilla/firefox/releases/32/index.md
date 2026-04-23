@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 ## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
@@ -39,7 +37,6 @@ l10n:
 ### JavaScript
 
 - 新たな ECMAScript 2015 の組み込みメソッドを実装しました。
-
   - {{jsxref("Array.from()")}} ([Firefox バグ 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}} ([Firefox バグ 934423](https://bugzil.la/934423))
   - {{jsxref("Number.isSafeInteger()")}} ([Firefox バグ 1003764](https://bugzil.la/1003764))

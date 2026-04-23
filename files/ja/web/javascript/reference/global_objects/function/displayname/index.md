@@ -1,11 +1,12 @@
 ---
 title: "Function: displayName"
+short-title: displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`displayName`** は {{jsxref("Function")}} インスタンスのプロパティで、関数の表示名を返します。
 
@@ -35,7 +36,7 @@ Firefox は、[無名の JavaScript 関数の命名規則](https://johnjbarton.g
 以下のものを Firefox コンソールに入力すると、 "`function MyFunction()`" のように表示されます。
 
 ```js
-const a = function () {};
+function a() {}
 a.displayName = "MyFunction";
 
 a; // function MyFunction()

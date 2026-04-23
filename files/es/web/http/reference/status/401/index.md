@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/401
 original_slug: Web/HTTP/Status/401
 ---
 
-{{HTTPSidebar}}
-
 El código de error HTTP 401 indica que la petición (request) no ha sido ejecutada porque carece de credenciales válidas de autenticación para el recurso solicitado.
 
 Este estatus se envia con un {{HTTPHeader("WWW-Authenticate")}} encabezado que contiene informacion sobre como autorizar correctamente.

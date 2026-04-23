@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
 ---
 
-{{AddonSidebar}}
-
 定义了 `BrowserSetting` 类型，用于表示浏览器设置。
 
 ## 类型

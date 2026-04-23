@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **最大内容绘制**（LCP）性能指标提供了在视口内可见的最大图像或文本块的渲染时间（从页面开始加载时开始记录）。
 
 确定 LCP 时会考虑以下元素：

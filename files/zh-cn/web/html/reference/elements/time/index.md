@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 835c199410845eed61aaf8439cb2e9719e7e9f98
 ---
 
-{{HTMLSidebar}}
-
 **`<time>`** [HTML](/zh-CN/docs/Web/HTML) 元素用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
 
 它可以代表以下含义之一：

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 
 **`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.listformat.prototype.formatToParts()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.listformat.prototype.formatToParts()", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

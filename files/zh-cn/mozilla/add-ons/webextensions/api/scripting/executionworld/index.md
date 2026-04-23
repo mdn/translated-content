@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 指定通过 {{WebExtAPIRef("scripting.executeScript()")}} 插入或通过 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本的执行环境。
 
 ## 类型

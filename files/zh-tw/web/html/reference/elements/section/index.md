@@ -3,8 +3,6 @@ title: <section>：通用區段元素
 slug: Web/HTML/Reference/Elements/section
 ---
 
-{{HTMLSidebar}}
-
 **`<section>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件中的通用獨立區段，它沒有更具體的語義元素來代表它。區段應始終具有標題，幾乎沒有例外。
 
 {{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}

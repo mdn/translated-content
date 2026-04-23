@@ -9,7 +9,8 @@ l10n:
 
 Canvas 2D API の **`CanvasRenderingContext2D.putImageData()`** メソッドは、指定の {{domxref("ImageData")}} オブジェクトのデータをキャンバスに描画します。更新対象の矩形が指定された場合は、その矩形内のピクセルのみが描画されます。このメソッドは、キャンバスの変換行列の影響を受けません。
 
-> **メモ:** {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} メソッドを用いて、キャンバスから画像データを取得できます。
+> [!NOTE]
+> {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} メソッドを用いて、キャンバスから画像データを取得できます。
 
 記事[キャンバスとピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)に、`putImageData()` およびキャンバスの内容の一般的な操作に関するさらなる情報があります。
 

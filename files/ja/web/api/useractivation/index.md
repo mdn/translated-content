@@ -16,7 +16,7 @@ l10n:
 - {{Glossary("Transient activation", "一時的な有効化")}} (ユーザーが現在ページを操作している)
 - {{Glossary("Sticky activation", "粘着的な有効化")}} (ユーザーがページを読み込んでから少なくとも 1 回ページを操作した)
 
-より詳しい情報と、ユーザーによる一時的もしくは粘着的な有効化を必要とする API の一覧については、[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)を参照してください。
+より詳しい情報と、ユーザーによる一時的もしくは粘着的な有効化を必要とする API の一覧については、[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/Defenses/User_activation)を参照してください。
 
 この API はウインドウコンテキストでのみ利用可能で、ワーカーには提供されていません。
 
@@ -60,4 +60,4 @@ if (navigator.userActivation.hasBeenActive) {
 ## 関連情報
 
 - {{domxref("navigator.userActivation")}}
-- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)
+- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/Defenses/User_activation)

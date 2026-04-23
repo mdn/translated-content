@@ -1,13 +1,14 @@
 ---
-title: Worker.postMessage()
+title: "Worker: postMessage() メソッド"
+short-title: postMessage()
 slug: Web/API/Worker/postMessage
 l10n:
-  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
+  sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
-**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーの内部スコープにメッセージを送信します。これは、ワーカーに送信するデータを単一の引数として受け取ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
+**`postMessage()`** は {{domxref("Worker")}} インターフェイスのメソッドで、ワーカーにメッセージを送信します。最初の引数は、ワーカーに送信するデータです。データは、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で処理できる任意の JavaScript オブジェクトです。
 
 {{domxref("Worker")}} の `postMessage()` メソッドは {{domxref("MessagePort")}} の {{domxref("MessagePort.postMessage", "postMessage()")}} メソッドに委任して、受信する {{domxref("MessagePort")}} に対応するイベントループのタスクを追加します。
 
@@ -15,24 +16,25 @@ l10n:
 
 ## 構文
 
-```js
-postMessage(message);
-postMessage(message, transfer);
+```js-nolint
+postMessage(message)
+postMessage(message, transfer)
+postMessage(message, options)
 ```
 
 ### 引数
 
 - `message`
+  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event", "message")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
-  - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
-
-    `message` 引数が提供されて*いない*場合は、 `TypeError` が発生します。ワーカーに渡すデータが重要でない場合は、 `null` または `undefined` を明示的に渡すことができます。
+    引数 `message` は必須です。ワーカーに渡すデータが重要でない場合は、`null` または `undefined` を明示的に渡す必要があります。
 
 - `transfer` {{optional_inline}}
-
-  - : オプションで、所有権を移転する{{Glossary("Transferable Objects", "移転可能オブジェクト")}}の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)です。オブジェクトの所有権が移転されると、そのオブジェクトは送信元のコンテキストでは使用できなくなり、送信先のワーカーのみが使用できるようになります。
-
-    移転可能オブジェクトは {{jsxref("ArrayBuffer")}}、{{domxref("MessagePort")}}、{{domxref("ImageBitmap")}} のような移転可能なクラスのインスタンスです。 `null` を `transfer` の値として受け付けることはできません。
+  - : オプションで、[移譲可能なオブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)。これらのオブジェクトの所有権は出力先に渡され、送信側では使用できなくなります。これらの移譲可能なオブジェクトは、メッセージに添付する必要があります。そうしないと、移動はされるものの、実際には受信側ではアクセスできなくなります。
+- `options` {{optional_inline}}
+  - : 次のプロパティを含むオプションのオブジェクトです。
+    - `transfer` {{optional_inline}}
+      - : `transfer` 引数と同じ意味です。
 
 ### 返値
 
@@ -45,20 +47,18 @@ postMessage(message, transfer);
 ```js
 const myWorker = new Worker("worker.js");
 
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
+[first, second].forEach((input) => {
+  input.onchange = () => {
+    myWorker.postMessage([first.value, second.value]);
+    console.log("メッセージがワーカーへ渡されました");
+  };
+});
 ```
 
 完全な例は、[簡単なワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) （[例を実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）を参照してください。
 
-> **メモ:** `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
+> [!NOTE]
+> `postMessage()` は同時に一つしかオブジェクトを送信できません。上記のように、複数の値を渡したい場合は配列を送信してください。
 
 ### 移転を伴う例
 
@@ -71,7 +71,7 @@ second.onchange = () => {
 const myWorker = new Worker("myWorker.js");
 
 // myWorker を待ち受けしてバッファーを main に再移転する
-myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+myWorker.addEventListener("message", (msg) => {
   console.log("message from worker received in main:", msg);
 
   const bufTransferredBackFromWorker = msg.data;
@@ -103,7 +103,7 @@ console.log(
 
 ```js
 // main を待ち受けしてバッファーを myWorker に移転する
-self.onmessage = function handleMessageFromMain(msg) {
+self.onmessage = (msg) => {
   console.log("message from main received in worker:", msg);
 
   const bufTransferredFromMain = msg.data;

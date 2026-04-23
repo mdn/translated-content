@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Request-Method`** 请求标头会由浏览器在发出{{glossary("preflight request", "预检请求")}}时使用，通知服务器在实际请求中发出时将会采用哪种 [HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)。此标头是必需的，因为预检请求总是采用 {{HTTPMethod("OPTIONS")}} 方法，这与实际请求所使用的方法并不相同。
 
 <table class="properties">

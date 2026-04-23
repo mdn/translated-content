@@ -15,7 +15,8 @@ l10n:
 
 制約の仕組みについて詳しく知りたい場合は、[能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)を参照してください。
 
-> **メモ:** `min` および `exact` 値は、{{domxref("MediaDevices.getDisplayMedia()")}} 呼び出しで使用される制約では許可されておらず、`TypeError` が発生します。ただし、これらは {{domxref("MediaStreamTrack.applyConstraints()")}} 呼び出しで使用される制約では許可されています。
+> [!NOTE]
+> `min` および `exact` 値は、{{domxref("MediaDevices.getDisplayMedia()")}} 呼び出しで使用される制約では許可されておらず、`TypeError` が発生します。ただし、これらは {{domxref("MediaStreamTrack.applyConstraints()")}} 呼び出しで使用される制約では許可されています。
 
 ### ConstrainBoolean
 
@@ -142,9 +143,7 @@ l10n:
 これらの制約は、画面共有用のストリームを取得するために {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} に渡されるオブジェクトの `video` プロパティに適用されます。
 
 - {{domxref("MediaTrackConstraints.displaySurface", "displaySurface")}}
-
   - : ユーザーが選択可能な表示面の種類を指定する [`ConstrainDOMString`](#constraindomstring)。以下の文字列のいずれか 1 つ、または複数のソース表示面を許可するリストを指定できます。
-
     - `browser`
       - : ストリームには、ユーザーが選択した単一のブラウザータブの内容が含まれます。
     - `monitor`
@@ -153,7 +152,6 @@ l10n:
       - : ストリームには、ユーザーが共有用に選択した単一のウィンドウが含まれます。
 
 - {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
-
   - : ディスプレイ領域に直接対応しないソース表面の選択を許可するかどうかを示す単一の真偽値、またはそのセットを含む [`ConstrainBoolean`](#constrainboolean) 値。これには、他のウィンドウに隠されたウィンドウの内容をキャプチャできるようにするウィンドウのバッキングバッファや、ウィンドウ内で全体を表示するためにスクロールが必要な大きなドキュメントを含むバッファが含まれる場合があります。
 
 - {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback", "suppressLocalAudioPlayback")}} {{Experimental_Inline}}

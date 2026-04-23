@@ -31,10 +31,8 @@ clip(path, fillRule)
 ### 参数
 
 - `fillRule`
-
   - : 这个算法判断一个点是在裁剪区域内还是在此之外。
     允许的值：
-
     - `nonzero`
       - : [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
     - `evenodd`

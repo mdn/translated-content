@@ -2,10 +2,8 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 l10n:
-  sourceCommit: a73295d4344aeab38c67262717d0dda8b3b9f0c5
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`RegExp`** オブジェクトは、テキストをパターンと照合するために使用します。
 
@@ -15,10 +13,10 @@ l10n:
 
 ### リテラル記法とコンストラクター
 
-`RegExp` オブジェクトを生成するには 2 通りの方法があります。*リテラル記法*と*コンストラクター*です。
+`RegExp` オブジェクトを生成するには 2 通りの方法があります。「リテラル記法」と「コンストラクター」です。
 
-- _リテラル記法_ はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)が続きます。
-- _コンストラクター関数_ は文字列または `RegExp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
+- 「リテラル記法」はパターンを 2 本のスラッシュで囲み、 2 本目のスラッシュの後にオプションで[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)が続きます。
+- 「コンストラクター関数」は文字列または `RegExp` オブジェクトを最初の引数として取り、オプションの[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)を文字列で 2 番目の引数として取ります。
 
 以下の 3 つの式は、同じ正規表現オブジェクトを生成します。
 
@@ -30,7 +28,7 @@ const re = new RegExp("ab+c", "i"); // 最初の引数に文字列のパター�
 const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラルを渡したコンストラクター
 ```
 
-正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に一致を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://learn.microsoft.com/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
+正規表現は使用できるようになる前に、コンパイルする必要があります。この処理によって、より効率的に照合を行うことができるようになります。この処理の詳細は[ドットネットのドキュメント](https://learn.microsoft.com/ja-jp/dotnet/standard/base-types/compilation-and-reuse-in-regular-expressions)に記載されています。
 
 リテラル記法では、正規表現が評価されるときにコンパイルが行われます。一方、`RegExp` オブジェクトのコンストラクターである `new RegExp('ab+c')` は、実行時に正規表現をコンパイルすることになります。
 
@@ -40,7 +38,7 @@ const re = new RegExp(/ab+c/, "i"); // 最初の引数に正規表現リテラ�
 
 `new RegExp(/ab+c/, flags)` という式は新しい `RegExp` を生成しますが、第 1 引数を元として使用し、第 2 引数で指定された[フラグ](/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索)として使用して生成します。
 
-コンストラクター関数を使用する場合は、通常の文字エスケープ規則（文字列内に特殊文字が含まれるとき、前に `\` を付加する）が必須です。
+コンストラクター関数を使用する場合は、通常の文字エスケープの規則（文字列内に特殊文字が含まれるとき、前に `\` を付加する）が必須です。
 
 例えば、以下 2 つの構文は同等です。
 
@@ -177,15 +175,15 @@ re.exec("bar"); // [ 'bar', index: 0, input: 'bar', groups: undefined ]
 
 ### 正規表現を使用したデータ形式の変更
 
-以下のスクリプトは、 {{jsxref("String.prototype.replace()")}} メソッドを使用して、 _名 姓_ の形式の名前に一致させ、_姓, 名_ の形式で出力します。
+以下のスクリプトは、 {{jsxref("String.prototype.replace()")}} メソッドを使用して、 _名 姓_ の形式の名前で照合し、_姓, 名_ の形式で出力します。
 
 スクリプトでは、置換テキスト中で `$1` と `$2` を使用して、それぞれ対応する正規表現パターンで一致する括弧がキャプチャした結果を指定しています。
 
 ```js
 const re = /(\w+)\s(\w+)/;
 const str = "Maria Cruz";
-const newstr = str.replace(re, "$2, $1");
-console.log(newstr);
+const newStr = str.replace(re, "$2, $1");
+console.log(newStr);
 ```
 
 これは、 `"Cruz, Maria"` と表示します。
@@ -195,8 +193,8 @@ console.log(newstr);
 既定の改行文字は、プラットフォーム (Unix、Windows など) によって異なります。この例で実行する行分割は、あらゆるプラットフォームで動作します。
 
 ```js
-const text = "Some text\nAnd some more\r\nAnd yet\rThis is the end";
-const lines = text.split(/\r\n|\r|\n/);
+const text = "Some text\nAnd some more\r\nAnd yet\nThis is the end";
+const lines = text.split(/\r?\n/);
 console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
 ```
 
@@ -204,13 +202,15 @@ console.log(lines); // [ 'Some text', 'And some more', 'And yet', 'This is the e
 
 ### 複数行で正規表現を使用する
 
+デフォルトでは、`.` 文字は改行に一致しません。改行に一致させるには、`s` フラグ（`dotAll` モード）を使用します。
+
 ```js
 const s = "Please yes\nmake my day!";
 
 s.match(/yes.*day/);
 // null を返す
 
-s.match(/yes[^]*day/);
+s.match(/yes.*day/s);
 // Returns ["yes\nmake my day"]
 ```
 
@@ -252,13 +252,13 @@ global フラグ `g` を付けると、 3 桁だけでなく、 6 桁すべて�
 
 上の表にもある通り、`\w` や `\W` は ASCII 基本文字にのみ一致します。具体的には `a` から `z` 、`A` から `Z` 、 `0` から `9` および `_` です。
 
-キリル語やヘブライ語で使われるような非 ASCII 文字に一致させるには `\uhhhh` 形式 (`hhhh` の部分は 16 進表記の Unicode 値) を使ってください。
+キリル語やヘブライ語で使われるような非 ASCII 文字と照合するには `\uHHHH` 形式（`HHHH` の部分は 16 進表記の Unicode 値）を使ってください。
 
 この例は、文字列全体から Unicode 文字列だけを抜き出す方法を示しています。
 
 ```js
 const text = "Образец text на русском языке";
-const regex = /[\u0400-\u04FF]+/g;
+const regex = /[\u0400-\u04ff]+/g;
 
 const match = regex.exec(text);
 console.log(match[0]); // 'Образец'

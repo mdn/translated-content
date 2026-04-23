@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("declarativeNetRequest.Rule")}} 的 `condition` 属性，用于决定规则是否匹配请求的条件细节。
 
 ## 类型
@@ -47,16 +45,13 @@ l10n:
 - `excludedTabIds` {{optional_inline}}
   - : `number` 数组。规则不匹配的 {{WebExtAPIRef("tabs.Tab")}}.`id` 列表。{{WebExtAPIRef("tabs.TAB_ID_NONE")}} 的 ID 排除不来源于选项卡的请求。仅支持会话范围的规则。
 - `urlFilter` {{optional_inline}}
-
   - : `string`。与网络请求 URL 匹配的模式。支持的结构：
-
     - `*` ：通配符：匹配任意数量的字符。
     - `|` ：左或右锚：如果在模式的任一端使用，则分别指定 URL 的开头或结尾。
     - `||` ：域名锚：如果在模式的开头使用，则指定 URL 的（子）域的开头。
     - `^` ：分隔符字符：这匹配字母、数字或 `_`、`-`、`.`、`%` 之外的任何内容。最后的 `^` 还可以匹配 URL 的结尾，而不是分隔符字符。
 
     `urlFilter` 由以下部分组成：（可选的左/域名锚）+ 模式 +（可选的右锚）。如果省略，则匹配所有 URL。不允许使用空字符串。以 `||*` 开头的模式不允许使用。请使用 `*` 代替。注意：
-
     - 只能指定 `urlFilter` 或 [`regexFilter`](#regexfilter) 其中之一。
     - `urlFilter` 必须仅由 ASCII 字符组成。这与主机编码为[国际化域名编码](https://zh.wikipedia.org/wiki/国际化域名编码)格式的 URL 匹配（在国际化域名的情况下），任何其他非 ASCII 字符都使用 utf-8 进行 URL 编码。例如，当请求 URL 为 `http://abc.рф?q=ф` 时，`urlFilter` 与 URL 为 `http://abc.xn--p1ai/?q=%D1%84` 匹配。
 

@@ -2,12 +2,11 @@
 title: CSS セレクターページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
 
-{{MDNSidebar}}
-
-> **メモ:** _この説明文全体を削除してから公開してください。_
+> [!NOTE]
+> _この説明文全体を削除してから公開してください。_
 >
 > **訳注:** このテンプレートは翻訳記事用です。新たな記事を執筆する場合は、英語版を参照してください。日本語の単独記事を立項することはできません。）
 >
@@ -20,8 +19,8 @@ l10n:
 >
 > ```md
 > ---
-> title: :NameOfTheSelector
-> slug: Web/CSS/:NameOfTheSelector
+> title: :name-of-the-selector
+> slug: Web/CSS/Reference/Selectors/:name-of-the-selector
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -29,10 +28,10 @@ l10n:
 >
 > - **title**
 >   - : タイトルの見出しで、ページの先頭に表示されます。書式は _:NameOfTheSelector_ です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのタイトルは _:hover_ です。
+>     例えば、 {{cssxref(":hover")}} セレクターのタイトルは _:hover_ です。
 > - **slug**
->   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/:NameOfTheSelector` のような書式です。
->     例えば、 [`:hover`](/ja/docs/Web/CSS/:hover) セレクターのスラッグは `Web/CSS/:hover` です。
+>   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。 これは `Web/CSS/Reference/Selectors/:name-of-the-selector` のような書式です。
+>     例えば、 {{cssxref(":hover")}} セレクターのスラッグは `Web/CSS/:hover` です。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -40,7 +39,7 @@ l10n:
 >
 > **ページ先頭のマクロ**
 >
-> コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
+> ページのフロントマターの直後、本文セクションの先頭にいくつかのマクロが現れます。
 > **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
@@ -49,9 +48,6 @@ l10n:
 > - `\{{Non-standard_Header}}` — これは **標準外** バナーを生成し、この機能がどの仕様書にもないことを示します。
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
->
-> - `\{{CSSRef}}`: このマクロはすべての CSS モジュールのランディングページに置く必要があります。ページに記載したタグに応じて、適切な CSS サイドバーを生成します。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
@@ -67,7 +63,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 概要段落 - 始めに、セレクターの名前とそれが何をするのかを説明してください。これはできれば 1 つか 2 つの短い文章にしてください。
 
@@ -80,6 +76,10 @@ l10n:
 `\{{CSSSyntax}}`
 
 _このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+
+## アクセシビリティ
+
+これはオプションの節です。このプロパティを使用する際に開発者が留意すべきアクセシビリティに関するガイドライン、最適な手法、潜在的な問題点を記載してください。また、必要に応じて回避策や解決策を記載することもできます。
 
 ## 例
 
@@ -117,13 +117,8 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
-
-## アクセシビリティの考慮
-
-オプションとして、このセレクターを使用することでアクセシビリティに関わる可能性があることと、それをうまく回避する方法を警告してください。
-リストがない場合、この節は除去してください。
 
 ## 仕様書
 

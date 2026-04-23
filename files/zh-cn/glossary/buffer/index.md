@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 **缓冲区**是物理内存中用于在数据进行转移时临时存放数据的存储区域。
 
 ## 参见

@@ -28,9 +28,7 @@ set(options)
 または
 
 - `options`
-
   - : オブジェクトは次のものを含みます。
-
     - `domain` {{Optional_Inline}}
       - : Cookie のドメインが入った文字列です。
     - `expires` {{Optional_Inline}}
@@ -42,9 +40,7 @@ set(options)
     - `path` {{Optional_Inline}}
       - : Cookie のパスの入った文字列です。
     - `sameSite` {{Optional_Inline}}
-
       - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) のいずれかの値です。
-
         - `"strict"`
           - : Cookie は、ファーストパーティのコンテキストでのみ送信され、サードパーティのウェブサイトによるリクエストと一緒に送信されることはありません
         - `"lax"`

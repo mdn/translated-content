@@ -2,16 +2,16 @@
 title: class
 slug: Web/JavaScript/Reference/Statements/class
 l10n:
-  sourceCommit: 77176b1f35f73f319bb5b959e5c90db8b5a0f9ea
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
 {{jsSidebar("Statements")}}
 
-**`class`** 宣言は、プロトタイプベースの継承を使って、指定された名前の新しいクラスを作成します。
+**`class`** 宣言は、指定された名前の新しい [class](/ja/docs/Web/JavaScript/Reference/Classes) を作成します。
 
-{{jsxref("Operators/class", "クラス式", "", 1)}}を使ってクラスを定義することもで、その場合は再定義やクラス名の省略ができます。同じスコープで**クラス宣言**を同じ名前で行おうとすると、{{jsxref("SyntaxError")}} が発生します。
+{{jsxref("Operators/class", "クラス式", "", 1)}} を使ってクラスを定義できます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Class")}}
+{{InteractiveExample("JavaScript デモ: Statement - Class")}}
 
 ```js interactive-example
 class Polygon {
@@ -27,20 +27,45 @@ console.log(new Polygon(4, 3).area);
 ## 構文
 
 ```js-nolint
-class name [extends otherName] {
+class name {
+  // クラス本体
+}
+class name extends otherName {
   // クラス本体
 }
 ```
 
 ## 解説
 
-クラス式と同様、クラス宣言の内部は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)で実行されます。`constructor` メソッドは省略可能です。
+クラス宣言のクラス本体は [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode) で実行されます。クラス宣言は {{jsxref("Statements/let", "let")}} と非常によく似ています。
 
-クラス宣言は [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) や [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) と同様に動作し、{{Glossary("Hoisting", "巻き上げ")}}が行われません（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)とは異なります）。
+- `class` 宣言は、関数だけでなくブロックにもスコープされます。
+
+- `class` 宣言は、宣言された場所に到達した後にのみアクセスできます（[一時的デッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz) を参照）。このため、`class` 宣言は一般的に [非ホイスティング](/ja/docs/Glossary/Hoisting) とみなされます（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) とは異なります）。
+
+- スクリプトの最上位レベルで宣言された `class` 宣言は、{{jsxref("globalThis")}} にプロパティを作成しません（[関数宣言](/ja/docs/Web/JavaScript/Reference/Statements/function) とは異なります）。
+
+- `class` 宣言は、同じスコープ内の他の宣言によって [再宣言](/ja/docs/Web/JavaScript/Reference/Statements/let#再宣言) できません。
+
+```js
+class Foo {
+  static {
+    Foo = 1; // TypeError: Assignment to constant variable.
+  }
+}
+
+class Foo2 {
+  bar = (Foo2 = 1); // TypeError: Assignment to constant variable.
+}
+
+class Foo3 {}
+Foo3 = 1;
+console.log(Foo3); // 1
+```
 
 ## 例
 
-### 単純なクラス宣言
+### クラス宣言
 
 次の例では、はじめに `Rectangle` という名前のクラスを定義し、次にそれを拡張して `FilledRectangle` という名前のクラスを作成します。
 
@@ -63,24 +88,6 @@ class FilledRectangle extends Rectangle {
   }
 }
 ```
-
-### クラスを二度宣言しようとする
-
-クラス宣言を使って再度クラスを宣言すると、 {{jsxref("SyntaxError")}} が発生します。
-
-```js example-bad
-class Foo {}
-class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-```
-
-クラス式を使って事前にクラスを定義していたときも、同じエラーが発生します。
-
-```js example-bad
-let Foo = class {};
-class Foo {} // Uncaught SyntaxError: Identifier 'Foo' has already been declared
-```
-
-Firefox のウェブコンソール (**ツール** > **ウェブ開発者** > **ウェブコンソール**) などの REPL で実験しているときに、同じ名前のクラス宣言を 2 つの入力で実行すると、同じ再宣言エラーが発生することがあります。この課題については、[Firefox bug 1580891](https://bugzil.la/1580891)で詳しく議論されていますので、ご覧ください。Chrome コンソールでは、異なる REPL 入力間でのクラスの再宣言が可能です。
 
 ## 仕様書
 

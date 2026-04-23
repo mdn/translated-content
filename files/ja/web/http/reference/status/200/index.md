@@ -1,12 +1,9 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Reference/Status/200
-original_slug: Web/HTTP/Status/200
 l10n:
-  sourceCommit: b085d5418eb8ef812682e647045746221bad0e7e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`200 OK`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したことを示します。
 `200 OK` レスポンスは既定でキャッシュ可能です。

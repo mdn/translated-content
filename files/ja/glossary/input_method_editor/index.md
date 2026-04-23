@@ -12,9 +12,7 @@ slug: Glossary/Input_method_editor
 - 手書き文字認識を使用したタッチ画面のテキスト入力
 
 1. Wikipedia の記事
-
    1. [インプットメソッド](https://ja.wikipedia.org/wiki/インプットメソッド)
 
 2. 関連用語:
-
    1. {{Glossary("I18N", "国際化対応")}}

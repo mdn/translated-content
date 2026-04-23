@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e daremos uma visão geral do que torna este framework web especial. Vamos descrever os principais recursos, incluindo algumas das funcionalidades avançadas que não teremos tempo para abordar detalhadamente neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
 
@@ -16,7 +16,7 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
         <p>
           Conhecimentos básicos em computação. Um entendimento geral de
               <a
-                href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
+                href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de
@@ -44,18 +44,16 @@ Django ajuda você a escrever programas que são:
 - Completo
   - : Django segue a filosofia de "baterias incluídas" e fornece quase tudo que desenvolvedores possam querer fazer "fora da caixa". Como tudo o que você precisa é parte de um "produto", tudo funciona perfeitamente junto, seguindo princípios de design consistentes, contando uma extensa e [atualizada documentação](https://docs.djangoproject.com/pt-br/2.1/).
 - Versátil
-
   - : Django pode ser (e tem sido) utilizado para construir quase todo tipo de website - desde sistema de gestão de conteúdo e wikis, passando por redes sociais e sites de notícias. Ele pode trabalhar com qualquer framework do lado do cliente, e pode entregar conteúdo em praticamente qualquer formato (incluindo HTML, feeds RSS, JSON, XML, etc). Esse site que você está lendo agora é baseado em Django.
 
     À medida em que, internamente, fornece opções para quase todo tipo de funcionalidade que você possa querer (por exemplo: vários banco de dados que são populares, motores de template, etc), ele pode também ser extendido para utilizar outros componentes, caso seja necessário.
 
 - Seguro
-
   - : Django ajuda os desenvolvedores a evitar os erros de segurança mais comuns, fornecendo um framework que foi desenhado para "fazer as coisas certas", de modo a proteger o website automaticamente. Por exemplo, Django fornece uma maneira segura de gerenciar as contas dos usuários e suas senhas, evitando erros comuns, tais como colocar informações da sessão em cookies, onde ficam vulneráveis (ao invés disso os cookies contém apenas uma chave e os dados são armazenados no banco de dados), ou armazenar as senhas de forma direta, ao invés de gravar um hash para essas senhas.
 
     _Um hash de senha é um valor fixed-length (tamanho-fixo) criado mandando a senha por uma [cryptographic hash function (função hash criptográfica)](https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_hash_criptogr%C3%A1fica). Django pode checar se uma senha inserida está correta executando ela pela função hash e comparando a saída com o valor hash armazenado. Porém devido a natureza "one-way" ("um-caminho") da função, mesmo que o valor hash armazenado estiver comprometido, é difcil para uma pessoa comentendo um ataque resolver a senha original._
 
-    O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja [Segurança de sites](/pt-BR/docs/Learn/Server-side/First_steps/Website_security) para mais detalhes de tais ataques).
+    O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja [Segurança de sites](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) para mais detalhes de tais ataques).
 
 - Escalável
   - : Django usa uma arquitetura baseada em componentes "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).
@@ -315,4 +313,4 @@ Parabéns, você completou o primeiro passo em sua jornada no Django! Agora voc�
 
 Você já viu algum código real do Django acima, mas, diferentemente do código do lado do cliente, você precisa configurar um ambiente de desenvolvimento para executá-lo. Esse é o nosso próximo passo.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

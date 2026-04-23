@@ -7,11 +7,13 @@ slug: Web/API/SVGGraphicsElement/getBBox
 
 **`SVGGraphicsElement.getBBox()`** 메서드는 객체가 들어가는 가장 작은 직사각형의 좌표를 알아냅니다. 반환되는 좌표는 (목표 요소에 포함된 모든 요소의 모든 기하 특성의 적용 이후의) 현재 SVG 공간에 관련되어 있습니다.
 
-> **참고:** `getBBox()` 는 요소가 아직 렌더링되지 않은 경우일지라도
+> [!NOTE]
+> `getBBox()` 는 요소가 아직 렌더링되지 않은 경우일지라도
 > 반드시 메서드가 호출된 시점에서의 실제 바운딩 박스를 반환해야 합니다.
 > 이 메서드는 또한 요소나 부모 요소에 적용된 어떠한 변형도 고려하지 않습니다.
 
-> **참고:** `getBBox` 는 {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}와
+> [!NOTE]
+> `getBBox` 는 {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}와
 > 다른 값을 반환하는데, {{domxref("Element.getBoundingClientRect()", "getBoundingClientRect()")}}는
 > 뷰포트에 관련된 값을 반환합니다.
 
@@ -24,9 +26,7 @@ let bboxRect = object.getBBox();
 ### 매개변수
 
 - `Options` {{experimental_inline}} {{optional_inline}}
-
   - : 요소의 어떤 부분들이 바운딩 박스에 포함되는지를 제어하는 데 쓰이는 옵션 dictionary. 가능한 옵션은 아래와 같습니다.
-
     - `fill`
       - : fill이 바운딩 박스에 포함되어야 함을 나타내는 boolean 값. 기본 값은 `true` 입니다.
     - `stroke`

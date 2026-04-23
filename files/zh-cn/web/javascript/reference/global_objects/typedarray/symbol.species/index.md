@@ -3,8 +3,6 @@ title: TypedArray[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 ---
 
-{{JSRef}}
-
 **`TypedArray[Symbol.species]`** 静态访问器属性返回用于构造类型化数组方法返回值的构造函数。
 
 ## 语法

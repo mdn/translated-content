@@ -31,9 +31,7 @@ arr.find(callback(element[, index[, array]])[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função executada a cada iteração do array, recebendo três argumentos:
-
     - `element`
       - : O elemento atual que está sendo processado no array.
     - `index`{{optional_inline}}

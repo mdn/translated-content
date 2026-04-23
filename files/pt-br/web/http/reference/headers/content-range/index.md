@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Range
 original_slug: Web/HTTP/Headers/Content-Range
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensagem parcial pertence em uma mensagem completa no corpo.
 
 <table class="properties">
@@ -15,7 +13,7 @@ O cabeçalho de resposta HTTP **`Content-Range`** indica em que lugar uma mensag
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
     <tr>

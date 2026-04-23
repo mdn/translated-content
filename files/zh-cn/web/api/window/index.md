@@ -285,15 +285,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window/animationstart_event", "animationstart")}}
   - : 当一个动画开始时，触发该事件。
 
-### 剪切板事件
-
-- {{domxref("Window/copy_event", "copy")}}
-  - : 当用户通过浏览器的用户界面启动一个复制动作时，触发该事件。也可通过 {{domxref("HTMLElement/copy_event", "oncopy")}} 属性设置。
-- {{domxref("Window/cut_event", "cut")}}
-  - : 当用户通过浏览器的用户界面启动一个剪切动作时，触发该事件。也可通过 {{domxref("HTMLElement/cut_event", "oncut")}} 属性设置。
-- {{domxref("Window/paste_event", "paste")}}
-  - : 当用户通过浏览器的用户界面启动一个粘贴动作时，触发该事件。也可通过 {{domxref("HTMLElement/paste_event", "paste")}} 属性设置。
-
 ### 连接事件
 
 - {{domxref("Window/offline_event", "offline")}}
@@ -366,13 +357,13 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 ### 渐变事件
 
 - {{domxref("Window/transitioncancel_event", "transitioncancel")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)被取消时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)被取消时，触发该事件。
 - {{domxref("Window/transitionend_event", "transitionend")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)完成时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)完成时，触发该事件。
 - {{domxref("Window/transitionrun_event", "transitionrun")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)首次创建时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)首次创建时，触发该事件。
 - {{domxref("Window/transitionstart_event", "transitionstart")}}
-  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)真正开始时，触发该事件。
+  - : 当 [CSS 渐变](/zh-CN/docs/Web/CSS/Guides/Transitions/Using)真正开始时，触发该事件。
 
 ### 已废弃事件
 

@@ -12,7 +12,8 @@ l10n:
 
 ノードを複製すると、固有（インライン）のリスナーを含む、ノードのすべての属性とその値が複製されます。 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使って追加されたイベントリスナーや、要素のプロパティに代入されたイベントリスナー（例: `node.onclick = someFunction`）は複製されません。さらに、 {{HTMLElement("canvas")}} 要素では、描画された画像は複製されません。
 
-> **警告:** `cloneNode()` を使用すると、文書内で要素の ID が重複する可能性があります。
+> [!WARNING]
+> `cloneNode()` を使用すると、文書内で要素の ID が重複する可能性があります。
 >
 > 元のノードに `id` 属性があり、複製を同じ文書に配置する場合は、複製の ID が重複しないように変更してください。
 >
@@ -30,7 +31,6 @@ cloneNode(deep)
 ### 引数
 
 - `deep` {{optional_inline}}
-
   - : `true` の場合、ノードとそのサブツリーは、子ノードの {{domxref("Text")}} にあるテキストも含め複製されます。
 
     `false` の場合、このノードのみが複製されます。

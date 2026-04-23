@@ -25,11 +25,9 @@ Talvez exista um erro de digitação no nome da função? Talvez o objeto no qua
 Existem várias funções internas que precisam de uma função (callback). Você terá que prover uma função para obter esses métodos funcionando corretamente:
 
 - Quando estiver trabalhando com os objetos {{jsxref("Array")}} ou {{jsxref("TypedArray")}}:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Quando estiver trabalhando com os objetos {{jsxref("Map")}} ou {{jsxref("Set")}}:
-
   - {{jsxref("Map.prototype.forEach()")}} e {{jsxref("Set.prototype.forEach()")}}
 
 ## Exemplos

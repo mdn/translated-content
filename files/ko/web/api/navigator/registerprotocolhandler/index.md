@@ -18,7 +18,6 @@ navigator.registerProtocolHandler(protocol, url, title);
 - `protocol`
   - : 웹 사이트가 처리하고자 하는 프로토콜 문자열. 예컨대 SMS 문자 메시지를 처리하고자 한다면 `"sms"`를 전달하세요.
 - `url`
-
   - : 처리기의 URL. **플레이스홀더로 사용할 `%s`를 반드시 포함**해야 합니다. 실제 사용 시, `%s`에는 처리 대상 URL을 [이스케이프 처리](/ko/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)해 대입합니다.
     > [!NOTE]
     > 처리기의 URL은 반드시 `http` 또는 `https` 스킴을 필요로 합니다. 일부 브라우저는 보안상 `https`를 요구하므로 `https`를 사용하는 편이 좋습니다.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Object_basics
 original_slug: Learn/JavaScript/Objects/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 이 글에서는 JavaScript 객체와 관련된 기본적인 문법을 살펴보고 이전 코스에서 학습해서 이미 알고 있는 JavaScript 의 특징들과 우리가 이미 사용하고 있는 기능들이 이미 객체와 관련되어 있다는 사실을 다시 한번 복습할 것입니다.
 
@@ -14,11 +14,11 @@ original_slug: Learn/JavaScript/Objects/Basics
       <th scope="row">사전 지식:</th>
       <td>
         컴퓨터와 관련된 기본지식, HTML 과 CSS, 그리고 JavaScript 에 대한 기본
-        지식 (<a href="/ko/docs/Learn/JavaScript/First_steps"
+        지식 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting"
           >JavaScript 첫걸음</a
         >
         및
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/Learn_web_development/Core/Scripting"
           >JavaScript 구성요소</a
         >
         참조).
@@ -320,4 +320,4 @@ var myNotification = new Notification("Hello!");
 
 다음 장에서는 객체지향(OOP) 이론을 배우고, JavaScript 에서는 객체지향이 어떻게 사용되었는지 알아볼 것입니다.
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

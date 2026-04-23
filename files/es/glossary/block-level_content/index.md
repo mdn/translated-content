@@ -43,7 +43,7 @@ Hay un par de diferencias clave entre los elementos en bloque y elementos en lí
 - Modelo de contenido
   - : En general, los elementos en bloque pueden contener elementos en línea y otros elementos en bloque. Inherente a esta distinción estructural es la idea de que los elementos en bloque crean estructuras "más grandes" que los elementos en línea.
 
-La distinción entre elementos en bloque frente a elementos en línea se utiliza en las especificaciones de HTML hasta la 4.01. En HTML5, esta distinción dual se sustituye por un conjunto más complejo de [categorías de contenido](/es/docs/Web/HTML/Content_categories). La categoría "en bloque" corresponde aproximadamente a la categoría de [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico) en HTML 5, mientras que "en línea" se corresponde con [contenido estático](/es/docs/Web/HTML/Content_categories#Contenido_textual_o_est%C3%A1tico), pero hay categorías adicionales.
+La distinción entre elementos en bloque frente a elementos en línea se utiliza en las especificaciones de HTML hasta la 4.01. En HTML5, esta distinción dual se sustituye por un conjunto más complejo de [categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories). La categoría "en bloque" corresponde aproximadamente a la categoría de [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#contenido_dinámico) en HTML 5, mientras que "en línea" se corresponde con [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#Contenido_textual_o_est%C3%A1tico), pero hay categorías adicionales.
 
 ## Elementos
 
@@ -68,7 +68,6 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("dl") }}
   - : Lista de definición.
 - {{ HTMLElement("fieldset") }}
-
   - : Etiqueta de conjunto de campos.
 
 - {{ HTMLElement("figcaption") }}
@@ -92,7 +91,6 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("main") }}
   - : Engloba el único contenido central del documento.
 - {{ HTMLElement("nav") }}
-
   - : Contiene enlaces de navegación.
 
 - {{ HTMLElement("noscript") }}

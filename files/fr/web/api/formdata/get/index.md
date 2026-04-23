@@ -61,4 +61,4 @@ formData.get("username"); // Renvoie "Chris"
 - [`XMLHTTPRequest`](/fr/docs/Web/API/XMLHttpRequest)
 - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [Utiliser les objets `FormData`](/fr/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
+- [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)

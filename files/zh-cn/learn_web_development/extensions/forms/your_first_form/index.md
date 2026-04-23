@@ -3,7 +3,7 @@ title: 创建我的第一个表单
 slug: Learn_web_development/Extensions/Forms/Your_first_form
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
+{{NextMenu("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms")}}
 
 本系列的一篇文章为你提供了第一次创建 web 表单的经验，包括设计一个简单表单、使用正确的 HTML 表单控件和其他 HTML 元素实现它、通过 CSS 添加一些非常简单的样式，以及如何将数据发送到服务器。稍后我们将在这一章节中更详细地扩展这些主题。
 

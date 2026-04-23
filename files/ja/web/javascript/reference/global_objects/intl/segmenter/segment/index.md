@@ -9,7 +9,7 @@ l10n:
 
 **`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.segment")}}
 
 ```js interactive-example
 const string1 = "Que ma joie demeure";

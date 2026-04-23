@@ -30,7 +30,8 @@ l10n:
 이것은 `window.name`의 의도된 목적이 아니며, 창(window) 간의 정보 공유를 위한 더욱 안전하고 좋은 방법이 있기 때문입니다.
 [`Window.postMessage()`](/ko/docs/Web/API/Window/postMessage)가 바로 그 권장되는 방법입니다.
 
-> **참고:** `window.name`은 `toString` 메서드를 이용해서
+> [!NOTE]
+> `window.name`은 `toString` 메서드를 이용해서
 > 저장되어 있는 모든 값을 문자열 표현으로 변환합니다.
 
 ## 예제

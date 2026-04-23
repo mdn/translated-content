@@ -33,9 +33,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet qui a été mis à jour.
     - `changeInfo`
@@ -44,15 +42,11 @@ Les événements ont trois fonctions :
       - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 
 - `extraParameters`{{optional_inline}}
-
   - : `object`. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur. C'est un objet qui peut avoir une ou plusieurs des propriétés suivantes. Les événements ne seront envoyés que s'ils satisfont à tous les filtres donnés.
-
     - `urls`
       - : `Array`. Un tableau [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Ne déclenchez l'événement que pour les onglets dont la propriété de l'`url` courante correspond à l'un des motifs.
     - `properties`
-
       - : `Array`. un tableau de chaîne de caractères, qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
-
         - "attention"
         - "audible"
         - "discarded"

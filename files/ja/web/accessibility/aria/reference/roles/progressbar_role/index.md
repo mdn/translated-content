@@ -19,7 +19,8 @@ original_slug: Web/Accessibility/ARIA/Roles/progressbar_role
 > [!NOTE]
 > 支援技術は、[aria-valuetext](https://www.w3.org/TR/wai-aria/#aria-valuetext) が指定されていない限り、`aria-valuemin` の値と `aria-valuemax` の値の間の範囲のパーセントとして、`aria-valuenow` の値を一般にレンダリングします。 この計算に適した方法で、`aria-valuemin`、`aria-valuemax`、`aria-valuenow` の値を設定することをお勧めします。
 
-> **メモ:** `progressbar` ロールを持つ要素の暗黙の [`aria-readonly`](https://www.w3.org/TR/wai-aria/#aria-readonly) の値は `true` です。
+> [!NOTE]
+> `progressbar` ロールを持つ要素の暗黙の [`aria-readonly`](https://www.w3.org/TR/wai-aria/#aria-readonly) の値は `true` です。
 
 ## ユーザーエージェントと支援技術への影響
 

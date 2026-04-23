@@ -122,7 +122,8 @@ slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 
 一個使用者習慣更深層的分析，可以使用在預測他的興趣以及更進一步客製回應與提醒，例如在地圖中提供你可能想去看得過去遊歷過的或是熱門的地點列表。
 
-> **備註：** [Google Maps](https://maps.google.com/) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
+> [!NOTE]
+> [Google Maps](https://maps.google.com/) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
 >
 > Google search results are optimized based on previous searches.
 >

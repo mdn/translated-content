@@ -59,7 +59,6 @@ function myFunction() {
 ## 参见
 
 - 有关的事件处理器
-
   - {{domxref("Element.click_event", "Element.onclick")}}
   - {{domxref("Element.dblclick_event", "Element.ondblclick")}}
   - {{domxref("Element.auxclick_event", "Element.onauxclick")}}

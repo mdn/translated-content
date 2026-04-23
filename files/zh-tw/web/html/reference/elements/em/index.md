@@ -3,8 +3,6 @@ title: <em>：強調元素
 slug: Web/HTML/Reference/Elements/em
 ---
 
-{{HTMLSidebar}}
-
 **`<em>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於標記具有強調重點的文字。`<em>` 元素可以進行嵌套，每個嵌套層級表示更大程度的強調。
 
 {{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}

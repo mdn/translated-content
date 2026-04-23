@@ -2,10 +2,10 @@
 title: FileSystemFileHandle.getFile()
 slug: Web/API/FileSystemFileHandle/getFile
 l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+  sourceCommit: e97f7ef524c21300c65b5089139de89a42bd79e2
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System Access API")}}{{AvailableInWorkers}}
 
 {{domxref("FileSystemFileHandle")}} インターフェイスの **`getFile()`** メソッドは、ハンドルが表すエントリーのディスク上の状態を表す {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 
@@ -25,10 +25,12 @@ getFile()
 
 {{domxref('File')}} オブジェクトで解決する {{jsxref('Promise')}} を返します。
 
-### 例
+### 例外
 
-- NotAllowedError
+- `NotAllowedError` {{domxref("DOMException")}}
   - : 読み込みモードの {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : ファイルが見つからない場合に投げられます。
 
 ## 例
 

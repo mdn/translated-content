@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-Match
 original_slug: Web/HTTP/Headers/If-Match
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`If-Match`** リクエストヘッダーは、リクエストを条件付きにします。 {{HTTPMethod("GET")}} および {{HTTPMethod("HEAD")}} メソッドの場合、リストされた `ETag` のいずれかと一致する場合にのみ、サーバーは要求されたリソースを返します。{{HTTPMethod("PUT")}} と他の安全ではないメソッドでは、この場合のみリソースをアップロードします。
 
 格納された {{HTTPHeader("ETag")}} との比較では、*強い比較アルゴリズム*を使用、つまり二つのファイルがバイト単位で同一である場合のみ同一とみなします。列挙された `ETag` に `W/` 接頭辞がついている場合は弱いエンティティタグであることを示し、この比較アルゴリズムでの比較は行われません。

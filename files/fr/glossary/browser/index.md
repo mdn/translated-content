@@ -1,22 +1,30 @@
 ---
-title: Navigateur
+title: Navigateur (Browser)
 slug: Glossary/Browser
+l10n:
+  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
 ---
 
-{{GlossarySidebar}}
+Un **navigateur web** ou **navigateur** est un programme qui récupère et affiche des pages du {{Glossary("World Wide Web", "web")}}, et permet aux utilisateur·ice·s d'accéder à d'autres pages via des {{Glossary("hyperlink", "liens hypertexte")}}. Un navigateur est le type de {{Glossary("user agent", "agent utilisateur")}} le plus courant. Il utilise un {{Glossary("Engine/Rendering", "moteur de rendu")}} pour afficher les pages web.
 
-Un _navigateur internet_ est un programme informatique qui reçoit et affiche les pages du {{Glossary("World Wide Web","Web")}}, et permet aux utilisateurs d'accéder à d'autres pages au travers d'{{Glossary("hyperlink","hyperliens")}}.
+Parmi les navigateurs courants&nbsp;:
+
+- {{Glossary("Apple Safari")}}
+- {{Glossary("Google Chrome")}}
+- {{Glossary("Microsoft Edge")}} (remplace {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}})
+- {{Glossary("Mozilla Firefox")}}
+- {{Glossary("Opera Browser")}}
 
 ## Voir aussi
 
-### Connaissances générales
-
 - [Navigateur web](https://fr.wikipedia.org/wiki/Navigateur_web) sur Wikipédia
-- [L'évolution du Web](http://www.evolutionoftheweb.com/)
-
-### Télécharger un navigateur
-
-- [Mozilla Firefox](https://www.mozilla.org/fr/firefox/desktop/)
-- [Google Chrome](https://www.google.fr/intl/fr/chrome/browser/desktop/index.html)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
-- [Navigateur Opera](https://www.opera.com/fr)
+- En-tête de requête HTTP&nbsp;: {{HTTPHeader("User-agent")}}
+- Liens de téléchargement des navigateurs&nbsp;:
+  - [Apple Safari](https://www.apple.com/fr/safari/) (Safari n'est pas un navigateur téléchargeable)
+  - [Google Chrome](https://www.google.com/chrome/)
+  - [Microsoft Edge](https://www.microsoft.com/fr-fr/edge)
+  - [Mozilla Firefox](https://www.firefox.com/fr/)
+  - [Opera](https://www.opera.com/fr)
+- Termes associés du glossaire&nbsp;:
+  - {{Glossary("Engine/Rendering", "Moteur de rendu")}}
+  - {{Glossary("User agent", "Agent utilisateur")}}

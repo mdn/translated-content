@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 59 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -29,7 +27,7 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 - "unusual elements" (置換要素のように、CSS のボックスの概念に従って描画されない要素) で {{cssxref("display")}} の値に `contents` を指定したときの動作を、仕様書に従って更新しました ([Firefox バグ 1427292](https://bugzil.la/1427292))。仕様で定められた正確な動作については、[Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) をご覧ください。
 - {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ([Firefox バグ 975644](https://bugzil.la/975644))。
 - {{cssxref("&lt;color&gt;")}} 値 (`rgb()`, `rgba()`, `hsl()`, `hsla()`) で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 984021](https://bugzil.la/984021))。
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
+- [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
 - {{cssxref("@document")}} @-規則の使用を、ユーザースタイルシートと UA スタイルシートに限定しました ([Firefox バグ 1035091](https://bugzil.la/1035091))。
 - {{cssxref("font-optical-sizing")}} プロパティを実装しました ([Firefox バグ 1435692](https://bugzil.la/1435692))。
 
@@ -140,19 +138,16 @@ SMIL の `accessKey` 機能のサポートを廃止しました ([Firefox バグ
 ### WebExtensions
 
 - [Theme](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) の更新:
-
   - 新しいプロパティ: `colors.background_tab_text`, `colors.toolbar_field_border`
   - すべての色関連プロパティで、Chrome 形式の配列と CSS の色の値の両方をサポートしました。
 
 - 新しい [ブラウザー設定](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
-
   - [`contextMenuShowEvent`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
   - [`openBookmarksInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
   - [`openSearchResultsInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
   - [`proxyConfig`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
 
 - 新しい [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) の API:
-
   - [`tabs.captureTab()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab)
   - [`tabs.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
@@ -160,13 +155,11 @@ SMIL の `accessKey` 機能のサポートを廃止しました ([Firefox バグ
 - [`contextMenus`](/ja/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API で ["bookmark" コンテキスト](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) をサポートしました。
 - 新しい [`contentScripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API で、ランタイムがコンテンツスクリプトを登録できます。
 - 新しい [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) の API:
-
   - `browserAction/pageAction/sidebarAction.set*` 関数で、変更を元に戻すための `null` をサポートしました。
   - [`browserAction.isEnabled()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown) , [`sidebarAction.isOpen()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) 関数。
 
 - デフォルトでページアクションを表示するための、[`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) の新しいオプション。
 - `protocol_handers` の新しい値:
-
   - Secure Scuttlebutt 通信のための "ssb"
   - DATproject のための "dat"
   - IPFS のための "ipfs", "ipns", "dweb"

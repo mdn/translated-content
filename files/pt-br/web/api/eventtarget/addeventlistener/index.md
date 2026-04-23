@@ -25,7 +25,8 @@ alvo.addEventListener(type,listener[, useCapture, wantUntrusted {{ Non-standard_
 - `wantsUntrusted` {{ Non-standard_inline() }}
   - : Se `true`, o evento pode ser acionado por conteúdo não-confiável. Veja [Interação entre páginas com e sem privilégios](/pt-BR/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages).
 
-> **Nota:** `useCapture` tornou-se opcional somente nas versões mais recentes dos principais navegadores; não era opcional antes do Firefox 6, por exemplo. Você deve especificar esse parâmetro para obter uma maior compatibilidade.
+> [!NOTE]
+> `useCapture` tornou-se opcional somente nas versões mais recentes dos principais navegadores; não era opcional antes do Firefox 6, por exemplo. Você deve especificar esse parâmetro para obter uma maior compatibilidade.
 
 ## Exemplo
 

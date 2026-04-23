@@ -1,23 +1,20 @@
 ---
-title: Selection.anchorNode
+title: Selection：anchorNode 属性
+short-title: anchorNode
 slug: Web/API/Selection/anchorNode
+l10n:
+  sourceCommit: 23de2280422ab52460507ff831915a08bb043d8e
 ---
 
-{{ApiRef}}
+{{ ApiRef("DOM") }}
 
-## 概述
+**`Selection.anchorNode`** 只读属性返回选区开始所在的 {{domxref("Node")}}。如果文档中从未产生过选区（例如 iframe 从未被点击，或该节点属于另一个文档树），则可能返回 `null`。
 
-**`Selection.anchorNode`** 只读属性返回选区开始位置所属的节点（{{domxref("Node")}}）。
+用户可以从左到右（文档顺序）或从右到左（文档顺序的反向）进行选取。锚点是用户开始选取的位置。你可以按住 <kbd>Shift</kbd> 键并使用键盘上的方向键来直观地观察这一点：选区的锚点不会移动，而选区的另一端焦点会移动。
 
-## 语法
+## 值
 
-```plain
-sel.anchorNode
-```
-
-## 注意
-
-用户可能从左至右进行框选（沿着文字顺序）或者从右至左框选（沿着文字顺序的反方向）。锚点位于用户开始选择的位置。可以通过按住 Shift 和方向键来得知锚点所在的位置。选区的锚点是不会移动的，但是选区的焦点、选区其他的结束位置（多个选区，译者注）可以移动。
+{{domxref("Node")}} 对象或 `null`。
 
 ## 规范
 
@@ -27,6 +24,7 @@ sel.anchorNode
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("Selection")}}, 此属性所属接口。
+- {{domxref("Selection")}}
+- {{domxref("Selection.focusNode")}}

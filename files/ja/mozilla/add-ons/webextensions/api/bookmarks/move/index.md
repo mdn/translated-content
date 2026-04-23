@@ -22,18 +22,14 @@ browser.bookmarks.move(
 - `id`
   - : 移動させるブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
 - `destination`
-
   - : ブックマークの移動先を表す {{jsxref("object")}} です。このオブジェクトには以下のプロパティが必ず 1 つ以上含まれます。
-
     - `parentId` {{optional_inline}}
       - : 移動先フォルダーの ID を指定する {{jsxref("string")}} です。この値が省略された場合、現在と同じフォルダー内の新しい場所へ移動されます。
     - `index` {{optional_inline}}
       - : 移動先フォルダー内における位置を指定する 0 起点のインデックスです。値が 0 の場合、そのフォルダーの先頭に移動されます。値が省略された場合、新しい親フォルダー内の最後に移動されます。
 
 - `callback` {{optional_inline}}
-
   - : 移動が終了した際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
-
     - `result`
       - : 移動された新しいノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}
 
@@ -70,7 +66,7 @@ function moveToFolder(bookmarkId, destinationId) {
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium `の`[`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-move) API に基づいています。また、このドキュメント は [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードから作成されています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

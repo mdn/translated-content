@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
 
 초창기 웹에는 텍스트만 있었고 꽤 지루했습니다. 다행히도 웹 페이지 안에 이미지 (및 보다 흥미로운 유형의 컨텐츠)를 삽입하는 기능이 추가되기까지는 오래 걸리지 않았습니다. 고려해 볼 수 있는 다른 유형의 멀티미디어가 있지만 단순한 이미지를 웹 페이지에 삽입하는 데 사용되는 {{htmlelement("img")}} 요소로 쉽게 시작해 보겠습니다. 이 글에서는 기초 내용부터 심층적으로 사용하는 방법, {{htmlelement("figure")}}를 사용하여 캡션을 주석으로 추가하는 방법, {{glossary("CSS")}} 배경 이미지와 관련된 사용 방법을 자세히 설명합니다.
 
@@ -22,10 +22,10 @@ l10n:
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 지식 숙지 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >HTML 시작하기</a
         >에서 설명)
       </td>
@@ -83,7 +83,8 @@ l10n:
 
 ![브라우저에 임베드된 공룡의 기본 이미지와 그 위에 "HTML로 된 이미지"라고 쓰여 있습니다.](basic-image.png)
 
-> **참고:** {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에서 확인할 수 있습니다.
+> [!NOTE]
+> {{htmlelement("img")}} 와 {{htmlelement("video")}} 와 같은 요소들을 대체 요소라고 하기도 합니다. 그 이유는 요소의 내용과 크기가 요스 그 자체가 아니라, 외부적인 요소(이미지나 비디오)에 의해 결정되기 때문입니다. 이에 대한 자세한 내용은 [대체 요소](/ko/docs/Web/CSS/Guides/Images/Replaced_element_properties)에서 확인할 수 있습니다.
 
 > [!NOTE]
 > 완성된 예제들을 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)에서 확인하실 수 있습니다. ([source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)도 참고하세요.)
@@ -125,7 +126,7 @@ l10n:
 
 ### 너비와 높이
 
-[`width`](/ko/docs/Web/HTML/Element/img#width) 및 [`height`](/ko/docs/Web/HTML/Element/img#height) 속성을 사용하여 이미지의 너비와 높이를 지정할 수 있습니다. 이들은 단위 없이 정수로 제공되며, 픽셀 단위로 이미지의 너비와 높이를 나타냅니다.
+[`width`](/ko/docs/Web/HTML/Reference/Elements/img#width) 및 [`height`](/ko/docs/Web/HTML/Reference/Elements/img#height) 속성을 사용하여 이미지의 너비와 높이를 지정할 수 있습니다. 이들은 단위 없이 정수로 제공되며, 픽셀 단위로 이미지의 너비와 높이를 나타냅니다.
 
 여러 방법으로 이미지의 너비와 높이를 찾을 수 있습니다. 예를 들어, Mac에서는 이미지 파일의 표시 정보를 얻기 위해 <kbd>Cmd</kbd> + <kbd>I</kbd>를 사용할 수 있습니다. 우리의 예제로 돌아가서, 우리는 다음과 같이 할 수 있습니다.
 
@@ -454,7 +455,7 @@ Copyleft 라이선스들은 소프트웨어 세계에서 두드러집니다. 기
 {{htmlelement("figcaption")}} 요소는 브라우저와 보조 기술에게 캡션이 {{htmlelement("figure")}} 요소의 다른 컨텐츠를 설명한다고 알려줍니다.
 
 > [!NOTE]
-> 접근성의 관점에서, 캡션과 [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 다른 역할을 합니다. 캡션은 이미지를 볼 수 있는 사람들에게도 도움이 되지만, [`alt`](/ko/docs/Web/HTML/Element/img#alt) 텍스트는 이미지가 없을 때와 같은 기능을 제공합니다. 따라서, 캡션과 `alt` 텍스트는 같은 것을 말해서는 안 됩니다. 왜냐하면 이미지가 없을 때 둘 다 나타나기 때문입니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요.
+> 접근성의 관점에서, 캡션과 [`alt`](/ko/docs/Web/HTML/Reference/Elements/img#alt) 텍스트는 다른 역할을 합니다. 캡션은 이미지를 볼 수 있는 사람들에게도 도움이 되지만, [`alt`](/ko/docs/Web/HTML/Reference/Elements/img#alt) 텍스트는 이미지가 없을 때와 같은 기능을 제공합니다. 따라서, 캡션과 `alt` 텍스트는 같은 것을 말해서는 안 됩니다. 왜냐하면 이미지가 없을 때 둘 다 나타나기 때문입니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요.
 
 figure는 이미지일 필요가 없습니다. figure는 다음과 같은 독립적인 컨텐츠 단위입니다.
 
@@ -617,7 +618,8 @@ p {
 
 요약하기: 이미지가 의미가 있다면, 콘텐츠 관점에서, HTML 이미지를 사용해야 합니다. 이미지가 순전히 장식이라면, CSS 배경 이미지를 사용해야 합니다.
 
-> **참고:** [CSS 배경 이미지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 주제에서 더 자세히 배울 수 있습니다.
+> [!NOTE]
+> [CSS 배경 이미지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 주제에서 더 자세히 배울 수 있습니다.
 
 ## 스킬을 테스트 하세요!
 
@@ -627,4 +629,4 @@ p {
 
 여기까지입니다. 이미지와 캡션에 대해 자세히 알아보았습니다. 다음 기사에서는 웹 페이지에 [비디오와 오디오 콘텐츠](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)를 삽입하는 방법에 대해 알아보겠습니다.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}

@@ -2,10 +2,8 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器希望關閉這個未使用的連接。408 在一些伺服器上發送，_即使用戶端沒有任何先前的請求也會這樣_。
 

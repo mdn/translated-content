@@ -17,9 +17,7 @@ new WebAssembly.Table(tableDescriptor);
 ### 引数
 
 - _tableDescriptor_
-
   - : 以下のメンバーを含むことができるオブジェクトです。
-
     - _element_
       - : 文字列で、テーブルに格納される値の型を表します。現時点では、 `"anyfunc"` (関数) の値のみを取ることができます。
     - _initial_
@@ -55,7 +53,7 @@ var importObj = {
 };
 ```
 
-最終的に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みインスタンス化します。 table2.wasm モジュールには 2 つの関数 (1 つは 42 を返し、もう 1 つは 83 を返す) が入っており、それぞれをインポートされたテーブルの要素 0 と 1 に格納します。 ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)をご覧ください)。インスタンス化した後で、テーブルは長さは 2 のままですが、要素には呼び出し可能な<a href="/ja/docs/WebAssembly/Exported_functions">エクスポートされた WebAssembly 関数</a>が入り、 JS から呼び出せるようになりました。
+最終的に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みインスタンス化します。 table2.wasm モジュールには 2 つの関数 (1 つは 42 を返し、もう 1 つは 83 を返す) が入っており、それぞれをインポートされたテーブルの要素 0 と 1 に格納します。 ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)をご覧ください)。インスタンス化した後で、テーブルは長さは 2 のままですが、要素には呼び出し可能な<a href="/ja/docs/WebAssembly/Guides/Exported_functions">エクスポートされた WebAssembly 関数</a>が入り、 JS から呼び出せるようになりました。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(

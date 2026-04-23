@@ -30,7 +30,7 @@ null;
 
 ## Description
 
-La valeur `null` est un littéral (et non pas une propriété de l'objet global telle que {{jsxref("undefined")}}). Dans certaines API, `null` est souvent utilisé en valeur de retour lorsqu'un objet est attendu mais qu'aucun objet ne convient. Lors de tests d'égalité avec `null` ou `undefined`, il faut faire attention aux [différences entre les opérateurs d'égalité faible (==) et stricte (===)](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) (on aura une conversion de type avec le premier).
+La valeur `null` est un littéral (et non pas une propriété de l'objet global telle que {{jsxref("undefined")}}). Dans certaines API, `null` est souvent utilisé en valeur de retour lorsqu'un objet est attendu mais qu'aucun objet ne convient. Lors de tests d'égalité avec `null` ou `undefined`, il faut faire attention aux [différences entre les opérateurs d'égalité faible (==) et stricte (===)](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) (on aura une conversion de type avec le premier).
 
 ```js
 // toto n'existe pas, n'a pas été défini et n'a jamais été initialisé

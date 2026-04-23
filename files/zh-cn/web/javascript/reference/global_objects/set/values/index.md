@@ -3,8 +3,6 @@ title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`values()`** 方法返回一个新的[_集合迭代器_](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)对象，该对象包含此集合对象中每个元素的值，按插入顺序排列。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.values")}}

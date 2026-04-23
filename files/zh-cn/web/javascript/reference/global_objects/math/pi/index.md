@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
 
-{{JSRef}}
-
 **`Math.PI`** 静态数据属性表示圆的周长与直径的比例，其值约为 3.14159。
 
 {{InteractiveExample("JavaScript Demo: Math.PI")}}

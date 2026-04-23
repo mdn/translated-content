@@ -52,7 +52,7 @@ input.addEventListener("keypress", (e) => {
 - `charCode` は {{domxref("Element/keydown_event", "keydown")}} と {{domxref("Element/keyup_event", "keyup")}} イベントで設定されることはありません。これらのケースでは、代わりに `keyCode` が設定されます。
 - `keyCode` と `charCode` のどちらに格納されていたとしても、キーのコードを取得するには、{{ domxref("UIEvent.which", "which") }} プロパティを参照してください。
 - IME から入力された文字は `keyCode` や `charCode` を通して登録されません。
-- 特定のキーに関連付けられた `charCode` 値のリストについては、[例 7: イベントオブジェクトのプロパティを表示する](/ja/docs/Web/API/Document_Object_Model/Examples#例_7_イベントオブジェクトのプロパティの表示)を実行して、結果の HTML の表を表示してみてください。
+- 特定のキーに関連付けられた `charCode` 値のリストについては、[例 7: イベントオブジェクトのプロパティを表示する](/ja/docs/Web/API/Document_Object_Model#イベントオブジェクトのプロパティの表示)を実行して、結果の HTML の表を表示してみてください。
 
 ## 仕様書
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
-
 [**Flash**](https://zh.wikipedia.org/wiki/Adobe_Flash) 是一项由 Adobe 开发的目前*已经过时*的技术，用于呈现富 Web 应用程序、多媒体内容和流媒体。通过使用 Flash Player {{glossary("plugin", "插件")}}，Flash 可以在 Web {{glossary("browser", "浏览器")}}中使用。该插件可用于大多数桌面和移动平台，直到 2021 年结束它的生命周期。
 
 ## 参见

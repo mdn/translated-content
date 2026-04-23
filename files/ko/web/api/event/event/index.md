@@ -5,7 +5,7 @@ slug: Web/API/Event/Event
 
 {{APIRef("DOM")}}
 
-**`Event()`** 생성자는 새로운 {{domxref("Event")}} 객체를 생성합니다. 생성자로 생성한 이벤트는 브라우저가 생성하는 이벤트와 구분해서 합성 이벤트(synthetic event)라고 부르며, [스크립트에서 발송할 수 있습니다](/ko/docs/Web/Events/Creating_and_triggering_events).
+**`Event()`** 생성자는 새로운 {{domxref("Event")}} 객체를 생성합니다. 생성자로 생성한 이벤트는 브라우저가 생성하는 이벤트와 구분해서 합성 이벤트(synthetic event)라고 부르며, [스크립트에서 발송할 수 있습니다](/ko/docs/Web/API/Document_Object_Model/Events).
 
 ## 구문
 
@@ -55,4 +55,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [이벤트 생성 및 발동](/ko/docs/Web/Events/Creating_and_triggering_events)
+- [이벤트 생성 및 발동](/ko/docs/Web/API/Document_Object_Model/Events)

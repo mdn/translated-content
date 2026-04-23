@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Guides")}}
 
 これで MathML の概要を理解していただけたと思いますので、次は MathML 数式の構成要素として使用するテキストコンテナー（変数、数値、演算子...）に焦点を移します。
 
@@ -158,7 +158,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
 
-> **メモ:** [MathML Core のこの表](https://w3c.github.io/mathml-core/#italic-mappings)は、斜体化の指定された文字の完全なリストと、それに対応する斜体文字を提供しています。
+> [!NOTE]
+> [MathML Core のこの表](https://w3c.github.io/mathml-core/#italic-mappings)は、斜体化の指定された文字の完全なリストと、それに対応する斜体文字を提供しています。
 
 ## \<mi> の自動的なイタリック化の取り消し
 
@@ -449,4 +450,4 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 - [`<mo>` 要素](/ja/docs/Web/MathML/Reference/Element/mo)
 - [`<mtext>` 要素](/ja/docs/Web/MathML/Reference/Element/mtext)
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Guides")}}

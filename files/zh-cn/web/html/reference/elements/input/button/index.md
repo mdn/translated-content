@@ -3,8 +3,6 @@ title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 ---
 
-{{HTMLSidebar}}
-
 **`button`** 类型的 {{htmlelement("input")}} 元素被渲染为简单的按钮，可以根据需要对其进行编程，可以为其分配一个事件处理函数（通常为 {{domxref("Element/click_event", "click")}} 事件），以控制网页上的任何地方的自定义功能。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
@@ -46,7 +44,8 @@ slug: Web/HTML/Reference/Elements/input/button
 }
 ```
 
-> **备注：** `button` 类型的 `<input>` 元素仍然是合法的 HTML 代码，但是新的 {{HTMLElement("button")}} 元素是创建按钮的更好的方式。鉴于 {{HTMLElement("button")}} 的标签文字可以插入至开闭标签之间，你可以在标签中包含 HTML 代码，甚至是图像。
+> [!NOTE]
+> `button` 类型的 `<input>` 元素仍然是合法的 HTML 代码，但是新的 {{HTMLElement("button")}} 元素是创建按钮的更好的方式。鉴于 {{HTMLElement("button")}} 的标签文字可以插入至开闭标签之间，你可以在标签中包含 HTML 代码，甚至是图像。
 
 ## 值
 

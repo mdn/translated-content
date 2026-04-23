@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b1eab9d32f4b769d1d78b87a1fec8aed084cf86
 ---
 
-{{GlossarySidebar}}
-
 在{{glossary("cryptography", "密码学")}}领域，**密码算法**是一种可以{{glossary("encryption", "加密")}}{{glossary("Plaintext","明文")}}使其不可读，且能够{{glossary("decryption", "解密")}}回明文的算法。
 
 在信息时代很久以前，密码算法就已经很常见了（例如[替换密码算法](https://zh.wikipedia.org/wiki/替换式密码)和[移位密码算法](https://zh.wikipedia.org/zh-cn/古典密码#移位式密码)），但是它们之中除了[一次性密码本算法](https://zh.wikipedia.org/zh-cn/一次性密码本)以外，其他的均不满足密码学上的安全性。
@@ -25,7 +23,6 @@ l10n:
 - 维基百科上的[密码](https://zh.wikipedia.org/zh-cn/密码)词条
 - [加密与解密](/zh-CN/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN 术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
   - {{Glossary("Ciphertext","密文")}}
   - {{Glossary("Cipher suite", "密码套件")}}

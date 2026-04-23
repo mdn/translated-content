@@ -1,37 +1,38 @@
 ---
-title: CustomEvent()
+title: CustomEvent：CustomEvent() 建構子
 slug: Web/API/CustomEvent/CustomEvent
+l10n:
+  sourceCommit: 14aec55e57117d0dc4a916112e23d310908e9937
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-`CustomEvent()` constructor 可用來建立 {{domxref("CustomEvent")}}物件。
+**`CustomEvent()`** 建構子用於建立新的 {{domxref("CustomEvent")}} 物件。
 
 ## 語法
 
-```javascript
-new CustomEvent(type);
-new CustomEvent(type, options);
+```js-nolint
+new CustomEvent(type)
+new CustomEvent(type, options)
 ```
 
 ### 參數
 
 - `type`
-  - : 一個 {{domxref("DOMString")}} 用來表示事件名稱。
-- `options`{{optional_inline}}
-  - : 一個繼承自{{domxref("Event/Event", "Event()")}}的參數，其類型為 object。它有以下參數
+  - : 一個字串，用於提供事件名稱。事件名稱區分大小寫。
+- `options` {{optional_inline}}
+  - : 一個物件，_除了 {{domxref("Event/Event", "Event()")}} 定義的屬性之外_，還可以包含以下屬性：
     - `detail` {{optional_inline}}
-      - : 用來表示事件相關的資訊。它能藉由 {{domxref("CustomEvent.detail")}} 屬性來取得值。
-        其默認值為`null`。
+      - : 一個與事件相關的值。可以透過事件處理器中的 {{domxref("CustomEvent.detail")}} 屬性來存取此值。預設為 `null`。
 
-## 回傳值
+### 回傳值
 
-一個 {{domxref("CustomEvent")}} 物件。
+一個新的 {{domxref("CustomEvent")}} 物件。
 
 ## 範例
 
-```javascript
-// create custom events
+```js
+// 建立自訂事件
 const catFound = new CustomEvent("animalfound", {
   detail: {
     name: "cat",
@@ -42,52 +43,30 @@ const dogFound = new CustomEvent("animalfound", {
     name: "dog",
   },
 });
-// add an appropriate event listener
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
-// dispatch the events
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
-// "cat" and "dog" logged in the console
+
+const element = document.createElement("div"); // 建立一個 <div> 元素
+
+// 新增事件監聽器
+element.addEventListener("animalfound", (e) => console.log(e.detail.name));
+
+// 觸發事件
+element.dispatchEvent(catFound);
+element.dispatchEvent(dogFound);
+
+// 控制台會輸出「cat」和「dog」
 ```
 
-可於 [Creating and triggering events](/zh-TW/docs/Web/Events/Creating_and_triggering_events) 找到更多範例。
+更多範例請參見[建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)。
 
-## 規格
+## 規範
 
 {{Specifications}}
 
-## 瀏覽器支援度
+## 瀏覽器相容性
 
 {{Compat}}
 
-## 其他
-
-### 添加額外參數
-
-在 Internet Explorer 9 或更高的版本，你可以用以下的方法給
-`CustomEvent()` constructor 添加額外參數
-
-```javascript
-(function () {
-  function CustomEvent(event, params) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent("CustomEvent");
-    evt.initCustomEvent(
-      event,
-      params.bubbles,
-      params.cancelable,
-      params.detail,
-    );
-    return evt;
-  }
-
-  CustomEvent.prototype = window.Event.prototype;
-
-  window.CustomEvent = CustomEvent;
-})();
-```
-
-## 延伸閱讀
+## 參見
 
 - {{domxref("CustomEvent")}}
-- [Creating and triggering events](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- [建立與觸發事件](/zh-TW/docs/Web/API/Document_Object_Model/Events)

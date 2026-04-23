@@ -57,7 +57,6 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 
 - `action`: 提交表單時，要發送數據以進行處理的資源/ URL。如果未設置（或設置為空字符串），則表單將提交回當前頁面 URL。
 - `method`: 用於發送數據的 HTTP 方法：`POST` 或 `GET`。
-
   - `POST` 方法。如果數據將導致服務器數據庫的更改，則始終應該使用 `POST`方法，因為這更加可以抵抗跨站點偽造請求攻擊。
   - `GET` 方法只應用於不更改用戶數據的表單（例如，搜索表單）。當你希望能夠為 URL 添加書籤或共享時，建議使用此選項。
 
@@ -72,7 +71,6 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 如上圖所示，構成處理代碼所需要做的主要是：
 
 1. 在用戶第一次請求時顯示默認表單。
-
    - 表單可能包含空白字段（例如，如果你正在創建新記錄），或者可能預先填充了初始值（例如，如果你要更改記錄，或者俱有有用的默認初始值）。
 
 2. 接收用戶提交的數據，通常是在 HTTP `POST`請求中。

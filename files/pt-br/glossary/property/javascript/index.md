@@ -19,4 +19,4 @@ Uma propriedade tem nome (uma {{glossary("string")}}) e um valor ({{glossary("pr
 ### Conhecimento geral
 
 - [Property (programming)](<https://pt.wikipedia.org/wiki/Propriedade_(programação)>) on Wikipedia
-- [Introdução a objetos em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects)
+- [Introdução a objetos em JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

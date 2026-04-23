@@ -3,8 +3,6 @@ title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 ---
 
-{{JSRef}}
-
 **`RangeError`**物件在一個給定的值不在允許的集合或範圍內時被作為一個錯誤拋出
 
 ## 語法

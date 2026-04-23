@@ -1,11 +1,10 @@
 ---
 title: Math.acos()
+short-title: acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 l10n:
   sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
 ---
-
-{{JSRef}}
 
 **`Math.acos()`** は静的メソッドで、引数として与えた数値の逆余弦（アークコサイン）をラジアン単位で返します。すなわち次の通りです。
 
@@ -15,19 +14,19 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+{{InteractiveExample("JavaScript デモ: Math.acos()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 直角三角形の角度をラジアンで計算する
 function calcAngle(adjacent, hypotenuse) {
   return Math.acos(adjacent / hypotenuse);
 }
 
 console.log(calcAngle(8, 10));
-// Expected output: 0.6435011087932843
+// 予想される結果: 0.6435011087932843
 
 console.log(calcAngle(5, 3));
-// Expected output: NaN
+// 予想される結果: NaN
 ```
 
 ## 構文

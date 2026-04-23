@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
-
 **`<video>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于在文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。
 
 {{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
@@ -34,7 +32,6 @@ l10n:
 类似于所有其他 HTML 元素，此元素也支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
-
   - : 一个布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
     > [!NOTE]
@@ -47,7 +44,6 @@ l10n:
 - `controls`
   - : 如果存在该属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量、拖动进度、暂停或恢复播放。
 - `controlslist`
-
   - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性会帮助浏览器选择在控制面板上显示哪些 `video` 元素控件。
 
     允许的值有 `nodownload`、`nofullscreen` 和 `noremoteplayback`。
@@ -55,13 +51,10 @@ l10n:
     如果要禁用画中画模式（和控件），请使用 [`disablepictureinpicture`](#disablepictureinpicture) 属性。
 
 - `crossorigin`
-
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS 来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
-
     - `anonymous`
       - : 在发送跨源请求时不携带凭据（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将不会携带 cookie、X.509 证书，也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 标头），资源会被*污染*，并且它的使用会受到限制。
     - `use-credentials`
-
       - : 在发送跨源请求时携带凭据信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将会携带 cookie、证书，或执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 标头），图像会被*污染*，并且它的使用会受到限制。
 
       不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)获取更多信息。
@@ -69,7 +62,6 @@ l10n:
 - `disablepictureinpicture`
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。
 - `disableremoteplayback`
-
   - : 一个布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。
 
     在 Safari 中，你可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
@@ -85,9 +77,7 @@ l10n:
 - `poster`
   - : 海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。
 - `preload`
-
   - : 该枚举属性旨在提示浏览器，作者认为在播放视频之前，加载哪些内容会达到最佳的用户体验。可能是下列值之一：
-
     - `none`: 表示不应该预加载视频。
     - `metadata`: 表示仅预先获取视频的元数据（例如长度）。
     - `auto`: 表示可以下载整个视频文件，即使用户不希望使用它。
@@ -301,7 +291,7 @@ l10n:
 其他的使用说明：
 
 - 如果你不指定 `controls` 属性，视频将不会包含浏览器的默认控件；你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详细信息请参阅[创建跨浏览器视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
-- 为了实现对视频（和音频）内容的精确控制，`HTMLMediaElement` 会触发多种不同的[事件](/zh-CN/docs/Web/Events#media)，除了提供可控性之外，这些事件还允许你监控媒体的下载进度和播放进度，以及播放状态和位置。
+- 为了实现对视频（和音频）内容的精确控制，`HTMLMediaElement` 会触发多种不同的[事件](/zh-CN/docs/Web/API/Document_Object_Model/Events#media)，除了提供可控性之外，这些事件还允许你监控媒体的下载进度和播放进度，以及播放状态和位置。
 - 你可以使用 {{cssxref("object-position")}} 属性调整视频在元素框内的位置，和使用 {{cssxref("object-fit")}} 属性控制视频如何调整大小以适应框架。
 - 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
 - 你可以使用 `<video>` 元素播放音频文件。如果你需要结合 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕进行音频播放，这会非常有用，因为 {{HTMLElement("audio")}} 元素不支持使用 WebVTT 提供字幕。
@@ -536,7 +526,6 @@ AddType video/webm .webm
 ## 参见
 
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
-
   - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Guides/Formats/Containers)
   - [web 视频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)
   - [web 音频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)

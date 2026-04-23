@@ -1,110 +1,81 @@
 ---
 title: "HTMLDialogElement: returnValue プロパティ"
+short-title: returnValue
 slug: Web/API/HTMLDialogElement/returnValue
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 892f5d7d285d5ed9d79012b5e19c459392a7669e
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`returnValue`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、このダイアログ ({{htmlelement("dialog")}}) の返値を取得または設定します。ふつう、閉じる際にどのボタンが押されたかを示します。
+**`returnValue`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、{{htmlelement("dialog")}} 要素が閉じたときの返値を表す文字列です。
+値を直接設定したり (`dialog.returnValue = "result"`)、 {{domxref("HTMLDialogElement.close()", "close()")}} や {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} に文字列引数として提供する形設定したりすることができます。
 
 ## 値
 
 ダイアログの `returnValue` を表す文字列です。
+既定値は空文字列 (`""`) です。
 
 ## 例
 
-次の例では、フォームの入った {{htmlelement("dialog")}} を `showModal()` メソッドで開くためのボタンを表示しています。スクリプトは `returnvalue` に初期値を割り当てています。そこから、確認ボタンで検証つきフォームを送信し、「×」ボタンで検証なしでフォームを送信します。`method="dialog"` でフォームを送信すると、ダイアログが閉じられ、返値には送信ボタンの `name` （もしあれば）が設定されます。リセットボタンにはダイアログを閉じるイベントハンドラーがありますが、これは `returnValue` には何の影響もありません。<kbd>Esc</kbd> キーでダイアログを閉じることもできません。
+### 返値の確認
+
+次の例は、ダイアログを開くためのボタンを表示します。ダイアログは、利用規約の受け入れをユーザーに依頼します。
+
+ダイアログには［承諾］または［拒否］ボタンが含まれます。ユーザーがどちらかのボタンをクリックすると、そのボタンのクリックハンドラーがダイアログを閉じ、選択内容を {{domxref("HTMLDialogElement.close()", "close()")}} 関数に渡します。これにより、選択内容がダイアログの `returnValue` プロパティに代入されます。
+
+ダイアログの {{domxref("HTMLDialogElement.close_event", "close")}} イベントハンドラー内で、この例ではメインページのステータステキストを更新し、 `returnValue` を記録します。
+
+ユーザーがボタンをクリックせずにダイアログを閉じると（例えば、 <kbd>Esc</kbd> キーを押すなど）、返値は設定されません。
+
+#### HTML
 
 ```html
-<!-- フォームの入った単純なポップアップのダイアログボックス -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <input
-      type="submit"
-      aria-label="close"
-      value="X"
-      name="Xbutton"
-      formnovalidate />
-    <p>
-      <label
-        >Favorite animal:
-        <select name="favAnimal" required>
-          <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
-      </label>
-    </p>
-    <menu>
-      <button type="reset" value="resetBtn">Reset</button>
-      <button type="submit" value="confirmBtn">Confirm</button>
-    </menu>
-  </form>
+<dialog id="termsDialog">
+  <p>利用規約に同意しますか？（リンク）</p>
+  <button id="declineButton" value="declined">拒否</button>
+  <button id="acceptButton" value="accepted">承諾</button>
 </dialog>
-
 <p>
-  <button id="openDialog">Open Dialog</button>
+  <button id="openDialogButton">利用規約の確認</button>
 </p>
-<p id="text"></p>
-
-<script>
-  (() => {
-    const openDialog = document.getElementById("openDialog");
-    const dialog = document.getElementById("favDialog");
-    const text = document.getElementById("text");
-    const reset = document.querySelector("[type='reset']");
-    dialog.returnValue = "initialValue";
-
-    function openCheck(dialog) {
-      if (dialog.open) {
-        text.innerText = "Dialog open";
-      } else {
-        text.innerText = "Dialog closed";
-      }
-    }
-
-    function handleUserInput(returnValue) {
-      if (!returnValue) {
-        text.innerText += ". There was no return value";
-      } else {
-        text.innerText += ". Return value: " + returnValue;
-      }
-    }
-
-    // "Open Dialog" ボタンは <dialog> をモーダルに開く
-    openDialog.addEventListener("click", () => {
-      dialog.showModal();
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
-    });
-
-    reset.addEventListener("click", () => {
-      dialog.close();
-    });
-
-    // ダイアログが閉じられたとき、どのように閉じられたかにかかわらず
-    dialog.addEventListener("close", () => {
-      openCheck(dialog);
-      handleUserInput(dialog.returnValue);
-    });
-  })();
-</script>
-<style>
-  [aria-label="close"] {
-    appearance: none;
-    border-radius: 50%;
-    border: 1px solid;
-    float: right;
-  }
-</style>
+<p id="statusText"></p>
 ```
 
-### 結果
+#### JavaScript
 
-{{ EmbedLiveSample('Examples', '100%', '200px') }}
+```js
+const dialog = document.getElementById("termsDialog");
+const statusText = document.getElementById("statusText");
+
+const openDialogButton = document.getElementById("openDialogButton");
+const declineButton = document.getElementById("declineButton");
+const acceptButton = document.getElementById("acceptButton");
+
+openDialogButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+declineButton.addEventListener("click", closeDialog);
+acceptButton.addEventListener("click", closeDialog);
+
+function closeDialog(event) {
+  const button = event.target;
+  dialog.close(button.value);
+}
+
+dialog.addEventListener("close", () => {
+  statusText.innerText = dialog.returnValue
+    ? `返値: ${dialog.returnValue}`
+    : "返値はありません";
+});
+```
+
+#### 結果
+
+［利用規約の確認］をクリックし、ダイアログで「承諾」または［拒否］ボタンを選べますか、または <kbd>Esc</kbd> キーを押してダイアログを閉じる操作を行い、それぞれの状態更新を確認してください。
+
+{{ EmbedLiveSample('Checking the return value', '100%', '200px') }}
 
 ## 仕様書
 

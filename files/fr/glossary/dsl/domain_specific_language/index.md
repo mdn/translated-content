@@ -2,16 +2,14 @@
 title: DSL (Domain-Specific Language)
 slug: Glossary/DSL/Domain_specific_language
 l10n:
-  sourceCommit: cdb0dad4aeabda32b85c397f5e45304f95edc0d1
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
+Un **langage dédié** (<i lang="en">Domain-Specific Language</i>, DSL) est un type de langage informatique à portée limitée, conçu pour résoudre un problème particulier dans un domaine applicatif.
 
-**DSL** pour <i lang="en">Domain-Specific Language</i> (qu'on peut traduire en «&nbsp;langage dédié&nbsp;») est un type de langage informatique conçu pour résoudre un problème dans un domaine d'application donné.
-
-Les langages dédiés sont opposés aux langages généralistes (<i lang="en">general-purpose languages</i> ou (GPLs) en anglais), conçus pour traiter différents problèmes quel que soit le domaine concerné.
+On oppose les DSL aux _langages à usage général (GPL)_ qui sont conçus pour résoudre divers problèmes dans plusieurs domaines.
 
 ## Voir aussi
 
-- [La page Wikipédia pour les langages dédiés](https://fr.wikipedia.org/wiki/Langage_d%C3%A9di%C3%A9)
-- [Un guide sur les langages dédiés, écrit par Martin Fowler (en anglais)](https://martinfowler.com/dsl.html)
+- [Les langages dédiés](https://fr.wikipedia.org/wiki/Langage_d%C3%A9di%C3%A9) sur Wikipédia
+- [Guide DSL <sup>(angl.)</sup>](https://martinfowler.com/dsl.html) sur martinfowler.com

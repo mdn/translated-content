@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
 
-{{LearnSidebar}}
-
 本章节将演示如何定义一个用于创建 `Author` 对象的页面。
 
 ## 导入验证和修整方法

@@ -45,4 +45,4 @@ slug: Web/API/Element/animationstart_event
 
 ## 参见
 
-- [Using CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS Animations](/zh-CN/docs/Web/CSS/Guides/Animations/Using)

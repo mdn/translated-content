@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 变量名只在{{Glossary("local scope", "局部作用域")}}中与其{{glossary("value", "值")}}相绑定的{{glossary("variable", "变量")}}是局部变量。
 
 ## 示例

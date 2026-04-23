@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: setRangeText() メソッド"
 short-title: setRangeText()
 slug: Web/API/HTMLTextAreaElement/setRangeText
 l10n:
-  sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
+  sourceCommit: 58cc81b21f777d745877ec1430df8ba2852ff411
 ---
 
 {{APIRef("HTML DOM")}}
@@ -64,7 +64,7 @@ btn.addEventListener("click", () => {
 });
 
 function changeText() {
-  const textarea = document.getElementById("text-box");
+  const textarea = document.getElementById("ta");
   textarea.focus();
   textarea.setRangeText("ALREADY", 14, 17, "select");
 }

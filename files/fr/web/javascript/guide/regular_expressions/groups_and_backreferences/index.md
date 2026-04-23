@@ -164,7 +164,6 @@ console.log(lines.join("\n"));
 
 - [Une prothèse d'émulation pour les groupes de capture nommés](https://github.com/zloirock/core-js#ecmascript-string-and-regexp), disponible avec la bibliothèque [`core-js`](https://github.com/zloirock/core-js)
 - [Guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [Classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [Assertions](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

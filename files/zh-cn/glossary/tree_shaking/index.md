@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 **摇树优化**是指描述 JavaScript 上下文中移除未引用代码（dead code）行为的术语。
 
 它依赖于 [import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 和 [export](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 语句，用来检测代码模块是否被导出、导入，且被 JavaScript 文件使用。

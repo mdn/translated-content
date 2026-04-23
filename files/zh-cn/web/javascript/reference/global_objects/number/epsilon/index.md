@@ -3,8 +3,6 @@ title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 
-{{JSRef}}
-
 **`Number.EPSILON`** 静态数据属性表示 1 与大于 1 的最小浮点数之间的差值。
 
 {{InteractiveExample("JavaScript Demo: Number.EPSILON")}}

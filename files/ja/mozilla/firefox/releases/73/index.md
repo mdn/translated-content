@@ -3,8 +3,6 @@ title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 73 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -24,7 +22,7 @@ _変更なし。_
 
 #### 廃止
 
-- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/@media/pointer) を使用してください。
+- 独自仕様である [`-moz-touch-enabled`](/ja/docs/Web/CSS/@media/-moz-touch-enabled) メディアクエリーを削除しました ([Firefox バグ 1486964](https://bugzil.la/1486964))。代わりに [`pointer: coarse`](/ja/docs/Web/CSS/Reference/At-rules/@media/pointer) を使用してください。
 
 ### SVG
 

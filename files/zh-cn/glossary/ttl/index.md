@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 存活时间（TTL）要么指代网络中包的生命周期，要么指的是缓存数据的过期时间。
 
 ## 网络

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Evolution_of_HTTP
 original_slug: Web/HTTP/Evolution_of_HTTP
 ---
 
-{{HTTPSidebar}}
-
 **HTTP** es el protocolo en el que se basa la Web. Fue inventado por Tim Berners-Lee entre los años 1989-1991, HTTP ha visto muchos cambios, manteniendo la mayor parte de su simplicidad y desarrollando su flexibilidad. HTTP ha evolucionado, desde un protocolo destinado al intercambio de archivos en un entorno de un laboratorio semi-seguro, al actual laberinto de Internet, sirviendo ahora para el intercambio de imágenes, vídeos en alta resolución y en 3D.
 
 ## Invención de la World Wide Web
@@ -163,7 +161,7 @@ Desde el año 2005, las APIs disponibles para páginas Web han aumentado conside
 
 ### Relajación del modelo de seguridad de la Web
 
-El protocolo HTTP es independiente del modelo de seguridad de la Web: la [política del mismo origen](/es/docs/Web/Security/Same-origin_policy). De hecho, el actual modelo de seguridad de la Web, ha sido desarrollado con posterioridad a la creación del protocolo HTTP. A lo largo de los años, se ha probado útil, poder ser más permisivo con ella, permitiendo que bajo ciertos requerimientos se puedan levantar algunas de las restricciones de esta política. Cuanto y cuantas de estas restricciones se pueden saltar es comunicado desde el servidor al cliente, mediante una serie de nuevas cabeceras HTTP. Estas están especificadas en los documentos como CORS ( del inglés [Cross-Origin Resource Sharing](/es/docs/Glossary/CORS), que viene a significar: recursos compartidos de orígenes cruzados) y el CSP (del inglés: [Content Security Policy](/es/docs/Web/HTTP/Guides/CSP) , que traducido es: política de seguridad de contenidos).
+El protocolo HTTP es independiente del modelo de seguridad de la Web: la [política del mismo origen](/es/docs/Web/Security/Defenses/Same-origin_policy). De hecho, el actual modelo de seguridad de la Web, ha sido desarrollado con posterioridad a la creación del protocolo HTTP. A lo largo de los años, se ha probado útil, poder ser más permisivo con ella, permitiendo que bajo ciertos requerimientos se puedan levantar algunas de las restricciones de esta política. Cuanto y cuantas de estas restricciones se pueden saltar es comunicado desde el servidor al cliente, mediante una serie de nuevas cabeceras HTTP. Estas están especificadas en los documentos como CORS ( del inglés [Cross-Origin Resource Sharing](/es/docs/Glossary/CORS), que viene a significar: recursos compartidos de orígenes cruzados) y el CSP (del inglés: [Content Security Policy](/es/docs/Web/HTTP/Guides/CSP) , que traducido es: política de seguridad de contenidos).
 
 Además de estas ampliaciones, muchas otras cabeceras han sido añadidas, algunas unicamente experimentales. Algunas de ellas notables son: Do Not Track ({{HTTPHeader("DNT")}}); cabecera de control de privacidad: {{HTTPHeader("X-Frame-Options")}}, y {{HTTPHeader('Upgrade-Insecure-Requests')}}.
 

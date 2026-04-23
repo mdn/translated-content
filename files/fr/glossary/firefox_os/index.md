@@ -2,10 +2,8 @@
 title: Firefox OS
 slug: Glossary/Firefox_OS
 l10n:
-  sourceCommit: 8764a103fefe219c26316525be9949a66402bf3d
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
-
-{{GlossarySidebar}}
 
 Firefox OS est un système d'exploitation mobile <i lang="en">open source</i> qui a été développé par Mozilla et qui a maintenant été arrêté. Voir [Firefox OS](https://fr.wikipedia.org/wiki/Firefox_OS) pour plus de détails.
 

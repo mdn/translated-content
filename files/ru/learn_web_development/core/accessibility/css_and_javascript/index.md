@@ -3,7 +3,7 @@ title: CSS и JavaScript доступность - лучшие практики
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 В CSS и JavaScript есть множество возможностей для создания доступных интерфейсов. Но это обоюдоострый клинок — при неосторожном обращении они могут доступности и значительно навредить. В этой статье мы рассмотрим лучшие практики в CSS и JavaScript, которые позволят даже сложному контенту оставаться доступным настолько, насколько это возможно.
 
@@ -315,7 +315,7 @@ function createLink(testItem) {
 </div>
 ```
 
-Мы разберем данные атрибуты в следующей статье, которая подробно описывает [WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics).
+Мы разберем данные атрибуты в следующей статье, которая подробно описывает [WAI-ARIA](/ru/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics).
 
 > [!NOTE]
 > Кто-то из читателей мог задуматься о том факте, что в HTML5 формах есть встроенные механизмы валидации, такие как атрибуты `required`, `min`/`minlength` и `max`/`maxlength` (смотрите подробнее на странице элемента {{htmlelement("input")}}). Мы не использовали их в примере, потому что поддержка браузерами у HTML5 валидации весьма варьируется (например, только IE10 и новее).
@@ -359,4 +359,4 @@ imgThumb.onblur = hideImg;
 
 Далее WAI-ARIA!
 
-{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}

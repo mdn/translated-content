@@ -9,7 +9,7 @@ l10n:
 
 画面の向きとは、ブラウザーの[ビューポート](/ja/docs/Glossary/Viewport)がランドスケープモード（つまり、ビューポートの幅がその高さよりも大きい）か、そうでなければポートレートモード（ビューポートの高さがその幅よりも大きい）であるかを参照するものです。
 
-CSS は [`orientation`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
+CSS は [`orientation`](/ja/docs/Web/CSS/Guides/Media_queries/Using#orientation) というメディア特性を提供し、画面の向きに応じてレイアウトを調整できるようにしています。
 
 [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API) は、画面の内側へ作業するためのプログラム的な JavaScript API を提供します。これには、ビューポートを特定の方向に固定する機能が含まれます。
 
@@ -168,11 +168,11 @@ screen.orientation.lock();
 > [!NOTE]
 > 画面のロックはウェブアプリケーションに依存します。アプリケーション A が `landscape` に固定し、アプリケーション B が `portrait` に固定した場合は、アプリケーション A から B に、または B から A に切り替えても {{domxref("Window.orientationchange_event", "orientationchange")}} イベントは発生しません。これは、双方のアプリケーションが自身の向きを維持しているためです。
 >
-> ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることでで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
+> ただし、ロックの要求を満たすために向きを変更しなければならない場合は、向きをロックすることで {{domxref("Window.orientationchange_event", "orientationchange")}} イベントが発生する可能性があります。
 
 ## 関連情報
 
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} イベント
-- [orientation メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation)
+- [orientation メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using#orientation)

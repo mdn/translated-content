@@ -42,7 +42,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File_
 - {{domxref("File.size")}} {{readonlyinline}}
   - : Renvoie la taille du fichier en octets.
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/MIME_types/Common_types)du fichier.
+  - : Renvoie le type [MIME](/fr/docs/Web/HTTP/Guides/MIME_types/Common_types)du fichier.
 
 ## Méthodes
 

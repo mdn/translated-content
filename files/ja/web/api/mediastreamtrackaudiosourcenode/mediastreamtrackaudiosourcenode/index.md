@@ -22,9 +22,7 @@ new MediaStreamTrackAudioSourceNode(context, options)
 - `context`
   - : このノードを関連付ける音声コンテキストを表す {{domxref("AudioContext")}} です。
 - `options`
-
   - : `MediaStreamTrackAudioSourceNode` に持たせる性質を定義するオブジェクトです。
-
     - `mediaStreamTrack`
       - : このノードの出力とする音声のデータの取得元とする {{domxref("MediaStreamTrack")}} です。
 

@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers
 original_slug: Web/HTTP/Headers
 ---
 
-{{HTTPSidebar}}Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
+Os cabeçalhos HTTP permitem que o cliente e o servidor passem informações adicionais com a solicitação ou a resposta HTTP. Um cabeçalho de solicitação é composto por seu nome _case-insensitive_ (não diferencia letras maiúsculas e minúsculas), seguido por dois pontos ':' e pelo seu valor (sem quebras de linha). Espaços em branco antes do valor serão ignorados.
 
 Cabeçalhos proprietários personalizados podem ser adicionados usando o prefixo 'X-', mas essa convenção foi descontinuada em Junho de 2012, devido aos inconvenientes que causou quando os campos não-padronizados tornaram-se padronizados na [RFC 6648](https://tools.ietf.org/html/rfc6648); outros estão listados em um [registro IANA](https://www.iana.org/assignments/message-headers/perm-headers.html), cujo o conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). O IANA também mantém o [registro das propostas de novas mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
 
@@ -65,13 +65,11 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : Um boleano que indica a preferência do agente do usuário pelo uso reduzido de dados.
 - {{HTTPHeader("Viewport-Width")}} {{experimental_inline}}
-
   - : Um número que indica a largura em pixels do viewport do layout em pixels CSS. O valor em pixels disponibilizado é um número arredondado do menor inteiro seguinte. (i.e. valor ceiling).
 
     Se `Viewport-Width` ocorrer em uma mensagem mais de uma vez, o último valor irá sobrescrever todas as ocorrências anteriores.
 
 - {{HTTPHeader("Width")}} {{experimental_inline}}
-
   - : O campo `Width` no cabeçalho da requisição é um número que indica a largura desejada do recurso em pixels físicos (i.e. tamanho intrínseco da imagem). O valor do pixel provido é um número arredondado para o menor inteiro seguinte.
 
     Se a largura do recurso desejada não for conhecida no momento da solicitação ou o recurso não tiver uma largura de exibição, o campo `Width` poderá ser omitido do cabeçalho. Se `Width` ocorrer em uma mensagem mais de uma vez, o último valor irá sobrescrever todas as ocorrências anteriores.
@@ -119,7 +117,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 ## Cookies
 
 - {{HTTPHeader("Cookie")}}
-  - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
+  - : Contém [cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
 - {{HTTPHeader("Cookie2")}}
@@ -144,7 +142,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Utilizado ao emitr uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor quais cabeçalhos HTTP serão usados quando a solicitação real for realizada.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual [método HTTP](/pt-BR/docs/Web/HTTP/Methods) será usado quando a solicitação real for realizada.
+  - : Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual [método HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) será usado quando a solicitação real for realizada.
 - {{HTTPHeader("Origin")}}
   - : Inddica de onde uma busca se origina.
 - {{HTTPHeader("Timing-Allow-Origin")}}

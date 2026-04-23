@@ -15,7 +15,6 @@ SMTP는 상대적으로 직관적입니다. 복잡함을 유발하는 주요 원
 
 - 위키백과의 [SMTP](https://en.wikipedia.org/wiki/SMTP)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("NNTP")}}
   - {{glossary("POP")}}
   - {{glossary("protocol")}}

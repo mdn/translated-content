@@ -30,7 +30,6 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     これは、_xpath_ 自身の中で接頭辞を解決し、文書と照合できるようにするために使用することができます。
     値が `null` の場合は、HTML 文書や 名前空間接頭辞を使用していない場合によく用いられます。
 - `resultType`
-
   - : 整数で、返す結果の `XPathResult` の型に対応する整数。
     取りうる値は以下の通りです。
     - `ANY_TYPE` (`0`)

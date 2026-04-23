@@ -8,34 +8,30 @@ l10n:
 
 {{APIRef("Fetch API")}}
 
-{{domxref("Request")}} 인터페이스의 **`cache`** 읽기 전용 속성에는 요청의 캐시 모드가 포함되어 있습니다. 요청이 브라우저의 [HTTP 캐싱](/ko/docs/Web/HTTP/Caching)과 상호 작용하는 방식을 제어합니다.
+{{domxref("Request")}} 인터페이스의 **`cache`** 읽기 전용 속성에는 요청의 캐시 모드가 포함되어 있습니다. 요청이 브라우저의 [HTTP 캐싱](/ko/docs/Web/HTTP/Guides/Caching)과 상호 작용하는 방식을 제어합니다.
 
 ## 값
 
 `RequestCache` 값입니다. 사용 가능한 값은 다음과 같습니다.
 
 - `default` — 브라우저는 HTTP 캐시에서 일치하는 요청을 찾습니다.
-
-  - 일치하는 항목이 있고 [새 항목](/ko/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age)이면, 캐시에서 반환됩니다.
-  - 일치하는 항목이 있지만 [오래된 항목](/ko/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age)이면, 브라우저는 원격 서버에 [조건부 요청](/ko/docs/Web/HTTP/Conditional_requests)을 합니다. 서버가 리소스가 변경되지 않았다고 표시하면, 캐시에서 리소스가 반환됩니다. 그렇지 않으면 리소스가 서버에서 다운로드되고 캐시가 업데이트됩니다.
+  - 일치하는 항목이 있고 [새 항목](/ko/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age)이면, 캐시에서 반환됩니다.
+  - 일치하는 항목이 있지만 [오래된 항목](/ko/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age)이면, 브라우저는 원격 서버에 [조건부 요청](/ko/docs/Web/HTTP/Guides/Conditional_requests)을 합니다. 서버가 리소스가 변경되지 않았다고 표시하면, 캐시에서 리소스가 반환됩니다. 그렇지 않으면 리소스가 서버에서 다운로드되고 캐시가 업데이트됩니다.
   - 일치하는 항목이 없으면, 브라우저는 정상 요청을 하고 다운로드된 리소스로 캐시를 업데이트합니다.
 
 - `no-store` - 브라우저는 캐시를 먼저 살펴보지 않고 원격 서버에서 리소스를 가져오며, 다운로드된 리소스로 캐시를 업데이트하지 않습니다.
 - `reload` - 브라우저는 캐시를 먼저 살펴보지 않고 원격 서버에서 리소스를 가져오며, 그 다음으로 다운로드된 리소스로 캐시를 업데이트합니다.
 - `no-cache` - 브라우저는 HTTP 캐시에서 일치하는 요청을 찾습니다.
-
-  - 새 항목이든 오래된 항목이든 일치하는 항목이 있으면, 브라우저는 원격 서버에 [조건부 요청](/ko/docs/Web/HTTP/Conditional_requests)을 보냅니다. 서버가 리소스가 변경되지 않았다고 표시하면, 캐시에서 리소스가 반환됩니다. 그렇지 않으면 리소스가 서버에서 다운로드되고 캐시가 업데이트됩니다.
+  - 새 항목이든 오래된 항목이든 일치하는 항목이 있으면, 브라우저는 원격 서버에 [조건부 요청](/ko/docs/Web/HTTP/Guides/Conditional_requests)을 보냅니다. 서버가 리소스가 변경되지 않았다고 표시하면, 캐시에서 리소스가 반환됩니다. 그렇지 않으면 리소스가 서버에서 다운로드되고 캐시가 업데이트됩니다.
   - 일치하는 항목이 없으면, 브라우저는 정상 요청을 하고 다운로드된 리소스로 캐시를 업데이트합니다.
 
 - `force-cache` - 브라우저는 HTTP 캐시에서 일치하는 요청을 찾습니다.
-
   - 새 항목이든 오래된 항목이든 일치하는 항목이 있으면, 캐시에서 반환됩니다.
   - 일치하는 항목이 없으면, 브라우저는 정상 요청을 하고 다운로드된 리소스로 캐시를 업데이트합니다.
 
 - `only-if-cached` — 브라우저는 HTTP 캐시에서 일치하는 요청을 찾습니다.
-
   - 새 항목이든 오래된 항목이든 일치하는 항목이 있으면, 캐시에서 반환됩니다.
-  - 일치하는 항목이 없으면, 브라우저는 [504 Gateway timeout](/ko/docs/Web/HTTP/Status/504) 상태로 응답합니다.
+  - 일치하는 항목이 없으면, 브라우저는 [504 Gateway timeout](/ko/docs/Web/HTTP/Reference/Status/504) 상태로 응답합니다.
 
   `"only-if-cached"` 모드는 요청 [`mode`](/ko/docs/Web/API/Request/mode)가 `"same-origin"`인 경우에만 사용할 수 있습니다.
   캐시된 리다이렉션은 요청의 `redirect` 속성이 `"follow"`이고 리다이렉션이 `"same-origin"` 모드를 위반하지 않는 경우에만 허용됩니다.
@@ -126,5 +122,5 @@ fetch("some.json", {
 ## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

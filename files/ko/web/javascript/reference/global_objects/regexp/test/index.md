@@ -87,7 +87,8 @@ function testInput(re, str) {
 
 `test(str)`을 또 호출하면 `str` 검색을 `lastIndex`부터 계속 진행합니다. `lastIndex` 속성은 매 번 `test()`가 `true`를 반환할 때마다 증가하게 됩니다.
 
-> **참고:** `test()`가 `true`를 반환하기만 하면 `lastIndex`는 초기화되지 않습니다. 심지어 이전과 다른 문자열을 매개변수로 제공해도 그렇습니다!
+> [!NOTE]
+> `test()`가 `true`를 반환하기만 하면 `lastIndex`는 초기화되지 않습니다. 심지어 이전과 다른 문자열을 매개변수로 제공해도 그렇습니다!
 
 `test()`가 `false`를 반환할 땐 `lastIndex` 속성이 `0`으로 초기화됩니다.
 

@@ -16,7 +16,6 @@ _这个接口不继承任何属性。_
 - {{domxref("TreeWalker.root")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Node")}} ，表示新建 `TreeWalker` 时所声明的根节点。
 - {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
-
   - : 返回一个 `unsigned long` 类型的常量位掩码，表示需要筛选的{{domxref("Node")}} 类型。不匹配的节点会跳过，但其子节点，如果符合条件，则也会被包含。可能的值如下：
 
     | 常量                                                     | 数字值                                       | 描述                                                                                                                                                                                               |
@@ -50,7 +49,6 @@ _这个接口不继承任何方法。_
 - {{domxref("TreeWalker.parentNode()")}}
   - : 移动当前 {{domxref("Node")}} 到文档顺序中的第一个“可见”的祖先节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 - {{domxref("TreeWalker.firstChild()")}}
-
   - : 移动当前 {{domxref("Node")}} 到当前节点的第一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 
     ```html

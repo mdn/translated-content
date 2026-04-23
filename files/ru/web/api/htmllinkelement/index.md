@@ -7,14 +7,13 @@ slug: Web/API/HTMLLinkElement
 
 Интерфейс **`HTMLLinkElement`** представляет справочную информацию для внешних ресурсов и отношение этих ресурсов к документу и наоборот (соответствует элементу [`<link>`](/ru/docs/Web/HTML/Reference/Elements/link); не путать с [`<a>`](/ru/docs/Web/HTML/Reference/Elements/a), который представлен элементом [`HTMLAnchorElement`](/ru/docs/Web/API/HTMLAnchorElement)). Этот объект наследует все свойства и методы интерфейса {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 
 _Наследует свойства от своего родителя, {{domxref("HTMLElement")}}, и {{domxref("LinkStyle")}}._
 
 - {{domxref("HTMLLinkElement.as")}}
-
   - : Это {{domxref("DOMString")}} представляющий тип контента загружаемый по HTML ссылке.
 
 - {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
@@ -45,7 +44,6 @@ _Наследует свойства от своего родителя, {{domxr
 - {{domxref("HTMLLinkElement.charset")}}
   - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
 - {{domxref("HTMLLinkElement.rev")}}
-
   - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
 
     > [!NOTE]

@@ -18,10 +18,8 @@ Fork (フォーク) とは、ある時点での既存のソフトウェアプロ
 - [LibreOffice (OpenOffice からのフォーク)](https://www.libreoffice.org/about-us/who-are-we/)
 
 1. General Knowledge
-
    1. Wikipedia の [フォーク](<https://ja.wikipedia.org/wiki/フォーク_(ソフトウェア開発)>)
    2. [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (Git コンテキストのフォーク)
 
 2. 関連用語:
-
    1. {{Glossary("Fork", "フォーク")}}

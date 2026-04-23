@@ -1,13 +1,20 @@
 ---
 title: "HTMLAreaElement: username プロパティ"
+short-title: username
 slug: Web/API/HTMLAreaElement/username
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 8cc63f7e6619446ea38f6a38c457a597a9af564b
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLAreaElement.username`** プロパティは、ドメイン名の前で指定されたユーザー名の入った文字列です。
+**`username`** は {{domxref("HTMLAreaElement")}} インターフェイスのプロパティで、 `<area>` 要素の `href` のユーザー名成分を含む文字列です。　URL にユーザー名がない場合、このプロパティには空文字列 (`""`) が含まれます。
+
+このプロパティを設定すると、 URL のユーザー名を変更することができます。 URL に{{domxref("HTMLAreaElement.host", "ホスト", "", "nocode")}}が存在しないか、スキームが `file:` である場合、このプロパティを設定しても効果はありません。
+
+ユーザー名は、設定時には{{Glossary("Percent-encoding", "パーセントエンコード")}}されますが、読み取り時にはパーセントデコードされません。
+
+詳細については、 {{domxref("URL.username")}} を参照してください。
 
 ## 値
 

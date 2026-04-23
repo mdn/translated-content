@@ -2,7 +2,7 @@
 title: 帰属レポート API
 slug: Web/API/Attribution_Reporting_API
 l10n:
-  sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
+  sourceCommit: f5fd4776d1c0cd6e4cffc9649f7c4f44badb7ae2
 ---
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}
@@ -35,7 +35,7 @@ l10n:
 
 オンラインショップのオーナーは、広告を操作するユーザー、サイト上の製品ページを閲覧するユーザー、ショッピングカートに製品を入れるユーザーから、どれだけのコンバージョンを獲得しているかを測定したいと考えています。
 
-![Image representation of the steps described below](ara-flow.png)
+![下記に記述されている段階の画像表現](ara-flow.svg)
 
 手順は次のとおりです。
 
@@ -91,7 +91,7 @@ l10n:
 
 ## 登録およびローカルテスト
 
-自分のサイトで帰属レポート API を使用するには、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)でそれを指定する必要があります。これを行わないと、 API フローはレスポンス時点でブロックされ、レスポンスヘッダーが無視され、ソースとトリガーが登録されません。
+自分のサイトで帰属レポート API を使用するには、[プライバシーサンドボックス登録プロセス](/ja/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment)でそれを指定する必要があります。これを行わないと、 API フローはレスポンス時点でブロックされ、レスポンスヘッダーが無視され、ソースとトリガーが登録されません。
 
 ローカルで、登録せずに帰属レポート API のコードをテストすることは可能です。ローカルでテストできるようにするには、次の Chrome 開発者フラグを有効にしてください。
 
@@ -112,6 +112,6 @@ l10n:
 ## 関連情報
 
 - [Attribution Reporting Header Validation tool](https://wicg.github.io/attribution-reporting-api/validate-headers)
-- [Attribution reporting](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/) (developers.google.com, 2023)
-- [Enable conversion measurement](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting/enable-conversion-measurement) (developers.google.com, 2023)
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox/) (developers.google.com, 2023)
+- [Attribution reporting](https://privacysandbox.google.com/private-advertising/attribution-reporting/) on privacysandbox.google.com (2023)
+- [Enable conversion measurement](https://privacysandbox.google.com/private-advertising/attribution-reporting/enable-conversion-measurement) on privacysandbox.google.com (2023)
+- [The Privacy Sandbox](https://privacysandbox.google.com/) on privacysandbox.google.com (2023)

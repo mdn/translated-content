@@ -31,7 +31,6 @@ CSS 接口是一个工具接口，无法创建该类型的对象：其内部只�
 - {{DOMxRef("CSS.escape()")}}
   - : 可以用来转义一个大多用来当作 CSS 选择器一部分的字符串。
 - {{DOMxRef("CSS.factory_functions", 'CSS factory functions')}}
-
   - : 可以用来返回一个 [`CSSUnitValue`](/zh-CN/docs/Web/API/CSSUnitValue)。它的值由传入的数值以及调用的 factory 方法名称组成。
 
     ```js

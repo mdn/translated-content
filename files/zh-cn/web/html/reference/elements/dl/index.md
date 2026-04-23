@@ -3,8 +3,6 @@ title: <dl>
 slug: Web/HTML/Reference/Elements/dl
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
 
 {{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}

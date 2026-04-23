@@ -8,7 +8,8 @@ l10n:
 
 `generic` ロールは、自分自身で意味を持たない名前のないコンテナー要素を作成します。
 
-> **メモ:** `generic` ロールはユーザーエージェントが使用する一般的な要素の暗黙のロールです。文書化を完全にするためにここに記載しています。ウェブ作成者が使用すべきではありません。
+> [!NOTE]
+> `generic` ロールはユーザーエージェントが使用する一般的な要素の暗黙のロールです。文書化を完全にするためにここに記載しています。ウェブ作成者が使用すべきではありません。
 
 ## 解説
 
@@ -20,7 +21,8 @@ ARIA は主に意味づけを表現するために使用されますが、支援
 
 一般的なロールは名前がないので、[`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性は禁止されています。ロールは一般的なので、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) と [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性も禁止されています。
 
-> **メモ:** `role="generic"` を持つ要素は、アクセシブル名やロールの記述を持つべきではありません。
+> [!NOTE]
+> `role="generic"` を持つ要素は、アクセシブル名やロールの記述を持つべきではありません。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 

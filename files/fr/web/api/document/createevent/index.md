@@ -1,82 +1,63 @@
 ---
-title: Document.createEvent()
+title: "Document : méthode createEvent()"
+short-title: createEvent()
 slug: Web/API/Document/createEvent
+l10n:
+  sourceCommit: 976891fb78ba24cb4ac6e58ae8a903b20eae4337
 ---
+
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 > [!WARNING]
 > De nombreuses méthodes utilisées avec `createEvent`, tels que `initCustomEvent`, sont obsolètes. Utilisez le [constructeur d'évènement](/fr/docs/Web/API/CustomEvent) à la place.
 
-{{ ApiRef("DOM") }}
-
-Crée un [event](/fr/docs/Web/API/Event) du type spécifié. L'objet retourné doit être intialisé et peut être passé ensuite à [element.dispatchEvent](/fr/docs/Web/API/EventTarget/dispatchEvent).
+La méthode **`createEvent()`** de l'interface {{DOMxRef("Document")}} crée un [évènement](/fr/docs/Web/API/Event) du type défini. L'objet retourné doit être initialisé avant d'être passé à {{DOMxRef("EventTarget.dispatchEvent")}}.
 
 ## Syntaxe
 
-```js
-var event = document.createEvent(type);
+```js-nolint
+createEvent(type)
 ```
 
-- `event` est l'objet [Event](/fr/docs/Web/API/Event) créé.
-- `type` est une chaîne de caractères qui représente le type d'événement à créer. Les types possibles d'événement incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
+### Paramètres
 
-## Exemple
+- `type`
+  - : Une chaîne de caractères qui représente le type d'évènement à créer. Les types d'évènements possibles incluent `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"` et `"HTMLEvents"`. Voir la section [Notes](#notes) pour plus de détails.
+
+### Valeur de retour
+
+Un objet {{DOMxRef("Event")}}.
+
+## Exemples
 
 ```js
-// Crée l'événement.
-var event = document.createEvent("Event");
+// Crée l'évènement.
+const event = document.createEvent("Event");
 
-// Nomme l'événement 'build'.
+// Définit que le nom de l'évènement est 'build'.
 event.initEvent("build", true, true);
 
-//  Écoute l'événement.
-elem.addEventListener(
-  "build",
-  function (e) {
-    // e.target correspond à elem
-  },
-  false,
-);
+// Écoute l'évènement.
+elem.addEventListener("build", (e) => {
+  // e.target correspond à elem
+});
 
-// target peut être tout Element ou autre EventTarget.
+// L'élément cible peut être n'importe quel Element ou autre EventTarget.
 elem.dispatchEvent(event);
 ```
 
 ### Notes
 
-Les chaînes de type d'événement appropriées pour passer à `createEvent ()` sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.
+Les chaînes de type d'évènement appropriées pour passer à `createEvent()` sont répertoriées dans la [norme DOM — voir le tableau à l'étape 2 <sup>(angl.)</sup>](https://dom.spec.whatwg.org/#dom-document-createevent). Gardez à l'esprit que la plupart des objets d'évènement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet d'évènement.
 
-Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :
+## Spécifications
 
-<table class="fullwidth-table">
-  <tbody>
-    <tr>
-      <th>Event Module</th>
-      <th>Standard event object</th>
-      <th>Gecko also supports</th>
-    </tr>
-    <tr>
-      <td>Text event module</td>
-      <td><code>TextEvent</code></td>
-      <td><code>TextEvents</code></td>
-    </tr>
-    <tr>
-      <td>Keyboard event module</td>
-      <td><code>KeyboardEvent</code></td>
-      <td><code>KeyEvents</code></td>
-    </tr>
-    <tr>
-      <td>Basic events module</td>
-      <td><code>Event</code></td>
-      <td><code>Events</code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-## Spécification
+## Compatibilité des navigateurs
 
-- [DOM Level 2 Events: createEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
-- [DOM Level 3 Events: createEvent](https://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
+{{Compat}}
 
 ## Voir aussi
 
-- [Création et déclenchement d'événements](/fr/docs/Web/Events/Creating_and_triggering_events)
+- [Créer et déclencher des évènements](/fr/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events)

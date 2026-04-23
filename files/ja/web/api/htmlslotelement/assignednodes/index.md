@@ -22,9 +22,7 @@ assignedNodes(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 返されるノードのためのオプションを設定したオブジェクトです。利用可能な値は以下のとおりです。
-
     - `flatten`
       - : 論理値で、利用可能な子の `<slot>` 要素すべてに割り当てられたノードを返すか (`true`)、返さないか (`false`) を示します。既定値は `false` です。
 

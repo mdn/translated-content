@@ -34,7 +34,8 @@ new Function(arg1, ... , argN, functionBody)
 
 그 함수로 전달된 모든 arguments는 생성될 함수 안에서 파라미터의 식별자 이름으로 그것들이 전달된 순서대로 처리된다.
 
-> **참고:** {{jsxref("Statements/function*", "generator function")}} created with the `GeneratorFunction` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `GeneratorFunction` constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.
+> [!NOTE]
+> {{jsxref("Statements/function*", "generator function")}} created with the `GeneratorFunction` constructor do not create closures to their creation contexts; they always are created in the global scope. When running them, they will only be able to access their own local variables and global ones, not the ones from the scope in which the `GeneratorFunction` constructor was called. This is different from using {{jsxref("Global_Objects/eval", "eval")}} with code for a generator function expression.
 
 new 없이 `GeneratorFunction` 생성자를 함수처럼 사용하는 것은 생성자처럼 사용하는 것과 동일한 효과를 갖는다.
 

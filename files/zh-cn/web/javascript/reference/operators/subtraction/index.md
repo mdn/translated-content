@@ -3,8 +3,6 @@ title: 减法（-）
 slug: Web/JavaScript/Reference/Operators/Subtraction
 ---
 
-{{jsSidebar("Operators")}}
-
 **减法**（**`-`**）运算符将两个操作数相减，并产生两者之差。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Subtraction operator")}}

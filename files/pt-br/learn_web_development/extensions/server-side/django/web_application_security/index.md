@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
 original_slug: Learn/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Proteger dados do usuário é uma parte essencial de qualquer projeto de website. Anteriormente, explicamos algumas das ameaças de segurança mais comuns no artigo [Web security](/pt-BR/docs/Web/Security) — esse artigo fornece uma demonstração prática de como as proteções internas de Django lidam com essas ameaças.
 
@@ -14,11 +14,11 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler o tópico "<a
-          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps/Website_security"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security"
           >Website security</a
         >" de Programação Server-side. Conclua os tópicos do tutorial Django
         tutorial até (e incluindo) pelos menos
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>
@@ -37,19 +37,20 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
 
 O tópico [Website security](/pt-BR/docs/Web/Security) fornece uma visão geral do que a segurança de website siginifica para o projeto server-side e algumas das ameaças mais comuns contra as quais você deve se proteger. Uma das mensagens chave nesse artigo é que quase todos os ataques são bem sucedidos quando a aplicação web confia nos dados do navegador.
 
-> **Aviso:** **Importante:** A lição mais importante que você pode aprender sobre segurança de website é **nunca confiar nos dados do navegador**. Isso inclui dados de requisição GET em parâmetros de URL, dados `POST`, cabeçalhos HTTP e cookies, arquivos enviados por usuários, etc. Sempre verifique e "desinfete" todos os dados recebidos. Sempre assuma o pior.
+> [!WARNING]
+> **Importante:** A lição mais importante que você pode aprender sobre segurança de website é **nunca confiar nos dados do navegador**. Isso inclui dados de requisição GET em parâmetros de URL, dados `POST`, cabeçalhos HTTP e cookies, arquivos enviados por usuários, etc. Sempre verifique e "desinfete" todos os dados recebidos. Sempre assuma o pior.
 
 A boa notícia para usuários Django é que muitas das ameaças mais comuns são tratadas pelo framework! O artigo [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) (Django docs) explica os recursos de segurança e como proteger um website desenvolvido pelo Django.
 
 ## Ameaças/proteções comuns
 
-Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
 ### Cross site scripting (XSS)
 
 XSS é um termo utilizado para descrever uma classe de ataques que permitem um invasor injetar scripts no lado cliente, através do website, no navegador de outros usuários. Issi geralmente é conseguido armazenando scripts maliciosos no banco de dados onde eles podem ser recuperado e exibidos para outros usuários, ou fazendo com que usuários cliquem em um link que fará com que o JavaScript do invasor seja executado pelo navegador do usuário.
 
-O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms).
+O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms).
 
 1. Inicie o website usando o servidor de desenvolvimento (`python3 manage.py runserver`).
 2. Abra o site em seu navegador local e faça login em sua conta de superusuário.
@@ -165,7 +166,7 @@ Django also provides other forms of protection (most of which would be hard or n
 - Proteção contra Injeção de SQL
   - : As vulnerabilidades de injeção de SQL (SQL injection) permitem usuários mal-intencionados executarem código SQL arbitrário em um banco de dados, permitindo que dados sejam acessados, modificados ou apagados independentemente das permissões do usuário. Em quase todos os casos você acessará o banco de dados usando querysets/models do Django, de mdo que o SQL resultante será devidamente escapado pelo driver de banco de dados subjacente. Se você precisa escrever consultas brutas ou SQL customizado precisará pensar explicitamente sobre como previnir injeção de SQL.
 - Proteção contra Clickjacking
-  - : Nesse ataque, um usuário malicioso sequestra clicks destinados a um site de visível no nível superior e os encaminha para uma página oculta abaixo. Essa técnica pode ser usada, por exemplo, para exibir um site de banco legítimo, mas capturar as credenciais de login em um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) invisível, controlado pelo atacante. O Django possui [proteção contra clickjacking](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) na forma do [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) que, em um navegador de suporte, pode impedir que um site seja renderizado dentro de um frame.
+  - : Nesse ataque, um usuário malicioso sequestra clicks destinados a um site de visível no nível superior e os encaminha para uma página oculta abaixo. Essa técnica pode ser usada, por exemplo, para exibir um site de banco legítimo, mas capturar as credenciais de login em um [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe) invisível, controlado pelo atacante. O Django possui [proteção contra clickjacking](https://docs.djangoproject.com/en/2.0/ref/clickjacking/#clickjacking-prevention) na forma do [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) que, em um navegador de suporte, pode impedir que um site seja renderizado dentro de um frame.
 - Aplicação de SSL/HTTPS
   - : SSL/HTTPS pode ser habilitado no servidor web para criptografar todo o tráfego entre o site e o navegador, incluindo credenciais de autenticação que seriam enviadas em texto simples (habilitar HTTPS é altamente recomendado). Se HTTPS estiver habilitado o Django fornece uma série de outras proteções que você pode utilizar:
 
@@ -189,7 +190,7 @@ Django tem proteções eficazes contra uma série de ameaças comuns, incluindo 
 
 Esta foi uma incursão muito breve em segurança web. Nós recomendamos fortemente que você leia [Segurança no Django](https://docs.djangoproject.com/en/2.0/topics/security/) para obter um entendimento mais profundo.
 
-A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de avaliação](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog).
+A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de avaliação](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/django_assessment_blog).
 
 ## Veja também
 
@@ -198,4 +199,4 @@ A próxima e última etapa neste módulo sobre Django é concluir a [tarefa de a
 - [Segurança web](/pt-BR/docs/Web/Security) (MDN)
 - [Protegendo seu site](/pt-BR/docs/Web/Security/Practical_implementation_guides) (MDN)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}

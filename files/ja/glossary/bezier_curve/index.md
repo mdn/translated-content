@@ -18,5 +18,5 @@ l10n:
 ## 関連情報
 
 - [ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)（ウィキペディア）
-- [CSS の 3 次ベジェイージング関数](/ja/docs/Web/CSS/easing-function#cubic-bezier_関数の例)
+- [CSS の 3 次ベジェイージング関数](/ja/docs/Web/CSS/Reference/Values/easing-function#cubic-bezier_関数の例)
 - {{SVGAttr("keySplines")}} SVG 属性

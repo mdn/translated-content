@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 original_slug: Learn/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 A validação de formulário nos ajuda a garantir que os usuários preencham os campos no formato correto, garantindo que os dados enviados funcionem com êxito em nossos aplicativos. Este artigo apresentará conceitos e exemplos básicos sobre validação de formulário. Para mais informações adicionais, consulte o [Guia de validação](/pt-BR/docs/Web/HTML/Constraint_validation).
 
@@ -14,9 +14,9 @@ A validação de formulário nos ajuda a garantir que os usuários preencham os 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimento em informática, uma compreensão razoável de
-        <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
-        <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
-        <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>.
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d">HTML</a>,
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>, e
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308">JavaScript</a>.
       </td>
     </tr>
     <tr>
@@ -44,7 +44,7 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 
 - **Nos queremos que o dado correto e no formato correto** — nossa aplicação não irá trabalhar de forma correta se os dados dos nossos usuarios estivem armazenados em formato incorreto, ou quando esses dados são omitidos.
 - **Quemos proteger os dados dos nossos usuários** — Forçarnosos usuários a fornecer senhas seguras facilita na proteção das informações da conta do usuário.
-- **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)).
+- **Queremos proteger nos mesmos** — Existem diversas maneiras de um usuário malicioso usar formulários desprotegidos para danificar nossa aplicação (veja [Website security](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)).
 
   > [!WARNING]
   > Nunca confie nos dados passados do cliente para o servidor. Mesmo que seu formulário seja validado de maneira correta e previna a má formação de inputs no lado do cliente, um usuário malicioso ainda pode roubar o request da conexão.
@@ -54,7 +54,6 @@ Queremos tornar o preenchimento de formulários da web o mais fácil possível. 
 Existem dois tipos diferentes de validação de formulários que você encontrará na web:
 
 - **Validação do lado do cliente** é a validação que ocorre no navegador antes que os dados sejam enviados ao servidor. Isso é mais fácil de usar do que a validação do lado do servidor, pois fornece uma resposta instantânea. Isso pode ser ainda subdividido:
-
   - A validação **JavaScript** é codificada usando JavaScript. É completamente customizável.
   - **Validação de formulário integrada** usando recursos de validação de formulário HTML5. Isso geralmente não requer JavaScript. A validação de formulário integrada tem melhor desempenho, mas não é tão personalizável quanto o JavaScript.
 
@@ -106,7 +105,7 @@ Para começar, faça uma cópia de `fruit-start.html` em um novo diretório em s
 
 ### O atributo obrigatório
 
-O recurso de validação HTML5 mais simples de usar é o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) — se você quiser tornar uma entrada obrigatória, você pode marcar o elemento usando este atributo. Quando este atributo estiver definido, o formulário não será enviado (e exibirá uma mensagem de erro) quando a entrada estiver vazia (a entrada também será considerada inválida).
+O recurso de validação HTML5 mais simples de usar é o atributo [`required`](/pt-BR/docs/Web/HTML/Reference/Elements/input#required) — se você quiser tornar uma entrada obrigatória, você pode marcar o elemento usando este atributo. Quando este atributo estiver definido, o formulário não será enviado (e exibirá uma mensagem de erro) quando a entrada estiver vazia (a entrada também será considerada inválida).
 
 Adicione um atributo `required` à sua entrada, conforme mostrado abaixo:
 
@@ -136,7 +135,7 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 ### Validando com uma expressão regular
 
-Outro recurso de validação muito comum é o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que espera uma [Expressão Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
+Outro recurso de validação muito comum é o atributo [`pattern`](/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern) que espera uma [Expressão Regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
 
 Regexes são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
@@ -173,16 +172,16 @@ Neste exemplo, o elemento {{HTMLElement("input")}} aceita um dos dois valores po
 Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como você se sai! Tente torná-los relacionados a frutas sempre que possível, para que seus exemplos façam sentido!
 
 > [!NOTE]
-> Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
+> Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Reference/Elements/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
 
 > [!NOTE]
-> O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
+> O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Reference/Elements/input#pattern).
 
 ### Restringindo o comprimento de suas entradas
 
-Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) atributos. Um campo é inválido se seu valor for menor que o valor [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) ou maior que o valor [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength). Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
+Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando [`minlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength) atributos. Um campo é inválido se seu valor for menor que o valor [`minlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#minlength) ou maior que o valor [`maxlength`](/pt-BR/docs/Web/HTML/Reference/Elements/input#maxlength). Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
 
-Para campos numéricos (ou seja, `<input type="number">`), os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo [`min`](/pt-BR/docs/Web/HTML/Element/input#min) ou maior que o atributo [`max`](/pt-BR/docs/Web/HTML/Element/input#max), o campo será inválido.
+Para campos numéricos (ou seja, `<input type="number">`), os atributos [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) e [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max) também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo [`min`](/pt-BR/docs/Web/HTML/Reference/Elements/input#min) ou maior que o atributo [`max`](/pt-BR/docs/Web/HTML/Reference/Elements/input#max), o campo será inválido.
 
 Vejamos outro exemplo. Crie uma nova cópia do arquivo [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -231,7 +230,8 @@ Aqui está o exemplo rodando ao vivo:
 
 {{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}
 
-> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
+> [!NOTE]
+> `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Reference/Elements/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
 
 ### Exemplo completo
 
@@ -350,7 +350,7 @@ Essas mensagens automatizadas têm duas desvantagens:
 
 Para personalizar a aparência e o texto dessas mensagens, você deve usar JavaScript; não há como fazer isso usando apenas HTML e CSS.
 
-HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Learn/Forms/Form_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
+HTML5 fornece a [API de validação de restrição](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation) para verificar e personalizar o estado de um elemento de formulário. Entre outras coisas, é possível alterar o texto da mensagem de erro. Vejamos um exemplo rápido:
 
 ```html
 <form>
@@ -554,9 +554,7 @@ Para validar um formulário, você deve se fazer algumas perguntas:
 - O que devo fazer se o formulário não validar?
   - : Isso é claramente uma questão de interface do usuário. Você tem que decidir como o formulário se comportará: O formulário envia os dados mesmo assim? Você deve destacar os campos que estão com erro? Você deve exibir mensagens de erro?
 - Como posso ajudar o usuário a corrigir dados inválidos?
-
   - : Para diminuir a frustração do usuário, é muito importante fornecer o máximo de informações úteis possível para orientá-lo na correção de suas entradas. Você deve oferecer sugestões iniciais para que eles saibam o que é esperado, bem como mensagens de erro claras. Se você quiser se aprofundar nos requisitos da interface do usuário de validação de formulário, há alguns artigos úteis que você deve ler:
-
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Validação de formulário da Web: práticas recomendadas e tutoriais](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Seis revisões: [Práticas recomendadas para dicas e validação em formulários da Web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
@@ -735,11 +733,9 @@ O resultado fica assim:
 Como você pode ver, não é issodifícil construir um sistema de validação por conta própria. A parte difícil é torná-lo genérico o suficiente para usá-lo em várias plataformas e em qualquer formulário que você possa criar. Existem muitas bibliotecas disponíveis para realizar a validação de formulários; você não deve hesitar em usá-los. Aqui estão alguns exemplos:
 
 - Biblioteca independente
-
   - [Validate.js](http://rickharrison.github.com/validate.js/)
 
 - plug-in jQuery:
-
   - [Validação](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
 
 #### Validação remota
@@ -759,4 +755,4 @@ A validação de formulário não requer JavaScript complexo, mas requer pensar 
 - Seja permissivo quanto ao formato de entrada.
 - Indique exatamente onde ocorre o erro (especialmente em formulários grandes).
 
-{{PreviousMenuNext("Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls", "Learn_web_development/Extensions/Forms")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 85ee57ef02a1cc0d104d3db2c81a4a45cb71011b
 ---
 
-{{HTMLSidebar}}
-
 [`<script>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/script)的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
 
 导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
@@ -141,24 +139,19 @@ import { name as squareName, draw } from "shapes/circle.js";
 导入映射必须是有效的 JSON 对象，最多可以定义两个可选键：`imports` 和 `scopes`。每个键值必须是对象，可以是空。
 
 - `imports` {{optional_inline}}
-
   - : 该值是[模块标识符映射](#module_specifier_map)，它提供可能在 `import` 语句或 `import()` 运算符中出现的模块标识符文本，其会在解析时与替换它的文本之间建立映射。
 
     如果没有 `scopes` 路径 URL 匹配，或者如果匹配 `scopes` 路径中的模块标识符映射不包含与模块标识符匹配的键，这将是搜索匹配模块标识符的回退映射。
-
     - `<module specifier map>`
-
       - : “模块标识符映射”是一个有效的 JSON 对象，其中*键*是在导入模块时，模块标识符可能存在的文本，并且相应的*值*时模块标识符解析为地址时将替换词文本的 URL 或路径。
 
         模块标识符映射 JSON 对象有以下要求：
-
         - 没有键可以是空的。
         - 所有的值必须是字符串。定义有效的绝对 URL 或者以 `/`、`./` 或 `../` 开始的相对 URL。
         - 如果一个键以 `/` 结尾，那么相应的值也必须以 `/` 结尾。带有尾随的 `/` 键可以用作映射（或重新映射）模块地址的前缀。
         - 对象属性的顺序无关紧要：如果多个键可以匹配模块标识符，则使用最具体的键（换句话说，标识符“olive/branch/”将在“olive/”之前匹配）。
 
 - `scopes` {{optional_inline}}
-
   - : 作用域定义了特定于路径的[模块标识符映射](#module_specifier_map)，这允许映射的选择取决于导入模块的代码路径。
 
     作用域对象是一个有效的 JSON 对象，其每个属性都是一个 `<scope key>`（URL 路径），并且相应的值是一个 `<module specifier map>`。

@@ -28,13 +28,13 @@ slug: Web/API/Element/paste_event
   </tbody>
 </table>
 
-현재 커서가 편집 가능한 맥락 ({{htmlelement("textarea")}} 등, 또는 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 특성이 `true`인 요소) 내에 위치한 경우, 이벤트의 기본 동작은 커서 위치에 클립보드의 내용을 삽입하는 것입니다.
+현재 커서가 편집 가능한 맥락 ({{htmlelement("textarea")}} 등, 또는 [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 특성이 `true`인 요소) 내에 위치한 경우, 이벤트의 기본 동작은 커서 위치에 클립보드의 내용을 삽입하는 것입니다.
 
 `paste` 이벤트 처리기는 이벤트의 {{domxref("ClipboardEvent.clipboardData")}} 속성에 대해 {{domxref("DataTransfer.getData", "getData()")}} 메서드를 호출해 클립보드 콘텐츠를 읽을 수 있습니다.
 
 데이터 가공 등을 위해 기본 동작을 재정의해야 할 필요가 있는 경우 {{domxref("Event.preventDefault", "event.preventDefault()")}}을 호출해 취소하고, 직접 데이터를 삽입하면 됩니다.
 
-[합성](/ko/docs/Web/Events/Creating_and_triggering_events) `paste` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 문서 내용에 영향을 줄 수 없습니다.
+[합성](/ko/docs/Web/API/Document_Object_Model/Events) `paste` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 문서 내용에 영향을 줄 수 없습니다.
 
 ## 예제
 

@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este artículo proporcionaremos una breve introducción al [framework Svelte](https://svelte.dev/). Veremos cómo funciona Svelte y qué es lo que lo hace diferente del resto de _frameworks_ y herramientas que hemos revisado hasta ahora. Después aprenderemos a configurar nuestro entorno de desarrollo, crear una aplicación de ejemplo, entender la estructura del proyecto, ver cómo ejecutarlo localmente y finalmente construir la versión para producción.
 
@@ -18,9 +18,9 @@ En este artículo proporcionaremos una breve introducción al [framework Svelte]
       <td>
         <p>
         Se recomienda que como mínimo te sientas familiarizado con lo básico de los lenguajes
-          <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a> y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la
+          <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>, además tener conocimiento de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/línea de comandos</a
@@ -148,21 +148,17 @@ El contenido del proyecto consta de los siguientes archivos:
 - `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
 - `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un empaquetador de módulos. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
 - `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
-
   - `setupTypeScript.js`: Este script configura el soporte de Typescript dentro de Svelte. Hablaremos más a detalle de este tema en el último artículo.
 
 - `src`: En este directorio se encuentra el código fuente de tu aplicación. Es decir, donde crearás la mayor parte de código.
-
   - `App.svelte`: Este es el componente principal de tu aplicación. De momento solo renderiza el mensaje 'Hello world'.
   - `main.js`: El punto de entrada a nuestra aplicación. Se encarga de instanciar el componente `App` y lo enlaza con el _body_ de tu página HTML.
 
 - `public`: Este directorio contiene todos los archivos que serán publicados en producción.
-
   - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
   - `index.html`: Esta es la página principal de tu aplicación. Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y JavaScript generados por Svelte.
   - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
   - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
-
     - `bundle.css`: El archivo CSS generado por Svelte a partir de los estilos definidos por cada componente.
     - `bundle.js`: El archivo de código Javascript compilado a partir de todo el código fuente de tu aplicación.
 
@@ -281,7 +277,7 @@ Si tienes experiencia trabajando con CSS, el siguiente código te debería ser f
 </style>
 ```
 
-Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
+Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
 
 En Svelte, el CSS dentro del bloque `<style>` de un componente solo afecta al componente en cuestión. Para que esto funcione, se agrega una clase a los elementos seleccionados, la cual se basa en el _hash_ de los estilos del componente.
 
@@ -450,7 +446,6 @@ Para iniciar un REPL, abre tu navegador web y navega a <https://svelte.dev/repl>
 - La barra que se encuentra arriba del código te permite crear archivos `.svelte` y `.js` y reordenarlos. Para crear un archivo dentro de una carpeta, simplemente especifica el nombre completo de su dirección, de la siguiente manera: `components/MiComponente.svelte`. La carpeta será creada automáticamente.
 - Arriba de la barra se muestra el título del REPL. Haz click en él para editarlo.
 - Del lado derecho tienes tres pestañas:
-
   - La pestaña _Result_ muestra la salida de tu aplicación, y proporciona una consola en la parte inferior.
   - La pestaña _JS output_ te permite inspeccionar el código JavaScript generado por Svelte, así como configurar el compilador.
   - La pestaña de _CSS output_ muestra el código CSS generado por Svelte.
@@ -511,4 +506,4 @@ En Svelte:
 - Las variables del nivel principal de un componente conforman su estado.
 - La reactividad se activa al asignar un nuevo valor a una variable del nivel principal.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -10,7 +10,7 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
   - : **HyperText Markup Language** (lenguaje de marcas de hipertexto) es el lenguaje principal de prácticamente todo el contenido web. La mayoría de las cosas que ves en en la pantalla de tu navegador están escritas, fundamentalmente, utilizando HTML.
 - [Guía del Desarrollador: CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
   - : CSS (hojas de estilo en cascada) es un lenguaje usado para describir la presentación gráfica de un documento escrito en HTML.
-- [Guía de Eventos](/es/docs/Web/Events)
+- [Guía de Eventos](/es/docs/Web/API/Document_Object_Model/Events)
   - : El término "Eventos" se refiere tanto al patrón de diseño usado para el manejo asíncrono de sucesos que ocurren durante el tiempo de vida de una página web como al nombramiento, caracterización y uso de grandes cantidades de sucesos de diferentes tipos.
 - [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : AJAX es el término utilizado para definir un conjunto de tecnologías que permiten a las aplicaciones web hacer rápidamente actualizaciones incrementales a la interfaz de usuario sin la necesidad de recargar toda la página web. Esto permite que las aplicaciones web sean más rápidas y más responsivas a las acciones de los usuarios.

@@ -115,7 +115,6 @@ target.addEventListener("drop", (event) => {
 ## Véase también
 
 - Otros eventos de arrastre:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}
@@ -124,7 +123,6 @@ target.addEventListener("drop", (event) => {
   - {{domxref("HTMLElement/drop_event", "drop")}}
 
 - Este evento en otros objetivos:
-
   - {{domxref("Window")}}: {{domxref("Window/dragover_event", "dragover")}} event
   - {{domxref("Document")}}: {{domxref("Document/dragover_event", "dragover")}} event
   - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragover_event", "dragover")}} event

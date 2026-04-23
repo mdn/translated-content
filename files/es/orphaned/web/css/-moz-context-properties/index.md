@@ -4,7 +4,7 @@ slug: orphaned/Web/CSS/-moz-context-properties
 original_slug: Web/CSS/-moz-context-properties
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 > [!NOTE]
 > Este recurso esta disponible desde Firefox 55, pero solamente es compatible con imagenes SVG cargadas via `chrome://` o `resource://` URLs. Para experimentar con la caracteristica SVG en la web, es necesario poner `svg.context-properties.content.enabled` en `true`.

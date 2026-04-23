@@ -18,9 +18,7 @@ query(permissionDescriptor)
 ### 引数
 
 - `permissionDescriptor`
-
   - : 名前と値のペアのカンマ区切りリストで構成される、`query` 操作のオプションを設定するオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `name`
       - : 権限を照会したい API の名前です。対応している値の集合はブラウザーごとに異なります。 Firefox の値は[こちら](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、 Chromium の値は[こちら](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、 WebKit の値は[こちら](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)にあります。
     - `userVisibleOnly`
@@ -31,7 +29,8 @@ query(permissionDescriptor)
 > [!NOTE]
 > Firefox 44 以降、[通知](/ja/docs/Web/API/Notifications_API)と[プッシュ](/ja/docs/Web/API/Push_API)の権限が統合されました。 （例えば、ユーザーによって、関連する権限のダイアログにより）権限が与えられた場合、 `navigator.permissions.query()` は `notifications` と `push` の両方に対して `true` を返します。
 
-> **メモ:** `persistent-storage` 権限は、[ストレージ API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
+> [!NOTE]
+> `persistent-storage` 権限は、[ストレージ API](https://storage.spec.whatwg.org/) のとおりに、オリジンがそのストレージとして永続的ボックス（すなわち永続的ストレージ（[persistent storage](https://storage.spec.whatwg.org/#persistence)））を使用することを許可します。
 
 ### 返値
 

@@ -1,27 +1,25 @@
 ---
-title: Groups and ranges
+title: 组和反向引用
 slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 ---
 
-{{jsSidebar("JavaScript Guide")}}
+组将多个模式组合为一个整体，而在使用正则表达式模式与字符串进行匹配时，捕获组会提供额外的子匹配信息。反向引用是指同一正则表达式中先前捕获的组。
 
-组和范围表示表达式字符的 组和范围
-
-{{InteractiveExample("JavaScript Demo: RegExp Groups and backreferences")}}
+{{InteractiveExample("JavaScript 演示：正则表达式组与反向引用")}}
 
 ```js interactive-example
-// Groups
+// 组
 const imageDescription = "This image has a resolution of 1440×900 pixels.";
-const regexpSize = /([0-9]+)×([0-9]+)/;
+const regexpSize = /(\d+)×(\d+)/;
 const match = imageDescription.match(regexpSize);
 console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
-// Expected output: "Width: 1440 / Height: 900."
+// 期望输出："Width: 1440 / Height: 900."
 
-// Backreferences
+// 反向引用
 const findDuplicates = "foo foo bar";
 const regex = /\b(\w+)\s+\1\b/g;
 console.log(findDuplicates.match(regex));
-// Expected output: Array ["foo foo"]
+// 期望输出：Array ["foo foo"]
 ```
 
 ## 类型
@@ -137,13 +135,7 @@ console.log(findDuplicates.match(regex));
       </td>
       <td>
         <p>
-          其中 n 是一个正整数。对正则表达式中与 n
-          括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
-            >/apple(,)\sorange\1/</code
-          >
-          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
-          <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
-          <code>,</code>
+          <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference"><strong>反向引用：</strong></a>其中“n”是一个正整数。匹配正则表达式中第 n 个捕获组（按左括号计数）所匹配的相同子字符串。例如，<code>/apple(,)\sorange\1/</code> 匹配“apple, orange, cherry, peach”中的“apple, orange”。
         </p>
       </td>
     </tr>
@@ -215,13 +207,30 @@ do {
 // Hellow 韩 梅梅
 ```
 
+### 使用组和反向引用
+
+在此示例中，我们首先使用 `['"]` 匹配单引号或双引号字符，将其记在 `\1` 中；接着使用 `.*?` 匹配任意数量的字符（`*?` 是一个[非贪婪量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)），直到再次使用 `\1` 匹配到之前记下的引号字符。`\1` 是对第一个捕获组的反向引用，该捕获组匹配的是同类型的引号。因此，结果将是两个字符串：`"'"` 和 `'"'`。
+
+```js
+const quote = `Single quote "'" and double quote '"'`;
+const regexpQuotes = /(['"]).*?\1/g;
+for (const match of quote.matchAll(regexpQuotes)) {
+  console.log(match[0]);
+}
+```
+
+更多示例请参见[反向引用](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)参考文档。
+
 ## 参见
 
-- [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-
-- [正则构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)指南
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
+- [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)指南
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
+- [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)参考
+- [反向引用：`\1`、`\2`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Backreference)
+- [捕获组：`(...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
+- [具名反向引用：`\k<name>`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
+- [具名捕获组：`(?<name>...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- [非捕获组：`(?:...)`](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)

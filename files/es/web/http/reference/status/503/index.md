@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/503
 original_slug: Web/HTTP/Status/503
 ---
 
-{{HTTPSidebar}}
-
 El envío de un código de error **`503 Servicio No Disponible`** como respuesta por un servidor que use el Protocolo de Transferencia de Hipertexto (HTTP) indica que el servidor no está listo para manejar la solicitud.
 
 Las causas más comunes son que el servidor esté apagado por mantenimiento o esté sobrecargado. Esta respuesta debería usarse para condiciones temporales y la cabecera HTTP {{HTTPHeader("Retry-After")}} debería, si es posible, contener el tiempo estimado para la recuperación del servicio.

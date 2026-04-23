@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
-
 {{glossary("flexbox", "弹性盒子")}}的**交叉轴**和{{glossary("main axis", "主轴")}}垂直，因此如果 {{cssxref("flex-direction")}} 是 `row` 或 `row-reverse`，那么交叉轴就是从上至下垂直走向的。
 
 ![交叉轴沿列方向](basics3.png)
@@ -37,13 +35,11 @@ l10n:
 ### 拓展阅读
 
 - CSS 弹性盒子指南：
-
-  - [弹性布局的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-  - [掌握弹性项目的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [弹性布局的基本概念](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+  - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+  - [掌握弹性项目的包装](/zh-CN/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
 
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Flex", "弹性布局")}}
   - {{Glossary("Flex Container", "弹性容器")}}
   - {{Glossary("Flex Item", "弹性项目")}}

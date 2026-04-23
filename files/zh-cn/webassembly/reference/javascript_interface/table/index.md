@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.Table`** 是代表 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
+**`WebAssembly.Table`** 是 JavaScript 包装对象，具有代表 WebAssembly Table 的类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
 
 > [!NOTE]
 > Table 对象目前只能存储函数引用，不过在将来可能会被扩展。

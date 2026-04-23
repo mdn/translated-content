@@ -18,13 +18,10 @@ var highlighting = browser.tabs.highlight(
 ### Paramètres
 
 - `highlightInfo`
-
   - : `object`.
-
     - `windowId`{{optional_inline}}
       - : `integer`. ID de la fenêtre contenant les onglets.
     - `populate`{{optional_inline}}
-
       - : `boolean`. Par défaut la valeur est `true`. S'il est défini sur `false`, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété `tabs` contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
 
         > [!NOTE]
@@ -46,8 +43,6 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 > [!NOTE]
 >
 > Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

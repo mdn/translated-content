@@ -8,7 +8,7 @@ l10n:
 
 {{MathMLRef}}
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Guides")}}
 
 この記事では、テキストコンテナーを利用して、分数や根号を入れ子にしてより複雑な MathML 式を構築する方法を説明します。
 
@@ -300,7 +300,8 @@ checkboxes.forEach((checkbox) => {
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
-> **メモ:** `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
+> [!NOTE]
+> `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
 
 ## まとめ
 
@@ -312,4 +313,4 @@ checkboxes.forEach((checkbox) => {
 - [`<msqrt>` 要素](/ja/docs/Web/MathML/Reference/Element/msqrt)
 - [`<mroot>` 要素](/ja/docs/Web/MathML/Reference/Element/mroot)
 
-{{PreviousMenuNext("Web/MathML/Guides/Text_containers", "Web/MathML/Guides/Scripts", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Guides")}}

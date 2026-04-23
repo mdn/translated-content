@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/DPR
 original_slug: Web/HTTP/Headers/DPR
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Web/HTTP/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.
 
@@ -15,13 +15,14 @@ O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/d
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>?</td>
     </tr>
   </tbody>
 </table>
 
-> **Nota:** _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
+> [!NOTE]
+> _Client Hints_ são acessíveis somente em origens seguras (via TLS). Servidor deve optar em receber um cabeçalho `DPR` do cliente enviando cabeçalhos de resposta {{HTTPHeader("Accept-CH")}} e {{HTTPHeader("Accept-CH-Lifetime")}}.
 
 ## Sintaxe
 

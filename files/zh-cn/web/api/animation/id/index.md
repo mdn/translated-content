@@ -1,32 +1,25 @@
 ---
-title: Animation.id
+title: Animation：id 属性
+short-title: id
 slug: Web/API/Animation/id
+l10n:
+  sourceCommit: 291a8c75ed553e807895225d51dff7ac24ad1f05
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
-[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性可返回或设置用于识别某个动画的唯一标识。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API) 的 **`Animation.id`** 属性用于获取或设置一个用于标识动画的字符串。
 
-## 获取与设置 `animation.id`
+## 值
 
-```js
-// 获取动画的 id
-var animationsId = animation.id;
-
-// 设置动画的 id
-animation.id = "newId";
-```
-
-## 返回值
-
-当该动画已被分配 id，返回一个 {{domxref("DOMString")}}, 当该动画未被分配 id 则返回 null.
+一个可用于标识动画的字符串；如果动画没有 `id`，则为 `null`。
 
 ## 示例
 
-在 [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010) 这个例子里，你可以像下面的方式一样，为 `rabbitDownAnimation` 分配一个 id:
+在[红皇后的赛跑游戏示例](/zh-CN/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#其他有用的方法)中，你可以像下面这样为 `redQueenAlice` 分配一个 `id`：
 
 ```js
-rabbitDownAnimation.effect.id = "rabbitGo";
+redQueenAlice.id = "redQueenAlice";
 ```
 
 ## 规范
@@ -39,6 +32,6 @@ rabbitDownAnimation.effect.id = "rabbitGo";
 
 ## 参见
 
-- [KeyframeEffect Interface](/zh-CN/docs/Web/API/KeyframeEffect)
-- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
+- {{domxref("KeyframeEffect")}}
+- [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}}

@@ -13,12 +13,12 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 new Proxy(target, handler);
 ```
 
-> **참고:** `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
+> [!NOTE]
+> `Proxy()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)로만 만들 수 있습니다. `new` 없이 호출하려고 하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수
 
 - `target`
-
   - : `Proxy`로 래핑할 대상 객체입니다. 네이티브 배열, 함수 또는 다른 프록시를 포함한 모든 종류의 객체가 될 수 있습니다.
 
 - `handler`

@@ -3,8 +3,6 @@ title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
 
-{{JSRef}}
-
 **`Math.cosh()`** 函数返回数值的双曲余弦函数，可用 {{jsxref("Math.E", "constant e", "", 1)}} 表示：
 
 <math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>

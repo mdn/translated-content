@@ -3,8 +3,6 @@ title: 解决 JavaSctript 代码的常见问题
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 ---
 
-{{LearnSidebar}}
-
 以下链接指向撰写 JavaScript 代码时可能遇见的问题。
 
 ## 初学者常见的错误

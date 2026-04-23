@@ -33,9 +33,7 @@ typedarray.some(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à tester pour chaque élément. Elle prend trois arguments :
-
     - `valeurCourante`
       - : L'élément du tableau typé en cours de traitement.
     - `index`

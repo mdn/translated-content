@@ -3,8 +3,6 @@ title: Firefox 74 for developers
 slug: Mozilla/Firefox/Releases/74
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 74 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -23,8 +21,8 @@ _変更なし。_
 
 ### CSS
 
-- [`text-underline-position`](/ja/docs/Web/CSS/text-underline-position) をデフォルトで有効にしました ([Firefox バグ 1606997](https://bugzil.la/1606997))。
-- [`text-underline-offset`](/ja/docs/Web/CSS/text-underline-offset) および [`text-decoration-thickness`](/ja/docs/Web/CSS/text-decoration-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([Firefox バグ 1607534](https://bugzil.la/1607534))。
+- [`text-underline-position`](/ja/docs/Web/CSS/Reference/Properties/text-underline-position) をデフォルトで有効にしました ([Firefox バグ 1606997](https://bugzil.la/1606997))。
+- [`text-underline-offset`](/ja/docs/Web/CSS/Reference/Properties/text-underline-offset) および [`text-decoration-thickness`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-thickness) プロパティがパーセンテージの値を受け入れるようになりました ([Firefox バグ 1607534](https://bugzil.la/1607534))。
 - {{cssxref("outline-style")}} プロパティの値 `auto` をデフォルトで有効にしました ([Firefox バグ 1031664](https://bugzil.la/1031664))。
 
 #### 廃止

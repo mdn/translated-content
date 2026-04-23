@@ -7,7 +7,7 @@ slug: Web/API/HTMLImageElement
 
 **`HTMLImageElement`** 接口提供了特别的属性和方法 (在常规的 {{domxref("HTMLElement")}}之外，它也能通过继承使用) 来操纵 {{HTMLElement("img")}} 元素的布局和图像。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Constructor
 
@@ -26,7 +26,7 @@ _从它的父元素 {{domxref("HTMLElement")}} 继承的属性。_
   - : 一个 {{domxref("DOMString")}} 表示这个 img 元素的 CORS 设置。参考 [CORS settings attributes](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。This may be `null` if CORS is not used.
 - {{domxref("HTMLImageElement.currentSrc")}} {{readonlyInline}}
   - : 返回一个 {{domxref("DOMString")}} 表示加载当前显示的图像的 URL。
-    这可能会改变，因为图像是调整，由于不断变化的条件，由任何 [media queries](/zh-CN/docs/Web/CSS/CSS_media_queries) 的地方。
+    这可能会改变，因为图像是调整，由于不断变化的条件，由任何 [media queries](/zh-CN/docs/Web/CSS/Guides/Media_queries) 的地方。
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional {{domxref("DOMString")}} representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
 - {{domxref("HTMLImageElement.height")}}

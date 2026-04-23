@@ -21,7 +21,8 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Texto HTML avanzado 2
 
@@ -36,7 +37,8 @@ Intente actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida para esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) para trabajar en su propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 
@@ -46,7 +48,6 @@ Si desea que se evalúe su trabajo, o está atascado y desea pedir ayuda:
 
 1. Pon tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o utilizar los archivos de punto de inicio vinculados en las secciones anteriores.
 2. Escriba una publicación solicitando evaluación y / o ayuda en el [MDN Discourse forum Categoría de aprendizaje](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
-
    - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de texto avanzado HTML 1".
    - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, p. Ej. si está atascado y necesita ayuda, o quiere una evaluación.
    - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor que se puede compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.

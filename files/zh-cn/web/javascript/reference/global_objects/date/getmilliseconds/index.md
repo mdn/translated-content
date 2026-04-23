@@ -3,8 +3,6 @@ title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ---
 
-{{JSRef}}
-
 **`getMilliseconds()`** 方法根据本地时间，返回一个指定的日期对象的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.getMilliseconds()")}}

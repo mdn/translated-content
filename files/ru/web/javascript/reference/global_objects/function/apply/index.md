@@ -103,7 +103,7 @@ var max = Math.max.apply(
 var min = Math.min.apply(null, numbers);
 
 /* сравним с простым алгоритмом с циклом */
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {

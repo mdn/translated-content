@@ -3,7 +3,7 @@ title: "ARIA: spinbutton ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 original_slug: Web/Accessibility/ARIA/Roles/spinbutton_role
 l10n:
-  sourceCommit: 15495ec2cf79a6677a523629925ee269343d4bf0
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `spinbutton` ロールは、ユーザーに離散的な選択肢の中から値を選択することを期待する範囲選択の型を定義します。
@@ -18,7 +18,8 @@ l10n:
 
 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を含めてスピンボタンのフォーカスを有効にすることに加えて、キーボードとポインター端末に対応しなければなりません。キーボードユーザーのために、矢印キーのような方向キーに対応する必要があります。ポインティングデバイスのために、増加ボタンと減少ボタンがクリックされたときに値を変更することに対応していなければなりません。下記の[キーボード操作](#キーボード操作)を参照してください。
 
-> **メモ:** `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
+> [!NOTE]
+> `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
 
 ### ARIA range ウィジェットのオプション
 
@@ -42,7 +43,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性は最大値を定義します。これが無いか、数値でない場合、既定値は `100` です。
 
-[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `spinbutton` と `meter` では必須であり、 `progressbar` ではオプションです。
+[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `meter` では必須であり、`progressbar` ではオプションです。
 
 `spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
 
@@ -60,20 +61,16 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 ## 関連するロール、状態、プロパティ
 
-- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) （必須）
-
-  - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、既定値はありません。
+- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
+  - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、スピンボタンに現在の値が設定されていません。
 
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
-
   - : 支援技術は `aria-valuenow` の値を通常は数字で表示します。 `aria-valuenow` が正確な値でない場合は、 `aria-valuetext` を使用して、スピンボタンにより分かりやすい値を提供してください。
 
 - [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
-
   - : 最小値を表し、 `aria-valuemax` より小さい実数値を設定します。存在しない場合、既定値はありません。
 
 - [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
-
   - : 最大値を表し、 `aria-valuemin` より大きな実数値に設定します。存在しない場合、既定値はありません。
 
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)

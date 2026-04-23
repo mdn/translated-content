@@ -3,8 +3,6 @@ title: 词法语法
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
 
-{{JsSidebar("More")}}
-
 这部分描述了 JavaScript 的词法（lexical grammar）。ECMAScript 源码文本会被从左到右扫描，并被转换为一系列的输入元素，包括 token、控制符、行终止符、注释和空白符。ECMAScript 定义了一些关键字、字面量以及行尾分号补全的规则。
 
 ## 格式控制符
@@ -492,7 +490,6 @@ ECMAScript 规格提到[自动分号补全的三个规则](https://people.mozill
    ```
 
 3. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
-
    - 后置运算符（`++` 和 `--`）
    - `continue`
    - `break`

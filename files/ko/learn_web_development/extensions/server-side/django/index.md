@@ -14,7 +14,8 @@ Django는 파이썬으로 구성된, 인기 많고 완벽한 기능을 갖춘 �
 
 프로그래밍 개념 그리고 [Python](/ko/docs/Glossary/Python)에 대한 일반적인 지식을 공부하는 것은 권장합니다. 하지만 이것이 Django의 핵심 개념을 이해하는데 반드시 필요한 것은 아닙니다.
 
-> **참고:**: Python은 초보자가 읽고 이해할 수 있는 가장 쉬운 프로그래밍 언어 중 하나 입니다. 즉, 만약 당신이 이 모듈을 더 깊이 이해하고 싶다면, 인터넷에서 많은 무료 서적과 자습서들을 이용할 수 있습니다. ( 초보 프로그래머들은 python.org wiki 에서 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 페이지를 확인해도 좋습니다.).
+> [!NOTE]
+> Python은 초보자가 읽고 이해할 수 있는 가장 쉬운 프로그래밍 언어 중 하나 입니다. 즉, 만약 당신이 이 모듈을 더 깊이 이해하고 싶다면, 인터넷에서 많은 무료 서적과 자습서들을 이용할 수 있습니다. ( 초보 프로그래머들은 python.org wiki 에서 [Python for Non Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) 페이지를 확인해도 좋습니다.).
 
 ## 가이드
 

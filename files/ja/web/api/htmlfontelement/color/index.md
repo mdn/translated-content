@@ -10,7 +10,7 @@ l10n:
 
 廃止された **`HTMLFontElement.color`** プロパティは、HTML の [`color`](/ja/docs/Web/HTML/Reference/Elements/font#color) 属性を反映した文字列で、名前付き色または 16 進数の #RRGGBB 形式で指定した色が入ります。
 
-文字列の形式は以下の HTML マイクロ構文のいずれかに従わなければなりません（[`<color>`](/ja/docs/Web/CSS/color_value) を参照してください）。
+文字列の形式は以下の HTML マイクロ構文のいずれかに従わなければなりません（[`<color>`](/ja/docs/Web/CSS/Reference/Values/color_value) を参照してください）。
 
 | マイクロ構文            | 説明                                     | 例                        |
 | ----------------------- | ---------------------------------------- | ------------------------- |

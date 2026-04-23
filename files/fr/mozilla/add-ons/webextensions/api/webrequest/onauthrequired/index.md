@@ -65,23 +65,18 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`détails`](#details) ci-dessous.
 
     Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
-
     - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
     - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"`: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.
     - `"responseHeaders"`: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
 
@@ -90,9 +85,7 @@ Les événements ont trois fonctions :
 ### Détails
 
 - `challenger`
-
   - : `object`. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :
-
     - `host`
       - : `string`. Le [nom d'hôte](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames) du serveur.
         **Warning**: Contrairement à chrome, Firefox retournera l'hôte demandé au lieu du proxy demandant l'authentification, même si `isProxy` est `true`.
@@ -108,17 +101,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -131,7 +120,7 @@ Les événements ont trois fonctions :
     - `proxyDNS`
       - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
     - `failoverTimeout`
-      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
+      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
 
 - `realm`{{optional_inline}}
   - : `string`. La zone d'authentification [realm](https://tools.ietf.org/html/rfc1945#section-11) fournie par le serveur, s'il y en a un.
@@ -282,8 +271,6 @@ browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

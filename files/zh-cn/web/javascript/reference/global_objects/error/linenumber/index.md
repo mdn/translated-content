@@ -3,7 +3,7 @@ title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{non-standard_header}}
 
 **`lineNumber`** 属性的值为抛出错误的代码在其源文件中所在的行号。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取所有打开的窗口的信息，并将它们传递给一个回调函数。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
@@ -22,9 +20,7 @@ let gettingAll = browser.windows.getAll(
 ### 参数
 
 - `getInfo` {{optional_inline}}
-
   - : `object`。这将决定获取哪些 {{WebExtAPIRef('windows.Window')}} 对象。
-
     - `populate` {{optional_inline}}
       - : `boolean`。默认为 `false`。如果设置为 `true`，每个 {{WebExtAPIRef('windows.Window')}} 对象将有一个 `tabs` 属性，其中包含表示该窗口中的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象的列表。只有当扩展的清单文件包含 `"tabs"` 权限或与标签页的 URL 匹配的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)时 `Tab` 对象才会包含 `url`、`title` 和 `favIconUrl` 属性。
     - `windowTypes` {{optional_inline}}

@@ -48,7 +48,8 @@ En general, es mejor no agregar, modificar o eliminar propiedades del objeto dur
 
 ### Iteración en arreglos y `for...in`
 
-> **Nota:** `for...in` no se debe usar para iterar sobre un {{JSxRef("Array")}} donde el orden del índice es importante.
+> [!NOTE]
+> `for...in` no se debe usar para iterar sobre un {{JSxRef("Array")}} donde el orden del índice es importante.
 
 Los índices del arreglo son solo propiedades enumerables con nombres enteros y, por lo demás, son idénticos a las propiedades generales del objeto. No hay garantía de que `for...in` devuelva los índices en un orden en particular. La instrucción de bucle `for...in` devolverá todas las propiedades enumerables, incluidas aquellas con nombres no enteros y aquellas que se heredan.
 

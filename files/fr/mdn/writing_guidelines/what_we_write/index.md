@@ -33,7 +33,7 @@ Si vous souhaitez suggérer un nouveau contenu pour MDN, veuillez lire cette pag
 
 Pour les nouvelles pages de référence ou les nouveaux guides, veuillez ouvrir une discussion [sur le dépôt `mdn-community`](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions) et décrire le contenu suggéré et les raisons de cette suggestion (avec le plus de détails possible).
 
-Pour suggérer des projets plus vastes, comme l'écriture de nouvelles sections, veuillez vous référer aux [critères d'inclusion](/fr/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion). Cette page décrit comment faire dans ce cas.
+Pour suggérer des projets plus vastes, comme l'écriture de nouvelles sections, veuillez vous référer aux [critères d'inclusion](/fr/docs/MDN/Writing_guidelines/Criteria_for_inclusion). Cette page décrit comment faire dans ce cas.
 
 ## Sujets pertinents pour MDN
 
@@ -56,14 +56,14 @@ Les sujets sur lesquels nous nous concentrons avant tout sont les technologies w
 - [Les API web](/fr/docs/Web/API)
 - [HTTP](/fr/docs/Web/HTTP)
 
-Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
+Nous documentons également d'autres sujets comme [SVG](/fr/docs/Web/SVG), [XML](/fr/docs/Web/XML), [WebAssembly](/fr/docs/WebAssembly), [l'accessibilité](/fr/docs/Learn_web_development/Core/Accessibility). De plus, nous écrivons [des guides d'apprentissage](/fr/docs/Learn_web_development) pour ces technologies et disposons également [d'un glossaire](/fr/docs/Glossary).
 
 > [!NOTE]
-> Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn/Server-side).
+> Les technologies côté serveur ont, la plupart du temps, leur propre documentation et MDN n'a pas pour but de maintenir une autre version. Toutefois, [il existe certaines exceptions](/fr/docs/Learn_web_development/Extensions/Server-side).
 
 Le contenu présent sur MDN doit être pertinent pour la section dans laquelle il est situé. On attend des personnes qui contribuent à ce qu'elles suivent [les règles d'écritures sur MDN](/fr/docs/MDN/Writing_guidelines) tant pour la forme, les exemples de code que pour d'autres sujets.
 
-Pour plus de détails quant aux critères d'acceptation pour la documentation d'une technologie sur MDN, veuillez vous référer à [la page des critères d'inclusion](/fr/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion).
+Pour plus de détails quant aux critères d'acceptation pour la documentation d'une technologie sur MDN, veuillez vous référer à [la page des critères d'inclusion](/fr/docs/MDN/Writing_guidelines/Criteria_for_inclusion).
 
 ### Quand documenter une nouvelle technologie
 

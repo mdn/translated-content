@@ -3,8 +3,6 @@ title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 ---
 
-{{JSRef}}
-
 如果某个元素满足所提供的测试函数，**`find()`** 方法返回类型化数组中的**值**，否则返回 {{jsxref("undefined")}}。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 同时请参见 {{jsxref("TypedArray.findIndex", "findIndex()")}} 方法，它返回了类型化数组中所发现元素的**下标**，而不是它的值。
@@ -52,19 +50,27 @@ find(callbackFn, thisArg)
 下面的示例在类型化数组中寻找质数（如果没有质数则返回 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)）。
 
 ```js
-function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
+const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ## 规范
 

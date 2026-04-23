@@ -19,7 +19,7 @@ La mayoría de los elementos son enfocables por defecto, y se puede hacer que un
 
 ### Ver también
 
-- Atributo HTML global [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
+- Atributo HTML global [tabindex](/es/docs/Web/HTML/Reference/Global_attributes/tabindex)
 - Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
 - Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
 
@@ -31,7 +31,7 @@ Esto genera una confusión para usuarios que solo usen el teclado cuando el orde
 
 ### Ver también
 
-- Atributo HTML globlal [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
+- Atributo HTML globlal [tabindex](/es/docs/Web/HTML/Reference/Global_attributes/tabindex)
 - [Entendiento el orden del enfoque](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
 - [No use un tabindex mayor que 0](https://adrianroselli.com/2014/11/dont-use-tabindex-greater-than-0.html)
 
@@ -43,7 +43,7 @@ A un elemento se le puede hacer click si tiene in manejador de evento `onclick` 
 
 ### Ver también
 
-- El atributo global HTML [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
+- El atributo global HTML [tabindex](/es/docs/Web/HTML/Reference/Global_attributes/tabindex)
 - Manejador de evento global: [onkeydown](/es/docs/conflicting/Web/API/Element/keydown_event)
 - Manejador de evento global: [onkeyup](/es/docs/conflicting/Web/API/Element/keyup_event)
 
@@ -62,11 +62,11 @@ Si el usuario puede interactuar con un elemento (por ejemplo, usando el tacto o 
 
 ### Ver también
 
-- Atributo global HTML [tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)
+- Atributo global HTML [tabindex](/es/docs/Web/HTML/Reference/Global_attributes/tabindex)
 
 ## Elementos enfocables deben tener un estilo al estar enfocados
 
-Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/es/docs/Web/CSS/:focus).
+Cualquier elemento que pueda recibir el enfoque desde el teclado, debería tener un estilo visible que indique cuando el elemento esta enfocado. Se puede hacer esto con la pseudo-clase de CSS [`:focus`](/es/docs/Web/CSS/Reference/Selectors/:focus).
 
 Elementos enfocables estándar como enlaces y los campos de entrada reciben un estilo especial por parte del navegador de forma predeterminada, por lo que podría no ser necesario especificar un estilo de enfoque para éstos, a menos que se quiera que el estilo de enfoque sea más distintivo.
 

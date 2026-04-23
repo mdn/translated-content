@@ -3,8 +3,6 @@ title: 按位与（&）
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 ---
 
-{{jsSidebar("Operators")}}
-
 **按位与**（**`&`**）运算符在两个操作数对应的二进位都为 `1` 时，该位的结果值才为 `1`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND", "shorter")}}

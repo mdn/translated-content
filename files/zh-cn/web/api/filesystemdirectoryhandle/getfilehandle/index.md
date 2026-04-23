@@ -21,9 +21,7 @@ getFileHandle(name, options)
 - `name`
   - : 一个字符串，表示你想要获得的文件的 {{domxref('FileSystemHandle.name')}}。
 - `options` {{optional_inline}}
-
   - : 包含以下属性的对象：
-
     - `create` {{optional_inline}}
       - : {{jsxref('Boolean', '布尔值', '', 'nocode')}}，默认为 `false`。当设为 `true` 时，如果没有找到对应的文件，将会创建一个指定名称的文件并将其返回。
 

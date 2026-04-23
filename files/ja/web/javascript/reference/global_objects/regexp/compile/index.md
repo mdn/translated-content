@@ -1,13 +1,15 @@
 ---
 title: RegExp.prototype.compile()
+short-title: compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 l10n:
-  sourceCommit: 6bd17cb9cbc2d11163617b9f71706e93fdd743c8
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{Deprecated_Header}}
 
-> **メモ:** `compile()` メソッドは互換性のためにのみ定義されています。`compile()` を使用すると、それまで不変であった正規表現のソースとフラグが変更可能なものとなり、ユーザーの期待を裏切る可能性があります。代わりに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを使用して新しい正規表現オブジェクトを構築してください。
+> [!NOTE]
+> `compile()` メソッドは互換性のためにのみ定義されています。`compile()` を使用すると、それまで不変であった正規表現のソースとフラグが変更可能なものとなり、ユーザーの期待を裏切る可能性があります。代わりに [`RegExp()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) コンストラクターを使用して新しい正規表現オブジェクトを構築してください。
 
 **`compile()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 `RegExp` オブジェクトが既に作成された後、新しいソースとフラグで正規表現を再コンパイルするために使用します。
 
@@ -24,6 +26,10 @@ compile(pattern, flags)
 - `flags`
   - : [フラグ値](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#flags)の組み合わせです。
 
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
 ## 例
 
 ### compile() の使用
@@ -31,7 +37,7 @@ compile(pattern, flags)
 次の例では、新しいパターンとフラグで正規表現を再コンパイルする方法を示します。
 
 ```js
-const regexObj = new RegExp("foo", "gi");
+const regexObj = /foo/gi;
 regexObj.compile("new foo", "g");
 ```
 

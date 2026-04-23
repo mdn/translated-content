@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
-{{GlossarySidebar}}
-
 **HTTP/3** 是继 {{glossary("HTTP 2", "HTTP/2")}} 之后的 [HTTP 网络协议](/zh-CN/docs/Web/HTTP)的主要修订版。
 
 HTTP/3 的最大不同之处在于它使用了一种名为 QUIC 的协议（基于 {{glossary("UDP")}} 而不是 {{glossary("TCP")}}）。

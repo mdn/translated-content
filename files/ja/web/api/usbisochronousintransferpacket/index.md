@@ -19,9 +19,7 @@ l10n:
 - {{domxref("USBIsochronousInTransferPacket.data")}} {{ReadOnlyInline}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : あれば、USB デバイスからこのパケットで受信したデータが格納された `DataView` オブジェクトを返します。
 - {{domxref("USBIsochronousInTransferPacket.status")}} {{ReadOnlyInline}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 転送要求の状態を返します。以下のいずれかです。
-
     - `"ok"` — 転送は成功しました。
     - `"stall"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。アイソクロナスエンドポイントでのストールをクリアする必要はありません。
     - `"babble"` — デバイスは想定より多くのデータで応答しました。

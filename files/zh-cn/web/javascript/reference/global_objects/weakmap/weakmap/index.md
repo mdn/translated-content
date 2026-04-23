@@ -3,8 +3,6 @@ title: WeakMap() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 ---
 
-{{JSRef}}
-
 **`WeakMap()`** 构造函数创建 {{jsxref("WeakMap")}} 对象。
 
 ## 语法
@@ -14,7 +12,8 @@ new WeakMap()
 new WeakMap(iterable)
 ```
 
-> **备注：** `WeakMap()` 构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用。不使用 `new` 而直接调用会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `WeakMap()` 构造函数只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用。不使用 `new` 而直接调用会抛出 {{jsxref("TypeError")}}。
 
 ## 参数
 

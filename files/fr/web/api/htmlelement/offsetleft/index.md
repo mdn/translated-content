@@ -1,74 +1,87 @@
 ---
-title: element.offsetLeft
+title: "HTMLElement : propriété offsetLeft"
+short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
+l10n:
+  sourceCommit: 7cd51a73ad94df604db79ccacbbe0513d0967650
 ---
 
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}
 
-### Résumé
+La propriété en lecture seule **`offsetLeft`** de l'interface {{DOMxRef("HTMLElement")}} retourne le nombre de pixels de décalage du _coin supérieur gauche_ de l'élément courant vers la gauche à l'intérieur du nœud {{DOMxRef("HTMLElement.offsetParent")}}.
 
-Renvoie le nombre de pixels dont le
-_coin supérieur gauche_
-de l'élément courant est décalé vers la gauche au sein du nœud [`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent).
+Pour les éléments de type bloc, `offsetTop`, `offsetLeft`, `offsetWidth` et `offsetHeight` décrivent la boîte de bordure de l'élément par rapport à l'`offsetParent`.
 
-### Syntaxe
+Cependant, pour les éléments en ligne (comme une étendue) qui peuvent passer d'une ligne à l'autre, `offsetTop` et `offsetLeft` décrivent la position de la _première_ boîte de bordure (utilisez {{DOMxRef("Element.getClientRects()")}} pour obtenir sa largeur et sa hauteur), tandis que `offsetWidth` et `offsetHeight` décrivent les dimensions de la boîte de bordure _englobante_ (utilisez {{DOMxRef("Element.getBoundingClientRect()")}} pour obtenir sa position). Ainsi, une boîte avec la gauche, le haut, la largeur et la hauteur de `offsetLeft`, `offsetTop`, `offsetWidth` et `offsetHeight` ne sera pas une boîte englobante pour une étendue (<i lang="en">span</i>) avec un retour à la ligne.
 
-```js
-left = element.offsetLeft;
-```
+## Valeur
 
-`left` est un entier représentant le décalage vers la gauche en pixels.
-
-### Note
-
-`offsetLeft` renvoie la position du coin supérieur gauche de l'élément&nbsp;; pas nécessairement du «&nbsp;vrai&nbsp;» bord gauche de l'élément. C'est important pour les éléments **span** dans les textes continus qui s'étendent sur plusieurs lignes. Le span peut commencer au milieu de la page et continuer au début de la ligne suivante. La propriété `offsetLeft` fera référence au coin gauche de départ du span, pas le bord gauche du texte au début de la seconde ligne. Par conséquent, une boîte avec les valeurs left, top, width et height correspondant à `offsetLeft, offsetTop, offsetWidth` et `offsetHeight` ne contiendra pas forcément un span avec débordement de texte.
+Un entier.
 
 ### Exemple
 
 ```js
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+const colorTable = document.getElementById("t1");
+const tOLeft = colorTable.offsetLeft;
 
 if (tOLeft > 5) {
-  // grand décalage à gauche&nbsp;: faire quelque chose ici
+  // grand décalage à gauche : faire quelque chose ici
 }
 ```
 
-Comme noté plus haut, cet exemple montre une «&nbsp;longue&nbsp;» phrase qui déborde dans un div avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites du span.
+Cet exemple montre une «&nbsp;longue&nbsp;» phrase qui déborde dans un bloc avec une bordure bleue, et une boîte rouge dont on pourrait croire qu'elle décrit les limites de l'étendue.
 
-![](offsetleft.jpg)
-
-Note&nbsp;: il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
+![Une phrase qui dit : Courte étendue. Ce texte est entièrement dans un bloc avec une bordure bleue. Une phrase qui dit : Longue étendue qui déborde dans ce bloc. Les mots « longue étendue qui déborde » sont dans une boîte à bordure rouge. Les mots « dans ce bloc » sont dans le bloc à bordure bleue.](offsetleft.jpg)
 
 ```html
-<div
-  style="width: 300px; border-color:blue;
-  border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="long">Long span that wraps withing this div.</span>
+<div class="span-container">
+  <span>Courte étendue.</span>
+  <span id="long-span">Longue étendue qui déborde dans ce bloc.</span>
 </div>
 
-<div
-  id="box"
-  style="position: absolute; border-color: red;
-  border-width: 1; border-style: solid; z-index: 10"></div>
-
-<script>
-  var box = document.getElementById("box");
-  var long = document.getElementById("long");
-  box.style.left = long.offsetLeft + document.body.scrollLeft;
-  box.style.top = long.offsetTop + document.body.scrollTop;
-  box.style.width = long.offsetWidth;
-  box.style.height = long.offsetHeight;
-</script>
+<div id="box"></div>
 ```
 
-### Voir aussi
+```css
+.span-container {
+  width: 300px;
+  border-color: blue;
+  border-style: solid;
+  border-width: 1px;
+}
 
-[`offsetParent`](/fr/docs/Web/API/HTMLElement/offsetParent), [`offsetTop`](/fr/docs/Web/API/HTMLElement/offsetTop), [`offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth), [`offsetHeight`](/fr/docs/Web/API/HTMLElement/offsetHeight)
+#box {
+  position: absolute;
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 10;
+}
+```
 
-### Spécification
+```js
+const box = document.getElementById("box");
+const longSpan = document.getElementById("long-span");
+box.style.left = `${longSpan.offsetLeft}${document.body.scrollLeft}px`;
+box.style.top = `${longSpan.offsetTop}${document.body.scrollTop}px`;
+box.style.width = `${longSpan.offsetWidth}px`;
+box.style.height = `${longSpan.offsetHeight}px`;
+```
 
-Cette propriété ne fait partie d'aucun standard ou recommandation technique du W3C.
+## Spécifications
 
-[MSDN: offsetLeft](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/offsetleft.asp)
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- [Déterminer les dimensions des éléments](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- La propriété {{DOMxRef("Element.clientLeft")}}
+- La propriété {{DOMxRef("Element.scrollLeft")}}
+- La propriété {{DOMxRef("HTMLElement.offsetHeight")}}
+- La propriété {{DOMxRef("HTMLElement.offsetWidth")}}
+- La propriété {{DOMxRef("HTMLElement.offsetTop")}}
+- La méthode {{DOMxRef("Element.getBoundingClientRect()")}}

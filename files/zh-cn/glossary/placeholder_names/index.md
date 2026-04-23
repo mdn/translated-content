@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 占位符名称在密码学中常用来指代对话的参与者，而不使用诸如“甲方”、“窃听者”和“恶意攻击者”等术语。
 
 最常用的名称有：

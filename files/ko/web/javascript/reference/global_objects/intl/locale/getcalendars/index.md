@@ -68,7 +68,8 @@ getCalendars()
   - : 민간용(계산식) 아랍 달력
 - `islamicc`
   - : 민간용(계산식) 아랍 달력
-    > **경고:** `islamicc` 달력 키는 더 이상 사용하지 않습니다. `islamic-civil`를 사용해주세요.
+    > [!WARNING]
+    > `islamicc` 달력 키는 더 이상 사용하지 않습니다. `islamic-civil`를 사용해주세요.
 
 ## 예제
 

@@ -2,10 +2,10 @@
 title: width
 slug: Web/SVG/Reference/Attribute/width
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
 ---
 
-**`width`** 属性は、ユーザー座標系における要素の水平方向の長さを定義します。
+**`width`** 属性は、ユーザー座標系における要素の水平方向の寸法を定義します。
 
 ## 要素
 
@@ -13,7 +13,7 @@ l10n:
 
 ### `<feBlend>`
 
-{{SVGElement('feBlend')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feBlend')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -34,7 +34,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@ l10n:
 
 ### `<feColorMatrix>`
 
-{{SVGElement('feColorMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feColorMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -67,7 +67,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ l10n:
 
 ### `<feComponentTransfer>`
 
-{{SVGElement('feComponentTransfer')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feComponentTransfer')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -100,7 +100,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -112,7 +112,7 @@ l10n:
 
 ### `<feComposite>`
 
-{{SVGElement('feComposite')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feComposite')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -133,7 +133,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -145,7 +145,7 @@ l10n:
 
 ### `<feConvolveMatrix>`
 
-{{SVGElement('feConvolveMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feConvolveMatrix')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -166,7 +166,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -178,7 +178,7 @@ l10n:
 
 ### `<feDiffuseLighting>`
 
-{{SVGElement('feDiffuseLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feDiffuseLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -199,7 +199,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -211,7 +211,7 @@ l10n:
 
 ### `<feDisplacementMap>`
 
-{{SVGElement('feDisplacementMap')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feDisplacementMap')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -232,7 +232,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -244,7 +244,7 @@ l10n:
 
 ### `<feDropShadow>`
 
-{{SVGElement('feDropShadow')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feDropShadow')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -265,7 +265,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -277,7 +277,7 @@ l10n:
 
 ### `<feFlood>`
 
-{{SVGElement('feFlood')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feFlood')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -298,7 +298,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -310,7 +310,7 @@ l10n:
 
 ### `<feGaussianBlur>`
 
-{{SVGElement('feGaussianBlur')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feGaussianBlur')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -331,7 +331,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -343,7 +343,7 @@ l10n:
 
 ### `<feImage>`
 
-{{SVGElement('feImage')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feImage')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -364,7 +364,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -376,7 +376,7 @@ l10n:
 
 ### `<feMerge>`
 
-{{SVGElement('feMerge')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feMerge')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -397,7 +397,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -409,7 +409,7 @@ l10n:
 
 ### `<feMorphology>`
 
-{{SVGElement('feMorphology')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feMorphology')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -430,7 +430,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -442,7 +442,7 @@ l10n:
 
 ### `<feOffset>`
 
-{{SVGElement('feOffset')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feOffset')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -463,7 +463,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -475,7 +475,7 @@ l10n:
 
 ### `<feSpecularLighting>`
 
-{{SVGElement('feSpecularLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feSpecularLighting')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -496,7 +496,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -508,7 +508,7 @@ l10n:
 
 ### `<feTile>`
 
-{{SVGElement('feTile')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feTile')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -529,7 +529,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -541,7 +541,7 @@ l10n:
 
 ### `<feTurbulence>`
 
-{{SVGElement('feTurbulence')}} の場合、 `width` はプリミティブの描画領域の水平方向の長さを定義します。
+{{SVGElement('feTurbulence')}} の場合、 `width` はプリミティブの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -562,7 +562,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>100%</code></td>
     </tr>
     <tr>
@@ -574,7 +574,7 @@ l10n:
 
 ### `<filter>`
 
-{{SVGElement('filter')}} の場合、 `width` はフィルターの描画領域の水平方向の長さを定義します。
+{{SVGElement('filter')}} の場合、 `width` はフィルターの描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -595,7 +595,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>120%</code></td>
     </tr>
     <tr>
@@ -607,7 +607,7 @@ l10n:
 
 ### `<foreignObject>`
 
-{{SVGElement('foreignObject')}} の場合、 `width` は参照先の文書の描画領域の水平方向の長さを定義します。
+{{SVGElement('foreignObject')}} の場合、 `width` は参照先の文書の描画領域の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -629,7 +629,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code> (treated as <code>0</code>)</td>
     </tr>
     <tr>
@@ -644,7 +644,7 @@ l10n:
 
 ### `<image>`
 
-{{SVGElement('image')}} の場合、 `width` は画像の水平方向の長さを定義します。
+{{SVGElement('image')}} の場合、 `width` は画像の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -666,7 +666,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（画像の内在的な幅として扱われる）</td>
     </tr>
     <tr>
@@ -681,7 +681,7 @@ l10n:
 
 ### `<mask>`
 
-{{SVGElement('mask')}} の場合、 `width` は効果の領域の水平方向の長さを定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
+{{SVGElement('mask')}} の場合、 `width` は効果の領域の水平方向の寸法を定義します。この属性の正確な効果は、{{SVGAttr('maskUnits')}} 属性の影響を受けます。
 
 <table class="properties">
   <tbody>
@@ -702,7 +702,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>120%</code></td>
     </tr>
     <tr>
@@ -714,7 +714,7 @@ l10n:
 
 ### `<pattern>`
 
-{{SVGElement('pattern')}} の場合、 `width` はタイルパターンの水平方向の長さを定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
+{{SVGElement('pattern')}} の場合、 `width` はタイルパターンの水平方向の寸法を定義します。この属性の正確な効果は、 {{SVGAttr('patternUnits')}} と {{SVGAttr('patternTransform')}} 属性の影響を受けます。
 
 <table class="properties">
   <tbody>
@@ -729,7 +729,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>0</code></td>
     </tr>
     <tr>
@@ -741,7 +741,7 @@ l10n:
 
 ### `<rect>`
 
-{{SVGElement('rect')}} の場合、 `width` は矩形の水平方向の長さを定義します。
+{{SVGElement('rect')}} の場合、 `width` は矩形の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -763,7 +763,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>
@@ -778,7 +778,7 @@ l10n:
 
 ### `<svg>`
 
-{{SVGElement('svg')}} の場合、 `width` は SVG ビューポートの描画領域の水平方向の長さを定義します。
+{{SVGElement('svg')}} の場合、 `width` は SVG ビューポートの描画領域の水平方向の寸法を定義します。
 
 > [!NOTE]
 > HTML 文書内の {{SVGAttr('viewBox')}} 属性と `width` 属性の両方が省略された場合、 [svg 要素は幅 `300px` で表示されます](https://svgwg.org/specs/integration/#svg-css-sizing)。
@@ -803,7 +803,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code> (treated as <code>100%</code>)</td>
     </tr>
     <tr>
@@ -818,7 +818,7 @@ l10n:
 
 ### `<use>`
 
-{{SVGElement('use')}} の場合、 `width` は参照先要素の水平方向の長さを定義します。
+{{SVGElement('use')}} の場合、 `width` は参照先要素の水平方向の寸法を定義します。
 
 <table class="properties">
   <tbody>
@@ -840,7 +840,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>auto</code>（<code>0</code> として扱われる）</td>
     </tr>
     <tr>

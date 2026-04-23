@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
 
@@ -43,7 +43,7 @@ l10n:
 - [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
-我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
+我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/Reference/Properties/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
 
 ## appearance：控制操作系统层面的样式化
 
@@ -376,7 +376,7 @@ select {
 }
 ```
 
-然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/::before)/[`::after`](/zh-CN/docs/Web/CSS/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
+然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/Reference/Selectors/::before)/[`::after`](/zh-CN/docs/Web/CSS/Reference/Selectors/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
 
 ```html
 <label for="select">Select a fruit</label>

@@ -112,7 +112,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 배열의 첫번째 요소는 `myArray[0]`로 참조할 수 있고 두번째 요소는 `myArray[1]`로 참조할 수 있습니다.
 배열의 인덱스 값은 0부터 시작합니다.
 
-> **참고:** [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 객체처럼 배열의 다른 속성에 접근하기 위해 사용할 수도 있습니다.
+> [!NOTE]
+> [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)를 객체처럼 배열의 다른 속성에 접근하기 위해 사용할 수도 있습니다.
 >
 > ```js
 > const arr = ["one", "two", "three"];

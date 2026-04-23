@@ -14,7 +14,8 @@ l10n:
 
 `srcset` プロパティは {{domxref("HTMLImageElement.sizes", "sizes")}} プロパティとともに、レスポンシブウェブサイトを設計する上で重要な要素です。これらのプロパティを併用することにより、描画状況に適した画像を使用するページを作成できます。
 
-> **メモ:** [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
+> [!NOTE]
+> [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性が幅記述子を使用した場合、`sizes` 属性も指定する必要があります。さもないと `srcset` 自体が無視されます。
 
 ## 値
 

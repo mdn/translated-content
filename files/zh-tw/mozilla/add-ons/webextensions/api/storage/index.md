@@ -3,8 +3,6 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
-{{AddonSidebar}}
-
 讓套件可以存讀資料以及監聽儲存項目的更動。
 
 儲存系統基於 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)，有一些不同，包括：
@@ -53,9 +51,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> 此 API 基於 Chromium 的 [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API 而來，文件改作自 Chromium 程式碼裡的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/storage.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

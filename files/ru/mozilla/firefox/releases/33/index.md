@@ -3,7 +3,7 @@ title: Firefox 33 для разработчиков
 slug: Mozilla/Firefox/Releases/33
 ---
 
-{{FirefoxSidebar}}Хотите помочь с документацией к Firefox 33? Взгляните на [список багов нуждающихся в описании](http://beta.elchi3.de/doctracker/#list=fx&version=33.0) и помогите нам!
+Хотите помочь с документацией к Firefox 33? Взгляните на [список багов нуждающихся в описании](http://beta.elchi3.de/doctracker/#list=fx&version=33.0) и помогите нам!
 
 ## Список изменения для веб - разработки
 
@@ -27,7 +27,6 @@ _Нет изменений._
 - Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ([Firefox bug 1022396](https://bugzil.la/1022396)).
 - Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают `undefined` в место этого возвращают объект. ([Firefox bug 1031632](https://bugzil.la/1031632)).
 - Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ([Firefox bug 645416](https://bugzil.la/645416)):
-
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}

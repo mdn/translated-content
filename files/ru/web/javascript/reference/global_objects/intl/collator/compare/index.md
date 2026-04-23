@@ -20,7 +20,6 @@ collator.compare(string1, string2)
 - `string1`
 
   `string2`
-
   - : Сравниваемые друг с другом строки.
 
 ## Описание

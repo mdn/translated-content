@@ -3,8 +3,6 @@ title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`406 Not Acceptable`** [客户端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#客户端错误响应)状态码表示服务器无法根据请求的[主动内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation#服务端驱动型内容协商机制)标头中定义的可接受值的列表产生匹配的响应，并且服务器不愿意提供默认表示。
 
 主动内容协商标头包括：

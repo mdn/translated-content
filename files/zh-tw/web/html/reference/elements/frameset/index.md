@@ -3,7 +3,7 @@ title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 ---
 
-{{HTMLSidebar}}{{Deprecated_header}}
+{{Deprecated_header}}
 
 **`<frameset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於包含 {{HTMLElement("frame")}} 元素。
 

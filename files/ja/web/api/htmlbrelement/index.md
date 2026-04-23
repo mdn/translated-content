@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLBRElement`** インターフェイスはは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}} から継承しています。
+**`HTMLBRElement`** インターフェイスは HTML 改行要素 ({{htmlelement("br")}}) を表現します。{{domxref("HTMLElement")}} から継承しています。
 
 {{InheritanceDiagram}}
 

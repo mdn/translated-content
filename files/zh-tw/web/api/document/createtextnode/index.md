@@ -1,54 +1,62 @@
 ---
-title: Document.createTextNode()
+title: Document：createTextNode() 方法
 slug: Web/API/Document/createTextNode
+l10n:
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
 
-創建一個新的文字節點.
+建立一個新的 {{domxref("Text")}} 節點。此方法可用於轉義 HTML 字元。
 
-## Syntax
+## 語法
 
-```plain
-var text = document.createTextNode(data);
+```js-nolint
+createTextNode(data)
 ```
 
-- 文字屬於一個文字節點.
-- 將含有數據的串加入文字節點中.
+### 參數
 
-## Example
+- `data`
+  - : 包含要放入文字節點的資料的字串。
+
+### 回傳值
+
+一個 {{domxref("Text")}} 節點。
+
+## 範例
+
+```html
+<button>是！</button>
+<button>否！</button>
+<button>我們可以！</button>
+
+<hr />
+
+<p id="p1">段落的第一行。</p>
+```
 
 ```js
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>createTextNode example</title>
-<script>
 function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+  const newText = document.createTextNode(text);
+  const p1 = document.getElementById("p1");
 
-  p1.appendChild(newtext);
+  p1.appendChild(newText);
 }
-</script>
-</head>
 
-<body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
-
-  <hr />
-
-  <p id="p1">First line of paragraph.</p>
-</body>
-</html>
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    addTextNode(`${event.target.textContent} `);
+  });
+});
 ```
 
-## Specifications
+{{EmbedLiveSample('範例')}}
+
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}

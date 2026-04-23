@@ -1,9 +1,8 @@
 ---
 title: rel=prefetch
 slug: Web/HTML/Reference/Attributes/rel/prefetch
-original_slug: Web/HTML/Attributes/rel/prefetch
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +14,7 @@ l10n:
 > [!NOTE]
 > このような制限があるため、対応している場合には、代わりに[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を文書の先読みに使用することをお勧めします。
 
-`<link rel="prefetch">` は、機能的には `fetch()` を `priority: "low"` オプション付きで呼び出すのと同等ですが、前者は一般的に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。一般的にブラウザーは、先読みするリソースには事前読み込みリソース（`<link rel="preload">` でリクエストされたものなど）よりも低い優先度を与えることに注意してください。現在のページは次のページよりも重要です。
+`<link rel="prefetch">` は、機能的には {{domxref("Window/fetch", "fetch()")}} を `priority: "low"` オプション付きで呼び出すのと同等ですが、前者は一般的に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。一般的にブラウザーは、先読みするリソースには事前読み込みリソース（[`<link rel="preload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) でリクエストされたものなど）よりも低い優先度を与えることに注意してください。現在のページは次のページよりも重要です。
 
 `prefetch` 操作の取得リクエストは HTTP ヘッダー [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) を含む HTTP リクエストになります。サーバーはリソースのキャッシュタイムアウトを変更したり、他にも特別な処理を行うためにこのヘッダーを使用するかもしれません。
 リクエストは、 {{HTTPHeader("Sec-Fetch-Dest")}} ヘッダーの値を `empty` に設定したものも含みます。

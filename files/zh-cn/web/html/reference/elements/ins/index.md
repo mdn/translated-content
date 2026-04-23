@@ -5,7 +5,6 @@ slug: Web/HTML/Reference/Elements/ins
 
 ## 简介
 
-{{HTMLSidebar}}
 **HTML `<ins>` 元素**定义已经被插入文档中的文本。
 
 {{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
 
-{{HTMLSidebar}}
-
 **`accept`** 属性的值是一个以逗号分隔的列表，其中包含一个或多个文件类型/[唯一文件类型标识符](#唯一文件类型标识符)（描述了允许的文件类型）。
 
 {{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}

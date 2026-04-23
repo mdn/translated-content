@@ -26,7 +26,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 2
 
@@ -36,7 +37,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Variables 3
 
@@ -46,7 +48,8 @@ Intenta actualizar el código en vivo a continuación para recrear el ejemplo te
 
 {{EmbedGHLiveSample('learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html', '100%', 400)}}
 
-> **Nota:** [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de partida de esta tarea](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 
@@ -56,7 +59,6 @@ Si deseas que se evalúe tu trabajo o estás atascado y deseas pedir ayuda:
 
 1. Coloca tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puedes escribir el código tú mismo o utilizar los archivos de punto de partida vinculados en las secciones anteriores.
 2. Escribe una publicación solicitando evaluación y/o ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
-
    - Un título descriptivo como Evaluación deseada para la prueba de habilidad de Variables 1.
    - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quieres una evaluación.
    - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para empezar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.

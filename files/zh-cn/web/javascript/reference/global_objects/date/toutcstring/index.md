@@ -3,8 +3,6 @@ title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 ---
 
-{{JSRef}}
-
 **`toUTCString()`** 方法把一个日期转换为一个字符串，使用 UTC 时区。
 
 {{InteractiveExample("JavaScript Demo: Date.toUTCString()")}}

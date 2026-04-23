@@ -1,9 +1,9 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 Un objet **`FinalizationRegistry`** permet de déclencher une fonction de rappel (<i lang="en">callback</i>) lorsqu'un objet est récupéré par le ramasse-miettes.
 
@@ -12,7 +12,7 @@ Un objet **`FinalizationRegistry`** permet de déclencher une fonction de rappel
 `FinalizationRegistry` fournit une méthode pour demander à ce qu'une fonction de nettoyage soit appelée à un moment lorsqu'un objet enregistré dans le registre de mémoire a été _récupéré_ (traité par le ramasse-miettes). Ces fonctions de rappel pour du nettoyage sont parfois appelées _finaliseurs_.
 
 > [!NOTE]
-> Ces fonctions de rappels ne devraient pas être utilisées pour des opérations essentielles à la logique d'un programme. Voir les notes ci-après pour plus de détails.
+> Ces fonctions de rappels ne devraient pas être utilisées pour des opérations essentielles à la logique d'un programme. Voir [les notes sur les fonctions de rappel de nettoyage](#notes_quant_aux_fonctions_de_rappel_de_nettoyage) pour plus de détails.
 
 On crée le registre en passant la fonction de rappel en paramètre&nbsp;:
 
@@ -38,7 +38,9 @@ Une pratique fréquente consiste à utiliser l'objet lui-même comme jeton, ce q
 
 ```js
 registre.register(unObjet, "une valeur", unObjet);
-// …plus tard si on ne s'intéresse plus à `unObjet`…
+// …
+
+// plus tard si on ne s'intéresse plus à `unObjet`…
 registre.unregister(unObjet);
 ```
 
@@ -46,21 +48,11 @@ Il n'est toutefois pas nécessaire que ce soit le même objet, on peut tout à f
 
 ```js
 registre.register(unObjet, "une valeur", objetJeton);
-// …plus tard si on ne s'intéresse plus à `unObjet`…
+// …
+
+// plus tard si on ne s'intéresse plus à `unObjet`…
 registre.unregister(objetJeton);
 ```
-
-## Constructeur
-
-- [`FinalizationRegistry()`](/fr/docs/Web/JavaScript/Reference/FinalizationRegistry/FinalizationRegistry)
-  - : Crée un nouvel objet `FinalizationRegistry`.
-
-## Méthodes de l'instance
-
-- [`FinalizationRegistry.prototype.register()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register)
-  - : Enregistre un objet dans le registre afin de pouvoir déclencher une fonction de rappel de nettoyage lorsque l'objet est traité par le ramasse-miettes.
-- [`FinalizationRegistry.prototype.unregister()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister)
-  - : Retire un objet du registre.
 
 ## À éviter si possible
 
@@ -79,14 +71,35 @@ Voici quelques sujets spécifiques inclus dans [le document explicatif de la pro
 
 ## Notes quant aux fonctions de rappel de nettoyage
 
-Quelques notes à propos des fonctions de rappel de nettoyage&nbsp;:
-
-- On ne doit pas faire reposer une logique essentielle d'un programme sur les fonctions de rappel de nettoyage. Ces dernières peuvent être utiles afin de réduire l'utilisation de la mémoire pendant la vie d'un programme mais seront vraisemblablement inutiles autrement.
-- Une implémentation JavaScript conforme, y compris parmi celles qui implémentent un ramasse-miettes, n'est pas tenue d'appeler les fonctions de rappel de nettoyage. Le moment et l'éventualité de cet appel est entièrement dépendant des choix d'implémentation du moteur JavaScript. Lorsqu'un objet enregistré est récupéré, toute fonction de rappel de nettoyage déclarée pourra être appelée sur le coup, plus tard ou jamais.
-- Il est probable que les implémentations majeures des moteurs appelleront les fonctions de rappel de nettoyage à un moment pendant l'exécution mais ces appels pourront arriver bien après que l'objet en question ait été récupéré.
-- Il existe des situations où même les implémentations qui appellent ces fonctions de rappel ont peu de chance de les invoquer&nbsp;:
+- Il ne faut pas faire reposer une logique essentielle d'un programme sur les fonctions de rappel de nettoyage. Ces fonctions peuvent être utiles pour réduire l'utilisation de la mémoire au cours de l'exécution d'un programme, mais seront vraisemblablement inutiles autrement.
+- Si votre code vient d'enregistrer une valeur dans le registre, cette cible ne sera pas récupérée avant la fin de la [tâche <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#job) JavaScript courante. Voir [notes sur WeakRef](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_sur_weakref) pour plus de détails.
+- Une implémentation JavaScript conforme, même si elle effectue une collecte de mémoire, n'est pas obligée d'appeler les fonctions de rappel de nettoyage. Le moment et l'éventualité de cet appel dépendent entièrement de l'implémentation du moteur JavaScript. Lorsqu'un objet enregistré est récupéré, toute fonction de rappel de nettoyage déclarée pourra être appelée sur le coup, plus tard ou jamais.
+- Il est probable que les principales implémentations appellent les fonctions de rappel de nettoyage à un moment pendant l'exécution, mais ces appels pourront arriver bien après que l'objet concerné ait été récupéré. De plus, si un objet est enregistré dans deux registres, il n'y a aucune garantie que les deux fonctions de rappel soient appelées l'une après l'autre — l'une peut être appelée et l'autre jamais, ou l'autre peut être appelée bien plus tard.
+- Il existe également des situations où même les implémentations qui appellent normalement les fonctions de rappel de nettoyage ont peu de chance de les invoquer&nbsp;:
   - Lorsque le programme JavaScript s'interrompt entièrement (par exemple, lorsqu'on ferme un onglet dans un navigateur).
-  - Lorsque l'instance de `FinalizationRegistry`, elle-même, n'est plus accessible depuis le reste du code JavaScript.
+  - Lorsque l'instance de `FinalizationRegistry` elle-même n'est plus accessible depuis le code JavaScript.
+- Si la cible d'un `WeakRef` est également dans un `FinalizationRegistry`, la cible du `WeakRef` est effacée en même temps ou avant que toute fonction de rappel de nettoyage associée au registre ne soit appelée&nbsp;; si votre fonction de rappel de nettoyage appelle `deref` sur un `WeakRef` pour l'objet, elle recevra `undefined`.
+
+## Constructeur
+
+- {{JSxRef("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry()")}}
+  - : Crée un nouvel objet `FinalizationRegistry`.
+
+## Propriétés d'instance
+
+Ces propriétés sont définies sur `FinalizationRegistry.prototype` et partagées par toutes les instances de `FinalizationRegistry`.
+
+- {{JSxRef("Object/constructor", "FinalizationRegistry.prototype.constructor")}}
+  - : La fonction constructeur qui a créé l'objet d'instance. Pour les instances de `FinalizationRegistry`, la valeur initiale est le constructeur {{JSxRef("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry")}}.
+- `FinalizationRegistry.prototype[Symbol.toStringTag]`
+  - : La valeur initiale de la propriété [`[Symbol.toStringTag]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"FinalizationRegistry"`. Cette propriété est utilisée dans {{JSxRef("Object.prototype.toString()")}}.
+
+## Méthodes d'instance
+
+- {{JSxRef("FinalizationRegistry.prototype.register()")}}
+  - : Enregistre un objet dans le registre afin de pouvoir déclencher une fonction de rappel de nettoyage lorsque l'objet est traité par le ramasse-miettes.
+- {{JSxRef("FinalizationRegistry.prototype.unregister()")}}
+  - : Retire un objet du registre.
 
 ## Exemples
 
@@ -108,6 +121,58 @@ Ensuite, on enregistre les objets pour lesquels on souhaite avoir la fonction de
 registre.register(unObjet, "une valeur");
 ```
 
+### Les fonctions de rappel ne sont jamais appelées de manière synchrone
+
+Peu importe la pression exercée sur le ramasse-miettes, la fonction de rappel de nettoyage ne sera jamais appelée de manière synchrone. L'objet peut être récupéré de façon synchrone, mais la fonction de rappel sera toujours appelée à un moment après la fin de la tâche courante&nbsp;:
+
+```js
+let compteur = 0;
+const registre = new FinalizationRegistry(() => {
+  console.log(`${compteur} tableau(x) récupéré(s) par le ramasse-miettes`);
+});
+
+registre.register(["foo"]);
+
+(function allouerMemoire() {
+  // Allouer 50000 fonctions — c'est beaucoup de mémoire !
+  Array.from({ length: 50000 }, () => () => {});
+  if (compteur > 5000) return;
+  compteur++;
+  allouerMemoire();
+})();
+
+console.log("Fin de la tâche principale");
+// Logs:
+// Fin de la tâche principale
+// 5001 tableau(x) récupéré(s) par le ramasse-miettes
+```
+
+Cependant, si vous laissez une petite pause entre chaque allocation, la fonction de rappel pourra être appelée plus tôt&nbsp;:
+
+```js
+let tableauRecupere = false;
+let compteur = 0;
+const registre = new FinalizationRegistry(() => {
+  console.log(`${compteur} tableau(x) récupéré(s) par le ramasse-miettes`);
+  tableauRecupere = true;
+});
+
+registre.register(["toto"]);
+
+(function allouerMemoire() {
+  // Allouer 50000 fonctions — c'est beaucoup de mémoire !
+  Array.from({ length: 50000 }, () => () => {});
+  if (compteur > 5000 || tableauRecupere) return;
+  compteur++;
+  // Utiliser setTimeout pour que chaque allouerMemoire soit une tâche différente
+  setTimeout(allouerMemoire);
+})();
+
+console.log("Fin de la tâche principale");
+```
+
+Il n'y a aucune garantie que la fonction de rappel soit appelée plus tôt ou qu'elle soit appelée tout court, mais il est possible que le message affiché ait une valeur de compteur inférieure à 5000.
+
 ## Spécifications
 
 {{Specifications}}
@@ -118,6 +183,6 @@ registre.register(unObjet, "une valeur");
 
 ## Voir aussi
 
-- [`WeakRef`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)
-- [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
-- [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)
+- L'objet {{JSxRef("WeakRef")}}
+- L'objet {{JSxRef("WeakSet")}}
+- L'objet {{JSxRef("WeakMap")}}

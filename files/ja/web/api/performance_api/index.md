@@ -2,10 +2,10 @@
 title: パフォーマンス API
 slug: Web/API/Performance_API
 l10n:
-  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{DefaultAPISidebar("Performance API")}}
+{{DefaultAPISidebar("Performance API")}}{{AvailableInWorkers}}
 
 パフォーマンス API は、ウェブアプリケーションのパフォーマンスを測定するために使用される一連の規格です。
 
@@ -17,7 +17,7 @@ l10n:
 
 パフォーマンス項目のほとんどは、何もしなくても記録され、{{domxref("Performance.getEntries()")}} または {{domxref("PerformanceObserver")}} からアクセスできます。例えば、 {{domxref("PerformanceEventTiming")}} の項目は、設定された閾値より時間がかかるイベントに対して記録されます。しかし、パフォーマンス API では {{domxref("PerformanceMark")}} や {{domxref("PerformanceMeasure")}} インターフェイスを使用して、自分自身でカスタムイベントを定義したり記録したりすることも可能です。
 
-主となる {{domxref("Performance")}} インターフェイスは {{domxref("Window.performance", "Window")}} および {{domxref("WorkerGlobalScope.performance", "Worker")}} グローバルスコーの両方にあり、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
+主となる {{domxref("Performance")}} インターフェイスは {{domxref("Window.performance", "Window")}} および {{domxref("WorkerGlobalScope.performance", "Worker")}} グローバルスコープの両方にあり、独自のパフォーマンス項目を追加したり、パフォーマンス項目をクリアしたり、パフォーマンス項目を取得したりすることが可能です。
 
 このインターフェイスでは、さまざまな種類のパフォーマンス項目が記録されるときに、それを待ち受けするために使用することができます。
 
@@ -37,6 +37,10 @@ l10n:
   - : ページ上の要素の動きに基づいて、ウェブページのレイアウトの安定性に関する調査結果を提供します。
 - {{domxref("LayoutShiftAttribution")}}
   - : シフトした要素に関するデバッグ情報を提供します。
+- {{domxref("NotRestoredReasonDetails")}}
+  - : ナビゲートされたページが、後方/前方キャッシュ ({{Glossary("bfcache")}}) を使用できない単一の理由を表します。
+- {{domxref("NotRestoredReasons")}}
+  - : ナビゲートされたページが、後方/前方キャッシュ ({{Glossary("bfcache")}}) を使用できない理由を含むレポートデータを提供します。
 - {{domxref("Performance")}}
   - : パフォーマンス測定にアクセスするためのメインインターフェイスです。ウィンドウとワーカーのコンテキストで {{domxref("Window.performance")}} または {{domxref("WorkerGlobalScope.performance")}} を使用することで利用することができます。
 - {{domxref("PerformanceElementTiming")}}
@@ -44,7 +48,7 @@ l10n:
 - {{domxref("PerformanceEntry")}}
   - : 単一のパフォーマンス指標をカプセル化したパフォーマンスタイムライン上の項目です。すべてのパフォーマンス指標はこのインターフェイスを継承します。
 - {{domxref("PerformanceEventTiming")}}
-  - : イベントの遅延時間、最初の入力遅延 (FID) を測定します。
+  - : イベントの遅延時間と {{Glossary("Interaction to Next Paint")}} (INP) を測定します。
 - {{domxref("PerformanceLongAnimationFrameTiming")}}
   - : レンダリングを専有し、他のタスクの実行を妨げる[長時間アニメーションフレーム (LoAF)](/ja/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame) に関する指標を提供します。
 - {{domxref("PerformanceLongTaskTiming")}}

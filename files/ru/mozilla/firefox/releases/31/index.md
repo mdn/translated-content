@@ -3,8 +3,6 @@ title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
 ---
 
-{{FirefoxSidebar}}
-
 Хотите помочь документировать Firefox 31? См. [список багов, требующих описания](http://beta.elchi3.de/doctracker/#list=fx&version=31.0), и беритесь за дело!
 
 ## Изменения для Web-разработчиков

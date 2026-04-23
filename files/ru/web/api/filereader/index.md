@@ -11,7 +11,8 @@ slug: Web/API/FileReader
 
 Объекты `File` можно получить через объект {{domxref("FileList")}}, который возвращается как результат при выборе файлов пользователем с помощью элемента {{HTMLElement("input")}}, через drag and drop из объекта {{domxref("DataTransfer")}}, или с помощью `mozGetAsFile()`, метода доступного в API элемента {{domxref("HTMLCanvasElement")}}.
 
-> **Предупреждение:** `FileReader` используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следует использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.
+> [!WARNING]
+> `FileReader` используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следует использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.
 
 {{AvailableInWorkers}}
 
@@ -41,9 +42,9 @@ FileReader FileReader();
 - {{domxref("FileReader.onload")}}
   - : Обработчик события [`load`](/ru/docs/Web/API/Window/load_event). Это событие возникает при каждом успешном завершении операции чтения.
 - {{domxref("FileReader.onloadstart")}}
-  - : Обработчик события [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event). Это событие возникает каждый раз, при запуске процесса чтения.
+  - : Обработчик события [`loadstart`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadstart_event). Это событие возникает каждый раз, при запуске процесса чтения.
 - {{domxref("FileReader.onloadend")}}
-  - : Обработчик события [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
+  - : Обработчик события [`loadend`](/ru/docs/Web/API/XMLHttpRequestEventTarget/loadend_event). Это событие возникает каждый раз по окончании процесса чтения (не важно, успешном или нет).
 - {{domxref("FileReader.onprogress")}}
   - : Обработчик события [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event). Это событие возникает во время чтения данных из {{domxref("Blob")}}.
 

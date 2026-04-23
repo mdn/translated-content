@@ -5,7 +5,7 @@ slug: Web/API/Background_Tasks_API
 
 {{DefaultAPISidebar("Background Tasks")}}
 
-**Cooperative Scheduling of Background Tasks API** (Background Tasks API 또는 간단하게 `requestIdleCallback()` API 라고도 부릅니다.) 는 user agnet가 자유 시간이 있다고 판단되면, 자동으로 실행될 작업을 대기열(queue tasks)에 넣을 수 있는 기능을 제공합니다.
+**Cooperative Scheduling of Background Tasks API** (Background Tasks API 또는 간단하게 `requestIdleCallback()` API 라고도 부릅니다.) 는 user agent가 자유 시간이 있다고 판단되면, 자동으로 실행될 작업을 대기열(queue tasks)에 넣을 수 있는 기능을 제공합니다.
 
 ## Concepts and usage
 

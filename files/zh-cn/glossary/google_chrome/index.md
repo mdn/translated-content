@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 Chrome 浏览器是 Google 开发的一个免费网络{{glossary("browser", "浏览器")}}，基于开源项目 [Chromium](https://www.chromium.org/)。[BrowserStack](https://www.browserstack.com/guide/difference-between-chrome-and-chromium#toc5) 中描述了它们之间的主要差异。Chrome 维护使用自己的渲染引擎 {{glossary("Blink")}}。注意：iOS 版本的 Chrome 使用了 iOS 平台的 WebView，而非 Blink。
 
 ## 参见

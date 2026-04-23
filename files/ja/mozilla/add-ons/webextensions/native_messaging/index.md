@@ -132,11 +132,9 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 `ping_pong` の例にならって、 Firefox を使用する場合（[Chrome の場合はこのページ](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)を参照）、メッセージングが動作するように 2 つのレジストリー項目を作成する必要があります。
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
-
   - このキーの既定値は、*アプリケーションマニフェスト*へのパスとなります。例: `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`
 
 - `HKEY_LOCAL_MACHINE\Software\Mozilla\NativeMessagingHosts\ping_pong`
-
   - このキーの既定値は、アプリケーションマニフェストへのパスへのパスとなります。
 
 > [!NOTE]

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas, necesitamos dividirlo en componentes manejables y descriptivos. React no tiene ninguna regla estricta sobre lo que es y no es un componente - ¡eso depende de ti! En este artículo, le mostraremos una forma sensata de dividir nuestra aplicación en componentes.
 
@@ -16,9 +16,9 @@ En este punto, nuestra aplicación es un monolito. Antes de hacer que haga cosas
       <th scope="row">Prerequesitos:</th>
       <td>
         <p>
-          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a>, y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>,
+          Estar familiarizado con los lenguajes básicos <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a>, y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>,
           conocimientos de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
@@ -70,7 +70,7 @@ export default function Todo() {
 }
 ```
 
-Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/es/docs/Web/HTML/Element/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
+Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/es/docs/Web/HTML/Reference/Elements/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
 
 ```jsx
 export default function Todo() {
@@ -200,7 +200,7 @@ Si cambia el _prop_ `completed` en cada componente `<Todo />`, su navegador marc
 
 ### Asigna algún `id`, porfavor
 
-Ahora, nuestro componente `<Todo />` asigna un atributo `id` con el valor `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
+Ahora, nuestro componente `<Todo />` asigna un atributo `id` con el valor `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Reference/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
 
 Para seguir con el mismo patron que teníamos inicialmente, vamos a darle a cada instancia del componente `<Todo />` un ID con el formato `todo-i`, donde `i` cada vez es mas grande por uno:
 
@@ -249,7 +249,8 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 Este arreglo ahora esta disponible en el componente `App` como `props.tasks`. Puede usar `console.log` para comprobarlo, si lo desea.
 
-> **Nota:** `TODAS_MAYUSCULAS` los nombres de las constantes no tienen un significado especial en Javascript; es una convención para decirle a otros desarrolladores "Estos datos nunca cambiarán después de haberse definido aquí".
+> [!NOTE]
+> `TODAS_MAYUSCULAS` los nombres de las constantes no tienen un significado especial en Javascript; es una convención para decirle a otros desarrolladores "Estos datos nunca cambiarán después de haberse definido aquí".
 
 ## Renderizado con iteración
 
@@ -442,4 +443,4 @@ Con esto en su lugar, ¡estamos _casi_ listos para abordar algo de interactivida
 
 Y eso es todo en este artículo — hemos profundizado un poco en cómo dividir su aplicación en componentes, y renderizarlos eficientemente. Ahora veremos como manejamos los eventos en React, y empezaremos a agregar algo de interactividad.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}

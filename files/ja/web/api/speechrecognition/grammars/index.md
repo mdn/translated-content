@@ -1,21 +1,23 @@
 ---
-title: SpeechRecognition.grammars
+title: "SpeechRecognition: grammars プロパティ"
+short-title: grammars
 slug: Web/API/SpeechRecognition/grammars
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 0a00e01a8c8097ea9786710c3fc703d18f0af951
 ---
 
 {{APIRef("Web Speech API")}}
 
 **`grammars`** は {{domxref("SpeechRecognition")}} インターフェイスのプロバティで、現在の `SpeechRecognition` が理解できる文法を表す {{domxref("SpeechGrammar")}} オブジェクトの集合を返します。
 
+> [!NOTE]
+> ウェブ音声 API から文法の概念が削除されました。関連機能は仕様書に残っており、下位互換性のため対応ブラウザーでは認識されますが、音声認識サービスには影響しません。
+
 ## 値
 
-{{domxref("SpeechGrammarList")}} で、アプリの文法を表す{{domxref("SpeechGrammar")}} オブジェクトが入っています。
+{{domxref("SpeechGrammarList")}} で、アプリで使用する文法を表す{{domxref("SpeechGrammar")}} オブジェクトが入っています。
 
 ## 例
-
-下記のソースコードは [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) を参考しています。
 
 ```js
 const grammar =
@@ -24,12 +26,8 @@ const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
-//recognition.continuous = false;
-recognition.lang = "en-US";
-recognition.interimResults = false;
-recognition.maxAlternatives = 1;
 
-// ...
+// …
 ```
 
 ## 仕様書

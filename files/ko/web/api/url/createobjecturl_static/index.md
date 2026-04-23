@@ -45,7 +45,8 @@ const objectURL = URL.createObjectURL(object);
 
 구 Media Source 명세에서는 {{HTMLElement("video")}} 요소에 스트림을 부착하려면 {{domxref("MediaStream")}}의 객체 URL을 생성했어야 했습니다. 이제 이런 과정은 필수가 아니며, 브라우저도 지원을 중단하고 있습니다.
 
-> **경고:** **중요:** 아직 미디어 요소에 {{domxref("URL.createObjectURL", "createObjectURL()")}}을 사용해 스트림을 부착하고 있다면, {{domxref("HTMLMediaElement.srcObject", "srcObject")}}에 `MediaStream`을 직접 설정하도록 코드를 수정해야 합니다.
+> [!WARNING]
+> **중요:** 아직 미디어 요소에 {{domxref("URL.createObjectURL", "createObjectURL()")}}을 사용해 스트림을 부착하고 있다면, {{domxref("HTMLMediaElement.srcObject", "srcObject")}}에 `MediaStream`을 직접 설정하도록 코드를 수정해야 합니다.
 
 ## 명세
 

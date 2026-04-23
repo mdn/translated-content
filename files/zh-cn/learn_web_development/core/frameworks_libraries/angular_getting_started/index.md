@@ -3,8 +3,6 @@ title: Angular 入门
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 是时候将目光转向谷歌的 Angular 框架了，这是一种你可能经常遇到的选项。在这篇文章中我们关注 Angular 能提供什么、安装必备的组件、建立一个示例应用，并关注 Angular 的基本架构。

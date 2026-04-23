@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}
 
 En los primeros días del diseño web, las páginas se diseñaban para llenar un tamaño de pantalla en particular. Si el usuario tenía una pantalla más grande o más pequeña que la del diseñador, los resultados esperados iban desde barras de desplazamiento no deseadas hasta longitudes de línea excesivamente largas y un mal uso del espacio. A medida que estuvieron disponibles tamaños de pantalla más diversos, apareció el concepto de _diseño web responsivo_ (RWD, _responsive web design_), un conjunto de prácticas que permite a las páginas web alterar su diseño y apariencia para adaptarse a diferentes anchos de pantalla, resoluciones, etc. Es una idea que cambió la forma en que diseñamos para una web multidispositivo, y en este artículo te ayudaremos a comprender las principales técnicas que necesitas saber para dominarlo.
 
@@ -14,11 +14,11 @@ En los primeros días del diseño web, las páginas se diseñaban para llenar un
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos en CSS</a> y
-        <a href="/es/docs/Learn/CSS/Building_blocks"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos en CSS</a> y
+        <a href="/es/docs/Learn_web_development/Core/Styling_basics"
           >Los elementos básicos del CSS</a
         >).
       </td>
@@ -73,7 +73,7 @@ El término _diseño responsivo_ fue acuñado por [Ethan Marcotte en 2010](https
 
 1. La primera era la idea de las redes fluidas, algo que ya exploraba Gillenwater, y que puede leerse en el artículo de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publicado en 2009 en _A list apart_).
 2. La segunda técnica era la idea de las [imágenes fluidas](https://unstoppablerobotninja.com/entry/fluid-images). Usando una técnica muy simple de establecer la propiedad de `max-width` al `100%`, las imágenes se reducían si su columna de contención se volvía más estrecha que el tamaño intrínseco de la imagen, pero nunca se expandía. Esto permite reducir una imagen para que se ajuste a una columna de tamaño flexible, en lugar de que desborde, pero no se expande ni se pixela si la columna se ensancha más que la imagen.
-3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/CSS_media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
+3. El tercer componente clave era la [consulta a los media](/es/docs/Web/CSS/Guides/Media_queries). Las consultas a los media habilitan el tipo de cambio de diseño que Cameron Adams había explorado previamente usando JavaScript, pero usando solo CSS. En lugar de tener un único diseño para todos los tamaños de pantalla, el diseño podría cambiarse. Las barras laterales pueden reposicionarse en una pantalla más pequeña, o puede mostrarse una navegación alternativa.
 
 Es importante comprender que **el diseño web responsivo no es una tecnología independiente**: es un término utilizado para describir un enfoque para el diseño web, o un conjunto de buenas prácticas utilizado para crear un diseño que puede _responder_ según el dispositivo que se utiliza para ver un contenido. En la exploración original de Marcotte, esto significaba cuadrículas flexibles (mediante elementos flotantes) y consultas de media; sin embargo, en los casi 10 años desde que se escribió ese artículo, trabajar de manera responsiva se ha convertido en la norma. Los métodos de diseño CSS modernos son inherentemente responsivos, y la plataforma web dispone de herramientas integradas nuevas que facilitan el diseño de sitios web responsivos.
 
@@ -97,7 +97,7 @@ Puedes añadir múltiples consultas a los media dentro de una hoja de estilo, y 
 
 Un enfoque común cuando se usan las consultas a los media es crear un diseño sencillo de una sola columna para dispositivos de pantalla estrecha (por ejemplo, teléfonos móviles), luego implementar un diseño en columnas para pantallas más grandes cuando se sabe que hay suficiente ancho de pantalla para manejarlo. Esto se describe a menudo como diseño **primero móvil**.
 
-Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/CSS_media_queries) en la documentación de MDN.
+Obtén más información sobre las [consultas a los media](/es/docs/Web/CSS/Guides/Media_queries) en la documentación de MDN.
 
 ## Cuadrículas flexibles
 
@@ -134,7 +134,7 @@ En pantallas más anchas se pasa a dos columnas:
 
 ## Tecnologías modernas de diseño de páginas web
 
-Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
+Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
 
 ### Multicol
 
@@ -203,7 +203,7 @@ Las imágenes responsivas, que utilizan el elemento {{htmlelement ("picture")}} 
 
 También puedes usar imágenes _de director artístico_, que proporcionan un recorte o una imagen completamente diferente para diferentes tamaños de pantalla.
 
-Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Responsive_images) en MDN.
+Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Guides/Responsive_images) en MDN.
 
 ## Tipografía responsiva
 
@@ -254,7 +254,7 @@ h1 {
 
 El problema de hacer esto es que el usuario pierde la posibilidad de ampliar cualquier conjunto de texto configurado en unidades `vw`, porque ese texto siempre está en relación con el tamaño de la ventana gráfica. **Por lo tanto, nunca hay que establecer texto utilizando solo unidades de ventana**.
 
-Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
+Hay una solución, que implica el uso de la función [`calc()`](/es/docs/Web/CSS/Reference/Values/calc). Si añades la unidad `vw` a un valor establecido con un tamaño fijo, como `em` o `rem`, el texto continúa siendo ampliable. Esencialmente, la unidad `vw` se añade sobre ese valor ampliado:
 
 ```css
 h1 {
@@ -301,4 +301,4 @@ El diseño responsivo se refiere a un diseño página de un sitio web o una apli
 
 Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Multiple-column_Layout", "Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/CSS_layout")}}

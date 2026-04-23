@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Content-Language`** {{Glossary("representation header", "表示标头")}}用来说明访问者希望采用的语言，这样的话用户就可以根据自己偏好的语言来定制不同的内容。
 
 举个例子，`Content-Language: de-DE` 说明这份文件是为说德语的人提供的。这个文件可能是用英文写的，而非德语——它可能是为说德语的人开设的英语教程的一部分。要说明文档是用什么语言**写**的，应该用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang) 属性。

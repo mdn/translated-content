@@ -37,4 +37,4 @@ if (navigator.userActivation.hasBeenActive) {
 
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.isActive")}}
-- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)
+- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/Defenses/User_activation)

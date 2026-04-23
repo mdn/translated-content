@@ -3,8 +3,6 @@ title: <canvas>：繪圖畫布元素
 slug: Web/HTML/Reference/Elements/canvas
 ---
 
-{{HTMLSidebar}}
-
 使用 **HTML `<canvas>` 元素**與 [canvas 腳本 API](/zh-TW/docs/Web/API/Canvas_API) 或 [WebGL API](/zh-TW/docs/Web/API/WebGL_API) 來繪製圖形和動畫。
 
 ## 屬性

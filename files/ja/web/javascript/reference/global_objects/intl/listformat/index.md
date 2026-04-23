@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 
 **`Intl.ListFormat`** オブジェクトは、言語を考慮したリストの整形ができるようにします。
 
-{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.ListFormat", "taller")}}
 
 ```js interactive-example
 const vehicles = ["Motorcycle", "Bus", "Car"];

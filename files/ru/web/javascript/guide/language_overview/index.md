@@ -33,7 +33,6 @@ JavaScript является объектно-ориентированным яз
 - [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [Символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (новый тип из шестой редакции)
 - [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
   - [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
   - [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
   - [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)
@@ -218,7 +217,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 ## Операторы
 
-JavaScript поддерживает такие операторы, как `+`, `-`, `*`, `/` и `%`, который возвращает остаток от деления ([не путать с модулем](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Значения присваиваются с помощью оператора `=`, или с помощью составных операторов `+=` и `-=`. Это сокращённая запись выражения `x = x оператор y`.
+JavaScript поддерживает такие операторы, как `+`, `-`, `*`, `/` и `%`, который возвращает остаток от деления ([не путать с модулем](/ru/docs/Web/JavaScript/Reference/Operators#Remainder_%28%29)). Значения присваиваются с помощью оператора `=`, или с помощью составных операторов `+=` и `-=`. Это сокращённая запись выражения `x = x оператор y`.
 
 ```js
 x += 5;
@@ -611,7 +610,7 @@ a; // 4
 b; // 2
 ```
 
-В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с [DOM](/ru/docs/DOM)).
+В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с [DOM](/ru/docs/Web/API/Document_Object_Model)).
 
 ```js
 function countChars(elm) {

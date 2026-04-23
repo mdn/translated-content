@@ -22,9 +22,7 @@ send(body)
 ### 参数
 
 - `body` {{optional_inline}}
-
   - : 在 XHR 请求中要发送的数据体。可以是：
-
     - 可以为 {{domxref("Document")}}, 在这种情况下，它在发送之前被序列化。
     - 为 `XMLHttpRequestBodyInit`, 从 [per the Fetch spec](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit) （规范中）可以是 {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或者 {{domxref("USVString")}} 对象。
     - `null`

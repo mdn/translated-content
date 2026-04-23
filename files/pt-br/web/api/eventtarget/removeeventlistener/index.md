@@ -18,12 +18,12 @@ target.removeEventListener(type, listener[, useCapture])
 - `listener`
   - : A função {{ domxref("EventListener") }} a ser removida do event target.
 - `useCapture` {{ optional_inline() }}
-
   - : Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como _capturing listener_. Caso este parâmetro seja omitido, o valor _false_ será assumido por padrão.
 
     Se um listener foi registrado duas vezes, uma com o parâmetro _capture_ especificado e outra sem, cada um deve ser removido separadamente. A remoção de um _capturing listener_ não afeta a versão _non-capturing_ do mesmo listener, e vice versa.
 
-> **Nota:** `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
+> [!NOTE]
+> `useCapture` era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro `useCapture.`
 
 ## Notas
 

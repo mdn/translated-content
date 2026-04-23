@@ -11,7 +11,6 @@ Para implementar esse extensão, será necessário:
 
 - **definir a ação do navegador, que é um botão ligado a barra de ferramentas**.
   Para o botão nós iremos fornecer:
-
   - um icone chamado "beasts.png"
   - um popup para abrir quando o botão for pressionado. O popup irá ter incluso HTML, CSS e JavaScript.
 
@@ -80,7 +79,6 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
 - As primeiras três chaves : **`manifest_version`**, **`name`**, e **`version`**, são obrigatórias e contém metadados básicos para a extensão.
 - **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
 - **`browser_action`** especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
-
   - **`default_icon`** é obrigatório, e aponta para o icone do botão
   - **`default_title`** é opicional, e mostra a mensagem em um tooltip
   - **`default_popup`** é usado se você quer que um popup seja mostrado quando o usuário clicar no botão. Nós fazemos isto, então incluímos esta chave e apontamos para um arquivo HTML incluído na extensão.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Object_basics
 original_slug: Learn/JavaScript/Objects/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 En éste artículo, veremos fundamentos de sintaxis de los objetos de JavaScript y revisaremos algunas características de JavaScript que ya hemos analizado anteriormente en el curso, reiterando el hecho de que muchas de las funciones con las que ya has tratado de hecho son objetos.
 
@@ -282,4 +282,4 @@ Enhorabuena, has llegado al final de nuestro primer artículo sobre objetos JS: 
 
 En el próximo artículo comenzaremos a ver la teoría de programación orientada a objetos (OOP) y cómo se pueden usar dichas técnicas en JavaScript.
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

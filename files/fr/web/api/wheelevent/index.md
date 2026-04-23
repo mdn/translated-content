@@ -31,7 +31,6 @@ _Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEven
 - {{DOMxRef("WheelEvent.deltaZ")}}{{ReadOnlyInline}}
   - : Renvoie un `double` représentant le montant du défilement pour l'axe z.
 - {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
-
   - : Renvoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
 
     <table class="standard-table">
@@ -77,6 +76,5 @@ _Cette interface ne définit aucune méthode spécifique, mais hérite des méth
 
 - Évènement {{domxref("Element/wheel_event", "wheel")}}
 - Interfaces remplacées par celle-ci :
-
   - Objet d'évènement de roulette de souris hérité de Gecko: {{DOMxRef("MouseScrollEvent")}}
   - Objet d'évènement de roulette de souris hérité des navigateurs non gecko: {{DOMxRef("MouseWheelEvent")}}

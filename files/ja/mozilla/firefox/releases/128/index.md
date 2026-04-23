@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 95beef16ce880c41315c2e8b9d3e54c17c660124
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 128 の変更点をまとめています。Firefox 128 は、米国時間 [2024 年 7 月 9 日](https://whattrainisitnow.com/release/?version=128) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -17,8 +15,8 @@ l10n:
 
 ### CSS
 
-- [相対的な色の構文](/ja/docs/Web/CSS/CSS_colors/Relative_colors) をデフォルトで有効にしました。相対的な色の構文により、元の色に対して相対的な色の値を作成できます。また、[色関数](/ja/docs/Web/CSS/CSS_colors#functions) を使用して異なる [色空間](/ja/docs/Glossary/Color_space) の色の値に変換できます ([Firefox bug 1900251](https://bugzil.la/1900251))。
-- [`content`](/ja/docs/Web/CSS/content) プロパティで、画像を含むコンテンツのための [代替テキスト](/ja/docs/Web/CSS/content#alternative_text) をサポートしました。代替テキストは、ブラウザーのアクセシビリティツリーに現れます ([Firefox bug 1281158](https://bugzil.la/1281158)、[Firefox bug 1896047](https://bugzil.la/1896047))。
+- [相対的な色の構文](/ja/docs/Web/CSS/Guides/Colors/Using_relative_colors) をデフォルトで有効にしました。相対的な色の構文により、元の色に対して相対的な色の値を作成できます。また、[色関数](/ja/docs/Web/CSS/Guides/Colors#functions) を使用して異なる [色空間](/ja/docs/Glossary/Color_space) の色の値に変換できます ([Firefox bug 1900251](https://bugzil.la/1900251))。
+- [`content`](/ja/docs/Web/CSS/Reference/Properties/content) プロパティで、画像を含むコンテンツのための [代替テキスト](/ja/docs/Web/CSS/Reference/Properties/content#alternative_text) をサポートしました。代替テキストは、ブラウザーのアクセシビリティツリーに現れます ([Firefox bug 1281158](https://bugzil.la/1281158)、[Firefox bug 1896047](https://bugzil.la/1896047))。
 
 #### 廃止
 
@@ -28,7 +26,6 @@ l10n:
 
 - サイズ変更可能な {{jsxref("ArrayBuffer")}} と拡張可能な {{jsxref("SharedArrayBuffer")}} をサポートしました。新しいバッファーを割り当ててデータをコピーする必要なく、バッファーのサイズを変更できます ([Firefox bug 1884150](https://bugzil.la/1884150))。
   関連するメソッドやプロパティは以下のとおりです:
-
   - {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して {{jsxref("SharedArrayBuffer")}} を拡張します。
     バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
     {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
@@ -51,8 +48,8 @@ l10n:
   これは最適な解像度での再生が許可されるかを、メディアキーセッションを作成したり実際のライセンスを取得したりする必要なく事前に知るためのシンプルな仕組みをアプリケーションに提供します ([Firefox bug 1878714](https://bugzil.la/1878714))。
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} をサポートしました。WebRTC のローカルピアが受信したデータをデコードするために使用できるコーデックを、好みの順番で設定します。ウェブアプリケーションは、リモートピアに好みのコーデックを選択させたり、(再送信、冗長化、前方誤り訂正に使用するものを含む) 特定のコーデックのネゴシエーションを無効にしたりするためにこのメソッドを使用できます ([Firefox bug 1396922](https://bugzil.la/1396922))。
 - {{domxref('ShadowRoot.getHTML()')}}、{{domxref('Element.getHTML()')}} メソッド、およびこれらに関連する {{domxref('ShadowRoot.serializable')}}、{{domxref('HTMLTemplateElement.shadowRootSerializable')}} プロパティを含む、[宣言的なシャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#html_で宣言的に) のシリアライズをサポートしました。
-- [`CSSPropertyRule`](/ja/docs/Web/API/CSSPropertyRule) インターフェイスをデフォルトで有効にして、CSS の [`@property`](/ja/docs/Web/CSS/@property) アットルールを表すようになりました。このインターフェイスは [`name`](/ja/docs/Web/API/CSSPropertyRule/name)、[`syntax`](/ja/docs/Web/API/CSSPropertyRule/syntax)、[`inherits`](/ja/docs/Web/API/CSSPropertyRule/inherits)、[`initialValue`](/ja/docs/Web/API/CSSPropertyRule/initialValue) のような、`@property` アットルールを使用して定義した CSS カスタムプロパティの値を取得できます ([Firefox bug 1864818](https://bugzil.la/1864818))。
-- [`registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッドをデフォルトで有効にしました。JavaScript で [CSS カスタムプロパティ](/ja/docs/Web/CSS/--*) を定義できます。これは、CSS の `@property` アットルールを使用することに似ています ([Firefox bug 1864818](https://bugzil.la/1864818))。
+- [`CSSPropertyRule`](/ja/docs/Web/API/CSSPropertyRule) インターフェイスをデフォルトで有効にして、CSS の [`@property`](/ja/docs/Web/CSS/Reference/At-rules/@property) アットルールを表すようになりました。このインターフェイスは [`name`](/ja/docs/Web/API/CSSPropertyRule/name)、[`syntax`](/ja/docs/Web/API/CSSPropertyRule/syntax)、[`inherits`](/ja/docs/Web/API/CSSPropertyRule/inherits)、[`initialValue`](/ja/docs/Web/API/CSSPropertyRule/initialValue) のような、`@property` アットルールを使用して定義した CSS カスタムプロパティの値を取得できます ([Firefox bug 1864818](https://bugzil.la/1864818))。
+- [`registerProperty()`](/ja/docs/Web/API/CSS/registerProperty_static) メソッドをデフォルトで有効にしました。JavaScript で [CSS カスタムプロパティ](/ja/docs/Web/CSS/Reference/Properties/--*) を定義できます。これは、CSS の `@property` アットルールを使用することに似ています ([Firefox bug 1864818](https://bugzil.la/1864818))。
 
 #### Media、WebRTC、Web Audio
 
@@ -96,7 +93,6 @@ l10n:
 以下の機能は Firefox 128 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
 
 - **既定および画像のリクエストで `image/jxl` MIME タイプを Accept ヘッダーに追加:** `image.jxl.enabled`.
-
   - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。

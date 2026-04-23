@@ -14,12 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
       # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3.0.2
+      - uses: dorny/paths-filter@fbd0ab8f3e69293af611ebaee6363fc25e6d187d # v4.0.1
         name: See if any file needs checking
         id: filter
         with:
@@ -29,25 +32,26 @@ jobs:
               - "files/**"
               - ".github/workflows/pr-check_redirects.yml"
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         if: steps.filter.outputs.required_files == 'true'
         with:
           repository: mdn/content
           path: mdn/content
+          persist-credentials: false
 
       - name: Setup Node.js environment
         if: steps.filter.outputs.required_files == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
-          node-version-file: ".nvmrc"
-          cache: "yarn"
-          cache-dependency-path: mdn/content/yarn.lock
+          node-version-file: mdn/content/.nvmrc
+          cache: npm
+          cache-dependency-path: mdn/content/package-lock.json
 
-      - name: Install all yarn packages
+      - name: Install
         if: steps.filter.outputs.required_files == 'true'
         working-directory: ${{ github.workspace }}/mdn/content
-        run: |
-          yarn --frozen-lockfile
+        run: npm ci
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -57,6 +61,9 @@ jobs:
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          yarn content validate-redirects
+          npm run content validate-redirects

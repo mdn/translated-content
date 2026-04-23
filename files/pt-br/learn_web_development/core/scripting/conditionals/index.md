@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Conditionals
 original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/Loops", "conflicting/Learn_web_development/Core/Scripting")}}
 
 Em qualquer linguagem de programação, o código precisa tomar decisões e realizar ações de acordo, dependendo de diferentes entradas. Por exemplo, em um jogo, se o número de vidas do jogador é 0, então o jogo acaba. Em um aplicativo de clima, se estiver sendo observado pela manhã, ele mostra um gráfico do nascer do sol; Mostra estrelas e uma lua se for noite. Neste artigo, exploraremos como as chamadas declarações condicionais funcionam em JavaScript.
 
@@ -14,7 +14,7 @@ Em qualquer linguagem de programação, o código precisa tomar decisões e real
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimento básico de algoritmos, um entendimento básico de HTML e CSS,
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">JavaScript </a
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">JavaScript </a
         >primeiros passos.
       </td>
     </tr>
@@ -52,7 +52,7 @@ if (condicao) {
 Aqui nós temos:
 
 1. A palavra reservada `if` seguida de um par de parênteses.
-2. Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
+2. Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
 3. Um par de chaves, e dentro dele temos código — pode ser qualquer código que queiramos, e só vai ser executado se o teste condicional retornar `true`.
 4. A palavra reservada `else`.
 5. Outro par de chaves, dentro dele temos mais um pouco de código — pode ser qualquer código que queiramos, e só vai executar se o teste condicional retornar um valor diferente de `true`, neste caso `not true`, ou `false`.
@@ -157,7 +157,7 @@ function setWeather() {
 
 ### Uma nota sobre os operadores de comparação
 
-Operadores de comparação são usados para testar as condições dentro de nossas declarações condicionais. Nós primeiro olhamos para operadores de comparação de volta em nosso artigo [Matemática básica em JavaScript - números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators). Nossas escolhas são:
+Operadores de comparação são usados para testar as condições dentro de nossas declarações condicionais. Nós primeiro olhamos para operadores de comparação de volta em nosso artigo [Matemática básica em JavaScript - números e operadores](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#comparison_operators). Nossas escolhas são:
 
 - `===` e `!==` — testar se um valor é idêntico ou não idêntico a outro.
 - `<` e `>` — teste se um valor é menor ou maior que outro.
@@ -638,11 +638,11 @@ window.addEventListener("load", updateCode);
 
 ## Conclusão
 
-E isso é tudo que você realmente precisa saber sobre estruturas condicionais no JavaScript por agora! Tenho certeza que você terá entendido esses conceitos e trabalhou com os exemplos com facilidade; se houver algo que você não tenha entendido, sinta-se à vontade para ler o artigo novamente ou [contate-nos](/pt-BR/docs/Learn#contact_us) para pedir ajuda.
+E isso é tudo que você realmente precisa saber sobre estruturas condicionais no JavaScript por agora! Tenho certeza que você terá entendido esses conceitos e trabalhou com os exemplos com facilidade; se houver algo que você não tenha entendido, sinta-se à vontade para ler o artigo novamente ou [contate-nos](/pt-BR/docs/Learn_web_development#contact_us) para pedir ajuda.
 
 ## Veja também
 
-- [Operadores de comparação](/pt-BR/docs/Learn/JavaScript/First_steps/Math#comparison_operators)
+- [Operadores de comparação](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#comparison_operators)
 - [Declarações condicionais em detalhes](/pt-BR/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements)
 - [Referência if...else](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Referência do operador condicional (ternário)](/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
@@ -651,4 +651,4 @@ E isso é tudo que você realmente precisa saber sobre estruturas condicionais n
 
 Você chegou ao final deste artigo, mas você consegue se lembrar das informações mais importantes? Você pode encontrar mais alguns testes para verificar se reteve essas informações antes de prosseguir — Veja [Teste suas habilidades: Condicionais](/pt-BR/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals).
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "conflicting/Learn_web_development/Core/Scripting")}}

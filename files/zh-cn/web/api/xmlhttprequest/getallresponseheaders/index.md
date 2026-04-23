@@ -1,31 +1,37 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: XMLHttpRequest：getAllResponseHeaders() 方法
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
+l10n:
+  sourceCommit: 99b2676da42700bafbb3189449a30b00e727e2c5
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-**XMLHttpRequest.getAllResponseHeaders()** 方法返回所有的响应头，以 {{Glossary('CRLF')}} 分割的字符串，或者 `null` 如果没有收到任何响应。 **注意：** 对于复合请求（multipart requests），这个方法返回当前请求的头部，而不是最初的请求的头部。
+{{domxref("XMLHttpRequest")}} 的 **`getAllResponseHeaders()`** 方法以字符串形式返回所有响应标头，各个响应标头之间以 {{Glossary('CRLF')}} 分隔；如果尚未收到响应，则返回 `null`。
 
-```plain
-DOMString getAllResponseHeaders();
-```
+如果发生网络错误，则返回一个空字符串。
+
+> [!NOTE]
+> 对于多部分请求，此方法返回的是*当前*部分的响应标头，而不是原始通道的响应标头。
 
 ## 语法
 
-```plain
-var headers = XMLHttpRequest.getAllResponseHeaders();
+```js-nolint
+getAllResponseHeaders()
 ```
 
 ### 参数
 
-无
+无。
 
 ### 返回值
 
-一个原始的 Header 头例子：
+一个字符串，表示响应中的所有响应标头（字段名为 `Set-Cookie` 的除外），各项之间以 {{Glossary('CRLF')}} 分隔；如果尚未收到响应，则返回 `null`。若发生网络错误，则返回空字符串。
 
-```plain
+原始响应标头字符串的格式示例如下：
+
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -39,40 +45,57 @@ content-length: 6502\r\n
 x-xss-protection: 1; mode=block\r\n
 ```
 
-每一行通过\r\n 来进行分割。
+每一行都以回车和换行符（`\r\n`）结尾。它们用作分隔符，将各个响应标头分隔开。
 
-## 例子
+> [!NOTE]
+> 在现代浏览器中，按照最新规范，返回的响应标头名称都是小写的。
 
-```plain
-var request = new XMLHttpRequest();
+## 示例
+
+此示例在请求的 {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} 事件中检查响应标头。代码展示了如何获取原始响应标头字符串、如何将其转换为单个响应标头的数组，以及如何再将该数组转换为一个从响应标头名称映射到对应值的对象。
+
+```js
+const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+request.onreadystatechange = () => {
+  if (request.readyState === request.HEADERS_RECEIVED) {
+    // 获取原始响应标头字符串
+    const headers = request.getAllResponseHeaders();
 
-    // Get the raw header string
-    var headers = request.getAllResponseHeaders();
+    // 将响应标头字符串转换为单个响应标头的数组
+    const arr = headers.trim().split(/[\r\n]+/);
 
-    // Convert the header string into an array
-    // of individual headers
-    var arr = headers.trim().split(/[\r\n]+/);
-
-    // Create a map of header names to values
-    var headerMap = {};
-    arr.forEach(function (line) {
-      var parts = line.split(': ');
-      var header = parts.shift();
-      var value = parts.join(': ');
+    // 创建一个从响应标头名称映射到其值的对象
+    const headerMap = {};
+    arr.forEach((line) => {
+      const parts = line.split(": ");
+      const header = parts.shift();
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
+};
 ```
 
-上面的代码执行后，你可以：
+完成这些步骤后，你就可以例如这样使用它：
 
-```plain
-var contentType = headerMap["content-type"];
+```js
+const contentType = headerMap["content-type"];
 ```
 
-上面的变量 `contentType` 可以获取到 HTTP header 里的 `content-type` 字段值。
+这会将 {{httpheader("Content-Type")}} 响应标头的值赋值给变量 `contentType`。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- 设置请求标头：{{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

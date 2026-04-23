@@ -20,9 +20,7 @@ void gl.clear(mask);
 ### 参数
 
 - `mask`
-
   - : 一个用于指定需要清除的缓冲区的 {{domxref("GLbitfield")}} 。可能的值有：
-
     - `gl.COLOR_BUFFER_BIT //颜色缓冲区`
     - `gl.DEPTH_BUFFER_BIT //深度缓冲区`
     - `gl.STENCIL_BUFFER_BIT //模板缓冲区`

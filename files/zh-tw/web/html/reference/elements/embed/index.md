@@ -3,8 +3,6 @@ title: <embed>：嵌入外部內容元素
 slug: Web/HTML/Reference/Elements/embed
 ---
 
-{{HTMLSidebar}}
-
 **`<embed>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於在文件中指定的位置嵌入外部內容。這個內容是由外部應用程序或其他互動內容來源（如瀏覽器插件）提供的。
 
 {{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}

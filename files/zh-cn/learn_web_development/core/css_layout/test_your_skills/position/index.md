@@ -3,8 +3,6 @@ title: 技能测试：定位
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Position
 ---
 
-{{LearnSidebar}}
-
 此任务的目的是让你使用在我们的 position 课程中介绍的 CSS {{CSSxRef("position")}}属性以及对应值，你将通过两个小任务来复习刚才课程材料中介绍的不同元素。
 
 > [!NOTE]

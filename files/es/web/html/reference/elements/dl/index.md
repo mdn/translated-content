@@ -45,13 +45,13 @@ dd {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >Contenido de flujo</a
         >, y si los elementos hijos de <code>&#x3C;dl></code> incluyen un grupo
         nombre-valor, contenido palpable.
@@ -81,7 +81,7 @@ dd {
       <td>
         Cualquier elemento que acepte
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >contenido de flujo</a
         >.
       </td>
@@ -101,7 +101,7 @@ dd {
 
 ## Atributos
 
-Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Ejemplos
 
@@ -196,7 +196,7 @@ dt::after {
 
 ### Encapsulado de grupos nombre-valor en elementos {{HTMLElement("div")}}
 
-[WHATWG](/es/docs/Glossary/WHATWG) HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan [microdatos](/es/docs/Web/HTML/Microdata), o cuando [atributos globales](/es/docs/Web/HTML/Global_attributes) apliquen a todo el grupo, o por motivos de estilo.
+[WHATWG](/es/docs/Glossary/WHATWG) HTML permite encapsular cada grupo nombre-valor de un elemento {{HTMLElement("dl")}} en un elemento {{HTMLElement("div")}}. Esto puede ser útil cuando se utilizan [microdatos](/es/docs/Web/HTML/Guides/Microdata), o cuando [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes) apliquen a todo el grupo, o por motivos de estilo.
 
 ```html
 <dl>

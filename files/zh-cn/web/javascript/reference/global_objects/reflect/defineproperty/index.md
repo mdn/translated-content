@@ -3,8 +3,6 @@ title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 
-{{JSRef}}
-
 静态方法 **`Reflect.defineProperty()`** 基本等同于 {{jsxref("Object.defineProperty()")}} 方法，唯一不同是返回 {{jsxref("Boolean")}} 值。
 
 ## 语法
@@ -34,7 +32,8 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 `Reflect.defineProperty` 方法允许精确添加或修改对象上的属性。更多的细节请参阅类似的{{jsxref("Object.defineProperty")}} 。
 
-> **备注：** `Object.defineProperty` 返回一个对象，或者如果属性没有被成功定义，抛出一个 {{jsxref("TypeError")}}。相比之下，`Reflect.defineProperty` 方法只返回一个 {{jsxref("Boolean")}}，来说明该属性是否被成功定义。
+> [!NOTE]
+> `Object.defineProperty` 返回一个对象，或者如果属性没有被成功定义，抛出一个 {{jsxref("TypeError")}}。相比之下，`Reflect.defineProperty` 方法只返回一个 {{jsxref("Boolean")}}，来说明该属性是否被成功定义。
 
 ## 示例
 

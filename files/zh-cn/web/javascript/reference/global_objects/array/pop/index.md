@@ -3,8 +3,6 @@ title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
 
-{{JSRef}}
-
 **`pop()`** 方法从数组中删除**最后一个**元素，并返回该元素的值。此方法会更改数组的长度。
 
 {{InteractiveExample("JavaScript Demo: Array.pop()")}}

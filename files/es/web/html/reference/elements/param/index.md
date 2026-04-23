@@ -12,7 +12,7 @@ El elemento [HTML](/es/docs/Web/HTML) **`<param>`** define los parámetros para 
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `name` {{deprecated_inline}}
   - : Nombre del parámetro.
@@ -21,9 +21,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `type` {{deprecated_inline}}
   - : Se usa solo si `valuetype` es `ref`. Especifica el tipo MIME de los valores encontrados en la URI especificada por el valor.
 - `valuetype` {{deprecated_inline}}
-
   - : Especifica el tipo del atributo `value`. Los posibles valores son:
-
     - `data`: Valor por defecto. El valor se pasa a la implementación del objeto como una cadena.
     - `ref`: El valor es una URI hacia un recurso donde se almacenan los valores en tiempo de ejecución.
     - `object`: Un ID de otro {{HTMLElement("object")}} que se encuentra en el mismo documento.
@@ -34,7 +32,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Categorías de contenido</a>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories">Categorías de contenido</a>
       </th>
       <td>Ninguno</td>
     </tr>
@@ -52,7 +50,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Un {{HTMLElement("object")}} antes de cualquier
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
           >contenido de flujo</a
         >.
       </td>

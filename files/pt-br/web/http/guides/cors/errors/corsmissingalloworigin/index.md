@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## Motivo
 
 ```
@@ -24,13 +22,14 @@ Por exemplo, para permitir que um site da origem `https://example.com` acesse ao
 Access-Control-Allow-Origin: https://example.com
 ```
 
-Você também pode configurar um site para permitir que qualquer site o acesse usando o curinga `"*"`. Você só deve usar isso para APIs públicas. As APIs privadas nunca devem usar `"*"` e devem ter um domínio ou domínios específicos definidos. Além disso, o curinga só funciona para solicitações feitas com o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Global_attributes#crossorigin) definido como `"anonymous"`.
+Você também pode configurar um site para permitir que qualquer site o acesse usando o curinga `"*"`. Você só deve usar isso para APIs públicas. As APIs privadas nunca devem usar `"*"` e devem ter um domínio ou domínios específicos definidos. Além disso, o curinga só funciona para solicitações feitas com o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#crossorigin) definido como `"anonymous"`.
 
 ```http
 Access-Control-Allow-Origin: *
 ```
 
-> **Aviso:** **Advertência:** Usar o caractere curinga para permitir que todos os sites acessem uma API privada é uma péssima ideia para o que deve ser uma razão óbvia.
+> [!WARNING]
+> **Advertência:** Usar o caractere curinga para permitir que todos os sites acessem uma API privada é uma péssima ideia para o que deve ser uma razão óbvia.
 
 Por exemplo, no Apache, adicione uma linha como a seguinte à configuração do servidor (na seção `<Directory>`, `<Location>`, `<Files>` ou `<VirtualHost>` apropriada). A configuração é tipicamente encontrada em um arquivo `.conf` (`httpd.conf` e `apache.conf` são nomes comuns para estes), ou em um arquivo `.htaccess`.
 
@@ -48,4 +47,4 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 - [CORS errors (Erros do CORS)](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossário: {{Glossary("CORS")}}
-- [CORS introduction (Introdução ao CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [CORS introduction (Introdução ao CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)

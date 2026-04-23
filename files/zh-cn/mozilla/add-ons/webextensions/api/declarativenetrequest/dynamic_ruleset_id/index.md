@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 通过使用 {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}} 添加到扩展的动态规则中的规则集 ID。
 
 其值为 `"_dynamic"`。

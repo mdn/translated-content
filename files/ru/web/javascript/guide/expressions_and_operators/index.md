@@ -3,7 +3,7 @@ title: Выражения и операторы
 slug: Web/JavaScript/Guide/Expressions_and_operators
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}
 
 Эта глава описывает выражения и операторы языка JavaScript, такие как операторы присваивания, сравнения, арифметические, битовые, логические, строчные, и различные специальные операторы.
 
@@ -259,7 +259,8 @@ mystring += "bet"; // получается значение "alphabet" и при
 condition ? val1 : val2
 ```
 
-> **Предупреждение:** _val1 и val2 обязательно должны что-то возвращать, поэтому в этой конструкции нельзя использовать continue или break_
+> [!WARNING]
+> `val1` и `val2` обязательно должны что-то возвращать, поэтому в этой конструкции нельзя использовать `continue` или `break`.
 
 Если `condition (условие)` - истина, то оператор принимает значение `val1`. В противном случае оператор принимает значение `val2`. Вы можете использовать условный оператор во всех случаях, где может быть использован стандартный оператор.
 
@@ -649,4 +650,4 @@ var args = [0, 1, 2];
 f(...args);
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
+{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_strings")}}

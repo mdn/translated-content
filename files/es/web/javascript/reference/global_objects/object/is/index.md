@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Síntaxis
 
@@ -26,7 +26,7 @@ Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los va
 
 ## Descripción
 
-`Object.is()` determina si dos valores [son iguales](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness). Dos valores son iguales si se puede asegurar que:
+`Object.is()` determina si dos valores [son iguales](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Dos valores son iguales si se puede asegurar que:
 
 - ambos son {{jsxref("undefined")}}
 - ambos son {{jsxref("null")}}
@@ -34,7 +34,6 @@ Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los va
 - ambos son strings y tienen la misma longitud con los mismos carácteres
 - ambos son el mismo objeto
 - ambos son números y
-
   - `ambos +0 (mayores que 0)`
   - `ambos -0 (menores que 0)`
   - ambos son {{jsxref("NaN")}}
@@ -94,4 +93,4 @@ if (!Object.is) {
 
 ## Ver también
 
-- [Comparadores de igualdad e identidad](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness) —Una comparación de las 3 operaciones de cotejamiento integradas.
+- [Comparadores de igualdad e identidad](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) —Una comparación de las 3 operaciones de cotejamiento integradas.

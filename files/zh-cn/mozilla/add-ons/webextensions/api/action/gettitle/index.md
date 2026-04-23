@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取浏览器操作的标题。
 
 > [!NOTE]
@@ -27,9 +25,7 @@ let gettingTitle = browser.action.getTitle(
 ### 参数
 
 - `details`
-
   - : 一个含有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取标题的标签页。
     - `windowId` {{optional_inline}}

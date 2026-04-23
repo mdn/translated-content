@@ -21,5 +21,5 @@ Los _Hipervínculos_ ó _enlaces_ permiten conectar entre sí datos ó páginas 
 
 ### Aprende sobre
 
-- [`<a>` en MDN](/es/docs/Web/HTML/Element/a)
-- [`<link>` en MDN](/es/docs/Web/HTML/Element/link)
+- [`<a>` en MDN](/es/docs/Web/HTML/Reference/Elements/a)
+- [`<link>` en MDN](/es/docs/Web/HTML/Reference/Elements/link)

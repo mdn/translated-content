@@ -18,7 +18,6 @@ l10n:
 - 위키피디아의 [Fork](<https://en.wikipedia.org/wiki/Fork_(software_development)>)
 - [GitHub repo를 포크하는 방법](https://help.github.com/articles/fork-a-repo/) (Git 컨텍스트로 포크)
 - 다양한 "잘 알려진" 포크들
-
   - [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
   - [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
   - [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)

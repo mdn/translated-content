@@ -21,18 +21,18 @@ Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usa
 | Contenido permitido        | Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}) |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                   |
-| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content).                                                                                         |
+| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/es/docs/Web/HTML/Guides/Content_categories#flow_content).                                                                                  |
 | Documento nomativo         | [HTML5, section 4.4.7](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                          |
 
 ### Atributos
 
-Este elemento no tiene más atributos que los [atributos globales](/es/docs/Web/HTML/Global_attributes), común a todos los elementos.
+Este elemento no tiene más atributos que los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), común a todos los elementos.
 
 ## Notas de uso
 
 > [!NOTE]
 > Si bien el elemento `<hgroup>` se eliminó de la especificación HTML5 (W3C), todavía se mantiene en la versión WHATWG de HTML. De todos modos, está parcialmente implementado en la mayoría de los navegadores, por lo que es improbable que desaparezca.
-> Sin embargo, dado que el propósito principal del elemento `<hgroup>` es afectar cómo [el algoritmo de generación de esquemas de documento](/es/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm) muestra los encabezados, pero **dicho algoritmo no ha sido implementado por ningún navegador**, la semántica de `<hgroup>` es por el momento solo teórica.
+> Sin embargo, dado que el propósito principal del elemento `<hgroup>` es afectar cómo [el algoritmo de generación de esquemas de documento](/es/docs/Web/HTML/Reference/Elements/Heading_Elements#the_html5_outline_algorithm) muestra los encabezados, pero **dicho algoritmo no ha sido implementado por ningún navegador**, la semántica de `<hgroup>` es por el momento solo teórica.
 > La especificación HTML5 (W3C) aconseja entonces cómo maquetar [subtítulos, títulos alternativos y lemas](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) sin utilizar `<hgroup>`.
 
 ### Interfaz DOM

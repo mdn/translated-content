@@ -36,11 +36,10 @@ Para obtener más información sobre el uso de i18n en su extensión, consulte:
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Reconocimientos**
+> [!NOTE]
+> **Reconocimientos**
 >
 > Esta API se basa en la API [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n) de Chromium. Esta documentación deriva del archivo [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) en el código fuente de Chromium.
->
-> Los datos de compatibilidad de Microsoft Edge son suministrados por Microsoft Corporation y se incluyen aquí según los términos de la licencia Creative Commons Atribución 3.0, versión estadounidense.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

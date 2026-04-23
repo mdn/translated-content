@@ -1,22 +1,21 @@
 ---
 title: JavaScript による動的スクリプティング
+short-title: JavaScript
 slug: Learn_web_development/Core/Scripting
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 04158640487c17d515de8078c9307a2f906377d0
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core")}}
 
-このモジュールでは、条件文、ループ、関数、イベントなど一般的に発生するコードブロックの種類に注目し、JavaScript の重要な基本機能をすべてカバーしていきます。コースの中で既にこれらを目にしているのですが、説明を省いてきました。ここではすべて明示的に説明を行います。
+JavaScript は巨大な分野であり、学ぶべき機能やスタイル、テクニックは多岐にわたり、その上に構築された API やツールも数多く存在します。このモジュールでは、言語の中核となる基本要素に加え、関連する重要なトピックに焦点を当てています。これらのトピックを学ぶことで、しっかりとした基礎を築くことができます。
 
 ## 前提条件
 
-このモジュールを始めるにあたって、JavaScript の事前知識は必要ありませんが、このコースの前のモジュールを読み終えている必要があります。少なくとも [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) や [CSS の基礎](/ja/docs/Learn_web_development/Core/Styling_basics)はやっておくべきです。
+このモジュールを始めるにあたって、JavaScript の事前知識は必要ありませんが、このコースの前のモジュールを終えている必要があります。少なくとも [HTML](/ja/docs/Learn_web_development/Core/Structuring_content) や [CSS の基礎](/ja/docs/Learn_web_development/Core/Styling_basics)はやっておくべきです。
 
 > [!NOTE]
-> もしファイルが作れないコンピューターやタブレット、その他の端末で作業している場合は、[JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで（ほとんどの場合）試すことができます。
+> もしファイルを作成できないコンピューター、タブレット、その他の端末で作業している場合は、[CodePen](https://codepen.io/) や [JSFiddle](https://jsfiddle.net/) などのオンラインエディターでコードを実行してみることができます。
 
 ## チュートリアルと課題
 
@@ -36,8 +35,8 @@ l10n:
   - : 文字列の基本について見てきましたが、文字列の長さの取得、文字列の結合と分割、文字列内の文字の置換、その他の文字列の置換など、組込みメソッドを使用して文字列に対して実行できる便利な操作について考えてみましょう。
 - [配列](/ja/docs/Learn_web_development/Core/Scripting/Arrays)
   - : このモジュールの最後の記事では、配列を見ていきます — 単一の変数名の下に複数のデータ項目のリストを保存するのに適した方法です。ここでは、なぜこれが便利なのかを確認してから、配列の作成方法、配列に格納された項目の取り出し、追加、削除などの方法を学びます。
-- [課題: バカ話ジェネレーター] <sup>課題</sup>(/ja/docs/Learn_web_development/Core/Scripting/Silly_story_generator)
-  - : この課題では、このモジュールの記事で取り上げた知識の一部を用いて、ランダムなバカ話を生成する愉快なアプリの作成に適用することを求められます。楽しんで取り組みましょう！
+- [課題: バカ話ジェネレーター](/ja/docs/Learn_web_development/Core/Scripting/Silly_story_generator) <sup>課題</sup>
+  - : この課題では、これまでのモジュールで学んだ知識を活かして、ランダムに面白いおかしな話を生成する楽しいアプリを作成します。その過程で、変数、数学、文字列、配列に関する知識が試されます。
 - [コードでの意思決定 — 条件文](/ja/docs/Learn_web_development/Core/Scripting/Conditionals)
   - : どんなプログラミング言語でも、コードは異なる入力に応じて決定を下し、それに応じてアクションを実行する必要があります。例えば、ゲームではもしプレイヤーのライフが 0 だった場合、ゲームオーバーになります。お天気アプリでは、朝に見た場合には朝日の画像を表示し、夜に見た場合には星と月を表示します。この記事では、条件の構造が JavaScript でどのように機能するかを説明します。
 - [ループするコード](/ja/docs/Learn_web_development/Core/Scripting/Loops)
@@ -61,16 +60,20 @@ l10n:
 - [ネットワークリクエストを JavaScript で作成](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
   - : 現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術を見ていきます。
 - [JSON の操作](/ja/docs/Learn_web_development/Core/Scripting/JSON)
-
   - : JavaScript Object Notation (JSON) は、構造化データを表現するための標準のテキストベースの形式で、 JavaScript のオブジェクト構文に基づいています。ウェブアプリケーションでデータを転送する場合によく使われます（例えば、複数のデータをサーバーからクライアントへ送信して、ウェブページ上に表示する場合などで、その逆もあります）。頻繁に見かけるデータ形式ですので、この記事では JavaScript を使用して JSON を扱うのに必要なすべてのこと、例えば JSON を解釈してその中のデータにアクセスしたり、 JSON を作成したりする方法を説明します。
-
+- [課題: 家のデータの UI の構築](/ja/docs/Learn_web_development/Core/Scripting/House_data_UI) <sup>課題</sup>
+  - : この課題では、不動産サイトの物件検索ページ向けに JavaScript を記述していただきます。具体的には、JSON データの取得、フォームコントロールの入力値に基づいたデータのフィルタリング、そしてそのデータを UI に表示する処理を行います。その過程で、条件分岐、ループ、配列や配列メソッドなどの知識も確認していきます。
 - [JavaScript のデバッグとエラー処理](/ja/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript)
   - : このレッスンでは、JavaScript のデバッグ（「[何が間違っている?](/ja/docs/Learn_web_development/Core/Scripting/What_went_wrong)」で最初に見た内容）に戻ります。ここでは、エラーを特定するためのテクニックをさらに深く掘り下げていきますが、同時に、問題に直面する前に避けるために、防御的にコードを作成し、コード内のエラーを処理する方法も見ていきます。
 
+## スキルテスト
+
+チュートリアルの各記事の間に、「スキルテスト」の記事が配置されており、次のステップに進む前に、重要な情報をしっかりと理解できているかを確認することができます。これらすべての記事を一斉に確認したい場合は、[スキルテスト: JavaScript](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills) に一覧が掲載されています。
+
 ## 関連情報
 
-- [Scrimba: Learn JavaScript](https://v2.scrimba.com/learn-javascript-c0v?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn JavaScript_ コースでは、 140 以上のインタラクティブなコーディング課題を解きながら、ゲーム、ブラウザー拡張機能、モバイルアプリまで、自分のプロジェクトを構築しながら JavaScript を学んでいきます。 Scrimba は、知識豊富な講師陣による楽しいインタラクティブなレッスン機能を備えています。
+- [Scrimba: Learn JavaScript](https://scrimba.com/learn-javascript-c0v?via=mdn) <sup>[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup>
+  - : [Scrimba](https://scrimba.com/?via=mdn) の _Learn JavaScript_ コースでは、 140 以上のインタラクティブなコーディング課題を解きながら、ゲーム、ブラウザー拡張機能、モバイルアプリまで、自分のプロジェクトを構築しながら JavaScript を学んでいきます。 Scrimba は、知識豊富な講師陣による楽しいインタラクティブなレッスン機能を備えています。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す人のための優れたリソース - 短いレッスンとインタラクティブなテスト、自動評価によるガイドで、インタラクティブな環境で JavaScript を学ぶことができます。最初の 40 レッスンは無料で、少額の一回払いでこのコースのすべてを利用することができます。
 

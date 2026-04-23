@@ -55,7 +55,8 @@ Se o argumento (deep) for setado como false, os nós filhos do elemento node clo
 
 Se o argumento (deep) for setado como true, os nós filhos, toda a árvore DOM do elemento clonado, será clonada junto.
 
-> **Aviso:** **Cuidado:** `cloneNode()` pode duplicar IDs em um documento.
+> [!WARNING]
+> **Cuidado:** `cloneNode()` pode duplicar IDs em um documento.
 
 Se o elemento node (nó) clonado tiver uma ID e o novo elemento node resultante da clonagem for ser inserido no mesmo documento, a ID de um dos nós deve ser alterada para que observem o princípio de unicidade. Em outras palavras, um mesmo documento não pode ter elementos com IDs iguais. Se for o caso de trabalhar com manipulação de elementos DOM através do atributo "name", tome cuidado em observá-lo.
 

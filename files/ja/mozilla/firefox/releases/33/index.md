@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 33 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -36,7 +34,6 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 - 内容がないキーフレーム規則を持つ CSS アニメーションでイベントが発生するように修正しました ([Firefox バグ 1004377](https://bugzil.la/1004377))。
 - CSS Colors level 4 で新たに定義された {{cssxref("&lt;color&gt;")}} である `rebeccapurple` をサポートしました ([Firefox バグ 1024642](https://bugzil.la/1024642))。
 - CSS Fonts Level 3 の実験的な実装を進めています。これらを有効にするかは設定項目 `layout.css.font-features.enabled` で制御されており、Nightly ではデフォルトで有効です。以下の機能を新たに実装しました:
-
   - {{cssxref("font-variant-caps")}} のフォールバックアルゴリズム。不足しているグリフを代替するものを生成します ([Firefox バグ 961558](https://bugzil.la/961558))。
   - {{cssxref("font-synthesis")}} CSS プロパティを実装しました ([Firefox バグ 871453](https://bugzil.la/871453))。
 

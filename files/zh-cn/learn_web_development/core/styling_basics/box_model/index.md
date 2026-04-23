@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cafb94fe8b20ea9f38db7910b7da1b13e29354b5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 在 CSS 中，所有的元素都被一个个的“盒子”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。本文以 CSS 盒模型为主题，你将了解其工作原理和相关术语。
 
@@ -71,7 +71,7 @@ l10n:
 当你继续详细学习 CSS 布局时，将会遇到 [`flex`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox) 以及盒子可以具有的其他各种内部值，例如 [`grid`](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grids)。
 
 > [!NOTE]
-> 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)。
+> 想要了解更多有关显示值以及盒子在区块和行内布局中的工作原理，请参阅[常规流中的区块和行内布局](/zh-CN/docs/Web/CSS/Guides/Display/Block_and_inline_layout)。
 
 ## 不同显示类型的例子
 
@@ -387,7 +387,7 @@ p {
 
 {{EmbedLiveSample("margin-collapse", "", "280px")}}
 
-外边距何时折叠，何时不折叠，由许多规则决定。有关详细信息，请参阅[掌握外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。需要记住的主要一点是，外边距折叠是指在使用外边距创建空间时，如果没有获得预期的空间，就会发生外边距折叠。
+外边距何时折叠，何时不折叠，由许多规则决定。有关详细信息，请参阅[掌握外边距折叠](/zh-CN/docs/Web/CSS/Guides/Box_model/Margin_collapsing)。需要记住的主要一点是，外边距折叠是指在使用外边距创建空间时，如果没有获得预期的空间，就会发生外边距折叠。
 
 ### 边框
 

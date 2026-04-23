@@ -32,7 +32,6 @@ referenceStr.localeCompare(compareString[, locales[, options]])
 - `compareString`
   - : A string com a qual a _`referenceStr`_ é comparada.
 - `locales` _e _`options`
-
   - : Esses argumentos personalizam o comportamento da função e permitem que os aplicativos especifiquem o idioma cujas convenções de formatação devem ser usadas. Em implementações que ignoram os argumentos _`locales`_ e _`options`_, a localidade usada e a forma da string retornada são inteiramente dependentes da implementação.
 
     Consulte o [construtor `Intl.Collator()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator) para obter detalhes sobre esses parâmetros e como usá-los.
@@ -49,7 +48,8 @@ Retorna um inteiro indicando se _`referenceStr`_ vem antes, depois ou é equival
 - Positivo quando o _`referenceStr`_ ocorre após _`compareString`_
 - Retorna `0` se eles forem equivalentes
 
-> **Aviso:** **NÃO confie em valores de retorno exatos de -1 ou 1!**
+> [!WARNING]
+> **NÃO confie em valores de retorno exatos de -1 ou 1!**
 >
 > Os resultados de números inteiros negativos e positivos variam entre os navegadores (bem como entre as versões dos navegadores) porque a especificação W3C exige apenas valores negativos e positivos. Alguns navegadores podem retornar `-2` ou `2`, ou mesmo algum outro valor negativo ou positivo.
 

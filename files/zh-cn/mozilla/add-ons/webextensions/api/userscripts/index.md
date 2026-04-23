@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3d283cb0a0c6f36ad09ca95f751a30bd3a1fcf4d
 ---
 
-{{AddonSidebar}}
-
 使用此 API 注册用户脚本，即那些设计用于操作网页或提供新特性的第三方脚本。注册用户脚本会指示浏览器将脚本附加到与注册期间指定的 URL 模式匹配的页面上。
 
 > [!NOTE]

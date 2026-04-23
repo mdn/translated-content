@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 卸载调用此方法的附加组件。
 
 该 API *不*需要“management”[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
@@ -24,9 +22,7 @@ let uninstallingSelf = browser.management.uninstallSelf(
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : `object`，可能包含两个可选属性的对象：
-
     - `showConfirmDialog` {{optional_inline}}
       - : 布尔值，如果 `showConfirmDialog` 为 `true`，浏览器将显示一个对话框询问用户是否确认卸载该附加组件。默认为 `false`。
     - `dialogMessage` {{optional_inline}}

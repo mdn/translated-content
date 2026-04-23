@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
 original_slug: Web/HTTP/Headers/Access-Control-Max-Age
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Max-Age`** レスポンスヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}の結果 (つまり {{HTTPHeader("Access-Control-Allow-Methods")}} および {{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーに含まれる情報) をキャッシュすることができる時間の長さを示します。
 
 <table class="properties">

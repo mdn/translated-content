@@ -34,7 +34,6 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 ### Paramètres
 
 - `constraints`
-
   - : Un objet {{domxref("MediaStreamConstraints")}} spécifiant les types de supports à demander, ainsi que toutes les exigences pour chaque type.
 
     Le paramètre constraints est un objet `MediaStreamConstraints` avec deux membres: `video` et `audio` , décrivant les types de média demandés. L'un ou l'autre ou les deux doivent être spécifiés. Si le navigateur ne trouve pas toutes les pistes multimédia avec les types spécifiés qui répondent aux contraintes fournies, la promesse renvoyée est rejetée avec `NotFoundError` .
@@ -121,7 +120,6 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 - `AbortError`
   - : Bien que l'utilisateur et le système d'exploitation aient tous deux accédé à l'équipement matériel, et qu'aucun problème de matériel ne causerait un `NotReadableError` , un problème s'est produit, ce qui a empêché l'utilisation du périphérique.
 - `NotAllowedError`
-
   - : L'utilisateur a spécifié que l'instance de navigation actuelle n'a pas accès au périphérique; Ou l'utilisateur a refusé l'accès pour la session en cours; Ou l'utilisateur a refusé tout l'accès aux périphériques multimédias utilisateurs dans le monde entier.
 
     > [!NOTE]
@@ -132,7 +130,6 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 - `NotReadableError`
   - : Bien que l'utilisateur ait autorisé l'utilisation des appareils correspondants, une erreur matérielle s'est produite sur le système d'exploitation, le navigateur ou le niveau de la page Web qui a empêché l'accès au périphérique.
 - `OverConstrainedError`
-
   - : Aucun dispositif candidat répondant aux critères demandés. L'erreur est un objet de type `OverconstrainedError` et possède une propriété de `constraint` dont la valeur de chaîne est le nom d'une contrainte impossible à honorer et une propriété `message` contenant une chaîne lisible par l'homme expliquant le problème.
 
     > [!NOTE]

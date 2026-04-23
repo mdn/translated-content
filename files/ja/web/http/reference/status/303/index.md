@@ -1,12 +1,9 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Reference/Status/303
-original_slug: Web/HTTP/Status/303
 l10n:
-  sourceCommit: fcb01c3c48499529a7e846d1887a091433add073
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`303 See Other`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、ブラウザーがリクエストされたリソースをレンダリングするのではなく、 {{HTTPHeader("Location")}} ヘッダー内の URL にリダイレクトすべきであることを示します。
 

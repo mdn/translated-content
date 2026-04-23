@@ -3,8 +3,6 @@ title: <br>：換行元素
 slug: Web/HTML/Reference/Elements/br
 ---
 
-{{HTMLSidebar}}
-
 **`<br>`** [HTML](/zh-TW/docs/Web/HTML) 元素可在文字中插入換行（回車）。在寫詩或地址時，這很有用，因為行的分隔是重要的。
 
 {{InteractiveExample("HTML Demo: &lt;br&gt;", "tabbed-standard")}}

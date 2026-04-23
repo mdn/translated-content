@@ -20,9 +20,7 @@ createWritable()
 ### 引数
 
 - FileSystemCreateWritableOptions
-
   - : メソッドに渡すオプションを表すオブジェクトです。以下のオプションがあります。
-
     - `keepExistingData`: `false` であるか指定されない場合、一時ファイルは空に初期化されます。
       そうでない場合、既存のファイルがまず一時ファイルにコピーされます。
 

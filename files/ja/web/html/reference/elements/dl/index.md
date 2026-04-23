@@ -1,29 +1,26 @@
 ---
 title: "<dl>: 説明リスト要素"
 slug: Web/HTML/Reference/Elements/dl
-original_slug: Web/HTML/Element/dl
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar}}
 
 **`<dl>`** は [HTML](/ja/docs/Web/HTML) の要素で、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;dl&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Cryptids of Cornwall:</p>
+<p>コーンウォールの未確認生物:</p>
 
 <dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+  <dt>ボドミンの怪獣</dt>
+  <dd>ボドミンムーアに生息する大型のネコ科動物です。</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>モーガー</dt>
+  <dd>海蛇。</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
+  <dt>オウルマン</dt>
+  <dd>フクロウに似た巨大な生き物です。</dd>
 </dl>
 ```
 
@@ -43,62 +40,20 @@ dd {
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <p>
-          1 個以上の {{HTMLElement("dt")}} 要素とそれに続く 1 個以上の {{HTMLElement("dd")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。<br>
-          または ({{Glossary("WHATWG")}} HTML や {{Glossary("W3C")}} HTML 5.2 以降では) 1 個以上の {{HTMLElement("div")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
-        <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role"
-            >list</a
-          ></code
-        >, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLDListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
+
+- `compact` {{Deprecated_inline}}
+  - : この論理属性は、リストをコンパクトなスタイルで表示することを示唆するものです。この属性の解釈はブラウザーによって異なります。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。`compact` 属性と同様の効果を得るには、CSS プロパティ {{cssxref("line-height")}} を値 `80%` で使用することで実現できます。
+
+## アクセシビリティ
+
+スクリーンリーダーによっては、`<dl>` コンテンツの合計数、用語/定義のコンテキスト、ナビゲーション方法の公開方法は様々です。これらの違いは、必ずしもバグではありません。
+iOS 14 では、VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。VoiceOver は `<dl>` を使ったリストナビゲーションコマンドには対応していません。ARIA の `term` と `definition` のロールを `<dl>` 構造に適用すると、VoiceOver（macOS と iOS）がそのアナウンス方法を調整するので、注意が必要です。
+
+- [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
 
 ## 例
 
@@ -154,7 +109,7 @@ dd {
     mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
-  <!-- Other terms and descriptions -->
+  <!-- 他の用語と説明 -->
 </dl>
 ```
 
@@ -172,14 +127,14 @@ dd {
 
 ```html
 <dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
+  <dt>名前</dt>
+  <dd>ゴジラ</dd>
+  <dt>生年</dt>
   <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
+  <dt>出生地</dt>
+  <dd>日本</dd>
+  <dt>色</dt>
+  <dd>緑</dd>
 </dl>
 ```
 
@@ -197,25 +152,25 @@ dt::after {
 
 ### 名前と値のグループを `div` 要素で包む
 
-[WHATWG](/ja/docs/Glossary/WHATWG) HTML では、{{HTMLElement("dl")}} 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素でまとめることができます。これは[マイクロデータ](/ja/docs/Web/HTML/Guides/Microdata)を使用するとき、グループ全体に[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を適用するとき、あるいはスタイルを設定するために役立ちます。
+HTML では、`<dl>` 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素でまとめることができます。これは[マイクロデータ](/ja/docs/Web/HTML/Guides/Microdata)を使用するとき、グループ全体に[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を適用するとき、あるいはスタイルを設定するために役立ちます。
 
 ```html
 <dl>
   <div>
-    <dt>Name</dt>
-    <dd>Godzilla</dd>
+    <dt>名前</dt>
+    <dd>ゴジラ</dd>
   </div>
   <div>
-    <dt>Born</dt>
+    <dt>生年</dt>
     <dd>1952</dd>
   </div>
   <div>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
+    <dt>出生地</dt>
+    <dd>日本</dd>
   </div>
   <div>
-    <dt>Color</dt>
-    <dd>Green</dd>
+    <dt>色</dt>
+    <dd>緑</dd>
   </div>
 </dl>
 ```
@@ -230,13 +185,61 @@ dt::after {
 
 用語の説明のインデントを変更するには、[CSS](/ja/docs/Web/CSS) の {{cssxref("margin")}} プロパティを使用してください。
 
-## アクセシビリティの考慮
+## 技術的概要
 
-スクリーンリーダーによって、`<dl>` コンテンツの合計数、用語/定義のコンテキスト、ナビゲーション方法の公開方法は様々です。これらの違いは、必ずしもバグではありません。
-iOS 14 では、VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。VoiceOver は `<dl>` を使ったリストナビゲーションコマンドには対応していません。ARIA の `term` と `definition` のロールを `<dl>` 構造に適用すると、VoiceOver（macOS と iOS）がそのアナウンス方法を調整するので、注意が必要です。
-
-- [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
-- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a
+        >、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <p>
+          1 個以上の {{HTMLElement("dt")}} 要素とそれに続く 1 個以上の {{HTMLElement("dd")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。<br>
+          または ({{Glossary("WHATWG")}} HTML や {{Glossary("W3C")}} HTML 5.2 以降では) 1 個以上の {{HTMLElement("div")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
+            >list</a
+          ></code
+        >, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLDListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

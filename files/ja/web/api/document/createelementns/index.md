@@ -29,7 +29,6 @@ createElementNS(namespaceURI, qualifiedName, options)
   - : 文字列で、生成される要素の型を指定します。
     生成される要素の {{DOMxRef("node.nodeName", "nodeName")}} プロパティは、 _qualifiedName_ の値で初期化されます。
 - `options` {{Optional_Inline}}
-
   - : 任意の `ElementCreationOptions` オブジェクトで、 `is` という名前の単一のプロパティを持ち、その値として事前に `customElements.define()` を使用して定義されたカスタム要素のタグ名を設定します。
     以前のバージョンの[カスタム要素仕様書](https://www.w3.org/TR/custom-elements/)との後方互換性のため、ブラウザーによってはここにオブジェクトの代わりに、文字列を渡すことができ、その文字列の値はカスタム要素のタグ名になります。
     この引数の使い方について詳しい情報は、 [Extending native HTML elements](https://web.dev/articles/web-components/) を参照してください。

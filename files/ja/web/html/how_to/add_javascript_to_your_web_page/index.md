@@ -1,21 +1,21 @@
 ---
-title: ウェブページで JavaScript を使う
+title: ウェブページに JavaScript を追加する
+short-title: JavaScript の追加
 slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
-JavaScript を活用して、あなたのウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
+JavaScript を活用して、ウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >基本的な HTML 文書の作成</a
         >方法を習熟している必要があります。
       </td>
@@ -72,7 +72,6 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 
 - **すべてのコンテンツを（構造化された）テキストとして利用できるようにしましょう。** コンテンツは可能な限り HTML に頼ってください。例えば、 JavaScript で素敵な進捗バーを実装した場合、HTML 内で一致するテキストのパーセント表示で補完するようにしてください。同様に、ドロップダウンメニューは[リンク](/ja/docs/Learn_web_development/Core/Structuring_content/Lists)の[順序なしリスト](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)として構造化すべきです。
 - **すべての機能をキーボードからアクセスできるようにしましょう。**
-
   - ユーザーがすべてのコントロール（リンクやフォーム入力など）を合理的な順序で移動できるようにしましょう。
   - ポインターイベント（マウスイベントやタッチイベントなど）を使用している場合は、キーボードイベントで機能を複製しましょう。
   - キーボードのみを使用してサイトをテストしましょう。
@@ -81,7 +80,6 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 - **アニメーションは控えめで短く、点滅しないようにしましょう。** 点滅は煩わしく、[発作を発生させます](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)。さらに、アニメーションが数秒以上続く場合は、ユーザーがキャンセルできるようにしましょう。
 - **ユーザーに対話をさせましょう。** 意味しているのは、コンテンツを自動的に更新したり、リダイレクトしたり、再表示したりしないことです。カルーセルを使用したり、警告なしにポップアップを表示したりしないでください。
 - **JavaScript のないユーザーのためにプラン B を用意しましょう。** スピードとセキュリティを向上させるためにJavaScriptをオフに設定していることがあり、ユーザーはネットワークの問題によってスクリプトを読み込むことができないことがよくあります。さらに、サードパーティーのスクリプト（広告、トラッキングスクリプト、ブラウザー拡張機能）がブラウザースクリプトを壊す可能性もあります。
-
   - 少なくとも、 {{HTMLElement("noscript")}} で `<noscript>このサイトを使用するには、 JavaScript を有効にしてください</noscript>` というような短いメッセージを残してください。
   - 可能な限り、JavaScript の機能を HTML とサーバーサイドスクリプトで再現するのが理想的です。
   - 単純な視覚効果だけなら、 CSS の方が直感的に実現できることが多いでしょう。
@@ -91,5 +89,5 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [James Edwards' introduction to using JavaScript accessibly](https://www.sitepoint.com/javascript-accessibility-101/)
+- [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) (Manuel Matuzovic, 2017)
 - [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)

@@ -3,7 +3,7 @@ title: Tailles de canvas et WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Basic_scissoring","Web/API/WebGL_API/By_example/Boilerplate_1")}}
 
 {{EmbedLiveSample("Les_effets_liés_à_la_taille_du_canevas_sur_le_rendu_avec_WebGL",660,180)}}
 
@@ -79,4 +79,4 @@ window.addEventListener(
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/canvas-size-and-webgl).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_découpes_simples","Apprendre/WebGL/Par_exemple/Modèle_1")}}
+{{PreviousNext("Web/API/WebGL_API/By_example/Basic_scissoring","Web/API/WebGL_API/By_example/Boilerplate_1")}}

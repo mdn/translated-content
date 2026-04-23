@@ -3,8 +3,6 @@ title: "CSP: connect-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 ---
 
-{{HTTPSidebar}}
-
 HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中的 **`connect-src`** 指令用于限制通过使用脚本接口加载的 URL。其中受限制的 API 如下：
 
 - {{HTMLElement("a")}} [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping)

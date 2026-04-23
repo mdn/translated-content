@@ -3,7 +3,7 @@ title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`fixed()`** 方法创建一个 {{HTMLElement("tt")}} 元素字符串，其中嵌入了调用的字符串（`<tt>str</tt>`），这会导致该字符串以等宽字体显示。
 

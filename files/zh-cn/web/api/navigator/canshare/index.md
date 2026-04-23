@@ -28,13 +28,11 @@ canShare(data)
 ### 参数
 
 - `data` {{optional_inline}}
-
   - : 定义要测试的共享数据的对象。
 
     通常，如果此调用返回 `true`，则具有相同属性的对象将传递给 {{domxref("navigator.share()")}}。用户代理未知的属性将被忽略；共享数据仅根据用户代理理解的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性，否则该方法将返回 `false`。
 
     可能的值为：
-
     - `url` {{optional_inline}}
       - : 表示要共享的 URL 的字符串。
     - `text` {{optional_inline}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 `CreateDetails` 类型用于在调用 {{WebExtAPIRef("bookmarks.create()")}} 方法时描述新书签、书签文件夹或分隔符的属性。
 
 ## 类型

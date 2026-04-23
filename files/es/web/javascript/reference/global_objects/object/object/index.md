@@ -20,7 +20,8 @@ new Object(value)
 Object(value)
 ```
 
-> **Nota:** `Object()` puede ser llamado con o sin [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Ambos crean un nuevo objeto.
+> [!NOTE]
+> `Object()` puede ser llamado con o sin [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Ambos crean un nuevo objeto.
 
 ### Parametros
 

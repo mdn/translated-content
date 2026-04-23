@@ -3,9 +3,7 @@ title: 讓球移動
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
-{{GamesSidebar}}
-
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
 這一篇是[Gamedev Canvas tutorial](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)十個步驟中的第二步。當完成此步驟你的程式碼應該會與[Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html)差不多
 
@@ -132,12 +130,61 @@ function draw() {
 
 以下為到目前為止完整的程式碼，你可以核對並試著操作以幫助你更瞭解他的運作方式:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">開始遊戲</button>
+```
 
-Exercise: 練習改變球的移動速度或行進方向。
+```css
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+const dx = 2;
+const dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("比較你的程式碼", 600, 350)}}
+
+> [!NOTE]
+> 嘗試改變小球的運動速度或運動方向。
 
 ## 下一步
 
 我們繪製了球並且讓他可以移動，但他仍會消失在 canvas 的邊緣。在第三章我們將會實作 [讓球碰到牆壁後反彈](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

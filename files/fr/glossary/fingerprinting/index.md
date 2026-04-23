@@ -1,13 +1,11 @@
 ---
-title: Empreinte digitale numérique
+title: Empreinte numérique (fingerprinting)
 slug: Glossary/Fingerprinting
 l10n:
-  sourceCommit: 35bb8cea8badfbc1b3fffbd0ade2699893dc8fe1
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Une **empreinte digitale numérique** est parfois construite par des sites web pour identifier un navigateur donné (et par extension, une personne donnée), en collectant et assemblant des caractéristiques particulières du navigateur et système d'exploitation sous-jacent. Parmi les éléments constituants une empreinte digitale numérique, on pourra par exemple trouver&nbsp;:
+Une **empreinte numérique** est parfois construite par des sites web pour identifier un navigateur donné (et par extension, une personne donnée), en collectant et assemblant des caractéristiques particulières du navigateur et système d'exploitation sous-jacent. Parmi les éléments constituants une empreinte numérique, on pourra par exemple trouver&nbsp;:
 
 - La version du navigateur
 - Le fuseau horaire et la langue préférée
@@ -22,5 +20,5 @@ Les standards web sont conçus pour minimiser ce type de collecte d'information,
 
 ## Voir aussi
 
-- [<i lang="en">Cover Your Tracks</i>](https://coveryourtracks.eff.org)&nbsp;: un outil pour afficher les données qu'un site web peut utiliser pour construire une empreinte digitale numérique.
-- [Réduire les risques de construction d'une empreinte digitale dans les spécifications web](https://www.w3.org/TR/fingerprinting-guidance/)&nbsp;: un ensemble de bonnes pratiques à l'attention des autrices et auteurs de spécification web pour empêcher les constructions de telles empreintes.
+- [<i lang="en">Cover Your Tracks</i> <sup>(angl.)</sup>](https://coveryourtracks.eff.org)&nbsp;: un outil pour afficher les données qu'un site web peut utiliser pour construire une empreinte digitale numérique.
+- [Réduire les risques de construction d'une empreinte digitale dans les spécifications web <sup>(angl.)</sup>](https://w3c.github.io/fingerprinting-guidance/)&nbsp;: un ensemble de bonnes pratiques à l'attention des autrices et auteurs de spécification web pour empêcher les constructions de telles empreintes.

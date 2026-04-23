@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取和设置扩展的侧边栏的属性。
 
 [侧边栏](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars)是显示在浏览器窗口左侧或右侧紧挨着网页部分的面板。浏览器提供了相应的用户界面，让用户可以查看当前可用的侧边栏，并选择要显示的侧边栏。使用 [`sidebar_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json 键，扩展可以定义自己的侧边栏。使用这里描述的 `sidebarAction` API，扩展可以获取和设置侧边栏的属性。

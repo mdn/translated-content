@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
-
 _可缩放矢量图形_（**SVG**）是一种基于 {{Glossary("XML")}} 语法的二维矢量图形格式。
 
 {{Glossary("W3C")}} 于 20 世纪 90 年代末开始着手 SVG 的工作，但是直至 {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 推出 SVG 支持时，SVG 才变得流行起来。现在所有主流{{Glossary("browser", "浏览器")}}都支持 SVG。

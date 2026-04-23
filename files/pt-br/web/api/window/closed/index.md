@@ -16,9 +16,7 @@ isClosed = windowRef.closed;
 ```
 
 - `isClosed`
-
   - : Um booleano. Valores possíveis:
-
     - `true`: A janela foi fechada.
     - `false`: A janela está aberta.
 

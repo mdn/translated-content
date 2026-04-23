@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<address>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示其包含的 HTML 内容提供了与个人、团体或组织联系的信息。
 
 {{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}

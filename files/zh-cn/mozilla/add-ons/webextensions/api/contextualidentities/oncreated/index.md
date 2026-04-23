@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当创建新的场景身份时触发事件。场景身份可以由扩展使用 `contextualIdentities` API 创建，也可以由用户直接通过浏览器的用户界面创建。
 
 ## 语法

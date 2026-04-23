@@ -3,7 +3,7 @@ title: 属性选择器
 slug: Learn_web_development/Core/Styling_basics/Attribute_selectors
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics")}}
 
 从 HTML 的学习中，你已经知道，元素可以带有属性，它提供了关于如何标记的更详细信息。CSS 中，你能用属性选择器来选中带有特定属性的元素。本节课中，我们将会为你展示如何使用这些很有用的选择器。
 

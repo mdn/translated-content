@@ -7,7 +7,8 @@ slug: Web/API/DOMParser
 
 The **`DOMParser`** 인터페이스는 DOM {{domxref("Document")}} 문서에 맞는 {{Glossary("XML")}} 및 {{Glossary("HTML")}} 소스 코드를 해석할 수 있는 기반을 제공한다 .
 
-> **참고:** {{domxref("XMLHttpRequest")}} 객체로도 인식 가능한 URL 주소로부터 직접 XML 및 HTML 문서를 해석하여 {{domxref("XMLHttpRequest.response", "response")}} 속성을 통해 `Document` 객체로 제공한다.
+> [!NOTE]
+> {{domxref("XMLHttpRequest")}} 객체로도 인식 가능한 URL 주소로부터 직접 XML 및 HTML 문서를 해석하여 {{domxref("XMLHttpRequest.response", "response")}} 속성을 통해 `Document` 객체로 제공한다.
 
 반대로 DOM 구조를 XML 및 HTML 소스 코드로 제공하는 방식은 {{domxref("XMLSerializer")}} 인터페이스를 참고하도록 한다.
 
@@ -40,7 +41,6 @@ let doc = domparser.parseFromString(string, mimeType);
 - `string`
   - : 해석할 {{domxref("DOMString")}} 문자열. 반드시 {{Glossary("HTML")}}, {{Glossary("xml")}}, {{Glossary("xhtml+xml")}} 또는 {{Glossary("svg")}} 문서 형식에 맞아야 한다.
 - `mimeType`
-
   - : 아래 표에 정의한 형식을 반환 값으로 제공할 {{domxref("DOMString")}} 문자열.
 
     | `mimeType`              | `doc.constructor`            |
@@ -65,7 +65,7 @@ let doc = domparser.parseFromString(string, mimeType);
 
 ## 같이 보기
 
-- [XML 문서 직렬화와 해석](/ko/docs/Web/XML/Parsing_and_serializing_XML)
+- [XML 문서 직렬화와 해석](/ko/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("XMLSerializer")}}
 - {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 문서에 대해 같은 역할을 제공한다.

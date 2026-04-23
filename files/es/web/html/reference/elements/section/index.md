@@ -40,7 +40,7 @@ h2 {
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -121,24 +121,24 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >,
         <a
-          href="/es/docs/Web/HTML/Content_categories#contenido_de_sección"
+          href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_sección"
           >contenido de sección</a
-        >, <a href="/es/docs/Web/HTML/Content_categories#contenido_palpable">contenido palpable</a>.
+        >, <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_palpable">contenido palpable</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >Flujo de contenido</a
         >.
       </td>
@@ -151,7 +151,7 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flujo_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido"
           >flujo de contenido</a
         >. Ten en cuenta que un elemento <code>&#x3C;section></code> no debe ser un
         descendiente de un elemento {{HTMLElement("address")}}.
@@ -180,7 +180,7 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>,
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>,
@@ -210,6 +210,6 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
 ## Véase también
 
 - Otros elementos relacionados con secciones: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Usar secciones y esquemas de HTML](/es/docs/Web/HTML/Element/Heading_Elements)
+- [Usar secciones y esquemas de HTML](/es/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA: Rol de región](/es/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [Por qué deberías elegir article de HTML5 en lugar de section](https://www.smashingmagazine.com/2020/01/html5-article-section/), por Bruce Lawson

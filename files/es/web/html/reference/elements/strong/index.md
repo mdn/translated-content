@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/strong
 ### Definición
 
 - El elemento **strong** es el apropiado para marcar con especial énfasis las partes más importantes de un texto.
-
   - : **Sus etiquetas son**: \<strong> y \</strong> (ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).

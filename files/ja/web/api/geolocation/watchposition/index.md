@@ -3,12 +3,17 @@ title: "Geolocation: watchPosition() メソッド"
 short-title: watchPosition()
 slug: Web/API/Geolocation/watchPosition
 l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
-{{domxref("Geolocation")}} の **`watchPosition()`** メソッドは、端末の位置が変化するたびに自動的に呼び出されるハンドラー関数を登録するために用いられます。また必要に応じてエラー処理コールバック関数を指定することができます。
+**`watchPosition()`** は {{domxref("Geolocation")}} インターフェイスのメソッドで、端末の位置が変化するたびに自動的に呼び出されるハンドラー関数を登録するために用いられます。
+また必要に応じてエラー処理コールバック関数を指定することができます。
+
+保護されたコンテキストが必要であることに加え、この機能は [`geolocation`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` によってブロックされる可能性があり、またユーザーからの明示的な許可も必要となります。
+このメソッドが呼び出されたとき、ユーザーは必要に応じて確認されます。
+権限の状態は、[権限 API](/ja/docs/Web/API/Permissions_API) の `geolocation` ユーザー権限を使用して問い合わせることができます。
 
 ## 構文
 
@@ -43,7 +48,7 @@ function success(pos) {
   const crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulations, you reached the target");
+    console.log("おめでとうございます。目的地に到着しました。");
     navigator.geolocation.clearWatch(id);
   }
 }

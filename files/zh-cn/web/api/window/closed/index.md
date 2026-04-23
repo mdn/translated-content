@@ -16,9 +16,7 @@ isClosed = windowRef.closed;
 ```
 
 - `isClosed`
-
   - : 一个布尔值。可能的值：
-
     - `true`: 窗口已被关闭。
     - `false`: 窗口是打开的。
 

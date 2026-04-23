@@ -36,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **참고:** `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
+> [!NOTE]
+> `Symbol()`은 오직 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)를 사용하지 않고 호출해야 합니다.
 > `new`와 함께 생성하려하면 {{jsxref("TypeError")}}가 발생합니다.
 
 ### 매개변수

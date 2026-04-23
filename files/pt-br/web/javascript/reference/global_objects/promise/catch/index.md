@@ -18,7 +18,6 @@ p.catch(function(motivo) {
 ### Parâmetros
 
 - onRejected
-
   - : Uma {{jsxref("Function")}} chamada quando a `Promise` é rejeitada. Esta função possui um argumento:
     **reason** da rejeição.
     O motivo da rejeição.

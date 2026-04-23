@@ -1,11 +1,11 @@
 ---
 title: Exception
 slug: Glossary/Exception
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-Une **exception** est un état qui interrompt l'exécution normale du code. En JavaScript, les {{glossary("syntax error", "erreurs de syntaxe")}} sont une source commune d'exceptions.
+Une **exception** est un état qui interrompt l'exécution normale du code. En JavaScript, les {{Glossary("syntax error", "erreurs de syntaxe")}} sont une source commune d'exceptions.
 
 ## Voir aussi
 

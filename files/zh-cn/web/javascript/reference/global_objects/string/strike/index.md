@@ -3,7 +3,7 @@ title: String.prototype.strike()
 slug: Web/JavaScript/Reference/Global_Objects/String/strike
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 {{jsxref("String")}} 值的 **`strike()`** 方法创建一个 {{HTMLElement("strike")}} 元素字符串，其中嵌入了调用的字符串（`<strike>str</strike>`），从而使该字符串以删除线的形式显示。
 

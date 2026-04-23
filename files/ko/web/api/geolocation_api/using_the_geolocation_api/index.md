@@ -27,7 +27,8 @@ if ("geolocation" in navigator) {
 
 사용자의 현재 위치는 {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} 메서드를 호출해서 가져올 수 있습니다. 이 메서드는 사용자의 위치를 탐지하는 비동기 요청을 시작하고, 위치 관련 하드웨어에 최신 정보를 요청하며, 위치를 알아낸 후 주어진 콜백 함수를 호출합니다. 선택적으로, 오류가 발생하면 호출할 콜백을 두 번째 매개변수로 지정할 수 있습니다. 또 다른 선택 사항인 세 번째 매개변수는 위치 정보의 최대 수명, 요청의 최대 대기시간, 고정밀 위치정보 여부 등의 옵션을 담은 객체입니다.
 
-> **참고:** {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}}의 기본 설정에서는 정밀도가 낮더라도 최대한 빠르게 응답을 반환하므로, 정확도보다 속도가 중요한 상황에서 유용합니다. 예를 들어, GPS 기능을 가진 장비는 보정 과정에 수 분이 걸릴 수도 있으므로 그동안 IP 위치와 Wi-Fi 등 정확하지 않은 출처에 기반한 위치 정보를 반환할 수 있습니다.
+> [!NOTE]
+> {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}}의 기본 설정에서는 정밀도가 낮더라도 최대한 빠르게 응답을 반환하므로, 정확도보다 속도가 중요한 상황에서 유용합니다. 예를 들어, GPS 기능을 가진 장비는 보정 과정에 수 분이 걸릴 수도 있으므로 그동안 IP 위치와 Wi-Fi 등 정확하지 않은 출처에 기반한 위치 정보를 반환할 수 있습니다.
 
 ```js
 navigator.geolocation.getCurrentPosition((position) => {
@@ -41,7 +42,8 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 장치의 이동이나 위치 정밀도 향상으로 인해 위치 정보가 바뀔 때 호출할 콜백 함수를 {{domxref("Geolocation.watchPosition","watchPosition()")}} 메서드로 설정할 수 있습니다. 이 메서드의 매개변수는 {{domxref("Geolocation.getCurrentPosition","getCurrentPosition()")}}과 같습니다. 이 콜백은 여러 번 호출될 수 있으므로 브라우저가 사용자의 움직임에 따라 위치를 업데이트하거나, 고정밀 위치 기술을 적용해 보다 정밀한 위치를 표시할 수 있습니다. `getCurrentPosition()`과 마찬가지로 선택 사항인 오류 콜백 역시 여러 번 호출될 수 있습니다.
 
-> **참고:** {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}}을 먼저 호출하지 않아도 {{domxref("Geolocation.watchPosition", "watchPosition()")}}을 사용할 수 있습니다.
+> [!NOTE]
+> {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}}을 먼저 호출하지 않아도 {{domxref("Geolocation.watchPosition", "watchPosition()")}}을 사용할 수 있습니다.
 
 ```js
 const watchID = navigator.geolocation.watchPosition((position) => {

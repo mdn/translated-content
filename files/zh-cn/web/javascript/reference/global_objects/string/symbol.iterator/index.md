@@ -3,8 +3,6 @@ title: String.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator
 ---
 
-{{JSRef}}
-
 {{jsxref("String")}} 值的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，并允许字符串与大多数期望传入可迭代对象的语法一起使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[字符串迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，它按 Unicode 码位迭代字符串值并以字符串的形式返回。
 
 {{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}

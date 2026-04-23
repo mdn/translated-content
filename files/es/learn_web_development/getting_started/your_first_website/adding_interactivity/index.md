@@ -4,7 +4,7 @@ slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactiv
 original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
+{{LearnSidebar}}{{PreviousMenuNext( "Learn_web_development/Getting_started/Your_first_website/Styling_the_content","Learn_web_development/Getting_started/Your_first_website/Publishing_your_website","Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu sitio web, (por ejemplo, juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). Este artículo te ayudará a comenzar con este lenguaje extraordinario y te dará una idea de qué es posible hacer con él.
 
@@ -393,7 +393,6 @@ Esto fue lo que sucedió: se almacena una referencia a tu elemento {{htmlelement
 
 1. El código recupera el valor del atributo `src` de la imagen.
 2. El código usa una condicional para comprobar si el valor `src` es igual a la ruta de la imagen original:
-
    1. Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
    2. Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
 
@@ -488,4 +487,4 @@ Aquí solo has rozado la superficie de JavaScript. Si has disfrutado aprendiendo
 - [Aprende JavaScript](https://learnjavascript.online/)
   - : ¡Este es un excelente material para los aspirantes a desarrolladores web! Aprende JavaScript en un entorno interactivo, con lecciones cortas y pruebas interactivas, guiadas por una evaluación automatizada. Las primeras 40 lecciones son gratis. El curso completo está disponible por un pequeño pago único (en inglés).
 
-{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
+{{PreviousMenuNext( "Learn_web_development/Getting_started/Your_first_website/Styling_the_content","Learn_web_development/Getting_started/Your_first_website/Publishing_your_website","Learn_web_development/Getting_started/Your_first_website")}}

@@ -1,36 +1,41 @@
 ---
-title: MediaStream.addTrack()
+title: MediaStream：addTrack() 方法
+short-title: addTrack()
 slug: Web/API/MediaStream/addTrack
+l10n:
+  sourceCommit: d666d5ed812b56cbc9c6cba853494976da1f1dd2
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-**`MediaStream.addTrack()`** 方法会给流添加一个新轨道。指定一个{{domxref("MediaStreamTrack")}}对象作为参数。
+{{domxref("MediaStream")}} 接口的 **`addTrack()`** 方法用于向流中添加一个新的轨道。该轨道通过类型为 {{domxref("MediaStreamTrack")}} 的参数指定。
 
 > [!NOTE]
-> 如果指定的 track 已经存在于流的 track set 里的话，该方法不会产生作用。
+> 如果指定的轨道已经存在于该流的轨道集合中，该方法不会产生任何效果。
 
 ## 语法
 
-```js
-stream.addTrack(track);
+```js-nolint
+addTrack(track)
 ```
 
-### Parameters
+### 参数
 
 - `track`
-  - : A {{domxref("MediaStreamTrack")}} to add to the stream.
+  - : 一个要添加到流中的 {{domxref("MediaStreamTrack")}}。
 
-## Example
+### 返回值
 
-## Specifications
+无（{{jsxref("undefined")}})）。
+
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("MediaStream")}}, the interface it belongs to.
+- {{domxref("MediaStream")}}：该方法所属的接口。

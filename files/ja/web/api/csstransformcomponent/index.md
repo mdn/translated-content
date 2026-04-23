@@ -19,10 +19,9 @@ l10n:
 - {{domxref("CSSTransformComponent.toMatrix()")}} {{Experimental_Inline}}
   - : 新しい {{domxref('DOMMatrix')}} オブジェクトを返します。
 - {{domxref("CSSTransformComponent.toString()")}} {{Experimental_Inline}}
-
   - : CSS の{{cssxref("transform-function","座標変換関数")}}の形の文字列です。
 
-    これは `is2D` の値を使用して、 2D または 3D 座標変換のどちらかを返します。例えば、コンポーネントが {{domxref("CSSRotate")}} を表し、 `is2D` が false の場合、返す文字列は CSS 座標変換の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate3d) 関数の形式を取ります。true の場合、返される文字列は 2 次元の [`rotate3D()`](/ja/docs/Web/CSS/transform-function/rotate) 関数の形になります。
+    これは `is2D` の値を使用して、 2D または 3D 座標変換のどちらかを返します。例えば、コンポーネントが {{domxref("CSSRotate")}} を表し、 `is2D` が false の場合、返す文字列は CSS 座標変換の [`rotate3D()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d) 関数の形式を取ります。true の場合、返される文字列は 2 次元の [`rotate3D()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate) 関数の形になります。
 
 ## 例
 

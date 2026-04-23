@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 509fa54c6dd5ff8c4719a3a7db45917a68718765
 ---
 
-{{AddonSidebar}}
-
 请求授予给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
 
 `Permissions` 参数可以包含 `origins` 属性（[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)数组），或者可以包含 `permissions` 属性（[API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)数组），又或者同时包含两个属性。

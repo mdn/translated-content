@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
-{{FirefoxSidebar}}
-
 来たる Firefox 3 では、あなたが利用したいであろう新機能と同様に、ウェブサイトやウェブアプリケーションに影響するであろう多くの変更が施されています。この記事は Firefox 3 を最大限活用するためにあなたのコンテンツを更新する作業の出発点となるでしょう。
 
 ## DOM の変更
@@ -82,7 +80,7 @@ Firefox のこれまでのバージョンでは、ユーザーがファイルを
 
 ### file: URI の同一オリジンポリシーの変更
 
-file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#file_origins)を参照してください。
+file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy#file_origins)を参照してください。
 
 ## JavaScript の変更
 

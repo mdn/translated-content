@@ -16,12 +16,10 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 차이점은:
 
 - 위치:
-
   - 페이지 액션은 브라우저의 주소줄에 표시된다.
   - 브라우저 액션은 주소줄 밖 브라우저의 툴바에 표시된다.
 
 - 보임:
-
   - 페이지 액션은 평소에는 보통 숨겨지고(show_matches와 hide_matches [매니페스트 항목](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)으로 바꿀 수 있다), 해당 탭에 보이거나 숨길 때는 [`pageAction.show()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show)와 [`pageAction.hide()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) 를 호출한다.
   - 브라우저 액션은 항상 보인다.
 

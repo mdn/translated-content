@@ -20,9 +20,7 @@ forEach(callback, thisArg)
 ### 引数
 
 - `callback`
-
   - : `someNodeList` の各要素に対して実行する関数です。3 つの引数を受け付けます。
-
     - `currentValue`
       - : 現在 `someNodeList` で処理されている要素です。
     - `currentIndex` {{Optional_inline}}

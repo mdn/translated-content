@@ -3,8 +3,6 @@ title: HTTP 响应状态码
 slug: Web/HTTP/Reference/Status
 ---
 
-{{HTTPSidebar}}
-
 HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否成功完成。
 响应被归为以下五大类：
 
@@ -33,9 +31,7 @@ HTTP 响应状态码用来表明特定 [HTTP](/zh-CN/docs/Web/HTTP) 请求是否
 ## 成功响应
 
 - {{HTTPStatus(200, "200 OK")}}
-
   - : 请求成功。成功的含义取决于 HTTP 方法：
-
     - `GET`: 资源已被提取并在消息正文中传输。
     - `HEAD`: 实体标头位于消息正文中。
     - `PUT` or `POST`: 描述动作结果的资源在消息体中传输。

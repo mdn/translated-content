@@ -39,7 +39,6 @@ Number.parseInt(string, radix)
 - `string`
   - : 파싱할 값으로, [문자열로 강제 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)됩니다. 이 인자의 앞 부분 공백은 무시됩니다.
 - `radix` {{optional_inline}}
-
   - : `2`에서 `36` 사이의 정수로,
     `string`의 진법(수학적 숫자 체계의 기수)을
     나타냅니다.

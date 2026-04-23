@@ -11,7 +11,8 @@ l10n:
 `createStereoPanner()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、音源にステレオパンニングを適用する{{ domxref("StereoPannerNode") }}を生成します。
 入力された音声ストリームは、[低コストのパンニングアルゴリズム](https://webaudio.github.io/web-audio-api/#stereopanner-algorithm)で位置が決められます。
 
-> **メモ:** {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}} コンストラクターは {{domxref("StereoPannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("StereoPannerNode.StereoPannerNode", "StereoPannerNode()")}} コンストラクターは {{domxref("StereoPannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

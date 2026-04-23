@@ -1,127 +1,125 @@
 ---
-title: Array.prototype.fill()
+title: "Array : méthode fill()"
+short-title: fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`fill()`** des instances de {{JSxRef("Array")}} modifie tous les éléments d'un tableau compris dans un intervalle d'indices pour leur attribuer une valeur statique. Elle retourne le tableau modifié.
 
-La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.
-
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Array.prototype.fill()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3, 4];
+const array = [1, 2, 3, 4];
 
-// Fill with 0 from position 2 until position 4
-console.log(array1.fill(0, 2, 4));
-// Expected output: Array [1, 2, 0, 0]
+// Remplir avec 0 de la position 2 jusqu'à la position 4
+console.log(array.fill(0, 2, 4));
+// Sortie attendue : Array [1, 2, 0, 0]
 
-// Fill with 5 from position 1
-console.log(array1.fill(5, 1));
-// Expected output: Array [1, 5, 5, 5]
+// Remplir avec 5 à partir de la position 1
+console.log(array.fill(5, 1));
+// Sortie attendue : Array [1, 5, 5, 5]
 
-console.log(array1.fill(6));
-// Expected output: Array [6, 6, 6, 6]
+console.log(array.fill(6));
+// Sortie attendue : Array [6, 6, 6, 6]
 ```
 
 ## Syntaxe
 
-```js
-arr.fill(valeur);
-arr.fill(valeur, début);
-arr.fill(valeur, début, fin);
+```js-nolint
+fill(value)
+fill(value, start)
+fill(value, start, end)
 ```
 
 ### Paramètres
 
-- `valeur`
-  - : Valeur avec laquelle remplir le tableau.
-- `début` {{optional_inline}}
-  - : Index de début, la valeur par défaut est 0.
-- `fin` {{optional_inline}}
-  - : Index de fin, la valeur par défaut est `this.length`.
+- `value`
+  - : Une valeur avec laquelle remplir le tableau. Notez que tous les éléments du tableau auront exactement cette valeur&nbsp;: si `value` est un objet, chaque case du tableau référencera cet objet.
+- `start` {{Optional_Inline}}
+  - : L'indice de début (à partir de zéro) à partir duquel commencer à remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière).
+    - Un indice négatif compte à rebours depuis la fin du tableau&nbsp;: si `-array.length <= start < 0`, on utilise `start + array.length`.
+    - Si `start < -array.length` ou si `start` est omis, on utilise `0`.
+    - Si `start >= array.length`, aucun indice n'est rempli.
+- `end` {{Optional_Inline}}
+  - : L'indice de fin (à partir de zéro) auquel arrêter de remplir, [converti en entier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#conversion_entière). `fill()` remplit jusqu'à mais sans inclure `end`.
+    - Un indice négatif compte à rebours depuis la fin du tableau&nbsp;: si `-array.length <= end < 0`, on utilise `end + array.length`.
+    - Si `end < -array.length`, on utilise `0`.
+    - Si `end >= array.length` ou si `end` est omis ou `undefined`, on utilise `array.length`, ce qui fait que tous les indices jusqu'à la fin sont remplis.
+    - Si `end` implique une position avant ou à la même position que celle impliquée par `start`, rien n'est rempli.
 
 ### Valeur de retour
 
-Le tableau modifié par la méthode.
+Le tableau modifié, rempli avec `value`.
 
 ## Description
 
-Les éléments pour lesquels on utilisera la valeur sont ceux contenus dans l'intervalle de positions \[`début`, `fin`].
+La méthode `fill()` est une [méthode de modification](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_copie_et_méthodes_de_mutation). Elle ne modifie pas la longueur de `this`, mais elle en modifie le contenu.
 
-La méthode `fill()` prend jusqu'à trois arguments : `valeur`, `début` et `fin`. Les arguments `début` et `fin` sont optionnels. Leurs valeurs par défaut sont respectivement `0` et la taille `length` de l'objet `this`.
+La méthode `fill()` remplit également les cases vides dans les tableaux [creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) avec `value`.
 
-Si `début` est négatif, il sera traité comme `length+début` où `length` est la taille du tableau. Si `fin` est négatif, il est traité comme `length+fin`.
+La méthode `fill()` est [générique](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array#méthodes_de_tableau_génériques). Elle attend seulement que la valeur de `this` possède une propriété `length`. Bien que les chaînes de caractères soient aussi assimilables à des tableaux, cette méthode ne convient pas pour les utiliser, car les chaînes sont immuables.
 
-La fonction `fill()` est intentionnellement générique, il n'est pas nécessaire que sa valeur `this` soit un objet `Array`.
-
-La méthode `fill()` est une méthode de modification, elle changera l'objet `this` lui-même, et renverra l'objet modifié. Elle ne crée pas de copie. Lorsque cette méthode reçoit un objet comme valeur, elle copiera l'objet passé et remplira le tableau avec une référence vers cette copie.
+> [!NOTE]
+> Utiliser `Array.prototype.fill()` sur un tableau vide (`length = 0`) ne le modifiera pas car il n'y a rien à modifier.
+> Pour utiliser `Array.prototype.fill()` lors de la déclaration d'un tableau, assurez-vous que le tableau a une `length` non nulle.
+> [Voir l'exemple](#utiliser_fill_pour_remplir_un_tableau_vide).
 
 ## Exemples
 
-```js
-[1, 2, 3].fill(4); // [4, 4, 4]
-[1, 2, 3].fill(4, 1); // [1, 4, 4]
-[1, 2, 3].fill(4, 1, 2); // [1, 4, 3]
-[1, 2, 3].fill(4, 1, 1); // [1, 2, 3]
-[1, 2, 3].fill(4, -3, -2); // [4, 2, 3]
-[1, 2, 3].fill(4, 3, 3); // [1, 2, 3]
-[1, 2, 3].fill(4, NaN, NaN); // [1, 2, 3]
-Array(3).fill(4); // [4, 4, 4]
-[].fill.call({ length: 3 }, 4); // {0: 4, 1: 4, 2: 4, length: 3}
+### Utilisation de `fill()`
 
-// Les objets sont copiés via une référence
-var arr = Array(3).fill({}); // [{}, {}, {}];
-arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
+```js
+console.log([1, 2, 3].fill(4)); // [4, 4, 4]
+console.log([1, 2, 3].fill(4, 1)); // [1, 4, 4]
+console.log([1, 2, 3].fill(4, 1, 2)); // [1, 4, 3]
+console.log([1, 2, 3].fill(4, 1, 1)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 3)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, -3, -2)); // [4, 2, 3]
+console.log([1, 2, 3].fill(4, NaN, NaN)); // [1, 2, 3]
+console.log([1, 2, 3].fill(4, 3, 5)); // [1, 2, 3]
+console.log(Array(3).fill(4)); // [4, 4, 4]
+
+// Un seul objet, référencé par chaque case du tableau :
+const arr = Array(3).fill({}); // [{}, {}, {}]
+arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]
 ```
 
-## Prothèse d'émulation (_polyfill_)
+### Utiliser `fill()` pour créer une matrice de 1
+
+Cet exemple montre comment créer une matrice remplie de 1, comme la fonction `ones()` d'Octave ou MATLAB.
 
 ```js
-if (!Array.prototype.fill) {
-  Object.defineProperty(Array.prototype, "fill", {
-    value: function (value) {
-      // Steps 1-2.
-      if (this == null) {
-        throw new TypeError("this is null or not defined");
-      }
-
-      var O = Object(this);
-
-      // Steps 3-5.
-      var len = O.length >>> 0;
-
-      // Steps 6-7.
-      var start = arguments[1];
-      var relativeStart = start >> 0;
-
-      // Step 8.
-      var k =
-        relativeStart < 0
-          ? Math.max(len + relativeStart, 0)
-          : Math.min(relativeStart, len);
-
-      // Steps 9-10.
-      var end = arguments[2];
-      var relativeEnd = end === undefined ? len : end >> 0;
-
-      // Step 11.
-      var final =
-        relativeEnd < 0
-          ? Math.max(len + relativeEnd, 0)
-          : Math.min(relativeEnd, len);
-
-      // Step 12.
-      while (k < final) {
-        O[k] = value;
-        k++;
-      }
-
-      // Step 13.
-      return O;
-    },
-  });
+const arr = new Array(3);
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = new Array(4).fill(1); // Création d'un tableau de taille 4 rempli de 1
 }
+arr[0][0] = 10;
+console.log(arr[0][0]); // 10
+console.log(arr[1][0]); // 1
+console.log(arr[2][0]); // 1
+```
+
+### Utiliser `fill()` pour remplir un tableau vide
+
+Cet exemple montre comment remplir un tableau en attribuant une valeur spécifique à tous les éléments.
+Le paramètre `end` n'a pas besoin d'être spécifié.
+
+```js
+const tempGirls = Array(5).fill("girl", 0);
+```
+
+Notez que le tableau était initialement un [tableau creux](/fr/docs/Web/JavaScript/Guide/Indexed_collections#tableaux_creux) sans indices attribués. `fill()` peut tout de même remplir ce tableau.
+
+### Appeler `fill()` sur des objets qui ne sont pas des tableaux
+
+La méthode `fill()` lit la propriété `length` de `this` et définit la valeur de chaque propriété à clé entière de `start` à `end`.
+
+```js
+const objetSimilaireTableau = { length: 2 };
+console.log(Array.prototype.fill.call(objetSimilaireTableau, 1));
+// { '0': 1, '1': 1, length: 2 }
 ```
 
 ## Spécifications
@@ -134,5 +132,7 @@ if (!Array.prototype.fill) {
 
 ## Voir aussi
 
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray.prototype.fill()")}}
+- [Guide des collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections)
+- L'objet global {{JSxRef("Array")}}
+- La méthode {{JSxRef("TypedArray.prototype.fill()")}}
+- [Prothèse d'émulation de `Array.prototype.fill` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-array)

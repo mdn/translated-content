@@ -23,7 +23,8 @@ isDefaultNamespace(namespaceURI)
 
 - `namespaceURI`
   - : 要素の検査対象となる名前空間を表す文字列です。
-    > **メモ:** `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > `namespaceURI` は省略可能ではありませんが、 `null` に設定することはできます。
 
 ### 返値
 

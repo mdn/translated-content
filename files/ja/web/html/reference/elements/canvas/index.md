@@ -14,18 +14,18 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#埋め込みコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#埋め込みコンテンツ"
           >埋め込みコンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -34,11 +34,11 @@ l10n:
       <th scope="row">許可されている内容</th>
       <td>
         透過的コンテンツ、ただし子孫に<a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >のうち {{HTMLElement("a")}} 要素,
         {{HTMLElement("button")}} 要素, {{HTMLElement("input")}}
-        要素の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性が
+        要素の <a href="/ja/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> 属性が
         <code>checkbox</code>, <code>radio</code>,
         <code>button</code> のいずれか以外を含まないもの
       </td>
@@ -50,7 +50,7 @@ l10n:
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

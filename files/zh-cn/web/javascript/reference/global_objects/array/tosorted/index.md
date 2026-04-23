@@ -3,8 +3,6 @@ title: Array.prototype.toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 ---
 
-{{JSRef}}
-
 {{jsxref("Array")}} 实例的 **`toSorted()`** 方法是 {{jsxref("Array/sort", "sort()")}} 方法的[复制方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#复制方法和修改方法)版本。它返回一个新数组，其元素按升序排列。
 
 ## 语法
@@ -26,9 +24,7 @@ toSorted(function compareFn(a, b) { /* … */ })
 ### 参数
 
 - `compareFn` {{optional_inline}}
-
   - : 指定一个定义排序顺序的函数。如果省略，则将数组元素转换为字符串，然后根据每个字符的 Unicode 码位值进行排序。
-
     - `a`
       - : 用于比较的第一个元素。
     - `b`

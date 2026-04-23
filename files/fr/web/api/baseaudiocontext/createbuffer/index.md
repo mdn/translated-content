@@ -9,7 +9,8 @@ La méthode `createBuffer()` de l'interface {{domxref("BaseAudioContext")}} est 
 
 Pour plus de détails sur les tampons audio, consultez la page de référence {{domxref ("AudioBuffer")}}.
 
-> **Note :** `createBuffer()` permettait de prendre des données compressées et de restituer des échantillons décodés, mais cette possibilité a été supprimée de la spécification, du fait que tout le décodage était effectué dans le thread principal, donc `createBuffer()` bloquait l'exécution du reste du code. La méthode asynchrone `decodeAudioData()` fait la même chose - prend l'audio compressé, par exemple, un fichier MP3, et vous renvoie directement un {{domxref("AudioBuffer")}} que vous pouvez ensuite faire jouer via {{domxref("AudioBufferSourceNode")}}. Pour des utilisations simples comme la lecture d'un fichier MP3, `decodeAudioData()` est ce que vous devriez utiliser.
+> [!NOTE]
+> `createBuffer()` permettait de prendre des données compressées et de restituer des échantillons décodés, mais cette possibilité a été supprimée de la spécification, du fait que tout le décodage était effectué dans le thread principal, donc `createBuffer()` bloquait l'exécution du reste du code. La méthode asynchrone `decodeAudioData()` fait la même chose - prend l'audio compressé, par exemple, un fichier MP3, et vous renvoie directement un {{domxref("AudioBuffer")}} que vous pouvez ensuite faire jouer via {{domxref("AudioBufferSourceNode")}}. Pour des utilisations simples comme la lecture d'un fichier MP3, `decodeAudioData()` est ce que vous devriez utiliser.
 
 ## Syntaxe
 

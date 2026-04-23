@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.BookmarkTreeNodeUnmodifiable`** 类型用于指示书签树中的节点（其中每个节点都是书签或书签文件夹）无法被更改的原因。其被用于书签节点上 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} 字段的值。
 
 ## 类型

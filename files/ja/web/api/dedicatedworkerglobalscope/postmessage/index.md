@@ -28,7 +28,6 @@ postMessage(aMessage, transferList)
   - : メインスレッドに配信するオブジェクト。これは {{domxref("Worker.message_event")}} に配信されるイベント内の data フィールドに格納されます。
     これは、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)によって処理される任意の値または JavaScript オブジェクトであり、循環参照を含むことができます。
 - `transferList` {{optional_inline}}
-
   - : 所有権を移譲するための、{{Glossary("Transferable objects", "移譲可能オブジェクト")}}の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)（オプション）。
     オブジェクトの所有権が移譲された場合、そのオブジェクトは送信元のコンテキストでは使用できなくなり、 送信先のメインスレッドでのみ利用できるようになります。
 
@@ -56,7 +55,8 @@ onmessage = (e) => {
 
 完全な例は、[基本的な専用ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)を参照してください（[専用ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）。
 
-> **メモ:** `postMessage()` は一度に単一のオブジェクトしか送ることができません。上で見たように、複数の値を渡したい場合は、配列を送ることができます。
+> [!NOTE]
+> `postMessage()` は一度に単一のオブジェクトしか送ることができません。上で見たように、複数の値を渡したい場合は、配列を送ることができます。
 
 ## 仕様書
 

@@ -25,7 +25,8 @@ SyntaxError(message, fileName)
 SyntaxError(message, fileName, lineNumber)
 ```
 
-> **참고:** `SyntaxError()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 쓰거나 함께 쓰지 않아도 됩니다. 두 방법 모두 새로운 `SyntaxError` 인스턴스를 생성합니다.
+> [!NOTE]
+> `SyntaxError()`는 [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)와 함께 쓰거나 함께 쓰지 않아도 됩니다. 두 방법 모두 새로운 `SyntaxError` 인스턴스를 생성합니다.
 
 ### 매개변수
 

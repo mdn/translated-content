@@ -3,8 +3,6 @@ title: 原因：CORS disabled
 slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
 ---
 
-{{HTTPSidebar}}
-
 ## 原因
 
 ```plain

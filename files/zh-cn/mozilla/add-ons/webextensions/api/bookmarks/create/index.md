@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 在指定的 `parentId` 的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 下创建一个书签或文件夹。要创建文件夹，请省略或留空 {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}} 参数。
 
 > [!WARNING]

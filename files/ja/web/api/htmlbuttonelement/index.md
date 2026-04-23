@@ -39,9 +39,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : ボタンで制御するポップオーバー要素を取得および設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性と同等のものです。
 - {{domxref("HTMLButtonElement.type")}}
-
   - : 文字列で、このボタンの動作を示します。これは列挙型属性で、以下の値を取ることができます。
-
     - `submit`: フォームを送信するボタンです。これは属性が指定されていなかった場合の既定値です。または空の値や無効な値に変更された場合の既定値です。
     - `reset`: フォームをリセットするボタンです。
     - `button`: 何もしないボタンです。

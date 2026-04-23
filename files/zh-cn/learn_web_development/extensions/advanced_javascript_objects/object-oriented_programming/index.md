@@ -3,7 +3,7 @@ title: 面向对象编程基本概念
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 面向对象编程（OOP）是如今多种编程语言所实现的一种编程范式，包括 Java、C++。在本文中，我们会简要介绍面向对象编程（OOP）的基本概念，其中包括三个主要概念：**类与实例**、**继承**、**封装**。现在，我们会脱离特定的 JavaScript 代码来探讨这些概念，所有提及到的例子将会以{{Glossary("Pseudocode", "伪代码")}}的形式描述。
 

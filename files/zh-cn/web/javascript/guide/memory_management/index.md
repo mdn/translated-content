@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
-{{JsSidebar("Advanced")}}
-
 底层语言（如 C 语言）拥有手动的内存管理原语，例如：[`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 和 [`free()`](https://zh.wikipedia.org/wiki/C动态内存分配#函数概述)。相反，JavaScript 是在创建对象时自动分配内存，并在不再使用时自动释放内存（_垃圾回收_）。这个自动性是混乱的潜在根源：它让开发者错误地以为他们不需要担心内存管理。
 
 ## 内存生命周期
@@ -238,7 +236,8 @@ class MyWeakMap {
 
 ### WeakRefs 和 FinalizationRegistry
 
-> **备注：** `WeakRef` 和 `FinalizationRegistry` 能直接内省进垃圾回收机制。[尽量避免使用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#尽量避免使用)，因为运行时语义几乎完全不受保证。
+> [!NOTE]
+> `WeakRef` 和 `FinalizationRegistry` 能直接内省进垃圾回收机制。[尽量避免使用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#尽量避免使用)，因为运行时语义几乎完全不受保证。
 
 所有用对象作为值的变量都是那个对象的引用。然而，这样的引用是*强引用*——它们的存在会阻止垃圾回收器将对象标记为适合回收。[`WeakRef`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) 是对象的*弱引用*，这让对象能被垃圾回收，同时在对象的声明周期期间仍保留了读取对象的内容的能力。
 

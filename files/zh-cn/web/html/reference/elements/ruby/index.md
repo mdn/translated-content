@@ -3,8 +3,6 @@ title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<ruby>` 元素** 被用来展示东亚文字注音或字符注释。
 
 <table class="properties">

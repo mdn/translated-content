@@ -1,0 +1,51 @@
+---
+title: <msub>
+slug: Web/MathML/Reference/Element/msub
+original_slug: Web/MathML/Element/msub
+---
+
+{{MathMLRef}}
+
+L'élément MathML `<msub>` est utilisé pour attaché un indice à une expression. On utilise la syntaxe suivante: `<msub> base indice </msub>`.
+
+## Attributes
+
+- class, id, style
+  - : Fournit pour être utilisé avec [stylesheets](/fr/docs/Web/CSS).
+- href
+  - : Utilisé pour ajouter un hyperlien vers une URI.
+- mathbackground
+  - : La couleur d'arrière plan. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
+- mathcolor
+  - : La couleur du texte. Vous pouvez utiliser `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/Reference/Values/color_value#les_mots-clés).
+- subscriptshift
+  - : The minimum space by which to shift the subscript below the baseline of the expression, as a [length value](/fr/docs/Web/MathML/Reference/Values#lengths).
+
+## Example
+
+Image fixe: ![x1](msub.png)
+
+Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
+
+```html
+<math>
+  <msub>
+    <mi>X</mi>
+    <mn>1</mn>
+  </msub>
+</math>
+```
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{ MathMLElement("msup") }} (Superscript)
+- {{ MathMLElement("msubsup") }} (Subscript-superscript pair)
+- {{ MathMLElement("mmultiscripts") }} (Prescripts and tensor indices)

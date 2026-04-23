@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b326fb5b00ea2f881ae6786338671d7fbd2745b6
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 106 の変更点をまとめています。Firefox 106 は、米国時間 2022 年 10 月 18 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -24,7 +22,7 @@ l10n:
 
 ### CSS
 
-- [@supports](/ja/docs/Web/CSS/@supports) アットルールで `font-tech()` および `font-format()` 関数をサポートしました。
+- [@supports](/ja/docs/Web/CSS/Reference/At-rules/@supports) アットルールで `font-tech()` および `font-format()` 関数をサポートしました。
   これらの関数で、指定したフォント技術やフォント形式をブラウザーがサポートしているかを確認できます。また、確認結果に基づいて CSS スタイルを適用できます ([Firefox バグ 1786493](https://bugzil.la/1786493))。
 
 #### 廃止

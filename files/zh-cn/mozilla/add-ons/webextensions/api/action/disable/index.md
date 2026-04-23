@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 禁用某一标签页的浏览器操作——意味着当该标签页处于活动状态时，无法单击该按钮。
 
 > [!NOTE]

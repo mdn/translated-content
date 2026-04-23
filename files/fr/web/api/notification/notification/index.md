@@ -18,9 +18,7 @@ const myNotification = new Notification(title, options);
 - `title`
   - : Définit un titre pour la notification, qui s'affiche en haut de la fenêtre de notification.
 - `options` {{optional_inline}}
-
   - : Un objet d'options contenant tous les paramètres personnalisés que vous souhaitez appliquer à la notification. Les options possibles sont:
-
     - `dir`: La direction dans laquelle afficher la notification. La valeur par défaut est `auto`, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de `ltr` et `rtl` (bien que la plupart des navigateurs semblent ignorer ces paramètres.)
     - `lang`: La langue de la notification, telle que spécifiée à l'aide d'un [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant une [balise de langue BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Consultez la page des [codes de langue à 2 lettres ISO](https://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/) de Sitepoint pour une référence simple.
     - `badge`: Un [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.

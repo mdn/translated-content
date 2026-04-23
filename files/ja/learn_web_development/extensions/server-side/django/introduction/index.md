@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 この最初の Django の記事では、「Django とは何か」 という問いに答え、このウェブフレームワークの特徴と概要を説明します。
 
@@ -18,7 +18,7 @@ l10n:
       <th scope="row">前提条件:</th>
       <td>
         基本的なコンピューターリテラシー。
-       <a href="/ja/docs/Learn/Server-side/First_steps">サーバーサイドのウェブサイトプログラミング</a>の一般的な理解、特に、<a href="/ja/docs/Learn/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライアントとサーバーとのやり取り</a>の仕組みを理解していること。
+       <a href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps">サーバーサイドのウェブサイトプログラミング</a>の一般的な理解、特に、<a href="/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview">ウェブサイトにおけるクライアントとサーバーとのやり取り</a>の仕組みを理解していること。
       </td>
     </tr>
     <tr>
@@ -39,13 +39,11 @@ Django は次のようなソフトウェアを書くのに役立ちます。
 - 完全性
   - : Django は「電池入り」の哲学に従い、開発者が「箱から出して」やりたいことはほとんどすべて提供しています。必要なもの全てが一つの「製品」の一部であるため、全てがシームレスに連動し、一貫した設計原理に従っており、広範で[最新のドキュメント](https://docs.djangoproject.com/en/stable/)が備わっています。
 - 多様性
-
   - : Django は、コンテンツマネジメントシステムや Wiki からソーシャルネットワークやニュースサイトまで、ほとんど全てのタイプのウェブサイトを構築するのに使うことができます（そしてこれまでも使ってきました）。どんなクライアントサイドフレームワークでも動作し、ほとんどどんな形式のコンテンツでも配信できます（HTML、RSS フィード、JSON、XML を含む）。
 
     内部的には、必要となるほとんどの機能（人気のあるデータベースやテンプレートエンジンなど）の選択肢を提供していますが、他のコンポーネントを使用するように拡張もできます。
 
 - 安全性
-
   - : Django は、ウェブサイトを自動的に保護するために「正しいことをする」ように設計されたフレームワークです。多くの一般的なセキュリティミスを開発者が避けるのに役立ちます。 Django はユーザーアカウントとパスワードを安全に管理する方法を提供しており、セッション情報を脆弱なクッキーに入れたり（代わりにクッキーにはキーを入れるだけで、実際のデータはデータベースに保存されます）、パスワードハッシュではなくパスワードを直接保存するなどのよくある間違いを回避しています。
 
     _パスワードハッシュは、送信されたパスワードから [暗号化ハッシュ関数](https://ja.wikipedia.org/wiki/%E6%9A%97%E5%8F%B7%E5%AD%A6%E7%9A%84%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5%E9%96%A2%E6%95%B0)を介して生成された固定長の値です。 Django は入力されたパスワードが正しいかどうかを、ハッシュ関数を介した値と保存されたハッシュ値を比較することでチェックできます。これは「一方向性」の機能であり、もし保存されているハッシュ値が侵害されても、攻撃者が元のパスワードを解読するのは困難です。_
@@ -248,4 +246,4 @@ def index(request):
 
 上記では実際の Django コードをいくつか見ましたが、クライアントサイドのコードとは異なり、実行するための開発環境をセットアップする必要があります。それが次のステップです。
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

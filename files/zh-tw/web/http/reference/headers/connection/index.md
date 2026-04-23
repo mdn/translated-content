@@ -3,8 +3,6 @@ title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
 ---
 
-{{HTTPSidebar}}
-
 **`Connection`** 標頭用來控制在本次事務（transaction）後，連線是否要繼續開著。如果設定為 `keep-alive` ，
 則連線繼續開著，讓接下來送往同一伺服器的請求利用。
 
@@ -21,9 +19,9 @@ slug: Web/HTTP/Reference/Headers/Connection
 任何在 HTTP 事務中使用到的點對點標頭都必須在 `Connection` 標頭列出來，
 這樣首先經手請求的代理軟體才知道自己要處理這些標頭。標準的點對點標頭也是一樣的處理方式。
 
-| Header type                           | {{Glossary("General header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| Header type                              | {{Glossary("General header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | yes                            |
 
 ## 語法
 

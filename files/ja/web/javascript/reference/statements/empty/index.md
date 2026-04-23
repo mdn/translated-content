@@ -9,7 +9,7 @@ l10n:
 
 **空文** は、JavaScript 構文で文が想定されているときに、文を用意しないために使います。
 
-{{InteractiveExample("JavaScript Demo: Statement - Empty")}}
+{{InteractiveExample("JavaScript デモ: Statement - Empty")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3];

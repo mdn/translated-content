@@ -2,7 +2,7 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 l10n:
-  sourceCommit: 8f91a466f5a6d1e238ed209f36f9b506fc73ee0d
+  sourceCommit: cf16851e73da29823438198c4f0efcb7026b7d10
 ---
 
 {{ APIRef("DOM") }}
@@ -43,6 +43,8 @@ _このインターフェイスには、その親である {{domxref("Node")}} �
   - : この `DocumentFragment` の中で、文書の順序で見た場合に、指定されたセレクターに一致する最初の {{domxref("Element")}} ノードを返します。
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : この `DocumentFragment` の中で、指定されたセレクターに一致するすべての {{domxref("Element")}} ノードの {{domxref("NodeList")}} を返します。
+- {{DOMxRef("DocumentFragment.moveBefore()")}}
+  - : 指定された{{domxref(「Node」)}}を、呼び出し元の`DocumentFragment`内に直接の子として、指定された参照ノードの前に移動します。ノードは除去されることなく、そのまま挿入されます。
 - {{DOMxRef("DocumentFragment.replaceChildren()")}}
   - : `DocumentFragment` の既存の子を、指定された一連の新しい子で置き換えます。
 - {{domxref("DocumentFragment.getElementById()")}}
@@ -72,7 +74,7 @@ _このインターフェイスには、その親である {{domxref("Node")}} �
 
 ```js
 const ul = document.querySelector("ul");
-const fruits = ["Apple", "Orange", "Banana", "Melon"];
+const fruits = ["りんご", "みかん", "バナナ", "メロン"];
 
 const fragment = new DocumentFragment();
 

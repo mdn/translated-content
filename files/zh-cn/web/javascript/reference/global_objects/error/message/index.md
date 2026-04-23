@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{JSRef}}
-
 {{jsxref("Error")}} 实例的 **`message`** 数据属性是错误的人类可读描述。
 
 ## 值

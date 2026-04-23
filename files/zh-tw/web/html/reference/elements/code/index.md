@@ -3,8 +3,6 @@ title: <code>：行內程式碼元素
 slug: Web/HTML/Reference/Elements/code
 ---
 
-{{HTMLSidebar}}
-
 **`<code>`** [HTML](/zh-TW/docs/Web/HTML) 元素以一種樣式顯示其內容，意在指示該文字是一小段電腦程式碼。預設情況下，內容文字以{{Glossary("user agent", "使用者代理")}}的預設的等寬字體顯示。
 
 {{InteractiveExample("HTML Demo: &lt;code&gt;", "tabbed-shorter")}}

@@ -3,10 +3,14 @@ title: URI ガイド
 short-title: ガイド
 slug: Web/URI/Guides
 l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
 このページには URI のガイドを掲載しています。
-これらは、 URI の働き、 URI の種類、アプリケーション内でそれらを使用する方法を理解していただくのに有用です。
+これらは、URI の動作や、アプリケーション内で URI を使用する方法を理解するのに役立てるためのものです。
 
 {{SubPagesWithSummaries}}
+
+## 関連情報
+
+- [URI リファレンス](/ja/docs/Web/URI/Reference)

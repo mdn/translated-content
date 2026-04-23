@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
-{{jsSidebar("Statements")}}
-
 **`throw`** 语句用于抛出用户自定义的异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用函数中没有 `catch` 块，则程序将终止。
 
 {{InteractiveExample("JavaScript Demo: Statement - Throw")}}

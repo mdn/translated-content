@@ -20,9 +20,7 @@ void gl.clear(mask);
 ### Параметры
 
 - `mask`
-
   - : Побитовая маска ИЛИ {{domxref("GLbitfield")}} указывает какие конкретно буферы нужно очистить. Возможные значения:
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

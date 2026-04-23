@@ -22,9 +22,7 @@ l10n:
 - {{domxref("MIDIPort.name")}} {{ReadOnlyInline}}
   - : ポートのシステム名を表す文字列を返します。
 - {{domxref("MIDIPort.type")}} {{ReadOnlyInline}}
-
   - : ポートの種類を表す文字列を返します。以下のいずれかです。
-
     - `"input"`
       - : この `MIDIPort` は入力ポートです。
     - `"output"`
@@ -33,18 +31,14 @@ l10n:
 - {{domxref("MIDIPort.version")}} {{ReadOnlyInline}}
   - : ポートのバージョンを表す文字列を返します。
 - {{domxref("MIDIPort.state")}} {{ReadOnlyInline}}
-
   - : ポートの状態を表す文字列を返します。以下のいずれかです。
-
     - `"disconnected"`
       - : この `MIDIPort` が表すデバイスはシステムから切断されています。
     - `"connected"`
       - : この `MIDIPort` が表すデバイスは現在接続されています。
 
 - {{domxref("MIDIPort.connection")}} {{ReadOnlyInline}}
-
   - : ポートの接続状態を表す文字列を返します。以下のいずれかです。
-
     - `"open"`
       - : この `MIDIPort` が表すデバイスは既に開かれており、利用可能です。
     - `"closed"`

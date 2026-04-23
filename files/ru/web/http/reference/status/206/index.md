@@ -3,8 +3,6 @@ title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
 ---
 
-{{HTTPSidebar}}
-
 "The HTTP **`206 Partial Content"`** код ответа на статус успешного указывает, что запрос преуспел, и тело содержит запрошенные диапазоны данных, как описано в {{HTTPHeader("Range")}} запроса
 
 Если существует только один диапазон, {{HTTPHeader("Content-Type")}} всего ответа задаётся типом документа, а также {{HTTPHeader("Content-Range")}}

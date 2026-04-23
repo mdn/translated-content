@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.toSorted()
+short-title: toSorted()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 l10n:
-  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`toSorted()`** は {{jsxref("Array")}} インスタンスのメソッドで、 {{jsxref("Array/sort", "sort()")}} メソッドに対応する[コピー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#コピーメソッドと変更メソッド)メソッドです。これは、要素を昇順にソートした新しい配列を返します。
 
@@ -19,13 +18,7 @@ toSorted(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-
-  - : ソート順を定義する関数を指定します。省略した場合は、配列の要素を文字列に変換し、 Unicode コードポイントの値に従って並べ替えます。
-
-    - `a`
-      - : 比較する最初の要素です。
-    - `b`
-      - : 比較する 2 番目の要素です。
+  - : 要素の順序を決定する関数。省略した場合、配列の要素は文字列に変換され、各文字の Unicode コードポイントの値に従ってソートされます。詳細については、{{jsxref("Array/sort", "sort()")}} を参照してください。
 
 ### 返値
 
@@ -93,6 +86,7 @@ console.log(Array.prototype.toSorted.call(arrayLike));
 ## 関連情報
 
 - [`Array.prototype.toSorted` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#change-array-by-copy)
+- [es-shims による `Array.prototype.toSorted` のポリフィル](https://www.npmjs.com/package/array.prototype.tosorted)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.sort()")}}
 - {{jsxref("Array.prototype.toReversed()")}}

@@ -21,7 +21,7 @@ delete(customHighlightName)
 ### 引数
 
 - `customHighlightName`
-  - : この `HighlightRegistry` から除去する {{domxref("Highlight")}} オブジェクトの名前（{{jsxref("String", "文字列", "", "nocode)}}）。
+  - : この `HighlightRegistry` から除去する {{domxref("Highlight")}} オブジェクトの名前（{{jsxref("String", "文字列", "", "nocode")}}）。
 
 ### 返値
 

@@ -3,8 +3,6 @@ title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 ---
 
-{{JSRef}}
-
 {{jsxref("Set")}} 实例的 **`forEach()`** 方法按插入顺序为该集合中的每个值执行一次提供的函数。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}

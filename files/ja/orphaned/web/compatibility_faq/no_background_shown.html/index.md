@@ -26,14 +26,14 @@ slug: orphaned/Web/Compatibility_FAQ/No_Background_Shown.html
     ```
 
     上記の backgound: -webkit-gradient(); は、webkit ブラウザー用の記述となります。
-    また、[gradient](/ja/docs/Web/CSS/gradient)値を指定する代替の記述もないため、結果として、背景からグラデーション装飾が抜けてしまいます。
+    また、[gradient](/ja/docs/Web/CSS/Reference/Values/gradient)値を指定する代替の記述もないため、結果として、背景からグラデーション装飾が抜けてしまいます。
 
 ## 解決策
 
 要因の解決策の代表例として以下があります。
 
 1. **ベンダープレフィックス**
-    CSS3 準拠の backgound: [linear-gradient](/ja/docs/Web/CSS/gradient/linear-gradient)(); を追記します。
+    CSS3 準拠の backgound: [linear-gradient](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)(); を追記します。
 
     ```css
     .bg_hoge {
@@ -42,7 +42,7 @@ slug: orphaned/Web/Compatibility_FAQ/No_Background_Shown.html
     }
     ```
 
-    注意：[gradient](/ja/docs/Web/CSS/gradient)値や[linear-gradient()](/ja/docs/Web/CSS/gradient/linear-gradient)関数はブラウザーやバージョンごとに構文が異なりますので注意が必要です。
+    注意：[gradient](/ja/docs/Web/CSS/Reference/Values/gradient)値や[linear-gradient()](/ja/docs/Web/CSS/Reference/Values/gradient/linear-gradient)関数はブラウザーやバージョンごとに構文が異なりますので注意が必要です。
 
 ## メリット
 

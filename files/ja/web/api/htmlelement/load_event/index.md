@@ -36,7 +36,11 @@ elt.onload = (event) => { ... };
 ### HTML
 
 ```html
-<img id="image" src="favicon144.png" alt="MDN logo" width="72" />
+<img
+  id="image"
+  src="/shared-assets/images/examples/favicon144.png"
+  alt="MDN logo"
+  width="72" />
 <div><button onclick="reload()">Reload</button></div>
 ```
 
@@ -50,7 +54,7 @@ image.onload = () => {
 };
 
 function reload() {
-  image.src = "favicon144.png";
+  image.src = "/shared-assets/images/examples/favicon144.png";
 }
 ```
 
@@ -69,6 +73,5 @@ function reload() {
 ## 関連情報
 
 - 関連イベント:
-
   - Window: {{domxref("Window/load_event", "load")}} イベント
   - Window: {{domxref("Window/error_event", "error")}} イベント

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 26635ef6b1a40e538501bd81fdcf98725e14e6ea
 ---
 
-{{GlossarySidebar}}
-
 **属性**（Attribute）可扩展 {{Glossary("HTML")}} 或 {{Glossary("XML")}} {{Glossary("element", "元素")}}，改变其行为或提供元数据。
 
 属性的形式总是 `name="value"`（属性的标识符后跟相关的值）。你可能会看到没有等号或值的属性。这是在 HTML 中提供空字符串。但是，在 XML 中这是无效的：XML 要求所有属性都有显式值。

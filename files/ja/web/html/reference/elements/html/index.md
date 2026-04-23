@@ -14,7 +14,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -39,7 +39,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Document_role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"
           >document</a
         >
       </td>

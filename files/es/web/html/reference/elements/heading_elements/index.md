@@ -12,16 +12,16 @@ Los elementos de **encabezado** implementan seis niveles de encabezado del docum
 > - Evite omitir niveles de encabezado: siempre comience con `<h1>`, después use `<h2>` y así sucesivamente.
 > - Con el elemento {{HTMLElement("section")}}, debe considerar evitar usar \<h1> más de una vez en una página; por costumbre, se usa para mostrar el título de la página, con todos los encabezados debajo de éste comenzando con `<h2>`. Cuando se usan secciones, debe usarse un `<h1>` por sección. Véase [Definiendo secciones](/es/docs/Sections_and_Outlines_of_an_HTML5_document#Definiendo_secciones_en_HTML5) en [Secciones y esquema de un documento HTML5](/es/docs/Sections_and_Outlines_of_an_HTML5_document) para más información.
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
-| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | [Contenido textual o estático](/es/docs/Web/HTML/Content_categories#contenido_textual_o_estático).                                                                                                  |
-| Omisión de etiquetas                                            | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                  |
-| Elementos padres permitidos                                     | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
-| Interfaz DOM                                                    | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                   |
+| [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories) | [Contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#contenido_dinámico), contenido de encabezados, contenido palpable.                                                                        |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                    | [Contenido textual o estático](/es/docs/Web/HTML/Guides/Content_categories#contenido_textual_o_estático).                                                                                                  |
+| Omisión de etiquetas                                                   | Ninguna, tanto la etiqueta inicial como la final son obligatorias.                                                                                                                                         |
+| Elementos padres permitidos                                            | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#contenido_dinámico); no debe usarse como hijo del elemento {{HTMLElement("hgroup")}}, pues éste es obsoleto |
+| Interfaz DOM                                                           | {{domxref("HTMLHeadingElement")}}                                                                                                                                                                          |
 
 ## Atributos
 
-Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Estos elementos incluyen los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 El atributo `align` es obsoleto; no debe usarse.
 
@@ -95,10 +95,8 @@ Una forma típica de navegación que utilizan las personas no videntes es movers
 Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros documentos. Esto beneficia la organización de la información y también ayuda a los usuarios de lectores de pantalla a conocer mejor la jerarquía de los contenidos.
 
 1. `h1` Harry Potter
-
    1. `h2` Sinopsis
    2. `h2` Novelas
-
       1. `h3` Harry Potter y la Piedra Filosofal
       2. `h3` Harry Potter y la Cámara de los Secretos
       3. `h3` Harry Potter y el Prisionero de Azkaban
@@ -108,7 +106,6 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
       7. `h3` Harry Potter y las Reliquias de la Muerte
 
    3. `h2` Películas
-
       1. `h3` Harry Potter y la Piedra Filosofal
       2. `h3` Harry Potter y la Cámara de los Secretos
       3. `h3` Harry Potter y el Prisionero de Azkaban

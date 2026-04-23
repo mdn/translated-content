@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 067a40e4ed27ea6e1f3b8bbfec15cd9dc3078f4c
 ---
 
-{{HTMLSidebar}}
-
 **`dirname`** 属性描述了提交表单时元素文本内容的方向，可用于 {{htmlelement("textarea")}} 元素和一些 {{htmlelement("input")}} 类型。浏览器使用此属性值来决定用户输入的文本是从左到右，还是从右到左的。当使用此属性值时，元素的文本方向性值与作为字段名称的 `dirname` 属性值一起包含在表单提交数据中。
 
 ## 使用说明

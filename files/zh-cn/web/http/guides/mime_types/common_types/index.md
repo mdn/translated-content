@@ -3,8 +3,6 @@ title: 常见 MIME 类型列表
 slug: Web/HTTP/Guides/MIME_types/Common_types
 ---
 
-{{HTTPSidebar}}
-
 这是一份 MIME 类型列表，以及各个类型的文档类别，按照它们的常见扩展名排序。
 
 两种主要的 MIME 类型在默认类型中扮演了重要的角色：

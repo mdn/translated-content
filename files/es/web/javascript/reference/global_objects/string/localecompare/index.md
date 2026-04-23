@@ -40,7 +40,6 @@ localeCompare(compareString, locales, options);
 - `compareString`
   - : La cadena de caracteres contra la cual se compara la `referenceStr`.
 - `locales` y `options`
-
   - : Estos argumentos configuran el comportamiento de la función y le permiten
     a las aplicaciones especificar el idioma cuyas convenciones de formato se
     deben usar. En implementaciones que ignoran los argumentos `locales` y

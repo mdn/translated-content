@@ -10,7 +10,7 @@ l10n:
 
 **`<caption>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のキャプション（またはタイトル）を指定します。
 
-{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;caption&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -102,9 +102,7 @@ tr:nth-child(odd) td {
 以下の属性は非推奨であり、使用するべきではありません。以下に記述しているのは、既存コードを更新する際の参考や、歴史的な関心としてのためのみです。
 
 - `align` {{deprecated_inline}}
-
   - : この[列挙型](/ja/docs/Glossary/Enumerated)属性は caption 要素の、自身の指し示す table 要素を基準とした相対的な位置を指定します。以下の値が指定できます。
-
     - `left`
       - : キャプションを表の左側に表示します。
     - `top`
@@ -172,7 +170,7 @@ td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -181,7 +179,7 @@ td {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -227,5 +225,4 @@ td {
 ## 関連情報
 
 - {{HTMLElement("caption")}} 要素の align 属性 の代替となる CSS プロパティ:
-
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}

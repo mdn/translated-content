@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Age
 original_slug: Web/HTTP/Headers/Age
 ---
 
-{{HTTPSidebar}}
-
 **`Age`** ヘッダーには、プロキシーのキャッシュに入ってからの経過時間（秒）が含まれています。
 
 `Age` ヘッダーは通常０に近い値となっています。もし `Age: 0` であるなら、 おそらくオリジンサーバーからフェッチされただけでしょう。 それ以外の場合は、一般的にプロキシーの現在の日時と HTTP レスポンスに含まれていた{{HTTPHeader("Date")}} ヘッダーとの差分から算出されます。

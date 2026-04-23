@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a92a2bb31cf5d79808878701f0344a4eabf12963
 ---
 
-{{JSRef}}
-
 **`Atomics.load()`** 静态方法返回数组中指定位置的值。
 
 {{InteractiveExample("JavaScript Demo: Atomics.load()")}}

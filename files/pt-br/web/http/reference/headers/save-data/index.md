@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Save-Data
 original_slug: Web/HTTP/Headers/Save-Data
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Save-Data`** é um booleano no qual, em requisições, indica a preferência do cliente para reduzir uso de dados. Isso pode ser por algumas razões como custo de transferência alto, baixa velocidade de conexão, etc.
 
 Um valor de `On` indica uma opção explícita do usuário em querer reduzir a quantidade de dados usados no cliente, e quando comunicade para origens permite elas entregarem conteúdo alternativo para reduzir a quantidade de dados baixados como recursos de imagem e vídeo menores, marcação e estilo diferente, desabilitar _polling_ e atualizações automáticas, e assim por diante.

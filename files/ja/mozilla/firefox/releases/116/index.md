@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a81d16fadbe5cbee1ad2f8d0ddccda846f4034c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 116 の変更点をまとめています。Firefox 116 は、2023 年 8 月 1 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -18,7 +16,7 @@ l10n:
 
 ### CSS
 
-- 要素がたどる経路を定義するために使用する {{cssxref("offset-path")}} プロパティの構文を更新しました。新しい構文では `none`、または `<offset-path>` か `<coord-box>` のいずれかの値を設定できます。新しい `<offset-path>` の値は `<ray()>`、`<url>`、`<basic-shape>` を指定できます。[`<coord-box>`](/ja/docs/Web/CSS/box-edge) の値は旧来の `<geometry-box>` の値を置き換えるもので、要素のボックスモデルに基づく経路の形状を指定できます。`<basic-shape>` および `<coord-box>` の値を使用するには、それぞれ `layout.css.motion-path-basic-shapes.enabled` および `layout.css.motion-path-coord-box.enabled` の設定を有効にすることが必要です ([Firefox bug 1598156](https://bugzil.la/1598156))、([Firefox bug 1837305](https://bugzil.la/1837305))。
+- 要素がたどる経路を定義するために使用する {{cssxref("offset-path")}} プロパティの構文を更新しました。新しい構文では `none`、または `<offset-path>` か `<coord-box>` のいずれかの値を設定できます。新しい `<offset-path>` の値は `<ray()>`、`<url>`、`<basic-shape>` を指定できます。[`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge) の値は旧来の `<geometry-box>` の値を置き換えるもので、要素のボックスモデルに基づく経路の形状を指定できます。`<basic-shape>` および `<coord-box>` の値を使用するには、それぞれ `layout.css.motion-path-basic-shapes.enabled` および `layout.css.motion-path-coord-box.enabled` の設定を有効にすることが必要です ([Firefox bug 1598156](https://bugzil.la/1598156))、([Firefox bug 1837305](https://bugzil.la/1837305))。
 
 ### Accessibility (ARIA)
 
@@ -57,7 +55,7 @@ l10n:
 #### WebDriver BiDi
 
 - ユーザーが自動化セッションを終了できる `session.end` コマンドをサポートしました。以前、これは WebDriver Classic と WebDriver BiDi の両方を使用するセッションに限り使用できました。現在は WebDriver BiDi だけのセッションでも使用可能になりました ([Firefox bug 1829337](https://bugzil.la/1829337))。
-- `session.new` コマンドで [capability matching](/ja/docs/Web/WebDriver/Capabilities) をサポートしました。ブラウザー名やプラットフォーム名など、対象ブラウザーに関する想定値を定義できます。また、たとえば安全でない証明書を受け入れるかを指定するなど、セッションの設定にも使用できます ([Firefox bug 1731730](https://bugzil.la/1731730))。
+- `session.new` コマンドで [capability matching](/ja/docs/Web/WebDriver/Reference/Capabilities) をサポートしました。ブラウザー名やプラットフォーム名など、対象ブラウザーに関する想定値を定義できます。また、たとえば安全でない証明書を受け入れるかを指定するなど、セッションの設定にも使用できます ([Firefox bug 1731730](https://bugzil.la/1731730))。
 - シャドウルートが、戻り値のルートであるときに正しくシリアライズされるようになりまし ([Firefox bug 1836514](https://bugzil.la/1836514))。
 - `network` イベントの開始時刻の情報の名前を `originTime` から `timeOrigin` に変更しました ([Firefox bug 1836926](https://bugzil.la/1836926))。
 - `network` の `network.responseCompleted` イベントが、リダイレクトを伴うナビゲーション要求でも正しく発生するようになりました ([Firefox bug 1838238](https://bugzil.la/1838238))。

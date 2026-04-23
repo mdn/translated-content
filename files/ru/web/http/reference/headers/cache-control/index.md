@@ -3,8 +3,6 @@ title: Cache-Control
 slug: Web/HTTP/Reference/Headers/Cache-Control
 ---
 
-{{HTTPSidebar}}
-
 Общий заголовок **`Cache-Control`** используется для задания инструкций кеширования как для запросов, так и для ответов. Инструкции кеширования однонаправленные: заданная инструкция в запросе не подразумевает, что такая же инструкция будет указана в ответе
 
 <table class="properties">
@@ -14,7 +12,7 @@ slug: Web/HTTP/Reference/Headers/Cache-Control
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>нет</td>
     </tr>
     <tr>

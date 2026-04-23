@@ -23,7 +23,6 @@ slug: Glossary/Method
 <!---->
 
 - [Глоссарий MDN](/ru/docs/Glossary)
-
   - {{Glossary("function","Функция")}}
   - {{Glossary("object","Объект")}}
   - {{Glossary("property","Свойство")}}

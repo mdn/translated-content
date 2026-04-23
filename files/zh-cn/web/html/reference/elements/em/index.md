@@ -3,8 +3,6 @@ title: <em>：强调元素
 slug: Web/HTML/Reference/Elements/em
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<em>`** 元素将文本标记为强调（emphasis）格式。`<em>` 元素可以嵌套，嵌套层次越深，则强调的程度越深。
 
 {{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}

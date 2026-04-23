@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7159a4c0a2f1e886c09268c41c103c4ac7100d63
 ---
 
-{{GlossarySidebar}}
-
 **签名**（_数字签名_）是一种证明消息真实性的{{glossary("protocol","协议")}}。
 
 从给定消息的{{glossary("hash function", "散列")}}，**签名过程**首先使用实体的私有{{glossary("key", "密钥")}}生成链接到签名实体的数字签名。

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Allow
 original_slug: Web/HTTP/Headers/Allow
 ---
 
-{{HTTPSidebar}}
-
 **`Allow`** ヘッダーは、あるリソースが対応しているメソッドの一覧を示します。
 
 このヘッダーは、サーバーが {{HTTPStatus("405")}} `Method Not Allowed` ステータスコードで返答する場合、使用することができるリクエストメソッドを示すために送信する必要があります。 `Allow` ヘッダーが空である場合、リソースが許可しているリクエストメソッドがないことを示し、例えば指定されたリソースにおいて一時的に発生する可能性があります。

@@ -10,7 +10,7 @@ l10n:
 
 **`<embed>`** は [HTML](/ja/docs/Web/HTML) の要素で、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所（ブラウザーのプラグインなど）によって提供されます。
 
-{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;embed&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <embed
@@ -63,17 +63,17 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、埋め込みコンテンツ、対話型コンテンツ、<a
-          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >
       </td>

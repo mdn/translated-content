@@ -3,8 +3,6 @@ title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
 
-{{JSRef}}
-
 **`Object.getOwnPropertyDescriptors()`** 静态方法返回给定对象的所有自有属性描述符。
 
 {{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}

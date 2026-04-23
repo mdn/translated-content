@@ -24,7 +24,8 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 <button type="button" id="saveChanges">Save</button>
 ```
 
-> **メモ:** `role="button"` を意味論的な `<button>` や `<input type="button">` 要素の代わりに使用する場合は、要素をフォーカス可能にし、 {{domxref("Element/click_event", "click")}} イベントと {{domxref("Element/keydown_event", "keydown")}} イベントのイベントハンドラーを定義する必要があります。これは、あらゆる形のユーザー入力を処理するために、 <kbd>Enter</kbd> キーと <kbd>Space</kbd> キーを取り扱うことを含みます。[公式の WAI-ARIA サンプルコード](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)を参照してください。
+> [!NOTE]
+> `role="button"` を意味論的な `<button>` や `<input type="button">` 要素の代わりに使用する場合は、要素をフォーカス可能にし、 {{domxref("Element/click_event", "click")}} イベントと {{domxref("Element/keydown_event", "keydown")}} イベントのイベントハンドラーを定義する必要があります。これは、あらゆる形のユーザー入力を処理するために、 <kbd>Enter</kbd> キーと <kbd>Space</kbd> キーを取り扱うことを含みます。[公式の WAI-ARIA サンプルコード](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)を参照してください。
 
 通常のボタンウィジェットに加えて、ボタン以外の要素を使用してトグルボタンまたはメニューボタンを作成する場合は、`role="button"` を含める必要があります。
 

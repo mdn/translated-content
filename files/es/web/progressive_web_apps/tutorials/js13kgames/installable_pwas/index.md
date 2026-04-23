@@ -3,7 +3,7 @@ title: Cómo hacer PWAs instalables
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 En el último artículo, leímos cómo la aplicación de ejemplo, [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/), funciona sin conexión gracias a su [servicio worker](/es/docs/Web/API/Service_Worker_API), pero podemos ir aún más lejos y permitir que los usuarios instalen la aplicación web en los navegadores móviles y de escritorio que lo admitan. Los usuarios pueden iniciar la aplicación web instalada como si fuera una aplicación nativa. Este artículo explica cómo lograr esto usando el manifiesto de la aplicación web.
 
@@ -74,7 +74,7 @@ La mayoría de los campos se explican por sí mismos, pero para estar seguros de
 - `theme_color`: Un color primario para la interfaz de usuario, utilizado por el sistema operativo.
 - `background_color`: Un color que se utiliza como fondo predeterminado de la aplicación, usado durante la instalación y en la pantalla de bienvenida.
 
-Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Manifest) para obtener más detalles.
+Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest) para obtener más detalles.
 
 ## Agregar a la pantalla inicial
 
@@ -114,6 +114,6 @@ Para obtener más información sobre _aapi_, asegúrate de leer nuestra [guía p
 
 Ahora pasemos a la última pieza del rompecabezas de PWA: usar notificaciones automáticas para compartir anuncios con el usuario y ayudarlo a volver a interactuar con tu aplicación.
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

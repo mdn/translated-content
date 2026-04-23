@@ -3,8 +3,6 @@ title: RegExp.prototype[Symbol.search]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 ---
 
-{{JSRef}}
-
 {{jsxref("RegExp")}} 实例的 **`[Symbol.search]()`** 方法指定了 [`String.prototype.search()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/search) 的行为。
 
 ## 语法

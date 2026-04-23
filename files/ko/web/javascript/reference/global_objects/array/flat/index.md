@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.flat()
+short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 l10n:
   sourceCommit: b7ca46c94631967ecd9ce0fe36579be334a01275
@@ -9,7 +10,7 @@ l10n:
 
 {{jsxref("Array")}} 인스턴스의 **`flat()`** 메서드는 모든 하위 배열 요소가 지정된 깊이까지 재귀적으로 연결된 새 배열을 생성합니다.
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype.flat()")}}
 
 ```js interactive-example
 const arr1 = [0, 1, 2, [3, 4]];

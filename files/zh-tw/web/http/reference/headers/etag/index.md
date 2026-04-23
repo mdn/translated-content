@@ -3,8 +3,6 @@ title: ETag
 slug: Web/HTTP/Reference/Headers/ETag
 ---
 
-{{HTTPSidebar}}
-
 **`ETag`** 是 HTTP 回應標頭，用來標誌資源的版本。它可以使快取機制更有效率並節省頻寬，
 畢竟資料沒有變動的話，伺服器就不需要再次傳回整份資料。
 而且，它還可以用來預防多人同步更新資料時覆蓋掉彼此的資料（["mid-air collisions"](#avoiding_mid-air_collisions)）。
@@ -12,9 +10,9 @@ slug: Web/HTTP/Reference/Headers/ETag
 如果一個網址的資源有更新，就*必須*重新產生它的 `Etag` 值。
 比較前後版本的 ETag 就能知道資源有沒有變化，所以 Etags 的作用就跟指紋一樣。有些伺服器便會把它用在追蹤用途上，而且可能會永久保存這些資訊。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## Syntax
 

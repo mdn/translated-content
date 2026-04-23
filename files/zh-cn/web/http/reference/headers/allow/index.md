@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Allow`** 标头列出了资源支持的方法集。
 
 当服务器响应带有 {{HTTPStatus("405")}} `Method Not Allowed` 状态码时必须发送此标头，以表示可以使用哪些请求方法。`Allow` 空标头表示该资源不允许使用任何请求方法，例如，这种情况可能针对某个特定资源会临时出现。

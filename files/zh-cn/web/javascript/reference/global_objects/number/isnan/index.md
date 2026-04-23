@@ -3,8 +3,6 @@ title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 
-{{JSRef}}
-
 **`Number.isNaN()`** 静态方法判断传入的值是否为 {{jsxref("NaN")}}，如果输入不是数字类型，则返回 `false`。它是全局 {{jsxref("isNaN()")}} 函数更健壮的版本。
 
 {{InteractiveExample("JavaScript Demo: Number.isNaN()", "taller")}}

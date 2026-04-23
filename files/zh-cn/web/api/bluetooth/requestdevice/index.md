@@ -20,9 +20,7 @@ Bluetooth.requestDevice(options).then(function(bluetoothDevice) { ... })
 ### 参数
 
 - options
-
   - : 设置设备请求选项的对象。可用的选项是：
-
     - `filters[]`: 一个 BluetoothScanFilters 数组。此过滤器由一个 BluetoothServiceUUID 数组，一个名称参数和一个 namePrefix 参数组成。
     - `optionalServices[]`: 一个 BluetoothServiceUUID 数组。
     - `acceptAllDevices`: boolean 表示请求脚本可以接受所有蓝牙设备。默认值为 false。

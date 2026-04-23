@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/kbd
 ### Definición
 
 - Marca el texto que debe introducir el usuario.
-
   - : **Sus etiquetas son**: \<kbd> y \</kbd> (ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).

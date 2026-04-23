@@ -20,9 +20,7 @@ var getting = browser.cookies.getAll(
 ### Paramètres
 
 - `details`
-
   - : Un `object` contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir [type de cookie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) pour plus d'informations sur celles-ci ) :
-
     - `domain`{{optional_inline}}
       - : Une `chaîne` représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).
     - `firstPartyDomain`{{optional_inline}}
@@ -70,8 +68,6 @@ gettingAll.then(logCookies);
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -67,7 +67,7 @@ Dans notre application de démonstration js13kPWA, le CSS est suffisamment simpl
 
 ## Images
 
-En plus du JavaScript et du CSS, les sites web contiendront certainement un certain nombre d'images. Quand vous incluez des éléments [`<img>`](/fr/docs/Web/HTML/Element/img) dans votre HTML, chaque image référencée est alors recherchée et téléchargée lors de l'accès initial au site web. Il n'est pas inhabituel d'avoir des mégaoctets de données d'images à télécharger avant d'annoncer que le site est prêt, mais ceci crée, là encore, une perception de performance médiocre. Nous n'avons pas besoin de toutes les images dans la meilleure qualité possible au tout début de la consultation du site.
+En plus du JavaScript et du CSS, les sites web contiendront certainement un certain nombre d'images. Quand vous incluez des éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) dans votre HTML, chaque image référencée est alors recherchée et téléchargée lors de l'accès initial au site web. Il n'est pas inhabituel d'avoir des mégaoctets de données d'images à télécharger avant d'annoncer que le site est prêt, mais ceci crée, là encore, une perception de performance médiocre. Nous n'avons pas besoin de toutes les images dans la meilleure qualité possible au tout début de la consultation du site.
 
 Ceci peut être optimisé. Tout d'abord, vous devriez utiliser des outils ou des services tels que [TinyPNG](https://tinypng.com/) ou [Squoosh](https://squoosh.app/) qui réduiront la taille de fichier de vos images sans trop en altérer la qualité. Si vous avez déjà traité ce point, vous pouvez alors commencer à penser à optimiser le chargement des images en utilisant JavaScript. Nous expliquerons cela plus loin.
 
@@ -128,11 +128,11 @@ L'effet de flou est ainsi supprimé en une demi-seconde, ce qui semble suffisant
 
 Le mécanisme de chargement des images présenté dans la section précédente fonctionne correctement&nbsp;: il charge les images après que la structure HTML a été générée et applique un joli effet de transition au processus. Le problème est qu'il télécharge toujours _toutes_ les images en une fois, même si la personne ne verra que les deux ou trois premières au chargement de la page.
 
-Ce problème peut être résolu en ne chargeant les images que lorsqu'elles sont nécessaires&nbsp;: c'est ce qu'on appelle le <i lang="en">lazy loading</i> ou chargement différé. Le [chargement différé](/fr/docs/Web/Performance/Lazy_loading) est une technique qui permet de charger les images uniquement lorsqu'elles apparaissent dans la fenêtre de visualisation. Il existe plusieurs façons d'indiquer au navigateur de charger les images de façon discontinue.
+Ce problème peut être résolu en ne chargeant les images que lorsqu'elles sont nécessaires&nbsp;: c'est ce qu'on appelle le <i lang="en">lazy loading</i> ou chargement différé. Le [chargement différé](/fr/docs/Web/Performance/Guides/Lazy_loading) est une technique qui permet de charger les images uniquement lorsqu'elles apparaissent dans la fenêtre de visualisation. Il existe plusieurs façons d'indiquer au navigateur de charger les images de façon discontinue.
 
 ### L'attribut de chargement sur `<img>`
 
-La manière la plus simple de demander au navigateur de charger en différé n'implique pas l'utilisation de JavaScript. Vous ajoutez l'attribut [`loading`](/fr/docs/Web/HTML/Element/img#loading) à un élément [`<img>`](/fr/docs/Web/HTML/Element/img) avec la valeur `lazy`, et le navigateur saura qu'il ne doit charger cette image qu'en cas de besoin.
+La manière la plus simple de demander au navigateur de charger en différé n'implique pas l'utilisation de JavaScript. Vous ajoutez l'attribut [`loading`](/fr/docs/Web/HTML/Reference/Elements/img#loading) à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) avec la valeur `lazy`, et le navigateur saura qu'il ne doit charger cette image qu'en cas de besoin.
 
 ```html
 <img
@@ -174,7 +174,7 @@ Revenons ici sur l'amélioration progressive&nbsp;: le code est écrit de maniè
 
 ## Améliorations
 
-Rappelez-vous qu'il existe de nombreuses façons d'optimiser les temps de chargement, et que cet exemple n'explore qu'une seule de ces approches. Vous pouvez essayer de rendre vos applications plus résistantes en les faisant fonctionner sans JavaScript, soit en utilisant [`<noscript>`](/fr/docs/Web/HTML/Element/noscript) pour afficher l'image avec le `src` final déjà renseigné ou en enrobant les balises `<img>` avec des éléments [`<a>`](/fr/docs/Web/HTML/Element/a) pointant vers les images cibles de telle sorte que l'utilisatrice ou l'utilisateur puisse cliquer pour y accéder quand il le souhaite.
+Rappelez-vous qu'il existe de nombreuses façons d'optimiser les temps de chargement, et que cet exemple n'explore qu'une seule de ces approches. Vous pouvez essayer de rendre vos applications plus résistantes en les faisant fonctionner sans JavaScript, soit en utilisant [`<noscript>`](/fr/docs/Web/HTML/Reference/Elements/noscript) pour afficher l'image avec le `src` final déjà renseigné ou en enrobant les balises `<img>` avec des éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) pointant vers les images cibles de telle sorte que l'utilisatrice ou l'utilisateur puisse cliquer pour y accéder quand il le souhaite.
 
 Nous ne le ferons pas, car l'application elle-même dépend de JavaScript. Sans lui, la liste des jeux ne sera même pas chargée et le code du <i lang="en">service worker</i> ne s'exécutera pas.
 

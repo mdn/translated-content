@@ -64,7 +64,6 @@ Firefox では、このライブラリーは非標準の IDBMutableFile API の�
 
 - IDBFileStorage インスタンスを返す [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage)。名前付きストレージが存在しない場合には作成します。
 - [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html)。これはファイルを保存したり取得するメソッドを提供します、例えば次のもの:
-
   - データベース内の(フィルターされた)ファイルの list
   - データベースにファイルや blob を追加する put
   - データベースからファイルや blob を取得する get

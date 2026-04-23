@@ -1,12 +1,9 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
-original_slug: Web/HTTP/Status/100
 l10n:
-  sourceCommit: bd4d7bc4176d9f67297e3940ae7163a258f07ef5
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`100 Continue`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、リクエストの最初の部分が受信され、サーバーによってまだ拒否されていないことを示します。
 クライアントはリクエストを続けるべきですが、リクエストがすでに完了している場合は、 100 レスポンスを破棄します。

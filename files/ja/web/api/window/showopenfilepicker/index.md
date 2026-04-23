@@ -18,9 +18,7 @@ showOpenFilePicker()
 ### 引数
 
 - `options` {{Optional_Inline}}
-
   - : 以下のオプションを含むオブジェクトです。
-
     - `multiple`
       - : {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
         `true` に設定すると、複数のファイルを選択できるようになります。
@@ -28,9 +26,7 @@ showOpenFilePicker()
       - {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
         通常、ピッカーは (以下の `type` オプションに基づく) ファイル形式フィルターを何も適用しない選択肢を含むはずです。このオプションを `true` にすると、この選択肢を利用 _不可能_ にします。
     - `types`
-
       - : 選択可能なファイル形式の{{jsxref('Array', '配列')}}です。各項目は、以下のオプションを持つオブジェクトです。
-
         - `description`
           - : 選択可能なファイル形式のカテゴリーの説明で、省略可能です。
         - `accept`
@@ -47,7 +43,7 @@ showOpenFilePicker()
 
 ## セキュリティ
 
-[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するには、ユーザーがページまたは UI 要素を操作する必要があります。
+[ユーザーによる一時的な有効化](/ja/docs/Web/Security/Defenses/User_activation)が必要です。この機能が動作するには、ユーザーがページまたは UI 要素を操作する必要があります。
 
 ## 例
 

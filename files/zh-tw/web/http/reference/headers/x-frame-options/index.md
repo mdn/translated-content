@@ -3,8 +3,6 @@ title: X-Frame-Options 回應標頭
 slug: Web/HTTP/Reference/Headers/X-Frame-Options
 ---
 
-{{HTTPSidebar}}
-
 `X-Frame-Options` [HTTP](/zh-TW/docs/Web/HTTP) 回應標頭 (header) 用來指示文件是否能夠透過 {{ HTMLElement("frame") }}、{{ HTMLElement("iframe") }} 以及 {{ HTMLElement("object") }} 載入。網站可以利用 `X-Frame-Options` 來確保本身內容不會遭惡意嵌入到其他網站、避免 [clickjacking](/zh-TW/docs/Web/Security/Types_of_attacks#click-jacking) 攻擊。
 
 僅當訪問文件的用戶使用支持 `X-Frame-Options` 的瀏覽器時，才提供附加的安全性。
@@ -19,7 +17,7 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 - `DENY`
   - : 表示網頁無論如何都無法被嵌入到 frame 中，即使於相同網域內嵌入也不允許。
 - `SAMEORIGIN`
-  - : 唯有當符合[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)下，才能被嵌入到 frame 中。
+  - : 唯有當符合[同源政策](/zh-TW/docs/Web/Security/Defenses/Same-origin_policy)下，才能被嵌入到 frame 中。
 - `ALLOW-FROM uri` {{deprecated_inline}}
   - : 唯有列表許可的 URI 才能嵌入到 frame 中。新版瀏覽器已不再支援此指令。
 

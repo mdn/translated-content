@@ -3,8 +3,6 @@ title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 ---
 
-{{JSRef}}
-
 **`splice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
 
 {{InteractiveExample("JavaScript Demo: Array.splice()")}}

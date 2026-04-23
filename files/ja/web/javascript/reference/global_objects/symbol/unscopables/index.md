@@ -1,28 +1,27 @@
 ---
 title: Symbol.unscopables
+short-title: unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
+**`Symbol.unscopables`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)の `Symbol.unscopables` を表します。{{jsxref("Statements/with", "with")}} 文はスコープオブジェクト上で、その `with` 環境内でバインドから除外されるプロパティの集合を持つプロパティを、このシンボルで検索します。
 
-**`Symbol.unscopables`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.unscopables` を表します。{{jsxref("Statements/with", "with")}} 文はスコープオブジェクト上で、その `with` 環境内でバインドから除外されるプロパティの集合を持つプロパティを、このシンボルで検索します。
-
-{{InteractiveExample("JavaScript Demo: Symbol.unscopables")}}
+{{InteractiveExample("JavaScript デモ: Symbol.unscopables")}}
 
 ```js interactive-example
-const object1 = {
-  property1: 42,
+const object = {
+  foo: 42,
 };
 
-object1[Symbol.unscopables] = {
-  property1: true,
+object[Symbol.unscopables] = {
+  foo: true,
 };
 
-with (object1) {
-  console.log(property1);
-  // Expected output: Error: property1 is not defined
+with (object) {
+  console.log(foo);
+  // 予想される結果: Error: foo is not defined
 }
 ```
 

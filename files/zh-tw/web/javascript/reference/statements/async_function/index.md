@@ -3,8 +3,6 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
 
-{{jsSidebar("Statements")}}
-
 **`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。
 
 你也可以使用 {{jsxref("Operators/async_function", "async function expression", "", 1)}} 來定義一個*非同步函式*。
@@ -36,7 +34,8 @@ async function name([param[, param[, ... param]]]) {
 
 async 函式內部可以使用 {{jsxref("Operators/await", "await")}} 表達式，它會暫停此 async 函式的執行，並且等待傳遞至表達式的 Promise 的解析，解析完之後會回傳解析值，並繼續此 async 函式的執行。
 
-> **備註：** `async/await` 函式的目的在於簡化同步操作 promise 的表現，以及對多個 `Promise` 物件執行某些操作。就像 `Promise` 類似於具結構性的回呼函式，同樣地，async/await 好比將 generator 與 promise 組合起來。
+> [!NOTE]
+> `async/await` 函式的目的在於簡化同步操作 promise 的表現，以及對多個 `Promise` 物件執行某些操作。就像 `Promise` 類似於具結構性的回呼函式，同樣地，async/await 好比將 generator 與 promise 組合起來。
 
 ## 範例
 

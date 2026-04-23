@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`browsingData.DataTypeSet`** 类型描述了一组数据类型。
 
 它包含多个布尔属性。每个属性的名称是某种特定浏览数据的名称，例如“downloads”、“history”等。所有属性都是可选的。

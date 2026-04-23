@@ -40,7 +40,7 @@ menu {
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -105,18 +105,18 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <p>
-          <a href="/es/docs/Web/HTML/Content_categories#flow_content"
+          <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
             >Contenido de flujo</a
           >. Si los hijos del elemento incluyen al menos un
            elemento {{HTMLElement("li")}}:
           <a
-            href="/es/docs/Web/HTML/Content_categories#palpable_content"
+            href="/es/docs/Web/HTML/Guides/Content_categories#palpable_content"
             >contenido palpable</a
           >.
         </p>
@@ -140,7 +140,7 @@ button {
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
           >contenido de flujo</a
         >.
       </td>

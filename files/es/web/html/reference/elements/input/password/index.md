@@ -51,7 +51,7 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
 
 ## Atributos
 
-Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/Web/HTML/Global_attributes).
+Además de los atributos listados abajo, este elemento puede tener cualquier [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `autocomplete`
   - : Establece el valor del atributo de autocompletado en el campo de una contraseña. En caso de ser cierto, automaticamente se rellena con el valor previamente almacenado.
@@ -62,9 +62,7 @@ Además de los atributos listados abajo, este elemento puede tener cualquier [gl
 - `defaultvalue`
   - : Define un valor predeterminado en el campo de la contraseña.
 - `inputmode`
-
   - : Le da proporciona información al buscador sobre que teclado mostrar. Los valores posibles son:
-
     - `verbatim`: Alfanumérico, contenido no verbla tales como usuarios y contraseñas.
     - `latin`: Introducción de texto en el lenguaje preferido del usuario con ayudas de escritura, como predicción de texto. Se usa para comunicación de usuario a ordenador en, por ejemplo, campos de búsqueda.
     - `latin-name`: Como _latin_, pero para nombres de personas.

@@ -79,7 +79,8 @@ svg {
 - \<geometry-box>
   - : geometry-box 是应用 {{cssxref('basic-shape')}} 的额外信息，用于区分 CSS 基本形状如何应用于元素上：`fill-box` 表示将对象的包围框作为参照框；`stroke-box` 表示将对象的包围框加上描边的范围作为参照框；`view-box` 表示使用最近的 SVG 视窗作为参照框。
 
-> **备注：** `clip-path` 语法的更多细节可参考 CSS 属性 {{cssxref('clip-path')}} 的参考页面。
+> [!NOTE]
+> `clip-path` 语法的更多细节可参考 CSS 属性 {{cssxref('clip-path')}} 的参考页面。
 
 ## 规范
 

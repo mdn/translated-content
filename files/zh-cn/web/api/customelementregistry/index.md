@@ -3,20 +3,22 @@ title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
 ---
 
-{{DefaultAPISidebar("Web Components")}}
+{{APIRef("Web Components")}}
 
-**`CustomElementRegistry`**接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。
+**`CustomElementRegistry`** 接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 {{domxref("window.customElements")}}属性。
 
-## 方法
+## 实例方法
 
 - {{domxref("CustomElementRegistry.define()")}}
-  - : 定义一个新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Custom_Elements)。
+  - : 定义一个新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
 - {{domxref("CustomElementRegistry.get()")}}
-  - : 返回指定自定义元素的构造函数，如果未定义自定义元素，则返回`undefined`。
+  - : 返回指定自定义元素的构造函数，如果未定义自定义元素，则返回 `undefined`。
+- {{domxref("CustomElementRegistry.getName()")}}
+  - : 返回已定义的自定义元素的名称，如果没有定义自定义元素，则返回 `null`。
 - {{domxref("CustomElementRegistry.upgrade()")}}
-  - : Upgrades a custom element directly, even before it is connected to its shadow root.
+  - : 直接更新一个自定义元素，即使在它尚未连接到其影子根之前。
 - {{domxref("CustomElementRegistry.whenDefined()")}}
-  - : 返回当使用给定名称定义自定义元素时将会执行的 {{jsxref("Promise", "promise")}}。（如果已经定义了这样一个自定义元素，那么立即执行返回的 promise。）
+  - : 返回当使用给定名称定义自定义元素时将会兑现的 {{jsxref("Promise")}}。如果已经定义了这样一个自定义元素，那么立即兑现返回的 promise。
 
 ## 示例
 

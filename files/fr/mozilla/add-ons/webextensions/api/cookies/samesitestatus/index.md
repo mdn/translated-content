@@ -18,4 +18,4 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `strict`
   - : Correspond à un ensemble de témoins avec `SameSite=Strict`
 
-Voir les [cookies HTTP](/fr/docs/Web/HTTP/Cookies) pour plus d'informations.
+Voir les [cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies) pour plus d'informations.

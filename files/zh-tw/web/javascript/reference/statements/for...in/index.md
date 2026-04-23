@@ -3,8 +3,6 @@ title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 ---
 
-{{jsSidebar("Statements")}}
-
 迭代物件的可列舉屬性。對每個相異屬性，執行陳述式。
 
 <table>
@@ -48,7 +46,8 @@ A `for...in` loop iterates over the properties of an object in an arbitrary orde
 > [!NOTE]
 > If you only want to consider properties attached to the object itself, and not its prototypes, use [getOwnPropertyNames](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames) or perform a [hasOwnProperty](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) check ([propertyIsEnumerable](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) can also be used). Alternatively, if you know there won't be any outside code interference, you can extend built-in prototypes with a check method.
 
-> **備註：** `for..in` 不應該用來迭代一個索引順序很重要的[陣列](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)。 陣列索引只是以整數命名的可列舉屬性，其他方面等同於一般物件屬性。 無法擔保 `for...in` 以特定順序傳回索引，並且它將傳回全部可列舉屬性，包括非整數名的，以及繼承而來的可列舉屬性。因為迭代的順序依賴於 JavaScript 引擎的實作，在不同引擎下，迭代一個陣列可能不是以一個一致的順序存取陣列元素。因此，當你迭代陣列，且該陣列的存取順序很重要時，最好是使用以數值索引的 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 迴圈 (或 [Array.forEach](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或非標準 [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈)。
+> [!NOTE]
+> `for..in` 不應該用來迭代一個索引順序很重要的[陣列](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)。 陣列索引只是以整數命名的可列舉屬性，其他方面等同於一般物件屬性。 無法擔保 `for...in` 以特定順序傳回索引，並且它將傳回全部可列舉屬性，包括非整數名的，以及繼承而來的可列舉屬性。因為迭代的順序依賴於 JavaScript 引擎的實作，在不同引擎下，迭代一個陣列可能不是以一個一致的順序存取陣列元素。因此，當你迭代陣列，且該陣列的存取順序很重要時，最好是使用以數值索引的 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 迴圈 (或 [Array.forEach](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或非標準 [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈)。
 
 ## Examples
 

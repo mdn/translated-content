@@ -3,8 +3,6 @@ title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 错误提示
 
 ```plain

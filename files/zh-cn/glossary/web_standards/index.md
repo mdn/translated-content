@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 86b695e507a30ebcbb5348710b001ca03bff74b4
 ---
 
-{{GlossarySidebar}}
-
 Web 标准是由国际标准组织制定的规则，用于定义 {{Glossary("World Wide Web", "Web")}} 的工作方式（有时也控制{{Glossary("Internet", "因特网")}}）。
 
 有几个标准组织负责定义 Web 的不同方面，所有标准必须协调一致，以使 Web 的可用性和可访问性最大化。Web 标准也必须不断发展，以改进当前状态并适应新的情况。
