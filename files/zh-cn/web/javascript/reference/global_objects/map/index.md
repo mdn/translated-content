@@ -466,6 +466,7 @@ console.log(merged.get(3)); // three
 ## 参见
 
 - [`core-js` 中 `Map` 的 polyfill](https://github.com/zloirock/core-js#map)
+- [es-shims 中 `Map` 的 polyfill](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
