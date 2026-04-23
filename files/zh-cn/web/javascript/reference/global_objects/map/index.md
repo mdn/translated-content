@@ -41,7 +41,7 @@ console.log(map.size);
 
 ### 键的相等
 
-键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
+键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)，将 `0` 和 `-0` 视为不同。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
 
 ### `Object` 和 `Map` 的比较
 
