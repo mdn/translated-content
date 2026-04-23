@@ -218,7 +218,7 @@ interface RTCStatsReport {
 
 类 `Map` 对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`[Symbol.iterator]()`](#map.prototypesymbol.iterator) 。
+- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`get()`](#map.prototype.get)、[`has()`](#map.prototype.has)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`[Symbol.iterator]()`](#map.prototypesymbol.iterator)。
 - 可写的类 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
 
 除了对键和值类型的限制外，其方法和属性的行为与 `Map` 中的对应实体相同。
@@ -226,11 +226,12 @@ interface RTCStatsReport {
 以下是浏览器中只读的类 `Map` 对象的示例：
 
 - {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("EventCounts")}}
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
+- {{domxref("RTCStatsReport")}}
 
 ## 构造函数
 
@@ -263,21 +264,25 @@ interface RTCStatsReport {
 - {{jsxref("Map.prototype.clear()")}}
   - : 移除 `Map` 对象中所有的键值对。
 - {{jsxref("Map.prototype.delete()")}}
-  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `map.has(key)` 将返回 `false`。
+  - : 移除 `Map` 对象中由指定的键标识的条目。
 - {{jsxref("Map.prototype.entries()")}}
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有键值对 `[key, value]` 二元数组，以插入顺序排列。
 - {{jsxref("Map.prototype.forEach()")}}
   - : 以插入顺序为 `Map` 对象中的每个键值对调用一次 `callbackFn`。如果为 `forEach` 提供了 `thisArg` 参数，则它将作为每一次 callback 的 `this` 值。
 - {{jsxref("Map.prototype.get()")}}
-  - : 返回与指定的键 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
+  - : 返回 `Map` 对象中与指定键对应的值，若不存在，则返回 `undefined`。
+- {{jsxref("Map.prototype.getOrInsert()")}}
+  - : 返回 `Map` 对象中与指定的键对应的值。如果键不存在，则插入一个包含该键和给定默认值的新条目，并返回插入的值。
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
+  - : 返回 `Map` 对象中与指定键对应的值。如果键不存在，则插入一个新条目，其键为指定键，值由给定的回调函数计算得出，并返回插入的值。
 - {{jsxref("Map.prototype.has()")}}
-  - : 返回一个布尔值，用来表明 `Map` 对象中是否存在与指定的键 `key` 关联的值。
+  - : 返回一个布尔值，指示 `Map` 对象中是否存在具有指定键的条目。
 - {{jsxref("Map.prototype.keys()")}}
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有元素的键，以插入顺序排列。
 - {{jsxref("Map.prototype.set()")}}
-  - : 在 `Map` 对象中设置与指定的键 `key` 关联的值，并返回 `Map` 对象。
+  - : 向 `Map` 对象添加一个具有指定键和值的新条目，如果键已存在则更新现有条目。
 - {{jsxref("Map.prototype.values()")}}
-  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的值，并以插入 `Map` 对象的顺序排列。
+  - : 返回一个新的迭代对象，其中按插入顺序包含 `Map` 对象中每个元素的值。
 - [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有元素 `[key, value]` 二元数组，以插入顺序排列。
 
