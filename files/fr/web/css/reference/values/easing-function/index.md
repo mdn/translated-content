@@ -1,9 +1,9 @@
 ---
-title: <easing-function>
+title: Type CSS `<easing-function>`
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
-original_slug: Web/CSS/easing-function
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<easing-function>`** représente une fonction mathématique décrivant la vitesse à laquelle la valeur change.
