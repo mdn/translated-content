@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-**クライアントサイドレンダリング** (CSR) はブラウザー内で JavaScript を使用して HTML コンテンツを作る手法を指します。 CSR は、サーバーが HTML コンテンツを作る {{glossary("SSR", "server-side rendering")}} と対照的です。これらの 2 つの技術は互いに排他的でなく、同じアプリケーションで使えます。
+**クライアントサイドレンダリング** (CSR) はブラウザー内で JavaScript を使用して HTML コンテンツを作る手法を指します。 CSR は、サーバーが HTML コンテンツを作る {{glossary("SSR", "サーバーサイドレンダリング")}} と対照的です。これらの 2 つの技術は互いに排他的でなく、同じアプリケーションで使えます。
 
 純粋な CSR アプリは以下のような HTML コンテンツを返します。
 
@@ -25,7 +25,7 @@ l10n:
 </html>
 ```
 
-そして、実際のページコンテンツは、`bundle.js`内の JavaScript によって [DOM操作](/ja/docs/Web/API/Document_Object_Model) を使って作ります。
+そして、実際のページコンテンツは、`bundle.js` 内の JavaScript によって [DOM 操作](/ja/docs/Web/API/Document_Object_Model) を使って作ります。
 
 CSR のメリットは以下の通りです。
 
