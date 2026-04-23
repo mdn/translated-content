@@ -3,7 +3,7 @@ title: CSS ルビレイアウト
 short-title: ルビレイアウト
 slug: Web/CSS/Guides/Ruby_layout
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS ルビレイアウト** (CSS ruby layout) モジュールは、ルビ表記の表示に関するレンダリングモデルや整形の制御を提供します。ルビ表記は行間の注釈の一種で、ベーステキストに沿った短いテキストで構成されます。これらはふつう東アジアの文書で、発音を示したり、短い説明を提供したりするために使用されます。
