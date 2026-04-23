@@ -1,8 +1,9 @@
 ---
-title: <alpha-value>
+title: Type CSS `<alpha-value>`
+short-title: <alpha-value>
 slug: Web/CSS/Reference/Values/alpha-value
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<alpha-value>`** représente une valeur qui peut être soit un ({{CSSxRef("&lt;number&gt;")}}) soit un ({{CSSxRef("&lt;percentage&gt;")}}), et qui définit le **canal alpha** (<i lang="en">alpha channel</i>) ou la **transparence** d'une couleur.
