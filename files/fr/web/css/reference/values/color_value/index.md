@@ -1,8 +1,9 @@
 ---
-title: <color>
+title: Type CSS `<color>`
+short-title: <color>
 slug: Web/CSS/Reference/Values/color_value
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color>`** représente une couleur.

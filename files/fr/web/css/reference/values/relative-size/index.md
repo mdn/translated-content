@@ -1,8 +1,9 @@
 ---
-title: <relative-size>
+title: Type CSS `<relative-size>`
+short-title: <relative-size>
 slug: Web/CSS/Reference/Values/relative-size
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<relative-size>`** décrit les mots‑clés de taille relative. Les mots‑clés `<relative-size>` définissent une taille relative à la taille calculée de l'élément parent. Ce type de donnée est utilisé dans les propriétés (raccourcie) {{CSSxRef("font")}} et (longue) {{CSSxRef("font-size")}}.
