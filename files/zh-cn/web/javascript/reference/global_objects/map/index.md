@@ -295,7 +295,7 @@ const myMap = new Map();
 
 const keyString = "a string";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
@@ -311,7 +311,7 @@ console.log(myMap.get(keyFunc)); // "和键 keyFunc 关联的值"
 
 console.log(myMap.get("a string")); // "和键'a string'关联的值"，因为 keyString === 'a string'
 console.log(myMap.get({})); // undefined，因为 keyObj !== {}
-console.log(myMap.get(function () {})); // undefined，因为 keyFunc !== function () {}
+console.log(myMap.get(() => {})); // undefined，因为 keyFunc !== () => {}
 ```
 
 ### 将 NaN 作为 Map 的键
