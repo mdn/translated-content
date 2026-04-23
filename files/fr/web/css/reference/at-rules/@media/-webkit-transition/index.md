@@ -1,8 +1,9 @@
 ---
-title: -webkit-transition
+title: Fonction CSS `-webkit-transition`
+short-title: -webkit-transition
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transition
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{Deprecated_Header}}{{Non-standard_Header}}

@@ -1,8 +1,9 @@
 ---
-title: "@color-profile"
+title: Règle CSS `@color-profile`
+short-title: "@color-profile"
 slug: Web/CSS/Reference/At-rules/@color-profile
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction {{CSSxRef("color_value/color", "color()")}} afin d'indiquer une couleur.

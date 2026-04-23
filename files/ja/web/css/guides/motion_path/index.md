@@ -1,6 +1,6 @@
 ---
 title: CSS モーションパス
-short-title: Motion path
+short-title: モーションパス
 slug: Web/CSS/Guides/Motion_path
 l10n:
   sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7

@@ -1,8 +1,9 @@
 ---
-title: animation-range-start
+title: Propriété CSS `animation-range-start`
+short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: 2b6ef419bcd9bcc4316ae59c41b3a956c8fa5749
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-start`** définit le point sur la chronologie où une animation doit commencer.

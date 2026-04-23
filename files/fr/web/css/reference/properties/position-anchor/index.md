@@ -1,8 +1,9 @@
 ---
-title: position-anchor
+title: Propriété CSS `position-anchor`
+short-title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-anchor`** définit le nom de l'ancre de **l'élément d'ancrage** (c'est-à-dire un élément qui a un **nom d'ancre** défini avec la propriété {{CSSxRef("anchor-name")}}) auquel un élément positionné est associé.

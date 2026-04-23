@@ -1,8 +1,9 @@
 ---
-title: monochrome
+title: Fonction CSS `monochrome`
+short-title: monochrome
 slug: Web/CSS/Reference/At-rules/@media/monochrome
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`monochrome`** permet de tester le nombre de bits par pixel dans le tampon d'affichage monochrome de l'appareil de sortie.

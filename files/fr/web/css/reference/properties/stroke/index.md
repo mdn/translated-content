@@ -1,8 +1,9 @@
 ---
-title: stroke
+title: Propriété CSS `stroke`
+short-title: stroke
 slug: Web/CSS/Reference/Properties/stroke
 l10n:
-  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke`** définit la couleur ou le serveur de peinture SVG utilisé pour dessiner le contour d'un élément. En tant que telle, `stroke` n'a d'effet que sur les éléments pouvant recevoir un contour (par exemple, {{SVGElement('rect')}} ou {{SVGElement('ellipse')}})&nbsp;; voir la page sur l'attribut SVG {{SVGAttr('stroke')}} pour une liste complète. Lorsqu'elle est déclarée, la valeur CSS remplace toute valeur de l'attribut SVG {{SVGAttr("stroke")}} de l'élément.

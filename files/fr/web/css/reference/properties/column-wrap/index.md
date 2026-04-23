@@ -1,8 +1,9 @@
 ---
-title: column-wrap
+title: Propriété CSS `column-wrap`
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

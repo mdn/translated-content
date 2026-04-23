@@ -1,8 +1,9 @@
 ---
-title: prefers-contrast
+title: Fonction CSS `prefers-contrast`
+short-title: prefers-contrast
 slug: Web/CSS/Reference/At-rules/@media/prefers-contrast
 l10n:
-  sourceCommit: c4d3b34b77fcfc28dd1d1a7ecb051ee912d9d3dd
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`prefers-contrast`** permet de détecter si un·e utilisateur·ice a demandé à ce que le contenu web soit présenté avec un contraste plus faible ou plus élevé.

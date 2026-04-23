@@ -1,8 +1,9 @@
 ---
-title: align-self
+title: Propriété CSS `align-self`
+short-title: align-self
 slug: Web/CSS/Reference/Properties/align-self
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-self`** permet d'écraser la valeur de {{CSSxRef("align-items")}} d'un élément de grille ou de flex. En grille, elle aligne l'élément à l'intérieur de la {{Glossary("Grid Areas", "zone de grille")}}. En flexbox, elle aligne l'élément sur {{Glossary("cross axis", "l'axe transversal")}}.

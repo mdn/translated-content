@@ -1,8 +1,9 @@
 ---
-title: overscroll-behavior
+title: Propriété CSS `overscroll-behavior`
+short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
 l10n:
-  sourceCommit: 12e3ce1c71f6f04ecf6689a62a02382ad47fd52e
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** définit le comportement d'un navigateur lorsqu'il atteint la limite d'une zone de défilement.

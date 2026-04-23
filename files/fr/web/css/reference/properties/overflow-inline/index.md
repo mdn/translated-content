@@ -1,8 +1,9 @@
 ---
-title: overflow-inline
+title: Propriété CSS `overflow-inline`
+short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-inline`** définit ce qu'il faut afficher lorsque le contenu dépasse les bords en ligne d'une boîte. Cela peut être rien, une barre de défilement ou le contenu débordant.

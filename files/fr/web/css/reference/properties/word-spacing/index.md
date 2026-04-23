@@ -1,8 +1,9 @@
 ---
-title: word-spacing
+title: Propriété CSS `word-spacing`
+short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.

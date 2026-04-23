@@ -1,8 +1,9 @@
 ---
-title: stop-color
+title: Propriété CSS `stop-color`
+short-title: stop-color
 slug: Web/CSS/Reference/Properties/stop-color
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stop-color`** définit la couleur à utiliser pour un élément SVG {{SVGElement("stop")}} dans un dégradé. Si elle est présente, elle remplace l'attribut {{SVGAttr("stop-color")}} de l'élément.

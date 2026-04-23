@@ -1,8 +1,9 @@
 ---
-title: flex-wrap
+title: Propriété CSS `flex-wrap`
+short-title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-wrap`** définit si les éléments flexibles sont forcés sur une seule ligne ou peuvent passer à la ligne sur plusieurs lignes. Si le retour à la ligne est autorisé, elle définit la direction dans laquelle les lignes sont empilées.

@@ -1,8 +1,9 @@
 ---
-title: view-transition-name
+title: Propriété CSS `view-transition-name`
+short-title: view-transition-name
 slug: Web/CSS/Reference/Properties/view-transition-name
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`view-transition-name`** définit le nom de la [transition de vue](/fr/docs/Web/API/View_Transition_API) à laquelle les éléments sélectionnés participeront. Cela vous permet d'animer ces éléments séparément du reste de la page, qui utilise l'animation de fondu croisé par défaut pendant une transition de vue. Vous pouvez ensuite définir des styles d'animation personnalisés pour ces éléments.

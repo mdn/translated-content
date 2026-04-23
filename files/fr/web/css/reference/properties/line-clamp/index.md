@@ -1,8 +1,9 @@
 ---
-title: line-clamp
+title: Propriété CSS `line-clamp`
+short-title: line-clamp
 slug: Web/CSS/Reference/Properties/line-clamp
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`line-clamp`** permet de limiter le contenu d'un {{Glossary("block", "bloc")}} au nombre de lignes indiqué.

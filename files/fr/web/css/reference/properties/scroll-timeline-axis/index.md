@@ -1,8 +1,9 @@
 ---
-title: scroll-timeline-axis
+title: Propriété CSS `scroll-timeline-axis`
+short-title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
 l10n:
-  sourceCommit: f89de66a773484024ab5d914bc88fa08d894db1c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-axis`** est utilisée pour définir la direction de la barre de défilement qui sera utilisée pour fournir la [chronologie d'une animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), qui progresse en faisant défiler un élément défilable (_défileur_).

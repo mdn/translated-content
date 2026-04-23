@@ -1,8 +1,9 @@
 ---
-title: color-index
+title: Fonction CSS `color-index`
+short-title: color-index
 slug: Web/CSS/Reference/At-rules/@media/color-index
 l10n:
-  sourceCommit: 6ef7bc04d63cf8b512bdbea149a6cb875cc063e3
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`color-index`** est utilisée pour tester le nombre d'entrées dans la table de recherche des couleurs du périphérique de sortie.

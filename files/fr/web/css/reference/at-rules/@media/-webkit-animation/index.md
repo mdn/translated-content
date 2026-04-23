@@ -1,8 +1,9 @@
 ---
-title: -webkit-animation
+title: Fonction CSS `-webkit-animation`
+short-title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
 l10n:
-  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}

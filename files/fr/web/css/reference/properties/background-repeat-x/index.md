@@ -1,8 +1,9 @@
 ---
-title: background-repeat-x
+title: Propriété CSS `background-repeat-x`
+short-title: background-repeat-x
 slug: Web/CSS/Reference/Properties/background-repeat-x
 l10n:
-  sourceCommit: aea2d29336c910940abb1f8e71e02158ac51e7c4
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

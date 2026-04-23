@@ -1,8 +1,9 @@
 ---
-title: text-indent
+title: Propriété CSS `text-indent`
+short-title: text-indent
 slug: Web/CSS/Reference/Properties/text-indent
 l10n:
-  sourceCommit: 8d521c461c52730012ec7a06c36841e44ca98090
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-indent`** définit la longueur de l'espace vide (indentation) qui est placé avant les lignes de texte dans un bloc.

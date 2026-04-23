@@ -1,8 +1,9 @@
 ---
-title: any-hover
+title: Fonction CSS `any-hover`
+short-title: any-hover
 slug: Web/CSS/Reference/At-rules/@media/any-hover
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-hover`** est utilisée pour tester si _n'importe quel_ mécanisme d'entrée disponible peut survoler un élément.

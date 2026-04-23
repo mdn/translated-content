@@ -1,8 +1,9 @@
 ---
-title: margin-right
+title: Propriété CSS `margin-right`
+short-title: margin-right
 slug: Web/CSS/Reference/Properties/margin-right
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-right`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) à droite d'un élément. Une valeur positive l'éloigne de ses voisins, tandis qu'une valeur négative la rapproche.

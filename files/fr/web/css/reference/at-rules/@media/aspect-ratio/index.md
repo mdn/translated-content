@@ -1,8 +1,9 @@
 ---
-title: aspect-ratio
+title: Fonction CSS `aspect-ratio`
+short-title: aspect-ratio
 slug: Web/CSS/Reference/At-rules/@media/aspect-ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** peut être utilisée pour tester le {{Glossary("aspect ratio", "rapport d'aspect")}} de la {{Glossary("viewport", "zone d'affichage")}}.

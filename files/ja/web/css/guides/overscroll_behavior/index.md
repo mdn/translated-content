@@ -1,9 +1,9 @@
 ---
 title: CSS オーバースクロール動作
+short-title: オーバースクロール動作
 slug: Web/CSS/Guides/Overscroll_behavior
-original_slug: Web/CSS/CSS_overscroll_behavior
 l10n:
-  sourceCommit: fd4a5c3107826fe3689a0432ba56b3eba00a5f90
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS オーバースクロール動作**モジュールは、{{Glossary("Scroll_container", "スクロールコンテナー")}}のスクロール位置が{{Glossary("Scroll_boundary", "スクロール境界")}}に達したときの挙動を制御するプロパティを提供します。この側面を制御することは、埋め込まれたスクロール可能な領域が親コンテナーのスクロールを発生させないようにするシナリオで具体的な有益なことです。
@@ -33,7 +33,7 @@ l10n:
 
 ## ガイド
 
-- [CSS の構成要素: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : オーバーフローとは何か、どのように制御するのかを学びます。
 
 ## 関連概念
@@ -58,7 +58,7 @@ l10n:
   - {{cssxref("scroll-snap-stop")}} プロパティ
   - {{cssxref("scroll-snap-align")}} プロパティ
 
-- [CSSOM view](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール:
+- [CSSOM ビュー](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール:
   - {{domxref("Element.getBoundingClientRect()")}} メソッド
   - {{domxref("Element.scroll()")}} メソッド
   - {{domxref("Element.scrollBy()")}} メソッド
@@ -72,7 +72,7 @@ l10n:
 
 ## 関連情報
 
+- [CSS スクロール固定](/en-US/docs/Web/CSS/Guides/Scroll_anchoring)モジュール
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [CSS ボックスモデル](/ja/docs/Web/CSS/Guides/Box_model)モジュール
 - [CSS 論理的プロパティと値](/ja/docs/Web/CSS/Guides/Logical_properties_and_values)モジュール
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
-- [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) (developer.chrome.com, 2017)

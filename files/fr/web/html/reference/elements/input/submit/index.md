@@ -1,8 +1,9 @@
 ---
-title: <input type="submit">
+title: Valeur d'attribut HTML `<input type="submit">`
+short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`submit`** sont affichés comme des boutons. Lorsqu'un évènement {{DOMxRef("Element/click_event", "click")}} se produit (généralement parce que l'utilisateur·ice a cliqué sur le bouton), {{Glossary("user agent", "l'agent utilisateur")}} tente de soumettre le formulaire au serveur.

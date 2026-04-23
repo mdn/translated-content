@@ -1,8 +1,9 @@
 ---
-title: grid-template-areas
+title: Propriété CSS `grid-template-areas`
+short-title: grid-template-areas
 slug: Web/CSS/Reference/Properties/grid-template-areas
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-areas`** définit les {{Glossary("grid areas", "zones de grille")}} nommées, établit les cellules de la grille et leur attribue des noms.

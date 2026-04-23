@@ -1,8 +1,9 @@
 ---
-title: <input type="image">
+title: Valeur d'attribut HTML `<input type="image">`
+short-title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
 l10n:
-  sourceCommit: 2eab0bc09a2972fda0f760abd5cfe06201b23498
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`image`** sont utilisés pour créer des boutons d'envoi de formulaire graphiques. Autrement dit, il s'agit de boutons d'envoi qui affichent une image plutôt qu'un texte.

@@ -1,8 +1,9 @@
 ---
-title: font-style
+title: Descripteur de règle CSS `font-style`
+short-title: font-style
 slug: Web/CSS/Reference/At-rules/@font-face/font-style
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.

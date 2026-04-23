@@ -1,8 +1,9 @@
 ---
-title: font
+title: Propriété CSS `font`
+short-title: font
 slug: Web/CSS/Reference/Properties/font
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font`** permet de définir toutes les différentes propriétés de la police d'un élément. Elle permet aussi d'attribuer à un élément une police système.

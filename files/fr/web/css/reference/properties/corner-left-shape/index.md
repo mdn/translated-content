@@ -1,8 +1,9 @@
 ---
-title: corner-left-shape
+title: Propriété CSS `corner-left-shape`
+short-title: corner-left-shape
 slug: Web/CSS/Reference/Properties/corner-left-shape
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

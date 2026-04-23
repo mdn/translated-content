@@ -66,7 +66,7 @@ const y = ++x;
 // x は 4; y = 4
 
 let x2 = 3n;
-const y2 = --x2;
+const y2 = ++x2;
 // x2 は 4n; y2 は 4n
 ```
 

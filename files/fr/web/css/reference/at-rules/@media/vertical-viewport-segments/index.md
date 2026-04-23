@@ -1,8 +1,9 @@
 ---
-title: vertical-viewport-segments
+title: Fonction CSS `vertical-viewport-segments`
+short-title: vertical-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/vertical-viewport-segments
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`vertical-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage (<i lang="en">viewport</i>) disposés verticalement (de haut en bas).

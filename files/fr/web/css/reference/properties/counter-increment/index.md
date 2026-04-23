@@ -1,8 +1,9 @@
 ---
-title: counter-increment
+title: Propriété CSS `counter-increment`
+short-title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-increment`** permet d'incrémenter ou de décrémenter la valeur des compteurs nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) selon les valeurs définies, ou d'empêcher la modification de tous les compteurs ou de la valeur d'un compteur individuel.

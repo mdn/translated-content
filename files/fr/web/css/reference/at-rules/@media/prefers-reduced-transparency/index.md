@@ -1,8 +1,9 @@
 ---
-title: prefers-reduced-transparency
+title: Fonction CSS `prefers-reduced-transparency`
+short-title: prefers-reduced-transparency
 slug: Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}

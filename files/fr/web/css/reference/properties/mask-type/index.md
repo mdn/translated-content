@@ -1,8 +1,9 @@
 ---
-title: mask-type
+title: Propriété CSS `mask-type`
+short-title: mask-type
 slug: Web/CSS/Reference/Properties/mask-type
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-type`** s'applique à l'élément SVG {{SVGElement("mask")}}. Elle définit si le contenu du masque doit être utilisé comme un masque de _luminance_ (luminosité) ou de _alpha_ (transparence). Cette propriété peut être remplacée par la propriété {{CSSxRef("mask-mode")}}. La propriété `mask-type` n'a aucun effet sur les masques d'image ou de dégradé.

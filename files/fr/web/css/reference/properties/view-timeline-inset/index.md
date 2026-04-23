@@ -1,8 +1,9 @@
 ---
-title: view-timeline-inset
+title: Propriété CSS `view-timeline-inset`
+short-title: view-timeline-inset
 slug: Web/CSS/Reference/Properties/view-timeline-inset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`view-timeline-inset`** est utilisée pour définir une ou deux valeurs représentant un ajustement de la position de la zone d'affichage de défilement (voir {{Glossary("Scroll container", "Conteneur de défilement")}} pour plus de détails) dans lequel l'élément sujet d'une animation de _chronologie de progression de la vue nommée_ est considéré comme visible. En d'autres termes, cela permet de définir des valeurs d'encart (ou de retrait) de début et/ou de fin qui décalent la position de la chronologie.

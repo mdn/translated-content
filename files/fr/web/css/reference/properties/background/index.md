@@ -1,8 +1,9 @@
 ---
-title: background
+title: Propriété CSS `background`
+short-title: background
 slug: Web/CSS/Reference/Properties/background
 l10n:
-  sourceCommit: 8e7f97c52ea28a2f02b035ca2f3a8a42d41d9e9f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`background`** définit l'ensemble des propriétés de style d'arrière-plan en une seule déclaration, comme la couleur, l'image, l'origine, la taille et le mode de répétition.

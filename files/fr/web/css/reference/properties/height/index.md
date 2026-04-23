@@ -1,8 +1,9 @@
 ---
-title: height
+title: Propriété CSS `height`
+short-title: height
 slug: Web/CSS/Reference/Properties/height
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`height`** définit la hauteur d'un élément. Par défaut, la propriété définit la hauteur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu). Si {{CSSxRef("box-sizing")}} est définie sur `border-box`, elle détermine alors la hauteur de la [zone de bordure](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_bordure).

@@ -1,8 +1,9 @@
 ---
-title: scroll-timeline-name
+title: Propriété CSS `scroll-timeline-name`
+short-title: scroll-timeline-name
 slug: Web/CSS/Reference/Properties/scroll-timeline-name
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-name`** est utilisée pour définir le nom d'une _chronologie de progression de défilement nommée_, qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou la gauche et la droite). `scroll-timeline-name` est définie sur le défileur qui fournira la chronologie.

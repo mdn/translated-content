@@ -1,8 +1,9 @@
 ---
-title: white-space-collapse
+title: Propriété CSS `white-space-collapse`
+short-title: white-space-collapse
 slug: Web/CSS/Reference/Properties/white-space-collapse
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`white-space-collapse`** contrôle la manière dont les {{Glossary("whitespace", "espaces blancs")}} à l'intérieur d'un élément sont regroupés.
