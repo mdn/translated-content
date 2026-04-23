@@ -28,7 +28,7 @@ slug: Glossary/Character_reference
 | >      | `&gt;`             | U+0003E                 |
 | "      | `&quot;`           | U+00022                 |
 | '      | `&apos;`           | U+00027                 |
-|        | `&nbsp;`           | U+000A0                 |
+|        | `&nbsp;`           | U+000A0                 |
 | –      | `&ndash;`          | U+02013                 |
 | —      | `&mdash;`          | U+02014                 |
 | ©      | `&copy;`           | U+000A9                 |
