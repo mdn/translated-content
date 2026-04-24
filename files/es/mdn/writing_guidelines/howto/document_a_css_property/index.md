@@ -18,9 +18,9 @@ Primero, deberás identificar la propiedad CSS que deseas documentar. Es posible
 
 Si la implementación y la especificación divergen, no dudes en mencionarlo en el error de implementación. Es posible que se dé una de las siguientes situaciones:
 
-* Puede ser un error en la implementación (y se registrará un error de seguimiento).
-* Puede deberse a un retraso en la publicación de una nueva especificación.
-* Puede ser un error en la especificación (en cuyo caso, vale la pena registrar un error de especificación).
+- Puede ser un error en la implementación (y se registrará un error de seguimiento).
+- Puede deberse a un retraso en la publicación de una nueva especificación.
+- Puede ser un error en la especificación (en cuyo caso, vale la pena registrar un error de especificación).
 
 ## Paso 2 — Consultar la base de datos de propiedades CSS
 
