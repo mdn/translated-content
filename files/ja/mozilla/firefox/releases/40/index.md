@@ -1,11 +1,12 @@
 ---
-title: Firefox 40 for developers
+title: Firefox 40 開発者向けリリースノート
+short-title: Firefox 40
 slug: Mozilla/Firefox/Releases/40
 l10n:
-  sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-[Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 40 は、米国時間 2015 年 8 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 40 の変更点をまとめています。
+[Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.firefox.com/ja/channel/desktop/developer/) Firefox 40 は、米国時間 2015 年 8 月 11 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -42,7 +43,7 @@ l10n:
 - 接頭辞 (`-moz-`) 付きの {{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}} を削除しました ([Firefox バグ 1097922](https://bugzil.la/1097922))。
 - {{cssxref("text-align")}} プロパティで `match-parent` 値をサポートしました ([Firefox バグ 645642](https://bugzil.la/645642))。
 - Quirks モードで {{cssxref("empty-cells")}} の既定値が、Standard モードと同様に `show` になりました ([Firefox バグ 1020400](https://bugzil.la/1020400))。
-- {{HTMLElement('meter')}} および {{HTMLElement('progress')}} 要素で使用している非標準の {{cssxref("-moz-orient")}} プロパティが、writing-modes の縦書きに対応しました。`auto` を削除して、`inline` および `block` を追加しました。新たな既定値は `inline` です ([Firefox バグ 1028716](https://bugzil.la/1028716))。
+- {{HTMLElement('meter')}} および {{HTMLElement('progress')}} 要素で使用している標準外の {{cssxref("-moz-orient")}} プロパティが、writing-modes の縦書きに対応しました。`auto` を削除して、`inline` および `block` を追加しました。新たな既定値は `inline` です ([Firefox バグ 1028716](https://bugzil.la/1028716))。
 - {{cssxref("font-size-adjust")}} プロパティで、値 `0` は `none` (調整を行わない、または値 `1.0` になる) と同じではなく、倍数 (高さが `0` になるため、表示されない) として扱うように修正しました ([Firefox バグ 1144885](https://bugzil.la/1144885))。
 - 縦書きモードで text-overflow が動作しない問題を修正しました ([Firefox バグ 1117227](https://bugzil.la/1117227))。
 
@@ -54,15 +55,15 @@ _変更なし。_
 
 - {{jsxref("Statements/return", "return")}} 文の後方にある到達できないコード ({{jsxref("Statements/return", "セミコロンがない return 文", "#Automatic_semicolon_insertion", 1)}} の後方にある、到達できない式を含む) について、コンソールに警告を表示します ([Firefox バグ 1005110](https://bugzil.la/1005110)、[Firefox バグ 1151931](https://bugzil.la/1151931))。
 - {{jsxref("Symbol.match")}} を追加しました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
-- {{jsxref("Symbol.match")}} プロパティが {{Glossary("truthy")}} な値であるオブジェクトを {{jsxref("String.prototype.startsWith")}}、{{jsxref("String.prototype.endsWith")}}、`String.prototype.contains` に渡すと、{{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
-- {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して {{jsxref("Operators/new", "new")}} を伴わずに {{jsxref("RegExp")}} 関数を呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
-- JS1.7 の、for-in を使用する非標準の構造分解を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
-- [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで、[非標準の初期化式](/ja/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes)を無視してコンソールに警告を表示するようになりました ([Firefox バグ 748550](https://bugzil.la/748550) および [Firefox バグ 1164741](https://bugzil.la/1164741))。
+- {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるオブジェクトを {{jsxref("String.prototype.startsWith")}}、{{jsxref("String.prototype.endsWith")}}、`String.prototype.contains` に渡すと、{{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
+- {{jsxref("RegExp")}} 関数を {{jsxref("Operators/new", "new")}} を伴わずに {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
+- JS1.7 の、for-in を使用する標準外の構造分解を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
+- [標準外の初期化式](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)は [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループにおいて、無視されてコンソールに警告が表示されるようになりました ([Firefox バグ 748550](https://bugzil.la/748550) および [Firefox バグ 1164741](https://bugzil.la/1164741))。
 - Unicode コードポイントのエスケープ書式 [`\u{xxxxxx}`](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) をサポートしました ([Firefox バグ 320500](https://bugzil.la/320500))。
-- {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} は、{{jsxref("String.prototype.includes")}} に置き換えられました。`String.prototype.contains` はエイリアスとして維持します ([Firefox バグ 1102219](https://bugzil.la/1102219))。
+- `String.prototype.contains` は、{{jsxref("String.prototype.includes")}} に置き換えられました。`String.prototype.contains` はエイリアスとして維持します ([Firefox バグ 1102219](https://bugzil.la/1102219))。
 - {{jsxref("DataView")}} コンストラクターを {{jsxref("Operators/new", "new")}} 演算子を伴わない関数として呼び出した場合、ES6 に従って {{jsxref("TypeError")}} が発生するようになりました。
 - Firefox 21 のリグレッションである、`get` トラップを持たずに配列から作成した Proxy が正常に動作しない問題を修正しました。{{jsxref("Proxy")}} で `get` トラップを定義していない場合は、{{jsxref("Array.length")}} が `0` を返します。また `set` トラップは呼び出されません。この問題の回避策は、必要ない場合でも `get` トラップを追加することでした。この問題は解決されました ([Firefox バグ 895223](https://bugzil.la/895223))。
-- ES6 仕様に従い、 `WeakMap.prototype` および `WeakSet.prototype` は通常のオブジェクトに変更しました ([Firefox バグ 1055473](https://bugzil.la/1055473))。
+- ES2015 仕様に従い、 `WeakMap.prototype` および `WeakSet.prototype` は通常のオブジェクトに変更しました ([Firefox バグ 1055473](https://bugzil.la/1055473))。
 
 ### インターフェイス/API/DOM
 
@@ -72,13 +73,13 @@ _変更なし。_
 
 #### ウェブアニメーション API
 
-主に最新の仕様変更に合わせて、ウェブアニメーションの実験的な実装を改良しました:
+主に最新の仕様変更に合わせて、ウェブアニメーションの実験的な実装を改良しました。
 
 - {{domxref("AnimationPlayer.currentTime")}} が設定可能になりました ([Firefox バグ 1072037](https://bugzil.la/1072037))。
 - {{domxref("Element")}} で使用できる `Animatable.getAnimationPlayers()` を、{{domxref("Element.getAnimations()")}} に改名しました ([Firefox バグ 1145246](https://bugzil.la/1145246))。
 - `Animation` および `AnimationEffect` を、新たに作成した `KeyframeEffectReadOnly` に統合しました ([Firefox バグ 1153734](https://bugzil.la/1153734))。
 - `AnimationPlayer` を {{domxref("Animation")}} に改名しました ([Firefox バグ 1154615](https://bugzil.la/1154615))。
-- {{domxref("AnimationTimeline")}} は、{{domxref("DocumentTimeline")}} を唯一実装する抽象クラスになりました ([Firefox バグ 1152171](https://bugzil.la/1152171))。
+- {{domxref("AnimationTimeline")}} は抽象クラスになり、{{domxref("DocumentTimeline")}} が唯一の実装になりました ([Firefox バグ 1152171](https://bugzil.la/1152171))。
 
 #### CSSOM
 
@@ -93,7 +94,7 @@ _変更なし。_
 
 - 最新の仕様書の要求に従い、[`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) をパースできないときに {{domxref("HTMLImageElement.currentSrc")}} メソッドは `null` ではなく `""` を返すようになりました ([Firefox バグ 1139560](https://bugzil.la/1139560))。
 - 画像と同様に、Firefox は非表示の {{HTMLElement("iframe")}} に対して {{domxref("Window.requestAnimationFrame()")}} を抑制するようになりました ([Firefox バグ 1145439](https://bugzil.la/1145439))。
-- {{domxref("NavigatorID/taintEnabled", "Navigator.taintEnabled")}} はウェブワーカーで使用できなくなりました ([Firefox バグ 1154878](https://bugzil.la/1154878))。
+- {{domxref("Navigator.taintEnabled")}} はウェブワーカーで使用できなくなりました ([Firefox バグ 1154878](https://bugzil.la/1154878))。
 
 #### ウェブオーディオ API
 
@@ -105,8 +106,8 @@ _変更なし。_
 #### ウェブワーカー
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) を少々改良しました。{{domxref("ServiceWorkerRegistration.update()", "update()")}} メソッドを、{{domxref("ServiceWorkerGlobalScope")}} から {{domxref("ServiceWorkerRegistration")}} に移動しました ([Firefox バグ 1131350](https://bugzil.la/1131350))。
-- {{domxref("ServiceWorkerRegistration")}} をウェブワーカーで使用できます ([Firefox バグ 1131327](https://bugzil.la/1131327))。
-- {{domxref("DataStore")}} をウェブワーカーで使用できます ([Firefox バグ 916196](https://bugzil.la/916196))。
+- {{domxref("ServiceWorkerRegistration")}} をウェブワーカーで使用できるようになりました ([Firefox バグ 1131327](https://bugzil.la/1131327))。
+- `DataStore` をウェブワーカーで使用できるようになりました ([Firefox バグ 916196](https://bugzil.la/916196))。
 
 #### IndexedDB
 
@@ -114,7 +115,7 @@ _変更なし。_
 
 #### 開発者ツール
 
-- {{domxref("console.timeStamp")}} プロパティを追加しました ([Firefox バグ 922221](https://bugzil.la/922221))。
+- {{domxref("console/timeStamp_static", "console.timeStamp()")}} プロパティを追加しました ([Firefox バグ 922221](https://bugzil.la/922221))。
 
 ### MathML
 
@@ -148,7 +149,7 @@ _変更なし。_
 
 ### XPCOM
 
-- `nsClassInfo::GetImplementationLanguage()` 関数とともに `nsIClassInfo.implementationLanguage` 属性を削除しました。
+- `nsIClassInfo.implementationLanguage` 属性を、`nsClassInfo::GetImplementationLanguage()` 関数とともに削除しました。
 - 以下の XPCOM インターフェイスを削除しました。代わりに標準 HTML インターフェイスを使用してください。
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
@@ -160,8 +161,4 @@ _変更なし。_
 ### その他
 
 - Keywords API は非推奨になりました。まもなく削除します ([Firefox バグ 1140395](https://bugzil.la/1140395))。
-- 自動テストシステムで、個体テスト関数のスキップをサポートしました。[Conditionally running a test](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) の XPCShell testing をご覧ください。
-
-## 過去のバージョン
-
-{{Firefox_for_developers('39')}}
+- 自動テストシステムで、個体テスト関数のスキップをサポートしました。[running conditional tests](https://firefox-source-docs.mozilla.org/testing/xpcshell/index.html#conditionally-running-a-test) の XPCShell testing をご覧ください。

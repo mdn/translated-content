@@ -1,9 +1,9 @@
 ---
-title: <color-interpolation-method>
+title: Type CSS `<color-interpolation-method>`
+short-title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
-original_slug: Web/CSS/color-interpolation-method
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<color-interpolation-method>`** représente l'espace colorimétrique utilisé pour l'interpolation entre des valeurs {{CSSxRef("&lt;color&gt;")}}. Il peut être utilisé pour remplacer l'espace colorimétrique d'interpolation par défaut dans les notations fonctionnelles liées à la couleur comme {{CSSxRef("color_value/color-mix", "color-mix()")}} et {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}.

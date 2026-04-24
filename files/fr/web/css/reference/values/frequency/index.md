@@ -1,9 +1,9 @@
 ---
-title: <frequency>
+title: Type CSS `<frequency>`
+short-title: <frequency>
 slug: Web/CSS/Reference/Values/frequency
-original_slug: Web/CSS/frequency
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency>`** permet de représenter des fréquences (par exemple la hauteur d'une voix). Ce type n'est actuellement utilisé pour aucune propriété CSS.

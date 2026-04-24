@@ -1,9 +1,9 @@
 ---
-title: Fonction CSS `any-pointer`
+title: Caractéristique média CSS `any-pointer`
 short-title: any-pointer
 slug: Web/CSS/Reference/At-rules/@media/any-pointer
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`any-pointer`** vérifie si l'utilisateur dispose _d'un_ dispositif de pointage (comme une souris) et, le cas échéant, quelle est sa précision.
