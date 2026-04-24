@@ -26,7 +26,7 @@ _该接口同样继承来自 {{domxref("Event")}} 的属性。_
 - {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
   - : 列出所有新创建的 cookie 的数组。请注意，这将排除那些已过期的 cookie，因为这些 cookie 会被立即删除。
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
-  - : 列出所有已被移除的 cookie 的数组，这些 cookie 可能因过期或被显示删除而移除。请注意，这将包括那些创建时已过期的 cookie。
+  - : 列出所有已被移除的 cookie 的数组，这些 cookie 可能因过期或被明确删除而移除。请注意，这将包括那些创建时已过期的 cookie。
 
 ## 实例方法
 
