@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{deprecated_header}}
 
 Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y explique qué hace. Idealmente, debería ser una o dos frases cortas.
 
