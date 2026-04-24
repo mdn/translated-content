@@ -34,4 +34,4 @@ Al crear una página de referencia, querrás añadir _Ejemplos_. Para hacerlo, s
 
 ## Paso 4 — Solicitar la revisión del contenido
 
-Después de haber creado la página de la propiedad, envíala como una solicitud de extracción (pull request). Se asignará automáticamente a un miembro de nuestro equipo de revisión para que revise tu página.
+Después de haber creado la página de la propiedad, envíala como una solicitud de extracción (pull request). Se asignará automáticamente a un miembro de nuestro equipo de revisión para que revise tu página. 
