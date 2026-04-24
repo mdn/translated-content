@@ -1,5 +1,6 @@
 ---
 title: Cómo documentar una propiedad CSS
+short-title: Documentar una propiedad CSS
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 l10n:
   sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
