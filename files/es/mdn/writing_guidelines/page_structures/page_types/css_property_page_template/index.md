@@ -11,7 +11,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 ## Pruébalo (Try it)
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código.  Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
 
 ## Propiedades constituyentes
 
