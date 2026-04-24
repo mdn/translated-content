@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 719645a32546d9e514ac530a5eb66aa4c26d4f51
 ---
 
-{{MDNSidebar}}
-
 A medida que los estándares de [CSS](/es/docs/Web/CSS) evolucionan, siempre se añaden nuevas propiedades. La [Referencia de CSS](/es/docs/Web/CSS/Reference) en MDN Web Docs debe mantenerse actualizada con estos avances. Este artículo proporciona instrucciones paso a paso para crear una página de referencia de una propiedad CSS.
 
 Cada página de referencia de propiedad CSS sigue la misma estructura. Esto ayuda a los lectores a encontrar información más fácilmente, especialmente después de que se familiarizan con el formato estándar de las páginas de referencia.
