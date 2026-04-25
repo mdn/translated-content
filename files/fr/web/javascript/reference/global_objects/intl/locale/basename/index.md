@@ -1,48 +1,48 @@
 ---
-title: Intl.Locale.prototype.baseName
+title: "Intl.Locale : propriété baseName"
+short-title: baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
+l10n:
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.baseName`** renvoie un extrait de la chaîne de caractères représentant l'objet `Locale`. Cet extrait contient les informations essentielles à propos de l'objet `Locale`.
+La propriété d'accesseur **`baseName`** des instances de {{JSxRef("Intl.Locale")}} retourne une sous-chaîne de caractères de la représentation textuelle de cette locale, contenant les informations essentielles à propos de cette locale, y compris la langue, le script, la région et les variantes, si disponibles.
 
 ## Description
 
-Un objet `Intl.Locale` représente une locale ainsi que des options qui lui sont associées. La propriété `baseName` renvoie des informations essentielles quant à la locale sous la forme d'une chaîne de caractères. Cette chaîne est un extrait de la représentation textuelle complète de l'objet `Locale`. Cet extrait contient notamment la langue, le script utilisé ainsi que la région (s'ils sont disponibles).
+`baseName` retourne la sous-chaîne de caractères `language ["-" script] ["-" region] *("-" variant)` de la [grammaire `unicode_language_id` <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#Identifiers). Elle inclut uniquement les informations spécifiquement indiquées dans le constructeur, soit par la chaîne d'identifiant de locale, soit par l'objet d'options.
 
-Si on utilise [la grammaire Unicode](https://www.unicode.org/reports/tr35/#Identifiers), `baseName` renvoie la sous-séquence `language ["-" script] ["-" region] *("-" variant)`.
+Le mutateur d'accesseur de `baseName` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
 ### Exemple simple
 
 ```js
-let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Candanian French
-console.log(myLoc.toString()); // Prints out "fr-Latn-CA-u-ca-gregory"
-console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
+const myLoc = new Intl.Locale("fr-Latn-CA"); // Définit la locale sur le français canadien
+console.log(myLoc.toString()); // Affiche "fr-Latn-CA-u-ca-gregory"
+console.log(myLoc.baseName); // Affiche "fr-Latn-CA"
 ```
 
 ### Exemple avec certaines options
 
 ```js
-// Sets language to Japanese, region to Japan,
-
-// calendar to Gregorian, hour cycle to 24 hours
-let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
-console.log(japan.toString()); // Prints out "ja-JP-u-ca-gregory-hc-h24"
-console.log(japan.baseName); // Prints out "ja-JP"
+// Définit la langue sur le japonais, la région sur le Japon,
+// calendrier sur grégorien, cycle horaire sur 24 heures
+const japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
+console.log(japan.toString()); // Affiche "ja-JP-u-ca-gregory-hc-h24"
+console.log(japan.baseName); // Affiche "ja-JP"
 ```
 
 ### Exemple avec options qui surchargent
 
 ```js
-// Input string indicates language as Dutch and region as Belgium,
+// La chaîne de caractères d'entrée indique la langue comme néerlandais
+// et la région comme Belgique, mais l'objet d'options remplace la région
+// et la définit sur les Pays-Bas
+const dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
-// but options object overrides the region and sets it to the Netherlands
-let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
-
-console.log(dutch.baseName); // Prints out "nl-Latn-NL"
+console.log(dutch.baseName); // Affiche "nl-Latn-NL"
 ```
 
 ## Spécifications
@@ -55,4 +55,4 @@ console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
+- L'objet {{JSxRef("Intl.Locale")}}

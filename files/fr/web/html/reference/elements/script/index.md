@@ -2,7 +2,7 @@
 title: "<script> : l'élément de script"
 slug: Web/HTML/Reference/Elements/script
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<script>`** est utilisé pour intégrer du code ou des données exécutables&nbsp;: il sert généralement à intégrer ou référencer du code JavaScript. L'élément `<script>` peut aussi être utilisé avec d'autres langages, comme le langage de programmation GLSL de [WebGL](/fr/docs/Web/API/WebGL_API) ou {{Glossary("JSON")}}.
@@ -75,7 +75,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Si l'attribut est défini avec l'attribut `async`, l'élément se comporte comme si seul l'attribut `async` est défini.
 
-- `fetchpriority`
+- [`fetchpriority`](/fr/docs/Web/HTML/Reference/Attributes/fetchpriority)
   - : Indique une suggestion de priorité relative à utiliser lors de la récupération d'un script externe.
     Valeurs autorisées&nbsp;:
     - `high`
@@ -89,8 +89,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Voir {{DOMxRef("HTMLScriptElement.fetchPriority")}} pour plus d'informations.
 
-- `integrity`
-  - : Cet attribut contient des métadonnées que l'agent utilisateur peut vérifier afin de contrôler qu'une ressource téléchargée n'a pas été modifiée de façon frauduleuse. Pour plus d'informations, consulter [la page relative à l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
+- [`integrity`](/fr/docs/Web/HTML/Reference/Attributes/integrity)
+  - : Cet attribut contient une ou plusieurs {{Glossary("hash function", "hachage")}} de la ressource. Il est utilisé pour s'assurer que le contenu de la ressource est conforme à ce que le·la développeur·euse attend et n'a pas été remplacé par une copie malveillante dans le cadre d'une [attaque de la chaîne d'approvisionnement](/fr/docs/Web/Security/Attacks/Supply_chain_attacks). L'attribut ne doit pas être défini lorsque l'attribut `src` est absent. Voir également [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 - `nomodule`
   - : Cet attribut booléen indique que le script ne doit pas être exécuté dans les navigateurs qui prennent en charge les [modules EcmaScript](/fr/docs/Web/JavaScript/Guide/Modules). Il permet ainsi de fournir un script de repli aux anciens navigateurs qui ne gèrent pas le code JavaScript modulaire.
 - `nonce`
@@ -111,7 +111,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 - `src`
   - : Cet attribut définit l'URI d'un script externe. Cela peut être utilisé pour insérer des scripts autrement qu'en les insérant à même le document.
-- `type`
+- [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type)
   - : Cet attribut indique le type de script représenté.
     La valeur de cet attribut sera l'une des suivantes&nbsp;:
     - **Attribut non défini (valeur par défaut), chaîne de caractères vide ou type MIME JavaScript**
@@ -130,7 +130,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - [`speculationrules`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{Experimental_Inline}}
       - : Cette valeur indique que le contenu de l'élément contient des règles de spéculation.
         Les règles de spéculation prennent la forme d'un objet JSON qui détermine quelles ressources doivent être préchargées ou pré-rendues par le navigateur.
-        Cela fait partie de la {{DOMxRef("Speculation Rules API", "", "", "nocode")}}.
+        Cela fait partie de {{DOMxRef("Speculation Rules API", "l'API Speculation Rules", "", 1)}}.
     - **Toute autre valeur**
       - : Le contenu embarqué est traité comme un bloc de données et ne sera pas traité par le navigateur.
         Les développeur·euse·s doivent utiliser un type MIME valide qui n'est pas un type MIME JavaScript pour indiquer des blocs de données.

@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : autofocus"
+title: "Attribut HTML universel : `autofocus`"
 short-title: autofocus
 slug: Web/HTML/Reference/Global_attributes/autofocus
 l10n:
-  sourceCommit: 01d5901fdbad83033fe1f86486f652d07db7ce2a
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`autofocus`** est un attribut booléen indiquant si l'élément doit recevoir la sélection (<i lang="en">focus</i> en anglais) au chargement de la page ou, s'il est imbriqué à l'intérieur d'un élément {{HTMLElement("dialog")}} ou [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover), lorsque le `<dialog>` ou la fenêtre contextuelle est affiché.

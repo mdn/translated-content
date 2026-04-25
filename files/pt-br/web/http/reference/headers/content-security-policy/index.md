@@ -15,7 +15,7 @@ Para mais informações, veja o artigo introdutório em [Política de Segurança
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>
@@ -89,7 +89,7 @@ As diretivas de Documento governam as propriedades de um documento ou ambiente [
 - {{CSP("plugin-types")}}
   - : Restringe o conjunto de _plugins_ que podem ser embutidos em um documento limitando pelos tipos de conteúdos que podem ser carregados.
 - {{CSP("sandbox")}}
-  - : Habilita o _sandbox_ para um recurso requisitado similar ao atributo [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) de {{HTMLElement("iframe")}}.
+  - : Habilita o _sandbox_ para um recurso requisitado similar ao atributo [`sandbox`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe#sandbox) de {{HTMLElement("iframe")}}.
 
 ### {{Glossary("Navigation directive", "Navigation directives")}}
 

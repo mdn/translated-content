@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:target
 original_slug: Web/CSS/:target
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id) que coincide con el fragmento de la URL.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id) que coincide con el fragmento de la URL.
 
 ```css
 /* Selecciona un elemento con una ID que coincida con el fragmento de la URL actual */
@@ -199,4 +199,4 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 
 ## Ver también
 
-- [Usando la pseudoclase :target en selectores](/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
+- [Usando la pseudoclase :target en selectores](/es/docs/Web/CSS/Guides/Selectors/Using_:target)

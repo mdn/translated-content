@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`abs()`** contient un calcul et renvoie la valeur absolue de l'argument, avec le même type que l'argument.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`abs()`** contient un calcul et renvoie la valeur absolue de l'argument, avec le même type que l'argument.
 
 L'instruction `abs(A)` renverra `A` si la valeur numérique `A` est supérieure ou égale à 0. Sinon, elle renverra la valeur de `-1 * A`.
 

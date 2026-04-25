@@ -1,12 +1,104 @@
 ---
-title: translate
+title: Propriété CSS `translate`
+short-title: translate
 slug: Web/CSS/Reference/Properties/translate
-original_slug: Web/CSS/translate
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{seecompattable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`translate`** permet de définir des opérations de décalage, individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à définir pour `transform`.
 
-La propriété **`translate`** permet de définir des opérations de translations, individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
+{{InteractiveExample("Démonstration CSS&nbsp;: translate")}}
+
+```css interactive-example-choice
+translate: none;
+```
+
+```css interactive-example-choice
+translate: 40px;
+```
+
+```css interactive-example-choice
+translate: 50% -40%;
+```
+
+```css interactive-example-choice
+translate: 20px 4rem;
+```
+
+```css interactive-example-choice
+translate: 20px 4rem 150px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 800px;
+  perspective-origin: 150% 150%;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  perspective: 550px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgb(90 90 90 / 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgb(0 210 0 / 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgb(210 0 0 / 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgb(0 0 210 / 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgb(210 210 0 / 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgb(210 0 210 / 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 ## Syntaxe
 
@@ -24,16 +116,23 @@ translate: 50% 105px;
 
 /* Trois valeurs */
 translate: 50% 105px 5rem;
+
+/* Valeurs globales */
+translate: inherit;
+translate: initial;
+translate: revert;
+translate: revert-layer;
+translate: unset;
 ```
 
 ### Valeurs
 
-- Une seule valeur de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}})
-  - : Une longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
-- Deux valeurs de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}})
-  - : Deux longueurs ({{cssxref("&lt;length&gt;")}}) ou pourcentages ({{cssxref("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. Cela est équivalent à la fonction `translate()` appelée avec ces deux arguments.
+- Une seule valeur de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) ou un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) qui définit une translation en deux dimensions. La translation est la même pour l'axe X et l'axe Y. Cela est équivalent à la fonction `translate()` (translation en deux dimensions) avec une seule valeur.
+- Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}})
+  - : Deux longueurs ({{CSSxRef("&lt;length&gt;")}}) ou pourcentages ({{CSSxRef("&lt;percentage&gt;")}}) qui définissent respectivement les composantes horizontale et verticale d'une translation en deux dimensions. Cela est équivalent à la fonction `translate()` appelée avec ces deux arguments.
 - Trois valeurs
-  - : Deux valeurs de longueur/pourcentage ({{cssxref("&lt;length-percentage&gt;")}}) et une longueur ({{cssxref("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. Cela est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
+  - : Deux valeurs de longueur/pourcentage ({{CSSxRef("&lt;length-percentage&gt;")}}) et une longueur ({{CSSxRef("&lt;length&gt;")}}) qui définissent respectivement les composantes horizontale, verticale et en profondeur de la translation en trois dimensions. Cela est équivalent à la fonction `translate3d()` appelée avec ces trois arguments.
 - `none`
   - : Cette valeur indique qu'aucune translation ne devrait être appliquée.
 
@@ -47,51 +146,53 @@ translate: 50% 105px 5rem;
 
 ## Exemples
 
-### HTML
+### Déplacer un élément au survol
+
+Cet exemple montre comment utiliser la propriété `translate` pour déplacer un élément selon trois axes.
+La première boîte est déplacée le long de l'axe X et la deuxième boîte est déplacée le long des axes X et Y.
+La troisième boîte est déplacée le long des axes X, Y et Z et donne l'impression de se rapprocher du lecteur grâce à l'ajout de {{CSSxRef('perspective')}} à l'élément parent.
+
+#### HTML
 
 ```html
-<div>
-  <p class="translate">Translation</p>
+<div class="englobement">
+  <div id="boite1">translate X</div>
+  <div id="boite2">translate X,Y</div>
+  <div id="boite3">translate X,Y,Z</div>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
-* {
-  box-sizing: border-box;
+.englobement {
+  perspective: 100px;
+  display: inline-flex;
+  gap: 1em;
 }
-
-html {
-  font-family: sans-serif;
-}
-
-div {
-  width: 150px;
-  margin: 0 auto;
-}
-
-p {
-  padding: 10px 5px;
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 150px;
-  font-size: 1.2rem;
+.englobement > div {
+  width: 7em;
+  line-height: 7em;
   text-align: center;
+  transition: 0.5s ease-in-out;
+  border: 3px dotted;
+}
+#boite1:hover {
+  translate: 20px;
 }
 
-.translate {
-  transition: translate 1s;
+#boite2:hover {
+  translate: 20px 20px;
 }
 
-div:hover .translate {
-  translate: 200px 50px;
+#boite3:hover {
+  translate: 5px 5px 30px;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples')}}
+{{EmbedLiveSample("Déplacer un élément au survol", "100%", 175)}}
 
 ## Spécifications
 
@@ -103,6 +204,8 @@ div:hover .translate {
 
 ## Voir aussi
 
-- {{cssxref('scale')}}
-- {{cssxref('rotate')}}
-- {{cssxref('transform')}}
+- La propriété {{CSSxRef("scale")}}
+- La propriété {{CSSxRef("rotate")}}
+- La propriété {{CSSxRef("transform")}}
+
+Note&nbsp;: skew n'est pas une valeur de transformation indépendante

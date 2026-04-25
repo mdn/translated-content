@@ -1,8 +1,9 @@
 ---
-title: <input type="email">
+title: Valeur d'attribut HTML `<input type="email">`
+short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 l10n:
-  sourceCommit: 5c7a1a6c3ccd8d2b22771f5d2bea050a207ec0f1
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`email`** permettent à l'utilisateur·ice de saisir et d'éditer une adresse électronique ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Attributes/multiple) est indiqué, une liste d'adresses électroniques.

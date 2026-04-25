@@ -95,7 +95,7 @@ Lorsque vous développez un site, vous devez toujours garder à l'esprit les pro
 
 ## Testez vos compétences&nbsp;!
 
-Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de partir - voir (en anglais) [Testez vos compétences: overflow](/fr/docs/Learn/CSS/Building_blocks/Overflow_Tasks).
+Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de partir - voir (en anglais) [Testez vos compétences: overflow](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks).
 
 ## Résumé
 

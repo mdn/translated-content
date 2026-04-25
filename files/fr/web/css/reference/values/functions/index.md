@@ -280,7 +280,7 @@ Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) CSS {{CSSxRe
 - {{CSSxRef("ray", "ray()")}}
   - : Valide avec {{cssxref("offset-path")}}&nbsp;; définit le segment de ligne qu'un élément animé peut suivre.
 - {{CSSxRef("superellipse()")}}
-  - : Définit la courbure d'une ellipse&nbsp;; peut être utilisé pour spécifier une {{cssxref("corner-shape-value")}}, qui est utilisée avec {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#constituent_properties) et [associées](/fr/docs/Web/CSS/corner-shape#properties_that_follow_the_corner_shape).
+  - : Définit la courbure d'une ellipse&nbsp;; peut être utilisé pour spécifier une {{cssxref("corner-shape-value")}}, qui est utilisée avec {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) et [associées](/fr/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape).
 
 ## Les fonctions de référence
 

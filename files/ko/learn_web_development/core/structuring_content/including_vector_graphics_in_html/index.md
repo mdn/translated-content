@@ -15,9 +15,9 @@ l10n:
     <tr>
       <th scope="row">필요한 사전 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML의 기본 사항</a>
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML의 기본 사항</a>
         과
-        <a href="/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">문서에 이미지를 삽입하는 방법</a>
+        <a href="/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images">문서에 이미지를 삽입하는 방법</a>
         을 알고 있어야 합니다.
       </td>
     </tr>

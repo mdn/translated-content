@@ -1,8 +1,9 @@
 ---
-title: speak-as
+title: Descripteur de règle CSS `speak-as`
+short-title: speak-as
 slug: Web/CSS/Reference/At-rules/@counter-style/speak-as
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`speak-as`** permet de définir comment un symbole de compteur construit avec une règle {{CSSxRef('@counter-style')}} sera représenté à l'oral. Par exemple, l'auteur·ice peut indiquer qu'un symbole de compteur doit être prononcé comme sa valeur numérique ou simplement représenté par une indication sonore.

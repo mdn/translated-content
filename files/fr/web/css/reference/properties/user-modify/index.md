@@ -1,12 +1,19 @@
 ---
-title: user-modify
+title: Propriété CSS `user-modify`
+short-title: user-modify
 slug: Web/CSS/Reference/Properties/user-modify
-original_slug: Web/CSS/user-modify
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{deprecated_header}}
+{{Non-standard_Header}}{{Deprecated_Header}}
 
-La propriété **`user-modify`** n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur.
+La propriété [CSS](/fr/docs/Web/CSS) **`user-modify`** n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur·ice.
+
+> [!WARNING]
+> Cette propriété a été remplacée par l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable).
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -17,34 +24,34 @@ user-modify: write-only;
 /* Valeurs globales */
 user-modify: inherit;
 user-modify: initial;
+user-modify: revert;
 user-modify: unset;
 ```
 
-> [!WARNING]
-> Cette propriété a été remplacée par l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable).
-
-Cette propriété est similaire à l'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable). Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
-
-## Syntaxe
-
-La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la liste ci-après.
+La propriété `-moz-user-modify` est définie grâce à un mot-clé parmi ceux de la liste ci-après.
 
 ### Valeurs
 
-- `read-only`
-  - : La valeur par défaut, le contenu ne peut pas être modifié.
-- `read-write`
-  - : L'utilisateur peut lire et modifier le contenu.
-- `read-write-plaintext-only` {{Non-standard_inline}}
-  - : Identique à `read-write` mais la mise en forme du texte sera perdue.
-- `write-only`
-  - : L'utilisateur peut éditer le contenu mais ne peut pas le lire.
+- `read-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
+  - : La valeur par défaut. Le contenu est en lecture seule.
+- `read-write` {{Non-standard_Inline}}{{Deprecated_Inline}}
+  - : L'utilisateur·ice peut lire et éditer le contenu.
+- `read-write-plaintext-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
+  - : Identique à `read-write`, mais la mise en forme du texte sera perdue.
+- `write-only` {{Non-standard_Inline}}{{Deprecated_Inline}}
+  - : L'utilisateur·ice peut éditer le contenu; mais ne peut pas le lire.
 
-### Syntaxe formelle
+## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`user-modify = read-only | read-write | read-write-plaintext-only | write-only`)}}
 
 ## Exemples
+
+### HTML
+
+```html
+<div class="readwrite">L'utilisateur·ice est capable d'éditer ce texte.</div>
+```
 
 ### CSS
 
@@ -55,21 +62,9 @@ La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la
 }
 ```
 
-### HTML
-
-```html
-<div class="readwrite">L'utilisateur est capable de modifier ce texte.</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 300, 30)}}
-
 ## Spécifications
 
-`user-modify` a [été proposée pour la spécification CSS 3 sur les interfaces utilisateurs](https://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (le brouillon de travail de février 2000 qui est désormais remplacé par le module _Basic User Interface_ de _CSS 3_).
-
-{{cssinfo}}
+Ne fait pas partie d'un standard.
 
 ## Compatibilité des navigateurs
 
@@ -77,6 +72,6 @@ La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la
 
 ## Voir aussi
 
-- {{cssxref("-moz-user-focus")}}
-- {{cssxref("-moz-user-input")}}
-- {{cssxref("-moz-user-select")}}
+- La propriété {{CSSxRef("-moz-user-focus")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
+- La propriété {{CSSxRef("-moz-user-input")}} {{Non-standard_Inline}}{{Deprecated_Inline}}
+- La propriété {{CSSxRef("user-select", "-moz-user-select")}}

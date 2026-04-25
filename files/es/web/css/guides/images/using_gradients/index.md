@@ -553,7 +553,7 @@ div {
 
 #### Ejemplo: longitud para círculos
 
-Para los círculos, el tamaño se puede dar como [\<length>](/es/docs/Web/CSS/length), que es el tamaño del círculo.
+Para los círculos, el tamaño se puede dar como [\<length>](/es/docs/Web/CSS/Reference/Values/length), que es el tamaño del círculo.
 
 ```html hidden
 <div class="radial-circle-size"></div>
@@ -728,7 +728,7 @@ div {
 
 ### Múltiples degradados lineales repetitivos
 
-De forma similar a los degradados lineales y radiales normales, puede incluir varios degradados, uno encima del otro. Esto solo tiene sentido si los degradados son parcialmente transparentes, lo que permite que los degradados posteriores se muestren a través de las áreas transparentes, o si incluye diferentes valores de propiedad en [background-size](/es/docs/Web/CSS/background-size), opcionalmente con diferente [background-position](/es/docs/Web/CSS/background-position), para cada imagen degradada. Estamos usando la transparencia.
+De forma similar a los degradados lineales y radiales normales, puede incluir varios degradados, uno encima del otro. Esto solo tiene sentido si los degradados son parcialmente transparentes, lo que permite que los degradados posteriores se muestren a través de las áreas transparentes, o si incluye diferentes valores de propiedad en [background-size](/es/docs/Web/CSS/Reference/Properties/background-size), opcionalmente con diferente [background-position](/es/docs/Web/CSS/Reference/Properties/background-position), para cada imagen degradada. Estamos usando la transparencia.
 
 En este caso, las líneas de degradado tienen una longitud de 300px, 230px y 300px.
 

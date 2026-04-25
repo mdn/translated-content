@@ -1,8 +1,9 @@
 ---
-title: mask-border-source
+title: Propriété CSS `mask-border-source`
+short-title: mask-border-source
 slug: Web/CSS/Reference/Properties/mask-border-source
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-source`** définit l'image source à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/Reference/Properties/mask-border) d'un élément.

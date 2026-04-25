@@ -2,9 +2,8 @@
 title: "ARIA : rôle slider"
 short-title: slider
 slug: Web/Accessibility/ARIA/Reference/Roles/slider_role
-original_slug: Web/Accessibility/ARIA/Roles/slider_role
 l10n:
-  sourceCommit: 635820782735cd00f71ce3929ff9377b091f8995
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 Le rôle `slider` définit un champ de saisie dans lequel l'utilisateur·ice sélectionne une valeur comprise dans une plage donnée.
@@ -41,7 +40,7 @@ Pour le rôle `slider`, sauf si vous utilisez l'élément [`<input type="range">
 
 L'attribut optionnel [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) est utilisé lorsque la valeur numérique de `aria-valuenow` ne reflète pas la valeur réelle du curseur. Comme les valeurs minimale, maximale et courante sont toutes numériques, lorsque la signification de ces nombres n'est pas numérique, il faut inclure l'attribut `aria-valuetext` avec une chaîne de caractères définissant la valeur. Par exemple, pour un curseur de tailles de t‑shirt, l'attribut `aria-valuetext` doit passer de très petit à très grand au fur et à mesure que la valeur de `aria-valuenow` augmente.
 
-La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Il n'existe pas d'attribut HTML équivalent pour `<input type="range">`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{htmlelement('input')}}. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques.
+La valeur de `aria-valuetext` doit être mise à jour en même temps que la valeur ou `aria-valuenow`. Il n'existe pas d'attribut HTML équivalent pour `<input type="range">`, mais vous pouvez inclure `aria-valuetext` sur n'importe quel type {{HTMLElement('input')}}. Les attributs ARIA sont pris en charge sur les éléments HTML sémantiques.
 
 Lorsque `aria-valuetext` est une fonctionnalité importante pour un curseur, envisagez d'utiliser {{HTMLElement('select')}} avec des éléments {{HTMLElement('option')}} à la place. Même si ce n'est pas visuellement une plage, chaque valeur d'option est plus accessible à tous·tes les utilisateur·ice·s, pas seulement à celles et ceux utilisant une technologie d'assistance.
 

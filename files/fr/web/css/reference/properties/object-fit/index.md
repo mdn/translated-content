@@ -1,8 +1,9 @@
 ---
-title: object-fit
+title: Propriété CSS `object-fit`
+short-title: object-fit
 slug: Web/CSS/Reference/Properties/object-fit
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`object-fit`** définit la façon dont le contenu d'un {{ Glossary("replaced elements", "élément remplacé")}}, tel qu'une {{HTMLElement("img")}} ou une {{HTMLElement("video")}}, doit être redimensionné pour s'adapter à son conteneur.
@@ -77,7 +78,7 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 - `cover`
   - : Le contenu remplacé est redimensionné pour maintenir son rapport d'aspect tout en remplissant entièrement la boîte de contenu de l'élément. Si le rapport d'aspect de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors rogné pour s'adapter.
 - `fill`
-  - : Le contenu remplacé est redimensionné pour remplir entièrement la boîte de contenu de l'élément de boîte. L'ensemble de l'objet remplira complètement la boîte. Si le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors étiré pour s'adapter.
+  - : Le contenu remplacé est redimensionné pour remplir entièrement la boîte de contenu de l'élément de boîte. C'est la valeur de {{CSSxRef("initial")}}. L'ensemble de l'objet remplira complètement la boîte. Si le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'objet ne correspond pas à celui de sa boîte, l'objet sera alors étiré pour s'adapter.
 - `none`
   - : Le contenu remplacé n'est pas redimensionné.
 - `scale-down`

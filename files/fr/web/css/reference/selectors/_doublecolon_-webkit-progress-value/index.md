@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-progress-value
+title: Pseudo-élément CSS `::-webkit-progress-value`
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}

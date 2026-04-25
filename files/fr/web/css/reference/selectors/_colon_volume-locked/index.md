@@ -1,8 +1,9 @@
 ---
-title: :volume-locked
+title: Pseudo-classe CSS `:volume-locked`
+short-title: :volume-locked
 slug: Web/CSS/Reference/Selectors/:volume-locked
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:volume-locked`** représente un élément capable de produire du son, tel que {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, mais pour lequel le volume de l'élément multimédia est actuellement «&nbsp;verrouillé&nbsp;» par l'utilisateur·ice.

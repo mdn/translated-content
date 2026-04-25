@@ -7,9 +7,9 @@ slug: Web/HTTP/Reference/Headers/ETag
 
 如果给定 URL 中的资源更改，则*一定*要生成新的 `ETag` 值。比较这些 `ETag` 能快速确定此资源是否变化。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+| Header type                              | {{Glossary("Response header")}} |
+| ---------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden request header")}} | no                              |
 
 ## 语法
 

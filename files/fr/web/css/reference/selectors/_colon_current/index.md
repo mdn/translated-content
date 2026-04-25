@@ -1,8 +1,9 @@
 ---
-title: :current
+title: Pseudo-classe CSS `:current`
+short-title: :current
 slug: Web/CSS/Reference/Selectors/:current
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

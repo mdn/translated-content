@@ -2,7 +2,7 @@
 title: "<video> : l'élément d'intégration vidéo"
 slug: Web/HTML/Reference/Elements/video
 l10n:
-  sourceCommit: b0c2ce683687410406fa7ccdef391ff1d41503bb
+  sourceCommit: 743ba8b257cd06449b192818df120e609f6e16d2
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de média qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément {{HTMLElement("audio")}} peut fournir une expérience utilisateur plus appropriée.
@@ -23,13 +23,13 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de médi
 </video>
 ```
 
-L'exemple précédent illustre comment utiliser l'élément `<video>` simplement, à la façon d'un élément {{HTMLElement("img")}}. Le chemin vers le média à afficher est fourni via l'attribut `src` et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.
+L'exemple précédent illustre comment utiliser l'élément `<video>` simplement, à la façon d'un élément {{HTMLElement("img")}}. Le chemin vers le média à afficher est fourni avec l'attribut `src` et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur, la lecture automatique et/ou en boucle, les contrôles affichés, etc.
 
 Le contenu fourni entre les balises `<video></video>` est affiché comme contenu alternatif par les navigateurs qui ne prennent pas en charge l'élément.
 
 ## Attributs
 
-Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
   - : Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.
@@ -38,6 +38,9 @@ Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glo
     > Les navigateurs modernes bloquent l'audio (ou les vidéos avec une piste audio non assurée) de la lecture automatique, car les sites qui jouent automatiquement l'audio peuvent être une expérience désagréable pour les utilisateur·ice·s. Consultez notre [Guide sur la lecture automatique](/fr/docs/Web/Media/Guides/Autoplay) pour plus d'informations sur la façon d'utiliser correctement cette dernière.
 
     Pour désactiver la vidéo automatique, `autoplay="false"` ne fonctionnera pas&nbsp;; La vidéo sera automatiquement lue si l'attribut est présent dans le tag `<video>`. Pour supprimer la lecture automatique, l'attribut doit être complètement supprimé.
+
+    > [!NOTE]
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne commenceront pas à se télécharger et à se lire automatiquement tant que l'élément n'est pas proche ou dans la zone visible.
 
 - `controls`
   - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur·ice de contrôler la lecture de la vidéo, le volume et la mise sur pause.
@@ -66,14 +69,40 @@ Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glo
 
 - `height`
   - : La hauteur de la zone où afficher la vidéo, exprimée en [pixels CSS <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#px) (en valeur absolue uniquement&nbsp;; [pas de pourcentages <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
+
+- `loading` {{Experimental_Inline}}
+  - : Indique comment le navigateur doit charger la vidéo (y compris toute image d'affiche)&nbsp;:
+    - `eager`
+      - : Charge la vidéo immédiatement, que la vidéo soit ou non actuellement dans la zone d'affichage (<i lang="en">viewport</i> en anglais) visible (c'est la valeur par défaut).
+    - `lazy`
+      - : Diffère le chargement de la vidéo jusqu'à ce qu'elle atteigne une distance calculée de la zone d'affichage, telle que définie par le navigateur.
+
+        Le chargement différé évite la consommation de bande passante réseau et de stockage nécessaire pour gérer la vidéo tant qu'il n'est pas raisonnablement certain qu'elle sera nécessaire. Cela améliore les performances dans la plupart des cas d'utilisation typiques.
+
+        Bien que les attributs [`width`](#width) et [`height`](#height) explicites soient recommandés pour toutes les vidéos afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour celles chargées en différé. Les vidéos chargées en différé ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement modifierait cela, car les vidéos non chargées ont une `width` et une `height` de `0`. Cela crée une expérience utilisateur encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise en pleine lecture.
+
+        Les vidéos chargées en différé situées dans la zone d'affichage visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des vidéos chargées immédiatement — les vidéos chargées en différé ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
+
+        Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait toujours possible pour un site de suivre la position approximative de défilement d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des vidéos dans le balisage d'une page de sorte qu'un serveur puisse suivre combien de vidéos sont demandées et quand.
+
+        > [!NOTE]
+        > L'attribut `loading="lazy"` a également un impact sur les attributs [`autoplay`](#autoplay), [`poster`](#poster) et [`preload`](#preload), comme décrit dans chacune de ces sections de la page.
+
 - `loop`
   - : Un attribut booléen, qui, lorsqu'il est présent, indique que la vidéo doit être jouée en boucle.
+
 - `muted`
   - : Un attribut booléen qui indique s'il faut couper le son contenu dans la vidéo. Si cet attribut est utilisé, le son sera coupé au lancement de la vidéo. Sa valeur par défaut est `false`, ce qui signifie que l'audio sera lu lorsque la vidéo sera lue.
+
 - `playsinline`
   - : Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter&nbsp;: l'absence de cet attribut n'implique pas que la vidéo sera lancée en plein écran.
+
 - `poster`
   - : Une URL qui contient une vignette à afficher tant que la vidéo est en cours de téléchargement. Si cet attribut n'est pas utilisé, rien n'est affiché jusqu'à ce que la première image de la vidéo soit disponible, ensuite, c'est cette image qui est affichée comme vignette sur la vidéo.
+
+    > [!NOTE]
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini ne téléchargeront la ressource `poster` que lorsque la vidéo sera proche ou dans la zone d'affichage.
+
 - `preload`
   - : Cet attribut à [valeur contrainte](/fr/docs/Glossary/Enumerated) est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
     - `none`&nbsp;: la vidéo ne doit pas être préchargée.
@@ -84,6 +113,8 @@ Cet éléments inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glo
     La valeur par défaut peut être différente selon le navigateur. La spécification conseille d'utiliser la valeur `metadata`.
 
     > [!NOTE]
+    >
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini n'appliqueront le comportement `preload` que lorsque la vidéo sera proche ou dans la zone d'affichage.
     >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.
     > - Cet attribut est simplement une indication, la spécification ne force pas le navigateur à respecter la valeur de cet attribut.
@@ -191,7 +222,7 @@ Par exemple, le code HTML ci-dessous inclut le fichier «&nbsp;captions.vtt&nbsp
 </video>
 ```
 
-Les pistes de texte synchronisées peuvent également être ajoutées par programmation à l'aide de l'[API WebVTT](/fr/docs/Web/API/WebVTT_API).
+Les pistes de texte synchronisées peuvent également être ajoutées par programmation à l'aide de [l'API WebVTT](/fr/docs/Web/API/WebVTT_API).
 
 ### Détecter l'ajout et la suppression de pistes
 
@@ -414,7 +445,6 @@ Certains types de fichiers médias vous permettent de fournir des informations p
   - [Formats de conteneurs médias (types de fichiers)](/fr/docs/Web/Media/Guides/Formats/Containers)
   - [Guide des codecs vidéo du Web](/fr/docs/Web/Media/Guides/Formats/Video_codecs)
   - [Guide des codecs audio du Web](/fr/docs/Web/Media/Guides/Formats/Audio_codecs)
-
 - Les propriétés CSS permettant de positionner/redimensionner le contenu&nbsp;: {{CSSxRef("object-position")}} et {{CSSxRef("object-fit")}}
 - L'élément {{HTMLElement("audio")}}
 - [Utiliser les éléments `<audio>` et `<video>`](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)

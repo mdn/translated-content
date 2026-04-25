@@ -1,8 +1,9 @@
 ---
-title: cy
+title: Propriété CSS `cy`
+short-title: cy
 slug: Web/CSS/Reference/Properties/cy
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`cy`** définit le point central sur l'axe des ordonnées d'un élément SVG {{SVGElement("circle")}} ou {{SVGElement("ellipse")}}. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("cy")}} de l'élément.

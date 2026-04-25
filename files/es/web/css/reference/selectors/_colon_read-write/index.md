@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:read-write
 original_slug: Web/CSS/:read-write
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Reference/Elements/input)) que es editable por el usuario.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:read-write`** de [CSS](/es/docs/Web/CSS) representa un elemento (como un [input](/es/docs/Web/HTML/Reference/Elements/input)) que es editable por el usuario.
 
 ```css
 /* Selecciona cualquier elemento <input> que sea editable */

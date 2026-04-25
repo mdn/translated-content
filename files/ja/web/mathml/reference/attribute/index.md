@@ -67,7 +67,7 @@ l10n:
       <td><code>background</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/background-color"><code>background-color</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/background-color"><code>background-color</code></a> を使用してください。
       </td>
     </tr>
     <tr>
@@ -79,7 +79,7 @@ l10n:
       <td><code>color</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/color"><code>color</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/color"><code>color</code></a> を使用してください。
       </td>
     </tr>
     <tr>
@@ -123,7 +123,7 @@ l10n:
     <tr>
       <td><code>dir</code></td>
       <td>
-        <a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a>
+        <a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a>
       </td>
       <td>
         テキストの書字方向です。可能な値は、 <code>ltr</code> （左から右）または <code>rtl</code> （右から左）です。
@@ -138,10 +138,10 @@ l10n:
     </tr>
     <tr>
       <td><code>displaystyle</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
         <p>
-        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/Reference/Properties/math-style">math-style</a> を <code>normal</code> （true の場合）と <code>compact</code> （それ以外の場合）のどちらに設定するかを指定します。
         </p>
       </td>
     </tr>
@@ -156,28 +156,28 @@ l10n:
       <td><code>fontfamily</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/font-family"><code>font-family</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/font-family"><code>font-family</code></a> を使用してください。
       </td>
     </tr>
     <tr>
       <td><code>fontsize</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/font-size"><code>font-size</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> を使用してください。
       </td>
     </tr>
     <tr>
       <td><code>fontstyle</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/font-style"><code>font-style</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/font-style"><code>font-style</code></a> を使用してください。
       </td>
     </tr>
     <tr>
       <td><code>fontweight</code> {{deprecated_inline}}</td>
       <td>{{ MathMLElement("mstyle") }}</td>
       <td>
-        代わりに CSS の <a href="/ja/docs/Web/CSS/font-weight"><code>font-weight</code></a> を使用してください。
+        代わりに CSS の <a href="/ja/docs/Web/CSS/Reference/Properties/font-weight"><code>font-weight</code></a> を使用してください。
       </td>
     </tr>
     <tr>
@@ -206,12 +206,12 @@ l10n:
     </tr>
     <tr>
       <td><code>href</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>指定された URI へのハイパーリンクを設定するために使用します。</td>
     </tr>
     <tr>
       <td><code>id</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>この要素に関連する一意の識別子を設定します。</td>
     </tr>
     <tr>
@@ -246,28 +246,28 @@ l10n:
     </tr>
     <tr>
       <td><code>mathbackground</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        要素の<a href="/ja/docs/Web/CSS/background-color">背景色</a>です。
+        要素の<a href="/ja/docs/Web/CSS/Reference/Properties/background-color">背景色</a>です。
       </td>
     </tr>
     <tr>
       <td><code>mathcolor</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        要素の<a href="/ja/docs/Web/CSS/color">色</a>です。
+        要素の<a href="/ja/docs/Web/CSS/Reference/Properties/color">色</a>です。
       </td>
     </tr>
     <tr>
       <td><code>mathsize</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        {{cssxref("length-percentage")}} で、この要素の <a href="/ja/docs/Web/CSS/font-size"><code>font-size</code></a> として使用されます。
+        {{cssxref("length-percentage")}} で、この要素の <a href="/ja/docs/Web/CSS/Reference/Properties/font-size"><code>font-size</code></a> として使用されます。
       </td>
     </tr>
     <tr>
       <td><code>mathvariant</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>文字組版によって異なるトークン要素の論理クラスです。</td>
     </tr>
     <tr>
@@ -284,7 +284,7 @@ l10n:
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
+        <a href="/ja/docs/Web/MathML/Reference/Values#mathml_固有の型"><code>&lt;boolean&gt;</code></a> で、 <a href="/ja/docs/Web/CSS/Reference/Properties/math-style">math-style</a> が <code>compact</code> に設定されていた場合に上側・下側の文字が上付き・下付き文字に移動するかどうかを示します。
       </td>
     </tr>
     <tr>
@@ -344,9 +344,9 @@ l10n:
     </tr>
     <tr>
       <td><code>scriptlevel</code></td>
-      <td><a href="/ja/docs/Web/MathML/Global_attributes">すべての MathML 要素</a></td>
+      <td><a href="/ja/docs/Web/MathML/Reference/Global_attributes">すべての MathML 要素</a></td>
       <td>
-        この要素の <a href="/ja/docs/Web/CSS/math-depth">math-depth</a> を指定します。受け付ける値や対応は、 <a href="/ja/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel ページ</a>を参照してください。
+        この要素の <a href="/ja/docs/Web/CSS/Reference/Properties/math-depth">math-depth</a> を指定します。受け付ける値や対応は、 <a href="/ja/docs/Web/MathML/Global_attributes/scriptlevel#values">scriptlevel ページ</a>を参照してください。
       </td>
     </tr>
     <tr>

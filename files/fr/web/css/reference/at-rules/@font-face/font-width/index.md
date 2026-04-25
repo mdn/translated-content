@@ -1,8 +1,9 @@
 ---
-title: font-width
+title: Descripteur de règle CSS `font-width`
+short-title: font-width
 slug: Web/CSS/Reference/At-rules/@font-face/font-width
 l10n:
-  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 {{SeeCompatTable}}

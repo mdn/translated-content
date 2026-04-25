@@ -1,8 +1,9 @@
 ---
-title: object-view-box
+title: Propriété CSS `object-view-box`
+short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 l10n:
-  sourceCommit: 4b6027efb86db472ca6c37390fe9402b16b2716c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

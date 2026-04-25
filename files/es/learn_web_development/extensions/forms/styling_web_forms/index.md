@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 original_slug: Learn/Forms/Styling_web_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades.
 
@@ -14,8 +14,8 @@ En los artículos anteriores vimos todo el HTML que necesitas para crear y estru
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática y una comprensión básica de
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y
-        <a href="/es/docs/Learn/CSS/First_steps">CSS</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">HTML</a> y
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">CSS</a>.
       </td>
     </tr>
     <tr>
@@ -59,7 +59,7 @@ Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS com
 - Casillas de verificación ([checkbox](/es/docs/Web/HTML/Reference/Elements/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Reference/Elements/input/radio)).
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
-Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling).
+Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 #### Lo feo
 
@@ -269,7 +269,7 @@ form {
 }
 ```
 
-Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) y [Flexbox](/es/docs/Web/CSS/CSS_flexible_box_layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
+Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/Guides/Grid_layout) y [Flexbox](/es/docs/Web/CSS/Guides/Flexible_box_layout) para diseñar el formulario. Usando esto, podemos posicionar fácilmente nuestros elementos, incluido el título y todos los elementos del formulario:
 
 ```css
 h1 {
@@ -352,7 +352,7 @@ textarea {
 
 #### Dar estilo al botón de enviar
 
-El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con CSS; puedes hacer lo que quieras, incluso usando [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements):
+El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con CSS; puedes hacer lo que quieras, incluso usando [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
@@ -388,16 +388,16 @@ button:focus {
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que ha retenido esta información antes de continuar; consulte [Ponga a prueba sus habilidades: Conceptos básicos de estilo](/es/docs/Learn/Forms/Test_your_skills:_Styling_basics).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que ha retenido esta información antes de continuar; consulte [Ponga a prueba sus habilidades: Conceptos básicos de estilo](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Resumen
 
 Como puede ver, siempre que queramos crear formularios con solo campos de texto y botones, es fácil diseñarlos usando CSS. [En el próximo artículo](/es/docs/Learn/Forms/Advanced_form_styling), veremos cómo manejar los controles de formulario que caen en las categorías "malo" y "feo".
 
-{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 ### Temas avanzados
 
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Envío de formularios a través de JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tabla de compatibilidad de propiedades para controles de formulario](/es/docs/Learn_web_development/Extensions/Forms)

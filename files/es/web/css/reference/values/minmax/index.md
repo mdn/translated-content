@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Values/minmax
 original_slug: Web/CSS/minmax
 ---
 
-La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/CSS_grid_layout).
+La función **`minmax()`** [en CSS](/es/docs/Web/CSS) define un rango de tamaño mayor o igual que _min_ y menor o igual que _max_. Se emplea con [rejillas CSS](/es/docs/Web/CSS/Guides/Grid_layout).
 
 ```css
 /* valores <ancho no-flexible>, <ancho de la banda> */
@@ -64,10 +64,10 @@ Si _max_ < _min_, entonces _max_ es ignorado y se trata a `minmax(min,max)` como
 
 La función `minmax()` puede ser usada dentro de:
 
-- [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-- [grid-template-rows](/es/docs/Web/CSS/grid-template-columns)
-- [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
-- [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+- [grid-template-columns](/es/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [grid-template-rows](/es/docs/Web/CSS/Reference/Properties/grid-template-columns)
+- [grid-auto-columns](/es/docs/Web/CSS/Reference/Properties/grid-auto-columns)
+- [grid-auto-rows](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows)
 
 ## Ejemplo
 
@@ -118,45 +118,45 @@ La función `minmax()` puede ser usada dentro de:
 
 ## Mira también
 
-- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Track_sizing_and_minmax()>)_
+- Guía de Grid Layout: _[Conceptos básicos del diseño con rejilla - tamaño de bandas con minmax()](</es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#Track_sizing_and_minmax()>)_
 - [Rejillas CSS, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - Video tutorial: _[Presentando minmax()](https://gridbyexample.com/video/series-minmax/)_
 
 1. [**CSS**](/es/docs/Web/CSS)
 2. [**Referencia CSS**](/es/docs/Web/CSS/Reference)
-3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
+3. [CSS Grid Layout](/es/docs/Web/CSS/Guides/Grid_layout)
 4. **Guías**
-   1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-   2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+   2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
    3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
    4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
    5. [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-   6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-   7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
+   7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Box_alignment)
    8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
    9. [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-   10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-   11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+   10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/Guides/Grid_layout)
+   11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
 
 5. **Propiedades**
-   1. [grid](/es/docs/Web/CSS/grid)
+   1. [grid](/es/docs/Web/CSS/Reference/Properties/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
-   3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
+   3. [grid-auto-columns](/es/docs/Web/CSS/Reference/Properties/grid-auto-columns)
    4. [grid-auto-flow](/es/docs/Web/CSS/grid-auto-flow)
-   5. [grid-auto-rows](/es/docs/Web/CSS/grid-auto-rows)
+   5. [grid-auto-rows](/es/docs/Web/CSS/Reference/Properties/grid-auto-rows)
    6. [grid-column](/es/docs/Web/CSS/grid-column)
    7. [grid-column-end](/es/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/es/docs/Web/CSS/column-gap)
+   8. [grid-column-gap](/es/docs/Web/CSS/Reference/Properties/column-gap)
    9. [grid-column-start](/es/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/es/docs/Web/CSS/gap)
+   10. [grid-gap](/es/docs/Web/CSS/Reference/Properties/gap)
    11. [grid-row](/es/docs/Web/CSS/grid-row)
    12. [grid-row-end](/es/docs/Web/CSS/grid-row-end)
    13. [grid-row-gap](/es/docs/Web/CSS/row-gap)
    14. [grid-row-start](/es/docs/Web/CSS/grid-row-start)
    15. [grid-template](/es/docs/Web/CSS/grid-template)
-   16. [grid-template-areas](/es/docs/Web/CSS/grid-template-areas)
-   17. [grid-template-columns](/es/docs/Web/CSS/grid-template-columns)
-   18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
+   16. [grid-template-areas](/es/docs/Web/CSS/Reference/Properties/grid-template-areas)
+   17. [grid-template-columns](/es/docs/Web/CSS/Reference/Properties/grid-template-columns)
+   18. [grid-template-rows](/es/docs/Web/CSS/Reference/Properties/grid-template-rows)
 
 6. **Glosario**
    1. [Rejilla](/es/docs/Glossary/Grid)

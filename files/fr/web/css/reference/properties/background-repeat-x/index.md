@@ -1,9 +1,12 @@
 ---
-title: background-repeat-x
+title: Propriété CSS `background-repeat-x`
+short-title: background-repeat-x
 slug: Web/CSS/Reference/Properties/background-repeat-x
 l10n:
-  sourceCommit: 739c9994ad2e83809110f601d8941f61d6785f29
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
+
+{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat-x`** définit comment les images de fond sont répétées, ou non, le long de l'axe horizontal.
 

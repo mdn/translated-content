@@ -1,8 +1,9 @@
 ---
-title: -webkit-tap-highlight-color
+title: Propriété CSS `-webkit-tap-highlight-color`
+short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_Header}}

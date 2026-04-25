@@ -1,15 +1,15 @@
 ---
-title: "Attribut HTML universel : lang"
+title: "Attribut HTML universel : `lang`"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`lang`** aide à définir la langue d'un élément&nbsp;: la langue dans laquelle les éléments non modifiables sont écrits, ou la langue dans laquelle les éléments modifiables doivent être écrits par l'utilisateur·ice. L'attribut contient une seule {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}.
 
 > [!NOTE]
-> La valeur par défaut de `lang` est la chaîne de caractères vide, ce qui signifie que la langue est inconnue. Il est donc recommandé de toujours définir une valeur appropriée pour cet attribut.
+> Si la valeur de `lang` est est définie avec une chaîne de caractères vide, ça signifie que la langue est explicitement inconnue. Il est donc recommandé de toujours définir une valeur appropriée pour cet attribut.
 
 {{InteractiveExample("Démonstration HTML&nbsp;: lang", "tabbed-shorter")}}
 
@@ -43,7 +43,7 @@ Pour la pseudo-classe CSS {{CSSxRef(":lang")}}, deux noms de langues invalides s
 
 ## Problèmes d'accessibilité
 
-Le critère de succès WCAG 3.1.1 **exige** qu'une langue de page soit définie de manière à pouvoir être «&nbsp;déterminée par programme&nbsp;» (c'est-à-dire via l'attribut **`lang`**).
+Le critère de succès WCAG 3.1.1 **exige** qu'une langue de page soit définie de manière à pouvoir être «&nbsp;déterminée par programme&nbsp;» (c'est-à-dire avec l'attribut **`lang`**).
 
 Le critère de succès WCAG 3.1.2 exige que les pages comportant des **parties** dans différentes langues aient également les langues de ces parties définies. Encore une fois, l'attribut **`lang`** est le mécanisme correct pour cela.
 

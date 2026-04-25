@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Forms
 original_slug: Learn/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django e, em particular, a maneira mais fácil de programar formulários para criar, alterar e excluir instâncias de modelos. Como parte desta demonstração, vamos estender o site da [BibliotecaLocal](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) para que bibliotecários possam renovar reservas e criar, alterar e excluir autores usando nossos próprios formulários em vez do "admin" do Django.
 
@@ -15,7 +15,7 @@ Neste tutorial, vamos te mostrar como trabalhar com formulários HTML no Django 
       <td>
         Completar todos os tópicos anteriores deste tutorial, incluindo
         <a
-          href="/pt-BR/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Authentication"
           >Django Tutorial Parte 8: Autenticação e Permissões de Usuário</a
         >.
       </td>
@@ -682,4 +682,4 @@ Há muito mais que pode ser feito com formulários (confira abaixo nossa lista V
 - [Criando formulários com _models_](https://docs.djangoproject.com/en/2.1/topics/forms/modelforms/) (Django docs)
 - [Views genéricas de edição](https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/) (Django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}

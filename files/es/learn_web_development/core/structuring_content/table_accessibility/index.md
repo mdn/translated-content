@@ -14,7 +14,7 @@ En el segundo artículo de este módulo, analizamos algunas características má
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (ver
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >).
       </td>

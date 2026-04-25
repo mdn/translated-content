@@ -369,4 +369,4 @@ Solo nos falta mostrar el código HTML necesario para mostrar el ejemplo en la p
 
 - {{ domxref("AnimationEvent", "AnimationEvent") }}
 - [Detecting CSS animation support](/es/docs/CSS/CSS_animations/Detecting_CSS_animation_support)
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/Guides/Transitions/Using)

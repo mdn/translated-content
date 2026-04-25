@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Selectors/:only-child
 original_slug: Web/CSS/:only-child
 ---
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:only-child`** de [CSS](/es/docs/Web/CSS) representa un elemento sin hermanos. Esto es lo mismo que `:first-child:last-child` o `:nth-child(1):nth-last-child(1)`, pero con una especificidad menor.
+La [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:only-child`** de [CSS](/es/docs/Web/CSS) representa un elemento sin hermanos. Esto es lo mismo que `:first-child:last-child` o `:nth-child(1):nth-last-child(1)`, pero con una especificidad menor.
 
 ```css
 /* Selecciona cada <p>, pero solo si es el */

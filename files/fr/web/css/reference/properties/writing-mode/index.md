@@ -1,14 +1,14 @@
 ---
-title: writing-mode
+title: Propriété CSS `writing-mode`
+short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
-original_slug: Web/CSS/writing-mode
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément `html` pour les documents HTML).
 
-La propriété CSS **`writing-mode`** définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit. Lorsque cette propriété est définie pour un document entier, elle devrait être appliquée à la racine (soit l'élément {{HTMLElement("html")}} pour les documents HTML).
-
-{{InteractiveExample("CSS Demo: writing-mode")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: writing-mode")}}
 
 ```css interactive-example-choice
 writing-mode: horizontal-tb;
@@ -47,18 +47,16 @@ writing-mode: sideways-lr;
   padding: 0.75em;
   width: 80%;
   max-height: 300px;
-  display: flex;
 }
 
 #example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
+  background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
-  flex: 1;
 }
 ```
 
-La propriété définit la direction du flux du bloc. C'est dans cette direction que les conteneurs de bloc seront empilés et c'est dans cette direction que le contenu en flux « coule » dans un bloc contenur. Ainsi, la propriété `writing-mode` détermine également l'ordre du contenu de niveau bloc.
+La propriété définit la _direction du flux du bloc_, c'est-à-dire la direction dans laquelle les conteneurs de niveau bloc sont empilés, et la direction dans laquelle le contenu de niveau en ligne s'écoule à l'intérieur d'un conteneur de bloc. Ainsi, elle détermine également l'ordre du contenu de niveau bloc.
 
 ## Syntaxe
 
@@ -67,37 +65,42 @@ La propriété définit la direction du flux du bloc. C'est dans cette direction
 writing-mode: horizontal-tb;
 writing-mode: vertical-rl;
 writing-mode: vertical-lr;
+writing-mode: sideways-rl;
+writing-mode: sideways-lr;
 
 /* Valeurs globales */
 writing-mode: inherit;
 writing-mode: initial;
+writing-mode: revert;
+writing-mode: revert-layer;
 writing-mode: unset;
 ```
+
+La propriété `writing-mode` est définie comme l'une des valeurs listées ci-dessous. La direction du flux dans les systèmes d'écritures horizontaux est également affectée par la [directionnalité de ce système <sup>(angl.)</sup>](https://www.w3.org/International/questions/qa-scripts.en), soit de gauche à droite (`ltr`, comme le français et la plupart des autres langues) ou de droite à gauche (`rtl`, comme l'hébreu ou l'arabe).
 
 ### Valeurs
 
 - `horizontal-tb`
-  - : Le contenu coule horizontalement de gauche à droite puis de haut en bas. La ligne horizontale suivante est positionnée sous la ligne précédente.
+  - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule horizontalement de gauche à droite. Pour les systèmes d'écritures `rtl`, le contenu s'écoule horizontalement de droite à gauche. La ligne horizontale suivante est positionnée sous la ligne précédente.
 - `vertical-rl`
-  - : Le contenu coule verticalement de haut en bas puis horizontalement de droite à gauche. La ligne verticale suivante est positionnée à gauche de la ligne précédente.
+  - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de haut en bas, et la ligne verticale suivante est positionnée à gauche de la ligne précédente. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de bas en haut, et la ligne verticale suivante est positionnée à gauche de la ligne précédente.
 - `vertical-lr`
-  - : Le contenu coule verticalement de haut en bas puis horizontalement de gauche à droite. La ligne verticale suivante est positionnée à droite de la ligne précédente.
-- `sideways-rl`{{experimental_inline}}
-  - : Le contenu coule verticalement du haut vers le bas et tous les glyphes, y compris pour les systèmes d'écriture verticaux sont tournés sur le côté, vers la droite.
-
-<!---->
-
-- `sideways-lr`{{experimental_inline}}
-  - : Le contenu coule verticalement du haut vers le bas et tous les glyphes, y compris pour les systèmes d'écriture verticaux sont tournés sur le côté, vers la gauche.
-- `lr` {{deprecated_inline}}
+  - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de haut en bas, et la ligne verticale suivante est positionnée à droite de la ligne précédente. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de bas en haut, et la ligne verticale suivante est positionnée à droite de la ligne précédente.
+- `sideways-rl`
+  - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de haut en bas. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de bas en haut. Tous les glyphes, même ceux des systèmes d'écritures verticaux, sont orientés de côté vers la droite.
+- `sideways-lr`
+  - : Pour les systèmes d'écritures `ltr`, le contenu s'écoule verticalement de bas en haut. Pour les systèmes d'écritures `rtl`, le contenu s'écoule verticalement de haut en bas. Tous les glyphes, même ceux des systèmes d'écritures verticaux, sont orientés de côté vers la gauche.
+- `lr` {{Deprecated_Inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `lr-tb` {{deprecated_inline}}
+- `lr-tb` {{Deprecated_Inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `rl` {{deprecated_inline}}
+- `rl` {{Deprecated_Inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `horizontal-tb`.
-- `tb` {{deprecated_inline}}
+- `tb` {{Deprecated_Inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
-- `tb-rl` {{deprecated_inline}}
+- `tb-lr` {{Deprecated_Inline}}
+  - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-lr`.
+- `tb-rl` {{Deprecated_Inline}}
   - : Valeur dépréciée, sauf pour les documents SVG1. Pour CSS, il faut utiliser `vertical-rl`.
 
 ## Définition formelle
@@ -110,116 +113,222 @@ writing-mode: unset;
 
 ## Exemple
 
-### HTML
+### Utiliser plusieurs modes d'écriture
+
+Cet exemple démontre tous les modes d'écriture, en montrant chacun avec du texte dans différentes langues.
+
+#### HTML
 
 Ce fragment de code HTML contient un tableau ({{HTMLElement("table")}}) dont chaque ligne indique le mode d'écriture et des exemples de scripts utilisés.
 
 ```html
 <table>
-  <tr>
-    <th>Valeur</th>
-    <th>Système d'écriture vertical</th>
-    <th>Système d'écriture horizontal</th>
-    <th>Système d'écriture hybride</th>
-  </tr>
-  <tr>
-    <td>horizontal-tb</td>
-    <td class="example Text1">我家没有电脑。</td>
-    <td class="example Text1">Example text</td>
-    <td class="example Text1">1994年に至っては</td>
-  </tr>
-  <tr>
-    <td>vertical-lr</td>
-    <td class="example Text2">我家没有电脑。</td>
-    <td class="example Text2">Example text</td>
-    <td class="example Text2">1994年に至っては</td>
-  </tr>
-  <tr>
-    <td>vertical-rl</td>
-    <td class="example Text3">我家没有电脑。</td>
-    <td class="example Text3">Example text</td>
-    <td class="example Text3">1994年に至っては</td>
-  </tr>
-  <tr>
-    <td>sideways-lr</td>
-    <td class="example Text4">我家没有电脑。</td>
-    <td class="example Text4">Example text</td>
-    <td class="example Text4">1994年に至っては</td>
-  </tr>
-  <tr>
-    <td>sideways-rl</td>
-    <td class="example Text5">我家没有电脑。</td>
-    <td class="example Text5">Example text</td>
-    <td class="example Text5">1994年に至っては</td>
-  </tr>
+  <caption>
+    Utiliser plusieurs modes d'écriture
+  </caption>
+  <thead>
+    <tr>
+      <th>Valeur</th>
+      <th>Système d'écriture vertical</th>
+      <th>Système d'écriture horizontal</th>
+      <th>Système d'écriture hybride</th>
+      <th>Système d'écriture mixte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text1">
+      <th>horizontal-tb</th>
+      <td>我家没有电脑。</td>
+      <td>Texte d'exemple</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text2">
+      <th>vertical-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Texte d'exemple</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text3">
+      <th>vertical-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Texte d'exemple</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text4">
+      <th>sideways-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Texte d'exemple</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text5">
+      <th>sideways-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Texte d'exemple</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+  </tbody>
 </table>
+<p class="notice">
+  Votre navigateur ne prend pas en charge les valeurs<code>sideways-lr</code> ou
+  <code>sideways-rl</code>.
+</p>
 ```
 
-### CSS
+#### CSS
 
-Cette première partie permet uniquement de rendre les choses plus agréables à lire :
-
-```css
+```css hidden
 table {
   border-collapse: collapse;
 }
-
 td,
 th {
-  border: 1px black solid;
-  padding: 3px;
+  border: 2px black solid;
+  padding: 4px;
 }
 th {
   background-color: lightgray;
 }
+
+.experimental {
+  display: none;
+}
+
+.notice {
+  display: table-row;
+  font-weight: bold;
+  text-align: center;
+}
+
+@supports (writing-mode: sideways-lr) {
+  .experimental {
+    display: table-row;
+  }
+  .notice {
+    display: none;
+  }
+}
 ```
 
-Ensuite, on ajoute la direction du contenu pour chaque cellule du tableau :
+Ensuite, on ajoute la direction du contenu pour chaque cellule du tableau&nbsp;:
 
 ```css
-.example.Text1 span,
-.example.Text1 {
+.text1 td {
   writing-mode: horizontal-tb;
-  -webkit-writing-mode: horizontal-tb;
-  -ms-writing-mode: horizontal-tb;
 }
 
-.example.Text2 span,
-.example.Text2 {
+.text2 td {
   writing-mode: vertical-lr;
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: vertical-lr;
 }
 
-.example.Text3 span,
-.example.Text3 {
+.text3 td {
   writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
 }
 
-.example.Text4 span,
-.example.Text4 {
+.text4 td {
   writing-mode: sideways-lr;
-  -webkit-writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
 }
 
-.example.Text5 span,
-.example.Text5 {
+.text5 td {
   writing-mode: sideways-rl;
-  -webkit-writing-mode: sideways-rl;
-  -ms-writing-mode: sideways-rl;
 }
 ```
 
-{{EmbedLiveSample("Exemple", 400, 500)}}
+#### Résultat
 
-### Résultat statique
+{{EmbedLiveSample("Utiliser plusieurs modes d'écriture", 400, 700)}}
 
-Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mode` :
+### Utiliser `writing-mode` avec des transformations
 
-![](writing-mode-actual-result.png)
+Si votre navigateur ne prend pas en charge `sideways-lr`, une solution consiste à utiliser {{CSSxRef("transform")}} pour obtenir un effet similaire en fonction de la direction du système d'écriture.
+L'effet de `vertical-rl` est le même que celui de `sideways-lr`, donc aucune transformation n'est nécessaire pour les systèmes d'écriture de gauche à droite.
+Dans certains cas, faire pivoter le texte de 180 degrés suffit pour obtenir l'effet de `sideways-lr`, mais les glyphes de la police peuvent ne pas être conçus pour être pivotés, ce qui peut produire un positionnement ou un rendu inattendu.
+
+#### HTML
+
+```html
+<table>
+  <caption>
+    Utiliser le mode d'écriture avec des transformations
+  </caption>
+  <thead>
+    <tr>
+      <th>Mode vertical de gauche à droite</th>
+      <th>Mode vertical de gauche à droite avec transformation</th>
+      <th>Mode horizontal de gauche à droite</th>
+      <th>Rotation seule</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="vertical-lr">我家没有电脑。</span>
+        <span class="vertical-lr">Texte d'exemple</span>
+      </td>
+      <td>
+        <span class="vertical-lr rotated">我家没有电脑。</span>
+        <span class="vertical-lr rotated">Texte d'exemple</span>
+      </td>
+      <td>
+        <span class="sideways-lr">我家没有电脑。</span>
+        <span class="sideways-lr">Texte d'exemple</span>
+      </td>
+      <td>
+        <span class="only-rotate">我家没有电脑。</span>
+        <span class="only-rotate">Texte d'exemple</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### CSS
+
+```css
+.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.sideways-lr {
+  writing-mode: sideways-lr;
+}
+
+.only-rotate {
+  inline-size: fit-content;
+  transform: rotate(-90deg);
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 2px black solid;
+  padding: 4px;
+}
+th {
+  background-color: lightgray;
+}
+span {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample("Utiliser `writing-mode` avec des transformations", 400, 200)}}
 
 ## Spécifications
 
@@ -231,11 +340,13 @@ Voici un aperçu du résultat avec un navigateur qui prend en charge `writing-mo
 
 ## Voir aussi
 
-- L'attribut SVG [`writing-mode`](/fr/docs/Web/SVG/Attribute/writing-mode)
-- {{cssxref("direction")}}
-- {{cssxref("unicode-bidi")}}
-- {{cssxref("text-orientation")}}
-- {{cssxref("text-combine-upright")}}
-- [Les propriétés logiques en CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
-- [Mettre en forme du texte vertical (chinois, coréen, japonais, mongol)](https://www.w3.org/International/articles/vertical-text/)
-- [Tests de prise en charge des navigateurs](https://w3c.github.io/i18n-tests/results/writing-mode-vertical)
+- La propriété {{CSSxRef("direction")}}
+- La propriété {{CSSxRef("unicode-bidi")}}
+- La propriété {{CSSxRef("text-orientation")}}
+- La propriété {{CSSxRef("text-combine-upright")}}
+- [Les propriété logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Le module [des modes d'écriture CSS](/fr/docs/Web/CSS/Guides/Writing_modes)
+- L'attribut SVG {{SVGAttr("writing-mode")}}
+- [Créer des contrôles de formulaire verticaux](/fr/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
+- [Gérer différentes directions de texte](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [Mettre en forme le texte vertical (chinois, japonais, coréen et mongol) <sup>(angl.)</sup>](https://www.w3.org/International/articles/vertical-text/) sur W3.org (2022)

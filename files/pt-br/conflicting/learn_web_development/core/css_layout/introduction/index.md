@@ -16,7 +16,7 @@ Este artigo aborda o _Fluxo Normal_ de alinhamento e acomodação do conteúdo d
       <th scope="row">Prerrequisitos:</th>
       <td>
         Introdução ao HTML (study
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), e uma noção de como o CSS funciona (study
         <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
@@ -45,7 +45,7 @@ First of all, individual element boxes are laid out by taking the elements' cont
 
 By default, a [block level element](/pt-BR/docs/Glossary/Block-level_content)'s content is 100% of the width of its parent element, and as tall as its content. [Inline elements](/pt-BR/docs/Glossary/Inline-level_content) are as tall as their content, and as wide as their content. You can't set width or height on inline elements — they just sit inside the content of block level elements. If you want to control the size of an inline element in this manner, you need to set it to behave like a block level element with `display: block;` (or even,`display: inline-block;` which mixes characteristics from both.)
 
-That explains individual elements, but what about how elements interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, based on the parent's [writing mode](/pt-BR/docs/Web/CSS/writing-mode) (_initial_: horizontal-tb) — each one will appear on a new line below the last one, and they will be separated by any margin that is set on them. In English therefore, or any other horizontal, top to bottom writing mode, block-level elements are laid out vertically.
+That explains individual elements, but what about how elements interact with one another? The normal layout flow (mentioned in the layout introduction article) is the system by which elements are placed inside the browser's viewport. By default, block-level elements are laid out in the _block flow direction_, based on the parent's [writing mode](/pt-BR/docs/Web/CSS/Reference/Properties/writing-mode) (_initial_: horizontal-tb) — each one will appear on a new line below the last one, and they will be separated by any margin that is set on them. In English therefore, or any other horizontal, top to bottom writing mode, block-level elements are laid out vertically.
 
 Inline elements behave differently — they don't appear on new lines; instead, they sit on the same line as one another and any adjacent (or wrapped) text content, as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing text or elements will move down to a new line.
 

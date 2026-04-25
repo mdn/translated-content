@@ -1,10 +1,11 @@
 ---
 title: math:highest()
 slug: Web/XML/EXSLT/Reference/math/highest
-original_slug: Web/EXSLT/math/highest
+l10n:
+  sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/XML/EXSLT")}}
 
 `math:highest()` は、指定されたノードセットの最大値（[`math:max()`](/ja/docs/Web/XML/EXSLT/math/max) を使用して計算した最大値）を持つノードを返します。
 
@@ -27,4 +28,4 @@ math:highest(nodeSet)
 
 ## 仕様書
 
-[EXSLT - MATH:HIGHEST](http://exslt.org/math/functions/highest/index.html)
+[EXSLT - MATH:HIGHEST](https://exslt.github.io/math/functions/highest/index.html)

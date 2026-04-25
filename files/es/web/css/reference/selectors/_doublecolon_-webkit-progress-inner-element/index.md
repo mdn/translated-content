@@ -8,7 +8,7 @@ original_slug: Web/CSS/::-webkit-progress-inner-element
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-inner-element`** representa la parte más exterior de un elemento {{HTMLElement("progress")}}. Es el padre del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
+El [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/es/docs/Web/CSS) **`::-webkit-progress-inner-element`** representa la parte más exterior de un elemento {{HTMLElement("progress")}}. Es el padre del pseudo-elemento {{cssxref("::-webkit-progress-bar")}}.
 
 > [!NOTE]
 > Para que `::-webkit-progress-inner-element` tenga efecto , hay que darle valor none a {{cssxref("-webkit-appearance")}} en el elemento `<progress>`.

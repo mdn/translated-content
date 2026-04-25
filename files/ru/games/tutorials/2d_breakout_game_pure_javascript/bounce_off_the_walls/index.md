@@ -105,4 +105,4 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 Теперь мы добрались до стадии, где наш мяч одновременно двигается и остаётся на игровом поле. В четвёртой главе мы рассмотрим реализацию управления — см. [Paddle and keyboard controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

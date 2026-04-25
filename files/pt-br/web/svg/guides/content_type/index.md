@@ -7,7 +7,6 @@ original_slug: Web/SVG/Content_type
 ## Angle
 
 - \<angle>
-
   - : Angles are specified in one of two ways. When used in the value of a property in a stylesheet, an \<angle> is defined as follows:
 
     ```
@@ -31,7 +30,6 @@ original_slug: Web/SVG/Content_type
 ## Anything
 
 - \<anything>
-
   - : O tipo básico \<anything> é uma sequência de zero ou mais caracteres. Especificamente:
 
     ```
@@ -43,7 +41,6 @@ original_slug: Web/SVG/Content_type
 ## Clock-value
 
 - \<clock-value>
-
   - : Clock values have the same syntax as in [SMIL Animation](https://www.w3.org/TR/2001/REC-smil-animation-20010904/) specification. The grammar for clock values is repeated here:
 
     ```
@@ -65,7 +62,6 @@ original_slug: Web/SVG/Content_type
     For `Timecount` values, the default metric suffix is "s" (for seconds). No embedded white space is allowed in clock values, although leading and trailing white space characters will be ignored.
 
     The following are examples of legal clock values:
-
     - Full clock values:
       `02:30:03` = 2 hours, 30 minutes and 3 seconds
       `50:00:10.25` = 50 hours, 10 seconds and 250 milliseconds
@@ -86,7 +82,6 @@ original_slug: Web/SVG/Content_type
 ## Color
 
 - \<color>
-
   - : The basic type \<color> is a CSS2 compatible specification for a color in the sRGB color space. \<color> applies to SVG's use of the {{SVGAttr("color")}} attribute and is a component of the definitions of attributes {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}} and {{SVGAttr("lighting-color")}}, which also offer optional ICC-based color specifications.
 
     SVG supports all of the syntax alternatives for \<color> defined in [CSS2 syntax and basic data types](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color), and (depend on the implementation) in the future [CSS Color Module Level 3](https://www.w3.org/TR/css3-color/).
@@ -112,7 +107,6 @@ original_slug: Web/SVG/Content_type
 ## Coordinate
 
 - \<coordinate>
-
   - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/pt-BR/docs/Web/SVG#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
@@ -120,9 +114,7 @@ original_slug: Web/SVG/Content_type
 ## Frequency
 
 - \<frequency>
-
   - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/pt-BR/docs/Web/SVG#number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
-
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
 
@@ -136,7 +128,6 @@ original_slug: Web/SVG/Content_type
 ## ICCColor
 
 - \<icccolor>
-
   - : An \<icccolor> is an ICC color specification. In SVG 1.1, an ICC color specification is given by a name, which references a {{SVGElement("color-profile")}} element, and one or more color component values. The grammar is as follows:
 
     ```
@@ -148,7 +139,6 @@ original_slug: Web/SVG/Content_type
 ## Integer
 
 - \<integer>
-
   - : An \<integer> is specified as an optional sign character ("+" or "-") followed by one or more digits "0" to "9":
 
     ```
@@ -164,10 +154,9 @@ original_slug: Web/SVG/Content_type
 ## IRI
 
 - \<IRI>
-
   - : An Internationalized Resource Identifier.
 
-    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called someDrawing.svg located at `http://example.com` might have the following _IRI_:
+    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called someDrawing.svg located at `http://example.com` might have the following \_IRI_:
 
     ```
     http://example.com/someDrawing.svg
@@ -179,7 +168,7 @@ original_slug: Web/SVG/Content_type
     http://example.com/someDrawing.svg#Lamppost
     ```
 
-    _IRI_s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is simply an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "url(" and ")", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    _IRI_s are used in the {{SVGAttr("xlink:href")}} attribute. Some attributes allow both \_IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is simply an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "url(" and ")", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
@@ -194,7 +183,6 @@ original_slug: Web/SVG/Content_type
     ```
 
     SVG supports two types of _IRI_ references:
-
     - local _IRI_ references, where the IRI reference does not contain an `<absoluteIRI>` or `<relativeIRI>` and thus only contains a fragment identifier (i.e., `#<elementID>` or `#xpointer(id<elementID>)`)
     - non-local _IRI_ references, where the _IRI_ reference does contain an `<absoluteIRI>` or `<relativeIRI>`
 
@@ -203,7 +191,6 @@ original_slug: Web/SVG/Content_type
 ## Length
 
 - \<length>
-
   - : A length is a distance measurement, given as a number along with a unit. Lengths are specified in one of two ways. When used in a stylesheet, a \<length> is defined as follows:
 
     ```
@@ -223,7 +210,6 @@ original_slug: Web/SVG/Content_type
     The unit identifiers in such \<length> values must be in lower case.
 
     Note that the non-property \<length> definition also allows a percentage unit identifier. The meaning of a percentage length value depends on the attribute for which the percentage length value has been specified. Two common cases are:
-
     - when a percentage length value represents a percentage of the viewport width or height
     - when a percentage length value represents a percentage of the bounding box width or height on a given object.
 
@@ -232,7 +218,6 @@ original_slug: Web/SVG/Content_type
 ## List-of-\_T_s
 
 - \<list-of-\_T_s>
-
   - : (Quando _T_ é algum tipo.) Uma lista constituida por uma sequência de valores separados. A não ser que esteja descrito explicitamente de maneira diferente, as listas de atributos XML dentro do SVG podem ser separados por vírgula ou por espaços em branco.
 
     O espaço em branco nas listas é definido como um ou mais dos seguintes caracteres consecutivos: "espaço" (U + 0020), "tab" (U + 0009), "line feed" (U + 000A), "retorno" (U + 000D) e "form-feed" (U + 000C).
@@ -249,7 +234,6 @@ original_slug: Web/SVG/Content_type
 ## Name
 
 - \<name>
-
   - : Um nome, que é uma string, onde alguns personagens de importância sintática não são suportados.
 
     ```
@@ -259,7 +243,6 @@ original_slug: Web/SVG/Content_type
 ## Number
 
 - \<number>
-
   - : Real numbers are specified in one of two ways. When used in a stylesheet, a \<number> is defined as follows:
 
     ```
@@ -281,7 +264,6 @@ original_slug: Web/SVG/Content_type
 ## Number-optional-number
 
 - \<number-optional-number>
-
   - : A pair of \<number>s, where the second \<number> is optional.
 
     ```
@@ -299,7 +281,6 @@ original_slug: Web/SVG/Content_type
 ## Paint
 
 - \<paint>
-
   - : Os valores das propriedades {{SVGAttr("fill")}} e {{SVGAttr("stroke")}} são especificações do tipo de pintura a ser utilizada quando o preenchimento ou acariciando um determinado elemento gráfico. As opções disponíveis e sintaxe para \<paint> estão descritos na [especificação de pintura](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint).
 
     Dentro do DOM do SVG, os valores do \<paint> são representados usando objetos {{domxref("SVGPaint")}}.
@@ -307,7 +288,6 @@ original_slug: Web/SVG/Content_type
 ## Percentage
 
 - \<percentage>
-
   - : Percentages are specified as a number followed by a "%" character:
 
     ```
@@ -323,16 +303,13 @@ original_slug: Web/SVG/Content_type
 ## Time
 
 - \<time>
-
   - : O valor de tempo é um \<number> imediatamente seguida por um indentificador de unidade de tempo. Os indicadores de unidade de tempo são:
-
     - ms: milisegundos
     - s: segundos
 
 ## Transform-list
 
 - \<transform-list>
-
   - : A \<transform-list> é utilizado para especificar uma lista de transformações das coordenadas do sistema. A descrição detalhada dos valores possíveis para a \<transform-list> é dada no {{SVGAttr("transform")}} atribuir definição.
 
     Dentro do DOM do SVG, o valor \<transform-list> é representado usando um objeto {{domxref("SVGTransformList")}} ou {{domxref("SVGAnimatedTransformList")}}.

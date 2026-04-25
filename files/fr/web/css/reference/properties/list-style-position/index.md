@@ -1,8 +1,9 @@
 ---
-title: list-style-position
+title: Propriété CSS `list-style-position`
+short-title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-position`** permet de définir la position du marqueur (cf. {{CSSxRef("::marker")}}) de liste par rapport à la boîte principale.

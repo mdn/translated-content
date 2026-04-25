@@ -1,8 +1,9 @@
 ---
-title: "@page"
+title: Règle CSS `@page`
+short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@page`** est utilisée pour modifier différents aspects des pages imprimées. Elle permet de cibler et de modifier les dimensions, l'orientation et les marges de la page. La règle `@page` peut s'appliquer à toutes les pages d'une impression ou à un sous-ensemble grâce à ses différentes pseudo-classes.
@@ -279,7 +280,7 @@ Les pages nommées permettent de réaliser une mise en page par page et d'ajoute
 
 Les pages nommées peuvent être appliquées à l'aide de la propriété {{CSSxRef("page")}}. Cela permet de créer différentes configurations de page à utiliser dans les mises en page d'impression.
 
-Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/page#exemples).
+Un exemple de ceci se trouve dans les exemples de la page [`page`](/fr/docs/Web/CSS/Reference/Properties/page#exemples).
 
 ## Exemples
 

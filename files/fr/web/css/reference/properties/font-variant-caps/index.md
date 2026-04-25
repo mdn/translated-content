@@ -1,8 +1,9 @@
 ---
-title: font-variant-caps
+title: Propriété CSS `font-variant-caps`
+short-title: font-variant-caps
 slug: Web/CSS/Reference/Properties/font-variant-caps
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-caps`** contrôle l'utilisation de glyphes alternatifs pour les petites capitales (<i lang="en">small caps</i>), les très petites capitales (<i lang="en">petite caps</i>) ou les capitales de titrage.

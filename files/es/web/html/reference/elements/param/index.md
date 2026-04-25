@@ -32,7 +32,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Categorías de contenido</a>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories">Categorías de contenido</a>
       </th>
       <td>Ninguno</td>
     </tr>
@@ -50,7 +50,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Un {{HTMLElement("object")}} antes de cualquier
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content"
           >contenido de flujo</a
         >.
       </td>

@@ -1,8 +1,9 @@
 ---
-title: "@layer"
+title: Règle CSS `@layer`
+short-title: "@layer"
 slug: Web/CSS/Reference/At-rules/@layer
 l10n:
-  sourceCommit: 5005d73d35175d72a470c2285f1c3953a54e3688
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@layer`** est utilisée pour déclarer une couche de cascade et peut également être utilisée afin de définir l'ordre de précédence lorsqu'il y a plusieurs couches de cascade.
@@ -64,7 +65,7 @@ Le schéma suivant montre les priorités des couches selon l'ordre de déclarati
 Comme indiqué dans le schéma ci-dessus, les _déclarations importantes_ (celles avec le drapeau `!important`) ont priorité sur les _déclarations normales_ (celles sans le drapeau `!important`). L'ordre de précédence entre les règles importantes est l'inverse de celui des règles normales. Les transitions ont la plus grande précédence. Viennent ensuite, de la plus haute à la plus basse priorité&nbsp;: les déclarations importantes de l'{{Glossary("user agent", "agent utilisateur")}}, les déclarations importantes de l'utilisateur·rice, puis les déclarations importantes de l'auteur·ice (développeur·euse web), dans cet ordre. Les utilisateur·ice·s peuvent spécifier des styles via les préférences du navigateur, du système d'exploitation ou des extensions. Leurs déclarations importantes l'emportent sur celles écrites par l'auteur·ice ou le·la développeur·euse.
 
 Dans les styles de l'auteur·ice, toutes les déclarations importantes à l'intérieur des couches CSS l'emportent sur les déclarations importantes en dehors d'une couche, tandis que toutes les déclarations normales à l'intérieur des couches CSS ont une priorité inférieure à celles déclarées en dehors d'une couche.
-L'ordre de déclaration est important&nbsp;: la première couche déclarée a la priorité la plus faible et la dernière la plus forte. Cependant, la priorité est inversée lorsque le drapeau [`!important`](/fr/docs/Web/CSS/important) est utilisé.
+L'ordre de déclaration est important&nbsp;: la première couche déclarée a la priorité la plus faible et la dernière la plus forte. Cependant, la priorité est inversée lorsque le drapeau [`!important`](/fr/docs/Web/CSS/Reference/Values/important) est utilisé.
 
 La règle @ `@layer` est utilisée pour créer une couche de cascade de trois façons.
 

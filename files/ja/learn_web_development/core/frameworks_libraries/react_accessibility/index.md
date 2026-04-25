@@ -1,11 +1,10 @@
 ---
 title: React でのアクセシビリティ
+short-title: React のアクセシビリティ
 slug: Learn_web_development/Core/Frameworks_libraries/React_accessibility
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 2b4a2ad5d9ba084a9eaa2f9204102655e7b575c4
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_interactivity_filtering_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/React_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -52,9 +51,9 @@ l10n:
 
 "All"、"Active"、"Completed" の絞り込みボタンをマウスでクリックすると、フォーカスインジケーターは表示されませんが、キーボードの <kbd>Tab</kbd> キーでそれらの間を移されると表示されます。ご心配なく。コードが壊れているわけではありません。
 
-この CSS ファイルでは、 [`:focus-visible`](/ja/docs/Web/CSS/Reference/Selectors/:focus-visible) 擬似クラスを使用してフォーカスインジケーターに独自のスタイルを提供しています。また、ブラウザーは一連の内部ルールを使用して、ユーザーに表示するタイミングを決定します。一般的に、ブラウザーはキーボード入力に応じてフォーカスインジケーターを表示します。また、マウス入力に応じて表示する場合もあります。 `<button>` 要素はマウス入力に応じてフォーカスインジケーターを表示しませんが、 `<input>` 要素は表示します。
+この CSS ファイルでは、{{cssxref(":focus-visible")}} 擬似クラスを使用してフォーカスインジケーターに独自のスタイルを提供しています。また、ブラウザーは一連の内部ルールを使用して、ユーザーに表示するタイミングを決定します。一般的に、ブラウザーはキーボード入力に応じてフォーカスインジケーターを表示します。また、マウス入力に応じて表示する場合もあります。 `<button>` 要素はマウス入力に応じてフォーカスインジケーターを表示しませんが、 `<input>` 要素は表示します。
 
-`:focus-visible` の動作は、皆さんが馴染みのある古い [`:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus) 擬似クラスよりも選択的です。 `:focus` は、より多くの状況でフォーカスインジケーターを表示させます。できれば、 `:focus-visible` の代わりに使用することも、結合子として使用することもできます。
+`:focus-visible` の動作は、皆さんが馴染みのある古い {{cssxref(":focus")}} 擬似クラスよりも選択的です。 `:focus` は、より多くの状況でフォーカスインジケーターを表示させます。できれば、 `:focus-visible` の代わりに使用することも、結合子として使用することもできます。
 
 ## テンプレート間のフォーカス
 

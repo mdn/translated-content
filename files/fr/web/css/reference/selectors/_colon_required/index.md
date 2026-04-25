@@ -1,8 +1,9 @@
 ---
-title: :required
+title: Pseudo-classe CSS `:required`
+short-title: :required
 slug: Web/CSS/Reference/Selectors/:required
 l10n:
-  sourceCommit: 4cb9d89a204a9532370693b982e8a3b274a874b1
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:required`** permet de cibler un élément {{HTMLElement("input")}} pour lequel l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) est activé. Cela permet de mettre en forme les éléments obligatoires pour remplir correctement un formulaire.

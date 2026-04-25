@@ -111,6 +111,6 @@ Para aprender mais sobre ações de navegador, consulte a página da API.
 
 Recursos acessíveis na web são recursos como imagens, HTML, CSS, JavaScript, que podem ser incluídos na extensão e quer tornar acessível aos scripts de conteúdo e aos scripts da página. Eles podem ser referenciados a partir de scripts de página e de conteúdo, usando um URI scheme especial.
 
-Por exemplo, se um script de conteúdo quer inserir algumas imagens em páginas da web, você pode incluí-los na extensão e torná-los acessíveis na web. Em seguida o script de conteúdo pode criar e acrescentar tags [img](/pt-BR/docs/Web/HTML/Element/img) que fazem referência às imagens através do atributo `src`.
+Por exemplo, se um script de conteúdo quer inserir algumas imagens em páginas da web, você pode incluí-los na extensão e torná-los acessíveis na web. Em seguida o script de conteúdo pode criar e acrescentar tags [img](/pt-BR/docs/Web/HTML/Reference/Elements/img) que fazem referência às imagens através do atributo `src`.
 
 Para entender mais, veja a documentação sobre chaves no manifest.json em [recursos acessíveis na web.](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)

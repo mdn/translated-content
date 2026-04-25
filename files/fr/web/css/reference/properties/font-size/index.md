@@ -1,8 +1,9 @@
 ---
-title: font-size
+title: Propriété CSS `font-size`
+short-title: font-size
 slug: Web/CSS/Reference/Properties/font-size
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-size`** définit la taille de la fonte. Modifier la taille de la fonte met également à jour les tailles des unités {{CSSxRef("&lt;length&gt;")}} relatives à la taille de la fonte, telles que `em`, `ex`, etc.

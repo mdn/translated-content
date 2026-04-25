@@ -44,7 +44,7 @@ Pour identifier notre PWA, le document JSON doit inclure les propriétés `name`
 Lorsque `name` et `short_name` sont tous les deux renseignés, la valeur de `name` est utilisée dans la plupart des cas, tandis que `short_name` est utilisé lorsque l'espace d'affichage est limité.
 
 - [`description`](/fr/docs/Web/Manifest/description)
-  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
+  - : Une explication de ce que fait l'application. Elle fournit [une description accessible](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) de l'objectif et des fonctionnalités de l'application.
 
 ### Tâche
 

@@ -43,7 +43,7 @@ l10n:
   </tbody>
 </table>
 
-なお、[多くの要素はフォーカスを受け取ることができない](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495)ことが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページをでたり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
+なお、[多くの要素はフォーカスを受け取ることができない](https://stackoverflow.com/questions/42764494/blur-event-relatedtarget-returns-null/42764495)ことが、 `relatedTarget` が `null` になる良くある理由です。 `relatedTarget` はタブ移動でページを出たり入ったりする場合など、セキュリティ上の理由で `null` になることもあります。
 
 {{domxref("MouseEvent.relatedTarget")}} はマウスイベントにおける同様のプロパティです。
 
