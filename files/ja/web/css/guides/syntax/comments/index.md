@@ -1,9 +1,8 @@
 ---
 title: コメント
 slug: Web/CSS/Guides/Syntax/Comments
-original_slug: Web/CSS/CSS_syntax/Comments
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS の**コメント**は、説明的なメモをコードに追加したり、スタイルシートの特定の部分をブラウザーに解釈させないようにしたりするために使用します。設計上、コメントは文書のレイアウトにおいて効果を持ちません。

@@ -1,9 +1,9 @@
 ---
-title: Fonction CSS `grid`
+title: Caractéristique média CSS `grid`
 short-title: grid
 slug: Web/CSS/Reference/At-rules/@media/grid
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`grid`** permet de tester si le périphérique de sortie utilise un écran basé sur une grille.
