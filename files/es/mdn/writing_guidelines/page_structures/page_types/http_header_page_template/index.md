@@ -11,7 +11,7 @@ La primera frase de la página debe seguir este formato:
 
 > El encabezado HTTP **`nombre-del-encabezado`** (tipo de encabezado) se utiliza para X en circunstancias Y.
 
-El "tipo de encabezado" debe indicar si es un {{Glossary("request header", "encabezado de solicitud")}}, un {{Glossary("response header", "encabezado de respuesta")}}, o si puede ser ambos. 
+El "tipo de encabezado" debe indicar si es un {{Glossary("request header", "encabezado de solicitud")}}, un {{Glossary("response header", "encabezado de respuesta")}}, o si puede ser ambos.
 El párrafo de resumen debería ser idealmente una o dos frases cortas.
 
 Puedes mencionar advertencias notables o errores comunes en esta sección, enlazando a ejemplos o documentación más detallada (guías, etc.). 
