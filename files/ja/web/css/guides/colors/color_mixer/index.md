@@ -11,28 +11,28 @@ l10n:
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
-  <div>color-one</div>
-  <div>mixed-color</div>
-  <div>color-two</div>
+  <div>色 1</div>
+  <div>混合色</div>
+  <div>色 2</div>
 
   <div id="color-background">
     <button
       id="color-one"
       type="button"
       class="color-one"
-      aria-label="Open the color one picker dialog"></button>
+      aria-label="色 1 の選択ダイアログを開く"></button>
     <div id="mixed-color"></div>
     <button
       id="color-two"
       type="button"
       class="color-two"
-      aria-label="Open the color two picker dialog"></button>
+      aria-label="色 2 の選択ダイアログを開く"></button>
   </div>
   <div>
     <label
       id="percentage-one-label"
       for="percentage-one"
-      aria-label="color one percentage">
+      aria-label="色 1 の割合">
       50%
     </label>
     <input id="percentage-one" type="range" name="percent1" step="0.01" />
@@ -41,7 +41,7 @@ l10n:
     <label
       id="percentage-two-label"
       for="percentage-two"
-      aria-label="color two percentage">
+      aria-label="色 2 の割合">
       50%
     </label>
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
