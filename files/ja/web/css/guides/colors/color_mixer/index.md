@@ -103,7 +103,7 @@ l10n:
 <hr />
 <table id="output-colors">
   <caption>
-    Mixed color in different formats:
+    さまざまな形式の混合色:
   </caption>
   <tbody>
     <tr id="rgb-function">
