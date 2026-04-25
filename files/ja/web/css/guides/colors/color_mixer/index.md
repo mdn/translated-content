@@ -20,19 +20,19 @@ l10n:
       id="color-one"
       type="button"
       class="color-one"
-      aria-label="色 1 の選択ダイアログを開く"></button>
+      aria-label="Open the color one picker dialog"></button>
     <div id="mixed-color"></div>
     <button
       id="color-two"
       type="button"
       class="color-two"
-      aria-label="色 2 の選択ダイアログを開く"></button>
+      aria-label="Open the color two picker dialog"></button>
   </div>
   <div>
     <label
       id="percentage-one-label"
       for="percentage-one"
-      aria-label="色 1 の割合">
+      aria-label="color one percentage">
       50%
     </label>
     <input id="percentage-one" type="range" name="percent1" step="0.01" />
@@ -41,13 +41,13 @@ l10n:
     <label
       id="percentage-two-label"
       for="percentage-two"
-      aria-label="色 2 の割合">
+      aria-label="color two percentage">
       50%
     </label>
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
-  <label for="color-space">色空間: </label>
+  <label for="color-space">Color space: </label>
   <select id="color-space">
     <option value="srgb">sRGB</option>
     <option value="srgb-linear">sRGB-linear</option>
@@ -62,7 +62,7 @@ l10n:
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    色相の補間方法:
+    Hue interpolation method:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -72,19 +72,19 @@ l10n:
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>色の選択</div>
+    <div>Pick a color</div>
     <table>
       <tbody>
         <tr>
-          <td><label for="color-text">色を入力:</label></td>
+          <td><label for="color-text">Enter color:</label></td>
           <td><input type="text" id="color-text" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-input">色を選択:</label></td>
+          <td><label for="color-input">Pick color:</label></td>
           <td><input type="color" id="color-input" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-opacity">不透明度を選択:</label></td>
+          <td><label for="color-opacity">Select an opacity:</label></td>
           <td>
             <input
               type="range"
@@ -103,118 +103,118 @@ l10n:
 <hr />
 <table id="output-colors">
   <caption>
-    さまざまな形式の混合色:
+    Mixed color in different formats:
   </caption>
   <tbody>
     <tr id="rgb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/rgb"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
           target="_blank">
           RGB
         </a>
       </th>
-      <td><button id="copy-rgb-button">コピー</button><span></span></td>
+      <td><button id="copy-rgb-button">Copy</button><span></span></td>
     </tr>
     <tr id="hex">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/hex-color"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/hex-color"
           target="_blank"
           >HEX</a
         >
       </th>
-      <td><button id="copy-hex-button">コピー</button><span></span></td>
+      <td><button id="copy-hex-button">Copy</button><span></span></td>
     </tr>
     <tr id="hsl-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hsl"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl"
           target="_blank">
           HSL
         </a>
       </th>
-      <td><button id="copy-hsl-button">コピー</button><span></span></td>
+      <td><button id="copy-hsl-button">Copy</button><span></span></td>
     </tr>
     <tr id="hwb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hwb"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb"
           target="_blank">
           HWB
         </a>
       </th>
-      <td><button id="copy-hwb-button">コピー</button><span></span></td>
+      <td><button id="copy-hwb-button">Copy</button><span></span></td>
     </tr>
     <tr id="color-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/color"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
           target="_blank">
           color()
         </a>
       </th>
-      <td><button id="copy-color-button">コピー</button><span></span></td>
+      <td><button id="copy-color-button">Copy</button><span></span></td>
     </tr>
     <tr id="lab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lab"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lab"
           target="_blank">
           Lab
         </a>
       </th>
-      <td><button id="copy-lab-button">コピー</button><span></span></td>
+      <td><button id="copy-lab-button">Copy</button><span></span></td>
     </tr>
     <tr id="lch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lch"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
           target="_blank">
           LCH
         </a>
       </th>
-      <td><button id="copy-lch-button">コピー</button><span></span></td>
+      <td><button id="copy-lch-button">Copy</button><span></span></td>
     </tr>
     <tr id="oklab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklab"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab"
           target="_blank">
           Oklab
         </a>
       </th>
-      <td><button id="copy-oklab-button">コピー</button><span></span></td>
+      <td><button id="copy-oklab-button">Copy</button><span></span></td>
     </tr>
     <tr id="oklch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklch"
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
           target="_blank">
           OkLCh
         </a>
       </th>
-      <td><button id="copy-oklch-button">コピー</button><span></span></td>
+      <td><button id="copy-oklch-button">Copy</button><span></span></td>
     </tr>
     <tr id="xyz-d50-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz-d50"
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
           target="_blank">
           XYZ D50
         </a>
       </th>
-      <td><button id="copy-xyz-d50-button">コピー</button><span></span></td>
+      <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
     </tr>
     <tr id="xyz-d65-function">
       <th>
         <a
-          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz"
+          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
           target="_blank">
           XYZ D65
         </a>
       </th>
-      <td><button id="copy-xyz-d65-button">コピー</button><span></span></td>
+      <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
     </tr>
   </tbody>
 </table>
