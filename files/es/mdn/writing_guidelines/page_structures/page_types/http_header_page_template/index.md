@@ -56,7 +56,7 @@ Si el encabezado tiene muchas directivas disponibles, no dudes en incluir múlti
 NombreDelEncabezado: <directiva3>, …, <directivaN>
 ```
 
-Las directivas no distinguen entre mayúsculas y minúsculas y tienen un argumento opcional que puede usar tanto la sintaxis de *token* como la de cadena entrecomillada (*quoted-string*). Las múltiples directivas se separan por comas (elimina la información según corresponda).
+Las directivas no distinguen entre mayúsculas y minúsculas y tienen un argumento opcional que puede usar tanto la sintaxis de _token_ como la de cadena entrecomillada (_quoted-string_). Las múltiples directivas se separan por comas (elimina la información según corresponda).
 
 ## Directivas
 
