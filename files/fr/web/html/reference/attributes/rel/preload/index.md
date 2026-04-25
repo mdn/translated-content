@@ -1,8 +1,9 @@
 ---
-title: rel="preload"
+title: Valeur d'attribut HTML `rel="preload"`
+short-title: preload
 slug: Web/HTML/Reference/Attributes/rel/preload
 l10n:
-  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément HTML {{HTMLElement("link")}} permet de déclarer des requêtes à récupérer dans la partie {{HTMLElement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.

@@ -1,8 +1,9 @@
 ---
-title: rel="compression-dictionary"
+title: Valeur d'attribut HTML `rel="compression-dictionary"`
+short-title: compression-dictionary
 slug: Web/HTML/Reference/Attributes/rel/compression-dictionary
 l10n:
-  sourceCommit: 5d5ea57d7c00fac731b5ed6df9a2ccc4b7d76cb9
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 {{SeeCompatTable}}
