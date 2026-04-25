@@ -62,7 +62,7 @@ l10n:
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    Hue interpolation method:
+    色相の補間方法:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -72,7 +72,7 @@ l10n:
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>Pick a color</div>
+    <div>色の選択</div>
     <table>
       <tbody>
         <tr>
