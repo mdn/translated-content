@@ -14,7 +14,7 @@ La primera frase de la página debe seguir este formato:
 El "tipo de encabezado" debe indicar si es un {{Glossary("request header", "encabezado de solicitud")}}, un {{Glossary("response header", "encabezado de respuesta")}}, o si puede ser ambos.
 El párrafo de resumen debería ser idealmente una o dos frases cortas.
 
-Puedes mencionar advertencias notables o errores comunes en esta sección, enlazando a ejemplos o documentación más detallada (guías, etc.). 
+Puedes mencionar advertencias notables o errores comunes en esta sección, enlazando a ejemplos o documentación más detallada (guías, etc.).
 Dos o tres párrafos son apropiados para esta sección; si hay notas de uso sustanciales que incluir, usa una sección de "Descripción" después de "Directivas".
 
 <table class="properties">
