@@ -109,7 +109,7 @@ l10n:
     <tr id="rgb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/rgb"
           target="_blank">
           RGB
         </a>
@@ -119,7 +119,7 @@ l10n:
     <tr id="hex">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/hex-color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/hex-color"
           target="_blank"
           >HEX</a
         >
@@ -129,7 +129,7 @@ l10n:
     <tr id="hsl-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hsl"
           target="_blank">
           HSL
         </a>
@@ -139,7 +139,7 @@ l10n:
     <tr id="hwb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hwb"
           target="_blank">
           HWB
         </a>
@@ -149,7 +149,7 @@ l10n:
     <tr id="color-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/color"
           target="_blank">
           color()
         </a>
@@ -159,7 +159,7 @@ l10n:
     <tr id="lab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lab"
           target="_blank">
           Lab
         </a>
@@ -169,7 +169,7 @@ l10n:
     <tr id="lch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lch"
           target="_blank">
           LCH
         </a>
@@ -179,7 +179,7 @@ l10n:
     <tr id="oklab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklab"
           target="_blank">
           Oklab
         </a>
@@ -189,7 +189,7 @@ l10n:
     <tr id="oklch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklch"
           target="_blank">
           OkLCh
         </a>
@@ -199,7 +199,7 @@ l10n:
     <tr id="xyz-d50-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz-d50"
           target="_blank">
           XYZ D50
         </a>
@@ -209,7 +209,7 @@ l10n:
     <tr id="xyz-d65-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz"
           target="_blank">
           XYZ D65
         </a>
