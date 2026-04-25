@@ -62,7 +62,7 @@ l10n:
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    色相の補間方法:
+    Hue interpolation method:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -114,7 +114,7 @@ l10n:
           RGB
         </a>
       </th>
-      <td><button id="copy-rgb-button">Copy</button><span></span></td>
+      <td><button id="copy-rgb-button">コピー</button><span></span></td>
     </tr>
     <tr id="hex">
       <th>
@@ -124,7 +124,7 @@ l10n:
           >HEX</a
         >
       </th>
-      <td><button id="copy-hex-button">Copy</button><span></span></td>
+      <td><button id="copy-hex-button">コピー</button><span></span></td>
     </tr>
     <tr id="hsl-function">
       <th>
@@ -134,7 +134,7 @@ l10n:
           HSL
         </a>
       </th>
-      <td><button id="copy-hsl-button">Copy</button><span></span></td>
+      <td><button id="copy-hsl-button">コピー</button><span></span></td>
     </tr>
     <tr id="hwb-function">
       <th>
@@ -144,7 +144,7 @@ l10n:
           HWB
         </a>
       </th>
-      <td><button id="copy-hwb-button">Copy</button><span></span></td>
+      <td><button id="copy-hwb-button">コピー</button><span></span></td>
     </tr>
     <tr id="color-function">
       <th>
@@ -154,7 +154,7 @@ l10n:
           color()
         </a>
       </th>
-      <td><button id="copy-color-button">Copy</button><span></span></td>
+      <td><button id="copy-color-button">コピー</button><span></span></td>
     </tr>
     <tr id="lab-function">
       <th>
@@ -164,7 +164,7 @@ l10n:
           Lab
         </a>
       </th>
-      <td><button id="copy-lab-button">Copy</button><span></span></td>
+      <td><button id="copy-lab-button">コピー</button><span></span></td>
     </tr>
     <tr id="lch-function">
       <th>
@@ -174,7 +174,7 @@ l10n:
           LCH
         </a>
       </th>
-      <td><button id="copy-lch-button">Copy</button><span></span></td>
+      <td><button id="copy-lch-button">コピー</button><span></span></td>
     </tr>
     <tr id="oklab-function">
       <th>
@@ -184,7 +184,7 @@ l10n:
           Oklab
         </a>
       </th>
-      <td><button id="copy-oklab-button">Copy</button><span></span></td>
+      <td><button id="copy-oklab-button">コピー</button><span></span></td>
     </tr>
     <tr id="oklch-function">
       <th>
@@ -194,7 +194,7 @@ l10n:
           OkLCh
         </a>
       </th>
-      <td><button id="copy-oklch-button">Copy</button><span></span></td>
+      <td><button id="copy-oklch-button">コピー</button><span></span></td>
     </tr>
     <tr id="xyz-d50-function">
       <th>
@@ -204,7 +204,7 @@ l10n:
           XYZ D50
         </a>
       </th>
-      <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
+      <td><button id="copy-xyz-d50-button">コピー</button><span></span></td>
     </tr>
     <tr id="xyz-d65-function">
       <th>
@@ -214,7 +214,7 @@ l10n:
           XYZ D65
         </a>
       </th>
-      <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
+      <td><button id="copy-xyz-d65-button">コピー</button><span></span></td>
     </tr>
   </tbody>
 </table>
