@@ -131,7 +131,7 @@ Los desarrolladores pueden establecer y obtener encabezados HTTP usando `fetch()
 
 ## Ver también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado HTTP actual. Para más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_. 
+Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado HTTP actual. Para más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 Puedes enlazar a estados de respuesta relevantes como `\{{HTTPStatus("123", "123 Motivo")}}` y encabezados como `\{{HTTPHeader("Nombre-Del-Encabezado")}}`. Puedes agrupar estados y encabezados relacionados en un solo elemento de la lista para mayor brevedad.
 
 - enlace1
