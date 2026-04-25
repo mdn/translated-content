@@ -1,8 +1,9 @@
 ---
-title: "<dl> : l'élément de liste de descriptions"
+title: "Élément HTML `<dl>` : l'élément de liste de descriptions"
+short-title: <dl>
 slug: Web/HTML/Reference/Elements/dl
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément HTML **`<dl>`** représente une liste de descriptions sous la forme d'une liste de paires associant des termes (fournis par des éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt)) et leurs descriptions ou définitions (fournies par des éléments [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)). On utilisera par exemple cet élément pour implémenter un glossaire.

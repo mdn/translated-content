@@ -1,8 +1,9 @@
 ---
-title: "<script> : l'élément de script"
+title: "Élément HTML `<script>` : l'élément de script"
+short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<script>`** est utilisé pour intégrer du code ou des données exécutables&nbsp;: il sert généralement à intégrer ou référencer du code JavaScript. L'élément `<script>` peut aussi être utilisé avec d'autres langages, comme le langage de programmation GLSL de [WebGL](/fr/docs/Web/API/WebGL_API) ou {{Glossary("JSON")}}.

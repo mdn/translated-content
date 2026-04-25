@@ -1,8 +1,9 @@
 ---
-title: "<b> : l'élément portant à l'attention"
+title: "Élément HTML `<b>` : l'élément portant à l'attention"
+short-title: <b>
 slug: Web/HTML/Reference/Elements/b
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<b>`** est utilisé pour attirer l'attention du·de la lecteur·ice sur le contenu de l'élément, qui n'a pas d'importance particulière par ailleurs. Il était auparavant connu sous le nom d'élément «&nbsp;Boldface&nbsp;», et la plupart des navigateurs affichent encore le texte en gras. Cependant, il ne faut pas utiliser `<b>` pour la mise en forme du texte ou pour indiquer une importance. Pour créer un texte en gras, il faut utiliser la propriété CSS {{CSSxRef("font-weight")}}. Pour indiquer qu'un élément a une importance particulière, il faut utiliser l'élément {{HTMLElement("strong")}}.

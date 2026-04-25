@@ -1,9 +1,9 @@
 ---
-title: "<img> : l'élément d'image embarquée"
+title: "Élément HTML `<img>` : l'élément d'image embarquée"
+short-title: <img>
 slug: Web/HTML/Reference/Elements/img
-original_slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: 3111c5a49047a966a63b66f8634a1713c2568011
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.

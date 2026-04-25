@@ -1,8 +1,9 @@
 ---
-title: "<tbody> : l'élément de corps d'un tableau"
+title: "Élément HTML `<tbody>` : l'élément de corps d'un tableau"
+short-title: <tbody>
 slug: Web/HTML/Reference/Elements/tbody
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tbody>`** permet de regrouper une ou plusieurs lignes du tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent le corps (principal) des données d'un tableau.

@@ -1,8 +1,9 @@
 ---
-title: "<li> : l'élément dans une liste"
+title: "Élément HTML `<li>` : l'élément dans une liste"
+short-title: <li>
 slug: Web/HTML/Reference/Elements/li
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent&nbsp;: une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés avec des puces. Dans les listes ordonnées, ils sont habituellement affichés avec un compteur croissant à gauche, tel qu'un nombre ou une lettre.
