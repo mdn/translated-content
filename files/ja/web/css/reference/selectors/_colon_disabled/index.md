@@ -1,9 +1,9 @@
 ---
-title: :disabled
+title: "CSS `:disabled` 擬似クラス"
+short-title: :disabled
 slug: Web/CSS/Reference/Selectors/:disabled
-original_slug: Web/CSS/:disabled
 l10n:
-  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:disabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、無効な要素を表します。無効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができないものです。要素には有効な状態、つまりアクティブ化したりフォーカスを得たりすることができる状態もあります。
@@ -81,7 +81,7 @@ label {
 
 ```css
 input[type="text"]:disabled {
-  background: #ccc;
+  background: #cccccc;
 }
 ```
 
