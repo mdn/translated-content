@@ -28,11 +28,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 
 Incluye una tabla de los eventos que se disparan en este tipo de elemento, si los hay.
 
-| Nombre del evento | Se dispara cuando                       |
-| ----------------- | --------------------------------------- |
-| evento 1          | Explica brevemente cuándo se dispara    |
-| evento 2          | Explica brevemente cuándo se dispara    |
-| etc.              |                                         |
+| Nombre del evento | Se dispara cuando                    |
+| ----------------- | ------------------------------------ |
+| evento 1          | Explica brevemente cuándo se dispara |
+| evento 2          | Explica brevemente cuándo se dispara |
+| etc.              |                                      |
 
 ## Accesibilidad
 
