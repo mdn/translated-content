@@ -61,7 +61,7 @@ Las directivas no distinguen entre mayúsculas y minúsculas y tienen un argumen
 ## Directivas
 
 - `directiva1`
-  - : Incluye aquí una breve descripción de la directiva y lo que hace. 
+  - : Incluye aquí una breve descripción de la directiva y lo que hace.
     Incluye un término y una definición para cada directiva.
 - `directiva2`
   - : etc.
