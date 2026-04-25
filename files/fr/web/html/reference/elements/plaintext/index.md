@@ -1,8 +1,9 @@
 ---
-title: "<plaintext> : l'élément de texte brut"
+title: "Élément HTML `<plaintext>` : l'élément de texte brut"
+short-title: <plaintext>
 slug: Web/HTML/Reference/Elements/plaintext
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

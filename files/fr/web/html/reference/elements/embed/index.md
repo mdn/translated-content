@@ -1,8 +1,9 @@
 ---
-title: "<embed> : l'élément de contenu externe embarqué"
+title: "Élément HTML `<embed>` : l'élément de contenu externe embarqué"
+short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 l10n:
-  sourceCommit: 5dc9a1731aec0c04cebb4fdfa436b01cd30a20ae
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<embed>`** intègre du contenu externe au point défini dans le document. Ce contenu est fourni par une application externe ou une autre source de contenu interactif, comme un plugin de navigateur.

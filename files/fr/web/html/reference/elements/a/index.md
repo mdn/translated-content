@@ -1,8 +1,9 @@
 ---
-title: "<a> : l'élément d'ancre"
+title: "Élément HTML `<a>` : l'élément d'ancre"
+short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<a>`** (ou élément d'_ancre_), avec [son attribut `href`](#href), crée un hyperlien vers des pages web, des fichiers, des adresses e-mail, des emplacements dans la même page ou toute autre ressource accessible par une URL.

@@ -1,8 +1,9 @@
 ---
-title: "<link> : l'élément de lien vers des ressources externes"
+title: "Élément HTML `<link>` : l'élément de lien vers des ressources externes"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 l10n:
-  sourceCommit: fef6630e9b90f9794d3194ea8389ff70599c6884
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers {{Glossary("CSS", "une feuille de style")}}, vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
