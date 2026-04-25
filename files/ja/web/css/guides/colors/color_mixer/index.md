@@ -1,13 +1,13 @@
 ---
-title: Farbmischer
+title: カラーミキサー
 slug: Web/CSS/Guides/Colors/Color_mixer
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-Dieses Werkzeug ermöglicht es Ihnen, zwei Farben in jedem Farbraum mit der {{cssxref("color_value/color-mix")}}-Funktion zu mischen und die resultierende Farbe in jedem CSS-Farbformat zu kopieren.
+このツールは、任意の色空間で {{cssxref("color_value/color-mix")}} 関数を使用して 2 つの色を混合し、結果の色を任意の CSS カラー形式でコピーできます。
 
-Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, und die von der Funktion zurückgegebene gemischte Farbe wird in der Mitte dargestellt. Klicken Sie auf die äußeren Farbfelder, um neue Farben zum Mischen auszuwählen. Verwenden Sie die Schieberegler, um die Prozentsätze der einzelnen Eingabefarben im Mix zu ändern. Verwenden Sie das Dropdown-Menü, um den Farbraum des Funktionsergebnisses zu ändern. Die Werte der resultierenden Farbe in verschiedenen Formaten erscheinen in einer Tabelle unterhalb des Widgets und können kopiert werden. Sie können auch auf einen Farbnamen klicken, um mehr darüber zu erfahren.
+入力される 2 つの色、`color-one` と `color-two` は外側に表示され、関数が返す混合色は中央に表示されます。外側のカラーチップをクリックして、混合する新しい色を選択します。スライダーを使用して、混合に含める各入力色の割合を変更します。ドロップダウンメニューを使用して、関数の出力の色空間を変更します。結果の色値は、ウィジェットの下にある表にさまざまな形式で表示され、コピーできます。また、色形式名をクリックすると、その詳細を確認できます。
 
 ```html hidden live-sample___color-mixer
 <div id="color-mixer">
@@ -20,19 +20,19 @@ Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, 
       id="color-one"
       type="button"
       class="color-one"
-      aria-label="Open the color one picker dialog"></button>
+      aria-label="色 1 の選択ダイアログを開く"></button>
     <div id="mixed-color"></div>
     <button
       id="color-two"
       type="button"
       class="color-two"
-      aria-label="Open the color two picker dialog"></button>
+      aria-label="色 2 の選択ダイアログを開く"></button>
   </div>
   <div>
     <label
       id="percentage-one-label"
       for="percentage-one"
-      aria-label="color one percentage">
+      aria-label="色 1 の割合">
       50%
     </label>
     <input id="percentage-one" type="range" name="percent1" step="0.01" />
@@ -41,13 +41,13 @@ Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, 
     <label
       id="percentage-two-label"
       for="percentage-two"
-      aria-label="color two percentage">
+      aria-label="色 2 の割合">
       50%
     </label>
     <input id="percentage-two" type="range" name="percent2" step="0.01" />
   </div>
 
-  <label for="color-space">Color space: </label>
+  <label for="color-space">色空間: </label>
   <select id="color-space">
     <option value="srgb">sRGB</option>
     <option value="srgb-linear">sRGB-linear</option>
@@ -62,7 +62,7 @@ Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, 
   </select>
 
   <label id="interpolation-method-label" for="interpolation-method">
-    Hue interpolation method:
+    色相の補間方法:
   </label>
   <select id="interpolation-method">
     <option value="shorter hue" selected>shorter hue</option>
@@ -72,19 +72,19 @@ Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, 
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>Pick a color</div>
+    <div>色の選択</div>
     <table>
       <tbody>
         <tr>
-          <td><label for="color-text">Enter color:</label></td>
+          <td><label for="color-text">色を入力:</label></td>
           <td><input type="text" id="color-text" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-input">Pick color:</label></td>
+          <td><label for="color-input">色を選択:</label></td>
           <td><input type="color" id="color-input" value="#bada55" /></td>
         </tr>
         <tr>
-          <td><label for="color-opacity">Select an opacity:</label></td>
+          <td><label for="color-opacity">不透明度を選択:</label></td>
           <td>
             <input
               type="range"
@@ -103,118 +103,118 @@ Die beiden Eingabefarben, `color-one` und `color-two`, werden außen angezeigt, 
 <hr />
 <table id="output-colors">
   <caption>
-    Mixed color in different formats:
+    さまざまな形式の混合色:
   </caption>
   <tbody>
     <tr id="rgb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/rgb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/rgb"
           target="_blank">
           RGB
         </a>
       </th>
-      <td><button id="copy-rgb-button">Copy</button><span></span></td>
+      <td><button id="copy-rgb-button">コピー</button><span></span></td>
     </tr>
     <tr id="hex">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/hex-color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/hex-color"
           target="_blank"
           >HEX</a
         >
       </th>
-      <td><button id="copy-hex-button">Copy</button><span></span></td>
+      <td><button id="copy-hex-button">コピー</button><span></span></td>
     </tr>
     <tr id="hsl-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hsl"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hsl"
           target="_blank">
           HSL
         </a>
       </th>
-      <td><button id="copy-hsl-button">Copy</button><span></span></td>
+      <td><button id="copy-hsl-button">コピー</button><span></span></td>
     </tr>
     <tr id="hwb-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/hwb"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/hwb"
           target="_blank">
           HWB
         </a>
       </th>
-      <td><button id="copy-hwb-button">Copy</button><span></span></td>
+      <td><button id="copy-hwb-button">コピー</button><span></span></td>
     </tr>
     <tr id="color-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/color"
           target="_blank">
           color()
         </a>
       </th>
-      <td><button id="copy-color-button">Copy</button><span></span></td>
+      <td><button id="copy-color-button">コピー</button><span></span></td>
     </tr>
     <tr id="lab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lab"
           target="_blank">
           Lab
         </a>
       </th>
-      <td><button id="copy-lab-button">Copy</button><span></span></td>
+      <td><button id="copy-lab-button">コピー</button><span></span></td>
     </tr>
     <tr id="lch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/lch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/lch"
           target="_blank">
           LCH
         </a>
       </th>
-      <td><button id="copy-lch-button">Copy</button><span></span></td>
+      <td><button id="copy-lch-button">コピー</button><span></span></td>
     </tr>
     <tr id="oklab-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklab"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklab"
           target="_blank">
           Oklab
         </a>
       </th>
-      <td><button id="copy-oklab-button">Copy</button><span></span></td>
+      <td><button id="copy-oklab-button">コピー</button><span></span></td>
     </tr>
     <tr id="oklch-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/oklch"
+          href="https://developer.mozilla.org/ja/docs/Web/CSS/Reference/Values/color_value/oklch"
           target="_blank">
           OkLCh
         </a>
       </th>
-      <td><button id="copy-oklch-button">Copy</button><span></span></td>
+      <td><button id="copy-oklch-button">コピー</button><span></span></td>
     </tr>
     <tr id="xyz-d50-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz-d50"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz-d50"
           target="_blank">
           XYZ D50
         </a>
       </th>
-      <td><button id="copy-xyz-d50-button">Copy</button><span></span></td>
+      <td><button id="copy-xyz-d50-button">コピー</button><span></span></td>
     </tr>
     <tr id="xyz-d65-function">
       <th>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Glossary/Color_space#xyz"
+          href="https://developer.mozilla.org/ja/docs/Glossary/Color_space#xyz"
           target="_blank">
           XYZ D65
         </a>
       </th>
-      <td><button id="copy-xyz-d65-button">Copy</button><span></span></td>
+      <td><button id="copy-xyz-d65-button">コピー</button><span></span></td>
     </tr>
   </tbody>
 </table>
@@ -868,9 +868,9 @@ function init() {
     button.addEventListener("click", (e) => {
       const text = e.target.nextElementSibling.innerText;
       navigator.clipboard.writeText(text);
-      e.target.innerText = "Copied!";
+      e.target.innerText = "コピーしました!";
       setTimeout(() => {
-        e.target.innerText = "Copy";
+        e.target.innerText = "コピー";
       }, 1000);
     });
   });
