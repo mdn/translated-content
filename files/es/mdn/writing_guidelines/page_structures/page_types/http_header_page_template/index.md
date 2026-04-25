@@ -126,7 +126,7 @@ _De lo contrario, para usar esta macro, elimina las comillas invertidas y la bar
 
 _Si el navegador tiene un manejo específico para el encabezado, elimina el texto de abajo:_
 
-Este encabezado no tiene una integración con el agente de usuario definida por la especificación (la "compatibilidad con navegadores" no se aplica). 
+Este encabezado no tiene una integración con el agente de usuario definida por la especificación (la "compatibilidad con navegadores" no se aplica).
 Los desarrolladores pueden establecer y obtener encabezados HTTP usando `fetch()` para proporcionar un comportamiento de implementación específico de la aplicación.
 
 ## Ver también
