@@ -72,7 +72,7 @@ l10n:
   </select>
   <div id="mix-output-text"></div>
   <dialog id="picker-dialog">
-    <div>色の選択</div>
+    <div>Pick a color</div>
     <table>
       <tbody>
         <tr>
