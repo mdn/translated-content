@@ -1,14 +1,14 @@
 ---
-title: :where()
+title: "CSS `:where()` 擬似クラス"
+short-title: :where()
 slug: Web/CSS/Reference/Selectors/:where
-original_slug: Web/CSS/:where
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-`:where()` と {{CSSxRef(":is", ":is()")}} の違いは、 `:where()` の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が常に 0 であるのに対し、 `:is()` は引数の中で最も詳細度の高いセレクターの詳細度を継承する点です。
+`:where()` と {{cssxref(":is()")}} の違いは、 `:where()` の[詳細度](/ja/docs/Web/CSS/Guides/Cascade/Specificity)が常に 0 であるのに対し、 `:is()` は引数の中で最も詳細度の高いセレクターの詳細度を継承する点です。
 
 {{InteractiveExample("CSS デモ: :where", "tabbed-shorter")}}
 
@@ -31,25 +31,25 @@ ol {
 
 ```html interactive-example
 <ol>
-  <li>Saturn</li>
+  <li>土星</li>
   <li>
     <ul>
-      <li>Mimas</li>
-      <li>Enceladus</li>
+      <li>ミマス</li>
+      <li>エンケラドゥス</li>
       <li>
         <ol>
-          <li>Voyager</li>
-          <li>Cassini</li>
+          <li>ボイジャー</li>
+          <li>カッシーニ</li>
         </ol>
       </li>
-      <li>Tethys</li>
+      <li>テティス</li>
     </ul>
   </li>
-  <li>Uranus</li>
+  <li>天王星</li>
   <li>
     <ol>
-      <li>Titania</li>
-      <li>Oberon</li>
+      <li>チタニア</li>
+      <li>オベロン</li>
     </ol>
   </li>
 </ol>
@@ -198,6 +198,7 @@ footer a {
 
 ## 関連情報
 
-- {{CSSxRef(":is", ":is()")}}
+- {{cssxref(":is()")}}
 - [セレクターリスト](/ja/docs/Web/CSS/Reference/Selectors/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
+- [寛容なセレクターリスト](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)<sup>(英語)</sup> - csswg.org

@@ -1,9 +1,9 @@
 ---
-title: fill
+title: "CSS `fill` プロパティ"
+short-title: fill
 slug: Web/CSS/Reference/Properties/fill
-original_slug: Web/CSS/fill
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、SVG のテキストコンテンツおよび SVG の図形の内部キャンバスをどのように塗りつぶすか、または描画するかを定義します。存在する場合、要素の {{SVGAttr("fill")}} 属性を上書きします。
