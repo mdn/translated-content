@@ -1,5 +1,5 @@
 ---
-title: "CSS `:root` 擬似クラス"
+title: CSS `:root` 擬似クラス
 short-title: :root
 slug: Web/CSS/Reference/Selectors/:root
 l10n:
