@@ -1,5 +1,5 @@
 ---
-title: "CSS `:where()` 擬似クラス"
+title: CSS `:where()` 擬似クラス
 short-title: :where()
 slug: Web/CSS/Reference/Selectors/:where
 l10n:
