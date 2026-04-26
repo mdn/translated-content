@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-**`keySplines`* *属性は、{{SVGAttr("keyTimes")}} リストに関連付けられた[ベジェ曲線](/ja/docs/Glossary/Bezier_curve)の制御点のセットを定義し、区間の進行を制御する三次ベジェ関数を定義します。
+**`keySplines`** 属性は、{{SVGAttr("keyTimes")}} リストに関連付けられた[ベジェ曲線](/ja/docs/Glossary/Bezier_curve)の制御点のセットを定義し、区間の進行を制御する三次ベジェ関数を定義します。
 
 {{SVGAttr("calcMode")}} 属性が `spline` に設定されていない限り、この属性は無視されます。
 
