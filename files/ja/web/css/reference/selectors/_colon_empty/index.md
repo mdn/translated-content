@@ -1,5 +1,5 @@
 ---
-title: "CSS `:empty` 擬似クラス"
+title: CSS `:empty` 擬似クラス
 short-title: :empty
 slug: Web/CSS/Reference/Selectors/:empty
 l10n:
