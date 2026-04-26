@@ -2,11 +2,46 @@
 title: <textPath>
 slug: Web/SVG/Reference/Element/textPath
 l10n:
-  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-**`<textPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement("path")}} 要素の形に沿ってテキストを表示します。
+**`<textPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、{{SVGElement("path")}} 要素の形に沿ってテキストを表示します。
 テキストを `<textPath>` 要素で囲み、その要素に {{SVGAttr("href")}} 属性を指定して必要な `<path>` 要素を参照する必要があります。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("href")}}
+  - : テキストを表示するパスまたは基本図形への URL です。 `path` 属性を設定した場合、 `href` は効果がありません。
+    _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url); _デフォルト値_: なし; _アニメーション_: **可**
+- {{SVGAttr("lengthAdjust")}}
+  - : テキストの長さを調整する場所です。文字間、または空間と文字の両方。
+    _値の型_: `spacing` | `spacingAndGlyphs`; _デフォルト値_: `spacing`; _アニメーション_: **可**
+- {{SVGAttr("method")}}
+  - : パスに沿って個々の文字描画する方法です。
+    _値の型_: `align` | `stretch`; _デフォルト値_: `align`; _アニメーション_: **可**
+- {{SVGAttr("path")}} {{Experimental_Inline}}
+  - : テキストが描画されるパスです。
+    _値の型_: [**\<path_data>**](/ja/docs/Web/SVG/Reference/Attribute/path#path-data); _デフォルト値_: なし; _アニメーション_: **可**
+- {{SVGAttr("side")}} {{Experimental_Inline}}
+  - : テキストをパス上のどの辺に描画するかです。
+    _値の型_: `left` | `right`; _デフォルト値_: `left`; _アニメーション_: **可**
+- {{SVGAttr("spacing")}}
+  - : 文字間をどのように処理すべきかです。
+    _値の型_: `auto` | `exact`; _デフォルト値_: `exact`; _アニメーション_: **可**
+- {{SVGAttr("startOffset")}}
+  - : テキストの開始位置をパスの開始位置からどれだけずらすか。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("textLength")}}
+  - : テキストがレンダリングされる空間の幅。
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _デフォルト値_: _auto_; _アニメーション_: **可**
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGTextPathElement")}} インターフェイスを実装しています。
 
 ## 例
 
@@ -36,37 +71,6 @@ svg {
 ```
 
 {{EmbedLiveSample('Example', 200, 200)}}
-
-## 属性
-
-- {{SVGAttr("href")}}
-  - : テキストを表示するパスまたは基本図形への URL です。 `path` 属性を設定した場合、 `href` は効果がありません。
-    _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url); _既定値_: なし; _アニメーション_: **可**
-- {{SVGAttr("lengthAdjust")}}
-  - : テキストの長さを調整する場所です。文字間、または空間と文字の両方。
-    _値の型_: `spacing` | `spacingAndGlyphs`; _既定値_: `spacing`; _アニメーション_: **可**
-- {{SVGAttr("method")}}
-  - : パスに沿って個々の文字描画する方法です。
-    _値の型_: `align` | `stretch`; _既定値_: `align`; _アニメーション_: **可**
-- {{SVGAttr("path")}} {{Experimental_Inline}}
-  - : テキストが描画されるパスです。
-    _値の型_: [**\<path_data>**](/ja/docs/Web/SVG/Reference/Attribute/path#path-data); _既定値_: なし; _アニメーション_: **可**
-- {{SVGAttr("side")}} {{Experimental_Inline}}
-  - : テキストをパス上のどの辺に描画するかです。
-    _値の型_: `left` | `right`; _既定値_: `left`; _アニメーション_: **可**
-- {{SVGAttr("spacing")}}
-  - : 文字間をどのように処理すべきかです。
-    _値の型_: `auto` | `exact`; _既定値_: `exact`; _アニメーション_: **可**
-- {{SVGAttr("startOffset")}}
-  - : テキストの開始位置をパスの開始位置からどれだけずらすか。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: `0`; _アニメーション_: **可**
-- {{SVGAttr("textLength")}}
-  - : テキストがレンダリングされる空間の幅。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)|[**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: _auto_; _アニメーション_: **可**
-
-## 使用コンテキスト
-
-{{svginfo}}
 
 ## 仕様書
 
