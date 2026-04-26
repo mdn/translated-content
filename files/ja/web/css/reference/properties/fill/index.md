@@ -1,5 +1,5 @@
 ---
-title: "CSS `fill` プロパティ"
+title: CSS `fill` プロパティ
 short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 l10n:
