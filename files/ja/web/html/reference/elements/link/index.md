@@ -219,7 +219,7 @@ l10n:
 - `imagesrcset`
   - : `rel="preload"` および `as="image"` が付いている場合にのみ、 `imagesrcset` 属性は [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性と同様の構文と意味を持ち、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示します。
 - [`integrity`](/ja/docs/Web/HTML/Reference/Attributes/integrity)
-  - : この属性には、リソースの 1 つ以上の{{glossary("hash function", "ハッシュ")}}が含まれます。これは、リソースの内容が開発者が想定した通りであり、[サプライチェーン攻撃](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks)によって悪意のあるコピーに置き換えられていないことを保証します。この属性は、`rel` 属性で `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定できます。
+  - : この属性には、リソースの 1 つ以上の{{glossary("hash function", "ハッシュ")}}が含まれます。これは、リソースの内容が開発者が想定した通りであり、[サプライチェーン攻撃](/ja/docs/Web/Security/Attacks/Supply_chain_attacks)によって悪意のあるコピーに置き換えられていないことを保証します。この属性は、`rel` 属性で `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定できます。
     [サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)を参照してください。
 - `media`
   - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)でなければなりません。
