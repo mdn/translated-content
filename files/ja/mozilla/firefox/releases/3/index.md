@@ -1,8 +1,9 @@
 ---
-title: Firefox 3 for developers
+title: Firefox 3 開発者向けリリースノート
+short-title: Firefox 3
 slug: Mozilla/Firefox/Releases/3
 l10n:
-  sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
+  sourceCommit: 61912f53d01e935aea926a2226130fb4587414a9
 ---
 
 もしあなたが開発者で、Firefox 3 における新機能全体について情報を得ようとしているなら、ここは理解を深めるのに最も適した場所です。この記事は、Firefox 3 に追加された機能をカバーする新しい記事の一覧を提供します。小さな変更が必ずしもすべてカバーされているわけではありませんが、主要な改善を学ぶ助けにはなるでしょう。
@@ -29,11 +30,11 @@ l10n:
   - : 新しい HTML 5 の `activeElement` 及び `hasFocus` 属性がサポートされます。
 - Firefox でのオフラインリソース
   - : Firefox で、ウェブアプリケーションがオフラインの間でも使えるようにするキャッシュリソースをリクエストできるようになりました。
-- [Firefox 3 での CSS の改良](/ja/docs/CSS_improvements_in_Firefox_3)
+- [Firefox 3 での CSS の改良](https://web.archive.org/web/20210224062716/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/releases/3/CSS_improvements)
   - : Firefox 3 は、CSS サポートにおける数々の改善を行っています。
 - [Firefox 3 での DOM の改良](/ja/docs/Mozilla/Firefox/Releases/3/DOM_improvements)
   - : Firefox 3 は、DOM 実装において、いくつかの Internet Explorer 独自拡張を含む、多くの新機能を提供します。
-- [JavaScript 1.8 対応](/ja/docs/New_in_JavaScript_1.8)
+- [JavaScript 1.8 対応](https://web.archive.org/web/20210224081539/https://developer.mozilla.org/en-US/docs/Archive/Web/JavaScript/New_in_JavaScript/1.8)
   - : Firefox 3 は JavaScript 1.8 をサポートします。
 - [EXSLT support](/ja/docs/Web/XML/EXSLT)
   - : Firefox 3 は、 [XSLT](/ja/docs/Web/XML/XSLT) の拡張となる [EXSLT](/ja/docs/Web/XML/EXSLT) の実質的なサブセットのサポートを提供します。
@@ -48,53 +49,53 @@ l10n:
 
 - [Firefox 3 のための拡張機能の更新](/ja/docs/Mozilla/Firefox/Releases/3/Updating_extensions)
   - : 拡張機能を Firefox 3 に対応させるにあたって必要となることのガイドを提供します。
-- [Firefox 3 での XUL の改良](/ja/docs/XUL_improvements_in_Firefox_3)
+- [Firefox 3 での XUL の改良](/ja/docs/Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3)
   - : Firefox 3 は、新しいスライドスケール、日付と時刻の選択ウィジェット、スピンボタンを含む、多くの新しい XUL 要素を提供します。
-- [Firefox 3 でのテンプレート](/ja/docs/Templates_in_Firefox_3)
+- [Firefox 3 でのテンプレート](/ja/docs/Mozilla/Firefox/Releases/3/Templates)
   - : テンプレートは Firefox 3 で大幅に改善されました。主な改善は、独自のクエリープロセッサーを使って、RDF 以外の種類のデータソースも扱えるようになったことです。
-- [安全な更新](/ja/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates)
-  - : ユーザーにより安全な更新を提供するため、アドオンの更新をインストールする前に、安全な手段を使って更新情報を取得することが必須となりました。[Firefox Add-ons](https://addons.mozilla.org) に登録されているアドオンは、自動でこの手段を提供します。
-- [位置情報のマイグレーションガイド](/ja/docs/Places_Developer_Guide)
+- [安全な更新](https://web.archive.org/web/20201031093738/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Extension_Versioning,_Update_and_Compatibility#securing_updates)
+  - : ユーザーにより安全なアドオンのアップグレードパスを提供するため、アドオンはインストールされる前に、更新プログラムを取得するための安全なメソッドを提供することが要求されました。[AMO](https://addons.mozilla.org/) でホストされているアドオンは、このメソッドを自動的に提供します。Firefox 3 にアップグレードした際、安全な更新方法を指定していないアドオンは、自動的に無効化されます。ただし、Firefox は引き続き安全でない経路を通じて拡張機能の更新を調べ、提供されている更新があればインストールを試みます（更新自体も安全な更新方法を指定していない場合、インストールは失敗します）。
+- [位置情報のマイグレーションガイド](https://web.archive.org/web/20200621121524/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places/Places_Developer_Guide)
   - : 既存の拡張機能を Places API に対応させる方法についての記事。
-- [Firefox 3 でのダウンロードマネージャーの改良](/ja/docs/Download_Manager_improvements_in_Firefox_3)
+- [Firefox 3 でのダウンロードマネージャーの改良](https://web.archive.org/web/20191009203342/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Download_Manager_improvements_in_Firefox_3)
   - : Firefox 3 のダウンロードマネージャーには、複数のプログレスリスナーへのサポートを含む、新たな API や改善された API が含まれています。
 - nsILoginManager の使用
   - : パスワードマネージャーは、新しいログインマネージャーに置き換えられました。
-- [埋め込み XBL バインディング](/ja/docs/XBL/XBL_1.0_Reference/Elements#binding)
+- [埋め込み XBL バインディング](https://web.archive.org/web/20190710111835/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Elements#binding)
   - : XBL バインディングを、別の XML ファイルから読み込む代わりに、Chrome コードから `data:` URL スキーマを使って直接組み込むことができるようになりました。
-- [拡張機能の説明のローカライズ](/ja/docs/orphaned/Localizing_extension_descriptions)
+- [拡張機能の説明のローカライズ](https://web.archive.org/web/20210126131244/https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localizing_extension_descriptions)
   - : Firefox 3 では、アドオンのメタデータをローカライズする新しい方法がサポートされました。これにより、アドオンのダウンロード直後や無効時にローカライズされた詳細説明が表示されるようになりました。
-- [ローカライズと複数形](/ja/docs/Localization_and_Plurals)
+- [ローカライズと複数形](https://web.archive.org/web/20210619213040/https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localization_and_Plurals)
   - : Firefox 3 では、新しい PluralForm モジュールがサポートされました。このモジュールは、複数のローカライゼーションで複数形の単語を正しく扱うためのツールを提供します。
-- [Firefox 3 でのテーマの変更](/ja/docs/Theme_changes_in_Firefox_3)
+- [Firefox 3 でのテーマの変更](https://web.archive.org/web/20210518052656/https://developer.mozilla.org/en-US/docs/Archive/Themes/Theme_changes_in_Firefox_3)
   - : Firefox 3 向けのテーマを作成したい方々にとって役立つ注意と情報です。
 
 #### 新しいコンポーネントと機能
 
-- [FUEL Library](/ja/docs/Toolkit_API/FUEL)
+- [FUEL Library](https://web.archive.org/web/20210516092241/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL)
   - : FUEL は、XPCOM の形式的な部分を少なくし、いくつかの "モダンな" JavaScript のアイデアを追加することによって、拡張機能の開発をより生産的にします。
-- [Places](/ja/docs/Places)
-  - : 履歴とブックマークの API は、新しい [Places](/ja/docs/Places) API で完全に置き換えられます。
-- [アイドルサービス](/ja/docs/nsIIdleService)
+- [Places](https://web.archive.org/web/20210620103113/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/Places)
+  - : 履歴とブックマークの API は、新しい Places API で完全に置き換えられます。
+- [アイドルサービス](https://web.archive.org/web/20210511041145/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIIdleService)
   - : Firefox 3 では、ユーザーが最後にキーを入力、もしくは、マウスを動かしてからどのくらいの時間が経過しているかを拡張機能が測定できるようにする、新しい `nsIIdleService` インターフェイスが追加されました。
-- [ZIP ライター](/ja/docs/nsIZipWriter)
+- [ZIP ライター](https://web.archive.org/web/20210619003034/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipWriter)
   - : 新しい `nsIZipWriter` インターフェイスによって拡張機能は ZIP アーカイブを作れるようになります。
 - [フルページズーム](/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom)
   - : Firefox 3 では、テキストのみのズームに加えて、フルページズームが追加されたことで、ユーザー体験が改善されています。
-- [XPCOM サイクルコレクターとのインターフェイス](/ja/docs/Interfacing_with_the_XPCOM_cycle_collector)
+- [XPCOM サイクルコレクターとのインターフェイス](https://web.archive.org/web/20210620195127/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Interfacing_with_the_XPCOM_cycle_collector)
   - : XPCOM コードが、使われていないメモリーをリークする代わりに解放させるようにする「サイクルコレクター」を活用できるようになりました。
-- [スレッドマネージャー](/ja/docs/The_Thread_Manager)
+- [スレッドマネージャー](https://web.archive.org/web/20210419232321/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/The_Thread_Manager)
   - : Firefox 3 は、自作コードの中でスレッドを作成、管理する際に役立つ便利な方法を提供する、スレッドとスレッドイベント関連の新しいインターフェイスとともに、新たな `nsIThreadManager` インターフェイスを提供します。
-- [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)
+- [JavaScript モジュール](https://web.archive.org/web/20210531090101/https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules)
   - : Firefox 3 は、共有ライブラリーのように、拡張機能や ウェブアプリケーションから読み込んで利用できる JavaScript モジュールを簡単に作成できるようにする、新たな共有コードモジュール機構を提供します。
-- [`nsIJSON` インターフェイス](/ja/docs/nsIJSON)
+- [`nsIJSON` インターフェイス](https://web.archive.org/web/20210514110540/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIJSON)
   - : Firefox 3 は、[JSON](/ja/docs/Glossary/JSON) 文字列の高パフォーマンスなエンコードとデコードを提供する、新しい `nsIJSON` インターフェイスを提供します。
 - `nsIParentalControlsService` インターフェイス
   - : Firefox 3 では、Microsoft Windows Vista の保護者による制限機能がサポートされ、その機能とやり取りするためのコードが使用できるようになります。
-- [コンテンツ設定の使用](/ja/docs/Using_content_preferences)
+- [コンテンツ設定の使用](https://web.archive.org/web/20210314182749/https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Using_content_preferences)
   - : Firefox 3 には、拡張機能およびコアコードが各サイト用のユーザー設定を保存するために利用できる、任意のサイトごとの設定を取得または設定する新しいサービスが含まれています。
-- [プラグインモニタリング](/ja/docs/Monitoring_plugins)
-  - : プラグインシステムの新しいコンポーネントとして、プラグイン（例えば、Macromedia Flash) がどのくらい実行されているかを調べることができるコンポーネントが利用可能になりました。
+- [プラグインモニタリング](https://web.archive.org/web/20160617124200/https://developer.mozilla.org/en-US/Add-ons/Plugins/Monitoring_plugins)
+  - : プラグインシステムの新しいコンポーネントとして、プラグイン（例えば、Macromedia Flash）がどのくらい実行されているかを調べることができるコンポーネントが利用可能になりました。
 
 #### 修正されたバグ
 
@@ -126,7 +127,7 @@ l10n:
 - **ブックマークと履歴の整理** - 統合された新しいブックマークと履歴の管理画面では、複数の表示形式や、よく使う検索語を保存できるスマートフォルダーを使って、履歴やブックマークを簡単に検索できます。
 - **ウェブベースのプロトコルハンドラー** - ページ上の `mailto:` リンクを開く際、デスクトップアプリケーションの代わりに、お気に入りの ウェブメールサービスなど、ウェブアプリケーションを使えるようになりました。他のプロトコルについても同様のサポートが提供されます。(なお、ウェブアプリケーションを連携させるには、最初にそれらを Firefox に登録する必要があります)
 - **より便利になったダウンロードアクション** - 新しい「アプリケーション」設定画面は、様々なファイル形式やプロトコルスキーマの処理方法を設定するための、改良されたユーザーインターフェイスを提供します。
-- **ルック＆フィールの改善** - グラフィックとフォント処理が改良され、ウェブページが画面上でより美しく表示されるようになりました。例えば、テキストの描画がよりシャープになり、リガチャや複雑な筆記体活字を含むフォントのサポートも改善されています。さらに、Mac と Linux (Gnome) では、新たなネイティブテーマが採用されたことで、Firefox の見た目がかつてなくネイティブアプリケーションに近づきました。
+- **ルック＆フィールの改善** - グラフィックとフォント処理が改良され、ウェブページが画面上でより美しく表示されるようになりました。例えば、テキストの描画がよりシャープになり、リガチャや複雑な筆記体活字を含むフォントのサポートも改善されています。さらに、Mac と Linux (GNOME) では、新たなネイティブテーマが採用されたことで、Firefox の見た目がかつてなくネイティブアプリケーションに近づきました。
 - **カラーマネジメントのサポート** - `about:config` の設定で `gfx.color_management.enabled` を設定すると、画像に埋め込まれたカラープロファイルを使って、コンピューターの画面に適したカラー調節が行われます。
 - **オフラインサポート** - ウェブアプリケーションが、インターネットに接続していないときでも利用できるようにした新機能を活用できるようになりました。
 
@@ -146,7 +147,3 @@ l10n:
 - **信頼性** - Firefox 3 は、ブックマーク、履歴、Cookie、個人設定をトランザクション上安全なデータベース形式で保存します。つまり、システムがクラッシュした場合も、プロファイルデータが失われずに済みます。
 - **高速化** - Firefox 3 では、画面上の描画処理と、ページレイアウトの処理を行う部分を完全に書き換えることで、パフォーマンスが劇的に向上しました。
 - **メモリー使用量の削減** - Firefox 3 では、300 以上のメモリー「リーク」バグの修正に加えて、リークしたメモリーブロックを自動的に特定、処理する新機能によって、メモリー効率が大幅に向上しました。
-
-## 関連記事
-
-{{Firefox_for_developers('2')}}
