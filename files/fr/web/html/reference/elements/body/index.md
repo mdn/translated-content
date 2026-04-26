@@ -1,8 +1,9 @@
 ---
-title: "<body> : l'élément pour le corps du document"
+title: "Élément HTML `<body>` : l'élément pour le corps du document"
+short-title: <body>
 slug: Web/HTML/Reference/Elements/body
 l10n:
-  sourceCommit: 2a7d7d219c2ed31fbeec632d0b3f5e8a320a050a
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.

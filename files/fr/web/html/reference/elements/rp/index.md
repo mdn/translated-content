@@ -1,8 +1,9 @@
 ---
-title: "<rp> : l'élément de parenthèses alternatif aux annotations Ruby"
+title: "Élément HTML `<rp>` : l'élément de parenthèses alternatif aux annotations Ruby"
+short-title: <rp>
 slug: Web/HTML/Reference/Elements/rp
 l10n:
-  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<rp>`** est utilisé pour fournir des parenthèses de repli pour les navigateurs qui ne prennent pas en charge l'affichage des annotations ruby avec l'élément {{HTMLElement("ruby")}}. Un élément `<rp>` doit entourer chacune des parenthèses ouvrantes et fermantes qui encadrent l'élément {{HTMLElement("rt")}} contenant le texte de l'annotation.

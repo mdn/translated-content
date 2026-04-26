@@ -1,8 +1,9 @@
 ---
-title: "<hr> : l'élément de rupture thématique (règle horizontale)"
+title: "Élément HTML `<hr>` : l'élément de rupture thématique (règle horizontale)"
+short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 l10n:
-  sourceCommit: 479f72f9279246685bcf6eec93527ac3f470f93e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<hr>`** représente une rupture thématique entre des éléments de niveau paragraphe&nbsp;: par exemple, un changement de décor dans un récit ou un changement de sujet au sein d'une section.

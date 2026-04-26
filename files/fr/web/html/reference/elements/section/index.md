@@ -1,8 +1,9 @@
 ---
-title: "<section> : l'élément de section générique"
+title: "Élément HTML `<section>` : l'élément de section générique"
+short-title: <section>
 slug: Web/HTML/Reference/Elements/section
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<section>`** représente une section générique et autonome d'un document, qui n'a pas d'élément sémantique plus spécifique pour la représenter. Les sections doivent toujours comporter un titre, sauf très rares exceptions.

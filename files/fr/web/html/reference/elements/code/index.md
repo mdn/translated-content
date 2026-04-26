@@ -1,8 +1,9 @@
 ---
-title: "<code> : l'élément de code en ligne"
+title: "Élément HTML `<code>` : l'élément de code en ligne"
+short-title: <code>
 slug: Web/HTML/Reference/Elements/code
 l10n:
-  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<code>`** affiche son contenu avec une mise en forme destinée à indiquer qu'il s'agit d'un court fragment de code informatique. Par défaut, le texte est affiché avec la police monospace par défaut de {{Glossary("user agent", "l'agent utilisateur")}}.

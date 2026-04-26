@@ -1,8 +1,9 @@
 ---
-title: "<iframe> : l'élément de cadre intégré"
+title: "Élément HTML `<iframe>` : l'élément de cadre intégré"
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 743ba8b257cd06449b192818df120e609f6e16d2
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.

@@ -1,8 +1,9 @@
 ---
-title: "<fieldset> : l'élément pour les ensembles de champs"
+title: "Élément HTML `<fieldset>` : l'élément pour les ensembles de champs"
+short-title: <fieldset>
 slug: Web/HTML/Reference/Elements/fieldset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ({{HTMLElement("label")}}) dans un formulaire.

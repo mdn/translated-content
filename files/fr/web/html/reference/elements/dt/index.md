@@ -1,8 +1,9 @@
 ---
-title: "<dt> : l'élément pour le terme d'une description"
+title: "Élément HTML `<dt>` : l'élément pour le terme d'une description"
+short-title: <dt>
 slug: Web/HTML/Reference/Elements/dt
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dt>`** identifie un terme dans une liste de descriptions ou de définitions et, de ce fait, doit être utilisé à l'intérieur d'un élément HTML {{HTMLElement("dl")}}. Il est généralement suivi d'un élément {{HTMLElement("dd")}}&nbsp;; toutefois, plusieurs éléments `<dt>` successifs indiquent plusieurs termes qui sont tous définis par le {{HTMLElement("dd")}} immédiatement suivant.
