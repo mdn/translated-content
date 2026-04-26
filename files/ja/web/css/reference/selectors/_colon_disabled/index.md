@@ -1,5 +1,5 @@
 ---
-title: "CSS `:disabled` 擬似クラス"
+title: CSS `:disabled` 擬似クラス
 short-title: :disabled
 slug: Web/CSS/Reference/Selectors/:disabled
 l10n:
