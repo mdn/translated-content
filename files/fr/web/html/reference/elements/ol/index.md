@@ -1,8 +1,9 @@
 ---
-title: "<ol> : l'élément de liste ordonnée"
+title: "Élément HTML `<ol>` : l'élément de liste ordonnée"
+short-title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ol>`** représente une liste ordonnée, généralement affichée sous forme de liste numérotée.

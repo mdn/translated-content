@@ -3,7 +3,7 @@ title: "SVG: スケーラブルベクターグラフィック"
 short-title: SVG
 slug: Web/SVG
 l10n:
-  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
 **スケーラブルベクターグラフィック (SVG)** は [XML](/ja/docs/Web/XML) ベースのマークアップ言語で、二次元ベースの[ベクターグラフィック](https://en.wikipedia.org/wiki/Vector_graphics)を記述します。
@@ -18,14 +18,12 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
 
 ## チュートリアル
 
-[SVG チュートリアル](/ja/docs/Web/SVG/Tutorials)は、基礎からより高度なテクニックへと段階的に進みながら、事前知識がないことを前提に各テーマを解説するよう設計されています。
-
 - [ゼロから始める SVG 入門](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
   - : このチュートリアルは SVG の内部を説明することを目的としており、技術的な詳細が詰まっています。単に美しい画像を描きたいだけなら、 [Inkscape のドキュメントページ](https://inkscape.org/learn/)にもっと有用なリソースがあるかもしれません。 W3C の [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) も SVG の良い入門書です。また、アドベントカレンダーをテーマにした 25 種類の SVG をコーディングする [SVG Tutorial](https://svg-tutorial.com/) もチェックしてみてください。
 
 ## ガイド
 
-[SVGガイド](/ja/docs/Web/SVG/Guides)は、ウェブ上でのSVGの扱い方を支援するもので、埋め込み、MIME（メディア）タイプ、スクリプトの処理、アニメーション、フィルターなどのトピックを網羅しています。
+[SVG ガイド](/ja/docs/Web/SVG/Guides)は、ウェブ上での SVG の扱い方を支援するもので、埋め込み、MIME（メディア）タイプ、スクリプトの処理、アニメーション、フィルターなどのトピックを網羅しています。
 
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : 現代のブラウザーは、CSSスタイル内でSVGを使用し、HTMLコンテンツにグラフィック効果を適用することに対応しています。
@@ -35,7 +33,7 @@ SVG は 1999 年から[ワールドワイドウェブコンソーシアム (W3C)
   - : 名前空間は、複数の XML 方言に対応するユーザーエージェントにとって不可欠です。
     ブラウザーは、とても厳格である必要があります。名前空間を理解する時間を割くことで、将来の頭痛の種を回避できます。
 - [スクリプティング](/ja/docs/Web/SVG/Guides/Scripting)
-  - : JavaScriptを 使用して SVG を生成する操作を行う方法はいくつかあります。
+  - : JavaScript で SVG を作成・編集する方法はいくつかあります。
     この記事では、イベント処理、インタラクティブ機能、埋め込み SVG コンテンツの操作について説明します。
 - [SMIL による SVG アニメーション](/ja/docs/Web/SVG/Guides/SVG_animation_with_SMIL)
   - : SMIL は、インタラクティブなマルチメディアプレゼンテーションを作成するための XML ベースの言語です。

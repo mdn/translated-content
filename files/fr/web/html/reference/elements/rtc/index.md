@@ -1,8 +1,9 @@
 ---
-title: "<rtc> : l'élément de conteneur de texte Ruby"
+title: "Élément HTML `<rtc>` : l'élément de conteneur de texte Ruby"
+short-title: <rtc>
 slug: Web/HTML/Reference/Elements/rtc
 l10n:
-  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

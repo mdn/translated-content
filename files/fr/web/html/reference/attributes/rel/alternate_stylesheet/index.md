@@ -1,8 +1,9 @@
 ---
-title: rel="alternate stylesheet"
+title: Valeur d'attribut HTML `rel="alternate stylesheet"`
+short-title: alternate stylesheet
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La paire de mots-clés **`alternate stylesheet`**, lorsqu'elle est utilisée comme valeur pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément {{HTMLElement("link")}}, indique que la ressource cible est une _feuille de style alternative_. Définir des **feuilles de style alternatives** dans une page web permet aux utilisateur·ice·s de voir plusieurs versions d'une page selon leurs besoins ou préférences.
