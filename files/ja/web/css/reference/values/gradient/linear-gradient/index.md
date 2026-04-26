@@ -1,11 +1,12 @@
 ---
-title: linear-gradient()
+title: CSS `linear-gradient()` 関数
+short-title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、2 つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
+**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、2 つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: linear-gradient()")}}
 
@@ -94,7 +95,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : グラデーション軸の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。
 - `<linear-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} の値であり、任意でその後に停止位置を指定します (グラデーションの軸に沿った {{CSSxRef("&lt;percentage&gt;")}} または {{CSSxRef("&lt;length&gt;")}} の位置)。
@@ -110,7 +111,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
 繰り返して領域を埋め尽くす線形グラデーションを生成する場合は、代わりに {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} 関数を使用してください。
 
-`<gradient>` は CSS の `<image>` データ型に所属しますので、 `<image>` が使用できるところでのみ使用できます。このため、 `linear-gradient` は {{CSSxRef("background-color")}} などの {{CSSxRef("&lt;color&gt;")}} を要求するプロパティでは動作しません。
+`<gradient>` は CSS の `<image>` データ型に所属しますので、{{cssxref("image")}} が使用できるところでのみ使用できます。このため、 `linear-gradient()` は {{CSSxRef("background-color")}} などの {{CSSxRef("&lt;color&gt;")}} を要求するプロパティでは動作しません。
 
 ### 線形グラデーションの構成
 
@@ -285,7 +286,7 @@ body {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - [CSS 画像モジュール](/ja/docs/Web/CSS/Guides/Images)
