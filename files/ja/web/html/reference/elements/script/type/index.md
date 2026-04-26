@@ -1,11 +1,10 @@
 ---
-title: "<script>: type 属性"
+title: "HTML `<script type>` 属性"
+short-title: <script type>
 slug: Web/HTML/Reference/Elements/script/type
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 **`type`** は [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の属性で、その要素で表されるスクリプトの種類（クラシックスクリプト、JavaScript モジュール、インポートマップ、データブロック）を示します。
 
