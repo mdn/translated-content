@@ -1,0 +1,92 @@
+---
+title: <feDisplacementMap>
+slug: Web/SVG/Reference/Element/feDisplacementMap
+l10n:
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
+---
+
+**`<feDisplacementMap>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、{{SVGAttr("in2")}} から取得した画像のピクセル値を使用して、{{SVGAttr("in")}} から取得した画像を空間的に変位させます。
+
+変換式は次のようになります。
+
+`P'(x,y) ← P(x + scale * (XC(x,y) - 0.5), y + scale * (YC(x,y) - 0.5))`
+
+ここで、`P(x,y)` は入力画像 ({{SVGAttr("in")}}) であり、`P'(x,y)` は出力先です。`XC(x,y)` および `YC(x,y)` は、{{SVGAttr("xChannelSelector")}} および {{SVGAttr("yChannelSelector")}} で指定されたチャンネルの要素値です。
+
+他のフィルタープリミティブと同様に、デフォルトで `linearRGB` {{glossary("color space", "色空間")}}の色成分を処理します。{{svgattr("color-interpolation-filters")}} を使用することで、代わりに `sRGB` を使用することも可能です。
+
+## 使用コンテキスト
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("in")}}
+- {{SVGAttr("in2")}}
+- {{SVGAttr("scale")}}
+- {{SVGAttr("xChannelSelector")}}
+- {{SVGAttr("yChannelSelector")}}
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルタープリミティブ属性（プレゼンテーション属性）): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
+
+## DOM インターフェイス
+
+この要素は {{domxref("SVGFEDisplacementMapElement")}} インターフェイスを実装しています。
+
+## 例
+
+```html
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 220 220"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="displacementFilter">
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap
+      in2="turbulence"
+      in="SourceGraphic"
+      scale="50"
+      xChannelSelector="R"
+      yChannelSelector="G" />
+  </filter>
+
+  <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" />
+</svg>
+```
+
+{{EmbedLiveSample('Example', 220, 220)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルタープリミティブ属性（プレゼンテーション属性）)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG チュートリアル: フィルター効果](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
