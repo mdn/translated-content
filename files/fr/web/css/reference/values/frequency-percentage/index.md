@@ -1,9 +1,9 @@
 ---
-title: <frequency-percentage>
+title: Type CSS `<frequency-percentage>`
+short-title: <frequency-percentage>
 slug: Web/CSS/Reference/Values/frequency-percentage
-original_slug: Web/CSS/frequency-percentage
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{CSSxRef("frequency")}} ou une valeur de type {{CSSxRef("percentage")}}. Les valeurs de fréquence, par exemple, la hauteur d'une voix parlante, ne sont actuellement utilisées dans aucune propriété CSS.

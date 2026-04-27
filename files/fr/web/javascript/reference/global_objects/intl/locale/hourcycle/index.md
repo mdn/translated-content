@@ -1,41 +1,41 @@
 ---
-title: Intl.Locale.prototype.hourCycle
+title: "Intl.Locale : propriété hourCycle"
+short-title: hourCycle
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
+l10n:
+  sourceCommit: e509776556a47f12843b91ab5c6e9be6585698c6
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.hourCycle`** est une propriété accessible via un accesseur qui renvoie la convention pour le format des heures utilisée par la locale courante.
+La propriété d'accesseur **`hourCycle`** des instances de {{JSxRef("Intl.Locale")}} retourne le type de cycle horaire pour cette locale.
 
 ## Description
 
-Il existe deux types de conventions pour la représentation des heures : sur douze heures d'une part et sur vingt-quatre heures d'autre part. La propriété `hourCycle` permet aux développeurs de connaître la représentation utilisée par une locale donnée. À l'instar des autres données fournies par les instances de `Locale`, `hourCycle` représente une [extension Unicode](https://www.unicode.org/reports/tr35/#u_Extension) qui permet d'affiner le comportement d'une locale. Les valeurs de cette propriété/extension peuvent être :
+Il existe deux types principaux de conventions pour la représentation du temps (horloges) utilisées dans le monde : l'horloge sur 12 heures et l'horloge sur 24 heures. Pour une liste des types de cycles horaires pris en charge, voir [`Intl.Locale.prototype.getHourCycles()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#types_de_cycles_horaires_pris_en_charge).
 
-| Clé   | Description                                                                                                                                                          |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `h12` | Système horaire sur les heures 1 à 12 (correspond à la notation "h" pour les motifs de recherche). L'horloge est sur douze heures et minuit commence à 12:00 AM.     |
-| `h23` | Système horaire sur les heures 0 à 23 (correspond à la notation "H" pour les motifs de recherche). L'horloge est sur vingt-quatre heures et minuit commence à 0:00.  |
-| `h11` | Système horaire sur les heures 0 à 11 (correspond à la notation "K" pour les motifs de recherche). L'horloge est sur douze heures et minuit commence à 0:00 AM.      |
-| `h24` | Système horaire sur les heures 1 à 24 (correspond à la notation "K" pour les motifs de recherche). L'horloge est sur vingt-quatre heures et minuit commence à 24:00. |
+La valeur de la propriété `hourCycle` est définie au moment de la construction, soit par la clé `hc` de l'identifiant de la locale, soit par l'option `hourCycle` du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}. Cette dernière prend le pas si les deux sont présentes&nbsp;; et si aucune n'est présente, la propriété a pour valeur `undefined`.
+
+Le mutateur d'accesseur de `hourCycle` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
-### Définir le format horaire grâce à la chaîne décrivant la locale
+Comme pour d'autres sous-balises de locale, le type de cycle horaire peut être ajouté à l'objet {{JSxRef("Intl.Locale")}} par la chaîne de caractères représentant la locale, ou avec un objet de configuration passé en argument au constructeur.
 
-Il est possible de préciser la valeur d'une extension Unicode dans la chaîne de caractères représentant la locale. Pour indiquer l'extension, on ajoutera le suffixe `-u` qui indique une clé d'extension à venir, ensuite on ajoutera la clé de l'extension en question (ici `-hc`) et enfin on ajoutera la valeur souhaitée pour cette extension.
+### Ajouter un cycle horaire par le biais de la chaîne de caractères représentant la locale
+
+Dans le [spécification Unicode des chaînes de caractères de locale](https://www.unicode.org/reports/tr35/), `hourCycle` est un «&nbsp;sous-balise d'extension&nbsp;». Ces sous-balises ajoutent des données supplémentaires sur la locale et sont ajoutées aux identifiants de locale en utilisant la clé d'extension `-u`. Pour ajouter le type de cycle horaire à la chaîne de caractères d'identifiant de locale initiale passée au constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}, ajoutez d'abord la clé d'extension `-u` si elle n'existe pas. Ensuite, ajoutez l'extension `-hc` pour indiquer que vous ajoutez un cycle horaire. Enfin, ajoutez le type de cycle horaire.
 
 ```js
-let fr24hour = new Intl.Locale("fr-FR-u-hc-h23");
-console.log(fr24hour.hourCycle); // Affichera "h23" dans la console
+const locale = new Intl.Locale("fr-FR-u-hc-h23");
+console.log(locale.hourCycle); // "h23"
 ```
 
-### Définir le format horaire grâce à un objet de configuration
+### Ajouter un cycle horaire par le biais de l'objet de configuration
 
-Le constructeur [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété `hourCycle` sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.
+Le constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} accepte un argument optionnel sous forme d'objet de configuration, qui peut contenir plusieurs types d'extensions, y compris les types de cycles horaires. Définissez la propriété `hourCycle` de l'objet de configuration sur le type de cycle horaire souhaité, puis passez-le au constructeur.
 
 ```js
-let us12hour = new Intl.Locale("en-US-u-hc-h12");
-console.log(us12hour.hourCycle); // Affichera "h12" dans la console
+const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // "h12"
 ```
 
 ## Spécifications
@@ -48,5 +48,6 @@ console.log(us12hour.hourCycle); // Affichera "h12" dans la console
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Intl.Locale")}}
-- [Spécification pour l'extension Unicode des cycles horaires](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- L'objet {{JSxRef("Intl.Locale")}}
+- La méthode {{JSxRef("Intl.Locale.prototype.getHourCycles()")}}
+- [Extension Unicode des cycles horaires <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) dans la spécification du langage de balisage des données de locale Unicode

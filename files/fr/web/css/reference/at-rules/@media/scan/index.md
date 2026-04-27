@@ -1,8 +1,9 @@
 ---
-title: scan
+title: Caractéristique média CSS `scan`
+short-title: scan
 slug: Web/CSS/Reference/At-rules/@media/scan
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`scan`** permet d'appliquer des styles CSS en fonction du procédé de balayage du périphérique de sortie.

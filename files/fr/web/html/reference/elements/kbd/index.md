@@ -1,8 +1,9 @@
 ---
-title: "<kbd> : l'élément de saisie clavier"
+title: "Élément HTML `<kbd>` : l'élément de saisie clavier"
+short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
 l10n:
-  sourceCommit: 6ed02a2b0e0d891f7d3b4c2a6b1d9cc05c90ed9c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<kbd>`** représente une portion de texte en ligne désignant une saisie de texte de l'utilisateur·ice à partir d'un clavier, d'une commande vocale ou de tout autre dispositif de saisie de texte. Par convention, {{Glossary("user agent", "l'agent utilisateur")}} affiche le contenu d'un élément `<kbd>` en utilisant sa police monospace par défaut, bien que cela ne soit pas imposé par la norme HTML.

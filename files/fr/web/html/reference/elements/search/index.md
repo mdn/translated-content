@@ -1,8 +1,9 @@
 ---
-title: "<search>: l'élément de recherche"
+title: "Élément HTML `<search>` : l'élément de recherche"
+short-title: <search>
 slug: Web/HTML/Reference/Elements/search
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<search>`** est un conteneur représentant les parties du document ou de l'application avec des contrôles de formulaire ou d'autres contenus liés à l'exécution d'une opération de recherche ou de filtrage. L'élément `<search>` identifie sémantiquement le but du contenu de l'élément comme ayant des capacités de recherche ou de filtrage. La fonctionnalité de recherche ou de filtrage peut concerner le site Web ou l'application, la page Web ou le document actuel, ou l'ensemble d'Internet ou une sous-section de celui-ci.

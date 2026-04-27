@@ -1,8 +1,9 @@
 ---
-title: "<dir> : l'élément de répertoire"
+title: "Élément HTML `<dir>` : l'élément de répertoire"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

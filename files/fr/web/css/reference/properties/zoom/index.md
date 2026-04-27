@@ -1,8 +1,9 @@
 ---
-title: zoom
+title: Propriété CSS `zoom`
+short-title: zoom
 slug: Web/CSS/Reference/Properties/zoom
 l10n:
-  sourceCommit: 55326f330a6ae829494c7606b1bd47b2c0f9d888
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`zoom`** peut être utilisée pour contrôler le niveau de zoom d'un élément.

@@ -1,8 +1,9 @@
 ---
-title: <overflow-position>
+title: Type CSS `<overflow-position>`
+short-title: <overflow-position>
 slug: Web/CSS/Reference/Values/overflow-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<overflow-position>`** définit comment un sujet d'alignement (<i lang="en">alignment subject</i> en anglais) plus grand que son conteneur d'alignement (<i lang="en">alignment container</i> en anglais) déborde de ce dernier. Par exemple, si des éléments centrés sont plus larges que leur conteneur, le débordement peut s'afficher au‑delà du bord de début de la zone d'affichage (<i lang="en">viewport</i> en anglais), bord vers lequel il est impossible de défiler. La valeur `<overflow-position>` précise si le mode d'alignement doit être remplacé pour garantir que le contenu soit visible (`safe`) ou si le mode d'alignement doit être respecté (`unsafe`).

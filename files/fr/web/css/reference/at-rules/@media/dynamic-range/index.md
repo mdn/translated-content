@@ -1,8 +1,9 @@
 ---
-title: dynamic-range
+title: Caractéristique média CSS `dynamic-range`
+short-title: dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/dynamic-range
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`dynamic-range`** permet de tester la combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'{{Glossary("user agent", "agent utilisateur")}} et le périphérique de sortie.

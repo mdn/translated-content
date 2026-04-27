@@ -1,8 +1,9 @@
 ---
-title: scroll-snap-align
+title: Propriété CSS `scroll-snap-align`
+short-title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-snap-align`** définit la position d'accrochage de la boîte comme un alignement de sa [zone d'accrochage](/fr/docs/Glossary/Scroll_snap#snap_area) (en tant que {{Glossary("alignment subject", "sujet d'alignement")}}) à l'intérieur du port d'accrochage de son conteneur (en tant que {{Glossary("alignment container", "conteneur d'alignement")}}).

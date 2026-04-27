@@ -1,8 +1,9 @@
 ---
-title: position-try-order
+title: Propriété CSS `position-try-order`
+short-title: position-try-order
 slug: Web/CSS/Reference/Properties/position-try-order
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-try-order`** permet de définir diverses options de repli qui entraînent l'utilisation d'un repli de position disponible pour définir la position d'un élément positionné par ancre, au lieu de ses paramètres de position initiaux.

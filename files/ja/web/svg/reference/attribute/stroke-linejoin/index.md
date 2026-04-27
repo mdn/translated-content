@@ -184,7 +184,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "bevel" value -->
+  <!-- "bevel" 値の効果 -->
   <path
     d="M1,5 l2,-3 l2,3"
     stroke="black"
@@ -222,7 +222,7 @@ svg {
 
 ```html
 <svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "miter" value -->
+  <!-- "miter" 値の効果 -->
   <path
     d="M1,5 l2,-3 l2,3"
     stroke="black"
@@ -339,7 +339,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- Effect of the "round" value -->
+  <!-- "round" 値の効果 -->
   <path
     d="M1,5 l2,-3 l2,3"
     stroke="black"

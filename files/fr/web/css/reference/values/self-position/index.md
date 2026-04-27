@@ -1,8 +1,9 @@
 ---
-title: <self-position>
+title: Type CSS `<self-position>`
+short-title: <self-position>
 slug: Web/CSS/Reference/Values/self-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<self-position>`** est employé par les propriétés {{CSSxRef("justify-self")}} et {{CSSxRef("align-self")}}, ainsi que par le raccourci {{CSSxRef("place-self")}}, pour aligner la boîte dans son conteneur d'alignement. Il est également utilisé par les propriétés {{CSSxRef("justify-items")}} et {{CSSxRef("align-items")}}, ainsi que par le raccourci {{CSSxRef("place-items")}}, pour définir les valeurs par défaut de `justify-self` et `align-self`.

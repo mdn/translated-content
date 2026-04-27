@@ -1,8 +1,9 @@
 ---
-title: baseline-source
+title: Propriété CSS `baseline-source`
+short-title: baseline-source
 slug: Web/CSS/Reference/Properties/baseline-source
 l10n:
-  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`baseline-source`** définit la [ligne de base](/fr/docs/Web/CSS/Reference/Values/baseline-position) à utiliser lorsque les boîtes de niveau en ligne ont plusieurs lignes de base possibles, comme les [blocs en ligne](/fr/docs/Web/CSS/Guides/Display/Block_and_inline_layout) multi-lignes ou les [conteneurs flexibles en ligne](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts#le_conteneur_flexible).

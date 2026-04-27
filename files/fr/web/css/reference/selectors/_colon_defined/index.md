@@ -1,8 +1,9 @@
 ---
-title: :defined
+title: Pseudo-classe CSS `:defined`
+short-title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés («&nbsp;_custom elements_&nbsp;») ayant correctement été définis (c'est-à-dire grâce à la méthode {{DOMxRef("CustomElementRegistry.define()")}}).

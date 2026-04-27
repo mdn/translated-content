@@ -1,8 +1,9 @@
 ---
-title: <timeline-range-name>
+title: Type CSS `<timeline-range-name>`
+short-title: <timeline-range-name>
 slug: Web/CSS/Reference/Values/timeline-range-name
 l10n:
-  sourceCommit: 0cc0da86bf55acce9f83eca7bbed9508fda98375
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<timeline-range-name>`** est un identifiant représentant l'une des plages de chronologie nommées prédéfinies à l'intérieur d'une [chronologie de progression de vue](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines).
@@ -37,9 +38,12 @@ Valeurs valides pour `<timeline-range-name>`&nbsp;:
 - `exit-crossing`
   - : Représente la plage où la boîte principale franchit le bord de début. Le début de la plage (0% de progression) se produit lorsque le bord de début de la boîte principale de l'élément coïncide avec le bord de début de sa plage de visibilité de progression de vue. La fin de la plage (100% de progression) est le point où le bord de fin de la boîte principale de l'élément coïncide avec le bord de début de sa plage de visibilité de progression de vue. La taille de la plage correspond à la taille de la boîte principale de l'élément dans la direction du défilement.
 
+- `scroll`
+  - : Représente la plage complète du {{Glossary("scroll container", "conteneur de défilement")}} sur lequel la chronologie de progression de vue est définie. Le début de la plage (0% de progression) et la fin de la plage (100% de progression) se produisent aux positions de début et de fin du conteneur de défilement sous-jacent à la chronologie de progression de vue.
+
 ## Syntaxe formelle
 
-{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing`)}}
+{{CSSSyntaxRaw(`<timeline-range-name> = cover | contain | entry | exit | entry-crossing | exit-crossing | scroll`)}}
 
 ## Exemples
 
@@ -55,10 +59,11 @@ Voir le [visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://
 
 ## Voir aussi
 
-- {{CSSxRef("animation-range-start")}}, {{CSSxRef("animation-range-end")}}, {{CSSxRef("animation-range")}}
+- Les propriétés {{CSSxRef("animation-range-start")}}, {{CSSxRef("animation-range-end")}}, {{CSSxRef("animation-range")}}
 - La propriété {{CSSxRef("animation-timeline")}}
 - La propriété {{CSSxRef("scroll-timeline")}}
 - La propriété {{CSSxRef("view-timeline-inset")}}
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [Chronologies d'animation pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - Le module [des animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

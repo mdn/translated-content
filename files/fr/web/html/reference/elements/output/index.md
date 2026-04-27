@@ -1,8 +1,9 @@
 ---
-title: "<output> : l'élément de sortie"
+title: "Élément HTML `<output>` : l'élément de sortie"
+short-title: <output>
 slug: Web/HTML/Reference/Elements/output
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<output>`** est un élément conteneur dans lequel un site ou une application peut injecter les résultats d'un calcul ou le résultat d'une action utilisateur.

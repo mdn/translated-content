@@ -1,8 +1,9 @@
 ---
-title: :read-only
+title: Pseudo-classe CSS `:read-only`
+short-title: :read-only
 slug: Web/CSS/Reference/Selectors/:read-only
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-only`** permet de cibler les éléments (tels que certains types de {{HTMLElement("input")}} et {{HTMLElement("textarea")}}) qui ne sont pas modifiables par l'utilisateur·ice. Les éléments sur lesquels l'attribut HTML [`readonly`](/fr/docs/Web/HTML/Reference/Attributes/readonly) n'a pas d'effet (tels que [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio), [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) et tous les autres éléments non liés à un formulaire) sont également sélectionnés par la pseudo-classe `:read-only`. En fait, `:read-only` correspond à tout ce qui ne correspond pas à {{CSSxRef(":read-write")}}, ce qui le rend équivalent à `:not(:read-write)`.

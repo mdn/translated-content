@@ -1,8 +1,9 @@
 ---
-title: mask
+title: Propriété CSS `mask`
+short-title: mask
 slug: Web/CSS/Reference/Properties/mask
 l10n:
-  sourceCommit: 7b291dab974ec1ceb97c83f45ce76c3afada2e63
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`mask`** applique un masque à un élément (partiellement ou totalement) en masquant ou en rognant une zone définie de l'image. Il s'agit d'une propriété raccourcie pour toutes les propriétés [`mask-*`](#propriétés_constitutives). La propriété accepte une ou plusieurs valeurs séparées par des virgules, où chaque valeur correspond à un [`<mask-layer>`](#mask-layer).

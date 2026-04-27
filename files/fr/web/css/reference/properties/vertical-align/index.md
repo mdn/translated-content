@@ -1,8 +1,9 @@
 ---
-title: vertical-align
+title: Propriété CSS `vertical-align`
+short-title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
 l10n:
-  sourceCommit: 26e03490d14803dc2ae8b85ec5c0c2b26d6b50d1
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i> en anglais), en ligne et bloc (<i lang="en">inline-block</i> en anglais) ou d'une boîte de cellule de tableau.

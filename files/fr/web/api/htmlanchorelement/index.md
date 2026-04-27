@@ -15,6 +15,8 @@ L'interface **`HTMLAnchorElement`** représente les éléments d'hyperlien et fo
 
 _Hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
+- {{DOMxRef("HTMLAnchorElement.attributionSourceId")}} {{Experimental_Inline}}
+  - : Un entier positif représentant l'identifiant de la source d'attribution utilisé pour la [mesure des clics privés <sup>(angl.)</sup>](https://privacycg.github.io/private-click-measurement/). Les valeurs valides vont de `0` à `255`.
 - {{DOMxRef("HTMLAnchorElement.attributionSrc")}} {{SecureContext_Inline}} {{Deprecated_Inline}}
   - : Obtient et définit l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/a#attributionsrc) sur un élément {{HTMLElement("a")}} de façon programmatique, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une source d'attribution basée sur la navigation.
 - {{DOMxRef("HTMLAnchorElement.download")}}
