@@ -1,8 +1,9 @@
 ---
-title: "<data> : l'élément de données"
+title: "Élément HTML `<data>` : l'élément de données"
+short-title: <data>
 slug: Web/HTML/Reference/Elements/data
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<data>`** associe un contenu donné à une version interprétable par une machine. Si le contenu concerne une date ou une heure, il faut utiliser l'élément HTML {{HTMLElement("time")}}.

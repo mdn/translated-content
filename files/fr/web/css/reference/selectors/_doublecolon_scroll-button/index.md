@@ -1,8 +1,9 @@
 ---
-title: ::scroll-button()
+title: Pseudo-élément CSS `::scroll-button()`
+short-title: ::scroll-button()
 slug: Web/CSS/Reference/Selectors/::scroll-button
 l10n:
-  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}

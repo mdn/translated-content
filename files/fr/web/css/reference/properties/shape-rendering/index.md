@@ -1,8 +1,9 @@
 ---
-title: shape-rendering
+title: Propriété CSS `shape-rendering`
+short-title: shape-rendering
 slug: Web/CSS/Reference/Properties/shape-rendering
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`shape-rendering`** fournit des indications au moteur de rendu sur les compromis à effectuer lors du rendu de formes telles que des chemins, des cercles ou des rectangles.

@@ -1,8 +1,9 @@
 ---
-title: "<bdo> : l'élément de remplacement bidirectionnelle"
+title: "Élément HTML `<bdo>` : l'élément de remplacement bidirectionnelle"
+short-title: <bdo>
 slug: Web/HTML/Reference/Elements/bdo
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<bdo>`** force la direction courante du texte, de sorte que le texte à l'intérieur est affiché dans une direction différente.

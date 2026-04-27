@@ -1,12 +1,11 @@
 ---
 title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
-original_slug: Web/CSS/color_value/oklab
 l10n:
-  sourceCommit: 39a17e10bc078c6e76717683b26a5b20d9d9c574
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans l'{{glossary("color space", "espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.
 
 Oklab est un espace de couleur perceptuel et est utile pour&nbsp;:
 
@@ -14,7 +13,7 @@ Oklab est un espace de couleur perceptuel et est utile pour&nbsp;:
 - Modifier la saturation des couleurs, tout en conservant la perception de l'utilisateur·ice de la teinte et de la luminosité
 - Créer des dégradés de couleurs lisses et uniformes (lorsqu'ils sont interpolés manuellement, par exemple, dans un élément HTML {{HTMLElement("canvas")}}).
 
-`oklab()` fonctionne avec un système de coordonnées cartésiennes sur l'espace de couleur Oklab — les axes a et b. Il peut représenter une gamme plus large de couleurs que RGB, y compris les couleurs à large gamme et P3. Si vous souhaitez un système de couleur polaire, chroma et teinte, utilisez {{cssxref("color_value/oklch", "oklch()")}}.
+`oklab()` fonctionne avec un système de coordonnées cartésiennes sur l'espace de couleur Oklab — les axes a et b. Il peut représenter une gamme plus large de couleurs que RGB, y compris les couleurs à large gamme et P3. Si vous souhaitez un système de couleur polaire, chroma et teinte, utilisez {{CSSxRef("color_value/oklch", "oklch()")}}.
 
 ## Syntaxe
 
@@ -43,16 +42,16 @@ oklab(L a b[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `1`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la luminosité perçue de la couleur. Le nombre `0` correspond à `0%` (noir) et le nombre `1` correspond à `100%` (blanc).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `1`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la luminosité perçue de la couleur. Le nombre `0` correspond à `0%` (noir) et le nombre `1` correspond à `100%` (blanc).
 - `a`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `a` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est verte (en se déplaçant vers `-0.4`) ou rouge (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `a` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est verte (en se déplaçant vers `-0.4`) ou rouge (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
 - `b`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `b` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est bleue (en se déplaçant vers `-0.4`) ou jaune (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur définit la distance de la couleur le long de l'axe `b` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est bleue (en se déplaçant vers `-0.4`) ou jaune (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur 100%. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 > [!NOTE]
-> Consultez [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#composants_de_couleur_manquants) pour plus d'informations sur l'effet de `none`.
+> Consultez [Composantes de couleur manquantes](/fr/docs/Web/CSS/Reference/Values/color_value#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
 
 #### Syntaxe des valeurs relatives
 
@@ -63,15 +62,15 @@ oklab(from <color> L a b[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la **couleur d'origine**. C'est la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot-clé `from` est toujours inclus lors de la définition d'une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la **couleur d'origine**. C'est la couleur originale sur laquelle la couleur relative est basée. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `L`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `0` et `1`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur de sortie. Le nombre `0` correspond à `0%` (noir) et le nombre `1` correspond à `100%` (blanc).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `0` et `1`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `0%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur de sortie. Le nombre `0` correspond à `0%` (noir) et le nombre `1` correspond à `100%` (blanc).
 - `a`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `a` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est verte (en se déplaçant vers `-0.4`) ou rouge (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `a` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est verte (en se déplaçant vers `-0.4`) ou rouge (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
 - `b`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `b` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est bleue (en se déplaçant vers `-0.4`) ou jaune (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}) entre `-0.4` et `0.4`, un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) entre `-100%` et `100%`, ou le mot-clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la distance de la couleur de sortie le long de l'axe `b` dans l'espace de couleur Oklab, qui détermine à quel point la couleur est bleue (en se déplaçant vers `-0.4`) ou jaune (en se déplaçant vers `+0.4`). Notez que ces valeurs sont signées (permettant des valeurs positives et négatives) et théoriquement illimitées, ce qui signifie que vous pouvez définir des valeurs en dehors des limites `±0.4` (`±100%`). En pratique, les valeurs ne peuvent pas dépasser `±0.5`.
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où le nombre `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). De plus, le mot-clé `none` peut être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas explicitement définie, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, la valeur est précédée d'une barre oblique (`/`).
 
 #### Définition des composants des canaux de couleur de sortie relative
 
@@ -130,7 +129,7 @@ oklab(from hsl(0 100% 50% / 0.8) l a b / 0.5)
 /* Couleur de sortie calculée : oklab(0.627966 0.22488 0.125859 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `oklab()` — `oklab(0.627966 0.22488 0.125859)`. Les calculs {{cssxref("calc")}} sont appliqués aux valeurs `L`, `a`, `b`, et `A`, résultant en une couleur de sortie de `oklab(0.827966 0.14488 -0.0741406 / 0.9)`&nbsp;:
+Dans l'exemple suivant, la couleur d'origine `hsl()` est à nouveau convertie vers l'équivalent `oklab()` — `oklab(0.627966 0.22488 0.125859)`. Les calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `L`, `a`, `b`, et `A`, résultant en une couleur de sortie de `oklab(0.827966 0.14488 -0.0741406 / 0.9)`&nbsp;:
 
 ```css
 oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alpha - 0.1))
@@ -214,7 +213,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Ajustement de la luminosité", "", "200")}}
+{{EmbedLiveSample("Ajustement de la luminosité", "", 200)}}
 
 ### Ajustement de l'opacité
 
@@ -284,7 +283,7 @@ Cet exemple démontre les effets de la définition des valeurs `a` et `b` de la 
 
 #### CSS
 
-En utilisant la propriété CSS {{cssxref("background-color")}}, nous faisons varier les valeurs `a` et `b` de la fonction de couleur `oklab()` le long de l'axe a et de l'axe b, montrant les effets des valeurs maximales, médianes et minimales dans chaque cas.
+En utilisant la propriété CSS {{CSSxRef("background-color")}}, nous faisons varier les valeurs `a` et `b` de la fonction de couleur `oklab()` le long de l'axe a et de l'axe b, montrant les effets des valeurs maximales, médianes et minimales dans chaque cas.
 
 ```css hidden
 body {
@@ -336,7 +335,7 @@ div {
 
 #### Résultat
 
-{{EmbedLiveSample("Ajustement des axes de couleur", "", "200")}}
+{{EmbedLiveSample("Ajustement des axes de couleur", "", 200)}}
 
 La colonne de gauche est à l'extrémité jaune (`-0.4`) de l'axe b et la colonne de droite est à l'extrémité bleue (`0.4`). La rangée du haut affiche les couleurs à l'extrémité rouge de l'axe a (`-0.4`) et la rangée du bas est à l'extrémité verte (`0.4`). La colonne et la rangée du milieu sont aux points médians de chaque axe, la cellule du milieu étant grise&nbsp;; elle ne contient ni rouge, ni vert, ni jaune, ni bleu, avec une valeur `0` pour les deux axes.
 
@@ -410,13 +409,13 @@ span {
 
 #### Résultat
 
-{{EmbedLiveSample("Dégradés linéaires le long de l'axe a et de l'axe b", '', '420')}}
+{{EmbedLiveSample("Dégradés linéaires le long de l'axe a et de l'axe b", "", 420)}}
 
 ### Utilisation des couleurs relatives avec `oklab()`
 
-Cet exemple stylise trois éléments {{htmlelement("div")}} avec différentes couleurs de fond. Le `<div>` du milieu conserve la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
+Cet exemple stylise trois éléments {{HTMLElement("div")}} avec différentes couleurs de fond. Le `<div>` du milieu conserve la `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
 
-Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `oklab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré via une fonction `calc()`. La couleur éclaircie a `0.15` (15%) ajouté au canal de luminosité, et la couleur assombrie a `0.15` (15%) soustrait du canal de luminosité.
+Ces variantes sont définies en utilisant des couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est passée dans une fonction `oklab()`, et les couleurs de sortie ont leur canal de luminosité modifié pour obtenir l'effet désiré avec une fonction `calc()`. La couleur éclaircie a `0.15` (15%) ajouté au canal de luminosité, et la couleur assombrie a `0.15` (15%) soustrait du canal de luminosité.
 
 ```html hidden
 <div id="container">
@@ -464,7 +463,7 @@ Ces variantes sont définies en utilisant des couleurs relatives — la [propri�
 
 Le résultat est le suivant&nbsp;:
 
-{{ EmbedLiveSample("Utilisation des couleurs relatives avec `oklab()`", "100%", "200") }}
+{{EmbedLiveSample("Utilisation des couleurs relatives avec `oklab()`", "100%", 200)}}
 
 ## Spécifications
 
@@ -477,7 +476,7 @@ Le résultat est le suivant&nbsp;:
 ## Voir aussi
 
 - Le [type de donnée `<color>`](/fr/docs/Web/CSS/Reference/Values/color_value) pour une liste de toutes les notations de couleur
-- Les fonctions de couleur {{cssxref("color_value/lab","lab()")}} et {{cssxref("color_value/oklch","oklch()")}}
+- Les fonctions de couleur {{CSSxRef("color_value/lab","lab()")}} et {{CSSxRef("color_value/oklch","oklch()")}}
 - [Utilisation des couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
 - Le module des [couleurs CSS](/fr/docs/Web/CSS/Guides/Colors)
 - [Un espace de couleur perceptuel pour le traitement des images <sup>(angl.)</sup>](https://bottosson.github.io/posts/oklab/) sur bottosson.github.io (2023)

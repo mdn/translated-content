@@ -1,8 +1,9 @@
 ---
-title: "<samp> : l'élément d'échantillon en sortie"
+title: "Élément HTML `<samp>` : l'élément d'échantillon en sortie"
+short-title: <samp>
 slug: Web/HTML/Reference/Elements/samp
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](<https://fr.wikipedia.org/wiki/Courier_(police_d'écriture)>) ou en Lucida Console).

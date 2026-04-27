@@ -1,8 +1,9 @@
 ---
-title: margin-top
+title: Propriété CSS `margin-top`
+short-title: margin-top
 slug: Web/CSS/Reference/Properties/margin-top
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-top`** définit la [zone de marge](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_marge) en haut d'un élément. Une valeur positive l'éloigne de ses voisins, tandis qu'une valeur négative la rapproche.

@@ -1,8 +1,9 @@
 ---
-title: <input type="reset">
+title: Valeur d'attribut HTML `<input type="reset">`
+short-title: <input type="reset">
 slug: Web/HTML/Reference/Elements/input/reset
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`"reset"`** sont affichés sous la forme de boutons permettant de réinitialiser l'ensemble des champs du formulaire avec leurs valeurs initiales.

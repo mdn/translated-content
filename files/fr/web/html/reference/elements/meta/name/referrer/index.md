@@ -1,9 +1,9 @@
 ---
-title: <meta name="referrer">
+title: Valeur d'attribut HTML `<meta name="referrer">`
 short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`referrer`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} contrôle l'en-tête HTTP {{HTTPHeader("Referer")}} des requêtes envoyées depuis le document.

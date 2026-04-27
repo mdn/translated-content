@@ -1,8 +1,9 @@
 ---
-title: background-image
+title: Propriété CSS `background-image`
+short-title: background-image
 slug: Web/CSS/Reference/Properties/background-image
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.

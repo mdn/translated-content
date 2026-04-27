@@ -1,8 +1,9 @@
 ---
-title: "<em> : l'élément d'emphase"
+title: "Élément HTML `<em>` : l'élément d'emphase"
+short-title: <em>
 slug: Web/HTML/Reference/Elements/em
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<em>`** marque le texte qui reçoit une emphase. L'élément `<em>` peut être imbriqué, chaque niveau d'imbrication indiquant un degré d'emphase plus élevé.

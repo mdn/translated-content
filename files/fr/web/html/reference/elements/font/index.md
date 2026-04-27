@@ -1,8 +1,9 @@
 ---
-title: "<font> : l'élément de police"
+title: "Élément HTML `<font>` : l'élément de police"
+short-title: <font>
 slug: Web/HTML/Reference/Elements/font
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

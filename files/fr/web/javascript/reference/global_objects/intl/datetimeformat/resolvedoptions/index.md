@@ -43,7 +43,7 @@ Un nouvel objet dont les propriétés reflètent les options calculées lors de 
 - `calendar`
   - : La valeur fournie pour cette propriété dans l'argument `options`, ou en utilisant la clé d'extension Unicode `"ca"`, avec une valeur par défaut si nécessaire. Il s'agit d'un [type de calendrier](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge) pris en charge pour cette locale. La valeur par défaut dépend de la locale.
 - `numberingSystem`
-  - : La valeur fournie pour cette propriété dans l'argument `options`, ou en utilisant la clé d'extension Unicode `"nu"`, avec une valeur par défaut si nécessaire. Il s'agit d'un [système de numérotation](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numérotation_pris_en_charge) pris en charge pour cette locale. La valeur par défaut dépend de la locale.
+  - : La valeur fournie pour cette propriété dans l'argument `options`, ou en utilisant la clé d'extension Unicode `"nu"`, avec une valeur par défaut si nécessaire. Il s'agit d'un [système de numération](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numération_pris_en_charge) pris en charge pour cette locale. La valeur par défaut dépend de la locale.
 - `timeZone`
   - : La valeur fournie pour cette propriété dans l'argument `options`, avec une valeur par défaut si nécessaire. Il s'agit d'un [nom de fuseau horaire IANA](/fr/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime#fuseaux_horaires_et_décalages). La valeur par défaut correspond au fuseau horaire par défaut de l'environnement d'exécution.
 

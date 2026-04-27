@@ -1,8 +1,9 @@
 ---
-title: text-transform
+title: Propriété CSS `text-transform`
+short-title: text-transform
 slug: Web/CSS/Reference/Properties/text-transform
 l10n:
-  sourceCommit: 0cd011cb371ea646c7c2beaaff7e95b835756cd3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-transform`** définit la façon de mettre en majuscule le texte d'un élément. Elle peut être utilisée pour afficher le texte en majuscules, en minuscules ou avec chaque mot en majuscule. Elle peut également aider à améliorer la lisibilité pour les annotations ruby.

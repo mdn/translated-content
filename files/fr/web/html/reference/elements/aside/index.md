@@ -1,8 +1,9 @@
 ---
-title: "<aside> : l'élément aparté"
+title: "Élément HTML `<aside>` : l'élément aparté"
+short-title: <aside>
 slug: Web/HTML/Reference/Elements/aside
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<aside>`** représente une partie d'un document dont le contenu n'est lié que de façon indirecte au contenu principal du document. Les apartés sont fréquemment présentés sous forme de barres latérales ou d'encadrés.

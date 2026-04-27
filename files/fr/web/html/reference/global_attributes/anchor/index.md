@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : anchor"
+title: "Attribut HTML universel : `anchor`"
 short-title: anchor
 slug: Web/HTML/Reference/Global_attributes/anchor
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 {{Non-standard_Header}}{{SeeCompatTable}}

@@ -1,8 +1,9 @@
 ---
-title: inset-block-start
+title: Propriété CSS `inset-block-start`
+short-title: inset-block-start
 slug: Web/CSS/Reference/Properties/inset-block-start
 l10n:
-  sourceCommit: 2fe84cf3af6fab1d4009fe99b4a69332e1629838
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`inset-block-start`** définit le décalage logique de début de bloc d'un élément, qui correspond à un encart physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} ou {{CSSxRef("left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.

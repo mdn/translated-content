@@ -1,8 +1,9 @@
 ---
-title: max-width
+title: Propriété CSS `max-width`
+short-title: max-width
 slug: Web/CSS/Reference/Properties/max-width
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("width")}} de devenir supérieure à la valeur définie par `max-width`.

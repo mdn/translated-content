@@ -1,8 +1,9 @@
 ---
-title: :in-range
+title: Pseudo-classe CSS `:in-range`
+short-title: :in-range
 slug: Web/CSS/Reference/Selectors/:in-range
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:in-range`** cible un élément HTML {{HTMLElement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max).

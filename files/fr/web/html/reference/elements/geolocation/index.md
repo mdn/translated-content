@@ -1,8 +1,9 @@
 ---
-title: "<geolocation> : l'élément de géolocalisation"
+title: "Élément HTML `<geolocation>` : l'élément de géolocalisation"
+short-title: <geolocation>
 slug: Web/HTML/Reference/Elements/geolocation
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{SeeCompatTable}}
