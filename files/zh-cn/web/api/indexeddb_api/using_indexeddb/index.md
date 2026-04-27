@@ -269,7 +269,7 @@ request.onupgradeneeded = (event) => {
 
 ```js
 const transaction = db.transaction(["customers"], "readwrite");
-// 注意：较老的实验性实现使用已弃用常量 IDBTransaction.READ_WRITE，而不是 "readwrite"。如果你要兼容这类实现，可以写成：
+// 注意：较老的实验性实现使用已弃用常量 IDBTransaction.READ_WRITE，而不是“readwrite”。如果你要兼容这类实现，可以写成：
 // const transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);
 ```
 
@@ -497,19 +497,19 @@ index.get(["Donna", "donna@home.org"]).onsuccess = (event) => {
 如果你希望限制游标可见值的范围，可以创建 `IDBKeyRange` 对象，并把它作为第一个参数传给 `openCursor()` 或 `openKeyCursor()`。你可以创建仅允许单个键的范围，也可以创建只有下界、只有上界、或同时有上下界的范围。边界可为“闭区间”（即包含给定值）或“开区间”（即不包含给定值）。用法如下：
 
 ```js
-// 仅匹配 "Donna"
+// 仅匹配“Donna”
 const singleKeyRange = IDBKeyRange.only("Donna");
 
-// 匹配所有大于等于 "Bill" 的值
+// 匹配所有大于等于“Bill”的值
 const lowerBoundKeyRange = IDBKeyRange.lowerBound("Bill");
 
-// 匹配所有大于 "Bill" 的值，不包括 "Bill"
+// 匹配所有大于“Bill”的值，不包括“Bill”
 const lowerBoundOpenKeyRange = IDBKeyRange.lowerBound("Bill", true);
 
-// 匹配所有小于 "Donna" 的值，不包括 "Donna"
+// 匹配所有小于“Donna”的值，不包括“Donna”
 const upperBoundOpenKeyRange = IDBKeyRange.upperBound("Donna", true);
 
-// 匹配 "Bill" 到 "Donna" 之间的值，但不包括 "Donna"
+// 匹配“Bill”到“Donna”之间的值，但不包括“Donna”
 const boundKeyRange = IDBKeyRange.bound("Bill", "Donna", false, true);
 
 // 使用键范围时，将其作为 openCursor()/openKeyCursor() 的第一个参数
@@ -600,7 +600,7 @@ function useDatabase(db) {
 
 IndexedDB 使用同源原则，这意味着它与创建它的站点源绑定（通常是站点域名或子域名），因此不能被其他源访问。
 
-如果浏览器被设置为[从不接受第三方 Cookie](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection)（见 [Firefox bug 1147821](https://bugzil.la/1147821)），第三方窗口内容（例如 {{htmlelement("iframe")}} 内容）将无法访问 IndexedDB。
+如果浏览器被设置为[从不接受第三方 Cookie](https://support.mozilla.org/zh-CN/kb/Firefox%20的跟踪保护和第三方%20Cookie)（见 [Firefox bug 1147821](https://bugzil.la/1147821)），第三方窗口内容（例如 {{htmlelement("iframe")}} 内容）将无法访问 IndexedDB。
 
 ## 关于浏览器关闭的警告
 
