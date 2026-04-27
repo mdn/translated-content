@@ -1,62 +1,65 @@
 ---
-title: Intl.RelativeTimeFormat.prototype.formatToParts()
+title: "Intl.RelativeTimeFormat : méthode formatToParts()"
+short-title: formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`formatToParts()`** des instances de {{JSxRef("Intl.RelativeTimeFormat")}} retourne un tableau d'objets représentant chaque partie de la chaîne de caractères formatée qui serait retournée par {{JSxRef("Intl/RelativeTimeFormat/format", "format()")}}. Elle est utile pour construire des chaînes de caractères personnalisées à partir des jetons spécifiques à la locale.
 
-La méthode **`Intl.RelativeTimeFormat.prototype.formatToParts()`** est une méthode analogue à [`format()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format) qui renvoie un tableau d'objets contenant les différentes parties représentant le message internationalisé pour le temps relatif.
-
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat.prototype.formatToParts")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Intl.RelativeTimeFormat.prototype.formatToParts()")}}
 
 ```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
-const parts = rtf1.formatToParts(10, "seconds");
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const parts = rtf.formatToParts(10, "seconds");
 
 console.log(parts[0].value);
-// Expected output: "in "
+// Résultat attendu : "in "
 
 console.log(parts[1].value);
-// Expected output: "10"
+// Résultat attendu : "10"
 
 console.log(parts[2].value);
-// Expected output: " seconds"
+// Résultat attendu : " seconds"
 ```
 
 ## Syntaxe
 
-```js
-RelativeTimeFormat.formatToParts(valeur, unite);
+```js-nolint
+formatToParts(value, unit)
 ```
 
 ### Paramètres
 
-- `valeur`
-  - : Une valeur numérique qu'on souhaite formater pour un message internationalisé exprimant un temps relatif.
-- `unite`
-  - : L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont `"year"` (année), `"quarter"` (trimestre), `"month"` (mois), `"week"` (semaine), `"day"` (jour), `"hour"` (heure), `"minute"` (minute), `"second"` (secondes). Les formes plurielles sont également autorisées.
+- `value`
+  - : Valeur numérique à utiliser dans le message de temps relatif internationalisé.
+- `unit`
+  - : Unité à utiliser dans le message de temps relatif internationalisé. Les valeurs possibles sont&nbsp;: `"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"`. Les formes plurielles sont également autorisées.
 
 ### Valeur de retour
 
-Un tableau ({{jsxref("Array")}}) d'objets contenant les fragments composant la chaîne de caractères localisée et mise en forme pour exprimer le temps relatif.
+Un tableau ({{JSxRef("Array")}}) d'objets contenant le temps relatif formaté en parties. Chaque objet a deux ou trois propriétés, `type`, `value` et éventuellement `unit`, chacune contenant une chaîne de caractères. La concaténation des valeurs de `value`, dans l'ordre fourni, donnera la même chaîne de caractères que {{JSxRef("Intl/RelativeTimeFormat/format", "format()")}}. Les parties peuvent être considérées comme directement obtenues en appelant {{JSxRef("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} avec la valeur numérique, en passant uniquement l'option `numberingSystem`, puis en ajoutant des jetons supplémentaires de type `literal`, tels que `"in "`, `" days ago"`, etc. Tous les jetons produits par le `NumberFormat` ont une propriété supplémentaire `unit`, qui est la forme singulière de l'unité d'entrée&nbsp;; cela est destiné à un usage programmatique et n'est pas localisé. L'unité localisée est sortie comme partie d'un jeton littéral.
 
-## Description
-
-La méthode `Intl.RelativeTimeFormat.prototype.formatToParts()` est une méthode analogue à la méthode `format()` mais renvoie un tableau d'objets représentant chacun une partie du message internationalisé. Ces objets ont deux propriétés : `type` et `value`. Si un des composants provient de `NumberFormat`, il aura une propriété `unit` indiquant l'unité utilisée pour le formatage.
+Lorsque `options.numeric` est `"auto"`, et qu'il existe une chaîne de caractères spéciale pour la valeur, le tableau retourné est un seul jeton littéral.
 
 ## Exemples
+
+### Utiliser la méthode `formatToParts()`
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
-// Format relative time using the day unit.
+// Formatage d'une valeur relative utilisant l'unité jour
 rtf.formatToParts(-1, "day");
-// > [{ type: "literal", value: "yesterday"}]
+// [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// > [{ type: "literal", value: "in " },
-      { type: "integer", value: "100", unit: "day" },
-      { type: "literal", value: " days" }]
+// [
+//   { type: "literal", value: "in " },
+//   { type: "integer", value: "100", unit: "day" },
+//   { type: "literal", value: " days" }
+// ]
 ```
 
 ## Spécifications
@@ -69,4 +72,5 @@ rtf.formatToParts(100, "day");
 
 ## Voir aussi
 
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- L'objet {{JSxRef("Intl.RelativeTimeFormat")}}
+- La méthode {{JSxRef("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
