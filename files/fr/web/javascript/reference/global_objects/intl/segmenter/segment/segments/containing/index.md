@@ -1,39 +1,40 @@
 ---
-title: Intl.Segments.prototype.containing()
+title: "Segments : méthode containing()"
+short-title: containing()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
+La méthode **`containing()`** des instances de [`Segments`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) retourne un objet décrivant le segment de la chaîne de caractères qui inclut le codet situé à l'indice défini.
 
-La méthode **`Intl.Segments.containing()`** renvoie un objet décrivant le segment de la chaîne de caractères contenant le codet situé à l'indice passé en argument.
-
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing()")}}
+{{InteractiveExample("Démonstration JavaScript&nbsp;: Segments.prototype.containing()")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
-const string1 = "Que ma joie demeure";
+const string = "Que ma joie demeure";
 
-const segments = segmenterFr.segment(string1);
+const segments = segmenterFr.segment(string);
 
 console.log(segments.containing(5));
-// Expected output:
+// Résultat attendu :
 // Object {segment: 'ma', index: 4, input: 'Que ma joie demeure', isWordLike: true}
 ```
 
 ## Syntaxe
 
-```js
-containing(codeUnitIndex);
+```js-nolint
+containing(codeUnitIndex)
 ```
 
 ### Paramètres
 
-- `codeUnitIndex` {{optional_inline}}
-  - : Un nombre correspondant à l'indice du codet dans la chaîne de caractères à segmenter. Si cette valeur est absente, la valeur par défaut sera `0`.
+- `codeUnitIndex` {{Optional_Inline}}
+  - : Un nombre définissant l'indice de l'unité de code dans la chaîne de caractères de l'entrée originale. Si la valeur est omise, elle est par défaut `0`.
 
 ### Valeur de retour
 
-Un objet qui décrit le segment faisant partie de la chaîne de caractères originale, avec les propriétés suivantes (ou `undefined` si l'indice fourni est situé en dehors des limites de la chaîne)&nbsp;:
+Un objet décrivant le segment de la chaîne de caractères originale avec les propriétés suivantes, ou `undefined` si l'indice fourni est en dehors des limites.
 
 - `segment`
   - : Une chaîne de caractères contenant le segment de la chaîne de caractères originale.
@@ -47,31 +48,30 @@ Un objet qui décrit le segment faisant partie de la chaîne de caractères orig
 ## Exemples
 
 ```js
-// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← Indice des codets
-// ┃A l l o n s┃-┃y┃!┃   ← Codets
+// ┃0 1 2 3 4 5┃6┃7┃8┃9  ← indice de l'unité de code
+// ┃A l l o n s┃-┃y┃!┃   ← unité de code
 const input = "Allons-y!";
 
 const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
-let current = undefined;
 
-current = segments.containing();
-// → { index: 0, segment: "Allons", isWordLike: true }
+let current = segments.containing();
+// { index: 0, segment: "Allons", isWordLike: true }
 
 current = segments.containing(4);
-// → { index: 0, segment: "Allons", isWordLike: true }
+// { index: 0, segment: "Allons", isWordLike: true }
 
 current = segments.containing(6);
-// → { index: 6, segment: "-", isWordLike: false }
+// { index: 6, segment: "-", isWordLike: false }
 
 current = segments.containing(current.index + current.segment.length);
-// → { index: 7, segment: "y", isWordLike: true }
+// { index: 7, segment: "y", isWordLike: true }
 
 current = segments.containing(current.index + current.segment.length);
-// → { index: 8, segment: "!", isWordLike: false }
+// { index: 8, segment: "!", isWordLike: false }
 
 current = segments.containing(current.index + current.segment.length);
-// → undefined
+// undefined
 ```
 
 ## Spécifications
@@ -81,3 +81,8 @@ current = segments.containing(current.index + current.segment.length);
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'objet {{JSxRef("Intl.Segmenter")}}
+- La méthode {{JSxRef("Intl.Segmenter.prototype.segment()")}}
