@@ -1,8 +1,9 @@
 ---
-title: oklab()
+title: Fonction CSS `oklab()`
+short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`oklab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLab, qui essaie de se rapprocher de la perception de la couleur par l'œil humain.

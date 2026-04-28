@@ -3,10 +3,10 @@ title: CSS display の複数キーワード構文の使用
 short-title: 複数キーワード構文の使用
 slug: Web/CSS/Guides/Display/Multi-keyword_syntax
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: 3a69b74048ff2480c481ace3e689fbb4d510f3e5
 ---
 
-[CSS 表示方法モジュール](/ja/docs/Web/CSS/Guides/Display)は、 CSS の {{cssxref("display")}} プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
+[CSS 表示方法モジュール](/ja/docs/Web/CSS/Guides/Display)は、CSS の {{cssxref("display")}} プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
 
 > [!NOTE]
 > 複数キーワード構文は、「2 値構文」または「複数値構文」とも呼ばれています。
@@ -157,21 +157,20 @@ body {
 任意の値と `flow-root` を使用すると、親の新しい整形コンテキストを作成し、子要素のマージンを親の外縁に対して相対的に配置することができ、マージンの崩れを避けることができます。
 `flow-root` と `display: block flow-root` を切り替えると、 1 つの値の `flow-root` キーワードと同じ効果を得ることができます。
 
-```js hidden live-sample___display_block_flow-root_and_display_inline_flow-root
+```js hidden live-sample___flow-root
 const parentDiv = document.getElementById("parent");
 const siblingDiv = document.getElementById("sibling");
 const displayTypeSelect = document.getElementById("displayType");
-const displayType = displayTypeSelect.value;
 
 function changeDisplayType() {
-  parentDiv.style.display = displayType;
-  siblingDiv.style.display = displayType;
+  parentDiv.style.display = displayTypeSelect.value;
+  siblingDiv.style.display = displayTypeSelect.value;
 }
 
 displayTypeSelect.addEventListener("change", changeDisplayType);
 ```
 
-```css hidden live-sample___display_block_flow-root_and_display_inline_flow-root
+```css hidden live-sample___flow-root
 #controls {
   padding: 1rem;
   outline: 2px dashed black;
@@ -182,7 +181,7 @@ body {
 }
 ```
 
-```css live-sample___display_block_flow-root_and_display_inline_flow-root
+```css live-sample___flow-root
 div,
 p {
   outline: 2px solid black;
@@ -206,7 +205,7 @@ p {
 }
 ```
 
-```html hidden live-sample___display_block_flow-root_and_display_inline_flow-root
+```html hidden live-sample___flow-root
 <div id="controls">
   <label for="displayType">display:</label>
   <select id="displayType">
@@ -219,14 +218,14 @@ p {
 </div>
 ```
 
-```html live-sample___display_block_flow-root_and_display_inline_flow-root
+```html live-sample___flow-root
 <div id="parent">
   <p id="child">#child の段落（#parent の内側）です。</p>
 </div>
 <p id="sibling">#sibling の段落（#parent の兄弟）です。</p>
 ```
 
-{{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
+{{EmbedLiveSample("flow-root", '90%', 380)}}
 
 `flow-root` の値は、ブロックとインラインのレイアウト、いわゆる[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)について考えれば、理にかなっているでしょう。HTML ページは新しい整形コンテキストを作成し（浮動ボックスやマージンが境界からはみ出さない）、コンテンツはブロックとインラインレイアウトを使用して、通常フローで表示されます。グリッドやフレックスのコンテナーを作成すると、新しい整形コンテキスト（それぞれグリッド整形コンテキストとフレックス整形コンテキスト）も作成されます。しかし、浮動ボックスやマージンを含めてもブロックやインラインレイアウトを使い続けたい場合は、新しいフロールートを作成し、ブロックやインラインレイアウトでやり直すことができます。その位置から下方向は、すべて新しいフロールートの中に含まれます。
 
