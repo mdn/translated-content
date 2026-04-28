@@ -74,13 +74,13 @@ A maioria dos navegadores oferece um depurador que pode identificar documentos X
 
 Como o HTML, o XML oferece {{glossary("character reference", "referências de caracteres")}} para se referir a alguns caracteres reservados especiais (como o sinal de maior que, que é usado para tags). Há cinco desses caracteres que você deve conhecer:
 
-| Entidade    | Caractere | Descrição                                   |
-| ----------- | --------- | ------------------------------------------- |
-| &amp;lt;    | <         | Sinal de menor que                          |
-| &amp;gt;    | >         | Sinal de maior que                          |
-| &amp;amp;   | &         | E comercial                                 |
-| &amp;quot;  | "         | Um sinal de aspas duplas                    |
-| &amp;apos;  | '         | Um apóstrofo (ou sinal de aspas simples)    |
+| Entidade   | Caractere | Descrição                                |
+| ---------- | --------- | ---------------------------------------- |
+| &amp;lt;   | <         | Sinal de menor que                       |
+| &amp;gt;   | >         | Sinal de maior que                       |
+| &amp;amp;  | &         | E comercial                              |
+| &amp;quot; | "         | Um sinal de aspas duplas                 |
+| &amp;apos; | '         | Um apóstrofo (ou sinal de aspas simples) |
 
 Mesmo que haja apenas 5 referências de caracteres declaradas, ou entidades, mais podem ser adicionadas usando a [Definição de Tipo de Documento](/pt-BR/docs/Glossary/Doctype) do documento. Por exemplo, para criar uma nova entidade `&warning;`, você pode fazer isso:
 
