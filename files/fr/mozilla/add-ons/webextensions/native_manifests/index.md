@@ -180,7 +180,7 @@ Le manifest de stockage géré contient un seul objet JSON avec les propriétés
         <p>
           ID de l'extension pouvant accéder à ce stockage, donné comme ID que
           vous avez spécifié dans la clé d'<a
-            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
             >application</a
           >
           de l'extension.
@@ -314,7 +314,7 @@ Le manifest PKCS #11 est un fichier contenant un objet JSON avec les propriété
         <p>
           Notez que cela signifie que vous voudrez probablement inclure la clé
           des
-          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
+          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"
             >applications</a
           >
           dans le fichier manifest.json de votre extension, afin de pouvoir

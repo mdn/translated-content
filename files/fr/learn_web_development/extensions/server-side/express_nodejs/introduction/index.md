@@ -149,7 +149,7 @@ Les sections suivantes expliquent quelques choses communes que vous verrez en tr
 Tout d'abord intéressons-nous à l'exemple [Hello World](https://expressjs.com/fr/starter/hello-world.html) standard d'Express (nous expliquons chaque partie de cet exemple ci-dessous, et dans les sections suivantes).
 
 > [!NOTE]
-> Si vous avez déjà installé Node et Express (ou si vous les installez comme montré dans [l'article suivant](/fr/docs/Learn/Server-side/Express_Nodejs/development_environment)), vous pouvez enregistrer ce code dans un fichier texte appelé **app.js** et l'exécuter via un terminal en tapant :
+> Si vous avez déjà installé Node et Express (ou si vous les installez comme montré dans [l'article suivant](/fr/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)), vous pouvez enregistrer ce code dans un fichier texte appelé **app.js** et l'exécuter via un terminal en tapant :
 >
 > **`node app.js`**
 
@@ -557,4 +557,4 @@ Bien sûr, Express est délibérément un cadre d'application web très léger, 
 - [Servir les fichiers statiques dans Express](https://expressjs.com/fr/starter/static-files.html) (docs Express)
 - [Gestion des erreurs](https://expressjs.com/fr/guide/error-handling.html) (docs Express)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
