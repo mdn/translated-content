@@ -1,20 +1,17 @@
 ---
-title: asin()
+title: Fonction CSS `asin()`
+short-title: asin()
 slug: Web/CSS/Reference/Values/asin
-original_slug: Web/CSS/asin
 l10n:
-  sourceCommit: c90f67a3864bb41ae2a3fe99c43dfbcd98268f0b
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui renvoie l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui renvoie le nombre correspondant de radians représentant [un angle](/fr/docs/Web/CSS/Reference/Values/angle) entre `-90deg` et `90deg`.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`asin()`** est une fonction trigonométrique qui retourne l'arc sinus d'un nombre compris entre `-1` et `1`. Cette fonction effectue un unique calcul qui retourne un angle ({{CSSxRef("&lt;angle&gt;")}}) entre `-90deg` et `90deg`.
 
 ## Syntaxe
 
 ```css
-/* Valeurs numériques */
-/* Type <number> */
+/* Valeurs de type <number> */
 transform: rotate(asin(-0.2));
 transform: rotate(asin(2 * 0.125));
 
@@ -25,26 +22,39 @@ transform: rotate(asin(e / 3));
 
 ### Paramètres
 
-La fonction `asin()` prend un seul paramètre.
+La fonction `asin(number)` n'accepte qu'une seule valeur comme paramètre.
 
 - `number`
-  - : n nombre (une valeur de type [`<number>`](/fr/docs/Web/CSS/Reference/Values/number)) compris entre `-1` et `1`. Si la valeur fournie inférieure à `-1` ou supérieure à `1`, ou `NaN`, le résultat de la fonction sera `NaN`.
+  - : Un calcul qui se résout en un nombre ({{CSSxRef("&lt;number&gt;")}}) compris entre `-1` et `1`.
 
-### Syntaxe formelle
+### Valeur de retour
+
+L'arc sinus d'un `number` retourne toujours un angle ({{CSSxRef("&lt;angle&gt;")}}) compris entre `-90deg` et `90deg`.
+
+- Si `number` est inférieur à `-1` ou supérieur à `1`, le résultat est `NaN`.
+- Si `number` est `0⁻`, le résultat est `0⁻`.
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
-## Exemple
+## Exemples
 
-La fonction `asin()` peut être utilisée dans les transformations angulaires, par exemple avec [`rotate()`](/fr/docs/Web/CSS/Reference/Values/transform-function/rotate), car elle renvoie une valeur de type [`<angle>`](/fr/docs/Web/CSS/Reference/Values/angle).
+### Faire pivoter des éléments
 
-```html hidden
-<div class="box"></div>
+La fonction `asin()` peut être utilisée avec {{CSSxRef("transform-function/rotate", "rotate")}} pour faire pivoter des éléments, car elle retourne un angle ({{CSSxRef("&lt;angle&gt;")}}).
+
+#### HTML
+
+```html
 <div class="box box-1"></div>
 <div class="box box-2"></div>
 <div class="box box-3"></div>
 <div class="box box-4"></div>
+<div class="box box-5"></div>
 ```
+
+#### CSS
 
 ```css hidden
 body {
@@ -62,25 +72,26 @@ div.box {
   height: 100px;
   background: linear-gradient(orange, red);
 }
-
 div.box-1 {
-  transform: rotate(asin(-0.2));
+  transform: rotate(asin(1));
 }
-
 div.box-2 {
-  transform: rotate(asin(2 * 0.125));
+  transform: rotate(asin(0.5));
 }
-
 div.box-3 {
-  transform: rotate(asin(pi / 5));
+  transform: rotate(asin(0));
 }
-
 div.box-4 {
-  transform: rotate(asin(e / 3));
+  transform: rotate(asin(-0.5));
+}
+div.box-5 {
+  transform: rotate(asin(-1));
 }
 ```
 
-{{EmbedLiveSample('', '100%', '200px')}}
+#### Résultat
+
+{{EmbedLiveSample("Faire pivoter des éléments", "100%", 200)}}
 
 ## Spécifications
 
@@ -92,9 +103,9 @@ div.box-4 {
 
 ## Voir aussi
 
-- [`sin`](/fr/docs/Web/CSS/sin)
-- [`cos`](/fr/docs/Web/CSS/cos)
-- [`tan`](/fr/docs/Web/CSS/tan)
-- [`acos`](/fr/docs/Web/CSS/Reference/Values/acos)
-- [`atan`](/fr/docs/Web/CSS/atan)
-- [`atan2`](/fr/docs/Web/CSS/atan2)
+- La fonction {{CSSxRef("sin()")}}
+- La fonction {{CSSxRef("cos()")}}
+- La fonction {{CSSxRef("tan()")}}
+- La fonction {{CSSxRef("acos()")}}
+- La fonction {{CSSxRef("atan()")}}
+- La fonction {{CSSxRef("atan2()")}}
