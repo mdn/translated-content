@@ -1,8 +1,9 @@
 ---
-title: anchor()
+title: Fonction CSS `anchor()`
+short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`anchor()`** peut être utilisée dans les valeurs d'une [propriété d'encart](#propriétés_acceptant_les_valeurs_de_la_fonction_anchor) d'un élément **positionné par ancre**, et retourne une valeur de longueur relative à la position des bords de l'élément d'ancre associé.
