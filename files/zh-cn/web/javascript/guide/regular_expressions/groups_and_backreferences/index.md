@@ -84,7 +84,7 @@ console.log(findDuplicates.match(regex));
           <p>
             <strong>备注：</strong> ^ 字符也可以表示
             <a
-              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Boundaries"
+              href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
               >输入的起始</a
             >
           </p>
