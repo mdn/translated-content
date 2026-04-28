@@ -50,7 +50,7 @@ Pour un [`<path>`](/fr/docs/Web/SVG/Reference/Element/path), `d` est une chaîne
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@ Pour un élément [`<glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-face), `
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
@@ -105,7 +105,7 @@ Pour un élément [`<missing-glyph>`](/fr/docs/Web/CSS/Reference/At-rules/@font-
     <tr>
       <th scope="row">Valeur</th>
       <td>
-        <a href="/fr/docs/Web/SVG/Content_type#string"><code>&lt;string&gt;</code></a>
+        <a href="/fr/docs/Web/SVG/Guides/Content_type#string"><code>&lt;string&gt;</code></a>
       </td>
     </tr>
     <tr>
