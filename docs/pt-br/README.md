@@ -260,5 +260,3 @@ Ao executar `npm start` no seu clone de `mdn/content` você pode pré-visualizar
 </details>
 
 Mais informações na [discussão geral da comunidade](https://github.com/mdn/translated-content/discussions).
-
-[guia-contribuicao]: https://developer.mozilla.org/pt-BR/docs/MDN/Contribute
