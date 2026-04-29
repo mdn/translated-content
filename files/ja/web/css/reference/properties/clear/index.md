@@ -1,9 +1,9 @@
 ---
-title: clear
+title: CSS `clear` プロパティ
+short-title: clear
 slug: Web/CSS/Reference/Properties/clear
-original_slug: Web/CSS/clear
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/Reference/Properties/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
@@ -26,16 +26,13 @@ clear: right;
 clear: both;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
+    <div class="floated-left">左</div>
+    <div class="floated-right">右</div>
     <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      通りには、まるで水が地球の表面から引き上げたばかりかのような泥がたまっており、全長 40 フィートほどのメガロサウルスが、同様に象のようなトカゲのようによたよたとホルボーン・ヒルを登ってくるのを見かけても、不思議ではないでしょう。
     </div>
   </div>
 </section>
@@ -51,34 +48,19 @@ clear: both;
 
 .floated-left {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: left;
 }
 
 .floated-right {
   border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+  background-color: rgb(81 81 81 / 0.6);
   padding: 1em;
   float: right;
   height: 150px;
 }
 ```
-
-浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/Guides/Box_model/Introduction#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/Guides/Box_model/Introduction#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
-
-一方で、二つの浮動要素の垂直マージンは折り畳まれません。浮動要素に適用された場合、下の要素のマージンの辺が、すべての関連する浮動要素のマージンの辺よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
-
-解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)内の先行する浮動要素です。
-
-> [!NOTE]
-> 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/Reference/Properties/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/Reference/Properties/display#flow-root) に設定してください。
->
-> ```css
-> #container {
->   display: flow-root;
-> }
-> ```
 
 ## 構文
 
@@ -102,17 +84,34 @@ clear: unset;
 ### 値
 
 - `none`
-  - : 要素は先行する浮動要素と切り離されず、下に移動しません。
+  - : このキーワードは、この要素が、先行する浮動ボックスを解除するために下に移動されないことを示します。
 - `left`
-  - : 要素は先行する*左*の浮動要素と切り離され、下に移動します。
+  - : このキーワードは、この要素が先行する左の浮動ボックスを解除するために下に移動されることを示します。
 - `right`
-  - : 要素は先行する*右*の浮動要素と切り離され、下に移動します。
+  - : このキーワードは、この要素が先行する右の浮動ボックスを解除するために下に移動されることを示します。
 - `both`
-  - : 要素は先行する*左右両方*の浮動要素と切り離され、下に移動します。
+  - : このキーワードは、この要素が先行する左右両方の浮動ボックスを解除するために下に移動されることを示します。
 - `inline-start`
-  - : 要素は、先行する*包含ブロックの先頭側*の浮動要素の下に移動することを示すキーワードです。これは左書きでは*左側*、右書きでは*右側*の浮動要素です。
+  - : このキーワードは、この要素が先行する包含ブロックの先頭側の浮動ボックスを解除するために下に移動されることを示します。これは左書きでは左側、右書きでは右側の浮動要素です。
 - `inline-end`
-  - : 要素は、先行する*包含ブロックの末尾側*の浮動要素の下に移動することを示すキーワードです。これは左書きでは*右側*、右書きでは*左側*の浮動要素です。
+  - : このキーワードは、この要素が先行する包含ブロックの末尾側の浮動ボックスを解除するために下に移動されることを示します。これは左書きでは右側、右書きでは左側の浮動要素です。
+
+## 解説
+
+浮動ブロック以外に適用された場合は、その要素の[境界の端](/ja/docs/Web/CSS/Guides/Box_model/Introduction#境界領域)が、関係するすべての浮動要素の[マージンの端](/ja/docs/Web/CSS/Guides/Box_model/Introduction#マージン領域)より下まで移動します。浮動ブロック以外では、上マージンは相殺されます。
+
+一方で、2 つの浮動要素の垂直マージンは相殺されません。浮動要素に適用された場合、下の要素のマージンの端が、すべての関連する浮動要素のマージンの端よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
+
+解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/CSS/Guides/Display/Block_formatting_context)内の先行する浮動要素です。
+
+> [!NOTE]
+> 浮動要素しか包まない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の {{cssxref("display")}} プロパティの値を [`flow-root`](/ja/docs/Web/CSS/Reference/Properties/display#flow-root) に設定してください。
+>
+> ```css
+> #container {
+>   display: flow-root;
+> }
+> ```
 
 ## 公式定義
 
@@ -135,7 +134,7 @@ clear: unset;
     diam. Duis mattis varius dui. Suspendisse eget dolor.
   </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="left">This paragraph clears left.</p>
+  <p class="left">この段落は左側の浮動要素を解除します。</p>
 </div>
 ```
 
@@ -154,7 +153,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -181,7 +180,7 @@ p {
     diam. Duis mattis varius dui. Suspendisse eget dolor.
   </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  <p class="right">This paragraph clears right.</p>
+  <p class="right">この段落は右側の浮動要素を解除します。</p>
 </div>
 ```
 
@@ -200,7 +199,7 @@ p {
   float: right;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
@@ -231,7 +230,7 @@ p {
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
     diam. Duis mattis varius dui. Suspendisse eget dolor.
   </p>
-  <p class="both">This paragraph clears both.</p>
+  <p class="both">この段落は両方の浮動要素を解除します。</p>
 </div>
 ```
 
@@ -250,7 +249,7 @@ p {
   float: left;
   margin: 0;
   background-color: black;
-  color: #fff;
+  color: white;
   width: 20%;
 }
 .red {
