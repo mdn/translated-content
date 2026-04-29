@@ -107,7 +107,7 @@ tfoot td {
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >
       </td>

@@ -134,7 +134,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
       <td>
         O número de referência Unicode da chave; esse atributo é usado apenas
         pelo
-        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Web/API/Element/keypress_event"
           ><code>keypress</code></a
         >evento. Para chaves cujo <code>char</code>atributo contém vários
         caracteres, esse é o valor Unicode do primeiro caractere nesse atributo.

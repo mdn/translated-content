@@ -25,7 +25,7 @@ Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de 
         <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >), e uma ideia de
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
           >Como funciona o CSS</a
         >.
       </td>
