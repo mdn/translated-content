@@ -35,7 +35,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
@@ -51,7 +51,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
                 >
                 и !<code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
@@ -89,7 +89,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys"
                     >Object.keys</a
                   ></code
@@ -99,14 +99,14 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
                 Получить
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
                 >, выбрать свойства, не удовлетворяющие
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
@@ -115,7 +115,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
@@ -145,7 +145,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
                 Итерация по массиву
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/keys"
                     >Object.keys</a
                   ></code
@@ -155,14 +155,14 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
                 Итерация по
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
                 >, с выбранными свойствами, не удовлетворяющими
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable"
                     >propertyIsEnumerable</a
                   ></code
@@ -172,7 +172,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
                 Итерация по
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
+                    href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     title="/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames"
                     >getOwnPropertyNames</a
                   ></code
@@ -196,7 +196,7 @@ slug: Web/JavaScript/Guide/Enumerability_and_ownership_of_properties
               <td>
                 <code
                   ><a
-                    href="/ru/docs/JavaScript/Reference/Statements/for...in"
+                    href="/ru/docs/Web/JavaScript/Reference/Statements/for...in"
                     title="/ru/docs/JavaScript/Reference/Statements/for...in"
                     >for..in</a
                   ></code

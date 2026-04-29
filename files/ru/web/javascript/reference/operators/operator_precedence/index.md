@@ -112,28 +112,28 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="10">14</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT">Логическое отрицание (!)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Logical_NOT">Логическое отрицание (!)</a></td>
       <td rowspan="10">справа налево</td>
       <td><code>! …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT">Побитовое отрицание (~)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Bitwise_NOT">Побитовое отрицание (~)</a></td>
       <td><code>~ …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus">Унарный плюс</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Unary_plus">Унарный плюс</a></td>
       <td><code>+ …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation">Унарный минус</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Unary_negation">Унарный минус</a></td>
       <td><code>- …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment">Префиксный инкремент</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Increment">Префиксный инкремент</a></td>
       <td><code>++ …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement">Префиксный декремент</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Decrement">Префиксный декремент</a></td>
       <td><code>-- …</code></td>
     </tr>
     <tr>
@@ -154,65 +154,65 @@ a = b = 5;
     </tr>
     <tr>
       <td>13</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">Возведение в степень (**)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Exponentiation">Возведение в степень (**)</a></td>
       <td>справа налево</td>
       <td><code>… ** …</code></td>
     </tr>
     <tr>
       <td rowspan="3">12</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication">Умножение (*)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Multiplication">Умножение (*)</a></td>
       <td rowspan="3">слева направо</td>
       <td><code>… * …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division">Деление (/)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Division">Деление (/)</a></td>
       <td><code>… / …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder">Остаток от деления (%)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Remainder">Остаток от деления (%)</a></td>
       <td><code>… % …</code></td>
     </tr>
     <tr>
       <td rowspan="2">11</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">Сложение (+)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Addition">Сложение (+)</a></td>
       <td rowspan="2">слева направо</td>
       <td><code>… + …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction">Вычитание (-)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Subtraction">Вычитание (-)</a></td>
       <td><code>… - …</code></td>
     </tr>
     <tr>
       <td rowspan="3">10</td>
-      <td><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг влево (&#x3C;&#x3C;)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators">Побитовый сдвиг влево (&#x3C;&#x3C;)</a></td>
       <td rowspan="3">слева направо</td>
       <td><code>… &#x3C;&#x3C; …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовый сдвиг вправо (>>)</a>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators">Побитовый сдвиг вправо (>>)</a>
       </td>
       <td><code>… >> …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Сдвиг вправо с заполнением нулей (>>>)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators">Сдвиг вправо с заполнением нулей (>>>)</a></td>
       <td><code>… >>> …</code></td>
     </tr>
     <tr>
       <td rowspan="6">9</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator">Меньше (&#x3C;)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Less_than_operator">Меньше (&#x3C;)</a></td>
       <td rowspan="6">слева направо</td>
       <td><code>… &#x3C; …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator">Меньше или равно (&#x3C;=)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Less_than__or_equal_operator">Меньше или равно (&#x3C;=)</a></td>
       <td><code>… &#x3C;= …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator">Больше (>)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Greater_than_operator">Больше (>)</a></td>
       <td><code>… > …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator">Больше или равно (>=)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Greater_than_or_equal_operator">Больше или равно (>=)</a></td>
       <td><code>… >= …</code></td>
     </tr>
     <tr>
@@ -225,49 +225,49 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="4">8</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">Равенство (==)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Equality">Равенство (==)</a></td>
       <td rowspan="4">слева направо</td>
       <td><code>… == …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality">Неравенство (!=)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Inequality">Неравенство (!=)</a></td>
       <td><code>… != …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">Строгое равенство (===)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Identity">Строгое равенство (===)</a></td>
       <td><code>… === …</code></td>
     </tr>
     <tr>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity">Строгое неравенство (!==)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Nonidentity">Строгое неравенство (!==)</a></td>
       <td><code>… !== …</code></td>
     </tr>
     <tr>
       <td>7</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND">Побитовое «И» (&#x26;)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Bitwise_AND">Побитовое «И» (&#x26;)</a></td>
       <td>слева направо</td>
       <td><code>… &#x26; …</code></td>
     </tr>
     <tr>
       <td>6</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR">Побитовое исключающее «ИЛИ» (^)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Bitwise_XOR">Побитовое исключающее «ИЛИ» (^)</a></td>
       <td>слева направо</td>
       <td><code>… ^ …</code></td>
     </tr>
     <tr>
       <td>5</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR">Побитовое «ИЛИ» (|)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Bitwise_OR">Побитовое «ИЛИ» (|)</a></td>
       <td>слева направо</td>
       <td><code>… | …</code></td>
     </tr>
     <tr>
       <td>4</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND">Логическое «И» (&#x26;&#x26;)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Logical_AND">Логическое «И» (&#x26;&#x26;)</a></td>
       <td>слева направо</td>
       <td><code>… &#x26;&#x26; …</code></td>
     </tr>
     <tr>
       <td rowspan="2">3</td>
-      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR">Логическое «ИЛИ» (||)</a></td>
+      <td><a href="/ru/docs/Web/JavaScript/Reference/Operators#Logical_OR">Логическое «ИЛИ» (||)</a></td>
       <td rowspan="2">слева направо</td>
       <td><code>… || …</code></td>
     </tr>
@@ -277,7 +277,7 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="19">2</td>
-      <td rowspan="16"><a href="/ru/docs/Web/JavaScript/Reference/Operators/Assignment_Operators">Присваивание</a></td>
+      <td rowspan="16"><a href="/ru/docs/Web/JavaScript/Reference/Operators">Присваивание</a></td>
       <td rowspan="16">справа налево</td>
       <td><code>… = …</code></td>
     </tr>

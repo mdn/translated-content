@@ -3,7 +3,7 @@ title: Основы объектов в JavaScript
 slug: Learn_web_development/Core/Scripting/Object_basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 В этой статье мы рассмотрим объекты в JavaScript. Мы будем разбирать основы синтаксиса объектов JavaScript и заново изучим некоторые возможности JavaScript, которые мы уже исследовали ранее на курсе, подтвердив тот факт, что большая часть функциональности, с которой мы уже столкнулись, в действительности является объектами.
 
@@ -290,4 +290,4 @@ const myNotification = new Notification("Hello!");
 
 В следующей статье мы начнём рассматривать теорию объектно-ориентированного программирования (ООП) и как эти техники могут быть использованы в JavaScript
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

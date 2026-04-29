@@ -25,7 +25,7 @@ slug: Web/API/Element/pointerover_event
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/ru/docs/Web/API/GlobalEventHandlers/onpointerover"
+          ><a href="/ru/docs/Web/API/Element/pointerover_event"
             >onpointerover</a
           ></code
         >

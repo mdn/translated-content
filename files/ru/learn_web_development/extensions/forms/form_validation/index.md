@@ -3,7 +3,7 @@ title: Валидация форм на стороне клиента
 slug: Learn_web_development/Extensions/Forms/Form_validation
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 Перед отправкой данных на сервер важно убедиться, что все обязательные поля формы заполнены данными в корректном формате. Это называется **валидацией на стороне клиента** и помогает убедиться, что данные, введённые в каждый элемент формы, соответствуют требованиям. Данная статья проведёт вас через основные концепци и примеры валидации на стороне клиента.
 
@@ -791,7 +791,7 @@ addEvent(form, "submit", function () {
 
 После того, как вы убедились, что форма заполнена правильно, ее можно отправлять. Дальше мы рассмотрим [отправку данных формы](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data).
 
-{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data", "Learn_web_development/Extensions/Forms")}}
 
 ## In this module
 
