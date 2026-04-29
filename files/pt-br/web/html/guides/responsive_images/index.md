@@ -4,7 +4,7 @@ slug: Web/HTML/Guides/Responsive_images
 original_slug: Web/HTML/Responsive_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 Neste artigo nós iremos aprender sobre o conceito de imagens responsivas — imagens que funcionam em dispositivos com diferentes tamanhos de tela, resoluções e outras funcionalidades — e entrar em contato com quais ferramentas o HTML oferece para ajudar a implementá-las. Imagens responsivas são apenas uma parte do web design responsivo, um futuro [tópico de CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) para você aprender.
 

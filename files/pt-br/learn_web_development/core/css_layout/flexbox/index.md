@@ -17,7 +17,7 @@ Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Fle
         <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução a HTML</a
         >), e uma ideia de como CSS funciona (estude
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">Introdução a CSS</a
         >.)
       </td>
     </tr>
