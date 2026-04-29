@@ -1,7 +1,7 @@
 ---
 title: "SVGFEDropShadowElement: stdDeviationY プロパティ"
 short-title: stdDeviationY
-slug: Web/API/SVGFEDropShadowElement/height/stddeviationy
+slug: Web/API/SVGFEDropShadowElement/stdDeviationY
 l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
