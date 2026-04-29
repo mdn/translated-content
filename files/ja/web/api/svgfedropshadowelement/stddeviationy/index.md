@@ -1,9 +1,8 @@
 ---
 title: "SVGFEDropShadowElement: stdDeviationY プロパティ"
 short-title: stdDeviationY
-slug: Web/API/SVGFEDropShadowElement/stdDeviationY
-page-type: web-api-instance-property
-browser-compat: api.SVGFEDropShadowElement.stdDeviationY
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{APIRef("SVG")}}
