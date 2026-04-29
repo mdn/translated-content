@@ -16,17 +16,17 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
     <tr>
       <th scope="row">
         <a
-          href="/es/docs/HTML/Content_categories"
+          href="/es/docs/Web/HTML/Guides/Content_categories"
           >Cotenido de las categorias</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Contenido dinámico</a
         >,
         <a
-          href="/es/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido estático</a
         >,
         <a

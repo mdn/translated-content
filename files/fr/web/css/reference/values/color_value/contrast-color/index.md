@@ -1,8 +1,9 @@
 ---
-title: contrast-color()
+title: Fonction CSS `contrast-color()`
+short-title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 l10n:
-  sourceCommit: 7c78b2ffa0f08ac11e486884fa689ff08645dda7
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`contrast-color()`** prend une valeur de type {{CSSxRef("&lt;color&gt;")}} et retourne une couleur contrastée [garantie <sup>(angl.)</sup>](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum).
@@ -78,12 +79,8 @@ button {
     content: "Votre navigateur ne prend pas en charge la fonction contrast-color().";
     background-color: wheat;
     display: block;
-    width: 100%;
+    padding: 1rem 0;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -148,16 +145,8 @@ pre {
     content: "Votre navigateur ne prend pas en charge la fonction contrast-color().";
     background-color: wheat;
     display: block;
-    width: 100%;
+    padding: 1rem 0;
     text-align: center;
-  }
-
-  body {
-    background-color: white;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```

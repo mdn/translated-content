@@ -17,7 +17,7 @@ This article will recap some of the CSS layout features we've already touched up
         <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics"
           >Introduction to CSS</a
         >.)
       </td>

@@ -8,12 +8,12 @@ slug: Web/HTML/Reference/Elements/dd
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></th>
    <td>None</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>

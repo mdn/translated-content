@@ -95,7 +95,7 @@ tr:nth-child(odd) td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>
@@ -104,7 +104,7 @@ tr:nth-child(odd) td {
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content"
           >Flow content</a
         >.
       </td>

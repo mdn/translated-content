@@ -21,7 +21,7 @@ l10n:
 
 以下のコードブロックの "Play" をクリックすると、この例を MDN Playground で開きます。
 
-```html live-sample___card-example
+```html-nolint live-sample___card-example
 <div class="cards">
   <article class="card">
     <header>

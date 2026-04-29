@@ -1,5 +1,5 @@
 ---
-title: "CSS `:checked` 擬似クラス"
+title: CSS `:checked` 擬似クラス
 short-title: :checked
 slug: Web/CSS/Reference/Selectors/:checked
 l10n:

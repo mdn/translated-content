@@ -3,7 +3,7 @@ title: Introdução a progressive web apps
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 Este artigo fornece uma intrução as Progressive Web Apps (PWAs), explicando o que são e quais vantagens elas trazem em relação ao desenvolvimento de aplicações web comuns.
 
@@ -81,6 +81,6 @@ You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https:/
 
 Now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 {{QuickLinksWithSubpages("/pt-BR/docs/Web/Apps/Progressive/")}}

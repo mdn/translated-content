@@ -17,9 +17,9 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flux content</a
-        >,<a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content">
+        >,<a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content">
           Phrasing content</a
         >, conteúdo palpável.
       </td>
@@ -27,7 +27,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -40,10 +40,10 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
       <th scope="row">Permitted parents</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, ou qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>

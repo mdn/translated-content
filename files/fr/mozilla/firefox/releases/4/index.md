@@ -107,7 +107,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/-moz-font-feature-settings"
+        <a href="/fr/docs/Web/CSS/Reference/Properties/font-feature-settings"
           ><code>-moz-font-feature-settings</code></a
         >
       </td>
@@ -118,7 +118,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/-moz-tab-size"><code>-moz-tab-size</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Properties/tab-size"><code>-moz-tab-size</code></a>
       </td>
       <td>
         Spécifie la largeur d'un espace de tabulation (U+0009) lors du rendu du
@@ -254,7 +254,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/:-moz-any"><code>:-moz-any</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Selectors/:is"><code>:-moz-any</code></a>
       </td>
       <td>
         Permet de grouper les sélecteurs et de factoriser les combinateurs.
@@ -262,7 +262,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/-moz-calc"><code>-moz-calc</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Values/calc"><code>-moz-calc</code></a>
       </td>
       <td>
         Permet de spécifier des valeurs de
@@ -272,7 +272,7 @@ Les modifications suivantes ont étés apportées à l'interface [`CanvasRenderi
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/CSS/-moz-element"><code>-moz-element</code></a>
+        <a href="/fr/docs/Web/CSS/Reference/Values/element"><code>-moz-element</code></a>
       </td>
       <td>
         Permet d'utiliser un élément arbritaire de fond pour
@@ -453,7 +453,7 @@ Plusieurs éléments HTML ont vu leur interface DOM modifier, conformément à l
     </tr>
     <tr>
       <td>
-        <code><a href="/fr/docs/DOM/HTMLDivElement">HTMLDivElement</a></code>
+        <code><a href="/fr/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code>
       </td>
       <td>
         <code><a href="/fr/docs/Web/API/HTMLElement">HTMLElement</a></code>

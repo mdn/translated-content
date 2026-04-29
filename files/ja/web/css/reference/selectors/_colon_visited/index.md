@@ -1,5 +1,5 @@
 ---
-title: "CSS `:visited` 擬似クラス"
+title: CSS `:visited` 擬似クラス
 short-title: :visited
 slug: Web/CSS/Reference/Selectors/:visited
 l10n:

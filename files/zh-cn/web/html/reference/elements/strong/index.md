@@ -17,7 +17,7 @@ Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。
   </tr>
   <tr>
    <td>允许的内容</td>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">Phrasing content</a></td>
   </tr>
   <tr>
    <td>标签省略</td>
@@ -25,7 +25,7 @@ Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。
   </tr>
   <tr>
    <td>允许的父级元素</td>
-   <td>任何接受<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>的元素，或者接受 <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>的元素</td>
+   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Phrasing_content">phrasing content</a>的元素，或者接受 <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>的元素</td>
   </tr>
   <tr>
    <td>规范文档</td>

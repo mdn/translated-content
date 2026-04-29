@@ -1,5 +1,5 @@
 ---
-title: "CSS `anchor()` 関数"
+title: CSS `anchor()` 関数
 short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 l10n:

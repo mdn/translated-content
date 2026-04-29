@@ -1,8 +1,9 @@
 ---
-title: translate()
+title: Fonction CSS `translate()`
+short-title: translate()
 slug: Web/CSS/Reference/Values/transform-function/translate
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`translate()`** repositionne un élément dans les directions horizontale et/ou verticale. Son résultat est de type {{CSSxRef("&lt;transform-function&gt;")}}.
