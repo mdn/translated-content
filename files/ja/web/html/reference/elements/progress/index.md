@@ -1,19 +1,17 @@
 ---
-title: "<progress>: 進捗インジケーター要素"
+title: HTML `<progress>`  進捗インジケーター要素
+short-title: <progress>
 slug: Web/HTML/Reference/Elements/progress
-original_slug: Web/HTML/Element/progress
 l10n:
   sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
-
-{{HTMLSidebar}}
 
 **`<progress>`** は [HTML](/ja/docs/Web/HTML) の要素で、タスクの進捗状況を表示します。ふつうはプログレスバーとして表示されます。
 
 {{InteractiveExample("HTML デモ: &lt;progress&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="file">File progress:</label>
+<label for="file">ファイルの進捗:</label>
 
 <progress id="file" max="100" value="70">70%</progress>
 ```
@@ -24,6 +22,80 @@ label {
   font-size: 1rem;
 }
 ```
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
+
+- [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
+  - : この属性は、`progress` 要素で示すタスクで必要とする総作業量を設定します。`max` 属性を指定する場合は、値を `0` より大きい有効な浮動小数点数値にしなければなりません。既定値は `1` です。
+- `value`
+  - : この属性は、タスクの進捗状況を設定します。値は `0` から `max` までの間、または `max` を省略する場合は `0` から `1` までの間の、有効な浮動小数点数値であることが必要です。`value` 属性がない場合は、プログレスバーは不定、タスクは処理中であるものの完了までが予想できない状態になります。
+
+> [!NOTE]
+> {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
+
+> [!NOTE]
+> {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーに一致します。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} で value 属性を削除しなければなりません。
+
+## アクセシビリティ
+
+### ラベル付け
+
+`<progress>` を使用する場合、ふつうはアクセシビリティのあるラベルを提供しましょう。ARIA 標準のラベル付け属性 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) や [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を `role="progressbar"` の要素と同様に使用できますが、`<progress>` を用いる場合、代わりに {{htmlelement("label")}} 要素を使用することができます。
+
+> [!NOTE]
+> 要素のタグの間に配置されたテキストはアクセシビリティラベルではありません。この要素に対応していない古いブラウザー用の代替用としてのみ推奨されます。
+
+#### 例
+
+```html
+<label>
+  文書をアップロード中: <progress value="70" max="100">70 %</progress>
+</label>
+
+<!-- OR -->
+<br />
+
+<label for="progress-bar">文書をアップロード中</label>
+<progress id="progress-bar" value="70" max="100">70 %</progress>
+```
+
+#### 結果
+
+{{EmbedLiveSample('Labelling')}}
+
+### 特定の領域を説明
+
+`<progress>` 要素がページのある節の読み込みの進捗を表している場合、[`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して状況を指し、更新中の節に [`aria-busy="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) を設定し、読み込みが完了したら `aria-busy` 属性を解除してください。
+
+#### 例
+
+```html
+<div aria-busy="true" aria-describedby="progress-bar">
+  <!-- この領域のコンテンツが読み込み中 -->
+</div>
+
+<!-- ... -->
+
+<progress id="progress-bar" aria-label="コンテンツ読み込み中…"></progress>
+```
+
+##### 結果
+
+{{EmbedLiveSample('特定の領域を説明')}}
+
+## 例
+
+```html
+<progress value="70" max="100">70 %</progress>
+```
+
+### 結果
+
+{{ EmbedLiveSample("Examples", 200, 50) }}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -70,78 +142,6 @@ label {
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
-
-- `max`
-  - : この属性は、`progress` 要素で示すタスクで必要とする総作業量を設定します。`max` 属性を指定する場合は、値を `0` より大きい有効な浮動小数点数値にしなければなりません。既定値は `1` です。
-- `value`
-  - : この属性は、タスクの進捗状況を設定します。値は `0` から `max` までの間、または `max` を省略する場合は `0` から `1` までの間の、有効な浮動小数点数値であることが必要です。`value` 属性がない場合は、プログレスバーは不定、タスクは処理中であるものの完了までが予想できない状態になります。
-
-> [!NOTE]
-> {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
-
-> [!NOTE]
-> {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーに一致します。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} で value 属性を削除しなければなりません。
-
-## 例
-
-```html
-<progress value="70" max="100">70 %</progress>
-```
-
-### 結果
-
-{{ EmbedLiveSample("Examples", 200, 50) }}
-
-## アクセシビリティの考慮
-
-### ラベル付け
-
-`<progress>` を使用する場合、ふつうはアクセシビリティのあるラベルを提供しましょう。ARIA 標準のラベル付け属性 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) や [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を `role="progressbar"` の要素と同様に使用できますが、`<progress>` を用いる場合、代わりに {{htmlelement("label")}} 要素を使用することができます。
-
-> [!NOTE]
-> 要素のタグの間に配置されたテキストはアクセシビリティラベルではありません。この要素に対応していない古いブラウザー用の代替用としてのみ推奨されます。
-
-#### 例
-
-```html
-<label>
-  文書をアップロード中: <progress value="70" max="100">70 %</progress>
-</label>
-
-<!-- OR -->
-<br />
-
-<label for="progress-bar">文書をアップロード中</label>
-<progress id="progress-bar" value="70" max="100">70 %</progress>
-```
-
-#### 結果
-
-{{EmbedLiveSample('Labelling')}}
-
-### 特定の領域を記述
-
-`<progress>` 要素がページのある節の読み込みの進捗を表している場合、[`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して状況を指し、更新中の節に [`aria-busy="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) を設定し、読み込みが完了したら `aria-busy` 属性を解除してください。
-
-#### 例
-
-```html
-<div aria-busy="true" aria-describedby="progress-bar">
-  <!-- content is for this region is loading -->
-</div>
-
-<!-- ... -->
-
-<progress id="progress-bar" aria-label="Content loading…"></progress>
-```
-
-##### 結果
-
-{{EmbedLiveSample('Describing a particular region')}}
-
 ## 仕様書
 
 {{Specifications}}
@@ -152,6 +152,7 @@ label {
 
 ## 関連情報
 
+- [垂直フォームコントロールの作成](/ja/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - {{htmlelement("meter")}}
 - {{ cssxref(":indeterminate") }}
 - {{ cssxref("-moz-orient") }}

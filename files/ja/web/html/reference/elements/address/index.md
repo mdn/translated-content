@@ -1,11 +1,10 @@
 ---
-title: "<address>: 連絡先要素"
+title: HTML `<address>` 連絡先要素
+short-title: <address>
 slug: Web/HTML/Reference/Elements/address
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<address>`** は [HTML](/ja/docs/Web/HTML) の要素で、この中の HTML が個人、団体、組織の連絡先情報を提供していることを示します。
 
