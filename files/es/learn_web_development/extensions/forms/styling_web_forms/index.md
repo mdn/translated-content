@@ -72,7 +72,7 @@ En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
 - Elementos involucrados en la creación de controles de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
 
-Una vez más, describiremos lo que se puede hacer en términos de estilo de estos elementos en [Estilo de formulario avanzado](/es/docs/Learn/Forms/Advanced_form_styling).
+Una vez más, describiremos lo que se puede hacer en términos de estilo de estos elementos en [Estilo de formulario avanzado](/es/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 
 El verdadero problema con todos estos controles es que tienen una estructura muy compleja, y más allá de algunos estilos básicos (como cambiar el ancho o el margen del control), generalmente no tiene la capacidad de diseñar los componentes internos de los controles (como el calendario del selector de fecha, o el botón en `<select>` que hace que se muestre la lista de opciones) que conforman esos controles.
 
