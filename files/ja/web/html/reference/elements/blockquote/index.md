@@ -1,11 +1,10 @@
 ---
-title: "<blockquote>: ブロック引用要素"
+title: HTML `<blockquote>` ブロック引用要素
+short-title: <blockquote>
 slug: Web/HTML/Reference/Elements/blockquote
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<blockquote>`** は [HTML](/ja/docs/Web/HTML) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の URL は `cite` 属性により与えることができ、引用元のテキスト表現は {{HTMLElement("cite")}} 要素を用いて与えることができます。
 
@@ -15,8 +14,8 @@ l10n:
 <div>
   <blockquote cite="https://www.huxley.net/bnw/four.html">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
-      anything. You read and you’re pierced.
+      Words can be like X-rays, if you use them properly—they'll go through
+      anything. You read and you're pierced.
     </p>
   </blockquote>
   <p>—Aldous Huxley, <cite>Brave New World</cite></p>
