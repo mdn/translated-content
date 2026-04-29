@@ -112,8 +112,8 @@ input {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容目录</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/zh-CN/docs/HTML/Content_categories#form_listed">listed</a>, <a href="/zh-CN/docs/HTML/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容目录</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root">sectioning root</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#form_listed">listed</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#form-associated_content">form-associated</a> element, palpable content.</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -125,7 +125,7 @@ input {
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">flow content</a>.</td>
   </tr>
   <tr>
    <th scope="row">默认 ARIA role</th>
