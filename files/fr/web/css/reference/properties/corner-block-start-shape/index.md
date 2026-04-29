@@ -1,8 +1,9 @@
 ---
-title: corner-block-start-shape
+title: Propriété CSS `corner-block-start-shape`
+short-title: corner-block-start-shape
 slug: Web/CSS/Reference/Properties/corner-block-start-shape
 l10n:
-  sourceCommit: 133c1628ead5b32660a0096ea7b3881637dc355c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

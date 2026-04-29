@@ -1,8 +1,9 @@
 ---
-title: :-moz-window-inactive
+title: Pseudo-classe CSS `:-moz-window-inactive`
+short-title: :-moz-window-inactive
 slug: Web/CSS/Reference/Selectors/:-moz-window-inactive
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_Header}}

@@ -1,8 +1,9 @@
 ---
-title: box-flex
+title: Propriété CSS `box-flex`
+short-title: box-flex
 slug: Web/CSS/Reference/Properties/box-flex
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}

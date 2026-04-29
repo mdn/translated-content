@@ -1,8 +1,9 @@
 ---
-title: border-image-repeat
+title: Propriété CSS `border-image-repeat`
+short-title: border-image-repeat
 slug: Web/CSS/Reference/Properties/border-image-repeat
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit comment les images pour les côtés et la partie centrale de [l'image de bordure](/fr/docs/Web/CSS/Reference/Properties/border-image) sont mises à l'échelle et disposées en mosaïque. La région centrale peut être affichée en utilisant le mot-clé «&nbsp;fill&nbsp;» dans la propriété {{CSSxRef("border-image-slice")}}.

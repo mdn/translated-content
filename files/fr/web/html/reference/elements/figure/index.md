@@ -1,8 +1,9 @@
 ---
-title: "<figure> : l'élément de figure avec légende facultative"
+title: "Élément HTML `<figure>` : l'élément de figure avec légende facultative"
+short-title: <figure>
 slug: Web/HTML/Reference/Elements/figure
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est définie à l'aide de l'élément {{HTMLElement("figcaption")}}. La figure, sa légende et son contenu sont référencés comme une seule unité.

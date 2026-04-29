@@ -1,8 +1,9 @@
 ---
-title: border-end-end-radius
+title: Propriété CSS `border-end-end-radius`
+short-title: border-end-end-radius
 slug: Web/CSS/Reference/Properties/border-end-end-radius
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-end-end-radius`** définit un rayon de bordure logique sur un élément, qui correspond à un rayon de bordure physique dépendant de {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}} de l'élément. Ceci est utile pour créer des styles qui fonctionnent quel que soit [l'orientation du texte](/fr/docs/Web/CSS/Reference/Properties/text-orientation) et le [mode d'écriture](/fr/docs/Web/CSS/Guides/Writing_modes).

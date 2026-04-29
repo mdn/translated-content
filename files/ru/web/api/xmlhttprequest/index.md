@@ -442,7 +442,7 @@ var myRequest = new XMLHttpRequest();
           >
           Please use
           <a
-            href="/ru/docs/Server-sent_events"
+            href="/ru/docs/Web/API/Server-sent_events"
             title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,

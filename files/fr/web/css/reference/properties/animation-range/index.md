@@ -1,8 +1,9 @@
 ---
-title: animation-range
+title: Propriété CSS `animation-range`
+short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 l10n:
-  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation-range`** est utilisée pour définir le début et la fin de la plage d'attachement d'une animation le long de sa chronologie, c'est-à-dire à quel endroit de la chronologie une animation commencera et se terminera.

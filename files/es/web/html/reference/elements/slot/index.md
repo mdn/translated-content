@@ -28,7 +28,7 @@ original_slug: Web/HTML/Element/slot
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/HTML/Content_categories#Transparent_content_model"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Transparent_content_model"
           >Transparente</a
         >
       </td>
@@ -45,7 +45,7 @@ original_slug: Web/HTML/Element/slot
       <th scope="row">Parentes permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
       </td>

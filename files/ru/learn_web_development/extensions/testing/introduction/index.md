@@ -25,7 +25,7 @@ slug: Learn_web_development/Extensions/Testing/Introduction
 
 С другой стороны, плохо, когда сайт полноценно работает для обычных людей, но может быть совершенно недоступен для людей, имеющих проблемы со зрением, т.к. их приложения для чтения экрана не могут распознать информацию на сайте.
 
-Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
+Когда мы говорим "приемлемое количество браузеров", мы не говорим, что это должно быть 100% всех браузеров в мире — это почти невозможно. Вы можете собрать информацию о том, какими браузеры и устройства используют ваши пользователи (это мы обсудим во второй статье — см. [Gotta test 'em all?](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all)), но это ничего не гарантирует. Как веб-разработчик, вы должны определить для себя несколько браузеров и устройств, на которых код должен работать полностью, но кроме этого, вы должны писать код так, чтобы и другие браузеры были способны максимально использовать ваш сайт (defensive coding). Это одна из самых больших проблем веб-разработки.
 
 ## Почему возникают кросс-браузерные проблемы?
 
@@ -154,7 +154,7 @@ This article should have given you a high-level understanding of the most import
 ## In this module
 
 - [Introduction to cross browser testing](/ru/docs/Learn_web_development/Extensions/Testing/Introduction)
-- [Strategies for carrying out testing](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
+- [Strategies for carrying out testing](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies)
 - [Handling common HTML and CSS problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [Handling common JavaScript problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
 - [Handling common accessibility problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)

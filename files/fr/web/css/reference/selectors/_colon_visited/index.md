@@ -1,8 +1,9 @@
 ---
-title: :visited
+title: Pseudo-classe CSS `:visited`
+short-title: :visited
 slug: Web/CSS/Reference/Selectors/:visited
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:visited`** s'applique une fois que le lien a été visité par l'utilisateur·ice. Pour des raisons de vie privée, les styles pouvant être modifiés avec ce sélecteur sont très limités. La pseudo-classe `:visited` s'applique uniquement aux éléments HTML {{HTMLElement("a")}} et {{HTMLElement("area")}} qui possèdent un attribut `href`.

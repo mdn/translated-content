@@ -3,7 +3,7 @@ title: Phaser を使用した 2D ブロック崩しゲーム
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}
 
 このステップバイステップのチュートリアルでは、シンプルなモバイル **MDN ブロック崩し**ゲーム を、 JavaScript で書き、 [Phaser](https://phaser.io/) フレームワークを使用して作成します。
 
@@ -45,4 +45,4 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 では、始めましょう。シリーズの最初の部分 - [フレームワークの初期化](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)に向かいましょう。
 
-{{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
+{{Next("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework")}}

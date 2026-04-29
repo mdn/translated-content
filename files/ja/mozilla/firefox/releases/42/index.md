@@ -1,11 +1,12 @@
 ---
-title: Firefox 42 for developers
+title: Firefox 42 開発者向けリリースノート
+short-title: Firefox 42
 slug: Mozilla/Firefox/Releases/42
 l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-[Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 42 は、米国時間 2015 年 11 月 3 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
+[Firefox の最新の開発者向け機能をテストするには、 Firefox Developer Edition をインストールしてください](https://www.firefox.com/ja/channel/desktop/developer/) Firefox 42 は、米国時間 2015 年 11 月 3 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -29,30 +30,30 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素の [`referrer`](/ja/docs/Web/HTML/Reference/Elements/input#referrer) 属性を実験的にサポートしました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
+- `referrer` 属性を {{HTMLElement("img")}} ([Firefox バグ 1166910](https://bugzil.la/1166910))、{{htmlElement("iframe")}} ([Firefox バグ 1175736](https://bugzil.la/1175736))、{{HTMLElement("a")}} および {{HTMLElement("area")}} ([Firefox バグ 1174913](https://bugzil.la/1174913)) 要素で実験的に対応しました。`network.http.enablePerElementReferrer` の既定値が `false` であるため、デフォルトでは効力がありません。
 
 ### JavaScript
 
 - {{jsxref("Reflect")}} オブジェクトを実装しました ([Firefox バグ 987514](https://bugzil.la/987514))。
 - {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}} トラップの実装を、ES2015 の確定仕様に準拠するよう更新しました ([Firefox バグ 1049662](https://bugzil.la/1049662))。
-- {{jsxref('Operators', 'new')}} を伴わずに {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} を呼び出すと {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1083752](https://bugzil.la/1083752))。
+- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} を {{jsxref('Operators', 'new')}} を伴わずに呼び出すと {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1083752](https://bugzil.la/1083752))。
 
 ### インターフェイス/API/DOM
 
 #### DOM & HTML DOM
 
-- [`id`](/ja/docs/Web/HTML/Reference/Elements/img#id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
+- [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を伴う画像が、{{domxref("Window")}} インターフェイスのプロパティのリストに入らないようになりました。`<img id="login">` は `window.login` としてアクセスできません。この動作は Firefox 26 で導入しており、その後変更された仕様書に合致させるために削除しました ([Firefox バグ 959992](https://bugzil.la/959992))。
 - {{domxref('MouseEvent.offsetX')}} および {{domxref('MouseEvent.offsetY')}} を追加しました ([Firefox バグ 69787](https://bugzil.la/69787))。
 - {{domxref("HTMLInputElement")}} インターフェイスを、ディレクトリーのアップロードを扱うよう実験的に拡張しました ([Firefox バグ 1164310](https://bugzil.la/1164310))。以下 4 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
-  - {{domxref("HTMLInputElement.directory")}}
-  - {{domxref("HTMLInputElement.isFilesAndDirectoriesSupported")}}
-  - {{domxref("HTMLInputElement.getFilesAndDirectories()")}}
-  - {{domxref("HTMLInputElement.chooseDirectory()")}}
+  - `HTMLInputElement.directory`
+  - `HTMLInputElement.isFilesAndDirectoriesSupported`
+  - `HTMLInputElement.getFilesAndDirectories()`
+  - `HTMLInputElement.chooseDirectory()`
 
-- {{domxref("Directory")}} インターフェイスを実験的に拡張しました ([Firefox バグ 1177688](https://bugzil.la/1177688))。{{domxref("Directory.path")}} および {{domxref("Directory.getContents")}} の 2 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
+- {{domxref("Directory")}} インターフェイスを実験的に拡張しました ([Firefox バグ 1177688](https://bugzil.la/1177688))。{{domxref("Directory.path")}} および `Directory.getContents` の 2 つのメンバーは、設定項目 `dom.input.dirpicker` を `true` に設定すると使用できます。
 - `HTMLMediaElement.mozSrcObject` を {{domxref('HTMLMediaElement.srcObject')}} に改名しました ([Firefox バグ 1175523](https://bugzil.la/1175523))。
 
-#### Service Worker
+#### サービスワーカー
 
 - `Request.context` を削除しました ([Firefox バグ 1188062](https://bugzil.la/1188062))。
 - デスクトップ版 Firefox で[プッシュ API](/ja/docs/Web/API/Push_API) をデフォルトで有効にしました ([Firefox バグ 1153499](https://bugzil.la/1153499)) が、Nightly/Dev Edition/Beta チャンネルのみで有効です。コンシューマーの UX およびデバッグ機能が適切に実装されるまで、Release チャンネルではデフォルトで無効化しています ([Firefox バグ 1207875](https://bugzil.la/1207875))。なお、 `about:config` の設定項目 `dom.push.enabled` で有効化できます。
@@ -68,7 +69,7 @@ l10n:
 - {{domxref('Animation.reverse()')}} メソッド ([Firefox バグ 1150808](https://bugzil.la/1150808))。
 - {{domxref('AnimationPlaybackEvent')}} インターフェイスを実装して、{{domxref('Animation')}} で {{domxref("Animation/cancel_event", "cancel")}} および {{domxref("Animation/finish_event", "finish")}} イベントが発生するようになりました ([Firefox バグ 1178664](https://bugzil.la/1178664))。
 
-#### Web Components
+#### ウェブコンポーネント
 
 [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の実験的な実装を変更しました。
 
@@ -89,7 +90,7 @@ l10n:
 
 #### 新規 API
 
-- {{domxref("ImageBitmap")}} インターフェイスおよび {{domxref("createImageBitmap()")}} メソッドを実装しました。これらは通常の window スクリプトおよびウェブワーカーで有効であり、window やワーカーのコンテキスト間で効率よく画像を渡すことができます ([Firefox バグ 1044102](https://bugzil.la/1044102))。
+- {{domxref("ImageBitmap")}} インターフェイス、{{domxref("Window.createImageBitmap()")}} メソッド、{{domxref("WorkerGlobalScope.createImageBitmap()")}} メソッドを実装しました。これらは通常の window スクリプトおよびウェブワーカーで有効であり、window やワーカーのコンテキスト間で効率よく画像を渡すことができます ([Firefox バグ 1044102](https://bugzil.la/1044102))。
 
 #### その他
 
@@ -117,7 +118,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
+- CSP の [`upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) ディレクティブを実装しました ([Firefox バグ 1139297](https://bugzil.la/1139297))。
 
 ## セキュリティ
 
@@ -147,7 +148,3 @@ _変更なし。_
 ### その他
 
 _変更なし。_
-
-## 過去のバージョン
-
-{{Firefox_for_developers('41')}}

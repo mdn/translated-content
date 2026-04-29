@@ -174,6 +174,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
 - [L'API <i lang="en">Drag and drop</i> pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Les opérations de glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Types de données pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Types de données pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)
 - [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [Test `DataTransfer` — Coller ou glisser&nbsp;?](https://codepen.io/tech_query/pen/MqGgap)

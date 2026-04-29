@@ -1,8 +1,9 @@
 ---
-title: <resolution>
+title: Type CSS `<resolution>`
+short-title: <resolution>
 slug: Web/CSS/Reference/Values/resolution
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<resolution>`**, utilisé pour décrire les [résolutions](/fr/docs/Web/CSS/Reference/At-rules/@media/resolution) dans les [requêtes média](/fr/docs/Web/CSS/Guides/Media_queries), désigne la densité de pixels d'un périphérique de sortie, c'est‑à‑dire sa résolution.

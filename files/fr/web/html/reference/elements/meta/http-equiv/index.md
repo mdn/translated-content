@@ -1,9 +1,9 @@
 ---
-title: Attribut <meta> http-equiv
-short-title: <meta> http-equiv
+title: "Attribut HTML : `<meta http-equiv>`"
+short-title: <meta http-equiv>
 slug: Web/HTML/Reference/Elements/meta/http-equiv
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`http-equiv`** de l'élément {{HTMLElement("meta")}} permet de fournir des instructions de traitement au navigateur, comme si la réponse ayant retourné le document incluait certains en-têtes HTTP.

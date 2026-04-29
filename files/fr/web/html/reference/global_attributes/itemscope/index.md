@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : itemscope"
+title: "Attribut HTML universel : `itemscope`"
 short-title: itemscope
 slug: Web/HTML/Reference/Global_attributes/itemscope
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemscope`** est un booléen qui définit la portée des métadonnées associées. La spécification de l'attribut **`itemscope`** pour un élément crée un nouvel élément, ce qui entraîne un certain nombre de paires nom-valeur associées à l'élément.

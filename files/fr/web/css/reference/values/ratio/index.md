@@ -1,8 +1,9 @@
 ---
-title: <ratio>
+title: Type CSS `<ratio>`
+short-title: <ratio>
 slug: Web/CSS/Reference/Values/ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<ratio>`** décrit la relation proportionnelle entre deux valeurs. Il correspond essentiellement au rapport d'aspect (<i lang="en">aspect ratio</i> en anglais), qui met en relation la largeur et la hauteur. Par exemple, le `<ratio>` est utilisé comme valeur pour la caractéristique media `aspect-ratio` dans les media queries {{CSSxRef("@media")}}, pour la caractéristique de taille `aspect-ratio` dans les requêtes de conteneur {{CSSxRef("@container")}}, et comme valeur de la propriété CSS {{CSSxRef("aspect-ratio")}}.

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_conflicts
 original_slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Cascade_layers", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 O objetivo desta lição é desenvolver sua compreensão de alguns dos conceitos mais fundamentais do CSS — a cascata, especificidade e herança — que controlam como o CSS é aplicado ao HTML e como os conflitos entre as declarações de estilo são resolvidos.
 

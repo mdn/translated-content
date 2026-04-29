@@ -1,13 +1,13 @@
 ---
-title: "@namespace"
+title: "`@namespace` CSS アットルール"
+short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
-original_slug: Web/CSS/@namespace
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 1dcf976e9b654679c762568812562b1a2361c755
 ---
 
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で、
-[CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Glossary/Namespace)を定義します。
+[CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する XML [名前空間](/ja/docs/Glossary/Namespace)を定義します。
 
 {{InteractiveExample("CSS デモ: @namespace", "tabbed-shorter")}}
 
@@ -43,11 +43,11 @@ svg|a {
 
 ```css
 /* 既定の名前空間 */
-@namespace url(XML-namespace-URL);
+@namespace url("XML-namespace-URL");
 @namespace "XML-namespace-URL";
 
 /* 接頭辞つきの名前空間 */
-@namespace prefix url(XML-namespace-URL);
+@namespace prefix url("XML-namespace-URL");
 @namespace prefix "XML-namespace-URL";
 ```
 
@@ -75,8 +75,8 @@ HTML では、既知の[外来要素](https://html.spec.whatwg.org/multipage/syn
 ### 既定かつ定義済みの名前空間の指定
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace url("http://www.w3.org/1999/xhtml");
+@namespace svg url("http://www.w3.org/2000/svg");
 
 /* XHTML は既定で接頭辞のない名前空間であるため、これは XHTML のすべての <a> 要素を選択します */
 a {

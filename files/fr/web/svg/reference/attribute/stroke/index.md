@@ -49,7 +49,7 @@ svg {
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Paint">&#x3C;paint></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Paint">&#x3C;paint></a></strong
         >
       </td>
     </tr>

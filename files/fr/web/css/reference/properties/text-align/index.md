@@ -1,8 +1,9 @@
 ---
-title: text-align
+title: Propriété CSS `text-align`
+short-title: text-align
 slug: Web/CSS/Reference/Properties/text-align
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-align`** définit l'alignement horizontal du contenu de niveau en ligne à l'intérieur d'un élément de bloc ou d'une boîte de cellule de tableau. Cela signifie qu'elle fonctionne comme {{CSSxRef("vertical-align")}}, mais dans la direction horizontale.

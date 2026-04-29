@@ -1,9 +1,8 @@
 ---
 title: offset-position
 slug: Web/CSS/Reference/Properties/offset-position
-original_slug: Web/CSS/offset-position
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`offset-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、パスに沿った要素の初期位置を定義します。このプロパティは通常、 {{cssxref("offset-path")}} プロパティと組み合わせて、動きの効果を作成するために使用されます。 `offset-position` の値は、 {{cssxref("basic-shape/path", "path()")}} などの `offset-path` 関数が独自の開始位置を指定していない場合、オフセットパスに沿って移動するための要素の初期配置位置を決定します。
@@ -113,7 +112,7 @@ offset-position: unset;
 
 ### 様々なオフセット開始位置の比較
 
-この例では、 {{cssxref("ray", "ray()")}} を使用して {{cssxref("offset-path")}} プロパティの値を指定した場合、要素のさまざまな初期オフセット開始位置を視覚的に比較しています。要素ボックス内の数値は、CSS が適用される要素と、その要素のアンカー点を示しています。
+この例では、 {{cssxref("ray()")}} を使用して {{cssxref("offset-path")}} プロパティの値を指定した場合、要素のさまざまな初期オフセット開始位置を視覚的に比較しています。要素ボックス内の数値は、CSS が適用される要素と、その要素のアンカー点を示しています。
 
 ```html hidden
 <div class="wrap">

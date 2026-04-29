@@ -55,7 +55,7 @@ video::cue {
       <th scope="row">Permite Parentes</th>
       <td>
         Um elemento de mídia, antes de qualquer
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>

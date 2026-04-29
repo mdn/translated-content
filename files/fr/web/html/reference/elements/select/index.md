@@ -1,8 +1,9 @@
 ---
-title: "<select> : l'élément de liste déroulante"
+title: "Élément HTML `<select>` : l'élément de liste déroulante"
+short-title: <select>
 slug: Web/HTML/Reference/Elements/select
 l10n:
-  sourceCommit: 2362f25e1ccee7ad584584ab3521f3ff34a3e6ed
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<select>`** représente un contrôle qui propose un menu d'options.
@@ -130,10 +131,9 @@ L'élément `<hr>` à l'intérieur d'un `<select>` doit être considéré comme 
 
 ### Sélecteur simple
 
-#### HTML
+L'exemple suivant crée un menu déroulant à trois valeurs. La deuxième option inclut l'attribut `selected`, ce qui fait que cette option est sélectionnée par défaut.
 
 ```html
-<!-- C'est la deuxième valeur qui sera initialement sélectionnée -->
 <select id="monselect">
   <option value="valeur1">Valeur 1</option>
   <option value="valeur2" selected>Valeur 2</option>
@@ -191,6 +191,11 @@ L'exemple suivant crée un menu déroulant avec des groupes à l'aide de {{HTMLE
 
 L'exemple qui suit est légèrement plus complexe et illustre certaines fonctionnalités qui peuvent être utilisées avec un élément `<select>`&nbsp;:
 
+- L'attribut `multiple` permet de sélectionner plusieurs options.
+- L'attribut `size` est défini sur `4`, ce qui signifie que 4 lignes sont affichées à la fois. Les utilisateur·ice·s peuvent faire défiler pour voir toutes les options.
+- Deux éléments {{HTMLElement("optgroup")}} sont inclus, créant deux regroupements visuels, généralement avec le nom du groupe en gras et les options imbriquées étant indentées.
+- L'attribut `disabled` est inclus sur l'option «&nbsp;Hamster&nbsp;», ce qui rend cette option non sélectionnable.
+
 ```html
 <label
   >Veuillez choisir un ou plusieurs animaux&nbsp;:
@@ -212,13 +217,6 @@ L'exemple qui suit est légèrement plus complexe et illustre certaines fonction
 #### Résultat
 
 {{EmbedLiveSample("Sélecteur avancé avec multi-sélection", "", 100)}}
-
-Vous pourrez voir que&nbsp;:
-
-- Plusieurs options peuvent être sélectionnées grâce à l'attribut `multiple`.
-- L'attribut `size` permet d'afficher uniquement 4 lignes simultanément et qu'il faut faire défiler le contenu.
-- Les éléments {{HTMLElement("optgroup")}} ont été utilisés pour diviser les choix en différents groupes. Cela applique un effet simplement visuel (avec le nom en gras et les options indentées).
-- Le choix "Hamster" est présent avec l'attribut `disabled` et ne peut donc pas être sélectionné.
 
 ## Résumé technique
 
@@ -260,11 +258,9 @@ Vous pourrez voir que&nbsp;:
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        Zéro ou plusieurs éléments {{HTMLElement("option")}},
-        {{HTMLElement("optgroup")}}, ou {{HTMLElement("hr")}} dans les éléments <code>&lt;select&gt;</code> traditionnels. Dans les <a href="/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select">éléments de sélection personnalisables</a>&nbsp;:
         <ul>
-          <li>Le bouton de sélection {{HTMLElement("button")}} peut être inclus en tant qu'enfant <code>&lt;button&gt;</code> avec un élément {{HTMLElement("selectedcontent")}} imbriqué.</li>
-          <li>Le sélecteur déroulant est défini comme n'importe quel autre contenu, ce qui peut inclure zéro ou plusieurs éléments <code>&lt;option&gt;</code>, <code>&lt;optgroup&gt;</code>, <code>&lt;hr&gt;</code>, {{HTMLElement("div")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} et {{HTMLElement("noscript")}}.</li>
+          <li>Les éléments {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} ou {{HTMLElement("hr")}}, éventuellement précédés d'un élément {{HTMLElement("button")}} avec un élément {{HTMLElement("selectedcontent")}} imbriqué si c'est une boîte déroulante.</li>
+          <li>Les éléments {{HTMLElement("div")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} et {{HTMLElement("noscript")}}.</li>
         </ul>
       </td>
     </tr>
@@ -287,7 +283,7 @@ Vous pourrez voir que&nbsp;:
         <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a> avec <strong>aucun</strong> attribut
         <code>multiple</code> et <strong>aucun</strong> attribut
         <code>size</code> supérieur à 1, sinon
-        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><code>listbox</code></a>.
       </td>
     </tr>
     <tr>
@@ -295,8 +291,8 @@ Vous pourrez voir que&nbsp;:
       <td>
         <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role"><code>menu</code></a> avec <strong>aucun</strong> attribut
         <code>multiple</code> et <strong>aucun</strong> attribut
-        <code>size</code> supérieur à 1, sinon aucun
-        <code>role</code> autorisé
+        <code>size</code> supérieur à 1, sinon <a href="/fr/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
+        est autorisé mais n'est pas recommandé.
       </td>
     </tr>
     </tr>
@@ -317,7 +313,7 @@ Vous pourrez voir que&nbsp;:
 
 ## Voir aussi
 
-- Événements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}
 - L'élément {{HTMLElement("option")}}
 - L'élément {{HTMLElement("optgroup")}}
 - [Les éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select)
+- Événements déclenchés par `<select>`&nbsp;: {{DOMxRef("HTMLElement/change_event", "change")}}, {{DOMxRef("Element/input_event", "input")}}

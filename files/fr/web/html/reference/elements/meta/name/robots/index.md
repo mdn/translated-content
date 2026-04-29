@@ -1,9 +1,9 @@
 ---
-title: <meta name="robots">
+title: Valeur d'attribut HTML `<meta name="robots">`
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`robots`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} (souvent appelée «&nbsp;balise robots&nbsp;») définit le comportement d'exploration et d'indexation que les {{Glossary("Crawler", "robots d'exploration")}} web doivent utiliser avec la page.

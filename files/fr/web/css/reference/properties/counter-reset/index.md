@@ -1,8 +1,9 @@
 ---
-title: counter-reset
+title: Propriété CSS `counter-reset`
+short-title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`counter-reset`** permet de créer des compteurs CSS nommés [compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) et de les initialiser à une valeur précise. Elle permet de créer des compteurs qui comptent à partir de un jusqu'au nombre d'éléments, ainsi que ceux qui comptent à rebours du nombre d'éléments jusqu'à un.

@@ -1,8 +1,9 @@
 ---
-title: :invalid
+title: Pseudo-classe CSS `:invalid`
+short-title: :invalid
 slug: Web/CSS/Reference/Selectors/:invalid
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:invalid`** cible tout élément {{HTMLElement("input")}} pour lequel [la validation](/fr/docs/Web/HTML/Guides/Constraint_validation) du contenu échoue par rapport au type de donnée attendu. Ceci permet de mettre en forme les champs non valides pour aider l'utilisateur·ice à identifier et à corriger les erreurs.

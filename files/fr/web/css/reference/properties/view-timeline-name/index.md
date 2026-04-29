@@ -1,8 +1,9 @@
 ---
-title: view-timeline-name
+title: Propriété CSS `view-timeline-name`
+short-title: view-timeline-name
 slug: Web/CSS/Reference/Properties/view-timeline-name
 l10n:
-  sourceCommit: 5310a5bff0e1f3e2dfafa44bc2aadbb39e1c4673
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propéiété [CSS](/fr/docs/Web/CSS) **`view-timeline-name`** définit les noms d'un ou plusieurs [chronomètres de progression de vue nommés](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée) associés à l'élément.

@@ -1,8 +1,9 @@
 ---
-title: :first-child
+title: Pseudo-classe CSS `:first-child`
+short-title: :first-child
 slug: Web/CSS/Reference/Selectors/:first-child
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:first-child`** permet de cibler un élément qui est le premier élément fils par rapport à son élément parent.

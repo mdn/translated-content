@@ -1,9 +1,9 @@
 ---
-title: <box-edge>
+title: Type CSS `<box-edge>`
+short-title: <box-edge>
 slug: Web/CSS/Reference/Values/box-edge
-original_slug: Web/CSS/box-edge
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<box-edge>`** représentent un mot-clé de [bord de boîte](/fr/docs/Web/CSS/Guides/Box_model/Introduction), comme [`content-box`](#content-box) et [`border-box`](#border-box). Les mots-clés de bord de boîte servent à définir différents aspects du modèle de boîte d'un element et la façon dont les elements sont positionnés et affichés à l'écran.

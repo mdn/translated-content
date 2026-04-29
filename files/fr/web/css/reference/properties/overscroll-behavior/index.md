@@ -1,8 +1,9 @@
 ---
-title: overscroll-behavior
+title: Propriété CSS `overscroll-behavior`
+short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
 l10n:
-  sourceCommit: f28f4c26a3d95e41d01a505af3388881abd6e49c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`overscroll-behavior`** définit le comportement d'un navigateur lorsqu'il atteint la limite d'une zone de défilement.
@@ -128,6 +129,8 @@ Par défaut, les navigateurs mobiles ont tendance à fournir un effet de «&nbsp
 Dans certains cas, ces comportements ne sont pas souhaitables. Vous pouvez utiliser `overscroll-behavior` pour vous débarrasser de l'enchaînement de défilement indésirable et du comportement de type «&nbsp;tirer pour actualiser&nbsp;» inspiré des applications Facebook/Twitter.
 
 Notez que cette propriété s'applique uniquement aux {{Glossary("Scroll_container", "conteneurs de défilement")}}. En particulier, comme un {{HTMLElement("iframe")}} n'est pas un conteneur de défilement, définir cette propriété sur un cadre intégré n'a aucun effet. Pour contrôler l'enchaînement de défilement depuis un cadre intégré, définissez `overscroll-behavior` à la fois sur les éléments {{HTMLElement("html")}} et {{HTMLElement("body")}} du document du cadre intégré.
+
+Un {{Glossary("Scroll_container", "conteneur de défilement")}} qui n'a pas de débordement défilable, comme un élément avec `overflow: hidden`, est toujours considéré comme étant à sa {{Glossary("Scroll_boundary", "limite de défilement")}}. Ainsi, définir un `overscroll-behavior` différent de la valeur par défaut, tel que `contain` ou `none`, sur celui-ci empêchera l'enchaînement de défilement vers les conteneurs de défilement ancêtres. Cela peut être utilisé pour empêcher le défilement de l'arrière-plan lorsqu'une boîte de dialogue ou une superposition est ouverte.
 
 ## Définition formelle
 

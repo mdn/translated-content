@@ -1,8 +1,9 @@
 ---
-title: "<figcaption> : l'élément de légende d'une figure"
+title: "Élément HTML `<figcaption>` : l'élément de légende d'une figure"
+short-title: <figcaption>
 slug: Web/HTML/Reference/Elements/figcaption
 l10n:
-  sourceCommit: c403dd32f627cd972048db05db04ef76f3ab84fe
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<figcaption>`** représente une légende ou une description du reste du contenu de son élément parent {{HTMLElement("figure")}}, fournissant à `<figure>` un {{Glossary("accessible name", "nom accessible")}}.

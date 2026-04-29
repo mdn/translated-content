@@ -1,8 +1,9 @@
 ---
-title: descent-override
+title: Descripteur de règle CSS `descent-override`
+short-title: descent-override
 slug: Web/CSS/Reference/At-rules/@font-face/descent-override
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`descent-override`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} définit la mesure du jambage inférieur pour la police. La mesure du jambage inférieur est la hauteur en dessous de la ligne de base que CSS utilise pour disposer les boîtes de ligne dans un contexte de mise en forme en ligne.
