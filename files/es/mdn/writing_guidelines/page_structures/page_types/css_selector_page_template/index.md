@@ -48,7 +48,6 @@ l10n:
 >
 >     Ten en cuenta que puede que primero necesites crear o actualizar una entrada para el selector y su especificación en nuestro repositorio de datos de compatibilidad de navegadores.
 >     Consulta nuestra guía sobre cómo hacerlo.
-> * **sidebar**
 >
 >   * : Esto es `cssref` para todas las páginas de guía y referencia de CSS.
 >     Consulta "Estructuras de página: Barras laterales" para más detalles.
