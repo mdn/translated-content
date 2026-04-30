@@ -96,17 +96,16 @@ Por ejemplo:
 /* var( <nombre-de-propiedad-personalizada> ) */
 var(--custom-prop)
 
-/* Con un fallback vacío */
+/* Con un valor alternativo vacío */
 /* var( <nombre-de-propiedad-personalizada> , ) */
 var(--custom-prop,)
 
-/* Con un valor fallback */
+/* Con un valor alternativo*/
 /* var( <nombre-de-propiedad-personalizada> , <valor-de-declaracion> ) */
 var(--custom-prop, initial)
 var(--custom-prop, red)
 var(--my-background, linear-gradient(transparent, aqua), pink)
 var(--custom-prop, var(--default-value))
-var(--custom-prop, var(--default-value, red))
 ```
 
 ### Parámetros
