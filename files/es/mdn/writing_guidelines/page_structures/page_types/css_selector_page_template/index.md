@@ -6,7 +6,7 @@ l10n:
 ---
 
 > **Nota:**
-> *Elimina toda esta nota explicativa antes de publicar*
+> _Elimina toda esta nota explicativa antes de publicar_
 >
 > ---
 >
