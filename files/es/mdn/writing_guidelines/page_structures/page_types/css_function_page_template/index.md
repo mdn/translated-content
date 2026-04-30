@@ -71,7 +71,7 @@ l10n:
 >   See our [compatibility tables guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for information on adding or editing entries.
 >
 > _Remember to remove this note block before publishing._
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio que nombre la función y explique qué hace. Idealmente, debería ser una o dos frases cortas.
 
