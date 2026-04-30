@@ -1,8 +1,9 @@
 ---
-title: "<audio> : l'élément audio embarqué"
+title: "Élément HTML `<audio>` : l'élément audio embarqué"
+short-title: <audio>
 slug: Web/HTML/Reference/Elements/audio
 l10n:
-  sourceCommit: 743ba8b257cd06449b192818df120e609f6e16d2
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<audio>`** est utilisé pour intégrer du contenu sonore dans des documents. Il peut contenir une ou plusieurs sources audio, représentées à l'aide de l'attribut `src` ou de l'élément {{HTMLElement("source")}}&nbsp;: le navigateur choisira la plus appropriée.

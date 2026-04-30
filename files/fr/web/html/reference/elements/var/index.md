@@ -1,8 +1,9 @@
 ---
-title: "<var> : l'élément de variable"
+title: "Élément HTML `<var>` : l'élément de variable"
+short-title: <var>
 slug: Web/HTML/Reference/Elements/var
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<var>`** représente une variable dans une expression mathématique ou un texte lié à la programmation. Son contenu est généralement représenté avec une version italique de la police environnante utilisée, toutefois, ce comportement peut dépendre du navigateur utilisé.

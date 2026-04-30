@@ -1,8 +1,9 @@
 ---
-title: scale3d()
+title: Fonction CSS `scale3d()`
+short-title: scale3d()
 slug: Web/CSS/Reference/Values/transform-function/scale3d
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`scale3d()`** définit une transformation qui redimensionne un élément dans l'espace 3D.

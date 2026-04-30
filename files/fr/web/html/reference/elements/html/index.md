@@ -1,9 +1,9 @@
 ---
-title: "<html> : l'élément de racine du document HTML"
+title: "Élément HTML `<html>` : l'élément de racine du document HTML"
+short-title: <html>
 slug: Web/HTML/Reference/Elements/html
-original_slug: Web/HTML/Element/html
 l10n:
-  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML. Tout autre élément du document doit être un descendant de cet élément.

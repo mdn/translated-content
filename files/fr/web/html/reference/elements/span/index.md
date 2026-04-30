@@ -1,8 +1,9 @@
 ---
-title: "<span> : l'élément de contenu en ligne générique"
+title: "Élément HTML `<span>` : l'élément de contenu en ligne générique"
+short-title: <span>
 slug: Web/HTML/Reference/Elements/span
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<span>`** est un conteneur générique en ligne (<i lang="en">inline</i> en anglais) pour les contenus phrasés. Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin de les mettre en forme (grâce aux attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) et aux règles [CSS](/fr/docs/Web/CSS)) ou parce qu'ils partagent certaines valeurs d'attribut comme [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang). Il doit uniquement être utilisé lorsqu'aucun autre élément sémantique n'est approprié. `<span>` est très proche de l'élément {{HTMLElement("div")}}, mais l'élément {{HTMLElement("div")}} est [un élément de bloc](/fr/docs/Glossary/Block-level_content), alors que `<span>` est {{Glossary("Inline-level_content", "un élément en ligne")}}.

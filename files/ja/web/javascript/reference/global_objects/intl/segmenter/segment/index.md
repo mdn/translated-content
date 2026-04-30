@@ -1,15 +1,14 @@
 ---
 title: Intl.Segmenter.prototype.segment()
+short-title: segment()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment
 l10n:
-  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+**`segment()`** は {{jsxref("Intl.Segmenter")}} インスタンスンのメソッドで、この `Intl.Segmenter` オブジェクトのロケールおよび粒度に従って文字列を分割します。
 
-**`Intl.Segmenter.prototype.segment()`** メソッドは、この [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトのロケールおよび粒度に従って文字列を分割します。
-
-{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.segment")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter.prototype.segment()")}}
 
 ```js interactive-example
 const string1 = "Que ma joie demeure";
@@ -20,29 +19,29 @@ const segmenterFrGrapheme = new Intl.Segmenter("fr", {
 const graphemeSegments = segmenterFrGrapheme.segment(string1);
 
 console.log(Array.from(graphemeSegments)[0]);
-// Expected output:
+// 予想される結果:
 // Object {segment: 'Q', index: 0, input: 'Que ma joie demeure'}
 ```
 
 ## 構文
 
-```js
-segment(input);
+```js-nolint
+segment(input)
 ```
 
 ### 引数
 
 - `input`
-  - : 分割するテキストを [`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String) で指定します。
+  - : 分割するテキストを文字列で指定します。
 
 ### 返値
 
-入力文字列のセグメントを含む、反復可能な新しい [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) オブジェクトです。
+この分割器のロケールと粒度を使用して、入力文字列のセグメントを含む新しい反復可能オブジェクト [`Segments`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) です。
 
 ## 例
 
 ```js
-// ロケール固有の単語分割器を生成する
+// ロケール固有の分割器を生成する
 const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 
 // それを用い、文字列のセグメントを走査するイテレーターを取得する
@@ -59,7 +58,6 @@ for (const { segment, index, isWordLike } of segments) {
     isWordLike ? " (word-like)" : "",
   );
 }
-// logs
 // segment at code units [0, 3]: «Moi» (word-like)
 // segment at code units [3, 4]: « »
 // segment at code units [4, 5]: «?»

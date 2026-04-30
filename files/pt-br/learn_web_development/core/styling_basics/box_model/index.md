@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Box_model
 original_slug: Learn/CSS/Building_blocks/The_box_model
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333")}}
 
 Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para ser capaz de criar arranjos ( layouts ) com CSS, ou para alinhar itens com outros itens. Nesta lição, olharemos de modo apropiado para o modelo de caixas do CSS ( CSS Box Model ), de forma que você possa montar arranjos mais complexos com um melhor entendimento de como ele funciona e da terminologia relacionada.
 

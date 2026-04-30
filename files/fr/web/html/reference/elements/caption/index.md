@@ -1,8 +1,9 @@
 ---
-title: "<caption> : l'élément de légende d'un tableau"
+title: "Élément HTML `<caption>` : l'élément de légende d'un tableau"
+short-title: <caption>
 slug: Web/HTML/Reference/Elements/caption
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<caption>`** définit la légende (ou le titre) d'un tableau, fournissant à ce dernier un {{Glossary("accessible name", "nom accessible")}} ou une {{Glossary("accessible description", "description accessible")}}.
