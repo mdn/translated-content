@@ -69,7 +69,7 @@ l10n:
 > - Specifications and Browser compatibility sections: The build tool automatically uses the `browser-compat` key-value pair from the page front matter to insert data into the _Specifications_ and _Browser compatibility_ sections (replacing the `\{{Specifications}}` and `\{{Compat}}` macros in those sections, respectively).
 >
 >   Note that you may first need to create/update an entry for the function and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.
->   See our [compatibility tables guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for information on adding or editing entries.
+>   See our [compatibility tables guide](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for information on adding or editing entries.
 >
 > _Remember to remove this note block before publishing._
 > {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
