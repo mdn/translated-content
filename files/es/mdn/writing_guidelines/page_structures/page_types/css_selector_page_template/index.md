@@ -39,8 +39,8 @@ l10n:
 > - **page-type**
 >   - : La clave `page-type` para propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una pseudo-clase, un pseudo-elemento, un combinador o un selector simple.
 >
->   * : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se define automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se agregan o actualizan los estados de funcionalidades"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
-> * **browser-compat**
+> - **status**
+>   - : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se define automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se agregan o actualizan los estados de funcionalidades"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 >
 >   * : Reemplaza el valor de marcador de posición <code>css.selectors.NameOfTheSelector</code> con la cadena de consulta del selector en el repositorio de datos de compatibilidad de navegadores.
 >     La cadena de herramientas utiliza automáticamente esta clave para completar las secciones de compatibilidad y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en dichas secciones, respectivamente).
