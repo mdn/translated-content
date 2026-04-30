@@ -156,7 +156,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con el selector actual. Para más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con el selector actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
