@@ -1,10 +1,16 @@
 ---
-title: "CSP : script-src-attr"
+title: "Content-Security-Policy : directive script-src-attr"
+short-title: script-src-attr
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
+l10n:
+  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** définit les sources valides pour les gestionnaires d'évènements JavaScript embarqués.
+
+Cette directive ne définit que les sources valides pour les gestionnaires d'évènements JavaScript embarqués comme `onclick`.
+Elle ne s'applique pas aux autres sources JavaScript pouvant déclencher l'exécution de scripts, telles que les URL chargées directement dans des éléments HTML {{HTMLElement("script")}} et les [feuilles de style XSLT](/fr/docs/Web/XML/XSLT).
+(Les sources valides peuvent être spécifiées pour toutes les sources de scripts JavaScript en utilisant {{CSP("script-src")}}, ou uniquement pour les éléments `<script>` en utilisant {{CSP("script-src-elem")}}.)
 
 <table class="properties">
   <tbody>
@@ -14,12 +20,12 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src"><code>script-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive {{CSP("script-src")}}, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -27,31 +33,49 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+Content-Security-Policy: script-src-attr 'none';
+Content-Security-Policy: script-src-attr <source-expression-list>;
 ```
 
-`script-src-attr` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)&nbsp;:
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
+
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste de valeurs _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`'unsafe-hashes'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'unsafe-inline'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'report-sample'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
+
+`script-src-attr` peut être utilisé en conjonction avec {{CSP("script-src")}}, et remplacera cette directive pour les vérifications sur les gestionnaires d'évènements embarqués&nbsp;:
 
 ```http
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```
 
-### Sources
-
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
-
 ## Exemples
 
-### Valeur par défaut avec `script-src`
+### Cas de violation
 
-Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur la valeur de la directive [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src), qui elle-même a pour valeur par défaut celle de la directive [`default-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src).
+Étant donné cet en-tête CSP&nbsp;:
+
+```http
+Content-Security-Policy: script-src-attr 'none'
+```
+
+…le gestionnaire d'évènements embarqué suivant est bloqué et ne sera ni chargé ni exécuté&nbsp;:
+
+```html
+<button id="btn" onclick="faireQuelquechose()">Cliquez sur moi</button>
+```
+
+Notez que, généralement, vous devriez remplacer les gestionnaires d'évènements embarqués par des appels à {{DOMxRef("EventTarget.addEventListener", "addEventListener")}}&nbsp;:
+
+```js
+document.getElementById("btn").addEventListener("click", faireQuelquechose);
+```
 
 ## Spécifications
 
@@ -63,7 +87,7 @@ Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur 
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script)
-- [`script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)
-- [`script-src-elem`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- L'élément HTML {{HTMLElement("script")}}
+- La directive CSP {{CSP("script-src")}}
+- La directive CSP {{CSP("script-src-elem")}}
