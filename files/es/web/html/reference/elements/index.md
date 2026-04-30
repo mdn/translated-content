@@ -146,8 +146,8 @@ Puede incrustar contenido [SVG](/es/docs/Web/SVG) y [MathML](/es/docs/Web/MathML
 
 | Elemento                  | Descripción                                                                                                                                                                                                                                                                                           |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SVGElement("svg")}}     | El elemento `svg` es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML. |
-| {{MathMLElement("math")}} | `<math>` es el elemento superior en MathML. Cada instancia válida de MathML debe estar rodeada de etiquetas `<math>`. Además, no debes anidar un segundo elemento `<math>` dentro de un primero, pero puedes tener un número arbitrario de otros elementos hijos en él.                               |
+| {{SVGElement("svg")}}     | Es un contenedor que define un nuevo sistema de coordenadas y [viewport](/es/docs/Web/SVG/Attribute/viewBox). Es usado como el elemento más externo de cualquier documento SVG, pero también puede ser usado para agregar un fragmento de un SVG dentro de un documento SVG o HTML. |
+| {{MathMLElement("math")}} | Es el elemento superior en MathML. Cada instancia válida de MathML debe estar rodeada de etiquetas `<math>`. Además, no debes anidar un segundo elemento `<math>` dentro de un primero, pero puedes tener un número arbitrario de otros elementos hijos en él.                               |
 
 ## Scripting
 
@@ -156,8 +156,8 @@ Con el fin de crear contenido dinámico y aplicaciones Web, HTML soporta el uso 
 | Elemento                    | Descripción                                                                                                                                                                                                                                                                                                                          |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | {{HTMLElement("canvas")}}   | El elemento HTML _canvas_ (\<canvas>) se puede utilizar para dibujar gráficos a través de secuencias de comandos (por lo general [JavaScript](/es/docs/Web/JavaScript) ). Por ejemplo, puede usarse para dibujar gráficos, hacer composiciones de fotos o incluso realizar animaciones.                                              |
-| {{HTMLElement("noscript")}} | **Sus etiquetas son**: `<noscript>` y `</noscript>` (ambas obligatorias).                                                                                                                                                                                                                                                            |
-| {{HTMLElement("script")}}   | Se utiliza para incrustar código ejecutable o datos; esto generalmente se usa para incrustar o hacer referencia al código JavaScript. El elemento `<script>` también se puede usar con otros lenguajes, como el lenguaje de programación de sombreado GLSL de [WebGL](/es/docs/Web/API/WebGL_API) y [JSON](/es/docs/Glossary/ JSON). |
+| {{HTMLElement("noscript")}} | Define una sección de HTML que se insertara sí un tipo script en la página no es soportado o sí el navegador tiene la opción script inhabilitada.                                                                                                                                                                                                                                                         |
+| {{HTMLElement("script")}}   | Se utiliza para incrustar código ejecutable o datos; esto generalmente se usa para incrustar o hacer referencia al código JavaScript. El elemento `<script>` también se puede usar con otros lenguajes, como el lenguaje de programación de sombreado GLSL de [WebGL](/es/docs/Web/API/WebGL_API) y [JSON](/es/docs/Glossary/JSON). |
 
 ## Ediciones demarcadas
 
@@ -165,8 +165,8 @@ Estos elementos permiten proporcionar indicios de que determinadas partes del te
 
 | Elemento               | Descripción                                                   |
 | ---------------------- | ------------------------------------------------------------- |
-| {{HTMLElement("del")}} | **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias). |
-| {{HTMLElement("ins")}} | **Sus etiquetas son**: \<ins> e \</ins> (ambas obligatorias). |
+| {{HTMLElement("del")}} | Representa un rango de texto que ha sido borrado del documento. Puede ser usado cuando se renderiza "control de cambios" o información de diferencias de código fuente, por ejemplo. El elemento `<ins>` puede ser usado para el propósito opuesto: para indicar que el texto ha sido agregado al documento. |
+| {{HTMLElement("ins")}} | Representa un rango de texto que ha sido agregado al documento. Puede usar el elemento `<del>` similarmente para representar un rango de texto ue ha sido borrado del documento. |
 
 ## Tablas
 
