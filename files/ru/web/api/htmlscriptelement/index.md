@@ -62,7 +62,7 @@ _Наследует свойства от своего родителя, {{domxr
       <td rowspan="2">
         <p>
           Атрибуты <code>async</code> и <code>defer</code>
-          <a href="/ru/docs/JavaScript/Reference/Global_Objects/Boolean"
+          <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean"
             >булевы</a
           >
           атрибуты, которые контролируют как скрипт должен выполняться.
@@ -80,7 +80,7 @@ _Наследует свойства от своего родителя, {{domxr
           <li>
             Если атрибут <code>async</code> отсутствует, но представлен атрибут
             <code>defer</code>, то скрипт будет выполняться когда
-            <a href="/ru/docs/Web/Events/DOMContentLoaded"
+            <a href="/ru/docs/Web/API/Document/DOMContentLoaded_event"
               >страница полностью загружена</a
             >.
           </li>
@@ -123,7 +123,7 @@ _Наследует свойства от своего родителя, {{domxr
           >
             XML</a
           >; правиле для метода
-          <a href="/ru/docs/DOM/document.write"
+          <a href="/ru/docs/Web/API/Document/write"
             ><code>document.write()</code></a
           >; обработке
           <a
@@ -158,22 +158,22 @@ _Наследует свойства от своего родителя, {{domxr
       <td>
         <p>
           IDL атрибут <code>text</code> объединяет и возвращает содержимое всех
-          <a href="/ru/docs/DOM/Text"><code>Text</code> нод</a> внутри
+          <a href="/ru/docs/Web/API/Text"><code>Text</code> нод</a> внутри
           элемента {{HTMLElement("script")}} (игнорируя другие ноды,
           такие как комментарии) в древовидном порядке. При установке, он
           действует также, как и IDL атрибут
-          <a href="/ru/docs/DOM/Node.textContent"><code>textContent</code></a
+          <a href="/ru/docs/Web/API/Node/textContent"><code>textContent</code></a
           >.
         </p>
         <div class="note">
           <strong>Примечание:</strong> При вставке с использованием метода
-          <a href="/ru/docs/DOM/document.write"
+          <a href="/ru/docs/Web/API/Document/write"
             ><code>document.write()</code></a
           >, элементы {{HTMLElement("script")}} выполняются (обычно
           синхронно), когда при вставке используются
-          <a href="/ru/docs/DOM/element.innerHTML"><code>innerHTML</code></a>
+          <a href="/ru/docs/Web/API/Element/innerHTML"><code>innerHTML</code></a>
           или
-          <a href="/ru/docs/DOM/element.outerHTML"><code>outerHTML</code></a
+          <a href="/ru/docs/Web/API/Element/outerHTML"><code>outerHTML</code></a
           >, они вообще не выполняются.
         </div>
       </td>

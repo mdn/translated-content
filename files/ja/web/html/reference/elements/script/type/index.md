@@ -1,5 +1,5 @@
 ---
-title: "HTML `<script type>` 属性"
+title: HTML `<script type>` 属性
 short-title: <script type>
 slug: Web/HTML/Reference/Elements/script/type
 l10n:

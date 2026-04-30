@@ -3,7 +3,7 @@ title: Адаптивные изображения
 slug: Web/HTML/Guides/Responsive_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML", "Learn_web_development/Core/Structuring_content/Splash_page", "Learn_web_development/Core/Structuring_content")}}
 
 В данной статье мы изучим концепцию гибких (responsive) изображений — таких, которые отображаются хорошо на устройствах с сильно отличающимися размерами экрана, разрешением, и другими характеристиками — и рассмотрим инструменты, которые имеются в HTML для их реализации. Responsive images - только одна часть (и хорошее начало) гибкого веб-дизайна, темы, которая будет рассмотрена подробнее в будущем модуле на тему [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
