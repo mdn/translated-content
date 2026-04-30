@@ -61,8 +61,8 @@ l10n:
 >
 > * `\{{SeeCompatTable}}` — genera un banner de **Esta es una tecnología experimental** que indica que la tecnología es experimental.
 >   Si es experimental y la tecnología está oculta detrás de una preferencia en Firefox, también debes completar una entrada para ella en la página de funcionalidades experimentales de Firefox.
-> * `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está desaconsejado.
-> * `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
+> - `\{{Deprecated_Header}}` — genera un banner de **Obsoleto** que indica que el uso de la tecnología está desaconsejado.
+> - `\{{Non-standard_Header}}` — genera un banner de **No estándar** que indica que la funcionalidad no forma parte de ninguna especificación.
 >
 > Debes actualizar o eliminar las siguientes macros de acuerdo con las recomendaciones a continuación:
 >
