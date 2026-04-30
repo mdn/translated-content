@@ -34,7 +34,7 @@ l10n:
 >     For example, the [`pow()`](/es/docs/Web/CSS/Reference/Values/pow) function has a title of _pow()_.
 > - **slug**
 >   - : The `slug` value is the end of the URL path after `https://developer.mozilla.org/en-US/docs/`. This will be formatted as `Web/CSS/Reference/Values/nameOfTheFunction`. Note the absence of parentheses in the slug.
->     For example, the slug for the [`pow()`](/en-US/docs/Web/CSS/Reference/Values/pow) function is `Web/CSS/Reference/Values/pow`.
+>     For example, the slug for the [`pow()`](/es/docs/Web/CSS/Reference/Values/pow) function is `Web/CSS/Reference/Values/pow`.
 > - **page-type**
 >   - : The `page-type` value for CSS functions is `css-function`.
 > - **status**
