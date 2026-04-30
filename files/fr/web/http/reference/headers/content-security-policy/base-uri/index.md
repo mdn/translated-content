@@ -1,10 +1,12 @@
 ---
-title: "CSP : base-uri"
+title: "Content-Security-Policy : directive base-uri"
+short-title: base-uri
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/base-uri
-original_slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base). Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément HTML {{HTMLElement("base")}}. Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément HTML {{HTMLElement("base")}}.
 
 <table class="properties">
   <tbody>
@@ -14,29 +16,31 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Document_directive">Directive de document</a></td>
+      <td>{{Glossary("Document directive", "Directive de document")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
-      <td>Non, ne pas définir cette directive autorise toutes les URL</td>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
+      <td>Non. Ne pas définir cette directive autorise toutes les URL.</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-Une ou plusieurs _sources_ peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: base-uri <source>;
-Content-Security-Policy: base-uri <source> <source>;
+Content-Security-Policy: base-uri 'none';
+Content-Security-Policy: base-uri <source-expression-list>;
 ```
 
-### Sources
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
-Cette directive utilise en grande partie les mêmes valeurs de source comme arguments que les autres directives CSP&nbsp;: [valeurs sources pour CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-uri`, à l'instar des mots-clés `'unsafe-inline'` et `'strict-dynamic'`.
+- `'none'`
+  - : Aucun URI de base ne peut être défini à l'aide d'un élément `<base>`. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste d'expressions de source séparées par des espaces. Un élément `<base>` peut définir un URI de base si sa valeur correspond à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`<host-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## Exemples
 
@@ -48,21 +52,21 @@ On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-ur
 
 ### Configuration avec Apache
 
-```xml
+```apacheconf
 <IfModule mod_headers.c>
-  Header set Content-Security-Policy "base-uri 'self'";
+Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
 ```
 
 ### Configuration avec Nginx
 
-```
+```nginx
 add_header Content-Security-Policy "base-uri 'self';"
 ```
 
 ### Cas de violation
 
-À partir du moment où votre domaine n'est pas `example.com`, un élément [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base) avec son attribut `href` défini à `https://example.com` résultera en une violation de CSP.
+À partir du moment où votre domaine n'est pas `example.com`, un élément {{HTMLElement("base")}} avec son attribut `href` défini à `https://example.com` résultera en une violation de CSP.
 
 ```html example-bad
 <meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
@@ -85,6 +89,6 @@ directive: "base-uri 'self'"
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`<base>`](/fr/docs/Web/HTML/Reference/Elements/base)
-- [`Node.baseURI`](/fr/docs/Web/API/Node/baseURI)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- L'élément HTML {{HTMLElement("base")}}
+- La propriété API {{DOMxRef("Node.baseURI")}}
