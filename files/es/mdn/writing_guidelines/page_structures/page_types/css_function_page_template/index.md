@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_templa
 l10n:
   sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
+
 > [!NOTE]
 > _Remove this note block before publishing._
 >
