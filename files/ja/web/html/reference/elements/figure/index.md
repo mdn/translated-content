@@ -10,7 +10,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: &lt;figure&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <figure>
   <img
     src="/shared-assets/images/examples/elephant.jpg"
