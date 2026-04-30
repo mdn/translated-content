@@ -1,8 +1,9 @@
 ---
-title: "<style> : l'élément d'information de style"
+title: "Élément HTML `<style>` : l'élément d'information de style"
+short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<style>`** contient des informations de mise en forme pour un document ou une partie d'un document. Il contient du CSS, qui est appliqué au contenu du document contenant l'élément `<style>`.

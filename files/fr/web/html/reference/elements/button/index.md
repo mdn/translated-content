@@ -1,8 +1,9 @@
 ---
-title: "<button> : l'élément représentant un bouton"
+title: "Élément HTML `<button>` : l'élément représentant un bouton"
+short-title: <button>
 slug: Web/HTML/Reference/Elements/button
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<button>`** est un élément interactif qui peut être activé avec une souris, un clavier, un doigt, une commande vocale ou tout autre technologie d'assistance. Une fois activé, il peut déclencher une action tel qu'envoyer un [formulaire](/fr/docs/Learn_web_development/Extensions/Forms) ou ouvrir une boite de dialogue.

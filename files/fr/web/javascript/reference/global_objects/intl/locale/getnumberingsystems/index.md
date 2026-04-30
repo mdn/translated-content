@@ -1,120 +1,46 @@
 ---
-title: Intl.Locale.prototype.numberingSystems
+title: "Intl.Locale : méthode getNumberingSystems()"
+short-title: getNumberingSystems()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.numberingSystems`** est un accesseur qui renvoie un ou plusieurs identifiants pour des systèmes de numération utilisés par la locale représentée par l'instance `Intl.Locale` courante.
-
-## Description
-
-Un système de numération est utilisé pour représenter les nombres. La propriété `numberingSystems` permet de connaître les différents systèmes de numération utilisés par les différents pays, les différentes régions et cultures autour du monde. Les systèmes de numération représentés par cette propriété sont standardisés avec Unicode. Un tableau des systèmes de numération Unicode suit.
+La méthode **`getNumberingSystems()`** des instances de {{JSxRef("Intl.Locale")}} retourne une liste d'un ou plusieurs identifiants de systèmes de numération uniques pour cette locale.
 
 > [!NOTE]
-> La propriété `numberingSystem` (sans S) permet de connaître le système de numération principal utilisé par une locale. Celle-ci permet d'avoir la liste des différents systèmes de numération utilisés par une locale.
+> Dans certaines versions de certains navigateurs, cette méthode était implémentée comme une propriété d'accesseur appelée `numberingSystems`. Cependant, comme elle retourne un nouveau tableau à chaque accès, elle est maintenant implémentée comme une méthode pour éviter la situation où `locale.numberingSystems === locale.numberingSystems` retourne `false`. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
-| Valeur     | Description                                                                                             |
-| ---------- | ------------------------------------------------------------------------------------------------------- |
-| `adlm`     | Chiffres adlams                                                                                         |
-| `ahom`     | Chiffres ahoms                                                                                          |
-| `arab`     | Chiffres arabes                                                                                         |
-| `arabext`  | Chiffres arabes étendus                                                                                 |
-| `armn`     | Numération arménienne majuscule (algorithmique)                                                         |
-| `armnlow`  | Numération arménienne minuscule (algorithmique)                                                         |
-| `bali`     | Chiffres balinais                                                                                       |
-| `beng`     | Chiffres bengalis                                                                                       |
-| `bhks`     | Chiffres bhaiksuki                                                                                      |
-| `brah`     | Chiffres brahmis                                                                                        |
-| `cakm`     | Chiffres chakmas                                                                                        |
-| `cham`     | Chiffres chams                                                                                          |
-| `cyrl`     | Numération cyrillique (algorithmique)                                                                   |
-| `deva`     | Chiffres devanagaris                                                                                    |
-| `ethi`     | Numération éthiopienne (algorithmique)                                                                  |
-| `finance`  | Numération financière (peut être algorithmique)                                                         |
-| `fullwide` | Chiffres à pleine chasse                                                                                |
-| `geor`     | Numération géorgienne (algorithmique)                                                                   |
-| `gong`     | Chiffres Gunjala Gondis                                                                                 |
-| `gonm`     | Chiffres Masaram Gondis                                                                                 |
-| `grek`     | Numération greque majuscule (algorithmique)                                                             |
-| `greklow`  | Numération greque minuscule (algorithmique)                                                             |
-| `gujr`     | Chiffres Gujaratis                                                                                      |
-| `guru`     | Chiffres Gurmukhis                                                                                      |
-| `hanidays` | Numération du jour du mois avec caractère Han (utilisée avec les calendriers lunaires ou traditionnels) |
-| `hanidec`  | Système décimal positionnel utilisant les idéographes des nombres chinois comme chiffres                |
-| `hans`     | Numération chinoise simplifiée (algorithmique)                                                          |
-| `hansfin`  | Numération chinoise simplifiée financière (algorithmique)                                               |
-| `hant`     | Numération chinoise traditionnelle (algorithmique)                                                      |
-| `hantfin`  | Numération chinoise traditionnelle financière (algorithmique)                                           |
-| `hebr`     | Numération hébraïque (algorithmique)                                                                    |
-| `hmng`     | Chiffres Pahawh Hmongs                                                                                  |
-| `hmnp`     | Chiffres Nyiakeng Puachue Hmongs                                                                        |
-| `java`     | Chiffres javanais                                                                                       |
-| `jpan`     | Numération japonaise (algorithmique)                                                                    |
-| `jpanfin`  | Numération japonaise financière (algorithmique)                                                         |
-| `jpanyear` | Numération basée sur la première année Gannen du calendrier japonais                                    |
-| `kali`     | Chiffres Kayah Lis                                                                                      |
-| `khmr`     | Chiffres Khmers                                                                                         |
-| `knda`     | Chiffres Kannadas                                                                                       |
-| `lana`     | Chiffres Tai Tham Hora séculiers                                                                        |
-| `lanatham` | Chiffres Tai Tham Tham ecclésiastiques                                                                  |
-| `laoo`     | Chiffres laotien                                                                                        |
-| `latn`     | Chiffres latins                                                                                         |
-| `lepc`     | Chiffres Lepchas                                                                                        |
-| `limb`     | Chiffres Limbus                                                                                         |
-| `mathbold` | Chiffres mathématiques en gras                                                                          |
-| `mathdbl`  | Chiffres mathématiques barrés en double                                                                 |
-| `mathmono` | Chiffres mathématiques à chasse fixe                                                                    |
-| `mathsanb` | Chiffres mathématiques en gras sans empattements                                                        |
-| `mathsans` | Chiffres mathématiques sans empattements                                                                |
-| `mlym`     | Chiffres Malayalams                                                                                     |
-| `modi`     | Chiffres Modis                                                                                          |
-| `mong`     | Chiffres mongols                                                                                        |
-| `mroo`     | Chiffres Mros                                                                                           |
-| `mtei`     | Chiffres Meetei Mayeks                                                                                  |
-| `mymr`     | Chiffres Myanmars                                                                                       |
-| `mymrshan` | Chiffres Myanmar Shans                                                                                  |
-| `mymrtlng` | Chiffres Myanmar Tai Laings                                                                             |
-| `native`   | Chiffres natifs                                                                                         |
-| `newa`     | Chiffres Newas                                                                                          |
-| `nkoo`     | Chiffres N'Kos                                                                                          |
-| `olck`     | Chiffres Ol Chikis                                                                                      |
-| `orya`     | Chiffres Oriyas                                                                                         |
-| `osma`     | Chiffres Osmanyas                                                                                       |
-| `rohg`     | Chiffres Hanifi Rohingyas                                                                               |
-| `roman`    | Numération romaine majuscule (algorithmique)                                                            |
-| `romanlow` | Numération romaine minuscule (algorithmique)                                                            |
-| `saur`     | Chiffres Saurashtras                                                                                    |
-| `shrd`     | Chiffres Sharadas                                                                                       |
-| `sind`     | Chiffres Khudawadis                                                                                     |
-| `sinh`     | Chiffres Sinhala Liths                                                                                  |
-| `sora`     | Chiffres Sora_Sompengs                                                                                  |
-| `sund`     | Chiffres soudanais                                                                                      |
-| `takr`     | Chiffres Takris                                                                                         |
-| `talu`     | Chiffres New Tai Lues                                                                                   |
-| `taml`     | Numération tamoule (algorithmique=                                                                      |
-| `tamldec`  | Chiffres tamouls décimaux modernes                                                                      |
-| `telu`     | Chiffres Telugus                                                                                        |
-| `thai`     | Chiffres thaïs                                                                                          |
-| `tirh`     | Chiffres Tirhutas                                                                                       |
-| `tibt`     | Chiffres tibétains                                                                                      |
-| `traditio` | Numération traditionnelle (peut être algorithmique)                                                     |
-| `vaii`     | Chiffres Vais                                                                                           |
-| `wara`     | Chiffres Warang Citis                                                                                   |
-| `wcho`     | Chiffres Wanchos                                                                                        |
+## Syntaxe
+
+```js-nolint
+getNumberingSystems()
+```
+
+### Paramètres
+
+Aucun.
+
+### Valeur de retour
+
+Un tableau de chaînes de caractères représentant tous les systèmes de numération couramment utilisés pour la `Locale`, triés par ordre de préférence décroissant. Si la `Locale` possède déjà un {{JSxRef("Intl.Locale.prototype.numberingSystem", "numberingSystem")}}, alors le tableau retourné contient cette seule valeur.
+
+Pour une liste des types de systèmes de numération pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numération_pris_en_charge).
 
 ## Exemples
 
 ### Obtenir les systèmes de numération utilisés et pris en charge
 
+Si l'objet `Locale` ne possède pas déjà un `numberingSystem`, `getNumberingSystems()` liste tous les systèmes de numération couramment utilisés pour la `Locale` donnée. Pour des exemples de définition explicite d'un `numberingSystem`, voir les [exemples de `numberingSystem`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem#exemples).
+
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.numberingSystems); // affiche ["arab"]
+const arEG = new Intl.Locale("ar-EG");
+console.log(arEG.getNumberingSystems()); // ["arab"]
 ```
 
 ```js
-let ja = new Intl.Locale("ja");
-console.log(ja.numberingSystems); // affiche ["latn"]
+const ja = new Intl.Locale("ja");
+console.log(ja.getNumberingSystems()); // ["latn"]
 ```
 
 ## Spécifications
@@ -127,6 +53,6 @@ console.log(ja.numberingSystems); // affiche ["latn"]
 
 ## Voir aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [`Intl.Locale.numberingSystem`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
-- [Détails du standard Unicode sur les systèmes de numération](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)
+- L'objet {{JSxRef("Intl.Locale")}}
+- La propriété {{JSxRef("Intl.Locale.prototype.numberingSystem")}}
+- [Détails du standard Unicode sur les systèmes de numération <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/master/common/supplemental/numberingSystems.xml)

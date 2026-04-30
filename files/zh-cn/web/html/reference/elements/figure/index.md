@@ -61,7 +61,7 @@ figcaption {
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>所有接受<a href="/zh-CN/docs/HTML/Content_categories#流式内容">流式内容</a>的元素</td>
+   <td>所有接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>的元素</td>
   </tr>
    <tr>
       <th scope="row">明确的 ARIA 角色</th>

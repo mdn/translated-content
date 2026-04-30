@@ -1,8 +1,9 @@
 ---
-title: "<br> : l'élément de saut de ligne"
+title: "Élément HTML `<br>` : l'élément de saut de ligne"
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 l10n:
-  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<br>`** crée un saut de ligne dans le texte (retour à la ligne). Il est utile pour écrire un poème ou une adresse, lorsque la division des lignes est significative.

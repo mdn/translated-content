@@ -1,8 +1,9 @@
 ---
-title: "<bdi> : l'élément d'isolation bidirectionnelle"
+title: "Élément HTML `<bdi>` : l'élément d'isolation bidirectionnelle"
+short-title: <bdi>
 slug: Web/HTML/Reference/Elements/bdi
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<bdi>`** indique à l'algorithme bidirectionnel du navigateur de traiter le texte qu'il contient indépendamment du texte qui l'entoure. Il est particulièrement utile lorsqu'un site insère dynamiquement du texte sans connaître la direction du texte inséré.

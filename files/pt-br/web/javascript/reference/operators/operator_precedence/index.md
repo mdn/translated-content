@@ -79,7 +79,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/JavaScript/Reference/Operators/Special/new"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new"
           >new</a
         >
         (com lista de argumentos)
@@ -115,7 +115,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="2">17</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Increment"
           >Incremento P√≥s-fixado</a
         >
       </td>
@@ -125,7 +125,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Decrement"
           >Decremento P√≥s-fixado</a
         >
       </td>
@@ -136,7 +136,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="9">16</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Logical_NOT"
           >N√ÉO l√≥gico</a
         >
       </td>
@@ -146,7 +146,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Bitwise_NOT"
           >N√ÉO bit-a-bit</a
         >
       </td>
@@ -156,7 +156,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Unary_plus"
           >Positivo Un√°rio</a
         >
       </td>
@@ -166,7 +166,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Unary_negation"
           >Negativo Un√°rio</a
         >
       </td>
@@ -176,7 +176,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Increment"
           >Incremento Pr√©-fixado</a
         >
       </td>
@@ -186,7 +186,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Decrement"
           >Decremento Pr√©-fixado</a
         >
       </td>
@@ -228,7 +228,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>
         <p>
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation"
+            href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Exponentiation"
             >Exponencia√ß√£o</a
           >
         </p>
@@ -240,7 +240,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="3">14</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Multiplication"
           >Multiplica√ß√£o</a
         >
       </td>
@@ -250,7 +250,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Division"
           >Divis√£o</a
         >
       </td>
@@ -260,7 +260,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Remainder"
           >Resto</a
         >
       </td>
@@ -271,7 +271,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="2">13</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Addition"
           >Adi√ß√£o</a
         >
       </td>
@@ -281,7 +281,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Subtraction"
           >Subtra√ß√£o</a
         >
       </td>
@@ -292,7 +292,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="3">12</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators"
           >Deslocamento de bits para esquerda</a
         >
       </td>
@@ -302,7 +302,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators"
           >Deslocamento de bits para direita</a
         >
       </td>
@@ -312,7 +312,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators"
           >Deslocamento de bits para direita, sem sinal</a
         >
       </td>
@@ -323,7 +323,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="6">11</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Less_than_operator"
           >Menor Que</a
         >
       </td>
@@ -333,7 +333,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Less_than__or_equal_operator"
           >Menor ou Igual a</a
         >
       </td>
@@ -343,7 +343,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Greater_than_operator"
           >Maior Que</a
         >
       </td>
@@ -353,7 +353,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Greater_than_or_equal_operator"
           >Maior ou Igual a</a
         >
       </td>
@@ -384,7 +384,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="4">10</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Equality"
           >Igualdade</a
         >
       </td>
@@ -394,7 +394,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Inequality"
           >Desigualdade</a
         >
       </td>
@@ -404,7 +404,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Identity"
           >Igualdade Estrita</a
         >
       </td>
@@ -414,7 +414,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
     <tr>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Nonidentity"
           >Desigualdade Estrita</a
         >
       </td>
@@ -425,7 +425,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>9</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Bitwise_AND"
           >E bit-a-bit</a
         >
       </td>
@@ -436,7 +436,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>8</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Bitwise_XOR"
           >OU exclusivo bit-a-bit</a
         >
       </td>
@@ -447,7 +447,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>7</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Bitwise_OR"
           >OU bit-a-bit</a
         >
       </td>
@@ -458,7 +458,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>6</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Logical_AND"
           >E l√≥gico</a
         >
       </td>
@@ -469,7 +469,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>5</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators#Logical_OR"
           >OU l√≥gico</a
         >
       </td>
@@ -491,7 +491,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td rowspan="12">3</td>
       <td rowspan="12">
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Assignment_Operators"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators"
           >Atribui√ß√£o</a
         >
       </td>
@@ -555,7 +555,7 @@ A tabela seguinte est√° ordenada da mais alta (20) para a mais baixa (0) preced√
       <td>1</td>
       <td>
         <a
-          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator"
+          href="/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
           >Propaga√ß√£o</a
         >
       </td>

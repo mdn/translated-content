@@ -21,7 +21,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
   <tbody>
     <tr>
       <td>
-        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button"
           >Bouton de la barre d'outils (action du navigateur)</a
         >
       </td>
@@ -129,7 +129,7 @@ Les WebExtensions disposent de plusieurs options d'interface utilisateur afin qu
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/extension_pages"
+        <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
           >Extension pages</a
         >
       </td>

@@ -3,7 +3,7 @@ title: Что такое доступность?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Данная статья открывает модуль, в котором рассматривается, что такое доступность на самом деле — она включает в себя группы людей, которые нам нужно учитывать и почему, какие инструменты используют разные пользователи для взаимодействия с вебом, и как мы можем сделать доступность частью нашего рабочего процесса веб-разработки.
 
@@ -150,4 +150,4 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 
 Эта статья должна была дать вам полезный обзор специальных возможностей, показать, почему это так важно, и посмотреть, как вы можете вписать его в свой рабочий процесс. Теперь у вас также должна быть жажда узнать о деталях реализации, которые помогут сделать сайты доступными, и мы начнём с этого в следующем разделе, рассматривая, почему HTML является хорошей основой для доступности.
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
