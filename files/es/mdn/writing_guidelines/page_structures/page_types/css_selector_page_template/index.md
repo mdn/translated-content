@@ -33,11 +33,8 @@ l10n:
 >   - : Encabezado del título mostrado en la parte superior de la página. Formato como _:NameOfTheSelector_.
 >     Por ejemplo, el selector {{cssxref(":hover")}} tiene un título _:hover_.
 >
->   * : Encabezado del título mostrado en la parte superior de la página. Formato como *:NameOfTheSelector*.
->     Por ejemplo, el selector {{cssxref(":hover")}} tiene un título *:hover*.
-> * **slug**
->
->   * : El final de la ruta de la URL después de `https://developer.mozilla.org/en-US/docs/`. Se formatea como `Web/CSS/Reference/Selectors/:name-of-the-selector`.
+> - **slug**
+>   - : El final de la ruta de la URL después de `https://developer.mozilla.org/en-US/docs/`. Se formatea como `Web/CSS/Reference/Selectors/:name-of-the-selector`.
 >     Por ejemplo, el slug del selector {{cssxref(":hover")}} es `Web/CSS/Reference/Selectors/:hover`.
 > * **page-type**
 >
