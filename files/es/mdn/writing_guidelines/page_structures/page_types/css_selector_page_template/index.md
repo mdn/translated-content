@@ -37,8 +37,8 @@ l10n:
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/en-US/docs/`. Se formatea como `Web/CSS/Reference/Selectors/:name-of-the-selector`.
 >     Por ejemplo, el slug del selector {{cssxref(":hover")}} es `Web/CSS/Reference/Selectors/:hover`.
 >
->   * : La clave `page-type` para propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una pseudo-clase, un pseudo-elemento, un combinador o un selector simple.
-> * **status**
+> - **page-type**
+>   - : La clave `page-type` para propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una pseudo-clase, un pseudo-elemento, un combinador o un selector simple.
 >
 >   * : Indicadores que describen el estado de esta funcionalidad. Es un arreglo que puede contener uno o más de los siguientes: `experimental`, `deprecated`, `non-standard`. Esta clave no debe establecerse manualmente: se define automáticamente según los valores en los datos de compatibilidad de navegadores para la funcionalidad. Consulta ["Cómo se agregan o actualizan los estados de funcionalidades"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > * **browser-compat**
