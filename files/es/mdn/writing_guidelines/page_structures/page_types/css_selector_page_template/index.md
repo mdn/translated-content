@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d2fb8cdc9422dd2b68ff23f616d70811729f1fbd
 ---
 
----
-
 > **Nota:**
 > *Elimina toda esta nota explicativa antes de publicar*
 >
