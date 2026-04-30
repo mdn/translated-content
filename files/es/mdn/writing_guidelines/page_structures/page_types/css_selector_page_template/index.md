@@ -36,7 +36,6 @@ l10n:
 > - **slug**
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/en-US/docs/`. Se formatea como `Web/CSS/Reference/Selectors/:name-of-the-selector`.
 >     Por ejemplo, el slug del selector {{cssxref(":hover")}} es `Web/CSS/Reference/Selectors/:hover`.
-> * **page-type**
 >
 >   * : La clave `page-type` para propiedades CSS es una de `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es una pseudo-clase, un pseudo-elemento, un combinador o un selector simple.
 > * **status**
