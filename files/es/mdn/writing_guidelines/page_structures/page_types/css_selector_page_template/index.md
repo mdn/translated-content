@@ -78,7 +78,7 @@ l10n:
 > Para que se complete, debes asegurarte de que exista una entrada adecuada para el selector en el archivo de datos `selectors.json`.
 > Consulta `selectors.md` para más información.
 >
-> *Recuerda eliminar toda esta nota explicativa antes de publicar*
+> _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
