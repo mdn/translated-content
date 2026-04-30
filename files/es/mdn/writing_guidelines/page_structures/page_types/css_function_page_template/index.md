@@ -43,7 +43,7 @@ l10n:
 >   - : Replace the placeholder value `css.types.NameOfTheFunction` with the query string for the function in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/types). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
 > - **sidebar**
 >   - : This is `cssref` for all CSS guide and reference pages.
->     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
+>     See [Page structures: Sidebars](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
 >
 > ---
 >
