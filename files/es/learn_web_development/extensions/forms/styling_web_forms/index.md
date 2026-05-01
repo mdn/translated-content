@@ -392,7 +392,7 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 ## Resumen
 
-Como puede ver, siempre que queramos crear formularios con solo campos de texto y botones, es fácil diseñarlos usando CSS. [En el próximo artículo](/es/docs/Learn/Forms/Advanced_form_styling), veremos cómo manejar los controles de formulario que caen en las categorías "malo" y "feo".
+Como puede ver, siempre que queramos crear formularios con solo campos de texto y botones, es fácil diseñarlos usando CSS. [En el próximo artículo](/es/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling), veremos cómo manejar los controles de formulario que caen en las categorías "malo" y "feo".
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
