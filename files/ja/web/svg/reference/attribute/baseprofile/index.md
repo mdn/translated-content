@@ -1,7 +1,6 @@
 ---
 title: baseProfile
 slug: Web/SVG/Reference/Attribute/baseProfile
-page-type: svg-attribute
 l10n:
   sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
