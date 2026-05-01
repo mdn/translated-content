@@ -3,7 +3,7 @@ title: CSS 型付き演算の使用
 short-title: 型付き演算の使用
 slug: Web/CSS/Guides/Values_and_units/Using_typed_arithmetic
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS 型付き演算**は、{{cssxref("calc()")}} などの関数を通じて型付き CSS 値で実行が許可される計算を指し、特に [CSS 値と単位](/ja/docs/Web/CSS/Guides/Values_and_units)モジュールで仕様上定義される動作を指します。CSS 型付き算術では、同一データ型の異なる単位を持つ値で、ある単位を付けた値を割ることができるようになるため、単位のない商が得られます。
