@@ -3,7 +3,7 @@ title: CSS `anchor()` 関数
 short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 l10n:
-  sourceCommit: fe427ad725f3cf1add1299de3cadfbb2bb05ed14
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、**アンカー位置指定**要素の[インセットプロパティ](#anchor_関数値を受け入れるプロパティ)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
