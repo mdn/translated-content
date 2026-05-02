@@ -1,6 +1,8 @@
 ---
 title: Что такое доступность?
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
+l10n:
+  sourceCommit: 46795bb8d533abe0d4b625abe9aae3464d24ab77
 ---
 
 В этой статье представлены основные концепции, лежащие в основе веб-доступности.
