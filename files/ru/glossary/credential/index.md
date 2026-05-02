@@ -1,6 +1,8 @@
 ---
 title: Учётные данные
 slug: Glossary/Credential
+l10n:
+  sourceCommit: bef3bf0116bb9e709b3937caa25ada8c133694ef
 ---
 
 {{GlossarySidebar}}
