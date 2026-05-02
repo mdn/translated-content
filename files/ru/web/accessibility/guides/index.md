@@ -2,6 +2,8 @@
 title: Руководства по доступности
 short-title: Руководства
 slug: Web/Accessibility/Guides
+l10n:
+  sourceCommit: 37e992ede2d7015e9eeecd00ff6faefed5f018c8
 ---
 
 На этой странице представлен список руководств по веб-доступности.
