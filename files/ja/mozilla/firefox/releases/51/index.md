@@ -22,7 +22,7 @@ l10n:
 
 ### CSS
 
-- \<input type="radio"> 向けに {{cssxref(":indeterminate")}} を実装しました([Firefox バグ 885359](https://bugzil.la/885359))。
+- `<input type="radio">` 向けに {{cssxref(":indeterminate")}} を実装しました([Firefox バグ 885359](https://bugzil.la/885359))。
 - `<input type="text">` 向けに {{cssxref(":placeholder-shown")}} を実装しました ([Firefox バグ 1069015](https://bugzil.la/1069015))。
 - {{cssxref("::placeholder")}} 擬似要素の接頭辞を削除しました ([Firefox バグ 1069012](https://bugzil.la/1069012))。
 - {{cssxref(":valid")}} CSS 擬似クラスが有効な {{HTMLElement("form")}} 要素に一致しない問題を修正しました ([Firefox バグ 1285425](https://bugzil.la/1285425))。

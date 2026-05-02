@@ -1,8 +1,9 @@
 ---
-title: font-width
+title: CSS `font-width` プロパティ
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}
@@ -336,6 +337,7 @@ p {
 - 古い {{cssxref("font-stretch")}} の別名プロパティ（よりブラウザーの対応が広い）
 - {{cssxref("font-style")}} プロパティ
 - {{cssxref("font-weight")}} プロパティ
-- SVG の {{SVGAttr("font-stretch")}} 属性
+- SVG {{SVGAttr("font-width")}} 属性
+- SVG {{SVGAttr("font-stretch")}} 属性
 - [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS フォント](/ja/docs/Web/CSS/Guides/Fonts)モジュール

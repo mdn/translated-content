@@ -2,7 +2,7 @@
 title: <feDisplacementMap>
 slug: Web/SVG/Reference/Element/feDisplacementMap
 l10n:
-  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
+  sourceCommit: 62476ac3c21417ad3a07e12c9f8eaf92cea8311d
 ---
 
 **`<feDisplacementMap>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、{{SVGAttr("in2")}} から取得した画像のピクセル値を使用して、{{SVGAttr("in")}} から取得した画像を空間的に変位させます。
