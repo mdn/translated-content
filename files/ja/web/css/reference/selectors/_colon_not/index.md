@@ -1,8 +1,9 @@
 ---
-title: :not()
+title: CSS `:not()` 擬似クラス
+short-title: :not()
 slug: Web/CSS/Reference/Selectors/:not
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
@@ -58,7 +59,7 @@ p > :not(strong, b.important) {
 - `:not(.foo)` は `.foo` ではないすべての要素を選択するため、{{HTMLElement("html")}} や {{HTMLElement("body")}} も選択します。
 - このセレクターは、「X でない」ものすべてに一致します。これは、[子孫結合子](/ja/docs/Web/CSS/Reference/Selectors/Descendant_combinator)と使用すると、対象とする要素を選択する経路が複数できるので、意外な動きをするかもしれません。例えば、`body :not(table) a` は {{HTMLElement("table")}} 内のリンクにも適用されます。{{HTMLElement("tr")}}、{{HTMLElement("tbody")}}、{{HTMLElement("th")}}、{{HTMLElement("td")}}、{{HTMLElement("caption")}} などはすべて `:not(table)` の部分に一致するからです。これを回避するには、代わりに `body a:not(table a)` を使用すると、テーブルの子孫ではないリンクのみに適用されます。
 - 複数のセレクターを同時に否定することができます。例えば、`:not(.foo, .bar)` は `:not(.foo):not(.bar)` と同じです。
-- もし `:not()` 擬似クラスに渡されたセレクターのいずれかが無効であったり、ブラウザーが対応していなかったりした場合、ルール全体が無効となります。この挙動を克服するために有効な方法は、寛容なセレクターリストを受け入れる [`:is()`](/ja/docs/Web/CSS/Reference/Selectors/:is) 擬似クラスを使用することです。例えば `:not(.foo, :invalid-pseudo-class)` はルール全体を無効にしてしまいますが、 `:not(:is(.foo, :invalid-pseudo-class))` は `.foo` 以外のあらゆる（{{HTMLElement("html")}} や {{HTMLElement("body")}} を含む）要素に一致します。
+- もし `:not()` 擬似クラスに渡されたセレクターのいずれかが無効であったり、ブラウザーが対応していなかったりした場合、ルール全体が無効となります。この挙動を克服するために有効な方法は、寛容なセレクターリストを受け入れる {{cssxref(":is()")}} 擬似クラスを使用することです。例えば `:not(.foo, :invalid-pseudo-class)` はルール全体を無効にしてしまいますが、 `:not(:is(.foo, :invalid-pseudo-class))` は `.foo` 以外のあらゆる（{{HTMLElement("html")}} や {{HTMLElement("body")}} を含む）要素に一致します。
 
 ## 例
 
