@@ -2,6 +2,8 @@
 title: "ARIA: атрибут aria-hidden"
 short-title: aria-hidden
 slug: Web/Accessibility/ARIA/Reference/Attributes/aria-hidden
+l10n:
+  sourceCommit: 08dc24483ace35b1c45d9e5e1273f953b97f6b97
 ---
 
 Состояние `aria-hidden` указывает, доступен ли элемент для API специальных возможностей.
