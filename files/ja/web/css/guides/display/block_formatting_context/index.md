@@ -117,7 +117,7 @@ section {
 
 #### HTML
 
-```html
+```html-nolint
 <section>
   <div class="float">浮動ボックスの外にあるこのボックスの大きさを変えてみてください</div>
   <div class="box"><p>通常</p></div>
