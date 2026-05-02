@@ -21,7 +21,7 @@ l10n:
 ```js
 const feDropShadow = document.querySelector("feDropShadow");
 const verticalSize = feDropShadow.height;
-console.log(verticalSize.baseVal.value); // `height`
+console.log(verticalSize.baseVal.value); // `height` の値
 ```
 
 ## 仕様書
