@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
 
 웹 성능은 느린 처리 속도를 빠르게 보이게 하는 것을 포함해 웹사이트를 빠르게 만드는 모든 것입니다. 이 기사에서는 왜 웹 성능이 사이트 방문자와 당신의 사업적 목표에 중요한지 소개합니다.
 
@@ -75,4 +75,4 @@ l10n:
 
 웹 성능은 접근성뿐만 아니라 조직 또는 비즈니스의 목표에 부합하는 다른 웹사이트 지표에도 중요합니다. 웹 사이트 성능의 좋고 나쁨은 유저 경험뿐만 아니라 대부분의 사이트의 전반적인 효율성과도 밀접하게 관련되어 있습니다. 이것이 당신이 웹 성능에 신경 써야 하는 이유입니다.
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
+{{NextMenu("Learn_web_development/Extensions/Performance/What_is_web_performance", "Learn_web_development/Extensions/Performance")}}
