@@ -2,6 +2,8 @@
 title: "ARIA: роль checkbox"
 short-title: checkbox
 slug: Web/Accessibility/ARIA/Reference/Roles/checkbox_role
+l10n:
+  sourceCommit: 9655b901024f06e12b80e5e5d6dc7b406526d86e
 ---
 
 Роль `checkbox` предназначена для интерактивных элементов управления с состоянием
