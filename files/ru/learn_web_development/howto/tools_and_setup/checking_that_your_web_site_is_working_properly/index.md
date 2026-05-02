@@ -1,6 +1,8 @@
 ---
 title: Как убедиться, что ваш сайт работает правильно?
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+l10n:
+  sourceCommit: e23241878a32b579f43cf9e29390c40bee02e38e
 ---
 
 В этой статье мы рассмотрим различные шаги по устранению неполадок на веб-сайте, а также некоторые базовые действия для решения этих проблем.
