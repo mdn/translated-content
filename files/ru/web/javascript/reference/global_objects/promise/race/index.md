@@ -2,6 +2,8 @@
 title: Promise.race()
 short-title: race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+l10n:
+  sourceCommit: 1036bb23300ea7cce98a13c8c522c56525d7dab9
 ---
 
 {{JSRef}}
