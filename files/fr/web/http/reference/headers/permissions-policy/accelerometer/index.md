@@ -1,25 +1,29 @@
 ---
-title: "Feature-Policy: accelerometer"
+title: "Permissions-Policy : directive accelerometer"
+short-title: accelerometer
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer
-original_slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 {{SeeCompatTable}}
 
-La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
+L'en-tête HTTP {{HTTPHeader('Permissions-Policy')}} avec la directive **`accelerometer`** contrôle si le document courant est autorisé à recueillir des informations sur l'accélération de l'appareil avec l'interface {{DOMxRef('Accelerometer')}}.
+
+Plus précisément, lorsqu'une politique définie bloque l'utilisation de cette fonctionnalité, les appels au constructeur {{DOMxRef("Accelerometer.Accelerometer", "Accelerometer()")}} lèvent une {{DOMxRef("DOMException")}} de type `SecurityError`.
 
 ## Syntaxe
 
 ```http
-Feature-Policy: accelerometer <allowlist>;
+Permissions-Policy: accelerometer=<allowlist>;
 ```
 
 - `<allowlist>`
-  - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntaxe).
+  - : Une liste d'origines pour lesquelles la permission est accordée pour utiliser la fonctionnalité. Voir [`Permissions-Policy` > Syntaxe](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntaxe) pour plus de détails.
 
 ## Règle par défaut
 
-Pour cette fonctionnalité, la valeur par défaut pour `allowlist` est `'self'`.
+La liste d'autorisation par défaut pour `accelerometer` est `self`.
 
 ## Spécifications
 
@@ -31,6 +35,5 @@ Pour cette fonctionnalité, la valeur par défaut pour `allowlist` est `'self'`.
 
 ## Voir aussi
 
-- L'en-tête [`Feature-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
-- [Règles de gestion pour les fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
-- [Utiliser `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- L'en-tête {{HTTPHeader('Permissions-Policy')}}
+- [Politique de permissions](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
