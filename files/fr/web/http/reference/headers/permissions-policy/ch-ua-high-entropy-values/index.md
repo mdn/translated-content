@@ -35,7 +35,7 @@ La politique suivante ne permettrait qu'à l'origine actuelle et à deux autres 
 Permissions-Policy: ch-ua-high-entropy-values=("self https://a.exemple.com" "https://b.exemple.com")
 ```
 
-Vous pourriez ensuite intégrer l'une des deux autres origines :
+Vous pourriez ensuite intégrer l'une des deux autres origines&nbsp;:
 
 ```html
 <iframe src="https://a.exemple.com" allow="ch-ua-high-entropy-values"></iframe>
@@ -53,4 +53,4 @@ Vous pourriez ensuite intégrer l'une des deux autres origines :
 
 - L'en-tête {{HTTPHeader("Permissions-Policy")}}
 - [Politique de permissions](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
-- [L'API User-Agent Client Hints](/fr/docs/Web/API/User-Agent_Client_Hints_API)
+- [L'API d'indices client de l'agent utilisateur](/fr/docs/Web/API/User-Agent_Client_Hints_API)
