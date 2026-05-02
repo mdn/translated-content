@@ -23,7 +23,7 @@ page-break-after: auto;
 page-break-after: always;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <div>
   <p>
     このプロパティの効果は、ドキュメントを印刷する際や、印刷プレビューを表示させた際に確認できます。
