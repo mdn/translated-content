@@ -102,7 +102,6 @@ l10n:
 以下の機能は Firefox 128 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
 
 - **既定および画像のリクエストで `image/jxl` MIME タイプを Accept ヘッダーに追加:** `image.jxl.enabled`.
-
   - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox バグ 1711622](https://bugzil.la/1711622))。
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。
