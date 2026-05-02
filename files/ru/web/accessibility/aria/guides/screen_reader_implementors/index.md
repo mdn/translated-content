@@ -2,6 +2,8 @@
 title: Руководство для разработчиков скринридеров по ARIA
 short-title: Руководство для разработчиков скринридеров
 slug: Web/Accessibility/ARIA/Guides/Screen_Reader_Implementors
+l10n:
+  sourceCommit: a69f3de18af834b710efb346c528cfd3ddfc1760
 ---
 
 ## Интерактивные области
