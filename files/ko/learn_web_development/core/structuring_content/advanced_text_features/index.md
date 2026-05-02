@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "conflicting/Learn_web_development/Core/Structuring_content")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content/Structuring_documents", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 텍스트 서식에 있어서 [HTML 텍스트 기본](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다(그리고 이것은 완전한 목록이 아닙니다). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 아래 첨자, 위 첨자, 연락처 정보 등을 표시하는 방법에 대해 배울 것입니다.
 

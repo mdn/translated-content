@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 현대의 웹사이트와 애플리케이션에서 매우 흔한 또 다른 작업은 새 페이지 전체를 불러올 필요 없이 웹페이지의 섹션을 갱신하기 위해 서버에서 개별 데이터 항목을 검색하는 것입니다. 이것은 사소해 보이지만 사이트의 성능과 동작에 큰 영향을 미쳤기 때문에 이 문서에서는 개념을 설명하고 이를 가능하게 하는 기술, 특히 [Fetch API](/ko/docs/Web/API/Fetch_API)를 살펴보도록 하겠습니다.
 

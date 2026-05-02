@@ -65,7 +65,7 @@ blob:https://example.org/40a5fb5a-d56d-4a33-b4e2-0acf6a8e5f64
 
 ### blob URL の作成
 
-この例では、まず {{domxref("Blob")}} を {{HTMLElement("canvas")}} から作成し、それに　blob URL を作成し、最後にその URL を {{HTMLElement("img")}} 要素に添付します。
+この例では、まず {{domxref("Blob")}} を {{HTMLElement("canvas")}} から作成し、それに blob URL を作成し、最後にその URL を {{HTMLElement("img")}} 要素に添付します。
 
 ```js
 const canvas = document.querySelector("canvas");

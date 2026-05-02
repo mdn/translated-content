@@ -3,7 +3,7 @@ title: Django введение
 slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 В первой статье о Django мы отвечаем на вопрос «Что такое Django?» и даём обзор того, что делает его особенным. Мы опишем основные функции, в том числе некоторые из расширенных функций, которые у нас не будет времени подробно рассмотреть в этом модуле. Мы также покажем вам некоторые основные строительные блоки приложения Django (хотя на данный момент у вас ещё не будет среды разработки для тестирования).
 
@@ -225,4 +225,4 @@ def index(request):
 
 Вы уже видели код на Django выше, но в отличие от клиентского кода вам нужно настроить среду разработки для её запуска. Это наш следующий шаг.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

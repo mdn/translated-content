@@ -1,11 +1,10 @@
 ---
-title: "<a>: アンカー要素"
+title: HTML `<a>` アンカー要素
+short-title: <a>
 slug: Web/HTML/Reference/Elements/a
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、[`href` 属性](#href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 
@@ -33,7 +32,7 @@ li {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-- `attributionsrc` {{experimental_inline}}
+- `attributionsrc` {{deprecated_inline}}
   - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
 
     ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納されます。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
@@ -59,7 +58,7 @@ li {
     - 値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
-      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
+      - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/URI/Reference/Schemes/blob) の {{domxref("Blob.type")}} から）
 
     - 値を定義すると、ファイル名として提案します。 `/` および `\` はアンダースコアに変換されます。ファイルシステムがファイル名に禁止している文字は他にもあるかもしれませんので、ブラウザーは必要に応じてファイル名を調整します。
 
@@ -86,6 +85,8 @@ li {
 
 - `hreflang`
   - : リンク先の URL における自然言語のヒントです。組み込まれている機能はありません。許容される値は、 [`lang` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)と同じです。
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
+  - : `<a>` 要素を**関心インボーカー**として定義します。その値は、対象要素の `id` です。呼び出し元要素に対して関心が向けられたり失われたりした際（例えば、マウスオーバーやマウスアウト、フォーカスやフォーカス解除など）、この対象要素には何らかの影響（通常は表示または非表示）が及ぶことになります。詳細や例については、[関心インボーカーの使用](/ja/docs/Web/API/Popover_API/Using_interest_invokers)をご覧ください。
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
@@ -155,9 +156,9 @@ li {
 
 ##### 結果
 
-{{EmbedLiveSample('Inaccessible, weak link text')}}
+{{EmbedLiveSample('Inaccessible, weak link text', '100%', '50')}}
 
-#### 強力なリンクテキスト
+#### アクセシブルで強力なリンクテキスト
 
 幸いにも、これは簡単に直すことができ、しかもアクセシビリティに対応していないものより短くなります。
 
@@ -167,7 +168,7 @@ li {
 
 ##### 結果
 
-{{EmbedLiveSample('Strong link text')}}
+{{EmbedLiveSample('Accessible, strong link text', '100%', '50')}}
 
 支援ソフトウェアには、ページ上のすべてのリンクを一覧表示するショートカットがあります。しかし、強力なリンクテキストはすべてのユーザーに利点があります。「すべてのリンクの一覧」のショートカットは、視力のあるユーザーがページを素早く見渡す方法を模倣しています。
 
@@ -254,7 +255,7 @@ li {
 .skip-link {
   position: absolute;
   top: -3em;
-  background: #fff;
+  background: white;
 }
 .skip-link:focus {
   top: 0;
@@ -278,7 +279,7 @@ li {
 
 #### 大きさ
 
-リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)の大きさであることが推奨されています。
+リンクのような対話的要素は、それらを簡単に起動できるように十分な大きさの領域を提供する必要があります。これは、運動制御に問題がある人や、タッチパネルなどの精度が低い入力手段を使用している人など、さまざまな人に役立ちます。少なくとも 44×44 [CSS ピクセル](https://w3c.github.io/wcag/guidelines/22/#dfn-css-pixels)の大きさであることが推奨されています。
 
 散文コンテンツのテキストのみのリンクは免除されますが、それでもハイパーリンクに十分なテキストがあることを確認して、操作しやすくなるようにしておくと良いでしょう。
 
@@ -406,13 +407,13 @@ html {
   font-family: sans-serif;
 }
 canvas {
-  background: #fff;
+  background: white;
   border: 1px dashed;
 }
 a {
   display: inline-block;
-  background: #69c;
-  color: #fff;
+  background: #6699cc;
+  color: white;
   padding: 5px 10px;
 }
 ```

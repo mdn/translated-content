@@ -1,77 +1,104 @@
 ---
 title: グリッドラッパー
 slug: Web/CSS/How_to/Layout_cookbook/Grid_wrapper
-original_slug: Web/CSS/Layout_cookbook/Grid_wrapper
+l10n:
+  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
 ---
 
-このパターンは、中央のラッパー内でグリッドのコンテンツを整列させるのに便利ですが、必要に応じて項目を脱出させて親要素やページの端に整列させることもできます。
+グリッドラッパーパターンは、中央のラッパー内でグリッドコンテンツを揃えつつ、アイテムがラッパーの外側にはみ出して、親要素やページの端に整列することをすることができる点で便利です。
 
 ## 要件
 
-グリッド上に配置された項目は、水平方向の中央に配置された最大幅のラッパーやグリッドの外側の端に揃えることができます。
+グリッド上に配置されたアイテムは、水平方向の中央に配置された最大幅のラッパーやグリッドの外側の端に揃えることができます。
 
 ## レシピ
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
+以下のコードブロックの "Play" をクリックすると、この例を MDN Playground で開きます。
 
-> [!CALLOUT]
->
-> [この例をダウンロードする](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html)
+```html live-sample___grid-wrapper-example
+<div class="grid">
+  <div class="wrapper">
+    <p>
+      このアイテムは、最大幅が設定された列である中央の「ラッパー」に揃えられます。
+    </p>
+  </div>
+  <div class="full-width">
+    <p>このアイテムは、グリッドコンテナーの端に揃えられます。</p>
+  </div>
+  <div class="left-edge">
+    <p>
+      このアイテムは、グリッドコンテナーの左端とラッパーの右端に揃えられます。
+    </p>
+  </div>
+  <div class="right-wrapper">
+    <p>このアイテムは、「ラッパー」列の右端に揃えられます。</p>
+  </div>
+</div>
+```
 
-## 行った選択
+```css live-sample___grid-wrapper-example
+body {
+  font: 1.2em sans-serif;
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) repeat(6, minmax(0, 60px)) minmax(
+      20px,
+      1fr
+    );
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
 
-このレシピでは、CSS グリッドの {{cssxref("minmax")}} 関数を使用して、{{cssxref("grid-template-columns")}} プロパティでグリッドトラックのサイズを定義しています。 最大幅を持つ中央の（グリッドレイアウトに使う 6 つの）列には、0 以上の最小値と、列トラックが大きくなれる最大サイズを指定する最大値を設定できます。 数値の単位（ピクセル、em、rem）を使用すると、中央のラッパーの固定最大サイズが作成されますが、パーセント値またはビューポート単位を使用すると、このラッパーはそのコンテキストに応じて拡大または縮小します。
+.grid > * {
+  border: 2px solid rgb(95 97 110);
+  border-radius: 0.5em;
+  padding: 20px;
+}
 
-外側の2つの列の最大サイズは `1fr` です。 つまり、グリッドコンテナー内の残りの使用可能スペースを埋めるようにそれぞれが拡大されます。
+.full-width {
+  grid-column: 1 / -1;
+}
 
-## 有用な代替策または代替方法
+.wrapper {
+  grid-column: 2 / -2;
+}
 
-このレシピをページレベルで使用するときは、コンテンツを水平方向に中央揃えするために、次のように左右の `auto` の {{cssxref("margin")}} とともに `max-width` を設定すると便利です。
+.left-edge {
+  grid-column: 1 / -2;
+}
+
+.right-wrapper {
+  grid-column: 4 / -2;
+}
+```
+
+{{EmbedLiveSample("grid-wrapper-example", "", "550px")}}
+
+## 選択したもの
+
+このレシピでは、CSS グリッドの {{cssxref("minmax()")}} 関数を使用して、{{cssxref("grid-template-columns")}} プロパティでグリッドトラックのサイズを定義しています。 最大幅を持つ中央の（グリッドレイアウトに使う 6 つの）列には、0 以上の最小値と、列トラックが大きくなれる最大サイズを指定する最大値を設定できます。[相対](/ja/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_font)または[絶対](/ja/docs/Web/CSS/Reference/Values/length#absolute_length_units) {{cssxref("length")}} 単位（ピクセル、em、rem）を使用すると、中央のラッパーに固定の最大サイズが設定されます。一方、{{cssxref("percentage")}} 値や [ビューポート単位](/ja/docs/Web/CSS/Reference/Values/length#relative_length_units_based_on_viewport)を使用すると、ラッパーはそのコンテキストに応じて伸長または縮短します。
+
+外側の 2 つの列の最大サイズは `1fr` です。 つまり、グリッドコンテナー内の残りの利用可能な空間を埋めるようにそれぞれが拡大されます。
+
+## 有用な代替策またはその他の方法
+
+コンテンツを水平方向に中央揃えするために、次のように左右の `auto` の {{cssxref("margin")}} とともに `max-width` を設定すると便利です。
 
 ```css
 .grid {
-  max-width: 1200px;
-  margin: 0 auto; // コンテナーを水平方向に中央揃え
-}
-
-/* ブラウザーがグリッドに対応している場合は、max-width と margin を取り除く */
-@supports (display: grid) {
-  .grid {
-    display: grid;
-    /* 他のグリッドのコードはここへ */
-    max-width: none;
-    margin: 0;
-  }
+  max-width: 96vw; /* 幅をビューポートの幅の 96% に制限 */
+  margin: 0 auto; /* コンテナーを水平方向に中央揃え */
 }
 ```
-
-`full-width` 項目をビューポートの端まで「脱出」させるには、次のトリックを使用できます（[Una Kravets](https://una.im/) の好意による）。
-
-```css
-.item {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translate3d(-50%, 0, 0);
-}
-```
-
-これは、正確なグリッド上で項目を簡単に整列させることができるという利点が必要ない場合に限り、レイアウトの適切な近似値を提供します。
 
 ## アクセシビリティの考慮
 
-グリッドを使用すると（理由の範囲内で）項目を適切な場所に配置できますが、CSS グリッドを使用して項目を配置する場合は、基になるマークアップが論理的な順序に従うことが重要です（詳細については、[CSS グリッドのレイアウトとアクセシビリティ](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility)を参照）。
-
-## ブラウザーの互換性
-
-レイアウト方法によってブラウザーの対応状況が異なります。使用しているプロパティの基本的な対応の詳細については、以下の表を参照してください。
-
-#### grid-template-columns
-
-{{Compat}}
+グリッドを使用すると（理由の範囲内で）アイテムを適切な場所に配置できますが、CSS グリッドを使用してアイテムを配置する場合は、基になるマークアップが論理的な順序に従うことが重要です（詳細については、[CSS グリッドのレイアウトとアクセシビリティ](/ja/docs/Web/CSS/Guides/Grid_layout/Accessibility)を参照）。
 
 ## 関連情報
 
-- {{Cssxref("grid-template-columns")}}
-- [MDN の CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)
-- 記事: [CSS グリッド: minmax() によるさらなる柔軟性](https://css-irl.info/more-flexibility-with-minmax/)（英語）
-- 記事: [CSS グリッドを使った脱出](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)（英語）
+- {{Cssxref("grid-template-columns")}} プロパティ
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [CSS グリッド: `minmax()` によるさらなる柔軟性](https://css-irl.info/more-flexibility-with-minmax/)<sup>（英語）</sup> (2018)
+- [CSS グリッドを使った脱出](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)<sup>（英語）</sup> (2017)

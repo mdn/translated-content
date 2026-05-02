@@ -1,8 +1,9 @@
 ---
-title: repeating-conic-gradient()
+title: CSS `repeating-conic-gradient()` 関数
+short-title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`repeating-conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、（[単一のグラデーション](/ja/docs/Web/CSS/Reference/Values/gradient/conic-gradient)ではなく）繰り返しのグラデーションからなる、色の遷移が（中心から[放射状に広がるのではなく](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient)）、中心点の周りを回転する画像を生成します。
@@ -48,18 +49,18 @@ repeating-conic-gradient(
 )
 
 /* 円筒色空間での補間
-  色相の補間方法に longer を指定 */
+  色相の補間方法に shorter を指定 */
 repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 
 ### 値
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
   - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順番、キーワード値を使用して、グラデーションの中心の位置を定義します。省略すると、既定値は`center`、すなわちグラデーションに配置されます。
 - `<angular-color-stop>`
-  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。最後の色経由点から最初の色経由点までの角度が反復グラデーションの大きさを定義します。
+  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{cssxref("angle")}}) が続きます。最後の色経由点から最初の色経由点までの角度が反復グラデーションの大きさを定義します。
 - `<color-hint>`
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する{{Glossary("interpolation","補間")}}のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
@@ -68,7 +69,7 @@ repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 
 ## 解説
 
-反復扇形グラデーションの例にはスターバーストがあります。 `repeating-conic-gradient()` 関数の返値は {{CSSxRef("gradient")}} データ型のオブジェクトで、これは {{cssxref("image")}} の特殊形です。
+反復扇形グラデーションの例にはスターバーストがあります。 `repeating-conic-gradient()` 関数の返値は {{cssxref("gradient")}} データ型のオブジェクトで、これは {{cssxref("image")}} の特殊形です。
 
 最初と最後の色経由点がどちらも 0 度以上か 360 度未満になっていない場合、 conic-gradient は繰り返されません。
 
@@ -109,7 +110,7 @@ radial-gradient(red 33%, yellow 33% 66%, blue 66%);
 
 #### グラデーションのカスタマイズ
 
-グラデーションの円弧上に角度のついた色経由点ポイントをさらに追加することで、複数の色の間の高度なカスタマイズされた移行を行うことができます。色経由点の位置は、{{CSSxRef("&lt;angle&gt;")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、その前の色経由点と後の色経由点の中間に配置されます。反復しないグラデーションと同様に、最初と最後の色経由点の角度を指定しない場合、その値は 0 度と 360 度になります。いずれの角度も指定しない場合は、非反復の円錐形グラデーションになります。最初と最後の色経由点にそれぞれ 0 度と 360 度以外の値を宣言すると、グラデーションはその値に基づいて繰り返されます。例えば、最初の色に角度を宣言せず、最後の色止めに 10% と宣言した場合、円弧は 10 回繰り返されます。むしろ、最初に宣言した色経由点が起点となり、最後の色経由点は最後に宣言した色経由点の角度となります。次の 2 つのグラデーションは等価です。
+グラデーションの円弧上に角度のついた色経由点ポイントをさらに追加することで、複数の色の間の高度なカスタマイズされた移行を行うことができます。色経由点の位置は、{{cssxref("angle")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、その前の色経由点と後の色経由点の中間に配置されます。反復しないグラデーションと同様に、最初と最後の色経由点の角度を指定しない場合、その値は 0 度と 360 度になります。いずれの角度も指定しない場合は、非反復の円錐形グラデーションになります。最初と最後の色経由点にそれぞれ 0 度と 360 度以外の値を宣言すると、グラデーションはその値に基づいて繰り返されます。例えば、最初の色に角度を宣言せず、最後の色止めに 10% と宣言した場合、円弧は 10 回繰り返されます。むしろ、最初に宣言した色経由点が起点となり、最後の色経由点は最後に宣言した色経由点の角度となります。次の 2 つのグラデーションは等価です。
 
 ```css
 repeating-conic-gradient(red, orange, yellow, green, blue 50%);
@@ -254,10 +255,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - その他のグラデーション関数: {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

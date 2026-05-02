@@ -1,11 +1,10 @@
 ---
-title: "<base>: 文書の基底 URL 要素"
+title: HTML `<base>` 文書基底 URL 要素
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<base>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内におけるすべての*相対* URL の基点となる URL を指定します。 `<base>` 要素は、文書内に 1 つだけ置くことができます。
 
@@ -88,7 +87,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
     <tr>
