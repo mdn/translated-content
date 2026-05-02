@@ -8,7 +8,7 @@ l10n:
 **`<feDropShadow>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、入力画像のドロップシャドウを作成します。これは、{{SVGElement('filter')}} 要素内でのみ使用できます。
 
 > [!NOTE]
-> ドロップシャドウの色と透明度は、{{SVGAttr('flood-color')}} および {{SVGAttr('flood-opacity')}} というプレゼンテーション属性属性を使用して変更できます。
+> ドロップシャドウの色と透明度は、{{SVGAttr('flood-color')}} および {{SVGAttr('flood-opacity')}} というプレゼンテーション属性を使用して変更できます。
 
 他のフィルタープリミティブと同様に、デフォルトで `linearRGB` {{glossary("color space", "色空間")}}の色成分を処理します。{{svgattr("color-interpolation-filters")}} を使用することで、代わりに `sRGB` を使用することも可能です。
 

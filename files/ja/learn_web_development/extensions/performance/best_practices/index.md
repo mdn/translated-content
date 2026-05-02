@@ -1,84 +1,93 @@
 ---
-title: ウェブパフォーマンスの基礎
+title: ウェブパフォーマンスのベストプラクティスとヒント
+short-title: ベストプラクティスとヒント
 slug: Learn_web_development/Extensions/Performance/Best_practices
-original_slug: Learn_web_development/Extensions/Performance/Web_Performance_Basics
+l10n:
+  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
 ---
 
-{{LearnSidebar}}
+{{PreviousMenu("Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
-あなたのウェブサイトが可能な限りのパフォーマンスを発揮すべき[理由](https://web.dev/why-speed-matters/)はたくさんあります。
+ウェブサイトが可能な限りのパフォーマンスを発揮すべき[理由](https://web.dev/learn/performance/why-speed-matters)はたくさんあります。
 以下に、各トピックの詳細情報を提供するためのリンク付きのベストプラクティス、ツール、API の簡単なレビューを示します。
 
-## Best practices
+## ベストプラクティス
 
-- Start with learning the [critical rendering path](/ja/docs/Web/Performance/Guides/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
-- Using [resource hints](/ja/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints) such as `rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload`
-- Keep the size of Javascript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much Javascript as needed for the current page.
-- [CSS](/ja/docs/Learn_web_development/Extensions/Performance/CSS) performance factors
-- Use [HTTP/2](/ja/docs/Learn/Performance/HTTP2) on your server (or CDN).
-- Use a CDN for resources which can reduce load times significantly.
-- Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
-- Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the [`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) attribute on the {{HTMLElement("img")}} element
-- It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance).
+- まずは、ブラウザーの[クリティカルレンダリングパス](/ja/docs/Web/Performance/Guides/Critical_rendering_path)について学びましょう。これを理解することで、ウェブサイトのパフォーマンスを改善する方法を把握できるようになります。
+- リソースヒント、例えば [`rel=preconnect`](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)、[`rel=dns-prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch)、[`rel=prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch)、[`rel=preload`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を使用します。
+- JavaScript のサイズを[最小]に抑えてください。現在のページで必要となる分だけ JavaScript を使用するようにしてください。
+- [CSS](/ja/docs/Learn_web_development/Extensions/Performance/CSS) パフォーマンス要因
+- {{Glossary("HTTP_2", "HTTP/2")}} をサーバー（または CDN）で使用します。
+- 読み込み時間を大幅に短縮できるリソースには、CDN をご利用ください。
+- リソースを [gzip](https://www.gnu.org/software/gzip/)、[Brotli](https://github.com/google/brotli)、[Zopfli](https://github.com/google/zopfli) などを使用して圧縮してください。
+- 画像の最適化（可能であれば CSS アニメーションまたは SVG を使用する）。
+- ビューポート外にあるアプリケーションの一部を遅延読み込みします。その場合は、SEOのための代替策（例：ボットトラフィック向けにページ全体をレンダリングする）を用意してください。例えば、[`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を{{HTMLElement("img")}} 要素に使用したり、同様に {{HTMLElement("iframe")}}、 {{HTMLElement("video")}}、{{HTMLElement("audio")}} 要素に設定したりするなどです。
+- 同時に、ユーザーにとって何が本当に重要なのかを理解することも極めて重要です。それは厳密なタイミングではなく、[ユーザーの体感](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)であることがあります。
 
-## Quick Wins
+## 即効性のある方法
 
 ### CSS
 
-Web performance is all about user experience and perceived performance. As we learned in the [critical rendering path](/ja/docs/Web/Performance/Guides/Critical_rendering_path) document, linking CSS with a tradional link tag with rel="stylesheet" is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.
+ウェブパフォーマンスの本質は、ユーザー体験と知覚的パフォーマンスにあります。[クリティカルレンダリングパス](/ja/docs/Web/Performance/Guides/Critical_rendering_path)のドキュメントで学んだように、従来の `rel="stylesheet"` 属性を持つ link タグで CSS を読み込むと、同期処理となり、レンダリングがブロックされてしまいます。レンダリングを妨げる CSS を除去することで、ページのレンダリングを最適化しましょう。
 
-To load CSS asynchronously one can simpy set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring Javascript, so it is important to include a noscript tag with a traditional fallback.
+CSS を非同期で読み込むには、メディア種別を `print` に設定し、読み込まれた後に `all` に変更します。これには JavaScript が要求されるため、従来のフォールバックを含む `<noscript>` タグを記載することが重要です。
 
 ```html
 <link
+  id="my-stylesheet"
   rel="stylesheet"
   href="/path/to/my.css"
-  media="print"
-  onload="this.media='all'" />
+  media="print" />
 <noscript><link rel="stylesheet" href="/path/to/my.css" /></noscript>
 ```
 
-The downside with this approach is the flash of unstyled text (FOUT.) The simplist way to address this is by inlining CSS that is required for any content that is rendered above the fold, or what you see in the browser viewport before scrolling. These styles will improve perceived performance as the CSS does not require a file request.
+```js
+const stylesheet = document.getElementById("my-stylesheet");
+stylesheet.addEventListener("load", () => {
+  stylesheet.media = "all";
+});
+```
+
+この手法の欠点は、スタイルが適用されていないテキストが一時的に表示されてしまうこと (FOUT) です。これを解決する最も簡単な方法は、スクロールする前にブラウザーのビューポート内に表示されるコンテンツ（スクロールせずに見える範囲）に必要な CSS をインラインで記述することです。これにより、CSS ファイルの読み込みが不要になるため、知覚的パフォーマンスが改善されます。
 
 ```html
-<style type="text/css">
-  // Insert your CSS here
+<style>
+  /* ここに CSS を挿入 */
 </style>
 ```
 
-### Javascript
+### JavaScript
 
-Avoid Javascript blocking by using the [async](/ja/docs/Web/HTML/Reference/Elements/script) or [defer](/ja/docs/Web/HTML/Reference/Elements/script) attributes, or link javascript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
+[`async`](/ja/docs/Web/HTML/Reference/Elements/script) または [`defer`](/ja/docs/Web/HTML/Reference/Elements/script) 属性を使用するか、JavaScript リソースをページの DOM 要素の後に配置することで、JavaScript によるレンダリングのブロックを避けることができます。JavaScript は、DOM ツリー上で script タグの後に現れる要素のレンダリングのみをブロックします。
 
-### Web Fonts
+### ウェブフォント
 
-EOT and TTF formats are not compressed by default. Apply compression such as GZIP or Brotli for these file types. Use WOFF and WOFF2. These formats have compression built in.
+EOT や TTF 形式は、デフォルトで圧縮されません。これらのファイル形式には、GZIPやBrotliなどの圧縮を適用してください。WOFF や WOFF2 をご利用ください。これらの形式には、圧縮機能が組み込まれています。
 
-Within @font-face use font-display: swap. By using font display swap the browser will not block rendering and will use the backup system fonts that are defined. Optimiize [font weight](/ja/docs/Web/CSS/Reference/Properties/font-weight) to match the web font as closely as possible.
+@font-face 内では、font-display: swap を指定してください。font-display を swap に指定することで、ブラウザーはレンダリングを中断せず、定義された代替のシステムフォントを使用します。ウェブフォントにできるだけ一致するよう、[フォントの太さ](/ja/docs/Web/CSS/Reference/Properties/font-weight)を調整してください。
 
-#### Icon web fonts
+#### アイコンウェブフォント
 
-If possible avoid icon web fonts and use compressed SVGs. To further optimize inline your SVG data within HTML markup to avoid HTTP requests.
+可能であれば、アイコン用ウェブフォントは避け、圧縮された SVG を使用してください。さらに最適化するには、HTML マークアップ内に SVG データをインラインで埋め込んで使用してください。
 
-## Tools
+## ツール
 
-- Learn to use the [Firefox Dev Tools](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to profile your site.
-- [Pagespeed Insights](https://developers.google.com/speed/docs/insights/v5/about) can analyze your page and give some general hints to improve performance.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/) can give you a detailed breakdown of many aspects of your site including performance, SEO and accessibility.
-- Test your page's speed using [Webpagetest.org](http://webpagetest.org/), where you can use different real device types and locations.
-- Try the [Chrome User Experience Report](https://developers.google.com/web/tools/chrome-user-experience-report) which quantifies real user metrics.
-- Define a [performance budget.](/ja/docs/Web/Performance/Performance_budget)
+- [Firefox 開発者ツール](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) を使用して、サイトのパフォーマンスを分析する方法を学びましょう。
+- [PageSpeed Insights](https://pagespeed.web.dev/) を使用すると、ページを分析し、パフォーマンスの改善のための一般的なヒントを得ることができます。
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) を使用すると、サイトのパフォーマンス、SEO、アクセシビリティなど、さまざまな側面について詳細な分析結果を得ることができます。
+- [WebPageTest.org](https://www.webpagetest.org/) を使用して、ページの読み込み速度をテストしてください。ここでは、さまざまな実機タイプや場所を設定してテストを行うことができます。
+- 実際のユーザー指標を数値化した [Chrome ユーザーエクスペリエンスレポート](https://developer.chrome.com/docs/crux/)をお試しください。
+- [パフォーマンス予算](/ja/docs/Web/Performance/Guides/Performance_budgets)を定義しましょう。
 
-### APIs
+### API
 
-- Gather user metrics using <https://github.com/akamai/boomerang>
-- Or directly gather with [window.performance.timing](/ja/docs/Web/API/Window/performance)
+- [boomerang](https://github.com/akamai/boomerang) ライブラリーを使用して、ユーザー指標を収集します。
+- あるいは、[window.performance.timing](/ja/docs/Web/API/Performance/timing) を直接取得して集計します
 
-### Things not to do (bad practices)
+### 避けるべきこと（悪い習慣）
 
-- Download everything
-- Use uncompressed media files
+- すべてをダウンロードする
+- 未圧縮のメディアファイルを使用する
 
 ## 関連情報
 

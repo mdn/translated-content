@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
- **`yChannelSelector`** 属性は、{{SVGAttr("in2")}} のどの色チャンネルを使用して、{{SVGAttr("in")}} のピクセルを y 軸に沿って変位させるかを示します。
+**`yChannelSelector`** 属性は、{{SVGAttr("in2")}} のどの色チャンネルを使用して、{{SVGAttr("in")}} のピクセルを y 軸に沿って変位させるかを示します。
 
 ## 要素
 

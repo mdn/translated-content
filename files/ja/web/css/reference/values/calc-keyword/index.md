@@ -1,8 +1,9 @@
 ---
-title: <calc-keyword>
+title: CSS `<calc-keyword>` データ型
+short-title: <calc-keyword>
 slug: Web/CSS/Reference/Values/calc-keyword
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
@@ -27,7 +28,7 @@ l10n:
 
 ### メモ
 
-[`calc()`](/ja/docs/Web/CSS/Reference/Values/calc) 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
+{{cssxref("calc()")}} 内の引数のシリアライズは浮動小数点数の IEEE-754 標準に従いますので、 `infinity` や `NaN` のような定数に関していくつか見なされる意味があります。
 
 - ゼロで割ると、割られる数の符号に応じて正または負の `infinity` を返します。
 - 何かに対して `infinity` を加算、減算、乗算すると、 `NaN` を生成しない限り、 `infinity` を返します（下記参照）。
