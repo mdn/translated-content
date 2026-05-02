@@ -425,7 +425,7 @@ original_slug: Web/HTML/Attributes/rel
         of the <a href="/ko/docs/Web/HTML/Reference/Elements/link#crossorigin"><code>crossorigin</code></a> attribute is
         taken into consideration, making it possible to make anonymous
         prefetches.<br /><br /><strong>Note:</strong> The
-        <a href="/ko/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has
+        <a href="/ko/docs/Glossary/Prefetch">Link Prefetch FAQ</a> has
         details on which links can be prefetched and on alternative methods.
       </td>
       <td>
@@ -438,7 +438,7 @@ original_slug: Web/HTML/Attributes/rel
       <td>
         Tells the browser to download a resource because this resource will be
         needed later during the current navigation. See
-        <a href="/ko/docs/Web/HTML/Preloading_content"
+        <a href="/ko/docs/Web/HTML/Reference/Attributes/rel/preload"
           >Preloading content with rel="preload"</a
         >
         for more details.

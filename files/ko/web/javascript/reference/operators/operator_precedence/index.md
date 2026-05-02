@@ -611,7 +611,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td rowspan="18">2</td>
       <td rowspan="16">
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators"
+          href="/ko/docs/Web/JavaScript/Reference/Operators"
           >할당</a
         >
       </td>
