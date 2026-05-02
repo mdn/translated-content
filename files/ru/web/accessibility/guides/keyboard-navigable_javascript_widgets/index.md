@@ -1,6 +1,8 @@
 ---
 title: Навигация с клавиатуры в JavaScript
 slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
+l10n:
+  sourceCommit: 0a3232029066840f90f56db6a365a2d877f30ce9
 ---
 
 Как сделать для JavaScript-виджетов на основе span или div возможность навигации с клавиатуры.
