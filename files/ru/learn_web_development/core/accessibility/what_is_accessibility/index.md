@@ -1,6 +1,8 @@
 ---
 title: Что такое доступность?
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
+l10n:
+  sourceCommit: d153006a95fb3005c1e0f057fc3de59e2db0c1db
 ---
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
