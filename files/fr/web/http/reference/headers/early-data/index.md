@@ -3,14 +3,14 @@ title: En-tête Early-Data
 short-title: Early-Data
 slug: Web/HTTP/Reference/Headers/Early-Data
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 74109a487250280f5f4c1595e91dfb43efef544a
 ---
 
 {{SeeCompatTable}}
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Early-Data`** est défini par un intermédiaire pour indiquer que la requête a été transmise dans les [données précoces TLS](/fr/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3), et indique également que l'intermédiaire comprend le code d'état {{HTTPStatus("425", "425 Too Early")}}.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Early-Data`** est défini par un intermédiaire pour indiquer que la requête a été transmise dans les données précoces TLS, et indique également que l'intermédiaire comprend le code d'état {{HTTPStatus("425", "425 Too Early")}}.
 
-Si un client a récemment interagi avec un serveur, les données précoces (aussi appelées à [données (0-RTT)](/fr/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3) zéro aller-retour) permettent au client d'envoyer des données à un serveur dès le premier aller-retour d'une connexion, sans attendre la fin de [l'établissement TLS](/fr/docs/Glossary/TCP_handshake).
+Si un client a récemment interagi avec un serveur, les données précoces (aussi appelées à données (0-RTT) zéro aller-retour) permettent au client d'envoyer des données à un serveur dès le premier aller-retour d'une connexion, sans attendre la fin de {{Glossary("TCP handshake", "l'établissement TLS")}}.
 Cela réduit la latence pour les connexions répétées entre un client et un serveur, mais a des implications de sécurité, car les données précoces sont vulnérables aux attaques par rejeu.
 
 L'en-tête `Early-Data` n'est **pas** défini par l'initiateur de la requête (c'est-à-dire un navigateur).
