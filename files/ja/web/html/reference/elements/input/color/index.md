@@ -126,7 +126,7 @@ colorPicker.select();
 
 HTML はかなり単純です。数段落の説明的な素材と、 ID が `color-picker` で `color` 型の {{HTMLElement("input")}} があり、これを使用して段落のテキストの色を変更することになります。
 
-```html
+```html-nolint
 <p>
   <code>&lt;input type="color"&gt;</code> コントロールを使用する例です。
 </p>
