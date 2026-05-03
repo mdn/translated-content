@@ -2,6 +2,8 @@
 title: Руководства по MathML
 short-title: Руководства
 slug: Web/MathML/Tutorials
+l10n:
+  sourceCommit: 6cdad00a7ff6b7b7040a50427f51dc24edeb71a2
 ---
 
 На этой странице представлены руководства по MathML.
