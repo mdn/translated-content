@@ -1,0 +1,39 @@
+---
+title: "Permissions-Policy : directive translator"
+short-title: translator
+slug: Web/HTTP/Reference/Headers/Permissions-Policy/translator
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+---
+
+{{SeeCompatTable}}
+
+L'en-tête HTTP {{HTTPHeader("Permissions-Policy")}} avec la directive **`translator`** contrôle l'accès à la fonctionnalité de traduction des [API Translator et Language Detector](/fr/docs/Web/API/Translator_and_Language_Detector_APIs).
+
+Plus précisément, lorsqu'une politique définie bloque l'utilisation de cette fonctionnalité, toute tentative d'appel des méthodes de traduction de l'API échoue avec une {{DOMxRef("DOMException")}} de type `NotAllowedError`.
+
+## Syntaxe
+
+```http
+Permissions-Policy: translator=<allowlist>;
+```
+
+- `<allowlist>`
+  - : Une liste d'origines pour lesquelles l'autorisation d'utiliser la fonctionnalité est accordée. Voir [`Permissions-Policy` > Syntaxe](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy#syntaxe) pour plus de détails.
+
+## Règle par défaut
+
+La liste d'autorisations par défaut pour `translator` est `self`.
+
+## Spécifications
+
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- L'en-tête {{HTTPHeader("Permissions-Policy")}}
+- [Politique de permissions](/fr/docs/Web/HTTP/Guides/Permissions_Policy)
