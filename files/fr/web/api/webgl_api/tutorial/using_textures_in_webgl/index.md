@@ -252,14 +252,14 @@ Tout d'abord, le code pour spécifier le tampon de couleurs a disparu, remplacé
   const offset = 0; // à combien d'octets du début faut-il commencer
   gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
   gl.vertexAttribPointer(
-    programInfo.attributeLocations.textureCoord,
+    programInfo.attribLocations.textureCoord,
     num,
     type,
     normalize,
     stride,
     offset,
   );
-  gl.enableVertexAttribArray(programInfo.attributeLocations.textureCoord);
+  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }
 ```
 
