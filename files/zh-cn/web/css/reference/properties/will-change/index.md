@@ -1,29 +1,14 @@
 ---
 title: will-change
 slug: Web/CSS/Reference/Properties/will-change
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 `will-change` 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作。这种优化可以将一部分复杂的计算工作提前准备好，使页面的反应更为快速灵敏。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`will-change`** 向浏览器提示元素预计将如何发生变化。浏览器可能会在元素实际发生变化之前进行优化。此类优化通过在实际需要之前完成可能耗时的操作，从而提高页面的响应速度。
 
 > [!WARNING]
 > `will-change` 应该被视为最后的应对手段，用于解决现有的性能问题。不应该被用来预测性能问题。
-
-```css
-/* 关键字值 */
-will-change: auto;
-will-change: scroll-position;
-will-change: contents;
-will-change: transform; /* <custom-ident> 示例  */
-will-change: opacity; /* <custom-ident> 示例  */
-will-change: left, top; /* 两个 <animatable-feature> 例子 */
-
-/* 全局值 */
-will-change: inherit;
-will-change: initial;
-will-change: revert;
-will-change: revert-layer;
-will-change: unset;
-```
 
 想要用好该属性可能有些棘手：
 
@@ -35,26 +20,43 @@ will-change: unset;
 
 ## 语法
 
+```css
+/* 关键字值 */
+will-change: auto;
+will-change: scroll-position;
+will-change: contents;
+will-change: transform; /* <custom-ident> 示例 */
+will-change: opacity; /* <custom-ident> 示例 */
+will-change: left, top; /* 两个 <animatable-feature> 例子 */
+
+/* 全局值 */
+will-change: inherit;
+will-change: initial;
+will-change: revert;
+will-change: revert-layer;
+will-change: unset;
+```
+
 ### 取值
 
 - `auto`
-  - : 表示没有特别指定哪些属性会变化，浏览器需要自己去猜，然后使用浏览器经常使用的一些常规方法优化。
+  - : 此关键字表示没有特别意图；用户代理应采用其通常使用的任何启发式方法和优化。
 
-`<animateable-feature>` 可以是以下值：
+`<animatable-feature>` 可以是以下值之一：
 
 - `scroll-position`
-  - : 表示开发者希望在不久后改变滚动条的位置或者使之产生动画。
+  - : 表示开发者期望在不久的将来对元素的滚动位置进行动画或更改。
 - `contents`
-  - : 表示开发者希望在不久后改变元素内容中的某些东西，或者使它们产生动画。
+  - : 表示开发者期望在不久的将来对元素内容的某些方面进行动画或更改。
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : 该属性表示开发者期望在不久的将来对元素上给定名称的属性进行动画或更改。如果给定的属性是一个缩写，它表示对缩写展开的所有属性的期望。它不能是以下任何值：`unset`、`initial`、`inherit`、`will-change`、`auto`、`scroll-position` 或 `contents`。规范没有定义特定值的行为，但是 `transform` 通常被用作合成层提示。在给定特定的 CSS 属性标识时，[Chrome 目前会执行两个操作](https://github.com/operasoftware/devopera/pull/330)：建立新的合成层或新的[层叠上下文](/zh-CN/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)。
+  - : 表示开发者期望在不久的将来对元素上给定名称的属性进行动画或更改。如果给定的属性是一个缩写，它表示对缩写展开的所有属性的期望。它不能是以下任何值：`unset`、`initial`、`inherit`、`will-change`、`auto`、`scroll-position` 或 `contents`。规范没有定义特定值的行为，但是 `transform` 通常被用作合成层提示。在给定特定的 CSS 属性标识时，[Chrome 目前会执行两个操作](https://github.com/operasoftware/devopera/pull/330)：建立新的合成层或新的 {{Glossary("stacking context", "层叠上下文")}}。
 
 ### 通过样式表设置
 
 在需要通过按键进行页面翻转的应用程序中（例如相册或幻灯片演示文稿），或者在页面内容较大、较复杂的应用程序中，将 `will-change` 属性包含在样式表中可能是合适的。这将让浏览器提前准备好转换，并允许在按键按下时实现流畅的页面转换效果。但是，在样式表中直接使用 `will-change` 属性时需要谨慎。这可能会导致浏览器将优化保留在内存中的时间比实际需要的时间更长。
 
 ```css
-.sidebar {
+.slide {
   will-change: transform;
 }
 ```
@@ -71,12 +73,12 @@ will-change: unset;
 
 ### 通过脚本设置
 
-这是一个示例，演示如何通过脚本应用 `will-change` 属性，这可能是在大多数情况下你应该采用的方法。
+这是一个示例，演示如何通过脚本应用 `will-change` 属性，这可能是在大多数情况下你应该采取的做法。
 
 ```js
 const el = document.getElementById("element");
 
-// 当鼠标移动到该元素上时给该元素设置 will-change 属性
+// 当鼠标悬停在元素上时，设置 will-change 属性
 el.addEventListener("mouseenter", hintBrowser);
 el.addEventListener("animationEnd", removeHint);
 
