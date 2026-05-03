@@ -69,7 +69,7 @@ let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 
 ### 함수의 호출과 Optional chaining
 
-존재하지 않을 수 있는 매서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우, 유용할 수 있다.
+존재하지 않을 수 있는 메서드를 호출할 때, optional chaining을 사용할 수 있다. 예를 들어, 구현 기간이나 사용자 장치에서 사용할 수 없는 기능 때문에 메서드를 사용할 수 없는 API를 사용할 경우, 유용할 수 있다.
 
 함수 호출과 optional chaining을 사용함으로써 메서드를 찾을 수 없는 경우에 예외를 발생시키는 것 대신에 그 표현식은 자동으로 `undefined`를 반환한다:
 
