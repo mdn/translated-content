@@ -1,45 +1,47 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
+l10n:
+  sourceCommit: c5a0ee66baf779b702ffae6d964d1f365381767c
 ---
 
 **`Map`** 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者{{Glossary("Primitive", "原始值")}}）都可以作为键或值。
 
-{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+{{InteractiveExample("JavaScript 演示：Map", "taller")}}
 
 ```js interactive-example
-const map1 = new Map();
+const map = new Map();
 
-map1.set("a", 1);
-map1.set("b", 2);
-map1.set("c", 3);
+map.set("a", 1);
+map.set("b", 2);
+map.set("c", 3);
 
-console.log(map1.get("a"));
-// Expected output: 1
+console.log(map.get("a"));
+// 期望输出：1
 
-map1.set("a", 97);
+map.set("a", 97);
 
-console.log(map1.get("a"));
-// Expected output: 97
+console.log(map.get("a"));
+// 期望输出：97
 
-console.log(map1.size);
-// Expected output: 3
+console.log(map.size);
+// 期望输出：3
 
-map1.delete("b");
+map.delete("b");
 
-console.log(map1.size);
-// Expected output: 2
+console.log(map.size);
+// 期望输出：2
 ```
 
 ## 描述
 
 `Map` 对象是键值对的集合。`Map` 中的一个键**只能出现一次**；它在 `Map` 的集合中是独一无二的。`Map` 对象按键值对迭代——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key, value]` 的数组。迭代按*插入顺序*进行，即键值对按 [`set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/set) 方法首次插入到集合中的顺序（也就是说，当调用 `set()` 时，map 中没有具有相同值的键）进行迭代。
 
-规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（使用 O(1) 查找）、搜索树（使用 O(log(N)) 查找）或任何其他数据结构，只要复杂度小于 O(N)。
+规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（查找效率为 O(1)）、搜索树（查找效率为 O(log(N))）或任何其他数据结构，只要复杂度小于 O(N)。
 
 ### 键的相等
 
-键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同值相等)，将 `0` 和 `-0` 视为不同。检查[浏览器兼容性](#browser_compatibility)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。
+键的比较基于[零值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)算法。（它曾经使用[同值相等](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#使用_object.is_进行同值相等比较)，将 `0` 和 `-0` 视为不同。参见[浏览器兼容性](#浏览器兼容性)。）这意味着 {{jsxref("NaN")}} 是与 `NaN` 相等的（虽然 `NaN !== NaN`），剩下所有其他的值是根据 `===` 运算符的结果判断是否相等。此外，对于对象键，相等性基于对象标识。它们是通过引用进行比较，而非通过值。参见[使用 Map 对象](#使用_map_对象)示例。
 
 ### `Object` 和 `Map` 的比较
 
@@ -79,7 +81,7 @@ console.log(map1.size);
       </td>
       <td>
         <p>
-          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>。就像意外的键问题一样，这也可以通过使用 <code>null</code> 原型对象来缓解。
+          在 <code>Object</code> 上设置用户提供的键值对可能会允许攻击者覆盖对象的原型，这可能会导致<a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">对象注入攻击</a>或<a href="/zh-CN/docs/Web/Security/Attacks/Prototype_pollution">原型污染攻击</a>。就像意外的键问题一样，这也可以通过使用 <code>null</code> 原型对象来缓解。
         </p>
       </td>
     </tr>
@@ -166,9 +168,9 @@ console.log(map1.size);
 
 ### 设置对象属性
 
-设置对象属性同样适用于 Map 对象，但容易造成困扰。
+设置对象属性同样适用于 Map 对象，但可能会造成相当大的困扰。
 
-即，以下的代码能够正常运行（但不推荐）：
+因此，这种方式看起来能工作：
 
 ```js example-bad
 const wrongMap = new Map();
@@ -216,19 +218,20 @@ interface RTCStatsReport {
 
 类 `Map` 对象可以是只读的，也可以是可写的（参见上面 IDL 中的 `readonly` 关键字）。
 
-- 只读的类 `Map` 对象具有 [`size`](#map.prototype.size) 属性，以及这些方法：[`entries()`](#map.prototype.entries)、[`forEach()`](#map.prototype.foreach)、[`keys()`](#map.prototype.keys)、[`values()`](#map.prototype.values) 和 [`[Symbol.iterator]()`](#map.prototypesymbol.iterator) 。
-- 可写的类 `Map` 对象还额外具有这些方法：[`clear()`](#map.prototype.clear)、[`delete()`](#map.prototype.delete) 和 [`set()`](#map.prototype.set)。
+- 只读的类 `Map` 对象具有 {{jsxref("Map/size", "size")}} 属性，以及这些方法：{{jsxref("Map/entries", "entries()")}}、{{jsxref("Map/forEach", "forEach()")}}、{{jsxref("Map/get", "get()")}}、{{jsxref("Map/has", "has()")}}、{{jsxref("Map/keys", "keys()")}}、{{jsxref("Map/values", "values()")}} 和 [`Symbol.iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)。
+- 可写的类 `Map` 对象还额外具有这些方法：{{jsxref("Map/clear", "clear()")}}、{{jsxref("Map/delete", "delete()")}} 和 {{jsxref("Map/set", "set()")}}。
 
 除了对键和值类型的限制外，其方法和属性的行为与 `Map` 中的对应实体相同。
 
 以下是浏览器中只读的类 `Map` 对象的示例：
 
 - {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("EventCounts")}}
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
+- {{domxref("RTCStatsReport")}}
 
 ## 构造函数
 
@@ -261,21 +264,25 @@ interface RTCStatsReport {
 - {{jsxref("Map.prototype.clear()")}}
   - : 移除 `Map` 对象中所有的键值对。
 - {{jsxref("Map.prototype.delete()")}}
-  - : 移除 `Map` 对象中指定的键值对，如果键值对存在并成功被移除，返回 `true`，否则返回 `false`。调用 `delete` 后再调用 `map.has(key)` 将返回 `false`。
+  - : 移除 `Map` 对象中由指定的键标识的条目。
 - {{jsxref("Map.prototype.entries()")}}
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有键值对 `[key, value]` 二元数组，以插入顺序排列。
 - {{jsxref("Map.prototype.forEach()")}}
   - : 以插入顺序为 `Map` 对象中的每个键值对调用一次 `callbackFn`。如果为 `forEach` 提供了 `thisArg` 参数，则它将作为每一次 callback 的 `this` 值。
 - {{jsxref("Map.prototype.get()")}}
-  - : 返回与指定的键 `key` 关联的值，若不存在关联的值，则返回 `undefined`。
+  - : 返回 `Map` 对象中与指定键对应的值，若不存在，则返回 `undefined`。
+- {{jsxref("Map.prototype.getOrInsert()")}}
+  - : 返回 `Map` 对象中与指定的键对应的值。如果键不存在，则插入一个包含该键和给定默认值的新条目，并返回插入的值。
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
+  - : 返回 `Map` 对象中与指定键对应的值。如果键不存在，则插入一个新条目，其键为指定键，值由给定的回调函数计算得出，并返回插入的值。
 - {{jsxref("Map.prototype.has()")}}
-  - : 返回一个布尔值，用来表明 `Map` 对象中是否存在与指定的键 `key` 关联的值。
+  - : 返回一个布尔值，指示 `Map` 对象中是否存在具有指定键的条目。
 - {{jsxref("Map.prototype.keys()")}}
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有元素的键，以插入顺序排列。
 - {{jsxref("Map.prototype.set()")}}
-  - : 在 `Map` 对象中设置与指定的键 `key` 关联的值，并返回 `Map` 对象。
+  - : 向 `Map` 对象添加一个具有指定键和值的新条目，如果键已存在则更新现有条目。
 - {{jsxref("Map.prototype.values()")}}
-  - : 返回一个新的迭代对象，其中包含 `Map` 对象中所有的值，并以插入 `Map` 对象的顺序排列。
+  - : 返回一个新的迭代对象，其中按插入顺序包含 `Map` 对象中每个元素的值。
 - [`Map.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : 返回一个新的迭代器对象，其包含 `Map` 对象中所有元素 `[key, value]` 二元数组，以插入顺序排列。
 
@@ -288,7 +295,7 @@ const myMap = new Map();
 
 const keyString = "a string";
 const keyObj = {};
-const keyFunc = function () {};
+const keyFunc = () => {};
 
 // 添加键
 myMap.set(keyString, "和键'a string'关联的值");
@@ -304,7 +311,7 @@ console.log(myMap.get(keyFunc)); // "和键 keyFunc 关联的值"
 
 console.log(myMap.get("a string")); // "和键'a string'关联的值"，因为 keyString === 'a string'
 console.log(myMap.get({})); // undefined，因为 keyObj !== {}
-console.log(myMap.get(function () {})); // undefined，因为 keyFunc !== function () {}
+console.log(myMap.get(() => {})); // undefined，因为 keyFunc !== () => {}
 ```
 
 ### 将 NaN 作为 Map 的键
@@ -402,11 +409,11 @@ const original = new Map([[1, "one"]]);
 const clone = new Map(original);
 
 console.log(clone.get(1)); // one
-console.log(original === clone); // false. 浅比较 不为同一个对象的引用
+console.log(original === clone); // false（适用于浅比较）
 ```
 
 > [!NOTE]
-> 请记住，*数据本身*未被克隆。
+> 请记住，*数据本身*未被克隆。换句话说，这只是对 `Map` 的[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)。
 
 `Map` 对象间可以进行合并，但是会保持键的唯一性。
 
@@ -464,6 +471,7 @@ console.log(merged.get(3)); // three
 ## 参见
 
 - [`core-js` 中 `Map` 的 polyfill](https://github.com/zloirock/core-js#map)
+- [`Map` 的 es-shims polyfill](https://www.npmjs.com/package/es-map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}
