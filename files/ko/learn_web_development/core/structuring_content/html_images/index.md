@@ -627,6 +627,6 @@ p {
 
 ## 요약
 
-여기까지입니다. 이미지와 캡션에 대해 자세히 알아보았습니다. 다음 기사에서는 웹 페이지에 [비디오와 오디오 콘텐츠](/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)를 삽입하는 방법에 대해 알아보겠습니다.
+여기까지입니다. 이미지와 캡션에 대해 자세히 알아보았습니다. 다음 기사에서는 웹 페이지에 [비디오와 오디오 콘텐츠](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)를 삽입하는 방법에 대해 알아보겠습니다.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b")}}
