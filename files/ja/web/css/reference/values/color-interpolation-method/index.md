@@ -1,14 +1,14 @@
 ---
-title: <color-interpolation-method>
+title: CSS `<color-interpolation-method>` データ型
+short-title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
-original_slug: Web/CSS/color-interpolation-method
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<color-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{CSSXref("&lt;color&gt;")}} 値間の補間に使用する色空間を表します。これを使用すると、 {{CSSXref("color_value/color-mix", "color-mix()")}} や {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} のような色関連の関数記法における既定の補間色空間を上書きすることができます。
 
-`<color>` 値を補間する場合、補間色空間は Oklab が既定値です。
+`<color>` 値を補間する場合、補間色空間は Oklab がデフォルトです。
 
 ## 構文
 
@@ -23,13 +23,16 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### 値
 
 - `<rectangular-color-space>`
-  - : `srgb`、`srgb-linear`、`lab`、`oklab`、`xyz`、`xyz-d50`、`xyz-d65` のいずれかのキーワードです。
+  - : `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz`、`xyz-d50`、`xyz-d65` のいずれかのキーワードです。
 
 - `<polar-color-space>`
   - : `hsl`、`hwb`、`lch`、`oklch` のいずれかです。
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-  - : 色相補間のアルゴリズム。既定値は `shorter hue` です。
+  - : 色相補間のアルゴリズム。デフォルト値は `shorter hue` です。
+
+- `<custom-color-space>`
+  - : [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident#using_with_color-profile) で、カスタム [@color プロファイル](/ja/docs/Web/CSS/Reference/At-rules/@color-profile)を参照します。
 
 ### 形式文法
 
@@ -54,49 +57,6 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 #### CSS
 
-```css hidden
-/* Fallback styles */
-.srgb {
-  background-image: linear-gradient(
-    to right,
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%)
-  );
-}
-.oklab {
-  background-image: linear-gradient(
-    to right,
-    oklab(45.2% -0.032 -0.312),
-    oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.07 -0.137),
-    oklab(55.8% 0.122 -0.049),
-    oklab(59.3% 0.173 0.038),
-    oklab(62.8% 0.225 0.126)
-  );
-}
-.oklch-longer {
-  background-image: linear-gradient(
-    to right,
-    oklch(45.2% 0.313 264),
-    oklch(46.8% 0.308 243),
-    oklch(48.4% 0.303 221),
-    oklch(50% 0.298 200),
-    oklch(51.6% 0.293 179),
-    oklch(53.2% 0.288 157),
-    oklch(54.8% 0.283 136),
-    oklch(56.4% 0.278 115),
-    oklch(58% 0.273 93),
-    oklch(59.6% 0.268 72),
-    oklch(61.2% 0.263 51),
-    oklch(62.8% 0.258 29)
-  );
-}
-```
-
 ```css
 .gradient {
   height: 50px;
@@ -117,6 +77,69 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
 
+### 反復グラデーションでの色の補間
+
+次の例は、反復グラデーションの色を補間処理する際に、色空間を指定する方法を示しています。
+3 つのボックスには、[`repeating-conic-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-conic-gradient)、 [`repeating-linear-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-linear-gradient)、[`repeating-radial-gradient()`](/ja/docs/Web/CSS/Reference/Values/gradient/repeating-radial-gradient) の各関数を使用した、異なる種類の反復グラデーションを表示します。
+最初のボックスでは、Lab 色空間を使用して 2 つの色値の間を補間処理します。
+2 つ目と 3 つ目のボックスでは OkLCh を使用しており、さらに色相値間の補間処理を指定するための {{cssxref("hue-interpolation-method")}} も指定しています。
+
+#### HTML
+
+```html
+<div class="gradient conic">conic</div>
+<div class="gradient linear">linear</div>
+<div class="gradient radial">radial</div>
+```
+
+#### CSS
+
+それぞれのグラデーションで同じ 2 色を使用し、グラデーションにおける色の補間処理に対して、{{cssxref("hue-interpolation-method")}} と{{glossary("color space", "色空間")}}が及ぼす異なる効果を示しました。
+
+```css hidden
+.gradient {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 16px;
+}
+```
+
+```css
+.conic {
+  background-image: repeating-conic-gradient(
+    in lab,
+    burlywood,
+    blueviolet 120deg
+  );
+}
+
+.linear {
+  background-image: repeating-linear-gradient(
+    in oklch,
+    burlywood,
+    blueviolet 75px
+  );
+}
+
+.radial {
+  background-image: repeating-radial-gradient(
+    in oklch longer hue,
+    blueviolet 50px,
+    burlywood 100px
+  );
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
+
+1 つ目のボックスと 2 つ目のボックスを比較すると、異なる色空間における 2 つの色間の補間処理の違いがわかります。
+2 つ目と 3 つ目のボックスを比較すると、{{cssxref("hue-interpolation-method")}} の違いが示されています。線形グラデーションでは短い方（デフォルト）が使用され、放射グラデーションでは長い方が使用されています。
+
 ## 仕様書
 
 {{Specifications}}
@@ -127,5 +150,5 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 ## 関連情報
 
-- {{CSSXref("&lt;color&gt;")}}, {{CSSXref("gradient")}}
+- {{CSSXref("&lt;color&gt;")}}, {{cssxref("gradient")}}
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}}

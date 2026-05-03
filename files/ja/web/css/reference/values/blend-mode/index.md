@@ -1,12 +1,12 @@
 ---
-title: <blend-mode>
+title: CSS `<blend-mode>` データ型
+short-title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
-original_slug: Web/CSS/blend-mode
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
-**`<blend-mode>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、要素が重なったときにどのように色が現れるかを記述します。 {{cssxref("background-blend-mode")}} または {{cssxref("mix-blend-mode")}} プロパティで使用されます。
+**`<blend-mode>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、要素が重なったときにどのように色が現れるかを記述します。{{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティで使用されます。
 
 ## 構文
 
@@ -35,11 +35,11 @@ l10n:
 - `color-dodge`
   - : 下の色を、反転した上の色で除算した結果が、最終的な色になります。
     黒い前景は変化をもたらしません。背景色を反転した色を持つ前景は、完全に明るい色に導きます。
-    この混合モードは `screen` に似ていますが、完全に明るい色に近づけるためには背景色を反転した色と同程度に明るい前景が必要です。
+    この混合モードは `screen` に似ていますが、明るさが最大の色を生成するには、背景色を背景色を反転した色と同程度の明るさの前景色が必要です。
 - `color-burn`
   - : 反転した下の色を上の色で除算して、さらに反転した結果が最終的な色になります。
     白い背景は変化をもたらしません。背景色を反転した色を持つ前景は、最終的に黒い画像へ近づけます。
-    この混合モードは `multiply` に似ていますが、最終的に画像を暗くするためには背景色を反転した色と同程度に暗い前景が必要です。
+    この混合モードは `multiply` に似ていますが、最終的に画像を黒くするためには、背景色を反転した色と同程度の暗さの前景色が必要です。
 - `hard-light`
   - : 上の色が暗い色であれば `multiply` 、明るい色であれば `screen` の結果が最終的な色になります。
     この混合モードは `overlay` と同じですが、レイヤーが入れ替わっています。
@@ -86,269 +86,207 @@ l10n:
 
 ```css
 #div {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
+`background-blend-mode` に他の値を設定すると、異なる結果が得られます。
 
-### "multiply" の使用例
+{{ EmbedLiveSample('Example using "normal"', "100%", "300") }}
+
+### `background-blend-mode` の様々な値の比較
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
 ```css
-#div {
-  width: 300px;
-  height: 300px;
+.container {
+  width: 720px;
+  height: 760px;
+  display: grid;
+  grid: auto-flow 190px / repeat(4, 180px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container div div {
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
   background: url("br.png"), url("tr.png");
-  background-blend-mode: multiply;
+}
+
+.container div p {
+  line-height: 30px;
+  margin: 0;
+  color: #a33333;
+  text-align: center;
 }
 ```
 
-{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
+```js
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+];
 
-### "screen" の使用例
+const containerElem = document.querySelector(".container");
+
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.style.backgroundBlendMode = item;
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
+```
+
+リストを走査して複数の `div` 要素を生成し、それぞれの `backgroundBlendMode` の値を異なる値に設定します。
+
+{{ EmbedLiveSample('Comparison between different values with `background-blend-mode`', "100%", "780") }}
+
+### `mix-blend-mode` の様々な値の比較
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: screen;
+```css hidden
+.container {
+  width: 640px;
+  height: 800px;
+  display: grid;
+  grid: auto-flow 160px / repeat(4, 160px);
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+}
+
+.container > div {
+  border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.container > div > div {
+  position: relative;
+  margin-left: 20px;
+  width: 120px;
+  height: 120px;
+}
+
+.container div p {
+  margin: 0;
+  line-height: 30px;
+  color: #a33333;
+  text-align: center;
+}
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  position: absolute;
+}
+
+.circle-1 {
+  background: red;
+}
+
+.circle-2 {
+  background: lightgreen;
+  left: 40px;
+}
+
+.circle-3 {
+  background: blue;
+  left: 20px;
+  top: 40px;
+}
+
+.isolate {
+  isolation: isolate; /* Without isolation, the background color will be taken into account */
+  position: relative;
 }
 ```
 
-{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
+```js hidden
+const list = [
+  "normal",
+  "multiply",
+  "screen",
+  "overlay",
+  "darken",
+  "lighten",
+  "color-dodge",
+  "color-burn",
+  "hard-light",
+  "soft-light",
+  "difference",
+  "exclusion",
+  "hue",
+  "saturation",
+  "color",
+  "luminosity",
+  "plus-darker",
+  "plus-lighter",
+];
 
-### "overlay" の使用例
+const containerElem = document.querySelector(".container");
 
-```html hidden
-<div id="div"></div>
+list.forEach((item) => {
+  const innerElem = document.createElement("div");
+  innerElem.innerHTML = `
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+  `;
+
+  innerElem.querySelectorAll(".circle").forEach((circle) => {
+    circle.style.mixBlendMode = item;
+  });
+
+  const textElem = document.createElement("p");
+  textElem.innerText = item;
+
+  const outerElem = document.createElement("div");
+  outerElem.appendChild(textElem);
+  outerElem.appendChild(innerElem);
+
+  containerElem.appendChild(outerElem);
+});
 ```
 
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: overlay;
-}
-```
+次の例では、リストを走査して複数の `<div>` 要素を作成し、それぞれの `mixBlendMode` の値を異なる値で設定します。
 
-{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
-
-### "darken" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: darken;
-}
-```
-
-{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
-
-### "lighten" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: lighten;
-}
-```
-
-{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
-
-### "color-dodge" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-dodge;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
-
-### "color-burn" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color-burn;
-}
-```
-
-{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
-
-### "hard-light" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hard-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
-
-### "soft-light" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: soft-light;
-}
-```
-
-{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
-
-### "difference" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: difference;
-}
-```
-
-{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
-
-### "exclusion" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: exclusion;
-}
-```
-
-{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
-
-### "hue" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: hue;
-}
-```
-
-{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
-
-### "saturation" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: saturation;
-}
-```
-
-{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
-
-### "color" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: color;
-}
-```
-
-{{ EmbedLiveSample('Example using "color"', "300", "350") }}
-
-### "luminosity" の使用例
-
-```html hidden
-<div id="div"></div>
-```
-
-```css
-#div {
-  width: 300px;
-  height: 300px;
-  background: url("br.png"), url("tr.png");
-  background-blend-mode: luminosity;
-}
-```
-
-{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
+{{ EmbedLiveSample('Comparison between different values with `mix-blend-mode`', "100%", "820") }}
 
 ### 混合モードの比較
 
@@ -386,7 +324,7 @@ div {
   width: 300px;
   height: 300px;
   background:
-    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    url("https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png")
       no-repeat center,
     linear-gradient(to bottom, blue, orange);
 }
@@ -422,5 +360,5 @@ selectElem.addEventListener("change", () => {
 
 様々な混合モードの他のウェブサイトにおける解説:
 
-- [ブレンドモード](https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89)（ウィキペディア）
-- [Adobe Photoshop における描画モード](https://helpx.adobe.com/jp/photoshop/using/blending-modes.html) (Adobe)
+- [ブレンドモード](https://ja.wikipedia.org/wiki/ブレンドモード)（ウィキペディア）
+- [Adobe Photoshop における描画モード](https://helpx.adobe.com/jp/photoshop/desktop/repair-retouch/adjust-light-tone/blending-mode-descriptions.html) (Adobe)
