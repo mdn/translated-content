@@ -1,6 +1,8 @@
 ---
 title: TypeScript
 slug: Glossary/TypeScript
+l10n:
+  sourceCommit: b6d8629edca57aa241efcf3912b3136cfcc00a4c
 ---
 
 **TypeScript** — это язык программирования, который добавляет в JavaScript {{glossary("static_typing", "статическую проверку типов")}}.
