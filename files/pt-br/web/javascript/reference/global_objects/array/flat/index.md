@@ -1,9 +1,10 @@
 ---
 title: Array.prototype.flat()
+short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 O método **`flat()`** cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade especificada.
 
@@ -114,9 +115,7 @@ flatDeep(arr, Infinity);
 
 ## Especificações
 
-| Especificação                                                                                        | Status | Comentários |
-| ---------------------------------------------------------------------------------------------------- | ------ | ----------- |
-| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Draft  |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
