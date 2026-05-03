@@ -1,11 +1,12 @@
 ---
-title: rotate3d()
+title: CSS `rotate3d()` 関数
+short-title: rotate3d()
 slug: Web/CSS/Reference/Values/transform-function/rotate3d
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)は、要素を 3D 空間内の固定した軸を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+**`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)は、要素を三次元空間内の固定した軸を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: rotate3d()")}}
 
@@ -93,10 +94,10 @@ transform: rotate3d(0, 1, 0.5, 3.142rad);
 }
 ```
 
-3D 空間では、回転には三次元の自由度があり、これらが一緒になって単一の回転軸を表します。回転軸は \[x, y, z] ベクトルによって定義され、（{{ cssxref("transform-origin") }} プロパティで定義される）原点を通過します。もし、指定値として、ベクトルが*正規化*されていない場合（すなわち、3 つの座標の 2 乗の合計が 1 ではない場合）、{{glossary("user agent", "ユーザーエージェント")}}が内部的に正規化します。正規化できないベクトル、例えば null ベクトル \[0, 0, 0] では、回転が無視されますが、 CSS プロパティ全体を無効化はしません。
+三次元空間では、回転には三次元の自由度があり、これらが一緒になって単一の回転軸を表します。回転軸は \[x, y, z] ベクトルによって定義され、（{{ cssxref("transform-origin") }} プロパティで定義される）原点を通過します。もし、指定値として、ベクトルが*正規化*されていない場合（すなわち、3 つの座標の 2 乗の合計が 1 ではない場合）、{{glossary("user agent", "ユーザーエージェント")}}が内部的に正規化します。正規化できないベクトル、例えば null ベクトル \[0, 0, 0] では、回転が無視されますが、 CSS プロパティ全体を無効化はしません。
 
 > [!NOTE]
-> 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
+> 二次元平面での回転とは異なり、三次元での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。
 
 ## 構文
 
@@ -120,7 +121,7 @@ rotate3d(x, y, z, a)
     <tr>
       <th scope="col"><a href="/ja/docs/Web/CSS/Reference/Values/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
       <td rowspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+        この座標変換は三次元空間に適用され、平面で表すことはできません。
       </td>
     </tr>
     <tr>

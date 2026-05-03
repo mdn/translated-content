@@ -1,8 +1,9 @@
 ---
-title: translateY()
+title: CSS `translateY()` 関数
+short-title: translateY()
 slug: Web/CSS/Reference/Values/transform-function/translateY
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`translateY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を二次元平面上の垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
