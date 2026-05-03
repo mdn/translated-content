@@ -1,17 +1,12 @@
 ---
-title: ::cue
+title: CSS `::cue` 擬似クラス
+short-title: ::cue
 slug: Web/CSS/Reference/Selectors/::cue
-original_slug: Web/CSS/::cue
+l10n:
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
-**`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付けする](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)ことができます。
-
-```css
-::cue {
-  color: yellow;
-  font-weight: bold;
-}
-```
+**`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付設定](/ja/docs/Web/API/WebVTT_API#html_またはスタイルシートの中の_webvtt_のスタイル設定)することができます。
 
 {{InteractiveExample("CSS デモ: ::cue", "tabbed-shorter")}}
 
@@ -43,47 +38,53 @@ video::cue {
 
 このプロパティは、あたかも 1 つの部品であるかのように、一連のキュー全体に適用されます。 `background` とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。
 
+上記の例では、`::cue(u)` セレクターは、[キューテキスト](https://github.com/mdn/shared-assets/blob/main/misc/friday.vtt) 内のすべての [`<u>`](/ja/docs/Web/HTML/Reference/Elements/u) 要素を選択します。
+
 ## 構文
 
-{{CSSSyntax}}
+```css-nolint
+::cue | ::cue(<selector>) {
+  /* ... */
+}
+```
 
 ## 利用可能なプロパティ
 
-セレクターにこの要素を含むルールでは、以下の CSS プロパティしか使用することができません。
+セレクターにこの要素を含むルールでは、次の CSS プロパティしか使用することができません。
 
-- [`background`](/ja/docs/Web/CSS/Reference/Properties/background)
-- [`background-attachment`](/ja/docs/Web/CSS/Reference/Properties/background-attachment)
-- [`background-clip`](/ja/docs/Web/CSS/Reference/Properties/background-clip)
-- [`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color)
-- [`background-image`](/ja/docs/Web/CSS/Reference/Properties/background-image)
-- [`background-origin`](/ja/docs/Web/CSS/Reference/Properties/background-origin)
-- [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position)
-- [`background-repeat`](/ja/docs/Web/CSS/Reference/Properties/background-repeat)
-- [`background-size`](/ja/docs/Web/CSS/Reference/Properties/background-size)
-- [`color`](/ja/docs/Web/CSS/Reference/Properties/color)
-- [`font`](/ja/docs/Web/CSS/Reference/Properties/font)
-- [`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family)
-- [`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size)
-- [`font-stretch`](/ja/docs/Web/CSS/Reference/Properties/font-stretch)
-- [`font-style`](/ja/docs/Web/CSS/Reference/Properties/font-style)
-- [`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-weight`](/ja/docs/Web/CSS/Reference/Properties/font-weight)
-- [`line-height`](/ja/docs/Web/CSS/Reference/Properties/line-height)
-- [`opacity`](/ja/docs/Web/CSS/Reference/Properties/opacity)
-- [`outline`](/ja/docs/Web/CSS/Reference/Properties/outline)
-- [`outline-color`](/ja/docs/Web/CSS/Reference/Properties/outline-color)
-- [`outline-style`](/ja/docs/Web/CSS/Reference/Properties/outline-style)
-- [`outline-width`](/ja/docs/Web/CSS/Reference/Properties/outline-width)
-- [`ruby-position`](/ja/docs/Web/CSS/Reference/Properties/ruby-position)
-- [`text-combine-upright`](/ja/docs/Web/CSS/Reference/Properties/text-combine-upright)
-- [`text-decoration`](/ja/docs/Web/CSS/Reference/Properties/text-decoration)
-- [`text-decoration-color`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-color)
-- [`text-decoration-line`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-line)
-- [`text-decoration-style`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-style)
-- [`text-decoration-thickness`](/ja/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
-- [`text-shadow`](/ja/docs/Web/CSS/Reference/Properties/text-shadow)
-- [`visibility`](/ja/docs/Web/CSS/Reference/Properties/visibility)
-- [`white-space`](/ja/docs/Web/CSS/Reference/Properties/white-space)
+- {{cssxref("background")}}
+- {{cssxref("background-attachment")}}
+- {{cssxref("background-clip")}}
+- {{cssxref("background-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("background-origin")}}
+- {{cssxref("background-position")}}
+- {{cssxref("background-repeat")}}
+- {{cssxref("background-size")}}
+- {{cssxref("color")}}
+- {{cssxref("font")}}
+- {{cssxref("font-family")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
+- {{cssxref("opacity")}}
+- {{cssxref("outline")}}
+- {{cssxref("outline-color")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-width")}}
+- {{cssxref("ruby-position")}}
+- {{cssxref("text-combine-upright")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-shadow")}}
+- {{cssxref("visibility")}}
+- {{cssxref("white-space")}}
 
 ## 例
 
@@ -93,8 +94,28 @@ video::cue {
 
 ```css
 ::cue {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  background-color: rgb(0 0 0 / 60%);
+}
+```
+
+### WebVTT 内部ノードオブジェクトのスタイル設定
+
+キューテキストには、内部ノードオブジェクトをタグ（HTML 要素と同様）として指定することができます。具体的には、`<c>`、`<i>`、`<b>`、`<u>`、`<ruby>`、`<rt>`、`<v>`、`<lang>` などです。
+`::cue()` セレクターを使用することができます。これにより、これらのタグ内のコンテンツにスタイルを適用し、WebVTT トラックの表示方法をカスタマイズすることができます。
+`<u>` タグを使用してテキストに下線を引く、次のようなキューテキストを考えてみましょう。
+
+```plain
+00:00:01.500 --> 00:00:02.999 line:80%
+教えてください、<u>宇宙の主</u>はいらっしゃいますか？
+```
+
+次の CSS ルールは、`<u>` タグ内のテキストの色と [text-decoration](/ja/docs/Web/CSS/Reference/Properties/text-decoration) を指定してカスタマイズします。
+
+```css
+::cue(u) {
+  color: red;
+  text-decoration: wavy overline lime;
 }
 ```
 
