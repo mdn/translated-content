@@ -92,7 +92,7 @@ After each implementation phase, you will need to test the new functionality. To
 
 At this point, fix any problems you find with your new code.
 
-Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on [determining your target browsers](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)). For example:
+Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross browser issues (see the next article for more information on [determining your target browsers](/ru/docs/Learn_web_development/Extensions/Testing/Testing_strategies#Gotta_test_%27em_all)). For example:
 
 - Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, IE, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
@@ -149,7 +149,7 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 
 This article should have given you a high-level understanding of the most important concepts you need to know about cross browser testing. Armed with this knowledge, you are now ready to move on and start learning about Cross browser testing strategies.
 
-{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 ## In this module
 
