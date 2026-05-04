@@ -28,7 +28,7 @@ view-transition-class: unset;
 ### Valeurs
 
 - {{CSSxRef("&lt;custom-ident&gt;")}}
-  - : Un nom d'identification qui permet à l'élément sélectionné de participer à une [transition de vue](/fr/docs/Web/API/View_Transition_API) distincte de la transition de vue racine. L'identifiant doit être unique. Si deux éléments rendus ont le même `view-transition-name` en même temps, {{DOMxRef("ViewTransition.ready")}} rejettera et la transition sera ignorée.
+  - : Un nom d'identification qui permet à l'élément sélectionné de participer à une [transition de vue](/fr/docs/Web/API/View_Transition_API) distincte de la transition de vue racine. L'identifiant doit être unique. Si deux éléments rendus ont le même `view-transition-name` en même temps, {{DOMxRef("ViewTransition.ready")}} rejette et la transition est ignorée.
 - `none`
   - : Aucune classe ne s'appliquerait aux pseudo-éléments de transition de vue nommés générés pour cet élément.
 
