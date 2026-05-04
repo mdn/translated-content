@@ -1,8 +1,9 @@
 ---
-title: color()
+title: CSS `color()` 関数
+short-title: color()
 slug: Web/CSS/Reference/Values/color_value/color
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`color()`** 関数記法により、他のほとんどの色関数が暗黙に処理する sRGB {{glossary("color space", "色空間")}}ではなく、特定の指定した色空間で色を指定することができます。
