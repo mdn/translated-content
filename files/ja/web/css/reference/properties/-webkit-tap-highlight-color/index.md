@@ -1,21 +1,28 @@
 ---
-title: -webkit-tap-highlight-color
+title: CSS `-webkit-tap-highlight-color` プロパティ
+short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
-original_slug: Web/CSS/-webkit-tap-highlight-color
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{ CSSRef() }}
-
-{{ Non-standard_header() }}
+{{Non-standard_header}}
 
 **`-webkit-tap-highlight-color`** は CSS の標準外のプロパティで、リンクがタップされている間に表示される強調色を設定します。強調は、ユーザーがタップしたことが正常に認識されていることを示し、またどの要素がタップされているかを示します。
+
+## 構文
 
 ```css
 -webkit-tap-highlight-color: red;
 -webkit-tap-highlight-color: transparent; /* 強調をなくす */
-```
 
-## 構文
+/* グローバル値 */
+-webkit-tap-highlight-color: inherit;
+-webkit-tap-highlight-color: initial;
+-webkit-tap-highlight-color: revert;
+-webkit-tap-highlight-color: revert-layer;
+-webkit-tap-highlight-color: unset;
+```
 
 ### 値
 
@@ -27,7 +34,7 @@ original_slug: Web/CSS/-webkit-tap-highlight-color
 
 ## 形式文法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-tap-highlight-color = <color>`)}}
 
 ## 仕様書
 
@@ -41,6 +48,6 @@ original_slug: Web/CSS/-webkit-tap-highlight-color
 
 - [WebKit CSS 拡張](/ja/docs/Web/CSS/Reference/Webkit_extensions)
 - 関連する CSS 擬似クラス:
-  - [`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover)
-  - [`:active`](/ja/docs/Web/CSS/Reference/Selectors/:active)
-  - [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited)
+  - {{cssxref(":hover")}}
+  - {{cssxref(":active")}}
+  - {{cssxref(":visited")}}

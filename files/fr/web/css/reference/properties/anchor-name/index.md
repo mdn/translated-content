@@ -1,8 +1,9 @@
 ---
-title: anchor-name
+title: Propriété CSS `anchor-name`
+short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 l10n:
-  sourceCommit: 8300697ca75ca1e77175912110d4fe9ef48cb0bb
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`anchor-name`** permet de définir un élément comme **élément d'ancre** en lui attribuant un ou plusieurs **noms d'ancre**. Chaque nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("position-anchor")}} d'un élément positionné pour l'associer à l'ancre.

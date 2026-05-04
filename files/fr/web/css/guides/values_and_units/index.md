@@ -79,7 +79,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 - [`<time>`](/fr/docs/Web/CSS/Reference/Values/time)
 - [`<url>`](/fr/docs/Web/CSS/Reference/Values/url_value)
 - [`<url-modifier>`](/fr/docs/Web/CSS/Reference/Values/url_function#url-modifier)
-- [`<view-timeline-name>`](/fr/docs/Web/CSS/view-timeline-name)
+- [`<view-timeline-name>`](/fr/docs/Web/CSS/Reference/Properties/view-timeline-name)
 
 Le module des valeurs et unités CSS introduit également les types de données [`<frequency>`](/fr/docs/Web/CSS/Reference/Values/frequency) et [`<frequency-percentage>`](/fr/docs/Web/CSS/Reference/Values/frequency-percentage). Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
 

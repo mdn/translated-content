@@ -3,7 +3,7 @@ title: Fonctionnalités expérimentales dans Firefox
 short-title: Fonctionnalités expérimentales
 slug: Mozilla/Firefox/Experimental_features
 l10n:
-  sourceCommit: a28b03ab5b7bf13809362eb0f997880e0aece45f
+  sourceCommit: 291993c57c245249cf27c80f33f3dd22f8dd140d
 ---
 
 Cette page répertorie les fonctionnalités expérimentales et partiellement implémentées de Firefox, y compris les standards de la plateforme web en évolution ou proposés.
@@ -63,6 +63,20 @@ Les éléments HTML [`<input type="datetime-local">`](/fr/docs/Web/HTML/Referenc
 - `dom.forms.datetime.timepicker`
   - : Mettre sur `true` pour activer.
 
+### Les attributs `alpha` et `colorspace` dans les éléments de saisie `color`
+
+L'élément HTML [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color) prend en charge les attributs [`alpha`](/fr/docs/Web/HTML/Reference/Elements/input/color#alpha) et [`colorspace`](/fr/docs/Web/HTML/Reference/Elements/input/color#colorspace). ([Le bogue Firefox 1919718](https://bugzil.la/1919718)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Oui                 |
+| Developer Edition | -                      | -                   |
+| Beta              | -                      | -                   |
+| Release           | -                      | -                   |
+
+- `dom.forms.html_color_picker.enabled`
+  - : Mettre sur `true` pour activer.
+
 ## CSS
 
 ### Affichage des caractères de contrôle (rectangle avec valeur hexadécimale)
@@ -119,7 +133,7 @@ Vous pouvez également utiliser la notation fonctionnelle {{CSSxRef("animation-t
 
 Pour plus d'informations, voir [le bogue Firefox 1807685 <sup>(angl.)</sup>](https://bugzil.la/1807685), [le bogue Firefox 1804573 <sup>(angl.)</sup>](https://bugzil.la/1804573), [le bogue Firefox 1809005 <sup>(angl.)</sup>](https://bugzil.la/1809005), [le bogue Firefox 1676791 <sup>(angl.)</sup>](https://bugzil.la/1676791), [le bogue Firefox 1754897 <sup>(angl.)</sup>](https://bugzil.la/1754897), [le bogue Firefox 1817303 <sup>(angl.)</sup>](https://bugzil.la/1817303) et [le bogue Firefox 1737918 <sup>(angl.)</sup>](https://bugzil.la/1737918).
 
-Les propriétés {{CSSxRef('timeline-scope')}}, {{CSSxRef('animation-range-start')}} et {{CSSxRef('animation-range-end')}} (ainsi que la propriété abrégée {{CSSxRef('animation-range')}}) ne sont pas encore prises en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
+La propriété {{CSSxRef('timeline-scope')}} n'est pas encore prise en charge. Pour plus d'informations, voir [le bogue Firefox 1676779 <sup>(angl.)</sup>](https://bugzil.la/1676779).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -147,7 +161,8 @@ La fonctionnalité média CSS {{CSSxRef("@media/prefers-reduced-transparency")}}
 
 ### Fonctionnalité média `inverted-colors`
 
-La fonctionnalité média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs. (Voir [le bogue Firefox 1794628 <sup>(angl.)</sup>](https://bugzil.la/1794628) pour plus de détails.)
+La fonctionnalité média CSS {{CSSxRef("@media/inverted-colors")}} permet de détecter si un agent utilisateur ou le système d'exploitation sous-jacent inverse les couleurs.
+Voir [le bogue Firefox 1794628 <sup>(angl.)</sup>](https://bugzil.la/1794628) pour plus de détails.
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -177,7 +192,8 @@ Ce nom peut ensuite être assigné à `animation-timeline`, ce qui permet d'anim
 ### Fonction anonyme de progression de la vue
 
 La fonction CSS {{CSSxRef("animation-timeline/view")}} permet d'indiquer que la propriété `animation-timeline` d'un élément est une timeline de progression de la vue, ce qui animera l'élément lorsqu'il se déplace dans la zone visible de son élément de défilement ancêtre.
-La fonction définit l'axe de l'élément parent qui fournit la timeline, ainsi que l'encart dans la zone visible où l'animation commence et se termine. (Voir [le bogue Firefox 1808410 <sup>(angl.)</sup>](https://bugzil.la/1808410) pour plus de détails.)
+La fonction définit l'axe de l'élément parent qui fournit la timeline, ainsi que l'encart dans la zone visible où l'animation commence et se termine.
+Voir [le bogue Firefox 1808410 <sup>(angl.)</sup>](https://bugzil.la/1808410) pour plus de détails.
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -306,12 +322,70 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 146                    | Non                 |
-| Developer Edition | 146                    | Non                 |
-| Beta              | 146                    | Non                 |
-| Release           | 146                    | Non                 |
+| Nightly           | 148                    | Non                 |
+| Developer Edition | 148                    | Non                 |
+| Beta              | 148                    | Non                 |
+| Release           | 148                    | Non                 |
 
 - `layout.css.custom-media.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Valeurs `<attr-type>` dans la fonction CSS `attr()`
+
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les valeurs [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type). Cela vous permet de spécifier comment une valeur d'attribut est analysée en une valeur CSS et de prendre ces valeurs directement à partir de [`data-*`](/fr/docs/Web/HTML/How_to/Use_data_attributes). ([bogue Firefox 1986631 <sup>(angl.)</sup>](https://bugzil.la/1986631), [bogue Firefox 1998245 <sup>(angl.)</sup>](https://bugzil.la/1998245).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Non                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.attr.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Attributs avec espace de noms dans la fonction CSS `attr()`
+
+La fonction CSS {{CSSxRef("attr")}} prend désormais en charge les [attributs avec espace de noms](/fr/docs/Web/CSS/Reference/Values/attr#namespaces). Cela vous permet de prendre des attributs d'éléments de langages basés sur [XML](/fr/docs/Web/XML), tels que [SVG](/fr/docs/Web/SVG), et de les mettre en forme en conséquence. ([bogue Firefox 2014060 <sup>(angl.)</sup>](https://bugzil.la/2014060))
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `layout.css.attr.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Requêtes `@container style()`
+
+La règle CSS [`@container`](/fr/docs/Web/CSS/Reference/At-rules/@container) prend en charge les requêtes [`style()`](/fr/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#conteneurs_de_requêtes_de_style). Cela vous permet de vérifier si un conteneur possède une déclaration CSS valide, une propriété CSS ou une propriété personnalisée, et d'appliquer des styles à ses enfants en conséquence. ([bogue Firefox 2014404 <sup>(angl.)</sup>](https://bugzil.la/2014404)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 149                    | Oui                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
+
+- `layout.css.style-queries.enabled`
+  - : Mettre sur `true` pour activer.
+
+### Éléments positionnés en absolu dans des conteneurs multi-colonnes et lors de l'impression
+
+Les éléments positionnés en absolu à l'intérieur des [conteneurs multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout) et lors de l'impression sont désormais correctement positionnés et fragmentés.
+Cela améliore l'interopérabilité avec d'autres navigateurs et empêche les problèmes de mise en page tels que le chevauchement du texte ou la perte de contenu.
+([bogue Firefox 2018797 <sup>(angl.)</sup>](https://bugzil.la/2018797)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Oui                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `layout.abspos.fragmentainer-aware-positioning.enabled`
   - : Mettre sur `true` pour activer.
 
 ## SVG
@@ -320,54 +394,59 @@ La règle CSS {{CSSxRef("@custom-media")}} permet de définir des alias pour des
 
 ## JavaScript
 
-**Aucune fonctionnalité expérimentale dans ce cycle de publication.**
+### Tableaux associatifs multiples d'import
+
+Support pour [les tableaux associatifs multiples d'import](/fr/docs/Web/HTML/Reference/Elements/script/type/importmap#fusion_de_plusieurs_tableaux_associatifs_dimport).
+Cela donne aux développeur·euse·s plus de flexibilité lors de la structuration et du chargement des modules JavaScript, car ils n'ont plus besoin de connaître toutes leurs correspondances de modules à l'avance et de les déclarer dans un seul tableau associatif d'importation chargeant tous les modules.
+([bogue Firefox 1916277 <sup>(angl.)</sup>](https://bugzil.la/1916277)).
+
+| Canal de parution | Ajouté dans la version | Activé par défaut ? |
+| ----------------- | ---------------------- | ------------------- |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
+
+- `dom.multiple_import_maps.enabled`
+  - : Mettre sur `true` pour activer.
 
 ## Les API Web
 
-### Interface CloseWatcher
+### Registres d'éléments personnalisés à portée limitée
 
-Les composants web natifs ayant des sémantiques «&nbsp;ouvrir&nbsp;» et «&nbsp;fermer&nbsp;», comme les boîtes de dialogue modales et les popovers, peuvent être fermés à l'aide de mécanismes natifs de l'appareil.
-Par exemple, sur Android, vous pouvez fermer une boîte de dialogue avec le bouton retour.
-L'interface {{DOMxRef("CloseWatcher")}} permet aux développeur·euse·s d'implémenter des composants d'interface utilisateur, comme des barres latérales personnalisées, qui peuvent également être fermés à l'aide de mécanismes natifs.
-(Voir [le bogue Firefox 1888729 <sup>(angl.)</sup>](https://bugzil.la/1888729)).
+La prise en charge des [registres d'éléments personnalisés à portée limitée](/fr/docs/Web/API/Web_components/Using_custom_elements#registres_des_éléments_personnalisés_à_portée_limitée) est en cours d'implémentation.
+Les registres à portée permettent à un arbre d'ombre de créer un {{DOMxRef("CustomElementRegistry")}} indépendant dont les définitions ne s'appliquent qu'à ce sous-arbre DOM spécifique.
+Cela permet d'éviter les collisions lorsque plusieurs composants Web déclarent des éléments portant le même nom.
 
-| Canal de parution | Ajouté dans la version | Activé par défaut ?          |
-| ----------------- | ---------------------- | ---------------------------- |
-| Nightly           | 140                    | Oui (bureau). Non (Android). |
-| Developer Edition | 132                    | Non                          |
-| Beta              | 132                    | Non                          |
-| Release           | 132                    | Non                          |
+L'implémentation inclut&nbsp;:
 
-- `dom.closewatcher.enabled`
-  - : Mettre sur `true` pour activer.
-
-### L'API HTML Sanitizer
-
-[L'API HTML Sanitizer](/fr/docs/Web/API/HTML_Sanitizer_API) permet aux développeur·euse·s de prendre des chaînes HTML non fiables et de les assainir pour une insertion sûre dans le DOM d'un document.
+- La propriété `customElementRegistry` sur {{DOMxRef("Document")}}, {{DOMxRef("Element")}} et {{DOMxRef("ShadowRoot")}}.
+  ([bogue Firefox 2018900 <sup>(angl.)</sup>](https://bugzil.la/2018900)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 146                    | Oui                 |
-| Developer Edition | 147                    | Oui                 |
-| Beta              | 147                    | Oui                 |
-| Release           | 138                    | Non                 |
+| Nightly           | 150                    | Non                 |
+| Developer Edition | 150                    | Non                 |
+| Beta              | 150                    | Non                 |
+| Release           | 150                    | Non                 |
 
-- `dom.security.sanitizer.enabled`
+- `dom.scoped-custom-element-registries.enabled`
   - : Mettre sur `true` pour activer.
 
-### Suppression des évènements `beforescriptexecute` et `afterscriptexecute`
+### CSS Typed Object Model Level 1
 
-Les évènements non standard [`beforescriptexecute`](/fr/docs/Web/API/Document/beforescriptexecute_event) et [`afterscriptexecute`](/fr/docs/Web/API/Document/afterscriptexecute_event) sur l'interface {{DOMxRef("Document")}}, ainsi que [`afterscriptexecute`](/fr/docs/Web/API/Element/afterscriptexecute_event) et [`beforescriptexecute`](/fr/docs/Web/API/Element/beforescriptexecute_event) sur l'interface {{DOMxRef("Element")}}, sont en voie de suppression. Ils ont été désactivés dans Nightly.
-(Voir [le bogue Firefox 1954685 <sup>(angl.)</sup>](https://bugzil.la/1954685)).
+Le travail d'implémentation a commencé sur le [CSS Typed OM Level 1 <sup>(angl.)</sup>](https://drafts.css-houdini.org/css-typed-om/).
+Par exemple, la méthode {{DOMxRef("CSSNumericValue/to", "to()")}} de l'interface {{DOMxRef("CSSNumericValue")}} est prise en charge pour convertir une valeur numérique CSS d'une unité à une autre.
+([bogue Firefox 1278697 <sup>(angl.)</sup>](https://bugzil.la/1278697)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
-| Nightly           | 139                    | Non                 |
-| Developer Edition | 139                    | Oui                 |
-| Beta              | 139                    | Oui                 |
-| Release           | 139                    | Oui                 |
+| Nightly           | 149                    | Non                 |
+| Developer Edition | 149                    | Non                 |
+| Beta              | 149                    | Non                 |
+| Release           | 149                    | Non                 |
 
-- `dom.events.script_execute.enable`
+- `layout.css.typed-om.enabled`
   - : Mettre sur `true` pour activer.
 
 ### Propriétés `actions` et `maxActions` de Notification
@@ -411,29 +490,6 @@ Voir [le bogue Firefox 1602129 <sup>(angl.)</sup>](https://bugzil.la/1602129) po
   - : Mettre sur `true` pour activer (activé dans Nightly et sur Windows dans toutes les versions)
 - `dom.webgpu.service-workers.enabled`
   - : Mettre sur `true` pour activer (activé dans Nightly)
-
-### Prise en charge de l'API Reporting pour les violations CSP
-
-[L'API Reporting](/fr/docs/Web/API/Reporting_API) prend désormais en charge le signalement des violations de la [Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
-
-Les instances de {{DOMxRef('Report')}} retournées par l'interface {{DOMxRef('ReportingObserver')}} peuvent désormais avoir une valeur `type` de `"csp-violation"` et une propriété `body` qui contient une instance de l'interface {{DOMxRef('CSPViolationReportBody')}}.
-Cela permet de signaler les violations CSP au sein d'une page web.
-
-Les rapports de violation CSP peuvent également être envoyés à des points de terminaison distants définis par nom dans la directive CSP {{CSP("report-to")}} — les noms de points de terminaison et les URL correspondantes doivent d'abord être définis dans les en-têtes de réponse HTTP {{HTTPHeader('Reporting-Endpoints')}} ou {{HTTPHeader('Report-To')}}.
-Le rapport est une sérialisation de l'objet {{DOMxRef('Report')}} décrit ci-dessus, avec une propriété `body` qui est une sérialisation d'une instance de {{DOMxRef('CSPViolationReportBody')}}.
-
-Ce rapport de violation remplace un mécanisme similaire spécifique à CSP pour l'envoi de rapports de violation, qui utilise la directive CSP {{CSP("report-uri")}} pour définir l'URL du point de signalement, et dispose d'un [format JSON de rapport de violation spécifique à CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-(Voir [le bogue Firefox 1391243 <sup>(angl.)</sup>](https://bugzil.la/1391243)).
-
-| Canal de parution | Ajouté dans la version | Activé par défaut ? |
-| ----------------- | ---------------------- | ------------------- |
-| Nightly           | 130                    | Non                 |
-| Developer Edition | 130                    | Non                 |
-| Beta              | 130                    | Non                 |
-| Release           | 130                    | Non                 |
-
-- `dom.reporting.enabled`
-  - : Mettre sur `true` pour activer.
 
 ### WebRTC et multimédia
 
@@ -491,6 +547,7 @@ Firefox prend en charge les images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org
 Voir [le bogue Firefox 1539075 <sup>(angl.)</sup>](https://bugzil.la/1539075) pour plus de détails.
 
 Notez que, comme indiqué ci-dessous, la fonctionnalité n'est disponible que dans les versions Nightly (peu importe si la préférence est activée).
+Dans Firefox 149, le précédent décodeur d'images [JPEG XL <sup>(angl.)</sup>](https://jpeg.org/jpegxl/) en C++ a été remplacé par une nouvelle implémentation en Rust utilisant la bibliothèque `jxl-rs` ([bogue Firefox 1986393 <sup>(angl.)</sup>](https://bugzil.la/1986393)).
 
 | Canal de parution | Ajouté dans la version | Activé par défaut ? |
 | ----------------- | ---------------------- | ------------------- |
@@ -591,24 +648,6 @@ Cette fonctionnalité est activée sur Android dans toutes les versions, mais n�
 | Release           | 71               | Non (bureau). Oui (Android).                 |
 
 - `dom.webshare.enabled`
-  - : Mettre sur `true` pour activer.
-
-### L'API Screen Orientation
-
-#### `ScreenOrientation.lock()`
-
-La méthode {{DOMxRef("ScreenOrientation.lock()")}} permet de verrouiller un appareil sur une orientation particulière, si cela est pris en charge par l'appareil et autorisé par les exigences préalables du navigateur.
-En général, le verrouillage de l'orientation n'est autorisé que sur les appareils mobiles lorsque le document est affiché en plein écran.
-Voir [le bogue Firefox 1697647 <sup>(angl.)</sup>](https://bugzil.la/1697647) pour plus de détails.
-
-| Canal de parution | Version modifiée | Activé par défaut ? |
-| ----------------- | ---------------- | ------------------- |
-| Nightly           | 111              | Oui                 |
-| Developer Edition | 97               | Non                 |
-| Beta              | 97               | Non                 |
-| Release           | 97               | Non                 |
-
-- `dom.screenorientation.allow-lock`
   - : Mettre sur `true` pour activer.
 
 ### L'API Notifications

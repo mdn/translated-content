@@ -7,7 +7,7 @@ slug: Web/API/SVGTextContentElement
 
 Интерфейс **`SVGTextContentElement`** реализуется элементами, которые поддерживают рендеринг дочернего текстового содержимого. Он наследуется различными текстовыми интерфейсами, такими как {{domxref("SVGTextElement")}}, {{domxref("SVGTSpanElement")}}, {{domxref("SVGTRefElement")}}, {{domxref("SVGAltGlyphElement")}} и {{domxref("SVGTextPathElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Константы
 

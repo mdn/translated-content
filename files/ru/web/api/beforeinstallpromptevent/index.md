@@ -7,7 +7,7 @@ slug: Web/API/BeforeInstallPromptEvent
 
 Событие **`BeforeInstallPromptEvent`** запускается в обработчике {{domxref("Window.onbeforeinstallprompt")}} перед тем, как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.Этот интерфейс наследуется от интерфейса {{domxref("Event")}}.
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## Конструктор
 

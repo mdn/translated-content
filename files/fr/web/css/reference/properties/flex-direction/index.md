@@ -1,8 +1,9 @@
 ---
-title: flex-direction
+title: Propriété CSS `flex-direction`
+short-title: flex-direction
 slug: Web/CSS/Reference/Properties/flex-direction
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans le conteneur flexible, en définissant l'axe principal et la direction (normale ou inversée).

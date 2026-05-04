@@ -2,46 +2,64 @@
 title: Réaliser une démo basique avec Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 l10n:
-  sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
+  sourceCommit: 1a0be468b9e7c88a09ea3438a81341c4f6a619a6
 ---
 
-Une scène 3D dans un jeu, même la plus simple qui soit, contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour améliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three.js, notamment la configuration d'un environnement de développement, la structure du code HTML nécessaire, les objets fondamentaux de ThreeJS et la manière de créer une démonstration de base.
+Une scène 3D dans un jeu — même la plus simple qui soit — contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour améliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme n'importe quelle autre bibliothèque 3D, fournit des fonctions utilitaires intégrées pour vous aider à mettre en œuvre plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous allons vous présenter les bases réelles de l'utilisation de Three.js, y compris la configuration d'un environnement de développement, la structuration du HTML nécessaire, les objets fondamentaux de Three et comment construire une démo basique.
+
+_Three_ est l'une des bibliothèques [WebGL](/fr/docs/Web/API/WebGL_API) les plus populaires, bien que nous ne disions pas qu'elle soit meilleure qu'une autre bibliothèque WebGL, et vous devriez vous sentir libre d'essayer d'autres bibliothèques.
 
 > [!NOTE]
-> Nous avons choisi ThreeJS, car il s'agit de l'une des bibliothèques [WebGL](/fr/docs/Web/API/WebGL_API) les plus populaires, avec laquelle il est facile de commencer. Nous ne disons pas qu'il s'agit de la meilleure bibliothèque WebGL disponible, n'hésitez pas à expérimenter avec d'autres bibliothèques, comme [CopperLicht](https://www.ambiera.com/copperlicht/index.html), ou [PlayCanvas](https://playcanvas.com/).
+> Ce guide a été mis à jour pour la dernière fois en Novembre 2024, et est compatible avec la version `r79` de Three.js.
 
 ## Configuration de l'environnement de développement
 
-Pour commencer à développer Three.js\*\*&nbsp;:
+Pour commencer à développer avec Three.js, vous devez vous assurer d'utiliser un navigateur moderne avec une bonne prise en charge de [WebGL](/fr/docs/Web/API/WebGL_API).
 
-- Assurez-vous d'utiliser un navigateur moderne avec une bonne prise en charge de [WebGL](/fr/docs/Web/API/WebGL_API) (la dernière version de Firefox, Safari, Chrome ou Edge devrait suffire)
-- Créez un répertoire où enregistrer vos expérimentations
-- Enregistrez un exemplaire à jour de [la version minifiée de la bibliothèque Three.js](https://threejs.org/build/three.min.js) dans le répertoire
-- Ouvrez [la documentation de Three.js](https://threejs.org/docs/) dans un nouvel onglet afin de pouvoir vous y référer.
+Dans votre code, vous pouvez importer Three.js [en utilisant un CDN ou Node.js <sup>(angl.)</sup>](https://threejs.org/docs/#manual/en/introduction/Installation).
+Si vous l'incluez depuis un CDN, vous pouvez utiliser l'URL suivante dans votre HTML&nbsp;:
 
-## Structure HTML
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+```
 
-Voici la structure que nous allons utiliser
+Une configuration Node.js avec Three.js installé en tant que dépendance est pratique si vous souhaitez développer avec des versions spécifiques de Three.js et cela peut accélérer la collaboration et le déploiement&nbsp;:
+
+```bash
+npm install --save three
+npm install --save-dev vite # Pour le développement
+npx vite
+```
+
+Sinon, vous pouvez télécharger la [dernière version de la bibliothèque Three.js <sup>(angl.)</sup>](https://github.com/mrdoob/three.js/archive/master.zip) et copier la version minifiée de Three.js depuis l'archive décompressée à `build/three.module.min.js` dans votre projet.
+Gardez à l'esprit que les archives incluent les fichiers source, ce qui rend la taille du téléchargement d'environ 350 Mo.
+
+Quelle que soit la méthode que vous choisissez pour commencer, assurez-vous d'avoir la [documentation de Three.js <sup>(angl.)</sup>](https://threejs.org/docs/) ouverte quelque part pendant que vous travaillez pour référence.
+
+## HTML de départ pour Three.js
+
+Si vous construisez votre projet localement dans un IDE, voici la structure HTML pour commencer&nbsp;:
 
 ```html
 <!doctype html>
-<html lang="fr-FR">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Jeux avec MDN : démonstration Three.js</title>
     <style>
-      body {
+      html,
+      body,
+      canvas {
         margin: 0;
         padding: 0;
-      }
-      canvas {
         width: 100%;
         height: 100%;
+        font-size: 0;
       }
     </style>
   </head>
   <body>
-    <script src="three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
     <script>
       const WIDTH = window.innerWidth;
       const HEIGHT = window.innerHeight;
@@ -51,17 +69,16 @@ Voici la structure que nous allons utiliser
 </html>
 ```
 
-Cette structure contient des informations de base comme le titre du document ([`<title>`](/fr/docs/Web/HTML/Reference/Elements/title)), un peu de CSS pour définir la largeur ([`width`](/fr/docs/Web/CSS/Reference/Properties/width)) et la hauteur ([`height`](/fr/docs/Web/CSS/Reference/Properties/height)) du canevas ([`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas)), ici 100% pour remplir tout l'espace disponible.
+Cette structure contient des informations de base comme le {{HTMLElement("title")}} du document, ainsi que du CSS pour définir la `width` et la `height` de l'élément HTML {{HTMLElement("canvas")}} que Three.js ajoutera à la page en 100% pour remplir tout l'espace disponible de la zone d'affichage. Le premier élément HTML {{HTMLElement("script")}} inclut la bibliothèque Three.js dans la page, et nous écrirons notre code d'exemple dans le second. Deux variables utilitaires sont déjà incluses, elles stockent la `width` et la `height` de la fenêtre.
 
-Le premier élément [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) inclut la bibliothèque Three.js dans la page. Nous écrirons notre code dans le deuxième élément `<script>`. Nous avons déjà inclus deux variables utilitaires pour stocker la largeur et la hauteur de la fenêtre (respectivement `WIDTH` et `HEIGHT`).
-
-Avant de poursuivre, copiez ce code dans un fichier nommé `index.html` dans votre répertoire de travail.
+Avant de continuer, copiez ce code dans un nouveau fichier texte et enregistrez-le dans votre répertoire de travail sous le nom `index.html`.
 
 ## Moteur de rendu
 
-Un moteur de rendu (<i lang="en">renderer</i> en anglais) est un outil qui affiche les scènes directement dans votre navigateur. Il existe plusieurs moteurs différents&nbsp;: WebGL par défaut, mais aussi SVG, CSS, et le DOM. Ils diffèrent dans la façon dont ils gèrent le rendu et une implémentation WebGL implémentera une scène différemment d'une implémentation CSS. Malgré leurs différences, l'expérience utilisateur sera la même.
+Un moteur de rendu est un outil qui affiche les scènes directement dans votre navigateur. Il existe plusieurs moteurs différents&nbsp;: WebGL est le moteur par défaut, mais vous pouvez aussi utiliser Canvas, SVG, CSS et DOM. Ils diffèrent dans la façon dont tout est rendu, donc l'implémentation WebGL sera différente de celle en CSS. Malgré la variété des méthodes utilisées pour atteindre cet objectif, l'expérience sera identique pour l'utilisateur·ice. Grâce à cette approche, une solution de secours peut être utilisée si une technologie souhaitée n'est pas prise en charge par le navigateur.
 
-Grâce à cette approche, une solution de secours peut être utilisée, si une technologie n'est pas prise en charge par le navigateur.
+Le code ci-dessous crée un nouveau moteur de rendu WebGL, définit sa taille pour occuper tout l'espace disponible à l'écran, et ajoute la structure DOM à la page.
+Vous avez peut-être remarqué le paramètre `antialias` dans la première ligne — cela permet d'obtenir des bords de formes plus lisses. La méthode `setClearColor()` définit l'arrière-plan sur une couleur gris clair, au lieu du noir par défaut.
 
 ```js
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -70,13 +87,13 @@ renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
-Nous créons un nouveau rendu WebGL, définissons sa taille pour qu'elle occupe tout l'espace disponible à l'écran et ajoutons la structure DOM à la page. Vous avez peut-être remarqué le paramètre `antialias` dans la première ligne, cela évite les effets de [crénelage](https://fr.wikipedia.org/wiki/Crénelage) pour les bords des formes. La méthode `setClearColor()` définit notre arrière-plan avec une couleur gris clair au lieu du noir par défaut.
-
-Ajoutez ce code dans notre deuxième balise [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) du fichier `index.html`, juste en dessous du commentaire JavaScript.
+Ajoutez ce code dans notre second élément HTML {{HTMLElement("script")}}, juste en dessous du commentaire JavaScript.
 
 ## Scène
 
-Une scène est l'endroit où tout se passe. Lors de la création de nouveaux objets dans la démo, nous les ajoutons tous à l'intérieur de la scène afin qu'ils soient visibles à l'écran. Dans Three.js, la scène est représentée par un objet `Scene`. Créons-le, en ajoutant la ligne suivante sous nos lignes précédentes&nbsp;:
+Une scène est l'endroit où tout se passe.
+Lors de la création de nouveaux objets dans la démo, nous les ajoutons tous à l'intérieur de la scène afin qu'ils soient visibles à l'écran.
+Dans Three.js, la scène est représentée par un objet `Scene`. Créons-le, en ajoutant la ligne suivante sous nos lignes précédentes&nbsp;:
 
 ```js
 const scene = new THREE.Scene();
@@ -103,13 +120,11 @@ Il existe d'autres types de caméra (cube, orthographique), mais la plus simple 
 - La position `z`, avec une valeur de 50 unités, est la distance entre la caméra et le centre de la scène sur l'axe `z`. Ici, nous reculons la caméra, afin que les objets de la scène puissent être visualisés. 50 est une valeur correcte. Ce n'est ni trop près, ni trop loin, et la taille des objets leur permet de rester sur la scène, dans le champ de vision donné. Les valeurs `x` et `y`, si elles ne sont pas spécifiées, seront définies par défaut à 0.
 
 N'hésitez pas à modifier ces valeurs et observer les effets de ces changements sur la scène.
-
-> [!NOTE]
-> Les valeurs de distance (par exemple pour la position z de la caméra) sont sans unité et peuvent correspondre à toute unité que vous utiliserez pour l'ensemble des objets de la scène (millimètres, mètres, etc.).
+Les valeurs de distance (par exemple pour la position z de la caméra) sont sans unité et peuvent correspondre à toute unité que vous utiliserez pour l'ensemble des objets de la scène (millimètres, mètres, etc.).
 
 ## Rendu de la scène
 
-Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effectuer le rendu. Notre fonction `render()` fera ce travail, avec un peu d'aide de [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame), ce qui signifie que le rendu de scène sera calculé à chaque image&nbsp;:
+Tout est prêt, mais on ne voit toujours rien. Bien que nous ayons configuré le moteur de rendu, nous devons toujours effectuer le rendu. Notre fonction `render()` fera ce travail, avec un peu d'aide de {{DOMxRef("Window/requestAnimationFrame", "requestAnimationFrame()")}}, ce qui signifie que le rendu de scène sera calculé à chaque image&nbsp;:
 
 ```js
 function render() {
@@ -119,7 +134,7 @@ function render() {
 render();
 ```
 
-À chaque nouvelle image, la fonction `render()` est invoquée, et le `renderer` fera le rendu de la scène, selon l'angle de vue fourni par la caméra. Juste après la déclaration de fonction, nous l'invoquons pour la première fois afin de débuter la boucle, après quoi elle sera utilisée indéfiniment.
+À chaque nouvelle image, la fonction `render` est appelée, et le `renderer` effectue le rendu de la `scene` et de la `camera`. Juste après la déclaration de la fonction, nous l'appelons pour la première fois afin de démarrer la boucle, après quoi elle sera utilisée indéfiniment.
 
 Là encore, ajoutez ce nouveau code sous vos précédents ajouts. Enregistrez votre fichier et ouvrez-le dans votre navigateur. Vous devriez voir une fenêtre grise. Félicitations&nbsp;!
 
@@ -140,10 +155,6 @@ Un matériau est ce qui recouvre un objet, les couleurs, ou les textures sur sa 
 ```js
 const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
-
-Ajoutez cette ligne sous le code précédemment ajouté.
-
-Notre matériau est maintenant prêt. Que faut-il d'autre&nbsp;?
 
 ## Maillage
 
@@ -169,15 +180,57 @@ Si vous sauvegardez et rafraîchissez votre navigateur, notre objet ressemblera 
 cube.rotation.set(0.4, 0.2, 0);
 ```
 
-Félicitations, vous avez créé un objet dans un environnement 3D&nbsp;! Voici ce à quoi ça devrait ressembler&nbsp;:
+## Exemple de forme avec Three.js
 
-![Un cube bleu sur un arrière-plan gris, rendu avec Three.js.](cube.png)
+Si vous avez suivi toutes les étapes jusqu'à présent sans aucun problème, vous avez créé votre premier objet dans un environnement 3D en utilisant Three.js&nbsp;!
+Félicitations.
+Votre code devrait ressembler à l'exemple interactif suivant.
+Vous pouvez cliquer sur «&nbsp;Exécuter&nbsp;» pour visualiser et éditer le code dans le MDN Playground&nbsp;:
 
-Pour récapituler, voici le code que nous avons créé jusqu'ici&nbsp;:
+```html hidden live-sample___three-js-intro
+<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+```
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/bwup75fa/","","350")}}
+```js hidden live-sample___three-js-intro
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-Vous pouvez aussi [consulter l'exemple sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/cube.html).
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
+camera.position.z = 50;
+scene.add(camera);
+
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+scene.add(cube);
+cube.rotation.set(0.4, 0.2, 0);
+
+function render() {
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
+}
+render();
+```
+
+```css hidden live-sample___three-js-intro
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{EmbedLiveSample("three-js-intro", "", 400)}}
 
 ## Plus de formes et de matériaux
 
@@ -193,12 +246,14 @@ Ajoutons maintenant plus de formes et de matériaux. Que devrait-il arriver si v
 const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
 const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
 const torus = new THREE.Mesh(torusGeometry, phongMaterial);
+torus.rotation.set(0.5, 0.5, 0);
 scene.add(torus);
 ```
 
-Ces lignes vont ajouter un tore. La méthode `TorusGeometry()` utilise des paramètres pour le rayon du tore, le diamètre du tube, le nombre de segments radiaux et le nombre de segments tubulaires. Quant au matériau `Phong`, il a un aspect plus brillant que le matériau de base utilisé précédemment pour la boîte (même si pour l'instant, le tore apparaît noir).
+Ces lignes vont ajouter une géométrie de tore&nbsp;; les paramètres de la méthode `TorusGeometry()` définissent respectivement le rayon, le diamètre du tube, le nombre de segments radiaux et le nombre de segments tubulaires. Le matériau `Phong` devrait paraître plus brillant que le matériau `Basic` simple de la boîte, même si pour l'instant notre tore apparaîtra noir.
+Ajouter une rotation donne au tore une profondeur initiale pour qu'il ne paraisse pas plat.
 
-Nous pouvons utiliser d'autres de formes prédéfinies. Ajoutez les lignes suivantes après celles qui définissent le tore&nbsp;:
+Nous pouvons choisir d'autres formes prédéfinies amusantes. Continuons à expérimenter. Ajoutez les lignes suivantes, juste après celles qui définissent le tore&nbsp;:
 
 ```js
 const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
@@ -208,9 +263,9 @@ dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
 
-Cette fois, nous créons un dodécaèdre, une forme contenant douze faces plates et le paramètre passé à `DodecahedronGeometry()` définit la taille de l'objet. Nous utilisons un matériau `Lambert`, similaire au matériau `Phong`, mais moins brillant. À nouveau, l'objet est noir pour l'instant. Nous déplaçons l'objet vers la droite, afin qu'il ne soit pas au même emplacement que la boîte, ou le tore.
+Cette fois, nous créons un dodécaèdre, une forme contenant douze faces plates. Le paramètre passé à `DodecahedronGeometry()` définit la taille de l'objet. Nous utilisons un matériau `Lambert`, similaire au matériau `Phong`, mais moins brillant. À nouveau, l'objet est noir pour l'instant. Nous déplaçons l'objet vers la droite, afin qu'il ne soit pas au même emplacement que la boîte, ou le tore.
 
-Tel que mentionné plus haut, les nouveaux objets apparaissent noirs. Pour que les matériaux Phong et Lambert soient correctement visibles, nous devons introduire une source de lumière.
+Tel que mentionné plus haut, les nouveaux objets apparaissent noirs. Pour que les matériaux `Phong` et `Lambert` soient correctement visibles, nous devons introduire une source de lumière.
 
 ## Lumières
 
@@ -224,9 +279,7 @@ scene.add(light);
 
 Nous définissons un point de lumière blanche, ajustons sa position un peu plus loin que le centre de la scène, afin que certaines parties des formes soient éclairées, et enfin nous l'ajoutons à la scène. Désormais, les trois formes sont visibles. N'hésitez pas à consulter la documentation pour en savoir plus sur les autres types de lumière, telles que `Ambient`, `Directional`, `Hemisphere`, ou `Spot`. Essayez de les placer sur la scène, afin de voir l'effet qu'elles apportent.
 
-![Des formes : un cube bleu, un tore jaune foncé et un dodécahèdre gris foncé, sur un arrière-plan gris, rendus avec Three.js.](shapes.png)
-
-Malgré tout, ceci paraît un peu ennuyeux. Dans un jeu, il y a toujours de l'action. Il nous faut des animations. Donnons un peu de vie à nos formes, en les animant.
+Ce sont de bons progrès, mais nous pouvons rendre cela plus intéressant&nbsp;! Dans un jeu, il se passe généralement quelque chose. On peut voir des animations et autres. Essayons donc d'insuffler un peu de vie à ces formes, en les animant&nbsp;!
 
 ## Animation
 
@@ -257,9 +310,7 @@ t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-Nous utilisons `Math.sin()` pour obtenir un résultat plutôt intéressant. Cela modifie la taille du tore de façon périodique (le sinus étant une fonction périodique). Pour éviter un rendu incohérent avec un facteur d'échelle négatif, nous passons la valeur absolue avec `Math.abs()`.
-
-Voyons maintenant comment créer du mouvement.
+Nous utilisons `Math.sin()` pour obtenir un résultat plutôt intéressant. Cela modifie la taille du tore de façon périodique (le sinus étant une fonction périodique). Pour éviter un rendu incohérent avec un facteur d'échelle négatif, nous passons la valeur absolue avec `Math.abs()`. Voyons maintenant comment créer du mouvement.
 
 ### Déplacement
 
@@ -271,12 +322,81 @@ dodecahedron.position.y = -7 * Math.sin(t * 2);
 
 Cela va déplacer le dodécaèdre de haut en bas, en appliquant la valeur `sin()` à l'axe `y` à chaque image. Nous ajustons le résultat avec deux facteurs de multiplication pour obtenir un effet plus intéressant. Vous pouvez modifier ces coefficients pour observer l'effet qu'ils ont sur l'animation.
 
-## Conclusion
+## Exemple avec une animation Three.js
 
-Voici le code final&nbsp;
+Voici le code final avec des formes animées.
+Vous pouvez cliquer sur «&nbsp;Exécuter&nbsp;» pour éditer l'exemple dans le MDN Playground&nbsp;:
 
-{{JSFiddleEmbed("https://jsfiddle.net/rybr720u/","","350")}}
+```html hidden live-sample___three-js-animation
+<script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+```
 
-Vous pouvez aussi [consulter le code sur GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Three.js/shapes.html) et [faire une copie du dépôt](https://github.com/end3r/MDN-Games-3D/) si vous souhaitez manipuler le code sur votre ordinateur. Maintenant que vous avez découvert les bases de Three.js, vous pouvez revenir à la page parente, [la 3D sur le Web](/fr/docs/Games/Techniques/3D_on_the_web).
+```js live-sample___three-js-animation
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-Vous pouvez aussi apprendre à utiliser l'API WebGL de façon brute, pour mieux comprendre ce qui se passe sous le capot de Three.js. Pour cela, consultez notre page sur [la documentation WebGL](/fr/docs/Web/API/WebGL_API).
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(WIDTH, HEIGHT);
+renderer.setClearColor(0xdddddd, 1);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 0.1, 10000);
+camera.position.z = 50;
+scene.add(camera);
+
+const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
+cube.position.x = -25;
+cube.rotation.set(0.4, 0.2, 0);
+scene.add(cube);
+
+const torusGeometry = new THREE.TorusGeometry(7, 1, 16, 32);
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
+torus.rotation.set(0.5, 0.5, 0);
+scene.add(torus);
+
+const strangeGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
+const dodecahedron = new THREE.Mesh(strangeGeometry, lambertMaterial);
+dodecahedron.position.x = 25;
+scene.add(dodecahedron);
+
+const light = new THREE.PointLight(0xffffff);
+light.position.set(-10, 15, 50);
+scene.add(light);
+
+let t = 0;
+function render() {
+  t += 0.01;
+  requestAnimationFrame(render);
+  cube.rotation.y += 0.01;
+  torus.scale.y = Math.abs(Math.sin(t));
+  dodecahedron.position.y = -7 * Math.sin(t * 2);
+  renderer.render(scene, camera);
+}
+render();
+```
+
+```css hidden live-sample___three-js-animation
+body,
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+```
+
+{{EmbedLiveSample("three-js-animation", "", 400)}}
+
+## Résumé
+
+Vous connaissez maintenant les bases de Three.js&nbsp;; amusez-vous à expérimenter&nbsp;!
+Vous pouvez continuer à lire la documentation sur les [jeux 3D sur le Web](/fr/docs/Games/Techniques/3D_on_the_web) si vous souhaitez en savoir plus.
+Vous pouvez également essayer d'apprendre WebGL, pour mieux comprendre ce qui se passe en dessous.
+Consultez notre [documentation WebGL](/fr/docs/Web/API/WebGL_API) pour plus d'informations.

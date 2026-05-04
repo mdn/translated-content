@@ -139,7 +139,7 @@ Maintenant que nous avons définit notre viseur, on a besoin de le faire appara�
 
 Pour implémenter le compteur de score, suivez les étapes suivantes:
 
-1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément {{HTMLElement("h1")}} .
+1. Dans votre fichier HTML, ajoutez un élement {{HTMLElement("p")}} qui contiendra le texte suivant "Ball count: ", juste en dessous de l'élément `{{htmlelement("Heading_Elements", "&lt;h1&gt;")}}` .
 2. Dans votre fichier CSS, ajouter les règlesz suivantes:
 
    ```css

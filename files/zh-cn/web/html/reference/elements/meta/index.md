@@ -9,16 +9,16 @@ slug: Web/HTML/Reference/Elements/meta
   <tbody>
     <tr>
       <th>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容"
           >元数据内容</a
-        >。如果 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> 属性存在：<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        >。如果 <a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop"><code>itemprop</code></a> 属性存在：<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#分段内容"
+        >、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容"
           >分段内容</a>
       </td>
     </tr>
@@ -45,15 +45,15 @@ slug: Web/HTML/Reference/Elements/meta
           </li>
           <li>
             <code>&#x3C;meta name></code>：任何可以接受<a
-              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
+              href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容"
               >元数据内容</a
             >的元素。
           </li>
           <li>
             <code>&#x3C;meta itemprop></code>：任何可以接受<a
-              href="/zh-CN/docs/Web/Guide/HTML/Content_categories#元数据内容"
+              href="/zh-CN/docs/Web/HTML/Guides/Content_categories#元数据内容"
               >元数据内容</a
-            >或<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+            >或<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
               >流式内容</a
             >。
           </li>

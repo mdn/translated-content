@@ -4,73 +4,60 @@ slug: Web/Accessibility/ARIA/Reference/Roles/region_role
 original_slug: Web/Accessibility/ARIA/Roles/region_role
 ---
 
-リージョン (`region`) [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書内で、著者が重要であると識別した領域を識別するために使用されます。 これは、他のランドマークロールのどれも適切でないときでも、汎用のランドマークを提供することで、人々が容易にナビゲートできるようにするために使用されます。
+**`region`** ロールは、著者が重要だと判断した文書内の領域を識別するために使います。これは汎用的なランドマークであり、他のランドマークロールが適切でない場合にナビゲーションを補助するために利用できます。
 
 ```html
 <div role="region" aria-label="例">
-  <!-- リージョンのコンテンツ -->
+  <!-- 領域のコンテンツ -->
 </div>
 ```
 
 ## 説明
 
-リージョン (`region`) ロールは、ARIA の[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)です。 ランドマークロールは、ウェブページの構成と構造を識別する方法を提供します。 ページのセクションを分類およびラベル付けすることにより、レイアウトを通じて視覚的に伝達される構造情報がプログラム的に表されます。 スクリーンリーダーは、ランドマークロールを使用して、ページの重要なセクションにキーボードナビゲーションを提供します。
+`region` ロールは [ARIA ランドマーク](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._ランドマークロール)ロールの 1 つです。
+`region` ロールは、ユーザーがそのセクションへ簡単に移動したい可能性が高く、ページの要約にも列挙されるべき重要なコンテンツ領域に限定して使用してください。region ロールはより汎用的な名称であり、識別したいセクションを [`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)、[`main`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)、[`contentinfo`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)、[`complementary`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)、[`navigation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role) などの他のランドマークロールで正確に表現できない場合にのみ使用するべきです。
 
-リージョン (`region`) ロールは、ユーザーがそのセクションに簡単にナビゲートし、ページの要約にリストされることを望むほど重要なコンテンツのセクションのために予約するべきです。 リージョン (`region`) ロールはより汎用の用語であり、識別が必要なセクションが、[`banner`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)、[`main`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)、[`contentinfo`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)、[`complementary`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)、[`navigation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role) などの他のランドマークロールのいずれかによって正確に説明できない場合にのみ使用するべきです。
+`region` ロールを持つすべての要素には、その領域内コンテンツの目的を表すラベルを付けるべきです。可能であれば、目に見える見出しを参照する [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を使うのが望ましいです。適切な目に見える見出しが存在しない場合は、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を使用してください。
 
-リージョン (`region`) ロールを持つすべての要素には、リージョン内のコンテンツの目的を説明するラベルを含めるべきで、目に見えるヘッダーを参照する `aria-labelledby` を伴うのが好ましいです。 目に見える適切なヘッダーがない場合は、`aria-label` を使用するべきです。
+`region` ランドマークロール内のコンテンツは、文書の主コンテンツから分離しても意味が通るようにするべきです。
 
-リージョン (`region`) ランドマークロールのコンテンツは、文書のメインコンテンツから分離されている場合にも意味をなすべきです。
-
-{{htmlelement("section")}} 要素を使用すると、アクセス可能な名前が与えられている場合、自動的にセクションがリージョン (`region`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素（この場合は `<section>`）を常に使用するべきです。
+{{HTMLElement('section')}} 要素を使うと、アクセシブル名が与えられている場合に、そのセクションが `region` ロールであることが自動的に伝えられます。開発者は ARIA を使うよりも、今回であれば `<section>` のような適切なセマンティック HTML 要素を常に優先するべきです。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- aria-labelledby
-  - : リージョンにラベルを付けるには、この属性を使用します。 多くの場合、`aria-labelledby` 属性の値は、セクションのタイトルに使用される要素の ID になります。
-
-### キーボードインタラクション
-
-無し
-
-### 必要な JavaScript 機能
-
-無し
+- [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) または [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+  - : この属性を使って領域にラベルを付けます。多くの場合 `aria-labelledby` 属性の値には、セクションのタイトルに使う要素の id を指定します。適切な目に見える見出しが存在しない場合は、`aria-label` を使用するべきです。
 
 ## 例
 
 ```html
 <div role="region" aria-labelledby="region-heading">
   <h2 id="region-heading">
-    この見出しの
-    <code>id</code>
-    属性は、このリージョンがアクセス可能な名前を持つのに役立ちます
+    この見出しの `id` 属性により、この領域にアクセシブル名を付けられます
   </h2>
-  <!-- リージョンのコンテンツ -->
+  <!-- 領域のコンテンツ -->
 </div>
 ```
 
 ## アクセシビリティに関する懸念
 
-控えめに使用してください！ [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)は、文書のより大きな全体的なセクションを識別するために、控えめに使用することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。
+控えめに使用してください。[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._ランドマークロール) は、文書内の大きなセクションを識別するために、控えめに使うことが意図されています。ランドマークロールを多用しすぎると、スクリーンリーダーでは「ノイズ」が増え、ページ全体のレイアウトを把握しにくくなります。
 
-他の関連[コンテンツセクショニング要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)または[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)が当てはまらない場合にのみ、リージョン (`region`) ロールを使用してください。 ページ上に複数のリージョンが存在する場合は、そのページの全体構造を再検討する価値があります。
+該当する [区分コンテンツ](/ja/docs/Web/HTML/Reference/Elements#区分コンテンツ) 要素や [ランドマークロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#3._ランドマークロール) がない場合にのみ `region` ロールを使用してください。ページに複数の領域が存在する場合は、ページ全体の構造を再検討する価値があります。
 
 ## ベストプラクティス
 
 ### 好ましい HTML
 
-{{htmlelement("section")}} 要素を使用すると、アクセス可能な名前が与えられている場合、自動的にセクションがリージョン (`region`) ロールを持つことを伝えます。 可能であれば、`<section>` を代わりに使用することをお勧めします。
+{{HTMLElement('section')}} 要素を使うと、その要素が `region` ロールであることが自動的に伝わります。可能であれば、`region` ロールの代わりにセマンティックな `<section>` 要素を優先するべきです。
 
-### ランドマークのラベル付け
+### ランドマークへのラベル付け
 
-文書に複数のリージョン (`region`) ランドマークロールがある場合は、それぞれにラベルを付けます。 このラベルで、支援技術のユーザーがそれぞれのランドマークの目的をすばやく理解することができます。
+文書内に複数の `region` ランドマークロールが存在する場合は、それぞれに固有のラベルを付けてください。このラベルにより、支援技術のユーザーは各ランドマークの目的を素早く理解できます。
 
 ```html
 <div role="region" aria-labelledby="use-discretion">
-  <h3 id="use-discretion">
-    慎重に <code>region</code> ロールを使用してください
-  </h3>
+  <h3 id="use-discretion">`region` ロールの使用は慎重に行ってください</h3>
   <!-- コンテンツ -->
 </div>
 
@@ -82,38 +69,27 @@ original_slug: Web/Accessibility/ARIA/Roles/region_role
 </div>
 ```
 
-この例では、リージョンのラベルは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) 属性によって作成されています。
+この例では、領域のラベルは [`aria-labelledby` 属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって生成されています。
 
 ### オーバーフローテキストを含むコンテンツ領域のスクロール
 
-`tabindex="0"` のコンテンツ領域がある場合は、`role="region"` を追加して、汎用のリージョンであるとスクリーンリーダーのユーザーに伝えます。 これは、キーボードのみのユーザーがオーバーフローテキストを含むリージョンをスクロールできるようにするためです。
+`tabindex="0"` を持つコンテンツ領域がある場合、`role="region"` を追加すると、それが汎用の領域であることをスクリーンリーダーユーザーに伝えられます。これは、キーボードのみを使うユーザーがオーバーフローテキストを含む領域をスクロールできるようにするためです。
 
 ### SVG
 
-[SVG](/ja/docs/Web/SVG/Reference/Element/svg) の個々のセクションを説明できるようにするために、SVG の領域上に `role="region"` を `aria-label` とともに宣言することができます。
-
-### 追加された利点
-
-ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、非スクリーンリーダーユーザーは文書の大きなセクションを素早く識別してナビゲートできます。
-
-- [ランドマークブラウザー拡張](https://matatk.agrip.org.uk/landmarks/)（英語）
+SVG の個々のセクションを説明できるように、{{SVGElement('svg')}} の領域に `role="region"` を `aria-label` と一緒に宣言できます。
 
 ## 仕様書
 
 {{Specifications}}
 
-## スクリーンリーダーのサポート
-
-TBD
-
 ## 関連情報
 
-- {{htmlelement("section")}}: 汎用セクション要素
-- [region (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#region)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
+- {{HTMLElement('section')}} 要素
+- [ARIA: `banner` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role)
+- [ARIA: `main` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role)
+- [ARIA: `contentinfo` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role)
+- [ARIA: `complementary` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)
+- [ARIA: `navigation` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)
+- [ランドマークロール: ARIA の使用: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#ランドマークロール)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
-- [The section element | HTML5 Doctor](https://html5doctor.com/the-section-element/)
-
-1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

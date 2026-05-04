@@ -19,7 +19,7 @@ Para mais informação, veja a página de referência do cabeçalho {{HTTPHeader
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

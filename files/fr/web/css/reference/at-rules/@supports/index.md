@@ -1,8 +1,9 @@
 ---
-title: "@supports"
+title: Règle CSS `@supports`
+short-title: "@supports"
 slug: Web/CSS/Reference/At-rules/@supports
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@supports`** permet de définir des déclarations CSS qui dépendent du support de certaines fonctionnalités CSS par le navigateur.
@@ -317,6 +318,6 @@ L'exemple suivant applique le style CSS si le navigateur prend en charge le form
 ## Voir aussi
 
 - [Utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
-- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Guides/Syntax/At-rule_functions)
+- [Fonctions des règles @ CSS](/fr/docs/Web/CSS/Reference/At-rules/At-rule_functions)
 - L'interface API {{DOMxRef("CSSSupportsRule")}}
 - La méthode API {{DOMxRef("CSS.supports_static", "CSS.supports()")}}

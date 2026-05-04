@@ -1,37 +1,77 @@
 ---
-title: text-emphasis-style
+title: Propriété CSS `text-emphasis-style`
+short-title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
-original_slug: Web/CSS/text-emphasis-style
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`text-emphasis-style`** définit le type d'emphase utilisée. Celui-ci peut également être défini par la propriété raccourcie {{CSSxRef("text-emphasis")}}.
 
-La propriété **`text-emphasis-style`** définit le type d'emphase utilisée. Celui-ci peut également être (re)défini via la propriété raccourcie {{cssxref("text-emphasis")}}.
+{{InteractiveExample("Démonstration CSS&nbsp;: text-emphasis-style")}}
+
+```css interactive-example-choice
+text-emphasis-style: none;
+```
+
+```css interactive-example-choice
+text-emphasis-style: triangle;
+```
+
+```css interactive-example-choice
+text-emphasis-style: "x";
+```
+
+```css interactive-example-choice
+text-emphasis-style: filled double-circle;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    Je préfère être
+    <span class="transition-all" id="example-element"
+      >heureux que d'avoir raison</span
+    >
+    n'importe quel jour.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
+
+## Syntaxe
 
 ```css
 /* Valeur initiale */
-/* Aucune marque d'emphase */
-text-emphasis-style: none;
+text-emphasis-style: none; /* Aucune marque d'emphase */
 
-/*  Valeur distincte */
+/* Valeurs de type <string> */
 text-emphasis-style: "x";
-text-emphasis-style: "点";
 text-emphasis-style: "\25B2";
 text-emphasis-style: "*";
 
 /* Valeurs avec un mot-clé */
 text-emphasis-style: filled;
 text-emphasis-style: open;
+text-emphasis-style: dot;
+text-emphasis-style: circle;
+text-emphasis-style: double-circle;
+text-emphasis-style: triangle;
 text-emphasis-style: filled sesame;
 text-emphasis-style: open sesame;
 
 /* Valeurs globales */
 text-emphasis-style: inherit;
 text-emphasis-style: initial;
+text-emphasis-style: revert;
+text-emphasis-style: revert-layer;
 text-emphasis-style: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
@@ -52,7 +92,7 @@ text-emphasis-style: unset;
 - `sesame`
   - : Cette valeur permet d'afficher des marques en forme de points sésame :`'﹅'` (`U+FE45`) pour le caractère rempli et `'﹆'` (`U+FE46`) pour le caractère ouvert.
 - `<string>`
-  - : Utilise la chaîne fournie comme marque. Attention, l'agent utilisateur peut tronquer la chaîne ou choisir d'ignorer les chaînes qui ont plus d'un graphème. Il est donc conseillé de n'utiliser qu'une seule lettre.
+  - : Affiche la chaîne de caractères donnée comme marques. Les auteur·ice·s ne doivent pas définir plus d'un _caractère_ dans `<string>`. L'agent utilisateur peut tronquer ou ignorer les chaînes de caractères composées de plus d'un groupe de graphèmes.
 
 ## Définition formelle
 
@@ -64,23 +104,14 @@ text-emphasis-style: unset;
 
 ## Exemples
 
-### HTML
-
-```html
-<p><em>Coucou</em>, je suis <em>là</em></p>
-```
-
-### CSS
+### Exemple simple
 
 ```css
-em {
+h2 {
+  -webkit-text-emphasis-style: sesame;
   text-emphasis-style: sesame;
 }
 ```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples")}}
 
 ## Spécifications
 
@@ -92,6 +123,5 @@ em {
 
 ## Voir aussi
 
-- {{cssxref('text-emphasis-color')}}
-- {{cssxref('text-emphasis')}}.
-- {{cssxref('text-emphasis-position')}}
+- Les propriétés associées {{CSSxRef('text-emphasis-color')}}, {{CSSxRef('text-emphasis')}}.
+- La propriété {{CSSxRef('text-emphasis-position')}} permet de définir la position des marques d'emphase.

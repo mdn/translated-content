@@ -1,8 +1,9 @@
 ---
-title: border-right-width
+title: Propriété CSS `border-right-width`
+short-title: border-right-width
 slug: Web/CSS/Reference/Properties/border-right-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-right-width`** permet de définir l'épaisseur de la bordure à droite d'un élément.
@@ -75,11 +76,11 @@ border-right-width: unset;
 - `<line-width>`
   - : Une valeur de longueur ({{CSSxRef("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes&nbsp;:
     - `thin` (fin)
+      - Identique à `1px`.
     - `medium` (intermédiaire)
+      - Identique à `3px`.
     - `thick` (épais)
-
-> [!NOTE]
-> La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document.
+      - Identique à `5px`.
 
 ## Définition formelle
 

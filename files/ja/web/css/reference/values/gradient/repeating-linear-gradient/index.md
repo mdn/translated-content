@@ -1,8 +1,9 @@
 ---
-title: repeating-linear-gradient()
+title: CSS `repeating-linear-gradient()` 関数
+short-title: repeating-linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-linear-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
@@ -84,7 +85,7 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。
 
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : グラデーション線の方向を角度で示します。 `0deg` の値は `to top` と等価で、値が増加するとそこから時計回りに回ります。
 - `<linear-color-stop>`
   - : 色経由点の {{CSSxRef("&lt;color&gt;")}} の値であり、任意でその後に停止位置を指定します(グラデーションの軸に沿った {{CSSxRef("&lt;percentage&gt;")}} または {{CSSxRef("&lt;length&gt;")}} の位置)。 `0%` のパーセント値または `0` の長さは、グラデーションの先頭を表します。 `100%` の値は画像の寸法の 100% であり、つまりグラデーションは反復されません。
@@ -225,10 +226,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

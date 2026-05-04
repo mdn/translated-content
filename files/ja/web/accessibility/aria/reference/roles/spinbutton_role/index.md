@@ -3,7 +3,7 @@ title: "ARIA: spinbutton ロール"
 slug: Web/Accessibility/ARIA/Reference/Roles/spinbutton_role
 original_slug: Web/Accessibility/ARIA/Roles/spinbutton_role
 l10n:
-  sourceCommit: 15495ec2cf79a6677a523629925ee269343d4bf0
+  sourceCommit: f6e12d0cba939a2f203119f4514b56b5faff17e1
 ---
 
 `spinbutton` ロールは、ユーザーに離散的な選択肢の中から値を選択することを期待する範囲選択の型を定義します。
@@ -43,7 +43,7 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性は最大値を定義します。これが無いか、数値でない場合、既定値は `100` です。
 
-[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `spinbutton` と `meter` では必須であり、 `progressbar` ではオプションです。
+[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `meter` では必須であり、`progressbar` ではオプションです。
 
 `spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
 
@@ -61,8 +61,8 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 ## 関連するロール、状態、プロパティ
 
-- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) （必須）
-  - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、既定値はありません。
+- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
+  - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、スピンボタンに現在の値が設定されていません。
 
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
   - : 支援技術は `aria-valuenow` の値を通常は数字で表示します。 `aria-valuenow` が正確な値でない場合は、 `aria-valuetext` を使用して、スピンボタンにより分かりやすい値を提供してください。

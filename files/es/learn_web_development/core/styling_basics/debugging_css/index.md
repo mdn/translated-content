@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Styling_basics/Debugging_CSS
 original_slug: Learn/CSS/Building_blocks/Debugging_CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}
 
 Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace lo que esperas. Tal vez creas que cierto selector debería coincidir con un elemento, pero no sucede nada; o una caja tiene un tamaño diferente al que esperabas. Este artículo te orientará sobre cómo solucionar un problema de CSS y te mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarte a descubrir qué sucede.
 
@@ -15,17 +15,17 @@ Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, HTML básico (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con CSS</a>).
       </td>
     </tr>
     <tr>
@@ -185,4 +185,4 @@ En el caso de que tu problema sea en realidad un error en un navegador, también
 
 A medida que adquieras más experiencia con CSS, descubrirás que adquieres rapidez para descubrir de dónde vienen los problemas. Sin embargo, incluso los más experimentados a veces nos preguntamos qué pasa. Adoptar un enfoque metódico, hacer un caso de prueba reducido y explicar el problema a otra persona suele dar un buen resultado para encontrar una solución.
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn/CSS/Building_blocks/Organizing", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Organizing", "Learn_web_development/Core/Styling_basics")}}

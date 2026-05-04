@@ -1,12 +1,13 @@
 ---
-title: font-stretch
+title: Propriété CSS `font-stretch`
+short-title: font-stretch
 slug: Web/CSS/Reference/Properties/font-stretch
 l10n:
-  sourceCommit: ba886c384e385689ce8feffacf4f7ce1d8c5e736
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 > [!NOTE]
-> La propriété `font-stretch` a été renommée en `font-width` dans la [spécification CSS Fonts <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts/#font-stretch-prop). Pour préserver la compatibilité, la spécification conserve `font-stretch` comme alias de la propriété `font-width`.
+> La propriété `font-stretch` a été renommée en {{CSSxRef("font-width")}} dans la [spécification CSS Fonts <sup>(angl.)</sup>](https://drafts.csswg.org/css-fonts/#font-stretch-prop). Pour préserver la compatibilité, la spécification conserve `font-stretch` comme un alias hérité de la propriété `font-width`.
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-stretch`** permet de choisir entre la forme normale, condensée ou étendue d'une police.
 
@@ -55,7 +56,6 @@ font-stretch: 150%;
   font-family: "League";
   font-style: normal;
   font-weight: normal;
-  font-stretch: 50% 200%; /* Requis par Chrome - autorise 50% à 200% */
 }
 
 section {
@@ -67,7 +67,7 @@ section {
 ## Syntaxe
 
 ```css
-/* Valeurs avec un mot-clé de type <font-stretch-css3> */
+/* Valeurs avec un mot-clé */
 font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
@@ -91,16 +91,16 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-Cette propriété peut être définie avec un seul mot-clé `<font-stretch-css3>` ou une seule valeur de type pourcentage ({{CSSxRef("&lt;percentage&gt;")}}).
+Cette propriété peut être définie avec un seul mot-clé de type pourcentage ({{CSSxRef("&lt;percentage&gt;")}}).
 
 ### Valeurs
 
 - `normal`
-  - : Permet de choisir une fonte normale.
+  - : Définit une fonte normalement condensée.
 - `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
-  - : Permet de choisir une fonte plus resserrée que la normale, `ultra-condensed` correspond à la forme la plus condensée.
+  - : Définit une fonte plus condensée que la normale, `ultra-condensed` étant la plus condensée.
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
-  - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
+  - : Définit une fonte plus étendue que la normale, `ultra-expanded` étant la plus étendue.
 - {{CSSxRef("&lt;percentage&gt;")}}
   - : Une valeur de type {{CSSxRef("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette propriété.
 
@@ -128,80 +128,96 @@ Certaines polices possèdent différentes fontes pour lesquelles les caractères
 
 ### Sélection de la fonte
 
-La fonte sélectionnée pour une valeur `font-stretch` dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.
+La fonte sélectionnée pour une valeur donnée de `font-stretch` dépend des fontes prises en charge par la police en question. Si la police ne fournit pas de fonte correspondant exactement à la valeur donnée, les valeurs inférieures à `100%` correspondent à une fonte condensée, et les valeurs supérieures ou égales à `100%` correspondent à une fonte étendue.
 
-Le tableau qui suit illustre l'effet des différents pourcentages avec deux polices possédant différentes fontes&nbsp;:
+Le tableau ci-dessous illustre l'effet de la définition de différentes valeurs en pourcentage de `font-stretch` sur deux polices différentes&nbsp;:
 
 ```css hidden
 @font-face {
   font-family: "Inconsolata";
   src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
     format("woff2");
-  font-stretch: 50% 200%;
 }
 
 @font-face {
   font-family: "Anek Malayalam";
   src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
     format("woff2");
-  font-stretch: 75% 125%;
+}
+
+body {
+  font-family: system-ui;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tbody th {
+  text-align: right;
+}
+
+th,
+td {
+  padding: 0.25rem;
+  font-weight: normal;
+  text-align: center;
 }
 
 td {
   border: solid;
   border-width: 1px;
+  font-size: 5rem;
 }
 
-#inconsolata td {
-  font:
-    90px "Inconsolata",
-    sans-serif;
+.inconsolata {
+  font-family: "Inconsolata", sans-serif;
 }
-#anek-malayalam td {
-  font:
-    90px "Anek Malayalam",
-    sans-serif;
+
+.anek-malayalam {
+  font-family: "Anek Malayalam", sans-serif;
 }
-#inconsolata td:nth-child(2),
-#anek-malayalam td:nth-child(2) {
+
+td:nth-child(2) {
   font-stretch: 50%;
 }
-#inconsolata td:nth-child(3),
-#anek-malayalam td:nth-child(3) {
+
+td:nth-child(3) {
   font-stretch: 62.5%;
 }
-#inconsolata td:nth-child(4),
-#anek-malayalam td:nth-child(4) {
+
+td:nth-child(4) {
   font-stretch: 75%;
 }
-#inconsolata td:nth-child(5),
-#anek-malayalam td:nth-child(5) {
+
+td:nth-child(5) {
   font-stretch: 87.5%;
 }
-#inconsolata td:nth-child(6),
-#anek-malayalam td:nth-child(6) {
+
+td:nth-child(6) {
   font-stretch: 100%;
 }
-#inconsolata td:nth-child(7),
-#anek-malayalam td:nth-child(7) {
+
+td:nth-child(7) {
   font-stretch: 112.5%;
 }
-#inconsolata td:nth-child(8),
-#anek-malayalam td:nth-child(8) {
+
+td:nth-child(8) {
   font-stretch: 125%;
 }
-#inconsolata td:nth-child(9),
-#anek-malayalam td:nth-child(9) {
+
+td:nth-child(9) {
   font-stretch: 150%;
 }
-#inconsolata td:nth-child(10),
-#anek-malayalam td:nth-child(10) {
+
+td:nth-child(10) {
   font-stretch: 200%;
 }
 ```
 
 ```html hidden
-<table class="standard-table">
+<table>
   <thead>
     <tr>
       <th scope="row"></th>
@@ -217,7 +233,7 @@ td {
     </tr>
   </thead>
   <tbody>
-    <tr id="inconsolata">
+    <tr class="inconsolata">
       <th scope="row">Inconsolata</th>
       <td>e</td>
       <td>e</td>
@@ -229,7 +245,7 @@ td {
       <td>e</td>
       <td>e</td>
     </tr>
-    <tr id="anek-malayalam">
+    <tr class="anek-malayalam">
       <th scope="row">Anek Malayalam</th>
       <td>e</td>
       <td>e</td>
@@ -245,10 +261,10 @@ td {
 </table>
 ```
 
-{{EmbedLiveSample("Sélection de la fonte", "100%", 300)}}
+{{EmbedLiveSample("Sélection de la fonte", "100%", 250)}}
 
-- [Anek Malayalam <sup>(angl.)</sup>](https://fonts.google.com/specimen/Anek+Malayalam) est une police variable Google qui prend en charge des largeurs de 75% à 125%. Les valeurs en dehors de cette plage sélectionnent la fonte la plus proche.
 - [Inconsolata <sup>(angl.)</sup>](https://fonts.google.com/specimen/Inconsolata) est une police variable qui propose une plage continue de largeurs de 50% à 200%.
+- [Anek Malayalam <sup>(angl.)</sup>](https://fonts.google.com/specimen/Anek+Malayalam) est une police variable Google qui prend en charge des largeurs de 75% à 125%. Les valeurs en dehors de cette plage sélectionnent la fonte la plus proche.
 
 ## Définition formelle
 
@@ -256,7 +272,7 @@ td {
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{CSSSyntax("font-stretch")}}
 
 ## Exemples
 
@@ -270,10 +286,9 @@ td {
 
 ```css
 @font-face {
-  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
+  src: url("/shared-assets/fonts/LeagueMono-VF.ttf") format("truetype");
   font-family: "LeagueMonoVariable";
   font-style: normal;
-  font-stretch: 1% 500%; /* Requis par Chrome */
 }
 
 p {
@@ -307,7 +322,10 @@ p {
 
 ## Voir aussi
 
+- Le descripteur {{CSSxRef("@font-face/font-stretch")}} pour {{CSSxRef("@font-face")}}
+- La propriété {{CSSxRef("font-width")}} moderne, remplaçant `font-stretch`
 - La propriété {{CSSxRef("font-style")}}
 - La propriété {{CSSxRef("font-weight")}}
+- L'attribut SVG {{SVGAttr("font-stretch")}}
 - [Apprendre&nbsp;: Mise en forme fondamentale du texte et des polices](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - Le module [de polices CSS](/fr/docs/Web/CSS/Guides/Fonts)

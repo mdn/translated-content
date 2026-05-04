@@ -13,7 +13,7 @@ La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>
@@ -45,7 +45,7 @@ Referrer-Policy: unsafe-url
 - origin-when-cross-origin
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, pero únicamente el origen para otros casos.
 - same-origin
-  - : Se enviará un referente para [orígenes de sitio equivalente](/es/docs/Web/Security/Same-origin_policy), pero las solicitudes de origen transversal no contendrán ningún dato de referente.
+  - : Se enviará un referente para [orígenes de sitio equivalente](/es/docs/Web/Security/Defenses/Same-origin_policy), pero las solicitudes de origen transversal no contendrán ningún dato de referente.
 - strict-origin
   - : Solo se enviará el origen del documento como referente a destinos que _a priori_ son igual de seguros (HTTPS → HTTPS), pero no lo recibirán destinos menos seguros (HTTPS → HTTP).
 - strict-origin-when-cross-origin
@@ -95,5 +95,5 @@ Referrer-Policy: unsafe-url
   - La [relación de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).
   - Al utilizar [Fetch](/es/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 
-- [Directiva de origen equivalente](/es/docs/Web/Security/Same-origin_policy)
+- [Directiva de origen equivalente](/es/docs/Web/Security/Defenses/Same-origin_policy)
 - [«Un mayor control sobre sus referentes» en el blog de seguridad de Mozilla](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

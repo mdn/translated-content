@@ -324,7 +324,7 @@ input:valid + span:after {
 
 ### date/time 値の制限
 
-日付をと時刻のコントロールはすべて、[`min`](/ja/docs/Web/HTML/Reference/Attributes/min) と [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性で制約をつけることができて、さらに [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性 (この値は入力型によって変わります)で追加の制約も可能です。
+日付と時刻のコントロールはすべて、[`min`](/ja/docs/Web/HTML/Reference/Attributes/min) と [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性で制約をつけることができて、さらに [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性 (この値は入力型によって変わります)で追加の制約も可能です。
 
 ```html
 <label for="myDate">この夏はいつ空いていますか？</label><br />

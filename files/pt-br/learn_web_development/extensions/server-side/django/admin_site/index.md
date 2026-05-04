@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
 original_slug: Learn/Server-side/Django/Admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.
 

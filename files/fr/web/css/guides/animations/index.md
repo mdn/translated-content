@@ -1,12 +1,12 @@
 ---
 title: Animations CSS
+short-title: Animations
 slug: Web/CSS/Guides/Animations
-original_slug: Web/CSS/CSS_animations
 l10n:
-  sourceCommit: 6cd62fb4482a2d6927cebd0223bf8d0386095340
+  sourceCommit: b8a45c83bfb5aa8b99ddcd564e7e9c66be5daffc
 ---
 
-Le module d'**Animations CSS** permet d'animer les valeurs des propriétés CSS, comme `background-position` et `transform`, au fil du temps à l'aide d'étapes intermédiaires (<i lang="en">keyframes</i> en anglais). Chaque étape (<i lang="en">keyframe</i>) décrit comment l'élément animé doit être affiché à un moment donné de la séquence d'animation. Vous pouvez utiliser les propriétés du module d'animations pour contrôler la durée, le nombre de répétitions, le délai de démarrage et d'autres aspects d'une animation.
+Le module des **animations CSS** permet d'animer les valeurs des propriétés CSS, comme `background-position` et `transform`, au fil du temps à l'aide d'étapes intermédiaires (<i lang="en">keyframes</i> en anglais). Chaque étape décrit comment l'élément animé doit être affiché à un moment donné de la séquence d'animation. Vous pouvez utiliser les propriétés du module d'animations pour contrôler la durée, le nombre de répétitions, le délai de démarrage et d'autres aspects d'une animation.
 
 ## Animations en action
 
@@ -37,7 +37,7 @@ i {
   width: 16px;
   border-radius: 50%;
   animation: falling 3s linear 0s infinite backwards;
-  /* Les flocons de neige sont réalisés avec des dégradés linéaires CSS (https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients) */
+  /* Les flocons de neige sont réalisés avec des dégradés linéaires CSS (https://developer.mozilla.org/fr/docs/Web/CSS/Guides/Images/Using_gradients) */
   background-image:
     linear-gradient(180deg, transparent 40%, white 40% 60%, transparent 60%),
     linear-gradient(90deg, transparent 40%, white 40% 60%, transparent 60%),
@@ -45,7 +45,7 @@ i {
     linear-gradient(135deg, transparent 43%, white 43% 57%, transparent 57%);
 }
 i:nth-of-type(4n) {
-  /* Utilisation des pseudo-classes structurelles d'arbre pour créer de l'aléa - https://developer.mozilla.org/fr/docs/Web/CSS/:nth-of-type */
+  /* Utilisation des pseudo-classes structurelles d'arbre pour créer de l'aléa - https://developer.mozilla.org/fr/docs/Web/CSS/Reference/Selectors/:nth-of-type */
   height: 30px;
   width: 30px;
   transform-origin: right -30px;
@@ -220,9 +220,9 @@ input:checked + label::before {
 }
 ```
 
-{{EmbedLiveSample("animation", "", "610px")}}
+{{EmbedLiveSample("animation", "", 610)}}
 
-Cette animation d'exemple utilise la propriété CSS {{cssxref("animation-iteration-count")}} pour faire tomber les flocons de façon répétée, la propriété {{cssxref("animation-direction")}} pour faire bouger le nuage d'avant en arrière, la propriété {{cssxref("animation-fill-mode")}} pour faire monter le niveau de neige en réponse au mouvement du nuage, et la propriété {{cssxref("animation-play-state")}} pour mettre l'animation en pause.
+Cette animation d'exemple utilise la propriété CSS {{CSSxRef("animation-iteration-count")}} pour faire tomber les flocons de façon répétée, la propriété {{CSSxRef("animation-direction")}} pour faire bouger le nuage d'avant en arrière, la propriété {{CSSxRef("animation-fill-mode")}} pour faire monter le niveau de neige en réponse au mouvement du nuage, et la propriété {{CSSxRef("animation-play-state")}} pour mettre l'animation en pause.
 
 Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modifier le code de l'animation dans le MDN Playground.
 
@@ -230,54 +230,57 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans l'exemple ci-dessus pour voir ou modi
 
 ### Propriétés
 
-- {{cssxref("animation")}} (abrégée)
-- {{cssxref("animation-composition")}}
-- {{cssxref("animation-delay")}}
-- {{cssxref("animation-direction")}}
-- {{cssxref("animation-duration")}}
-- {{cssxref("animation-fill-mode")}}
-- {{cssxref("animation-iteration-count")}}
-- {{cssxref("animation-name")}}
-- {{cssxref("animation-play-state")}}
-- {{cssxref("animation-timeline")}}
-- {{cssxref("animation-timing-function")}}
+- {{CSSxRef("animation")}} (raccourcie)
+- {{CSSxRef("animation-composition")}}
+- {{CSSxRef("animation-delay")}}
+- {{CSSxRef("animation-direction")}}
+- {{CSSxRef("animation-duration")}}
+- {{CSSxRef("animation-fill-mode")}}
+- {{CSSxRef("animation-iteration-count")}}
+- {{CSSxRef("animation-name")}}
+- {{CSSxRef("animation-play-state")}}
+- {{CSSxRef("animation-timeline")}}
+- {{CSSxRef("animation-timing-function")}}
 
 Le module d'animations CSS niveau 2 introduit également les propriétés `animation-trigger`, `animation-trigger-exit-range`, `animation-trigger-exit-range-end`, `animation-trigger-exit-range-start`, `animation-trigger-range`, `animation-trigger-range-end`, `animation-trigger-range-start`, `animation-trigger-timeline` et `animation-trigger-type`. Actuellement, aucun navigateur ne prend en charge ces fonctionnalités.
 
 ### Règles @
 
-- {{cssxref("@keyframes")}}
+- {{CSSxRef("@keyframes")}}
+- [`<keyframe-selector>`](/fr/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
-### Événements
+### Évènements
 
-Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des événements d'animation.
+Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des évènements d'animation.
 
-- {{domxref("Element/animationstart_event", "animationstart")}}
-- {{domxref("Element/animationend_event", "animationend")}}
-- {{domxref("Element/animationcancel_event", "animationcancel")}}
-- {{domxref("Element/animationiteration_event", "animationiteration")}}
+- {{DOMxRef("Element/animationstart_event", "animationstart")}}
+- {{DOMxRef("Element/animationend_event", "animationend")}}
+- {{DOMxRef("Element/animationcancel_event", "animationcancel")}}
+- {{DOMxRef("Element/animationiteration_event", "animationiteration")}}
 
 ### Interfaces
 
-- [API Web Animations](/fr/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationEvent")}}
-- {{domxref("CSSAnimation")}}
-- {{domxref("CSSKeyframeRule")}}
-- {{domxref("CSSKeyframesRule")}}
+- [L'API Web Animations](/fr/docs/Web/API/Web_Animations_API)
+- {{DOMxRef("AnimationEvent")}}
+- {{DOMxRef("CSSAnimation")}}
+- {{DOMxRef("CSSKeyframeRule")}}
+- {{DOMxRef("CSSKeyframesRule")}}
 
 ## Guides
 
 - [Manipuler les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using)
   - : Un tutoriel pas-à-pas qui explique comment créer des animations CSS. Cet article décrit les différentes propriétés et règles @ relatives aux animations et comment elles interagissent.
+- [Animer les propriétés CSS](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties)
+  - : Aperçu de la manière dont différentes propriétés CSS peuvent être animées, y compris leurs types d'animation et méthodes d'interpolation.
 - [Utiliser l'API Web Animations](/fr/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
   - : Exemples de besoins courants en animation qui peuvent être résolus avec quelques lignes de JavaScript.
 
 ## Concepts associés
 
-- La propriété CSS {{cssxref("will-change")}}
-- Le type de donnée [`<easing-function>`](/fr/docs/Web/CSS/Reference/Values/easing-function)
-- Les requêtes media [`prefers-reduced-motion`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
-- Le terme du glossaire {{glossary("Bezier curve", "courbe de Bézier")}}
+- La propriété CSS {{CSSxRef("will-change")}}
+- Le type de donnée {{CSSxRef("&lt;easing-function&gt;")}}
+- Les requêtes média {{CSSxRef("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+- Le terme du glossaire {{Glossary("Bezier curve", "courbe de Bézier")}}
 
 ## Spécifications
 
@@ -285,8 +288,8 @@ Toutes les animations, même celles d'une durée de 0 seconde, déclenchent des 
 
 ## Voir aussi
 
-- [Module CSS d'animations dirigées par le défilement](/fr/docs/Web/CSS/CSS_scroll-driven_animations).
+- Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/CSS_scroll-driven_animations).
 - Propriétés du module CSS [transitions](/fr/docs/Web/CSS/Guides/Transitions) pour déclencher des animations en fonction des actions utilisateur·ice·s.
-- La propriété {{cssxref("interpolate-size")}} et la fonction {{cssxref("calc-size()")}} pour permettre des animations vers et depuis des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size).
-- L'élément HTML {{htmlelement("canvas")}} avec l'[API canvas](/fr/docs/Web/API/Canvas_API) et l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
-- L'interface {{domxref("SVGAnimationElement")}} pour tous les éléments d'animation SVG, incluant {{domxref("SVGAnimateElement")}}, {{domxref("SVGSetElement")}}, {{domxref("SVGAnimateColorElement")}}, {{domxref("SVGAnimateMotionElement")}} et {{domxref("SVGAnimateTransformElement")}}.
+- La propriété {{CSSxRef("interpolate-size")}} et la fonction {{CSSxRef("calc-size()")}} pour permettre des animations vers et depuis des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size).
+- L'élément HTML {{HTMLElement("canvas")}} avec [l'API canvas](/fr/docs/Web/API/Canvas_API) et [l'API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.
+- L'interface {{DOMxRef("SVGAnimationElement")}} pour tous les éléments d'animation SVG, incluant {{DOMxRef("SVGAnimateElement")}}, {{DOMxRef("SVGSetElement")}}, {{DOMxRef("SVGAnimateColorElement")}}, {{DOMxRef("SVGAnimateMotionElement")}} et {{DOMxRef("SVGAnimateTransformElement")}}.

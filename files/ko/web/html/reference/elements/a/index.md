@@ -82,20 +82,20 @@ li {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >,
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           title="HTML/Content categories#Phrasing content"
           >구문 콘텐츠</a
         >,
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#대화형_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#대화형_콘텐츠"
           >대화형 컨텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -103,13 +103,13 @@ li {
     <tr>
       <th scope="row">가능한 콘텐츠</th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#투명_콘텐츠_모델"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#투명_콘텐츠_모델"
           >투명함</a
         >.
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >(대화형 콘텐츠 제외) 또는
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -123,7 +123,7 @@ li {
       <td>
         <p>
           <a
-            href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+            href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
             title="HTML/Content_categories#Phrasing_content"
             >구문 콘텐츠</a
           >를 허용하는 모든 요소, 또는 플로우 콘텐츠를 허용하는 모든 요소. 단,

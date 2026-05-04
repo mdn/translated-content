@@ -15,7 +15,7 @@ Con las cosas que has aprendido en las últimas lecciones, puedes darle formato 
       <td>
         Antes de intentar esta evaluación, deberías haber trabajado a través del
         módulo de CSS básico, y también comprender HTML básico (estudia la
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
         >).
       </td>

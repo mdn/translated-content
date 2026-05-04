@@ -14,11 +14,11 @@ Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pe
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
-        >) y <a href="/es/docs/Learn/HTML/Tables">tablas HTML</a>, y nociones de
+        >) y <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics">tablas HTML</a>, y nociones de
         cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>.)
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>.)
       </td>
     </tr>
     <tr>

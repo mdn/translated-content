@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : part"
+title: "Attribut HTML universel : `part`"
 short-title: part
 slug: Web/HTML/Reference/Global_attributes/part
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`part`** contient une liste espacée des noms de parties de l'élément. Les noms de parties permettent au CSS de sélectionner et de mettre en forme des éléments spécifiques dans un arbre d'ombre avec le pseudo-élément CSS {{CSSxRef("::part")}}.

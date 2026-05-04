@@ -1,9 +1,8 @@
 ---
 title: stroke-linejoin
 slug: Web/CSS/Reference/Properties/stroke-linejoin
-original_slug: Web/CSS/stroke-linejoin
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
 ---
 
 **`stroke-linejoin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[SVG](/ja/docs/Web/SVG) 要素のストローク付きパスの角で使用される形状を定義します。指定された場合、要素の {{SVGAttr("stroke-linejoin")}} 属性を上書きします。

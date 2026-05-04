@@ -1,8 +1,9 @@
 ---
-title: ::backdrop
+title: Pseudo-élément CSS `::backdrop`
+short-title: ::backdrop
 slug: Web/CSS/Reference/Selectors/::backdrop
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::backdrop`** est une boîte de la taille de la {{Glossary("viewport", "zone d'affichage")}}, qui est rendue immédiatement sous tout élément présenté dans la {{Glossary("top layer", "couche supérieure")}}.

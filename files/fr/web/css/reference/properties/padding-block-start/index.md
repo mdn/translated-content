@@ -1,16 +1,14 @@
 ---
-title: padding-block-start
+title: Propriété CSS `padding-block-start`
+short-title: padding-block-start
 slug: Web/CSS/Reference/Properties/padding-block-start
-original_slug: Web/CSS/padding-block-start
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La propriété [CSS](/fr/docs/Web/CSS) **`padding-block-start`** définit le début logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte.
 
-La propriété **`padding-block-start`** définit le début logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à la propriété {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} ou {{cssxref("padding-left")}} selon les valeurs qui sont utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
-
-Elle est à rapprocher des propriétés {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}} et {{cssxref("padding-inline-end")}} qui définissent les autres écarts de remplissage logiques d'un élément.
-
-{{InteractiveExample("CSS Demo: padding-block-start")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: padding-block-start")}}
 
 ```css interactive-example-choice
 padding-block-start: 20px;
@@ -36,8 +34,8 @@ writing-mode: vertical-lr;
 <section id="default-example">
   <div class="transition-all" id="example-element">
     <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
     </div>
   </div>
 </section>
@@ -59,24 +57,33 @@ writing-mode: vertical-lr;
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length>       */
-padding-block-start: 10px;
-padding-block-start: 1em;
+/* Valeurs de type <length> */
+padding-block-start: 10px; /* Une longueur absolue */
+padding-block-start: 1em; /* Une longueur relative à la taille du texte */
 
-/* Valeurs de proportions */
-/* Type <percentage>      */
+/* Valeurs de type <percentage> */
 padding-block-start: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-block-start: inherit;
 padding-block-start: initial;
+padding-block-start: revert;
+padding-block-start: revert-layer;
 padding-block-start: unset;
 ```
 
 ### Valeurs
 
-La propriété `padding-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille du remplissage exprimé en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
+
+## Description
+
+La propriété `padding-block-start` prend les mêmes valeurs que les propriétés de remplissage physiques telles que {{CSSxRef("padding-top")}}. Cependant, elle peut être équivalente à `padding-top`, {{CSSxRef("padding-bottom")}}, {{CSSxRef("padding-left")}}, ou {{CSSxRef("padding-right")}} en fonction des valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
+
+Elle est liée à {{CSSxRef("padding-block-end")}}, {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}}, qui définissent les autres valeurs de remplissage de l'élément.
 
 ## Définition formelle
 
@@ -88,15 +95,17 @@ La propriété `padding-block-start` peut prendre les mêmes valeurs que la prop
 
 ## Exemples
 
-### HTML
+### Définir le remplissage de bloc pour le texte vertical
+
+#### HTML
 
 ```html
 <div>
-  <p class="exemple">Texte d'exemple et Lorem et IP sum</p>
+  <p class="texteExemple">Texte d'exemple</p>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -105,16 +114,16 @@ div {
   height: 120px;
 }
 
-.exemple {
+.texteExemple {
   writing-mode: vertical-lr;
   padding-block-start: 20px;
   background-color: #c8c800;
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir le remplissage de bloc pour le texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -126,12 +135,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("padding-top")}},
-  - {{cssxref("padding-right")}},
-  - {{cssxref("padding-bottom")}},
-  - {{cssxref("padding-left")}}
-
-- {{cssxref("writing-mode")}},
-- {{cssxref("direction")}},
-- {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

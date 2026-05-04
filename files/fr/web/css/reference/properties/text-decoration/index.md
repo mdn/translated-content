@@ -1,14 +1,14 @@
 ---
-title: text-decoration
+title: Propriété CSS `text-decoration`
+short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
-original_slug: Web/CSS/text-decoration
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-decoration`** définit l'apparence des lignes décoratives sur le texte. C'est une propriété raccourcie pour {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-style")}}, et la plus récente {{CSSxRef("text-decoration-thickness")}}.
 
-La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
-
-{{InteractiveExample("CSS Demo: text-decoration")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: text-decoration")}}
 
 ```css interactive-example-choice
 text-decoration: underline;
@@ -33,9 +33,11 @@ text-decoration: underline overline #ff3028;
 ```html interactive-example
 <section id="default-example">
   <p>
-    I'd far rather be
-    <span class="transition-all" id="example-element">happy than right</span>
-    any day.
+    Je préférerais de loin être
+    <span class="transition-all" id="example-element"
+      >heureux que d'avoir raison</span
+    >
+    chaque jour.
   </p>
 </section>
 ```
@@ -46,34 +48,45 @@ p {
 }
 ```
 
-Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em> des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on aura tout le paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'aurait aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraînerait un cumul des décorations pour « des mots mis en avant ».
+Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em>des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on aura tout le paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'aurait aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraînerait un cumul des décorations pour «&nbsp;des mots mis en avant&nbsp;».
 
-> [!NOTE]
-> La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-line")}}
+- {{CSSxRef("text-decoration-style")}}
+- {{CSSxRef("text-decoration-thickness")}}
 
 ## Syntaxe
 
 ```css
 /* Valeurs avec mots-clés */
-text-decoration: none; /* Aucune décoration */
-text-decoration: underline red; /* On souligne en rouge */
-text-decoration: underline wavy red; /* On souligne en rouge avec */
-/* une ligne ondulée */
+text-decoration: underline;
+text-decoration: overline red;
+text-decoration: none;
 
 /* Valeurs globales */
 text-decoration: inherit;
 text-decoration: initial;
+text-decoration: revert;
+text-decoration: revert-layer;
 text-decoration: unset;
 ```
 
+La propriété `text-decoration` est définie comme une ou plusieurs valeurs séparées par des espaces représentant les différentes propriétés longues de text-decoration.
+
 ### Valeurs
 
-- {{cssxref("text-decoration-line")}}
-  - : Cette valeur indique le type de décoration utilisée.
-- {{cssxref("text-decoration-color")}}
-  - : Cette valeur indique la couleur de la décoration utilisée.
-- {{cssxref("text-decoration-style")}}
-  - : Cette valeur indique le style à utiliser pour la décoration.
+- {{CSSxRef("text-decoration-line")}}
+  - : Définit le type de décoration utilisée, comme `underline` ou `line-through`.
+- {{CSSxRef("text-decoration-color")}}
+  - : Définit la couleur de la décoration.
+- {{CSSxRef("text-decoration-style")}}
+  - : Définit le style de la ligne utilisée pour la décoration, comme `solid`, `wavy` ou `dashed`.
+- {{CSSxRef("text-decoration-thickness")}}
+  - : Définit l'épaisseur de la ligne utilisée pour la décoration.
 
 ## Définition formelle
 
@@ -85,7 +98,7 @@ text-decoration: unset;
 
 ## Exemples
 
-### CSS
+### Démonstration des valeurs de `text-decoration`
 
 ```css
 .under {
@@ -108,6 +121,10 @@ text-decoration: unset;
   text-decoration: dashed underline overline;
 }
 
+.thick {
+  text-decoration: solid underline purple 4px;
+}
+
 .blink {
   text-decoration: blink;
 }
@@ -125,12 +142,16 @@ text-decoration: unset;
   soulignement sert souvent d'indication pour un hyperlien.
 </p>
 <p class="underover">Ce texte a des lignes en dessous et au dessus.</p>
+<p class="thick">
+  Ce texte a une ligne en dessous très épaisse et violette dans les navigateurs
+  compatibles.
+</p>
 <p class="blink">Ce texte peut clignoter selon le navigateur utilisé.</p>
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples','auto','280')}}
+{{EmbedLiveSample("Exemples", "auto", 520)}}
 
 ## Spécifications
 
@@ -142,8 +163,7 @@ text-decoration: unset;
 
 ## Voir aussi
 
-- L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
-- Les propriétés détaillées associées à cette propriété raccourcie :
-  - {{cssxref("text-decoration-line")}}
-  - {{cssxref("text-decoration-color")}}
-  - {{cssxref("text-decoration-style")}}.
+- Les propriétés individuelles de `text-decoration` sont {{CSSxRef("text-decoration-line")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-decoration-style")}} et {{CSSxRef("text-decoration-thickness")}}.
+- Les propriétés {{CSSxRef("text-decoration-skip-ink")}}, {{CSSxRef("text-underline-offset")}} et {{CSSxRef("text-underline-position")}} affectent également la décoration du texte, mais ne sont pas incluses dans la propriété raccourcie.
+- La propriété {{CSSxRef("list-style")}} contrôle l'apparence des éléments dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
+- L'attribut SVG {{SVGAttr("text-decoration")}}

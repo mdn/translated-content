@@ -3,7 +3,7 @@ title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 ---
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
 Este es el **4º** paso sobre 16 del tutorial [Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente tal y como quedaría al completar la lección en [Gamedev-Phaser-Content-Kit/demos/lesson04.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html).
 
@@ -34,4 +34,4 @@ El siguiente paso es añadir una detección básica de colisión, para que la pe
 
 En cualquier caso, antes de hacer todo esto debemos introducir los motores de Física de Phaser y hacer un poco de trabajo de configuración.
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}

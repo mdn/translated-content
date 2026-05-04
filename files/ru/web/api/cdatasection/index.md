@@ -27,7 +27,7 @@ slug: Web/API/CDATASection
 
 Заметьте, что разделы CDATA не следует использовать внутри HTML; они работают только в XML.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

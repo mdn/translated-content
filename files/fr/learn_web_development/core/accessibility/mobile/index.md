@@ -255,7 +255,7 @@ Il est également utile d'envisager l'utilisation de types de saisie de formulai
 - Les types `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
 - Les types `time` et `date` affichent des sélecteurs appropriés pour la sélection des heures et des dates. .
 
-Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à [input types](http://diveinto.html5doctor.com/detect.html#input-types) pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
+Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à [input types](http://diveinto.html5doctor.com/detect.html#input-types) pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn_web_development/Extensions/Testing/Feature_detection) pour en savoir plus. .
 
 ## Résumé
 

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`load()`** de l'objet {{JSxRef("Atomics")}} retourne une valeur située à une position donnée du tableau.
+La méthode statique **`Atomics.load()`** retourne une valeur située à une position donnée du tableau.
 
 ## Syntaxe
 
@@ -36,7 +36,7 @@ La valeur à la position indiquée (`typedArray[index]`).
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.load()`
+### Utiliser la méthode `Atomics.load()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

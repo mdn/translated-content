@@ -106,7 +106,7 @@ console.log(square.area); // 100
 
 ### 정적 메서드와 속성
 
-{{jsxref("Classes/static", "static", "", 1)}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](<https://developer.mozilla.org/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
+{{jsxref("Classes/static", "static", "", 1)}} 키워드는 클래스를 위한 정적(static) 메서드를 정의합니다. 정적 메서드는 클래스의 인스턴스화([instantiating](</ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#The_object_(class_instance)> 'An example of class instance is "var john = new Person();"')) 없이 호출되며, 클래스의 인스턴스에서는 호출할 수 없습니다. 정적 메서드는 어플리케이션(application)을 위한 유틸리티(utility) 함수를 생성하는 데 주로 사용됩니다. 반면, 정적 속성은 캐시, 고정 환경설정 또는 인스턴스 간에 복제할 필요가 없는 기타 데이터에 유용합니다.
 
 ```js
 class Point {

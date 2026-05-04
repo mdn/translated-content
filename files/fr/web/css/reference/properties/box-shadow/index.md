@@ -1,8 +1,9 @@
 ---
-title: box-shadow
+title: Propriété CSS `box-shadow`
+short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 l10n:
-  sourceCommit: 710429f3ae667556b60370b3d3d355cbdcc6ebf0
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`box-shadow`** ajoute des effets d'ombre autour du cadre d'un élément. Vous pouvez définir plusieurs effets séparés par des virgules. Une ombre de boîte est décrite par des décalages X et Y relatifs à l'élément, un rayon de flou, un rayon d'étalement et une couleur.

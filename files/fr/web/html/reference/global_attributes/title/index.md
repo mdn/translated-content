@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : title"
+title: "Attribut HTML universel : `title`"
 short-title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`title`** contient un texte d'information relatif à l'élément auquel il est rattaché.

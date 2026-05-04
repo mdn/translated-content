@@ -1,12 +1,14 @@
 ---
-title: outline
+title: Propriété CSS `outline`
+short-title: outline
 slug: Web/CSS/Reference/Properties/outline
-original_slug: Web/CSS/outline
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété **`outline`** est [une propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi {{cssxref("outline-style")}}, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`outline`** définit la plupart des propriétés de contour dans une seule déclaration.
 
-{{InteractiveExample("CSS Demo: outline")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: outline")}}
 
 ```css interactive-example-choice
 outline: solid;
@@ -25,14 +27,14 @@ outline: thick double #32a1ce;
 ```
 
 ```css interactive-example-choice
-outline: 8px ridge rgba(170, 50, 220, 0.6);
+outline: 8px ridge rgb(170 50 220 / 0.6);
 border-radius: 2rem;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+    Ceci est une boîte avec un contour autour.
   </div>
 </section>
 ```
@@ -45,14 +47,13 @@ border-radius: 2rem;
 }
 ```
 
-À l'instar des autres propriétés raccourcies, toutes les valeurs qui ne sont pas explicitement utilisées dans la déclaration sont réinitialisées avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
+## Propriétés constitutives
 
-### Bordures et contours
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
 
-Les contours (_outline_) diffèrent des bordures, notamment sur les points suivants :
-
-- Les contours ne prennent pas d'espace et sont dessinés au-dessus du contenu.
-- Les contours peuvent avoir une forme qui n'est pas rectangulaire. Ils seront rectangulaires avec Gecko et Firefox mais Opera dessinera une forme autour du contenu (cf. exemples).
+- {{CSSxRef("outline-width")}}
+- {{CSSxRef("outline-style")}}
+- {{CSSxRef("outline-color")}}
 
 ## Syntaxe
 
@@ -61,33 +62,50 @@ Les contours (_outline_) diffèrent des bordures, notamment sur les points suiva
 outline: solid;
 
 /* couleur | style */
-outline: #f66 dashed;
+outline: dashed #ff6666;
 
 /* style | épaisseur */
 outline: inset thick;
 
 /* couleur | style | épaisseur */
-outline: green solid 3px;
+outline: 3px solid green;
 
 /* Valeurs globales */
 outline: inherit;
 outline: initial;
+outline: revert;
+outline: revert-layer;
 outline: unset;
 ```
 
-La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance.
+La propriété `outline` peut être définie avec une, deux ou trois valeurs parmi celles listées ci-après. L'ordre de ces valeurs n'a pas d'importance. Comme pour toutes les propriétés raccourcies, toutes les sous-valeurs omises seront définies avec [leur valeur initiale](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_initiale).
 
 > [!NOTE]
-> Si aucun style n'est défini, le contour sera invisible (car le style par défaut vaut `none`).
+> Le contour sera invisible pour de nombreux éléments si son style n'est pas défini. En effet, le style par défaut est `none`. Une exception notable est les éléments `input`, qui reçoivent un style par défaut par les navigateurs.
 
 ### Valeurs
 
 - `<'outline-width'>`
-  - : Voir {{cssxref("outline-width")}}.
+  - : Définit l'épaisseur du contour. Par défaut, elle est `medium` si elle est absente. Voir {{CSSxRef("outline-width")}}.
 - `<'outline-style'>`
-  - : Voir {{cssxref("outline-style")}}.
+  - : Définit le style du contour. Par défaut, il est `none` si absent. Voir {{CSSxRef("outline-style")}}.
 - `<'outline-color'>`
-  - : Depuis Gecko 1.9 (Firefox 3), la valeur de la propriété {{cssxref("color")}} de l'élément est utilisée. Voir {{cssxref("outline-color")}}.
+  - : Définit la couleur du contour. Par défaut, elle est `invert` pour les navigateurs qui le supportent, `currentColor` pour les autres. Voir {{CSSxRef("outline-color")}}.
+
+## Description
+
+Le contour est une ligne à l'extérieur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) de l'élément. Contrairement aux autres zones de la boîte, les contours n'occupent pas d'espace, ils n'affectent donc pas la mise en page du document.
+
+Il existe plusieurs propriétés qui affectent l'apparence d'un contour. Il est possible de changer le style, la couleur et l'épaisseur en utilisant la propriété `outline`, la distance par rapport à la bordure en utilisant la propriété {{CSSxRef("outline-offset")}}, et les angles des coins en utilisant la propriété {{CSSxRef("border-radius")}}.
+
+Un contour n'est pas obligé d'être rectangulaire&nbsp;: Lorsqu'on traite du texte multiligne, certains navigateurs dessineront un contour pour chaque boîte de ligne séparément, tandis que d'autres envelopperont tout le texte avec un seul contour.
+
+## Accessibilité
+
+Attribuer à `outline` une valeur de `0` ou `none` supprimera le style de sélection par défaut du navigateur. Si un élément peut être interactif, il doit avoir un indicateur de sélection visible. Fournissez un style de sélection évident si le style de sélection par défaut est supprimé.
+
+- [Comment concevoir des indicateurs de sélection utiles et utilisables <sup>(angl.)</sup>](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
+- WCAG 2.1&nbsp;: [Comprendre le critère de succès 2.4.7&nbsp;: Sélection visible <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
 
 ## Définition formelle
 
@@ -99,64 +117,35 @@ La propriété `outline` peut être définie avec une, deux ou trois valeurs par
 
 ## Exemples
 
-### Exemple simple
+### Utiliser `outline` pour définir un style de sélection
 
 #### HTML
 
 ```html
-<p class="exemple">Je suis entouré de tirets rouges</p>
+<a href="#">Ceci est un lien avec un style de sélection spécial.</a>
 ```
 
 #### CSS
 
 ```css
-.exemple {
-  outline: dashed red 2px;
-  /* on aurait pu utiliser          */
-  /* les trois propriétés unitaires */
-  /* et avoir le même résultat      */
+a {
+  border: 1px solid;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+}
+
+a:focus {
+  outline: 4px dotted #ee7733;
+  outline-offset: 4px;
+  background: #ffffaa;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple")}}
-
-### Exemple de contour non rectangulaire
-
-#### HTML
-
-```html
-<p class="exemple">
-  petit texte
-  <span class="grand">Grand Texte</span>
-  petit texte
-</p>
-```
-
-#### CSS
-
-```css
-.exemple {
-  outline: dotted orange 1px;
-}
-
-.grand {
-  font-size: xx-large;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Exemple_de_contour_non_rectangulaire")}}
-
-## Accessibilité
-
-Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le style par défaut du navigateur pour le focus. Lorsqu'on interagit avec un élément, celui-ci doit avoir un indicateur visible. Aussi, veillez à fournir un tel indicateur si vous retirez le style par défaut pour le focus
-
-- {{cssxref(":focus")}}
-- [Comment concevoir des indicateurs de focus utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- [_Understanding Success Criterion 2.4.7 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
+{{EmbedLiveSample("Utiliser `outline` pour définir un style de sélection", "100%", 85)}}
 
 ## Spécifications
 
@@ -165,3 +154,10 @@ Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le st
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("outline-width")}}
+- La propriété {{CSSxRef("outline-style")}}
+- La propriété {{CSSxRef("outline-color")}}
+- La propriété {{CSSxRef("border")}}

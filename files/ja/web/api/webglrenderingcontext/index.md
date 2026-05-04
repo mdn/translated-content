@@ -214,7 +214,7 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
   - : `WebGLShader` を削除します。
 - {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : `WebGLShader` をでタッチします。
+  - : `WebGLShader` をデタッチします。
 - {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
   - : `WebGLProgram` にアタッチされた `WebGLShader` オブジェクトのリストを返します。
 - {{domxref("WebGLRenderingContext.getProgramParameter()")}}

@@ -111,7 +111,7 @@ translateZ(tz)
 ### 値
 
 - `tz`
-  - : 変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Z 軸方向の移動量をを表します。正の値では要素が閲覧者に向かって移動し、負の値で移動すると遠ざかります。
+  - : 変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Z 軸方向の移動量を表します。正の値では要素が閲覧者に向かって移動し、負の値で移動すると遠ざかります。
 
 <table class="standard-table">
   <thead>

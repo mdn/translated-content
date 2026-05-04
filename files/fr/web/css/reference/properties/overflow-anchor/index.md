@@ -1,14 +1,104 @@
 ---
-title: overflow-anchor
+title: Propriété CSS `overflow-anchor`
+short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
-original_slug: Web/CSS/overflow-anchor
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`overflow-anchor`** permet de désactiver le comportement d'ancrage du défilement du navigateur, qui ajuste la position de défilement pour minimiser les déplacements de contenu.
 
-La propriété **`overflow-anchor`** permet d'éviter, lors du défilement, que le navigateur ajuste la position afin de minimiser le déplacement du contenu.
+Le comportement d'ancrage du défilement est activé par défaut dans tous les navigateurs qui le prennent en charge. Par conséquent, il est généralement nécessaire de modifier la valeur de cette propriété uniquement si vous rencontrez des problèmes d'ancrage du défilement dans un document ou une partie d'un document et que vous devez désactiver ce comportement.
 
-Ce comportement est activé par défaut pour les navigateurs qui le prenne en charge. Aussi, cette propriété est uniquement nécessaire lorsque vous rencontrez des problèmes de défilement dans un document et que vous souhaitez désactiver ce comportement.
+{{InteractiveExample("Démonstration CSS&nbsp;: overflow-anchor")}}
+
+```css interactive-example-choice
+overflow-anchor: auto;
+```
+
+```css interactive-example-choice
+overflow-anchor: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <button id="playback" type="button">Démarrer la loterie</button>
+    <p>Les numéros magiques pour aujourd'hui sont&nbsp;:</p>
+    <div id="example-element"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#example-element {
+  height: 100%;
+  border: 2px dashed dodgerblue;
+  padding: 0.75em;
+  text-align: left;
+  overflow: scroll;
+}
+
+#playback {
+  font-size: 1em;
+  width: 10em;
+  height: 4em;
+  font-weight: bold;
+  margin: 1em auto;
+  background-color: aliceblue;
+  border: solid 2px dodgerblue;
+  border-radius: 5px;
+}
+
+#playback:hover {
+  border-color: lightseagreen;
+}
+
+#playback:active {
+  filter: brightness(0.9);
+}
+```
+
+```js interactive-example
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
+let intervalId;
+
+function setInitialState() {
+  example.innerHTML = "";
+  Array.from({ length: 10 }, (_, i) => i).forEach(addContent);
+  example.scrollTop = example.scrollHeight;
+}
+
+function addContent() {
+  console.log("adding content");
+  const magicNumber = Math.floor(Math.random() * 10000);
+  example.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="new-content-container">Nouveau numéro magique : ${magicNumber}</div>`,
+  );
+}
+
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "Démarrer la loterie";
+    clearInterval(intervalId);
+  } else {
+    example.classList.add("running");
+    button.textContent = "Arrêter la loterie";
+    setInitialState();
+    intervalId = setInterval(addContent, 1000);
+  }
+});
+```
 
 ## Syntaxe
 
@@ -20,6 +110,8 @@ overflow-anchor: none;
 /* Valeurs globales */
 overflow-anchor: inherit;
 overflow-anchor: initial;
+overflow-anchor: revert;
+overflow-anchor: revert-layer;
 overflow-anchor: unset;
 ```
 
@@ -40,7 +132,9 @@ overflow-anchor: unset;
 
 ## Exemples
 
-Pour désactiver l'ancrage du défilement, on pourra utiliser cette propriété :
+### Empêcher l'ancrage du défilement
+
+Pour empêcher l'ancrage du défilement dans un document, utilisez la propriété `overflow-anchor`.
 
 ```css
 body {
@@ -58,4 +152,5 @@ body {
 
 ## Voir aussi
 
-- [Guide sur l'ancrage du défilement (_scroll anchoring_)](/fr/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [Aperçu de l'ancrage du défilement](/fr/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- Le module [d'ancrage du défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_anchoring)

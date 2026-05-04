@@ -65,6 +65,6 @@ Quando um novo objeto {{domxref("Headers")}} é criado usando o {{domxref("Heade
 
 Um cabeçalho guard afeta os métodos {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, e {{domxref("Headers.append","append()")}} os quais mudam o conteúdo do cabeçalho. Um`TypeError` é lançado se você tentar modificar um objeto {{domxref("Headers")}} objeto cujo "guard" é `immutable`. De qualquer maneira, a operação vai funcionar se
 
-- guard for um `request` e o _name_ de cabeçalho não for {{Glossary("forbidden header name")}} .
+- guard for um `request` e o _name_ de cabeçalho não for {{Glossary("Forbidden request header")}} .
 - guard for `request-no-cors` e os _name_/_value_ de cabeçalho for {{Glossary("simple header")}} .
 - guard for `response` e o _name_ de cabeçalho não for {{Glossary("forbidden response header name")}} .

@@ -63,7 +63,7 @@ Lorsque vous aidez à répondre aux questions liées à la section [Apprendre le
 
 1. Examinez la structure de la page en général.
 2. Regardez en particulier les types d'évaluations disponibles,
-   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#test_your_skills!))
+   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn_web_development/Core/Scripting/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#test_your_skills!))
    - Aux évaluations plus approfondies à la fin de certains modules (voir par exemple [/fr/docs/Learn_web_development/Core/Scripting/Image_gallery](/fr/docs/Learn_web_development/Core/Scripting/Image_gallery))
 
 3. Jetez un œil aux dépôts GitHub associés à la zone d'apprentissage (la plupart des fichiers sont disponibles dans <https://github.com/mdn/learning-area/>, certains sont dans <https://github.com/mdn/css-examples/tree/master/learn>). La plupart des exemples sur lesquels les apprenants voudront de l'aide sont contenus ici.

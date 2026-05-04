@@ -13,7 +13,7 @@ O cabeçalho HTTP **`Referrer-Policy`** controla quanta [informação de referê
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>
@@ -64,7 +64,7 @@ Referrer-Policy: unsafe-url
 
 ## Integração com HTML
 
-Você também pode colocar política de referência dentro do HTML. Por exemplo, você pode colocar uma política de referência para o documento inteiro com um elemento {{HTMLElement("meta")}} com um [nome](/pt-BR/docs/Web/HTML/Element/meta#name) de `referrer`:
+Você também pode colocar política de referência dentro do HTML. Por exemplo, você pode colocar uma política de referência para o documento inteiro com um elemento {{HTMLElement("meta")}} com um [nome](/pt-BR/docs/Web/HTML/Reference/Elements/meta#name) de `referrer`:
 
 ```html
 <meta name="referrer" content="origin" />

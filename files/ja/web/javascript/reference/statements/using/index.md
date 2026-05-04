@@ -2,7 +2,7 @@
 title: using
 slug: Web/JavaScript/Reference/Statements/using
 l10n:
-  sourceCommit: b6a36de3428f4b42c7707c8f190a349db13bf531
+  sourceCommit: 075e089ec955f14ed65dfaa0bf3311051c58f666
 ---
 
 **`using`** 宣言は、同期的に破棄されるブロックスコープのローカル変数を宣言します。 {{jsxref("Statements/const", "const")}} と同様に、 `using` で宣言された変数は初期化が必要であり、再代入できません。変数の値は `null`、`undefined`、または [`[Symbol.dispose]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/dispose) メソッドを持つオブジェクトのいずれかでなければなりません。変数がスコープ外になると、リソースを解放するために、オブジェクトの `[Symbol.dispose]()` メソッドが呼び出されます。
@@ -163,7 +163,7 @@ using resource2 = new Resource();
 
 ### オプションの `using`
 
-`using` では変数に `null` または `undefined` の値を持たせられるため、リソースの有無を任意にすることができます。つまり、以下のような記述は不要です。
+`using` を使用すると、変数の値を `null` または `undefined` にすることができるため、リソースは任意で存在しても構いません。つまり、例えば、ある種のリソースの利用可否を確認する場合などには、次のようにします。
 
 ```js
 function acquireResource() {
@@ -174,7 +174,11 @@ function acquireResource() {
   }
   return new Resource();
 }
+```
 
+次のようにする必要はありません。
+
+```js example-bad
 const maybeResource = acquireResource();
 
 if (maybeResource) {
@@ -185,9 +189,9 @@ if (maybeResource) {
 }
 ```
 
-このようにすることができます。
+次のようにすることができます。
 
-```js
+```js example-good
 using resource = acquireResource();
 console.log(resource?.getValue());
 ```

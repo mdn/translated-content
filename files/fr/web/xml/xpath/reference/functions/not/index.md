@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/not
 original_slug: Web/XPath/Functions/not
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `not` évalue une expression booléenne et retourne la valeur opposée.
 

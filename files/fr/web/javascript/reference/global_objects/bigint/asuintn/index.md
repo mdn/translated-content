@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`asUintN()`** des valeurs {{JSxRef("BigInt")}} tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier non signé.
+La méthode statique **`BigInt.asUintN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier qui n'est pas signé.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: BigInt.asUintN()")}}
 
@@ -40,7 +40,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Valeur de retour
 
-La valeur de `bigint` modulo `2 ** bits` comme entier signé.
+La valeur de `bigint` modulo `2 ** bits` comme entier qui n'est pas signé.
 
 ### Exceptions
 
@@ -49,7 +49,7 @@ La valeur de `bigint` modulo `2 ** bits` comme entier signé.
 
 ## Description
 
-La méthode `BigInt.asUintN` tronque une valeur `BigInt` au nombre de bits donné et interprète le résultat comme un entier non signé. Les entiers non signés n'ont pas de bits de signe et sont toujours non négatifs. Par exemple, pour `BigInt.asUintN(4, 25n)`, la valeur `25n` est tronquée à `9n`&nbsp;:
+La méthode `BigInt.asUintN` tronque une valeur `BigInt` au nombre de bits donné et interprète le résultat comme un entier qui n'est pas signé. Les entiers qui ne sont pas signés n'ont pas de bits de signe et sont toujours positifs. Par exemple, pour `BigInt.asUintN(4, 25n)`, la valeur `25n` est tronquée à `9n`&nbsp;:
 
 ```plain
 25n = 00011001 (base 2)

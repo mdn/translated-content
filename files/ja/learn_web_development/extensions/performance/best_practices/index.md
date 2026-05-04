@@ -11,7 +11,7 @@ original_slug: Learn_web_development/Extensions/Performance/Web_Performance_Basi
 
 ## Best practices
 
-- Start with learning the [critical rendering path](/ja/docs/Web/Performance/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
+- Start with learning the [critical rendering path](/ja/docs/Web/Performance/Guides/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
 - Using [resource hints](/ja/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints) such as `rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload`
 - Keep the size of Javascript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much Javascript as needed for the current page.
 - [CSS](/ja/docs/Learn_web_development/Extensions/Performance/CSS) performance factors
@@ -26,7 +26,7 @@ original_slug: Learn_web_development/Extensions/Performance/Web_Performance_Basi
 
 ### CSS
 
-Web performance is all about user experience and perceived performance. As we learned in the [critical rendering path](/ja/docs/Web/Performance/Critical_rendering_path) document, linking CSS with a tradional link tag with rel="stylesheet" is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.
+Web performance is all about user experience and perceived performance. As we learned in the [critical rendering path](/ja/docs/Web/Performance/Guides/Critical_rendering_path) document, linking CSS with a tradional link tag with rel="stylesheet" is synchronous and blocks rendering. Optimize the rendering of your page by removing blocking CSS.
 
 To load CSS asynchronously one can simpy set the media type to print and then change to all once loaded. The following snippet includes an onload attribute, requiring Javascript, so it is important to include a noscript tag with a traditional fallback.
 

@@ -1,8 +1,9 @@
 ---
-title: margin-inline
+title: Propriété CSS `margin-inline`
+short-title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`margin-inline`** est une propriété raccourcie qui définit à la fois les marges logiques de début et de fin en ligne d'un élément, lesquelles correspondent à des marges physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément.
@@ -97,7 +98,7 @@ La propriété `margin-inline` peut être définie avec une ou deux valeurs.
 
 ### Valeurs
 
-La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{CSSxRef("margin", "", "#valeurs")}}.
+La propriété `margin-inline` peut prendre les mêmes valeurs que la propriété {{CSSxRef("margin-top", "", "#valeurs")}}.
 
 ## Définition formelle
 

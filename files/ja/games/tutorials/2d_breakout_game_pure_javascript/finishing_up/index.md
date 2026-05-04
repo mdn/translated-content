@@ -101,7 +101,7 @@ requestAnimationFrame(draw);
 
 ## ゲームクリア - 今のところは
 
-おめでとうございます。これで全てのレッスンを終えました。ここまでで、キャンバス操作の基本をと簡単な 2D ゲームの裏にあるロジックを学んだはずです。フレームワークを学びゲーム開発を続ける良い時期です。このシリーズに対応する [Phaser を使ったブロックくずしゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)や[デバイス回転方向を使った 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)チュートリアルを見てみると良いでしょう。 [MDN のゲームセクション](/ja/docs/Games)で発想やより多くの知識を探してみても良いでしょう。
+おめでとうございます。これで全てのレッスンを終えました。ここまでで、キャンバス操作の基本と簡単な 2D ゲームの裏にあるロジックを学んだはずです。フレームワークを学びゲーム開発を続ける良い時期です。このシリーズに対応する [Phaser を使ったブロックくずしゲーム](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)や[デバイス回転方向を使った 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)チュートリアルを見てみると良いでしょう。 [MDN のゲームセクション](/ja/docs/Games)で発想やより多くの知識を探してみても良いでしょう。
 
 また、[このチュートリアルシリーズの目次](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)を見返せます。コーディングを楽しみましょう。
 

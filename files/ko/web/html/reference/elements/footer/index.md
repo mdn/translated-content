@@ -50,7 +50,7 @@ footer {
         >
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >, 뚜렷한 콘텐츠.
       </td>
@@ -59,7 +59,7 @@ footer {
       <th scope="row">가능한 콘텐츠</th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >. 단, {{htmlelement("header")}}와 다른
@@ -74,7 +74,7 @@ footer {
       <th scope="row">가능한 부모 요소</th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소. 단, <code>&#x3C;footer></code> 요소는

@@ -24,7 +24,7 @@ l10n:
         <code>AddSearchProvider(<em>descriptionURL)</em></code>
       </td>
       <td>
-        空函数；无任何作用。参见<a href="/zh-CN/docs/Web/OpenSearch#自动发现搜索插件"
+        空函数；无任何作用。参见<a href="/zh-CN/docs/Web/XML/Guides/OpenSearch#自动发现搜索插件"
           >自动发现搜索插件</a
         >。
       </td>

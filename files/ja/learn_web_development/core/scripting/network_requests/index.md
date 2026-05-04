@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
 
 現代のウェブサイトやアプリケーションでとても一般的なもう一つのタスクは、新しいページ全体を読み込むことなくウェブページの一部を更新するために、サーバーから個々のデータ項目を取得することです。この一見小さなことが、サイトのパフォーマンスや動作に大きな影響を与えてきました。そこでこの記事では、この概念を説明し、これを可能にする技術、特に[フェッチ API](/ja/docs/Web/API/Fetch_API) を見ていきます。
 
@@ -60,7 +60,7 @@ l10n:
 この節では、フェッチ API の例をいくつか見てみましょう。
 
 下記にある例はある程度の複雑さを持ち、Fetch APIを実際のコンテキストでどのように使用するかを示しています。これまでフェッチを使用したことがない場合は、 Scrimba の [First fetch](https://scrimba.com/frontend-path-c0j/~0lu?via=mdn) <sup>
-[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
+[_MDN 学習パートナー_](/ja/docs/MDN/Writing_guidelines/Learning_content#外部リンクと埋め込み)</sup> のインタラクティブチュートリアルから始めることをお勧めします。とても単純な導入手順を追って説明する手順を提供しています。
 
 ### テキストコンテンツの読み取り
 
@@ -266,4 +266,4 @@ try {
 - [HTTP の概要](/ja/docs/Web/HTTP/Guides/Overview)
 - [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Image_gallery","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

@@ -1,9 +1,9 @@
 ---
-title: "<head> : l'élément de métadonnées (en-tête) du document"
+title: "Élément HTML `<head>` : l'élément de métadonnées (en-tête) du document"
+short-title: <head>
 slug: Web/HTML/Reference/Elements/head
-original_slug: Web/HTML/Element/head
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<head>`** fournit des informations générales ({{Glossary("metadata", "métadonnées")}}) sur le document, incluant son [titre](/fr/docs/Web/HTML/Reference/Elements/title), [scripts](/fr/docs/Web/HTML/Reference/Elements/script), et [feuilles de style](/fr/docs/Web/HTML/Reference/Elements/style). Il ne peut y avoir qu'un seul élément `<head>` dans un document HTML.

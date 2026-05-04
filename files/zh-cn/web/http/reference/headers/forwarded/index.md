@@ -9,9 +9,9 @@ slug: Web/HTTP/Reference/Headers/Forwarded
 
 这个消息首部会被用来进行调试和统计，以及生成基于位置的定制化内容，按照设计的目的，它会暴露一定的隐私和敏感信息，比如客户端的 IP 地址。所以在应用此消息首部的时候，需要将用户的隐私问题考虑在内。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | no                             |
+| Header type                              | {{Glossary("Request header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | no                             |
 
 ## 语法
 

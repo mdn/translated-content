@@ -1,105 +1,300 @@
 ---
-title: mask-size
+title: Propriété CSS `mask-size`
+short-title: mask-size
 slug: Web/CSS/Reference/Properties/mask-size
-original_slug: Web/CSS/mask-size
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
-
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-size`** définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
 mask-size: cover;
 mask-size: contain;
+mask-size: auto;
 
-/* Syntaxe avec une valeur           */
-/* qui indique la largeur de l'image */
-/* la hauteur est fixée à auto       */
+/* Syntaxe avec une valeur */
+/* La largeur du masque. Définit la hauteur à 'auto'. */
 mask-size: 50%;
 mask-size: 3em;
 mask-size: 12px;
-mask-size: auto;
 
-/* Syntaxe avec deux valeurs :           */
-/* La première valeur indique la largeur */
-/* La seconde indique la hauteur         */
-mask-size: 50% auto;
+/* Syntaxe avec deux valeurs */
+/* Première valeur : largeur du masque. Deuxième valeur : hauteur du masque. */
 mask-size: 3em 25%;
 mask-size: auto 6px;
-mask-size: auto auto;
+mask-size: auto 50%;
 
-/* Valeurs multiples pour gérer différents */
-/* masques. Attention à ne pas confondre   */
-/* avec mask-size: auto auto               */
-mask-size: auto, auto;
-mask-size: 50%, 25%, 25%;
+/* Valeurs multiples */
+mask-size: auto, contain;
+mask-size:
+  50%,
+  50% 25%,
+  auto 25%;
 mask-size: 6px, auto, contain;
 
 /* Valeurs globales */
 mask-size: inherit;
 mask-size: initial;
 mask-size: revert;
+mask-size: revert-layer;
 mask-size: unset;
 ```
 
-> [!NOTE]
-> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie [`mask`](/fr/docs/Web/CSS/Reference/Properties/mask) et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
-
-## Syntaxe
-
-Une ou plusieurs valeurs `<bg-size>`, séparées par des virgules. Une valeur `<bg-size>` peut être définie de trois façons&nbsp;:
-
-- avec le mot-clé `contain`
-- avec le mot-clé `cover`
-- avec des valeurs pour la hauteur et la largeur.
-
-Pour indiquer une taille avec une largeur et une hauteur, il est possible de fournir une ou deux valeurs&nbsp;:
-
-- Si une seule valeur est fournie, elle servira à définir la largeur, la hauteur vaudra alors `auto`
-- Si deux valeurs sont fournies, la première définira la largeur et la seconde définira la hauteur.
-
-Chaque valeur peut être une longueur (`<length>`), un pourcentage (`<percentage>`) ou `auto`.
-
 ### Valeurs
 
-- `<length>`
-  - : Une valeur de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length) qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.
-- `<percentage>`
-  - : Une valeur de pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)) qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par [`mask-origin`](/fr/docs/Web/CSS/Reference/Properties/mask-origin) par rapport à la taille de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<i lang="en">padding</i>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
-- `auto`
-  - : Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.
+La propriété `mask-size` accepte une liste séparée par des virgules de valeurs `<bg-size>`. Une valeur `<bg-size>` est soit `cover`, `contain`, une paire de valeurs définissant la largeur et la hauteur (dans cet ordre), ou une seule valeur définissant la largeur (dans ce cas, la hauteur est définie sur `auto`). Les valeurs incluent&nbsp;:
+
 - `contain`
-  - : Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le conteneur. Par défaut, l'image est centrée sauf si [`mask-position`](/fr/docs/Web/CSS/Reference/Properties/mask-position) indique un autre paramètre.
+  - : Redimensionne l'image du masque vers le haut ou vers le bas, tout en conservant son rapport d'aspect, pour que le masque soit aussi grand que possible dans son conteneur sans le recadrer ni l'étirer.
+    Si l'image du masque est plus petite que le conteneur, le masque sera répété, sauf si la propriété {{CSSxRef("mask-repeat")}} est définie sur `no-repeat`.
+
 - `cover`
-  - : Un mot-clé qui se comporte à l'inverse de `contain`. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).
+  - : Redimensionne l'image du masque à la plus petite taille possible pour remplir le conteneur tout en conservant son rapport d'aspect. Si le rapport d'aspect de l'image du masque diffère de celui de l'élément, elle sera recadrée verticalement ou horizontalement.
 
-L'interprétation des valeurs se fera en fonction des dimensions intrinsèques de l'image (sa hauteur et sa largeur) et de ses proportions intrinsèques (le ratio entre la largeur et la hauteur). Une image matricielle (<i lang="en">bitmap</i>) possèdera toujours des dimensions intrinsèques et des proportions intrinsèques. Une image vectorielle pourra avoir des dimensions intrinsèques (et donc, _de facto_, des proportions intrinsèques) ou également n'avoir qu'une ou aucune dimension intrinsèque et des proportions intrinsèques ou non. Les gradients sont considérés comme des images sans dimensions ni proportions intrinsèques.
+- `auto`
+  - : Conserve le rapport d'aspect original de la source du masque. Lorsqu'il est défini pour la largeur et la hauteur, la taille d'origine de la ressource du masque est utilisée. Sinon, `auto` redimensionne l'image du masque dans la direction correspondante de manière à ce que son rapport d'aspect original soit maintenu.
 
-La taille de l'image affichée pour le masque est calculée de la façon suivante&nbsp;:
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Affiche l'image du masque à la longueur définie dans la dimension correspondante (largeur si définie comme première ou seule valeur, hauteur si définie comme deuxième valeur). Les valeurs négatives ne sont pas autorisées.
 
-- Si les deux composants de `mask-size` sont définis et sont différents de `auto`&nbsp;:
-  - : L'image est affichée avec la taille indiquée.
-- Si `mask-size` vaut `contain` ou `cover`&nbsp;:
-  - : L'image est affichée en conservant ses proportions avec la plus grande taille possible pour être contenue ou couvrir toute la zone du masque. Si l'image ne possède pas de proportions intrinsèques, sa taille d'affichage sera la taille de la zone du masque.
-- Si `mask-size` vaut `auto` ou `auto auto`&nbsp;:
-  - : Si l'image possède deux dimensions intrinsèques, elle sera affichée avec cette taille. Si elle ne possède pas de dimensions intrinsèques ni de proportions intrinsèques, elle sera affichée à la taille de la zone du masque. Si elle n'a aucune dimension intrinsèque mais possède des proportions intrinsèques elle sera affichée comme si `contain` avait été utilisé. Si l'image possède une dimension intrinsèque et des proportions intrinsèques, sa taille sera déterminée grâce à ses informations. Si l'image possède une dimension intrinsèque mais aucune proportion intrinsèque, la dimension connue sera utilisée pour cet axe et la seconde sera celle de la zone pour le masque.
-- Si `mask-size` possède un composant `auto` et un autre composant différent de `auto`&nbsp;:
-  - : Si l'image possède des proportions intrinsèques, elle sera affichée avec la dimension connue et la deuxième sera calculée à partir de la proportion. Si l'image ne possède pas de proportions intrinsèques, la valeur définie sera utilisée pour l'axe correspondant et pour l'autre axe, on utilisera la dimension intrinsèque si elle est connue, sinon, on utilisera la dimension (sur cet axe) de la zone du masque.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Affiche l'image du masque dans la dimension correspondante en fonction du pourcentage défini de la zone d'origine de la boîte telle que définie par la propriété {{CSSxRef("mask-origin")}}, qui par défaut est `padding-box`. Les valeurs négatives ne sont pas autorisées.
+
+## Description
+
+La propriété `mask-size` est utilisée pour définir la taille des calques de masque.
+
+Un élément peut avoir plusieurs calques de masque appliqués. Le nombre de calques de masque est déterminé par le nombre de valeurs séparées par des virgules dans la valeur de la propriété {{CSSxRef("mask-image")}} (une valeur crée un calque de masque, même si c'est `none`).
+
+Chaque valeur `mask-size` dans la liste de valeurs séparées par des virgules est associée à un calque de masque correspondant tel que défini par la liste des valeurs `mask-image`, dans l'ordre. Si le nombre de valeurs dans les deux propriétés diffère&nbsp;:
+
+- Si `mask-size` a plus de valeurs que `mask-image`, les valeurs excédentaires de `mask-size` ne sont pas utilisées.
+- Si `mask-size` a moins de valeurs que `mask-image`, les valeurs de `mask-size` sont répétées.
+
+Chaque valeur `mask-size` est une valeur `<bg-size>`. Il existe trois façons de déclarer chaque `<bg-size>`&nbsp;: un mot-clé, deux longueurs, pourcentages ou le mot-clé `auto`, ou une longueur, un pourcentage ou `auto`&nbsp;:
+
+- Les mots-clés disponibles sont `cover` et `contain`.
+- Lorsque deux valeurs sont définies, la première définit la largeur du masque et la seconde définit sa hauteur.
+- Lorsque une seule valeur est définie, elle définit uniquement la largeur du masque, la hauteur étant définie sur `auto`.
+
+Les valeurs de largeur et de hauteur sont une laongueur ({{CSSxRef("&lt;length&gt;")}}), un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}), ou le mot-clé `auto`, qui est la valeur par défaut. Définir une ou les deux valeurs sur `auto` maintient le rapport d'aspect original de l'image du masque.
+
+La taille rendue de l'image du masque est calculée comme suit&nbsp;:
+
+- Si les deux composants de `mask-size` sont définis et ne sont pas `auto`, l'image du masque est rendue à la taille définie.
+- Si `mask-size` est `contain` ou `cover`, l'image est rendue en préservant son rapport d'aspect à la plus grande taille contenue dans ou couvrant la zone de positionnement du masque. Si l'image n'a pas de proportion intrinsèque, comme avec les dégradés, elle est alors rendue à la taille de la zone de positionnement du masque.
+- Si `mask-size` est `auto` (ce qui se résout en `auto auto`), elle est rendue à la taille à laquelle le masque serait affiché si aucun CSS n'était appliqué pour modifier le rendu&nbsp;; c'est sa {{Glossary("intrinsic size", "taille intrinsèque")}}. Si elle n'a pas de dimensions intrinsèques et pas de proportion intrinsèque, comme c'est le cas avec les [dégradés CSS](/fr/docs/Web/CSS/Reference/Values/gradient), elle est rendue à la taille de la zone de positionnement du masque, définie par la {{CSSxRef("mask-origin")}} (qui par défaut est `border-box`).
+  Si la source du masque n'a pas de dimensions mais a une proportion (rapport d'aspect), une valeur de `auto` la rendra comme si `contain` avait été défini à la place. Si l'image a une dimension intrinsèque et une proportion, elle est rendue à la taille déterminée par cette dimension et la proportion. Si l'image a une dimension intrinsèque mais pas de proportion, elle est rendue en utilisant la dimension intrinsèque et la dimension correspondante de la zone de positionnement du masque.
+- Si `mask-size` a un composant `auto` et un composant qui n'est pas `auto`, ce qui s'applique à toutes les valeurs à un seul composant, le rapport d'aspect est maintenu si la source du masque a une proportion intrinsèque. S'il n'y a pas de proportions intrinsèques, la valeur `auto` est supposée être la dimension de la zone de positionnement du masque.
+
+Comme pour tous les composants en notation longue d'une propriété raccourcie, si la propriété raccourcie {{CSSxRef("mask")}} est définie et que la valeur de la propriété `mask-size` n'est pas définie dans une couche de masque, la valeur de `mask-size` est réinitialisée à sa valeur initiale `auto` pour ces couches de masque.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
 ### Définir la taille du masque en pourcentages
 
-{{EmbedGHLiveSample("css-examples/masking/mask-size.html", '100%', 700)}}
+Cet exemple montre l'utilisation de base, tout en démontrant les valeurs en pourcentage pour `mask-size`.
+
+#### HTML
+
+Nous inclusons deux éléments HTML {{HTMLElement("div")}}&nbsp;:
+
+```html
+<div class="width"></div>
+<div class="height"></div>
+```
+
+#### CSS
+
+Les éléments `<div>` sont définis pour être deux fois plus hauts que larges, avec un fond en dégradé et un masque&nbsp;:
+
+```css
+div {
+  width: 200px;
+  height: 400px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url("/shared-assets/images/examples/mdn.svg");
+}
+```
+
+La largeur du masque d'un élément `<div>` est définie à `50%`, la hauteur étant par défaut `auto`. La hauteur du masque pour le deuxième élément `<div>` est définie à `50%` avec la largeur définie à `auto`&nbsp;:
+
+```css
+.width {
+  mask-size: 50%;
+}
+
+.height {
+  mask-size: auto 50%;
+}
+```
+
+Dans le cas de la `width`, le masque est rendu `100px` de large (`50%` de l'élément de `200px` de large). La hauteur par défaut est `auto`, ce qui maintient le rapport d'aspect du masque.
+Dans le cas de la `height`, le masque est rendu `200px` de haut (`50%` du conteneur de `400px` de haut). La largeur est explicitement définie à `auto`, ce qui maintient le rapport d'aspect du masque.
+
+```css hidden
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+#### Résultats
+
+{{EmbedLiveSample("Définir la taille du masque en pourcentages", "", 430)}}
+
+### Couvrir et contenir
+
+Cet exemple montre les valeurs de mots-clés pour `mask-size`.
+
+#### HTML
+
+Trois éléments HTML {{HTMLElement("section")}} sont définis, chacun avec un nom de classe différent, et chacun contenant un `<div>`.
+
+```html
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
+```
+
+#### CSS
+
+Les éléments `<div>` sont définis pour être deux fois plus hauts que larges, avec un fond en dégradé et un masque&nbsp;:
+
+```css
+div {
+  width: 200px;
+  height: 400px;
+  background: blue linear-gradient(red, blue);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
+}
+```
+
+La propriété `mask-size` de deux des éléments `<div>` est définie sur l'une des valeurs de mots-clés de la propriété. Le troisième `<div>` a une `mask-size` de `auto` définie, démontrant les dimensions intrinsèques originales du masque&nbsp;:
+
+```css
+.auto div {
+  mask-size: auto;
+}
+
+.cover div {
+  mask-size: cover;
+}
+
+.contain div {
+  mask-size: contain;
+}
+```
+
+Les valeurs de la propriété sont affichées en utilisant [du contenu généré](/fr/docs/Web/CSS/Guides/Generated_content).
+
+```css
+section::before {
+  content: "mask-size: " attr(class) ";";
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+```
+
+```css hidden
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+section {
+  border: 1px solid;
+}
+```
+
+#### Résultats
+
+{{EmbedLiveSample("Couvrir et contenir", "", 430)}}
+
+Avec `auto`, l'étoile est affichée à sa taille intrinsèque de `100px` par `100px`. Avec `cover`, l'étoile grandit pour atteindre `400px` de haut, couvrant toute la boîte d'origine. Avec `contain`, l'étoile grandit jusqu'à ce qu'une dimension soit égale à la même dimension de la [boîte d'origine](/fr/docs/Web/CSS/Reference/Properties/mask-origin), ce qui signifie que l'étoile est aussi grande que possible (`200px` de large) tout en restant contenue.
+
+### Lorsque le masque est plus grand que le conteneur
+
+En utilisant le même HTML et CSS que ci-dessus, avec juste une taille de boîte d'origine différente, cet exemple explore ce qui se passe lorsque la boîte d'origine est plus petite que les dimensions intrinsèques du masque.
+
+```html hidden
+<section class="auto">
+  <div></div>
+</section>
+<section class="cover">
+  <div></div>
+</section>
+<section class="contain">
+  <div></div>
+</section>
+```
+
+```css hidden
+div {
+  background: blue linear-gradient(red, blue);
+  mask-image: url("/shared-assets/images/examples/mask-star.svg");
+}
+
+.auto div {
+  mask-size: auto;
+}
+
+.cover div {
+  mask-size: cover;
+}
+
+.contain div {
+  mask-size: contain;
+}
+
+section::before {
+  content: attr(class);
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+section {
+  border: 1px solid;
+}
+```
+
+La seule différence est la taille de la boîte contenant (et du contenu généré)&nbsp;:
+
+```css
+div {
+  width: 70px;
+  height: 70px;
+}
+```
+
+{{EmbedLiveSample("Lorsque le masque est plus grand que le conteneur", "", 120)}}
+
+La valeur `contain` contient le masque à l'intérieur de la boîte d'origine. La valeur `cover` le couvre. Dans les deux cas, le masque rétrécit tout en conservant le rapport d'aspect original. Avec `auto`, le masque est coupé car les dimensions intrinsèques sont plus grandes que celles de la boîte.
 
 ## Spécifications
 
@@ -111,4 +306,17 @@ La taille de l'image affichée pour le masque est calculée de la façon suivant
 
 ## Voir aussi
 
-- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- La propriété {{CSSxRef("background-size")}}
+- La propriété raccourcie {{CSSxRef("mask")}}
+- La propriété {{CSSxRef("mask-image")}}
+- La propriété {{CSSxRef("mask-origin")}}
+- La propriété {{CSSxRef("mask-position")}}
+- La propriété {{CSSxRef("mask-repeat")}}
+- La propriété {{CSSxRef("mask-image")}}
+- La propriété {{CSSxRef("mask-border")}}
+- La propriété {{CSSxRef("background-size")}}
+- La propriété {{CSSxRef("mask-border-width")}}
+- [Introduction au masquage CSS](/fr/docs/Web/CSS/Guides/Masking/Introduction)
+- [Les propriétés CSS `mask`](/fr/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Déclarer plusieurs masques](/fr/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- Le module [de masquage CSS](/fr/docs/Web/CSS/Guides/Masking)

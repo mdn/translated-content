@@ -2,7 +2,7 @@
 title: path
 slug: Web/SVG/Reference/Attribute/path
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 **`path`** 属性には 2 つの異なる意味があります。テキストの文字がレンダリングされるテキストパスを定義する場合と、参照された要素がアニメーションされるモーションパスを定義する場合です。

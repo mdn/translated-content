@@ -174,7 +174,7 @@ detachedWindow.fetchLater("https://origin.example.com");
 
 ## 関連情報
 
-- [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API)
+- [`fetchLater()` API](/ja/docs/Web/API/Fetch_API)
 - [`fetchLater()` の割り当て](/ja/docs/Web/API/fetchLater_API/fetchLater_quotas)
 - {{domxref("FetchLaterResult")}}
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)

@@ -105,17 +105,17 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/HTML/Content_categories"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories"
           >콘텐츠 카테고리</a
         >
       </th>
       <td>
         <p>
-          <a href="/ko/docs/Web/HTML/Content_categories#flow_content"
+          <a href="/ko/docs/Web/HTML/Guides/Content_categories#flow_content"
             >플로우 콘텐츠</a
           >. 요소의 자식으로 적어도 한 개 이상의 {{HTMLElement("li")}} 요소를 포함한다면:
           <a
-            href="/ko/docs/Web/HTML/Content_categories#palpable_content"
+            href="/ko/docs/Web/HTML/Guides/Content_categories#palpable_content"
             >뚜렷한 콘텐츠</a
           >.
         </p>
@@ -136,7 +136,7 @@ button {
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/ko/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

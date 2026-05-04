@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Forms
 original_slug: Learn/Server-side/Django/Forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Authentication", "Learn_web_development/Extensions/Server-side/Django/Testing", "Learn_web_development/Extensions/Server-side/Django")}}
 
 En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 

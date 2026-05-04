@@ -1,53 +1,57 @@
 ---
-title: text-decoration-skip
+title: Propriété CSS `text-decoration-skip`
+short-title: text-decoration-skip
 slug: Web/CSS/Reference/Properties/text-decoration-skip
-original_slug: Web/CSS/text-decoration-skip
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+{{Deprecated_Header}}
 
-La propriété **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
+La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
+
+## Syntaxe
 
 ```css
-/* Syntaxe avec un mot-clé */
+/* Valeurs avec un mot-clé */
 text-decoration-skip: none;
 text-decoration-skip: objects;
+text-decoration-skip: spaces;
 text-decoration-skip: edges;
 text-decoration-skip: box-decoration;
-text-decoration-skip: spaces;
 
 /* Plusieurs mots-clés */
-text-decoration-skip: object spaces;
+text-decoration-skip: objects spaces;
 text-decoration-skip: leading-spaces trailing-spaces;
 text-decoration-skip: objects edges box-decoration;
 
 /* Valeurs globales */
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
+text-decoration-skip: revert;
+text-decoration-skip: revert-layer;
 text-decoration-skip: unset;
 ```
-
-> [!NOTE]
-> La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
-
-## Syntaxe
 
 ### Valeurs
 
 - `none`
-  - : La propriété `text-decoration` s'applique à tous les éléments sélectionnés.
+  - : Rien n'est ignoré. Ainsi, la décoration de texte est dessinée pour tout le contenu textuel et à travers les boîtes en ligne atomiques.
 - `objects`
-  - : La propriété `text-decoration` n'est pas appliquée pour les éléments en lignes atomiques telles que les images ou les blocs en lignes.
+  - : Toute la boîte de l'élément est ignorée s'il s'agit d'un élément en ligne atomique comme une image ou un élément en ligne de type bloc.
 - `spaces`
-  - : Les décorations ne sont pas appliquées où il y a des espaces (c'est-à-dire [des caractères Unicode considérés comme des blancs](https://www.unicode.org/reports/tr44/#White_Space), des séparateurs de mots et toute propriété {{cssxref("letter-spacing")}} ou {{cssxref("word-spacing")}} adjacente).
+  - : Tous les espacements sont ignorés&nbsp;: tous les [caractères d'espacement Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr44/#White_Space) et tous les séparateurs de mots, ainsi que tout {{CSSxRef("letter-spacing")}} ou {{CSSxRef("word-spacing")}} adjacent.
 - `leading-spaces`
-  - : Comportement analogue à `spaces` mais seuls les espaces avant les mots sont ignorés.
+  - : Identique à `spaces`, sauf que seuls les espaces de début sont ignorés.
 - `trailing-spaces`
-  - : Comportement analogue à `spaces` mais seuls les espaces après les mots sont ignorés.
+  - : Identique à `spaces`, sauf que seuls les espaces de fin sont ignorés.
 - `edges`
-  - : La décoration de `text-decoration` est rognée vers l'intérieur de la moitié de la largueur de la ligne, vers la droite et la gauche. ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
+  - : Le début et la fin de la décoration de texte sont légèrement décalés (par exemple, de la moitié de l'épaisseur de la ligne) par rapport au bord du contenu de la boîte décorative. Ainsi, les éléments adjacents reçoivent des soulignements séparés. (Ceci est important en chinois, où le soulignement est une forme de ponctuation.)
+
+    ![Un exemple de "text-decoration-skip: edges;".](decoration-skip-edges.png)
+
 - `box-decoration`
-  - : La propriété `text-decoration` n'est pas appliquée pour les marges, bordures et zones de remplissage (_padding_) des éléments fils.
+  - : La décoration de texte est ignorée sur les marges, bordures et zones de remplissage de la boîte. Cela n'a d'effet que sur les décorations imposées par un ancêtre&nbsp;; une _boîte décorative_ ne dessine jamais sur sa propre décoration de boîte.
 
 ## Définition formelle
 
@@ -59,26 +63,28 @@ text-decoration-skip: unset;
 
 ## Exemples
 
-### CSS
+### Ignorer les bords
+
+#### HTML
+
+```html
+<p>Bonjour tout le monde, quelle journée !</p>
+```
+
+#### CSS
 
 ```css
 p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;
-  text-decoration-skip: edge;
+  text-decoration-skip: edges;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p>Bonjour tout le monde, quelle journée !</p>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", "100%", 60)}}
+{{EmbedLiveSample("Ignorer les bords", "100%", 150)}}
 
 ## Spécifications
 
@@ -87,3 +93,7 @@ p {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété {{CSSxRef("text-decoration-skip-ink")}}

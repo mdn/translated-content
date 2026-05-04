@@ -96,7 +96,7 @@ Las evaluaciones de cada módulo están diseñadas para comprobar tu conocimient
 
 #### Recursos adicionales
 
-- [Libro de recetas de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)
+- [Libro de recetas de diseño CSS](/es/docs/Web/CSS/How_to/Layout_cookbook)
 
 ### Interactividad con JavaScript
 

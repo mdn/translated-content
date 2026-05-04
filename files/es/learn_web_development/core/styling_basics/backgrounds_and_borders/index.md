@@ -15,18 +15,18 @@ En este artículo, veremos algunas de las cosas creativas que puedes hacer con l
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >, conocimientos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con el CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Primeros pasos con el CSS</a>).
       </td>
     </tr>
     <tr>
@@ -58,11 +58,11 @@ Más adelante en este tutorial regresaremos a cómo funcionan las propiedades ab
 
 ### Los colores de fondo
 
-La propiedad {{cssxref ("background-color")}} define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier [`<color>`](/es/docs/Web/CSS/color_value) válido. Un color de fondo (`background-color`) se extiende por debajo del contenido y el relleno del elemento.
+La propiedad {{cssxref ("background-color")}} define el color de fondo de cualquier elemento en CSS. La propiedad admite cualquier [`<color>`](/es/docs/Web/CSS/Reference/Values/color_value) válido. Un color de fondo (`background-color`) se extiende por debajo del contenido y el relleno del elemento.
 
 En el ejemplo siguiente hemos utilizado varios valores de color para añadir un color de fondo a la caja, a un encabezado y a un elemento {{htmlelement ("span")}}.
 
-**Juega un poco con ellos; usa cualquier valor [\<color>](/es/docs/Web/CSS/color_value) disponible.**
+**Juega un poco con ellos; usa cualquier valor [\<color>](/es/docs/Web/CSS/Reference/Values/color_value) disponible.**
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 800)}}
 
@@ -91,7 +91,7 @@ La propiedad {{cssxref ("background-repeat")}} se usa para controlar el comporta
 
 #### Dimensionar la imagen de fondo
 
-En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/length) o [porcentaje](/es/docs/Web/CSS/percentage), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
+En el ejemplo anterior hay una imagen grande que aparece recortada porque es más grande que el fondo. En este caso, podríamos usar la propiedad {{cssxref ("background-size")}}, que puede tomar valores de [longitud](/es/docs/Web/CSS/Reference/Values/length) o [porcentaje](/es/docs/Web/CSS/Reference/Values/percentage), para ajustar el tamaño de la imagen para que quepa dentro del fondo.
 
 También puedes utilizar palabras clave:
 
@@ -127,7 +127,7 @@ Puedes usar palabras clave como `top` y `right` (busca todas las demás en la p�
 }
 ```
 
-Y también [longitudes](/es/docs/Web/CSS/length) y [porcentajes](/es/docs/Web/CSS/percentage):
+Y también [longitudes](/es/docs/Web/CSS/Reference/Values/length) y [porcentajes](/es/docs/Web/CSS/Reference/Values/percentage):
 
 ```css
 .box {
@@ -168,7 +168,7 @@ Por último, también puedes usar una sintaxis de 4 valores para indicar una dis
 
 Un degradado, cuando se usa para un fondo, actúa como una imagen y también se establece usando la propiedad {{cssxref("background-image")}}.
 
-Puedes leer más sobre los diferentes tipos de degradados y sobre qué puedes hacer con ellos en la página sobre el tipo de datos [`<gradient>`](/es/docs/Web/CSS/gradient) de MDN. Una forma divertida de jugar con degradados es usar uno de los muchos generadores de degradados CSS que hay disponibles en la web, [como este](https://cssgradient.io/). Puedes crear un degradado y luego copiar y pegar el código fuente que lo genera.
+Puedes leer más sobre los diferentes tipos de degradados y sobre qué puedes hacer con ellos en la página sobre el tipo de datos [`<gradient>`](/es/docs/Web/CSS/Reference/Values/gradient) de MDN. Una forma divertida de jugar con degradados es usar uno de los muchos generadores de degradados CSS que hay disponibles en la web, [como este](https://cssgradient.io/). Puedes crear un degradado y luego copiar y pegar el código fuente que lo genera.
 
 Prueba algunos degradados diferentes en el ejemplo siguiente. En las dos cajas hay, respectivamente, un degradado lineal que se extiende por toda la caja, y un degradado radial con un tamaño establecido, que por lo tanto se repite.
 

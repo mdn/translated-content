@@ -1,8 +1,9 @@
 ---
-title: dominant-baseline
+title: Propriété CSS `dominant-baseline`
+short-title: dominant-baseline
 slug: Web/CSS/Reference/Properties/dominant-baseline
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`dominant-baseline`** définit la [ligne de base](/fr/docs/Glossary/Baseline/Typography) précise utilisée pour aligner le texte et le contenu de niveau en ligne de la boîte. Elle indique également la ligne de base d'alignement par défaut de toutes les boîtes participant à l'alignement sur la ligne de base dans le contexte d'alignement de la boîte. Si elle est présente, elle remplace l'attribut {{SVGAttr("dominant-baseline")}} de la forme.

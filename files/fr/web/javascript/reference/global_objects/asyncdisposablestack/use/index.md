@@ -3,7 +3,7 @@ title: "AsyncDisposableStack : méthode use()"
 short-title: use()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncDisposableStack/use
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: 419694495e070daaf466c923b413b3f476740fd6
 ---
 
 La méthode **`use()`** des instances de {{JSxRef("AsyncDisposableStack")}} enregistre dans la pile une valeur qui implémente le [protocole de libération asynchrone](/fr/docs/Web/JavaScript/Guide/Resource_management).
@@ -41,7 +41,7 @@ La fonction suivante lit un fichier (comme un [`FileHandle` <sup>(angl.)</sup>](
 ```js
 async function lireContenuFichier(chemin) {
   await using gestionnaire = new AsyncDisposableStack();
-  const descripteur = gestionnaire.use(fs.open(chemin));
+  const descripteur = gestionnaire.use(await fs.open(chemin));
   const donnees = await descripteur.read();
   return donnees;
   // Le gestionnaire est libéré ici, ce qui entraîne aussi la fermeture du descripteur

@@ -1,8 +1,9 @@
 ---
-title: "<tr> : l'élément de ligne d'un tableau"
+title: "Élément HTML `<tr>` : l'élément de ligne d'un tableau"
+short-title: <tr>
 slug: Web/HTML/Reference/Elements/tr
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tr>`** définit une ligne de cellules dans un tableau. Les cellules de la ligne peuvent ensuite être créées à l'aide d'une combinaison d'éléments {{HTMLElement("td")}} (cellule de données) et {{HTMLElement("th")}} (cellule d'en-tête).

@@ -2,10 +2,10 @@
 title: EventSource
 slug: Web/API/EventSource
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Server Sent Events")}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`EventSource`** インターフェイスは、[サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)のウェブコンテンツのインターフェイスです。
 
@@ -18,7 +18,7 @@ l10n:
 [WebSocket](/ja/docs/Web/API/WebSockets_API) とは異なり、サーバー送信イベントは単一方向です。つまり、データメッセージはサーバーからクライアント（ユーザーのウェブブラウザーなど）に向けて、一方向に配信されます。これは、メッセージの形でクライアントからサーバーにデータを送る必要がない場合には良い選択です。例えば、 `EventSource` はソーシャルメディアの近況アップデートやニュースフィードのようなものを扱ったり、[クライアント側ストレージ](/ja/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)（[IndexedDB](/ja/docs/Web/API/IndexedDB_API) や [web storage](/ja/docs/Web/API/Web_Storage_API) など）の仕組みにデータを配信したりするアプローチに有用です。
 
 > [!WARNING]
-> **HTTP/2 上で使用されていない**場合、 SSE は開いている接続の最大数に制限を受けます。この制限はブラウザーごとにあり、とても低い数 (6) に設定されているため、さまざまなタブを開くために特別な痛みを伴うことがあります。この問題は、[Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) と [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896) で「修正予定なし」と表示されています。この制限はブラウザー＋ドメインごとなので、 `www.example1.com` への SSE 接続をすべてのタブで 6 つ、`www.example2.com.` への SSE 接続をさらに 6 つ開くことができることを意味しています（[Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) より）。 HTTP/2 を使用している場合、同時の _HTTP ストリーム_ の最大数はサーバーとクライアントの間で交渉されます（既定値は 100）。
+> **HTTP/2 上で使用されていない**場合、 SSE は開いている接続の最大数に制限を受けます。この制限はブラウザーごとにあり、とても低い数 (6) に設定されているため、さまざまなタブを開くために特別な痛みを伴うことがあります。この問題は、[Chrome](https://crbug.com/275955) と [Firefox](https://bugzil.la/906896) で「修正予定なし」と表示されています。この制限はブラウザー＋ドメインごとなので、 `www.example1.com` への SSE 接続をすべてのタブで 6 つ、`www.example2.com.` への SSE 接続をさらに 6 つ開くことができることを意味しています（[Stack Overflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159) より）。 HTTP/2 を使用している場合、同時の _HTTP ストリーム_ の最大数はサーバーとクライアントの間で交渉されます（既定値は 100）。
 
 ## コンストラクター
 
@@ -85,7 +85,7 @@ const sse = new EventSource("/api/v1/sse");
  *
  * event: notice
  * data: useful data
- * id: someid
+ * id: some-id
  */
 sse.addEventListener("notice", (e) => {
   console.log(e.data);

@@ -54,10 +54,10 @@ label {
     <tr>
       <td><strong>추가 특성</strong></td>
       <td>
-        <a href="/ko/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
-        <a href="/ko/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#accept"><code>accept</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#capture"><code>capture</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#files"><code>files</code></a>,
+        <a href="/ko/docs/Web/HTML/Reference/Elements/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>
@@ -483,4 +483,4 @@ function returnFileSize(number) {
 ## 같이 보 기
 
 - [웹 애플리케이션에서 파일 사용하기](/ko/docs/Web/API/File_API/Using_files_from_web_applications) — `<input type="file">`과 File API에 대한 유용한 예제를 더 가지고 있습니다.
-- [CSS 속성 호환성](/ko/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [CSS 속성 호환성](/ko/docs/Learn_web_development/Extensions/Forms)

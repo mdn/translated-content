@@ -1,11 +1,12 @@
 ---
-title: EventSource.withCredentials
+title: "EventSource: withCredentials プロパティ"
+short-title: withCredentials
 slug: Web/API/EventSource/withCredentials
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: a166ba48ceb8bccb37c67a0a8856b0e5b12e0135
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`withCredentials`** は {{domxref("EventSource")}} インターフェイスの読み取り専用プロパティで、この `EventSource` オブジェクトが CORS 資格情報が設定してインスタンス化されたかどうかを示す論理値を返します。
 

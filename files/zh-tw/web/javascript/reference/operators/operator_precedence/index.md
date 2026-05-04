@@ -402,7 +402,7 @@ a = b = 5;
       <td>3</td>
       <td>
         <a
-          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
+          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Conditional_operator"
           >條件運算</a
         >
       </td>

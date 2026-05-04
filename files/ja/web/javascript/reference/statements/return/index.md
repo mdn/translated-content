@@ -2,14 +2,12 @@
 title: return
 slug: Web/JavaScript/Reference/Statements/return
 l10n:
-  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Statements")}}
+**`return`** 文は関数の実行を終了し、関数の呼び出し元に返す値を指定します。
 
-**`return`** 文は関数の実行を終了して、関数の呼び出し元に返す値を指定します。
-
-{{InteractiveExample("JavaScript デモ: Statement - Return")}}
+{{InteractiveExample("JavaScript デモ: return 文")}}
 
 ```js interactive-example
 function getRectArea(width, height) {
@@ -20,10 +18,10 @@ function getRectArea(width, height) {
 }
 
 console.log(getRectArea(3, 4));
-// Expected output: 12
+// 予想される結果: 12
 
 console.log(getRectArea(-3, 4));
-// Expected output: 0
+// 予想される結果: 0
 ```
 
 ## 構文
@@ -33,53 +31,37 @@ return;
 return expression;
 ```
 
-- `expression`
+- `expression` {{optional_inline}}
   - : 値が返される式。省略した場合は、代わりに `undefined` が返されます。
 
 ## 解説
 
-`return` 文が関数本体の中で使用された際、その関数の実行が停止します。値を指定した場合、与えられた値が関数の呼び出し元に返されます。例として、以下の関数は引数 `x` が数値のとき、`x` の二乗を返します。
+`return` 文は関数本体内でのみ使用できます。関数本体内で `return` 文が使用されると、関数の実行は停止します。`return` 文は配置される関数によって効果が異なります。
 
-```js
-function square(x) {
-  return x * x;
-}
-const demo = square(3);
-// demo は 9 に等しい
-```
+- 単純関数では、その関数への呼び出しは返値として評価されます。
+- 非同期関数では、生成されたプロミスは返された値で解決されます。
+- ジェネレーター関数では、生成されたジェネレーターオブジェクトの `next()` メソッドは `{ done: true, value: returnedValue }` を返します。
+- 非同期ジェネレーター関数では、生成された非同期ジェネレーターオブジェクトの `next()` メソッドは、 `{ done: true, value: returnedValue }` で履行されるプロミスを返します。
 
-値が省略された場合は、代わりに `undefined` が返されます。
-
-以下の return 文はすべて関数の実行を中断するものです。
-
-```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
-```
+`return` 文が {{jsxref("Statements/try...catch", "try")}} ブロック内で実行された場合、`finally` ブロックがあれば、実際に値が返される前に実行されます。
 
 ### 自動セミコロン挿入
 
-`return` 文は[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入) の影響を受けます。`return` キーワードと式の間の改行コードは許容されません。
+構文上、`return` キーワードと返値の式の間の改行は許容されません。
 
 ```js-nolint example-bad
 return
 a + b;
 ```
 
-上記のコードは ASI によって以下のように変換されます。
+上記のコードは[自動セミコロン挿入 (ASI)](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#自動セミコロン挿入) によって、次のように変換されます。
 
-```js
+```js-nolint
 return;
 a + b;
 ```
 
-コンソールは "unreachable code after return statement" と警告します。
-
-> [!NOTE]
-> Firefox 40 以降から `return` 文の後に到達不可能なコードが見つかった場合、コンソールに警告が表示されます。
+これにより、この関数は `undefined` を返し、 `a + b` の式は評価されません。これは[コンソールに警告](/ja/docs/Web/JavaScript/Reference/Errors/Stmt_after_return)を表示することがあります。
 
 括弧を使用することで、この問題を回避する（ASI を防ぐ）ことができます。
 

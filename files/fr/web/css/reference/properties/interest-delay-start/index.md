@@ -1,8 +1,9 @@
 ---
-title: interest-delay-start
+title: Propriété CSS `interest-delay-start`
+short-title: interest-delay-start
 slug: Web/CSS/Reference/Properties/interest-delay-start
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

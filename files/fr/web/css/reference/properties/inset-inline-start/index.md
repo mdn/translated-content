@@ -1,8 +1,9 @@
 ---
-title: inset-inline-start
+title: Propriété CSS `inset-inline-start`
+short-title: inset-inline-start
 slug: Web/CSS/Reference/Properties/inset-inline-start
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`inset-inline-start`** définit le décalage logique de début en ligne d'un élément, qui correspond à un décalage physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond à la propriété {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} ou {{CSSxRef("left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
@@ -93,7 +94,7 @@ La propriété raccourcie pour `inset-inline-start` et {{CSSxRef("inset-inline-e
 
 ### Valeurs
 
-La propriété `inset-inline-start` peut prendre les mêmes valeurs que la propriété {{CSSxRef("left")}}.
+La propriété `inset-inline-start` peut prendre les mêmes valeurs que la propriété {{CSSxRef("top")}}.
 
 ## Définition formelle
 

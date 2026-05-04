@@ -43,7 +43,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : この iframe を即座に (`eager`) 読み込むべきか、または必要に応じて (`lazy`) 読み込むべきであるというヒントをブラウザーに提供する文字列。
     これは、HTML の [`loading`](/ja/docs/Web/HTML/Reference/Elements/iframe#loading) 属性を反映します。
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
-  - : フレームの長い説明文の URI をが入った文字列です。
+  - : フレームの長い説明文の URI が入った文字列です。
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
   - : フレームのマージンの高さである文字列です。
 - {{domxref("HTMLIFrameElement.marginWidth")}} {{Deprecated_Inline}}

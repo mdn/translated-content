@@ -1,14 +1,14 @@
 ---
-title: shape-margin
+title: Propriété CSS `shape-margin`
+short-title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
-original_slug: Web/CSS/shape-margin
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{CSSxRef("shape-outside")}}.
 
-La propriété CSS **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.
-
-{{InteractiveExample("CSS Demo: shape-margin")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: shape-margin")}}
 
 ```css interactive-example-choice
 shape-margin: 0;
@@ -30,14 +30,15 @@ shape-margin: 5%;
 <section class="default-example" id="default-example">
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    Nous avions convenu, mon compagnon et moi, que je devrais passer le voir
+    chez lui, après le dîner, pas plus tard que onze heures. Ce jeune Français
+    athlétique appartient à un petit groupe de sportifs parisiens, qui se sont
+    adonnés au «&nbsp;ballon&nbsp;» comme passe-temps. Après avoir épuisé toutes
+    les sensations que l'on peut trouver dans les sports ordinaires, même celles
+    de «&nbsp;l'automobile&nbsp;» à toute vitesse, les membres de «&nbsp;l'Aéro
+    Club&nbsp;» recherchent maintenant dans les airs, où ils se livrent à toutes
+    sortes d'exploits audacieux, l'excitation nerveuse qu'ils ont cessé de
+    trouver sur terre.
   </div>
 </section>
 ```
@@ -59,30 +60,30 @@ shape-margin: 5%;
 }
 ```
 
-La marge permet d'ajuster la distance entre le contour de la forme (l'élément flottant) et le contenu autour.
+La marge permet d'ajuster la distance entre le contour de la forme (**l'élément flottant**) et le contenu autour.
+
+## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length> */
+/* Valeur de type <length> */
 shape-margin: 10px;
 shape-margin: 20mm;
 
-/* Valeur proportionnelle */
-/* Type <percentage> */
+/* Valeur de type <percentage> */
 shape-margin: 60%;
 
 /* Valeurs globales */
 shape-margin: inherit;
 shape-margin: initial;
+shape-margin: revert;
+shape-margin: revert-layer;
 shape-margin: unset;
 ```
-
-## Syntaxe
 
 ### Valeurs
 
 - `<length-percentage>`
-  - : Cette valeur définit la marge entre la forme et le texte alentour grâce à une longueur (cf. {{cssxref("&lt;length&gt;")}}) ou à un pourcentage ({{cssxref("&lt;percentage&gt;")}}) proportionnel à la largeur du bloc englobant de l'élément.
+  - : Définit la marge de la forme à une valeur de type {{CSSxRef("&lt;length&gt;")}} ou à un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de la largeur du bloc englobant de l'élément.
 
 ## Définition formelle
 
@@ -94,7 +95,25 @@ shape-margin: unset;
 
 ## Exemples
 
-### CSS
+### Ajouter une marge à un polygone
+
+#### HTML
+
+```html
+<section>
+  <div class="shape"></div>
+  Nous ne sommes pas tout à fait sûrs de quoi que ce soit en biologie&nbsp;; nos
+  connaissances en géologie sont relativement très limitées, et les lois
+  économiques de la société sont incertaines pour tout le monde, sauf pour
+  certains individus qui tentent de les exposer&nbsp;; mais avant que le monde
+  ne soit façonné, le carré sur l'hypoténuse était égal à la somme des carrés
+  sur les deux autres côtés d'un triangle rectangle, et il en sera de même après
+  la mort de ce monde&nbsp;; et l'habitant de Mars, s'il en existe un, connaît
+  probablement sa vérité comme nous la connaissons.
+</section>
+```
+
+#### CSS
 
 ```css
 section {
@@ -112,24 +131,9 @@ section {
 }
 ```
 
-### HTML
+#### Result
 
-```html
-<section>
-  <div class="shape"></div>
-  We are not quite sure of any one thing in biology; our knowledge of geology is
-  relatively very slight, and the economic laws of society are uncertain to
-  every one except some individual who attempts to set them forth; but before
-  the world was fashioned the square on the hypotenuse was equal to the sum of
-  the squares on the other two sides of a right triangle, and it will be so
-  after this world is dead; and the inhabitant of Mars, if he exists, probably
-  knows its truth as we know it.
-</section>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 500, 250)}}
+{{EmbedLiveSample("Ajouter une marge à un polygone", 500, 250)}}
 
 ## Spécifications
 
@@ -143,6 +147,6 @@ section {
 
 - [Les formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Un aperçu des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
-- {{cssxref("shape-outside")}}
-- {{cssxref("shape-image-threshold")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;basic-shape&gt;")}}
+- La propriété {{CSSxRef("shape-outside")}}
+- La propriété {{CSSxRef("shape-image-threshold")}}

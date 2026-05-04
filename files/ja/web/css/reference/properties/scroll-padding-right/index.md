@@ -1,12 +1,11 @@
 ---
 title: scroll-padding-right
 slug: Web/CSS/Reference/Properties/scroll-padding-right
-original_slug: Web/CSS/scroll-padding-right
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
 ---
 
-`scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*の右のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
 {{InteractiveExample("CSS デモ: scroll-padding-right")}}
 
@@ -59,7 +58,7 @@ scroll-padding-right: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,7 +67,7 @@ scroll-padding-right: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -95,7 +94,7 @@ scroll-padding-right: unset;
 ### 値
 
 - `<length-percentage>`
-  - : スクロールポートの上辺からの内側のオフセットで、有効な長さまたはパーセント値です。
+  - : スクロールポートの右辺からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
 
@@ -117,5 +116,5 @@ scroll-padding-right: unset;
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)
+- [CSS スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)モジュール
 - [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

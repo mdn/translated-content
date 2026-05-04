@@ -1,9 +1,9 @@
 ---
-title: <content-position>
+title: Type CSS `<content-position>`
+short-title: <content-position>
 slug: Web/CSS/Reference/Values/content-position
-original_slug: Web/CSS/content-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<content-position>`** est utilisé par les propriétés {{CSSxRef("justify-content")}} et {{CSSxRef("align-content")}}, ainsi que par le raccourci {{CSSxRef("place-content")}}, pour aligner le contenu de la boîte à l'intérieur de celle-ci.

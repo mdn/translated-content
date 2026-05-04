@@ -3,7 +3,7 @@ title: Изображения в HTML
 slug: Learn_web_development/Core/Structuring_content/HTML_images
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 В начале Web был просто текстом, что было довольно скучно. К счастью, это продолжалось не долго - до появления возможности вставлять изображения (и другие, более интересные, типы контента) в веб-страницы. Существуют и другие типы мультимедиа, однако логичнее начать со скромного {{htmlelement("img")}} элемента, используемого для вставки простого изображения в веб-страницу. В этой статье мы рассмотрим, как использовать элемент, начиная с основ, снабжать примечаниями, используя {{htmlelement("figure")}}, и разберём, как это относится к фоновым изображениям {{glossary("CSS")}}.
 
@@ -116,7 +116,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 Однако, вы не должны изменять размеры ваших изображений используя HTML атрибуты. Если вы установите размер изображения слишком большим, то в конечном итоге вы столкнётесь с изображениями, которые выглядят зернистыми, размытыми или слишком маленькими, и потратите трафик для загрузки изображения, которое не будет соответствовать нуждам пользователя. Конечное изображение может также выглядеть искажённым, если вы не сохраните правильное [соотношение сторон](<https://en.wikipedia.org/wiki/Aspect_ratio_(image)>). Рекомендуется использовать графический редактор для подгонки изображения к нужному размеру, перед вставкой его на вашу веб-страницу.
 
 > [!NOTE]
-> Если вам действительно нужно изменить размер изображения, вы должны использовать вместо этого [CSS](/ru/docs/Learn/CSS).
+> Если вам действительно нужно изменить размер изображения, вы должны использовать вместо этого [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 ### Заголовок изображения
 
@@ -340,7 +340,7 @@ p {
 Итог: если изображение имеет важность, в контексте содержимого вашей страницы, вам следует использовать HTML изображения. Если же картинка является банальной декорацией, используйте фоновые изображения CSS.
 
 > [!NOTE]
-> Вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn/CSS).
+> Вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn_web_development/Core/Styling_basics).
 
 ## Проверьте свои навыки!
 
@@ -350,4 +350,4 @@ p {
 
 На этом пока все. Мы подробно рассмотрели изображения и их заголовки. В следующей статье мы рассмотрим, как использовать HTML для встраивания видео и аудио на веб-страницы.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}

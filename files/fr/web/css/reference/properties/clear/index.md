@@ -1,8 +1,9 @@
 ---
-title: clear
+title: Propriété CSS `clear`
+short-title: clear
 slug: Web/CSS/Reference/Properties/clear
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`clear`** définit si un élément doit être déplacé sous les éléments [flottants](/fr/docs/Web/CSS/Reference/Properties/float) qui le précèdent (dégagement). La propriété `clear` s'applique aux éléments flottants comme aux éléments non flottants.

@@ -46,5 +46,5 @@ body {
 ## 関連情報
 
 - [ブロックレベルコンテンツ](/ja/docs/Glossary/Block-level_content)
-- [インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
 - {{cssxref("display")}}

@@ -1,9 +1,8 @@
 ---
 title: :left
 slug: Web/CSS/Reference/Selectors/:left
-original_slug: Web/CSS/:left
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`:left`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で使われ、印刷文書の左側のページすべてを表します。

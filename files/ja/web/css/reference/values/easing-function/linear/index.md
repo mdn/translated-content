@@ -1,13 +1,12 @@
 ---
 title: linear()
 slug: Web/CSS/Reference/Values/easing-function/linear
-original_slug: Web/CSS/easing-function/linear
 l10n:
-  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`linear()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、点の間を均一の進行する遷移曲線を作成します。
-[`<easing-function>`](/ja/docs/Web/CSS/Reference/Values/easing-function) としては、{{Glossary("Interpolation", "補間処理")}}が最初から最後まで一定の速度で起こる遷移を作成します。
+イージング関数 ({{cssxref("easing-function")}}) として、{{Glossary("interpolation", "補間")}}が最初から最後まで一定の速度で起こる遷移を作成します。
 
 ## 構文
 
@@ -93,4 +92,5 @@ linear(start, middle, end)
 ## 関連情報
 
 - 他のイージング関数: {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}} と {{cssxref("easing-function/steps", "steps()")}}
-- [`linear()` easing generator](https://linear-easing-generator.netlify.app/) by Jake Archibald
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
+- [`linear()` easing generator](https://linear-easing-generator.netlify.app/) - Jake Archibald

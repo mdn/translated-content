@@ -103,5 +103,5 @@ Por exemplo, [você pode implementar MPEG-DASH usando JavaScript durante carrega
 - [Using audio and video in Firefox](/pt-BR/Using_HTML5_audio_and_video)
 - [HTML media support in Firefox](http://bluishcoder.co.nz/2013/08/21/html-media-support-in-firefox.html)
 - [Media elements](https://www.whatwg.org/specs/web-apps/current-work/#media-elements) (HTML 5 specification)
-- [`video`](/pt-BR/docs/Web/HTML/Element/video)
-- [`audio`](/pt-BR/docs/Web/HTML/Element/audio)
+- [`video`](/pt-BR/docs/Web/HTML/Reference/Elements/video)
+- [`audio`](/pt-BR/docs/Web/HTML/Reference/Elements/audio)

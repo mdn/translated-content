@@ -1,14 +1,14 @@
 ---
-title: scroll-padding-inline
+title: Propriété CSS `scroll-padding-inline`
+short-title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
-original_slug: Web/CSS/scroll-padding-inline
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-padding-inline`** définit le remplissage de défilement d'un élément dans la dimension en ligne.
 
-La propriété **`scroll-padding-inline`** est une propriété raccourcie qui permet de définir le remplissage, sur l'axe en ligne, entre l'élément et la zone de défilement. Autrement dit, elle permet de définir `scroll-padding-inline-end` et `scroll-padding-inline-start`.
-
-{{InteractiveExample("CSS Demo: scroll-padding-inline")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-padding-inline")}}
 
 ```css interactive-example-choice
 scroll-padding-inline: 0;
@@ -29,7 +29,7 @@ scroll-padding-inline: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -59,7 +59,7 @@ scroll-padding-inline: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -68,12 +68,19 @@ scroll-padding-inline: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
 
-Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
+Les propriétés `scroll-padding` définissent des décalages pour la _zone de visualisation optimale_ de la zone de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions de la zone de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords de la zone de défilement.
+
+## Propriétés constitutives
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("scroll-padding-inline-end")}}
+- {{CSSxRef("scroll-padding-inline-start")}}
 
 ## Syntaxe
 
@@ -81,8 +88,7 @@ Les propriétés pour le remplissage de la zone de défilement permettent de dé
 /* Valeurs avec un mot-clé */
 scroll-padding-inline: auto;
 
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 scroll-padding-inline: 10px;
 scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
@@ -90,6 +96,8 @@ scroll-padding-inline: 10%;
 /* Valeurs globales */
 scroll-padding-inline: inherit;
 scroll-padding-inline: initial;
+scroll-padding-inline: revert;
+scroll-padding-inline: revert-layer;
 scroll-padding-inline: unset;
 ```
 
@@ -115,3 +123,8 @@ scroll-padding-inline: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

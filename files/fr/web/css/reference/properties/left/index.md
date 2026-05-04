@@ -1,8 +1,9 @@
 ---
-title: left
+title: Propriété CSS `left`
+short-title: left
 slug: Web/CSS/Reference/Properties/left
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`left`** participe à la définition de la position horizontale d'un [élément positionné](/fr/docs/Web/CSS/Reference/Properties/position). Cette {{Glossary("inset properties", "propriété d'encart")}} n'a aucun effet sur les éléments non positionnés.

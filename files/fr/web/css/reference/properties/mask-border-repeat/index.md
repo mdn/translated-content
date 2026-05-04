@@ -1,12 +1,12 @@
 ---
-title: mask-border-repeat
+title: Propriété CSS `mask-border-repeat`
+short-title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
-original_slug: Web/CSS/mask-border-repeat
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
-
-La propriété CSS **`mask-border-repeat`** indique la façon dont les régions du bord du [masque](/fr/docs/Web/CSS/Reference/Properties/mask-border) sont ajustées pour correspondre aux dimensions de la bordure de l'élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-border-repeat`** définit la façon dont les images pour les côtés et la partie centrale de [l'image de bordure de masque](/fr/docs/Web/CSS/Reference/Properties/mask-border) sont mises à l'échelle et répétées.
 
 ## Syntaxe
 
@@ -23,13 +23,15 @@ mask-border-repeat: round stretch;
 /* Valeurs globales */
 mask-border-repeat: inherit;
 mask-border-repeat: initial;
+mask-border-repeat: revert;
+mask-border-repeat: revert-layer;
 mask-border-repeat: unset;
 ```
 
 La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeurs parmi celles de la liste ci-après.
 
-- Lorsqu'une seule valeur est fournie, le même comportement est utilisé pour les quatre côtés.
-- Lorsque deux valeurs sont indiquées, la première valeur s'applique aux côtés haut et bas et la deuxième aux côtés gauche et droit.
+- Lorsque **une** seule valeur est définie, le même comportement est utilisé pour **les quatre côtés**.
+- Lorsque **deux** valeurs sont définies, la première valeur s'applique aux côtés **haut et bas** et la deuxième aux côtés **gauche et droite**.
 
 ### Values
 
@@ -50,6 +52,25 @@ La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeur
 
 {{CSSSyntax}}
 
+## Exemples
+
+### Exemple simple
+
+Cette propriété ne semble pas encore être prise en charge nulle part. Lorsqu'elle commencera à être prise en charge, elle servira à définir comment la tranche de masque de bordure sera répétée autour de la bordure — c'est-à-dire, sera-t-elle simplement répétée, ou légèrement mise à l'échelle pour qu'un nombre entier de tranches s'adapte, ou étirée pour qu'une tranche s'adapte&nbsp;?
+
+```css
+mask-border-repeat: round;
+```
+
+Les navigateurs basés sur Chromium prennent en charge une version obsolète de cette propriété — `mask-box-image-repeat` — avec un préfixe&nbsp;:
+
+```css
+-webkit-mask-box-image-repeat: round;
+```
+
+> [!NOTE]
+> La page {{CSSxRef("mask-border")}} propose un exemple fonctionnel (utilisant les propriétés de masque de bordure préfixées obsolètes prises en charge dans Chromium), afin que vous puissiez vous faire une idée de l'effet.
+
 ## Spécifications
 
 {{Specifications}}
@@ -57,3 +78,11 @@ La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeur
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- La propriété raccourcie {{CSSxRef("mask-border")}}
+- La propriété {{CSSxRef("mask-border-mode")}}
+- La propriété {{CSSxRef("mask-border-outset")}}
+- La propriété {{CSSxRef("mask-border-source")}}
+- La propriété {{CSSxRef("mask-border-width")}}

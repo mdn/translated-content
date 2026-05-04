@@ -1,8 +1,9 @@
 ---
-title: rel="preconnect"
+title: Valeur d'attribut HTML `rel="preconnect"`
+short-title: preconnect
 slug: Web/HTML/Reference/Attributes/rel/preconnect
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`preconnect`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Elements/link#rel) de l'élément HTML {{HTMLElement("link")}} indique au navigateur que l'utilisateur·ice aura probablement besoin de ressources provenant de l'origine de la ressource cible. Le navigateur peut donc améliorer l'expérience en initiant de manière anticipée une connexion vers cette origine. Le préconnect permet d'accélérer les chargements futurs depuis une origine donnée en réalisant à l'avance tout ou partie de l'établissement de la connexion (DNS+TCP pour HTTP, et DNS+TCP+TLS pour les origines HTTPS).

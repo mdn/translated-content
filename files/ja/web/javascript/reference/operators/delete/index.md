@@ -1,5 +1,5 @@
 ---
-title: delete 演算子
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 ---
 

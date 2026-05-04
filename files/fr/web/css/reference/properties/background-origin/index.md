@@ -1,8 +1,9 @@
 ---
-title: background-origin
+title: Propriété CSS `background-origin`
+short-title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-origin`** définit l'origine de l'arrière-plan&nbsp;: depuis le début de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage.

@@ -1,9 +1,9 @@
 ---
 title: CSS 条件付きルール
+short-title: 条件付きルール
 slug: Web/CSS/Guides/Conditional_rules
-original_slug: Web/CSS/CSS_conditional_rules
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **CSS 条件付きルール** (CSS conditional rules) モジュールは、CSS のメディアクエリーと機能クエリーを定義し、特定の条件が満たされた場合にのみ適用されるスタイルを定義できるようにします。このモジュールで定義される条件付きルールは、端末、ユーザーエージェント、ビューポートなどの能力に基づいています。条件付きルールを使用すると、レンダリングされる文書とは無関係に、クエリー値やブラウザーおよび端末の機能に基づいて、 CSS スタイルをターゲットに指定することができます。
@@ -32,8 +32,7 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
-> [!NOTE]
-> CSS 条件付きルールモジュールでは、まだ実装されていない 2 つのアットルール、`@else` と `@when` が導入されています。
+CSS 条件付きルールモジュールでは、まだ実装されていない 2 つのアットルール、`@else` と `@when` が導入されています。
 
 ### 関数
 
@@ -43,8 +42,7 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 - [`selector()`](/ja/docs/Web/CSS/Reference/At-rules/@supports#function_syntax)
 - [`supports()`](/ja/docs/Web/CSS/Reference/At-rules/@import#supports-condition)
 
-> [!NOTE]
-> CSS 条件付きルールモジュールでは、まだ実装されていない CSS 関数 `media()` が導入されています。
+CSS 条件付きルールモジュールでは、まだ実装されていない CSS 関数 `media()` が導入されています。
 
 ### データ型
 
@@ -65,7 +63,7 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 ### 用語の定義
 
 - {{glossary("media/CSS", "メディア")}}
-- 機能クエリー（[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)を参照）
+- supports クエリー（[機能クエリー](/ja/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)を参照）
 
 ## ガイド
 
@@ -92,9 +90,9 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 - [CSS メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries)モジュール
   - [`<media-feature>`](/ja/docs/Web/CSS/Reference/At-rules/@media#media_features)
   - [`<media-type>`](/ja/docs/Web/CSS/Reference/At-rules/@media#media_types)
-  - [`<media-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@media#logical_operators)
+  - [`<media-condition>`](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子)
   - [`<media-query-list>`](/ja/docs/Web/SVG/Reference/Attribute/media)
-  - [CSS logical operators](/ja/docs/Web/CSS/Reference/At-rules/@media#logical_operators) (`not`, `or`, `and`)
+  - [CSS 論理演算子](/ja/docs/Web/CSS/Reference/At-rules/@media#論理演算子) (`not`, `or`, `and`)
 
 - [CSSOM view](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール
   - {{domxref("CSS")}} API

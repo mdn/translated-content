@@ -1,89 +1,87 @@
 ---
-title: user-select
+title: Propriété CSS `user-select`
+short-title: user-select
 slug: Web/CSS/Reference/Properties/user-select
-original_slug: Web/CSS/user-select
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`user-select`** contrôle si l'utilisateur·ice peut sélectionner du texte. Cela n'a aucun effet sur le contenu chargé dans l'interface utilisateur d'un navigateur (son {{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.
 
-La propriété **`user-select`** permet de contrôler l'opération de [sélection](/fr/docs/Web/API/Selection). Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.
+{{InteractiveExample("Démonstration CSS&nbsp;: user-select")}}
+
+```css interactive-example-choice
+user-select: none;
+```
+
+```css interactive-example-choice
+user-select: text;
+```
+
+```css interactive-example-choice
+user-select: all;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">Essayez de sélectionner ce texte</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5rem;
+}
+```
+
+## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
 user-select: none;
 user-select: auto;
 user-select: text;
-user-select: contain;
 user-select: all;
 
 /* Valeurs globales */
 user-select: inherit;
 user-select: initial;
+user-select: revert;
+user-select: revert-layer;
 user-select: unset;
-
-/* Valeurs spécifiques à Mozilla */
--moz-user-select: none;
--moz-user-select: text;
--moz-user-select: all;
-
-/* Valeurs spécifiques à WebKit */
--webkit-user-select: none;
--webkit-user-select: text;
--webkit-user-select: all; /* Ne fonctionne pas pour Safari */
-
-/* Valeurs spécifiques à Microsoft */
--ms-user-select: none;
--ms-user-select: text;
--ms-user-select: element;
 ```
-
-## Syntaxe
-
-- `none`
-  - : On ne pourra pas sélectionner le texte de l'élément et celui de ses descendants. Toutefois, l'objet {{domxref("Selection")}} pourra contenir ces éléments. À partir de Firefox 21, `none` se comporte comme `-moz-none` et la sélection peut donc être réactivée sur les éléments fils avec `-moz-user-select:text`.
-- `auto`
-  - : Le texte sera sélectionné avec les propriétés par défaut appliquées par l'agent utilisateur. La valeur calculée est déterminée de la façon suivante :
-    - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
-    - Si l'élément est un élément éditable, la valeur calculée est `contain`
-    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
-    - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
-    - Sinon, la valeur calculée est `text`
-
-- `text`
-  - : Le texte peut être sélectionné par l'utilisateur`.`
-- `all`
-  - : Dans un éditeur HTML, si un double clic ou si un clic contextuel se produit sur les éléments fils, c'est la valeur de l'ancêtre le plus haut qui sera sélectionnée.
-- `contain`
-
-  `element` {{non-standard_inline}} (alias spécifique à IE)
-  - : Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.
 
 > [!NOTE]
-> CSS UI 4 [a renommé `user-select: element` en `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+> `user-select` n'est pas une propriété héritée, bien que la valeur initiale `auto` fasse qu'elle se comporte comme si elle était héritée la plupart du temps. Les navigateurs basés sur WebKit/Chromium _implémentent_ la propriété comme héritée, ce qui viole le comportement décrit dans la spécification, et cela entraînera certains problèmes. Jusqu'à présent, Chromium a choisi de [corriger les problèmes <sup>(ang.)</sup>](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de) pour que le comportement final respecte les spécifications.
 
-### Syntaxe formelle
+### Valeurs
 
-{{csssyntax}}
+- `none`
+  - : Le texte de l'élément et de ses sous-éléments n'est pas sélectionnable. Notez que l'objet {{DOMxRef("Selection")}} peut contenir ces éléments.
+- `auto`
+  - : La valeur utilisée de `auto` est déterminée comme suit&nbsp;:
+    - Pour les pseudo-éléments `::before` et `::after`, la valeur utilisée est `none`
+    - Si la valeur utilisée de `user-select` sur le parent de cet élément est `none`, la valeur utilisée est `none`
+    - Sinon, si la valeur utilisée de `user-select` sur le parent de cet élément est `all`, la valeur utilisée est `all`
+    - Sinon, la valeur utilisée est `text`
+
+- `text`
+  - : Le texte peut être sélectionné par l'utilisateur·ice.
+- `all`
+  - : Le contenu de l'élément doit être sélectionné de manière atomique&nbsp;: si une sélection contient une partie de l'élément, alors la sélection doit contenir l'intégralité de l'élément, y compris tous ses descendants. Si un double-clic ou un clic contextuel se produit dans des sous-éléments, l'ancêtre le plus élevé avec cette valeur sera sélectionné.
+
+> [!NOTE]
+> Le module [d'interface utilisateur de base CSS](/fr/docs/Web/CSS/Guides/Basic_user_interface) définit une valeur `contain` pour la propriété `user-select` afin de permettre à la sélection de commencer à l'intérieur de l'élément pour être contenue dans les limites de cet élément, cependant, cela n'est pris en charge dans aucun navigateur.
+
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
-
-### CSS
-
-```css
-.unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.all {
-  -moz-user-select: all;
-  -webkit-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
-}
-```
 
 ### HTML
 
@@ -93,6 +91,20 @@ user-select: unset;
 <p class="all">
   Cliquer une fois permettra de sélectionner l'ensemble du texte.
 </p>
+```
+
+### CSS
+
+```css
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+}
+
+.all {
+  -webkit-user-select: all;
+  user-select: all;
+}
 ```
 
 ### Résultat
@@ -109,6 +121,5 @@ user-select: unset;
 
 ## Voir aussi
 
-- {{cssxref("::selection")}}
-- L'objet JavaScript {{domxref("Selection")}}.
-- [`user-select`](https://www.w3.org/TR/css-ui-4/#propdef-user-select) dans [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).
+- Le pseudo-élément {{CSSxRef("::selection")}}
+- L'objet JavaScript {{DOMxRef("Selection")}}

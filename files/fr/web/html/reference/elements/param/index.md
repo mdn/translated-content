@@ -1,8 +1,9 @@
 ---
-title: "<param> : l'élément paramètre d'un objet"
+title: "Élément HTML `<param>` : l'élément paramètre d'un objet"
+short-title: <param>
 slug: Web/HTML/Reference/Elements/param
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

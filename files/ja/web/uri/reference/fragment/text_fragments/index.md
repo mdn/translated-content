@@ -84,15 +84,15 @@ https://example.com#:~:text=[prefix-,]textStart[,textEnd][,-suffix]
 ### prefix- や -suffix の例
 
 - [https://example.com/#:~:text=asking-,for](https://example.com/#:~:text=asking-,for) は、文書中の `for` というテキストのうち 2 番目に出現するテキストにスクロールし強調表示します。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー) は、`送信される` というテキストが直前にある `リファラー` というテキストのうち最初のものにスクロールし強調表示します。これは文書中ので 2 番目の `リファラー` という文字列です。接頭辞がない場合は、最初のものが強調表示されます。
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示) は、`リンク先の URL` というテキストの直後に `を表示` というテキストがある最初のものにスクロールし強調表示します。これは文書中ので 4 番目の `リンク先の URL` という文字列です。接尾辞がない場合は、最初のものが強調表示されます。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=送信される-,リファラー) は、`送信される` というテキストが直前にある `リファラー` というテキストのうち最初のものにスクロールし強調表示します。これは文書中の 2 番目の `リファラー` という文字列です。接頭辞がない場合は、最初のものが強調表示されます。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先の%20URL,-を表示) は、`リンク先の URL` というテキストの直後に `を表示` というテキストがある最初のものにスクロールし強調表示します。これは文書中の 4 番目の `リンク先の URL` という文字列です。接尾辞がない場合は、最初のものが強調表示されます。
 - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,referer,ヘッダー,-は](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=downgrade:-,referer,ヘッダー,-は) は、`Referrer ヘッダー` というテキストのうち、直前に `downgrade:` というテキストがあり、直後に `は` というテキストがあるものにスクロールし強調表示します。この例は、接頭辞/接尾辞を使用して、リンクしたい具体的なテキストインスタンスを絞り込む、より複雑な例を示しています。例えば接頭辞を削除して、何が一致するか試してみてください。
 
 ### 複数のテキストフラグメントが付いた URL
 
 アンパサンド (`&`) 文字で区切ることで、同じ URL で強調表示する複数のテキストフラグメントを指定することができます。
 
-- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた&text=扱う](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた&text=扱う) は、テキスト文字列 `Causes` および `linked` のうち最初に出現するものにスクロールし強調表示します。
+- [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた&text=扱う](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンクされた&text=扱う) は、テキスト文字列 `リンクされた` および `扱う` のうち最初に出現するものにスクロールし強調表示します。
 - [https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先%20URL,-の&text=非推奨の-,属性,属性](/ja/docs/Web/HTML/Reference/Elements/a#:~:text=リンク先%20URL,-の&text=非推奨の-,属性,属性) は、2 つのテキストにスクロールし強調表示します。
   - `リンク先 URL` という文字列の直後に `の` がある最初のもの。
   - `属性` で始まり `属性` で終わるテキスト文字列で、その直前に `非推奨の` があるもの。

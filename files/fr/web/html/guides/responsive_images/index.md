@@ -35,7 +35,7 @@ Vous pourriez penser que les images vectorielles résoudraient ces problèmes, e
 Ce type de problème n'existait pas lorsque le web est apparu, au début et au milieu des années 90 — à l'époque, les seuls appareils existants pour naviguer sur le Web étaient des ordinateurs de bureau et des portables, donc les ingénieur·e·s des navigateurs et les rédacteur·ice·s de spécifications n'ont même pas pensé à mettre en œuvre des solutions. Les _technologies d'images adaptatives_ ont été mises en place récemment pour résoudre les problèmes indiqués ci-dessus en vous permettant de proposer au navigateur plusieurs fichiers image, soit tous montrant la même chose mais contenant un nombre différent de pixels (_commutation de résolution_), soit différentes images adaptées à différents espaces (_direction artistique_).
 
 > [!NOTE]
-> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#attr-sizes)/{{HTMLElement("picture")}} — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
+> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset)/[`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes)/{{HTMLElement("picture")}} — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
 
 ## Comment créer des images adaptatives ?
 

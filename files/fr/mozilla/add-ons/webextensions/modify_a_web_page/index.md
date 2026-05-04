@@ -106,7 +106,7 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 });
 ```
 
-Dans ce script, nous créons un [élément de menu contextuel](/fr/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create), lui donnant un identifiant et un titre précis (le texte à afficher dans le menu contextuel). Ensuite, nous mettons en place une écoute d'événements afin que l'utilisateur clique sur un élément de menu contextuel, nous vérifions si c'est notre élément de la page. Si c'est le cas, nous injectons "page-eater.js" dans l'onglet actuel à l'aide de l'API [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Cette API prend facultativement un ID de tabulation en tant qu'argument: nous avons omis l'ID de l'onglet, ce qui signifie que le script est injecté dans l'onglet actuellement actif.
+Dans ce script, nous créons un [élément de menu contextuel](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/create), lui donnant un identifiant et un titre précis (le texte à afficher dans le menu contextuel). Ensuite, nous mettons en place une écoute d'événements afin que l'utilisateur clique sur un élément de menu contextuel, nous vérifions si c'est notre élément de la page. Si c'est le cas, nous injectons "page-eater.js" dans l'onglet actuel à l'aide de l'API [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Cette API prend facultativement un ID de tabulation en tant qu'argument: nous avons omis l'ID de l'onglet, ce qui signifie que le script est injecté dans l'onglet actuellement actif.
 
 A ce stade, l'extension devrait ressembler à ceci :
 
@@ -141,14 +141,14 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
       <th scope="row">Envoyer un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -158,14 +158,14 @@ Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met
       <th scope="row">Reçevoir un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >

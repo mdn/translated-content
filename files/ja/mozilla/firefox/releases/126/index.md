@@ -91,7 +91,7 @@ l10n:
 
 - **CSS `shape()` 関数:** `layout.css.basic-shape-shape.enabled`。
 
-  [`shape()`](/ja/docs/Web/CSS/basic-shape/shape) 関数を使用して、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティでシェイプを定義できます。この関数は定義できるシェイプをきめ細かく設定することができ、`{{cssxref("path","path()")}}` 関数より多くの利点をもたらします (`clip-path` における `shape()` 関数のサポートは [Firefox bug 1823463](https://bugzil.la/1823463)、`offset-path` における `shape()` 関数のサポートは [Firefox bug 1884424](https://bugzil.la/1884424)、`shape()` の補完のサポートは [Firefox bug 1884425](https://bugzil.la/1884425))。
+  [`shape()`](/ja/docs/Web/CSS/Reference/Values/basic-shape/shape) 関数を使用して、{{cssxref("clip-path")}} および {{cssxref("offset-path")}} プロパティでシェイプを定義できます。この関数は定義できるシェイプをきめ細かく設定することができ、`{{cssxref("path","path()")}}` 関数より多くの利点をもたらします (`clip-path` における `shape()` 関数のサポートは [Firefox bug 1823463](https://bugzil.la/1823463)、`offset-path` における `shape()` 関数のサポートは [Firefox bug 1884424](https://bugzil.la/1884424)、`shape()` の補完のサポートは [Firefox bug 1884425](https://bugzil.la/1884425))。
 
 ## 過去のバージョン
 

@@ -1,17 +1,13 @@
 ---
 title: container-name
 slug: Web/CSS/Reference/Properties/container-name
-original_slug: Web/CSS/container-name
 l10n:
-  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/Reference/At-rules/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
 コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
 コンテナーコンテキストの名前が指定されたとき、コンテナーコンテキストのある最も近い祖先の代わりに、 {{Cssxref("@container")}} アットルールを用いて固有のターゲットを指定することができます。
-
-> [!NOTE]
-> {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
@@ -19,10 +15,10 @@ l10n:
 container-name: none;
 
 /* 単一の名前 */
-container-name: myLayout;
+container-name: my-layout;
 
 /* 複数の名前 */
-container-name: myPageLayout myComponentLibrary;
+container-name: my-page-layout my-component-library;
 
 /* グローバル値 */
 container-name: inherit;
@@ -63,11 +59,11 @@ container-name: unset;
 <div class="card">
   <div class="post-meta">
     <h2>カードのタイトル</h2>
-    <p>My post details.</p>
+    <p>投稿の詳細</p>
   </div>
   <div class="post-excerpt">
     <p>
-      A preview of my <a href="https://example.com">blog post</a> about cats.
+      ネコに関する<a href="https://example.com">ブログ投稿</a>のプレビュー。
     </p>
   </div>
 </div>
@@ -94,13 +90,13 @@ container-name: unset;
 次の例では、 `.post-excerpt` 要素のコンテンツのみに適用するコンテナークエリーと、 `.post-meta` と `.post-excerpt` のコンテンツ両方に適用するコンテナークエリーの 2 つがあります。
 
 ```css
-@container excerpt (min-width: 400px) {
+@container excerpt (width >= 400px) {
   p {
     visibility: hidden;
   }
 }
 
-@container (min-width: 400px) {
+@container (width >= 400px) {
   p {
     font-size: 2rem;
   }
@@ -124,13 +120,13 @@ container-name: unset;
 これは、複数のコンテナークエリーで同じコンテナーを対象としたい場合に有益です。
 
 ```css
-@container meta (max-width: 500px) {
+@container meta (width <= 500px) {
   p {
     visibility: hidden;
   }
 }
 
-@container card (max-height: 200px) {
+@container card (width <= 200px) {
   h2 {
     font-size: 1.5em;
   }

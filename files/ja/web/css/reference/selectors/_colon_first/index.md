@@ -1,9 +1,8 @@
 ---
 title: :first
 slug: Web/CSS/Reference/Selectors/:first
-original_slug: Web/CSS/:first
 l10n:
-  sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)で使用され、印刷文書の最初のページを表します。（一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。）

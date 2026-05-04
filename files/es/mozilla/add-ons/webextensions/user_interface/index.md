@@ -24,7 +24,7 @@ Las extensiones que usan las API de WebExtension se proporcionan con varias opci
     <tr>
       <td>
         <a
-          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
+          href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button"
           >Botón de la barra de herramientas</a
         >
         (acción del navegador)

@@ -1,8 +1,9 @@
 ---
-title: :checked
+title: Pseudo-classe CSS `:checked`
+short-title: :checked
 slug: Web/CSS/Reference/Selectors/:checked
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`).

@@ -14,10 +14,10 @@ La compaginación en cuadrícula con CSS es un método de diseño de páginas we
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y una idea de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
       </td>
     </tr>
     <tr>
@@ -770,7 +770,7 @@ En esta descripción general, hemos recorrido las características principales d
 
 ## Ver también
 
-- [Guías de cuadrícula CSS](/es/docs/Web/CSS/CSS_grid_layout#guides)
+- [Guías de cuadrícula CSS](/es/docs/Web/CSS/Guides/Grid_layout#guides)
 - [Inspector de cuadrícula CSS: Examinar diseños de cuadrícula](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout")}}

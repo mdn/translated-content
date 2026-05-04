@@ -1,6 +1,6 @@
 ---
 title: "確認テスト: ボックスモデル"
-short-title: "試験: ボックスモデル"
+short-title: "テスト: ボックスモデル"
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model
 l10n:
   sourceCommit: a623d4459e2aa00d17dc0fd6b6bc44f56c589950

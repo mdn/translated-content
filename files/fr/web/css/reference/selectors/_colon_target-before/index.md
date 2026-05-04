@@ -1,8 +1,9 @@
 ---
-title: :target-before
+title: Pseudo-classe CSS `:target-before`
+short-title: :target-before
 slug: Web/CSS/Reference/Selectors/:target-before
 l10n:
-  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`add()`** de l'objet {{JSxRef("Atomics")}} ajoute une valeur donnée à un élément du tableau à une position donnée et retourne l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un élément du tableau à une position donnée et retourne l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ L'ancienne valeur à la position donnée (`typedArray[index]`).
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.add()`
+### Utiliser la méthode `Atomics.add()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

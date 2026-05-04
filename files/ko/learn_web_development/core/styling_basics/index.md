@@ -60,7 +60,7 @@ original_slug: Learn/CSS/Building_blocks
 
 CSS 기술을 테스트하고 싶습니까? 다음 평가는 위 안내서에서 다루는 CSS 에 대한 이해를 테스트 합니다.
 
-- [기본 CSS 이해](/ko/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
+- [기본 CSS 이해](/ko/docs/Learn_web_development/Core/Styling_basics)
   - : 이 평가는 기본적인 구문, 선택자, 우선 순위, 박스 모델 등에 대한 이해를 테스트 합니다.
 - [멋진 편지지 만들기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_caad113ab4b172ad3cd3f6b04d466fd25bbbea60c1a37548c663858321ca18f3)
   - : 올바른 인상을 남기고 싶다면, 멋진 편지지에 편지를 쓰는 것이 정말 좋습니다. 이 평가에서는 이러한 모양을 달성하기 위해 온라인 템플릿을 작성해야 합니다.

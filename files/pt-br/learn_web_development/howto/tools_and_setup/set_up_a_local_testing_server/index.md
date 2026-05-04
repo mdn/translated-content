@@ -14,12 +14,12 @@ Este artigo explica como configurar um simples servidor de testes local em seu c
         <p>
           Primeiro você precisa saber
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona"
+            href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
             >como a internet funciona</a
           >
           e
           <a
-            href="https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server"
+            href="/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
             >o que é um servidor Web</a
           >.
         </p>

@@ -65,7 +65,7 @@ transform: translateY(50%);
 ### 値
 
 - `<length-percentage>`
-  - : 変換ベクトルの縦座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Y 座標の移動量をを表します。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。
+  - : 変換ベクトルの縦座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Y 座標の移動量を表します。パーセント値は {{cssxref("transform-box")}} プロパティで定義される参照ボックスの幅からの相対値です。
 
 <table class="standard-table">
   <thead>

@@ -1,11 +1,10 @@
 ---
-title: animation-range-end
+title: Propriété CSS `animation-range-end`
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-end`** définit le point sur la chronologie où une animation doit se terminer.
 
@@ -38,7 +37,7 @@ animation-range-end: unset;
 - {{CSSxRef("length-percentage")}}
   - : Définit une valeur de longueur ou de pourcentage mesurée à partir du début de la chronologie.
 - {{CSSxRef("timeline-range-name")}}
-  - : Définit une plage de chronologie nommée dans la chronologie globale. La plage commence à `0%`.
+  - : Définit une plage de chronologie nommée dans la chronologie globale. La plage se termine à `100%`.
 - `<timeline-range-name> <length-percentage>`
   - : Définit une longueur ou un pourcentage mesuré à partir du début de la plage de chronologie nommée.
 
@@ -227,5 +226,6 @@ Faites défiler pour voir l'élément s'animer. Activez ensuite la case à coche
 - La propriété {{CSSxRef("view-timeline-inset")}}
 - La propriété `rangeStart` de la méthode {{DOMxRef("Element.animate()")}}
 - [Chronologies d'animation pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

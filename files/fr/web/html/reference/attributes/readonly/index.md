@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : readonly"
+title: "Attribut HTML : `readonly`"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 l10n:
-  sourceCommit: aff319cd81d10cfda31b13adb3263deafb284b20
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut booléen **`readonly`**, lorsqu'il est présent, rend l'élément non mutable, ce qui signifie que l'utilisateur·ice ne peut pas modifier le contrôle.

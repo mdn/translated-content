@@ -37,7 +37,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/button">&#x3C;button></a></code
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/button">&#x3C;button></a></code
         >
       </td>
       <td>
@@ -50,7 +50,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
       <td>
         <p>
           <code
-            ><a href="/fr/docs/Web/HTML/Element/select">&#x3C;select></a></code
+            ><a href="/fr/docs/Web/HTML/Reference/Elements/select">&#x3C;select></a></code
           >
         </p>
       </td>
@@ -67,7 +67,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/HTML/Element/textarea"
+          ><a href="/fr/docs/Web/HTML/Reference/Elements/textarea"
             >&#x3C;textarea></a
           ></code
         >
@@ -81,7 +81,7 @@ La plupart des styles sont automatiquement appliqués, mais certains éléments 
     <tr>
       <td>
         Parent d'un
-        <code><a href="/fr/docs/Web/HTML/Element/input">&#x3C;input></a></code>
+        <code><a href="/fr/docs/Web/HTML/Reference/Elements/input">&#x3C;input></a></code>
       </td>
       <td>
         <pre class="brush: html">

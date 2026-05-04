@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/param
 original_slug: Web/XSLT/Element/param
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:param>` définit un paramètre par son nom et, éventuellement, lui attribue une valeur par défaut. Lorsqu'il est utilisé comme élément de premier niveau, le paramètre est global. Utilisé dans un élément `<xsl:template>`, le paramètre est local à ce modèle. Dans ce dernier cas, il doit être le premier élément enfant du modèle.
 

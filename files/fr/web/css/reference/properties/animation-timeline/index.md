@@ -1,11 +1,10 @@
 ---
-title: animation-timeline
+title: Propriété CSS `animation-timeline`
+short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:
-  sourceCommit: 21f3703f37be2ab064fb8cff005438f47f92a1de
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** définit la chronologie utilisée pour contrôler la progression d'une animation CSS.
 

@@ -4,8 +4,6 @@ slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
-
 Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.
 
 <table class="standard-table">

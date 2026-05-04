@@ -1,8 +1,9 @@
 ---
-title: font-feature-settings
+title: Propriété CSS `font-feature-settings`
+short-title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
 l10n:
-  sourceCommit: 0b5859108411e47d228a4bb9f30a5556ab17f63c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
@@ -104,10 +105,10 @@ Cette propriété se définit soit avec le mot-clé `normal`, soit avec une list
   - : Indique que le texte est disposé en utilisant les réglages de police par défaut. Il s'agit de la valeur par défaut.
 - `<feature-tag-value>`
   - : Représente une collection de valeurs (<i lang="en">tuple</i> en anglais) séparées par un espace, constitué d'un nom d'étiquette et d'une valeur optionnelle.
-
-    Le nom d'étiquette est toujours une {{CSSxRef("&lt;string&gt;")}} de quatre caractères {{Glossary("ASCII")}}. Si le nom d'étiquette comporte plus ou moins de caractères ou s'il contient des caractères en dehors de l'intervalle de points de code `U+20` — `U+7E`, le descripteur est invalide.
-
-    La valeur optionnelle peut être un entier positif ou le mot-clé `on` ou `off`. Les mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est définie, la valeur par défaut est `1`. Pour les fonctionnalités OpenType non booléennes (par exemple, [alternatives stylistiques](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt)), la valeur implique qu'un glyphe particulier soit sélectionné&nbsp;; pour les fonctionnalités booléennes, la valeur active ou désactive la fonctionnalité.
+    - Le nom de l'étiquette
+      - : Le nom d'étiquette est toujours une {{CSSxRef("&lt;string&gt;")}} de quatre caractères {{Glossary("ASCII")}}. Si le nom d'étiquette comporte plus ou moins de caractères ou s'il contient des caractères en dehors de l'intervalle de points de code `U+20` — `U+7E`, le descripteur est invalide.
+    - Une valeur optionnelle
+      - : La valeur optionnelle peut être un entier positif ou le mot-clé `on` ou `off`. Les mots-clés `on` et `off` sont des synonymes respectifs des valeurs `1` et `0`. Si aucune valeur n'est définie, la valeur par défaut est `1`. Pour les fonctionnalités OpenType non booléennes (par exemple, [alternatives stylistiques](https://learn.microsoft.com/en-ca/typography/opentype/spec/features_pt#tag-salt)), la valeur implique qu'un glyphe particulier soit sélectionné&nbsp;; pour les fonctionnalités booléennes, la valeur active ou désactive la fonctionnalité.
 
 ## Définition formelle
 

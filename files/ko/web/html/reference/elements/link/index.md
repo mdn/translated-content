@@ -112,7 +112,7 @@ l10n:
               <p>fetch, XHR</p>
               <div class="notecard note">
                 <p>
-                  <strong>참고:</strong> 이 값은 crossorigin 특성을 포함하기 위해 <code>&#x3C;link></code> 를 필요로 합니다. <a href="/ko/docs/Web/HTML/Attributes/rel/preload#CORS가_활성화된_fetch">CORS가 활성화된 fetch</a>를 확인하세요.
+                  <strong>참고:</strong> 이 값은 crossorigin 특성을 포함하기 위해 <code>&#x3C;link></code> 를 필요로 합니다. <a href="/ko/docs/Web/HTML/Reference/Attributes/rel/preload#CORS가_활성화된_fetch">CORS가 활성화된 fetch</a>를 확인하세요.
                 </p>
               </div>
             </td>
@@ -366,20 +366,20 @@ l10n:
   <tbody>
     <tr>
       <th>
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
         메타데이터 콘텐츠.
         <code
-          ><a href="/ko/docs/Web/HTML/Global_attributes/itemprop"
+          ><a href="/ko/docs/Web/HTML/Reference/Global_attributes/itemprop"
             >itemprop</a
           ></code
         >이 존재하면
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           >플로우 콘텐츠</a
         >
         및
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >.
       </td>
@@ -399,11 +399,11 @@ l10n:
       <td>
         메타데이터 콘텐츠를 허용하는 모든 요소.
         <code
-          ><a href="/ko/docs/Web/HTML/Global_attributes/itemprop"
+          ><a href="/ko/docs/Web/HTML/Reference/Global_attributes/itemprop"
             >itemprop</a
           ></code
         >이 존재하면
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

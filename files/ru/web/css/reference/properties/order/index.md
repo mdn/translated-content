@@ -139,4 +139,4 @@ main > aside {
 
 ## Смотрите также
 
-- [Используя CSS flexible boxes](/docs/Web/Guide/CSS/Flexible_boxes)
+- [Используя CSS flexible boxes](/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)

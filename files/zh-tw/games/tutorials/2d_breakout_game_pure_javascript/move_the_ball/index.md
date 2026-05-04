@@ -130,9 +130,58 @@ function draw() {
 
 以下為到目前為止完整的程式碼，你可以核對並試著操作以幫助你更瞭解他的運作方式:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
+```html
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">開始遊戲</button>
+```
 
-Exercise: 練習改變球的移動速度或行進方向。
+```css
+canvas {
+  background: #eeeeee;
+}
+button {
+  display: block;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+const dx = 2;
+const dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+const runButton = document.getElementById("runButton");
+runButton.addEventListener("click", () => {
+  startGame();
+  runButton.disabled = true;
+});
+```
+
+{{embedlivesample("比較你的程式碼", 600, 350)}}
+
+> [!NOTE]
+> 嘗試改變小球的運動速度或運動方向。
 
 ## 下一步
 

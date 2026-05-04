@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`store()`** de l'objet {{JSxRef("Atomics")}} enregistre une valeur donnée à un emplacement donné du tableau partagé et retourne cette valeur.
+La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et retourne cette valeur.
 
 ## Syntaxe
 
@@ -38,7 +38,7 @@ La valeur qui a été enregistrée.
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.store()`
+### Utiliser la méthode `Atomics.store()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

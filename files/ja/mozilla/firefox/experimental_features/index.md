@@ -781,7 +781,7 @@ Firefox は、ページ側のクライアントコードによって既に追加
 
 ### MIME タイプ image/jxl の Accept ヘッダー
 
-[既定のリクエストおよび画像リクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)の HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーは、`image/jxl` MIME タイプに対応していることをを示す環境設定で構成できます。
+[既定のリクエストおよび画像リクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values)の HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーは、`image/jxl` MIME タイプに対応していることを示す環境設定で構成できます。
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |

@@ -1,18 +1,14 @@
 ---
 title: container-type
 slug: Web/CSS/Reference/Properties/container-type
-original_slug: Web/CSS/container-type
 l10n:
-  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 要素はクエリーコンテナーを確立するのに、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用することができます。 `container-type` は、コンテナークエリーで使用されるコンテナーコンテキストの種類を定義するために使用されます。利用できるコンテナーコンテキストは次のとおりです。
 
 - [サイズ](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
 - [スクロール状態](/ja/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries): コンテナーが途中までスクロールされているスクロールコンテナーであるかどうか、コンテナーがスクロールスナップコンテナーにスナップされている[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)であるかどうかなどのスクロール状態の条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。
-
-> [!NOTE]
-> `container-type` および {{cssxref("container-name")}} プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
@@ -40,9 +36,7 @@ container-type: unset;
 
 - `inline-size`
   - : コンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
-    要素にレイアウト、スタイル、インラインサイズ抑制を適用します。
-
-    インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/Guides/Containment/Using)を参照してください）。
+    要素に[スタイル](/ja/docs/Web/CSS/Reference/Properties/contain#style)抑制と[インラインサイズ](/ja/docs/Web/CSS/Reference/Properties/contain#inline-size)抑制を適用します。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/Guides/Containment/Using#サイズ抑制)することができます（[CSS コンテナーの使用](/ja/docs/Web/CSS/Guides/Containment/Using)を参照してください）。
 
 - `normal`
   - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/Reference/At-rules/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
@@ -52,9 +46,7 @@ container-type: unset;
 
 - `size`
   - : [インラインおよびブロック](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
-    コンテナーにレイアウト抑制、スタイル抑制、サイズ抑制を適用します。
-
-    サイズ抑制は、インライン方向とブロック方向の両方で要素に適用されます。要素のサイズは、子要素を無視して単独で計算できます。
+    コンテナーに[スタイル](/ja/docs/Web/CSS/Reference/Properties/contain#style)抑制と[サイズ](/ja/docs/Web/CSS/Reference/Properties/contain#size)抑制を適用します。サイズ抑制は、インライン方向とブロック方向の両方で要素に適用されます。要素のサイズは、子要素を無視して単独で計算できます。
 
 ## 公式定義
 
@@ -97,7 +89,7 @@ container-type: unset;
 ```html
 <div class="container">
   <div class="card">
-    <h3>Normal card</h3>
+    <h3>通常のカード</h3>
     <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
@@ -107,7 +99,7 @@ container-type: unset;
 
 <div class="container wide">
   <div class="card">
-    <h3>Wider card</h3>
+    <h3>広幅のカード</h3>
     <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua.
@@ -116,7 +108,8 @@ container-type: unset;
 </div>
 ```
 
-コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
+コンテナーコンテキストを作成するには、要素に `container-type` プロパティを追加します。
+以下は、 `inline-size` 値を使用してコンテナーの[インライン軸](/ja/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#ブロック軸とインライン軸)のコンテナーコンテキストを作成しています。
 
 ```css
 .container {
@@ -155,7 +148,7 @@ h3 {
 コンテナークエリーを {{Cssxref("@container")}} アットルールで書くと、コンテナーの横幅が 400px を超える場合に、コンテナーの要素にスタイルが適用されます。
 
 ```css
-@container (min-width: 400px) {
+@container (width > 400px) {
   .card {
     display: grid;
     grid-template-columns: 1fr 2fr;

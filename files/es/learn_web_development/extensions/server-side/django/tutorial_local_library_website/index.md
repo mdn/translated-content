@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library
 original_slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 El primer artículo de nuestra serie de tutoriales prácticos explica qué puedes aprender, y proporciona una visión general del sitio web de ejemplo de "biblioteca local" en el que estaremos trabajando y evolucionando en artículos subsiguientes.
 
@@ -20,7 +20,7 @@ El primer artículo de nuestra serie de tutoriales prácticos explica qué puede
             >Introducción a Django</a
           >. Durante los siguientes artículos necesitarás tener
           <a
-            href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
+            href="/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
             >levantado un entorno de desarrollo Django</a
           >.
         </p>

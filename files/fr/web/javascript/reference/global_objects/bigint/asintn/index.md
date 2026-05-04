@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode statique **`asIntN()`** des valeurs {{JSxRef("BigInt")}} tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier signé.
+La méthode statique **`BigInt.asIntN()`** tronque une valeur `BigInt` au nombre donné de bits les moins significatifs et retourne cette valeur sous la forme d'un entier signé.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: BigInt.asIntN()")}}
 

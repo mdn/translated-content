@@ -10,7 +10,7 @@ original_slug: Web/HTML/Element/form
 
 El elemento HTML form (`<form>`) representa una sección de un documento que contiene controles interactivos que permiten a un usuario enviar información a un servidor web.
 
-Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/:valid) e [`:invalid`](/es/docs/Web/CSS/:invalid) para darle estilos a un elemento form.
+Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/Reference/Selectors/:valid) e [`:invalid`](/es/docs/Web/CSS/Reference/Selectors/:invalid) para darle estilos a un elemento form.
 
 ## Contexto de uso
 

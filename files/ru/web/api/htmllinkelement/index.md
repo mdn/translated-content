@@ -7,7 +7,7 @@ slug: Web/API/HTMLLinkElement
 
 Интерфейс **`HTMLLinkElement`** представляет справочную информацию для внешних ресурсов и отношение этих ресурсов к документу и наоборот (соответствует элементу [`<link>`](/ru/docs/Web/HTML/Reference/Elements/link); не путать с [`<a>`](/ru/docs/Web/HTML/Reference/Elements/a), который представлен элементом [`HTMLAnchorElement`](/ru/docs/Web/API/HTMLAnchorElement)). Этот объект наследует все свойства и методы интерфейса {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

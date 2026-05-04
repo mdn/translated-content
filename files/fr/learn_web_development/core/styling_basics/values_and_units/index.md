@@ -265,7 +265,7 @@ Dans le prochain exemple, on utilise `calc()` afin que la boîte soit large de `
 
 ## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles&nbsp;? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre&nbsp;: rendez-vous sur [Testez vos compétences&nbsp;: valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_tasks).
+Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles&nbsp;? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre&nbsp;: rendez-vous sur [Testez vos compétences&nbsp;: valeurs et unités CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_tasks).
 
 ## Résumé
 

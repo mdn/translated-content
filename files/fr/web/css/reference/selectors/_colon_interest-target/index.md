@@ -1,8 +1,9 @@
 ---
-title: :interest-target
+title: Pseudo-classe CSS `:interest-target`
+short-title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 l10n:
-  sourceCommit: 423161782178b119c64cd0b41bff8df20dc84a56
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

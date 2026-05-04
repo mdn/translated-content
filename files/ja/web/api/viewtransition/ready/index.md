@@ -3,22 +3,22 @@ title: "ViewTransition: ready プロパティ"
 short-title: ready
 slug: Web/API/ViewTransition/ready
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3a95c239db50c88fdde48daacb6c279006a422b9
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transition API")}}
 
-**`ready`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用プロパティで、擬似要素ツリーが作成され、ビュー遷移のアニメーションが始まるときに履行される {{jsxref("Promise")}} です。
+**`ready`** は {{domxref("ViewTransition")}} インターフェイスの読み取り専用プロパティで、擬似要素ツリーが作成され、ビュー遷移のアニメーションが始まるときに履行されるプロミス ({{jsxref("Promise")}}) です。
 
 `ready` はトランジションを始められない場合に拒否されます。これは、例えば {{cssxref("view-transition-name")}} が重複していたり、{{domxref("Document.startViewTransition()")}} に渡されたコールバックが拒否されたプロミスを発生させたり返したりするなど、設定ミスが原因である可能性があります。
 
 ## 値
 
-プロミスです。
+プロミス ({{jsxref("Promise")}}) です。
 
 ## 例
 
-次の例では、 {{domxref("ViewTransition.ready")}} プロミスを使用して、クリック時のユーザーカーソルの位置から発生する独自の円形表示ビュー遷移を発生させ、 {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によってアニメーションが指定されています。
+次の例では、`ready` を使用して、クリック時にユーザーのカーソル位置から広がる独自の円形レベールビュー遷移を開始しています。アニメーションは {{domxref("Web Animations API", "ウェブアニメーション API", "", "nocode")}} によって指定されています。
 
 ```js
 // 最後のクリックイベントを保存
@@ -92,4 +92,4 @@ function spaNavigate(data) {
 
 ## 関連情報
 
-- [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/)
+- [Smooth transitions with the View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions/)

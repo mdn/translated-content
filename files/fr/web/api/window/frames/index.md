@@ -1,29 +1,29 @@
 ---
-title: Window.frames
+title: "Window : propriété frames"
+short-title: frames
 slug: Web/API/Window/frames
+l10n:
+  sourceCommit: fff34aeef99745d594b618950330cb8333e9bfc6
 ---
 
-{{ApiRef("Window")}}
+{{APIRef("DOM")}}
 
-Renvoie la fenêtre elle-même, qui est semblable à un objet de type Array, listant les frames présentes dans la fenêtre courante.
+La propriété **`frames`** de l'interface {{DOMxRef("Window")}} retourne la fenêtre elle-même, qui est semblable à un objet de type tableau (`array`), listant les sous-cadres directs de la fenêtre courante.
 
-## Syntaxe
+## Valeur
 
-```js
-frameList = window.frames;
-```
+Une liste d'objets de cadre. Elle est similaire à un tableau en ce qu'elle possède une propriété `length` et que ses éléments peuvent être accessibles en utilisant la notation `[i]`.
 
-- `frameList` est une liste d'objets frame, semblable à un tableau grâce à la propriété `length` . Ses éléments sont accessibles en utilisant la notation `[i]`.
-- `frameList === window` est évalué à `true`.
-- Chaque élément de `window.frames` est un pseudo tableau représentant l'objet [window](/fr/docs/Web/API/Window) correspondant au contenu de la [\<frame>](/fr/docs/Web/HTML/Reference/Elements/frame) ou [\<iframe>](/fr/docs/Web/HTML/Reference/Elements/iframe) , et non au DOM element (i)frame (ex., `window.frames[ 0 ]` équivaut à `document.getElementsByTagName( "iframe" )[ 0 ].contentWindow`).
-- pour plus de détails sur la valeur retournée, se référer au [fil de discussion sur mozilla.dev.platform](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1).
+- `frames === window` est évalué comme vrai.
+- Chaque élément du pseudo-tableau `window.frames` représente l'objet {{DOMxRef("Window")}} correspondant au contenu du {{HTMLElement("frame")}} ou du {{HTMLElement("iframe")}} donné, et non à l'élément DOM `frame` ou `iframe` (c'est-à-dire, `window.frames[0]` est la même chose que `document.getElementsByTagName("iframe")[0].contentWindow`).
+- Pour plus de détails sur la valeur retournée, consultez ce [fil de discussion sur mozilla.dev.platform <sup>(angl.)</sup>](https://groups.google.com/g/mozilla.dev.platform/c/VijG80aFnU8).
 
-## Exemple
+## Exemples
 
 ```js
-var frames = window.frames; // ou // var frames = window.parent.frames;
-for (var i = 0; i < frames.length; i++) {
-  // faire quelque chose avec chaque subframe en tant que frames[i]
+const frames = window.frames; // ou const frames = window.parent.frames;
+for (let i = 0; i < frames.length; i++) {
+  // faire quelque chose avec chaque sous-cadre en tant que frames[i]
   frames[i].document.body.style.background = "red";
 }
 ```
@@ -31,3 +31,7 @@ for (var i = 0; i < frames.length; i++) {
 ## Spécifications
 
 {{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}

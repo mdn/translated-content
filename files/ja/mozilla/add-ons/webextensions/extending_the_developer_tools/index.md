@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 {{AddonSidebar}}
 
 > [!NOTE]
-> このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis)を参照してください。
+> このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_apis)を参照してください。
 
 WebExtensions API を使用して、ブラウザーの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
 

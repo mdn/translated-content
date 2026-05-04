@@ -3,11 +3,11 @@ title: Referencia CSS
 slug: Web/CSS/Reference
 ---
 
-Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements), [reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#keyword_index), así como los [selectores por tipo](#selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#dom_css).
+Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements), [reglas-at](/es/docs/Web/CSS/Guides/Syntax/At-rules), [unidades](/es/docs/Web/CSS/Reference/Values/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#keyword_index), así como los [selectores por tipo](#selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#dom_css).
 
 Tenga en cuenta que las definiciones de reglas CSS son completamente [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII), mientras que DOM-CSS / CSSOM, el sistema de gestión de reglas, está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
-Vea también las [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) para propiedades específicas de Gecko, que usan el prefijo `-moz`; y las [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) para propiedades específicas de WebKit. Vea [Vendor-prefixed CSS Property Overview](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo como referencia a todas las propiedades con prefijo.
+Vea también las [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Reference/Mozilla_extensions) para propiedades específicas de Gecko, que usan el prefijo `-moz`; y las [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) para propiedades específicas de WebKit. Vea [Vendor-prefixed CSS Property Overview](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo como referencia a todas las propiedades con prefijo.
 
 ## Sintaxis de regla básica
 
@@ -38,11 +38,11 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
+Para una introducción de nivel principiante a la sintaxis de los selectores de CSS, consulte [este tutorial](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors). Tenga en cuenta que cualquier error de [sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction) en una definición de regla hace que la regla completa se invalide. El navegador ignora las reglas no válidas. Tenga en cuenta que las definiciones de reglas CSS son totalmente (ASCII) [basadas en texto](https://www.w3.org/TR/css-syntax-3/#intro), mientras que DOM-CSS / CSSOM (el sistema de gestión de reglas) está [basado en objetos](https://www.w3.org/TR/cssom/#introduction).
 
 ### Sintaxis de las reglas-at (@rules)
 
-Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/CSS_syntax/At-rule) para ver la sintaxis de la regla deseada.
+Debido a que éstas tienen formatos de estructura variados, revise la sección [reglas-At](/es/docs/Web/CSS/Guides/Syntax/At-rules) para ver la sintaxis de la regla deseada.
 
 ## Índice de palabras clave
 
@@ -53,22 +53,22 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ## Selectores
 
-### [Selectores básicos](/es/docs/Web/CSS/CSS_selectors#basic_selectors)
+### [Selectores básicos](/es/docs/Web/CSS/Guides/Selectors#basic_selectors)
 
-- [Selectores de tipo](/es/docs/Web/CSS/Type_selectors) `elementname`
-- [Selectores de clase](/es/docs/Web/CSS/Class_selectors) `.classname`
-- [Selectores de ID](/es/docs/Web/CSS/ID_selectors) `#idname`
-- [Selectores universales](/es/docs/Web/CSS/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
-- [Selectores de atributo](/es/docs/Web/CSS/Attribute_selectors) `[attr=value]`
+- [Selectores de tipo](/es/docs/Web/CSS/Reference/Selectors/Type_selectors) `elementname`
+- [Selectores de clase](/es/docs/Web/CSS/Reference/Selectors/Class_selectors) `.classname`
+- [Selectores de ID](/es/docs/Web/CSS/Reference/Selectors/ID_selectors) `#idname`
+- [Selectores universales](/es/docs/Web/CSS/Reference/Selectors/Universal_selectors) `*`, `ns|*`, `*|*`, `|*`
+- [Selectores de atributo](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[attr=value]`
 
-### [Combinadores](/es/docs/Web/CSS/CSS_selectors#combinators)
+### [Combinadores](/es/docs/Web/CSS/Guides/Selectors#combinators)
 
-- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Next-sibling_combinator) `A + B`
-- [Selectores de hermanos generales](/es/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-- [Selectores de hijo](/es/docs/Web/CSS/Child_combinator) `A > B`
-- [Selectores de descendiente](/es/docs/Web/CSS/Descendant_combinator) `A B`
+- [Selectores de hermanos adyacentes](/es/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator) `A + B`
+- [Selectores de hermanos generales](/es/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) `A ~ B`
+- [Selectores de hijo](/es/docs/Web/CSS/Reference/Selectors/Child_combinator) `A > B`
+- [Selectores de descendiente](/es/docs/Web/CSS/Reference/Selectors/Descendant_combinator) `A B`
 
-### [Pseudo-clases](/es/docs/Web/CSS/Pseudo-classes)
+### [Pseudo-clases](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
 
 - {{ Cssxref(":active") }}
 - {{ Cssxref(':any')}}
@@ -117,7 +117,7 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 - {{ Cssxref(":valid") }}
 - {{ Cssxref(":visited") }}
 
-### [Pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements)
+### [Pseudo-elementos](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 
 - {{ Cssxref("::after") }}
 - {{ Cssxref("::backdrop") }}
@@ -138,34 +138,34 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 ### Sintaxis y semántica
 
-- [Sintaxis CSS](/es/docs/Web/CSS/CSS_syntax/Syntax)
-- [Reglas-at](/es/docs/Web/CSS/CSS_syntax/At-rule)
+- [Sintaxis CSS](/es/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Reglas-at](/es/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Cascada](/es/docs/Web/CSS/Cascade)
-- [Comentarios](/es/docs/Web/CSS/CSS_syntax/Comments)
+- [Comentarios](/es/docs/Web/CSS/Guides/Syntax/Comments)
 - [Descriptor](</es/docs/Glossary/Descriptor_(CSS)>)
-- [Herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance)
-- [Propiedades abreviadas](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-- [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity)
-- [Sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [Herencia](/es/docs/Web/CSS/Guides/Cascade/Inheritance)
+- [Propiedades abreviadas](/es/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+- [Especificidad](/es/docs/Web/CSS/Guides/Cascade/Specificity)
+- [Sintaxis de definición de valor](/es/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 
 ### Valores
 
 - [Valor actual](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
 - [Valor calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-- [Valor inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing)
+- [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [Valor resuelto](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
 - [Valor específico](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1)
-- [Valor utilizado](/es/docs/Web/CSS/used_value)
+- [Valor utilizado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
 ### Diseño
 
-- [Contexto de formato de bloque](/es/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Modelo de caja](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Contexto de formato de bloque](/es/docs/Web/CSS/Guides/Display/Block_formatting_context)
+- [Modelo de caja](/es/docs/Web/CSS/Guides/Box_model/Introduction)
 - [Containing block](/es/docs/Web/CSS/Containing_block)
 - [Modo de diseño](/es/docs/Glossary/Layout_mode)
-- [Margen colapsando](/es/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-- [Elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- [Contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+- [Margen colapsando](/es/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
+- [Elementos reemplazados](/es/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+- [Contexto de apilamiento](/es/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
 - [Modelo de formato visual](/es/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
@@ -190,18 +190,18 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 
 Estas páginas describen las nuevas tecnologías que aparecieron en CSS3, o las de CSS2.1 que no tienen mucho soporte:
 
-- [Uso de media queries con CSS](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Uso de media queries con CSS](/es/docs/Web/CSS/Guides/Media_queries/Using)
 - [Uso de contadores con CSS](/es/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-- [Uso de gradientes con CSS](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Uso de transformaciones con CSS](/es/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- [Uso de animaciones con CSS](/es/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [Uso de transiciones con CSS](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [Uso de múltiples fondos con CSS](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Uso de gradientes con CSS](/es/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Uso de transformaciones con CSS](/es/docs/Web/CSS/Guides/Transforms/Using)
+- [Uso de animaciones con CSS](/es/docs/Web/CSS/Guides/Animations/Using)
+- [Uso de transiciones con CSS](/es/docs/Web/CSS/Guides/Transitions/Using)
+- [Uso de múltiples fondos con CSS](/es/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
 - [Uso de las cajas flexibles con CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)
-- [Uso de columnas con CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Uso de columnas con CSS](/es/docs/Web/CSS/Guides/Multicol_layout/Using)
 
 ## Ver también
 
-- [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Mozilla_Extensions) (con el prefijo `-moz`)
+- [Extensiones CSS de Mozilla](/es/docs/Web/CSS/Reference/Mozilla_extensions) (con el prefijo `-moz`)
 - [Extensiones CSS de WebKit](/es/docs/Web/CSS/Webkit_Extensions) (principalmente con el prefijo `-webkit`)
 - [Extensiones CSS de Microsoft](/es/docs/Web/CSS/Microsoft_CSS_extensions) (con el prefijo `-ms`)

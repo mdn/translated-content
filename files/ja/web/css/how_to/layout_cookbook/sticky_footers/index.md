@@ -1,12 +1,11 @@
 ---
 title: 張りつくフッター
 slug: Web/CSS/How_to/Layout_cookbook/Sticky_footers
-original_slug: Web/CSS/Layout_cookbook/Sticky_footers
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 張りつくフッターのパターンは、コンテンツがビューポートの高さより短い場合に、ページのフッターがビューポートの下部に「張りつく」パターンです。 このレシピでこれを作成するためのいくつかのテクニックを見ていきます。
-
-![ボックスの底に押し込まれた張りつくフッター](cookbook-footer.png)
 
 ## 要件
 
@@ -17,47 +16,135 @@ original_slug: Web/CSS/Layout_cookbook/Sticky_footers
 
 ## レシピ
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
+以下のコードブロックの "Play" をクリックすると、この例を MDN Playground で開きます。
 
-> [!CALLOUT]
->
-> [この例をダウンロード](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+```html-nolint live-sample___sticky-footer-example
+<div class="wrapper">
+  <header class="page-header">これがヘッダーです</header>
+  <main class="page-body">
+    <p contenteditable>
+      この段落は短いですが、フッターは画面の下部に固定されたままです。この編集可能な領域にコンテンツを追加すると、コンテンツに合わせて必要に応じてフッターが下に移動するのが確認できます。
+    </p>
+  </main>
+  <footer class="page-footer">張りつくフッター</footer>
+</div>
+```
+
+```css live-sample___sticky-footer-example
+* {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font: 1.2em sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.page-header,
+.page-footer {
+  background-color: rgb(75 70 74);
+  color: white;
+  padding: 20px;
+}
+
+.page-body {
+  padding: 20px;
+}
+
+.page-body p {
+  border: 1px solid grey;
+}
+```
+
+{{EmbedLiveSample("sticky-footer-example", "", "400px")}}
 
 > [!NOTE]
 > この例と以下の例では、ライブ例がうまくいくように、 wrapper に `min-height: 100%` に設定して使用しています。 また、{{htmlelement("body")}} の {{cssxref("min-height")}} を `100vh` に設定し、それをグリッドコンテナーとして使用することで、ページ全体でこれを実現することもできます。
 
-## 行った選択
+## 選択したもの
 
-上記の例では、CSS グリッドレイアウトを使用して張りつくフッターを実現しています。 `.wrapper` の最小の高さは `100%` です。 つまり、コンテナーの高さと同じ高さになります。 次に、レイアウトの各部分につき 1 行で、3 行 1 列のグリッドレイアウトを作成します。
+上記の例では、[CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)を使用して張りつくフッターを実現しています。 `.wrapper` の最小の高さは `100%` です。 つまり、コンテナーの高さと同じ高さになります。 次に、レイアウトの各部分につき 1 行で、3 行 1 列のグリッドレイアウトを作成します。
 
-グリッドの自動配置では、アイテムがソース順に配置されるため、ヘッダーは最初の自動サイズ調整トラックに入り、メインコンテンツは `1fr` トラックに、フッターは最後の自動サイズ調整トラックに入ります。`1fr` トラックは使用可能な空間をすべて占有するため、隙間を埋めるように大きくなります。
+[グリッドの自動配置](/ja/docs/Web/CSS/Guides/Grid_layout/Auto-placement)では、アイテムがソース順に配置されるため、ヘッダーは最初の自動サイズ調整トラックに入り、メインコンテンツは `1fr` トラックに、フッターは最後の自動サイズ調整トラックに入ります。`1fr` トラックは使用可能な空間をすべて占有するため、隙間を埋めるように大きくなります。
 
 ## 代替策
 
-グリッドレイアウトに対応していないブラウザーとの互換性が必要な場合は、フレックスボックスを使用して張りつくフッターを作成することもできます。
+また、[フレックスボックス](/ja/docs/Web/CSS/Guides/Flexible_box_layout)を使用して、張りつくフッターを作成することもできます。
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
+```html-nolint live-sample___sticky-footer-flexbox-example
+<div class="wrapper">
+  <header class="page-header">これがヘッダーです</header>
+  <main class="page-body">
+    <p contenteditable>
+      この段落は短いですが、フッターは画面の下部に固定されたままです。この編集可能な領域にコンテンツを追加すると、コンテンツに合わせて必要に応じてフッターが下に移動するのが確認できます。
+    </p>
+  </main>
+  <footer class="page-footer">張りつくフッター</footer>
+</div>
+```
 
-フレックスボックスの例は同じように始まりますが、`.wrapper` では `display: grid` ではなく `display: flex` を使用し、`flex-direction` を `column` に設定します。次に、メインコンテンツを `flex-grow: 1` に設定し、他の 2 つの要素を `flex-shrink: 0` に設定します。これにより、コンテンツがメイン領域いっぱいになったときに、それらが縮小されるのを防ぎます。
+```css live-sample___sticky-footer-flexbox-example
+* {
+  box-sizing: border-box;
+}
 
-## ブラウザーの互換性
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font: 1.2em sans-serif;
+}
 
-#### grid-template-rows
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
 
-{{Compat}}
+  display: flex;
+  flex-direction: column;
+}
 
-#### flex-direction
+.page-header,
+.page-footer {
+  background-color: rgb(75 70 74);
+  color: white;
+  padding: 20px;
 
-{{Compat}}
+  flex-grow: 0;
+  flex-shrink: 0;
+}
 
-#### flex-grow
+.page-body {
+  padding: 20px;
 
-{{Compat}}
+  flex-grow: 1;
+}
 
-#### flex-shrink
+.page-body p {
+  border: 1px solid grey;
+}
+```
 
-{{Compat}}
+{{EmbedLiveSample("sticky-footer-flexbox-example", "", "400px")}}
 
-## MDN の関連資料
+フレックスボックスの例は同じように始まりますが、`.wrapper` では `display:flex` を `display:grid` の代わりに使用しています。また、{{cssxref("flex-direction")}} を `column` に設定します。次に、メインコンテンツを [`flex-grow: 1`](/ja/docs/Web/CSS/Reference/Properties/flex-grow) に設定し、他の 2 つの要素を [`flex-shrink: 0`](/ja/docs/Web/CSS/Reference/Properties/flex-shrink) に設定します。これにより、コンテンツがメイン領域いっぱいになったときに、それらが縮小されるのを防ぎます。
 
+## MDN のリソース
+
+- CSS プロパティ: {{cssxref("display")}}, {{cssxref("min-height")}}, {{cssxref("grid-template-rows")}}, {{cssxref("flex-direction")}}, {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}}
 - [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/Guides/Grid_layout)モジュール
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/Guides/Flexible_box_layout)モジュール

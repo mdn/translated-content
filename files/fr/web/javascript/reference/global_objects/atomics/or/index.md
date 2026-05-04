@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 48f29758dbe9036bd04baf519b8e35d1f989e532
 ---
 
-La méthode statique **`or()`** de l'objet {{JSxRef("Atomics")}} calcule un OU binaire entre une valeur donnée et la valeur présente à une position donnée du tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'intervient tant que la valeur modifiée n'a pas été réinscrite.
+La méthode statique **`Atomics.or()`** calcule un OU binaire entre une valeur donnée et la valeur présente à une position donnée du tableau, et retourne l'ancienne valeur à cette position. Cette opération atomique garantit qu'aucune autre écriture n'intervient tant que la valeur modifiée n'a pas été réinscrite.
 
 ## Syntaxe
 
@@ -58,7 +58,7 @@ Par exemple, un OU binaire de `5 | 1` retourne `0101`, ce qui correspond à 5 en
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.or()`
+### Utiliser la méthode `Atomics.or()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

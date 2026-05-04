@@ -13,7 +13,7 @@ Le travail préparatoire pour nous permettre de créer une page d'accueil pour l
     <tr>
       <th scope="row">Pré-requis:</th>
       <td>
-        L'<a href="/fr/docs/Learn/Server-side/Django/Introduction"
+        L'<a href="/fr/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >introduction</a
         >
         à cette série didactique et les sections précédentes y compris celle sur

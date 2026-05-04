@@ -133,7 +133,7 @@ Voici un exemple qui permet à du contenu d'être déplacé:
 
 Ici, on
 
-- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-dir) à vrai pour que l'élément puisse être déplacé.
+- Définit l'attribut [`draggable`](/fr/docs/Web/HTML/Reference/Global_attributes/dir) à vrai pour que l'élément puisse être déplacé.
 - Ajoute un gestionnaire d'événement [`dragstart`](/fr/docs/Web/API/HTMLElement/dragstart_event) qui définit les données de déplacement à l'intérieur.
 
 > [!NOTE]
@@ -141,7 +141,7 @@ Ici, on
 
 #### contentEditable
 
-Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class).
+Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes/class).
 
 ```html
 <div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>

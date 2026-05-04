@@ -1,9 +1,8 @@
 ---
 title: steps()
 slug: Web/CSS/Reference/Values/easing-function/steps
-original_slug: Web/CSS/easing-function/steps
 l10n:
-  sourceCommit: 891bc513a3349040a16c4896197d6a3a910ca42b
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **`steps()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、入力時間を同じ長さの指定した数値の間隔に分割する遷移を定義します。ステップ関数のサブクラスは、「階段関数」とも呼ばれることがあります。
@@ -107,4 +106,5 @@ steps(0, jump-none)
 ## 関連情報
 
 - その他のイージング関数: {{cssxref("easing-function/cubic-bezier", "cubic-bezier()")}} および {{cssxref("easing-function/linear", "linear()")}}
+- [CSS イージング関数](/ja/docs/Web/CSS/Guides/Easing_functions)モジュール
 - [階段関数](https://ja.wikipedia.org/wiki/階段関数) （ウィキペディア）

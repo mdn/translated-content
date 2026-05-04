@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}
 
 이 문서에서는 행, 셀, 제목, 여러 열과 행에 걸쳐 셀을 만드는 방법, 스타일 지정 목적으로 열의 모든 셀을 그룹화하는 방법과 같은 기본 사항을 다루며 HTML 테이블을 시작하는 방법을 안내합니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML의 기초 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >를 봐주시기 바랍니다).
       </td>
@@ -553,4 +553,4 @@ th {
 
 이것으로 HTML 테이블의 기본 사항을 마무리했습니다. 다음 장에서는 조금 더 [고급 테이블 기능](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)을 살펴보고 시각 장애인이 테이블에 얼마나 쉽게 접근할 수 있는지 생각해 보겠습니다.
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Table_accessibility", "conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics")}}

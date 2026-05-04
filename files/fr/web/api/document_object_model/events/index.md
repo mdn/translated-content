@@ -204,7 +204,7 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
         </p>
         <p>
           Les événements de la Roue déclenchés sur
-          <a href="/fr/docs/Web/API/Document/wheel_event"
+          <a href="/fr/docs/Web/API/Element/wheel_event"
             ><code>Document</code></a
           >
           et

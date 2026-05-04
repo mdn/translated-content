@@ -1,8 +1,9 @@
 ---
-title: ::spelling-error
+title: Pseudo-élément CSS `::spelling-error`
+short-title: ::spelling-error
 slug: Web/CSS/Reference/Selectors/::spelling-error
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/fr/docs/Web/CSS) **`::spelling-error`** représente une portion de texte que l'{{Glossary("user agent", "agent utilisateur")}} signale comme étant mal orthographiée.

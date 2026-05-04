@@ -1,9 +1,8 @@
 ---
 title: コンテナースクロール状態クエリーの使用
 slug: Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries
-original_slug: Web/CSS/CSS_conditional_rules/Container_scroll-state_queries
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c55c9e2191ad434c496c3a1edd323f8ba24486d6
 ---
 
 **コンテナースクロール状態クエリー**は、[コンテナークエリー](/ja/docs/Web/CSS/Reference/At-rules/@container)の一種です。コンテナーのサイズに基づいて子孫要素にスタイルを選択的に適用する代わりに、スクロール状態クエリーを使用すると、コンテナーのスクロール状態に基づいて子孫要素にスタイルを選択的に適用することができます。これには、コンテナーが部分的にスクロールされているかどうか、[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)の祖先にスナップされているかどうか、 [`position: sticky`](/ja/docs/Web/CSS/Reference/Properties/position) によって配置され、{{glossary("scroll container", "スクロールコンテナー")}}の祖先の境界に固定されているかどうかを含めることができます。
@@ -15,6 +14,7 @@ l10n:
 `scroll-state()` クエリーで使用できる `@container` の記述子は 3 つあります。
 
 - `scrollable`: コンテナーが、ユーザーによるスクロール（例えば、スクロールバーをドラッグしたり、トラックパッドのジェスチャーを使用したり）によって、指定された方向にスクロールできるかどうかを問い合わせます。つまり、指定された方向にスクロールできるコンテンツが溢れているか、ということです。これは、スクロールコンテナーのスクロール位置に関連するスタイルを適用する場合に便利です。例えば、スクロールバーが上部に表示されているときに、ユーザーにスクロールしてコンテンツをさらに表示するよう促すヒントを表示し、ユーザーが実際にスクロールを開始したらそのヒントを非表示にすることができます。
+- `scrolled`: 最近、指定された方向にコンテナーがスクロールされたかどうかを調べます。これにより、ユーザーのスクロール方向に応じてスタイルを選択的に適用できます。例えば、ユーザーが上にスクロールしているときのみ表示されるトップメニューバーなどが挙げられます。
 - `snapped`: コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを照会します。これは、要素がスクロールスナップコンテナーにスナップされている場合にスタイルを適用するのに役立ちます。例えば、スナップされた要素を何らかの方法で強調表示したり、前回は非表示だったコンテンツの一部を表示したりする場合などです。
 - `stuck`: {{cssxref("position")}} 値が `sticky` のコンテナーが、そのスクロールコンテナーの祖先の端に固定されているかどうかを照会します。これは、固定されたときに `position: sticky` 要素のスタイルを別々に指定する場合に便利です。たとえば、異なる配色やレイアウトを指定することができます。
 
@@ -44,9 +44,9 @@ l10n:
 
 ## `scrollable` クエリーの使用
 
-スクロール状態の [`scrollable`](/ja/docs/Web/CSS/Reference/At-rules/@container#scrollable) クエリーは、 `scroll-state(scrollable: value)` と記述され、コンテナーのスクロール可能な親要素が、ユーザーによるスクロールで指定された方向にスクロールできるかどうかを検査します。できない場合、クエリーは false を返します。
+スクロール状態の [`scrollable`](/ja/docs/Web/CSS/Reference/At-rules/@container#scrollable) クエリーは、 `scroll-state(scrollable: <keyword>)` と記述され、コンテナーのスクロール可能な親要素が、ユーザーによるスクロールで指定された方向にスクロールできるかどうかを検査します。できない場合、クエリーは false を返します。
 
-`value` は、スクロールの可否を検査する方向を示します。例えば、
+キーワードの値は、スクロールの可否を検査する方向を示します。例を示します。
 
 - `top`: コンテナーの上端に向かってスクロールできるかどうかを検査します。
 - `inline-end`: コンテナーをインライン方向の末尾に向かってスクロールできるかどうかを検査します。
@@ -239,7 +239,7 @@ HTML には、文書をスクロールさせるのに十分なコンテンツを
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 
@@ -285,8 +285,8 @@ img {
 .back-to-top {
   text-decoration: none;
   border-radius: 50%;
-  border: 1px solid #0007;
-  background-color: #0007;
+  border: 1px solid #00000077;
+  background-color: #00000077;
   color: white;
   font-size: 3rem;
   text-shadow: 0 0 2px black;
@@ -295,7 +295,7 @@ img {
 
 .back-to-top:hover,
 .back-to-top:focus {
-  background: #0009;
+  background: #00000099;
 }
 ```
 
@@ -326,11 +326,300 @@ html {
 
 文書を下にスクロールして、「トップへ戻る」リンクがどのように表示されるかをメモしてください。`transition` により、ビューポートの右側からスムーズにアニメーションして表示されます。リンクをクリックするか、手動でスクロールしてトップに戻ると、「トップへ戻る」リンクは画面の外側に移動します。
 
+## `scrolled` クエリーの使用
+
+スクロール状態の [`scrolled`](/ja/docs/Web/CSS/Reference/At-rules/@container#scrolled) クエリーは、`scroll-state(scrolled: <keyword>)` の形式で記述され、コンテナーのスクロール可能な親要素が直近で指定された方向にスクロールされたかどうかを判定します。そうでない場合、クエリーは false を返します。
+
+キーワード値は、検査する方向を示します。例を示します。
+
+- `block-start`: コンテナーが直近でブロックの開始位置に向かってスクロールされたかどうかを確認します。
+- `right`: コンテナーが直近で右端に向かってスクロールされたかどうかを確認します。
+- `y`: コンテナーが直近でY軸に沿って上にスクロールされたか、下にスクロールされたかを判定します。
+- `none`: コンテナーが{{glossary("scroll container", "スクロールコンテナー")}}ではないか、またはレンダリング以降、どの方向にもスクロールされていないかどうかを判定します。
+
+この検査が true を返した場合、`@container` ブロック内のルールが、一致したスクロールコンテナーの子孫要素に適用されます。
+
+`scrolled` クエリーを使用したスクロールコンテナ－の例を見てみましょう。このコンテナーでは、ユーザーが上にスクロールしているときは上部のコンテンツ「バー」を、下にスクロールしているときは下部のコンテンツ「バー」のみを表示します。
+
+### HTML
+
+HTMLには、文書をスクロールさせるのに十分なコンテンツを含む {{htmlelement("article")}} 要素があり、その前には上部と下部の「バー」を表す 2 つの {{htmlelement("div")}} 要素が配置されています。
+
+```html
+<div class="bar" id="top-bar">現在上に向かってスクロールしています。</div>
+<div class="bar" id="bottom-bar">現在下に向かってスクロールしています。</div>
+<article>
+  <h1>スクロールコンテナークエリーのある文書</h1>
+  <section>
+    <header>
+      <h2>この最初の節は面白い</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    ...
+  </section>
+
+  ...
+</article>
+```
+
+簡潔にするため、HTML の大部分を省略しています。
+
+```html hidden live-sample___scrolled
+<div class="bar" id="top-bar">現在上に向かってスクロールしています。</div>
+<div class="bar" id="bottom-bar">現在下に向かってスクロールしています。</div>
+<article>
+  <h1>スクロールコンテナークエリーのある文書</h1>
+  <section>
+    <header>
+      <h2>この最初の節は面白い</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    <p>
+      Mauris non malesuada est, sed vestibulum nibh. Duis vestibulum iaculis
+      lectus, eu sagittis dolor dignissim iaculis. Nunc et orci sed sapien
+      eleifend placerat. Curabitur dapibus risus eget odio sollicitudin, sit
+      amet luctus justo pellentesque.
+    </p>
+
+    <p>
+      <strong>Morbi non pharetra quam.</strong> Fusce vestibulum sem diam, ac
+      consequat augue consectetur ut. Donec at augue viverra, tempus urna sit
+      amet, porta augue.
+      <em>Phasellus fringilla tincidunt sem ullamcorper varius.</em> Aenean
+      gravida feugiat sem nec ultricies.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Sed pellentesque placerat mi sed maximus. Sed vitae dui vitae mi pulvinar
+      gravida sed et libero.
+      <a href="#">Duis nec venenatis dolor, sed tristique felis.</a>
+      Integer dapibus facilisis leo elementum vulputate. Curabitur a urna quis
+      nulla vulputate tincidunt quis ac enim.
+    </p>
+
+    <p>
+      Cras non elit vel leo dignissim convallis. Duis eros urna, varius sit amet
+      lorem vel, feugiat euismod est.
+      <strong>Aliquam ornare eu elit ut iaculis.</strong>
+      Suspendisse vulputate tempor leo, non rhoncus risus aliquam vel.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>これは、そうでもない</h2>
+
+      <p>Suspendisse varius est ac turpis mollis cursus.</p>
+    </header>
+
+    <p>
+      <strong
+        >Curabitur faucibus condimentum eros, ut auctor felis lacinia
+        sed.</strong
+      >
+      Praesent vitae scelerisque eros.
+    </p>
+
+    <p>
+      <em>Ut vitae suscipit augue.</em> Cras et orci condimentum ante dignissim
+      iaculis. Sed consectetur quis est sed dignissim. Nulla egestas orci erat,
+      et commodo arcu feugiat ut.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      Sed non tempor massa, at accumsan ante. Pellentesque habitant morbi
+      <a href="#">tristique senectus</a> et netus et malesuada fames ac turpis
+      egestas.
+    </p>
+
+    <p>
+      Pellentesque placerat luctus tempor. Nunc congue dapibus eros, at
+      vulputate nulla. Sed rutrum eleifend magna vel porta. Integer cursus orci
+      faucibus turpis scelerisque, nec pharetra arcu molestie.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>これで少しは分かりやすくなったでしょうか？</h2>
+
+      <p>Curabitur facilisis ornare lorem et eleifend.</p>
+    </header>
+
+    <p>
+      <strong>Aenean mollis non neque sed finibus.</strong> Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit. Suspendisse sagittis viverra urna.
+      In hac habitasse platea dictumst. Vestibulum neque orci, mollis sagittis
+      augue et, pharetra vehicula diam.
+    </p>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <a href="#">Pellentesque sollicitudin</a> nunc quis nisl condimentum, ac
+      iaculis libero feugiat.
+      <strong>Nullam ultrices purus a nulla dignissim hendrerit.</strong> In
+      molestie consectetur est quis pulvinar.
+    </p>
+
+    <p>
+      Vivamus ac erat eu est lobortis commodo. Orci varius natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus. In nulla turpis,
+      <strong>mollis et est tempor</strong>, dignissim aliquam metus. Proin eu
+      arcu quis erat mollis pulvinar. Vivamus at facilisis neque.
+    </p>
+
+    <p>
+      Integer bibendum laoreet erat, quis vulputate mauris bibendum nec. Class
+      aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+      himenaeos. Nam ut est in arcu interdum hendrerit.
+    </p>
+  </section>
+  <section>
+    <header>
+      <h2>一種の要約</h2>
+
+      <p>Nunc facilisis augue quis ex porta aliquam.</p>
+    </header>
+
+    <img src="#" alt="Placeholder" />
+
+    <p>
+      <strong
+        >Fusce nisi enim, venenatis a est vel, varius placerat lacus.</strong
+      >
+      Nunc tempus rutrum nisl bibendum aliquet. Pellentesque vitae nunc sed nisl
+      tincidunt elementum a sit amet nisi. Morbi pretium at dolor in pulvinar.
+      Curabitur dapibus eleifend accumsan.
+    </p>
+
+    <p>
+      Donec rhoncus, leo vitae mollis maximus, tellus lorem interdum arcu, eu
+      <em>tempor lectus libero in risus</em>. Ut sit amet magna vitae mauris
+      tempor bibendum. <a href="#">Integer id mauris ut ex mattis finibus.</a>
+    </p>
+
+    <p>
+      Curabitur dui felis, elementum et tellus id, blandit facilisis lorem.
+      Aliquam sed posuere ligula, at auctor ipsum. Morbi dignissim accumsan
+      tellus pretium iaculis.
+    </p>
+  </section>
+</article>
+```
+
+### CSS
+
+「バー」には基本的なスタイルが適用されています。最も重要な点として、 {{cssxref("position")}} の値として `fixed` が指定されており、 {{cssxref("left")}} と {{cssxref("right")}} の値を用いて左右からオフセットしています。
+
+```css hidden live-sample___scrolled
+/* 全般的なスタイル */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  width: 90%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 90%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid gray;
+  aspect-ratio: 3/2;
+}
+```
+
+```css live-sample___scrolled
+.bar {
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: #0009;
+  padding: 10px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 5px;
+  right: 5px;
+}
+```
+
+次に、上部バーと下部バーに負の {{cssxref("top")}} および {{cssxref("bottom")}} の長さを設定し、デフォルトではビューポートの上下で非表示になるようにします。また、{{cssxref("transition")}} を追加して、{{cssxref("translate")}} の値が変更された際に、バーが滑らかに表示されるようにアニメーションさせます。
+
+```css live-sample___scrolled
+#top-bar {
+  top: -50px;
+  transition: 0.6s translate;
+}
+
+#bottom-bar {
+  bottom: -50px;
+  transition: 0.6s translate;
+}
+```
+
+この例における{{glossary("scroll container", "スクロールコンテナー")}}は、`<html>` 要素そのものであり、{{cssxref("container-type")}} の値が `scroll-state` であるスクロール状態クエリーコンテナーとして指定されています。{{cssxref("container-name")}} は厳密には必須ではありませんが、コードベース内に異なるクエリーがターゲットとされる複数のスクロール状態クエリーコンテナーが存在する場合に役立ちます。
+
+```css live-sample___scrolled
+html {
+  container-type: scroll-state;
+  container-name: scroller;
+}
+```
+
+次に、2 つの {{cssxref("@container")}} ブロックを定義します。どちらも `scroller` というコンテナー名をターゲットとしています。1 つ目のブロックはクエリー `scrolled: block-end` を定義し、2 つ目のブロックはクエリー `scrolled: block-start` を定義します。それぞれ、これらのクエリーは、`<html>` 要素が直近でブロックの終了端または開始端に向かってスクロールされた場合にのみ、そのブロック内に含まれるルールを適用します。言い換えれば、コンテナーが下にスクロールされたとき、または上にスクロールされたときです。いずれかの条件が真になると、ブロック内で参照されているバーには `translate` 値が設定され、画面上に遷移します。条件 `@condition` で参照されているバーのうち、条件が真でなくなったものは画面外へ遷移します。
+
+```css live-sample___scrolled
+@container scroller scroll-state(scrolled: block-start) {
+  #top-bar {
+    translate: 0 55px;
+  }
+}
+
+@container scroller scroll-state(scrolled: block-end) {
+  #bottom-bar {
+    translate: 0 -55px;
+  }
+}
+```
+
+簡潔にするため、残りの CSS の例は省略しました。
+
+### 結果
+
+{{EmbedLiveSample("scrolled", "100%", "400px")}}
+
+文書を上下にスクロールしてみてください。すると、さまざまなバーが画面に表示されたり消えたりする様子が、滑らかなアニメーションで変化していくのがわかります。
+
 ## `snapped` クエリーの使用
 
 [スクロールスナップ](/ja/docs/Web/CSS/Guides/Scroll_snap)が実装されている場合にのみ関連しますが、スクロール状態の [`snapped`](/ja/docs/Web/CSS/Reference/At-rules/@container#snapped) クエリー（`scroll-state(snapped: value)` と記述）は、コンテナーが、指定された軸に沿って[スクロールスナップコンテナー](/ja/docs/Glossary/Scroll_snap#スクロールスナップコンテナー)の祖先にスナップされているか、またはスナップされるかどうかを検査します。そうでない場合、クエリーは false を返します。
 
-この場合の `value` は、要素のスナップする方向を示すものです。例えば、
+この場合のキーワード値は、要素がスナップできる能力をテストする方向を示します。例えば：
 
 - `x`: コンテナーが、そのスクロールスナップコンテナーの親コンテナーに対して水平方向にスナップしているかどうかを検査します。
 - `inline`: コンテナーが、インライン方向にスクロールスナップコンテナーの祖先にスナップしているかどうかを検査します。
@@ -352,7 +641,7 @@ HTML は、スクロールスナップコンテナーとなる {{htmlelement("ma
 <main>
   <section>
     <div class="wrapper">
-      <h2>Section 1</h2>
+      <h2>第 1 章</h2>
     </div>
   </section>
 
@@ -366,82 +655,82 @@ HTML は、スクロールスナップコンテナーとなる {{htmlelement("ma
 <main>
   <section>
     <div class="wrapper">
-      <h2>Section 1</h2>
+      <h2>第 1 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 2</h2>
+      <h2>第 2 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 3</h2>
+      <h2>第 3 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 4</h2>
+      <h2>第 4 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 5</h2>
+      <h2>第 5 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 6</h2>
+      <h2>第 6 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 7</h2>
+      <h2>第 7 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 8</h2>
+      <h2>第 8 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 9</h2>
+      <h2>第 9 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 10</h2>
+      <h2>第 10 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 11</h2>
+      <h2>第 11 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 12</h2>
+      <h2>第 12 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 13</h2>
+      <h2>第 13 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 14</h2>
+      <h2>第 14 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 15</h2>
+      <h2>第 15 章</h2>
     </div>
   </section>
   <section>
     <div class="wrapper">
-      <h2>Section 16</h2>
+      <h2>第 16 章</h2>
     </div>
   </section>
 </main>
@@ -458,7 +747,7 @@ html {
   height: 100%;
 }
 
-/* body and main sizing */
+/* body と main のサイズ指定 */
 
 body {
   display: flex;
@@ -488,7 +777,7 @@ main {
 
 ```css live-sample___snapped
 section {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   width: 150px;
   height: 150px;
   margin: 50px auto;
@@ -502,7 +791,7 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background: #eee;
+  background: #eeeeee;
   box-shadow:
     inset 1px 1px 4px rgb(255 255 255 / 0.5),
     inset -1px -1px 4px rgb(0 0 0 / 0.5);
@@ -522,7 +811,7 @@ h2 {
 }
 ```
 
-`<section>` 要素をクエリーできるようにしたいと思います。具体的には、 `<section>` 要素がコンテナーにスナップしているかどうかを検査したいので、 {{cssxref("container-type")}} 値を `scroll-state` に設定して、それらをスクロール状態クエリーコンテナーとして指定します。また、 {{cssxref("container-name")}} も指定していますが、これは厳密には必要ではありませんが、後でコードが複雑になり、様々なクエリー－でターゲットとする複数のスクロール状態クエリーコンテナーがある場合に役立つちます。
+`<section>` 要素をクエリーできるようにしたいと思います。具体的には、`<section>` 要素がコンテナーにスナップしているかどうかを検査したいので、 {{cssxref("container-type")}} 値を `scroll-state` に設定して、それらをスクロール状態クエリーコンテナーとして指定します。また、 {{cssxref("container-name")}} も指定していますが、これは厳密には必要ではありませんが、後でコードが複雑になり、様々なクエリーでターゲットとする複数のスクロール状態クエリーコンテナーがある場合に役立つちます。
 
 ```css live-sample___snapped
 section {
@@ -550,9 +839,9 @@ section {
 
 ## `stuck` クエリーの使用
 
-スクロール状態の [`stuck`](/ja/docs/Web/CSS/Reference/At-rules/@container#scrollable) クエリーは、 `scroll-state(stuck: value)` と記述され、 {{cssxref("position")}} 値が `sticky` であるコンテナーが、そのスクロールコンテナーの祖先の端に固定されているかどうかを検査します。そうでない場合、クエリーは false を返します。
+スクロール状態の [`stuck`](/ja/docs/Web/CSS/Reference/At-rules/@container#scrollable) クエリーは、 `scroll-state(stuck: <keyword>)` と記述され、 {{cssxref("position")}} 値が `sticky` であるコンテナーが、そのスクロールコンテナーの祖先の端に固定されているかどうかを検査します。そうでない場合、クエリーは false を返します。
 
-この場合、`value` は検査するスクロールコンテナーの端を示します。例えば、
+この場合のキーワード値は、テスト対象のスクロールコンテナーの端を示します。例を示します。
 
 - `top`: コンテナーが、そのスクロールコンテナーの祖先の最上端に貼り付いていないかを検査します。
 - `block-end`: コンテナーが、そのスクロールコンテナーの祖先のブロック方向の端に貼り付いていないかを検査します。
@@ -759,7 +1048,7 @@ HTML には、文書をスクロールさせるのに十分なコンテンツを
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
 }
 
@@ -821,8 +1110,25 @@ header p {
 @container sticky-heading scroll-state(stuck: top) {
   h2,
   p {
-    background: #ccc;
-    box-shadow: 0 5px 2px #0007;
+    background: #cccccc;
+    box-shadow: 0 5px 2px #00000077;
+  }
+}
+```
+
+```css hidden live-sample___scrollable live-sample___scrolled live-sample___snapped live-sample___stuck
+@supports not (container-type: scroll-state) {
+  body::before {
+    content: "このブラウザーは、`scroll-state` コンテナークエリーに対応していません。";
+    color: black;
+    background-color: wheat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 1;
   }
 }
 ```

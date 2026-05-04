@@ -15,13 +15,13 @@ Jusqu'ici, nous avons appris les bases du CSS, ses objectifs et comment écrire 
       <td>
         Notions de base en l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base installés</a
         >,
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >savoir manipuler des fichiers</a
         >, connaissance de base de HTML (cf. <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+          href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >.)
       </td>

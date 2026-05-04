@@ -143,7 +143,7 @@ Les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [bordures et décora
 - {{cssxref("&lt;basic-shape&gt;")}}
   - : Décrit les fonctions de forme utilisées dans les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} et {{cssxref("offset-path")}}.
 - {{cssxref("&lt;corner-shape-value&gt;")}}
-  - : Décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/corner-shape#constituent_properties) pour spécifier la forme appliquée aux coins de conteneur affectés.
+  - : Décrit la forme d'un coin de conteneur. Il est utilisé par la propriété abrégée {{cssxref("corner-shape")}} et ses [propriétés constitutives](/fr/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) pour spécifier la forme appliquée aux coins de conteneur affectés.
 
 ## Spécifications
 

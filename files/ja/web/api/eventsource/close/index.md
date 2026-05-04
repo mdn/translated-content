@@ -1,11 +1,12 @@
 ---
-title: EventSource.close()
+title: "EventSource: close() メソッド"
+short-title: close()
 slug: Web/API/EventSource/close
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: a166ba48ceb8bccb37c67a0a8856b0e5b12e0135
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`close()`** は {{domxref("EventSource")}} インターフェイスのメソッドで、コネクションが構築されていればそれを閉じ、 {{domxref("EventSource.readyState")}} 属性を `2` （接続終了）に設定します。
 

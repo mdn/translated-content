@@ -1,11 +1,12 @@
 ---
-title: EventSource()
+title: "EventSource: EventSource() コンストラクター"
+short-title: EventSource()
 slug: Web/API/EventSource/EventSource
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef('WebSockets API')}}
+{{APIRef("Server Sent Events")}}{{AvailableInWorkers}}
 
 **`EventSource()`** コンストラクターは、リモートリソースを表す新しく作成された {{domxref("EventSource")}} を返します。
 

@@ -18,7 +18,7 @@ Exceto pelos cabeçalhos padrões _hop-by-hop_ (salto-por-salto) ({{HTTPHeader("
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>sim</td>
     </tr>
   </tbody>

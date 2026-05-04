@@ -1,8 +1,9 @@
 ---
-title: field-sizing
+title: Propriété CSS `field-sizing`
+short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

@@ -3,7 +3,7 @@ title: 프로그레시브 웹 앱 소개
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
-{{PWASidebar}}{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{PWASidebar}}{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}
 
 이 문서는 프로그레시브 웹 앱(PWA)의 소개입니다. PWA가 무엇이고 일반 웹 앱에 어떤 이점을 가져다주는지 설명합니다.
 
@@ -79,4 +79,4 @@ PWA를 위해 요구되는 핵심 요소는 [service worker](/ko/docs/Web/API/Se
 
 이제, 우리의 예제 앱의 구조에 대해 살펴볼 이 시리즈의 두 번째 파트로 이동합시다.
 
-{{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
+{{NextMenu("Web/Progressive_web_apps/Tutorials/js13kGames/App_structure", "Web/Progressive_web_apps")}}

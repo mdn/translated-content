@@ -7,7 +7,7 @@ slug: Web/API/HTMLDialogElement
 
 **`HTMLDialogElement`** - интерфейс взаимодействия, предоставляющий методы для управления {{HTMLElement("dialog")}} элементами. Он наследует свойства и методы от {{domxref("HTMLElement")}}.
 
-{{InheritanceDiagram(600, 80)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

@@ -160,7 +160,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 ### Propriétés dépréciées
 
 - {{DOMxRef("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : Retourne l'**événement courant**, c'est-à-dire l'événement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun événement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'événements.
+  - : Retourne l'**évènement courant**, c'est-à-dire l'évènement actuellement traité par le contexte du code JavaScript, ou `undefined` si aucun évènement n'est en cours de traitement. Il est recommandé d'utiliser l'objet {{DOMxRef("Event")}} passé directement aux gestionnaires d'évènements.
 - {{DOMxRef("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Retourne un objet avec des fonctions permettant d'ajouter des fournisseurs de recherche externes au navigateur.
 - {{DOMxRef("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
@@ -205,19 +205,19 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.focus()")}}
   - : Donne la sélection à la fenêtre courante.
 - {{DOMxRef("Window.getComputedStyle()")}}
-  - : Obtient le style calculé pour l'élément spécifié. Le style calculé indique les valeurs calculées de toutes les propriétés CSS de l'élément.
+  - : Obtient le style calculé pour l'élément défini. Le style calculé indique les valeurs calculées de toutes les propriétés CSS de l'élément.
 - {{DOMxRef("Window.getDefaultComputedStyle()")}} {{Non-standard_Inline}}
-  - : Obtient le style calculé par défaut pour l'élément spécifié, en ignorant les feuilles de style de l'auteur·ice.
+  - : Obtient le style calculé par défaut pour l'élément défini, en ignorant les feuilles de style de l'auteur·ice.
 - {{DOMxRef("Window.getScreenDetails()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Retourne une promesse {{JSxRef("Promise")}} résolue avec une instance de l'objet {{DOMxRef("ScreenDetails")}} représentant les détails de tous les écrans disponibles sur le périphérique de l'utilisateur·ice.
 - {{DOMxRef("Window.getSelection()")}}
   - : Retourne l'objet de sélection représentant l'élément ou les éléments sélectionnés.
 - {{DOMxRef("Window.matchMedia()")}}
-  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de requête média spécifiée.
+  - : Retourne un objet {{DOMxRef("MediaQueryList")}} représentant la chaîne de requête média définie.
 - {{DOMxRef("Window.moveBy()")}}
   - : Déplace la fenêtre courante d'une certaine distance.
 - {{DOMxRef("Window.moveTo()")}}
-  - : Déplace la fenêtre aux coordonnées spécifiées.
+  - : Déplace la fenêtre aux coordonnées définies.
 - {{DOMxRef("Window.open()")}}
   - : Ouvre une nouvelle fenêtre.
 - {{DOMxRef("Window.postMessage()")}}
@@ -229,7 +229,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Retourne une promesse {{JSxRef("Promise")}} résolue avec un tableau d'objets {{DOMxRef("FontData")}} représentant les polices disponibles localement.
 - {{DOMxRef("Window.queueMicrotask()")}}
-  - : Place une micro-tâche dans la file d'attente pour exécution à un moment sûr avant que le contrôle ne revienne à la boucle d'événements du navigateur.
+  - : Place une micro-tâche dans la file d'attente pour exécution à un moment sûr avant que le contrôle ne revienne à la boucle d'évènements du navigateur.
 - {{DOMxRef("Window.reportError()")}}
   - : Signale une erreur dans un script, simulant une exception non gérée.
 - {{DOMxRef("Window.requestAnimationFrame()")}}
@@ -247,9 +247,9 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.scrollByLines()")}} {{Non-standard_Inline}}
   - : Fait défiler le document du nombre de lignes indiqué.
 - {{DOMxRef("Window.scrollByPages()")}} {{Non-standard_Inline}}
-  - : Fait défiler le document courant du nombre de pages spécifié.
+  - : Fait défiler le document courant du nombre de pages défini.
 - {{DOMxRef("Window.scrollTo()")}}
-  - : Fait défiler le document jusqu'aux coordonnées spécifiées.
+  - : Fait défiler le document jusqu'aux coordonnées définies.
 - {{DOMxRef("Window.setInterval()")}}
   - : Planifie l'exécution d'une fonction à chaque intervalle de temps donné en millisecondes.
 - {{DOMxRef("Window.setTimeout()")}}
@@ -270,11 +270,11 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 ### Méthodes dépréciées
 
 - {{DOMxRef("Window.captureEvents()")}} {{Deprecated_Inline}}
-  - : Enregistre la fenêtre pour capturer tous les événements du type spécifié.
+  - : Enregistre la fenêtre pour capturer tous les évènements du type défini.
 - {{DOMxRef("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Annule l'exécution répétée définie avec `setImmediate()`.
 - {{DOMxRef("Window.releaseEvents()")}} {{Deprecated_Inline}}
-  - : Libère la fenêtre de la capture d'événements d'un type spécifique.
+  - : Libère la fenêtre de la capture d'évènements d'un type spécifique.
 - {{DOMxRef("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Permet à un site web ou une application d'accéder à un système de fichiers isolé pour son propre usage.
 - {{DOMxRef("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
@@ -286,9 +286,9 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.webkitConvertPointFromPageToNode()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Transforme un {{DOMxRef("WebKitPoint")}} du système de coordonnées de la page vers celui du nœud.
 
-## Événements
+## Évènements
 
-Écoutez ces événements à l'aide de [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en assignant un écouteur d'événement à la propriété `oneventname` de cette interface. En plus des événements listés ci-dessous, de nombreux événements peuvent remonter depuis le {{DOMxRef("Document")}} contenu dans l'objet window.
+Écoutez ces évènements à l'aide de [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) ou en assignant un écouteur d'évènement à la propriété `oneventname` de cette interface. En plus des évènements listés ci-dessous, de nombreux évènements peuvent remonter depuis le {{DOMxRef("Document")}} contenu dans l'objet window.
 
 - {{DOMxRef("Window/error_event", "error")}}
   - : Se déclenche lorsqu'une ressource n'a pas pu être chargée ou utilisée. Par exemple, si un script rencontre une erreur d'exécution ou si une image est introuvable ou invalide.
@@ -299,14 +299,14 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window/storage_event", "storage")}}
   - : Se déclenche lorsqu'une zone de stockage (`localStorage` ou `sessionStorage`) a été modifiée dans le contexte d'un autre document.
 
-### Événements de connexion
+### Évènements de connexion
 
 - {{DOMxRef("Window/offline_event", "offline")}}
   - : Se déclenche lorsque le navigateur perd l'accès au réseau et que la valeur de `navigator.onLine` passe à `false`.
 - {{DOMxRef("Window/online_event", "online")}}
   - : Se déclenche lorsque le navigateur retrouve l'accès au réseau et que la valeur de `navigator.onLine` passe à `true`.
 
-### Événements d'orientation de l'appareil
+### Évènements d'orientation de l'appareil
 
 - {{DOMxRef("Window.devicemotion_event", "devicemotion")}} {{SecureContext_Inline}}
   - : Se déclenche à intervalles réguliers, indiquant la force d'accélération physique reçue par le périphérique et, si disponible, le taux de rotation.
@@ -315,21 +315,21 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} {{SecureContext_Inline}}
   - : Se déclenche lorsque de nouvelles données du capteur d'orientation du magnétomètre sont disponibles concernant l'orientation absolue du périphérique par rapport au repère terrestre.
 
-### Événements de ciblage
+### Évènements de ciblage
 
 - {{DOMxRef("Window/blur_event", "blur")}}
   - : Se déclenche lorsqu'un élément perd la sélection.
 - {{DOMxRef("Window/focus_event", "focus")}}
   - : Se déclenche lorsqu'un élément reçoit la sélection.
 
-### Événements de manette de jeu
+### Évènements de manette de jeu
 
 - {{DOMxRef("Window/gamepadconnected_event", "gamepadconnected")}}
   - : Se déclenche lorsque le navigateur détecte qu'une manette de jeu a été connectée ou lors de la première utilisation d'un bouton ou axe de la manette.
 - {{DOMxRef("Window/gamepaddisconnected_event", "gamepaddisconnected")}}
   - : Se déclenche lorsque le navigateur détecte qu'une manette de jeu a été déconnectée.
 
-### Événements d'historique
+### Évènements d'historique
 
 - {{DOMxRef("Window/hashchange_event", "hashchange")}}
   - : Se déclenche lorsque l'identifiant de fragment de l'URL a changé (la partie de l'URL commençant par et suivant le symbole `#`).
@@ -344,7 +344,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window/popstate_event", "popstate")}}
   - : Se déclenche lorsque l'entrée d'historique active change.
 
-### Événements de chargement et de déchargement
+### Évènements de chargement et de déchargement
 
 - {{DOMxRef("Window/beforeunload_event", "beforeunload")}}
   - : Se déclenche lorsque la fenêtre, le document et ses ressources vont être déchargés.
@@ -353,42 +353,42 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window/unload_event", "unload")}} {{Deprecated_Inline}}
   - : Se déclenche lorsque le document ou une ressource enfant est en cours de déchargement.
 
-### Événements du manifeste
+### Évènements du manifeste
 
 - {{DOMxRef("Window/appinstalled_event", "appinstalled")}}
   - : Se déclenche lorsque le navigateur a installé une page en tant qu'application.
 - {{DOMxRef("Window/beforeinstallprompt_event", "beforeinstallprompt")}}
   - : Se déclenche lorsqu'un·e utilisateur·ice va être invité·e à installer une application web.
 
-### Événements de messagerie
+### Évènements de messagerie
 
 - {{DOMxRef("Window/message_event", "message")}}
-  - : Se déclenche lorsque la fenêtre reçoit un message, par exemple via {{DOMxRef("Window/postMessage", "Window.postMessage()")}} depuis un autre contexte de navigation.
+  - : Se déclenche lorsque la fenêtre reçoit un message, par exemple avec {{DOMxRef("Window/postMessage", "Window.postMessage()")}} depuis un autre contexte de navigation.
 - {{DOMxRef("Window/messageerror_event", "messageerror")}}
   - : Se déclenche lorsqu'un objet `Window` reçoit un message qui ne peut pas être désérialisé.
 
-### Événements d'impression
+### Évènements d'impression
 
 - {{DOMxRef("Window/afterprint_event", "afterprint")}}
   - : Se déclenche après le début de l'impression du document associé ou la fermeture de l'aperçu avant impression.
 - {{DOMxRef("Window/beforeprint_event", "beforeprint")}}
   - : Se déclenche lorsque le document associé va être imprimé ou affiché en aperçu avant impression.
 
-### Événements de rejet de promesse
+### Évènements de rejet de promesse
 
 - {{DOMxRef("Window/rejectionhandled_event", "rejectionhandled")}}
   - : Se déclenche chaque fois qu'une promesse {{JSxRef("Promise")}} JavaScript est rejetée, qu'il y ait ou non un gestionnaire pour intercepter ce rejet.
 - {{DOMxRef("Window/unhandledrejection_event", "unhandledrejection")}}
   - : Se déclenche lorsqu'une promesse {{JSxRef("Promise")}} JavaScript est rejetée sans gestionnaire pour intercepter ce rejet.
 
-### Événements de défilement
+### Évènements de défilement
 
 - {{DOMxRef("Window/scrollsnapchange_event", "scrollsnapchange")}} {{Experimental_Inline}}
   - : Se déclenche sur le conteneur de défilement à la fin d'une opération de défilement lorsqu'une nouvelle cible d'ancrage a été sélectionnée.
 - {{DOMxRef("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{Experimental_Inline}}
   - : Se déclenche sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'ancrage est en attente, c'est-à-dire qu'elle sera sélectionnée à la fin du geste de défilement en cours.
 
-### Événements dépréciés
+### Évènements dépréciés
 
 - {{DOMxRef("Window/orientationchange_event", "orientationchange")}} {{Deprecated_Inline}}
   - : Se déclenche lorsque l'orientation du périphérique a changé.
@@ -403,9 +403,9 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window/vrdisplaypresentchange_event", "vrdisplaypresentchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Se déclenche lorsque l'état de présentation d'un périphérique VR change (passe de présenté à non présenté, ou inversement).
 
-### Événements propagés
+### Évènements propagés
 
-Tous les événements qui remontent ne peuvent pas atteindre l'objet `Window`. Seuls les événements suivants le peuvent et peuvent être écoutés sur l'objet `Window`&nbsp;:
+Tous les évènements qui remontent ne peuvent pas atteindre l'objet `Window`. Seuls les évènements suivants le peuvent et peuvent être écoutés sur l'objet `Window`&nbsp;:
 
 - `abort`
 - {{DOMxRef("Element/auxclick_event", "auxclick")}}
@@ -477,15 +477,15 @@ Tous les événements qui remontent ne peuvent pas atteindre l'objet `Window`. S
 
 Voir la [Référence DOM](/fr/docs/Web/API/Document_Object_Model).
 
-## Écouter des événements sur Window
+## Écouter des évènements sur Window
 
-Les éléments HTML offrent trois façons d'écouter des événements&nbsp;:
+Les éléments HTML offrent trois façons d'écouter des évènements&nbsp;:
 
-- Ajouter un écouteur d'événement à l'élément avec la méthode {{DOMxRef("EventTarget.addEventListener")}}.
-- Assigner un gestionnaire d'événement à la propriété `oneventname` de l'élément en JavaScript.
+- Ajouter un écouteur d'évènement à l'élément avec la méthode {{DOMxRef("EventTarget.addEventListener")}}.
+- Assigner un gestionnaire d'évènement à la propriété `oneventname` de l'élément en JavaScript.
 - Ajouter un attribut préfixé par `on` à l'élément dans le HTML.
 
-Pour écouter des événements sur les objets `Window`, en général, seules les deux premières méthodes sont possibles, car `Window` n'a pas d'élément HTML correspondant. Cependant, un groupe spécifique d'événements peut voir leurs écouteurs ajoutés à l'élément {{HTMLElement("body")}} (ou l'élément déprécié {{HTMLElement("frameset")}}) du document de la fenêtre, en utilisant la deuxième ou la troisième méthode. Ces événements sont&nbsp;:
+Pour écouter des évènements sur les objets `Window`, en général, seules les deux premières méthodes sont possibles, car `Window` n'a pas d'élément HTML correspondant. Cependant, un groupe spécifique d'évènements peut voir leurs écouteurs ajoutés à l'élément {{HTMLElement("body")}} (ou l'élément déprécié {{HTMLElement("frameset")}}) du document de la fenêtre, en utilisant la deuxième ou la troisième méthode. Ces évènements sont&nbsp;:
 
 - `afterprint`
 - `beforeprint`
