@@ -2,33 +2,48 @@
 title: ARIA ページテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: da12dd76d4c9863ce4f9c436f5e2373fe541e1c7
 ---
 
-{{MDNSidebar}}
-
 ## ページのフロントマター
+
+ページのメタデータは、次の例のようにフロントマターで記述します。
+
+```md
+---
+title: aria-labelledby
+slug: Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby
+l10n:
+>   sourceCommit: 翻訳元コミットID
+---
+```
 
 ### title と slug
 
 ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug` を `ARIA/NameOfTheRole_role` としてください。例えば、 [button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)は `title` が `ARIA: button ロール` で、 `slug` が `Web/Accessibility/ARIA/Roles/button_role` となり、 [aria-labelledby](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性の `title` は `aria-labelledby` となります。
 
+### Sidebar
+
+`accessibilitysidebar` は、`/Web/Accessibility` 配下のすべてのページで使用できます。（訳注: 翻訳記事では指定しません。）
+
+```yaml
+sidebar: accessibilitysidebar
+```
+
+詳細については、[ページの構成：サイドバー](/ja/docs/MDN/Writing_guidelines/Page_structures/Sidebars)をご覧ください。
+
 ### 先頭のマクロ
 
 コンテンツ部の上部に多くのマクロ呼び出しが現れます。下記のアドバイスに従って更新または削除してください。
 
-- \\{{ariaref}} — ページに記載されているタ グに応じて、適切な ARIA サイドバーを生成します。
-
 ### 状態
 
-> [!CALLOUT]
-> **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
-
+**訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 （適切な）機能状態キーを含めるマクロです。 [**実験的**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)、[**非推奨**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨)、**標準外**があります。 — [機能状態を追加または更新する方法](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#機能状態を追加または更新する方法)の節を参照してください。
 
 ### 仕様書
 
-`spec_urls` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント ID を指すように URL を更新してください。
+`spec-urls` フロントマターのメタデータキーの値で、以下の仕様書で正しい節のフラグメント ID を指すように URL を更新してください。（訳注: 翻訳記事では指定しません。）
 
 - [ARIA](https://w3c.github.io/aria/)
 - [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
@@ -107,7 +122,7 @@ ARIA ロールのページは `title` を `ARIA: Name Of The Role` と、 `slug`
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
 
 ## アクセシビリティの考慮
