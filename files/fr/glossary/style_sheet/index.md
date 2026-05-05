@@ -1,6 +1,7 @@
 ---
 title: Feuille de style
-slug: Glossary/Stylesheet
+slug: Glossary/Style_sheet
+original_slug: Glossary/Stylesheet
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
