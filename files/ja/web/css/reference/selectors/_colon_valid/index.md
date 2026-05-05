@@ -81,9 +81,7 @@ input:valid {
       <span></span>
     </div>
     <div>
-      <label for="email">
-        メールアドレス（返事が欲しい場合）:
-      </label>
+      <label for="email"> メールアドレス（返事が欲しい場合）: </label>
       <input id="email" name="email" type="email" />
       <span></span>
     </div>
