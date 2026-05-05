@@ -1,6 +1,8 @@
 ---
 title: Символьная ссылка
 slug: Glossary/Character_reference
+l10n:
+  sourceCommit: e424d6c716e66a52e139aef8ce33466a999e4759
 ---
 
 **Символьная ссылка** (character reference) в {{glossary("HTML")}} — это {{glossary("escape character", "escape-последовательность")}} из {{glossary("character", "символов")}}, используемая для представления другого символа на отображаемой веб-странице.
