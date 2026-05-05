@@ -33,7 +33,7 @@ HTTP/3 サーバーへの接続を開くには、その URL を {{domxref("WebTr
 
 また、{{domxref(「WebTransport.closed」)}} プロミスの解決を待つことで、接続の終了に対応できる点にも注意してください。WebTransport 操作によって返されるエラーは {{domxref("WebTransportError")}} 型であり、標準の {{domxref("DOMException")}} セットに加えて追加のデータを含んでいます。
 
-```js
+```js-nolint
 const url = "https://example.com:4999/wt";
 
 async function initTransport(url) {
