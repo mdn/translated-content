@@ -104,7 +104,10 @@ code {
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
 <canvas id="canvas"></canvas>
 <div class="output">
-  <img id="photo" src="" alt="スクリーンキャプチャ結果はこのボックスに表示されます。" />
+  <img
+    id="photo"
+    src=""
+    alt="スクリーンキャプチャ結果はこのボックスに表示されます。" />
 </div>
 ```
 
