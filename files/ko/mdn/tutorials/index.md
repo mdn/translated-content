@@ -128,7 +128,7 @@ original_slug: Web/Tutorials
           </dt>
           <dd>앞뒤로 호환되며, 확장 가능한 mark-up을 배울 수 있습니다.</dd>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/Canvas_tutorial"
+            <a href="/ko/docs/Web/API/Canvas_API/Tutorial"
               >Canvas 학습서</a
             >
           </dt>
@@ -167,7 +167,7 @@ original_slug: Web/Tutorials
           </dd>
           <dt>
             <a
-              href="https://developer.mozilla.org/ko/docs/JavaScript/Getting_Started"
+              href="/ko/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity"
               >JavaScript 시작하기</a
             >
           </dt>
@@ -245,7 +245,7 @@ original_slug: Web/Tutorials
           <dd>오늘날, Douglas Crockford가 탐구해온 언어와 방법.</dd>
           <dt>
             <a
-              href="https://developer.mozilla.org/ko/docs/Introduction_to_Object-Oriented_JavaScript"
+              href="/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects"
               >객체 지향 JavaScript 소개</a
             >
           </dt>
@@ -410,7 +410,7 @@ original_slug: Web/Tutorials
         <h3 id="중급_2">중급</h3>
         <dl>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/CSS/CSS_Reference"
+            <a href="/ko/docs/Web/CSS/Reference"
               >CSS 참조</a
             >
           </dt>
@@ -488,7 +488,7 @@ original_slug: Web/Tutorials
             회전, 기울이기, 크기 조절 등의 변환을 CSS를 사용하여 적용합니다.
           </dd>
           <dt>
-            <a href="https://developer.mozilla.org/ko/docs/CSS/CSS_transitions"
+            <a href="/ko/docs/Web/CSS/Guides/Transitions/Using"
               >CSS 전환</a
             >
           </dt>

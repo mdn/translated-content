@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:xr-overlay`
 short-title: :xr-overlay
 slug: Web/CSS/Reference/Selectors/:xr-overlay
 l10n:
-  sourceCommit: 8bc4a2b996edcb9bae1769200bbc7b29ed5d7097
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 {{SeeCompatTable}}
@@ -37,7 +37,7 @@ Dans cet exemple, nous définissons la superposition comme étant noire semi-tra
 
 ```css
 :xr-overlay {
-  background-color: rgba(0 0 0 / 0.5);
+  background-color: rgb(0 0 0 / 0.5);
   color: white;
 }
 ```

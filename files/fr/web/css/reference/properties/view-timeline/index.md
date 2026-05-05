@@ -3,7 +3,7 @@ title: Propriété CSS `view-timeline`
 short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`view-timeline`** définit le nom, l'axe et les valeurs d'encart d'une [chronologie de progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée).
@@ -52,12 +52,12 @@ view-timeline: unset;
 
 ### Description
 
-La propriété raccourcie `view-timeline` définit une _chronologie de progression de la vue nommée_, qui progresse en fonction des changements de visibilité d'un élément (le _sujet_) à l'intérieur d'un élément défilable (<i lang="en">scroller</i>). La propriété `view-timeline` est définie sur le sujet. Si l'élément scroller ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne sera créée.
+La propriété raccourcie `view-timeline` définit une _chronologie de progression de la vue nommée_, qui progresse en fonction des changements de visibilité d'un élément (le _sujet_) à l'intérieur d'un élément défilable (<i lang="en">scroller</i>). La propriété `view-timeline` est définie sur le sujet. Si l'élément scroller ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement n'est créée.
 
 La visibilité du sujet à l'intérieur du scroller est suivie — par défaut, la chronologie est à `0%` lorsque le sujet est d'abord visible à un bord du scroller et à `100%` lorsqu'il atteint le bord opposé.
 
 La propriété `view-timeline` peut contenir trois valeurs constitutives&nbsp;: un nom pour la chronologie de progression de la vue nommée, une valeur d'axe de défilement et jusqu'à deux valeurs d'encart de la chronologie.
-Si une seule valeur est déclarée, cette valeur est le `view-timeline-name`. Le nom est ensuite référencé dans une déclaration {{CSSxRef("animation-timeline")}} pour indiquer l'élément qui sera animé au fur et à mesure de la progression de la chronologie. Il peut s'agir de l'élément sujet, mais ce n'est pas obligatoire — vous pouvez animer un élément différent pendant que le sujet se déplace dans la zone de défilement.
+Si une seule valeur est déclarée, cette valeur est le `view-timeline-name`. Le nom est ensuite référencé dans une déclaration {{CSSxRef("animation-timeline")}} pour indiquer l'élément qui est animé au fur et à mesure de la progression de la chronologie. Il peut s'agir de l'élément sujet, mais ce n'est pas obligatoire — vous pouvez animer un élément différent pendant que le sujet se déplace dans la zone de défilement.
 
 La propriété raccourcie `view-timeline` peut être appliquée à un élément conteneur pour définir une combinaison des valeurs `<view-timeline-name>`, `<view-timeline-inset>` et `<view-timeline-axis>`. Au moins une valeur doit être définie. Si toutes les valeurs sont définies, l'ordre doit être `<view-timeline-name>` suivi de `<view-timeline-axis>` et/ou `<view-timeline-inset>`.
 
@@ -150,7 +150,7 @@ p {
 }
 ```
 
-L'élément `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline` est défini pour créer une chronologie de progression de la vue nommée. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément sera animé au fur et à mesure que la chronologie de progression de la vue avance.
+L'élément `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline` est défini pour créer une chronologie de progression de la vue nommée. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément est animé au fur et à mesure que la chronologie de progression de la vue avance.
 
 Enfin, une animation est définie sur l'élément qui anime son opacité et son échelle, ce qui lui permet de s'estomper et de grandir au fur et à mesure qu'il se déplace vers le haut du défileur.
 
@@ -185,7 +185,7 @@ Enfin, une animation est définie sur l'élément qui anime son opacité et son 
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

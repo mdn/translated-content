@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-initial-target`
 short-title: scroll-initial-target
 slug: Web/CSS/Reference/Properties/scroll-initial-target
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
@@ -178,13 +178,12 @@ p {
 }
 
 @supports not (scroll-initial-target: nearest) {
-  body::before {
+  :root::before {
     content: "Votre navigateur ne prend pas en charge la propriété scroll-initial-target.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```
