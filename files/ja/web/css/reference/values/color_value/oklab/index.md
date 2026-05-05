@@ -1,8 +1,9 @@
 ---
-title: oklab()
+title: CSS `oklab()` 関数
+short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`oklab()`** 関数記法は、指定された色を、人間の目による色の知覚方法を模倣しようとする Oklab {{glossary("color space", "色空間")}}で表現します。

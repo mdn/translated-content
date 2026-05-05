@@ -55,14 +55,14 @@ delete object[property]
 ## 解説
 
 `delete` 演算子は、[優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence)が他の単項演算子（例：[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof)）と同等です。
-したがって、より優先度の高い演算子で構成される任意の式を受け入れます。ただし、以下の形式は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)において早期の構文エラーを引き起こします。
+したがって、より優先度の高い演算子で構成される任意の式を受け入れます。ただし、以下の形式は[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)において早期の構文エラーが発生します。
 
 ```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は自動的に厳格モードで動作し、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)はクラス本体内でのみ合法的に参照できるため、プライベート要素が削除されることは決してありません。 `delete 識別子` は、 `識別子` がグローバルオブジェクトの構成不可プロパティを参照している場合に[機能する可能性があります](#グローバルプロパティの削除)が、この形式は避けるべきであり、代わりに [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) を接頭辞として付けるべきです。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は自動的に厳格モードで動作し、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)はクラス本体内でのみ合法的に参照できるため、プライベート要素が削除されることは決してありません。 `delete 識別子` は、`識別子` がグローバルオブジェクトの構成不可プロパティを参照している場合に[機能する可能性があります](#グローバルプロパティの削除)が、この形式は避けるべきであり、代わりに [`globalThis`](/ja/docs/Web/JavaScript/Reference/Global_Objects/globalThis) を接頭辞として付けるべきです。
 
 それ以外の式も受け入れられますが、それらは意味のある動作にはつながりません。
 
@@ -71,7 +71,7 @@ delete console.log(1);
 // 1 を出力し、 true を返すが、何も削除されない
 ```
 
-`delete`演算子は、指定されたプロパティをオブジェクトから取り除きます。削除が成功した場合、`true`を返し、失敗した場合は`false`を返します。一般的に信じられていることとは異なり (おそらく [C++ における delete](https://learn.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)ページを参照してください。
+`delete` 演算子は、指定されたプロパティをオブジェクトから取り除きます。削除が成功した場合、`true` を返し、失敗した場合は `false` を返します。一般的に信じられていることとは異なり (おそらく [C++ における delete](https://learn.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)ページを参照してください。
 
 以下の次のシナリオを考慮することが重要です。
 

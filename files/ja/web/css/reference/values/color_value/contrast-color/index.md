@@ -1,8 +1,9 @@
 ---
-title: contrast-color()
+title: CSS `contrast-color()` 関数
+short-title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 **`contrast-color()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、{{cssxref("color_value","color")}} 値を取ってコントラストの高い色を返します。この関数はふつう、[WCAG AA の最小コントラスト](https://w3c.github.io/wcag/guidelines/22/#contrast-minimum)（英語）を保証します。ブラウザーは異なるより良いアルゴリズムを可能性もあります。
@@ -36,7 +37,7 @@ contrast-color(var(--backgroundColor))
 
 ### ボタン用にコントラストを付けたテキスト
 
-次の例では、背景色を変更すると、ブラウザーが自動的に送信ボタン {{htmlelement("button")}} のテキストにコントラスト色の背景を適用します。
+次の例では、ブラウザーが自動的に選択した色を［ボタン］{{htmlelement("button")}}の背景に適用し、そのテキストには反対色（黒または白）を適用します。
 
 ```html hidden
 <label>
@@ -44,7 +45,7 @@ contrast-color(var(--backgroundColor))
   <input type="color" id="colorPicker" value="#660066" />
 </label>
 <br />
-<button>送信</button>
+<button>ボタン</button>
 ```
 
 ```css
@@ -78,12 +79,8 @@ button {
     content: "このブラウザーは contrast-color() 関数に対応していません。";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```
@@ -96,7 +93,7 @@ function updateColor(color) {
   root.style.setProperty("--button-color", colorPicker.value);
 }
 
-colorPicker.addEventListener("change", updateColor);
+colorPicker.addEventListener("input", updateColor);
 updateColor();
 ```
 
@@ -106,12 +103,12 @@ updateColor();
 
 次の例では、[`prefers-color-scheme`](/ja/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) [メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)を使用して、オペレーティングシステムやブラウザーの色設定に基づいて背景色を設定しています。`contrast-color()` 関数を使用して、テキストの色を自動的に設定します。
 
-ブラウザーやOSのダークモード設定を変更して、効果を確認してみてください。
+ブラウザーや OS のダークモード設定を変更して、効果を確認してみてください。
 
 ```html hidden
 <pre>
-    Q: How does CSS transform light into energy?
-  Ans: Using <a href="/ja/docs/Web/CSS/Reference/Properties/font-synthesis">font-synthesis</a>.
+    Q: CSS はどうやって光をエネルギーに変換するの？
+    A: <a href="/ja/docs/Web/CSS/Reference/Properties/font-synthesis">font-synthesis</a> を使用します。
 </pre>
 ```
 
@@ -148,16 +145,8 @@ pre {
     content: "このブラウザーは contrast-color() 関数に対応していません。";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body {
-    background-color: white;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

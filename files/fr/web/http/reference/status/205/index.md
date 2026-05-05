@@ -2,7 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: b4e920ce0a34d9e609080ccb937a1a30c3cd558a
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`205 Reset Content`** indique que la requête a été traitée avec succès et que le client doit réinitialiser l'affichage du document.
@@ -12,9 +12,10 @@ L'instruction «&nbsp;réinitialiser le contenu&nbsp;» peut signifier vider le 
 
 > [!NOTE]
 > Dans les applications web qui utilisent le statut `205`, il est supposé que le client gère la réinitialisation du contenu après une réponse `205`.
-> Cela se fait généralement via JavaScript, car la réinitialisation de contenu comme les formulaires après une réponse `205` n'est pas gérée nativement par les navigateurs.
+> Cela se fait généralement par le biais de JavaScript, car la réinitialisation de contenu comme les formulaires après une réponse `205` n'est pas gérée nativement par les navigateurs.
 
-Notez que la réponse ne doit inclure aucun contenu ni l'en-tête {{HTTPHeader("Content-Length")}} (les navigateurs peuvent rejeter les réponses qui incluent du contenu).
+Notez que la réponse ne doit inclure aucun contenu, et les navigateurs peuvent rejeter les réponses qui en contiennent.
+La réponse ne doit pas non plus inclure l'en-tête {{HTTPHeader("Content-Length")}}, mais si c'est le cas, la valeur doit être `0`.
 La réponse vide peut aussi être indiquée à l'aide de l'en-tête {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} avec un bloc vide.
 
 ## Statut
@@ -33,9 +34,9 @@ Dans cet exemple, le client envoie une requête `POST` pour soumettre un formula
 POST /submit HTTP/1.1
 Host: exemple.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 17
 
-comment=Bonjour !
+comment=Bonjour%20%21
 ```
 
 Après le traitement réussi de la soumission du formulaire, le serveur répond avec la réponse `205` suivante, indiquant que le client doit réinitialiser le formulaire.
@@ -43,7 +44,6 @@ Après le traitement réussi de la soumission du formulaire, le serveur répond 
 ```http
 HTTP/1.1 205 Reset Content
 Content-Type: text/html; charset=utf-8
-Content-Length: 0
 Date: Wed, 26 Jun 2024 12:00:00 GMT
 ```
 
@@ -53,6 +53,6 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 
 ## Voir aussi
 
-- Le code de satut HTTP {{HTTPStatus(204, "204 No Content")}}
+- Le code de statut {{HTTPStatus(204, "204 No Content")}}
 - [Les méthodes de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods)
 - [Les codes de statut de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)

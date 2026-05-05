@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: c212cfca9809021001637344831487029f1b8887
 ---
 
 Le code de statut de [réponse de succès](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) HTTP **`204 No Content`** indique que la requête a réussi, mais que le client n'a pas besoin de quitter la page actuelle.
@@ -42,6 +42,33 @@ Après la suppression réussie de l'image, le serveur répond avec une réponse 
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
+
+### Réception d'une réponse après la mise à jour avec PUT
+
+Dans cet exemple, le client envoie une requête `PUT` pour mettre à jour les informations du profil d'un·e utilisateur·ice.
+La requête inclut un en-tête {{HTTPHeader("Authorization")}} avec un jeton pour authentifier la requête&nbsp;:
+
+```http
+PUT /users/123 HTTP/1.1
+Host: exemple.com
+Content-Type: application/json
+Authorization: Bearer 1234abcd
+
+{
+  "name": "Sandra Smith",
+  "email": "sandra@exemple.com"
+}
+```
+
+Après la mise à jour réussie du profil utilisateur, le serveur répond avec une réponse `204`.
+L'en-tête {{HTTPHeader("ETag")}} contient l'étiquette d'entité pour la ressource mise à jour&nbsp;:
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 Server: Apache/2.4.1 (Unix)
 ```
 
