@@ -75,7 +75,7 @@ p.special {
 
 #### HTML
 
-```html
+```html-nolint
 <p style="color: revert-rule">このテキストはスタイルシートの色を使用しています。</p>
 ```
 
@@ -115,7 +115,7 @@ p {
 
 #### HTML
 
-```html
+```html-nolint
 <p class="a b">このテキストは、一連の revert-rule 値によってスタイル設定されています。</p>
 ```
 

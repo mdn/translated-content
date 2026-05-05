@@ -1,5 +1,5 @@
 ---
-title: CSS `::cue` 擬似クラス
+title: CSS `::cue` 擬似要素
 short-title: ::cue
 slug: Web/CSS/Reference/Selectors/::cue
 l10n:

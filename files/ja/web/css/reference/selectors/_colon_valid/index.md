@@ -1,17 +1,12 @@
 ---
-title: :valid
+title: CSS `:valid` 擬似クラス
+short-title: :valid
 slug: Web/CSS/Reference/Selectors/:valid
-original_slug: Web/CSS/:valid
+l10n:
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、内容物の[検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に成功した {{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素を表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
-
-```css
-/* 有効な <input> をすべて選択 */
-input:valid {
-  background-color: powderblue;
-}
-```
+**`:valid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、{{htmlelement("input")}} 要素 やその他の {{HTMLElement("form")}} 要素のうち、コンテンツの[検証](/ja/docs/Web/HTML/Guides/Constraint_validation) に成功したものを表します。これにより、有効な入力欄に、データの形式が適切であることをユーザーが確認しやすくなる外観を簡単に適用できるようになります。
 
 {{InteractiveExample("CSS デモ: :valid", "tabbed-shorter")}}
 
@@ -32,18 +27,17 @@ input:valid {
 
 ```html interactive-example
 <form>
-  <label for="email">Email Address:</label>
+  <label for="email">メールアドレス:</label>
   <input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
+  <label for="secret">秘密のコード: (英小文字)</label>
   <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
+  <label for="age">年齢: (18 歳以上)</label>
   <input id="age" name="age" type="number" value="5" min="18" />
 
   <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
+    ><input name="tos" type="checkbox" required checked /> - 規約に同意しますか？</label
   >
 </form>
 ```
@@ -52,25 +46,115 @@ input:valid {
 
 ## 構文
 
+```css
+:valid {
+  /* ... */
+}
 ```
-:user-valid
-```
+
+## アクセシビリティ
+
+入力が有効であることを示す際、一般的に緑色が使用されます。特定の種類の色覚異常のある人は、色に頼らずに意味を伝える追加の指標が併記されていない限り、入力の状態を判断することができません。一般的には、説明文やアイコンなどが使用されます。
+
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 例
 
 ### 有効／無効なフォームフィールドを示す
 
-この例では、このような構造を使用しています。この構造には、コンテンツを生成するための追加の `<span>` が含まれており、これらを使用して、データが有効であるか無効であるかの表示を提供します。
+この例では、有効なデータや無効なデータを示すコンテンツを生成するために、追加の `<span>` 要素を含めています。
 
 ```html
-<div>
-  <label for="fname">First name *: </label>
-  <input id="fname" name="fname" type="text" required />
-  <span></span>
-</div>
+<form>
+  <fieldset>
+    <legend>フィードバックフォーム</legend>
+    <p>「必須」とあるものは必須項目です。</p>
+    <div>
+      <label for="fname">苗字: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">名前: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="email">
+        メールアドレス（返事が欲しい場合）:
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>送信</button></div>
+  </fieldset>
+</form>
 ```
 
 これらの表示を提供するために、以下の CSS を使用します。
+
+```css hidden
+body {
+  font-family: sans-serif;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+fieldset {
+  padding: 10px 30px 0;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input {
+  box-shadow: inset 1px 1px 3px #cccccc;
+  border-radius: 5px;
+}
+
+input:hover,
+input:focus {
+  background-color: #eeeeee;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "必須";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
 
 ```css
 input + span {
@@ -105,16 +189,9 @@ input:valid + span::before {
 
 以下で試してみることができます。
 
-{{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
+{{EmbedLiveSample("indicating_valid_and_invalid_form_fields", "", 430)}}
 
-必須のテキスト入力は、空の状態では無効ですが、何かが記入されている状態では有効であることに注意してください。一方、 email の入力は、必須ではないため、空の場合は有効ですが、適切な email アドレスでないものが含まれている場合は無効となります。
-
-## アクセシビリティの考慮
-
-緑色は入力が有効であることを示すためによく使われます。色盲の人によっては、それ以外の色によらない識別方法を伴わないと、入力状態が判別できないことがあります。通常、文字列やアイコンを使用して説明します。
-
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
-- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+必須のテキスト入力は、空の状態では無効ですが、何かが記入されている状態では有効であることに注意してください。一方、メールアドレスの入力は必須ではないため、空の場合は有効ですが、適切なメールアドレスでないものが含まれている場合は無効となります。
 
 ## 仕様書
 
