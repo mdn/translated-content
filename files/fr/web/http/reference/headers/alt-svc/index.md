@@ -3,10 +3,10 @@ title: En-tête Alt-Svc
 short-title: Alt-Svc
 slug: Web/HTTP/Reference/Headers/Alt-Svc
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Alt-Svc`** permet à un serveur d'indiquer qu'un autre emplacement réseau (le «&nbsp;service alternatif&nbsp;») peut être considéré comme faisant autorité pour cette origine lors de futures requêtes.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Alt-Svc`** permet à un serveur d'indiquer qu'un autre emplacement réseau (le «&nbsp;service alternatif&nbsp;») peut être considéré comme faisant autorité pour cette origine lors de futures requêtes.
 
 Cela permet d'annoncer de nouvelles versions de protocole sans affecter les requêtes en cours et peut aussi aider les serveurs à gérer le trafic. L'utilisation d'un service alternatif n'est pas visible pour l'utilisateur·ice final·e&nbsp;; cela ne modifie pas l'URL ni l'origine de la requête et n'introduit pas de trajets supplémentaires.
 
@@ -66,4 +66,4 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## Voir aussi
 
-- [Services alternatifs <sup>(angl.)</sup>](https://www.mnot.net/blog/2016/03/09/alt-svc) par le président du HTTP Working Group, Mark Nottingham (2016)
+- [Services alternatifs <sup>(angl.)</sup>](https://mnot.net/blog/2016/alt-svc) par le président du HTTP Working Group, Mark Nottingham (2016)

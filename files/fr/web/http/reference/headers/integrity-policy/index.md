@@ -3,18 +3,18 @@ title: En-tête Integrity-Policy
 short-title: Integrity-Policy
 slug: Web/HTTP/Reference/Headers/Integrity-Policy
 l10n:
-  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Integrity-Policy`** permet aux administrateur·ice·s de site web de s'assurer que toutes les ressources chargées par l'agent utilisateur (d'un certain type) bénéficient des garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Integrity-Policy`** permet aux administrateur·ice·s de site web de s'assurer que toutes les ressources chargées par l'agent utilisateur (d'un certain type) bénéficient des garanties de [l'intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity).
 
 Lorsqu'il est défini, l'agent utilisateur bloquera les requêtes sur les [destinations de requête](#blocked-destinations) définies qui omettent les métadonnées d'intégrité, et bloquera également les requêtes en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors) avant même qu'elles ne soient effectuées.
 
-Des rapports de violation peuvent également être envoyés si l'en-tête inclut un nom de point de terminaison de rapport qui correspond à un point de terminaison déclaré à l'aide de l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
-Les rapports sont générés à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API) et peuvent également être observés dans la page pour laquelle la politique d'intégrité est appliquée, à l'aide d'un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver).
-Le format du corps du rapport est donné par le dictionnaire {{DOMxRef("IntegrityViolationReportBody")}} (une forme sérialisée en JSON de ce corps est envoyée en POST aux points de terminaison du serveur de rapport).
-
 Ceci aide à se prémunir contre la manipulation de contenu des sous-ressources récupérées.
+
+Les violations de la politique peuvent être signalées à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API).
+Les rapports peuvent être observés dans la page pour laquelle la politique est appliquée, à l'aide d'un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver), et envoyés aux points de terminaison du serveur définis dans un en-tête de réponse {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés à l'aide du champ [`endpoints`](#endpoints).
+Pour plus d'informations, voir {{DOMxRef("IntegrityViolationReport")}}.
 
 <table class="properties">
   <tbody>
@@ -58,7 +58,7 @@ Les valeurs de l'en-tête sont définies comme des dictionnaires de champs struc
 
 ### Bloquer et signaler lorsque les scripts n'ont pas de métadonnées d'intégrité
 
-Cet exemple montre un document qui bloque et signale lorsque l'élément HTML {{HTMLElement("script")}} (ou `HTMLScriptElement`) ne définit pas d'attribut `integrity`, ou lorsqu'une ressource de script est demandée en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors).
+Cet exemple montre un document qui bloque et signale à un point de terminaison de serveur lorsque l'élément HTML {{HTMLElement("script")}} (ou `HTMLScriptElement`) ne définit pas d'attribut `integrity`, ou lorsqu'une ressource de script est demandée en mode [no-cors](/fr/docs/Web/API/Request/mode#no-cors).
 
 Notez que le `integrity-endpoint` utilisé dans `Integrity-Policy` est défini dans l'en-tête {{HTTPHeader("Reporting-Endpoints")}}.
 
@@ -93,5 +93,8 @@ La [charge utile du rapport](/fr/docs/Web/API/Reporting_API#points_de_terminaiso
 ## Voir aussi
 
 - L'en-tête {{HTTPHeader("Integrity-Policy-Report-Only")}}
-- [Politique d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#politique_dintégrité)
+- L'en-tête {{HTTPHeader("Reporting-Endpoints")}}
+- L'interface API {{DOMxRef("ReportingObserver")}}
+- L'interface API {{DOMxRef("IntegrityViolationReport")}}
+- [Politique d'intégrité](/fr/docs/Web/Security/Defenses/Subresource_Integrity#politique_dintégrité) dans [Intégrité des sous-ressources](/fr/docs/Web/Security/Defenses/Subresource_Integrity#integrity_policy)
 - [L'API Reporting](/fr/docs/Web/API/Reporting_API)

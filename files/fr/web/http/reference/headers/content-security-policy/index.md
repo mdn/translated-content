@@ -3,11 +3,17 @@ title: En-tête Content-Security-Policy (CSP)
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Content-Security-Policy`** permet aux administrateur·ice·s d'un site web de contrôler les ressources que l'agent utilisateur est autorisé à charger pour une page donnée. À quelques exceptions près, les règles consistent principalement à définir les origines du serveur et les points d'accès pour les scripts.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Content-Security-Policy`** permet aux administrateur·ice·s d'un site web de contrôler les ressources que l'agent utilisateur est autorisé à charger pour une page donnée.
+
+À quelques exceptions près, les règles consistent principalement à définir les origines du serveur et les points d'accès pour les scripts.
 Cela permet de se prémunir contre les attaques {{Glossary("cross-site scripting", "de script inter-sites")}}.
+
+Les violations peuvent être signalées à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API).
+Les rapports peuvent être observés dans la page pour laquelle la politique est appliquée, en utilisant un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver), et envoyés aux points de terminaison du serveur définis dans un en-tête de réponse HTTP {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés à l'aide de la directive CSP {{CSP("report-to")}}.
+Pour plus d'informations, consultez {{DOMxRef("CSPViolationReport")}}.
 
 Pour plus d'informations, consultez le [guide Content Security Policy (CSP)](/fr/docs/Web/HTTP/Guides/CSP) pour des détails sur la livraison d'une CSP au navigateur, son apparence, ainsi que des cas d'utilisation et des stratégies de déploiement.
 
@@ -41,7 +47,7 @@ Les directives de récupération contrôlent les emplacements à partir desquels
     [Repli](#replis) pour `frame-src` et `worker-src`.
 
 - {{CSP("connect-src")}}
-  - : Restreint les URL qui peuvent être chargées via les interfaces de script.
+  - : Restreint les URL qui peuvent être chargées par les interfaces de script.
 - {{CSP("default-src")}}
   - : Sert de repli pour les autres {{Glossary("Fetch directive", "directives de récupération")}}.
 
@@ -71,7 +77,7 @@ Les directives de récupération contrôlent les emplacements à partir desquels
 - {{CSP("script-src-elem")}}
   - : Définit les sources valides pour les éléments HTML JavaScript {{HTMLElement("script")}}.
 - {{CSP("script-src-attr")}}
-  - : Définit les sources valides pour les gestionnaires d'évènements JavaScript en ligne.
+  - : Définit les sources valides pour les gestionnaires d'évènements JavaScript embarqué.
 - {{CSP("style-src")}}
   - : Définit les sources valides pour les feuilles de styles.
 
@@ -80,7 +86,7 @@ Les directives de récupération contrôlent les emplacements à partir desquels
 - {{CSP("style-src-elem")}}
   - : Définit les sources valides pour les éléments HTML {{HTMLElement("style")}} et les éléments HTML {{HTMLElement("link")}} ayant `rel="stylesheet"`.
 - {{CSP("style-src-attr")}}
-  - : Définit les sources valides pour les styles en ligne appliqués à des éléments individuels du DOM.
+  - : Définit les sources valides pour les styles embarqués appliqués à des éléments individuels du DOM.
 - {{CSP("worker-src")}}
   - : Définit les sources valides pour les scripts {{DOMxRef("Worker")}}, {{DOMxRef("SharedWorker")}} ou {{DOMxRef("ServiceWorker")}}.
 
@@ -97,9 +103,9 @@ Certaines directives de récupération servent de replis pour d'autres directive
 
 Par exemple&nbsp;:
 
-- Si `img-src` est omise mais que `default-src` est incluse, alors la règle définie par `default-src` sera appliquée aux images.
-- Si `script-src-elem` est omise mais que `script-src` est incluse, alors la règle définie par `script-src` sera appliquée aux éléments `<script>`.
-- Si `script-src-elem` et `script-src` sont toutes deux omises, mais que `default-src` est incluse, alors la règle définie par `default-src` sera appliquée aux éléments `<script>`.
+- Si `img-src` est omise mais que `default-src` est incluse, alors la règle définie par `default-src` est appliquée aux images.
+- Si `script-src-elem` est omise mais que `script-src` est incluse, alors la règle définie par `script-src` est appliquée aux éléments `<script>`.
+- Si `script-src-elem` et `script-src` sont toutes deux omises, mais que `default-src` est incluse, alors la règle définie par `default-src` est appliquée aux éléments `<script>`.
 
 ### Directives de document
 
@@ -128,7 +134,7 @@ Les directives de rapport contrôlent l'URL de destination pour les rapports d'e
 
     > [!WARNING]
     > Cette directive est destinée à remplacer [`report-uri`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri)&nbsp;; dans les navigateurs qui prennent en charge `report-to`, la directive `report-uri` est ignorée.
-    > Cependant, tant que `report-to` n'est pas largement supportée, il est recommandé de spécifier les deux en-têtes comme illustré (où `nom_point_de_terminaison` est le nom d'un point de terminaison fourni séparément)&nbsp;:
+    > Cependant, tant que `report-to` n'est pas largement supportée, il est recommandé de définir les deux en-têtes comme illustré (où `nom_point_de_terminaison` est le nom d'un point de terminaison fourni séparément)&nbsp;:
     >
     > ```http
     > Content-Security-Policy: …; report-uri https://endpoint.exemple.com; report-to nom_point_de_terminaison
@@ -142,13 +148,13 @@ Les directives de rapport contrôlent l'URL de destination pour les rapports d'e
   - : Utilisée pour définir une liste blanche de règles de [types de confiance](/fr/docs/Web/API/Trusted_Types_API).
     Les types de confiance permettent aux applications de verrouiller les puits d'injection XSS du DOM pour n'accepter que des valeurs typées et non falsifiables à la place des chaînes de caractères.
 - {{CSP("upgrade-insecure-requests")}}
-  - : Indique à l'agent utilisateur de traiter toutes les URL non-sécurisées d'un site (celles servies via HTTP) comme si elles avaient été remplacées par des URL sécurisées (celles servies via HTTPS).
+  - : Indique à l'agent utilisateur de traiter toutes les URL non-sécurisées d'un site (celles servies par HTTP) comme si elles avaient été remplacées par des URL sécurisées (celles servies par HTTPS).
     Cette directive est destinée aux sites web qui possèdent un grand nombre d'URL historiques non-sécurisées devant être réécrites.
 
 ### Directives obsolètes
 
 - {{CSP("block-all-mixed-content")}} {{Deprecated_Inline}}
-  - : Empêche le chargement de toute ressource via HTTP lorsque la page est chargée avec HTTPS.
+  - : Empêche le chargement de toute ressource par HTTP lorsque la page est chargée avec HTTPS.
 
 - {{CSP("report-uri")}} {{Deprecated_Inline}}
   - : Fournit au navigateur une URL où les rapports d'enfreinte CSP doivent être envoyés.
@@ -201,7 +207,7 @@ Par exemple&nbsp;:
 
 Lorsque le navigateur reçoit le document, il effectue le hachage du contenu de chaque élément `<script>` et `<style>`, compare le résultat avec les hachages présents dans la directive CSP, et ne charge la ressource que s'il y a correspondance.
 
-Si l'élément charge une ressource externe (par exemple, via l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/script#src)), alors l'élément doit également avoir l'attribut [`integrity`](/fr/docs/Web/HTML/Reference/Elements/script#integrity) renseigné.
+Si l'élément charge une ressource externe (par exemple, avec l'attribut [`src`](/fr/docs/Web/HTML/Reference/Elements/script#src)), alors l'élément doit également avoir l'attribut [`integrity`](/fr/docs/Web/HTML/Reference/Elements/script#integrity) renseigné.
 
 Si une directive contient une valeur de hachage et `unsafe-inline`, alors le navigateur ignore `unsafe-inline`.
 
@@ -220,8 +226,8 @@ Si le schéma est omis, celui de l'origine du document est utilisé.
 
 Lors de la comparaison des schémas, les mises à niveau sécurisées sont autorisées. Par exemple&nbsp;:
 
-- `http://exemple.com` autorisera également les ressources provenant de `https://exemple.com`
-- `ws://exemple.org` autorisera également les ressources provenant de `wss://exemple.org`.
+- `http://exemple.com` autorise également les ressources provenant de `https://exemple.com`
+- `ws://exemple.org` autorise également les ressources provenant de `wss://exemple.org`.
 
 Les jokers (`'*'`) peuvent être utilisés pour les sous-domaines, l'adresse de l'hôte et le numéro de port, indiquant que toutes les valeurs légales de chacun sont valides. Par exemple&nbsp;:
 
@@ -229,7 +235,7 @@ Les jokers (`'*'`) peuvent être utilisés pour les sous-domaines, l'adresse de 
 
 Les chemins qui se terminent par `/` correspondent à tout chemin dont ils sont le préfixe. Par exemple&nbsp;:
 
-- `exemple.com/api/` autorisera les ressources provenant de `exemple.com/api/users/new`.
+- `exemple.com/api/` autorise les ressources provenant de `exemple.com/api/users/new`.
 
 Les chemins qui ne se terminent pas par `/` sont comparés exactement. Par exemple&nbsp;:
 
@@ -241,8 +247,8 @@ Un [schéma](/fr/docs/Web/URI/Reference/Schemes), tel que `https:`. Les deux-poi
 
 Les mises à niveau sécurisées sont autorisées, donc&nbsp;:
 
-- `http:` autorisera également les ressources chargées en HTTPS
-- `ws:` autorisera également les ressources chargées en WSS.
+- `http:` autorise également les ressources chargées en HTTPS
+- `ws:` autorise également les ressources chargées en WSS.
 
 ### `self`
 
@@ -250,8 +256,8 @@ Les ressources du type donné ne peuvent être chargées que depuis la même {{G
 
 Les mises à niveau sécurisées sont autorisées. Par exemple&nbsp;:
 
-- Si le document est servi depuis `http://exemple.com`, alors une CSP avec `'self'` autorisera également les ressources provenant de `https://exemple.com`.
-- Si le document est servi depuis `ws://exemple.org`, alors une CSP avec `'self'` autorisera également les ressources provenant de `wss://exemple.org`.
+- Si le document est servi depuis `http://exemple.com`, alors une CSP avec `'self'` autorise également les ressources provenant de `https://exemple.com`.
+- Si le document est servi depuis `ws://exemple.org`, alors une CSP avec `'self'` autorise également les ressources provenant de `wss://exemple.org`.
 
 ### `trusted-types-eval`
 
@@ -285,21 +291,21 @@ Voir la section [`eval()` et API similaires](/fr/docs/Web/HTTP/Guides/CSP#eval_e
 
 ### `wasm-unsafe-eval`
 
-Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors une page ne pourra pas compiler du WebAssembly à l'aide de fonctions comme [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static).
+Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors une page ne peut pas compiler du WebAssembly à l'aide de fonctions comme [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static).
 
 Le mot-clé `wasm-unsafe-eval` peut être utilisé pour annuler cette protection. Il s'agit d'une alternative bien plus sûre à `'unsafe-eval'`, car cela n'active pas l'évaluation générale du JavaScript.
 
 ### `unsafe-inline`
 
-Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors le JavaScript en ligne n'est pas autorisé à s'exécuter. Cela inclut&nbsp;:
+Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors le JavaScript embarqué n'est pas autorisé à s'exécuter. Cela inclut&nbsp;:
 
-- les balises `<script>` en ligne
-- les attributs de gestionnaire d'évènements en ligne
+- les balises `<script>` embarqué
+- les attributs de gestionnaire d'évènements embarqué
 - les URL `javascript:`.
 
-De même, si une CSP contient `default-src` ou une directive `style-src`, alors le CSS en ligne ne sera pas chargé, y compris&nbsp;:
+De même, si une CSP contient `default-src` ou une directive `style-src`, alors le CSS embarqué n'est pas chargé, y compris&nbsp;:
 
-- les balises `<style>` en ligne
+- les balises `<style>` embarqué
 - les attributs {{DOMxRef("HTMLElement.style", "style")}}.
 
 Le mot-clé `unsafe-inline` peut être utilisé pour annuler cette protection, permettant à toutes ces formes d'être chargées.
@@ -307,36 +313,36 @@ Le mot-clé `unsafe-inline` peut être utilisé pour annuler cette protection, p
 > [!WARNING]
 > Les développeur·euse·s doivent éviter `'unsafe-inline'`, car cela annule en grande partie l'intérêt d'une CSP.
 
-Voir la section [JavaScript en ligne](/fr/docs/Web/HTTP/Guides/CSP#javascript_en_ligne) du guide CSP pour plus d'informations d'utilisation.
+Voir la section [JavaScript embarqué](/fr/docs/Web/HTTP/Guides/CSP#javascript_embarqué) du guide CSP pour plus d'informations d'utilisation.
 
 ### `unsafe-hashes`
 
-Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors les attributs de gestionnaire d'évènements en ligne comme `onclick` et les attributs `style` en ligne ne sont pas autorisés à s'exécuter.
+Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors les attributs de gestionnaire d'évènements embarqués comme `onclick` et les attributs `style` embarqués ne sont pas autorisés à s'exécuter.
 
-L'expression `'unsafe-hashes'` permet au navigateur d'utiliser des [expressions de hachage](#hash_algorithm-hash_value) pour les gestionnaires d'évènements en ligne et les attributs `style`. Par exemple, une CSP peut contenir une directive comme&nbsp;:
+L'expression `'unsafe-hashes'` permet au navigateur d'utiliser des [expressions de hachage](#hash_algorithm-hash_value) pour les gestionnaires d'évènements embarqués et les attributs `style`. Par exemple, une CSP peut contenir une directive comme&nbsp;:
 
 ```http
 script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 ```
 
-Si la valeur de hachage correspond au hachage de la valeur d'un attribut de gestionnaire d'évènements en ligne ou d'un attribut `style`, alors le code sera autorisé à s'exécuter.
+Si la valeur de hachage correspond au hachage de la valeur d'un attribut de gestionnaire d'évènements embarqués ou d'un attribut `style`, alors le code est autorisé à s'exécuter.
 
 > [!WARNING]
 > La valeur `'unsafe-hashes'` n'est pas sûre.
 >
-> En particulier, cela permet une attaque dans laquelle le contenu de l'attribut de gestionnaire d'évènements en ligne est injecté dans le document comme un élément `<script>` en ligne. Supposons que le gestionnaire d'évènements en ligne soit&nbsp;:
+> En particulier, cela permet une attaque dans laquelle le contenu de l'attribut de gestionnaire d'évènements embarqués est injecté dans le document comme un élément `<script>` embarqué. Supposons que le gestionnaire d'évènements embarqués soit&nbsp;:
 >
 > ```html
 > <button onclick="transferAllMyMoney()">Transférer tout mon argent</button>
 > ```
 >
-> Si un·e attaquant·e peut injecter un élément `<script>` en ligne contenant ce code, la CSP autorisera son exécution automatiquement.
+> Si un·e attaquant·e peut injecter un élément `<script>` embarqué contenant ce code, la CSP autorise son exécution automatiquement.
 >
 > Cependant, `'unsafe-hashes'` est bien plus sûr que `'unsafe-inline'`.
 
 ### `inline-speculation-rules`
 
-Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors le JavaScript en ligne n'est pas autorisé à s'exécuter. L'expression `'inline-speculation-rules'` permet au navigateur de charger des éléments `<script>` en ligne qui ont un attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) de [`speculationrules`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules).
+Par défaut, si une CSP contient une directive `default-src` ou `script-src`, alors le JavaScript embarqué n'est pas autorisé à s'exécuter. L'expression `'inline-speculation-rules'` permet au navigateur de charger des éléments `<script>` embarqués qui ont un attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) de [`speculationrules`](/fr/docs/Web/HTML/Reference/Elements/script/type/speculationrules).
 
 Voir la section [API Speculation Rules](/fr/docs/Web/API/Speculation_Rules_API) pour plus d'informations.
 
@@ -355,7 +361,7 @@ Voir la section [Le mot-clé `strict-dynamic`](/fr/docs/Web/HTTP/Guides/CSP#le_m
 
 ### `report-sample`
 
-Si cette expression est incluse dans une directive contrôlant les scripts ou les styles, et que la directive entraîne le blocage par le navigateur de tout script en ligne, style en ligne ou attribut de gestionnaire d'évènements en ligne, alors le [rapport de violation](/fr/docs/Web/HTTP/Guides/CSP#rapport_de_violation) généré par le navigateur contiendra une propriété {{DOMxRef("CSPViolationReportBody.sample", "sample")}} contenant les 40 premiers caractères de la ressource bloquée.
+Si cette expression est incluse dans une directive contrôlant les scripts ou les styles, et que la directive entraîne le blocage par le navigateur de tout script embarqué, style embarqué ou attribut de gestionnaire d'évènements embarqué, alors le [rapport de violation](/fr/docs/Web/HTTP/Guides/CSP#rapport_de_violation) généré par le navigateur contient une propriété {{DOMxRef("CSPViolationReport.sample", "sample")}} contenant les 40 premiers caractères de la ressource bloquée.
 
 ## Le CSP dans les workers
 
@@ -365,9 +371,9 @@ L'exception à cette règle concerne le cas où l'origine du script du worker es
 
 ## Gérer plusieurs politiques de sécurité
 
-Le mécanisme CSP permet d'indiquer plusieurs politiques pour une ressource, notamment via l'en-tête `Content-Security-Policy`, l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et l'élément {{HTMLElement("meta")}}.
+Le mécanisme CSP permet d'indiquer plusieurs politiques pour une ressource, notamment avec l'en-tête `Content-Security-Policy`, l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}} et l'élément {{HTMLElement("meta")}}.
 
-Vous pouvez utiliser l'en-tête `Content-Security-Policy` plusieurs fois, comme dans l'exemple ci-dessous. Portez une attention particulière à la directive {{CSP("connect-src")}} ici. Même si la deuxième politique autorise la connexion, la première politique contient `connect-src 'none'`. Ajouter des politiques supplémentaires _ne peut que restreindre davantage_ les capacités de la ressource protégée, ce qui signifie qu'aucune connexion ne sera autorisée et, en tant que politique la plus stricte, `connect-src 'none'` sera appliquée.
+Vous pouvez utiliser l'en-tête `Content-Security-Policy` plusieurs fois, comme dans l'exemple ci-dessous. Portez une attention particulière à la directive {{CSP("connect-src")}} ici. Même si la deuxième politique autorise la connexion, la première politique contient `connect-src 'none'`. Ajouter des politiques supplémentaires _ne peut que restreindre davantage_ les capacités de la ressource protégée, ce qui signifie qu'aucune connexion n'est autorisée et, en tant que politique la plus stricte, `connect-src 'none'` est appliquée.
 
 ```http
 Content-Security-Policy: default-src 'self' http://exemple.com;
@@ -378,10 +384,10 @@ Content-Security-Policy: connect-src http://exemple.com/;
 
 ## Exemples
 
-### Désactiver le code en ligne non sûr et n'autoriser que les ressources HTTPS
+### Désactiver le code embarqué non sûr et n'autoriser que les ressources HTTPS
 
 Cet en-tête HTTP définit la politique par défaut pour n'autoriser le chargement des ressources (images, polices, scripts, etc.) qu'en HTTPS.
-Comme les directives `unsafe-inline` et `unsafe-eval` ne sont pas définies, les scripts en ligne seront bloqués.
+Comme les directives `unsafe-inline` et `unsafe-eval` ne sont pas définies, les scripts embarqués sont bloqués.
 
 ```http
 Content-Security-Policy: default-src https:
@@ -393,9 +399,9 @@ Les mêmes restrictions peuvent être appliquées à l'aide de l'élément HTML 
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-### Autoriser le code en ligne et les ressources HTTPS, mais désactiver les plugins
+### Autoriser le code embarqué et les ressources HTTPS, mais désactiver les plugins
 
-Cette politique peut être utilisée sur un site existant qui utilise trop de code en ligne pour être corrigé, afin de s'assurer que les ressources sont chargées uniquement via HTTPS et de désactiver les plugins&nbsp;:
+Cette politique peut être utilisée sur un site existant qui utilise trop de code embarqué pour être corrigé, afin de s'assurer que les ressources sont chargées uniquement par HTTPS et de désactiver les plugins&nbsp;:
 
 ```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
@@ -433,6 +439,10 @@ Voir [Mise en œuvre de la Content Security Policy (CSP)](/fr/docs/Web/Security/
 ## Voir aussi
 
 - L'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- La directive CSP {{CSP("report-to")}}
+- L'en-tête {{HTTPHeader("Reporting-Endpoints")}}
+- L'interface API {{DOMxRef("CSPViolationReport")}}
+- [L'API Reporting](/fr/docs/Web/API/Reporting_API).
 - [Apprendre&nbsp;: Content Security Policy](/fr/docs/Web/HTTP/Guides/CSP)
 - [Sécurité du contenu dans les WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Adopter une politique stricte <sup>(angl.)</sup>](https://csp.withgoogle.com/docs/strict-csp.html)
