@@ -37,7 +37,7 @@ input:indeterminate {
 
 #### HTML
 
-```html
+```html-nolint
 <fieldset>
   <legend>チェックボックス</legend>
   <div>
