@@ -24,7 +24,7 @@ input:invalid {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
   <label for="email">メールアドレス:</label>
   <input id="email" name="email" type="email" value="na@me@example.com" />
