@@ -11,7 +11,7 @@ La paire de mots-clés **`alternate stylesheet`**, lorsqu'elle est utilisée com
 > [!NOTE]
 > Cette fonctionnalité n'est pas bien prise en charge dans les navigateurs sans extension. Pour proposer des présentations alternatives qui fonctionnent avec les préférences existantes de l'utilisateur·ice, voir les [fonctions média CSS](/fr/docs/Web/CSS/Reference/At-rules/@media#fonctions_média) {{CSSxRef("@media/prefers-color-scheme", "prefers-color-scheme")}} et {{CSSxRef("@media/prefers-contrast", "prefers-contrast")}}.
 
-Firefox permet aux utilisateur·ice·s de sélectionner des {{Glossary("stylesheet", "feuilles de style")}} alternatives via le sous-menu _Affichage &gt; Style de la page_, qui affiche les valeurs des attributs [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Les autres navigateurs nécessitent une extension pour activer cette fonctionnalité. La page web peut aussi fournir sa propre interface utilisateur pour permettre de changer de style.
+Firefox permet aux utilisateur·ice·s de sélectionner des {{Glossary("style sheet", "feuilles de style")}} alternatives via le sous-menu _Affichage &gt; Style de la page_, qui affiche les valeurs des attributs [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title). Les autres navigateurs nécessitent une extension pour activer cette fonctionnalité. La page web peut aussi fournir sa propre interface utilisateur pour permettre de changer de style.
 
 ## Exemples
 
