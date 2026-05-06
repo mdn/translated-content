@@ -1,53 +1,94 @@
 ---
-title: counters()
+title: Fonction CSS `counters()`
+short-title: counters()
 slug: Web/CSS/Reference/Values/counters
-original_slug: Web/CSS/counters
+l10n:
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`counters()`** permet de combiner des marqueurs lors de l'imbrication de compteurs. La fonction retourne une chaîne de caractères qui concatène les valeurs actuelles des compteurs nommés et imbriqués, le cas échéant, avec la chaîne de caractères fournie. Le troisième paramètre, optionnel, permet de définir le style de liste.
 
-La fonction CSS **`counters()`** permet d'obtenir des compteurs imbriqués en renvoyant la concaténation des chaînes de caractères des valeurs des compteurs passés en arguments. La fonction `counters()` peut s'utiliser sous deux formes :
+La fonction `counters()` est généralement utilisée au sein d'un [pseudo-élément](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) avec la propriété {{CSSxRef("content")}}, mais théoriquement, elle peut être utilisée partout où une valeur {{CSSxRef("&lt;string&gt;")}} est acceptée.
 
-- `counters(name, string)`
-- `counters(name, string, style)`
+La fonction `counters()` a deux formes&nbsp;: `counters(<name>, <string>)` et `counters(<name>, <string>, <style>)`. Le texte généré est la valeur de tous les compteurs avec le `<name>` donné, disposés du plus externe au plus interne, et séparés par la `<string>` définie. Les compteurs sont rendus dans le `<style>` indiqué, par défaut `decimal` si aucun `<style>` n'est défini.
 
-Cette fonction est généralement utilisée sur des [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) mais peut théoriquement être utilisée à tout endroit où une valeur [`<string>`](/fr/docs/Web/CSS/Reference/Values/string) est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera `decimal`).
+{{InteractiveExample("Démonstration CSS&nbsp;: counters()", "tabbed-standard")}}
 
-```css
-/* Utilisation simple - style decimal par défaut */
-counters(countername, '-');
+```css interactive-example
+ol {
+  counter-reset: index;
+  list-style-type: none;
+}
 
-/* Changement du style d'affichage */
-counters(countername, '.', upper-roman)
+li::before {
+  counter-increment: index;
+  content: counters(index, ".", decimal) " ";
+}
 ```
 
-Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`counter()`](/fr/docs/Web/CSS/Reference/Values/counter) doivent être utilisées pour créer du contenu.
-
-> [!NOTE]
-> Bien que la fonction `counters()` puisse être utilisée avec n'importe quelle propriété CSS, la prise en charge des propriétés autres que {{CSSxRef("content")}} reste experimentale.
->
-> Avant d'utiliser cette fonctionnalité en production, référez vous au tableau de compatibilité ci-après.
+```html interactive-example
+<ol>
+  <li>Mars</li>
+  <li>
+    Saturne
+    <ol>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Téthys</li>
+    </ol>
+  </li>
+  <li>
+    Uranus
+    <ol>
+      <li>Titan</li>
+    </ol>
+  </li>
+</ol>
+```
 
 ## Syntaxe
 
+```css
+/* Utilisation simple - style decimal par défaut */
+counters(counter-name, '.');
+
+/* Changement du style d'affichage */
+counters(counter-name, '-', upper-roman)
+```
+
+Un [compteur](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters) n'est pas visible en tant que tel. La fonction `counters()` (et la fonction {{CSSxRef("counter()")}}) est ce qui la rend utile en retournant du contenu défini par le·la développeur·euse.
+
 ### Valeurs
 
-- {{cssxref("&lt;custom-ident&gt;")}}
-  - : Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
-- `<counter-style>`
-  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/Reference/Properties/list-style-type#valeurs)) ou une fonction [`symbols()`](/fr/docs/Web/CSS/Reference/Values/symbols). En absence de valeur, le style utilisé sera `decimal`.
-- {{cssxref("&lt;string&gt;")}}
-  - : Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. `\000A9` représentera par exemple le symbole copyright (©).
-- `none`
-  - : Représente la chaîne vide.
+La fonction `counters()` accepte deux ou trois paramètres. Le premier paramètre est le `<counter-name>`. Le deuxième paramètre est le séparateur `<string>`. Le troisième paramètre optionnel est le `<counter-style>`.
 
-### Syntaxe formelle
+- `<counter-name>`
+  - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) qui identifie les compteurs, et qui est le même nom sensible à la casse utilisé avec les valeurs de propriété {{CSSxRef("counter-reset")}} et {{CSSxRef("counter-increment")}}. Le nom du compteur ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`. Alternativement, pour les compteurs en ligne à usage unique, la fonction {{CSSxRef("symbols")}} peut être utilisée à la place d'un compteur nommé dans [les navigateurs qui prennent en charge `symbols()`](/fr/docs/Web/CSS/Reference/Values/symbols#compatibilité_des_navigateurs).
+- {{CSSxRef("&lt;string&gt;")}}
+  - : N'importe quel nombre en chaîne de caractères textuels. Les caractères non latins doivent être encodés en utilisant leurs séquences d'échappement Unicode&nbsp;: par exemple, `\000A9` représente le symbole de copyright (©).
+- `<counter-style>`
+  - : Un nom de style de compteur ou une fonction {{CSSxRef("symbols()")}}. Le nom du style de compteur peut être un style prédéfini tel que numérique, alphabétique ou symbolique, un style prédéfini complexe en écriture asiatique ou éthiopienne, ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/Guides/Counter_styles). Si omis, le style de compteur par défaut est `decimal`.
+
+La valeur de retour est une chaîne de caractères contenant toutes les valeurs de tous les compteurs dans l'ensemble de compteurs CSS de l'élément nommé `<counter-name>` dans le style de compteur défini par `<counter-style>` (ou décimal, si omis). La chaîne de caractères de retour est triée de l'extérieur vers l'intérieur, jointe par la chaîne de caractères (`<string>`) définie.
+
+> [!NOTE]
+> Pour obtenir des informations sur les compteurs non concaténés, consultez la fonction {{CSSxRef("counter()")}}, qui omet le paramètre `<string>`.
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
 ## Exemples
 
-### Style par défaut et chiffres romains
+### Comparer la valeur par défaut du compteur avec les chiffres romains majuscules
+
+Cet exemple inclut deux fonctions `counters()`&nbsp;: l'une avec `<counter-style>` défini et l'autre utilisant la valeur par défaut `decimal`.
 
 #### HTML
 
@@ -79,7 +120,7 @@ Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`c
 
 #### CSS
 
-```css
+```css-nolint
 ol {
   counter-reset: listCounter;
 }
@@ -87,19 +128,23 @@ li {
   counter-increment: listCounter;
 }
 li::marker {
-  content: counters(listCounter, ".", upper-roman) ") ";
+  content:
+    counters(listCounter, ".", upper-roman) ") ";
 }
 li::before {
-  content: counters(listCounter, ".") " == "
+  content:
+    counters(listCounter, ".") " == "
     counters(listCounter, ".", lower-roman);
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Style_par_défaut_et_chiffres_romains", "100%", 150)}}
+{{EmbedLiveSample("Comparer la valeur par défaut du compteur avec les chiffres romains majuscules", "100%", 270)}}
 
-### _Numérotation décimale (avec zéro) et indices alphabétiques_
+### Comparer la valeur du compteur `decimal-leading-zero` avec les lettres minuscules
+
+Cet exemple inclut trois fonctions `counters()`, chacune avec des valeurs `<string>` et `<counter-style>` différentes.
 
 #### HTML
 
@@ -131,7 +176,7 @@ li::before {
 
 #### CSS
 
-```css
+```css-nolint
 ol {
   counter-reset: count;
 }
@@ -139,17 +184,19 @@ li {
   counter-increment: count;
 }
 li::marker {
-  content: counters(count, ".", upper-alpha) ") ";
+  content:
+    counters(count, "-", decimal-leading-zero) ") ";
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == "
-    counters(count, ".", lower-alpha);
+  content:
+    counters(count, "~", upper-alpha) " == "
+    counters(count,  "*", lower-alpha);
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Numérotation_décimale_(avec_zéro)_et_indices_alphabétiques", "100%", 150)}}
+{{EmbedLiveSample("Comparer la valeur du compteur `decimal-leading-zero` avec les lettres minuscules", "100%", 270)}}
 
 ## Spécifications
 
@@ -162,8 +209,12 @@ li::before {
 ## Voir aussi
 
 - [Utiliser les compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles/Using_counters)
-- {{cssxref("counter-reset")}}
-- {{cssxref("counter-increment")}}
-- {{cssxref("@counter-style")}}
-- La fonction CSS [`counter()`](/fr/docs/Web/CSS/Reference/Values/counter)
-- {{cssxref("::marker")}}
+- La propriété {{CSSxRef("counter-reset")}}
+- La propriété {{CSSxRef("counter-set")}}
+- La propriété {{CSSxRef("counter-increment")}}
+- La règle {{CSSxRef("@counter-style")}}
+- La fonction {{CSSxRef("counters()")}}
+- Le pseudo-élément {{CSSxRef("::marker")}}
+- Le module [des listes et compteurs CSS](/fr/docs/Web/CSS/Guides/Lists)
+- Le module [des styles de compteurs CSS](/fr/docs/Web/CSS/Guides/Counter_styles)
+- Le module [du contenu généré CSS](/fr/docs/Web/CSS/Guides/Generated_content)
