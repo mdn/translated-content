@@ -200,6 +200,7 @@
 /ko/docs/Glossary/Self-Executing_Anonymous_Function	/ko/docs/conflicting/Glossary/IIFE
 /ko/docs/Glossary/Simple_header	/ko/docs/conflicting/Glossary/CORS-safelisted_request_header
 /ko/docs/Glossary/Simple_response_header	/ko/docs/conflicting/Glossary/CORS-safelisted_response_header
+/ko/docs/Glossary/Stylesheet	/ko/docs/Glossary/Style_sheet
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
 /ko/docs/Glossary/XHR_(XMLHttpRequest)	/ko/docs/Glossary/XMLHttpRequest
