@@ -1,52 +1,144 @@
 ---
-title: calc
+title: Fonction CSS `calc()`
+short-title: calc()
 slug: Web/CSS/Reference/Values/calc
-original_slug: Web/CSS/calc
+l10n:
+  sourceCommit: dc4a0e708bed278ea7794eaef5ea83ed368b409f
 ---
 
-{{CSSRef}}
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`calc()`** permet d'effectuer des calculs lors de la définition des valeurs des propriétés CSS. Elle peut être utilisée avec les valeurs {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} et {{CSSxRef("color_value", "&lt;color-function&gt;")}}.
 
-La fonction **`calc()`** peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à `calc()`, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.
+{{InteractiveExample("Démonstration CSS&nbsp;: calc()")}}
 
-```css
-/* property: calc(expression) */
-width: calc(100% - 80px);
+```css interactive-example-choice
+width: calc(10px + 100px);
 ```
 
-Il est aussi possible d'utiliser `calc()` dans une autre fonction `calc()` et ainsi d'imbriquer les fonctions les unes dans les autres.
+```css interactive-example-choice
+width: calc(100% - 30px);
+```
+
+```css interactive-example-choice
+width: calc(2em * 5);
+```
+
+```css interactive-example-choice
+width: calc(var(--variable-width) + 20px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Changez ma largeur.</div>
+</section>
+```
+
+```css interactive-example
+:root {
+  --variable-width: 100px;
+}
+
+#example-element {
+  border: 10px solid black;
+  padding: 10px;
+}
+```
 
 ## Syntaxe
 
-Une fonction qui prend comme seul argument une expression mathématique et dont le résultat est utilisé comme valeur de retour. L'expression peut être n'importe quelle expression combinant les différents opérateurs suivants, en respectant l'ordre de priorité des opérateurs :
+```css
+/* calc(expression) */
+calc(100% - 80px)
+
+/* Argument avec une fonction CSS */
+calc(100px * sin(pi / 2))
+
+/* Argument contenant une variable */
+calc(var(--hue) + 180)
+
+/* Argument contenant des canaux de couleur dans des couleurs relatives */
+lch(from aquamarine l c calc(h + 180))
+```
+
+La fonction `calc()` prend un seul argument comme paramètre, et le résultat de l'expression est utilisé comme valeur pour une propriété CSS. Dans cet argument, les {{Glossary("operand", "opérandes")}} peuvent être combinés en utilisant les {{Glossary("operator", "opérateurs")}} listés ci-dessous. Lorsque l'expression contient plusieurs opérandes, `calc()` utilise les règles standard de [priorité des opérateurs](/fr/docs/Learn_web_development/Core/Scripting/Math#priorité_des_opérateurs_précédence)&nbsp;:
 
 - `+`
-  - : Addition
+  - : Additionne les opérandes définies.
 - `-`
-  - : Soustraction
+  - : Soustrait le deuxième opérande du premier opérande.
 - `*`
-  - : Multiplication. Au moins un des arguments doit être un {{cssxref("&lt;number&gt;")}}.
+  - : Multiplie les opérandes définies.
 - `/`
-  - : Division. Il n'est pas possible de diviser par une longueur. Ceci peut être utilisé, par exemple, pour que votre longueur soit une fraction d'une longueur existante. L'opérande droit doit être une valeur de type {{cssxref("&lt;number&gt;")}}.
+  - : Divise l'opérande de gauche (dividende) par l'opérande de droite (diviseur).
 
-L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur. Vous pouvez utiliser des unités différentes pour chacune des valeurs si vous le souhaitez. Vous pouvez aussi utiliser les parenthèses pour définir l'ordre des opérations.
+Tous les opérandes, à l'exception de ceux de type {{CSSxRef("&lt;number&gt;")}}, doivent être suivis d'une unité appropriée, telle que `px`, `em` ou `%`. Vous pouvez utiliser une unité différente pour chaque opérande dans votre expression. Vous pouvez également utiliser des parenthèses pour établir l'ordre des calculs si nécessaire.
 
-### Notes
+## Description
 
-- Une division par zéro aboutit à une erreur qui est générée par le parseur HTML.
-- Les opérateurs `+` et `-` **doivent toujours être entouré d'espaces**. Par exemple l'opérande de `calc(50% -8px)` sera interprété comme une valeur en pourcentage suivie d'une longueur négative, l'expression est invalide. L'opérande de `calc(50% - 8px)` est une valeur en pourcentage suivie d'un signe moins et d'une longueur. Et ainsi, `calc(8px + -50%)` est interprété comme une longueur suivi d'un signe plus et d'un pourcentage négatif.
-- Les opérateurs `*` et `/` ne nécessitent pas d'espaces, mais les ajouter pour conserver la cohérence est recommandé.
-- Les expressions mathématiques manipulant des pourcentages pour les hauteurs et largeurs de colonnes d'un tableau, de groupes de colonne, de lignes d'un tableau ou de groupes de lignes contribuant à un tableau organisé de façon automatique ou en disposition fixe pourront être traitées comme si c'était `auto` qui avait été utilisé.
-- Il est possible d'imbriquer des fonctions `calc()`, auquel cas, les appels « internes » sont considérés comme des parenthèses.
+Il y a quelques points à noter concernant `calc()`, qui sont détaillés dans les sections ci-dessous.
 
-### Syntaxe formelle
+### Valeurs résultantes
 
-{{csssyntax}}
+La fonction `calc()` doit se substituer à une valeur CSS complète de l'un des types suivants&nbsp;:
+
+- {{CSSxRef("&lt;length&gt;")}}
+- {{CSSxRef("&lt;frequency&gt;")}}
+- {{CSSxRef("angle")}}
+- {{CSSxRef("&lt;time&gt;")}}
+- {{CSSxRef("flex_value", "&lt;flex&gt;")}}
+- {{CSSxRef("resolution")}}
+- {{CSSxRef("&lt;percentage&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
+- {{CSSxRef("&lt;integer&gt;")}}
+- Un des types mixtes comme {{CSSxRef("&lt;length-percentage&gt;")}}
+
+`calc()` ne peut pas seulement remplacer la partie numérique des valeurs en pourcentage, des valeurs de longueur, etc., sans également remplacer l'unité qui suit. Par exemple, `calc(100 / 4)%` est invalide, tandis que `calc(100% / 4)` est valide.
+
+La valeur résultante de `calc()` doit être compatible avec le contexte dans lequel elle est utilisée. Par exemple, `margin: calc(1px + 2px)` est valide, mais `margin: calc(1 + 2)` ne l'est pas&nbsp;: cela équivaut à définir `margin: 3`, ce qui ignore la propriété.
+
+Lorsque qu'un entier ({{CSSxRef("&lt;integer&gt;")}}) est attendu, l'expression `calc()` peut également évaluer un nombre (`<number>`), qui est arrondi à l'entier le plus proche. Ainsi, `calc(1.4)` donne une valeur de `1`. Si la partie fractionnaire de la valeur est exactement `0.5`, la valeur est arrondie vers l'infini positif. Par exemple, `calc(1.5)` donne une valeur de `2`, tandis que `calc(-1.5)` est arrondi à `-1`.
+
+`calc()` effectue des calculs en virgule flottante selon la norme IEEE-754, ce qui entraîne certaines considérations concernant les valeurs `infinity` et `NaN`. Pour plus de détails sur la façon dont les constantes sont sérialisées, consultez la page {{CSSxRef("calc-keyword")}}.
+
+### Arithmétique typée CSS
+
+Lors de l'utilisation de `calc()` pour multiplier des valeurs, en utilisant l'opérateur `*`, une seule valeur peut contenir une unité. Les calculs comme `200px * 4px` ne sont pas pris en charge car 800px<sup>2</sup> n'a pas de sens en CSS.
+
+Inversement, `200px / 4px` se résout à `50`, ce qui a du sens en CSS. Par conséquent, lors de l'utilisation de la fonction `calc()` pour diviser des nombres, en utilisant l'opérateur `/`, [les navigateurs compatibles](#compatibilité_des_navigateurs) permettent des unités des deux côtés de l'opérande, à condition qu'elles soient du même type de données. Par exemple, `100vw / 1px` est valide et donne une valeur sans unité.
+
+Le quotient peut ensuite être utilisé dans les valeurs des propriétés ou des fonctions qui acceptent un nombre ({{CSSxRef("&lt;number&gt;")}}) comme valeur ou paramètre, ou converti en un type de données différent en le multipliant par une valeur typée.
+
+Pour une explication complète de l'arithmétique typée en CSS, ainsi que des exemples, consultez [Utilisation de l'arithmétique typée CSS](/fr/docs/Web/CSS/Guides/Values_and_units/Using_typed_arithmetic).
+
+### Prise en charge du calcul des canaux de couleur dans les couleurs relatives
+
+La fonction `calc()` peut être utilisée pour manipuler directement les canaux de couleur dans le contexte des [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors). Cela permet des ajustements dynamiques des canaux de couleur dans des modèles de couleur tels que {{CSSxRef("color_value/rgb", "rgb()")}}, {{CSSxRef("color_value/hsl", "hsl()")}} et {{CSSxRef("color_value/lch", "lch()")}}.
+
+La syntaxe des couleurs relatives définit plusieurs mots-clés de canal de couleur, chacun représentant la valeur du canal de couleur en tant que nombre ({{CSSxRef("&lt;number&gt;")}}) (voir [Les valeurs des canaux se résolvent en valeurs `<number>`](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors#valeurs_des_canaux_converties_en_valeurs_number) pour plus d'informations). La fonction `calc()` peut utiliser ces mots-clés de canal de couleur pour effectuer des ajustements dynamiques sur les canaux de couleur, par exemple, `calc(r + 10)`.
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
+## Accessibilité
+
+Lorsque `calc()` est utilisé pour contrôler la taille du texte, assurez-vous qu'une des valeurs inclut une [unité de longueur relative](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives), par exemple&nbsp;:
+
+```css
+h1 {
+  font-size: calc(1.5rem + 3vw);
+}
+```
+
+Cela garantit que la taille du texte s'adaptera si la page est zoomée.
+
+- [Comprendre le WCAG sur MDN, Explications de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
+- [Comprendre le critère de succès 1.4.4&nbsp;: Redimensionner le texte | WAI | W3C <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
 
 ## Exemples
 
 ### Positionner un objet sur l'écran avec une marge
 
-`calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :
+`calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre&nbsp;:
 
 ```css
 .banniere {
@@ -63,16 +155,16 @@ L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur
 ```
 
 ```html
-<div class="banniere">C'est une bannière !</div>
+<div class="banniere">C'est une bannière&nbsp;!</div>
 ```
 
-{{EmbedLiveSample("Positionner_un_objet_sur_l'écran_avec_une_marge", '100%', '60')}}
+{{EmbedLiveSample("Positionner un objet sur l'écran avec une marge", "100%", 60)}}
 
 ### Dimensionner automatiquement les champs d'un formulaire pour s'ajuster au conteneur
 
 Un autre cas d'utilisation de `calc()` est d'aider à s'assurer que les champs d'un formulaire s'adaptent à l'espace disponible, sans s'étendre au-delà de la bordure du conteneur, tout en conservant une marge appropriée.
 
-Regardons un peu le CSS :
+Regardons un peu le CSS&nbsp;:
 
 ```css
 input {
@@ -81,29 +173,29 @@ input {
   width: calc(100% - 1em);
 }
 
-#boiteformulaire {
+#boite-formulaire {
   width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
 }
 ```
 
-Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons `calc()` pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini :
+Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons `calc()` pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini&nbsp;:
 
 ```html
 <form>
-  <div id="boiteformulaire">
-    <label>Tapez quelque chose :</label>
-    <input type="text" />
+  <div id="boite-formulaire">
+    <label for="misc">Tapez quelque chose&nbsp;:</label>
+    <input type="text" id="misc" name="misc" />
   </div>
 </form>
 ```
 
-{{EmbedLiveSample("Dimensionner_automatiquement_les_champs_d'un_formulaire_pour_s'ajuster_au_conteneur", '100%', '80')}}
+{{EmbedLiveSample("Dimensionner automatiquement les champs d'un formulaire pour s'ajuster au conteneur", "100%", 80)}}
 
 ### Imbriquer plusieurs `calc()` grâce aux variables CSS
 
-Prenons la feuille de style suivante :
+Prenons la feuille de style suivante&nbsp;:
 
 ```css
 .toto {
@@ -114,22 +206,50 @@ Prenons la feuille de style suivante :
 }
 ```
 
-Une fois que toutes les variables sont développées, `largeurC` aura la valeur `calc( calc( 100px / 2) / 2)` et sera ensuite affectée à la propriété {{cssxref("width")}} des éléments de la classe `toto`. Tous les `calc()` imbriqués, quel que soit leur nombre, seront convertis en parenthèses, la valeur sera donc calculée comme `calc( ( 100px / 2) / 2)` (soit 25px). En résumé, utiliser des `calc()` imbriqués revient à utiliser des parenthèses.
+Une fois que toutes les variables sont développées, `--largeurC` a la valeur `calc(calc(100px / 2) / 2)`. Lorsqu'elle est affectée à la propriété `width` de `.toto`, toutes les fonctions `calc()` imbriquées (peu importe leur profondeur) sont aplaties en simples parenthèses. Par conséquent, la valeur de la propriété `width` est finalement `calc((100px / 2) / 2)`, ce qui équivaut à `25px`. En résumé, un `calc()` à l'intérieur d'un autre `calc()` est identique à l'utilisation de parenthèses.
 
-## Accessibilité
+### Ajuster les canaux de couleur dans les couleurs relatives
 
-Lorsque vous utilisez `calc()` pour définir la taille d'un texte, assurez-vous d'inclure [une unité de longueur relative](/fr/docs/Web/CSS/Reference/Values/length#unités_de_longueur_relatives). Par exemple :
+La fonction `calc()` peut être utilisée pour ajuster les canaux de couleur individuels dans les [couleurs relatives](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors) sans avoir besoin de stocker les valeurs des canaux de couleur en tant que variables.
 
-```css
-h1 {
-  font-size: calc(1.5rem + 3vw);
+Dans l'exemple ci-dessous, le premier paragraphe utilise une couleur nommée ({{CSSxRef("&lt;named-color&gt;")}}).
+Dans les paragraphes qui suivent, `calc()` est utilisé avec les fonctions {{CSSxRef("color_value/rgb", "rgb()")}} et {{CSSxRef("color_value/hsl", "hsl()")}} pour ajuster les valeurs de chaque canal de couleur par rapport à la couleur nommée d'origine.
+
+```html
+<p class="originale">Couleur originale du texte en rebeccapurple</p>
+<p class="teinte-augmentee">Teinte augmentée de 80</p>
+<p class="luminosite-augmentee">Luminosité augmentée de 20</p>
+<p class="luminosite-diminuee">Luminosité diminuée de 10</p>
+```
+
+```css hidden
+p {
+  font-family: monospace;
+  font-size: 16px;
 }
 ```
 
-De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.
+```css
+.originale {
+  color: rebeccapurple;
+}
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+.teinte-augmentee {
+  color: lch(from rebeccapurple l c calc(h + 80));
+}
+
+.luminosite-augmentee {
+  color: lch(from rebeccapurple calc(l + 20) c h);
+}
+
+.luminosite-diminuee {
+  color: lch(from rebeccapurple calc(l - 10) c h);
+}
+```
+
+{{EmbedLiveSample("Ajuster les canaux de couleur dans les couleurs relatives", 700, 300)}}
+
+Pour un autre exemple d'utilisation de la fonction `calc()` pour dériver des couleurs relatives, voir la section [Utiliser les fonctions mathématiques](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors#utiliser_les_fonctions_mathématiques) de la page _Utiliser les couleurs relatives_.
 
 ## Spécifications
 
@@ -141,4 +261,7 @@ De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.
 
 ## Voir aussi
 
-- [Firefox 4 : CSS3 `calc()` sur Mozilla Hacks](https://hacks.mozilla.org/2010/06/css3-calc/)
+- Le type de donnée {{CSSxRef("&lt;calc-sum&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;calc-keyword&gt;")}}
+- [Les fonctions CSS](/fr/docs/Web/CSS/Reference/Values/Functions)
+- [Un guide complet sur `calc()` en CSS <sup>(angl.)</sup>](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)
