@@ -16,5 +16,5 @@ JavaScript には、他に 2 種類のシンボルが定義されています。
 ## 関連情報
 
 - ウィキペディアの [データ型](https://ja.wikipedia.org/wiki/%E3%83%87%E3%83%BC%E3%82%BF%E5%9E%8B)
-- Wikipedia の [Symbol](https://en.wikipedia.org/wiki/Symbol_(programming))
+- Wikipedia の [Symbol](<https://en.wikipedia.org/wiki/Symbol_(programming)>)
 - JavaScript のグローバルオブジェクト {{jsxref("Symbol")}}
