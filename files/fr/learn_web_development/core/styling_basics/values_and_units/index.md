@@ -72,15 +72,15 @@ Le type numérique que vous rencontrerez le plus souvent est le type `<length>`.
 
 La liste qui suit contient uniquement des unités de longueur **absolue**. Ces quantités ne sont pas relatives à quoi que ce soit d'autre et leur taille sera considérée comme constante.
 
-| Unité | Nom                              | Équivalent à         |
-| ----- | -------------------------------- | -------------------- |
-| `cm`  | Centimètres                      | 1cm = 38px = 25/64in |
-| `mm`  | Millimètres                      | 1mm = 1/10th of 1cm  |
-| `Q`   | Quarts de millimètre             | 1Q = 1/40th of 1cm   |
-| `in`  | Pouces (<i lang="en">inches</i>) | 1in = 2.54cm = 96px  |
-| `pc`  | Picas                            | 1pc = 1/6e de 1in    |
-| `pt`  | Points                           | 1pt = 1/72e de 1in   |
-| `px`  | Pixels                           | 1px = 1/96th de 1in  |
+| Unité | Nom                              | Équivalent à           |
+| ----- | -------------------------------- | ---------------------- |
+| `cm`  | Centimètres                      | 1cm = 25/64in ≈ 37.8px |
+| `mm`  | Millimètres                      | 1mm = 1/10th of 1cm    |
+| `Q`   | Quarts de millimètre             | 1Q = 1/40th of 1cm     |
+| `in`  | Pouces (<i lang="en">inches</i>) | 1in = 2.54cm = 96px    |
+| `pc`  | Picas                            | 1pc = 1/6e de 1in      |
+| `pt`  | Points                           | 1pt = 1/72e de 1in     |
+| `px`  | Pixels                           | 1px = 1/96th de 1in    |
 
 La plupart de ces unités sont utiles pour l'impression plutôt que pour l'affichage sur un écran. Ainsi, on n'utilise généralement pas `cm` (centimètres) sur un écran. La seule unité ici que vous rencontrerez fréquemment est `px` (pixels).
 
