@@ -1,9 +1,9 @@
 ---
-title: polygon()
+title: Fonction CSS `polygon()`
+short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
-original_slug: Web/CSS/basic-shape/polygon
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`polygon()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle permet de dessiner un [polygone](https://fr.wikipedia.org/wiki/Polygone) en fournissant une ou plusieurs paires de coordonnées, chacune représentant un sommet de la forme.
@@ -47,14 +47,14 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 ## Syntaxe
 
 ```css-nolint
-/* Spécifié comme liste de coordonnées */
+/* Définie comme liste de coordonnées */
 /* polygon(<length-percentage> <length-percentage>, ... )*/
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
 polygon(0px 0px, 200px 100px, 0px 200px)
 polygon(0% 0px, 100% 100px, 0% 100%)
 polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%)
 
-/* Spécifié comme liste de coordonnées et règle de remplissage */
+/* Définie comme liste de coordonnées et règle de remplissage */
 /* polygon(<fill-rule> <length-percentage> <length-percentage>, ... )*/
 polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
@@ -102,7 +102,7 @@ Cela crée un rectangle de la taille de son parent en définissant les coordonn�
 
 {{CSSSyntax}}
 
-## Examples
+## Exemples
 
 ### Créer un triangle
 
@@ -127,11 +127,11 @@ Dans cet exemple, un triangle est formé en définissant les coordonnées de ses
 
 #### Résultat
 
-{{EmbedLiveSample("créer_un_triangle", '100%', 400)}}
+{{EmbedLiveSample("Créer un triangle", "100%", 400)}}
 
 Les coordonnées du triangle sont le coin en haut à droite (`100% 0%`), le point central (`50% 50%`) et le coin en bas à droite (`100% 100%`) du conteneur.
 
-### Définir un polygone pour shape-outside
+### Définir un polygone pour `shape-outside`
 
 Dans cet exemple, une forme est créée pour que le texte la suive grâce à la propriété {{CSSxRef("shape-outside")}}.
 
@@ -181,7 +181,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("définir_un_polygone_pour_shape-outside", '100%', 400)}}
+{{EmbedLiveSample("Définir un polygone pour `shape-outside`", "100%", 400)}}
 
 ## Spécifications
 

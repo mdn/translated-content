@@ -1,14 +1,14 @@
 ---
-title: path()
+title: Fonction CSS `path()`
+short-title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
-original_slug: Web/CSS/basic-shape/path
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/Guides/Motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS [`offset-path`](/fr/docs/Web/CSS/Reference/Properties/offset-path) et [`clip-path`](/fr/docs/Web/CSS/Reference/Properties/clip-path), ainsi que dans l'attribut SVG [`d`](/fr/docs/Web/SVG/Reference/Attribute/d).
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/Guides/Motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS {{CSSxRef("offset-path")}} et {{CSSxRef("clip-path")}}, ainsi que dans l'attribut SVG {{SVGAttr("d")}}.
 
-Il existe certaines limitations à l'utilisation de la fonction `path()`. Le tracé doit être défini comme une seule chaîne de caractères, il n'est donc pas possible de créer un tracé personnalisé à l'aide de variables (fonctions [`var()`](/fr/docs/Web/CSS/Reference/Values/var)). De plus, toutes les longueurs du tracé sont implicitement définies en [pixels](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`)&nbsp;; aucune autre unité n'est acceptée. La fonction [`shape()`](/fr/docs/Web/CSS/Reference/Values/basic-shape/shape) offre plus de flexibilité que la fonction `path()`.
+Il existe certaines limitations à l'utilisation de la fonction `path()`. Le tracé doit être défini comme une seule chaîne de caractères, il n'est donc pas possible de créer un tracé personnalisé à l'aide de variables (fonctions {{CSSxRef("var()")}}). De plus, toutes les longueurs du tracé sont implicitement définies en [pixels](/fr/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`)&nbsp;; aucune autre unité n'est acceptée. La fonction {{CSSxRef("basic-shape/shape", "shape()")}} offre plus de flexibilité que la fonction `path()`.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: path()")}}
 
@@ -67,12 +67,12 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80")
     > [!WARNING]
     > `<fill-rule>` n'est pas pris en charge dans {{CSSxRef("offset-path")}} et son utilisation invalide la propriété.
 
-- {{CSSxRef("string")}}
-  - : Une [chaîne de données](/fr/docs/Web/SVG/Reference/Attribute/d), placée entre guillemets, qui définit un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path). La chaîne de données du tracé SVG contient des [commandes de tracé](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands) qui utilisent implicitement l'unité pixel. Un tracé vide est considéré comme invalide.
+- {{CSSxRef("&lt;string&gt;")}}
+  - : Une [chaîne de caractères de données](/fr/docs/Web/SVG/Reference/Attribute/d), placée entre guillemets, qui définit un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path). La chaîne de caractères de données du tracé SVG contient des [commandes de tracé](/fr/docs/Web/SVG/Reference/Attribute/d#path_commands) qui utilisent implicitement l'unité pixel. Un tracé vide est considéré comme invalide.
 
 ### Valeur de retour
 
-Retourne une valeur {{CSSxRef("basic-shape")}}.
+Retourne une valeur {{CSSxRef("&lt;basic-shape&gt;")}}.
 
 ## Syntaxe formelle
 
@@ -133,13 +133,13 @@ btn.addEventListener("click", () => {
 });
 ```
 
-{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
+{{EmbedLiveSample("Utiliser la fonction `path()` comme valeur de `offset-path`", "100%", 350)}}
 
-### Modifier la valeur de l'attribut d du tracé SVG
+### Modifier la valeur de l'attribut `d` du tracé SVG
 
-La fonction `path()` peut être utilisée pour modifier la valeur de l'attribut [`d`](/fr/docs/Web/SVG/Reference/Attribute/d) d'un tracé SVG, qui peut aussi être défini à `none` dans votre CSS.
+La fonction `path()` peut être utilisée pour modifier la valeur de l'attribut {{SVGAttr("d")}} d'un tracé SVG, qui peut aussi être défini à `none` dans votre CSS.
 
-Le symbole «&nbsp;V&nbsp;» se retournera verticalement au survol, si `d` est pris en charge comme propriété CSS.
+Le symbole «&nbsp;V&nbsp;» se retourne verticalement au survol, si `d` est pris en charge comme propriété CSS.
 
 #### CSS
 
@@ -166,7 +166,7 @@ svg {
 
 #### Résultat
 
-{{EmbedLiveSample('Modify the value of the SVG path d attribute', '100%', 200)}}
+{{EmbedLiveSample("Modifier la valeur de l'attribut `d` du tracé SVG", "100%", 200)}}
 
 ## Spécifications
 
@@ -178,7 +178,7 @@ svg {
 
 ## Voir aussi
 
-- {{CSSxRef("&lt;shape-outside&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;shape-outside&gt;")}}
 - Le module des [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - [Guide illustré de la syntaxe du tracé SVG <sup>(angl.)</sup>](https://css-tricks.com/svg-path-syntax-illustrated-guide/) sur CSS-tricks (2021)
