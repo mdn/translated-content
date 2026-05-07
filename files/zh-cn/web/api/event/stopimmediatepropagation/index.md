@@ -1,5 +1,5 @@
 ---
-title: "Event: stopImmediatePropagation() 方法"
+title: Event：stopImmediatePropagation() 方法
 short-title: stopImmediatePropagation()
 slug: Web/API/Event/stopImmediatePropagation
 l10n:
@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-{{domxref("Event")}} 接口的 **`stopImmediatePropagation()`** 方法阻止监听同一事件的其他事件监听器被调用。
+{{domxref("Event")}} 接口的 **`stopImmediatePropagation()`** 方法阻止监听同一事件的其他监听器被调用。
 
-如果多个事件监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个事件监听器中执行 `stopImmediatePropagation()`，则该元素上以及任何其他元素上的剩余监听器都不会被调用。
+如果多个监听器被附加到相同元素的相同事件类型上，当此事件触发时，它们会按其被添加的顺序被调用。如果在其中一个监听器中执行 `stopImmediatePropagation()`，则该元素上以及任何其他元素上的剩余监听器都不会被调用。
 
 ## 语法
 
@@ -33,8 +33,8 @@ stopImmediatePropagation()
 下面的示例包含三个嵌套的 div 元素，每个 div 内都有一个按钮。每个按钮都注册了三个 click 事件监听器，每个 div 也注册了一个 click 事件监听器。
 
 - 顶部按钮允许正常的事件传播。
-- 中间按钮在其第一个事件处理程序中调用 `stopPropagation()`。
-- 底部按钮在其第一个事件处理程序中调用 `stopImmediatePropagation()`。
+- 中间按钮在其第一个事件处理器中调用 `stopPropagation()`。
+- 底部按钮在其第一个事件处理器中调用 `stopImmediatePropagation()`。
 
 #### HTML
 
@@ -95,13 +95,13 @@ document.addEventListener(
 document.querySelectorAll("button").forEach((elem) => {
   for (let i = 1; i <= 3; i++) {
     elem.addEventListener("click", (evt) => {
-      /* 在第一个事件处理程序中进行传播停止操作 */
+      /* 在第一个事件处理器中进行传播停止操作 */
       if (i === 1 && elem.id) {
         evt[elem.id]();
-        outElem.textContent += `事件处理程序 1 调用了 ${elem.id}()\n`;
+        outElem.textContent += `事件处理器 1 调用了 ${elem.id}()\n`;
       }
 
-      outElem.textContent += `在"${elem.textContent}"按钮上处理了 click 事件 ${i}\n`;
+      outElem.textContent += `在“${elem.textContent}”按钮上处理了 click 事件 ${i}\n`;
     });
   }
 });
@@ -113,14 +113,14 @@ document
     elem.addEventListener(
       "click",
       (evt) =>
-        (outElem.textContent += `在"${elem.firstChild.data.trim()}"上处理了 click 事件\n`),
+        (outElem.textContent += `在“${elem.firstChild.data.trim()}”上处理了 click 事件\n`),
     ),
   );
 ```
 
 #### 结果
 
-每个 click 事件处理程序在被调用时都会显示一条状态消息。如果你按下中间的按钮，你会看到 `stopPropagation()` 允许在该按钮上注册的所有 click 事件处理程序执行，但阻止了 div 的 click 事件处理程序执行（通常情况下会执行）。然而，如果你按下底部的按钮，`stopImmediatePropagation()` 会停止调用该方法的事件之后的所有事件传播。
+每个 click 事件处理器在被调用时都会显示一条状态消息。如果你按下中间的按钮，你会看到 `stopPropagation()` 允许在该按钮上注册的所有 click 事件处理器执行，但阻止了 div 的 click 事件处理器执行（通常情况下会执行）。然而，如果你按下底部的按钮，`stopImmediatePropagation()` 会停止调用该方法的事件之后的所有事件传播。
 
 {{ EmbedLiveSample("比较事件阻止函数", 500, 550) }}
 
