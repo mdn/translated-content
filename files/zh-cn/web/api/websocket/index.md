@@ -9,7 +9,7 @@ l10n:
 
 `WebSocket` 对象提供了用于创建和管理与服务器的 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 连接，以及可以通过该连接发送和接收数据的 API。
 
-使用 [`WebSocket()`](/zh-CN/docs/Web/API/WebSocket/WebSocket) 构造函数来构造一个 `WebSocket`。
+使用 [`WebSocket()`](/zh-CN/docs/Web/API/WebSocket/WebSocket) 构造函数来构造 `WebSocket`。
 
 > [!NOTE]
 > `WebSocket` API 无法应用[背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压（backpressure）)，因此当消息到达速度超过应用程序的处理速度时，应用程序要么因缓冲这些消息而耗尽设备内存，要么因 100% CPU 使用率而变得无响应，甚至可能同时出现这两种情况。如需一种能提供自动背压的替代方案，请参见 {{domxref("WebSocketStream")}}。
@@ -24,7 +24,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("WebSocket.binaryType")}}
-  - : 使用二进制的数据类型连接。
+  - : 由连接所使用的二进制数据类型。
 - {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : 队列中数据的字节数。
 - {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
@@ -34,7 +34,7 @@ l10n:
 - {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : 连接的当前状态。
 - {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
-  - : WebSocket 的绝对路径。
+  - : WebSocket 的绝对 URL。
 
 ## 实例方法
 
@@ -45,16 +45,16 @@ l10n:
 
 ## 事件
 
-使用 `addEventListener()` 或将一个事件监听器赋值给本接口的 `oneventname` 属性，来监听下面的事件。
+使用 `addEventListener()` 或将事件监听器赋值给此接口的 `oneventname` 属性，来监听下面的事件。
 
 - {{domxref("WebSocket/close_event", "close")}}
-  - : 当一个 `WebSocket` 连接被关闭时触发。也可以通过 `onclose` 属性使用。
+  - : 当 `WebSocket` 连接被关闭时触发。也可以通过 `onclose` 属性使用。
 - {{domxref("WebSocket/error_event", "error")}}
-  - : 当一个 `WebSocket` 连接因错误（例如无法发送数据）而关闭时触发。也可以通过 `onerror` 属性使用。
+  - : 当 `WebSocket` 连接因错误（例如无法发送数据）而关闭时触发。也可以通过 `onerror` 属性使用。
 - {{domxref("WebSocket/message_event", "message")}}
   - : 当通过 `WebSocket` 收到数据时触发。也可以通过 `onmessage` 属性使用。
 - {{domxref("WebSocket/open_event", "open")}}
-  - : 当一个 `WebSocket` 连接成功时触发。也可以通过 `onopen` 属性使用。
+  - : 当 `WebSocket` 连接成功时触发。也可以通过 `onopen` 属性使用。
 
 ## 示例
 
