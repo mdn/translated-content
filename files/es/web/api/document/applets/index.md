@@ -3,7 +3,7 @@ title: document.applets
 slug: Web/API/Document/applets
 ---
 
-{{APIRef("DOM")}}{{ Deprecated_header() }}
+{{APIRef("DOM")}}{{ Deprecated_header }}
 
 ### Resumen
 
