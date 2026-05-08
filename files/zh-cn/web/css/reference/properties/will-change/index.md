@@ -1,5 +1,6 @@
 ---
-title: will-change
+title: `will-change` CSS 属性
+short-title: will-change
 slug: Web/CSS/Reference/Properties/will-change
 l10n:
   sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
