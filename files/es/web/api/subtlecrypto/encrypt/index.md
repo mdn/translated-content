@@ -1,6 +1,6 @@
 ---
-title: "SubtleCrypto: método encrypt() "
-short-title: "encrypt()"
+title: "SubtleCrypto: método encrypt()"
+short-title: encrypt()
 slug: Web/API/SubtleCrypto/encrypt
 l10n:
   sourceCommit: 373b648fd3f8f742aac14180ebe4ab2e07f8dfab
@@ -10,7 +10,7 @@ l10n:
 
 El método **`encrypt()`** de la interfaz {{domxref("SubtleCrypto")}} cifra datos.
 
-Recibe como argumento una {{glossary("key")}} para cifrar, los parámetros específicos del algoritmo, y los datos que se van a cifrar (también conocido como "texto plano" o "plaintext" en inglés).
+Recibe como argumento una {{glossary("key", "clave")}} para cifrar, los parámetros específicos del algoritmo, y los datos que se van a cifrar (también conocido como "texto plano" o "plaintext" en inglés).
 Retorna un objeto {{jsxref("Promise")}} que se resolverá con los datos cifrados (También conocidos como "texto cifrado" o "ciphertext" en inglés).
 
 ## Sintaxis
@@ -22,14 +22,14 @@ encrypt(algorithm, key, data)
 ### Parámetros
 
 - `algorithm`
-  - : Un objeto que especifica el [algorithm](#supported_algorithms) que se va a utilizar y cualquier parámetro adicional necesario:
+  - : Un objeto que especifica el [algoritmo](#algoritmos_soportados) que se va a utilizar y cualquier parámetro adicional necesario:
     - Para usar [RSA-OAEP](#rsa-oaep), pasa un objeto {{domxref("RsaOaepParams")}}.
     - Para usar [AES-CTR](#aes-ctr), pasa un objeto {{domxref("AesCtrParams")}}.
     - Para usar [AES-CBC](#aes-cbc), pasa un objeto {{domxref("AesCbcParams")}}.
     - Para usar [AES-GCM](#aes-gcm), pasa un objeto {{domxref("AesGcmParams")}}.
 
 - `key`
-  - : Un objeto {{domxref("CryptoKey")}} que contienen la clave que se usará para el cifrado.
+  - : Un objeto {{domxref("CryptoKey")}} que contiene la clave que se usará para el cifrado.
 - `data`
   - : Un {{jsxref("ArrayBuffer")}}, un {{jsxref("TypedArray")}}, o un {{jsxref("DataView")}}
     que contiene los datos a cifrar (también conocidos como {{glossary("plaintext", "texto plano")}}).
@@ -84,7 +84,7 @@ Un valor de bloque contador determinado nunca debe usarse más de una vez con la
 
 Normalmente, esto se logra dividiendo el valor inicial del bloque contador en dos partes concatenadas:
 
-- Un {{Glossary("Nonce")}} (un número que solo se puede usar una vez). La parte del nonce permanece igual para cada bloque del mensaje. Cada vez que se cifra un mensaje nuevo, se elige un nonce nuevo. Los nonces no tienen que ser secretos, pero no deben reutilizarse con la misma clave.
+- Un {{Glossary("Nonce", "nonce")}} (un número que solo se puede usar una vez). La parte del nonce permanece igual para cada bloque del mensaje. Cada vez que se cifra un mensaje nuevo, se elige un nonce nuevo. Los nonces no tienen que ser secretos, pero no deben reutilizarse con la misma clave.
 - Un contador. Esta parte del bloque se incrementa cada vez que se cifra un bloque.
 
 En esencia: el nonce garantiza que los bloques contadores no se reutilicen entre mensajes, mientras que el contador garantiza que no se reutilicen dentro de un mismo mensaje.
@@ -183,7 +183,7 @@ function encryptMessage(key) {
 
 ### AES-GCM
 
-Este codigo obtiene el contenido de un cuadro de texto, lo codifica para su cifrado y lo cifra mendiante AES en modo GCM. [Puedes consultar el código en GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
+Este código obtiene el contenido de un cuadro de texto, lo codifica para su cifrado y lo cifra mediante AES en modo GCM. [Puedes consultar el código en GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/encrypt-decrypt/aes-gcm.js)
 
 ```js
 function getMessageEncoding() {
@@ -201,11 +201,11 @@ function encryptMessage(key) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
@@ -213,6 +213,6 @@ function encryptMessage(key) {
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) especifica RSAOAEP.
-- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica CTR mode.
-- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica CBC mode.
-- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) especifica GCM mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica el modo CTR.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) especifica el modo CBC.
+- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) especifica el modo GCM.
