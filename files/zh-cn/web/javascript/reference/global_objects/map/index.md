@@ -37,7 +37,7 @@ console.log(map.size);
 
 `Map` 对象是键值对的集合。`Map` 中的一个键**只能出现一次**；它在 `Map` 的集合中是独一无二的。`Map` 对象按键值对迭代——一个 {{jsxref("Statements/for...of", "for...of")}} 循环在每次迭代后会返回一个形式为 `[key, value]` 的数组。迭代按*插入顺序*进行，即键值对按 [`set()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/set) 方法首次插入到集合中的顺序（也就是说，当调用 `set()` 时，map 中没有具有相同值的键）进行迭代。
 
-规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（查找效率为 O(1)）、搜索树（查找效率为 O(log(N))）或任何其他数据结构，只要复杂度小于 O(N)。
+规范要求 map 实现“平均访问时间与集合中的元素数量呈次线性关系”。因此，它可以在内部表示为散列表（查找复杂度为 O(1)）、搜索树（查找复杂度为 O(log(N))）或任何其他数据结构，只要复杂度小于 O(N)。
 
 ### 键的相等
 
@@ -45,9 +45,9 @@ console.log(map.size);
 
 ### `Object` 和 `Map` 的比较
 
-{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成 `Map` 使用。
+{{jsxref("Object")}} 和 `Map` 类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象（`Object`）当成 `Map` 使用。
 
-不过 `Map` 和 `Object` 有一些重要的区别，在下列情况中使用 `Map` 会是更好的选择：
+不过，它们之间有一些重要的区别，是的在一些情况下使用 `Map` 会是更好的选择：
 
 <table class="standard-table">
   <thead>
@@ -298,18 +298,18 @@ const keyObj = {};
 const keyFunc = () => {};
 
 // 添加键
-myMap.set(keyString, "和键'a string'关联的值");
+myMap.set(keyString, "和键“a string”关联的值");
 myMap.set(keyObj, "和键 keyObj 关联的值");
 myMap.set(keyFunc, "和键 keyFunc 关联的值");
 
 console.log(myMap.size); // 3
 
 // 读取值
-console.log(myMap.get(keyString)); // "和键'a string'关联的值"
+console.log(myMap.get(keyString)); // "和键“a string”关联的值"
 console.log(myMap.get(keyObj)); // "和键 keyObj 关联的值"
 console.log(myMap.get(keyFunc)); // "和键 keyFunc 关联的值"
 
-console.log(myMap.get("a string")); // "和键'a string'关联的值"，因为 keyString === 'a string'
+console.log(myMap.get("a string")); // "和键“a string”关联的值"，因为 keyString === 'a string'
 console.log(myMap.get({})); // undefined，因为 keyObj !== {}
 console.log(myMap.get(() => {})); // undefined，因为 keyFunc !== () => {}
 ```
