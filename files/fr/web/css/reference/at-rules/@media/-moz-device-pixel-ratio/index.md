@@ -1,9 +1,9 @@
 ---
-title: Fonction CSS `-moz-device-pixel-ratio`
+title: Caractéristique média CSS `-moz-device-pixel-ratio`
 short-title: -moz-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-moz-device-pixel-ratio
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 {{Non-standard_Header}}{{Deprecated_Header}}

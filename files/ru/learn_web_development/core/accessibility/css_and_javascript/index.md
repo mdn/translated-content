@@ -3,7 +3,7 @@ title: CSS и JavaScript доступность - лучшие практики
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 В CSS и JavaScript есть множество возможностей для создания доступных интерфейсов. Но это обоюдоострый клинок — при неосторожном обращении они могут доступности и значительно навредить. В этой статье мы рассмотрим лучшие практики в CSS и JavaScript, которые позволят даже сложному контенту оставаться доступным настолько, насколько это возможно.
 

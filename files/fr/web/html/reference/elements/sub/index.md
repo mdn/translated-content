@@ -1,8 +1,9 @@
 ---
-title: "<sub> : l'élément de mise en indice"
+title: "Élément HTML `<sub>` : l'élément de mise en indice"
+short-title: <sub>
 slug: Web/HTML/Reference/Elements/sub
 l10n:
-  sourceCommit: b9acb5397cf8e07966b1757a857e5000a009b04e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<sub>`** définit du texte en ligne qui doit être affiché en indice pour des raisons strictement typographiques. Les indices sont généralement rendus avec une ligne de base abaissée et un texte de plus petite taille.

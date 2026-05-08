@@ -1,9 +1,9 @@
 ---
-title: <custom-ident>
+title: Type CSS `<custom-ident>`
+short-title: <custom-ident>
 slug: Web/CSS/Reference/Values/custom-ident
-original_slug: Web/CSS/custom-ident
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<custom-ident>`** désigne une chaîne de caractères arbitraire définie par l'utilisateur·ice et utilisée comme {{Glossary("identifier", "identifiant")}}. Elle est sensible à la casse et certaines valeurs sont interdites dans divers contextes pour éviter toute ambiguïté.

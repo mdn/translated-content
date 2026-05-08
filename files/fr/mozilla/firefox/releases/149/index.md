@@ -81,9 +81,9 @@ Firefox 149 est sorti le [24 mars 2026 <sup>(angl.)</sup>](https://whattrainisit
 
 ## Changements pour les développeur·euse·s d'extensions
 
-- Ajout du support initial pour la vue fractionnée. Ce support couvre&nbsp;:
-  - L'inclusion de l'ID de la vue fractionnée dans {{WebExtAPIRef("tabs.query")}}, {{WebExtAPIRef("tabs.onUpdated")}} et {{WebExtAPIRef("tabs.Tab")}}
-  - La documentation du comportement lorsque {{WebExtAPIRef("tabs.move")}} ou {{WebExtAPIRef("tabs.remove")}} incluent des onglets dans une vue fractionnée.
+- Ajout du support initial pour la vue scindée. Ce support couvre&nbsp;:
+  - L'inclusion de l'ID de la vue scindée dans {{WebExtAPIRef("tabs.query")}}, {{WebExtAPIRef("tabs.onUpdated")}} et {{WebExtAPIRef("tabs.Tab")}}
+  - La documentation du comportement lorsque {{WebExtAPIRef("tabs.move")}} ou {{WebExtAPIRef("tabs.remove")}} incluent des onglets dans une vue scindée.
     ([bogue Firefox 1993037 <sup>(angl.)</sup>](https://bugzil.la/1993037))
 - Ajout du support pour `tabId` en tant que paramètre de niveau supérieur dans {{WebExtAPIRef("action.isEnabled")}} et {{WebExtAPIRef("browserAction.isEnabled")}}. Ce changement assure la compatibilité avec l'implémentation Chrome de `action.isEnabled`. ([bogue Firefox 2013477 <sup>(angl.)</sup>](https://bugzil.la/2013477))
 - Un geste de l'utilisateur·ice n'est plus requis pour {{WebExtAPIRef("action.openPopup")}} et {{WebExtAPIRef("browserAction.openPopup")}} pour ouvrir une fenêtre affichée par dessus le contenu (<i lang="en">popup</i> en anglais). Cette fonctionnalité était disponible derrière la préférence `extensions.openPopupWithoutUserGesture.enabled` depuis Firefox 108. Ce changement aligne le comportement de Firefox avec Chrome et Safari. ([bogue Firefox 1799344 <sup>(angl.)</sup>](https://bugzil.la/1799344))

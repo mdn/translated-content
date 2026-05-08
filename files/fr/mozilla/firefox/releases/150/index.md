@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: ce29b1c36065db92c2a59ba507a4941fbf0a5159
+  sourceCommit: 674d6c8868cde1654eaba3c285afde9d3b60ce9f
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.
@@ -82,9 +82,10 @@ Pas de changements notables.
 
 ## Changements pour les développeur·euse·s d'extensions
 
-- Le comportement de {{WebExtAPIRef("tabs.move")}} est mis à jour pour les vues fractionnées afin que&nbsp;:
-  - L'ordre des onglets dans une vue fractionnée puisse être échangé. ([bogue Firefox 2016762 <sup>(angl.)</sup>](https://bugzil.la/2016762))
-  - Lorsque la liste des onglets inclut à la fois des onglets de vue fractionnée et place un ou plusieurs onglets entre eux, les onglets sont déplacés et la vue fractionnée est fermée. ([bogue Firefox 2022549 <sup>(angl.)</sup>](https://bugzil.la/2022549))
+- Le comportement de {{WebExtAPIRef("tabs.move")}} est mis à jour pour les vues scindées afin que&nbsp;:
+  - L'ordre des onglets dans une vue scindée puisse être échangé. ([bogue Firefox 2016762 <sup>(angl.)</sup>](https://bugzil.la/2016762))
+  - Lorsque la liste des onglets inclut à la fois des onglets de vue scindée et place un ou plusieurs onglets entre eux, les onglets sont déplacés et la vue scindée est fermée. ([bogue Firefox 2022549 <sup>(angl.)</sup>](https://bugzil.la/2022549))
+- Les documents d'extension peuvent désormais utiliser [l'API Web Authentication](/fr/docs/Web/API/Web_Authentication_API) et affirmer un [ID de partie de confiance (RP ID)](/fr/docs/Web/API/PublicKeyCredentialCreationOptions#rp) pour tout domaine couvert par les [autorisations d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) de l'extension. Cela signifie que {{DOMxRef("CredentialsContainer.create()", "navigator.credentials.create()")}} et {{DOMxRef("CredentialsContainer.create()", "navigator.credentials.get()")}} peuvent définir un RP ID correspondant à un domaine autorisé, permettant aux extensions de créer et de récupérer des informations d'identification WebAuthn au nom des services web. Voir [Utiliser l'API Web Authn dans les extensions web](/fr/docs/Mozilla/Add-ons/WebExtensions/Use_the_web_authn_api) pour plus de détails. ([bogue Firefox 1956484 <sup>(angl.)</sup>](https://bugzil.la/1956484)).
 - Résolution d'un problème avec certains appels JavaScript [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) échouant à importer du CSS. ([bogue Firefox 2016369 <sup>(angl.)</sup>](https://bugzil.la/2016369))
 
 ## Fonctionnalités web expérimentales

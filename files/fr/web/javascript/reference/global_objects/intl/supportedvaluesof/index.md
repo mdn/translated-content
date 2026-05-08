@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9b86874b5762b52ce0055f58d561004d1a204ad5
 ---
 
-La méthode statique **`Intl.supportedValuesOf()`** retourne un tableau contenant les valeurs de calendrier, de collation, de monnaie, de systèmes de numérotation ou d'unités prises en charge par l'implémentation.
+La méthode statique **`Intl.supportedValuesOf()`** retourne un tableau contenant les valeurs de calendrier, de collation, de monnaie, de systèmes de numération ou d'unités prises en charge par l'implémentation.
 
 Les doublons sont omis et le tableau est trié par ordre lexicographique croissant (ou plus précisément, en utilisant {{JSxRef("Array/sort", "Array.prototype.sort()")}} avec une fonction de comparaison `undefined`).
 
@@ -47,7 +47,7 @@ Intl.supportedValuesOf(key)
     - `"calendar"`&nbsp;: voir [les types de calendriers pris en charge](#types_de_calendriers_pris_en_charge)
     - `"collation"`&nbsp;: voir [les types de collation pris en charge](#types_de_collation_pris_en_charge)
     - `"currency"`&nbsp;: voir [les identifiants de monnaies pris en charge](#identifiants_de_monnaies_pris_en_charge)
-    - `"numberingSystem"`&nbsp;: voir [les types de systèmes de numérotation pris en charge](#types_de_systèmes_de_numérotation_pris_en_charge)
+    - `"numberingSystem"`&nbsp;: voir [les types de systèmes de numération pris en charge](#types_de_systèmes_de_numération_pris_en_charge)
     - `"timeZone"`&nbsp;: voir [les identifiants de fuseaux horaires pris en charge](#identifiants_de_fuseaux_horaires_pris_en_charge)
     - `"unit"`&nbsp;: voir [les identifiants d'unités pris en charge](#identifiants_dunités_pris_en_charge)
 
@@ -67,11 +67,11 @@ Voici toutes les valeurs couramment prises en charge par les navigateurs pour la
 | `dangi`            | Calendrier coréen traditionnel, proleptique. Calendrier luni-solaire utilisant les mois publiés par le Korea Astronomy and Space Science Institute (KASI) entre 1900 et 2050, avec un retour à une approximation définie par l'implémentation en dehors de cette plage. L'année arithmétique est identique à `gregory`, et il n'y a pas d'ères.                                                              |
 | `ethioaa`          | Calendrier éthiopien, Amete Alem, proleptique. Algorithme solaire similaire à `coptic` et `ethiopic`, avec une ère et une année d'époque différente.                                                                                                                                                                                                                                                         |
 | `ethiopic`         | Calendrier éthiopien, Amete Mihret, proleptique. Algorithme solaire similaire à `coptic` et `ethioaa`, avec deux ères et une année d'époque différente.                                                                                                                                                                                                                                                      |
-| `gregory`          | Calendrier grégorien, proleptique. Calendrier solaire presque identique au calendrier ISO 8601, sauf qu'il ne définit pas la numérotation des semaines et qu'il contient deux ères, une avant l'année d'époque.                                                                                                                                                                                              |
+| `gregory`          | Calendrier grégorien, proleptique. Calendrier solaire presque identique au calendrier ISO 8601, sauf qu'il ne définit pas la numération des semaines et qu'il contient deux ères, une avant l'année d'époque.                                                                                                                                                                                                |
 | `hebrew`           | Calendrier hébraïque, proleptique. Calendrier civil avec Tishrei comme premier mois de l'année. Calendrier luni-solaire avec un mois intercalaire inséré après le mois 5. Il y a une ère.                                                                                                                                                                                                                    |
 | `indian`           | Calendrier national indien (ou Śaka), proleptique. Calendrier solaire avec une ère.                                                                                                                                                                                                                                                                                                                          |
-| `islamic-civil`    | Calendrier hégirien, proleptique, tabulaire/basé sur des règles avec la règle des années bissextiles II (années bissextiles 2,5,7,10,13,16,18,21,24,26,29 dans le cycle de 30 ans (numérotation à partir de 1)) et époque civile (vendredi 16 juillet 622 julien / 0622-07-19 ISO)                                                                                                                           |
-| `islamic-tbla`     | Calendrier hégirien, proleptique, tabulaire/basé sur des règles avec la règle des années bissextiles II (années bissextiles 2,5,7,10,13,16,18,21,24,26,29 dans le cycle de 30 ans (numérotation à partir de 1)) et époque astronomique (jeudi 15 juillet 622 julien / 0622-07-18 ISO)                                                                                                                        |
+| `islamic-civil`    | Calendrier hégirien, proleptique, tabulaire/basé sur des règles avec la règle des années bissextiles II (années bissextiles 2,5,7,10,13,16,18,21,24,26,29 dans le cycle de 30 ans (numération à partir de 1)) et époque civile (vendredi 16 juillet 622 julien / 0622-07-19 ISO)                                                                                                                             |
+| `islamic-tbla`     | Calendrier hégirien, proleptique, tabulaire/basé sur des règles avec la règle des années bissextiles II (années bissextiles 2,5,7,10,13,16,18,21,24,26,29 dans le cycle de 30 ans (numération à partir de 1)) et époque astronomique (jeudi 15 juillet 622 julien / 0622-07-18 ISO)                                                                                                                          |
 | `islamic-umalqura` | Calendrier hégirien, proleptique, Umm al-Qura. Calendrier lunaire utilisant les mois calculés par KACST du début de 1300 AH (1882-11-12 ISO) à la fin de 1600 AH (2174-11-25 ISO), avec un retour à `islamic-civil` en dehors de cette plage.                                                                                                                                                                |
 | `iso8601`          | Calendrier ISO (variante du calendrier grégorien avec des règles de semaine et des paramètres de formatage rendus indépendants de la région)                                                                                                                                                                                                                                                                 |
 | `japanese`         | Calendrier impérial japonais (ce calendrier ajoute une ère pour chaque nouvel empereur, donc l'année et l'ère de sortie pour une date future peuvent ne pas correspondre à l'année et à l'ère d'entrée lorsque votre code s'exécute sur une future version du moteur. **Remarque&nbsp;:** Voir les remarques sous ce tableau concernant les dates antérieures au 23/10/1868 ISO.)                            |
@@ -142,9 +142,9 @@ Références&nbsp;:
 - [Codes de monnaie ISO 4217 <sup>(angl.)</sup>](https://www.iso.org/iso-4217-currency-codes.html)
 - [UTS 35, Monnaies <sup>(angl.)</sup>](https://unicode.org/reports/tr35/tr35-numbers.html#Currencies)
 
-#### Types de systèmes de numérotation pris en charge
+#### Types de systèmes de numération pris en charge
 
-Voici toutes les valeurs couramment prises en charge par les navigateurs pour la clé `numberingSystem`. Ces valeurs peuvent être utilisées pour l'option `numberingSystem` ou la [clé d'extension Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#argument_locales) `nu` lors de la création d'objets comme {{JSxRef("Intl.NumberFormat")}}. Pour les lignes avec «&nbsp;chiffres&nbsp;», l'exécution traduit les chiffres un par un sans action supplémentaire. Les autres, marquées «&nbsp;algorithmique&nbsp;», nécessitent des algorithmes supplémentaires pour traduire les chiffres. Plus le point de code Unicode est élevé, plus le système de numérotation est récent et plus il est probable qu'il ne soit pas pris en charge par tous les navigateurs.
+Voici toutes les valeurs couramment prises en charge par les navigateurs pour la clé `numberingSystem`. Ces valeurs peuvent être utilisées pour l'option `numberingSystem` ou la [clé d'extension Unicode](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#argument_locales) `nu` lors de la création d'objets comme {{JSxRef("Intl.NumberFormat")}}. Pour les lignes avec «&nbsp;chiffres&nbsp;», l'exécution traduit les chiffres un par un sans action supplémentaire. Les autres, marquées «&nbsp;algorithmique&nbsp;», nécessitent des algorithmes supplémentaires pour traduire les chiffres. Plus le point de code Unicode est élevé, plus le système de numération est récent et plus il est probable qu'il ne soit pas pris en charge par tous les navigateurs.
 
 | Value      | Description                                                                                         | Digit characters                                                                                        |
 | ---------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -249,9 +249,9 @@ Il existe trois valeurs spéciales&nbsp;: `native`, `traditio` et `finance`, don
 
 Références&nbsp;:
 
-- [Clés de type de système de numérotation CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/bcp47/number.xml)
-- [Définitions des systèmes de numérotation CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)
-- [UTS 35, Systèmes de numérotation <sup>(angl.)</sup>](https://unicode.org/reports/tr35/tr35-numbers.html#Numbering_Systems)
+- [Clés de type de système de numération CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/bcp47/number.xml)
+- [Définitions des systèmes de numération CLDR <sup>(angl.)</sup>](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)
+- [UTS 35, Systèmes de numération <sup>(angl.)</sup>](https://unicode.org/reports/tr35/tr35-numbers.html#Numbering_Systems)
 
 #### Identifiants de fuseaux horaires pris en charge
 

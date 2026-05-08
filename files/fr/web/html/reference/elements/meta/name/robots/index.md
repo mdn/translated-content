@@ -3,7 +3,7 @@ title: Valeur d'attribut HTML `<meta name="robots">`
 short-title: robots
 slug: Web/HTML/Reference/Elements/meta/name/robots
 l10n:
-  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 La valeur **`robots`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} (souvent appelée «&nbsp;balise robots&nbsp;») définit le comportement d'exploration et d'indexation que les {{Glossary("Crawler", "robots d'exploration")}} web doivent utiliser avec la page.
@@ -47,16 +47,16 @@ Un élément `<meta name="robots">` peut avoir les attributs supplémentaires su
         Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/special-tags?visit_id=637855965074074862-574753619&rd=1&hl=fr).
     - `noarchive`
       - : Demande au moteur de recherche de ne pas mettre en cache le contenu de la page.
-        Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo <sup>(angl.)</sup>](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo <sup>(angl.)</sup>](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `nosnippet`
       - : Empêche l'affichage d'une description de la page dans les résultats des moteurs de recherche.
-        Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr), [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr), [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `noimageindex`
       - : Demande que cette page n'apparaisse pas comme page référente d'une image indexée.
         Utilisé par&nbsp;: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag?hl=fr).
     - `nocache`
       - : Synonyme de `noarchive`.
-        Utilisé par&nbsp;: [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Utilisé par&nbsp;: [Bing <sup>(angl.)</sup>](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
 
 ## Description
 
@@ -66,7 +66,7 @@ Il y a plusieurs points importants à noter lors de la définition d'une valeur 
 - Si elles sont définies dans une balise `<meta>`, les robots doivent tout de même accéder à la page pour lire ces règles. Pour réduire la bande passante, envisagez d'utiliser un [fichier robots.txt](/fr/docs/Web/Security/Practical_implementation_guides/Robots_txt) à la place.
 - La balise `<meta name="robots">` et le fichier `robots.txt` ont des rôles différents&nbsp;: `robots.txt` contrôle l'exploration, tandis que la balise meta `robots` influence l'indexation et d'autres comportements.
 - Une page bloquée par `robots.txt` peut tout de même être indexée si elle est liée depuis d'autres sources.
-- La directive `noindex` ne prendra effet qu'après que le robot aura revisité la page, donc assurez-vous que `robots.txt` ne l'empêche pas.
+- La directive `noindex` ne prend effet qu'après que le robot a revisité la page, donc assurez-vous que `robots.txt` ne l'empêche pas.
 - Certaines valeurs, comme `index` vs. `noindex` ou `follow` vs. `nofollow`, sont mutuellement exclusives. Le comportement est indéfini en cas de valeurs contradictoires.
 - Des robots comme Google, Yahoo et Bing prennent aussi en charge ces directives dans l'en-tête HTTP {{HTTPHeader("X-Robots-Tag")}}, ce qui est utile pour les contenus non-HTML comme les PDF ou les images.
 

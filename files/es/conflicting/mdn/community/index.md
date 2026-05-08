@@ -34,7 +34,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
   <tbody>
     <tr>
       <td>
-        <a href="/es/docs/MDN/Contribute/Fixing_MDN_content_bugs"
+        <a href="/es/docs/MDN/Community/Getting_started"
           >Corrección de errores de contenido de MDN</a
         >
       </td>

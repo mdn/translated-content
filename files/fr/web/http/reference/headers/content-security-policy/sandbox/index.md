@@ -1,10 +1,13 @@
 ---
-title: "CSP: sandbox"
+title: "Content-Security-Policy : directive sandbox"
+short-title: sandbox
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
-original_slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (_sandbox_) pour les ressources demandées similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) des éléments {{HTMLElement("iframe")}}. Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intruses (_popups_) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** active un bac à sable (<i lang="en">sandbox</i> en anglais) pour les ressources demandées, similaire à l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) des éléments HTML {{HTMLElement("iframe")}}.
+Elle applique des restrictions aux actions d'une page, dont le fait d'empêcher les fenêtres intrusives (<i lang="en">popups</i> en anglais) et l'exécution de greffons et de scripts et de créer une contrainte de même origine.
 
 <table class="properties">
   <tbody>
@@ -14,13 +17,11 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** 
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Document directive")}}</td>
+      <td>{{Glossary("Document directive", "Directive de document")}}</td>
     </tr>
     <tr>
       <th colspan="2" scope="row">
-        Cette directive n'est pas supportée dans l'élément
-        {{HTMLElement("meta")}} ou par l'en-tête
-        {{HTTPHeader("Content-Security-policy-Report-Only")}}.
+        Cette directive n'est pas prise en charge dans l'élément HTML {{HTMLElement("meta")}} ou par l'en-tête {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
       </th>
     </tr>
   </tbody>
@@ -28,46 +29,52 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** 
 
 ## Syntaxe
 
-```
+```http
 Content-Security-Policy: sandbox;
-Content-Security-Policy: sandbox <valeur>;
+Content-Security-Policy: sandbox <value>;
 ```
 
-Où `<valeur>` peut optionnellement être une valeur parmi :
+Où `<value>` peut optionnellement être une valeur parmi&nbsp;:
 
-- `allow-downloads-without-user-activation` {{experimental_inline}}
-  - : Autorise les téléchargements sans action de l'utilisateur.
-
-<!---->
-
+- `allow-downloads`
+  - : Permet de télécharger des fichiers via un élément HTML {{HTMLElement("a")}} ou {{HTMLElement("area")}} avec l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#download), ainsi que par la navigation qui mène au téléchargement d'un fichier.
+    Cela fonctionne indépendamment du fait que l'utilisateur·ice ait cliqué sur le lien ou que le code JS l'ait initié sans interaction de l'utilisateur·ice.
 - `allow-forms`
-  - : Autorise la soumission de de formulaires. Si ce mot-clé n'est pas spécifié, cette opération est interdite.
+  - : Permet à la page de soumettre des formulaires. Si ce mot-clé n'est pas utilisé, le formulaire sera affiché normalement, mais sa soumission ne déclenchera pas la validation des entrées, l'envoi des données à un serveur web ou la fermeture d'une boîte de dialogue.
 - `allow-modals`
-  - : Autorise la page à ouvrir des fenêtres modales.
+  - : Permet à la page d'ouvrir des fenêtres bloquantes avec {{DOMxRef("Window.alert()")}}, {{DOMxRef("Window.confirm()")}}, {{DOMxRef("Window.print()")}} et {{DOMxRef("Window.prompt()")}}, tandis que l'ouverture d'un {{HTMLElement("dialog")}} est autorisée indépendamment de ce mot-clé. Cela permet également à la page de recevoir l'évènement {{DOMxRef("BeforeUnloadEvent")}}.
 - `allow-orientation-lock`
-  - : Autorise la page à désactiver la possibilité de verrouiller l'orientation de l'écran.
+  - : Permet à la ressource de [verrouiller l'orientation de l'écran](/fr/docs/Web/API/Screen/lockOrientation).
 - `allow-pointer-lock`
-  - : Autorise la page à utiliser l'[API Pointer Lock](/fr/docs/Web/API/Pointer_Lock_API).
+  - : Permet à la page d'utiliser [l'API de verrouillage du pointeur](/fr/docs/Web/API/Pointer_Lock_API).
 - `allow-popups`
-  - : Autorise les fenêtres intruses (comme avec `window.open`, `target="_blank"`, `showModalDialog`). Si ce mot-clé n'est pas utilisée, cette fonctionnalité échouera en silence.
+  - : Permet les fenêtres intrusives (créées, par exemple, par {{DOMxRef("Window.open()")}} ou `target="_blank"`).
+    Si ce mot-clé n'est pas utilisé, l'affichage des fenêtres intrusives échouera silencieusement.
 - `allow-popups-to-escape-sandbox`
-  - : Autorise un document cloisonné dans une bac à sable à ouvrir de nouvelles fenêtres sans les contraindre à appliquer les mêmes règles. Cela permettra, par exemple, à une publicité externe d'être sainement cloisonnée sans imposer les mêmes restrictions sur une page d'accueil.
+  - : Permet à un document en bac à sable d'ouvrir de nouvelles fenêtres sans lui imposer les restrictions du bac à sable. Cela permettra, par exemple, à une publicité tierce d'être sécurisée dans un bac à sable sans imposer les mêmes restrictions à la page vers laquelle la publicité renvoie.
 - `allow-presentation`
-  - : Autorise les pages embarquantes à avoir contrôle sur la possibilité pour l'iframe de démarrer une session de présentation ou non.
+  - : Permet aux intégrateurs de contrôler si un cadre intégré peut démarrer une [session de présentation](/fr/docs/Web/API/PresentationRequest).
 - `allow-same-origin`
-  - : Autorise le contenu à être traité comme étant de son origine normale. Si ce mot-clé n'est pas utilisé, les contenu embarqués seront traités comme étant d'une origine unique.
+  - : Permet à une ressource en bac à sable de conserver son {{Glossary("origin", "origine")}}.
+    Une ressource en bac à sable est autrement traitée comme provenant d'une [origine opaque](/fr/docs/Glossary/Origin#origine_opaque), ce qui garantit qu'elle échouera toujours aux vérifications de la {{Glossary("same-origin policy", "politique de même origine")}}, et donc ne pourra pas accéder à [`localstorage` et `document.cookie`](/fr/docs/Web/Security/Defenses/Same-origin_policy#accès_au_stockage_de_données_inter-origines) et à certaines API JavaScript.
+    L'en-tête {{HTTPHeader("Origin")}} des ressources en bac à sable sans le mot-clé `allow-same-origin` est `null`.
 - `allow-scripts`
-  - : Autorise la page à exécuter des scripts (mais non créer des fenêtres intruses). Si ce mot-clé n'est pas utilisée, cette opération n'est pas permise.
-- `allow-storage-access-by-user-activation` {{experimental_inline}}
-  - : Laisse les requêtes de ressources accéder à l'espace de stockage du parent avec l'[API Storage Access](/fr/docs/Web/API/Storage_Access_API).
+  - : Permet à la page d'exécuter des scripts (mais pas de créer des fenêtres intrusives). Si ce mot-clé n'est pas utilisé, cette opération n'est pas autorisée.
+- `allow-storage-access-by-user-activation` {{Experimental_Inline}}
+  - : Permet à la ressource de demander l'accès aux capacités de stockage du parent avec [l'API d'accès au stockage](/fr/docs/Web/API/Storage_Access_API).
 - `allow-top-navigation`
-  - : Autorise la page à charger du contenu au niveau supérieur de contexte navigationnel. Si ce mot-clé n'est pas utilisé, cette opération n'est pas permise.
+  - : Permet à la ressource de naviguer dans le contexte de navigation de niveau supérieur (celui nommé `_top`).
 - `allow-top-navigation-by-user-activation`
-  - : Laisse la ressource naviguer jusqu'au niveau supérieur de contexte navigationnel, mais seulement si initié par une aciton de l'utilisateur.
+  - : Permet à la ressource de naviguer dans le contexte de navigation de niveau supérieur, mais uniquement si cela est initié par un geste de l'utilisateur·ice.
+- `allow-top-navigation-to-custom-protocols`
+  - : Permet les navigations vers des protocoles non-`http` intégrés au navigateur ou [enregistrés par un site web](/fr/docs/Web/API/Navigator/registerProtocolHandler). Cette fonctionnalité est également activée par les mots-clés `allow-popups` ou `allow-top-navigation`.
+
+> [!NOTE]
+> Les valeurs `allow-top-navigation` et les valeurs associées n'ont de sens que pour les documents intégrés (comme les iframes enfants). Pour les documents autonomes, ces valeurs n'ont aucun effet, car le contexte de navigation de niveau supérieur est le document lui-même.
 
 ## Exemples
 
-```bash
+```http
 Content-Security-Policy: sandbox allow-scripts;
 ```
 
@@ -81,5 +88,5 @@ Content-Security-Policy: sandbox allow-scripts;
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- L'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) sur les éléments HTML {{HTMLElement("iframe")}}

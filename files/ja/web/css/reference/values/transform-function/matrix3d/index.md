@@ -1,11 +1,12 @@
 ---
-title: matrix3d()
+title: CSS `matrix3d()` 関数
+short-title: matrix3d()
 slug: Web/CSS/Reference/Values/transform-function/matrix3d
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、4x4 の 3D 同次変換行列を定義します。
+**`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、4x4 の三次元同次変換行列を定義します。
 結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: matrix3d()")}}
@@ -90,10 +91,10 @@ matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
   <tbody>
     <tr>
       <td colspan="2">
-        この変換は 3D 空間に適用され、平面で表現することはできません。
+        この変換は三次元空間に適用され、平面で表現することはできません。
       </td>
       <td>
-        一般的な 3D <a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F">アフィン変換</a>は、変換が線形座標変換ではないので、直交座標行列を使用して表現することはできません。
+        一般的な三次元<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%95%E3%82%A3%E3%83%B3%E5%86%99%E5%83%8F">アフィン変換</a>は、変換が線形座標変換ではないので、直交座標行列を使用して表現することはできません。
       </td>
       <td>
         <math display="block">

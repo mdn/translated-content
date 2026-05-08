@@ -1,36 +1,41 @@
 ---
-title: Intl.Locale.prototype.language
+title: "Intl.Locale : propriété language"
+short-title: language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
+l10n:
+  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
 ---
 
-{{JSRef}}
-
-La propriété **`Intl.Locale.prototype.language`** est une propriété fournie via un accesseur qui renvoie la langue associée à la locale.
+La propriété d'accesseur **`language`** des instances de {{JSxRef("Intl.Locale")}} retourne la langue associée à cette locale.
 
 ## Description
 
-La langue est l'une des caractéristiques majeurs d'une locale. La spécification Unicode indique que l'identifiant de la langue d'une locale est composée de l'identifiant canonique de la langue et de l'identifiant de la réponse (on pourra ainsi distinguer l'anglais britannique de l'anglais américain). Toutefois, la propriété `language` de {{jsxref("Locale", "Locale")}} renvoie uniquement la composante relative à la langue.
+La langue est l'une des caractéristiques majeures d'une locale. La spécification Unicode considère l'identifiant de langue d'une locale comme comprenant à la fois la langue et la région (pour distinguer les dialectes et les variations, par exemple l'anglais britannique et l'anglais américain). La propriété `language` d'une instance de {{JSxRef("Intl.Locale")}} retourne strictement le sous-balise de langue de la locale.
+
+La valeur de la propriété `language` est définie au moment de la construction, soit par la première partie de l'identifiant de la locale, soit par l'option `language` du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}}. Cette dernière prend le pas si les deux sont présentes.
+
+Le mutateur d'accesseur de `language` est `undefined`. Vous ne pouvez pas modifier cette propriété directement.
 
 ## Exemples
 
-### Indiquer la langue via la chaîne décrivant la locale
+Comme pour d'autres sous-balises de locale, la langue peut être ajoutée à l'objet {{JSxRef("Intl.Locale")}} par le biais de la chaîne de caractères représentant la locale, ou avec un objet de configuration passé en argument au constructeur.
 
-Afin de pouvoir représenter une locale Unicode correctement, une chaîne doit commencer par un identifiant de langue. Le principal argument du constructeur {{jsxref("Locale", "Locale")}} doit être un identifiant valide et doit donc contenir la composante liée à la langue.
+### Définir la langue par le biais de la chaîne de caractères représentant la locale
+
+Afin de pouvoir représenter une locale Unicode correctement, une chaîne de caractères doit commencer par un identifiant de langue. Le principal argument du constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} doit être un identifiant valide et doit donc contenir la composante liée à la langue.
 
 ```js
-let langStr = new Intl.Locale("en-Latn-US");
-
-console.log(langStr.language); // Affichera "en" dans la console
+const locale = new Intl.Locale("en-Latn-US");
+console.log(locale.language); // "en"
 ```
 
-### Surcharger la langue via l'objet de configuration
+### Surcharger la langue par le biais de l'objet de configuration
 
-Bien que la composante de la langue doive être indiquée dans le premier paramètre, le constructeur {{jsxref("Locale", "Locale")}} prend comme deuxième argument un objet de configuration qui permet de surcharger cette composante.
+Bien que la sous-balise de langue doive être définie, le constructeur {{JSxRef("Intl/Locale/Locale", "Intl.Locale()")}} accepte un argument optionnel sous forme d'objet de configuration, qui peut remplacer la sous-balise de langue.
 
 ```js
-let langObj = new Intl.Locale("en-Latn-US", { language: "es" });
-
-console.log(langObj.language); // Affichera "es" dans la console
+const locale = new Intl.Locale("en-Latn-US", { language: "es" });
+console.log(locale.language); // "es"
 ```
 
 ## Spécifications
@@ -43,5 +48,5 @@ console.log(langObj.language); // Affichera "es" dans la console
 
 ## Voir aussi
 
-- {{jsxref("Locale", "Locale")}}
-- [Spécification des extensions Unicode](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity)
+- L'objet {{JSxRef("Intl.Locale")}}
+- [Sous-balise de langue Unicode <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity) dans la spécification du langage de balisage des données de locale Unicode

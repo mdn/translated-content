@@ -39,7 +39,7 @@ li {
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Transparent_content_model"
           title="HTML/Content_categories#Transparent_content_model"
           >Transparente, que contiene contenido de flujo (excluyendo contenido
           interactivo) o contenido de párrafo.</a

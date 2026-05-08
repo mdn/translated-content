@@ -1,8 +1,9 @@
 ---
-title: "<nobr> : l'élément de non-rupture de texte"
+title: "Élément HTML `<nobr>` : l'élément de non-rupture de texte"
+short-title: <nobr>
 slug: Web/HTML/Reference/Elements/nobr
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

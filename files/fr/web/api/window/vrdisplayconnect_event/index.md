@@ -25,7 +25,7 @@ L'événement **`vrdisplayconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_API
       <th scope="row">Propriété de gestionnaire d'événements</th>
       <td>
         <code
-          ><a href="/fr/docs/Web/API/Window/onvrdisplayconnect"
+          ><a href="/fr/docs/Web/API/Window/vrdisplayconnect_event"
             >onvrdisplayconnect</a
           ></code
         >

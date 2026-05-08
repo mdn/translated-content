@@ -1,8 +1,9 @@
 ---
-title: "<pre> : l'élément de texte préformaté"
+title: "Élément HTML `<pre>` : l'élément de texte préformaté"
+short-title: <pre>
 slug: Web/HTML/Reference/Elements/pre
 l10n:
-  sourceCommit: d534b22334554896f3c2c83e469f9b9eb3f9188a
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté qui est présenté exactement comme écrit dans le fichier HTML. Le texte est généralement affiché avec une police non proportionnelle, ou [à chasse fixe](https://fr.wikipedia.org/wiki/Police_de_caract%C3%A8res_%C3%A0_chasse_fixe).

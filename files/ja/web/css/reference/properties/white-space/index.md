@@ -1,8 +1,9 @@
 ---
-title: white-space
+title: "`white-space` CSS プロパティ"
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`white-space`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
@@ -356,4 +357,4 @@ text {
 
 - 内部での折り返しを定義するプロパティ: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
 - {{cssxref("tab-size")}}
-- [CSS でのホワイトスペースの扱い](/ja/docs/Web/CSS/Guides/Text/Whitespace)
+- [CSS でのホワイトスペースの処理](/ja/docs/Web/CSS/Guides/Text/Whitespace)

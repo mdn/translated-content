@@ -1,8 +1,9 @@
 ---
-title: "<label> : l'élément de libellé"
+title: "Élément HTML `<label>` : l'élément de libellé"
+short-title: <label>
 slug: Web/HTML/Reference/Elements/label
 l10n:
-  sourceCommit: 7b8768d410a281446b0b95627c531d852e624353
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<label>`** représente une légende pour un élément d'une interface utilisateur.

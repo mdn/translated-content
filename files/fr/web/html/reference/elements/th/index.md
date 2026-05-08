@@ -1,8 +1,9 @@
 ---
-title: "<th> : l'élément d'en-tête de tableau"
+title: "Élément HTML `<th>` : l'élément d'en-tête de tableau"
+short-title: <th>
 slug: Web/HTML/Reference/Elements/th
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<th>`** définit une cellule comme l'en-tête d'un groupe de cellules de tableau et peut être utilisé comme enfant de l'élément {{HTMLElement("tr")}}. La nature exacte de ce groupe est définie par les attributs [`scope`](#scope) et [`headers`](#headers).

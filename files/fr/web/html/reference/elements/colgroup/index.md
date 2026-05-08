@@ -1,8 +1,9 @@
 ---
-title: "<colgroup> : l'élément regroupant des colonnes"
+title: "Élément HTML `<colgroup>` : l'élément regroupant des colonnes"
+short-title: <colgroup>
 slug: Web/HTML/Reference/Elements/colgroup
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<colgroup>`** définit un groupe de colonnes au sein d'un tableau.

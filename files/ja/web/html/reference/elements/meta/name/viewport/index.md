@@ -1,22 +1,22 @@
 ---
-title: <meta name="viewport">
+title: HTML `<meta name="viewport">` 属性値
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-**`viewport`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、{{glossary("viewport", "ビューポート")}}の初期サイズについてのヒントを与えます。
+**`viewport`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、{{glossary("viewport", "ビューポート")}}をどのように変倍するかについてのヒントを与えます。
 
-指定した場合、`<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性では、カンマ区切りで 1 つ以上の値として指定して、ビューポートに関する動作を定義することができます。
+指定された場合、`<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性では、カンマ区切りで 1 つ以上の値として指定して、ビューポートに関する動作を定義することができます。
 
 ## 使用上のメモ
 
 `<meta name="viewport">` 要素には、次の追加属性があります。
 
-- [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content)
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
   - : `content` 属性は定義する必要があり、その値はビューポート関連のさまざまな動作を設定します。
-    値は、`key=value` の形式で指定された 1 つ以上のキーと値の組をカンマ区切りで列挙したリストです。次のキーが定義されています。
+    値は、`key=value` の形式で指定された 1 つ以上のキーと値の組からなる、カンマ区切りのリストです。以下のキーが定義されています。
     - `width`
       - : ビューポートの幅の（最小）ピクセル数を制御します（[ビューポートの幅と画面の幅](#ビューポートの幅と画面の幅)を参照）。1 から 10000 までの正の値のピクセル数（`width=600` など）または特別な値 `device-width`（端末画面の物理サイズを CSS ピクセル数で表したもの）に設定できます。この値は [`vw`](/ja/docs/Web/CSS/Reference/Values/length#ビューポートに基づく相対的な長さの単位) の単位の値を決定します。
     - `height`

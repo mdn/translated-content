@@ -1,24 +1,28 @@
 ---
-title: -webkit-text-fill-color
+title: CSS `-webkit-text-fill-color` プロパティ
+short-title: -webkit-text-fill-color
 slug: Web/CSS/Reference/Properties/-webkit-text-fill-color
-original_slug: Web/CSS/-webkit-text-fill-color
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`-webkit-text-fill-color`** は CSS のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/Reference/Values/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+**`-webkit-text-fill-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの文字の塗りつぶしの[色](/ja/docs/Web/CSS/Reference/Values/color_value)を指定します。このプロパティが設定されていない場合、 {{cssxref("color")}} プロパティの値が使用されます。
+
+## 構文
 
 ```css
 /* <color> 値 */
 -webkit-text-fill-color: red;
--webkit-text-fill-color: #000000;
--webkit-text-fill-color: rgb(100, 200, 0);
+-webkit-text-fill-color: #123456;
+-webkit-text-fill-color: rgb(100 200 0);
 
 /* グローバル値 */
 -webkit-text-fill-color: inherit;
 -webkit-text-fill-color: initial;
+-webkit-text-fill-color: revert;
+-webkit-text-fill-color: revert-layer;
 -webkit-text-fill-color: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -50,7 +54,7 @@ p {
 #### HTML
 
 ```html
-<p>This text is green.</p>
+<p>このテキストは緑色です。</p>
 ```
 
 #### 結果
@@ -67,7 +71,7 @@ p {
 
 ## 関連情報
 
-- [Surfin' Safari blog post announcing this feature](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [Introducing Text-Stroke](https://webkit.org/blog/85/introducing-text-stroke/) - webkit.org (2006)
 - [CSS-Tricks article explaining this feature](https://css-tricks.com/adding-stroke-to-web-text/)
 - {{cssxref("-webkit-text-stroke-color")}}
 - {{cssxref("-webkit-text-stroke-width")}}

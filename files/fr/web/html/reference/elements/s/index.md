@@ -1,8 +1,9 @@
 ---
-title: "<s> : l'élément de texte barré"
+title: "Élément HTML `<s>` : l'élément de texte barré"
+short-title: <s>
 slug: Web/HTML/Reference/Elements/s
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<s>`** affiche du texte barré. Utilisez l'élément `<s>` pour représenter des choses qui ne sont plus pertinentes ou plus exactes. Cependant, `<s>` n'est pas approprié pour indiquer les modifications d'un document&nbsp;; pour cela, utilisez les éléments {{HTMLElement("del")}} et {{HTMLElement("ins")}}, selon le cas.
