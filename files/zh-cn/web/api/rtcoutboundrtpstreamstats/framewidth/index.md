@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("RTCOutboundRtpStreamStats")}} 字典的 **`frameWidth`** 属性是表示最后一个编码帧的宽度的正整数（单位为像素）。
 
-请注意，编码帧的分辨率可能低于媒体源的分辨率。媒体源的分辨率由 {{domxref("RTCVideoSourceStats.width")}} 方法提供。
+请注意，编码帧的分辨率可能低于媒体源的分辨率（由 {{domxref("RTCVideoSourceStats.width")}} 提供）。
 
 > [!NOTE]
 > 对于音频或者在第一个帧被编码之前，该值不存在。
