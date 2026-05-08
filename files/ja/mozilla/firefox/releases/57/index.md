@@ -1,8 +1,9 @@
 ---
-title: Firefox 57 (Quantum) for developers
+title: Firefox 57 (Quantum) 開発者向けリリースノート
+short-title: Firefox 57
 slug: Mozilla/Firefox/Releases/57
 l10n:
-  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
 Firefox 57 (別名 Firefox Quantum) は、米国時間 2017 年 11 月 14 日にリリースされました。このページでは、開発者に影響する Firefox 57 の変更点をまとめています。
@@ -24,13 +25,13 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
+- [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型の {{htmlelement("input")}} が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
 
 ### CSS
 
-- [`display-mode`](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
-- `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
-- 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("basic-shape")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
+- [`display-mode`](/ja/docs/Web/CSS/Reference/At-rules/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) もご覧ください。
+- `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} 一括指定プロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
+- 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{CSSxRef("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 
 #### Quantum CSS に関する補足
 
@@ -46,7 +47,7 @@ Quantum で以下の不具合を修正しました。
 - Gecko では {{CSSxRef("@document", "@-moz-document")}} 規則の `domain()` あるいは `url-prefix()` URL マッチング関数で解析するときに、URL トークンの解析と同じ仕組みを再使用します。Quantum CSS は同じ仕組みを使用せず、括弧や引用符を含む場合にトークンを無効とみなしません ([Firefox バグ 1362333](https://bugzil.la/1362333))。
 - Gecko では canvas 2D コンテキストの {{DOMxRef("CanvasRenderingContext2D.font", "font")}} の値としてシステムフォント (例えば `menu`) を設定すると、期待するフォントが返りません (何も返りません)。Quantum でこの不具合を修正しました ([Firefox バグ 1374885](https://bugzil.la/1374885))。
 - Gecko では、切り離されたサブツリー (例えば {{DOMxRef("Document.createElement","createElement()")}} を使用して作成した、DOM に未挿入の {{htmlelement("div")}}) を作成すると、サブツリーのルート要素がブロックレベル要素として設定されます。Quantum CSS では仕様書に従って、インラインとして設定します ([Firefox バグ 1374994](https://bugzil.la/1374994))。
-- Gecko では {{CSSxRef("calc", "calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([Firefox バグ 1376019](https://bugzil.la/1376019))。
+- Gecko では {{cssxref("calc()")}} 式を {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}} の半径の構成要素として使用すると、式が拒否されて値が無効になります ([Firefox バグ 1376019](https://bugzil.la/1376019))。
 - Gecko では `calc(1*2*3)` が正しく解析されません。Quantum CSS でこの不具合を修正しました ([Firefox バグ 1379467](https://bugzil.la/1379467))。
 - Quantum CSS では、[`calc()` を仕様書で説明されているとおり全面的にサポートしています](https://drafts.csswg.org/css-values-3/#calc-notation) ([Firefox バグ 1350857](https://bugzil.la/1350857))。Gecko はそうではありません。
 - Gecko は {{CSSxRef("::before")}} および {{CSSxRef("::after")}} 擬似要素で、{{CSSxRef("content")}} プロパティの値が `normal` や `none` であっても擬似要素を生成する不具合があります。仕様書によると、このようにするべきではありません ([Firefox バグ 1387931](https://bugzil.la/1387931))。
@@ -58,9 +59,9 @@ _変更なし。_
 
 ### JavaScript
 
-- 非標準の {{JSxRef("Statements/for_each...in", "for each...in")}} (E4X) ループを廃止しました。代わりに {{JSxRef("Statements/for...of", "for...of")}} を使用してください。また、移行の助けになる [Warning: JavaScript 1.6's for-each-in loops are deprecated](/ja/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) をご覧ください。([Firefox バグ 1083470](https://bugzil.la/1083470))
-- {{JSxRef("Object.prototype.watch()")}} および {{JSxRef("Object.unwatch", "unwatch()")}} メソッドが非推奨になり、使用すると警告が発生します。また、将来削除する予定です ([Firefox バグ 934669](https://bugzil.la/934669))。
-- 非標準の {{JSxRef("Iterator")}} および {{JSxRef("StopIteration")}} オブジェクトと、古いイテレーションプロトコルを廃止しました ([Firefox バグ 1098412](https://bugzil.la/1098412))。
+- 非標準の [`for each...in`](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) ループは、もともと ECMAScript for XML (E4X) の一部でしたが、廃止しました。代わりに {{JSxRef("Statements/for...of", "for...of")}} を使用してください。([Firefox バグ 1083470](https://bugzil.la/1083470))
+- [`Object.prototype.watch()` および `Object.prototype.unwatch()`](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#object_2) メソッドが非推奨になり、使用すると警告が発生します。また、将来削除する予定です ([Firefox バグ 934669](https://bugzil.la/934669))。
+- 非標準の `Iterator` および `StopIteration` オブジェクトと、[古い反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#legacy_generator_and_iterator)を廃止しました ([Firefox バグ 1098412](https://bugzil.la/1098412))。
 - 非同期ジェネレーターを有効化しました ([Firefox バグ 1352312](https://bugzil.la/1352312))。
 - for await (... of ...) 構文を有効化しました ([Firefox バグ 1352312](https://bugzil.la/1352312))。
 
@@ -90,7 +91,7 @@ _変更なし。_
 - SCTP メッセージの end-of-record (EOR) フラグを使用することにより、{{DOMxRef("RTCDataChannel")}} で任意のサイズ (256kiB が相互運用性が高いのですが、最大 1GiB まで) のメッセージをサポートしました。詳しくは [Understanding message size limits](/ja/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) をご覧ください ([Firefox バグ 979417](https://bugzil.la/979417))。
 
   > [!NOTE]
-  > Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP ndata プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、[Firefox バグ 1381145](https://bugzil.la/1381145) をご覧ください。
+  > Firefox は、複数のソースの SCTP メッセージを多重化する機能を提供する SCTP Stream Schedulers and User Message Interleaving プロトコルが未サポートですので、大きなデータオブジェクトを送信すると他のすべての SCTP 通信で著しい遅延が発生する可能性があります。Firefox の ndata サポートの実装および展開の進捗を追跡するには、[Firefox バグ 1381145](https://bugzil.la/1381145) をご覧ください。
 
 - {{DOMxRef("RTCDataChannel.send()")}} メソッドで、送信しようとしたメッセージのサイズが受信側の {{Glossary("user agent","ユーザーエージェント")}} と互換性がない場合に `TypeError` 例外を発生できるようになりました (これは [Firefox バグ 979417](https://bugzil.la/979417) の一部として実装しました)。
 - [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) を更新し、録画中に発生した問題を報告するために送信される {{domxref("MediaRecorder/error_event", "error")}} イベントを一般的なイベントから {{DOMxRef("MediaRecorderErrorEvent")}} 型にしました。
@@ -107,7 +108,7 @@ _変更なし。_
 
 ### その他
 
-- Firefox の [ヘッドレスモード](/ja/docs/Mozilla/Firefox/Headless_mode) に、コマンドラインからウェブサイトのスクリーンショットを直接取得することを可能にする `-screenshot` フラグを追加しました ([Firefox バグ 1378010](https://bugzil.la/1378010))。
+- Firefox の [ヘッドレスモード](https://web.archive.org/web/20210604151145/https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) に、コマンドラインからウェブサイトのスクリーンショットを直接取得することを可能にする `-screenshot` フラグを追加しました ([Firefox バグ 1378010](https://bugzil.la/1378010))。
 
 ## ウェブプラットフォームから廃止
 
@@ -117,7 +118,7 @@ _変更なし。_
 
 ### API
 
-- Mozilla 独自仕様 [ソーシャル API](/ja/docs/Archive/Social_API) を完全に削除しました ([Firefox バグ 1388902](https://bugzil.la/1388902))。
+- Mozilla 独自仕様の[ソーシャル API](https://web.archive.org/web/20210509145412/https://developer.mozilla.org/en-US/docs/Archive/Social_API) を完全に削除しました ([Firefox バグ 1388902](https://bugzil.la/1388902))。
 
 ### SVG
 
@@ -130,7 +131,7 @@ _変更なし。_
 
 ### WebExtensions
 
-以下の API を追加または拡張しました:
+以下の API を追加または拡張しました。
 
 - [`bookmarks`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
   - [`bookmarks.BookmarkTreeNodeType`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType) でセパレーターをサポートしました。
@@ -216,7 +217,3 @@ _変更なし。_
 
 - [`windows`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows)
   - [`windows.create()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/windows/create) の `allowScriptsToClose` プロパティ
-
-## 過去のバージョン
-
-{{Firefox_for_developers(56)}}

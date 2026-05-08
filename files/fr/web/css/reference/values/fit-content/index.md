@@ -8,7 +8,7 @@ l10n:
 
 {{CSSRef}}
 
-Le mot-clé **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que le conteneur utilisera l'espace disponible, mais jamais plus que [`max-content`](/fr/docs/Web/CSS/max-content).
+Le mot-clé **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que le conteneur utilisera l'espace disponible, mais jamais plus que [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content).
 
 Lorsqu'elle est utilisée comme taille de boîte pour [`width`](/fr/docs/Web/CSS/Reference/Properties/width), [`height`](/fr/docs/Web/CSS/Reference/Properties/height), [`min-width`](/fr/docs/Web/CSS/Reference/Properties/min-width), [`min-height`](/fr/docs/Web/CSS/Reference/Properties/min-height), [`max-width`](/fr/docs/Web/CSS/Reference/Properties/max-width) et [`max-height`](/fr/docs/Web/CSS/Reference/Properties/max-height), les tailles maximale et minimale se réfèrent à la taille du contenu.
 
@@ -70,4 +70,4 @@ block-size: fit-content;
 
 ## Voir aussi
 
-- Mots-clés relatifs à la taille&nbsp;: [`min-content`](/fr/docs/Web/CSS/min-content), [`max-content`](/fr/docs/Web/CSS/max-content)
+- Mots-clés relatifs à la taille&nbsp;: [`min-content`](/fr/docs/Web/CSS/Reference/Values/min-content), [`max-content`](/fr/docs/Web/CSS/Reference/Values/max-content)

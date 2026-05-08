@@ -11,7 +11,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
   <tbody>
     <tr>
       <th scope="row">Необходимые знания:</th>
-      <td>Вы уже должны знать о <a href="/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need">различных программах, необходимых для создания веб-сайта</a>.</td>
+      <td>Вы уже должны знать о <a href="/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need">различных программах, необходимых для создания веб-сайта</a>.</td>
     </tr>
     <tr>
       <th scope="row">Цель:</th>

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/contenteditable
 
 {{HTMLSidebar("Global_attributes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`contenteditable`** é um atributo enumerado indicando se o elemento deve ser editável pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição.
+O [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes) **`contenteditable`** é um atributo enumerado indicando se o elemento deve ser editável pelo usuário. Se assim for, o navegador modifica seu widget para permitir a edição.
 
 {{InteractiveExample("HTML Demo: contenteditable", "tabbed-shorter")}}
 
@@ -71,7 +71,7 @@ Você pode definir a cor usada para desenhar a inserção de texto {{Glossary("c
 ## Veja também
 
 - [Tornando o conteúdo editável](/pt-BR/docs/conflicting/Web/HTML/Global_attributes/contenteditable)
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes)
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} e {{domxref("HTMLElement.isContentEditable")}}
 - A propriedade {{cssxref("caret-color")}} do CSS.
 - [Evento de `input` - `HTMLElement`](/pt-BR/docs/Web/API/Element/input_event)

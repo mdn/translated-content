@@ -41,4 +41,4 @@ _Esta interfaz hereda las propiedades de su padre, {{domxref("Event")}}._
 ## Ver también
 
 - {{domxref("Window.postMessage()")}}
-- [Creación y activación de eventos](/es/docs/Web/Events/Creating_and_triggering_events)
+- [Creación y activación de eventos](/es/docs/Web/API/Document_Object_Model/Events)

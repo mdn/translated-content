@@ -1,9 +1,9 @@
 ---
-title: <calc-sum>
+title: Type CSS `<calc-sum>`
+short-title: <calc-sum>
 slug: Web/CSS/Reference/Values/calc-sum
-original_slug: Web/CSS/calc-sum
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<calc-sum>`** représente une expression qui effectue un calcul dans n'importe quelle [fonction mathématique CSS](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_mathématiques). L'expression réalise une opération arithmétique d'addition ou de soustraction entre deux valeurs.

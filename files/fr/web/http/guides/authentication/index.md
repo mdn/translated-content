@@ -22,7 +22,7 @@ Dans le cadre d'une authentification basique comme montré dans l'image ci-dessu
 
 ### Authentification par procuration
 
-Le même mécanisme de défi et réponse peut être utilisée pour _l'authentification par procuration_ (« _Proxy authentication_ » en anglais). Dans ce cas, c'est un système de procuration intermédiaire qui requiert l'authentification. Comme les deux authentifications (celle de la ressource et celle du système de procuration) peuvent coexister, un autre jeu d'en-têtes et de codes de réponses HTTP est nécessaire. Dans le cadre des systèmes de procuration, le code HTTP de défi est [`407`](/fr/docs/Web/HTTP/Reference/Status/407) (« Proxy Authentication Required »), l'en-tête de réponse [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) contient au moins un défi applicable au système de procuration et l'en-tête de requête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) est utilisé pour fournir les identifiants au serveur de procuration.
+Le même mécanisme de défi et réponse peut être utilisée pour _l'authentification par procuration_ (« _Proxy authentication_ » en anglais). Dans ce cas, c'est un système de procuration intermédiaire qui requiert l'authentification. Comme les deux authentifications (celle de la ressource et celle du système de procuration) peuvent coexister, un autre jeu d'en-têtes et de codes de réponses HTTP est nécessaire. Dans le cadre des systèmes de procuration, le code HTTP de défi est [`407`](/fr/docs/Web/HTTP/Reference/Status/407) (« Proxy Authentication Required »), l'en-tête de réponse [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authenticate) contient au moins un défi applicable au système de procuration et l'en-tête de requête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authorization) est utilisé pour fournir les identifiants au serveur de procuration.
 
 ### Accès interdit
 
@@ -38,7 +38,7 @@ Les navigateurs utilisent l'encodage de caractère `utf-8` pour les noms d'utili
 
 ### En-têtes WWW-Authenticate et Proxy-Authenticate
 
-Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate) et [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) définissent le schéma d'authentification devant être utilisée pour accéder à une ressource, afin que le client désirant y accéder puisse savoir comment fournir les identifiants.
+Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate) et [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authenticate) définissent le schéma d'authentification devant être utilisée pour accéder à une ressource, afin que le client désirant y accéder puisse savoir comment fournir les identifiants.
 
 La syntaxe pour ces en-têtes est la suivante :
 
@@ -51,7 +51,7 @@ Ici, `<type>` est le schéma d'authentification (« Basic » est le plus courant
 
 ### En-têtes Authorization et Proxy-Authorization
 
-Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
+Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
 
 ```http
 Authorization: <type> <credentials>
@@ -130,6 +130,6 @@ https://utilisateur:password@www.example.com/
 
 - L'entête [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate)
 - L'entête [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization)
-- L'entête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
-- L'entête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
+- L'entête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authorization)
+- L'entête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/Proxy-Authenticate)
 - Les codes de statut : [`401`](/fr/docs/Web/HTTP/Reference/Status/401), [`403`](/fr/docs/Web/HTTP/Reference/Status/403) et [`407`](/fr/docs/Web/HTTP/Reference/Status/407)

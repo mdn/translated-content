@@ -282,5 +282,5 @@ In the first case, a new (anonymous) function is created at each loop turn. In t
 ## See Also
 
 - [element.removeEventListener()](/es/docs/Web/API/EventTarget/removeEventListener)
-- [Creating and triggering custom events](/es/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and triggering custom events](/es/docs/Web/API/Document_Object_Model/Events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

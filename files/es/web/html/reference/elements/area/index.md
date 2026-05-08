@@ -150,11 +150,11 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Categorias de Contenido</a>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories">Categorias de Contenido</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Contenido de flujo</a>,
-        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido de redacción</a>.
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content">Contenido de flujo</a>,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#phrasing_content">contenido de redacción</a>.
       </td>
     </tr>
     <tr>
@@ -168,13 +168,13 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     <tr>
       <th scope="row">Elementos padre permitidos</th>
       <td>
-        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido redactable</a>. El elemento <code>&#x3C;area></code> debe tener como ancestro un elemento {{HTMLElement("map")}}, pero no es necesario que este sea el padre directo.
+        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Guides/Content_categories#phrasing_content">contenido redactable</a>. El elemento <code>&#x3C;area></code> debe tener como ancestro un elemento {{HTMLElement("map")}}, pero no es necesario que este sea el padre directo.
       </td>
     </tr>
     <tr>
       <th scope="row">Rol ARIA implícito</th>
       <td>
-        <a href="/es/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> cuando el atributo <a href="/es/docs/Web/HTML/Element/area#href"><code>href</code></a> esta presente, si no lo esta es
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> cuando el atributo <a href="/es/docs/Web/HTML/Reference/Elements/area#href"><code>href</code></a> esta presente, si no lo esta es
         <a href="/es/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>

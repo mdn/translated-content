@@ -3,7 +3,7 @@ title: Document.execCommand()
 slug: Web/API/Document/execCommand
 ---
 
-{{ApiRef("DOM")}}{{ Deprecated_header() }}
+{{ApiRef("DOM")}}{{ Deprecated_header }}
 
 ## Resumen
 

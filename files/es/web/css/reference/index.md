@@ -155,7 +155,7 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 - [Valor inicial](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 - [Valor resuelto](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
 - [Valor específico](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_8a702f25e61d14d8bd6ee6f7e88ca236512427b92b01a92c1d11f9edbb8f5fe1)
-- [Valor utilizado](/es/docs/Web/CSS/used_value)
+- [Valor utilizado](/es/docs/Web/CSS/Guides/Cascade/Property_value_processing)
 
 ### Diseño
 

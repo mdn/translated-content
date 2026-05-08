@@ -15,45 +15,45 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
     <tr>
       <th scope="row">
         <a
-          href="/es/docs/HTML/Content_categories"
+          href="/es/docs/Web/HTML/Guides/Content_categories"
           title="HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           title="HTML/Content categories#Flow content"
           >Contenido de flujo</a
         >,
         <a
-          href="/es/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           title="HTML/Content categories#Phrasing content"
           >contenido de fraseo</a
         >,
         <a
-          href="/es/docs/HTML/Content_categories#Interactive_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Interactive_content"
           title="HTML/Content categories#Interactive content"
           >contenido interactivo</a
         >,
         <a
-          href="/es/docs/HTML/Content_categories#Form_listed"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Form_listed"
           title="HTML/Content categories#Form listed"
           >listado</a
         >,
         <a
-          href="/es/docs/HTML/Content_categories#Form_labelable"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Form_labelable"
           title="HTML/Content categories#Form labelable"
           >etiquetable</a
         >, y elementos
         <a
-          href="/es/docs/HTML/Content_categories#Form_submittable"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Form_submittable"
           title="HTML/Content categories#Form submittable"
           >entregables</a
         >
         con
         <a
-          href="/es/docs/HTML/Content_categories#Form-associated_"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Form-associated_"
           title="HTML/Content categories#Form-associated "
           >contenido asociado a los formularios</a
         >, contenido evidente.
@@ -63,7 +63,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/es/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >Contenido de fraseo</a
         >.
@@ -78,7 +78,7 @@ Los navegadores generan un controlador para un botón clickable sin valor por de
       <td>
         Cualquier elemento que acepte
         <a
-          href="/es/docs/HTML/Content_categories#Phrasing_content"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           title="HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.

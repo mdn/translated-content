@@ -1,8 +1,9 @@
 ---
-title: background-position
+title: Propriété CSS `background-position`
+short-title: background-position
 slug: Web/CSS/Reference/Properties/background-position
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-position`** définit la position initiale de chaque image d'arrière-plan. La position est relative à la couche de position définie par {{CSSxRef("background-origin")}}.

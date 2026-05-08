@@ -1,8 +1,9 @@
 ---
-title: word-spacing
+title: Propriété CSS `word-spacing`
+short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 l10n:
-  sourceCommit: 21b975609b233dbc6fde334ff97ee9cde75e7c0f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`word-spacing`** définit la règle d'espacement utilisée entre les balises et entre les mots.
@@ -164,7 +165,7 @@ Notre CSS commence par appliquer des valeurs de {{CSSxRef("font-size")}} croissa
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 

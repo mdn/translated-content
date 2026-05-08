@@ -1,8 +1,9 @@
 ---
-title: :not
+title: Pseudo-classe CSS `:not()`
+short-title: :not()
 slug: Web/CSS/Reference/Selectors/:not
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:not()`** représente les éléments qui ne correspondent pas à une liste de sélecteurs. Comme elle empêche la sélection d'éléments spécifiques, elle est connue sous le nom de _pseudo-classe de négation_.

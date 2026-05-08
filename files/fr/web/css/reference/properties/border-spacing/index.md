@@ -1,8 +1,9 @@
 ---
-title: border-spacing
+title: Propriété CSS `border-spacing`
+short-title: border-spacing
 slug: Web/CSS/Reference/Properties/border-spacing
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-spacing`** permet de définir la distance entre les bordures des cellules adjacentes dans un élément HTML {{HTMLElement("table")}}. Cette propriété s'applique uniquement lorsque {{CSSxRef("border-collapse")}} vaut `separate`.

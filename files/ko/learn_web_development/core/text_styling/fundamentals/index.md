@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Text_styling/Fundamentals
 original_slug: Learn/CSS/Styling_text/Fundamentals
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}
 
 이 기사에서는 {{glossary("CSS")}} 를 사용하여 텍스트 스타일링을 마스터하기 위한 과정을 시작합니다. 여기에서는 글꼴 굵기, 종류 및 스타일, 글꼴 약식 (shorthand), 텍스트 정렬 및 기타 효과, 줄 및 문자 간격 설정을 포함하여, 텍스트/글꼴 스타일링의 모든 기본 사항에 대해 자세히 설명합니다.
 
@@ -14,10 +14,10 @@ original_slug: Learn/CSS/Styling_text/Fundamentals
       <th scope="row">전제조건</th>
       <td>
         기본적인 컴퓨터의 이해, HTML 기본 (
-        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         > 둘러보기), CSS 기본 (study
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 소개</a
         > 둘러보기).
       </td>
@@ -703,4 +703,4 @@ window.addEventListener("load", drawOutput);
 
 이 기사에서 텍스트를 가지고 노는 것이 즐거웠기를 바랍니다! 다음 기사에서는 HTML 목록 스타일 지정에 대해 알아야 할 모든 정보를 제공합니다.
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{NextMenu("Learn_web_development/Core/Text_styling/Styling_lists", "Learn_web_development/Core/Text_styling")}}

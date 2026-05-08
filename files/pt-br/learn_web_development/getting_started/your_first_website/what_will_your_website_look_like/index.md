@@ -42,7 +42,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 ### Cor do tema
 
-Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_colors/Color_picker_tool) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
+Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/Guides/Colors/Color_format_converter) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
 ![](screenshot_from_2014-11-03_17-40-49.png)
 

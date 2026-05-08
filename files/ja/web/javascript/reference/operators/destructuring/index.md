@@ -153,7 +153,7 @@ const { a: numbers[0], b: numbers[1] } = obj;
 // これは完全に正しくありません。
 ```
 
-代入パターンをは[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)の左辺としてのみ使用できます。`+=` や `*=` などの複合代入演算子では使用できません。
+代入パターンは[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)の左辺としてのみ使用できます。`+=` や `*=` などの複合代入演算子では使用できません。
 
 ### 既定値
 

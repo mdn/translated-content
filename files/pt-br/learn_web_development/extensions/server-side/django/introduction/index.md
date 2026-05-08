@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e daremos uma visão geral do que torna este framework web especial. Vamos descrever os principais recursos, incluindo algumas das funcionalidades avançadas que não teremos tempo para abordar detalhadamente neste módulo. Também mostraremos alguns dos principais blocos de construção de um aplicativo Django (embora neste momento você ainda não tenha um ambiente de desenvolvimento para testá-lo).
 
@@ -16,7 +16,7 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
         <p>
           Conhecimentos básicos em computação. Um entendimento geral de
               <a
-                href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
+                href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de
@@ -313,4 +313,4 @@ Parabéns, você completou o primeiro passo em sua jornada no Django! Agora voc�
 
 Você já viu algum código real do Django acima, mas, diferentemente do código do lado do cliente, você precisa configurar um ambiente de desenvolvimento para executá-lo. Esse é o nosso próximo passo.
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}

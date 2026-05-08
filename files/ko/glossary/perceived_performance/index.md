@@ -11,4 +11,4 @@ l10n:
 
 ## 같이 보기
 
-- [인지된 성능](/ko/docs/Learn/Performance/Perceived_performance)
+- [인지된 성능](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)

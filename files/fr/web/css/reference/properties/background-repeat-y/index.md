@@ -1,8 +1,9 @@
 ---
-title: background-repeat-y
+title: Propriété CSS `background-repeat-y`
+short-title: background-repeat-y
 slug: Web/CSS/Reference/Properties/background-repeat-y
 l10n:
-  sourceCommit: 76e6e5407fd7cb49fb54dc51c7790a8b71ecec7f
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 {{SeeCompatTable}}
@@ -83,11 +84,11 @@ La propriété `background-repeat-y` accepte une liste de mots-clés [`<repetiti
 
 La valeur par défaut est `repeat`. Avec cette valeur, l'image de fond se répète verticalement, couvrant toute la hauteur de la zone de peinture de l'image de fond, les images de bord étant découpées à la taille de l'élément. Que les bords supérieur, inférieur ou les deux soient découpés dépend de la valeur de la propriété {{CSSxRef("background-position")}} correspondante. Le nombre de fois que les images sont répétées et la quantité de découpe des images sur les bords dépendent de la taille de la zone de peinture de l'image de fond et de la valeur de hauteur de la propriété {{CSSxRef("background-size")}} correspondante.
 
-Les images répétées peuvent être espacées uniformément, garantissant que les images répétées ne sont pas découpées verticalement. Avec la valeur `space`, si la hauteur de la zone de peinture de l'image de fond n'est pas un multiple de la hauteur de l'image ou n'a pas autrement une taille qui est un multiple de la taille de l'image de fond dans la direction verticale, il y aura des zones non couvertes par l'image de fond.
+Les images répétées peuvent être espacées uniformément, garantissant que les images répétées ne sont pas découpées verticalement. Avec la valeur `space`, si la hauteur de la zone de peinture de l'image de fond n'est pas un multiple de la hauteur de l'image ou n'a pas autrement une taille qui est un multiple de la taille de l'image de fond dans la direction verticale, il y a des zones non couvertes par l'image de fond.
 
 D'une autre manière, l'image de fond répétée peut être étirée pour couvrir toute la hauteur de la zone de fond sans être découpée. Avec `round`, si la hauteur de la zone de peinture de l'image de fond n'est pas un multiple de la hauteur de l'image de fond, l'image répétée est étirée pour remplir tout l'espace disponible jusqu'à ce qu'il y ait de la place pour ajouter une image répétée supplémentaire.
 
-Par exemple, étant donné une image de fond de `100px` par `100px` et une zone de peinture de fond de `1099px` de hauteur, l'image sera répétée 10 fois dans la direction verticale, chaque image étant étirée à `109.9px` de hauteur, ce qui peut modifier le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'image et la déformer. Si la hauteur de la zone de peinture augmente de `1px` pour atteindre `1100px`, une 11ème image pourra s'afficher verticalement, chaque image étant peinte à `100px` de hauteur, et n'étant plus étirée verticalement.
+Par exemple, étant donné une image de fond de `100px` par `100px` et une zone de peinture de fond de `1099px` de hauteur, l'image est répétée 10 fois dans la direction verticale, chaque image étant étirée à `109.9px` de hauteur, ce qui peut modifier le {{Glossary("aspect ratio", "rapport d'aspect")}} de l'image et la déformer. Si la hauteur de la zone de peinture augmente de `1px` pour atteindre `1100px`, une 11ème image peut s'afficher verticalement, chaque image étant peinte à `100px` de hauteur, et n'étant plus étirée verticalement.
 
 ## Définition formelle
 
@@ -163,7 +164,7 @@ div {
       content: "Votre navigateur ne prend pas en charge la propriété `background-repeat-y`.";
       background-color: wheat;
       display: block;
-      padding: 1em;
+      padding: 1rem 0;
       text-align: center;
     }
   }

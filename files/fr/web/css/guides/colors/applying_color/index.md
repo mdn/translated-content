@@ -81,7 +81,7 @@ Vous pouvez utiliser la propriété raccourcie {{cssxref("border")}}, qui permet
 
 ## Spécification des couleurs dans les feuilles de style
 
-Maintenant que vous savez quelles [propriétés CSS permettent d'appliquer des couleurs](#proprietes_qui_peuvent_avoir_une_couleur), vous pouvez commencer à en ajouter à vos sites. Observons des exemples d'utilisation de la couleur dans une {{Glossary("stylesheet")}}. Ici nous utilisons plusieurs propriétés mentionnées plus haut, le principe restant identique quelle que soit la propriété.
+Maintenant que vous savez quelles [propriétés CSS permettent d'appliquer des couleurs](#proprietes_qui_peuvent_avoir_une_couleur), vous pouvez commencer à en ajouter à vos sites. Observons des exemples d'utilisation de la couleur dans une {{Glossary("style sheet", "feuille de style")}}. Ici nous utilisons plusieurs propriétés mentionnées plus haut, le principe restant identique quelle que soit la propriété.
 
 Regardons d'abord le résultat, puis le code à écrire pour l'obtenir&nbsp;:
 

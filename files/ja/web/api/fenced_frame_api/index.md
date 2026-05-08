@@ -70,7 +70,7 @@ frame.config = frameConfig;
 
 ### 権限ポリシー
 
-`<fencedframes>` で使用するために設計された固有の機能だけが、そのフレームに設定する権限ポリシーによって有効にできます。詳細は[フェンスフレームで利用できる権限ポリシー](/ja/docs/Web/HTML/Element/fencedframe#フェンスフレームで利用できる権限ポリシー)を参照してください。
+`<fencedframes>` で使用するために設計された固有の機能だけが、そのフレームに設定する権限ポリシーによって有効にできます。詳細は[フェンスフレームで利用できる権限ポリシー](/ja/docs/Web/HTML/Reference/Elements/fencedframe#フェンスフレームで利用できる権限ポリシー)を参照してください。
 
 ### HTTP ヘッダー
 

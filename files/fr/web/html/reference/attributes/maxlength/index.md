@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : maxlength"
+title: "Attribut HTML : `maxlength`"
 short-title: maxlength
 slug: Web/HTML/Reference/Attributes/maxlength
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`maxlength`** définit la [longueur maximale de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/length) que l'utilisateur·rice peut saisir dans un élément HTML {{HTMLElement("input")}} ou un élément {{HTMLElement("textarea")}}. L'attribut doit avoir une valeur entière supérieure ou égale à 0.

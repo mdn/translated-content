@@ -4,7 +4,7 @@ slug: Web/SVG/Reference/Attribute
 original_slug: Web/SVG/Attribute
 ---
 
-« [SVG](/pt-BR/docs/Web/SVG) / [SVG Element reference](/pt-BR/docs/Web/SVG/Element) »
+« [SVG](/pt-BR/docs/Web/SVG) / [SVG Element reference](/pt-BR/docs/Web/SVG/Reference/Element) »
 
 ## SVG Attributes
 

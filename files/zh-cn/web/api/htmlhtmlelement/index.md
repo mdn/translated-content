@@ -9,7 +9,7 @@ slug: Web/API/HTMLHtmlElement
 
 你可以通过读取 {{domxref("document.documentElement")}} 属性的值来获取文档的 `HTMLHtmlElement` 对象。
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

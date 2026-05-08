@@ -34,7 +34,7 @@ slug: orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
     チェックボックスには、ブラウザー毎で独自の CSS が適応されるため、多少デザインが異なります。
     統一させる為には、デフォルトの装飾をリセットし、別途スタイル指定を行う必要があります。
 
-    <p class="attention">注意：2014/12現在、mobile版Firefoxでは、ブラウザー側のスタイルをリセットする<a href="https://developer.mozilla.org/ja/docs/Web/CSS/-moz-appearance">appearance</a>プロパティが使用できない不具合があります。</p>
+    <p class="attention">注意：2014/12現在、mobile版Firefoxでは、ブラウザー側のスタイルをリセットする<a href="/ja/docs/Web/CSS/Reference/Properties/appearance">appearance</a>プロパティが使用できない不具合があります。</p>
 
     ![](ex2_2.png)
 

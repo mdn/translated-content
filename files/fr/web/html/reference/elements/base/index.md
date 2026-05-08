@@ -1,8 +1,9 @@
 ---
-title: "<base> : l'élément pour l'URL de base du document"
+title: "Élément HTML `<base>` : l'élément pour l'URL de base du document"
+short-title: <base>
 slug: Web/HTML/Reference/Elements/base
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<base>`** définit l'URL de base à utiliser pour toutes les URL _relatives_ d'un document. Il ne peut y avoir qu'un seul élément `<base>` dans un document.

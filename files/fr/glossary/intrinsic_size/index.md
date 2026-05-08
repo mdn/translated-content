@@ -15,7 +15,7 @@ La taille intrinsèque a la même signification pour les images que pour le text
 
 La densité de pixels et la résolution influent sur la taille intrinsèque. Par défaut, les images sont supposées avoir une densité de pixels «&nbsp;1x&nbsp;» (1 pixel matériel = 1 pixel CSS), auquel cas la taille intrinsèque correspond simplement à la hauteur et à la largeur en pixels. La taille intrinsèque et la résolution d'une image peuvent être explicitement spécifiées dans ses données {{Glossary("EXIF")}}. La densité de pixels d'une image peut aussi être définie via l'attribut [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset). Notez que si les deux mécanismes sont utilisés, la valeur de `srcset` est appliquée «&nbsp;par-dessus&nbsp;» la valeur EXIF.
 
-Les tailles intrinsèques et leur mode de calcul sont définis dans le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/CSS_box_sizing).
+Les tailles intrinsèques et leur mode de calcul sont définis dans le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing).
 
 ## Taille intrinsèque minimale
 

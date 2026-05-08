@@ -205,7 +205,7 @@ Por exemplo:
 ```
 
 > [!NOTE]
-> **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
+> **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Reference/Elements/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
 
 > [!WARNING]
 > **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**

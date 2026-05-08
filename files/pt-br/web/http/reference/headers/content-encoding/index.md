@@ -15,7 +15,7 @@ The recommendation is to compress data as much as possible and therefore to use 
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

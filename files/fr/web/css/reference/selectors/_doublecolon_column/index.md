@@ -1,8 +1,9 @@
 ---
-title: ::column
+title: Pseudo-élément CSS `::column`
+short-title: ::column
 slug: Web/CSS/Reference/Selectors/::column
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}

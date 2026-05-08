@@ -16,7 +16,7 @@ Furthermore, an accessing script must have obtained the window object of the acc
 
 Además, un _script_ de acceso debe haber obtenido el objeto de ventana del documento al que se ha accedido de antemano. Esto puede ocurrir a través de métodos como [`window.open()`](/es/docs/Web/API/Window/open) para ventanas emergentes o [`iframe.contentWindow`](/es/docs/Web/API/HTMLIFrameElement/contentWindow) para _iframes_.
 
-En términos generales, una ventana puede obtener una referencia a otra (por ejemplo, a través de `targetWindow = window.opener`) y luego enviar un {{domxref("MessageEvent")}} a través de `targetWindow.postMessage()`. La ventana receptora queda entonces libre para [manejar este evento](/es/docs/Web/Events/Event_handlers) según sea necesario. Los argumentos pasados ​​a `window.postMessage()` (es decir, el "mensaje") se [exponen a la ventana receptora a través del objeto de evento](#el_evento_enviado).
+En términos generales, una ventana puede obtener una referencia a otra (por ejemplo, a través de `targetWindow = window.opener`) y luego enviar un {{domxref("MessageEvent")}} a través de `targetWindow.postMessage()`. La ventana receptora queda entonces libre para [manejar este evento](/es/docs/Web/API/Document_Object_Model/Events) según sea necesario. Los argumentos pasados ​​a `window.postMessage()` (es decir, el "mensaje") se [exponen a la ventana receptora a través del objeto de evento](#el_evento_enviado).
 
 ## Sintaxis
 

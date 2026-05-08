@@ -158,7 +158,7 @@ console.log(moods.match(regexpEmoticons));
         Совпадёт с символом возврат назад (англ. backspace). Если вы ищите
         символ границы слова (<code>\b</code>), смотри
         <a
-          href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+          href="/ru/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
           >Границы</a
         >.
       </td>

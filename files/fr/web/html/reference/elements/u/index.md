@@ -1,8 +1,9 @@
 ---
-title: "<u> : l'élément d'annotation non textuelle"
+title: "Élément HTML `<u>` : l'élément d'annotation non textuelle"
+short-title: <u>
 slug: Web/HTML/Reference/Elements/u
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<u>`** représente une portion de texte en ligne devant être rendue de manière à indiquer qu'elle comporte une annotation non textuelle. Par défaut, il est affiché avec un unique soulignement continu, mais cela peut être modifié via CSS.

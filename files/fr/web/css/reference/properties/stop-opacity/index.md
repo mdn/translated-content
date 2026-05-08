@@ -1,8 +1,9 @@
 ---
-title: stop-opacity
+title: Propriété CSS `stop-opacity`
+short-title: stop-opacity
 slug: Web/CSS/Reference/Properties/stop-opacity
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stop-opacity`** définit l'opacité d'un arrêt de couleur dans un élément SVG {{SVGElement("stop")}} au sein d'un dégradé SVG. Si elle est présente, elle remplace l'attribut {{SVGAttr("stop-opacity")}} de l'élément.

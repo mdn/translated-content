@@ -1,8 +1,9 @@
 ---
-title: background-repeat
+title: Propriété CSS `background-repeat`
+short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 l10n:
-  sourceCommit: 1b3165b1717bbd0bfc1c90ad68c80a84e0b4fc8c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.

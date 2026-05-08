@@ -139,7 +139,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>Поддерживаемые общие атрибуты</strong></td>
-      <td><a href="/ru/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
+      <td><a href="/ru/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>Атрибуты IDL</strong></td>

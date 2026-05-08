@@ -1,8 +1,9 @@
 ---
-title: scrollbar-gutter
+title: Propriété CSS `scrollbar-gutter`
+short-title: scrollbar-gutter
 slug: Web/CSS/Reference/Properties/scrollbar-gutter
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scrollbar-gutter`** permet aux auteur·ice·s de réserver de l'espace pour la barre de défilement, évitant ainsi les changements de mise en page indésirables lorsque le contenu augmente, tout en évitant les éléments visuels inutiles lorsque le défilement n'est pas nécessaire.

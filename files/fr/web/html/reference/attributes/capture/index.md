@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : capture"
+title: "Attribut HTML : `capture`"
 short-title: capture
 slug: Web/HTML/Reference/Attributes/capture
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`capture`** indique, de façon optionnelle, qu'un nouveau fichier doit être capturé et quel appareil doit être utilisé pour capturer ce nouveau média, dont le type est défini par l'attribut [`accept`](/fr/docs/Web/HTML/Reference/Attributes/accept).

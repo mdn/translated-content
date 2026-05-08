@@ -66,7 +66,7 @@ The example below shows the source for a set of elements marked up with `itempro
 
 ## Properties
 
-Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/pt-BR/docs/Web/HTML/Element/img#src) attribute, or other elements that link to or embed external resources.
+Properties have values that are either a string or a URL. When a string value is a URL, it is expressed using the {{HTMLElement("a")}} element and its [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/a#href) attribute, the {{HTMLElement("img")}} element and its [`src`](/pt-BR/docs/Web/HTML/Reference/Elements/img#src) attribute, or other elements that link to or embed external resources.
 
 ### Three properties with values that are strings
 
@@ -428,9 +428,9 @@ Names are unordered relative to each other, but if a particular name has multipl
 
 ## See also
 
-- [Other different global attributes](/pt-BR/docs/Web/HTML/Global_attributes)
+- [Other different global attributes](/pt-BR/docs/Web/HTML/Reference/Global_attributes)
 - Other, microdata related, global attributes:
-  - [`itemid`](/pt-BR/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemref`](/pt-BR/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/pt-BR/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/pt-BR/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemref`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#itemtype)

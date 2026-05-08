@@ -39,7 +39,7 @@ Otra indicación (implícita) de que las peticiones PATCH son permitidas, es la 
     <tr>
       <th scope="row">
         Permitido en
-        <a href="/es/docs/Web/Guide/HTML/Forms">formularios HTML</a>
+        <a href="/es/docs/Learn_web_development/Extensions/Forms">formularios HTML</a>
       </th>
       <td>No</td>
     </tr>

@@ -1,8 +1,9 @@
 ---
-title: container-type
+title: Propriété CSS `container-type`
+short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 l10n:
-  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`container-type`** permet de définir le type de contexte de conteneur utilisé dans une requête de conteneur. Les contextes de conteneur disponibles sont&nbsp;:

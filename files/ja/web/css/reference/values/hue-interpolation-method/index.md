@@ -1,16 +1,16 @@
 ---
-title: <hue-interpolation-method>
+title: CSS `<hue-interpolation-method>` データ型
+short-title: <hue-interpolation-method>
 slug: Web/CSS/Reference/Values/hue-interpolation-method
-original_slug: Web/CSS/hue-interpolation-method
 l10n:
-  sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
-**`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{CSSXref("&lt;hue&gt;")}} 値間の補間に用いるアルゴリズムを表します。
+**`<hue-interpolation-method>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、 {{cssxref("hue")}} 値間の補間に用いるアルゴリズムを表します。
 補間方法は、色相環に基づいて 2 つの色相値の中間点を探す方法を指定します。
 これは {{CSSXref("&lt;color-interpolation-method&gt;")}} データ型の成分として使用します。
 
-`<hue>` 値を補間する場合、色相補間アルゴリズムは [`shorter`](#shorter) が既定値です。
+`<hue>` 値を補間する場合、色相補間アルゴリズムは [`shorter`](#shorter) がデフォルト値です。
 
 ## 構文
 
@@ -28,7 +28,7 @@ decreasing hue
 任意の色相角の組は{{Glossary("color wheel", "色相環")}}上の 2 つの半径に対応し、円周を補間可能な 2 つの弧に切り分けます。どちらの弧も最初の半径で始まり 2 つ目の半径で終わりますが、一方は時計回りに、もう一方は反時計回りに進みます。
 
 > [!NOTE]
-> 以下の説明と図は、色相角が時計回りに増加する色相環に基づいています。角度の増加が反時計回りの処理になる色相環があることに注意してください。
+> 以下の説明と図は、色相角が時計回りに増加する色相環に基づいています。角度の増加が反時計回りの操作になる色相環があることに注意してください。
 
 色相角 `θ1` と `θ2` のペアは範囲 `[0deg, 360deg)` に正規化され、 `θ1` から `θ2` への補間時にどの円弧を使用するかを決定するアルゴリズムが 4 つあります。
 
@@ -37,9 +37,9 @@ decreasing hue
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                        | `θ1 = 135deg`, `θ2 = 45deg`                                        |
-    | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-    | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                   | `θ1 = 135deg`, `θ2 = 45deg`                                   |
+    | ------------------------------------------------------------- | ------------------------------------------------------------- |
+    | ![θ1 = 45deg と θ2 = 135deg の短い方](shorter_increasing.png) | ![θ1 = 135deg と θ2 = 45deg の短い方](shorter_decreasing.png) |
 
 - `longer`
   - : 長い方の弧を使用します。 2 つの角が一致した場合は次のようになります。
@@ -50,30 +50,30 @@ decreasing hue
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                      | `θ1 = 135deg`, `θ2 = 45deg`                                      |
-    | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-    | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                  | `θ1 = 135deg`, `θ2 = 45deg`                                  |
+    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | ![θ1 = 45deg と θ2 = 135deg の長い方](longer_decreasing.png) | ![θ1 = 135deg と θ2 = 45deg の長い方](longer_increasing.png) |
 
 - `increasing`
   - : 時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
-    | --------------------------------------------------------------------- | -------------------------------------------------------------------- |
-    | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                     | `θ1 = 135deg`, `θ2 = 45deg`                                    |
+    | --------------------------------------------------------------- | -------------------------------------------------------------- |
+    | ![θ1 = 45deg から θ2 = 135deg への増加](shorter_increasing.png) | ![θ1 = 135deg から θ2 = 45deg への増加](longer_increasing.png) |
 
 - `decreasing`
   - : 反時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
-    | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |
-    | -------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | ![decreasing with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![decreasing with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
+    | `θ1 = 45deg`, `θ2 = 135deg`                                    | `θ1 = 135deg`, `θ2 = 45deg`                                     |
+    | -------------------------------------------------------------- | --------------------------------------------------------------- |
+    | ![θ1 = 45deg から θ2 = 135deg への減少](longer_decreasing.png) | ![θ1 = 135deg から θ2 = 45deg への減少](shorter_decreasing.png) |
 
 選べる弧が 2 つしかないため、これらのアルゴリズムはある状況下では対等です。特に次の場合です。
 
 - `0deg < θ2 - θ1 < 180deg` または `θ2 - θ1 < -180deg` ならば、 `shorter` と `increasing` は等価で、`longer` と `decreasing` は等価です。
 - `-180deg < θ2 - θ1 < 0deg` または `θ2 - θ1 > 180deg` ならば、`shorter` と `decreasing` は等価で、`longer` と `increasing` は等価です。
 
-`increasing` と `decreasing` の特筆すべき特性は、トランジションやアニメーション中に色相角の差が `180deg` を通過するとき、 `shorter` と `longer` のように弧が反対側にならないことです。
+`increasing` と `decreasing` の特筆すべき特性は、トランジションやアニメーション中に色相角の差が `180deg` を通って変化したとき、 `shorter` と `longer` のように弧が反対側にならないことです。
 
 ### 形式文法
 
@@ -233,4 +233,4 @@ p {
 ## 関連情報
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{CSSXref("&lt;hue&gt;")}} データ型
+- {{cssxref("hue")}} データ型

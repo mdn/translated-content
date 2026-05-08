@@ -9,7 +9,7 @@ l10n:
 
 JavaScript の**巻き上げ** (Hoisting) は、インタープリターがコードの実行前に、関数、変数、クラス、インポートの宣言をそのスコープの先頭に移動するように見えるプロセスを指します。
 
-「巻き上げ」は ECMAScript 仕様書で規範的に定義されている用語ではありません。仕様書では宣言のグループを [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration) として定義していますが、これは [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/ja/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)、[`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) 宣言しか含んでいません。巻き上げは、異なる形でではありますが、 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 宣言の機能としても多く考えられています。俗な言い方をすれば、以下のような動作はすべて巻き上げと見なされます。
+「巻き上げ」は ECMAScript 仕様書で規範的に定義されている用語ではありません。仕様書では宣言のグループを [_HoistableDeclaration_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration) として定義していますが、これは [`function`](/ja/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/ja/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/ja/docs/Web/JavaScript/Reference/Statements/async_function)、[`async function*`](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) 宣言しか含んでいません。巻き上げは、異なる形ではありますが、 [`var`](/ja/docs/Web/JavaScript/Reference/Statements/var) 宣言の機能としても多く考えられています。俗な言い方をすれば、以下のような動作はすべて巻き上げと見なされます。
 
 1. スコープ内の宣言行よりも前で変数の値を使用すること。（「値の巻き上げ」）
 2. 変数がスコープ内の宣言行よりも前で参照しても {{jsxref("ReferenceError")}} が発生せず、値が常に [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) であること。（「宣言の巻き上げ」）

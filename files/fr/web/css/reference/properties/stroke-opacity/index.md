@@ -1,8 +1,9 @@
 ---
-title: stroke-opacity
+title: Propriété CSS `stroke-opacity`
+short-title: stroke-opacity
 slug: Web/CSS/Reference/Properties/stroke-opacity
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`stroke-opacity`** définit l'opacité du contour d'une forme [SVG](/fr/docs/Web/SVG). L'effet est identique à celui de {{CSSxRef('opacity')}}, sauf qu'il ne s'applique qu'au contour, et non à l'ensemble de l'élément. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("stroke-opacity")}} de l'élément.

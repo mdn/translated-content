@@ -54,7 +54,7 @@ _Aucun changement._
 
 ### IndexedDB
 
-- Le support de [IDBFactory.cmp()](</fr/docs/IndexedDB/IDBFactory#cmp()>) a été ajouté.
+- Le support de [IDBFactory.cmp()](</fr/docs/Web/API/IDBFactory#cmp()>) a été ajouté.
 - Une [clé IndexedDB](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#section_6) peut également être de l'un des types suivants : Date, Arrays et Float (et pas seulement String et Integer).
 
 ### Réseau

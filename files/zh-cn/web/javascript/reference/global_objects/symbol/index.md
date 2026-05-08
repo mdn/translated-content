@@ -120,7 +120,7 @@ typeof symObj; // "object"
 - {{jsxref("Symbol.for()", "Symbol.for(key)")}}
   - : 使用给定的 key 搜索现有的 symbol，如果找到则返回该 symbol。否则将使用给定的 key 在全局 symbol 注册表中创建一个新的 symbol。
 - {{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}
-  - : 从全局 symbol 注册表中，为给定的 symbol 检索一个共享的？symbol key。
+  - : 从全局 symbol 注册表中，为给定的 symbol 检索一个共享的 symbol key。
 
 ## Symbol 原型
 

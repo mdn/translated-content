@@ -1,8 +1,9 @@
 ---
-title: transition-timing-function
+title: Propriété CSS `transition-timing-function`
+short-title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/Guides/Transitions/Using) sont calculées.

@@ -50,8 +50,8 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#presentation) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 

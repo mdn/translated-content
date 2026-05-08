@@ -1,9 +1,9 @@
 ---
-title: <display-box>
+title: Type CSS `<display-box>`
+short-title: <display-box>
 slug: Web/CSS/Reference/Values/display-box
-original_slug: Web/CSS/display-box
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<display-box>`** définit si un élément génère des boîtes d'affichage ou aucune.

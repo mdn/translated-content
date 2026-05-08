@@ -1,8 +1,9 @@
 ---
-title: justify-items
+title: Propriété CSS `justify-items`
+short-title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
 l10n:
-  sourceCommit: 05e0ea073802694cc49d76d566778bd607a9511f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`justify-items`** définit la valeur par défaut de {{CSSxRef("justify-self")}} pour tous les éléments de la boîte, leur donnant ainsi une façon par défaut de justifier chaque boîte le long de l'axe approprié.

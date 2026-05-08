@@ -1,8 +1,9 @@
 ---
-title: dynamic-range-limit
+title: Propriété CSS `dynamic-range-limit`
+short-title: dynamic-range-limit
 slug: Web/CSS/Reference/Properties/dynamic-range-limit
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 314e1451345c061ad4ecc7a9d1845e3e8a9a23f4
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`dynamic-range-limit`** définit la luminance maximale autorisée pour le contenu <abbr>HDR</abbr> pour <i lang="en">High Dynamic Range</i>, signifiant Grande Plage Dynamique.
@@ -28,22 +29,18 @@ dynamic-range-limit: unset;
 
 ### Valeurs
 
-La propriété `dynamic-range-limit` se définit avec l'une des valeurs suivantes ou avec un appel à la fonction {{CSSxRef("dynamic-range-limit-mix()")}}.
-
-Les valeurs suivantes peuvent être utilisées&nbsp;:
-
 - `standard`
-  - : Définit la luminance maximale comme le **blanc de référence HDR**, qui correspond à la couleur CSS `white`.
+  - : Définit la luminance maximale comme le blanc de référence à Haute Plage Dynamique (<abbr>HDR</abbr>), qui correspond à la couleur CSS `white`.
 - `no-limit`
-  - : Définit la luminance maximale comme bien supérieure à celle du blanc de référence HDR. Le niveau exact n'est pas précisé.
+  - : Définit la luminance maximale comme bien supérieure à celle du blanc de référence HDR. Le niveau exact n'est pas précisé. C'est la valeur initiale.
 - `constrained`
   - : Définit la luminance maximale comme légèrement supérieure à celle du blanc de référence HDR, afin qu'un mélange de contenu SDR (plage dynamique standard) et HDR puisse être affiché confortablement ensemble. Le niveau exact n'est pas précisé.
-
-La fonction {{CSSxRef("dynamic-range-limit-mix()")}} permet de définir une luminance maximale personnalisée, en combinant différentes valeurs selon les pourcentages indiqués. Elle prend deux paires ou plus, chacune composée d'un mot-clé `dynamic-range-limit` (ou d'une fonction `dynamic-range-limit-mix()` imbriquée) et d'un pourcentage.
+- {{CSSxRef("dynamic-range-limit-mix()")}}
+  - : Définit une luminance maximale personnalisée, en combinant différentes valeurs selon les pourcentages indiqués. Elle prend deux paires ou plus, chacune composée d'un mot-clé `dynamic-range-limit` (ou d'une fonction `dynamic-range-limit-mix()` imbriquée) et d'un pourcentage.
 
 ## Description
 
-La plage dynamique correspond à la différence de luminance (luminosité) entre les parties les plus claires et les plus sombres d'un contenu. Elle se mesure en stops photographiques, où une augmentation d'un stop représente un doublement de la luminance.
+La propriété `dynamic-range-limit` définit la luminance maximale autorisée sur les écrans capables d'afficher des couleurs à haute plage dynamique. Une **plage dynamique** est la différence de luminance (luminosité) entre les parties les plus claires et les plus sombres d'un contenu. Elle se mesure en stops photographiques, où une augmentation d'un stop représente un doublement de la luminance.
 
 ### SDR, HDR et marge de manœuvre
 
@@ -86,7 +83,7 @@ Dans le balisage, nous intégrons une image HDR avec un élément {{HTMLElement(
 
 #### CSS
 
-Nous appliquons quelques styles de base à notre élément `<img>`, puis nous définissons sa propriété `dynamic-range-limit` sur `standard`, ce qui signifie qu'il ne sera pas affiché plus lumineux que le blanc de référence HDR. Nous ajoutons également la propriété {{CSSxRef("transition")}} pour que la valeur de `dynamic-range-limit` de l'élément `<img>` évolue sur `0,6` seconde lors d'un changement d'état.
+Nous appliquons quelques styles de base à notre élément `<img>`, puis nous définissons sa propriété `dynamic-range-limit` sur `standard`, ce qui signifie qu'il n'est pas affiché plus lumineux que le blanc de référence HDR. Nous ajoutons également la propriété {{CSSxRef("transition")}} pour que la valeur de `dynamic-range-limit` de l'élément `<img>` évolue sur `0,6` seconde lors d'un changement d'état.
 
 ```css
 img {
@@ -97,7 +94,7 @@ img {
 }
 ```
 
-Au survol ou à la sélection, nous changeons la valeur de la propriété `dynamic-range-limit` de l'élément `<img>` à `no-limit` pour qu'il soit affiché aussi lumineux que le navigateur et l'écran le permettent.
+Au survol ou à la sélection, nous changeons la valeur de la propriété `dynamic-range-limit` de l'élément `<img>` à `no-limit` pour qu'il s'affiche aussi lumineux que le navigateur et l'écran le permettent.
 
 ```css
 img:hover,
@@ -116,4 +113,4 @@ img:focus {
 
 ## Voir aussi
 
-[`dynamic-range`](/fr/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) et [`video-dynamic-range`](/fr/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) fonctionnalités de média
+- [`dynamic-range`](/fr/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) et les fonctionnalités de média [`video-dynamic-range`](/fr/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range)

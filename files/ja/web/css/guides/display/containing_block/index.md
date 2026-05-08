@@ -1,9 +1,8 @@
 ---
 title: レイアウトと包含ブロック
 slug: Web/CSS/Guides/Display/Containing_block
-original_slug: Web/CSS/CSS_display/Containing_block
 l10n:
-  sourceCommit: 9b9086cf753e2d5721fe1229ff6f767ccf512f97
+  sourceCommit: 19497692665c3551b4097af5cd9f52f84564cefd
 ---
 
 要素の寸法や位置は、しばしば**包含ブロック** (containing block) に影響されます。多くの場合、包含ブロックは要素から見て直近の[ブロックレベル](/ja/docs/Glossary/Block-level_content)の祖先の[コンテンツ領域](/ja/docs/Web/CSS/Guides/Box_model/Introduction#コンテンツ領域)ですが、常にそうとは限りません。この記事では、要素の包含ブロックが決まる要因を学びます。
@@ -33,9 +32,8 @@ l10n:
 2. `position` プロパティが **`absolute`** の場合、包含ブロックは `position` の値が `static` 以外 (`fixed`, `absolute`, `relative`, `sticky`) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。
 3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("Viewport", "ビューポート")}} （連続的なメディアの場合）またはページ領域（ページメディアの場合）によって確立されます。
 4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素におけるパディングボックスの辺によって構成されることがあります。
-   - {{cssxref("filter")}}、{{cssxref("backdrop-filter")}}、{{cssxref("transform")}}、{{cssxref("perspective")}} の値が `none` 以外である。
+   - {{cssxref("filter")}}、{{cssxref("backdrop-filter")}}、{{cssxref("transform")}}、{{cssxref("perspective")}}、{{cssxref("rotate")}}、{{cssxref("scale")}}、{{cssxref("translate")}} の値が `none` 以外である。
    - {{cssxref("contain")}} の値が `layout`、`paint`、`strict`、`content` のいずれかである。（例 `contain: paint;`）
-   - {{cssxref("container-type")}} の値が `normal` 以外である。
    - {{cssxref("will-change")}} 値で、包含ブロックを形成する初期値以外の値を持つプロパティ（`filter` や `transform` など）がある。
    - {{cssxref("content-visibility")}} の値が `auto` である。
 
@@ -265,5 +263,5 @@ p {
 - [重ね合わせコンテキスト](/ja/docs/Web/CSS/Guides/Positioned_layout/Stacking_context)
 - [マージンの相殺](/ja/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
 - [初期値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#初期値)、[計算値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#計算値)、[使用値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#使用値)、[実効値](/ja/docs/Web/CSS/Guides/Cascade/Property_value_processing#実効値)
-- [置換要素](/ja/docs/Web/CSS/Guides/Images/Replaced_element_properties)
+- {{glossary("Replaced elements", "置換要素")}}
 - {{glossary("Intrinsic Size", "内在サイズ")}}

@@ -1,8 +1,9 @@
 ---
-title: position-try-fallbacks
+title: Propriété CSS `position-try-fallbacks`
+short-title: position-try-fallbacks
 slug: Web/CSS/Reference/Properties/position-try-fallbacks
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-try-fallbacks`** permet de définir une liste d'une ou plusieurs **options de repli de position** pour les éléments positionnés par ancre afin qu'ils soient placés par rapport à leurs éléments d'ancrage associés. Lorsque l'élément dépasserait autrement son bloc contenant modifié par les marges internes, le navigateur essaiera de placer l'élément positionné dans ces différentes positions de repli, dans l'ordre fourni, jusqu'à ce qu'il trouve une valeur qui empêche le débordement de son conteneur ou de la fenêtre d'affichage.

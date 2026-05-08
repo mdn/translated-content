@@ -15,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">선행 지식:</th>
       <td>
-        <a href="/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">인터넷이 작동하는 법</a>을
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">인터넷이 작동하는 법</a>을
         알아야 하고
         <a href="/ko/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >웹 페이지, 웹사이트, 웹 서버 그리고 검색엔진의 차이</a

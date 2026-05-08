@@ -19,7 +19,7 @@ slug: Web/HTTP/Reference/Headers/Sec-CH-UA-Arch
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>是</td>
     </tr>
   </tbody>

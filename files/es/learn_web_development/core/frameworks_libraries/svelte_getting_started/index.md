@@ -7,7 +7,7 @@ l10n:
 ---
 
 {{LearnSidebar}}
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 En este artículo proporcionaremos una breve introducción al [framework Svelte](https://svelte.dev/). Veremos cómo funciona Svelte y qué es lo que lo hace diferente del resto de _frameworks_ y herramientas que hemos revisado hasta ahora. Después aprenderemos a configurar nuestro entorno de desarrollo, crear una aplicación de ejemplo, entender la estructura del proyecto, ver cómo ejecutarlo localmente y finalmente construir la versión para producción.
 
@@ -18,9 +18,9 @@ En este artículo proporcionaremos una breve introducción al [framework Svelte]
       <td>
         <p>
         Se recomienda que como mínimo te sientas familiarizado con lo básico de los lenguajes
-          <a href="/es/docs/Learn/HTML">HTML</a>,
-          <a href="/es/docs/Learn/CSS">CSS</a> y
-          <a href="/es/docs/Learn/JavaScript">JavaScript</a>, además tener conocimiento de la
+          <a href="/es/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1">CSS</a> y
+          <a href="/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792">JavaScript</a>, además tener conocimiento de la
           <a
             href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/línea de comandos</a
@@ -506,4 +506,4 @@ En Svelte:
 - Las variables del nivel principal de un componente conforman su estado.
 - La reactividad se activa al asignar un nuevo valor a una variable del nivel principal.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_resources","Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

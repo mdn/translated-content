@@ -209,7 +209,7 @@ table.summary = "nota: aumento de borda";
 
 ### Interfaces Core no DOM
 
-Essa seção lista algumas das interfaces mais utilizadas no DOM. A ideia não é descrever o que essas APIs fazem aqui mas para te dar uma ideia de que tipos de métodos e propriedades você verá bastante conforme for usando o DOM. Essas APIs são usadas nos exemplos mais extensos no capítulo de [DOM Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples) ao fim desse livro.
+Essa seção lista algumas das interfaces mais utilizadas no DOM. A ideia não é descrever o que essas APIs fazem aqui mas para te dar uma ideia de que tipos de métodos e propriedades você verá bastante conforme for usando o DOM. Essas APIs são usadas nos exemplos mais extensos no capítulo de [DOM Examples](/pt-BR/docs/conflicting/Web/API/Document_Object_Model) ao fim desse livro.
 
 Objetos `Document` e `window` são os objetos cujas interfaces você geralmente utiliza mais frequentemente em programação DOM. De forma simples, o objeto `window` representa algo como o browser, e o objeto `document` é a raiz de todo o documento em si. `Element` herda dessa interface `Node` genérica, e juntamente com essas duas interfaces fornecem muitos dos métodos e propriedades que você utiliza em elementos individuais. Esses elementos podem também ter interfaces específicas para lidar com o tipo de dado que esses elementos contêm, como no exemplo do objeto `table` na seção anterior.
 
@@ -303,8 +303,8 @@ Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessávei
 ## Subnav
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
+- [Introduction to the DOM](/pt-BR/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef)
 - [Events and the DOM](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
-- [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
+- [Examples](/pt-BR/docs/conflicting/Web/API/Document_Object_Model)
 
 {{DefaultAPISidebar("DOM")}}

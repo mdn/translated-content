@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 이 글에선 비동기 프로그래밍이 무엇인지, 왜 필요한지 설명하고 역사상 JavaScript에서 비동기 함수가 구현된 몇 가지 방법에 대해 간략하게 설명 할 것입니다.
 
@@ -325,4 +325,4 @@ doOperation();
 
 이러한 이유로 대부분의 최신 비동기 API는 콜백을 사용하지 않습니다. 대신 JavaScript에서 비동기 프로그래밍의 토대는 다음에 소개할 {{jsxref("Promise")}} 입니다.
 
-{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}

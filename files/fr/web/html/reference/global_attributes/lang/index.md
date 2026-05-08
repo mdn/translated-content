@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : lang"
+title: "Attribut HTML universel : `lang`"
 short-title: lang
 slug: Web/HTML/Reference/Global_attributes/lang
 l10n:
-  sourceCommit: a2a094e0c6b051595a6d33c06650c5faca202d14
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`lang`** aide à définir la langue d'un élément&nbsp;: la langue dans laquelle les éléments non modifiables sont écrits, ou la langue dans laquelle les éléments modifiables doivent être écrits par l'utilisateur·ice. L'attribut contient une seule {{Glossary("BCP 47 language tag", "balise de langue BCP 47")}}.

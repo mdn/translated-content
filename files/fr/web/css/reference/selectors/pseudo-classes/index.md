@@ -2,7 +2,7 @@
 title: Pseudo-classes
 slug: Web/CSS/Reference/Selectors/Pseudo-classes
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: a75edf682e5e346b4f97582db6cbccaae800ef73
 ---
 
 Une **_pseudo-classe_** [CSS](/fr/docs/Web/CSS) est un mot-clé ajouté à un sélecteur qui vous permet de sélectionner des éléments en fonction d'informations qui se trouvent en dehors de l'arbre de documents, telles qu'un état spécifique des éléments sélectionnés. Par exemple, la pseudo-classe {{CSSxRef(":hover")}} peut être utilisée pour mettre en forme un bouton lorsque le pointeur de l'utilisateur·ice survole le bouton.
@@ -44,6 +44,8 @@ Ces pseudo-classes permettent de sélectionner des éléments en fonction de leu
   - : Correspond à un élément qui est actuellement en mode plein écran.
 - {{CSSxRef(":picture-in-picture")}}
   - : Correspond à un élément qui est actuellement en mode image dans l'image.
+- {{CSSxRef(":xr-overlay")}}
+  - : Correspond à l'élément de superposition DOM pendant une session AR ou VR immersive.
 
 ## Pseudo-classes d'entrée de formulaire
 
@@ -399,6 +401,10 @@ V
 W
 
 - {{CSSxRef(":where", ":where()")}}
+
+X
+
+- {{CSSxRef(":xr-overlay")}} {{Experimental_Inline}}
 
 ### Pseudo-classes non standard
 

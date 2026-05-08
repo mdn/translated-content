@@ -1,8 +1,9 @@
 ---
-title: :heading()
+title: Pseudo-classe CSS `:heading()`
+short-title: :heading()
 slug: Web/CSS/Reference/Selectors/:heading_function
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{SeeCompatTable}}

@@ -7,7 +7,7 @@ slug: Web/API/SVGDescElement
 
 L'interface **`SVGDescElement`** correspond à l'élément {{SVGElement("desc")}}.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Propriétés
 

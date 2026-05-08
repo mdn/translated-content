@@ -6,10 +6,10 @@ original_slug: Web/API/Document_Object_Model/Whitespace
 
 ## O problema
 
-A presença de espaço branco no [DOM](/pt-BR/docs/Web/API/Document_Object_Model) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/Web/CSS)). Isso significa que:
+A presença de espaço branco no [DOM](/pt-BR/docs/Web/API/Document_Object_Model) pode dificultar a manipulação da árvore de conteúdo de formas imprevisíveis. No Mozilla, todo o espaço branco no conteúdo de texto do documento original é representado no DOM (isso não inclui [whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace) entre tags). (Isso é necessário internamente para que o editor possa preservar a formatação de documentos e também que `white-space: pre` irá funcionar em [CSS](/pt-BR/docs/Web/CSS)). Isso significa que:
 
-- haverão alguns nós de texto que contêm somente [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace), e
-- alguns nós de texto terão [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) no início ou no final.
+- haverão alguns nós de texto que contêm somente [whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace), e
+- alguns nós de texto terão [whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace) no início ou no final.
 
 Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como a imagem abaixo (usando "\n" para representar novas linhas):
 
@@ -28,7 +28,7 @@ Em outras palavras, a árvore do DOM para o documento seguinte irá parecer como
 
 ![](whitespace_tree.png)
 
-Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace).
+Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que quer iterar através do conteúdo, excluindo o [whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace).
 
 ## Facilitando as coisas
 
@@ -57,7 +57,7 @@ Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que q
 </div>
 ```
 
-O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) no DOM mais fácil.
+O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace) no DOM mais fácil.
 
 ```js
 /**

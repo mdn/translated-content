@@ -104,4 +104,4 @@ requestAnimationFrame(draw);
 
 Вы также можете вернуться на [this tutorial series' index page](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) учебника. Получайте удовольствие от написания кода!
 
-{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

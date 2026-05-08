@@ -2,10 +2,8 @@
 title: データ属性の使用
 slug: Web/HTML/How_to/Use_data_attributes
 l10n:
-  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
+  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
 ---
-
-{{HTMLSidebar}}
 
 HTML は、特定の要素に関連付ける必要があるが、定義済みの意味を持つ必要のないデータに対する拡張性を念頭に置いて設計されています。 [`data-*` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)により、標準外の属性や DOM の追加プロパティなどの特殊な方法に頼らずに、標準的な意味のある HTML 要素に追加情報を格納することができます。
 
@@ -94,15 +92,87 @@ article[data-columns="4"] {
 }
 ```
 
-[この JS Bin の例](https://jsbin.com/ujiday/2/edit)では、これらすべてが一緒に機能していることがわかります。
+データ値は文字列です。スタイル設定を適用するには、セレクター内で数値を引用符で囲む必要があります。
 
-データ属性を保存して、ゲームのスコアなど、絶えず変化する情報を含めることもできます。 ここで CSS セレクターと JavaScript アクセスを使用すると、独自の表示ルーチンを作成することなく、気の利いたエフェクトを作成できます。 生成したコンテンツと CSS トランジション（transition、遷移）を使用した例については、[このスクリーンキャスト](https://www.youtube.com/watch?v=On_WyUB1gOk)を参照してください（[JS Bin の例](https://jsbin.com/atawaz/3/edit)）。
+## 例
 
-データ値は文字列です。 スタイリングを有効にするには、セレクターで数値を引用符で囲む必要があります。
+### スタイルの変化形
+
+`callout` というクラスを想像してください。これに、"note" や "warning" といった異なる変化形を実装したいとします。従来は、単に異なるクラス名を使用するのが一般的でした。
+
+```html
+<div class="callout callout--note">...</div>
+<div class="callout callout--warning">...</div>
+```
+
+```css
+.callout {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.callout--note {
+  border-color: rgb(15 15 235);
+  background-color: rgb(15 15 235 / 0.2);
+}
+.callout--warning {
+  border-color: rgb(235 15 15);
+  background-color: rgb(235 15 15 / 0.2);
+}
+```
+
+データ属性がついている場合、次のような別の方法も検討することができます。
+
+```html live-sample___callout-data-attr
+<div class="callout">...</div>
+<div class="callout" data-variant="note">...</div>
+<div class="callout" data-variant="warning">...</div>
+```
+
+```css live-sample___callout-data-attr
+.callout {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* デフォルトのスタイル */
+.callout:not([data-variant]) {
+  border-color: rgb(15 15 15);
+  background-color: rgb(15 15 15 / 0.2);
+}
+.callout[data-variant="note"] {
+  border-color: rgb(15 15 235);
+  background-color: rgb(15 15 235 / 0.2);
+}
+.callout[data-variant="warning"] {
+  border-color: rgb(235 15 15);
+  background-color: rgb(235 15 15 / 0.2);
+}
+```
+
+{{EmbedLiveSample("callout-data-attr", "", "200")}}
+
+これには多くの利点があります。
+
+- これにより、`callout` を追加せずに `callout--note` を適用したり、複数の変化形を同時に適用したりするなど、多くの不正な状態が排除されます。
+- 別個の `data-variant` 属性を使用することで、リンティングや型チェックを通じて有効な値の静的解析をすることができます。
+- 変化形を切り替える方が直感的です。`div.dataset.variant = "warning";` を、複数の段階を要求する [`classList`](/ja/docs/Web/API/Element/classList) を操作する代わりに使用することができます。
+
+### DOM 要素に任意のデータを関連付ける
+
+多くのウェブアプリでは、UI 状態の真正な情報源として JavaScript のデータが用いられています。このような場合、HTML 属性はレンダリングに必要なもののみを追加します。データ属性は、すべての情報がマークアップ内に存在し、JavaScript がイベント処理や状態の同期などにのみ必要な場合に役立ちます。
+
+例えば、[スクロールマージン付きのカルーセル](/ja/docs/Web/API/IntersectionObserver/scrollMargin#スクロールマージン付きのカルーセル)の例では、すでに HTML ページに多くの `<img>` 要素が配置されています。画像のソースは、リクエストが発生しないようにするため、最初は `data-src` に格納されており、実際の `src` は、`<img>` がスクロールして表示範囲内に入ったときにのみ追加されます。データ（画像のソース）は要素と同じ場所に配置されており、JavaScript は動作を定義する役割のみを担っています。
 
 ## 問題
 
-支援技術がアクセスできない可能性があるため、データ属性に表示およびアクセス可能なコンテンツを保存しないでください。 さらに、検索クローラーはデータ属性の値にインデックスを付けない場合があります。
+支援技術がアクセスできない可能性があるため、データ属性に表示およびアクセス可能なコンテンツを保存しないでください。 さらに、検索クローラーはデータ属性の値にインデックスしない場合があります。多くの場合、データ属性を表示させるだけであれば、[`textContent`](/ja/docs/Web/API/Node/textContent) を直接操作することが可能です。
 
 ## 関連情報
 

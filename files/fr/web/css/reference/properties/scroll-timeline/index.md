@@ -1,8 +1,9 @@
 ---
-title: scroll-timeline
+title: Propriété CSS `scroll-timeline`
+short-title: scroll-timeline
 slug: Web/CSS/Reference/Properties/scroll-timeline
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`scroll-timeline`** est utilisée pour définir une [chronologie de progression de défilement nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines), qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou de gauche à droite).
@@ -45,11 +46,11 @@ scroll-timeline: unset;
 
 ## Description
 
-La propriété raccourcie `scroll-timeline` peut être appliquée à un élément conteneur pour définir à la fois les propriétés `scroll-timeline-name` et `scroll-timeline-axis`. Elle est définie sur le conteneur de défilement qui fournira la chronologie. Si le conteneur n'a pas de débordement à faire défiler ou si le débordement est masqué ou coupé, aucune chronologie ne sera créée.
+La propriété raccourcie `scroll-timeline` peut être appliquée à un élément conteneur pour définir à la fois les propriétés `scroll-timeline-name` et `scroll-timeline-axis`. Elle est définie sur le conteneur de défilement qui fournit la chronologie. Si le conteneur n'a pas de débordement à faire défiler ou si le débordement est masqué ou coupé, aucune chronologie ne est créée.
 
-La valeur de la propriété {{CSSxRef("scroll-timeline-name")}}, si elle n'est pas définie sur `none`, doit être un {{CSSxRef("&lt;dashed-ident&gt;")}}, ce qui signifie qu'elle doit commencer par `--`. Cela permet d'éviter les conflits de noms avec les mots-clés CSS standard. Le nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("animation-timeline")}} d'un élément pour définir l'élément conteneur de défilement qui définira sa [chronologie d'animation](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#progression_du_défilement_dune_chronologie_nommée), pilotant la progression de l'animation au fur et à mesure du défilement.
+La valeur de la propriété {{CSSxRef("scroll-timeline-name")}}, si elle n'est pas définie sur `none`, doit être un {{CSSxRef("&lt;dashed-ident&gt;")}}, ce qui signifie qu'elle doit commencer par `--`. Cela permet d'éviter les conflits de noms avec les mots-clés CSS standard. Le nom peut ensuite être utilisé comme valeur de la propriété {{CSSxRef("animation-timeline")}} d'un élément pour définir l'élément conteneur de défilement qui définit sa [chronologie d'animation](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#progression_du_défilement_dune_chronologie_nommée), pilotant la progression de l'animation au fur et à mesure du défilement.
 
-La valeur optionnelle de l'axe de défilement ({{CSSxRef("&lt;axis&gt;")}}) définit la valeur de {{CSSxRef("scroll-timeline-axis")}}, qui par défaut est `block` si elle est omise. Si un nom et un axe sont définis, l'ordre doit être la valeur `<scroll-timeline-name>` suivie de la valeur `<axis>`. Si l'axe (`<axis>`) est listé en premier, la déclaration est invalide et sera ignorée.
+La valeur optionnelle de l'axe de défilement ({{CSSxRef("&lt;axis&gt;")}}) définit la valeur de {{CSSxRef("scroll-timeline-axis")}}, qui par défaut est `block` si elle est omise. Si un nom et un axe sont définis, l'ordre doit être la valeur `<scroll-timeline-name>` suivie de la valeur `<axis>`. Si l'axe (`<axis>`) est listé en premier, la déclaration est invalide et est ignorée.
 
 ## Définition formelle
 
@@ -134,12 +135,12 @@ Sans contenu qui déborde du conteneur, il n'y aurait pas de barre de défilemen
 ```css hidden
 @layer no-support {
   @supports not (scroll-timeline: --square-timeline) {
-    body::before {
+    :root::before {
       content: "Votre navigateur ne prend pas en charge la propriété `scroll-timeline`.";
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

@@ -29,7 +29,7 @@ slug: Web/API/CDATASection
 
 注意，CDATA 片段不应该在 HTML 中被使用；它只在 XML 中有效。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

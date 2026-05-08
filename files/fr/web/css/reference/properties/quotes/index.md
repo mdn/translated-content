@@ -1,8 +1,9 @@
 ---
-title: quotes
+title: Propriété CSS `quotes`
+short-title: quotes
 slug: Web/CSS/Reference/Properties/quotes
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`quotes`** définit la manière dont le navigateur doit afficher les guillemets qui sont automatiquement ajoutés à l'élément HTML {{HTMLElement("q")}} ou ajoutés en utilisant les valeurs `open-quotes` ou `close-quotes` (ou omis en utilisant les valeurs `no-open-quote` et `no-close-quote`) de la propriété CSS {{CSSxRef("content")}}.

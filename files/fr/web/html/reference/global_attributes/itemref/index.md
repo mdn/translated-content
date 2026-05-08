@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : itemref"
+title: "Attribut HTML universel : `itemref`"
 short-title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemref`** permet d'associer des propriétés qui ne sont pas des descendants d'un élément avec l'attribut [`itemscope`](/fr/docs/Web/HTML/Reference/Global_attributes/itemscope).

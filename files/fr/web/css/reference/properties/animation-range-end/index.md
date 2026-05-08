@@ -1,8 +1,9 @@
 ---
-title: animation-range-end
+title: Propriété CSS `animation-range-end`
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 l10n:
-  sourceCommit: f94b7a0b06a0e32df81ec8197720d306fe50a4a0
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-end`** définit le point sur la chronologie où une animation doit se terminer.
@@ -36,7 +37,7 @@ animation-range-end: unset;
 - {{CSSxRef("length-percentage")}}
   - : Définit une valeur de longueur ou de pourcentage mesurée à partir du début de la chronologie.
 - {{CSSxRef("timeline-range-name")}}
-  - : Définit une plage de chronologie nommée dans la chronologie globale. La plage commence à `0%`.
+  - : Définit une plage de chronologie nommée dans la chronologie globale. La plage se termine à `100%`.
 - `<timeline-range-name> <length-percentage>`
   - : Définit une longueur ou un pourcentage mesuré à partir du début de la plage de chronologie nommée.
 

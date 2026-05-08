@@ -34,7 +34,7 @@ Bien que certaines contraintes soient imposées aux navigateurs sur leurs feuill
 
 ### Feuilles de style du site
 
-Les **feuilles de style du site** (<i lang="en">author stylesheets</i> en anglais) sont les feuilles de style les plus fréquemment rencontrées. Il s'agit des styles écrits par les équipes de développement web. Ces styles peuvent réinitialiser les styles de l'agent utilisateur, comme indiqué avant, et définir les styles pour la conception d'une page ou application web donnée. C'est la personne ou l'équipe qui développe le site web qui définit les styles du document en utilisant une ou plusieurs feuilles de style importées ou liées, des éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) ou encore des styles en incise définis avec l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style). Ce sont ces styles qui définissent l'aspect du site web, son thème.
+Les **feuilles de style du site** (<i lang="en">author stylesheets</i> en anglais) sont les feuilles de style les plus fréquemment rencontrées. Il s'agit des styles écrits par les équipes de développement web. Ces styles peuvent réinitialiser les styles de l'agent utilisateur, comme indiqué avant, et définir les styles pour la conception d'une page ou application web donnée. C'est la personne ou l'équipe qui développe le site web qui définit les styles du document en utilisant une ou plusieurs feuilles de style importées ou liées, des éléments [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) ou encore des styles en incise définis avec l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes/style). Ce sont ces styles qui définissent l'aspect du site web, son thème.
 
 ### Feuilles de style de l'utilisatrice ou l'utilisateur
 

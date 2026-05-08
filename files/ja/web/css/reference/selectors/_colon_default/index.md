@@ -37,7 +37,7 @@ input:default {
   >
 
   <label
-    ><input name="privacy" type="checkbox" />プライバシーポリシーをを読み、同意します。</label
+    ><input name="privacy" type="checkbox" />プライバシーポリシーを読み、同意します。</label
   >
 
   <input type="submit" value="送信フォーム" />

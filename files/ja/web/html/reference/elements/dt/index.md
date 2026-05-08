@@ -89,7 +89,7 @@ dd {
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Listitem_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >

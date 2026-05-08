@@ -73,7 +73,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
           X）查看。設定尺寸的時候注意到這個樣式表目前會做這個設定<code
             >box-sizing: border-box</code
           >
-          （查看 <a href="/docs/Web/CSS/box-sizing">box-sizing</a>）。
+          （查看 <a href="/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>）。
         </p>
         <p>
           <a href="https://firefoxux.github.io/StyleGuide/#/controls"

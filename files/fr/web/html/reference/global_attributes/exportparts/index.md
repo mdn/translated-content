@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : exportparts"
+title: "Attribut HTML universel : `exportparts`"
 short-title: exportparts
 slug: Web/HTML/Reference/Global_attributes/exportparts
 l10n:
-  sourceCommit: 730741c750cc299b85798f1adbaf7adbd6e2016d
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`exportparts`** permet de sélectionner et de mettre en forme des éléments présents dans des {{Glossary("shadow tree", "arbres d'ombre")}} imbriqués, en exportant leurs noms de `part`.

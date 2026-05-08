@@ -98,7 +98,7 @@ if(!("nextElementSibling" in document.documentElement)){
 
 ## 参见
 
-- [`nextSibling`](/zh-CN/docs/DOM/Node.nextSibling)
+- [`nextSibling`](/zh-CN/docs/Web/API/Node/nextSibling)
 - [`childElementCount`](/zh-CN/docs/Web/API/Element/childElementCount)
 - [`children`](/zh-CN/docs/Web/API/Element/children)
 - [`firstElementChild`](/zh-CN/docs/Web/API/Element/firstElementChild)
