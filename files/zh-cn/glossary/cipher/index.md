@@ -7,9 +7,9 @@ l10n:
 
 在{{glossary("cryptography", "密码学")}}领域，**密码算法**是一种可以{{glossary("encryption", "加密")}}{{glossary("Plaintext","明文")}}使其不可读，且能够{{glossary("decryption", "解密")}}回明文的算法。
 
-在信息时代很久以前，密码算法就已经很常见了（例如[替换密码算法](https://zh.wikipedia.org/wiki/替换式密码)和[移位密码算法](https://zh.wikipedia.org/zh-cn/古典密码#移位式密码)），但是它们之中除了[一次性密码本算法](https://zh.wikipedia.org/zh-cn/一次性密码本)以外，其他的均不满足密码学上的安全性。
+在信息时代很久以前，密码算法就已经很常见了（例如[替换密码算法](https://zh.wikipedia.org/wiki/替换式密码)和[移位密码算法](https://zh.wikipedia.org/wiki/古典密码#移位式密码)），但是它们之中除了[一次性密码本算法](https://zh.wikipedia.org/wiki/一次性密码本)以外，其他的均不满足密码学上的安全性。
 
-在现代，密码算法发生了巨大变化。[AES](https://zh.wikipedia.org/wiki/高级加密标准)、[RSA](<https://zh.wikipedia.org/wiki/RSA加密演算法>) 和 [Blowfish](<https://zh.wikipedia.org/wiki/Blowfish>) 都是作为当代加密标准和系统不可或缺组成部分的密码算法。
+在现代，密码算法发生了巨大变化。[AES](https://zh.wikipedia.org/wiki/高级加密标准)、[RSA](https://zh.wikipedia.org/wiki/RSA加密演算法) 和 [Blowfish](https://zh.wikipedia.org/wiki/Blowfish) 都是作为当代加密标准和系统不可或缺组成部分的密码算法。
 
 现代密码算法通常为抵抗{{glossary("cryptanalysis", "密码分析")}}的攻击设计。无法保证所有攻击方法都已被发现，因此根据已知的攻击类别，每种算法[适用于不同的用途](/zh-CN/docs/Web/API/SubtleCrypto#支持的算法)。
 
