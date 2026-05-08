@@ -1,8 +1,9 @@
 ---
-title: <input type="text">
+title: Valeur d'attribut HTML `<input type="text">`
+short-title: <input type="text">
 slug: Web/HTML/Reference/Elements/input/text
 l10n:
-  sourceCommit: 6e3b5b1a28e717aedd42b5e27b61bd80664ae3af
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`text`** permettent de créer des champs de saisie pour du texte sur une seule ligne.

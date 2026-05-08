@@ -2,7 +2,7 @@
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
 l10n:
-  sourceCommit: 74e7902b0875b6378d77df6d2d925a2d09d19f5d
+  sourceCommit: ef78a9a3336c884fb3587e4ff833e64704296f01
 ---
 
 **Firefox** est un {{Glossary("Browser","navigateur web")}} gratuit et open source développé par la Mozilla Corporation. Firefox est disponible pour Windows, macOS, Linux, Android et iOS.
@@ -18,8 +18,8 @@ Firefox est disponible sur plusieurs plateformes et existe en différentes versi
 Utilisez ces liens pour télécharger Firefox pour différentes plateformes, appareils ou besoins de déploiement&nbsp;:
 
 - [Ordinateur](https://www.firefox.com/fr/)
-- [Android](https://www.firefox.com/fr/browsers/mobile/)
-- [iOS](https://www.firefox.com/fr/browsers/mobile/)
+- [Android](https://www.firefox.com/fr/mobile/)
+- [iOS](https://www.firefox.com/fr/mobile/)
 - [Firefox pour les entreprises](https://www.firefox.com/fr/browsers/enterprise/)
 
 ### Développeur·euse·s web

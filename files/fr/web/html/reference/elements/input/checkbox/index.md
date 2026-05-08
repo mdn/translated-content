@@ -1,8 +1,9 @@
 ---
-title: <input type="checkbox">
+title: Valeur d'attribut HTML `<input type="checkbox">`
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 l10n:
-  sourceCommit: 539dea64b179cea3f12270fe2b5203a9d2d08795
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`checkbox`** sont affichés par défaut sous la forme de cases qui sont cochées lorsqu'elles sont activées, comme vous pourriez le voir sur un formulaire papier gouvernemental. L'apparence exacte dépend de la configuration du système d'exploitation sous lequel le navigateur fonctionne. Il s'agit généralement d'un carré, mais il peut avoir des coins arrondis. Une case à cocher permet de sélectionner des valeurs individuelles à soumettre dans un formulaire (ou pas).

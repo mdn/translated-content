@@ -12,17 +12,17 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de Conteúdo</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Categorias de Conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >,
         <a
           href="/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
           >sectioning root</a
-        >, <a href="/pt-BR/docs/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/pt-BR/docs/HTML/Content_categories#form-associated_content"
+        >, <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#form_listed">listed</a>,
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -43,7 +43,7 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
       <th scope="row">Elementos pai permitidos</th>
       <td>
         Qualquer elemento que aceita
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>

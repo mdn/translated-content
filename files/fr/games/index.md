@@ -2,7 +2,7 @@
 title: Développement de jeux vidéo
 slug: Games
 l10n:
-  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 Les jeux vidéo sont parmi les activités numériques les plus populaires. L'arrivée continue de nouvelles technologies permet de développer encore des jeux de meilleure qualité et plus performants qui peuvent fonctionner dans n'importe quel navigateur respectant les standards du web.

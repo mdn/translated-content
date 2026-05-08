@@ -1,9 +1,9 @@
 ---
-title: blur()
+title: Fonction CSS `blur()`
+short-title: blur()
 slug: Web/CSS/Reference/Values/filter-function/blur
-original_slug: Web/CSS/filter-function/blur
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`blur()`** permet d'appliquer [un flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien) sur l'image d'entrée. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -45,7 +45,7 @@ blur(1.17rem)  /* Flou avec un rayon de 1.17rem */
 ### Paramètres
 
 - {{CSSxRef("length")}} {{Optional_Inline}}
-  - : Définit le rayon du flou. Il correspond à la valeur de l'écart-type de la fonction gaussienne, c'est-à-dire le nombre de pixels de l'écran qui se mélangent entre eux. Plus la valeur est grande, plus le flou sera prononcé. Une valeur de `0` laisse l'entrée inchangée. La valeur initiale pour l'{{Glossary("interpolation")}} est `0`. Les valeurs en pourcentage ne sont pas valides. La valeur par défaut est `0`.
+  - : Définit le rayon du flou. Il correspond à la valeur de l'écart-type de la fonction gaussienne, c'est-à-dire le nombre de pixels de l'écran qui se mélangent entre eux. Plus la valeur est grande, plus le flou est prononcé. Une valeur de `0` laisse l'entrée inchangée. La valeur initiale pour {{Glossary("interpolation", "l'interpolation")}} est `0`. Les valeurs en pourcentage ne sont pas valides. La valeur par défaut est `0`.
 
 ## Filtre SVG
 
@@ -143,7 +143,7 @@ svg:not([height]) {
 
 ### Résultat
 
-{{EmbedLiveSample('Exemples', '100%', '280')}}
+{{EmbedLiveSample("Exemples", "100%", 280)}}
 
 ## Spécifications
 

@@ -207,10 +207,10 @@ I am a readonly textarea</textarea
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Elemento associado ao formulário de conteúdo de fluxo, conteúdo de
           frases, conteúdo interativo, listado, rotulável, redefinível e
           submetível a envio.</a

@@ -3,7 +3,7 @@ title: Pseudo-classe CSS `:open`
 short-title: :open
 slug: Web/CSS/Reference/Selectors/:open
 l10n:
-  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:open`** représente un élément qui a des états ouverts et fermés, uniquement lorsqu'il est actuellement dans l'état ouvert.
@@ -24,7 +24,7 @@ La pseudo-classe `:open` sélectionne tout élément actuellement dans l'état o
 - Les éléments {{HTMLElement("input")}} qui affichent une interface de sélection pour que l'utilisateur·ice choisisse une valeur (par exemple [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color)), lorsque le sélecteur est affiché.
 - Les éléments {{HTMLElement("select")}} qui affichent un sélecteur déroulant pour que l'utilisateur·ice choisisse une valeur, lorsque le sélecteur est affiché. Notez que lors de l'implémentation [d'éléments de sélection personnalisables](/fr/docs/Learn_web_development/Extensions/Forms/Customizable_select), le sélecteur lui-même peut être sélectionné à l'aide du pseudo-élément {{CSSxRef("::picker()", "::picker(select)")}}.
 
-Notez que les états ouvert et fermé sont des états sémantiques, et ne correspondent pas nécessairement à la visibilité de l'élément en question. Par exemple, un élément `<details>` qui est développé pour afficher son contenu est ouvert, et sera sélectionné par le sélecteur `details:open`, même s'il est masqué avec une valeur {{CSSxRef("visibility")}} de `hidden`.
+Notez que les états ouvert et fermé sont des états sémantiques, et ne correspondent pas nécessairement à la visibilité de l'élément en question. Par exemple, un élément `<details>` qui est développé pour afficher son contenu est ouvert, et est sélectionné par le sélecteur `details:open`, même s'il est masqué avec une valeur {{CSSxRef("visibility")}} de `hidden`.
 
 Les éléments {{DOMxRef("Popover API", "de fenêtre contextuelle", "", 1)}} (c'est-à-dire, les éléments avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) défini sur eux) ont des états sémantiques distincts représentant des popovers qui sont affichés ou masqués, qui peuvent coexister avec des états ouverts et fermés. Pour cibler un élément popover dans un état affiché, utilisez la pseudo-classe {{CSSxRef(":popover-open")}} à la place.
 
@@ -52,12 +52,8 @@ details:open > summary {
     content: "Votre navigateur ne prend pas en charge le sélecteur :open.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

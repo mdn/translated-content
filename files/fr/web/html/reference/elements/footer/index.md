@@ -1,8 +1,9 @@
 ---
-title: "<footer> : l'élément de pied de page"
+title: "Élément HTML `<footer>` : l'élément de pied de page"
+short-title: <footer>
 slug: Web/HTML/Reference/Elements/footer
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<footer>`** représente un pied de page pour sa [section de contenu](/fr/docs/Web/HTML/Guides/Content_categories#contenu_sectionnant) ou [racine de sectionnement](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements#libeller_le_contenu_des_sections) la plus proche. Un `<footer>` contient généralement des informations sur l'auteur·ice de la section, des données de droit d'auteur ou des liens vers des documents associés.

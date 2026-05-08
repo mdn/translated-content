@@ -1,8 +1,9 @@
 ---
-title: "<article> : l'élément de contenu d'un article"
+title: "Élément HTML `<article>` : l'élément de contenu d'un article"
+short-title: <article>
 slug: Web/HTML/Reference/Elements/article
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<article>`** représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée indépendamment (par exemple dans une syndication). Les exemples incluent&nbsp;: un message de forum, un article de magazine ou de journal, une entrée de blog, une fiche produit, un commentaire soumis par un·e utilisateur·ice, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.

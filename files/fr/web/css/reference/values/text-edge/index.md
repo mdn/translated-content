@@ -1,8 +1,9 @@
 ---
-title: <text-edge>
+title: Type CSS `<text-edge>`
+short-title: <text-edge>
 slug: Web/CSS/Reference/Values/text-edge
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<text-edge>`** définit des mots-clés qui définissent les métriques de police représentant des régions spécifiques sur le bord de début de bloc (block-start) et le bord de fin de bloc (block-end) d'une police. Chaque mot-clé définit une position du bord supérieur et/ou inférieur d'une police.

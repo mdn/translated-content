@@ -1,8 +1,9 @@
 ---
-title: "<marquee> : l'élément de texte défilant"
+title: "Élément HTML `<marquee>` : l'élément de texte défilant"
+short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

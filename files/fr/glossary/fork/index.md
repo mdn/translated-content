@@ -2,7 +2,7 @@
 title: Fork
 slug: Glossary/Fork
 l10n:
-  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
+  sourceCommit: ef78a9a3336c884fb3587e4ff833e64704296f01
 ---
 
 Un **fork** est une copie d'un projet logiciel existant à un moment donné pour permettre à quelque-un d'ajouter ses propres modifications au projet.
@@ -18,4 +18,4 @@ Les <i lang="en">forks</i> sont communs dans le développement des logiciels lib
 - Divers forks «&nbsp;bien connus&nbsp;»&nbsp;:
   - [Distributions Linux <sup>(angl.)</sup>](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
   - [Node.js et io.js (qui ont été fusionnés) <sup>(angl.)</sup>](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
-  - [LibreOffice, un fork d'OpenOffice <sup>(angl.)</sup>](https://www.libreoffice.org/about-us/who-are-we/)
+  - [LibreOffice, un fork d'OpenOffice <sup>(angl.)</sup>](https://www.libreoffice.org/who-are-we/)

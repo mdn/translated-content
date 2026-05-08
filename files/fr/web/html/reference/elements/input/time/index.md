@@ -1,8 +1,9 @@
 ---
-title: <input type="time">
+title: Valeur d'attribut HTML `<input type="time">`
+short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`time`** permettent de créer des contrôles où l'utilisateur·ice peut saisir une heure (avec des minutes et éventuellement des secondes).

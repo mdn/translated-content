@@ -1,8 +1,9 @@
 ---
-title: font-variation-settings
+title: Descripteur de règle CSS `font-variation-settings`
+short-title: font-variation-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-variation-settings
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`font-variation-settings`**, associé à la [la règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} permet d'indiquer les variations de police de bas niveau pour les polices OpenType ou TrueType.

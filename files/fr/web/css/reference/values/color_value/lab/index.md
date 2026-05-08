@@ -1,8 +1,9 @@
 ---
-title: lab()
+title: Fonction CSS `lab()`
+short-title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lab()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} CIE L\*a\*b\*.

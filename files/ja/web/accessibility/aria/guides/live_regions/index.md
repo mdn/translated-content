@@ -8,13 +8,13 @@ l10n:
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/Annotations">ARIA アノテーション</a></li>
+    <li><a href="/ja/docs/Web/Accessibility/ARIA">ARIA アノテーション</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides">ARIA ガイド</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions">ARIA ライブリージョン</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA スクリーンリーダー実装ガイド</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Techniques">ARIA の使用: ロール、ステート、プロパティ</a></li>
     <li><a href="/ja/docs/Web/Accessibility/ARIA/Guides/Multipart_labels">マルチパートラベル</a></li>
-    <li><a href="/ja/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">ARIA 関連のバグの報告方法</a></li>
+    <li><a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/File_browser_bugs">ARIA 関連のバグの報告方法</a></li>
     <li class="toggle">
       <details><summary>ARIA ステートとプロパティ</summary>
         {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}

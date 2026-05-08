@@ -1,9 +1,9 @@
 ---
-title: overscroll-behavior
+title: "`overscroll-behavior` CSS プロパティ"
+short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
-original_slug: Web/CSS/overscroll-behavior
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 **`overscroll-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロール領域の境界に達したときのブラウザーの挙動を設定します。
@@ -127,6 +127,8 @@ overscroll-behavior: unset;
 場合によっては、この動きが望ましくないことがあります。 `overscroll-behavior` を使用すると、望ましくないスクロール連鎖を抑止したり、ブラウザー版の Facebook や Twitter アプリなどに見られる「引いて更新」の類の動きを実現したりすることができます。
 
 このプロパティは{{Glossary("Scroll_container", "スクロールコンテナー")}}にのみ適用されることに注意してください。特に、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) はスクロールコンテナーではないため、iframe にこのプロパティを設定しても効果はありません。 iframe からのスクロール連鎖を制御するには、 `overscroll-behavior` を iframe 内の文書の [`<html>`](/ja/docs/Web/HTML/Reference/Elements/html) 要素と [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body) 要素の両方に設定してください。
+
+スクロール可能なオーバーフローを持たない{{Glossary("Scroll_container", "スクロールコンテナー")}}、例えば `overflow: hidden` が設定された要素などは、常に{{Glossary("Scroll_boundary", "スクロール境界")}}にあるとみなされます。そのため、`overscroll-behavior` を `contain` や `none` などのデフォルト以外に設定すると、親要素のスクロールコンテナーへのスクロール連鎖が防止されます。これは、ダイアログやオーバーレイが開いている間、背景のスクロールを防ぐために使用することができます。
 
 ## 公式定義
 

@@ -1,9 +1,9 @@
 ---
-title: <meta name="color-scheme">
+title: Valeur d'attribut HTML `<meta name="color-scheme">`
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`color-scheme`** pour l'attribut [`name`](/fr/docs/Web/HTML/Reference/Elements/meta/name) de l'élément HTML {{HTMLElement("meta")}} indique un schéma de couleurs suggéré que les agents utilisateur·ice·s doivent utiliser pour une page.

@@ -1,8 +1,9 @@
 ---
-title: "<div> : l'élément de division du contenu"
+title: "Élément HTML `<div>` : l'élément de division du contenu"
+short-title: <div>
 slug: Web/HTML/Reference/Elements/div
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<div>`** est le conteneur générique du contenu de flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de {{Glossary("CSS")}} (par exemple, si la mise en forme lui est appliquée directement, ou si un modèle de mise en page tel que [Flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout) est appliqué à son élément parent).

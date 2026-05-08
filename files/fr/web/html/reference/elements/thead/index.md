@@ -1,8 +1,9 @@
 ---
-title: "<thead> : l'élément d'en-tête du tableau"
+title: "Élément HTML `<thead>` : l'élément d'en-tête du tableau"
+short-title: <thead>
 slug: Web/HTML/Reference/Elements/thead
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<thead>`** encapsule un ensemble de lignes de tableau (éléments {{HTMLElement("tr")}}), indiquant qu'elles constituent l'en-tête d'un tableau contenant des informations sur les colonnes du tableau. Il s'agit généralement d'en-têtes de colonnes (éléments {{HTMLElement("th")}}).

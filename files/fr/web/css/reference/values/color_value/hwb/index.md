@@ -1,8 +1,9 @@
 ---
-title: hwb()
+title: Fonction CSS `hwb()`
+short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 l10n:
-  sourceCommit: db52e840c36da02f761984001bd25b603c84ee92
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hwb()`** exprime un {{Glossary("color space", "espace de couleur")}} {{Glossary("RGB", "sRGB")}} donné selon sa teinte, sa blancheur et sa noirceur. Une composante alpha optionnelle représente l'opacité de la couleur.

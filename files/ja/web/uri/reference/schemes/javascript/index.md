@@ -28,7 +28,7 @@ javascript:<script>
 
 - `<a>` または `<area>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性。
 - `<form>` 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性。
-- `<iframe>`要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性。
+- `<iframe>` 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性。
 - JavaScript の [`window.location`](/ja/docs/Web/API/Window/location) プロパティ。
 - ブラウザーのアドレスバー自体。
 

@@ -74,7 +74,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
           href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
-        <a href="/zh-CN/docs/HTML/CORS_settings_attributes"
+        <a href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS settings attributes</a
         >
         查看更多详情
@@ -234,7 +234,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
       <td>{{domxref("MediaStream")}}</td>
       <td>
         Lets you set or get the
-        <a href="/zh-CN/docs/WebRTC/MediaStream_API">Media Stream</a> to be
+        <a href="/zh-CN/docs/Web/API/Media_Capture_and_Streams_API">Media Stream</a> to be
         played or being played.
       </td>
     </tr>

@@ -1,8 +1,9 @@
 ---
-title: <input type="week">
+title: Valeur d'attribut HTML `<input type="week">`
+short-title: <input type="week">
 slug: Web/HTML/Reference/Elements/input/week
 l10n:
-  sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`week`** créent des champs de saisie permettant de saisir facilement une année ainsi que le [numéro de semaine ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Semaine) correspondant à cette année (c'est-à-dire de la semaine 1 à la semaine [52 ou 53](https://fr.wikipedia.org/wiki/ISO_8601#Semaine)).

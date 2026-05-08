@@ -1,8 +1,9 @@
 ---
-title: font-display
+title: Descripteur de règle CSS `font-display`
+short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-feature-values/font-display
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le descripteur **`font-display`** pour la règle {{CSSxRef("@font-feature-values")}} définit la valeur par défaut indiquant comment une police est affichée, en fonction de son téléchargement et du moment où il a lieu. Définir une valeur pour le descripteur `font-display` dans un bloc `@font-feature-values` fixe la valeur par défaut du descripteur `font-display` pour la règle {{CSSxRef("@font-face")}} pour toutes les polices partageant la même valeur de {{CSSxRef("@font-face/font-family", "font-family")}}.

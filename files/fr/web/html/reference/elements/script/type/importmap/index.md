@@ -1,9 +1,9 @@
 ---
-title: <script type="importmap">
+title: Valeur d'attribut HTML `<script type="importmap">`
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: 16c2dc9c347065f648a0d6204b814657480ed25b
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 La valeur **`importmap`** de l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/script/type) pour l'élément HTML {{HTMLElement("script")}} indique que le contenu de l'élément contient un tableau associatif d'import (<i lang="en">import map</i>).
