@@ -45,11 +45,11 @@ will-change: unset;
 `<animatable-feature>` 可以是以下值之一：
 
 - `scroll-position`
-  - : 表示开发者期望在不久的将来对元素的滚动位置进行动画或更改。
+  - : 表示开发者期望在不久的将来对元素的滚动位置添加动画或进行更改。
 - `contents`
-  - : 表示开发者期望在不久的将来对元素内容的某些方面进行动画或更改。
+  - : 表示开发者期望在不久的将来对元素内容的某些方面添加动画或进行更改。
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : 表示开发者期望在不久的将来对元素上给定名称的属性进行动画或更改。如果给定的属性是一个缩写，它表示对缩写展开的所有属性的期望。它不能是以下任何值：`unset`、`initial`、`inherit`、`will-change`、`auto`、`scroll-position` 或 `contents`。规范没有定义特定值的行为，但是 `transform` 通常被用作合成层提示。在给定特定的 CSS 属性标识时，[Chrome 目前会执行两个操作](https://github.com/operasoftware/devopera/pull/330)：建立新的合成层或新的 {{Glossary("stacking context", "层叠上下文")}}。
+  - : 表示开发者期望在不久的将来对元素上给定名称的属性添加动画或进行更改。如果给定的属性是一个缩写，它表示对缩写展开的所有属性的期望。它不能是以下任何值：`unset`、`initial`、`inherit`、`will-change`、`auto`、`scroll-position` 或 `contents`。规范没有定义特定值的行为，但是 `transform` 通常被用作合成层提示。在给定特定的 CSS 属性标识时，[Chrome 目前会执行两个操作](https://github.com/operasoftware/devopera/pull/330)：建立新的合成层或新的{{Glossary("stacking context", "层叠上下文")}}。
 
 ### 通过样式表设置
 
