@@ -10,11 +10,11 @@ l10n:
 
 **`MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN`** 是一个专有的、WebKit 特有的静态数值属性，值为触发强制点击所需的最小力度。
 
-因为 `WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` 是 `MouseEvent` 的静态属性，因此你总应该以 `MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` 的形式使用该属性，而非作为 `MouseEvent` 实例的属性。
+因为 `WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` 是 `MouseEvent` 的静态属性，因此你始终应该以 `MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN` 的形式使用该属性，而非作为 `MouseEvent` 实例的属性。
 
 ## 规范
 
-*不属于任何规范。*Apple 在 [Mac 开发者库](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)中提供了相关描述。
+_不属于任何规范_。Apple 在 [Mac 开发者库](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/SafariJSProgTopics/RespondingtoForceTouchEventsfromJavaScript.html)中提供了相关描述。
 
 ## 参见
 
