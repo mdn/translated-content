@@ -180,13 +180,13 @@ console.log(
 
 ```js
 console.log("This is the outer level");
-console.group();
-console.log("Level 2");
-console.group();
-console.log("Level 3");
-console.warn("More of level 3");
+console.group("First group");
+console.log("In the first group");
+console.group("Second group");
+console.log("In the second group");
+console.warn("Still in the second group");
 console.groupEnd();
-console.log("Back to level 2");
+console.log("Back to the first group");
 console.groupEnd();
 console.debug("Back to the outer level");
 ```
