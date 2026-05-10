@@ -75,7 +75,7 @@ code {
 }
 ```
 
-```html hidden live-sample___photo-capture live-sample___photo-capture-with-filters
+```html-nolint hidden live-sample___photo-capture live-sample___photo-capture-with-filters
 <h1>写真のキャプチャデモ</h1>
 <p>
   この例では、<code>navigator.mediaDevices.getUserMedia()</code> を使用して、ウェブカメラやその他の映像機器からメディアストリームを設定し、そのストリームから画像を取得して、その画像から PNG を作成する方法を示します。
@@ -83,7 +83,7 @@ code {
 <button id="permissions-button">カメラの使用を許可</button>
 ```
 
-```html hidden live-sample___photo-capture-with-filters
+```html-nolint hidden live-sample___photo-capture-with-filters
 <p>
   &#9432; この例では、以前と同じコードを使用しますが、今回は CSS の <code>filter: grayscale(100%)</code> 宣言を使用して、<code>&lt;video&gt;</code> 要素にフィルター効果を追加します。その後、video 要素に CSS の <code>filter</code> が適用されているかどうかを調べることができ、キャンバスに描画する際に同じフィルターを使用します。
 </p>
@@ -104,7 +104,10 @@ code {
 ```html live-sample___photo-capture live-sample___photo-capture-with-filters
 <canvas id="canvas"></canvas>
 <div class="output">
-  <img id="photo" src="" alt="スクリーンキャプチャ結果はこのボックスに表示されます。" />
+  <img
+    id="photo"
+    src=""
+    alt="スクリーンキャプチャ結果はこのボックスに表示されます。" />
 </div>
 ```
 

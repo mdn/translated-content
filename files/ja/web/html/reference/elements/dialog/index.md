@@ -132,7 +132,7 @@ CSS の {{cssxref('::backdrop')}} 擬似要素を使用することで、{{domxr
 
 この例では、[呼び出しコマンド API](/ja/docs/Web/API/Invoker_Commands_API) の [`commandfor`](/ja/docs/Web/HTML/Reference/Elements/button#commandfor) および [`command`](/ja/docs/Web/HTML/Reference/Elements/button#command) 属性を使用して、モーダルダイアログを開いたり閉じたりする方法を示しています。
 
-まず、{{htmlelement(「button」)}} 要素を宣言し、`command` 属性を [`"show-modal"`](/ja/docs/Web/HTML/Reference/Elements/button#show-modal) に、`commandfor` 属性を開くダイアログの `id` (`my-dialog`) に設定します。
+まず、{{htmlelement("button")}} 要素を宣言し、`command` 属性を [`"show-modal"`](/ja/docs/Web/HTML/Reference/Elements/button#show-modal) に、`commandfor` 属性を開くダイアログの `id` (`my-dialog`) に設定します。
 次に、「閉じる」というラベルの付いた `<button>` が含まれている `<dialog>` 要素を宣言します。このボタンは、[`"close"`](/ja/docs/Web/HTML/Reference/Elements/button#close) コマンドを（同じ）ダイアログの id に送信します。
 
 ```html

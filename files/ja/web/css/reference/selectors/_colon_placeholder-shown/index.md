@@ -23,7 +23,7 @@ input:placeholder-shown {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
   <label for="name">名前:</label>
   <input id="name" name="name" type="text" />

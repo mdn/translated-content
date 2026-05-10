@@ -1,9 +1,9 @@
 ---
-title: ellipse()
+title: Fonction CSS `ellipse()`
+short-title: ellipse()
 slug: Web/CSS/Reference/Values/basic-shape/ellipse
-original_slug: Web/CSS/basic-shape/ellipse
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
