@@ -32,9 +32,7 @@ let synth = window.speechSynthesis;
 const utterance1 = new SpeechSynthesisUtterance(
   "こう言ってみてはどうでしょうか？これを言うと、かなり長い文章になります。",
 );
-const utterance2 = new SpeechSynthesisUtterance(
-  "念のため、もう一言言います。",
-);
+const utterance2 = new SpeechSynthesisUtterance("念のため、もう一言言います。");
 
 synth.speak(utterance1);
 synth.speak(utterance2);
