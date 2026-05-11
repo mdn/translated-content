@@ -223,7 +223,7 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 ### 获取 gamepad
 
-{{domxref("Navigator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，数组长度为 2，那么它将会是这样：`[null, [object Gamepad]]`。如果设备被断开或不可用的话，值将被设为 `null`。
+{{domxref("Navigator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，那么数组长度为 2，且将为 `[null, [object Gamepad]]`。如果设备断开或不可用，值将被设为 `null`。
 
 ### 映射标准
 
