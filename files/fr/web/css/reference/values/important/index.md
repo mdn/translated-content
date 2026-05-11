@@ -1,5 +1,5 @@
 ---
-title: "Mot-clé CSS `!important`"
+title: Mot-clé CSS `!important`
 short-title: "!important"
 slug: Web/CSS/Reference/Values/important
 l10n:
