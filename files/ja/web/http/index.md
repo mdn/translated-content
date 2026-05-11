@@ -32,8 +32,8 @@ HTTP は拡張可能なプロトコルであり、リソースや統一リソー
     この記事では、この一般的な構造、その目的、およびさまざまな種類のメッセージについて説明します。
 - [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)
   - : HTTP/1.0 以降、さまざまな種類のコンテンツを送信することが可能になりました。
-    この記事では、{{HTTPHeader("Content-Type")}} ヘッダーと MIME 標準を用いて、これがどのように実現されるかを説明します。
-    ウェブ開発者がよく使用する一般的な MIME タイプのリストは、[一般的な MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)でご覧いただけます。
+    この記事では、これが {{HTTPHeader("Content-Type")}} ヘッダーと MIME 標準を用いてどのように実現されているかを説明します。
+    ウェブ開発者がよく使用する MIME タイプの一覧は、[一般的な MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)でご覧いただけます。
 - [HTTP の圧縮](/ja/docs/Web/HTTP/Guides/Compression)
   - : ブラウザーやサーバーは、ネットワーク経由でメッセージを送信する前に圧縮を行い、送信する必要があるデータを縮小することで、転送速度と帯域幅の利用効率を改善します。
 - [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)
