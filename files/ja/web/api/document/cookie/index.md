@@ -254,9 +254,7 @@ clearBtn.addEventListener("click", () => {
 ### 例 6: クッキーが特定の値を持っていることをチェック
 
 ```html
-<button id="check">
-  クッキーが特定の値を持っていることをチェック
-</button>
+<button id="check">クッキーが特定の値を持っていることをチェック</button>
 <button id="clear">クリア</button>
 
 <div>
