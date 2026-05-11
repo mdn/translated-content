@@ -1,11 +1,12 @@
 ---
-title: max-content
+title: Mot-clé CSS `max-content`
+short-title: max-content
 slug: Web/CSS/Reference/Values/max-content
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: aaedffba9f47d6dce7967a4191963378026d9406
 ---
 
-Le mot-clé de dimensionnement `max-content` représente la [taille intrinsèque maximale](/fr/docs/Glossary/Intrinsic_Size#taille_intrinsèque_maximale) d'un élément.
+Le mot-clé [CSS](/fr/docs/Web/CSS) de dimensionnement `max-content` représente la [taille intrinsèque maximale](/fr/docs/Glossary/Intrinsic_Size#taille_intrinsèque_maximale) d'un élément.
 Ce mot-clé étend l'élément à la plus grande taille nécessaire pour afficher son contenu sans retour à la ligne souple.
 Pour le contenu textuel, ce mot-clé n'effectue aucun retour à la ligne, même si cela provoque un dépassement.
 
@@ -34,7 +35,7 @@ grid-template-columns: 200px 1fr max-content;
 <div id="container">
   <div class="item">Élément</div>
   <div class="item">
-    Élément avec plus de texte qui dépassera la boîte à largeur fixe.
+    Élément avec plus de texte qui dépasse la boîte à largeur fixe.
   </div>
 </div>
 ```
@@ -107,4 +108,4 @@ grid-template-columns: 200px 1fr max-content;
 ## Voir aussi
 
 - Mots-clés de dimensionnement apparentés&nbsp;: {{CSSxRef("min-content")}}, {{CSSxRef("fit-content")}}
-- [Module de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
+- Le module [de dimensionnement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_sizing)
