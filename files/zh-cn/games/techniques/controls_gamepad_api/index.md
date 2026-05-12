@@ -12,9 +12,9 @@ l10n:
 
 从历史上看，在连接电视的游戏主机上玩游戏与在电脑上玩游戏始终是截然不同的体验，这主要归因于其独特的操控方式。后来，借助额外的驱动程序和插件，我们终于能够将游戏手柄用于桌面游戏——无论是原生游戏还是在浏览器中运行的游戏。如今，我们拥有了[游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API)，它让我们无需任何插件即可使用游戏手柄玩基于浏览器的游戏。游戏手柄 API 通过提供一个接口来实现这一点，该接口会暴露按键动作和轴位变化，这些信息可在 JavaScript 代码中用于处理输入。这对浏览器游戏来说，确实是个好时代。
 
-## 哪种控制器最好？
+## 哪种游戏手柄最好？
 
-目前最受欢迎的控制器是来自 XBox 360、XBox One、PS3 和 PS4 的——它们经受过时间的检验，并且在浏览器跨 Windows 与 macOS 平台中对游戏手柄 API 的实现中工作良好。
+目前最受欢迎的游戏手柄是来自 XBox 360、XBox One、PS3 和 PS4 的——它们经受过时间的检验，并且在浏览器跨 Windows 与 macOS 平台中对游戏手柄 API 的实现中工作良好。
 
 此外，还有许多其他设备采用各种不同的按键布局，这些布局在不同浏览器的实现中或多或少都能正常工作。本文讨论的代码已在几种游戏手柄上进行了测试，但作者最喜欢的配置是使用无线 Xbox 360 手柄配合 macOS 上的 Firefox 浏览器。
 
@@ -22,7 +22,7 @@ l10n:
 
 [GitHub Game Off II](https://github.com/open-source/gaming/github-game-off-ii) 比赛举行于 2013 年 11 月，[Enclave Games](https://enclavegames.com/) 决定参加比赛。比赛的主题为“变化”，因此他们提交了一款游戏：玩家需要通过点击健康食物（苹果、胡萝卜、生菜）来喂饱“饥饿的冰箱”，同时避开“不健康”的食物（啤酒、汉堡、披萨）。倒计时会每隔几秒改变冰箱想要吃的食物种类，因此玩家必须小心谨慎并迅速行动。
 
-第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接控制器后，游戏会有很明显的改变（饥饿冰箱会变成超级涡轮饥饿冰箱），并且你可以使用游戏手柄 API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
+第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接游戏手柄后，游戏会有很明显的改变（饥饿冰箱会变成超级涡轮饥饿冰箱），并且你可以使用游戏手柄 API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
 
 游戏封装了两种截然不同的“变化”——好食物对坏食物，与移动端对桌面端。
 
@@ -54,7 +54,7 @@ const gamepadAPI = {
 };
 ```
 
-数组 `buttons` 存储着 XBox 360 控制器的按键布局：
+数组 `buttons` 存储着 XBox 360 游戏手柄的按键布局：
 
 ```js-nolint
 const gamepadAPI = {
@@ -85,19 +85,22 @@ const gamepadAPI = {
   connect(evt) {
     gamepadAPI.controller = evt.gamepad;
     gamepadAPI.turbo = true;
-    console.log("控制器已连接。");
+    console.log("游戏手柄已连接。");
   },
 };
 ```
 
-函数 `connect()` 接受一个事件作为参数，并将其中的 `gamepad` 对象分配给 `gamepadAPI.controller` 变量。我们在这个游戏中只使用一个控制器，所以这个变量是一个单独的对象而不是控制器的数组。然后我们设置 `turbo` 属性为 `true`。（这个可以直接用 `gamepad.connected` 实现，但我们想单独设置一个变量来控制“涡轮模式”而不需要连接控制器，原因已在前面说明过了。）
+函数 `connect()` 接受一个事件作为参数，并将其中的 `gamepad` 对象分配给 `gamepadAPI.controller` 变量。我们在这个游戏中只使用一个游戏手柄，所以这个变量是一个单独的对象而不是游戏手柄的数组。然后我们设置 `turbo` 属性为 `true`。（这个可以直接用 `gamepad.connected` 实现，但我们想单独设置一个变量来控制“涡轮模式”而不需要连接游戏手柄，原因已在前面说明过了。）
 
 ```js
-disconnect: function(evt) {
-  gamepadAPI.turbo = false;
-  delete gamepadAPI.controller;
-  console.log('控制器已断开。');
-},
+const gamepadAPI = {
+  // …
+  disconnect(evt) {
+    gamepadAPI.turbo = false;
+    delete gamepadAPI.controller;
+    console.log("游戏手柄已断开。");
+  },
+};
 ```
 
 `disconnect` 函数设置 `gamepad.turbo` 属性为 `false` 并移除存储着 `gamepad` 对象的变量。
@@ -113,7 +116,7 @@ disconnect: function(evt) {
 - `axes`：每个坐标轴的状态，由一个浮点数数组表示。
 - `buttons`：每个按钮的状态，由一个包含 `pressed` 和 `value` 属性的 `GamepadButton` 对象数组表示。
 
-变量 `index` 在我们连接了多个控制器时非常有用，我们可以用此来区分它们的操作——例如我们有一个需要连接两个控制器的双人游戏。
+变量 `index` 在我们连接了多个控制器时非常有用，我们可以用此来区分它们的操作——例如我们有一个需要连接两个设备的双人游戏。
 
 ### 查询游戏手柄对象
 
@@ -206,7 +209,7 @@ if (gamepadAPI.turbo) {
 
 按钮只有两种状态：`0` 或 `1`，但是摇杆可以有许多不同的值——它们在 `X` 和 `Y` 轴上都有一个范围为 `-1` 到 `1` 的浮点值。
 
-控制器放在一边不活动时轴值也可能有一定波动，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
+游戏手柄放在一边不活动时轴值也可能有一定波动，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
 ```js
 if (gamepadAPI.axesStatus[0].x > 0.5) {
@@ -223,7 +226,7 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 ### 获取游戏手柄
 
-{{domxref("Navigator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，那么数组长度为 2，且将为 `[null, [object Gamepad]]`。如果设备断开或不可用，值将被设为 `null`。
+{{domxref("Navigator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在游戏手柄数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，那么数组长度为 2，且将为 `[null, [object Gamepad]]`。如果设备断开或不可用，值将被设为 `null`。
 
 ### 映射标准
 
@@ -236,7 +239,7 @@ enum GamepadMappingType {
 }
 ```
 
-此枚举中定义了已知的控制器映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。
+此枚举中定义了已知的游戏手柄映射集。目前只有 `standard` 布局可用，但是未来可能会有新的布局。如果布局未知，那么将会是空字符串。
 
 ### 事件
 
