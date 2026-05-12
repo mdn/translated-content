@@ -219,9 +219,9 @@ div {
 
 - La propriété {{CSSxRef("transform")}}
 - Le type de donnée {{CSSxRef("&lt;transform-function&gt;")}}
-- La fonction {{CSSxRef("transform-function/scaleZ" "scaleZ()")}}
-- La fonction {{CSSxRef("transform-function/translate3d" "translate3d()")}}
-- La fonction {{CSSxRef("transform-function/rotate3d" "rotate3d()")}}
+- La fonction {{CSSxRef("transform-function/scaleZ", "scaleZ()")}}
+- La fonction {{CSSxRef("transform-function/translate3d", "translate3d()")}}
+- La fonction {{CSSxRef("transform-function/rotate3d", "rotate3d()")}}
 - Autres propriétés individuelles de transformation&nbsp;:
   - {{CSSxRef("translate")}}
   - {{CSSxRef("scale")}}
