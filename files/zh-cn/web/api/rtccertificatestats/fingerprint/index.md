@@ -14,7 +14,7 @@ l10n:
 
 包含关联证书指纹的字符串。
 
-这是使用 {{domxref("RTCCertificateStats.fingerprintAlgorithm","fingerprintAlgorithm")}} 属性中指定的哈希函数计算得出的小写十六进制的字符串。具体格式在 [RFC4572 第 5 节](https://www.rfc-editor.org/rfc/rfc4572#section-5)中给出了更为精确的定义。
+这是使用 {{domxref("RTCCertificateStats.fingerprintAlgorithm","fingerprintAlgorithm")}} 属性中指定的散列函数计算得出的小写十六进制的字符串。[RFC4572 第 5 节](https://www.rfc-editor.org/rfc/rfc4572#section-5)中给出了更为精确的格式定义。
 
 ## 规范
 
