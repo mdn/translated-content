@@ -96,7 +96,7 @@ Chacune des pages ci-dessous contient des informations détaillées sur la synta
 
 - {{CSSxRef("calc()")}}
   - : Effectue des calculs arithmétiques de base sur des valeurs numériques.
-- {{CSSxRef"calc-size()")}}
+- {{CSSxRef("calc-size()")}}
   - : Effectue des calculs sur des valeurs de taille intrinsèques telles que `auto`, `fit-content` et `max-content`, qui ne sont pas prises en charge par la fonction `calc()`.
 
 ### Les fonctions de comparaison
