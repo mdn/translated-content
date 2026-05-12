@@ -1,5 +1,6 @@
 ---
-title: "<table>: 表要素"
+title: HTML `<table>` 表要素
+short-title: <table>
 slug: Web/HTML/Reference/Elements/table
 l10n:
   sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
@@ -107,7 +108,7 @@ tfoot td {
   - : 親要素内のテーブルの水平方向の配置を指定します。 {{Glossary("enumerated","列挙")}}値として、`left`、`center`、`right` があります。 この属性は非推奨であるため、代わりに CSS の {{cssxref("margin-inline-start")}} および {{cssxref("margin-inline-end")}} プロパティを使用してください。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
+  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/Reference/Values/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/Reference/Values/named-color)のうちのどちらかを使用することもできます。それ以外の CSS の {{cssxref("&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `border` {{deprecated_inline}}
   - : 表を囲む枠のサイズを非負の整数（ピクセル単位）で定義します。`0` に設定すると、[`frame`](#frame)属性は無効になります。この属性は非推奨であるため、代わりに CSS の プロパティの {{cssxref("border")}} を使用してください。
@@ -458,7 +459,7 @@ td {
 
 #### HTML
 
-表の概要を追加するには、表の[キャプション](#キャプション)（{{HTMLElement("caption")}} 要素）を `<table>` の最初の子として使用します。このキャプションは表の{{glossary("accessible description", "アクセシブル説明")}}を提供します。
+表の概要を追加するには、表の[キャプション](#キャプション)（{{HTMLElement("caption")}} 要素）を `<table>` の最初の子として使用します。このキャプションは表の{{glossary("accessible name", "アクセシブル名")}}または{{glossary("accessible description", "アクセシブル説明")}}を提供します。
 
 最後に、表のフッター節（{{HTMLElement("tfoot")}} 要素）を本体の下に追加し、合計を表示して「残高」の列の合計を集計する行を追加します。 先に紹介した要素と属性を適用します。
 
@@ -588,8 +589,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -682,8 +683,8 @@ table {
   border: 2px solid rgb(140 140 140);
   font:
     16px "Open Sans",
-    Helvetica,
-    Arial,
+    "Helvetica",
+    "Arial",
     sans-serif;
 }
 
