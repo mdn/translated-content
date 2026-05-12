@@ -1,6 +1,6 @@
 ---
 title: Permissions-Policy 标头
-short-title: 权限策略
+short-title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 l10n:
   sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
