@@ -37,7 +37,7 @@ On peut avoir autant de curseurs qu'on souhaite en même temps. Ce sera toujours
 
 ## Constantes
 
-{{deprecated_header(13)}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > Ces constantes ne sont plus disponibles - elles ont été retirées depuis Gecko 25. Les valeurs équivalentes en chaînes de caractères devraient être utilisées à la place (cf. [bug Firefox 891944](https://bugzil.la/891944)).
