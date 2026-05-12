@@ -10,7 +10,7 @@ l10n:
 
 ## 选择目标
 
-{{cssxref(":target")}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)用于为文档中通过 URL 片段标识符确定的目标元素设置样式。例如，URL `https://developer.mozilla.org/zh-CN/docs/Web/CSS#参考` 包含片段标识符 `#参考`。在 HTML 中，标识符通常作为 `id` 或 `name` 属性的值出现，因为这两个属性共享同一命名空间。因此，上述示例 URL 将指向该文档中 id 为 `reference` 的元素。
+{{cssxref(":target")}} [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)用于为文档中通过 URL 片段标识符确定的目标元素设置样式。例如，URL `https://developer.mozilla.org/zh-CN/docs/Web/CSS#参考` 包含片段标识符 `#参考`。在 HTML 中，标识符通常作为 `id` 或 `name` 属性的值出现，因为这两个属性共享同一命名空间。因此，上述示例 URL 将指向该文档中 id 为 `参考` 的元素。
 
 若要为作为 URL 目标的任何 `h2` 元素设置样式，同时不影响其他类型的元素使其获得目标样式，请将 `:target` 伪类与[类型选择器](/zh-CN/docs/Web/CSS/Reference/Selectors/Type_selectors)结合使用：
 
@@ -20,10 +20,10 @@ h2:target {
 }
 ```
 
-同样的，将样式应用于特定的文档片段也是可行的。这是通过使用 URI 中相同的标识符实现的。例如，要在 `#reference` 文档片段中加入背景颜色，我们可以通过如下代码实现：
+同样的，将样式应用于特定的文档片段也是可行的。这是通过使用 URI 中相同的标识符实现的。例如，要在 `#参考` 文档片段中加入背景颜色，我们可以通过如下代码实现：
 
 ```css
-#reference:target {
+#参考:target {
   background-color: yellow;
 }
 ```
