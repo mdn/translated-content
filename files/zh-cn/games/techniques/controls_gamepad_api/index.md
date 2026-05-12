@@ -14,7 +14,7 @@ l10n:
 
 ## 哪种控制器最好？
 
-目前最受欢迎的控制器是来自 XBox 360、XBox One、PS3 和 PS4 的——它们经受过时间的检验，并且在浏览器跨 Windows 与 macOS 平台中对 Gamepad API 的实现中工作良好。
+目前最受欢迎的控制器是来自 XBox 360、XBox One、PS3 和 PS4 的——它们经受过时间的检验，并且在浏览器跨 Windows 与 macOS 平台中对游戏手柄 API 的实现中工作良好。
 
 此外，还有许多其他设备采用各种不同的按键布局，这些布局在不同浏览器的实现中或多或少都能正常工作。本文讨论的代码已在几种游戏手柄上进行了测试，但作者最喜欢的配置是使用无线 Xbox 360 手柄配合 macOS 上的 Firefox 浏览器。
 
@@ -22,13 +22,13 @@ l10n:
 
 [GitHub Game Off II](https://github.com/open-source/gaming/github-game-off-ii) 比赛举行于 2013 年 11 月，[Enclave Games](https://enclavegames.com/) 决定参加比赛。比赛的主题为“变化”，因此他们提交了一款游戏：玩家需要通过点击健康食物（苹果、胡萝卜、生菜）来喂饱“饥饿的冰箱”，同时避开“不健康”的食物（啤酒、汉堡、披萨）。倒计时会每隔几秒改变冰箱想要吃的食物种类，因此玩家必须小心谨慎并迅速行动。
 
-第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接控制器后，游戏会有很明显的改变（饥饿冰箱会变成超级涡轮饥饿冰箱），并且你可以使用 Gamepad API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
+第二个隐藏的“改变”的实现是可以从单纯静态的冰箱改变成涡轮驱动、射击和吞食的机器能力。当你连接控制器后，游戏会有很明显的改变（饥饿冰箱会变成超级涡轮饥饿冰箱），并且你可以使用游戏手柄 API 来控制装甲冰箱。你需要击落食物但是你仍然需要找到冰箱目前想吃的食物，否则你会失去能量。
 
 游戏封装了两种截然不同的“变化”——好食物对坏食物，与移动端对桌面端。
 
 ## 示例
 
-开发团队首先开发了《饥饿的冰箱》游戏的完整版本，随后为了展示 Gamepad API 的实际应用并展示 JavaScript 源代码，创建了一个[简单演示](https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html)。该演示是 GitHub 上发布的 [Gamepad API 内容包](https://end3r.github.io/Gamepad-API-Content-Kit/) 的一部分，你可以在其中深入研究代码，并详细了解其工作原理。
+开发团队首先开发了《饥饿的冰箱》游戏的完整版本，随后为了展示游戏手柄 API 的实际应用并展示 JavaScript 源代码，创建了一个[简单演示](https://end3r.github.io/Gamepad-API-Content-Kit/demo/demo.html)。该演示是 GitHub 上发布的[游戏手柄 API 内容包](https://end3r.github.io/Gamepad-API-Content-Kit/) 的一部分，你可以在其中深入研究代码，并详细了解其工作原理。
 
 下文所述代码取自《饥饿的冰箱》游戏的完整版本，但与演示版几乎完全一致——唯一的区别在于完整版使用 `turbo` 变量来决定游戏是否以“超级涡轮”模式启动。该功能独立运行，因此即使未连接游戏手柄，也能将其开启。
 
@@ -37,7 +37,7 @@ l10n:
 
 ## 实现
 
-使用 Gamepad API 时有两个重要的事件——`gamepadconnected` 和 `gamepaddisconnected`。第一个事件在浏览器检测到新游戏手柄连接时触发，而第二个事件在游戏手柄断开连接时触发（无论是用户物理断开，还是因闲置而断开）。在演示中，`gamepadAPI` 对象用于存储与该 API 相关的所有内容：
+使用游戏手柄 API 时有两个重要的事件——`gamepadconnected` 和 `gamepaddisconnected`。第一个事件在浏览器检测到新游戏手柄连接时触发，而第二个事件在游戏手柄断开连接时触发（无论是用户物理断开，还是因闲置而断开）。在演示中，`gamepadAPI` 对象用于存储与该 API 相关的所有内容：
 
 ```js
 const gamepadAPI = {
@@ -102,7 +102,7 @@ disconnect: function(evt) {
 
 `disconnect` 函数设置 `gamepad.turbo` 属性为 `false` 并移除存储着 `gamepad` 对象的变量。
 
-### Gamepad 对象
+### 游戏手柄对象
 
 `gamepad` 对象中有包含了许多有用的信息，其中就包括按钮和坐标轴的状态等重要信息：
 
@@ -115,9 +115,9 @@ disconnect: function(evt) {
 
 变量 `index` 在我们连接了多个控制器时非常有用，我们可以用此来区分它们的操作——例如我们有一个需要连接两个控制器的双人游戏。
 
-### 查询 gamepad 对象
+### 查询游戏手柄对象
 
-除了 `connect()` 和 `disconnect()`，`gamepadAPI` 对象中还有另外两个方法：`update()` 和 `buttonPressed()`。`update()` 会在游戏循环的每一帧中执行，来更新 gamepad 对象的实时状态：
+除了 `connect()` 和 `disconnect()`，`gamepadAPI` 对象中还有另外两个方法：`update()` 和 `buttonPressed()`。`update()` 会在游戏循环的每一帧中执行，来更新游戏手柄对象的实时状态：
 
 ```js
 const gamepadAPI = {
@@ -134,7 +134,7 @@ const gamepadAPI = {
     // 清除按钮缓存
     gamepadAPI.buttonsStatus = [];
 
-    // 获取 gamepad 对象
+    // 获取游戏手柄对象
     const c = gamepadAPI.controller || {};
 
     // 在按钮中循环，将按下的那些加入数组
@@ -221,7 +221,7 @@ if (gamepadAPI.axesStatus[0].x > 0.5) {
 
 经过长达一年多的规范化，W3C Gamepaf API 于 2015 年 4 月更新了规范（[查看最新信息](https://w3c.github.io/gamepad/)）。更新的改动并不是很大，但是我们最好了解一下到底更新了些什么——以下为更新。
 
-### 获取 gamepad
+### 获取游戏手柄
 
 {{domxref("Navigator.getGamepads()")}} 方法已用[更长的说明和示例代码](https://w3c.github.io/gamepad/#navigator-interface-extension)更新。现在控制器数组的长度必须为 `n+1`（`n` 是已连接设备的数量）——当设备连接且其有索引 1，那么数组长度为 2，且将为 `[null, [object Gamepad]]`。如果设备断开或不可用，值将被设为 `null`。
 
@@ -244,4 +244,4 @@ enum GamepadMappingType {
 
 ## 总结
 
-Gamepad API 可在无需任何插件的情况下，在浏览器中提供类似游戏主机的体验。你可以在浏览器中直接游玩[饥饿的冰箱](https://enclavegames.com/games/hungry-fridge/)的完整版游戏。请查阅 [Gamepad API 内容工具包](https://end3r.github.io/Gamepad-API-Content-Kit/) 中的其他资源。
+游戏手柄 API 可在无需任何插件的情况下，在浏览器中提供类似游戏主机的体验。你可以在浏览器中直接游玩[饥饿的冰箱](https://enclavegames.com/games/hungry-fridge/)的完整版游戏。请查阅[游戏手柄 API 内容工具包](https://end3r.github.io/Gamepad-API-Content-Kit/)中的其他资源。
