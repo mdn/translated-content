@@ -163,7 +163,7 @@ Il existe une quatrième forme, `<name-repeat>`, qui est utilisée pour ajouter 
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`<track-repeat> <auto-repeat> <fixed-repeat> <name-repeat>`)}}
 
 ## Exemples
 

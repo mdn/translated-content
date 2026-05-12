@@ -54,7 +54,7 @@ Si la direction de l'élément est définie grâce à l'attribut `dir`, la décl
 
 ## Syntaxe formelle
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`box-direction = normal | reverse`)}}
 
 ## Exemples
 
