@@ -3,22 +3,22 @@ title: Permissions-Policy 标头
 short-title: 权限策略
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 l10n:
-  sourceCommit: dd1e8282ab6621b62399d65cad46177d426d1d93
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{SeeCompatTable}}
 
-HTTP **`Permissions-Policy`** {{Glossary("response header")}} 提供了一种机制，用于允许或拒绝在文档中或文档内的任何 {{HTMLElement("iframe")}} 元素中使用浏览器特性。
+HTTP **`Permissions-Policy`** {{Glossary("response header", "响应标头")}}提供了一种机制，用于允许或拒绝在文档中或文档内的任何 {{HTMLElement("iframe")}} 元素中使用浏览器特性。
 
-策略违规可以使用 [报告 API](/zh-CN/docs/Web/API/Reporting_API) 进行报告。报告可以发送到按指令指定的 `report-to` 参数中指定的服务器端点，否则发送到名为 `"default"` 的服务器端点（服务器端点名称与 URL 之间的映射使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头设置）。报告也可以在执行策略的页面中使用 [`ReportingObserver`](/zh-CN/docs/Web/API/ReportingObserver) 进行观察。报告的格式和更多细节参见 {{domxref("PermissionsPolicyViolationReport")}}。
+可以使用[报告 API](/zh-CN/docs/Web/API/Reporting_API) 报告策略违规。报告可以发送到按指令指定的 `report-to` 参数所指示的服务器端点，否则发送到名为 `"default"` 的服务器端点（服务器端点名称与 URL 之间的映射使用 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头设置）。还可以在强制执行策略的页面中使用 [`ReportingObserver`](/zh-CN/docs/Web/API/ReportingObserver) 观察报告。报告的格式和更多细节参见 {{domxref("PermissionsPolicyViolationReport")}}。
 
-更多信息请参阅主文章 [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。
+更多信息请参阅主文章[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
-      <td>{{Glossary("Response header")}}</td>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
     </tr>
   </tbody>
 </table>
@@ -29,41 +29,41 @@ HTTP **`Permissions-Policy`** {{Glossary("response header")}} 提供了一种机
 # 单个指令
 Permissions-Policy: <directive>=<allowlist>
 
-# 单个指令带报告端点
+# 带有报告端点的单个指令
 Permissions-Policy: <directive>=<allowlist>;report-to=<endpoint>
 
 # 多个指令，包含和不包含服务器报告端点
 Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<endpoint>, ...
 ```
 
-该标头可用于设置一个或多个指令的允许列表，以及可选的按指令指定的 `report-to` 参数，指示发送策略违规报告的服务器端点。每个指令的条目以逗号分隔。
+该标头可用于设置一个或多个指令的允许列表，并可选择设置按指令指定的 `report-to` 参数，指示要将策略违规报告发送到的服务器端点。每个指令的条目以逗号分隔。
 
 - `<directive>`
-  - : 要应用允许列表的权限策略指令。允许的指令名称列表请参见下文的[指令](#指令)。
+  - : 要应用 `allowlist` 的权限策略指令。允许的指令名称列表请参见下文的[指令](#指令)。
 - `<allowlist>`
-  - : 允许列表是一个来源列表，在括号中包含的以下一个或多个值，并用空格分隔：
+  - : 允许列表是一个来源列表，由括号中以下一个或多个值组成，并以空格分隔：
     - `*`（通配符）
       - : 该特性将在本文档和所有嵌套的浏览上下文（`<iframe>`）中被允许，无论其来源如何。
     - `()`（空允许列表）
-      - : 该特性在顶层和嵌套浏览上下文中被禁用。这相当于 `<iframe>` `allow` 属性值为 `'none'`。
+      - : 该特性在顶层和嵌套浏览上下文中被禁用。这等效于 `<iframe>` `allow` 属性为 `'none'`。
     - `self`
-      - : 该特性将在本文档和同源的嵌套浏览上下文（`<iframe>`）中被允许。该特性不允许在跨源文档的嵌套浏览上下文中使用。`self` 可以看作是 `https://your-site.example.com` 的简写。其等效于 `<iframe>` `allow` 属性值为 `self`。
+      - : 该特性将在本文档和所有同源的嵌套浏览上下文（`<iframe>`）中被允许。该特性不允许在嵌套浏览上下文中的跨源文档内使用。`self` 可以看作是 `https://your-site.example.com` 的简写。其等效于 `<iframe>` `allow` 属性为 `self`。
     - `src`
-      - : 该特性将在此 `<iframe>` 中被允许，只要加载到其中的文档与其 {{HTMLElement('iframe','src','#Attributes')}} 属性中的 URL 同源。此值仅在 `<iframe>` `allow` 属性中使用，是 `<iframe>` 中*默认*的允许列表值。
+      - : 只要加载到此 `<iframe>` 中的文档与其 {{HTMLElement('iframe','src','#属性')}} 属性中的 URL 同源，该特性就会在此 `<iframe>` 中被允许。此值仅在 `<iframe>` `allow` 属性中使用，并且是 `<iframe>` 中*默认*的 `allowlist` 值。
     - `"<origin>"`
       - : 该特性允许用于指定特定来源（例如 `"https://a.example.com"`）。来源应以空格分隔。注意，`<iframe>` allow 属性中的来源无需加引号。
 
     值 `*` 和 `()` 只能单独使用，而 `self` 和 `src` 可以与一个或多个来源组合使用。
 
     > [!NOTE]
-    > 指令有一个默认的允许列表，对于 `Permissions-Policy` HTTP 标头来说，它始终是 `*`、`self` 或 `none` 之一，用于控制未在策略中明确列出时的默认行为。这些在各个[指令参考页面](#指令)中指定。对于 `<iframe>` `allow` 属性，默认行为始终是 `src`。
+    > 指令具有默认的允许列表。对于 `Permissions-Policy` HTTP 标头来说，默认允许列表始终是 `*`、`self` 或 `none` 之一，并用于控制未在策略中明确列出该指令时的默认行为。这些默认值在各个[指令参考页面](#指令)中指定。对于 `<iframe>` `allow` 属性，默认行为始终是 `src`。
 
 - `report-to=<endpoint>` {{optional_inline}}
-  - : `report-to` 参数可用于指定报告端点的名称，当关联指令发生策略违规时，报告将发送到该端点。端点名称及其关联的 URL 必须在单独的 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头中指定。
+  - : `report-to` 参数可用于指定报告端点的名称，当关联指令发生策略违规时，报告将发送到该端点。端点名称及其关联 URL 必须在单独的 {{HTTPHeader("Reporting-Endpoints")}} HTTP 响应标头中指定。
 
-    如果省略，报告将发送到 [`default` 报告端点](/zh-CN/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint)（如果已定义）。详见 [报告 API](/zh-CN/docs/Web/API/Reporting_API)。
+    如果省略，报告将发送到 [`default` 报告端点](/zh-CN/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#默认报告端点)（如果已定义）。详见[报告 API](/zh-CN/docs/Web/API/Reporting_API)。
 
-在支持的情况下，你可以在权限策略来源中使用通配符。这意味着你不必在允许列表中明确指定多个不同的子域名，而是可以通过一个带通配符的源将它们全部包含在内。
+在支持的情况下，你可以在权限策略来源中使用通配符。这意味着你不必在允许列表中明确指定多个不同的子域名，而是可以通过一个带通配符的来源将它们全部包含在内。
 
 所以，与其写
 
@@ -91,23 +91,23 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
 - {{httpheader("Permissions-Policy/aria-notify", "aria-notify")}} {{Experimental_Inline}}
   - : 控制当前文档是否允许使用 {{domxref("Document.ariaNotify", "ariaNotify()")}} 方法触发{{glossary("screen reader", "屏幕阅读器")}}播报。
 
-- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}}
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}} {{non-standard_inline}}
   - : 控制当前文档是否允许使用 [归因报告 API](/zh-CN/docs/Web/API/Attribution_Reporting_API)。
 
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许通过 {{domxref("HTMLMediaElement")}} 接口自动播放媒体。当此策略被禁用且没有用户操作时，{{domxref("HTMLMediaElement.play()")}} 返回的 {{jsxref("Promise")}} 将因 `NotAllowedError` {{domxref("DOMException")}} 而被拒绝。{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素上的 autoplay 属性将被忽略。
+  - : 控制当前文档是否允许自动播放通过 {{domxref("HTMLMediaElement")}} 接口请求的媒体。当此策略被禁用且没有用户手势时，{{domxref("HTMLMediaElement.play()")}} 返回的 {{jsxref("Promise")}} 将因 `NotAllowedError` {{domxref("DOMException")}} 而被拒绝。{{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素上的 autoplay 属性将被忽略。
 
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
-  - : 控制是否允许使用 [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)。当此策略被禁用时，{{DOMxRef("Navigator.bluetooth")}} 返回的 {{DOMxRef("Bluetooth")}} 对象的方法将返回 `false` 或使返回的 {{JSxRef("Promise")}} 因 `SecurityError` {{DOMxRef("DOMException")}} 而拒绝。
+  - : 控制是否允许使用 [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API)。当此策略被禁用时，{{DOMxRef("Navigator.bluetooth")}} 返回的 {{DOMxRef("Bluetooth")}} 对象的方法将返回 `false` 或使返回的 {{JSxRef("Promise")}} 因 `SecurityError` {{DOMxRef("DOMException")}} 而拒绝。
 
 - {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} {{deprecated_inline}} {{non-standard_inline}}
-  - : 控制对 [Topics API](/zh-CN/docs/Web/API/Topics_API) 的访问。当策略明确禁止使用 Topics API 时，任何调用 {{domxref("Document.browsingTopics()")}} 方法或发送带有 {{httpheader("Sec-Browsing-Topics")}} 标头的请求都将失败并抛出 `NotAllowedError` {{domxref("DOMException")}}。
+  - : 控制对[主题 API](/zh-CN/docs/Web/API/Topics_API) 的访问。当策略明确禁止使用 Topics API 时，任何调用 {{domxref("Document.browsingTopics()")}} 方法或发送带有 {{httpheader("Sec-Browsing-Topics")}} 标头的请求都将失败并抛出 `NotAllowedError` {{domxref("DOMException")}}。
 
 - {{httpheader('Permissions-Policy/camera', 'camera')}} {{experimental_inline}}
   - : 控制当前文档是否允许使用视频输入设备。如果未授予此权限，{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 返回的 {{jsxref("Promise")}} 将因 `NotAllowedError` {{DOMxRef("DOMException")}} 而拒绝。
 
 - {{HTTPHeader('Permissions-Policy/captured-surface-control', 'captured-surface-control')}} {{experimental_inline}}
-  - : 控制文档是否被允许使用 [Captured Surface Control API](/zh-CN/docs/Web/API/Screen_Capture_API/Captured_Surface_Control)。如果未授予权限，该 API 的主要方法返回的 promise 将因 `NotAllowedError` {{DOMxRef("DOMException")}} 而拒绝。
+  - : 控制文档是否被允许使用 [Captured Surface Control API](/zh-CN/docs/Web/API/Screen_Capture_API/Captured_Surface_Control)。如果未授予权限，该 API 主要方法返回的 promise 将因 `NotAllowedError` {{DOMxRef("DOMException")}} 而被拒绝。
 
 - {{HTTPHeader('Permissions-Policy/ch-ua-high-entropy-values', 'ch-ua-high-entropy-values')}} {{experimental_inline}}
   - : 控制文档是否被允许使用 {{domxref("NavigatorUAData.getHighEntropyValues()")}} 方法检索高熵用户代理数据。如果未授予此权限，该方法将仅返回 `brands`、`mobile` 和 `platform` 的低熵数据。
@@ -125,16 +125,16 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
   - : 控制共享跨源子框架 [`fetchLater()` 配额](/zh-CN/docs/Web/API/Fetch_API/Using_Deferred_Fetch#配额)的分配。
 
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}} {{experimental_inline}}
-  - : 控制当前文档是否被允许使用 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} 方法捕获屏幕内容。当此策略被禁用时，如果未获得捕获屏幕内容的权限，`getDisplayMedia()` 返回的 promise 将因 `NotAllowedError` {{DOMxRef("DOMException")}} 而拒绝。
+  - : 控制当前文档是否被允许使用 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} 方法捕获屏幕内容。当此策略被禁用时，如果未获得捕获显示内容的权限，`getDisplayMedia()` 返回的 promise 将因 `NotAllowedError` {{DOMxRef("DOMException")}} 而被拒绝。
 
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [加密媒体扩展 API](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) (EME)。当此策略被禁用时，{{domxref("Navigator.requestMediaKeySystemAccess()")}} 返回的 {{jsxref("Promise")}} 将因 `SecurityError` {{domxref("DOMException")}} 而拒绝。
+  - : 控制当前文档是否允许使用[加密媒体扩展 API](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) (EME)。当此策略被禁用时，{{domxref("Navigator.requestMediaKeySystemAccess()")}} 返回的 {{jsxref("Promise")}} 将因 `SecurityError` {{domxref("DOMException")}} 而拒绝。
 
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}} {{experimental_inline}}
   - : 控制当前文档是否允许使用 {{DOMxRef("Element.requestFullscreen()")}}。当此策略被禁用时，返回的 {{JSxRef("Promise")}} 将因 {{JSxRef("TypeError")}} 而拒绝。
 
 - {{httpheader('Permissions-Policy/gamepad','gamepad')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [Gamepad API](/zh-CN/docs/Web/API/Gamepad_API)。当此策略被禁用时，调用 {{domxref('Navigator.getGamepads()')}} 将抛出 `SecurityError` {{domxref('DOMException')}}，并且 {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} 和 {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} 事件将不会触发。
+  - : 控制当前文档是否允许使用[游戏手柄 API](/zh-CN/docs/Web/API/Gamepad_API)。当此策略被禁用时，调用 {{domxref('Navigator.getGamepads()')}} 将抛出 `SecurityError` {{domxref('DOMException')}}，并且 {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} 和 {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} 事件将不会触发。
 
 - {{httpheader('Permissions-Policy/geolocation','geolocation')}} {{experimental_inline}}
   - : 控制当前文档是否允许使用 {{domxref('Geolocation')}} 接口。当此策略被禁用时，调用 {{domxref('Geolocation.getCurrentPosition','getCurrentPosition()')}} 和 {{domxref('Geolocation.watchPosition','watchPosition()')}} 将导致这些函数的回调函数返回 `PERMISSION_DENIED` 的 {{domxref('GeolocationPositionError')}} 错误代码。
@@ -146,16 +146,16 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
   - : 控制当前文档是否允许使用 {{domxref("WebHID API", "WebHID API", "", "nocode")}} 连接非标准或特殊的人机界面设备，如替代键盘或游戏手柄。
 
 - {{httpheader('Permissions-Policy/identity-credentials-get','identity-credentials-get')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [联合凭证管理 API (FedCM)](/zh-CN/docs/Web/API/FedCM_API)。
+  - : 控制当前文档是否允许使用[联合凭证管理 API（FedCM）](/zh-CN/docs/Web/API/FedCM_API)。
 
 - {{httpheader('Permissions-Policy/idle-detection','idle-detection')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 {{domxref("Idle Detection API", "空闲检测 API", "", "nocode")}} 检测用户何时正在与设备交互，例如在聊天应用中报告"在线"/"离开"状态。
+  - : 控制当前文档是否允许使用{{domxref("Idle Detection API", "空闲检测 API", "", "nocode")}} 检测用户何时正在与设备交互，例如在聊天应用中报告“在线”/“离开”状态。
 
 - {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
-  - : 控制对 [Translator and Language Detector APIs](/zh-CN/docs/Web/API/Translator_and_Language_Detector_APIs) 语言检测功能的访问权限。
+  - : 控制对[翻译器和语言检测 API](/zh-CN/docs/Web/API/Translator_and_Language_Detector_APIs) 语言检测功能的访问权限。
 
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许通过 {{DOMxRef("Window.queryLocalFonts()")}} 方法收集用户本地安装的字体数据（另见 {{domxref("Local Font Access API", "本地字体访问 API", "", "nocode")}}）。
+  - : 控制当前文档是否允许通过 {{DOMxRef("Window.queryLocalFonts()")}} 方法收集用户本地安装的字体数据（参见{{domxref("Local Font Access API", "本地字体访问 API", "", "nocode")}}）。
 
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}} {{Experimental_Inline}}
   - : 控制当前文档是否允许通过 {{DOMxRef("Magnetometer")}} 接口收集有关设备方向的信息。
@@ -170,10 +170,10 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
   - : 控制对 [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的[设备端语音识别](/zh-CN/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#设备端语音识别)功能的访问权限。
 
 - {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [WebOTP API](/zh-CN/docs/Web/API/WebOTP_API) 从应用服务器发送的特殊格式短信中请求一次性密码 (OTP)，即通过 {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}} 实现。
+  - : 控制当前文档是否允许使用 [WebOTP API](/zh-CN/docs/Web/API/WebOTP_API) 从应用服务器发送的特殊格式短信中请求一次性密码（OTP），即通过 {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}} 实现。
 
 - {{httpheader('Permissions-Policy/payment', 'payment')}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [支付请求接口](/zh-CN/docs/Web/API/Payment_Request_API)。当此策略被启用时，{{domxref("PaymentRequest","PaymentRequest()")}} 构造函数将抛出 `SecurityError` {{domxref("DOMException")}}。
+  - : 控制当前文档是否允许使用[支付请求接口](/zh-CN/docs/Web/API/Payment_Request_API)。当此策略被启用时，{{domxref("PaymentRequest","PaymentRequest()")}} 构造函数将抛出 `SecurityError` {{domxref("DOMException")}}。
 
 - {{httpheader('Permissions-Policy/picture-in-picture', 'picture-in-picture')}} {{Experimental_Inline}}
   - : 控制当前文档是否允许通过相应的 API 以画中画模式播放视频。
@@ -185,25 +185,25 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
   - : 控制[私有状态令牌](/zh-CN/docs/Web/API/Private_State_Token_API) `token-redemption` 和 `send-redemption-record` 操作的使用。
 
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 创建新的非对称密钥凭证，即通过 {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}} 实现。
+  - : 控制当前文档是否允许使用 [Web 认证 API](/zh-CN/docs/Web/API/Web_Authentication_API) 创建新的非对称密钥凭证，即通过 {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}} 实现。
 
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{experimental_inline}}
-  - : 控制当前文档是否允许使用 [Web Authentication API](/zh-CN/docs/Web/API/Web_Authentication_API) 检索已存储的公钥凭证，即通过 {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}。
+  - : 控制当前文档是否允许使用 [Web 认证 API](/zh-CN/docs/Web/API/Web_Authentication_API) 检索已存储的公钥凭证，即通过 {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}。
 
 - {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{experimental_inline}}
-  - : 控制当前文档是否允许使用 [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API) 指示设备不应关闭或调暗屏幕。
+  - : 控制当前文档是否允许使用[屏幕唤醒锁 API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API) 指示设备不应关闭屏幕或调暗屏幕亮度。
 
 - {{httpheader('Permissions-Policy/serial','serial')}} {{Experimental_Inline}}
   - : 控制当前文档是否允许使用 {{domxref("Web Serial API", "Web Serial API", "", "nocode")}} 与串行设备通信，无论是通过串行端口直接连接，还是通过模拟串行端口的 USB 或蓝牙设备连接。
 
 - {{httpheader("Permissions-Policy/speaker-selection", "speaker-selection")}} {{Experimental_Inline}}
-  - : 控制当前文档是否允许使用 [音频输出设备 API](/zh-CN/docs/Web/API/Audio_Output_Devices_API) 列出和选择扬声器。
+  - : 控制当前文档是否允许使用[音频输出设备 API](/zh-CN/docs/Web/API/Audio_Output_Devices_API) 列出和选择扬声器。
 
 - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} {{Experimental_Inline}}
-  - : 控制在第三方上下文中加载的文档（即嵌入在 {{htmlelement("iframe")}} 中）是否允许使用 {{domxref("Storage Access API", "存储访问 API", "", "nocode")}} 请求访问未分区的 cookie。
+  - : 控制在第三方上下文中加载的文档（即嵌入在 {{htmlelement("iframe")}} 中）是否允许使用{{domxref("Storage Access API", "存储访问 API", "", "nocode")}} 请求访问未分区的 cookie。
 
 - {{httpheader("Permissions-Policy/translator", "translator")}} {{Experimental_Inline}}
-  - : 控制对 [Translator and Language Detector APIs](/zh-CN/docs/Web/API/Translator_and_Language_Detector_APIs) 翻译功能的访问权限。
+  - : 控制对[翻译器和语言检测 API](/zh-CN/docs/Web/API/Translator_and_Language_Detector_APIs) 翻译功能的访问权限。
 
 - {{httpheader("Permissions-Policy/summarizer", "summarizer")}} {{Experimental_Inline}}
   - : 控制对 [Summarizer API](/zh-CN/docs/Web/API/Summarizer_API) 的访问权限。
@@ -212,7 +212,7 @@ Permissions-Policy: <directive>=<allowlist>, <directive>=<allowlist>;report-to=<
   - : 控制当前文档是否允许使用 [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API)。
 
 - {{httpheader("Permissions-Policy/web-share", "web-share")}} {{experimental_inline}}
-  - : 控制当前文档是否允许使用 [Web Share API](/zh-CN/docs/Web/API/Web_Share_API) 的 {{domxref("Navigator.share","Navigator.share()")}} 的方法，将文本、链接、图像和其他内容分享到用户选择的任意目标，例如移动应用。
+  - : 控制当前文档是否允许使用 [Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 的 {{domxref("Navigator.share","Navigator.share()")}} 方法，将文本、链接、图像和其他内容分享到用户选择的任意目标，例如移动应用。
 
 - {{httpheader("Permissions-Policy/window-management", "window-management")}} {{experimental_inline}}
   - : 控制当前文档是否允许使用 [Window Management API](/zh-CN/docs/Web/API/Window_Management_API) 管理多显示器上的窗口。
@@ -278,7 +278,7 @@ Permissions-Policy: camera=*
   allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
-值得一提的是 `src` 值。我们在上面提到，使用此允许列表值意味着，只要加载到其中的文档与其 {{HTMLElement('iframe','src','#Attributes')}} 属性中的 URL 同源，关联的特性将在此 `<iframe>` 中被允许。此值是 `allow` 中列出的特性的*默认*允许列表值，因此以下两种写法是等效的：
+值得一提的是 `src` 值。我们在上面提到，使用此允许列表值意味着，只要加载到其中的文档与其 {{HTMLElement('iframe','src','#属性')}} 属性中的 URL 同源，关联的特性将在此 `<iframe>` 中被允许。此值是 `allow` 中列出的特性的*默认*允许列表值，因此以下两种写法是等效的：
 
 ```html
 <iframe src="https://example.com" allow="geolocation 'src'"></iframe>
@@ -287,7 +287,7 @@ Permissions-Policy: camera=*
 
 ### 禁用强大特性的访问
 
-SecureCorp Inc. 希望在其应用中禁用麦克风（例如 {{domxref("MediaDevices.getUserMedia()")}}）和 {{domxref("Geolocation")}} API。可以通过以下响应标头实现：
+SecureCorp 公司希望在其应用中禁用麦克风（例如 {{domxref("MediaDevices.getUserMedia()")}}）和 {{domxref("Geolocation")}} API。可以通过以下响应标头实现：
 
 ```http
 Permissions-Policy: microphone=(), geolocation=()
@@ -309,7 +309,7 @@ Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 <iframe src="https://trusted-ad-network.com" allow="geolocation"></iframe>
 ```
 
-如果最终加载到 `<iframe>` 中的是其他来源，则该源将无法访问地理位置信息：
+如果最终加载到 `<iframe>` 中的是其他来源，则该来源将无法访问地理位置信息：
 
 ```html
 <iframe src="https://rogue-origin-example.com" allow="geolocation"></iframe>
@@ -327,7 +327,7 @@ Permissions-Policy: geolocation=();report-to=geo_endpoint
 ```
 
 > [!NOTE]
-> 如果要将所有违规报告发送到同一端点，可以改为定义 [`"default"` 报告端点](/zh-CN/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#default_reporting_endpoint)：
+> 如果要将所有违规报告发送到同一端点，可以改为定义 [`"default"` 报告端点](/zh-CN/docs/Web/HTTP/Reference/Headers/Reporting-Endpoints#默认报告端点)：
 >
 > ```http
 > Reporting-Endpoints: default="https://example.com/reports"
@@ -343,7 +343,7 @@ navigator.geolocation.getCurrentPosition(
 );
 ```
 
-发送到端点的[报告负载](/zh-CN/docs/Web/API/Reporting_API#reporting_server_endpoints)可能如下所示：
+发送到端点的[报告负载](/zh-CN/docs/Web/API/Reporting_API#报告服务器端点)可能如下所示：
 
 ```json
 [
