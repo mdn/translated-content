@@ -92,7 +92,7 @@ Ces interfaces représentent des éléments HTML spécifiques (ou des ensembles 
 - {{DOMxRef("HTMLDataListElement")}}
 - {{DOMxRef("HTMLDetailsElement")}}
 - {{DOMxRef("HTMLDialogElement")}}
-- {{DOMxRef("HTMLDirectoryElement")}}
+- `HTMLDirectoryElement`
 - {{DOMxRef("HTMLDivElement")}}
 - {{DOMxRef("HTMLDListElement")}}
 - {{DOMxRef("HTMLElement")}}
@@ -154,7 +154,7 @@ Ces interfaces représentent des éléments HTML spécifiques (ou des ensembles 
 #### Interfaces d'éléments HTML obsolètes
 
 - {{DOMxRef("HTMLFontElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("HTMLFrameElement")}} {{Deprecated_Inline}}
+- `HTMLFrameElement` {{Deprecated_Inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{Deprecated_Inline}}
 
 ### Interfaces d'intégration aux applications web et au navigateur
