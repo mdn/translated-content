@@ -3,7 +3,7 @@ title: "HTMLButtonElement : propriété labels"
 short-title: labels
 slug: Web/API/HTMLButtonElement/labels
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 116577234db1d6275c74a8bb879fce54d944f4ed
 ---
 
 {{APIRef("DOM")}}
