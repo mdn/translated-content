@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCIceCandidatePairStats")}} 字典的 **`localCandidateId`** 属性是用于唯一标识本地 {{Glossary("ICE")}} 候选对的字符串。经分析，该候选对可以生成 {{domxref("RTCIceCandidateStats")}}，进而用于计算该候选者对的统计信息。
+{{domxref("RTCIceCandidatePairStats")}} 字典的 **`localCandidateId`** 属性是用于唯一标识本地 {{Glossary("ICE")}} 候选对的字符串；该候选项经分析后会生成用于计算这一候选项对统计信息的 {{domxref("RTCIceCandidateStats")}}。
 
 ## 值
 
