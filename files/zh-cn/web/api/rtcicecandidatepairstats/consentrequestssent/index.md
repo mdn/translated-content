@@ -12,7 +12,6 @@ l10n:
 
 如果该对中的任一或两个对等方通过[网络地址转换](/zh-CN/docs/Web/API/WebRTC_API/Protocols#nat)（NAT）访问互联网，则另一方需要定期向 NAT 防火墙发送 [NAT会话穿越应用程序（STUN）](/zh-CN/docs/Web/API/WebRTC_API/Protocols#stun)请求，以请求允许流量通过的同意。该属性将统计请求的数量。{{rfc("7675")}} 提供了有关 NAT 和同意的更多信息。
 
-
 ## 值
 
 表示发送到候选对中对等方的同意请求总数的整数。
