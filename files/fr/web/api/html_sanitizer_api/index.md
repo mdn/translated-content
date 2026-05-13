@@ -29,12 +29,12 @@ L'API HTML Sanitizer fournit des méthodes sécurisées et non sécurisées pour
 - Méthodes non sécurisées
   - : {{DOMxRef('Element.setHTMLUnsafe()')}}, {{DOMxRef('ShadowRoot.setHTMLUnsafe()')}} et {{DOMxRef('Document/parseHTMLUnsafe_static','Document.parseHTMLUnsafe()')}}.
 
-Toutes les méthodes prennent le HTML à injecter et un {{domxref("Sanitizer")}} ou {{domxref("SanitizerConfig")}} optionnel comme arguments.
+Toutes les méthodes prennent le HTML à injecter et un {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} optionnel comme arguments.
 Les objets d'assainissement définissent les entités HTML qui sont filtrées de l'entrée avant qu'elle ne soit injectée.
 Les méthodes de l'objet {{DOMxRef('Element')}} sont conscientes du contexte et suppriment également tout élément que la spécification HTML n'autorise pas dans l'élément cible.
 
 Les méthodes sécurisées suppriment toujours les éléments et attributs non sécurisés contre le XSS.
-Si aucun assainisseur n'est passé en paramètre, elles utilisent la [configuration par défaut de l'assainisseur](#configuration_par_défaut_de_lassainisseur), qui supprime à la fois les éléments et attributs non sécurisés contre le XSS, tels que les éléments HTML {{htmlelement("script")}} et les gestionnaires d'évènements `onclick`, ainsi que d'autres qui pourraient être utilisés dans d'autres types d'attaques si fournis en tant qu'entrée utilisateur·ice.
+Si aucun assainisseur n'est passé en paramètre, elles utilisent la [configuration par défaut de l'assainisseur](#configuration_par_défaut_de_lassainisseur), qui supprime à la fois les éléments et attributs non sécurisés contre le XSS, tels que les éléments HTML {{HTMLElement("script")}} et les gestionnaires d'évènements `onclick`, ainsi que d'autres qui pourraient être utilisés dans d'autres types d'attaques si fournis en tant qu'entrée utilisateur·ice.
 Si un assainisseur personnalisé est utilisé avec une méthode sécurisée, il est implicitement mis à jour pour supprimer tous les éléments et attributs qui ne sont pas sécurisés contre le XSS (notez que l'assainisseur passé n'est pas modifié et peut toujours autoriser des entités non sécurisées s'il est utilisé avec une méthode non sécurisée).
 
 Les méthodes sécurisées doivent être utilisées à la place de {{DOMxRef("Element.innerHTML")}}, {{DOMxRef("Element.outerHTML")}}, ou {{DOMxRef("ShadowRoot.innerHTML")}}, pour injecter du contenu HTML non fiable.
@@ -201,16 +201,16 @@ Notez que si vous appelez la même méthode pour définir un attribut par élém
 
 La configuration de base sécurisée contre les XSS définit les éléments qui doivent être supprimés d'une entrée afin de la rendre sécurisée contre les XSS&nbsp;:
 
-- {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}} et {{SVGElement("use")}}.
+- {{HTMLElement("embed")}}, {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("script")}} et {{SVGElement("use")}}.
 - Tous les attributs de contenu des gestionnaires d'évènements, tels que `onafterprint`, `onbeforeinput`, et ainsi de suite.
 
-La configuration est automatiquement appliquée à {{domxref("Element.setHTML()")}} et aux autres [méthodes de désinfection sécurisées](/fr/docs/Web/API/HTML_Sanitizer_API#méthodes_dassainissement), et garantit que les éléments non sécurisés contre les XSS sont supprimés de la sortie même s'ils sont autorisés par un assainisseur passé.
-Vous pouvez également appeler {{domxref("Sanitizer/removeUnsafe", "removeUnsafe")}} sur une instance de {{domxref("Sanitizer")}} pour appliquer cette configuration et la rendre sécurisée contre les XSS.
+La configuration est automatiquement appliquée à {{DOMxRef("Element.setHTML()")}} et aux autres [méthodes de désinfection sécurisées](/fr/docs/Web/API/HTML_Sanitizer_API#méthodes_dassainissement), et garantit que les éléments non sécurisés contre les XSS sont supprimés de la sortie même s'ils sont autorisés par un assainisseur passé.
+Vous pouvez également appeler {{DOMxRef("Sanitizer/removeUnsafe", "removeUnsafe")}} sur une instance de {{DOMxRef("Sanitizer")}} pour appliquer cette configuration et la rendre sécurisée contre les XSS.
 
 #### Configuration par défaut de l'assainisseur
 
 La configuration par défaut de l'assainisseur est plus restrictive que la configuration de base sécurisée contre les XSS.
-Elle définit l'assainisseur qui est utilisé si vous appelez {{domxref("Element.setHTML()")}} ou les autres [méthodes de désinfection sécurisées](/fr/docs/Web/API/HTML_Sanitizer_API#méthodes_dassainissement) sans passer d'objet assainisseur.
+Elle définit l'assainisseur qui est utilisé si vous appelez {{DOMxRef("Element.setHTML()")}} ou les autres [méthodes de désinfection sécurisées](/fr/docs/Web/API/HTML_Sanitizer_API#méthodes_dassainissement) sans passer d'objet assainisseur.
 C'est également la configuration qui est renvoyée par le [constructeur `Sanitizer()`](/fr/docs/Web/API/Sanitizer/Sanitizer) lorsqu'aucune configuration n'est définie.
 
 La configuration supprime les types d'éléments suivants&nbsp;:
