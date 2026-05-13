@@ -93,7 +93,7 @@ console.log(new Intl.DateTimeFormat("ar-EG").format(date));
 // "١٩‏/١٢‏/٢٠١٢"
 
 // 在日本，应用可能想要使用日本日历，
-// 2012 年是平成 24 年（平成是是日本天皇明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
+// 2012 年是平成 24 年（平成是是日本国王明仁的年号，由 1989 年 1 月 8 日起开始计算直至现在）
 console.log(new Intl.DateTimeFormat("ja-JP-u-ca-japanese").format(date));
 // "24/12/19"
 
