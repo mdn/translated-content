@@ -69,7 +69,7 @@ Ces types sont utilisés pour définir des distances et d'autres quantités.
 - {{CSSxRef("&lt;length&gt;")}}
   - : Les longueurs sont une `<dimension>` et se réfèrent à des distances.
 - {{CSSxRef("&lt;angle&gt;")}}
-  - : Les angles sont utilisés dans des propriétés telles que {{CSSxRef("linear-gradient()")}} et sont une `<dimension>` avec l'une des unités `deg`, `grad`, `rad` ou `turn` attachées.
+  - : Les angles sont utilisés dans des propriétés telles que {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}} et sont une `<dimension>` avec l'une des unités `deg`, `grad`, `rad` ou `turn` attachées.
 - {{CSSxRef("&lt;time&gt;")}}
   - : Les unités de durée sont une `<dimension>` avec une unité `s` ou `ms`.
 - {{CSSxRef("&lt;frequency&gt;")}}
