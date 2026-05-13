@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33cada2d06f8d0cd009d9d5348de6e3165bba67f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 글에서는 간단한 로컬 테스트 서버를 여러분의 장비에 설치하는 법과 기본적인 사용법을 설명합니다.
 

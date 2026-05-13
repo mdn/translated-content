@@ -3,7 +3,7 @@ title: Разбираемся с веб ссылками
 slug: Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В данной статье мы узнаем, что такое ссылки и почему они важны.
 
