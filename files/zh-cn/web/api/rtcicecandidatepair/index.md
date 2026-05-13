@@ -14,7 +14,9 @@ l10n:
 - {{domxref("RTCIceCandidatePair.local", "local")}}
   - ：描述连接本地端配置的 {{domxref("RTCIceCandidate")}}。
 - {{domxref("RTCIceCandidatePair.remote", "remote")}}
-  - ：描述连接远端配置的 **`RTCIceCandidate`**。
+  - : 描述连接本地端配置的 {{domxref("RTCIceCandidate")}}。
+- {{domxref("RTCIceCandidatePair.remote", "remote")}}
+  - : 描述连接远端配置的 **`RTCIceCandidate`**。
 
 ## 示例
 
