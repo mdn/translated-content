@@ -3,7 +3,7 @@ title: Fonction CSS `path()`
 short-title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte une chaîne de caractères représentant un [tracé SVG](/fr/docs/Web/SVG/Reference/Element/path) et permet de dessiner une forme dans les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [chemin de déplacement CSS](/fr/docs/Web/CSS/Guides/Motion_path). La fonction `path()` est une valeur du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}. Elle peut être utilisée dans les propriétés CSS {{CSSxRef("offset-path")}} et {{CSSxRef("clip-path")}}, ainsi que dans l'attribut SVG {{SVGAttr("d")}}.
@@ -178,7 +178,7 @@ svg {
 
 ## Voir aussi
 
-- Le type de donnée {{CSSxRef("&lt;shape-outside&gt;")}}
+- La propriété {{CSSxRef("shape-outside")}}
 - Le module des [formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Présentation des formes CSS](/fr/docs/Web/CSS/Guides/Shapes/Overview)
 - [Guide illustré de la syntaxe du tracé SVG <sup>(angl.)</sup>](https://css-tricks.com/svg-path-syntax-illustrated-guide/) sur CSS-tricks (2021)

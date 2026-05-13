@@ -3,7 +3,7 @@ title: "Élément HTML `<img>` : l'élément d'image embarquée"
 short-title: <img>
 slug: Web/HTML/Reference/Elements/img
 l10n:
-  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
@@ -56,7 +56,7 @@ SVG reste le format recommandé pour les images qui doivent être dessinées ave
 
 ## Erreur de chargement d'une image
 
-Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}, le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
+Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement `onerror` a été défini pour intercepter l'évènement {{DOMxRef("HTMLElement/error_event", "error")}}, le gestionnaire est appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
 
 - L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
 - L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
@@ -80,11 +80,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     >
     > Dans ces situations, le navigateur peut remplacer l'image avec le texte fourni par cet attribut. Aussi, il est grandement préférable de fournir une valeur utile pour `alt` dès que possible.
 
-    Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masqueront l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
+    Utiliser la chaîne de caractères vide comme valeur pour cet attribut (`alt=""`) indique que cette image _n'est pas_ importante pour le contenu (par exemple une décoration ou un pixel de pistage), dans ce cas, les navigateurs non-visuels peuvent ne pas la traiter pour le rendu. Les navigateurs visuels masquent l'icône de l'image cassée si `alt` est vide et que le chargement de l'image a échoué.
 
     Cet attribut est également utilisé pour copier/coller l'image vers du texte ou pour enregistrer un marque-page avec l'image associée.
 
-- `attributionsrc` {{Deprecated_Inline}}
+- `attributionsrc` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
 
     Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
@@ -95,7 +95,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
     > Voir [l'API sur les rapports d'attribution](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
     Il existe deux versions de cet attribut&nbsp;:
-    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
+    - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne est utilisée si elle est absente.
     - Une valeur contenant une ou plusieurs URL, comme&nbsp;:
 
     ```html
@@ -106,17 +106,17 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
                          https://b.example/register-source" />
     ```
 
-    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) sera envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL pourront ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
+    Cette forme s'avère utile lorsque la ressource demandée n'est pas située sur un serveur que vous contrôler, ou si vous souhaitez gérer l'enregistrement de la source d'attribution sur un serveur différent. Dans ce cas, on indique une ou plusieurs URL pour la valeur de `attributionsrc`. Lorsque la requête pour la ressource est émise, l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible) est envoyé aux URL indiquées dans `attributionSrc`, ainsi qu'à l'origine de la ressource. Ces URL peuvent ensuite répondre avec un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger) afin de finaliser l'enregistrement.
 
     > [!NOTE]
-    > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
+    > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, par différents rapports sur différentes données.
 
 - [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin)
-  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité).
+  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée avec une requête CORS](/fr/docs/Web/HTML/How_to/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité).
 
-    Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
+    Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS est effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin)) et le navigateur marque la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas).
 
-    Si l'attribut `crossorigin` _est présent_, une requête CORS est envoyée (avec l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin))&nbsp;; si le serveur ne gère pas l'accès depuis les origines tierces (c'est-à-dire qu'il n'envoie aucun en-tête de réponse [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) ou qu'il n'inclut pas l'origine du site dans l'en-tête `Access-Control-Allow-Origin`), le navigateur bloquera le chargement de l'image et affichera une erreur CORS dans la console de développement.
+    Si l'attribut `crossorigin` _est présent_, une requête CORS est envoyée (avec l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin))&nbsp;; si le serveur ne gère pas l'accès depuis les origines tierces (c'est-à-dire qu'il n'envoie aucun en-tête de réponse [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin) ou qu'il n'inclut pas l'origine du site dans l'en-tête `Access-Control-Allow-Origin`), le navigateur bloque le chargement de l'image et affiche une erreur CORS dans la console de développement.
 
     Les valeurs autorisées pour cet attribut sont&nbsp;:
     - `anonymous`
@@ -129,9 +129,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 - `decoding`
   - : Cet attribut fournit une indication au navigateur sur la façon de décoder l'image&nbsp;: soit en effectuant le décodage de l'image en même temps que le rendu du reste du contenu du DOM, dans une seule étape de présentation qui paraît plus «&nbsp;correcte&nbsp;» (`sync`), soit en rendant et présentant d'abord le reste du contenu du DOM puis en décodant l'image et en la présentant ensuite (`async`). En pratique, `async` signifie que le prochain affichage ne dépend pas de la fin du décodage de l'image.
 
-    Il est souvent difficile de percevoir un effet notable lors de l'utilisation de `decoding` sur des éléments `<img>` statiques. Ils seront probablement d'abord rendus comme des images vides pendant que les fichiers image sont récupérés (depuis le réseau ou le cache), puis traités indépendamment, de sorte que la «&nbsp;synchronisation&nbsp;» des mises à jour de contenu est moins apparente. Cependant, le blocage du rendu pendant le décodage, bien que souvent très court, _peut_ être mesuré — même s'il est difficile à observer à l'œil nu. Voir [Que fait réellement l'attribut de décodage d'image&nbsp;? <sup>(angl.)</sup>](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) pour une analyse plus détaillée (tunetheweb.com, 2023).
+    Il est souvent difficile de percevoir un effet notable lors de l'utilisation de `decoding` sur des éléments `<img>` statiques. Ils sont probablement d'abord rendus comme des images vides pendant que les fichiers image sont récupérés (depuis le réseau ou le cache), puis traités indépendamment, de sorte que la «&nbsp;synchronisation&nbsp;» des mises à jour de contenu est moins apparente. Cependant, le blocage du rendu pendant le décodage, bien que souvent très court, _peut_ être mesuré — même s'il est difficile à observer à l'œil nu. Voir [Que fait réellement l'attribut de décodage d'image&nbsp;? <sup>(angl.)</sup>](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) pour une analyse plus détaillée (tunetheweb.com, 2023).
 
-    L'utilisation de différents types de `decoding` peut entraîner des différences plus perceptibles lors de l'insertion dynamique d'éléments `<img>` dans le DOM via JavaScript — voir {{DOMxRef("HTMLImageElement.decoding")}} pour plus de détails.
+    L'utilisation de différents types de `decoding` peut entraîner des différences plus perceptibles lors de l'insertion dynamique d'éléments `<img>` dans le DOM avec JavaScript — voir {{DOMxRef("HTMLImageElement.decoding")}} pour plus de détails.
 
     Valeurs autorisées&nbsp;:
     - `sync`
@@ -177,24 +177,24 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
         L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
-        Bien que les attributs explicites [`width`](#width) et [`height`](#height) soient recommandés pour toutes les images afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour les images chargées de manière paresseuse. Les images chargées de manière paresseuse ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement pourrait le changer, car les images non chargées ont une `width` et une `height` de `0`. Cela crée une expérience des utilisateur·ice·s encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise au milieu de la lecture.
+        Bien que les attributs explicites [`width`](#width) et [`height`](#height) soient recommandés pour toutes les images afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour les images chargées de manière paresseuse. Les images chargées de manière paresseuse ne sont jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement pourrait le changer, car les images non chargées ont une `width` et une `height` de `0`. Cela crée une expérience des utilisateur·ice·s encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise au milieu de la lecture.
 
         Les images chargées de manière paresseuse situées dans la zone d'affichage (<i lang="en">viewport</i> en anglais) visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des images chargées de manière anticipée — les images chargées de manière paresseuse ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
 
-        Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+        Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un·e utilisateur·ice en fonction de sa position sur la page serait toujours possible (avec des images placées à intervalle régulier sur la page).
 
 - `referrerpolicy`
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
     - `no-referrer`
       - : L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé.
     - `no-referrer-when-downgrade`
-      - : L'en-tête {{HTTPHeader("Referer")}} ne sera pas envoyé aux origines sans TLS/HTTPS.
+      - : L'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
-      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL).
+      - : Le référent envoyé est limité à l'origine de la page référente, c'est-à-dire qu'il ne contient que le [schéma, l'hôte et le port](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL).
     - `origin-when-cross-origin`
-      - : Le référent envoyé aux autres origines sera limité au schéma, à l'hôte et au port. La navigation vers la même origine contiendra le chemin.
+      - : Le référent envoyé aux autres origines est limité au schéma, à l'hôte et au port. La navigation vers la même origine contient le chemin.
     - `same-origin`
-      - : Un référent sera envoyé vers les mêmes origines mais les requêtes vers d'autres origines ne contiendront pas de référent.
+      - : Un référent est envoyé vers les mêmes origines mais les requêtes vers d'autres origines ne contiennent pas de référent.
     - `strict-origin`
       - : N'envoie l'origine du document comme référent que lorsque le niveau de sécurité du protocole reste le même (HTTPS→HTTPS) et pas lorsque la destination est moins sécurisée (HTTPS→HTTP).
     - `strict-origin-when-cross-origin` (la valeur par défaut)
@@ -222,7 +222,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
         Les valeurs de taille de source définissent la taille d'affichage prévue de l'image.
         {{Glossary("User agent", "Les agents utilisateur")}} utilisent la taille de source courante pour sélectionner l'une des sources fournies par l'attribut `srcset`, lorsque ces sources sont décrites à l'aide de descripteurs de largeur (`w`).
         La valeur `w` définie dans sizes détermine la largeur de mise en page par défaut de l'image.
-        En l'absence de {{Glossary("CSS")}}, le navigateur affichera l'image à cette taille, quelle que soit la dimension physique en pixels du fichier téléchargé.
+        En l'absence de {{Glossary("CSS")}}, le navigateur affiche l'image à cette taille, quelle que soit la dimension physique en pixels du fichier téléchargé.
 
         Une valeur de taille de source peut être n'importe quelle [longueur](/fr/docs/Web/CSS/Reference/Values/length) positive.
         Elle ne doit pas utiliser de fonctions CSS autres que les [fonctions mathématiques](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_mathématiques).
@@ -260,7 +260,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
   - : {{Glossary("URL", "L'URL")}} de l'image. Cet attribut est obligatoire. Pour les {{Glossary("Browser", "navigateurs")}} qui prennent en charge `srcset`, l'image fourni par `src` est considérée comme une candidate avec un descripteur de densité de pixel à `1x`, sauf si une image avec un tel descripteur est déjà définie dans `srcset`, ou si `srcset` contient des descripteurs `w`.
 
 - `srcset`
-  - : Une ou plusieurs chaînes de caractères séparées par des virgules, qui indiquent des sources possibles pour l'image que {{Glossary("user agent", "l'agent utilisateur")}} pourra utiliser. Chaque chaîne de caractères se compose&nbsp;:
+  - : Une ou plusieurs chaînes de caractères séparées par des virgules, qui indiquent des sources possibles pour l'image que {{Glossary("user agent", "l'agent utilisateur")}} peut utiliser. Chaque chaîne de caractères se compose&nbsp;:
     1. D'une {{Glossary("URL")}} vers l'image
     2. Éventuellement, d'un espace suivi&nbsp;:
        - D'un descripteur de largeur (un entier positif suivi par `w`). Le descripteur de largeur est divisé par la taille de source fournie par l'attribut `sizes` afin de calculer la densité de pixel effective.
@@ -268,7 +268,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     Si aucun descripteur n'est indiqué, la source se voit affecter un descripteur par défaut de `1x`.
 
-    Toute combinaison des deux types de descripteur sera invalide. De même, indiquer deux sources avec le même descripteur sera invalide.
+    Toute combinaison des deux types de descripteur est invalide. De même, indiquer deux sources avec le même descripteur est invalide.
 
     L'agent utilisateur sélectionne une des sources disponibles comme il l'entend. Cette liberté permet de baser le choix sur d'autres facteurs comme les préférences de l'utilisateur·ice ou les {{Glossary("bandwidth", "conditions réseau")}}. Voir [le tutoriel sur les images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images) pour un exemple.
 
@@ -284,7 +284,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 ### Attributs obsolètes
 
 - `align` {{Deprecated_Inline}}
-  - : Aligne l'image au sein de son contexte englobant. À la place de cet attribut, on privilégiera les propriétés {{Glossary("CSS")}} {{CSSxRef("float")}} et/ou {{CSSxRef("vertical-align")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
+  - : Aligne l'image au sein de son contexte englobant. À la place de cet attribut, on privilégie les propriétés {{Glossary("CSS")}} {{CSSxRef("float")}} et/ou {{CSSxRef("vertical-align")}}. Les valeurs autorisées pour cet attribut sont&nbsp;:
     - `top`
       - : Équivalent à `vertical-align: top` ou `vertical-align: text-top`
     - `middle`
@@ -318,7 +318,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
 `<img>` est {{Glossary("replaced elements", "un élément remplacé")}}. Sa propriété {{CSSxRef("display")}} par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés {{CSSxRef("border")}}/{{CSSxRef("border-radius")}}, {{CSSxRef("padding")}}/{{CSSxRef("margin")}}, {{CSSxRef("width")}}, {{CSSxRef("height")}}, etc, sur une image.
 
-`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec {{CSSxRef("vertical-align", "vertical-align: baseline")}}, le bas de l'image sera placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec {{CSSxRef("vertical-align", "vertical-align: baseline")}}, le bas de l'image est placé sur la ligne de base du texte.
 
 La propriété {{CSSxRef("object-position")}} peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété {{CSSxRef("object-fit")}} peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
@@ -344,7 +344,7 @@ La valeur d'un attribut `alt` doit fournir un texte de remplacement clair et con
 
 Un test important pour l'accessibilité consiste à lire le contenu de l'attribut `alt` avec le texte qui précède pour vérifier si cela transmet le même sens que l'image. Par exemple, si l'image était précédée de la phrase «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: », l'exemple _À ne pas faire_ pourrait être lu par un lecteur d'écran comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: image&nbsp;», ce qui n'a pas de sens. L'exemple _À faire_ pourrait être lu comme «&nbsp;Lors de mes voyages, j'ai vu un petit animal mignon&nbsp;: Un manchot sur une plage.&nbsp;», ce qui a du sens.
 
-Pour les images utilisées pour déclencher une action, par exemple des images incluses dans un élément HTML {{HTMLElement("a")}} ou {{HTMLElement("button")}}, pensez à décrire l'action déclenchée dans la valeur de l'attribut `alt`. Par exemple, vous pouvez écrire `alt="page suivante"` au lieu de `alt="flèche droite"`. Vous pouvez aussi ajouter une description complémentaire dans un attribut `title`&nbsp;; celle-ci pourra être lue par les lecteurs d'écran si l'utilisateur·ice en fait la demande.
+Pour les images utilisées pour déclencher une action, par exemple des images incluses dans un élément HTML {{HTMLElement("a")}} ou {{HTMLElement("button")}}, pensez à décrire l'action déclenchée dans la valeur de l'attribut `alt`. Par exemple, vous pouvez écrire `alt="page suivante"` au lieu de `alt="flèche droite"`. Vous pouvez aussi ajouter une description complémentaire dans un attribut `title`&nbsp;; celle-ci peut être lue par les lecteurs d'écran si l'utilisateur·ice en fait la demande.
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran peuvent annoncer le nom du fichier de l'image à la place. Cela peut prêter à confusion si le nom du fichier ne représente pas le contenu de l'image.
 
@@ -368,7 +368,7 @@ L'attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes/title) n'est 
 
 L'attribut `title` ne doit pas non plus être utilisé comme information de légende supplémentaire pour accompagner la description `alt` d'une image. Si une image a besoin d'une légende, utilisez les éléments {{HTMLElement("figure")}} et {{HTMLElement("figcaption")}}.
 
-La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la verra&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en ligne en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
+La valeur de l'attribut `title` est généralement présentée à l'utilisateur·ice sous forme d'infobulle, qui apparaît peu après l'arrêt du curseur sur l'image. Bien que cela _puisse_ fournir des informations supplémentaires, il ne faut pas supposer que l'utilisateur·ice la voit&nbsp;: il·elle peut n'utiliser qu'un clavier ou un écran tactile. Si vous avez une information particulièrement importante ou précieuse pour l'utilisateur·ice, présentez-la en ligne en utilisant l'une des méthodes mentionnées ci-dessus plutôt que `title`.
 
 - [Utiliser l'attribut HTML `title` — mis à jour | Vispero <sup>(angl.)</sup>](https://vispero.com/resources/using-the-html-title-attribute-updated/)
 
@@ -400,7 +400,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 
 ### Utiliser l'attribut `srcset`
 
-Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci sera chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateurs qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` sera considérée comme une candidate avec le descripteur `1x`.
+Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci est chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateurs qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` est considérée comme une candidate avec le descripteur `1x`.
 
 ```html
 <img
@@ -413,7 +413,7 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
 
 ### Utiliser les attributs `srcset` et `sizes`
 
-L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en charge lorsque les descripteurs `w` sont présents. Lorsque la condition `(max-width: 600px)` est respectée, l'image large de 200 pixels sera chargée (car c'est celle qui est la plus proche de `200px`). Dans les autres cas, c'est l'autre image qui est chargée.
+L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en charge lorsque les descripteurs `w` sont présents. Lorsque la condition `(max-width: 600px)` est respectée, l'image large de 200 pixels est chargée (car c'est celle qui est la plus proche de `200px`). Dans les autres cas, c'est l'autre image qui est chargée.
 
 ```html
 <img

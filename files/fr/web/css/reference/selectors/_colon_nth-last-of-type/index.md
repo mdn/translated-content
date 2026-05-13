@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
-La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-of-type`** permet de cibler les éléments selon leur position parmi les voisins qui sont du même type (les mêmes balises) en partant de la fin.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-of-type`** permet de cibler les éléments selon leur position parmi les voisins qui sont du même type (les mêmes balises) en partant de la fin.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: :nth-last-of-type", "tabbed-shorter")}}
 

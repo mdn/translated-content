@@ -3,7 +3,7 @@ title: Fonction CSS `counter()`
 short-title: counter()
 slug: Web/CSS/Reference/Values/counter
 l10n:
-  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`counter()`** retourne une chaîne de caractères représentant la valeur actuelle du compteur nommé, si celui-ci existe.
@@ -57,7 +57,7 @@ La fonction `counter()` accepte jusqu'à deux paramètres. Le premier paramètre
 - `<counter-name>`
   - : Un identifiant personnalisé ({{CSSxRef("&lt;custom-ident&gt;")}}) qui identifie le compteur, et qui est le même nom sensible à la casse utilisé avec les valeurs de propriété {{CSSxRef("counter-reset")}} et {{CSSxRef("counter-increment")}}. Le nom du compteur ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
-  - : Un nom de {{CSSxRef("&lt;list-style-type&gt;")}}, un nom de {{CSSxRef("&lt;@counter-style&gt;")}} ou une fonction {{CSSxRef("symbols()")}}, où un nom de style de compteur peut être un style de compteur prédéfini `numeric`, `alphabetic` ou `symbolic`, un style de compteur prédéfini complexe en écriture asiatique ou éthiopienne, ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/Guides/Counter_styles). Si omis, le style de compteur par défaut est `decimal`.
+  - : Un nom de {{CSSxRef("list-style-type")}}, un nom de {{CSSxRef("@counter-style#counter-style-name", "counter-style-name")}} ou une fonction {{CSSxRef("symbols()")}}, où un nom de style de compteur peut être un style de compteur prédéfini `numeric`, `alphabetic` ou `symbolic`, un style de compteur prédéfini complexe en écriture asiatique ou éthiopienne, ou un autre [style de compteur prédéfini](/fr/docs/Web/CSS/Guides/Counter_styles). Si omis, le style de compteur par défaut est `decimal`.
 
 > [!NOTE]
 > Pour joindre les valeurs de compteur lors de l'imbrication de compteurs, utilisez la fonction {{CSSxRef("counters()")}}, qui fournit un paramètre {{CSSxRef("&lt;string&gt;")}} supplémentaire.
