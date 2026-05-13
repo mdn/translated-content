@@ -3,7 +3,7 @@ title: "HTMLTableCellElement : propriété vAlign"
 short-title: vAlign
 slug: Web/API/HTMLTableCellElement/vAlign
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: 9a6462fba2d1527b1d9e550cda954eafdccb5d58
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
@@ -30,7 +30,7 @@ Les valeurs possibles sont&nbsp;: `"top"`, `"middle"`, `"bottom"` ou `"baseline"
 
 ## Exemples
 
-Utilisez plutôt CSS {{CSSxRef("vertical-align")}}, qui a priorité, comme démontré dans l'[exemple d'alignement vertical des cellules de tableau](/fr/docs/Web/CSS/Reference/Properties/vertical-align#alignement_vertical_dans_une_cellule_de_tableau).
+Utilisez plutôt CSS {{CSSxRef("vertical-align")}}, qui a priorité, comme démontré dans [l'exemple d'alignement vertical des cellules de tableau](/fr/docs/Web/CSS/Reference/Properties/vertical-align#alignement_vertical_dans_une_cellule_de_tableau).
 
 ## Spécifications
 

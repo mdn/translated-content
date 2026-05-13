@@ -2,12 +2,12 @@
 title: HTMLSelectedContentElement
 slug: Web/API/HTMLSelectedContentElement
 l10n:
-  sourceCommit: 11478c4adedc859a4fe3e3c4004fcfd96ebc1eba
+  sourceCommit: 9af64ef430ad722b9cc3f75ccabeb8989c23b988
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-L'interface **`HTMLSelectedContentElement`** représente un élément HTML {{HTMLElement("selectedcontent")}} dans l'[arbre DOM](/fr/docs/Web/API/Document_Object_Model).
+L'interface **`HTMLSelectedContentElement`** représente un élément HTML {{HTMLElement("selectedcontent")}} dans [l'arbre DOM](/fr/docs/Web/API/Document_Object_Model).
 
 {{InheritanceDiagram}}
 
