@@ -29,7 +29,7 @@ _Cette interface hérite des propriétés de {{DOMxRef("HTMLElement")}}._
 - {{DOMxRef("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
   - : Un booléen qui reflète la valeur de l'attribut [`shadowrootclonable`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) de l'élément HTML `<template>` associé.
 - {{DOMxRef("HTMLTemplateElement.shadowRootCustomElementRegistry", "shadowRootCustomElementRegistry")}}
-  - : Une chaîne de caractères qui reflète la valeur de l'attribut [`shadowrootcustomelementregistry`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) de l'élément `<template>` associé, indiquant que la racine d'ombre déclarative utilise un {{domxref("CustomElementRegistry")}} avec une portée.
+  - : Une chaîne de caractères qui reflète la valeur de l'attribut [`shadowrootcustomelementregistry`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) de l'élément `<template>` associé, indiquant que la racine d'ombre déclarative utilise un {{DOMxRef("CustomElementRegistry")}} avec une portée.
 - {{DOMxRef("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
   - : Un booléen qui reflète la valeur de l'attribut [`shadowrootserializable`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) de l'élément HTML `<template>` associé.
 
