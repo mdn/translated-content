@@ -32,24 +32,24 @@ new Intl.Segmenter(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.Segmenter()` 只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
+> `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 来构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 
 - `locales` {{optional_inline}}
-  - : 带有 {{glossary("BCP 47 language tag", "BCP 47 语言标记")}}的字符串，或 {{jsxref("Intl.Locale")}} 实例，或此类语言环境标识符的数组。当传递 `undefined` 或没有一个指定的语言环境标识符被支持时，将使用运行时的默认语言环境。关于 `locales` 参数的一般形式和解释，参见 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
+  - : 带有 {{glossary("BCP 47 language tag", "BCP 47 语言标记")}}的字符串，或 {{jsxref("Intl.Locale")}} 实例，或这些类型的语言环境标识符组成的数组。当传入 `undefined` 或所有指定的语言环境标识符均不被支持时，将使用运行时的默认语言环境。关于 `locales` 参数的一般形式和解释，参见 [`Intl` 主页上的参数描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_参数)。
 - `options` {{optional_inline}}
-  - : 包含以下属性的对象，按照获取顺序排列（所有属性都是可选的）：
+  - : 包含以下属性的对象，按获取顺序排列（所有属性都是可选的）：
     - `localeMatcher`
       - : 要使用的语言环境匹配算法。可选的值为 `"lookup"` 和 `"best fit"`；默认值为 `"best fit"`。关于此选项的更多信息，参见[语言区域识别和判定](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#语言区域识别和判定)。
     - `granularity`
       - : 输入应该按多细的粒度进行分割。可选的值为：
         - `"grapheme"`（默认）
-          - : 按照由语言环境确定的字素簇（用户感知的字符）边界将输入分割为片段。
+          - : 根据语言环境，按字素簇（用户感知的字符）边界分割输入。
         - `"word"`
-          - : 按照由语言环境确定的词边界将输入分割为片段。
+          - : 根据语言环境，按词边界分割输入。
         - `"sentence"`
-          - : 按照由语言环境确定的句子边界将输入分割为片段。
+          - : 根据语言环境，按句子边界分割输入。
 
 ### 返回值
 

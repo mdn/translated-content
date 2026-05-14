@@ -36,7 +36,7 @@ segment(input)
 
 ### 返回值
 
-一个新的可迭代的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象，包含使用分割器的语言环境和粒度生成的输入字符串的片段。
+一个新的可迭代的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象，其中包含根据当前分割器的语言环境和粒度对输入字符串分割后生成的片段。
 
 ## 示例
 
