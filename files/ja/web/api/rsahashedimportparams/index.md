@@ -20,7 +20,7 @@ l10n:
     - `SHA-512`: [SHA-512](/ja/docs/Web/API/SubtleCrypto/digest#対応しているアルゴリズム) アルゴリズムを選択します。
 
     > [!WARNING]
-    > `SHA-1` にも対応していますが、[SHA-1](/en-US/docs/Web/API/SubtleCrypto/digest#対応しているアルゴリズム) アルゴリズムは脆弱とされており、もう使用しないべきです。
+    > `SHA-1` にも対応していますが、[SHA-1](/ja/docs/Web/API/SubtleCrypto/digest#対応しているアルゴリズム) アルゴリズムは脆弱とされており、もう使用しないべきです。
 
 ## 例
 
