@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の **`HmacImportParams`** 辞書は、[HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) アルゴリズム用の鍵のインポート・アンラップ・導出を行う際、以下の引数として渡すオブジェクトを表します。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) の **`HmacImportParams`** 辞書は、[HMAC](/ja/docs/Web/API/SubtleCrypto/sign#hmac) アルゴリズム用の鍵のインポート・アンラップ・導出を行う際、以下の引数として渡すオブジェクトを表します。
 
 - {{domxref("SubtleCrypto.importKey()")}} の引数 `algorithm`
 - {{domxref("SubtleCrypto.unwrapKey()")}} の引数 `unwrappedKeyAlgorithm`

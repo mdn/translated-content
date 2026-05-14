@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の **`Pbkdf2Params`** 辞書は、[PBKDF2](/ja/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) アルゴリズムを用いる際に {{domxref("SubtleCrypto.deriveKey()")}} の引数 `algorithm` に渡すオブジェクトを表します。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) の **`Pbkdf2Params`** 辞書は、[PBKDF2](/ja/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2) アルゴリズムを用いる際に {{domxref("SubtleCrypto.deriveKey()")}} の引数 `algorithm` に渡すオブジェクトを表します。
 
 ## インスタンスプロパティ
 
