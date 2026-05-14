@@ -27,7 +27,7 @@ l10n:
 - `tagLength` {{optional_inline}}
   - : `Number` です。暗号化操作で生成され、対応する復号の際に認証に用いる認証タグのビット数を設定します。
 
-     [Web Crypto API の仕様書](https://w3c.github.io/webcrypto/#aes-gcm-operations-encrypt)によれば、この値は 32, 64, 96, 104, 112, 120, 128 のいずれかでなければなりません。一方、AES-GCM の仕様書では 96, 104, 112, 120, 128 のいずれかにすることが推奨されていますが、アプリケーションによっては 32 または 64 ビットでもいいかもしれません。より詳しい指針は、"Recommendation for Block Cipher Modes of Operation" に関する NIST Publication の [Appendix C](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) を参照してください。
+    [Web Crypto API の仕様書](https://w3c.github.io/webcrypto/#aes-gcm-operations-encrypt)によれば、この値は 32, 64, 96, 104, 112, 120, 128 のいずれかでなければなりません。一方、AES-GCM の仕様書では 96, 104, 112, 120, 128 のいずれかにすることが推奨されていますが、アプリケーションによっては 32 または 64 ビットでもいいかもしれません。より詳しい指針は、"Recommendation for Block Cipher Modes of Operation" に関する NIST Publication の [Appendix C](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf#%5B%7B%22num%22%3A92%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D) を参照してください。
 
     `tagLength` は省略可能で、指定しない場合は 128 になります。
 
