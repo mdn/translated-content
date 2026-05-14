@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の **`EcdsaParams`** 辞書は、[ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) アルゴリズムを用いる際、{{domxref("SubtleCrypto.sign()")}} や {{domxref("SubtleCrypto.verify()")}} の引数 `algorithm` として渡すオブジェクトを表します。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) の **`EcdsaParams`** 辞書は、[ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) アルゴリズムを用いる際、{{domxref("SubtleCrypto.sign()")}} や {{domxref("SubtleCrypto.verify()")}} の引数 `algorithm` として渡すオブジェクトを表します。
 
 ## インスタンスプロパティ
 

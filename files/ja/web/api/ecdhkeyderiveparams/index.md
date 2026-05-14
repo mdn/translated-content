@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の **`EcdhKeyDeriveParams`** 辞書は、[ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) および [X25519](/ja/docs/Web/API/SubtleCrypto/deriveKey#x25519) アルゴリズムを用いる際、{{domxref("SubtleCrypto.deriveKey()")}} や {{domxref("SubtleCrypto.deriveBits()")}} の引数 `algorithm` として渡すオブジェクトを表します。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) の **`EcdhKeyDeriveParams`** 辞書は、[ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) および [X25519](/ja/docs/Web/API/SubtleCrypto/deriveKey#x25519) アルゴリズムを用いる際、{{domxref("SubtleCrypto.deriveKey()")}} や {{domxref("SubtleCrypto.deriveBits()")}} の引数 `algorithm` として渡すオブジェクトを表します。
 
 ECDH により、それぞれが公開鍵と秘密鍵からなる鍵ペアを持った 2 人が共有の秘密を導出することができます。彼らは公開鍵を交換し、自分の秘密鍵と相手の公開鍵を組み合わせて用いることにより、彼らが共有し、他の誰も知らない秘密の鍵を導出できます。
 

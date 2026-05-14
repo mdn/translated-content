@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Crypto API") }}
 
-[Web Crypto API](/ja/docs/Web/API/Web_Crypto_API) の **`EcKeyImportParams`** 辞書は、楕円曲線ベースの鍵ペアを生成する際、すなわち [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) または [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) アルゴリズムを用いる際に {{domxref("SubtleCrypto.importKey()")}} や {{domxref("SubtleCrypto.unwrapKey()")}} の引数 `algorithm` として渡すオブジェクトを表します。
+[ウェブ暗号化 API](/ja/docs/Web/API/Web_Crypto_API) の **`EcKeyImportParams`** 辞書は、楕円曲線ベースの鍵ペアを生成する際、すなわち [ECDSA](/ja/docs/Web/API/SubtleCrypto/sign#ecdsa) または [ECDH](/ja/docs/Web/API/SubtleCrypto/deriveKey#ecdh) アルゴリズムを用いる際に {{domxref("SubtleCrypto.importKey()")}} や {{domxref("SubtleCrypto.unwrapKey()")}} の引数 `algorithm` として渡すオブジェクトを表します。
 
 ## インスタンスプロパティ
 
