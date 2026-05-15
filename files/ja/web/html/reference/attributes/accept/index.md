@@ -128,7 +128,7 @@ div {
 > [!NOTE]
 > この例は GitHub でも見ることができます。 — [ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)と[ライブ実行](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)を確認してください。
 
-ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
+ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されます。
 
 上記のように [`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性を含めることで、複数のファイルを一度に選択できるようになります。ユーザーは、選択したプラットフォームが許す任意の方法でファイルピッカーから複数のファイルを選択することができます（例えば、 <kbd>Shift</kbd> キーまたは <kbd>Control</kbd> キーを押しながらクリックするなど）。 `<input>` ごとに 1 つのファイルのみを選択させたい場合は、 `multiple` 属性を省略してください。
 
