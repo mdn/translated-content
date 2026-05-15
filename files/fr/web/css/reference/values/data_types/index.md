@@ -3,14 +3,14 @@ title: Types de données CSS
 short-title: Types de données
 slug: Web/CSS/Reference/Values/Data_types
 l10n:
-  sourceCommit: 0aa8517faf9d7d15c745ac94db7014d3a2d2085f
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 Les **types de données CSS** définissent des valeurs typiques (y compris des mots-clés et des unités) acceptées par les propriétés et les fonctions CSS. Ils sont un type spécial de [type de valeur du composant <sup>(angl.)</sup>](https://drafts.csswg.org/css-values/#component-types).
 
 Les types les plus couramment utilisés sont définis dans le module [Valeurs et unités CSS](/fr/docs/Web/CSS/Guides/Values_and_units). Ce module définit également des [notations fonctionnelles](/fr/docs/Web/CSS/Reference/Values/Functions), qui permettent des types ou des traitements plus complexes. D'autres types sont définis dans les spécifications auxquelles ils s'appliquent.
 
-Vous trouverez ci-dessous une référence aux types que vous êtes le plus susceptible de rencontrer, mais ce n'est pas une référence complète pour tous les types définis dans chaque spécification CSS.
+Vous pouvez trouver ci-dessous une référence aux types que vous êtes le plus susceptible de rencontrer, mais ce n'est pas une référence complète pour tous les types définis dans chaque spécification CSS.
 
 ## Syntaxe
 
@@ -69,7 +69,7 @@ Ces types sont utilisés pour définir des distances et d'autres quantités.
 - {{CSSxRef("&lt;length&gt;")}}
   - : Les longueurs sont une `<dimension>` et se réfèrent à des distances.
 - {{CSSxRef("&lt;angle&gt;")}}
-  - : Les angles sont utilisés dans des propriétés telles que {{CSSxRef("linear-gradient()")}} et sont une `<dimension>` avec l'une des unités `deg`, `grad`, `rad` ou `turn` attachées.
+  - : Les angles sont utilisés dans des propriétés telles que {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}} et sont une `<dimension>` avec l'une des unités `deg`, `grad`, `rad` ou `turn` attachées.
 - {{CSSxRef("&lt;time&gt;")}}
   - : Les unités de durée sont une `<dimension>` avec une unité `s` ou `ms`.
 - {{CSSxRef("&lt;frequency&gt;")}}
@@ -79,7 +79,7 @@ Ces types sont utilisés pour définir des distances et d'autres quantités.
 
 ## Combinaisons de types
 
-Certaines propriétés CSS peuvent accepter une dimension ou une valeur de pourcentage. Dans ce cas, la valeur de pourcentage sera résolue en une quantité qui correspond à la dimension autorisée. Les propriétés qui peuvent accepter un pourcentage en plus d'une dimension utiliseront l'un des types énumérés ci-dessous.
+Certaines propriétés CSS peuvent accepter une dimension ou une valeur de pourcentage. Dans ce cas, la valeur de pourcentage est résolue en une quantité qui correspond à la dimension autorisée. Les propriétés qui peuvent accepter un pourcentage en plus d'une dimension utilisent l'un des types énumérés ci-dessous.
 
 - {{CSSxRef("&lt;length-percentage&gt;")}}
   - : Un type qui peut accepter une longueur ou un pourcentage comme valeur.
@@ -120,7 +120,7 @@ Le module [Images CSS](/fr/docs/Web/CSS/Guides/Images) définit les types de don
 
 ## Positionnement 2D
 
-Le type de données {{CSSxRef("&lt;position&gt;")}} est interprété comme défini pour la propriété {{CSSxRef("&lt;background-position&gt;")}}.
+Le type de données {{CSSxRef("&lt;position&gt;")}} est interprété comme défini pour la propriété {{CSSxRef("background-position")}}.
 
 - {{CSSxRef("&lt;position&gt;")}}
   - : Définit la position d'une zone d'objet. Accepte une valeur de mot-clé telle que `top` ou `left`, ou un `<length-percentage>`.

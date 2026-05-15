@@ -1,14 +1,14 @@
 ---
-title: superellipse()
+title: Fonction CSS `superellipse()`
+short-title: superellipse()
 slug: Web/CSS/Reference/Values/superellipse
-original_slug: Web/CSS/superellipse
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à spécifier les [formes de coins](/fr/docs/Web/CSS/Reference/Properties/corner-shape) soit directement, soit via les mots-clés {{cssxref("&lt;corner-shape-value>")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`superellipse()`** permet de définir la courbure d'une ellipse, et sert à définir les [formes de coins](/fr/docs/Web/CSS/Reference/Properties/corner-shape) soit directement, soit avec les mots-clés {{CSSxRef("&lt;corner-shape-value&gt;")}}.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ superellipse(-infinity)
 
 ### Paramètres
 
-- {{cssxref("&lt;number>")}}
+- {{CSSxRef("&lt;number&gt;")}}
   - : Un nombre compris entre `-infinity` et `infinity` inclus.
 
 ### Valeur de retour
@@ -33,7 +33,7 @@ Une forme de superellipse.
 
 ## Description
 
-La fonction `superellipse()` retourne une forme de superellipse, utilisée pour définir les valeurs de {{cssxref("corner-shape")}}. Une superellipse est une courbe fermée symétrique, intermédiaire entre un rectangle et une ellipse. Elle ressemble à une ellipse qui conserve les caractéristiques géométriques de ses deux axes.
+La fonction `superellipse()` retourne une forme de superellipse, utilisée pour définir les valeurs de {{CSSxRef("corner-shape")}}. Une superellipse est une courbe fermée symétrique, intermédiaire entre un rectangle et une ellipse. Elle ressemble à une ellipse qui conserve les caractéristiques géométriques de ses deux axes.
 
 La forme de superellipse est calculée à partir d'une version modifiée de l'ellipse. L'équation suivante définit une ellipse centrée à l'origine&nbsp;:
 
@@ -116,16 +116,16 @@ Le schéma suivant illustre différentes valeurs de `superellipse()` pour le coi
 
 ![Schéma illustrant les ellipses créées avec différentes valeurs de K, comme décrit ci-dessous](superellipse-param.svg)
 
-- Une valeur de `K` égale à `0` crée une ligne droite. Cette valeur permet de créer des coins biseautés et correspond au mot-clé `bevel` de {{cssxref("&lt;corner-shape-value>")}}.
+- Une valeur de `K` égale à `0` crée une ligne droite. Cette valeur permet de créer des coins biseautés et correspond au mot-clé `bevel` de {{CSSxRef("&lt;corner-shape-value&gt;")}}.
 - Une valeur de `K` égale à `1` crée une ellipse ordinaire, correspondant au mot-clé `round`.
 - Une valeur de `K` supérieure à `1` rend la forme plus carrée&nbsp;; `2` correspond au mot-clé `squircle`.
 - Une valeur de `K` égale à `infinity` crée un carré parfait (correspondant au mot-clé `square`), bien que des valeurs de `K` supérieures ou égales à `10` soient pratiquement indiscernables d'un carré.
 - Des valeurs négatives de `K` produisent une courbe concave, donnant des coins incurvés vers l'intérieur («&nbsp;creusés&nbsp;»). Une valeur de `K` égale à `-1` correspond au mot-clé `scoop` et `-infinity` au mot-clé `notch`.
 
-Une superellipse négative ou positive sera symétrique à une superellipse de valeur inverse.
+Une superellipse négative ou positive est symétrique à une superellipse de valeur inverse.
 
 > [!NOTE]
-> Pour toute valeur du paramètre `K` passée, la fonction `superellipse()` retournera toujours la même forme pour cette valeur. Lorsque cette valeur est appliquée à deux éléments, l'apparence du coin peut différer si la taille de la boîte ou la valeur de {{cssxref("border-radius")}} diffère.
+> Pour toute valeur du paramètre `K` passée, la fonction `superellipse()` retourne toujours la même forme pour cette valeur. Lorsque cette valeur est appliquée à deux éléments, l'apparence du coin peut différer si la taille de la boîte ou la valeur de {{CSSxRef("border-radius")}} diffère.
 
 ## Syntaxe formelle
 
@@ -135,12 +135,14 @@ Une superellipse négative ou positive sera symétrique à une superellipse de v
 
 ### Comparaison des valeurs `superellipse()`
 
-Dans cet exemple, deux curseurs {{HTMLElement("input/range", "<code>&lt;input type=\"range\"&gt;</code>")}} permettent de parcourir différentes valeurs `superellipse()` pour `corner-shape` et différentes valeurs de {{cssxref("border-radius")}}, afin de comparer leurs effets sur un conteneur. Le code est masqué pour plus de clarté, mais l'explication complète de la [comparaison des valeurs superellipse](/fr/docs/Web/CSS/Reference/Properties/corner-shape#comparaison_des_valeurs_superellipse) est disponible sur la page de référence {{cssxref("corner-shape")}}.
+Dans cet exemple, deux curseurs `{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}` permettent de parcourir différentes valeurs `superellipse()` pour `corner-shape` et différentes valeurs de {{CSSxRef("border-radius")}}, afin de comparer leurs effets sur un conteneur. Le code est masqué pour plus de clarté, mais l'explication complète de la [comparaison des valeurs superellipse](/fr/docs/Web/CSS/Reference/Properties/corner-shape#comparaison_des_valeurs_superellipse) est disponible sur la page de référence {{CSSxRef("corner-shape")}}.
 
 ```html hidden live-sample___value-comparison
 <form>
   <div>
-    <label for="superellipse-slider">Choose a superellipse() value:</label>
+    <label for="superellipse-slider">
+      Choisissez une valeur pour superellipse()&nbsp;:
+    </label>
     <input
       type="range"
       id="superellipse-slider"
@@ -150,7 +152,9 @@ Dans cet exemple, deux curseurs {{HTMLElement("input/range", "<code>&lt;input ty
       step="0.1" />
   </div>
   <div>
-    <label for="radius-slider">Choose a border-radius value:</label>
+    <label for="radius-slider">
+      Choisissez une valeur pour border-radius&nbsp;:
+    </label>
     <input type="range" id="radius-slider" min="0" value="45" max="90" />
   </div>
 </form>
@@ -214,7 +218,7 @@ borderRadiusRange.addEventListener("input", setCorners);
 setCorners();
 ```
 
-{{EmbedLiveSample("value-comparison", "100%", "300")}}
+{{EmbedLiveSample("value-comparison", "100%", 300)}}
 
 > [!NOTE]
 > Voir aussi l'exemple de [comparaison des valeurs `<corner-shape-value>`](/fr/docs/Web/CSS/Reference/Values/corner-shape-value#comparaison_des_valeurs_corner-shape-value).
@@ -229,6 +233,6 @@ setCorners();
 
 ## Voir aussi
 
-- La propriété {{cssxref("corner-shape")}}
-- Le type de donnée {{cssxref("&lt;corner-shape-value>")}}
+- La propriété {{CSSxRef("corner-shape")}}
+- Le type de donnée {{CSSxRef("&lt;corner-shape-value>")}}
 - Le module [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations)

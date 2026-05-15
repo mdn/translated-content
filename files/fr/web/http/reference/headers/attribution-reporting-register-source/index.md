@@ -3,15 +3,15 @@ title: En-tête Attribution-Reporting-Register-Source
 short-title: Attribution-Reporting-Register-Source
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source
 l10n:
-  sourceCommit: d7a0ef33dfce20818a160557b5a72d6565cec254
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
 {{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Attribution-Reporting-Register-Source`** enregistre une fonctionnalité de page comme [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources).
 Cet en-tête est inclus dans la réponse à une requête contenant l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Il fournit les informations que le navigateur doit stocker lorsqu'un·e utilisateur·ice interagit avec la source d'attribution. Les informations que vous incluez dans cet en-tête déterminent également les types de rapports que le navigateur peut générer.
 
-Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
 > Si le site appelant n'a pas inclus l'API Attribution Reporting dans un [processus d'inscription Privacy Sandbox](/fr/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment) réussi, l'en-tête `Attribution-Reporting-Register-Source` est ignoré et les sources d'attribution ne sont pas enregistrées.
@@ -48,7 +48,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"aggregation_keys"` {{Optional_Inline}}
       - : Un objet contenant des clés fournies par l'utilisateur·ice représentant différents points de données pour agréger les valeurs de rapport.
     - `"aggregatable_report_window"` {{Optional_Inline}}
-      - : Une chaîne de caractères représentant une durée en secondes après laquelle les données de déclencheur ne seront plus incluses dans les rapports agrégés générés (appelée **fenêtre de rapport**). Si ce champ n'est pas défini, la valeur par défaut est celle de `"expiry"`.
+      - : Une chaîne de caractères représentant une durée en secondes après laquelle les données de déclencheur ne sont plus incluses dans les rapports agrégés générés (appelée **fenêtre de rapport**). Si ce champ n'est pas défini, la valeur par défaut est celle de `"expiry"`.
     - `"debug_key"` {{Optional_Inline}}
       - : Un entier non signé de 64 bits au format décimal représentant une clé de débogage. À définir si vous souhaitez générer un [rapport de débogage](/fr/docs/Web/API/Attribution_Reporting_API/Generating_reports#rapport_de_débogage) en plus du rapport d'attribution associé.
     - `"debug_reporting"` {{Optional_Inline}}
@@ -56,17 +56,17 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"event_level_epsilon"` {{Optional_Inline}}
       - : Un nombre supérieur ou égal à `0`, qui contrôle la quantité de [bruit ajouté aux rapports](/fr/docs/Web/API/Attribution_Reporting_API/Generating_reports#bruit_ajouté_aux_rapports). Des valeurs plus faibles d'epsilon entraînent plus de bruit et donc une meilleure protection de la vie privée. Les valeurs maximales et par défaut varient selon les implémentations&nbsp;; Chrome, par exemple, a une valeur maximale et par défaut de `14`.
     - `"event_report_window"` {{Optional_Inline}}
-      - : Une chaîne de caractères représentant une durée en secondes, après laquelle les déclencheurs suivants ne seront plus attribués à cette source pour la production de rapports de niveau évènement (appelée **fenêtre de rapport**). Si ce champ n'est pas défini, la fenêtre de rapport évènement revient à la valeur de `"expiry"`.
+      - : Une chaîne de caractères représentant une durée en secondes, après laquelle les déclencheurs suivants ne sont plus attribués à cette source pour la production de rapports de niveau évènement (appelée **fenêtre de rapport**). Si ce champ n'est pas défini, la fenêtre de rapport évènement revient à la valeur de `"expiry"`.
         > [!NOTE]
-        > Si `"event_report_window"` est défini, `"event_report_windows"` ne peut pas l'être, sinon l'enregistrement de la source échouera.
+        > Si `"event_report_window"` est défini, `"event_report_windows"` ne peut pas l'être, sinon l'enregistrement de la source échoue.
     - `"event_report_windows"` {{Optional_Inline}}
       - : Un objet représentant une série de fenêtres de rapport, commençant à `"start_time"`, avec des rapports pour cette source délivrés après chaque heure de fin définie dans `"end_times"`. Cela permet de varier le moment de la livraison des rapports sur plusieurs rapports. Si ce champ n'est pas défini, la fenêtre de rapport évènement revient à la valeur de `"expiry"`. Les propriétés sont les suivantes&nbsp;:
         - `"start_time"` {{Optional_Inline}}&nbsp;: Un nombre non négatif définissant l'heure de début des fenêtres de rapport. Si ce champ n'est pas défini, la valeur par défaut est `0`.
         - `"end_times"`&nbsp;: Un tableau de nombres positifs définissant les heures de fin des fenêtres de rapport suivantes. Les valeurs doivent être croissantes et supérieures à `"start_time"`.
           > [!NOTE]
-          > Si `"event_report_windows"` est défini, `"event_report_window"` ne peut pas l'être, sinon l'enregistrement de la source échouera.
+          > Si `"event_report_windows"` est défini, `"event_report_window"` ne peut pas l'être, sinon l'enregistrement de la source échoue.
     - `"expiry"` {{Optional_Inline}}
-      - : Une chaîne de caractères représentant une durée d'expiration en secondes pour la source d'attribution, après laquelle elle n'est plus active (c'est-à-dire que les déclencheurs suivants ne seront plus attribués à cette source). La durée maximale autorisée est de 2592000 secondes (30 jours), qui est aussi la valeur par défaut si `"expiry"` n'est pas explicitement définie.
+      - : Une chaîne de caractères représentant une durée d'expiration en secondes pour la source d'attribution, après laquelle elle n'est plus active (c'est-à-dire que les déclencheurs suivants ne sont plus attribués à cette source). La durée maximale autorisée est de 2592000 secondes (30 jours), qui est aussi la valeur par défaut si `"expiry"` n'est pas explicitement définie.
     - `"filter_data"` {{Optional_Inline}}
       - : Un objet définissant des données personnalisées pouvant être utilisées pour filtrer quelles conversions génèrent des rapports. Voir [Filtres](/fr/docs/Web/API/Attribution_Reporting_API/Generating_reports#filtres) pour plus de détails.
     - `"max_event_level_reports"` {{Optional_Inline}}

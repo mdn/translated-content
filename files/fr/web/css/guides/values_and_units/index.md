@@ -72,7 +72,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 - [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position)
 - [`<ratio>`](/fr/docs/Web/CSS/Reference/Values/ratio)
 - [`<resolution>`](/fr/docs/Web/CSS/Reference/Values/resolution)
-- [`<rounding-strategy>`](/fr/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
+- [`<rounding-strategy>`](/fr/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
 - [`<string>`](/fr/docs/Web/CSS/Reference/Values/string)
 - [`<syntax>`](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
 - [`<time-percentage>`](/fr/docs/Web/CSS/Reference/Values/time-percentage)
