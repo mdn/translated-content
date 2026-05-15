@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Streams")}}{{AvailableInWorkers}}
 
-{{domxref("TransformStreamDefaultController")}} 接口的 **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何数据块都将被丢弃。
+{{domxref("TransformStreamDefaultController")}} 接口的 **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何分块都将被丢弃。
 
 ## 语法
 
@@ -27,7 +27,7 @@ error(reason)
 
 ## 示例
 
-在此示例中，当某个数据块无法进行转换时，会调用 `error()` 方法。
+在此示例中，当某个分块无法进行转换时，会调用 `error()` 方法。
 
 ```js
 const transformContent = {
@@ -38,7 +38,7 @@ const transformContent = {
     try {
       chunk = await applyMyTransformation(chunk);
     } catch (err) {
-      controller.error(`无法转换数据块：${err}`);
+      controller.error(`无法转换分块：${err}`);
     }
     // …
   },

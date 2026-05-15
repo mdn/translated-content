@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("TransformStreamDefaultController")}} 接口的只读属性 **`desiredSize`** 返回填充满关联的 {{domxref("ReadableStream")}} 的队列所需要的大小。
 
-`ReadableStream` 的内部队列包含已入队但尚未读取的数据块。浏览器确定填满流**所需要的大小**，并且这个值由 `desiredSize` 属性返回。
+`ReadableStream` 的内部队列包含已入队但尚未读取的分块。浏览器确定填满流**所需要的大小**，并且这个值由 `desiredSize` 属性返回。
 
 如果这个 `desiredSize` 是 `0`，则队列已满。因此你可以使用这个信息去[手动管理背压](/zh-CN/docs/Web/API/Streams_API/Concepts#背压)去管理队列。
 

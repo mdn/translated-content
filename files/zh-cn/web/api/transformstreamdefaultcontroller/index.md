@@ -19,7 +19,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("TransformStreamDefaultController.enqueue()")}}
-  - : 将一个数据块（单个数据单元）加入流的可读端队列。
+  - : 将一个分块（单个数据单元）加入流的可读端队列。
 - {{domxref("TransformStreamDefaultController.error()")}}
   - : 使转换流的可写端和可读端都报告错误。
 - {{domxref("TransformStreamDefaultController.terminate()")}}
@@ -27,7 +27,7 @@ l10n:
 
 ## 示例
 
-在下面的示例中，一个转换流接收所有的数据块将其转换为 {{jsxref("Uint8Array")}} 值，使用了 {{domxref("TransformStreamDefaultController.error()","error()")}} 和 {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} 方法。
+在下面的示例中，一个转换流接收所有的分块将其转换为 {{jsxref("Uint8Array")}} 值，使用了 {{domxref("TransformStreamDefaultController.error()","error()")}} 和 {{domxref("TransformStreamDefaultController.enqueue()","enqueue()")}} 方法。
 
 ```js
 const transformContent = {
