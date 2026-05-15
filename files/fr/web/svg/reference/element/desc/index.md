@@ -1,9 +1,6 @@
 ---
 title: <desc>
 slug: Web/SVG/Reference/Element/desc
-page-type: svg-element
-browser-compat: svg.elements.desc
-sidebar: svgref
 l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
