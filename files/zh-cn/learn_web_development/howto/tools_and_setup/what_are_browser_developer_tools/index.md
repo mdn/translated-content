@@ -27,7 +27,6 @@ l10n:
   - **Chrome：** _➤ 更多工具 ➤ 开发者工具_
   - **Opera：** _开发者 ➤ 开发者工具_
   - **Safari：** _开发 ➤ 显示 Web 检查器_。
-  
     > [!NOTE]
     > Safari 开发者工具默认没有启用。要启用它们，前往 _Safari ➤ 偏好设置 ➤ 高级_，然后勾选*在菜单栏中显示“开发”菜单*或*启用 Web 开发者功能*复选框。
 
@@ -85,8 +84,8 @@ l10n:
 
 在某些浏览器中，还可以在此面板中查看所选元素的 JavaScript 详细信息。在 Safari 中，这些内容统一在*节点*标签页下，但在 Chrome、Opera 和 Edge 中则分别位于不同的选项卡中。
 
-- *属性*：元素对象的{{Glossary("Property/JavaScript", "属性")}}。
-- *事件监听器*：与该元素关联的[事件](/zh-CN/docs/Web/API/Event)。
+- _属性_：元素对象的{{Glossary("Property/JavaScript", "属性")}}。
+- _事件监听器_：与该元素关联的[事件](/zh-CN/docs/Web/API/Event)。
 
 ### 了解更多
 
