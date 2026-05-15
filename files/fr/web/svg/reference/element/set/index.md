@@ -1,9 +1,6 @@
 ---
 title: <set>
 slug: Web/SVG/Reference/Element/set
-page-type: svg-element
-browser-compat: svg.elements.set
-sidebar: svgref
 l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
