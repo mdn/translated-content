@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
 
-{{APIRef}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}
 
 On peut facilement confondre les différentes cibles d'évènements lorsqu'on écrit un gestionnaire d'évènement. Cet article devrait vous aider à y voir plus clair dans l'utilisation des propriétés relatives aux cibles.
 
@@ -187,3 +187,5 @@ inner.addEventListener("mouseout", handleMouseOut);
 Déplacez votre pointeur dans le carré noir et en dehors.
 
 {{EmbedLiveSample("","",200)}}
+
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Test_your_skills/Events", "Learn_web_development/Core/Scripting")}}

@@ -3,7 +3,7 @@ title: Fonction CSS `calc()`
 short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 l10n:
-  sourceCommit: dc4a0e708bed278ea7794eaef5ea83ed368b409f
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`calc()`** permet d'effectuer des calculs lors de la définition des valeurs des propriétés CSS. Elle peut être utilisée avec les valeurs {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("angle")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, {{CSSxRef("&lt;integer&gt;")}} et {{CSSxRef("color_value", "&lt;color-function&gt;")}}.
@@ -82,10 +82,10 @@ La fonction `calc()` doit se substituer à une valeur CSS complète de l'un des 
 
 - {{CSSxRef("&lt;length&gt;")}}
 - {{CSSxRef("&lt;frequency&gt;")}}
-- {{CSSxRef("angle")}}
+- {{CSSxRef("&lt;angle&gt;")}}
 - {{CSSxRef("&lt;time&gt;")}}
 - {{CSSxRef("flex_value", "&lt;flex&gt;")}}
-- {{CSSxRef("resolution")}}
+- {{CSSxRef("&lt;resolution&gt;")}}
 - {{CSSxRef("&lt;percentage&gt;")}}
 - {{CSSxRef("&lt;number&gt;")}}
 - {{CSSxRef("&lt;integer&gt;")}}
@@ -99,9 +99,17 @@ Lorsque qu'un entier ({{CSSxRef("&lt;integer&gt;")}}) est attendu, l'expression 
 
 `calc()` effectue des calculs en virgule flottante selon la norme IEEE-754, ce qui entraîne certaines considérations concernant les valeurs `infinity` et `NaN`. Pour plus de détails sur la façon dont les constantes sont sérialisées, consultez la page {{CSSxRef("calc-keyword")}}.
 
+### Considérations relatives à la saisie
+
+- `calc()` ne peut pas effectuer de calculs sur des [valeurs de taille intrinsèque](/fr/docs/Glossary/Intrinsic_Size) telles que {{CSSxRef("width#auto", "auto")}} et {{CSSxRef("fit-content")}}. Utilisez plutôt la fonction {{CSSxRef("calc-size()")}}.
+- Les opérateurs `*` et `/` ne nécessitent pas d'espaces, mais il est recommandé d'en ajouter pour des raisons de cohérence.
+- Il est permis d'imbriquer des fonctions `calc()`, auquel cas les fonctions internes sont traitées comme de simples parenthèses.
+- Les expressions mathématiques impliquant des pourcentages pour les largeurs et hauteurs des colonnes de tableau, des groupes de colonnes de tableau, des lignes de tableau, des groupes de lignes de tableau et des cellules de tableau dans les tableaux à disposition automatique et fixe _peuvent_ être traitées comme si `auto` était défini.
+- Voir {{CSSxRef("&lt;calc-sum&gt;")}} pour plus d'informations sur la syntaxe des expressions `+` et `-`.
+
 ### Arithmétique typée CSS
 
-Lors de l'utilisation de `calc()` pour multiplier des valeurs, en utilisant l'opérateur `*`, une seule valeur peut contenir une unité. Les calculs comme `200px * 4px` ne sont pas pris en charge car 800px<sup>2</sup> n'a pas de sens en CSS.
+Lors de l'utilisation de `calc()` pour multiplier des valeurs, en utilisant l'opérateur `*`, une seule valeur peut contenir une unité. Les calculs comme `200px * 4px` ne sont pas pris en charge, car 800px<sup>2</sup> n'a pas de sens en CSS.
 
 Inversement, `200px / 4px` se résout à `50`, ce qui a du sens en CSS. Par conséquent, lors de l'utilisation de la fonction `calc()` pour diviser des nombres, en utilisant l'opérateur `/`, [les navigateurs compatibles](#compatibilité_des_navigateurs) permettent des unités des deux côtés de l'opérande, à condition qu'elles soient du même type de données. Par exemple, `100vw / 1px` est valide et donne une valeur sans unité.
 

@@ -3,18 +3,18 @@ title: "HTMLLinkElement : propriété relList"
 short-title: relList
 slug: Web/API/HTMLLinkElement/relList
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`relList`** de l'interface {{domxref("HTMLLinkElement")}} reflète l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel). C'est un {{domxref("DOMTokenList")}} vivant contenant l'ensemble des types de liens indiquant la relation entre la ressource représentée par l'élément HTML {{HTMLElement("link")}} et le document courant.
-
-La propriété elle-même est en lecture seule, ce qui signifie que vous ne pouvez pas remplacer le {{domxref("DOMTokenList")}} par un autre, mais le contenu de la liste retournée peut être modifié.
+La propriété en lecture seule **`relList`** de l'interface {{DOMxRef("HTMLLinkElement")}} retourne un objet {{DOMxRef("DOMTokenList")}} dynamique contenant l'ensemble des types de liens indiquant la relation entre la ressource représentée par l'élément HTML {{HTMLElement("link")}} et le document courant. Elle reflète l'attribut de contenu [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}}.
 
 ## Valeur
 
-Un {{domxref("DOMTokenList")}} dynamique de chaînes de caractères.
+Un objet {{DOMxRef("DOMTokenList")}} dynamique.
+
+Bien que la propriété `relList` elle-même soit en lecture seule dans le sens où vous ne pouvez pas remplacer l'objet `DOMTokenList`, vous pouvez toujours affecter directement à la propriété `relList`, ce qui équivaut à affecter à sa propriété {{DOMxRef("DOMTokenList/value", "value")}}. Vous pouvez également modifier l'objet `DOMTokenList` en utilisant les méthodes {{DOMxRef("DOMTokenList/add", "add()")}}, {{DOMxRef("DOMTokenList/remove", "remove()")}}, {{DOMxRef("DOMTokenList/replace", "replace()")}} et {{DOMxRef("DOMTokenList/toggle", "toggle()")}}.
 
 ## Exemples
 
@@ -39,6 +39,6 @@ for (const link of links) {
 ## Voir aussi
 
 - La propriété équivalente sur les éléments HTML {{HTMLElement("a")}} et {{HTMLElement("area")}}&nbsp;:
-  - {{domxref("HTMLAnchorElement.relList")}}
-  - {{domxref("HTMLAreaElement.relList")}}
-- La même liste mais sous forme de jetons séparés par des espaces dans une chaîne&nbsp;: {{domxref("HTMLLinkElement.rel")}}
+  - {{DOMxRef("HTMLAnchorElement.relList")}}
+  - {{DOMxRef("HTMLAreaElement.relList")}}
+- La même liste mais sous forme de jetons séparés par des espaces dans une chaîne&nbsp;: {{DOMxRef("HTMLLinkElement.rel")}}

@@ -3,7 +3,7 @@ title: "Document : méthode exitPictureInPicture()"
 short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+  sourceCommit: 58d68cd4c2a6e77a90fb990924a04e5bc93cc3bd
 ---
 
 {{APIRef("Picture-in-Picture API")}}
@@ -46,7 +46,7 @@ document.onclick = (event) => {
 };
 ```
 
-Notez que si vous souhaitez suivre quelle vidéo de votre page est actuellement en cours de lecture en mode image dans l'image, vous devez écouter les événements `enterpictureinpicture` et `exitpictureinpicture` sur l'élément {{DOMxRef("HTMLVideoElement")}} concerné. Alternativement, vous pouvez vérifier si {{DOMxRef("Document.pictureInPictureElement")}} fait référence à l'élément {{DOMxRef("HTMLVideoElement")}} actuel.
+Notez que si vous souhaitez suivre quelle vidéo de votre page est actuellement en cours de lecture en mode image dans l'image, vous devez écouter les évènements `enterpictureinpicture` et `leavepictureinpicture` sur l'élément {{DOMxRef("HTMLVideoElement")}} concerné. Alternativement, vous pouvez vérifier si {{DOMxRef("Document.pictureInPictureElement")}} fait référence à l'élément {{DOMxRef("HTMLVideoElement")}} actuel.
 
 ## Spécifications
 

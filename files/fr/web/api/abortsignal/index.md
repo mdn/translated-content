@@ -2,12 +2,12 @@
 title: AbortSignal
 slug: Web/API/AbortSignal
 l10n:
-  sourceCommit: 4854b2e695bd40ec2a124e15bf57b032f96e493d
+  sourceCommit: 9187ced76026d7784a8600296c4e04b0e6f72382
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-L'interface **`AbortSignal`** représente un objet signal qui permet de communiquer avec une opération asynchrone (comme une requête fetch) et de l'annuler si nécessaire via un objet {{DOMxRef("AbortController")}}.
+L'interface **`AbortSignal`** représente un objet signal qui permet de communiquer avec une opération asynchrone (comme une requête fetch) et de l'annuler si nécessaire avec un objet {{DOMxRef("AbortController")}}.
 
 {{InheritanceDiagram}}
 
@@ -29,7 +29,7 @@ _Hérite également des méthodes de son interface parente, {{DOMxRef("EventTarg
 - {{DOMxRef("AbortSignal/any_static", "AbortSignal.any()")}}
   - : Retourne un `AbortSignal` qui s'annule dès qu'un des signaux donnés est annulé.
 - {{DOMxRef("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
-  - : Retourne une instance d'`AbortSignal` qui s'annulera automatiquement après un temps défini.
+  - : Retourne une instance d'`AbortSignal` qui s'annule automatiquement après un temps défini.
 
 ## Méthodes d'instance
 
@@ -46,20 +46,20 @@ _Hérite également des évènements de son interface parente, {{DOMxRef("EventT
 
 - {{DOMxRef("AbortSignal/abort_event", "abort")}}
   - : Déclenché lorsque les opérations asynchrones avec lesquelles le signal communique sont annulées.
-    Également disponible via la propriété `onabort`.
+    Également disponible avec la propriété `onabort`.
 
 ## Exemples
 
 ### Annuler une opération `fetch` à l'aide d'un signal explicite
 
-L'extrait suivant montre comment utiliser un signal pour annuler le téléchargement d'une vidéo avec l'[API Fetch](/fr/docs/Web/API/Fetch_API).
+L'extrait suivant montre comment utiliser un signal pour annuler le téléchargement d'une vidéo avec [l'API Fetch](/fr/docs/Web/API/Fetch_API).
 
 On commence par définir une variable pour notre `AbortController`.
 
-Avant chaque [requête fetch](/fr/docs/Web/API/Window/fetch), on crée un nouveau contrôleur avec le constructeur {{DOMxRef("AbortController.AbortController","AbortController()")}}, puis on récupère une référence à son objet {{DOMxRef("AbortController.signal")}} `AbortSignal` associé via la propriété.
+Avant chaque [requête fetch](/fr/docs/Web/API/Window/fetch), on crée un nouveau contrôleur avec le constructeur {{DOMxRef("AbortController.AbortController","AbortController()")}}, puis on récupère une référence à son objet {{DOMxRef("AbortController.signal")}} `AbortSignal` associé avec la propriété.
 
 > [!NOTE]
-> Un `AbortSignal` ne peut être utilisé qu'une seule fois. Une fois annulé, tout appel à fetch utilisant ce même signal sera immédiatement rejeté.
+> Un `AbortSignal` ne peut être utilisé qu'une seule fois. Une fois annulé, tout appel à fetch utilisant ce même signal est immédiatement rejeté.
 
 Lorsque la [requête fetch](/fr/docs/Web/API/Window/fetch) est lancée, on passe le `AbortSignal` en option dans l'objet d'options de la requête (voir `{ signal }` ci-dessous). Cela associe le signal et le contrôleur à la requête fetch et permet de l'annuler en appelant {{DOMxRef("AbortController.abort()")}}, comme illustré dans le second gestionnaire d'évènement.
 
@@ -95,7 +95,7 @@ async function fetchVideo() {
 }
 ```
 
-Si la requête est annulée après l'exécution de l'appel à `fetch()` mais avant que le corps de la réponse n'ait été lu, toute tentative de lecture du corps de la réponse rejettera avec une exception `AbortError`.
+Si la requête est annulée après l'exécution de l'appel à `fetch()` mais avant que le corps de la réponse n'ait été lu, toute tentative de lecture du corps de la réponse rejette avec une exception `AbortError`.
 
 ```js
 async function get() {
@@ -117,7 +117,7 @@ Vous pouvez trouver un [exemple complet et fonctionnel sur GitHub <sup>(angl.)</
 ### Annuler une opération `fetch` avec un délai d'expiration
 
 Si vous devez annuler l'opération après un délai, vous pouvez utiliser la méthode statique {{DOMxRef("AbortSignal/timeout_static", "AbortSignal.timeout()")}}.
-Cela retourne un `AbortSignal` qui s'annulera automatiquement après un certain nombre de millisecondes.
+Cela retourne un `AbortSignal` qui s'annule automatiquement après un certain nombre de millisecondes.
 
 L'extrait ci-dessous montre comment réussir à télécharger un fichier ou gérer une erreur de délai d'attente après 5 secondes.
 Notez qu'en cas de délai, la promesse `fetch()` est rejetée avec un `DOMException` de type `TimeoutError`.

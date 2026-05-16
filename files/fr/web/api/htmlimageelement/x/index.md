@@ -3,7 +3,7 @@ title: "HTMLImageElement : propriété x"
 short-title: x
 slug: Web/API/HTMLImageElement/x
 l10n:
-  sourceCommit: e68530dbce2b661c8860e9c6a1c70b1caca5a199
+  sourceCommit: 11d748f9e217b6a9fd16291d7815a6f803f0136d
 ---
 
 {{APIRef("HTML DOM")}}
@@ -34,18 +34,22 @@ Dans cet exemple, un tableau affiche des informations sur des utilisateur·ice·
     <col span="2" class="group1" />
     <col />
   </colgroup>
-  <tr>
-    <th>Identifiant utilisateur</th>
-    <th>Nom</th>
-    <th>Avatar</th>
-  </tr>
-  <tr>
-    <td>12345678</td>
-    <td>Johnny Rocket</td>
-    <td>
-      <img src="/shared-assets/images/examples/grapefruit-slice.jpg" />
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Identifiant utilisateur</th>
+      <th>Nom</th>
+      <th>Avatar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12345678</td>
+      <td>Johnny Rocket</td>
+      <td>
+        <img src="/shared-assets/images/examples/grapefruit-slice.jpg" />
+      </td>
+    </tr>
+  </tbody>
 </table>
 <pre id="log"></pre>
 ```
