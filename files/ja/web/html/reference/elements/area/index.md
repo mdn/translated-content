@@ -1,11 +1,10 @@
 ---
-title: "<area>: イメージマップ領域要素"
+title: HTML `<area>` イメージマップ領域要素
+short-title: <area>
 slug: Web/HTML/Reference/Elements/area
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<area>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップの中でクリック可能な領域をあらかじめ定義します。イメージマップでは、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。
 
@@ -75,7 +74,7 @@ img {
     - `poly`: 値は `x1,y1,x2,y2,..,xn,yn` です。値は多角形の角の座標を指定します。
       先頭と末尾の座標が同じではない場合、ブラウザーは最後に座標を追加して多角形を閉じます。
 
-    値は CSS ピクセルの数です。
+    値は CSS ピクセルの数です。[シェイプジェネレーター](/ja/docs/Web/CSS/Guides/Shapes/Shape_generator)では、アップロードした画像上の点を選択することで、`coords` 構文を生成することが可能です。
 
 - `download`
   - : この属性がある場合は、作者はハイパーリンクをリソースのダウンロードに使用すると考えていることを示します。
@@ -84,6 +83,8 @@ img {
   - : この領域のハイパーリンクの宛先です。
     この値は有効な URL です。
     この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
+- `interestfor` {{experimental_inline}} {{non-standard_inline}}
+  - : この `<area>` 要素を**関心インボーカー**として定義します。その値は対象要素の `id` であり、インボーカー要素に対してインタレストが示されたり失われたりした際（例えば、ホバーやホバー解除、フォーカスやフォーカス解除など）、何らかの影響（通常は表示または非表示）が対象要素に及ぶことになります。詳細や例については、[関心インボーカーの使用](/ja/docs/Web/API/Popover_API/Using_interest_invokers) をご覧ください。
 - `ping`
   - : ハイパーリンクに進んだとき、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として（バックグラウンドで）送信する URL を空白で区切ったリストで記述します。
     ふつうはトラッキング用に使用します。
@@ -123,18 +124,20 @@ img {
 
 ## 例
 
+### クリック可能な領域のある画像
+
 ```html
 <map name="primary">
   <area
     shape="circle"
     coords="75,75,75"
     href="left.html"
-    alt="Click to go Left" />
+    alt="左へ行く" />
   <area
     shape="circle"
     coords="275,75,75"
     href="right.html"
-    alt="Click to go Right" />
+    alt="右へ行く" />
 </map>
 <img
   usemap="#primary"
@@ -142,9 +145,7 @@ img {
   alt="350 x 150 pic" />
 ```
 
-### 結果
-
-{{ EmbedLiveSample('Examples', 360, 160) }}
+{{ EmbedLiveSample('Image with clickable areas', 360, 160) }}
 
 ## 技術的概要
 
@@ -179,7 +180,7 @@ img {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Reference/Elements/area#href"><code>href</code></a> 属性がある場合は
+        <a href="#href"><code>href</code></a> 属性がある場合は
         <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>、そうでなければ
         <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>

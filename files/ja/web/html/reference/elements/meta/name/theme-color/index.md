@@ -1,9 +1,9 @@
 ---
-title: <meta name="theme-color">
+title: HTML `<meta name="theme-color">` 属性値
 short-title: theme-color
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 **`theme-color`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、ユーザーエージェントがページやその周辺のユーザーインターフェイスの表示をカスタマイズするために使用すべき推奨色を示します。指定された場合、 [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性には有効な CSS の {{cssxref("&lt;color&gt;")}} が含まれていなければなりません。
@@ -20,7 +20,7 @@ l10n:
 
 `<meta name="theme-color">` 要素には、次の追加属性が存在します。
 
-- [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content)
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
   - : `name=theme-color` に対応する `<meta>` 要素には、テーマカラーを定義する `content` 属性を指定する必要があります。
     `content` 属性の値は次のとおりです。
     - {{cssxref("&lt;color&gt;")}} 値
@@ -72,4 +72,4 @@ _画像の出典: [Icons & Browser Colors](https://web.dev/articles/icons-and-br
 
 - `<meta>` `name` 属性の [`color-scheme`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) 値
 - CSS の {{cssxref("color-scheme")}} プロパティ
-- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} メディアクエリー
+- {{cssxref("@media/prefers-color-scheme")}} メディアクエリー

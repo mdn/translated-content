@@ -58,7 +58,7 @@ console.dir(widthObject2.baseVal.value); // 出力: 20 (10% of 200)
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("SVGForeignObjectElement.height")}}
 - {{domxref("SVGAnimatedLength.baseVal")}}

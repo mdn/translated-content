@@ -253,7 +253,8 @@ pasteButton.addEventListener("click", () => {
 
   let pasted = document.execCommand("paste", false);
   if (!pasted) {
-    textBox.textContent = "貼り付けに失敗しました。execCommand に対応していません。";
+    textBox.textContent =
+      "貼り付けに失敗しました。execCommand に対応していません。";
   }
 });
 ```
@@ -266,6 +267,7 @@ pasteButton.addEventListener("click", () => {
 {{EmbedLiveSample("Using paste", 100, 300)}}
 
 ## 仕様書
+
 この機能は、現在のいかなる仕様にも属しません。標準化の予定がなくなりました。非公式な [W3C execCommand 仕様書草案](https://w3c.github.io/editing/docs/execCommand/)があります。
 
 ## ブラウザーの互換性

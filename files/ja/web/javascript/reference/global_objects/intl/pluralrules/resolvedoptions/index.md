@@ -17,10 +17,10 @@ const pluralRules2 = new Intl.PluralRules("bn");
 const options2 = pluralRules2.resolvedOptions();
 
 console.log(options1.pluralCategories);
-// Expected output: Array ["few", "many", "one", "other"]
+// 予想される結果: Array ["few", "many", "one", "other"]
 
 console.log(options2.pluralCategories);
-// Expected output: Array ["one", "other"]
+// 予想される結果: Array ["one", "other"]
 ```
 
 ## 構文

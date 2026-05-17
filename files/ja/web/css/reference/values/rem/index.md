@@ -1,8 +1,9 @@
 ---
-title: rem()
+title: CSS `rem()` 関数
+short-title: rem()
 slug: Web/CSS/Reference/Values/rem
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`rem()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、最初の引数を 2 つ目の引数で割ったときの剰余を返します。これは、JavaScript の[剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder) と似ています。剰余は、1 つのオペランド（被除数）を 2 つ目のオペランド（除数）で割ったときに残る値です。常に被除数の符号を取ります。

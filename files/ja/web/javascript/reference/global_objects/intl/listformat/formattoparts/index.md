@@ -26,9 +26,9 @@ const partValuesEn = formatterEn.formatToParts(vehicles).map((p) => p.value);
 const partValuesFr = formatterFr.formatToParts(vehicles).map((p) => p.value);
 
 console.log(partValuesEn);
-// Expected output: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
+// 予想される結果: "["Motorcycle", ", ", "Bus", ", and ", "Car"]"
 console.log(partValuesFr);
-// Expected output: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
+// 予想される結果: "["Motorcycle", ", ", "Bus", " et ", "Car"]"
 ```
 
 ## 構文

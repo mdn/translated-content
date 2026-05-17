@@ -3,10 +3,10 @@ title: Map.prototype.delete()
 short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: 7b63b90d24ad8945977bb9dc2735d75f72829bc1
 ---
 
-**`delete()`** は {{jsxref("Map")}} インスタンスのメソッドで、このマップからキーを指定して特定の要素を削除します。
+**`delete()`** は {{jsxref("Map")}} インスタンスのメソッドで、この対応表 (`Map`) からキーを指定して特定の要素を削除します。
 
 {{InteractiveExample("JavaScript デモ: Map.prototype.delete()")}}
 
@@ -31,11 +31,11 @@ mapInstance.delete(key)
 ### 引数
 
 - `key`
-  - : `Map` オブジェクトから削除する要素のキーです。
+  - : `Map` オブジェクトから返される要素のキーです。オブジェクトのキーは値ではなく[参照](/ja/docs/Glossary/Object_reference)として比較されます。
 
 ### 返値
 
-`Map` オブジェクトの要素が削除されたら `true` を、要素が存在しなければ `false` を返します。
+`Map` オブジェクトの項目が正常に除去された場合は `true` です。`Map` 内にそのキーが見つからない場合は `false` です。
 
 ## 例
 
@@ -60,3 +60,7 @@ console.log(myMap.has("bar")); // false を返す。 "bar" の要素がもう存
 ## 関連情報
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.clear()")}}
+- {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.has()")}}

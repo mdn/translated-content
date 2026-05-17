@@ -113,7 +113,7 @@ td {
     > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用している場合は `[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - `width` {{deprecated_inline}}
-  - : 各列のデフォルトの幅を指定します。この属性に指定できる値には、標準的なピクセル値やパーセント値に加え、`0*` という特別な形式があります。これは、各列の幅を、その列のコンテンツを収めるのに必要な最小幅にするということです。`5*` のような相対幅も使用できます。なお、この属性は、親要素である {{HTMLElement("colgroup")}} で指定された [`width`](/en-US/docs/Web/HTML/Reference/Elements/colgroup#width) を上書きします。この属性は非推奨となっているため、代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
+  - : 各列のデフォルトの幅を指定します。この属性に指定できる値には、標準的なピクセル値やパーセント値に加え、`0*` という特別な形式があります。これは、各列の幅を、その列のコンテンツを収めるのに必要な最小幅にするということです。`5*` のような相対幅も使用できます。なお、この属性は、親要素である {{HTMLElement("colgroup")}} で指定された [`width`](/ja/docs/Web/HTML/Reference/Elements/colgroup#width) を上書きします。この属性は非推奨となっているため、代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
 ## 使い方のメモ
 

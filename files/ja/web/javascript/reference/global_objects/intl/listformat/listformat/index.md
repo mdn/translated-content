@@ -18,18 +18,18 @@ const formatter = new Intl.ListFormat("en", {
   type: "conjunction",
 });
 console.log(formatter.format(vehicles));
-// Expected output: "Motorcycle, Bus, and Car"
+// 予想される結果: "Motorcycle, Bus, and Car"
 
 const formatter2 = new Intl.ListFormat("de", {
   style: "short",
   type: "disjunction",
 });
 console.log(formatter2.format(vehicles));
-// Expected output: "Motorcycle, Bus oder Car"
+// 予想される結果: "Motorcycle, Bus oder Car"
 
 const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
 console.log(formatter3.format(vehicles));
-// Expected output: "Motorcycle Bus Car"
+// 予想される結果: "Motorcycle Bus Car"
 ```
 
 ## 構文

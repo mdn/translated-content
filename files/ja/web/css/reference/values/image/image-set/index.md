@@ -1,8 +1,9 @@
 ---
-title: image-set()
+title: CSS `image-set()` 関数
+short-title: image-set()
 slug: Web/CSS/Reference/Values/image/image-set
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`image-set()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)記法で、主に高解像度の画面において、指定されたセットから最も適切な CSS 画像をブラウザーに選択させる方法です。

@@ -27,6 +27,7 @@ querySelectorAll(selectors)
 ### 返値
 
 ライブではない {{domxref("NodeList")}} で、指定されたセレクターの少なくとも 1 つに一致する要素ごとに {{domxref("Element")}} を一つずつ含みます。または一致するものがなければ空の {{domxref("NodeList")}} です。要素は文書内の順序で並んでいます。つまり、親要素が子要素より先に、先に定義された兄弟要素が後に定義された兄弟要素より先に配置されます。
+
 > [!NOTE]
 > 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
