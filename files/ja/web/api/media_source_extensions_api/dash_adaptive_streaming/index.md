@@ -8,7 +8,7 @@ original_slug: Web/Media/Guides/DASH_Adaptive_Streaming_for_HTML_5_Video
 
 Dynamic Adaptive Streaming over HTTP (DASH) は、アダプティブストリーミングプロトコルです。これは動画の再生を維持するためにネットワークパフォーマンスに応じてビデオストリームのビットレートを切り替えることを可能にします。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 Firefox 21 は HTML5 WebM のための DASH の実装を含んでいますが、既定では無効になっています。これは "about:config" の "media.dash.enabled" 設定によって有効にすることができます。
 
