@@ -1,12 +1,12 @@
 ---
-title: steps()
+title: Fonction CSS `steps()`
+short-title: steps()
 slug: Web/CSS/Reference/Values/easing-function/steps
-original_slug: Web/CSS/easing-function/steps
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`steps()`** définit une transition qui divise le temps d'entrée en un nombre spécifié d'intervalles de même longueur. Cette sous-classe de fonctions en étapes est parfois aussi appelée _fonction en escalier_.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`steps()`** définit une transition qui divise le temps d'entrée en un nombre défini d'intervalles de même longueur. Cette sous-classe de fonctions en étapes est parfois aussi appelée _fonction en escalier_.
 
 ## Syntaxe
 
@@ -49,7 +49,7 @@ La fonction accepte les paramètres suivants&nbsp;:
 La fonction `steps()` divise la durée de l'animation en intervalles égaux.
 Par exemple, `steps(4, end)` divise l'animation en quatre intervalles égaux, les valeurs changeant à la fin de chaque intervalle, sauf le dernier changement qui a lieu à la fin de l'animation.
 
-Si une animation contient plusieurs segments, le nombre d'étapes définies s'applique à chaque segment. Par exemple, si une animation comporte trois segments et utilise `steps(2)`, il y aura six étapes au total, soit deux par segment.
+Si une animation contient plusieurs segments, le nombre d'étapes définies s'applique à chaque segment. Par exemple, si une animation comporte trois segments et utilise `steps(2)`, il y a six étapes au total, soit deux par segment.
 
 L'image suivante montre l'effet des différentes valeurs de `<step-position>` sur le moment où les sauts se produisent&nbsp;:
 

@@ -1,9 +1,10 @@
 ---
-title: <filter-function>
+title: CSS `<filter-function>` データ型
+short-title: <filter-function>
 slug: Web/CSS/Reference/Values/filter-function
 original_slug: Web/CSS/filter-function
 l10n:
-  sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。

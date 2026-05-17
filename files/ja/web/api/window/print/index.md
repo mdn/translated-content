@@ -1,9 +1,12 @@
 ---
-title: Window.print()
+title: "Window: print() メソッド"
+short-title: print()
 slug: Web/API/Window/print
+l10n:
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 現在の文書を印刷するための印刷ダイアログを開きます。
 
@@ -13,8 +16,8 @@ slug: Web/API/Window/print
 
 ## 構文
 
-```js
-print();
+```js-nolint
+print()
 ```
 
 ### 引数

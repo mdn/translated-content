@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
             href="/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
             >Quand avez-vous besoin d'un identifiant complémentaire</a
           ><a
-            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#When_do_I_need_the_applications_key"
             >?</a
           >). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.
         </p>

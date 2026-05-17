@@ -1,8 +1,9 @@
 ---
-title: :is()
+title: CSS `:is()` 擬似クラス
+short-title: :is()
 slug: Web/CSS/Reference/Selectors/:is
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:is()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)関数で、セレクターのリストを引数に取り、リスト中のセレクターのいずれか一つに当てはまる要素をすべて選択します。数多くのセレクターを小さくまとめて書くのに便利です。
@@ -68,7 +69,7 @@ ol {
 
 ### :is() と :where() の違い
 
-この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 [`:where()`](/ja/docs/Web/CSS/Reference/Selectors/:where) は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/Reference/Selectors/:where#例)で実証されています。
+この 2 つの違いは、 `:is()` がセレクター全体の詳細度にカウントされる（最も詳細な引数の詳細度を取る）のに対し、 {{cssxref(":where()")}} は詳細度の値が 0 であることです。これは、 [`:where()` 参照ページの例](/ja/docs/Web/CSS/Reference/Selectors/:where#例)で実証されています。
 
 ### セレクターの解釈の許容
 

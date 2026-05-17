@@ -1,8 +1,9 @@
 ---
-title: "<ins> : l'élément de texte inséré"
+title: "Élément HTML `<ins>` : l'élément de texte inséré"
+short-title: <ins>
 slug: Web/HTML/Reference/Elements/ins
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ins>`** représente une portion de texte qui a été ajoutée à un document. Vous pouvez utiliser l'élément {{HTMLElement("del")}} de la même manière pour indiquer une portion de texte qui a été supprimée du document.

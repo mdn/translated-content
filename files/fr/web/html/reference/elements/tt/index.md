@@ -1,8 +1,9 @@
 ---
-title: "<tt> : l'élément de texte de téléscripteur"
+title: "Élément HTML `<tt>` : l'élément de texte de téléscripteur"
+short-title: <tt>
 slug: Web/HTML/Reference/Elements/tt
 l10n:
-  sourceCommit: 9cfc2285428932f448a1747e347b1e35a3e0172b
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

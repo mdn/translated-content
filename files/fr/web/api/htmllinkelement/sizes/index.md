@@ -3,23 +3,25 @@ title: "HTMLLinkElement : propriété sizes"
 short-title: sizes
 slug: Web/API/HTMLLinkElement/sizes
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété en lecture seule **`sizes`** de l'interface {{domxref("HTMLLinkElement")}} définit les tailles des icônes pour les médias visuels contenus dans la ressource. Elle reflète l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/link#sizes) de l'élément {{HTMLElement("link")}}, qui prend une liste de tailles séparées par des espaces, chacune au format `<largeur en pixels>x<hauteur en pixels>`, ou le mot-clé `any`.
+La propriété en lecture seule **`sizes`** de l'interface {{DOMxRef("HTMLLinkElement")}} définit les tailles des icônes pour les médias visuels contenus dans la ressource. Elle reflète l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/link#sizes) de l'élément {{HTMLElement("link")}}, qui prend une liste de tailles séparées par des espaces, chacune au format `<largeur en pixels>x<hauteur en pixels>`, ou le mot-clé `any`.
 
-Cela n'est pertinent que si {{domxref("HTMLLinkElement.rel", "rel")}} vaut `icon` ou un type non standard comme `apple-touch-icon`.
+Cela n'est pertinent que si {{DOMxRef("HTMLLinkElement.rel", "rel")}} vaut `icon` ou un type non standard comme `apple-touch-icon`.
 
 ## Valeur
 
-Un objet {{domxref("DOMTokenList")}}
+Un objet {{DOMxRef("DOMTokenList")}}.
+
+Bien que la propriété `sizes` elle-même soit en lecture seule dans le sens où vous ne pouvez pas remplacer l'objet `DOMTokenList`, vous pouvez toujours affecter directement à la propriété `sizes`, ce qui équivaut à affecter à sa propriété {{DOMxRef("DOMTokenList/value", "value")}}. Vous pouvez également modifier l'objet `DOMTokenList` en utilisant les méthodes {{DOMxRef("DOMTokenList/add", "add()")}}, {{DOMxRef("DOMTokenList/remove", "remove()")}}, {{DOMxRef("DOMTokenList/replace", "replace()")}} et {{DOMxRef("DOMTokenList/toggle", "toggle()")}}.
 
 ## Exemples
 
 ```html
-<link rel="icon" sizes="72x72 114x114" href="smallish.png" />
+<link rel="icon" sizes="72x72 114x114" href="smallish.ico" />
 ```
 
 ```js
@@ -47,9 +49,9 @@ console.log(link.sizes[1]); // affiche : '114x114'
 
 ## Voir aussi
 
-- La propriété {{domxref("HTMLLinkElement.rel")}}
-- La propriété {{domxref("HTMLLinkElement.relList")}}
-- La propriété {{domxref("HTMLLinkElement.type")}}
-- La propriété {{domxref("HTMLLinkElement.href")}}
+- La propriété {{DOMxRef("HTMLLinkElement.rel")}}
+- La propriété {{DOMxRef("HTMLLinkElement.relList")}}
+- La propriété {{DOMxRef("HTMLLinkElement.type")}}
+- La propriété {{DOMxRef("HTMLLinkElement.href")}}
 - L'élément HTML {{HTMLElement("link")}}
 - L'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel)

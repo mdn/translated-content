@@ -1,8 +1,9 @@
 ---
-title: device-cmyk()
+title: Fonction CSS `device-cmyk()`
+short-title: device-cmyk()
 slug: Web/CSS/Reference/Values/color_value/device-cmyk
 l10n:
-  sourceCommit: 7d0031545bb606d2ff7fb033180f9cec451a6f8d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`device-cmyk()`** permet d'exprimer des couleurs dans l'espace de couleurs CMJN (CMYK en anglais), en indiquant les composantes de cyan, de magenta, de jaune et de noir.

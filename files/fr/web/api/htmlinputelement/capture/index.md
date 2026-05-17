@@ -3,7 +3,7 @@ title: "HTMLInputElement : propriété capture"
 short-title: capture
 slug: Web/API/HTMLInputElement/capture
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 {{APIRef("HTML DOM")}}

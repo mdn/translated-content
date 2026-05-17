@@ -34,7 +34,7 @@ original_slug: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Learn_web_development/Extensions/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

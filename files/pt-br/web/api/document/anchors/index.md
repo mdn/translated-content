@@ -5,7 +5,7 @@ slug: Web/API/Document/anchors
 
 {{APIRef("DOM")}}
 
-{{deprecated_header("HTML5")}}
+{{deprecated_header}}
 
 `anchors` retorna uma lista de todas as âncoras no documento.
 

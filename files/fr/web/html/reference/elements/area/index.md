@@ -1,8 +1,9 @@
 ---
-title: "<area> : l'élément de zone"
+title: "Élément HTML `<area>` : l'élément de zone"
+short-title: <area>
 slug: Web/HTML/Reference/Elements/area
 l10n:
-  sourceCommit: 995f8bcede5aa8ca40921b030deef7524ce9e1a3
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<area>`** définit une zone à l'intérieur d'une image qui possède des zones cliquables prédéfinies. Une _image_ permet d'associer des zones géométriques d'une image à des {{Glossary("Hyperlink", "liens hypertextes")}}.

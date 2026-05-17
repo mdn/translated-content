@@ -77,5 +77,3 @@ Dans la plupart des cas, la disposition de flux fonctionne comme on s'y attend l
 ## Ressources externes
 
 - _[CSS Writing Modes (en anglais)](https://24ways.org/2016/css-writing-modes/)_ par Jen Simmons sur _24 Ways_
-
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}

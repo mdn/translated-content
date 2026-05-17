@@ -4,8 +4,6 @@ slug: Web/Performance/Guides/Performance_budgets
 original_slug: Web/Performance/Performance_budgets
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
-
 Un budget de performance est une limite pour éviter les régressions. Il peut s'appliquer à un fichier, un type de fichier, tous les fichiers chargés sur une page, une métrique spécifique (par exemple, [Time to Interactive](/fr/docs/Glossary/Time_to_interactive)), une métrique personnalisée (par exemple, Time to Hero Element), ou un seuil sur une période de temps.
 
 ## Pourquoi ai-je besoin d'un budget de performance?

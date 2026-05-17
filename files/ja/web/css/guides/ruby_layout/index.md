@@ -1,12 +1,12 @@
 ---
 title: CSS ルビレイアウト
+short-title: ルビレイアウト
 slug: Web/CSS/Guides/Ruby_layout
-original_slug: Web/CSS/CSS_ruby_layout
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
-**CSS ルビレイアウト** (CSS Ruby Layout) モジュールは、ルビ表記の表示に関するレンダリングモデルや整形の制御を提供します。ルビ表記は行間の表記の一種で、ベーステキストに沿った短いテキストで構成されます。これらはふつう東アジアの文書で、発音を示したり、短い説明を提供したりするために使用されます。
+**CSS ルビレイアウト** (CSS ruby layout) モジュールは、ルビ表記の表示に関するレンダリングモデルや整形の制御を提供します。ルビ表記は行間の注釈の一種で、ベーステキストに沿った短いテキストで構成されます。これらはふつう東アジアの文書で、発音を示したり、短い説明を提供したりするために使用されます。
 
 ## リファレンス
 
@@ -15,8 +15,7 @@ l10n:
 - {{cssxref("ruby-align")}}
 - {{cssxref("ruby-position")}}
 
-> [!NOTE]
-> CSS ルビレイアウトモジュールは、 `ruby-merge` と `ruby-overhang` の 2 つのプロパティを導入していますが、まだどのブラウザーにも実装されていません。
+CSS ルビレイアウトモジュールは、`ruby-merge` と `ruby-overhang` の各プロパティも導入しています。今のところ、どのブラウザーもまだこれらの機能を実装していません。
 
 ### display 値
 
@@ -28,7 +27,7 @@ CSS ルビレイアウトモジュールは、以下の値を {{cssxref("display
 - `ruby-base-container`
 - `ruby-text-container`
 
-### 用語集とキーワード
+### 用語集の用語
 
 - {{Glossary("ruby", "ルビ")}}
 

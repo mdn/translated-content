@@ -3,7 +3,7 @@ title: "Document : méthode statique parseHTML()"
 short-title: parseHTML()
 slug: Web/API/Document/parseHTML_static
 l10n:
-  sourceCommit: 8b449a5846c1de417894acfe9b4471447181b57f
+  sourceCommit: cda9415220ba812ba2ee24e0af1c8e8001ab9924
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
@@ -24,9 +24,11 @@ Document.parseHTML(input, options)
 - `options` {{Optional_Inline}}
   - : Un objet d'options avec les paramètres optionnels suivants&nbsp;:
     - `sanitizer`
-      - : Un objet {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} qui définit quels éléments de l'entrée seront autorisés ou supprimés, ou la chaîne de caractères `"default"` pour la configuration par défaut du nettoyeur.
-        Notez que de manière générale, un `Sanitizer` est censé être plus efficace qu'un `SanitizerConfig` si la configuration doit être réutilisée.
-        Si rien n'est défini, la configuration par défaut d'assainissement XSS est utilisée.
+      - : Un objet {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} qui définit quels éléments de l'entrée sont autorisés ou supprimés, ou la chaîne de caractères `"default"` pour la [configuration par défaut de l'assainisseur](/fr/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+        La méthode supprime tous les éléments et attributs non sécurisés pour les XSS, même s'ils sont autorisés par l'assainisseur.
+        Si aucun objet n'est défini, la configuration par défaut du `Sanitizer` est utilisée.
+
+        Notez que si vous utilisez la même configuration plusieurs fois, il est prévu qu'il soit plus efficace d'utiliser un `Sanitizer` et de le modifier lorsque vous en avez besoin.
 
 ### Valeur de retour
 
@@ -44,12 +46,13 @@ Un objet {{DOMxRef("Document")}}.
 ## Description
 
 La méthode **`parseHTML()`** analyse et assainit une chaîne de caractères HTML afin de créer une nouvelle instance de {{DOMxRef("Document")}} sécurisée contre les XSS.
-Le `Document` résultant aura un [type de contenu](/fr/docs/Web/API/Document/contentType) de `"text/html"`, un [encodage de caractères](/fr/docs/Web/API/Document/characterSet) UTF-8 et une URL «&nbsp;about:blank&nbsp;».
+Le `Document` résultant a un [type de contenu](/fr/docs/Web/API/Document/contentType) de `"text/html"`, un [encodage de caractères](/fr/docs/Web/API/Document/characterSet) UTF-8 et une URL «&nbsp;about:blank&nbsp;».
 
-Si aucune configuration du nettoyeur n'est précisée dans le paramètre `options.sanitizer`, `parseHTML()` utilise la configuration par défaut de {{DOMxRef("Sanitizer")}}.
-Cette configuration autorise tous les éléments et attributs considérés comme sûrs vis‑à‑vis des XSS, et refuse donc les entités considérées comme dangereuses.
+Si aucun assainisseur n'est défini dans le paramètre `options.sanitizer`, `parseHTML()` utilise la [configuration par défaut de l'assainisseur](/fr/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
+Cette configuration est adaptée à la majorité des cas d'utilisation, car elle empêche les attaques XSS, ainsi que d'autres attaques comme l'usurpation de clics ou l'usurpation d'identité.
+
 Un assainisseur personnalisé ou une configuration d'assainissement peut être défini pour choisir quels éléments, attributs et commentaires sont autorisés ou supprimés.
-Notez que même si des options non sécurisées sont autorisées par la configuration d'assainissement, elles seront néanmoins supprimées lors de l'utilisation de cette méthode (qui appelle implicitement {{DOMxRef('Sanitizer.removeUnsafe()')}}).
+Notez que même si des options non sécurisées sont autorisées par l'assainisseur, elles sont néanmoins supprimées lors de l'utilisation de cette méthode (qui appelle implicitement {{DOMxRef('Sanitizer.removeUnsafe()')}}).
 
 Le HTML d'entrée peut inclure des [racines d'ombre déclaratives](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif).
 Si la chaîne HTML définit plus d'une [racine d'ombre déclarative](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif) dans un hôte d'ombre donné, seule la première {{DOMxRef("ShadowRoot")}} est créée — les déclarations suivantes sont analysées comme des éléments {{HTMLElement("template")}} à l'intérieur de cette racine d'ombre.

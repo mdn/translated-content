@@ -1,5 +1,6 @@
 ---
 title: Array.prototype.reduceRight()
+short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
