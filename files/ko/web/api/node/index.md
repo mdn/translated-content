@@ -1,14 +1,13 @@
 ---
 title: Node
 slug: Web/API/Node
-browser-compat: api.Node
 l10n:
   sourceCommit: 5cfd038b0d37452042461cfe169c0c9ab87be94d
 ---
 
 {{APIRef("DOM")}}
 
-{{Glossary("DOM")}} **`Node`** 인터페이스는 많은 DOM API 객체의 기반이 되는 추상 기반 클래스로, 이를 통해 여러 객체 타입을 유사하게 또는 상호교환 가능하게 사용할 수 있습니다. 추상 클래스이므로 순수한 `Node` 객체는 존재하지 않으며, `Node`를 구현하는 모든 객체는 하위 클래스 중 하나를 기반으로 합니다. 
+{{Glossary("DOM")}} **`Node`** 인터페이스는 많은 DOM API 객체의 기반이 되는 추상 기반 클래스로, 이를 통해 여러 객체 타입을 유사하게 또는 상호교환 가능하게 사용할 수 있습니다. 추상 클래스이므로 순수한 `Node` 객체는 존재하지 않으며, `Node`를 구현하는 모든 객체는 하위 클래스 중 하나를 기반으로 합니다.
 대표적으로 {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}가 있습니다.
 
 또한 모든 종류의 DOM 노드는 `Node`기반의 인터페이스로 표현됩니다.
@@ -25,7 +24,7 @@ l10n:
 _아래 속성 외에도 `Node`는 부모인 {{DOMxRef("EventTarget")}}으로부터 속성을 상속받습니다._
 
 - {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
-  - : `Node`를 가지고 있는 문서의 URL을 문자열로 반환합니다. 
+  - : `Node`를 가지고 있는 문서의 URL을 문자열로 반환합니다.
 - {{DOMxRef("Node.childNodes")}} {{ReadOnlyInline}}
   - : 요소, 텍스트, 주석을 포함한 `Node`의 모든 자식을 담은 실시간 {{DOMxRef("NodeList")}}를 반환합니다. 실시간이란 `Node`의 자식이 변경되면 {{DOMxRef("NodeList")}} 객체도 자동으로 업데이트된다는 의미입니다.
 - {{DOMxRef("Node.firstChild")}} {{ReadOnlyInline}}
@@ -168,7 +167,7 @@ function eachNode(rootNode, callback) {
 - `rootNode`
   - : 자손을 순회할 `Node` 객체입니다.
 - `callback` {{optional_inline}}
-    - : `Node`를 인수로 받는 선택적 콜백 [함수](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)입니다. 생략할 경우 `eachNode`는 `rootNode`와 그 안에 포함된 모든 노드의 {{jsxref("Array")}}를 반환합니다.
+  - : `Node`를 인수로 받는 선택적 콜백 [함수](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)입니다. 생략할 경우 `eachNode`는 `rootNode`와 그 안에 포함된 모든 노드의 {{jsxref("Array")}}를 반환합니다.
 
 다음은 `eachNode()` 함수를 사용하여 웹 페이지의 텍스트를 검색하는 예제입니다.
 
@@ -212,5 +211,3 @@ function grep(parentNode, pattern) {
 ## 브라우저 호환성
 
 {{Compat}}
-
-```
