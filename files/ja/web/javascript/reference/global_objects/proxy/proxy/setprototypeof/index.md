@@ -72,7 +72,7 @@ new Proxy(target, {
 
 プロキシーの `[[SetPrototypeOf]]` 内部メソッドでは、ハンドラー定義が次の不変条件のいずれかに違反する場合、{{jsxref("TypeError")}} を発生します。
 
-- 対象とするオブジェクトが拡張不可の場合は、プロトタイプを変更できません。つまり、{{jsxref(「Reflect.isExtensible()」)}} が `target` に対して `false` を返す場合、かつ `prototype` が `Reflect.getPrototypeOf(target)` の結果と一致しない場合、トラップは偽値を返す必要があります。
+- 対象とするオブジェクトが拡張不可の場合は、プロトタイプを変更できません。つまり、{{jsxref("Reflect.isExtensible()")}} が `target` に対して `false` を返す場合、かつ `prototype` が `Reflect.getPrototypeOf(target)` の結果と一致しない場合、トラップは偽値を返す必要があります。
 
 ## 例
 
