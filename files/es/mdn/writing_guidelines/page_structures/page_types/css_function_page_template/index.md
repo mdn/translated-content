@@ -5,13 +5,82 @@ l10n:
   sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
+> [!Nota]
+> _Elimina este bloque de notas antes de publicar._
+>
+> ---
+>
+> **Front matter de la página:**
+>
+> El front matter en la parte superior de la página se utiliza para definir los "metadatos de la página".
+> Los valores deben actualizarse adecuadamente para la función en particular. Ten en cuenta la presencia (o ausencia) de paréntesis.
+>
+> ```md
+> ---
+> title: nombreDeLaFuncion()
+> slug: Web/CSS/Reference/Values/nombreDeLaFuncion
+> page-type: css-function
+> status:
+>   - deprecated
+>   - experimental
+>   - non-standard
+> browser-compat: css.types.nombreDeLaFuncion
+> sidebar: cssref
+> ---
+> ```
+>
+> - **title**
+>   - : El valor de `title` se muestra en la parte superior de la página. El formato del título es _NombreDeLaFuncion()_.
+>     Por ejemplo, la función [`pow()`](/es/docs/Web/CSS/Reference/Values/pow) tiene el título _pow()_.
+> - **slug**
+>   - : El valor de `slug` es el final de la ruta URL después de `https://developer.mozilla.org/es/docs/`. Esto tendrá el formato `Web/CSS/Reference/Values/nombreDeLaFuncion`. Ten en cuenta la ausencia de paréntesis en el slug.
+>     Por ejemplo, el slug para la función [`pow()`](/es/docs/Web/CSS/Reference/Values/pow) es `Web/CSS/Reference/Values/pow`.
+> - **page-type**
+>   - : El valor de `page-type` para las funciones CSS es `css-function`.
+> - **status**
+>   - : Etiquetas que describen el estado de esta característica. Un array que puede contener uno o más de los siguientes valores: `experimental`, `deprecated`, `non-standard`. Esta clave no debe configurarse manualmente: se establece automáticamente según los valores en los datos de compatibilidad del navegador para la característica. Consulta ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
+> - **browser-compat**
+>   - : Reemplaza el valor de marcador de posición `css.types.NombreDeLaFuncion` con la cadena de consulta para la función en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/tree/main/css/types). Revisa la sección _Otras macros en la página_ de este bloque de notas para ver cómo se utiliza esta relación clave-valor para generar contenido para las secciones de _Especificaciones_ y _Compatibilidad con navegadores_.
+> - **sidebar**
+>   - : Esto es `cssref` para todas las páginas de guía y referencia de CSS.
+>     Consulta [Estructuras de página: Barras laterales](/es/docs/MDN/Writing_guidelines/Page_structures/Sidebars) para más detalles.
+>
+> ---
+>
+> **Macros de la parte superior de la página**
+>
+> En la parte superior de la sección de contenido aparecen varias llamadas a macros (inmediatamente debajo del front matter de la página).
+> Estas macros son añadidas automáticamente por la cadena de herramientas (no hay necesidad de añadirlas o eliminarlas):
+>
+> - `\{{SeeCompatTable}}`: Esta macro genera un banner de **Experimental**, que indica que la tecnología es [experimental](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+>   Si la tecnología es experimental y está oculta detrás de una preferencia en Firefox, también debes rellenar una entrada para ella en la página de [Características experimentales en Firefox](/es/docs/Mozilla/Firefox/Experimental_features).
+> - `\{{Deprecated_Header}}`: Esta macro genera un banner de **Obsoleto (Deprecated)**, que indica que se [desaconseja](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) el uso de la tecnología.
+> - `\{{Non-standard_Header}}` — esto genera un banner de **No estándar (Non-standard)** que indica que la característica no forma parte de ninguna especificación.
+>
+> No proporciones macros de encabezado de estado manualmente. Consulta la sección ["Cómo se añaden o actualizan los estados de las características"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) para añadir estos estados a la página.
+>
+> Muestras de los banners **Experimental**, **Deprecated** y **Non-standard** se muestran justo después de este bloque de notas.
+>
+> ---
+>
+> **Otras macros en la página**
+>
+> - Sección de sintaxis formal: El contenido para la sección _Sintaxis formal_ se genera utilizando la macro `\{{CSSSyntax}}`. Esta macro recupera datos de las especificaciones utilizando el [paquete npm @webref/css](https://www.npmjs.com/package/@webref/css).
+> - Secciones de Especificaciones y Compatibilidad con navegadores: La herramienta de construcción utiliza automáticamente el par clave-valor `browser-compat` del front matter de la página para insertar datos en las secciones _Especificaciones_ y _Compatibilidad con navegadores_ (reemplazando las macros `\{{Specifications}}` y `\{{Compat}}` en esas secciones, respectivamente).
+>
+>   Ten en cuenta que primero es posible que necesites crear o actualizar una entrada para la función y su especificación en nuestro <a href="https://github.com/mdn/browser-compat-data">repositorio de datos de compatibilidad del navegador</a>.
+>   Consulta nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo añadir o editar entradas.
+>
+> _Recuerda eliminar este bloque de notas antes de publicar._
+>
+
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comienza el contenido de la página con un párrafo introductorio que nombre la función y explique qué hace. Idealmente, debería ser una o dos frases cortas.
 
-## Pruébalo (Try it)
+## Pruébalo
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Try it" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Pruébalo" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
 
 ## Sintaxis
 
@@ -53,7 +122,7 @@ Incluye un término y una definición para cada parámetro.
 - `<valor-de-declaracion>` {{optional_inline}}
   - : Incluye una descripción del parámetro, su tipo de datos y su valor predeterminado si lo hubiera.
 
-> [!WARNING]
+> [!Advertencia]
 > No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) en las páginas de CSS.
 
 ### Valor de retorno
@@ -86,7 +155,7 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para más información.
 
-> [!NOTE]
+> [!Nota]
 > A veces querrás enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
@@ -127,9 +196,9 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 _Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
 
-## Ver también
+## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la función actual. Para más pautas, consulta la [sección Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la función actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
