@@ -14,10 +14,10 @@ const numberDe = new Intl.NumberFormat("de-DE");
 const numberAr = new Intl.NumberFormat("ar");
 
 console.log(numberDe.resolvedOptions().numberingSystem);
-// Expected output: "latn"
+// 予想される結果: "latn"
 
 console.log(numberAr.resolvedOptions().numberingSystem);
-// Expected output: "arab"
+// 予想される結果: "arab"
 ```
 
 ## 構文

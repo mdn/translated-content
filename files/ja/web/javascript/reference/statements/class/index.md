@@ -21,7 +21,7 @@ class Polygon {
 }
 
 console.log(new Polygon(4, 3).area);
-// Expected output: 12
+// 予想される結果: 12
 ```
 
 ## 構文

@@ -11,17 +11,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 
 ```js interactive-example
 console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));
-// Expected output: Array ["a", "ä", "z", "Z"]
+// 予想される結果: Array ["a", "ä", "z", "Z"]
 
 console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("sv").compare));
-// Expected output: Array ["a", "z", "Z", "ä"]
+// 予想される結果: Array ["a", "z", "Z", "ä"]
 
 console.log(
   ["Z", "a", "z", "ä"].sort(
     new Intl.Collator("de", { caseFirst: "upper" }).compare,
   ),
 );
-// Expected output: Array ["a", "ä", "Z", "z"]
+// 予想される結果: Array ["a", "ä", "Z", "z"]
 ```
 
 ## コンストラクター
