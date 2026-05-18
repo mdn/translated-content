@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-La méthode **`formData()`** de l'interface {{DOMxRef("Response")}} lit un flux de {{DOMxRef("Response" "réponse", "", 1)}} jusqu'à son terme. Elle retourne une promesse qui est résolue avec un objet {{DOMxRef("FormData")}}.
+La méthode **`formData()`** de l'interface {{DOMxRef("Response")}} lit un flux de {{DOMxRef("Response", "réponse", "", 1)}} jusqu'à son terme. Elle retourne une promesse qui est résolue avec un objet {{DOMxRef("FormData")}}.
 
 > [!NOTE]
 > Ceci est principalement pertinent pour les [service workers](/fr/docs/Web/API/Service_Worker_API). Si un·e utilisateur·ice soumet un formulaire et qu'un service worker intercepte la requête, vous pouvez par exemple appeler `formData()` dessus pour obtenir une table clé-valeur, modifier certains champs, puis envoyer le formulaire au serveur (ou l'utiliser localement).

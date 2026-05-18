@@ -1,15 +1,15 @@
 ---
 title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外で、 {{jsxref("JSON.parse()")}} が文字列を JSON として解釈するのに失敗した場合に発生します。
 
 ## エラーメッセージ
 
-```js
+```plain
 SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal
@@ -41,10 +41,9 @@ SyntaxError: JSON.parse: property names must be double-quoted strings
 SyntaxError: JSON.parse: expected property name or '}'
 SyntaxError: JSON.parse: unexpected character
 SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
-SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)
 ```
 
-## エラー種別
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
@@ -54,7 +53,7 @@ SyntaxError: JSON.parse Error: Invalid character at position {0} (Edge)
 
 ## 例
 
-### `JSON.parse()` は末尾のカンマを許容しない
+### JSON.parse() は末尾のカンマを許容しない
 
 どちらの行でも SyntaxError が発生します。
 

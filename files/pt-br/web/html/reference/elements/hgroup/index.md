@@ -14,7 +14,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabe√ßalhos de diferentes n√
       <th scope="row">Categorias de conteudo</th>
       <td>
         <a
-          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -36,7 +36,7 @@ O **elemento HTML `<hgroup>` **destina-se a agrupar cabe√ßalhos de diferentes n√
       <td>
         Any element that accepts
         <a
-          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>

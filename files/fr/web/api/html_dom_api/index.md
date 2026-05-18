@@ -1,8 +1,8 @@
 ---
-title: L'API HTML DOM
+title: API HTML DOM
 slug: Web/API/HTML_DOM_API
 l10n:
-  sourceCommit: 87440643d71bf81a5bf4b8fa21db9e3d56ead395
+  sourceCommit: 6686b4c94c8cf3eb188d0e549634cd581f0b8237
 ---
 
 {{DefaultAPISidebar("HTML DOM")}}
@@ -21,7 +21,7 @@ Les domaines fonctionnels inclus dans l'API HTML DOM comprennent&nbsp;:
 
 ## Concepts et utilisation du HTML DOM
 
-Dans cet article, nous nous concentrerons sur les parties du HTML DOM qui impliquent l'interaction avec des éléments HTML. Les discussions sur d'autres domaines, tels que {{DOMxRef("HTML_Drag_and_Drop_API", "Drag and Drop", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSockets", "", "1")}}, {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, etc. se trouvent dans la documentation de ces API.
+Dans cet article, nous nous concentrons sur les parties du HTML DOM qui impliquent l'interaction avec des éléments HTML. Les discussions sur d'autres domaines, tels que {{DOMxRef("HTML_Drag_and_Drop_API", "Drag and Drop", "", "1")}}, {{DOMxRef("WebSockets_API", "WebSockets", "", "1")}}, {{DOMxRef("Web_Storage_API", "Web Storage", "", "1")}}, etc. se trouvent dans la documentation de ces API.
 
 ### Structure d'un document HTML
 
@@ -70,7 +70,7 @@ Ces interfaces spécifiques aux éléments constituent la majorité de l'API HTM
 ## Public cible du HTML DOM
 
 Les fonctionnalités exposées par le HTML DOM font partie des API les plus couramment utilisées dans la boîte à outils d'un·e développeur·euse web.
-Toutes les applications web sauf les plus simples utiliseront certaines fonctionnalités du HTML DOM.
+Toutes les applications web sauf les plus simples utilisent certaines fonctionnalités du HTML DOM.
 
 ## Interfaces de l'API HTML DOM
 
@@ -92,7 +92,7 @@ Ces interfaces représentent des éléments HTML spécifiques (ou des ensembles 
 - {{DOMxRef("HTMLDataListElement")}}
 - {{DOMxRef("HTMLDetailsElement")}}
 - {{DOMxRef("HTMLDialogElement")}}
-- {{DOMxRef("HTMLDirectoryElement")}}
+- `HTMLDirectoryElement`
 - {{DOMxRef("HTMLDivElement")}}
 - {{DOMxRef("HTMLDListElement")}}
 - {{DOMxRef("HTMLElement")}}
@@ -154,7 +154,7 @@ Ces interfaces représentent des éléments HTML spécifiques (ou des ensembles 
 #### Interfaces d'éléments HTML obsolètes
 
 - {{DOMxRef("HTMLFontElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("HTMLFrameElement")}} {{Deprecated_Inline}}
+- `HTMLFrameElement` {{Deprecated_Inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{Deprecated_Inline}}
 
 ### Interfaces d'intégration aux applications web et au navigateur
@@ -164,10 +164,6 @@ Ces interfaces offrent un accès à la fenêtre et au document du navigateur qui
 - {{DOMxRef("BarProp")}}
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
-
-#### Interfaces d'intégration dépréciées
-
-- {{DOMxRef("External")}} {{Deprecated_Inline}}
 
 #### Interfaces d'intégration obsolètes
 

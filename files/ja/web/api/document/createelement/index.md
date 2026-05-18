@@ -3,29 +3,36 @@ title: "Document: createElement() メソッド"
 short-title: createElement()
 slug: Web/API/Document/createElement
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 09d8ff096be97b28ea415fc4c68fb1cff0ff8af9
 ---
 
 {{APIRef("DOM")}}
 
-[HTML](/ja/docs/Web/HTML) 文書において、 **`document.createElement()`** メソッドは _tagName_ で指定された HTML 要素を生成し、または _tagName_ が認識できない場合は {{domxref("HTMLUnknownElement")}} を生成します。
+**`createElement()`** は {{domxref("Document")}} インターフェイスのメソッドで、`localName` で指定された新しい {{domxref("HTMLElement")}} を生成します。
+
+`localName` が認識できない場合は {{domxref("HTMLUnknownElement")}} を生成します。
 
 ## 構文
 
 ```js-nolint
-createElement(tagName)
-createElement(tagName, options)
+createElement(localName)
+createElement(localName, options)
 ```
 
 ### 引数
 
-- `tagName`
-  - : 生成される要素の型を特定する文字列です。生成される要素の {{domxref("Node.nodeName", "nodeName")}} は _tagName_ の値で初期化されます。このメソッドで修飾名 ("html:a" など) を使用しないでください。 HTML 文書で呼び出すと、 `createElement()` は要素を生成する前に _tagName_ を小文字に変換します。 Firefox, Opera, Chrome では、 `createElement(null)` は `createElement("null")` のように動作します。
-- `options` {{optional_inline}}
-  - : 以下のプロパティを持つオブジェクトです。
-    - `is`
-      - : 事前に `customElements.define()` で定義したカスタム要素のタグ名です。
+- `localName`
+  - : 生成される要素の型を特定する文字列です。
+    このメソッドでは、修飾名（"html:a" など）を使用しないでください。
+    HTML 文書で呼び出すと、 `createElement()` は要素を生成する前に `localName` を小文字に変換します。 Firefox, Opera, Chrome では、 `createElement(null)` は `createElement("null")` のように動作します。
+- `options` {{Optional_Inline}}
+  - : 以下のオプションのプロパティを持つオブジェクト（なお、`is` と `customElementRegistry` のどちらかのみを設定できます）。
+    - `is` {{Optional_Inline}}
+      - : {{domxref("CustomElementRegistry/define", "customElements.define()")}} を使用して、以前定義されたカスタム要素のタグ名を指定する文字列です。
+        新しい要素には、そのカスタム要素のタグ名を値とする `is` 属性が指定されます。
         詳しくは[ウェブコンポーネントの例](#ウェブコンポーネントの例)を参照してください。
+    - `customElementRegistry` {{Optional_Inline}}
+      - : {{domxref("CustomElementRegistry")}} であり、カスタム要素の[スコープ付きカスタム要素レジストリー](/ja/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries)を設定します。
 
 ### 返値
 
@@ -34,11 +41,25 @@ createElement(tagName, options)
 > [!NOTE]
 > 文書が {{domxref("HTMLDocument", "HTMLDocument", "", "1")}} である場合、新しい {{domxref("HTMLElement", "HTMLElement", "", "1")}} を返しますが、これが最も一般的です。それ以外の場合は新しい {{domxref("Element","Element","","1")}} を返します。
 
+### 例外
+
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : [`localName`](#localname) の値が有効な要素名でない場合に発生します。
+    文字列は、長さが 1 文字以上であり、かつ以下の条件を満たす場合、有効な要素名となります。
+    - アルファベット文字で始まり、ASCII のホワイトスペース、`NULL`、`/`、`>`（それぞれU+0000、U+002F、U+003E）が含まれていないもの。
+    - 先頭が `:` (U+003A)、 `_` (U+005F)、U+0080 以上 U+10FFFF 以下の範囲内の任意の文字で始まり、かつ、残りのコードポイントは、それらの同じ文字に加え、ASCII 英数字、`-` (U+002D)、および `.` (U+002E) のみを含むもの。
+
+    > [!NOTE]
+    > 以前のバージョンの仕様書では、より厳しい制限があり、`localName` が有効な [XML 名](https://www.w3.org/TR/xml/#dt-name) であることが要求されていました。
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : [`is`](#is) および [`customElementRegistry`](#customelementregistry) の両方のオプションが指定された場合、この例外が発生します。
+
 ## 例
 
 ### 基本的な例
 
-この例では新しい `<div>` を生成し、 id が "`div1`" である要素の前に挿入します。
+この例では新しい `<div>` を生成し、 id が `div1` である要素の前に挿入します。
 
 #### HTML
 
@@ -58,8 +79,6 @@ createElement(tagName, options)
 #### JavaScript
 
 ```js
-document.body.onload = addElement;
-
 function addElement() {
   // 新しい div 要素を作成します
   const newDiv = document.createElement("div");
@@ -74,6 +93,8 @@ function addElement() {
   const currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
 }
+
+addElement();
 ```
 
 #### 結果
@@ -81,6 +102,9 @@ function addElement() {
 {{EmbedLiveSample("Basic_example", 500, 80)}}
 
 ### ウェブコンポーネントの例
+
+> [!NOTE]
+> 対応状況については[ブラウザーの互換性](#ブラウザーの互換性)の節を、またカスタマイズされた組み込み要素の実装上の注意点については [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) 属性のリファレンスをご確認ください。
 
 以下の例の断片は [expanding-list-web-component](https://github.com/mdn/web-components-examples/tree/master/expanding-list-web-component)
 の例から取ったものです（[ライブでもご覧ください](https://mdn.github.io/web-components-examples/expanding-list-web-component/)）。この場合、カスタム要素は {{domxref("HTMLUListElement")}} を拡張し、 {{htmlelement("ul")}} 要素を表します。

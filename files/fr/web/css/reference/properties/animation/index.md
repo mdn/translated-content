@@ -3,7 +3,7 @@ title: Propriété CSS `animation`
 short-title: animation
 slug: Web/CSS/Reference/Properties/animation
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 8fbdeb7fdee69284a6423044f24b8b4a7140028f
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`animation`** permet d'appliquer une animation entre des styles. Il s'agit d'une propriété raccourcie pour {{CSSxRef("animation-name")}}, {{CSSxRef("animation-duration")}}, {{CSSxRef("animation-timing-function")}}, {{CSSxRef("animation-delay")}}, {{CSSxRef("animation-iteration-count")}}, {{CSSxRef("animation-direction")}}, {{CSSxRef("animation-fill-mode")}}, {{CSSxRef("animation-play-state")}} et {{CSSxRef("animation-timeline")}}.
@@ -113,27 +113,25 @@ La propriété `animation` est définie sous la forme d'une ou plusieurs animati
 
 Le composant `<animation-name>` de chaque animation correspond au nom de l'animation, qui peut être `none`, un {{CSSxRef("&lt;custom-ident&gt;")}}, ou un {{CSSxRef("&lt;string&gt;")}}. La valeur initiale de `animation-name` est `none`, ce qui signifie que si aucune valeur `animation-name` n'est déclarée dans la propriété raccourcie `animation`, aucune animation n'est appliquée à aucune des propriétés.
 
-L'ordre des autres valeurs dans une définition d'animation est important pour distinguer une valeur {{CSSxRef("animation-name")}} des autres valeurs. Si une valeur dans la notation raccourcie `animation` peut être analysée comme une valeur pour une propriété d'animation autre que `animation-name`, alors la valeur sera appliquée d'abord à cette propriété et non à `animation-name`. Pour cette raison, il est recommandé de définir une valeur pour `animation-name` comme dernière valeur d'une liste lors de l'utilisation de la notation raccourcie `animation`&nbsp;; cela reste vrai même lorsque vous définissez plusieurs animations séparées par des virgules en utilisant la notation raccourcie `animation`.
+L'ordre des autres valeurs dans une définition d'animation est important pour distinguer une valeur {{CSSxRef("animation-name")}} des autres valeurs. Si une valeur dans la notation raccourcie `animation` peut être analysée comme une valeur pour une propriété d'animation autre que `animation-name`, alors la valeur est appliquée d'abord à cette propriété et non à `animation-name`. Pour cette raison, il est recommandé de définir une valeur pour `animation-name` comme dernière valeur d'une liste lors de l'utilisation de la notation raccourcie `animation`&nbsp;; cela reste vrai même lorsque vous définissez plusieurs animations séparées par des virgules en utilisant la notation raccourcie `animation`.
 
 ### Valeurs temporelles
 
 Chaque animation peut inclure zéro, une ou deux occurrences de la valeur {{CSSxRef("&lt;time&gt;")}}. L'ordre des valeurs temporelles dans chaque définition d'animation est important&nbsp;: la première valeur pouvant être analysée comme une {{CSSxRef("&lt;time&gt;")}} est affectée à {{CSSxRef("animation-duration")}}, et la seconde est affectée à {{CSSxRef("animation-delay")}}.
 
-Si aucune valeur `animation-duration` n'est définie dans la propriété raccourcie `animation`, la durée prend la valeur par défaut `0s`. Dans ce cas, l'animation aura quand même lieu (les évènements [`animationStart`](/fr/docs/Web/API/Element/animationstart_event) et [`animationEnd`](/fr/docs/Web/API/Element/animationend_event) seront déclenchés), mais aucune animation ne sera visible pour l'utilisateur·ice.
+Si aucune valeur `animation-duration` n'est définie dans la propriété raccourcie `animation`, la durée prend la valeur par défaut `0s`. Dans ce cas, l'animation a quand même lieu (les évènements [`animationStart`](/fr/docs/Web/API/Element/animationstart_event) et [`animationEnd`](/fr/docs/Web/API/Element/animationend_event) sont déclenchés), mais aucune animation n'est visible pour l'utilisateur·ice.
 
-### animation-timeline
+### `animation-timeline`
 
-Les implémentations actuelles de `animation` sont en mode réinitialisation uniquement&nbsp;: si aucun `<animation-timeline>` n'est inclus dans la notation raccourcie `animation`, la déclaration raccourcie réinitialisera toutes les valeurs `animation-timeline` précédemment déclarées à `auto`.
+Si aucune `<animation-timeline>` n'est incluse dans la notation raccourcie `animation`, la déclaration raccourcie réinitialise toutes les valeurs `animation-timeline` précédemment déclarées à `auto`, ce qui définit la chronologie sur le {{DOMxRef("documentTimeline")}} par défaut.
 
-Par défaut, `animation-timeline` est le {{DOMxRef("documentTimeline")}}. Si une valeur est incluse, mais que l'agent utilisateur ne prend pas en charge les valeurs `<animation-timeline>` dans la notation raccourcie, la déclaration est invalide et est ignorée.
+Si une `<animation-timeline>` est incluse, mais que l'agent utilisateur ne prend pas en charge les valeurs `<animation-timeline>` dans la notation raccourcie, la déclaration entière de `animation` est invalide et est ignorée. Pour cette raison, lors de la création [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), vous devez déclarer la propriété `animation-timeline` après avoir déclaré toute notation raccourcie `animation` pour qu'elle prenne effet.
 
-Cela signifie que, lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations), vous devez déclarer la propriété `animation-timeline` après avoir déclaré toute notation raccourcie `animation` pour qu'elle prenne effet.
-
-Alternativement, la propriété `animation-timeline` peut être utilisée dans la notation raccourcie `animation` au sein d'un bloc CSS {{CSSxRef("@supports")}}, par exemple&nbsp;:
+D'une autre manière, la chronologie d'animation (`<animation-timeline>`) peut être définie dans la notation raccourcie `animation` au sein d'un bloc CSS {{CSSxRef("@supports")}}, par exemple&nbsp;:
 
 ```css
 @supports (animation: view()) {
-  /* CSS pour les navigateurs qui prennent en charge la définition de <animation-timeline> dans la notation raccourcie animation */
+  /* CSS pour les navigateurs prennant en charge la définition de <animation-timeline> dans la notation raccourcie `animation` */
 }
 ```
 
@@ -145,13 +143,13 @@ Dans le cas de la valeur [`forwards`](/fr/docs/Web/CSS/Reference/Properties/anim
 
 Les animations qui clignotent ou scintillent sont problématiques, notamment pour les personnes souffrant de troubles cognitifs comme le trouble du déficit de l'attention avec ou sans hyperactivité (TDAH). De plus, certains types de mouvements peuvent déclencher des troubles vestibulaires, des crises d'épilepsie, des migraines ou une sensibilité scotopique.
 
-Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [la requête média pour la préférence de réduction des animations](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour offrir une expérience complémentaire aux utilisateur·ice·s qui ont exprimé une préférence pour la réduction des animations.
+Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'animation ainsi qu'à utiliser [la requête `@media` de réduction des animations](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) pour offrir une expérience complémentaire aux utilisateur·ice·s qui ont exprimé une préférence pour la réduction des animations.
 
-- [Concevoir des animations web plus sûres pour la sensibilité au mouvement · Article de A List Apart <sup>(angl.)</sup>](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- [Introduction à la requête média pour la réduction des animations | CSS-Tricks <sup>(angl.)</sup>](https://css-tricks.com/introduction-reduced-motion-media-query/)
-- [Conception réactive pour le mouvement | WebKit <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [Concevoir des animations web plus sûres pour la sensibilité au mouvement <sup>(angl.)</sup>](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) sur A List Apart (2015)
+- [Introduction à la requête média pour la réduction des animations <sup>(angl.)</sup>](https://css-tricks.com/introduction-reduced-motion-media-query/) sur CSS-Tricks (2017)
+- [Conception réactive pour le mouvement <sup>(angl.)</sup>](https://webkit.org/blog/7551/responsive-design-for-motion/) sur WebKit (2017)
 - [Explications WCAG sur MDN, explications de la règle 2.2 des WCAG](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#règle_2.2_—_temps_suffisant_donner_aux_utilisateurs_et_utilisatrices_assez_de_temps_pour_lire_et_utiliser_le_contenu)
-- [Comprendre le critère de succès 2.2.2 | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
+- [Comprendre le critère de succès 2.2.2&nbsp;: Pause, Arrêt, Cacher du WCAG | Comprendre le WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide) sur W3C (2026)
 
 ## Définition formelle
 
@@ -164,15 +162,23 @@ Veillez à fournir un mécanisme permettant d'interrompre ou de désactiver l'an
 ## Exemples
 
 > [!NOTE]
-> Il est déconseillé d'animer les propriétés du [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model). L'animation de toute propriété du modèle de boîte est intrinsèquement coûteuse en ressources processeur&nbsp;; il est préférable d'animer la propriété [transform](/fr/docs/Web/CSS/Reference/Properties/transform).
+> Il est déconseillé d'animer les propriétés du [modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model), car cela entraîne un recalcul de la mise en page et des repeints. L'animation de toute propriété du modèle de boîte est intrinsèquement coûteuse en ressources processeur&nbsp;; il est préférable d'animer la propriété [transform](/fr/docs/Web/CSS/Reference/Properties/transform).
 
-### Lever de soleil
+### Utilisation simple : Un lever de soleil
 
-Ici, nous animons un soleil jaune à travers un ciel bleu clair. Le soleil s'élève jusqu'au centre de la zone d'affichage puis disparaît hors de vue.
+Dans cet exemple, nous démontrons l'utilisation de base de la notation raccourcie `animation` en animant un soleil jaune à travers un ciel bleu clair. Le soleil s'élève jusqu'au centre de la zone d'affichage puis disparaît hors de vue.
+
+#### HTML
+
+Nous incluons un seul élément {{HTMLElement("div")}} pour représenter notre soleil.
 
 ```html
 <div class="soleil"></div>
 ```
+
+#### CSS
+
+Nous commençons par créer le soleil et le ciel. Le ciel est la racine ({{CSSxRef(":root")}}) du document HTML. Nous masquons tout contenu en dehors de la zone d'affichage, ce qui, dans notre cas, est toute partie du soleil sous l'horizon, en définissant la propriété {{CSSxRef("overflow")}} sur `hidden`. Nous utilisons également la propriété {{CSSxRef("justify-content")}} pour centrer le soleil dans l'arrière-plan. Nous rendons le soleil jaune, déclarons sa hauteur ({{CSSxRef("height")}}) comme étant la hauteur de la zone d'affichage (`100vh`), et définissons sa largeur égale à sa hauteur en définissant la propriété {{CSSxRef("aspect-ratio")}} sur `1`. Nous transformons le `<div>` carré en cercle en utilisant la propriété {{CSSxRef("border-radius")}}.
 
 ```css
 :root {
@@ -186,7 +192,7 @@ Ici, nous animons un soleil jaune à travers un ciel bleu clair. Le soleil s'él
   background-color: yellow;
   border-radius: 50%; /* crée un arrière-plan circulaire */
   height: 100vh; /* donne au soleil la taille de la zone d'affichage */
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   animation: 4s linear 0s infinite alternate soleil-levant;
 }
 
@@ -202,58 +208,27 @@ Ici, nous animons un soleil jaune à travers un ciel bleu clair. Le soleil s'él
 }
 ```
 
-{{EmbedLiveSample("Lever de soleil")}}
-
-### Animer plusieurs propriétés
-
-En ajoutant à l'animation du soleil de l'exemple précédent, nous ajoutons une seconde animation qui change la couleur du soleil lorsqu'il s'élève et se couche. Le soleil commence rouge foncé lorsqu'il est sous l'horizon et devient orange vif lorsqu'il atteint le sommet.
-
-```html
-<div class="soleil"></div>
-```
+La dernière étape consiste à appliquer l'animation&nbsp;! Nous utilisons la propriété raccourcie `animation` pour appliquer l'animation par images clés `soleil-levant` au `<div>` `.soleil`. L'animation est définie pour se jouer indéfiniment, chaque itération durant 4 secondes&nbsp;; la direction de l'animation alterne à chaque itération&nbsp;:
 
 ```css
-:root {
-  overflow: hidden;
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-}
-
 .soleil {
-  background-color: yellow;
-  border-radius: 50%;
-  height: 100vh;
-  aspect-ratio: 1 / 1;
-  animation: 4s linear 0s infinite alternate animation-propriete-multiples;
-}
-
-/* il est possible d'animer plusieurs propriétés dans une seule animation */
-@keyframes animation-propriete-multiples {
-  from {
-    transform: translateY(110vh);
-    background-color: red;
-    filter: brightness(75%);
-  }
-  to {
-    transform: translateY(0);
-    background-color: orange;
-    /* les propriétés désactivées, c'est-à-dire 'filter', reviendront à leurs valeurs par défaut */
-  }
+  animation: 4s linear 0s infinite alternate soleil-levant;
 }
 ```
 
-{{EmbedLiveSample("Animer plusieurs propriétés")}}
+#### Résultat
+
+{{EmbedLiveSample("Utilisation simple : Un lever de soleil")}}
 
 ### Appliquer plusieurs animations
 
-Voici un soleil qui monte et descend sur un fond bleu clair. Le soleil tourne progressivement à travers un arc-en-ciel de couleurs. Le rythme de la position et de la couleur du soleil est indépendant.
+Cet exemple démontre l'application de plusieurs animations à un seul élément. En s'appuyant sur l'exemple précédent, avec un soleil qui se lève et se couche sur un fond bleu clair, nous allons ici faire tourner progressivement le soleil à travers un arc-en-ciel de couleurs. Le rythme de la position et de la couleur du soleil est indépendant.
 
-```html
+```html hidden
 <div class="soleil"></div>
 ```
 
-```css
+```css hidden
 :root {
   overflow: hidden;
   background-color: lightblue;
@@ -266,13 +241,9 @@ Voici un soleil qui monte et descend sur un fond bleu clair. Le soleil tourne pr
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  /* plusieurs animations sont séparées par des virgules, chaque animation a ses paramètres définis indépendamment */
-  animation:
-    4s linear 0s infinite alternate levee,
-    24s linear 0s infinite psychedelic;
 }
 
-@keyframes levee {
+@keyframes soleil-levant {
   from {
     transform: translateY(110vh);
   }
@@ -280,7 +251,11 @@ Voici un soleil qui monte et descend sur un fond bleu clair. Le soleil tourne pr
     transform: translateY(0);
   }
 }
+```
 
+Nous incluons le même HTML et CSS que dans l'exemple précédent, et ajoutons un second ensemble de `@keyframes` pour appliquer un filtre ({{CSSxRef("filter")}}) qui fait tourner la teinte à travers toutes les valeurs possibles en utilisant la fonction de filtre {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}&nbsp;:
+
+```css
 @keyframes psychedelic {
   from {
     filter: hue-rotate(0deg);
@@ -291,17 +266,29 @@ Voici un soleil qui monte et descend sur un fond bleu clair. Le soleil tourne pr
 }
 ```
 
+Nous appliquons ensuite les deux animations à notre soleil. Plusieurs animations sont séparées par des virgules, et les paramètres de chaque animation sont définis indépendamment&nbsp;:
+
+```css
+.soleil {
+  animation:
+    4s linear 0s infinite alternate soleil-levant,
+    24s linear 0s infinite psychedelic;
+}
+```
+
+#### Résultats
+
 {{EmbedLiveSample("Appliquer plusieurs animations")}}
 
 ### Enchaîner plusieurs animations
 
-Voici un soleil jaune sur un fond bleu clair. Le soleil rebondit entre le côté gauche et le côté droit de la zone d'affichage. Le soleil reste dans la zone d'affichage même si une animation de montée est définie. La propriété transform de l'animation de montée est «&nbsp;surchargée&nbsp;» par l'animation de rebond.
+Cet exemple démontre ce qui se passe lorsque plusieurs animations définissent des valeurs pour la même propriété. Cet exemple s'appuie sur l'exemple [d'utilisation simple](#utilisation_simple_un_lever_de_soleil), avec deux animations appliquées qui définissent toutes deux une valeur pour la propriété {{CSSxRef("transform")}}.
 
-```html
+```html hidden
 <div class="soleil"></div>
 ```
 
-```css
+```css hidden
 :root {
   overflow: hidden;
   background-color: lightblue;
@@ -314,17 +301,13 @@ Voici un soleil jaune sur un fond bleu clair. Le soleil rebondit entre le côté
   border-radius: 50%;
   height: 100vh;
   aspect-ratio: 1 / 1;
-  /*
-      les animations déclarées plus tard dans la cascade vont remplacer
-      les propriétés des animations déclarées précédemment
-    */
-  /* rebond « surcharge » la propriété transform définie par montée, ainsi le soleil ne se déplace que horizontalement */
-  animation:
-    4s linear 0s infinite alternate levee,
-    4s linear 0s infinite alternate rebond;
 }
+```
 
-@keyframes levee {
+Nous utilisons le même HTML et CSS que dans le premier exemple, y compris l'animation `soleil-levant` originale, et une deuxième animation nommée `rebond`. Les deux animations déclarent des valeurs pour la même propriété&nbsp;:
+
+```css
+@keyframes soleil-levant {
   from {
     transform: translateY(110vh);
   }
@@ -343,9 +326,21 @@ Voici un soleil jaune sur un fond bleu clair. Le soleil rebondit entre le côté
 }
 ```
 
+Nous appliquons ensuite les deux animations à notre soleil. Lorsque deux animations appliquent des valeurs différentes à la même propriété, les animations déclarées plus tard dans la cascade remplacent les animations déclarées précédemment. Dans ce cas, la valeur `transform` de l'animation `rebond` «&nbsp;gagne&nbsp;» la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction#css_animations_and_the_cascade) et remplace la transformation définie par `soleil-levant`, donc le soleil ne se déplace que horizontalement.
+
+```css
+.soleil {
+  animation:
+    4s linear 0s infinite alternate soleil-levant,
+    4s linear 0s infinite alternate rebond;
+}
+```
+
+#### Résultats
+
 {{EmbedLiveSample("Enchaîner plusieurs animations")}}
 
-Voir [Utiliser les animations CSS](/fr/docs/Web/CSS/Guides/Animations/Using#exemples) pour d'autres exemples.
+Le soleil rebondit entre les côtés gauche et droit de la fenêtre. Le soleil reste dans la fenêtre même si l'animation `soleil-levant` est définie. La propriété `transform` de l'animation `soleil-levant` est remplacée par l'animation `rebond`.
 
 ## Spécifications
 

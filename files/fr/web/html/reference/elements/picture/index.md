@@ -1,8 +1,9 @@
 ---
-title: "<picture> : l'élément d'image adaptative"
+title: "Élément HTML `<picture>` : l'élément d'image adaptative"
+short-title: <picture>
 slug: Web/HTML/Reference/Elements/picture
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<picture>`** contient zéro ou plusieurs éléments {{HTMLElement("source")}} et un élément {{HTMLElement("img")}} pour proposer des versions alternatives d'une image selon les scénarios d'affichage ou d'appareil.

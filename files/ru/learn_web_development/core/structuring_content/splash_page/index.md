@@ -3,7 +3,7 @@ title: Страница о Mozilla
 slug: Learn_web_development/Core/Structuring_content/Splash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{LearnSidebar}}{{PreviousMenu("Web/HTML/Guides/Responsive_images", "Learn_web_development/Core/Structuring_content")}}
 
 В этом задании мы проверим ваши знания приёмов, рассмотренных в статьях этого модуля, через добавление изображений и видео на забавную страницу о Mozilla!
 

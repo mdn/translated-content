@@ -2,7 +2,7 @@
 title: Fragments média
 slug: Web/URI/Reference/Fragment/Media_fragments
 l10n:
-  sourceCommit: 93eb85aec36d1a929ac8dfc7dbf1ed297992608f
+  sourceCommit: 465d0f2adc0dd98c6122a8e6fc2c6b32ecce0b0c
 ---
 
 Les **fragments média** peuvent être inclus dans les URL de fichiers média (par exemple, [vidéo](/fr/docs/Web/HTML/Reference/Elements/video) et [SVG](/fr/docs/Web/SVG)) pour indiquer que vous souhaitez afficher une partie du média&nbsp;: une certaine durée ou une certaine dimension.
@@ -11,15 +11,15 @@ Les **fragments média** peuvent être inclus dans les URL de fichiers média (p
 
 Lorsque vous affichez plusieurs portions de média, il peut être plus pratique et efficace d'inclure tout le contenu dans un seul fichier, puis d'afficher uniquement la partie requise dans chaque cas.
 
-- Les fragments média permettent de faire cela via des fragments d'URL. La spécification définit deux types différents&nbsp;:
+- Les fragments média permettent de faire cela avec des fragments d'URL. La spécification définit deux types différents&nbsp;:
 
-- Les **fragments de dimension temporelle** permettent de lire une portion d'une vidéo ou d'une animation à partir d'un instant de départ jusqu'à un instant de fin, après quoi le média sera mis en pause.
+- Les **fragments de dimension temporelle** permettent de lire une portion d'une vidéo ou d'une animation à partir d'un instant de départ jusqu'à un instant de fin, après quoi le média est mis en pause.
 - Les **fragments de dimension spatiale** permettent d'afficher une zone rectangulaire spécifique du média en définissant les dimensions de la boîte à afficher, ainsi que les coordonnées du coin supérieur gauche de la boîte.
 
 ## Syntaxe des fragments de dimension temporelle
 
 ```url
-https://example.com/video.mp4#t=[npt:][timeStart][,timeEnd]
+https://exemple.com/video.mp4#t=[npt:][timeStart][,timeEnd]
 ```
 
 Les éléments clés de la syntaxe sont&nbsp;:
@@ -42,7 +42,7 @@ Les valeurs `timeStart` et `timeEnd` peuvent être définies dans les formats su
 - `mm:ss`
   - : Valeurs de minute et de seconde, séparées par un deux-points. La valeur des minutes est un entier entre `0` et `59`. La valeur des secondes est un nombre entre `0` et `59`, qui peut inclure une partie décimale pour indiquer une fraction de seconde.
 
-Ainsi, par exemple, les fragments suivants liront tous le média du début jusqu'à 5 secondes&nbsp;:
+Ainsi, par exemple, les fragments suivants lisent tous le média du début jusqu'à 5 secondes&nbsp;:
 
 ```plain
 #t=0,5
@@ -51,14 +51,14 @@ Ainsi, par exemple, les fragments suivants liront tous le média du début jusqu
 #t=00:00,0:00:05
 ```
 
-Les deux fragments suivants liront le média à partir de 2 secondes jusqu'à la fin.
+Les deux fragments suivants lisent le média à partir de 2 secondes jusqu'à la fin.
 
 ```plain
 #t=2
 #t=0:00:02
 ```
 
-Les fragments suivants liront le média à partir de 2 secondes jusqu'à 3,5 secondes.
+Les fragments suivants lisent le média à partir de 2 secondes jusqu'à 3,5 secondes.
 
 ```plain
 #t=2,3.5
@@ -78,9 +78,9 @@ Les éléments clés de la syntaxe sont&nbsp;:
   - : Le début de la syntaxe de dimension spatiale. Cela doit toujours être inclus après le symbole dièse.
 - `unit:` {{Optional_Inline}}
   - : Les unités à définir pour `xCoord`, `yCoord`, `width` et `height`. Par défaut, c'est `pixel:` si omis. Les valeurs possibles sont&nbsp;:
-    - `percent:`
-      - : Les valeurs indiquent un nombre absolu de pixels.
     - `pixel:`
+      - : Les valeurs indiquent un nombre absolu de pixels.
+    - `percent:`
       - : Les valeurs indiquent un pourcentage de la largeur ou de la hauteur intrinsèque du média.
 - `xCoord`
   - : La distance horizontale du coin supérieur gauche de la boîte affichée par rapport au coin supérieur gauche du média.
@@ -91,14 +91,14 @@ Les éléments clés de la syntaxe sont&nbsp;:
 - `height`
   - : La hauteur de la boîte affichée.
 
-Ainsi, par exemple, les fragments suivants afficheront une boîte de `320x240` pixels dont le coin supérieur gauche est à `160px` de la gauche et `120px` du haut du média original.
+Ainsi, par exemple, les fragments suivants affichent une boîte de `320x240` pixels dont le coin supérieur gauche est à `160px` de la gauche et `120px` du haut du média original.
 
 ```plain
 xywh=160,120,320,240
 xywh=pixel:160,120,320,240
 ```
 
-Le fragment suivant affichera une boîte de `50%x50%` dont le coin supérieur gauche est à `25%` de la gauche et `25%` du haut du média original.
+Le fragment suivant affiche une boîte de `50%x50%` dont le coin supérieur gauche est à `25%` de la gauche et `25%` du haut du média original.
 
 ```plain
 xywh=percent:25,25,50,50

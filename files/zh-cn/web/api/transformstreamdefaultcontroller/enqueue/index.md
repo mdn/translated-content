@@ -1,11 +1,14 @@
 ---
-title: TransformStreamDefaultController.enqueue()
+title: TransformStreamDefaultController：enqueue() 方法
+short-title: enqueue()
 slug: Web/API/TransformStreamDefaultController/enqueue
+l10n:
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
-{{domxref("TransformStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定的分块排入流的可读端。
+{{domxref("TransformStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定的分块加入流的可读端队列。
 
 有关可读流和分块的更多信息，请参见[使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)。
 
@@ -18,7 +21,7 @@ enqueue(chunk)
 ### 参数
 
 - `chunk`
-  - : 正在排入的分块。一个分块是一个数据片段。它可以是任何数据类型，并且一个流可以包含不同类型的分块。
+  - : 正在排队的分块。分块是指单个数据单元。它可以是任何类型的数据，且一个流可以包含不同类型的分块。
 
 ### 返回值
 

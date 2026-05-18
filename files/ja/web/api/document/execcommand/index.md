@@ -3,14 +3,17 @@ title: "Document: execCommand() メソッド"
 short-title: execCommand()
 slug: Web/API/Document/execCommand
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}{{deprecated_header}}{{non-standard_header}}
+
+> [!NOTE]
+> `execCommand()` メソッドは非推奨となっていますが、まだ有効な代替手段を持たない有効な用途がいくつか存在します。例えば、直接的な DOM 操作とは異なり、`execCommand()` による変更では、取り消しバッファー（編集履歴）が保持されます。このような用途では、引き続きこのメソッドを使用することができますが、{{domxref("document.queryCommandSupported()")}} などを使用して、ブラウザー間の互換性を検証してください。
 
 **`execCommand`** メソッドは、複数の異なるコマンドを実装しています。クリップボードへのアクセスを提供するものもあれば、[フォーム入力フィールド](/ja/docs/Web/HTML/Reference/Elements/input)や [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) の要素、文書全体（[デザインモード](/ja/docs/Web/API/Document/designMode)に切り替えた場合）を編集するためのものもあります。
 
-クリップボードにアクセスするには、`execCommand()` よりも新しい[クリップボード API](/ja/docs/Web/API/Clipboard_API) が推奨されます。しかし、編集コマンドを置き換えるものはありません。DOM を直接操作するのとは異なり、`execCommand()` によって実行された変更はアンドゥバッファ (編集履歴) を保持します。
+クリップボードにアクセスするには、`execCommand()` よりも新しい[クリップボード API](/ja/docs/Web/API/Clipboard_API) が推奨されます。
 
 多くのコマンドは、文書の[選択範囲](/ja/docs/Web/API/Selection)に対して影響を及ぼします。例えば、一部のコマンド（太字、斜体など）は現在選択されているテキストを整形する一方で、他のコマンドは選択範囲を削除したり、新しい要素を挿入したり（選択範囲を置き換えたり）、行全体に影響を与えたり（インデント）します。変更することができるのは現在アクティブになっている編集可能な要素だけですが、一部のコマンド（`copy`など）は編集可能な要素がなくても動作します。
 
@@ -20,12 +23,12 @@ l10n:
 ## 構文
 
 ```js-nolint
-execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+execCommand(commandName, showDefaultUI, valueArgument)
 ```
 
 ### 引数
 
-- `aCommandName`
+- `commandName`
   - : 文字列で、実行するコマンドの名前を指定します。以下のコマンドが使用できます。
     - `backColor`
       - : 文書の背景色を変更します。 `styleWithCss` モードでは、文書ではなく含まれているブロックの背景色に影響します。この場合、引数として {{cssxref("&lt;color&gt;")}} 値の文字列を渡す必要があります。
@@ -42,7 +45,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : 選択範囲の前後または挿入位置に {{HTMLElement("small")}} タグを追加します。
     - `defaultParagraphSeparator`
-      - : 編集可能なテキスト領域に新しい段落が作成された時の、段落区切りを変更します。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation)を参照してください。
+      - : 編集可能なテキスト領域に新しい段落が作成された時の、段落区切りを変更します。
     - `delete`
       - : 現在の選択範囲を削除します。
     - `enableAbsolutePositionEditor`
@@ -74,9 +77,20 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `insertHorizontalRule`
       - : 挿入位置に {{HTMLElement("hr")}} 要素を挿入するか、選択範囲を置き換えるかします。
     - `insertHTML`
-      - : 挿入位置に HTML 文字列を挿入します (選択範囲は削除されます)。引数として正しい HTML 文字列が必要です。(Internet Explorer では対応していません。)
+      - : 挿入位置に HTML マークアップの {{domxref("TrustedHTML")}} インスタンスまたは文字列を挿入します (選択範囲は削除されます)。
+        正しい HTML マークアップが必要です。
+
+        > [!WARNING]
+        > 入力は HTML として構文解析され、DOM に書き込まれます。
+        > このような API は[インジェクションシンク](/ja/docs/Web/API/Trusted_Types_API#概念と使い方)と呼ばれ、入力が攻撃者から来たものであれば、[クロスサイトスクリプティング (XSS)](/ja/docs/Web/Security/Attacks/XSS)攻撃の経路となる可能性があります。
+        >
+        > このリスクを軽減するには、文字列の代わりに常に {{domxref("TrustedHTML")}} オブジェクトを割り当て、[信頼型を強制する](/ja/docs/Web/API/Trusted_Types_API#csp_を使用した信頼型の強制)ようにしてください。
+        > 詳しくは[信頼型 API](/ja/docs/Web/API/Trusted_Types_API) を参照してください。
+
     - `insertImage`
       - : 挿入位置に画像を挿入します (選択範囲は削除されます)。引数として画像の `src` のための URL 文字列が必要です。この文字列の要求事項は、 `createLink` と同じです。
+    - `insertLineBreak`
+      - : 選択範囲を削除し、[改行要素](/ja/docs/Web/HTML/Reference/Elements/br)で置き換えます。
     - `insertOrderedList`
       - : 選択範囲または挿入位置に[番号付き順序付きリスト](/ja/docs/Web/HTML/Reference/Elements/ol)を生成します。
     - `insertUnorderedList`
@@ -98,7 +112,12 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `outdent`
       - : 選択範囲または挿入位置を含む行の字下げを戻します。
     - `paste`
-      - : クリップボードのコンテンツを挿入位置に貼り付け（ペースト）します（現在の選択範囲は置き換えられます）。ウェブコンテンツでは無効です。
+      - : クリップボードのコンテンツを挿入位置に貼り付け（ペースト）します（現在の選択範囲は置き換えられます）。
+
+        この機能はウェブコンテンツでは無効とされていますが、一部のブラウザーでは[クリップボード API](/ja/docs/Web/API/Clipboard_API#セキュリティの考慮) を通じて実装されています。
+        これらのブラウザーでは、この機能を利用するには{{glossary("transient activation", "一時的な活性化")}}が要求され、また、オリジンを越えたコンテンツを貼り付ける際にはポップアップ UI の確認が必要です。
+        詳しくは、[ブラウザーの互換性一覧表](#ブラウザーの互換性)を参照してください。
+
     - `redo`
       - : 前回の undo コマンドを元に戻します。
     - `removeFormat`
@@ -118,18 +137,17 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `unlink`
       - : 選択されたハイパーリンクから[アンカー要素](/ja/docs/Web/HTML/Reference/Elements/a)を削除します。
     - `useCSS` {{Deprecated_inline}}
-      - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true または false の真偽値が必要です。
+      - : 生成するマークアップに HTML タグと CSS のどちらを使用するかを切り替えます。引数として true/false の論理値が必要です。
         > [!NOTE]
         > この引数は論理が逆です（つまり、`false` で CSS が使用され、`true` で HTML が使用される）。これは `styleWithCSS` に置き換えられ、非推奨になりました。
-
     - `styleWithCSS`
       - : `useCSS` コマンドを置き換えるものです。`true` はマークアップ時に `style` 属性が生成または変更され、false では書式要素が生成されます。
     - `AutoUrlDetect`
       - : ブラウザーの自動リンクの動作を変更します。
 
-- `aShowDefaultUI`
+- `showDefaultUI`
   - : 論理値で、既定のユーザーインターフェイスを表示するかどうかを指示します。 Mozilla では未実装です。
-- `aValueArgument`
+- `valueArgument`
   - : 入力引数を必要とするコマンド向けのもので、その情報を提供する文字列です。例えば、 `insertImage` では挿入する画像の URL です。引数が不要な場合は `null` を指定してください。
 
 ### 返値
@@ -140,8 +158,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 > `document.execCommand()` はユーザーの操作の中で行われた場合にのみ `true` を返します。コマンドを呼び出す前に、ブラウザーが対応しているかどうかを調べるために返値を使用しないでください。
 
 ## 例
-
-[execCommand と contentEditable 要素の使用方法](https://codepen.io/chrisdavidmills/full/gzYjag/)の例 (CodePen) です。
 
 ### insertText の使用
 
@@ -159,7 +175,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
   <button data-el="i">Italic</button>
 </div>
 
-<textarea class="editarea">Some text.</textarea>
+<textarea class="editarea">いくらかのテキスト。</textarea>
 
 <h2>contenteditable</h2>
 
@@ -168,13 +184,13 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
   <button data-el="i">Italic</button>
 </div>
 
-<pre contenteditable="true" class="editarea">Some text.</pre>
+<pre contenteditable="true" class="editarea">いくらかのテキスト。</pre>
 ```
 
 #### JavaScript
 
 ```js
-// Prepare action buttons
+// アクションボタンを準備
 const buttonContainers = document.querySelectorAll(".actions");
 
 for (const buttonContainer of buttonContainers) {
@@ -189,7 +205,7 @@ for (const buttonContainer of buttonContainers) {
   }
 }
 
-// Inserts text at cursor, or replaces selected text
+// カーソルの位置にテキストを挿入するか、選択したテキストを置き換えます
 function insertText(newText, selector) {
   const textarea = document.querySelector(selector);
   textarea.focus();
@@ -205,7 +221,7 @@ function insertText(newText, selector) {
   }
 
   if (!pasted) {
-    console.error("paste unsuccessful, execCommand not supported");
+    console.error("貼り付けに失敗しました。execCommand に対応していません。");
   }
 }
 ```
@@ -214,9 +230,45 @@ function insertText(newText, selector) {
 
 {{EmbedLiveSample("Using insertText", 100, 300)}}
 
+### paste の使用
+
+この例には、{{HTMLElement("textarea")}} 要素と、そこにコンテンツを貼り付けるために使用することができる {{HTMLElement("button")}} 要素が含まれています。
+
+#### HTML
+
+```html
+<button id="paste">貼り付け</button>
+<hr />
+<textarea id="text_box">いくらかのテキスト。</textarea>
+```
+
+#### JavaScript
+
+```js
+const pasteButton = document.querySelector("#paste");
+const textBox = document.querySelector("#text_box");
+
+pasteButton.addEventListener("click", () => {
+  textBox.focus();
+
+  let pasted = document.execCommand("paste", false);
+  if (!pasted) {
+    textBox.textContent =
+      "貼り付けに失敗しました。execCommand に対応していません。";
+  }
+});
+```
+
+#### 結果
+
+[クリップボード API](/ja/docs/Web/API/Clipboard_API#セキュリティの考慮) を使用してこの機能を実装しているブラウザーでは、テキストエリア内のテキストなど、同一オリジンのコンテンツをコピーし、それを貼り付けて選択されているコンテンツを置き換えることができるはずです。
+他のページや場所からコピーしたテキストなど、オリジンを越えるコンテンツを貼り付けようとする場合は、まず表示される「貼り付け」 UI を選択する必要があります。
+
+{{EmbedLiveSample("Using paste", 100, 300)}}
+
 ## 仕様書
 
-この機能は現在のどの仕様にも属しませんが、これを規定しようとする[非公式な草案](https://w3c.github.io/editing/docs/execCommand/)があります。
+この機能は、現在のいかなる仕様にも属しません。標準化の予定がなくなりました。非公式な [W3C execCommand 仕様書草案](https://w3c.github.io/editing/docs/execCommand/)があります。
 
 ## ブラウザーの互換性
 
@@ -225,5 +277,9 @@ function insertText(newText, selector) {
 ## 関連情報
 
 - [クリップボード API](/ja/docs/Web/API/Clipboard_API)
+- MDN の例: [ブラウザーで対応している execCommand](https://mdn.github.io/dom-examples/execcommand/)
 - {{domxref("HTMLElement.contentEditable")}}
 - {{domxref("document.designMode")}}
+- {{domxref("document.queryCommandEnabled()")}}
+- {{domxref("document.queryCommandState()")}}
+- {{domxref("document.queryCommandSupported()")}}

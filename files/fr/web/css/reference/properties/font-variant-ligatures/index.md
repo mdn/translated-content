@@ -3,7 +3,7 @@ title: Propriété CSS `font-variant-ligatures`
 short-title: font-variant-ligatures
 slug: Web/CSS/Reference/Properties/font-variant-ligatures
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-ligatures`** contrôle quelles {{Glossary("ligature", "ligatures")}} et formes contextuelles sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.

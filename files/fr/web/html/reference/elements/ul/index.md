@@ -1,8 +1,9 @@
 ---
-title: "<ul> : l'élément de liste non ordonnée"
+title: "Élément HTML `<ul>` : l'élément de liste non ordonnée"
+short-title: <ul>
 slug: Web/HTML/Reference/Elements/ul
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.

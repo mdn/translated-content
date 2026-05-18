@@ -1,95 +1,69 @@
 ---
-title: Intl.NumberFormat.prototype.formatRangeToParts()
+title: "Intl.NumberFormat : méthode formatRangeToParts()"
+short-title: formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
-
-La méthode **`Intl.Numberformat.prototype.formatRangeToParts()`** permet de formater des chaînes de caractères produites par des objets `NumberFormat` en tenant compte de la locale.
+La méthode **`formatRangeToParts()`** des instances de {{JSxRef("Intl.NumberFormat")}} retourne un tableau ({{JSxRef("Array")}}) d'objets contenant les jetons spécifiques à la locale à partir desquels il est possible de construire des chaînes de caractères personnalisées tout en préservant les parties spécifiques à la locale. Cela permet de fournir des intervalles de formatage personnalisés sensibles à la locale pour les chaînes de caractères représentant des nombres.
 
 ## Syntaxe
 
-```js
-formatRangeToParts();
-formatRangeToParts(debutIntervalle, finIntervalle);
+```js-nolint
+formatRangeToParts(startRange, endRange)
 ```
 
 ### Paramètres
 
-- `debutIntervalle`
-  - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
-
-- `finIntervalle`
-  - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
+- `startRange`
+  - : Un nombre ({{JSxRef("Number")}}), un grand entier ({{JSxRef("BigInt")}}), ou une chaîne de caractères, à formater. Les chaînes de caractères sont analysées de la même manière que dans [la conversion de nombres](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number#contrainte_de_nombre), sauf que `formatRangeToParts()` utilisera la valeur exacte que représente la chaîne de caractères, évitant ainsi toute perte de précision lors de la conversion implicite en nombre.
+- `endRange`
+  - : Un nombre ({{JSxRef("Number")}}), un grand entier ({{JSxRef("BigInt")}}), ou une chaîne de caractères, à formater.
 
 ### Valeur de retour
 
-Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) d'objets qui contiennent les différents fragments représentant l'intervalle numérique pour la locale.
+Un tableau ({{JSxRef("Array")}}) d'objets contenant l'intervalle formaté en parties. Chaque objet possède trois propriétés, `type`, `value` et `source`, chacune contenant une chaîne de caractères. La concaténation des valeurs de `value`, dans l'ordre fourni, donnera la même chaîne de caractères que {{JSxRef("Intl/NumberFormat/formatRange", "formatRange()")}}. La propriété `type` peut avoir les mêmes valeurs que {{JSxRef("Intl/NumberFormat/formatToParts", "formatToParts()")}}, ou la valeur supplémentaire `"approximatelySign"` (voir ci-dessous). La propriété `source` peut être l'une des suivantes&nbsp;:
 
-## Description
+- `startRange`
+  - : Le jeton fait partie du nombre de début.
+- `endRange`
+  - : Le jeton fait partie du nombre de fin.
+- `shared`
+  - : Le jeton est partagé entre le début et la fin&nbsp;; par exemple, le symbole de la devise. Tous les littéraux qui font partie du modèle d'intervalle lui-même, comme le séparateur `"—"`, sont également marqués comme `shared`.
 
-La méthode `formatRangeToParts()` est utile lorsqu'on souhaite construire des chaînes localisées sur mesure qui représentent des intervalles numériques. Elle renvoie un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) dont les éléments sont des objets décrivant chaque fragment localisé qui permet de construire une chaîne de caractères sur mesure tout en préservant la localisation. La structure du tableau renvoyé par la méthode `formatRangeToParts()` ressemble à&nbsp;:
+Si les nombres de début et de fin sont formatés de la même manière, alors la sortie contient la même liste de jetons que l'appel de {{JSxRef("Intl/NumberFormat/formatToParts", "formatToParts()")}} sur le nombre de début, avec tous les jetons marqués comme `source: "shared"`. De plus, le premier jeton peut être un symbole «&nbsp;environ égal&nbsp;» (par exemple, `"~"`) avec `type: "approximatelySign"`. L'insertion de ce symbole dépend uniquement des paramètres de la locale et est insérée même lorsque `startRange === endRange`.
 
-```js
-[
-  { type: "integer", value: "3", source: "startRange" },
-  { type: "literal", value: "-", source: "shared" },
-  { type: "integer", value: "5", source: "endRange" },
-  { type: "literal", value: " ", source: "shared" },
-  { type: "currency", value: "€", source: "shared" },
-];
-```
+### Exceptions
 
-Les types de valeur possibles pour les fragments sont&nbsp;:
-
-- `"currency"`
-  - : La chaîne de caractères représentant la devise, telle que les symboles `"$"` et `"€"` ou les noms `"Dollar"`, `"Euro"` selon comment `currencyDisplay` est indiqué.
-- `"decimal"`
-  - : La chaîne de caractères représentant le séparateur décimal (par exemple `"."`).
-- `"fraction"`
-  - : La chaîne de caractères représentant la partie fractionnaire.
-- `"group"`
-  - : La chaîne de caractères pour la séparation entre les groupes (par exemple `","`).
-- `"infinity"`
-  - : La chaîne de caractères pour représenter l'infini ([`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity)) (par exemple `"∞"`).
-- `"integer"`
-  - : La chaîne de caractères représentant la partie entière.
-- `"literal"`
-  - : Toute chaîne de caractères ou blanc utilisé pour le formatage de la valeur numérique.
-- `"minusSign"`
-  - : La chaîne de caractères représentant le signe moins (par exemple `"-"`).
-- `"nan"`
-  - : La chaîne de caractères représentant la valeur [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) (`"NaN"`).
-- `"plusSign"`
-  - : La chaîne de caractères représentant le signe plus (par exemple `"+"`).
-- `"percentSign"`
-  - : La chaîne de caractères représentant le signe de pourcentage (par exemple `"%"`).
-- `"unit"`
-  - : La chaîne de caractères représentant l'unité, telle que `"l"` ou `"litres"` selon comment `unitDisplay` est indiqué.
+- {{JSxRef("RangeError")}}
+  - : Levée si `startRange` ou `endRange` est `NaN` ou une chaîne de caractères non convertible.
+- {{JSxRef("TypeError")}}
+  - : Levée si `startRange` ou `endRange` n'est pas défini.
 
 ## Exemples
 
-### Comparer `formatRange()` et `formatRangeToParts()`
+### Utiliser la méthode `formatRangeToParts()`
 
-`NumberFormat.formatRange()` produit des chaînes de caractères localisées qui ne peuvent pas être manipulées directement&nbsp;:
+La méthode `formatRange()` retourne des chaînes de caractères localisées opaques qui ne peuvent pas être manipulées directement&nbsp;:
 
 ```js
-const debutIntervalle = 3500;
-const finIntervalle = 9500;
+const startRange = 3500;
+const endRange = 9500;
 
-const formateur = new Intl.NumberFormat("de-DE", {
+const formatter = new Intl.NumberFormat("de-DE", {
   style: "currency",
   currency: "EUR",
 });
 
-formateur.formatRange(debutIntervalle, finIntervalle);
-// "3.500,00–9.500,00 €"
+console.log(formatter.formatRange(startRange, endRange));
+// "3.500,00—9.500,00 €"
 ```
 
-Toutefois, s'il est nécessaire de personnaliser la chaîne de caractères finale en utilisant les fragments localisés, on peut utiliser la méthode `formatRangeToParts()` qui fournit les fragments formatés de la chaîne de caractères et qui tiennent compte de la locale&nbsp;:
+Cependant, dans de nombreuses interfaces utilisateur, vous pouvez vouloir personnaliser le formatage de cette chaîne, ou l'intercaler avec d'autres textes. La méthode `formatRangeToParts()` produit les mêmes informations en parties&nbsp;:
 
 ```js
-formateur.formatRangeToParts(debutIntervalle, finIntervalle)
+console.log(formatter.formatRangeToParts(startRange, endRange));
 
 // Valeur de retour :
 [
@@ -98,7 +72,7 @@ formateur.formatRangeToParts(debutIntervalle, finIntervalle)
   { type: "integer", value: "500", source: "startRange" },
   { type: "decimal", value: ",", source: "startRange" },
   { type: "fraction", value: "00", source: "startRange" },
-  { type: "literal", value: "–", source: "shared" },
+  { type: "literal", value: "—", source: "shared" },
   { type: "integer", value: "9", source: "endRange" },
   { type: "group", value: ".", source: "endRange" },
   { type: "integer", value: "500", source: "endRange" },
@@ -106,7 +80,7 @@ formateur.formatRangeToParts(debutIntervalle, finIntervalle)
   { type: "fraction", value: "00", source: "endRange" },
   { type: "literal", value: " ", source: "shared" },
   { type: "currency", value: "€", source: "shared" },
-]
+];
 ```
 
 ## Spécifications
@@ -119,6 +93,5 @@ formateur.formatRangeToParts(debutIntervalle, finIntervalle)
 
 ## Voir aussi
 
-- [`Intl.NumberFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
-- [`Intl.NumberFormat.prototype.format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format)
-- La méthode analogue pour le formatage d'intervalle de dates&nbsp;: [`Intl.DateTimeFormat.prototype.formatRangeToParts()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts)
+- L'objet {{JSxRef("Intl.NumberFormat")}}
+- La méthode {{JSxRef("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}

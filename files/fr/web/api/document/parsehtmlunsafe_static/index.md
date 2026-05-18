@@ -3,7 +3,7 @@ title: "Document : méthode statique parseHTMLUnsafe()"
 short-title: parseHTMLUnsafe()
 slug: Web/API/Document/parseHTMLUnsafe_static
 l10n:
-  sourceCommit: e1d5e4480e823e863842fdb27b19f6b499ca00a0
+  sourceCommit: cda9415220ba812ba2ee24e0af1c8e8001ab9924
 ---
 
 {{APIRef("DOM")}}
@@ -34,11 +34,11 @@ Document.parseHTMLUnsafe(input, options)
 - `options` {{Optional_Inline}}
   - : Un objet d'options avec les paramètres optionnels suivants&nbsp;:
     - `sanitizer` {{Optional_Inline}}
-      - : Un objet {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} qui définit quels éléments de l'entrée seront autorisés ou supprimés.
-        Cela peut également être une chaîne de caractères avec la valeur `"default"`, qui applique un `Sanitizer` avec la configuration par défaut (sécurisée contre les XSS).
+      - : Un objet {{DOMxRef("Sanitizer")}} ou {{DOMxRef("SanitizerConfig")}} qui définit quels éléments de l'entrée sont autorisés ou supprimés.
+        Cela peut également être une chaîne de caractères avec la valeur `"default"`, qui applique un `Sanitizer` avec la [configuration par défaut de l'assainisseur](/fr/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration). (sécurisée contre les XSS).
         Si aucun n'est défini, aucun assainisseur n'est utilisé.
 
-        Notez qu'en général, un `Sanitizer` est attendu pour être plus efficace qu'un `SanitizerConfig` si la configuration doit être réutilisée.
+        Notez que si vous utilisez la même configuration plusieurs fois, il est prévu qu'il soit plus efficace d'utiliser un `Sanitizer` et de le modifier lorsque vous en avez besoin.
 
 ### Valeur de retour
 
@@ -58,13 +58,13 @@ Un objet {{DOMxRef("Document")}}.
 ## Description
 
 La méthode statique **`parseHTMLUnsafe()`** peut être utilisée pour créer une nouvelle instance de {{DOMxRef("Document")}}, en filtrant éventuellement les éléments et attributs indésirables.
-Le `Document` résultant aura un [type de contenu](/fr/docs/Web/API/Document/contentType) de `"text/html"`, un [encodage de caractères](/fr/docs/Web/API/Document/characterSet) UTF-8 et une URL «&nbsp;about:blank&nbsp;».
+Le `Document` résultant a un [type de contenu](/fr/docs/Web/API/Document/contentType) de `"text/html"`, un [encodage de caractères](/fr/docs/Web/API/Document/characterSet) UTF-8 et une URL «&nbsp;about:blank&nbsp;».
 
 Le HTML d'entrée peut inclure des [racines d'ombre déclaratives](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif).
 Si la chaîne HTML définit plus d'une [racine d'ombre déclarative](/fr/docs/Web/HTML/Reference/Elements/template#dom_dombre_déclaratif) dans un hôte d'ombre donné, seule la première {{DOMxRef("ShadowRoot")}} est créée — les déclarations suivantes sont analysées comme des éléments {{HTMLElement("template")}} à l'intérieur de cette racine d'ombre.
 
 `parseHTMLUnsafe()` n'effectue aucun assainissement par défaut.
-Si aucun assainisseur n'est passé en paramètre, toutes les entités HTML de l'entrée seront injectées.
+Si aucun assainisseur n'est passé en paramètre, toutes les entités HTML de l'entrée sont injectées.
 
 ### Considérations de sécurité
 
@@ -78,7 +78,7 @@ Cela garantit que l'entrée passe par une fonction de transformation, qui a la p
 L'utilisation de `TrustedHTML` permet d'auditer et de vérifier que le code d'assainissement est efficace à quelques endroits seulement, plutôt que dispersé dans tous les points d'injection.
 Il n'est pas nécessaire de passer un assainisseur à la méthode lorsque vous utilisez `TrustedHTML`.
 
-Si, pour une raison quelconque, vous ne pouvez pas utiliser `TrustedHTML` (ou mieux, `setHTML()`), l'option la plus sûre suivante consiste à utiliser `setHTMLUnsafe()` avec la configuration par défaut de {{DOMxRef("Sanitizer")}} sécurisée contre les XSS.
+Si, pour une raison quelconque, vous ne pouvez pas utiliser `TrustedHTML` (ou mieux, `setHTML()`), l'option la plus sûre suivante consiste à utiliser `setHTMLUnsafe()` avec la [configuration par défaut de l'assainisseur](/fr/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration) sécurisée contre les XSS.
 
 ## Spécifications
 

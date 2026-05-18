@@ -21,7 +21,7 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
           >Building blocks</a
         >
         참조), OOJS 기초 (<a
-          href="/ko/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/ko/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >
         참조).

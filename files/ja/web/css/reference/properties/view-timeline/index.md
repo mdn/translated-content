@@ -1,60 +1,67 @@
 ---
-title: view-timeline
+title: CSS `view-timeline` プロパティ
+short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
-original_slug: Web/CSS/view-timeline
 l10n:
-  sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
-{{SeeCompatTable}}
-
-**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
-
-既定では、主体要素がスクローラーの一方の端に初めて表示されるとタイムラインは 0% になり、反対側の端に達すると 100% になります。
-
-`view-timeline` は 2 つの構成値、名前付き進行タイムラインの名前とオプションのスクロール軸の値持つことができます。
-この名前は [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline) 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうである必要はありません。主体がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
-
-> [!NOTE]
-> 要素が軸方向の寸法でそのコンテナーをはみ出さない場合、またははみ出した部分が隠されているかクリップされている場合、タイムラインは作成されません。
+**`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)で、[名前付きビュー進行タイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#名前付きビュー進行タイムライン)の名前、方向、インセット値を定義します。
 
 ## 構成要素のプロパティ
 
-このプロパティは以下の CSS プロパティの一括指定です。
+このプロパティは、次の CSS プロパティの一括指定です。
 
-- [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
-- [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis)
+- {{cssxref("view-timeline-axis")}}
+- {{cssxref("view-timeline-inset")}}
+- {{cssxref("view-timeline-name")}}
 
 ## 構文
 
 ```css
-/* 2 つの値: view-timeline-name と view-timeline-axis がそれぞれ 1 つずつ */
-view-timeline: --custom_name_for_timeline block;
-view-timeline: --custom_name_for_timeline inline;
-view-timeline: --custom_name_for_timeline y;
-view-timeline: --custom_name_for_timeline x;
-view-timeline: none block;
-view-timeline: none inline;
-view-timeline: none y;
-view-timeline: none x;
-
-/* 1 つの値: view-timeline-name */
+/* 単一の成分 */
 view-timeline: none;
 view-timeline: --custom_name_for_timeline;
+
+/* 2 つの成分 */
+view-timeline: --custom_name_for_timeline block;
+view-timeline: --custom_name_for_timeline y;
+view-timeline: none inline;
+view-timeline: none x;
+
+/* 3 つの成分 */
+view-timeline: --custom_name_for_timeline block auto;
+view-timeline: --custom_name_for_timeline block 20% 200px;
+
+/* グローバル値 */
+view-timeline: inherit;
+view-timeline: initial;
+view-timeline: revert;
+view-timeline: revert-layer;
+view-timeline: unset;
 ```
-
-`view-timeline` の一括指定プロパティは `<view-timeline-name>` と `<view-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、 `<view-timeline-name>` 値の後に `<view-timeline-axis>` 値が続く順序でなければなりません。
-
-> [!NOTE]
-> `<view-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/Reference/Values/dashed-ident) の値で、 `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ### 値
 
 - `<view-timeline-name>`
-  - : [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name) を参照してください。
-
+  - : {{cssxref("view-timeline-name")}} を参照してください。デフォルト値は `none` です。
+- `<view-timeline-inset>`
+  - : {{cssxref("view-timeline-inset")}} を参照してください。デフォルト値は `auto` です。
 - `<view-timeline-axis>`
-  - : [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis) を参照してください。既定値は `block` です。
+  - : {{cssxref("view-timeline-axis")}} を参照してください。デフォルト値は `block` です。
+
+### 解説
+
+`view-timeline` 一括指定プロパティは、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する、名前付きビュー進行タイムラインを定義します。 `view-timeline` は主体要素に設定します。要素がこの軸の方向の寸法でそのコンテナーをはみ出さない場合、または、はみ出した部分が隠されていたりクリップされていたりする場合、タイムラインは作成されません。
+
+スクロール領域内での主体要素の可視状態が追跡されます。デフォルトでは、主体要素がスクロール領域の一方の端で初めて表示された時点でタイムラインは `0%` となり、反対側の端に到達した時点で `100%` となります。
+
+`view-timeline` には 3 つの構成値があります。名前付きビュー進行タイムラインの名前、スクロール軸の値、2 つ以下のタイムラインのインセット値です。
+値が 1 つだけ宣言された場合、この値は `view-timeline-name` とみなされます。この名前は {{cssxref("animation-timeline")}} 宣言で参照され、タイムラインの進行に合わせてアニメーションする要素を示します。これは主体要素である場合もありますが、そうであるとは限りません。主体要素がスクロール領域を移動する際に異なる要素をアニメーションさせることができます。
+
+`view-timeline` 一括指定プロパティは `<view-timeline-name>`、`<view-timeline-inset>`、`<view-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくとも 1 つの値を指定しなければなりません。すべての値を指定した場合は、 `<view-timeline-name>` 値の後に `<view-timeline-axis>` 値や `<view-timeline-inset>` 値が続く順序でなければなりません。
+
+`<view-timeline-name>` で指定される名前は、カンマ区切りの {{cssxref("dashed-ident")}} 値（`--` から始める必要がある）のリストで、これによって CSS の標準キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 
@@ -68,8 +75,8 @@ view-timeline: --custom_name_for_timeline;
 
 ### 名前付きビュー進行タイムラインの作成
 
-`--subjectReveal` という名前のビュー進行タイムラインは、 `view-timeline` プロパティを使用して、`class` が `animation` の主体要素に定義します。
-これを同じ要素のタイムラインとして設定するには `animation-timeline: --subjectReveal` を使用します。その結果、主体要素は文書がスクロールされるにつれて上方向に移動するアニメーションが表示されます。
+`--subject-reveal` という名前のビュー進行タイムラインは、`view-timeline` プロパティを使用して、`class` が `animation` の主体要素に定義します。
+これを同じ要素のタイムラインとして設定するには `animation-timeline: --subject-reveal` を使用します。その結果、主体要素は文書がスクロールされるにつれて上方向に移動するアニメーションが表示されます。
 
 #### HTML
 
@@ -77,7 +84,7 @@ view-timeline: --custom_name_for_timeline;
 
 ```html
 <div class="content">
-  <h1>Content</h1>
+  <h1>コンテンツ</h1>
 
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -130,7 +137,7 @@ view-timeline: --custom_name_for_timeline;
 
 p,
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
@@ -143,14 +150,14 @@ p {
 }
 ```
 
-`subject` クラスのついた `<div>` には、`animation` クラスも指定されています。ここで `view-timeline-name` を設定し、名前付きビュー進行タイムラインを定義しています。また、同じ値で `animation-timeline` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
+`subject` クラスが指定された `<div>` には、`animation` クラスも指定されています。ここで `view-timeline` を設定し、名前付きビュー進行タイムラインを定義しています。また、同じ値で `animation-timeline` の名前を指定して、ビュー進行タイムラインが進むにつれてアニメーションする要素であることを宣言します。
 
 最後に、要素の透過率と変倍をアニメーションで指定し、スクロール移動されるたびにフェードインしたり変倍させたりします。
 
 ```css
 .animation {
-  view-timeline: --subjectReveal block;
-  animation-timeline: --subjectReveal;
+  view-timeline: --subject-reveal block;
+  animation-timeline: --subject-reveal;
 
   animation-name: appear;
   animation-fill-mode: both;
@@ -164,8 +171,22 @@ p {
   }
 
   to {
-    opacity: 1,
+    opacity: 1;
     transform: scaleX(1);
+  }
+}
+```
+
+```css hidden
+@layer no-support {
+  @supports not (view-timeline: none) {
+    body::before {
+      content: "このブラウザーは `view-timeline` プロパティに対応していません。";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
   }
 }
 ```
@@ -186,7 +207,8 @@ p {
 
 ## 関連情報
 
-- [`animation-timeline`](/ja/docs/Web/CSS/Reference/Properties/animation-timeline)
-- {{cssxref("timeline-scope")}}
-- [`view-timeline-axis`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-axis), [`view-timeline-name`](/ja/docs/Web/CSS/Reference/Properties/view-timeline-name)
+- {{cssxref("animation-timeline")}}
+- {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
+- {{cssxref("animation-timeline/view", "view()")}}
+- [ガイド: CSS によるスクロール駆動アニメーションのタイムライン](/ja/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline)
 - [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations)

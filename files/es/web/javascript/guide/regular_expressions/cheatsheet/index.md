@@ -91,7 +91,7 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
      </tr>
      <tr>
       <td><code>[\b]</code></td>
-      <td>Coincide con un caracter de retroceso. Si estás buscando el caracter de límite de palabra (<code>\b</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries">Límites</a>.</td>
+      <td>Coincide con un caracter de retroceso. Si estás buscando el caracter de límite de palabra (<code>\b</code>), consulta <a href="/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">Límites</a>.</td>
      </tr>
      <tr>
       <td><code>\0</code></td>

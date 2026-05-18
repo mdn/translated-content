@@ -3,7 +3,7 @@ title: Propriété CSS `quotes`
 short-title: quotes
 slug: Web/CSS/Reference/Properties/quotes
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 652d220f00bede14baef1fc755003a3bcfd2573c
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`quotes`** définit la manière dont le navigateur doit afficher les guillemets qui sont automatiquement ajoutés à l'élément HTML {{HTMLElement("q")}} ou ajoutés en utilisant les valeurs `open-quotes` ou `close-quotes` (ou omis en utilisant les valeurs `no-open-quote` et `no-close-quote`) de la propriété CSS {{CSSxRef("content")}}.
@@ -80,7 +80,7 @@ quotes: unset;
     La paire de guillemets utilisée dépend de la profondeur, ou du niveau d'imbrication, des guillemets&nbsp;: le nombre d'occurrences de guillemets `<q>` ou `open-quote` (ou `no-open-quote`) dans tout le texte généré avant l'occurrence actuelle, moins le nombre d'occurrences de guillemets fermants, soit sous forme de `</q>`, `close-quote`, ou `no-close-quote`. Si la profondeur est de 0, la première paire est utilisée, si la profondeur est de 1, la deuxième paire est utilisée, etc.
 
 > [!NOTE]
-> La valeur `open-quote` de la propriété CSS `content` incrémente le niveau de citation et `no-close-quote` le décrémente, mais n'insère pas de guillemets.
+> La valeur `no-open-quote` de la propriété CSS `content` incrémente le niveau de citation et `no-close-quote` le décrémente, mais elles n'insèrent pas de guillemets.
 
 ## Définition formelle
 
@@ -96,7 +96,7 @@ quotes: unset;
 
 Cet exemple compare les guillemets par défaut fournis par l'élément HTML sémantique `<q>` à ceux que nous définissons en utilisant la propriété CSS `quotes`.
 
-La valeur par défaut de `quotes` est [`auto`](#auto). Dans cet exemple, le premier élément de la liste a `quotes: auto` défini, donc il obtient les guillemets par défaut pour la langue définie&nbsp;; c'est la même chose que si aucune propriété `quotes` n'était définie. Le deuxième élément de la liste définit quels guillemets utiliser pour les citations et les citations imbriquées&nbsp;; ces guillemets seront utilisés pour les descendants d'un élément avec la classe `specialQuotes` indépendamment de la langue (comme pour toute valeur de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) définie).
+La valeur par défaut de `quotes` est [`auto`](#auto). Dans cet exemple, le premier élément de la liste a `quotes: auto` défini, donc il obtient les guillemets par défaut pour la langue définie&nbsp;; c'est la même chose que si aucune propriété `quotes` n'était définie. Le deuxième élément de la liste définit quels guillemets utiliser pour les citations et les citations imbriquées&nbsp;; ces guillemets sont utilisés pour les descendants d'un élément avec la classe `specialQuotes` indépendamment de la langue (comme pour toute valeur de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes/lang) définie).
 
 #### HTML
 
@@ -143,7 +143,7 @@ li {
 
 Par défaut, le navigateur fournit des guillemets spécifiques à la langue lorsque l'élément `<q>` est utilisé. Si la propriété `quotes` est définie, les valeurs fournies remplacent les valeurs par défaut du navigateur. Notez que la propriété `quotes` est héritée. La propriété `quotes` est définie sur le `<li>` avec la classe `specialQuotes`, mais les guillemets sont appliqués aux éléments `<q>`.
 
-On notera que chaque guillemets ouvrant et fermant est remplacé par l'une des chaînes de caractères des valeurs de guillemets, en fonction de la profondeur de l'imbrication.
+Notez que chaque guillemet ouvrant et fermant est remplacé par l'une des chaînes de caractères des valeurs de guillemets, en fonction de la profondeur de l'imbrication.
 
 ### Guillemets automatiques
 
@@ -227,7 +227,7 @@ Dans cet exemple, au lieu d'utiliser l'élément `<q>`, nous ajoutons des guille
 
 ### Texte comme guillemets et guillemets vides
 
-Cet exemple montre comment utiliser autre chose que des guillemets comme valeurs `<string>`. L'open-quote indique le locuteur et, comme il n'y a pas de guillemet ouvrant, le close-quote est vide. (Mélanger une `<string>` avec un mot-clé énuméré pour créer une paire n'est pas pris en charge). Nous définissons `auto` pour les guillemets imbriqués. Ces guillemets imbriqués seront encadrés par ce que la langue dicte comme normal pour les guillemets imbriqués.
+Cet exemple montre comment utiliser autre chose que des guillemets comme valeurs `<string>`. L'open-quote indique le locuteur et, comme il n'y a pas de guillemet ouvrant, le guillemet fermant est vide. (Mélanger une `<string>` avec un mot-clé énuméré pour créer une paire n'est pas pris en charge). Nous définissons `auto` pour les guillemets imbriqués. Ces guillemets imbriqués sont encadrés par ce que la langue dicte comme normal pour les guillemets imbriqués.
 
 #### HTML
 

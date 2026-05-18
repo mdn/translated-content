@@ -4,8 +4,6 @@ slug: Web/CSS/Guides/Media_queries/Using_for_accessibility
 original_slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/Requêtes_média/")}}
-
 **Les requêtes média (_media queries_)** peuvent être utilisées afin d'améliorer l'accessibilité d'un site web.
 
 ## Réduction de mouvement - `prefers-reduced-motion`

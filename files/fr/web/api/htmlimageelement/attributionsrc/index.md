@@ -3,10 +3,10 @@ title: "HTMLImageElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLImageElement/attributionSrc
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLImageElement")}} permet d'indiquer que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} avec la requête d'image. Elle reflète l'attribut de contenu [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc) de l'élément HTML `<img>`.
 
@@ -14,7 +14,7 @@ Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) p
 
 ## Valeur
 
-A string that is either empty or a space-separated list of URLs. For the interpretation of this attribute, see the HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc) reference.
+Une chaîne de caractères vide ou une liste d'URL séparées par des espaces. Pour l'interprétation de cet attribut, voir la référence HTML [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributionsrc).
 
 ## Exemples
 

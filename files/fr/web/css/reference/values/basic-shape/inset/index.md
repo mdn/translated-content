@@ -1,29 +1,29 @@
 ---
-title: inset()
+title: Fonction CSS `inset()`
+short-title: inset()
 slug: Web/CSS/Reference/Values/basic-shape/inset
-original_slug: Web/CSS/basic-shape/inset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`ellipse()`** fait partie du [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`inset()`** définit un rectangle aux distances d'encart définies depuis chaque côté de la boîte de référence. C'est une fonction de forme de base utilisée pour définir l'un des [types de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{CSSxRef("&lt;basic-shape&gt;")}}.
 
-{{InteractiveExample("Démonstration CSS&nbsp;: ellipse()")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: inset()")}}
 
 ```css interactive-example-choice
-clip-path: ellipse(20px 50px);
+clip-path: inset(30px);
 ```
 
 ```css interactive-example-choice
-clip-path: ellipse(4rem 50% at right center);
+clip-path: inset(1rem 2rem 3rem 4rem);
 ```
 
 ```css interactive-example-choice
-clip-path: ellipse(closest-side closest-side at 5rem 6rem);
+clip-path: inset(20% 30% round 20px);
 ```
 
 ```css interactive-example-choice
-clip-path: ellipse(closest-side farthest-side);
+clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
 ```
 
 ```html interactive-example
@@ -47,23 +47,19 @@ clip-path: ellipse(closest-side farthest-side);
 ## Syntaxe
 
 ```css
-shape-outside: ellipse(40% 50% at left);
-shape-outside: ellipse(closest-side farthest-side at 30%);
+shape-outside: inset(20px 50px 10px 0 round 50px);
 ```
-
-An ellipse is essentially a squashed circle and so `ellipse()` acts in a very similar way to {{CSSxRef("basic-shape/circle","circle()")}} except that we have to specify two radii x and y.
 
 ### Valeurs
 
-- `<shape-radius>`
-  - : Deux rayons, x et y dans cet ordre. Ils peuvent être une longueur {{CSSxRef("length")}}, un pourcentage {{CSSxRef("percentage")}} ou les valeurs `closest-side` et `farthest-side`.
-    - `closest-side`
-      - : Utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de référence. Pour une ellipse, il s'agit du côté le plus proche dans la dimension du rayon.
-    - `farthest-side`
-      - : Utilise la distance entre le centre de la forme et le côté le plus éloigné de la boîte de référence. Pour une ellipse, il s'agit du côté le plus éloigné dans la dimension du rayon.
+- `<length-percentage>{1,4}`
+  - : Lorsque les quatre arguments sont fournis, ils représentent les décalages supérieur, droit, inférieur et gauche depuis la boîte de référence vers l'intérieur, définissant les positions des bords du rectangle d'encart. Ces arguments suivent la syntaxe de l'abréviation de marge, ce qui permet de définir tous
+    les quatre encarts avec une, deux ou quatre valeurs.
 
-- `<position>`
-  - : Déplace le centre de l'ellipse. Peut être une longueur {{CSSxRef("length")}}, un pourcentage {{CSSxRef("percentage")}} ou une valeur comme `left`. La valeur `<position>` est centrée par défaut si elle est omise.
+    Si une paire d'encarts pour une dimension dépasse 100% de cette dimension, les deux valeurs sont réduites proportionnellement afin que leur somme soit égale à 100%. Par exemple, la valeur `inset(90% 10% 60% 10%)` a un encart supérieur de `90%` et un encart inférieur de `60%`. Ces valeurs sont réduites proportionnellement à `inset(60% 10% 40% 10%)`. Les formes de ce type, qui n'enferment aucune zone et n'ont pas de {{CSSxRef("shape-margin")}}, n'affectent pas l'enroulement.
+
+- `<border-radius>`
+  - : L'argument optionnel [`<border-radius>`](/fr/docs/Web/CSS/Reference/Properties/border-radius) permet de définir des coins arrondis pour le rectangle d'encart en utilisant la syntaxe abrégée de `border-radius`.
 
 ## Syntaxe formelle
 
@@ -71,12 +67,11 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
 
 ## Exemples
 
-### Exemple basique d'`ellipse()`
+### Exemple simple de `inset()`
 
-Cet exemple montre une ellipse positionnée à gauche, avec un rayon horizontal de 40 % et un rayon vertical de 50 %. Le centre de l'ellipse se trouve donc sur le bord gauche de la boîte, ce qui crée une demi‑ellipse autour de laquelle le texte s'enroule.
-Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code pour modifier ces valeurs et voir l'évolution de l'ellipse&nbsp;:
+Dans l'exemple ci-dessous, nous avons une forme `inset()` utilisée pour déplacer le contenu au-dessus de l'élément flottant. Modifiez les valeurs des encarts pour voir comment la forme change.
 
-```html live-sample___ellipse
+```html
 <div class="box">
   <div class="shape"></div>
   <p>
@@ -92,56 +87,26 @@ Cliquez sur «&nbsp;Exécuter&nbsp;» dans les blocs de code pour modifier ces v
 </div>
 ```
 
-```css live-sample___ellipse
-body {
-  font: 1.2em / 1.5 sans-serif;
+```css
+.box {
+  width: 400px;
+  margin: 0 auto;
 }
+
 .shape {
   float: left;
-  shape-outside: ellipse(40% 50% at left);
-  margin: 20px;
-  width: 100px;
-  height: 200px;
+  width: 150px;
+  height: 100px;
+  clip-path: inset(45px 50px 15px 0 round 50px);
+  shape-outside: inset(40px 40px 10px 0 round 50px);
+  background-color: coral;
+  border-radius: 20px;
+  margin: 0;
+  padding: 20px;
 }
 ```
 
-{{EmbedLiveSample("ellipse", "", "300px")}}
-
-### Utilisation des valeurs closest-side / farthest-side
-
-Les mots‑clés `closest-side` et `farthest-side` permettent de définir rapidement une ellipse basée sur la taille de la boîte de référence de l'élément flottant.
-
-```html live-sample___ellipse-keywords
-<div class="box">
-  <div class="shape"></div>
-  <p>
-    Une nuit de novembre en 1782, paraît‑il, deux frères étaient assis près de
-    leur feu d'hiver dans la petite ville française d'Annonay, observant les
-    volutes de fumée grises s'élever de la large cheminée. Ils s'appelaient
-    Stephen et Joseph Montgolfier, ils exerçaient le métier de papetier, et
-    étaient connus pour leur esprit réfléchi et leur vif intérêt pour toute
-    connaissance scientifique et toute nouvelle découverte. Avant cette nuit—une
-    nuit mémorable, comme elle devait le devenir—des centaines de millions de
-    personnes avaient vu s'élever la fumée de leurs feux sans en tirer une
-    inspiration particulière.
-  </p>
-</div>
-```
-
-```css live-sample___ellipse-keywords
-body {
-  font: 1.2em / 1.5 sans-serif;
-}
-.shape {
-  float: left;
-  shape-outside: ellipse(closest-side farthest-side at 30%);
-  margin: 20px;
-  width: 100px;
-  height: 140px;
-}
-```
-
-{{EmbedLiveSample("ellipse-keywords", "", "300px")}}
+{{EmbedLiveSample("Exemple simple de `inset()`", "100%", 280)}}
 
 ## Spécifications
 
@@ -154,4 +119,5 @@ body {
 ## Voir aussi
 
 - Propriétés utilisant ce type de donnée&nbsp;: {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}}
+- Le module [des formes CSS](/fr/docs/Web/CSS/Guides/Shapes)
 - [Guide des formes de base](/fr/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

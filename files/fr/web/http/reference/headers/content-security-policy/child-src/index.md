@@ -1,10 +1,12 @@
 ---
-title: "CSP : child-src"
+title: "Content-Security-Policy : directive child-src"
+short-title: child-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/child-src
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}. Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
 
 <table class="properties">
   <tbody>
@@ -14,10 +16,10 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>
       </td>
@@ -27,18 +29,20 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Header
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: child-src <source>;
-Content-Security-Policy: child-src <source> <source>;
+Content-Security-Policy: child-src 'none';
+Content-Security-Policy: child-src <source-expression-list>;
 ```
 
-### Sources
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`<host-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## Exemples
 
@@ -50,13 +54,13 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: child-src https://example.com/
 ```
 
-Cette [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) et ce <i lang="en">worker</i> seront bloqués et ne se chargeront pas&nbsp;:
+Cette {{HTMLElement("iframe")}} et ce <i lang="en">worker</i> seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  let blockedWorker = new Worker("data:application/javascript,...");
+  const blockedWorker = new Worker("data:text/javascript,…");
 </script>
 ```
 
@@ -70,6 +74,6 @@ Cette [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) et ce <i lang="e
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame) et [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
-- [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker), [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- Les éléments HTML {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}
+- Les interfaces API {{DOMxRef("Worker")}}, {{DOMxRef("SharedWorker")}}, {{DOMxRef("ServiceWorker")}}

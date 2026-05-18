@@ -1,8 +1,9 @@
 ---
-title: lch()
+title: Fonction CSS `lch()`
+short-title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`lch()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} LCH, qui utilise le même axe L (luminosité) que la fonction de couleur {{CSSxRef("color_value/lab","lab()")}} de l'[espace de couleur CIELab](/fr/docs/Glossary/Color_space#espaces_de_couleur_cielab), mais utilise des coordonnées polaires C (chroma) et H (pour la teinte, <i lang="en">hue</i> en anglais).

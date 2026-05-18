@@ -2,14 +2,18 @@
 title: <metadata>
 slug: Web/SVG/Reference/Element/metadata
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
 **`<metadata>`** は [SVG](/ja/docs/Web/SVG) の要素で、この要素は SVG コンテンツにメタデータを追加します。メタデータはデータに関する構造化された情報です。`<metadata>` のコンテンツは他の {{Glossary("XML")}} {{Glossary("namespace", "名前空間")}}の要素、例えば {{Glossary("RDF")}}、[FOAF](https://ja.wikipedia.org/wiki/Friend_of_a_Friend) などでなければなりません。
 
-## 使用可能な場所
+## 使用コンテキスト
 
 {{svginfo}}
+
+## 属性
+
+この要素には、グローバル属性のみがあります。
 
 ## DOM インターフェイス
 
