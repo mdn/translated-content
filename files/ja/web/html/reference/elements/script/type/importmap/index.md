@@ -1,9 +1,9 @@
 ---
-title: <script type="importmap">
+title: HTML `<script type="importmap">` 属性値
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 **`importmap`** の値を [`<script>` 要素](/ja/docs/Web/HTML/Reference/Elements/script)の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性に設定すると、要素の本体がインポートマップであることを示します。
@@ -163,6 +163,8 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 ```
 
 ### 複数のインポートマップの統合
+
+対応しているブラウザーでは、それらに依存するモジュールが読み込まれる前に定義されていれば、文書内の任意の場所に 1 つ以上のインポートマップを宣言することができます（一部の[バージョンのブラウザー](#ブラウザーの互換性)では、インポートマップの宣言は単一のものとしかできず、その宣言はどのモジュールよりも先に記述する必要があります）。
 
 内部的には、ブラウザーは単一のグローバルインポートマップ表現を維持しています。複数のインポートマップが文書内に含まれている場合、それらの内容は登録時にグローバルインポートマップに統合されます。
 
