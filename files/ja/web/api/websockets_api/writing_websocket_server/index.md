@@ -9,7 +9,7 @@ l10n:
 
 WebSocket API を使用したい場合は、サーバーを所有していると便利です。この記事では、C# で記述する方法を説明します。どんなサーバーサイドの言語でも行うことができますが、わかりやすく理解しやすいように、 Microsoft の言語を選択しました。
 
-このサーバーは [RFC 6455](https://tools.ietf.org/html/rfc6455) に準拠しているため、Chrome バージョン 16、Firefox 11、IE 10 以上の接続のみを処理します。
+このサーバーは [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) に準拠しているため、Chrome バージョン 16、Firefox 11、IE 10 以上の接続のみを処理します。
 
 ## 最初のステップ
 
