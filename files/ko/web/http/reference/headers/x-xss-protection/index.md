@@ -13,7 +13,7 @@ HTTP **`X-XSS-Protection`**헤더는 Internet Explorer, Chrome 및 Safari에서 
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>no</td>
     </tr>
   </tbody>

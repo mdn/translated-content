@@ -2,10 +2,8 @@
 title: API ランディングページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_landing_page_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: 6aca3e5157dbc163fe8209d9bf8cc3f2e8ec3f9d
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
@@ -44,6 +42,7 @@ l10n:
 > **ページ先頭のマクロ**
 >
 > コンテンツ部の上部（ページのフロントマターのすぐ下）には、いくつかのマクロ呼び出しが現れます。
+>
 > **訳注:** 英語版では以下のマクロは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のマクロに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。
@@ -56,15 +55,17 @@ l10n:
 > - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
 >   そうではない場合は、マクロ呼び出すを削除することができます。
 >   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{AvailableInWorkers}}` — これにより、**ウェブワーカーで利用可能**というメモが生成され、その技術が [ウェブワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API) で利用可能であることを示します。
+>   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
+>   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
 > - `\{{APIRef("GroupDataName")}}` — これをクリックすると、現在のページに関連するすばやく参照できるリンクを表示する左側のリファレンスサイドバーが生成されます。
 >   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) の中の各ページは同じサイドバーを持ち、そこでこの API の別なページにアクセスできます。
 >   API に適したサイドバーを生成するには、GitHub リポジトリーに `GroupData` エントリーを追加し、マクロ呼び出しの中で _GroupDataName_ の代わりにそのエントリーの名前を記載する必要があります。
 >   この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)ガイドを参照してください。
-> - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **保護されたコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > ---
 >
@@ -74,7 +75,7 @@ l10n:
 >
 > ブラウザーの互換性の節を埋めるには、先に[ブラウザーの互換性データリポジトリー](https://github.com/mdn/browser-compat-data)に API インターフェイスの項目を作成/更新する必要があるかもしれません。[これを行う方法のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)を参照してください。
 >
-> 互換性情報が必要なインターフェイス毎に `\{{Compat("path.to.feature.Interface")}}` マクロを追加してく、 "path.to.feature.Interface" 引数で、ブラウザー互換性データ内に必要なインターフェイスへのパスを指定してください。
+> `\{{Compat}}` マクロを使用して、ブラウザーの互換性情報の表を追加してください。
 >
 > ---
 >
@@ -84,13 +85,13 @@ l10n:
 >
 > 仕様書の節を埋めるには、先に[ブラウザーの互換性データリポジトリー](https://github.com/mdn/browser-compat-data)に API インターフェイスの項目を作成/更新する必要があるかもしれません。[これを行う方法のガイド](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)を参照してください。
 >
-> 中心となる仕様書を追加するには `\{{specifications("path.to.feature.Interface")}}` マクロを使用してください。
+> 中心となる仕様書を追加するには `\{{Specifications}}` マクロを使用してください。
 >
 > ---
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 ページのコンテンツは導入段落から始めてください。API の名前で始め、それが何をするのかを示してください。これはできれば 1、2 の短い文にすべきです。
 
@@ -103,11 +104,18 @@ l10n:
 この API について解説すべき概念がたくさんある場合は、別に「基礎」や「概念」の記事で説明してください（例: [WebXR の基礎](/ja/docs/Web/API/WebXR_Device_API/Fundamentals)）。
 サンプルコード付きの実用的な使用ガイドについては、API ドキュメントに「...の使用」の記事を記載しましょう (例: [WebVR API の使用](/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API))。
 
-コンテンツを発見性しやすくして {{Glossary("SEO")}} に役立つように、以下のヒントを覚えておいてください。
+## ガイド
+
+このランディングページの下に、ガイドページのリストを記載してください。それぞれの DT は、そのガイドページへのリンクを張る必要があります。この節は任意です。1 つの「使用」ガイドだけしかなく、他にいくつかの概念的なガイドがあるだけの場合、「概念と用途」の節の最後に段落としてリンクをまとめた方が便利な場合もあります。ガイドの数が多く、文章が読みづらくなってしまうような場合には、この節を設けた方が役立つでしょう。
+
+- ... API の使用
+  - : このガイドページの導入段落
+- ガイド 2
+  - : このガイドページの導入段落
 
 ## インターフェイス
 
-_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_下記の節で [domxref マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#リファレンスのページへのリンク)を使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 - `\{{domxref("NameOfTheInterface")}}`
   - : インターフェイスの簡単な説明とその機能をここに記載してください。
@@ -164,24 +172,20 @@ _インターフェイス名_ は以下の API を拡張し、挙げた機能を
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> この API の例については、[fetch() のページ](https://example.org/)を参照してください。
 > ```
 
 ## 仕様書
 
-`\{{Specifications("path.to.feature.Interface_1")}}`
+`\{{Specifications}}`
 
-`\{{Specifications("path.to.feature.Interface_2")}}`
-
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## ブラウザーの互換性
 
-`\{{Compat("path.to.feature.Interface_1")}}`
+`\{{Compat}}`
 
-`\{{Compat("path.to.feature.Interface_2")}}`
-
-_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+_このマクロを使用するには、マークダウンファイルの逆引用符とバックスラッシュを除去してください。_
 
 ## 関連情報
 

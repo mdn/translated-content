@@ -1,9 +1,9 @@
 ---
-title: Attribut <script> type
+title: "Attribut HTML : `<script type>`"
+short-title: <script type>
 slug: Web/HTML/Reference/Elements/script/type
-original_slug: Web/HTML/Element/script/type
 l10n:
-  sourceCommit: 11e09e7c584658fbfbecd2f00ae66e546cd54cc0
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`type`** de l'élément {{HTMLElement("script")}} indique le _type_ de script représenté par l'élément&nbsp;: un script classique, un module JavaScript, une carte (<i lang="en">map</i>) d'import, ou un bloc de données.

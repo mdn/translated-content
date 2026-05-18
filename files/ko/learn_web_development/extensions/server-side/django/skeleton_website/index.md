@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/ko/docs/Learn/Server-side/Django/development_environment"
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >장고 개발 환경을 설치하세요. (Set up a Django development
           environment.)</a
         >

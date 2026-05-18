@@ -10,7 +10,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
@@ -20,7 +20,7 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="/pt-BR/docs/Web/Guide/HTML/Categorias_de_conteudo#Conte%C3%BAdo_de_fluxo"
+          href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Conte%C3%BAdo_de_fluxo"
           >Conteúdo de fluxo</a
         >.
       </td>
@@ -65,14 +65,14 @@ O **elemento HTML \<dd>** fornece detalhes ou uma definição mais completa do t
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes) como seus.
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes) como seus.
 
 - `nowrap` {{Non-standard_inline}}
   - : Se o valor deste atributo for `yes`, o texto de definição não será envolvido. O valor padrão é `no`.
 
 ## Exemplo
 
-Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Element/dl#exemplos).
+Para exemplos, veja [os exemplos de \<dl>](/pt-BR/docs/Web/HTML/Reference/Elements/dl#exemplos).
 
 ## Especificações
 

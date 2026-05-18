@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/attribute
 original_slug: Web/XSLT/Reference/Element/attribute
 ---
 
-{{XsltSidebar}}{{XsltRef}}
+{{XsltSidebar}}
 
 El elemento `<xsl:attribute>` genera un atributo en el documento de salida, usando cualquier valor que puede ser accedido desde la hoja de estilo. Este elemento tiene que ser la primer cosa que se encuentre dentro del elemento del documento de salida para el cual se desea generar el atributo.
 

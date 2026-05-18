@@ -1,8 +1,9 @@
 ---
-title: min-height
+title: Propriété CSS `min-height`
+short-title: min-height
 slug: Web/CSS/Reference/Properties/min-height
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`min-height`** est utilisée afin de définir la hauteur minimale d'un élément. Elle empêche ainsi que la [valeur utilisée](/fr/docs/Web/CSS/Guides/Cascade/Property_value_processing#valeur_utilisée) de la propriété {{CSSxRef("height")}} devienne inférieure à la valeur définie pour `min-height`.

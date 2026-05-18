@@ -6,7 +6,7 @@ original_slug: Web/CSS/:empty
 
 {{ CSSRef() }}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:empty`** representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:empty`** representa qualquer elemento que não tenha filhos. Aqui, filhos podem ser outros elementos ou blocos de texto (incluindo espaços em branco). Comentários e instruções de processamento não são considerados ao se determinar se um elemento é vazio.
 
 ```css
 /* Seleciona qualquer <div> que não tenha conteúdo */
@@ -58,7 +58,7 @@ body {
 
 ## Questões de acessibilidade
 
-Tecnologias assistivas como leitores de tela não conseguem identificar e processar conteúdos interativos que estejam vazios. Todo conteúdo interativo deve ter um nome acessível, que é criado ao fornecer um valor de texto para o elemento pai do controle interativo ([âncoras](/pt-BR/docs/Web/HTML/Element/a), [botões](/pt-BR/docs/Web/HTML/Element/button), etc.). Nomes acessíveis expõem o controle interativo à [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), uma API que comunica informações importantes úteis para tecnologias assistivas.
+Tecnologias assistivas como leitores de tela não conseguem identificar e processar conteúdos interativos que estejam vazios. Todo conteúdo interativo deve ter um nome acessível, que é criado ao fornecer um valor de texto para o elemento pai do controle interativo ([âncoras](/pt-BR/docs/Web/HTML/Reference/Elements/a), [botões](/pt-BR/docs/Web/HTML/Reference/Elements/button), etc.). Nomes acessíveis expõem o controle interativo à [árvore de acessibilidade](/pt-BR/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs), uma API que comunica informações importantes úteis para tecnologias assistivas.
 
 The text that provides the interactive control's accessible name can be hidden using [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) that remove it visually from the screen but keep it parseable by assistive technology. This is commonly used for buttons that rely solely on an icon to convey purpose.
 

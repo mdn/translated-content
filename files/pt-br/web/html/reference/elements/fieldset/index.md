@@ -12,17 +12,17 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de Conteúdo</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Categorias de Conteúdo</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >,
         <a
           href="/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root"
           >sectioning root</a
-        >, <a href="/pt-BR/docs/HTML/Content_categories#form_listed">listed</a>,
-        <a href="/pt-BR/docs/HTML/Content_categories#form-associated_content"
+        >, <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#form_listed">listed</a>,
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#form-associated_content"
           >form-associated</a
         >
         element, palpable content.
@@ -43,7 +43,7 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
       <th scope="row">Elementos pai permitidos</th>
       <td>
         Qualquer elemento que aceita
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>
@@ -60,7 +60,7 @@ O **elemento HTML `<fieldset>`** é usado para agrupar elementos, assim como lab
 
 ## Atributos
 
-Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `disabled`
   - : Se este atributo Booleano está definido, os controles de formulario que são seus descendentes, exceto os descendentes de seu primeiro elemento opcional {{HTMLElement("legend")}}, estarão desativados, i.e., não editável. Eles não receberão qualquer evento de navegação, como clique do mouse ou relacionado com focus. Frequentemente os navegadores mostram tais controles em cinza.
@@ -85,7 +85,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 </form>
 ```
 
-### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Element/input) e [textboxes](/pt-BR/docs/Web/HTML/Element/input)\*
+### Example #2: Simulando um editável {{HTMLElement("select")}} através de um `fieldset` de [radioboxes](/pt-BR/docs/Web/HTML/Reference/Elements/input) e [textboxes](/pt-BR/docs/Web/HTML/Reference/Elements/input)\*
 
 O exemplo a seguinte é feito de puro HTML e CSS. Não contém javascript.
 

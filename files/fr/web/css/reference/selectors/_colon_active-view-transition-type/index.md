@@ -1,8 +1,9 @@
 ---
-title: :active-view-transition-type()
+title: Pseudo-classe CSS `:active-view-transition-type()`
+short-title: :active-view-transition-type()
 slug: Web/CSS/Reference/Selectors/:active-view-transition-type
 l10n:
-  sourceCommit: 8f7fa9e7aef0399c7a7f8e5a20476a0c2f287640
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active-view-transition-type()`** correspond aux éléments lorsqu'une transition de vue avec un ou plusieurs types spécifiques est en cours (est _active_) et cesse de correspondre une fois la transition de vue terminée.

@@ -68,4 +68,4 @@ form {
 ## Ver também
 
 - {{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- The [box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- The [box model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

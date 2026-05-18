@@ -6,7 +6,7 @@ original_slug: Web/CSS/:read-write
 
 {{CSSRef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:read-write`** representa um elemento (como o `input` ou `textarea`) que é editável pelo usuário.
 
 ```css
 input:read-write,
@@ -54,7 +54,7 @@ Você pode encontrar o código fonte completo em [readonly-confirmation.html](ht
 
 ### Estilizar controle não formal de read-write
 
-Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido sobre ele.
+Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com [`contenteditable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#contenteditable) definido sobre ele.
 
 ```html
 <p contenteditable>Este parágrafo é editável; é read-write.</p>
@@ -92,4 +92,4 @@ p:read-write {
 ## Veja também
 
 - {{cssxref(":read-only")}}
-- Atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable).
+- Atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#contenteditable).

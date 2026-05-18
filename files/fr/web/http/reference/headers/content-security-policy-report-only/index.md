@@ -3,15 +3,17 @@ title: En-tête Content-Security-Policy-Report-Only
 short-title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only
 l10n:
-  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
+  sourceCommit: 6720d579bd658f02c56363805e97e69f93dc79f1
 ---
 
-L'{{Glossary("response header", "en-tête de réponse")}} HTTP **`Content-Security-Policy-Report-Only`** permet de surveiller les violations de la politique de sécurité du contenu (CSP) et leurs effets sans imposer les règles de sécurité.
-Cet en-tête vous permet de tester ou corriger les violations avant qu'un {{HTTPHeader("Content-Security-Policy")}} soit appliqué et imposé.
+{{Glossary("response header", "L'en-tête de réponse")}} HTTP **`Content-Security-Policy-Report-Only`** permet de surveiller les violations de la politique de sécurité du contenu (CSP) et leurs effets sans imposer les règles de sécurité.
+Cet en-tête vous permet de tester ou corriger les violations avant qu'une {{HTTPHeader("Content-Security-Policy")}} (<abbr>CSP</abbr>) soit appliquée et imposée.
 
-La directive CSP {{CSP("report-to")}} doit être définie pour que les rapports soient envoyés&nbsp;: sinon, l'opération n'aura aucun effet.
+La directive CSP {{CSP("report-to")}} doit être définie pour que les rapports soient envoyés&nbsp;: sinon, l'opération n'a aucun effet.
 
-Les rapports de violation sont envoyés grâce à [l'API de rapport](/fr/docs/Web/API/Reporting_API) vers les points de terminaison définis dans un en-tête HTTP {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés avec la directive CSP {{CSP("report-to")}}.
+Les violations de la politique peuvent être signalées à l'aide de [l'API Reporting](/fr/docs/Web/API/Reporting_API).
+Les rapports peuvent être observés dans la page pour laquelle la politique est appliquée, en utilisant un [`ReportingObserver`](/fr/docs/Web/API/ReportingObserver), et envoyés aux points de terminaison du serveur définis dans un en-tête de réponse HTTP {{HTTPHeader("Reporting-Endpoints")}} et sélectionnés à l'aide de la directive CSP {{CSP("report-to")}}.
+Pour plus d'informations, voir {{DOMxRef("CSPViolationReport")}}.
 
 Pour en savoir plus, consultez notre guide [Politique de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
 
@@ -54,11 +56,11 @@ Pour utiliser la directive {{CSP("report-to")}}, vous devez d'abord définir un 
 Dans l'exemple ci-dessous, nous définissons un point de terminaison nommé `csp-endpoint`.
 
 ```http
-Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Reporting-Endpoints: csp-endpoint="https://exemple.com/rapports-csp"
 ```
 
 Vous pouvez ensuite définir la destination du rapport avec {{CSP("report-to")}} et {{CSP("report-uri")}}, comme illustré ci-dessous.
-Ce rapport serait déclenché si la page chargeait des ressources de façon non sécurisée ou depuis du code en ligne.
+Ce rapport est déclenché si la page charge des ressources de façon non sécurisée ou depuis du code en ligne.
 
 ```http
 Content-Security-Policy-Report-Only: default-src https:;
@@ -67,7 +69,7 @@ Content-Security-Policy-Report-Only: default-src https:;
 ```
 
 > [!NOTE]
-> La directive `report-to` est à privilégier par rapport à la directive obsolète `report-uri`, mais nous déclarons les deux car `report-to` n'est pas encore prise en charge par tous les navigateurs.
+> La directive `report-to` est à privilégier par rapport à la directive obsolète `report-uri`, mais nous déclarons les deux, car `report-to` n'est pas encore prise en charge par tous les navigateurs.
 
 ## Spécifications
 
@@ -81,4 +83,7 @@ Content-Security-Policy-Report-Only: default-src https:;
 
 - L'en-tête {{HTTPHeader("Content-Security-Policy")}}
 - La directive CSP {{CSP("report-to")}}
+- L'en-tête {{HTTPHeader("Reporting-Endpoints")}}
+- L'interface API {{DOMxRef("CSPViolationReport")}}
 - La directive CSP {{CSP("report-uri")}} {{Deprecated_Inline}}
+- [L'API Reporting](/fr/docs/Web/API/Reporting_API)

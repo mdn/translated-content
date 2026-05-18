@@ -1,8 +1,9 @@
 ---
-title: <input type="file">
+title: Valeur d'attribut HTML `<input type="file">`
+short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 30221c85132f8cb77ca73fbb033100cc2f10bba7
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`file"`** permettent à l'utilisateur·ice de choisir un ou plusieurs fichiers stockés sur son appareil. Une fois sélectionnés, les fichiers peuvent être téléversés vers un serveur à l'aide de [l'envoi de formulaire](/fr/docs/Learn_web_development/Extensions/Forms), ou manipulés à l'aide du code JavaScript et de [l'API File](/fr/docs/Web/API/File_API/Using_files_from_web_applications).
@@ -110,7 +111,7 @@ div {
 }
 ```
 
-Ce fragment de code HTML produira le résultat suivant&nbsp;:
+Ce fragment de code HTML produit le résultat suivant&nbsp;:
 
 {{EmbedLiveSample('Un exemple simple', 650, 90)}}
 
@@ -182,9 +183,9 @@ Voici le résultat produit&nbsp;:
 > [!NOTE]
 > Vous pouvez également consulter cet exemple sur GitHub — voir le [code source <sup>(angl.)</sup>](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html) et aussi [voir la démonstration en direct <sup>(angl.)</sup>](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
-Le résultat peut sembler similaire, mais si vous essayez de sélectionner un fichier avec ce champ, vous verrez que le sélecteur ne permet de choisir que les types de fichiers définis dans la valeur de l'attribut `accept` (l'interface exacte varie selon les navigateurs et les systèmes d'exploitation).
+Le résultat peut sembler similaire, mais si vous essayez de sélectionner un fichier avec ce champ, vous voyez que le sélecteur ne permet de choisir que les types de fichiers définis dans la valeur de l'attribut `accept` (l'interface exacte varie selon les navigateurs et les systèmes d'exploitation).
 
-L'attribut `accept` ne permet pas de valider les types des fichiers sélectionnés&nbsp;; il fournit des indications aux navigateurs pour guider les utilisateurs vers la sélection des types de fichiers corrects. Il est toujours possible (dans la plupart des cas) pour les utilisateurs de basculer une option dans le sélecteur de fichiers qui permet de contourner cela et de sélectionner n'importe quel fichier qu'ils souhaitent, puis de choisir des types de fichiers incorrects.
+L'attribut `accept` ne permet pas de valider les types des fichiers sélectionnés&nbsp;; il fournit des indications aux navigateurs pour guider les utilisateur·ice·s vers la sélection des types de fichiers corrects. Il est toujours possible (dans la plupart des cas) pour les utilisateur·ice·s de basculer une option dans le sélecteur de fichiers qui permet de contourner cela et de sélectionner n'importe quel fichier qu'ils souhaitent, puis de choisir des types de fichiers incorrects.
 
 À cause de cela, vous devez vous assurer que l'attribut `accept` est soutenu par une validation appropriée côté serveur.
 
@@ -192,7 +193,7 @@ L'attribut `accept` ne permet pas de valider les types des fichiers sélectionn�
 
 L'évènement `cancel` est déclenché lorsque l'utilisateur·ice ne modifie pas sa sélection, en re-sélectionnant les fichiers précédemment sélectionnés. L'évènement `cancel` est également déclenché lorsque la boîte de dialogue de sélection de fichiers est fermée ou annulée, grâce au bouton «&nbsp;Annuler&nbsp;» ou à la touche <kbd>Échap</kbd>.
 
-Par exemple, le code suivant affichera un message dans la console si l'utilisateur·ice ferme la fenêtre sans sélectionner de fichier&nbsp;:
+Par exemple, le code suivant affiche un message dans la console si l'utilisateur·ice ferme la fenêtre sans sélectionner de fichier&nbsp;:
 
 ```js
 const elem = document.createElement("input");
@@ -210,21 +211,21 @@ elem.click();
 
 ### Notes
 
-1. Il n'est pas possible de définir la valeur du sélecteur de fichier via un script. Le code suivant n'aura aucun effet&nbsp;:
+1. Il n'est pas possible de définir la valeur du sélecteur de fichier par le biais d'un script. Le code suivant n'a aucun effet&nbsp;:
 
    ```js
    const input = document.querySelector("input[type=file]");
    input.value = "toto";
    ```
 
-2. Lorsqu'on choisit un fichier via `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes, et ça a même été [défini dans la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
+2. Lorsqu'on choisit un fichier avec `<input type="file">`, le chemin réel du fichier source n'est pas transmis dans la valeur de l'attribut `value` pour des raisons de sécurité. À la place, on a le nom du fichier précédé du chemin `C:\fakepath\`. Cela provient de raisons historiques, est pris en charge par la plupart des navigateurs modernes, et ça a même été [défini dans la spécification <sup>(angl.)</sup>](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly).
 
 ## Exemples
 
-Dans l'exemple qui suit, on présente sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
+Dans l'exemple qui suit, on présente un sélecteur de fichiers plus avancé, qui tire parti des informations disponibles grâce à la propriété `HTMLInputElement.files`. On montre aussi quelques astuces.
 
 > [!NOTE]
-> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquerons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
+> Le code source complet de cet exemple est disponible sur GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html) ([voir la démonstration _live_ associée](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). Nous n'expliquons pas ici la feuille de style CSS mais plutôt le code JavaScript qui contient la logique.
 
 Tout d'abord, voici le fragment de code HTML utilisé&nbsp;:
 
@@ -313,7 +314,7 @@ Pour l'instant, le fragment HTML ressemble à ce que nous avons déjà vu avant,
 
 Voyons maintenant le code JavaScript utilisé.
 
-Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}} car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice saura comment interagir avec le document pour téléverser des fichiers.
+Pour les premières lignes du script, on récupère des références au formulaire et à l'élément {{HTMLElement("div")}} qui possède la classe `.preview`. Ensuite, on masque l'élément {{HTMLElement("input")}} car leur apparence peut être incohérente entre les navigateurs et qu'il est difficile de les mettre en forme. Cliquer sur l'élément {{HTMLElement("label")}} suffit à ouvrir le sélecteur et nous mettons donc en forme cet élément à la façon d'un bouton. Ainsi, l'utilisateur·ice sait comment interagir avec le document pour téléverser des fichiers.
 
 ```js
 const input = document.querySelector("input");
@@ -325,7 +326,7 @@ input.style.opacity = 0;
 > [!NOTE]
 > La propriété {{CSSxRef("opacity")}} est utilisée pour masquer l'élément `<input>` plutôt que {{CSSxRef("visibility", "visibility: hidden")}} ou {{CSSxRef("display", "display: none")}}. En effet, avec ces derniers les technologies d'assistance (lecteurs d'écran par exemple) comprendraient que l'élément n'est pas interactif et ne peut pas être utilisé.
 
-Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrirons juste après.
+Ensuite, on ajoute [un gestionnaire d'évènement](/fr/docs/Web/API/EventTarget/addEventListener) à l'élément `<input>` afin de réaliser certaines actions lorsque sa valeur (c'est-à-dire les fichiers sélectionnés) change. Ici, le gestionnaire d'évènement appelle la fonction `updateImageDisplay()` que nous décrivons juste après.
 
 ```js
 input.addEventListener("change", updateImageDisplay);
@@ -337,7 +338,7 @@ input.addEventListener("change", updateImageDisplay);
 - Récupérez l'objet {{DOMxRef("FileList")}} qui contient les informations sur tous les fichiers sélectionnés et stockez-le dans une variable appelée `curFiles`.
 - Vérifiez qu'aucun fichier n'a été sélectionné en vérifiant si `curFiles.length` est égal à 0. Si c'est le cas, affichez un message dans l'aperçu `<div>` indiquant qu'aucun fichier n'a été sélectionné.
 - Si des fichiers ont été sélectionnés, parcourez-les un par un et affichez les informations les concernant dans l'aperçu `<div>`. Remarques importantes&nbsp;:
-- Nous utilisons la fonction personnalisée `validFileType()` pour vérifier si le fichier est du type correct (par exemple, les types d'images spécifiés dans l'attribut `accept`).
+- Nous utilisons la fonction personnalisée `validFileType()` pour vérifier si le fichier est du type correct (par exemple, les types d'images définis dans l'attribut `accept`).
 - Si c'est le cas, nous&nbsp;:
   - Affichons son nom et sa taille dans un élément de liste à l'intérieur de la balise `<div>` précédente (obtenus à partir de `file.name` et `file.size`). La fonction personnalisée `returnFileSize()` retourne une version bien formatée de la taille en octets/Ko/Mo (par défaut, le navigateur indique la taille en octets absolus).
   - Générons un aperçu miniature de l'image en appelant {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Ensuite, insérez l'image dans l'élément de liste en créant un nouveau {{HTMLElement("img")}} et en définissant son [`src`](/fr/docs/Web/HTML/Reference/Elements/img#src) sur la miniature.

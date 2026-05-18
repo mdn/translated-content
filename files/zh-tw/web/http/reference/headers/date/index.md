@@ -16,9 +16,9 @@ slug: Web/HTTP/Reference/Headers/Date
 > });
 > ```
 
-| Header type                           | {{Glossary("General header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| Header type                              | {{Glossary("General header")}} |
+| ---------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden request header")}} | yes                            |
 
 ## 語法
 

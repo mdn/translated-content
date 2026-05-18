@@ -1,8 +1,9 @@
 ---
-title: "<legend> : l'élément de légende de groupe de champs"
+title: "Élément HTML `<legend>` : l'élément de légende de groupe de champs"
+short-title: <legend>
 slug: Web/HTML/Reference/Elements/legend
 l10n:
-  sourceCommit: f2d281d86396bcd2dcecfdabd5837b1590132aa6
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<legend>`** représente une légende pour le contenu de son parent {{HTMLElement("fieldset")}}.

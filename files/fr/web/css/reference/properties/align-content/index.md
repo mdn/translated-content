@@ -1,8 +1,9 @@
 ---
-title: align-content
+title: Propriété CSS `align-content`
+short-title: align-content
 slug: Web/CSS/Reference/Properties/align-content
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-content`** permet de définir la répartition de l'espace entre et autour des éléments de contenu le long de [l'axe transversal](/fr/docs/Glossary/Cross_Axis) d'un [flexbox](/fr/docs/Web/CSS/Guides/Flexible_box_layout), ou de l'axe de bloc d'un élément [grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [de niveau bloc](/fr/docs/Glossary/Block-level_content).

@@ -1,8 +1,9 @@
 ---
-title: "<frame> : l'élément de cadre"
+title: "Élément HTML `<frame>` : l'élément de cadre"
+short-title: <frame>
 slug: Web/HTML/Reference/Elements/frame
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{Deprecated_Header}}
@@ -15,19 +16,19 @@ Utiliser l'élément `<frame>` est déconseillé en raison de certains inconvén
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `src` {{Deprecated_Inline}}
+- `src` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut indique le document qui doit être affiché dans la frame.
-- `name` {{Deprecated_Inline}}
-  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens seront ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Reference/Elements/a#target) pour plus d'informations.
-- `noresize` {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Cet attribut sert à nommer les frames. Sans nommage, tous les liens sont ouverts dans la frame où ils se trouvent. Voir [`target`](/fr/docs/Web/HTML/Reference/Elements/a#target) pour plus d'informations.
+- `noresize` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut empêche aux utilisateur·ice·s de redimensionner les frames.
-- `scrolling` {{Deprecated_Inline}}
+- `scrolling` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit l'existence des barres de défilement. Si cet attribut n'est pas utilisé, le navigateur mettre une barre de défilement si nécessaire. Il y a deux options&nbsp;: `"yes"` pour afficher les barres de défilement même quand ce n'est pas nécessaire, et `"no"` pour ne pas afficher les barres de défilement même quand c'est nécessaire.
-- `marginheight` {{Deprecated_Inline}}
+- `marginheight` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit la hauteur des marges entre les frames.
-- `marginwidth` {{Deprecated_Inline}}
+- `marginwidth` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut définit la largeur des marges entre les frames.
-- `frameborder` {{Deprecated_Inline}}
+- `frameborder` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut permet de mettre des bordures à la frame.
 
 ## Exemple

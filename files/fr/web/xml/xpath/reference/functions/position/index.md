@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/position
 original_slug: Web/XPath/Functions/position
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `position` retourne un nombre égal à la position du contexte dans le contexte d'évaluation d'expression.
 

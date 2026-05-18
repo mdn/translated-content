@@ -1,8 +1,9 @@
 ---
-title: :target
+title: Pseudo-classe CSS `:target`
+short-title: :target
 slug: Web/CSS/Reference/Selectors/:target
 l10n:
-  sourceCommit: 11d748f9e217b6a9fd16291d7815a6f803f0136d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#id) correspond au fragment d'identifiant de l'URI du document.

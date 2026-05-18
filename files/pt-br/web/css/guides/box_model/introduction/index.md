@@ -26,7 +26,7 @@ A **área de margem** (margin area) estende a área de borda com um espaço vazi
 
 O tamanho da área de margem é controlada utilizando as seguintes propriedades CSS {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} e na forma generalizada {{ cssxref("margin") }}.
 
-Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
+Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
 
 Finalmente, note que, para elementos não substituídos inline, o total de espaço ocupado (para a altura da linha) é determinado pela propriedade {{ cssxref('line-height') }}, mesmo que a borda e o padding aparecerem visualmente em torno do conteúdo.
 

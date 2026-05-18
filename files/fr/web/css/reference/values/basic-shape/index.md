@@ -1,9 +1,9 @@
 ---
-title: <basic-shape>
+title: Type CSS `<basic-shape>`
+short-title: <basic-shape>
 slug: Web/CSS/Reference/Values/basic-shape
-original_slug: Web/CSS/basic-shape
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<basic-shape>`** représente une forme utilisée dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}} et {{CSSxRef("offset-path")}}.

@@ -1,22 +1,23 @@
 ---
-title: <transform-function>
+title: CSS `<transform-function>` データ型
+short-title: <transform-function>
 slug: Web/CSS/Reference/Values/transform-function
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
-**`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/Reference/Values/Functions)は、 2D または 3D 空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。
+**`<transform-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、要素の外見に影響する座標変換を表します。座標変換[関数](/ja/docs/Web/CSS/Reference/Values/Functions)は、二次元または三次元空間で要素を回転、拡大縮小、歪曲、移動させることができます。これは {{cssxref("transform")}} プロパティの中で使用されます。
 
 ## 構文
 
-`<transform-function>` データ型は、以下に示した変換関数のうちの一つを使用して指定します。各関数は 2D または 3D の座標操作を適用します。
+`<transform-function>` データ型は、以下に示した変換関数のうちの一つを使用して指定します。各関数は二次元または三次元の座標操作を適用します。
 
 ### 行列変換
 
 - [`matrix()`](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix)
-  - : 2D の同次変換行列を記述します。
+  - : 二次元の同次変換行列を記述します。
 - [`matrix3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/matrix3d)
-  - : 3D の変換を 4×4 の同次行列で記述します。
+  - : 三次元の変換を 4×4 の同次行列で記述します。
 
 ### 視点距離
 
@@ -26,9 +27,9 @@ l10n:
 ### 回転
 
 - [`rotate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate)
-  - : 要素を 2D 平面上で特定の点を中心に回転します。
-- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
-  - : 要素を 3D 空間で特定の軸を中心に回転します。
+  - : 要素を二次元平面上で特定の点を中心に回転します。
+- {{cssxref("transform-function/rotate3d")}}
+  - : 要素を三次元空間で特定の軸を中心に回転します。
 - [`rotateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateX)
   - : 要素を水平軸を中心に回転します。
 - [`rotateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotateY)
@@ -39,9 +40,9 @@ l10n:
 ### 拡大縮小（リサイズ）
 
 - [`scale()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scale)
-  - : 要素を 2D 平面上で拡大または縮小します。
+  - : 要素を二次元平面上で拡大または縮小します。
 - [`scale3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scale3d)
-  - : 要素を 3D 空間で拡大または縮小します。
+  - : 要素を三次元空間で拡大または縮小します。
 - [`scaleX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleX)
   - : 要素を水平に拡大または縮小します。
 - [`scaleY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleY)
@@ -52,7 +53,7 @@ l10n:
 ### 歪め
 
 - [`skew()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skew)
-  - : 要素を 2D 平面上で歪ませます。
+  - : 要素を二次元平面上で歪ませます。
 - [`skewX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skewX)
   - : 要素を水平方向に歪ませます。
 - [`skewY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/skewY)
@@ -61,9 +62,9 @@ l10n:
 ### 平行移動
 
 - [`translate()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate)
-  - : 要素を 2D 平面上で平行移動させます。
+  - : 要素を二次元平面上で平行移動させます。
 - [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-  - : 要素を3D 空間で平行移動させます。
+  - : 要素を三次元空間で平行移動させます。
 - [`translateX()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateX)
   - : 要素を水平方向に平行移動させます。
 - [`translateY()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translateY)
@@ -73,7 +74,7 @@ l10n:
 
 ## 解説
 
-HTML 要素の寸法や形状を記述するために様々な座標モデルが用いられることがあり、同様に変換にも適用されます。最も一般的なものは、[直交座標系](https://ja.wikipedia.org/wiki/%E7%9B%B4%E4%BA%A4%E5%BA%A7%E6%A8%99%E7%B3%BB)ですが、[同次座標系](https://en.wikipedia.org/wiki/Homogeneous_coordinates)が用いられることもあります。
+HTML 要素の寸法や形状を記述するために様々な座標モデルが用いられることがあり、同様に変換にも適用されます。最も一般的なものは、[直交座標系](https://ja.wikipedia.org/wiki/直交座標系)ですが、[同次座標系](https://en.wikipedia.org/wiki/Homogeneous_coordinates)が用いられることもあります。
 
 ### 直交座標系
 
@@ -124,7 +125,7 @@ CSS (および多くのコンピューターグラフィック) では、原点 
 
 ### 座標変換関数の比較
 
-次の例では、DOM 要素と座標変換で作成された 3D 立方体と、立方体を座標変換するための様々な座標変換関数を選択するための選択メニューが用意されており、様々な種類の効果を比較することができます。
+次の例では、DOM 要素と座標変換で作成された三次元立方体と、立方体を座標変換するための様々な座標変換関数を選択するための選択メニューが用意されており、様々な種類の効果を比較することができます。
 
 選択すると、変換が立方体に適用され、2 秒後に立方体は開始時の状態に戻ります。すべての変換の効果を見ることができるように、`transform3d()` を使って立方体の開始状態をわずかに回転させています。
 
@@ -243,7 +244,7 @@ const selectElem = document.querySelector("select");
 const example = document.querySelector("#example-element");
 
 selectElem.addEventListener("change", () => {
-  if (selectElem.value === "Choose a function") {
+  if (selectElem.value === "座標変換関数を選択") {
     return;
   }
   example.style.transform = `rotate3d(1, 1, 1, 30deg) ${selectElem.value}`;

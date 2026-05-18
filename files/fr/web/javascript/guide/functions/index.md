@@ -124,7 +124,7 @@ if (num === 0) {
 }
 ```
 
-Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{jsxref("Objets_globaux/eval", "eval()")}}.
+Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{JSxRef("eval()")}}.
 
 Une **méthode** est une fonction étant une propriété d'un objet. Vous trouverez plus de détails sur ces éléments dans le chapitre suivant du guide : [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
 
@@ -669,29 +669,29 @@ var p = new Personne();
 
 JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau :
 
-- {{jsxref("Objets_globaux/eval","eval()")}}
+- {{JSxRef("eval()")}}
   - : La fonction **`eval()`** permet d'évaluer du code JavaScript contenu dans une chaîne de caractères.
-- {{jsxref("Objets_globaux/uneval","uneval()")}} {{non-standard_inline}}
+- {{JSxRef("uneval()")}} {{non-standard_inline}}
   - : La fonction **`uneval()`** crée une représentation sous la forme d'une chaîne de caractères pour le code source d'un objet.
-- {{jsxref("Objets_globaux/isFinite","isFinite()")}}
+- {{JSxRef("isFinite()")}}
   - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
-- {{jsxref("Objets_globaux/isNaN","isNaN()")}}
+- {{JSxRef("isNaN()")}}
   - : La fonction **`isNaN()`** détermine si une valeur est {{jsxref("NaN")}} ou non. Note : On pourra également utiliser {{jsxref("Number.isNaN()")}} défini avec ECMAScript 6 ou utiliser [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) afin de déterminer si la valeur est **N**ot-**A**-**N**umber.
-- {{jsxref("Objets_globaux/parseFloat","parseFloat()")}}
+- {{JSxRef("parseFloat()")}}
   - : La fonction **`parseFloat()`** convertit une chaîne de caractères en un nombre flottant.
-- {{jsxref("Objets_globaux/parseInt","parseInt()")}}
+- {{JSxRef("parseInt()")}}
   - : La fonction **`parseInt()`** convertit une chaîne de caractères et renvoie un entier dans la base donnée.
-- {{jsxref("Objets_globaux/decodeURI","decodeURI()")}}
-  - : La fonction **`decodeURI()`** décode un Uniform Resource Identifier (URI) créé par {{jsxref("Objets_globaux/encodeURI","encodeURI()")}} ou une méthode similaire.
-- {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}
-  - : La fonction **`decodeURIComponent()`** décode un composant d'un Uniform Resource Identifier (URI) créé par {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent")}} ou une méthode similaire.
-- {{jsxref("Objets_globaux/encodeURI","encodeURI()")}}
+- {{JSxRef("decodeURI()")}}
+  - : La fonction **`decodeURI()`** décode un Uniform Resource Identifier (URI) créé par {{JSxRef("encodeURI()")}} ou une méthode similaire.
+- {{JSxRef("decodeURIComponent()")}}
+  - : La fonction **`decodeURIComponent()`** décode un composant d'un Uniform Resource Identifier (URI) créé par {{JSxRef("encodeURIComponent")}} ou une méthode similaire.
+- {{JSxRef("encodeURI()")}}
   - : La fonction **`encodeURI()`** encode un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par un, deux, trois voire quatre séquences d'échappement représentant l'encodage UTF-8 du caractères (quatre séquences seront utilisées uniquement lorsque le caractère est composé d'une paire de deux demi-codets).
-- {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent()")}}
+- {{JSxRef("encodeURIComponent()")}}
   - : La fonction **`encodeURIComponent()`** encode un composant d'un Uniform Resource Identifier (URI) en remplaçant chaque exemplaire de certains caractères par un, deux, trois voire quatre séquences d'échappement représentant l'encodage UTF-8 du caractères (quatre séquences seront utilisées uniquement lorsque le caractère est composé d'une paire de deux demi-codets).
-- {{jsxref("Objets_globaux/escape","escape()")}} {{deprecated_inline}}
-  - : La fonction dépréciée **`escape()`** calcule une nouvelle chaîne de caractères pour laquelle certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Les fonctions {{jsxref("Objets_globaux/encodeURI","encodeURI()")}} ou {{jsxref("Objets_globaux/encodeURIComponent","encodeURIComponent()")}} doivent être utilisées à la place.
-- {{jsxref("Objets_globaux/unescape","unescape()")}} {{deprecated_inline}}
-  - : La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères pour laquelle les séquences d'échappement hexadécimales sont remplacées par les caractères qu'elles représentent. Les séquences d'échappement introduites peuvent provenir d'une fonction telle que {{jsxref("Objets_globaux/escape","escape()")}}. `unescape` est dépréciée et doit être remplacée par {{jsxref("Objets_globaux/decodeURI","decodeURI()")}} ou {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}.
+- {{JSxRef("escape()")}} {{deprecated_inline}}
+  - : La fonction dépréciée **`escape()`** calcule une nouvelle chaîne de caractères pour laquelle certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Les fonctions {{JSxRef("encodeURI()")}} ou {{JSxRef("encodeURIComponent()")}} doivent être utilisées à la place.
+- {{JSxRef("unescape()")}} {{deprecated_inline}}
+  - : La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères pour laquelle les séquences d'échappement hexadécimales sont remplacées par les caractères qu'elles représentent. Les séquences d'échappement introduites peuvent provenir d'une fonction telle que {{JSxRef("escape()")}}. `unescape` est dépréciée et doit être remplacée par {{JSxRef("decodeURI()")}} ou {{JSxRef("decodeURIComponent()")}}.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

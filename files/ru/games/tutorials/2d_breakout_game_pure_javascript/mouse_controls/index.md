@@ -46,4 +46,4 @@ function mouseMoveHandler(e) {
 
 Теперь у нас есть полная игра, мы закончим нашу серию уроков с ещё несколькими небольшими хитростями — [Finishing up](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}

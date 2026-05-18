@@ -3,7 +3,7 @@ title: Начало работы с HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax")}}
 
 В этой статье мы охватим азы HTML, необходимые для начала работы. Дадим определение «элементам», «атрибутам», «тегам» и прочим важным понятиям, о которых вы, возможно, слышали, а также об их роли в языке. Мы также покажем, как устроены HTML-элементы, типичная HTML-страница, и объясним другие важные аспекты языка. По ходу дела, чтобы вы не заскучали, мы поиграем с настоящей HTML-страницей!
 
@@ -722,10 +722,10 @@ textarea.onkeyup = function () {
 Вы дошли до конца статьи — надеемся, вам понравилось путешествие по основам HTML. На этом этапе вы уже должны немного разобраться, как выглядит язык, как он работает на базовом уровне и уметь описать несколько элементов и атрибутов. Сейчас идеальное время и место, чтобы продолжить изучать HTML. В последующих статьях мы рассмотрим некоторые из вещей, которые вы уже рассмотрели, но намного подробнее, а также представим некоторые новые функции языка. Оставайтесь с нами!
 
 > [!NOTE]
-> Сейчас, когда вы начинаете больше узнавать о HTML, вы также можете начать изучать основы каскадных таблиц стилей Cascading Style Sheets, или [CSS](/ru/docs/Learn/CSS). CSS — это язык, который используется для стилизации веб-страниц (например, изменение шрифта или цветов или изменение макета страницы). Как вы скоро поймёте, HTML и CSS созданы друг для друга.
+> Сейчас, когда вы начинаете больше узнавать о HTML, вы также можете начать изучать основы каскадных таблиц стилей Cascading Style Sheets, или [CSS](/ru/docs/Learn_web_development/Core/Styling_basics). CSS — это язык, который используется для стилизации веб-страниц (например, изменение шрифта или цветов или изменение макета страницы). Как вы скоро поймёте, HTML и CSS созданы друг для друга.
 
 ## Смотрите также
 
 - [Применение цвета к элементам HTML с помощью CSS](/ru/docs/Web/CSS/Guides/Colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Введение_в_HTML/Начало_работы")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content/Basic_HTML_syntax")}}

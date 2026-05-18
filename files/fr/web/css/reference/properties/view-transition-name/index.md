@@ -1,11 +1,12 @@
 ---
-title: view-transition-name
+title: Propriété CSS `view-transition-name`
+short-title: view-transition-name
 slug: Web/CSS/Reference/Properties/view-transition-name
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`view-transition-name`** définit le nom de la [transition de vue](/fr/docs/Web/API/View_Transition_API) à laquelle les éléments sélectionnés participeront. Cela vous permet d'animer ces éléments séparément du reste de la page, qui utilise l'animation de fondu croisé par défaut pendant une transition de vue. Vous pouvez ensuite définir des styles d'animation personnalisés pour ces éléments.
+La propriété [CSS](/fr/docs/Web/CSS) **`view-transition-name`** définit le nom de la [transition de vue](/fr/docs/Web/API/View_Transition_API) à laquelle les éléments sélectionnés participent. Cela vous permet d'animer ces éléments séparément du reste de la page, qui utilise l'animation de fondu croisé par défaut pendant une transition de vue. Vous pouvez ensuite définir des styles d'animation personnalisés pour ces éléments.
 
 ## Syntaxe
 
@@ -33,7 +34,7 @@ view-transition-name: unset;
 - `match-element`
   - : Le navigateur attribue automatiquement un nom unique à l'élément sélectionné. Ce nom est utilisé pour capturer l'élément séparément de tous les autres éléments de la page. (Ce nom est interne et ne peut pas être lu depuis le DOM.)
 - `none`
-  - : L'élément sélectionné ne participera pas à un instantané distinct, sauf s'il a un élément parent avec un `view-transition-name` défini, auquel cas il sera capturé dans le cadre de cet élément.
+  - : L'élément sélectionné ne participe pas à un instantané distinct, sauf s'il a un élément parent avec un `view-transition-name` défini, auquel cas il est capturé dans le cadre de cet élément.
 
 ## Description
 
@@ -67,11 +68,11 @@ Si vous ne souhaitez pas qu'un élément soit capturé séparément, vous pouvez
 }
 ```
 
-Le `<custom-ident>` de `view-transition-name` doit être unique pour chaque élément rendu participant à la transition de vue. Si deux éléments rendus ont le même `view-transition-name` en même temps, la promesse ({{JSxRef("Promise")}}) {{DOMxRef("ViewTransition.ready")}} sera rejetée et la transition sera ignorée.
+Le `<custom-ident>` de `view-transition-name` doit être unique pour chaque élément rendu participant à la transition de vue. Si deux éléments rendus ont le même `view-transition-name` en même temps, la promesse ({{JSxRef("Promise")}}) {{DOMxRef("ViewTransition.ready")}} est rejetée et la transition est ignorée.
 
 ### Définition automatique des valeurs de `view-transition-name`
 
-Parfois, vous souhaiterez animer plusieurs éléments de l'interface utilisateur séparément dans une transition de vue. C'est souvent le cas lorsque vous avez une liste d'éléments sur une page et que vous souhaitez les réorganiser d'une certaine manière&nbsp;:
+Parfois, vous souhaitez animer plusieurs éléments de l'interface utilisateur séparément dans une transition de vue. C'est souvent le cas lorsque vous avez une liste d'éléments sur une page et que vous souhaitez les réorganiser d'une certaine manière&nbsp;:
 
 ```html
 <ul>
@@ -361,7 +362,7 @@ li {
 }
 ```
 
-Nous définissons également une règle qui sélectionne les éléments avec la classe `active-item`. Lorsque cette classe est appliquée à un élément, la règle fait en sorte qu'il soit positionné exactement au-dessus de l'élément `<article>`. Cette classe sera appliquée aux éléments de la liste par JavaScript lorsque leurs liens seront cliqués, ce qui déclenchera une transition de vue.
+Nous définissons également une règle qui sélectionne les éléments avec la classe `active-item`. Lorsque cette classe est appliquée à un élément, la règle fait en sorte qu'il soit positionné exactement au-dessus de l'élément `<article>`. Cette classe est appliquée aux éléments de la liste par JavaScript lorsque leurs liens sont cliqués, ce qui déclenche une transition de vue.
 
 ```css
 .active-item {
@@ -398,7 +399,7 @@ html::view-transition-new(*) {
 
 #### JavaScript
 
-Dans cet exemple, la classe `active-item` est appliquée aux éléments de la liste lorsque leurs liens sont cliqués ; cela est réalisé via la fonction `updateActiveItem()`&nbsp;:
+Dans cet exemple, la classe `active-item` est appliquée aux éléments de la liste lorsque leurs liens sont cliqués&nbsp;; cela est réalisé avec la fonction `updateActiveItem()`&nbsp;:
 
 ```js
 const mainElem = document.querySelector("main");

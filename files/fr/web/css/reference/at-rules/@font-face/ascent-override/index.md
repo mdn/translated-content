@@ -1,8 +1,9 @@
 ---
-title: ascent-override
+title: Descripteur de règle CSS `ascent-override`
+short-title: ascent-override
 slug: Web/CSS/Reference/At-rules/@font-face/ascent-override
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`ascent-override`** pour la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@font-face")}} définit la mesure du jambage supérieur pour la police. La mesure du jambage supérieur est la hauteur au-dessus de la ligne de base que CSS utilise pour disposer les boîtes de ligne dans un contexte de mise en forme en ligne.

@@ -1,8 +1,9 @@
 ---
-title: :read-write
+title: Pseudo-classe CSS `:read-write`
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:read-write`** représente un élément (tel que `input` ou `textarea`) qui peut être modifié par l'utilisateur·ice.

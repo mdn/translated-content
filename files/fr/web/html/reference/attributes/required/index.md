@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : required"
+title: "Attribut HTML : `required`"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 l10n:
-  sourceCommit: 0c81cbce5f95a0be935724bcd936f5592774eb3a
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut {{Glossary("Boolean/HTML", "booléen")}} **`required`**, s'il est présent, indique que l'utilisateur·ice doit définir une valeur avant que le formulaire propriétaire puisse être envoyé.

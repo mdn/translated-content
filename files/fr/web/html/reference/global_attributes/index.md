@@ -20,7 +20,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - [`accesskey`](/fr/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : Fournit une indication pour générer un raccourci clavier pour l'élément courant. Cet attribut se compose d'une liste de caractères séparés par des espaces. Le navigateur doit utiliser le premier caractère qui existe selon la disposition du clavier utilisée.
 - [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor) {{Non-standard_Inline}}
-  - : Associe un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous souhaitez ancrer l'élément positionné. L'élément peut alors être positionné [en utilisant le positionnement d'ancre CSS](/fr/docs/Web/CSS/CSS_anchor_positioning/Using).
+  - : Associe un élément positionné à un élément d'ancre. La valeur de l'attribut correspond à l'[`id`](/fr/docs/Web/HTML/Reference/Global_attributes/id) de l'élément auquel vous souhaitez ancrer l'élément positionné. L'élément peut alors être positionné [en utilisant le positionnement d'ancre CSS](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using).
 - [`autocapitalize`](/fr/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
   - : Contrôle si le texte saisi est automatiquement mis en majuscule et, si oui, de quelle manière.
 - [`autocorrect`](/fr/docs/Web/HTML/Reference/Global_attributes/autocorrect)

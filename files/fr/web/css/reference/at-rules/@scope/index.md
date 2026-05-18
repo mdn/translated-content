@@ -1,8 +1,9 @@
 ---
-title: "@scope"
+title: Règle CSS `@scope`
+short-title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.
@@ -165,7 +166,7 @@ Voici quelques points à considérer pour `:scope` dans les blocs `@scope`&nbsp;
 
 ### Spécificité dans `@scope`
 
-À l'intérieur d'une règle `@scope`, les sélecteurs simples et le sélecteur d'imbrication [`&`](/fr/docs/Web/CSS/Nesting_selector) se comportent comme si `:where(:scope)` était préfixé au sélecteur.
+À l'intérieur d'une règle `@scope`, les sélecteurs simples et le sélecteur d'imbrication [`&`](/fr/docs/Web/CSS/Reference/Selectors/Nesting_selector) se comportent comme si `:where(:scope)` était préfixé au sélecteur.
 Comme {{CSSxRef(":where", ":where()")}} a une [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) nulle, les sélecteurs simples et `&` n'ajoutent aucun poids. Le poids de spécificité est déterminé par le reste du sélecteur.
 Par exemple, la spécificité du sélecteur `& img` est équivalente à celle de `:where(:scope) img` (0-0-1).
 
@@ -266,7 +267,7 @@ Pour corriger cela, vous pouvez utiliser `@scope` comme suit&nbsp;:
 Désormais, le paragraphe le plus à l'intérieur est correctement coloré en noir. Cela s'explique par le fait qu'il n'est qu'à un niveau de hiérarchie du DOM de la racine de portée `.light-theme`, mais à deux niveaux de la racine de portée `.dark-theme`. Ainsi, le style clair l'emporte.
 
 > [!NOTE]
-> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity).
+> La proximité de portée prévaut sur l'ordre du code source mais est elle-même supplantée par d'autres critères de priorité supérieure tels que [l'importance](/fr/docs/Web/CSS/Reference/Values/important), [les couches](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) et [la spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ## Syntaxe formelle
 

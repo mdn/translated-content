@@ -20,9 +20,9 @@ O elemento `linearGradient` permite que os autores definam gradientes lineares p
 
 ### Atributos globais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
-- [Atributos Xlink](/pt-BR/docs/SVG/Attribute#xlink) »
+- [Atributos centrais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation) »
+- [Atributos Xlink](/pt-BR/docs/Web/SVG/Reference/Attribute#xlink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

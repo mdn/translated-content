@@ -1,9 +1,9 @@
 ---
-title: :visited
+title: CSS `:visited` 擬似クラス
+short-title: :visited
 slug: Web/CSS/Reference/Selectors/:visited
-original_slug: Web/CSS/:visited
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーが訪問したことがあるリンクに適用されます。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。 `:visited` 擬似クラスは `href` 属性を持つ {{htmlelement("a")}} と {{htmlelement("area")}} 要素にのみ適用されます。
@@ -42,7 +42,7 @@ a:visited {
 </ul>
 ```
 
-`:visited` および、未訪問を表す [`:link`](/ja/docs/Web/CSS/Reference/Selectors/:link) 擬似クラスで定義されたスタイルは、少なくとも同等の仕様を持つユーザー操作に関する擬似クラスで（{{cssxref(":hover")}} や {{cssxref(":active")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 `:visited` ルールを `:link` ルールの後、 `:hover` および `:active` ルールの前に置いてください。 _LVHA 順_、 `:link` — `:visited` — `:hover` — `:active` と定義されています。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
+`:visited` および、未訪問を表す {{cssxref(":link")}} 擬似クラスで定義されたスタイルは、少なくとも同等の仕様を持つユーザー操作に関する擬似クラスで（{{cssxref(":hover")}} や {{cssxref(":active")}}）によって上書きされます。適切にリンクにスタイルを適用するには、 `:visited` ルールを `:link` ルールの後、 `:hover` および `:active` ルールの前に置いてください。 _LVHA 順_、 `:link` — `:visited` — `:hover` — `:active` と定義されています。 `:visited` 擬似クラスと `:link` 擬似クラスは互いに排他的です。
 
 ## プライバシー上の制約
 
@@ -52,7 +52,7 @@ a:visited {
 - 利用できる SVG 属性は {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} です。
 - 利用できるスタイルでもアルファチャンネルは無視されます。要素の `:visited` でない状態のアルファ成分が代わりに使用されます。Firefox でアルファ成分が `0` の場合、`:visited` で設定したスタイルは完全に無視されます。
 - これらのスタイルはエンドユーザーに対する表示色を変更できるようになっていますが、 {{domxref("window.getComputedStyle")}} メソッドは嘘をつき、 `:visited` 状態ではない色の値を返します。
-- [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素は `:visited` に一致することはありません。
+- {{ HTMLElement("link") }} 要素は `:visited` に一致することはありません。
 - CSS セレクターを介して要素と照合する DOM メソッド（[`querySelector()`](/ja/docs/Web/API/Document/querySelector) や [`querySelectorAll()`](/ja/docs/Web/API/Document/querySelectorAll) など）は、文書内に訪問済みのリンクがある場合でも、常に「空」の結果を返します。前述のメソッドの場合、これはそれぞれ `null` または空の [`NodeList`](/ja/docs/Web/API/NodeList) になります。
 
 > [!NOTE]

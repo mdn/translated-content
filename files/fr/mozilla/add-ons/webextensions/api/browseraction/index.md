@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 Ajoute un bouton à la barre d'outils du navigateur.
 
-Une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) est un bouton dans la barre d'outils du navigateur.
+Une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) est un bouton dans la barre d'outils du navigateur.
 
 Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des [messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 

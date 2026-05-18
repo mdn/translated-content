@@ -1,8 +1,9 @@
 ---
-title: text-anchor
+title: Propriété CSS `text-anchor`
+short-title: text-anchor
 slug: Web/CSS/Reference/Properties/text-anchor
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-anchor`** aligne une boîte contenant une chaîne de caractères textuelle où la zone de retour à la ligne est déterminée à partir de la propriété {{CSSxRef("inline-size")}}, et le texte est ensuite placé par rapport au point d'ancrage de l'élément, qui est défini à l'aide des attributs {{SVGAttr('x')}} et {{SVGAttr('y')}} (ou {{SVGAttr('dx')}} et {{SVGAttr('dy')}}). Si présent, la valeur de la propriété CSS remplace toute valeur de l'attribut {{SVGAttr("text-anchor")}} de l'élément.

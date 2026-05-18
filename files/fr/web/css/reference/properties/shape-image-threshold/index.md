@@ -1,8 +1,9 @@
 ---
-title: shape-image-threshold
+title: Propriété CSS `shape-image-threshold`
+short-title: shape-image-threshold
 slug: Web/CSS/Reference/Properties/shape-image-threshold
 l10n:
-  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`shape-image-threshold`** définit le seuil du canal alpha utilisé pour extraire la forme à partir d'une image en tant que valeur pour {{CSSxRef("shape-outside")}}.

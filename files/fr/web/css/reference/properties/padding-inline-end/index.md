@@ -1,8 +1,9 @@
 ---
-title: padding-inline-end
+title: Propriété CSS `padding-inline-end`
+short-title: padding-inline-end
 slug: Web/CSS/Reference/Properties/padding-inline-end
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-inline-end`** définit le remplissage logique en fin de ligne d'un élément, qui se traduit par un remplissage physique en fonction du mode d'écriture, de la directions et de l'orientation du texte de l'élément.

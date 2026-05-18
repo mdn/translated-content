@@ -1,8 +1,9 @@
 ---
-title: object-position
+title: Propriété CSS `object-position`
+short-title: object-position
 slug: Web/CSS/Reference/Properties/object-position
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`object-position`** définit l'alignement du contenu d'un {{Glossary("replaced elements", "élément remplacé")}} au sein de la boîte de l'élément. Les zones de la boîte qui ne sont pas couvertes par l'objet de l'élément remplacé afficheront l'arrière-plan de l'élément.

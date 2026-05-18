@@ -1,8 +1,9 @@
 ---
-title: container
+title: Propriété CSS `container`
+short-title: container
 slug: Web/CSS/Reference/Properties/container
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`container`** établit l'élément comme conteneur de requêtes et précise le nom et le type du [contexte de compartimentation](/fr/docs/Web/CSS/Guides/Containment/Container_queries#contexte_de_compartimentation_nommé) utilisé dans une [requête de conteneur](/fr/docs/Web/CSS/Guides/Containment/Container_queries).

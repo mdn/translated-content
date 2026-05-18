@@ -18,7 +18,7 @@ Cada elemento container ou elementos gráficos em um desenho SVG podem fornecer 
 
 ### Atributos globais
 
-- [Atributos centrais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos centrais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

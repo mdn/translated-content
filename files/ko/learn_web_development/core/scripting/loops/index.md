@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/Building_blocks/Looping_code
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 활용 능력, HTML과 CSS,
-        <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a>.
+        <a href="/ko/docs/conflicting/Learn_web_development/Core/Scripting">JavaScript 첫걸음</a>.
       </td>
     </tr>
     <tr>

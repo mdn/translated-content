@@ -1,8 +1,9 @@
 ---
-title: "<table> : l'élément de tableau"
+title: "Élément HTML `<table>` : l'élément de tableau"
+short-title: <table>
 slug: Web/HTML/Reference/Elements/table
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<table>`** représente des données tabulaires, c'est-à-dire des informations présentées dans un tableau à deux dimensions composé de lignes et de colonnes de cellules contenant des données.

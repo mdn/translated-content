@@ -1,8 +1,9 @@
 ---
-title: "<dir> : l'élément de répertoire"
+title: "Élément HTML `<dir>` : l'élément de répertoire"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{Deprecated_Header}}
@@ -20,7 +21,7 @@ Cet élément implémente l'interface `HTMLDirectoryElement`.
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
 
 ## Spécifications

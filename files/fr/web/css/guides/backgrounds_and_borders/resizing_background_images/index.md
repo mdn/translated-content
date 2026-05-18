@@ -1,14 +1,12 @@
 ---
 title: Redimensionner les images d'arrière-plan avec background-size
+short-title: Redimensionner les images d'arrière-plan
 slug: Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
-original_slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 l10n:
-  sourceCommit: 70b1b8ac18d3e3346645d4ee5155f654c83d96e0
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-{{CSSRef}}
-
-La propriété [CSS](/fr/docs/Web/CSS) [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
+La propriété [CSS](/fr/docs/Web/CSS) **{{CSSxRef("background-size")}}** permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer une mosaïque répétant l'image à sa taille normale en indiquant une hauteur et/ou une largeur pour l'image. Il est ainsi possible d'agrandir ou de rapetisser l'image.
 
 ## Répéter une grande image
 
@@ -24,7 +22,7 @@ Prenons une grande image, ici le logo de Firefox aux dimensions 2982x2808 pixels
 
 ```css
 .tiledBackground {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -35,7 +33,7 @@ Prenons une grande image, ici le logo de Firefox aux dimensions 2982x2808 pixels
 
 ### Résultat
 
-{{EmbedLiveSample("", 340, 340)}}
+{{EmbedLiveSample("Répéter une grande image", 340, 340)}}
 
 ## Étirer une image
 
@@ -47,19 +45,21 @@ On peut aussi indiquer les dimensions horizontale et verticale de l'image, comme
 background-size: 300px 150px;
 ```
 
-### Résultat
+Le résultat ressemble à ceci&nbsp;:
 
-![Le logo étiré](stretched_firefox_logo.png)
+![Le logo de Firefox étiré](stretched_firefox_logo.png)
 
 ## Agrandir une image
 
 À l'inverse, on peut vouloir agrandir une image en arrière-plan. Ici, on passe d'une icône de 32x32 pixels à 300x300 pixels&nbsp;:
 
+![Logo de MDN agrandi](scaled_mdn_logo.png)
+
 ### CSS
 
 ```css
 .square2 {
-  background-image: url(favicon.png);
+  background-image: url("favicon.png");
   background-size: 300px;
   width: 300px;
   height: 300px;
@@ -69,15 +69,11 @@ background-size: 300px 150px;
 }
 ```
 
-### Résultat
-
-![Logo de MDN agrandi](scaled_mdn_logo.png)
-
 Comme vous pouvez le voir, le CSS est quasi-identique, seul le nom du fichier a été modifié.
 
 ## Les valeurs spéciales `contain` et `cover`
 
-En plus des valeurs de longueur (type [`<length>`](/fr/docs/Web/CSS/Reference/Values/length)), la propriété [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size) permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
+En plus des valeurs de longueur ({{CSSxRef("&lt;length&gt;")}}), la propriété {{CSSxRef("background-size")}} permet d'utiliser valeurs spéciales `contain` et `cover`. Voyons ce qu'ils offrent.
 
 ### `contain`
 
@@ -87,7 +83,7 @@ La valeur `contain` indique que, quelle que soit la taille de la boîte engloban
 
 ```html
 <div class="bgSizeContain">
-  <p>Essayez de redimensionner cet élément !</p>
+  <p>Essayez de redimensionner cet élément&nbsp;!</p>
 </div>
 ```
 
@@ -95,7 +91,7 @@ La valeur `contain` indique que, quelle que soit la taille de la boîte engloban
 
 ```css
 .bgSizeContain {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -107,7 +103,7 @@ La valeur `contain` indique que, quelle que soit la taille de la boîte engloban
 
 #### Résultat
 
-{{EmbedLiveSample('', 250, 250)}}
+{{EmbedLiveSample("`contain`", 250, 250)}}
 
 ### `cover`
 
@@ -117,7 +113,7 @@ La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite
 
 ```html
 <div class="bgSizeCover">
-  <p>Essayez de redimensionner cet élément !</p>
+  <p>Essayez de redimensionner cet élément&nbsp;!</p>
 </div>
 ```
 
@@ -125,7 +121,7 @@ La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite
 
 ```css
 .bgSizeCover {
-  background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
+  background-image: url("https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png");
   background-size: cover;
   width: 160px;
   height: 160px;
@@ -137,10 +133,11 @@ La valeur `cover` indique que l'image d'arrière-plan devrait être aussi petite
 
 #### Résultat
 
-{{EmbedLiveSample('', 250, 250)}}
+{{EmbedLiveSample("`cover`", 250, 250)}}
 
 ## Voir aussi
 
-- [`background-size`](/fr/docs/Web/CSS/Reference/Properties/background-size)
-- [`background`](/fr/docs/Web/CSS/Reference/Properties/background)
-- [Redimensionnement des arrières-plans SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
+- La propriété {{CSSxRef("background-size")}}
+- La propriété {{CSSxRef("background")}}
+- Le module [d'arrière-plans et bordures CSS](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders)
+- [Redimensionner des arrières-plans SVG](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)

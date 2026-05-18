@@ -16,12 +16,12 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
-        <a href="/es/docs/Web/Guide/HTML/Content_categories#contenido_de_metadatos"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#contenido_de_metadatos"
           >Contenido de metadatos</a
         >.
       </td>

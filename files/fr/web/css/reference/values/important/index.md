@@ -1,8 +1,9 @@
 ---
-title: "!important"
+title: Mot-clé CSS `!important`
+short-title: "!important"
 slug: Web/CSS/Reference/Values/important
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: aaedffba9f47d6dce7967a4191963378026d9406
 ---
 
 Un délimiteur `!` suivi du mot-clé `important` marque la déclaration comme importante. Le drapeau `!important` modifie les règles de sélection des déclarations dans la [cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction). Une déclaration qui n'est pas _importante_ est dite _normale_.
@@ -21,7 +22,7 @@ Le `!important` vient après la valeur de la paire propriété-valeur, précéd�
 
 ## Impact sur la cascade
 
-En ce qui concerne les déclarations importantes, l'[ordre d'origine et de couche de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) est inversé. Sans le drapeau important, les déclarations dans les feuilles de style de l'auteur·ice prévalent sur celles de la feuille de style de l'utilisateur·ice, qui prévalent sur celles de la feuille de style par défaut de l'agent utilisateur.
+En ce qui concerne les déclarations importantes, [l'ordre d'origine et de couche de la cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction) est inversé. Sans le drapeau important, les déclarations dans les feuilles de style de l'auteur·ice prévalent sur celles de la feuille de style de l'utilisateur·ice, qui prévalent sur celles de la feuille de style par défaut de l'agent utilisateur.
 
 Lorsqu'une déclaration est importante, l'ordre de priorité est inversé. Les déclarations marquées comme importantes dans les feuilles de style de l'agent utilisateur prévalent sur toutes les déclarations importantes dans les feuilles de style de l'utilisateur·ice. De même, toutes les déclarations importantes dans les feuilles de style de l'utilisateur·ice prévalent sur toutes les déclarations importantes dans les feuilles de style de l'auteur·ice. Enfin, toutes les déclarations importantes prévalent sur toutes les animations.
 
@@ -30,7 +31,7 @@ Lorsqu'une déclaration est importante, l'ordre de priorité est inversé. Les d
 
 Inverser l'ordre de priorité pour les déclarations importantes garantit que les utilisateur·ice·s ayant des besoins spécifiques, comme des schémas de couleurs personnalisés ou de grandes polices, peuvent outrepasser les styles de l'auteur·ice en marquant certaines déclarations comme importantes dans leur feuille de style utilisateur·ice. Cela garantit aussi que des extensions malveillantes ne peuvent pas outrepasser les styles importants de l'agent utilisateur, ce qui pourrait casser des fonctionnalités ou nuire à la sécurité.
 
-Quelque chose a-t-il priorité sur les déclarations importantes&nbsp;? Oui, les [transitions](/fr/docs/Web/CSS/Guides/Transitions). Les transitions CSS permettent de contrôler la vitesse à laquelle une propriété passe d'une valeur à une autre. Pendant la transition d'une valeur à une autre, une propriété ne correspondra pas à une déclaration importante spécifique.
+Quelque chose a-t-il priorité sur les déclarations importantes&nbsp;? Oui, les [transitions](/fr/docs/Web/CSS/Guides/Transitions). Les transitions CSS permettent de contrôler la vitesse à laquelle une propriété passe d'une valeur à une autre. Pendant la transition d'une valeur à une autre, une propriété ne correspond pas à une déclaration importante spécifique.
 
 ```css
 a {
@@ -44,7 +45,7 @@ a:hover {
 }
 ```
 
-Dans cet exemple, les propriétés `color` et `background-color` passeront à l'état survolé en deux secondes. Même si les états par défaut sont des déclarations normales et les états survolés des déclarations `!important`, la transition a bien lieu.
+Dans cet exemple, les propriétés `color` et `background-color` passent à l'état survolé en deux secondes. Même si les états par défaut sont des déclarations normales et les états survolés des déclarations `!important`, la transition a bien lieu.
 
 ### Les couches de cascade
 
@@ -59,7 +60,7 @@ Les styles en ligne sont des styles définis à l'aide de l'attribut [`style`](/
 Bien que `!important` ne fasse pas partie du calcul de la spécificité, il y est lié. Les déclarations importantes outrepassent toutes les autres déclarations de la même [origine et couche de cascade](/fr/docs/Web/CSS/Guides/Cascade/Introduction).
 
 ```css
-#myElement#myElement#myElement .myClass.myClass p:hover {
+#monElement#monElement#monElement .maClasse.maClasse p:hover {
   color: blue;
 }
 
@@ -68,12 +69,12 @@ p {
 }
 ```
 
-Cet exemple montre un cas de sélecteur sur-défini. Peu importe à quel point la [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) du sélecteur correspond à une déclaration normale, une déclaration importante de la même source et couche de cascade aura toujours la priorité. Dans ce cas, le paragraphe sera toujours rouge.
+Cet exemple montre un cas de sélecteur sur-défini. Peu importe à quel point la [spécificité](/fr/docs/Web/CSS/Guides/Cascade/Specificity) du sélecteur correspond à une déclaration normale, une déclaration importante de la même source et couche de cascade a toujours la priorité. Dans ce cas, le paragraphe est toujours rouge.
 
 Lorsque deux déclarations importantes de la même origine et de la même couche s'appliquent au même élément, les navigateurs sélectionnent et utilisent la déclaration ayant la spécificité la plus élevée.
 
 ```css
-#myElement p {
+#monElement p {
   color: green !important;
 }
 
@@ -113,14 +114,14 @@ Lorsque le drapeau `!important` est ajouté à la déclaration de valeur d'une p
 
 ```css
 :root {
-  --my-color: red !important;
-  --my-color: blue;
+  --ma-couleur: red !important;
+  --ma-couleur: blue;
 }
 p {
-  color: var(--my-color);
+  color: var(--ma-couleur);
 }
 blockquote {
-  color: var(--my-color);
+  color: var(--ma-couleur);
   color: purple;
 }
 ```
@@ -130,21 +131,21 @@ blockquote {
 <blockquote>Ceci est une citation</blockquote>
 ```
 
-Dans cet exemple, le paragraphe sera rouge, pas bleu, car l'affectation de la valeur de la propriété personnalisée est importante. La citation sera violette, car la déclaration normale `purple` vient après la déclaration normale `red`.
+Dans cet exemple, le paragraphe est rouge, pas bleu, car l'affectation de la valeur de la propriété personnalisée est importante. La citation est violette, car la déclaration normale `purple` vient après la déclaration normale `red`.
 
-{{EmbedLiveSample('Impact sur les propriétés personnalisées', 500, 250)}}
+{{EmbedLiveSample("Impact sur les propriétés personnalisées", 500, 250)}}
 
 ## Bonnes pratiques
 
 Évitez d'utiliser `!important` pour outrepasser la spécificité. Lorsque vous créez intentionnellement des déclarations importantes pour des besoins d'interface, commentez dans votre code CSS pour expliquer aux mainteneur·euse·s pourquoi il ne faut pas outrepasser cette fonctionnalité.
 
-Même lorsque vous souhaitez outrepasser des styles à forte spécificité qui ne sont pas sous votre contrôle, comme des styles dans une extension tiers déclaré avec un [sélecteur d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors), il n'est pas nécessaire d'utiliser `!important`. Envisagez plutôt d'importer la feuille de style externe dans une [couche nommée ou anonyme](/fr/docs/Web/CSS/Reference/At-rules/@layer) comme première couche de cascade, au lieu d'utiliser `!important`. Tant que les styles externes n'incluent pas de déclarations importantes, vos styles prévaudront sur ceux du module, quelle que soit la spécificité.
+Même lorsque vous souhaitez outrepasser des styles à forte spécificité qui ne sont pas sous votre contrôle, comme des styles dans une extension tiers déclaré avec un [sélecteur d'identifiant](/fr/docs/Web/CSS/Reference/Selectors/ID_selectors), il n'est pas nécessaire d'utiliser `!important`. Envisagez plutôt d'importer la feuille de style externe dans une [couche nommée ou anonyme](/fr/docs/Web/CSS/Reference/At-rules/@layer) comme première couche de cascade, au lieu d'utiliser `!important`. Tant que les styles externes n'incluent pas de déclarations importantes, vos styles prévalent sur ceux du module, quelle que soit la spécificité.
 
 Si vous devez outrepasser une feuille de style externe contenant des déclarations importantes, créez une couche de cascade contenant les surcharges nécessaires, et déclarez cette couche en premier.
 
 ### Problèmes d'accessibilité
 
-Les styles importants d'une feuille de style utilisateur·ice prévalent sur les déclarations importantes de la feuille de style de l'auteur·ice, ce qui signifie qu'ajouter un drapeau `!important` aux styles d'un site n'empêchera pas les utilisateur·ice·s ayant des besoins spécifiques, comme de grandes polices, de pouvoir outrepasser vos styles en ajoutant des styles importants dans leur propre feuille de style utilisateur·ice.
+Les styles importants d'une feuille de style utilisateur·ice prévalent sur les déclarations importantes de la feuille de style de l'auteur·ice, ce qui signifie qu'ajouter un drapeau `!important` aux styles d'un site n'empêche pas les utilisateur·ice·s ayant des besoins spécifiques, comme de grandes polices, de pouvoir outrepasser vos styles en ajoutant des styles importants dans leur propre feuille de style utilisateur·ice.
 
 ## Compatibilité des navigateurs
 

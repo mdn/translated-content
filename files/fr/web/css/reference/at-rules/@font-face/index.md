@@ -1,8 +1,9 @@
 ---
-title: "@font-face"
+title: Règle CSS `@font-face`
+short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 l10n:
-  sourceCommit: 7d6315943bf1032e19c65bca591e28d2117e9bec
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@font-face`** permet de définir une police d'écriture particulière à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisatrice ou l'utilisateur.

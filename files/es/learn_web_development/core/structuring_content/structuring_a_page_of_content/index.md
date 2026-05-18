@@ -19,10 +19,10 @@ La estructuración de una página de contenido lista para su uso mediante CSS es
             en el resto del curso, con un énfasis particular en la
           </span></span
         ><a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
           >Estructura del Documento y del Sitio Web.</a
         ><a
-          href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/estructura"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Structuring_documents"
           >.</a
         >
       </td>

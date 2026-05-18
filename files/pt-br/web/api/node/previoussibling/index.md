@@ -30,7 +30,7 @@ Navegador baseados na engine Gecko inserem nós de texto no documento para repre
 Portanto um nó obtido, por exemplo, usando [`Node.firstChild`](/pt-BR/docs/Web/API/Node/firstChild) ou [`Node.previousSibling`](/pt-BR/docs/Web/API/Node/previousSibling) pode fazer referência a um
 espaço em banco ao invés do elemento que o autor pretendia obter.
 
-Veja [Whitespace in the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace) e
+Veja [Whitespace in the DOM](/pt-BR/docs/Web/CSS/Guides/Text/Whitespace) e
 [W3C DOM 3 FAQ: Why are some Text nodes empty?](https://www.w3.org/DOM/faq.html#emptytext)
 Para mais informações.
 

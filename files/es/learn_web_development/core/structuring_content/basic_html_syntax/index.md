@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 194ea6cb5ddaf20e4f551cc93574be50b8b4f339
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 En este artículo, cubrimos los conceptos básicos de HTML. Para empezar, este artículo define elementos, atributos y todos los demás términos importantes que puedas haber escuchado. También explica dónde encajan en HTML. Aprenderás cómo se estructuran los elementos HTML, cómo se estructura una página HTML típica y otras características importantes del lenguaje básico. ¡En el camino, también tendrás la oportunidad de jugar con HTML!
 
@@ -17,11 +17,11 @@ En este artículo, cubrimos los conceptos básicos de HTML. Para empezar, este a
       <td>
         Conocimientos informáticos básicos,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, y conocimientos básicos de
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >.
       </td>
@@ -767,4 +767,4 @@ En este punto, debes entender cómo se ve HTML y cómo funciona a un nivel bási
 
 - [Aplicar color a elementos HTML usando CSS](/es/docs/Web/CSS/CSS_colors/Applying_color)
 
-{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "conflicting/Learn_web_development/Core/Structuring_content")}}

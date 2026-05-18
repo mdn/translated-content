@@ -1,8 +1,9 @@
 ---
-title: animation-play-state
+title: Propriété CSS `animation-play-state`
+short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-play-state`** définit si une animation est en cours ou en pause.

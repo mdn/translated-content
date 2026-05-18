@@ -9,7 +9,7 @@ slug: Web/API/SyncEvent
 
 このインターフェイスは {{domxref("ExtendableEvent")}} インターフェイスを継承しています。
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{InheritanceDiagram}}
 
 ## コンストラクタ
 

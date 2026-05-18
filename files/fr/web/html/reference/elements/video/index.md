@@ -1,8 +1,9 @@
 ---
-title: "<video> : l'élément d'intégration vidéo"
+title: "Élément HTML `<video>` : l'élément d'intégration vidéo"
+short-title: <video>
 slug: Web/HTML/Reference/Elements/video
 l10n:
-  sourceCommit: 8db892b3e7ca294621898441e7db2481e0e6d939
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<video>`** intègre un lecteur de média qui prend en charge la lecture vidéo dans le document. Vous pouvez également utiliser `<video>` pour le contenu audio, mais l'élément {{HTMLElement("audio")}} peut fournir une expérience utilisateur plus appropriée.
@@ -79,14 +80,14 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
         Le chargement différé évite la consommation de bande passante réseau et de stockage nécessaire pour gérer la vidéo tant qu'il n'est pas raisonnablement certain qu'elle sera nécessaire. Cela améliore les performances dans la plupart des cas d'utilisation typiques.
 
-    Bien que les attributs [`width`](#width) et [`height`](#height) explicites soient recommandés pour toutes les vidéos afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour celles chargées en différé. Les vidéos chargées en différé ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement modifierait cela, car les vidéos non chargées ont une `width` et une `height` de `0`. Cela crée une expérience utilisateur encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise en pleine lecture.
+        Bien que les attributs [`width`](#width) et [`height`](#height) explicites soient recommandés pour toutes les vidéos afin d'éviter les décalages de mise en page, ils sont particulièrement importants pour celles chargées en différé. Les vidéos chargées en différé ne seront jamais chargées si elles n'intersectent pas une partie visible d'un élément, même si leur chargement modifierait cela, car les vidéos non chargées ont une `width` et une `height` de `0`. Cela crée une expérience utilisateur encore plus perturbante lorsque le contenu visible dans la zone d'affichage se réorganise en pleine lecture.
 
-    Les vidéos chargées en différé situées dans la zone d'affichage visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des vidéos chargées immédiatement — les vidéos chargées en différé ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
+        Les vidéos chargées en différé situées dans la zone d'affichage visuelle peuvent ne pas encore être visibles lorsque l'évènement {{DOMxRef("Window.load_event", "load")}} de la fenêtre est déclenché. Cela s'explique par le fait que l'évènement est déclenché en fonction des vidéos chargées immédiatement — les vidéos chargées en différé ne sont pas prises en compte même si elles se trouvent dans la zone d'affichage visuelle lors du chargement initial de la page.
 
-    Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait toujours possible pour un site de suivre la position approximative de défilement d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des vidéos dans le balisage d'une page de sorte qu'un serveur puisse suivre combien de vidéos sont demandées et quand.
+        Le chargement n'est différé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait toujours possible pour un site de suivre la position approximative de défilement d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des vidéos dans le balisage d'une page de sorte qu'un serveur puisse suivre combien de vidéos sont demandées et quand.
 
-    > [!NOTE]
-    > L'attribut `loading="lazy"` a également un impact sur les attributs [`autoplay`](#autoplay), [`poster`](#poster) et [`preload`](#preload), comme décrit dans chacune de ces sections de la page.
+        > [!NOTE]
+        > L'attribut `loading="lazy"` a également un impact sur les attributs [`autoplay`](#autoplay), [`poster`](#poster) et [`preload`](#preload), comme décrit dans chacune de ces sections de la page.
 
 - `loop`
   - : Un attribut booléen, qui, lorsqu'il est présent, indique que la vidéo doit être jouée en boucle.
@@ -114,11 +115,10 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
 
     > [!NOTE]
     >
+    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini n'appliqueront le comportement `preload` que lorsque la vidéo sera proche ou dans la zone d'affichage.
+    >
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.
     > - Cet attribut est simplement une indication, la spécification ne force pas le navigateur à respecter la valeur de cet attribut.
-
-    > [!NOTE]
-    > Les vidéos avec l'attribut [`loading="lazy"`](#loading) défini n'appliqueront le comportement `preload` que lorsque la vidéo sera proche ou dans la zone d'affichage.
 
 - `src`
   - : L'URL de la vidéo à intégrer. Cet attribut est optionnel, l'élément {{HTMLElement("source")}} peut également être utilisé dans l'élément `<video>` afin d'indiquer la vidéo à intégrer.

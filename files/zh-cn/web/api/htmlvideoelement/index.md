@@ -9,7 +9,7 @@ slug: Web/API/HTMLVideoElement
 
 在不同浏览器中 [支持的媒体格式](/zh-CN/docs/Web/Media/Guides/Formats) 是不一样的。因此在提供媒体文件的时候，或者提供一种所有浏览器都支持的格式，或者提供格式不同的多个视频源来支持不同浏览器，保证你想要支持的浏览器都能够播放。
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

@@ -1,8 +1,9 @@
 ---
-title: atan()
+title: CSS `atan()` 関数
+short-title: atan()
 slug: Web/CSS/Reference/Values/atan
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`atan()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、`-∞` から `+∞` までの数値の逆正接を返す三角関数です。この関数には、 `-90deg` から `90deg` までの {{cssxref("angle")}} を返す単一の計算が含まれています。

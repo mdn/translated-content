@@ -1,8 +1,9 @@
 ---
-title: overflow-wrap
+title: Propriété CSS `overflow-wrap`
+short-title: overflow-wrap
 slug: Web/CSS/Reference/Properties/overflow-wrap
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-wrap`** s'applique au texte, définissant si le navigateur doit insérer des sauts de ligne à l'intérieur d'une chaîne autrement insécable pour éviter que le texte ne dépasse de sa boîte de ligne.

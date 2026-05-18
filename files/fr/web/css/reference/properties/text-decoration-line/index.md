@@ -1,8 +1,9 @@
 ---
-title: text-decoration-line
+title: Propriété CSS `text-decoration-line`
+short-title: text-decoration-line
 slug: Web/CSS/Reference/Properties/text-decoration-line
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-decoration-line`** permet de définir le type de décoration appliquée au texte d'un élément, comme un soulignement ou une ligne au-dessus du texte.

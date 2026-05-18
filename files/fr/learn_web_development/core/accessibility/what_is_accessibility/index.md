@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela comprend les groupes de personnes que l'on a besoin de considérer et pourquoi, quels outils ils utilisent afin d'intéragir avec les pages web et comment rendre accessible la partie de notre espace de travail web.
 
@@ -166,4 +166,4 @@ Lorsque les informations sémantiques natives fournies par les éléments HTML d
 
 Cet article aurait dû vous donner une vue d'ensemble utile de haut niveau de l'accessibilité, vous expliquer pourquoi c'est important et voir comment vous pouvez l'intégrer à votre flux de travail. Vous devriez maintenant aussi avoir soif d'apprendre les détails de la mise en œuvre susceptibles de rendre des sites accessibles. Nous commencerons dans cette question dans la section suivante, en nous demandant pourquoi le HTML constitue une bonne base d'accessibilité.
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}

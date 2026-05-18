@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/transform
 original_slug: Web/XSLT/Element/transform
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:transform>` 요소는 [`<xsl:stylesheet>`](/ko/XSLT/stylesheet) 요소와 정확히 같습니다.
 

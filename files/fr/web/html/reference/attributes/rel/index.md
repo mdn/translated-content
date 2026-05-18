@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : rel"
+title: "Attribut HTML : `rel`"
 short-title: rel
 slug: Web/HTML/Reference/Attributes/rel
 l10n:
-  sourceCommit: a4fcf79b60471db6f148fa4ba36f2cdeafbbeb70
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`rel`** définit la relation entre une ressource liée et le document courant. Il est valide sur {{HTMLElement("link")}}, {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}}. Les valeurs acceptées dépendent de l'élément sur lequel l'attribut est utilisé.

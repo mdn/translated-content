@@ -1,8 +1,9 @@
 ---
-title: "<textarea> : l'élément de zone de texte"
+title: "Élément HTML `<textarea>` : l'élément de zone de texte"
+short-title: <textarea>
 slug: Web/HTML/Reference/Elements/textarea
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<textarea>`** représente un contrôle d'édition de texte brut sur plusieurs lignes, utile lorsque vous souhaitez permettre aux utilisateur·ice·s de saisir une quantité importante de texte libre, par exemple un commentaire sur un avis ou un formulaire de retour.

@@ -8,7 +8,7 @@ original_slug: Web/CSS/:last-of-type
 
 ## Sumário
 
-A [CSS](/pt-BR/docs/Web/CSS) [pseudo-class](/pt-BR/docs/Web/CSS/Pseudo-classes) `:last-of-type` representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.
+A [CSS](/pt-BR/docs/Web/CSS) [pseudo-class](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) `:last-of-type` representa o último irmão com o nome de elemento dado na lista de filhos de seu elemento pai.
 
 ## Syntax
 

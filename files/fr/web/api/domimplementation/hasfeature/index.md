@@ -5,7 +5,7 @@ slug: Web/API/DOMImplementation/hasFeature
 
 {{ApiRef("DOM")}}
 
-{{deprecated_header()}}
+{{deprecated_header}}
 
 La méthode **`DOMImplementation.hasFeature()`** renvoie un {{domxref("Boolean")}} (_booléen_) indiquant si une fonctionnalité donnée est prise en charge. Cette méthode est dépréciée et les navigateurs modernes renvoient `true` (_vrai_) dans tous les cas.
 

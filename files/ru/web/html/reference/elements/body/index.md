@@ -11,7 +11,7 @@ slug: Web/HTML/Reference/Elements/body
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories"
           >Категории контента</a
         >
       </th>
@@ -25,7 +25,7 @@ slug: Web/HTML/Reference/Elements/body
     <tr>
       <th scope="row">Допустимое содержимое</th>
       <td>
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories#Потоковый_контент"
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories#Потоковый_контент"
           >Потоковый контент</a
         >.
       </td>

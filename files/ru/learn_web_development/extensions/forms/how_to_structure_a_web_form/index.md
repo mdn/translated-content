@@ -282,7 +282,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 ## Протестируйте себя!
 
-Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn/Forms/Test_your_skills:_Form_structure).
+Вы дошли до конца статьи, но можете ли вспомнить самую важную информацию? Далее вы можете найти тест, который поможет убедиться, что вы усвоили знания прежде чем двигаться дальше — посмотрите [Test your skills: Form structure](/ru/docs/Learn_web_development/Extensions/Forms).
 
 ## Заключение
 
@@ -311,4 +311,4 @@ slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 
 - [Как создавать пользовательские виджеты форм](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form widgets](/ru/docs/Learn_web_development/Extensions/Forms)

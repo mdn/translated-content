@@ -6,7 +6,7 @@ original_slug: Web/CSS/:invalid
 
 {{CSSRef}}
 
-A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/HTML/Constraint_validation).
+A [pseudo-classe CSS](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:invalid`** representa qualquer elemento {{HTMLElement("input")}} ou {{HTMLElement("form")}} cujo conteúdo não esteja [válido](/pt-BR/docs/Web/HTML/Constraint_validation).
 
 ```css
 /* Seleciona todos os inputs inválidos */

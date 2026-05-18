@@ -1,8 +1,9 @@
 ---
-title: interpolate-size
+title: Propriété CSS `interpolate-size`
+short-title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

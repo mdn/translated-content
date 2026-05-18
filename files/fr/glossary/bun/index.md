@@ -2,12 +2,12 @@
 title: Bun
 slug: Glossary/Bun
 l10n:
-  sourceCommit: 6722199b4d63fad3c33db1146af380fc98b6c202
+  sourceCommit: 0d155984425e8964c889efb63ec39593e11bbc14
 ---
 
 **Bun** est un environnement d'exécution {{Glossary("JavaScript")}} moderne et rapide, conçu pour privilégier la performance et les outils pour les développeur·euse·s.
 
-Contrairement à [Node.js <sup>(angl.)</sup>](https://nodejs.org/) et [Deno <sup>(angl.)</sup>](https://deno.com/), Bun est basé sur [JavaScriptCore <sup>(angl.)</sup>](https://trac.webkit.org/wiki/JavaScriptCore) d'Apple. Les fonctionnalités notables de Bun incluent&nbsp;:
+Contrairement à [Node.js <sup>(angl.)</sup>](https://nodejs.org/) et [Deno <sup>(angl.)</sup>](https://deno.com/), Bun est basé sur [JavaScriptCore <sup>(angl.)</sup>](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) d'Apple. Les fonctionnalités notables de Bun incluent&nbsp;:
 
 - Remplacement direct de Node.js&nbsp;: presque tous les programmes Node.js peuvent s'exécuter avec les commandes équivalentes de Bun.
 - Vitesse d'exécution JavaScript de pointe dans la plupart des scénarios réels.

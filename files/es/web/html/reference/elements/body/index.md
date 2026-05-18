@@ -12,13 +12,13 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5"
+          href="/es/docs/Web/HTML/Reference/Elements/Heading_Elements#Section_Elements_in_HTML5"
           >Secciones en HTML5</a
         >
       </td>
@@ -26,7 +26,7 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flujo de contenido</a
         >.
       </td>

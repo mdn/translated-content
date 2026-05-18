@@ -12,14 +12,14 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias do conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flux content</a
-        >,<a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content">
+        >,<a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content">
           Phrasing content</a
         >, conteúdo palpável.
       </td>
@@ -27,7 +27,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -40,10 +40,10 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
       <th scope="row">Permitted parents</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, ou qualquer elemento que aceite
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >flow content</a
         >.
       </td>
@@ -66,7 +66,7 @@ O elemento HTML <strong> dá ao texto uma forte importância, e é tipicamente m
 
 ## Atributos
 
-Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -112,6 +112,6 @@ Ao fazer x é **imperativo** que se faça y antes de prosseguir.
 
 ## Veja também
 
-- [HTML bold element](/pt-BR/docs/Web/HTML/Element/b)
+- [HTML bold element](/pt-BR/docs/Web/HTML/Reference/Elements/b)
 
 {{HTMLSidebar}}

@@ -9,7 +9,7 @@ O **Modelo de Objeto de Documento (_DOM_)** é uma interface de programação pa
 
 Embora o DOM seja frequentemente acessado usando JavaScript, não é uma parte da linguagem JavaScript. Ele também pode ser acessado por outras linguagens.
 
-Uma [introdução](/pt-BR/docs/Web/API/Document_Object_Model/Introduction) ao DOM está disponível.
+Uma [introdução](/pt-BR/docs/conflicting/Web/API/Document_Object_Model_a0b90593de4c5cb214690e823be115a18d605d4bc7719ba296e212da2abe18ef) ao DOM está disponível.
 
 ## DOM interfaces
 
@@ -331,4 +331,4 @@ Aqui estão a DOM API para tipos de dados utilizados nas definições de proprie
 
 ## Veja também
 
-- [DOM Exemplos](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
+- [DOM Exemplos](/pt-BR/docs/conflicting/Web/API/Document_Object_Model)

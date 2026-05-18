@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/trailing
 original_slug: Web/EXSLT/set/trailing
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `set:trailing()` renvoie les nœuds d'un premier ensemble de nœuds qui viennent après le premier nœud d'un deuxième ensemble.
 

@@ -22,7 +22,7 @@ original_slug: Web/HTML/Element/title
         >
       </th>
       <td>
-        <a href="/ko/docs/Web/Guide/HTML/컨텐트_카테고리#메타데이터_콘텐츠"
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#메타데이터_콘텐츠"
           >메타데이터 콘텐츠</a
         >.
       </td>

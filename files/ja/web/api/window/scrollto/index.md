@@ -1,27 +1,43 @@
 ---
-title: window.scrollTo
+title: "Window: scrollTo() メソッド"
+short-title: scrollTo()
 slug: Web/API/Window/scrollTo
+l10n:
+  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
 {{APIRef}}
 
-**`Window.scrollTo()`** は文書内の特定の組み合わせの座標までスクロールします。
+**`Window.scrollTo()`** は文書内の特定の座標までスクロールします。
 
 ## 構文
 
-```
-window.scrollTo(x-coord, y-coord)
-window.scrollTo(options)
+```js-nolint
+scrollTo(xCoord, yCoord)
+scrollTo(options)
 ```
 
 ### 引数
 
-- `x-coord` は、左上に表示されたい文書の水平軸上のピクセルです。
-- `y-coord` は、左上に表示されたい文書の垂直軸上のピクセルです。
+- `xCoord`
+  - : 文書の水平軸上の、左上に表示させたいピクセルです。
+- `yCoord`
+  - : 文書の垂直軸上の、左上に表示させたいピクセルです。
+- `options`
+  - : 以下のプロパティが含まれているオブジェクトです。
+    - `top`
+      - : ウィンドウまたは要素をスクロールする Y 軸方向のピクセル数を指定します。
+    - `left`
+      - : ウィンドウまたは要素をスクロールする X 軸方向のピクセル数を指定します。
+    - `behavior`
+      - : スクロールを瞬時に行うか、滑らかにアニメーションするかを指定します。このオプションは文字列であり、以下のいずれかの値を設定しなければなりません。
+        - `smooth`: スクロールを滑らかなアニメーションで行います。
+        - `instant`: スクロールを単一のジャンプで直ちに行います。
+        - `auto`: スクロールの動作は {{cssxref("scroll-behavior")}} の計算値で定められます。
 
-\- または -
+### 返値
 
-- `options` は {{domxref("ScrollToOptions")}} 辞書です。
+なし ({{jsxref("undefined")}})。
 
 ## 例
 

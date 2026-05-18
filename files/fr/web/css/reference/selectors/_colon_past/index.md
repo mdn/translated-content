@@ -1,8 +1,9 @@
 ---
-title: :past
+title: Pseudo-classe CSS `:past`
+short-title: :past
 slug: Web/CSS/Reference/Selectors/:past
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:past`** est une pseudo-classe temporelle qui correspondra à tout élément apparaissant entièrement avant un élément correspondant à {{CSSxRef(":current")}}. Par exemple, dans une vidéo avec des sous-titres affichés par [WebVTT](/fr/docs/Web/API/WebVTT_API).

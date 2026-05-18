@@ -40,5 +40,5 @@ slug: Web/SVG/Reference/Attribute/stroke-width
 
 Следующие элементы могут использовать атрибут `stroke-width`.
 
-- [Элементы форм](/ru/docs/SVG/Element#shape)
-- [Текстовые элементы](/ru/docs/SVG/Element#textcontent)
+- [Элементы форм](/ru/docs/Web/SVG/Reference/Element#shape)
+- [Текстовые элементы](/ru/docs/Web/SVG/Reference/Element#textcontent)

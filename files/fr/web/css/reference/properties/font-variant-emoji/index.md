@@ -1,8 +1,9 @@
 ---
-title: font-variant-emoji
+title: Propriété CSS `font-variant-emoji`
+short-title: font-variant-emoji
 slug: Web/CSS/Reference/Properties/font-variant-emoji
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-emoji`** permet de définir le style de présentation par défaut pour l'affichage des emojis.

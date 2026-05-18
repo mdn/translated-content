@@ -1,11 +1,12 @@
 ---
-title: color-mix()
+title: CSS `color-mix()` 関数
+short-title: color-mix()
 slug: Web/CSS/Reference/Values/color_value/color-mix
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`color-mix()`** 関数記法は 2 つの {{cssxref("&lt;color&gt;")}} 値を採り、指定された色空間の指定された量で混合した結果を返します。
+**`color-mix()`** 関数記法は 1 つ以上の {{cssxref("&lt;color&gt;")}} 値を取り、指定された色空間の指定された量で混合した結果を返します。
 
 ## 構文
 
@@ -21,11 +22,15 @@ color-mix(in lab, plum 60%, #123456 50%)
 /* 補間方法付き */
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
+
+/* 2 つ以上の色 */
+color-mix(in oklab, teal, olive, blue)
+color-mix(in oklab, teal 20%, olive 30%, blue 50%)
 ```
 
 ### 引数
 
-`color-mix( <color-interpolation-method>, <color> [<percentage>], <color> [<percentage>] )` は以下の引数を受け入れます。
+`color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` は以下の引数を受け入れます。
 
 - {{CSSXref("&lt;color-interpolation-method&gt;")}}
   - : 色の混合に使用する補間方法を指定します。`in` キーワードに続いて、{{glossary("color space", "色空間")}}（[形式文法](#形式文法)に掲載されている色空間のいずれか）を指定し、必要に応じて {{CSSXref("&lt;hue-interpolation-method&gt;")}} を指定します。
@@ -42,7 +47,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
 ## 解説
 
-`color-mix()` 関数は、任意の種類の 2 つの {{cssxref("&lt;color&gt;")}} 値を、特定の比率で、指定された色空間において、色相補間処理については短い方と長い方のどちらかを使用して混合することを可能にします。ブラウザーは多数の色空間に対応しており、`color-mix()` 関数により、sRGB 色空間に限定されない幅広い色の混合が可能になります。
+`color-mix()` 関数は、任意の種類の 1 つ以上の {{cssxref("&lt;color&gt;")}} 値を、特定の比率で、指定された色空間において、色相補間処理については短い方と長い方のどちらかを使用して混合することを可能にします。ブラウザーは多数の色空間に対応しており、`color-mix()` 関数により、sRGB 色空間に限定されない幅広い色の混合が可能になります。
 
 {{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
@@ -52,7 +57,7 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
 適切な色空間の選択は、望ましい結果を得るために重要です。指定された色を混在させる場合でも、補間処理の用途によって、異なる色空間がより適切となる場合があります。
 
-- 2 つの色の光を物理的に混合した結果を求める場合には、CIE XYZ または srgb-linear 色空間が適切です。これらは光強度に対して線形であるためです。
+- 色の光を物理的に混合した結果を求める場合には、CIE XYZ または srgb-linear 色空間が適切です。これらは光強度に対して線形であるためです。
 - 色を知覚的に均等に分布させる必要がある場合（グラデーションなど）、Oklab（および旧式の Lab）色空間が適しています。これらは知覚的に均一になるよう設計されているためです。
 - 色混合におけるグレー化を避ける場合、すなわちトランジション全体で彩度を最大化したい場合には、Oklch（および旧式の LCH）色空間が効果的です。
 - sRGB は、sRGB を使用する特定の端末やソフトウェアの動作に一致する必要がある場合にのみ使用してください。sRGB 色空間は光強度に対して線形でも知覚的に均一でもなく、混合色が暗くなりすぎたり、灰色がかったりするなど、産出する結果が劣ります。
@@ -68,9 +73,9 @@ color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
 ### 色の割合
 
-2 つの色はそれぞれ、`0%` から `100%` までの `<percentage>` 値が宣言可能で、これは混合させる対応する色の量を指定します。宣言されたパーセント値の合計値が `100%` に等しくない場合、パーセント値は正規化されます。
+色はそれぞれ、`0%` から `100%` までの `<percentage>` 値が宣言可能で、これは混合させる対応する色の量を指定します。宣言されたパーセント値の合計値が `100%` に等しくない場合、パーセント値は正規化されます。
 
-2 つの色のパーセント値（ここでは `p1` および `p2` とする）は次のように正規化されます。
+2 つの色が混合された場合のパーセント値（ここでは `p1` および `p2` とする）は、次のように正規化されます。
 
 - `p1` と `p2` の両方が省略された場合は、 `p1 = p2 = 50%` となります。
 - `p1` が省略されたら、 `p1 = 100% - p2` となります。
@@ -245,7 +250,7 @@ li:nth-child(6) {
 
 ### color-mix() による色相の補間の使用
 
-この例は、`color-mix()` 関数で利用できる色相補間方式を実演します。色相の[補間](/ja/docs/Web/CSS/Reference/Values/color_value#補間)を使用する場合、結果の色相は混合される 2 色の色相値の中間となります。色相環上のどの経路を通るかによって、得られる値は異なります。
+この例は、`color-mix()` 関数で利用できる色相補間方式を実演します。色相の[補間](/ja/docs/Web/CSS/Reference/Values/color_value#補間)を使用する場合、結果の色相は混合される色相値の中間となります。色相環上のどの経路を通るかによって、得られる値は異なります。
 
 詳しくは、{{cssxref("&lt;hue-interpolation-method&gt;")}} を参照してください。
 

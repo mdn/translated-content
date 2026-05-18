@@ -1,37 +1,57 @@
 ---
-title: Intl.Locale.prototype.hourCycles
+title: "Intl.Locale : méthode getHourCycles()"
+short-title: getHourCycles()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles
+l10n:
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{JSRef}}
+La méthode **`getHourCycles()`** des instances de {{JSxRef("Intl.Locale")}} retourne une liste d'un ou plusieurs identifiants de cycles horaires uniques pour cette locale.
 
-La propriété **`Intl.Locale.prototype.hourCycles`** est un accesseur qui renvoie une liste d'un ou plusieurs identifiants de cycles horaires utilisés pour la locale représentée par l'instance `Locale` courante.
+> [!NOTE]
+> Dans certaines versions de certains navigateurs, cette méthode était implémentée comme une propriété d'accesseur appelée `hourCycles`. Cependant, comme elle retourne un nouveau tableau à chaque accès, elle est maintenant implémentée comme une méthode pour éviter la situation où `locale.hourCycles === locale.hourCycles` retourne `false`. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails.
 
-## Description
+## Syntaxe
 
-Il existe deux conventions pour représenter une heure pendant une journée&nbsp;: sur une horloge à 12 heures et sur une horloge à 24 heures. La propriété `hourCycles` permet de connaître l'ensemble des cycles horaires disponibles pour la locale courante. Le type de cycle horaire correspond à [une sous-balise d'extension](https://www.unicode.org/reports/tr35/#u_Extension), qui étend les données portées par la chaîne de caractères représentant la locale. Les valeurs possibles pour représenter un cycle horaire sont indiquées dans le tableau qui suit.
+```js-nolint
+getHourCycles()
+```
 
-### Types de cycles horaires valides
+### Paramètres
 
-| Type de cycle horaire | Description                                                                                                                         |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `h12`                 | Système horaire utilisant 1-12&nbsp;; ce qui correspond à 'h' dans les motifs. Horloge sur 12 heures, minuit commençant à 12:00 am. |
-| `h23`                 | Système horaire utilisant 0-23&nbsp;; ce qui correspond à 'H' dans les motifs. Horloge sur 24 heures, minuit commençant à 0:00.     |
-| `h11`                 | Système horaire utilisant 0-11&nbsp;; ce qui correspond à 'K' dans les motifs. Horloge sur 12 heures, minuit commençant à 0:00 am.  |
-| `h24`                 | Système horaire utilisant 1-24&nbsp;; ce qui correspond à 'k' dans les motifs. Horloge sur 24 heures, minuit commençant à 24:00.    |
+Aucun.
+
+### Valeur de retour
+
+Un tableau de chaînes de caractères représentant tous les types de cycles horaires couramment utilisés pour la `Locale`, triés par ordre de préférence décroissant. Si la `Locale` possède déjà un {{JSxRef("Intl.Locale.prototype.hourCycle", "hourCycle")}}, alors le tableau retourné contient cette seule valeur.
+
+Ci-dessous se trouve une liste des types de cycles horaires pris en charge.
+
+### Types de cycles horaires pris en charge
+
+- `h12`
+  - : Système horaire utilisant 1-12&nbsp;; ce qui correspond à 'h' dans les motifs. Horloge sur 12 heures, minuit commençant à 12:00 am. Utilisé, par exemple, aux États-Unis.
+- `h23`
+  - : Système horaire utilisant 0-23&nbsp;; ce qui correspond à 'H' dans les motifs. Horloge sur 24 heures, minuit commençant à 0:00.
+- `h11`
+  - : Système horaire utilisant 0-11&nbsp;; ce qui correspond à 'K' dans les motifs. Horloge sur 12 heures, minuit commençant à 0:00 am. Utilisé principalement au Japon.
+- `h24`
+  - : Système horaire utilisant 1-24&nbsp;; ce qui correspond à 'k' dans les motifs. Horloge sur 24 heures, minuit commençant à 24:00. N'est utilisé nulle part.
 
 ## Exemples
 
-### Connaître les cycles horaires pris en charge
+### Obtenir les cycles horaires pris en charge
+
+Si l'objet `Locale` ne possède pas déjà un `hourCycle`, `getHourCycles()` liste tous les identifiants de cycles horaires couramment utilisés pour la `Locale` donnée. Pour des exemples de définition explicite d'un `hourCycle`, voir les [exemples de `hourCycle`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle#exemples).
 
 ```js
-let arEG = new Intl.Locale("ar-EG");
-console.log(arEG.hourCycles); // logs ["h12"]
+const arEG = new Intl.Locale("ar-EG");
+console.log(arEG.getHourCycles()); // ["h12"]
 ```
 
 ```js
-let jaJP = new Intl.Locale("ja-JP");
-console.log(jaJP.hourCycles); // logs ["h23"]
+const jaJP = new Intl.Locale("ja-JP");
+console.log(jaJP.getHourCycles()); // ["h23"]
 ```
 
 ## Spécifications
@@ -44,6 +64,6 @@ console.log(jaJP.hourCycles); // logs ["h23"]
 
 ## Voir aussi
 
-- [`Intl.Locale`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
-- [`Intl.Locale.hourCycle`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
-- [Spécification Unicode pour la clé d'extension HourCycle](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier)
+- L'objet {{JSxRef("Intl.Locale")}}
+- La propriété {{JSxRef("Intl.Locale.prototype.hourCycle")}}
+- [Unicode pour la clé d'extension HourCycle <sup>(angl.)</sup>](https://www.unicode.org/reports/tr35/#UnicodeHourCycleIdentifier) dans la spécification Unicode locale data markup language

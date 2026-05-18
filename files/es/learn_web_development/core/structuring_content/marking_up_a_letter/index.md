@@ -14,23 +14,23 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
       <th scope="row">Prerrequisitos:</th>
       <td>
         Antes de intentar este examen deberías haber trabajado los artículos
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Getting started with HTML</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata"
           >What's in the head? Metadata in HTML</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >HTML text fundamentals</a
         >,
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Creating_links"
           >Creating hyperlinks</a
         >, y
         <a
-          href="/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+          href="/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features"
           >Advanced text formatting</a
         >.
       </td>

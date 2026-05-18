@@ -1,8 +1,9 @@
 ---
-title: ::search-text
+title: Pseudo-élément CSS `::search-text`
+short-title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{SeeCompatTable}}

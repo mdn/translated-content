@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{HTMLElement("video")}} 要素が実装している **`HTMLVideoElement`** インターフェイスは、動画ブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。
+{{HTMLElement("video")}} 要素が実装している **`HTMLVideoElement`** インターフェイスは、動画オブジェクトを操作するための特別なプロパティとメソッドを提供します。また、 {{domxref("HTMLMediaElement")}} と {{domxref("HTMLElement")}} のプロパティとメソッドを継承しています。
 
 [対応しているメディア形式](/ja/docs/Web/Media/Guides/Formats)のリストは、ブラウザーによって異なります。動画を提供する際には、関連するすべてのブラウザーが対応している単一の形式で提供するか、対応する必要のあるすべてのブラウザーをカバーするように、異なる形式で複数の動画ソースを提供するかしてください。
 
@@ -41,7 +41,7 @@ _親インターフェイスである {{domxref("HTMLMediaElement")}} および 
 - {{domxref("HTMLVideoElement.mozPaintedFrames")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : `unsigned long` で、画面上に描画されたフレームの数を返します。
 - {{domxref("HTMLVideoElement.mozFrameDelay")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : `double` で、最後にペイントされたビデオフレームの時刻をを秒単位で返します。
+  - : `double` で、最後にペイントされたビデオフレームの時刻を秒単位で返します。
 - {{domxref("HTMLVideoElement.mozHasAudio")}} {{Non-standard_Inline}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 論理値で、動画に音声があるかどうかを示す値を返します。
 
@@ -67,7 +67,7 @@ _親である {{domxref("HTMLMediaElement")}} およびその祖先である {{d
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
   - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : ピクチャインピクチャモードになったときに {{DOMxRef("HTMLVideoElement")}} に送信されます。
+  - : ピクチャインピクチャモードを終了したときに {{DOMxRef("HTMLVideoElement")}} に送信されます。
 - {{DOMxRef("HTMLVideoElement.resize_event", "resize")}}
   - : {{domxref("HTMLVideoElement.videoWidth", "videoWidth")}} と {{domxref("HTMLVideoElement.videoHeight", "videoHeight")}} プロパティのうち、どちらか一方または両方が更新された直後に発行されます。
 

@@ -20,7 +20,7 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 > **Note:** **Usage note:**
 > Navegadores nem sempre exibem a imagem referenciada pelo elemento. Este é o caso para navegadores não gráficos (incluindo aqueles usados por pessoas com deficiência de visão), ou se o usuário optar por não exibir imagens ou se o navegador não conseguir exibir a imagem porque é inválido ou um tipo não suportado. Nesses casos, o navegador pode substituir a imagem pelo texto definido no atributo **alt** deste elemento.
 
-- _[Content categories](/pt-BR/docs/Web/HTML/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Content_categories#phrasing_content), embedded content, palpable content. If the element has a [`usemap`](#usemap) attribute, it also is a part of the interactive content category.
+- _[Content categories](/pt-BR/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/pt-BR/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/pt-BR/docs/Web/HTML/Guides/Content_categories#phrasing_content), embedded content, palpable content. If the element has a [`usemap`](#usemap) attribute, it also is a part of the interactive content category.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
 - _Permitted parent elements_ Any element that accepts embedded content.
@@ -28,7 +28,7 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 
 ## Atributos
 
-Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
+Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{deprecated_inline}}
   - : The alignment of the image with respect to its surrounding context. Use the {{cssxref('vertical-align')}} CSS property.
@@ -40,7 +40,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `border` {{deprecated_inline}}
   - : The width of a border around the image.
 - `crossorigin`
-  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
     - anonymous
       - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted..
     - use-credentials
@@ -55,12 +55,12 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `ismap`
   - : This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.
 
-    > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute.
+    > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Reference/Elements/a#href) attribute.
 
 - `longdesc` {{deprecated_inline}}
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id).
 - `name` {{deprecated_inline}}
-  - : A name for the element. Use the [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) attribute instead.
+  - : A name for the element. Use the [`id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#id) attribute instead.
 - `src`
   - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
 - `srcset`
@@ -75,7 +75,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 - `width`
   - : The width of the image in pixels or percent.
 - `usemap`
-  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/Web/HTML/Element/map) associated with the element.
+  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/Web/HTML/Reference/Elements/map) associated with the element.
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
@@ -178,9 +178,9 @@ Quando o atributo `alt` não estiver presente em uma imagem, alguns programas le
 
 ### O atributo title
 
-O atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title) não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
+O atributo [`title`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#title) não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
 
-Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
+Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Reference/Elements/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Reference/Elements/figcaption).
 
 O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de _poder_ _prover_ informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.
 

@@ -13,9 +13,9 @@ Este tutorial tem como objetivo explicar as partes internas de SVG acompanhada d
 
 ##### Apresentando SVG com Scratch
 
-- [Introdução](/pt-BR/docs/Web/SVG/Tutorial/Introduction)
-- [Começando](/pt-BR/docs/Web/SVG/Tutorial/Getting_Started)
-- [Posições](/pt-BR/docs/Web/SVG/Tutorial/Positions)
+- [Introdução](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction)
+- [Começando](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
+- [Posições](/pt-BR/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)
 - [Formas Básicas](/pt-BR/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [Caminhos](/pt-BR/docs/Web/SVG/Tutorial/Paths)
 - [Preenchimentos e traços](/pt-BR/docs/Web/SVG/Tutorial/Fills_and_Strokes)

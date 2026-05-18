@@ -1,8 +1,9 @@
 ---
-title: element()
+title: CSS `element()` 関数
+short-title: element()
 slug: Web/CSS/Reference/Values/element
 l10n:
-  sourceCommit: e253c3abaca1994b6b940699ea582091df5207f3
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{SeeCompatTable}}
@@ -120,5 +121,5 @@ element(id)
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("image")}}
 - {{cssxref("gradient")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}
 - {{domxref("document.mozSetImageElement()")}}

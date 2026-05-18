@@ -78,5 +78,3 @@ Dans ce guide, nous avons approfondi les notions relatives aux contextes de form
 - [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/Guides/Display/Block_formatting_context)
 - [Modèle de formatage visuel](/fr/docs/Web/CSS/Guides/Display/Visual_formatting_model)
 - [Modèle de boîte CSS](/fr/docs/Web/CSS/Guides/Box_model)
-
-{{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}

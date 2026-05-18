@@ -78,14 +78,14 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
         </p>
         <p>
           Pour éviter de nouveaux onglets, utilisez à la place "<a
-            href="/fr/Add-ons/WebExtensions/manifest.json/chrome_url_overrides"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides"
             >chrome_url_overrides</a
           >".
         </p>
         <p>
           C'est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
           >.
         </p>
@@ -119,7 +119,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           C'est un objet avec les propriétés listées ci-dessous. Toutes les
           propriétés chaîne de caractères sont
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
+            href="/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >localisable</a
           >s.
         </p>

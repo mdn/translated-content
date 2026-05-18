@@ -1,8 +1,9 @@
 ---
-title: scroll-target-group
+title: Propriété CSS `scroll-target-group`
+short-title: scroll-target-group
 slug: Web/CSS/Reference/Properties/scroll-target-group
 l10n:
-  sourceCommit: 9dbcd91284ec1ec64c4d8b343c3770880dd25129
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

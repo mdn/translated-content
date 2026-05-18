@@ -143,7 +143,7 @@ _変更なし。_
 
 #### 新機能
 
-- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
+- Marionette が `WebDriver:NewSession` の応答で `setWindowRect` [capability](/ja/docs/Web/WebDriver/Reference/Capabilities) を返すようになりました。これは、ブラウザーのウィンドウの移動やリサイズが可能である場合 (例えばモバイルアプリケーション以外の Firefox) に true になります ([Firefox バグ 1470659](https://bugzil.la/1470659))。
 - `unhandledPromptBehavior` capability をサポートしました。これは、WebDriver 仕様の特定の [prompt behavior](https://w3c.github.io/webdriver/#dfn-user-prompt-handler) を定義できます ([Firefox バグ 1264259](https://bugzil.la/1264259))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` コマンドに、ユーザープロンプトの処理を追加しました ([Firefox バグ 1439995](https://bugzil.la/1439995))。
 

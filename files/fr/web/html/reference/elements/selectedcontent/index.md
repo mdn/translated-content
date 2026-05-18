@@ -1,8 +1,9 @@
 ---
-title: "<selectedcontent> : l'élément d'affichage de l'option sélectionnée"
+title: "Élément HTML `<selectedcontent>` : l'élément d'affichage de l'option sélectionnée"
+short-title: <selectedcontent>
 slug: Web/HTML/Reference/Elements/selectedcontent
 l10n:
-  sourceCommit: 6eae35bc64a49865a469ca29bc40e6993b9cb8cc
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{SeeCompatTable}}

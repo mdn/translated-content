@@ -3,7 +3,7 @@ title: "HTMLGeolocationElement : propriété initialPermissionStatus"
 short-title: initialPermissionStatus
 slug: Web/API/HTMLGeolocationElement/initialPermissionStatus
 l10n:
-  sourceCommit: 3712f845b54b2754b2b550c7d7dca18f0277c0ad
+  sourceCommit: 3d49f18251e1f3493ef2e3a70519603345f8b7dc
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
@@ -17,12 +17,12 @@ Si vous souhaitez accéder à l'état d'autorisation actuel pour la fonctionnali
 Une valeur énumérée, qui peut être&nbsp;:
 
 - `granted`
-  - : L'utilisateur·ice a déjà accordé l'autorisation au navigateur d'utiliser la fonctionnalité `geolocation`, soit via l'élément {{HTMLElement("geolocation")}}, soit par un autre mécanisme. Lors de l'utilisation de l'élément `<geolocation>`, cela signifie que l'utilisateur·ice a déjà appuyé sur le bouton affiché et sélectionné l'option «&nbsp;autoriser&nbsp;».
+  - : L'utilisateur·ice a déjà accordé l'autorisation au navigateur d'utiliser la fonctionnalité `geolocation`, soit avec l'élément {{HTMLElement("geolocation")}}, soit par un autre mécanisme. Lors de l'utilisation de l'élément `<geolocation>`, cela signifie que l'utilisateur·ice a déjà appuyé sur le bouton affiché et sélectionné l'option «&nbsp;autoriser&nbsp;».
 
-    Si l'élément `<geolocation>` possède l'attribut [`autolocate`](/fr/docs/Web/HTML/Reference/Elements/geolocation#autolocate) défini sur `true`, et que l'autorisation a déjà été accordée, le navigateur commencera à demander les données de localisation dès le chargement de la page, sans que l'utilisateur·ice ait besoin d'appuyer sur le bouton.
+    Si l'élément `<geolocation>` possède l'attribut [`autolocate`](/fr/docs/Web/HTML/Reference/Elements/geolocation#autolocate) défini sur `true`, et que l'autorisation a déjà été accordée, le navigateur commence à demander les données de localisation dès le chargement de la page, sans que l'utilisateur·ice ait besoin d'appuyer sur le bouton.
 
 - `denied`
-  - : L'utilisateur·ice a déjà refusé l'autorisation au navigateur d'utiliser la fonctionnalité `geolocation`, soit via l'élément `<geolocation>`, soit par un autre mécanisme. Lors de l'utilisation de l'élément `<geolocation>`, cela signifie que l'utilisateur·ice a déjà appuyé sur le bouton affiché et sélectionné l'option «&nbsp;ne pas autoriser&nbsp;».
+  - : L'utilisateur·ice a déjà refusé l'autorisation au navigateur d'utiliser la fonctionnalité `geolocation`, soit avec l'élément `<geolocation>`, soit par un autre mécanisme. Lors de l'utilisation de l'élément `<geolocation>`, cela signifie que l'utilisateur·ice a déjà appuyé sur le bouton affiché et sélectionné l'option «&nbsp;ne pas autoriser&nbsp;».
 - `prompt`
   - : L'utilisateur·ice n'a pas encore accordé ni refusé l'autorisation au navigateur d'utiliser la fonctionnalité `geolocation`. Lors de l'utilisation de l'élément `<geolocation>`, cela signifie que l'utilisateur·ice n'a pas encore appuyé sur le bouton affiché.
 
@@ -67,7 +67,7 @@ const outputElem = document.querySelector("#output");
 const geo = document.querySelector("geolocation");
 ```
 
-Ensuite, nous incluons une structure `if...else if` qui vérifie la valeur de `initialPermissionStatus` et affiche un message d'état à l'écran pour informer l'utilisateur·ice du statut, de ce qu'il·elle doit faire pour utiliser l'application, et de ce que le bouton fera lorsqu'il sera pressé.
+Ensuite, nous incluons une structure `if...else if` qui vérifie la valeur de `initialPermissionStatus` et affiche un message d'état à l'écran pour informer l'utilisateur·ice du statut, de ce qu'il·elle doit faire pour utiliser l'application, et de ce que le bouton fait lorsqu'il est pressé.
 
 ```js
 if (geo.initialPermissionStatus === "prompt") {
@@ -82,7 +82,7 @@ if (geo.initialPermissionStatus === "prompt") {
 }
 ```
 
-Enfin, nous ajoutons un écouteur d'évènement {{DOMxRef("HTMLGeolocationElement.location_event", "location")}} à l'objet `HTMLGeolocationElement`, pour détecter quand la demande de localisation est retournée. Si les données sont retournées avec succès, nous y accédons via la propriété {{DOMxRef("HTMLGeolocationElement.position")}} et affichons les valeurs de latitude et longitude dans le paragraphe de sortie. Si la demande échoue, nous accédons à l'erreur via la propriété {{DOMxRef("HTMLGeolocationElement.error")}} et l'affichons dans le paragraphe de sortie.
+Enfin, nous ajoutons un écouteur d'évènement {{DOMxRef("HTMLGeolocationElement.location_event", "location")}} à l'objet `HTMLGeolocationElement`, pour détecter quand la demande de localisation est retournée. Si les données sont retournées avec succès, nous y accédons avec la propriété {{DOMxRef("HTMLGeolocationElement.position")}} et affichons les valeurs de latitude et longitude dans le paragraphe de sortie. Si la demande échoue, nous accédons à l'erreur avec la propriété {{DOMxRef("HTMLGeolocationElement.error")}} et l'affichons dans le paragraphe de sortie.
 
 ```js
 geo.addEventListener("location", () => {

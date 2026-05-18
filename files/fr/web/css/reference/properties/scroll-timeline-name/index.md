@@ -1,16 +1,17 @@
 ---
-title: scroll-timeline-name
+title: Propriété CSS `scroll-timeline-name`
+short-title: scroll-timeline-name
 slug: Web/CSS/Reference/Properties/scroll-timeline-name
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-name`** est utilisée pour définir le nom d'une _chronologie de progression de défilement nommée_, qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou la gauche et la droite). `scroll-timeline-name` est définie sur le défileur qui fournira la chronologie.
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-timeline-name`** est utilisée pour définir le nom d'une _chronologie de progression de défilement nommée_, qui progresse en faisant défiler un élément défilable (_défileur_) entre le haut et le bas (ou la gauche et la droite). `scroll-timeline-name` est définie sur le défileur qui fournit la chronologie.
 
 Le nom est ensuite référencé dans une déclaration {{CSSxRef("animation-timeline")}} pour indiquer l'élément conteneur utilisé pour piloter la progression de l'animation avec l'action de défilement.
 
 > [!NOTE]
-> Si l'élément ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie ne sera créée.
+> Si l'élément ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie ne est créée.
 
 Les propriétés {{CSSxRef("scroll-timeline-axis")}} et `scroll-timeline-name` peuvent également être définies en utilisant la propriété raccourcie {{CSSxRef("scroll-timeline")}}.
 
@@ -61,7 +62,7 @@ Le HTML pour l'exemple est montré ci-dessous.
 
 #### CSS
 
-Le CSS pour le conteneur le définit comme la source d'une chronologie de progression de défilement nommée `--chronologie-du-carre` en utilisant la propriété `scroll-timeline-name`. Aucun [axe de la barre de défilement](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline-axis) n'est défini ici, car l'axe vertical sera utilisé par défaut.
+Le CSS pour le conteneur le définit comme la source d'une chronologie de progression de défilement nommée `--chronologie-du-carre` en utilisant la propriété `scroll-timeline-name`. Aucun [axe de la barre de défilement](/fr/docs/Web/CSS/Reference/Properties/scroll-timeline-axis) n'est défini ici, car l'axe vertical est utilisé par défaut.
 
 La hauteur du conteneur est définie sur `300px`, et le conteneur est également configuré pour créer une barre de défilement verticale si son contenu déborde (la règle CSS `height` sur l'élément `stretcher` ci-dessous fait en sorte que le contenu déborde de son conteneur).
 

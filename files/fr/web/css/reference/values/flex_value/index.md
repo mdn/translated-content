@@ -1,9 +1,9 @@
 ---
-title: <flex>
+title: Type CSS `<flex>`
+short-title: <flex>
 slug: Web/CSS/Reference/Values/flex_value
-original_slug: Web/CSS/flex_value
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<flex>`** permet de représenter une longueur flexible à l'intérieur d'un conteneur en grille, qui est déclarée comme une dimension d'unité `fr`. Il est notamment utilisé pour les propriétés {{CSSxRef("grid-template-columns")}}, {{CSSxRef("grid-template-rows")}} ainsi que d'autres.

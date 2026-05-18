@@ -1,8 +1,9 @@
 ---
-title: "<iframe> : l'élément de cadre intégré"
+title: "Élément HTML `<iframe>` : l'élément de cadre intégré"
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
-  sourceCommit: 929f6a4afa23a47036da5e8f6a09898a2cce9929
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<iframe>`** représente un {{Glossary("Browsing context", "contexte de navigation")}} imbriqué, intégrant une autre page HTML dans la page courante.
@@ -75,9 +76,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
         L'intention est d'éviter d'utiliser la bande passante réseau et de stockage nécessaire pour récupérer le cadre tant que le navigateur n'est pas raisonnablement certain qu'elle sera nécessaire.
         Cela améliore les performances et réduit les coûts dans la plupart des cas d'utilisation typiques, en particulier en réduisant le temps de chargement initial de la page.
 
-        > [!NOTE]
-        > Le chargement n'est retardé que lorsque JavaScript est activé.
-        > Il s'agit d'une mesure anti-pistage.
+        Le chargement n'est retardé que lorsque JavaScript est activé. Il s'agit d'une mesure anti-pistage, car si un agent utilisateur prenait en charge le chargement différé lorsque le script est désactivé, il serait toujours possible pour un site de suivre la position de défilement approximative d'un·e utilisateur·ice tout au long d'une session, en plaçant stratégiquement des cadres intégrés (<i lang="en">iframes</i> en anglais) dans le balisage d'une page de manière à ce qu'un serveur puisse suivre combien de cadres intégrés sont demandés et quand.
 
 - `name`
   - : Un nom pour le contexte de navigation (ou la _frame_). Ce nom peut être utilisé comme la valeur de l'attribut `target` d'un élément {{HTMLElement("a")}}, {{HTMLElement("form")}}, ou {{HTMLElement("base")}}&nbsp;; l'attribut `formtarget` d'un élément {{HTMLElement("input")}} ou {{HTMLElement("button")}}&nbsp;; ou le paramètre `windowName` de la méthode {{DOMxRef("Window.open()","window.open()")}}. De plus, ce nom devient une propriété des objets {{DOMxRef("Window")}} et {{DOMxRef("Document")}}, contenant une référence à la fenêtre intégrée ou à l'élément lui-même.

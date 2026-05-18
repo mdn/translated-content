@@ -3,24 +3,18 @@ title: "HTMLLinkElement : propriété blocking"
 short-title: blocking
 slug: Web/API/HTMLLinkElement/blocking
 l10n:
-  sourceCommit: 0e2ec54f4eb55cccad11af843d83061857918bee
+  sourceCommit: c053b4b3bb0f34736e9f4402d4254830670af723
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propriété **`blocking`** de l'interface {{domxref("HTMLLinkElement")}} est une chaîne de caractères indiquant que certaines opérations doivent être bloquées lors de la récupération d'une ressource externe.
-
-Elle reflète l'attribut `blocking` de l'élément HTML {{HTMLElement("link")}}.
+La propriété **`blocking`** de l'interface {{DOMxRef("HTMLLinkElement")}} retourne un objet {{DOMxRef("DOMTokenList")}} dynamique contenant les opérations qui doivent être bloquées lors de la récupération d'une ressource externe. Elle reflète l'attribut [`blocking`](/fr/docs/Web/HTML/Reference/Elements/link#blocking) de l'élément HTML {{HTMLElement("link")}}.
 
 ## Valeur
 
-Une chaîne de caractères. Doit être une liste, séparée par des espaces, de jetons de blocage listés ci-dessous, indiquant les opérations à bloquer&nbsp;:
+Un objet {{DOMxRef("DOMTokenList")}} dynamique.
 
-- `render`
-  - : Le rendu du contenu à l'écran est bloqué.
-
-    > [!NOTE]
-    > Seuls les éléments `link` présents dans le `<head>` du document peuvent bloquer le rendu. Par défaut, un élément `link` avec `rel="stylesheet"` dans le `<head>` bloque le rendu lorsque le navigateur le découvre lors de l'analyse. Si un tel élément est ajouté dynamiquement via un script, il faut également définir `blocking = "render"` pour qu'il bloque le rendu.
+Bien que la propriété `blocking` elle-même soit en lecture seule dans le sens où vous ne pouvez pas remplacer l'objet `DOMTokenList`, vous pouvez toujours affecter directement à la propriété `blocking`, ce qui équivaut à affecter à sa propriété {{DOMxRef("DOMTokenList/value", "value")}}. Vous pouvez également modifier l'objet `DOMTokenList` en utilisant les méthodes {{DOMxRef("DOMTokenList/add", "add()")}}, {{DOMxRef("DOMTokenList/remove", "remove()")}}, {{DOMxRef("DOMTokenList/replace", "replace()")}} et {{DOMxRef("DOMTokenList/toggle", "toggle()")}}.
 
 ## Exemples
 
@@ -35,7 +29,7 @@ Une chaîne de caractères. Doit être une liste, séparée par des espaces, de 
 
 ```js
 const el = document.getElementById("el");
-console.log(el.blocking); // Affiche : "render"
+console.log(el.blocking); // Affiche : DOMTokenList ["render"]
 ```
 
 ## Spécifications
@@ -48,5 +42,5 @@ console.log(el.blocking); // Affiche : "render"
 
 ## Voir aussi
 
-- La propriété {{domxref("HTMLScriptElement.blocking")}}
-- La propriété {{domxref("HTMLStyleElement.blocking")}}
+- La propriété {{DOMxRef("HTMLScriptElement.blocking")}}
+- La propriété {{DOMxRef("HTMLStyleElement.blocking")}}

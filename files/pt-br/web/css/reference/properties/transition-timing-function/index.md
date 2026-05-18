@@ -597,5 +597,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## See also
 
-- [Using CSS transitions](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/pt-BR/docs/Web/CSS/Guides/Transitions/Using)
 - {{ domxref("TransitionEvent") }}

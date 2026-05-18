@@ -1,8 +1,9 @@
 ---
-title: <input type="hidden">
+title: Valeur d'attribut HTML `<input type="hidden">`
+short-title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeur·euse·s web d'inclure des données qui ne peuvent pas être vues ni modifiées par les utilisateur·ice·s lors de l'envoi d'un formulaire. Par exemple, l'identifiant du contenu actuellement commandé ou modifié, ou un jeton de sécurité unique. Les champs masqués sont totalement invisibles dans la page rendue, et il n'existe aucun moyen de les rendre visibles dans le contenu de la page.

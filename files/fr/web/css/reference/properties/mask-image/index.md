@@ -1,8 +1,9 @@
 ---
-title: mask-image
+title: Propriété CSS `mask-image`
+short-title: mask-image
 slug: Web/CSS/Reference/Properties/mask-image
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image utilisée comme calque de masque pour un élément, masquant les sections de l'élément sur lesquelles l'image de masquage est définie en fonction du canal alpha de l'image de masque et, selon la valeur de la propriété {{CSSxRef("mask-mode")}}, de la luminosité de l'image de masque.

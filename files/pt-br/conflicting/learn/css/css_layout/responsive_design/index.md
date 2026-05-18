@@ -17,19 +17,19 @@ Dispositivos móveis possuem características de hardware bastante diferentes co
 [Responsive Web Design](/pt-BR/docs/Web/Progressive_web_apps) is a term for a set of techniques that enables your web site to adapt its layout as its viewing environment — most obviously, the size and orientation of the screen — changes. It includes techniques such as:
 
 - fluid CSS layouts, to make the page adapt smoothly as the browser window size changes
-- the use of [media queries](/pt-BR/docs/CSS/Media_queries) to conditionally include CSS rules appropriate for the device screen [width](/pt-BR/docs/CSS/Media_queries#width) and [height](/pt-BR/docs/CSS/Media_queries#height)
+- the use of [media queries](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using) to conditionally include CSS rules appropriate for the device screen [width](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#width) and [height](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#height)
 
 The [viewport meta tag](/pt-BR/Mobile/Viewport_meta_tag) instructs the browser to display your site at the appropriate scale for the user's device.
 
 ### Working with touch screens
 
-To use a touch screen you'll need to work with [DOM Touch events](/pt-BR/docs/DOM/Touch_events). You won't be able to use the [CSS :hover](/en-US/CSS/:hover) pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on [designing for touch screens](https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
+To use a touch screen you'll need to work with [DOM Touch events](/pt-BR/docs/Web/API/Touch_events). You won't be able to use the [CSS :hover](/en-US/CSS/:hover) pseudo-class, and will need to design clickable items like buttons to respect the fact that fingers are fatter than mouse pointers. See this article on [designing for touch screens](https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
 
-You can use the [-moz-touch-enabled](/pt-BR/docs/CSS/Media_queries#-moz-touch-enabled) media query to load different CSS on a touch-enabled device.
+You can use the [-moz-touch-enabled](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#-moz-touch-enabled) media query to load different CSS on a touch-enabled device.
 
 ### Optimizing images
 
-To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen [height](/pt-BR/docs/CSS/Media_queries#height), [width](/pt-BR/docs/CSS/Media_queries#width), and [pixel ratio](/pt-BR/docs/CSS/Media_queries#-moz-device-pixel-ratio).
+To help users whose devices have low or expensive bandwidth, you can optimize images by loading images appropriate to the device screen size and resolution. You do this in CSS by querying for screen [height](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#height), [width](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#width), and [pixel ratio](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using#-moz-device-pixel-ratio).
 
 You can also make use of CSS properties to implement visual effects like [gradients](/pt-BR/docs/CSS/Using_CSS_gradients) and [shadows](/en-US/CSS/Box-shadow) without images.
 

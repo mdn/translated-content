@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : draggable"
+title: "Attribut HTML universel : `draggable`"
 short-title: draggable
 slug: Web/HTML/Reference/Global_attributes/draggable
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`draggable`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique si l'élément peut être déplacé, soit par le comportement natif du navigateur, soit via [l'API HTML Drag and Drop](/fr/docs/Web/API/HTML_Drag_and_Drop_API).

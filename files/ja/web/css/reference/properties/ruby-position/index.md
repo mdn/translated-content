@@ -1,12 +1,12 @@
 ---
-title: ruby-position
+title: "`ruby-position` CSS プロパティ"
+short-title: ruby-position
 slug: Web/CSS/Reference/Properties/ruby-position
-original_slug: Web/CSS/ruby-position
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-**`ruby-position`** は CSS のプロパティで、ベース要素に対するルビ要素の位置を定義します。要素の上方 (`over`)、下方 (`under`)、文字の間の右側 (`inter-character`) に配置できます。
+**`ruby-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ベース要素に対するルビ要素の位置を定義します。要素の上方 (`over`)、下方 (`under`)、文字の間の右側 (`inter-character`) に配置できます。
 
 {{InteractiveExample("CSS デモ: ruby-position")}}
 
@@ -20,7 +20,7 @@ ruby-position: under;
 
 ```html interactive-example
 <section id="default-example">
-  <ruby id="example-element"> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+  <ruby id="example-element"> 明日 <rp>(</rp><rt>あした</rt><rp>)</rp> </ruby>
 </section>
 ```
 
@@ -154,3 +154,4 @@ ruby {
 
 - HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}
 - {{cssxref("ruby-align")}}
+- [CSS ルビレイアウト](/ja/docs/Web/CSS/Guides/Ruby_layout)モジュール

@@ -6,7 +6,7 @@ original_slug: Web/CSS/@font-face
 
 {{CSSRef}}
 
-O **`@font-face`** [CSS](/pt-BR/docs/Web/CSS) [at-rule](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
+O **`@font-face`** [CSS](/pt-BR/docs/Web/CSS) [at-rule](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
 
 Se a função `local()` for fornecida, a especificação do nome da fonte a ser procurada no computador do usuário, e a {{Glossary("user agent")}} encontrar uma correspondência, essa fonte local será usada. Caso contrário, o recurso de fonte especificado usando a função `url()` é baixado e usado.
 
@@ -14,7 +14,7 @@ Ao permitir que os autores forneçam suas próprias fontes, `@font-face` torna p
 
 É comum usar `url()` e `local()` juntos, para que a cópia instalada da fonte do usuário seja usada, se disponível, voltando ao download de uma cópia da fonte, caso ela não seja encontrada no dispositivo do usuário.
 
-A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
+A regra de CSS `@font-face` pode ser usada não apenas no nível superior de um CSS, mas também dentro de qualquer [CSS conditional-group at-rule](/pt-BR/docs/Web/CSS/Guides/Syntax/At-rules#conditional_group_rules).
 
 ```css
 @font-face {

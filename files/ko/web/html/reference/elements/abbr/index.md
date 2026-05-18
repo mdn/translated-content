@@ -30,16 +30,16 @@ abbr {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 카테고리</a>
       </th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#플로우_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#플로우_콘텐츠"
           title="HTML/Content categories#Flow content"
           >플로우 콘텐츠</a
         >,
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           title="HTML/Content categories#Phrasing content"
           >구문 콘텐츠</a
         >, 뚜렷한 콘텐츠.
@@ -49,7 +49,7 @@ abbr {
       <th scope="row">가능한 콘텐츠</th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           title="HTML/Content_categories#Phrasing_content"
           >구문 콘텐츠</a
         >
@@ -63,7 +63,7 @@ abbr {
       <th scope="row">가능한 부모 요소</th>
       <td>
         <a
-          href="/ko/docs/Web/Guide/HTML/Content_categories#구문_콘텐츠"
+          href="/ko/docs/Web/HTML/Guides/Content_categories#구문_콘텐츠"
           title="HTML/Content_categories#Phrasing_content"
           >구문 콘텐츠</a
         >를 허용하는 모든 요소.

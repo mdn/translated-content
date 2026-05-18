@@ -17,10 +17,10 @@ l10n:
       <td>
         基本的なコンピューターリテラシー、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >クライアント側のウェブ技術</a
         >の基本的な知識
       </td>

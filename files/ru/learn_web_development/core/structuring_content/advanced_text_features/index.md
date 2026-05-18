@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">Необходимые знания:</th>
       <td>
-        Базовое знакомство с HTML, раскрытое в <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Начало работы с HTML</a>. Форматирование текста с помощью HTML, описанное в статье <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a>.
+        Базовое знакомство с HTML, раскрытое в <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">Начало работы с HTML</a>. Форматирование текста с помощью HTML, описанное в статье <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">Основы редактирования текста в HTML</a>.
       </td>
     </tr>
     <tr>

@@ -40,7 +40,7 @@ O atributo {{domxref("element.name","name")}} pode somente ser aplicado nos docu
 A coleção retornada {{domxref("NodeList")}} contém _todos_ os elementos com o respectivo `nome`, tal como {{htmlelement("meta")}}, {{htmlelement("object")}}, e até os elementos o qual não suporta o atributo `nome` para todos.
 
 > [!WARNING]
-> O método **getElementsByName** trabalha diferentemente em IE10 e anteriores. Além de que, `getElementsByName()` também retorna elementos que tem um [atributo `id`](/pt-BR/docs/Web/HTML/Global_attributes/id) com o valor especificado. Seja cuidadoso para não usar a mesma string como ambos `nome` e `id`.
+> O método **getElementsByName** trabalha diferentemente em IE10 e anteriores. Além de que, `getElementsByName()` também retorna elementos que tem um [atributo `id`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/id) com o valor especificado. Seja cuidadoso para não usar a mesma string como ambos `nome` e `id`.
 
 > [!WARNING]
 > O método **getElementsByName** trabalha diferentemente no IE. Portanto, `getElementsByName()` não retorna todos os elementos no qual não pode ter um atributo `nome` (tal como `<span>`).
