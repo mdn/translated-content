@@ -1,158 +1,47 @@
 ---
 title: IIFE (即時実行関数式)
 slug: Glossary/IIFE
+l10n:
+  sourceCommit: 99d723c4f77d7f537292a07dd7b5e5c13cb610da
 ---
 
-{{GlossarySidebar}}
-
-**IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は定義されるとすぐに実行される {{glossary("JavaScript")}} の{{glossary("function", "関数")}}です。
-
-IIFE という名前は [Ben Alman のブログ](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
+**IIFE** (Immediately Invoked Function Expression; 即時実行関数式) は、定義されるとすぐに実行される {{glossary("JavaScript")}} の{{glossary("function", "関数")}}のイディオムです。これは「自己実行無名関数」としても知られています。IIFE という名前は Ben Alman の[ブログ](https://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
 
 ```js
+// 標準的な IIFE
 (function () {
-  // …
+  // 文…
 })();
 
+// アロー関数形式
 (() => {
-  // …
+  // 文…
 })();
 
+// 非同期 IIFE
 (async () => {
-  // …
+  // 文…
 })();
 ```
 
-このデザインパターンは{{glossary("Self-Executing Anonymous Function", "自己実行無名関数")}}とも呼ばれ、主に次の 2 つを含みます。
+これは 2 つの重要な部分を含んでいます。
 
-1. 最初の部分は {{jsxref("Operators/Grouping", "グループ化演算子")}} `()` に囲まれた静的スコープ付きの無名関数です。これは IIFE イディオム内で、汚いグローバルスコープと同様に変数へアクセスすることを防ぎます。
-2. 2 つ目の部分は即時実行関数式の `()` で、これを通じて JavaScript エンジンは直接関数を解釈実行します。
+1. [関数式](/ja/docs/Web/JavaScript/Reference/Operators/function)。これは通常、正しく構文解析するために[中括弧で囲む](/ja/docs/Web/JavaScript/Reference/Operators/Grouping)必要があります。
+2. その関数式を直ちに呼び出す。引数を指定することもありますが、引数なしの IIFE の方が一般的です。
 
-## 使用例
+IIFE は、単一の式が要求される場所で、独自のスコープ内で任意の多数の文を実行する（場合によって値を返す）ために使用される一般的なパターンです。これらは[カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)と似ていますが、カンマ演算子は複数の式を実行することしかできず、ローカル変数や制御文を使用する方法が提供されていないため、IIFE のほうがはるかに強力です。
 
-### グローバル名前空間の汚染を避ける
+IIFE の主な用途には、次のようなものがあります。
 
-別々のファイルからたくさんの関数やグローバル変数がアプリケーションに含まれるため、グローバル変数の数を制限することが重要です。
-もし再利用する必要のない初期化コードがあるなら、1 つの関数宣言や関数式よりも IIFE を使ったほうが良いです。
+- 新しい{{glossary("scope","スコープ")}}を作成することにより、グローバル名前空間の汚染を防ぐ。
+- 非同期でないコンテキストで {{jsxref("Operators/await", "await")}} を使用するために、新しい非同期コンテキストを作成する。
+- 複数の文を単一の式として使用するなど、複雑なロジックを用いた値の計算。
 
-```js
-(() => {
-  // 初期化の処理
-  let firstVariable;
-  let secondVariable;
-})();
-
-// firstVariable と secondVariable は関数が実行されたら破棄されます。
-```
-
-### 非同期関数の実行
-
-[`async`](/ja/docs/Web/JavaScript/Reference/Operators/async_function) IIFE は [top-level await](/ja/docs/Web/JavaScript/Reference/Operators/await#top_level_await) が無い古いブラウザーや JavaScript のランタイムでも [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) と [`for-await`](/ja/docs/Web/JavaScript/Reference/Statements/for-await...of) を使えるようにします。
-
-```js
-const getFileStream = async (url) => {
-  // 実装
-};
-
-(async () => {
-  const stream = await getFileStream("https://domain.name/path/file.ext");
-  for await (const chunk of stream) {
-    console.log({ chunk });
-  }
-})();
-```
-
-### モジュールパターン
-
-IIFE はプライベート変数やパブリック変数、メソッドを作るためにも使えます。もっと洗練されたモジュールパターンや IIFE を知りたいなら、 Addy Osmani による本 Learning JavaScript Design Patterns を読むと良いでしょう。
-
-```js
-const makeWithdraw = (balance) =>
-  ((copyBalance) => {
-    let balance = copyBalance; // この変数はプライベートです
-    const doBadThings = () => {
-      console.log("I will do bad things with your money");
-    };
-    doBadThings();
-    return {
-      withdraw(amount) {
-        if (balance >= amount) {
-          balance -= amount;
-          return balance;
-        }
-        return "Insufficient money";
-      },
-    };
-  })(balance);
-
-const firstAccount = makeWithdraw(100); // "I will do bad things with your money"
-console.log(firstAccount.balance); // undefined
-console.log(firstAccount.withdraw(20)); // 80
-console.log(firstAccount.withdraw(30)); // 50
-console.log(firstAccount.doBadThings); // undefined; このメソッドはプライベートです
-const secondAccount = makeWithdraw(20); // "I will do bad things with your money"
-console.log(secondAccount.withdraw(30)); // "Insufficient money"
-console.log(secondAccount.withdraw(20)); // 0
-```
-
-### ES6 以前の var を使ったループ
-
-ブロックスコープや **ES6** での **let** や **const** の導入前の古いコードで、次のような IIFE の使い方を見ることができます。
-**var** では、関数のスコープとグローバルなスコープしかありませんでした。
-「ボタン 0」「ボタン 1」という 2 つのボタンをクリックした時に、それぞれ「0」「1」が表示されるようにしてみます。以下のコードではうまく動きません:
-
-```js
-for (var i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = function () {
-    console.log(i);
-  };
-  document.body.appendChild(button);
-}
-console.log(i); // 2
-```
-
-クリックすると、「ボタン 0」「ボタン 1」の両方で 2 が表示されます。
-これは変数 `i` がグローバルであり、最後に代入された値が 2 であるためです。
-
-ES6 以前にこの問題を解決する時は、 IIFE パターンを使っていました:
-
-```js
-for (var i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = (function (copyOfI) {
-    return () => {
-      console.log(copyOfI);
-    };
-  })(i);
-  document.body.appendChild(button);
-}
-console.log(i); // 2
-```
-
-クリックすると、「ボタン 0」なら 0 が、「ボタン 1」なら 1 が表示されます。
-上記のコードでも、変数 `i` はグローバルに定義されています。
-**let** を使うともっと簡単に書けます:
-
-```js
-for (let i = 0; i < 2; i++) {
-  const button = document.createElement("button");
-  button.innerText = `ボタン ${i}`;
-  button.onclick = function () {
-    console.log(i);
-  };
-  document.body.appendChild(button);
-}
-console.log(i); // Uncaught ReferenceError: i is not defined.
-```
-
-クリックすると、「ボタン 0」なら 0 が、「ボタン 1」なら 1 が表示されます。
+コードの例については、[`function` 式](/ja/docs/Web/JavaScript/Reference/Operators/function)および [`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)のリファレンスページをご覧ください。
 
 ## 関連情報
 
-- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
+- [即時実行関数式 (IIFE)](https://ja.wikipedia.org/wiki/即時実行関数式)（ウィキペディア）
+- [カンマ演算子](/ja/docs/Web/JavaScript/Reference/Operators/Comma_operator)
 - 関連用語:
   - {{Glossary("Function", "関数")}}
-  - {{Glossary("Self-Executing Anonymous Function", "自己実行無名関数")}}
