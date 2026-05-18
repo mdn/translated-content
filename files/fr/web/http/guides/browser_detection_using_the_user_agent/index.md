@@ -1,6 +1,6 @@
 ---
 title: Détection du navigateur à l'aide de la chaîne de caractères d'agent utilisateur (analyseur d'AU)
-short-title: Détection du navigateur avec la chaîne de caractères d'agent utilisateur
+short-title: Détection du navigateur avec la chaîne de caractères d'AU
 slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 l10n:
   sourceCommit: 6ad108adad746bd7ed79b5b32d8d3e05e5ec685a
