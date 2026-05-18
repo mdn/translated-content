@@ -1,11 +1,11 @@
 ---
 title: User agent (ユーザーエージェント)
 slug: Glossary/User_agent
+l10n:
+  sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-{{GlossarySidebar}}
-
-ユーザーエージェントは個人を表すコンピューターのプログラムで、例えば{{Glossary("World Wide Web", "ウェブ")}}における{{Glossary("Browser","ブラウザー")}}に当たるものです。
+ユーザーエージェントは人を代表するコンピューターのプログラムで、例えば{{Glossary("World Wide Web", "ウェブ")}}における{{Glossary("Browser","ブラウザー")}}に当たるものです。
 
 ブラウザーのほかに、ウェブページをスクレイピングするボット、ダウンロードマネージャー、その他のウェブにアクセスするアプリがユーザーエージェントになる可能性もあります。ブラウザーはサーバーに対してリクエストを行う際に毎回、 {{Glossary("HTTP")}} の {{HTTPHeader("User-Agent")}} ヘッダーに、ユーザーエージェント (UA) 文字列と呼ばれる自分自身を識別する文字列を含めます。この文字列はブラウザー、バージョン番号、ホストのオペレーティングシステムなどを識別します。
 
@@ -17,18 +17,12 @@ slug: Glossary/User_agent
 
 ## 関連情報
 
-### 一般知識
-
-- Wikipedia の[ユーザーエージェント](https://ja.wikipedia.org/wiki/ユーザーエージェント)
-
-### 技術リファレンス
-
+- [ユーザーエージェント](https://ja.wikipedia.org/wiki/ユーザーエージェント) - ウィキペディア
 - {{domxref("navigator.userAgent")}}
 - [User Agent を用いたブラウザーの判定](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
-- {{RFC(2616, "14.43")}}: The `User-Agent` header
+- {{RFC(2616, "", "14.43")}}: `User-Agent` ヘッダー
 
-1. 関連用語:
-   1. {{Glossary("Browser", "ブラウザー")}}
-
-2. HTTP ヘッダー
-   1. {{HTTPHeader("User-agent")}}
+- 関連用語:
+  - {{Glossary("Browser", "ブラウザー")}}
+- HTTP ヘッダー
+  - {{HTTPHeader("User-agent")}}

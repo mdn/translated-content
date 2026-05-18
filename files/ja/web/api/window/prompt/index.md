@@ -1,13 +1,16 @@
 ---
-title: Window.prompt() メソッド
+title: "Window: prompt() メソッド"
+short-title: prompt()
 slug: Web/API/Window/prompt
+l10n:
+  sourceCommit: 79fdc26fea835d65c9361541bb8ab1896f307475
 ---
 
 {{ApiRef("Window")}}
 
 `window.prompt()` は、ユーザーにテキストを入力するように促すダイアログをオプションのメッセージと共に表示し、ユーザーがテキストを送信するかダイアログをキャンセルするまで待機するようにブラウザーに指示します。
 
-ある条件下では、例えば、ユーザーがタブを切り替えたとき、ブラウザーは実際にはダイアログを表示しないかもしれませんし、ユーザーがテキストを送信したり、ダイアログをキャンセルしたりするまで待たないかもしれません。
+ある条件下では（例えば、ユーザーがタブを切り替えたとき）、ブラウザーは実際にはダイアログを表示しないかもしれませんし、ユーザーがテキストを送信したり、ダイアログをキャンセルしたりするまで待たないかもしれません。
 
 ## 構文
 
@@ -22,7 +25,7 @@ prompt(message, defaultValue)
 - `message` {{optional_inline}}
   - : ユーザーに表示する文字列です。プロンプトウィンドウに表示するものがない場合は省略可能です。
 - `defaultValue` {{optional_inline}}
-  - : テキスト入力フィールドに表示される既定値を指定する文字列です。
+  - : テキスト入力フィールドに表示されるデフォルト値を指定する文字列です。
 
 ### 返値
 
@@ -30,13 +33,15 @@ prompt(message, defaultValue)
 
 ## 例
 
-### メッセージと初期値を指定してプロンプトダイアログを使う
+### メッセージと初期値を指定してプロンプトを使用
 
 以下の例では、プロンプトの返値をチェックする方法を示します。
-ユーザーが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。ユーザーがテキストを入力せずに OK をクリックする場合、空文字列が返ります。ユーザーがキャンセルボタンをクリックする場合、この関数は `null` を返します。
+ユーザーが OK ボタンをクリックすると、入力フィールドに入力されたテキストが返ります。
+ユーザーがテキストを入力せずに OK をクリックする場合、空文字列が返ります。
+ユーザーがキャンセルボタンをクリックする場合、この関数は `null` を返します。
 
 ```html live-sample___prompt
-<button id="signButton">Check star sign</button>
+<button id="signButton">星座を調べる</button>
 <pre id="log"></pre>
 ```
 
@@ -45,16 +50,16 @@ const signButton = document.querySelector("#signButton");
 const log = document.querySelector("#log");
 
 signButton.addEventListener("click", () => {
-  let sign = prompt("What's your sign?");
+  let sign = prompt("あなたの星座は？");
 
   if (sign === null) {
-    log.innerText = "OK, maybe next time.";
+    log.innerText = "よし、次はきっとね。";
   } else if (sign.toLowerCase() === "") {
-    log.innerText = "Don't be shy, enter your sign!";
+    log.innerText = "恥ずかしがらないで、星座を入力してね！";
   } else if (sign.toLowerCase() === "scorpio") {
-    log.innerText = "Wow! I'm a Scorpio too!";
+    log.innerText = "わお！私も Scorpio です！";
   } else {
-    log.innerText = `${sign} is my favorite!`;
+    log.innerText = `${sign} が大好きです。`;
   }
 });
 ```
@@ -78,13 +83,13 @@ sign = window.prompt("元気にしてる ?", "元気だよ !");
 
 ## メモ
 
-ダイアログボックスはモーダルウィンドウです。ダイアログボックスが閉じられるまで、ユーザーはプログラムの他のインターフェイスにアクセスすることができなくなります。このため、ダイアログボックス（またはモーダルウィンドウ）を作成する関数は、使いすぎないようにしましょう。
-
+ダイアログボックスはモーダルウィンドウです。ダイアログボックスが閉じられるまで、ユーザーはプログラムの他のインターフェイスにアクセスすることができなくなります。
+このため、ダイアログボックス（またはモーダルウィンドウ）を作成する関数は、使いすぎないようにしましょう。
 他にもユーザー入力には {{HTMLElement("dialog")}} 要素を使用することができます。
 
 プロンプトダイアログは、単一の行のテキストボックス、キャンセルボタン、OK ボタンを含み、ユーザーがテキストボックスに入力した（空の可能性もある）テキストを返します。
-
-返値は文字列であることに注意してください。つまり、ユーザーから与えられた値をキャストする必要がある場合があります。例えば、答えが Number であるべきなら、その値を Number にキャストする必要があります。
+返値は文字列であることに注意してください。つまり、ユーザーから与えられた値をキャストする必要がある場合があります。
+例えば、答えが数値であるべきなら、その値を Number にキャストする必要があります。
 
 ```js
 const number = Number(window.prompt("Type a number", ""));
@@ -103,4 +108,4 @@ const number = Number(window.prompt("Type a number", ""));
 - {{HTMLElement("dialog")}} 要素
 - {{domxref("window.alert", "alert")}}
 - {{domxref("window.confirm", "confirm")}}
-- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) on A List Apart (2017)
+- [Never Use a Warning When you Mean Undo](https://alistapart.com/article/neveruseawarning/) - A List Apart (2017)

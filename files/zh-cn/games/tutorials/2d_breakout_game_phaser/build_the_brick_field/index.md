@@ -1,5 +1,5 @@
 ---
-title: Build the brick field
+title: 构建砖块区域
 slug: Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 ---
 

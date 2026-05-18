@@ -2,7 +2,7 @@
 title: Window
 slug: Web/API/Window
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 {{APIRef("DOM")}}
@@ -33,6 +33,8 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Indique si la fenêtre courante est fermée ou non.
 - {{DOMxRef("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Retourne une référence à l'objet {{DOMxRef("CookieStore")}} pour le contexte du document courant.
+- {{DOMxRef("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Retourne un objet {{DOMxRef("CrashReportContext")}} qui permet d'enregistrer des données arbitraires pour le contexte de navigation de niveau supérieur actuel, qui sont ensuite ajoutées à un {{DOMxRef("CrashReport")}} et envoyées à un point de rapport en cas de plantage du navigateur.
 - {{DOMxRef("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Retourne un booléen indiquant si le document courant a été chargé dans une {{HTMLElement("iframe")}} sans identifiants. Voir [IFrame credentialless](/fr/docs/Web/Security/IFrame_credentialless) pour plus de détails.
 - {{DOMxRef("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
@@ -45,7 +47,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne le rapport entre les pixels physiques et les pixels indépendants du périphérique sur l'affichage courant.
 - {{DOMxRef("Window.document")}} {{ReadOnlyInline}}
   - : Retourne une référence vers le document contenu dans la fenêtre.
-- {{DOMxRef("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{DOMxRef("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Retourne une référence vers la fenêtre [Picture-in-Picture du document](/fr/docs/Web/API/Document_Picture-in-Picture_API) pour le contexte du document courant.
 - {{DOMxRef("Window.fence")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Retourne une instance de l'objet {{DOMxRef("Fence")}} pour le contexte du document courant. Disponible uniquement pour les documents intégrés dans une {{HTMLElement("fencedframe")}}.
@@ -84,7 +86,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.name")}}
   - : Obtient ou définit le nom de la fenêtre.
 - {{DOMxRef("Window.navigation")}} {{ReadOnlyInline}}
-  - : Retourne l'objet {{DOMxRef("Navigation")}} associé à la fenêtre courante. Point d'entrée de l'[API Navigation](/fr/docs/Web/API/Navigation_API).
+  - : Retourne l'objet {{DOMxRef("Navigation")}} associé à la fenêtre courante. Point d'entrée de [l'API Navigation](/fr/docs/Web/API/Navigation_API).
 - {{DOMxRef("Window.navigator")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet navigator.
 - {{DOMxRef("Window.opener")}}
@@ -108,7 +110,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.personalbar")}} {{ReadOnlyInline}}
   - : Retourne l'objet personalbar.
 - {{DOMxRef("Window.scheduler")}} {{ReadOnlyInline}}
-  - : Retourne l'objet {{DOMxRef("Scheduler")}} associé au contexte courant. Point d'entrée pour utiliser l'[API Prioritized Task Scheduling](/fr/docs/Web/API/Prioritized_Task_Scheduling_API).
+  - : Retourne l'objet {{DOMxRef("Scheduler")}} associé au contexte courant. Point d'entrée pour utiliser [l'API Prioritized Task Scheduling](/fr/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{DOMxRef("Window.screen")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet screen associé à la fenêtre.
 - {{DOMxRef("Window.screenX")}} and {{DOMxRef("Window.screenLeft")}} {{ReadOnlyInline}}
@@ -129,10 +131,10 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
   - : Retourne une référence à l'objet window lui-même.
 - {{DOMxRef("Window.sessionStorage")}}
   - : Retourne une référence à l'objet de stockage de session utilisé pour stocker des données accessibles uniquement par l'origine qui les a créées.
-- {{DOMxRef("Window.sharedStorage")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : Retourne l'objet {{DOMxRef("WindowSharedStorage")}} pour l'origine courante. Point d'entrée principal pour écrire des données dans le stockage partagé avec l'[API Shared Storage](/fr/docs/Web/API/Shared_Storage_API).
+- {{DOMxRef("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Retourne l'objet {{DOMxRef("WindowSharedStorage")}} pour l'origine courante. Point d'entrée principal pour écrire des données dans le stockage partagé avec [l'API Shared Storage](/fr/docs/Web/API/Shared_Storage_API).
 - {{DOMxRef("Window.speechSynthesis")}} {{ReadOnlyInline}}
-  - : Retourne un objet {{DOMxRef("SpeechSynthesis")}}, point d'entrée pour utiliser la synthèse vocale de l'[API Web Speech](/fr/docs/Web/API/Web_Speech_API).
+  - : Retourne un objet {{DOMxRef("SpeechSynthesis")}}, point d'entrée pour utiliser la synthèse vocale de [l'API Web Speech](/fr/docs/Web/API/Web_Speech_API).
 - {{DOMxRef("Window.statusbar")}} {{ReadOnlyInline}}
   - : Retourne l'objet statusbar.
 - {{DOMxRef("Window.toolbar")}} {{ReadOnlyInline}}
@@ -140,7 +142,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - {{DOMxRef("Window.top")}} {{ReadOnlyInline}}
   - : Retourne une référence à la fenêtre la plus haute dans la hiérarchie des fenêtres. Cette propriété est en lecture seule.
 - {{DOMxRef("Window.trustedTypes")}} {{ReadOnlyInline}}
-  - : Retourne l'objet {{DOMxRef("TrustedTypePolicyFactory")}} associé à l'objet global, point d'entrée pour utiliser l'{{DOMxRef("Trusted Types API", "API Trusted Types", "", "nocode")}}.
+  - : Retourne l'objet {{DOMxRef("TrustedTypePolicyFactory")}} associé à l'objet global, point d'entrée pour utiliser {{DOMxRef("Trusted Types API", "l'API Trusted Types", "", "nocode")}}.
 - {{DOMxRef("Window.viewport")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Retourne une instance d'objet {{DOMxRef("Viewport")}}, qui fournit des informations sur l'état courant de la zone d'affichage (<i lang="en">viewport</i> en anglais) du périphérique.
 - {{DOMxRef("Window.visualViewport")}} {{ReadOnlyInline}}
@@ -152,10 +154,10 @@ Notez que les propriétés qui sont des objets (par exemple, pour surcharger le 
 - Propriétés nommées
   - : Certains éléments du document sont également exposés comme propriétés de window&nbsp;:
     - Pour chaque élément {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}} et {{HTMLElement("object")}}, son `name` (s'il n'est pas vide) est exposé.
-      Par exemple, si le document contient `<form name="my_form">`, alors `window["my_form"]` (et son équivalent `window.my_form`) renverra une référence vers cet élément.
+      Par exemple, si le document contient `<form name="my_form">`, alors `window["my_form"]` (et son équivalent `window.my_form`) retourne une référence vers cet élément.
     - Pour chaque élément HTML, son `id` (s'il n'est pas vide) est exposé.
 
-  Si une propriété correspond à un seul élément, cet élément est directement renvoyé. Si la propriété correspond à plusieurs éléments, alors un objet {{DOMxRef("HTMLCollection")}} contenant tous ces éléments est renvoyé. Si l'un des éléments est une `<iframe>` ou un `<object>` navigable, alors la propriété {{DOMxRef("HTMLIFrameElement/contentWindow", "contentWindow")}} du premier iframe de ce type est renvoyée à la place.
+    Si une propriété correspond à un seul élément, cet élément est directement renvoyé. Si la propriété correspond à plusieurs éléments, alors un objet {{DOMxRef("HTMLCollection")}} contenant tous ces éléments est renvoyé. Si l'un des éléments est une `<iframe>` ou un `<object>` navigable, alors la propriété {{DOMxRef("HTMLIFrameElement/contentWindow", "contentWindow")}} du premier iframe de ce type est renvoyée à la place.
 
 ### Propriétés dépréciées
 
@@ -265,7 +267,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window.stop()")}}
   - : Cette méthode arrête le chargement de la fenêtre.
 - {{DOMxRef("Window.structuredClone()")}}
-  - : Crée une [copie profonde](/fr/docs/Glossary/Deep_copy) d'une valeur donnée à l'aide de l'[algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+  - : Crée une [copie profonde](/fr/docs/Glossary/Deep_copy) d'une valeur donnée à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 ### Méthodes dépréciées
 
@@ -386,7 +388,7 @@ _Cette interface hérite des méthodes de l'interface {{DOMxRef("EventTarget")}}
 - {{DOMxRef("Window/scrollsnapchange_event", "scrollsnapchange")}} {{Experimental_Inline}}
   - : Se déclenche sur le conteneur de défilement à la fin d'une opération de défilement lorsqu'une nouvelle cible d'ancrage a été sélectionnée.
 - {{DOMxRef("Window/scrollsnapchanging_event", "scrollsnapchanging")}} {{Experimental_Inline}}
-  - : Se déclenche sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'ancrage est en attente, c'est-à-dire qu'elle sera sélectionnée à la fin du geste de défilement en cours.
+  - : Se déclenche sur le conteneur de défilement lorsque le navigateur détermine qu'une nouvelle cible d'ancrage est en attente, c'est-à-dire qu'elle est sélectionnée à la fin du geste de défilement en cours.
 
 ### Évènements dépréciés
 

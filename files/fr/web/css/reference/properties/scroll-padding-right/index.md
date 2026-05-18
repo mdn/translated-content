@@ -3,7 +3,7 @@ title: Propriété CSS `scroll-padding-right`
 short-title: scroll-padding-right
 slug: Web/CSS/Reference/Properties/scroll-padding-right
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ab63f9fa055a0d5b1b4eeac21e9a1e98c4f62c82
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-right`** définit des décalages pour le bord droit dans la dimension en ligne de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.
@@ -95,7 +95,7 @@ scroll-padding-right: unset;
 ### Valeurs
 
 - `<length-percentage>`
-  - : Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. C'est une longueur ou un pourcentage valide.
+  - : Un décalage intérieur entre le bord droit de la zone de défilement et le contenu, exprimé en longueur ou en pourcentage valide.
 - `auto`
   - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 

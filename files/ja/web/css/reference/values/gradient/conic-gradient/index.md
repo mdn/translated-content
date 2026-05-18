@@ -1,11 +1,12 @@
 ---
-title: conic-gradient()
+title: CSS `conic-gradient()` 関数
+short-title: conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/conic-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
+**`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{cssxref("gradient")}} データ型のオブジェクトであり、これは {{cssxref("image")}} の特殊型です。
 
 {{InteractiveExample("CSS デモ: conic-gradient()")}}
 
@@ -86,12 +87,12 @@ conic-gradient(
 
 ### 値
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : `from` キーワードに続いて角度を指定することで、時計回りのグラデーションの位置を定義します。
 - `<position>`
-  - : [`background-position`](/ja/docs/Web/CSS/Reference/Properties/background-position) プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
+  - : {{cssxref("background-position")}} プロパティと同じ長さ、順序、キーワード値を使用して、 `position` 値はグラデーションの中心を定義します。指定されていない場合、既定では `position` に `center` 値が使用され、グラデーションが中央に配置されるということになります。
 - `<angular-color-stop>`
-  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{CSSxRef("&lt;angle&gt;")}}) が続きます。
+  - : 色経由点の {{CSSxRef("&lt;color&gt;")}} 値で、その後にオプションで 1 ～ 2 個の位置 (グラデーションの円周軸に沿った {{cssxref("angle")}}) が続きます。
 - `<color-hint>`
   - : 隣接する色経由点の間でグラデーションがどのように進行するかを定義する{{Glossary("interpolation","補間")}}のヒントです。長さは、 2 つの色経由点の間のどの位置でグラデーションの色が色の遷移の中間点に到達するかを定義します。省略した場合、色の遷移の中間点は 2 つの色経由点間の中間点になります。
 
@@ -123,7 +124,7 @@ conic-gradient(
 
 #### グラデーションのカスタマイズ
 
-グラデーション円弧上に角度のついた色経由点をさらに追加することで、複数の色の間で高度なカスタマイズされた遷移を行うことができます。色経由点の位置は、 {{CSSxRef("&lt;angle&gt;")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、前の色経由点と後の色経由点の中間に配置されます。最初の色経由点と最後の色経由点に角度を指定しない場合、その値はそれぞれ 0deg と 360deg です。次の2つのグラデーションは同等です。
+グラデーション円弧上に角度のついた色経由点をさらに追加することで、複数の色の間で高度なカスタマイズされた遷移を行うことができます。色経由点の位置は、 {{cssxref("angle")}} を使って明示的に定義することができます。色経由点の位置を指定しない場合は、前の色経由点と後の色経由点の中間に配置されます。最初の色経由点と最後の色経由点に角度を指定しない場合、その値はそれぞれ 0deg と 360deg です。次の2つのグラデーションは同等です。
 
 ```css
 conic-gradient(red, orange, yellow, green, blue);
@@ -152,11 +153,11 @@ conic-gradient(red .8rad, yellow .6rad, blue 1.3rad);
 扇形グラデーションでは、他にもさまざまな効果を作り出すことができます。奇しくも市松模様もその一つです。左上と右下の白、左下と右上の黒で四分円を作り、グラデーションを16回 (横に4回、下に4回) 繰り返すと市松模様になります。
 
 ```css
-conic-gradient(white 90deg, black 0.25turn 0.5turn, white 1rad 1.5rad, black 300grad);
+conic-gradient(white 90deg, black 0.25turn 0.5turn, white calc(pi * 1rad) calc(pi * 1.5rad), black 300grad);
 background-size: 25% 25%;
 ```
 
-そして、そうですね、異なる角度のユニットを混ぜて使うこともできますが、やめておきましょう。以上、読みにくかったですね。
+そして、そうですね、異なる角度の単位を混ぜて使うこともできますが、やめておきましょう。上記のものは読みにくいですね。
 
 ## 形式文法
 
@@ -325,10 +326,10 @@ div {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/Guides/Images/Using_gradients)
 - 他のグラデーション関数: {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [`<hue-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/ja/docs/Web/CSS/Reference/Values/color-interpolation-method)
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
 - {{cssxref("image")}}
 - {{cssxref("image/image","image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("cross-fade()")}}

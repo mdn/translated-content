@@ -1,25 +1,17 @@
 ---
-title: page-break-inside
+title: CSS `page-break-inside` プロパティ
+short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
-original_slug: Web/CSS/page-break-inside
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
+
+{{deprecated_header}}
 
 > [!WARNING]
 > このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
 
-CSS の **`page-break-inside`** プロパティは、現在の要素の*内側の* 改ページを調整します。
-
-```css
-/* キーワード値 */
-page-break-inside: auto;
-page-break-inside: avoid;
-
-/* グローバル値 */
-page-break-inside: inherit;
-page-break-inside: initial;
-page-break-inside: revert;
-page-break-inside: unset;
-```
+**`page-break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、現在の要素の*内部*の改ページを調整します。
 
 {{InteractiveExample("CSS デモ: page-break-inside")}}
 
@@ -31,23 +23,18 @@ page-break-inside: auto;
 page-break-inside: avoid;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div>
-    <p>
-      The effect of this property can be noticed when the document is being
-      printed or a preview of a print is displayed.
-    </p>
-    <button id="print-btn">Show Print Preview</button>
-    <div class="box-container">
-      <div class="box">Content before the property</div>
-      <div class="box" id="example-element">
-        Content with 'page-break-inside'
-      </div>
-      <div class="box">Content after the property</div>
-    </div>
+```html-nolint interactive-example
+<div>
+  <p>
+    このプロパティの効果は、ドキュメントを印刷する際や、印刷プレビューを表示させた際に確認できます。
+  </p>
+  <button id="print-btn">印刷プレビューを表示</button>
+  <div class="box-container">
+    <div class="box">このプロパティの前のコンテンツ</div>
+    <div class="box" id="example-element">'page-break-inside' の付いたコンテンツ</div>
+    <div class="box">このプロパティの後のコンテンツ</div>
   </div>
-</section>
+</div>
 ```
 
 ```css interactive-example
@@ -64,10 +51,6 @@ page-break-inside: avoid;
   color: black;
 }
 
-.hide-element {
-  display: none;
-}
-
 @media print {
   #example-element {
     height: 25cm;
@@ -77,39 +60,33 @@ page-break-inside: avoid;
 
 ```js interactive-example
 const btn = document.getElementById("print-btn");
-const editorContainer = document.getElementsByClassName(
-  "css-editor-container",
-)[0];
-const exampleHTMLElement = document.getElementById("default-example");
-
-const printableSection = document.createElement("div");
-printableSection.setAttribute("id", "printable-section");
-printableSection.classList.add("hide-element");
-document.body.appendChild(printableSection);
 
 btn.addEventListener("click", () => {
-  const exampleContent = exampleHTMLElement.innerHTML;
-
-  editorContainer.classList.add("hide-element");
-  printableSection.innerHTML = exampleContent;
-  printableSection.classList.remove("hide-element");
-
   window.print();
-
-  printableSection.classList.add("hide-element");
-  printableSection.innerHTML = "";
-  editorContainer.classList.remove("hide-element");
 });
 ```
 
 ## 構文
 
+```css
+/* キーワード値 */
+page-break-inside: auto;
+page-break-inside: avoid;
+
+/* グローバル値 */
+page-break-inside: inherit;
+page-break-inside: initial;
+page-break-inside: revert;
+page-break-inside: revert-layer;
+page-break-inside: unset;
+```
+
 ### 値
 
 - `auto`
-  - : 初期値です。自動的な改ページが行われます (強制や禁止の機能は持ちません)。
+  - : 初期値です。自動的な改ページが行われます（強制も禁止もしません）。
 - `avoid`
-  - : 要素の内側で改ページされないようにします。
+  - : 要素の内部で改ページされないようにします。
 
 ## 改ページの別名
 
@@ -132,7 +109,7 @@ btn.addEventListener("click", () => {
 
 ## 例
 
-<h3 id="Avoiding_page_breaks_inside_elements">要素の途中の改ページを防ぐ</h3>
+### 要素の途中の改ページを防ぐ
 
 #### HTML
 
@@ -150,7 +127,7 @@ btn.addEventListener("click", () => {
     <li>one</li>
     <!-- <li>two</li> -->
   </ul>
-  <p>Tこれは第二段落です。</p>
+  <p>これは第二段落です。</p>
   <p>これは第三段落です。文章の量が多くなっています。</p>
   <p>
     これは第四段落です。第三段落よりも、さらにもう少しだけ、文章の量が多くなっています。

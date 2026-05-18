@@ -1,13 +1,36 @@
 ---
 title: Firefox へのフィードリーダーの追加
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+l10n:
+  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
 ---
 
 Firefox 2 より、Firefox はフィードを読む際に使う RSS または Atom フィードリーダを選択できるようになっています。この記事ではデフォルトではサポートされていないリーダを追加サポートさせる方法について説明します。
 
 ## 新しいウェブベースのフィードリーダの追加
 
-新しいウェブベースのフィードリーダを追加サポートさせるためにやらなければならないことは、3 つの新しい設定項目を追加することだけです。
+### ウェブアプリケーションからのフィードリーダの追加
+
+ウェブからのフィードリーダーの追加機能は HTML5 仕様から除去され、Firefox での対応も Firefox 62 で廃止される予定です。
+{{Deprecated_Inline}}
+
+以前のバージョンでは、ウェブ上の JavaScript コードは、`navigator.registerContentHandler()` 関数を使用してフィードリーダーを追加することができました。
+
+```js
+navigator.registerContentHandler(
+  "application/vnd.mozilla.maybe.feed",
+  "https://www.example.com/?feed-feed=%s",
+  "My Feed Reader",
+);
+```
+
+なお、ウェブコンテンツでは、呼び出しを行うページと同じオリジンを持つハンドラー URL のみを追加できる点にご注意ください。
+
+### 手動で新しいフィードリーダーを追加
+
+Firefox 63 では、新しいフィードリーダーの追加機能が除去されました。{{deprecated_inline}}.
+
+Firefox 63 以前では、新しいウェブベースのフィードリーダーに対応させるには、3 つの新しい環境設定を追加する必要がありました。
 
 - `browser.contentHandlers.types.number.title`
   - : フィードリーダの名前。
@@ -22,29 +45,8 @@ Firefox 2 より、Firefox はフィードを読む際に使う RSS または At
 - `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`
 - `browser.contentHandlers.types.5.uri`: `http://www.theeasyreaderurl.com?feed=%s`
 
-`about:config` を使うことでこれらの設定項目を手動で追加できます。拡張機能で新しいフィードリーダをインストールしたいのであれば、プログラム側で行うこともできます。
+`about:config` にアクセスして、これらの環境設定を手動で追加することができます。
 
-### ウェブアプリケーションからのフィードリーダの追加
+### 新しいフィードリーダーアプリケーションを追加
 
-ウェブ上の JavaScript コードから簡単にフィードリーダを追加することができます。このためには、このような {{domxref("navigator.registerContentHandler()")}} 関数を使用します。
-
-```js
-navigator.registerContentHandler(
-  "application/vnd.mozilla.maybe.feed",
-  "http://www.theeasyreaderurl.com?feed=%s",
-  "Easy Reader",
-);
-```
-
-### 新しいフィードリーダアプリケーションの追加
-
-これを最も簡単に行う方法というのは、単に設定（あるいは オプション、ご使用のプラットフォームによります）ウィンドウの フィード パネルという既存のユーザーインターフェイスを使用することです。
-
-> [!NOTE]
-> Firefox 8 よりフィードパネルは無くなっています。フィードリーダーの開発者が、Web フィードの処理の為のオプションをご自分で追加する場合、上記の同様の JavaScript コードを実装することをお勧めします。
-
-これも拡張機能からプログラムで行うこともできます。フィードリーダに使うアプリケーションのパス名を `browser.feeds.handlers.application` オプションの値に設定することで可能です。
-
-## 関連情報
-
-- {{ domxref("window.navigator.registerContentHandler()") }}
+このことを行う最も簡単な方法は、指定されたユーザーインターフェースを使用し、「環境設定」（お使いのプラットフォームによっては「オプション」）ウィンドウ内の「フィード」パネルを利用することです。

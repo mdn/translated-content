@@ -1,15 +1,15 @@
 ---
-title: "CSP : object-src"
+title: "Content-Security-Policy : directive object-src"
+short-title: object-src
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/object-src
+l10n:
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`object-src`** spécifie les sources valides pour les éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
-
-Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`object-src`** définit les sources valides pour les éléments HTML {{HTMLElement("object")}} et {{HTMLElement("embed")}}.
 
 > [!NOTE]
-> Les éléments contrôlés par `object-src` sont considérés comme des éléments HTML historiques et qui ne recevront pas de nouvelles fonctionnalités standardisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). Ainsi, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive en définissant `object-src 'none'`.
+> Les éléments contrôlés par `object-src` sont peut-être considérés comme des éléments HTML hérités et ne reçoivent pas de nouvelles fonctionnalités standardisées (comme les attributs de sécurité `sandbox` ou `allow` pour `<iframe>`). Il est donc [recommandé <sup>(angl.)</sup>](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive de récupération (par exemple, définir explicitement `object-src 'none'` si possible).
 
 <table class="properties">
   <tbody>
@@ -19,10 +19,10 @@ Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
+      <td>{{Glossary("Fetch directive", "Directive de récupération")}}</td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Solution de repli {{CSP("default-src")}}</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la
         directive <code>default-src</code>.
@@ -33,18 +33,20 @@ Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
-
 ```http
-Content-Security-Policy: object-src <source>;
-Content-Security-Policy: object-src <source> <source>;
+Content-Security-Policy: object-src 'none';
+Content-Security-Policy: object-src <source-expression-list>;
 ```
 
-### Sources
+Cette directive peut avoir l'une des valeurs suivantes&nbsp;:
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
-
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associées)).
+- `'none'`
+  - : Aucune ressource de ce type ne peut être chargée. Les guillemets simples sont obligatoires.
+- `<source-expression-list>`
+  - : Une liste de valeurs _d'expressions de source_ séparées par des espaces. Les ressources de ce type peuvent être chargées si elles correspondent à l'une des expressions de source données. Pour cette directive, les valeurs d'expression de source suivantes sont applicables&nbsp;:
+    - [`<host-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## Exemples
 
@@ -53,15 +55,14 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 Soit cet en-tête CSP&nbsp;:
 
 ```http
-Content-Security-Policy: object-src https://example.com/
+Content-Security-Policy: object-src https://exemple.com/
 ```
 
-Ces éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet) seront bloqués et ne se chargeront pas&nbsp;:
+Ces éléments {{HTMLElement("object")}} et {{HTMLElement("embed")}} seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
-<embed src="https://not-example.com/flash"></embed>
-<object data="https://not-example.com/plugin"></object>
-<applet archive="https://not-example.com/java"></applet>
+<embed src="https://hors-exemple.com/flash" />
+<object data="https://hors-exemple.com/plugin"></object>
 ```
 
 ## Spécifications
@@ -74,5 +75,5 @@ Ces éléments [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<emb
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
-- [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+- Les éléments HTML {{HTMLElement("object")}} et {{HTMLElement("embed")}}

@@ -1,16 +1,14 @@
 ---
-title: :state()
+title: CSS `:state()` 擬似クラス
+short-title: :state()
 slug: Web/CSS/Reference/Selectors/:state
-original_slug: Web/CSS/:state
 l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:state()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、特定のカスタム状態を持つ[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)に一致します。
 
 ## 構文
-
-`:state()` 擬似クラスは、引数として一致するカスタム要素の状態を表すカスタム識別子を取ります。
 
 ```css-nolint
 :state(<カスタム識別子>) {
@@ -18,11 +16,15 @@ l10n:
 }
 ```
 
+### 引数
+
+`:state()` 擬似クラスは、一致するカスタム要素の状態を表す独自の識別子を引数として取ります。
+
 ## 解説
 
 要素は、ユーザー操作や他の要因により、状態が遷移することがあります。
 例えば、ユーザーが要素にカーソルをかざしたときに "hover" 状態に遷移したり、ユーザーがクリックした後にリンクが "visited" 状態に遷移したりします。
-ブラウザーで指定された要素は、[`:hover`](/ja/docs/Web/CSS/Reference/Selectors/:hover) や [`:visited`](/ja/docs/Web/CSS/Reference/Selectors/:visited) などの CSS 擬似クラスを使用して、これらの状態に基づいてスタイルを設定することができます。
+ブラウザーで指定された要素は、{{cssxref(":hover")}} や {{cssxref(":visited")}} などの CSS 擬似クラスを使用して、これらの状態に基づいてスタイルを設定することができます。
 同様に、[自律的カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム要素の種類)（組み込み要素から派生していないカスタム要素）は、その状態を公開することができ、その要素を使用するページは、CSS の `:state()` 擬似クラスを使用して、それらにスタイル設定することができます。
 
 カスタム要素の状態は文字列値で表されます。
@@ -78,7 +80,7 @@ shadowRoot.innerHTML = `<labeled-checkbox part='checkbox'>Yes</labeled-checkbox>
 ```
 
 次の CSS は、[`::part()`](/ja/docs/Web/CSS/Reference/Selectors/::part) 擬似要素を使用して `'checkbox'` シャドウパーツと照合する方法を示しています。
-また、`::part()`擬 似要素に続いて `:state()` 擬似クラスを使用することで、チェック状態の同じ部分と照合する方法も表示させています。
+また、`::part()` 擬似要素に続いて `:state()` 擬似クラスを使用することで、チェック状態の同じ部分と照合する方法も表示させています。
 
 ```css
 question-box::part(checkbox) {
@@ -87,6 +89,7 @@ question-box::part(checkbox) {
 
 question-box::part(checkbox):state(checked) {
   color: green;
+  outline: dashed 1px green;
 }
 ```
 
@@ -104,5 +107,5 @@ question-box::part(checkbox):state(checked) {
 
 - [`CustomStateSet`](/ja/docs/Web/API/CustomStateSet)
 - [擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
-- [擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+- [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - [カスタム状態と CSS のカスタム状態擬似クラスセレクター](/ja/docs/Web/API/Web_components/Using_custom_elements#カスタム状態と_css_のカスタム状態擬似クラスセレクター)（[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)）
