@@ -1,122 +1,97 @@
 ---
-title: Plantilla de página de destino del módulo CSS
+title: Plantilla de página de módulo CSS
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_page_template
-original_slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_module_landing_page_template
 l10n:
-  sourceCommit: bfdfe970004b21218ef4ab6a4274d4fb29c4742b
+  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
 ---
 
-{{MDNSidebar}}
-
-> [!NOTE]
-> _Recuerde eliminar este bloque de notas antes de publicar._
->
-> ---
->
-> **Metadatos de la página:**
->
-> La parte superior de la página se utiliza para definir "metadatos de página".
-> Los valores deben actualizarse adecuadamente para el módulo en particular.
->
-> ```md
-> ---
-> title: NombreDelModulo CSS
-> slug: Web/CSS/CSS_NameOfTheModule
-> page-type: css-module
-> spec-urls:
->   - url1
->   - url2
-> ---
-> ```
->
-> - **title**
->   - : El valor `title` se muestra en la parte superior de la página.
->     Este es el nombre del módulo seguido del texto "CSS".
->     Por ejemplo, el título de la página de inicio del módulo [grid layout](/es/docs/Web/CSS/Guides/Grid_layout) es _Diseño de cuadrícula de CSS_.
-> - **slug**
->   - : El valor `slug` es el final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/CSS/CSS_NameOfTheModule`.
->     Por ejemplo, el `slug` para la página de inicio del módulo [grid layout](/es/docs/Web/CSS/Guides/Grid_layout) es `Web/CSS/CSS_grid_layout`.
-> - **page-type**
->   - : El valor `page-type` para las páginas de destino del módulo CSS es `css-module` (solo para contenido en ingles).
-> - **spec-urls**
->   - : El valor `spec-urls` es una URL de la especificación. En caso de que haya más de una versión de la especificación que sea relevante, preséntelas en una lista con viñetas. Por ejemplo, el valor de la clave `spec-urls` para la página de inicio del módulo [filter effects](/es/docs/Web/CSS/CSS_filter_effects) es (solo para contenido en ingles):
->
->     ```plain
->     - `https://drafts.fxtf.org/filter-effects-2/`
->     - `https://drafts.fxtf.org/filter-effects-1/`
->     ```
->
-> ---
->
-> **Macros al principio de la pagina**
->
-> La macro llamada `\{{CSSRef}}` aparece en la parte superior de la sección de contenido (inmediatamente debajo de los metadatos).
-> Esta macro debe estar presente en cada página de destino del módulo CSS. Genera una barra lateral CSS adecuada, dependiendo de las etiquetas incluidas en la página.
-> Elimine la macro `\{{MDNSidebar}}` cuando utilice esta plantilla.
->
-> ---
->
-> _Recuerde eliminar este bloque de notas antes de publicar._
-
-Comience el contenido de la página con un párrafo introductorio, que nombra el módulo y dice lo que hace.
-Idealmente, esto debería ser una o dos oraciones cortas.
+Comienza el contenido de la página con un párrafo introductorio que nombre el módulo y explique qué hace. Proporciona brevemente una visión general de las características definidas en la especificación y, si es relevante, describe cómo interactúan con características de especificaciones relacionadas. Esta descripción es una visión rápida, NO un tutorial o guía, así que mantenla breve.
 
 ## NombreDelModulo en acción
 
-En esta sección, incluya un ejemplo interactivo del módulo que ayude a demostrar la utilidad o el poder de varias propiedades proporcionadas por este módulo. El propósito de esta sección es demostrar algunos casos de uso y crear interés y curiosidad en la mente de los lectores que aprenden sobre este módulo.
+En esta sección, incluye un ejemplo utilizando `\{{EmbedLiveSample}}` (consulta [Ejemplos en vivo](/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples) para más información) que ayude a demostrar la utilidad y el poder de las diversas propiedades proporcionadas por este módulo.
+El propósito de esta sección es demostrar casos de uso y despertar el interés y la curiosidad de los lectores que están aprendiendo sobre este módulo. Mantén el código oculto a menos que sea esencial para comprender los casos de uso (por ejemplo, espacios de nombres o anidamiento).
 
-Proporcione una breve descripción de cómo los lectores pueden interactuar con el ejemplo. No entres en muchos detalles para explicar el ejemplo y no incluyas fragmentos de código. Añade un enlace al código fuente del ejemplo en el repositorio [`css-examples`](https://github.com/mdn/css-examples/tree/main/modules). Por ejemplo, para el ejemplo interactivo del módulo de efectos de filtro, diría:
-"Para ver el código de este ejemplo, [ver el código fuente en GitHub](https://github.com/mdn/css-examples/blob/main/modules/filters.html)."
+Si es relevante, proporciona una breve descripción de cómo los lectores pueden interactuar con el ejemplo.
 
 ## Referencia
 
-Cree las subsecciones relevantes para enumerar las propiedades, funciones, tipos de datos, etc. relacionados.
+Crea las subsecciones pertinentes para enumerar las propiedades, funciones, tipos de datos relacionados, etc. La sección de referencia debe incluir únicamente las características introducidas en esa especificación concreta. Si una característica está en la especificación pero no está soportada, menciónala en un párrafo bajo el encabezado correspondiente. Las características relacionadas definidas en otras especificaciones van en "conceptos relacionados", y NO en esta sección.
 
 ### Propiedades
 
-Lista de todas las propiedades abreviadas y completas proporcionadas por el módulo.
+Una lista de todas las propiedades (abreviadas y completas) proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
 
-### Reglas arroba
+Añade un párrafo indicando las propiedades introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
 
-Lista de reglas de arroba CSS proporcionada por el módulo. Omita esta sección si no hay reglas de arroba CSS relevantes para este módulo.
+Omite esta sección si el módulo no define ninguna propiedad.
+
+### Reglas-at (@rules)
+
+Una lista de las reglas-at de CSS proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
+
+Añade un párrafo indicando las reglas-at introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
+
+Omite esta sección si el módulo no define ninguna regla-at.
 
 ### Funciones
 
-Lista de funciones CSS proporcionadas por el módulo. Omita esta sección si no hay funciones CSS relevantes para este módulo.
+Una lista de las funciones CSS proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
+
+Añade un párrafo indicando las funciones introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
+
+Omite esta sección si el módulo no define ninguna función CSS.
 
 ### Tipos de datos
 
-Lista de tipos de datos CSS proporcionados por el módulo. Omita esta sección si no hay tipos de datos CSS relevantes para este módulo.
+Una lista de los tipos de datos CSS proporcionados por el módulo que estén soportadas en al menos un navegador principal.
+
+Añade un párrafo indicando los tipos de datos introducidos por el módulo que aún no están soportadas por ningún navegador, si las hay.
+
+Omite esta sección si el módulo no define ningún tipo de datos.
 
 ### Eventos
 
-Lista de eventos de API proporcionados por el módulo. Omita esta sección si no hay eventos relevantes para este módulo.
+Una lista de los eventos de API proporcionados por el módulo que estén soportados en al menos un navegador principal.
+
+Añade un párrafo indicando los eventos introducidos por el módulo que aún no están soportados por ningún navegador, si las hay.
+
+Omite esta sección si el módulo no define ningún evento.
 
 ### Interfaces
 
-Enumere la API relacionada y las interfaces proporcionadas por el módulo. Omita esta sección si no hay interfaces API relevantes para este módulo.
+Una lista de las interfaces de API relacionadas proporcionadas por el módulo que estén soportadas en al menos un navegador principal.
+
+Añade un párrafo indicando las interfaces introducidas por el módulo que aún no están soportadas por ningún navegador, si las hay.
+
+Omite esta sección si el módulo no define ninguna interfaz de API.
+
+### Términos del glosario y definiciones
+
+Enumera los términos del glosario relacionados y otros términos definidos dentro de las páginas de referencia enumeradas anteriormente. Omite esta sección si no hay nada relevante que incluir.
 
 ## Guías
 
+Una lista de definiciones de las guías relacionadas dentro de la estructura del módulo, en orden de complejidad creciente, seguida de guías relacionadas de otros módulos. Solo incluye guías de MDN.
+
 - EnlaceAGuia1
-  - : Descripción de la guía en una o dos frases.
+  - : Descripción de una frase de la guía.
 - EnlaceAGuia2
-  - : Descripción de la guía en una o dos frases.
+  - : Descripción de una frase de la guía.
 
 ## Conceptos relacionados
 
-Enumere todas las demás propiedades, tipos de datos o términos del glosario que puedan ser relevantes o estar relacionados con este módulo.
+Enumera todas las demás propiedades, tipos de datos, términos del glosario, etc., que estén relacionados con este módulo.
 
-Especificaciones
+## Especificaciones
 
 `\{{Specifications}}`
 
-_Para usar esta macro, elimine las comillas inveritdas y la barra invertida en el archivo de markdown._
+_Para usar esta macro, elimina las comillas invertidas y la barra invertida en el archivo markdown._
 
-Vease también
+## Ver también
 
-Incluya enlaces a páginas de referencia y guías relacionadas con la propiedad actual. Consulta la sección [Vease también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para obtener más consejos e instrucciones.
+Incluye enlaces a cualquier otra página de referencia y otro contenido que sea relevante pero que no encaje en las otras secciones. Si hay guías externas relevantes que valga la pena enlazar, colócalas al final de la lista (no bajo la sección "Guías", que está limitada a guías de MDN). Consulta la sección [Ver también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en nuestra _Guía de estilo de escritura_ para más consejos e instrucciones.
 
 - enlace1
 - enlace2
