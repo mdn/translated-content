@@ -27,7 +27,7 @@ querySelector(selectors)
 - `selectors`
   - : 文字列で、照合する 1 つ以上のセレクターを設定します。この文字列は有効な CSS セレクター文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
 
-    なお、HTML 仕様書ではでは、属性値が有効な CSS 識別子であることを要求していません。[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合、セレクター内で使用する前に、その値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} を呼び出すか、[文字のエスケープ](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)で説明されている手法のいずれかを使用する必要があります。例については、[属性値のエスケープ](#属性値のエスケープ)を参照してください。
+    なお、HTML 仕様書では、属性値が有効な CSS 識別子であることを要求していません。[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合、セレクター内で使用する前に、その値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} を呼び出すか、[文字のエスケープ](/ja/docs/Web/CSS/Reference/Values/ident#文字のエスケープ)で説明されている手法のいずれかを使用する必要があります。例については、[属性値のエスケープ](#属性値のエスケープ)を参照してください。
 
 ### 返値
 

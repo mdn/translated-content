@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-**ウェブトランスポート API** (WebTransport API) は、{{domxref("WebSockets API", "ウェブソケット", "", "nocode")}}を現代的にに刷新したもので、[HTTP/3 トランスポート](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)を使用してクライアントとサーバー間でデータを転送します。WebTransport は、マルチストリーム単短方向ストリーム、順不同配信に対応しています。これにより、{{domxref("Streams API", "ストリーム", "", "nocode")}}による信頼性の高い転送と、UDP 同様にデータグラムによる信頼性の低い転送をすることができます。
+**ウェブトランスポート API** (WebTransport API) は、{{domxref("WebSockets API", "ウェブソケット", "", "nocode")}}を現代的に刷新したもので、[HTTP/3 トランスポート](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)を使用してクライアントとサーバー間でデータを転送します。WebTransport は、マルチストリーム単短方向ストリーム、順不同配信に対応しています。これにより、{{domxref("Streams API", "ストリーム", "", "nocode")}}による信頼性の高い転送と、UDP 同様にデータグラムによる信頼性の低い転送をすることができます。
 
 ## 概念と使い方
 
