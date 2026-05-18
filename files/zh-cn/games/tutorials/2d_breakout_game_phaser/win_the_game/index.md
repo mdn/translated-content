@@ -27,7 +27,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-我们使用 `this.bricks` 上的 `countAlive()` 方法，统计仍然存活的砖块数量。如果没有存活的砖块了，那么我们就显示获胜消息，并在警告框被关闭后重新开始游戏。
+我们使用 `this.bricks` 的 `countAlive()` 方法，统计仍然存在的砖块数量。如果没有存在的砖块了，那么我们就显示获胜消息，并在警告框被关闭后重新开始游戏。
 
 ## 比较你的代码
 
