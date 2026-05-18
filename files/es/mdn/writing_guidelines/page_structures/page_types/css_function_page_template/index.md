@@ -72,7 +72,6 @@ l10n:
 >   Consulta nuestra [guía de tablas de compatibilidad](/es/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) para obtener información sobre cómo añadir o editar entradas.
 >
 > _Recuerda eliminar este bloque de notas antes de publicar._
->
 
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
