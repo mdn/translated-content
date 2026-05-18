@@ -1,8 +1,9 @@
 ---
-title: cubic-bezier()
+title: CSS `cubic-bezier()` 関数
+short-title: cubic-bezier()
 slug: Web/CSS/Reference/Values/easing-function/cubic-bezier
 l10n:
-  sourceCommit: e4fda00ba2b51b39024e0d92e2bd76593998cd01
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`cubic-bezier()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3 次[ベジェ](/ja/docs/Glossary/Bezier_curve)曲線を使用してスムーズな遷移を作成します。
