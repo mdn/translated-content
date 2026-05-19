@@ -7,18 +7,18 @@ l10n:
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feGaussianBlur>`** applique un effet de flou à l'image en entrée. La quantité de flou est définie par l'attribut {{SVGAttr("stdDeviation")}}, qui décrit la courbe en cloche du flou gaussien.
 
-Comme les autres primitives de filtres, elle traite les composantes colorimétriques dans l'{{glossary("color space", "espace colorimétrique")}} `linearRGB` par défaut. L'attribut {{SVGAttr("color-interpolation-filters")}} permet d'utiliser `sRGB` à la place.
+Comme les autres primitives de filtres, elle traite les composantes colorimétriques dans {{Glossary("color space", "l'espace colorimétrique")}} `linearRGB` par défaut. L'attribut {{SVGAttr("color-interpolation-filters")}} permet d'utiliser `sRGB` à la place.
 
 ## Contexte d'utilisation
 
-{{svginfo}}
+{{SVGInfo}}
 
 ## Attributs
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("stdDeviation")}}
 - {{SVGAttr("edgeMode")}}
-- [Attributs des primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes) : {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
+- [Attributs des primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_pour_les_primitives_de_filtre)&nbsp;: {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## Interface DOM
 
@@ -48,7 +48,7 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple", "", "130")}}
+{{EmbedLiveSample("Exemple simple", "", 130)}}
 
 ### Exemple avec une ombre portée
 
@@ -75,7 +75,7 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_avec_une_ombre_portée", "", "130")}}
+{{EmbedLiveSample("Exemple avec une ombre portée", "", 130)}}
 
 ## Spécifications
 
@@ -87,7 +87,7 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 
 ## Voir aussi
 
-- [Attributs SVG pour les primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#filters_attributes)
+- [Attributs SVG pour les primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_filtre)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
@@ -104,4 +104,4 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG : Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [Tutoriel SVG&nbsp;: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
