@@ -43,7 +43,7 @@ Même si la négociation menée par le serveur est la méthode la plus fréquemm
 
 L'en-tête {{HTTPHeader("Accept")}} liste les types MIME des ressources média que l'agent accepte de traiter. Il s'agit d'une liste de types MIME séparés par des virgules, chacun associé avec un facteur de qualité indiquant la préférence relative entre chaque type MIME.
 
-L'en-tête `Accept` est défini par le navigateur (ou tout autre agent utilisateur) et peut varier selon le contexte, par exemple que la ressource soit une page HTML, une image, une vidéo ou un script. Cet en-tête est différent selon qu'on récupère un document demandé avec la barre d'adresse, ou une ressource désignée par un élément HTML {{HTMLElement("img")}}, {{HTMLElement("video")}} ou {{HTMLElement("audio")}}. Les navigateurs peuvent utiliser la valeur d'en-tête qu'ils estiment la plus adéquate. Une [liste exhaustive des valeurs par défaut pour les navigateurs principaux](/fr/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) est disponible.
+L'en-tête `Accept` est défini par le navigateur (ou tout autre agent utilisateur) et peut varier selon le contexte, par exemple que la ressource soit une page HTML, une image, une vidéo ou un script. Cet en-tête est différent selon qu'on récupère un document demandé avec la barre d'adresse, ou une ressource désignée par un élément HTML {{HTMLElement("img")}}, {{HTMLElement("video")}} ou {{HTMLElement("audio")}}. Les navigateurs peuvent utiliser la valeur d'en-tête qu'ils estiment la plus adéquate. Une [liste exhaustive des valeurs par défaut pour les navigateurs principaux](/fr/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) est disponible.
 
 ### L'en-tête `Accept-CH`
 
