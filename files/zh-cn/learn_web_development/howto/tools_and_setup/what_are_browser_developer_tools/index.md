@@ -2,7 +2,7 @@
 title: 什么是浏览器开发者工具？
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 1af3d045bad1d27c20b1236966301839971f9c09
 ---
 
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
@@ -103,9 +103,8 @@ l10n:
 
 如何打开调试器：
 
-**Firefox**：打开开发者工具，然后选择**调试器**标签。
-
-**其他浏览器**：打开开发者工具，然后选择**源代码**标签。
+- **Firefox**：打开开发者工具，然后选择**调试器**标签。
+- **其他浏览器**：打开开发者工具，然后选择**源代码**标签。
 
 ### 探索调试器
 
