@@ -3,7 +3,7 @@ title: Как выбрать текстовый редактор?
 slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В этой статье мы расскажем, о чём следует подумать при установке текстового редактора для веб-разработки.
 
