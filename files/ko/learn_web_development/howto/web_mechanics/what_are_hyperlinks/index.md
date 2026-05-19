@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 583d48191a7a8605d831aff357bef6cc63aef2e3
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 글에서, 우리는 하이퍼링크가 무엇이고 왜 중요한지를 살필 것이다.
 
