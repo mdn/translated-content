@@ -23,7 +23,11 @@ input:read-only {
 
 ## 语法
 
-{{csssyntax}}
+```css
+:read-only {
+  /* ... */
+}
+```
 
 ## 示例
 

@@ -13,7 +13,11 @@ custom-element::part(foo) {
 
 ## 语法
 
-{{CSSSyntax}}
+```css
+::part(<ident>+) {
+  /* ... */
+}
+```
 
 ## 示例
 

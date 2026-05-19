@@ -32,9 +32,22 @@ slug: Web/CSS/Reference/Selectors/:nth-last-child
 - `<An+B>`
   - : 代表一些元素，它们在所在兄弟节点中的数字位置满足模式 `An+B`, `n`是 0 或者任意的正整数。从结尾开始计算的第一个元素的索引值是`1`. `A` 和 `B` 必须都是 {{cssxref("&lt;integer&gt;")}}.
 
-### Formal syntax
+### The `of <selector>` syntax
 
-{{csssyntax}}
+By passing a selector argument, we can select the **nth-last** element that matches that selector. For example, the following selector matches the last three _important_ list items, which are assigned with `class="important"`.
+
+```css
+:nth-last-child(-n + 3 of li.important) {
+}
+```
+
+> [!NOTE]
+> This is different from moving the selector outside of the function, like:
+
+```css
+li.important:nth-last-child(-n + 3) {
+}
+```
 
 ## 示例
 

@@ -45,7 +45,7 @@ box-orient: unset;
 
 ## 形式语法
 
-{{CSSSyntax}}
+{{CSSSyntaxRaw(`box-orient = horizontal | vertical | inline-axis | block-axis`)}}
 
 ## 示例
 

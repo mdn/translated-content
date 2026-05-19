@@ -21,9 +21,9 @@ slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
 
 A {{Cssxref("color value")}}.
 
-### 基本语法
+### 形式语法
 
-{{csssyntax}}
+{{CSSSyntaxRaw(`-webkit-tap-highlight-color = <color>`)}}
 
 ## 规范
 

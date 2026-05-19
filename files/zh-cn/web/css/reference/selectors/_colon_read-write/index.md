@@ -23,7 +23,11 @@ input:read-write {
 
 ## 语法
 
-{{csssyntax}}
+```css
+:read-write {
+  /* ... */
+}
+```
 
 ## 示例
 

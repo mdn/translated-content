@@ -19,7 +19,11 @@ simple-custom:defined {
 
 ## 语法
 
-{{csssyntax}}
+```css
+:defined {
+  /* ... */
+}
+```
 
 ## 示例
 

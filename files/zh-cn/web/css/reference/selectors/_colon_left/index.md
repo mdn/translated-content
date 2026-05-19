@@ -17,9 +17,13 @@ slug: Web/CSS/Reference/Selectors/:left
 > [!NOTE]
 > 并不是所有样式属性都能应用在此选择器内。仅仅 {{ Cssxref("margin") }}、{{ Cssxref("padding") }}、{{ Cssxref("border") }} 和 {{ Cssxref("background") }} 等打印时需要的属性可以使用。其他属性将直接忽略，并且可以使用的属性也只会在打印时生效，显示时不会生效。
 
-## 参数
+## 语法
 
-{{csssyntax}}
+```css
+:left {
+  /* ... */
+}
+```
 
 ## 样例
 

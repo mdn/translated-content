@@ -34,7 +34,7 @@ The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argu
 
 ### Formal syntax
 
-{{csssyntax}}
+{{CSSSyntax("fit-content")}}
 
 ## Example
 

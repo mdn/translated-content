@@ -30,9 +30,11 @@ The syntax for the rectangle is similar to the [`rect()`](/zh-CN/docs/Web/CSS/Re
 - `left`
   - : The left edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
 
-### Formal syntax
+## Description
 
-{{CSSSyntax}}
+This property allows you to, for example, use different parts of one larger image as backgrounds in different parts of your content.
+
+The syntax for the rectangle is similar to the [`rect()`](/en-US/docs/Web/CSS/Reference/Values/shape#syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
 
 ## Example
 

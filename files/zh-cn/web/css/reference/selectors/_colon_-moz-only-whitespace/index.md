@@ -13,9 +13,13 @@ slug: Web/CSS/Reference/Selectors/:-moz-only-whitespace
 
 3. 仅有空白符的文本节点。
 
-## 形式语法
+## 语法
 
-{{CSSSyntax}}
+```css
+:-moz-only-whitespace {
+  /* ... */
+}
+```
 
 ## 示例
 

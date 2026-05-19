@@ -30,7 +30,11 @@ slug: Web/CSS/Reference/Selectors/::first-line
 
 ## 语法
 
-{{csssyntax}}
+```css
+::first-line {
+  /* ... */
+}
+```
 
 ## 示例
 

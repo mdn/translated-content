@@ -16,7 +16,11 @@ input:valid {
 
 ## 语法
 
-{{csssyntax}}
+```css
+:valid {
+  /* ... */
+}
+```
 
 ## 例子
 
