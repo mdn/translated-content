@@ -2,7 +2,7 @@
 title: 端末の方向の検出
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
 l10n:
-  sourceCommit: 6754a50ec57c8c9758a65a42691878e5fd1f910a
+  sourceCommit: bcfc05aac40b47aecad69d44c54e33bf5f9b4e41
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
@@ -13,12 +13,42 @@ l10n:
 
 もうひとつのイベントは {{domxref("DeviceMotionEvent")}} であり、加速度が変化したときに発生します。こちらは方向ではなく加速度の変化を監視することが、{{domxref("DeviceOrientationEvent")}} との違いです。一般的に {{domxref("DeviceMotionEvent")}} を検出できるセンサーには、可動部があるストレージ装置を保護するためノートパソコンに内蔵するものも含みます。{{domxref("DeviceOrientationEvent")}} は、モバイル端末でとても一般的です。
 
-## orientation イベントの処理
+## 権限のリクエスト
+
+一部の{{Glossary("user agent", "ユーザーエージェント")}}では、端末の向きや動きのデータにアクセスする前に、ユーザーからの明示的な許可が必要となります。これが必要な環境では、{{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} および {{domxref("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} という静的メソッドを使用して、この許可をリクエストすることができます。どちらのメソッドもプロミス ({{jsxref("Promise")}}) を返し、これは `"granted"` または `"denied"` で解決されます。また、どちらもユーザーの操作（`click` イベントハンドラーなど）の中から呼び出す必要があります。
+
+すべてのユーザーエージェントがこれらのメソッドを実装しているわけではないため、呼び出す前に機能検出を行う必要があります。次の例は、ボタンのクリックハンドラーから両方の権限をリクエストする方法を示しています。
+
+```js
+function handleClick() {
+  if (typeof DeviceMotionEvent.requestPermission === "function") {
+    // API は権限が必要 — リクエストを行う
+    Promise.all([
+      DeviceMotionEvent.requestPermission(),
+      DeviceOrientationEvent.requestPermission(),
+    ]).then(([motionPermission, orientationPermission]) => {
+      if (
+        motionPermission === "granted" &&
+        orientationPermission === "granted"
+      ) {
+        window.addEventListener("devicemotion", handleMotion);
+        window.addEventListener("deviceorientation", handleOrientation);
+      }
+    });
+  } else {
+    // 権限は不要、イベントリスナーを直接追加
+    window.addEventListener("devicemotion", handleMotion);
+    window.addEventListener("deviceorientation", handleOrientation);
+  }
+}
+```
+
+## 方向イベントの処理
 
 方向の変化を受け取り始めるために必要なことは、 {{domxref("Window.deviceorientation_event", "deviceorientation")}} イベントを待ち受けすることだけです。
 
 ```js
-window.addEventListener("deviceorientation", handleOrientation, true);
+window.addEventListener("deviceorientation", handleOrientation);
 ```
 
 イベントリスナー（この場合は `handleOrientation()` と呼ばれる JavaScript 関数）を登録すると、リスナー関数は定期的に更新された方向データを取得します。
@@ -48,7 +78,7 @@ function handleOrientation(event) {
 
 ### 方向の値の解説
 
-それぞれの軸で報告される値は、標準座標系の軸を中心にした回転量を表します。これらは[方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)の記事で詳しく説明しており、ここでは概要を記載します。
+それぞれの軸で報告される値は、標準座標系の軸を中心にした回転量を表します。これらは[方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)の記事で詳しく説明しており、ここでは概要を記載します。
 
 - {{domxref("DeviceOrientationEvent.alpha")}} の値は z 軸を中心にした端末の動きを表し、0 以上 360 未満の範囲による度数で表されます。
 - {{domxref("DeviceOrientationEvent.beta")}} の値は x 軸を中心にした端末の動きを表し、-180 以上 180 未満の範囲の値による度数で表されます。これは端末の前後の動きです。
@@ -75,7 +105,7 @@ function handleOrientation(event) {
   position: relative;
   width: 200px;
   height: 200px;
-  border: 5px solid #ccc;
+  border: 5px solid #cccccc;
   border-radius: 10px;
 }
 
@@ -139,7 +169,7 @@ window.addEventListener("deviceorientation", handleOrientation);
 モーションイベントは方向イベントと同じ方法で扱えますが、イベント名は {{domxref("Window.devicemotion_event", "devicemotion")}} になります。
 
 ```js
-window.addEventListener("devicemotion", handleMotion, true);
+window.addEventListener("devicemotion", handleMotion);
 ```
 
 実際どのように変化したかの情報は、 {{domxref("DeviceMotionEvent")}} オブジェクトが提供します。これはイベントリスナー（この例では `handleMotion()`）の引数として渡されます。
@@ -153,7 +183,7 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 ### モーション値の解説
 
-{{domxref("DeviceMotionEvent")}} オブジェクトはウェブ開発者に、端末の位置や方向が変化した速度の情報を提供します。変化量は 3 つの軸 (詳しくは[方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)をご覧ください) に沿って表します。
+{{domxref("DeviceMotionEvent")}} オブジェクトはウェブ開発者に、端末の位置や方向が変化した速度の情報を提供します。変化量は 3 つの軸 (詳しくは[方向と動きのデータの解説の説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)をご覧ください) に沿って表します。
 
 {{domxref("DeviceMotionEvent.acceleration","acceleration")}} および {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}} で対応する軸は以下のとおりです。
 
@@ -187,6 +217,6 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- [方向および動きとして示されるデータの説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- [3D 座標変換での deviceorientation の使用](/ja/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
-- [Cyber Orb: 端末の向きを使用した 2D 迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
+- [方向と動きのデータの解説の説明](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [三次元座標変換での deviceorientation の使用](/ja/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
+- [Cyber Orb: 端末の向きを使用した二次元迷路ゲーム](/ja/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
