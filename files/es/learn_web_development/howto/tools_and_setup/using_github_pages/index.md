@@ -4,7 +4,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages
 original_slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 [GitHub](https://github.com/) es un sitio "social coding". Te permite subir repositorios de código para almacenarlo en el **sistema de control de versiones** [Git](http://git-scm.com/). Tu puedes colaborar en proyectos de código, y el sistema es código abierto por defecto, lo que significa que cualquiera en el mundo puede encontrar tu código en GitHub, usarlo, aprender de el, y mejorarlo. ¡Tú puedes hacer eso con el código de otras personas tambien! Este artículo provee una guía básica para publicar contenido usando la característica gh-pages de Github.
 

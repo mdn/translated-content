@@ -3,7 +3,7 @@ title: Firefox 150 note de version pour les développeurs
 short-title: Firefox 150
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 674d6c8868cde1654eaba3c285afde9d3b60ce9f
+  sourceCommit: 0b214cbce88da71a9d4470364e378285c2a921a5
 ---
 
 Cet article présente les informations concernant les changements de Firefox 150 qui concernent les développeur·euse·s.
@@ -21,7 +21,7 @@ Firefox 150 est sorti le [21 avril 2026 <sup>(angl.)</sup>](https://whattrainisi
 
 - Le mot-clé `"auto"` est désormais pris en charge comme option pour l'attribut [`sizes`](/fr/docs/Web/HTML/Reference/Elements/img#sizes) des éléments `<img>` (et [`HTMLImageElement.sizes`](/fr/docs/Web/API/HTMLImageElement/sizes)).
   Cela permet aux éléments `<img>` chargés paresseusement d'utiliser la taille de mise en page de l'image calculée, après l'application de tout CSS, pour sélectionner l'image à afficher à partir d'un [`srcset`](/fr/docs/Web/HTML/Reference/Elements/img#srcset).
-  Cela est plus simple que de définir des conditions de média et leurs tailles associées dans l'attribut, ce qui duplique probablement le comportement déjà capturé dans les requêtes média CSS.
+  C'est plus simple que de définir des conditions de média et leurs tailles associées dans l'attribut, ce qui duplique probablement le comportement déjà capturé dans les requêtes média CSS.
   ([bogue Firefox 1819581 <sup>(angl.)</sup>](https://bugzil.la/1819581)).
 
 ### CSS
@@ -31,8 +31,6 @@ Firefox 150 est sorti le [21 avril 2026 <sup>(angl.)</sup>](https://whattrainisi
 - La fonction CSS [`light-dark()`](/fr/docs/Web/CSS/Reference/Values/color_value/light-dark) accepte désormais des valeurs [`<image>`](/fr/docs/Web/CSS/Reference/Values/image). Cela permet d'utiliser des images, des dégradés, etc. pour différents schémas de couleurs. ([bogue Firefox 2023569 <sup>(angl.)</sup>](https://bugzil.la/2023569)).
 
 - Les pseudo-classes basées sur les médias {{CSSxRef(":buffering")}}, {{CSSxRef(":muted")}}, {{CSSxRef(":paused")}}, {{CSSxRef(":playing")}}, {{CSSxRef(":seeking")}}, {{CSSxRef(":stalled")}} et {{CSSxRef(":volume-locked")}} sont désormais prises en charge. Elles permettent de mettre en forme les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}} en fonction de leur état actuel, comme en lecture ou en pause. ([bogue Firefox 2020775 <sup>(angl.)</sup>](https://bugzil.la/2020775)).
-
-- Les propriétés {{CSSxRef("animation-range-start")}} et {{CSSxRef("animation-range-end")}} (ainsi que la propriété abrégée {{CSSxRef("animation-range")}}) sont désormais prises en charge. Ces propriétés définissent le début et la fin de la plage d'attachement d'une animation le long de sa chronologie, ce qui vous permet de contrôler à quel moment de la chronologie d'une [animation pilotée par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) va commencer et se terminer. ([bogue Firefox 1825427 <sup>(angl.)</sup>](https://bugzil.la/1825427)).
 
 - Le mot-clé CSS {{CSSxRef("revert-rule")}} est désormais pris en charge. Il permet de déterminer la valeur d'une propriété comme si la règle de style actuelle n'avait pas été présente, de sorte que la valeur d'une autre règle correspondante puisse s'appliquer à la place. ([bogue Firefox 2017307 <sup>(angl.)</sup>](https://bugzil.la/2017307)).
 
@@ -45,7 +43,7 @@ Pas de changements notables.
 ### APIs
 
 - La méthode {{DOMxRef("Sanitizer.replaceElementWithChildren()")}} retourne désormais `false` si l'élément à remplacer est {{HTMLElement("html")}} dans [l'espace de noms HTML](/fr/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace).
-  En d'autres termes, vous ne pouvez pas utiliser cette méthode pour créer un {{DOMxRef("Sanitizer")}} qui remplacera l'élément `<html>` par son contenu interne. ([bogue Firefox 2022176 <sup>(angl.)</sup>](https://bugzil.la/2022176)).
+  En d'autres termes, vous ne pouvez pas utiliser cette méthode pour créer un {{DOMxRef("Sanitizer")}} qui remplace l'élément `<html>` par son contenu interne. ([bogue Firefox 2022176 <sup>(angl.)</sup>](https://bugzil.la/2022176)).
 
 #### DOM
 
@@ -60,6 +58,15 @@ Pas de changements notables.
 - La méthode `ariaNotify()` est désormais prise en charge sur les interfaces {{DOMxRef("Document/ariaNotify","Document")}} et {{DOMxRef("Element/ariaNotify","Element")}}.
   Cela permet de mettre en file d'attente une chaîne de texte à annoncer par un {{Glossary("screen reader", "lecteur d'écran")}}, offrant une alternative plus ergonomique et fiable aux [régions ARIA dynamiques](/fr/docs/Web/Accessibility/ARIA/Guides/Live_regions).
   ([bogue Firefox 2018095 <sup>(angl.)</sup>](https://bugzil.la/2018095)).
+
+#### Media, WebRTC et Web Audio
+
+- {{DOMxRef("RTCError")}} et {{DOMxRef("RTCErrorEvent")}} sont désormais pris en charge, permettant de signaler les erreurs d'analyse SDP.
+  ([bogue Firefox 1814459 <sup>(angl.)</sup>](https://bugzil.la/1814459)).
+- {{DOMxRef("RTCPeerConnectionIceErrorEvent")}} et l'évènement [`RTCPeerConnection.icecandidateerror`](/fr/docs/Web/API/RTCPeerConnection/icecandidateerror_event) sont désormais pris en charge.
+  ([bogue Firefox 1561441 <sup>(angl.)</sup>](https://bugzil.la/1561441)).
+- {{DOMxRef("RTCIceTransport.role")}} est désormais pris en charge.
+  ([bogue Firefox 2018843 <sup>(angl.)</sup>](https://bugzil.la/2018843)).
 
 ### Conformité WebDriver (WebDriver BiDi, Marionette)
 
