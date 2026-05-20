@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/regexp/replace
 original_slug: Web/EXSLT/regexp/replace
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `regexp:replace()` reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.
 

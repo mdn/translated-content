@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Performance/HTML
 original_slug: Learn/Performance/HTML
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 HTML est par défaut rapide et accessible. Il est du devoir de toute personne développant des sites web et des applications de s'assurer que ces deux caractéristiques sont préservées lors de la création ou de la modification de code HTML. Des difficultés peuvent apparaître par exemple lorsque la taille de fichier d'un élément [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) est trop importante, ou lorsqu'une page web n'est pas optimisée pour les appareils mobiles. Ce module a pour but de présenter les fonctionnalités clés de HTML qui sont liées aux performances, et qui peuvent améliorer drastiquement la qualité de vos pages web.
 
@@ -15,11 +15,11 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
       <td>
         Bases de l'informatique,
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >logiciels de base</a
         >
         installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
+        <a href="/fr/docs/Learn_web_development/Getting_started/Your_first_website"
           >des technologies web opérant côté client</a
         >.
       </td>
@@ -39,10 +39,9 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 - [L'élément `<picture>`](/fr/docs/Web/HTML/Reference/Elements/picture)
 - [L'élément `<video>`](/fr/docs/Web/HTML/Reference/Elements/video)
 - [L'élément `<source>`](/fr/docs/Web/HTML/Reference/Elements/source)
-- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attributes)
+- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Reference/Elements/img#attributs)
   - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
-
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload) - ([https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
 - Attributs `async` / `defer`
 - [L'élément `<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe)
 - [L'élément `<object>`](/fr/docs/Web/HTML/Reference/Elements/object)
@@ -51,7 +50,7 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 
 ## Conclusion
 
-{{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/JavaScript", "Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance")}}
 
 ## Voir aussi
 
@@ -61,4 +60,4 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 - [L'attribut `srcset` de l'élément `<img>`](/fr/docs/Web/HTML/Reference/Elements/img#attributs)
   - [Images adaptatives](/fr/docs/Web/HTML/Guides/Responsive_images)
 - [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Reference/Attributes/rel/preload)
-- [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/)

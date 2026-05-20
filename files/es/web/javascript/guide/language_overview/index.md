@@ -236,7 +236,7 @@ Una diferencia importante entre JavaScript y otros lenguajes como Java es que en
 
 ## Operadores
 
-Los operadores numéricos de JavaScript son `+`, `-`, `*`, `/` y `%` que es el operador de residuo o resto ([que es lo mismo que módulo](/es/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_%28%29)). Los valores se asignan usando `=`, y también hay declaraciones de asignación compuestas como `+=` y `-=`. Estas se extienden hasta `x = x operador y`.
+Los operadores numéricos de JavaScript son `+`, `-`, `*`, `/` y `%` que es el operador de residuo o resto ([que es lo mismo que módulo](/es/docs/Web/JavaScript/Reference/Operators#Remainder_%28%29)). Los valores se asignan usando `=`, y también hay declaraciones de asignación compuestas como `+=` y `-=`. Estas se extienden hasta `x = x operador y`.
 
 ```js
 x += 5;

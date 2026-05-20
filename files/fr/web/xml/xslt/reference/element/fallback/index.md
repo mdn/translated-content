@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/fallback
 original_slug: Web/XSLT/Element/fallback
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 L'élément `<xsl:fallback>` définit le modèle à utiliser si un élément d'extension donné (ou, éventuellement, une nouvelle version) n'est pas supporté.
 

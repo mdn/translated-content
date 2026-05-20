@@ -1,8 +1,9 @@
 ---
-title: font-variant-alternates
+title: Propriété CSS `font-variant-alternates`
+short-title: font-variant-alternates
 slug: Web/CSS/Reference/Properties/font-variant-alternates
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-alternates`** contrôle l'utilisation des glyphes alternatifs. Ces glyphes alternatifs peuvent être référencés par des noms alternatifs définis dans {{CSSxRef("@font-feature-values")}}.

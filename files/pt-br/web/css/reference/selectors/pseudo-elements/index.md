@@ -89,4 +89,4 @@ Você pode utilizar apenas um pseudo-elemento em um seletor. Ele deve aparecer d
 
 ## Ver também
 
-- [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)
+- [pseudo-classes](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

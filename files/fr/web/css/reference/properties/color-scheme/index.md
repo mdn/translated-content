@@ -1,8 +1,9 @@
 ---
-title: color-scheme
+title: Propriété CSS `color-scheme`
+short-title: color-scheme
 slug: Web/CSS/Reference/Properties/color-scheme
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`color-scheme`** permet à un élément d'indiquer dans quels jeux de couleurs il peut être affiché de manière optimale. Les agents utilisateur adaptent les éléments suivants de l'interface pour correspondre au jeu de couleurs utilisé&nbsp;:

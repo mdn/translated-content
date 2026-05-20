@@ -6,7 +6,7 @@ original_slug: Web/CSS/env
 
 {{CSSRef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).
+A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/Reference/Properties/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).
 
 ```css
 body {
@@ -112,5 +112,5 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 
 - {{CSSxRef("var", "var(…)")}}
 - [CSS Custom Properties for Cascading Variables](/pt-BR/docs/Web/CSS/CSS_cascading_variables)
-- [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/--*)
-- [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/Reference/Properties/--*)
+- [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)

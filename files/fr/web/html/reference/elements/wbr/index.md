@@ -1,8 +1,9 @@
 ---
-title: "<wbr> : l'élément d'opportunité de saut de ligne"
+title: "Élément HTML `<wbr>` : l'élément d'opportunité de saut de ligne"
+short-title: <wbr>
 slug: Web/HTML/Reference/Elements/wbr
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<wbr>`** permet de représenter un emplacement où casser la ligne si nécessaire. Le navigateur pourra alors utiliser cet emplacement pour effectuer un saut de ligne si le texte est trop long et qu'en temps normal, une règle empêche le saut de ligne.

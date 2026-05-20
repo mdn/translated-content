@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-meter-even-less-good-value
+title: Pseudo-élément CSS `::-webkit-meter-even-less-good-value`
+short-title: ::-webkit-meter-even-less-good-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-even-less-good-value
 l10n:
-  sourceCommit: f336c5b6795a562c64fe859aa9ee2becf223ad8a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}

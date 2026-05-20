@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : itemprop"
+title: "Attribut HTML universel : `itemprop`"
 short-title: itemprop
 slug: Web/HTML/Reference/Global_attributes/itemprop
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemprop`** est utilisé pour ajouter des propriétés à un objet. Chaque élément HTML peut avoir un attribut `itemprop` défini, et un `itemprop` consiste en une paire nom-valeur. Chaque paire nom-valeur est appelée une **propriété**, et un groupe d'une ou plusieurs propriétés forme un **objet**. Les valeurs des propriétés sont soit une chaîne de caractères, soit une URL, et peuvent être associées à un très large éventail d'éléments, y compris {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}}, {{HTMLElement("track")}}, et {{HTMLElement("video")}}.

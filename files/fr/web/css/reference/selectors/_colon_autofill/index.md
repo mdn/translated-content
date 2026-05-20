@@ -1,11 +1,12 @@
 ---
-title: :autofill
+title: Pseudo-classe CSS `:autofill`
+short-title: :autofill
 slug: Web/CSS/Reference/Selectors/:autofill
 l10n:
-  sourceCommit: 1c68ccea9621d3b67d9e3bff8f9f2e948e4e7e54
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
-La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
+La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:autofill`** correspond à un élément HTML {{HTMLElement("input")}} lorsque sa valeur est remplie automatiquement par le navigateur. La classe cesse la correspondance si l'utilisateur·ice modifie le champ.
 
 {{InteractiveExample("DémonstrationCSS&nbsp;: :autofill", "tabbed-shorter")}}
 
@@ -81,7 +82,7 @@ The following example demonstrates the use of the `:autofill` pseudo-class to ch
 
 ### HTML
 
-Nous incluons trois éléments HTML `<input>`, chacun avec un {{HTMLElement("label")}} associé. Les valeurs `name` et `email` seront probablement complétées automatiquement et correspondront à `:autofill`, tandis que la valeur `pet` est peu susceptible de l'être.
+Nous incluons trois éléments HTML `<input>`, chacun avec un {{HTMLElement("label")}} associé. Les valeurs `name` et `email` est probablement complétées automatiquement et correspond à `:autofill`, tandis que la valeur `pet` est peu susceptible de l'être.
 
 ```html
 <form method="post" action="">
@@ -122,9 +123,8 @@ input:autofill {
     content: "Votre navigateur ne prend pas en charge le sélecteur :autofill.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 1rem 0;
   }
 }
 ```

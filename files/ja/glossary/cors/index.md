@@ -1,27 +1,20 @@
 ---
 title: CORS
 slug: Glossary/CORS
+l10n:
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
 
-{{GlossarySidebar}}
+**CORS** (オリジン間リソース共有、 Cross-Origin Resource Sharing) は、 {{Glossary("HTTP_header", "HTTP ヘッダー")}}の転送で構成されるシステムであり、ブラウザーがオリジンをまたいだリクエストのレスポンスに、フロントエンドの JavaScript コードがアクセスすることをブロックするかどうかを決めるものです。
 
-**CORS** (オリジン間リソース共有、 Cross-Origin Resource Sharing) は、 {{Glossary("Header", "HTTP ヘッダー")}}の転送で構成されるシステムであり、ブラウザーがオリジンをまたいだリクエストのレスポンスに、フロントエンドの JavaScript コードがアクセスすることをブロックするかどうかを決めるものです。
+[同一オリジンセキュリティポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)は、デフォルトでリソースへのオリジン間のアクセスを禁止しています。しかし、 CORS はウェブサーバーに、リソースへのオリジンをまたいだアクセスを許可することができるようにします。
 
-[同一オリジンセキュリティポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)は、既定でリソースへのオリジン間のアクセスを禁止しています。しかし、 CORS はウェブサーバーに、リソースへのオリジンをまたいだアクセスを許可すると言うことができるようにします。
-
-## 理解を深める
-
-### 一般知識
-
-- MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- Wikipedia 上の [Cross-origin_resource_sharing](https://ja.wikipedia.org/wiki/Cross-origin_resource_sharing) （英語）
-
-### CORS のヘッダー
+### CORS ヘッダー
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : レスポンスを共有してよいかどうかを示します。
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
-  - : 認証情報フラグが true の場合、リクエストに対するレスポンスを公開してよいかどうかを示します。
+  - : 資格情報フラグが true の場合、リクエストに対するレスポンスを公開してよいかどうかを示します。
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : プリフライトリクエストへのレスポンスで使用され、実際のリクエストを行う際に使用してよい HTTP ヘッダーを示します。
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
@@ -36,7 +29,11 @@ slug: Glossary/CORS
   - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)をサーバーに知らせるために使用します。
 - {{HTTPHeader("Origin")}}
   - : どのオリジンからアクセスしているかを示します。
+- {{HTTPHeader("Timing-Allow-Origin")}}
+  - : クロスオリジン制限のため通常はゼロとして報告される、[リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) の機能を通じて取得された属性の値を、閲覧をすることができるオリジンを指定します。
 
-### 技術リファレンス
+## 関連情報
 
-- [Fetch specification](https://fetch.spec.whatwg.org)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
+- [クロスオリジンリソース共有](https://ja.wikipedia.org/wiki/クロスオリジンリソース共有) - ウィキペディア
+- [Fetch 仕様書](https://fetch.spec.whatwg.org/)<sup>（英語）</sup>

@@ -13,7 +13,7 @@ HTTP **`Authorization`** 요청 헤더는 서버의 사용자 에이전트임을
       <td>{{Glossary("Request header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>아니오</td>
     </tr>
   </tbody>

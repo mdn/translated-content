@@ -1,9 +1,8 @@
 ---
 title: offset-rotate
 slug: Web/CSS/Reference/Properties/offset-rotate
-original_slug: Web/CSS/offset-rotate
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`offset-rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
@@ -74,19 +73,17 @@ offset-rotate: reverse;
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "再生";
-    } else {
-      example.classList.add("running");
-      button.textContent = "停止";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    example.classList.add("running");
+    button.textContent = "停止";
+  }
 });
 ```
 
@@ -100,7 +97,7 @@ window.addEventListener("load", () => {
 offset-rotate: auto;
 offset-rotate: auto 45deg;
 
-/* パスの方向に従うが、 auto とは逆の方向を向く */
+/* パスの方向に従うが、auto とは逆の方向を向く */
 offset-rotate: reverse;
 
 /* パスの位置に関係なく、決められた回転を維持する */
@@ -117,10 +114,10 @@ offset-rotate: unset;
 
 - `auto`
   - : 要素は正方向の X 軸から見た {{cssxref("offset-path")}} 方向の角度で回転します。これが既定値です。
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : 要素は指定された回転角によって、時計方向に固定値で回転変換されます。
 - `auto <angle>`
-  - : `auto` に {{cssxref("&lt;angle&gt;")}} が続いた場合、その角度が `auto` の計算値に加算されます。
+  - : `auto` に {{cssxref("angle")}} が続いた場合、その角度が `auto` の計算値に加算されます。
 - `reverse`
   - : 要素は `auto` と同様に回転しますが、反対方向を向きます。 `auto 180deg` の値を指定したのと同等です。
 

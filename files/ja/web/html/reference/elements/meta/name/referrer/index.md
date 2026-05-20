@@ -1,5 +1,5 @@
 ---
-title: <meta name="referrer">
+title: HTML `<meta name="referrer">` 属性値
 short-title: referrer
 slug: Web/HTML/Reference/Elements/meta/name/referrer
 l10n:
@@ -7,7 +7,7 @@ l10n:
 ---
 
 **`referrer`** は {{htmlelement("meta")}} 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性の値で、文書から送信される HTTP リクエストの {{httpheader("Referer")}} ヘッダーを制御します。
-指定した場合、 `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content) 属性にキーワード値としてリファラーを定義します。
+指定した場合、 `<meta>` 要素の [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性にキーワード値としてリファラーを定義します。
 
 例えば、次の `<meta>` 要素は、文書の{{glossary("origin", "オリジン")}}をリファラーとして送信します。
 
@@ -23,7 +23,7 @@ l10n:
 
 `<meta name="referrer">` 要素には、次の追加属性があります。
 
-- [`content`](/ja/docs/Web/HTML/Reference/Elements/meta#content)
+- [`content`](/ja/docs/Web/HTML/Reference/Attributes/content)
   - : 文書のリファラーを設定します。この属性は定義する必要があります。
     次のいずれかの値を受け入れます。
     - `no-referrer`

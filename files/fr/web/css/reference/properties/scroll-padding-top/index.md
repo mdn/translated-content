@@ -1,8 +1,9 @@
 ---
-title: scroll-padding-top
+title: Propriété CSS `scroll-padding-top`
+short-title: scroll-padding-top
 slug: Web/CSS/Reference/Properties/scroll-padding-top
 l10n:
-  sourceCommit: a14f56b06eabf3b182ae4bc0e02634a8ccc01f20
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`scroll-padding-top`** définit des décalages pour le bord supérieur de la _zone de visualisation optimale_ du conteneur de défilement&nbsp;: la région utilisée comme zone cible pour placer des éléments à la vue de l'utilisateur·ice. Cela permet à l'auteur·ice d'exclure des régions du conteneur de défilement qui sont masquées par d'autres contenus (comme des barres d'outils ou des barres latérales en position fixe) ou de laisser plus d'espace entre un élément ciblé et les bords du conteneur de défilement.

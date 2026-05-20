@@ -1,8 +1,9 @@
 ---
-title: column-width
+title: Propriété CSS `column-width`
+short-title: column-width
 slug: Web/CSS/Reference/Properties/column-width
 l10n:
-  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-width`** définit la largeur optimale d'une colonne dans une mise en page multi-colonnes. Le conteneur comporte autant de colonnes que l'espace le permet, sans qu'aucune d'elles n'ait une largeur inférieure à la valeur `column-width`. Si la largeur du conteneur est inférieure à la valeur définie, la largeur de la colonne unique sera plus petite que la largeur déclarée.

@@ -61,49 +61,49 @@ svg|a:active {
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
 > [!WARNING]
-> Como esse elemento compartilha seu nome de tag com o [elemento `<a>` do HTML](/pt-BR/docs/Web/HTML/Element/a), selecionar `a` com CSS ou [`querySelector`](/pt-BR/docs/Web/API/Document/querySelector), pode ser aplicar ao tipo errado de elemento. Experimente usar [a regra @namespace](/pt-BR/docs/Web/CSS/@namespace) para distinguir os dois.
+> Como esse elemento compartilha seu nome de tag com o [elemento `<a>` do HTML](/pt-BR/docs/Web/HTML/Reference/Elements/a), selecionar `a` com CSS ou [`querySelector`](/pt-BR/docs/Web/API/Document/querySelector), pode ser aplicar ao tipo errado de elemento. Experimente usar [a regra @namespace](/pt-BR/docs/Web/CSS/@namespace) para distinguir os dois.
 
 ## Attributes
 
-- [`download`](/pt-BR/docs/Web/HTML/Element/a#download) {{experimental_inline}}
+- [`download`](/pt-BR/docs/Web/HTML/Reference/Elements/a#download) {{experimental_inline}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
-    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
-- [`hreflang`](/pt-BR/docs/Web/HTML/Element/a#hreflang)
+    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
+- [`hreflang`](/pt-BR/docs/Web/HTML/Reference/Elements/a#hreflang)
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- [`ping`](/pt-BR/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
+- [`ping`](/pt-BR/docs/Web/HTML/Reference/Elements/a#ping) {{experimental_inline}}
   - : A space-separated list of URLs to which, when the hyperlink is followed, [`POST`](/pt-BR/docs/Web/HTTP/Reference/Methods/POST) requests with the body `PING` will be sent by the browser (in the background). Typically used for tracking. For a more widely-supported feature addressing the same use cases, see [Navigator.sendBeacon()](/pt-BR/docs/Web/API/Navigator/sendBeacon).
-    _Value type_: **[\<list-of-URLs>](/pt-BR/docs/Web/SVG/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
-- [`referrerpolicy`](/pt-BR/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
+    _Value type_: **[\<list-of-URLs>](/pt-BR/docs/Web/SVG/Guides/Content_type#list-of-ts)** ; _Default value_: _none_; _Animatable_: **no**
+- [`referrerpolicy`](/pt-BR/docs/Web/HTML/Reference/Elements/a#referrerpolicy) {{experimental_inline}}
   - : Which [referrer](/pt-BR/docs/Web/HTTP/Reference/Headers/Referer) to send when fetching the {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
-- [`rel`](/pt-BR/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
+- [`rel`](/pt-BR/docs/Web/HTML/Reference/Elements/a#rel) {{experimental_inline}}
   - : The relationship of the target object to the link object.
     _Value type_: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("target")}}
   - : Where to display the linked {{Glossary("URL")}}.
     _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
-- [`type`](/pt-BR/docs/Web/HTML/Element/a#type)
+- [`type`](/pt-BR/docs/Web/HTML/Reference/Elements/a#type)
   - : A {{Glossary("MIME type")}} for the linked URL.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : The URL or URL fragment that the hyperlink points to. May be required for backwards compatibility for older browsers.
-    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
+    _Value type_: **[\<URL>](/pt-BR/docs/Web/SVG/Guides/Content_type#url)** ; _Default value_: _none_; _Animatable_: **yes**
 
 ### Global attributes
 
-- [Core Attributes](/docs/Web/SVG/Attribute/Core)
+- [Core Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('id')}}, {{SVGAttr('lang')}}, {{SVGAttr('tabindex')}}
-- [Styling Attributes](/docs/Web/SVG/Attribute/Styling)
+- [Styling Attributes](/docs/Web/SVG/Reference/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Conditional Processing Attributes](/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Conditional Processing Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Event Attributes
-  - : [Global event attributes](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Attribute/Events#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
+  - : [Global event attributes](/docs/Web/SVG/Reference/Attribute#Global_Event_Attributes), [Document element event attributes](/docs/Web/SVG/Reference/Attribute#Document_Element_Event_Attributes), [Graphical event attributes](/docs/Web/SVG/Reference/Attribute#Graphical_Event_Attributes)
+- [Presentation Attributes](/docs/Web/SVG/Reference/Attribute)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink Attributes
   - : Most notably: {{SVGAttr("xlink:title")}}

@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 33cada2d06f8d0cd009d9d5348de6e3165bba67f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 글에서는 간단한 로컬 테스트 서버를 여러분의 장비에 설치하는 법과 기본적인 사용법을 설명합니다.
 
@@ -15,8 +15,8 @@ l10n:
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/ko/docs/Learn/How_the_Internet_works">인터넷의 작동 방법</a
-        >과 <a href="/ko/docs/Learn/What_is_a_Web_server">웹서버</a>에 대해
+        <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">인터넷의 작동 방법</a
+        >과 <a href="/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">웹서버</a>에 대해
         알고 있어야 합니다.
       </td>
     </tr>

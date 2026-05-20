@@ -1,8 +1,9 @@
 ---
-title: max-inline-size
+title: Propriété CSS `max-inline-size`
+short-title: max-inline-size
 slug: Web/CSS/Reference/Properties/max-inline-size
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`max-inline-size`** définit la taille maximale horizontale ou verticale d'un élément en fonction de son mode d'écriture. Elle correspond à la propriété {{CSSxRef("max-width")}} ou {{CSSxRef("max-height")}}, selon la valeur de {{CSSxRef("writing-mode")}}.

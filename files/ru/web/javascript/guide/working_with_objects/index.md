@@ -3,7 +3,7 @@ title: Работа с объектами
 slug: Web/JavaScript/Guide/Working_with_objects
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}
 
 JavaScript спроектирован на основе простой парадигмы. В основе концепции лежат простые объекты. Объект — это набор свойств, и каждое свойство состоит из имени и значения, ассоциированного с этим именем. Значением свойства может быть функция, которую можно назвать _методом_ объекта. В дополнение к встроенным в браузер объектам, вы можете определить свои собственные объекты. Эта глава описывает как пользоваться объектами, свойствами, функциями и методами, а также как создавать свои собственные объекты.
 
@@ -553,4 +553,4 @@ console.log(fruitbear); // вернёт { name: "grape" } вместо { name: "
 - Для детального изучения читайте [подробнее об объектной модели JavaScript](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 - Для изучения классов ECMAScript 2015 (новый способ определения объектов), читайте главу [классы JavaScript](/ru/docs/Web/JavaScript/Reference/Classes).
 
-{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
+{{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Inheritance_and_the_prototype_chain")}}

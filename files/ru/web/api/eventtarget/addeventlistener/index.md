@@ -520,5 +520,5 @@ elem.addEventListener(
 ## Дополнительная информация
 
 - {{domxref("EventTarget.removeEventListener()")}}
-- [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
+- [Creating and triggering custom events](/ru/docs/Web/API/Document_Object_Model/Events)
 - [More details on the use of `this` in event handlers](https://www.quirksmode.org/js/this.html)

@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/CSS_layout/Positioning
       <th>前提：</th>
       <td>
         HTML 基础 (学习
-        <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和
+        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML 导学</a>) 和
         CSS 怎样工作的 (学习<a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">
           CSS 导学</a
         >)

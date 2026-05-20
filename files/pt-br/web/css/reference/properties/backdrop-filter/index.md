@@ -43,7 +43,7 @@ backdrop-filter: unset;
 - `none`
   - : Nenhum filtro é aplicado ao plano de fundo.
 - `<filter-function-list>`
-  - : Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um [filtro SVG](/pt-BR/docs/Web/SVG/Element/filter) que será aplicado ao plano de fundo.
+  - : Uma lista de {{cssxref("&lt;filter-function&gt;")}}s separadas por espaços ou um [filtro SVG](/pt-BR/docs/Web/SVG/Reference/Element/filter) que será aplicado ao plano de fundo.
 
 ## Definição formal
 

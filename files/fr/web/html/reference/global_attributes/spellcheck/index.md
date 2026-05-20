@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : spellcheck"
+title: "Attribut HTML universel : `spellcheck`"
 short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`spellcheck`** est un attribut [énuméré](/fr/docs/Glossary/Enumerated) qui définit si l'élément peut être vérifié pour les erreurs d'orthographe.

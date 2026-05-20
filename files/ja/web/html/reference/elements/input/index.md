@@ -1,8 +1,9 @@
 ---
-title: "<input>: HTML 入力要素"
+title: HTML `<input>` 入力要素
+short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 l10n:
-  sourceCommit: f29e825161ee6776a395cd846f8570686f784341
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
@@ -38,7 +39,7 @@ label {
 
 ## \<input> の型
 
-`<input>` の動作は [`type`](#type) 属性の値に応じて大きく異なりますので、個別のリファレンスページでさまざまな型を扱っています。この属性を指定しない場合の既定の型は `text` です。
+`<input>` の動作は [`type`](#type) 属性の値に応じて大きく異なりますので、個別のリファレンスページでさまざまな型を扱っています。この属性を指定しない場合のデフォルトの型は `text` です。
 
 利用可能な型は次の通りです。
 
@@ -59,7 +60,7 @@ label {
     <tr>
       <td>{{HTMLElement("input/button", "button")}}</td>
       <td>
-        プッシュボタンで、既定の動作を持たず、<a href="#value"><code>value</code></a> 属性の値（既定では空）を表示します。
+        プッシュボタンで、デフォルトの動作を持たず、<a href="#value"><code>value</code></a> 属性の値（デフォルトでは空）を表示します。
       </td>
       <td id="examplebutton">
         <pre class="brush: html hidden">
@@ -140,7 +141,7 @@ label {
       </td>
       <td id="examplehidden">
         <pre class="brush: html hidden">
-&#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
+&#x3C;input id="userId" name="userId" type="hidden" value="abc123" /></pre
         >
         {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
@@ -168,7 +169,7 @@ label {
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td>
-        数値を入力するためのコントロールです。スピナーを表示し、既定の検証を追加します。動的キーボードを持つ一部の端末では、テンキーを表示します。
+        数値を入力するためのコントロールです。スピナーを表示し、デフォルトの検証を追加します。動的キーボードを持つ一部の端末では、テンキーを表示します。
       </td>
       <td id="examplenumber">
         <pre class="brush: html hidden">
@@ -202,7 +203,7 @@ label {
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
       <td>
-        厳密な値であることが重要ではない数値を入力するためのコントロールです。範囲のウィジェットを表示し、既定では中央の値になります。
+        厳密な値であることが重要ではない数値を入力するためのコントロールです。範囲のウィジェットを表示し、デフォルトでは中央の値になります。
         <a href="#min"><code>min</code></a> と <a href="#max"><code>max</code></a> の組み合わせで、受け入れる値の範囲を定義することができます。
       </td>
       <td id="examplerange">
@@ -214,7 +215,7 @@ label {
     <tr>
       <td>{{HTMLElement("input/reset", "reset")}}</td>
       <td>
-        フォームのコントロールを既定値に初期化するボタンです。推奨しません。
+        フォームのコントロールをデフォルト値に初期化するボタンです。推奨しません。
       </td>
       <td id="examplereset">
         <pre class="brush: html hidden">
@@ -257,7 +258,7 @@ label {
     <tr>
       <td>{{HTMLElement("input/text", "text")}}</td>
       <td>
-        既定値です。単一行のテキスト入力欄です。改行は自動的に入力値から取り除かれます。
+        デフォルト値です。単一行のテキスト入力欄です。改行は自動的に入力値から取り除かれます。
       </td>
       <td id="exampletext">
         <pre class="brush: html hidden">
@@ -326,11 +327,13 @@ label {
 | 属性                                          | 型                                                                  | 説明                                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [`accept`](#accept)                           | `file`                                                              | ファイルアップロードコントロールで期待されるファイル形式のヒント               |
+| [`alpha`](#alpha)                             | `color`                                                             | 色の不透明度                                                                   |
 | [`alt`](#alt)                                 | `image`                                                             | image 型の alt 属性です。アクセシビリティのために必要です。                    |
 | [`autocapitalize`](#autocapitalize)           | `url`, `email`, `password` を除くすべて                             | 入力されたテキストの自動大文字化を制御します。                                 |
 | [`autocomplete`](#autocomplete)               | `checkbox`、`radio`、ボタンを除くすべて                             | フォームの自動補完機能のためのヒント                                           |
 | [`capture`](#capture)                         | `file`                                                              | ファイルアップロードコントロールのメディアキャプチャ入力方法                   |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                 | コマンドやコントロールがチェックされているか                                   |
+| [`colorspace`](#colorspace)                   | `color`                                                             | 色値の選択に使用するべき[色空間](/ja/docs/Glossary/Color_space)                |
 | [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                   | フォーム送信時に要素の書字方向を送信するために使用するフォームフィールドの名前 |
 | [`disabled`](#disabled)                       | すべて                                                              | コントロールが無効であるかどうか                                               |
 | [`form`](#form)                               | すべて                                                              | コントロールを form 要素に関連付ける                                           |
@@ -356,6 +359,7 @@ label {
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                 | コントロールの大きさ                                                           |
 | [`src`](#src)                                 | `image`                                                             | {{htmlelement('img')}} の `src` 属性と同じで、画像リソースのアドレス           |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `range`          | 有効と見なされる増分                                                           |
+| [`switch`](#switch)                           | `checkbox`                                                          | チェックボックス入力をスイッチとして表示するかどうか                           |
 | [`type`](#type)                               | すべて                                                              | フォームコントロールの型                                                       |
 | [`value`](#value)                             | すべて                                                              | コントロールの値。HTML で指定された場合、初期値に相当する                      |
 | [`width`](#width)                             | `image`                                                             | {{htmlelement('img')}} の `width` 属性と同じで、水平方向の大きさ               |
@@ -366,6 +370,9 @@ label {
 
 - [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept)
   - : `file` 入力型に対してのみ有効です。`accept` 属性は `file` アップロードコントロールの中でどのファイル形式が選択可能であるかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
+
+- `alpha` {{experimental_inline}}
+  - : `color` 入力型にのみ適用される `alpha` 属性は、エンドユーザーが選択中の色の不透過度を設定できるように提供するものです。
 
 - `alt`
   - : `image` ボタンに対してのみ有効です。`alt` 属性は画像の代替テキストを提供します。[`src`](#src) の画像が存在しないか、または読み込みに失敗した場合にこの属性の値を表示します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
@@ -398,12 +405,17 @@ label {
 - [`capture`](/ja/docs/Web/HTML/Reference/Attributes/capture)
   - : HTML Media Capture 仕様書で導入され、`file` 入力型に対してのみ有効です。`capture` 属性は、どのメディア (マイク、ビデオ、カメラ) を使用して新しいファイルをキャプチャし、対応するシナリオで `file` アップロードコントロールを使用してアップロードするかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 - `checked`
-  - : `radio` 型と `checkbox` 型の両方で有効で、`checked` は論理属性です。`radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。`checkbox` 型に存在した場合、(ページが読み込まれたとき) 既定でチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。（[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
+  - : `radio` 型と `checkbox` 型の両方で有効で、`checked` は論理属性です。`radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。`checkbox` 型に存在した場合、(ページが読み込まれたとき) デフォルトでチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。（[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
 
     > [!NOTE]
     > 他の入力コントロールとは異なり、チェックボックスやラジオボタンの値は、現在 `checked` の状態にある場合だけ送信データに含まれます。存在する場合、チェックされたコントロールの名前と値が送信されます。
     >
-    > 例えば、`name` が `fruit` で、`value` が `cherry` であるチェックボックスがチェックされていると、送信されるフォームデータには `fruit=cherry` が含まれます。チェックボックスがチェックされていない場合、フォームデータには全く含まれません。チェックボックスやラジオボタンの既定の `value` は `on` です。
+    > 例えば、`name` が `fruit` で、`value` が `cherry` であるチェックボックスがチェックされていると、送信されるフォームデータには `fruit=cherry` が含まれます。チェックボックスがチェックされていない場合、フォームデータには全く含まれません。チェックボックスやラジオボタンのデフォルトの `value` は `on` です。
+
+- `colorspace` {{experimental_inline}}
+  - : `color` 入力型にのみ適用される `colorspace` 属性は、`type="color"` の入力で使用される[色空間](/ja/docs/Glossary/Color_space)を指定します。指定可能な{{Glossary("enumerated", "列挙")}}値は以下の通りです。
+    - `"limited-srgb"`: 色は {{glossary("RGB", "sRGB")}} 色空間で指定されます。この色空間には {{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}、 {{cssxref("color_value/hwb", "hwb()")}}、および {{cssxref("hex-color")}} 値が含まれます。色値は、`r`、`g`、`b` 各要素につき 8 ビットに制限されます。これがデフォルト値です。
+    - `"display-p3"`: [Display P3 色空間](/ja/docs/Glossary/Color_space#display-p3)、例えば `color(display-p3 1.84 -0.19 0.72 / 0.6)` です。
 
 - [`dirname`](/ja/docs/Web/HTML/Reference/Attributes/dirname)
   - : `hidden`, `text`, `search`, `url`, `tel`, `email` 入力型について有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` 属性の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
@@ -428,7 +440,7 @@ label {
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
 
     > [!NOTE]
-    > 仕様書で要件とはされていませんが、Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
+    > 仕様書で要件とはされていませんが、Firefox はデフォルトで、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
 
 - [`form`](/ja/docs/Web/HTML/Reference/Attributes/form)
   - : 文字列で、入力欄が関連づけられた {{HTMLElement("form")}} 要素（つまり、**フォームオーナー**）を指定します。存在する場合、この文字列値は同一文書内の `<form>` 要素の [`id`](#id) と一致している必要があります。この属性が指定されない場合は、`<input>` 要素は直近の内包するフォームに（もしあれば）関連付けられます。
@@ -473,7 +485,7 @@ label {
 - [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（{{glossary("UTF-16", "UTF-16 コード単位")}}で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
-    欄に入力されたテキストの文字数が {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
+    欄に入力されたテキストの文字数が {{glossary("UTF-16", "UTF-16 コード単位")}}で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。デフォルトでは、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
@@ -542,7 +554,7 @@ label {
 - `popovertarget`
   - : `<input type="button">` をポップオーバー制御ボタンにします。制御するポップオーバー要素の ID を値として取ります。詳細は{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。 `popovertarget` 属性を使用してポップオーバーとその呼び出しボタンを関連付けると、さらに 2 つの有益な効果があります。
     - ブラウザーは、ポップオーバーと呼び出し元の間に、暗黙的な [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を生成し、ポップオーバーを表示させる際には、キーボードフォーカスナビゲーションの論理的な位置にポップオーバーを配置します。これにより、キーボードや支援技術 (AT) のユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)も参照してください）。
-    - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)を参照してください。
+    - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/Guides/Anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#ポップオーバーのアンカー位置指定)を参照してください。
 
 - `popovertargetaction`
   - : 制御用の `<input type="button">` で制御されるポップオーバー要素で行われる動作を指定します。取りうる値は次の通りです。
@@ -551,7 +563,7 @@ label {
     - `"show"`
       - : このボタンは、非表示のポップオーバーを表示させます。すでに表示されているポップオーバーを表示させようとしても、何もしません。
     - `"toggle"`
-      - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合、表示させます。ポップオーバーが表示されている場合、非表示になります。`popovertargetaction` が省略された場合は、`"toggle"` が制御ボタンで実行される既定のアクションです。
+      - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合、表示させます。ポップオーバーが表示されている場合、非表示になります。`popovertargetaction` が省略された場合は、`"toggle"` が制御ボタンで実行されるデフォルトのアクションです。
 
 - [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly)
   - : 論理属性で、存在すれば、ユーザーが入力欄の値を編集できないことを示します。`readonly` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password` の各入力型が対応しています。
@@ -564,26 +576,32 @@ label {
     詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Reference/Attributes/required) を参照してください。
 
 - [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
-  - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/Reference/Properties/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
+  - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の {{cssxref("width")}} プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）でデフォルト値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
 
 - `src`
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
-  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。ステップベースからの整数倍のステップ数である値のみが有効です。ステップベースは、指定されている場合は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)、指定されていない場合は [`value`](#value)、どちらも指定されていない場合は `0` となります（ただし、`week` は例外で、既定のステップベースは −259,200,000, これは週 `1970-W01` の先頭を示します）。
+  - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。ステップベースからの整数倍のステップ数である値のみが有効です。ステップベースは、指定されている場合は [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)、指定されていない場合は [`value`](#value)、どちらも指定されていない場合は `0` となります（ただし、`week` は例外で、デフォルトのステップベースは −259,200,000, これは週 `1970-W01` の先頭を示します）。
 
     明示的に指定しない場合は次のようになります。
-    - `step` の既定値は、`number` と `range` の場合は 1 です。
-    - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。[`date`](/ja/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/ja/docs/Web/HTML/Reference/Elements/input/time#step)、[`week`](/ja/docs/Web/HTML/Reference/Elements/input/week#step) の個別のページを参照してください。
+    - `step` のデフォルト値は、`number` と `range` の場合は 1 です。
+    - 日付や時刻の入力型では、型ごとにふさわしい `step` のデフォルト値があります。[`date`](/ja/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/ja/docs/Web/HTML/Reference/Elements/input/time#step)、[`week`](/ja/docs/Web/HTML/Reference/Elements/input/week#step) の個別のページを参照してください。
 
     値は、正の整数または浮動小数点実数、または特殊な値 `any` のいずれかでなければなりません。これは、ステップが考慮されず、あらゆる値が許容されることを意味します（[`min`](/ja/docs/Web/HTML/Reference/Attributes/min) や [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) などの他の制約がない場合）。
 
-    例えば、`<input type="number" min="10" step="2">` とすると、`10` 以上の偶数の整数であればすべて有効となります。`<input type="number">` のように省略された場合は、整数であれば何でも有効ですが、浮動小数点実数 (`4.2` など) は `step` の既定値が `1` なので有効ではありません。`4.2` を有効にするためには、`step` に `any`、0.1、0.2 に設定するか、`min` の値を `.2` で終わる数に（例えば `<input type="number" min="-5.2">` に）設定する必要があります。
+    例えば、`<input type="number" min="10" step="2">` とすると、`10` 以上の偶数の整数であればすべて有効となります。`<input type="number">` のように省略された場合は、整数であれば何でも有効ですが、浮動小数点実数 (`4.2` など) は `step` のデフォルト値が `1` なので有効ではありません。`4.2` を有効にするためには、`step` に `any`、0.1、0.2 に設定するか、`min` の値を `.2` で終わる数に（例えば `<input type="number" min="-5.2">` に）設定する必要があります。
 
     > [!NOTE]
     > ユーザーが入力したデータがステップの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
 
     詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
+
+- [`switch`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}} {{non-standard_inline}}
+  - : `checkbox` 入力要素にのみ適用され、`switch` は、チェックボックス入力要素をスイッチとして表示するかどうかを示す論理属性です。
+
+    > [!NOTE]
+    > この属性はまだ実験的な段階にあり、対応しているブラウザーは限られています。未対応のブラウザーでは、この属性は無視されます。
 
 - `tabindex`
   - : すべての要素、すべての入力型で有効なグローバル属性で、要素が入力フォーカスを受けられる (フォーカス可能) かどうかを示す整数属性であり、順次キーボードナビゲーションに加わるべきかどうかを示します。hidden 型の入力を除くすべての入力型がフォーカス可能であるため、この属性はフォームコントロールに使用すべきではありません。そうすると文書内のすべての要素のフォーカス順序を管理しなければならず、間違って行うとユーザビリティやアクセシビリティを損なう危険性があるからです。
@@ -662,7 +680,7 @@ label {
 - `results` {{non-standard_inline}}
   - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
-    この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーの既定の最大項目数が使用されます。
+    この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーのデフォルトの最大項目数が使用されます。
 
 - `webkitdirectory` {{non-standard_inline}}
   - : 論理属性の `webkitdirectory` は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
@@ -688,9 +706,9 @@ label {
 - {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
   - : 通常、要素が選択されたときに表示される入力要素のブラウザーピッカーを表示しますが、ボタン押下や他のユーザー操作によって発生させます。
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-  - : 数値入力欄の値を既定で 1、または指定された数値の単位だけ減少させます。
+  - : 数値入力欄の値をデフォルトで 1、または指定された数値の単位だけ減少させます。
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-  - : 数値入力欄の値を既定で 1、または指定された数値の単位だけ増加させます。
+  - : 数値入力欄の値をデフォルトで 1、または指定された数値の単位だけ増加させます。
 
 ## CSS
 
@@ -738,7 +756,7 @@ label {
     <tr>
       <td>{{Cssxref(":default")}}</td>
       <td>
-        関連する要素のグループの中で、既定となるフォーム要素です。{{HTMLElement("input/checkbox", "checkbox")}} や {{HTMLElement("input/radio", "radio")}} の入力型のうち、ページの読み込み時やレンダリング時にチェックされていたものに一致します。
+        関連する要素のグループの中で、デフォルトとなるフォーム要素です。{{HTMLElement("input/checkbox", "checkbox")}} や {{HTMLElement("input/radio", "radio")}} の入力型のうち、ページの読み込み時やレンダリング時にチェックされていたものに一致します。
       </td>
     </tr>
     <tr>
@@ -856,7 +874,7 @@ input[pattern] {
 
 ### ::placeholder
 
-既定では、プレイスホルダーのテキストは半透明または明るい灰色で表示されます。{{cssxref('::placeholder')}} 擬似要素は入力欄の [`placeholder` のテキスト](#placeholder)です。これは限定された CSS プロパティでスタイル設定することができます。
+デフォルトでは、プレイスホルダーのテキストは半透明または明るい灰色で表示されます。{{cssxref('::placeholder')}} 擬似要素は入力欄の [`placeholder` のテキスト](#placeholder)です。これは限定された CSS プロパティでスタイル設定することができます。
 
 ```css
 ::placeholder {
@@ -895,7 +913,7 @@ input.custom {
 
 ### field-sizing
 
-{{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、既定では推奨されるサイズが設定されています）。このプロパティを使用すると、既定の動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
+{{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、デフォルトでは推奨されるサイズが設定されています）。このプロパティを使用すると、デフォルトの動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
 
 このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url)、[`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
@@ -962,7 +980,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 > [!WARNING]
 > クライアント側の検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Reference/Status/400)を返してください。
 
-上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアント側の検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいた既定のメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
+上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアント側の検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいたデフォルトのメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
 
 一部の入力型やその他の属性によっては、入力に対して有効な値を制限するものがあります。例えば、`<input type="number" min="2" max="10" step="2">` の場合、2、4、6、8、10 の数値のみが有効になります。様々なエラーが発生する可能性があります。例えば、`rangeUnderflow` エラー（値が 2 より小さい場合）、`rangeOverflow` （10 より大きい場合）、`stepMismatch` （値が 2 から 10 の間の数字で偶数の整数でない (`step` 属性の要件に合わない) 場合）、`typeMismatch` （値が数値ではない場合）などです。
 
@@ -1032,7 +1050,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
       <td><a href="#step"><code>step</code></a></td>
       <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
-        値が step の増分に一致していない。増分の既定値は <code>1</code> であるため、<code>type="number"</code> で step が指定されていない場合は整数のみが有効になります。<code>step="any"</code> ではこのエラーは発生しません。
+        値が step の増分に一致していない。増分のデフォルト値は <code>1</code> であるため、<code>type="number"</code> で step が指定されていない場合は整数のみが有効になります。<code>step="any"</code> ではこのエラーは発生しません。
       </td>
     </tr>
     <tr>
@@ -1069,12 +1087,12 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 ```js
 function validate(input) {
-  let validityState_object = input.validity;
-  if (validityState_object.valueMissing) {
+  let validityState = input.validity;
+  if (validityState.valueMissing) {
     input.setCustomValidity("値が必要です");
-  } else if (validityState_object.rangeUnderflow) {
+  } else if (validityState.rangeUnderflow) {
     input.setCustomValidity("値が低すぎます");
-  } else if (validityState_object.rangeOverflow) {
+  } else if (validityState.rangeOverflow) {
     input.setCustomValidity("値が高すぎます");
   } else {
     input.setCustomValidity("");
@@ -1096,7 +1114,7 @@ function validate(input) {
 </form>
 ```
 
-基本的な HTML フォーム検証機能では、フォームを送信しようとしたときに、有効な値が入力されていなかったり、`pattern` と一致しない値が入力されていたりすると、既定のエラーメッセージを生成します。
+基本的な HTML フォーム検証機能では、フォームを送信しようとしたときに、有効な値が入力されていなかったり、`pattern` と一致しない値が入力されていたりすると、デフォルトのエラーメッセージを生成します。
 
 独自のエラーメッセージで代替したい場合は、以下のような JavaScript を使用することができます。
 

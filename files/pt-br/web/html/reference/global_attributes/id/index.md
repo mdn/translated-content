@@ -4,7 +4,7 @@ slug: Web/HTML/Reference/Global_attributes/id
 original_slug: Web/HTML/Global_attributes/id
 ---
 
-{{HTMLSidebar("Global_attributes")}}O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **id** define um identificador exclusivo (ID) que deve ser único por todo o documento. Seu objetivo é identificar o elemento ao navegar por âncoras (usando um identificador de fragmento), quando utilizar scripts ou estilizando (com CSS).
+{{HTMLSidebar("Global_attributes")}}O [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes) **id** define um identificador exclusivo (ID) que deve ser único por todo o documento. Seu objetivo é identificar o elemento ao navegar por âncoras (usando um identificador de fragmento), quando utilizar scripts ou estilizando (com CSS).
 
 O valor deste atributo é uma string opaca: isso significa que os desenvolvedores não devem utilizá-lo para transmitir nenhuma informação. Significados específicos como, por exemplo, significado semântico não devem ser provenientes desta string.
 
@@ -23,5 +23,5 @@ O valor deste atributo não deve conter lacunas (espaços, tabulações etc.). N
 
 ## Veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("Element.id")}} para explorar este atributo.

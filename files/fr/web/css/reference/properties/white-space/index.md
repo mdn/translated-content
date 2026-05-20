@@ -1,8 +1,9 @@
 ---
-title: white-space
+title: Propriété CSS `white-space`
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`white-space`** détermine comment les {{Glossary("whitespace", "espaces blancs")}} à l'intérieur d'un élément sont gérés.

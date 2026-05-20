@@ -1,8 +1,9 @@
 ---
-title: mask-origin
+title: Propriété CSS `mask-origin`
+short-title: mask-origin
 slug: Web/CSS/Reference/Properties/mask-origin
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-origin`** définit l'origine d'un masque. Cette propriété détermine la zone de positionnement du masque&nbsp;: la zone dans laquelle une image de masque est positionnée. Les éléments HTML peuvent avoir des masques contenus dans leur boîte de contenu, boîte de remplissage ou boîte de contenu, tandis que les éléments SVG (qui n'ont pas les boîtes de mise en page CSS associées) peuvent avoir des masques contenus à l'intérieur de leur boîte de remplissage, de contour ou de vue.

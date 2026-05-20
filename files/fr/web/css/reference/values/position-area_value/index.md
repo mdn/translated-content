@@ -1,8 +1,9 @@
 ---
-title: <position-area>
+title: Type CSS `<position-area>`
+short-title: <position-area>
 slug: Web/CSS/Reference/Values/position-area_value
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<position-area>`** définit la cellule ou les cellules étendues d'une **grille de zones de position** (<i lang="en">position-area grid</i>), une grille 3×3 dont la cellule centrale est un élément ancre.

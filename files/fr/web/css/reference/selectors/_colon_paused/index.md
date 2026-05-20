@@ -1,8 +1,9 @@
 ---
-title: :paused
+title: Pseudo-classe CSS `:paused`
+short-title: :paused
 slug: Web/CSS/Reference/Selectors/:paused
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:paused`** représente un élément pouvant être lu, tel que {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, lorsque cet élément est «&nbsp;en pause&nbsp;» (c'est-à-dire qu'il n'est pas «&nbsp;en cours de lecture&nbsp;»).

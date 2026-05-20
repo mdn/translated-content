@@ -47,7 +47,7 @@ formElem.addEventListener("submit", (e) => {
 
   // FormData オブジェクトを構築し、 formdata イベントを発行させる
   const formData = new FormData(formElem);
-  // フォームデータがが formdata イベントによって変更される
+  // フォームデータが formdata イベントによって変更される
   console.log(formData.get("field1")); // foo
   console.log(formData.get("field2")); // bar
 });

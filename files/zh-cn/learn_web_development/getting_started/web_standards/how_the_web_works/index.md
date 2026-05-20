@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 *万维网是如何工作的*简单描述了你在计算机或手机上通过 Web 浏览器访问网页时发生了什么。
 
@@ -77,4 +77,4 @@ l10n:
 
 由 [kevin digga](https://www.pinterest.com/kevindigga/) 提供的街景图片 [Street composing](https://www.pinterest.com/pin/400538960580676851/)。
 
-{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
+{{NextMenu("Learn_web_development/Getting_started/Web_standards/The_web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}

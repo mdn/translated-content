@@ -1,8 +1,9 @@
 ---
-title: "<canvas> : l'élément de canevas graphique"
+title: "Élément HTML `<canvas>` : l'élément de canevas graphique"
+short-title: <canvas>
 slug: Web/HTML/Reference/Elements/canvas
 l10n:
-  sourceCommit: 5e815d522e796fb2209fa8470616b37e31c572b4
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 Utilisez l'élément HTML **`<canvas>`** avec soit l'[API de script Canvas](/fr/docs/Web/API/Canvas_API), soit l'[API WebGL](/fr/docs/Web/API/WebGL_API) pour dessiner des graphiques et des animations.

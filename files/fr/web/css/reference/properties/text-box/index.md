@@ -1,8 +1,9 @@
 ---
-title: text-box
+title: Propriété CSS `text-box`
+short-title: text-box
 slug: Web/CSS/Reference/Properties/text-box
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`text-box`** correspond aux propriétés {{CSSxRef("text-box-trim")}} et {{CSSxRef("text-box-edge")}}, qui définissent ensemble la quantité d'espace à supprimer du bord de début de bloc et du bord de fin de bloc du conteneur de bloc d'un élément de texte.

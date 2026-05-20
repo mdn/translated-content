@@ -1,8 +1,9 @@
 ---
-title: color-interpolation
+title: Propriété CSS `color-interpolation`
+short-title: color-interpolation
 slug: Web/CSS/Reference/Properties/color-interpolation
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété CSS `color-interpolation` est utilisée dans SVG pour définir l'espace colorimétrique à utiliser pour les éléments SVG {{SVGElement("linearGradient")}} et {{SVGElement("radialGradient")}} de SVG.

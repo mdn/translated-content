@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/string
 original_slug: Web/XPath/Functions/string
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `string` convertit l'argument passé en une chaîne.
 

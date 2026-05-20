@@ -44,11 +44,11 @@ text-overflow: inherit
 ### Values
 
 - `clip`
-  - : This keyword value indicates to truncate the text at the limit of the [content area](/pt-BR/docs/CSS/box_model), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
+  - : This keyword value indicates to truncate the text at the limit of the [content area](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction), therefore the truncation can happen in the middle of a character. To truncate at the transition between two characters, the empty string value (`''`) must be used. The value `clip` is the default for this property.
 - `ellipsis`
-  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/pt-BR/docs/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
+  - : This keyword value indicates to display ellipses (`'…'`, `U+2026 Horizontal Ellipsis`) to represent clipped text. The ellipsis is displayed inside the [content area](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction), shortening more the size of the displayed text. If there is not enough place to display ellipsis, they are clipped.
 - `<string>` {{ experimental_inline() }}
-  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/pt-BR/docs/CSS/box_model), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
+  - : The {{cssxref("&lt;string&gt;")}} to be used to represent clipped text. The string is displayed inside the [content area](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction), shortening more the size of the displayed text. If there is not enough place to display the string itself, it is clipped.
 
 ## Examples
 

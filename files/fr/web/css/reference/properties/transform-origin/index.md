@@ -1,8 +1,9 @@
 ---
-title: transform-origin
+title: Propriété CSS `transform-origin`
+short-title: transform-origin
 slug: Web/CSS/Reference/Properties/transform-origin
 l10n:
-  sourceCommit: e316a03cc74a78004dbba837c9d5df297e2eb0aa
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.

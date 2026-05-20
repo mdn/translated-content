@@ -2,7 +2,7 @@
 title: HTMLOutputElement
 slug: Web/API/HTMLOutputElement
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: af9a8ff87cfa6563c9a082162ce4ed7ba0b204e1
 ---
 
 {{APIRef("HTML DOM")}}
@@ -10,6 +10,11 @@ l10n:
 L'interface **`HTMLOutputElement`** fournit des propriétés et méthodes (en plus de celles héritées de {{DOMxRef("HTMLElement")}}) pour manipuler la présentation et la mise en page des éléments HTML {{HTMLElement("output")}}.
 
 {{InheritanceDiagram}}
+
+## Constructeur
+
+- {{DOMxRef("HTMLOutputElement.HTMLOutputElement", "HTMLOutputElement()")}} {{Experimental_Inline}}
+  - : Crée un nouvel objet `HTMLOutputElement`.
 
 ## Propriétés d'instance
 

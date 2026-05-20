@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Building_blocks/conditionals
 
 {{LearnSidebar}}
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego. En una aplicación del clima, si se observa en la mañana, se despliega una gráfica del amanecer; muestra estrellas y una luna si es de noche. En este artículo, exploraremos cómo las llamadas declaraciones condicionales funcionan en JavaScript.
 
@@ -800,4 +800,4 @@ textarea.onkeyup = function () {
 - [Referencia if...else](/es/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Referencia de operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator)
 
-{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
+{{NextMenu("Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}

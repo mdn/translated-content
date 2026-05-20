@@ -1,8 +1,9 @@
 ---
-title: overflow-clip-margin
+title: Propriété CSS `overflow-clip-margin`
+short-title: overflow-clip-margin
 slug: Web/CSS/Reference/Properties/overflow-clip-margin
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-clip-margin`** détermine jusqu'où un élément avec [`overflow: clip`](/fr/docs/Web/CSS/Reference/Properties/overflow) peut être peint en dehors de ses limites avant d'être rogné. La limite définie par cette propriété est appelée _bord de découpe du débordement_ de la boîte.

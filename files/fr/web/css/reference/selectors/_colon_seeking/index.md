@@ -1,8 +1,9 @@
 ---
-title: :seeking
+title: Pseudo-classe CSS `:seeking`
+short-title: :seeking
 slug: Web/CSS/Reference/Selectors/:seeking
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:seeking`** représente un élément qui est lisible, tel que {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, lorsque l'élément lisible recherche une position de lecture dans la ressource multimédia.

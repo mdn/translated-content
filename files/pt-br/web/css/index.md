@@ -45,20 +45,20 @@ Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estiliz
 
 - [Referências CSS](/pt-BR/docs/Web/CSS/Reference): Essa extensa referência para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.
 - Conceitos chave do CSS:
-  - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/CSS_syntax/Syntax)
-  - [Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity), [herança](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
-  - [Box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) e [colapso de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/Guides/Syntax/Introduction)
+  - [Especificidade](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity), [herança](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
+  - [Box model](/pt-BR/docs/Web/CSS/Guides/Box_model/Introduction) e [colapso de margem](/pt-BR/docs/Web/CSS/Guides/Box_model/Margin_collapsing)
   - O [containing block](/pt-BR/docs/Web/CSS/Containing_block)
   - [Empilhamento](/pt-BR/docs/Web/Guide/CSS/Understanding_z_index/O_contexto_de_empilhamento) e [block-formatting context](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - Valores [iniciais](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value), [computados](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value), [usados](/pt-BR/docs/Web/CSS/CSS_cascade/used_value) e [reais](/pt-BR/docs/Web/CSS/CSS_cascade/actual_value)
-  - [Propriedades abreviadas do CSS](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
-  - [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries)
+  - Valores [iniciais](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37), [computados](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d), [usados](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing) e [reais](/pt-BR/docs/Web/CSS/Guides/Cascade/Property_value_processing)
+  - [Propriedades abreviadas do CSS](/pt-BR/docs/Web/CSS/Guides/Cascade/Shorthand_properties)
+  - [CSS Flexible Box Layout](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout)
+  - [CSS Grid Layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
+  - [Media queries](/pt-BR/docs/Web/CSS/Guides/Media_queries)
 
 ## Livro de receitas
 
-O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/Layout_cookbook) tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.
+O [livro de receitas de layout CSS](/pt-BR/docs/Web/CSS/How_to/Layout_cookbook) tem como objetivo juntar receitas para padrões comuns de layout, coisas que você pode precisar para implementar em seus sites. Além de prover código você pode usá-lo como ponto de partida em seus projetos, essas receitas destacam as diferentes formas de utilização das especificações de layout e as escolhas que você pode fazer como desenvolvedor.
 
 ## Ferramentas para desenvolvimento de CSS
 

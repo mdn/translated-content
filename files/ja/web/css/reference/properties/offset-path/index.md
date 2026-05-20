@@ -1,9 +1,8 @@
 ---
 title: offset-path
 slug: Web/CSS/Reference/Properties/offset-path
-original_slug: Web/CSS/offset-path
 l10n:
-  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
 **`offset-path`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がたどる経路（パス）を指定し、そのパス内の親コンテナーまたは SVG 座標系における要素の位置を決定します。パスは、要素が位置指定または移動される直線、曲線、または幾何学的形状です。
@@ -63,19 +62,17 @@ offset-path: path("M0,0 L60,70 L-60,30z");
 ```
 
 ```js interactive-example
-window.addEventListener("load", () => {
-  const example = document.getElementById("example-element");
-  const button = document.getElementById("playback");
+const example = document.getElementById("example-element");
+const button = document.getElementById("playback");
 
-  button.addEventListener("click", () => {
-    if (example.classList.contains("running")) {
-      example.classList.remove("running");
-      button.textContent = "再生";
-    } else {
-      example.classList.add("running");
-      button.textContent = "停止";
-    }
-  });
+button.addEventListener("click", () => {
+  if (example.classList.contains("running")) {
+    example.classList.remove("running");
+    button.textContent = "再生";
+  } else {
+    example.classList.add("running");
+    button.textContent = "停止";
+  }
 });
 ```
 
@@ -91,7 +88,7 @@ offset-path: ray(contain 150deg at center center);
 offset-path: ray(45deg);
 
 /* URL */
-offset-path: url(#myCircle);
+offset-path: url("#my-circle");
 
 /* 基本図形 */
 offset-path: circle(50% at 25% 25%);
@@ -120,7 +117,7 @@ offset-path: unset;
 
 ### 値
 
-`offset-path` プロパティは、 `<offset-path>` 値、 [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#値) 値、またはその両方、あるいは `none` キーワードを値として導きます。 `<offset-path>` 値は {{cssxref("ray","ray()")}} 関数、 {{cssxref("url_value", "&lt;url&gt;")}} 値、または [`<basic-shape>`](/ja/docs/Web/CSS/Reference/Values/basic-shape) 値です。
+`offset-path` プロパティは、 `<offset-path>` 値、 [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#値) 値、またはその両方、あるいは `none` キーワードを値として導きます。 `<offset-path>` 値は {{cssxref("ray","ray()")}} 関数、 {{cssxref("url_value", "&lt;url&gt;")}} 値、または {{cssxref("basic-shape")}} 値です。
 
 - `none`
   - : 要素がオフセットパスをたどらないことを指定します。値 `none` は、要素が[オフセット変換](/ja/docs/Web/CSS/Reference/Properties/offset)を持たないことと同じです。この場合、要素の動きは、オフセットパスではなく、 {{cssxref("top")}} や {{cssxref("left")}} などの既定の位置プロパティによって決まります。これは既定値です。
@@ -131,10 +128,10 @@ offset-path: unset;
       - : 指定した位置から、指定した長さで、指定した角度で伸びる線を定義します。 `ray()` 関数は、最大 4 つの引数（{{CSSxRef("angle")}}、オプションのサイズ値、オプションのキーワード `contain`、およびオプションの `at <position>`）を受け取ります。
 
     - {{cssxref("url_value", "&lt;url&gt;")}}
-      - : [SVG 図形要素](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の ID を指定します。パスは、 `url()` 関数で `id` によって参照される SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}} のいずれかの要素の形状です。 URL が図形要素を参照していない場合、または無効な場合、オフセットパスの解決値は `path("M0,0")` （これは有効な `<basic-shape>` 値です）になります。
+      - : [SVG 図形要素](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の ID を指定します。パスは、 `url()` 関数で `id` によって参照される SVG {{SVGElement("circle")}}、{{SVGElement("ellipse")}}、{{SVGElement("line")}}、{{SVGElement("path")}}、{{SVGElement("polygon")}}、{{SVGElement("polyline")}}、{{SVGElement("rect")}} のいずれかの要素の形状です。 URL が図形要素を参照していない場合、または無効な場合、オフセットパスの解決値は `path("M0,0")` （これは有効な `<basic-shape>` 値です）になります。
 
     - {{cssxref("basic-shape")}}
-      - : オフセットパスを、 [CSS 基本図形関数](/ja/docs/Web/CSS/Reference/Values/basic-shape)（ {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/path","path()")}}, {{cssxref("basic-shape/polygon","polygon()")}}, {{cssxref("basic-shape/rect","rect()")}}, {{cssxref("basic-shape/xywh","xywh()")}} など）と同等のパスとして指定します。例えば、 `<basic_shape>` が `ellipse()` 関数である場合、パスは、楕円の右端の点から時計回りに 1 回転した楕円の概要になります。 `at <position>` 引数を受け入れる `ellipse()` および `circle()` では、 `<position>` が省略された場合、要素に {{cssxref("offset-position")}} が指定されていない限り、位置は既定で `center` になります。この場合、 `offset-position` の値が `at <position>` 引数に使用されます。より複雑な形状は、 {{cssxref("basic-shape/shape","shape()")}} 関数を使用して定義することができます。
+      - : オフセットパスを、 [CSS 基本図形関数](/ja/docs/Web/CSS/Reference/Values/basic-shape)（{{cssxref("basic-shape/circle","circle()")}}、{{cssxref("basic-shape/ellipse","ellipse()")}}、{{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/path","path()")}}、{{cssxref("basic-shape/polygon","polygon()")}}、{{cssxref("basic-shape/rect","rect()")}}、{{cssxref("basic-shape/xywh","xywh()")}} など）と同等のパスとして指定します。例えば、 `<basic_shape>` が `ellipse()` 関数である場合、パスは、楕円の右端の点から時計回りに 1 回転した楕円の概要になります。 `at <position>` 引数を受け入れる `ellipse()` および `circle()` では、 `<position>` が省略された場合、要素に {{cssxref("offset-position")}} が指定されていない限り、位置は既定で `center` になります。この場合、 `offset-position` の値が `at <position>` 引数に使用されます。より複雑な形状は、 {{cssxref("basic-shape/shape","shape()")}} 関数を使用して定義することができます。
 
 - [`<coord-box>`](/ja/docs/Web/CSS/Reference/Values/box-edge#値)
   - : パスを含む[参照ボックス](/ja/docs/Web/CSS/Guides/Shapes/Using_shape-outside#参照ボックス)のサイズ情報を指定します。参照ボックスは、この要素の包含ブロックを確立する要素から派生します。このパラメータはオプションです。指定しない場合、CSS コンテキストでは既定値は `border-box` です。 SVG のコンテキストでは、この値は `view-box` として扱われます。 `ray()` または `<basic-shape>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、それぞれ、ray または `<basic-shape>` の参照ボックスを提供します。 `<url>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、図形要素のビューポートおよびユーザー座標系を提供し、原点 (`0 0`) は左上隅、サイズは `1px` となります。
@@ -245,41 +242,72 @@ body {
     stroke-linejoin="round"
     stroke-linecap="round" />
   <path
-    id="firstScissorHalf"
-    class="scissorHalf"
-    d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-    transform="translate(0,0)"
-    fill="green"
-    stroke="black"
-    stroke-width="5"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-    fill-rule="evenodd" />
+    id="first-scissor-half"
+    class="scissor-half"
+    d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0" />
   <path
-    id="secondScissorHalf"
-    class="scissorHalf"
-    d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-    transform="translate(0,0)"
-    fill="forestgreen"
-    stroke="black"
-    stroke-width="5"
-    stroke-linejoin="round"
-    stroke-linecap="round"
-    fill-rule="evenodd" />
+    id="second-scissor-half"
+    class="scissor-half"
+    d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0" />
 </svg>
 ```
 
 ```css live-sample___offset_path_path
-.scissorHalf {
+.scissor-half {
   offset-path: path(
-    "M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190"
+    "M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
   );
-  animation: follow-path 4s linear infinite;
+  transform: translate(0px, 0px);
+  fill: green;
+  stroke: black;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill-rule: evenodd;
+  offset-anchor: 0 0;
 }
 
-@keyframes follow-path {
+#first-scissor-half {
+  animation:
+    move 12s linear infinite,
+    rotate-left 1s infinite;
+}
+#second-scissor-half {
+  animation:
+    move 12s linear infinite,
+    rotate-right 1s infinite;
+}
+
+@keyframes move {
+  from {
+    offset-distance: 0%;
+  }
   to {
     offset-distance: 100%;
+  }
+}
+
+@keyframes rotate-left {
+  0% {
+    offset-rotate: auto 0deg;
+  }
+  50% {
+    offset-rotate: auto -45deg;
+  }
+  100% {
+    offset-rotate: auto 0deg;
+  }
+}
+
+@keyframes rotate-right {
+  0% {
+    offset-rotate: auto 0deg;
+  }
+  50% {
+    offset-rotate: auto 45deg;
+  }
+  100% {
+    offset-rotate: auto 0deg;
   }
 }
 ```
@@ -317,7 +345,7 @@ body {
   height: 50px;
   border-radius: 50%;
   background-color: green;
-  offset-path: url(#svgRect);
+  offset-path: url("#svgRect");
   offset-anchor: auto;
   animation: move 5s linear infinite;
 }
@@ -340,6 +368,105 @@ body {
 
 {{EmbedLiveSample('live-sample___offset_path_url', '100%', '250')}}
 
+### 様々なシェイプ
+
+この例は、様々な {{cssxref("basic-shape")}} 値である {{cssxref("basic-shape/circle", "circle()")}}、{{cssxref("basic-shape/ellipse", "ellipse()")}}、{{cssxref("basic-shape/inset", "inset()")}}、{{cssxref("basic-shape/polygon", "polygon()")}} を使用しています。
+
+```html
+<div class="container">
+  <div class="mover mover-path">path()</div>
+  <div class="mover mover-circle">circle()</div>
+  <div class="mover mover-ellipse">ellipse()</div>
+  <div class="mover mover-inset">inset()</div>
+  <div class="mover mover-polygon">polygon()</div>
+</div>
+```
+
+```css
+.container {
+  border: 1px solid black;
+  width: 80vw;
+  height: 80vh;
+  position: relative;
+  left: 10vw;
+  top: 10vh;
+}
+
+.mover {
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-indent: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='e644da42-a34e-4ceb-a89a-89a4eb6dcc51' data-name='Layer 1' viewBox='0 0 71.08 54.62'%3E%3Ctitle%3Epointer-hand%3C/title%3E%3Cpath d='M43.56,49.35a5.24,5.24,0,0,0-1.27-3.43,5.26,5.26,0,0,0,1.86-9,5.26,5.26,0,0,0-.5-9.53L66.12,27c2.28-.07,5-1.57,5-4.58a5.06,5.06,0,0,0-4.58-4.83L34.08,17c3.48-2.89,6.26-6.55,6.73-11.08C41.45-.14,36.07-1.15,35,1.09,32,7.11,23,12.75,17.42,15.52,8.64,19.08,0,19.77,0,34.56,0,42.7,2.7,47.94,9.42,51c5.51,2.52,13.71,3.59,25.36,3.59H38.3A5.27,5.27,0,0,0,43.56,49.35Z'/%3E%3C/svg%3E")
+    no-repeat;
+  background-size: cover;
+  color: white;
+  animation: move 10s linear infinite;
+  font-family: monospace;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center center;
+}
+.mover-path {
+  top: 50px;
+  motion-path: path(
+    "M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z"
+  );
+  offset-path: path(
+    "M18.45,58.46s52.87-70.07,101.25-.75,101.75-6.23,101.75-6.23S246.38,5.59,165.33,9.08s-15,71.57-94.51,74.56S18.45,58.46,18.45,58.46Z"
+  );
+}
+.mover-circle {
+  top: 150px;
+  offset-path: circle(100px at 50px 50px);
+  motion-path: circle(100px at 50px 50px);
+}
+.mover-ellipse {
+  top: 250px;
+  offset-path: ellipse(25% 40% at 50% 50%);
+  motion-path: ellipse(25% 40% at 50% 50%);
+}
+.mover-inset {
+  top: 350px;
+  offset-path: inset(5% 20% 15% 10%);
+  motion-path: inset(5% 20% 15% 10%);
+}
+.mover-polygon {
+  top: 450px;
+  offset-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  motion-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+@keyframes move {
+  100% {
+    motion-offset: 100%;
+    offset-distance: 100%;
+  }
+}
+```
+
+{{EmbedLiveSample("different shapes", "", "500")}}
+
 ## 仕様書
 
 {{Specifications}}
@@ -353,10 +480,5 @@ body {
 - {{cssxref("offset")}}
 - {{cssxref("offset-distance")}}
 - {{cssxref("offset-rotate")}}
-- [SVG \<path>](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
+- SVG の[パス](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)のチュートリアル
 - {{cssxref("basic-shape/path","path()")}}
-- その他のデモ:
-  - [Examples using various shapes values](https://codepen.io/team/css-tricks/pen/WZdKMq) (CodePen, CSS-Tricks)
-  - [Moving a triangle along a curved path](https://codepen.io/ericwilligers/pen/jMbJPp) (CodePen, Eric Willigers)
-  - [Moving a pair of scissors along the shape of a house](https://codepen.io/ericwilligers/pen/bwVZNa) (CodePen, Eric Willigers)
-  - [Moving multiple pairs of eyes](https://jsfiddle.net/ericwilligers/r1snqdan/) (JSFiddle, Eric Willigers)

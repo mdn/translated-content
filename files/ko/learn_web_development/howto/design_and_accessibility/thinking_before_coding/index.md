@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 글은 모든 프로젝트에서 중요한 첫 단계 - 프로젝트를 통해 달성하고 싶은 것을 정의하기 - 를 다룬다.
 

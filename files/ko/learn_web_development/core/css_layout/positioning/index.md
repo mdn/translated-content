@@ -13,10 +13,10 @@ original_slug: Learn/CSS/CSS_layout/Positioning
     <tr>
       <th scope="row">선결 사항:</th>
       <td>
-        HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+        HTML의 기초 (<a href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn_web_development/Core/Styling_basics"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>

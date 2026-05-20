@@ -501,6 +501,6 @@ React では:
 ## 関連情報
 
 - [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点ととなる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ コースは、 React の初心者にとって完璧な出発点となる究極の React 101 です。 140 以上の対話式のコード課題を解き、 8 つの楽しいプロジェクトを構築することで、現行の React の基本を学ぶことができます。
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

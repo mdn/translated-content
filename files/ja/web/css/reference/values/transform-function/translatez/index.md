@@ -1,8 +1,9 @@
 ---
-title: translateZ()
+title: CSS `translateZ()` 関数
+short-title: translateZ()
 slug: Web/CSS/Reference/Values/transform-function/translateZ
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
@@ -97,7 +98,7 @@ transform: translateZ(-3ch);
 
 この変換は、 {{cssxref("&lt;length&gt;")}} によって定義され、要素または要素がどれだけ内側または外側に移動するかを指定します。
 
-上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/Reference/Properties/perspective) (3D 空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/Reference/Properties/transform-style) (立方体の 6 つの面である子を 3D 空間に配置) を立方体に設定しました。
+上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/Reference/Properties/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/Reference/Properties/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
 > [!NOTE]
 > `translateZ(tz)` は、`translate3d(0, 0, tz)` と等価です。
@@ -111,7 +112,7 @@ translateZ(tz)
 ### 値
 
 - `tz`
-  - : 変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Z 軸方向の移動量をを表します。正の値では要素が閲覧者に向かって移動し、負の値で移動すると遠ざかります。
+  - : 変換ベクトルの z 成分を表す{{cssxref("&lt;length&gt;")}}。[直交座標系](/ja/docs/Web/CSS/Reference/Values/transform-function#cartesian_coordinates)では Z 軸方向の移動量を表します。正の値では要素が閲覧者に向かって移動し、負の値で移動すると遠ざかります。
 
 <table class="standard-table">
   <thead>
@@ -125,7 +126,7 @@ translateZ(tz)
   <tbody>
     <tr>
       <td colspan="2">
-        この変換は 3D 空間に適用されます。平面上では表現できません。
+        この変換は三次元空間に適用されます。平面上では表現できません。
       </td>
       <td>
         この変換は ℝ^3 の線形変換ではなく、直交座標系の行列では表現できません。

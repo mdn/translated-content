@@ -1,8 +1,9 @@
 ---
-title: text-underline-position
+title: Propriété CSS `text-underline-position`
+short-title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: a516a9818e8cef06c626d436ee1d73fc6d87ec51
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-underline-position`** définit la position du soulignement utilisé lorsque la propriété {{CSSxRef("text-decoration")}} prend la valeur `underline`.
@@ -66,7 +67,7 @@ text-underline-position: unset;
 - `from-font`
   - : Si le fichier de police contient des informations sur une position préférée, utiliser cette valeur. Si le fichier de police n'inclut pas cette information, se comporter comme si `auto` était défini, le navigateur choisissant une position appropriée.
 - `under`
-  - : Force la ligne à être placée sous la ligne de base alphabétique, à une position où elle ne traversera aucun jambage. Ceci est utile pour garantir la lisibilité des formules chimiques et mathématiques, qui utilisent largement des indices.
+  - : Force la ligne à être placée sous la ligne de base alphabétique, à une position où elle ne traverse aucun jambage. Ceci est utile pour garantir la lisibilité des formules chimiques et mathématiques, qui utilisent largement des indices.
 - `left`
   - : En modes d'écriture verticale, ce mot-clé force la ligne à être placée du côté _gauche_ du texte. En modes d'écriture horizontale, il est synonyme de `auto`.
 - `right`

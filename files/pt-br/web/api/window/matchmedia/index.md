@@ -7,7 +7,7 @@ slug: Web/API/Window/matchMedia
 
 ## Resumo
 
-Retorna um novo objeto {{domxref("MediaQueryList")}} representando o resultado analisado da string [media query](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries) especificada.
+Retorna um novo objeto {{domxref("MediaQueryList")}} representando o resultado analisado da string [media query](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using) especificada.
 
 ## Sintaxe
 
@@ -41,7 +41,7 @@ Veja [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_qu
 
 ## Veja também
 
-- [Media queries](/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/pt-BR/docs/Web/CSS/Guides/Media_queries/Using)
 - [Usando media queries a partir do código](/pt-BR/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}
 - {{domxref("MediaQueryListListener")}}

@@ -1,9 +1,9 @@
 ---
-title: <line-style>
+title: CSS `<line-style>` データ型
+short-title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
-original_slug: Web/CSS/line-style
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<line-style>`** {{glossary("enumerated", "列挙値")}}型は、線のスタイル、または線がないことを定義するキーワード値を表します。 `<line-style>` キーワード値は、[境界](/ja/docs/Web/CSS/Guides/Backgrounds_and_borders)や[段組み](/ja/docs/Web/CSS/Guides/Multicol_layout)の以下の個別指定プロパティで用いられます。
@@ -22,10 +22,6 @@ l10n:
 - {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
 
 ## 構文
-
-```css
-<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
-```
 
 ### 値
 
@@ -53,7 +49,11 @@ l10n:
   - : 要素がエンボス加工されて現れるように境界線を表示します。この値は `inset` の反対です。 {{cssxref("border-collapse")}} を `collapsed` に設定した表セルに適用すると、この値は `ridge` のように動作します。
 
 > [!NOTE]
-> `<outline-style>` は {{cssxref("outline")}} および {{cssxref("outline-style")}} プロパティの値の型として使用されます。 `<line-style>` と似ていますが、 `hidden` に対応しておらず、 `auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<line-style>` の値が使用されます。
+> `<outline-style>` は {{cssxref("outline")}} および {{cssxref("outline-style")}} プロパティの値の型として使用されます。`<line-style>` と似ていますが、 `hidden` に対応しておらず、`auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<line-style>` の値が使用されます。
+
+## 形式文法
+
+{{CSSSyntaxRaw(`<line-style> = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset`)}}
 
 ## 例
 
@@ -68,8 +68,8 @@ l10n:
 この例では複数の {{HTMLElement( "div" )}} 要素を使用しており、クラスごとに `<line-style>` 値を表しています。
 
 ```html
-<div class="<line-style>">
-  <p><line-style></p>
+<div class="{line-style}">
+  <p>{line-style}</p>
   <p>a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
 </div>
 ```
@@ -152,7 +152,7 @@ p + p {
   columns: 3;
   column-gap: 20px;
   column-rule: double 7px;
-  border-color: #000000;
+  border-color: black;
 }
 .none p {
   border-style: none;
@@ -206,50 +206,12 @@ p + p {
 
 この例では線のスタイルと色の指定について説明します。 `<line-style>` キーワードの値によっては、線の色が期待したものと異なる場合があります。 `groove`、`ridge`、`inset`、`outset` スタイルに要求される「3D」効果を生むために、これらの値を黒または白で表示するときにはユーザーエージェントが他の色の線の組み合わせとは異なる色の計算を使用します。
 
-#### HTML
-
-この例では、複数の {{HTMLElement( "div" )}} 要素を使用し、それぞれ異なる `border-color` をインラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) として設定しています。
-
-```html-nolint hidden
-<section>
-```
-
-```html
-<div style="border-color: #000000"></div>
-```
-
-```html hidden
-<div style="border-color: #000001"></div>
-<div style="border-color: #ffffff"></div>
-
-<div style="border-color: #ff00ff"></div>
-<div style="border-color: #ffff00"></div>
-<div style="border-color: #00ffff"></div>
-
-<div style="border-color: #cc33cc"></div>
-<div style="border-color: #cccc33"></div>
-<div style="border-color: #33cccc"></div>
-
-<div style="border-color: #ff0000"></div>
-<div style="border-color: #00ff00"></div>
-<div style="border-color: #0000ff"></div>
-
-<div style="border-color: #cc3333"></div>
-<div style="border-color: #33cc33"></div>
-<div style="border-color: #3333cc"></div>
-
-<div style="border-color: #993333"></div>
-<div style="border-color: #339933"></div>
-<div style="border-color: #333399"></div>
-</section>
-```
-
 #### CSS
 
 それぞれの `<div>` の 4 辺には異なる `<line-style>` 値があり、それぞれのリストアイテムは異なる {{cssxref("color_value", "&lt;color>")}} 値になっています。宣言された CSS をインラインで表示するために、[生成コンテンツ](/ja/docs/Web/CSS/Reference/Properties/content)を使用しています。
 
-```css hidden
-section {
+```css hidden live-sample___line_style_colors
+body {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -258,22 +220,42 @@ section {
 }
 ```
 
-```css
+```css live-sample___line_style_colors
 div {
   border-width: 10px;
   border-style: inset groove ridge outset;
   padding: 5px;
 }
-div::before {
-  content: attr(style);
+```
+
+#### JavaScript
+
+この JavaScript は、それぞれの {{HTMLElement( "div" )}} 要素に異なる `border-color` を設定して動的に作成します。
+
+```js live-sample___line_style_colors
+// prettier-ignore
+const colors = [
+  "#000000", "#000001", "#ffffff",
+  "#ff00ff", "#ffff00", "#00ffff",
+  "#cc33cc", "#cccc33", "#33cccc",
+  "#ff0000", "#00ff00", "#0000ff",
+  "#cc3333", "#33cc33", "#3333cc",
+  "#993333", "#339933", "#333399",
+];
+
+for (const c of colors) {
+  const div = document.createElement("div");
+  div.style.borderColor = c;
+  div.textContent = c;
+  document.body.appendChild(div);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Line_style_colors", "500", "400")}}
+{{EmbedLiveSample("line_style_colors", "500", "200")}}
 
-黒に近い`#000001`の色は実際の黒とは異なる場合があり、明るい色を使用すると辺の明暗のコントラストがより目立つことに注意してください。
+黒に近い `#000001` の色は実際の黒とは異なる場合があり、明るい色を使用すると辺の明暗のコントラストがより目立つことに注意してください。
 
 ## 仕様書
 

@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/local-name
 original_slug: Web/XPath/Functions/local-name
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `local-name` retourne une chaîne représentant le nom local du premier nœud d'un ensemble de nœuds donné.
 

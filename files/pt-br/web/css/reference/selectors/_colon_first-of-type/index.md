@@ -6,7 +6,7 @@ original_slug: Web/CSS/:first-of-type
 
 {{CSSRef}}
 
-A [CSS](/pt-BR/docs/Web/CSS) [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.
+A [CSS](/pt-BR/docs/Web/CSS) [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) **`:first-of-type`** representa o primeiro elemento de seu tipo entre os filhos de seu elemento pai.
 
 ```css
 /* Seleciona qualquer <p> que seja o primeiro elemento
@@ -50,7 +50,7 @@ p:first-of-type {
 
 ### Elementos aninhados
 
-Este exemplo mostra como os elementos aninhados também podem ser estilizados. Note que o [seletor universal](/pt-BR/docs/Web/CSS/Universal_selectors) (`*`) está implícito quando nenhum seletor simples está escrito.
+Este exemplo mostra como os elementos aninhados também podem ser estilizados. Note que o [seletor universal](/pt-BR/docs/Web/CSS/Reference/Selectors/Universal_selectors) (`*`) está implícito quando nenhum seletor simples está escrito.
 
 #### HTML
 

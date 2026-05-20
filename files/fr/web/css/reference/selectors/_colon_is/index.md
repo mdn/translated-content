@@ -1,8 +1,9 @@
 ---
-title: :is()
+title: Pseudo-classe CSS `:is()`
+short-title: :is()
 slug: Web/CSS/Reference/Selectors/:is
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:is()`** prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.

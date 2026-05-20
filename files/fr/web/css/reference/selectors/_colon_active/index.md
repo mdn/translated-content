@@ -1,8 +1,9 @@
 ---
-title: :active
+title: Pseudo-classe CSS `:active`
+short-title: :active
 slug: Web/CSS/Reference/Selectors/:active
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active`** permet de cibler un élément lorsque celui-ci est activé par l'utilisateur. Elle permet de fournir un _feedback_ indiquant que l'activation a bien été détectée par le navigateur. Lorsqu'on a une interaction avec un pointeur, il s'agit généralement du moment entre l'appui sur le pointeur et le relâchement de celui-ci.

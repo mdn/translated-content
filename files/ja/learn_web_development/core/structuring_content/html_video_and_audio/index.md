@@ -280,7 +280,7 @@ WEBVTT
 
 ### 自分の音声と動画を埋め込む
 
-この課題では、外に出て自分自身で動画や音声を録音してみあｍしょう。スマートフォンをお持ちなら、それを使用して音声と映像を録音し、コンピューターに転送して試してみましょう。動画の場合、WebM や MP4 に、音声の場合には MP3 や Ogg に変換する必要があるかもしれませんがでこの作業をすることができる [CloudConvert](https://cloudconvert.com/mp4-converter) （オンライン）や [Audacity](https://sourceforge.net/projects/audacity/) （デスクトップアプリケーション）など、十分なツールがあります。ぜひ試してみてください！
+この課題では、外に出て自分自身で動画や音声を録音してみましょう。スマートフォンをお持ちなら、それを使用して音声と映像を録音し、コンピューターに転送して試してみましょう。動画の場合、WebM や MP4 に、音声の場合には MP3 や Ogg に変換する必要があるかもしれませんが、この作業をすることができる [CloudConvert](https://cloudconvert.com/mp4-converter) （オンライン）や [Audacity](https://sourceforge.net/projects/audacity/) （デスクトップアプリケーション）など、十分なツールがあります。ぜひ試してみてください！
 
 > [!NOTE]
 > 動画や音声を入手できない場合は、この[音声および動画のサンプルファイル](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)を自由に使用してこの演習を行うことができます。

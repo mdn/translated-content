@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/generate-id
 original_slug: Web/XPath/Functions/generate-id
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 La fonction `generate-id` génère un identifiant `id` unique pour le premier nœud d'un ensemble de nœuds donné et retourne une chaîne contenant cet `id`.
 

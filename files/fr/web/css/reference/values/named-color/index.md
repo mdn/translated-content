@@ -1,9 +1,9 @@
 ---
-title: <named-color>
+title: Type CSS `<named-color>`
+short-title: <named-color>
 slug: Web/CSS/Reference/Values/named-color
-original_slug: Web/CSS/named-color
 l10n:
-  sourceCommit: 865da9174c0ef94d65378a97e2e890f28613bdf1
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<named-color>`** correspond au nom d'une couleur, comme `red`, `blue`, `black` ou `lightseagreen`. Syntaxiquement, un `<named-color>` est équivalent à un {{CSSxRef("&lt;ident&gt;")}}.

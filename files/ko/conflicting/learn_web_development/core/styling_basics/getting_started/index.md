@@ -23,11 +23,11 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습) 및
-        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS"
           >CSS 작동 방식</a
         >
         이해

@@ -1,8 +1,9 @@
 ---
-title: font-weight
+title: Propriété CSS `font-weight`
+short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police {{CSSxRef("font-family")}}. Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.

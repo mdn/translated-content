@@ -1,8 +1,9 @@
 ---
-title: column-wrap
+title: Propriété CSS `column-wrap`
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 l10n:
-  sourceCommit: 04defe50e601cf53adde40c4bd652a7a4e6eae55
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}
@@ -451,7 +452,7 @@ p:first-of-type {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {

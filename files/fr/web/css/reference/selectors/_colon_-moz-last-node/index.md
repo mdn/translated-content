@@ -1,8 +1,9 @@
 ---
-title: :-moz-last-node
+title: Pseudo-classe CSS `:-moz-last-node`
+short-title: :-moz-last-node
 slug: Web/CSS/Reference/Selectors/:-moz-last-node
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 {{Non-standard_Header}}{{SeeCompatTable}}

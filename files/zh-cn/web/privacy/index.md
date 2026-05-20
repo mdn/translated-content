@@ -100,7 +100,7 @@ l10n:
 
 - {{httpheader("Set-Cookie")}} 标头的 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性的默认值已更新为 `Lax`，以提供更好的保护，防止追踪和 {{glossary("CSRF")}} 攻击。有关更多信息，请参见[控制第三方 cookie 的 SameSite](/zh-CN/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)。
 - 浏览器默认开始阻止第三方 cookie。有关更多信息，请参见[浏览器如何处理第三方 cookie？](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#how_do_browsers_handle_third-party_cookies)。
-- 浏览器正在实现技术，仅在不会损害隐私的某些情况下允许第三方 cookie，或者以其他方式实现当前需要第三方 cookie 的常见用例。有关更多信息，请参见[从第三方 cookie 过渡](/zh-CN/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies)和[替代第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies)。
+- 浏览器正在实现技术，仅在不会损害隐私的某些情况下允许第三方 cookie，或者以其他方式实现当前需要第三方 cookie 的常见用例。有关更多信息，请参见[从第三方 cookie 过渡](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies)和[替代第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies)。
 - 若干浏览器会剥离已知的追踪参数，例如 Firefox、Safari 和 Brave。浏览器扩展也有助于实现这一功能，例如 [ClearURLs](https://addons.mozilla.org/zh-CN/firefox/addon/clearurls/)。
 - 浏览器已实现[重定向追踪保护](/zh-CN/docs/Web/Privacy/Guides/Redirect_tracking_protection)。
 

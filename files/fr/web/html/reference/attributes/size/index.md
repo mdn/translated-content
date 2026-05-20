@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : size"
+title: "Attribut HTML : `size`"
 short-title: size
 slug: Web/HTML/Reference/Attributes/size
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`size`** définit la largeur de l'élément HTML {{HTMLElement("input")}} et la hauteur de l'élément {{HTMLElement("select")}}. Pour un élément `input`, il définit le nombre de caractères que l'agent utilisateur permet à l'utilisateur·ice de voir lors de la modification de la valeur. Pour un élément `select`, il définit le nombre d'options qui doivent être affichées à l'utilisateur·ice. Il doit s'agir d'un entier non négatif valide supérieur à zéro.

@@ -100,4 +100,4 @@ Um ou mais dos seguintes, por qualquer ordem:
 
 - {{Cssxref ( "- moz-fundo-inline-política")}}
 - [Usando gradientes](/pt-BR/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Vários fundos](/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Vários fundos](/pt-BR/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

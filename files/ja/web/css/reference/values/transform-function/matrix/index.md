@@ -1,8 +1,9 @@
 ---
-title: matrix()
+title: CSS `matrix()` 関数
+short-title: matrix()
 slug: Web/CSS/Reference/Values/transform-function/matrix
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

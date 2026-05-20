@@ -11,7 +11,7 @@ original_slug: Web/CSS/:blank
 >
 > See [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967).
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:blank`** seleciona elementos de entrada do usuário vazios (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}).
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:blank`** seleciona elementos de entrada do usuário vazios (ex. {{HTMLElement("input")}} ou {{HTMLElement("textarea")}}).
 
 ## Sintaxe
 

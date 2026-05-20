@@ -51,7 +51,7 @@ with webdriver.Firefox() as driver:
 
 ### コマンド
 
-[コマンド](/ja/docs/Web/WebDriver/Commands)
+[コマンド](/ja/docs/Web/WebDriver/Reference/Classic/Commands)
 
 {{ListSubpages("/ja/docs/Web/WebDriver/Commands")}}
 
@@ -59,20 +59,20 @@ with webdriver.Firefox() as driver:
 
 [種類](/ja/docs/Web/WebDriver/Types)
 
-- [Error object](/ja/docs/Web/WebDriver/Errors#payload)
+- [Error object](/ja/docs/Web/WebDriver/Reference/Errors#payload)
 - [Timeouts object](/ja/docs/Web/WebDriver/Timeouts)
 - [WebElement](/ja/docs/Web/WebDriver/WebElement)
 - [WebWindow](/ja/docs/Web/WebDriver/WebWindow)
 
 ### 能力
 
-[能力](/ja/docs/Web/WebDriver/Capabilities)
+[能力](/ja/docs/Web/WebDriver/Reference/Capabilities)
 
 {{ListSubpages("/ja/docs/Web/WebDriver/Capabilities")}}
 
 ### エラー
 
-[エラー](/ja/docs/Web/WebDriver/Errors)
+[エラー](/ja/docs/Web/WebDriver/Reference/Errors)
 
 {{ListSubpages("/ja/docs/Web/WebDriver/Errors")}}
 

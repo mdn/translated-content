@@ -4,7 +4,7 @@ slug: orphaned/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_
 original_slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 [Google App Engine](https://cloud.google.com/appengine/) - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google - нужно ли создавать многоуровневое веб-приложение с нуля или размещать статический веб-сайт. Вот пошаговое руководство по размещению вашего сайта в Google App Engine.
 

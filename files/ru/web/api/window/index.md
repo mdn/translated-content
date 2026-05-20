@@ -334,7 +334,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("GlobalEventHandlers.onload")}}
   - : Свойство обработчика событий для загрузки окна.
 - {{domxref("WindowEventHandlers.onmessage")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), представляющий собой код, который будет вызван, когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event).
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), представляющий собой код, который будет вызван, когда произойдёт событие [`message`](/ru/docs/Web/API/BroadcastChannel/message_event).
 - {{domxref("GlobalEventHandlers.onmousedown")}}
   - : Свойство обработчика событий для события mousedown в окне.
 - {{domxref("GlobalEventHandlers.onmousemove")}}
@@ -372,7 +372,7 @@ _Этот интерфейс наследует методы от интерфе
 - {{domxref("GlobalEventHandlers.onselect")}}
   - : Свойство обработчика событий для события выбора в окне.
 - {{domxref("GlobalEventHandlers.onselectionchange")}}
-  - : [`event handler`](/ru/docs/Web/Events/Event_handlers), представляющий собой код, который будет вызван, когда произойдёт событие [`selectionchange`](/ru/docs/Web/API/HTMLInputElement/selectionchange_event).
+  - : [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), представляющий собой код, который будет вызван, когда произойдёт событие [`selectionchange`](/ru/docs/Web/API/HTMLInputElement/selectionchange_event).
 - {{domxref("GlobalEventHandlers.onsubmit")}}
   - : Свойство обработчика событий для события submits в окне формы.
 - {{domxref("WindowEventHandlers.onunhandledrejection")}} {{experimental_inline}}

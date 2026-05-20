@@ -1,21 +1,21 @@
 ---
-title: <input type="time">
+title: Valeur d'attribut HTML `<input type="time">`
+short-title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
-original_slug: Web/HTML/Element/input/time
+l10n:
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
-{{HTMLSidebar}}
+Les éléments {{HTMLElement("input")}} de type **`time`** permettent de créer des contrôles où l'utilisateur·ice peut saisir une heure (avec des minutes et éventuellement des secondes).
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut `type` vaut **`time`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir une heure (avec des minutes et éventuellement des secondes).
-
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("Démonstration HTML&nbsp;: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="appt">Choose a time for your meeting:</label>
+<label for="appt">Choisissez une heure pour votre réunion&nbsp;:</label>
 
 <input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
 
-<small>Office hours are 9am to 6pm</small>
+<small>Les heures de bureau sont de 9h à 18h</small>
 ```
 
 ```css interactive-example
@@ -32,244 +32,213 @@ label {
 }
 ```
 
-L'interface utilisateur affichée pour le contrôle peut varier d'un navigateur à l'autre. À l'heure où nous écrivons ces lignes, seul Safari ne prend pas en charge ce type de contrôle. Pour ce dernier, l'élément sera transformé en simple [`<input type="text">`](/fr/docs/Web/HTML/Reference/Elements/input/text).
-
-## Apparence
-
-### Chrome/Opera
-
-Pour Chrome/Opera, le contrôle `time` possède deux cases permettant de saisir les heures d'une part et les minutes d'autre part (sur 12 ou 24 heures selon la locale de l'ordinateur), deux flèches pour augmenter ou réduire la valeur et une croix permettant de supprimer la valeur.
-
-![Contrôle Chrome pour une heure sur 12 heures](chrome_time.png)12 heures
-
-![Contrôle Chrome pour une heure sur 24 heures](chrome-time.png)24 heures
-
-### Firefox
-
-Pour Firefox, l'aspect du contrôle est similaire, mais il ne possède pas les flèches d'incrément. L'horloge peut également s'utiliser sur un format 12 heures ou 24 heures (selon la locale du système). Un bouton rond avec une croix permet de réinitialiser la valeur du contrôle.
-
-![Contrôle Firefox pour une heure sur 12 heures](firefox-time.png) 12 heures
-
-![Contrôle Firefox pour une heure sur 24 heures](firefox-time-24.png) 24 heures
-
-### Edge
-
-Pour Edge, le contrôle affiché est un plus élaboré&nbsp;: il affiche un sélecteur avec deux bandes déroulantes pour choisir l'heure et les minutes (sur 12 ou 24 heures selon la locale)&nbsp;:
-
-![Contrôle Edge pour la saisie sur 12 heures](edge_time.png) 12 heures
-
-![Contrôle Edge pour la saisie sur 24 heures](edge-time.png) 24 heures
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#valeur">Valeur</a></strong></td>
-      <td>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente une heure ou qui est vide.</td>
-    </tr>
-    <tr>
-      <td><strong>Évènements</strong></td>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLElement/change_event"><code>change</code></a> et <a href="/fr/docs/Web/API/HTMLElement/input_event"><code>input</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs pris en charge</strong></td>
-      <td>
-        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Attributs IDL</strong></td>
-      <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code> et <code>list</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Méthodes</strong></td>
-      <td>
-        <a href="/fr/docs/Web/API/HTMLInputElement/select"><code>select()</code></a>, <a href="/fr/docs/Web/API/HTMLInputElement/stepDown"><code>stepDown()</code></a>, et <a href="/fr/docs/Web/API/HTMLInputElement/stepUp"><code>stepUp()</code></a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## Valeur
-
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui représente la valeur de l'heure saisie dans le contrôle.
-
-### Définir l'attribut HTML `value`
-
-Il est possible de définir une valeur par défaut en indiquant une heure dans l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value)&nbsp;:
-
-```html
-<label for="appt-time">Veuillez choisir une heure de rendez-vous :</label>
-<input id="appt-time" type="time" name="appt-time" value="13:30" />
-```
-
-{{EmbedLiveSample('', 600, 60)}}
-
-### Définir la valeur avec le DOM et JavaScript
-
-Il est également possible d'obtenir et de fixer l'heure en JavaScript grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement). Par exemple&nbsp;:
-
-```js
-let timeControl = document.querySelector('input[type="time"]');
-timeControl.value = "15:30";
-```
-
-### Représentation de la valeur
-
-Attention, le format d'affichage peut être différent de la valeur exacte contenue dans l'attribut `value`. Le format d'affichage sera choisi en fonction de la locale du système d'exploitation du navigateur alors que la valeur de `value` suivra toujours le format `hh:mm` (où `hh` représente les deux chiffres de l'heure sur 24 heures et où `mm` représente les deux chiffres pour les minutes). Ainsi, `13:30`, pourra être affiché sous la forme `1.30 PM` dans le contrôle mais la valeur envoyée avec le formulaire sera toujours `appt-time=13%3A30`. Si l'heure inclut des secondes (voir [Utiliser l'attribut `step`](#utiliser_step)), le format sera `hh:mm:ss`. Pour en savoir plus, vous pouvez vous référer à [l'article sur les formats utilisés pour les représentations des dates et heures](/fr/docs/Web/HTML/Guides/Date_and_time_formats).
-
-Prenons un autre exemple qui permet de voir simultanément la valeur dans le contrôle et celle stockée dans l'attribut.
-
-#### HTML
-
-Pour commencer, on a ce fragment de HTML qui utilise un libellé et le champ de saisie (comme montré avant). On y ajoute un paragraphe (l'élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)) et un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) afin d'afficher la valeur du champ `time`&nbsp;:
-
-```html
-<form>
-  <label for="startTime">Début : </label>
-  <input type="time" id="startTime" />
-  <p>
-    Valeur stockée dans <code>&lt;input time&gt;</code> :<code>
-      "<span id="value">n/a</span>"</code
-    >.
-  </p>
-</form>
-```
-
-#### JavaScript
-
-On utilise quelques lignes de JavaScript afin de récupérer la valeur stockée et on l'insère dans l'élément `<span>` du fragment HTML précédent en surveillant l'évènement [`input`](/fr/docs/Web/API/Element/input_event)&nbsp;:
-
-```js
-let startTime = document.getElementById("startTime");
-let valueSpan = document.getElementById("value");
-
-startTime.addEventListener(
-  "input",
-  function () {
-    valueSpan.innerText = startTime.value;
-  },
-  false,
-);
-```
-
-#### Résultat
-
-{{EmbedLiveSample("", 600, 120)}}
-
-Lorsqu'un formulaire contenant un champ `time` est envoyé, la valeur est encodée avant d'être incluse dans les données du formulaire. Ainsi, la valeur du champ pour l'heure aura toujours la forme `name=hh%3Amm`, ou `name=hh%3Amm%3Ass` si les secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_step)).
-
 ## Attributs supplémentaires
 
-En complément des attributs communs à l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), les champs de type `time` gèrent les attributs suivants.
+En complément des attributs communs à l'ensemble des éléments {{HTMLElement("input")}}, les champs de type `time` gèrent les attributs suivants.
 
 > [!NOTE]
 > À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine **périodique**. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique `min` avec la valeur `14:00` et `max` avec la valeur `2:00`, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant. Pour plus de détails, voir la section [avoir un minimum et un maximum autour de minuit](#avoir_un_minimum_et_un_maximum_autour_de_minuit).
 
 ### `list`
 
-La valeur de cet attribut est l'identifiant ([`id`](/fr/docs/Web/API/Element/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Reference/Elements/datalist) fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
+La valeur de cet attribut est l'identifiant ({{DOMxRef("Element.id", "id")}}) d'un élément {{HTMLElement("datalist")}} situé dans le même document. L'élément {{HTMLElement("datalist")}} fournit une liste de valeurs prédéfinies qui doivent être suggérées lors de la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec le type de champ ([`type`](/fr/docs/Web/HTML/Reference/Elements/input#type)) ne sera pas incluse dans les suggestions. Les valeurs fournies sont des suggestions et pas des contraintes&nbsp;: il reste tout à fait possible de choisir une valeur différente que celles de la liste.
 
 ### `max`
 
-Une chaîne de caractères, au format `hh:mm`, qui indique l'heure la plus tardive qui est considérée comme valide. Si la chaîne fournie n'est pas valide, aucun maximum n'est défini.
+Une chaîne de caractères indiquant l'heure la plus tardive qui peut être acceptée, définie dans le même [format de valeur temporelle](#format_de_la_valeur_de_lheure) que celui décrit ci-dessus. Si la chaîne de caractères définie n'est pas une heure valide, aucune valeur maximale n'est définie.
 
 ### `min`
 
-Une chaîne de caractères, au format `hh:mm`, qui indique l'heure la plus tôt qui est considérée comme valide. Si la chaîne fournie n'est pas valide, aucun minimum n'est défini.
+Une chaîne de caractères indiquant l'heure la plus tôt qui peut être acceptée, définie dans le même [format de valeur temporelle](#format_de_la_valeur_de_lheure) que celui décrit ci-dessus. Si la chaîne de caractères définie n'est pas une heure valide, aucune valeur minimale n'est définie.
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` sur l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité par l'utilisateur·ice. La valeur de l'attribut `value` peut, toutefois, être modifiée avec du code JavaScript qui modifierait la valeur de la propriété `value` sur l'objet {{DOMxRef("HTMLInputElement")}}.
 
 > [!NOTE]
 > Puisqu'un champ en lecture seule ne peut pas avoir de valeur, `required` n'a pas d'effet sur les champs qui ont également `readonly` présent.
 
 ### `step`
 
-L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit obéir, ou la valeur `any` (décrite ci-après). Seules les valeurs qui sont des incréments en multiple de `step` depuis la valeur de base ([`min`](#min) si cet attribut est défini, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#attr-value) sinon, et si aucun n'est fourni, une valeur par défaut appropriée) sont valides.
+L'attribut `step` est un nombre qui définit la granularité à laquelle la valeur doit obéir, ou la valeur `any` (décrite ci-après). Seules les valeurs qui sont des incréments en multiple de `step` depuis la valeur de base ([`min`](#min) si cet attribut est défini, [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) sinon, et si aucun n'est fourni, une valeur par défaut appropriée) sont valides.
 
-Si cet attribut utilise la chaîne de caractère `any`, cela signifie qu'il n'y a aucune contrainte d'incrément et que toute valeur est autorisée (sous réserve de respecter les autres contraintes, comme celles indiquées par [`min`](#min) et [`max`](#max)).
+Pour les champs de type `time`, la valeur de `step` est exprimée en secondes et est interprétée comme un nombre de millisecondes égal à 1 000 fois la valeur de `step` (la valeur numérique sous-jacente est en millisecondes). La valeur par défaut est 60, ce qui correspond à 1 minute.
 
-> [!NOTE]
-> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
-
-Pour les champs de type `time`, la valeur de l'attribut `step` est exprimée en secondes (avec un facteur de multiplication de `1000` puisque la valeur numérique sous-jacente est exprimée en millisecondes). Par défaut, la valeur de l'incrément est `60`, ce qui correspond à 1 minute.
-
-_À l'heure où ces lignes sont écrites, la signification de la valeur `any` pour l'attribut `step` pour les champs `time` n'est pas certaine. Cette information sera mise à jour dès que possible._
-
-## Utiliser `<input type="time">`
-
-### Utilisation simple
-
-Dans sa forme la plus simple, `<input type="time">` n'est accompagné que d'un élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)&nbsp;:
-
-```html
-<form>
-  <label for="appt-time">Veuillez choisir une heure de rendez-vous : </label>
-  <input id="appt-time" type="time" name="appt-time" />
-</form>
-```
-
-{{EmbedLiveSample('', 600, 40)}}
-
-### Ajuster la taille du contrôle
-
-`<input type="time">` ne prend pas en charge d'attribut qui permette de le dimensionner (à la façon de [`size`](/fr/docs/Web/HTML/Reference/Elements/input#attr-size)). Il faut donc utiliser [CSS](/fr/docs/Web/CSS) si besoin.
-
-### Utiliser `step`
-
-L'attribut [`step`](/fr/docs/Web/HTML/Reference/Elements/input#attr-step) peut être utilisé afin de faire varier l'incrément de temps lorsqu'on passe d'une valeur à la suivante ou à la précédente. Attention toutefois, cela n'est pas pris en charge ou homogène parmi les différents navigateurs.
+Une valeur de chaînes de caractères `any` signifie qu'aucun pas n'est implicite et que toute valeur est autorisée (sous réserve d'autres contraintes, telles que [`min`](#min) et [`max`](#max)). En réalité, cela a le même effet que `60` pour les champs `time`, car l'interface utilisateur du sélecteur ne permet dans ce cas que de sélectionner des minutes entières.
 
 > [!NOTE]
-> L'effet de cette propriété peut être étrange selon les navigateurs, elle n'est donc pas complètement fiable.
-
-La valeur de cet attribut est un entier exprimant le nombre de secondes à incrémenter. Si on choisit une valeur inférieure à 60 secondes (c'est-à-dire 1 minute), le contrôle `time` affichera alors une troisième section pour les secondes après les heures et les minutes&nbsp;:
-
-```html
-<form>
-  <label for="appt-time">Veuillez choisir une heure de rendez-vous : </label>
-  <input id="appt-time" type="time" name="appt-time" step="2" />
-</form>
-```
-
-{{EmbedLiveSample("", 600, 40)}}
-
-Cependant, cela ne semble avoir un effet prévisible que pour Chrome/Opera qui sont les deux navigateurs à posséder des flèches d'incrément. Avant l'exemple précédent, cliquer sur la flèche augmentera/réduira l'heure de deux secondes (si on souhaite manipuler des minutes, il faudra multiplier par `60` et de même pour les heures&nbsp;: un incrément de `120` correspondra à 2 minutes et un incrément de `7200` correspondra à 2 heures).
-
-Pour Firefox, il n'y a pas de flèches et `step` n'est pas utilisé. Toutefois, fournir cet attribut a comme effet d'ajouter une zone de saisie pour les secondes à côté de la section pour les minutes.
-
-Cet attribut ne semble pas avoir d'effet pour Edge.
-
-> [!NOTE]
-> L'utilisation de `step` semble causer des problèmes de validation (voir la section qui suit).
+> Lorsque les données saisies dans le contrôle ne respectent pas l'incrément, {{Glossary("user agent", "l'agent utilisateur")}} pourra arrondir à la valeur valide la plus proche, en privilégiant les nombres les plus grands si les deux options valides environnantes sont à égale distance.
 
 ## Validation
 
-Par défaut `<input type="time">` ne valide pas les valeurs saisies. En effet, l'interface utilisateur ne permet de choisir une valeur exotique (par exemple `36:87`). Il faut toutefois faire attention à une saisie de la valeur autrement qu'avec l'interface du navigateur et au cas où la valeur est la chaîne de caractères vide (`""`).
+Par défaut, `<input type="time">` ne valide pas les valeurs saisies, autre que l'interface utilisateur qui ne permet généralement pas de saisir autre chose qu'une valeur temporelle. Cela est utile, mais vous ne pouvez pas vous fier entièrement à la valeur pour être une chaîne de temps correcte, car elle pourrait être une chaîne de caractères vide (`""`), ce qui est autorisé. Pour des exemples de validation des contraintes utilisant les attributs `min`, `max`, `step` et `required`, voir la section [définir les heures maximales et minimales](#définir_les_heures_minimales_et_maximales).
 
-### Indiquer une heure maximale et minimale
+## Exemples
 
-Les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max) permettent de réduire la plage horaire valide pendant laquelle on peut sélectionner une heure. Dans l'exemple suivant, on peut saisir une heure minimum de `12:00` et une heure maximum de `18:00`&nbsp;:
+### Utilisation simple du type `time`
+
+L'utilisation la plus simple de `<input type="time">` implique une combinaison simple d'un élément `<input>` et d'un élément {{HTMLElement("label")}}, comme illustré ci-dessous&nbsp;:
 
 ```html
 <form>
-  <label for="appt-time"
-    >Veuillez choisir une heure de rendez-vous (heures d'ouverture 12:00 à
-    18:00) :
+  <label for="appointment-time">
+    Choisissez une heure de rendez-vous&nbsp;:
   </label>
-  <input id="appt-time" type="time" name="appt-time" min="12:00" max="18:00" />
+  <input id="appointment-time" type="time" name="appointment-time" />
+</form>
+```
+
+{{EmbedLiveSample("Utilisation simple du type `time`", 600, 40)}}
+
+### Créer une interface de sélection de l'heure
+
+Dans cet exemple, nous créons un élément d'interface pour choisir l'heure en utilisant le sélecteur natif créé avec `<input type="time">`&nbsp;:
+
+```html
+<form>
+  <label for="appointment-time">
+    Choisissez une heure de rendez-vous (heures d'ouverture 12:00 à
+    18:00)&nbsp;:
+  </label>
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    min="12:00"
+    max="18:00"
+    required />
   <span class="validity"></span>
 </form>
 ```
 
-{{EmbedLiveSample('', 600, 100)}}
+```css
+input[type="time"] {
+  width: 100px;
+}
 
-Voici la feuille de style CSS utilisée dans l'exemple précédent. On utilise les pseudo-classes [`:valid`](/fr/docs/Web/CSS/Reference/Selectors/:valid) et [`:invalid`](/fr/docs/Web/CSS/Reference/Selectors/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est valide ou non. Les icônes qui indiquent cette validité ont été placées dans un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) à part car Chrome ne permet pas de placer du contenu généré dans le contrôle.
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+```
+
+{{EmbedLiveSample("Créer une interface de sélection de l'heure", 600, 140)}}
+
+### Contrôler la taille du champ
+
+`<input type="time">` ne prend pas en charge les attributs de taille de formulaire tels que [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size), car les heures ont toujours à peu près le même nombre de caractères. Vous devrez utiliser le [CSS](/fr/docs/Web/CSS) pour les besoins de dimensionnement.
+
+### Définir l'attribut `value`
+
+Vous pouvez définir une valeur par défaut pour le champ en incluant une heure valide dans l'attribut [`value`](/fr/docs/Web/HTML/Reference/Elements/input#value) lors de la création de l'élément `<input>`, comme suit&nbsp;:
+
+```html
+<label for="appointment-time">
+  Choisissez une heure de rendez-vous&nbsp;:
+</label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  value="13:30" />
+```
+
+{{EmbedLiveSample("Définir l'attribut `value`", 600, 60)}}
+
+### Définir la valeur à l'aide de JavaScript
+
+Vous pouvez également obtenir et définir la valeur de l'heure en JavaScript en utilisant la propriété `value` de {{DOMxRef("HTMLInputElement")}}, par exemple&nbsp;:
+
+```js
+const timeControl = document.querySelector('input[type="time"]');
+timeControl.value = "15:30";
+```
+
+### Format de la valeur de l'heure
+
+La `value` du champs `time` est toujours au format 24 heures avec des zéros initiaux&nbsp;: `HH:mm`, quel que soit le format d'entrée, qui est probablement sélectionné en fonction de la locale de l'utilisateur·ice (ou par l'agent utilisateur). Si l'heure inclut des secondes (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)), le format est toujours `HH:mm:ss`. Vous pouvez en savoir plus sur le format de la valeur de l'heure utilisé par ce type d'entrée dans [la représentation des heures](/fr/docs/Web/HTML/Guides/Date_and_time_formats#représentation_des_heures).
+
+Dans cet exemple, vous pouvez voir la valeur du champ de l'heure en saisissant une heure et en observant comment elle change ensuite.
+
+Premièrement, regardons le HTML. Nous incluons un libellé et un champ de saisie, et ajoutons un élément {{HTMLElement("p")}} avec un {{HTMLElement("span")}} pour afficher la valeur du champ `time`&nbsp;:
+
+```html
+<form>
+  <label for="startTime">Heure de début&nbsp;: </label>
+  <input type="time" id="startTime" />
+  <p>
+    Valeur du champ <code>time</code>&nbsp;:
+    <code>"<span id="value">n/a</span>"</code>.
+  </p>
+</form>
+```
+
+Le code JavaScript ajoute un écouteur d'évènements au champ de l'heure pour surveiller l'évènement {{DOMxRef("Element/input_event", "input")}}, qui est déclenché chaque fois que le contenu d'un élément de saisie change. Lorsque cela se produit, le contenu du `<span>` est remplacé par la nouvelle valeur de l'élément input.
+
+```js
+const startTime = document.getElementById("startTime");
+const valueSpan = document.getElementById("value");
+
+startTime.addEventListener("input", () => {
+  valueSpan.innerText = startTime.value;
+});
+```
+
+{{EmbedLiveSample("Format de la valeur de l'heure", 600, 80)}}
+
+Lorsque un formulaire incluant un champ `time` est soumis, la valeur est encodée avant d'être incluse dans les données du formulaire. L'entrée de données du formulaire pour un champ de type time sera toujours sous la forme `name=HH%3Amm`, ou `name=HH%3Amm%3Ass` si des secondes sont incluses (voir [Utiliser l'attribut `step`](#utiliser_lattribut_step)).
+
+### Utiliser l'attribut `step`
+
+You can use the [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) attribute to vary the amount of time jumped whenever the time is incremented or decremented (for example, so the time moves by 10 minutes at a time when clicking the little arrow widgets).
+
+It takes an integer value defining the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes but not seconds. Including the [`step`](/fr/docs/Web/HTML/Reference/Elements/input#step) attribute with any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
+
+```html
+<form>
+  <label for="appointment-time">Choose an appointment time: </label>
+  <input id="appointment-time" type="time" name="appointment-time" step="2" />
+</form>
+```
+
+{{EmbedLiveSample('utiliser_lattribut_step', 600, 40)}}
+
+Pour définir des minutes ou des heures comme pas, définissez le nombre de minutes ou d'heures en secondes, par exemple 120 pour 2 minutes, ou 7200 pour 2 heures.
+
+### Définir les heures minimales et maximales
+
+Vous pouvez utiliser les attributs [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) et [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max) pour restreindre les heures valides que l'utilisateur·ice peut choisir. Dans l'exemple suivant, nous définissons une heure minimale de `12:00` et une heure maximale de `18:00`&nbsp;:
+
+```html
+<form>
+  <label for="appointment-time">
+    Choisissez une heure de rendez-vous (heures d'ouverture de 12:00 à
+    18:00)&nbsp;:
+  </label>
+  <input
+    id="appointment-time"
+    type="time"
+    name="appointment-time"
+    min="12:00"
+    max="18:00" />
+  <span class="validity"></span>
+</form>
+```
+
+{{EmbedLiveSample("Définir les heures minimales et maximales", 600, 40)}}
+
+Voici le CSS utilisé dans l'exemple ci-dessus. Nous utilisons les propriétés CSS {{CSSxRef(":valid")}} et {{CSSxRef(":invalid")}} pour mettre en forme l'élément de saisie en fonction de la validité de la valeur actuelle. Nous ajoutons une icône en tant que contenu généré sur un {{HTMLElement("span")}} à côté de l'élément de saisie.
 
 ```css
 div {
@@ -285,27 +254,26 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid + span:after {
+input:invalid + span::after {
   position: absolute;
   content: "✖";
   padding-left: 5px;
 }
 
-input:valid + span:after {
+input:valid + span::after {
   position: absolute;
   content: "✓";
   padding-left: 5px;
 }
 ```
 
-Avec ce fragment de code HTML&nbsp;:
+Le résultat ici est que&nbsp;:
 
-- Seules les heures comprises entre `12:00` et `18:00` sont affichées comme étant valides (les heures avant et après seront invalides).
-- Selon le navigateur utilisé, il peut même être impossible de sélectionner une heure en dehors de la plage restreinte (avec Edge notamment).
+- Seules les heures comprises entre 12:00 et 18:00 seront considérées comme valides&nbsp;; les heures en dehors de cette plage seront considérées comme invalides.
 
 #### Avoir un minimum et un maximum autour de minuit
 
-En définissant un attribut [`min`](/fr/docs/Web/HTML/Reference/Elements/input#attr-min) supérieur à [`max`](/fr/docs/Web/HTML/Reference/Elements/input#attr-max), l'intervalle de temps valide se situera autour de minuit. Cette fonctionnalité n'est pas valable pour les autres champs de formulaire. Et bien [qu'elle fasse partie de la spécification HTML](https://html.spec.whatwg.org/C/#has-a-reversed-range), elle n'est pas prise en charge de façon universelle. La prise en charge pour les navigateurs basés sur Chrome a démarré à la version 82, Firefox l'a ajouté à la version 76 et Safari ne l'implémente pas (au moins jusqu'à la version 14.1). Pour déterminer la prise en charge, vous pouvez utiliser le fragment de code suivant&nbsp;:
+En définissant un attribut [`min`](/fr/docs/Web/HTML/Reference/Elements/input#min) supérieur à l'attribut [`max`](/fr/docs/Web/HTML/Reference/Elements/input#max), la plage horaire valide contournera minuit pour produire une plage horaire valide. Cette fonctionnalité n'est pas prise en charge par d'autres types de champs de saisie.
 
 ```js
 const input = document.createElement("input");
@@ -315,29 +283,29 @@ input.max = "01:00";
 input.value = "23:59";
 
 if (input.validity.valid && input.type === "time") {
-  // l'intervalle encadrant minuit est pris en charge
+  // <input type=time> plage inversée prise en charge
 } else {
-  // l'intervalle encadrant minuit n'est pas pris en charge
+  // <input type=time> plage inversée non prise en charge
 }
 ```
 
-### Rendre la saisie obligatoire
+### Rendre les heures obligatoires
 
-On peut également utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#attr-required) afin que la saisie du champ soit obligatoire. Lorsque c'est le cas, les navigateurs afficheront un message d'erreur si l'utilisatrice ou l'utilisateur tente d'envoyer le formulaire sans avoir saisi de valeur (ou si celle-ci est en dehors de la plage indiquée).
+De plus, vous pouvez utiliser l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required) pour rendre la saisie de l'heure obligatoire. Les navigateurs afficheront une erreur si vous essayez de soumettre une heure en dehors des limites définies ou un champ horaire vide.
 
-Prenons l'exemple suivant qui restreint la plage horaire sélectionnable et qui rend le champ obligatoire&nbsp;:
+Voyons un exemple&nbsp;; ici, nous avons défini des heures minimales et maximales, et avons également rendu le champ obligatoire&nbsp;:
 
 ```html
 <form>
   <div>
-    <label for="appt-time"
-      >Veuillez choisir une heure de rendez-vous (heures d'ouverture entre 12:00
-      et 18:00) :
+    <label for="appointment-time">
+      Choisissez une heure de rendez-vous (heures d'ouverture de 12:00 à
+      18:00)&nbsp;:
     </label>
     <input
-      id="appt-time"
+      id="appointment-time"
       type="time"
-      name="appt-time"
+      name="appointment-time"
       min="12:00"
       max="18:00"
       required />
@@ -349,236 +317,65 @@ Prenons l'exemple suivant qui restreint la plage horaire sélectionnable et qui 
 </form>
 ```
 
-Si vous essayez de soumettre le formulaire sans avoir saisi de valeur (ou avec une heure en dehors des heures d'ouverture indiquées), le navigateur affichera une erreur. Vous pouvez manipuler le résultat obtenu&nbsp;:
+Si vous essayez de soumettre le formulaire avec une heure incomplète (ou avec une heure en dehors des limites définies), le navigateur affichera une erreur. Essayez de jouer avec l'exemple maintenant&nbsp;:
 
-{{EmbedLiveSample('', 600, 120)}}
+{{EmbedLiveSample("Rendre les heures obligatoires", 600, 120)}}
 
 > [!WARNING]
-> Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour quelqu'un de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> La validation des formulaires HTML _ne remplace pas_ les scripts qui garantissent que les données saisies sont au bon format. Il est beaucoup trop facile pour quelqu'un de modifier le HTML pour contourner la validation, ou de la supprimer entièrement. Il est également possible pour quelqu'un de contourner complètement votre HTML et de soumettre les données directement à votre serveur. Si votre code côté serveur ne valide pas les données qu'il reçoit, des catastrophes peuvent survenir lorsque des données mal formatées sont soumises (ou des données trop volumineuses, du mauvais type, etc.).
 
-## Gérer la prise en charge des navigateurs
+## Résumé technique
 
-Comme mentionné avant, un problème peut être l'hétérogénéité de la prise en charge des navigateurs&nbsp;: les anciennes versions de Safari ne prennent pas en charge cette fonctionnalité sur les ordinateurs de bureau et les anciennes versions d'Internet Explorer n'implémentent pas cet élément.
-
-Pour les plateformes mobiles (Android et iOS par exemple), les systèmes d'exploitation fournissent des interfaces particulièrement adaptées aux environnements tactiles. Voici par exemple le sélecteur d'heure pour Chrome sur Android&nbsp;:
-
-![](chrome-android-time.png)
-
-Lorsqu'un navigateur ne prend pas en charge ce type d'élément, il utilise un champ texte (`<input type="text">`) à la place. Mais cela crée des problèmes, tant au niveau de l'interface utilisateur que de la cohérence des données et du format.
-
-C'est ce problème de format qui est le plus important. Comme nous l'avons expliqué plus haut, un champ `time` permet d'obtenir une valeur normalisée, respectant le format `hh:mm`. Avec un champ texte, le navigateur ne reconnaît pas de format particulier pour l'heure et les personnes peuvent employer différentes formes pour décrire l'heure voulue&nbsp;:
-
-- `3.00 pm`
-- `3:00pm`
-- `15:00`
-- `3h de l'après-midi`
-- etc.
-
-Une façon de contourner ce problème consiste à utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Reference/Elements/input#attr-pattern) sur le champ `time`. Bien que le champ `time` n'utilise pas cet attribut, le champ texte pourra l'utiliser. Vous pouvez par exemple tester ce fragment de code dans un navigateur qui ne prend pas en charge `<input type="time">`&nbsp;:
-
-```html
-<form>
-  <div>
-    <label for="appt-time"
-      >Veuillez choisir une heure de rendez-vous (heures d'ouverture entre 12:00
-      et 18:00) :
-    </label>
-    <input
-      id="appt-time"
-      type="time"
-      name="appt-time"
-      min="12:00"
-      max="18:00"
-      required
-      pattern="[0-9]{2}:[0-9]{2}" />
-    <span class="validity"></span>
-  </div>
-  <div>
-    <input type="submit" value="Envoyer" />
-  </div>
-</form>
-```
-
-{{EmbedLiveSample('', 600, 120)}}
-
-Si on essaie d'envoyer une valeur qui ne respecte pas le bon format, le navigateur affichera un message d'erreur et mettra en évidence le champ si celui-ci ne suit pas la forme `nn:nn` avec `n` qui est un chiffre entre 0 et 9. Bien entendu, cela n'empêche pas de saisir des heures invalides mais qui respectent ce format.
-
-De plus, comment communiquer à la personne le format dans lequel saisir l'heure&nbsp;?
-
-Il reste donc un problème.
-
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
-}
-
-input[type="number"] {
-  width: 100px;
-}
-
-input + span {
-  padding-right: 30px;
-}
-
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
-}
-
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
-}
-```
-
-Actuellement, la meilleure façon de gérer ce type de saisie pour les différents navigateurs consiste à utiliser deux contrôles (le premier pour la saisie des heures et le second pour la saisie des minutes) avec deux éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) (cf. ci-après) ou d'utiliser certaines bibliothèques JavaScript telles que [le plugin de sélecteur d'heure (<i lang="en">timepicker</i>) jQuery](https://timepicker.co/).
-
-## Exemples
-
-Dans l'exemple qui suit, on crée deux ensembles d'éléments&nbsp;: un sélecteur natif avec `<input type="time">` et un ensemble de deux éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) qui permettent de choisir des heures et des minutes dans les navigateurs qui ne prennent pas en charge le contrôle natif.
-
-{{EmbedLiveSample('', 600, 140)}}
-
-Voici le fragment HTML utilisé&nbsp;:
-
-```html
-<form>
-  <div class="nativeTimePicker">
-    <label for="appt-time"
-      >Veuillez choisir une heure de rendez-vous (heures d'ouverture 12:00 à
-      18:00) :
-    </label>
-    <input
-      id="appt-time"
-      type="time"
-      name="appt-time"
-      min="12:00"
-      max="18:00"
-      required />
-    <span class="validity"></span>
-  </div>
-  <p class="fallbackLabel">
-    Veuillez choisir une heure de rendez-vous (heures d'ouverture 12:00 à 18:00)
-    :
-  </p>
-  <div class="fallbackTimePicker">
-    <div>
-      <span>
-        <label for="hour">Heures :</label>
-        <select id="hour" name="hour"></select>
-      </span>
-      <span>
-        <label for="minute">Minutes :</label>
-        <select id="minute" name="minute"></select>
-      </span>
-    </div>
-  </div>
-</form>
-```
-
-Les valeurs pour les heures et les minutes seront générées dynamiquement en JavaScript.
-
-```css hidden
-div {
-  margin-bottom: 10px;
-  position: relative;
-}
-
-input[type="number"] {
-  width: 100px;
-}
-
-input + span {
-  padding-right: 30px;
-}
-
-input:invalid + span:after {
-  position: absolute;
-  content: "✖";
-  padding-left: 5px;
-}
-
-input:valid + span:after {
-  position: absolute;
-  content: "✓";
-  padding-left: 5px;
-}
-```
-
-La partie la plus intéressante du code est celle qui permet de détecter si le contrôle natif est pris en charge. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et on modifie son attribut `type` afin qu'il vaille `time`, immédiatement après, on vérifie la valeur du type. Si le navigateur ne prend pas en charge l'élément, il renverra `text`, car l'élément a été transformé en `<input type="text">`, dans ce cas, on masque le sélecteur natif et on affiche l'interface alternative avec les deux éléments [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select).
-
-```js
-// On définit quelques variables
-let nativePicker = document.querySelector(".nativeTimePicker");
-let fallbackPicker = document.querySelector(".fallbackTimePicker");
-let fallbackLabel = document.querySelector(".fallbackLabel");
-
-let hourSelect = document.querySelector("#hour");
-let minuteSelect = document.querySelector("#minute");
-
-// On cache le sélecteur alternatif
-fallbackPicker.style.display = "none";
-fallbackLabel.style.display = "none";
-
-// On teste si un nouveau contrôle time
-// est transformé en text
-let test = document.createElement("input");
-
-try {
-  test.type = "time";
-} catch (e) {
-  console.log(e.description);
-}
-
-// Si c'est le cas…
-if (test.type === "text") {
-  // On masque le sélecteur natif et
-  // on affiche le sélecteur alternatif
-  nativePicker.style.display = "none";
-  fallbackPicker.style.display = "block";
-  fallbackLabel.style.display = "block";
-
-  // On génère les valeurs dynamiquement
-  // pour les heures et les minutes
-  populateHours();
-  populateMinutes();
-}
-
-function populateHours() {
-  // On ajoute les heures dans
-  // l'élément <select> avec les 6
-  // heures ouvertes
-  for (let i = 12; i <= 18; i++) {
-    let option = document.createElement("option");
-    option.textContent = i;
-    hourSelect.appendChild(option);
-  }
-}
-
-function populateMinutes() {
-  // On génère 60 options pour 60 minutes
-  for (let i = 0; i <= 59; i++) {
-    let option = document.createElement("option");
-    option.textContent = i < 10 ? "0" + i : i;
-    minuteSelect.appendChild(option);
-  }
-}
-
-// avec la fonction suivante, si l'heure vaut 18
-// on s'assure que les minutes vaillent 00
-// afin de ne pas pouvoir choisir d'heure passé 18:00
-function setMinutesToZero() {
-  if (hourSelect.value === "18") {
-    minuteSelect.value = "00";
-  }
-}
-
-hourSelect.onchange = setMinutesToZero;
-minuteSelect.onchange = setMinutesToZero;
-```
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="/fr/docs/Web/HTML/Reference/Elements/input#valeur">Valeur</a></strong></td>
+      <td>Une chaîne de caractères représentant une heure, ou une chaîne de caractères vide.</td>
+    </tr>
+    <tr>
+      <td><strong>Évènements</strong></td>
+      <td>
+        {{DOMxRef("HTMLElement/change_event", "change")}} et
+        {{DOMxRef("Element/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Attributs pris en charge</strong></td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Attributs IDL</strong></td>
+      <td>
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/fr/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Interface DOM</strong></td>
+      <td>{{DOMxRef("HTMLInputElement")}}</td>
+    </tr>
+    <tr>
+      <td><strong>Méthodes</strong></td>
+      <td>
+        {{DOMxRef("HTMLInputElement.select", "select()")}},
+        {{DOMxRef("HTMLInputElement.stepDown", "stepDown()")}},
+        et
+        {{DOMxRef("HTMLInputElement.stepUp", "stepUp()")}}.
+      </td>
+    </tr>
+     <tr>
+      <td><strong>Rôle ARIA implicite</strong></td>
+      <td><a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant <sup>(angl.)</sup></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Spécifications
 
@@ -590,11 +387,10 @@ minuteSelect.onchange = setMinutesToZero;
 
 ## Voir aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) ainsi que l'interface DOM [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui permet de le manipuler
+- L'élément [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date)
+- L'élément [`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- L'élément [`<input type="week">`](/fr/docs/Web/HTML/Reference/Elements/input/week)
+- L'élément [`<input type="month">`](/fr/docs/Web/HTML/Reference/Elements/input/month)
+- L'élément {{HTMLElement("input")}} ainsi que l'interface {{DOMxRef("HTMLInputElement")}} qui permet de le manipuler
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Guides/Date_and_time_formats)
-- [Un tutoriel pour les sélecteurs de date et d'heure](/fr/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Reference/Elements/input/datetime-local)
-- [`<input type="date">`](/fr/docs/Web/HTML/Reference/Elements/input/date)
-- [`<input type="month">`](/fr/docs/Web/HTML/Reference/Elements/input/month)
-- [`<input type="week">`](/fr/docs/Web/HTML/Reference/Elements/input/week)
-- [Compatibilité des propriétés CSS](/fr/docs/Learn_web_development/Extensions/Forms)
+- [Un tutoriel pour les sélecteurs de date et d'heure](/fr/docs/Learn_web_development/Extensions/Forms/HTML5_input_types#sélection_de_date_et_heure)

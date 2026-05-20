@@ -1,81 +1,373 @@
 ---
-title: "Testez vos compétences : Grilles"
+title: "Testez vos compétences : Grilles CSS"
+short-title: "Test : Grille CSS"
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
-original_slug: Learn/CSS/CSS_layout/Grid_skills
+l10n:
+  sourceCommit: 143f7345a4276156679d816a153470fe1fc6f3f8
 ---
 
-{{LearnSidebar}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
-Le but de cette tâche est de vous faire travailler avec « _CSS Grid Layout_ » (modèle de disposition en grille) et d'évaluer votre compréhension du comportement d'une grille et des éléments de grille. Vous allez compléter trois petites tâches en utilisant différents éléments des grilles CSS.
+Le but de ce test de compétences est de vous aider à évaluer si vous comprenez comment [une grille et des éléments de grille](/fr/docs/Learn_web_development/Core/CSS_layout/Grids) se comportent. Vous allez travailler sur plusieurs petites tâches qui utilisent différents éléments du contenu que vous venez de voir.
 
 > [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
->
-> N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
+> Pour obtenir de l'aide, lisez notre guide d'utilisation [Testez vos compétences](/fr/docs/Learn_web_development#testez_vos_compétences). Vous pouvez également nous contacter en utilisant l'un de nos [canaux de communication](/fr/docs/MDN/Community/Communication_channels).
 
 ## Disposition en grille 1
 
-Dans cette tâche, vous devriez créer une grille dans laquelle les quatre enfants s'arrangeront automatiquement. La grille devrait répartir l'espace disponible en trois colonnes égales et avoir des «&nbsp;gouttières&nbsp;» de 20 pixels entre les colonnes et les lignes.
+Dans cette tâche, nous vous demandons de créer une grille dans laquelle les quatre éléments enfants sont automatiquement placés. La grille doit comporter trois colonnes qui partagent également l'espace disponible, avec un écart de `20px` entre les pistes de colonnes et de lignes. Ensuite, essayez d'ajouter d'autres éléments enfants à l'intérieur du conteneur parent ayant la classe `grid` et observez leur comportement par défaut.
 
-![Une grille à trois colonnes ayant quatre éléments.](grid-task1.png)
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+{{EmbedLiveSample("grid1-start", "", 220)}}
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 1)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html).
+```html live-sample___grid1-start live-sample___grid1-finish
+<div class="grid">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+</div>
+```
+
+```css live-sample___grid1-start live-sample___grid1-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.grid > * {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+.grid {
+  /* Ajoutez des styles ici */
+}
+```
+
+La disposition finale devrait ressembler à ceci&nbsp;:
+
+{{EmbedLiveSample("grid1-finish", "", 160)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Créez une grille en utilisant `display: grid` avec trois colonnes en utilisant `grid-template-columns` et un `gap` entre les éléments&nbsp;:
+
+```css live-sample___grid1-finish
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+```
+
+</details>
 
 ## Disposition en grille 2
 
-Nous avons déjà défini une grille dans cet exemple. Modifiez les règles CSS des deux enfants (`.item1` et `.item2`), chacun desquels devrait couvrir plusieurs pistes de grille — le deuxième élément devrait superposer le premier comme dans l'image ci-dessous.
+Dans cette tâche, une grille est déjà définie. Nous vous demandons de modifier les règles CSS des deux éléments enfants afin que chacun couvre plusieurs pistes de la grille. Le deuxième élément doit se superposer au premier.
 
-![Un élément superposé sur un deuxième élément dans une boîte.](grid-task2.png)
+**Question bonus&nbsp;:** Pouvez-vous maintenant faire en sorte que le premier élément s'affiche au‑dessus sans modifier l'ordre des éléments dans le code source&nbsp;?
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+{{EmbedLiveSample("grid2-start", "", 340)}}
 
-Questions supplémentaires&nbsp;:
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-- Pouvez-vous maintenant afficher le premier élément (`.item1`) en avant sans modifier l'ordre des éléments dans le code&nbsp;?
+```html live-sample___grid2-start live-sample___grid2-finish
+<div class="grid">
+  <div class="item1">Un</div>
+  <div class="item2">Deux</div>
+</div>
+```
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 2)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html).
+```css live-sample___grid2-start live-sample___grid2-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.grid > * {
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
+
+.item1 {
+  background-color: rgb(74 102 112 / 70%);
+  border: 5px solid rgb(74 102 112 / 100%);
+}
+
+.item2 {
+  background-color: rgb(214 162 173 / 70%);
+  border: 5px solid rgb(214 162 173 / 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  gap: 10px;
+}
+
+.item1 {
+  /* Ajoutez des styles ici */
+}
+
+.item2 {
+  /* Ajoutez des styles ici */
+}
+```
+
+La disposition devrait ressembler à ceci après avoir terminé la tâche&nbsp;:
+
+{{EmbedLiveSample("grid2-finish", "", 340)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Il est possible de superposer des éléments en les faisant occuper les mêmes cellules de la grille.
+Une option consiste à utiliser les raccourcis ci-dessous, mais il serait correct d'utiliser les propriétés longues comme `grid-row-start`, par exemple.
+
+```css live-sample___grid2-finish
+.item1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+}
+
+.item2 {
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+}
+```
+
+Pour la question bonus, une façon d'y parvenir est d'utiliser `order`, que nous avons rencontré dans le tutoriel sur les boîtes flexibles.
+
+```css live-sample___grid2-finish
+.item1 {
+  order: 1;
+}
+```
+
+Une autre solution valide consiste à utiliser `z-index`&nbsp;:
+
+```css
+.item1 {
+  z-index: 1;
+}
+```
+
+</details>
 
 ## Disposition en grille 3
 
-Cette grille a quatre enfants directs — le code de démarrage affiche ces éléments en utilisant le placement automatique. Utilisez `grid-area` et `grid-template-areas` afin de les disposer comme le montre l'image ci-dessous.
+Dans cette tâche, la grille contient quatre enfants directs. Ils sont actuellement placés automatiquement dans la grille.
 
-![](grid-task3.png)
+Le point de départ de la tâche ressemble à ceci&nbsp;:
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+{{EmbedLiveSample("grid3-start", "", 200)}}
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid3.html", '100%', 800)}}
+Voici le code sous-jacent pour ce point de départ&nbsp;:
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 3)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html).
+```html live-sample___grid3-start live-sample___grid3-finish
+<div class="grid">
+  <div class="one">Un</div>
+  <div class="two">Deux</div>
+  <div class="three">Trois</div>
+  <div class="four">Quatre</div>
+</div>
+```
 
-## Mise en page avec Flexbox et grilles 4
+```css live-sample___grid3-start live-sample___grid3-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.grid > * {
+  background-color: #4d7298;
+  border: 2px solid #77a6b6;
+  border-radius: 0.5em;
+  color: white;
+  padding: 0.5em;
+}
 
-Vous devrez utiliser Flexbox et les grilles CSS pour recréer l'exemple illustré dans l'image ci-dessous. Vous n'êtes pas obligé de modifier le code HTML pour y parvenir.
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+```
 
-![Deux lignes de cartes, ayant chacune une image et un ensemble de tags.](grid-task4.png)
+Pour compléter cette tâche, utilisez les propriétés `grid-area` et `grid-template-areas` afin de disposer les éléments comme indiqué ci-dessous&nbsp;:
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+{{EmbedLiveSample("grid3-finish", "", 200)}}
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (mise en page avec Flexbox et Grilles 4)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html).
+Chaque partie de la disposition doit avoir un nom en utilisant la propriété `grid-area` et `grid-template-areas` pour les disposer. Les points de confusion possibles seraient de ne pas réaliser que vous devez placer un `.` pour laisser une cellule vide, ou que vous devez répéter le nom pour qu'un élément occupe plus d'une piste&nbsp;:
 
-## Évaluation ou aide supplémentaire
+```css live-sample___grid3-finish
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "aa aa"
+    "bb cc"
+    ". dd";
+}
 
-Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de l'aide&nbsp;:
+.one {
+  grid-area: aa;
+}
 
-1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
-2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN dans la catégorie «&nbsp;Learning&nbsp;»](https://discourse.mozilla.org/c/mdn/learn). Incluez dans votre message&nbsp;:
-   - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-   - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne (comme expliqué à l'étape 1). C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+.two {
+  grid-area: bb;
+}
+
+.three {
+  grid-area: cc;
+}
+
+.four {
+  grid-area: dd;
+}
+```
+
+</details>
+
+## Disposition en grille 4
+
+Dans cette tâche, vous devrez utiliser à la fois la disposition en grille et la disposition flexible pour recréer la disposition finale. L'espacement entre les colonnes et les lignes doit être de `10px`. Vous n'avez pas besoin de modifier le HTML pour y parvenir.
+
+Le point de départ de la tâche ressemble à ceci&nbsp;:
+
+{{EmbedLiveSample("grid4-start", "", 400)}}
+
+Voici le code sous-jacent pour ce point de départ&nbsp;:
+
+```html live-sample___grid4-start live-sample___grid4-finish
+<div class="container">
+  <div class="card">
+    <img
+      alt="un ballon rouge"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons1.jpg" />
+    <ul class="tags">
+      <li>ballon</li>
+      <li>rouge</li>
+      <li>ciel</li>
+      <li>bleu</li>
+      <li>Montgolfière</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="ballons au-dessus de certaines maisons"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons2.jpg" />
+    <ul class="tags">
+      <li>ballons</li>
+      <li>maisons</li>
+      <li>train</li>
+      <li>bord de mer</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="gros plan de ballons en train de gonfler"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons3.jpg" />
+    <ul class="tags">
+      <li>ballons</li>
+      <li>gonflage</li>
+      <li>vert</li>
+      <li>bleu</li>
+    </ul>
+  </div>
+  <div class="card">
+    <img
+      alt="un ballon au soleil"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons4.jpg" />
+    <ul class="tags">
+      <li>ballon</li>
+      <li>soleil</li>
+      <li>ciel</li>
+      <li>été</li>
+      <li>lumineux</li>
+    </ul>
+  </div>
+</div>
+```
+
+```css live-sample___grid4-start live-sample___grid4-finish
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 200px min-content;
+}
+
+.card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags > * {
+  background-color: #999999;
+  color: white;
+  padding: 0.2em 0.8em;
+  border-radius: 0.2em;
+  font-size: 80%;
+  margin: 5px;
+}
+
+.container {
+  /* Ajoutez les styles ici */
+}
+
+.tags {
+  /* Ajoutez les styles ici */
+}
+```
+
+La disposition devrait ressembler à ceci après avoir terminé la tâche&nbsp;:
+
+{{EmbedLiveSample("grid4-finish", "", 400)}}
+
+<details>
+<summary>Cliquez ici pour afficher la solution</summary>
+
+Le conteneur devra être une disposition en grille, car nous avons un alignement en lignes et en colonnes — bidimensionnel.
+Le `<ul>` doit être un conteneur flexible, car les balises (éléments `<li>`) ne sont pas alignées en colonnes, seulement en lignes et elles sont centrées dans l'espace avec la propriété d'alignement `justify-content` définie sur `center`.
+
+Vous pouvez essayer d'utiliser les boîtes flexibles sur le conteneur et de restreindre les cartes avec des valeurs en pourcentage. Vous pouvez également essayer de transformer les éléments en une disposition en grille, mais notez que les éléments ne sont pas alignés en deux dimensions, donc les boîtes flexibles ne sont pas le meilleur choix.
+
+```css live-sample___grid4-finish
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+```
+
+</details>
+
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}

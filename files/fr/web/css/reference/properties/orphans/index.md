@@ -1,8 +1,9 @@
 ---
-title: orphans
+title: Propriété CSS `orphans`
+short-title: orphans
 slug: Web/CSS/Reference/Properties/orphans
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`orphans`** définit le nombre minimum de lignes dans un bloc englobant qui doivent être affichées en bas d'une [page](/fr/docs/Web/CSS/Guides/Paged_media), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Guides/Multicol_layout).

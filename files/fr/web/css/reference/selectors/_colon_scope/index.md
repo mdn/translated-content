@@ -1,8 +1,9 @@
 ---
-title: :scope
+title: Pseudo-classe CSS `:scope`
+short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
 l10n:
-  sourceCommit: 28e834cdc972a940d80a370f2fa15263a44c944b
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:scope`** représente les éléments qui sont des points de référence ou des portées auxquels faire correspondre les sélecteurs.

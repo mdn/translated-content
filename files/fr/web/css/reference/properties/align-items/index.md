@@ -1,8 +1,9 @@
 ---
-title: align-items
+title: Propriété CSS `align-items`
+short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`align-items`** permet de définir la valeur de {{CSSxRef("align-self")}} sur tous les enfants directs en groupe. En flexbox, elle contrôle l'alignement des éléments sur {{Glossary("cross axis", "l'axe transversal")}}. En mise en page grille, elle contrôle l'alignement des éléments sur l'axe de bloc à l'intérieur de leurs {{Glossary("grid areas", "zones de grille")}}.

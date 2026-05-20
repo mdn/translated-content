@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/concat
 original_slug: Web/XPath/Functions/concat
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `concat` 함수는 둘 또는 둘 이상의 문자열을 연결하고 연결한 문자열을 반환합니다.
 

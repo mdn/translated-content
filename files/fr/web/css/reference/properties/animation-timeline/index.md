@@ -1,8 +1,9 @@
 ---
-title: animation-timeline
+title: Propriété CSS `animation-timeline`
+short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 l10n:
-  sourceCommit: 21f3703f37be2ab064fb8cff005438f47f92a1de
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-timeline`** définit la chronologie utilisée pour contrôler la progression d'une animation CSS.
@@ -61,7 +62,7 @@ La propriété `animation-timeline` se définit comme une ou plusieurs valeurs s
 
 La chronologie par défaut d'une animation par étapes CSS est la chronologie {{DOMxRef("DocumentTimeline")}}. La propriété `animation-timeline` peut être utilisée pour définir une ligne de temps nommée ou anonyme pour la progression du défilement ou de l'affichage. Elle peut également être utilisée pour définir explicitement la ligne temporelle par défaut du document afin de contrôler la progression de l'animation d'un élément ou pour ne pas avoir de ligne temporelle du tout, auquel cas l'élément ne s'anime pas.
 
-Les types de chronologies suivants peuvent être définis via `animation-timeline`&nbsp;:
+Les types de chronologies suivants peuvent être définis par `animation-timeline`&nbsp;:
 
 - {{DOMxRef("DocumentTimeline")}}
   - : La chronologie par défaut du document, qui progresse en fonction du temps écoulé depuis que le document a été chargé pour la première fois dans le navigateur. C'est la ligne de temps traditionnellement associée aux animations CSS et elle est sélectionnée avec la valeur `auto`, ou en ne définissant pas de valeur `animation-timeline` du tout, car c'est la valeur par défaut.
@@ -72,19 +73,19 @@ Les types de chronologies suivants peuvent être définis via `animation-timelin
     - [Chronologie de la progression du défilement anonyme](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_du_défilement_anonyme)
       - : La propriété `animation-timeline` de l'élément à animer est définie sur la fonction {{CSSxRef("animation-timeline/scroll", "scroll()")}}. Les deux paramètres optionnels de la fonction définissent le défileur fournissant la chronologie de progression du défilement et l'axe de défilement à utiliser.
 - [Chronologie de la progression de la vue](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologies_de_progression_de_la_vue)
-  - : Une animation par étapes progresse en fonction du changement de visibilité d'un élément à l'intérieur d'un défileur&nbsp;; cet élément est appelé le _sujet_. Par défaut, la chronologie est à `0%` lorsque l'élément devient visible pour la première fois à un bord du défileur, et est à `100%` lorsque son bord de fin sort du bord opposé du défileur. Une chronologie de progression de vue peut être spécifiée de deux manières&nbsp;:
+  - : Une animation par étapes progresse en fonction du changement de visibilité d'un élément à l'intérieur d'un défileur&nbsp;; cet élément est appelé le _sujet_. Par défaut, la chronologie est à `0%` lorsque l'élément devient visible pour la première fois à un bord du défileur, et est à `100%` lorsque son bord de fin sort du bord opposé du défileur. Une chronologie de progression de vue peut être définie de deux manières&nbsp;:
     - [Chronologie de la progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée)
       - : Le sujet est explicitement nommé en définissant la propriété {{CSSxRef("view-timeline-name")}} (ou la propriété raccourcie {{CSSxRef("view-timeline")}}) sur un `<dashed-ident>`. Lorsque vous définissez la propriété `animation-timeline` de l'élément à animer sur ce `<dashed-ident>`, la visibilité du sujet contrôle la progression de l'animation de l'élément. Notez que l'élément à animer ne doit pas être le même que le sujet.
     - [Chronologie de la progression de la vue anonyme](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_anonyme)
       - : La propriété `animation-timeline` de l'élément à animer est définie sur une fonction {{CSSxRef("animation-timeline/view", "view()")}}, ce qui provoque son animation en fonction de sa visibilité dans la zone de défilement de son défileur parent le plus proche.
 - Pas de chronologie
-  - : Toutes les chronologies d'animation peuvent être supprimées en sélectionnant une valeur de `none`. Lorsque `animation-timeline: none` est défini, aucune animation ne se produira car il n'y a pas de chronologie à suivre.
+  - : Toutes les chronologies d'animation peuvent être supprimées en sélectionnant une valeur de `none`. Lorsque `animation-timeline: none` est défini, aucune animation ne se produit, car il n'y a pas de chronologie à suivre.
 
-La propriété `animation-timeline` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} en tant que valeur de réinitialisation uniquement. Cela signifie que l'inclusion de `animation` réinitialise une valeur `animation-timeline` précédemment déclarée à `auto`. Comme ce composant de la propriété raccourcie est uniquement une réinitialisation, une valeur spécifique ne peut pas être définie via `animation`. Lors de la création d'[animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), vous devez déclarer `animation-timeline` après avoir déclaré toute propriété raccourcie `animation` pour qu'elle prenne effet.
+La propriété `animation-timeline` est incluse dans la propriété raccourcie {{CSSxRef("animation")}} en tant que valeur de réinitialisation uniquement. Cela signifie que l'inclusion de `animation` réinitialise une valeur `animation-timeline` précédemment déclarée à `auto`. Comme ce composant de la propriété raccourcie est uniquement une réinitialisation, une valeur spécifique ne peut pas être définie par `animation`. Lors de la création [d'animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines), vous devez déclarer `animation-timeline` après avoir déclaré toute propriété raccourcie `animation` pour qu'elle prenne effet.
 
 Si vous définissez plusieurs valeurs séparées par des virgules, chaque valeur de `animation-timeline` est appliquée à une seule animation dans l'ordre dans lequel les valeurs {{CSSxRef("animation-name")}} apparaissent. Si le nombre de valeurs dans la déclaration `animation-timeline` est supérieur au nombre de valeurs `animation-name`, les valeurs de chronologie excédentaires sont ignorées. S'il y a moins de valeurs `animation-timeline` que de valeurs `animation-name`, les valeurs `animation-timeline` sont répétées, dans l'ordre, jusqu'à ce que chaque `animation-name` ait une chronologie associée.
 
-Si deux ou plusieurs lignes de temps partagent le même nom `<dashed-ident>` et la même spécificité, la dernière déclarée dans la cascade sera utilisée. Si aucune ligne de temps correspondant à un nom inclus dans la `animation-timeline` n'est trouvée, la `animation-name` associée à cette valeur n'est pas associée à une ligne de temps.
+Si deux ou plusieurs lignes de temps partagent le même nom `<dashed-ident>` et la même spécificité, la dernière déclarée dans la cascade est utilisée. Si aucune ligne de temps correspondant à un nom inclus dans la `animation-timeline` n'est trouvée, la `animation-name` associée à cette valeur n'est pas associée à une ligne de temps.
 
 ## Définition formelle
 
@@ -168,7 +169,7 @@ La seule différence est la déclaration `animation-timeline` (ou son absence da
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -188,7 +189,7 @@ Dans cet exemple, la chronologie d'animation est définie sur une chronologie de
 
 #### HTML
 
-Notre conteneur comprend trois éléments extensibles qui seront suffisamment larges pour garantir que notre conteneur soit une zone de défilement. Celui du milieu contient une forme que nous allons animer.
+Notre conteneur comprend trois éléments extensibles qui sont suffisamment larges pour garantir que notre conteneur soit une zone de défilement. Celui du milieu contient une forme que nous allons animer.
 
 ```html live-sample___named_scroll live-sample___anonymous_scroll
 <div id="container">
@@ -254,7 +255,7 @@ Le CSS ci-dessous définit un carré qui tourne dans des directions alternées s
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -288,7 +289,7 @@ Nous incluons tout le CSS de l'exemple précédent, en ne définissant que la pr
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -302,7 +303,7 @@ Faites défiler pour voir l'élément carré animé.
 
 ### Définir une chronologie de progression de vue nommée
 
-Dans cet exemple, nous montrons comment créer et appliquer une chronologie de progression de vue nommée. Deux éléments seront animés, avec des éléments différents servant de conteneur de défilement.
+Dans cet exemple, nous montrons comment créer et appliquer une chronologie de progression de vue nommée. Deux éléments sont animés, avec des éléments différents servant de conteneur de défilement.
 
 #### HTML
 

@@ -1,8 +1,9 @@
 ---
-title: src
+title: Descripteur de règle CSS `src`
+short-title: src
 slug: Web/CSS/Reference/At-rules/@font-face/src
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`src`** pour la règle {{CSSxRef("@font-face")}} spécifie la ressource contenant les données de la police. Il est obligatoire pour que la règle `@font-face` soit valide.

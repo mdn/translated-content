@@ -1,8 +1,9 @@
 ---
-title: forced-colors
+title: Caractéristique média CSS `forced-colors`
+short-title: forced-colors
 slug: Web/CSS/Reference/At-rules/@media/forced-colors
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`forced-colors`** permet de détecter si l'{{Glossary("user agent", "agent utilisateur")}} a activé un mode couleurs forcées, dans lequel il impose une palette de couleurs limitée choisie par l'utilisateur·ice sur la page. Un exemple de mode couleurs forcées est le mode contraste élevé de Windows.
@@ -16,7 +17,7 @@ La caractéristique média `forced-colors` indique si le navigateur est actuelle
 - `none`
   - : Le mode couleurs forcées n'est pas actif&nbsp;; les couleurs de la page ne sont pas limitées à une palette restreinte.
 - `active`
-  - : Indique que le mode couleurs forcées est actif. Le navigateur fournit la palette de couleurs aux auteur·ice·s via les mots-clés de [couleurs système CSS](/fr/docs/Web/CSS/system-color) et, si nécessaire, déclenche la valeur appropriée de [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) afin que les auteur·ice·s puissent adapter la page. Le navigateur choisit la valeur de `prefers-color-scheme` en fonction de la clarté de la couleur système `Canvas` (voir la [spécification de color adjust <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced) pour plus de détails).
+  - : Indique que le mode couleurs forcées est actif. Le navigateur fournit la palette de couleurs aux auteur·ice·s via les mots-clés de [couleurs système CSS](/fr/docs/Web/CSS/Reference/Values/system-color) et, si nécessaire, déclenche la valeur appropriée de [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) afin que les auteur·ice·s puissent adapter la page. Le navigateur choisit la valeur de `prefers-color-scheme` en fonction de la clarté de la couleur système `Canvas` (voir la [spécification de color adjust <sup>(angl.)</sup>](https://drafts.csswg.org/css-color-adjust-1/#forced) pour plus de détails).
 
 ## Notes d'utilisation
 
@@ -45,7 +46,7 @@ De plus, les propriétés suivantes ont un comportement particulier en mode coul
 - {{CSSxRef("color-scheme")}} est forcée à «&nbsp;light dark&nbsp;»
 - {{CSSxRef("scrollbar-color")}} est forcée à «&nbsp;auto&nbsp;»
 
-Les couleurs système imposées pour les propriétés ci-dessus dépendent du contexte de l'élément. Par exemple, la propriété {{CSSxRef("color")}} sur un bouton sera forcée à `ButtonText`. Sur un texte normal, elle sera forcée à `CanvasText`. Voir la [liste des couleurs système](/fr/docs/Web/CSS/system-color) pour plus de détails sur les cas d'utilisation selon le contexte d'interface.
+Les couleurs système imposées pour les propriétés ci-dessus dépendent du contexte de l'élément. Par exemple, la propriété {{CSSxRef("color")}} sur un bouton sera forcée à `ButtonText`. Sur un texte normal, elle sera forcée à `CanvasText`. Voir la [liste des couleurs système](/fr/docs/Web/CSS/Reference/Values/system-color) pour plus de détails sur les cas d'utilisation selon le contexte d'interface.
 
 > [!NOTE]
 > Les agents utilisateur choisissent les couleurs système en fonction de la sémantique native des éléments, _pas_ selon les rôles ARIA ajoutés.
@@ -59,7 +60,7 @@ Lorsque {{CSSxRef("forced-color-adjust")}} est défini à `none` sur un élémen
 
 Lorsque {{CSSxRef("forced-color-adjust")}} est défini à `preserve-parent-color` sur un élément, et que la valeur de {{CSSxRef("color")}} sur l'élément n'est pas héritée de son parent, alors l'élément se comporte comme si `preserve-parent-color` était défini à `none`.
 
-Lorsqu'une [couleur système](/fr/docs/Web/CSS/system-color) est spécifiée, elle sera utilisée à la place de la valeur qui aurait été forcée.
+Lorsqu'une [couleur système](/fr/docs/Web/CSS/Reference/Values/system-color) est spécifiée, elle sera utilisée à la place de la valeur qui aurait été forcée.
 
 Vous pouvez également utiliser les couleurs système avec toute propriété _autre_ que celles listées ci-dessus, afin de garantir que le reste de la page s'intègre à la palette de couleurs restreinte disponible en mode couleurs forcées.
 

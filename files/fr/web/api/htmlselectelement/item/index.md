@@ -3,14 +3,14 @@ title: "HTMLSelectElement : méthode item()"
 short-title: item()
 slug: Web/API/HTMLSelectElement/item
 l10n:
-  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
+  sourceCommit: b245601cd95df53dcbaf736eb3c50138e6c9d946
 ---
 
 {{APIRef("HTML DOM")}}
 
 La méthode **`item()`** de l'interface {{DOMxRef("HTMLSelectElement")}} retourne l'élément ({{DOMxRef("Element")}}) correspondant à l'interface {{DOMxRef("HTMLOptionElement")}} dont la position dans la liste des options correspond à l'indice donné en paramètre, ou `null` s'il n'y en a pas.
 
-En JavaScript, utiliser la syntaxe de crochets de tableau avec un `unsigned long`, comme `selectElt[index]`, est équivalent à `selectElt.namedItem(index)`.
+En JavaScript, utiliser la syntaxe de crochets de tableau avec un `unsigned long`, comme `selectElt[index]`, est équivalent à `selectElt.item(index)`.
 
 ## Syntaxe
 

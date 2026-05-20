@@ -8,7 +8,7 @@ original_slug: Web/CSS/::first-letter
 
 ## Sumário
 
-O [pseudo-elemento](/pt-BR/docs/Web/CSS/Pseudo-elements) [CSS](/pt-BR/docs/Web/CSS) `::first-letter` seleciona a primeira letra da primeira linha de um bloco, desde que não seja precedida por outro conteúdo (como imagens ou tabelas embutidas/inline) na mesma linha.
+O [pseudo-elemento](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements) [CSS](/pt-BR/docs/Web/CSS) `::first-letter` seleciona a primeira letra da primeira linha de um bloco, desde que não seja precedida por outro conteúdo (como imagens ou tabelas embutidas/inline) na mesma linha.
 
 A primeira letra de um elemento não é necessariamente uma identificação trivial:
 

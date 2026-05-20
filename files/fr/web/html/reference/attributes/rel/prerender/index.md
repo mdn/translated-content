@@ -1,8 +1,9 @@
 ---
-title: rel="prerender"
+title: Valeur d'attribut HTML `rel="prerender"`
+short-title: prerender
 slug: Web/HTML/Reference/Attributes/rel/prerender
 l10n:
-  sourceCommit: 8799c26ef12a653ea2ab7d22a958fb46a649ca60
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 {{Deprecated_Header}}{{Non-standard_Header}}

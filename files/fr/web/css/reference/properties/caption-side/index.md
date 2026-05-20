@@ -1,8 +1,9 @@
 ---
-title: caption-side
+title: Propriété CSS `caption-side`
+short-title: caption-side
 slug: Web/CSS/Reference/Properties/caption-side
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`caption-side`** place le contenu de la {{HTMLElement("caption", "légende")}} d'un tableau sur le côté défini. Les valeurs sont relatives au mode d'écriture ({{CSSxRef("writing-mode")}}) du tableau.

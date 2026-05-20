@@ -2,7 +2,7 @@
 title: x
 slug: Web/SVG/Reference/Attribute/x
 l10n:
-  sourceCommit: d35e3fd4bc6b80049899b45d74ed71dc996adfc7
+  sourceCommit: d559e66723de93ce6c59eb5d22a29afca7265c2a
 ---
 
 **`x`** 属性はユーザー座標系の X 軸の座標を定義します。
@@ -793,7 +793,7 @@ l10n:
 
 ### `<filter>`
 
-{{SVGElement('filter')}} の場合、 `x` はこのフィルターの描画領域における左上隅の X 座標をを定義します。
+{{SVGElement('filter')}} の場合、 `x` はこのフィルターの描画領域における左上隅の X 座標を定義します。
 
 <table class="properties">
   <tbody>
@@ -826,7 +826,7 @@ l10n:
 
 ### `<foreignObject>`
 
-{{SVGElement('foreignObject')}} の場合、 `x` はビューポートの左上隅の X 座標をを定義します。
+{{SVGElement('foreignObject')}} の場合、 `x` はビューポートの左上隅の X 座標を定義します。
 
 <table class="properties">
   <tbody>

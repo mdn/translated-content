@@ -97,10 +97,10 @@ tfoot td {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-TW/docs/HTML/Content_categories">內容類型</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
       </th>
       <td>
-        <a href="/zh-TW/docs/HTML/Content_categories#Flow_content">流內容</a>
+        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#Flow_content">流內容</a>
       </td>
     </tr>
     <tr>

@@ -1,8 +1,9 @@
 ---
-title: ::-webkit-scrollbar
+title: Pseudo-élément CSS `::-webkit-scrollbar`
+short-title: ::-webkit-scrollbar
 slug: Web/CSS/Reference/Selectors/::-webkit-scrollbar
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}

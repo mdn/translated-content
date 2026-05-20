@@ -14,7 +14,7 @@ Cada sombra é especificada como um deslocamento do texto, juntamente com valore
 
 Multiplas sombras são aplicadas de frente-para-trás, com a primeira sombra especificada no topo.
 
-Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::first-letter")}} [pseudo-elements](/pt-BR/docs/Web/CSS/Pseudo-elements).
+Esta propriedade se aplica a ambos {{cssxref("::first-line")}} e {{cssxref("::first-letter")}} [pseudo-elements](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 {{cssinfo}}
 

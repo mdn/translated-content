@@ -51,7 +51,7 @@ flex-direction: column-reverse;
 }
 ```
 
-Observe que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo [`dir`](/pt-BR/docs/Web/HTML/Global_attributes#dir) for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row`** representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
+Observe que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo [`dir`](/pt-BR/docs/Web/HTML/Reference/Global_attributes#dir) for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row`** representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
 
 ## Syntax
 
@@ -165,5 +165,5 @@ Usar a propriedade `flex-direction` com o valores de `row-reverse` or `column-re
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS Flexbox Guide: _[Ordering flex items](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

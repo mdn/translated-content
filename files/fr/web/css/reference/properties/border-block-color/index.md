@@ -1,8 +1,9 @@
 ---
-title: border-block-color
+title: Propriété CSS `border-block-color`
+short-title: border-block-color
 slug: Web/CSS/Reference/Properties/border-block-color
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-block-color`** permet de définir la couleur des bordures logiques de bloc d'un élément. Cette couleur correspond à une bordure physique selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle peut donc correspondre à {{CSSxRef("border-top-color")}} et {{CSSxRef("border-bottom-color")}}, ou à {{CSSxRef("border-right-color")}} et {{CSSxRef("border-left-color")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.

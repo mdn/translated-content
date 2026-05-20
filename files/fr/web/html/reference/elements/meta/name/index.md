@@ -1,10 +1,9 @@
 ---
-title: Attribut <meta> name
-short-title: <meta> name
+title: "Attribut HTML : `<meta name>`"
+short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
-original_slug: Web/HTML/Element/meta/name
 l10n:
-  sourceCommit: c7a8b2584452bcd5d2c135b637f4ec659ff74b99
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`name`** de l'élément {{HTMLElement("meta")}} fournit des métadonnées sous forme de paires nom-valeur.

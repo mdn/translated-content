@@ -3,7 +3,7 @@ title: "HTMLElement : propriété offsetParent"
 short-title: offsetParent
 slug: Web/API/HTMLElement/offsetParent
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 678f7ed93e03b90cae88e9a3c7e4b81b0f969664
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,10 +22,12 @@ S'il n'y a pas d'élément ancêtre positionné, c'est le `body` qui est retourn
 > `offsetParent` retourne `null` dans les situations suivantes&nbsp;:
 >
 > - La propriété `display` de l'élément ou de son élément parent vaut `none`.
-> - La propriété `position` de l'élément vaut `fixed` (Firefox retourne `<body>`).
+> - L'élément a la propriété `position` définie sur `fixed` et son bloc englobant est la zone d'affichage.
+>   Si le bloc englobant n'est pas la zone d'affichage, `offsetParent` retourne l'ancêtre le plus proche qui forme
+>   un bloc englobant, par exemple, un ancêtre avec des styles `transform`, `perspective` ou `filter` définis.
 > - L'élément courant est `<body>` ou `<html>`.
 
-`offsetParent` est utile car {{DOMxRef("HTMLElement.offsetTop", "offsetTop")}} et {{DOMxRef("HTMLElement.offsetLeft", "offsetLeft")}} sont relatifs au bord de remplissage.
+`offsetParent` est utile, car {{DOMxRef("HTMLElement.offsetTop", "offsetTop")}} et {{DOMxRef("HTMLElement.offsetLeft", "offsetLeft")}} sont relatifs au bord de remplissage.
 
 ## Valeur
 

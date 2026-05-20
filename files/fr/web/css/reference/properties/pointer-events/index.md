@@ -1,8 +1,9 @@
 ---
-title: pointer-events
+title: Propriété CSS `pointer-events`
+short-title: pointer-events
 slug: Web/CSS/Reference/Properties/pointer-events
 l10n:
-  sourceCommit: ff4dc3d43e814614df60ecdb7376b59698660ac2
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`pointer-events`** permet de contrôler les circonstances (le cas échéant) dans lesquelles un élément graphique peut être [une cible](/fr/docs/Web/API/Event/target), c'est-à-dire recevoir des évènements de la souris, du pointeur ou du doigt.

@@ -1,8 +1,9 @@
 ---
-title: font
+title: Propriété CSS `font`
+short-title: font
 slug: Web/CSS/Reference/Properties/font
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: ddf85bfec1b6e43cdacb404de0c38a801c561640
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font`** permet de définir toutes les différentes propriétés de la police d'un élément. Elle permet aussi d'attribuer à un élément une police système.
@@ -107,25 +108,25 @@ font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
 font: caption;
 ```
 
-La propriété `font` peut être définie avec un seul mot-clé (qui sélectionnera la police système à utiliser) ou comme propriété raccourcie pour paramétrer les différentes propriétés relatives aux polices.
+La propriété `font` peut être définie avec un seul mot-clé (qui sélectionne la police système à utiliser) ou comme propriété raccourcie pour paramétrer les différentes propriétés relatives aux polices.
 
 Si `font` est définie grâce à un mot-clé, ce mot-clé doit être&nbsp;: `caption`, `icon`, `menu`, `message-box`, `small-caption` ou `status-bar`.
 
 Si `font` est définie comme une propriété raccourcie&nbsp;:
 
-- La déclaration devra inclure des valeurs pour&nbsp;:
-  - {{CSSxRef("&lt;font-size&gt;")}}
-  - {{CSSxRef("&lt;font-family&gt;")}}
+- La déclaration doit inclure des valeurs pour&nbsp;:
+  - {{CSSxRef("font-size")}}
+  - {{CSSxRef("font-family")}}
 
-- La déclaration pourra éventuellement inclure des valeurs pour&nbsp;:
-  - {{CSSxRef("&lt;font-style&gt;")}}
-  - {{CSSxRef("&lt;font-variant&gt;")}}
-  - {{CSSxRef("&lt;font-weight&gt;")}}
-  - {{CSSxRef("&lt;font-stretch&gt;")}}
-  - {{CSSxRef("&lt;line-height&gt;")}}
+- La déclaration peut éventuellement inclure des valeurs pour&nbsp;:
+  - {{CSSxRef("font-style")}}
+  - {{CSSxRef("font-variant")}}
+  - {{CSSxRef("font-weight")}}
+  - {{CSSxRef("font-stretch")}}
+  - {{CSSxRef("line-height")}}
 
 - Les valeurs pour `font-style`, `font-variant` et `font-weight` doivent précéder la valeur pour `font-size`
-- La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1 : `normal` et `small-caps`
+- La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1&nbsp;: `normal` et `small-caps`
 - La valeur de `font-stretch` ne peut être qu'un mot-clé.
 - La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
 - La valeur pour `font-family` doit être la dernière fournie.
@@ -177,16 +178,16 @@ Si `font` est définie comme une propriété raccourcie&nbsp;:
 ### Définir les propriétés de police
 
 ```css
-/* La corps de la police sera 12px */
-/* La hauteur de ligne 14px et la   */
-/* famille de polices sans-serif    */
+/* La corps de la police est de 12px */
+/* La hauteur de ligne 14px et la    */
+/* famille de polices sans-serif     */
 p {
   font: 12px/14px sans-serif;
 }
-/* La taille de la police mesurera   */
-/* 80% de celle de l'élément parent  */
-/* ou la valeur par défaut et la     */
-/* famille de police sera sans-serif */
+/* La taille de la police mesure    */
+/* 80% de celle de l'élément parent */
+/* ou la valeur par défaut et la    */
+/* famille de police est sans-serif */
 p {
   font: 80% sans-serif;
 }
@@ -375,7 +376,7 @@ p {
   </div>
 
   <div class="cf propInputs">
-    <div class="propInputCont tar">font :</div>
+    <div class="propInputCont tar">font:</div>
     <div class="propInputCont">
       <input type="text" class="curCss" id="input_font_style" /><br />
       font-style <br />

@@ -1,8 +1,9 @@
 ---
-title: padding-block
+title: Propriété CSS `padding-block`
+short-title: padding-block
 slug: Web/CSS/Reference/Properties/padding-block
 l10n:
-  sourceCommit: c3c0f615b9b35e1ce3c799927eb21732b2f05926
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-block`** définit le remplissage logique au début et à la fin de l'axe de bloc d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.

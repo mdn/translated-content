@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/hidden
 
 {{HTMLSidebar("Global_attributes")}}
 
-O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`hidden`** é um atributo booleano que indica se um elemento é ou não _relevante_. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo. Os navegadores não renderizarão elementos com o atributo `hidden` setado.
+O [atributo global](/pt-BR/docs/Web/HTML/Reference/Global_attributes) **`hidden`** é um atributo booleano que indica se um elemento é ou não _relevante_. Por exemplo, ele pode ser usado para esconder elementos de página que não podem ser usados até que o processo de login seja completo. Os navegadores não renderizarão elementos com o atributo `hidden` setado.
 
 O atributo `hidden` não deve ser utilizado para esconder conteúdo que poderia legitimamente ser mostrado em outra apresentação, por exemplo, não é correto usar `hidden` para esconder abas de formulários em paineis, porque interfaces separadas por abas são meramente um tipo de apresentação em fluxo — o que pode ser igualmente mostrado em forma vertical com barra de rolagem. É similarmente incorreto usar este atributo para esconder conteúdo de apenas uma apresentação — se algo está marcado como `hidden`, ele está escondido de todas as apresentações incluindo, por exemplo, leitores de tela.
 
@@ -31,4 +31,4 @@ Similarmente, um elemento canvas com atributo `hidden` poderia ser usado como bu
 
 ## Veja também
 
-- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+- Todos os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).

@@ -195,4 +195,4 @@ td {
 
 ## Veja também
 
-- [Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Usando transformações CSS](/pt-BR/docs/Web/CSS/Guides/Transforms/Using)

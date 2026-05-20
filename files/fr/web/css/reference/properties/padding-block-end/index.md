@@ -1,8 +1,9 @@
 ---
-title: padding-block-end
+title: Propriété CSS `padding-block-end`
+short-title: padding-block-end
 slug: Web/CSS/Reference/Properties/padding-block-end
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`padding-block-end`** définit la fin logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte.

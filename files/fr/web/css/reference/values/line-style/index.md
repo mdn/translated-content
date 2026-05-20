@@ -1,9 +1,9 @@
 ---
-title: <line-style>
+title: Type CSS `<line-style>`
+short-title: <line-style>
 slug: Web/CSS/Reference/Values/line-style
-original_slug: Web/CSS/line-style
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) {{Glossary("enumerated", "énuméré")}} [CSS](/fr/docs/Web/CSS) **`<line-style>`** représente des mots-clés qui définissent le style d'une ligne, ou l'absence de ligne. Les valeurs de mot-clé `<line-style>` sont utilisées dans les propriétés [border](/fr/docs/Web/CSS/Guides/Backgrounds_and_borders) et [column](/fr/docs/Web/CSS/Guides/Multicol_layout), aussi bien en version longue qu'en version abrégée&nbsp;:

@@ -157,7 +157,7 @@ Um objeto de configurações é um [ambiente](https://html.spec.whatwg.org/multi
 
 Para melhor visualizar isso, podemos dar uma olhada mais de perto em como o reino pode ser um problema. Um **reino** pode ser pensado aproximadamente como o objeto global. O que é único sobre os realms é que eles contêm todas as informações necessárias para executar o código JavaScript. Isso inclui objetos como [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array) e [`Error`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error). Cada objeto de configurações tem sua própria "cópia" e não são compartilhados. Isso pode causar algum comportamento inesperado em relação às promises. Para contornar isso, rastreamos algo chamado **objeto de configurações incumbentes**. Isso representa informações específicas do contexto do código do usuário responsável por uma determinada chamada de função.
 
-Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) embutido em um documento se comunica com seu host. Como todas as APIs da Web estão cientes do objeto de configurações incumbente, o seguinte funcionará em todos os navegadores:
+Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`](/pt-BR/docs/Web/HTML/Reference/Elements/iframe) embutido em um documento se comunica com seu host. Como todas as APIs da Web estão cientes do objeto de configurações incumbente, o seguinte funcionará em todos os navegadores:
 
 ```html
 <!doctype html> <iframe></iframe>

@@ -9,7 +9,7 @@ slug: Web/API/HTMLStyleElement
 
 这个接口不允许修改包含其中的 CSS（大多数情况下）。如果需要修改 CSS，前往[关于使用动态样式的信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)查看在 DOM 中用于修改特定 CSS 属性的对象。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

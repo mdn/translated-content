@@ -3,15 +3,15 @@ title: "HTMLElement : évènement toggle"
 short-title: toggle
 slug: Web/API/HTMLElement/toggle_event
 l10n:
-  sourceCommit: 405fc9a921068347e95211312a8c19e917c457d2
+  sourceCommit: 661a04e7a61abe3d8c7245f04cdd1d0bc865fe69
 ---
 
 {{APIRef("HTML DOM")}}
 
 L'évènement **`toggle`** de l'interface {{DOMxRef("HTMLElement")}} se déclenche sur un élément {{DOMxRef("Popover_API", "de fenêtre contextuelle", "", "nocode")}} (<i lang="en">popover</i> en anglais), un élément HTML {{HTMLElement("dialog")}} ou un élément HTML {{HTMLElement("details")}} juste après qu'il a été affiché ou masqué.
 
-- Si la fenêtre contextuelle passe de masqué à affiché, la propriété [`event.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) sera définie sur `closed` et la propriété [`event.newState`](/fr/docs/Web/API/ToggleEvent/newState) sera définie sur `open`.
-- Si la fenêtre contextuelle passe d'affiché à masqué, alors `event.oldState` sera définie sur `open` et `event.newState` sera définie sur `closed`.
+- Si la fenêtre contextuelle passe de masqué à affiché, la propriété [`event.oldState`](/fr/docs/Web/API/ToggleEvent/oldState) est définie sur `closed` et la propriété [`event.newState`](/fr/docs/Web/API/ToggleEvent/newState) est définie sur `open`.
+- Si la fenêtre contextuelle passe d'affiché à masqué, alors `event.oldState` est définie sur `open` et `event.newState` est définie sur `closed`.
 
 Cet évènement n'est pas [annulable](/fr/docs/Web/API/Event/cancelable).
 
@@ -94,7 +94,7 @@ fenetreContextuelle.addEventListener("toggle", (event) => {
 
 ### Remarque sur l'agrégation des évènements `toggle`
 
-Si plusieurs évènements `toggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement sera déclenché.
+Si plusieurs évènements `toggle` sont déclenchés avant que la boucle d'évènements ait eu la possibilité de s'exécuter, un seul évènement est déclenché.
 On parle alors d'«&nbsp;agrégation d'évènements&nbsp;».
 
 Par exemple&nbsp;:
@@ -108,6 +108,10 @@ fenetreContextuelle.showPopover();
 fenetreContextuelle.hidePopover();
 // `toggle` est déclenché une seule fois
 ```
+
+### Autres exemples
+
+- L'exemple [Ouvrir une boîte de dialogue modale](/fr/docs/Web/API/HTMLDialogElement#ouvrir_fermer_une_boîte_de_dialogue_modale) dans `HTMLDialogElement`
 
 ## Spécifications
 

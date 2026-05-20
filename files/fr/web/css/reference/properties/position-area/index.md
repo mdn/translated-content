@@ -1,8 +1,9 @@
 ---
-title: position-area
+title: Propriété CSS `position-area`
+short-title: position-area
 slug: Web/CSS/Reference/Properties/position-area
 l10n:
-  sourceCommit: 3e0ba995376cace7f08f0771635f86f0fb1753b3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position-area`** permet de positionner un élément ancré par rapport aux bords de son élément d'ancrage associé en plaçant l'élément positionné sur une ou plusieurs cases d'une grille implicite 3x3, où l'élément d'ancrage est la case centrale.
