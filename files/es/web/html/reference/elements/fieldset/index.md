@@ -1,6 +1,8 @@
 ---
 title: "<fieldset>: El elemento de agrupación de campos"
 slug: Web/HTML/Reference/Elements/fieldset
+l10n:
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 El elemento **`<fieldset>`** de [HTML](/es/docs/Web/HTML) se utiliza para agrupar varios controles así como etiquetas ({{HTMLElement("label")}}) dentro de un formulario web.
