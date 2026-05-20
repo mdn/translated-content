@@ -3,14 +3,14 @@ title: Position par ancres CSS
 short-title: Position par ancres
 slug: Web/CSS/Guides/Anchor_positioning
 l10n:
-  sourceCommit: 8300697ca75ca1e77175912110d4fe9ef48cb0bb
+  sourceCommit: 879a1aece3a1d4eb28c0024f0baac6aa1b96638e
 ---
 
 Le module de **position par ancres CSS** définit des fonctionnalités permettant d'attacher des éléments entre eux. Certains éléments sont définis comme des **éléments ancre**&nbsp;; les **éléments positionnés par ancre** peuvent alors avoir leur taille et leur position définies en fonction de la taille et de la position des éléments ancre auxquels ils sont liés.
 
 De plus, la spécification fournit des mécanismes CSS permettant de&nbsp;:
 
-- Définir un ensemble de positions alternatives pour un élément ancré&nbsp;; lorsque la position de rendu par défaut le fait déborder de son bloc conteneur et/ou l'affiche hors écran, le navigateur essaiera d'afficher l'élément ancré dans les positions alternatives.
+- Définir un ensemble de positions alternatives pour un élément ancré&nbsp;; lorsque la position de rendu par défaut le fait déborder de son bloc conteneur et/ou l'affiche hors écran, le navigateur essaie d'afficher l'élément ancré dans les positions alternatives.
 - Déclarer des conditions dans lesquelles les éléments positionnés par ancre doivent être masqués, dans les situations où il n'est pas approprié de les attacher à des éléments ancre.
 
 ## Référence
@@ -61,6 +61,9 @@ De plus, la spécification fournit des mécanismes CSS permettant de&nbsp;:
 
 - [Options de repli et masquage conditionnel en cas de dépassement](/fr/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding)
   - : Un guide sur les mécanismes que le positionnement par ancre CSS propose pour éviter que les éléments positionnés par ancre ne débordent de leur conteneur ou de la fenêtre, incluant les options de repli et le masquage conditionnel.
+
+- [Utiliser les requêtes de conteneurs ancrés](/fr/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
+  - : Explique comment utiliser les requêtes de conteneurs ancrés pour appliquer conditionnellement des styles aux éléments positionnés par ancre en fonction des options de repli de position actives sur eux.
 
 ## Concepts associés
 
