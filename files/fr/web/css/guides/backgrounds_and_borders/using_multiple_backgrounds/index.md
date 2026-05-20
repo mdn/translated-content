@@ -2,7 +2,7 @@
 title: Utiliser plusieurs arrière-plans
 slug: Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
 l10n:
-  sourceCommit: 5ebca2edd6095fb3f61d442ed3146fa37fffbf7d
+  sourceCommit: c53bfa01f3bf436d486f4032c16f592855a2af2c
 ---
 
 Vous pouvez appliquer **plusieurs arrière-plans** aux éléments. Ceux-ci sont superposés les uns sur les autres, le premier arrière-plan que vous fournissez étant au-dessus et le dernier arrière-plan listé étant en arrière-plan. Seul le dernier arrière-plan peut inclure une couleur de fond.
@@ -16,13 +16,13 @@ Dans cet exemple, trois arrière-plans sont superposés&nbsp;: le logo de Firefo
 ### HTML
 
 ```html
-<div class="multi-bg-example"></div>
+<div class="exemple-multi-fond"></div>
 ```
 
 ### CSS
 
 ```css
-.multi-bg-example {
+.exemple-multi-fond {
   width: 100%;
   height: 400px;
   background-image:
@@ -50,7 +50,7 @@ Par exemple&nbsp;:
 
 ```css
 .element {
-  background-image: url(a.png), url(b.png), url(c.png);
+  background-image: url("a.png"), url("b.png"), url("c.png");
   background-position: left top;
 }
 ```
