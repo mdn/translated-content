@@ -1,27 +1,29 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "setting getter-only property" は、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに新しい値を設定しようとした時に発生します。
+JavaScript の[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)専用の例外 "setting getter-only property" は、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに新しい値を設定しようとしたとき、または同様にゲッターのみが定義されている[プライベートアクセサープロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)に設定しようとしたときに発生します。
 
 ## エラーメッセージ
 
-```js
-TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+```plain
+TypeError: Cannot set property x of #<Object> which has only a getter (V8-based)
+TypeError: '#x' was defined without a setter (V8-based)
 TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
+TypeError: Attempted to assign to readonly property. (Safari)
+TypeError: Trying to access an undefined private setter (Safari)
 ```
 
 ## エラーの種類
 
-[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ、{{jsxref("TypeError")}}。
+[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でのみ、{{jsxref("TypeError")}}。
 
 ## エラーの原因
 
-[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに、新しい値を設定しようとしています。非 strict モードでは暗黙裡に無視されるだけですが、 [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では {{jsxref("TypeError")}} が発生します。
+[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)のみが定義されているプロパティに、新しい値を設定しようとしています。厳格モード以外では暗黙裡に無視されるだけですが、 [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では {{jsxref("TypeError")}} が発生します。クラスは常に厳格モードで動作するため、ゲッターのみを持つプライベート要素に値を代入しようとすると、常にこのエラーが発生します。
 
 ## 例
 
@@ -33,16 +35,16 @@ TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chro
 "use strict";
 
 function Archiver() {
-  var temperature = null;
+  const temperature = null;
   Object.defineProperty(this, "temperature", {
-    get: function () {
+    get() {
       console.log("get!");
       return temperature;
     },
   });
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 
 arc.temperature = 30;
@@ -55,15 +57,15 @@ arc.temperature = 30;
 "use strict";
 
 function Archiver() {
-  var temperature = null;
-  var archive = [];
+  let temperature = null;
+  const archive = [];
 
   Object.defineProperty(this, "temperature", {
-    get: function () {
+    get() {
       console.log("get!");
       return temperature;
     },
-    set: function (value) {
+    set(value) {
       temperature = value;
       archive.push({ val: temperature });
     },
@@ -74,7 +76,7 @@ function Archiver() {
   };
 }
 
-var arc = new Archiver();
+const arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
