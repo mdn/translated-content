@@ -44,7 +44,7 @@ throw true; // génère une exception ayant la valeur true
 throw new Error("Obligatoire"); // génère un objet Error avec le message "Obligatoire"
 ```
 
-On notera également que l'instruction `throw` est affectée par {{jsxref("Grammaire_lexicale","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
+On notera également que l'instruction `throw` est affectée par {{jsxref("Lexical_grammar","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
 
 ## Exemples
 

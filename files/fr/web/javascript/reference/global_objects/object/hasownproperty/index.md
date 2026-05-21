@@ -40,7 +40,7 @@ Un booléen qui indique si l'objet possède ou non la propriété indiquée en a
 
 ## Description
 
-Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnProperty()`. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Operators/L_opérateur_in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode `hasOwnProperty()` pourra être utilisée afin de vérifier la présence d'un index.
+Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnProperty()`. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Operators/in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode `hasOwnProperty()` pourra être utilisée afin de vérifier la présence d'un index.
 
 ## Exemples
 
@@ -131,5 +131,5 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 - [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Operators/L_opérateur_in", "in")}}
+- {{jsxref("Operators/in", "in")}}
 - [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

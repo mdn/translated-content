@@ -15,7 +15,7 @@ Pour plus d'informations et d'exemples, on pourra également consulter le [chapi
 
 Toute fonction JavaScript est en fait un objet `Function`. Voir la page {{jsxref("Global_Objects/Function","Function")}} pour des informations sur les propriétés et les méthodes de ces objets.
 
-Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref("Statements/return","return")}} qui définit la valeur à renvoyer (sauf dans le cas d'un [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui a été appelé avec le mot-clé {{jsxref("Operators/L_opérateur_new")}}). Une fonction qui ne renvoie pas de valeur retourne {{jsxref("undefined")}}.
+Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref("Statements/return","return")}} qui définit la valeur à renvoyer (sauf dans le cas d'un [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui a été appelé avec le mot-clé {{jsxref("Operators/new")}}). Une fonction qui ne renvoie pas de valeur retourne {{jsxref("undefined")}}.
 
 Les paramètres donnés lors de l'appel d'une fonction sont appelés les _arguments_ de la fonction. Les arguments sont passés _par valeur_ (_by value_ en anglais). Si la fonction modifie la valeur d'un argument, ce changement ne se répercute pas en dehors de la fonction. Il existe cependant les _références_ d'objets qui sont aussi des valeurs mais qui possèdent la particularité suivante : si la fonction modifie les propriété de l'objet de la référence, ce(s) changement(s) seront perceptibles en dehors de la fonction. Prenons l'exemple suivant :
 
@@ -74,7 +74,7 @@ function nom([param[, param[, ... param]]]) {
 
 ### Utiliser une expression de fonction (l'expression `function`)
 
-L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Operators/L_opérateur_function","function")}} pour plus d'informations) :
+L'expression d'une fonction se fait d'une façon similaire à la déclaration (veuillez consulter la page de l'expression {{jsxref("Operators/function","function")}} pour plus d'informations) :
 
 ```
 function [nom]([param] [, param] [..., param]) {
@@ -796,16 +796,16 @@ Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` -
 ## Voir aussi
 
 - L'instruction {{jsxref("Statements/function", "function")}}
-- L'expression {{jsxref("Operators/L_opérateur_function", "function")}}
+- L'expression {{jsxref("Operators/function", "function")}}
 - L'instruction {{jsxref("Statements/function*", "function*")}}
 - L'expression {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
 - {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées")}}
 - {{jsxref("Functions/Default_parameters", "Les paramètres par défaut","",1)}}
-- {{jsxref("Functions/paramètres_du_reste", "Les paramètres du reste","",1)}}
+- {{jsxref("Functions/rest_parameters", "Les paramètres du reste","",1)}}
 - L'objet {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Functions/get", "getter")}}
 - {{jsxref("Functions/set", "setter")}}
-- {{jsxref("Functions/Définition_de_méthode", "Les définitions de méthodes","",1)}}
+- {{jsxref("Functions/Method_definitions", "Les définitions de méthodes","",1)}}
 - [Fonctions et portée des fonctions](/fr/docs/Web/JavaScript/Reference/Functions)

@@ -13,13 +13,13 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
 
 ### Contrôle du flux
 
-- {{jsxref("Statements/bloc", "Bloc")}}
+- {{jsxref("Statements/block", "Bloc")}}
   - : Une instruction de bloc est utilisée pour regrouper zéro ou plusieurs instructions. Un bloc est délimité par une paire d'accolades.
 - {{jsxref("Statements/break", "break")}}
   - : Cette instruction termine la boucle ou l'instruction `switch` ou l'instruction `label` en cours et continue l'exécution sur l'instruction suivant l'instruction terminée.
 - {{jsxref("Statements/continue", "continue")}}
   - : Cette instruction termine l'exécution des instructions dans la boucle courante, ou la boucle avec une étiquette correspondante, et continue l'exécution de la boucle dans l'itération suivante.
-- {{jsxref("Statements/vide", "Vide")}}
+- {{jsxref("Statements/Empty", "Vide")}}
   - : Une instruction vide est utilisée pour ne fournir aucune instruction là où JavaScript en attendrait une.
 - {{jsxref("Statements/if...else","if...else")}}
   - : Cette instruction exécute une instruction si une condition donnée est vérifiée. Si la condition n'est pas vérifiée une autre instruction pourra être exécutée.
@@ -58,7 +58,7 @@ Pour une liste alphabétique, voir le volet de navigation situé à gauche sur c
   - : Cette instruction crée une boucle qui s'exécute tant que la condition est vraie. La condition est évaluée après avoir exécuté une itération de boucle, ce qui fait que cette boucle sera exécutée au moins une fois.
 - {{jsxref("Statements/for", "for")}}
   - : Cette instruction crée une boucle qui se base sur trois expressions facultatives. Ces expressions sont entre parenthèses, séparées par des points virgules et suivies par l'instruction à exécuter dans la boucle.
-- {{jsxref("Statements/for_each...in", "for each...in")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "for each...in")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Cette instruction itère une variable donnée sur toutes les propriétés d'un objet. Pour chaque propriété distincte, une instruction spécifique est exécutée.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Cette instruction effectue, dans un ordre arbitraire, une boucle sur les propriétés énumérables d'un objet. Pour chacune des différentes propriétés, des instructions peuvent être exécutées.

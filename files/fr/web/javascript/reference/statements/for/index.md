@@ -130,7 +130,7 @@ function showOffsetPos(sId) {
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/vide", "Instruction vide","",1)}}
+- {{jsxref("Statements/Empty", "Instruction vide","",1)}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for...in", "for...in")}}

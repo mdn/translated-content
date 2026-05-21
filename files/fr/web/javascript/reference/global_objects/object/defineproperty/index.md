@@ -48,7 +48,7 @@ L'objet qui a été passé à la fonction et qui a éventuellement été modifi�
 
 ## Description
 
-Cette méthode permet d'ajouter ou de modifier une propriété d'un objet avec une certaine précision. En effet, quand on ajoute une propriété « normalement » (via une affectation), on crée une propriété dont le comportement par défaut fait qu'elle sera listée dans une énumération de propriétés (par exemple avec une boucle {{jsxref("Statements/for...in","for...in")}} ou via la méthode {{jsxref("Object.keys")}}), dont la valeur peut être changée et qui peut être supprimée via {{jsxref("Operators/L_opérateur_delete","delete")}}. La méthode `Object.defineProperty()` permet de préciser le comportement attendu, potentiellement différent de celui par défaut.
+Cette méthode permet d'ajouter ou de modifier une propriété d'un objet avec une certaine précision. En effet, quand on ajoute une propriété « normalement » (via une affectation), on crée une propriété dont le comportement par défaut fait qu'elle sera listée dans une énumération de propriétés (par exemple avec une boucle {{jsxref("Statements/for...in","for...in")}} ou via la méthode {{jsxref("Object.keys")}}), dont la valeur peut être changée et qui peut être supprimée via {{jsxref("Operators/delete","delete")}}. La méthode `Object.defineProperty()` permet de préciser le comportement attendu, potentiellement différent de celui par défaut.
 
 Les descripteurs de propriété existent en deux versions : les descripteurs de données et les descripteurs d'accesseur. Un descripteur de données est une propriété qui possède une valeur et qui peut ou non être accessible en écriture. Un descripteur d'accesseur est une propriété décrite par une paire d'accesseur/mutateur (_getter/setter_) qui sont des fonctions. Un descripteur est un descripteur de données ou un descripteur d'accesseur, il ne peut pas être les deux.
 
@@ -384,8 +384,8 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.prototype.watch()")}}
 - {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/L_opérateur_get", "get")}}
-- {{jsxref("Operators/L_opérateur_set", "set")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - [Exemples supplémentaires utilisant `Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty/Exemples_supplémentaires)
 - {{jsxref("Reflect.defineProperty()")}}

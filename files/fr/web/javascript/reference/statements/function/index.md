@@ -18,7 +18,7 @@ console.log(calcRectArea(5, 6));
 // Expected output: 30
 ```
 
-Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Operators/L_opérateur_function", "expression de fonction","",1)}}.
+Il est également possible de définir des fonctions en utilisant le constructeur {{jsxref("Function")}} et une {{jsxref("Operators/function", "expression de fonction","",1)}}.
 
 ## Syntaxe
 
@@ -39,7 +39,7 @@ function nom([param1[, param2,[…, paramN]]]) {
 
 Une fonction créée via une déclaration de fonction est un objet `Function` et possède toutes les caractéristiques (propriétés, méthodes et comportement) d'un objet `Function`. Voir la page {{jsxref("Function")}} pour plus d'informations sur ces caractéristiques.
 
-Une fonction peut également être créée en utilisant une expression (voir {{jsxref("Operators/L_opérateur_function", "les expressions de fonctions","",1)}}).
+Une fonction peut également être créée en utilisant une expression (voir {{jsxref("Operators/function", "les expressions de fonctions","",1)}}).
 
 Par défaut, une fonction renvoie {{jsxref("undefined")}}. Pour renvoyer une autre valeur en résultat, une fonction doit utiliser une instruction {{jsxref("Statements/return", "return")}} qui définit la valeur à retourner.
 
@@ -113,7 +113,7 @@ function remontée() {
 }
 ```
 
-On notera que les {{jsxref("Operators/L_opérateur_function", "expressions de fonctions","",1)}} ne sont pas remontées :
+On notera que les {{jsxref("Operators/function", "expressions de fonctions","",1)}} ne sont pas remontées :
 
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
@@ -145,9 +145,9 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 
 ## Voir aussi
 
-- {{jsxref("Fonctions", "Les fonctions","",1)}}
+- {{jsxref("Functions", "Les fonctions","",1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Operators/L_opérateur_function", "Les expressions de fonction","",1)}}
+- {{jsxref("Operators/function", "Les expressions de fonction","",1)}}
 - L'instruction {{jsxref("Statements/function*", "function*")}}
 - L'expression {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées","",1)}}

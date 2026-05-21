@@ -126,6 +126,6 @@ console.log(résultat); // "toto"
 ## Voir aussi
 
 - [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- L'instruction {{jsxref("Instruction/function*", "function*")}}
+- L'instruction {{jsxref("Statements/function*", "function*")}}
 - L'expression {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Operators/yield", "yield")}}

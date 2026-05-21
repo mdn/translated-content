@@ -86,7 +86,7 @@ with (Math) {
 
 ## Voir aussi
 
-- {{jsxref("Statements/bloc", "Bloc d'instructions","",1)}}
+- {{jsxref("Statements/block", "Bloc d'instructions","",1)}}
 - {{jsxref("Strict_mode","Mode strict","",1)}}
 - {{jsxref("Symbol.unscopables")}}
 - {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}

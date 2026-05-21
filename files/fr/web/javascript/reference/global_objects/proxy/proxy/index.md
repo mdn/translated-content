@@ -24,19 +24,19 @@ Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le c
 - {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
   - : Une trappe pour {{jsxref("Object.defineProperty")}}.
 - {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Operators/L_opérateur_in", "in")}}.
+  - : Une trappe pour l'opérateur {{jsxref("Operators/in", "in")}}.
 - {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
   - : Une trappe pour l'accès aux valeurs des propriétés.
 - {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
   - : Une trappe pour la définition des valeurs des propriétés.
 - {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Operators/L_opérateur_delete", "delete")}}.
+  - : Une trappe pour l'opérateur {{jsxref("Operators/delete", "delete")}}.
 - {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
   - : Une trappe pour {{jsxref("Object.getOwnPropertyNames")}} et {{jsxref("Object.getOwnPropertySymbols")}}.
 - {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
   - : Une trappe pour l'appel d'une fonction.
 - {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
-  - : Une trappe pour l'opérateur {{jsxref("Operators/L_opérateur_new", "new")}}.
+  - : Une trappe pour l'opérateur {{jsxref("Operators/new", "new")}}.
 
 Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#proxy).
 

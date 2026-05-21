@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Statements/bloc","bloc","",1)}} d'instructions).
+L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Statements/block","bloc","",1)}} d'instructions).
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -41,7 +41,7 @@ Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne s
 
 ### Les propriétés ajoutées, modifiées ou supprimées
 
-Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Operators/L_opérateur_delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
+Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Operators/delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
 
 Si une propriété est modifiée dans une des itérations de la boucle et que la boucle itère ensuite sur cette propriété, sa valeur sera celle qui a été modifiée. Une propriété qui a été supprimée avant que la boucle n'itère sur celle-là ne sera pas dans la boucle. Les propriétés qui ont été ajoutées à l'objet pendant la boucle peuvent être ou ne pas être pris en compte.
 
@@ -116,4 +116,4 @@ for (var prop in obj) {
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Statements/for_each...in", "for each...in")}} {{deprecated_inline}} : une instruction semblable, dépréciée, qui parcourt les valeurs des propriétés d'un objet plutôt que les noms.
+- {{jsxref("Deprecated_and_obsolete_features", "for each...in")}} {{deprecated_inline}} : une instruction semblable, dépréciée, qui parcourt les valeurs des propriétés d'un objet plutôt que les noms.

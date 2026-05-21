@@ -58,7 +58,7 @@ f();
 
 ## Description
 
-Deux facteurs sont à l'origine de la conception des fonctions fléchées&nbsp;: une syntaxe plus courte et l'absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu'une fonction fléchée ne lie pas son propre {{jsxref("Operators/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Functions/arguments","arguments")}}, {{jsxref("Operators/super","super")}} ou {{jsxref("Operators/new.target","new.target")}}).
+Deux facteurs sont à l'origine de la conception des fonctions fléchées&nbsp;: une syntaxe plus courte et l'absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu'une fonction fléchée ne lie pas son propre {{jsxref("Operators/this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Functions/arguments","arguments")}}, {{jsxref("Operators/super","super")}} ou {{jsxref("Operators/new.target","new.target")}}).
 
 > [!NOTE]
 > Voir aussi l'article sur les fonctions fléchées présent sur <https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees> (l'article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
@@ -88,7 +88,7 @@ var a3 = a.map((s) => s.length);
 
 ### Pas de `this` lié à la fonction
 
-Jusqu'a l'apparition des fonctions fléchées, chaque nouvelle fonction définissait son propre {{jsxref("Operators/L_opérateur_this","this")}} :
+Jusqu'a l'apparition des fonctions fléchées, chaque nouvelle fonction définissait son propre {{jsxref("Operators/this","this")}} :
 
 - un nouvel objet dans le cas d'un constructeur
 - `undefined` dans les appels de fonctions en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)

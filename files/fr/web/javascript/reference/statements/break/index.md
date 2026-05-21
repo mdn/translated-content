@@ -34,7 +34,7 @@ break [label];
 
 ## Description
 
-L'instruction `break` peut être utilisée avec une étiquette (_label_) optionnelle qui permet d'interrompre une instruction étiquetée. L'instruction `break` doit être imbriquée au sein de l'instruction référencée. L'instruction étiquetée peut correspondre à n'importe quel instruction de {{jsxref("Statements/bloc", "bloc","",1)}} ; il n'est pas nécessaire qu'elle soit précédée par une instruction de boucle.
+L'instruction `break` peut être utilisée avec une étiquette (_label_) optionnelle qui permet d'interrompre une instruction étiquetée. L'instruction `break` doit être imbriquée au sein de l'instruction référencée. L'instruction étiquetée peut correspondre à n'importe quel instruction de {{jsxref("Statements/block", "bloc","",1)}} ; il n'est pas nécessaire qu'elle soit précédée par une instruction de boucle.
 
 Une instruction `break`, suivie ou non d'une étiquette, ne peut pas être utilisée dans le corps d'une fonction appartenant elle-même à une boucle, à une instruction {{jsxref("Statements/switch")}} ou à une instruction `label`.
 

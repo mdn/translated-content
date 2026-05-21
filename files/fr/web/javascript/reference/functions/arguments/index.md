@@ -11,7 +11,7 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 > Si vous pouvez utiliser les fonctionnalités ECMAScript 2015/ES6, il est préférable de manipuler les arguments avec [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters).
 
 > [!NOTE]
-> Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Functions/arguments.length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
+> Par « objet semblable à un tableau », on indique que l'objet `arguments` possède une propriété {{jsxref("Functions/arguments/length", "length")}} et que ses propriétés sont indexées à partir de 0 mais qu'il ne possède aucune des méthodes natives de {{jsxref("Array")}} telles que {{jsxref("Array.forEach", "forEach()")}} et {{jsxref("Array.map", "map()")}}.
 
 {{InteractiveExample("JavaScript Demo: Functions Arguments")}}
 
@@ -92,7 +92,7 @@ Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus 
 
 ### Utiliser `typeof` sur `arguments`
 
-L'opérateur {{jsxref("Operators/L_opérateur_typeof","typeof")}} renvoie `"object"` lorsqu'on l'utilise sur `arguments`
+L'opérateur {{jsxref("Operators/typeof","typeof")}} renvoie `"object"` lorsqu'on l'utilise sur `arguments`
 
 ```js
 console.log(typeof arguments); // "object"

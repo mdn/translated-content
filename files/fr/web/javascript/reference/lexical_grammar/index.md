@@ -136,7 +136,7 @@ Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'env
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/default", "default")}}
-- {{jsxref("Operators/L_opérateur_delete", "delete")}}
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -148,16 +148,16 @@ Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'env
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Statements/for...in", "in")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/L_opérateur_new", "new")}}
+- {{jsxref("Operators/new", "new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/L_opérateur_this", "this")}}
+- {{jsxref("Operators/this", "this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
-- {{jsxref("Operators/L_opérateur_typeof", "typeof")}}
+- {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Statements/var", "var")}}
-- {{jsxref("Operators/L_opérateur_void", "void")}}
+- {{jsxref("Operators/void", "void")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Operators/yield","yield")}}
