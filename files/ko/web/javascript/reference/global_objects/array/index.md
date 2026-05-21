@@ -266,7 +266,7 @@ f("a", "b"); // 'a+b'
 
 ## 정적 속성
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : `Array` 생성자를 반환합니다.
 
 ## 정적 메서드
@@ -286,7 +286,7 @@ f("a", "b"); // 'a+b'
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : 인스턴스 객체를 생성한 생성자 함수입니다. `Array` 인스턴스의 경우, 초기 값은 {{jsxref("Array/Array", "Array")}} 생성자입니다.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : ES2015 버전 이전의 ECMAScript 표준에 포함되지 않았으며 [`with`](/ko/docs/Web/JavaScript/Reference/Statements/with) 문 바인딩 목적으로 무시되는 속성 이름을 포함합니다.
 
 아래 속성은 각 `Array` 인스턴스의 고유 속성입니다.

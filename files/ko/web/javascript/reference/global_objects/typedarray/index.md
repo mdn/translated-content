@@ -101,7 +101,7 @@ new TypedArray(buffer, byteOffset, length);
   - : `TypedArray` 객체 요소의 크기를 숫자 값으로 반환합니다.
 - {{jsxref("TypedArray.name")}}
   - : 생성자 이름을 문자열로 반환합니다(예: `"Int8Array"`).
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : 파생된 객체를 만드는 데 사용되는 생성자 함수입니다.
 - {{jsxref("TypedArray")}}
   - : `TypedArray` 객체의 프로토타입.
@@ -182,7 +182,7 @@ new TypedArray(buffer, byteOffset, length);
   - : 배열 및 해당 요소를 나타내는 지역화된 문자열을 반환합니다. {{jsxref("Array.prototype.toLocaleString()")}}도 참조하시기 바랍니다.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : 배열과 해당 요소를 나타내는 문자열을 반환합니다. {{jsxref("Array.prototype.toString()")}}도 참조하시기 바랍니다.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
   - : 배열의 각 인덱스에 대한 값을 포함하는 새 **배열 반복기** 객체를 반환합니다.
 
 ## 예제

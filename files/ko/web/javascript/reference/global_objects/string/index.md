@@ -262,7 +262,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String/Symbol.iterator")}}
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
