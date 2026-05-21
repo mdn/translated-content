@@ -172,7 +172,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 
     .
 
-- {{jsxref("Math.random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Retorna um número pseudo-aleatório entre 0 e 1.
 - {{jsxref("Math.round", "Math.round(x)")}}
   - : Retorna o valor arrendodado de `x`, para o valor inteiro mais próximo.

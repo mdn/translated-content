@@ -98,14 +98,14 @@ A tabela à seguir sumariza as propriedades do objeto `Number.`
 | {{jsxref("Number.MIN_SAFE_INTEGER")}}  | Mínimo safe integer em JavaScript.                                                                         |
 | {{jsxref("Number.MAX_SAFE_INTEGER")}}  | Máximo safe integer em JavaScript.                                                                         |
 
-| Método                               | Descrição                                                                                                                                       |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | Analisa um argumento string e retorna um número float. O mesmo que a função global {{jsxref("parseFloat", "parseFloat()")}}.                    |
-| {{jsxref("Number.parseInt()")}}      | Analisa um argumento string e retorna um inteiro da raiz ou base especificada. O mesmo que a função global{{jsxref("parseInt", "parseInt()")}}. |
-| {{jsxref("Number.isFinite()")}}      | Determina se o valor passado é um número finito.                                                                                                |
-| {{jsxref("Number.isInteger()")}}     | Determina se o valor passado é um inteiro.                                                                                                      |
-| {{jsxref("Number.isNaN()")}}         | Determina se o valor passado é {{jsxref("NaN")}}. A versão mais robusta da original {{jsxref("isNaN", "isNaN()")}}.                             |
-| {{jsxref("Number.isSafeInteger()")}} | Determina se o valor passado é um safe integer.                                                                                                 |
+| Método                               | Descrição                                                                                                                           |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Analisa um argumento string e retorna um número float. O mesmo que a função global {{jsxref("parseFloat()")}}.                      |
+| {{jsxref("Number.parseInt()")}}      | Analisa um argumento string e retorna um inteiro da raiz ou base especificada. O mesmo que a função global{{jsxref("parseInt()")}}. |
+| {{jsxref("Number.isFinite()")}}      | Determina se o valor passado é um número finito.                                                                                    |
+| {{jsxref("Number.isInteger()")}}     | Determina se o valor passado é um inteiro.                                                                                          |
+| {{jsxref("Number.isNaN()")}}         | Determina se o valor passado é {{jsxref("NaN")}}. A versão mais robusta da original {{jsxref("isNaN()")}}.                          |
+| {{jsxref("Number.isSafeInteger()")}} | Determina se o valor passado é um safe integer.                                                                                     |
 
 O protótipo `Number` provê métodos para resgatar informações de objetos `Number` em vários formatos. A tabela a seguir sumariza os métodos de `Number.prototype`.
 

@@ -27,13 +27,13 @@ Number.parseFloat(string)
 
 ## Descrição
 
-Este método tem a mesma funcionalidade do método global: {{jsxref("parseFloat", "parseFloat()")}}
+Este método tem a mesma funcionalidade do método global: {{jsxref("parseFloat()")}}
 
 ```
 Number.parseFloat === parseFloat; // true
 ```
 
-Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exemplos.
+Por favor veja {{jsxref("parseFloat()")}} para mais detalhes e exemplos.
 
 ## Especificações
 
@@ -46,4 +46,4 @@ Por favor veja {{jsxref("parseFloat", "parseFloat()")}} para mais detalhes e exe
 ## Veja também
 
 - O objeto {{jsxref("Number")}} ao qual o método parseFloat pertence.
-- O método global {{jsxref("parseFloat", "parseFloat()")}}.
+- O método global {{jsxref("parseFloat()")}}.

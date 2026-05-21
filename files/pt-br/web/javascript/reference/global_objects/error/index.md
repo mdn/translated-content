@@ -45,7 +45,7 @@ Além do construtor genérico de `Error`, existem outros seis construtores princ
 - {{jsxref("TypeError")}}
   - : Cria uma instância representando um erro que ocorre quando uma variável ou parâmetro não é de um tipo válido.
 - {{jsxref("URIError")}}
-  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("encodeURI", "encodeURI()")}} ou {{jsxref("decodeURI", "decodeURI()")}}.
+  - : Cria uma instância representando um erro que ocorre quando são passados parâmetros inválidos para {{jsxref("encodeURI()")}} ou {{jsxref("decodeURI()")}}.
 
 ## Propriedades
 

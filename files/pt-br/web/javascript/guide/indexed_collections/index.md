@@ -447,7 +447,7 @@ Linha 3: [3,0] [3,1] [3,2] [3,3]
 
 ### Arrays e expressões regulares
 
-Quando um array é o resultado de uma equivalência entre uma expressão regular e um string, o array retorna propriedades e elementos que disponibilizam a informação sobre a correspondência. Um array é o valor retornado de {{jsxref("RegExp.exec","RegExp.exec()")}}, {{jsxref("String.match","String.match()")}}, e {{jsxref("String.split","String.split()")}}. Para informações sobre o uso de arrays com expressões regulares, veja [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
+Quando um array é o resultado de uma equivalência entre uma expressão regular e um string, o array retorna propriedades e elementos que disponibilizam a informação sobre a correspondência. Um array é o valor retornado de {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}}, e {{jsxref("String.split()")}}. Para informações sobre o uso de arrays com expressões regulares, veja [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Trabalhando com objetos array-like
 

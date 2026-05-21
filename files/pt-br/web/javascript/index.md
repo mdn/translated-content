@@ -40,7 +40,7 @@ Vá para a [Área de aprendizado de JavaScript](/pt-BR/docs/conflicting/Learn_we
 - [Estruturas de dados do JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)
   - : Um resumo das estruturas de dados disponíveis em JavaScript.
 - [Comparações de igualdade e uniformidade](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : O JavaScript fornece três operações diferentes para comparar valores: igualdade estrita utilizando `===`, igualdade ampla usando `==` e o método {{jsxref("Object.is", "Object.is()")}}.
+  - : O JavaScript fornece três operações diferentes para comparar valores: igualdade estrita utilizando `===`, igualdade ampla usando `==` e o método {{jsxref("Object.is()")}}.
 
 ### Avançado
 
