@@ -9,7 +9,7 @@ l10n:
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 **`gamma`** は {{domxref("DeviceOrientationEvent")}} インターフェイスのプロパティで、 Y 軸における端末の回転、つまり端末が左右に傾いている度数を `-90` から `90` の範囲で返します。
-詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
+詳しくは[方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
 
 ## 値
 
@@ -27,5 +27,5 @@ l10n:
 
 - {{ domxref("DeviceOrientationEvent") }}
 - [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} イベント

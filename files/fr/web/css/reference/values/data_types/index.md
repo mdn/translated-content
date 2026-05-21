@@ -140,7 +140,7 @@ Ces types de données sont utilisés dans les calculs de [fonction mathématique
 
 ## Types de données de forme
 
-Les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [bordures et décorations de boîtes CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations) définissent des types de données de forme&nbsp;:
+Les modules [formes CSS](/fr/docs/Web/CSS/Guides/Shapes) et [bordures et décorations de boîtes CSS](/fr/docs/Web/CSS/Guides/Borders_and_box_decorations) définissent des types de données de forme&nbsp;:
 
 - {{CSSxRef("&lt;basic-shape&gt;")}}
   - : Décrit les fonctions de forme utilisées dans les propriétés {{CSSxRef("clip-path")}}, {{CSSxRef("shape-outside")}} et {{CSSxRef("offset-path")}}.
