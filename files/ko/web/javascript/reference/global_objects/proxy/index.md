@@ -390,7 +390,7 @@ console.log(products.latestBrowser);
 
 ### 속성으로 배열 아이템 객체 찾기
 
-이 프록시는 일부 유틸리티 기능으로 배열을 확장합니다. 보시다시피 {{jsxref("Object.defineProperties", "Object.defineProperties()")}}를 사용하지 않고도 속성을 유연하게 "정의"할 수 있습니다. 이 예제는 해당 셀로 테이블 행을 찾는 데 적용할 수 있습니다. 이 경우 대상은 {{domxref("HTMLTableElement.rows", "table.rows")}}가 됩니다.
+이 프록시는 일부 유틸리티 기능으로 배열을 확장합니다. 보시다시피 {{jsxref("Object.defineProperties()")}}를 사용하지 않고도 속성을 유연하게 "정의"할 수 있습니다. 이 예제는 해당 셀로 테이블 행을 찾는 데 적용할 수 있습니다. 이 경우 대상은 {{domxref("HTMLTableElement.rows", "table.rows")}}가 됩니다.
 
 ```js
 const products = new Proxy(

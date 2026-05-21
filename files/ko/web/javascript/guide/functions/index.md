@@ -725,10 +725,10 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 - {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
   - : **`uneval()`** 메소드는 {{jsxref("Object")}}의 소스코드를 표현하는 문자열을 만듭니다.
 
-- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isFinite()")}}
   - : 전역 **`isFinite()`** 함수는 전달받은 값이 유한한지 결정합니다. 만약 필요하다면, 매개변수는 첫번째로 숫자로 변환됩니다.
 
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}
   - : **`isNaN()`** 함수는 {{jsxref("NaN")}}인지 아닌지 결정합니다.
     > [!NOTE]
     > `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) 규칙을 가지고 있습니다.
@@ -737,28 +737,28 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
     >
     > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
 
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}
   - **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
   - **`parseInt()`** 함수는 문자열 인수 값을 수학적인 수 체계에 따라 해석하여 특정한 진법의 정수를 반환합니다.
 
-- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("decodeURI()")}}
   - **`decodeURI()`** 함수는 사전에 {{jsxref("encodeURI")}}을 통해 만들어지거나 비슷한 과정을 통해 만들어진 URI(Uniform Resource Identifier) 를 해독합니다.
 
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}
   - **`decodeURIComponent()`** 함수는 인코딩으로 이전에 생성된 URI({{jsxref("encodeURIComponent")}})를 디코딩합니다. URI(Uniform Resource Identifier) 또는 유사한 루틴을 사용합니다.
 
-- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURI()")}}
   - **`encodeURI()`** 메소드는 URI(Uniform Resource Identifier)를 각 인스턴스의 특정한 문자를 한 개, 두 개, 세 개 또는 네 개의 UTF-8인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다. (두 "surrogate"문자로 구성된 문자들은 오직 네 개의 연속된 확장문자 입니다)
 
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("encodeURIComponent()")}}
   - **`encodeURIComponent()`** 메소드는 URI(Uniform Resource Identifier) 컴포넌트를 각 인스턴스의 특정한 문자를 한개, 두 개, 세 개 또는 네 개의 UTF-8 인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다.(두 "surrogate"문자로 구성된 문자들은 오직 네개의 연속된 확장문자 입니다.)
 
-- {{jsxref("escape", "escape()")}} {{deprecated_inline}}
+- {{jsxref("escape()")}} {{deprecated_inline}}
   - 곧 사라질 **`escape()`** 메소드는 한 문자열에서 특정 문자들이 16진 확장 비트열로 바뀌어진 문자열로 계산합니다. {{jsxref("encodeURI")}} 또는 {{jsxref("encodeURIComponent")}} 를 사용하세요.
 
-- {{jsxref("unescape", "unescape()")}} {{deprecated_inline}}
-  - 곧 사라질 **`unescape()`** 메소드는 문자열에서 확장 비트열이 확장 비트열이 나타내는 문자로 바뀌어진 문자열로 계산합니다. {{jsxref("escape")}}에서 확장 비트열이 소개될 것입니다. `unescape()` 메소드가 곧 사라지기 때문에, {{jsxref("decodeURI", "decodeURI()")}} or {{jsxref("decodeURIComponent")}} 를 대신 사용하세요.
+- {{jsxref("unescape()")}} {{deprecated_inline}}
+  - 곧 사라질 **`unescape()`** 메소드는 문자열에서 확장 비트열이 확장 비트열이 나타내는 문자로 바뀌어진 문자열로 계산합니다. {{jsxref("escape")}}에서 확장 비트열이 소개될 것입니다. `unescape()` 메소드가 곧 사라지기 때문에, {{jsxref("decodeURI()")}} or {{jsxref("decodeURIComponent")}} 를 대신 사용하세요.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

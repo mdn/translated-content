@@ -97,7 +97,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
   - : 0개 이상의 인수에서 제일 작은 수를 반환합니다.
 - {{jsxref("Math.pow", "Math.pow(x, y)")}}
   - : x의 y 제곱을 반환합니다.
-- {{jsxref("Math.random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : 0과 1 사이의 난수를 반환합니다.
 - {{jsxref("Math.round", "Math.round(x)")}}
   - : 숫자에서 가장 가까운 정수를 반환합니다.

@@ -72,9 +72,9 @@ Number(undefined); // NaN
 - {{jsxref("Number.isSafeInteger()")}}
   - : 주어진 값이 안전한 정수(`-(2^53 - 1)`과 `2^53 - 1` 사이의 정수)인지 확인합니다.
 - {{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}
-  - : 전역 객체 {{jsxref("parseFloat", "parseFloat()")}}와 동일한 값입니다.
+  - : 전역 객체 {{jsxref("parseFloat()")}}와 동일한 값입니다.
 - {{jsxref("Number.parseInt()", "Number.parseInt(<var>string</var>, [<var>radix</var>])")}}
-  - : 전역 객체 {{jsxref("parseInt", "parseInt()")}}와 동일한 값입니다.
+  - : 전역 객체 {{jsxref("parseInt()")}}와 동일한 값입니다.
 
 ## 인스턴스 메소드
 

@@ -27,17 +27,17 @@ slug: Web/JavaScript/Reference/Global_Objects
 객체에 붙지 않고 전역으로 호출하는 함수로, 반환 값을 호출자에게 바로 반환합니다.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("isFinite", "isFinite()")}}
-- {{JSxRef("isNaN", "isNaN()")}}
-- {{JSxRef("parseFloat", "parseFloat()")}}
-- {{JSxRef("parseInt", "parseInt()")}}
-- {{JSxRef("encodeURI", "encodeURI()")}}
-- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("decodeURI", "decodeURI()")}}
-- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
 - **Deprecated**
-  - {{JSxRef("escape", "escape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("unescape", "unescape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("unescape()")}} {{Deprecated_Inline}}
 
 ### 기초 객체
 

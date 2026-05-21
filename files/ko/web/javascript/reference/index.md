@@ -22,14 +22,14 @@ slug: Web/JavaScript/Reference
 ### 함수 속성
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("isFinite", "isFinite()")}}
-- {{JSxRef("isNaN", "isNaN()")}}
-- {{JSxRef("parseFloat", "parseFloat()")}}
-- {{JSxRef("parseInt", "parseInt()")}}
-- {{JSxRef("decodeURI", "decodeURI()")}}
-- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("encodeURI", "encodeURI()")}}
-- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
 
 ### 기초 객체
 
