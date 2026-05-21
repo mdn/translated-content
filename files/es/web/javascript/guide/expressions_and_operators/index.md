@@ -69,7 +69,7 @@ También hay operadores de asignación compuestos que son una abreviatura de las
 | {{JSxRef("Operators/Bitwise_OR_assignment", "Asignación OR bit a bit")}}                                       | `x \|= y`          | `x = x \| y`     |
 | {{JSxRef("Operators/Logical_AND_assignment", "Asignación AND lógico")}}                                        | `x &&= y`          | `x && (x = y)`   |
 | {{JSxRef("Operators/Logical_OR_assignment", "Asignación OR lógico")}}                                          | `x \|\|= y`        | `x \|\| (x = y)` |
-| {{JSxRef("Operators/Logical_nullish_assignment", "Asignación de anulación lógica")}}                           | `x ??= y`          | `x ?? (x = y)`   |
+| {{JSxRef("Operators/Nullish_coalescing_assignment", "Asignación de anulación lógica")}}                        | `x ??= y`          | `x ?? (x = y)`   |
 
 #### Valor de retorno y encadenamiento
 
@@ -95,7 +95,7 @@ Al encadenar estas expresiones, cada asignación se evalúa de **derecha a izqui
 
 #### Desestructuración
 
-Para asignaciones más complejas, la sintaxis de {{JSxRef("Operators/Destructuring_assignment", "asignación de desestructuración")}} es una expresión de JavaScript que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.
+Para asignaciones más complejas, la sintaxis de {{JSxRef("Operators/Destructuring", "asignación de desestructuración")}} es una expresión de JavaScript que hace posible extraer datos de arreglos u objetos usando una sintaxis que refleja la construcción de arreglos y objetos literales.
 
 ```js
 var foo = ["one", "two", "three"];
@@ -118,16 +118,16 @@ var var1 = 3;
 var var2 = 4;
 ```
 
-| Operador                                                                                                | Descripción                                                                                                                                                                   | Ejemplos que devuelven `true`              |
-| ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
-| {{JSxRef("Operators/Comparison_Operators", "Igual", "#Igualdad")}} (`==`)                               | Devuelve `true` si los operandos son iguales.                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
-| {{JSxRef("Operators/Comparison_Operators", "No es igual", "#Desigualdad")}} (`!=`)                      | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
-| {{JSxRef("Operators/Comparison_Operators", "Estrictamente igual", "#Identidad")}} (`===`)               | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                               |
-| {{JSxRef("Operators/Comparison_Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)           | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
-| {{JSxRef("/Operadores/Comparison_Operators", "Mayor que", "#Mayor_que_el_operador")}} (`>`)             | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                    | `var2 > var1 "12" > 2`                     |
-| {{JSxRef("Operators/Comparison_Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`) | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                            | `var2 >= var1 var1 >= 3`                   |
-| {{JSxRef("Operators/Comparison_Operators", "Menor que", "#Operador_menor_que")}} (`<`)                  | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
-| {{JSxRef("Operators/Comparison_Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)     | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                            | `var1 <= var2 var2 <= 5`                   |
+| Operador                                                                                    | Descripción                                                                                                                                                                   | Ejemplos que devuelven `true`              |
+| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| {{JSxRef("Operators", "Igual", "#Igualdad")}} (`==`)                                        | Devuelve `true` si los operandos son iguales.                                                                                                                                 | `3 == var1`<br>`"3" == var1`<br>`3 == '3'` |
+| {{JSxRef("Operators", "No es igual", "#Desigualdad")}} (`!=`)                               | Devuelve `true` si los operandos _no_ son iguales.                                                                                                                            | `var1 != 4`<br>`var2 != "3"`               |
+| {{JSxRef("Operators", "Estrictamente igual", "#Identidad")}} (`===`)                        | Devuelve `true` si los operandos son iguales y del mismo tipo. Consulta también {{JSxRef("Object.is")}} y {{JSxRef("Equality_comparisons_and_sameness", "similitud en JS")}}. | `3 === var1`                               |
+| {{JSxRef("Operators", "Desigualdad estricta", "#No_Identidad")}} (`!==`)                    | Devuelve `true` si los operandos son del mismo tipo pero no iguales, o son de diferente tipo.                                                                                 | `var1 !== "3"`<br>`3 !== '3'`              |
+| {{JSxRef("/Operadores/Comparison_Operators", "Mayor que", "#Mayor_que_el_operador")}} (`>`) | Devuelve `true` si el operando izquierdo es mayor que el operando derecho.                                                                                                    | `var2 > var1 "12" > 2`                     |
+| {{JSxRef("Operators", "Mayor o igual que", "#Operador_mayor_que_o_igual")}} (`>=`)          | Devuelve `true` si el operando izquierdo es mayor o igual que el operando derecho.                                                                                            | `var2 >= var1 var1 >= 3`                   |
+| {{JSxRef("Operators", "Menor que", "#Operador_menor_que")}} (`<`)                           | Devuelve `true` si el operando izquierdo es menor que el operando derecho.                                                                                                    | `var1 < var2`<br>`"2" < 12`                |
+| {{JSxRef("Operators", "Menor o igual", "#Operador_menor_que_o_igual")}} (`<=`)              | Devuelve `true` si el operando izquierdo es menor o igual que el operando derecho.                                                                                            | `var1 <= var2 var2 <= 5`                   |
 
 > [!NOTE]
 > (**=>**) no es un operador, sino la notación para {{JSxRef("Functions/Arrow_functions", "Funciones flecha")}}.
@@ -261,7 +261,7 @@ Debido a que las expresiones lógicas se evalúan de izquierda a derecha, se pru
 
 Las reglas de la lógica garantizan que estas evaluaciones sean siempre correctas. Ten en cuenta que la parte _anything_ de las expresiones anteriores no se evalúa, por lo que los efectos secundarios de hacerlo no surten efecto.
 
-Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing_operator", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Global_Objects/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("Global_Objects/undefined", "undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
+Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Global_Objects/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("Global_Objects/undefined", "undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
 
 ### Operadores de cadena
 

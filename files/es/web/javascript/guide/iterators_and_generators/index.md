@@ -110,7 +110,7 @@ for (let valor of miIterable) {
 
 ### Sintaxis que esperan objetos iterables
 
-Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Statements/for...of","for-of")}}, {{jsxref("Operators/Spread_operator","el operador de propagación")}}, {{jsxref("Operators/yield*","yield*")}}, y {{jsxref("Operators/Destructuring_assignment","la asignación por desestructuración","",1)}}.
+Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Statements/for...of","for-of")}}, {{jsxref("Operators/Spread_syntax","el operador de propagación")}}, {{jsxref("Operators/yield*","yield*")}}, y {{jsxref("Operators/Destructuring","la asignación por desestructuración","",1)}}.
 
 ```js
 for (let valor of ["a", "b", "c"]) {

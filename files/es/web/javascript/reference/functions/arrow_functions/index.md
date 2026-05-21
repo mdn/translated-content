@@ -159,7 +159,7 @@ Se admiten los {{JSxRef("Functions/Parametros_por_defecto", "parámetros predete
 (a = 400, b = 20, c) => expression;
 ```
 
-{{JSxRef("Operators/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:
+{{JSxRef("Operators/Destructuring", "Desestructuración")}} dentro de los parámetros admitidos:
 
 ```js
 ([a, b] = [10, 20]) => a + b; // el resultado es 30

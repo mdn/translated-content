@@ -206,10 +206,10 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
   - : Asignación de `AND` lógico.
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
   - : Asignación de `OR` lógico.
-- {{jsxref("Operators/Logical_nullish_assignment", "??=")}}
+- {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : Asignación de anulación lógica.
-- {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
+  {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
   - : La desestructuración te permite asignar las propiedades de un arreglo u objeto a variables utilizando una sintaxis que se parece a los arreglos u objetos literales.
 
 ### Operador coma

@@ -105,7 +105,7 @@ for (let item of mySet) console.log(item);
 
 ### Conversión entre arreglo y `Set`
 
-Puedes crear un {{JSxRef("Array")}} a partir de un `Set` usando {{JSxRef("Array.from")}} o el {{JSxRef("Operators/Spread_operator", "operador de propagación")}}. Además, el constructor `Set` acepta un `Array` para convertirlo en la otra dirección.
+Puedes crear un {{JSxRef("Array")}} a partir de un `Set` usando {{JSxRef("Array.from")}} o el {{JSxRef("Operators/Spread_syntax", "operador de propagación")}}. Además, el constructor `Set` acepta un `Array` para convertirlo en la otra dirección.
 
 > [!NOTE]
 > Recuerda que los objetos `Set` almacenan _valores únicos_, por lo que cualquier elemento duplicado de un arreglo se elimina al realizar la conversión.

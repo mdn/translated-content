@@ -266,7 +266,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### Operador condicional (ternario)
 
@@ -289,9 +289,9 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
 
 ### Operador coma
 

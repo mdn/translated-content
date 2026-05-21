@@ -530,7 +530,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Nullish_coalescing_operator","Operador de coalescencia nula (??)","", 1)}}
+        {{jsxref("Operators/Nullish_coalescing","Operador de coalescencia nula (??)","", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… ?? …</code></td>

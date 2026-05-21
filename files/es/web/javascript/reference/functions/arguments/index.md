@@ -157,7 +157,7 @@ let listHTML = list("u", "One", "Two", "Three");
 
 ### Parámetros `rest`, predeterminados y desestructurados
 
-El objeto `arguments` se puede utilizar junto con parámetros {{jsxref("Functions/rest_parameters", "rest")}}, {{jsxref("Functions/Default_parameters", "predeterminados")}} y {{jsxref("Operators/Destructuring_assignment", "desestructurados")}}.
+El objeto `arguments` se puede utilizar junto con parámetros {{jsxref("Functions/rest_parameters", "rest")}}, {{jsxref("Functions/Default_parameters", "predeterminados")}} y {{jsxref("Operators/Destructuring", "desestructurados")}}.
 
 ```js
 function foo(...args) {
