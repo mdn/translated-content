@@ -85,7 +85,7 @@ _変更なし。_
 ### その他
 
 - [プログレッシブ ウェブアプリ](/ja/docs/Web/Progressive_web_apps) の取り組みの一環として、Android 版 Firefox で "ホーム画面に追加" をサポートしました ([Firefox バグ 1212648](https://bugzil.la/1212648))。
-- [WebAssembly](/ja/docs/WebAssembly) に、読み込み時間を最適化する階層型コンパイラー ([Firefox バグ 1277562](https://bugzil.la/1277562)) と、新たなストリーミング API ({{jsxref("WebAssembly.compileStreaming()")}} および {{jsxref("WebAssembly.installStreaming()")}}) を搭載しました ([Firefox バグ 1347644](https://bugzil.la/1347644))。
+- [WebAssembly](/ja/docs/WebAssembly) に、読み込み時間を最適化する階層型コンパイラー ([Firefox バグ 1277562](https://bugzil.la/1277562)) と、新たなストリーミング API ([`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) および [`WebAssembly.installStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/installStreaming)) を搭載しました ([Firefox バグ 1347644](https://bugzil.la/1347644))。
 
 ## ウェブプラットフォームから廃止
 
