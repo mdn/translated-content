@@ -62,7 +62,7 @@ localeCompare(compareString, locales, options);
 ## 성능
 
 큰 배열의 정렬과 같이 대량의 문자열을 비교하는 경우, {{jsxref("Intl/Collator", "Intl.Collator")}} 객체를 작성하고
-해당 {{jsxref("Collator.prototype.compare", "compare")}} 프로퍼티가 제공하는 함수를 사용하는 것이 좋습니다.
+해당 {{jsxref("Intl/Collator/compare", "compare")}} 프로퍼티가 제공하는 함수를 사용하는 것이 좋습니다.
 
 ## 예시
 

@@ -262,11 +262,11 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 
 ## 국제화
 
-{{jsxref("Intl")}} 개체는 ECMA스크립트 국제 API에 언어와 문자열과 숫자서식과 날짜와 시간서식을 제공하는 명칭공간입니다. {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 와 {{jsxref("DateTimeFormat")}} 개체들을 위한 생성자들은 `Intl` 개체의 특성들입니다.
+{{jsxref("Intl")}} 개체는 ECMA스크립트 국제 API에 언어와 문자열과 숫자서식과 날짜와 시간서식을 제공하는 명칭공간입니다. {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, 와 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 개체들을 위한 생성자들은 `Intl` 개체의 특성들입니다.
 
 ### 날짜와 시간서식
 
-{{jsxref("DateTimeFormat")}} 개체는 날짜와 시간을 서식하기에 유용합니다. 다음 코드는 미국에서 쓰이는 영어로 날짜를 서식합니다. (결과는 다른 시간대와 다릅니다)
+{{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} 개체는 날짜와 시간을 서식하기에 유용합니다. 다음 코드는 미국에서 쓰이는 영어로 날짜를 서식합니다. (결과는 다른 시간대와 다릅니다)
 
 ```js
 var msPerDay = 24 * 60 * 60 * 1000;
@@ -289,7 +289,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 ### 숫자 서식
 
-{{jsxref("NumberFormat")}}개체는 통화를 위해 숫자를 서식하는것에 대해 유용하다.
+{{jsxref("Intl/NumberFormat", "NumberFormat")}}개체는 통화를 위해 숫자를 서식하는것에 대해 유용하다.
 
 ```js
 var gasPrice = new Intl.NumberFormat("en-US", {
@@ -310,7 +310,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 ### 조합
 
-{{jsxref("Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
+{{jsxref("Intl/Collator", "Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
 
 예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 "ä", "ö"인것처럼 "ae", "oe"로 확장됐습니다.
 
