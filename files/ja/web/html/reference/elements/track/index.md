@@ -1,14 +1,18 @@
 ---
-title: "<track>: 埋め込みテキストトラック要素"
+title: HTML `<track>` 埋め込みテキストトラック要素
+short-title: <track>
 slug: Web/HTML/Reference/Elements/track
-original_slug: Web/HTML/Element/track
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
-{{HTMLSidebar}}
+**`<track>`** は [HTML](/ja/docs/Web/HTML) の要素で、メディア要素 ({{HTMLElement("audio")}} および {{HTMLElement("video")}}) の子として使用します。
+それぞれの track 要素では、メディア要素と並行して表示できる時間指定テキストトラック（または時間ベースのデータ）を指定できます。例えば、動画の上に字幕やクローズドキャプションを重ねたり、音声トラックと共に表示したりすることができます。
 
-**`<track>`** は [HTML](/ja/docs/Web/HTML) の要素で、メディア要素 ({{HTMLElement("audio")}} および {{HTMLElement("video")}}) の子として使用します。この要素は自動的に処理される字幕など、時間指定されたテキストトラック (または時系列データ) を指定することができます。トラックは [WebVTT 形式](/ja/docs/Web/API/WebVTT_API) (`.vtt` ファイル) を用います。
+1 つのメディア要素に対して複数のトラックを指定することができ、それぞれに異なる種類の時間指定テキストデータ、あるいは異なるロケール向けに翻訳された時間指定テキストデータを含めることができます。
+使用されるデータは、デフォルトで設定されているトラック、またはユーザーの設定に基づいた種類や翻訳のいずれかとなります。
+
+トラックは [WebVTT 形式](/ja/docs/Web/API/WebVTT_API) (`.vtt` ファイル、Web Video Text Tracks) を用います。
 
 {{InteractiveExample("HTML デモ: &lt;track&gt;", "tabbed-standard")}}
 
@@ -18,6 +22,7 @@ l10n:
     default
     kind="captions"
     srclang="en"
+    label="English"
     src="/shared-assets/misc/friday.vtt" />
   Download the
   <a href="/shared-assets/videos/friday.mp4">MP4</a>
@@ -36,92 +41,38 @@ video::cue {
 }
 ```
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
-          >コンテンツカテゴリー</a
-        >
-      </th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>
-        空要素であるため開始タグは必須、また終了タグを置いてはなりません。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <p>
-          メディア要素、 {{HTMLElement("audio")}} または {{HTMLElement("video")}}
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTrackElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `default`
-  - : この属性は、別の track が適切であるとユーザーの設定が示さない限り有効にすべき track であることを表します。この属性はメディア要素ごとに 1 つの `track` 要素のみで使用できます。
+  - : この属性は、ユーザー設定によって別のトラックが適切であると示されない限り、有効にすべきトラックであることを表します。この属性はメディア要素ごとに 1 つの `track` 要素のみで使用できます。
 - `kind`
-  - : どのように使用するトラックであるかを表します。省略した場合、既定の種類は `subtitles` です。属性に無効な値が含まれている場合は `metadata` を使用します (バージョン 52 より前の Chrome は、無効な値を `subtitles` として扱っていました)。以下のキーワードが利用できます。
+  - : テキストトラックの使用方法を示します。省略された場合、デフォルトの種別は `subtitles` となります。この属性に不正な値が指定された場合、`metadata` が使用されます。
+    以下のキーワードが利用できます。
     - `subtitles`
-      - 字幕は、視聴者が理解できないコンテンツの翻訳を提供します。例えば、英語の映画における英語以外の言語による会話やテキストです。
-      - 字幕には追加コンテンツ、一般的には付加的な背景情報を含む場合があります。例えばスターウォーズの冒頭のテキストや、シーンの日時および場所です。
-
+      - : 字幕です。台詞の文字起こしや翻訳を提供します。英語圏の映画で英語以外の言語が話されたり、テキストが表示されたりする場合など、音は利用できるものの内容が理解できない場合に適しています。字幕には、通常は追加の背景情報といった、追加の内容が含まれることもあります。例えば、スター・ウォーズ映画の冒頭にあるテキストや、シーンの日時や場所などが挙げられます。字幕の情報は、音声と映像を補完するものです。多くの場合、動画自体に埋め込まれていますが、特に映画全体の翻訳の場合など、同時に提供されることもあります。
     - `captions`
-      - クローズドキャプションは書写、あるいは音声の翻訳を提供します。
-      - これは音楽のキューやサウンドエフェクトといった重要な非言語情報を含む場合があります。これはキューのソース (例: 音楽、テキスト、キャラクター) を示すでしょう。
-      - 耳が不自由なユーザーや音声をミュートしている場合に適しています。
-
+      - : クローズドキャプションです。台詞、効果音、関連する音楽、ソース（登場人物や環境など）といった関連する音声情報の文字起こしや翻訳を提供します。これは、音声が利用できない場合や、はっきりと聞き取れない場合（例えば、ミュートされている、周囲の騒音にかき消されている、あるいはユーザーが聴覚障碍者である場合など）に適しています。
     - `descriptions`
-      - テキストによる動画コンテンツの説明です。
-      - 目が不自由なユーザーや動画を視聴できない場合に適しています。
-
+      - : 説明文です。メディアリソースの video 要素を要約したものです。これらは、視覚的な要素が隠れていたり、利用できない、あるいは使用できない場合（例えば、ユーザーが運転中に画面を見ずにアプリケーションを操作している場合や、視覚障害がある場合など）に、音声として合成されることを意図しています。
     - `chapters`
-      - チャプタータイトルは、ユーザーがメディアリソースの操作を行う際に使用することを意図しています。
-
+      - : チャプタータイトルです。ユーザーがメディアリソースの操作を行う際に使用するためのものです。
     - `metadata`
-      - スクリプトが使用するトラック情報です。ユーザーには見えません。
+      - : スクリプトが使用するトラック情報です。ユーザーには見えません。
 
 - `label`
   - : 使用可能なテキストトラックを一覧表示する際にブラウザーが使用する、ユーザーに見せるテキストトラックのタイトルです。
 - `src`
   - : トラック（`.vtt` ファイル）のアドレスです。有効な URL であることが必要です。この属性は定義する必要があり、 URL の値は文書として — `track` 要素の親要素である {{HTMLElement("audio")}} または {{HTMLElement("video")}} が [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を持たない限り — 同じオリジンを持たなければなりません。
 - `srclang`
-  - : テキストデータの言語です。有効な [BCP 47](https://r12a.github.io/app-subtags/) 言語タグであることが必要です。`kind` 属性に `subtitles` を設定した場合は、`srclang` 属性を定義しなければなりません。
+  - : テキストデータの言語です。有効な {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}であることが必要です。`kind` 属性に `subtitles` を設定した場合は、`srclang` 属性を定義しなければなりません。
 
 ## 使用上の注意
 
 ### トラックのデータの種類
 
-`track` 要素でメディアに付加するデータの種類は `kind` 属性で設定します。使用できる値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。この要素は、ユーザーが付加データを要求した際にブラウザーが提供する、時間指定テキストを含むソースファイルを指示します。
+`track` 要素でメディアに付加するデータの種類は `kind` 属性で設定します。使用できる値は `subtitles`, `captions`, `chapters`, `metadata` です。この要素は、ユーザーが付加データを要求した際にブラウザーが提供する、時間指定テキストを含むソースファイルを指示します。
 
 メディア要素は `kind`、`srclang` および `label` が同一の `track` を複数持つことはできません。
 
@@ -129,15 +80,23 @@ video::cue {
 
 配下にある {{domxref("TextTrack")}} は {{domxref("HTMLTrackElement.track", "track")}} プロパティで示され、現在表示されているキューが変更される度に `cuechange` イベントを受信します。これは、このトラックがメディア要素に関連付けられていない場合でも発生します。
 
-このトラックがメディア要素に関連付けられている場合、 {{HTMLElement("track")}} を {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の子として使用すると、 `cuechange` イベントは {{domxref("HTMLTrackElement")}} にも送信されます。
+このトラックがメディア要素に関連付けられている場合、`<track>` を {{HTMLElement("audio")}} または {{HTMLElement("video")}} 要素の子として使用すると、 `cuechange` イベントは {{domxref("HTMLTrackElement")}} にも送信されます。
 
 ```js
-let textTrackElem = document.getElementById("texttrack");
+let textTrackElem = document.getElementById("text-track");
 
 textTrackElem.addEventListener("cuechange", (event) => {
   let cues = event.target.track.activeCues;
 });
 ```
+
+### プログラムでテキストトラックを追加
+
+JavaScript で `<track>` 要素を表すインターフェイスは、{{domxref("HTMLTrackElement")}} です。
+要素に関連付けられたテキストトラックは、{{domxref("HTMLTrackElement.track")}} プロパティから取得でき、その型は {{domxref("TextTrack")}} です。
+
+`TextTrack` オブジェクトは、{{domxref("HTMLVideoElement")}} または {{domxref("HTMLAudioElement")}} 要素に、{{domxref("HTMLMediaElement.addTextTrack()")}} メソッドを使用して追加することもできます。
+メディア要素に関連付けられた `TextTrack` オブジェクトは、{{domxref("TextTrackList")}} に格納され、{{domxref("HTMLMediaElement.textTracks")}} プロパティを使用して取得できます。
 
 ## 例
 
@@ -146,7 +105,6 @@ textTrackElem.addEventListener("cuechange", (event) => {
   <source src="sample.mp4" type="video/mp4" />
   <source src="sample.ogv" type="video/ogv" />
   <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
   <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
@@ -159,6 +117,49 @@ textTrackElem.addEventListener("cuechange", (event) => {
   …
 </video>
 ```
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>空要素であるため開始タグは必須、また終了タグを置いてはいけません。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <p>
+          メディア要素、 {{HTMLElement("audio")}} または {{HTMLElement("video")}}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTrackElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
