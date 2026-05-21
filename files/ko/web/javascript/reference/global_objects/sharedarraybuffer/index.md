@@ -76,12 +76,12 @@ var sab = new SharedArrayBuffer(1024);
 
 - `SharedArrayBuffer.length`
   - : 값이 1인 `SharedArrayBuffer` 생성자의 length 속성입니다.
-- {{jsxref("SharedArrayBuffer.prototype")}}
+- {{jsxref("SharedArrayBuffer")}}
   - : 모든 `SharedArrayBuffer` 객체에 프로퍼티 추가를 가능하게 해줍니다.
 
 ## `SharedArrayBuffer` prototype 객체
 
-모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer.prototype")}} 를 상속합니다.
+모든 `SharedArrayBuffer` 인스턴스는 {{jsxref("SharedArrayBuffer")}} 를 상속합니다.
 
 ### 속성
 

@@ -209,7 +209,7 @@ var slice = Array.prototype.slice;
 slice.apply(arguments);
 ```
 
-`bind()`로, 이는 단순화될 수 있습니다. 다음 조각 코드에서, `slice`는 {{jsxref("Function.prototype")}}의 {{jsxref("Function.prototype.apply()", "apply()")}} 함수에 바인딩된 함수입니다, `this` 값을 {{jsxref("Array.prototype")}}의 {{jsxref("Array.prototype.slice()", "slice()")}} 함수로 설정한 채. 이는 추가 `apply()` 호출은 삭제될 수 있음을 뜻합니다:
+`bind()`로, 이는 단순화될 수 있습니다. 다음 조각 코드에서, `slice`는 {{jsxref("Function")}}의 {{jsxref("Function.prototype.apply()", "apply()")}} 함수에 바인딩된 함수입니다, `this` 값을 {{jsxref("Array")}}의 {{jsxref("Array.prototype.slice()", "slice()")}} 함수로 설정한 채. 이는 추가 `apply()` 호출은 삭제될 수 있음을 뜻합니다:
 
 ```js
 // 이전 예에서 "slice"와 같음
