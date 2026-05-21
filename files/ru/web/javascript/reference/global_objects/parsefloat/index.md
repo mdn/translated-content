@@ -91,8 +91,8 @@ parseFloat("FF2");
 
 ## Смотрите также
 
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
 - {{jsxref("Number.toFixed()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

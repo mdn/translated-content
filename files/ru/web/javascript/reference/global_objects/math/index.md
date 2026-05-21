@@ -92,7 +92,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
   - : Возвращает наименьшее число из своих аргументов.
 - {{jsxref("Math.pow", "Math.pow(a, n)")}}
   - : Возвращает `a` в `n`-й степени, то есть _a_<sup><i>n</i></sup>.
-- {{jsxref("Math.random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Возвращает псевдослучайное число в диапазоне от 0 до 1.
 - {{jsxref("Math.round", "Math.round(x)")}}
   - : Возвращает значение числа, округлённое до ближайшего целого.

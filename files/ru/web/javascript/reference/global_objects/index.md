@@ -30,16 +30,16 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
-- {{jsxref("isFinite", "isFinite()")}}
-- {{jsxref("isNaN", "isNaN()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxref("isFinite()")}}
+- {{jsxref("isNaN()")}}
+- {{jsxref("parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("escape()")}} {{deprecated_inline}}
+- {{jsxref("unescape()")}} {{deprecated_inline}}
 
 ### Фундаментальные объекты
 

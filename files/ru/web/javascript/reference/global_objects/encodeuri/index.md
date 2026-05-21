@@ -84,7 +84,7 @@ function fixedEncodeURI(str) {
 
 ## Смотрите также
 
-- {{jsxref("decodeURI", "decodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}
+- {{jsxref("decodeURIComponent()")}}
 - Base62x

@@ -27,16 +27,16 @@ l10n:
 ### Свойства функции
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("isFinite", "isFinite()")}}
-- {{JSxRef("isNaN", "isNaN()")}}
-- {{JSxRef("parseFloat", "parseFloat()")}}
-- {{JSxRef("parseInt", "parseInt()")}}
-- {{JSxRef("decodeURI", "decodeURI()")}}
-- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("encodeURI", "encodeURI()")}}
-- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("escape", "escape()")}} {{Deprecated_Inline}}
-- {{JSxRef("unescape", "unescape()")}} {{Deprecated_Inline}}
+- {{JSxRef("isFinite()")}}
+- {{JSxRef("isNaN()")}}
+- {{JSxRef("parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("decodeURI()")}}
+- {{JSxRef("decodeURIComponent()")}}
+- {{JSxRef("encodeURI()")}}
+- {{JSxRef("encodeURIComponent()")}}
+- {{JSxRef("escape()")}} {{Deprecated_Inline}}
+- {{JSxRef("unescape()")}} {{Deprecated_Inline}}
 
 ### Фундаментальные объекты
 

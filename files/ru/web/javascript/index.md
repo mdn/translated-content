@@ -47,7 +47,7 @@ slug: Web/JavaScript
 - [Структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures)
   - : Обзор существующих структур данных в JavaScript.
 - [Операторы сравнения и тождественности](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : JavaScript предоставляет три различных оператора сравнения значений: строгое равенство `===`, с приведением типов `==` и метод {{jsxref("Object.is", "Object.is()")}}.
+  - : JavaScript предоставляет три различных оператора сравнения значений: строгое равенство `===`, с приведением типов `==` и метод {{jsxref("Object.is()")}}.
 - [Замыкания](/ru/docs/Web/JavaScript/Guide/Closures)
   - : Замыкания это сочетание функции и лексического окружения в котором она была определена.
 

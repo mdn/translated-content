@@ -70,4 +70,4 @@ myVar = o.valueOf(); // [object Object]
 ## Смотрите также
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
