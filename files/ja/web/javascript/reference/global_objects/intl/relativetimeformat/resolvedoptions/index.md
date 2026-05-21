@@ -3,7 +3,7 @@ title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
 short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
 **`resolvedOptions()`** は {{jsxref("Intl.RelativeTimeFormat")}} のメソッドで、この `RelativeTimeFormat` オブジェクトの初期化時に計算されたロケールや日時や書式化オプションを反映したプロパティを持つ新しいオブジェクトを返します。
