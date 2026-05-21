@@ -119,6 +119,6 @@ console.log(result); // false
 ## Смотрите также
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Operators/delete", "delete")}} operator
 - {{jsxref("Reflect.deleteProperty()")}}
