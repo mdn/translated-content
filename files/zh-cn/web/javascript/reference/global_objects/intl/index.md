@@ -7,17 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 
 ## 属性
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
   - : collators 的构造函数，用于启用对语言敏感的字符串比较的对象。
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
   - : 用于启用语言敏感的日期和时间格式的对象的构造函数。
-- {{jsxref("Global_Objects/ListFormat", "Intl.ListFormat")}}
+- {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
   - : 用于启用语言敏感数字格式的对象的构造函数。
-- {{jsxref("Global_Objects/PluralRules", "Intl.PluralRules")}}
+- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - : 用于启用多种敏感格式和多种语言语言规则的对象的构造函数。
-- {{jsxref("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
   - : Constructor for objects that enable language-sensitive relative time formatting.
 
 ## 方法
