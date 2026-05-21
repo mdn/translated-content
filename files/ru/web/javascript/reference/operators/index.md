@@ -178,29 +178,29 @@ slug: Web/JavaScript/Reference/Operators
 
 Операторы присваивания присваивают значение своему левому операнду, зависящее от значения их правого операнда.
 
-- {{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}
+- {{jsxref("Operators", "=", "#Assignment")}}
   - : Оператор присваивания.
-- {{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
+- {{jsxref("Operators", "*=", "#Multiplication_assignment")}}
   - : Оператор присваивания с умножением.
-- {{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
+- {{jsxref("Operators", "/=", "#Division_assignment")}}
   - : Оператор присваивания с делением.
-- {{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
+- {{jsxref("Operators", "%=", "#Remainder_assignment")}}
   - : Оператор присваивания с взятием остатка от деления.
-- {{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
+- {{jsxref("Operators", "+=", "#Addition_assignment")}}
   - : Оператор присваивания со сложением.
-- {{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
+- {{jsxref("Operators", "-=", "#Subtraction_assignment")}}
   - : Оператор присваивания с вычитанием.
-- {{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{jsxref("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
   - : Оператор присваивания со сдвигом влево.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
   - : Оператор присваивания со знаковым сдвигом вправо.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
   - : Оператор присваивания с беззнаковым сдвигом вправо.
-- {{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{jsxref("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
   - : Оператор присваивания с побитовым И.
-- {{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{jsxref("Operators", "^=", "#Bitwise_XOR_assignment")}}
   - : Оператор присваивания с побитовым ИСКЛЮЧАЮЩИМ ИЛИ.
-- {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{jsxref("Operators", "|=", "#Bitwise_OR_assignment")}}
   - : Оператор присваивания с побитовым ИЛИ.
 - {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
   {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
