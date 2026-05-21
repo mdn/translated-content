@@ -141,7 +141,7 @@ if (num === 0) {
 }
 ```
 
-여기에 설명된 것 이외에도 {{jsxref("eval", "eval()")}} 처럼 {{jsxref("Function")}} 생성자를 사용하여 런타임 중 문자열에서 함수를 만들 수 있습니다.
+여기에 설명된 것 이외에도 {{jsxref("Global_Objects/eval", "eval()")}} 처럼 {{jsxref("Function")}} 생성자를 사용하여 런타임 중 문자열에서 함수를 만들 수 있습니다.
 
 객체의 속성이 함수인 것을 **메서드**(method)라고 합니다. 자세한 내용은 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects) 문서를 참고하세요.
 
@@ -722,7 +722,7 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : **`eval()`** 메소드는 문자열로 표현된 JavaScript 코드를 실행합니다.
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
   - : **`uneval()`** 메소드는 {{jsxref("Object")}}의 소스코드를 표현하는 문자열을 만듭니다.
 
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}

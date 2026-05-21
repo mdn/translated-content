@@ -55,7 +55,7 @@ var obj = { propertyKey; };
 // SyntaxError: missing : after property id
 ```
 
-만약 값 없이 속성을 정의해야 한다면 값으로 {{jsxref("null")}}을 지정할 수 있습니다.
+만약 값 없이 속성을 정의해야 한다면 값으로 {{jsxref("Operators/null", "null")}}을 지정할 수 있습니다.
 
 ```js example-good
 var obj = { propertyKey: null };

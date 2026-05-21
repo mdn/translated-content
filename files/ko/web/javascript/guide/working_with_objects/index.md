@@ -40,7 +40,7 @@ const myCar = {
 };
 ```
 
-객체에 할당되지 않은 속성은{{jsxref("undefined")}}입니다. ({{jsxref("null")}}이 아닙니다)
+객체에 할당되지 않은 속성은{{jsxref("undefined")}}입니다. ({{jsxref("Operators/null", "null")}}이 아닙니다)
 
 ```js
 myCar.color; // undefined

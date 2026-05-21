@@ -270,7 +270,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 ### 문자열 변환
 
-비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("Global_Objects/null", "null")}}과 {{jsxref("Global_Objects/undefined", "undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
+비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("Operators/null", "null")}}과 {{jsxref("Global_Objects/undefined", "undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
 
 ```js
 var outputStrings = [];

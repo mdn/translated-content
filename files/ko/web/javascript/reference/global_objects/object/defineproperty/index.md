@@ -75,7 +75,7 @@ Object.defineProperty(obj, prop, descriptor);
 
 `value`, `writable`, `get`, `set` 키를 모두 지니고 있지 않은 서술자는 데이터 서술자로 간주합니다. 반면 `value` 또는 `writable`을 `get` 또는 `set` 키와 함께 가지고 있으면 오류가 발생합니다.
 
-위의 각 설정이 서술자의 자체 속성일 필요는 없으며, 서술자가 상속하는 속성도 고려합니다. 기본 값을 확실하게 보존하려면 {{jsxref("Object")}}를 먼저 동결하거나, 모든 설정을 직접 명시하거나, {{jsxref("Object.create", "Object.create(null)")}}을 사용해 서술자의 프로토타입이 {{jsxref("null")}}을 가리키도록 하세요.
+위의 각 설정이 서술자의 자체 속성일 필요는 없으며, 서술자가 상속하는 속성도 고려합니다. 기본 값을 확실하게 보존하려면 {{jsxref("Object")}}를 먼저 동결하거나, 모든 설정을 직접 명시하거나, {{jsxref("Object.create", "Object.create(null)")}}을 사용해 서술자의 프로토타입이 {{jsxref("Operators/null", "null")}}을 가리키도록 하세요.
 
 ```js
 // __proto__ 사용
@@ -462,7 +462,7 @@ console.log(myclass.prototype.y); // 1
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.prototype.watch()")}}
 - {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/get", "get")}}
-- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Reflect.defineProperty()")}}

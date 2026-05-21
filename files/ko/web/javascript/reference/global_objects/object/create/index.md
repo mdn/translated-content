@@ -26,7 +26,7 @@ Object.create(proto[, propertiesObject])
 
 ### 예외
 
-`proto` 매개변수가 {{jsxref("null")}} 또는 객체가 아닌 경우 {{jsxref("TypeError")}} 예외가 발생(throw).
+`proto` 매개변수가 {{jsxref("Operators/null", "null")}} 또는 객체가 아닌 경우 {{jsxref("TypeError")}} 예외가 발생(throw).
 
 ## 예
 

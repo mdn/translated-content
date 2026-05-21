@@ -116,7 +116,7 @@ button.addEventListener("click", function (event) {
 
 ## 참조
 
-- {{jsxref("Arrow_functions", "Arrow functions")}}
+- {{jsxref("Functions/Arrow_functions", "Arrow functions")}}
 - {{jsxref("Functions", "Functions and function scope")}}
 - {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function statement")}}

@@ -248,7 +248,7 @@ class Rectangle {
 
 일반적인 프로퍼티와는 다르게 private 필드는 값을 할당하면서 만들어질 수 없습니다.
 
-자세한 내용은 {{jsxref("Classes/Private_class_fields", "private class fields", "", 1)}}를 참조하세요.
+자세한 내용은 {{jsxref("Classes/Private_elements", "private class fields", "", 1)}}를 참조하세요.
 
 ## `extends`를 통한 클래스 상속(sub classing)
 
@@ -419,7 +419,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 - {{jsxref("Statements/class", "class 선언", "", 1)}}
 - {{jsxref("Operators/class", "class 식", "", 1)}}
 - {{jsxref("Classes/Public_class_fields", "Public class fields", "", 1)}}
-- {{jsxref("Classes/Private_class_fields", "Private class fields", "", 1)}}
+- {{jsxref("Classes/Private_elements", "Private class fields", "", 1)}}
 - {{jsxref("Operators/super", "super")}}
 - [블로그 게시물: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [Fields and public/private class properties proposal (stage 3)](https://github.com/tc39/proposal-class-fields)

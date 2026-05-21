@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/getContext
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.getContext()`** 메소드는 캔버스의 드로잉 컨텍스트를 반환합니다. 컨텍스트 식별자가 지원되지 않을 경우 {{jsxref("null")}}을 반환합니다.
+**`HTMLCanvasElement.getContext()`** 메소드는 캔버스의 드로잉 컨텍스트를 반환합니다. 컨텍스트 식별자가 지원되지 않을 경우 {{jsxref("Operators/null", "null")}}을 반환합니다.
 
 동일한 캔버스 엘리먼트에서 나중에 이 메소드를 호출하면 동일한 `contextType` 인자와 함께 메소드가 마지막으로 호출되었을 때 반환된 것과 같이 동일한 드로잉 컨텍스트 인스턴스를 반환합니다. 다른 드로잉 컨텍스트 객체를 얻으려면 다른 `contextType`을 전달하거나 다른 캔버스 엘리먼트에서 메소드를 호출해야 합니다.
 

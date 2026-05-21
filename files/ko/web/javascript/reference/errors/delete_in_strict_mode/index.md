@@ -44,7 +44,7 @@ delete x;
 // is deprecated
 ```
 
-변수의 내용을 비우려면 {{jsxref("null")}}을 설정하면 됩니다:
+변수의 내용을 비우려면 {{jsxref("Operators/null", "null")}}을 설정하면 됩니다:
 
 ```js example-good
 "use strict";

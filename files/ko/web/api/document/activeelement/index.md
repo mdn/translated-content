@@ -22,7 +22,7 @@ element = DocumentOrShadowRoot.activeElement;
 
 ### 값
 
-포커스를 갖고 있는 {{domxref("Element")}}. 그런 요소가 없으면 {{htmlelement("body")}} 또는 {{jsxref("null")}}.
+포커스를 갖고 있는 {{domxref("Element")}}. 그런 요소가 없으면 {{htmlelement("body")}} 또는 {{jsxref("Operators/null", "null")}}.
 
 ## 예제
 

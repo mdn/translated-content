@@ -31,7 +31,7 @@ leftExpr ?? rightExpr;
 
 ## 설명
 
-널 병합 연산자는 만약 왼쪽 표현식이 {{jsxref("null")}} 또는 {{jsxref("undefined")}}인 경우, 오른쪽 표현식의 결과를 반환한다.
+널 병합 연산자는 만약 왼쪽 표현식이 {{jsxref("Operators/null", "null")}} 또는 {{jsxref("undefined")}}인 경우, 오른쪽 표현식의 결과를 반환한다.
 
 ### 변수에 기본값 할당
 

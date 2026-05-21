@@ -35,9 +35,9 @@ func.apply(thisArg, [argsArray]);
 ### 매개변수
 
 - `thisArg`
-  - : 옵션. `func` 를 호출하는데 제공될 `this` 의 값. `this` 는 메소드에 의해 실제로 보여지는 값이 아닐 수 있음을 유의합니다. 메소드가 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 코드의 함수일 경우, {{jsxref("null")}} 과 {{jsxref("undefined")}} 가 전역 객체로 대체되며, 기본 값은 제한됩니다.
+  - : 옵션. `func` 를 호출하는데 제공될 `this` 의 값. `this` 는 메소드에 의해 실제로 보여지는 값이 아닐 수 있음을 유의합니다. 메소드가 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 코드의 함수일 경우, {{jsxref("Operators/null", "null")}} 과 {{jsxref("undefined")}} 가 전역 객체로 대체되며, 기본 값은 제한됩니다.
 - `argsArray`
-  - : 옵션. _`func`_ 이 호출되어야 하는 인수를 지정하는 유사 배열 객체, 함수에 제공된 인수가 없을 경우 {{jsxref("null")}} 또는 {{jsxref("undefined")}}. ECMAScript 5 의 시작으로 이러한 인수들은 배열 대신 제네릭 유사 배열 객체로 사용될 수 있습니다. 아래의 [브라우저 호환성](#browser_compatibility) 정보를 보세요.
+  - : 옵션. _`func`_ 이 호출되어야 하는 인수를 지정하는 유사 배열 객체, 함수에 제공된 인수가 없을 경우 {{jsxref("Operators/null", "null")}} 또는 {{jsxref("undefined")}}. ECMAScript 5 의 시작으로 이러한 인수들은 배열 대신 제네릭 유사 배열 객체로 사용될 수 있습니다. 아래의 [브라우저 호환성](#browser_compatibility) 정보를 보세요.
 
 ### 반환값
 

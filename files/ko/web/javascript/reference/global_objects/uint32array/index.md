@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint32Array.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자로 반환합니다. `Uint32Array`의 경우 `4` 입니다.
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
+- {{jsxref("Function.name", "Uint32Array.name")}}
   - : 생성자 이름을 문자열로 반환합니다. `Uint32Array` 타입의 경우 `"Uint32Array"`입니다.
 
 ## 정적 메서드

@@ -134,7 +134,7 @@ var a;
 a + 2; // NaN으로 평가
 ```
 
-{{jsxref("null")}} 값을 평가할 때, 수치 맥락에서는 `0`으로, 불리언 맥락에서는 `false`로 동작합니다. 예를 들면,
+{{jsxref("Operators/null", "null")}} 값을 평가할 때, 수치 맥락에서는 `0`으로, 불리언 맥락에서는 `false`로 동작합니다. 예를 들면,
 
 ```js
 var n = null;

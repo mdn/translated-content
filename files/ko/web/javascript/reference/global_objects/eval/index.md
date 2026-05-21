@@ -322,6 +322,6 @@ var fct2 = eval(fctStr2); // 함수를 반환
 
 ## 참고
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}}
 - [속성 접근자](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [WebExtensions: Using eval in content scripts](<https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts#Using_eval()_in_content_scripts>)

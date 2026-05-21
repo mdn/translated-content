@@ -54,7 +54,7 @@ console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
 
 - 배열이 아닌 객체의 속성들은 어떤 특정한 순서에 따라 문자열화 될 것이라고 보장되지 않는다. 같은 객체의 문자열화에 있어서 속성의 순서에 의존하지 않는다.
 - {{jsxref("Boolean")}}, {{jsxref("Number")}}, {{jsxref("String")}} 객체들은 문자열화 될 때 전통적인 변환 의미에 따라 연관된 기본형(primitive) 값으로 변환된다.
-- {{jsxref("undefined")}}, 함수, 심볼(symbol)은 변환될 때 생략되거나(객체 안에 있을 경우) {{jsxref("null")}} 로 변환된다(배열 안에 있을 경우).
+- {{jsxref("undefined")}}, 함수, 심볼(symbol)은 변환될 때 생략되거나(객체 안에 있을 경우) {{jsxref("Operators/null", "null")}} 로 변환된다(배열 안에 있을 경우).
 - 심볼을 키로 가지는 속성들은 `replacer` 함수를 사용하더라도 완전히 무시된다.
 - 열거 불가능한 속성들은 무시된다.
 

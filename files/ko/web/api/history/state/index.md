@@ -17,7 +17,7 @@ const currentState = history.state;
 
 ### 값
 
-현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("null")}} 값을 가집니다.
+현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("Operators/null", "null")}} 값을 가집니다.
 
 ## 예제
 

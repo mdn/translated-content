@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Errors/Unexpected_type
 
 ## What went wrong?
 
-그것은 정확하지 않은 형태이다. 그것은 가끔{{jsxref("undefined")}} 나 {{jsxref("null")}} 값을 발생한다.
+그것은 정확하지 않은 형태이다. 그것은 가끔{{jsxref("undefined")}} 나 {{jsxref("Operators/null", "null")}} 값을 발생한다.
 
 또한, {{jsxref("Object.create()")}} 또는 {{jsxref("Symbol.keyFor()")}}와 같은 메서드는 반드시 제공되어야하는 특별한 형태를 요구한다.
 
@@ -61,4 +61,4 @@ if (typeof foo !== "undefined") {
 ## 같이 보기
 
 - {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxref("Operators/null", "null")}}

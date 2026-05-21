@@ -20,7 +20,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : 요소 크기를 숫자 값으로 반환합니다. `Uint16Array`의 경우 `2` 입니다.
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
+- {{jsxref("Function.name", "Uint16Array.name")}}
   - : 생성자 이름을 문자열로 반환합니다. `Uint16Array` 타입의 경우 `"Uint16Array"`입니다.
 
 ## 정적 메서드

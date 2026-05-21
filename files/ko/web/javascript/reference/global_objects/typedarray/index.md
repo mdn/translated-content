@@ -99,7 +99,7 @@ new TypedArray(buffer, byteOffset, length);
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : `TypedArray` 객체 요소의 크기를 숫자 값으로 반환합니다.
-- {{jsxref("TypedArray.name")}}
+- {{jsxref("Function.name", "TypedArray.name")}}
   - : 생성자 이름을 문자열로 반환합니다(예: `"Int8Array"`).
 - {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : 파생된 객체를 만드는 데 사용되는 생성자 함수입니다.

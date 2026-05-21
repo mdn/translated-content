@@ -15,7 +15,7 @@ slug: Web/API/Web_Workers_API
 
 워커와 메인 스레드 간의 데이터 교환은 메시지 시스템을 사용합니다. 양측 모두 postMessage() 메서드를 사용해 전송하고, `onmessage` 이벤트 처리기(메시지는 {{domxref("Worker/message_event", "message")}}의 `data` 속성에 들어있습니다)를 사용해 수신합니다. 전송하는 데이터는 복사하며 공유하지 않습니다.
 
-워커 역시 새로운 워커를 생성할 수 있습니다. 단, 생성하려는 워커가 부모 페이지와 동일한 {{glossary("origin", "출처")}}에 호스팅 되어있어야 합니다. 추가로, 워커는 {{domxref("XMLHttpRequest")}}를 사용해 네트워크 입출력을 할 수 있지만 `responseXML`과 `channel` 특성은 항상 {{jsxref("null")}}을 반환합니다.
+워커 역시 새로운 워커를 생성할 수 있습니다. 단, 생성하려는 워커가 부모 페이지와 동일한 {{glossary("origin", "출처")}}에 호스팅 되어있어야 합니다. 추가로, 워커는 {{domxref("XMLHttpRequest")}}를 사용해 네트워크 입출력을 할 수 있지만 `responseXML`과 `channel` 특성은 항상 {{jsxref("Operators/null", "null")}}을 반환합니다.
 
 전용 워커 외에도 다음과 같은 다른 유형의 워커도 존재합니다.
 
