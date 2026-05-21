@@ -104,13 +104,13 @@ slug: Web/JavaScript/Reference
 ### 國際化
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Locale", "Intl.Locale")}}
+- {{JSxRef("Intl/Collator", "Intl.Collator")}}
+- {{JSxRef("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{JSxRef("Intl/ListFormat", "Intl.ListFormat")}}
+- {{JSxRef("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{JSxRef("Intl/PluralRules", "Intl.PluralRules")}}
+- {{JSxRef("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl/Locale", "Intl.Locale")}}
 
 ### WebAssembly
 

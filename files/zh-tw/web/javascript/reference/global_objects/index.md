@@ -138,9 +138,9 @@ These objects represent and interact with structured data buffers and data coded
 Additions to the ECMAScript core for language-sensitive functionalities.
 
 - {{jsxref("Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
 ### WebAssembly
 
