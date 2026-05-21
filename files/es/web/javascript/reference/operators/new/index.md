@@ -167,4 +167,4 @@ car2.owner.name;
 
 - {{JSxRef("Function", "Funciones")}}
 - {{jsxref("Reflect.construct()")}}
-- {{jsxref("Object.prototype")}}
+- {{jsxref("Object")}}

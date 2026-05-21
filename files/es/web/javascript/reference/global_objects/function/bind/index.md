@@ -160,7 +160,7 @@ var slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-Con `bind()`, esto puede ser simplificado. En el siguiente fragmento de código, `slice` es una función ligada a la función {{jsxref("Function.prototype.call()", "call()")}} de {{jsxref("Function.prototype")}}, con la referencia `this` setteada a la función {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Esto significa que llamadas adicionales a `call()` pueden omitirse:
+Con `bind()`, esto puede ser simplificado. En el siguiente fragmento de código, `slice` es una función ligada a la función {{jsxref("Function.prototype.call()", "call()")}} de {{jsxref("Function")}}, con la referencia `this` setteada a la función {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array")}}. Esto significa que llamadas adicionales a `call()` pueden omitirse:
 
 ```js
 // same as "slice" in the previous example

@@ -67,7 +67,7 @@ Number(undefined); // NaN
   - : Valor especial para representar infinitos negativos; retorno de un desborde de pila overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Valor especial para representar infinitos positivos; retorno de un desborde de pila overflow.
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : Permite la adición de propiedades a un objeto `Number`.
 
 ## Métodos
@@ -89,7 +89,7 @@ Number(undefined); // NaN
 
 ## Instancias `Number`
 
-Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El objeto prototipo del constructor de `Number` puede modificarse para aceptar a todas las instancias de `Number`.
+Todas las instancias `Number` heredan de {{jsxref("Number")}}. El objeto prototipo del constructor de `Number` puede modificarse para aceptar a todas las instancias de `Number`.
 
 ### Métodos
 

@@ -121,7 +121,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-El enlazado puede realizarse con la función `.call` de {{jsxref("Function.prototype")}} y puede ser abreviado también usando `[].slice.call(arguments)` en lugar de `Array.prototype.slice.call`. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.
+El enlazado puede realizarse con la función `.call` de {{jsxref("Function")}} y puede ser abreviado también usando `[].slice.call(arguments)` en lugar de `Array.prototype.slice.call`. En cualquier caso, puede ser simplificado usando {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;

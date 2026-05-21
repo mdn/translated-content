@@ -26,7 +26,7 @@ Para más información acerca de la sintaxis del constructor y sus parámetros, 
   - : Propiedad estática de tamaño cuyo valor es 3. Para el tamaño actual (número d elementos), mire {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Uint8Array.name")}}
   - : Devuelve el nombre del constructor en un string. En el caso de `Uint8Array` devuelve: "Uint8Array".
-- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+- {{jsxref("TypedArray", "Uint8Array.prototype")}}
   - : Prototipo para los objetos _TypedArray_ .
 
 ## Métodos
@@ -38,7 +38,7 @@ Para más información acerca de la sintaxis del constructor y sus parámetros, 
 
 ## `Uint8Array` prototype
 
-Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propiedades
 

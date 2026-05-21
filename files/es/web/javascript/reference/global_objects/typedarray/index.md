@@ -81,7 +81,7 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
   - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
 - {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
-- {{jsxref("TypedArray.prototype")}}
+- {{jsxref("TypedArray")}}
   - : Prototipo para objetos `TypedArray`.
 
 ## Métodos estáticos
