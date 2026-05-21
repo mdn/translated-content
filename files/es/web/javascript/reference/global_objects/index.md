@@ -150,14 +150,14 @@ Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
 
 ### WebAssembly
 
-- {{jsxref("WebAssembly")}}
-- {{jsxref("WebAssembly.Module")}}
-- {{jsxref("WebAssembly.Instance")}}
-- {{jsxref("WebAssembly.Memory")}}
-- {{jsxref("WebAssembly.Table")}}
-- {{jsxref("WebAssembly.CompileError")}}
-- {{jsxref("WebAssembly.LinkError")}}
-- {{jsxref("WebAssembly.RuntimeError")}}
+- [`WebAssembly`](/es/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/es/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/es/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/es/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/es/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/es/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/es/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/es/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ### Otro
 
