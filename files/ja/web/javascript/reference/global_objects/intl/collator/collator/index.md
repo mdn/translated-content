@@ -36,7 +36,7 @@ new Intl.Collator(locales, options);
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : 任意。 BCP47 言語タグの文字列またはその配列。 `locales` 引数の一般的な形式や解釈については {{jsxref("Global_Objects/Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
+  - : 任意。 BCP47 言語タグの文字列またはその配列。 `locales` 引数の一般的な形式や解釈については {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 
     次の Unicode 拡張キーが使用可能です。
 
@@ -71,7 +71,7 @@ new Intl.Collator(locales, options);
 - `options` {{optional_inline}}
   - : 任意。以下のプロパティの一部またはすべてを持つオブジェクトです。
     - `localeMatcher`
-      - : ロケールの照合に使用するアルゴリズム。指定可能な値は "`lookup`" と "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細については {{jsxref("Global_Objects/Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
+      - : ロケールの照合に使用するアルゴリズム。指定可能な値は "`lookup`" と "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細については {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
     - `usage`
       - : この比較がソートのためなのか、それとも一致する文字列を検索するためなのか。使用可能な値は "`sort`" および "`search`" で、既定値は "`sort`" です。
     - `sensitivity`

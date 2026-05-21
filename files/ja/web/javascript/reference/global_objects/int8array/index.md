@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Int8Array/Int8Array", "Int8Array()")}}
+- {{jsxref("Int8Array.Int8Array", "Int8Array()")}}
   - : 新しい `Int8Array` オブジェクトを生成します。
 
 ## 静的プロパティ

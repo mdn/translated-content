@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Uint16Array/Uint16Array", "Uint16Array()")}}
+- {{jsxref("Uint16Array.Uint16Array", "Uint16Array()")}}
   - : 新しい `Uint16Array` オブジェクトを生成します。
 
 ## 静的プロパティ

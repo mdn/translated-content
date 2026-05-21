@@ -46,7 +46,7 @@ Firefox の最新の開発者向け機能を試すには、 Firefox Developer Ed
 
 - ES2015 (ES6) の [クラス](/ja/docs/Web/JavaScript/Reference/Classes) を既定で有効にしました ([Firefox バグ 1197932](https://bugzil.la/1197932))。
 - {{jsxref("Deprecated_and_obsolete_features", "式クロージャ", "", 1)}} が非推奨になり、コンソールに警告を表示するようになりました ([Firefox バグ 995610](https://bugzil.la/995610))。
-- {{jsxref("String.prototype.replace")}} は関数の引数を実行した後、{{jsxref("Global_Objects/RegExp/n", "RegExp の静的プロパティ", "", 1)}} に値を復元しないようになりました ([Firefox バグ 1226936](https://bugzil.la/1226936))。
+- {{jsxref("String.prototype.replace")}} は関数の引数を実行した後、{{jsxref("RegExp.n", "RegExp の静的プロパティ", "", 1)}} に値を復元しないようになりました ([Firefox バグ 1226936](https://bugzil.la/1226936))。
 - {{jsxref("Math.random()")}} を XorShift128+ アルゴリズムにアップグレードしました ([Firefox バグ 322529](https://bugzil.la/322529))。
 
 ### インターフェイス/API/DOM

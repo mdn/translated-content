@@ -35,7 +35,7 @@ l10n:
 ### JavaScript
 
 - {{jsxref("Reflect")}} オブジェクトを実装しました ([Firefox バグ 987514](https://bugzil.la/987514))。
-- {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}} トラップの実装を、ES2015 の確定仕様に準拠するよう更新しました ([Firefox バグ 1049662](https://bugzil.la/1049662))。
+- {{jsxref("Proxy")}} {{jsxref("Proxy.Proxy.ownKeys", "handler.ownKeys()")}} トラップの実装を、ES2015 の確定仕様に準拠するよう更新しました ([Firefox バグ 1049662](https://bugzil.la/1049662))。
 - {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}} を {{jsxref('Operators', 'new')}} を伴わずに呼び出すと {{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1083752](https://bugzil.la/1083752))。
 
 ### インターフェイス/API/DOM
