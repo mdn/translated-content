@@ -144,9 +144,9 @@ Estos objetos representan e interactúan con los búferes de datos estructurados
 Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
 
 - {{jsxref("Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
 ### WebAssembly
 

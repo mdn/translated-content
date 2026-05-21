@@ -9,13 +9,13 @@ El objeto de ámbito global **`Intl`** es el espacio de nombres para el API de I
 
 ## Propiedades
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
   - : Constructor para collators, objetos que permiten la comparación de cadenas con sensibilidad al lenguaje.
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
   - : Constructor para objetos que permiten el formato de fecha y tiempos con sensibilidad al lenguaje.
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
   - : Constructor para objetos que permiten el formato de números con sensibilidad al lenguaje.
-- {{jsxref("Global_Objects/PluralRules", "Intl.PluralRules")}}
+- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - : _Por definir_
 
 ## Métodos

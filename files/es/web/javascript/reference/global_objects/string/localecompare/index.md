@@ -76,7 +76,7 @@ es equivalente a la cadena `compareString`.
 
 Cuando se compara un gran número de cadenas, como cuando se ordenan arreglos de
 gran tamaño, es mejor crear un objeto
-{{jsxref("Global_Objects/Collator", "Intl.Collator")}} y usar la función
+{{jsxref("Intl/Collator", "Intl.Collator")}} y usar la función
 provista por su propiedad {{jsxref("Collator.prototype.compare", "compare")}}.
 
 ## Ejemplos
@@ -174,4 +174,4 @@ console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 
 ## Véase también
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}

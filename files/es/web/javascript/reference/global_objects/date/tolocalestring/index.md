@@ -152,7 +152,7 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 
 ## Performance
 
-When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
+When formatting large numbers of dates, it is better to create an {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
 
 ## Especificaciones
 
@@ -164,7 +164,7 @@ When formatting large numbers of dates, it is better to create an {{jsxref("Glob
 
 ## See also
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 - {{jsxref("Date.prototype.toString()")}}
