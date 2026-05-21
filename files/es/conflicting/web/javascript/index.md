@@ -16,7 +16,7 @@ Contrariamente a la creencia popular, **JavaScript _no_ es "Java interpretado"**
 
 JavaScript puede funcionar como un {{JSxRef("../Introduction_to_Object-Oriented_JavaScript", "lenguaje orientado a objetos")}} y [procedimental](https://es.wikipedia.org/wiki/Programación_por_procedimientos). Los objetos se crean mediante programación en JavaScript, adjuntando métodos y propiedades a objetos que de otro modo **en tiempo de ejecución** estarían vacíos, a diferencia de las definiciones de clases sintácticas comunes en lenguajes compilados como C++ y Java. Una vez que se ha construido un objeto, se puede utilizar como plano (o prototipo) para crear objetos similares.
 
-Las capacidades dinámicas de JavaScript incluyen la construcción de objetos en tiempo de ejecución, listas de parámetros variables, variables de función, creación dinámica de scripts (a través de {{JSxRef("Objetos_globales/eval", "eval")}}, introspección de objetos (a través de `for...in`) y recuperación de código fuente (los programas JavaScript pueden descompilar los cuerpos de las funciones en su texto fuente).
+Las capacidades dinámicas de JavaScript incluyen la construcción de objetos en tiempo de ejecución, listas de parámetros variables, variables de función, creación dinámica de scripts (a través de {{JSxRef("Global_Objects/eval", "eval")}}, introspección de objetos (a través de `for...in`) y recuperación de código fuente (los programas JavaScript pueden descompilar los cuerpos de las funciones en su texto fuente).
 
 Para una explicación más profunda de la programación de JavaScript, sigue los enlaces [recursos de JavaScript](#recursos_de_javascript) a continuación.
 

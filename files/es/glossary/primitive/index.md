@@ -88,7 +88,7 @@ A excepción de `null` y `undefined`, todos los valores primitivos tienen objeto
 - {{JSxRef("Boolean")}} para el `boolean` primitivo.
 - {{JSxRef("Symbol")}} para el `symbol` primitivo.
 
-El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
+El método {{JSxRef("Global_Objects/Object/valueOf"," valueOf()")}} del contenedor devuelve el valor primitivo.
 
 ## Véase también
 

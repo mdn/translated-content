@@ -11,7 +11,7 @@ Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el int
 
 El servicio _workers_ son un delegado virtual entre el navegador y la red. Finalmente, solucionan problemas con los que los desarrolladores de aplicaciones para el usuario han luchado durante años, en particular, cómo almacenar correctamente en caché los activos de un sitio web y ponerlos a disposición cuando el dispositivo del usuario está desconectado.
 
-Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio _worker_ algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Objetos_globales/Promise", "promesa")}}.
+Se ejecutan en un hilo separado del código JavaScript principal de nuestra página y no tienen acceso a la estructura DOM. Esto introduce un enfoque diferente al de la programación web tradicional — la API no bloquea y puede enviar y recibir comunicación entre diferentes contextos. Puede darle a un servicio _worker_ algo en lo que trabajar y recibir el resultado cuando esté listo utilizando un enfoque basado en una {{JSxRef("Global_Objects/Promise", "promesa")}}.
 
 Pueden hacer mucho más que "solo" ofrecer capacidades sin conexión, incluido el manejo de notificaciones, la realización de cálculos pesados en un hilo separado, etc. El servicio _workers_ es bastante poderoso, ya que pueden tomar el control de las solicitudes de red, modificarlas, entregar respuestas personalizadas recuperadas de la caché o sintetizar respuestas por completo.
 

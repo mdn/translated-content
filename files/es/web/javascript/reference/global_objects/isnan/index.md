@@ -45,7 +45,7 @@ isNaN(valor)
 
 `isNaN` intenta convertir el parámetro pasado a un número. Si el parámetro no se puede convertir, devuelve true; en caso contrario, devuelve false.
 
-Esta función es útil ya que el valor {{jsxref("Objetos_globales/NaN", "NaN")}} no puede se probado correctamente con operadores de igualdad. `x == NaN` y `x === NaN` son siempre false, sin importar lo que sea `x`, incluso si `x` es `NaN`. Por ejemplo, tanto `1 == NaN` como `NaN == NaN` devuelven `false`.
+Esta función es útil ya que el valor {{jsxref("Global_Objects/NaN", "NaN")}} no puede se probado correctamente con operadores de igualdad. `x == NaN` y `x === NaN` son siempre false, sin importar lo que sea `x`, incluso si `x` es `NaN`. Por ejemplo, tanto `1 == NaN` como `NaN == NaN` devuelven `false`.
 
 ### Ejemplos
 
@@ -66,5 +66,5 @@ isNaN(12); //devuelve false
 
 ### Vea También
 
-- {{jsxref("Objetos_globales/NaN", "NaN")}}
+- {{jsxref("Global_Objects/NaN", "NaN")}}
 - {{jsxref("Number.isNaN()")}}

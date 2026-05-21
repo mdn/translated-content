@@ -25,7 +25,7 @@ for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
   - : Una expresión para ser evaluada al final de cada iteración del bucle. Esto ocurre antes de la siguiente evaluación de la `condicion`. Generalmente se usa para actualizar o incrementar la variable contador.
 
 - `sentencia`
-  - : Una sentencia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro del bucle, utilice una sentencia {{jsxref("Sentencias/block", "block")}} (`{ ... }`) para agrupar aquellas sentecias.
+  - : Una sentencia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro del bucle, utilice una sentencia {{jsxref("Statements/block", "block")}} (`{ ... }`) para agrupar aquellas sentecias.
 
 ### Ejemplos
 
@@ -42,10 +42,10 @@ for (var i = 0; i < 9; i++) {
 
 ## Vea También
 
-- {{jsxref("Sentencias/break", "break")}}
-- {{jsxref("Sentencias/continue", "continue")}}
-- {{jsxref("Sentencias/empty", "empty")}}
-- {{jsxref("Sentencias/while", "while")}}
-- {{jsxref("Sentencias/do...while", "do...while")}}
-- {{jsxref("Sentencias/for...in", "for...in")}}
-- {{jsxref("Sentencias/for...of", "for...of")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Statements/for...of", "for...of")}}

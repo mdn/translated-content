@@ -53,11 +53,11 @@ Los comentarios se comportan como espacios en blanco y se descartan durante la e
 
 JavaScript tiene tres tipos de declaraciones de variables.
 
-- {{JSxRef("Sentencias/var", "var")}}
+- {{JSxRef("Statements/var", "var")}}
   - : Declara una variable, opcionalmente la inicia a un valor.
-- {{JSxRef("Sentencias/let", "let")}}
+- {{JSxRef("Statements/let", "let")}}
   - : Declara una variable local con ámbito de bloque, opcionalmente la inicia a un valor.
-- {{JSxRef("Sentencias/const", "const")}}
+- {{JSxRef("Statements/const", "const")}}
   - : Declara un nombre de constante de solo lectura y ámbito de bloque.
 
 ### Variables
@@ -76,10 +76,10 @@ Algunos ejemplos de nombres legales son `Number_hits`, `temp99`, `$credit` y `_n
 
 Puedes declarar una variable de dos formas:
 
-- Con la palabra clave {{JSxRef("Sentencias/var", "var")}}. Por ejemplo, `var x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
-- Con la palabra clave {{JSxRef("Sentencias/const", "const")}} o {{JSxRef("Sentencias/let", "let")}}. Por ejemplo, `let y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito_de_variables) abajo.)
+- Con la palabra clave {{JSxRef("Statements/var", "var")}}. Por ejemplo, `var x = 42`. Esta sintaxis se puede utilizar para declarar variables **locales** y **globales**, dependiendo del _contexto de ejecución_.
+- Con la palabra clave {{JSxRef("Statements/const", "const")}} o {{JSxRef("Statements/let", "let")}}. Por ejemplo, `let y = 13`. Esta sintaxis se puede utilizar para declarar una variable local con ámbito de bloque. (Ve el [Ámbito de variables](#ambito_de_variables) abajo.)
 
-También puedes simplemente asignar un valor a una variable. Por ejemplo, `x = 42`. Este formulario crea una variable {{JSxRef("Sentencias/var", "global no declarada", "#Descripción")}}. También genera una advertencia estricta de JavaScript. Las variables globales no declaradas a menudo pueden provocar un comportamiento inesperado. Por lo tanto, se desaconseja utilizar variables globales no declaradas.
+También puedes simplemente asignar un valor a una variable. Por ejemplo, `x = 42`. Este formulario crea una variable {{JSxRef("Statements/var", "global no declarada", "#Descripción")}}. También genera una advertencia estricta de JavaScript. Las variables globales no declaradas a menudo pueden provocar un comportamiento inesperado. Por lo tanto, se desaconseja utilizar variables globales no declaradas.
 
 ### Evaluar variables
 
@@ -104,7 +104,7 @@ console.log("El valor de y es " + y); // Error de referencia no detectada: y no 
 let y;
 ```
 
-Puedes usar `undefined` para determinar si una variable tiene un valor. En el siguiente código, a la variable `input` no se le asigna un valor y la declaración {{JSxRef("Sentencias/if...else", "if")}} evalúa a `true`.
+Puedes usar `undefined` para determinar si una variable tiene un valor. En el siguiente código, a la variable `input` no se le asigna un valor y la declaración {{JSxRef("Statements/if...else", "if")}} evalúa a `true`.
 
 ```js
 var input;
@@ -248,7 +248,7 @@ En consecuencia, puedes acceder a las variables globales declaradas en una «ven
 
 ### Constantes
 
-Puedes crear una constante de solo lectura con nombre con la palabra clave {{JSxRef("Sentencias/const", "const")}}.
+Puedes crear una constante de solo lectura con nombre con la palabra clave {{JSxRef("Statements/const", "const")}}.
 
 La sintaxis de un identificador de constante es la misma que la de cualquier identificador de variable: debe comenzar con una letra, un subrayado o un signo de dólar (`$`) y puede contener caracteres alfabéticos, numéricos o de subrayado.
 

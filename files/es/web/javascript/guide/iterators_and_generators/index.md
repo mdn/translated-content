@@ -5,14 +5,14 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
-Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Sentencias/for","for")}} hasta métodos como {{jsxref("Objetos_globales/Array/map","map()")}} y {{jsxref("Objetos_globales/Array/filter","filter()")}}. Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Sentencias/for...of","for...of")}}.
+Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Statements/for","for")}} hasta métodos como {{jsxref("Global_Objects/Array/map","map()")}} y {{jsxref("Global_Objects/Array/filter","filter()")}}. Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Statements/for...of","for...of")}}.
 
 Para más información, véase:
 
 - {{jsxref("Iteration_protocols", "Protocolos de iteración")}}
-- {{jsxref("Sentencias/for...of","for...of")}}
-- {{jsxref("Sentencias/function*","function*")}} y {{jsxref("Objetos_globales/Generador","Generador")}}
-- {{jsxref("Operadores/yield","yield")}} y {{jsxref("Operadores/yield*","yield*")}}
+- {{jsxref("Statements/for...of","for...of")}}
+- {{jsxref("Statements/function*","function*")}} y {{jsxref("Global_Objects/Generador","Generador")}}
+- {{jsxref("Operators/yield","yield")}} y {{jsxref("Operators/yield*","yield*")}}
 
 ## Iteradores
 
@@ -54,9 +54,9 @@ console.log(it.next().done); // true
 
 ## Generadores
 
-Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Objetos_globales/Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
+Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Global_Objects/Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
 
-Una función generadora (constructor GeneratorFunction) es un tipo especial de función que sirve como una fábrica de iteradores. Cuando se ejecuta, regresa un nuevo objeto Generador. Una función se convierte en una Función Generadora si utiliza la sintáxis {{jsxref("Sentencias/function*","function*")}}.
+Una función generadora (constructor GeneratorFunction) es un tipo especial de función que sirve como una fábrica de iteradores. Cuando se ejecuta, regresa un nuevo objeto Generador. Una función se convierte en una Función Generadora si utiliza la sintáxis {{jsxref("Statements/function*","function*")}}.
 
 ```js
 function* hacedorIds() {
@@ -76,7 +76,7 @@ console.log(gen.next().value); // 2
 
 ## Iterables
 
-Un objeto es **iterable** si define cómo se itera. Un ejemplo son los valores que se iteran en un bucle {{jsxref("Sentencias/for...of", "for...of")}}. Algunos tipos integrados de datos, como {{jsxref("Array")}} o {{jsxref("Map")}}, tienen una forma de iteración ya definida, mientras que otras no (como {{jsxref("Object")}}).
+Un objeto es **iterable** si define cómo se itera. Un ejemplo son los valores que se iteran en un bucle {{jsxref("Statements/for...of", "for...of")}}. Algunos tipos integrados de datos, como {{jsxref("Array")}} o {{jsxref("Map")}}, tienen una forma de iteración ya definida, mientras que otras no (como {{jsxref("Object")}}).
 
 Con el fin de ser **iterable**, un objeto debe implementar el método **@@iterator**. Esto quiere decir que dicho objeto (o alguno en su [cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) debe tener una propiedad definida usando la llave {{jsxref("Symbol.iterator")}}. Esta función debería regresar un nuevo iterador en cada invocación, pero no es obligatorio.
 
@@ -106,11 +106,11 @@ for (let valor of miIterable) {
 
 ### Iterables integrados
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Objetos_globales/TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son iterables ya integrados, porque todos sus objetos prototipo tienen un método definido con la llave {{jsxref("Symbol.iterator")}}.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Global_Objects/TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son iterables ya integrados, porque todos sus objetos prototipo tienen un método definido con la llave {{jsxref("Symbol.iterator")}}.
 
 ### Sintaxis que esperan objetos iterables
 
-Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Sentencias/for...of","for-of")}}, {{jsxref("Operadores/Spread_operator","el operador de propagación")}}, {{jsxref("Operadores/yield*","yield*")}}, y {{jsxref("Operadores/Destructuring_assignment","la asignación por desestructuración","",1)}}.
+Algunas sentencias y expresiones esperan objetos iterables, por ejemplo los bucles {{jsxref("Statements/for...of","for-of")}}, {{jsxref("Operators/Spread_operator","el operador de propagación")}}, {{jsxref("Operators/yield*","yield*")}}, y {{jsxref("Operators/Destructuring_assignment","la asignación por desestructuración","",1)}}.
 
 ```js
 for (let valor of ["a", "b", "c"]) {
@@ -136,7 +136,7 @@ a; // "a"
 
 Los generadores calculan los valores devueltos bajo demanda, lo que les permite representar eficientemente secuencias que son costosas de calcular, o incluso secuencias infinitas como se explicó anteriormente.
 
-El método {{jsxref("Objetos_globales/Generador/next","next()")}} también acepta un valor que puede ser utilizado para modificar el estado interno del generador. El valor recibido por `next()` es utilizado como si fuera el resultado de la iteración anterior (último valor entregado por `yield`) el cual detuvo al generador.
+El método {{jsxref("Global_Objects/Generador/next","next()")}} también acepta un valor que puede ser utilizado para modificar el estado interno del generador. El valor recibido por `next()` es utilizado como si fuera el resultado de la iteración anterior (último valor entregado por `yield`) el cual detuvo al generador.
 
 A continuación se muestra un generador de Fibonacci usando `next(x)` para reiniciar la secuencia:
 
@@ -170,10 +170,10 @@ console.log(secuencia.next().value); // 2
 console.log(secuencia.next().value); // 3
 ```
 
-Es posible forzar a un generador a lanzar una excepción cuando se invoca al método {{jsxref("Objetos_globales/Generador/throw","throw()")}} y se pasa el valor de excepción a lanzar. Esta excepción será lanzada desde el contexto actual suspendido del generador, como si en vez del estado suspendido actualmente de `yield` se tuviera una sentencia `throw valor`.
+Es posible forzar a un generador a lanzar una excepción cuando se invoca al método {{jsxref("Global_Objects/Generador/throw","throw()")}} y se pasa el valor de excepción a lanzar. Esta excepción será lanzada desde el contexto actual suspendido del generador, como si en vez del estado suspendido actualmente de `yield` se tuviera una sentencia `throw valor`.
 
 Si la excepción no es atrapada dentro del generador, se propagará a la invocación de `throw()`, y las siguientes llamadas a `next()` tendrán a la propiedad `done` en `verdadero`.
 
-Los generadores tienen un método {{jsxref("Objetos_globales/Generador/return","return(valor)")}} que regresa el valor enviado y finalizan al generador.
+Los generadores tienen un método {{jsxref("Global_Objects/Generador/return","return(valor)")}} que regresa el valor enviado y finalizan al generador.
 
 {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}

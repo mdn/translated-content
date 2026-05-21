@@ -46,5 +46,5 @@ const y = new Error('¡Fui construido con la palabra clave "new"!');
 
 ## Ve también
 
-- {{JSxRef("Sentencias/throw", "throw")}}
-- {{JSxRef("Sentencias/try...catch", "try...catch")}}
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

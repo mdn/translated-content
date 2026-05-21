@@ -128,7 +128,7 @@ En este punto, puedes estar pensando "¿por qué necesitamos dos palabras clave 
 
 Las razones son algo históricas. Cuando se creó JavaScript por primera vez, solo existía `var`. Esto básicamente funciona bien en la mayoría de los casos, pero tiene algunos problemas en la forma en que trabaja — su diseño a veces puede ser confuso o francamente molesto. Entonces, se creó `let` en versiones modernas de JavaScript, una nueva palabra clave para crear variables que funciona de manera algo diferente a `var`, solucionando sus problemas en el proceso.
 
-A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Sentencias/let", "let")}} en nuestra página de referencia.
+A continuación se explican un par de diferencias simples. No abordaremos todas las diferencias ahora, pero comenzarás a descubrirlas a medida que aprendas más sobre JavaScript (si realmente deseas leer sobre ellas ahora, no dudes en consultar {{jsxref("Statements/let", "let")}} en nuestra página de referencia.
 
 Para empezar, si escribes un programa JavaScript de varias líneas que declara e inicia una variable, puedes declarar una variable con `var` después de iniciarla y seguirá funcionando. Por ejemplo:
 
@@ -147,7 +147,7 @@ var myName;
 > [!NOTE]
 > Esto no funcionará al escribir líneas individuales en una consola de JavaScript, solo cuando se ejecutan varias líneas de JavaScript en un documento web.
 
-Esto funciona debido a la **elevación** — lee {{jsxref("Sentencias/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
+Esto funciona debido a la **elevación** — lee {{jsxref("Statements/var", "Elevación de variables", "#Elevación_de_variables")}} para obtener más detalles sobre el tema.
 
 La elevación (`hoisting`) ya no funciona con `let`. Si cambiamos `var` a `let` en el ejemplo anterior, fallaría con un error. Esto es bueno — declarar una variable después de iniciarla resulta en un código confuso y más difícil de entender.
 
@@ -323,7 +323,7 @@ myNumber = 500; // mucho mejor — ahora este es un número
 typeof myNumber;
 ```
 
-Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operadores/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
+Intenta ingresar las cuatro líneas anteriores en tu consola una por una y ve cuáles son los resultados. Notarás que estamos usando un operador especial llamado {{jsxref("Operators/typeof", "typeof")}} — esto devuelve el tipo de datos de la variable que escribes después. La primera vez que se llama, debe devolver `string`, ya que en ese punto la variable `myNumber` contiene una cadena, `'500'`. Échale un vistazo y ve qué devuelve la segunda vez que lo llamas.
 
 ## Constantes en JavaScript
 

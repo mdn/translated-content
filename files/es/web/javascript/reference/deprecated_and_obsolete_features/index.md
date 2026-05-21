@@ -73,7 +73,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Funciones
 
-- Las {{jsxref ("Operadores/Expression_closures", "expresiones closure", "", 1)}} están en desuso. En su lugar, utiliza {{jsxref("Operators/function", "funciones")}} o {{jsxref("Functions/Arrow_functions", "funciones de flecha", "", 1)}} normales.
+- Las {{jsxref ("Operators/Expression_closures", "expresiones closure", "", 1)}} están en desuso. En su lugar, utiliza {{jsxref("Operators/function", "funciones")}} o {{jsxref("Functions/Arrow_functions", "funciones de flecha", "", 1)}} normales.
 
 ### Proxy
 

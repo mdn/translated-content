@@ -13,7 +13,7 @@ Este capítulo presenta colecciones de datos que están indexadas por una clave;
 
 ECMAScript 2015 introduce una nueva estructura de datos para asociar claves con valores. Un objeto {{JSxRef("Map")}} es un mapa de clave/valor simple y puedes iterar sobre sus elementos en el orden en que fueron insertados.
 
-El siguiente código muestra algunas operaciones básicas con un `Map`. Consulta también la página de referencia de {{JSxRef("Map")}} para obtener más ejemplos y la API completa. Puedes usar un bucle {{JSxRef("Sentencias/for...of", "for...of")}} para devolver un arreglo de `[key, value]` para cada iteración.
+El siguiente código muestra algunas operaciones básicas con un `Map`. Consulta también la página de referencia de {{JSxRef("Map")}} para obtener más ejemplos y la API completa. Puedes usar un bucle {{JSxRef("Statements/for...of", "for...of")}} para devolver un arreglo de `[key, value]` para cada iteración.
 
 ```js
 let sayings = new Map();

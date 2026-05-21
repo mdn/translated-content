@@ -35,4 +35,4 @@ JavaScript imprime el valor `Number.NaN` como `NaN`.
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}

@@ -39,7 +39,7 @@ Si no se especifica la base o se especifica como 0, JavaScript asume lo siguient
 
 Si el primer carácter no se puede convertir en número, `parseInt` devuelve `NaN`.
 
-Para fines aritméticos, el valor `NaN` no es un número en ninguna base. Puede llamar a la función {{jsxref("Objetos_globales/isNaN", "isNaN")}} para determinar se el resultado de `parseInt` es `NaN`. Si se pasa `NaN` en operaciones aritméticas, la operación resultante también será `NaN`.
+Para fines aritméticos, el valor `NaN` no es un número en ninguna base. Puede llamar a la función {{jsxref("Global_Objects/isNaN", "isNaN")}} para determinar se el resultado de `parseInt` es `NaN`. Si se pasa `NaN` en operaciones aritméticas, la operación resultante también será `NaN`.
 
 Para convertir números a su literal cadena en una base en particular, utilice `intValue.toString(base)`.
 
@@ -78,9 +78,9 @@ parseInt("0x11");
 
 ### Véase También
 
-- {{jsxref("Objetos_globales/parseFloat", "parseFloat()")}}
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

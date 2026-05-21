@@ -176,4 +176,4 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
   - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
   - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("Global_Objects/RegExp", "El constructor RegExp()")}}

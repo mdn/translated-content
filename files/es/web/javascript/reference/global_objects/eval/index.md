@@ -231,5 +231,5 @@ var fct2 = eval(fctStr2); // deuelve una función
 
 ## Vea También
 
-- {{jsxref("Objetos_globales/uneval", "uneval()")}}
+- {{jsxref("Global_Objects/uneval", "uneval()")}}
 - [Miembros de operadores](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors)

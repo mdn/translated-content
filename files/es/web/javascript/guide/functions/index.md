@@ -13,7 +13,7 @@ Consulta también el {{JSxRef("Funciones", "capítulo de referencia exhaustivo s
 
 ### Declaración de función
 
-Una **definición de función** (también denominada **declaración de función** o **expresión de función**) consta de la palabra clave {{JSxRef("Sentencias/function", "function")}}, seguida de:
+Una **definición de función** (también denominada **declaración de función** o **expresión de función**) consta de la palabra clave {{JSxRef("Statements/function", "function")}}, seguida de:
 
 - El nombre de la función.
 - Una lista de parámetros de la función, entre paréntesis y separados por comas.
@@ -27,7 +27,7 @@ function square(number) {
 }
 ```
 
-La función `square` toma un parámetro, llamado `number`. La función consta de una declaración que dice devuelva el parámetro de la función (es decir, `number`) multiplicado por sí mismo. La instrucción {{JSxRef("Sentencias/return", "return")}} especifica el valor devuelto por la función:
+La función `square` toma un parámetro, llamado `number`. La función consta de una declaración que dice devuelva el parámetro de la función (es decir, `number`) multiplicado por sí mismo. La instrucción {{JSxRef("Statements/return", "return")}} especifica el valor devuelto por la función:
 
 ```js
 return number * number;
@@ -54,7 +54,7 @@ y = mycar.make; // y obtiene el valor "Toyota"
 
 ### Expresiones `function`
 
-Si bien la declaración de función anterior sintácticamente es una declaración, las funciones también se pueden crear mediante una {{JSxRef("Operadores/function", "expresión function")}}.
+Si bien la declaración de función anterior sintácticamente es una declaración, las funciones también se pueden crear mediante una {{JSxRef("Operators/function", "expresión function")}}.
 
 Esta función puede ser **anónima**; no tiene por qué tener un nombre. Por ejemplo, la función `square` se podría haber definido como:
 
@@ -222,7 +222,7 @@ getScore(); // Devuelve "Chamahk anotó 5"
 Una función se puede referir y llamarse a sí misma. Hay tres formas de que una función se refiera a sí misma:
 
 1. El nombre de la función
-2. {{JSxRef("Funciones/arguments/callee", "arguments.callee")}}
+2. {{JSxRef("Functions/arguments/callee", "arguments.callee")}}
 3. Una variable dentro del ámbito que se refiere a la función
 
 Por ejemplo, considera la siguiente definición de función:
@@ -581,11 +581,11 @@ function multiply(a, b = 1) {
 multiply(5); // 5
 ```
 
-Para obtener más detalles, consulta {{JSxRef("Funciones/Parametros_predeterminados", "parámetros predeterminados")}} en la referencia.
+Para obtener más detalles, consulta {{JSxRef("Functions/Parametros_predeterminados", "parámetros predeterminados")}} en la referencia.
 
 ### Parámetros `rest`
 
-La sintaxis del {{JSxRef("Funciones/Parametros_rest", "parámetro rest")}} nos permite representar un número indefinido de argumentos como un arreglo.
+La sintaxis del {{JSxRef("Functions/Parametros_rest", "parámetro rest")}} nos permite representar un número indefinido de argumentos como un arreglo.
 
 En el siguiente ejemplo, la función `multiply` usa _parámetros `rest`_ para recopilar argumentos desde el segundo hasta el final. Luego, la función los multiplica por el primer argumento.
 
@@ -600,7 +600,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Funciones Flecha
 
-Una {{JSxRef("Funciones/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operadores/this", "this")}}, {{JSxRef("Funciones/arguments", "arguments")}}, {{JSxRef("Operadores/super", "super")}} o {{JSxRef("Operadores/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+Una {{JSxRef("Functions/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operators/this", "this")}}, {{JSxRef("Functions/arguments", "arguments")}}, {{JSxRef("Operators/super", "super")}} o {{JSxRef("Operators/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
 Dos factores influyeron en la introducción de las funciones flecha: _funciones más cortas_ y _no vinculantes_ de `this`.
 
@@ -624,7 +624,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 ### Sin `this` separado
 
-Hasta las funciones flecha, cada nueva función definía su propio valor {{JSxRef("Operadores/this", "this")}} (un nuevo objeto en el caso de un constructor, indefinido en llamadas a funciones en {{JSxRef("Strict_mode", "modo estricto")}}, el objeto base si la función se llama como un "método de objeto", etc.). Esto resultó ser poco menos que ideal con un estilo de programación orientado a objetos.
+Hasta las funciones flecha, cada nueva función definía su propio valor {{JSxRef("Operators/this", "this")}} (un nuevo objeto en el caso de un constructor, indefinido en llamadas a funciones en {{JSxRef("Strict_mode", "modo estricto")}}, el objeto base si la función se llama como un "método de objeto", etc.). Esto resultó ser poco menos que ideal con un estilo de programación orientado a objetos.
 
 ```js
 function Person() {
@@ -658,7 +658,7 @@ function Person() {
 }
 ```
 
-Alternativamente, podrías crear una {{JSxRef("Objetos_globales/Function/bind", "función vinculada")}} para que el valor `this` adecuado se pasara a la función `growUp()`.
+Alternativamente, podrías crear una {{JSxRef("Global_Objects/Function/bind", "función vinculada")}} para que el valor `this` adecuado se pasara a la función `growUp()`.
 
 Una función flecha no tiene su propio `this` se utiliza el valor de `this` del contexto de ejecución adjunto. Por lo tanto, en el siguiente código, `this` dentro de la función que se pasa a `setInterval` tiene el mismo valor que `this` en la función adjunta:
 
@@ -678,29 +678,29 @@ var p = new Person();
 
 JavaScript tiene integradas varias funciones de nivel superior:
 
-- {{JSxRef("Objetos_globales/eval", "eval()")}}
+- {{JSxRef("Global_Objects/eval", "eval()")}}
   - : El método **`eval()`** evalúa el código JavaScript representado como una cadena.
-- {{JSxRef("Objetos_globales/uneval", "uneval()")}}
+- {{JSxRef("Global_Objects/uneval", "uneval()")}}
   - : El método **`uneval()`** crea una representación de cadena del código fuente de un {{JSxRef("Object")}}.
-- {{JSxRef("Objetos_globales/isFinite", "isFinite()")}}
+- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
   - : La función global **`isFinite()`** determina si el valor pasado es un número finito. Si es necesario, el parámetro, primero se convierte en un número.
-- {{JSxRef("Objetos_globales/isNaN", "isNaN()")}}
-  - : La función **`isNaN()`** determina si un valor es {{JSxRef("Objetos_globales/NaN", "NaN")}} o no. **Nota**: La coerción dentro de la función `isNaN` tiene {{JSxRef("Objetos_globales/isNaN", "interesantes", "#Descripcion")}} reglas; también puedes querer usar {{JSxRef("Number.isNaN()")}}, como se define en ECMAScript 2015, o puedes usar {{JSxRef("Operadores/typeof", "typeof")}} para determinar si el valor no es un número (`NaN`).
-- {{JSxRef("Objetos_globales/parseFloat", "parseFloat()")}}
+- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
+  - : La función **`isNaN()`** determina si un valor es {{JSxRef("Global_Objects/NaN", "NaN")}} o no. **Nota**: La coerción dentro de la función `isNaN` tiene {{JSxRef("Global_Objects/isNaN", "interesantes", "#Descripcion")}} reglas; también puedes querer usar {{JSxRef("Number.isNaN()")}}, como se define en ECMAScript 2015, o puedes usar {{JSxRef("Operators/typeof", "typeof")}} para determinar si el valor no es un número (`NaN`).
+- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
   - : La función **`parseFloat()`** procesa un argumento de cadena y devuelve un número de punto flotante.
-- {{JSxRef("Objetos_globales/parseInt", "parseInt()")}}
+- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
   - : La función **`parseInt()`** procesa un argumento de cadena y devuelve un número entero de la base especificada (la base en los sistemas numéricos matemáticos).
-- {{JSxRef("Objetos_globales/decodeURI", "decodeURI()")}}
-  - : La función **`decodeURI()`** decodifica un identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Objetos_globales/encodeURI", "encodeURI")}} o por una rutina similar.
-- {{JSxRef("Objetos_globales/decodeURIComponent", "decodeURIComponent()")}}
-  - : El método **`decodeURIComponent()`** decodifica un componente Identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Objetos_globales/encodeURIComponent", "encodeURIComponent")}} o por un rutina similar.
-- {{JSxRef("Objetos_globales/encodeURI", "encodeURI()")}}
+- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
+  - : La función **`decodeURI()`** decodifica un identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Global_Objects/encodeURI", "encodeURI")}} o por una rutina similar.
+- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+  - : El método **`decodeURIComponent()`** decodifica un componente Identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent")}} o por un rutina similar.
+- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
   - : El método **`encodeURI()`** codifica un identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("Objetos_globales/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : El método **`encodeURIComponent()`** codifica un componente Identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("Objetos_globales/escape", "escape()")}}
-  - : El método obsoleto **`escape()`** calcula una nueva cadena en la que ciertos caracteres han sido reemplazados por una secuencia de escape hexadecimal. En su lugar usa {{JSxRef("Objetos_globales/encodeURI", "encodeURI")}} o {{JSxRef("Objetos_globales/encodeURIComponent", "encodeURIComponent")}}.
-- {{JSxRef("Objetos_globales/unescape", "unescape()")}}
-  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("Objetos_globales/escape", "escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("Objetos_globales/decodeURI", "decodeURI()")}} o {{JSxRef("Objetos_globales/decodeURIComponent", "decodeURIComponent")}} en su lugar.
+- {{JSxRef("Global_Objects/escape", "escape()")}}
+  - : El método obsoleto **`escape()`** calcula una nueva cadena en la que ciertos caracteres han sido reemplazados por una secuencia de escape hexadecimal. En su lugar usa {{JSxRef("Global_Objects/encodeURI", "encodeURI")}} o {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent")}}.
+- {{JSxRef("Global_Objects/unescape", "unescape()")}}
+  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("Global_Objects/escape", "escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}} o {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent")}} en su lugar.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

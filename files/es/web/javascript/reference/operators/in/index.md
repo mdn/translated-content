@@ -54,7 +54,7 @@ var color2 = "coral";
 
 ### Usando `in` con propiedades eliminadas o no definidas
 
-Si se elimina una propiedad con el operador {{jsxref("Operadores/delete", "delete")}}, el operador `in` devuelve `false` para esa propiedad.
+Si se elimina una propiedad con el operador {{jsxref("Operators/delete", "delete")}}, el operador `in` devuelve `false` para esa propiedad.
 
 ```js
 var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };
@@ -66,7 +66,7 @@ delete arboles[3];
 3 in arboles; // devuelve false
 ```
 
-Si se cambia una propiedad a {{jsxref("Objetos_globales/undefined", "undefined")}} pero no se elimina, el operador `in` devuelve true para esa propiedad.
+Si se cambia una propiedad a {{jsxref("Global_Objects/undefined", "undefined")}} pero no se elimina, el operador `in` devuelve true para esa propiedad.
 
 ```js
 var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };

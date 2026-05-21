@@ -26,7 +26,7 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 ```
 
 > [!NOTE]
-> Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}.
+> Para que funcionen los escapes de propiedad Unicode, una expresión regular debe utilizar {{JSxRef("../Guide/Regular_Expressions", "la bandera <code>u</code>", "#Busqueda_avanzada_con_banderas")}} que indica que una cadena se debe considerar como una serie de puntos de código Unicode. Consulta también {{JSxRef("Global_Objects/RegExp/unicode", "RegExp.prototype.unicode")}}.
 
 > [!NOTE]
 > Algunas propiedades Unicode abarcan muchos más caracteres que algunas {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "clases de caracteres")}} (como `\w` que coincide solo con letras latinas, desde `a` hasta `z`) pero esta última es más compatible con los navegadores (a partir de enero de 2020).
@@ -164,8 +164,8 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
   - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
   - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
-- {{JSxRef("Objetos_globales/RegExp/unicode", "RegExp.prototype.unicode")}}
+- {{JSxRef("Global_Objects/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("Global_Objects/RegExp/unicode", "RegExp.prototype.unicode")}}
 - [Propiedades de caracteres unicode — Wikipedia](https://en.wikipedia.org/wiki/Unicode_character_property)
 - [Una entrada en el blog de Axel Rauschmayer sobre los escapes de propiedades Unicode](https://2ality.com/2017/07/regexp-unicode-property-escapes.html)
 - [El documento Unicode para las propiedades Unicode](https://unicode.org/reports/tr18/#Categories)

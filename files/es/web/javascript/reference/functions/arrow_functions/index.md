@@ -5,15 +5,15 @@ slug: Web/JavaScript/Reference/Functions/Arrow_functions
 
 {{jsSidebar("Functions", "Funciones")}}
 
-Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
+Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operators/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
 
 **Diferencias y limitaciones:**
 
-- No tiene sus propios enlaces a {{JSxRef("Operadores/this", "this")}} o {{JSxRef("Operadores/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
-- No tiene {{JSxRef("Funciones/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.
-- No apta para los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
+- No tiene sus propios enlaces a {{JSxRef("Operators/this", "this")}} o {{JSxRef("Operators/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
+- No tiene {{JSxRef("Functions/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.
+- No apta para los métodos {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
-- No se puede utilizar {{JSxRef("Operadores/yield", "yield")}} dentro de su cuerpo.
+- No se puede utilizar {{JSxRef("Operators/yield", "yield")}} dentro de su cuerpo.
 
 {{InteractiveExample("JavaScript Demo: Functions =>")}}
 
@@ -147,19 +147,19 @@ Para devolver una expresión de objeto literal, se requieren paréntesis alreded
 (params) => ({ foo: "a" }); // devuelve el objeto {foo: "a"}
 ```
 
-Los {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} son compatibles:
+Los {{JSxRef("Functions/parametros_rest", "parámetros rest")}} son compatibles:
 
 ```js
 (a, b, ...r) => expression;
 ```
 
-Se admiten los {{JSxRef("Funciones/Parametros_por_defecto", "parámetros predeterminados")}}:
+Se admiten los {{JSxRef("Functions/Parametros_por_defecto", "parámetros predeterminados")}}:
 
 ```js
 (a = 400, b = 20, c) => expression;
 ```
 
-{{JSxRef("Operadores/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:
+{{JSxRef("Operators/Destructuring_assignment", "Desestructuración")}} dentro de los parámetros admitidos:
 
 ```js
 ([a, b] = [10, 20]) => a + b; // el resultado es 30
@@ -172,10 +172,10 @@ Consulta también ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](
 
 ### "`this`" y funciones flecha
 
-Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operadores/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
+Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operators/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
 
 > [!NOTE]
-> Si `this` es un misterio para ti, consulta {{JSxRef("Operadores/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
+> Si `this` es un misterio para ti, consulta {{JSxRef("Operators/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.
 
 En las **funciones tradicionales** de manera predeterminada `this` está en el ámbito de `window`:
 
@@ -266,9 +266,9 @@ Object.defineProperty(obj, "b", {
 
 ### `call`, `apply` y `bind`
 
-Los métodos {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
+Los métodos {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
 
-Por ejemplo, {{JSxRef("Objetos_globales/Function/call", "call")}}, {{JSxRef("Objetos_globales/Function/apply", "apply")}} y {{JSxRef("Objetos_globales/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
+Por ejemplo, {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
 
 ```js
 // ----------------------
@@ -370,7 +370,7 @@ obj.doSomethingLater();
 
 ### Sin enlace de `arguments`
 
-Las funciones flecha no tienen su propio objeto {{JSxRef("Funciones/arguments", "arguments")}}. Por tanto, en este ejemplo, `arguments` simplemente es una referencia a los argumentos del ámbito adjunto:
+Las funciones flecha no tienen su propio objeto {{JSxRef("Functions/arguments", "arguments")}}. Por tanto, en este ejemplo, `arguments` simplemente es una referencia a los argumentos del ámbito adjunto:
 
 ```js
 var arguments = [1, 2, 3];
@@ -386,7 +386,7 @@ function foo(n) {
 foo(3); // 6
 ```
 
-En la mayoría de los casos, usar {{JSxRef("Funciones/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
+En la mayoría de los casos, usar {{JSxRef("Functions/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
 
 ```js
 function foo(n) {
@@ -417,7 +417,7 @@ console.log(Foo.prototype); // undefined
 
 ### Uso de la palabra clave `yield`
 
-La palabra clave {{JSxRef("Operadores/yield", "yield")}} no se puede utilizar en el cuerpo de una función flecha (excepto cuando está permitido dentro de las funciones anidadas dentro de ella). Como consecuencia, las funciones flecha no se pueden utilizar como generadores.
+La palabra clave {{JSxRef("Operators/yield", "yield")}} no se puede utilizar en el cuerpo de una función flecha (excepto cuando está permitido dentro de las funciones anidadas dentro de ella). Como consecuencia, las funciones flecha no se pueden utilizar como generadores.
 
 ### Cuerpo de función
 
@@ -483,7 +483,7 @@ var func = (a, b, c) => 1;
 
 ### Orden de procesamiento
 
-Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operadores/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
+Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operators/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
 
 ```js
 let callback;

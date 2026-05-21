@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 Este capítulo documenta todo acerca de estándares de Javascript, los objetos integrados en JavaScript, así como los métodos y propiedades de cada uno.
 
-El término "objetos globales" (u objetos incorporados estándar) aquí no debe confundirse con el **objeto global**. Aquí, los objetos globales se refieren a **objetos en el ámbito global**. Se puede acceder al **objeto global** en sí usando el operador {{jsxref("Operadores/this", "this")}} en el ámbito global (pero solo si no se usa el modo estricto ECMAScript 5, en ese caso devuelve {{jsxref("undefined")}}). De hecho, el alcance global consiste en las propiedades del objeto global, incluidas las propiedades heredadas, si las hay.
+El término "objetos globales" (u objetos incorporados estándar) aquí no debe confundirse con el **objeto global**. Aquí, los objetos globales se refieren a **objetos en el ámbito global**. Se puede acceder al **objeto global** en sí usando el operador {{jsxref("Operators/this", "this")}} en el ámbito global (pero solo si no se usa el modo estricto ECMAScript 5, en ese caso devuelve {{jsxref("undefined")}}). De hecho, el alcance global consiste en las propiedades del objeto global, incluidas las propiedades heredadas, si las hay.
 
 Otros objetos en el alcance global son [creados por el script de usuario](/es/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) o son proporcionados por la aplicación host. Los objetos host disponibles en los contextos del navegador están documentados en la [referencia de la API](/es/docs/Web/API). Para obtener más información acerca de la distinción entre el [DOM](/es/docs/Web/API/Document_Object_Model) y el núcleo de [JavaScript](/es/docs/Web/JavaScript), vea [Introducción a las tecnologías JavaScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
@@ -27,18 +27,18 @@ Estas propiedades globales devuelven un valor simple; ellos no tienen propiedade
 
 Estas funciones globales -funciones llamadas globalmente en lugar de un objeto- devuelven directamente sus resultados a la persona que llama.
 
-- {{jsxref("Objetos_globales/eval", "eval()")}}
-- {{jsxref("Objetos_globales/uneval", "uneval()")}} {{non-standard_inline}}
-- {{jsxref("Objetos_globales/isFinite", "isFinite()")}}
-- {{jsxref("Objetos_globales/isNaN", "isNaN()")}}
-- {{jsxref("Objetos_globales/parseFloat", "parseFloat()")}}
-- {{jsxref("Objetos_globales/parseInt", "parseInt()")}}
-- {{jsxref("Objetos_globales/decodeURI", "decodeURI()")}}
-- {{jsxref("Objetos_globales/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Objetos_globales/encodeURI", "encodeURI()")}}
-- {{jsxref("Objetos_globales/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Objetos_globales/escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("Objetos_globales/unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxref("Global_Objects/eval", "eval()")}}
+- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
+- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
+- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
+- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
 
 ### Objetos fundamentales
 
@@ -144,9 +144,9 @@ Estos objetos representan e interactúan con los búferes de datos estructurados
 Adiciones al núcleo de ECMAScript para funcionalidades sensibles al lenguaje.
 
 - {{jsxref("Intl")}}
-- {{jsxref("Objetos_globales/Collator", "Intl.Collator")}}
-- {{jsxref("Objetos_globales/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Objetos_globales/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
 
 ### WebAssembly
 
