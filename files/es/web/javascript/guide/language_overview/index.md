@@ -479,7 +479,7 @@ obj["for"] = "Simon"; // trabaja bien
 > [!NOTE]
 > A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
 
-Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Object.prototype")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Object")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 > [!NOTE]
 > A partir de ECMAScript 2015, las claves de objeto se pueden definir mediante la variable en notación de corchetes al crearlas. `{[phoneType]: 12345}` es posible en lugar de solo `var userPhone = {}; userPhone[phoneType] = 12345`.

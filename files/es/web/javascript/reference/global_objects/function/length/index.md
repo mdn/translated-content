@@ -13,7 +13,7 @@ La propiedad **`length`** especifica el número de argumentos esperados por la f
 
 ## Descripción
 
-`length` es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. Este número no incluye {{jsxref("rest_parameters", "rest parameter", "", 1)}}. En cambio, {{jsxref("Functions/arguments/length", "arguments.length")}} es local a una función y aporta el número de argumentos actuales pasados a una función.
+`length` es la propiedad de una función objeto, e indica el número de argumentos que una función requiere, por ejemplo, el número de parámetros formales. Este número no incluye {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}}. En cambio, {{jsxref("Functions/arguments/length", "arguments.length")}} es local a una función y aporta el número de argumentos actuales pasados a una función.
 
 ### Propiedades de la `Función` constructora
 

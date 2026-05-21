@@ -40,7 +40,7 @@ En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una prop
 Una variable a la que no se le ha asignado valor es de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Statements/return", "devuelto")}} un valor.
 
 > [!NOTE]
-> Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined` no es una {{jsxref("Reserved_Words", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
+> Aunque es posible usarlo como un {{Glossary("Identifier", "identificador")}} (nombre de variable) en cualquier otro ámbito que no sea el ámbito global (porque `undefined` no es una {{jsxref("Lexical_grammar", "palabra reservada")}}), hacerlo es una mala idea que provocará que tú código sea difícil de mantener y depurar.
 >
 > ```js example-bad
 > //NO HAGAS ESTO
