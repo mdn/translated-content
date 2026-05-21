@@ -52,7 +52,7 @@ Un descriptor de datos tiene además las siguientes claves opcionales:
   - : El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript (number, object, function, etc).
     **Por defecto es {{jsxref("Global_Objects/undefined", "undefined")}}.**
 - `writable`
-  - : `true` Indica si el valor de la propiedad puede modificarse con el {{jsxref("Operators/Assignment_Operators", "operador de asignación", "", 1)}}.
+  - : `true` Indica si el valor de la propiedad puede modificarse con el {{jsxref("Operators", "operador de asignación", "Assignment_operators", 1)}}.
     **Defaults to `false`.**
 
 Un descriptor de acceso además tiene las siguientes claves opcionales:

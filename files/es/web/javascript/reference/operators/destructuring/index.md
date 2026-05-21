@@ -465,5 +465,5 @@ const { self, prot } = obj;
 
 ## Ve también
 
-- {{jsxref("Operators/Assignment_Operators", "Operadores de asignación", "", 1)}}
+- {{jsxref("Operators", "Operadores de asignación", "Assignment_operators", 1)}}
 - ["ES6 en profundidad: Desestructuración" en hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/)
