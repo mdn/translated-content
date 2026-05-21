@@ -120,6 +120,6 @@ var p = new Proxy(obj, {
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - L'opérateur {{jsxref("Operators/L_opérateur_in", "in")}}
 - {{jsxref("Reflect.has()")}}

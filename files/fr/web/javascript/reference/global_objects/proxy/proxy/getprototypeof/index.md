@@ -141,6 +141,6 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}

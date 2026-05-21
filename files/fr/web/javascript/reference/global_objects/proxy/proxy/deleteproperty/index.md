@@ -101,6 +101,6 @@ delete p.a; // "appelée sur : a"
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - L'opérateur {{jsxref("Operators/L_opérateur_delete", "delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

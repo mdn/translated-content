@@ -123,6 +123,6 @@ new p(); // TypeError: p is not a constructor
 ## Voir aussi
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - L'opérateur {{jsxref("Operators/L_opérateur_new", "new")}}
 - {{jsxref("Reflect.construct()")}}

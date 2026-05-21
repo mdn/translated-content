@@ -53,4 +53,4 @@ L'objet `Reflect` fournit des fonctions statiques qui ont les mêmes noms que le
 ## Voir aussi
 
 - L'objet global {{jsxref("Proxy")}}.
-- L'objet {{jsxref("Proxy.handler", "handler")}}.
+- L'objet {{jsxref("Proxy/Proxy", "handler")}}.
