@@ -585,7 +585,7 @@ Para obtener más detalles, consulta {{JSxRef("Functions/Default_parameters", "p
 
 ### Parámetros `rest`
 
-La sintaxis del {{JSxRef("Functions/Parametros_rest", "parámetro rest")}} nos permite representar un número indefinido de argumentos como un arreglo.
+La sintaxis del {{JSxRef("Functions/rest_parameters", "parámetro rest")}} nos permite representar un número indefinido de argumentos como un arreglo.
 
 En el siguiente ejemplo, la función `multiply` usa _parámetros `rest`_ para recopilar argumentos desde el segundo hasta el final. Luego, la función los multiplica por el primer argumento.
 
@@ -600,7 +600,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Funciones Flecha
 
-Una {{JSxRef("Functions/Funciones_flecha", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operators/this", "this")}}, {{JSxRef("Functions/arguments", "arguments")}}, {{JSxRef("Operators/super", "super")}} o {{JSxRef("Operators/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+Una {{JSxRef("Functions/Arrow_functions", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operators/this", "this")}}, {{JSxRef("Functions/arguments", "arguments")}}, {{JSxRef("Operators/super", "super")}} o {{JSxRef("Operators/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
 Dos factores influyeron en la introducción de las funciones flecha: _funciones más cortas_ y _no vinculantes_ de `this`.
 

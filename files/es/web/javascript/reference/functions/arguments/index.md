@@ -80,7 +80,7 @@ function longestString() {
 }
 ```
 
-Puedes usar {{jsxref("Functions/arguments/lenght", "arguments.length")}} para contar con cuántos argumentos se llamó a la función. Si, en cambio, deseas contar cuántos parámetros se declara que acepta una función, inspecciona la propiedad {{jsxref("Function.length", "length")}} de esa función.
+Puedes usar {{jsxref("Functions/arguments/length", "arguments.length")}} para contar con cuántos argumentos se llamó a la función. Si, en cambio, deseas contar cuántos parámetros se declara que acepta una función, inspecciona la propiedad {{jsxref("Function.length", "length")}} de esa función.
 
 ### Usar `typeof` con `arguments`
 

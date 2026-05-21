@@ -228,4 +228,4 @@ Por favor checa <https://github.com/Raynos/function-bind> para ver una solución
 
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

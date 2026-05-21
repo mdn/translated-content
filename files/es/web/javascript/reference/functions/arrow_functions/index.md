@@ -147,7 +147,7 @@ Para devolver una expresión de objeto literal, se requieren paréntesis alreded
 (params) => ({ foo: "a" }); // devuelve el objeto {foo: "a"}
 ```
 
-Los {{JSxRef("Functions/parametros_rest", "parámetros rest")}} son compatibles:
+Los {{JSxRef("Functions/rest_parameters", "parámetros rest")}} son compatibles:
 
 ```js
 (a, b, ...r) => expression;
@@ -386,7 +386,7 @@ function foo(n) {
 foo(3); // 6
 ```
 
-En la mayoría de los casos, usar {{JSxRef("Functions/parametros_rest", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
+En la mayoría de los casos, usar {{JSxRef("Functions/rest_parameters", "parámetros rest")}} es una buena alternativa a usar un objeto `arguments`.
 
 ```js
 function foo(n) {
