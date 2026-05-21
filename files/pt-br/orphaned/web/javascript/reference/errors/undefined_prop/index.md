@@ -33,7 +33,7 @@ foo.bar; // ReferenceError: reference to undefined property "bar"
 
 ### Certo
 
-Para evitar o erro, você precisa adicionar uma definição de `bar` ao objeto ou verificar a existência da propriedade `bar` antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref ("Object.prototype.hasOwnProperty ()")}}, desta forma:
+Para evitar o erro, você precisa adicionar uma definição de `bar` ao objeto ou verificar a existência da propriedade `bar` antes de tentar acessá-la; Uma maneira de fazer isso é usar o método {{jsxref("Object.prototype.hasOwnProperty()")}}, desta forma:
 
 ```js example-good
 var foo = {};

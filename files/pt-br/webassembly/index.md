@@ -45,7 +45,7 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 - [`WebAssembly.instantiate()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/instantiate)
   - : The `WebAssembly.instantiate()` a função é a API primária para compilar e instanciar o código WebAssembly, retornando um `Module` e sua primeira `instância`.
 - [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
+  - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
 - [`WebAssembly.Table()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
 - [`WebAssembly.CompileError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/CompileError)

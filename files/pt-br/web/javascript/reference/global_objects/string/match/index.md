@@ -51,7 +51,7 @@ Se a expressão regular não incluir o sinalizador `g`, `str.match()` retornará
 
 - Se você precisar saber se uma string corresponde a uma expressão regular, use {{jsxref("RegExp.test()")}}.
 - Se você quiser encontrar apenas uma correspondência, você pode querer usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}}.
-- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String. prototype.matchAll() ")}} em vez disso.
+- Se você deseja obter grupos de captura e o sinalizador global (`g`) está definido, você precisa usar {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} ou {{jsxref("String.prototype.matchAll()")}} em vez disso.
 
 ## Exemplos
 

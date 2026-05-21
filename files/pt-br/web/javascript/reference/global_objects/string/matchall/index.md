@@ -63,7 +63,7 @@ while ((match = regexp.exec(str)) !== null) {
 
 Com o `matchAll()` disponível, você pode evitar o loop {{jsxref("Statements/while", "while")}} e executar com `g`.
 
-Em vez disso, usando o `matchAll()`, você obtém um iterador para usar com o mais conveniente {{jsxref ("Statements/for ... of", "for...of")}}, {{jsxref ("Operators/Spread_syntax" , "array spread")}} ou construções {{jsxref ("Array.from()")}}:
+Em vez disso, usando o `matchAll()`, você obtém um iterador para usar com o mais conveniente {{jsxref("Statements/for...of", "for...of")}}, {{jsxref ("Operators/Spread_syntax" , "array spread")}} ou construções {{jsxref ("Array.from()")}}:
 
 ```js
 const regexp = RegExp("foo[a-z]*", "g");

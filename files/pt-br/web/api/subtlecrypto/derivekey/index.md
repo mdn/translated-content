@@ -18,7 +18,7 @@ var result = crypto.subtle.deriveKey(algorithm, masterKey, derivedKeyAlgorithm, 
 - `algorithm` é um objeto definindo o algoritmo de derivação a se usar. Os valores suportados são:
   - `{"name": "ECDH", "public": publicKey}`
   - `{"name": "DH", "public": publicKey}`
-  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{jsxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.
+  - `{"name": "PBKDF2", salt, iterations, hash}` where _`salt`_ is an {{jsxref("ArrayBuffer")}} ou um {{domxref("ArrayBufferView")}}, _`iterations`_ é o número de interações e _`hash`_ é um {{domxref("DOMString")}} identificando o algoritmo hashing para uso.
   - `{"name": "HKDF-CTR", hash, label, context}`
 
 - _`masterKey`_ é uma {{domxref("CryptoKey")}} representando a master key para ser utilizada por um algoritmo de derivação de key.
