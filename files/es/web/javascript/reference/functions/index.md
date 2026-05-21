@@ -15,7 +15,7 @@ Toda función en JavaScript es un objeto Function. Ver {{jsxref("Function")}} pa
 
 Las funciones no son lo mismo que los procedimientos. Una función siempre devuelve un valor, pero un procedimiento, puede o no puede devolver un valor.
 
-Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Statements/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
+Para devolver un valor especifico distinto del predeterminado, una función debe tener una sentencia {{jsxref("Statements/return", "return")}}, que especifique el valor a devolver. Una función sin una instrucción return devolverá el valor predeterminado. En el caso de un {{jsxref("Object.prototype.constructor", "constructor")}} llamado con la palabra clave {{jsxref("Operators/new", "new")}}, el valor predeterminado es el valor de su parametro. Para el resto de funciones, el valor predeterminado es undefined.
 
 Los parámetros en la llamada a una función son los argumentos de la función. Los argumentos se pasan a las funciones _por valor_. Si la función cambia el valor de un argumento, este cambio no se refleja globalmente ni en la llamada de la función. Sin embargo, las referencias a objetos también son valores, y son especiales: si la función cambia las propiedades del objeto referenciado, ese cambio es visible fuera de la función, tal y como se muestra en el siguiente ejemplo:
 

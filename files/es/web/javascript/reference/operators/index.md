@@ -49,7 +49,7 @@ Los valores de la izquierda son el destino de una asignación.
     (`object.property` y `object["property"]`).
 - {{jsxref("Operators/new", "new")}}
   - : El operador `new` crea una instancia auxiliado por un constructor.
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
+- {{jsxref("Operators/new.target", "new.target")}}
   - : En los constructores, `new.target` se refiere al constructor que fue invocado por {{jsxref("Operators/new", "new")}}.
 - {{jsxref("Operators/super", "super")}}
   - : La palabra clave `super` llama al constructor padre.

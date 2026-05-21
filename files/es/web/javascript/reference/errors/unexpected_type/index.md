@@ -26,7 +26,7 @@ TypeError: "x" is not a symbol
 
 Tipo inesperado. Esto ocurre amenudo con valores {{jsxref("undefined")}} o {{jsxref("Operators/null", "null")}} .
 
-Además, ciertos métodos, como {{jsxref ("Object.create ()")}} o {{jsxref("Symbol.keyFor()")}}, requieren de un tipo específico, que debe ser proporcionado, ejemplos
+Además, ciertos métodos, como {{jsxref("Object.create()")}} o {{jsxref("Symbol.keyFor()")}}, requieren de un tipo específico, que debe ser proporcionado, ejemplos
 
 ### Casos inválidos
 

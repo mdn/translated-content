@@ -99,7 +99,7 @@ Todas las instancias `Number` heredan de {{jsxref("Number")}}. El objeto prototi
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
   - : Devuelve una cadena que representa el número en notación de punto fijo.
 - {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
-  - : Devuelve una cadena con una representación sensible al idioma de este número. Invalida el método {{jsxref ("Object.prototype.toLocaleString ()")}}.
+  - : Devuelve una cadena con una representación sensible al idioma de este número. Invalida el método {{jsxref("Object.prototype.toLocaleString()")}}.
 
 ## Ejemplos
 
@@ -171,4 +171,4 @@ Number("-Infinity"); //-Infinity
 
 - {{jsxref("NaN")}}
 - {{jsxref("Math")}}
-- {{jsxref("Arithmetic operators")}}
+- {{jsxref("Operators", "Arithmetic operators")}}

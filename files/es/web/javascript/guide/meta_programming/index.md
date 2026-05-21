@@ -76,7 +76,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
       <td>Si <code><var>target</var></code> no es extensible, el parámetro <code>prototype</code> debe tener el mismo valor que <code>Object.getPrototypeOf(<var>target</var>)</code>.</td>
      </tr>
      <tr>
-      <td>{{jsxref("Proxy.Proxy.is Extensible", "handler.isExtensible()")}}</td>
+      <td>{{jsxref("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}</td>
       <td>{{jsxref("Object.isExtensible()")}}<br>
        {{jsxref("Reflect.isExtensible()")}}</td>
       <td><code>Object.isExtensible(<var>proxy</var>)</code> debe devolver el mismo valor que <code>Object.isExtensible(<var>target</var>)</code>.</td>

@@ -19,7 +19,7 @@ A diferencia de la mayoría de los lenguajes de programación, el lenguaje JavaS
 
 ## Información general
 
-JavaScript es un lenguaje dinámico múltiparadigma con tipos y operadores, objetos estándar integrados y métodos. Su sintaxis se basa en los lenguajes Java y C — muchas estructuras de esos lenguajes también se aplican a JavaScript. JavaScript admite la programación orientada a objetos con prototipos de objetos, en lugar de clases (consulta más información sobre {{jsxref("Inheritance_and_the_prototype_chain", "herencia prototípica")}} y ES2015 {{jsxref("Reference/Classes", "clases")}}. JavaScript también admite la programación funcional — debido a que son objetos, las funciones se pueden almacenar en variables y pasarse como cualquier otro objeto.
+JavaScript es un lenguaje dinámico múltiparadigma con tipos y operadores, objetos estándar integrados y métodos. Su sintaxis se basa en los lenguajes Java y C — muchas estructuras de esos lenguajes también se aplican a JavaScript. JavaScript admite la programación orientada a objetos con prototipos de objetos, en lugar de clases (consulta más información sobre [herencia prototípica](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) y ES2015 {{jsxref("Classes", "clases")}}. JavaScript también admite la programación funcional — debido a que son objetos, las funciones se pueden almacenar en variables y pasarse como cualquier otro objeto.
 
 Comencemos observando los componentes básicos de cualquier lenguaje: los tipos. Los programas JavaScript manipulan valores, y todos esos valores pertenecen a un tipo. Los tipos de JavaScript son:
 

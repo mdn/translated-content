@@ -25,7 +25,7 @@ nodeList.forEach(callback[, thisArg]);
       - : El objeto NodeList al que se está aplicando el método `forEach()`.
 
 - `thisArg` {{Optional_inline}}
-  - : Valor a ser usado como {{jsxref("this")}} al ejecutar `callback`.
+  - : Valor a ser usado como {{jsxref("Operators/this", "this")}} al ejecutar `callback`.
 
 ### Valor Retornado
 
