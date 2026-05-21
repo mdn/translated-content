@@ -51,8 +51,8 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Generador heredado
 
-- La {{jsxref("Statements/Legacy_generator_function", "Declaración de función del generador heredado")}} y {{jsxref("Deprecated_and_obsolete_features", "Expresión de función del generador heredado")}} están en desuso. En su lugar usa {{jsxref("Statements/function*", "declaraciones function*")}} y {{jsxref ("Operators/function *", "expresión function*")}}.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} y {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} están en desuso.
+- La {{jsxref("Deprecated_and_obsolete_features", "Declaración de función del generador heredado")}} y {{jsxref("Deprecated_and_obsolete_features", "Expresión de función del generador heredado")}} están en desuso. En su lugar usa {{jsxref("Statements/function*", "declaraciones function*")}} y {{jsxref ("Operators/function *", "expresión function*")}}.
+- {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} y {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} están en desuso.
 
 ### Iterador
 
@@ -73,7 +73,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Funciones
 
-- Las {{jsxref ("Operators/Expression_closures", "expresiones closure", "", 1)}} están en desuso. En su lugar, utiliza {{jsxref("Operators/function", "funciones")}} o {{jsxref("Functions/Arrow_functions", "funciones de flecha", "", 1)}} normales.
+- Las {{jsxref ("Deprecated_and_obsolete_features", "expresiones closure", "", 1)}} están en desuso. En su lugar, utiliza {{jsxref("Operators/function", "funciones")}} o {{jsxref("Functions/Arrow_functions", "funciones de flecha", "", 1)}} normales.
 
 ### Proxy
 
