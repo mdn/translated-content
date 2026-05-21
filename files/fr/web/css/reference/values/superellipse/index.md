@@ -235,4 +235,4 @@ setCorners();
 
 - La propriété {{CSSxRef("corner-shape")}}
 - Le type de donnée {{CSSxRef("&lt;corner-shape-value>")}}
-- Le module [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/CSS_borders_and_box_decorations)
+- Le module [bordures et décorations de boîte CSS](/fr/docs/Web/CSS/Guides/Borders_and_box_decorations)
