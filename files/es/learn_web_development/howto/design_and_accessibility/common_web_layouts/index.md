@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 530c1f54e63834411aa38789b1ac82e3831c4dfa
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/es/docs/Learn/Common_questions")}}
 
 Cuando diseñas páginas para tú sitio web es bueno tener una idea de los diseños más comunes.
 

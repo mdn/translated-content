@@ -43,7 +43,7 @@ console.log(iterator1.next().value.segment);
 - : `Intl.Segmenter.prototype[@@toStringTag]`
   - [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.Segmenter"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
-## 인스턴스 매서드
+## 인스턴스 메서드
 
 - {{jsxref("Intl/Segmenter/resolvedOptions", "Intl.Segmenter.prototype.resolvedOptions()")}}
   - : 이 `Intl.Segmenter` 객체를 초기화하는 동안 계산된 로케일 및 세부화된 옵션을 반영하는 속성이 포함된 새 객체를 반환합니다.
