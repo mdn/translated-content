@@ -50,9 +50,9 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
   - : 如果引用是[空值](/zh-CN/docs/Glossary/Nullish)（[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
 - {{jsxref("Operators/new", "new")}}
   - : `new` 运算符创建了构造函数实例。
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
+- {{jsxref("Operators/new.target", "new.target")}}
   - : 在构造函数中，`new.target` 指向 {{jsxref("Operators/new", "new")}} 调用的构造函数。
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
   - : 向 JavaScript 模块暴露特定上下文的元数据属性的对象。
 - {{jsxref("Operators/super", "super")}}
   - : `super` 关键字调用父类的构造函数或用于访问父类对象的属性。

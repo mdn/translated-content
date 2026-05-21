@@ -204,8 +204,8 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("Operators/Property_accessors", "属性访问器", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
 - {{jsxref("Operators/new", "new")}}
-- {{jsxref("Operators/new%2Etarget", "new.target")}}
-- {{jsxref("Operators/import%2Emeta", "import.meta")}}
+- {{jsxref("Operators/new.target", "new.target")}}
+- {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
 

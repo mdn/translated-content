@@ -26,7 +26,7 @@ forEach(callback, thisArg)
       - : `someNodeList` 在 `forEach()` 方法中所属的 NodeList 对象。
 
 - `thisArg` {{Optional_inline}}
-  - : 传递 `callback` 的值一般用{{jsxref("this")}}值。
+  - : 传递 `callback` 的值一般用{{jsxref("Operators/this", "this")}}值。
 
 ### 返回值
 

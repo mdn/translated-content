@@ -38,7 +38,7 @@ var p = new Proxy(target, {
 
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Reflect.defineProperty()")}}
-- {{jsxref("proxy.property='value'")}}
+- `proxy.property = 'value'`
 
 ### 不变量
 
