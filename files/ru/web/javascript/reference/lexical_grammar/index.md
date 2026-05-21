@@ -363,7 +363,7 @@ See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.code
 
 ### Литерал Шаблона
 
-Смотрите также {{jsxref('template_strings','template strings')}} для получения более подробной информации.
+Смотрите также {{jsxref('Template_literals','template strings')}} для получения более подробной информации.
 
 ```js
 `string text`;

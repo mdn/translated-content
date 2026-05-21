@@ -109,7 +109,7 @@ for (let value of iterable) {
 // 3
 ```
 
-### Обход объекта {{jsxref("arguments")}}
+### Обход объекта {{jsxref("Functions/arguments", "arguments")}}
 
 ```
 (function() {
