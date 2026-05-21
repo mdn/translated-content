@@ -30,7 +30,7 @@ Ces propriétés globales renvoient une valeur simple. Elles n'ont ni propriét�
 
 Ces fonctions globales — fonctions appelées globalement, et non sur un objet — renvoient directement leur résultat à l'appelant.
 
-- {{JSxRef("eval", "eval()")}}
+- {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("isFinite()")}}
 - {{JSxRef("isNaN()")}}
 - {{JSxRef("parseFloat()")}}

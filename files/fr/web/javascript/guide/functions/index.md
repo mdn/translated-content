@@ -124,7 +124,7 @@ if (num === 0) {
 }
 ```
 
-Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{JSxRef("eval", "eval()")}}.
+Une autre façon de définir des fonctions est d'utiliser le constructeur de l'objet {{jsxref("Function")}} afin de créer des fonctions à partir d'une chaîne lors de l'exécution, de la même façon que {{JSxRef("Global_Objects/eval", "eval()")}}.
 
 Une **méthode** est une fonction étant une propriété d'un objet. Vous trouverez plus de détails sur ces éléments dans le chapitre suivant du guide : [Utiliser les objets](/fr/docs/Web/JavaScript/Guide/Working_with_objects).
 
@@ -669,7 +669,7 @@ var p = new Personne();
 
 JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau :
 
-- {{JSxRef("eval", "eval()")}}
+- {{JSxRef("Global_Objects/eval", "eval()")}}
   - : La fonction **`eval()`** permet d'évaluer du code JavaScript contenu dans une chaîne de caractères.
 - {{JSxRef("uneval()")}} {{non-standard_inline}}
   - : La fonction **`uneval()`** crée une représentation sous la forme d'une chaîne de caractères pour le code source d'un objet.

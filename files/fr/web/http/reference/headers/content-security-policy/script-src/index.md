@@ -209,7 +209,7 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 
 La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code JavaScript à partir de chaines de caractères. Si `'unsafe-eval'` n'est pas spécifiée avec la directive `script-src`, ces méthodes seront bloquées et n'auront aucun effet&nbsp;:
 
-- {{JSxRef("eval", "eval()")}}
+- {{JSxRef("Global_Objects/eval", "eval()")}}
 - {{JSxRef("Function", "Function()")}}
 - Lors du passage d'une chaîne de caractères littérale à des méthodes telles que&nbsp;: `setTimeout("alert(\"Coucou le monde\");", 500);`
   - {{DOMxRef("Window.setTimeout", "setTimeout()")}}
