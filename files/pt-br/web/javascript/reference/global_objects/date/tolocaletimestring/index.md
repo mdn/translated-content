@@ -122,7 +122,7 @@ console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 
 ## Performance
 
-Quando se formata um grande número de datas, é aconselhável criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecida pela propriedade dele: {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Quando se formata um grande número de datas, é aconselhável criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecida pela propriedade dele: {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificações
 

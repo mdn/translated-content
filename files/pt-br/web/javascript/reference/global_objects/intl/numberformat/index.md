@@ -79,12 +79,12 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat.prototype")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat.prototype")}}
   - : Pertime a inclusão de propriedades a todos os objetos.
 
 ### Métodos
 
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
   - : Retorna uma matriz contendo as localizações fornecidas que são suportadas sem retornar a localização padrão em tempo de execução.
 
 ## Instâncias `NumberFormat`

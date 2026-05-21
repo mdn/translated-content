@@ -123,7 +123,7 @@ console.log(numero.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 
 ## Desempenho
 
-Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("NumberFormat.format")}}.
+Quando formatar uma grande quantidade de números, é melhor criar um objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}} e usar a função fornecida pela propriedade {{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}}.
 
 ## Especificações
 

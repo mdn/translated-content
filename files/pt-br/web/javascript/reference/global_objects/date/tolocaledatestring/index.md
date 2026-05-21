@@ -116,7 +116,7 @@ console.log(date.toLocaleDateString("en-US", options));
 
 ## Performance
 
-Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecido porsua propriedade {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Ao formatar um grande número de datas, é melhor criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecido porsua propriedade {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificações
 

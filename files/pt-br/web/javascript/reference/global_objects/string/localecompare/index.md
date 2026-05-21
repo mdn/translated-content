@@ -55,7 +55,7 @@ Retorna um inteiro indicando se _`referenceStr`_ vem antes, depois ou é equival
 
 ## Performance
 
-Ao comparar um grande número de strings, como na classificação de grandes arrays, é melhor criar um objeto {{jsxref("Intl/Collator", "Intl.Collator")}} e usar a função fornecida por sua propriedade {{jsxref("Collator.prototype.compare", "compare")}}.
+Ao comparar um grande número de strings, como na classificação de grandes arrays, é melhor criar um objeto {{jsxref("Intl/Collator", "Intl.Collator")}} e usar a função fornecida por sua propriedade {{jsxref("Intl/Collator/compare", "compare")}}.
 
 ## Exemplos
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 
 {{JSRef}}
 
-O objeto **`Intl`** é o namespace para a API de Internacionalização do ECMAScript , que fornece comparação de string sensível à línguagem, formatação de números, e formatação de data e hora. Os construtores para os objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, e {{jsxref("DateTimeFormat")}} são propriedades do objecto `Intl`. Esta página documenta essas propriedades, bem como funcionalidades comuns aos construtores de internacionalização e outras funções sensíveis de linguagem.
+O objeto **`Intl`** é o namespace para a API de Internacionalização do ECMAScript , que fornece comparação de string sensível à línguagem, formatação de números, e formatação de data e hora. Os construtores para os objetos {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, e {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} são propriedades do objecto `Intl`. Esta página documenta essas propriedades, bem como funcionalidades comuns aos construtores de internacionalização e outras funções sensíveis de linguagem.
 
 ## Propriedades
 
@@ -37,7 +37,7 @@ Uma tag de linguagem BCP 47 identifica um idioma ou local (a diferença entre am
 
 As subtags identificando idiomas, escritas, países (regiões) e (raramente utilizadas) variantes nas tags de linguagem BCP 47 podem ser consultadas no [Registro de Subtags de Linguagem da IANA](https://www.iana.org/assignments/language-subtag-registry).
 
-BCP 47 também permite extensões, e uma delas é relevante para as funções JavaScript de internacionalização: a extensão `"u"` (Unicode). Ela pode ser utilizada para requisitar uma customização do comportamento específico local de um objeto {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemplos:
+BCP 47 também permite extensões, e uma delas é relevante para as funções JavaScript de internacionalização: a extensão `"u"` (Unicode). Ela pode ser utilizada para requisitar uma customização do comportamento específico local de um objeto {{jsxref("Intl/Collator", "Collator")}}, {{jsxref("Intl/NumberFormat", "NumberFormat")}}, ou {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}. Exemplos:
 
 - `"de-DE-u-co-phonebk"`: Use the phonebook variant of the German sort order, which expands umlauted vowels to character pairs: ä → ae, ö → oe, ü → ue.
 - `"th-TH-u-nu-thai"`: Use Thai digits (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) in number formatting.
@@ -47,7 +47,7 @@ BCP 47 também permite extensões, e uma delas é relevante para as funções Ja
 
 The `locales` argument, after stripping off all Unicode extensions, is interpreted as a prioritized request from the application. The runtime compares it against the locales it has available and picks the best one available. Two matching algorithms exist: the `"lookup"` matcher follows the Lookup algorithm specified in [BCP 47](https://tools.ietf.org/html/rfc4647#section-3.4); the `"best fit"` matcher lets the runtime provide a locale that's at least, but possibly more, suited for the request than the result of the Lookup algorithm. If the application doesn't provide a `locales` argument, or the runtime doesn't have a locale that matches the request, then the runtime's default locale is used. The matcher can be selected using a property of the `options` argument (see below).
 
-If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the `"co"` key (collation) is only supported by {{jsxref("Collator")}}, and its `"phonebk"` value is only supported for German.
+If the selected language tag had a Unicode extension substring, that extension is now used to customize the constructed object or the behavior of the function. Each constructor or function supports only a subset of the keys defined for the Unicode extension, and the supported values often depend on the language tag. For example, the `"co"` key (collation) is only supported by {{jsxref("Intl/Collator", "Collator")}}, and its `"phonebk"` value is only supported for German.
 
 ### `options` argument
 
@@ -67,9 +67,9 @@ One property is supported by all language sensitive constructors and functions: 
 
 - Introduction: [The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Constructors
-  - {{jsxref("Collator", "Intl.Collator")}}
-  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
 - Methods
   - {{jsxref("String.prototype.localeCompare()")}}

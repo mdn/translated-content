@@ -53,12 +53,12 @@ new Intl.RelativeTimeFormat([locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat.prototype")}}
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat.prototype")}}
   - : Permite a adição de propriedades para todos os objetos.
 
 ### Métodos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Retorna um array contendo os valores disponíveis dentre os que foram passados como parâmetro sem ter de recorrer ao local padrão do ambiente.
 
 ## Instâncias `RelativeTimeFormat`
