@@ -59,5 +59,5 @@ console.log(formatted.join("; "));
 
 ## Смотрите также
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}

@@ -54,12 +54,12 @@ new Intl.ListFormat([locales[, options]])
 
 ### Свойства
 
-- {{jsxref("ListFormat", "Intl.ListFormat.prototype")}}
+- {{jsxref("Intl/ListFormat", "Intl.ListFormat.prototype")}}
   - : Позволяет добавлять свойства ко всем объектам `Intl.ListFormat`
 
 ### Методы
 
-- {{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
   - : Возвращает массив, содержащий те из переданных ему локалей, которые поддерживаются без необходимости использовать локаль по умолчанию.
 
 ## Примеры

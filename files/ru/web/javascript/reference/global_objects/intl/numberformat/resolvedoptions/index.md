@@ -57,4 +57,4 @@ numberFormat.resolvedOptions()
 
 ## Смотрите также
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}

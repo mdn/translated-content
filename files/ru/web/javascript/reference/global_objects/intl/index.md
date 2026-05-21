@@ -69,9 +69,9 @@ BCP 47 также позволяет использовать расширени
 
 - Введение: [API интернационализации ECMAScript](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Конструкторы
-  - {{jsxref("Collator", "Intl.Collator")}}
-  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("Intl/Collator", "Intl.Collator")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
 - Методы
   - {{jsxref("String.prototype.localeCompare()")}}

@@ -51,4 +51,4 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 
 ## Смотрите также
 
-- {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
