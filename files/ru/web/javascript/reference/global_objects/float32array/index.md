@@ -27,7 +27,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Статическое свойство "длина" со значением 0. Если хотите получить актуальную длину массива (число элементов) используйте {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Float32Array.name")}}
   - : Возвращает строковое представление названия конструктора. В данном случае `Float32Array` вернёт `"Float32Array"`.
-- {{jsxref("TypedArray.prototype", "Float32Array.prototype")}}
+- {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Прототип объекта `TypedArray`.
 
 ## Методы
@@ -39,7 +39,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
 
 ## `Float32Array` prototype
 
-``Любые `Float32Array` объекты наследуются от {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+``Любые `Float32Array` объекты наследуются от {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Свойства
 

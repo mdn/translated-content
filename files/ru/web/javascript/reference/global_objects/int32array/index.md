@@ -27,7 +27,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
   - : Свойство статического размера, значение которого равно 3. Для актуального размера (количества элементов), смотрите {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int32Array.name")}}
   - : Возвращает строковое значение названия конструктора. В случае с типом `Int32Array`: "Int32Array".
-- {{jsxref("TypedArray.prototype", "Int32Array.prototype")}}
+- {{jsxref("TypedArray", "Int32Array.prototype")}}
   - : Прототип для _TypedArray_ объектов.
 
 ## Методы
@@ -39,7 +39,7 @@ new Int32Array(buffer [, byteOffset [, length]]);
 
 ## `Int32Array` прототип
 
-All `Int32Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Int32Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Свойства
 

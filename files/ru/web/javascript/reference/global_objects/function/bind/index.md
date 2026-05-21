@@ -167,7 +167,7 @@ var slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-С помощью метода `bind()`, это сокращение может быть упрощено. В следующем куске кода `slice` является функцией, привязанной к функции {{jsxref("Function.prototype.call()", "call()")}} объекта {{jsxref("Function.prototype")}}, со значением `this`, установленным в функцию {{jsxref("Array.prototype.slice()", "slice()")}} объекта {{jsxref("Array.prototype")}}. Это означает, что дополнительный вызов `call()` может быть устранён:
+С помощью метода `bind()`, это сокращение может быть упрощено. В следующем куске кода `slice` является функцией, привязанной к функции {{jsxref("Function.prototype.call()", "call()")}} объекта {{jsxref("Function")}}, со значением `this`, установленным в функцию {{jsxref("Array.prototype.slice()", "slice()")}} объекта {{jsxref("Array")}}. Это означает, что дополнительный вызов `call()` может быть устранён:
 
 ```js
 // Тоже самое, что и slice в предыдущем примере

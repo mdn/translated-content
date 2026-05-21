@@ -54,7 +54,7 @@ new Intl.ListFormat([locales[, options]])
 
 ### Свойства
 
-- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+- {{jsxref("ListFormat", "Intl.ListFormat.prototype")}}
   - : Позволяет добавлять свойства ко всем объектам `Intl.ListFormat`
 
 ### Методы

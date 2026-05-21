@@ -27,7 +27,7 @@ For more information about the constructor syntax and the parameters, see _[Type
   - : Static length property whose value is 0. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Float64Array.name")}}
   - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "Float64Array".
-- {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}
+- {{jsxref("TypedArray", "Float64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
 ## Methods
@@ -39,7 +39,7 @@ For more information about the constructor syntax and the parameters, see _[Type
 
 ## `Float64Array` prototype
 
-All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Float64Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 

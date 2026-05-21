@@ -265,7 +265,7 @@ let iterable = [3, 5, 7];
 iterable.foo = 'hello';
 ```
 
-Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object.prototype")}} и {{jsxref("Array.prototype")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Каждый объект унаследует метод `objCustom` и каждый массив {{jsxref("Array")}} унаследует метод `arrCustom` благодаря созданию их в {{jsxref("Object")}} и {{jsxref("Array")}}. Объект `iterable` унаследует методы `objCustom` и `arrCustom` из-за [наследования через прототип](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```
 for (let i in iterable) {

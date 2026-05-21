@@ -26,7 +26,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
   - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: "Uint8ClampedArray".
-- {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
+- {{jsxref("TypedArray", "Uint8ClampedArray.prototype")}}
   - : Prototype for the _TypedArray_ objects.
 
 ## Methods
@@ -38,7 +38,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 
 ## `Uint8ClampedArray` prototype
 
-All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 

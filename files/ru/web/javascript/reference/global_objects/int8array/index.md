@@ -27,7 +27,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : Статическая длина конструктора `Int8Array`, всегда равна `3` (т.к. конструктор принимает до 3 аргументов). Чтобы узнать длину созданного массива, see {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int8Array.name")}}
   - : Возвращает строчное значение имени конструктора. В случае с `Int8Array`: "Int8Array".
-- {{jsxref("TypedArray.prototype", "Int8Array.prototype")}}
+- {{jsxref("TypedArray", "Int8Array.prototype")}}
   - : Прототип для _TypedArray_ objects.
 
 ## Methods
@@ -39,7 +39,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
 
 ## `Int8Array` prototype
 
-All `Int8Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+All `Int8Array` objects inherit from {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Properties
 
