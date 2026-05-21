@@ -40,4 +40,4 @@ Não faz parte de nenhum padrão.
 
 ## Veja também
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

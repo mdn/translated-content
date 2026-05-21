@@ -25,7 +25,7 @@ Para obter mais informações sobre a sintaxe do construtor e os parâmetros, co
   - : Retorna um valor numérico do tamanho do elemento. `2` no caso de um `Int16Array`.
 - Int16Array.length
   - : Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
+- {{jsxref("Function.name", "Int16Array.name")}}
   - : Retorna o valor da string do nome do construtor. No caso do tipo `Int16Array`: "Int16Array".
 - {{jsxref("TypedArray", "Int16Array.prototype")}}
   - : Protótipo para os objetos TypedArray.

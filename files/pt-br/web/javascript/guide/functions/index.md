@@ -108,7 +108,7 @@ if (num == 0) {
 }
 ```
 
-Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string em tempo real, como no método {{jsxref("eval()")}}.
+Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string em tempo real, como no método {{jsxref("Global_Objects/eval", "eval()")}}.
 
 Um **método** é uma função invocada por um objeto. Leia mais sobre objetos e métodos em [Trabalhando com Objetos](/pt-BR/docs/Web/JavaScript/Guide/Working_with_objects).
 
@@ -631,7 +631,7 @@ JavaScript tem várias funções pré-definidas:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : O método **`eval()`** avalia código JavaScript representado como uma _string_.
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
   - : O método **`uneval()`** cria uma representação de _string_ do código-fonte de um {{jsxref("Object")}}.
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : A função global **`isFinite()`** determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.

@@ -25,7 +25,7 @@ Para mais informações sobre a síntaxe de construção e os parâmetros, veja 
   - : Retorna um número valor do tamanho do elemento. `4` no caso de uma `Float32Array`.
 - Float32Array.length
   - : Método estático cujo o valor é `0`. Para o tamanho atual (número de elementos), veja {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
+- {{jsxref("Function.name", "Float32Array.name")}}
   - : Retorna o valor em string do nome do constructor. No caso de `Float32Array` é "Float32Array".
 - {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Prototype para os objetos _TypedArray_.

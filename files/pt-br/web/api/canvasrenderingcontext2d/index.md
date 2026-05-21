@@ -200,7 +200,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
+  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("Operators/null", "null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
 
 ## Hit regions
 

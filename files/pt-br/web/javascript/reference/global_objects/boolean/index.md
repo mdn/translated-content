@@ -20,11 +20,11 @@ new Boolean([value])
 
 ## Descrição
 
-O valor passado como primeiro parâmetro é convertido para um valor boleano, se necessário. Se o valor é omitido ou é `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}} ou é uma string vazia(`""`), o objeto terá um valor inicial de `false`. Todos outros valores, incluindo qualquer objeto ou string `"false"`, criam um objeto com valor inicial `true`.
+O valor passado como primeiro parâmetro é convertido para um valor boleano, se necessário. Se o valor é omitido ou é `0`, `-0`, {{jsxref("Operators/null", "null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}} ou é uma string vazia(`""`), o objeto terá um valor inicial de `false`. Todos outros valores, incluindo qualquer objeto ou string `"false"`, criam um objeto com valor inicial `true`.
 
 Não confunda os valores primitivos Boolean `true` e `false` com os valores `true` and `false` do objeto `Boolean`.
 
-Qualquer objeto cujo o valor não é {{jsxref("undefined")}} ou {{jsxref("null")}}, incluindo um objeto `Boolean` que o valor seja `false`, é avaliado para `true` quando passa por uma declaração condicional. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como `true`:
+Qualquer objeto cujo o valor não é {{jsxref("undefined")}} ou {{jsxref("Operators/null", "null")}}, incluindo um objeto `Boolean` que o valor seja `false`, é avaliado para `true` quando passa por uma declaração condicional. Por exemplo, a condição a seguir {{jsxref("Statements/if...else", "if")}} a declaração é avaliada como `true`:
 
 ```js
 var x = new Boolean(false);

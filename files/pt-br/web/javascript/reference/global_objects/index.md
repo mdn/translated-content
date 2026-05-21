@@ -29,7 +29,7 @@ Propriedades globais retornam um valor simples; eles não tem propriedades ou m�
 Estas funções globais —funções que são chamadas globalmente ao invés de em um objeto—retornam diretamente seus resultados a quem chama.
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline()}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline()}}
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}

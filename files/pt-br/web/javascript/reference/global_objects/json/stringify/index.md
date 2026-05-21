@@ -30,7 +30,7 @@ JSON.stringify(valor[, replacer[, espaço]])
 
 - Se o valor tiver um método `toJSON()`, é responsável por definir quais dados serão serializados.
 - {{jsxref("Boolean")}}, {{jsxref("Number")}}, and {{jsxref("String")}} os objetos são convertidos para os valores primitivos correspondentes durante a stringificação, de acordo com a semântica de conversão.
-- Se {{jsxref("undefined")}}, uma função, ou um symbol é encontrado durante a conversão é omitido (quando é encontrado em um objeto) ou censurado para {{jsxref("null")}} (quando é encontrado em um Array). `JSON.stringify` pode também somente retornar `undefined` ao passar valores puros como `JSON.stringify(function(){})` ou `JSON.stringify(undefined)`.
+- Se {{jsxref("undefined")}}, uma função, ou um symbol é encontrado durante a conversão é omitido (quando é encontrado em um objeto) ou censurado para {{jsxref("Operators/null", "null")}} (quando é encontrado em um Array). `JSON.stringify` pode também somente retornar `undefined` ao passar valores puros como `JSON.stringify(function(){})` ou `JSON.stringify(undefined)`.
 - Todas as propriedades com chave de símbolo serão completamente ignoradas, mesmo quando usar a função `replacer`.
 - Propriedades não enumeráveis serão ignoradas.
 

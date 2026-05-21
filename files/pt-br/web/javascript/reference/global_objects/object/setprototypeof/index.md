@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 {{JSRef}}
 
-O método **`Object.setPrototypeOf()`** configura o 'prototype' (i.e., a propriedade interna `[[Prototype]]`) de um objeto específico para outro objeto ou {{jsxref("null")}}.
+O método **`Object.setPrototypeOf()`** configura o 'prototype' (i.e., a propriedade interna `[[Prototype]]`) de um objeto específico para outro objeto ou {{jsxref("Operators/null", "null")}}.
 
 > [!WARNING]
 > **Atenção:** Mudar o `[[Prototype]]` de um objeto é, pela natureza de como os modernos mecanismos JavaScript otimizam os acessos de propriedade, uma operação muito lenta, em **_todos_** navegadores e mecanismos JavaScript. O efeito sobre o desempenho de alterar a herança são sutis e vastas e não se limitam simplesmente ao tempo gasto em `obj.__proto__ = ...` statement, mas pode estender a **_qualquer_** código que tem acesso a **_qualquer_** objeto cujo `[[Prototype]]` foi alterado. Se você se preocupa com desempenho, você deveria evitar configurar o `[[Prototype]]` de um objeto. Em vez disso, crie um novo objeto com o `[[Prototype]] desejado usando` {{jsxref("Object.create()")}}.
@@ -21,7 +21,7 @@ Object.setPrototypeOf(obj, prototype);
 - `obj`
   - : O objeto que deve ter seu 'prototype' definido.
 - `prototype`
-  - : O novo 'prototype' do objeto (um objeto ou {{jsxref("null")}}).
+  - : O novo 'prototype' do objeto (um objeto ou {{jsxref("Operators/null", "null")}}).
 
 ### Valor de retorno
 
@@ -29,7 +29,7 @@ O objeto especificado.
 
 ## Descrição
 
-Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo `[[Prototype]]` é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '`prototype'` não for um objeto ou {{jsxref("null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o `[[Prototype]]` do `obj` para um novo valor.
+Gera uma exceção {{jsxref("TypeError")}} se o objeto cujo `[[Prototype]]` é para ser modificado não for extensível de acordo com {{jsxref("Object.isExtensible()")}}. Não faz nada se o parâmetro '`prototype'` não for um objeto ou {{jsxref("Operators/null", "null")}} (ex., número, texto, boleano, ou {{jsxref("undefined")}}). Caso contrário, este método muda o `[[Prototype]]` do `obj` para um novo valor.
 
 `Object.setPrototypeOf() é uma especificação` ECMAScript 2015. É geralmente considerada a maneira correta de definir o 'prototype' de um objeto, em relação à propriedade mais controversa [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 

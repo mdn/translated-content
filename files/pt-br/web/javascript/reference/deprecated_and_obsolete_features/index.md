@@ -68,7 +68,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 ### Métodos de data
 
 - {{jsxref("Global_Objects/Date/getYear", "getYear")}} e {{jsxref("Global_Objects/Date/setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} e {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} em códigos novos.
+- Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toUTCString", "toGMTString")}} em códigos novos.
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
 
 ### Funções

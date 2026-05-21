@@ -20,7 +20,7 @@ Uma nova string representando a string original convertida em maiúsculas.
 ### Exceções
 
 - {{jsxref("TypeError")}}
-  - : Quando chamado em uma string contendo valor {{jsxref("null")}} ou {{jsxref("undefined")}}, por exemplo, `String.prototype.toUpperCase.call(undefined)`.
+  - : Quando chamado em uma string contendo valor {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}, por exemplo, `String.prototype.toUpperCase.call(undefined)`.
 
 ## Descrição
 

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 {{JSRef}}
 
-A propriedade `__proto__` de {{jsxref("Object")}} é uma propriedade de acesso (uma função getter e uma setter) que expõe o interno `[[Prototype]]` (ou um objeto ou {{jsxref("Global_Objects/null", "null")}}) de um objeto o qual é acessado.
+A propriedade `__proto__` de {{jsxref("Object")}} é uma propriedade de acesso (uma função getter e uma setter) que expõe o interno `[[Prototype]]` (ou um objeto ou {{jsxref("Operators/null", "null")}}) de um objeto o qual é acessado.
 
 O uso de `__proto__` é controverso, e foi desencorajado. Nunca foi incluído originalmente na especificação do idioma EcmaScript, mas os navegadores modernos decidiram implementá-lo de qualquer maneira. Somente recentemente, a propriedade `__proto__` foi padronizada na especificação de linguagem ECMAScript 2015 para navegadores para garantir compatibilidade, e então ser suportada no futuro. É obsoleta a favor de {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} e {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}} (embora ainda, definir `[[Prototype]]` é uma operação lenta que deve ser evitada se o desempenho for uma preocupação).
 
@@ -94,7 +94,7 @@ Nota: são dois underscores(underlines), seguidos de cinco caracteres "proto", s
 
 A função getter de `__proto__` expõe o valor interno de `[[Prototype]]` de um objeto. Para objetos criado usando um objeto literal, este valor é {{jsxref("Object")}}. Para os objetos criados usando literais de matrizes, esse valor é {{jsxref("Array")}}. Para funções, esse valor é {{jsxref("Function")}}. Para objeto criados usando `new fun`, onde `fun` é uma função construtora built-in fornecida pelo JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, e assim por diante — incluindo novos construtores adicionados como evolução do JavaScript), este valor é sempre `fun.prototype`. Para objetos criados usando `new fun`, onde `fun` é uma função definida em um script, esse valor é o valor de `fun.prototype`. (Ou seja, se o construtor não retornou um outro objeto explicitamente, ou o `fun.prototype` foi reatribuído desde que a instância foi criada).
 
-O setter `__proto__` permite ao `[[Prototype]]` de um objeto sejá mutável. O objeto deve ser extensível de acordo com {{jsxref("Object.isExtensible()")}}: se não for, um erro {{jsxref("Global_Objects/TypeError", "TypeError")}} é emitido. O valor fornecido deve ser um objeto ou {{jsxref("Global_Objects/null", "null")}}. Fornecer qualquer outro valor não fará nada.
+O setter `__proto__` permite ao `[[Prototype]]` de um objeto sejá mutável. O objeto deve ser extensível de acordo com {{jsxref("Object.isExtensible()")}}: se não for, um erro {{jsxref("Global_Objects/TypeError", "TypeError")}} é emitido. O valor fornecido deve ser um objeto ou {{jsxref("Operators/null", "null")}}. Fornecer qualquer outro valor não fará nada.
 
 Para entender como os prototypes são usados para herança, veja o artigo:[Inheritance and the prototype chain](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 

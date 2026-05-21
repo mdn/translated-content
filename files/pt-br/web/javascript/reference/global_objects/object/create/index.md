@@ -45,7 +45,7 @@ Um novo objeto com o protótipo de objeto e propriedades especificadas.
 
 ### Exceções
 
-Uma exceção {{jsxref("TypeError")}} se o parâmetro `proto` não for {{jsxref("null")}} ou um objeto.
+Uma exceção {{jsxref("TypeError")}} se o parâmetro `proto` não for {{jsxref("Operators/null", "null")}} ou um objeto.
 
 ## Exemplos
 

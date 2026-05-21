@@ -29,7 +29,7 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
 `Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
 
 - ambos são {{jsxref("undefined")}}
-- ambos são {{jsxref("null")}}
+- ambos são {{jsxref("Operators/null", "null")}}
 - ambos são `true` ou ambos são `false`
 - ambos são strings do mesmo comprimento, com os mesmos caracteres
 - ambos são o mesmo objeto

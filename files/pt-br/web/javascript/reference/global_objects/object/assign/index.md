@@ -47,7 +47,7 @@ Portanto, ele _atribui_ propriedades, em vez de simplesmente copiar ou definir n
 
 Ambas as propriedades {{jsxref("String")}} e {{jsxref("Symbol")}} são copiadas.
 
-No caso de erro, por exemplo, se uma propriedade não é _writable_, um {{jsxref("TypeError")}} será lançado e o objeto _destino_ permanecerá inalterado. Note que `Object.assign()` não lança erros caso algum argumento _source_ seja {{jsxref("null")}} ou {{jsxref("undefined")}}.
+No caso de erro, por exemplo, se uma propriedade não é _writable_, um {{jsxref("TypeError")}} será lançado e o objeto _destino_ permanecerá inalterado. Note que `Object.assign()` não lança erros caso algum argumento _source_ seja {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}.
 
 ## Exemplos
 

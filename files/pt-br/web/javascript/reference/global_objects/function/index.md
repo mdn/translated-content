@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
 
 ## Resumo
 
-O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
+O **`construtor Function`** cria um novo objeto `Function`. Chamar o construtor diretamente pode criar funções dinamicamente, mas sofre com problemas de segurança e desempenho semelhante (mas muito menos significativo) a {{jsxref("Global_Objects/eval", "eval")}}. No entanto, diferentemente de eval, a Função construtora cria funções que executam somente no escopo global.
 
 ## Sintaxe
 
