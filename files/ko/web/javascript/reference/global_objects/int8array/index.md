@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Int8Array/Int8Array", "Int8Array()")}}
+- {{jsxref("Int8Array.Int8Array", "Int8Array()")}}
   - : 새로운 `Int8Array` 객체를 생성합니다.
 
 ## 정적 속성

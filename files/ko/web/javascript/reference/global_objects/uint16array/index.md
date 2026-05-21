@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Uint16Array/Uint16Array", "Uint16Array()")}}
+- {{jsxref("Uint16Array.Uint16Array", "Uint16Array()")}}
   - : 새로운 `Uint16Array` 객체를 생성합니다.
 
 ## 정적 속성

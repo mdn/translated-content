@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/URIError
 
 ## 생성자
 
-- {{jsxref("Global_Objects/URIError/URIError", "URIError()")}}
+- {{jsxref("URIError.URIError", "URIError()")}}
   - : 새로운 `URIError` 객체를 만듭니다.
 
 ## 인스턴스 속성
@@ -73,7 +73,7 @@ try {
 ## 같이 보기
 
 - {{jsxref("Error")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}

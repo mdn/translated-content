@@ -56,7 +56,7 @@ console.log(sanitize("NotANumber"));
 
 ### `NaN` 판별
 
-값이 `NaN`인지 확인하려면, {{jsxref("Number.isNaN()")}} 또는 {{jsxref("Global_Objects/isNaN", "isNaN()")}}를 사용하여 값이 `NaN`인지 여부를 확인 할 수 있습니다. 또는 `NaN`은 자신과 같지 않다고 비교되는 유일한 값이므로 `x !== x`와 같은 자체 비교를 수행할 수 있습니다.
+값이 `NaN`인지 확인하려면, {{jsxref("Number.isNaN()")}} 또는 {{jsxref("isNaN", "isNaN()")}}를 사용하여 값이 `NaN`인지 여부를 확인 할 수 있습니다. 또는 `NaN`은 자신과 같지 않다고 비교되는 유일한 값이므로 `x !== x`와 같은 자체 비교를 수행할 수 있습니다.
 
 ```js
 NaN === NaN; // false

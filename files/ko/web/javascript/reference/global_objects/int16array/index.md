@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Int16Array/Int16Array", "Int16Array()")}}
+- {{jsxref("Int16Array.Int16Array", "Int16Array()")}}
   - : 새로운 `Int16Array` 객체를 생성합니다.
 
 ## 정적 속성

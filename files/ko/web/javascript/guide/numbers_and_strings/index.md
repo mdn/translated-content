@@ -145,9 +145,9 @@ var notANum = Number.NaN;
       <td>{{jsxref("Number.isNaN()")}}</td>
       <td>
         이 전달된 값
-        {{jsxref("Global_Objects/NaN", "Not-a-Number")}}여부를
+        {{jsxref("NaN", "Not-a-Number")}}여부를
         확인합니다. 원본 글로벌
-        {{jsxref("Global_Objects/isNaN", "(isNaN)")}}의 더욱
+        {{jsxref("isNaN", "(isNaN)")}}의 더욱
         강력한 버전입니다.
       </td>
     </tr>

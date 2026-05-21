@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Uint32Array/Uint32Array", "Uint32Array()")}}
+- {{jsxref("Uint32Array.Uint32Array", "Uint32Array()")}}
   - : 새로운 `Uint32Array` 객체를 생성합니다.
 
 ## 정적 속성

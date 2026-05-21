@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Int32Array/Int32Array", "Int32Array()")}}
+- {{jsxref("Int32Array.Int32Array", "Int32Array()")}}
   - : 새로운 `Int32Array` 객체를 생성합니다.
 
 ## 정적 속성

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8Array
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Uint8Array/Uint8Array", "Uint8Array()")}}
+- {{jsxref("Uint8Array.Uint8Array", "Uint8Array()")}}
   - : 새로운 `Uint8Array` 객체를 생성합니다.
 
 ## 정적 속성

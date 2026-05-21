@@ -53,7 +53,7 @@ const handler2 = {
 const proxy2 = new Proxy(target, handler2);
 ```
 
-대상 객체의 속성 액세스를 가로채는 {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} 처리기를 제공했습니다.
+대상 객체의 속성 액세스를 가로채는 {{jsxref("Proxy.Proxy.get", "get()")}} 처리기를 제공했습니다.
 
 처리기 함수는 대상 객체에 대한 호출을 잡아내기 때문에 _트랩(traps)_ 이라고도 부릅니다. 위의 `handler2`에 있는 매우 간단한 트랩은 모든 속성 접근자를 재정의합니다.
 
@@ -87,7 +87,7 @@ console.log(proxy3.message2); // world
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Proxy/Proxy", "Proxy()")}}
+- {{jsxref("Proxy.Proxy", "Proxy()")}}
   - : 새 `Proxy` 객체를 생성합니다.
 
 ## 정적 메서드
@@ -99,7 +99,7 @@ console.log(proxy3.message2); // world
 
 ### 기본 예제
 
-이 간단한 예에서는 속성 이름이 객체에 없으면 숫자 `37`을 기본값으로 반환합니다. {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} 처리기를 사용합니다.
+이 간단한 예에서는 속성 이름이 객체에 없으면 숫자 `37`을 기본값으로 반환합니다. {{jsxref("Proxy.Proxy.get", "get()")}} 처리기를 사용합니다.
 
 ```js
 const handler = {
@@ -208,7 +208,7 @@ console.log(proxy.size); // TypeError: get size method called on incompatible Pr
 
 ### 검증
 
-프록시를 사용하면 객체에 대해 전달된 값을 쉽게 확인할 수 있습니다. 이 예제에서는 {{jsxref("Global_Objects/Proxy/Proxy/set", "set()")}} 처리기를 사용합니다.
+프록시를 사용하면 객체에 대해 전달된 값을 쉽게 확인할 수 있습니다. 이 예제에서는 {{jsxref("Proxy.Proxy.set", "set()")}} 처리기를 사용합니다.
 
 ```js
 const validator = {
@@ -240,7 +240,7 @@ person.age = 300; // 예외 발생
 
 ### 생성자 확장하기
 
-함수 프록시는 새 생성자로 생성자를 쉽게 확장할 수 있습니다. 이 예제에서는 {{jsxref("Global_Objects/Proxy/Proxy/construct", "construct()")}}과 {{jsxref("Global_Objects/Proxy/Proxy/apply", "apply()")}} 처리기를 사용합니다.
+함수 프록시는 새 생성자로 생성자를 쉽게 확장할 수 있습니다. 이 예제에서는 {{jsxref("Proxy.Proxy.construct", "construct()")}}과 {{jsxref("Proxy.Proxy.apply", "apply()")}} 처리기를 사용합니다.
 
 ```js
 function extend(sup, base) {

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 ## 생성자
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray.Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : 새로운 `Uint8ClampedArray` 객체를 생성합니다.
 
 ## 정적 속성

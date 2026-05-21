@@ -147,7 +147,7 @@ s.match(/yes[^]*day/);
 
 ### 접착 플래그와 함께 사용하기
 
-{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
+{{JSxRef("RegExp.sticky", "sticky")}} 플래그는 해당 정규 표현식이 접착 판별, 즉 {{jsxref("RegExp.prototype.lastIndex")}}에서 시작하는 일치만 확인하도록 할 수 있습니다.
 
 ```js
 let str = "#foo#";

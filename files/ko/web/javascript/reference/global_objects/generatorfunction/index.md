@@ -62,7 +62,7 @@ console.log(iterator.next().value); // 20
 
 - {{jsxref("Statements/function*", "function* function")}}
 - {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions", "Functions and function scope", "", 1)}}

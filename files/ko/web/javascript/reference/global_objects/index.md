@@ -27,17 +27,17 @@ slug: Web/JavaScript/Reference/Global_Objects
 객체에 붙지 않고 전역으로 호출하는 함수로, 반환 값을 호출자에게 바로 반환합니다.
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("isFinite", "isFinite()")}}
+- {{JSxRef("isNaN", "isNaN()")}}
+- {{JSxRef("parseFloat", "parseFloat()")}}
+- {{JSxRef("parseInt", "parseInt()")}}
+- {{JSxRef("encodeURI", "encodeURI()")}}
+- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("decodeURI", "decodeURI()")}}
+- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
-  - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
-  - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("escape", "escape()")}} {{Deprecated_Inline}}
+  - {{JSxRef("unescape", "unescape()")}} {{Deprecated_Inline}}
 
 ### 기초 객체
 
@@ -122,8 +122,8 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Generator")}}
 - {{JSxRef("GeneratorFunction")}}
 - {{JSxRef("AsyncFunction")}}
-- {{JSxRef("Global_Objects/AsyncGenerator", "AsyncGenerator")}}
-- {{JSxRef("Global_Objects/AsyncGeneratorFunction", "AsyncGeneratorFunction")}}
+- {{JSxRef("AsyncGenerator")}}
+- {{JSxRef("AsyncGeneratorFunction")}}
 
 ### 리플렉션
 
@@ -135,10 +135,10 @@ slug: Web/JavaScript/Reference/Global_Objects
 ECMAScript 코어에 추가된 언어 구분 기능입니다.
 
 - {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Intl/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/Intl/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Intl/Locale", "Intl.Locale")}}
+- {{JSxRef("Intl.Collator")}}
+- {{JSxRef("Intl.DateTimeFormat")}}
+- {{JSxRef("Intl.ListFormat")}}
+- {{JSxRef("Intl.NumberFormat")}}
+- {{JSxRef("Intl.PluralRules")}}
+- {{JSxRef("Intl.RelativeTimeFormat")}}
+- {{JSxRef("Intl.Locale")}}

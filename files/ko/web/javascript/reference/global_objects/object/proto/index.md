@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 `__proto__` getter 함수는 객체의 내부 `[[Prototype]]` 값을 노출합니다. 객체 리터럴을 사용하여 생성된 객체의 경우 이 값은 {{JSxRef("Object")}}입니다. 배열 리터럴을 사용하여 생성된 객체의 경우 이 값은 {{JSxRef("Array")}}입니다. 함수의 경우 이 값은 {{JSxRef("Function")}}입니다. `new fun`을 사용하여 생성된 객체의 경우 (여기서 `fun`은 JavaScript에서 제공하는 내장 생성자 함수 중 하나입니다. {{JSxRef("Array")}}, {{JSxRef("Boolean")}}, {{ JSxRef("Date")}}, {{JSxRef("Number")}}, {{JSxRef("Object")}}, {{JSxRef("String")}} 등 - JavaScript가 발전함에 따라 추가된 새로운 생성자 포함) 이 값은 항상 `fun.prototype`입니다. `new fun`을 사용하여 생성된 객체의 경우 `fun`은 스크립트에 정의된 함수이며 이 값은 `fun.prototype`의 값입니다. (즉, 생성자가 다른 객체를 명시적으로 반환하지 않았거나 인스턴스가 생성된 이후에 `fun.prototype`이 다시 할당된 경우입니다.)
 
-`__proto__` setter를 사용하면 객체의 `[[Prototype]]`이 변경될 수 있습니다. 객체는 {{JSxRef("Object.isExtensible()")}}에 따라 확장 가능해야 합니다. 그렇지 않으면 {{JSxRef("Global_Objects/TypeError", "TypeError")}}가 발생합니다. 제공된 값은 객체 또는 {{JSxRef("Operators/null", "null")}}여야 합니다. 다른 값을 제공하면 아무 효과가 없습니다.
+`__proto__` setter를 사용하면 객체의 `[[Prototype]]`이 변경될 수 있습니다. 객체는 {{JSxRef("Object.isExtensible()")}}에 따라 확장 가능해야 합니다. 그렇지 않으면 {{JSxRef("TypeError")}}가 발생합니다. 제공된 값은 객체 또는 {{JSxRef("Operators/null", "null")}}여야 합니다. 다른 값을 제공하면 아무 효과가 없습니다.
 
 프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)를 참조하세요.
 

@@ -39,7 +39,7 @@ console.log(new Food("cheese", 5).name);
   - : _`func`_ 호출에 제공되는 `this`의 값.
 
 > [!NOTE]
-> `this`는 메소드에 의해 보이는 실제값이 아닐 수 있음을 주의하세요: 메소드가 {{jsxref("Strict_mode", "비엄격 모드", "", 1)}} 코드 내 함수인 경우, {{jsxref("Operators/null", "null")}} 및 {{jsxref("Global_Objects/undefined", "undefined")}}는 전역 객체로 대체되고 원시값은 객체로 변환됩니다. `arg1, arg2, ...` 객체를 위한 인수.
+> `this`는 메소드에 의해 보이는 실제값이 아닐 수 있음을 주의하세요: 메소드가 {{jsxref("Strict_mode", "비엄격 모드", "", 1)}} 코드 내 함수인 경우, {{jsxref("Operators/null", "null")}} 및 {{jsxref("undefined")}}는 전역 객체로 대체되고 원시값은 객체로 변환됩니다. `arg1, arg2, ...` 객체를 위한 인수.
 
 ### 반환값(Return Value)
 

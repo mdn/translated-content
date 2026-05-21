@@ -235,9 +235,9 @@ parseInt("11", obj); // 11
 
 ## 같이 보기
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

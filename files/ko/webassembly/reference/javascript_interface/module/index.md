@@ -12,16 +12,16 @@ original_slug: WebAssembly/JavaScript_interface/Module
 
 ## 생성자
 
-- {{jsxref("Global_Objects/WebAssembly/Module/Module", "WebAssembly.Module()")}}
+- {{jsxref("WebAssembly.Module.Module", "WebAssembly.Module()")}}
   - : Creates a new `Module` object.
 
 ## 정적 속성
 
-- {{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
+- {{jsxref("WebAssembly.Module.customSections", "WebAssembly.Module.customSections()")}}
   - : 모듈(`Module`)과 문자열이 주어지면 모듈의 모든 사용자 정의 섹션 내용의 사본을 주어진 문자열 이름으로 반환합니다.
-- {{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
+- {{jsxref("WebAssembly.Module.exports", "WebAssembly.Module.exports()")}}
   - : 모듈(`Module`)이 주어지면 선언 된 모든 내보내기에 대한 설명이 들어있는 배열을 반환합니다.
-- {{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
+- {{jsxref("WebAssembly.Module.imports", "WebAssembly.Module.imports()")}}
   - : 모듈(`Module`)이 주어지면 선언 된 모든 가져오기에 대한 설명이 들어있는 배열을 반환합니다.
 
 ## 명세
