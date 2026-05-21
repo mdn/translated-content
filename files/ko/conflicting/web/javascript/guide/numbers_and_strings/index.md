@@ -56,7 +56,7 @@ ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사
 
 ### 문자열 개체
 
-{{jsxref("문자열")}} 개체는 문자열 기본 데이터 형식의 래퍼입니다.
+{{jsxref("String", "문자열")}} 개체는 문자열 기본 데이터 형식의 래퍼입니다.
 
 ```js
 var s = new String("foo"); // Creates a String object
@@ -88,7 +88,7 @@ mystring[0]; // This returns "H"
 
 `String` 객체는 다양한 메서드가 있습니다: 문자열 자체의 변경된 결과를 반환하는 `substring`과 `toUpperCase`가 그것!
 
-다음 표는 {{jsxref("문자열")}} 개체의 메서드를 요약한 것입니다.
+다음 표는 {{jsxref("String", "문자열")}} 개체의 메서드를 요약한 것입니다.
 
 <table class="standard-table">
   <caption>
