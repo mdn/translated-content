@@ -108,7 +108,7 @@ Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray.prototype", "%Typ
   - : Retorna uma string localizada representando a array e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Retorna uma string representando a array e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float32Array.prototype[@@iterator]()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índex na Array.
 
 ## Exemplos

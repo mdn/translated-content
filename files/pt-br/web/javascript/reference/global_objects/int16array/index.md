@@ -108,7 +108,7 @@ Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArr
   - : Retorna uma string localizada representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
   - : Retorna uma string representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Int16Array.prototype[@@iterator]()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na lista.
 
 ## Exemplos
