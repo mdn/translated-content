@@ -133,8 +133,8 @@ typeof symObj; // "object"
 
 ### 实例方法
 
-- {{jsxref("Symbol.prototype.toSource")}}
-  - : 返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toSource")}} 方法
+- {{jsxref("Symbol.prototype.toString", "Symbol.prototype.toSource")}}
+  - : 返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toString", "Object.prototype.toSource")}} 方法
 - {{jsxref("Symbol.prototype.toString")}}
   - : 返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法
 - {{jsxref("Symbol.prototype.valueOf")}}

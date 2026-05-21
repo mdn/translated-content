@@ -182,7 +182,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       - `gl.UNSIGNED_INT_10F_11F_11F_REV`
       - `gl.UNSIGNED_INT_5_9_9_9_REV`
       - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("null")}})
+      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("Operators/null", "null")}})
 
 - `pixels`
   - : 下列对象之一可以用作纹理的像素源：

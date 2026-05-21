@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/getContextAttributes
 
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.getContextAttributes()`** 方法返回一个包含实际上下文参数的 `WebGLContextAttributes` 对象。如果上下文丢失，可能返回 {{jsxref("null")}}。
+**`WebGLRenderingContext.getContextAttributes()`** 方法返回一个包含实际上下文参数的 `WebGLContextAttributes` 对象。如果上下文丢失，可能返回 {{jsxref("Operators/null", "null")}}。
 
 ## 语法
 
@@ -15,7 +15,7 @@ gl.getContextAttributes();
 
 ### 返回值
 
-一个包含实际上下文参数的 `WebGLContextAttributes` 的对象，或 {{jsxref("null")}}（如果上下文丢失）。
+一个包含实际上下文参数的 `WebGLContextAttributes` 的对象，或 {{jsxref("Operators/null", "null")}}（如果上下文丢失）。
 
 ## 实例
 

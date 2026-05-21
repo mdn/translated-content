@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/canvas
 
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.canvas`** 只读属性，对 {{domxref("HTMLCanvasElement")}} 和 {{domxref("OffscreenCanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{HTMLElement("canvas")}} 元素或 {{domxref("OffscreenCanvas")}} 对象，值为 {{jsxref("null")}}。
+**`WebGLRenderingContext.canvas`** 只读属性，对 {{domxref("HTMLCanvasElement")}} 和 {{domxref("OffscreenCanvas")}} 对象的引用。如果绘图上下文没有相关联的 {{HTMLElement("canvas")}} 元素或 {{domxref("OffscreenCanvas")}} 对象，值为 {{jsxref("Operators/null", "null")}}。
 
 ## 语法
 
@@ -15,7 +15,7 @@ gl.canvas;
 
 ### 返回值
 
-{{domxref("HTMLCanvasElement")}} 或 {{domxref("OffscreenCanvas")}} 或 {{jsxref("null")}}。
+{{domxref("HTMLCanvasElement")}} 或 {{domxref("OffscreenCanvas")}} 或 {{jsxref("Operators/null", "null")}}。
 
 ## 示例
 

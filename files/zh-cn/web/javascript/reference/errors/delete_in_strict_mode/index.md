@@ -41,7 +41,7 @@ delete x;
 // is deprecated
 ```
 
-要释放变量引用的内容，可以将变量值设置为 {{jsxref("null")}}:
+要释放变量引用的内容，可以将变量值设置为 {{jsxref("Operators/null", "null")}}:
 
 ```js example-good
 "use strict";

@@ -16,7 +16,7 @@ TypeError: undefined has no properties
 
 ## 哪里出错了？
 
-{{jsxref("null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
+{{jsxref("Operators/null", "null")}} 和 {{jsxref("undefined")}}中，没有你需要的属性。
 
 ## 示例
 
@@ -30,5 +30,5 @@ undefined.bar;
 
 ## 参考
 
-- {{jsxref("null")}}
+- {{jsxref("Operators/null", "null")}}
 - {{jsxref("undefined")}}

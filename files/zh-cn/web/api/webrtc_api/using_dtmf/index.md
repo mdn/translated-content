@@ -316,7 +316,7 @@ function handleCallerNegotiationNeeded() {
 }
 ```
 
-由于参与协商连接的各种方法返回了 {{jsxref("promise")}}，我们可以像这样将它们链接在一起：
+由于参与协商连接的各种方法返回了 {{jsxref("Promise", "promise")}}，我们可以像这样将它们链接在一起：
 
 1. 调用 {{domxref("RTCPeerConnection.createOffer", "callerPC.createOffer()")}} 获取一个提议。
 2. 然后采用这个提议，并通过调用 {{domxref("RTCPeerConnection.setLocalDescription", "callerPC.setLocalDescription()")}} 设置呼叫方的本地描述来匹配。

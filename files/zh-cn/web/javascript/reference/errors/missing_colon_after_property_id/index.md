@@ -52,7 +52,7 @@ var obj = { propertyKey; };
 // SyntaxError: missing : after property id
 ```
 
-假如你需要创建一个无值属性，那么需要将它的值设置为 {{jsxref("null")}} 。
+假如你需要创建一个无值属性，那么需要将它的值设置为 {{jsxref("Operators/null", "null")}} 。
 
 ```js example-good
 var obj = { propertyKey: null };

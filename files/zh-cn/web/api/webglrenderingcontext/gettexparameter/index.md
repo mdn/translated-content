@@ -161,7 +161,7 @@ getTexParameter(target, pname)
 
 ### 返回值
 
-返回需要的纹理信息 (和 `pname`类型相同). 如果发生错误，就返回{{jsxref("null")}}.
+返回需要的纹理信息 (和 `pname`类型相同). 如果发生错误，就返回{{jsxref("Operators/null", "null")}}.
 
 ## 示例
 

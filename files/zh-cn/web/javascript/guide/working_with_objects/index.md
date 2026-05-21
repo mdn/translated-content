@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-对象中未赋值的属性的值为{{jsxref("undefined")}}（而不是{{jsxref("null")}}）。
+对象中未赋值的属性的值为{{jsxref("undefined")}}（而不是{{jsxref("Operators/null", "null")}}）。
 
 ```js
 myCar.noProperty; // undefined

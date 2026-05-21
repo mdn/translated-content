@@ -3,7 +3,7 @@ title: Reflect.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 ---
 
-除了返回类型以外，静态方法 **`Reflect.setPrototypeOf()`** 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[Prototype]]` 属性）为另一个对象或 {{jsxref("null")}}，如果操作成功返回 `true`，否则返回 `false`。
+除了返回类型以外，静态方法 **`Reflect.setPrototypeOf()`** 与 {{jsxref("Object.setPrototypeOf()")}} 方法是一样的。它可设置对象的原型（即内部的 `[[Prototype]]` 属性）为另一个对象或 {{jsxref("Operators/null", "null")}}，如果操作成功返回 `true`，否则返回 `false`。
 
 {{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
 
@@ -33,7 +33,7 @@ Reflect.setPrototypeOf(target, prototype)
 - _`target`_
   - : 设置原型的目标对象。
 - _`prototype`_
-  - : 对象的新原型（一个对象或 {{jsxref("null")}}）。
+  - : 对象的新原型（一个对象或 {{jsxref("Operators/null", "null")}}）。
 
 ### 返回值
 
@@ -41,7 +41,7 @@ Reflect.setPrototypeOf(target, prototype)
 
 ### 异常
 
-如果 _`target`_ 不是 {{jsxref("Object")}} ，或 *`prototype` *既不是对象也不是 {{jsxref("null")}}，抛出一个 {{jsxref("TypeError")}} 异常。
+如果 _`target`_ 不是 {{jsxref("Object")}} ，或 *`prototype` *既不是对象也不是 {{jsxref("Operators/null", "null")}}，抛出一个 {{jsxref("TypeError")}} 异常。
 
 ## 描述
 

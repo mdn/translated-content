@@ -17,7 +17,7 @@ TypeError: Invalid value used in weak set (Chrome)
 
 ## 哪里出错了？
 
-在期待出现对象类型的值的地方而没有提供。{{jsxref("null")}} 不是对象类型，因此不起作用。必须在给定的场景下提供一个合适的对象。
+在期待出现对象类型的值的地方而没有提供。{{jsxref("Operators/null", "null")}} 不是对象类型，因此不起作用。必须在给定的场景下提供一个合适的对象。
 
 ## 示例
 

@@ -188,7 +188,7 @@ The following interfaces are used to represent the events used by the WebXR API.
 The WebGL API is extended by the WebXR specification to augment the WebGL context to allow it to be used to render views for display by a WebXR device.
 
 - {{domxref("WebGLRenderingContextBase.makeXRCompatibile()")}}
-  - : Configures the WebGL context to be compatible with WebXR. If the context was not initially created with the {{domxref("WebGLContextAttributes.xrCompatible", "xrCompatible")}} property set to `true`, you must call `makeXRCompatible()` prior to attempting to use the WebGL context for WebXR rendering. Returns a {{jsxref("promise")}} which resolves once the context has been prepared, or is rejected if the context cannot be configured for use by WebXR.
+  - : Configures the WebGL context to be compatible with WebXR. If the context was not initially created with the {{domxref("WebGLContextAttributes.xrCompatible", "xrCompatible")}} property set to `true`, you must call `makeXRCompatible()` prior to attempting to use the WebGL context for WebXR rendering. Returns a {{jsxref("Promise", "promise")}} which resolves once the context has been prepared, or is rejected if the context cannot be configured for use by WebXR.
 
 ## 指南与教程
 
