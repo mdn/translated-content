@@ -204,7 +204,7 @@ var strReverse = str.split(/(?:)/u).reverse().join("");
 // => "́emuśer"
 ```
 
-**추가:** {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} 연산자를 사용하면 원본 문자열이 팰린드롬인지 확인할 수 있습니다.
+**추가:** {{jsxref("Operators", "===", "#Identity_strict_equality_(===)")}} 연산자를 사용하면 원본 문자열이 팰린드롬인지 확인할 수 있습니다.
 
 ## 명세
 

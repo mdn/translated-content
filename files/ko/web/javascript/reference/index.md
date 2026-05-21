@@ -259,7 +259,7 @@ slug: Web/JavaScript/Reference
 
 - {{JSxRef("Operators/Logical_AND", "&amp;&amp;")}}
 - {{JSxRef("Operators/Logical_OR", "||")}}
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
 
 ### 조건(삼항) 연산자
 
@@ -282,9 +282,9 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Bitwise_OR_assignment", "|=")}}
 - {{JSxRef("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = arr")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{ a, b } = obj")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = arr")}}
+- {{JSxRef("Operators/Destructuring", "{ a, b } = obj")}}
 
 ### 쉼표 연산자
 

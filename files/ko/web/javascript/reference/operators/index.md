@@ -170,7 +170,7 @@ slug: Web/JavaScript/Reference/Operators
   - : 논리 AND.
 - {{JSxRef("Operators/Logical_OR", "||")}}
   - : 논리 OR.
-- {{JSxRef("Operators/Nullish_coalescing_operator", "??")}}
+- {{JSxRef("Operators/Nullish_coalescing", "??")}}
   - : Nullish 통합 연산자.
 
 ### 조건부(삼항) 연산자
@@ -218,10 +218,10 @@ slug: Web/JavaScript/Reference/Operators
   - : 논리적 AND 할당.
 - {{JSxRef("Operators/Logical_OR_assignment", "||=")}}
   - : 논리적 OR 할당.
-- {{JSxRef("Operators/Logical_nullish_assignment", "??=")}}
+- {{JSxRef("Operators/Nullish_coalescing_assignment", "??=")}}
   - : 논리적 nullish 할당.
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+  {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
   - : 구조 분해 할당은 배열 또는 객체의 속성을 배열 또는 객체 리터럴과 비슷해 보이는 구문을 사용하여 변수에 할당할 수 있게 합니다.
 
 ### 쉼표 연산자
