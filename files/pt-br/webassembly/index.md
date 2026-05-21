@@ -48,11 +48,11 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
   - : Em `WebAssembly`. O objeto `Memory` é redimensionável {{jsxref ("Global_objects / ArrayBuffer","ArrayBuffer")}} que detém os bytes de memória invocados por uma `instância` de código.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
   - : Em `WebAssembly`. O objeto `Table` é uma matriz redimensionável de valores opacos, como referências de funções, acessadas por uma `instância` de código.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Cria um novo objeto WebAssembly `CompileError`.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Cria um novo objeto WebAssembly `LinkError`.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/pt-BR/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Cria um novo objeto WebAssembly `RuntimeError`.
 
 ## Exemplos
