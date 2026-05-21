@@ -30,7 +30,7 @@ console.log(canMakeHTTPRequest());
 ## 解説
 
 従来、グローバルスコープにアクセスするには、JavaScript 環境ごとに異なる構文を必要としていました。ウェブ上では {{domxref("Window.window", "window")}}, {{domxref("Window.self", "self")}}, {{domxref("Window.frames", "frames")}} を使うことができます。しかし [Web Worker](/ja/docs/Web/API/Worker) は `self` のみを利用することができます。Node.js はこれらのいずれも利用できず、代わりに `global` を使用する必要があります。
-`this` キーワードは、厳格でないモードで実行されている関数の中で使用することもできますが、厳格モードで実行されているモジュールや関数の中では `undefined` になります。`Function('return this')()` を使用することもできますが、{{Glossary("CSP")}} などによって {{jsxref("eval", "eval()")}} を無効にしている環境では、この方法でも {{jsxref("Function")}} の使用が抑制されます。
+`this` キーワードは、厳格でないモードで実行されている関数の中で使用することもできますが、厳格モードで実行されているモジュールや関数の中では `undefined` になります。`Function('return this')()` を使用することもできますが、{{Glossary("CSP")}} などによって {{jsxref("Global_Objects/eval", "eval()")}} を無効にしている環境では、この方法でも {{jsxref("Function")}} の使用が抑制されます。
 
 `globalThis` プロパティは、環境を越えてグローバルな `this` 値 (すなわちグローバルオブジェクト自身) にアクセスするための標準的な方法を提供します。`window` や `self` などの同様のプロパティとは異なり、これはウィンドウのコンテキストでも非ウィンドウのコンテキストでも動作することが保証されています。この方法では、コードがどの環境で実行されているのかを知らなくても、一貫した方法でグローバルオブジェクトにアクセスすることができます。名前を覚えやすくするために、グローバルスコープでは `this` の値は `globalThis` であることを忘れないでください。
 

@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int8Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int8Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Int8Array` の場合は `1` です。
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
+- {{jsxref("Function.name", "Int8Array.name")}}
   - : コンストラクター名を文字列値で返します。`Int8Array` の場合、 "Int8Array" です。
 
 ## 静的メソッド

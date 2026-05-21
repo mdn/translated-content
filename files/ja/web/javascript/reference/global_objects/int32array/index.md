@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Int32Array` の場合は `4` です。
-- {{jsxref("TypedArray.name", "Int32Array.name")}}
+- {{jsxref("Function.name", "Int32Array.name")}}
   - : コンストラクター名を文字列値で返します。`Int32Array` の場合、 "`Int32Array`" です。
 
 ## 静的メソッド
