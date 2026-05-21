@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigUint64Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`BigUint64Array` の場合は `8` です。
-- {{jsxref("TypedArray.name", "BigUint64Array.name")}}
+- {{jsxref("Function.name", "BigUint64Array.name")}}
   - : コンストラクター名を文字列値で返します。`BigUint64Array` の場合、 "`BigUint64Array`" です。
 
 ## 静的メソッド

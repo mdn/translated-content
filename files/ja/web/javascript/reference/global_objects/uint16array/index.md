@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint16Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint16Array` の場合は `2` です。
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
+- {{jsxref("Function.name", "Uint16Array.name")}}
   - : コンストラクター名を文字列値で返します。`Uint16Array` の場合、 "`Uint16Array`" です。
 
 ## 静的メソッド

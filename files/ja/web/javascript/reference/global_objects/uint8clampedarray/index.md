@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8ClampedArray.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Uint8ClampedArray` の場合は `1` です。
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
+- {{jsxref("Function.name", "Uint8ClampedArray.name")}}
   - : コンストラクター名を文字列値で返します。`Uint8ClampedArray` の場合、 "`Uint8ClampedArray`" です。
 
 ## 静的メソッド

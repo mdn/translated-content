@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Float64Array.BYTES_PER_ELEMENT")}}
   - : 要素の大きさを数値で返します。`Float64Array` の場合は `8` です。
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
+- {{jsxref("Function.name", "Float64Array.name")}}
   - : コンストラクター名を文字列値で返します。`Float64Array` の場合、 "`Float64Array`" です。
 
 ## 静的メソッド
