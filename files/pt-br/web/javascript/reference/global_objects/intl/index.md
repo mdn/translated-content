@@ -9,11 +9,11 @@ O objeto **`Intl`** é o namespace para a API de Internacionalização do ECMASc
 
 ## Propriedades
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
   - : Construtor para _collators_, objetos que permitem comparação de string sensível a linguagem.
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
   - : Construtor para objetos que permitem formatação de data e hora sensível a linguagem.
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
   - : Construtor para objetos que permitem formatação de número sensível a linguagem.
 
 ## Métodos

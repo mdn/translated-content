@@ -123,8 +123,8 @@ Estes objetos representam e interagem com buffers de dados estruturados e dados 
 Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
 
 ### Objetos não-padrão
