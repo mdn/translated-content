@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Uint8ClampedArray/Uint8ClampedArray", "Uint8ClampedArray()")}}
+- {{jsxref("Uint8ClampedArray.Uint8ClampedArray", "Uint8ClampedArray()")}}
   - : 新しい `Uint8ClampedArray` オブジェクトを生成します。
 
 ## 静的プロパティ

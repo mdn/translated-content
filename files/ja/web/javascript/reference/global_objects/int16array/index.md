@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Int16Array/Int16Array", "Int16Array()")}}
+- {{jsxref("Int16Array.Int16Array", "Int16Array()")}}
   - : 新しい `Int16Array` オブジェクトを生成します。
 
 ## 静的プロパティ

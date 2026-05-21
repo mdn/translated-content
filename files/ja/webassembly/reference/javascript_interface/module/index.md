@@ -10,16 +10,16 @@ original_slug: WebAssembly/JavaScript_interface/Module
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/WebAssembly/Module/Module", "WebAssembly.Module()")}}
+- {{jsxref("WebAssembly.Module.Module", "WebAssembly.Module()")}}
   - : 新しい `Module` オブジェクトを生成します。
 
 ## 静的プロパティ
 
-- {{jsxref("Global_Objects/WebAssembly/Module/customSections", "WebAssembly.Module.customSections()")}}
+- {{jsxref("WebAssembly.Module.customSections", "WebAssembly.Module.customSections()")}}
   - : `Module` と文字列を指定すると、モジュール内の与えられた文字列を名前に持つすべてのカスタムセクションの内容を返します。
-- {{jsxref("Global_Objects/WebAssembly/Module/exports", "WebAssembly.Module.exports()")}}
+- {{jsxref("WebAssembly.Module.exports", "WebAssembly.Module.exports()")}}
   - : `Module` を指定すると、エクスポート宣言の情報を配列として返します。
-- {{jsxref("Global_Objects/WebAssembly/Module/imports", "WebAssembly.Module.imports()")}}
+- {{jsxref("WebAssembly.Module.imports", "WebAssembly.Module.imports()")}}
   - : `Module` を指定すると、インポート宣言の情報を配列として返します。
 
 ## 例

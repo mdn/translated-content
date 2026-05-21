@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Int32Array
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/Int32Array/Int32Array", "Int32Array()")}}
+- {{jsxref("Int32Array.Int32Array", "Int32Array()")}}
   - : 新しい `Int32Array` オブジェクトを生成します。
 
 ## 静的プロパティ

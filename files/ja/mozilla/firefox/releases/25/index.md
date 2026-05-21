@@ -32,11 +32,11 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 
 - [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) に {{jsxref("Array.of()")}} メソッドを実装しました ([Firefox バグ 866849](https://bugzil.la/866849))。
 - {{jsxref("Array.prototype.find()")}} メソッドおよび {{jsxref("Array.prototype.findIndex()")}} メソッドをサポートしました ([Firefox バグ 885553](https://bugzil.la/885553))。
-- {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} および {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} メソッドを実装しました ([Firefox バグ 886949](https://bugzil.la/886949))。
+- {{jsxref("Number.parseInt", "Number.parseInt()")}} および {{jsxref("Number.parseFloat", "Number.parseFloat()")}} メソッドを実装しました ([Firefox バグ 886949](https://bugzil.la/886949))。
 - `Map.prototype.forEach()` メソッドおよび `Set.prototype.forEach()` メソッドを実装しました ([Firefox バグ 866847](https://bugzil.la/866847))。
 - [`Math`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math) へ新たに、数学的なメソッドを追加しました: `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` and `Math.cbrt()` ([Firefox バグ 717379](https://bugzil.la/717379)).
 - 2 進数および 8 進数の整数リテラルをサポートしました: `0b10101010`, `0B1010`, `0o777`, `0O237` が有効になりました ([Firefox バグ 894026](https://bugzil.la/894026))。
-- 計算機イプシロン定数 (1 に追加することで 1 ではなくなる、表現可能な最小の値) を {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} として使用できます ([Firefox バグ 885798](https://bugzil.la/885798))。
+- 計算機イプシロン定数 (1 に追加することで 1 ではなくなる、表現可能な最小の値) を {{jsxref("Number.EPSILON")}} として使用できます ([Firefox バグ 885798](https://bugzil.la/885798))。
 
 ### インターフェイス/API/DOM
 
