@@ -73,7 +73,7 @@ Math.sin(3.5);
 var circumference = 2 * Math.PI * r;
 ```
 
-Puedes convertir una cadena en un número entero usando la función {{jsxref("parseInt", "parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:
+Puedes convertir una cadena en un número entero usando la función {{jsxref("parseInt()")}} incorporada. Esta toma la base para la conversión como un segundo argumento opcional, que siempre debes proporcionar:
 
 ```js
 parseInt("123", 10); // 123
@@ -87,7 +87,7 @@ parseInt("010"); //  8
 parseInt("0x10"); // 16
 ```
 
-Aquí, vemos que la función {{jsxref("parseInt", "parseInt()")}} trata la primera cadena como octal debido al 0 inicial, y la segunda cadena como hexadecimal debido al "0x" inicial. La _notación hexadecimal todavía está en su lugar_; solo se ha eliminado el octal.
+Aquí, vemos que la función {{jsxref("parseInt()")}} trata la primera cadena como octal debido al 0 inicial, y la segunda cadena como hexadecimal debido al "0x" inicial. La _notación hexadecimal todavía está en su lugar_; solo se ha eliminado el octal.
 
 Si deseas convertir un número binario en un entero, simplemente cambia la base:
 
@@ -95,7 +95,7 @@ Si deseas convertir un número binario en un entero, simplemente cambia la base:
 parseInt("11", 2); // 3
 ```
 
-De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("parseFloat", "parseFloat()")}}. A diferencia de su primo {{jsxref("parseInt", "parseInt()")}}, `parseFloat()` siempre usa base 10.
+De manera similar, puedes analizar números de coma flotante utilizando la función incorporada {{jsxref("parseFloat()")}}. A diferencia de su primo {{jsxref("parseInt()")}}, `parseFloat()` siempre usa base 10.
 
 También puedes utilizar el operador `+` unario para convertir valores en números:
 
@@ -117,7 +117,7 @@ parseInt("hello", 10); // NaN
 NaN + 5; // NaN
 ```
 
-Puedes probar si un valor es `NaN` utilizando la función incorporada {{jsxref("isNaN", "isNaN()")}}:
+Puedes probar si un valor es `NaN` utilizando la función incorporada {{jsxref("isNaN()")}}:
 
 ```js
 isNaN(NaN); // true
@@ -130,7 +130,7 @@ JavaScript también tiene los valores especiales {{jsxref("Infinity")}} e `-Infi
 -1 / 0; // -Infinity
 ```
 
-Puedes probar los valores `Infinity`, `-Infinity` y `NaN` utilizando la función integrada {{jsxref("isFinite", "isFinite()")}}:
+Puedes probar los valores `Infinity`, `-Infinity` y `NaN` utilizando la función integrada {{jsxref("isFinite()")}}:
 
 ```js
 isFinite(1 / 0); // false
@@ -139,7 +139,7 @@ isFinite(NaN); // false
 ```
 
 > [!NOTE]
-> Las funciones {{jsxref("parseInt", "parseInt()")}} y {{jsxref("parseFloat", "parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
+> Las funciones {{jsxref("parseInt()")}} y {{jsxref("parseFloat()")}} analizan una cadena hasta que alcancen un caracter que no es válido para el formato de número especificado, luego devuelve el número analizado hasta ese punto. Sin embargo, el operador "+" simplemente convierte la cadena a `NaN` si contiene un caracter no válido. Intenta analizar la cadena "10.2abc" con cada método tú mismo en la consola y comprenderás mejor las diferencias.
 
 ## Strings
 

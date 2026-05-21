@@ -332,7 +332,7 @@ console.log(products.latestBrowser);
 
 Este _proxy_ extiende un arreglo con ciertas funcionalidades utilitarias. Como
 se puede ver, puedes "definir" propiedades de manera flexible sin usar
-{{jsxref("Object.defineProperties", "Object.defineProperties()")}}. Este ejemplo
+{{jsxref("Object.defineProperties()")}}. Este ejemplo
 se puede adaptar para encontrar una fila de una tabla por su celda. En dicho
 caso, el target sería {{domxref("HTMLTableElement.rows", "table.rows")}}.
 

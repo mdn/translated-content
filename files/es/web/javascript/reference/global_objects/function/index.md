@@ -35,7 +35,7 @@ Cada función de JavaScript en realidad es un objeto `Function`. Esto se puede v
   - : Crea una nueva función que, cuando se llama, tiene su `this` configurado en el `thisArg`. Opcionalmente, una determinada secuencia de argumentos se antepondrá a los argumentos siempre que se llame a la función recién invocada.
 - {{jsxref("Function.prototype.call()", "Function.prototype.call(<var>thisArg</var>[, <var>arg1</var>, <var>arg2</var>, ...<var>argN</var>])")}}
   - : Llama a una función y establece su `this` en el valor proporcionado. Los argumentos se pueden pasar tal cual.
-- {{jsxref("Function.prototype.toString()", "Function.prototype.toString()")}}
+- {{jsxref("Function.prototype.toString()")}}
   - : Devuelve una cadena que representa el código fuente de la función.
     Redefine el método {{jsxref("Object.prototype.toString()")}}.
 

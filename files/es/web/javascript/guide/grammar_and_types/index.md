@@ -348,8 +348,8 @@ Con todos los demás operadores, JavaScript _no_ convierte valores numéricos en
 
 En el caso que un valor representando un número está en memoria como texto, hay métodos para la conversión.
 
-- {{JSxRef("parseInt", "parseInt()")}}
-- {{JSxRef("parseFloat", "parseFloat()")}}
+- {{JSxRef("parseInt()")}}
+- {{JSxRef("parseFloat()")}}
 
 `parseInt` solo devuelve números enteros, por lo que su uso se reduce para decimales.
 

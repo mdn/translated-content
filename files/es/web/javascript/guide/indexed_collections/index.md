@@ -484,7 +484,7 @@ console.log(arr.property); // Registra "value"
 
 ### Arreglos y expresiones regulares
 
-Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("RegExp.exec", "RegExp.exec()")}}, {{jsxref("String.match", "String.match()")}} y {{jsxref("String.split", "String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
+Cuando un arreglo es el resultado de una coincidencia entre una expresión regular y una cadena, el arreglo devuelve propiedades y elementos que proporcionan información sobre la coincidencia. Un arreglo es el valor de retorno de {{jsxref("RegExp.exec()")}}, {{jsxref("String.match()")}} y {{jsxref("String.split()")}}. Para obtener información sobre el uso de arreglos con expresiones regulares, consulta [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ### Trabajar con objetos tipo array
 

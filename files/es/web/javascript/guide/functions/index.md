@@ -682,25 +682,25 @@ JavaScript tiene integradas varias funciones de nivel superior:
   - : El método **`eval()`** evalúa el código JavaScript representado como una cadena.
 - {{JSxRef("Deprecated_and_obsolete_features", "uneval()")}}
   - : El método **`uneval()`** crea una representación de cadena del código fuente de un {{JSxRef("Object")}}.
-- {{JSxRef("isFinite", "isFinite()")}}
+- {{JSxRef("isFinite()")}}
   - : La función global **`isFinite()`** determina si el valor pasado es un número finito. Si es necesario, el parámetro, primero se convierte en un número.
-- {{JSxRef("isNaN", "isNaN()")}}
+- {{JSxRef("isNaN()")}}
   - : La función **`isNaN()`** determina si un valor es {{JSxRef("NaN")}} o no. **Nota**: La coerción dentro de la función `isNaN` tiene {{JSxRef("isNaN", "interesantes", "#Descripcion")}} reglas; también puedes querer usar {{JSxRef("Number.isNaN()")}}, como se define en ECMAScript 2015, o puedes usar {{JSxRef("Operators/typeof", "typeof")}} para determinar si el valor no es un número (`NaN`).
-- {{JSxRef("parseFloat", "parseFloat()")}}
+- {{JSxRef("parseFloat()")}}
   - : La función **`parseFloat()`** procesa un argumento de cadena y devuelve un número de punto flotante.
-- {{JSxRef("parseInt", "parseInt()")}}
+- {{JSxRef("parseInt()")}}
   - : La función **`parseInt()`** procesa un argumento de cadena y devuelve un número entero de la base especificada (la base en los sistemas numéricos matemáticos).
-- {{JSxRef("decodeURI", "decodeURI()")}}
+- {{JSxRef("decodeURI()")}}
   - : La función **`decodeURI()`** decodifica un identificador uniforme de recursos (URI) creado previamente por {{JSxRef("encodeURI")}} o por una rutina similar.
-- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
+- {{JSxRef("decodeURIComponent()")}}
   - : El método **`decodeURIComponent()`** decodifica un componente Identificador uniforme de recursos (URI) creado previamente por {{JSxRef("encodeURIComponent")}} o por un rutina similar.
-- {{JSxRef("encodeURI", "encodeURI()")}}
+- {{JSxRef("encodeURI()")}}
   - : El método **`encodeURI()`** codifica un identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("encodeURIComponent()")}}
   - : El método **`encodeURIComponent()`** codifica un componente Identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("escape", "escape()")}}
+- {{JSxRef("escape()")}}
   - : El método obsoleto **`escape()`** calcula una nueva cadena en la que ciertos caracteres han sido reemplazados por una secuencia de escape hexadecimal. En su lugar usa {{JSxRef("encodeURI")}} o {{JSxRef("encodeURIComponent")}}.
-- {{JSxRef("unescape", "unescape()")}}
-  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("decodeURI", "decodeURI()")}} o {{JSxRef("decodeURIComponent")}} en su lugar.
+- {{JSxRef("unescape()")}}
+  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("decodeURI()")}} o {{JSxRef("decodeURIComponent")}} en su lugar.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

@@ -78,9 +78,9 @@ parseInt("0x11");
 
 ### Véase También
 
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

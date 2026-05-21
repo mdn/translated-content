@@ -85,7 +85,7 @@ Number(undefined); // NaN
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
 - {{jsxref("Number.parseInt()")}}
-  - : El valor es el mismo que {{jsxref("parseInt", "parseInt()")}} del objeto global.
+  - : El valor es el mismo que {{jsxref("parseInt()")}} del objeto global.
 
 ## Instancias `Number`
 

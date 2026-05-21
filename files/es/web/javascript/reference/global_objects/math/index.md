@@ -92,7 +92,7 @@ A diferencia de los demás objetos globales, el objeto `Math` no se puede editar
   - : Devuelve el más pequeño de cero o más números.
 - {{jsxref("Math.pow", "Math.pow(x, y)")}}
   - : Las devoluciones de base a la potencia de exponente, que es, baseexponent.
-- {{jsxref("Math.random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : Devuelve un número pseudo-aleatorio entre 0 y 1.
 - {{jsxref("Math.round", "Math.round(x)")}}
   - : Devuelve el valor de un número redondeado al número entero más cercano.

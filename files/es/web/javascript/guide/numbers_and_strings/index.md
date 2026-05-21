@@ -104,14 +104,14 @@ La siguiente tabla resume las propiedades del objeto `Number`.
 | {{JSxRef("Number.MIN_SAFE_INTEGER")}}  | Número entero seguro mínimo en JavaScript (−253 + 1 o `−9007199254740991`)                                                                |
 | {{JSxRef("Number.MAX_SAFE_INTEGER")}}  | Máximo número entero seguro en JavaScript (+253 - 1 o `+9007199254740991`)                                                                |
 
-| Método                               | Descripción                                                                                                                                                  |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{JSxRef("Number.parseFloat()")}}    | Analiza un argumento de cadena y devuelve un número de punto flotante. Igual que la función {{JSxRef("parseFloat", "parseFloat()")}} global.                 |
-| {{JSxRef("Number.parseInt()")}}      | Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada. Igual que la función {{JSxRef("parseInt", "parseInt()")}} global. |
-| {{JSxRef("Number.isFinite()")}}      | Determina si el valor pasado es un número finito.                                                                                                            |
-| {{JSxRef("Number.isInteger()")}}     | Determina si el valor pasado es un número entero.                                                                                                            |
-| {{JSxRef("Number.isNaN()")}}         | Determina si el valor pasado es {{JSxRef("NaN")}}. Versión más robusta del {{JSxRef("isNaN", "isNaN()")}} global original.                                   |
-| {{JSxRef("Number.isSafeInteger()")}} | Determina si el valor proporcionado es un número que es un _entero seguro_.                                                                                  |
+| Método                               | Descripción                                                                                                                                      |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{JSxRef("Number.parseFloat()")}}    | Analiza un argumento de cadena y devuelve un número de punto flotante. Igual que la función {{JSxRef("parseFloat()")}} global.                   |
+| {{JSxRef("Number.parseInt()")}}      | Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada. Igual que la función {{JSxRef("parseInt()")}} global. |
+| {{JSxRef("Number.isFinite()")}}      | Determina si el valor pasado es un número finito.                                                                                                |
+| {{JSxRef("Number.isInteger()")}}     | Determina si el valor pasado es un número entero.                                                                                                |
+| {{JSxRef("Number.isNaN()")}}         | Determina si el valor pasado es {{JSxRef("NaN")}}. Versión más robusta del {{JSxRef("isNaN()")}} global original.                                |
+| {{JSxRef("Number.isSafeInteger()")}} | Determina si el valor proporcionado es un número que es un _entero seguro_.                                                                      |
 
 El prototipo `Number` proporciona métodos para recuperar información de objetos `Number` en varios formatos. La siguiente tabla resume los métodos de `Number.prototype`.
 
