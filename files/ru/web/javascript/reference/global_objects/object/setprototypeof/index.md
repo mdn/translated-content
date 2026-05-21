@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 ## Сводка
 
-Метод **`Object.setPrototypeOf()`** устанавливает прототип (то есть, внутреннее свойство `[[Prototype]]`) указанного объекта в другой объект или {{jsxref("null")}}.
+Метод **`Object.setPrototypeOf()`** устанавливает прототип (то есть, внутреннее свойство `[[Prototype]]`) указанного объекта в другой объект или {{jsxref("Operators/null", "null")}}.
 
 ## Синтаксис
 
@@ -23,11 +23,11 @@ Object.setPrototypeOf(obj, prototype);
 - `obj`
   - : Объект, которому устанавливается прототип.
 - `prototype`
-  - : Новый прототип объекта (объект или {{jsxref("null")}}).
+  - : Новый прототип объекта (объект или {{jsxref("Operators/null", "null")}}).
 
 ## Описание
 
-Выкидывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если объект, чей прототип `[[Prototype]]` является не расширяемым, согласно методу {{jsxref("Object.isExtensible()")}}. Не делает ничего, если параметр `prototype` не является объектом или значением {{jsxref("null")}} (то есть, является числом, строкой, логическим значением или {{jsxref("undefined")}}). В противном случае метод устанавливает прототип `[[Prototype]]` объекта `obj` в новое значение.
+Выкидывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если объект, чей прототип `[[Prototype]]` является не расширяемым, согласно методу {{jsxref("Object.isExtensible()")}}. Не делает ничего, если параметр `prototype` не является объектом или значением {{jsxref("Operators/null", "null")}} (то есть, является числом, строкой, логическим значением или {{jsxref("undefined")}}). В противном случае метод устанавливает прототип `[[Prototype]]` объекта `obj` в новое значение.
 
 ## Примеры
 

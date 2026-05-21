@@ -25,7 +25,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает число, соответствующее размеру элемента массива в байтах. Для `Float32Array` это `4`.
 - Float32Array.length
   - : Статическое свойство "длина" со значением 0. Если хотите получить актуальную длину массива (число элементов) используйте {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float32Array.name")}}
+- {{jsxref("Function.name", "Float32Array.name")}}
   - : Возвращает строковое представление названия конструктора. В данном случае `Float32Array` вернёт `"Float32Array"`.
 - {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Прототип объекта `TypedArray`.

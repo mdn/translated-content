@@ -44,4 +44,4 @@ JavaScript вызывает метод `toString` автоматически, к
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

@@ -41,5 +41,5 @@ console.log(x.toString()); // Отобразит 'Привет, мир'
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("String.prototype.valueOf()")}}

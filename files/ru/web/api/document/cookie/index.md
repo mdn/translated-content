@@ -329,7 +329,7 @@ Executes a function only once, even after the refresh of the page.
 - `callback`
   - : The function to be executed ({{jsxref("function", "", "", 1)}}).
 - `thisObject` Optional
-  - : The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", 1)}} or {{jsxref("Global_Objects/null", "null")}}).
+  - : The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", 1)}} or {{jsxref("Operators/null", "null")}}).
 - `argumentToPass1, argumentToPass2, argumentToPassN` Optional
   - : The arguments of the `callback` function.
 - `identifier`

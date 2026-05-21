@@ -27,7 +27,7 @@ var isSame = Object.is(value1, value2);
 Метод `Object.is()` определяет, являются ли два значения [одинаковыми значениями](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Два значения являются одинаковыми в следующих случаях:
 
 - оба равны {{jsxref("undefined")}}
-- оба равны {{jsxref("null")}}
+- оба равны {{jsxref("Operators/null", "null")}}
 - оба равны `true`, либо оба равны `false`
 - оба являются строками с одинаковой длиной и одинаковыми символами
 - оба являются одним и тем же объектом

@@ -68,7 +68,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 ### Методы даты
 
 - {{jsxref("Global_Objects/Date/getYear", "getYear")}} и {{jsxref("Global_Objects/Date/setYear", "setYear")}} are affected by the Year-2000-Problem and have been subsumed by {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} и {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- You should use {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} method in new code.
+- You should use {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} instead of the deprecated {{jsxref("Global_Objects/Date/toUTCString", "toGMTString")}} method in new code.
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} is deprecated.
 
 ### Functions

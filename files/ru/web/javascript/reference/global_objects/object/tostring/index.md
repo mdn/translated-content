@@ -44,7 +44,7 @@ o.toString(); // вернёт [object Object]
 ```
 
 > [!NOTE]
-> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("Global_Objects/null", "null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
+> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("Operators/null", "null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("Global_Objects/undefined", "undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
 
 ## Примеры
 
@@ -128,7 +128,7 @@ toString.call(null); // [object Null]
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Number.prototype.toString()")}}
 - {{jsxref("Symbol.toPrimitive")}}

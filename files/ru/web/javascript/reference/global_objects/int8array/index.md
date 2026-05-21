@@ -25,7 +25,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
   - : Возвращает числовое значение размера элемента массива. `1` в случае с `Int8Array`.
 - Int8Array.length
   - : Статическая длина конструктора `Int8Array`, всегда равна `3` (т.к. конструктор принимает до 3 аргументов). Чтобы узнать длину созданного массива, see {{jsxref("TypedArray.prototype.length", "Int8Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int8Array.name")}}
+- {{jsxref("Function.name", "Int8Array.name")}}
   - : Возвращает строчное значение имени конструктора. В случае с `Int8Array`: "Int8Array".
 - {{jsxref("TypedArray", "Int8Array.prototype")}}
   - : Прототип для _TypedArray_ objects.

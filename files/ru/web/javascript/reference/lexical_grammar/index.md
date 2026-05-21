@@ -226,7 +226,7 @@ function import() {} // неправильно.
 
 ### Литерал Null
 
-Подробнее о `{{jsxref('Global_Objects/null','null')}}null`.
+Подробнее о `{{jsxref('Operators/null','null')}}null`.
 
 ```js
 null;

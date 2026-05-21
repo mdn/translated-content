@@ -22,14 +22,14 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{jsxref("Global_Objects/Infinity", "Infinity")}}
 - {{jsxref("Global_Objects/NaN", "NaN")}}
 - {{jsxref("Global_Objects/undefined", "undefined")}}
-- литерал {{jsxref("Global_Objects/null", "null")}}
+- литерал {{jsxref("Operators/null", "null")}}
 
 ### Функции
 
 Глобальные функции, возвращающие результат определённой подпрограммы.
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}

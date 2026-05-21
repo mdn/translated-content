@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/canvas
 
 {{APIRef("WebGL")}}
 
-`Свойство WebGLRenderingContext.canvas` доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("null")}}.
+`Свойство WebGLRenderingContext.canvas` доступно только для чтения. Возвращает ссылку на объекты {{domxref("HTMLCanvasElement")}} или {{domxref("OffscreenCanvas")}} связанные с установленным контекстом отрисовки. Если объект {{HTMLElement("canvas")}} или {{domxref("OffscreenCanvas")}} не связан с контекстом, то возвращается значение {{jsxref("Operators/null", "null")}}.
 
 ## Syntax
 
@@ -15,7 +15,7 @@ gl.canvas;
 
 ### Return value
 
-Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or {{jsxref("null")}}.
+Either a {{domxref("HTMLCanvasElement")}} or {{domxref("OffscreenCanvas")}} object or {{jsxref("Operators/null", "null")}}.
 
 ## Examples
 

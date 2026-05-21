@@ -46,4 +46,4 @@ console.log(typeof num); // number
 
 ## Смотрите также
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}}

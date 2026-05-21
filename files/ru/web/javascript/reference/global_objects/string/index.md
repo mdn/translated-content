@@ -199,7 +199,7 @@ console.log(String.replace(num, /5/, "2"));
 
 ### Пример: преобразование в строку
 
-Объект `String` можно использовать как «безопасную» альтернативу методу {{jsxref("String.prototype.toString()", "toString()")}}, так как хотя он обычно и вызывает соответствующий метод `toString()`, он также работает и для значений {{jsxref("Global_Objects/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}}. Например:
+Объект `String` можно использовать как «безопасную» альтернативу методу {{jsxref("String.prototype.toString()", "toString()")}}, так как хотя он обычно и вызывает соответствующий метод `toString()`, он также работает и для значений {{jsxref("Operators/null", "null")}} и {{jsxref("Global_Objects/undefined", "undefined")}}. Например:
 
 ```js
 var outputStrings = [];

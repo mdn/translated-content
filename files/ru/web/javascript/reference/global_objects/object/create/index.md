@@ -26,7 +26,7 @@ Object.create(proto[, propertiesObject])
 
 ### Выбрасываемые исключения
 
-Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр `proto` не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).
+Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр `proto` не является {{jsxref("Operators/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).
 
 ## Примеры
 

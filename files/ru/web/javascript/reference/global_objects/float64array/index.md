@@ -25,7 +25,7 @@ For more information about the constructor syntax and the parameters, see _[Type
   - : Returns a number value of the element size. `8` in the case of an `Float64Array`.
 - Float64Array.length
   - : Static length property whose value is 0. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
+- {{jsxref("Function.name", "Float64Array.name")}}
   - : Returns the string value of the constructor name. In the case of the `Float64Array` type: "Float64Array".
 - {{jsxref("TypedArray", "Float64Array.prototype")}}
   - : Prototype for the _TypedArray_ objects.

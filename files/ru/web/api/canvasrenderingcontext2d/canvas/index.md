@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/canvas
 
 {{APIRef}}
 
-Свойство **`CanvasRenderingContext2D.canvas`** является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.
+Свойство **`CanvasRenderingContext2D.canvas`** является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("Operators/null", "null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.
 
 ## Синтаксис
 

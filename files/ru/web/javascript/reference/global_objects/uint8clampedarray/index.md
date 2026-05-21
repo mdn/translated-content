@@ -24,7 +24,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : Возвращает размер элемента в байтах. Для Uint8ClampedArray оно равно 1.
 - Uint8ClampedArray.length
   - : Static length property whose value is 3. For the actual length (number of elements), see {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
+- {{jsxref("Function.name", "Uint8ClampedArray.name")}}
   - : Returns the string value of the constructor name. In the case of the `Uint8ClampedArray` type: "Uint8ClampedArray".
 - {{jsxref("TypedArray", "Uint8ClampedArray.prototype")}}
   - : Prototype for the _TypedArray_ objects.

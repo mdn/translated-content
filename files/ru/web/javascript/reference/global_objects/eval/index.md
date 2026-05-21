@@ -195,5 +195,5 @@ var fct2 = eval(fctStr2); // вернёт функцию
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}}
 - [Доступ к свойствам](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors)
