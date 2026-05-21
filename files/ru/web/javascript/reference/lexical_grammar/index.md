@@ -400,7 +400,7 @@ tag`string text ${expression} string text`;
 
 2\. Точка с запятой ставится в конце, когда обнаружен конец вводимой строки токенов и парсер is unable to parse the single input stream as a complete program.
 
-Here `++` is not treated as a {{jsxref('Operators/Arithmetic_Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
+Here `++` is not treated as a {{jsxref('Operators','postfix operator','Increment')}} applying to variable `b`, because a line terminator occurs between `b` and `++`.
 
 ```js-nolint
 a = b

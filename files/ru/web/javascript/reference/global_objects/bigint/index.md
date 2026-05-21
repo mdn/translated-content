@@ -154,7 +154,7 @@ o === o; // true
 `BigInt` ведёт себя как {{JSxRef("Global_Objects/Number", "обычное число")}} в следующих случаях:
 
 - Преобразуется в {{JSxRef("Global_Objects/Boolean", "Boolean")}} через функцию {{JSxRef("Global_Objects/Boolean", "Boolean")}}
-- Используется с логическими операторами {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&` и `!`
+- Используется с логическими операторами {{JSxRef("Operators", "Logical Operators")}} `||`, `&&` и `!`
 - В условном тесте, таком как {{JSxRef("Statements/if...else", "if statement")}}.
 
 ```js

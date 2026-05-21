@@ -22,7 +22,7 @@ Number.isNaN(value)
 
 ## Описание
 
-Поскольку оба оператора проверки на равенство, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} и {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, вычисляются в `false` при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} _и есть_ {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции `Number.isNaN()`. Эта ситуация отличается от всех других возможных сравнений в JavaScript.
+Поскольку оба оператора проверки на равенство, {{jsxref("Operators", "==", "#Equality")}} и {{jsxref("Operators", "===", "#Identity")}}, вычисляются в `false` при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} _и есть_ {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции `Number.isNaN()`. Эта ситуация отличается от всех других возможных сравнений в JavaScript.
 
 В отличие от глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}, `Number.isNaN()` не имеет проблемы принудительного преобразования параметра в число. Это значит, что в него безопасно передавать значения, которые обычно превращаются в {{jsxref("Global_Objects/NaN", "NaN")}}, но на самом деле {{jsxref("Global_Objects/NaN", "NaN")}} не являются. Также это значит, что метод возвращает `true` только для числовых значений, имеющих значение {{jsxref("Global_Objects/NaN", "NaN")}}.
 

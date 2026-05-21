@@ -102,12 +102,12 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="2">15</td>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный инкремент","#Increment")}}</td>
+      <td>{{jsxref("Operators","Постфиксный инкремент","#Increment")}}</td>
       <td rowspan="2">не определено</td>
       <td><code>… ++</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/Arithmetic_Operators","Постфиксный декремент","#Decrement")}}</td>
+      <td>{{jsxref("Operators","Постфиксный декремент","#Decrement")}}</td>
       <td><code>… --</code></td>
     </tr>
     <tr>

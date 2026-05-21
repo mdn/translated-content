@@ -145,7 +145,7 @@ var strReverse = str.split("").reverse().join(""); // 'длорпавыф'
 // split() возвращает массив, к которому применяются методы reverse() и join()
 ```
 
-**Бонус:** используя оператор {{jsxref("Operators/Comparison_Operators", "===", "#Identity_.2F_strict_equality_(.3D.3D.3D)")}}, можно проверить, являлась ли строка палиндромом.
+**Бонус:** используя оператор {{jsxref("Operators", "===", "#Identity_.2F_strict_equality_(.3D.3D.3D)")}}, можно проверить, являлась ли строка палиндромом.
 
 ## Спецификации
 
