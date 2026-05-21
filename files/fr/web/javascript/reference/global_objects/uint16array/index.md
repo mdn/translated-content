@@ -27,7 +27,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
   - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint16Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Uint16Array.name")}}
   - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint16Array` ce sera : "Uint16Array".
-- {{jsxref("TypedArray.prototype", "Uint16Array.prototype")}}
+- {{jsxref("TypedArray", "Uint16Array.prototype")}}
   - : Le prototype des objets _TypedArray_.
 
 ## Méthodes
@@ -39,7 +39,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
 
 ## Prototype `Uint16Array`
 
-Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriétés
 

@@ -267,7 +267,7 @@ for (let i of iterable) {
 }
 ```
 
-Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object.prototype")}} et {{jsxref("Array.prototype")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object")}} et {{jsxref("Array")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```js
 for (let i in iterable) {
