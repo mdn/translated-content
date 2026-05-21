@@ -51,8 +51,8 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Legacy generator
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} and {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
-- {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
+- {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function statement")}} and {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function expression")}} are deprecated. Use {{jsxref("Statements/function*", "function* statement")}} and {{jsxref("Operators/function*", "function* expression")}} instead.
+- {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} and {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} are deprecated.
 
 ### Iterator
 
@@ -73,7 +73,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Functions
 
-- {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} are deprecated. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
+- {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}} are deprecated. Use regular {{jsxref("Operators/function", "functions")}} or {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} instead.
 
 ### Proxy
 

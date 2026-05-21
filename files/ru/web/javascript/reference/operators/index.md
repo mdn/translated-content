@@ -216,11 +216,11 @@ slug: Web/JavaScript/Reference/Operators
 - {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function", "", 1)}}
   - : Ключевое слово `function` может быть использовано для определения устаревших функций-генераторов в одном выражении. Для того, чтобы сделать такую функцию, её тело должно содержать хотя бы одно выражение {{jsxref("Operators/yield", "yield")}}.
 
-- {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}}
   - : Синтаксис закрытого выражения для сокращённого написания простейших функций.
-- {{non-standard_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Упрощённый синтаксис создания массива.
-- {{non-standard_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : Упрощённый синтаксис создания генератора.
 
 ## Спецификации
