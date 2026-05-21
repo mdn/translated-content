@@ -89,4 +89,4 @@ with (Math) {
 - {{jsxref("Statements/bloc", "Bloc d'instructions","",1)}}
 - {{jsxref("Strict_mode","Mode strict","",1)}}
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}

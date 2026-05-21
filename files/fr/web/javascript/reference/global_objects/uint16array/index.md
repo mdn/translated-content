@@ -108,7 +108,7 @@ Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%Ty
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint16Array.prototype.toString()")}}
   - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint16Array.prototype[@@iterator]()")}}
   - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples

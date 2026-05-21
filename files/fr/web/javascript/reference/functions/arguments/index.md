@@ -112,7 +112,7 @@ console.log(typeof arguments[0]); // renvoie le type du premier argument
   - : Référence à la fonction appelante.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : Référence au nombre d'arguments passés à la fonction.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
+- {{jsxref("Functions/arguments/Symbol.iterator", "arguments[@@iterator]")}}
   - : Renvoie un nouvel [itérateur](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérateurs) qui contient les valeurs pour chaque indice d'`arguments`.
 
 ## Exemples
