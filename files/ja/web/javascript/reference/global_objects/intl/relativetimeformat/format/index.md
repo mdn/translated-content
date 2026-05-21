@@ -40,7 +40,7 @@ relativeTimeFormat.format(value, unit);
 
 ## 解説
 
-`format` ゲッター関数は、この {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って値や単位を整形し、文字列に格納します。
+`format` ゲッター関数は、この {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って値や単位を整形し、文字列に格納します。
 
 ## 例
 

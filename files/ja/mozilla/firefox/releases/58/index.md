@@ -30,9 +30,9 @@ _変更なし。_
 ### JavaScript
 
 - {{jsxref("Promise.prototype.finally()")}} メソッドを実装しました ([Firefox バグ 1019116](https://bugzil.la/1019116))。
-- {{jsxref("PluralRules", "Intl.PluralRules")}} オブジェクトを実装しました ([Firefox バグ 1403318](https://bugzil.la/1403318))。
-- {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1403319](https://bugzil.la/1403319))。
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトで `hourCycle` オプションと `hc` 言語タグをサポートしました ([Firefox バグ 1386146](https://bugzil.la/1386146))。
+- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}} オブジェクトを実装しました ([Firefox バグ 1403318](https://bugzil.la/1403318))。
+- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1403319](https://bugzil.la/1403319))。
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトで `hourCycle` オプションと `hc` 言語タグをサポートしました ([Firefox バグ 1386146](https://bugzil.la/1386146))。
 - [optional catch binding 提案](https://github.com/tc39/proposal-optional-catch-binding) を実装しました ([Firefox バグ 1380881](https://bugzil.la/1380881))。
 
 ### API
