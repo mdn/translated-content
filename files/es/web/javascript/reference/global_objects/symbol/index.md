@@ -104,7 +104,7 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
   - : Devuelve una cadena que contiene la descripción del Symbol. Anula el método {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Devuelve el Symbol. Anula el método {{jsxref("Object.prototype.valueOf()")}}.
-- {{jsxref("Symbol.prototype.@@toPrimitive()", "Symbol.prototype[@@toPrimitive]")}}
+- {{jsxref("Symbol/Symbol.toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
   - : Devuelve el Symbol.
 
 ## Ejemplos

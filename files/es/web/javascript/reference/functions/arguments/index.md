@@ -102,8 +102,8 @@ console.log(typeof arguments[0]); // devuelve el tipo del primer argumento
   - : Referencia a la función en ejecución a la que pertenecen los argumentos. Prohibida en modo estricto.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : El número de argumentos que se pasaron a la función.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
-  - : Devuelve un nuevo objeto {{jsxref("Array/@@iterator", "Array iterator", "", 0)}} que contiene los valores de cada índice en `arguments`.
+- {{jsxref("Functions/arguments/Symbol.iterator", "arguments[@@iterator]")}}
+  - : Devuelve un nuevo objeto {{jsxref("Array/Symbol.iterator", "Array iterator", "", 0)}} que contiene los valores de cada índice en `arguments`.
 
 ## Ejemplos
 

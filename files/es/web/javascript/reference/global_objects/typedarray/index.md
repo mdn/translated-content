@@ -79,7 +79,7 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
   - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
 - {{jsxref("TypedArray.name")}}
   - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
 - {{jsxref("TypedArray.prototype")}}
   - : Prototipo para objetos `TypedArray`.
@@ -154,7 +154,7 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
   - : Devuelve una cadena localizada que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.prototype.toString()")}}
   - : Devuelve una cadena que representa el arreglo y sus elementos. Consulta también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "TypedArray.prototype[@@iterator]()")}}
   - : Devuelve un nuevo objeto `Array Iterator` que contiene los valores de cada índice del arreglo.
 
 ## Ejemplos

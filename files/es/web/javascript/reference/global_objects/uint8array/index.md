@@ -107,7 +107,7 @@ Todos los objetos `Uint8Array` son heredados de {{jsxref("TypedArray.prototype",
   - : Devuelve una cadena localizada que representa el array y sus elementos. Véase también {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
   - : Retorna una cadena representando el array sus elementos. Véase también {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint8Array.prototype[@@iterator]()")}}
   - : Retorna un nuevo objeto `Array Iterator` que contiene los valores para cada índice en el array.
 
 ## Ejemplos

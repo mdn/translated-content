@@ -238,7 +238,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
   - : Recorta los espacios en blanco del final de la cadena.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Devuelve el valor primitivo del objeto especificado. Redefine el método {{jsxref("Object.prototype.valueOf()")}}.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String/Symbol.iterator")}}
   - : Devuelve un nuevo objeto `Iterator` que itera sobre los puntos de código de un valor de cadena, devolviendo cada punto de código como un valor de cadena.
 
 ## Métodos de contenedor HTML

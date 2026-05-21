@@ -54,7 +54,7 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
 
 ## Propiedades estáticas
 
-- {{JSxRef("RegExp.@@species", "get RegExp[@@species]")}}
+- {{JSxRef("RegExp/Symbol.species", "get RegExp[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.
 - {{JSxRef("RegExp.lastIndex")}}
   - : El índice en el que comenzará la siguiente búsqueda.
@@ -88,15 +88,15 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
   - : Prueba una coincidencia en su parámetro de cadena.
 - {{JSxRef("RegExp.prototype.toString()")}}
   - : Devuelve una cadena que representa el objeto especificado. Redefine el método {{JSxRef("Object.prototype.toString()")}}.
-- {{JSxRef("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
+- {{JSxRef("RegExp/Symbol.match", "RegExp.prototype[@@match]()")}}
   - : Realiza la coincidencia con la cadena dada y devuelve el resultado de la coincidencia.
-- {{JSxRef("RegExp.prototype.@@matchAll()", "RegExp.prototype[@@matchAll]()")}}
+- {{JSxRef("RegExp/Symbol.matchAll", "RegExp.prototype[@@matchAll]()")}}
   - : Devuelve todas las coincidencias de la expresión regular con una cadena.
-- {{JSxRef("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{JSxRef("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}
   - : Reemplaza las coincidencias en una cadena dada con una nueva subcadena.
-- {{JSxRef("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{JSxRef("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
   - : Busca la coincidencia en la cadena dada y devuelve el índice del patrón encontrado en la cadena.
-- {{JSxRef("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{JSxRef("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}
   - : Divide la cadena dada en un arreglo separando la cadena en subcadenas.
 
 ## Ejemplos
