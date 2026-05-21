@@ -128,7 +128,7 @@ console.log(
 
 ## Rendimiento
 
-Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("Intl/DateTimeFormat/prototype/format", "format")}}.
+Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y usar su método {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificaciones
 

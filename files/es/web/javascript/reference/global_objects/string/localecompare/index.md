@@ -77,7 +77,7 @@ es equivalente a la cadena `compareString`.
 Cuando se compara un gran número de cadenas, como cuando se ordenan arreglos de
 gran tamaño, es mejor crear un objeto
 {{jsxref("Intl/Collator", "Intl.Collator")}} y usar la función
-provista por su propiedad {{jsxref("Intl/Collator/prototype/compare", "compare")}}.
+provista por su propiedad {{jsxref("Intl/Collator/compare", "compare")}}.
 
 ## Ejemplos
 
