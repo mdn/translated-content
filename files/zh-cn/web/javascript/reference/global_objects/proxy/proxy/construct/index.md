@@ -120,6 +120,6 @@ new p(); // TypeError is thrown, "p" is not a constructor
 ## 相关主题
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Operators/new", "new")}} operator.
 - {{jsxref("Reflect.construct()")}}

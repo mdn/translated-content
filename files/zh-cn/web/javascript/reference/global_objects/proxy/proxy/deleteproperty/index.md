@@ -72,6 +72,6 @@ delete p.a; // "called: a"
 ## 参见
 
 - {{jsxref("Proxy")}}
-- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Proxy/Proxy", "handler")}}
 - {{jsxref("Operators/delete", "delete")}} 操作符
 - {{jsxref("Reflect.deleteProperty()")}}
