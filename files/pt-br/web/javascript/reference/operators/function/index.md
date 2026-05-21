@@ -62,7 +62,7 @@ var math = {
 ## Veja também
 
 - {{jsxref("Functions", "Funções e Escopos de Funções")}}
-- {{jsxref("Função")}}
+- {{jsxref("Function", "Função")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("Operators/function*", "function* expression")}}
