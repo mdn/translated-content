@@ -105,7 +105,7 @@ All `Uint8ClampedArray` objects inherit from {{jsxref("TypedArray.prototype", "%
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint8ClampedArray.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Examples

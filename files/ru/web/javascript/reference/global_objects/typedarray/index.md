@@ -87,7 +87,7 @@ new Int8Array(32).foo; // "bar"
   - : Свойство "Длина", значение которого 0.
 - {{jsxref("TypedArray.name")}}
   - : Возвращает строковое имя конструктора. Например, "Int8Array".
-- {{jsxref("TypedArray.@@species", "get TypedArray[@@species]")}}
+- {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : Конструктор. Используется для создания производных объектов.
 - {{jsxref("TypedArray.prototype")}}
   - : Прототип для _TypedArray_-объектов.

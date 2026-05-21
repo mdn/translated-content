@@ -106,7 +106,7 @@ All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%Typed
   - : Returns a localized string representing the array and its elements. See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float64Array.prototype.toString()")}}
   - : Returns a string representing the array and its elements. See also {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float64Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float64Array.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
 ## Examples

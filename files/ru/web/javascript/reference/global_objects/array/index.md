@@ -128,7 +128,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 ## Статические свойства
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/Symbol.species", "Array[@@species]")}}
   - : Возвращает конструктор `Array`.
 
 ## Статические методы
@@ -148,7 +148,7 @@ const myArray = myRe.exec("cdbBdbsbz");
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `Array` начальным значением является конструктор {{jsxref("Array/Array", "Array")}}.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/Symbol.unscopables", "Array.prototype[@@unscopables]")}}
   - : Содержит имена свойств, которые не включены в стандарт ECMAScript до версии ES2015 и которые игнорируются оператором [`with`](/ru/docs/Web/JavaScript/Reference/Statements/with).
 
 Собственные свойства каждого экземпляра `Array`:

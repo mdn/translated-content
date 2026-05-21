@@ -106,7 +106,7 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : Возвращает локализированную строку представляющую массив и его элементы. Смотрите также {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}
   - : Возвращает строку представляющую массив и его элементы. Смотрите также {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Float32Array.prototype[@@iterator]()")}}
   - : `Возвращает новый объект Array Iterator который содержит значения всех элементов в массиве.`
 
 ## Примеры
