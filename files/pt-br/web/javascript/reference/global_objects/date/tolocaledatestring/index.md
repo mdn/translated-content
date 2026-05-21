@@ -21,7 +21,7 @@ Verifique a seção [Compatibilidade entre navegadores](#compatibilidade_entre_n
 
 ### Return value
 
-Uma representação em string de parte da data dada a instância {{jsxref("Global_Objects/Date", "Date")}} de acordo com as convenções específicas do idioma.
+Uma representação em string de parte da data dada a instância {{jsxref("Date")}} de acordo com as convenções específicas do idioma.
 
 ## Exemplos
 

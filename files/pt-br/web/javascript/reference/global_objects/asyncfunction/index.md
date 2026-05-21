@@ -92,7 +92,7 @@ a(10, 20).then((v) => {
 
 - {{jsxref("Statements/async_function", "async function function")}}
 - {{jsxref("Operators/async_function", "async function expression")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Operators/function", "function expression")}}
 - {{jsxref("Functions", "Funções e escopo de função", "", 1)}}

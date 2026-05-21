@@ -39,7 +39,7 @@ O valor default para cada propriedade do componente date-time é {{jsxref("undef
 
 ### Valor retornado
 
-Uma string representando uma porção de tempo de uma instância {{jsxref("Global_Objects/Date", "Date")}}, fornecida de acordo com as convenções específicas do idioma.
+Uma string representando uma porção de tempo de uma instância {{jsxref("Date")}}, fornecida de acordo com as convenções específicas do idioma.
 
 ## Exemplos
 

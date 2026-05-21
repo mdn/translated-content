@@ -61,9 +61,9 @@ Os principais usos para o objeto `Number` são:
 - ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Usado para avaliar o valor passado e convertê-lo a um inteiro (ou infinito), mas foi removido.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
-  - : O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.
+  - : O valor é o mesmo que {{jsxref("parseFloat")}} do objeto global.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
-  - : O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.
+  - : O valor é o mesmo que {{jsxref("parseInt")}} do objeto global.
 
 ## Instâncias `Number`
 
@@ -132,5 +132,5 @@ Number("100a"); // NaN
 
 ## Veja também
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- O objeto global {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("NaN")}}
+- O objeto global {{jsxref("Math")}}

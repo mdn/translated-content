@@ -86,7 +86,7 @@ Um resultado similar pode ser alcançado usando o método {{jsxref("String.local
 
 ### Distinção entre String primitiva e objetos String
 
-Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Global_Objects/Boolean", "Boolean")}} e {{jsxref("Global_Objects/Number", "Numbers")}}.)
+Note que o JavaScript distingue entre objetos String e valores de string primitivas. (O mesmo é válido para {{jsxref("Boolean")}} e {{jsxref("Number", "Numbers")}}.)
 
 Strings literais (definidas por aspas duplas ou aspas simples) e strings retornadas da chamada da função String fora do contexto de uma função construtora (sem o uso da palavra chave [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)) são strings primitivas. O JavaScript converte automaticamente strings primitivas para objetos do tipo String, por isso é possível utilizar os métodos do objeto String através de strings primitivas. Em contextos onde um método é invocado de uma string primitiva ou uma propriedade é procurada, o JavaScript irá criar um objeto com a string primitiva e executar o método ou acessar a propriedade procurada.
 
@@ -139,7 +139,7 @@ var num = 15;
 alert(String.replace(num, /5/, "2"));
 ```
 
-[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) também estão disponíveis em métodos {{jsxref("Global_Objects/Array", "Array")}}.
+[Genéricos](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) também estão disponíveis em métodos {{jsxref("Array")}}.
 
 O seguinte é uma implementação para fornecer suporte a navegadores sem suporte:
 

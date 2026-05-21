@@ -110,7 +110,7 @@ const rounded = 5n / 2n;
 
 ### Comparações
 
-Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "Number")}}, mas é mais ou menos assim.
+Um `BigInt` não é estritamente igual a um {{jsxref("Number")}}, mas é mais ou menos assim.
 
 ```js
 0n === 0;
@@ -120,7 +120,7 @@ Um `BigInt` não é estritamente igual a um {{jsxref("Global_Objects/Number", "N
 // ↪ true
 ```
 
-Um {{jsxref("Global_Objects/Number", "Number")}} e um `BigInt` podem ser comparado normalmente.
+Um {{jsxref("Number")}} e um `BigInt` podem ser comparado normalmente.
 
 ```js
 1n < 2;
@@ -161,7 +161,7 @@ o === o; // true
 
 ### Condicionais
 
-A `BigInt` comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
+A `BigInt` comporta-se como {{jsxref("Number")}} nos casos onde ele é convertido para um {{jsxref("Boolean")}}: através da função {{jsxref("Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators", "Logical Operators")}} `||`, `&&`, e `!`; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.
 
 ```js
 if (0n) {

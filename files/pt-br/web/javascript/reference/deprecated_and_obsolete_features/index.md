@@ -47,7 +47,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Propriedades de Função
 
-- As propriedades {{jsxref("Global_Objects/Function/caller", "caller")}} e {{jsxref("Global_Objects/Function/arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade _arguments_, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.
+- As propriedades {{jsxref("Function.caller", "caller")}} e {{jsxref("Function.arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade _arguments_, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.
 
 ### Legacy generator
 
@@ -56,8 +56,8 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Iterador
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} foi descontinuado.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} foi descontinuado.
+- {{jsxref("StopIteration")}} foi descontinuado.
+- {{jsxref("Iterator")}} foi descontinuado.
 
 ### Métodos de objeto
 
@@ -67,9 +67,9 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Métodos de data
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} e {{jsxref("Global_Objects/Date/setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} e {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toUTCString", "toGMTString")}} em códigos novos.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
+- {{jsxref("Date.getYear", "getYear")}} e {{jsxref("Date.setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Date.getFullYear", "getFullYear")}} e {{jsxref("Date.setFullYear", "setFullYear")}}.
+- Deve-se usar {{jsxref("Date.toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Date.toUTCString", "toGMTString")}} em códigos novos.
+- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
 
 ### Funções
 
@@ -91,7 +91,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 ### Sequências de escape
 
 - Sequências de escape octais (\ seguido por um, dois ou três dígitos octais) foram descontinuadas em literais _string_ e expressões regulares.
-- As funções {{jsxref("Global_Objects/escape", "escape")}} e {{jsxref("Global_Objects/unescape", "unescape")}} foram descontinuadas. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.
+- As funções {{jsxref("escape")}} e {{jsxref("unescape")}} foram descontinuadas. Use {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.
 
 ### Métodos de _string_
 
@@ -110,9 +110,9 @@ Estas _features_ obsoletas foram totamente removidas do JavaScript e não podem 
 
 ### Function
 
-| Property                                             | Description                 |
-| ---------------------------------------------------- | --------------------------- |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
+| Property                              | Description                 |
+| ------------------------------------- | --------------------------- |
+| {{jsxref("Function.arity", "arity")}} | Number of formal arguments. |
 
 ### Array
 

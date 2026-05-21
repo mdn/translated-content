@@ -27,11 +27,11 @@ Palavras-chave e expressões básicas em JavaScript.
   - : Pausa e retorma uma função de gerador
 - {{experimental_inline}} {{jsxref("Operators/yield*", "yield*")}}
   - : Delegar a outra função gerador ou objeto iterável.
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : Array initializer/literal syntax.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Object initializer/literal syntax.
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
 - {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Array comprehensions.

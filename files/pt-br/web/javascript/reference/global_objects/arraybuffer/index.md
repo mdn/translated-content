@@ -78,7 +78,7 @@ All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer")}}.
 
 ## Exemplo
 
-In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```
 var buffer = new ArrayBuffer(8);

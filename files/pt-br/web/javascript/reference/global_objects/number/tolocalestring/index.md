@@ -38,7 +38,7 @@ console.log(numero.toLocaleString()); // Mostra "3,500" se a localização for U
 
 ### Verificando o suporte dos argumentos `locales` e `options`
 
-Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} pode ser usada da seguinte forma:
+Os argumentos `locales` e `options` não são suportados por todos os navegadores ainda. Para verificar pelo suporte das implementações do ES5.1 e posteriores, a requisição de tags de linguagem ilegais são rejeitadas com uma exceção {{jsxref("RangeError")}} pode ser usada da seguinte forma:
 
 ```js
 function toLocaleStringSupportsLocales() {

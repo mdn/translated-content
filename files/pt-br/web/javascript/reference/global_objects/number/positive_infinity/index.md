@@ -22,7 +22,7 @@ Esse valor se comporta ligeiramente diferente do infinito matemático:
 - Qualquer número positivo dividido por `POSITIVE_INFINITY` é Zero positivo.
 - Qualquer número negativo dividido por `POSITIVE_INFINITY` é Zero negativo.
 - Zero multiplicado por `POSITIVE_INFINITY` é {{jsxref("NaN")}}.
-- {{jsxref("Global_Objects/NaN", "NaN")}} multiplicado por `POSITIVE_INFINITY` é {{jsxref("NaN")}}.
+- {{jsxref("NaN")}} multiplicado por `POSITIVE_INFINITY` é {{jsxref("NaN")}}.
 - `POSITIVE_INFINITY`, dividido por qualquer valor negativo exceto {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, é {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
 - `POSITIVE_INFINITY`, dividido por qualquer valor positivo exceto `POSITIVE_INFINITY`, é `POSITIVE_INFINITY`.
 - `POSITIVE_INFINITY`, dividido por {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} ou `POSITIVE_INFINITY`, é {{jsxref("NaN")}}.

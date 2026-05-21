@@ -40,7 +40,7 @@ Se _base_ é `undefined` ou 0 (ou ausente), JavaScript assume o seguinte:
 
 Se o primeiro caracter não puder ser convertido para um número, `parseInt` retorna `NaN`.
 
-Para propósitos aritméticos, o valor `NaN` não é um número em qualquer base. Você pode chamar a função {{jsxref("Global_Objects/isNaN", "isNaN")}} para determinar se o resultado de `parseInt` é `NaN`. Se `NaN` for passado em operações aritméticas, o resultado da operação também será `NaN`.
+Para propósitos aritméticos, o valor `NaN` não é um número em qualquer base. Você pode chamar a função {{jsxref("isNaN")}} para determinar se o resultado de `parseInt` é `NaN`. Se `NaN` for passado em operações aritméticas, o resultado da operação também será `NaN`.
 
 Para converter um número para seu literal string em uma base específica use `intValue.toString(base)`.
 
@@ -141,9 +141,9 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## Veja também
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

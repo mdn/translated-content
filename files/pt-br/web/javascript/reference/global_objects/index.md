@@ -19,9 +19,9 @@ Outros objetos no escopo global também são [criados pelo desenvolvedor](/pt-BR
 
 Propriedades globais retornam um valor simples; eles não tem propriedades ou métodos.
 
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/undefined", "undefined")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("NaN")}}
+- {{jsxref("undefined")}}
 - {{jsxref("Operators/null", "null")}} literal
 
 ### Propriedades de função
@@ -30,55 +30,55 @@ Estas funções globais —funções que são chamadas globalmente ao invés de 
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline()}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline()}}
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline()}}
+- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("escape", "escape()")}} {{deprecated_inline()}}
+- {{jsxref("unescape", "unescape()")}} {{deprecated_inline()}}
 
 ### Objetos fundamentais
 
 Estes são objetos básicos e fundamentais nos quais todos os outros objetos são baseados. Isso inclui objetos que representam objetos genéricos, funções e erros.
 
-- {{jsxref("Global_Objects/Object", "Object")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Global_Objects/Boolean", "Boolean")}}
-- {{jsxref("Global_Objects/Symbol", "Symbol")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/Error", "Error")}}
-- {{jsxref("Global_Objects/EvalError", "EvalError")}}
-- {{jsxref("Global_Objects/InternalError", "InternalError")}}
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-- {{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}}
-- {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}
-- {{jsxref("Global_Objects/TypeError", "TypeError")}}
-- {{jsxref("Global_Objects/URIError", "URIError")}}
+- {{jsxref("Object")}}
+- {{jsxref("Function")}}
+- {{jsxref("Boolean")}}
+- {{jsxref("Symbol")}} {{experimental_inline()}}
+- {{jsxref("Error")}}
+- {{jsxref("EvalError")}}
+- {{jsxref("InternalError")}}
+- {{jsxref("RangeError")}}
+- {{jsxref("ReferenceError")}}
+- {{jsxref("StopIteration")}}
+- {{jsxref("SyntaxError")}}
+- {{jsxref("TypeError")}}
+- {{jsxref("URIError")}}
 
 ### Números e datas
 
 Estes são objetos base para a representação de números, datas e cálculos matemáticos.
 
-- {{jsxref("Global_Objects/Number", "Number")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Global_Objects/Date", "Date")}}
+- {{jsxref("Number")}}
+- {{jsxref("Math")}}
+- {{jsxref("Date")}}
 
 ### Processamento de texto
 
 Estes objetos representam strings e manipulam as mesmas.
 
-- {{jsxref("Global_Objects/String", "String")}}
-- {{jsxref("Global_Objects/RegExp", "RegExp")}}
+- {{jsxref("String")}}
+- {{jsxref("RegExp")}}
 
 ### Coleções indexadas
 
 Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como `[]`.
 
-- {{jsxref("Global_Objects/Array", "Array")}}
+- {{jsxref("Array")}}
 - [`Float32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)
 - [`Float64Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)
 - [`Int16Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)
@@ -88,16 +88,16 @@ Estes objetos representam coleções de dados que são ordenados pelo valor de u
 - [`Uint32Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)
 - [`Uint8Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 - [`Uint8ClampedArray`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray)
-- {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
+- {{jsxref("ParallelArray")}} {{non-standard_inline()}}
 
 ### Coleções chaveadas
 
 Estes objetos representam coleções que usam chaves; estas contém elementos que são iteráveis na ordem de inserção.
 
-- {{jsxref("Global_Objects/Map", "Map")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/Set", "Set")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/WeakMap", "WeakMap")}} {{experimental_inline()}}
-- {{jsxref("Global_Objects/WeakSet", "WeakSet")}} {{experimental_inline()}}
+- {{jsxref("Map")}} {{experimental_inline()}}
+- {{jsxref("Set")}} {{experimental_inline()}}
+- {{jsxref("WeakMap")}} {{experimental_inline()}}
+- {{jsxref("WeakSet")}} {{experimental_inline()}}
 
 ### Dados estruturados
 
@@ -122,10 +122,10 @@ Estes objetos representam e interagem com buffers de dados estruturados e dados 
 
 Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}
 - {{jsxref("Intl/Collator", "Intl.Collator")}}
 - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}
 
 ### Objetos não-padrão
 

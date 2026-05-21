@@ -95,7 +95,7 @@ str.matchAll(regexp);
 // retorna TypeError
 ```
 
-`matchAll()` cria internamente um clone da `regexp` - portanto, ao contrário de {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}, o `lastIndex` não muda conforme a string é verificada.
+`matchAll()` cria internamente um clone da `regexp` - portanto, ao contrário de {{jsxref("RegExp.exec", "regexp.exec()")}}, o `lastIndex` não muda conforme a string é verificada.
 
 ```js
 const regexp = RegExp("[a-c]", "g");
@@ -109,7 +109,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 
 Outra razão convincente para usar `matchAll()` é o acesso aprimorado para capturar grupos.
 
-Os grupos de captura são ignorados ao usar {{jsxref("Global_Objects/String/match", "match()")}} com o sinalizador global `/g`:
+Os grupos de captura são ignorados ao usar {{jsxref("String.match", "match()")}} com o sinalizador global `/g`:
 
 ```js
 let regexp = /t(e)(st(\d?))/g;

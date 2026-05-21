@@ -105,7 +105,7 @@ Observe que este código é somente um exemplo; ele não aceita números válido
 
 ## Veja também
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("parseInt", "parseInt()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}

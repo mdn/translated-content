@@ -16,7 +16,7 @@ Date.toSource()
 
 ### Valor de retorno
 
-Uma _string_ representando o código fonte do objeto {{jsxref("Global_Objects/Date", "Date")}}.
+Uma _string_ representando o código fonte do objeto {{jsxref("Date")}}.
 
 ## Exemplos
 

@@ -41,4 +41,4 @@ console.log(new MyArray() instanceof MySubArray); // false
 ## Veja também
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Global_Objects/Object/isPrototypeOf", "isPrototypeOf()")}}
+- {{jsxref("Object.isPrototypeOf", "isPrototypeOf()")}}

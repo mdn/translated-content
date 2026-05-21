@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/function*
 
 {{jsSidebar("Statements")}}
 
-A declaração **`function*`** (palavra chave `function` seguida de um asterisco) define uma _função geradora_ (_generator function_), que retorna um objeto {{jsxref("Global_Objects/Generator","Generator")}}.
+A declaração **`function*`** (palavra chave `function` seguida de um asterisco) define uma _função geradora_ (_generator function_), que retorna um objeto {{jsxref("Generator")}}.
 
 {{InteractiveExample("JavaScript Demo: Statement - Function*")}}
 
