@@ -1,7 +1,6 @@
 ---
 title: ナビゲーション API
 slug: Web/API/Navigation_API
-page-type: web-api-overview
 l10n:
   sourceCommit: 9c27111e8c096a18881d96d15d6fd41558acf6e5
 ---

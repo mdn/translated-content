@@ -126,7 +126,7 @@ img {
 
 ### クリック可能な領域のある画像
 
-```html
+```html-nolint
 <map name="primary">
   <area
     shape="circle"

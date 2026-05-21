@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("SVG")}}
 
-**`isPointInStroke()`** は {{domxref("SVGGeometryElement")}} インターフェイスのメソッドで、{{domxref(「SVGGeometryElement」)}} インターフェイスの **`isPointInStroke()`** メソッドは、指定された点が要素のストローク図形内にあるかどうかを判断します。 `point` 引数は、要素のローカル座標系における点として解釈されます。
+**`isPointInStroke()`** は {{domxref("SVGGeometryElement")}} インターフェイスのメソッドで、{{domxref("SVGGeometryElement")}} インターフェイスの **`isPointInStroke()`** メソッドは、指定された点が要素のストローク図形内にあるかどうかを判断します。 `point` 引数は、要素のローカル座標系における点として解釈されます。
 
 ## 構文
 

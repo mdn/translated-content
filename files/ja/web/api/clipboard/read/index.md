@@ -137,7 +137,7 @@ async function pasteImage() {
 
 #### HTML
 
-```html
+```html-nolint
 <img id="source_jpg" src="butterfly.jpg" alt="JPG butterfly image" />
 <div id="destination">ここをクリックすると、クリップボードにデータをコピーします。</div>
 <button id="reload" type="button">再読み込み</button>
