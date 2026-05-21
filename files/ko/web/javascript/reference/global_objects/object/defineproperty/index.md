@@ -64,7 +64,7 @@ Object.defineProperty(obj, prop, descriptor);
 - `value`
   - : 속성에 연관된 값입니다. 유효한 JavaScript 값(숫자, 객체, 함수 등)은 모두 사용할 수 있습니다. **기본 값은 {{jsxref("undefined")}}입니다.**
 - `writable`
-  - : {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 속성의 값을 바꿀 수 있으면 `true`입니다. **기본 값은 `false`입니다.**
+  - : {{jsxref("Operators", "할당 연산자", "Assignment_operators", 1)}}로 속성의 값을 바꿀 수 있으면 `true`입니다. **기본 값은 `false`입니다.**
 
 **접근자 서술자**는 다음 키를 선택사항으로 가집니다.
 
