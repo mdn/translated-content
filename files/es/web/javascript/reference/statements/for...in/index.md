@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-La instrucción {{JSxRef("Statements/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Global_Objects/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
+La instrucción {{JSxRef("Statements/for...in", "for-in")}} itera sobre todas las [propiedades enumerables](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Global_Objects/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -122,8 +122,8 @@ for (const prop in obj) {
 - {{JSxRef("Statements/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad `values`
 - {{JSxRef("Statements/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
 - {{JSxRef("Statements/for", "for")}}
-- {{JSxRef("../Guide/Iterators_and_Generators", "Expresiones generadoras")}} (usa la sintaxis `for...in`)
-- {{JSxRef("../Enumerability_and_ownership_of_properties", "Enumerabilidad y posesión de propiedades")}}
+- [Expresiones generadoras](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usa la sintaxis `for...in`)
+- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{JSxRef("Object.getOwnPropertyNames()")}}
 - {{JSxRef("Object.prototype.hasOwnProperty()")}}
 - {{JSxRef("Array.prototype.forEach()")}}

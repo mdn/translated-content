@@ -13,7 +13,7 @@ Los errores en tiempo de ejecución dan como resultado la creación y lanzamient
 
 ### Tipos `Error`
 
-Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Declaraciones para el manejo de excepciones", "#Sentencias_de_manejo_de_excepciones", 1)}}.
+Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta [Declaraciones para el manejo de excepciones](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Sentencias_de_manejo_de_excepciones).
 
 - {{JSxRef("EvalError")}}
   - : Crea una instancia que representa un error que ocurre con respecto a la función global {{JSxRef("eval", "eval()")}}.

@@ -154,7 +154,7 @@ console.log(`Quince es ${five + ten} y no ${2 * five + ten}.`);
 // "Quince es 15 y no 20."
 ```
 
-Para obtener más información, lee acerca de {{JSxRef("template_strings", "plantillas literales")}} en la {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
+Para obtener más información, lee acerca de {{JSxRef("template_strings", "plantillas literales")}} en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 ## Internacionalización
 

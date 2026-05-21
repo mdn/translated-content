@@ -10,7 +10,7 @@ Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef
 **Diferencias y limitaciones:**
 
 - No tiene sus propios enlaces a {{JSxRef("Operators/this", "this")}} o {{JSxRef("Operators/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
-- No tiene {{JSxRef("Functions/arguments", "argumentos")}} o palabras clave {{JSxRef("../Operadores/new.target", "new.target")}}.
+- No tiene {{JSxRef("Functions/arguments", "argumentos")}} o palabras clave [new.target](/es/docs/Web/JavaScript/Operadores/new.target).
 - No apta para los métodos {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
 - No se puede utilizar {{JSxRef("Operators/yield", "yield")}} dentro de su cuerpo.
