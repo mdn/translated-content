@@ -8,7 +8,7 @@ slug: Web/API/CredentialsContainer/create
 La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en
 
 - une nouvelle instance {{domxref("Credential")}} construite avec les options fournies
-- {{jsxref("null")}} si aucun objet `Credential` ne peut être créé.
+- {{jsxref("Operators/null", "null")}} si aucun objet `Credential` ne peut être créé.
 
 > [!NOTE]
 > Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.

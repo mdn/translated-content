@@ -46,7 +46,7 @@ Un nouvel objet qui dispose du prototype et des propriétés indiquées.
 
 ### Exceptions
 
-Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
+Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("Operators/null", "null")}} ou s'il ne décrit pas des propriétés d'un objet.
 
 ## Exemples
 

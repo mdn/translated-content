@@ -47,7 +47,7 @@ Les propriétés {{jsxref("String")}} et {{jsxref("Symbol")}} sont copiées. Les
 
 En cas d'erreur, si une propriété n'est pas accessible en écriture par exemple, une exception {{jsxref("TypeError")}} sera levée mais l'objet cible aura été modifié avec les propriétés ajoutées avant l'erreur.
 
-`Object.assign` ne donnera pas d'erreur si on fournit les valeurs {{jsxref("null")}} ou {{jsxref("undefined")}} pour la valeur source.
+`Object.assign` ne donnera pas d'erreur si on fournit les valeurs {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}} pour la valeur source.
 
 ## Exemples
 

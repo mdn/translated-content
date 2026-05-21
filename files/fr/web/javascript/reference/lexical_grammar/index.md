@@ -135,7 +135,7 @@ Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'env
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Statements/switch", "default")}}
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
@@ -223,7 +223,7 @@ function import() {} // Illégal.
 
 ### Littéral `null`
 
-Voir aussi la page {{jsxref("null")}} pour plus d'informations.
+Voir aussi la page {{jsxref("Operators/null", "null")}} pour plus d'informations.
 
 ```js
 null;

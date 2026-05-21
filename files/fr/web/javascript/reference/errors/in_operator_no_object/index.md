@@ -41,7 +41,7 @@ On utilisera plutôt la méthode {{jsxref("String.prototype.indexOf()")}} :
 
 ### `null` ou `undefined` ne fonctionnent pas
 
-Avant d'utiliser `in`, il faut s'assurer que la valeur qu'on inspecte n'est pas {{jsxref("null")}} ou {{jsxref("undefined")}}.
+Avant d'utiliser `in`, il faut s'assurer que la valeur qu'on inspecte n'est pas {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}.
 
 ```js example-bad
 var toto = null;

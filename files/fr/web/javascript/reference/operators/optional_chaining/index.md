@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 {{jsSidebar("Operators")}}
 
-L'opérateur de **chaînage optionnel** **`?.`** permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide. L'opérateur `?.` fonctionne de manière similaire à l'opérateur de chaînage `.`, à ceci près qu'au lieu de causer une erreur si une référence est {{jsxref("null")}} ou {{jsxref("undefined")}}, l'expression se court-circuite avec `undefined` pour valeur de retour. Quand il est utilisé avec des appels de fonctions, il retourne `undefined` si la fonction donnée n'existe pas.
+L'opérateur de **chaînage optionnel** **`?.`** permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide. L'opérateur `?.` fonctionne de manière similaire à l'opérateur de chaînage `.`, à ceci près qu'au lieu de causer une erreur si une référence est {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}, l'expression se court-circuite avec `undefined` pour valeur de retour. Quand il est utilisé avec des appels de fonctions, il retourne `undefined` si la fonction donnée n'existe pas.
 
 Ceci résulte en des expressions plus courtes et plus simples lors de l'accès à des propriétés chaînées quand il est possible qu'une référence soit manquante. Ceci peut aussi être utile lors de l'exploration du contenu d'un objet lorsqu'il n'y a aucune garantie concernant les propriétés qui sont requises.
 

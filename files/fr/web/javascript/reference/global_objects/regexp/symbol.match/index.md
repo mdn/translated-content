@@ -38,7 +38,7 @@ regexp[Symbol.match](str);
 
 ### Valeur de retour
 
-Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances et les groupes capturés grâce aux parenthèse. S'il n'y a aucune correspondance, ce sera {{jsxref("null")}}.
+Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances et les groupes capturés grâce aux parenthèse. S'il n'y a aucune correspondance, ce sera {{jsxref("Operators/null", "null")}}.
 
 ## Description
 

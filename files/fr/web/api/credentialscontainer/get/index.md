@@ -5,7 +5,7 @@ slug: Web/API/CredentialsContainer/get
 
 {{APIRef("Credential Management")}}{{SeeCompatTable}}
 
-La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("null")}}.
+La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContainer")}}, renvoie une promesse ({{jsxref("Promise")}}) qui est résolue en une instance de {{domxref("Credential")}} correspondant aux paramètres fournis. Si aucune correspondance n'est trouvée, la promesse sera résolue avec la valeur {{jsxref("Operators/null", "null")}}.
 
 Cette méthode collecte l'ensemble des informations d'authentification stockées dans l'objet {{domxref("CredentialsContainer")}} et qui respectent les critères indiqués (définis grâce à l'argument **`options`**). À partir de cet ensemble, l'agent utilisateur sélectionne la meilleure information d'authentification. Selon les options fournies, l'agent utilisateur pourra afficher une boîte de dialogue et demander à l'utilisateur de sélectionner la bonne information.
 
@@ -35,7 +35,7 @@ var promise = CredentialsContainer.get([options]);
 
 ### Valeur de retour
 
-Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxref("Credential")}} correspondant aux paramètres fournis. S'il n'est pas possible d'obtenir une seule instance sans ambiguïté, la promesse sera résolue avec la valeur {{jsxref("null")}}.
+Une promesse ({{jsxref("Promise")}}) qui est résolue avec une instance {{domxref("Credential")}} correspondant aux paramètres fournis. S'il n'est pas possible d'obtenir une seule instance sans ambiguïté, la promesse sera résolue avec la valeur {{jsxref("Operators/null", "null")}}.
 
 ## Spécifications
 

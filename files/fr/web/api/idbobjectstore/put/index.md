@@ -25,7 +25,7 @@ var request = objectStore.put(monElement, cleOptionnelle);
 - `monElement`
   - : La valeur qu'on souhaite enregistrer.
 - `cleOptionnelle` {{optional_inline}}
-  - : La clé qu'on souhaite utiliser pour identifier l'enregistrement. Si cet argument est absent, la valeur par défaut sera {{jsxref("null")}}.
+  - : La clé qu'on souhaite utiliser pour identifier l'enregistrement. Si cet argument est absent, la valeur par défaut sera {{jsxref("Operators/null", "null")}}.
 
 ### Valeur de retour
 

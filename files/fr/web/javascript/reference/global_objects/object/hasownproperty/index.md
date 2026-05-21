@@ -36,7 +36,7 @@ obj.hasOwnProperty(prop);
 
 ### Valeur de retour
 
-Un booléen qui indique si l'objet possède ou non la propriété indiquée en argument et que celle-ci est directement rattachée à l'objet (elle ne provient pas de la chaîne de prototypes de l'objet). `hasOwnProperty()` renvoie `true` si la propriété existe et que sa valeur est {{jsxref("null")}} ou {{jsxref("undefined")}}.
+Un booléen qui indique si l'objet possède ou non la propriété indiquée en argument et que celle-ci est directement rattachée à l'objet (elle ne provient pas de la chaîne de prototypes de l'objet). `hasOwnProperty()` renvoie `true` si la propriété existe et que sa valeur est {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}.
 
 ## Description
 

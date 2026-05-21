@@ -34,7 +34,7 @@ var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
 ```
 
-On peut corriger cet exemple en utilisant {{jsxref("null")}} comme prototype :
+On peut corriger cet exemple en utilisant {{jsxref("Operators/null", "null")}} comme prototype :
 
 ```js example-good
 var obj = Object.create(null);

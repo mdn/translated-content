@@ -42,7 +42,7 @@ let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
 
 Une autre différence entre `let` et `var` est la façon dont la variable est initialisée : pour `let`, la variable est initialisée à l'endroit où le parseur évalue son contenu (cf. ci-après).
 
-À l'instar de {{jsxref("instructions/const", "const")}}, `let` ne crée pas de propriété sur l'objet {{domxref("window")}} quand les variables sont déclarées au niveau global.
+À l'instar de {{jsxref("Statements/const", "const")}}, `let` ne crée pas de propriété sur l'objet {{domxref("window")}} quand les variables sont déclarées au niveau global.
 
 L'origine du nom `let` est décrite [dans cette réponse (en anglais)](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 

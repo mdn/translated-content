@@ -55,7 +55,7 @@ var obj = { cleDeLaPropriete; };
 // SyntaxError: missing : after property id
 ```
 
-Si vous souhaitez définir une propriété sans valeur, vous pouvez utiliser le mot-clé {{jsxref("null")}} :
+Si vous souhaitez définir une propriété sans valeur, vous pouvez utiliser le mot-clé {{jsxref("Operators/null", "null")}} :
 
 ```js example-good
 var obj = { cleDeLaPropriete: null };

@@ -38,7 +38,7 @@ None.
 
 - Si `mode` n'est pas l'une des valeurs acceptables, une erreur `gl.INVALID_ENUM` est déclenchée.
 - Si `premier` ou `compte` sont négatifs, une erreur `gl.INVALID_VALUE` est déclenchée.
-- Si `gl.CURRENT_PROGRAM` est {{jsxref("null")}}, une erreur `gl.INVALID_OPERATION` est déclenchée.
+- Si `gl.CURRENT_PROGRAM` est {{jsxref("Operators/null", "null")}}, une erreur `gl.INVALID_OPERATION` est déclenchée.
 
 ## Exemples
 

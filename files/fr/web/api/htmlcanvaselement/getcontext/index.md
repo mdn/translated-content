@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Canvas API")}}
 
-La méthode **`getContext()`** de l'interface {{DOMxRef("HTMLCanvasElement")}} retourne un contexte de dessin pour le canevas, ou {{JSxRef("null")}} si l'identifiant de contexte n'est pas pris en charge, ou si le canevas a déjà été configuré pour un autre mode de contexte.
+La méthode **`getContext()`** de l'interface {{DOMxRef("HTMLCanvasElement")}} retourne un contexte de dessin pour le canevas, ou {{JSxRef("Operators/null", "null")}} si l'identifiant de contexte n'est pas pris en charge, ou si le canevas a déjà été configuré pour un autre mode de contexte.
 
 Les appels ultérieurs à cette méthode sur un même élément canevas, avec le même argument `contextType`, retourneront toujours la même instance de contexte de dessin que celle retournée lors du premier appel. Il n'est pas possible d'obtenir un autre objet de contexte de dessin pour un même élément canevas.
 

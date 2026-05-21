@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 > [!WARNING]
 > Bien que la propriété `Object.prototype.__proto__` soit déjà supportée dans la plupart des navigateurs à l'heure actuelle, son comportement n'a été standardisé que récemment avec la spécification ECMAScript 2015. Si vous avez besoin d'utiliser cette propriété dans des environnements antérieurs à ES2015, il est recommandé d'utiliser {{jsxref("Object.getPrototypeOf()")}}.
 
-La propriété `__proto__` de {{jsxref("Object")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("null")}}) de l'objet courant.
+La propriété `__proto__` de {{jsxref("Object")}} est une propriété accesseur (un couple de fonction avec un accesseur (_getter_) et un mutateur (_setter_)) qui expose le `[[Prototype]]` interne (qui est soit un objet, soit {{jsxref("Operators/null", "null")}}) de l'objet courant.
 
 L'utilisation de `__proto__` est sujet à controverse. Elle a été déconseillée par plusieurs personnes et n'avait jamais été incluse dans la spécification ECMAScript. Cependant, de nombreux navigateurs ont décidé de l'implémenter. À l'heure actuelle, la propriété `__proto__` a été standardisée avec la spécification ECMAScript 2015 et sera officiellement supportée à l'avenir. Une alternative à cette propriété peut être l'utilisation des méthodes {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} et {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}}. Cependant, modifier le `[[Prototype]]` d'un objet est toujours une opération lente qui doit être évitée le plus possible pour des raisons de performances.
 
@@ -36,7 +36,7 @@ L'accesseur `__proto__` expose la valeur du `[[Prototype]]` interne d'un objet.
 - Pour les objets créés en utilisant `new fun`, avec `fun` un des constructeurs natif de fonctions, fournis par JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, etc.), cette valeur est `fun.prototype`.
 - Pour les objets créés en utilisant `new fun`, avec `fun` une function definie dans un script, cette valeur est la valeur de `fun.prototype` au moment où `new fun` est évaluée. (Ainsi, si on affecte une nouvelle valeur à `fun.prototype`, les instances crées précédemment conserveront leur `[[Prototype]]`, les objets créés par la suite bénéficieront de la nouvelle valeur pour leur `[[Prototype]]`.)
 
-Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("null")}}. Toute autre valeur entraînera un échec silencieux.
+Le mutateur `__proto__` permet de changer le `[[Prototype]]` d'un objet. Cet objet doit être extensible selon {{jsxref("Object.isExtensible")}}, si ce n'est pas le cas, une exception {{jsxref("TypeError")}} sera renvoyée. La valeur fournie pour le nouveau prototype doit être un objet ou {{jsxref("Operators/null", "null")}}. Toute autre valeur entraînera un échec silencieux.
 
 Pour plus d'éléments sur le fonctionnement de l'héritage et des prototypes, voir la page sur [l'héritage et les chaînes de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
@@ -122,7 +122,7 @@ Object.prototype.__proto__ = Object.create(
 b.salut();
 ```
 
-Si la propriété `__proto__` de {{jsxref("Object")}} ne permet pas d'aboutir à {{jsxref("null")}} via la chaîne de prototypes, on a une chaîne cyclique et on doit avoir une exception {{jsxref("TypeError")}} "cyclic \_\_proto\_\_ value".
+Si la propriété `__proto__` de {{jsxref("Object")}} ne permet pas d'aboutir à {{jsxref("Operators/null", "null")}} via la chaîne de prototypes, on a une chaîne cyclique et on doit avoir une exception {{jsxref("TypeError")}} "cyclic \_\_proto\_\_ value".
 
 ## Spécifications
 

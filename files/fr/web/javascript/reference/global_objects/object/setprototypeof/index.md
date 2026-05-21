@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 > [!WARNING]
 > Étant donnée la façon dont la plupart des moteurs JavaScript optimisent les performances, modifier le `[[Prototype]]` d'un objet est une opération lente pour chaque navigateur et moteur JavaScript. Les impacts liés aux performances sur ce point sont vastes et subtiles : ils concernent pas uniquement le temps passé à effectuer `Object.setPrototypeOf`, mais peuvent concerner n'importe quel code pour n'importe quel objet dont `[[Prototype]]` a été modifié. Si vous souhaitez obtenir des performances optimales, évitez de modifier le `[[Prototype]]` d'un objet. À la place, il est conseillé de créer un objet avec le prototype voulu en utilisant {{jsxref("Object/create","Object.create()")}}
 
-La méthode **`Object.setPrototypeOf()`** définit le prototype (autrement dit la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}.
+La méthode **`Object.setPrototypeOf()`** définit le prototype (autrement dit la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("Operators/null", "null")}}.
 
 ## Syntaxe
 
@@ -29,7 +29,7 @@ L'objet sur lequel on a défini le prototype.
 
 ## Description
 
-Cette méthode renvoie une exception {{jsxref("TypeError")}} si l'objet dont on souhaite modifier le `[[Prototype]]` est non-extensible selon {{jsxref("Object.isExtensible")}}. Cette méthode ne fait rien si le paramètre prototype n'est ni un objet ni {{jsxref("null")}} (par exemple : un nombre, une chaîne, un booléen ou {{jsxref("undefined")}}). Dans les autres cas, cette méthode substitue le `[[Prototype]]` de `obj` avec un nouvel objet.
+Cette méthode renvoie une exception {{jsxref("TypeError")}} si l'objet dont on souhaite modifier le `[[Prototype]]` est non-extensible selon {{jsxref("Object.isExtensible")}}. Cette méthode ne fait rien si le paramètre prototype n'est ni un objet ni {{jsxref("Operators/null", "null")}} (par exemple : un nombre, une chaîne, un booléen ou {{jsxref("undefined")}}). Dans les autres cas, cette méthode substitue le `[[Prototype]]` de `obj` avec un nouvel objet.
 
 `Object.setPrototypeOf()` fait partie de la spécification ECMAScript 2015. L'utilisation de cette méthode est considérée comme la façon correcte pour modifier le prototype d'un objet (contrairement à la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) plus controversée).
 

@@ -44,7 +44,7 @@ class ClasseFille extends ClasseParente { ... }
 
 Le mot-clé `extends` peut être utilisé pour créer des sous-classes de classes existantes (natives ou non).
 
-La propriété `.prototype` d'une classe fille (aussi appelée une _extension_) doit être un {{jsxref("Object")}} ou {{jsxref("null")}}.
+La propriété `.prototype` d'une classe fille (aussi appelée une _extension_) doit être un {{jsxref("Object")}} ou {{jsxref("Operators/null", "null")}}.
 
 ## Exemples
 
@@ -106,7 +106,7 @@ Ces exemples sont extraits de ces deux pages : [démonstration](https://googlech
 
 ### Étendre `null`
 
-Étendre {{jsxref("null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object")}}.
+Étendre {{jsxref("Operators/null", "null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object")}}.
 
 ```js
 class extensionNull extends null {
