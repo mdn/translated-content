@@ -50,7 +50,7 @@ Um descritor de dados também possui as seguintes chaves opcionais:
   - : O valor associado com a propriedade. Pode ser qualquer valor válido em Javascript (número, objeto, função, etc).
     **Valor padrão é {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators/Assignment_Operators", "operador de atribuição", "", 1)}}.
+  - : `true` se e somente se o valor associado com a propriedade pode ser modificada com um {{jsxref("Operators", "operador de atribuição", "Assignment_operators", 1)}}.
     **Valor padrão é `false`.**
 
 Um descritor de assessor também possui as seguintes chaves opcionais:

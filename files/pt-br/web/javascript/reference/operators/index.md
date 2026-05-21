@@ -171,29 +171,29 @@ Operadores lógicos são normalmente usados com boolean (logical) valores, e qua
 
 An assignment operator assigns a value to its left operand based on the value of its right operand.
 
-- {{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}
+- {{jsxref("Operators", "=", "#Assignment")}}
   - : Assignment operator.
-- {{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
+- {{jsxref("Operators", "*=", "#Multiplication_assignment")}}
   - : Multiplication assignment.
-- {{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
+- {{jsxref("Operators", "/=", "#Division_assignment")}}
   - : Division assignment.
-- {{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
+- {{jsxref("Operators", "%=", "#Remainder_assignment")}}
   - : Remainder assignment.
-- {{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
+- {{jsxref("Operators", "+=", "#Addition_assignment")}}
   - : Addition assignment.
-- {{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
+- {{jsxref("Operators", "-=", "#Subtraction_assignment")}}
   - : Subtraction assignment
-- {{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{jsxref("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
   - : Left shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
   - : Right shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
   - : Unsigned right shift assignment.
-- {{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{jsxref("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
   - : Bitwise AND assignment.
-- {{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{jsxref("Operators", "^=", "#Bitwise_XOR_assignment")}}
   - : Bitwise XOR assignment.
-- {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{jsxref("Operators", "|=", "#Bitwise_OR_assignment")}}
   - : Bitwise OR assignment.
 - {{experimental_inline}} {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
   {{experimental_inline}} {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
