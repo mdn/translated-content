@@ -76,7 +76,7 @@ var stop = false,
 age > 18 ? location.assign("continue.html") : (stop = true);
 ```
 
-en utilisant l'{{jsxref("Operators/L_opérateur_virgule","opérateur virgule")}}, on peut même y placer plusieurs instructions (attention toutefois à la lisibilité et à se demander si un {{jsxref("Statements/if...else","if...else")}} n'est pas plus approprié).
+en utilisant l'{{jsxref("Operators/Comma_operator","opérateur virgule")}}, on peut même y placer plusieurs instructions (attention toutefois à la lisibilité et à se demander si un {{jsxref("Statements/if...else","if...else")}} n'est pas plus approprié).
 
 ```js
 var stop = false,

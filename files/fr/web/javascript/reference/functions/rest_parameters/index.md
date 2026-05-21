@@ -213,6 +213,6 @@ console.log(trierArguments(5, 3, 7, 1)); // [1, 3, 5, 7]
 - L'objet {{jsxref("Functions/arguments","arguments")}}
 - {{jsxref("Array","Array")}}
 - {{jsxref("Functions","Les fonctions et leurs portées","",1)}}
-- {{jsxref("Operators/Syntaxe_décomposition","L'opérateur de décomposition","",1)}}
+- {{jsxref("Operators/Spread_syntax","L'opérateur de décomposition","",1)}}
 - [Proposition originale sur ecmascript.org](https://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters) (en anglais)
 - [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/) (article en anglais)

@@ -328,7 +328,7 @@ Ils ont quelques limitations&nbsp;:
 
 ### Littéraux objets
 
-Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Operators/Initialisateur_objet","Initialisateur d'objet","",1)}} pour plus d'informations.
+Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Operators/Object_initializer","Initialisateur d'objet","",1)}} pour plus d'informations.
 
 ```js
 var o = { a: "toto", b: "truc", c: 42 };
