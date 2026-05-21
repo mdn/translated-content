@@ -45,7 +45,7 @@ Highlights:
 
 ### JavaScript
 
-- {{jsxref("Date.prototype")}}现在是一个普通对象，不再是一个 {{jsxref("Date")}} 实例 ([Firefox bug 861219](https://bugzil.la/861219)).
+- {{jsxref("Date")}}现在是一个普通对象，不再是一个 {{jsxref("Date")}} 实例 ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Date.prototype.toString")}} 现在是一般方法 ([Firefox bug 861219](https://bugzil.la/861219)).
 - {{jsxref("Symbol.species")}}被增加到 ([Firefox bug 1131043](https://bugzil.la/1131043)).
 - {{jsxref("Map/Symbol.species", "Map[@@species]")}} 和{{jsxref("Set/Symbol.species", "Set[@@species]")}} 获取已经被增加 ([Firefox bug 1131043](https://bugzil.la/1131043)).

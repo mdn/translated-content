@@ -93,7 +93,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ## 属性
 
-- {{jsxref("Date.prototype")}}
+- {{jsxref("Date")}}
   - : 允许为 `Date` 对象添加属性。
 - `Date.length`
   - : `Date.length` 的值是 7。这是该构造函数可接受的参数个数。
@@ -113,7 +113,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
 ## JavaScript `Date` 实例
 
-所有的 `Date` 实例都继承自 {{jsxref("Date.prototype")}}。修改 `Date` 构造函数的原型对象会影响到所有的 `Date` 实例。
+所有的 `Date` 实例都继承自 {{jsxref("Date")}}。修改 `Date` 构造函数的原型对象会影响到所有的 `Date` 实例。
 
 ### 实例属性
 

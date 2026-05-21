@@ -32,7 +32,7 @@ obj.__proto__
 
 ## 描述
 
-`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function.prototype")}}。你可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
+`__proto__` 的 getter 函数暴露了一个对象内部的 `[[Prototype]]` 的值。对于使用对象字面量创建的对象，该值是 `Object.prototype`。对于使用数组字面量创建的对象，该值是 [`Array.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。对于函数，该值是 {{JSxRef("Function")}}。你可以在[继承与原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中了解有关原型链的更多信息。
 
 `__proto__` 的 setter 允许修改一个对象的 `[[Prototype]]`。提供的值必须是一个对象或 {{JSxRef("Operators/null", "null")}}。提供任何其他值都不会产生任何作用。
 

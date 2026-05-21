@@ -52,7 +52,7 @@ new Intl.ListFormat([locales[, options]])
 
 ### 属性
 
-- {{jsxref("ListFormat.prototype", "Intl.ListFormat.prototype")}}
+- {{jsxref("ListFormat", "Intl.ListFormat.prototype")}}
   - : 允许增加一个属性到列表中的所有对象。
 
 ### 方法

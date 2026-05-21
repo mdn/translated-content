@@ -23,7 +23,7 @@ new Uint8Array(buffer [, byteOffset [, length]]);
   - : 返回数组中元素的字节数，Uint8Array 中返回 1 字节。
 - Uint8Array.length
   - : 静态属性 length 一直为 0。想获知其真实长度（元素个数），请参阅 {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}。
-- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+- {{jsxref("TypedArray", "Uint8Array.prototype")}}
   - : _TypedArray_ 对象的原型。
 
 ## 静态方法

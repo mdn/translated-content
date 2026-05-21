@@ -83,7 +83,7 @@ typeof symObj; // "object"
 
 - `Symbol.length`
   - : 长度属性，值为 0。
-- {{jsxref("Symbol.prototype")}}
+- {{jsxref("Symbol")}}
   - : `symbol` 构造函数的原型。
 
 ### 内置通用（well-known）symbol
@@ -124,7 +124,7 @@ typeof symObj; // "object"
 
 ## Symbol 原型
 
-所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.
+所有 Symbols 继承自 {{jsxref("Symbol")}}.
 
 ### 实例属性
 
