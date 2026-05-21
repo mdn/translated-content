@@ -31,11 +31,11 @@ slug: Web/JavaScript/Reference/Operators
   - : `async function` определяет выражение асинхронной функции.
 - {{experimental_inline}} {{jsxref("Operators/await", "await")}}
   - : Пауза и продолжение выполнения асинхронной функции и ожидание [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise) (результата выполнения) с результатом разрешено/отклонено.
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : Синтаксис создания инициализатора/литерала массива.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Синтаксис создания инициализатора/литерала объекта
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : Синтаксис создания литерала регулярного выражения.
 - {{jsxref("Operators/Grouping", "( )")}}
   - : Оператор группировки.
@@ -80,9 +80,9 @@ slug: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/typeof", "typeof")}}
   - : Оператор `typeof` определяет тип переданного объекта.
 - {{jsxref("Operators", "+", "#Unary_plus")}}
-  - : Оператор унарного плюса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}.
+  - : Оператор унарного плюса преобразует свой операнд в тип {{jsxref("Number")}}.
 - {{jsxref("Operators", "-", "#Unary_negation")}}
-  - : Оператор унарного минуса преобразует свой операнд в тип {{jsxref("Global_Objects/Number", "Number")}}, а затем меняет его знак.
+  - : Оператор унарного минуса преобразует свой операнд в тип {{jsxref("Number")}}, а затем меняет его знак.
 - {{jsxref("Operators", "~", "#Bitwise_NOT")}}
   - : Оператор побитового НЕ.
 - {{jsxref("Operators", "!", "#Logical_NOT")}}
@@ -107,7 +107,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### Реляционные операторы
 
-Реляционные операторы (операторы отношения) сравнивают свои операнды и возвращают значение типа {{jsxref("Global_Objects/Boolean", "Boolean")}}, зависящее от того, был ли результат сравнения истинным или ложным.
+Реляционные операторы (операторы отношения) сравнивают свои операнды и возвращают значение типа {{jsxref("Boolean")}}, зависящее от того, был ли результат сравнения истинным или ложным.
 
 - {{jsxref("Operators/in", "in")}}
   - : Оператор `in` определяет, содержит ли объект указанное свойство.
@@ -127,7 +127,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### Операторы равенства
 
-Результат вычисления оператора равенства всегда имеет тип {{jsxref("Global_Objects/Boolean", "Boolean")}} и значение, зависящее от того, был ли результат проверки истинным или ложным.
+Результат вычисления оператора равенства всегда имеет тип {{jsxref("Boolean")}} и значение, зависящее от того, был ли результат проверки истинным или ложным.
 
 - {{jsxref("Operators", "==", "#Equality")}}
   - : Оператор проверки на равенство.

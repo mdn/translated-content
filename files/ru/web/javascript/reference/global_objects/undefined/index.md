@@ -127,5 +127,5 @@ if (y === void 0) {
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
+- {{jsxref("NaN")}}
 - {{jsxref("Operators/null", "null")}}

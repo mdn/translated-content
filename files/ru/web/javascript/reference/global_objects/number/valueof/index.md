@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 
 ## Сводка
 
-Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Number")}}.
 
 ## Синтаксис
 

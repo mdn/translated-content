@@ -19,9 +19,9 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 Глобальные свойства, возвращающие простое значение.
 
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/undefined", "undefined")}}
+- {{jsxref("Infinity")}}
+- {{jsxref("NaN")}}
+- {{jsxref("undefined")}}
 - литерал {{jsxref("Operators/null", "null")}}
 
 ### Функции
@@ -30,72 +30,72 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-- {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-- {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
+- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("decodeURI", "decodeURI()")}}
+- {{jsxref("decodeURIComponent", "decodeURIComponent()")}}
+- {{jsxref("encodeURI", "encodeURI()")}}
+- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("escape", "escape()")}} {{deprecated_inline}}
+- {{jsxref("unescape", "unescape()")}} {{deprecated_inline}}
 
 ### Фундаментальные объекты
 
 Общие языковые объекты, функции и ошибки.
 
-- {{jsxref("Global_Objects/Object", "Object")}}
-- {{jsxref("Global_Objects/Function", "Function")}}
-- {{jsxref("Global_Objects/Boolean", "Boolean")}}
-- {{jsxref("Global_Objects/Symbol", "Symbol")}}
-- {{jsxref("Global_Objects/Error", "Error")}}
-- {{jsxref("Global_Objects/EvalError", "EvalError")}}
-- {{jsxref("Global_Objects/InternalError", "InternalError")}}
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-- {{jsxref("Global_Objects/ReferenceError", "ReferenceError")}}
-- {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}
-- {{jsxref("Global_Objects/TypeError", "TypeError")}}
-- {{jsxref("Global_Objects/URIError", "URIError")}}
+- {{jsxref("Object")}}
+- {{jsxref("Function")}}
+- {{jsxref("Boolean")}}
+- {{jsxref("Symbol")}}
+- {{jsxref("Error")}}
+- {{jsxref("EvalError")}}
+- {{jsxref("InternalError")}}
+- {{jsxref("RangeError")}}
+- {{jsxref("ReferenceError")}}
+- {{jsxref("SyntaxError")}}
+- {{jsxref("TypeError")}}
+- {{jsxref("URIError")}}
 
 ### Числа и даты
 
 Объекты, имеющие дело с числами, датами и математическими вычислениями.
 
-- {{jsxref("Global_Objects/Number", "Number")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Global_Objects/Date", "Date")}}
+- {{jsxref("Number")}}
+- {{jsxref("Math")}}
+- {{jsxref("Date")}}
 
 ### Обработка текста
 
 Объекты для манипулирования текстом.
 
-- {{jsxref("Global_Objects/String", "String")}}
-- {{jsxref("Global_Objects/RegExp", "RegExp")}}
+- {{jsxref("String")}}
+- {{jsxref("RegExp")}}
 
 ### Индексированные коллекции
 
 Коллекции, упорядоченные по индексам. Массивоподобные объекты.
 
-- {{jsxref("Global_Objects/Array", "Array")}}
-- {{jsxref("Global_Objects/Int8Array", "Int8Array")}}
-- {{jsxref("Global_Objects/Uint8Array", "Uint8Array")}}
-- {{jsxref("Global_Objects/Uint8ClampedArray", "Uint8ClampedArray")}}
-- {{jsxref("Global_Objects/Int16Array", "Int16Array")}}
-- {{jsxref("Global_Objects/Uint16Array", "Uint16Array")}}
-- {{jsxref("Global_Objects/Int32Array", "Int32Array")}}
-- {{jsxref("Global_Objects/Uint32Array", "Uint32Array")}}
-- {{jsxref("Global_Objects/Float32Array", "Float32Array")}}
-- {{jsxref("Global_Objects/Float64Array", "Float64Array")}}
+- {{jsxref("Array")}}
+- {{jsxref("Int8Array")}}
+- {{jsxref("Uint8Array")}}
+- {{jsxref("Uint8ClampedArray")}}
+- {{jsxref("Int16Array")}}
+- {{jsxref("Uint16Array")}}
+- {{jsxref("Int32Array")}}
+- {{jsxref("Uint32Array")}}
+- {{jsxref("Float32Array")}}
+- {{jsxref("Float64Array")}}
 
 ### Коллекции по ключу
 
 Коллекции объектов по ключу. Элементы обходятся в порядке вставки.
 
-- {{jsxref("Global_Objects/Map", "Map")}}
-- {{jsxref("Global_Objects/Set", "Set")}}
-- {{jsxref("Global_Objects/WeakMap", "WeakMap")}}
-- {{jsxref("Global_Objects/WeakSet", "WeakSet")}}
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakSet")}}
 
 ### Структурированные данные
 
@@ -103,22 +103,22 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 - [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView)
-- {{jsxref("Global_Objects/JSON", "JSON")}}
+- {{jsxref("JSON")}}
 
 ### Объекты управляющих абстракций
 
-- {{jsxref("Global_Objects/Promise", "Promise")}}
+- {{jsxref("Promise")}}
 
 ### Рефлексия
 
-- {{jsxref("Global_Objects/Reflect", "Reflect")}} {{experimental_inline}}
-- {{jsxref("Global_Objects/Proxy", "Proxy")}} {{experimental_inline}}
+- {{jsxref("Reflect")}} {{experimental_inline}}
+- {{jsxref("Proxy")}} {{experimental_inline}}
 
 ### Интернационализация
 
 Дополнения к ядру ECMAScript, отвечающие за функциональность, чувствительную к языку.
 
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}
 - {{jsxref("Intl/Collator", "Intl.Collator")}}
 - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}

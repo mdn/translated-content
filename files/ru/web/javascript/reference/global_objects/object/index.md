@@ -153,7 +153,7 @@ const o = new Object(null);
 
 ### Пример: использование `Object` для создания объектов `Boolean`
 
-Следующий пример сохраняет объекты {{jsxref("Global_Objects/Boolean", "Boolean")}} в переменную `o`:
+Следующий пример сохраняет объекты {{jsxref("Boolean")}} в переменную `o`:
 
 ```js
 // эквивалентно o = new Boolean(true);

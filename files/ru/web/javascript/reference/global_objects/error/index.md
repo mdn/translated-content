@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error
 - {{jsxref("TypeError")}}
   - : Создаёт экземпляр, представляющий ошибку, возникающую при недопустимом типе для переменной или параметра.
 - {{jsxref("URIError")}}
-  - : Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} или {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} недопустимых параметров.
+  - : Создаёт экземпляр, представляющий ошибку, возникающую при передаче в функции {{jsxref("encodeURI", "encodeURI()")}} или {{jsxref("decodeURI", "decodeURI()")}} недопустимых параметров.
 - {{jsxref("AggregateError")}}
   - : Создаёт экземпляр, представляющий несколько ошибок, обёрнутых в одну. Может быть полезно, например, при работе с {{jsxref("Promise.any()")}}.
 - {{jsxref("InternalError")}} {{non-standard_inline}}

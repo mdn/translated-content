@@ -17,11 +17,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/length
 
 ### Свойство данных конструктора `Function`
 
-Конструктор {{jsxref("Global_Objects/Function", "Function")}} сам является объектом {{jsxref("Global_Objects/Function", "Function")}}. Его свойство данных `length` имеет значение 1. Атрибуты свойства: записываемое: `false`, перечисляемое: `false`, настраиваемое: `true`.
+Конструктор {{jsxref("Function")}} сам является объектом {{jsxref("Function")}}. Его свойство данных `length` имеет значение 1. Атрибуты свойства: записываемое: `false`, перечисляемое: `false`, настраиваемое: `true`.
 
 ### Свойство объекта прототипа `Function`
 
-Свойство `length` объекта прототипа {{jsxref("Global_Objects/Function", "Function")}} имеет значение 0.
+Свойство `length` объекта прототипа {{jsxref("Function")}} имеет значение 0.
 
 ## Примеры
 
@@ -46,4 +46,4 @@ console.log(
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Function", "Function")}}
+- {{jsxref("Function")}}

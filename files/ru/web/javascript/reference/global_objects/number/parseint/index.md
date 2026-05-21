@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 
 ## Сводка
 
-Метод **`Number.parseInt()`** разбирает строковый аргумент и возвращает целое число. Этот метод ведёт себя идентично глобальной функции {{jsxref("Global_Objects/parseInt", "parseInt()")}} и является частью ECMAScript 6 (его целью является модуляризация глобальных сущностей).
+Метод **`Number.parseInt()`** разбирает строковый аргумент и возвращает целое число. Этот метод ведёт себя идентично глобальной функции {{jsxref("parseInt", "parseInt()")}} и является частью ECMAScript 6 (его целью является модуляризация глобальных сущностей).
 
 ## Синтаксис
 
@@ -34,7 +34,7 @@ Number.parseInt(string[, radix])
 Number.parseInt === parseInt; // true
 ```
 
-Пожалуйста, обратитесь к документации по глобальной функции {{jsxref("Global_Objects/parseInt", "parseInt()")}} для просмотра подробного описания и примеров.
+Пожалуйста, обратитесь к документации по глобальной функции {{jsxref("parseInt", "parseInt()")}} для просмотра подробного описания и примеров.
 
 ## Полифил
 
@@ -54,5 +54,5 @@ if (Number.parseInt === undefined) {
 
 ## Смотрите также
 
-- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.
-- Глобальная функция {{jsxref("Global_Objects/parseInt", "parseInt()")}}.
+- Объект {{jsxref("Number")}}, которому принадлежит этот метод.
+- Глобальная функция {{jsxref("parseInt", "parseInt()")}}.
