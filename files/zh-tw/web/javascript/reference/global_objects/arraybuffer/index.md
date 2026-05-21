@@ -39,7 +39,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
   - : The `ArrayBuffer` constructor's length property whose value is 1.
 - [`ArrayBuffer[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
-- {{jsxref("ArrayBuffer.prototype")}}
+- {{jsxref("ArrayBuffer")}}
   - : Allows the addition of properties to all `ArrayBuffer` objects.
 
 ## 方法
@@ -51,7 +51,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ## `ArrayBuffer` 實例
 
-所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer.prototype")}}.
+所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer")}}.
 
 ### 屬性
 

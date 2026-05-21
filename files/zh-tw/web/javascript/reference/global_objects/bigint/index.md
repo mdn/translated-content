@@ -200,7 +200,7 @@ Boolean(12n);
 
 ## 屬性
 
-- {{JSxRef("BigInt.prototype")}}
+- {{JSxRef("BigInt")}}
   - : 允許對一個 `BigInt` 物件增加其屬性。
 
 ## `BigInt` 物件實體

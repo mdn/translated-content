@@ -148,7 +148,7 @@ console.log(eval(s2.valueOf())); // 回傳數字 4
 
 ## 屬性
 
-- {{jsxref("String.prototype")}}
+- {{jsxref("String")}}
   - : 能讓字串物件增加屬性。
 
 ## 方法

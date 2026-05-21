@@ -118,7 +118,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Binding can be done with the .`call` function of {{jsxref("Function.prototype")}} and it can also be reduced using `[].slice.call(arguments)` instead of `Array.prototype.slice.call`. Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
+Binding can be done with the .`call` function of {{jsxref("Function")}} and it can also be reduced using `[].slice.call(arguments)` instead of `Array.prototype.slice.call`. Anyway, it can be simplified using {{jsxref("Function.prototype.bind", "bind")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;

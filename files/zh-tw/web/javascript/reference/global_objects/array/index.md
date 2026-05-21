@@ -141,7 +141,7 @@ var myArray = myRe.exec("cdbBdbsbz");
   - : `Array` 建構子的長度為 1。
 - [`Array[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : 用來建立衍生物件的建構函數。
-- {{jsxref("Array.prototype")}}
+- {{jsxref("Array")}}
   - : 可加入屬性至所有陣列物件。
 
 ## 方法
@@ -155,7 +155,7 @@ var myArray = myRe.exec("cdbBdbsbz");
 
 ## `Array` 實例
 
-所有的陣列實例都繼承自 {{jsxref("Array.prototype")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。
+所有的陣列實例都繼承自 {{jsxref("Array")}}。若修改這個陣列建構子 (Array constructor) 的原型物件 (prototype object)，將會影響所有的陣列實體。
 
 ### 屬性
 

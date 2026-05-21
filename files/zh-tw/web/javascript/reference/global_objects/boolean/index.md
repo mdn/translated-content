@@ -62,7 +62,7 @@ var s = new Boolean(myString); // 依舊為true
 
 - `Boolean.length`
   - : 長度永遠為 1。
-- {{jsxref("Boolean.prototype")}}
+- {{jsxref("Boolean")}}
   - : 原型為`Boolean`的建構式。
 
 ## 方法
@@ -71,7 +71,7 @@ var s = new Boolean(myString); // 依舊為true
 
 ## `Boolean` 實體
 
-所有 `Boolean` 實體會繼承 {{jsxref("Boolean.prototype")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。
+所有 `Boolean` 實體會繼承 {{jsxref("Boolean")}} 。和所有建構式一樣，原型物件會指派給實體那些繼承的屬性和方法。
 
 ### 方法
 
@@ -113,6 +113,6 @@ var bObjProto = new Boolean({});
 
 ## 參見
 
-- {{jsxref("Boolean.prototype")}}
+- {{jsxref("Boolean")}}
 - {{Glossary("Boolean")}}
 - [布林資料類型（維基百科）](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

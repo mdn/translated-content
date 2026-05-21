@@ -41,7 +41,7 @@ new Number(value)
   - : 特別用來表示**負無窮**的數值。
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : 特別用來表示**正無窮**的數值。
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : 允許被添加到 `Number` 物件的屬性。
 
 ## 方法
@@ -61,7 +61,7 @@ new Number(value)
 
 ## `Number` 實體
 
-所有 `Number` 實體都會繼承其建構式的 {{jsxref("Number.prototype")}}。`Number` 的原型物件可以被修改並作用在所有 `Number` 實體。
+所有 `Number` 實體都會繼承其建構式的 {{jsxref("Number")}}。`Number` 的原型物件可以被修改並作用在所有 `Number` 實體。
 
 ### 方法
 

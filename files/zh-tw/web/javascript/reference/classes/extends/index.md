@@ -101,7 +101,7 @@ class myDate extends Date {
 
 ### 擴展 `null`
 
-像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object.prototype")}}。
+像擴展普通類別一樣擴展 {{jsxref("null")}}，但新對象的原型不會繼承 {{jsxref("Object")}}。
 
 ```js
 class nullExtends extends null {
