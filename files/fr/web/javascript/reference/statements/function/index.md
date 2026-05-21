@@ -150,7 +150,7 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 - {{jsxref("Operators/L_opérateur_function", "Les expressions de fonction","",1)}}
 - L'instruction {{jsxref("Statements/function*", "function*")}}
 - L'expression {{jsxref("Operators/function*", "function*")}}
-- {{jsxref("Functions/Fonctions_fléchées", "Les fonctions fléchées","",1)}}
+- {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées","",1)}}
 - {{jsxref("GeneratorFunction")}}
 - [L'instruction `async function` (les déclarations des fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Statements/async_function)
 - [L'opérateur `async function` (les expressions de fonctions asynchrones)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)

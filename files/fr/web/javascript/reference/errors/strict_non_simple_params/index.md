@@ -28,7 +28,7 @@ SyntaxError: Illegal 'use strict' directive in function with non-simple paramete
 
 Une directive `"use strict"` apparaît au début d'une fonction qui possède l'un des paramètres suivants :
 
-- {{jsxref("Functions/Valeurs_par_défaut_des_arguments", "Des paramètres par défaut", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "Des paramètres par défaut", "", 1)}}
 - {{jsxref("Functions/paramètres_du_reste", "Des paramètres du reste", "", 1)}}
 - {{jsxref("Operators/Affecter_par_décomposition", "Des paramètres décomposés", "", 1)}}
 
@@ -108,6 +108,6 @@ var callback = (() => {
 - {{jsxref("Strict_mode", "Le mode strict", "", 1)}}
 - {{jsxref("Statements/function", "L'instruction function", "", 1)}}
 - {{jsxref("Operators/L_opérateur_function", "Les expressions de fonction", "", 1)}}
-- {{jsxref("Functions/Valeurs_par_défaut_des_arguments", "Les paramètres par défaut", "", 1)}}
+- {{jsxref("Functions/Default_parameters", "Les paramètres par défaut", "", 1)}}
 - {{jsxref("Functions/paramètres_du_reste", "Les paramètres du reste", "", 1)}}
 - {{jsxref("Operators/Affecter_par_décomposition", "Les paramètres décomposés", "", 1)}}

@@ -801,8 +801,8 @@ Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` -
 - L'expression {{jsxref("Operators/function*", "function*")}}
 - {{jsxref("Function")}}
 - {{jsxref("GeneratorFunction")}}
-- {{jsxref("Functions/Fonctions_fléchées", "Les fonctions fléchées")}}
-- {{jsxref("Functions/Valeurs_par_défaut_des_arguments", "Les paramètres par défaut","",1)}}
+- {{jsxref("Functions/Arrow_functions", "Les fonctions fléchées")}}
+- {{jsxref("Functions/Default_parameters", "Les paramètres par défaut","",1)}}
 - {{jsxref("Functions/paramètres_du_reste", "Les paramètres du reste","",1)}}
 - L'objet {{jsxref("Functions/arguments", "arguments")}}
 - {{jsxref("Functions/get", "getter")}}
