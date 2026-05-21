@@ -46,7 +46,7 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
+  - : これは既定値で、フォームのデータを {{jsxref("encodeURI()")}} などのアルゴリズムを使ってテキストを{{Glossary("Percent-encoding", "パーセントエンコーディング")}}した後のテキストとして送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`

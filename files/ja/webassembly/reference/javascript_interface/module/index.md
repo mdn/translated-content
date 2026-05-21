@@ -15,11 +15,11 @@ original_slug: WebAssembly/JavaScript_interface/Module
 
 ## 静的プロパティ
 
-- {{jsxref("WebAssembly.Module.customSections", "WebAssembly.Module.customSections()")}}
+- {{jsxref("WebAssembly.Module.customSections()")}}
   - : `Module` と文字列を指定すると、モジュール内の与えられた文字列を名前に持つすべてのカスタムセクションの内容を返します。
-- {{jsxref("WebAssembly.Module.exports", "WebAssembly.Module.exports()")}}
+- {{jsxref("WebAssembly.Module.exports()")}}
   - : `Module` を指定すると、エクスポート宣言の情報を配列として返します。
-- {{jsxref("WebAssembly.Module.imports", "WebAssembly.Module.imports()")}}
+- {{jsxref("WebAssembly.Module.imports()")}}
   - : `Module` を指定すると、インポート宣言の情報を配列として返します。
 
 ## 例

@@ -42,7 +42,7 @@ Object.prototype.propertyIsEnumerable.call(obj, "foo"); // true; 期待通りの
 
 ### オブジェクトからのプロパティの削除
 
-オブジェクト自体には、自身のプロパティを削除するメソッド ({{jsxref("Map.prototype.delete", "Map.prototype.delete()")}} のようなもの) はありません。これを行うには、 {{jsxref("Operators/delete", "delete")}} 演算子を使用する必要があります。
+オブジェクト自体には、自身のプロパティを削除するメソッド ({{jsxref("Map.prototype.delete()")}} のようなもの) はありません。これを行うには、 {{jsxref("Operators/delete", "delete")}} 演算子を使用する必要があります。
 
 ### null プロトタイプオブジェクト
 
