@@ -121,7 +121,7 @@ var b = "monde";
 ## Voir aussi
 
 - {{jsxref("Functions", "Fonctions et portée des fonctions")}}
-- {{jsxref("Global_Objects/Function","L'objet Function")}}
+- {{jsxref("Function","L'objet Function")}}
 - {{jsxref("Statements/function", "Instruction function")}}
 - {{jsxref("Statements/function*", "Instruction function*")}}
 - {{jsxref("Operators/function*", "Expression function*")}}

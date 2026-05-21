@@ -18,7 +18,7 @@ Les erreurs d'exécution entraînent la création et la levée de nouveaux objet
 Outre le constructeur générique `Error`, il existe d'autres constructeurs d'erreur principaux en JavaScript. Pour les exceptions côté client, voir [Contrôle du flux d'instructions et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#déclarations_de_gestion_des_exceptions).
 
 - {{JSxRef("EvalError")}}
-  - : Crée une instance représentant une erreur qui se produit concernant la fonction globale {{JSxRef("Global_Objects/eval", "eval()")}}.
+  - : Crée une instance représentant une erreur qui se produit concernant la fonction globale {{JSxRef("eval", "eval()")}}.
 - {{JSxRef("RangeError")}}
   - : Crée une instance représentant une erreur qui se produit lorsqu'une variable ou un paramètre numérique est en dehors de sa plage de validité.
 - {{JSxRef("ReferenceError")}}

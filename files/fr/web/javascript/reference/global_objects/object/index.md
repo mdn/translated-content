@@ -154,7 +154,7 @@ Le terme «&nbsp;objet avec prototype `null`&nbsp;» inclut souvent aussi tout o
 Beaucoup d'opérations intégrées qui attendent des objets convertissent d'abord leurs arguments en objets. [L'opération <sup>(angl.)</sup>](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toobject) peut être résumée comme suit&nbsp;:
 
 - Les objets sont retournés tels quels.
-- {{JSxRef("Global_Objects/undefined", "undefined")}} et {{JSxRef("Operators/null", "null")}} lèvent une {{JSxRef("TypeError")}}.
+- {{JSxRef("undefined")}} et {{JSxRef("Operators/null", "null")}} lèvent une {{JSxRef("TypeError")}}.
 - Les primitives {{JSxRef("Number")}}, {{JSxRef("String")}}, {{JSxRef("Boolean")}}, {{JSxRef("Symbol")}}, {{JSxRef("BigInt")}} sont enveloppées dans leurs enveloppes d'objet correspondantes.
 
 Il y a deux façons d'obtenir presque le même effet en JavaScript.

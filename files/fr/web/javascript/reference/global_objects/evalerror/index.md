@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-L'objet **`EvalError`** indique une erreur concernant la fonction globale {{JSxRef("Global_Objects/eval", "eval()")}}. Cette exception n'est plus levée par JavaScript, toutefois l'objet `EvalError` reste disponible pour des raisons de compatibilité.
+L'objet **`EvalError`** indique une erreur concernant la fonction globale {{JSxRef("eval", "eval()")}}. Cette exception n'est plus levée par JavaScript, toutefois l'objet `EvalError` reste disponible pour des raisons de compatibilité.
 
 `EvalError` est un {{Glossary("serializable object", "objet sérialisable")}}, donc il peut être cloné avec {{DOMxRef("Window.structuredClone", "structuredClone()")}} ou copié entre des [Workers](/fr/docs/Web/API/Worker) en utilisant {{DOMxRef("Worker/postMessage()", "postMessage()")}}.
 
@@ -57,4 +57,4 @@ try {
 ## Voir aussi
 
 - L'objet {{JSxRef("Error")}}
-- La fonction {{JSxRef("Global_Objects/eval", "eval()")}}
+- La fonction {{JSxRef("eval", "eval()")}}

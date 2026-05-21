@@ -69,4 +69,4 @@ try {
 ## Voir aussi
 
 - L'objet {{JSxRef("Error")}}
-- La fonction {{JSxRef("Global_Objects/eval", "eval()")}}
+- La fonction {{JSxRef("eval", "eval()")}}

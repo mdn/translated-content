@@ -67,7 +67,7 @@ Si la base fournie vaut {{jsxref("undefined")}} ou 0 (ou si elle n'est pas utili
 
 Si le premier caractère de la chaîne de caractères ne peut pas être converti, `parseInt()` renverra `NaN`.
 
-Pour des raisons arithmétiques, la valeur {{jsxref("NaN")}} n'est un nombre pour aucune base. La fonction {{jsxref("Global_Objects/isNaN", "isNaN()")}} peut être utilisée pour déterminer si le résultat obtenu par `parseInt()` vaut `NaN`. Si `NaN` est utilisé dans une opération arithmétique, le résultat de cette opération sera aussi `NaN` (on dit que `NaN` est une valeur « toxique »).
+Pour des raisons arithmétiques, la valeur {{jsxref("NaN")}} n'est un nombre pour aucune base. La fonction {{jsxref("isNaN", "isNaN()")}} peut être utilisée pour déterminer si le résultat obtenu par `parseInt()` vaut `NaN`. Si `NaN` est utilisé dans une opération arithmétique, le résultat de cette opération sera aussi `NaN` (on dit que `NaN` est une valeur « toxique »).
 
 Pour convertir un nombre en une chaîne de caractères dans une base donnée, on utilisera `monEntier.toString(base)`.
 
@@ -183,9 +183,9 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## Voir aussi
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("isNaN", "isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

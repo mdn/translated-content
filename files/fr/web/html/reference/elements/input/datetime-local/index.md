@@ -62,7 +62,7 @@ Vous pouvez définir une valeur par défaut pour le champ en incluant une date e
 Il convient de noter que les formats de date et d'heure affichés diffèrent de la véritable valeur&nbsp;; la date et l'heure affichées sont formatées selon la locale de l'utilisateur·ice telle que rapportée par son système d'exploitation, tandis que la valeur de date/heure est toujours formatée `YYYY-MM-DDTHH:mm`. Lorsque la valeur ci-dessus est envoyée au serveur, par exemple, elle ressemblera à `party-date=2024-06-01T08:30`.
 
 > [!NOTE]
-> Gardez également à l'esprit que si ces données sont envoyées via HTTP {{HTTPMethod("GET")}}, le caractère deux-points devra être échappé pour être inclus dans les paramètres de l'URL, par exemple, `party-date=2024-06-01T08%3A30`. Voir {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}} pour une façon de faire cela.
+> Gardez également à l'esprit que si ces données sont envoyées via HTTP {{HTTPMethod("GET")}}, le caractère deux-points devra être échappé pour être inclus dans les paramètres de l'URL, par exemple, `party-date=2024-06-01T08%3A30`. Voir {{JSxRef("encodeURI", "encodeURI()")}} pour une façon de faire cela.
 
 Vous pouvez également obtenir et définir la valeur de la date en JavaScript à l'aide de la propriété `value` de {{DOMxRef("HTMLInputElement")}}&nbsp;:
 

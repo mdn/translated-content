@@ -7,13 +7,13 @@ slug: Web/JavaScript/Reference/Functions
 
 De manière générale, une fonction est un « sous-programme » qui peut être appelé par du code extérieur à la fonction (ou du code interne dans le cas d'une récursion). Comme le programme, une fonction est composée d'une suite d'instructions qui forment le _corps de la fonction_. Il est parfois possible de _passer_ des valeurs à une fonction et une fonction peut éventuellement _retourner_ (ou _renvoyer_) une valeur.
 
-En JavaScript, les fonctions sont des objets de première classe. Cela signifie qu'elles peuvent être manipulées et échangées, qu'elles peuvent avoir des propriétés et des méthodes, comme tous les autres objets JavaScript. Les fonctions sont des objets {{jsxref("Global_Objects/Function","Function")}}.
+En JavaScript, les fonctions sont des objets de première classe. Cela signifie qu'elles peuvent être manipulées et échangées, qu'elles peuvent avoir des propriétés et des méthodes, comme tous les autres objets JavaScript. Les fonctions sont des objets {{jsxref("Function")}}.
 
 Pour plus d'informations et d'exemples, on pourra également consulter le [chapitre du Guide JavaScript sur les fonctions.](/fr/docs/Web/JavaScript/Guide/Functions)
 
 ## Description
 
-Toute fonction JavaScript est en fait un objet `Function`. Voir la page {{jsxref("Global_Objects/Function","Function")}} pour des informations sur les propriétés et les méthodes de ces objets.
+Toute fonction JavaScript est en fait un objet `Function`. Voir la page {{jsxref("Function")}} pour des informations sur les propriétés et les méthodes de ces objets.
 
 Afin de renvoyer une valeur, la fonction doit comporter une instruction {{jsxref("Statements/return","return")}} qui définit la valeur à renvoyer (sauf dans le cas d'un [constructeur](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) qui a été appelé avec le mot-clé {{jsxref("Operators/new")}}). Une fonction qui ne renvoie pas de valeur retourne {{jsxref("undefined")}}.
 

@@ -34,9 +34,9 @@ apply(thisArg, argsArray)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur de `this` fournie pour l'appel à `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("Global_Objects/undefined", "undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
+  - : La valeur de `this` fournie pour l'appel à `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
 - `argsArray` {{Optional_Inline}}
-  - : Un objet semblable à un tableau, définissant les arguments avec lesquels `func` doit être appelée, ou {{JSxRef("Operators/null", "null")}} ou {{JSxRef("Global_Objects/undefined", "undefined")}} si aucun argument ne doit être fourni à la fonction.
+  - : Un objet semblable à un tableau, définissant les arguments avec lesquels `func` doit être appelée, ou {{JSxRef("Operators/null", "null")}} ou {{JSxRef("undefined")}} si aucun argument ne doit être fourni à la fonction.
 
 ### Valeur de retour
 

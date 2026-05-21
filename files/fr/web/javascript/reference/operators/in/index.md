@@ -87,7 +87,7 @@ delete arbres[3];
 3 in arbres; // renvoie false
 ```
 
-Si une propriété est définie à {{jsxref("Global_Objects/undefined", "undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
+Si une propriété est définie à {{jsxref("undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
 
 ```js
 var voiture = { marque: "Honda", modèle: "Accord", année: 1998 };

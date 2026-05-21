@@ -61,7 +61,7 @@ Les [guides WebAssembly](/fr/docs/WebAssembly/Guides) couvrent des sujets comme 
 - [`WebAssembly.validate()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/validate_static)
   - : La fonction `WebAssembly.validate()` valide un tableau typé de code binaire WebAssembly donné.
 - [`WebAssembly.Memory()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory)
-  - : Un objet `WebAssembly.Memory` est un {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} redimensionnable qui contient les octets bruts de la mémoire accédée par une `Instance`.
+  - : Un objet `WebAssembly.Memory` est un {{jsxref("ArrayBuffer")}} redimensionnable qui contient les octets bruts de la mémoire accédée par une `Instance`.
 - [`WebAssembly.Table()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : Un objet `WebAssembly.Table` est un tableau typé redimensionnable de valeurs opaques, comme des références de fonctions, auxquelles accède une `Instance`.
 - [`WebAssembly.Tag()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Tag)

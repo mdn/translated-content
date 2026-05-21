@@ -14,7 +14,7 @@ l10n:
 >
 > Voir [Considérations de sécurité](#considérations_de_sécurité) pour plus d'informations.
 
-Le constructeur **`Function()`** crée des objets {{JSxRef("Function")}}. Appeler ce constructeur directement permet de créer des fonctions dynamiquement, mais présente des problèmes de sécurité et des problèmes de performance similaires (mais bien moins importants) à ceux de {{JSxRef("Global_Objects/eval", "eval()")}}. Cependant, contrairement à `eval` (qui peut avoir accès à la portée locale), le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée globale.
+Le constructeur **`Function()`** crée des objets {{JSxRef("Function")}}. Appeler ce constructeur directement permet de créer des fonctions dynamiquement, mais présente des problèmes de sécurité et des problèmes de performance similaires (mais bien moins importants) à ceux de {{JSxRef("eval", "eval()")}}. Cependant, contrairement à `eval` (qui peut avoir accès à la portée locale), le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée globale.
 
 {{InteractiveExample("Démonstration JavaScript&nbsp;: constructeur Function()", "shorter")}}
 

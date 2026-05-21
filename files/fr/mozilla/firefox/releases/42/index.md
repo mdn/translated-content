@@ -30,7 +30,7 @@ Points forts:
 ### JavaScript
 
 - L'objet {{jsxref("Reflect")}} a été implémenté ([bug Firefox 987514](https://bugzil.la/987514)).
-- La mise en œuvre de l'interruption {{jsxref("Proxy")}} {{jsxref("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ([bug Firefox 1049662](https://bugzil.la/1049662)).
+- La mise en œuvre de l'interruption {{jsxref("Proxy")}} {{jsxref("Proxy.Proxy.ownKeys", "handler.ownKeys()")}} a été mise à jour pour correspondre à la spécification finale ES2015 ([bug Firefox 1049662](https://bugzil.la/1049662)).
 - Appel de {{jsxref("Map")}}, {{jsxref("Set")}}, ou {{jsxref("WeakMap")}} sans {{jsxref('Operators', 'new')}}, va maintenant lancer un {{jsxref("TypeError")}} ([bug Firefox 1083752](https://bugzil.la/1083752)).
 
 ### Interfaces/APIs/DOM

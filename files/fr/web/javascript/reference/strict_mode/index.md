@@ -20,7 +20,7 @@ Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mo
 
 ## Invoquer le mode strict
 
-Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{JSxRef("Global_Objects/eval", "eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/Window/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
+Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{JSxRef("eval", "eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/Window/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
 
 ### Le mode strict pour les scripts
 
@@ -68,7 +68,7 @@ export default maFonctionDeModule;
 
 ## Différences du mode strict
 
-Le mode strict modifie à la fois la syntaxe et le comportement à l'exécution. Les changements se déclinent généralement en trois catégories : ceux qui convertissent les fautes en erreurs (comme des erreurs de syntaxe ou les erreurs d'exécution), ceux qui simplifient comment une variable pour un nom donné est traitée, simplifiant {{JSxRef("Global_Objects/eval", "eval()")}} et {{jsxref("Functions/arguments","arguments")}} et ceux qui permettent d'écrire plus simplement du code JavaScript pérenne qui anticipe les évolutions futures d'ECMAScript.
+Le mode strict modifie à la fois la syntaxe et le comportement à l'exécution. Les changements se déclinent généralement en trois catégories : ceux qui convertissent les fautes en erreurs (comme des erreurs de syntaxe ou les erreurs d'exécution), ceux qui simplifient comment une variable pour un nom donné est traitée, simplifiant {{JSxRef("eval", "eval()")}} et {{jsxref("Functions/arguments","arguments")}} et ceux qui permettent d'écrire plus simplement du code JavaScript pérenne qui anticipe les évolutions futures d'ECMAScript.
 
 ### Convertir les fautes en erreurs
 
@@ -81,7 +81,7 @@ Premièrement, en mode strict, il est impossible de créer accidentellement des 
 variableMalDéclarée = 17; // lève une ReferenceError
 ```
 
-Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Global_Objects/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lèvera une exception en mode strict :
+Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lèvera une exception en mode strict :
 
 ```js
 "use strict";
@@ -228,7 +228,7 @@ eval("var x; delete x;"); // !!! erreur de syntaxe
 
 ### Rendre `eval` et `arguments` plus simples
 
-Le mode strict rend {{jsxref("Functions/arguments","arguments")}} et {{JSxRef("Global_Objects/eval", "eval()")}} moins « étranges ». Les deux impliquent une quantité de comportements étranges dans le code en mode non-strict : `eval` afin d'ajouter et d'enlever des liaisons et pour changer les valeurs de liaisons, et `arguments` via ses propriétés indexées faisant référence à des arguments nommés. Le mode strict permet de mieux traîter `eval` et `arguments` comme des mots-clés à part entière, bien qu'une _réparation_ complète ne devrait pas arriver avant une version future d'ECMAScript.
+Le mode strict rend {{jsxref("Functions/arguments","arguments")}} et {{JSxRef("eval", "eval()")}} moins « étranges ». Les deux impliquent une quantité de comportements étranges dans le code en mode non-strict : `eval` afin d'ajouter et d'enlever des liaisons et pour changer les valeurs de liaisons, et `arguments` via ses propriétés indexées faisant référence à des arguments nommés. Le mode strict permet de mieux traîter `eval` et `arguments` comme des mots-clés à part entière, bien qu'une _réparation_ complète ne devrait pas arriver avant une version future d'ECMAScript.
 
 Premièrement, les chaînes `eval` et `arguments` ne peuvent pas être utilisées comme identificateur. Tous les exemples suivants entraînent des erreurs de syntaxe :
 

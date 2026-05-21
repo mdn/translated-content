@@ -24,7 +24,7 @@ Lorsqu'un fragment de code JavaScript s'exécute, il s'exécute dans un **contex
 
 - Le contexte global est le contexte d'exécution créé pour exécuter le corps principal de votre code&nbsp;; c'est-à-dire tout code qui existe en dehors d'une fonction JavaScript.
 - Chaque fonction s'exécute dans son propre contexte d'exécution. On parle souvent de «&nbsp;contexte local&nbsp;».
-- L'utilisation de la fonction déconseillée {{JSxRef("Global_Objects/eval", "eval()")}} crée également un nouveau contexte d'exécution.
+- L'utilisation de la fonction déconseillée {{JSxRef("eval", "eval()")}} crée également un nouveau contexte d'exécution.
 
 Chaque contexte est, en substance, un niveau de portée dans votre code. Lorsqu'un de ces segments de code commence à s'exécuter, un nouveau contexte est construit pour l'exécuter&nbsp;; ce contexte est ensuite détruit lorsque le code quitte ce segment. Considérez le programme JavaScript ci-dessous&nbsp;:
 
@@ -133,7 +133,7 @@ Lorsque plusieurs programmes et plusieurs objets de code dans ces programmes ess
 
 L'utilisation des [web workers](/fr/docs/Web/API/Web_Workers_API), qui permettent au script principal d'exécuter d'autres scripts dans de nouveaux processus, aide à atténuer ce problème. Un site ou une application bien conçu·e utilise des travailleurs pour effectuer toute opération complexe ou longue, laissant le processus principal faire le moins de travail possible, au-delà de la mise à jour, de la disposition et de l'affichage de la page web.
 
-Cela est encore amélioré par l'utilisation de [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS) et de techniques telles que {{JSxRef("Global_Objects/Promise", "promesses", "", 1)}} pour permettre au code principal de continuer à s'exécuter en attendant les résultats d'une requête. Cependant, le code s'exécutant à un niveau plus fondamental — comme le code d'une bibliothèque ou d'un framework — peut avoir besoin d'un moyen de planifier l'exécution du code à un moment sûr tout en restant sur le processus principal, indépendamment des résultats d'une requête ou d'une tâche.
+Cela est encore amélioré par l'utilisation de [JavaScript asynchrone](/fr/docs/Learn_web_development/Extensions/Async_JS) et de techniques telles que {{JSxRef("Promise", "promesses", "", 1)}} pour permettre au code principal de continuer à s'exécuter en attendant les résultats d'une requête. Cependant, le code s'exécutant à un niveau plus fondamental — comme le code d'une bibliothèque ou d'un framework — peut avoir besoin d'un moyen de planifier l'exécution du code à un moment sûr tout en restant sur le processus principal, indépendamment des résultats d'une requête ou d'une tâche.
 
 Les microtâches sont une autre solution à ce problème, offrant un degré d'accès plus fin en permettant de planifier l'exécution du code avant le début de la prochaine itération de la boucle d'évènements, au lieu d'attendre la suivante.
 

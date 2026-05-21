@@ -52,7 +52,7 @@ Une nouvelle instance de {{jsxref("TypedArray")}}.
 Il existe de légères différences entre {{jsxref("Array.from()")}} et `TypedArray.from()` :
 
 - Si la valeur de `this` passée à `TypedArray.from` n'est pas un constructeur, `TypedArray.from` lèvera une exception {{jsxref("TypeError")}}, tandis que `Array.from` créera un nouvel objet {{jsxref("Array")}}.
-- `TypedArray.from` utilise `[[Set]]` tandis que `Array.from` utilise `[[DefineProperty]]`. Ainsi par exemple lorsque des objets {{jsxref("Proxy")}} sont manipulés la première méthode appellera {{jsxref("Global_Objects/Proxy/Proxy/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty")}}.
+- `TypedArray.from` utilise `[[Set]]` tandis que `Array.from` utilise `[[DefineProperty]]`. Ainsi par exemple lorsque des objets {{jsxref("Proxy")}} sont manipulés la première méthode appellera {{jsxref("Proxy.Proxy.set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Proxy.Proxy.defineProperty", "handler.defineProperty")}}.
 - Lorsque `source` est un itérable, `TypedArray.from` va dans un premier temps récupérer toutes ses valeurs, puis initialiser une instance de `this` à l'aide de leur nombre, et enfin ajouter ces valeurs à l'instance. `Array.from` ajoute les valeurs au nouvel objet lors du parcours de l'itérateur et ne définit la taille de l'objet qu'en dernière étape.
 - Si `Array.from` reçoit un objet semblable à un tableau qui n'est pas un itérable, les valeurs non définies sont conservées. `TypedArray.from` construit un objet dense en éliminant ces valeurs.
 

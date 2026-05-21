@@ -323,8 +323,8 @@ Avec des instructions impliquant d'autres opérateurs, JavaScript ne convertit p
 
 Si un nombre est représenté en mémoire par une chaîne de caractères, il y a des méthodes pour effectuer la bonne conversion :
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseFloat", "parseFloat()")}}
 
 `parseInt` renverra uniquement des nombres entiers, étant ainsi inappropriée pour la manipulation de nombre décimaux. Une bonne pratique pour cette fonction est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé (base 2, base 10...).
 

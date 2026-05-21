@@ -37,7 +37,7 @@ str.charCodeAt(indice);
 
 ### Valeur de retour
 
-Un nombre qui représente la valeur du point de code UTF-16 pour le caractère à la position indiquée. Si `index` pointe en dehors de la chaîne, ce sera {{jsxref("Global_Objects/NaN","NaN")}} qui sera renvoyé.
+Un nombre qui représente la valeur du point de code UTF-16 pour le caractère à la position indiquée. Si `index` pointe en dehors de la chaîne, ce sera {{jsxref("NaN")}} qui sera renvoyé.
 
 ## Description
 

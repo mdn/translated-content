@@ -38,7 +38,7 @@ class ClasseAvecMethodeDInstancePublique {
 
 Les champs statiques publics sont utiles lorsque vous voulez qu'un champ n'existe qu'une seule fois par classe, pas dans chaque instance que vous créez. Cela est utile pour des caches, une configuration fixe, ou tout autres données dont vous n'avez pas besoin qu'elles soient répliquées à travers les instances.
 
-Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. Ils sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. On y accède à nouveau à partir du constructeur de la classe.
+Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. Ils sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe en utilisant {{jsxref("Object.defineProperty", "Object.defineProperty()")}}. On y accède à nouveau à partir du constructeur de la classe.
 
 ```js
 class ClasseAvecChampStatique {
@@ -106,7 +106,7 @@ console.log(SousClasseAvecChampStatique.sousChampStatique);
 
 Les champs d'instance publics existent dans chaque instance créée d'une classe. En déclarant un champ public, vous pouvez vous assurer que le champ est toujours présent, et que la définition de la classe est davantage auto-documentée.
 
-Les champs d'instance publics sont ajoutés grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}, soit au moment de la construction dans la classe de base (avant que le corps du constructeur ne soit exécuté), soit juste après le retour de `super()` dans une sous-classe.
+Les champs d'instance publics sont ajoutés grâce à {{jsxref("Object.defineProperty", "Object.defineProperty()")}}, soit au moment de la construction dans la classe de base (avant que le corps du constructeur ne soit exécuté), soit juste après le retour de `super()` dans une sous-classe.
 
 ```js
 class ClasseAvecChampDInstance {
@@ -187,7 +187,7 @@ console.log(ClasseAvecMethodeStatique.methodeStatique());
 // affichage attendu : "la méthode statique a été appelée."
 ```
 
-Les méthodes statiques sont ajoutées au constructeur de la classe grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} au moment de l'évaluation de la classe. Ces méthodes peuvent être écrites, ne sont pas énumérables et sont configurables.
+Les méthodes statiques sont ajoutées au constructeur de la classe grâce à {{jsxref("Object.defineProperty", "Object.defineProperty()")}} au moment de l'évaluation de la classe. Ces méthodes peuvent être écrites, ne sont pas énumérables et sont configurables.
 
 #### Méthodes d'instance publiques
 
@@ -205,7 +205,7 @@ console.log(instance.methodePublique());
 // affichage attendu : "hello world"
 ```
 
-Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
+Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Object.defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
 
 Vous pouvez utiliser des fonctions génératrices, asynchrones et génératrices asynchrones.
 

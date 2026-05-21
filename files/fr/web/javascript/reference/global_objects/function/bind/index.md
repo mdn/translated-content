@@ -39,7 +39,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("Global_Objects/undefined", "undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("Operators/new", "new")}}.
+  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("Operators/new", "new")}}.
 - `arg1`, …, `argN` {{Optional_Inline}}
   - : Arguments à faire précéder aux arguments fournis à la fonction liée lors de l'invocation de `func`.
 

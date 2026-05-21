@@ -10,7 +10,7 @@ L'objet **`Function`** fournit des méthodes pour les [fonctions](/fr/docs/Web/J
 ## Constructeur
 
 - {{JSxRef("Function/Function", "Function()")}}
-  - : Crée un nouvel objet `Function`. Appeler le constructeur directement permet de créer des fonctions dynamiquement, mais cela présente des problèmes de sécurité et de performances similaires (mais bien moindres) à {{JSxRef("Global_Objects/eval", "eval()")}}. Cependant, contrairement à `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée globale.
+  - : Crée un nouvel objet `Function`. Appeler le constructeur directement permet de créer des fonctions dynamiquement, mais cela présente des problèmes de sécurité et de performances similaires (mais bien moindres) à {{JSxRef("eval", "eval()")}}. Cependant, contrairement à `eval()`, le constructeur `Function` crée des fonctions qui s'exécutent uniquement dans la portée globale.
 
 ## Propriétés d'instance
 
@@ -52,7 +52,7 @@ Ces propriétés sont propres à chaque instance de `Function`.
 
 ### Différence entre l'utilisation du constructeur `Function()` et les déclarations de fonction
 
-Les fonctions créées avec le constructeur `Function()` ne créent pas de fermetures contenant leur contexte de création&nbsp;; elles sont toujours créées dans la portée globale. Lors de leur exécution, elles ne pourront accéder qu'à leurs propres variables locales et aux variables globales, elles ne pourront pas accéder aux variables de la portée dans laquelle le constructeur `Function()` a été appelé. Il s'agit d'un comportement différent que celui obtenu en utilisant {{JSxRef("Global_Objects/eval", "eval()")}} avec une expression de fonction.
+Les fonctions créées avec le constructeur `Function()` ne créent pas de fermetures contenant leur contexte de création&nbsp;; elles sont toujours créées dans la portée globale. Lors de leur exécution, elles ne pourront accéder qu'à leurs propres variables locales et aux variables globales, elles ne pourront pas accéder aux variables de la portée dans laquelle le constructeur `Function()` a été appelé. Il s'agit d'un comportement différent que celui obtenu en utilisant {{JSxRef("eval", "eval()")}} avec une expression de fonction.
 
 ```js
 // Crée une propriété globale avec `var`

@@ -108,7 +108,7 @@ console.log(typeof arguments[0]); // renvoie le type du premier argument
 
 - {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{Deprecated_inline}}
   - : Référence à la fonction en cours d'exécution.
-- {{jsxref("Global_Objects/Function/caller", "arguments.caller")}} {{deprecated_inline}}
+- {{jsxref("Function.caller", "arguments.caller")}} {{deprecated_inline}}
   - : Référence à la fonction appelante.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : Référence au nombre d'arguments passés à la fonction.

@@ -77,7 +77,7 @@ function toto() {
 
 Sans avoir à lever une erreur puis à l'intercepter.
 
-Les trames de pile peuvent aussi provenir d'autres éléments que des appels de fonction explicites. Par exemple, les gestionnaires d'évènements, les tâches temporisées et les gestionnaires de promesses démarrent tous leur propre chaîne d'appels. Le code source à l'intérieur des appels à {{JSxRef("Global_Objects/eval", "eval()")}} et au constructeur {{JSxRef("Function")}} apparaît aussi dans la pile&nbsp;:
+Les trames de pile peuvent aussi provenir d'autres éléments que des appels de fonction explicites. Par exemple, les gestionnaires d'évènements, les tâches temporisées et les gestionnaires de promesses démarrent tous leur propre chaîne d'appels. Le code source à l'intérieur des appels à {{JSxRef("eval", "eval()")}} et au constructeur {{JSxRef("Function")}} apparaît aussi dans la pile&nbsp;:
 
 ```js
 console.log(new Function("return new Error('Échec de la fonction')")().stack);
