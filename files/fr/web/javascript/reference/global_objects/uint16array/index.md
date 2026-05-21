@@ -25,7 +25,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
   - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`Uint16Array`, ce sera `2`.
 - `Uint16Array.length`
   - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
+- {{jsxref("Function.name", "Uint16Array.name")}}
   - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint16Array` ce sera : "Uint16Array".
 - {{jsxref("TypedArray", "Uint16Array.prototype")}}
   - : Le prototype des objets _TypedArray_.

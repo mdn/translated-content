@@ -25,7 +25,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
   - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`Uint32Array`, ce sera `4`.
 - `Uint32Array.length`
   - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint32Array.name")}}
+- {{jsxref("Function.name", "Uint32Array.name")}}
   - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint32Array` ce sera : "Uint32Array".
 - {{jsxref("TypedArray", "Uint32Array.prototype")}}
   - : Le prototype des objets _TypedArray_.
