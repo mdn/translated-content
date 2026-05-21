@@ -50,7 +50,7 @@ Un descriptor de datos tiene además las siguientes claves opcionales:
 
 - `value`
   - : El valor asociado a la propiedad. Puede ser cualquier tipo valido de JavaScript (number, object, function, etc).
-    **Por defecto es {{jsxref("Global_Objects/undefined", "undefined")}}.**
+    **Por defecto es {{jsxref("undefined")}}.**
 - `writable`
   - : `true` Indica si el valor de la propiedad puede modificarse con el {{jsxref("Operators", "operador de asignación", "Assignment_operators", 1)}}.
     **Defaults to `false`.**
@@ -59,10 +59,10 @@ Un descriptor de acceso además tiene las siguientes claves opcionales:
 
 - `get`
   - : Una función cuyo valor retornado será el que se use como valor de la propiedad.
-    **Defaults to {{jsxref("Global_Objects/undefined", "undefined")}}.**
+    **Defaults to {{jsxref("undefined")}}.**
 - `set`
   - : Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.
-    **Defaults to {{jsxref("Global_Objects/undefined", "undefined")}}.**
+    **Defaults to {{jsxref("undefined")}}.**
 
 Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Operators/null", "null")}} la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
@@ -112,7 +112,7 @@ Si quiere ver algunos ejemplos de utilización del método `Object.definePropert
 
 ### Ejemplo: Creando una propiedad
 
-Cuando la propiedad especificada no existe en el objeto, `Object.defineProperty()` crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos `value`, `get` y `set` se establecerán por defecto a {{jsxref("Global_Objects/undefined", "undefined")}}. Una propiedad definida sin indicar `get`/`set`/`value`/`writable` es denominada "genérica" y "tipificada" como un descriptor de datos.
+Cuando la propiedad especificada no existe en el objeto, `Object.defineProperty()` crea una nueva. En el descriptor pueden omitirse campos, a los cuales se les asignará el valor por defecto. A todos los que sean de tipo Booleano se les asignará el valor falso. Los campos `value`, `get` y `set` se establecerán por defecto a {{jsxref("undefined")}}. Una propiedad definida sin indicar `get`/`set`/`value`/`writable` es denominada "genérica" y "tipificada" como un descriptor de datos.
 
 ```js
 var o = {}; // Creates a new object
@@ -158,7 +158,7 @@ Cuando la propiedad realmente existe, `Object.defineProperty()` intenta modifica
 
 Si una propiedad no tiene capacidad de configuración, su atributo `writabble` solo puede ser cambiada to `false`.
 
-Un {{jsxref("Global_Objects/TypeError", "TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo `writable`) a menos que el valor actual y el valor nuevo sean los mismos.
+Un {{jsxref("TypeError")}} es arrojado cuando se intenta cambiar las propiedades de atributos sin capacidad de configuración (adeḿas del atributo `writable`) a menos que el valor actual y el valor nuevo sean los mismos.
 
 #### Atributo writable
 

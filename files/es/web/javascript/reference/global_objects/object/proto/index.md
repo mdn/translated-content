@@ -37,7 +37,7 @@ Nota: esto es, dos guiones bajos, seguidos de cinco carácteres "proto", seguido
 
 La función getter `__proto__`el valor interno del `[[Prototype]]` de un objeto. Para objetos creados usando un objeto literal, el valor es {{jsxref("Object")}}. Para objetos creados usando literales de array, este valor es {{jsxref("Array")}}. Para funciones, este valor {{jsxref("Function")}}. Para objetos creados utilizando el operador new fun, donde **fun** es una función constructora incluída en JavaScript ({{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("String")}}, etcétera—incluyendo nuevos contrusctores conforme JavaScript evoluciona), este valor es `fun.prototype`. (Esto es, si el constructor no devuelve un objeto de forma explícita, o el `fun.prototype` ha sido reasignado desde que la instancia fué creada).
 
-El `__proto__` setter la mutación del objeto `[[Prototype]]` de un objeto. El objeto debe ser extensible según {{jsxref("Object.isExtensible()")}}: si no, un {{jsxref("Global_Objects/TypeError", "TypeError")}} es lanzado. El valor proveído debe ser un objeto o {{jsxref("Operators/null", "null")}}. Provetendo otro tipo de valor no hará nada.
+El `__proto__` setter la mutación del objeto `[[Prototype]]` de un objeto. El objeto debe ser extensible según {{jsxref("Object.isExtensible()")}}: si no, un {{jsxref("TypeError")}} es lanzado. El valor proveído debe ser un objeto o {{jsxref("Operators/null", "null")}}. Provetendo otro tipo de valor no hará nada.
 
 Para entender como los prototipos son usados para herencia, ver el artículo [Inheritance and the prototype chain](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 

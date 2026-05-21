@@ -31,11 +31,11 @@ Palabras clave básicas y expresiones generales en JavaScript.
   - : La `async function` define una expresión de función asíncrona.
 - {{jsxref("Operators/await", "await")}}
   - : Pausa y reanuda una función asíncrona y espera la resolución/rechazo de la promesa.
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : Iniciador de arreglo/sintaxis literal.
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : Iniciador de objeto/sintaxis literal.
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : Sintaxis de expresión regular literal.
 - {{jsxref("Operators/Grouping", "( )")}}
   - : Operador de agrupación.

@@ -50,7 +50,7 @@ El valor por defecto para cada propiedad del componente fecha-hora es {{jsxref("
 
 ### Valor de retorno
 
-Una cadena que representa la parte de la fecha de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada según las convenciones específicas del idioma.
+Una cadena que representa la parte de la fecha de la instancia {{jsxref("Date")}} dada según las convenciones específicas del idioma.
 
 ## Rendimiento
 

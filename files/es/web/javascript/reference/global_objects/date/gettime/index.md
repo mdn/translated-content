@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 El método **`getTime()`** devuelve el valor numérico correspondiente a la hora para la fecha especificada según la hora universal.
 
-Puede utilizar este método para ayudar a asignar una fecha y hora a otro objeto {{jsxref("Global_Objects/Date", "Date")}}. Este método es funcionalmente equivalente al metodo {{jsxref("Date.valueof", "valueOf()")}}.
+Puede utilizar este método para ayudar a asignar una fecha y hora a otro objeto {{jsxref("Date")}}. Este método es funcionalmente equivalente al metodo {{jsxref("Date.valueof", "valueOf()")}}.
 
 ## Sintaxis
 
@@ -35,7 +35,7 @@ copy.setTime(birthday.getTime());
 
 ### Ejemplo: Medir el tiempo de ejecución
 
-Restando dos llamadas `getTime()` subsiguientes en objetos {{jsxref("Global_Objects/Date", "Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.
+Restando dos llamadas `getTime()` subsiguientes en objetos {{jsxref("Date")}} recién generados, dé el intervalo de tiempo entre estas dos llamadas. Esto se puede utilizar para calcular el tiempo de ejecución de algunas operaciones.
 
 ```js
 var end, start;

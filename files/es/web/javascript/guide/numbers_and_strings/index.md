@@ -36,7 +36,7 @@ Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) segu
 
 ### Números binarios
 
-La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (`0b` o `0B`). Si los dígitos después del `0b` no son 0 o 1, el siguiente {{JSxRef("Global_Objects/SyntaxError", "SyntaxError")}} se lanza un: "Faltan dígitos binarios después de 0b".
+La sintaxis de números binarios utiliza un cero inicial seguido de una letra "B" latina en minúscula o mayúscula (`0b` o `0B`). Si los dígitos después del `0b` no son 0 o 1, el siguiente {{JSxRef("SyntaxError")}} se lanza un: "Faltan dígitos binarios después de 0b".
 
 ```js
 var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
@@ -61,7 +61,7 @@ var a = 0o10; // ES2015: 8
 
 ### Números hexadecimales
 
-La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (`0x` o `0X`). Si los dígitos después de `0x` están fuera del rango (0123456789ABCDEF), el siguiente {{JSxRef("Global_Objects/SyntaxError", "SyntaxError")}} se lanza: "El identificador comienza inmediatamente después del literal numérico".
+La sintaxis de números hexadecimales utiliza un cero inicial seguido de una letra "X" latina en minúscula o mayúscula (`0x` o `0X`). Si los dígitos después de `0x` están fuera del rango (0123456789ABCDEF), el siguiente {{JSxRef("SyntaxError")}} se lanza: "El identificador comienza inmediatamente después del literal numérico".
 
 ```js
 0xfffffffffffffffff; // 295147905179352830000
@@ -104,14 +104,14 @@ La siguiente tabla resume las propiedades del objeto `Number`.
 | {{JSxRef("Number.MIN_SAFE_INTEGER")}}  | Número entero seguro mínimo en JavaScript (−253 + 1 o `−9007199254740991`)                                                                |
 | {{JSxRef("Number.MAX_SAFE_INTEGER")}}  | Máximo número entero seguro en JavaScript (+253 - 1 o `+9007199254740991`)                                                                |
 
-| Método                               | Descripción                                                                                                                                                     |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("Number.parseFloat()")}}    | Analiza un argumento de cadena y devuelve un número de punto flotante. Igual que la función {{JSxRef("parseFloat", "parseFloat()")}} global.                    |
-| {{JSxRef("Number.parseInt()")}}      | Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada. Igual que la función {{JSxRef("parseInt", "parseInt()")}} global.    |
-| {{JSxRef("Number.isFinite()")}}      | Determina si el valor pasado es un número finito.                                                                                                               |
-| {{JSxRef("Number.isInteger()")}}     | Determina si el valor pasado es un número entero.                                                                                                               |
-| {{JSxRef("Number.isNaN()")}}         | Determina si el valor pasado es {{JSxRef("Global_Objects/NaN", "NaN")}}. Versión más robusta del {{JSxRef("Global_Objects/isNaN", "isNaN()")}} global original. |
-| {{JSxRef("Number.isSafeInteger()")}} | Determina si el valor proporcionado es un número que es un _entero seguro_.                                                                                     |
+| Método                               | Descripción                                                                                                                                                  |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{JSxRef("Number.parseFloat()")}}    | Analiza un argumento de cadena y devuelve un número de punto flotante. Igual que la función {{JSxRef("parseFloat", "parseFloat()")}} global.                 |
+| {{JSxRef("Number.parseInt()")}}      | Analiza un argumento de cadena y devuelve un número entero de la base o raíz especificada. Igual que la función {{JSxRef("parseInt", "parseInt()")}} global. |
+| {{JSxRef("Number.isFinite()")}}      | Determina si el valor pasado es un número finito.                                                                                                            |
+| {{JSxRef("Number.isInteger()")}}     | Determina si el valor pasado es un número entero.                                                                                                            |
+| {{JSxRef("Number.isNaN()")}}         | Determina si el valor pasado es {{JSxRef("NaN")}}. Versión más robusta del {{JSxRef("isNaN", "isNaN()")}} global original.                                   |
+| {{JSxRef("Number.isSafeInteger()")}} | Determina si el valor proporcionado es un número que es un _entero seguro_.                                                                                  |
 
 El prototipo `Number` proporciona métodos para recuperar información de objetos `Number` en varios formatos. La siguiente tabla resume los métodos de `Number.prototype`.
 

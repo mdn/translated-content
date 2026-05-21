@@ -21,7 +21,7 @@ fun.apply(thisArg[, argsArray])
 ### Parámetros
 
 - `thisArg`
-  - : El valor del objeto **this** a utilizar dentro de la llamada a _fun_. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} o {{jsxref("Global_Objects/undefined", "undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.
+  - : El valor del objeto **this** a utilizar dentro de la llamada a _fun_. Cabe mencionar que éste puede no ser el valor visto por el método: si el método es una función del tipo {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} o {{jsxref("undefined")}} será reemplazado por el objeto global, y los valores primitivos serán encapsulados.
 - `argsArray`
   - : Un objeto similar a un array ([array like object](/es/docs/Web/JavaScript/Guide#working_with_array-like_objects)), que contiene los parámetros con los que será llamada _`fun`_, o `null` o {{jsxref("undefined")}} si ningún argumento es estipulado. Desde la versión 5 de ECMAScript estos parámetros pueden estar en un objeto similar a un array en lugar de un array. Véase [browser compatibility](#browser_compatibility) para mayor información.
 

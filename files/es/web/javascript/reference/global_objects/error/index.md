@@ -32,7 +32,7 @@ Además del constructor genérico `Error`, hay otros siete constructores de erro
 
 ## Constructor
 
-- {{JSxRef("Global_Objects/Error/Error", "Error()")}}
+- {{JSxRef("Error.Error", "Error()")}}
   - : Crea un nuevo objeto `Error`.
 
 ## Métodos estáticos
@@ -104,7 +104,7 @@ Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http
 #### Clase `Error` personalizado en ES6
 
 > [!WARNING]
-> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Object.defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
 > [!NOTE]
 > Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.

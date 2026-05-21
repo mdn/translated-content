@@ -658,7 +658,7 @@ function Person() {
 }
 ```
 
-Alternativamente, podrías crear una {{JSxRef("Global_Objects/Function/bind", "función vinculada")}} para que el valor `this` adecuado se pasara a la función `growUp()`.
+Alternativamente, podrías crear una {{JSxRef("Function.bind", "función vinculada")}} para que el valor `this` adecuado se pasara a la función `growUp()`.
 
 Una función flecha no tiene su propio `this` se utiliza el valor de `this` del contexto de ejecución adjunto. Por lo tanto, en el siguiente código, `this` dentro de la función que se pasa a `setInterval` tiene el mismo valor que `this` en la función adjunta:
 
@@ -682,25 +682,25 @@ JavaScript tiene integradas varias funciones de nivel superior:
   - : El método **`eval()`** evalúa el código JavaScript representado como una cadena.
 - {{JSxRef("Deprecated_and_obsolete_features", "uneval()")}}
   - : El método **`uneval()`** crea una representación de cadena del código fuente de un {{JSxRef("Object")}}.
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
+- {{JSxRef("isFinite", "isFinite()")}}
   - : La función global **`isFinite()`** determina si el valor pasado es un número finito. Si es necesario, el parámetro, primero se convierte en un número.
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-  - : La función **`isNaN()`** determina si un valor es {{JSxRef("Global_Objects/NaN", "NaN")}} o no. **Nota**: La coerción dentro de la función `isNaN` tiene {{JSxRef("Global_Objects/isNaN", "interesantes", "#Descripcion")}} reglas; también puedes querer usar {{JSxRef("Number.isNaN()")}}, como se define en ECMAScript 2015, o puedes usar {{JSxRef("Operators/typeof", "typeof")}} para determinar si el valor no es un número (`NaN`).
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
+- {{JSxRef("isNaN", "isNaN()")}}
+  - : La función **`isNaN()`** determina si un valor es {{JSxRef("NaN")}} o no. **Nota**: La coerción dentro de la función `isNaN` tiene {{JSxRef("isNaN", "interesantes", "#Descripcion")}} reglas; también puedes querer usar {{JSxRef("Number.isNaN()")}}, como se define en ECMAScript 2015, o puedes usar {{JSxRef("Operators/typeof", "typeof")}} para determinar si el valor no es un número (`NaN`).
+- {{JSxRef("parseFloat", "parseFloat()")}}
   - : La función **`parseFloat()`** procesa un argumento de cadena y devuelve un número de punto flotante.
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
+- {{JSxRef("parseInt", "parseInt()")}}
   - : La función **`parseInt()`** procesa un argumento de cadena y devuelve un número entero de la base especificada (la base en los sistemas numéricos matemáticos).
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-  - : La función **`decodeURI()`** decodifica un identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Global_Objects/encodeURI", "encodeURI")}} o por una rutina similar.
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : El método **`decodeURIComponent()`** decodifica un componente Identificador uniforme de recursos (URI) creado previamente por {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent")}} o por un rutina similar.
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
+- {{JSxRef("decodeURI", "decodeURI()")}}
+  - : La función **`decodeURI()`** decodifica un identificador uniforme de recursos (URI) creado previamente por {{JSxRef("encodeURI")}} o por una rutina similar.
+- {{JSxRef("decodeURIComponent", "decodeURIComponent()")}}
+  - : El método **`decodeURIComponent()`** decodifica un componente Identificador uniforme de recursos (URI) creado previamente por {{JSxRef("encodeURIComponent")}} o por un rutina similar.
+- {{JSxRef("encodeURI", "encodeURI()")}}
   - : El método **`encodeURI()`** codifica un identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{JSxRef("encodeURIComponent", "encodeURIComponent()")}}
   - : El método **`encodeURIComponent()`** codifica un componente Identificador uniforme de recursos (URI) reemplazando cada instancia de ciertos caracteres por una, dos, tres o cuatro secuencias de escape que representan la codificación UTF-8 del caracter (solo habrá cuatro secuencias de escape para caracteres compuestos por dos caracteres "sustitutos").
-- {{JSxRef("Global_Objects/escape", "escape()")}}
-  - : El método obsoleto **`escape()`** calcula una nueva cadena en la que ciertos caracteres han sido reemplazados por una secuencia de escape hexadecimal. En su lugar usa {{JSxRef("Global_Objects/encodeURI", "encodeURI")}} o {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent")}}.
-- {{JSxRef("Global_Objects/unescape", "unescape()")}}
-  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("Global_Objects/escape", "escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}} o {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent")}} en su lugar.
+- {{JSxRef("escape", "escape()")}}
+  - : El método obsoleto **`escape()`** calcula una nueva cadena en la que ciertos caracteres han sido reemplazados por una secuencia de escape hexadecimal. En su lugar usa {{JSxRef("encodeURI")}} o {{JSxRef("encodeURIComponent")}}.
+- {{JSxRef("unescape", "unescape()")}}
+  - : El método obsoleto **`unescape()`** calcula una nueva cadena en la que las secuencias de escape hexadecimales se reemplazan con el caracter que representan. Las secuencias de escape se pueden introducir por medio de una función como {{JSxRef("escape")}}. Debido a que `unescape()` está en desuso, usa {{JSxRef("decodeURI", "decodeURI()")}} o {{JSxRef("decodeURIComponent")}} en su lugar.
 
 {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

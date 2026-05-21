@@ -11,7 +11,7 @@ Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef
 
 - No tiene sus propios enlaces a {{JSxRef("Operators/this", "this")}} o {{JSxRef("Operators/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
 - No tiene {{JSxRef("Functions/arguments", "argumentos")}} o palabras clave [new.target](/es/docs/Web/JavaScript/Operadores/new.target).
-- No apta para los métodos {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
+- No apta para los métodos {{JSxRef("Function.call", "call")}}, {{JSxRef("Function.apply", "apply")}} y {{JSxRef("Function.bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
 - No se puede utilizar {{JSxRef("Operators/yield", "yield")}} dentro de su cuerpo.
 
@@ -266,9 +266,9 @@ Object.defineProperty(obj, "b", {
 
 ### `call`, `apply` y `bind`
 
-Los métodos {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
+Los métodos {{JSxRef("Function.call", "call")}}, {{JSxRef("Function.apply", "apply")}} y {{JSxRef("Function.bind", "bind")}} **NO son adecuados** para las funciones flecha, ya que fueron diseñados para permitir que los métodos se ejecuten dentro de diferentes ámbitos, porque **las funciones flecha establecen "`this`" según el ámbito dentro del cual se define la función flecha.**
 
-Por ejemplo, {{JSxRef("Global_Objects/Function/call", "call")}}, {{JSxRef("Global_Objects/Function/apply", "apply")}} y {{JSxRef("Global_Objects/Function/bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
+Por ejemplo, {{JSxRef("Function.call", "call")}}, {{JSxRef("Function.apply", "apply")}} y {{JSxRef("Function.bind", "bind")}} funcionan como se esperaba con las funciones tradicionales, porque establecen el ámbito para cada uno de los métodos:
 
 ```js
 // ----------------------

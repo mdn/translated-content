@@ -47,7 +47,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Propiedades de función
 
-- Las propiedades {{jsxref("Global_Objects Function/caller", "caller")}} y {{jsxref("Global_Objects/Function/argument", "argument")}} están obsoletas porque filtran la función llamadora. En lugar de la propiedad arguments, debes usar el objeto {{jsxref("Functions/arguments", "arguments")}} dentro de los cierres de funciones.
+- Las propiedades {{jsxref("Global_Objects Function/caller", "caller")}} y {{jsxref("Function.argument", "argument")}} están obsoletas porque filtran la función llamadora. En lugar de la propiedad arguments, debes usar el objeto {{jsxref("Functions/arguments", "arguments")}} dentro de los cierres de funciones.
 
 ### Generador heredado
 
@@ -56,8 +56,8 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Iterador
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} está en desuso.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} está en desuso.
+- {{jsxref("StopIteration")}} está en desuso.
+- {{jsxref("Iterator")}} está en desuso.
 
 ### Métodos de objeto
 
@@ -67,9 +67,9 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 ### Métodos de `Date`
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} y {{jsxref("Global_Objects/Date/setYear", "setYear")}} se ven afectados por el problema del año 2000 y se han subsumido por {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} y {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- En nuevo código, debes usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Global_Objects/Date/toUTCString", "toGMTString")}}.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} está en desuso.
+- {{jsxref("Date.getYear", "getYear")}} y {{jsxref("Date.setYear", "setYear")}} se ven afectados por el problema del año 2000 y se han subsumido por {{jsxref("Date.getFullYear", "getFullYear")}} y {{jsxref("Date.setFullYear", "setFullYear")}}.
+- En nuevo código, debes usar {{jsxref("Date.toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Date.toUTCString", "toGMTString")}}.
+- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} está en desuso.
 
 ### Funciones
 
@@ -87,7 +87,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 ### Secuencias de escape
 
 - Las secuencias de escape octales (\ seguida de uno, dos o tres dígitos octales) están en desuso en los literales de cadenas y expresiones regulares.
-- Las funciones {{jsxref("Global_Objects/escape", "escape")}} y {{jsxref("Global_Objects/unescape", "unescape")}} están en desuso. Usa {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} o {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar y decodificar secuencias de escape para caracteres especiales.
+- Las funciones {{jsxref("escape")}} y {{jsxref("unescape")}} están en desuso. Usa {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, {{jsxref("decodeURI")}} o {{jsxref("decodeURIComponent")}} para codificar y decodificar secuencias de escape para caracteres especiales.
 
 ### Métodos de cadena
 
@@ -113,9 +113,9 @@ Estas características obsoletas se han eliminado por completo de JavaScript y y
 
 ### Función
 
-| Propiedad                                            | Descripción                    |
-| ---------------------------------------------------- | ------------------------------ |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Número de argumentos formales. |
+| Propiedad                             | Descripción                    |
+| ------------------------------------- | ------------------------------ |
+| {{jsxref("Function.arity", "arity")}} | Número de argumentos formales. |
 
 ### Array
 

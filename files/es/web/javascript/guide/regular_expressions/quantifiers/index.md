@@ -176,4 +176,4 @@ Para obtener información sobre la compatibilidad del navegador, consulta la [ta
   - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-- {{JSxRef("Global_Objects/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}

@@ -70,7 +70,7 @@ if (condition) {
 }
 ```
 
-Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Global_Objects/Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
+Aquí, la `condition` puede ser cualquier expresión que se evalúe como `true` o `false`. (Consulta {{JSxRef("Boolean", "Boolean", "#Description")}} para obtener una explicación de lo que se evalúa como `true` y `false`).
 
 Si `condition` se evalúa como `true`, se ejecuta `statement_1`. De lo contrario, se ejecuta `statement_2`. `statement_1` y `statement_2` pueden ser cualquier declaración, incluidas otras declaraciones `if` anidadas.
 
@@ -238,7 +238,7 @@ Puedes lanzar excepciones usando la instrucción `throw` y manejarlas usando las
 
 Casi cualquier objeto se puede lanzar en JavaScript. Sin embargo, no todos los objetos lanzados son iguales. Si bien es común lanzar números o cadenas como errores, con frecuencia es más efectivo usar uno de los tipos de excepción creados específicamente para este propósito:
 
-- {{JSxRef("Global_Objects/Error", "excepciones ECMAScript", "#Tipos_Error")}}
+- {{JSxRef("Error", "excepciones ECMAScript", "#Tipos_Error")}}
 - La interfaz [DOMException](/es/docs/Web/API/DOMException) representa un evento anormal (llamado excepción) que ocurre como resultado de llamar a un método o acceder a una propiedad de una API web y la interfaz [DOMError](/es/docs/Web/API/DOMError) describe un objeto de error que contiene un nombre de error.
 
 ### Expresión `throw`

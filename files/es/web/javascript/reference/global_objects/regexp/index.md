@@ -49,7 +49,7 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
 
 ## Constructor
 
-- {{JSxRef("Global_Objects/RegExp/RegExp", "RegExp()")}}
+- {{JSxRef("RegExp.RegExp", "RegExp()")}}
   - : Crea un nuevo objeto `RegExp`.
 
 ## Propiedades estáticas
@@ -103,7 +103,7 @@ Ten en cuenta que varias de las propiedades de {{JSxRef("RegExp")}} tienen nombr
 
 ### Usar una expresión regular para cambiar el formato de los datos
 
-El siguiente script usa el método {{JSxRef("String.prototype.replace()", "replace()")}} de la instancia {{JSxRef("Global_Objects/String", "String")}} para hacer coincidir una nombre en el formato _primero último_ y enviarlo en el formato _último, primero_.
+El siguiente script usa el método {{JSxRef("String.prototype.replace()", "replace()")}} de la instancia {{JSxRef("String")}} para hacer coincidir una nombre en el formato _primero último_ y enviarlo en el formato _último, primero_.
 
 En el texto de reemplazo, el script usa `$1` y `$2` para indicar los resultados de los correspondientes paréntesis coincidentes en el patrón de expresión regular.
 
@@ -142,7 +142,7 @@ s.match(/sí[^]*día/);
 
 ### Usar una expresión regular con la bandera pegajosa
 
-La bandera {{JSxRef("Global_Objects/RegExp/sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.
+La bandera {{JSxRef("RegExp.sticky", "sticky")}} indica que la expresión regular realiza una coincidencia permanente en la cadena de destino al intentar hacer coincidir a partir de {{JSxRef("RegExp.prototype.lastIndex")}}.
 
 ```js
 let str = "#foo#";

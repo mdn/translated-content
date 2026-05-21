@@ -261,7 +261,7 @@ Debido a que las expresiones lógicas se evalúan de izquierda a derecha, se pru
 
 Las reglas de la lógica garantizan que estas evaluaciones sean siempre correctas. Ten en cuenta que la parte _anything_ de las expresiones anteriores no se evalúa, por lo que los efectos secundarios de hacerlo no surten efecto.
 
-Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Operators/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("Global_Objects/undefined", "undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
+Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Operators/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
 
 ### Operadores de cadena
 
@@ -349,7 +349,7 @@ delete myobj.h; // devuelve true (puede eliminar propiedades definidas por el us
 
 ##### Eliminar elementos de un arreglo
 
-Dado que los arreglos solo son objetos, técnicamente es posible `delete` elementos de ellos. Sin embargo, esto se considera una mala práctica, trata de evitarlo. Cuando eliminas una propiedad de arreglo, la longitud del arreglo no se ve afectada y otros elementos no se vuelven a indexar. Para lograr ese comportamiento, es mucho mejor simplemente sobrescribir el elemento con el valor `undefined`. Para manipular realmente el arreglo, usa los diversos métodos de arreglo, como {{JSxRef("Global_Objects/Array/splice", "splice")}}.
+Dado que los arreglos solo son objetos, técnicamente es posible `delete` elementos de ellos. Sin embargo, esto se considera una mala práctica, trata de evitarlo. Cuando eliminas una propiedad de arreglo, la longitud del arreglo no se ve afectada y otros elementos no se vuelven a indexar. Para lograr ese comportamiento, es mucho mejor simplemente sobrescribir el elemento con el valor `undefined`. Para manipular realmente el arreglo, usa los diversos métodos de arreglo, como {{JSxRef("Array.splice", "splice")}}.
 
 #### `typeof`
 

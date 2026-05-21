@@ -117,7 +117,7 @@ console.log(4, multilineaCorrecta); // corrige  'manzena' pero no toca 'en'.
 
 ### Busca al comienzo de la entrada usando un caracter de control `^`
 
-Usa `^` para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular `/^A/`. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Global_Objects/Array/filter", "filter")}} con un {{JSxRef("Functions/Arrow_functions", "función flecha")}}.
+Usa `^` para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular `/^A/`. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Array.filter", "filter")}} con un {{JSxRef("Functions/Arrow_functions", "función flecha")}}.
 
 ```js
 let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
@@ -222,4 +222,4 @@ Para obtener información sobre la compatibilidad del navegador, consulta la [ta
   - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-- {{JSxRef("Global_Objects/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}

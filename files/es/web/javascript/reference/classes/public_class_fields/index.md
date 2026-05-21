@@ -34,7 +34,7 @@ class ClassWithPublicInstanceMethod {
 
 Los campos estáticos públicos son útiles cuando desea que exista un campo solo una vez por clase, no en cada instancia de clase que cree. Esto es útil para cachés, configuración fija o cualquier otro dato que no necesite replicarse en todas las instancias.
 
-Los campos estáticos públicos se declaran utilizando la palabra clave `static`. Se agregan al constructor de la clase en el momento de la evaluación de la clase utilizando {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Se accede nuevamente desde el constructor de la clase.
+Los campos estáticos públicos se declaran utilizando la palabra clave `static`. Se agregan al constructor de la clase en el momento de la evaluación de la clase utilizando {{jsxref("Object.defineProperty", "Object.defineProperty()")}}. Se accede nuevamente desde el constructor de la clase.
 
 ```js
 class ClassWithStaticField {

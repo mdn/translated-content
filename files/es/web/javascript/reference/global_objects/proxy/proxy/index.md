@@ -39,31 +39,31 @@ Un manejador vacío creará un proxy que se comporta, en casi todos los aspectos
 
 Esta sección enumera todas las funciones de manejador que puede definir. Las funciones de manejador a veces se denominan _trampas_, porque atrapan las llamadas al objeto de destino subyacente.
 
-- {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
+- {{JSxRef("Proxy.Proxy.apply", "handler.apply()")}}
   - : Una trampa para una llamada de función.
-- {{JSxRef("Global_Objects/Proxy/Proxy/construct", "handler.construct()")}}
+- {{JSxRef("Proxy.Proxy.construct", "handler.construct()")}}
   - : Una trampa para el operador {{JSxRef("Operators/new", "new")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
+- {{JSxRef("Proxy.Proxy.defineProperty", "handler.defineProperty()")}}
   - : Una trampa para {{JSxRef("Object.defineProperty")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
+- {{JSxRef("Proxy.Proxy.deleteProperty", "handler.deleteProperty()")}}
   - : Una trampa para el operador {{JSxRef("Operators/delete", "delete")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
+- {{JSxRef("Proxy.Proxy.get", "handler.get()")}}
   - : Una trampa para obtener valores de propiedad.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+- {{JSxRef("Proxy.Proxy.getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : Una trampa para {{JSxRef("Object.getOwnPropertyDescriptor")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
+- {{JSxRef("Proxy.Proxy.getPrototypeOf", "handler.getPrototypeOf()")}}
   - : Una trampa para {{JSxRef("Object.getPrototypeOf")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/has", "handler.has()")}}
+- {{JSxRef("Proxy.Proxy.has", "handler.has()")}}
   - : Una trampa para el operador {{JSxRef("Operators/in", "in")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
+- {{JSxRef("Proxy.Proxy.isExtensible", "handler.isExtensible()")}}
   - : Una trampa para {{JSxRef("Object.isExtensible")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
+- {{JSxRef("Proxy.Proxy.ownKeys", "handler.ownKeys()")}}
   - : Una trampa para {{JSxRef("Object.getOwnPropertyNames")}} y {{JSxRef("Object.getOwnPropertySymbols")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
+- {{JSxRef("Proxy.Proxy.preventExtensions", "handler.preventExtensions()")}}
   - : Una trampa para {{JSxRef("Object.preventExtensions")}}.
-- {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
+- {{JSxRef("Proxy.Proxy.set", "handler.set()")}}
   - : Una trampa para establecer valores de propiedad.
-- {{JSxRef("Global_Objects/Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
+- {{JSxRef("Proxy.Proxy.setPrototypeOf", "handler.setPrototypeOf()")}}
   - : Una trampa para {{JSxRef("Object.setPrototypeOf")}}.
 
 ## Ejemplos
@@ -104,4 +104,4 @@ console.log(proxy.proxied); // "Valor reemplazado"
 ## Véase también
 
 - [`Proxy` y `Reflect` en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Meta_programming)
-- {{jsxref("Global_Objects/Reflect", "Reflect")}}
+- {{jsxref("Reflect")}}

@@ -38,19 +38,19 @@ Y lo mejor es que está siendo desarrollado como un estándar web a través del 
 
 ## Referencia de la API
 
-- {{jsxref("Global_Objects/WebAssembly", "WebAssembly")}}
+- {{jsxref("WebAssembly")}}
   - : Este objeto sirve como espacio de nombres para toda funcionalidad relacionada a WebAssembly.
-- {{jsxref("Global_Objects/WebAssembly/Global", "WebAssembly.Global()")}}
+- {{jsxref("WebAssembly.Global", "WebAssembly.Global()")}}
   - : El objeto `WebAssembly.Global` representa una instancia variable global, accesible desde JavaScript e importable/exportable a través de una o más instancias de {{jsxref("WebAssembly.Module")}}. Esto permite el enlace dinámico de varios módulos.
-- {{jsxref("Global_Objects/WebAssembly/Module", "WebAssembly.Module()")}}
+- {{jsxref("WebAssembly.Module", "WebAssembly.Module()")}}
   - : El objeto `WebAssembly.Module` contiene código WebAssembly sin estado que ha sido ya compilado por el navegador y puede ser [compartido con workers](/es/docs/Web/API/Worker/postMessage) e instanciado varias veces.
-- {{jsxref("Global_Objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
+- {{jsxref("WebAssembly.Instance", "WebAssembly.Instance()")}}
   - : Un objeto `WebAssembly.Instance` es una instancia ejecutable y con estado de un `Module`. Los objetos `Instance` contienen todas las [funciones exportadas de WebAssembly](/es/docs/WebAssembly/Exported_functions) que permiten llamar a código WebAssembly desde JavaScript.
-- {{jsxref("Global_Objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
+- {{jsxref("WebAssembly.instantiateStreaming", "WebAssembly.instantiateStreaming()")}}
   - : La función `WebAssembly.instantiateStreaming()` es la principal API para compilar e instanciar código WebAssembly, retornando tanto un `Module` como su primera `Instance`.
-- {{jsxref("Global_Objects/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Un objeto `WebAssembly.Memory` es un {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
-- {{jsxref("Global_Objects/WebAssembly/Table", "WebAssembly.Table()")}}
+- {{jsxref("WebAssembly.Memory", "WebAssembly.Memory()")}}
+  - : Un objeto `WebAssembly.Memory` es un {{jsxref("ArrayBuffer")}} redimensionable que contiene los bytes de memoria accedidos por una `Instance`.
+- {{jsxref("WebAssembly.Table", "WebAssembly.Table()")}}
   - : Un objeto `WebAssembly.Table` es un arreglo tipado redimensionable de valores opacos, como referencias a funciones, que son accedidos por una `Instance`.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : Crea un nuevo objeto `CompileError` de WebAssembly.

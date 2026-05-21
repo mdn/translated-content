@@ -113,7 +113,7 @@ console.log("La entrada 0 en el arreglo de 32 bits ahora es " + int32View[0]);
 
 La salida de esto es `"La entrada 0 en el arreglo de 32 bits ahora es 32"`.
 
-En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("Global_Objects/TypedArray", "tipo de vista", "#TypedArray_objects")}}.
+En otras palabras, los dos arreglos se ven simplemente en el mismo búfer de datos, tratándolo como formatos diferentes. Lo puedes hacer con cualquier {{JSxRef("TypedArray", "tipo de vista", "#TypedArray_objects")}}.
 
 ### Trabajar con complejas estructuras de datos
 

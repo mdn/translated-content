@@ -81,7 +81,7 @@ Number(undefined); // NaN
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
 - ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
-  - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
+  - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Infinity")}}), pero ha sido eliminado.~~
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
 - {{jsxref("Number.parseInt()")}}
@@ -169,6 +169,6 @@ Number("-Infinity"); //-Infinity
 
 ### Vea También
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("NaN")}}
+- {{jsxref("Math")}}
 - {{jsxref("Arithmetic operators")}}

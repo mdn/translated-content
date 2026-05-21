@@ -39,7 +39,7 @@ El valor predeterminado de cada componente de fecha-hora es {{jsxref("undefined"
 
 ### Valor devuelto
 
-Una cadena representando la porción de tiempo de la instancia {{jsxref("Global_Objects/Date", "Date")}} dada, conforme a las convenciones específicas del idioma.
+Una cadena representando la porción de tiempo de la instancia {{jsxref("Date")}} dada, conforme a las convenciones específicas del idioma.
 
 ## Ejemplos
 

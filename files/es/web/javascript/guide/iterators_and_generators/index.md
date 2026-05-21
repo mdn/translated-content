@@ -5,13 +5,13 @@ slug: Web/JavaScript/Guide/Iterators_and_generators
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
 
-Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Statements/for","for")}} hasta métodos como {{jsxref("Global_Objects/Array/map","map()")}} y {{jsxref("Global_Objects/Array/filter","filter()")}}. Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Statements/for...of","for...of")}}.
+Procesar cada uno de los elementos en una colección es una operación muy común. JavaScript proporciona diversas formas de iterar sobre una colección, desde simples bucles {{jsxref("Statements/for","for")}} hasta métodos como {{jsxref("Array.map","map()")}} y {{jsxref("Array.filter","filter()")}}. Los iteradores y los generadores traen el concepto de iteración al centro del lenguaje y proporcionan un mecanismo para personalizar el comportamiento de los bucles {{jsxref("Statements/for...of","for...of")}}.
 
 Para más información, véase:
 
 - {{jsxref("Iteration_protocols", "Protocolos de iteración")}}
 - {{jsxref("Statements/for...of","for...of")}}
-- {{jsxref("Statements/function*","function*")}} y {{jsxref("Global_Objects/Generador","Generador")}}
+- {{jsxref("Statements/function*","function*")}} y {{jsxref("Generador")}}
 - {{jsxref("Operators/yield","yield")}} y {{jsxref("Operators/yield*","yield*")}}
 
 ## Iteradores
@@ -54,7 +54,7 @@ console.log(it.next().done); // true
 
 ## Generadores
 
-Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Global_Objects/Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
+Aunque los iteradores personalizados son una herramienta útil, su creación require una programación meticulosa ya que necesitan mantener su estado interno explícitamente. Los **{{jsxref("Generador","generadores","",1)}}** son una alternativa poderosa: permiten definir un algoritmo iterativo al escribir una sola función que puede mantener su propio estado.
 
 Una función generadora (constructor GeneratorFunction) es un tipo especial de función que sirve como una fábrica de iteradores. Cuando se ejecuta, regresa un nuevo objeto Generador. Una función se convierte en una Función Generadora si utiliza la sintáxis {{jsxref("Statements/function*","function*")}}.
 
@@ -106,7 +106,7 @@ for (let valor of miIterable) {
 
 ### Iterables integrados
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Global_Objects/TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son iterables ya integrados, porque todos sus objetos prototipo tienen un método definido con la llave {{jsxref("Symbol.iterator")}}.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} y {{jsxref("Set")}} son iterables ya integrados, porque todos sus objetos prototipo tienen un método definido con la llave {{jsxref("Symbol.iterator")}}.
 
 ### Sintaxis que esperan objetos iterables
 
@@ -136,7 +136,7 @@ a; // "a"
 
 Los generadores calculan los valores devueltos bajo demanda, lo que les permite representar eficientemente secuencias que son costosas de calcular, o incluso secuencias infinitas como se explicó anteriormente.
 
-El método {{jsxref("Global_Objects/Generador/next","next()")}} también acepta un valor que puede ser utilizado para modificar el estado interno del generador. El valor recibido por `next()` es utilizado como si fuera el resultado de la iteración anterior (último valor entregado por `yield`) el cual detuvo al generador.
+El método {{jsxref("Generador.next","next()")}} también acepta un valor que puede ser utilizado para modificar el estado interno del generador. El valor recibido por `next()` es utilizado como si fuera el resultado de la iteración anterior (último valor entregado por `yield`) el cual detuvo al generador.
 
 A continuación se muestra un generador de Fibonacci usando `next(x)` para reiniciar la secuencia:
 
@@ -170,10 +170,10 @@ console.log(secuencia.next().value); // 2
 console.log(secuencia.next().value); // 3
 ```
 
-Es posible forzar a un generador a lanzar una excepción cuando se invoca al método {{jsxref("Global_Objects/Generador/throw","throw()")}} y se pasa el valor de excepción a lanzar. Esta excepción será lanzada desde el contexto actual suspendido del generador, como si en vez del estado suspendido actualmente de `yield` se tuviera una sentencia `throw valor`.
+Es posible forzar a un generador a lanzar una excepción cuando se invoca al método {{jsxref("Generador.throw","throw()")}} y se pasa el valor de excepción a lanzar. Esta excepción será lanzada desde el contexto actual suspendido del generador, como si en vez del estado suspendido actualmente de `yield` se tuviera una sentencia `throw valor`.
 
 Si la excepción no es atrapada dentro del generador, se propagará a la invocación de `throw()`, y las siguientes llamadas a `next()` tendrán a la propiedad `done` en `verdadero`.
 
-Los generadores tienen un método {{jsxref("Global_Objects/Generador/return","return(valor)")}} que regresa el valor enviado y finalizan al generador.
+Los generadores tienen un método {{jsxref("Generador.return","return(valor)")}} que regresa el valor enviado y finalizan al generador.
 
 {{PreviousNext("conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain", "Web/JavaScript/Guide/Meta_programming")}}
