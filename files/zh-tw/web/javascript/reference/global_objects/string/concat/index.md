@@ -44,7 +44,7 @@ concat(str1, str2, ... , strN)
 
 ## 效能
 
-對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} 來達成，
+對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators", "assignment operators", "Assignment_operators", 1)}} 來達成，
 像是 `+` 及 `+=`，而不是使用 `concat()` 方法。
 
 ## 範例
@@ -79,4 +79,4 @@ let greetList = ["Hello", " ", "Venkat", "!"];
 ## 參見
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxref("Operators", "Assignment operators", "Assignment_operators", 1)}}

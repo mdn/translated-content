@@ -261,18 +261,18 @@ slug: Web/JavaScript/Reference
 
 ### 賦值運算子
 
-- {{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{JSxRef("Operators", "=", "#Assignment")}}
+- {{JSxRef("Operators", "*=", "#Multiplication_assignment")}}
+- {{JSxRef("Operators", "/=", "#Division_assignment")}}
+- {{JSxRef("Operators", "%=", "#Remainder_assignment")}}
+- {{JSxRef("Operators", "+=", "#Addition_assignment")}}
+- {{JSxRef("Operators", "-=", "#Subtraction_assignment")}}
+- {{JSxRef("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{JSxRef("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{JSxRef("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{JSxRef("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{JSxRef("Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{JSxRef("Operators", "|=", "#Bitwise_OR_assignment")}}
 - {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
 - {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
 

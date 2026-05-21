@@ -176,29 +176,29 @@ slug: Web/JavaScript/Reference/Operators
 
 賦值運算子會根據其右側運算元的數值處理後賦值給其左側的運算元。
 
-- {{jsxref("Operators/Assignment_Operators", "=", "#Assignment")}}
+- {{jsxref("Operators", "=", "#Assignment")}}
   - : 賦值運算子。
-- {{jsxref("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
+- {{jsxref("Operators", "*=", "#Multiplication_assignment")}}
   - : 乘法賦值。
-- {{jsxref("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
+- {{jsxref("Operators", "/=", "#Division_assignment")}}
   - : 除法賦值。
-- {{jsxref("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
+- {{jsxref("Operators", "%=", "#Remainder_assignment")}}
   - : 餘數賦值。
-- {{jsxref("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
+- {{jsxref("Operators", "+=", "#Addition_assignment")}}
   - : 加法賦值。
-- {{jsxref("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
+- {{jsxref("Operators", "-=", "#Subtraction_assignment")}}
   - : 減法賦值。
-- {{jsxref("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{jsxref("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
   - : 左移賦值。
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
   - : 右移賦值。
-- {{jsxref("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{jsxref("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
   - : 無號右移賦值。
-- {{jsxref("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{jsxref("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
   - : 位元 AND 賦值。
-- {{jsxref("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{jsxref("Operators", "^=", "#Bitwise_XOR_assignment")}}
   - : 位元 XOR 賦值。
-- {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{jsxref("Operators", "|=", "#Bitwise_OR_assignment")}}
   - : 位元 OR 賦值。
 - {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
   {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
