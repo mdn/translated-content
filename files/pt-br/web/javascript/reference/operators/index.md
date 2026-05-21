@@ -33,9 +33,9 @@ Palavras-chave e expressões básicas em JavaScript.
   - : Object initializer/literal syntax.
 - {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
   - : Regular expression literal syntax.
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Array comprehensions.
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : Generator comprehensions.
 - {{jsxref("Operators/Grouping", "( )")}}
   - : Grouping operator.
@@ -208,7 +208,7 @@ An assignment operator assigns a value to its left operand based on the value of
 
 - {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function", "", 1)}}
   - : The `function` keyword can be used to define a legacy generator function inside an expression. To make the function a legacy generator, the function body should contains at least one {{jsxref("Operators/yield", "yield")}} expression.
-- {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}}
   - : The expression closure syntax is a shorthand for writing simple function.
 
 ## Especificações

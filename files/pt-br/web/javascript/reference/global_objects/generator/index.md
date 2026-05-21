@@ -89,7 +89,7 @@ console.log(it.next()); // throws StopIteration (Como o generator está fechado)
 
 ### Legacy generators
 
-- {{jsxref("Statements/Legacy_generator_function", "The legacy generator function", "", 1)}}
+- {{jsxref("Deprecated_and_obsolete_features", "The legacy generator function", "", 1)}}
 - {{jsxref("Deprecated_and_obsolete_features", "The legacy generator function expression", "", 1)}}
 - {{jsxref("StopIteration")}}
 - [The legacy Iterator protocol](/pt-BR/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
