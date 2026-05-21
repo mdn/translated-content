@@ -48,7 +48,7 @@ Object.defineProperties(obj, props);
       - : La valeur associée à la propriété. Cela peut être n'importe quelle valeur valide en JavaScript (un nombre, un objet, etc.).
         **Par défaut : {{jsxref("undefined")}}.**
     - `writable`
-      - : `true` si et seulement si la valeur associée à la propriété peut être modifiée par un {{jsxref("Operators/Opérateurs_d_affectation", "opérateur d'affectation", "", 1)}}.
+      - : `true` si et seulement si la valeur associée à la propriété peut être modifiée par un {{jsxref("Operators", "opérateur d'affectation", "Assignment_operators", 1)}}.
         **Par défaut : `false`.**
 
     Un descripteur d'accesseur pourra avoir les clés suivantes :
