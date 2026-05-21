@@ -198,62 +198,62 @@ slug: Web/JavaScript/Reference
 
 ### 遞增與遞減
 
-- {{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+- {{JSxRef("Operators", "A++", "#Increment")}}
+- {{JSxRef("Operators", "A--", "#Decrement")}}
+- {{JSxRef("Operators", "++A", "#Increment")}}
+- {{JSxRef("Operators", "--A", "#Decrement")}}
 
 ### 一元運算子
 
 - {{JSxRef("Operators/delete", "delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
-- {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
-- {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+- {{JSxRef("Operators", "+", "#Unary_plus")}}
+- {{JSxRef("Operators", "-", "#Unary_negation")}}
+- {{JSxRef("Operators", "~", "#Bitwise_NOT")}}
+- {{JSxRef("Operators", "!", "#Logical_NOT")}}
 
 ### 算術運算子
 
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+- {{JSxRef("Operators", "+", "#Addition")}}
+- {{JSxRef("Operators", "-", "#Subtraction")}}
+- {{JSxRef("Operators", "/", "#Division")}}
+- {{JSxRef("Operators", "*", "#Multiplication")}}
+- {{JSxRef("Operators", "%", "#Remainder")}}
+- {{JSxRef("Operators", "**", "#Exponentiation")}}
 
 ### 關係運算子
 
 - {{JSxRef("Operators/in", "in")}}
 - {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{JSxRef("Operators", "&lt;", "#Less_than_operator")}}
+- {{JSxRef("Operators", "&gt;", "#Greater_than_operator")}}
+- {{JSxRef("Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+- {{JSxRef("Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
 
 ### 相等運算子
 
-- {{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}
-- {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}
-- {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}
-- {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+- {{JSxRef("Operators", "==", "#Equality")}}
+- {{JSxRef("Operators", "!=", "#Inequality")}}
+- {{JSxRef("Operators", "===", "#Identity")}}
+- {{JSxRef("Operators", "!==", "#Nonidentity")}}
 
 ### 位元移位運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{JSxRef("Operators", "&lt;&lt;", "#Left_shift")}}
+- {{JSxRef("Operators", "&gt;&gt;", "#Right_shift")}}
+- {{JSxRef("Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
 
 ### 二元位元運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
-- {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
-- {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+- {{JSxRef("Operators", "&amp;", "#Bitwise_AND")}}
+- {{JSxRef("Operators", "|", "#Bitwise_OR")}}
+- {{JSxRef("Operators", "^", "#Bitwise_XOR")}}
 
 ### 二元邏輯運算子
 
-- {{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
-- {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}
+- {{JSxRef("Operators", "&amp;&amp;", "#Logical_AND")}}
+- {{JSxRef("Operators", "||", "#Logical_OR")}}
 
 ### 條件(三元)運算子
 
@@ -273,8 +273,8 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
 - {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
 - {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{JSxRef("Operators/Destructuring", "[a, b] = [1, 2]")}}
+- {{JSxRef("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
 
 ## 函數
 

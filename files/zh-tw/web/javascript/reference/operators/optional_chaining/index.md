@@ -162,7 +162,7 @@ let duration = vacations.trip?.getTime?.();
 
 ### 使用空值合併運算子
 
-在可選串連後可以使用{{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：
+在可選串連後可以使用{{JSxRef("Operators/Nullish_coalescing", "空值合併運算子", '', 1)}}來編配預設值，如果無法在屬性串連中取得值：
 
 ```js
 let customer = {
@@ -183,5 +183,5 @@ console.log(customerCity); // Unknown city
 
 ## 參見
 
-- {{JSxRef("Operators/Nullish_Coalescing_Operator", "空值合併運算子", '', 1)}}
+- {{JSxRef("Operators/Nullish_coalescing", "空值合併運算子", '', 1)}}
 - [TC39 proposals](https://github.com/tc39/proposals)

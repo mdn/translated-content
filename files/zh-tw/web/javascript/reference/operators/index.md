@@ -51,20 +51,20 @@ slug: Web/JavaScript/Reference/Operators
   - : 在建構子中 `new.target` 可以參考被 {{jsxref("Operators/new", "new")}} 呼叫的建構子 (Constructor) 。
 - {{jsxref("Operators/super", "super")}}
   - : `super` 關鍵字可以呼叫父建構子 (Constructor) 。
-- {{jsxref("Operators/Spread_operator", "...obj")}}
+- {{jsxref("Operators/Spread_syntax", "...obj")}}
   - : The spread operator allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) are expected.
 
 ### 遞增與遞減
 
 字尾/字首遞增與字尾/字首遞減運算子。
 
-- {{jsxref("Operators/Arithmetic_Operators", "A++", "#Increment")}}
+- {{jsxref("Operators", "A++", "#Increment")}}
   - : 字尾遞增運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
+- {{jsxref("Operators", "A--", "#Decrement")}}
   - : 字尾遞減運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "++A", "#Increment")}}
+- {{jsxref("Operators", "++A", "#Increment")}}
   - : 字首遞增運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+- {{jsxref("Operators", "--A", "#Decrement")}}
   - : 字首遞減運算子。
 
 ### 一元運算子
@@ -77,30 +77,30 @@ slug: Web/JavaScript/Reference/Operators
   - : `void` 運算子可放棄一個運算式的回傳值。
 - {{jsxref("Operators/typeof", "typeof")}}
   - : `typeof` 運算子可以判斷一個指定物件的型態。
-- {{jsxref("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
+- {{jsxref("Operators", "+", "#Unary_plus")}}
   - : 一元正運算子可以轉換其運算元成為數值 (Number) 型態。
-- {{jsxref("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
+- {{jsxref("Operators", "-", "#Unary_negation")}}
   - : 一元負運算子可以轉換其運算元成為數值 (Number) 型態並轉為負值。
-- {{jsxref("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
+- {{jsxref("Operators", "~", "#Bitwise_NOT")}}
   - : 元位 NOT 運算子。
-- {{jsxref("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+- {{jsxref("Operators", "!", "#Logical_NOT")}}
   - : 邏輯 NOT 運算子。
 
 ### 算術運算子
 
 算術運算子會要用到數值 (不論是字面值或者變數) 做為運算元，並且會回傳單一數值結果。
 
-- {{jsxref("Operators/Arithmetic_Operators", "+", "#Addition")}}
+- {{jsxref("Operators", "+", "#Addition")}}
   - : 加法運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
+- {{jsxref("Operators", "-", "#Subtraction")}}
   - : 減法運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "/", "#Division")}}
+- {{jsxref("Operators", "/", "#Division")}}
   - : 除法運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
+- {{jsxref("Operators", "*", "#Multiplication")}}
   - : 乘法運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "%", "#Remainder")}}
+- {{jsxref("Operators", "%", "#Remainder")}}
   - : 餘數運算子。
-- {{jsxref("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+- {{jsxref("Operators", "**", "#Exponentiation")}}
   - : 指數運算子。
 
 ### 關係運算子
@@ -111,13 +111,13 @@ slug: Web/JavaScript/Reference/Operators
   - : `in` 運算子會判斷一個物件是否有指定的屬性。
 - {{jsxref("Operators/instanceof", "instanceof")}}
   - : `instanceof` 運算子會判斷一個物件是否為另一個物件的實例。
-- {{jsxref("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
+- {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
   - : 小於運算子。
-- {{jsxref("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
+- {{jsxref("Operators", "&gt;", "#Greater_than_operator")}}
   - : 大於運算子。
-- {{jsxref("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+- {{jsxref("Operators", "&lt;=", "#Less_than_or_equal_operator")}}
   - : 小於等於運算子。
-- {{jsxref("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{jsxref("Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
   - : 大於等於運算子。
 
 > [!NOTE]
@@ -127,44 +127,44 @@ slug: Web/JavaScript/Reference/Operators
 
 執行相對運算子後的結果為比較結果是否成立的 `Boolean` 值。
 
-- {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}}
+- {{jsxref("Operators", "==", "#Equality")}}
   - : 相等運算子。
-- {{jsxref("Operators/Comparison_Operators", "!=", "#Inequality")}}
+- {{jsxref("Operators", "!=", "#Inequality")}}
   - : 不相等運算子。
-- {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}
+- {{jsxref("Operators", "===", "#Identity")}}
   - : 恆等運算子。
-- {{jsxref("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+- {{jsxref("Operators", "!==", "#Nonidentity")}}
   - : 不恆等運算子。
 
 ### 位元移位運算子
 
 用來位移運算元所有位元的運算。
 
-- {{jsxref("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
+- {{jsxref("Operators", "&lt;&lt;", "#Left_shift")}}
   - : 左移位元運算子。
-- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
+- {{jsxref("Operators", "&gt;&gt;", "#Right_shift")}}
   - : 右移位元運算子。
-- {{jsxref("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{jsxref("Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
   - : 右移無號位元運算子。
 
 ### 二元位元運算子
 
 位元運算子將其運算元當做是 32 位元 (32 個零與一) 的數值處理並回傳標準 JavaScript 數值。
 
-- {{jsxref("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
+- {{jsxref("Operators", "&amp;", "#Bitwise_AND")}}
   - : 位元 AND。
-- {{jsxref("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
+- {{jsxref("Operators", "|", "#Bitwise_OR")}}
   - : 位元 OR。
-- {{jsxref("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+- {{jsxref("Operators", "^", "#Bitwise_XOR")}}
   - : 位元 XOR。
 
 ### 二元邏輯運算子
 
 邏輯運算子一般用在處理布林 (邏輯) 值，它們存在的地方會回傳一個布林 (Boolean) 值。
 
-- {{jsxref("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
+- {{jsxref("Operators", "&amp;&amp;", "#Logical_AND")}}
   - : 邏輯 AND。
-- {{jsxref("Operators/Logical_Operators", "||", "#Logical_OR")}}
+- {{jsxref("Operators", "||", "#Logical_OR")}}
   - : 邏輯 OR。
 
 ### 條件 (三元) 運算子
@@ -200,8 +200,8 @@ slug: Web/JavaScript/Reference/Operators
   - : 位元 XOR 賦值。
 - {{jsxref("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
   - : 位元 OR 賦值。
-- {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-  {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
+  {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
   - : 解構讓你可使用如陣列或物件書寫格式來賦值給陣列或物件的屬性。
 
 ### 逗號運算子
@@ -211,7 +211,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 非標準功能
 
-- {{non-standard_inline}} {{jsxref("Operators/Legacy_generator_function", "Legacy generator function", "", 1)}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function", "", 1)}}
   - : The `function` keyword can be used to define a legacy generator function inside an expression. To make the function a legacy generator, the function body should contains at least one {{jsxref("Operators/yield", "yield")}} expression.
 - {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
   - : The expression closure syntax is a shorthand for writing simple function.
