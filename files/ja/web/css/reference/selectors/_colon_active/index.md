@@ -1,9 +1,8 @@
 ---
 title: :active
 slug: Web/CSS/Reference/Selectors/:active
-original_slug: Web/CSS/:active
 l10n:
-  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **`:active`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、ユーザーによってアクティブ化されている要素（ボタンなど）を表します。マウスを使用する場合は、「アクティブ化」とはふつう、主ボタンを押し下げたときに始まります。
@@ -83,7 +82,7 @@ a:active {
 
 /* アクティブな段落 */
 p:active {
-  background: #eee;
+  background: #eeeeee;
 }
 ```
 

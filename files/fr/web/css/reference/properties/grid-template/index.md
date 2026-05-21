@@ -1,8 +1,9 @@
 ---
-title: grid-template
+title: Propriété CSS `grid-template`
+short-title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`grid-template`** définit les {{Glossary("grid column", "colonnes de grille")}}, les {{Glossary("grid_row", "lignes de grille")}} et les {{Glossary("grid areas", "zones de grille")}}.

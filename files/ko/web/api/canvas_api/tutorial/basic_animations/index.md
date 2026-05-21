@@ -361,4 +361,4 @@ function draw() {
 - [JavaScript Daemons Management](/ko/docs/JavaScript/Timers/Daemons)
 - [HTMLCanvasElement](/ko/docs/Web/API/HTMLCanvasElement)
 
-{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}
+{{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
-[一つ前の記事](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からありすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。
+[一つ前の記事](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。
 
 <table>
   <tbody>
@@ -353,7 +353,7 @@ http://foo.com?pos.x=123&pos.y=456
     <tr>
       <td>
         <code
-          ><a href="/ja/docs/Web/HTML/Global_attributes/autofocus"
+          ><a href="/ja/docs/Web/HTML/Reference/Global_attributes/autofocus"
             >autofocus</a
           ></code
         >
@@ -376,7 +376,7 @@ http://foo.com?pos.x=123&pos.y=456
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form">form</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form">form</a></code>
       </td>
       <td></td>
       <td>
@@ -385,14 +385,14 @@ http://foo.com?pos.x=123&pos.y=456
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#name">name</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#name">name</a></code>
       </td>
       <td></td>
       <td>要素の名前。これはフォームデータとともに送信されます。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#value">value</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#value">value</a></code>
       </td>
       <td></td>
       <td>要素の初期値です。</td>

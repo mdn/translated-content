@@ -1,14 +1,16 @@
 ---
 title: :-moz-broken
 slug: Web/CSS/Reference/Selectors/:-moz-broken
+l10n:
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
-**`:-moz-broken`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)，用于匹配表示损坏图像链接的元素。
+**`:-moz-broken`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Reference/Selectors/Pseudo-classes)是一个用于匹配表示损坏图像链接的元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Reference/Mozilla_extensions)。
 
 > [!NOTE]
-> 这个选择器主要是为主题开发人员设计。
+> 这个选择器主要是供主题开发者使用的。
 
 ## 语法
 
@@ -23,7 +25,7 @@ slug: Web/CSS/Reference/Selectors/:-moz-broken
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="这个图像损坏了 :-(" />
+<img src="broken.jpg" alt="这张图片无法显示。:-(" />
 ```
 
 ### CSS

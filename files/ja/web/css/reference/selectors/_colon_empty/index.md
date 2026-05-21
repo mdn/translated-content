@@ -1,9 +1,9 @@
 ---
-title: :empty
+title: CSS `:empty` 擬似クラス
+short-title: :empty
 slug: Web/CSS/Reference/Selectors/:empty
-original_slug: Web/CSS/:empty
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 **`:empty`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Reference/Selectors/Pseudo-classes)で、子を持たない要素を表します。子とは要素のノードまたは文字列（ホワイトスペースを含む）です。コメント、処理指示、 CSS の {{cssxref("content")}} は要素が空であるかどうかの判断には影響しません。
@@ -45,7 +45,7 @@ div:empty {
 
 インタラクティブコントロールのアクセシブル名を提供するテキストは、画面から視覚的に削除するものの、支援技術によって解析可能なままにする[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用して非表示にすることができます。これは、アイコンのみによってその目的を伝えるボタンに一般的に使用されます。
 
-- [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
+- [What is an accessible name? | Vispero](https://vispero.com/resources/what-is-an-accessible-name/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
 - [MDN WCAG を理解する、ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.4_—_ナビゲート可能_ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する)
 - [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)

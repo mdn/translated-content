@@ -1,8 +1,9 @@
 ---
-title: "<title> : l'élément de titre du document"
+title: "Élément HTML `<title>` : l'élément de titre du document"
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 l10n:
-  sourceCommit: 96a73163513476fe49bfba695acedb7622135354
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<title>`** définit le titre du document (qui est affiché dans la barre de titre du {{Glossary("Browser", "navigateur")}} ou dans l'onglet de la page). Il ne contient que du texte&nbsp;; les balises HTML présentes dans l'élément, le cas échéant, sont également traitées comme du texte brut.

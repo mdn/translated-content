@@ -26,7 +26,7 @@ L'évènement `mouseup` peut être vu comme le contrepoint de l'évènement [`mo
     <tr>
       <th scope="row">Propriété pour la gestion d'évènement</th>
       <td>
-        <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseup"><code>onmouseup</code></a>
+        <a href="/fr/docs/Web/API/Element/mouseup_event"><code>onmouseup</code></a>
       </td>
     </tr>
   </tbody>

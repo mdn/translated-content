@@ -1,8 +1,9 @@
 ---
-title: break-inside
+title: Propriété CSS `break-inside`
+short-title: break-inside
 slug: Web/CSS/Reference/Properties/break-inside
 l10n:
-  sourceCommit: 18161d1b77cdfdc739a4f05be695961924b4c173
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`break-inside`** définit la façon dont les sauts de page, de colonne ou de région doivent se comporter à l'intérieur d'une boîte générée. Si aucune boîte n'est générée, la propriété est ignorée.

@@ -1,8 +1,9 @@
 ---
-title: background-size
+title: Propriété CSS `background-size`
+short-title: background-size
 slug: Web/CSS/Reference/Properties/background-size
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille de l'image d'arrière-plan de l'élément.

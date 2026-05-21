@@ -2,10 +2,8 @@
 title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 l10n:
-  sourceCommit: 8c4bb8752201d9eee9ea7c189774db0f73f4efa1
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "unexpected token" は、パーサーが指定の位置で認識できるトークンを読み取れず、プログラムの構造を理解できない場合に発生します。単純なタイプミスかもしれません。
 
@@ -63,8 +61,8 @@ for (let i = 0; i < 5; ++i) {
 
 ```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
-if (n > upperBound) || (n < lowerBound) { // Missing parentheses here!
-    throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
+if (n > upperBound) || (n < lowerBound) { // ここで括弧を忘れている
+    throw new Error(`Number ${n} が ${upperBound} より大きいか ${lowerBound} より小さい`);
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
   } else {
@@ -79,7 +77,7 @@ if (n > upperBound) || (n < lowerBound) { // Missing parentheses here!
 function round(n, upperBound, lowerBound) {
   if ((n > upperBound) || (n < lowerBound)) {
     throw new Error(
-      `Number ${n} is more than ${upperBound} or less than ${lowerBound}`,
+      `Number ${n} が ${upperBound} より大きいか ${lowerBound} より小さい`,
     );
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;

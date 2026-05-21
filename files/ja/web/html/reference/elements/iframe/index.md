@@ -1,5 +1,6 @@
 ---
-title: "<iframe>: インラインフレーム要素"
+title: HTML `<iframe>` インラインフレーム要素
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
@@ -47,15 +48,15 @@ iframe {
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
 
     > [!NOTE]
-    > この属性は古い属性とみなされており、 `allow="fullscreen"` として再定義されました。
+    > この属性は古い属性とみなされており、 `allow="fullscreen *"` として再定義されました。
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
-  - : 異なるオリジンの `<iframe>` で [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
+  - : 異なるオリジンの `<iframe>` で[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
 
     > [!NOTE]
-    > この属性は古い属性とみなされており、 `allow="payment"` として再定義されました。
+    > この属性は古い属性とみなされており、 `allow="payment *"` として再定義されました。
 
-- `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
+- `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
   - : 論理属性で、表示されている場合、現在のユーザーの選択されたトピックを `<iframe>` のソースのリクエストと共に送信することを指定します。詳細は、[トピック API の使用](/ja/docs/Web/API/Topics_API/Using)を参照してください。
 
 - `credentialless` {{Experimental_Inline}}
@@ -75,12 +76,14 @@ iframe {
         その目的は、ブラウザーがフレームを使用すると合理的に確信できるまで、フレームの取得に必要なネットワークとストレージの帯域幅を使用しないようにすることです。
         これにより、ほとんどの典型的な使用用途において、特に初期ページの読み込み時点が縮小され、パフォーマンスとコストが改善されます。
 
-        > [!NOTE]
-        > JavaScript が有効な場合のみ、読み込みが遅延されます。
-        > これはトラッキング対策です。
+        読み込みの遅延は、JavaScript が有効な場合にのみ行われます。これはトラッキング対策の一環です。なぜなら、スクリプトが無効な状態でユーザーエージェントが遅延読み込みに対応していた場合、サイト側はページのマークアップ内に iframe を戦略的に配置することで、サーバーが iframe のリクエスト数やタイミングを追跡できるようにし、セッション全体を通じてユーザーのスクロール位置のおおよその位置を追跡できてしまう可能性があるからです。
 
 - `name`
   - : 埋め込み閲覧コンテキストのターゲットの名前です。 {{HTMLElement("a")}}, {{HTMLElement("form")}}, {{HTMLElement("base")}} 要素における `target` 属性の値、 {{HTMLElement("input")}} や {{HTMLElement("button")}} 要素における `formtarget` 属性の値、 {{domxref("Window.open()","window.open()")}} メソッドの `windowName` 引数の値として使用することができます。さらに、この名前は {{domxref("Window")}} および {{domxref("Document")}} プロパティとなり、埋め込まれたウィンドウや要素自身への参照が入ります。
+
+- `privateToken` {{experimental_inline}}
+  - : [プライベート状態トークン](/ja/docs/Web/API/Private_State_Token_API/Using)操作を表すオプションオブジェクトの文字列表現が含まれています。このオブジェクトは、`RequestInit` 辞書の [`privateToken`](/ja/docs/Web/API/RequestInit#privatetoken) プロパティと同じ構造を持っています。この属性を含む iframe は、埋め込まれたコンテンツが読み込まれた際に、トークンの発行や償還などの操作を開始することができます。
+
 - `referrerpolicy`
   - : フレームのリソースにアクセスする際にどの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
     - `no-referrer`
@@ -120,6 +123,8 @@ iframe {
       - : 埋め込み側が、 iframe が[プレゼンテーションセッション](/ja/docs/Web/API/PresentationRequest)を開始できるかどうかを制御することを許可します。
     - `allow-same-origin`
       - : このトークンが使用されていない場合、リソースは{{Glossary("same-origin policy", "同一オリジンポリシー")}}に常に失敗する特別なオリジンからのものとして扱われます（潜在的に[データストレージやクッキー](/ja/docs/Web/Security/Defenses/Same-origin_policy#オリジンをまたいだデータストレージアクセス)へのアクセスや一部の JavaScript API の使用を阻止することがあります）。
+        > [!NOTE]
+        > `allow-same-origin` が存在する場合、たとえ `allow-scripts` が設定されていなくても、同一オリジンの親文書は iframe の DOM にアクセスし、操作を行うことができます。`allow-scripts` トークンは、埋め込まれた閲覧コンテキスト内でのスクリプトの実行のみを制御するものであり、親文書からの DOM へのアクセスには影響しません。
     - `allow-scripts`
       - : ページがスクリプトを実行することを許可します（ただし、ポップアップウィンドウは作成しません）。このキーワードが使用されない場合、この操作は許可されません。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
@@ -185,7 +190,22 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 スクリプトは、フレームの内側からは {{domxref("window.parent")}} で親ウィンドウを参照できます。
 
-フレームの内容にアクセスするスクリプトは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)に従います。別なオリジンから読み込まれたスクリプトは、フレーム内のスクリプトがフレームの親にアクセスする場合を含め、他の `window` オブジェクトのほとんどのプロパティにアクセスできません。オリジンをまたいだやりとりは {{domxref("Window.postMessage()")}} を使用して実現できます。
+スクリプトによるフレームのコンテンツへのアクセスは、[同一オリジンポリシー](/ja/docs/Web/Security/Defenses/Same-origin_policy)の対象となります。
+スクリプトが異なるオリジンから読み込まれた場合、他の `window` オブジェクトのほとんどのプロパティにアクセスすることはできません。これには、フレーム内のスクリプトがフレームの親にアクセスする場合も含まれます。
+オリジンを越える通信は、{{domxref("Window.postMessage()")}} を使用して実現できます。
+
+### 別オリジンのフレームの最上位ナビゲーション
+
+同一オリジンのフレームで実行されているスクリプトは、{{domxref("Window.top")}} プロパティにアクセスし、{{domxref("Window.location","window.top.location")}} を設定することで、最上位のページを新しい場所へリダイレクトすることができます。
+この動作は「最上位ナビゲーション」と呼ばれています。
+
+別オリジンのフレームが `top` を使用して最上位のページをリダイレクトすることができるのは、そのフレームに{{glossary("sticky activation", "持続的な有効化")}}が設定されている場合に限られます。
+最上位ナビゲーションがブロックされている場合、ブラウザーはリダイレクトの許可をユーザーに求めるか、開発者コンソールにエラーを報告する（あるいはその両方）ことがあります。
+このブラウザーによる制限は、フレームバスター対策と呼ばれます。
+つまり、別オリジンのフレームは最上位のページを即座にリダイレクトすることはできず、ユーザーがそのフレームを操作したことがあったり、リダイレクトの権限を与えたりしている必要があります。
+
+サンドボックス化されたフレームは、`sandbox` 属性の値が [`allow-top-navigation`](#allow-top-navigation) または [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation) に設定されていない限り、すべての最上位ナビゲーションをブロックします。
+なお、最上位ナビゲーションの権限は継承されるため、ネストされたフレームが最上位ナビゲーションを実行できるのは、その親フレームが同時にその権限を持つ場合に限られます。
 
 ## 位置指定と表示倍率
 

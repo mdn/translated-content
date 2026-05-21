@@ -1,11 +1,10 @@
 ---
-title: animation-range-start
+title: Propriété CSS `animation-range-start`
+short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-range-start`** définit le point sur la chronologie où une animation doit commencer.
 
@@ -62,9 +61,9 @@ La propriété `animation-range-start`, ainsi que la propriété {{CSSxRef("anim
 
 ## Exemples
 
-### Créer une chronologie de progression de vue pilotée par le défilement avec un début de plage
+### Créer une chronologie de progression pilotée par le défilement avec un début de plage
 
-Dans cet exemple, la propriété `animation-range-start` est appliquée à un élément animé via une chronologie de progression de défilement. Cela permet à l'animation de commencer bien avant que l'élément n'entre dans la zone de défilement.
+Dans cet exemple, la propriété `animation-range-start` est appliquée à un élément animé par une chronologie de progression de défilement. Cela permet à l'animation de commencer bien avant que l'élément n'entre dans la zone de défilement.
 
 #### HTML
 
@@ -185,7 +184,7 @@ p {
 
 Faites défiler pour voir l'élément s'animer. Remarquez que l'élément est déjà mis à l'échelle et semi-opaque lorsqu'il entre dans la zone d'affichage. Cela s'explique par le fait que l'élément a commencé à s'animer bien avant d'entrer dans la zone d'affichage.
 
-{{EmbedLiveSample("Créer une chronologie de progression de vue pilotée par le défilement avec un début de plage", "100%", 480)}}
+{{EmbedLiveSample("Créer une chronologie de progression pilotée par le défilement avec un début de plage", "100%", 480)}}
 
 ## Spécifications
 
@@ -203,5 +202,6 @@ Faites défiler pour voir l'élément s'animer. Remarquez que l'élément est d�
 - La propriété {{CSSxRef("view-timeline-inset")}}
 - La propriété `rangeStart` de la méthode {{DOMxRef("Element.animate()")}}
 - [Chronologies d'animation pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Comprendre les noms de plage de chronologie](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - Le module [d'animations pilotées par le défilement CSS](/fr/docs/Web/CSS/Guides/Scroll-driven_animations)
 - [Visualiseur de plage de chronologie de vue <sup>(angl.)</sup>](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

@@ -16,9 +16,9 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías tener un conocimiento
-        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">básico de HTML</a>
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">básico de HTML</a>
         y cómo
-        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn_web_development/Core/Structuring_content/HTML_images"
           >agregar imágenes estáticas a un sitio web</a
         >.
       </td>
@@ -29,7 +29,7 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
       </th>
       <td>
         Aprende a usar características como
-        <a href="/es/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> y el elemento
+        <a href="/es/docs/Web/HTML/Reference/Elements/img#srcset"><code>srcset</code></a> y el elemento
         {{htmlelement("picture")}} para implementar soluciones de
         imágenes adaptables a sitios web.
       </td>

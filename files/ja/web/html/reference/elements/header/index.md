@@ -163,22 +163,22 @@ header > time {
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Complementary_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Main_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Navigation_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Region_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
         > ロールの要素の子孫である場合は

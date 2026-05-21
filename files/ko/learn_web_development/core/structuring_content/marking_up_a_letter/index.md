@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}
 
 우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 이 페이지에서 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 이 장에서는 하이퍼링크와 HTML {{htmlelement("head")}} 요소뿐만이 아니라, 주어진 글을 HTML 기본/혹은 고급 텍스트 포맷팅 방식에 맞춰 다듬는 연습을 할 예정입니다.
 
@@ -17,23 +17,23 @@ l10n:
       <td>
         <p>
           이 장에 들어서기에 앞서 필요한 사전 지식에는
-          <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          <a href="/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
             >HTML 시작하기</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata"
             >head 안에는 무엇이 있나? HTML 메타 데이터</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
             >HTML 텍스트 기본</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links"
             >하이퍼링크 만들기</a
           >,
           <a
-            href="/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+            href="/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features"
             >텍스트 조작 고급기법</a
           >
           등이 있습니다.
@@ -109,4 +109,4 @@ l10n:
    - 평가받고 싶거나 도움이 필요한 경우에 대한 위의 1단계에서 제시한 것 처럼, 온라인 공유 가능 편집기 링크가 있어야합니다. 코드를 볼 수 없다면 코딩에 관한 문제가 있는 사람을 도와주기가 매우 어렵기 때문입니다.
    - 링크는 실제 프로젝트 또는 평가 페이지로 연결되는 링크로, 도움을 받고자 하는 문제를 확인할 수 있습니다.
 
-{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content", "Learn/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "conflicting/Learn_web_development/Core/Structuring_content")}}

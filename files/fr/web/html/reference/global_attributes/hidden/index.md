@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : hidden"
+title: "Attribut HTML universel : `hidden`"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 l10n:
-  sourceCommit: 032373c0ec106ec2d57f6bd14e74e2cc9191907a
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`hidden`** est un attribut {{Glossary("Enumerated", "énuméré")}} qui indique que le navigateur ne doit pas rendre le contenu de l'élément. Par exemple, il peut être utilisé pour masquer des éléments de la page qui ne peuvent pas être utilisés tant que le processus de connexion n'est pas terminé.

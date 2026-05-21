@@ -61,7 +61,7 @@ S'il a plusieurs valeurs, `dy` définit un décalage sur l'axe y individuellemen
       <td>
         Liste de
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -86,7 +86,7 @@ Pour {{SVGElement('feDropShadow')}}, `dy` définit le décalage x de l'ombre por
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -111,7 +111,7 @@ Pour {{SVGElement('feOffset')}}, `dy` définit le décalage x de l'élément sou
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -139,7 +139,7 @@ Pour {{SVGElement('glyphRef')}}, `dy` définit le décalage x du glyphe, dans le
       <th scope="row">Valeur</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -167,7 +167,7 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
       <td>
         Liste de
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -238,7 +238,7 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
       <td>
         Liste de
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
         >
       </td>
     </tr>
@@ -266,7 +266,7 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
       <td>
         Liste de
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+          ><a href="/docs/Web/SVG/Guides/Content_type#Length">&#x3C;length></a></strong
         >
       </td>
     </tr>

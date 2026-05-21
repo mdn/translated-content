@@ -12,7 +12,7 @@ En solicitudes (tales como {{HTTPMethod("POST")}} o {{HTTPMethod("PUT")}}), el c
 
 | Header type                                                               | {{Glossary("Entity header")}} |
 | ------------------------------------------------------------------------- | ----------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                            |
+| {{Glossary("Forbidden request header")}}                                  | no                            |
 | {{Glossary("Simple response header", "CORS-safelisted response-header")}} | si                            |
 
 ## Sintaxis

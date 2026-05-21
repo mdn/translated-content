@@ -1,15 +1,14 @@
 ---
-title: Firefox 50 for developers
+title: Firefox 50 開発者向けリリースノート
 short-title: Firefox 50
 slug: Mozilla/Firefox/Releases/50
 l10n:
-  sourceCommit: 0cc63ce1d7f43eb98746a908a9aba68ef6a36f7b
+  sourceCommit: 83f4e64da466670c3700110da364546253eae127
 ---
 
-[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください](https://www.firefox.com/en-US/channel/desktop/developer/)。
-Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
+[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.firefox.com/ja/channel/desktop/developer/) Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
-## ウェブ開発者向けの変更点一覧
+## ウェブ開発者向けの変更点
 
 ### HTML
 

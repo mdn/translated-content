@@ -43,7 +43,7 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 - [Web Audio API](/ja/docs/Web/API/Web_Audio_API) をサポートしました。以前は不完全な実装を、設定のもとで使用できました ([Firefox バグ 779297](https://bugzil.la/779297))。
 - Windows の IME に関するキーの一部を `KeyboardEvent.key` でサポートしました ([Firefox バグ 865565](https://bugzil.la/865565))。詳しくは[キー名の表](/ja/docs/Web/API/KeyboardEvent#key_names_and_char_values)をご覧ください。
 - Metro 版 Firefox が、デスクトップ版と同じ方法でキーイベントを発生させるようになりました ([Firefox バグ 843236](https://bugzil.la/843236))。
-- 前の `keydown` イベントの `preventDefault()` が呼び出された場合は`keypress` イベントが発生しないようになりました ([Firefox バグ 501496](https://bugzil.la/501496))。詳しくは [`keydown` イベントのドキュメント](</ja/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event> "Web/Reference/Events/keydown#preventDefault()_of_keydown_event")をご覧ください。
+- 前の `keydown` イベントの `preventDefault()` が呼び出された場合は`keypress` イベントが発生しないようになりました ([Firefox バグ 501496](https://bugzil.la/501496))。詳しくは [`keydown` イベントのドキュメント](</ja/docs/Web/API/Element/keydown_event#preventDefault()_of_keydown_event> "Web/Reference/Events/keydown#preventDefault()_of_keydown_event")をご覧ください。
 - `Future` インターフェイスの名称を `Promise` に変更しました ([Firefox バグ 884279](https://bugzil.la/884279))。
 - {{domxref("HTMLIFrameElement")}} インターフェイスで `srcDoc`プロパティをサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できるプロパティです ([Firefox バグ 802895](https://bugzil.la/802895))。
 - {{domxref("HTMLTableElement")}} インターフェイスで `createTBody()` メソッドをサポートしました。これは、`createTBody()` の取得を可能にします ([Firefox バグ 813034](https://bugzil.la/813034))。

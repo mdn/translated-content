@@ -32,12 +32,12 @@ l10n:
 >
 > - **title**
 >   - : El valor de `title` se muestra en la parte superior de la página. El formato del título es _NombreDeLaPropiedad_.
->     Por ejemplo, la propiedad [`background-color`](/es/docs/Web/CSS/background-color) tiene un título de _background-color_.
+>     Por ejemplo, la propiedad [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) tiene un título de _background-color_.
 > - **slug**
 >   - : El valor de `slug` es el final de la ruta URL después de `https://developer.mozilla.org/es/docs/`. Esto se formateará como `Web/CSS/NombreDeLaPropiedad`.
->     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debería usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
+>     Por ejemplo, el slug para la propiedad [`background-color`](/es/docs/Web/CSS/Reference/Properties/background-color) es `Web/CSS/background-color`. Para un componente de varias palabras como `Getting_started` en un slug, el slug debería usar un guión bajo como en `/es/docs/Learn/HTML/Getting_started`.
 > - **page-type**
->   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/animation-delay) es `css-property`.
+>   - : El valor de `page-type` para las propiedades CSS es `css-property`. Para una propiedad CSS abreviada, el valor es `css-shorthand-property`. Por ejemplo, el valor de `page-type` para la propiedad [animation](/es/docs/Web/CSS/Reference/Properties/animation) es `css-shorthand-property` porque es una propiedad abreviada, mientras que el valor de `page-type` para la propiedad [animation-delay](/es/docs/Web/CSS/Reference/Properties/animation-delay) es `css-property`.
 > - **status**
 >   - : Si corresponde, el valor de la clave de tecnología `status` puede ser [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) y/o **non-standard** (si no está en una pista de estándares).
 > - **browser-compat**
@@ -85,7 +85,7 @@ Esta sección es para ejemplos interactivos agregados usando la macro `\{{EmbedI
 
 ## Propiedades constituyentes
 
-Agrega esta sección solo para propiedades abreviadas, como [animation](/es/docs/Web/CSS/animation), para listar todas las propiedades con descripción completa relacionadas.
+Agrega esta sección solo para propiedades abreviadas, como [animation](/es/docs/Web/CSS/Reference/Properties/animation), para listar todas las propiedades con descripción completa relacionadas.
 
 ## Sintaxis
 

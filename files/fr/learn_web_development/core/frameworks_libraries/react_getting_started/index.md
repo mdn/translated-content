@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 Dans cet article, nous aurons un premier contact avec React. Nous découvrirons quelques détails sur son contexte et ses cas d'utilisation, effectuerons une configuration basique des outils React sur notre ordinateur local, créerons une application pour démarrer simplement, apprenant au passage les bases du fonctionnement de React.
 
@@ -14,12 +14,12 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Familiarité avec les langages <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>, et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>,
+          Familiarité avec les langages <a href="/fr/docs/Learn_web_development/Core/Structuring_content">HTML</a>,
+          <a href="/fr/docs/Learn_web_development/Core/Styling_basics">CSS</a>, et
+          <a href="/fr/docs/Learn_web_development/Core/Scripting">JavaScript</a>,
           connaissance de la
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
             >ligne de commande/du terminal</a
           >.
         </p>
@@ -469,4 +469,4 @@ Dans React&nbsp;:
 - Certains attributs JSX sont différents des attributs HTML, afin qu'ils n'entrent pas en conflit avec les mots-clés réservés en JavaScript. Par exemple, `class` en HTML se traduit par `className` en JSX. Notez que les attributs sont en <i lang="en">camel case</i>.
 - Les props sont écrites comme des attributs à l'intérieur des appels aux composants et sont passées aux composants.
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

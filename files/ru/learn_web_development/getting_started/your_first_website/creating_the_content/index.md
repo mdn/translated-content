@@ -147,7 +147,7 @@ HTML не является языком программирования; это
 <p>Это одиночный абзац</p>
 ```
 
-Добавьте свой образец текста (вы создавали его в статье [_Каким должен быть ваш веб-сайт?_](/ru/docs/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like)) в один или несколько абзацев, расположенных прямо под элементом {{htmlelement("img")}}.
+Добавьте свой образец текста (вы создавали его в статье [_Каким должен быть ваш веб-сайт?_](/ru/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)) в один или несколько абзацев, расположенных прямо под элементом {{htmlelement("img")}}.
 
 ### Списки
 

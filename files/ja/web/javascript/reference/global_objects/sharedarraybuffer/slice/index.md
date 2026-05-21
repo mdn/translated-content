@@ -32,7 +32,7 @@ slice(start, end)
 
 ### 返値
 
-取り出した要素をが入った新しい {{jsxref("SharedArrayBuffer")}} です。
+取り出した要素が入った新しい {{jsxref("SharedArrayBuffer")}} です。
 
 ## 例
 

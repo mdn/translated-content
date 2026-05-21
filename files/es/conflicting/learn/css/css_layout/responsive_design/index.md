@@ -17,7 +17,7 @@ Los dispositivos móviles tienen características de hardware bastante diferente
 [Diseño web adaptable](/es/docs/Desarrollo_Web/Web_adaptable) es un término para un conjunto de técnicas que permiten a su sitio web adaptar su diseño según el entorno de visualización — lo más evidente, el tamaño y orientación de la pantalla — cambie. Incluye técnicas como:
 
 - diseño CSS fluido, para hacer que la página se adapte sin problemas según cambie el tamaño de la ventana del navegador y
-- el uso de [media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries) para incluir condicionalmente reglas CSS adecuadas para el [ancho](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#width) y [alto](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#height) de la pantalla.
+- el uso de [media queries](/es/docs/Web/CSS/Guides/Media_queries/Using) para incluir condicionalmente reglas CSS adecuadas para el [ancho](/es/docs/Web/CSS/Guides/Media_queries/Using#width) y [alto](/es/docs/Web/CSS/Guides/Media_queries/Using#height) de la pantalla.
 
 La [etiqueta meta viewport](/es/docs/M%C3%B3vil/Viewport_meta_tag) ordena al navegador que muestre su sitio web a la escala adecuada para el dispositivo del usuario.
 
@@ -25,13 +25,13 @@ La [etiqueta meta viewport](/es/docs/M%C3%B3vil/Viewport_meta_tag) ordena al nav
 
 Para usar una pantalla táctil necesitará trabajar con eventos [DOM Touch](/es/docs/Web/API/Touch_events). No tendrá la posibilidad de usar la pseudo-clase [CSS :hover](/es/docs/Web/CSS/%3Ahover) y tendrá que diseñar elementos interactivos como botones para respetar el hecho de que los dedos son más gordos que el puntero del ratón. Vea este artículo sobre [diseñar para pantallas táctiles](http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/).
 
-Puede usar el _media query_ [-moz-touch-enabled](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-touch-enabled) para cargar una CSS diferente en un dispositivo con pantalla táctil.
+Puede usar el _media query_ [-moz-touch-enabled](/es/docs/Web/CSS/Guides/Media_queries/Using#-moz-touch-enabled) para cargar una CSS diferente en un dispositivo con pantalla táctil.
 
 ### Optimizando imágenes
 
-Para ayudar a los usuarios cuyos dispositivos tienen un bajo o caro ancho de banda, puede optimizar las imágenes cargando sólo aquellas apropiadas para el tamaño y resolución del dispositivo. Es algo que se hace en la CSS consultando la [altura](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#height) de pantalla, [anchura](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#width) y [proporción de píxeles](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio).
+Para ayudar a los usuarios cuyos dispositivos tienen un bajo o caro ancho de banda, puede optimizar las imágenes cargando sólo aquellas apropiadas para el tamaño y resolución del dispositivo. Es algo que se hace en la CSS consultando la [altura](/es/docs/Web/CSS/Guides/Media_queries/Using#height) de pantalla, [anchura](/es/docs/Web/CSS/Guides/Media_queries/Using#width) y [proporción de píxeles](/es/docs/Web/CSS/Guides/Media_queries/Using#-moz-device-pixel-ratio).
 
-También puede hacer uso de propiedades CSS para implementar efectos visuales como [gradientes](/es/docs/Web/CSS/CSS_images/Using_CSS_gradients) y [sombras](/es/docs/Web/CSS/box-shadow) sin utilizar imágenes para ello.
+También puede hacer uso de propiedades CSS para implementar efectos visuales como [gradientes](/es/docs/Web/CSS/Guides/Images/Using_gradients) y [sombras](/es/docs/Web/CSS/Reference/Properties/box-shadow) sin utilizar imágenes para ello.
 
 ### APIs móviles
 
@@ -47,9 +47,9 @@ Para crear sitios web que funcionen aceptablemente en diferentes navegadores mó
 - Si necesita utilizar estas características, compruebe si otros navegadores implementan sus propias versiones e inclúyalas igualmente.
 - Para navegadores que no soportan estas características, ofrezca una alternativa aceptable.
 
-Por ejemplo, si establece un gradiente como fondo para cierto texto usando una propiedad prefijada por el proveedor (_vendor-prefixed_) como `-webkit-linear-gradient`, es mejor incluir las otras versiones prefijadas de la propiedad [linear-gradient](/es/docs/Web/CSS/gradient/linear-gradient) (gradiente linear). Si no lo hace, asegúrese al menos de que el fondo por defecto contrasta con el texto. Así, la página será al menos usable en un navegador al que no esté dirigida su regla `linear-gradient`.
+Por ejemplo, si establece un gradiente como fondo para cierto texto usando una propiedad prefijada por el proveedor (_vendor-prefixed_) como `-webkit-linear-gradient`, es mejor incluir las otras versiones prefijadas de la propiedad [linear-gradient](/es/docs/Web/CSS/Reference/Values/gradient/linear-gradient) (gradiente linear). Si no lo hace, asegúrese al menos de que el fondo por defecto contrasta con el texto. Así, la página será al menos usable en un navegador al que no esté dirigida su regla `linear-gradient`.
 
-Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Mozilla_Extensions), esta lista de [propiedades específicas para WebKit](/es/docs/Web/CSS/WebKit_Extensions) y la [tabla de propiedades específicas de proveedores (_vendor-specific_)](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo.
+Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Reference/Mozilla_extensions), esta lista de [propiedades específicas para WebKit](/es/docs/Web/CSS/WebKit_Extensions) y la [tabla de propiedades específicas de proveedores (_vendor-specific_)](https://peter.sh/experiments/vendor-prefixed-css-property-overview/) de Peter Beverloo.
 
 Usar herramientas como [CSS Lint](http://csslint.net/) puede ayudar a encontrar problemas como este en el código y preprocesadores como [SASS](https://sass-lang.com/) y [LESS](https://lesscss.org/) pueden ser de ayuda para crear código compatible con diferentes navegadores.
 

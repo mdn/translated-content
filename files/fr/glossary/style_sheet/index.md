@@ -1,0 +1,15 @@
+---
+title: Feuille de style
+slug: Glossary/Style_sheet
+l10n:
+  sourceCommit: 147396deabb666d5eb44589a6824433d64f2b703
+---
+
+Une **feuille de style** est un ensemble de règles CSS utilisé pour contrôler la mise en page et le style d'une page web ou d'un document. Les feuilles de style _internes_ sont disposées au sein d'un élément HTML {{HTMLElement("style")}} dans la section {{HTMLElement("head")}} du document web et les feuilles de style _externes_ sont quant à elles placées dans un fichier `.css` distinct, elles sont appliquées au document grâce à une référence au fichier dans un élément {{HTMLElement("link")}} dans l'en-tête du document, entre les balises {{HTMLElement("head")}}.
+
+On préfère utiliser des feuilles de style externes, car elles permettent de contrôler le style de plusieurs pages à partir d'un seul endroit, plutôt que d'avoir à répéter le même code CSS sur chaque page.
+
+## Voir aussi
+
+- [Premiers pas avec CSS](/fr/docs/Learn_web_development/Core/Styling_basics)
+- Les feuilles de style sur [Wikipédia](https://fr.wikipedia.org/wiki/Feuille_de_style)

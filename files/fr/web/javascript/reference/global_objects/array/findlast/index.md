@@ -3,7 +3,7 @@ title: "Array : méthode findLast()"
 short-title: findLast()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLast
 l10n:
-  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
+  sourceCommit: f9fe909466736b335491bdd866701e4b023057d0
 ---
 
 La méthode **`findLast()`** des instances de {{JSxRef("Array")}} parcourt le tableau en ordre inverse et retourne la valeur du premier élément qui satisfait la fonction de test fournie.
@@ -129,6 +129,34 @@ console.log([4, 5, 7, 8, 9, 11, 12].findLast(estPremier)); // 11
 
 > [!NOTE]
 > L'implémentation de `estPremier()` est uniquement à des fins de démonstration. Pour une application réelle, il est préférable d'utiliser un algorithme fortement mémoïsé comme le [crible d'Ératosthène](https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne) afin d'éviter les calculs répétés.
+
+### Trouver la tâche la plus récemment terminée
+
+Cet exemple illustre un cas d'utilisation pratique de `findLast()` lorsqu'on travaille avec des données ordonnées par le temps. Il trouve la tâche la plus récemment terminée dans une liste déjà triée par `timestamp`.
+
+```js
+const tasks = [
+  {
+    name: "Configuration du projet",
+    completed: true,
+    timestamp: 1609459200000,
+  },
+  { name: "Écrire des tests", completed: false, timestamp: 1609545600000 },
+  { name: "Corriger le bug #42", completed: true, timestamp: 1609632000000 },
+  {
+    name: "Déployer en pré-production",
+    completed: true,
+    timestamp: 1609718400000,
+  },
+  { name: "Revoir la PR", completed: false, timestamp: 1609804800000 },
+];
+
+const lastCompletedTask = tasks.findLast((task) => task.completed);
+
+console.log(lastCompletedTask.name); // Déployer en pré-production
+```
+
+Ceci est plus efficace que d'utiliser `find()` avec un tableau inversé, car cela évite de créer un nouveau tableau.
 
 ### Utiliser le troisième argument de `callbackFn`
 

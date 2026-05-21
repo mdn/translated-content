@@ -46,7 +46,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) est utilisé avec `type="file"` et `accept="image/*"`.
 - Les images ICO de style PNG de Windows Vista sont à présent supportée.
 - Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Reference/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/How_to/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
-- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#attr-rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
+- La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Reference/Elements/td#rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
 
 ### CSS
 
@@ -69,7 +69,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - la méthode [`Document.queryCommandSupported()`](/fr/docs/Web/API/Document/queryCommandSupported) a été implémentée.
 - L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/fr/docs/Web/API/Document_Object_Model/Events) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 - L'évènement `readystatechange` est désormais uniquement tiré sur le document, comme prévu.
-- Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9).
+- Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/Web/API/Document_Object_Model/Events#event_handler_changes_in_firefox_9).
 - Un nouveau type de réponse, "`moz-json`", a été ajouté à `XMLHttpRequest`, laissant `XMLHttpRequest` analyser automatiquement les chaînes [JSON](/fr/docs/Glossary/JSON), quand vous demandez ce type, une chaîne JSON est analysé, afin que la valeur de la propriété `response` est la résultante de l'objet JavaScript.
 - [Les évènements "progress" de `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) sont à présent correctement envoyé pour chaque bloc de données reçu, dans le passé il était possible pour que le dernier bloc de données reçu ne déclenche pas un évènement "progress". Maintenant, vous pouvez suivre uniquement la progression des évènements "progress", au lieu d'avoir également à surveiller les évènements "load" pour détecter la réception du dernier bloc de données.
 - Dans le passé, l'appel de [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener) avec un écouteur `null` renvoyait une exception. maintenant il ne retourne plus d'erreur et est sans effet.

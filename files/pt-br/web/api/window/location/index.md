@@ -470,5 +470,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the {{Glossary("browsing context")}}, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/pt-BR/docs/DOM/Manipulating_the_browser_history)
+- [Manipulating the browser history](/pt-BR/docs/Web/API/History_API)
 - [hashchange](/pt-BR/docs/Web/API/Window/hashchange_event)

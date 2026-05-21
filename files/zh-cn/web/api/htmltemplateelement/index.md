@@ -7,7 +7,7 @@ slug: Web/API/HTMLTemplateElement
 
 可以使用 **`HTMLTemplateElement`** 接口来访问 HTML {{HTMLElement("template")}} 元素的内容。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 

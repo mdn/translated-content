@@ -13,7 +13,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/web_application_securi
       <th scope="row">前提：</th>
       <td>
         阅读服务器端网页编程中的 "<a
-          href="/zh-CN/docs/learn/Server-side/First_steps/Website_security"
+          href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security"
           >Website security</a
         >" 主题。并请至少完成 Django Web 框架教程
         <a href="/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Forms"

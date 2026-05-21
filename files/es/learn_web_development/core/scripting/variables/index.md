@@ -351,4 +351,4 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 A estas alturas, deberías saber bastante sobre las variables de JavaScript y cómo crearlas. En el próximo artículo, nos centraremos en los números con más detalle, y veremos cómo hacer matemáticas básicas en JavaScript.
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "conflicting/Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "conflicting/Learn_web_development/Core/Scripting")}}

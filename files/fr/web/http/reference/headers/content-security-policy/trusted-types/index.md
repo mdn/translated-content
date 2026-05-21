@@ -1,50 +1,47 @@
 ---
-title: "CSP: trusted-types"
+title: "Content-Security-Policy : directive trusted-types"
+short-title: trusted-types
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types
-original_slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
+l10n:
+  sourceCommit: ecd02ce48a6a6076e244396747a1d31eb4d9747a
 ---
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} informe l'agent utilisateur qu'il faut restreindre la création de règles Trusted Types (fonctions qui créent des valeurs typées non falsifiables, dans le but de les passer au puits XSS du DOM au lieu de chaines de caractères).
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** est utilisée pour définir une liste blanche de [noms de règles de types de confiance](/fr/docs/Web/API/Trusted_Types_API) qu'un site web peut créer en utilisant {{DOMxRef("TrustedTypePolicyFactory/createPolicy", "trustedTypes.createPolicy()")}}.
 
-Conjointement à la directive [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for), cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture. Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec `TrustedTypes.createPolicy` à partir de l'API Trusted Types.
+Cela empêche le code du site web de créer des règles inattendues, ce qui facilite l'audit du code de types de confiance (`createPolicy()` générera une exception si un nom qui n'est pas répertorié dans `trusted-types` est passé).
+
+> [!NOTE]
+> La directive {{CSP("require-trusted-types-for")}} doit être définie pour activer l'application des types de confiance, et le mot-clé [`trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) est utilisé pour assouplir les restrictions sur {{JSxRef("eval()")}} et {{JSxRef("Function()")}} lorsque les types de confiance sont activés.
+>
+> Voir [l'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API) pour plus d'informations.
 
 ## Syntaxe
 
-```
+```http
 Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types <policyName>;
 Content-Security-Policy: trusted-types <policyName> <policyName> 'allow-duplicates';
 ```
 
-- \<nomRègle>
-  - : Un nom de règle est composé de caractères alphanumériques ou d'un ou plusieurs "`-#=_/@.%`". Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (quoique la valeur `'allow-duplicates'` pourrait permettre d'être plus laxiste à l'avenir).
+- \<policyName>
+  - : Un nom de règle valide ne contient que des caractères alphanumériques, ou l'un des caractères `-#=_/@.%`. Une astérisque (`*`) comme nom de règle informe l'agent utilisateur d'autoriser tout nom de règle unique (`allow-duplicates` pourrait assouplir cela davantage).
 - `'none'`
-  - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun nom de règle).
+  - : Interdit la création de toute règle de Trusted Type (identique au fait de ne renseigner aucun _\<policyName>_).
 - `'allow-duplicates'`
   - : Autorise la création de règles dont le nom a déjà été utilisé.
 
 ## Exemples
 
-Soit l'en-tête CSP :
-
-```
-Content-Security-Policy: trusted-types foo bar 'allow-duplicates';
-```
-
-Ce code génèrera une erreur car une des règles créées a un nom non autorisé :
-
 ```js
+// Content-Security-Policy: trusted-types toto tata 'allow-duplicates';
+
 if (typeof trustedTypes !== "undefined") {
-  const policyFoo = trustedTypes.createPolicy("foo", {});
-  const policyFoo2 = trustedTypes.createPolicy("foo", {});
-  const policyBaz = trustedTypes.createPolicy("baz", {}); // Throws and dispatches a SecurityPolicyViolationEvent.
+  const politiqueToto = trustedTypes.createPolicy("toto", {});
+  const politiqueToto2 = trustedTypes.createPolicy("toto", {});
+  const politiqueTata = trustedTypes.createPolicy("tata", {}); // Lève et déclenche un évènement SecurityPolicyViolationEvent.
 }
 ```
-
-## Prothèse d'émulation
-
-Un [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webappsec-trusted-types#polyfill) est disponible sur Github.
 
 ## Spécifications
 
@@ -56,7 +53,9 @@ Un [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webapp
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Cross-Site Scripting (XSS)](/fr/docs/Glossary/Cross-site_scripting)
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types)
-- Trusted Types with [DOMPurify](https://github.com/cure53/DOMPurify#what-about-dompurify-and-trusted-types) XSS sanitizer
+- L'en-tête {{HTTPHeader("Content-Security-Policy")}}
+  - [la directive `require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for)
+  - [le mot-clé `trusted-types-eval`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval)
+- [L'API Trusted Types](/fr/docs/Web/API/Trusted_Types_API)
+  - [L'interface des puits d'injection](/fr/docs/Web/API/Trusted_Types_API#interfaces_des_puits_dinjection)
+- L'entrée de glossaire [Cross-Site Scripting (XSS)](/fr/docs/Glossary/Cross-site_scripting)

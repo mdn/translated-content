@@ -35,7 +35,7 @@ slug: Web/HTTP/Reference/Methods/GET
     </tr>
     <tr>
       <th scope="row">
-        Допускается в <a href="/ru/docs/Learn/HTML/Forms">HTML-формах</a>
+        Допускается в <a href="/ru/docs/Learn_web_development/Extensions/Forms">HTML-формах</a>
       </th>
       <td>Да</td>
     </tr>

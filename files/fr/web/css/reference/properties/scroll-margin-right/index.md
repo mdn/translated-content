@@ -1,14 +1,14 @@
 ---
-title: scroll-margin-right
+title: Propriété CSS `scroll-margin-right`
+short-title: scroll-margin-right
 slug: Web/CSS/Reference/Properties/scroll-margin-right
-original_slug: Web/CSS/scroll-margin-right
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-margin-right`** définit la marge de la zone d'accrochage au défilement à droite, utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone d'accrochage au défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages définis.
 
-La propriété **`scroll-margin-right`** définit la marge de défilement de l'élément sur le côté droit. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
-
-{{InteractiveExample("CSS Demo: scroll-margin-right")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-margin-right")}}
 
 ```css interactive-example-choice
 scroll-margin-right: 0;
@@ -29,7 +29,7 @@ scroll-margin-right: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -45,7 +45,7 @@ scroll-margin-right: 2em;
 }
 
 .scroller {
-  text-align: left;
+  text-align: right;
   width: 250px;
   height: 250px;
   overflow-x: scroll;
@@ -59,16 +59,16 @@ scroll-margin-right: 2em;
   flex: 0 0 250px;
   width: 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -76,21 +76,22 @@ scroll-margin-right: 2em;
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 scroll-margin-right: 10px;
 scroll-margin-right: 1em;
 
 /* Valeurs globales */
 scroll-margin-right: inherit;
 scroll-margin-right: initial;
+scroll-margin-right: revert;
+scroll-margin-right: revert-layer;
 scroll-margin-right: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Un décalage par rapport au bord droit du conteneur de défilement.
 
 ## Définition formelle
 
@@ -107,3 +108,8 @@ scroll-margin-right: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

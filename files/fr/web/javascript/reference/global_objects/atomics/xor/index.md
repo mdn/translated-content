@@ -58,7 +58,7 @@ Par exemple, le calcul d'un OU exclusif binaire `5 ^ 1` retourne `0100`, qui cor
 
 Notez que ces exemples ne peuvent pas être exécutés directement depuis la console ou une page web arbitraire, car `SharedArrayBuffer` n'est pas défini à moins que [ses exigences de sécurité](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#contraintes_de_sécurité) ne soient respectées.
 
-### Utiliser `Atomics.xor()`
+### Utiliser la méthode `Atomics.xor()`
 
 ```js
 // Crée un SharedArrayBuffer avec une taille en octets

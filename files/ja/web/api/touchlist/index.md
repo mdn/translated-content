@@ -11,7 +11,7 @@ l10n:
 
 このインターフェイスは[変更不可能なリストを作成しようとしたもの](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)で、すでに使用しているコードを壊さないために対応しているだけです。現代の API では、JavaScript の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)をベースにした型でリストを表現しています。このことにより、配列のメソッドの多くを利用可能にし、同時にその使用方法に追加の意味づけをすることができます (例えば、アイテムを読み取り専用にする)。
 
-この歴史的な理由は、開発者が `TouchList` を避けるべきということではありません。開発者は `TouchList` のオブジェクトをを自分で作成するのではなく、{{domxref("TouchEvent.targetTouches")}} などの API から取得するでしょう。そして、これらの API は非推奨になっていません。ただし、本物の配列との意味論的な違いには注意するべきです。
+この歴史的な理由は、開発者が `TouchList` を避けるべきということではありません。開発者は `TouchList` のオブジェクトを自分で作成するのではなく、{{domxref("TouchEvent.targetTouches")}} などの API から取得するでしょう。そして、これらの API は非推奨になっていません。ただし、本物の配列との意味論的な違いには注意するべきです。
 
 ## インスタンスプロパティ
 

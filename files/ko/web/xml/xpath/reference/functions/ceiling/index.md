@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/ceiling
 original_slug: Web/XPath/Functions/ceiling
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `ceiling` 함수는 10진수를 평가하고 10진수보다 작지 않은 가장 작은 정수를 반환합니다.
 

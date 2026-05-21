@@ -1,8 +1,9 @@
 ---
-title: font-family
+title: Propriété CSS `font-family`
+short-title: font-family
 slug: Web/CSS/Reference/Properties/font-family
 l10n:
-  sourceCommit: 3ea29f3443256eb763b957f2eb8d9c597f039add
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`font-family`** définit une liste priorisée d'un ou plusieurs noms de famille de police et/ou de noms de famille génériques pour l'élément sélectionné.

@@ -1,8 +1,9 @@
 ---
-title: "<acronym> : l'élément d'acronyme"
+title: "Élément HTML `<acronym>` : l'élément d'acronyme"
+short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

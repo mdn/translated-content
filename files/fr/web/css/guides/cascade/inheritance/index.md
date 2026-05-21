@@ -97,7 +97,7 @@ On voit ici la bordure supplémentaire autour du texte en emphase.
   - [`inherit`](/fr/docs/Web/CSS/Reference/Values/inherit)
   - [`initial`](/fr/docs/Web/CSS/Reference/Values/initial)
   - [`revert`](/fr/docs/Web/CSS/Reference/Values/revert)
-  - [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
+  - [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
   - [`unset`](/fr/docs/Web/CSS/Reference/Values/unset)
 - [Introduction à la cascade CSS](/fr/docs/Web/CSS/Guides/Cascade/Introduction)
 - [La cascade et l'héritage](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)

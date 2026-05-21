@@ -73,12 +73,12 @@ hr::after {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories"
           >内容分类</a
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >。
       </td>
@@ -94,7 +94,7 @@ hr::after {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        所有接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+        所有接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>

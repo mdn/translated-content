@@ -118,7 +118,7 @@ _このインターフェイスには、親である {{domxref("SVGGraphicsEleme
 - {{domxref("SVGSVGElement.createSVGPoint()")}}
   - : {{domxref("DOMPoint")}} オブジェクトを文書ツリーの外側に作成します。このオブジェクトはユーザー座標系の点 `(0,0)` で初期化されます。
 - {{domxref("SVGSVGElement.createSVGMatrix()")}}
-  - : {{domxref("DOMMatrix")}} オブジェクトを文書ツリーの外側に作成します。このオブジェクトは単位行列で初期化されます。
+  - : {{domxref("DOMMatrix")}} オブジェクトを文書ツリーの外側に作成します。このオブジェクトは恒等行列で初期化されます。
 - {{domxref("SVGSVGElement.createSVGRect()")}}
   - : {{domxref("SVGRect")}} オブジェクトを文書ツリーの外側に作成します。このオブジェクトはすべての値が `0` ユーザー単位になるように初期化されます。
 - {{domxref("SVGSVGElement.createSVGTransform()")}}
@@ -150,7 +150,7 @@ _このインターフェイスには、親である {{domxref("SVGGraphicsEleme
 - {{domxref("window.languagechange_event", "SVGSVGElement.onlanguagechange")}}
   - : ユーザーの優先言語が変更されたときに発行されます。
 - {{domxref("window.message_event", "SVGSVGElement.onmessage")}}
-  - : ウィンドウがメッセージを受信した際に発行されます。例えば、別の閲覧コンテキストからの [`Window.postMessage()`](/ja/docs/Web/API/Window/postMessage) の呼び出しなどです。
+  - : ウィンドウがメッセージを受信した際に発行されます。例えば、別の閲覧コンテキストからの {{ domxref("window.postMessage()") }} の呼び出しなどです。
 - {{domxref("window.messageerror_event", "SVGSVGElement.onmessageerror")}}
   - : ウィンドウがデシリアライズできないメッセージを受信したときに発行されます。
 - {{domxref("window.offline_event", "SVGSVGElement.onoffline")}}

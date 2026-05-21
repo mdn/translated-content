@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Storage Access API")}}
 
-**`requestStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、サードパーティコンテキスト（つまり {{htmlelement("iframe")}} に埋め込まれたもの）に読み込まれたコンテンツが、[サードパーティクッキー](/ja/docs/Web/Privacy/Third-party_cookies)と[分離されていない状態](/ja/docs/Web/Privacy/State_Partitioning#state_partitioning)へのアクセスをリクエストできるようになります。これは、既定ではプライバシーを向上させるために（例えば、トラッキングを防ぐために）サードパーティの[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザーエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の一部です。
+**`requestStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、サードパーティコンテキスト（つまり {{htmlelement("iframe")}} に埋め込まれたもの）に読み込まれたコンテンツが、[サードパーティクッキー](/ja/docs/Web/Privacy/Guides/Third-party_cookies)と[分離されていない状態](/ja/docs/Web/Privacy/State_Partitioning#state_partitioning)へのアクセスをリクエストできるようになります。これは、既定ではプライバシーを向上させるために（例えば、トラッキングを防ぐために）サードパーティの[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザーエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の一部です。
 
 サードパーティクッキーにアクセスする権限が既に与えられているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出して、特性名 `"storage-access"`を指定してください。
 

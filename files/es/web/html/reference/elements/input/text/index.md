@@ -55,21 +55,21 @@ label {
     <tr>
       <td><strong>Atributos comunes admitidos</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a> y
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
         <code>value</code>
       </td>
     </tr>
@@ -488,4 +488,4 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
-- [Compatibilidad de propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad de propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)

@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/CSS_media_queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
+Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/Guides/Media_queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
 
 Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.
 
@@ -72,7 +72,7 @@ mql.addListener(screenTest);
 
 ## Ver también
 
-- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/es/docs/Web/CSS/Guides/Media_queries/Using)
 - [Uso de media queries desde el código](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryListListener")}}

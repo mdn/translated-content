@@ -12,7 +12,7 @@ slug: Learn_web_development/Core/Structuring_content/Creating_links
     <tr>
       <th scope="row">Предварительные требования:</th>
       <td>
-        Базовое знание HTML, описанное в разделе <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started">«Начало работы с HTML»</a>. Знакомство с форматированием текста, которое описано в разделе
+        Базовое знание HTML, описанное в разделе <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">«Начало работы с HTML»</a>. Знакомство с форматированием текста, которое описано в разделе
         <a href="/ru/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">«Основы редактирования текста в HTML»</a>.
       </td>
     </tr>

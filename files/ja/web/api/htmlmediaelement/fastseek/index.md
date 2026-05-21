@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.fastSeek()`** メソッドは、精度と引き換えにで新しい時間へのメディアを迅速にシークします。
+**`HTMLMediaElement.fastSeek()`** メソッドは、精度と引き換えに新しい時間へのメディアを迅速にシークします。
 
 > [!NOTE]
 > 正確にシークする必要がある場合は、代わりに [`HTMLMediaElement.currentTime`](/ja/docs/Web/API/HTMLMediaElement/currentTime) を設定してください。

@@ -30,7 +30,7 @@ async function generate() {
 }
 
 generate();
-// Expected output: "abc"
+// 予想される結果: "abc"
 ```
 
 ## 構文

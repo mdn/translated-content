@@ -9,4 +9,4 @@ Internet est un réseau mondial constitué de réseaux. Ce réseau utilise le pr
 
 ## Voir aussi
 
-- [Comment fonctionne Internet](/fr/docs/Learn/How_the_Internet_works) (introduction pour les débutants)
+- [Comment fonctionne Internet](/fr/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work) (introduction pour les débutants)

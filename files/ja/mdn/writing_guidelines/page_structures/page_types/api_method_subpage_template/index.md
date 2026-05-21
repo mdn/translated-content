@@ -2,10 +2,8 @@
 title: API メソッドサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
 l10n:
-  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
+  sourceCommit: ca26363fcc6fc861103d40ac0205e5c5b79eb2fa
 ---
-
-{{MDNSidebar}}
 
 > [!NOTE]
 > _この説明文全体を削除してから公開してください。_
@@ -31,7 +29,7 @@ l10n:
 > - **title**
 >   - : タイトルの見出しは、ページの最上部に表示されます。
 >     書式は `NameOfTheParentInterface: NameOfTheMethod() コンストラクター` です。
->     例えば、 [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [count()](/ja/docs/Web/API/IDBIndex/count) メソッドには `IDBIndex.count()` というタイトルを付けます。
+>     例えば、 [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [count()](/ja/docs/Web/API/IDBIndex/count) メソッドには `IDBIndex: count() メソッド` というタイトルを付けます。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/NameOfTheParentInterface/NameOfTheMethod` のような形式になります。
@@ -48,6 +46,7 @@ l10n:
 > **ページ先頭のマクロ**
 >
 > コンテンツ部の上部（ページのフロントマターの直下）には、いくつかのマクロ呼び出しが現れます。
+>
 > **訳注:** 英語版では以下のバナーは自動的に更新されますが、翻訳記事では更新されませんので、翻訳時に手動で英語版のバナーに合わせてください。
 >
 > - `\{{SeeCompatTable}}` — これは **これは実験的な機能です。** のバナーを生成し、この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)であることを示します。実験的なもので、その技術が Firefox の設定で隠されている場合は、 [Firefox での実験的な機能](/ja/docs/Mozilla/Firefox/Experimental_features) ページにもそのための項目を記入する必要があります。
@@ -59,14 +58,17 @@ l10n:
 > - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Defenses/Secure_Contexts)でのみ利用できることを示します。
 >   もしそうでないなら、マクロの呼び出しを削除してください。
 >   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+> - `\{{AvailableInWorkers}}` — これにより、**ウェブワーカーで利用可能**というメモが生成され、その技術が [ウェブワーカーのコンテキスト](/ja/docs/Web/API/Web_Workers_API) で利用可能であることを示します。
+>   ウィンドウコンテキストでのみ利用できる場合は、そのマクロの呼び出しを除去できます。
+>   もしそれがワーカーコンテキストでも利用できる、あるいはワーカーコンテキストでのみ利用できる場合、その利用状況に応じて引数を渡す必要があることがあります（利用できるすべての値については、[\\{{AvailableInWorkers}} マクロのソースコード](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)をご参照ください）。また、[ウェブワーカーで利用可能な Web API](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#ワーカーで使用できる_web_api) ページに、その項目を追加する必要があることがあります。
 > - `\{{APIRef("GroupDataName")}}` — これは、現在のページに関連するクイックリファレンスリンクを示す左側のリファレンスサイドバーを生成します。
 >   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) のすべてのページには同じサイドバーがあり、これは API の他のページを指しています。
 >   API に適したサイドバーを生成するには、 KumaScript GitHub リポジトリーに GroupData の項目を追加し、_GroupDataName_ の代わりにマクロ呼び出し内にその項目の名前を記載する必要があります。
->   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。このページをコピーする際には、忘れずに `\{{MDNSidebar}}` マクロを除去してください。
+>   この方法については、 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドを参照してください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **保護されたコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **保護されたコンテキスト**、**ワーカーで利用可能**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > _公開前に、忘れずにこの説明文全体を削除してください。_
 
@@ -97,7 +99,7 @@ l10n:
 
 ### 例外
 
-このコンストラクターが発生させる可能性がある例外の一覧をすべて記述します。例外ごとに 1 つずつ用語と定義を記述してください。
+このメソッドが発生させる可能性がある例外の一覧をすべて記述します。例外ごとに 1 つずつ用語と定義を記述してください。
 
 - `Exception1`
   - : どのような場合に例外が発生するかをの説明を記述してください。
@@ -117,6 +119,11 @@ l10n:
   - : Thrown …
 - {{jsxref("TypeError")}}
   - : Thrown …
+
+## 解説
+
+_メソッドの動作に関する詳細な説明_
+_ページの上部に導入文が 1 ～ 2 段落あれば十分である場合は、この節は省略します。_
 
 ## 例
 
@@ -154,7 +161,7 @@ l10n:
 > ```md
 > ## 例
 >
-> この API の例については、[fetch() ページ](https://example.org)を参照してください。
+> この API の例については、[fetch() ページ](https://example.org/)を参照してください。
 > ```
 
 ## 仕様書

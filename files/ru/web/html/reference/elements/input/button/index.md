@@ -358,4 +358,4 @@ draw();
 
 - {{HTMLElement("input")}} и {{domxref("HTMLInputElement")}} интерфейс, который его реализует.
 - Более современный элемент {{HTMLElement("button")}}.
-- [Совместимость свойств CSS](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Совместимость свойств CSS](/ru/docs/Learn_web_development/Extensions/Forms)

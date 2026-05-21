@@ -33,7 +33,7 @@ slug: Web/CSS/Guides/Box_model/Introduction
 
 ## Смотрите также
 
-- [Справочник по CSS](/ru/docs/CSS/CSS_Reference)
+- [Справочник по CSS](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Guides/Syntax/Introduction)
   - [@-правила](/ru/docs/Web/CSS/Guides/Syntax/At-rules)

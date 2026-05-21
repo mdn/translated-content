@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/function-available
 original_slug: Web/XPath/Functions/function-available
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `function-available` 함수는 인수로 준 함수가 이용 가능한 지를 결정하고 boolean true나 false를 반환합니다.
 

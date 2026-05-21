@@ -1,14 +1,14 @@
 ---
-title: top
+title: Propriété CSS `top`
+short-title: top
 slug: Web/CSS/Reference/Properties/top
-original_slug: Web/CSS/top
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`top`** participe à la spécification de la position verticale d'un [élément positionné](/fr/docs/Web/CSS/Reference/Properties/position). Cette {{Glossary("inset properties", "propriété d'encart")}} n'a aucun effet sur les éléments non positionnés.
 
-La propriété **`top`** définit une partie de la position des éléments positionnés, elle n'a aucun effet pour les éléments non-positionnés.
-
-{{InteractiveExample("CSS Demo: top")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: top")}}
 
 ```css interactive-example-choice
 top: 0;
@@ -29,12 +29,12 @@ top: 20px;
 ```html interactive-example
 <section id="default-example">
   <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+    <div id="example-element">Je suis positionné absolument.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      Autant de boue dans les rues comme si les eaux venaient de se retirer de
+      la surface de la terre, et il ne serait pas étonnant de rencontrer un
+      Megalosaurus, d'environ douze mètres de long, se dandinant comme un lézard
+      éléphantesque sur Holborn Hill.
     </p>
   </div>
 </section>
@@ -60,50 +60,56 @@ top: 20px;
 }
 ```
 
-L'effet de la propriété `top` dépend de la façon dont l'élément est positionné (autrement dit, il dépend de la valeur de la propriété {{cssxref("position")}}) :
+L'effet de `top` dépend de la façon dont l'élément est positionné (c'est‑à‑dire de la valeur de la propriété {{CSSxRef("position")}})&nbsp;:
 
-- Pour les éléments qui sont positionnés de manière absolue ({{cssxref("position")}}`: absolute` ou {{cssxref("position")}}`: fixed`), cette propriété définit la distance entre le bord haut de la marge (_margin_) de l'élément et le bord haut du bloc englobant (il faut que le bloc englobant ait `position: relative`).
-- Lorsque `position` vaut `relative`, cela définit la grandeur du déplacement avec laquelle l'élément est placé en dessous de sa position normale.
-- Lorsque `position` vaut `sticky`, la propriété `top` se comporte comme avec `relative` lorsque l'élément se situe à l'intérieur de la zone d'affichage (_viewport_) et elle se comporte comme `fixed` lorsque l'élément est à l'extérieur de la zone d'affichage.
-- Lorsque `position` vaut `static`, la propriété `top` n'a aucun effet.
+- Lorsque `position` est défini sur `absolute` ou `fixed`, la propriété `top` définit la distance entre la marge extérieure du bord supérieur de l'élément et la bordure intérieure du bord supérieur de son bloc conteneur, ou, dans le cas des [éléments positionnés par ancrage](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using) lorsque la fonction {{CSSxRef("anchor()")}} est utilisée dans la valeur, par rapport au bord [`<anchor-side>`](/fr/docs/Web/CSS/Reference/Values/anchor#anchor-side) défini. La propriété `top` est [compatible](/fr/docs/Web/CSS/Reference/Values/anchor#compatibilité_des_propriétés_dencart_et_des_valeurs_anchor-side) avec les valeurs `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center` et `<percentage>`.
+- Lorsque `position` est défini sur `relative`, la propriété `top` définit la distance à laquelle le bord supérieur de l'élément est déplacé en dessous de sa position normale.
+- Lorsque `position` est défini sur `sticky`, la propriété `top` est utilisée pour calculer le rectangle de contrainte sticky.
+- Lorsque `position` est défini sur `static`, la propriété `top` n'a _aucun effet_.
 
-Lorsque `top` et {{cssxref("bottom")}} sont utilisés tous les deux, tant que {{cssxref("height")}} n'est pas définie ou ne vaut pas `auto` ou `100%`, les distances introduites par `top` et {{cssxref("bottom")}} seront respectées. Sinon, si {{cssxref("height")}} est contrainte d'une certaine façon, la propriété `top` prendra le pas sur {{cssxref("bottom")}} qui sera ignorée.
+Lorsque les valeurs `top` et {{CSSxRef("bottom")}} sont toutes deux définies, il existe trois cas différents&nbsp;:
+
+- Si `position` est défini sur `absolute` ou `fixed` et que {{CSSxRef("height")}} n'est pas définie (soit `auto`, soit `100%`), les valeurs `top` et `bottom` sont toutes deux respectées.
+- Si `position` est défini sur `relative` ou si la propriété {{CSSxRef("height")}} est contrainte, la propriété `top` prime et la propriété `bottom` est ignorée.
+- Si `position` est défini sur `sticky`, les valeurs `top` et `bottom` sont prises en compte. Cela signifie qu'un élément attaché peut potentiellement se déplacer vers le haut et vers le bas au sein de son bloc englobant en fonction des valeurs de ces deux propriétés, tant que la boîte de position de l'élément reste contenue dans son bloc englobant.
 
 ## Syntaxe
 
 ```css
-/* Valeur de longueur */
-/* Type <length> */
+/* Valeur de type <length> */
 top: 3px;
 top: 2.4em;
+top: anchor(bottom);
+top: anchor-size(--mon-ancre self-block, 10%);
 
-/* Valeur en pourcentages */
-/* Relative à la hauteur du bloc englobant */
-/* Type <percentages> */
+/* Valeurs de type <percentage> */
 top: 10%;
 
-/* Avec un mot-clé */
+/* Valeurs avec un mot-clé */
 top: auto;
 
 /* Valeur globale */
 top: inherit;
 top: initial;
+top: revert;
+top: revert-layer;
 top: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : Une valeur négative, nulle ou positive du type {{cssxref("&lt;length&gt;")}} qui représente :
-    - La distance depuis le bord haut du bloc englobant pour les _éléments positionnés de façon absolue_
-    - Le décalage avec lequel l'élément est déplacé vers le bas (relativement à sa position normale) pour _les éléments positionnés de façon relative_.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Une longueur ({{CSSxRef("&lt;length&gt;")}}) négative, nulle ou positive&nbsp;:
+    - pour _les éléments positionnés absolument_, elle représente la distance par rapport au bord supérieur du bloc englobant.
+    - pour _les éléments positionnés par ancre_, la fonction {{CSSxRef("anchor()")}} se résout en une valeur {{CSSxRef("&lt;length&gt;")}} relative à la position du bord supérieur ou inférieur de l'élément ancre associé (voir [Utilisation des propriétés inset avec les valeurs de fonction `anchor()`](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#utiliser_les_propriétés_dencart_avec_des_valeurs_de_fonction_anchor)), et la fonction {{CSSxRef("anchor-size()")}} se résout en une valeur {{CSSxRef("&lt;length&gt;")}} relative à la largeur ou à la hauteur de l'élément ancre associé (voir [Définir la position de l'élément en fonction de la taille de l'ancre](/fr/docs/Web/CSS/Guides/Anchor_positioning/Using#définir_la_position_dun_élément_selon_la_taille_de_lancre)).
+    - pour _les éléments positionnés relativement_, elle représente la distance que l'élément est déplacé en dessous de sa position normale.
 
-- `<percentage>`
-  - : Une valeur du type {{cssxref("&lt;percentage&gt;")}} qui est relative à la hauteur du bloc englobant.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.
 - `auto`
-  - : Un mot-clé qui représente :
-    - Pour les éléments positionnés de façon absolue, la position de l'élément en fonction de la propriété {{cssxref("bottom")}} et qui traite `height: auto` comme une hauteur basée sur le contenu. Si `bottom` vaut également `auto`, l'élément est positionné verticalement comme s'il avait été un élément statique.
-    - Pour les éléments positionnés de façon relative, le décalage de l'élément par rapport à sa position originale, basée sur la propriété {{cssxref("bottom")}}. Si `bottom` vaut également `auto`, aucun décalage n'est appliqué.
+  - : Définit que&nbsp;:
+    - pour _les éléments positionnés absolument_, la position de l'élément est basée sur la propriété {{CSSxRef("bottom")}}, tandis que `height: auto` est traité comme une hauteur basée sur le contenu&nbsp;; ou si `bottom` est également `auto`, l'élément est positionné là où il devrait être verticalement s'il était un élément statique.
+    - pour _les éléments positionnés relativement_, la distance de l'élément par rapport à sa position normale est basée sur la propriété {{CSSxRef("bottom")}} ; ou si `bottom` est également `auto`, l'élément n'est pas déplacé verticalement du tout.
 
 ## Définition formelle
 
@@ -115,65 +121,29 @@ top: unset;
 
 ## Exemples
 
-### Positionnement relatif
-
-#### HTML
-
-```html
-<div>
-  <p>Lorem ipsum et tralala normal</p>
-  <p class="relatif">Lorem ipsum et tralala relatif</p>
-  <p>Lorem ipsum et tralala normal</p>
-</div>
-```
-
-#### CSS
+### Un élément positionné à 10 % du haut
 
 ```css
+body {
+  background: beige;
+}
+
 div {
-  border: 2px black dashed;
-}
-
-p.relatif {
-  position: relative;
-  top: 5em;
-  border: 2px black solid;
-}
-```
-
-#### Résultat
-
-{{EmbedLiveSample("Positionnement_relatif","100%","200")}}
-
-### Positionnement absolu
-
-#### HTML
-
-```html
-<div>
-  <p>Lorem ipsum et tralala normal</p>
-  <p class="absolu">Lorem ipsum et tralala absolu</p>
-  <p>Lorem ipsum et tralala normal</p>
-</div>
-```
-
-#### CSS
-
-```css
-div {
-  border: 2px black dashed;
-}
-
-p.absolu {
   position: absolute;
-  top: 5em;
-  border: 2px black solid;
+  top: 10%;
+  right: 40%;
+  bottom: 20%;
+  left: 15%;
+  background: gold;
+  border: 1px solid blue;
 }
 ```
 
-#### Résultat
+```html
+<div>La taille de ce contenu est déterminée par la position de ses bords.</div>
+```
 
-{{EmbedLiveSample("Positionnement_absolu","100%","100%")}}
+{{EmbedLiveSample("Un élément positionné à 10 % du haut", "100%", 200)}}
 
 ## Spécifications
 
@@ -185,9 +155,9 @@ p.absolu {
 
 ## Voir aussi
 
-- {{cssxref("position")}}
-- {{cssxref("bottom")}}
-- {{cssxref("height")}}
-- {{cssxref("left")}}
-- {{cssxref("right")}}
-- [Les bases de CSS : la disposition et le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Introduction#le_positionnement)
+- Les propriétés {{CSSxRef("bottom")}}, {{CSSxRef("left")}} et {{CSSxRef("right")}}
+- La propriété raccourcie {{CSSxRef("inset")}}
+- Les propriétés {{CSSxRef("inset-block-start")}}, {{CSSxRef("inset-block-end")}}, {{CSSxRef("inset-inline-start")}} et {{CSSxRef("inset-inline-end")}}
+- {{CSSxRef("inset-block")}}, et la propriété raccourcie {{CSSxRef("inset-inline")}}
+- La propriété {{CSSxRef("position")}}
+- Le module [de disposition positionnée CSS](/fr/docs/Web/CSS/Guides/Positioned_layout)

@@ -1,9 +1,9 @@
 ---
-title: "<p> : l'élément paragraphe"
+title: "Élément HTML `<p>` : l'élément paragraphe"
+short-title: <p>
 slug: Web/HTML/Reference/Elements/p
-original_slug: Web/HTML/Element/p
 l10n:
-  sourceCommit: a1765c2cad20118be0dad322d3548908787b5791
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<p>`** représente un paragraphe. Les paragraphes sont généralement représentés dans les médias visuels comme des blocs de texte séparés des blocs adjacents par des lignes vides et/ou une indentation de première ligne, mais les paragraphes HTML peuvent être tout regroupement structurel de contenu lié, comme des images ou des champs de formulaire.

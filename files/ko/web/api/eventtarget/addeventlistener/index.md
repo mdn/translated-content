@@ -40,7 +40,7 @@ addEventListener(type, listener, useCapture);
 ### 매개변수
 
 - `type`
-  - : 수신할 [이벤트 유형](/ko/docs/Web/Events)을 나타내는 대소문자 구분 문자열입니다.
+  - : 수신할 [이벤트 유형](/ko/docs/Web/API/Document_Object_Model/Events)을 나타내는 대소문자 구분 문자열입니다.
 - `listener`
   - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. `handleEvent()` 메서드를 포함하는 객체 또는 JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
 - `options` {{optional_inline}}
@@ -172,7 +172,7 @@ const el = document.getElementById("outside");
 el.addEventListener("click", modifyText, false);
 ```
 
-위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버를링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
+위 코드의 `modifyText()`가 `addEventListener()`로 추가하는 `click` 이벤트의 수신기입니다. 표 요소의 어디를 클릭하든, 클릭 이벤트는 버블링을 통해 전파되다가 `modifyText()`를 발동하게 됩니다.
 
 #### 결과
 

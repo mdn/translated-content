@@ -118,7 +118,7 @@ Los valores aceptados son:
 | `browser`    | La aplicación se abrirá en una pestaña nueva del navegador o una ventana nueva, dependiendo del navegador y plataforma. Esto es por defecto.                                                                                                                                                                          | (None)                |
 
 > [!NOTE]
-> Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/es/docs/Web/CSS/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
+> Puedes aplicar selectivamente CSS a tu app basandote en el modo de visualización, usando la característica [display-mode](/es/docs/Web/CSS/Reference/At-rules/@media/display-mode). Se puede utilizar para proporcionar una experiencia de usuario consistente al lanzar un site desde una URL y lanzarlo desde un icono de escritorio.
 
 ### `icons`
 

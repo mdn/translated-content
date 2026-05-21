@@ -28,7 +28,7 @@ set(index, value);
 ### 例外
 
 - _index_ が {{jsxref("WebAssembly/Table/length","Table.prototype.length")}} 以上の場合、 {{jsxref("RangeError")}} が発生します。
-- _value_ がエクスポートされた WebAssembly 関数でも <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></code> でもない場合、{{jsxref("TypeError")}} が発生します。
+- _value_ がエクスポートされた WebAssembly 関数でも <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/null">null</a></code> でもない場合、{{jsxref("TypeError")}} が発生します。
 
 ## 例
 

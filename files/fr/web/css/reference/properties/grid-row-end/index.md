@@ -1,8 +1,9 @@
 ---
-title: grid-row-end
+title: Propriété CSS `grid-row-end`
+short-title: grid-row-end
 slug: Web/CSS/Reference/Properties/grid-row-end
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-row-end`** définit la position de fin d'un élément de la grille sur la ligne de la grille en ajoutant une ligne, un fragment (<i lang="en">span</i> en anglais) ou rien (automatique) à son placement sur la grille, définissant ainsi le bord de fin en ligne de sa {{Glossary("grid areas", "zone de grille")}}.

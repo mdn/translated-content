@@ -1,8 +1,9 @@
 ---
-title: lch()
+title: CSS `lch()` 関数
+short-title: lch()
 slug: Web/CSS/Reference/Values/color_value/lch
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`lch()`** 関数記法は、指定された色を明度、彩度、色相で表す LCH {{glossary("color space", "色空間")}}で表現します。これは [CIELab 色空間](/ja/docs/Glossary/Color_space#cielab_色空間)の {{cssxref("color_value/lab","lab()")}} と同じ `L` 軸を使用しますが、極座標系の `C` （彩度）と `H` （色相）を使用します。

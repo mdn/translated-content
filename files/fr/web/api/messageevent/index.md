@@ -21,7 +21,7 @@ L'action déclenchée par cet événement est définie dans une fonction défini
 
 {{AvailableInWorkers}}
 
-{{InheritanceDiagram(600, 80)}}
+{{InheritanceDiagram}}
 
 ## Constructeur
 

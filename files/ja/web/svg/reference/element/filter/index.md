@@ -2,7 +2,7 @@
 title: <filter>
 slug: Web/SVG/Reference/Element/filter
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 62476ac3c21417ad3a07e12c9f8eaf92cea8311d
 ---
 
 **`<filter>`** は [SVG](/ja/docs/Web/SVG) の要素で、原子フィルタープリミティブをグループ化してカスタムフィルター効果を定義します。これ自身はレンダリングされず、 SVG 要素の {{SVGAttr("filter")}} 属性や SVG/HTML 要素の {{Glossary("CSS")}} の {{cssxref("filter")}} プロパティで使用する必要があります。
@@ -21,13 +21,18 @@ l10n:
 - {{SVGAttr("primitiveUnits")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
+> [!NOTE]
+> `<filter>` 要素の場合、`x` および `y` 属性のデフォルト値は `-10%`、`width` および `height` 属性のデフォルト値は `120%` です。これは、{{svgelement("feGaussianBlur")}} など、多くのフィルター効果が、フィルター処理の対象となる要素の境界を越えて拡張するためです。このデフォルトのサイズ設定により、フィルター効果がクリップされることがないように保証されます。
+
 ## DOM インターフェイス
 
 この要素は {{domxref("SVGFilterElement")}} インターフェイスを実装しています。
 
 ## 例
 
-### SVG
+### ぼかし効果の追加
+
+#### SVG
 
 ```html
 <svg width="230" height="120" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +46,7 @@ l10n:
 </svg>
 ```
 
-### 結果
+#### 結果
 
 {{EmbedLiveSample("Example",235,150)}}
 

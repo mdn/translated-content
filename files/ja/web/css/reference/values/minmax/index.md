@@ -1,8 +1,9 @@
 ---
-title: minmax()
+title: CSS `minmax()` 関数
+short-title: minmax()
 slug: Web/CSS/Reference/Values/minmax
 l10n:
-  sourceCommit: c1c83d2f84db361bdef77913ec783eed61d5c16c
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`minmax()`** は [CSS の関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、寸法の範囲を _min_ 以上、 _max_ 以下で定義します。 [CSS グリッド](/ja/docs/Web/CSS/Guides/Grid_layout)で使用されます。

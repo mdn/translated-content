@@ -293,7 +293,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>Yes</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
@@ -320,7 +320,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>Yes</td>
+      <td>可</td>
     </tr>
   </tbody>
 </table>

@@ -17,7 +17,7 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
 
 - [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo lhe dá a base necessária, levando-o a fazer uso de conceitos e sintaxe fundamentais e ensinando como aplicar HTML ao texto, bem como criar _hiperlinks_ e fazer uso do HTML para estruturar uma página da web.
-- **[Referência de Elementos HTML da MDN](/pt-BR/docs/Web/HTML/Element)**
+- **[Referência de Elementos HTML da MDN](/pt-BR/docs/Web/HTML/Reference/Elements)**
   - : Uma referência abrangente para elementos HTML e como são suportados pelos diferentes navegadores.
 - **[Criando uma Página Web simples com HTML](https://www.theblogstarter.com/html-for-beginners)** (The Blog Starter)
   - : Um guia HTML para iniciantes que inclui explicações de _tags_ comums, incluindo tags HTML5. Também inclui um guia passo a passo sobre como criar uma página da web com exemplos de códigos já usados.
@@ -37,7 +37,7 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
 
 - [Formulários em HTML (HTML forms)](/pt-BR/docs/Learn_web_development/Extensions/Forms)
   - : Formulários são uma parte muito importante da Web - fornecem grande parte das funcionalidades que você precisa para interagir com sites da Web, como por exemplo registrando e efetuando login, enviando comentários, comprando produtos e muito mais. Este módulo começa com a criação de formulários da parte do cliente.
-- **[Dicas para criar páginas HTML de carregamento rápido](/pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)**
+- **[Dicas para criar páginas HTML de carregamento rápido](/pt-BR/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)**
   - : Otimize páginas da web para fornecer um site mais receptivo para visitantes e reduzir a carga em seu servidor web juntamente com a conexão com a Internet.
 
 ## Tutoriais CSS
@@ -68,9 +68,9 @@ Os links nesta página levam a uma variedade de tutoriais e materiais de treinam
 
 ### Nível avançado
 
-- **[Usando transformações CSS](/pt-BR/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)**
+- **[Usando transformações CSS](/pt-BR/docs/Web/CSS/Guides/Transforms/Using)**
   - : Aplique rotação, inclinação, escala e translação utilizando CSS.
-- **[CSS Transições](/pt-BR/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)**
+- **[CSS Transições](/pt-BR/docs/Web/CSS/Guides/Transitions/Using)**
   - : Transições CSS, parte do projecto de especificação CSS3, fornecem uma maneira de animar as alterações nas propriedades CSS, ao invés de executar as alterações imediatamente.
 - **[Guia Rápido para implementar Fontes da Web com @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)**
   - : O recurso @font-face do CSS3 permite que você use fontes personalizadas na web de uma forma acessível, manipulável e escalável.

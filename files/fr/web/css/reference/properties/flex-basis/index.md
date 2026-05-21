@@ -1,8 +1,9 @@
 ---
-title: flex-basis
+title: Propriété CSS `flex-basis`
+short-title: flex-basis
 slug: Web/CSS/Reference/Properties/flex-basis
 l10n:
-  sourceCommit: c4614bbe613c54975666cf8897ffc2a2ea7f8040
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété **`flex-basis`** [CSS](/fr/docs/Web/CSS) définit la taille principale initiale d'un {{Glossary("flex item", "élément flexible")}}. Elle définit la taille de la boîte de contenu sauf si elle est modifiée par {{CSSxRef("box-sizing")}}.

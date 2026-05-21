@@ -2,14 +2,15 @@
 title: 308 Permanent Redirect
 slug: Web/HTTP/Reference/Status/308
 l10n:
-  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: a44f198025a4efab10df30201b59793b8e0fd38c
 ---
 
 Le code de statut de [réponse de redirection](/fr/docs/Web/HTTP/Reference/Status#messages_de_redirection) HTTP **`308 Permanent Redirect`** indique que la ressource demandée a été définitivement déplacée vers l'URL indiquée dans l'en-tête {{HTTPHeader("Location")}}.
 
-Un navigateur recevant ce statut demandera automatiquement la ressource à l'URL figurant dans l'en-tête `Location`, redirigeant ainsi l'utilisateur·ice vers la nouvelle page. Les moteurs de recherche recevant cette réponse mettront à jour leurs liens vers la ressource et transféreront le classement de référencement ({{Glossary("SEO")}}) vers la nouvelle URL.
+Un navigateur recevant ce statut demande automatiquement la ressource à l'URL figurant dans l'en-tête `Location`, redirigeant ainsi l'utilisateur·ice vers la nouvelle page.
 
-La méthode de requête et son corps **ne sont pas modifiés** par le client lors de la requête redirigée. Un {{HTTPStatus("301", "301 Moved Permanently")}} exige que la méthode et le corps restent inchangés lors d'une redirection, mais cela est incorrectement géré par d'anciens clients qui utilisent à la place la méthode {{HTTPMethod("GET")}}.
+La méthode de requête et son corps **ne sont pas modifiés** par le client lors de la requête redirigée.
+Un {{HTTPStatus("301", "301 Moved Permanently")}} exige que la méthode et le corps restent inchangés lors d'une redirection, mais cela est incorrectement géré par d'anciens clients qui utilisent à la place la méthode {{HTTPMethod("GET")}}.
 
 > [!NOTE]
 > Certaines applications Web peuvent utiliser `308 Permanent Redirect` de façon non standard et pour d'autres usages.
@@ -45,5 +46,5 @@ Content-Length: 0
 
 - [Les redirections en HTTP](/fr/docs/Web/HTTP/Guides/Redirections)
 - [Les codes d'état de réponse HTTP](/fr/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("301", "301 Moved Permanently")}}, l'équivalent de ce code d'état, qui peut modifier la méthode de la requête lorsqu'il ne s'agit pas d'une {{HTTPMethod("GET")}}
-- {{HTTPStatus("302", "302 Found")}}, une redirection temporaire
+- Le code de statut {{HTTPStatus("301", "301 Moved Permanently")}}, l'équivalent de ce code d'état, qui peut modifier la méthode de la requête lorsqu'il ne s'agit pas d'une {{HTTPMethod("GET")}}
+- Le code de statut {{HTTPStatus("302", "302 Found")}}, une redirection temporaire

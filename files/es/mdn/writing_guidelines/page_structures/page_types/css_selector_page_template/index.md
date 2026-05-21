@@ -32,12 +32,12 @@ l10n:
 >
 > - **title**
 >   - : Título que se muestra en la parte superior de la página. Formatear como _:NameOfTheSelector_.
->     Por ejemplo, el selector [`:hover`](/es/docs/Web/CSS/:hover) tiene el título de _:hover_.
+>     Por ejemplo, el selector [`:hover`](/es/docs/Web/CSS/Reference/Selectors/:hover) tiene el título de _:hover_.
 > - **slug**
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`). Se formateará como `Web/CSS/:NameOfTheSelector`.
->     Por ejemplo, el slug del selector [`:hover`](/es/docs/Web/CSS/:hover) es `Web/CSS/:hover`.
+>     Por ejemplo, el slug del selector [`:hover`](/es/docs/Web/CSS/Reference/Selectors/:hover) es `Web/CSS/:hover`.
 > - **page-type**
->   - : El valor de `page-type` para las propiedades CSS puede ser `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es un [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements), un [combinador](/es/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), o un [selector básico](/es/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
+>   - : El valor de `page-type` para las propiedades CSS puede ser `css-selector`, `css-pseudo-class` o `css-pseudo-element`, dependiendo de si el selector es un [pseudo-clase](/es/docs/Web/CSS/Reference/Selectors/Pseudo-classes), un [pseudo-elemento](/es/docs/Web/CSS/Reference/Selectors/Pseudo-elements), un [combinador](/es/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), o un [selector básico](/es/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**

@@ -402,8 +402,8 @@ AV1은 현재 세 프로파일을 제공하며:**main**, **high**, **professiona
       <td>
         ISOBMFF<sup><a href="#av1-foot-1">[1]</a></sup
         >, MPEG-TS,
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
@@ -579,9 +579,9 @@ AVC는 유료 포맷이지만 무수한 특허들이 개입한 여러 단체에 
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
@@ -706,9 +706,9 @@ H.263는 Telenor, Fujitsu, Motorola, Samsung, Hitachi, Polycom, Qualcomm 등 수
     <tr>
       <th scope="row">컨테이너 지원</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -888,7 +888,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
       <td>
         <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
             >ISOBMFF</a
-          >、MPEG-TS、<a href="/ko/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ko/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+          >、MPEG-TS、<a href="/ko/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ko/docs/Web/Media/Guides/Formats/Containers#quicktime">QuickTime</a>
       </td>
     </tr>
     <tr>
@@ -1006,8 +1006,8 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>
       </td>
     </tr>
     <tr>
@@ -1287,10 +1287,10 @@ MPEG-2는 서로 다른 스펙을 가진 여러 프로파일이 있습니다. �
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#MPEGMPEG-2">MPEG</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MPEGMPEG-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -1412,7 +1412,7 @@ Theora의 단점 중 하나는 오직 8 bit 컬러 모드만을 지원하여 컬
     </tr>
     <tr>
       <th scope="row">지원 컨테이너</th>
-      <td><a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
+      <td><a href="/ko/docs/Web/Media/Guides/Formats/Containers#Ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row">
@@ -1519,9 +1519,9 @@ HTML 콘텐츠로써 특히 [WebM](/ko/docs/Web/Media/Guides/Formats/Containers#
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
@@ -1670,9 +1670,9 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/ko/docs/Web/Media/Guides/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>

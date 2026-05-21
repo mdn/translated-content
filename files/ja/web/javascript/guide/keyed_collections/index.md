@@ -2,10 +2,10 @@
 title: キー付きコレクション
 slug: Web/JavaScript/Guide/Keyed_collections
 l10n:
-  sourceCommit: 5bdcf72ed6ffc7d4fa878060a548869ed6ae149b
+  sourceCommit: 30c9f71e6a6cac4d894688cabf7e4b50af87cfe5
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 本章では、キーによって索引付けされたデータのコレクションを紹介します。`Map` および `Set` オブジェクトは挿入順に反復処理を行える要素を保持します。
 
@@ -63,12 +63,12 @@ sayings.size; // 0
 
 詳細やサンプルコードについては、{{jsxref("WeakMap")}} リファレンスページの「なぜ WeakMap なのか？」もご覧ください。
 
-`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例は Nick Fitzgerald 氏のブログ投稿、["Hiding Implementation Details with ECMAScript 6 WeakMaps"](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) からの引用です。プライベートなデータとメソッドはオブジェクトの内部に属していて、プライベートな `WeakMap` オブジェクトに格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。 `privates` はモジュールからエクスポートされていません。
+`WeakMap` オブジェクトのよくある使用方法のひとつとして、オブジェクトに対するプライベートデータの格納、あるいは実装の細部の隠蔽があります。次の例では、プライベートなデータとメソッドはオブジェクトの内部に属していて、`privates` オブジェクト (`WeakMap`) に格納されています。インスタンスから露出する全てとプロトタイプは公開されています、他の全てのものは外部よりアクセスできません。 `privates` はモジュールからエクスポートされていません。
 
 ```js
 const privates = new WeakMap();
 
-function Public() {
+export default function Public() {
   const me = {
     // ここにプライベートデータが置かれる
   };
@@ -77,11 +77,13 @@ function Public() {
 
 Public.prototype.method = function () {
   const me = privates.get(this);
-  // `me` にプライベートデータを詰め込む…
+  // `me` にプライベートデータを詰め込む
+  // …
 };
-
-module.exports = Public;
 ```
+
+> [!NOTE]
+> この用例は[クラスとプライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)で実装されています。
 
 ## Set
 

@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/By_example
 
 {{learnsidebar}}
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}
 
 実例による WebGL は、WebGL の概念と機能を短く説明する一連の実例サンプルです。実例はトピックと難易度順に従って並んでおり、WebGL レンダリングコンテキスト、シェダープログラミング、テクスチャ、ジオメトリ、ユーザーインタラクションなどを網羅しています。
 
@@ -54,4 +54,4 @@ slug: Web/API/WebGL_API/By_example
 - [Video textures](/ja/docs/Web/API/WebGL_API/By_example/Video_textures)
   - : この例ではビデオファイルをテクスチャとして使用します
 
-{{Next("Learn/WebGL/By_example/Detect_WebGL")}}
+{{Next("Web/API/WebGL_API/By_example/Detect_WebGL")}}

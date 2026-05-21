@@ -1,9 +1,8 @@
 ---
 title: container
 slug: Web/CSS/Reference/Properties/container
-original_slug: Web/CSS/container
 l10n:
-  sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/Guides/Cascade/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/Guides/Containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/Guides/Containment/Container_queries#コンテナーコンテキストの命名)の名前を指定します。
@@ -84,7 +83,7 @@ container: unset;
 そして、 {{cssxref("@container")}} アットルールを用いて、そのコンテナーの名前をターゲットにすることができます。
 
 ```css
-@container sidebar (min-width: 400px) {
+@container sidebar (width >= 400px) {
   /* <stylesheet> */
 }
 ```

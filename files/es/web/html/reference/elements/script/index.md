@@ -301,12 +301,12 @@ para que el script no bloquee el análisis pero se garantiza que será evaluado 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/HTML/Content_categories">Categorías de contenido</a>
+        <a href="/es/docs/Web/HTML/Guides/Content_categories">Categorías de contenido</a>
       </th>
       <td>
-        <a href="/es/docs/Web/HTML/Content_categories#metadata_content">Contenido de metadatos</a>,
-        <a href="/es/docs/Web/HTML/Content_categories#flow_content">Contenido de flujo</a>,
-        <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">Contenido de fraseo</a>.
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#metadata_content">Contenido de metadatos</a>,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#flow_content">Contenido de flujo</a>,
+        <a href="/es/docs/Web/HTML/Guides/Content_categories#phrasing_content">Contenido de fraseo</a>.
       </td>
     </tr>
     <tr>
@@ -320,8 +320,8 @@ para que el script no bloquee el análisis pero se garantiza que será evaluado 
     <tr>
       <th scope="row">Padres permitidos</th>
       <td>
-        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#metadata_content">contenido de metadatos</a>,
-        o cualquier elemento que acepte <a href="/es/docs/Web/HTML/Content_categories#phrasing_content">contenido de fraseo</a>.
+        Cualquier elemento que acepte <a href="/es/docs/Web/HTML/Guides/Content_categories#metadata_content">contenido de metadatos</a>,
+        o cualquier elemento que acepte <a href="/es/docs/Web/HTML/Guides/Content_categories#phrasing_content">contenido de fraseo</a>.
       </td>
     </tr>
     <tr>

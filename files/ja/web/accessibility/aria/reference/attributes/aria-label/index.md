@@ -104,6 +104,6 @@ l10n:
 - [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) (MDN blog, 2023)
 
 <section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
+<strong><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
 {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
 </section>

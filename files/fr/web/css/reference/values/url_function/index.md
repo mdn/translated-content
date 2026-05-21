@@ -1,8 +1,9 @@
 ---
-title: url()
+title: Fonction CSS `url()`
+short-title: url()
 slug: Web/CSS/Reference/Values/url_function
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`url()`** est utilisée afin d'inclure un fichier. Le paramètre est une URL absolue, une URL relative ou un URI de donnée. La fonction **`url()`** peut être utilisée comme paramètre d'une autre fonction comme {{CSSxRef("attr")}}. Selon la propriété pour laquelle elle est utilisée, la ressource utilisée peut être une image, une police ou une feuille de style. La notation fonctionnelle `url()` correspond au type de donnée CSS `<url>`.
@@ -15,29 +16,31 @@ La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CS
 Lorsque des URL relatives sont utilisées, elles sont relatives à l'URL de la feuille de style et pas à celle de la page web courante.
 
 La fonction **`url()`** peut être incluse comme valeur pour les propriétés&nbsp;:
-{{CSSxRef('background')}}, {{CSSxRef('background-image')}}, {{CSSxRef('border')}}, {{CSSxRef('border-image')}}, {{CSSxRef('border-image-source')}}, {{CSSxRef('content')}}, {{CSSxRef('cursor')}}, {{CSSxRef('filter')}}, {{CSSxRef('list-style')}}, {{CSSxRef('list-style-image')}}, {{CSSxRef('mask')}}, {{CSSxRef('mask-image')}}, {{CSSxRef('offset-path')}}, {{CSSxRef('clip-path')}}, [src](/fr/docs/Web/CSS/Reference/At-rules/@font-face/src) dans le cadre d'un bloc {{CSSxRef('@font-face')}} et {{CSSxRef('@counter-style/symbols', '@counter-style/symbols')}}.
+{{CSSxRef("background")}}, {{CSSxRef("background-image")}}, {{CSSxRef("border")}}, {{CSSxRef("border-image")}}, {{CSSxRef("border-image-source")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("filter")}}, {{CSSxRef("list-style")}}, {{CSSxRef("list-style-image")}}, {{CSSxRef("mask")}}, {{CSSxRef("mask-image")}}, {{CSSxRef("offset-path")}}, {{CSSxRef("clip-path")}}, {{CSSxRef("@font-face/src")}} dans le cadre d'un bloc {{CSSxRef("@font-face")}} et {{CSSxRef("@counter-style/symbols", "@counter-style/symbols")}}.
 
 ## Syntaxe
 
 ```css
 /* Utilisation simple */
+url("https://example.com/images/monImg.jpg");
+url('https://example.com/images/monImg.jpg');
 url(https://example.com/images/monImg.jpg);
-url(data:image/png;base64,iRxVB0…);
-url(maPolice.woff);
-url(#IDdeCheminSVG);
+url("data:image/jpeg;base64,iRxVB0…");
+url(monImg.jpg);
+url(#IDduCheminSVG);
 
 /* Propriétés utilisables */
 background-image: url("star.gif");
 list-style-image: url('../images/bullet.jpg');
-content: url("pdficon.jpg");
-cursor: url(moncurseur.cur);
+content: url("mon-icone.jpg");
+cursor: url(mon-curseur.cur);
 border-image-source: url(/media/diamonds.png);
-src: url('superpolice.woff');
-offset-path: url(#path);
+src: url('super-police.woff');
+offset-path: url(#chemin);
 mask-image: url("masques.svg#masque1");
 
 /* Propriétés avec valeurs de recours */
-cursor: url(pointer.cur), pointer
+cursor: url(pointer.cur), pointer;
 
 /* Propriétés raccourcies associées */
 background: url('star.gif') bottom right repeat-x blue;
@@ -45,13 +48,13 @@ border-image: url("/media/diamonds.png") 30 fill / 30px / 30px space;
 
 /* Utilisation comme paramètre d'une fonction CSS */
 background-image: cross-fade(20% url(first.png), url(second.png));
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent));
+mask-image: image(url(mask.png), skyblue, linear-gradient(black, transparent));
 
 /* Utilisation avec plusieurs valeurs */
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
-/* Règles @ / at-rules */
-@document url("https://www.example.com/") { ... } /* expérimental */
+/* Règles @ */
+@document url("https://www.example.com/") { /* … */ }
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
@@ -59,14 +62,14 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ## Valeurs
 
 - `<string>`
-  - : Une chaîne de caractères spécifiant une URL, qui est une adresse relative ou absolue, ou un pointeur, vers la ressource web à inclure, ou un URI de données. Vous pouvez également utiliser une URL de hachage pour référencer l'ID d'une [forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) ou d'un [filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter).
+  - : Une chaîne de caractères définissant une URL, qui est une adresse relative ou absolue, ou un pointeur, vers la ressource web à inclure, ou un URI de données. Vous pouvez également utiliser une URL de hachage pour référencer l'ID d'une [forme SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) ou d'un [filtre SVG](/fr/docs/Web/SVG/Reference/Element/filter).
 
     Les guillemets sont généralement facultatifs&nbsp;: ils sont requis si l'URL inclut des parenthèses, des espaces ou des guillemets (à moins que ces caractères ne soient échappés), ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Les règles de syntaxe des chaînes normales s'appliquent&nbsp;: les guillemets doubles ne peuvent pas apparaître à l'intérieur de guillemets doubles et les guillemets simples ne peuvent pas apparaître à l'intérieur de guillemets simples à moins d'être échappés.
 
 - `<url-modifier>`
   - : Dans le futur, la fonction `url()` pourrait prendre en charge la spécification d'un modificateur, d'un identifiant ou d'une notation fonctionnelle, qui modifie le sens de la chaîne d'URL. Cela n'est pas pris en charge et n'est pas entièrement défini dans la spécification.
 
-### Syntaxe formelle
+## Syntaxe formelle
 
 {{CSSSyntax("url")}}
 
@@ -81,15 +84,15 @@ body {
 }
 ```
 
-{{EmbedLiveSample("utilisation_comme_valeur_de_background", "100%", "200")}}
+{{EmbedLiveSample("Utilisation comme valeur de `background`", "100%", 200)}}
 
 ### Utilisation comme image de puce pour une liste
 
 ```html hidden
 <ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
 </ul>
 ```
 
@@ -107,7 +110,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("utilisation_comme_image_de_puce_pour_une_liste", "100%", "200")}}
+{{EmbedLiveSample("Utilisation comme image de puce pour une liste", "100%", 200)}}
 
 ### Utilisation avec la propriété `content`
 
@@ -115,9 +118,9 @@ ul {
 
 ```html
 <ul>
-  <li>Élément 1</li>
-  <li>Élément 2</li>
-  <li>Élément 3</li>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
 </ul>
 ```
 
@@ -132,7 +135,7 @@ li::after {
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_avec_la_propriété_content", "100%", 150)}}
+{{EmbedLiveSample("Utilisation avec la propriété `content`", "100%", 150)}}
 
 ### Utilisation comme une URI de données
 
@@ -146,7 +149,7 @@ body {
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_comme_une_uri_de_données", "100%", 100)}}
+{{EmbedLiveSample("Utilisation comme une URI de données", "100%", 100)}}
 
 ### Utilisation pour les filtres
 
@@ -157,13 +160,11 @@ Lorsqu'une URL est utilisée comme chemin d'un filtre, l'URL doit être&nbsp;:
 
 ```css
 .blur {
-  filter: url(mon-fichier.svg#svg-blur);
-  /* L'URL d'un fichier SVG utilisé comme filtre */
+  filter: url("mon-fichier.svg#svg-blur"); /* L'URL d'un fichier SVG utilisé comme filtre */
 }
 
 .inline-blur {
-  filter: url(#svg-blur);
-  /* L'identifiant d'un SVG déjà chargé sur la page HTML */
+  filter: url("#svg-blur"); /* L'identifiant d'un SVG déjà chargé sur la page HTML */
 }
 ```
 

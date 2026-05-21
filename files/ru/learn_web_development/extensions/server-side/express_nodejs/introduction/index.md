@@ -3,7 +3,7 @@ title: Express/Node introduction
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 В этой первой статье по Express мы ответим на вопросы "Что такое Node?" и "Что такое Express?", и сделаем обзор того, что делает веб-фреймворк Express таким особенным. Мы расскажем об основных функциях и покажем вам некоторые из основных строительных блоков приложения Express (хотя на данный момент у вас ещё нет среды разработки, в которой можно её протестировать).
 
@@ -497,4 +497,4 @@ Express не делает никаких предположений относи
 - [Serving static files in Express](<Serving static files in Express>) (Express docs)
 - [Error handling](http://expressjs.com/en/guide/error-handling.html) (Express docs)
 
-{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
