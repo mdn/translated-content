@@ -54,7 +54,7 @@ Math.expm1(1); // 1.718281828459045
 
 ## Prothèse d'émulation (_polyfill_)
 
-Cette fonction peut être émulée en utilisant la fonction {{jsxref("Math.exp", "Math.exp()")}} :
+Cette fonction peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}} :
 
 ```js
 Math.expm1 =
