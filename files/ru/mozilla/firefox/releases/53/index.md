@@ -127,7 +127,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### JavaScript
 
-- Нестандартный {{jsxref("ArrayBuffer.slice ()")}} Метод был удалён (но стандартизированная версия {{jsxref("ArrayBuffer.prototype.slice()")}} сохраняется, см [Firefox bug 1313112](https://bugzil.la/1313112)).
+- Нестандартный {{jsxref("ArrayBuffer.prototype.slice()", "ArrayBuffer.slice()")}} Метод был удалён (но стандартизированная версия {{jsxref("ArrayBuffer.prototype.slice()")}} сохраняется, см [Firefox bug 1313112](https://bugzil.la/1313112)).
 
 ### API-интерфейсы
 
