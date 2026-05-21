@@ -79,7 +79,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
+- {{jsxref("NumberFormat", "Intl.NumberFormat.prototype")}}
   - : Pertime a inclusão de propriedades a todos os objetos.
 
 ### Métodos

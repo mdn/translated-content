@@ -45,7 +45,7 @@ Os principais usos para o objeto `Number` são:
   - : Valor especial representando infinito negativo; retornado no "overflow".
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Valor especial representando infinito; retornado no "overflow".
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : Permite a adição de propriedades a um objeto Number.
 
 ## Methods
@@ -67,7 +67,7 @@ Os principais usos para o objeto `Number` são:
 
 ## Instâncias `Number`
 
-Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
+Toda instância `Number` herdam de {{jsxref("Number")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
 
 ### Métodos
 

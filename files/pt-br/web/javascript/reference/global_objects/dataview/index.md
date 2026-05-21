@@ -107,7 +107,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Propriedades
 
-Todas as instâncias de `DataView` herdam {{jsxref("DataView.prototype")}} e permitem a adição de propriedades a todos os objetos DataView.
+Todas as instâncias de `DataView` herdam {{jsxref("DataView")}} e permitem a adição de propriedades a todos os objetos DataView.
 
 <!-- TODO: page macro not supported: page('en-US/Web/JavaScript/Reference/Global_Objects/DataView/prototype','Properties') -->
 

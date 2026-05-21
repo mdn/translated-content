@@ -667,7 +667,7 @@ var re = new RegExp("\\w+");
 
 ## Propriedades
 
-- {{jsxref("RegExp.prototype")}}
+- {{jsxref("RegExp")}}
   - : Permite a adição de propriedades a todos os objetos.
 - `RegExp.length`
   - : O valor of `RegExp.length` é 2.

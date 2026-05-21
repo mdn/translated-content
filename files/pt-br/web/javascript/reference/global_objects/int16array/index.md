@@ -27,7 +27,7 @@ Para obter mais informações sobre a sintaxe do construtor e os parâmetros, co
   - : Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int16Array.name")}}
   - : Retorna o valor da string do nome do construtor. No caso do tipo `Int16Array`: "Int16Array".
-- {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
+- {{jsxref("TypedArray", "Int16Array.prototype")}}
   - : Protótipo para os objetos TypedArray.
 
 ## Métodos
@@ -39,7 +39,7 @@ Para obter mais informações sobre a sintaxe do construtor e os parâmetros, co
 
 ## `Int16Array` prototype
 
-Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos `Int16Array` objetos herdam de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriedades
 

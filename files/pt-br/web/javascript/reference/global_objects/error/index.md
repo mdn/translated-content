@@ -26,7 +26,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 Erros em tempo de execução resultam em novos objetos `Error` sendo criados e lançados.
 
-Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error.prototype")}}.
+Esta página documenta o uso do objeto `Error` em si e seu uso como uma função construtora. Para uma lista de propriedades e métodos herdados por instâncias de `Error`, veja {{jsxref("Error")}}.
 
 ### Tipos de erro
 
@@ -49,7 +49,7 @@ Além do construtor genérico de `Error`, existem outros seis construtores princ
 
 ## Propriedades
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
   - : Permite a criação de propriedades para instâncias de `Error`.
 
 ## Métodos
@@ -143,6 +143,6 @@ try {
 
 ## Veja também
 
-- {{jsxref("Error.prototype")}}
+- {{jsxref("Error")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try...catch")}}

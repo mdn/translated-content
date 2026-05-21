@@ -27,7 +27,7 @@ Para mais informações sobre a síntaxe de construção e os parâmetros, veja 
   - : Método estático cujo o valor é `0`. Para o tamanho atual (número de elementos), veja {{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Float32Array.name")}}
   - : Retorna o valor em string do nome do constructor. No caso de `Float32Array` é "Float32Array".
-- {{jsxref("TypedArray.prototype", "Float32Array.prototype")}}
+- {{jsxref("TypedArray", "Float32Array.prototype")}}
   - : Prototype para os objetos _TypedArray_.
 
 ## Métodos
@@ -39,7 +39,7 @@ Para mais informações sobre a síntaxe de construção e os parâmetros, veja 
 
 ## `Float32Array` prototype
 
-Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos os objetos `Float32Array` herdam de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriedades
 

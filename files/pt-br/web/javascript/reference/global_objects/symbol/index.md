@@ -69,7 +69,7 @@ O método {{jsxref("Object.getOwnPropertySymbols()")}} retorna um array de símb
 
 - `Symbol.length`
   - : Propriedade de tamanho cujo valor é 1.
-- {{jsxref("Symbol.prototype")}}
+- {{jsxref("Symbol")}}
   - : Representa o protótipo do `Symbol` construtor.
 
 ### Símbolos conhecidos
@@ -100,7 +100,7 @@ Em adição para seus próprios símbolos, JavaScript possui alguns símbolos bu
 
 ## `Symbol` protótipo
 
-Todos os símbolos herdados de {{jsxref("Symbol.prototype")}}.
+Todos os símbolos herdados de {{jsxref("Symbol")}}.
 
 ### Propriedades
 

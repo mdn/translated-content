@@ -51,7 +51,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
   - : The `ArrayBuffer` constructor's length property whose value is 1.
 - {{jsxref("ArrayBuffer/Symbol.species", "get ArrayBuffer[@@species]")}}
   - : The constructor function that is used to create derived objects.
-- {{jsxref("ArrayBuffer.prototype")}}
+- {{jsxref("ArrayBuffer")}}
   - : Allows the addition of properties to all `ArrayBuffer` objects.
 
 ## Methods
@@ -63,7 +63,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ## Instances
 
-All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer.prototype")}}.
+All `ArrayBuffer` instances inherit from {{jsxref("ArrayBuffer")}}.
 
 ### Properties
 

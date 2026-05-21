@@ -200,7 +200,7 @@ Boolean(12n);
 
 ## Propriedades
 
-- {{jsxref("BigInt.prototype")}}
+- {{jsxref("BigInt")}}
   - : Permite a adição de propriedades a um objeto `BigInt`.
 
 ## Instâncias `BigInt`

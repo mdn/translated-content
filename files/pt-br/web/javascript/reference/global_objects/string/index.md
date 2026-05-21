@@ -120,7 +120,7 @@ console.log(eval(s2.valueOf())); // retorna o número 4
 
 ## Propriedades
 
-- {{jsxref("String.prototype")}}
+- {{jsxref("String")}}
   - : Permite a adição de propriedades a um objeto String.
 
 ## Métodos

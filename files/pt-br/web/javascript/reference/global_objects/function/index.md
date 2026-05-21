@@ -35,7 +35,7 @@ Invocar o construtor `Function` como uma função (sem usar o operador `new`) te
 
 ## Propriedades e Métodos da `Function`
 
-O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function.prototype")}}.
+O objeto global `Function` não tem métodos ou propriedades próprias, no entanto, como ela é uma função, ela herda alguns métodos e propriedades através do prototype chain do {{jsxref("Function")}}.
 
 ## `Function` prototype object
 
@@ -49,7 +49,7 @@ O objeto global `Function` não tem métodos ou propriedades próprias, no entan
 
 ## `Function` instances
 
-`Function` instances inherit methods and properties from {{jsxref("Function.prototype")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
+`Function` instances inherit methods and properties from {{jsxref("Function")}}. As with all constructors, you can change the constructor's prototype object to make changes to all `Function` instances.
 
 ## Exemplos
 

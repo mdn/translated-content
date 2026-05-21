@@ -196,7 +196,7 @@ var slice = Array.prototype.slice;
 slice.apply(arguments);
 ```
 
-Com `bind()`, isso pode ser simplificado. No seguinte trecho de código, `slice` é uma função vinculada à função {{jsxref("Function.prototype.apply()", "apply()")}} de {{jsxref("Function.prototype")}}, com o valor `this` definido com a função {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array.prototype")}}. Isso significa que chamadas adicionais de `apply()` podem ser eliminadas:
+Com `bind()`, isso pode ser simplificado. No seguinte trecho de código, `slice` é uma função vinculada à função {{jsxref("Function.prototype.apply()", "apply()")}} de {{jsxref("Function")}}, com o valor `this` definido com a função {{jsxref("Array.prototype.slice()", "slice()")}} de {{jsxref("Array")}}. Isso significa que chamadas adicionais de `apply()` podem ser eliminadas:
 
 ```js
 // mesmo que "slice" no exemplo anterior

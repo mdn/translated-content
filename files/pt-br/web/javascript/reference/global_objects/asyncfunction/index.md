@@ -41,7 +41,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 - **`AsyncFunction.length`**
   - : A propriedade tamanho do construtor da `AsyncFunction` cujo valor é 1.
-- {{jsxref("AsyncFunction.prototype")}}
+- {{jsxref("AsyncFunction")}}
   - : Permite a adição de propriedades para todos os objetos async function.
 
 ## `AsyncFunction` prototype object
@@ -52,7 +52,7 @@ Invocar o construtor `AsyncFunction` como uma função (sem usar o operador `new
 
 ## `AsyncFunction` instances
 
-Instância `AsyncFunction` herdam métodos e propriedades do {{jsxref("AsyncFunction.prototype")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do `AsyncFunction`.
+Instância `AsyncFunction` herdam métodos e propriedades do {{jsxref("AsyncFunction")}}. Com todos os contrutores, que podem mudar o prototype do objeto construtor para fazer mudanças em todas as instâncias do `AsyncFunction`.
 
 ## Exemplos
 
