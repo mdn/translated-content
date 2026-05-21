@@ -15,7 +15,7 @@ La propriété `__proto__` de {{jsxref("Object.prototype")}} est une propriété
 
 L'utilisation de `__proto__` est sujet à controverse. Elle a été déconseillée par plusieurs personnes et n'avait jamais été incluse dans la spécification ECMAScript. Cependant, de nombreux navigateurs ont décidé de l'implémenter. À l'heure actuelle, la propriété `__proto__` a été standardisée avec la spécification ECMAScript 2015 et sera officiellement supportée à l'avenir. Une alternative à cette propriété peut être l'utilisation des méthodes {{jsxref("Object.getPrototypeOf")}}/{{jsxref("Reflect.getPrototypeOf")}} et {{jsxref("Object.setPrototypeOf")}}/{{jsxref("Reflect.setPrototypeOf")}}. Cependant, modifier le `[[Prototype]]` d'un objet est toujours une opération lente qui doit être évitée le plus possible pour des raisons de performances.
 
-La propriété `__proto__` peut également être utilisée avec un littéral objet afin de définir le `[[Prototype]]` lors de la construction (ce qui en fait une alternative à {{jsxref("Object.create()")}}. Voir la page sur {{jsxref("Opérateurs/Initialisateur_objet","les initialisateurs d'objet","",1)}}.
+La propriété `__proto__` peut également être utilisée avec un littéral objet afin de définir le `[[Prototype]]` lors de la construction (ce qui en fait une alternative à {{jsxref("Object.create()")}}. Voir la page sur {{jsxref("Operators/Initialisateur_objet","les initialisateurs d'objet","",1)}}.
 
 ## Syntaxe
 

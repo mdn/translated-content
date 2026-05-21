@@ -64,7 +64,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 - {{jsxref("Reflect.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
 
 ### Invariants
 

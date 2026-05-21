@@ -51,7 +51,7 @@ On notera que `set` :
 - ne doit pas apparaître dans un littéral objet qui possède un autre `set` ou une autre propriété avec la même clé :
   ( `{ set x(v) { }, set x(v) { } }` et `{ x: ..., set x(v) { } }` seront interdits)
 
-On peut retirer un mutateur d'un objet grâce à l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}}.
+On peut retirer un mutateur d'un objet grâce à l'opérateur {{jsxref("Operators/L_opérateur_delete","delete")}}.
 
 ## Exemples
 
@@ -72,7 +72,7 @@ On notera que `courant` n'est pas défini. Toute tentative pour y accéder renve
 
 ### Supprimer un mutateur grâce à l'opérateur `delete`
 
-Si on souhaite retirer un mutateur, on peut simplement utiliser l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}} :
+Si on souhaite retirer un mutateur, on peut simplement utiliser l'opérateur {{jsxref("Operators/L_opérateur_delete","delete")}} :
 
 ```js
 delete o.courant;
@@ -122,8 +122,8 @@ console.log(obj.bidule); // "bidule"
 
 ## Voir aussi
 
-- {{jsxref("Fonctions/get","get")}}
-- {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
+- {{jsxref("Functions/get","get")}}
+- {{jsxref("Operators/L_opérateur_delete","delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

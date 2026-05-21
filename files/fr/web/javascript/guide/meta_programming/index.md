@@ -31,7 +31,7 @@ Ici, l'objet `Proxy` définit une `cible` (ici c'est un objet vide) et un gestio
 
 Lorsqu'on utilise les proxies et leurs fonctionnalités, on utilisera les termes suivants :
 
-- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","",1)}}
+- {{jsxref("Global_Objects/Proxy/handler","gestionnaire (handler)","",1)}}
   - : L'objet qui contient les trappes.
 - trappes
   - : Les méthodes qui fournissent l'accès aux propriétés. Ce concept est analogue aux trappes utilisées dans les systèmes d'exploitations.
@@ -55,7 +55,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
   <tbody>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+        {{jsxref("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
       </td>
       <td>
         {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
@@ -69,7 +69,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+        {{jsxref("Global_Objects/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
       </td>
       <td>
         {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
@@ -84,7 +84,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+        {{jsxref("Global_Objects/Proxy/handler/isExtensible", "handler.isExtensible()")}}
       </td>
       <td>
         <p>{{jsxref("Object.isExtensible()")}}</p>
@@ -99,7 +99,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+        {{jsxref("Global_Objects/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
       </td>
       <td>
         <p>{{jsxref("Object.preventExtensions()")}}</p>
@@ -115,7 +115,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+        {{jsxref("Global_Objects/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
       </td>
       <td>
         <p>{{jsxref("Object.getOwnPropertyDescriptor()")}}</p>
@@ -155,7 +155,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+        {{jsxref("Global_Objects/Proxy/handler/defineProperty", "handler.defineProperty()")}}
       </td>
       <td>
         <p>{{jsxref("Object.defineProperty()")}}</p>
@@ -189,7 +189,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}
+        {{jsxref("Global_Objects/Proxy/handler/has", "handler.has()")}}
       </td>
       <td>
         <p>Requête d'une propriété : <code>toto in proxy</code></p>
@@ -213,7 +213,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}
+        {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
         <p>
@@ -243,7 +243,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}
+        {{jsxref("Global_Objects/Proxy/handler/set", "handler.set()")}}
       </td>
       <td>
         <p>
@@ -276,7 +276,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+        {{jsxref("Global_Objects/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
       </td>
       <td>
         <p>
@@ -292,7 +292,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/enumerate", "handler.enumerate()")}}
+        {{jsxref("Global_Objects/Proxy/handler/enumerate", "handler.enumerate()")}}
       </td>
       <td>
         <p>
@@ -305,7 +305,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+        {{jsxref("Global_Objects/Proxy/handler/ownKeys", "handler.ownKeys()")}}
       </td>
       <td>
         <p>
@@ -326,7 +326,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}
+        {{jsxref("Global_Objects/Proxy/handler/apply", "handler.apply()")}}
       </td>
       <td>
         <p>
@@ -341,7 +341,7 @@ Le tableau suivant résume les différentes trappes disponibles pour les objets 
     </tr>
     <tr>
       <td>
-        {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
+        {{jsxref("Global_Objects/Proxy/handler/construct", "handler.construct()")}}
       </td>
       <td>
         <p>
@@ -380,7 +380,7 @@ typeof proxy; // "object", typeof ne déclenche aucune trappe
 
 ## Réflexion
 
-{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","",1)}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
+{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Global_Objects/Proxy/handler","gestionnaires de proxy","",1)}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
 
 `Reflect` aide à transférer les opérations par défaut depuis le gestionnaire vers la cible.
 

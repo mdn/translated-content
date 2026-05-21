@@ -24,7 +24,7 @@ console.log(Bar.prototype.isPrototypeOf(bar));
 ```
 
 > [!NOTE]
-> `isPrototypeOf()` est différent de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
+> `isPrototypeOf()` est différent de l'opérateur {{jsxref("Operators/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
 
 ## Syntaxe
 
@@ -90,7 +90,7 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 
 ## Voir aussi
 
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

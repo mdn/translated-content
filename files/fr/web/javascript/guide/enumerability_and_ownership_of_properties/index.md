@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Enumerability_and_ownership_of_properties
 
 {{JsSidebar("More")}}
 
-Les propriétés dites « énumérables » sont celles pour lesquelles la caractéristique interne `[[Enumerable]]` vaut `true`. C'est le cas par défaut pour les propriétés qui sont créées grâce à une affectation simple ou grâce à un initialisateur de propriété. Les propriétés définies avec des méthodes analogues à {{jsxref("Object.defineProperty()")}} auront `[[Enumerable]]` à `false`). Les propriétés énumérables sont celles qui seront parcourues dans une boucle {{jsxref("Instructions/for...in","for..in")}} (sauf si le nom de la propriété est un {{jsxref("Symbol")}}).
+Les propriétés dites « énumérables » sont celles pour lesquelles la caractéristique interne `[[Enumerable]]` vaut `true`. C'est le cas par défaut pour les propriétés qui sont créées grâce à une affectation simple ou grâce à un initialisateur de propriété. Les propriétés définies avec des méthodes analogues à {{jsxref("Object.defineProperty()")}} auront `[[Enumerable]]` à `false`). Les propriétés énumérables sont celles qui seront parcourues dans une boucle {{jsxref("Statements/for...in","for..in")}} (sauf si le nom de la propriété est un {{jsxref("Symbol")}}).
 
 Le rattachement des propriétés est détérminé selon que la propriété est directement rattachée à l'objet et non à sa chaîne de prototypes. Il est également possible de récupérer l'ensemble des propriétés d'un objet. Dans le tableau suivant, on détaille les moyens possibles pour détecter, parcourir, énumérer, récupérer les propriétés d'un objet.
 

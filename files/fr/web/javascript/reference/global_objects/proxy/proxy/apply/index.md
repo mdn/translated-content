@@ -46,7 +46,7 @@ Les paramètres suivants sont passés à la méthode `apply`. Ici, `this` est li
 - `cible`
   - : L'objet cible.
 - `thisArg`
-  - : L'argument {{jsxref("Opérateurs/L_opérateur_this","this")}} pour cet appel.
+  - : L'argument {{jsxref("Operators/L_opérateur_this","this")}} pour cet appel.
 - `listeArguments`
   - : La liste d'arguments pour l'appel.
 

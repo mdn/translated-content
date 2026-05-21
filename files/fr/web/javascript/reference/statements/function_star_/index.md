@@ -24,7 +24,7 @@ console.log(gen.next().value);
 // Expected output: 20
 ```
 
-Il est également possible de définir un générateur en utilisant le constructeur {{jsxref("GeneratorFunction")}} et une expression {{jsxref("Opérateurs/function*", "function*")}}.
+Il est également possible de définir un générateur en utilisant le constructeur {{jsxref("GeneratorFunction")}} et une expression {{jsxref("Operators/function*", "function*")}}.
 
 ## Syntaxe
 
@@ -47,7 +47,7 @@ Les générateurs sont des fonctions qu'il est possible de quitter puis de repre
 
 Les générateurs, combinés avec [les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises), sont des outils de programmation asynchrones puissants qui permettent de réduire les inconvénients causés par les _callbacks_ (fonctions de rappel) et [l'inversion de contrôle](https://frontendmasters.com/courses/rethinking-async-js/callback-problems-inversion-of-control/).
 
-Lorsqu'on appelle une fonction génératrice, son corps n'est pas exécuté immédiatement, c'est un {{jsxref("Les_protocoles_iteration","itérateur","#le_proprocole_itérateur",1)}} qui est renvoyé pour la fonction. Lorsque la méthode `next()` de l'itérateur est appelée, le corps de la fonction génératrice est utilisé jusqu'à ce que la première expression {{jsxref("Opérateurs/yield", "yield")}} soit trouvée. Cette expression définira la valeur à renvoyer pour l'itérateur. Si on utilise {{jsxref("Opérateurs/yield*", "yield*")}}, on pourra déléguer la génération des valeurs à une autre fonction génératrice. La méthode `next()` renvoie un objet dont la propriété `value` contient la valeur générée et une propriété `done` qui indique si le générateur a produit sa dernière valeur ou non. Lorsqu'on appelle la méthode `next()` avec un argument, cela reprendra l'exécution de la fonction génératrice et remplacera la valeur de l'expression `yield` (là où l'exécution avait été interrompue) avec la valeur de l'argument passé à `next()`.
+Lorsqu'on appelle une fonction génératrice, son corps n'est pas exécuté immédiatement, c'est un {{jsxref("Les_protocoles_iteration","itérateur","#le_proprocole_itérateur",1)}} qui est renvoyé pour la fonction. Lorsque la méthode `next()` de l'itérateur est appelée, le corps de la fonction génératrice est utilisé jusqu'à ce que la première expression {{jsxref("Operators/yield", "yield")}} soit trouvée. Cette expression définira la valeur à renvoyer pour l'itérateur. Si on utilise {{jsxref("Operators/yield*", "yield*")}}, on pourra déléguer la génération des valeurs à une autre fonction génératrice. La méthode `next()` renvoie un objet dont la propriété `value` contient la valeur générée et une propriété `done` qui indique si le générateur a produit sa dernière valeur ou non. Lorsqu'on appelle la méthode `next()` avec un argument, cela reprendra l'exécution de la fonction génératrice et remplacera la valeur de l'expression `yield` (là où l'exécution avait été interrompue) avec la valeur de l'argument passé à `next()`.
 
 On peut utiliser une instruction `return` dans un générateur. Lorsque cette instruction sera exécutée, le générateur sera terminé (`done` vaudra `true`). La valeur renvoyée par l'instruction `return` sera la valeur de terminaison du générateur. Une fois qu'un générateur est terminé, il ne peut plus produire d'autres valeurs.
 
@@ -197,14 +197,14 @@ console.log(truc.next()); // {value: 10, done: false}
 
 ## Voir aussi
 
-- L'expression {{jsxref("Opérateurs/function*", "function*")}}
+- L'expression {{jsxref("Operators/function*", "function*")}}
 - L'objet {{jsxref("GeneratorFunction")}}
 - {{jsxref("Les_protocoles_iteration","itérateur","#le_protocole_itérateur",1)}}
-- {{jsxref("Opérateurs/yield", "yield")}}
-- {{jsxref("Opérateurs/yield*", "yield*")}}
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
 - L'objet {{jsxref("Function")}}
-- {{jsxref("Instructions/function", "Les déclarations de fonction","",1)}}
-- {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction","",1)}}
+- {{jsxref("Statements/function", "Les déclarations de fonction","",1)}}
+- {{jsxref("Operators/L_opérateur_function", "Les expressions de fonction","",1)}}
 - {{jsxref("Fonctions", "Les fonctions","",1)}}
 - D'autres ressources disponibles sur le Web :
   - [Regenerator](https://facebook.github.io/regenerator/) un compilateur permettant de traduire des générateurs ES2015 en du code JavaScript basé sur ES5

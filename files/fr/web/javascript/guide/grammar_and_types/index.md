@@ -45,11 +45,11 @@ La syntaxe utilisée pour **les commentaires** est la même que celle utilisée 
 
 Il existe trois types de déclarations de variable en JavaScript.
 
-- {{jsxref("Instructions/var", "var")}}
+- {{jsxref("Statements/var", "var")}}
   - : On déclare une variable, éventuellement en initialisant sa valeur.
-- {{jsxref("Instructions/let", "let")}}
+- {{jsxref("Statements/let", "let")}}
   - : On déclare une variable dont la portée est celle du bloc courant, éventuellement en initialisant sa valeur.
-- {{jsxref("Instructions/const", "const")}}
+- {{jsxref("Statements/const", "const")}}
   - : On déclare une constante nommée, dont la portée est celle du bloc courant, accessible en lecture seule.
 
 ### Variables
@@ -67,8 +67,8 @@ Voici des exemples d'identifiants valides : `Nombre_touches`, `temp99`, `$credit
 
 Il est possible de déclarer des variables de plusieurs façons :
 
-- En utilisant le mot-clé {{jsxref("Instructions/var","var")}}, par exemple : `var x = 42`. Cette syntaxe peut être utilisée pour déclarer des variables [locales ou globales](#portées) selon le contexte d'exécution.
-- En utilisant le mot-clé {{jsxref("Instructions/const","const")}} ou le mot-clé {{jsxref("Instructions/let","let")}}, par exemple avec `let y = 13`. Cette syntaxe peut être utilisée pour déclarer une variable dont la portée sera celle du bloc. Voir le paragraphe sur [les portées des variables](#portées) ci-après.
+- En utilisant le mot-clé {{jsxref("Statements/var","var")}}, par exemple : `var x = 42`. Cette syntaxe peut être utilisée pour déclarer des variables [locales ou globales](#portées) selon le contexte d'exécution.
+- En utilisant le mot-clé {{jsxref("Statements/const","const")}} ou le mot-clé {{jsxref("Statements/let","let")}}, par exemple avec `let y = 13`. Cette syntaxe peut être utilisée pour déclarer une variable dont la portée sera celle du bloc. Voir le paragraphe sur [les portées des variables](#portées) ci-après.
 
 Il est également possible d'affecter une valeur à une variable sans utiliser de mot-clé (ex. `x = 42`). Cela créera une variable globale non-déclarée. Cette forme génèrera également un avertissement avec [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). Attention, les variables globales non-déclarées peuvent mener à des comportements inattendus et sont considérées comme une mauvaise pratique.
 
@@ -138,7 +138,7 @@ if (true) {
 console.log(x); // x vaut 5
 ```
 
-La déclaration {{jsxref("Instructions/let","let")}}, introduite avec ECMAScript 2015, ajoute un nouveau comportement :
+La déclaration {{jsxref("Statements/let","let")}}, introduite avec ECMAScript 2015, ajoute un nouveau comportement :
 
 ```js
 if (true) {
@@ -229,7 +229,7 @@ Ainsi, il est possible d'accéder à des variables déclarées dans une fenêtre
 
 ### Constantes
 
-Il est possible de créer des constantes en lecture seule en utilisant le mot-clé {{jsxref("Instructions/const","const")}}. La syntaxe d'un identifiant pour une constante est la même que pour les variables (elle doit débuter avec une lettre, un tiret du bas, un symbole dollar et peut contenir des caractères numériques, alphabétiques et des tirets bas voire des caractères Unicode).
+Il est possible de créer des constantes en lecture seule en utilisant le mot-clé {{jsxref("Statements/const","const")}}. La syntaxe d'un identifiant pour une constante est la même que pour les variables (elle doit débuter avec une lettre, un tiret du bas, un symbole dollar et peut contenir des caractères numériques, alphabétiques et des tirets bas voire des caractères Unicode).
 
 ```js
 const préfixe = "212";
@@ -323,8 +323,8 @@ Avec des instructions impliquant d'autres opérateurs, JavaScript ne convertit p
 
 Si un nombre est représenté en mémoire par une chaîne de caractères, il y a des méthodes pour effectuer la bonne conversion :
 
-- {{jsxref("Objets_globaux/parseInt", "parseInt()")}}
-- {{jsxref("Objets_globaux/parseFloat", "parseFloat()")}}
+- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
 
 `parseInt` renverra uniquement des nombres entiers, étant ainsi inappropriée pour la manipulation de nombre décimaux. Une bonne pratique pour cette fonction est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé (base 2, base 10...).
 

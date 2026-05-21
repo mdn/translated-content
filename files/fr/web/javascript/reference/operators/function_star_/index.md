@@ -44,7 +44,7 @@ function* [nom]([param1[, param2[, …, paramN]]]) {
 
 ## Description
 
-Une expression `function*` est très semblable à une instruction {{jsxref('Instructions/function*', 'function*')}}, elle possède également une syntaxe similaire. La différence principale entre une expression `function*` et une instruction `function*` est le nom de la fonction. En effet, dans les expressions, le nom peut être omis pour créer une fonction génératrice _anonyme_. Voir également le chapitre sur les [fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
+Une expression `function*` est très semblable à une instruction {{jsxref('Statements/function*', 'function*')}}, elle possède également une syntaxe similaire. La différence principale entre une expression `function*` et une instruction `function*` est le nom de la fonction. En effet, dans les expressions, le nom peut être omis pour créer une fonction génératrice _anonyme_. Voir également le chapitre sur les [fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
 
 ## Exemples
 
@@ -66,12 +66,12 @@ var x = function* (y) {
 
 ## Voir aussi
 
-- L'instruction {{jsxref("Instructions/function*", "function*")}}
+- L'instruction {{jsxref("Statements/function*", "function*")}}
 - L'objet {{jsxref("GeneratorFunction")}}
 - [Le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Opérateurs/yield", "yield")}}
-- {{jsxref("Opérateurs/yield*", "yield*")}}
+- {{jsxref("Operators/yield", "yield")}}
+- {{jsxref("Operators/yield*", "yield*")}}
 - L'objet {{jsxref("Function")}}
-- L'instruction {{jsxref("Instructions/function", "function")}}
-- L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
+- L'instruction {{jsxref("Statements/function", "function")}}
+- L'expression {{jsxref("Operators/L_opérateur_function", "function")}}
 - {{jsxref("Fonctions", "Fonctions et portée des fonctions","",1)}}

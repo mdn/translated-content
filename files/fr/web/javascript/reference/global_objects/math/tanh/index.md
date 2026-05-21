@@ -56,7 +56,7 @@ Math.tanh(1); // 0.7615941559557649
 
 ## Prothèse d'émulation (_polyfill_)
 
-Cette méthode peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
+Cette méthode peut être émulée grâce à la fonction {{jsxref("Global_Objects/Math/exp", "Math.exp()")}} :
 
 ```js
 Math.tanh =
@@ -68,7 +68,7 @@ Math.tanh =
   };
 ```
 
-et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}}&nbsp;:
+et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Global_Objects/Math/exp", "Math.exp()")}}&nbsp;:
 
 ```js
 Math.tanhx =

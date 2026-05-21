@@ -87,7 +87,7 @@ delete arbres[3];
 3 in arbres; // renvoie false
 ```
 
-Si une propriété est définie à {{jsxref("Objets_globaux/undefined", "undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
+Si une propriété est définie à {{jsxref("Global_Objects/undefined", "undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
 
 ```js
 var voiture = { marque: "Honda", modèle: "Accord", année: 1998 };
@@ -117,8 +117,8 @@ L'opérateur `in` renvoie `true` pour les propriétés qui appartiennent à la c
 
 ## Voir aussi
 
-- {{jsxref("Instructions/for...in","for...in")}}
-- {{jsxref("Opérateurs/L_opérateur_delete","delete")}}
+- {{jsxref("Statements/for...in","for...in")}}
+- {{jsxref("Operators/L_opérateur_delete","delete")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Caractère énumérable des propriétés et rattachement](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

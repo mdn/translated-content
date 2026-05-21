@@ -73,7 +73,7 @@ void (function iife() {
 
 ## Les URI JavaScript
 
-Lorsqu'un navigateur utilise une URI avec `javascript:`, le code de l'URI est évalué et le résultat remplace le contenu de la page, sauf si la valeur renvoyée vaut {{jsxref("Objets_globaux/undefined","undefined")}}. L'utilisateur `void` peut alors être utilisé pour renvoyer cette valeur. Par exemple :
+Lorsqu'un navigateur utilise une URI avec `javascript:`, le code de l'URI est évalué et le résultat remplace le contenu de la page, sauf si la valeur renvoyée vaut {{jsxref("Global_Objects/undefined","undefined")}}. L'utilisateur `void` peut alors être utilisé pour renvoyer cette valeur. Par exemple :
 
 ```html
 <a href="javascript:void(0);"> Cliquer ici (sans effet) </a>

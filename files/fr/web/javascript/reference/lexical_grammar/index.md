@@ -128,39 +128,39 @@ Si vous souhaitez placer un commentaire en début de fichier sans indiquer d'env
 
 ### Mots-clés réservés selon ECMAScript 2015
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/switch", "case")}}
-- {{jsxref("Opérateurs/class","class")}}
-- {{jsxref("Instructions/try...catch", "catch")}}
-- {{jsxref("Instructions/const", "const")}}
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/debugger", "debugger")}}
-- {{jsxref("Instructions/default", "default")}}
-- {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}
-- {{jsxref("Instructions/while", "do")}}
-- {{jsxref("Instructions/if...else", "else")}}
-- {{jsxref("Instructions/export", "export")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/switch", "case")}}
+- {{jsxref("Operators/class","class")}}
+- {{jsxref("Statements/try...catch", "catch")}}
+- {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/debugger", "debugger")}}
+- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Operators/L_opérateur_delete", "delete")}}
+- {{jsxref("Statements/while", "do")}}
+- {{jsxref("Statements/if...else", "else")}}
+- {{jsxref("Statements/export", "export")}}
 - {{jsxref("Classes/extends","extends")}}
-- {{jsxref("Instructions/try...catch", "finally")}}
-- {{jsxref("Instructions/for", "for")}}
-- {{jsxref("Instructions/function", "function")}}
-- {{jsxref("Instructions/if...else", "if")}}
-- {{jsxref("Instructions/import", "import")}}
-- {{jsxref("Instructions/for...in", "in")}}
-- {{jsxref("Opérateurs/instanceof", "instanceof")}}
-- {{jsxref("Opérateurs/L_opérateur_new", "new")}}
-- {{jsxref("Instructions/return", "return")}}
-- {{jsxref("Opérateurs/super", "super")}}
-- {{jsxref("Instructions/switch", "switch")}}
-- {{jsxref("Opérateurs/L_opérateur_this", "this")}}
-- {{jsxref("Instructions/throw", "throw")}}
-- {{jsxref("Instructions/try...catch", "try")}}
-- {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}}
-- {{jsxref("Instructions/var", "var")}}
-- {{jsxref("Opérateurs/L_opérateur_void", "void")}}
-- {{jsxref("Instructions/while", "while")}}
-- {{jsxref("Instructions/with", "with")}}
-- {{jsxref("Opérateurs/yield","yield")}}
+- {{jsxref("Statements/try...catch", "finally")}}
+- {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Statements/if...else", "if")}}
+- {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/for...in", "in")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("Operators/L_opérateur_new", "new")}}
+- {{jsxref("Statements/return", "return")}}
+- {{jsxref("Operators/super", "super")}}
+- {{jsxref("Statements/switch", "switch")}}
+- {{jsxref("Operators/L_opérateur_this", "this")}}
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try")}}
+- {{jsxref("Operators/L_opérateur_typeof", "typeof")}}
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Operators/L_opérateur_void", "void")}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/with", "with")}}
+- {{jsxref("Operators/yield","yield")}}
 
 ### Mots-clés réservés pour le futur
 
@@ -172,7 +172,7 @@ Les mots-clés qui suivent ont été réservés pour une utilisation future dans
 Les mots-clés suivants sont réservés dans du code en mode strict :
 
 - `implements`
-- {{jsxref("Instructions/let", "let")}}
+- {{jsxref("Statements/let", "let")}}
 - `package`
 - `protected`
 - `static`
@@ -328,7 +328,7 @@ Ils ont quelques limitations&nbsp;:
 
 ### Littéraux objets
 
-Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Opérateurs/Initialisateur_objet","Initialisateur d'objet","",1)}} pour plus d'informations.
+Voir aussi les pages {{jsxref("Object")}} et {{jsxref("Operators/Initialisateur_objet","Initialisateur d'objet","",1)}} pour plus d'informations.
 
 ```js
 var o = { a: "toto", b: "truc", c: 42 };

@@ -72,7 +72,7 @@ console.log(tp.triple()); // tp.triple n'est pas une fonction
 
 ### Utilisation depuis une autre méthode statique
 
-Afin d'appeler une autre méthode statique dans une méthode statique, on pourra utiliser {{jsxref("Opérateurs/L_opérateur_this","this")}}.
+Afin d'appeler une autre méthode statique dans une méthode statique, on pourra utiliser {{jsxref("Operators/L_opérateur_this","this")}}.
 
 ```js
 class StaticMethodCall {

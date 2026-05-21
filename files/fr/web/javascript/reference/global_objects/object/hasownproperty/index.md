@@ -40,7 +40,7 @@ Un booléen qui indique si l'objet possède ou non la propriété indiquée en a
 
 ## Description
 
-Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnProperty()`. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode `hasOwnProperty()` pourra être utilisée afin de vérifier la présence d'un index.
+Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnProperty()`. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Operators/L_opérateur_in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode `hasOwnProperty()` pourra être utilisée afin de vérifier la présence d'un index.
 
 ## Exemples
 
@@ -75,7 +75,7 @@ o.hasOwnProperty("hasOwnProperty");
 
 ### Parcourir les propriétés d'un objet
 
-L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
+L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle {{jsxref("Statements/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
 
 ```js
 var bidule = {
@@ -130,6 +130,6 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 - [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Instructions/for...in", "for...in")}}
-- {{jsxref("Opérateurs/L_opérateur_in", "in")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Operators/L_opérateur_in", "in")}}
 - [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

@@ -44,7 +44,7 @@ Un entier construit à partir de l'analyse de la chaîne de caractères passée 
 
 ## Description
 
-Voir la page {{jsxref("Objets_globaux/parseInt", "parseInt()")}} pour plus de détails et d'exemples. Cette méthode se comporte de façon identique à la fonction globale {{jsxref("Objets_globaux/parseInt", "parseInt()")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales) et on aura :
+Voir la page {{jsxref("Global_Objects/parseInt", "parseInt()")}} pour plus de détails et d'exemples. Cette méthode se comporte de façon identique à la fonction globale {{jsxref("Global_Objects/parseInt", "parseInt()")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales) et on aura :
 
 ```js
 Number.parseInt === parseInt; // true
@@ -71,4 +71,4 @@ if (Number.parseInt === undefined) {
 ## Voir aussi
 
 - L'objet {{jsxref("Number")}} auquel appartient cette fonction.
-- La méthode {{jsxref("Objets_globaux/parseInt","parseInt()")}} de l'objet global.
+- La méthode {{jsxref("Global_Objects/parseInt","parseInt()")}} de l'objet global.

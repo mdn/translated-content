@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
+L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Statements/bloc","bloc","",1)}} d'instructions).
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -41,7 +41,7 @@ Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne s
 
 ### Les propriétés ajoutées, modifiées ou supprimées
 
-Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Opérateurs/L_opérateur_delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
+Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Operators/L_opérateur_delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
 
 Si une propriété est modifiée dans une des itérations de la boucle et que la boucle itère ensuite sur cette propriété, sa valeur sera celle qui a été modifiée. Une propriété qui a été supprimée avant que la boucle n'itère sur celle-là ne sera pas dans la boucle. Les propriétés qui ont été ajoutées à l'objet pendant la boucle peuvent être ou ne pas être pris en compte.
 
@@ -54,7 +54,7 @@ Une bonne pratique consiste à ne pas ajouter, modifier ou supprimer une propri�
 
 Les éléments des indices d'un tableau sont des propriétés énumérables dont les noms sont des entiers, excepté cela, elles sont en tout point identiques aux propriétés des objets en général. Ici aussi, il n'y a aucune certitude que `for...in` renvoie les indices dans un ordre particulier. Cette instruction listera également les propriétés énumérables dont les noms ne sont pas des entiers et celles qui sont héritées.
 
-L'ordre dans lequel le parcours est effectué dépend de l'implémentation. Dans le cas d'un parcours de tableau utilisant `for...in`, on pourrait très bien avoir un ordre qui ne soit pas le même entre les différents environnements. Pour cette raison, il est préférable d'utiliser une boucle {{jsxref("Instructions/for","for")}} utilisant un compteur numérique (ou {{jsxref("Array.prototype.forEach","Array.forEach()")}} ou encore {{jsxref("Instructions/for...of","for...of")}}) lorsqu'on souhaite parcourir des tableaux dans un ordre bien défini.
+L'ordre dans lequel le parcours est effectué dépend de l'implémentation. Dans le cas d'un parcours de tableau utilisant `for...in`, on pourrait très bien avoir un ordre qui ne soit pas le même entre les différents environnements. Pour cette raison, il est préférable d'utiliser une boucle {{jsxref("Statements/for","for")}} utilisant un compteur numérique (ou {{jsxref("Array.prototype.forEach","Array.forEach()")}} ou encore {{jsxref("Statements/for...of","for...of")}}) lorsqu'on souhaite parcourir des tableaux dans un ordre bien défini.
 
 ### Itérer uniquement sur les propriétés non héritées
 
@@ -110,10 +110,10 @@ for (var prop in obj) {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/for...of","for...of")}} : une instruction semblable qui permet d'itérer sur les valeurs des propriétés
-- {{jsxref("Instructions/for","for")}}
+- {{jsxref("Statements/for...of","for...of")}} : une instruction semblable qui permet d'itérer sur les valeurs des propriétés
+- {{jsxref("Statements/for","for")}}
 - [Le rattachement et le caractère énumérable des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Instructions/for_each...in", "for each...in")}} {{deprecated_inline}} : une instruction semblable, dépréciée, qui parcourt les valeurs des propriétés d'un objet plutôt que les noms.
+- {{jsxref("Statements/for_each...in", "for each...in")}} {{deprecated_inline}} : une instruction semblable, dépréciée, qui parcourt les valeurs des propriétés d'un objet plutôt que les noms.
