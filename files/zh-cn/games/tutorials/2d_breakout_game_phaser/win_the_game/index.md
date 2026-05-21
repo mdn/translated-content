@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 12 步**。在我们的游戏中实现获胜非常简单：如果你销毁了所有砖块，那么你就赢了。
+这是 [Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 个步骤中的**第 12 步**。在我们的游戏中实现获胜非常简单：如果你摧毁了所有砖块，那么你就赢了。
 
 ## 如何获胜？
 
