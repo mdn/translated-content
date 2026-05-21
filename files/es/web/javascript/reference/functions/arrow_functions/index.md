@@ -153,7 +153,7 @@ Los {{JSxRef("Functions/parametros_rest", "parámetros rest")}} son compatibles:
 (a, b, ...r) => expression;
 ```
 
-Se admiten los {{JSxRef("Functions/Parametros_por_defecto", "parámetros predeterminados")}}:
+Se admiten los {{JSxRef("Functions/Default_parameters", "parámetros predeterminados")}}:
 
 ```js
 (a = 400, b = 20, c) => expression;

@@ -581,7 +581,7 @@ function multiply(a, b = 1) {
 multiply(5); // 5
 ```
 
-Para obtener más detalles, consulta {{JSxRef("Functions/Parametros_predeterminados", "parámetros predeterminados")}} en la referencia.
+Para obtener más detalles, consulta {{JSxRef("Functions/Default_parameters", "parámetros predeterminados")}} en la referencia.
 
 ### Parámetros `rest`
 
