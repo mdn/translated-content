@@ -50,11 +50,11 @@ WebAssembly разработан для дополнения JavaScript – ис
   - : `WebAssembly.Memory` это изменяемый {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} содержащий в себе данные не имеющие типа к которым обращается `Instance`.
 - {{jsxref("Global_objects/WebAssembly/Table", "WebAssembly.Table()")}}
   - : `WebAssembly.Table` объект является изменяемым типизированным массивом значений, таких как ссылки на функции, которые доступны `Instance`.
-- {{jsxref("WebAssembly.CompileError()")}}
+- [`WebAssembly.CompileError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
   - : Создаёт новый WebAssembly `CompileError` объект.
-- {{jsxref("WebAssembly.LinkError()")}}
+- [`WebAssembly.LinkError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
   - : Создаёт новый WebAssembly `LinkError` объект.
-- {{jsxref("WebAssembly.RuntimeError()")}}
+- [`WebAssembly.RuntimeError()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
   - : Создаёт новый WebAssembly `RuntimeError` объект.
 
 ## Примеры
