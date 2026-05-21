@@ -22,7 +22,7 @@ Comme les autres primitives de filtres, elle traite les composantes colorimétri
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
+Cet élément implémente l'interface {{DOMxRef("SVGFEGaussianBlurElement")}}.
 
 ## Exemple
 
@@ -88,20 +88,20 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 ## Voir aussi
 
 - [Attributs SVG pour les primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_filtre)
-- {{SVGElement("filter")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
+- L'élément {{SVGElement("filter")}}
+- L'élément {{SVGElement("feBlend")}}
+- L'élément {{SVGElement("feColorMatrix")}}
+- L'élément {{SVGElement("feComponentTransfer")}}
+- L'élément {{SVGElement("feComposite")}}
+- L'élément {{SVGElement("feConvolveMatrix")}}
+- L'élément {{SVGElement("feDiffuseLighting")}}
+- L'élément {{SVGElement("feDisplacementMap")}}
+- L'élément {{SVGElement("feFlood")}}
+- L'élément {{SVGElement("feImage")}}
+- L'élément {{SVGElement("feMerge")}}
+- L'élément {{SVGElement("feMorphology")}}
+- L'élément {{SVGElement("feOffset")}}
+- L'élément {{SVGElement("feSpecularLighting")}}
+- L'élément {{SVGElement("feTile")}}
+- L'élément {{SVGElement("feTurbulence")}}
 - [Tutoriel SVG&nbsp;: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
