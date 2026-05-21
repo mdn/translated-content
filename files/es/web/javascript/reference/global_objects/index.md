@@ -20,7 +20,7 @@ Estas propiedades globales devuelven un valor simple; ellos no tienen propiedade
 - {{jsxref("Infinity")}}
 - {{jsxref("NaN")}}
 - {{jsxref("undefined")}}
-- {{jsxref("null")}} literal
+- {{jsxref("Operators/null", "null")}} literal
 - {{JSxRef("globalThis")}}
 
 ### Propiedades de funciones
@@ -28,7 +28,7 @@ Estas propiedades globales devuelven un valor simple; ellos no tienen propiedade
 Estas funciones globales -funciones llamadas globalmente en lugar de un objeto- devuelven directamente sus resultados a la persona que llama.
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}

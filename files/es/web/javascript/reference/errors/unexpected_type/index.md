@@ -24,7 +24,7 @@ TypeError: "x" is not a symbol
 
 ## ¿Qué salió mal?
 
-Tipo inesperado. Esto ocurre amenudo con valores {{jsxref("undefined")}} o {{jsxref("null")}} .
+Tipo inesperado. Esto ocurre amenudo con valores {{jsxref("undefined")}} o {{jsxref("Operators/null", "null")}} .
 
 Además, ciertos métodos, como {{jsxref ("Object.create ()")}} o {{jsxref("Symbol.keyFor()")}}, requieren de un tipo específico, que debe ser proporcionado, ejemplos
 
@@ -59,4 +59,4 @@ if (typeof foo !== "undefined") {
 ## Ver también
 
 - {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxref("Operators/null", "null")}}

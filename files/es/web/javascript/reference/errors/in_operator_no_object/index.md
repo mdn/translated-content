@@ -39,7 +39,7 @@ En su lugar, deberá usar {{jsxref("String.prototype.indexOf()")}}, por ejemplo.
 
 ### El operando no puede ser `null` o `undefined`
 
-Asegúrese que el objeto que está inspeccionando no sea {{jsxref("null")}} o {{jsxref("undefined")}}.
+Asegúrese que el objeto que está inspeccionando no sea {{jsxref("Operators/null", "null")}} o {{jsxref("undefined")}}.
 
 ```js example-bad
 var foo = null;

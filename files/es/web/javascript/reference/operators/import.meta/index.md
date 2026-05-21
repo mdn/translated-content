@@ -17,7 +17,7 @@ import.meta
 
 La sintasis consiste de la palabra clave {{JSxRef("Statements/import","import")}},un punto, y un identificador `meta`. Normalmente, la parte a la izquierda del punto es el objeto sobre el cual la accion es realizada, pero aqui `import` no es realmente un objeto.
 
-El objeto `import.meta` es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.
+El objeto `import.meta` es creado por la implementacion ECMAScript , con un prototipo {{JSxRef("Operators/null", "null")}} . El objeto es extensible y sus propiedades son grabables, editables y enumerables.
 
 ## Ejemplos
 

@@ -77,7 +77,7 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : Devuelve un valor numérico del tamaño del elemento para los diferentes objetos `TypedArray`.
-- {{jsxref("TypedArray.name")}}
+- {{jsxref("Function.name", "TypedArray.name")}}
   - : Devuelve el valor de cadena del nombre del constructor (por ejemplo, `"Int8Array"`).
 - {{jsxref("TypedArray/Symbol.species", "get TypedArray[@@species]")}}
   - : La función constructora utilizada para crear objetos derivados.

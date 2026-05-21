@@ -17,7 +17,7 @@ class ChildClass extends ParentClass { ... }
 
 La palabra clave `extends` se puede usar para crear una subclase a partir de clases personalizadas, así como sus objetos incorporados.
 
-La propiedad `.prototype` de la nueva subclase debe ser un {{jsxref("Object")}} o {{jsxref("null")}}.
+La propiedad `.prototype` de la nueva subclase debe ser un {{jsxref("Object")}} o {{jsxref("Operators/null", "null")}}.
 
 ## Ejemplos
 
@@ -81,7 +81,7 @@ class myDate extends Date {
 
 ### Extendiendo de `null`
 
-Extender de {{jsxref("null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object")}}.
+Extender de {{jsxref("Operators/null", "null")}} es como hacerlo de una clase normal, excepto que el objeto prototype no hereda de {{jsxref("Object")}}.
 
 ```js
 class nullExtends extends null {

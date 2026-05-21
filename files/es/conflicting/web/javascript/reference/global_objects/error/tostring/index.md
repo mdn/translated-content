@@ -39,4 +39,4 @@ donde estos atributos corresponden a las propiedades respectivas de la instancia
 - {{JSxRef("Error.prototype.lineNumber")}}
 - {{JSxRef("Error.prototype.message")}}
 - {{JSxRef("Error.prototype.name")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.toString()", "Object.prototype.toSource()")}}

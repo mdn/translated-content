@@ -30,7 +30,7 @@ Comencemos observando los componentes básicos de cualquier lenguaje: los tipos.
 - {{jsxref("Object", "Objetos")}}
 - {{jsxref("Symbol", "Símbolos")}} (nuevo en ES2015)
 
-... oh, y {{jsxref("undefined")}} y {{jsxref("null")}}, que son ... ligeramente extraños. Y {{jsxref("Array")}}, que es un tipo de objeto especial. Y {{jsxref("Date", "Fechas (Date)")}} y {{jsxref("RegExp", "Expresiones regulares (RegExp)")}}, que son objetos que obtienes de forma gratuita. Y para ser técnicamente precisos, las funciones son solo un tipo especial de objeto. Por lo tanto, el diagrama de tipos se parece más a este:
+... oh, y {{jsxref("undefined")}} y {{jsxref("Operators/null", "null")}}, que son ... ligeramente extraños. Y {{jsxref("Array")}}, que es un tipo de objeto especial. Y {{jsxref("Date", "Fechas (Date)")}} y {{jsxref("RegExp", "Expresiones regulares (RegExp)")}}, que son objetos que obtienes de forma gratuita. Y para ser técnicamente precisos, las funciones son solo un tipo especial de objeto. Por lo tanto, el diagrama de tipos se parece más a este:
 
 - {{jsxref("Number", "Números")}}
 - {{jsxref("String", "Cadenas de texto (Strings)")}}
@@ -42,7 +42,7 @@ Comencemos observando los componentes básicos de cualquier lenguaje: los tipos.
   - {{jsxref("Date")}}
   - {{jsxref("RegExp")}}
 
-- {{jsxref("null")}}
+- {{jsxref("Operators/null", "null")}}
 - {{jsxref("undefined")}}
 
 Y también hay algunos tipos {{jsxref("Error")}} integrados. Sin embargo, las cosas son mucho más fáciles si nos atenemos al primer diagrama, por lo que discutiremos los tipos enumerados allí por ahora.
@@ -163,7 +163,7 @@ Para encontrar la longitud de una cadena (en unidades de código), accede a su p
 
 ## Otros tipos
 
-JavaScript distingue entre {{jsxref("null")}}, que es un valor que indica un no valor deliberado (y solo se puede acceder a él mediante la palabra clave `null`), y {{jsxref("undefined")}}, que es un valor de tipo `undefined` que indica una variable no iniciada es decir, que aún no se le ha asignado un valor. Hablaremos de variables más adelante, pero en JavaScript es posible declarar una variable sin asignarle un valor. Si hace esto, el tipo de la variable es `undefined`. `undefined` en realidad es una constante.
+JavaScript distingue entre {{jsxref("Operators/null", "null")}}, que es un valor que indica un no valor deliberado (y solo se puede acceder a él mediante la palabra clave `null`), y {{jsxref("undefined")}}, que es un valor de tipo `undefined` que indica una variable no iniciada es decir, que aún no se le ha asignado un valor. Hablaremos de variables más adelante, pero en JavaScript es posible declarar una variable sin asignarle un valor. Si hace esto, el tipo de la variable es `undefined`. `undefined` en realidad es una constante.
 
 JavaScript tiene un tipo booleano, con valores posibles `true` y `false` (ambos son palabras clave). Cualquier valor se puede convertir a booleano de acuerdo con las siguientes reglas:
 

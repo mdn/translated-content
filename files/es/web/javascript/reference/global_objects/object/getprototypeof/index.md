@@ -22,7 +22,7 @@ Object.getPrototypeOf(obj)
 
 ### Valor Devuelto
 
-El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá {{jsxref("null")}}.
+El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá {{jsxref("Operators/null", "null")}}.
 
 ## Ejemplos
 

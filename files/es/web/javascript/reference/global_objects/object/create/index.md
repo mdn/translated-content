@@ -45,7 +45,7 @@ Un nuevo objeto con el prototipo y propiedades del objeto especificado.
 
 ### Excepciones
 
-Una excepción {{jsxref("TypeError")}} si el parámetro `propertiesObject` es {{jsxref("null")}} o un objeto envolvente no primitivo.
+Una excepción {{jsxref("TypeError")}} si el parámetro `propertiesObject` es {{jsxref("Operators/null", "null")}} o un objeto envolvente no primitivo.
 
 ## Ejemplos
 

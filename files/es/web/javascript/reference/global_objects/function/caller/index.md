@@ -11,7 +11,7 @@ La propiedad **`function.caller`** retorna la función que llamó a la función 
 
 ## Descripción
 
-Si la función `f` fue llamada por desde nivel raiz (top level code), el valor de `f.caller` es {{jsxref("Global_Objects/null", "null")}}, de lo contrario se retorna la función que llamó a `f`.
+Si la función `f` fue llamada por desde nivel raiz (top level code), el valor de `f.caller` es {{jsxref("Operators/null", "null")}}, de lo contrario se retorna la función que llamó a `f`.
 
 Esta propiedad reemplaza a la propiedad obsoleta {{jsxref("Functions/arguments/caller", "arguments.caller")}} del objeto {{jsxref("Functions/arguments", "arguments")}}.
 

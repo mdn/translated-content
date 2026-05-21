@@ -23,7 +23,7 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
     > [!WARNING]
     > En ciertos casos, `thisArg` puede no ser el valor actual visto por el método.
     >
-    > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Global_Objects/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
+    > Si el método es una función en {{jsxref("Strict_mode", "non-strict mode", "", 1)}}, {{jsxref("Operators/null", "null")}} y {{jsxref("Global_Objects/undefined", "undefined")}} serán reemplazados con el objeto global, y valores primitivos serán convertidos a objetos.
 
 - `arg1, arg2, ...`
   - : Argumentos para el objeto.

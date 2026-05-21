@@ -24,7 +24,7 @@ Element.setAttribute(name, value);
 
 Los atributos booleanos se consideran `true` si al menos están presentes en el elemento, independientemente de su `value` actual; como regla, se debería especificar una cadena de texto vacía (`""`) en `value` (algunas personas utilizan el nombre del atributo; esto funciona pero no es un standard). Vea un [ejemplo](#ejemplo) posterior para una demostración práctica.
 
-Dado que `value` se convierte en una cadena de texto, indicando `null` no necesariamente hace lo que se espera. En lugar de eliminar el atributo o establecer su valor para ser {{jsxref("null")}}, establece el valor del atributo a la cadena de texto `"null"`. Si se desea eliminar un atributo, se debe llamar a {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+Dado que `value` se convierte en una cadena de texto, indicando `null` no necesariamente hace lo que se espera. En lugar de eliminar el atributo o establecer su valor para ser {{jsxref("Operators/null", "null")}}, establece el valor del atributo a la cadena de texto `"null"`. Si se desea eliminar un atributo, se debe llamar a {{domxref("Element.removeAttribute", "removeAttribute()")}}.
 
 ### Valor devuelto
 

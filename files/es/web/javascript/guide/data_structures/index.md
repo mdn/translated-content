@@ -46,7 +46,7 @@ Todos los tipos, excepto los objetos, definen valores inmutables (es decir, valo
 
 ### Tipo `Null`
 
-El tipo `Null` tiene exactamente un valor: `null`. Consulta {{jsxref("null")}} y {{Glossary("Null")}} para obtener más detalles.
+El tipo `Null` tiene exactamente un valor: `null`. Consulta {{jsxref("Operators/null", "null")}} y {{Glossary("Null")}} para obtener más detalles.
 
 ### Tipo `Undefined`
 

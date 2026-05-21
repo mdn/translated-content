@@ -277,7 +277,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 
 ### Conversión de cadenas
 
-Es posible usar `String` como una alternativa más confiable de {{jsxref("String.prototype.toString()", "toString()")}}, ya que funciona cuando se usa en {{jsxref( "null")}}, {{jsxref("undefined")}} y en {{jsxref("Symbol", "símbolos")}}. Por ejemplo:
+Es posible usar `String` como una alternativa más confiable de {{jsxref("String.prototype.toString()", "toString()")}}, ya que funciona cuando se usa en {{jsxref( "Operators/null", "null")}}, {{jsxref("undefined")}} y en {{jsxref("Symbol", "símbolos")}}. Por ejemplo:
 
 ```js
 let outputStrings = [];

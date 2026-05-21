@@ -116,7 +116,7 @@ if (num === 0) {
 }
 ```
 
-Además de definir funciones como se describe aquí, también puedes usar el constructor {{JSxRef("Function")}} para crear funciones a partir de una cadena en tiempo de ejecución, muy al estilo de {{JSxRef("eval", "eval()")}}.
+Además de definir funciones como se describe aquí, también puedes usar el constructor {{JSxRef("Function")}} para crear funciones a partir de una cadena en tiempo de ejecución, muy al estilo de {{JSxRef("Global_Objects/eval", "eval()")}}.
 
 Un **método** es una función que es propiedad de un objeto. Obten más información sobre objetos y métodos en [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_Objects).
 
@@ -680,7 +680,7 @@ JavaScript tiene integradas varias funciones de nivel superior:
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
   - : El método **`eval()`** evalúa el código JavaScript representado como una cadena.
-- {{JSxRef("Global_Objects/uneval", "uneval()")}}
+- {{JSxRef("Deprecated_and_obsolete_features", "uneval()")}}
   - : El método **`uneval()`** crea una representación de cadena del código fuente de un {{JSxRef("Object")}}.
 - {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
   - : La función global **`isFinite()`** determina si el valor pasado es un número finito. Si es necesario, el parámetro, primero se convierte en un número.

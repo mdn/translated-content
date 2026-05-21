@@ -129,7 +129,7 @@ var a;
 a + 2; // Evalúa a NaN
 ```
 
-Cuando evalúas una variable {{JSxRef("null")}}, el valor nulo se comporta como `0` en contextos numéricos y como `false` en contextos booleanos. Por ejemplo:
+Cuando evalúas una variable {{JSxRef("Operators/null", "null")}}, el valor nulo se comporta como `0` en contextos numéricos y como `false` en contextos booleanos. Por ejemplo:
 
 ```js
 var n = null;

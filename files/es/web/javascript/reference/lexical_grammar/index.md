@@ -135,7 +135,7 @@ console.log("Hola mundo");
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
+- {{jsxref("Statements/switch", "default")}}
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
@@ -237,7 +237,7 @@ Algunos identificadores tienen un significado especial en algunos contextos sin 
 
 ### `null` literal
 
-Consulta también {{jsxref("null")}} para obtener más información.
+Consulta también {{jsxref("Operators/null", "null")}} para obtener más información.
 
 ```js
 null;

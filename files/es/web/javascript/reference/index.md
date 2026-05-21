@@ -196,7 +196,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{JSxRef("Operators/null", "null")}}
 
 ### Expresiones del lado izquierdo
 

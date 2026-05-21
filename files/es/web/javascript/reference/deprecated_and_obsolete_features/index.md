@@ -68,7 +68,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 ### Métodos de `Date`
 
 - {{jsxref("Global_Objects/Date/getYear", "getYear")}} y {{jsxref("Global_Objects/Date/setYear", "setYear")}} se ven afectados por el problema del año 2000 y se han subsumido por {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} y {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- En nuevo código, debes usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}}.
+- En nuevo código, debes usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} en lugar del método en desuso {{jsxref("Global_Objects/Date/toUTCString", "toGMTString")}}.
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} está en desuso.
 
 ### Funciones

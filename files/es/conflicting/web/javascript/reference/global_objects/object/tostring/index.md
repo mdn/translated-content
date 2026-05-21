@@ -55,14 +55,14 @@ console.log(new Person('Joe').toSource()); // ---> nueva Person("Joe")
 
 Cada tipo fundamental de JavaScript tiene su propio método `toSource()`. Éstos objetos son:
 
-- {{jsxref("Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.
-- {{jsxref("Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.
+- {{jsxref("Array.prototype.toString()", "Array.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Array")}} object.
+- {{jsxref("Boolean.prototype.toString()", "Boolean.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Boolean")}} object.
 - {{jsxref("Date.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Date")}} object.
 - {{jsxref("Function.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Function")}} object.
-- {{jsxref("Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.
+- {{jsxref("Number.prototype.toString()", "Number.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Number")}} object.
 - {{jsxref("RegExp.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("RegExp")}} object.
 - {{jsxref("SIMD.toSource()", "SIMD.%type%.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("SIMD")}} objects.
-- {{jsxref("String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.
+- {{jsxref("String.prototype.toString()", "String.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("String")}} object.
 - {{jsxref("Symbol.prototype.toSource()")}} {{non-standard_inline}} — {{jsxref("Symbol")}} object.
 - `Math.toSource()` — Regrsa la cadena "Math".
 

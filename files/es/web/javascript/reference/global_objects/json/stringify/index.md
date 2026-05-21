@@ -36,9 +36,9 @@ JSON.stringify(value[, replacer[, space]])
 - `value`
   - : El valor que será convertido a una cadena JSON.
 - `replacer`{{Optional_Inline}}
-  - : Una función que altera el comportamiento del proceso de conversión a cadena de texto, o un array de objetos {{JSxRef("String")}} o {{JSxRef("Number")}} que representan una lista de elementos válidos que se incluyen en la cadena JSON. Si este valor es {{JSxRef("null")}} o no se define, todas las propiedades del objeto son incluidas en la cadena de texto JSON resultante.
+  - : Una función que altera el comportamiento del proceso de conversión a cadena de texto, o un array de objetos {{JSxRef("String")}} o {{JSxRef("Number")}} que representan una lista de elementos válidos que se incluyen en la cadena JSON. Si este valor es {{JSxRef("Operators/null", "null")}} o no se define, todas las propiedades del objeto son incluidas en la cadena de texto JSON resultante.
 - `space`{{Optional_Inline}}
-  - : Un objeto de tipo {{JSxRef("String")}} o {{JSxRef("Number")}} que se utiliza para insertar un espacio en blanco dentro de la cadena de salida JSON para mejorar su legibilidad.Si es de tipo `Number`, indica el número de espacios a usar como espacios en blanco; este número está limitado se limita a 10 (si es mayor, el valor es sólo `10`). Los valores inferiores a 1 indican que no se deben utilizar espacios.Si es de tipo `String`, la cadena de texto (o sus 10 primeros caracteres, si es mayor) se utiliza como espacios en blanco. Si este parámetro no se define o es {{JSxRef("null")}}, no se utilizará ningún espacio en blanco.
+  - : Un objeto de tipo {{JSxRef("String")}} o {{JSxRef("Number")}} que se utiliza para insertar un espacio en blanco dentro de la cadena de salida JSON para mejorar su legibilidad.Si es de tipo `Number`, indica el número de espacios a usar como espacios en blanco; este número está limitado se limita a 10 (si es mayor, el valor es sólo `10`). Los valores inferiores a 1 indican que no se deben utilizar espacios.Si es de tipo `String`, la cadena de texto (o sus 10 primeros caracteres, si es mayor) se utiliza como espacios en blanco. Si este parámetro no se define o es {{JSxRef("Operators/null", "null")}}, no se utilizará ningún espacio en blanco.
 
 ### Valor devuelto
 
@@ -54,10 +54,10 @@ Lanza una excepción {{JSxRef("TypeError")}} ("cyclic object value") cuando encu
 
 - Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON()_behavior>), es responsable de definir qué será serializado.
 - Los objetos {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} se convierten a sus valores primitivos, de acuerdo con la conversión semántica tradicional.
-- Si durante la conversión se encuentra un {{JSxRef("undefined")}}, una {{JSxRef("Function")}}, o un {{JSxRef("Symbol")}} se omite (cuando se encuentra en un objeto) o se censura a {{JSxRef("null")}} (cuando se encuentra en un array). `JSON.stringify()` puede devolver `undefined` cuando se pasan valores "puros" como `JSON.stringify(function(){}`) o `JSON.stringify(undefined)`.
+- Si durante la conversión se encuentra un {{JSxRef("undefined")}}, una {{JSxRef("Function")}}, o un {{JSxRef("Symbol")}} se omite (cuando se encuentra en un objeto) o se censura a {{JSxRef("Operators/null", "null")}} (cuando se encuentra en un array). `JSON.stringify()` puede devolver `undefined` cuando se pasan valores "puros" como `JSON.stringify(function(){}`) o `JSON.stringify(undefined)`.
 - Todas las propiedades que utilicen {{JSxRef("Symbol")}} en los nombres de la clave se ignoran por completo, incluso si utilizan una función `replacer`.
 - Las instancias de {{JSxRef("Date")}} implementan la función `toJSON()` devolviendo una cadena de texto (igual que `date.toISOString()`). Por lo que son tratadas como strings.
-- Los números {{JSxRef("Infinity")}} y {{JSxRef("NaN")}}, así como el valor {{JSxRef("null")}}, se consideran `null`.
+- Los números {{JSxRef("Infinity")}} y {{JSxRef("NaN")}}, así como el valor {{JSxRef("Operators/null", "null")}}, se consideran `null`.
 - El resto de instancias de {{JSxRef("Object")}} (incluyendo {{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, y {{JSxRef("WeakSet")}}) sólo tendrán serializadas sus propiedades enumerables.
 
 ```js

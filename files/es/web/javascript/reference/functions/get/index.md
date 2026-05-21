@@ -66,7 +66,7 @@ delete o.latest;
 ## Consulta también
 
 - {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

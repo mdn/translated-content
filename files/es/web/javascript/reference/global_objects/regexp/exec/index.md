@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 {{JSRef}}
 
-El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("null")}}.
+El método **`exec()`** ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o {{jsxref("Operators/null", "null")}}.
 
 Si está ejecutando una expresión regular solo para buscar si algo se cumple o no, usa el método {{jsxref("RegExp.prototype.test()")}} o el método {{jsxref("String.prototype.search()")}}.
 
@@ -24,7 +24,7 @@ regexObj.exec(cadena)
 
 Si se encuentran coincidencial, el método `exec()` devuelve un array y actualiza las propiedades del objeto de la expresión regular. El array devuelto contiene los elementos encontrados en su primer elemento, y un elemento por cada parte de la expresión regular que se encuentra entre parentesis y se encuentra dentro del texto que fué capturado.
 
-Si la busqueda falla, el método `exec()` devuelve {{jsxref("null")}}.
+Si la busqueda falla, el método `exec()` devuelve {{jsxref("Operators/null", "null")}}.
 
 ## Descripción
 
