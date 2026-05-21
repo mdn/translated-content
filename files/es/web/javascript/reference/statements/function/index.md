@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Statements/function
 
 Declara una función con los parámetros especificados.
 
-Puede también definir funciones usando el constructor {{jsxref("Function")}} y el {{jsxref("Operadors/function", "function")}} (expresión function).
+Puede también definir funciones usando el constructor {{jsxref("Function")}} y el {{jsxref("Operators/function", "function")}} (expresión function).
 
 ## Sintaxis
 

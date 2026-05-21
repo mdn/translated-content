@@ -141,7 +141,7 @@ Llamar al contructor Function como una función, sin el operador new, tiene el m
 
 ## El objeto `arguments`
 
-Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functiones/argument", "Function")}}.
+Puedes referirte a los argumentos de una función dentro de la misma, utilizando el objeto arguments. Ver {{jsxref("Functions/arguments", "Function")}}.
 
 ## Ámbito de ejecución y pila de funciones
 

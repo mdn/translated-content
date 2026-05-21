@@ -198,7 +198,7 @@ Puedes llamar a una variable prácticamente como quieras, pero existen limitacio
 - Un último punto: también debes evitar el uso de palabras reservadas de JavaScript como nombres de variables — con esto, nos referimos a las palabras que componen la sintaxis real de JavaScript. Por lo tanto, no puedes usar palabras como `var`, `function`, `let` y `for` como nombres de variables. Los navegadores las reconocen como elementos de código diferentes, por lo que obtendrás errores.
 
 > [!NOTE]
-> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Gramática_léxica", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
+> Puedes encontrar una lista bastante completa de palabras clave reservadas que debes evitar en {{jsxref("Lexical_grammar", "Gramática léxica — Palabras clave", "#Palabras_clave")}}.
 
 Ejemplos de buenos nombres:
 

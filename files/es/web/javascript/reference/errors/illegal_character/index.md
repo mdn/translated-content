@@ -17,7 +17,7 @@ ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
 
 ## Tipo de error
 
-{{jsxref("SyntaxError")}} {{jsxref("ErrorDeSintaxis")}}
+{{jsxref("SyntaxError")}} {{jsxref("SyntaxError", "ErrorDeSintaxis")}}
 
 ## ¿Qué salió mal?
 
