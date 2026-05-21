@@ -109,7 +109,7 @@ button.addEventListener("click", function (event) {
 
 ## Смотрите также
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions", "Functions and function scope")}}
 - {{jsxref("Function")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Statements/function*", "function* statement")}}

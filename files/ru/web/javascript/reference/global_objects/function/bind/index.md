@@ -233,4 +233,4 @@ if (!Function.prototype.bind) {
 
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Functions_and_function_scope", "Функции и их область видимости", "", 1)}}
+- {{jsxref("Functions", "Функции и их область видимости", "", 1)}}
