@@ -161,6 +161,6 @@ Number("-Infinity"); // -Infinity
 
 - 최신 `Number` 동작(2진수와 8진수를 지원하는)의 폴리필은 [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)를 참고하세요
 - {{jsxref("NaN")}}
-- {{jsxref("Arithmetic operators")}}
+- {{jsxref("Operators", "Arithmetic operators")}}
 - {{jsxref("Math")}} 전역 객체
 - 임의 정밀도 정수: {{jsxref("BigInt")}}

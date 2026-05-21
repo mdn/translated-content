@@ -49,7 +49,7 @@ slug: Web/JavaScript/Reference/Operators
     (`object.property`, `object["property"]`)
 - {{JSxRef("Operators/new", "new")}}
   - : `new` 연산자는 생성자의 인스턴스를 만듭니다.
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
   - : 생성자 문맥에서, `new.target`은 {{jsxref("Operators/new", "new")}}에 의해 호출된 생성자를 말합니다.
 - {{JSxRef("Operators/super", "super")}}
   - : `super` 키워드는 부모 생성자를 호출합니다.

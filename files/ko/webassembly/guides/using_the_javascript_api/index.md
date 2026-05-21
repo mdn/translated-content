@@ -120,7 +120,7 @@ WebAssembly의 저수준 메모리 모델에서 메모리는 [Linear Memory](htt
 
 ### 메모리의 확장
 
-메모리 인스턴스는 {{jsxref("Memory.prototype.grow()")}}를 호출하여 확장 할 수 있습니다. 여기서 인수는 WebAssembly 페이지 단위로 입력합니다.
+메모리 인스턴스는 [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)를 호출하여 확장 할 수 있습니다. 여기서 인수는 WebAssembly 페이지 단위로 입력합니다.
 
 ```js
 memory.grow(1);
@@ -128,7 +128,7 @@ memory.grow(1);
 
 메모리 인스턴스 생성시 최대 값이 제공되었을 때 이 최대 값을 초과하여 증가하려고 시도하면 [`WebAssembly.RangeError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/RangeError) 예외가 발생합니다. 엔진은 이 상한값을 이용하여 미리 메모리를 예약하므로 크기를 보다 효율적으로 조정할 수 있습니다.
 
-{{domxref("ArrayBuffer")}}의 byteLength는 불변이므로, {{jsxref("Memory.prototype.grow()")}} 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
+{{domxref("ArrayBuffer")}}의 byteLength는 불변이므로, [`Memory.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) 오퍼레이션이 성공하면, 버퍼 getter는 (새로운 byteLength로) 새로운 ArrayBuffer 객체를 돌려 주어, 이전의 모든 ArrayBuffer 객체는 「detached」가되거나, 이전에 가리켰던 기본 메모리와의 접속이 끊어집니다.
 
 함수와 마찬가지로 선형 메모리를 모듈 내부에서 정의하거나 가져올 수 있습니다. 마찬가지로 모듈은 메모리를 선택적으로 내보낼수도 있습니다. 즉, JavaScript는 새 WebAssembly.Memory를 만들고 가져 오기로 전달하거나 [`Instance.prototype.exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports)를 통해 메모리 내보내기를 하여 WebAssembly 인스턴스의 메모리에 액세스 할 수 있습니다.
 

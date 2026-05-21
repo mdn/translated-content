@@ -84,7 +84,7 @@ mystring[0] = "L"; // This has no effect, because strings are immutable
 mystring[0]; // This returns "H"
 ```
 
-유니 코드 스칼라 값이 U + FFFF (희귀 한 중국어 / 일본어 / 한국어 / 베트남어 문자 및 일부 이모티콘)보다 큰 문자는 각각 서로 다른 두 개의 코드 단위로 UTF-16에 저장됩니다. 예를 들어, 단일 문자 U + 1F600 "Emoji grinning face"를 포함하는 문자열은 길이가 2입니다. 대괄호를 사용하여 이러한 문자열의 개별 코드 단위에 액세스하면 일치하지 않는 대리 코드 단위가있는 문자열이 만들어지는 등의 바람직하지 않은 결과가 발생할 수 있습니다. 유니 코드 표준 위반 MDN 버그 857438이 수정 된 후에 예제가 이 페이지에 추가되어야합니다. {{jsxref ( "String.fromCodePoint ()")}} 또는 {{jsxref ( "String.prototype.codePointAt ()")}}도 참조하십시오.
+유니 코드 스칼라 값이 U + FFFF (희귀 한 중국어 / 일본어 / 한국어 / 베트남어 문자 및 일부 이모티콘)보다 큰 문자는 각각 서로 다른 두 개의 코드 단위로 UTF-16에 저장됩니다. 예를 들어, 단일 문자 U + 1F600 "Emoji grinning face"를 포함하는 문자열은 길이가 2입니다. 대괄호를 사용하여 이러한 문자열의 개별 코드 단위에 액세스하면 일치하지 않는 대리 코드 단위가있는 문자열이 만들어지는 등의 바람직하지 않은 결과가 발생할 수 있습니다. 유니 코드 표준 위반 MDN 버그 857438이 수정 된 후에 예제가 이 페이지에 추가되어야합니다. {{jsxref("String.fromCodePoint()")}} 또는 {{jsxref("String.prototype.codePointAt()")}}도 참조하십시오.
 
 `String` 객체는 다양한 메서드가 있습니다: 문자열 자체의 변경된 결과를 반환하는 `substring`과 `toUpperCase`가 그것!
 
