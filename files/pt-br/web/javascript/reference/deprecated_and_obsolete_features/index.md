@@ -51,7 +51,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Legacy generator
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} e {{jsxref("Operators/Legacy_generator_function", "Legacy generator function expression")}} foram descontinuados. No lugar deles, use {{jsxref("Statements/function*", "function* statement")}} e {{jsxref("Operators/function*", "function* expression")}}.
+- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} e {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function expression")}} foram descontinuados. No lugar deles, use {{jsxref("Statements/function*", "function* statement")}} e {{jsxref("Operators/function*", "function* expression")}}.
 - O {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} e o {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} foram descontinuados.
 
 ### Iterador

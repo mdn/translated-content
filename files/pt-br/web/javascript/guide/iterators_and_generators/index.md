@@ -69,7 +69,7 @@ myIterable[Symbol.iterator] = function* () {
 
 ### Syntaxes expecting iterables
 
-Algumas declarações e expressões esperam por iteradores, por exemplo o {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/Spread_operator","spread operator","",1)}}, {{jsxref("Operators/yield*","yield*")}}, e {{jsxref("Operators/Destructuring_assignment","destructuring assignment","",1)}}.
+Algumas declarações e expressões esperam por iteradores, por exemplo o {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/Spread_syntax","spread operator","",1)}}, {{jsxref("Operators/yield*","yield*")}}, e {{jsxref("Operators/Destructuring","destructuring assignment","",1)}}.
 
 ```js
 for (let value of ["a", "b", "c"]) {

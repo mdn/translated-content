@@ -201,7 +201,7 @@ O script exibirá o texto a seguir:
 > // retorna "́emuśer"
 > ```
 >
-> **Bonus:** use o operador {{jsxref("Operators/Comparison_Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
+> **Bonus:** use o operador {{jsxref("Operators", "===", "#Identity_strict_equality_(===)")}} para testar se a string original era um palíndromo.
 
 ## Especificações
 
