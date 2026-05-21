@@ -213,11 +213,11 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function", "", 1)}}
   - : The `function` keyword can be used to define a legacy generator function inside an expression. To make the function a legacy generator, the function body should contains at least one {{jsxref("Operators/yield", "yield")}} expression.
-- {{non-standard_inline}} {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}}
   - : The expression closure syntax is a shorthand for writing simple function.
-- {{non-standard_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : Array comprehensions.
-- {{non-standard_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{non-standard_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : Generator comprehensions.
 
 ## 技術規格
