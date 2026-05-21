@@ -41,17 +41,17 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 ### Instance properties
 
 - `Table.prototype.constructor`
-  - : 이 객체의 인스턴스를 생성 한 함수를 돌려줍니다. 기본적으로 이것은 {{jsxref("WebAssembly.Table()")}} 생성자입니다.
-- {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}
+  - : 이 객체의 인스턴스를 생성 한 함수를 돌려줍니다. 기본적으로 이것은 [`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table) 생성자입니다.
+- [`Table.prototype.length`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/length)
   - : 테이블의 길이, 즉 요소의 수를 돌려줍니다.
 
 ### Instance methods
 
-- {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}
+- [`Table.prototype.get()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/get)
   - : 접근 자 함수 - 주어진 색인에 저장된 요소를 가져옵니다.
-- {{jsxref("WebAssembly/Table/grow","Table.prototype.grow()")}}
+- [`Table.prototype.grow()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/grow)
   - : 지정된 요소 수만큼 Table 인스턴스의 크기를 늘립니다.
-- {{jsxref("WebAssembly/Table/set","Table.prototype.set()")}}
+- [`Table.prototype.set()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/set)
   - : 지정된 인덱스에 격납되어있는 요소를, 지정된 값으로 설정합니다.
 
 ## Examples
@@ -75,7 +75,7 @@ var importObj = {
 };
 ```
 
-마지막으로 {{jsxref ( "WebAssembly.instantiateStreaming ()")}} 메소드를 사용하여 wasm 모듈 (table2.wasm)을 로드하고 인스턴스화합니다. table2.wasm 모듈에는 두 개의 함수 (하나는 42를 반환하고 다른 하나는 83을 반환하는 함수)가 들어 있고 가져온 테이블의 요소 0과 1에 둘 다 저장합니다 ([text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat) 참조). 인스턴스화 후에도 테이블의 길이는 여전히 2이지만 JS에 호출 할 수있는 호출 가능한 [Exported WebAssembly Functions](/ko/docs/WebAssembly/Guides/Exported_functions)가 요소에 포함됩니다.
+마지막으로 [`WebAssembly.instantiateStreaming ()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) 메소드를 사용하여 wasm 모듈 (table2.wasm)을 로드하고 인스턴스화합니다. table2.wasm 모듈에는 두 개의 함수 (하나는 42를 반환하고 다른 하나는 83을 반환하는 함수)가 들어 있고 가져온 테이블의 요소 0과 1에 둘 다 저장합니다 ([text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat) 참조). 인스턴스화 후에도 테이블의 길이는 여전히 2이지만 JS에 호출 할 수있는 호출 가능한 [Exported WebAssembly Functions](/ko/docs/WebAssembly/Guides/Exported_functions)가 요소에 포함됩니다.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
