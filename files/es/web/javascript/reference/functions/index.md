@@ -152,7 +152,7 @@ some section about scope and functions calling other functions
 Una función puede referirse y llamarse a sí misma. Hay tres maneras en la que una función puede referirse a sí misma.
 
 1. El nombre de la función
-2. {{jsxref("arguments.callee")}}
+2. {{jsxref("Functions/arguments/callee", "arguments.callee")}}
 3. una función dentro del ambito de ejecución que refiere a la función
 
 Por ejemplo, considere la siguiente definición de función:
