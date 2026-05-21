@@ -174,4 +174,4 @@ Creating functions with the `Function` constructor is one of the ways to dynamic
 
 - {{jsxref("Operators/function", "function Expression", "", 1)}}
 - {{jsxref("Statements/function", "function Statement", "", 1)}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions", "Functions and function scope", "", 1)}}

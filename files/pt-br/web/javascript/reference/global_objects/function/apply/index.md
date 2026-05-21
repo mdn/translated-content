@@ -19,7 +19,7 @@ fun.apply(thisArg, [argsArray])
 ### Parâmetros
 
 - `thisArg`
-  - : O valor de `this` é fornecido para a chamada de _fun._ Note que isso talvez não seja o valor real visto pelo método: se um método é uma função em código {{jsxref("Functions/Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.
+  - : O valor de `this` é fornecido para a chamada de _fun._ Note que isso talvez não seja o valor real visto pelo método: se um método é uma função em código {{jsxref("Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.
 - `argsArray`
   - : Um objeto parecido com um array (array-like), especificando os argumentos com os quais _fun_ deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de [compatibilidade de browsers](#browser_compatibility).
 

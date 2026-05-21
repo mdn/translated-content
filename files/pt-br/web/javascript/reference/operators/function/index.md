@@ -61,7 +61,7 @@ var math = {
 
 ## Veja também
 
-- {{jsxref("Functions_and_function_scope", "Funções e Escopos de Funções")}}
+- {{jsxref("Functions", "Funções e Escopos de Funções")}}
 - {{jsxref("Função")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Statements/function*", "function* statement")}}

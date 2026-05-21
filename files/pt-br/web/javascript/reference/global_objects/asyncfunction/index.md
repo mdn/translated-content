@@ -95,4 +95,4 @@ a(10, 20).then((v) => {
 - {{jsxref("Global_Objects/Function", "Function")}}
 - {{jsxref("Statements/function", "function statement")}}
 - {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Funções e escopo de função", "", 1)}}
+- {{jsxref("Functions", "Funções e escopo de função", "", 1)}}
