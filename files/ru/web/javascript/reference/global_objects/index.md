@@ -119,9 +119,9 @@ slug: Web/JavaScript/Reference/Global_Objects
 Дополнения к ядру ECMAScript, отвечающие за функциональность, чувствительную к языку.
 
 - {{jsxref("Global_Objects/Intl", "Intl")}}
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
 ### Нестандартные объекты
 

@@ -51,4 +51,4 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
+- {{jsxref("Intl/Collator", "Intl.Collator")}}

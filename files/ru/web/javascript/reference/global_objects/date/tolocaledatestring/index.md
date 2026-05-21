@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 
 Метод **`toLocaleDateString()`** возвращает строку с языкозависимым представлением части с датой в этой дате. Новые аргументы `locales` и `options` позволяют приложениям определять язык, чьи соглашения по форматированию должны использоваться, а также менять поведение этого метода. В старых реализациях, игнорирующих аргументы `locales` и `options`, используемая локаль и форма возвращённой строки целиком зависит от реализации.
 
-При форматировании большого количества дат лучшим вариантом будет создание объекта {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} и использование функции, предоставляемой его свойством {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+При форматировании большого количества дат лучшим вариантом будет создание объекта {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} и использование функции, предоставляемой его свойством {{jsxref("DateTimeFormat.prototype.format", "format")}}.
 
 {{InteractiveExample("JavaScript Demo: Date.toLocaleDateString()", "taller")}}
 

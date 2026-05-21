@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOption
 
 ## Сводка
 
-Метод **`Intl.DateTimeFormat.prototype.resolvedOptions()`** возвращает новый объект со свойствами, отражающими локаль и параметры форматирования даты и времени, вычисленные во время инициализации соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}.
+Метод **`Intl.DateTimeFormat.prototype.resolvedOptions()`** возвращает новый объект со свойствами, отражающими локаль и параметры форматирования даты и времени, вычисленные во время инициализации соответствующего объекта {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
 
 ## Синтаксис
 
@@ -17,7 +17,7 @@ dateTimeFormat.resolvedOptions()
 
 ## Описание
 
-Возвращает новый объект со свойствами, отражающими локаль и параметры форматирования чисел, вычисленные во время инициализации соответствующего объекта {{jsxref("Global_Objects/DateTimeFormat", "DateTimeFormat")}}. Объект содержит следующие свойства:
+Возвращает новый объект со свойствами, отражающими локаль и параметры форматирования чисел, вычисленные во время инициализации соответствующего объекта {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}. Объект содержит следующие свойства:
 
 - `locale`
   - : Языковая метка BCP 47 реально используемой локали. Если во входной языковой метке BCP 47 запрошены какие-либо расширения Unicode, приведшие к этой локали, запрошенные и поддерживаемые для этой локали пары ключ-значение также будут включены в свойство `locale`.
@@ -59,4 +59,4 @@ dateTimeFormat.resolvedOptions()
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
