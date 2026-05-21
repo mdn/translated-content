@@ -22,9 +22,9 @@ new Map([
   ["baz", undefined],
 ]).forEach(logMapElements);
 
-// Expected output: "m[foo] = 3"
-// Expected output: "m[bar] = [object Object]"
-// Expected output: "m[baz] = undefined"
+// 予想される結果: "m[foo] = 3"
+// 予想される結果: "m[bar] = [object Object]"
+// 予想される結果: "m[baz] = undefined"
 ```
 
 ## 構文

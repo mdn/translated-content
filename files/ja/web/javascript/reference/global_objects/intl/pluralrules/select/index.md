@@ -11,16 +11,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 
 ```js interactive-example
 console.log(new Intl.PluralRules("ar-EG").select(0));
-// Expected output: "zero"
+// 予想される結果: "zero"
 
 console.log(new Intl.PluralRules("ar-EG").select(5));
-// Expected output: "few"
+// 予想される結果: "few"
 
 console.log(new Intl.PluralRules("ar-EG").select(55));
-// Expected output: "many"
+// 予想される結果: "many"
 
 console.log(new Intl.PluralRules("en").select(0));
-// Expected output: "other"
+// 予想される結果: "other"
 ```
 
 ## 構文

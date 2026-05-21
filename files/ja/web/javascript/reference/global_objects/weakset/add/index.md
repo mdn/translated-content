@@ -15,7 +15,7 @@ const object1 = {};
 
 weakset1.add(object1);
 console.log(weakset1.has(object1));
-// Expected output: true
+// 予想される結果: true
 
 try {
   weakset1.add(1);

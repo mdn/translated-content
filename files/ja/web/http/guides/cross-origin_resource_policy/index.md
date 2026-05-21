@@ -58,4 +58,4 @@ Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
 ## 関連情報
 
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP Header
-- [Bugzilla bug 1459573](https://bugzilla.mozilla.org/show_bug.cgi?id=1459573)
+- [Bugzilla bug 1459573](https://bugzil.la/1459573)

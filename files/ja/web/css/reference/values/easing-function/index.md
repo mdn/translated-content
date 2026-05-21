@@ -1,8 +1,9 @@
 ---
-title: <easing-function>
+title: CSS `<easing-function>` 型
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
 l10n:
-  sourceCommit: ed2725c99c6011da9d4afa5e47546fe0722ee814
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/Reference/Values/Data_types)で、値が変化する割合を記述する数学的な関数を表します。

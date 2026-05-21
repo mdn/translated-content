@@ -17,10 +17,10 @@ const object2 = {};
 weakset1.add(object1);
 
 console.log(weakset1.has(object1));
-// Expected output: true
+// 予想される結果: true
 
 console.log(weakset1.has(object2));
-// Expected output: false
+// 予想される結果: false
 ```
 
 ## 構文
