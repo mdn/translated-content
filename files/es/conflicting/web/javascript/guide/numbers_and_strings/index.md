@@ -158,11 +158,11 @@ Para obtener más información, lee acerca de {{JSxRef("template_strings", "plan
 
 ## Internacionalización
 
-El objeto {{JSxRef("Intl")}} es el espacio de nombres para la API de internacionalización de ECMAScript, que proporciona comparación de cadenas sensible al idioma, formato de números y formato de fecha y hora. Los constructores de los objetos {{JSxRef("Collator")}}, {{JSxRef("NumberFormat")}} y {{JSxRef("DateTimeFormat")}} son propiedades del objeto `Intl`.
+El objeto {{JSxRef("Intl")}} es el espacio de nombres para la API de internacionalización de ECMAScript, que proporciona comparación de cadenas sensible al idioma, formato de números y formato de fecha y hora. Los constructores de los objetos {{JSxRef("Intl/Collator", "Collator")}}, {{JSxRef("Intl/NumberFormat", "NumberFormat")}} y {{JSxRef("Intl/DateTimeFormat", "DateTimeFormat")}} son propiedades del objeto `Intl`.
 
 ### Formato de fecha y hora
 
-El objeto {{JSxRef("DateTimeFormat")}} es útil para formatear la fecha y la hora. El siguiente formato es una fecha para el Inglés como se usa en los Estados Unidos. (El resultado es diferente en otra zona horaria).
+El objeto {{JSxRef("Intl/DateTimeFormat", "DateTimeFormat")}} es útil para formatear la fecha y la hora. El siguiente formato es una fecha para el Inglés como se usa en los Estados Unidos. (El resultado es diferente en otra zona horaria).
 
 ```js
 const msPerDay = 24 * 60 * 60 * 1000;
@@ -185,7 +185,7 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 
 ### Formato de número
 
-El objeto {{JSxRef("NumberFormat")}} es útil para formatear números, por ejemplo, monedas.
+El objeto {{JSxRef("Intl/NumberFormat", "NumberFormat")}} es útil para formatear números, por ejemplo, monedas.
 
 ```js
 const gasPrice = new Intl.NumberFormat("en-US", {
@@ -206,7 +206,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 ### Colación
 
-El objeto {{JSxRef("Collator")}} es útil para comparar y ordenar cadenas.
+El objeto {{JSxRef("Intl/Collator", "Collator")}} es útil para comparar y ordenar cadenas.
 
 Por ejemplo, en realidad hay dos órdenes de clasificación diferentes en Alemán, «_phonebook_» y «_dictionary_». La clasificación «_phonebook_» enfatiza el sonido, y es como si "ä", "ö", etc. se expandieran a "ae", "oe", etc. antes de la clasificación.
 

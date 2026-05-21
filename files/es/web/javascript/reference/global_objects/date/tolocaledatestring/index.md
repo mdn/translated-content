@@ -54,7 +54,7 @@ Una cadena que representa la parte de la fecha de la instancia {{jsxref("Date")}
 
 ## Rendimiento
 
-Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Cuando se formatea un gran número de fechas, es mejor crear un objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} y utilizar la función proporcionada por su propiedad {{jsxref("Intl/DateTimeFormat/prototype/format", "format")}}.
 
 ## Ejemplos
 

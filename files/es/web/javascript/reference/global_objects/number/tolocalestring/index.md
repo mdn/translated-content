@@ -42,7 +42,7 @@ Un texto con una representación localizada del número dado.
 
 ## Performance
 
-Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("NumberFormat")}} y utilizar la función {{jsxref("NumberFormat.format")}}.
+Cuando formateas una gran cantidad de números, es mejor crear un objeto {{jsxref("Intl/NumberFormat", "NumberFormat")}} y utilizar la función {{jsxref("Intl/NumberFormat/format", "NumberFormat.format")}}.
 
 ## Ejemplos
 
