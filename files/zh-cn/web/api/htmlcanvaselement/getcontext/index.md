@@ -19,7 +19,7 @@ getContext(contextType, contextAttributes)
 ### 参数
 
 - `contextType`
-  - : 是一个指示使用何种上下文的 {{domxref("DOMString")}} 。可能的值是：
+  - : 是一个指示使用何种上下文的 {{jsxref("String")}} 。可能的值是：
     - `"2d`", 建立一个 {{domxref("CanvasRenderingContext2D")}} 二维渲染上下文。
     - `"webgl"` (或`"experimental-webgl"`) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现[WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 1(OpenGL ES 2.0) 的浏览器上可用。
     - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
