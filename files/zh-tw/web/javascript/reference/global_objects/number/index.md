@@ -21,7 +21,7 @@ new Number(value)
 `Number` 物件主要的用途：
 
 - 如果參數沒辦法被轉換成數字，則它會回傳 {{jsxref("NaN")}} 。
-- 在不是使用建構式的情境中(即不用 {{jsxref("Operators/new", "new")}} 運算子), `Number` 可以被用來轉換型別.
+- 在不是使用建構式的情境中(即不用 {{jsxref("new")}} 運算子), `Number` 可以被用來轉換型別.
 
 ## 屬性
 

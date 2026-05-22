@@ -11,4 +11,4 @@ slug: Glossary/Null
 
 - 維基百科上的[空指標](https://zh.wikipedia.org/wiki/空指標)
 - [JavaScript 的數據類型和結構](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)
-- JavaScript 全域物件：{{jsxref("Operators/null", "null")}}
+- JavaScript 全域物件：{{jsxref("null")}}

@@ -160,7 +160,7 @@ console.log(
 ## 參見
 
 - [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

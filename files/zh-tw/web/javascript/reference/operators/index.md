@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Operators
 
 在 JavaScript 中基本的關鍵字與一般的運算式。
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : `this` 關鍵字可以參考執行函數的所在位置。
 - {{jsxref("Operators/function", "function")}}
   - : `function` 關鍵字可以定義一個函數運算式。
@@ -45,10 +45,10 @@ slug: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
   - : 成員運算子可存取物件的屬性或方法
     (`object.property` and `object["property"]`)。
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : `new` 運算子可以建立一個建構子 (Constructor) 的實例。
 - [new.target](/zh-TW/docs/Web/JavaScript/Reference/Operators/new.target)
-  - : 在建構子中 `new.target` 可以參考被 {{jsxref("Operators/new", "new")}} 呼叫的建構子 (Constructor) 。
+  - : 在建構子中 `new.target` 可以參考被 {{jsxref("new")}} 呼叫的建構子 (Constructor) 。
 - {{jsxref("Operators/super", "super")}}
   - : `super` 關鍵字可以呼叫父建構子 (Constructor) 。
 - {{jsxref("Operators/Spread_syntax", "...obj")}}
@@ -71,7 +71,7 @@ slug: Web/JavaScript/Reference/Operators
 
 一元運算是指只需要使用一個運算元的運算。
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : `delete` 運算子可刪除物件中的屬性。
 - {{jsxref("Operators/void", "void")}}
   - : `void` 運算子可放棄一個運算式的回傳值。
@@ -109,7 +109,7 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{jsxref("Operators/in", "in")}}
   - : `in` 運算子會判斷一個物件是否有指定的屬性。
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : `instanceof` 運算子會判斷一個物件是否為另一個物件的實例。
 - {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
   - : 小於運算子。

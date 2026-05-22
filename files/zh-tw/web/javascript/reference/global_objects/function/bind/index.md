@@ -14,7 +14,7 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ### 參數
 
 - `thisArg`
-  - : The value to be passed as the `this` parameter to the target function when the bound function is called. The value is ignored if the bound function is constructed using the {{jsxref("Operators/new", "new")}} operator.
+  - : The value to be passed as the `this` parameter to the target function when the bound function is called. The value is ignored if the bound function is constructed using the {{jsxref("new")}} operator.
 - `arg1, arg2, ...`
   - : Arguments to prepend to arguments provided to the bound function when invoking the target function.
 
@@ -112,7 +112,7 @@ flower.bloom();
 > [!WARNING]
 > This section demonstrates JavaScript capabilities and documents some edge cases of the `bind()` method. The methods shown below are not the best way to do things and probably should not be used in any production environment.
 
-Bound functions are automatically suitable for use with the {{jsxref("Operators/new", "new")}} operator to construct new instances created by the target function. When a bound function is used to construct a value, the provided `this` is ignored. However, provided arguments are still prepended to the constructor call:
+Bound functions are automatically suitable for use with the {{jsxref("new")}} operator to construct new instances created by the target function. When a bound function is used to construct a value, the provided `this` is ignored. However, provided arguments are still prepended to the constructor call:
 
 ```js
 function Point(x, y) {
@@ -144,7 +144,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 ```
 
-Note that you need do nothing special to create a bound function for use with {{jsxref("Operators/new", "new")}}. The corollary is that you need do nothing special to create a bound function to be called plainly, even if you would rather require the bound function to only be called using {{jsxref("Operators/new", "new")}}.
+Note that you need do nothing special to create a bound function for use with {{jsxref("new")}}. The corollary is that you need do nothing special to create a bound function to be called plainly, even if you would rather require the bound function to only be called using {{jsxref("new")}}.
 
 ```js
 // Example can be run directly in your JavaScript console
@@ -158,7 +158,7 @@ emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
-If you wish to support the use of a bound function only using {{jsxref("Operators/new", "new")}}, or only by calling it, the target function must enforce that restriction.
+If you wish to support the use of a bound function only using {{jsxref("new")}}, or only by calling it, the target function must enforce that restriction.
 
 ### Creating shortcuts
 

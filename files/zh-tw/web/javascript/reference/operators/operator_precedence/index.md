@@ -73,7 +73,7 @@ a = b = 5;
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (with argument list)</td>
+      <td>{{jsxref("new")}} (with argument list)</td>
       <td>無</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -97,7 +97,7 @@ a = b = 5;
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (without argument list)
+        {{jsxref("new")}} (without argument list)
       </td>
       <td>從右至左</td>
       <td><code>new …</code></td>
@@ -171,7 +171,7 @@ a = b = 5;
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -300,7 +300,7 @@ a = b = 5;
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+      <td>{{jsxref("instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>

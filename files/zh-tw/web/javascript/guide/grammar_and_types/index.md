@@ -109,7 +109,7 @@ var a;
 a + 2; // Evaluates to NaN
 ```
 
-當你對 {{jsxref("Operators/null", "null")}} 進行運算，{{jsxref("Operators/null", "null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
+當你對 {{jsxref("null")}} 進行運算，{{jsxref("null")}} 會自動轉換成數值 0，如果當做布林值運算，會被當成 `false`，舉例來說：
 
 ```js
 var n = null;

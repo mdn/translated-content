@@ -84,7 +84,7 @@ var view = new Int32Array(buffer);
 
 ## 相容性備註
 
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = ArrayBuffer(10);

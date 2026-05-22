@@ -174,7 +174,7 @@ slug: Web/JavaScript/Reference
 
 ### 主要運算式
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -186,12 +186,12 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("Operators/null", "null")}}
+- {{JSxRef("null")}}
 
 ### 左手邊運算式
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
 - {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
@@ -205,7 +205,7 @@ slug: Web/JavaScript/Reference
 
 ### 一元運算子
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators", "+", "#Unary_plus")}}
@@ -225,7 +225,7 @@ slug: Web/JavaScript/Reference
 ### 關係運算子
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators", "&lt;", "#Less_than_operator")}}
 - {{JSxRef("Operators", "&gt;", "#Greater_than_operator")}}
 - {{JSxRef("Operators", "&lt;=", "#Less_than_or_equal_operator")}}

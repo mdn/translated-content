@@ -19,7 +19,7 @@ BigInt(value);
   - : 欲創建的數值，可以為整數或字串。
 
 > [!NOTE]
-> `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
+> `BigInt()` 不和 {{JSxRef("new")}} 一起使用。
 
 ## 說明
 
