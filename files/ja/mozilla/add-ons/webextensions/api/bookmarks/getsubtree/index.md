@@ -21,7 +21,7 @@ browser.bookmarks.getSubTree(
 ### 引数
 
 - `id`
-  - : 取得したい部分木のルートノードに対応する ID を表す {{jsxref("string")}} です。
+  - : 取得したい部分木のルートノードに対応する ID を表す {{jsxref("String", "string")}} です。
 - `callback`
   - : リクエストしたノードが取得された際に呼び出される関数です。この関数には以下の引数が渡ります。
     - `results`

@@ -32,9 +32,9 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref('Sensor.activated')}} {{ReadOnlyInline}}
-  - : センサーが作動中かどうかを表す {{jsxref('boolean')}} 値を返します。
+  - : センサーが作動中かどうかを表す {{jsxref('Boolean', 'boolean')}} 値を返します。
 - {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
-  - : センサーが測定値を持っているかを表す {{jsxref('boolean')}} 値を返します。
+  - : センサーが測定値を持っているかを表す {{jsxref('Boolean', 'boolean')}} 値を返します。
 - {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
   - : センサーの最新の測定値のタイムスタンプを返します。
 

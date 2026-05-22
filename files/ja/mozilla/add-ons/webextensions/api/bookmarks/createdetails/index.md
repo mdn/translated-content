@@ -12,16 +12,16 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 
 ## 値の型
 
-以下のプロパティを含む {{jsxref("object")}} です。
+以下のプロパティを含む {{jsxref("Object", "object")}} です。
 
 - `parentId`{{optional_inline}}
-  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("string")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
+  - : 新しいブックマーク / フォルダーの親フォルダーを指定する {{jsxref("String", "string")}} です。デフォルト値はブラウザーによって異なり、Chrome の場合は「その他のブックマーク」、Firefox の場合は「未分類のブックマーク」です。
 - `index`{{optional_inline}}
-  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("number")}} です。値が 0 の場合、リストの先頭に置かれます。
+  - : 親要素の配下における、新しいブックマーク / フォルダーの位置を指定する {{jsxref("Number", "number")}} です。値が 0 の場合、リストの先頭に置かれます。
 - `title`{{optional_inline}}
-  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("string")}} です。値を省略した場合、タイトルは `""` になります。
+  - : `作成する`ブックマークのタイトルやフォルダーの名前を指定する {{jsxref("String", "string")}} です。値を省略した場合、タイトルは `""` になります。
 - `url`{{optional_inline}}
-  - : ブックマークの URL を指定する {{jsxref("string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
+  - : ブックマークの URL を指定する {{jsxref("String", "string")}} です。値を省略するか `null` を指定した場合、ブックマークではなくフォルダーが作成されます。
 
 ## ブラウザーの互換性
 

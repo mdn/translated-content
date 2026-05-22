@@ -14,7 +14,7 @@ l10n:
 - {{domxref("USBDevice.configuration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : ペアリングした USB デバイスの現在選択されているインターフェイスを表す {{domxref("USBConfiguration")}} オブジェクトです。
 - {{domxref("USBDevice.configurations")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : ペアリングした USB デバイスの制御用のデバイス固有のインターフェイスの {{jsxref("array")}} です。
+  - : ペアリングした USB デバイスの制御用のデバイス固有のインターフェイスの {{jsxref("Array", "array")}} です。
 - {{domxref("USBDevice.deviceClass")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : デバイスとともに動く USB ドライバーのロード用に USB デバイスを特定する 3 個のプロパティのうちの 1 個です。他の 2 個のプロパティは `USBDevice.deviceSubclass` と `USBDevice.deviceProtocol` です。
 - {{domxref("USBDevice.deviceProtocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}

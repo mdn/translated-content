@@ -194,7 +194,7 @@ console.log(cities); // [ "東京", "札幌" ]
 
 ## それぞれのアイテムへのアクセス
 
-配列のすべてのアイテムにアクセスしたいことがよくあるでしょう。この場合、 {{jsxref("statements/for...of","for...of")}} 文を使用します。
+配列のすべてのアイテムにアクセスしたいことがよくあるでしょう。この場合、 {{jsxref("Statements/for...of","for...of")}} 文を使用します。
 
 ```js
 const birds = ["Parrot", "Falcon", "Owl"];
