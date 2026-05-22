@@ -218,7 +218,7 @@ Si des déclarations de la même origine et de la même couche de la cascade ent
 
 Utiliser `!important` pour remplacer la spécificité est considéré comme une **mauvaise pratique** et doit être évité à cette fin. Comprendre et utiliser efficacement la spécificité et la cascade peut éliminer tout besoin du drapeau `!important`.
 
-Au lieu d'utiliser `!important` pour remplacer le CSS étranger (provenant de bibliothèques externes, comme Bootstrap ou normalize.css), importez les scripts tiers directement dans des [couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer). Si vous devez utiliser `!important` dans votre CSS, commentez votre utilisation afin que les futurs mainteneurs du code sachent pourquoi la déclaration a été marquée comme importante et sachent ne pas la remplacer. Mais surtout, n'utilisez pas `!important` lors de l'écriture de plugins ou de <i lang="en">frameworks</i> que d'autres développeur·euse·s doivent intégrer sans pouvoir les contrôler.
+Au lieu d'utiliser `!important` pour remplacer le CSS étranger (provenant de bibliothèques externes, comme Bootstrap ou normalize.css), importez les scripts tiers directement dans des [couches de cascade](/fr/docs/Web/CSS/Reference/At-rules/@layer). Si vous devez utiliser `!important` dans votre CSS, commentez votre utilisation afin que les futurs mainteneur·euse·s du code sachent pourquoi la déclaration a été marquée comme importante et sachent ne pas la remplacer. Mais surtout, n'utilisez pas `!important` lors de l'écriture de plugins ou de <i lang="en">frameworks</i> que d'autres développeur·euse·s doivent intégrer sans pouvoir les contrôler.
 
 ### L'exception `:where()`
 
