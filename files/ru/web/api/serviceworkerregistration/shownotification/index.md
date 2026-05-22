@@ -24,9 +24,9 @@ A {{jsxref('Promise')}} that resolves to a {{domxref('NotificationEvent')}}.
 - `options` {{optional_inline}}
   - : An object that allows to configure the notification. It can have the following properties:
     - `actions`: An array of actions to display in the notification. The members of the array should be an object literal. It may contain the following values:
-      - action: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-      - title: A {{domxref("DOMString")}} containing action text to be shown to the user.
-      - icon: A {{domxref("USVString")}} containg the URL of an icon to display with the action.
+      - action: A {{jsxref("String")}} identifying a user action to be displayed on the notification.
+      - title: A {{jsxref("String")}} containing action text to be shown to the user.
+      - icon: A {{jsxref("String")}} containg the URL of an icon to display with the action.
 
       Appropriate responses are built using `event.action` within the [`notificationclick`](/ru/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) event.
 
