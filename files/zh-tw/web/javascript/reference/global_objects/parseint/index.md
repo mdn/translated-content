@@ -169,9 +169,9 @@ console.log(filterInt("1.61803398875")); // NaN
 
 ## 參見
 
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseFloat()")}}
 - {{jsxref("Number.parseFloat()")}}
 - {{jsxref("Number.parseInt()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}
 - {{jsxref("Number.toString()")}}
 - {{jsxref("Object.valueOf")}}

@@ -88,7 +88,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math
   - : 回傳給定數值中的最小值。
 - {{jsxref("Math.pow", "Math.pow(x, y)")}}
   - : 回傳 x 的 y 次方，也就是 `x^y`。
-- {{jsxref("Math.random", "Math.random()")}}
+- {{jsxref("Math.random()")}}
   - : 回傳一個 0 到 1 之間的偽隨機值。
 - {{jsxref("Math.round", "Math.round(x)")}}
   - : 回傳 x 的四捨五入值。

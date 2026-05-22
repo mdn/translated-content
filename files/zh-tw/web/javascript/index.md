@@ -40,7 +40,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 - [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)
   - : 簡介在 JavaScript 可用的資料結構。
 - [相等值比較和相等度](/zh-TW/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
-  - : JavaScript 提供了三種不同的數值比較方式：嚴謹的相等用 `===`，寬鬆的相等用 `==，`以及 {{jsxref("Object.is", "Object.is()")}} 方法。
+  - : JavaScript 提供了三種不同的數值比較方式：嚴謹的相等用 `===`，寬鬆的相等用 `==，`以及 {{jsxref("Object.is()")}} 方法。
 - [閉包（Closure)](/zh-TW/docs/Web/JavaScript/Guide/Closures)
   - : 閉包（Closure）是函式以及該宣告函式所包含的作用域環境（lexical environment）的組合。
 

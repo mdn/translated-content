@@ -312,8 +312,8 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 當代表數字的值以字串形式存在記憶體中，有些方法可用來將這種字串轉換成整數或浮點數。
 
-- {{jsxref("parseInt", "parseInt()")}}
-- {{jsxref("parseFloat", "parseFloat()")}}
+- {{jsxref("parseInt()")}}
+- {{jsxref("parseFloat()")}}
 
 `parseInt` 只會返回整數，因此減少了對小數的使用。此外，parseInt 的最佳實務是始終包含基數參數。基數參數用於指定使用的數值系統。
 

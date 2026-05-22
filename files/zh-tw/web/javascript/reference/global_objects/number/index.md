@@ -55,9 +55,9 @@ new Number(value)
 - {{jsxref("Number.isSafeInteger()")}}
   - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
 - {{jsxref("Number.parseFloat()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseFloat()")}} 相同。
 - {{jsxref("Number.parseInt()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseInt()")}} 相同。
 
 ## `Number` 實體
 
@@ -74,9 +74,9 @@ new Number(value)
 - {{jsxref("Number.isSafeInteger()")}}
   - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
 - {{jsxref("Number.parseFloat()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseFloat()")}} 相同。
 - {{jsxref("Number.parseInt()")}}
-  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
+  - : 這個方法和全域物件的 {{jsxref("parseInt()")}} 相同。
 
 ## 範例
 
