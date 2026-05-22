@@ -18,10 +18,10 @@ console.log(options1.locale);
 // Expected output (Chrome): "de"
 
 console.log(options1.style);
-// Expected output: "long"
+// 予想される結果: "long"
 
 console.log(options1.type);
-// Expected output: "disjunction"
+// 予想される結果: "disjunction"
 ```
 
 ## 構文

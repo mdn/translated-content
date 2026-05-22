@@ -20,7 +20,7 @@ location.assign(url);
 ### 参数
 
 - `url`
-  - : 一个包含了要跳转到的链接的{{domxref("DOMString")}}。
+  - : 一个包含了要跳转到的链接的{{jsxref("String")}}。
 
 ## 示例
 
