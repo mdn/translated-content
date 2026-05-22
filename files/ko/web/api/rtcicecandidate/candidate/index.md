@@ -5,7 +5,7 @@ slug: Web/API/RTCIceCandidate/candidate
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`** 는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.
+{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`** 는 candidate에 대해 자세히 설명해주는 {{jsxref("String")}}를 반환합니다.
 
 `RTCIceCandidate`의 거의 모든 다른 속성들은 사실 이 문자열에서 가져와진 것입니다.
 
@@ -19,7 +19,7 @@ var candidate = RTCIceCandidate.candidate;
 
 ### 값
 
-반환되는 {{domxref("DOMString")}} 값은 {{Glossary("SDP")}}의 속성인 `"candidate"`에서 직접 가져와진 candidate의 속성에 대해 알려줍니다. candidate 문자열은 해당 candidate에 대한 네트워크 연결 정보를 명시합니다. `candidate`가 빈 문자열 (`""`)이라면, 더 이상 남아있는 candidate가 없다는 뜻입니다. 빈 문자열은 "candidate 종료" 표시자로도 알려져있습니다.
+반환되는 {{jsxref("String")}} 값은 {{Glossary("SDP")}}의 속성인 `"candidate"`에서 직접 가져와진 candidate의 속성에 대해 알려줍니다. candidate 문자열은 해당 candidate에 대한 네트워크 연결 정보를 명시합니다. `candidate`가 빈 문자열 (`""`)이라면, 더 이상 남아있는 candidate가 없다는 뜻입니다. 빈 문자열은 "candidate 종료" 표시자로도 알려져있습니다.
 
 candidate 문자열에 대한 구문은 {{RFC(5245, "", 15.1)}}에 설명되어있습니다.
 

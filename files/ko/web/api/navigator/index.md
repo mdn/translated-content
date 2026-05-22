@@ -44,9 +44,9 @@ l10n:
 - {{domxref('Navigator.keyboard')}} {{readonlyinline}} {{experimental_inline}}
   - : {{domxref('Keyboard')}} 객체를 반환합니다. 키보드 레이아웃 맵을 가져올 수 있고, 물리적 키보드의 키 입력 캡처를 켜고 끌 수 있습니다.
 - {{domxref("Navigator.language")}} {{readonlyInline}}
-  - : 사용자의 선호 언어(주로 브라우저 UI 언어)를 나타내는 {{domxref("DOMString")}}을 반환합니다. 언어를 알 수 없는 경우 `null`을 반환합니다.
+  - : 사용자의 선호 언어(주로 브라우저 UI 언어)를 나타내는 {{jsxref("String")}}을 반환합니다. 언어를 알 수 없는 경우 `null`을 반환합니다.
 - {{domxref("Navigator.languages")}} {{readonlyInline}} {{experimental_inline}}
-  - : 사용자에게 알려진 언어 목록을 나타내는 {{domxref("DOMString")}} 배열을 반환합니다. 정렬 순서는 사용자의 언어 선호도입니다.
+  - : 사용자에게 알려진 언어 목록을 나타내는 {{jsxref("String")}} 배열을 반환합니다. 정렬 순서는 사용자의 언어 선호도입니다.
 - {{domxref("Navigator.locks")}} {{readonlyinline}} {{experimental_inline}}
   - : 새로운 {{domxref("Lock")}} 객체를 요청하거나, 기존 `Lock` 객체를 질의할 수 있는 {{domxref("LockManager")}} 객체를 반환합니다.
 - {{domxref("Navigator.maxTouchPoints")}} {{readonlyInline}}
