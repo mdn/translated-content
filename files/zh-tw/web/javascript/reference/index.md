@@ -186,7 +186,7 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{JSxRef("Operators/null", "null")}}
 
 ### 左手邊運算式
 

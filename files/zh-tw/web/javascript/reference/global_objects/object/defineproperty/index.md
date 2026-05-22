@@ -77,7 +77,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : 作為 setter 形式，為屬性存在的函式，如果沒有 setter 的話則回傳 {{jsxref("undefined")}}。 The function will receive as only argument the new value being assigned to the property.
     **預設 {{jsxref("undefined")}}**
 
-請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("null")}}。
+請注意，這些選項並不一定要是 descriptor 屬性，由原型鍊（prototype chain）繼承的屬性，也會被考慮到。要確保需要凍結（freeze）的 {{jsxref("Object")}} upfront 預設能被保存，請明確指定所有選項，或把 [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 屬性指向 {{jsxref("Operators/null", "null")}}。
 
 ```js
 // using __proto__
@@ -366,8 +366,8 @@ Internet Explorer 8 implemented a `Object.defineProperty()` method that could [o
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.prototype.watch()")}}
 - {{jsxref("Object.prototype.unwatch()")}}
-- {{jsxref("Operators/get", "get")}}
-- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - [Additional `Object.defineProperty` examples](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples)
 - {{jsxref("Reflect.defineProperty()")}}

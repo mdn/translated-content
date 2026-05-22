@@ -40,7 +40,7 @@ var foo = true; // foo 目前是布林值
 
 ### Null 型別
 
-Null 型別只有一個值：`null`。請參見 {{jsxref("null")}} 與 {{Glossary("Null")}}。
+Null 型別只有一個值：`null`。請參見 {{jsxref("Operators/null", "null")}} 與 {{Glossary("Null")}}。
 
 ### 未定義型別
 

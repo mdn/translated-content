@@ -18,11 +18,11 @@ new Boolean([value])
 
 ## 說明
 
-傳入的第一個參數值，如果需要的話，會被轉換成布林值。如果沒傳值，或者是`0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}、空字串(`""`)的話，這個物件的值會被初始化成`false`。大多數情況下，DOM 物件 {{domxref("document.all")}} 被傳入後，也會將其初始化為`false`。至於其他的值，包含所有物件或`"false"`字串，都會使其初始化為`true`。
+傳入的第一個參數值，如果需要的話，會被轉換成布林值。如果沒傳值，或者是`0`、`-0`、{{jsxref("Operators/null", "null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}、空字串(`""`)的話，這個物件的值會被初始化成`false`。大多數情況下，DOM 物件 {{domxref("document.all")}} 被傳入後，也會將其初始化為`false`。至於其他的值，包含所有物件或`"false"`字串，都會使其初始化為`true`。
 
 不要將原始型別的布林值和這個布林物件搞混，它們並不相同。
 
-在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} ，儘管是值為`false` 的 `Boolean` 物件，都會被轉換成`true`。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為`true`：
+在判斷式中，任何物件只要不是 {{jsxref("undefined")}} 或 {{jsxref("Operators/null", "null")}} ，儘管是值為`false` 的 `Boolean` 物件，都會被轉換成`true`。舉例來說，下列的 {{jsxref("Statements/if...else", "if")}} 判斷式中的布林值即為`true`：
 
 ```js
 var x = new Boolean(false);

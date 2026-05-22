@@ -18,14 +18,14 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{jsxref("Infinity")}}
 - {{jsxref("NaN")}}
 - {{jsxref("undefined")}}
-- {{jsxref("null")}} literal
+- {{jsxref("Operators/null", "null")}} literal
 
 ### 函數屬性
 
 這些全域函式會直接在全域範圍中被呼叫，不用從某個物件取得後呼叫；呼叫後直接回傳結果給執行的人。
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
+- {{jsxref("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
