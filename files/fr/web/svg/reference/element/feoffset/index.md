@@ -20,7 +20,7 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feOffset>`** permet de décal
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
+Cet élément implémente l'interface {{DOMxRef("SVGFEOffsetElement")}}.
 
 ## Exemple
 
@@ -60,22 +60,22 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
 
 ## Voir aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
+- L'élément {{SVGElement("filter")}}
+- L'élément {{SVGElement("animate")}}
+- L'élément {{SVGElement("set")}}
+- L'élément {{SVGElement("feBlend")}}
+- L'élément {{SVGElement("feColorMatrix")}}
+- L'élément {{SVGElement("feComponentTransfer")}}
+- L'élément {{SVGElement("feComposite")}}
+- L'élément {{SVGElement("feConvolveMatrix")}}
+- L'élément {{SVGElement("feDiffuseLighting")}}
+- L'élément {{SVGElement("feDisplacementMap")}}
+- L'élément {{SVGElement("feFlood")}}
+- L'élément {{SVGElement("feGaussianBlur")}}
+- L'élément {{SVGElement("feImage")}}
+- L'élément {{SVGElement("feMerge")}}
+- L'élément {{SVGElement("feMorphology")}}
+- L'élément {{SVGElement("feSpecularLighting")}}
+- L'élément {{SVGElement("feTile")}}
+- L'élément {{SVGElement("feTurbulence")}}
 - [Tutoriel SVG&nbsp;: Effets de filtre](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
