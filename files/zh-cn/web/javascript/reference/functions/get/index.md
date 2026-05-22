@@ -129,7 +129,7 @@ get notifier() {
 
 ### `get` vs. `defineProperty`
 
-当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("classes")}}中使用时，二者有细微的差别。
+当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("Classes", "classes")}}中使用时，二者有细微的差别。
 
 当使用 `get` 关键字时，属性将被定义在实例的原型上，当使用{{jsxref("Object.defineProperty()")}}时，属性将被定义在实例自身上。
 

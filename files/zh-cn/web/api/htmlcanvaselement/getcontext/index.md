@@ -38,7 +38,7 @@ getContext(contextType, contextAttributes)
     2d 上下文属性：
     - **`alpha`**: `boolean`值表明`canvas`包含一个`alpha`通道。如果设置为`false`, 浏览器将认为`canvas`背景总是不透明的，这样可以加速绘制透明的内容和图片。
     - {{non-standard_inline}} (Gecko only) **`willReadFrequently`**: `boolean`值表明是否有重复读取计划。经常使用{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}，这将迫使软件使用 2D `canvas` 并 节省内存（而不是硬件加速）。这个方案适用于存在属性 `gfx.canvas.willReadFrequently`的环境。并设置为`true` (缺省情况下，只有 B2G / Firefox OS).
-    - {{non-standard_inline}} (Blink only) **`storage`**: {{jsxref("string")}} 这样表示使用哪种方式存储 (默认为：持久（"persistent"）).
+    - {{non-standard_inline}} (Blink only) **`storage`**: {{jsxref("String", "string")}} 这样表示使用哪种方式存储 (默认为：持久（"persistent"）).
 
     WebGL 上下文属性：
     - **`alpha`**: `boolean`值表明`canvas`包含一个`alpha`缓冲区。

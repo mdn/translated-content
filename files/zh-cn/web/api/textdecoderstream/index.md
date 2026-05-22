@@ -17,9 +17,9 @@ slug: Web/API/TextDecoderStream
 - {{DOMxRef("TextDecoderStream.encoding")}}{{ReadOnlyInline}}
   - : 一种编码。
 - {{DOMxRef("TextDecoderStream.fatal")}}{{ReadOnlyInline}}
-  - : 一个 {{jsxref("boolean")}}，表示错误是否是致命的。
+  - : 一个 {{jsxref("Boolean", "boolean")}}，表示错误是否是致命的。
 - {{DOMxRef("TextDecoderStream.ignoreBOM")}}{{ReadOnlyInline}}
-  - : 一个 {{jsxref("boolean")}}，表示是否忽略字节顺序标记。
+  - : 一个 {{jsxref("Boolean", "boolean")}}，表示是否忽略字节顺序标记。
 - {{DOMxRef("TextDecoderStream.readable")}}{{ReadOnlyInline}}
   - : 返回此对象控制的 {{domxref("ReadableStream")}} 实例。
 - {{DOMxRef("TextDecoderStream.writable")}}{{ReadOnlyInline}}

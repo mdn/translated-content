@@ -323,7 +323,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 [JavaScript 类](/zh-CN/docs/Web/JavaScript/Reference/Classes)。
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
 - [私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

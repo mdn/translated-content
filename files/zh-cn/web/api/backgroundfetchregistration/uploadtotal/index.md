@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-{{jsxref("number")}}。
+{{jsxref("Number", "number")}}。
 
 ## 示例
 
