@@ -144,14 +144,14 @@ Additions to the ECMAScript core for language-sensitive functionalities.
 
 ### WebAssembly
 
-- {{jsxref("WebAssembly")}}
-- {{jsxref("WebAssembly.Module")}}
-- {{jsxref("WebAssembly.Instance")}}
-- {{jsxref("WebAssembly.Memory")}}
-- {{jsxref("WebAssembly.Table")}}
-- {{jsxref("WebAssembly.CompileError")}}
-- {{jsxref("WebAssembly.LinkError")}}
-- {{jsxref("WebAssembly.RuntimeError")}}
+- [`WebAssembly`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface)
+- [`WebAssembly.Module`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Module)
+- [`WebAssembly.Instance`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Instance)
+- [`WebAssembly.Memory`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Memory)
+- [`WebAssembly.Table`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/Table)
+- [`WebAssembly.CompileError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/CompileError)
+- [`WebAssembly.LinkError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/LinkError)
+- [`WebAssembly.RuntimeError`](/zh-TW/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)
 
 ### 非標準物件
 
