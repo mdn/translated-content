@@ -15,7 +15,7 @@ l10n:
 
 JavaScript 中的基本关键字和常用表达式。这些表达式具有最高的优先级（高于[运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)）。
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : `this` 关键字指向执行上下文的特殊属性。
 - [字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)
   - : 基本的 `null`、布尔、数字和字符串字面量。
@@ -48,10 +48,10 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
   - : 成员运算符用于访问对象的属性或方法（`object.property` 和 `object["property"]`）。
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : 如果引用是[空值](/zh-CN/docs/Glossary/Nullish)（[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : `new` 运算符创建了构造函数实例。
 - {{jsxref("Operators/new.target", "new.target")}}
-  - : 在构造函数中，`new.target` 指向 {{jsxref("Operators/new", "new")}} 调用的构造函数。
+  - : 在构造函数中，`new.target` 指向 {{jsxref("new")}} 调用的构造函数。
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : 向 JavaScript 模块暴露特定上下文的元数据属性的对象。
 - {{jsxref("Operators/super", "super")}}
@@ -76,7 +76,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 
 一元运算符只有一个操作数。
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : `delete` 运算符用来删除对象的属性。
 - {{jsxref("Operators/void", "void")}}
   - : `void` 运算符执行表达式并丢弃其返回值。
@@ -122,7 +122,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
   - : 小于等于运算符。
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大于等于运算符。
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : `instanceof` 运算符判断一个对象是否是另一个对象的实例。
 - {{jsxref("Operators/in", "in")}}
   - : `in` 运算符用来判断对象是否拥有给定属性。

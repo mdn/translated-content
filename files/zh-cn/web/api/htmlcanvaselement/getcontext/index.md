@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/getContext
 
 {{APIRef("Canvas API")}}
 
-**`HTMLCanvasElement.getContext()`** 方法返回`canvas` 的上下文，如果上下文没有定义则返回 {{jsxref("Operators/null", "null")}} .
+**`HTMLCanvasElement.getContext()`** 方法返回`canvas` 的上下文，如果上下文没有定义则返回 {{jsxref("null")}} .
 
 在同一个 canvas 上以相同的 `contextType` 多次调用此方法只会返回同一个上下文。
 
@@ -63,7 +63,7 @@ getContext(contextType, contextAttributes)
 - {{domxref("WebGL2RenderingContext")}} 为`"webgl2"` 和`"experimental-webgl2"`, 或者
 - {{domxref("ImageBitmapRenderingContext")}} 为`"bitmaprenderer"`.
 
-如果 `contextType` 不是上述之一，返回{{jsxref("Operators/null", "null")}}.
+如果 `contextType` 不是上述之一，返回{{jsxref("null")}}.
 
 ## 示例
 

@@ -93,7 +93,7 @@ var uint8 = new Uint8Array(iterable);
 
 ## 兼容性说明
 
-从 ECMAScript 2015 开始，`Uint8Array` 构造函数需要通过 {{jsxref("Operators/new", "new")}} 操作符调用。即日起如果没有使用 `new` 调用 `Uint8Array` 的构造函数，将会抛出 {{jsxref("TypeError")}} 。
+从 ECMAScript 2015 开始，`Uint8Array` 构造函数需要通过 {{jsxref("new")}} 操作符调用。即日起如果没有使用 `new` 调用 `Uint8Array` 的构造函数，将会抛出 {{jsxref("TypeError")}} 。
 
 ```js example-bad
 var dv = Uint8Array([1, 2, 3]);

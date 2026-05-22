@@ -34,7 +34,7 @@ Reflect.getPrototypeOf(target)
 
 ### 返回值
 
-给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxref("Operators/null", "null")}}。
+给定对象的原型。如果给定对象没有继承的属性，则返回 {{jsxref("null")}}。
 
 ### 异常
 

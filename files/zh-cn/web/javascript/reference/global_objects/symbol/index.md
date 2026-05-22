@@ -54,7 +54,7 @@ var sym3 = Symbol("foo");
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：
+下面带有 {{jsxref("new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：
 
 ```js
 var sym = new Symbol(); // TypeError
@@ -103,7 +103,7 @@ typeof symObj; // "object"
 - {{jsxref("Symbol.split")}}
   - : 一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxref("String.prototype.split()")}} 使用。
 - 其他 symbols {{jsxref("Symbol.hasInstance")}}
-  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("Operators/instanceof", "instanceof")}} 使用。
+  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("instanceof")}} 使用。
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : 一个布尔值，表明一个对象是否应该 flattened 为它的数组元素。被 {{jsxref("Array.prototype.concat()")}} 使用。
 - {{jsxref("Symbol.unscopables")}}

@@ -7,11 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean
 
 ## 描述
 
-如果需要，作为第一个参数传递的值将转换为布尔值。如果省略该参数或参数值为 `0`、`-0`、{{jsxref("Operators/null", "null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}，或空字符串（`""`），则该对象具有的初始值为 `false`。所有其他值，包括任何对象，空数组（`[]`）或字符串 `"false"`，都会创建一个初始值为 `true` 的对象。
+如果需要，作为第一个参数传递的值将转换为布尔值。如果省略该参数或参数值为 `0`、`-0`、{{jsxref("null")}}、`false`、{{jsxref("NaN")}}、{{jsxref("undefined")}}，或空字符串（`""`），则该对象具有的初始值为 `false`。所有其他值，包括任何对象，空数组（`[]`）或字符串 `"false"`，都会创建一个初始值为 `true` 的对象。
 
 注意不要将基本类型中的布尔值 `true` 和 `false` 与值为 `true` 和 `false` 的 `Boolean` 对象弄混了。
 
-其值不是 {{jsxref("undefined")}} 或 {{jsxref("Operators/null", "null")}} 的任何对象（包括其值为 `false` 的布尔对象）在传递给条件语句时都将计算为 `true`。例如，以下 {{jsxref("Statements/if...else", "if")}} 语句中的条件评估为 `true`：
+其值不是 {{jsxref("undefined")}} 或 {{jsxref("null")}} 的任何对象（包括其值为 `false` 的布尔对象）在传递给条件语句时都将计算为 `true`。例如，以下 {{jsxref("Statements/if...else", "if")}} 语句中的条件评估为 `true`：
 
 ```js
 const x = new Boolean(false);

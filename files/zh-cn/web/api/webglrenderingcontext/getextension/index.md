@@ -20,7 +20,7 @@ gl.getExtension(name);
 
 ### 返回值
 
-一个 WebGL 扩展对象。如果扩展名称（区分大小写）与 {{domxref("WebGLRenderingContext.getSupportedExtensions")}} 中的任何结果都不匹配，则只会返回 {{jsxref("Operators/null", "null")}} 。
+一个 WebGL 扩展对象。如果扩展名称（区分大小写）与 {{domxref("WebGLRenderingContext.getSupportedExtensions")}} 中的任何结果都不匹配，则只会返回 {{jsxref("null")}} 。
 
 ## 示例
 

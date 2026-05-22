@@ -85,7 +85,7 @@ var z = new Float32Array(buffer, 0, 4);
 
 ## 一致性提示
 
-从 ECMAScript 2015 (ES6) 开始， `Float32Array`构造函数需要用一个{{jsxref("Operators/new", "new")}}操作符来构造。现在直接把`Float32Array 构造函数当函数调用而不使用 new，会抛出一个`{{jsxref("TypeError")}}。
+从 ECMAScript 2015 (ES6) 开始， `Float32Array`构造函数需要用一个{{jsxref("new")}}操作符来构造。现在直接把`Float32Array 构造函数当函数调用而不使用 new，会抛出一个`{{jsxref("TypeError")}}。
 
 ```js example-bad
 var dv = Float32Array([1, 2, 3]);

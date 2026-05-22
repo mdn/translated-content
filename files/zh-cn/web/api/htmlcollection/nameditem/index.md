@@ -21,7 +21,7 @@ const item = collection.namedItem(key);
 
 ### 返回值
 
-- `item` 是 {{domxref("HTMLCollection")}} 第一个与 _key_ 匹配的 {{domxref("Element")}}，如果没有，则返回 {{jsxref("Operators/null", "null")}}。
+- `item` 是 {{domxref("HTMLCollection")}} 第一个与 _key_ 匹配的 {{domxref("Element")}}，如果没有，则返回 {{jsxref("null")}}。
 
 ## 示例
 

@@ -45,7 +45,7 @@ Object.create(proto, propertiesObject)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `proto` 既不是 {{jsxref("Operators/null", "null")}}，也不是 {{jsxref("Object")}}，则抛出此错误。
+  - : 如果 `proto` 既不是 {{jsxref("null")}}，也不是 {{jsxref("Object")}}，则抛出此错误。
 
 ## 示例
 

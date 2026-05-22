@@ -38,7 +38,7 @@ void gl.drawArrays(mode, first, count);
 
 - 如果 `mode` 不是一个可接受值，将会抛出 `gl.INVALID_ENUM` 异常。
 - 如果 `first` 或者 `count` 是负值，会抛出 `gl.INVALID_VALUE` 异常。
-- 如果 `gl.CURRENT_PROGRAM` 为 {{jsxref("Operators/null", "null")}}，会抛出 `gl.INVALID_OPERATION` 异常。
+- 如果 `gl.CURRENT_PROGRAM` 为 {{jsxref("null")}}，会抛出 `gl.INVALID_OPERATION` 异常。
 
 ## 示例
 

@@ -27,7 +27,7 @@ const gl = canvas.getContext("webgl");
 以下的属性和方法提供只读的 WebGL 上下文的信息和特性：
 
 - {{domxref("WebGLRenderingContext.canvas")}}
-  - : 只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("Operators/null", "null")}}。
+  - : 只读属性，对 {{domxref("HTMLCanvasElement")}} 的向后引用。如果上下文没有相联系的 {{HTMLElement("canvas")}} 元素，值将会为 {{jsxref("null")}}。
 - {{domxref("WebGLRenderingContext.commit()")}} {{Experimental_Inline}}
   - : 如果上下文没有指定的 canvas，把帧交给原始的{{domxref("HTMLCanvasElement")}}元素。
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}

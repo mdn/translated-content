@@ -85,7 +85,7 @@ var z = new Int8Array(buffer, 1, 4);
 
 ## 兼容性说明
 
-自 ECMAScript 2015 (ES6) 施行，`Int8Array` 需要使用 {{jsxref("Operators/new", "new")}} 构造。从当前版本开始，不加 new 而便调用 `Int8Array` 构造器方法，将报出 {{jsxref("TypeError")}} 错误。
+自 ECMAScript 2015 (ES6) 施行，`Int8Array` 需要使用 {{jsxref("new")}} 构造。从当前版本开始，不加 new 而便调用 `Int8Array` 构造器方法，将报出 {{jsxref("TypeError")}} 错误。
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);

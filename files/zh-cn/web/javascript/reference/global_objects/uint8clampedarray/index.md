@@ -96,7 +96,7 @@ var uintc8 = new Uint8ClampedArray(iterable);
 
 ## 兼容性注意事项
 
-从 ECMAScript 2015 开始， `Uint8ClampedArray` 构造函数需要用一个 {{jsxref("Operators/new", "new")}} 操作符来构建。从现在开始，不使用 `new` 来调用一个 `Uint8ClampedArray` 构造函数将会抛出一个 {{jsxref("TypeError")}}。
+从 ECMAScript 2015 开始， `Uint8ClampedArray` 构造函数需要用一个 {{jsxref("new")}} 操作符来构建。从现在开始，不使用 `new` 来调用一个 `Uint8ClampedArray` 构造函数将会抛出一个 {{jsxref("TypeError")}}。
 
 ```js example-bad
 var dv = Uint8ClampedArray([1, 2, 3]);

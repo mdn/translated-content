@@ -186,7 +186,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 主要表达式
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - [字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)
 - {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
@@ -203,7 +203,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 - {{jsxref("Operators/Property_accessors", "属性访问器", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Operators/new.target", "new.target")}}
 - {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
@@ -218,7 +218,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 一元运算符
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Operators/Unary_plus", "+")}}
@@ -242,7 +242,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("Operators/Greater_than", "&gt;")}}（大于）
 - {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Operators/in", "in")}}
 
 ### 相等运算符

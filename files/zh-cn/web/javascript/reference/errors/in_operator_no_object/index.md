@@ -38,7 +38,7 @@ TypeError: Cannot use 'in' operator to search for 'x' in y (Chrome)
 
 ### 操作数不能为 null 或者 undefined
 
-确保你将要进行探测的对象不为 {{jsxref("Operators/null", "null")}} 或者 {{jsxref("undefined")}}.
+确保你将要进行探测的对象不为 {{jsxref("null")}} 或者 {{jsxref("undefined")}}.
 
 ```js example-bad
 var foo = null;

@@ -31,7 +31,7 @@ var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
 ```
 
-你可以将 {{jsxref("Operators/null", "null")}} 设置为原型：
+你可以将 {{jsxref("null")}} 设置为原型：
 
 ```js example-good
 var obj = Object.create(null);

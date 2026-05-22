@@ -3,7 +3,7 @@ title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
 
-JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通常为意外获得的 {{jsxref("undefined")}} 或 {{jsxref("Operators/null", "null")}} 值）时被抛出。
+JavaScript 异常“_x_ is (not) _y_”在出现与期望不符的类型（通常为意外获得的 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值）时被抛出。
 
 ## 消息
 
@@ -23,7 +23,7 @@ TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
 
 ## 什么地方出错了？
 
-出现了与期望不符的类型。这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("Operators/null", "null")}} 值引起。
+出现了与期望不符的类型。这个错误常常由 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值引起。
 
 此外，某些方法，例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}，要求必须提供特定类型的参数。
 
@@ -68,4 +68,4 @@ if (foo) {
 ## 参见
 
 - {{jsxref("undefined")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("null")}}
