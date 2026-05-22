@@ -24,7 +24,7 @@ TypeError: "x" is not a symbol
 
 ## Что случилось?
 
-Встречен неожиданный тип. Это часто случается со значениями {{jsxref("Operators/null", "null")}} или {{jsxref("undefined")}}.
+Встречен неожиданный тип. Это часто случается со значениями {{jsxref("null")}} или {{jsxref("undefined")}}.
 
 Так же, некоторые методы, такие как {{jsxref("Object.create()")}} или {{jsxref("Symbol.keyFor()")}}, требуют определённый тип, который должен быть предоставлен.
 
@@ -61,4 +61,4 @@ if (typeof foo !== "undefined") {
 ## Смотрите также
 
 - {{jsxref("undefined")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("null")}}

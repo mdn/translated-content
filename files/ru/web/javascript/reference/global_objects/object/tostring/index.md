@@ -44,7 +44,7 @@ o.toString(); // вернёт [object Object]
 ```
 
 > [!NOTE]
-> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("Operators/null", "null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
+> Начиная с JavaScript 1.8.5, метод `toString()`, вызванный на {{jsxref("null")}}, возвращает строку `[object Null]`, а вызванный для {{jsxref("undefined")}}, возвращает строку `[object Undefined]`, как определено в 5-м издании ECMAScript и последующих исправлениях. Смотрите пример [использование метода toString() для определения типа объекта](#using_tostring_to_detect_object_type).
 
 ## Примеры
 

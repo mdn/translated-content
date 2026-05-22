@@ -152,7 +152,7 @@ var float32 = new Float32Array(iterable);
 
 ## Примечания по совместимости
 
-Начиная с ECMAScript 2015 (ES6), `Float32Array` конструктор обязательно должен вызываться с ключевым словом {{jsxref("Operators/new", "new")}}. Вызов `Float32Array` конструктора как функцию приведёт к исключению {{jsxref("TypeError")}}.
+Начиная с ECMAScript 2015 (ES6), `Float32Array` конструктор обязательно должен вызываться с ключевым словом {{jsxref("new")}}. Вызов `Float32Array` конструктора как функцию приведёт к исключению {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Float32Array([1, 2, 3]);

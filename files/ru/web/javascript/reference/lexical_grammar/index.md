@@ -140,7 +140,7 @@ console.log("Hello world");
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/while", "do")}}
 - [`else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - {{jsxref("Statements/export", "export")}}
@@ -151,13 +151,13 @@ console.log("Hello world");
 - [`if`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - {{jsxref("Statements/import", "import")}}
 - [`in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Statements/let", "let")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - [`try`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch)
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -226,7 +226,7 @@ function import() {} // неправильно.
 
 ### Литерал Null
 
-Подробнее о `{{jsxref('Operators/null','null')}}null`.
+Подробнее о `{{jsxref('null')}}null`.
 
 ```js
 null;

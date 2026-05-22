@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 
 ## Описание
 
-Если функция `f` была вызвана из кода самого верхнего уровня, значение `f.caller` будет равно {{jsxref("Operators/null", "null")}}, в противном случае значение будет равно функции, вызвавшей `f`.
+Если функция `f` была вызвана из кода самого верхнего уровня, значение `f.caller` будет равно {{jsxref("null")}}, в противном случае значение будет равно функции, вызвавшей `f`.
 
 Это свойство пришло на замену удалённого свойства {{jsxref("Function.prototype.caller", "arguments.caller")}} объекта {{jsxref("Functions/arguments", "arguments")}}.
 

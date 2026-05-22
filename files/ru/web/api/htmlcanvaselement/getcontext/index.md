@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/getContext
 
 {{APIRef("Canvas API")}}
 
-Метод **`HTMLCanvasElement.getContext()`** возвращает контекст рисования на холсте, или {{jsxref("Operators/null", "null")}}, если идентификатор контекста не определён.
+Метод **`HTMLCanvasElement.getContext()`** возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.
 
 ## Синтаксис
 

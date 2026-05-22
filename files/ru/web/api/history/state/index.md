@@ -15,7 +15,7 @@ const currentState = history.state
 
 ### Значение
 
-Последнее состояние стека истории. Значение равно {{jsxref("Operators/null", "null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.
+Последнее состояние стека истории. Значение равно {{jsxref("null")}} до тех пор, пока не будет применён метод {{domxref("History.pushState","pushState()")}} или {{domxref("History.replaceState","replaceState()")}}.
 
 ## Примеры
 

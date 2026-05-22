@@ -152,7 +152,7 @@ var int8 = new Int8Array(iterable);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015, `Int8Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Int8Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `Int8Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Int8Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);

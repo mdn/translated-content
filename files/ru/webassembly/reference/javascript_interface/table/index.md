@@ -37,7 +37,7 @@ slug: WebAssembly/Reference/JavaScript_interface/Table
 
 ## Примеры
 
-Следующий пример (смотри [исходный код](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) и [живую версию](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) table2.html) создаёт новый экземпляр WebAssembly Table с 2 элементами. После этого выводит длину таблицы и содержимое первых двух элементов (полученных через [`Table.prototype.get()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table/get) чтобы показать что длина равняется 2 и элементы равны {{jsxref("Operators/null", "null")}}.
+Следующий пример (смотри [исходный код](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) и [живую версию](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) table2.html) создаёт новый экземпляр WebAssembly Table с 2 элементами. После этого выводит длину таблицы и содержимое первых двух элементов (полученных через [`Table.prototype.get()`](/ru/docs/WebAssembly/Reference/JavaScript_interface/Table/get) чтобы показать что длина равняется 2 и элементы равны {{jsxref("null")}}.
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });

@@ -30,7 +30,7 @@ myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-Неопределённые свойства объекта являются {{jsxref("undefined")}} (а не {{jsxref("Operators/null", "null")}}).
+Неопределённые свойства объекта являются {{jsxref("undefined")}} (а не {{jsxref("null")}}).
 
 ```js
 myCar.color; // undefined

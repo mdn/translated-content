@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Operators
 
 Базовые ключевые слова и общие выражения в JavaScript.
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : Ключевое слово `this` ссылается на контекст выполняемой функции.
 - {{jsxref("Operators/function", "function")}}
   - : Ключевое слово `function` определяет выражение функции.
@@ -47,10 +47,10 @@ slug: Web/JavaScript/Reference/Operators
 - {{jsxref("Operators/Property_accessors", "Доступ к свойству", "", 1)}}
   - : Операторы доступа к членам предоставляют доступ к свойству или методу объекта
     (`object.property` и `object['property']`).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : Оператор `new` создаёт экземпляр объекта с использованием конструктора.
 - [new.target](/ru/docs/Web/JavaScript/Reference/Operators/new.target)
-  - : Свойство `new.target` ссылается на конструктор или функцию, который был вызван через оператор {{jsxref("Operators/new", "new")}}.
+  - : Свойство `new.target` ссылается на конструктор или функцию, который был вызван через оператор {{jsxref("new")}}.
 - {{jsxref("Operators/super", "super")}}
   - : Ключевое слово `super` вызывает конструктор родительского класса.
 - {{jsxref("Operators/Spread_syntax", "...obj")}}
@@ -73,7 +73,7 @@ slug: Web/JavaScript/Reference/Operators
 
 Унарные операции — это операции с одним операндом.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : Оператор `delete` удаляет свойство из объекта.
 - {{jsxref("Operators/void", "void")}}
   - : Оператор `void` отбрасывает возвращаемое значение выражения.
@@ -111,7 +111,7 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{jsxref("Operators/in", "in")}}
   - : Оператор `in` определяет, содержит ли объект указанное свойство.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : Оператор `instanceof` определяет, является ли объект экземпляром потомком Prototype (или экземпляром) другого объекта.
 - {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
   - : Оператор меньше.

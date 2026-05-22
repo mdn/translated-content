@@ -27,7 +27,7 @@ var gl = canvas.getContext("webgl");
 Ниже перечислены свойства и методы которые дают общую информацию и функциональность при работе с WebGL контекстом:
 
 - {{domxref("WebGLRenderingContext.canvas")}}
-  - : Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может быть {{jsxref("Operators/null", "null")}} если будет применятся в контексте элемента иного типа чем {{HTMLElement("canvas")}}.
+  - : Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может быть {{jsxref("null")}} если будет применятся в контексте элемента иного типа чем {{HTMLElement("canvas")}}.
 - {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
   - : Вставляет окна в первоначальный {{domxref("HTMLCanvasElement")}} , если контекст не привязан к конкретному холсту.
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
@@ -35,7 +35,7 @@ var gl = canvas.getContext("webgl");
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным контекстом.
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать {{jsxref("Operators/null", "null")}} если контекст утерян.
+  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать {{jsxref("null")}} если контекст утерян.
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : Возвращает `true` если контекст утерян, в противном случае возвращает `false`.
 

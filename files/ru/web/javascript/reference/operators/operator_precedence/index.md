@@ -81,7 +81,7 @@ a = b = 5;
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (со списком аргументов)</td>
+      <td>{{jsxref("new")}} (со списком аргументов)</td>
       <td>не определено</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -96,7 +96,7 @@ a = b = 5;
     </tr>
     <tr>
       <td>16</td>
-      <td>{{jsxref("Operators/new","new")}} (без списка аргументов)</td>
+      <td>{{jsxref("new")}} (без списка аргументов)</td>
       <td>справа налево</td>
       <td><code>new …</code></td>
     </tr>

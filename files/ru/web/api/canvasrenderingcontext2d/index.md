@@ -202,7 +202,7 @@ ctx.fillRect(10, 10, 55, 50);
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Восстанавливает состояние стилей рисования в значение, сохранённое методом `save()` в стек состояний последним.
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может иметь значение {{jsxref("Operators/null", "null")}}, если она не связана с элементом {{HTMLElement("canvas")}}.
+  - : Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может иметь значение {{jsxref("null")}}, если она не связана с элементом {{HTMLElement("canvas")}}.
 
 ## Области попадания
 

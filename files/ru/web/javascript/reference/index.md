@@ -185,7 +185,7 @@ l10n:
 
 ### Основные выражения
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - [Литералы](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
 - {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
@@ -202,7 +202,7 @@ l10n:
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
 - {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
@@ -217,7 +217,7 @@ l10n:
 
 ### Унарные оператоты
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -241,7 +241,7 @@ l10n:
 - {{JSxRef("Operators/Greater_than", "&gt;")}} (Больше чем)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/in", "in")}}
 
 ### Оператоы сравнения

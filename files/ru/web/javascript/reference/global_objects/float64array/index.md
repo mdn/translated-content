@@ -152,7 +152,7 @@ var float64 = new Float64Array(iterable);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015, `Float64Array` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Float64Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015, `Float64Array` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Float64Array` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Float64Array([1, 2, 3]);

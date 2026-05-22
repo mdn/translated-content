@@ -144,7 +144,7 @@ var z = new Uint8ClampedArray(buffer, 1, 4);
 
 ## Compatibility notes
 
-Starting with ECMAScript 2015 (ES6), `Uint8ClampedArray` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling a `Uint8ClampedArray` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with ECMAScript 2015 (ES6), `Uint8ClampedArray` constructors require to be constructed with a {{jsxref("new")}} operator. Calling a `Uint8ClampedArray` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = Uint8ClampedArray([1, 2, 3]);

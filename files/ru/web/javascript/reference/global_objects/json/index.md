@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
 
 ### Объектная нотация JavaScript
 
-JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения {{jsxref("Operators/null", "null")}}. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript. Смотрите также статью [JSON: подмножество JavaScript, которым он не является](http://timelessrepo.com/json-isnt-a-javascript-subset) (на английском).
+JSON является синтаксисом для сериализации объектов, массивов, чисел, строк логических значений и значения {{jsxref("null")}}. Он основывается на синтаксисе JavaScript, однако всё же отличается от него: не каждый код на JavaScript является JSON, и не каждый JSON является кодом на JavaScript. Смотрите также статью [JSON: подмножество JavaScript, которым он не является](http://timelessrepo.com/json-isnt-a-javascript-subset) (на английском).
 
 <table>
   <caption>

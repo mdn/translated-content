@@ -152,7 +152,7 @@ var int32 = new Int32Array(iterable);
 
 ## Compatibility notes
 
-Начиная с ECMAScript 2015, конструкторы `Int32Array` требуют оператор {{jsxref("Operators/new", "new")}}. Вызов `Int32Array` конструктора как функцию без оператора `new`, вызовет ошибку {{jsxref("TypeError")}}.
+Начиная с ECMAScript 2015, конструкторы `Int32Array` требуют оператор {{jsxref("new")}}. Вызов `Int32Array` конструктора как функцию без оператора `new`, вызовет ошибку {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int32Array([1, 2, 3]);
