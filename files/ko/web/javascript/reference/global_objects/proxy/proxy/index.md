@@ -37,31 +37,31 @@ new Proxy(target, handler);
 
 이 섹션에서는 정의할 수 있는 모든 처리기 함수를 나열합니다. 처리기 함수는 기본 대상 객체에 대한 호출을 가로채기 때문에 **트랩**(**traps**)이라고도 합니다.
 
-- {{JSxRef("Proxy.Proxy.apply", "handler.apply()")}}
+- {{JSxRef("Proxy/Proxy/apply", "handler.apply()")}}
   - : 함수 호출에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.construct", "handler.construct()")}}
+- {{JSxRef("Proxy/Proxy/construct", "handler.construct()")}}
   - : {{JSxRef("Operators/new", "new")}} 연산자에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.defineProperty", "handler.defineProperty()")}}
+- {{JSxRef("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : {{JSxRef("Object.defineProperty")}}에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.deleteProperty", "handler.deleteProperty()")}}
+- {{JSxRef("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
   - : {{JSxRef("Operators/delete", "delete")}} 연산자에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.get", "handler.get()")}}
+- {{JSxRef("Proxy/Proxy/get", "handler.get()")}}
   - : 속성 값을 가져오기(get) 위한 트랩.
-- {{JSxRef("Proxy.Proxy.getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+- {{JSxRef("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : {{JSxRef("Object.getOwnPropertyDescriptor")}}에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.getPrototypeOf", "handler.getPrototypeOf()")}}
+- {{JSxRef("Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : {{JSxRef("Object.getPrototypeOf")}}에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.has", "handler.has()")}}
+- {{JSxRef("Proxy/Proxy/has", "handler.has()")}}
   - : {{JSxRef("Operators/in", "in")}} 연산자에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.isExtensible", "handler.isExtensible()")}}
+- {{JSxRef("Proxy/Proxy/isExtensible", "handler.isExtensible()")}}
   - : {{JSxRef("Object.isExtensible")}}에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.ownKeys", "handler.ownKeys()")}}
+- {{JSxRef("Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
   - : {{JSxRef("Object.getOwnPropertyNames")}}와 {{JSxRef("Object.getOwnPropertySymbols")}}에 대한 트랩
-- {{JSxRef("Proxy.Proxy.preventExtensions", "handler.preventExtensions()")}}
+- {{JSxRef("Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
   - : {{JSxRef("Object.preventExtensions")}}에 대한 트랩
-- {{JSxRef("Proxy.Proxy.set", "handler.set()")}}
+- {{JSxRef("Proxy/Proxy/set", "handler.set()")}}
   - : 속성 값 설정(set)에 대한 트랩.
-- {{JSxRef("Proxy.Proxy.setPrototypeOf", "handler.setPrototypeOf()")}}
+- {{JSxRef("Proxy/Proxy/setPrototypeOf", "handler.setPrototypeOf()")}}
   - : {{JSxRef("Object.setPrototypeOf")}}에 대한 트랩.
 
 ## 예제들
