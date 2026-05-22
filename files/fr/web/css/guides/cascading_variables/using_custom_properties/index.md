@@ -553,6 +553,6 @@ element.style.setProperty("--ma-variable", jsVar + 4);
 
 - La règle {{CSSxRef("@property")}}
 - La fonction {{CSSxRef("var()")}}
-- Le module [des propriétés pour les variables de la cascade CSS](/fr/docs/Web/CSS/Guides/Cascading_variables) module
+- Le module [des propriétés pour les variables de la cascade CSS](/fr/docs/Web/CSS/Guides/Cascading_variables)
 - [Syntaxe des propriétés personnalisées](/fr/docs/Web/CSS/Reference/Properties/--*)
 - [L'API des propriétés et valeurs CSS](/fr/docs/Web/API/CSS_Properties_and_Values_API)
