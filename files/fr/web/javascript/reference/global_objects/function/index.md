@@ -31,7 +31,7 @@ Ces propriétés sont propres à chaque instance de `Function`.
   - : Indique le nombre d'arguments attendus par la fonction.
 - {{JSxRef("Function/name", "name")}}
   - : Le nom de la fonction.
-- {{JSxRef("Function/prototype", "prototype")}}
+- {{JSxRef("Function", "prototype")}}
   - : Utilisé lorsque la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("Operators/new", "new")}}. Cela deviendra le prototype du nouvel objet.
 
 ## Méthodes d'instance

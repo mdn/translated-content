@@ -671,7 +671,7 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 
 - {{JSxRef("Global_Objects/eval", "eval()")}}
   - : La fonction **`eval()`** permet d'évaluer du code JavaScript contenu dans une chaîne de caractères.
-- {{JSxRef("uneval()")}} {{non-standard_inline}}
+- {{JSxRef("Deprecated_and_obsolete_features", "uneval()")}} {{non-standard_inline}}
   - : La fonction **`uneval()`** crée une représentation sous la forme d'une chaîne de caractères pour le code source d'un objet.
 - {{JSxRef("isFinite()")}}
   - : La fonction **`isFinite()`** détermine si la valeur passée est un nombre fini. Si nécessaire, le paramètre sera converti en un nombre.
