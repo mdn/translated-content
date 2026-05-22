@@ -331,7 +331,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 
 [Classes JavaScript](/fr/docs/Web/JavaScript/Reference/Classes)
 
-- {{JSxRef("Classes/Constructor", "constructor")}}
+- {{JSxRef("Classes/constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
 - [Éléments privés](/fr/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Champs de classe publics](/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

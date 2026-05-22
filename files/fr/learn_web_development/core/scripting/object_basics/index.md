@@ -346,7 +346,7 @@ frank.salutation();
 // "Salut ! Je suis Frank."
 ```
 
-Cela fonctionne bien, mais c'est un peu long&nbsp;: nous devons créer un objet vide, l'initialiser et le renvoyer. Une meilleure solution consiste à utiliser un **constructeur**. Un constructeur est simplement une fonction appelée à l'aide du mot-clé {{jsxref("operators/new", "new")}}. Lorsque vous appelez un constructeur, celui-ci&nbsp;:
+Cela fonctionne bien, mais c'est un peu long&nbsp;: nous devons créer un objet vide, l'initialiser et le renvoyer. Une meilleure solution consiste à utiliser un **constructeur**. Un constructeur est simplement une fonction appelée à l'aide du mot-clé {{jsxref("Operators/new", "new")}}. Lorsque vous appelez un constructeur, celui-ci&nbsp;:
 
 - Crée un nouvel objet
 - Lie `this` au nouvel objet, afin que vous puissiez vous référer à `this` dans votre code constructeur

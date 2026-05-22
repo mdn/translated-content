@@ -9,28 +9,28 @@ Un objet de type `bookmarks.BookmarkTreeNode` représente un nœud dans l'arbore
 
 ## Type
 
-Un {{jsxref("object")}} avec les propriétés suivantes :
+Un {{jsxref("Object", "object")}} avec les propriétés suivantes :
 
 - `children` {{optional_inline}}
-  - : Un {{jsxref("array")}} d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} qui représentent les enfants du noeud. La liste est classée dans la liste dans laquelle les enfants apparaissent dans l'interface utilisateur. Ce champ est omis si le noeud n'est pas un dossier.
+  - : Un {{jsxref("Array", "array")}} d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} qui représentent les enfants du noeud. La liste est classée dans la liste dans laquelle les enfants apparaissent dans l'interface utilisateur. Ce champ est omis si le noeud n'est pas un dossier.
 - `dateAdded` {{optional_inline}}
   - : Un nombre représentant la date de création du noeud en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `dateGroupModified` {{optional_inline}}
   - : Un nombre représentant la date et l'heure de la dernière modification du contenu de ce dossier, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 - `id`
-  - : Un {{jsxref("string")}} qui identifie le nœud de manière unique. Chaque ID est unique dans le profil de l'utilisateur et reste inchangé dans les redémarrages du navigateur.
+  - : Un {{jsxref("String", "string")}} qui identifie le nœud de manière unique. Chaque ID est unique dans le profil de l'utilisateur et reste inchangé dans les redémarrages du navigateur.
 - `index` {{optional_inline}}
   - : Un nombre qui représente la position zéro de ce noeud dans son dossier parent, où zéro représente la première entrée.
 - `parentId` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui spécifie l'ID du dossier parent. Cette propriété n'est pas présente dans le noeud racine.
+  - : Un {{jsxref("String", "string")}} qui spécifie l'ID du dossier parent. Cette propriété n'est pas présente dans le noeud racine.
 - `title`
-  - : Un {{jsxref("string")}} qui contient le texte affiché pour le nœud dans les menus et les listes de signets.
+  - : Un {{jsxref("String", "string")}} qui contient le texte affiché pour le nœud dans les menus et les listes de signets.
 - `type`{{optional_inline}}
   - : Un objet {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} indiquant s'il s'agit d'un signet, d'un dossier ou d'un séparateur. La valeur par défaut est `"bookmark"` sauf si l'`url` est omise, auquel cas elle est par défaut `"folder"`.
 - `unmodifiable` {{optional_inline}}
-  - : Un {{jsxref("string")}} comme décrit par le type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Représente la raison pour laquelle le noeud ne peut pas être modifié. Si le nœud peut être changé, ceci est omis.
+  - : Un {{jsxref("String", "string")}} comme décrit par le type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Représente la raison pour laquelle le noeud ne peut pas être modifié. Si le nœud peut être changé, ceci est omis.
 - `url` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui représente l'URL du signet. Si le nœud représente un dossier, cette propriété est omise.
+  - : Un {{jsxref("String", "string")}} qui représente l'URL du signet. Si le nœud représente un dossier, cette propriété est omise.
 
 ## Compatibilité des navigateurs
 

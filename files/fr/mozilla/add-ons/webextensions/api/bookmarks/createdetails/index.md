@@ -9,18 +9,18 @@ Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau
 
 ## Type
 
-Un {{jsxref("object")}} contenant une combinaison des champs suivants :
+Un {{jsxref("Object", "object")}} contenant une combinaison des champs suivants :
 
 - `index` {{optional_inline}}
   - : Un entier {{jsxref("Number")}} qui spécifie la position à laquelle placer le nouveau signet sous son parent. Une valeur de 0 le placera en haut de la liste.
 - `parentId` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui indique l'ID du dossier parent dans lequel placer le nouveau signet ou dossier de signets. Sur Chrome et Firefox, la valeur par défaut est le dossier "Autres signets" du menu Signets.
+  - : Un {{jsxref("String", "string")}} qui indique l'ID du dossier parent dans lequel placer le nouveau signet ou dossier de signets. Sur Chrome et Firefox, la valeur par défaut est le dossier "Autres signets" du menu Signets.
 - `title` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui spécifie le titre du signet ou le nom du dossier à créer. Si ce n'est pas spécifié, le titre est `""`.
+  - : Un {{jsxref("String", "string")}} qui spécifie le titre du signet ou le nom du dossier à créer. Si ce n'est pas spécifié, le titre est `""`.
 - `type`{{optional_inline}}
   - : Un objet {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}indiquant s'il s'agit d'un signet, d'un dossier ou d'un séparateur. La valeur par défaut est `"bookmark"` sauf si l'`url` est omise, auquel cas elle est par défaut `"folder"`.
 - `url` {{optional_inline}}
-  - : `string`. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
+  - : `string`. Un {{jsxref("String", "string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
 
 ## Compatibilité des navigateurs
 

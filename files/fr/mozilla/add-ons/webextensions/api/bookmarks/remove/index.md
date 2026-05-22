@@ -23,7 +23,7 @@ var removingBookmark = browser.bookmarks.remove(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
+  - : Un {{jsxref("String", "string")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
 
 ### Valeur retournée
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 
 Étant donné l'ID d'un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} ou d'un tableau de ces ID, la méthode **`bookmarks.get()`** récupère les nœuds correspondants.
 
-C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.
+C'est une fonction asynchrone qui renvoie une {{jsxref("Promise", "promise")}}.
 
 ## Syntaxe
 
@@ -20,11 +20,11 @@ var getBookmarks = browser.bookmarks.get(
 ### Paramètres
 
 - `idOrIdList`
-  - : `string` Une {{jsxref("string")}} ou un {{jsxref("array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.
+  - : `string` Une {{jsxref("String", "string")}} ou un {{jsxref("Array", "array")}} de chaînes spécifiant les ID d'un ou plusieurs objets {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à récupérer.
 
 ### Valeur retournée
 
-Une {{jsxref("promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.
+Une {{jsxref("Promise", "promise")}} qui sera remplie avec un tableau de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}}, un pour chaque nœud correspondant. Les séparateurs ne sont pas inclus dans les résultats. Si aucun noeud n'a pu être trouvé, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

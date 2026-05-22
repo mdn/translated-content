@@ -23,7 +23,7 @@ var removingTree = browser.bookmarks.removeTree(
 ### Paramètres
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
+  - : Un {{jsxref("String", "string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
 
 ### Valeur retournée
 

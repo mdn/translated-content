@@ -22,17 +22,17 @@ var searching = browser.bookmarks.search(
 ### Paramètres
 
 - `query`
-  - : Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.
+  - : Un {{jsxref("String", "string")}} ou {{jsxref("Object", "object")}} décrivant la requête à effectuer.
 
     Si la `query` est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.
 
     Si la `query` un objet, elle possède zéro ou plus des trois propriétés suivantes : `query`, `title`, et `url`, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.
     - `query` {{optional_inline}}
-      - : Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
+      - : Un {{jsxref("String", "string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
     - `url` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
+      - : Un {{jsxref("String", "string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
     - `title` {{optional_inline}}
-      - : Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
+      - : Un {{jsxref("String", "string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
 
 ### Valeur retournée
 
