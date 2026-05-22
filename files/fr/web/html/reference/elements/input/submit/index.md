@@ -45,7 +45,7 @@ Cet attribut est également disponible pour les éléments [`<input type="image"
 Une chaîne de caractères qui identifie la méthode d'encodage à utiliser pour l'envoi des données du formulaire au serveur. Trois valeurs sont autorisées&nbsp;:
 
 - `application/x-www-form-urlencoded`
-  - : C'est la valeur par défaut, elle envoie les données du formulaire sous forme de chaîne de caractères après avoir {{Glossary("Percent-encoding", "encodé en pourcentage")}} le texte en utilisant un algorithme tel que {{JSxRef("encodeURI", "encodeURI()")}}.
+  - : C'est la valeur par défaut, elle envoie les données du formulaire sous forme de chaîne de caractères après avoir {{Glossary("Percent-encoding", "encodé en pourcentage")}} le texte en utilisant un algorithme tel que {{JSxRef("encodeURI()")}}.
 - `multipart/form-data`
   - : Cette valeur utilise l'API {{DOMxRef("FormData")}} pour gérer les données, permettant de téléverser des fichiers sur le serveur. Vous _devez_ utiliser un encodage de ce type s'il y a des éléments de formulaire, incluant des {{HTMLElement("input")}} de [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) `file` ([`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file)).
 - `text/plain`
