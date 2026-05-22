@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/values
 
 {{APIRef("DOM")}}
 
-La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant aux développeurs de passer en revue toutes les valeurs contenues dans la `DOMTokenList`. Individuellement, les valeurs sont des objets {{domxref("DOMString")}} (_chaînes de caractères_).
+La méthode **`values()`** (_valeurs_) de l'interface {{domxref("DOMTokenList")}} renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant aux développeurs de passer en revue toutes les valeurs contenues dans la `DOMTokenList`. Individuellement, les valeurs sont des objets {{jsxref("String")}} (_chaînes de caractères_).
 
 ## Syntaxe
 

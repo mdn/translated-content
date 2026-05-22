@@ -5,7 +5,7 @@ slug: Web/API/DOMTokenList/entries
 
 {{APIRef("DOM")}}
 
-La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet. Les valeurs sont des objets {{domxref("DOMString")}} (_chaînes de caractères_), chacun représentant une seule marque.
+La méthode **`DOMTokenList.entries()`** renvoie un {{jsxref("Iteration_protocols",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet. Les valeurs sont des objets {{jsxref("String")}} (_chaînes de caractères_), chacun représentant une seule marque.
 
 ## Syntaxe
 
