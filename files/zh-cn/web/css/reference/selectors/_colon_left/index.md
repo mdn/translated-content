@@ -25,7 +25,7 @@ slug: Web/CSS/Reference/Selectors/:left
 }
 ```
 
-## 样例
+## 示例
 
 ```css
 @page :left {
@@ -44,4 +44,4 @@ slug: Web/CSS/Reference/Selectors/:left
 ## 参见
 
 - {{ Cssxref("@page") }}
-- Other page-related pseudo-classes: {{ Cssxref(":first") }}, {{ Cssxref(":right") }}
+- 其他与页相关的伪类：{{ Cssxref(":first") }}、{{ Cssxref(":right") }}

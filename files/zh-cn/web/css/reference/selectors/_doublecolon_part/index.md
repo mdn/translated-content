@@ -104,6 +104,7 @@ globalThis.customElements.define(
 
 ## 相关阅读
 
-- [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#part) 属性 - 用于定义可以被 `::part()` 选取的选择器
-- [`exportparts`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#exportparts) 属性 - 用于将阴影部分从嵌套的阴影树过渡到包含显影树的传递导出。
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#part) 属性
+- {{CSSxRef(":state",":state()")}} 伪类函数
+- [`exportparts`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#exportparts) 属性
+- [CSS 影子部件](/zh-CN/docs/Web/CSS/Guides/Shadow_parts) 模块

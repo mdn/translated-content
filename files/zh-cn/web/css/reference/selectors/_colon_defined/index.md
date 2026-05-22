@@ -27,7 +27,7 @@ simple-custom:defined {
 
 ## 示例
 
-下面的片段摘自我们的 [定义伪类](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) demo ([点击查看源码](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
+下面的片段摘自我们的[定义伪类](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class)演示（[点击查看源码](https://mdn.github.io/web-components-examples/defined-pseudo-class/)）。
 
 在这个 demo 中我们定义了一个非常简单的自定义元素：
 
@@ -97,4 +97,4 @@ simple-custom:defined {
 
 ## 参见
 
-- [Web component](/zh-CN/docs/Web/API/Web_components)
+- [Web 组件](/zh-CN/docs/Web/API/Web_components)
