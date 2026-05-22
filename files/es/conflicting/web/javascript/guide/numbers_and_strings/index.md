@@ -108,7 +108,7 @@ La siguiente tabla resume los métodos de los objetos {{JSxRef("String")}}.
 
 ### Plantillas literales multilínea
 
-Las {{JSxRef("template_strings", "plantillas literales")}} son cadena literales que permiten expresiones incrustadas. Puedes utilizar cadenas de varias líneas y funciones de interpolación de cadenas con ellas.
+Las {{JSxRef("Template_literals", "plantillas literales")}} son cadena literales que permiten expresiones incrustadas. Puedes utilizar cadenas de varias líneas y funciones de interpolación de cadenas con ellas.
 
 Las plantillas literales están encerradas por el carácter (` `` `) ([acento grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles. Las plantillas literales pueden contener marcadores de posición. Estos se indican mediante el signo de dólar y llaves (`${expresión}`).
 
@@ -154,7 +154,7 @@ console.log(`Quince es ${five + ten} y no ${2 * five + ten}.`);
 // "Quince es 15 y no 20."
 ```
 
-Para obtener más información, lee acerca de {{JSxRef("template_strings", "plantillas literales")}} en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
+Para obtener más información, lee acerca de {{JSxRef("Template_literals", "plantillas literales")}} en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 ## Internacionalización
 

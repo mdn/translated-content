@@ -697,7 +697,7 @@ El azúcar es dulce,\n\
 y foo también.";
 ```
 
-ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("template_strings", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
+ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("Template_literals", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
 
 ```js
 var poem = `Las rosas son rojas,
