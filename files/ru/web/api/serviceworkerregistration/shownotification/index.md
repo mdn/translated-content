@@ -34,7 +34,7 @@ A {{jsxref('Promise')}} that resolves to a {{domxref('NotificationEvent')}}.
     - `body`: Строка с дополнительным контентом уведомления.
     - `dir` : The direction of the notification; it can be `auto`, `ltr`, or `rtl`
     - `icon`: URL или base64 версия картинки, которая отображается рядом с уведомлением.
-    - `image`: URL {{domxref("USVSTring")}} картинки, которая отображается внутри уведомления.
+    - `image`: URL {{jsxref("String")}} картинки, которая отображается внутри уведомления.
     - `lang`: Specify the lang used within the notification. This string must be a valid [BCP 47 language tag](https://tools.ietf.org/html/bcp47).
     - `renotify`: A boolean that indicates whether to supress vibrations and audible alerts when resusing a `tag` value. The default is false.
     - `requireInteraction`: Indicates that on devices with sufficiently large screens, a notification should remain active until the user clicks or dismisses it. If this value is absent or false, the desktop version of Chrome will auto-minimize notifications after approximately twenty seconds. The default value is `false`.
