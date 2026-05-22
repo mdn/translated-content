@@ -16,7 +16,7 @@ var myRequest = new Request(input, init);
 ### 파라미터
 
 - _input_
-  - : 취득한 리소스를 정의합니다. 이하의 값을 파라미터로 넣을 수 있습니다.\* 취득하고 싶은 리소스의 URL을 담은 {domxref("USVString")}}.
+  - : 취득한 리소스를 정의합니다. 이하의 값을 파라미터로 넣을 수 있습니다.\* 취득하고 싶은 리소스의 URL을 담은 {{jsxref("String")}}.
     - Request 객체의 클론 생성을 위해 입력할 {{domxref("Request")}} 객체. 기존의 request 객체로 새로운 동일한 객체를 생성할때, 다음과 같은 보안에 관련된 예외가 검출될 수 있습니다.
 - _init_ {{optional_inline}}
   - : 리퀘스트를 적용할 커스텀 설정을 포함한 옵션오브젝트. 설정 가능한 옵션은 다음과 같습니다.\* `method`: `GET`, `POST`과 같은 리퀘스트 메소드.
