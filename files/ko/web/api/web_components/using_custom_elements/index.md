@@ -13,7 +13,7 @@ slug: Web/API/Web_components/Using_custom_elements
 
 페이지에 사용자 정의 요소를 등록하는 방법은 {{domxref("CustomElementRegistry.define()")}} 메서드를 사용하는 것입니다. 이 메서드는 인자로 다음을 취합니다.
 
-- {{domxref("DOMString")}}은 요소에 주는 이름을 나타냅니다. 사용자 정의 요소의 이름은 [대시가 사용되는 것을 요구](https://html.spec.whatwg.org/#valid-custom-element-name)한다는 것에 주의하세요 (kebab-case). 이름은 하나의 단어일 수 없습니다.
+- {{jsxref("String")}}은 요소에 주는 이름을 나타냅니다. 사용자 정의 요소의 이름은 [대시가 사용되는 것을 요구](https://html.spec.whatwg.org/#valid-custom-element-name)한다는 것에 주의하세요 (kebab-case). 이름은 하나의 단어일 수 없습니다.
 - 요소의 동작을 정의하는 [class](/ko/docs/Web/JavaScript/Reference/Classes) 객체.
 - {{optional_inline}} `extends` 속성을 포함하는 옵션 객체인데, 이는 이 요소가 상속받는 내장 요소가 있다면, 그 내장 요소를 명시합니다 (오직 사용자 정의된 내장 요소에만 관계있습니다. 아래의 정의를 보세요).
 

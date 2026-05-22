@@ -15,7 +15,7 @@ selectElt.setCustomValidity(string);
 
 ### Параметр
 
-- _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
+- _Строка_ {{jsxref("String")}} содержащая сообщение об ошибке.
 
 ## Спецификации
 

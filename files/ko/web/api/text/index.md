@@ -25,7 +25,7 @@ slug: Web/API/Text
 - {{domxref("Text.isElementContentWhitespace")}} {{readonlyInline}}{{deprecated_inline() }}
   - : 텍스트 노드가 공백만 포함하는지 여부를 나타내는 {{domxref("Boolean")}} 플래그를 반환합니다.
 - {{domxref("Text.wholeText")}} {{readonlyInline}}
-  - : 이 {{domxref("Node")}}와 논리적으로 인접한 모든 `Text` 노드의 텍스트를 문서 내의 순서대로 이어붙인 {{domxref("DOMString")}}을 반환합니다.
+  - : 이 {{domxref("Node")}}와 논리적으로 인접한 모든 `Text` 노드의 텍스트를 문서 내의 순서대로 이어붙인 {{jsxref("String")}}을 반환합니다.
 - {{domxref("Text.assignedSlot")}} {{readonlyinline}}
   - : 이 요소와 연관된 {{domxref("HTMLSlotElement")}} 객체를 반환합니다.
 

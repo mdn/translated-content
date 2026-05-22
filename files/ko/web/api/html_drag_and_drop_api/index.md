@@ -89,7 +89,7 @@ function dragstart_handler(ev) {
 
 ### 드래그 데이터 정의하기
 
-드래그할 때 자유롭게 데이터 아이템을 포함할 수 있습니다. 각 데이터 아이템은 특정 `type`의 {{domxref("DOMString","문자열")}}이며, 보통 `text/html`와 같은 MIME type입니다.
+드래그할 때 자유롭게 데이터 아이템을 포함할 수 있습니다. 각 데이터 아이템은 특정 `type`의 {{jsxref("String","문자열")}}이며, 보통 `text/html`와 같은 MIME type입니다.
 
 각 {{domxref("DragEvent","drag event")}} 은 이벤트 데이터를 가지고 있는 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 를 가집니다. 이 프로퍼티는 ({{domxref("DataTransfer")}} 객체) 드래그 데이터를 관리하는 메소드를 가집니다. {{domxref("DataTransfer.setData","setData()")}} 는 아래 코드 예제와 같이 아이템을 드래그 데이터에 추가할 때 사용합니다.
 

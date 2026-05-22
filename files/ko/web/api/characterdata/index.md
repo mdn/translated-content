@@ -14,7 +14,7 @@ slug: Web/API/CharacterData
 _부모 {{domxref("Node")}} 로부터 프로퍼티를 상속받고 {{domxref("ChildNode")}} 와 {{domxref("NonDocumentTypeChildNode")}} 인터페이스를 구현합니다._
 
 - {{domxref("CharacterData.data")}}
-  - : 이 객체를 포함하는 문자형 데이터를 나타내는 {{domxref("DOMString")}} 입니다.
+  - : 이 객체를 포함하는 문자형 데이터를 나타내는 {{jsxref("String")}} 입니다.
 - {{domxref("CharacterData.length")}} {{readonlyInline}}
   - : `CharacterData.data` 에 포함된 문자열의 크기를 나타내는 `unsigned long` 을 반환합니다.
 - {{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readonlyInline}}
@@ -27,17 +27,17 @@ _부모 {{domxref("Node")}} 로부터 프로퍼티를 상속받고 {{domxref("Ch
 _부모 {{domxref("Node")}} 로부터 메소드를 상속받고 {{domxref("ChildNode")}} 와 _{{domxref("NonDocumentTypeChildNode")}}_ 인터페이스를 구현합니다._
 
 - {{domxref("CharacterData.appendData()")}}
-  - : 주어진 {{domxref("DOMString")}} 을 `CharacterData.data` 문자열에 붙입니다. 이 메소드가 반환할 때 `data` 는 이어 붙여진 {{domxref("DOMString")}} 을 갖게됩니다.
+  - : 주어진 {{jsxref("String")}} 을 `CharacterData.data` 문자열에 붙입니다. 이 메소드가 반환할 때 `data` 는 이어 붙여진 {{jsxref("String")}} 을 갖게됩니다.
 - {{domxref("CharacterData.deleteData()")}}
-  - : `CharacterData.data` 문자열의 특정 오프셋으로부터 지정한 양만큼의 문자열을 제거합니다. 이 메소드가 반환할 때 `data` 는 짧아진 {{domxref("DOMString")}} 을 갖게됩니다.
+  - : `CharacterData.data` 문자열의 특정 오프셋으로부터 지정한 양만큼의 문자열을 제거합니다. 이 메소드가 반환할 때 `data` 는 짧아진 {{jsxref("String")}} 을 갖게됩니다.
 - {{domxref("CharacterData.insertData()")}}
-  - : `CharacterData.data` 문자열의 특정 오프셋에 특정 문자열을 삽입합니다. 이 메소드가 반환할 때 `data` 는 수정된 {{domxref("DOMString")}} 을 갖게됩니다.
+  - : `CharacterData.data` 문자열의 특정 오프셋에 특정 문자열을 삽입합니다. 이 메소드가 반환할 때 `data` 는 수정된 {{jsxref("String")}} 을 갖게됩니다.
 - {{domxref("ChildNode.remove()")}} {{experimental_inline}}
   - : 부모의 자식 리스트로부터 객체를 제거합니다.
 - {{domxref("CharacterData.replaceData()")}}
-  - : 특정 오프셋으로부터 지정한 양만큼의 문자열을 지정된 {{domxref("DOMString")}} 으로 대체합니다. 이 메소드가 반환할 때 `data` 는 수정된 {{domxref("DOMString")}} 을 갖게됩니다.
+  - : 특정 오프셋으로부터 지정한 양만큼의 문자열을 지정된 {{jsxref("String")}} 으로 대체합니다. 이 메소드가 반환할 때 `data` 는 수정된 {{jsxref("String")}} 을 갖게됩니다.
 - {{domxref("CharacterData.substringData()")}}
-  - : `CharacterData.data` 의 특정 오프셋으로부터 지정된 길이만큼의 {{domxref("DOMString")}} 을 반환합니다.
+  - : `CharacterData.data` 의 특정 오프셋으로부터 지정된 길이만큼의 {{jsxref("String")}} 을 반환합니다.
 
 ## 명세
 

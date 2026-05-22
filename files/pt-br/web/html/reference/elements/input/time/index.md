@@ -61,7 +61,7 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Uma {{domxref("DOMString")}} representando um horário, ou vazia.
+        Uma {{jsxref("String")}} representando um horário, ou vazia.
       </td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
 
 ## Valor
 
-Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) ao criar o elemento `<input>`, tipo assim:
+Uma {{jsxref("String")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) ao criar o elemento `<input>`, tipo assim:
 
 ```html
 <label for="hora-cons">Escolha o horário da consulta: </label>

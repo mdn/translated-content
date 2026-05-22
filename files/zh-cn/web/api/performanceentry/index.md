@@ -12,9 +12,9 @@ Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker
 ## Properties
 
 - {{domxref("PerformanceEntry.name")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} 该 performance entry 的名字
+  - : {{jsxref("String")}} 该 performance entry 的名字
 - {{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。
+  - : {{jsxref("String")}} 代表所上报的 performance metric 的 entryType 类型，例如 "mark". 可以通过 {{domxref("PerformanceEntry.entryType","entryType")}} 查阅完整的 entryType type 类型。
 - {{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} 此为 metric 上报时的时间
 - {{domxref("PerformanceEntry.duration")}} {{readonlyInline}}
