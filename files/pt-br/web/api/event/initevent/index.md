@@ -21,7 +21,7 @@ event.initEvent(tipo, bubbles, cancelable);
 ```
 
 - `tipo`
-  - : É um {{domxref("DOMString")}} definido o tipo do evento.
+  - : É um {{jsxref("String")}} definido o tipo do evento.
 - `bolhas`
   - : É um {{jsxref("Boolean")}} decidindo se o evento precisa ser enviado para cima, na cadeia de eventos ou não. Uma vez definido, a propriedade read-only {{ domxref("Event.bubbles") }} irá informar o seu valor.
 - `cancelable`
