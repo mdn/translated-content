@@ -1,32 +1,24 @@
 ---
 title: <feBlend>
 slug: Web/SVG/Reference/Element/feBlend
-original_slug: Web/SVG/Element/feBlend
+l10n:
+  sourceCommit: 48afb4da7957efe672d7fd837413ee1a69a842fd
 ---
 
-{{SVGRef}}
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feBlend>`** permet de composer deux objets ensemble selon un mode de fusion donné, à la manière de ce que proposent les logiciels de retouche d'image pour fusionner deux calques. Le mode utilisé est défini par l'attribut {{SVGAttr("mode")}}.
 
-La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feBlend>`** permet de combiner deux objets en utilisant un mode de fusion définit, un peu de la même manière que les logiciels de retouche d'image permettent de fusionner deux calques. Le mode à utiliser est définit par l'attribut {{SVGAttr("mode")}}.
+Comme les autres primitives de filtres, elle traite les composantes colorimétriques dans {{Glossary("color space", "l'espace colorimétrique")}} `linearRGB` par défaut. L'attribut {{SVGAttr("color-interpolation-filters")}} permet d'utiliser `sRGB` à la place.
 
 ## Contexte d'utilisation
 
-{{svginfo}}
+{{SVGInfo}}
 
 ## Attributs
-
-### Attributs globaux
-
-- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
-- [Attributs de primitive de filtre](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Attributs spécifiques
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
 - {{SVGAttr("mode")}}
+- [Attributs des primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_pour_les_primitives_de_filtre)&nbsp;: {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## Interface DOM
 
@@ -57,18 +49,18 @@ Cet élément implémente l'interface {{domxref("SVGFEBlendElement")}}.
   </defs>
 
   <image
-    xlink:href="/files/6457/mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     x="10%"
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    filter="url(#spotlight)" />
 </svg>
 ```
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{EmbedLiveSample("Exemple", "", 200)}}
 
 ## Spécifications
 
@@ -80,6 +72,7 @@ Cet élément implémente l'interface {{domxref("SVGFEBlendElement")}}.
 
 ## Voir aussi
 
+- [Attributs des primitives de filtres SVG](/fr/docs/Web/SVG/Reference/Attribute#attributs_pour_les_primitives_de_filtre)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
@@ -98,4 +91,4 @@ Cet élément implémente l'interface {{domxref("SVGFEBlendElement")}}.
 - {{SVGElement("feSpecularLighting")}}
 - {{SVGElement("feTile")}}
 - {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- [Tutoriel SVG&nbsp;: Effets de filtre](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
