@@ -70,7 +70,7 @@ localeCompare(compareString, locales, options)
 
 ## 效能
 
-如果要對大量的字串進行比較，例如排序長度很長的陣列，最好是建立一個 {{jsxref("Intl/Collator", "Intl.Collator")}}物件並使用其{{jsxref("Collator.prototype.compare", "compare")}} 方法。
+如果要對大量的字串進行比較，例如排序長度很長的陣列，最好是建立一個 {{jsxref("Intl/Collator", "Intl.Collator")}}物件並使用其{{jsxref("Intl/Collator/compare", "compare")}} 方法。
 
 ## 範例
 
