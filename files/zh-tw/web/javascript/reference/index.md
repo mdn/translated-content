@@ -192,7 +192,7 @@ slug: Web/JavaScript/Reference
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
+- {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/super", "super")}}
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
 
