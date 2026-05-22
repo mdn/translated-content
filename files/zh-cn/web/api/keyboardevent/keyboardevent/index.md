@@ -17,11 +17,11 @@ new KeyboardEvent(type, options)
 ### 值
 
 - _typeArg_
-  - : {{domxref("DOMString")}} 类型，表示事件名称。
+  - : {{jsxref("String")}} 类型，表示事件名称。
 - _KeyboardEventInit_{{optional_inline}}
   - : `KeyboardEventInit` 字典，有以下几种值：
-    - `"key"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。
-    - `"code"`, 可选，默认为 `""`, {{domxref("DOMString")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。
+    - `"key"`, 可选，默认为 `""`, {{jsxref("String")}} 类型，设置 {{domxref("KeyboardEvent.key")}} 的值。
+    - `"code"`, 可选，默认为 `""`, {{jsxref("String")}} 类型，设置{{domxref("KeyboardEvent.code")}} 的值。
     - `"location"`, 可选，默认为 `0`, `unsigned long`类型，设置 {{domxref("KeyboardEvent.location")}} 的值。
     - `"ctrlKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置 {{domxref("KeyboardEvent.ctrlKey")}} 的值。
     - `"shiftKey"`, 可选，默认为 `false`, {{jsxref("Boolean")}} 类型，设置{{domxref("KeyboardEvent.shiftKey")}} 的值。

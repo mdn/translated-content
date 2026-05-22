@@ -124,7 +124,7 @@ _Cette interface hérite également des propriétés de ses parents, {{domxref("
     )) était active quand l'évènement touche a été généré.
 
 - {{domxref("KeyboardEvent.repeat")}} {{Readonlyinline}}
-  - : Retourne un {{jsxref("Booléen")}} qui est `true` si la touche est maintenue enfoncée de telle sorte qu'elle se répète automatiquement.
+  - : Retourne un {{jsxref("Boolean", "Booléen")}} qui est `true` si la touche est maintenue enfoncée de telle sorte qu'elle se répète automatiquement.
 - {{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}
   - : Retourne un {{jsxref("Boolean")}} qui est `true` si la touche
 

@@ -36,7 +36,7 @@ obj.__defineSetter__(prop, fun);
 
 ## Description
 
-La méthode `__defineSetter__` permet de définir un {{jsxref("Opérateurs/L_opérateur_set", "mutateur", "", 1)}} sur un objet pré-existant.
+La méthode `__defineSetter__` permet de définir un {{jsxref("Functions/set", "mutateur", "", 1)}} sur un objet pré-existant.
 
 ## Exemples
 
@@ -86,7 +86,7 @@ console.log(o.uneAutreValeur); // 5
 ## Voir aussi
 
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_set", "set")}}
+- L'opérateur {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)

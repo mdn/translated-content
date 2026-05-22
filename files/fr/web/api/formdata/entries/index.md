@@ -7,7 +7,7 @@ slug: Web/API/FormData/entries
 
 {{APIRef("XMLHttpRequest API")}}
 
-La methode **FormData.entries()** retourne un {{jsxref("Les_protocoles_iteration",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
+La methode **FormData.entries()** retourne un {{jsxref("Iteration_protocols",'iterateur')}} permettant d'accéder aux paires clefs/valeurs contenues dans cet objet.
 La clef de chaque paire est une {{jsxref("String")}}. De la même manière, la valeur peut être une {{jsxref("String")}} ou un {{domxref("Blob")}}.
 
 > [!NOTE]
@@ -21,7 +21,7 @@ formData.entries();
 
 ### Valeur retournée
 
-Retourne un {{jsxref("Les_protocoles_iteration","iterateur")}}.
+Retourne un {{jsxref("Iteration_protocols","iterateur")}}.
 
 ## Exemple
 

@@ -7,7 +7,7 @@ slug: Web/API/FormData/keys
 
 {{APIRef("XMLHttpRequest API")}}
 
-La méthode `FormData.keys()` renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{jsxref("String")}}.
+La méthode `FormData.keys()` renvoie une {{jsxref("Iteration_protocols", "itération")}} permettant de parcourir toutes les clés contenues dans cet objet. Les clés sont des objets {{jsxref("String")}}.
 
 > [!NOTE]
 > Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
@@ -20,7 +20,7 @@ formData.keys();
 
 ### Valeur de retour
 
-Retourne une {{jsxref("Les_protocoles_iteration", "itération")}}.
+Retourne une {{jsxref("Iteration_protocols", "itération")}}.
 
 ## Exemple
 

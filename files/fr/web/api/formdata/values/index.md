@@ -7,7 +7,7 @@ slug: Web/API/FormData/values
 
 {{APIRef("XMLHttpRequest API")}}
 
-La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{jsxref("String")}} ou {{domxref("Blob")}}.
+La méthode **`FormData.values()`** renvoie une {{jsxref("Iteration_protocols", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{jsxref("String")}} ou {{domxref("Blob")}}.
 
 > [!NOTE]
 > Cette méthode est disponible dans les [Web Workers](/fr/docs/Web/API/Web_Workers_API).
@@ -20,7 +20,7 @@ formData.values();
 
 ### Valeur de retour
 
-Retourne une {{jsxref("Les_protocoles_iteration", "itération")}} .
+Retourne une {{jsxref("Iteration_protocols", "itération")}} .
 
 ## Exemple
 

@@ -21,7 +21,7 @@ navigator.sendBeacon(url, data);
 - `url`
   - : `url` 参数表明 `data` 将要被发送到的网络地址。
 - `data` {{Optional_inline}}
-  - : `data` 参数是将要发送的 {{jsxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("DOMString")}}、{{domxref("FormData")}} 或 {{domxref("URLSearchParams")}} 类型的数据。
+  - : `data` 参数是将要发送的 {{jsxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{jsxref("String")}}、{{domxref("FormData")}} 或 {{domxref("URLSearchParams")}} 类型的数据。
 
 ### 返回值
 
