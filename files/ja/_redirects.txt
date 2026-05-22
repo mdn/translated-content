@@ -6562,7 +6562,12 @@
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+/ja/docs/Web/JavaScript/Reference/delete	/ja/docs/Web/JavaScript/Reference/Operators/delete
+/ja/docs/Web/JavaScript/Reference/instanceof	/ja/docs/Web/JavaScript/Reference/Operators/instanceof
+/ja/docs/Web/JavaScript/Reference/new	/ja/docs/Web/JavaScript/Reference/Operators/new
+/ja/docs/Web/JavaScript/Reference/null	/ja/docs/Web/JavaScript/Reference/Operators/null
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
+/ja/docs/Web/JavaScript/Reference/this	/ja/docs/Web/JavaScript/Reference/Operators/this
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Defenses/Same-origin_policy
 /ja/docs/Web/JavaScript/Shells	/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
