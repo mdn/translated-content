@@ -31,7 +31,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): [`Math.fround()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/fround) ([bug Firefox 900125](https://bugzil.la/900125)).
 - Les [mots réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ([bug Firefox 907958](https://bugzil.la/907958)).
 - La syntaxe des [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la `function f(x=1, y)`. See [bug Firefox 777060](https://bugzil.la/777060).
-- {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} est implémenté ([bug Firefox 904701](https://bugzil.la/904701)).
+- {{jsxref("GeneratorFunction")}} est implémenté ([bug Firefox 904701](https://bugzil.la/904701)).
 
 ### Interfaces/APIs/DOM
 

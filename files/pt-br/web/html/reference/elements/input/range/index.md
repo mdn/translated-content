@@ -53,7 +53,7 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Uma {{domxref("DOMString")}} contendo a a string que representa
+        Uma {{jsxref("String")}} contendo a a string que representa
         o valor numérico escolhido; use
         {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
         para pegar o valor como um {{jsxref("Number")}}.
@@ -91,7 +91,7 @@ Se o navegador do usuário não suportar o tipo `"range"`, este será tratado co
 
 ## Value
 
-O atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) contém uma {{domxref("DOMString")}} que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (`""`). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:
+O atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) contém uma {{jsxref("String")}} que conte uma representação dos números selecionados em string. O valor nunca é uma string vazia (`""`). O valor padrão está entre o mínimo e o máximo especificados, a menos que o valor máximo seja menor que o mínimo, caso em que o padrão é definido como o atributo de valor mínimo. O algoritmo que determina o valor padrão é:
 
 ```js
 defaultValue =

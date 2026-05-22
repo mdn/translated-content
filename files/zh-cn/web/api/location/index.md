@@ -12,27 +12,27 @@ slug: Web/API/Location
 _`Location` 接口不继承任何属性，但是实现了那些来自 {{domxref("URLUtils")}} 的属性。_
 
 - {{domxref("Location.href")}}
-  - : 包含整个 URL 的一个{{domxref("DOMString")}}
+  - : 包含整个 URL 的一个{{jsxref("String")}}
 - {{domxref("Location.protocol")}}
-  - : 包含 URL 对应协议的一个{{domxref("DOMString")}}，最后有一个":"。
+  - : 包含 URL 对应协议的一个{{jsxref("String")}}，最后有一个":"。
 - {{domxref("Location.host")}}
-  - : 包含了域名的一个{{domxref("DOMString")}}，可能在该串最后带有一个":"并跟上 URL 的端口号。
+  - : 包含了域名的一个{{jsxref("String")}}，可能在该串最后带有一个":"并跟上 URL 的端口号。
 - {{domxref("Location.hostname")}}
-  - : 包含 URL 域名的一个{{domxref("DOMString")}}。
+  - : 包含 URL 域名的一个{{jsxref("String")}}。
 - {{domxref("Location.port")}}
-  - : 包含端口号的一个{{domxref("DOMString")}}。
+  - : 包含端口号的一个{{jsxref("String")}}。
 - {{domxref("Location.pathname")}}
-  - : 包含 URL 中路径部分的一个{{domxref("DOMString")}}，开头有一个 `/`。
+  - : 包含 URL 中路径部分的一个{{jsxref("String")}}，开头有一个 `/`。
 - {{domxref("Location.search")}}
-  - : 包含 URL 参数的一个{{domxref("DOMString")}}，开头有一个`“?”`。
+  - : 包含 URL 参数的一个{{jsxref("String")}}，开头有一个`“?”`。
 - {{domxref("Location.hash")}}
-  - : 包含块标识符的{{domxref("DOMString")}}，开头有一个 `#`。
+  - : 包含块标识符的{{jsxref("String")}}，开头有一个 `#`。
 - {{domxref("Location.username")}}
-  - : 包含 URL 中域名前的用户名的一个{{domxref("DOMString")}}。
+  - : 包含 URL 中域名前的用户名的一个{{jsxref("String")}}。
 - {{domxref("Location.password")}}
-  - : 包含 URL 域名前的密码的一个 {{domxref("DOMString")}}。
+  - : 包含 URL 域名前的密码的一个 {{jsxref("String")}}。
 - {{domxref("Location.origin")}} {{readOnlyInline}}
-  - : 包含页面来源的域名的标准形式{{domxref("DOMString")}}。
+  - : 包含页面来源的域名的标准形式{{jsxref("String")}}。
 
 ## 方法
 
@@ -45,7 +45,7 @@ _`Location` 没有继承任何方法_，但实现了来自{{domxref("URLUtils")}
 - {{domxref("Location.replace()")}}
   - : 用给定的 URL 替换掉当前的资源。与 `assign()` 方法不同的是用 `replace()`替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。
 - {{domxref("Location.toString()")}}
-  - : 返回一个{{domxref("DOMString")}}，包含整个 URL。它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
+  - : 返回一个{{jsxref("String")}}，包含整个 URL。它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
 
 ## 例子
 

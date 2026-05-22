@@ -25,9 +25,9 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
   - : Cette propriété renvoie un nombre correspondant à la quantité d'octets pour un élément du tableau. Dans le cas d'`Uint16Array`, ce sera `2`.
 - `Uint16Array.length`
   - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Uint16Array.name")}}
+- {{jsxref("Function.name", "Uint16Array.name")}}
   - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint16Array` ce sera : "Uint16Array".
-- {{jsxref("TypedArray.prototype", "Uint16Array.prototype")}}
+- {{jsxref("TypedArray", "Uint16Array.prototype")}}
   - : Le prototype des objets _TypedArray_.
 
 ## Méthodes
@@ -39,7 +39,7 @@ Pour plus d'informations sur la syntaxe du constructeur et le rôle des différe
 
 ## Prototype `Uint16Array`
 
-Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriétés
 
@@ -108,7 +108,7 @@ Tous les objets `Uint16Array` héritent de {{jsxref("TypedArray.prototype", "%Ty
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Uint16Array.prototype.toString()")}}
   - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Uint16Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Uint16Array.prototype[@@iterator]()")}}
   - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples

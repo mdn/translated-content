@@ -44,7 +44,7 @@ Math.exp(1); // 2.718281828459045
 
 ## Veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} ao qual ele pertence.
+- O objeto {{jsxref("Math")}} ao qual ele pertence.
 - {{jsxref("Math.E")}}
 - {{jsxref("Math.log()")}}
 - {{jsxref("Math.pow()")}}

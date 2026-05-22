@@ -25,7 +25,7 @@ new Number(value);
 Os principais usos para o objeto `Number` são:
 
 - Se o objeto não pode ser convertido para um número, é retornado `NaN`.
-- Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("Operators/new", "new")}}, `Number` pode ser utilizador para realizar uma conversão de tipo.
+- Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("new")}}, `Number` pode ser utilizador para realizar uma conversão de tipo.
 
 ## Propriedades
 
@@ -45,7 +45,7 @@ Os principais usos para o objeto `Number` são:
   - : Valor especial representando infinito negativo; retornado no "overflow".
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Valor especial representando infinito; retornado no "overflow".
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : Permite a adição de propriedades a um objeto Number.
 
 ## Methods
@@ -61,13 +61,13 @@ Os principais usos para o objeto `Number` são:
 - ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Usado para avaliar o valor passado e convertê-lo a um inteiro (ou infinito), mas foi removido.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
-  - : O valor é o mesmo que {{jsxref("Global_Objects/parseFloat", "parseFloat")}} do objeto global.
+  - : O valor é o mesmo que {{jsxref("parseFloat")}} do objeto global.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
-  - : O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.
+  - : O valor é o mesmo que {{jsxref("parseInt")}} do objeto global.
 
 ## Instâncias `Number`
 
-Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
+Toda instância `Number` herdam de {{jsxref("Number")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
 
 ### Métodos
 
@@ -132,5 +132,5 @@ Number("100a"); // NaN
 
 ## Veja também
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- O objeto global {{jsxref("Global_Objects/Math", "Math")}}
+- {{jsxref("NaN")}}
+- O objeto global {{jsxref("Math")}}

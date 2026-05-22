@@ -24,7 +24,7 @@ O usuário pode fazer a seleção da esquerda para a direita (na orientação do
 - {{DOMxRef("Selection.rangeCount")}}{{ReadOnlyInline}}
   - : Retorna no número de intervalos da seleção.
 - {{DOMxRef("Selection.type")}}{{ReadOnlyInline}}
-  - : Retorna um {{DOMxRef("DOMString")}} descrevento o tipo da seleção atual.
+  - : Retorna um {{jsxref("String")}} descrevento o tipo da seleção atual.
 
 ## Métodos
 
