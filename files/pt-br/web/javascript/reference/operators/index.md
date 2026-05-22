@@ -164,7 +164,7 @@ Operadores lógicos são normalmente usados com boolean (logical) valores, e qua
 
 ### Operador de Condicional (ternário)
 
-- {{jsxref("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : O operador condicional retorna um dos dois valores baseado no valor lógico da condição.
 
 ### Assignment operators
@@ -201,7 +201,7 @@ An assignment operator assigns a value to its left operand based on the value of
 
 ### Comma operator
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.
 
 ### Non-standard features

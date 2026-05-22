@@ -18,7 +18,7 @@ var intervalID = scope.setInterval(code, delay);
 ### Parâmetros
 
 - `func`
-  - : Uma {{jsxref("function")}} para ser executada a cada `delay` em milisegundos. Não é passado nenhum parâmetro para a função, e não retorna nenhum valor esperado.
+  - : Uma {{jsxref("Operators/function", "function")}} para ser executada a cada `delay` em milisegundos. Não é passado nenhum parâmetro para a função, e não retorna nenhum valor esperado.
 - `code`
   - : Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada `delay` em milisegundos. Esta sintaxe _não é recomendada_ pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("Global_Objects/eval", "eval()")}}.
 - `delay`
