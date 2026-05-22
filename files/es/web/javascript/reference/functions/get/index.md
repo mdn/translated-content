@@ -26,7 +26,7 @@ Tenga en cuenta lo siguiente al trabajar con la sintaxis `get`:
 - Debe tener exactamente cero parametros (ver [Cambio ES5 incompatible: las funciones getter y setter literal deben tener ahora exactamente cero o un argumento](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mas información);
 - No debe haber múltiples getters para una misma propiedad (`{ get x() { }, get x() { } }` y `{ x: ..., get x() { } }` están prohibidos).
 
-El getter puede ser removido usando el operador {{jsxref("Operators/delete", "delete")}}.
+El getter puede ser removido usando el operador {{jsxref("delete")}}.
 
 ## Ejemplos
 
@@ -65,7 +65,7 @@ delete o.latest;
 
 ## Consulta también
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)

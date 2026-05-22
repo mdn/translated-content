@@ -184,7 +184,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Expresiones primarias
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -196,13 +196,13 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("Operators/null", "null")}}
+- {{JSxRef("null")}}
 
 ### Expresiones del lado izquierdo
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - [`?.` (Optional chaining)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
 - {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
@@ -217,7 +217,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Operadores unarios
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -237,7 +237,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Operadores relacionales
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/Less_than", "&lt;")}}
 - {{JSxRef("Operators/Greater_than", "&gt;")}}
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}

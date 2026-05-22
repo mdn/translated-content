@@ -270,7 +270,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new","new")}} (con lista de argumentos)</td>
+      <td>{{jsxref("new")}} (con lista de argumentos)</td>
       <td>n/a</td>
       <td><code>new … ( … )</code></td>
     </tr>
@@ -293,7 +293,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (sin lista de argumentos)
+        {{jsxref("new")}} (sin lista de argumentos)
       </td>
       <td>a la derecha</td>
       <td><code>new …</code></td>
@@ -359,7 +359,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -459,7 +459,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+      <td>{{jsxref("instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>

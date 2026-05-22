@@ -34,7 +34,7 @@ var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 1 were passed
 ```
 
-Puedes arreglar esto configurando {{jsxref("Operators/null", "null")}} como el prototipo, por ejemplo:
+Puedes arreglar esto configurando {{jsxref("null")}} como el prototipo, por ejemplo:
 
 ```js example-good
 var obj = Object.create(null);

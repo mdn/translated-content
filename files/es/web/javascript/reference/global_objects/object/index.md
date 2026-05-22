@@ -15,7 +15,7 @@ Los cambios realizados en el `Object` prototipo son vistos por todos los objetos
 
 El constructor `Objeto` crea un envoltorio de objeto para el valor dado.
 
-- Si el valor es {{jsxref("Operators/null", "null")}} o {{jsxref("undefined")}}, se creará un objeto y se retornará un objeto vacío.
+- Si el valor es {{jsxref("null")}} o {{jsxref("undefined")}}, se creará un objeto y se retornará un objeto vacío.
 - Si el valor ya es un objeto, entonces se retornará el valor.
 - En cualquier otro caso, se retornará un objeto del Tipo que corresponda al valor dado.
 

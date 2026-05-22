@@ -29,7 +29,7 @@ Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los va
 `Object.is()` determina si dos valores [son iguales](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Dos valores son iguales si se puede asegurar que:
 
 - ambos son {{jsxref("undefined")}}
-- ambos son {{jsxref("Operators/null", "null")}}
+- ambos son {{jsxref("null")}}
 - ambos son `true` o `false`
 - ambos son strings y tienen la misma longitud con los mismos carácteres
 - ambos son el mismo objeto

@@ -161,7 +161,7 @@ Donde _TypedArray_ es un constructor para uno de los tipos concretos.
 
 ### Se requiere `new`
 
-A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("Operators/new", "new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
+A partir de ECMAScript 2015, los constructores `TypedArray` se deben construir con el operador {{jsxref("new")}}. Llamar a un constructor `TypedArray` como una función sin `new` arrojará un {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 Este capítulo documenta todo acerca de estándares de Javascript, los objetos integrados en JavaScript, así como los métodos y propiedades de cada uno.
 
-El término "objetos globales" (u objetos incorporados estándar) aquí no debe confundirse con el **objeto global**. Aquí, los objetos globales se refieren a **objetos en el ámbito global**. Se puede acceder al **objeto global** en sí usando el operador {{jsxref("Operators/this", "this")}} en el ámbito global (pero solo si no se usa el modo estricto ECMAScript 5, en ese caso devuelve {{jsxref("undefined")}}). De hecho, el alcance global consiste en las propiedades del objeto global, incluidas las propiedades heredadas, si las hay.
+El término "objetos globales" (u objetos incorporados estándar) aquí no debe confundirse con el **objeto global**. Aquí, los objetos globales se refieren a **objetos en el ámbito global**. Se puede acceder al **objeto global** en sí usando el operador {{jsxref("this")}} en el ámbito global (pero solo si no se usa el modo estricto ECMAScript 5, en ese caso devuelve {{jsxref("undefined")}}). De hecho, el alcance global consiste en las propiedades del objeto global, incluidas las propiedades heredadas, si las hay.
 
 Otros objetos en el alcance global son [creados por el script de usuario](/es/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects) o son proporcionados por la aplicación host. Los objetos host disponibles en los contextos del navegador están documentados en la [referencia de la API](/es/docs/Web/API). Para obtener más información acerca de la distinción entre el [DOM](/es/docs/Web/API/Document_Object_Model) y el núcleo de [JavaScript](/es/docs/Web/JavaScript), vea [Introducción a las tecnologías JavaScript](/es/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
@@ -20,7 +20,7 @@ Estas propiedades globales devuelven un valor simple; ellos no tienen propiedade
 - {{jsxref("Infinity")}}
 - {{jsxref("NaN")}}
 - {{jsxref("undefined")}}
-- {{jsxref("Operators/null", "null")}} literal
+- {{jsxref("null")}} literal
 - {{JSxRef("globalThis")}}
 
 ### Propiedades de funciones

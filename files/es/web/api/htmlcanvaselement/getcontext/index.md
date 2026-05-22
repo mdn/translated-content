@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/getContext
 
 {{APIRef("Canvas API")}}
 
-El método **`HTMLCanvasElement.getContext()`** retorna un contexto de dibujo en el lienzo, o {{jsxref("Operators/null", "null")}} si el identificador del contexto no está soportado.
+El método **`HTMLCanvasElement.getContext()`** retorna un contexto de dibujo en el lienzo, o {{jsxref("null")}} si el identificador del contexto no está soportado.
 
 ## Sintaxis
 

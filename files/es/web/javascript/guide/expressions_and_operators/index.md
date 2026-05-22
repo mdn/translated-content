@@ -261,7 +261,7 @@ Debido a que las expresiones lógicas se evalúan de izquierda a derecha, se pru
 
 Las reglas de la lógica garantizan que estas evaluaciones sean siempre correctas. Ten en cuenta que la parte _anything_ de las expresiones anteriores no se evalúa, por lo que los efectos secundarios de hacerlo no surten efecto.
 
-Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("Operators/null", "null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
+Ten en cuenta que para el segundo caso, en el código moderno puedes usar el nuevo {{JSxRef("Operators/Nullish_coalescing", "operador de fusión nulo")}} (`??`) que funciona como `||`, pero solo devuelve la segunda expresión, cuando la primera es "{{Glossary("Nullish", "nullish")}}", es decir, {{JSxRef("null")}}, el valor nulo representa la ausencia intencional de cualquier valor de objeto. Es uno de los valores primitivos de JavaScript y se trata como falso para las operaciones booleanas. o {{JSxRef("undefined")}} la propiedad global undefined representa el valor "`undefined`" primitivo. Es uno de los tipos primitivos de JavaScript. Por tanto, es la mejor alternativa para proporcionar valores predeterminados, cuando valores como `''` o `0` también son valores válidos para la primera expresión.
 
 ### Operadores de cadena
 
@@ -321,7 +321,7 @@ Una operación unaria es una operación con un solo operando.
 
 #### `delete`
 
-El operador {{JSxRef("Operators/delete", "delete")}} elimina la propiedad de un objeto. La sintaxis es:
+El operador {{JSxRef("delete")}} elimina la propiedad de un objeto. La sintaxis es:
 
 ```js
 delete object.property;

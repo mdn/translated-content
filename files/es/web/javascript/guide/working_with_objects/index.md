@@ -40,7 +40,7 @@ var myCar = {
 };
 ```
 
-Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("Operators/null", "null")}}).
+Las propiedades no asignadas de un objeto son {{jsxref("undefined")}} (y no {{jsxref("null")}}).
 
 ```js
 myCar.color; // undefined

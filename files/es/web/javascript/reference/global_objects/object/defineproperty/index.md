@@ -31,7 +31,7 @@ Object.defineProperty(obj, prop, descriptor)
 
 Este método permite añadir o modificar una propiedad en un objeto.
 
-La adición normal de una propiedad a través de la asignación crea propiedades que aparecen durante la enumeración de propiedades en el bucle ({{jsxref("Statements/for...in", "for...in")}} o el método {{jsxref("Object.keys")}}), cuyos valores pueden modificarse y pudiendo incluso eliminar la propiedad del objeto mediante el método {{jsxref("Operators/delete", "delete")}}.
+La adición normal de una propiedad a través de la asignación crea propiedades que aparecen durante la enumeración de propiedades en el bucle ({{jsxref("Statements/for...in", "for...in")}} o el método {{jsxref("Object.keys")}}), cuyos valores pueden modificarse y pudiendo incluso eliminar la propiedad del objeto mediante el método {{jsxref("delete")}}.
 
 Este método nos permite modificar el comportamiento por defecto de las propiedades. Es decir, nos permite definir una propiedad como no enumerable, no modificable o incluso evitar que pueda ser eliminada del objeto.
 
@@ -64,7 +64,7 @@ Un descriptor de acceso además tiene las siguientes claves opcionales:
   - : Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.
     **Defaults to {{jsxref("undefined")}}.**
 
-Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Operators/null", "null")}} la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
+Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("null")}} la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ```js
 // Usando __proto__

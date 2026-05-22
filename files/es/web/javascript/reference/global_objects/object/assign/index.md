@@ -49,7 +49,7 @@ Tanto las propiedades {{jsxref("String")}} como {{jsxref("Symbol")}} son copiada
 
 En caso de un error, por ejemplo si una propiedad es de solo lectura, se lanza un {{jsxref("TypeError")}}, y el objeto destino se mantendrá sin cambios.
 
-Note que `Object.assign()` no lanza excepciones al encontrar en las fuentes propiedades {{jsxref("Operators/null", "null")}} o {{jsxref("undefined")}}.
+Note que `Object.assign()` no lanza excepciones al encontrar en las fuentes propiedades {{jsxref("null")}} o {{jsxref("undefined")}}.
 
 ## Ejemplos
 

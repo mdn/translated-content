@@ -32,7 +32,7 @@ Como `abs()` es un método estático de `Math`, deberías siempre usar `Math.abs
 
 ### Comportamiento de `Math.abs()`
 
-Pasando un string no-numérico o una variable {{jsxref("undefined")}}/empty retorna {{jsxref("NaN")}}. Pasando {{jsxref("Operators/null", "null")}} retorna 0.
+Pasando un string no-numérico o una variable {{jsxref("undefined")}}/empty retorna {{jsxref("NaN")}}. Pasando {{jsxref("null")}} retorna 0.
 
 ```js
 Math.abs("-1"); // 1

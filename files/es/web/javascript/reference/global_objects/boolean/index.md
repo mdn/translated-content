@@ -9,11 +9,11 @@ El objeto **`Boolean`** es un objeto contenedor para un valor booleano.
 
 ## Descripción
 
-El valor pasado como primer parámetro se convierte en un valor booleano, si es necesario. Si el valor se omite o es `0`, `-0`, {{jsxref("Operators/null", "null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, o la cadena vacía (`""`), el objeto tiene un valor inicial de `false`. Todos los demás valores, incluido cualquier objeto, un arreglo vacío (`[]`) o la cadena "`false`", crean un objeto con un valor inicial de `true`.
+El valor pasado como primer parámetro se convierte en un valor booleano, si es necesario. Si el valor se omite o es `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, o la cadena vacía (`""`), el objeto tiene un valor inicial de `false`. Todos los demás valores, incluido cualquier objeto, un arreglo vacío (`[]`) o la cadena "`false`", crean un objeto con un valor inicial de `true`.
 
 No confundas los valores del `Boolean` {{Glossary("Primitive", "primitivo")}}, `true` y `false` con los valores `true` y `false` del objeto `Boolean`.
 
-**Cualquier** objeto cuyo valor no sea {{jsxref("undefined")}} o {{jsxref("Operators/null", "null")}}, incluido un objeto `Boolean` cuyo valor es `false`, se evalúa como `true` cuando se pasa a una declaración condicional. Por ejemplo, la condición en la siguiente declaración {{jsxref("Statements/if...else", "if")}} se evalúa como `true`:
+**Cualquier** objeto cuyo valor no sea {{jsxref("undefined")}} o {{jsxref("null")}}, incluido un objeto `Boolean` cuyo valor es `false`, se evalúa como `true` cuando se pasa a una declaración condicional. Por ejemplo, la condición en la siguiente declaración {{jsxref("Statements/if...else", "if")}} se evalúa como `true`:
 
 ```js
 var x = new Boolean(false);

@@ -169,7 +169,7 @@ console.log(o.phase, o.modulus); // logs -0.78 1.4142
 
 ### Como un constructor
 
-Cuando una función es usada como un constructor (con la palabra clave {{jsxref("Operators/new", "new")}}), su `this` es enlazado al nuevo objeto en construcción, a menos que la ejecución de los resultados del constructor en el motor JavaScript encuentren una instrucción de retorno donde el valor de retorno sea un objeto.
+Cuando una función es usada como un constructor (con la palabra clave {{jsxref("new")}}), su `this` es enlazado al nuevo objeto en construcción, a menos que la ejecución de los resultados del constructor en el motor JavaScript encuentren una instrucción de retorno donde el valor de retorno sea un objeto.
 
 ```js
 /*

@@ -9,7 +9,7 @@ Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef
 
 **Diferencias y limitaciones:**
 
-- No tiene sus propios enlaces a {{JSxRef("Operators/this", "this")}} o {{JSxRef("Operators/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
+- No tiene sus propios enlaces a {{JSxRef("this")}} o {{JSxRef("Operators/super", "super")}} y no se debe usar como {{Glossary("Method", "métodos")}}.
 - No tiene {{JSxRef("Functions/arguments", "argumentos")}} o palabras clave [new.target](/es/docs/Web/JavaScript/Operadores/new.target).
 - No apta para los métodos {{JSxRef("Function.call", "call")}}, {{JSxRef("Function.apply", "apply")}} y {{JSxRef("Function.bind", "bind")}}, que generalmente se basan en establecer un {{Glossary("Scope", "ámbito o alcance")}}
 - No se puede utilizar como {{Glossary("constructor", "constructor")}}.
@@ -172,7 +172,7 @@ Consulta también ["ES6 en profundidad: funciones flecha" en hacks.mozilla.org](
 
 ### "`this`" y funciones flecha
 
-Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("Operators/this", "this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
+Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito ({{JSxRef("this")}}) y hacer que la ejecución de funciones sea mucho más intuitiva.
 
 > [!NOTE]
 > Si `this` es un misterio para ti, consulta {{JSxRef("Operators/this", "este documento")}} para obtener más información sobre cómo funciona `this`. Para resumir, `this` se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave `new`. De lo contrario, `this` se establecerá —de forma predeterminada— en el {{Glossary("Scope", "ámbito o alcance")}} de window.

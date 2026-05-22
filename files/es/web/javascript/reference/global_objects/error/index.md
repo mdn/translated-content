@@ -80,7 +80,7 @@ try {
 
 ### Manejar de un error específico
 
-Puede elegir manejar solo tipos de error específicos probando el tipo de error con la propiedad {{JSxRef("Object.prototype.constructor", "constructor")}} del error o, si estás escribiendo para motores JavaScript modernos, la palabra clave {{JSxRef("Operators/instanceof", "instanceof")}}:
+Puede elegir manejar solo tipos de error específicos probando el tipo de error con la propiedad {{JSxRef("Object.prototype.constructor", "constructor")}} del error o, si estás escribiendo para motores JavaScript modernos, la palabra clave {{JSxRef("instanceof")}}:
 
 ```js
 try {

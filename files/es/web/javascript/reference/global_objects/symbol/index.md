@@ -27,7 +27,7 @@ El código anterior crea tres nuevos símbolos. Tenga en cuenta que `Symbol("foo
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-La siguiente sintaxis con el operador {{jsxref("Operators/new", "new")}} lanzará un {{jsxref("TypeError")}}:
+La siguiente sintaxis con el operador {{jsxref("new")}} lanzará un {{jsxref("TypeError")}}:
 
 ```js
 let sym = new Symbol(); // TypeError
@@ -62,7 +62,7 @@ El método {{jsxref("Object.getOwnPropertySymbols()")}} devuelve una matriz de S
 - {{jsxref("Symbol.asyncIterator")}}
   - : Un método que devuelve el AsyncIterator por defecto para un objeto. Utilizado por [`for await...of`](/es/docs/Web/JavaScript/Reference/Statements/for-await...of).
 - {{jsxref("Symbol.hasInstance")}}
-  - : Un método que determina si un objeto constructor reconoce un objeto como su instancia. Utilizado por {{jsxref("Operators/instanceof", "instanceof")}}.
+  - : Un método que determina si un objeto constructor reconoce un objeto como su instancia. Utilizado por {{jsxref("instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : Un valor booleano que indica si un objeto debe ser convertido a sus elementos de matriz. Utilizado por {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.iterator")}}

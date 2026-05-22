@@ -600,7 +600,7 @@ console.log(arr); // [2, 4, 6]
 
 ## Funciones Flecha
 
-Una {{JSxRef("Functions/Arrow_functions", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("Operators/this", "this")}}, {{JSxRef("Functions/arguments", "arguments")}}, {{JSxRef("Operators/super", "super")}} o {{JSxRef("Operators/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+Una {{JSxRef("Functions/Arrow_functions", "expresión de función flecha")}} (anteriormente, y ahora conocida incorrectamente como **función de flecha gruesa**) tiene una sintaxis más corta en comparación con las expresiones de función y no tiene su propio {{JSxRef("this")}}, {{JSxRef("Functions/arguments", "arguments")}}, {{JSxRef("Operators/super", "super")}} o {{JSxRef("Operators/new.target", "new.target")}}. Las funciones flecha siempre son anónimas. Consulta también esta publicación del blog hacks.mozilla.org: "[ES6 en profundidad: funciones flecha](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
 
 Dos factores influyeron en la introducción de las funciones flecha: _funciones más cortas_ y _no vinculantes_ de `this`.
 
@@ -624,7 +624,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 ### Sin `this` separado
 
-Hasta las funciones flecha, cada nueva función definía su propio valor {{JSxRef("Operators/this", "this")}} (un nuevo objeto en el caso de un constructor, indefinido en llamadas a funciones en {{JSxRef("Strict_mode", "modo estricto")}}, el objeto base si la función se llama como un "método de objeto", etc.). Esto resultó ser poco menos que ideal con un estilo de programación orientado a objetos.
+Hasta las funciones flecha, cada nueva función definía su propio valor {{JSxRef("this")}} (un nuevo objeto en el caso de un constructor, indefinido en llamadas a funciones en {{JSxRef("Strict_mode", "modo estricto")}}, el objeto base si la función se llama como un "método de objeto", etc.). Esto resultó ser poco menos que ideal con un estilo de programación orientado a objetos.
 
 ```js
 function Person() {

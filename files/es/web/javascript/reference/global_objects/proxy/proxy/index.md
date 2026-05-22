@@ -42,11 +42,11 @@ Esta sección enumera todas las funciones de manejador que puede definir. Las fu
 - {{JSxRef("Proxy/Proxy/apply", "handler.apply()")}}
   - : Una trampa para una llamada de función.
 - {{JSxRef("Proxy/Proxy/construct", "handler.construct()")}}
-  - : Una trampa para el operador {{JSxRef("Operators/new", "new")}}.
+  - : Una trampa para el operador {{JSxRef("new")}}.
 - {{JSxRef("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : Una trampa para {{JSxRef("Object.defineProperty")}}.
 - {{JSxRef("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : Una trampa para el operador {{JSxRef("Operators/delete", "delete")}}.
+  - : Una trampa para el operador {{JSxRef("delete")}}.
 - {{JSxRef("Proxy/Proxy/get", "handler.get()")}}
   - : Una trampa para obtener valores de propiedad.
 - {{JSxRef("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

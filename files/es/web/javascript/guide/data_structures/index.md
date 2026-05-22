@@ -34,7 +34,7 @@ El último estándar ECMAScript define nueve tipos:
 - {{Glossary("Object")}}: `typeof instance === "object"`. Tipo estructural especial que no es de datos pero para cualquier instancia de objeto [construido](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor) que también se utiliza como estructuras de datos: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} y casi todo lo hecho con la [palabra clave `new`](/es/docs/Web/JavaScript/Reference/Operators/new);
 - {{Glossary("Function")}}: una estructura sin datos, aunque también responde al operador `typeof`: `typeof instance === "function"`. Esta simplemente es una forma abreviada para funciones, aunque cada constructor de funciones se deriva del constructor `Object`.
 
-Ten en cuenta que el único propósito valioso del uso del operador `typeof` es verificar el tipo de dato. Si deseamos verificar cualquier Tipo Estructural derivado de `Object`, no tiene sentido usar `typeof` para eso, ya que siempre recibiremos "`object`". La forma correcta de comprobar qué tipo de Objeto estamos usando es la palabra clave {{jsxref("Operators/instanceof", "instanceof")}}. Pero incluso en ese caso, puede haber conceptos erróneos.
+Ten en cuenta que el único propósito valioso del uso del operador `typeof` es verificar el tipo de dato. Si deseamos verificar cualquier Tipo Estructural derivado de `Object`, no tiene sentido usar `typeof` para eso, ya que siempre recibiremos "`object`". La forma correcta de comprobar qué tipo de Objeto estamos usando es la palabra clave {{jsxref("instanceof")}}. Pero incluso en ese caso, puede haber conceptos erróneos.
 
 ## Valores primitivos
 
@@ -46,7 +46,7 @@ Todos los tipos, excepto los objetos, definen valores inmutables (es decir, valo
 
 ### Tipo `Null`
 
-El tipo `Null` tiene exactamente un valor: `null`. Consulta {{jsxref("Operators/null", "null")}} y {{Glossary("Null")}} para obtener más detalles.
+El tipo `Null` tiene exactamente un valor: `null`. Consulta {{jsxref("null")}} y {{Glossary("Null")}} para obtener más detalles.
 
 ### Tipo `Undefined`
 

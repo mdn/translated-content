@@ -54,7 +54,7 @@ var color2 = "coral";
 
 ### Usando `in` con propiedades eliminadas o no definidas
 
-Si se elimina una propiedad con el operador {{jsxref("Operators/delete", "delete")}}, el operador `in` devuelve `false` para esa propiedad.
+Si se elimina una propiedad con el operador {{jsxref("delete")}}, el operador `in` devuelve `false` para esa propiedad.
 
 ```js
 var micoche = { marca: "Honda", modelo: "Accord", año: 1998 };

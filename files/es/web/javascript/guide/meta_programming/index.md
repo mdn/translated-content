@@ -61,7 +61,7 @@ La siguiente tabla resume las trampas disponibles para los objetos `Proxy`. Ve l
        {{jsxref("Reflect.getPrototypeOf()")}}<br>
        {{jsxref("Object/proto", "__proto__")}}<br>
        {{jsxref("Object.prototype.isPrototypeOf()")}}<br>
-       {{jsxref("Operators/instanceof", "instanceof")}}</td>
+       {{jsxref("instanceof")}}</td>
       <td>
        <ul>
         <li>El método <code>getPrototypeOf</code> regresa un objeto o <code>null</code>.</li>

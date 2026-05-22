@@ -40,7 +40,7 @@ Un bucle `for...in` solo itera sobre propiedades enumerables que no son símbolo
 
 ### Propiedades `deleted`, `added` o `modified`
 
-Un bucle `for...in` itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("Operators/delete", "delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).
+Un bucle `for...in` itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).
 
 Si una propiedad se modifica en una iteración y luego se visita en un momento posterior, su valor en el bucle es su valor en ese momento posterior. Una propiedad que se elimina antes de haber sido visitada no se visitará más tarde. Las propiedades agregadas al objeto sobre el que se está produciendo la iteración se pueden visitar u omitir de la iteración.
 

@@ -15,7 +15,7 @@ Para obtener una lista alfabética, consulta la barra lateral de la izquierda.
 
 Palabras clave básicas y expresiones generales en JavaScript.
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : La palabra clave `this` se refiere a una propiedad especial de un contexto de ejecución.
 - {{jsxref("Operators/function", "function")}}
   - : La palabra clave `function` define una expresión de función.
@@ -47,10 +47,10 @@ Los valores de la izquierda son el destino de una asignación.
 - {{jsxref("Operators/Property_accessors", "Propiedad accessors", "", 1)}}
   - : Los operadores miembro proporcionan acceso a una propiedad o método de un objeto
     (`object.property` y `object["property"]`).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : El operador `new` crea una instancia auxiliado por un constructor.
 - {{jsxref("Operators/new.target", "new.target")}}
-  - : En los constructores, `new.target` se refiere al constructor que fue invocado por {{jsxref("Operators/new", "new")}}.
+  - : En los constructores, `new.target` se refiere al constructor que fue invocado por {{jsxref("new")}}.
 - {{jsxref("Operators/super", "super")}}
   - : La palabra clave `super` llama al constructor padre.
 - {{jsxref("Operators/Spread_syntax", "...obj")}}
@@ -73,7 +73,7 @@ Operadores de incremento sufijo/prefijo y decremento sufijo/prefijo.
 
 Una operación unaria es una operación con un solo operando.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : El operador `delete` elimina una propiedad de un objeto.
 - {{jsxref("Operators/void", "void")}}
   - : El operador `void` descarta el valor de retorno de una expresión.
@@ -111,7 +111,7 @@ Un operador de comparación compara sus operandos y devuelve un valor `Boolean` 
 
 - {{jsxref("Operators/in", "in")}}
   - : El operador `in` determina si un objeto tiene una determinada propiedad.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : El operador `instanceof` determina si un objeto es una instancia de otro objeto.
 - {{jsxref("Operators/Less_than", "&lt;")}}
   - : Operador menor que.

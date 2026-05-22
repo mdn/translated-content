@@ -20,7 +20,7 @@ fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ### Parametros
 
 - `thisArg`
-  - : Es un valor que será enviado a la función destino cuando se llame a la función de enlace. Este valor será ignorado si la función de enlace es construida usando el operador {{jsxref("Operators/new", "new")}}.
+  - : Es un valor que será enviado a la función destino cuando se llame a la función de enlace. Este valor será ignorado si la función de enlace es construida usando el operador {{jsxref("new")}}.
 - `arg1, arg2, ...`
   - : Son los argumentos que se enviarán además de los provistos a la función de enlace cuando se invoque la función destino.
 
@@ -30,7 +30,7 @@ Una copia de la función entregada con el valor especificado `this` y los argume
 
 ## Descripción
 
-La función `bind()` crea una nueva función (**función ligada**) con el mismo cuerpo (propiedad interna {{jsxref("Function.prototype.call", "call")}} en términos de ECMAScript 5) como la función que será llamada (la **función objetivo** de la función ligada) con la referencia `this` asociada al primer argumento de `bind()`, el cual no podrá ser sobreescrito. `bind()` también acepta parámetros predeterminados que antecederán al resto de los parámetros específicos cuando la función objetivo sea llamada. Una función ligada también puede ser construída utilizando el operador {{jsxref("Operators/new", "new")}}: al hacerlo, actuará como si en su lugar hubiera sido construída la función objetivo.
+La función `bind()` crea una nueva función (**función ligada**) con el mismo cuerpo (propiedad interna {{jsxref("Function.prototype.call", "call")}} en términos de ECMAScript 5) como la función que será llamada (la **función objetivo** de la función ligada) con la referencia `this` asociada al primer argumento de `bind()`, el cual no podrá ser sobreescrito. `bind()` también acepta parámetros predeterminados que antecederán al resto de los parámetros específicos cuando la función objetivo sea llamada. Una función ligada también puede ser construída utilizando el operador {{jsxref("new")}}: al hacerlo, actuará como si en su lugar hubiera sido construída la función objetivo.
 
 En este último caso, el parámetro correspondiente para `this` será ignorado, aunque los parámetros predeterminados que antecederán al resto sí serán provistos para la función emulada.
 
@@ -101,7 +101,7 @@ LateBloomer.prototype.declare = function () {
 > [!WARNING]
 > **Advetencia:** Esta sección demuestra las capacidades de JavaScript y documenta algunos usos extremos del método `bind()`. Los métodos mostrados a continuación no son la mejor forma de hacer las cosas y probablemente no deberían ser utilizados en ningún ambiente productivo.
 
-Las funciones ligadas son automáticamente adecuadas para usarse con el operador {{jsxref("Operators/new", "new")}} para construir nuevas instancias creadas por la función objetivo. Cuando una función ligada es utilizada para construir un valor, el parámetro enviado para reemplazar la referencia `this` es ignorado. De cualquier forma, los argumentos iniciales sí son tomados en consideración y antecederán a los parámetros que se envíen al constructor:
+Las funciones ligadas son automáticamente adecuadas para usarse con el operador {{jsxref("new")}} para construir nuevas instancias creadas por la función objetivo. Cuando una función ligada es utilizada para construir un valor, el parámetro enviado para reemplazar la referencia `this` es ignorado. De cualquier forma, los argumentos iniciales sí son tomados en consideración y antecederán a los parámetros que se envíen al constructor:
 
 ```js
 function Point(x, y) {
@@ -130,7 +130,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 ```
 
-Note que no necesita hacer nada especial para crear una función ligada para usarse con {{jsxref("Operators/new", "new")}}. El razonamiento es que usted no necesita hacer nada especial para crear una función ligada para ser llamada planamente, aún si usted prefiriera requerir que la función ligada sea llamada únicamente utilizando {{jsxref("Operators/new", "new")}}.
+Note que no necesita hacer nada especial para crear una función ligada para usarse con {{jsxref("new")}}. El razonamiento es que usted no necesita hacer nada especial para crear una función ligada para ser llamada planamente, aún si usted prefiriera requerir que la función ligada sea llamada únicamente utilizando {{jsxref("new")}}.
 
 ```js
 // Ejemplo que puede ser ejecutado directamente en tu consola JavaScript
@@ -144,7 +144,7 @@ emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
-Si desea utilizar una función ligada únicamente usando {{jsxref("Operators/new", "new")}}, o únicamente mediante una llamada directa, la función objetivo debe forzar esa restricción.
+Si desea utilizar una función ligada únicamente usando {{jsxref("new")}}, o únicamente mediante una llamada directa, la función objetivo debe forzar esa restricción.
 
 ### Ejemplo: Crear atajos
 

@@ -136,7 +136,7 @@ console.log("Hola mundo");
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -147,12 +147,12 @@ console.log("Hola mundo");
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -237,7 +237,7 @@ Algunos identificadores tienen un significado especial en algunos contextos sin 
 
 ### `null` literal
 
-Consulta también {{jsxref("Operators/null", "null")}} para obtener más información.
+Consulta también {{jsxref("null")}} para obtener más información.
 
 ```js
 null;
