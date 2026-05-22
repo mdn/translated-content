@@ -171,7 +171,7 @@ Si bien la presencia de parámetros `rest`, predeterminados o desestructurados n
 En el código de modo estricto, el objeto `arguments` se comporta de la misma manera independientemente de que se pasen parámetros `rest`, predeterminados o desestructurados a una función. Es decir, asignar nuevos valores a las variables en el cuerpo de la función no afectará al objeto `arguments`. La asignación de nuevas variables al objeto `arguments` tampoco afectará el valor de las variables.
 
 > [!NOTE]
-> No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_Non_Simple_Params", "error de sintaxis")}}.
+> No puedes escribir una directiva `"use strict";` en el cuerpo de una definición de función que acepte parámetros `rest`, predeterminados o desestructurados. Si lo haces, generará un {{jsxref("Errors/Strict_non_simple_params", "error de sintaxis")}}.
 
 Las funciones no estrictas a las que se les pasan solo parámetros simples (es decir, no parámetros `rest`, predeterminados o desestructurados) sincronizarán el valor de los nuevos valores de las variables en el cuerpo de la función con el objeto `arguments`, y viceversa:
 

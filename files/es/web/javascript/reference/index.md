@@ -270,7 +270,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Operador condicional (ternario)
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Operadores de asignación
 
@@ -295,7 +295,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 
 ### Operador coma
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Funciones
 

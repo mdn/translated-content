@@ -25,7 +25,7 @@ Se ha proporcionado una cadena con una fecha no válida para {{jsxref("Date")}} 
 
 ### Casos no válidos
 
-Las cadenas o fechas irreconocibles que contienen valores de elementos ilegales en cadenas con formato ISO suelen devolver {{jsxref("Nan")}}. Sin embargo, dependiendo de la implementación, las cadenas de formato ISO no conformes, también pueden lanzar `RangeError: invalid date`, como los siguientes casos en Firefox:
+Las cadenas o fechas irreconocibles que contienen valores de elementos ilegales en cadenas con formato ISO suelen devolver {{jsxref("NaN", "Nan")}}. Sin embargo, dependiendo de la implementación, las cadenas de formato ISO no conformes, también pueden lanzar `RangeError: invalid date`, como los siguientes casos en Firefox:
 
 ```js example-bad
 new Date("foo-bar 2014");

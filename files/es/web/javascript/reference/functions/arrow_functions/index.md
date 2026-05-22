@@ -483,7 +483,7 @@ var func = (a, b, c) => 1;
 
 ### Orden de procesamiento
 
-Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operators/Operator_Precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
+Aunque la flecha en una función flecha no es un operador, las funciones flecha tienen reglas de procesamiento especiales que interactúan de manera diferente con {{JSxRef("Operators/Operator_precedence", "prioridad de operadores")}} en comparación con las funciones regulares.
 
 ```js
 let callback;

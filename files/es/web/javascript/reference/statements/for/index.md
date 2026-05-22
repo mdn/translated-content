@@ -44,7 +44,7 @@ for (var i = 0; i < 9; i++) {
 
 - {{jsxref("Statements/break", "break")}}
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/empty", "empty")}}
+- {{jsxref("Statements/Empty", "empty")}}
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for...in", "for...in")}}

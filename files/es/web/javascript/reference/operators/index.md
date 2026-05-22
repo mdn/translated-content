@@ -171,7 +171,7 @@ Los operadores lógicos se utilizan normalmente con valores booleanos (lógicos)
 
 ### Operador condicional (ternario)
 
-- {{jsxref("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : El operador condicional devuelve uno de dos valores según el valor lógico de la condición.
 
 ### Operadores de asignación
@@ -214,7 +214,7 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ### Operador coma
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : El operador `coma` permite evaluar múltiples expresiones en una sola declaración y devuelve el resultado de la última expresión.
 
 ## Especificaciones
@@ -227,4 +227,4 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ## Ve también
 
-- {{jsxref("Operators/Operator_Precedence", "Operator de precedencia")}}
+- {{jsxref("Operators/Operator_precedence", "Operator de precedencia")}}

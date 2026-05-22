@@ -284,7 +284,7 @@ mystring += "bet"; // se evalúa como "alphabet" y asigna este valor a mystring.
 
 ### Operador condicional (ternario)
 
-El {{JSxRef("Operators/Conditional_Operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:
+El {{JSxRef("Operators/Conditional_operator", "operador condicional")}} es el único operador de JavaScript que toma tres operandos. El operador puede tener uno de dos valores según una condición. La sintaxis es:
 
 ```
 condition ? val1 : val2
@@ -302,7 +302,7 @@ Esta declaración asigna el valor "`adult`" a la variable `status` si `age` es d
 
 ### Operador coma
 
-El {{JSxRef("Operators/Comma_Operator", "operador coma")}} (`,`) simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle `for`, para permitir que se actualicen múltiples variables cada vez a través del bucle. Se considera de mal estilo usarlo en otros lugares, cuando no es necesario. A menudo, en su lugar pueden y se deben utilizar dos declaraciones independientes.
+El {{JSxRef("Operators/Comma_operator", "operador coma")}} (`,`) simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle `for`, para permitir que se actualicen múltiples variables cada vez a través del bucle. Se considera de mal estilo usarlo en otros lugares, cuando no es necesario. A menudo, en su lugar pueden y se deben utilizar dos declaraciones independientes.
 
 Por ejemplo, si `a` es un arreglo bidimensional con 10 elementos en un lado, el siguiente código usa el operador `coma` para actualizar dos variables a la vez. El código imprime los valores de los elementos diagonales en el arreglo:
 
@@ -519,7 +519,7 @@ La siguiente tabla describe la precedencia de los operadores, de mayor a menor.
 | asignación               | `= += -= *= /= %= <<= >>= >>>= &= ^= \|= &&= \|\|= ??=` |
 | coma                     | `,`                                                     |
 
-Puedes encontrar una versión más detallada de esta tabla, completa con enlaces a detalles adicionales sobre cada operador, en {{JSxRef("Operators/Operator_Precedence", "Referencia de JavaScript", "#Table")}}.
+Puedes encontrar una versión más detallada de esta tabla, completa con enlaces a detalles adicionales sobre cada operador, en {{JSxRef("Operators/Operator_precedence", "Referencia de JavaScript", "#Table")}}.
 
 ## Expresiones
 

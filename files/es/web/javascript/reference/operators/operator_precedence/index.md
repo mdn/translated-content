@@ -257,14 +257,14 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto", 1)}}
+        {{jsxref("Operators/Property_accessors", "Acceso a propiedades (notación por punto)", "#notaci.c3.b3n_por_punto", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Acceso a propiedades (notación por corchetes)","#notaci.c3.b3n_por_corchetes", 1)}}
+        {{jsxref("Operators/Property_accessors", "Acceso a propiedades (notación por corchetes)","#notaci.c3.b3n_por_corchetes", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… [ … ]</code></td>
@@ -538,7 +538,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>3</td>
       <td>
-        {{jsxref("Operators/Conditional_Operator","Operador condicional (ternario)","", 1)}}
+        {{jsxref("Operators/Conditional_operator","Operador condicional (ternario)","", 1)}}
       </td>
       <td>a la derecha</td>
       <td><code>… ? … : …</code></td>
@@ -608,7 +608,7 @@ una [respuesta en Stack Overflow](https://stackoverflow.com/questions/48656338/o
     <tr>
       <td>1</td>
       <td>
-        {{jsxref("Operators/Comma_Operator","Operador coma","", 1)}}
+        {{jsxref("Operators/Comma_operator","Operador coma","", 1)}}
       </td>
       <td>a la izquierda</td>
       <td><code>… , …</code></td>
