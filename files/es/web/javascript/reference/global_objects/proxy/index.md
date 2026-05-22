@@ -57,7 +57,7 @@ const proxy2 = new Proxy(target, handler2);
 ```
 
 Aquí hemos provisto una implementación del manipulador
-{{jsxref("Proxy.Proxy.get", "get()")}}, el cual intercepta los
+{{jsxref("Proxy/Proxy/get", "get()")}}, el cual intercepta los
 intentos de acceder a las propiedades del objeto envuelto.
 
 Las funciones manipuladoras son llamadas a menudo _trampas_, probablemente
@@ -95,7 +95,7 @@ console.log(proxy3.message2); // world
 
 ## Constructor
 
-- {{jsxref("Proxy.Proxy", "Proxy()")}}
+- {{jsxref("Proxy/Proxy", "Proxy()")}}
   - : Crea un nuevo objeto `Proxy`.
 
 ## Métodos estáticos
@@ -109,7 +109,7 @@ console.log(proxy3.message2); // world
 
 En este ejemplo, el número `37` es devuelto como valor pordefecto cuando el
 nombre de propiedad no está en el objeto. Se realiza usando el manipulador
-{{jsxref("Proxy.Proxy.get", "get()")}}.
+{{jsxref("Proxy/Proxy/get", "get()")}}.
 
 ```js
 const handler = {
@@ -153,7 +153,7 @@ objetos nativos del navegador como Elementos del DOM.
 
 Con un `Proxy`, puedes puedes validar fácilmente el valor enviado para un
 objeto. Este ejemplo usa el manipulador
-{{jsxref("Proxy.Proxy.set", "set()")}}.
+{{jsxref("Proxy/Proxy/set", "set()")}}.
 
 ```js
 let validator = {
@@ -187,8 +187,8 @@ person.age = 300; // Lanza una excepción
 
 Una función intermediaria podría fácilmente extender un constructor con un nuevo
 constructor. Este ejemplo usa los manipuladores
-{{jsxref("Proxy.Proxy.construct", "construct()")}} y
-{{jsxref("Proxy.Proxy.apply", "apply()")}}.
+{{jsxref("Proxy/Proxy/construct", "construct()")}} y
+{{jsxref("Proxy/Proxy/apply", "apply()")}}.
 
 ```js
 function extend(sup, base) {
@@ -228,7 +228,7 @@ console.log(Peter.age); // 13
 
 A veces querrás alternar algún atributo o clase de dos elementos distintos. En
 este ejemplo se explica cómo lo puedes hacer usando el manipulador
-{{jsxref("Proxy.Proxy.set", "set()")}}.
+{{jsxref("Proxy/Proxy/set", "set()")}}.
 
 ```js
 let view = new Proxy({
