@@ -145,7 +145,7 @@ scriptElem.addEventListener("load", () => {
 document.head.append(scriptElem);
 ```
 
-JavaScript モジュールは、 {{jsxref("operators/import", "import()")}} 関数を使用して動的に読み込むことができます。
+JavaScript モジュールは、 {{jsxref("Operators/import", "import()")}} 関数を使用して動的に読み込むことができます。
 
 ```js
 import("./modules/myModule.js").then((module) => {

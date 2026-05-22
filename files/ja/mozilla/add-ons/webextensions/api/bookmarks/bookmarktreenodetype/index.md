@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 
 ## 型
 
-`bookmarks.BookmarkTreeNodeType` は以下の 3 つのうちいずれかの値を取りうる {{jsxref("string")}} です。
+`bookmarks.BookmarkTreeNodeType` は以下の 3 つのうちいずれかの値を取りうる {{jsxref("String", "string")}} です。
 
 - `"bookmark"`: ノードがブックマークであることを示します。
 - `"folder"`: ノードがフォルダーであることを示します。

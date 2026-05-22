@@ -60,7 +60,7 @@ l10n:
 ## インスタンスメソッド
 
 - {{domxref("IDBKeyRange.includes()")}}
-  - : 指定されたキーがこのキーの範囲に含まれるかを表す {{jsxref("boolean")}} を返します。
+  - : 指定されたキーがこのキーの範囲に含まれるかを表す {{jsxref("Boolean", "boolean")}} を返します。
 
 ## 例
 

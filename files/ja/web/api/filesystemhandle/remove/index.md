@@ -24,7 +24,7 @@ remove(options)
 - `options` {{optional_inline}}
   - : 削除のオプションを指定するオブジェクトです。以下のプロパティを設定できます。
     - `recursive` {{optional_inline}}
-      - : {{jsxref("boolean")}} 値で、デフォルトは `false` です。`true` に設定し、エントリーがディレクトリーである場合は、内容が再帰的に削除されます。
+      - : {{jsxref("Boolean", "boolean")}} 値で、デフォルトは `false` です。`true` に設定し、エントリーがディレクトリーである場合は、内容が再帰的に削除されます。
 
 ### 返値
 

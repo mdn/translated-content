@@ -11,7 +11,7 @@ l10n:
 
 ## 値
 
-{{jsxref("boolean")}} です。
+{{jsxref("Boolean", "boolean")}} です。
 
 ## 例
 

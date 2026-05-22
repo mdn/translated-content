@@ -611,7 +611,7 @@ console.log(A() && B() || C());
       <td>1: カンマ</td>
       <td>左→右</td>
       <td>
-        {{jsxref("Operators/Comma_Operator", "カンマ演算子", "", 1)}}<br><code>x, y</code>
+        {{jsxref("Operators/Comma_operator", "カンマ演算子", "", 1)}}<br><code>x, y</code>
       </td>
     </tr>
   </tbody>

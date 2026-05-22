@@ -37,20 +37,20 @@ browser.bookmarks.onChanged.hasListener(listener)
 - `callback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
     - `id`
-      - : 変更を受けた要素の ID を表す {{jsxref("string")}}
+      - : 変更を受けた要素の ID を表す {{jsxref("String", "string")}}
 
     <!---->
     - `changeInfo`
-      - : 変更に関する詳細を含んだ {{jsxref("object")}}
+      - : 変更に関する詳細を含んだ {{jsxref("Object", "object")}}
 
 ## 付随するオブジェクト
 
 ### changeInfo
 
 - `title`
-  - : 変更された要素のタイトルを表す {{jsxref("string")}}
+  - : 変更された要素のタイトルを表す {{jsxref("String", "string")}}
 - `url`{{optional_inline}}
-  - : 変更された要素の URL を表す {{jsxref("string")}}。要素がフォルダーだった場合に値は入りません。
+  - : 変更された要素の URL を表す {{jsxref("String", "string")}}。要素がフォルダーだった場合に値は入りません。
 
 ## ブラウザーの互換性
 

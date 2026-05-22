@@ -33,7 +33,7 @@ BigInt(value)
 - {{jsxref("TypeError")}}
   - : 以下のどちらかの場合に発生します。
     - 引数がプリミティブ型に変換できない。
-    - プリミティブ型に変換された結果が、{{jsxref("undefined")}}、{{jsxref("Operators/null", "null")}}、シンボル ({{jsxref("symbol")}}) となる。
+    - プリミティブ型に変換された結果が、{{jsxref("undefined")}}、{{jsxref("Operators/null", "null")}}、シンボル ({{jsxref("Symbol", "symbol")}}) となる。
 - {{jsxref("SyntaxError")}}
   - : 引数が `BigInt` として解析できない文字列の場合に発生します。
 

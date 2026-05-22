@@ -53,7 +53,7 @@ set(options)
 
 ### 返値
 
-Cookie の設定が完了すると {{jsxref("Undefined")}} に解決される {{jsxref("Promise")}} です。
+Cookie の設定が完了すると {{jsxref("undefined", "Undefined")}} に解決される {{jsxref("Promise")}} です。
 
 ### 例外
 
