@@ -9,26 +9,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 ## 値の型
 
-以下のプロパティを含む {{jsxref("Object", "object")}} です。
+以下のプロパティを含む {{jsxref("Object")}} です。
 
 - `id`
-  - : そのノードを一意に識別する {{jsxref("String", "string")}} です。この ID はユーザーのプロファイル内で固有であり、ブラウザーを再起動した後も有効です。
+  - : そのノードを一意に識別する {{jsxref("String")}} です。この ID はユーザーのプロファイル内で固有であり、ブラウザーを再起動した後も有効です。
 - `parentId` {{optional_inline}}
-  - : 親フォルダーの ID を表す {{jsxref("String", "string")}} です。ルートノードの場合は省略されます。
+  - : 親フォルダーの ID を表す {{jsxref("String")}} です。ルートノードの場合は省略されます。
 - `index` {{optional_inline}}
-  - : 親フォルダーの中におけるノードの位置を表す 0 以上の {{jsxref("Number", "number")}} です。0 は先頭の要素を意味します。
+  - : 親フォルダーの中におけるノードの位置を表す 0 以上の {{jsxref("Number")}} です。0 は先頭の要素を意味します。
 - `url` {{optional_inline}}
-  - : ブックマークの URL を表す {{jsxref("String", "string")}} です。フォルダーの場合は省略されます。
+  - : ブックマークの URL を表す {{jsxref("String")}} です。フォルダーの場合は省略されます。
 - `title`
-  - : ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("String", "string")}} です。
+  - : ブックマークリストやメニューにノードが表示される際のテキストを表す {{jsxref("String")}} です。
 - `dateAdded` {{optional_inline}}
-  - : このノードが生成された時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("Number", "number")}} です。
+  - : このノードが生成された時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("Number")}} です。
 - `dateGroupModified` {{optional_inline}}
-  - : その内容の最終変更時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("Number", "number")}} です。
+  - : その内容の最終変更時刻を [1970 年 1 月 1 日からの経過ミリ秒](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93) で表す {{jsxref("Number")}} です。
 - `unmodifiable` {{optional_inline}}
-  - : {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 型で表現される {{jsxref("String", "string")}} です。このノードが変更不可である理由を表します。変更可能な場合には省略されます。
+  - : {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}} 型で表現される {{jsxref("String")}} です。このノードが変更不可である理由を表します。変更可能な場合には省略されます。
 - `children` {{optional_inline}}
-  - : 各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("Array", "array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダー以外の場合は省略されます。
+  - : 各要素がノードの子要素を表す、{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} の {{jsxref("Array")}} です。リストの要素は UI に表示されているのと同じ順序で並びます。フォルダー以外の場合は省略されます。
 
 > [!NOTE]
 > 現在、ブックマークリストのセパレータをこのオブジェクトで表すことはできません。

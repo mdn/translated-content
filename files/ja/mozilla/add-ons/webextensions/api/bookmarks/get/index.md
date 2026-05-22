@@ -19,11 +19,11 @@ browser.bookmarks.get(
 ### 引数
 
 - `idOrIdList`
-  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("String", "string")}} または {{jsxref("String", "string")}} の {\[jsxref("array")}} です。
+  - : 取得したい {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} オブジェクトの ID を指定した {{jsxref("String")}} または {{jsxref("String")}} の {\[jsxref("array")}} です。
 - `callback`
   - : ノードが取得された際に実行される {{jsxref("Operators/function", "function")}} です。この関数には以下の引数が渡ります。
     - `results`
-      - : 各要素が {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} である、マッチしたノードの {{jsxref("Array", "array")}} です。セパレータは結果の戻り値に含まれません。ノードが見つからなかった場合の `results` は `undefined` となり、{{WebExtAPIRef("runtime.lastError")}} がセットされます。
+      - : 各要素が {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} である、マッチしたノードの {{jsxref("Array")}} です。セパレータは結果の戻り値に含まれません。ノードが見つからなかった場合の `results` は `undefined` となり、{{WebExtAPIRef("runtime.lastError")}} がセットされます。
 
 ## ブラウザーの互換性
 

@@ -7,11 +7,11 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`configurations`** は、ペアリングした USB デバイスの制御用のデバイス固有のインターフェイスの {{jsxref("Array", "array")}} を返します。
+{{domxref("USBDevice")}} インターフェイスの読み取り専用プロパティ **`configurations`** は、ペアリングした USB デバイスの制御用のデバイス固有のインターフェイスの {{jsxref("Array")}} を返します。
 
 ## 値
 
-{{domxref("USBConfiguration")}} オブジェクトの {{jsxref("Array", "array")}} です。
+{{domxref("USBConfiguration")}} オブジェクトの {{jsxref("Array")}} です。
 
 ## 仕様書
 

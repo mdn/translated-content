@@ -26,7 +26,7 @@ isScript(value)
 
 ### 返値
 
-論理値 ({{jsxref("Boolean", "boolean")}}) で、オブジェクトが有効な {{domxref("TrustedScript")}} オブジェクトであれば true です。
+論理値 ({{jsxref("Boolean")}}) で、オブジェクトが有効な {{domxref("TrustedScript")}} オブジェクトであれば true です。
 
 ## 例
 

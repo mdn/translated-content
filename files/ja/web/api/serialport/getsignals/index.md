@@ -24,13 +24,13 @@ getSignals()
 以下のメンバーが入ったオブジェクトで解決する {{jsxref("Promise")}} を返します。
 
 - `clearToSend`
-  - : シリアル通信の相手がデータの送信を要求しているかを表す {{jsxref("Boolean", "boolean")}} 値です。
+  - : シリアル通信の相手がデータの送信を要求しているかを表す {{jsxref("Boolean")}} 値です。
 - `dataCarrierDetect`
-  - : シリアル通信に必要な制御信号があるかを表す {{jsxref("Boolean", "boolean")}} 値です。
+  - : シリアル通信に必要な制御信号があるかを表す {{jsxref("Boolean")}} 値です。
 - `dataSetReady`
-  - : デバイスがデータの送受信が可能な状態にあるかを表す {{jsxref("Boolean", "boolean")}} 値です。
+  - : デバイスがデータの送受信が可能な状態にあるかを表す {{jsxref("Boolean")}} 値です。
 - `ringIndicator`
-  - : シリアル通信で呼出信号を受信したかを表す {{jsxref("Boolean", "boolean")}} 値です。
+  - : シリアル通信で呼出信号を受信したかを表す {{jsxref("Boolean")}} 値です。
 
 ### 例外
 

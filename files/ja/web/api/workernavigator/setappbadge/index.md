@@ -19,7 +19,7 @@ setAppBadge(contents)
 ### 引数
 
 - `contents` {{optional_inline}}
-  - : バッジの値として用いる {{jsxref("Number", "number")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
+  - : バッジの値として用いる {{jsxref("Number")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
 
 ### 返値
 
