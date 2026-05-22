@@ -26,7 +26,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
       - : 这个方法，也是由开发人员定义的，当流的内部队列不满时，会重复调用这个方法，直到队列补满。如果 `pull()` 返回一个 promise，那么它将不会再被调用，直到 promise 完成;如果 promise 失败，该流将会出现错误。传递给此方法的 `controller` 参数是 {{domxref("ReadableStreamDefaultController")}} 或 {{domxref("ReadableByteStreamController")}}，具体取决于 `type` 属性的值。由于更多的块被获取，这个方法可以被开发人员用来控制流。
     - `cancel` (reason) {{optional_inline}}
       - : 如果应用程序表示该流将被取消（例如，调用了 {{domxref("ReadableStream.cancel()")}}，则将调用此方法，该方法也由开发人员定义。该方法应该做任何必要的事情来释放对流的访问。
-        如果这个过程是异步的，它可以返回一个 promise，表明成功或失败。原因参数包含一个 {{domxref("DOMString")}}，它描述了流被取消的原因。
+        如果这个过程是异步的，它可以返回一个 promise，表明成功或失败。原因参数包含一个 {{jsxref("String")}}，它描述了流被取消的原因。
     - `type` {{optional_inline}}
       - : 该属性控制正在处理的可读类型的流。如果它包含一个设置为 `bytes` 的值，则传递的控制器对象将是一个 {{domxref("ReadableByteStreamController")}}，能够处理 BYOB（带你自己的缓冲区）/字节流。如果未包含，则传递的控制器将为 {{domxref("ReadableStreamDefaultController")}}。
     - `autoAllocateChunkSize` {{optional_inline}}
