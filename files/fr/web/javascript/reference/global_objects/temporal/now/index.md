@@ -9,7 +9,7 @@ L'objet **`Temporal.Now`** d'espace de noms contient des méthodes statiques pou
 
 ## Description
 
-Contrairement à la plupart des objets universels, `Temporal.Now` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec l'opérateur {{JSxRef("Operators/new", "new")}} ni invoquer l'objet `Temporal.Now` comme une fonction. Toutes les propriétés et méthodes de `Temporal.Now` sont statiques (tout comme l'objet {{JSxRef("Math")}}).
+Contrairement à la plupart des objets universels, `Temporal.Now` n'est pas un constructeur. Vous ne pouvez pas l'utiliser avec l'opérateur {{JSxRef("new")}} ni invoquer l'objet `Temporal.Now` comme une fonction. Toutes les propriétés et méthodes de `Temporal.Now` sont statiques (tout comme l'objet {{JSxRef("Math")}}).
 
 Fondamentalement, l'heure système est retournée par le système d'exploitation comme un temps écoulé depuis l'époque Unix (généralement avec une précision au milliseconde, mais pouvant également être au nanoseconde). {{JSxRef("Temporal/Now/instant", "Temporal.Now.instant()")}} retourne ce temps sous forme d'objet {{JSxRef("Temporal.Instant")}}.
 

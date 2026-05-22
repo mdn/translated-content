@@ -5,13 +5,13 @@ slug: Web/API/URL/protocol
 
 {{ApiRef("URL API")}}
 
-A propriedade **`protocol`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} representando o esquema de protocolo da URL, incluindo o final `':'`.
+A propriedade **`protocol`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} representando o esquema de protocolo da URL, incluindo o final `':'`.
 
 {{AvailableInWorkers}}
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

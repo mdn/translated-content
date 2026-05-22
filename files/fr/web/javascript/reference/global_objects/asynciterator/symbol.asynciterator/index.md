@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`[Symbol.asyncIterator]()`** des instances de {{JSxRef("AsyncIterator")}} implémente le [protocole d'itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) et permet aux itérateurs asynchrones natifs d'être consommés par la plupart des syntaxes qui attendent des itérables asynchrones, telles que les boucles {{JSxRef("Statements/for-await...of", "for await...of")}}. Elle retourne la valeur de {{JSxRef("Operators/this", "this")}}, c'est‑à‑dire l'objet itérateur asynchrone lui‑même.
+La méthode **`[Symbol.asyncIterator]()`** des instances de {{JSxRef("AsyncIterator")}} implémente le [protocole d'itérable asynchrone](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#les_protocoles_ditérateur_asynchrone_et_ditérable_asynchrone) et permet aux itérateurs asynchrones natifs d'être consommés par la plupart des syntaxes qui attendent des itérables asynchrones, telles que les boucles {{JSxRef("Statements/for-await...of", "for await...of")}}. Elle retourne la valeur de {{JSxRef("this")}}, c'est‑à‑dire l'objet itérateur asynchrone lui‑même.
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ Aucun.
 
 ### Valeur de retour
 
-La valeur de {{JSxRef("Operators/this", "this")}}, c'est‑à‑dire l'objet itérateur asynchrone lui‑même.
+La valeur de {{JSxRef("this")}}, c'est‑à‑dire l'objet itérateur asynchrone lui‑même.
 
 ## Exemples
 

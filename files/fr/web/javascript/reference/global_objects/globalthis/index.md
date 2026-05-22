@@ -118,4 +118,4 @@ if (typeof globalThis.Intl === "undefined") {
 
 - [Prothèse d'émulation de `globalThis` dans `core-js` <sup>(angl.)</sup>](https://github.com/zloirock/core-js#ecmascript-globalthis)
 - [Prothèse d'émulation es-shims de `globalThis` <sup>(angl.)</sup>](https://www.npmjs.com/package/globalthis)
-- L'opérateur {{JSxRef("Operators/this", "this")}}
+- L'opérateur {{JSxRef("this")}}

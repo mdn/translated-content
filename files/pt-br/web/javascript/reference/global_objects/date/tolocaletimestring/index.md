@@ -39,7 +39,7 @@ O valor default para cada propriedade do componente date-time é {{jsxref("undef
 
 ### Valor retornado
 
-Uma string representando uma porção de tempo de uma instância {{jsxref("Global_Objects/Date", "Date")}}, fornecida de acordo com as convenções específicas do idioma.
+Uma string representando uma porção de tempo de uma instância {{jsxref("Date")}}, fornecida de acordo com as convenções específicas do idioma.
 
 ## Exemplos
 
@@ -122,7 +122,7 @@ console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 
 ## Performance
 
-Quando se formata um grande número de datas, é aconselhável criar um objeto {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecida pela propriedade dele: {{jsxref("DateTimeFormat.prototype.format", "format")}}.
+Quando se formata um grande número de datas, é aconselhável criar um objeto {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} e usar a função fornecida pela propriedade dele: {{jsxref("Intl/DateTimeFormat/format", "format")}}.
 
 ## Especificações
 
@@ -134,7 +134,7 @@ Quando se formata um grande número de datas, é aconselhável criar um objeto {
 
 ## Veja também
 
-- {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}
