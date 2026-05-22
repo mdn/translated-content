@@ -186,7 +186,7 @@ slug: Web/JavaScript/Reference
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{JSxRef("Operators/null", "null")}}
 
 ### 左手邊運算式
 
@@ -225,7 +225,7 @@ slug: Web/JavaScript/Reference
 ### 關係運算子
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("instanceof")}}
+- {{JSxRef("Operators/instanceof", "instanceof")}}
 - {{JSxRef("Operators", "&lt;", "#Less_than_operator")}}
 - {{JSxRef("Operators", "&gt;", "#Greater_than_operator")}}
 - {{JSxRef("Operators", "&lt;=", "#Less_than_or_equal_operator")}}

@@ -64,7 +64,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 - [標準內建物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects)
   - : 瞭解標準內建物件： {{jsxref("Array")}}、 {{jsxref("Boolean")}}、 {{jsxref("Date")}}、 {{jsxref("Error")}}、 {{jsxref("Function")}}、 {{jsxref("JSON")}}、 {{jsxref("Math")}}、 {{jsxref("Number")}}、 {{jsxref("Object")}}、 {{jsxref("RegExp")}}、 {{jsxref("String")}}、 {{jsxref("Map")}}、 {{jsxref("Set")}}、 {{jsxref("WeakMap")}}、 {{jsxref("WeakSet")}} 等等。
 - [表式法與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)
-  - : 瞭解更多 JavaScript 運算子的行為：{{jsxref("instanceof")}}、 {{jsxref("Operators/typeof", "typeof")}}、 {{jsxref("new")}}、 {{jsxref("this")}}、[運算子優先序](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)等等。
+  - : 瞭解更多 JavaScript 運算子的行為：{{jsxref("Operators/instanceof", "instanceof")}}、 {{jsxref("Operators/typeof", "typeof")}}、 {{jsxref("new")}}、 {{jsxref("this")}}、[運算子優先序](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)等等。
 - [敘述和宣告](/zh-TW/docs/Web/JavaScript/Reference/Statements)
   - : 瞭解 {{jsxref("Statements/do...while", "do-while")}}、{{jsxref("Statements/for...in", "for-in")}}、 {{jsxref("Statements/for...of", "for-of")}}、 {{jsxref("Statements/try...catch", "try-catch")}}、{{jsxref("Statements/let", "let")}}、 {{jsxref("Statements/var", "var")}}、 {{jsxref("Statements/const", "const")}}、 {{jsxref("Statements/if...else", "if-else")}}、 {{jsxref("Statements/switch", "switch")}} 和其他 JavaScript 敘述和關鍵字的運作方式。
 - [函數](/zh-TW/docs/Web/JavaScript/Reference/Functions)

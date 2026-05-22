@@ -109,7 +109,7 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{jsxref("Operators/in", "in")}}
   - : `in` 運算子會判斷一個物件是否有指定的屬性。
-- {{jsxref("instanceof")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
   - : `instanceof` 運算子會判斷一個物件是否為另一個物件的實例。
 - {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
   - : 小於運算子。

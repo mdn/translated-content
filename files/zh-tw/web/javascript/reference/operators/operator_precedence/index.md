@@ -300,7 +300,7 @@ a = b = 5;
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("instanceof")}}</td>
+      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>

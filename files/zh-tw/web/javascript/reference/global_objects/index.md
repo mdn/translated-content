@@ -18,7 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{jsxref("Infinity")}}
 - {{jsxref("NaN")}}
 - {{jsxref("undefined")}}
-- {{jsxref("null")}} literal
+- {{jsxref("Operators/null", "null")}} literal
 
 ### 函數屬性
 

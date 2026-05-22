@@ -17,9 +17,9 @@ fun.apply(thisArg, [argsArray])
 ### 參數
 
 - `thisArg`
-  - : 讓 _`fun`_ 呼叫時可以視為 this 的值。注意，這可能並不是最後會在方法裡看見的值：如果這是一個在非 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 下運作的程式碼，{{jsxref("null")}} 及 {{jsxref("undefined")}} 將會被全域物件取代，而原始類別將被封裝。
+  - : 讓 _`fun`_ 呼叫時可以視為 this 的值。注意，這可能並不是最後會在方法裡看見的值：如果這是一個在非 {{jsxref("Strict_mode", "non-strict mode", "", 1)}} 下運作的程式碼，{{jsxref("Operators/null", "null")}} 及 {{jsxref("undefined")}} 將會被全域物件取代，而原始類別將被封裝。
 - `argsArray`
-  - : 一個 array-like 物件 ，定義了 _`fun`_ 要呼叫的一組參數，如果沒有需要提供，可以傳入 {{jsxref("null")}} 或 {{jsxref("undefined")}}。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like 物件，而不一定要是一組陣列。查看下方的[瀏覽器相容性](#瀏覽器相容性)資訊。
+  - : 一個 array-like 物件 ，定義了 _`fun`_ 要呼叫的一組參數，如果沒有需要提供，可以傳入 {{jsxref("Operators/null", "null")}} 或 {{jsxref("undefined")}}。從 ECMAScript 5 開始，這些參數不僅可以是泛型的 array-like 物件，而不一定要是一組陣列。查看下方的[瀏覽器相容性](#瀏覽器相容性)資訊。
 
 ### 回傳值
 

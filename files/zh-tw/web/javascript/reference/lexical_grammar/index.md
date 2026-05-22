@@ -123,7 +123,7 @@ comment();
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("instanceof")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
