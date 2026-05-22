@@ -181,7 +181,7 @@ const obj = {
 
 ### get と defineProperty
 
-`get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("Classes", "classes")}} 上で使用する場合は微妙な違いがあります。
+`get` キーワードと {{jsxref("Object.defineProperty()")}} の使用は似た結果になりますが、 {{jsxref("Classes")}} 上で使用する場合は微妙な違いがあります。
 
 `get` を使用した場合は、プロパティはインスタンスのプロトタイプに定義されるのに対し、 {{jsxref("Object.defineProperty()")}} を使用した場合は、プロパティは適用されたインスタンスに定義されます。
 

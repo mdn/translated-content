@@ -22,7 +22,7 @@ claimInterface(interfaceNumber)
 
 ### 返値
 
-{{jsxref("Promise", "promise")}} です。
+{{jsxref("Promise")}} です。
 
 ## 例
 

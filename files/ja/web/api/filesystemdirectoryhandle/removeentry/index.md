@@ -23,7 +23,7 @@ removeEntry(name, options)
 - `options` {{optional_inline}}
   - : オプションを持つオブジェクトで、省略可能です。以下のオプションがあります。
     - `recursive`
-      - : {{jsxref("Boolean", "boolean")}} 値で、デフォルトは `false` です。`true` に設定すると、エントリーが再帰的に削除されます。
+      - : {{jsxref("Boolean")}} 値で、デフォルトは `false` です。`true` に設定すると、エントリーが再帰的に削除されます。
 
 ### 返値
 

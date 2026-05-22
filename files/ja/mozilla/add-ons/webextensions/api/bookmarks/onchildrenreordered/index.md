@@ -34,18 +34,18 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 - `callback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
     - `id`
-      - : 子要素の順序が変更されたフォルダーの ID を表す {{jsxref("String", "string")}} です。
+      - : 子要素の順序が変更されたフォルダーの ID を表す {{jsxref("String")}} です。
 
     <!---->
     - `reorderInfo`
-      - : 詳細情報を含んだ {{jsxref("Object", "object")}} です。
+      - : 詳細情報を含んだ {{jsxref("Object")}} です。
 
 ## 付随するオブジェクト
 
 ### reorderInfo
 
 - `childIds`
-  - : {{jsxref("String", "string")}} の {{jsxref("Array", "array")}} です。このフォルダーに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
+  - : {{jsxref("String")}} の {{jsxref("Array")}} です。このフォルダーに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
 
 ## ブラウザーの互換性
 

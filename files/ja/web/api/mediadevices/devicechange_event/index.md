@@ -168,7 +168,7 @@ function updateDeviceList() {
 }
 ```
 
-`updateDeviceList()` は {{domxref("navigator.mediaDevices")}} プロパティで参照している {{domxref("MediaDevices")}} オブジェクトの {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} の関数呼び出しが全体を占め、 `enumerateDevices()` から返されるプロミス ({{jsxref("Promise", "promise")}}) が履行されたときに実行されるコードもあります。
+`updateDeviceList()` は {{domxref("navigator.mediaDevices")}} プロパティで参照している {{domxref("MediaDevices")}} オブジェクトの {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} の関数呼び出しが全体を占め、 `enumerateDevices()` から返されるプロミス ({{jsxref("Promise")}}) が履行されたときに実行されるコードもあります。
 履行ハンドラーは、機器一覧の準備ができたときに呼び出されます。
 この一覧は履行ハンドラーへ {{domxref("MediaDeviceInfo")}} オブジェクトの配列として渡され、それぞれがメディアの入力機器や出力機器を表しています。
 

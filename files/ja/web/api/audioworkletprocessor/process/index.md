@@ -47,7 +47,7 @@ process(inputs, outputs, parameters)
 
 ### 返値
 
-{{Glossary("user agent", "ユーザーエージェント")}}の内部ロジックがノードをシャットダウンしても安全だと判断しても {{domxref("AudioWorkletNode")}} の活動を続けるかを表す {{jsxref("Boolean", "boolean")}} 値を返します。
+{{Glossary("user agent", "ユーザーエージェント")}}の内部ロジックがノードをシャットダウンしても安全だと判断しても {{domxref("AudioWorkletNode")}} の活動を続けるかを表す {{jsxref("Boolean")}} 値を返します。
 
 この返値により、処理器が {{domxref("AudioWorkletProcessor")}} とそれを所有するノードの生存期間ポリシーを制御することができます。ブラウザーが返値とノードの状態に基づいてノードを停止すると判断すると、`process()` は呼ばれなくなります。
 

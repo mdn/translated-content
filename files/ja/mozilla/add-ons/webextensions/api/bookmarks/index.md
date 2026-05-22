@@ -16,9 +16,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}
   - : ブックマークツリー上のブックマークやフォルダーを表します。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}
-  - : ツリー内のノードがブックマークかフォルダーかセパレーターかを表す {{jsxref("String", "string")}} の列挙型です。
+  - : ツリー内のノードがブックマークかフォルダーかセパレーターかを表す {{jsxref("String")}} の列挙型です。
 - {{WebExtAPIRef("bookmarks.BookmarkTreeNodeUnmodifiable")}}
-  - : ブックマークやフォルダーが変更不可である理由を表す {{jsxref("String", "string")}} の列挙型です。
+  - : ブックマークやフォルダーが変更不可である理由を表す {{jsxref("String")}} の列挙型です。
 - {{WebExtAPIRef("bookmarks.CreateDetails")}}
   - : 新しいブックマークを作成する際、{{WebExtAPIRef("bookmarks.create()")}} メソッドに渡す情報を含みます。
 

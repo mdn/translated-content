@@ -24,7 +24,7 @@ l10n:
 - `expires`
   - : ミリ秒単位の [UNIX 時間](/ja/docs/Glossary/Unix_time)で与えられるタイムスタンプで、Cookie の有効期限を表します。
 - `secure`
-  - : Cookie がセキュアコンテキスト (HTTP ではなく HTTPS) のサイト由来かを表す {{jsxref("Boolean", "boolean")}} です。
+  - : Cookie がセキュアコンテキスト (HTTP ではなく HTTPS) のサイト由来かを表す {{jsxref("Boolean")}} です。
 - `sameSite`
   - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) の値のいずれかです。
     - `"strict"`

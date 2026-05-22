@@ -16,7 +16,7 @@ l10n:
 このインターフェイスには、{{domxref("EventTarget")}} から継承したプロパティもあります。
 
 - {{domxref("HIDDevice.opened")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : {{jsxref("Boolean", "boolean")}} を返します。このデバイスとの接続が開かれているとき `true` になります。
+  - : {{jsxref("Boolean")}} を返します。このデバイスとの接続が開かれているとき `true` になります。
 - {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : この HID デバイスのベンダー ID を返します。
 - {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}

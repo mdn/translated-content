@@ -145,7 +145,7 @@ const displayMediaOptions = {
 
 ## キャプチャしたストリームの使用
 
-{{jsxref("Promise", "promise")}} が返す {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} は、画面または画面領域を含む少なくとも一つの動画ストリームを含み、 `getDisplayMedia()` が呼ばれたときに指定した制約に基づいて調整またはフィルタリングされた {{domxref("MediaStream")}} に解決されます。
+{{jsxref("Promise")}} が返す {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} は、画面または画面領域を含む少なくとも一つの動画ストリームを含み、 `getDisplayMedia()` が呼ばれたときに指定した制約に基づいて調整またはフィルタリングされた {{domxref("MediaStream")}} に解決されます。
 
 ### 潜在的なリスク
 
@@ -240,7 +240,7 @@ async function startCapture() {
 }
 ```
 
-前回の接続の際に残ったテキストを取り除くためにログの内容をクリアした後、`startCapture()` は {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を呼び出し、そこに `displayMediaOptions` で定義された制約オブジェクトを渡します。jsxref("Operators/await", "await")}} を使用して、次のコード行は `getDisplayMedia()` が返す {{jsxref("Promise", "promise")}} が解決するまで実行されません。解決後、プロミスは {{domxref("MediaStream")}} を返し、ユーザーが選択した画面、ウィンドウ、その他の領域の内容をストリームとして出力します。
+前回の接続の際に残ったテキストを取り除くためにログの内容をクリアした後、`startCapture()` は {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} を呼び出し、そこに `displayMediaOptions` で定義された制約オブジェクトを渡します。jsxref("Operators/await", "await")}} を使用して、次のコード行は `getDisplayMedia()` が返す {{jsxref("Promise")}} が解決するまで実行されません。解決後、プロミスは {{domxref("MediaStream")}} を返し、ユーザーが選択した画面、ウィンドウ、その他の領域の内容をストリームとして出力します。
 
 このストリームは、返された `MediaStream` を要素の {{domxref("HTMLMediaElement.srcObject", "srcObject")}} に格納することによって {{HTMLElement("video")}} 要素に接続されています。
 
