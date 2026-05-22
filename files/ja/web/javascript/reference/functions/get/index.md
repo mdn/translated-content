@@ -102,7 +102,7 @@ console.log(instance.msg); // "hello cake"
 
 ### `delete` 演算子によるゲッターの削除
 
-ゲッターを削除したい場合は、 {{jsxref("Operators/delete", "delete")}} を使用してください。
+ゲッターを削除したい場合は、 {{jsxref("delete")}} を使用してください。
 
 ```js
 delete obj.latest;
