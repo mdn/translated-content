@@ -478,7 +478,7 @@ Quelques points à retenir concernant la spécificité&nbsp;:
 - Le module [de cascade et d'héritage CSS](/fr/docs/Web/CSS/Guides/Cascade)
 - [Apprendre&nbsp;: Gérer les conflits](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#spécificité_2)
 - [Apprendre&nbsp;: Les couches de cascade](/fr/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-- [Syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax) module
+- Le module [de syntaxe CSS](/fr/docs/Web/CSS/Guides/Syntax)
 - [Introduction à la syntaxe CSS&nbsp;: déclarations, règles et instructions](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
 - [Gestion des erreurs CSS](/fr/docs/Web/CSS/Guides/Syntax/Error_handling)
 - [Règles @](/fr/docs/Web/CSS/Guides/Syntax/At-rules)
