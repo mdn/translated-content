@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 Метод **`getTime()`** возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.
 
-Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueof", "valueOf()")}}.
+Вы можете использовать этот метод для того, чтобы присвоить дату и время другому объекту {{jsxref("Date")}}. Этот метод функционально эквивалентен методу {{jsxref("Date.prototype.valueOf", "valueOf()")}}.
 
 {{InteractiveExample("JavaScript Demo: Date.getTime()")}}
 
