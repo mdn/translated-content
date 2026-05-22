@@ -15,7 +15,7 @@ name = passwordCredential.name;
 
 ### Valeur
 
-A {{domxref("USVString")}} containing a name.
+A {{jsxref("String")}} containing a name.
 
 ## Spécifications
 
