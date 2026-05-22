@@ -66,7 +66,7 @@ Un descripteur de données possède les propriétés optionnelles suivantes :
   - : La valeur associée à la propriété. Peut être n'importe quelle valeur JavaScript valide (un nombre, un objet, etc.).
     **La valeur par défaut est {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` si et seulement si la valeur associée à la propriété peut être modifiée en utilisant un {{jsxref("Operators", "opérateur d'affectation", "Assignment_operators", 1)}}. **La valeur par défaut est `false`.**
+  - : `true` si et seulement si la valeur associée à la propriété peut être modifiée en utilisant un {{jsxref("Operators", "opérateur d'affectation", "opérateurs_daffectation", 1)}}. **La valeur par défaut est `false`.**
 
 Un descripteur d'accesseur possède les propriétés optionnelles suivantes :
 

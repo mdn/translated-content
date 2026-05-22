@@ -61,7 +61,7 @@ var salutation = ["Bonjour", " ", "Alfred", " ", "!"];
 
 ## Performance
 
-Il est fortement recommandé d'utiliser les {{jsxref("Operators", "opérateurs d'affectation", "Assignment_operators", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
+Il est fortement recommandé d'utiliser les {{jsxref("Operators", "opérateurs d'affectation", "opérateurs_daffectation", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
 
 ## Spécifications
 
@@ -74,4 +74,4 @@ Il est fortement recommandé d'utiliser les {{jsxref("Operators", "opérateurs d
 ## Voir aussi
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators", "Les opérateurs d'affectation", "Assignment_operators", 1)}}
+- {{jsxref("Operators", "Les opérateurs d'affectation", "opérateurs_daffectation", 1)}}
