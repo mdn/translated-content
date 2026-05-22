@@ -25,7 +25,7 @@ new Number(value);
 Os principais usos para o objeto `Number` são:
 
 - Se o objeto não pode ser convertido para um número, é retornado `NaN`.
-- Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("Operators/new", "new")}}, `Number` pode ser utilizador para realizar uma conversão de tipo.
+- Fora do contexo de um construtor (Ex., Sem o operador {{jsxref("new")}}, `Number` pode ser utilizador para realizar uma conversão de tipo.
 
 ## Propriedades
 

@@ -30,7 +30,7 @@ str.match(regexp);
 <!---->
 
 - `array`
-  - : Um {{jsxref ("Array")}} cujo conteúdo depende da presença ou ausência do sinalizador global (`g`), ou {{jsxref ("Operators/null", "null")}} se nenhuma correspondência for encontrada.
+  - : Um {{jsxref ("Array")}} cujo conteúdo depende da presença ou ausência do sinalizador global (`g`), ou {{jsxref ("null")}} se nenhuma correspondência for encontrada.
 
 #### Propriedades adicionais
 

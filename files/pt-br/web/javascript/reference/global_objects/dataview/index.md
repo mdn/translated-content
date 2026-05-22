@@ -135,7 +135,7 @@ dv.getInt16(1); //42
 
 ## Notas de compatibilidade
 
-Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("Operators/new", "new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
+Começando com o Firefox 40, `DataView` deve ser construído com o operador {{jsxref("new")}} . Chamando `DataView()` como uma função sem o `new`, irá lançar um {{jsxref("TypeError")}} de agora em diante.
 
 ```js example-bad
 var dv = DataView(buffer, 0);

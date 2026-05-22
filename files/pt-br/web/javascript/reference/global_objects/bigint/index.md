@@ -19,7 +19,7 @@ BigInt(value);
   - : O valor numérico do objeto que está sendo criado. Pode ser uma _string_ ou um número inteiro.
 
 > [!NOTE]
-> **Observação**: `BigInt()` não é usado com o operador {{jsxref("Operators/new", "new")}}.
+> **Observação**: `BigInt()` não é usado com o operador {{jsxref("new")}}.
 
 ## Descrição
 

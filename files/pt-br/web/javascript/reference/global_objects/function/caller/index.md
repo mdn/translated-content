@@ -9,7 +9,7 @@ A propriedade **`function.caller`** retorna a função que invocou a função es
 
 ## Descrição
 
-Se a função `f` foi invocada pelo codigo mais alto nível, o valor de `f.caller` é {{jsxref("Operators/null", "null")}}, caso contrario, o valor será a função a qual invocou `f`.
+Se a função `f` foi invocada pelo codigo mais alto nível, o valor de `f.caller` é {{jsxref("null")}}, caso contrario, o valor será a função a qual invocou `f`.
 
 Esta propriedade substitui a propriedade obsoleta {{jsxref("Function.prototype.caller", "arguments.caller")}} do objeto {{jsxref("Functions/arguments", "arguments")}}.
 

@@ -154,7 +154,7 @@ var float32 = new Float32Array(iterable);
 
 ## Notas de compatibilidade
 
-Começando com o ECMAScript 2015, construtores da Array `Float32Array` requerem o uso do operador {{jsxref("Operators/new", "new")}}. Chamando o construtor da Array `Float32Array` como uma função, sem o `new`, irá gerar um erro {{jsxref("TypeError")}} de agora em diante.
+Começando com o ECMAScript 2015, construtores da Array `Float32Array` requerem o uso do operador {{jsxref("new")}}. Chamando o construtor da Array `Float32Array` como uma função, sem o `new`, irá gerar um erro {{jsxref("TypeError")}} de agora em diante.
 
 ```js example-bad
 var dv = Float32Array([1, 2, 3]);

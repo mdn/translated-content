@@ -26,7 +26,7 @@ new Object([value])
 
 ## Descrição
 
-O construtor `Object` cria um wrapper de objeto para o valor fornecido. Se o valor for {{jsxref ("Operators/null", "null")}} ou {{jsxref ("undefined")}}, ele criará e retornará um objeto vazio, caso contrário, retornará um objeto de um Type que corresponde ao dado valor. Se o valor já for um objeto, ele retornará o valor.
+O construtor `Object` cria um wrapper de objeto para o valor fornecido. Se o valor for {{jsxref ("null")}} ou {{jsxref ("undefined")}}, ele criará e retornará um objeto vazio, caso contrário, retornará um objeto de um Type que corresponde ao dado valor. Se o valor já for um objeto, ele retornará o valor.
 
 Quando chamado em um contexto não-construtor, o `object` se comporta de forma idêntica ao `new Object ()`.
 

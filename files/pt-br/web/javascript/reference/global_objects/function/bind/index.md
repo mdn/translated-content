@@ -35,7 +35,7 @@ function.bind(thisArg[, arg1[, arg2[, ...]]])
 ### Parâmetros
 
 - `thisArg`
-  - : O valor a ser passado como parâmetro `this` para a função de destino quando a função vinculada é chamada. O valor é ignorado se a função ligada é construída usando o operador {{jsxref("Operators/new", "new")}}.
+  - : O valor a ser passado como parâmetro `this` para a função de destino quando a função vinculada é chamada. O valor é ignorado se a função ligada é construída usando o operador {{jsxref("new")}}.
 - `arg1, arg2, ...`
   - : Argumentos que precedem outros argumentos fornecidos para a função vinculada ao invocar a função de destino.
 
@@ -56,7 +56,7 @@ Uma função vinculada tem as seguintes propriedades internas:
 
 Quando a função vinculada é chamada, ela chama seu método interno **\[\[Call]]** na **\[\[BoundTargetFunction]],** na forma `Call(boundThis, args)`, onde `boundThis` é **\[\[BoundThis]]** e `args` é **\[\[BoundArguments]]** seguido pelos argumentos passados pela chamada de função.
 
-Uma função vinculada também pode ser construída usando-se o operador {{jsxref("Operators/new", "new")}}; ao fazê-lo, o resultado é o mesmo que seria se a função alvo tivesse sido construída. O valor de `this` fornecido é ignorado, porém os argumentos precedentes são fornecidos à função emulada.
+Uma função vinculada também pode ser construída usando-se o operador {{jsxref("new")}}; ao fazê-lo, o resultado é o mesmo que seria se a função alvo tivesse sido construída. O valor de `this` fornecido é ignorado, porém os argumentos precedentes são fornecidos à função emulada.
 
 ## Exemplos
 
@@ -135,7 +135,7 @@ flower.bloom();
 > [!WARNING]
 > Esta seção demonstra capacidades do JavaScript e documenta alguns casos de borda do método `bind()`. Os métodos mostrados abaixo não são os melhores jeitos de se fazer as coisas e provavelmente não deveriam ser usados em nenhum ambiente produtivo.
 
-Funções vinculadas são automaticamente adequadas para uso com o operador {{jsxref("Operators/new", "new")}} para construir novas instâncias criadas pela função alvo. Quando uma função vinculada é usada para construir um valor, o `this` fornecido é ignorado. Porém, argumentos fornecidos ainda são prefixados à chamada do construtor:
+Funções vinculadas são automaticamente adequadas para uso com o operador {{jsxref("new")}} para construir novas instâncias criadas pela função alvo. Quando uma função vinculada é usada para construir um valor, o `this` fornecido é ignorado. Porém, argumentos fornecidos ainda são prefixados à chamada do construtor:
 
 ```js
 function Point(x, y) {
@@ -166,7 +166,7 @@ axisPoint instanceof YAxisPoint; // true
 new Point(17, 42) instanceof YAxisPoint; // true
 ```
 
-Note que você não precisa fazer nada de especial para criar uma função vinculada para usar com {{jsxref("Operators/new", "new")}}. O corolário é que você não precisa fazer nada de especial para criar uma função vinculada que será chamada de forma clara, mesmo que você preferisse que a função vinculada fosse somente chamada usando-se {{jsxref("Operators/new", "new")}}.
+Note que você não precisa fazer nada de especial para criar uma função vinculada para usar com {{jsxref("new")}}. O corolário é que você não precisa fazer nada de especial para criar uma função vinculada que será chamada de forma clara, mesmo que você preferisse que a função vinculada fosse somente chamada usando-se {{jsxref("new")}}.
 
 ```js
 // Exemplo pode ser executado diretamente no seu console JavaScript
@@ -180,7 +180,7 @@ emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
-Se você quer suportar o uso de uma função vinculada somente através de {{jsxref("Operators/new", "new")}}, ou somente a chamando, a função alvo deve impor essa restrição.
+Se você quer suportar o uso de uma função vinculada somente através de {{jsxref("new")}}, ou somente a chamando, a função alvo deve impor essa restrição.
 
 ### Criando atalhos
 

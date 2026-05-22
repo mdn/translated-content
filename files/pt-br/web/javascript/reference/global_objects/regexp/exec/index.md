@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 {{JSRef}}
 
-O método **`exec()`** executa a busca por um padrão em uma determinada string. Retorna um array, ou {{jsxref("Operators/null", "null")}}.
+O método **`exec()`** executa a busca por um padrão em uma determinada string. Retorna um array, ou {{jsxref("null")}}.
 
 Se você está precisa somente de um retorno verdadeiro/falso, use o método {{jsxref("RegExp.prototype.test()")}} ou {{jsxref("String.prototype.search()")}}.
 
@@ -24,7 +24,7 @@ regexObj.exec(string)
 
 Se a combinação acontecer, o método `exec()` o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
 
-Se falhar, o retorno do método `exec()` será {{jsxref("Operators/null", "null")}}.
+Se falhar, o retorno do método `exec()` será {{jsxref("null")}}.
 
 ## Descrição
 

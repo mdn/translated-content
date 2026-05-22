@@ -30,7 +30,7 @@ meuCarro.modelo = "Mustang";
 meuCarro.ano = 1969;
 ```
 
-Propriedades não definidas de um objeto são {{jsxref("undefined")}} (e não {{jsxref("Operators/null", "null")}}).
+Propriedades não definidas de um objeto são {{jsxref("undefined")}} (e não {{jsxref("null")}}).
 
 ```js
 meuCarro.semPropriedade; //undefined

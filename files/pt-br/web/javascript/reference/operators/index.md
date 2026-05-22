@@ -15,7 +15,7 @@ Para uma lista alfabética ver a barra lateral à esquerda.
 
 Palavras-chave e expressões básicas em JavaScript.
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : A palavra-chave `this` refere-se ao contexto de execução da função.
 - {{jsxref("Operators/function", "function")}}
   - : A palavra-chave `function` define uma função.
@@ -47,7 +47,7 @@ Left values are the destination of an assignment.
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
   - : Member operators provide access to a property or method of an object
     (`object.property` and `object["property"]`).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{experimental_inline}} {{jsxref("Operators/super", "super")}}
   - : The `super` keyword calls the parent constructor.
@@ -71,7 +71,7 @@ Operadores sufixo/prefixo para incremento e sufixo/prefixo para decremento.
 
 A unary operation is operation with only one operand.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : The `delete` operator deletes a property from an object.
 - {{jsxref("Operators/void", "void")}}
   - : The `void` operator discards an expression's return value.
@@ -107,7 +107,7 @@ A comparison operator compares its operands and returns a `Boolean` value based 
 
 - {{jsxref("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : The `instanceof` operator determines whether an object is an instance of another object.
 - {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
   - : Operador "menor que".

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 {{JSSidebar("Operators")}}
 
-O **operador de coalescência nula (`??`)** é um operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}. Caso contrário, ele retorna o seu operando do lado esquerdo.
+O **operador de coalescência nula (`??`)** é um operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é {{jsxref("null")}} ou {{jsxref("undefined")}}. Caso contrário, ele retorna o seu operando do lado esquerdo.
 
 Ao contrário do [operador lógico OR (`||`)](</pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#OR_Lógico_()>), o operando esquerdo é retornado se houver um valor _[falsy](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos#Short-Circuit_Evaluation)_ (falso) que não seja `null` ou `undefined`. Em outras palavras, se você usar `||` para obter algum valor padrão para outra variável `foo`, você pode enfrentar comportamentos inesperados se você considerar algum valor falseável como utilizável (eg. `''` ou `0`). Veja abaixo alguns exemplos:
 
@@ -29,7 +29,7 @@ exprEsq ?? exprDir
 
 ## Descrição
 
-O operador de coalescência nula retorna os resultados da expressão de seu lado direito se a expressão de seu lado esquerdo for {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}.
+O operador de coalescência nula retorna os resultados da expressão de seu lado direito se a expressão de seu lado esquerdo for {{jsxref("null")}} ou {{jsxref("undefined")}}.
 
 ### Endereçando um valor padrão à variável
 

@@ -154,7 +154,7 @@ var int16 = new Int16Array(iterable);
 
 ## Notas de compatibilidade
 
-A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("Operators/new", "new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
+A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int16Array([1, 2, 3]);

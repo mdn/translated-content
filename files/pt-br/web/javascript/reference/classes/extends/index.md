@@ -17,7 +17,7 @@ class ChildClass extends ParentClass { ... }
 
 A palavra chave extends pode ser usada para tanto classes filhas quanto objetos filhos pré-construidos.
 
-O `.prototype` da extensão deve ser um {{jsxref("Object")}} ou {{jsxref("Operators/null", "null")}}.
+O `.prototype` da extensão deve ser um {{jsxref("Object")}} ou {{jsxref("null")}}.
 
 ## Exemplos
 
@@ -80,7 +80,7 @@ class myDate extends Date {
 
 ### Estendendo `null`
 
-Estender de {{jsxref("Operators/null", "null")}} funciona como em uma classe normal, exceto que o objeto prototype não herda de {{jsxref("Object")}}.
+Estender de {{jsxref("null")}} funciona como em uma classe normal, exceto que o objeto prototype não herda de {{jsxref("Object")}}.
 
 ```js
 class nullExtends extends null {

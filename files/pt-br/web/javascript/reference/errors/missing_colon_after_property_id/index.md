@@ -54,7 +54,7 @@ var obj = { propertyKey; };
 // SyntaxError: missing : after property id
 ```
 
-Se você precisa definir uma propriedade sem um valor, você pode usar {{jsxref("Operators/null", "null")}} como um valor.
+Se você precisa definir uma propriedade sem um valor, você pode usar {{jsxref("null")}} como um valor.
 
 ```js example-good
 var obj = { propertyKey: null };

@@ -64,7 +64,7 @@ Um descritor de assessor também possui as seguintes chaves opcionais:
 
 Se um descritor tem nenhum das chaves `value`, `writable`, `get` e `set`, ele é tratado como um descritor de dados. Se um descritor tem ambas chaves `value` ou `writable` e `get` ou `set` keys, uma exceção é lançada.
 
-Tenha em mente que estes atributos não são necessariamente as propriedades do próprio descritor. Propriedades herdadas serão consideradas também. Para garantir que estes padrões sejam preservados, você pode congelar o {{jsxref("Object")}} previamente, declarar todas as opções explicitamente, ou apontar para {{jsxref("Operators/null", "null")}} com {{jsxref("Object.create", "Object.create(null)")}}.
+Tenha em mente que estes atributos não são necessariamente as propriedades do próprio descritor. Propriedades herdadas serão consideradas também. Para garantir que estes padrões sejam preservados, você pode congelar o {{jsxref("Object")}} previamente, declarar todas as opções explicitamente, ou apontar para {{jsxref("null")}} com {{jsxref("Object.create", "Object.create(null)")}}.
 
 ```js
 // usando __proto__

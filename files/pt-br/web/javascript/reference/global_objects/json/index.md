@@ -13,7 +13,7 @@ O Objeto **`JSON`** contém métodos para parsing [JavaScript Object Notation](h
 
 ### JavaScript Object Notation
 
-JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("Operators/null", "null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript.
+JSON é uma sintaxe para serialização de objetos, matrizes, números, strings, booleanos, e {{jsxref ("null")}}. Baseia-se em sintaxe Javascript, mas é distinta desta: alguns Javascript não são JSON, e alguns JSON não são Javascript.
 
 | JavaScript tipo  | JSON diferenças                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

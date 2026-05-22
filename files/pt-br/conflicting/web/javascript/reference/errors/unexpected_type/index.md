@@ -26,7 +26,7 @@ TypeError: can't access property "prop" of null
 
 ## O que deu errado?
 
-O acesso a propriedade foi realizado com um valor {{jsxref("undefined")}} ou {{jsxref("Operators/null", "null")}}.
+O acesso a propriedade foi realizado com um valor {{jsxref("undefined")}} ou {{jsxref("null")}}.
 
 ## Exemplos
 
@@ -55,4 +55,4 @@ if (typeof foo !== 'undefined') {
 ## Veja também
 
 - {{jsxref("undefined")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("null")}}
