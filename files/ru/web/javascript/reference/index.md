@@ -271,7 +271,7 @@ l10n:
 
 ### Условный (тернарный) оператор
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### Операторы присваивания
 
@@ -304,7 +304,7 @@ l10n:
 
 ### Оператор запятой
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## Функции
 
@@ -322,7 +322,7 @@ l10n:
 
 [JavaScript классы.](/ru/docs/Web/JavaScript/Reference/Classes)
 
-- {{JSxRef("Classes/Constructor", "constructor")}}
+- {{JSxRef("Classes/constructor", "constructor")}}
 - {{JSxRef("Classes/extends", "extends")}}
 - [Особенности приватных классов](/ru/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [Поля открытого класса](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

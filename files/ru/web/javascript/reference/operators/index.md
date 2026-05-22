@@ -171,7 +171,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### Условный (тернарный) оператор
 
-- {{jsxref("Operators/Conditional_Operator", "(условие ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(условие ? ifTrue : ifFalse)")}}
   - : Условный оператор возвращает одно значение из двух данных в зависимости от логического значения условия.
 
 ### Операторы присваивания
@@ -208,7 +208,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### Оператор запятая
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : Оператор запятая позволяет вычислять несколько выражений в одном операторе и возвращает результат вычисления последнего выражения.
 
 ### Нестандартные особенности
@@ -229,4 +229,4 @@ slug: Web/JavaScript/Reference/Operators
 
 ## Смотрите также
 
-- {{jsxref("Operators/Operator_Precedence", "Приоритеты операторов", "", 1)}}
+- {{jsxref("Operators/Operator_precedence", "Приоритеты операторов", "", 1)}}

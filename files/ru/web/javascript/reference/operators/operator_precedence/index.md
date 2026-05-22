@@ -72,12 +72,12 @@ a = b = 5;
     </tr>
     <tr>
       <td rowspan="5">17</td>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам", "#Dot_notation")}}</td>
+      <td>{{jsxref("Operators/Property_accessors", "Доступ к свойствам", "#Dot_notation")}}</td>
       <td rowspan="2">слева направо</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/Property_Accessors", "Доступ к свойствам с возможностью вычисления","#Bracket_notation")}}</td>
+      <td>{{jsxref("Operators/Property_accessors", "Доступ к свойствам с возможностью вычисления","#Bracket_notation")}}</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
