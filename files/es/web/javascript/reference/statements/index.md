@@ -63,7 +63,7 @@ Puedes encontrarlas por orden alfabético en la columna de la izquierda .
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Itera sobre las propiedades enumerables de un objeto, en orden albitrario. Para cada propiedad distinta, las instrucciones pueden ser ejecutadas.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Array", "array")}}, array-like objects, [iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Array")}}, array-like objects, [iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
   - : Crea un bucle que ejecuta la instrucción especificada siempre que la condición de prueba se evalúe como verdadera. La condición se evalúa antes de ejecutar la instrucción.
 
