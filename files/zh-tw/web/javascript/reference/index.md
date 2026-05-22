@@ -257,7 +257,7 @@ slug: Web/JavaScript/Reference
 
 ### 條件(三元)運算子
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 賦值運算子
 

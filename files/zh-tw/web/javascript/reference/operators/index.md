@@ -169,7 +169,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 條件 (三元) 運算子
 
-- {{jsxref("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
   - : 條件運算子會根據條件的邏輯值判斷並回傳其中一個值。
 
 ### 賦值運算子
@@ -206,7 +206,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 逗號運算子
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : 逗號運算子允許在一個敘述句中執行多個運算式並回傳最後一個運算式的結果。
 
 ### 非標準功能

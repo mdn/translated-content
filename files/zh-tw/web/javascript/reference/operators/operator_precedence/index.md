@@ -60,14 +60,14 @@ a = b = 5;
     <tr>
       <td rowspan="5">18</td>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Member Access", "#dot_notation", 1)}}
+        {{jsxref("Operators/Property_accessors", "Member Access", "#dot_notation", 1)}}
       </td>
       <td>從左至右</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Property_Accessors", "Computed Member Access", "#bracket_notation", 1)}}
+        {{jsxref("Operators/Property_accessors", "Computed Member Access", "#bracket_notation", 1)}}
       </td>
       <td>從左至右</td>
       <td><code>… [ … ]</code></td>
