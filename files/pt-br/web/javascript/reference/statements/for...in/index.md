@@ -25,7 +25,7 @@ O laço for...in somente iterage sobre propriedades enumeradas. Objetos criados 
 
 ### Propriedades deletadas, adicionadas ou modificadas
 
-O laço `for...in` iterage sobre as propriedades de um objeto em uma ordem arbitrária (veja o {{jsxref("delete")}} ). Se uma propriedade é deletada durante a execução do loop, ela se torna indisponível para ser acessada depois. É recomendável não adicionar, remover ou alterar propriedades novas ao objeto durante a execução do laço (durante o loop)
+O laço `for...in` iterage sobre as propriedades de um objeto em uma ordem arbitrária (veja o {{jsxref("Operators/delete", "delete")}} ). Se uma propriedade é deletada durante a execução do loop, ela se torna indisponível para ser acessada depois. É recomendável não adicionar, remover ou alterar propriedades novas ao objeto durante a execução do laço (durante o loop)
 
 ### Iteração em Arrays e `for...in`
 

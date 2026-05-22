@@ -71,7 +71,7 @@ Operadores sufixo/prefixo para incremento e sufixo/prefixo para decremento.
 
 A unary operation is operation with only one operand.
 
-- {{jsxref("delete")}}
+- {{jsxref("Operators/delete", "delete")}}
   - : The `delete` operator deletes a property from an object.
 - {{jsxref("Operators/void", "void")}}
   - : The `void` operator discards an expression's return value.

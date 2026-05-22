@@ -114,7 +114,7 @@ Neste caso, a função `console.log()` nunca será invocada, pois está comentad
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/switch", "default")}}
-- {{jsxref("delete")}}
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}

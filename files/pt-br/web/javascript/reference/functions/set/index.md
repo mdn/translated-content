@@ -114,7 +114,7 @@ console.log(obj.baz); // "baz"
 ## See also
 
 - [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("delete")}}
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

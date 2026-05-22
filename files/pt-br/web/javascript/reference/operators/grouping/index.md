@@ -52,5 +52,5 @@ a * c + b * c; // 9
 ## Veja também
 
 - [Operator precedence](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("delete")}}
+- {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}
