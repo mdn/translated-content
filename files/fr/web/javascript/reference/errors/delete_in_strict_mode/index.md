@@ -44,7 +44,7 @@ delete x;
 // an unqualified name is deprecated
 ```
 
-Pour libérer le contenu d'une variable, on peut la passer à {{jsxref("Operators/null", "null")}} :
+Pour libérer le contenu d'une variable, on peut la passer à {{jsxref("null")}} :
 
 ```js example-good
 "use strict";

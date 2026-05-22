@@ -48,7 +48,7 @@ L'objet qui a été passé à la fonction et qui a éventuellement été modifi�
 
 ## Description
 
-Cette méthode permet d'ajouter ou de modifier une propriété d'un objet avec une certaine précision. En effet, quand on ajoute une propriété « normalement » (via une affectation), on crée une propriété dont le comportement par défaut fait qu'elle sera listée dans une énumération de propriétés (par exemple avec une boucle {{jsxref("Statements/for...in","for...in")}} ou via la méthode {{jsxref("Object.keys")}}), dont la valeur peut être changée et qui peut être supprimée via {{jsxref("Operators/delete","delete")}}. La méthode `Object.defineProperty()` permet de préciser le comportement attendu, potentiellement différent de celui par défaut.
+Cette méthode permet d'ajouter ou de modifier une propriété d'un objet avec une certaine précision. En effet, quand on ajoute une propriété « normalement » (via une affectation), on crée une propriété dont le comportement par défaut fait qu'elle sera listée dans une énumération de propriétés (par exemple avec une boucle {{jsxref("Statements/for...in","for...in")}} ou via la méthode {{jsxref("Object.keys")}}), dont la valeur peut être changée et qui peut être supprimée via {{jsxref("delete")}}. La méthode `Object.defineProperty()` permet de préciser le comportement attendu, potentiellement différent de celui par défaut.
 
 Les descripteurs de propriété existent en deux versions : les descripteurs de données et les descripteurs d'accesseur. Un descripteur de données est une propriété qui possède une valeur et qui peut ou non être accessible en écriture. Un descripteur d'accesseur est une propriété décrite par une paire d'accesseur/mutateur (_getter/setter_) qui sont des fonctions. Un descripteur est un descripteur de données ou un descripteur d'accesseur, il ne peut pas être les deux.
 
@@ -78,7 +78,7 @@ Un descripteur d'accesseur possède les propriétés optionnelles suivantes :
 
 Si un descripteur ne possède aucune des clés `value`, `writable`, `get` ou `set`, il est considéré comme un descripteur de données. Si un descripteur possède à la fois une propriété `value` ou `writable` et une propriété `get` ou `set`, un exception sera déclenchée.
 
-Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object")}}, définir toutes les options explicitement ou faire pointer la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) vers {{jsxref("Operators/null", "null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
+Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object")}}, définir toutes les options explicitement ou faire pointer la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) vers {{jsxref("null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
 
 ```js
 var obj = {};

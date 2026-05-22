@@ -17,7 +17,7 @@ L'interface **`PasswordCredential`**, rattachée à l'[API Credential Management
 _Hérite des propriétés de l'interface parente, {{domxref("Credential")}}._
 
 - {{domxref("PasswordCredential.additionalData")}} {{deprecated_inline()}}
-  - : Une instance {{domxref("FormData")}} ou une instance {{domxref("URLSearchParams")}} ou {{jsxref("Operators/null", "null")}}. Les données de cet objet seront ajoutées au corps de la requête et envoyées au point distant avec les informations d'authentification.
+  - : Une instance {{domxref("FormData")}} ou une instance {{domxref("URLSearchParams")}} ou {{jsxref("null")}}. Les données de cet objet seront ajoutées au corps de la requête et envoyées au point distant avec les informations d'authentification.
 - {{domxref("PasswordCredential.iconURL")}} {{readonlyinline}}
   - : Une chaîne de caractères {{domxref("USVString")}} contenant une URL qui pointe vers une image servant d'icône. Cette image est destinée à être utilisée dans le sélecteur d'informations d'authentification. L'URL doit être accessible sans authentification.
 - {{domxref("PasswordCredential.idName")}} {{deprecated_inline()}}

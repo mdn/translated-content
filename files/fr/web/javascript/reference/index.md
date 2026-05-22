@@ -194,7 +194,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 
 ### Expressions primaires
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - [Litéraux](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#litéraux)
 - {{JSxRef("Array", "[]")}}
 - {{JSxRef("Operators/Object_initializer", "{}")}}
@@ -211,7 +211,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 
 - {{JSxRef("Operators/Property_accessors", "Accesseurs de propriété", "", 1)}}
 - {{JSxRef("Operators/Optional_chaining", "?.")}}
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
 - {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
@@ -226,7 +226,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 
 ### Opérateurs unaires
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -250,7 +250,7 @@ Si vous débutez avec JavaScript, commencez par le [guide](/fr/docs/Web/JavaScri
 - {{JSxRef("Operators/Greater_than", "&gt;")}} (Supérieur à)
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}
 - {{JSxRef("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/in", "in")}}
 
 ### Opérateurs d'égalité

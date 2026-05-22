@@ -21,7 +21,7 @@ var request = myIndex.getKey(key);
 ### Paramètres
 
 - `key` {{optional_inline}}
-  - : Une clé ou un intervalle {{domxref("IDBKeyRange")}} qui identifie l'enregistrement dont on souhaite obtenir la clé. Si la valeur vaut {{jsxref("Operators/null", "null")}} ou si elle est absente, le navigateur utilisera un intervalle de clé sans limite.
+  - : Une clé ou un intervalle {{domxref("IDBKeyRange")}} qui identifie l'enregistrement dont on souhaite obtenir la clé. Si la valeur vaut {{jsxref("null")}} ou si elle est absente, le navigateur utilisera un intervalle de clé sans limite.
 
 ### Valeur de retour
 

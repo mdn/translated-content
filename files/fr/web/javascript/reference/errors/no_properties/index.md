@@ -19,7 +19,7 @@ TypeError: undefined has no properties (Firefox)
 
 ## Quel est le problème ?
 
-Les valeurs {{jsxref("Operators/null", "null")}} et {{jsxref("undefined")}} n'ont aucunes propriétés auxquelles accéder.
+Les valeurs {{jsxref("null")}} et {{jsxref("undefined")}} n'ont aucunes propriétés auxquelles accéder.
 
 ## Exemples
 
@@ -33,5 +33,5 @@ undefined.truc;
 
 ## Voir aussi
 
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("null")}}
 - {{jsxref("undefined")}}

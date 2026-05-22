@@ -40,7 +40,7 @@ Reflect.apply(cible, argumentThis, listeArguments);
 - `argumentThis`
   - : La valeur fournie pour `this` lors de l'appel à _`cible`_.
 - `listeArguments`
-  - : Un objet semblable à un tableau qui définit les arguments à passer à _`cible`_. S'il vaut {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}}, aucun argument ne sera passé.
+  - : Un objet semblable à un tableau qui définit les arguments à passer à _`cible`_. S'il vaut {{jsxref("null")}} ou {{jsxref("undefined")}}, aucun argument ne sera passé.
 
 ### Valeur de retour
 

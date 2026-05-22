@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 
 {{JSRef}}
 
-la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("Operators/null", "null")}}. Cette méthode renvoie `true` si l'opération a réussi et `false` sinon.
+la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}. Cette méthode renvoie `true` si l'opération a réussi et `false` sinon.
 
 {{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
 
@@ -35,7 +35,7 @@ Reflect.setPrototypeOf(cible, prototype);
 - `cible`
   - : L'objet cible dont on souhaite modifier le prototype.
 - `prototype`
-  - : Le nouveau prototype à appliquer à l'objet cible (ça peut être un objet ou {{jsxref("Operators/null", "null")}}).
+  - : Le nouveau prototype à appliquer à l'objet cible (ça peut être un objet ou {{jsxref("null")}}).
 
 ### Valeur de retour
 
@@ -43,7 +43,7 @@ Un {{jsxref("Boolean","booléen","",1)}} qui indique si le prototype a correctem
 
 ### Exceptions
 
-Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}} ou si `prototype` n'est ni un objet ni {{jsxref("Operators/null", "null")}}.
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}} ou si `prototype` n'est ni un objet ni {{jsxref("null")}}.
 
 ## Description
 

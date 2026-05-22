@@ -29,7 +29,7 @@ WebGLUniformLocation = WebGLRenderingContext.getUniformLocation(programme, nom);
 
 ### Valeur retournée
 
-Une valeur {{domxref ("WebGLUniformLocation")}} indiquant l'emplacement de la variable nommée, si elle existe. Si la variable indiquée n'existe pas, {{jsxref("Operators/null", "null")}} est retourné à la place.
+Une valeur {{domxref ("WebGLUniformLocation")}} indiquant l'emplacement de la variable nommée, si elle existe. Si la variable indiquée n'existe pas, {{jsxref("null")}} est retourné à la place.
 
 `WebGLUniformLocation` est une valeur opaque utilisée pour identifier de manière unique l'emplacement dans la mémoire de la GPU auquel se trouve la variable uniform. Avec cette valeur en main, vous pouvez appeler d'autres méthodes WebGL pour accéder à la valeur de la variable uniform.
 

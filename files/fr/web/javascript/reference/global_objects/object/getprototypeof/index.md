@@ -30,7 +30,7 @@ Object.getPrototypeOf(obj);
 
 ### Valeur de retour
 
-Le prototype de l'objet passé en argument. Si aucune propriété n'est héritée, c'est la valeur {{jsxref("Operators/null", "null")}} qui est renvoyée.
+Le prototype de l'objet passé en argument. Si aucune propriété n'est héritée, c'est la valeur {{jsxref("null")}} qui est renvoyée.
 
 ## Exemples
 

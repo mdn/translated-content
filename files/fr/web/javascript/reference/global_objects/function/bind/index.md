@@ -39,7 +39,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("Operators/new", "new")}}.
+  - : La valeur à transmettre en tant que paramètre `this` à la fonction cible `func` lorsque la fonction liée est appelée. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets. La valeur est ignorée si la fonction liée est construite en utilisant l'opérateur {{JSxRef("new")}}.
 - `arg1`, …, `argN` {{Optional_Inline}}
   - : Arguments à faire précéder aux arguments fournis à la fonction liée lors de l'invocation de `func`.
 
@@ -64,7 +64,7 @@ const journalAttache2 = journalAttache.bind("cette nouvelle valeur", 3, 4);
 journalAttache2(5, 6); // "cette valeur", 1, 2, 3, 4, 5, 6
 ```
 
-Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("Operators/new", "new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible avait été construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} sera la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
+Une fonction liée peut également être construite à l'aide de l'opérateur {{JSxRef("new")}} si sa fonction cible est constructible. Cela agit comme si la fonction cible avait été construite à la place. Les arguments préfixés sont transmis à la fonction cible comme d'habitude, tandis que la valeur `this` fournie est ignorée (car la construction prépare son propre `this`, comme le montrent les paramètres de {{JSxRef("Reflect.construct")}}). Si la fonction liée est directement construite, {{JSxRef("Operators/new.target", "new.target")}} sera la fonction cible. (Autrement dit, la fonction liée est transparente pour `new.target`.)
 
 ```js
 class Base {
@@ -213,7 +213,7 @@ class FleuraisonTardive {
 
 ### Les fonctions liées utilisées en tant que constructeurs
 
-Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{JSxRef("Operators/new", "new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur&nbsp;:
+Les fonctions liées sont automatiquement disponibles à l'usage pour toutes les instances initialisées avec l'opérateur {{JSxRef("new")}} sur la fonction cible. Quand une fonction liée est utilisée pour construire une valeur, le `this` fourni est ignoré. Cependant, les arguments fournis sont toujours préremplis lors de l'appel au constructeur&nbsp;:
 
 ```js
 function Point(x, y) {
@@ -240,9 +240,9 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-Notez qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à utiliser avec {{JSxRef("Operators/new", "new")}}. {{JSxRef("Operators/new.target", "new.target")}}, {{JSxRef("Operators/instanceof", "instanceof")}}, {{JSxRef("Operators/this", "this")}} etc. fonctionnent tous comme prévu, comme si le constructeur n'avait jamais été lié. La seule différence est qu'elle ne peut plus être utilisée pour {{JSxRef("Classes/extends", "extends")}}.
+Notez qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à utiliser avec {{JSxRef("new")}}. {{JSxRef("Operators/new.target", "new.target")}}, {{JSxRef("instanceof")}}, {{JSxRef("this")}} etc. fonctionnent tous comme prévu, comme si le constructeur n'avait jamais été lié. La seule différence est qu'elle ne peut plus être utilisée pour {{JSxRef("Classes/extends", "extends")}}.
 
-Le corollaire est qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à appeler simplement, même si vous préféreriez que la fonction liée ne soit appelée qu'avec {{JSxRef("Operators/new", "new")}}. Si vous l'appelez sans `new`, le `this` lié n'est soudainement plus ignoré.
+Le corollaire est qu'il n'est pas nécessaire de faire quoi que ce soit de particulier pour créer une fonction liée à appeler simplement, même si vous préféreriez que la fonction liée ne soit appelée qu'avec {{JSxRef("new")}}. Si vous l'appelez sans `new`, le `this` lié n'est soudainement plus ignoré.
 
 ```js
 const objetVide = {};
@@ -256,7 +256,7 @@ YAxisPoint(13);
 console.log(objetVide); // { x: 0, y: 13 }
 ```
 
-Si vous souhaitez restreindre une fonction liée à être appelée uniquement avec {{JSxRef("Operators/new", "new")}}, ou uniquement sans `new`, la fonction cible doit appliquer cette restriction, par exemple en vérifiant que `new.target !== undefined` ou en utilisant une [classe](/fr/docs/Web/JavaScript/Reference/Classes) à la place.
+Si vous souhaitez restreindre une fonction liée à être appelée uniquement avec {{JSxRef("new")}}, ou uniquement sans `new`, la fonction cible doit appliquer cette restriction, par exemple en vérifiant que `new.target !== undefined` ou en utilisant une [classe](/fr/docs/Web/JavaScript/Reference/Classes) à la place.
 
 ### Lier des classes
 

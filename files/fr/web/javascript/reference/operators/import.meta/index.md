@@ -17,7 +17,7 @@ import.meta;
 
 L'objet `import.meta` se compose d'un mot-clé `"import`", suivi d'un point, puis du nom de propriété `"meta"`. En temps normal, "`import."` serait utilisé comme contexte pour un accès à une propriété mais, dans ce cas, `"import."` n'est pas, à proprement parler, un objet.
 
-L'objet `import.meta` est créé par l'implémentation ECMAScript avec un prototype qui vaut {{jsxref("Operators/null", "null")}}. Cet objet est extensible et ses propriétés sont accessibles en écriture, configurables et énumérables.
+L'objet `import.meta` est créé par l'implémentation ECMAScript avec un prototype qui vaut {{jsxref("null")}}. Cet objet est extensible et ses propriétés sont accessibles en écriture, configurables et énumérables.
 
 ## Exemples
 

@@ -41,7 +41,7 @@ Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne s
 
 ### Les propriétés ajoutées, modifiées ou supprimées
 
-Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("Operators/delete","delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
+Une boucle `for...in` parcourt les propriétés d'un objet dans un ordre arbitraire (voir l'opérateur {{jsxref("delete")}} pour plus d'explications quant à l'impossibilité de se fier à un tel ordre, au moins dans le cas où on souhaite gérer plusieurs navigateurs).
 
 Si une propriété est modifiée dans une des itérations de la boucle et que la boucle itère ensuite sur cette propriété, sa valeur sera celle qui a été modifiée. Une propriété qui a été supprimée avant que la boucle n'itère sur celle-là ne sera pas dans la boucle. Les propriétés qui ont été ajoutées à l'objet pendant la boucle peuvent être ou ne pas être pris en compte.
 

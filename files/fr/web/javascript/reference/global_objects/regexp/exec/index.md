@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 
 {{JSRef}}
 
-La méthode **`exec()`** exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou {{jsxref("Operators/null", "null")}}.
+La méthode **`exec()`** exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou {{jsxref("null")}}.
 
 Si on souhaite uniquement savoir s'il y a une correspondance, on utilisera la méthode {{jsxref("RegExp.prototype.test()")}} ou la méthode {{jsxref("String.prototype.search()")}}.
 
@@ -40,7 +40,7 @@ regexObj.exec(chaîne);
 
 S'il y a une correspondance, la méthode `exec()` renvoie un tableau (contenant des éléments et deux propriétés `index` et `values`, cf. ci-après) et met à jour les propriétés de l'objet représentant l'expression rationnelle (notamment {{jsxref("RegExp.lastIndex", "lastIndex")}}). Le tableau renvoyé contient le texte qui correspond dans le premier élément puis un élément pour chaque groupe capturé dans les parenthèses capturantes.
 
-S'il n'y a aucune correspondance, la méthode `exec()` renvoie {{jsxref("Operators/null", "null")}} et la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} reçoit la valeur 0.
+S'il n'y a aucune correspondance, la méthode `exec()` renvoie {{jsxref("null")}} et la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} reçoit la valeur 0.
 
 ## Description
 

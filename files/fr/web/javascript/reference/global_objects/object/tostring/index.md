@@ -44,7 +44,7 @@ o.toString(); // renvoie [object Object]
 ```
 
 > [!NOTE]
-> À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("Operators/null", "null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
+> À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
 
 ## Exemples
 

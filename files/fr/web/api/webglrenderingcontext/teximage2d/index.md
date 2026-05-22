@@ -120,7 +120,7 @@ void gl.texImage2D(cible, niveau, formatinterne, largeur, hauteur, bordure, form
       - `gl.UNSIGNED_INT_10F_11F_11F_REV`
       - `gl.UNSIGNED_INT_5_9_9_9_REV`
       - `gl.UNSIGNED_INT_24_8`
-      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("Operators/null", "null")}})
+      - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (les pixels doivent être {{jsxref("null")}})
 
 - `pixels`
   - : L'un des objets suivants peut être utilisé comme source de pixels pour la texture :

@@ -118,7 +118,7 @@ L'opérateur `in` renvoie `true` pour les propriétés qui appartiennent à la c
 ## Voir aussi
 
 - {{jsxref("Statements/for...in","for...in")}}
-- {{jsxref("Operators/delete","delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Caractère énumérable des propriétés et rattachement](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

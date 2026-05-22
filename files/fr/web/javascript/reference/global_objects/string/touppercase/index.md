@@ -29,7 +29,7 @@ Une nouvelle chaîne de caractères obtenue à partir de la chaîne appelante, p
 ### Exceptions levées
 
 - {{jsxref("TypeError")}}
-  - : Une telle exception sera levée si on appelle cette méthode sur {{jsxref("Operators/null", "null")}} ou {{jsxref("undefined")}} (en utilisant `Function.prototype.call()` par exemple).
+  - : Une telle exception sera levée si on appelle cette méthode sur {{jsxref("null")}} ou {{jsxref("undefined")}} (en utilisant `Function.prototype.call()` par exemple).
 
 ## Description
 

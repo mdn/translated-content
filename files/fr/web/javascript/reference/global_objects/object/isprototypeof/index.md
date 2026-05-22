@@ -24,7 +24,7 @@ console.log(Bar.prototype.isPrototypeOf(bar));
 ```
 
 > [!NOTE]
-> `isPrototypeOf()` est différent de l'opérateur {{jsxref("Operators/instanceof", "instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
+> `isPrototypeOf()` est différent de l'opérateur {{jsxref("instanceof")}}. Dans l'expression "`object instanceof AFunction`", on compare la chaîne de prototypes d'`object` avec `AFunction.prototype` et non avec `AFunction`.
 
 ## Syntaxe
 
@@ -70,7 +70,7 @@ console.log(Machin.prototype.isPrototypeOf(bidule)); // true
 console.log(Object.prototype.isPrototypeOf(bidule)); // true
 ```
 
-La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("Operators/instanceof", "instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
+La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
 
 Par exemple, vérifier que `bidule` descend bien de `Machin.prototype`&nbsp;:
 
@@ -90,7 +90,7 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 
 ## Voir aussi
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

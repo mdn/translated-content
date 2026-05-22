@@ -37,7 +37,7 @@ call(thisArg, arg1, arg2, /* …, */ argN)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur à utiliser comme `this` lors de l'appel de `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
+  - : La valeur à utiliser comme `this` lors de l'appel de `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
 - `arg1`, …, `argN` {{Optional_Inline}}
   - : Les arguments pour la fonction.
 
@@ -50,10 +50,10 @@ Le résultat de l'appel de la fonction invoquée avec la valeur `this` indiquée
 > [!NOTE]
 > Cette fonction est presque identique à {{JSxRef("Function/apply", "apply()")}}, sauf que les arguments de la fonction sont passés à `call()` individuellement sous forme de liste, tandis que pour `apply()` ils sont regroupés dans un seul objet, généralement un tableau — par exemple, `func.call(this, "eat", "bananas")` contre `func.apply(this, ["eat", "bananas"])`.
 
-Normalement, lors de l'appel d'une fonction, la valeur de {{JSxRef("Operators/this", "this")}} à l'intérieur de la fonction est l'objet sur lequel la fonction a été appelée. Avec `call()`, vous pouvez attribuer une valeur arbitraire à `this` lors de l'appel d'une fonction existante, sans d'abord rattacher la fonction à l'objet comme propriété. Cela vous permet d'utiliser les méthodes d'un objet comme fonctions utilitaires génériques.
+Normalement, lors de l'appel d'une fonction, la valeur de {{JSxRef("this")}} à l'intérieur de la fonction est l'objet sur lequel la fonction a été appelée. Avec `call()`, vous pouvez attribuer une valeur arbitraire à `this` lors de l'appel d'une fonction existante, sans d'abord rattacher la fonction à l'objet comme propriété. Cela vous permet d'utiliser les méthodes d'un objet comme fonctions utilitaires génériques.
 
 > [!WARNING]
-> N'utilisez pas `call()` pour chaîner des constructeurs (par exemple, pour implémenter l'héritage). Cela invoque la fonction constructeur comme une fonction ordinaire, ce qui signifie que {{JSxRef("Operators/new.target", "new.target")}} vaut `undefined`, et les classes lèvent une erreur car elles ne peuvent pas être appelées sans {{JSxRef("Operators/new", "new")}}. Utilisez plutôt {{JSxRef("Reflect.construct()")}} ou {{JSxRef("Classes/extends", "extends")}}.
+> N'utilisez pas `call()` pour chaîner des constructeurs (par exemple, pour implémenter l'héritage). Cela invoque la fonction constructeur comme une fonction ordinaire, ce qui signifie que {{JSxRef("Operators/new.target", "new.target")}} vaut `undefined`, et les classes lèvent une erreur car elles ne peuvent pas être appelées sans {{JSxRef("new")}}. Utilisez plutôt {{JSxRef("Reflect.construct()")}} ou {{JSxRef("Classes/extends", "extends")}}.
 
 ## Exemples
 

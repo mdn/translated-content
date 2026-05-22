@@ -18,7 +18,7 @@ var getAllKeysRequest = IDBIndex.getAllKeys(requete, quantite);
 ### Paramètres
 
 - `requete` {{optional_inline}}
-  - : Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui identifie les clés qu'on souhaite récupérer. Si cette valeur vaut {{jsxref("Operators/null", "null")}} ou est absente, le navigateur utilisera un intervalle de clé sans limite.
+  - : Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui identifie les clés qu'on souhaite récupérer. Si cette valeur vaut {{jsxref("null")}} ou est absente, le navigateur utilisera un intervalle de clé sans limite.
 - `quantite` {{optional_inline}}
   - : Le nombre d'enregistrements qu'on souhaite obtenir. Si cette quantité est supérieure au nombre d'enregistrements récupérés par la requête, le navigateur ne récupèrera que le premier élément. Si elle est négative ou supérieure à `2^32-1`, une exception {{jsxref("TypeError")}} sera levée.
 

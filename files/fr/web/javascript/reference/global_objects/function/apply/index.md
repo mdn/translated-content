@@ -34,9 +34,9 @@ apply(thisArg, argsArray)
 ### Paramètres
 
 - `thisArg`
-  - : La valeur de `this` fournie pour l'appel à `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("Operators/null", "null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
+  - : La valeur de `this` fournie pour l'appel à `func`. Si la fonction n'est pas en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), {{JSxRef("null")}} et {{JSxRef("undefined")}} seront remplacées par l'objet global, et les valeurs primitives seront converties en objets.
 - `argsArray` {{Optional_Inline}}
-  - : Un objet semblable à un tableau, définissant les arguments avec lesquels `func` doit être appelée, ou {{JSxRef("Operators/null", "null")}} ou {{JSxRef("undefined")}} si aucun argument ne doit être fourni à la fonction.
+  - : Un objet semblable à un tableau, définissant les arguments avec lesquels `func` doit être appelée, ou {{JSxRef("null")}} ou {{JSxRef("undefined")}} si aucun argument ne doit être fourni à la fonction.
 
 ### Valeur de retour
 
@@ -47,7 +47,7 @@ Le résultat obtenu en appelant la fonction avec la valeur `this` indiquée et l
 > [!NOTE]
 > Cette fonction est presque identique à {{JSxRef("Function/call", "call()")}}, sauf que les arguments de la fonction sont passés à `call()` individuellement sous forme de liste, tandis qu'avec `apply()` ils sont combinés dans un seul objet, généralement un tableau — par exemple, `func.call(this, "eat", "bananas")` contre `func.apply(this, ["eat", "bananas"])`.
 
-Normalement, lors de l'appel d'une fonction, la valeur de {{JSxRef("Operators/this", "this")}} à l'intérieur de la fonction est l'objet sur lequel la fonction a été appelée. Avec `apply()`, vous pouvez attribuer une valeur arbitraire à `this` lors de l'appel d'une fonction existante, sans avoir à rattacher d'abord la fonction à l'objet en tant que propriété. Cela permet d'utiliser les méthodes d'un objet comme fonctions utilitaires génériques.
+Normalement, lors de l'appel d'une fonction, la valeur de {{JSxRef("this")}} à l'intérieur de la fonction est l'objet sur lequel la fonction a été appelée. Avec `apply()`, vous pouvez attribuer une valeur arbitraire à `this` lors de l'appel d'une fonction existante, sans avoir à rattacher d'abord la fonction à l'objet en tant que propriété. Cela permet d'utiliser les méthodes d'un objet comme fonctions utilitaires génériques.
 
 Vous pouvez également utiliser tout type d'objet semblable à un tableau comme second paramètre. En pratique, cela signifie qu'il doit posséder une propriété `length` et des propriétés entières («&nbsp;index&nbsp;») dans l'intervalle `(0..length - 1)`. Par exemple, vous pouvez utiliser un {{DOMxRef("NodeList")}}, ou un objet personnalisé comme `{ 'length': 2, '0': 'eat', '1': 'bananas' }`. Vous pouvez aussi utiliser {{JSxRef("Functions/arguments", "arguments")}}, par exemple&nbsp;:
 
@@ -68,7 +68,7 @@ function enveloppe(...args) {
 En général, `fn.apply(null, args)` est équivalent à `fn(...args)` avec la syntaxe de décomposition des paramètres, sauf que `args` doit être un objet semblable à un tableau dans le premier cas avec `apply()`, et un objet [itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») dans le second cas avec la syntaxe de décomposition.
 
 > [!WARNING]
-> Ne pas utiliser `apply()` pour chaîner des constructeurs (par exemple, pour implémenter l'héritage). Cela invoque la fonction constructeur comme une fonction ordinaire, ce qui signifie que {{JSxRef("Operators/new.target", "new.target")}} vaut `undefined`, et les classes lèvent une erreur car elles ne peuvent pas être appelées sans {{JSxRef("Operators/new", "new")}}. Utilisez plutôt {{JSxRef("Reflect.construct()")}} ou {{JSxRef("Classes/extends", "extends")}}.
+> Ne pas utiliser `apply()` pour chaîner des constructeurs (par exemple, pour implémenter l'héritage). Cela invoque la fonction constructeur comme une fonction ordinaire, ce qui signifie que {{JSxRef("Operators/new.target", "new.target")}} vaut `undefined`, et les classes lèvent une erreur car elles ne peuvent pas être appelées sans {{JSxRef("new")}}. Utilisez plutôt {{JSxRef("Reflect.construct()")}} ou {{JSxRef("Classes/extends", "extends")}}.
 
 ## Exemples
 

@@ -45,7 +45,7 @@ On notera que l'opérateur `get` :
 - ne doit pas posséder de paramètre (lire la page [Changement ES5 : les fonctions _d'accession_ et _de mutation_ littérales doivent avoir maintenant zéro ou un paramètre.](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) _(en anglais)_ pour plus d'informations)
 - ne doit pas apparaître dans un littéral objet avec un autre `get` ou une autre propriété avec le même identifiant (les codes suivants : `{ get x() { }, get x() { } }` et `{ x: ..., get x() { } }` sont interdits).
 
-Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("Operators/delete","delete")}}.
+Un _accesseur_ peut être supprimé grâce à l'opérateur {{jsxref("delete")}}.
 
 ## Exemples
 
@@ -163,7 +163,7 @@ console.log(
 ## Voir aussi
 
 - [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

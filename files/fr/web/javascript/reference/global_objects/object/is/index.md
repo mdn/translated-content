@@ -29,7 +29,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 `Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
 
 - elles sont toutes les deux {{jsxref("undefined")}}
-- elles sont toutes les deux {{jsxref("Operators/null", "null")}}
+- elles sont toutes les deux {{jsxref("null")}}
 - elles sont toutes les deux `true` ou toutes les deux `false`
 - elles sont des chaînes de caractères de la même longueur et avec les mêmes caractères (dans le même ordre)
 - elles sont toutes les deux le même objet

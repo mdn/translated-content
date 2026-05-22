@@ -28,7 +28,7 @@ TypeError: "x" is not a symbol
 
 ## Quel est le problème ?
 
-Un type inattendu a été rencontré. Cela se produit la plupart du temps avec les valeurs {{jsxref("undefined")}} ou {{jsxref("Operators/null", "null")}}.
+Un type inattendu a été rencontré. Cela se produit la plupart du temps avec les valeurs {{jsxref("undefined")}} ou {{jsxref("null")}}.
 
 Certaines méthodes comme {{jsxref("Object.create()")}} ou {{jsxref("Symbol.keyFor()")}} ont des contraintes sur le type de valeur qui peut être passé en argument.
 
@@ -69,4 +69,4 @@ if (typeof toto !== "undefined") {
 ## Voir aussi
 
 - {{jsxref("undefined")}}
-- {{jsxref("Operators/null", "null")}}
+- {{jsxref("null")}}

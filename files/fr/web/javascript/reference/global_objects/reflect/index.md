@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ## Description
 
-Contrairement à la plupart des objets globaux, `Reflect` n'est pas un constructeur. Il ne peut pas être utilisé avec l'opérateur {{jsxref("Operators/new","new")}} ou être invoqué comme une fonction. Les propriétés et méthodes de `Reflect` sont statiques (comme pour celles de l'objet {{jsxref("Math")}}).
+Contrairement à la plupart des objets globaux, `Reflect` n'est pas un constructeur. Il ne peut pas être utilisé avec l'opérateur {{jsxref("new")}} ou être invoqué comme une fonction. Les propriétés et méthodes de `Reflect` sont statiques (comme pour celles de l'objet {{jsxref("Math")}}).
 
 ## Méthodes
 
@@ -18,11 +18,11 @@ L'objet `Reflect` fournit des fonctions statiques qui ont les mêmes noms que le
 - {{jsxref("Reflect.apply()")}}
   - : Appelle une fonction cible avec les arguments définis par le paramètres `args`. Voir aussi {{jsxref("Function.prototype.apply()")}}.
 - {{jsxref("Reflect.construct()")}}
-  - : L'opérateur {{jsxref("Operators/new","new")}} comme fonction. C'est équivalent à `new cible(...args)`. Cette méthode permet également d'indiquer un prototype différent.
+  - : L'opérateur {{jsxref("new")}} comme fonction. C'est équivalent à `new cible(...args)`. Cette méthode permet également d'indiquer un prototype différent.
 - {{jsxref("Reflect.defineProperty()")}}
   - : Semblable à {{jsxref("Object.defineProperty()")}}. Renvoie un {{jsxref("Boolean")}}.
 - {{jsxref("Reflect.deleteProperty()")}}
-  - : L'opérateur {{jsxref("Operators/delete","delete")}} comme fonction. C'est équivalent à `delete cible[nom]`.
+  - : L'opérateur {{jsxref("delete")}} comme fonction. C'est équivalent à `delete cible[nom]`.
 - {{jsxref("Reflect.get()")}}
   - : Une fonction qui renvoie la valeur d'une propriété.
 - {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

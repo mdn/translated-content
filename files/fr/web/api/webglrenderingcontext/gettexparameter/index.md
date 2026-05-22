@@ -166,7 +166,7 @@ quelconque gl.getTexParameter(cible, nomp);
 
 ### Valeur retournée
 
-Retourne l'information de texture demandée (telle qu'indiquée par `nomp`). Si une erreur se produit, {{jsxref("Operators/null", "null")}} est retourné.
+Retourne l'information de texture demandée (telle qu'indiquée par `nomp`). Si une erreur se produit, {{jsxref("null")}} est retourné.
 
 ## Exemples
 

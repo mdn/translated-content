@@ -26,7 +26,7 @@ tokenList.forEach(callback, argument);
       - : Le tableau que `forEach()` est en train d'appliquer.
 
 - `argument` {{Optional_Inline}}
-  - : Valeur à utiliser comme {{jsxref("Operators/this", "this")}} lors de l'exécution du `callback` (_rappel_).
+  - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
 ### Valeur renvoyée
 

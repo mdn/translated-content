@@ -36,7 +36,7 @@ Reflect.getPrototypeOf(cible);
 
 ### Valeur de retour
 
-Le prototype de l'objet ou {{jsxref("Operators/null", "null")}} s'il n'y a aucune propriété héritée.
+Le prototype de l'objet ou {{jsxref("null")}} s'il n'y a aucune propriété héritée.
 
 ### Exceptions levées
 

@@ -20,7 +20,7 @@ TypeError: Invalid value used in weak set (Chrome)
 
 ## Quel est le problème ?
 
-Un objet devrait être trouvé et n'est pas fourni. La valeur {{jsxref("Operators/null", "null")}} n'est pas un objet et ne fonctionnera pas, il est nécessaire de fournir un véritable objet pour que le code en question fonctionne.
+Un objet devrait être trouvé et n'est pas fourni. La valeur {{jsxref("null")}} n'est pas un objet et ne fonctionnera pas, il est nécessaire de fournir un véritable objet pour que le code en question fonctionne.
 
 ## Exemples
 

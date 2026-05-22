@@ -32,7 +32,7 @@ Ces propriétés sont propres à chaque instance de `Function`.
 - {{JSxRef("Function/name", "name")}}
   - : Le nom de la fonction.
 - {{JSxRef("Function", "prototype")}}
-  - : Utilisé lorsque la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("Operators/new", "new")}}. Cela deviendra le prototype du nouvel objet.
+  - : Utilisé lorsque la fonction est utilisée comme constructeur avec l'opérateur {{JSxRef("new")}}. Cela deviendra le prototype du nouvel objet.
 
 ## Méthodes d'instance
 
@@ -46,7 +46,7 @@ Ces propriétés sont propres à chaque instance de `Function`.
   - : Retourne une chaîne de caractères représentant le code source de la fonction.
     Surcharge la méthode {{JSxRef("Object.prototype.toString")}}.
 - [`Function.prototype[Symbol.hasInstance]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
-  - : Définit la procédure par défaut pour déterminer si une fonction constructeur reconnaît un objet comme étant une de ses instances. Appelée par l'opérateur {{JSxRef("Operators/instanceof", "instanceof")}}.
+  - : Définit la procédure par défaut pour déterminer si une fonction constructeur reconnaît un objet comme étant une de ses instances. Appelée par l'opérateur {{JSxRef("instanceof")}}.
 
 ## Exemples
 
