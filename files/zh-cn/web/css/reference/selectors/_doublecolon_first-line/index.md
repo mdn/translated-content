@@ -13,11 +13,11 @@ slug: Web/CSS/Reference/Selectors/::first-line
 
 在一个使用了 `::first-line` 伪元素的选择器中，只有很小的一部分 css 属性能被使用：
 
-- 所有和字体有关的属性：{{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}
+- 所有和字体有关的属性：{{Cssxref("font")}}、{{cssxref("font-kerning")}}、{{Cssxref("font-style")}}、{{Cssxref("font-variant")}}、{{cssxref("font-variant-numeric")}}、{{cssxref("font-variant-position")}}、{{cssxref("font-variant-east-asian")}}、{{cssxref("font-variant-caps")}}、{{cssxref("font-variant-alternates")}}、{{cssxref("font-variant-ligatures")}}、{{cssxref("font-synthesis")}}、{{cssxref("font-feature-settings")}}、{{cssxref("font-language-override")}}、{{Cssxref("font-weight")}}、{{Cssxref("font-size")}}、{{cssxref("font-size-adjust")}}、{{cssxref("font-stretch")}} 和 {{Cssxref("font-family")}}
 - {{cssxref("color")}}
-- 所有和背景有关的属性： {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}}, and {{cssxref("background-blend-mode")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}}, and {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("vertical-align")}}.
+- 所有和背景有关的属性：{{Cssxref("background-color")}}、{{cssxref("background-clip")}}、{{Cssxref("background-image")}}、{{cssxref("background-origin")}}、{{Cssxref("background-position")}}、{{Cssxref("background-repeat")}}、{{cssxref("background-size")}}、{{Cssxref("background-attachment")}} 和 {{cssxref("background-blend-mode")}}
+- {{cssxref("word-spacing")}}、{{cssxref("letter-spacing")}}、{{cssxref("text-decoration")}}、{{cssxref("text-transform")}} 和 {{cssxref("line-height")}}
+- {{cssxref("text-shadow")}}、{{cssxref("text-decoration")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-style")}} 和 {{cssxref("vertical-align")}}。
 
 这个列表将来可能会被扩展，但是推荐的是，你不要使用任何上述没有提到的属性。
 
@@ -30,7 +30,11 @@ slug: Web/CSS/Reference/Selectors/::first-line
 
 ## 语法
 
-{{csssyntax}}
+```css
+::first-line {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -119,4 +123,5 @@ p::first-line {
 
 ## 参见
 
-- The {{cssxref("::first-letter")}} pseudo-element.
+- {{cssxref("::first-letter")}}
+- {{cssxref("white-space")}}
