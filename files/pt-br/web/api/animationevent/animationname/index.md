@@ -5,7 +5,7 @@ slug: Web/API/AnimationEvent/animationName
 
 `{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
 
-O `AnimationEvent.animationName` é uma propriedade só de leitura do{{domxref("DOMString")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
+O `AnimationEvent.animationName` é uma propriedade só de leitura do{{jsxref("String")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
 
 ## Síntaxe
 

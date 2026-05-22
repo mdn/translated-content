@@ -20,7 +20,7 @@ Voir la page [Passer au mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mo
 
 ## Invoquer le mode strict
 
-Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{JSxRef("eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/Window/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
+Le mode strict s'applique à des _scripts entiers_ ou à des _fonctions individuelles_. Il ne peut s'appliquer à des blocs d'instructions entourés d'accolades `{}`; essayer de l'appliquer dans ces contextes ne fera rien. Les codes présents dans {{JSxRef("Global_Objects/eval", "eval()")}}, {{jsxref("Function")}}, les attributs d'événements et les chaînes passées à [`setTimeout`](/fr/docs/Web/API/Window/setTimeout), ou autres sont des scripts entiers, et invoquer le mode strict à l'intérieur de ceux-ci fonctionnera comme prévu.
 
 ### Le mode strict pour les scripts
 
@@ -68,20 +68,20 @@ export default maFonctionDeModule;
 
 ## Différences du mode strict
 
-Le mode strict modifie à la fois la syntaxe et le comportement à l'exécution. Les changements se déclinent généralement en trois catégories : ceux qui convertissent les fautes en erreurs (comme des erreurs de syntaxe ou les erreurs d'exécution), ceux qui simplifient comment une variable pour un nom donné est traitée, simplifiant {{JSxRef("eval()")}} et {{jsxref("Fonctions/arguments","arguments")}} et ceux qui permettent d'écrire plus simplement du code JavaScript pérenne qui anticipe les évolutions futures d'ECMAScript.
+Le mode strict modifie à la fois la syntaxe et le comportement à l'exécution. Les changements se déclinent généralement en trois catégories : ceux qui convertissent les fautes en erreurs (comme des erreurs de syntaxe ou les erreurs d'exécution), ceux qui simplifient comment une variable pour un nom donné est traitée, simplifiant {{JSxRef("Global_Objects/eval", "eval()")}} et {{jsxref("Functions/arguments","arguments")}} et ceux qui permettent d'écrire plus simplement du code JavaScript pérenne qui anticipe les évolutions futures d'ECMAScript.
 
 ### Convertir les fautes en erreurs
 
 Le mode strict change quelques fautes précédemment acceptées, en erreurs. JavaScript a été conçu pour les développeurs novices et, quelquefois, il ne crée pas d'erreur explicite pour certaines instructions qui devraient être des erreurs. Parfois cela règle un problème immédiatement, mais cela peut aussi créer d'autres erreurs, plus loin dans le code. Le mode strict traite ces fautes comme des erreurs afin qu'elles soient découvertes et rapidement traitées.
 
-Premièrement, en mode strict, il est impossible de créer accidentellement des variables globales. En mode normal, ne pas déclarer une variable lors d'une affectation (oublier l'instruction {{jsxref("Instructions/var","var")}}) crée une nouvelle propriété sur l'objet global et le code continue de fonctionner (même si ça peut être une source de problèmes par la suite). Les affectations qui pourraient accidentellement créer des variables globales lèveront une erreur en mode strict:
+Premièrement, en mode strict, il est impossible de créer accidentellement des variables globales. En mode normal, ne pas déclarer une variable lors d'une affectation (oublier l'instruction {{jsxref("Statements/var","var")}}) crée une nouvelle propriété sur l'objet global et le code continue de fonctionner (même si ça peut être une source de problèmes par la suite). Les affectations qui pourraient accidentellement créer des variables globales lèveront une erreur en mode strict:
 
 ```js
 "use strict";
 variableMalDéclarée = 17; // lève une ReferenceError
 ```
 
-Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("Objets_globaux/NaN","NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lèvera une exception en mode strict :
+Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraient silencieusement lèveront aussi une exception. Par exemple, {{jsxref("NaN")}} est une variable globale en lecture seule. En mode normal, une affectation à `NaN` ne fera rien ; le développeur ne recevra aucun retour par rapport à cette faute. En mode strict, affecter une valeur quelconque à `NaN` lèvera une exception. Toute affectation qui échouera silencieusement en mode non-strict (affectation à une propriété en lecture seule, affectation à une propriété sans méthode `set`, affectation à une nouvelle propriété sur un objet [non-extensible](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)) lèvera une exception en mode strict :
 
 ```js
 "use strict";
@@ -228,7 +228,7 @@ eval("var x; delete x;"); // !!! erreur de syntaxe
 
 ### Rendre `eval` et `arguments` plus simples
 
-Le mode strict rend {{jsxref("Fonctions/arguments","arguments")}} et {{JSxRef("eval()")}} moins « étranges ». Les deux impliquent une quantité de comportements étranges dans le code en mode non-strict : `eval` afin d'ajouter et d'enlever des liaisons et pour changer les valeurs de liaisons, et `arguments` via ses propriétés indexées faisant référence à des arguments nommés. Le mode strict permet de mieux traîter `eval` et `arguments` comme des mots-clés à part entière, bien qu'une _réparation_ complète ne devrait pas arriver avant une version future d'ECMAScript.
+Le mode strict rend {{jsxref("Functions/arguments","arguments")}} et {{JSxRef("Global_Objects/eval", "eval()")}} moins « étranges ». Les deux impliquent une quantité de comportements étranges dans le code en mode non-strict : `eval` afin d'ajouter et d'enlever des liaisons et pour changer les valeurs de liaisons, et `arguments` via ses propriétés indexées faisant référence à des arguments nommés. Le mode strict permet de mieux traîter `eval` et `arguments` comme des mots-clés à part entière, bien qu'une _réparation_ complète ne devrait pas arriver avant une version future d'ECMAScript.
 
 Premièrement, les chaînes `eval` et `arguments` ne peuvent pas être utilisées comme identificateur. Tous les exemples suivants entraînent des erreurs de syntaxe :
 
@@ -342,7 +342,7 @@ function fun(static) {
 
 Deux défauts liés à Mozilla Firefox : tout d'abord si votre code est en JavaScript 1.7 ou supérieur (par exemple pour du code qui concerne le chrome dans les extensions ou lorsqu'on utilise les balises `<script type="">`) et qu'il est en mode strict, `let` et `yield` fonctionnent de la façon dont ils fonctionnaient originellement au sein de Firefox. En revanche, pour du code strict utilisé sur une page web et chargé avec `<script src="">` ou `<script>...</script>`, on ne pourra pas utiliser `let`/`yield` comme identifiants. Ensuite, bien qu'ES5 réserve les mots-clés `class`, `enum`, `export`, `extends`, `import`, et `super` pour le mode strict et le mode non strict, les versions antérieures à Firefox 5 ne réservaient ces mots-clés que pour le mode strict.
 
-Deuxièmement, [le mode strict interdit les déclarations de fonctions qui ne sont pas au niveau le plus haut d'un script ou d'une fonction](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En mode normal, il est possible de déclarer une fonction n'importe où avec une déclaration de fonction (voir {{jsxref("Instructions/function","function")}}). Ceci ne fait pas partie de la spécification ECMAScript et est donc une extension. [Le mode strict interdit cela](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls), ce qui permet de lever toute ambiguité par rapport aux futures spécifications ECMAScript sur cette fonctionnalité. On notera que les instructions de fonctions écrites en dehors du plus haut niveau sont autorisées avec ES2015 :
+Deuxièmement, [le mode strict interdit les déclarations de fonctions qui ne sont pas au niveau le plus haut d'un script ou d'une fonction](https://whereswalden.com/2011/01/24/new-es5-strict-mode-requirement-function-statements-not-at-top-level-of-a-program-or-function-are-prohibited/). En mode normal, il est possible de déclarer une fonction n'importe où avec une déclaration de fonction (voir {{jsxref("Statements/function","function")}}). Ceci ne fait pas partie de la spécification ECMAScript et est donc une extension. [Le mode strict interdit cela](https://wiki.ecmascript.org/doku.php?id=conventions:no_non_standard_strict_decls), ce qui permet de lever toute ambiguité par rapport aux futures spécifications ECMAScript sur cette fonctionnalité. On notera que les instructions de fonctions écrites en dehors du plus haut niveau sont autorisées avec ES2015 :
 
 ```js
 "use strict";

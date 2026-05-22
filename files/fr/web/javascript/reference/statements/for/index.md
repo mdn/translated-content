@@ -74,7 +74,7 @@ for (var i = 0; ; i++) {
 }
 ```
 
-Les trois blocs d'expressions peuvent être omis. Encore une fois, il faudra utiliser une instruction {{jsxref("Instructions/break")}} pour terminer la boucle. Si le test se fait sur un seuil, on veillera à incrémenter la variable pour que la condition d'arrêt modifiée soit respectée.
+Les trois blocs d'expressions peuvent être omis. Encore une fois, il faudra utiliser une instruction {{jsxref("Statements/break")}} pour terminer la boucle. Si le test se fait sur un seuil, on veillera à incrémenter la variable pour que la condition d'arrêt modifiée soit respectée.
 
 ```js
 var i = 0;
@@ -128,10 +128,10 @@ function showOffsetPos(sId) {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/break", "break")}}
-- {{jsxref("Instructions/continue", "continue")}}
-- {{jsxref("Instructions/vide", "Instruction vide","",1)}}
-- {{jsxref("Instructions/while", "while")}}
-- {{jsxref("Instructions/do...while", "do...while")}}
-- {{jsxref("Instructions/for...in", "for...in")}}
-- {{jsxref("Instructions/for...of", "for...of")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
+- {{jsxref("Statements/Empty", "Instruction vide","",1)}}
+- {{jsxref("Statements/while", "while")}}
+- {{jsxref("Statements/do...while", "do...while")}}
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Statements/for...of", "for...of")}}

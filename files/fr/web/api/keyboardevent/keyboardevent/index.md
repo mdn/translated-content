@@ -16,11 +16,11 @@ event = new KeyboardEvent(typeArg, KeyboardEventInit);
 ### Valeurs
 
 - typeArg
-  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
+  - : Une représentation du nom de l'évènement sous forme de {{jsxref("String")}}.
 - KeyboardEventInit{{optional_inline}}
   - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :
-    - `"key"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.
-    - `"code"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.
+    - `"key"`, optionnel et par défaut `""`, de type {{jsxref("String")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.
+    - `"code"`, optionnel et par défaut `""`, de type {{jsxref("String")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.
     - `"location"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur de {{domxref("KeyboardEvent.location")}}.
     - `"ctrlKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.ctrlKey")}}.
     - `"shiftKey"`, optionnel et par défaut `false`, de type {{jsxref("Boolean")}}, qui définit la valeur de {{domxref("KeyboardEvent.shiftKey")}}.

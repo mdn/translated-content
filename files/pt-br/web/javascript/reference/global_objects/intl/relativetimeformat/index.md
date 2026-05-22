@@ -33,7 +33,7 @@ new Intl.RelativeTimeFormat([locales[, options]])
 ### Parâmetros
 
 - `locales`
-  - : Opcional. Uma string com uma tag da linguagem BCP 47, ou um array dessas strings. Para a forma geral e interpretação do argumento `locales` , acesse: {{jsxref("Global_Objects/Intl", "Página Intl", "#Locale_identification_and_negotiation", 1)}}.
+  - : Opcional. Uma string com uma tag da linguagem BCP 47, ou um array dessas strings. Para a forma geral e interpretação do argumento `locales` , acesse: {{jsxref("Intl", "Página Intl", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
   - : Opcional. Um objeto com algumas ou todas as seguintes propriedades:
     - `localeMatcher`
@@ -53,12 +53,12 @@ new Intl.RelativeTimeFormat([locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("RelativeTimeFormat.prototype", "Intl.RelativeTimeFormat.prototype")}}
+- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat.prototype")}}
   - : Permite a adição de propriedades para todos os objetos.
 
 ### Métodos
 
-- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : Retorna um array contendo os valores disponíveis dentre os que foram passados como parâmetro sem ter de recorrer ao local padrão do ambiente.
 
 ## Instâncias `RelativeTimeFormat`

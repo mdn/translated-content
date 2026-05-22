@@ -98,13 +98,13 @@ function handleEvent(event) {
 }
 ```
 
-Par exemple, lorsque vous utilisez un gestionnaire générique pour un ensemble d'éléments similaires, la valeur de {{JSxRef("Operators/this", "this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet évènement passé au gestionnaire.
+Par exemple, lorsque vous utilisez un gestionnaire générique pour un ensemble d'éléments similaires, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet évènement passé au gestionnaire.
 
 ### La valeur de `this` dans le gestionnaire
 
 Il est souvent utile de faire référence à l'élément sur lequel le gestionnaire d'évènement a été déclenché, par exemple lorsqu'on utilise un gestionnaire générique pour un ensemble d'éléments similaires.
 
-Lorsque vous attachez une fonction de gestion à un élément avec `addEventListener()`, la valeur de {{JSxRef("Operators/this", "this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet passé au gestionnaire d'évènement.
+Lorsque vous attachez une fonction de gestion à un élément avec `addEventListener()`, la valeur de {{JSxRef("this")}} à l'intérieur du gestionnaire sera une référence à l'élément. Elle sera identique à la valeur de la propriété `currentTarget` de l'objet passé au gestionnaire d'évènement.
 
 ```js
 monElement.addEventListener("click", function (e) {

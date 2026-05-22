@@ -22,7 +22,7 @@ new Int32Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> `Int32Array()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
+> `Int32Array()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 
