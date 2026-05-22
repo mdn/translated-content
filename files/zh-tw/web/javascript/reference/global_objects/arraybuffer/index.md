@@ -67,7 +67,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ## 範例
 
-In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 var buffer = new ArrayBuffer(8);

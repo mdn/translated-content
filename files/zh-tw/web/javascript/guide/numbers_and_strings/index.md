@@ -105,14 +105,14 @@ You always refer to a property of the predefined `Number` object as shown above,
 | {{jsxref("Number.MIN_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最小數值。                                                                          |
 | {{jsxref("Number.MAX_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最大數值。                                                                          |
 
-| 方法                                 | 描述                                                                                                                                                                      |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | 字串轉換成浮點數。 等同於全域函式 {{jsxref("parseFloat", "parseFloat()")}} 。                                                                                             |
-| {{jsxref("Number.parseInt()")}}      | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxref("parseInt", "parseInt()")}} 。                                                                                     |
-| {{jsxref("Number.isFinite()")}}      | 判定給定的值是不是一個有限數。                                                                                                                                            |
-| {{jsxref("Number.isInteger()")}}     | 判定給定的值是不是一個整數                                                                                                                                                |
-| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
+| 方法                                 | 描述                                                                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{jsxref("Number.parseFloat()")}}    | 字串轉換成浮點數。 等同於全域函式 {{jsxref("parseFloat", "parseFloat()")}} 。                                                        |
+| {{jsxref("Number.parseInt()")}}      | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxref("parseInt", "parseInt()")}} 。                                                |
+| {{jsxref("Number.isFinite()")}}      | 判定給定的值是不是一個有限數。                                                                                                       |
+| {{jsxref("Number.isInteger()")}}     | 判定給定的值是不是一個整數                                                                                                           |
+| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("NaN")}}. More robust version of the original global {{jsxref("isNaN", "isNaN()")}}. |
+| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                          |
 
 The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
 

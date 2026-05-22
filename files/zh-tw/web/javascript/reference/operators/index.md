@@ -29,11 +29,11 @@ slug: Web/JavaScript/Reference/Operators
   - : `async` 函數可以定義一個非同步函數運算式。
 - {{experimental_inline}} {{jsxref("Operators/await", "await")}}
   - : 暫停與繼續一個非同步函數並等候承諾的結果/拒絕。
-- {{jsxref("Global_Objects/Array", "[]")}}
+- {{jsxref("Array", "[]")}}
   - : 陣列初始化/書寫格式。
 - {{jsxref("Operators/Object_initializer", "{}")}}
   - : 物件初始化/書寫格式。
-- {{jsxref("Global_Objects/RegExp", "/ab+c/i")}}
+- {{jsxref("RegExp", "/ab+c/i")}}
   - : 正規表示法書寫格式。
 - {{jsxref("Operators/Grouping", "( )")}}
   - : 分組運算子。

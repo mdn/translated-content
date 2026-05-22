@@ -117,7 +117,7 @@ else print(a + " 和 " + b + " 相等");
 
 ### 分辨 string 原始型別和 `String` 物件
 
-請注意，JavaScript 會區別 `String` 物件和原始字串({{jsxref("Global_Objects/Boolean", "Boolean")}} 和 {{jsxref("Global_Objects/Number", "Numbers")}} 也是如此)。
+請注意，JavaScript 會區別 `String` 物件和原始字串({{jsxref("Boolean")}} 和 {{jsxref("Number", "Numbers")}} 也是如此)。
 
 String literals (denoted by double or single quotes) and strings returned from `String` calls in a non-constructor context (i.e., without using the [`new` keyword](/zh-TW/docs/Web/JavaScript/Reference/Operators/new)) are primitive strings. JavaScript automatically converts primitives to `String` objects, so that it's possible to use `String` object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.
 
@@ -170,7 +170,7 @@ var num = 15;
 alert(String.replace(num, /5/, "2"));
 ```
 
-[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) are also available on {{jsxref("Global_Objects/Array", "Array")}} methods.
+[Generics](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#array_generic_methods) are also available on {{jsxref("Array")}} methods.
 
 The following is a shim to provide support to non-supporting browsers:
 

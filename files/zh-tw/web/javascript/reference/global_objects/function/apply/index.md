@@ -84,7 +84,7 @@ console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > [!NOTE]
-> This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Global_Objects/Date", "Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
+> This non-native `Function.construct` method will not work with some native constructors (like {{jsxref("Date")}}, for example). In these cases you have to use the {{jsxref("Function.prototype.bind")}} method (for example, imagine having an array like the following, to be used with {{jsxref("Date")}} constructor: `[2012, 11, 4]`; in this case you have to write something like: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` — anyhow this is not the best way to do things and probably should not be used in any production environment).
 
 ### 使用 `apply` 於內建的函數
 
