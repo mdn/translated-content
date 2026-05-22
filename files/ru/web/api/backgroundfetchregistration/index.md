@@ -20,13 +20,13 @@ l10n:
 - {{domxref("BackgroundFetchRegistration.id")}}{{ReadOnlyInline}}
   - : Строка, содержащая идентификатор фонового запроса.
 - {{domxref("BackgroundFetchRegistration.uploadTotal")}}{{ReadOnlyInline}}
-  - : {{jsxref("Number", "number")}} содержащий общее количество байт для загрузки.
+  - : {{jsxref("Number")}} содержащий общее количество байт для загрузки.
 - {{domxref("BackgroundFetchRegistration.uploaded")}}{{ReadOnlyInline}}
-  - : {{jsxref("Number", "number")}} содержащий количество успешно отправленных байт, изначально `0`.
+  - : {{jsxref("Number")}} содержащий количество успешно отправленных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.downloadTotal")}}{{ReadOnlyInline}}
-  - : {{jsxref("Number", "number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
+  - : {{jsxref("Number")}} содержащий общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0`.
 - {{domxref("BackgroundFetchRegistration.downloaded")}}{{ReadOnlyInline}}
-  - : {{jsxref("Number", "number")}} содержащий количество скачанных байт, изначально `0`.
+  - : {{jsxref("Number")}} содержащий количество скачанных байт, изначально `0`.
 - {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
   - : Изначально возвращает пустую строку, а по завершению запросо либо `"success"`, либо `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
@@ -45,7 +45,7 @@ l10n:
       - : Превышен `downloadTotal`. Его значение устанавливается при регистрации запроса.
 
 - {{domxref("BackgroundFetchRegistration.recordsAvailable")}}{{ReadOnlyInline}}
-  - : {{jsxref("Boolean", "boolean")}} указывает, установлен ли флаг `recordsAvailable`.
+  - : {{jsxref("Boolean")}} указывает, установлен ли флаг `recordsAvailable`.
 
 ## Методы
 
