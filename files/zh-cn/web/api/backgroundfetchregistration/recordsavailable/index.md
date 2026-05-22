@@ -12,7 +12,7 @@ l10n:
 
 ## 值
 
-{{jsxref("Boolean", "boolean")}}。
+{{jsxref("Boolean")}}。
 
 ## 示例
 

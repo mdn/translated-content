@@ -9,7 +9,7 @@ l10n:
 
 ## 类型
 
-一个具有以下属性的 {{jsxref("Object", "object")}}：
+一个具有以下属性的 {{jsxref("Object")}}：
 
 - `children` {{optional_inline}}
   - : 一个{{jsxref("Array", "数组", "", 1)}}，包含代表节点子节点的 {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} 对象。列表按照子节点在用户界面中出现的顺序排序。如果节点不是文件夹，则省略此字段。
