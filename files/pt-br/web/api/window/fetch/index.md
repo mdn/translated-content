@@ -50,7 +50,7 @@ const fetchResponsePromise = fetch(resource [, init])
     - `body`
       - : Qualquer corpo que você queira adicionar à sua requisição: podendo ser um
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
-        {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou um objeto
+        {{domxref("URLSearchParams")}}, {{jsxref("String")}}, ou um objeto
         {{domxref("ReadableStream")}}. Note que uma requisição usando os métodos
         `GET` or `HEAD` não pode ter um corpo.
     - `mode`
@@ -78,7 +78,7 @@ const fetchResponsePromise = fetch(resource [, init])
           Veja [WHATWG fetch standard](https://fetch.spec.whatwg.org/#requests) para mais informações.
 
     - `referrer`
-      - : Uma {{domxref("USVString")}} especificando o referenciador da requisição. Isso pode ser uma URL
+      - : Uma {{jsxref("String")}} especificando o referenciador da requisição. Isso pode ser uma URL
         same-origin, `about:client`, ou uma string vazia.
     - `referrerPolicy`
       - : Especifica a [referrer
