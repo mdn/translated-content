@@ -27,7 +27,7 @@ Les sections suivantes décrivent comment utiliser ces deux méthodes.
 
 Une propriété personnalisée préfixée par deux tirets commence par `--`, suivie du nom de la propriété (par exemple, `--ma-propriete`), et d'une valeur de propriété qui peut être n'importe quelle [valeur CSS valide](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 Comme toute autre propriété, elle est écrite à l'intérieur d'un ensemble de règles.
-L'exemple suivant montre comment créer une propriété personnalisée `--couleur-principale-fond` et utilise une valeur de {{CSSxRef("named-color")}} de `brown`&nbsp;:
+L'exemple suivant montre comment créer une propriété personnalisée `--couleur-principale-fond` et utilise une valeur de couleur nommée ({{CSSxRef("&lt;named-color&gt;")}}) `brown`&nbsp;:
 
 ```css
 section {
