@@ -121,4 +121,4 @@ if (typeof globalThis.Intl === "undefined") {
 
 - [`globalThis` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-globalthis)
 - [es-shims による `globalThis` のポリフィル](https://www.npmjs.com/package/globalthis)
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
