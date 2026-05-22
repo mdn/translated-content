@@ -43,7 +43,7 @@ void gl.uniform4iv(emplacement, valeur);
     - Un {{jsxref("Number")}} flottant pour les valeurs flottantes (méthodes avec "f").
     - Une suite de nombres flottants (par exemple, un {{jsxref("Float32Array")}} ou un {{jsxref("Array")}} de nombres) pour les méthodes de vecteurs de flottants (méthodes avec "fv").
     - Un {{jsxref("Number")}} entier pour les valeurs entières (méthodes avec "i").
-    - Un {{jsxref("Int32Array", "int32Array")}} pour les méthodes de vecteur d'entiers (méthodes avec "iv").
+    - Un {{jsxref("Int32Array")}} pour les méthodes de vecteur d'entiers (méthodes avec "iv").
 
 ### Valeur retournée
 

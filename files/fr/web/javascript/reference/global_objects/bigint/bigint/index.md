@@ -33,7 +33,7 @@ Une valeur {{JSxRef("BigInt")}}. Les valeurs numériques doivent être des entie
 - {{JSxRef("TypeError")}}
   - : Levée dans l'un des cas suivants&nbsp;:
     - Le paramètre ne peut pas être converti en primitif.
-    - Après conversion en primitif, le résultat est {{JSxRef("undefined")}}, {{JSxRef("Operators/null", "null")}}, {{JSxRef("Symbol", "symbol")}}.
+    - Après conversion en primitif, le résultat est {{JSxRef("undefined")}}, {{JSxRef("Operators/null", "null")}}, {{JSxRef("Symbol")}}.
 - {{JSxRef("SyntaxError")}}
   - : Levée si le paramètre est une chaîne de caractère qui ne peut pas être interprété comme un `BigInt`.
 
