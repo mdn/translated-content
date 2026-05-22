@@ -99,7 +99,7 @@ try {
 
 오류의 {{jsxref("Object.prototype.constructor", "constructor")}} 속성을 이용해
 유형을 판별, 특정 오류만 처리할 수 있습니다. 만약 최신 Javascript 엔진에서
-동작하는 코드를 작성한다면 {{jsxref("Operators/instanceof", "instanceof")}} 키워드를 이용할 수도 있습니다.
+동작하는 코드를 작성한다면 {{jsxref("instanceof")}} 키워드를 이용할 수도 있습니다.
 
 ```js
 try {

@@ -9,11 +9,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean
 
 ## 설명
 
-첫 번째 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 `0`, `-0`, {{jsxref("Operators/null", "null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (`""`)이라면 객체의 초기값은 `false`가 됩니다. 문자열 `"false"`를 포함한 그 외 모든 다른 값은 초기값을 `true`로 설정합니다.
+첫 번째 매개변수로서 전달한 값은 필요한 경우 불리언 값으로 변환됩니다. 값이 없거나 `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 빈 문자열 (`""`)이라면 객체의 초기값은 `false`가 됩니다. 문자열 `"false"`를 포함한 그 외 모든 다른 값은 초기값을 `true`로 설정합니다.
 
 `Boolean` 객체의 `true`와 `false` 값을 원시 `Boolean` 값 `true`, `false`와 혼동해선 안됩니다.
 
-값이 {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}이 아닌 **모든** 객체는 조건문에서 `true`로 계산됩니다. 이는 값이 `false`인 `Boolean` 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.
+값이 {{jsxref("undefined")}}, {{jsxref("null")}}이 아닌 **모든** 객체는 조건문에서 `true`로 계산됩니다. 이는 값이 `false`인 `Boolean` 객체도 포함합니다. 즉 아래 {{jsxref("Statements/if...else", "if")}} 문의 조건은 참입니다.
 
 ```js
 var x = new Boolean(false);

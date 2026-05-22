@@ -36,7 +36,7 @@ Reflect.getPrototypeOf(target);
 
 ### 반환 값
 
-주어진 객체의 프로토타입. 상속한 속성이 없으면 {{jsxref("Operators/null", "null")}}을 반환합니다.
+주어진 객체의 프로토타입. 상속한 속성이 없으면 {{jsxref("null")}}을 반환합니다.
 
 ### 예외
 

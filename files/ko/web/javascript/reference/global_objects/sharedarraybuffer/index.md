@@ -60,7 +60,7 @@ worker.postMessage(sab);
 
 ### 생성자는 `new` 연산자를 필요로 함
 
-`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("Operators/new", "new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
+`SharedArrayBuffer` 생성자는 생성될 때, {{jsxref("new")}} 연산자를 필요로 합니다. `SharedArrayBuffer` 생성자를 new 없이 함수로써 호출하면, {{jsxref("TypeError")}} 를 일으킬 것 입니다.
 
 ```js example-bad
 var sab = SharedArrayBuffer(1024);

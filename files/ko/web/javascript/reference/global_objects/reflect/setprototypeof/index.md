@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 
 {{JSRef}}
 
-**`Reflect.setPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("Operators/null", "null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
+**`Reflect.setPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입(내부 `[[Prototype]]` 속성)을 다른 객체나 {{jsxref("null")}}로 바꿉니다. 반환 값을 제외하면 {{jsxref("Object.setPrototypeOf()")}} 메서드와 같습니다.
 
 {{InteractiveExample("JavaScript Demo: Reflect.setPrototypeOf()")}}
 
@@ -35,7 +35,7 @@ Reflect.setPrototypeOf(target, prototype);
 - `target`
   - : 프로토타입을 지정할 대상 객체.
 - `prototype`
-  - : 대상 객체의 새로운 프로토타입. (객체 또는 {{jsxref("Operators/null", "null")}}
+  - : 대상 객체의 새로운 프로토타입. (객체 또는 {{jsxref("null")}}
 
 ### 반환 값
 
@@ -43,7 +43,7 @@ Reflect.setPrototypeOf(target, prototype);
 
 ### 예외
 
-`target`이 {{jsxref("Object")}}가 아니거나, `prototype`이 객체도 {{jsxref("Operators/null", "null")}}도 아니면 {{jsxref("TypeError")}}.
+`target`이 {{jsxref("Object")}}가 아니거나, `prototype`이 객체도 {{jsxref("null")}}도 아니면 {{jsxref("TypeError")}}.
 
 ## 설명
 

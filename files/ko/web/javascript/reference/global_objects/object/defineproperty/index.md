@@ -45,7 +45,7 @@ Object.defineProperty(obj, prop, descriptor);
 
 ## 설명
 
-`defineProperty` 메서드를 사용하면 객체의 속성을 세밀하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법으로 추가한 속성은 객체의 속성을 열거({{jsxref("Statements/for...in", "for...in")}} 반복문 또는 {{jsxref("Object.keys")}} 메서드)할 때 노출되며, 원하는대로 값을 변경하고 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수도 있습니다. `defineProperty`를 사용하면 이런 기본 동작까지도 상세하게 조절할 수 있습니다. `Object.defineProperty()`로 추가한 속성은 기본적으로 불변하며 열거 불가능합니다.
+`defineProperty` 메서드를 사용하면 객체의 속성을 세밀하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법으로 추가한 속성은 객체의 속성을 열거({{jsxref("Statements/for...in", "for...in")}} 반복문 또는 {{jsxref("Object.keys")}} 메서드)할 때 노출되며, 원하는대로 값을 변경하고 {{jsxref("delete")}} 연산자로 삭제할 수도 있습니다. `defineProperty`를 사용하면 이런 기본 동작까지도 상세하게 조절할 수 있습니다. `Object.defineProperty()`로 추가한 속성은 기본적으로 불변하며 열거 불가능합니다.
 
 속성 서술자(`descriptor`)는 데이터 서술자(data descriptors)와 접근자 서술자(accessor descriptors) 두 가지 형식을 취할 수 있습니다. **데이터 서술자**는 값을 가지는 속성을 기술할 때 사용합니다. **접근자 서술자**는 접근자(getter)-설정자(setter) 함수를 한 쌍으로 가지는 속성을 기술할 때 사용합니다. 서술자는 두 유형 중 하나여야 하며, 두 유형을 동시에 나타낼 수는 없습니다.
 
@@ -75,7 +75,7 @@ Object.defineProperty(obj, prop, descriptor);
 
 `value`, `writable`, `get`, `set` 키를 모두 지니고 있지 않은 서술자는 데이터 서술자로 간주합니다. 반면 `value` 또는 `writable`을 `get` 또는 `set` 키와 함께 가지고 있으면 오류가 발생합니다.
 
-위의 각 설정이 서술자의 자체 속성일 필요는 없으며, 서술자가 상속하는 속성도 고려합니다. 기본 값을 확실하게 보존하려면 {{jsxref("Object")}}를 먼저 동결하거나, 모든 설정을 직접 명시하거나, {{jsxref("Object.create", "Object.create(null)")}}을 사용해 서술자의 프로토타입이 {{jsxref("Operators/null", "null")}}을 가리키도록 하세요.
+위의 각 설정이 서술자의 자체 속성일 필요는 없으며, 서술자가 상속하는 속성도 고려합니다. 기본 값을 확실하게 보존하려면 {{jsxref("Object")}}를 먼저 동결하거나, 모든 설정을 직접 명시하거나, {{jsxref("Object.create", "Object.create(null)")}}을 사용해 서술자의 프로토타입이 {{jsxref("null")}}을 가리키도록 하세요.
 
 ```js
 // __proto__ 사용

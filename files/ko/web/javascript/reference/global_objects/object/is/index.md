@@ -48,7 +48,7 @@ Object.is(value1, value2);
 `Object.is()`는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)인지 결정합니다. 다음 중 하나를 만족하면 두 값은 같습니다.
 
 - 둘 다 {{jsxref("undefined")}}
-- 둘 다 {{jsxref("Operators/null", "null")}}
+- 둘 다 {{jsxref("null")}}
 - 둘 다 `true` 또는 둘 다 `false`
 - 둘 다 같은 순서로 같은 문자에 같은 길이인 문자열
 - 둘 다 같은 객체 (두 값 모두 메모리에서 같은 객체를 참조하는 것을 의미)

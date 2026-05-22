@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/Object
 
 **`Object`의 생성자**는 주어진 값를 객체 래퍼로 만들어 줍니다.
 
-- 만약 값이 {{jsxref("Operators/null", "null")}} 또는 {{jsxref("undefined")}} 라면, 빈 객체를 생성하여 반환합니다.
+- 만약 값이 {{jsxref("null")}} 또는 {{jsxref("undefined")}} 라면, 빈 객체를 생성하여 반환합니다.
 - 그렇지 않으면, 주어진 값의 타입 객체를 반환합니다.
 - 만약 주어진 값이 객체라면, 해당 값을 그대로 반환합니다.
 

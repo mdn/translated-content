@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 **optional chaining** 연산자 (**`?.`**) 는 체인의 각 참조가 유효한지 명시적으로 검증하지 않고, 연결된 객체 체인 내에 깊숙이 위치한 속성 값을 읽을 수 있다.
 
-`?.` 연산자는 `.` 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("Operators/null", "null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 `undefined`로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, `undefined`를 리턴한다.
+`?.` 연산자는 `.` 체이닝 연산자와 유사하게 작동하지만, 만약 참조가 {{glossary("nullish")}} ({{JSxRef("null")}} 또는 {{JSxRef("undefined")}})이라면, 에러가 발생하는 것 대신에 표현식의 리턴 값은 `undefined`로 단락된다. 함수 호출에서 사용될 때, 만약 주어진 함수가 존재하지 않는다면, `undefined`를 리턴한다.
 
 따라서 참조가 누락될 가능성이 있는 경우 연결된 속성으로 접근할 때 더 짧고 간단한 표현식이 생성된다. 어떤 속성이 필요한지에 대한 보증이 확실하지 않는 경우 객체의 내용을 탐색하는 동안 도움이 될 수 있다.
 

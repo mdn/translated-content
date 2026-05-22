@@ -44,7 +44,7 @@ console.log(new DateFormatter("August 19, 1975 23:15:30").getFormattedDate());
 
 `extends` 키워드는 내장 객체뿐만 아니라 사용자 정의 클래스를 하위 클래스로 만들기 위해 사용될 수 있습니다.
 
-확장( 클래스)의 `.prototype`은 {{jsxref("Object")}} 또는 {{jsxref("Operators/null", "null")}}이어야 합니다.
+확장( 클래스)의 `.prototype`은 {{jsxref("Object")}} 또는 {{jsxref("null")}}이어야 합니다.
 
 ## 예
 
@@ -107,7 +107,7 @@ class myDate extends Date {
 
 ### `null` 확장
 
-{{jsxref("Operators/null", "null")}}에서 확장은 prototype 객체가 {{jsxref("Object")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
+{{jsxref("null")}}에서 확장은 prototype 객체가 {{jsxref("Object")}}으로부터 상속받지 않은 것을 제외하면 보통 클래스처럼 동작합니다.
 
 ```js
 class nullExtends extends null {

@@ -42,7 +42,7 @@ l10n:
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : 창이 포함하는 문서로의 참조를 반환합니다.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
-  - : 이 창을 삽입했을 때 사용한 요소를 반환합니다. 창이 문서 내에 삽입된 것이 아니면 {{jsxref("Operators/null", "null")}}을 반환합니다.
+  - : 이 창을 삽입했을 때 사용한 요소를 반환합니다. 창이 문서 내에 삽입된 것이 아니면 {{jsxref("null")}}을 반환합니다.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : 현재 창의 하위 프레임을 배열로 반환합니다.
 - {{domxref("Window.fullScreen")}} {{Non-standard_Inline}}

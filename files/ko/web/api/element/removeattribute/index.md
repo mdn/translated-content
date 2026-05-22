@@ -24,7 +24,7 @@ element.removeAttribute(attrName);
 
 ## 사용 일람
 
-많은 특성은 {{jsxref("Operators/null", "null")}}을 대입했을 때 예상치 못한 동작을 하곤 합니다. 그러므로 특성을 삭제할 때 `null`을 직접 대입하거나, {{domxref("Element.setAttribute", "setAttribute()")}}의 매개변수로 제공하기보단 `removeAttribute()` 메서드를 사용해야 합니다.
+많은 특성은 {{jsxref("null")}}을 대입했을 때 예상치 못한 동작을 하곤 합니다. 그러므로 특성을 삭제할 때 `null`을 직접 대입하거나, {{domxref("Element.setAttribute", "setAttribute()")}}의 매개변수로 제공하기보단 `removeAttribute()` 메서드를 사용해야 합니다.
 
 ## 예제
 

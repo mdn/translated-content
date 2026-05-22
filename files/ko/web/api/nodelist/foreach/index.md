@@ -23,7 +23,7 @@ NodeList.forEach(callback[, thisArg]);
     - _`listObj`_
       - : `forEach()` 가 적용되고 있는 NodeList 객체입니다.
 - `thisArg` {{Optional_inline}}
-  - : `callback` 을 실행할 때 {{jsxref("Operators/this", "this")}} 에 대입할 값입니다.
+  - : `callback` 을 실행할 때 {{jsxref("this")}} 에 대입할 값입니다.
 
 ### Return value
 

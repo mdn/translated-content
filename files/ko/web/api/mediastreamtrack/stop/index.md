@@ -40,7 +40,7 @@ function stopStreamedVideo(videoElem) {
 
 우선 비디오 요소에서 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 속성을 사용해 스트림을 가져오는 것부터 시작합니다. 그다음으로는 {{domxref("MediaStream.getTracks", "getTracks()")}} 메서드를 사용해 스트림의 트랙 목록을 가져오고, 이제 {{jsxref("Array.forEach", "forEach()")}}로 각 트랙의 `stop()` 메서드를 호출합니다.
 
-마지막으로, `srcObject`를 {{jsxref("Operators/null", "null")}}로 설정해서 {{domxref("MediaStream")}}과의 연결을 끊어, 객체를 해제할 수 있도록 합니다.
+마지막으로, `srcObject`를 {{jsxref("null")}}로 설정해서 {{domxref("MediaStream")}}과의 연결을 끊어, 객체를 해제할 수 있도록 합니다.
 
 ## 명세
 

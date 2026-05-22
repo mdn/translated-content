@@ -40,11 +40,11 @@ new Proxy(target, handler);
 - {{JSxRef("Proxy/Proxy/apply", "handler.apply()")}}
   - : 함수 호출에 대한 트랩.
 - {{JSxRef("Proxy/Proxy/construct", "handler.construct()")}}
-  - : {{JSxRef("Operators/new", "new")}} 연산자에 대한 트랩.
+  - : {{JSxRef("new")}} 연산자에 대한 트랩.
 - {{JSxRef("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : {{JSxRef("Object.defineProperty")}}에 대한 트랩.
 - {{JSxRef("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : {{JSxRef("Operators/delete", "delete")}} 연산자에 대한 트랩.
+  - : {{JSxRef("delete")}} 연산자에 대한 트랩.
 - {{JSxRef("Proxy/Proxy/get", "handler.get()")}}
   - : 속성 값을 가져오기(get) 위한 트랩.
 - {{JSxRef("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

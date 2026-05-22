@@ -19,13 +19,13 @@ someOtherNode.textContent = string;
 
 ### 값
 
-문자열 또는 {{jsxref("Operators/null", "null")}}.
+문자열 또는 {{jsxref("null")}}.
 
 ## 설명
 
 `textContent`의 값은 상황에 따라 다릅니다.
 
-- 노드가 {{domxref("document")}} 또는 {{glossary("Doctype")}}이면 {{jsxref("Operators/null", "null")}}을 반환합니다.
+- 노드가 {{domxref("document")}} 또는 {{glossary("Doctype")}}이면 {{jsxref("null")}}을 반환합니다.
 
   > [!NOTE]
   > 전체 문서의 모든 텍스트와 CDATA 데이터를 얻으려면 `document.documentElement.textContent`를 사용하세요.

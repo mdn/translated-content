@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Operators
 
 기본 키워드 및 JavaScript의 일반 식.
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
   - : `this` 키워드는 실행 문맥의 특별한 속성을 가리킵니다.
 - {{JSxRef("Operators/function", "function")}}
   - : `function` 키워드는 함수를 정의합니다.
@@ -47,10 +47,10 @@ slug: Web/JavaScript/Reference/Operators
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
   - : 속성 접근자는 객체의 속성 또는 메서드에 대한 접근 방법을 제공합니다.
     (`object.property`, `object["property"]`)
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
   - : `new` 연산자는 생성자의 인스턴스를 만듭니다.
 - {{JSxRef("Operators/new.target", "new.target")}}
-  - : 생성자 문맥에서, `new.target`은 {{jsxref("Operators/new", "new")}}에 의해 호출된 생성자를 말합니다.
+  - : 생성자 문맥에서, `new.target`은 {{jsxref("new")}}에 의해 호출된 생성자를 말합니다.
 - {{JSxRef("Operators/super", "super")}}
   - : `super` 키워드는 부모 생성자를 호출합니다.
 - {{JSxRef("Operators/Spread_syntax", "...obj")}}
@@ -73,7 +73,7 @@ slug: Web/JavaScript/Reference/Operators
 
 단항 연산은 피연산자가 하나뿐인 연산입니다.
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
   - : `delete` 연산자는 객체에서 속성을 지웁니다.
 - {{JSxRef("Operators/void", "void")}}
   - : `void` 연산자는 식의 반환값을 버립니다.
@@ -114,7 +114,7 @@ slug: Web/JavaScript/Reference/Operators
 
 - {{JSxRef("Operators/in", "in")}}
   - : `in` 연산자는 객체에 주어진 속성이 있는지를 결정합니다.
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
   - : `instanceof` 연산자는 객체가 다른 객체의 인스턴스인지 판별합니다.
 - {{JSxRef("Operators/Less_than", "&lt;")}}
   - : 작음 연산자.

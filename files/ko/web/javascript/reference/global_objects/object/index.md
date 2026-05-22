@@ -15,7 +15,7 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 
 `Object` 생성자는 주어진 값에 대한 객체 래퍼를 생성합니다.
 
-- 값이 {{jsxref("Operators/null", "null")}} 또는 {{jsxref("undefined")}}이면 빈 객체를 생성하여 반환합니다.
+- 값이 {{jsxref("null")}} 또는 {{jsxref("undefined")}}이면 빈 객체를 생성하여 반환합니다.
 - 그렇지 않으면 주어진 값에 해당하는 타입의 객체를 반환합니다.
 - 값이 이미 객체인 경우 그 값을 반환합니다.
 

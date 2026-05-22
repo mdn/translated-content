@@ -9,7 +9,7 @@ slug: Web/API/Worker
 
 워커는 부모 페이지와 같은 {{glossary("origin", "출처")}}에 호스팅 된 다른 워커를 생성할 수 있습니다. (참고: [WebKit은 아직 중첩 워커를 구현하지 않았습니다.](https://bugs.webkit.org/show_bug.cgi?id=22723))
 
-[`Worker` 내에서 사용할 수 있는 인터페이스와 함수](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)는 제한돼있습니다. 워커는 {{domxref("XMLHttpRequest")}}를 사용해 네트워크 통신을 할 수 있지만, 응답의 `responseXML`과 `channel` 특성은 항상 {{jsxref("Operators/null", "null")}}입니다. ([`fetch`](/ko/docs/Web/API/Fetch_API)는 이러한 제한 없이 사용할 수 있습니다.)
+[`Worker` 내에서 사용할 수 있는 인터페이스와 함수](/ko/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)는 제한돼있습니다. 워커는 {{domxref("XMLHttpRequest")}}를 사용해 네트워크 통신을 할 수 있지만, 응답의 `responseXML`과 `channel` 특성은 항상 {{jsxref("null")}}입니다. ([`fetch`](/ko/docs/Web/API/Fetch_API)는 이러한 제한 없이 사용할 수 있습니다.)
 
 ## 생성자
 

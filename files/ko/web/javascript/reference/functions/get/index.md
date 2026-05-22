@@ -97,7 +97,7 @@ Static 설정자와 private 설정자는 유사한 구문을 사용하며, [`sta
 
 ### `delete` 연산자로 접근자 제거하기
 
-접근자를 삭제하려면 간단히 {{jsxref("Operators/delete", "delete")}} 연산자를 사용하세요.
+접근자를 삭제하려면 간단히 {{jsxref("delete")}} 연산자를 사용하세요.
 
 ```js
 delete obj.latest;

@@ -237,7 +237,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/new","new")}} (인자 리스트 제공)
+        {{jsxref("new")}} (인자 리스트 제공)
       </td>
       <td>없음</td>
       <td><code>new … ( … )</code></td>
@@ -264,7 +264,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
     <tr>
       <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (인자 리스트 생략)
+        {{jsxref("new")}} (인자 리스트 생략)
       </td>
       <td>우결합성</td>
       <td><code>new …</code></td>
@@ -354,7 +354,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td><code>void …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/delete", "delete")}}</td>
+      <td>{{jsxref("delete")}}</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
@@ -490,7 +490,7 @@ a?.b.c; // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `un
       <td><code>… in …</code></td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/instanceof", "instanceof")}}</td>
+      <td>{{jsxref("instanceof")}}</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>

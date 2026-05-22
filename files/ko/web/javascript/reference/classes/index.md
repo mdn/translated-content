@@ -137,7 +137,7 @@ console.log(Point.distance(p1, p2)); // 7.0710678118654755
 
 ### 프로토타입 및 정적 메서드를 사용한 `this` 바인딩
 
-메서드를 변수에 할당 한 다음 호출하는 것과 같이, 정적 메서드나 프로토타입 메서드가 {{jsxref("Operators/this", "this")}} 값 없이 호출될 때, `this` 값은 메서드 안에서 `undefined`가 됩니다. 이 동작은 {{jsxref("Strict_mode", "\"use strict\"")}} 명령어 없이도 같은 방식으로 동작하는데, `class` 문법 안에 있는 코드는 항상 strict mode 로 실행되기 때문입니다.
+메서드를 변수에 할당 한 다음 호출하는 것과 같이, 정적 메서드나 프로토타입 메서드가 {{jsxref("this")}} 값 없이 호출될 때, `this` 값은 메서드 안에서 `undefined`가 됩니다. 이 동작은 {{jsxref("Strict_mode", "\"use strict\"")}} 명령어 없이도 같은 방식으로 동작하는데, `class` 문법 안에 있는 코드는 항상 strict mode 로 실행되기 때문입니다.
 
 ```js
 class Animal {

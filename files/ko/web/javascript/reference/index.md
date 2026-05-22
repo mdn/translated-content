@@ -176,7 +176,7 @@ slug: Web/JavaScript/Reference
 
 ### 일차 표현식
 
-- {{JSxRef("Operators/this", "this")}}
+- {{JSxRef("this")}}
 - {{JSxRef("Operators/function", "function")}}
 - {{JSxRef("Operators/class", "class")}}
 - {{JSxRef("Operators/function*", "function*")}}
@@ -195,7 +195,7 @@ slug: Web/JavaScript/Reference
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
 - [`?.` (Optional chaining)](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- {{JSxRef("Operators/new", "new")}}
+- {{JSxRef("new")}}
 - {{JSxRef("Operators/new.target", "new.target")}}
 - {{JSxRef("Operators/import.meta", "import.meta")}}
 - {{JSxRef("Operators/super", "super")}}
@@ -210,7 +210,7 @@ slug: Web/JavaScript/Reference
 
 ### 단항 연산자
 
-- {{JSxRef("Operators/delete", "delete")}}
+- {{JSxRef("delete")}}
 - {{JSxRef("Operators/void", "void")}}
 - {{JSxRef("Operators/typeof", "typeof")}}
 - {{JSxRef("Operators/Unary_plus", "+")}}
@@ -230,7 +230,7 @@ slug: Web/JavaScript/Reference
 ### 관계 연산자
 
 - {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{JSxRef("instanceof")}}
 - {{JSxRef("Operators/Less_than", "&lt;")}}
 - {{JSxRef("Operators/Greater_than", "&gt;")}}
 - {{JSxRef("Operators/Less_than_or_equal", "&lt;=")}}

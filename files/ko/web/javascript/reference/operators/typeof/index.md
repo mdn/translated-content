@@ -244,4 +244,4 @@ function type(value) {
 
 ## 같이 보기
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}

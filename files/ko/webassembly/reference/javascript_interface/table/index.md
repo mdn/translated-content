@@ -56,7 +56,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 
 ## Examples
 
-다음 예제 (table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) 및 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) 참조)는 초기 크기가 2인 새 WebAssembly Table 인스턴스를 만듭니다. 그런 다음 두 개의 인덱스 (표 [`Table.prototype.get()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/get)를 통해 검색하여 테이블의 길이와 내용을 인쇄합니다. 길이가 2이고 {{jsxref ( "Operators/null", "null")}}이 두개라고 출력됩니다.
+다음 예제 (table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) 및 [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) 참조)는 초기 크기가 2인 새 WebAssembly Table 인스턴스를 만듭니다. 그런 다음 두 개의 인덱스 (표 [`Table.prototype.get()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table/get)를 통해 검색하여 테이블의 길이와 내용을 인쇄합니다. 길이가 2이고 {{jsxref ( "null")}}이 두개라고 출력됩니다.
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });

@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
 
 ## JavaScript와 JSON의 차이
 
-JSON은 객체, 배열, 숫자, 문자열, 불리언과 {{jsxref("Operators/null", "null")}}을 직렬화하기 위한 구문으로, JavaScript 구문에 기반을 두고 있지만 분명한 차이점을 가지고 있습니다. 즉, 어떤 JavaScript는 JSON이 아닙니다.
+JSON은 객체, 배열, 숫자, 문자열, 불리언과 {{jsxref("null")}}을 직렬화하기 위한 구문으로, JavaScript 구문에 기반을 두고 있지만 분명한 차이점을 가지고 있습니다. 즉, 어떤 JavaScript는 JSON이 아닙니다.
 
 - 객체와 배열
   - : 속성의 이름은 반드시 큰따옴표로 표시된 문자열이어야 합니다. [후행 쉼표](/ko/docs/Web/JavaScript/Reference/Trailing_commas)는 허용하지 않습니다.

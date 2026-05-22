@@ -34,7 +34,7 @@ intersection(other)
 
 ![두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 교차점은 두 원이 겹치는 부분입니다.](diagram.svg)
 
-`intersection()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기 위해 {{jsxref("Operators/this", "this")}}가 필요합니다. 그런 다음 동작은 `this`와 `other`의 크기에 따라 달라집니다.
+`intersection()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기 위해 {{jsxref("this")}}가 필요합니다. 그런 다음 동작은 `this`와 `other`의 크기에 따라 달라집니다.
 
 - `this`에 `other.size`보다 많은 요소가 있으면 `other`의 `keys()` 메서드를 호출하여 `other`을 순회하고 생성된 모든 요소로 `this`에도 존재하는 새 집합을 구성합니다.
 - 그렇지 않으면, `this`의 요소를 순회하고 `other.has(e)`가 `this`에서 [참 같은 값](/ko/docs/Glossary/Truthy)을 반환하게 만드는 모든 요소 `e`를 포함하는 새 집합을 생성합니다.

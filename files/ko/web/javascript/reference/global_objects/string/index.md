@@ -121,7 +121,7 @@ if (a < b) {
 
 JavaScript는 `String` 오브젝트와 원형의 문자열을 다르게 취급한다는 것에 주의해야 합니다. ({{jsxref("Boolean")}}과 [숫자](/ko/docs/Web/JavaScript/Reference/Global_Objects)의 true도 마찬가지입니다.)
 
-문자열 리터럴(작은 따옴표 또는 큰 따옴표로 생성되는)과 생성자 없이(즉. {{jsxref("Operators/new", "new")}} 키워드를 사용하지 않고) `String`을 호출하여 반환된 문자열은 원형 문자열(primitive strings)입니다. JavaScript는 자동적으로 원형을 `String` 오브젝트로 변환하기 때문에, `String` 오브젝트 메서드를 사용하여 원형문자열을 생성할 수 있습니다. 문맥 안의 메서드에서 프로퍼티 조회 또는 원형의 문자열 호출이 발생하면, JavaScript는 자동으로 문자열 원형을 감싸고 프로퍼티 조회를 수행 하거나 메서드를 호출합니다.
+문자열 리터럴(작은 따옴표 또는 큰 따옴표로 생성되는)과 생성자 없이(즉. {{jsxref("new")}} 키워드를 사용하지 않고) `String`을 호출하여 반환된 문자열은 원형 문자열(primitive strings)입니다. JavaScript는 자동적으로 원형을 `String` 오브젝트로 변환하기 때문에, `String` 오브젝트 메서드를 사용하여 원형문자열을 생성할 수 있습니다. 문맥 안의 메서드에서 프로퍼티 조회 또는 원형의 문자열 호출이 발생하면, JavaScript는 자동으로 문자열 원형을 감싸고 프로퍼티 조회를 수행 하거나 메서드를 호출합니다.
 
 ```js
 var s_prim = "foo";
@@ -270,7 +270,7 @@ console.log(eval(s2.valueOf())); // returns the number 4
 
 ### 문자열 변환
 
-비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("Operators/null", "null")}}과 {{jsxref("undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
+비록 일반적으로 toString() 함수를 많이 사용하고 있지만, {{jsxref("String.prototype.toString()", "toString()")}}의 "안전한" 대안으로 String을 사용할 수 있습니다. String은 {{jsxref("null")}}과 {{jsxref("undefined")}}에 대해서도 잘 동작합니다. 예를 들면:
 
 ```js
 var outputStrings = [];
