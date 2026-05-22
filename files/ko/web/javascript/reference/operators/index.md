@@ -175,7 +175,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 조건부(삼항) 연산자
 
-<dl><dt>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</dt></dl>
+<dl><dt>{{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}</dt></dl>
 
 조건부 연산자는 조건의 논리값에 따라 두 값 중 하나를 반환합니다.
 
@@ -226,7 +226,7 @@ slug: Web/JavaScript/Reference/Operators
 
 ### 쉼표 연산자
 
-- {{jsxref("Operators/Comma_Operator", ",")}}
+- {{jsxref("Operators/Comma_operator", ",")}}
   - : 쉼표 연산자는 여러 식을 단문으로 평가되게 하고 마지막 식의 결과를 반환합니다.
 
 ## 명세

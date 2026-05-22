@@ -263,7 +263,7 @@ slug: Web/JavaScript/Reference
 
 ### 조건(삼항) 연산자
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{JSxRef("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
 
 ### 할당 연산자
 
@@ -288,7 +288,7 @@ slug: Web/JavaScript/Reference
 
 ### 쉼표 연산자
 
-- {{JSxRef("Operators/Comma_Operator", ",")}}
+- {{JSxRef("Operators/Comma_operator", ",")}}
 
 ## 함수
 
