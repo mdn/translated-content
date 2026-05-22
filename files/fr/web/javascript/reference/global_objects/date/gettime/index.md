@@ -34,7 +34,7 @@ Un nombre représentant le [timestamp](/fr/docs/Web/JavaScript/Reference/Global_
 
 ## Description
 
-Les objets `Date` sont fondamentalement représentés par un [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), et cette méthode permet de récupérer ce timestamp. Vous pouvez utiliser cette méthode pour affecter une date et une heure à un autre objet {{JSxRef("Date")}}. Cette méthode est fonctionnellement équivalente à la méthode {{JSxRef("Date/valueof", "valueOf()")}}.
+Les objets `Date` sont fondamentalement représentés par un [timestamp](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#lepoch_les_timestamps_et_la_date_invalide), et cette méthode permet de récupérer ce timestamp. Vous pouvez utiliser cette méthode pour affecter une date et une heure à un autre objet {{JSxRef("Date")}}. Cette méthode est fonctionnellement équivalente à la méthode {{JSxRef("Date/valueOf", "valueOf()")}}.
 
 ## Exemples
 

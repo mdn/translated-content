@@ -27,7 +27,7 @@ queueMicrotask(callback)
 ### Paramètres
 
 - `callback`
-  - : Une {{JSxRef("function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
+  - : Une {{JSxRef("Operators/function", "function")}} qui doit être exécutée lorsque le moteur du navigateur détermine qu'il est sûr d'appeler votre code. Les micro-tâches mises en files d'attente sont exécutées après la fin de toutes les tâches en attente et avant de céder le contrôle à la boucle d'évènements du navigateur.
 
 ### Valeur de retour
 

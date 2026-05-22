@@ -17,7 +17,7 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
     </tr>
     <tr>
       <td><code>""</code></td>
-      <td>{{domxref("DOMString")}} (valeur par défaut)</td>
+      <td>{{jsxref("String")}} (valeur par défaut)</td>
     </tr>
     <tr>
       <td><code>"arraybuffer"</code></td>
@@ -37,7 +37,7 @@ La propriété `XMLHttpRequest.response` contient le corps de la réponse. Elle 
     </tr>
     <tr>
       <td><code>"text"</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
     </tr>
     <tr>
       <td><code>"moz-blob"</code> {{non-standard_inline}}</td>

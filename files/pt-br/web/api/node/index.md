@@ -16,7 +16,7 @@ Todos os tipos a seguir herdam essa interface e seus métodos e propriedades (ap
 _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.baseURI")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última `'/'`.
+  - : Retorna uma {{jsxref("String")}} representando o URL base do nó. O conceito de URL base muda de uma linguagem para outra; no HTML, ela corresponde ao protocolo, ao nome de domínio e a estrutura de diretório; tudo isso até a última `'/'`.
 - {{domxref("Node.baseURIObject")}} {{Non-standard_inline()}}
   - : Retorna um objeto `nsIURI`, representando o URL base do nó. _(Indisponível para conteúdo Web)_
 - {{domxref("Node.childNodes")}} {{readonlyInline}}
@@ -28,7 +28,7 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.nextSibling")}} {{readonlyInline}}
   - : Retorna um {{domxref("Node")}} representando o próximo elemento na árvore ou `null`, caso tal nó não exista.
 - {{domxref("Node.nodeName")}} {{readonlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} contendo o nome do elemento, do `Node`. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.
+  - : Retorna uma {{jsxref("String")}} contendo o nome do elemento, do `Node`. A estrutura do nome irá mudar conforme o tipo do elemento. Veja as diferenças na documentação do método {{domxref("Node.nodeName")}}.
 - {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
   - : Uma interface `nsIPrincipal` representando o nó principal.
 - {{domxref("Node.nodeType")}}{{readonlyInline}}
@@ -68,7 +68,7 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 ### Propriedades obsoletas
 
 - {{domxref("Node.localName")}}{{readonlyInline}}
-  - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
+  - : Retorna um {{jsxref("String")}} representando a parte local do nome qualificado de um elemento.
 
     > [!NOTE]
     > No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
@@ -80,7 +80,7 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
     > No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
 
 - {{domxref("Node.prefix")}}{{readonlyInline}}
-  - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
+  - : É um {{jsxref("String")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
 
 ## Métodos
 

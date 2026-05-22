@@ -16,7 +16,7 @@ ctx.font = value;
 ### Options
 
 - `valeur`
-  - : Une valeur {{domxref("DOMString")}} analysée comme une valeur de {{cssxref("font")}} CSS. La police par défaut est 10px sans-serif.
+  - : Une valeur {{jsxref("String")}} analysée comme une valeur de {{cssxref("font")}} CSS. La police par défaut est 10px sans-serif.
 
 ## Exemples
 
