@@ -16,7 +16,7 @@ slug: Web/API/UIEvent/UIEvent
 ### 參數
 
 - _typeArg_
-  - : 一個 {{domxref("DOMString")}} ，用來表示事件名稱
+  - : 一個 {{jsxref("String")}} ，用來表示事件名稱
 - _UIEventInit_{{optional_inline}}
   - : 一個 `UIEventInit` dictionary ，能接受以下參數：
     - `detail`

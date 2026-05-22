@@ -43,7 +43,7 @@ Un booléen qui indique si la valeur fournie en argument est {{jsxref("NaN")}}.
 
 ## Description
 
-Les deux opérateurs d'égalité, {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#égalité_simple_(==)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#égalité_stricte_(===)")}}, renvoient `false` pour vérifier que {{jsxref("NaN")}} _est_ NaN. La fonction `Number.isNaN` est nécessaire pour distinguer ce cas. Le résultat de cette comparaison sera différent avec les autres méthodes de comparaisons en JavaScript.
+Les deux opérateurs d'égalité, {{jsxref("Operators", "==", "#égalité_simple_(==)")}} et {{jsxref("Operators", "===", "#égalité_stricte_(===)")}}, renvoient `false` pour vérifier que {{jsxref("NaN")}} _est_ NaN. La fonction `Number.isNaN` est nécessaire pour distinguer ce cas. Le résultat de cette comparaison sera différent avec les autres méthodes de comparaisons en JavaScript.
 
 En effet, la fonction globale {{jsxref("isNaN")}} convertit l'argument en un nombre. `Number.isNaN` ne convertit pas l'argument. Cela signifie qu'on peut passer des valeurs qui, normalement, seraient converties en NaN, mais qui ne sont pas NaN. Cela signifie également que, uniquement lorsque la méthode sera utilisée avec des nombres qui valent `NaN`, elle renverra `true`.
 
@@ -93,5 +93,5 @@ Number.isNaN =
 ## Voir aussi
 
 - L'objet {{jsxref("Number")}} auquel appartient cette méthode.
-- La méthode {{jsxref("Objets_globaux/Object/is", "Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur
+- La méthode {{jsxref("Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur
 - La méthode {{jsxref("isNaN")}} de l'objet global

@@ -18,7 +18,7 @@ var elements = element.getElementsByClassName(names);
 ### Parâmetros
 
 - `names`
-  - : Uma {{domxref("DOMString")}} contendo um ou mais nomes de classes separados por espaço em branco.
+  - : Uma {{jsxref("String")}} contendo um ou mais nomes de classes separados por espaço em branco.
 
 ### Valor de retorno
 

@@ -22,7 +22,7 @@ performance.mark(name);
 ### Arguments
 
 - `name`
-  - : Une chaîne de caractères ({{domxref("DOMString")}}) représentant le nom du marqueur. Si le nom donné à cette méthode existe déjà dans l'interface {{domxref("PerformanceTiming")}}, une exception {{jsxref("SyntaxError")}} est levée.
+  - : Une chaîne de caractères ({{jsxref("String")}}) représentant le nom du marqueur. Si le nom donné à cette méthode existe déjà dans l'interface {{domxref("PerformanceTiming")}}, une exception {{jsxref("SyntaxError")}} est levée.
 
 ### Valeur de retour
 

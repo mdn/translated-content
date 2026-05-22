@@ -18,7 +18,7 @@ void gl.shaderSource(shader, source);
 - shader
   - : Un objet {{domxref("WebGLShader")}} dans lequel définir le code source.
 - source
-  - : Une {{domxref("DOMString")}} contenant le code source GLSL à définir.
+  - : Une {{jsxref("String")}} contenant le code source GLSL à définir.
 
 ### Valeur retournée
 
