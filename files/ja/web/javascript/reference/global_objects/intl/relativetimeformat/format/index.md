@@ -1,46 +1,47 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
+short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
+l10n:
+  sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-{{JSRef}}
-
-**`Intl.RelativeTimeFormat.prototype.format()`** メソッドは `value` や `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って整形します。
+**`format()`** は {{jsxref("Intl.RelativeTimeFormat")}} のメソッドで、`value` や `unit` を、この `Intl.RelativeTimeFormat` オブジェクトのロケールと書式化オプションに従って書式化します。
 
 {{InteractiveExample("JavaScript デモ: Intl.RelativeTimeFormat.prototype.format")}}
 
 ```js interactive-example
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });
+const rtf = new Intl.RelativeTimeFormat("ja", { style: "short" });
 
-console.log(rtf1.format(3, "quarter"));
-// 予想される結果: "in 3 qtrs."
+console.log(rtf.format(3, "quarter"));
+// 予想される結果: "3 四半期後"
 
-console.log(rtf1.format(-1, "day"));
-// 予想される結果: "1 day ago"
+console.log(rtf.format(-1, "day"));
+// 予想される結果: "1 日前"
 
-console.log(rtf1.format(10, "seconds"));
-// 予想される結果: "in 10 sec."
+console.log(rtf.format(10, "seconds"));
+// 予想される結果: "10 秒後"
 ```
 
 ## 構文
 
-```js
-relativeTimeFormat.format(value, unit);
+```js-nolint
+format(value, unit)
 ```
 
 ### 引数
 
 - `value`
-  - : 国際化された相対時間のメッセージに使用する数値です。
-
-<!---->
-
+  - : 国際化対応の相対時間メッセージで使用する値です。
 - `unit`
-  - : 国際化された相対時間のメッセージに使用する単位です。利用可能な値は、 "`year`", "`quarter`", "`month`", "`week`", "`day`", "`hour`", "`minute`", "`second`" です。複数形も許容されています。
+  - : 国際化対応の相対時間のメッセージに使用する単位です。利用可能な値は、`"year"`, `"quarter"`, `"month"`, `"week"`, `"day"`, `"hour"`, `"minute"`, `"second"` です。複数形も許容されています。
 
-## 解説
+## 返値
 
-`format` ゲッター関数は、この {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトのロケールと整形オプションに従って値や単位を整形し、文字列に格納します。
+指定された `value` および `unit` を、この {{jsxref("Intl.RelativeTimeFormat")}} オブジェクトのロケールおよび書式設定オプションに従って書式化した文字列です。
+
+> [!NOTE]
+> ほとんどの場合、`format()` が返す書式化は一貫しています。しかし、同じロケール内であっても、実装によって出力は異なる場合があります。出力のばらつきは設計上のものであり、仕様でも認められています。また、期待した結果とは異なる場合もあります。例えば、文字列は、改行しない空白文字を使用したり、双方向コントロール文字で囲まれたりする場合があります。`format()` の結果を、ハードコードされた定数と比較してはいけません。
 
 ## 例
 
@@ -51,37 +52,35 @@ relativeTimeFormat.format(value, unit);
 ```js
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
-const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "best fit", // other values: "lookup"
-  numeric: "always", // other values: "auto"
-  style: "long", // other values: "short" or "narrow"
+const rtf = new Intl.RelativeTimeFormat("ja", {
+  localeMatcher: "best fit", // その他の値: "lookup"
+  numeric: "always", // その他の値: "auto"
+  style: "long", // その他の値: "short" や "narrow"
 });
 
 // 負の値 (-1) を使った相対時間の書式化
-rtf.format(-1, "day");
-// > "1 day ago"
+rtf.format(-1, "day"); // "1 日前"
 
 // 正の値 (1) を使った相対時間の書式化
-rtf.format(1, "day");
-// > "in 1 day"
+rtf.format(1, "day"); // "1 日後"
 ```
 
 ### auto オプションの使用
 
-`numeric:auto` オプションが渡された場合は、 `1 day ago` や `in 1 day` の代わりに `yesterday` や `tomorrow` の文字列が生成されます。これにより、出力に数値が含まれなくなることがあります。
+`numeric:auto` オプションが渡された場合は、 `1 日前` や `in 1 day` の代わりに `yesterday` や `tomorrow` の文字列が生成されます。これにより、出力に数値が含まれなくなることがあります。
 
 ```js
 // ロケールで既定値を明確に指定して
 // 相対時間フォーマッターを作成
-const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+const rtf = new Intl.RelativeTimeFormat("ja", { numeric: "auto" });
 
 // 負の値 (-1) を使った相対時間の書式化
-rtf.format(-1, "day");
-// > "yesterday"
+rtf.format(-1, "day"); // "昨日"
 
-// 正の値 (1) を使った相対時間の書式化
-rtf.format(1, "day");
-// > "tomorrow"
+rtf.format(0, "day"); // "今日"
+
+// 正の日の単位 (1) を使った相対時間の書式化
+rtf.format(1, "day"); // "明日"
 ```
 
 ## 仕様書
