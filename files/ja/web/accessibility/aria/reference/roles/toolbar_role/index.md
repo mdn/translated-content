@@ -91,5 +91,5 @@ l10n:
 
 ## 関連情報
 
-- [The CSS `:focus` pseudoclass](/ja/docs/Web/CSS/Reference/Selectors/:focus)
-- [The CSS `:focus-within` pseudoclass](/ja/docs/Web/CSS/Reference/Selectors/:focus-within)
+- [CSS の擬似クラス `:focus`](/ja/docs/Web/CSS/Reference/Selectors/:focus)
+- [CSS の擬似クラス `:focus-within`](/ja/docs/Web/CSS/Reference/Selectors/:focus-within)
