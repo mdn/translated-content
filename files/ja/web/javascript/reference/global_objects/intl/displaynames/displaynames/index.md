@@ -18,10 +18,10 @@ const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
 });
 
 console.log(regionNamesInEnglish.of("US"));
-// Expected output: "United States"
+// 予想される結果: "United States"
 
 console.log(regionNamesInTraditionalChinese.of("US"));
-// Expected output: "美國"
+// 予想される結果: "美國"
 ```
 
 ## 構文

@@ -106,7 +106,7 @@ Ces exemples sont extraits de ces deux pages : [démonstration](https://googlech
 
 ### Étendre `null`
 
-Étendre {{jsxref("null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object.prototype")}}.
+Étendre {{jsxref("null")}} se fait comme avec une classe normale sauf que l'objet prototype n'hérite pas de {{jsxref("Object")}}.
 
 ```js
 class extensionNull extends null {

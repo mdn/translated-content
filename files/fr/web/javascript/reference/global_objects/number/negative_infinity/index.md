@@ -71,4 +71,4 @@ if (petitNombre === Number.NEGATIVE_INFINITY) {
 - {{jsxref("Number.POSITIVE_INFINITY")}}
 - {{jsxref("Number.isFinite()")}}
 - {{jsxref("Infinity", "Infinity")}}
-- {{jsxref("isFinite", "isFinite()")}}
+- {{jsxref("isFinite()")}}

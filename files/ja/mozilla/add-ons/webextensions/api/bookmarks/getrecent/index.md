@@ -23,7 +23,7 @@ browser.bookmarks.getRecent(
 - `callback`
   - : リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
     - `results`
-      - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}
+      - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("Array")}}
 
 ## ブラウザーの互換性
 

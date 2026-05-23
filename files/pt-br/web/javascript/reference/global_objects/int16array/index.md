@@ -25,9 +25,9 @@ Para obter mais informações sobre a sintaxe do construtor e os parâmetros, co
   - : Retorna um valor numérico do tamanho do elemento. `2` no caso de um `Int16Array`.
 - Int16Array.length
   - : Propriedade de comprimento estático cujo valor é 0. Para o comprimento real (número de elementos), consulte {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
-- {{jsxref("TypedArray.name", "Int16Array.name")}}
+- {{jsxref("Function.name", "Int16Array.name")}}
   - : Retorna o valor da string do nome do construtor. No caso do tipo `Int16Array`: "Int16Array".
-- {{jsxref("TypedArray.prototype", "Int16Array.prototype")}}
+- {{jsxref("TypedArray", "Int16Array.prototype")}}
   - : Protótipo para os objetos TypedArray.
 
 ## Métodos
@@ -39,7 +39,7 @@ Para obter mais informações sobre a sintaxe do construtor e os parâmetros, co
 
 ## `Int16Array` prototype
 
-Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
+Todos `Int16Array` objetos herdam de {{jsxref("TypedArray", "%TypedArray%.prototype")}}.
 
 ### Propriedades
 
@@ -108,7 +108,7 @@ Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArr
   - : Retorna uma string localizada representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int16Array.prototype.toString()")}}
   - : Retorna uma string representando a matriz e seus elementos. Veja também {{jsxref("Array.prototype.toString()")}}.
-- {{jsxref("TypedArray.@@iterator", "Int16Array.prototype[@@iterator]()")}}
+- {{jsxref("TypedArray/Symbol.iterator", "Int16Array.prototype[@@iterator]()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na lista.
 
 ## Exemplos
@@ -154,7 +154,7 @@ var int16 = new Int16Array(iterable);
 
 ## Notas de compatibilidade
 
-A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("Operators/new", "new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
+A partir do ECMAScript 2015, os construtores `Int16Array` precisam ser construídos com um operador {{jsxref("new")}}. Chamar um construtor `Int16Array` como uma função sem o `new`, irá resultar em {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = Int16Array([1, 2, 3]);

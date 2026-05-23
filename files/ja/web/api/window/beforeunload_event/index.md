@@ -49,7 +49,7 @@ onbeforeunload = (event) => { }
   3. その後、ユーザーがアプリマネージャーからブラウザーを閉じます。
 
   > [!NOTE]
-  > 以上のような問題を回避し、アプリの状態自動保存をより確実に実行するためのシグナルとして、{{domxref(「Document.visibilitychange_event」, 「visibilitychange」)}} イベントの使用をお勧めします。詳細については、[Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) をご覧ください。
+  > 以上のような問題を回避し、アプリの状態自動保存をより確実に実行するためのシグナルとして、{{domxref("Document.visibilitychange_event", "visibilitychange")}} イベントの使用をお勧めします。詳細については、[Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) をご覧ください。
 
 - Firefox では、`beforeunload` は[バックフォワードキャッシュ](https://web.dev/articles/bfcache) (bfcache) と互換性がありません。つまり、Firefox は `beforeunload` リスナーが設定されているページを bfcache に保存しないため、パフォーマンスに悪影響を及ぼします。
 
