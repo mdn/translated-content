@@ -3,7 +3,7 @@ title: Firefox 150 release notes for developers (Stable)
 short-title: Firefox 150 (Stable)
 slug: Mozilla/Firefox/Releases/150
 l10n:
-  sourceCommit: 674d6c8868cde1654eaba3c285afde9d3b60ce9f
+  sourceCommit: 0b214cbce88da71a9d4470364e378285c2a921a5
 ---
 
 このページでは、開発者に影響する Firefox 150 の変更点をまとめています。
@@ -30,8 +30,6 @@ Firefox 150 は、米国時間 [2026 年 4 月 21 日](https://whattrainisitnow.
 
 - メディアベースの擬似クラスである {{cssxref(":buffering")}}、{{cssxref(":muted")}}、{{cssxref(":paused")}}、{{cssxref(":playing")}}、{{cssxref(":seeking")}}、{{cssxref(":stalled")}}、{{cssxref(":volume-locked")}} をサポートしました。これらは {{htmlelement("audio")}} および {{htmlelement("video")}} 要素に対して、再生中や一時停止など現在の状態に基づいてスタイルを設定できます ([Firefox bug 2020775](https://bugzil.la/2020775))。
 
-- {{cssxref("animation-range-start")}} および {{cssxref("animation-range-end")}} プロパティ (および {{cssxref("animation-range")}} ショートハンドプロパティ) をサポートしました。これらのプロパティはアニメーションのタイムラインに沿って適用範囲の開始点と終了点を設定するもので、[スクロール駆動アニメーション](/ja/docs/Web/CSS/Guides/Scroll-driven_animations) のタイムラインのどこでアニメーションを開始および終了するかを制御できます ([Firefox bug 1825427](https://bugzil.la/1825427))。
-
 - {{cssxref("revert-rule")}} CSS キーワードをサポートしました。これにより現在のスタイル規則が存在しないかのようにプロパティの値を決定でき、代わりに別のマッチする規則の値が適用されます ([Firefox bug 2017307](https://bugzil.la/2017307))。
 
 - {{cssxref("overscroll-behavior")}} CSS プロパティ (およびロングハンドプロパティの {{cssxref("overscroll-behavior-x")}}、{{cssxref("overscroll-behavior-y")}}、{{cssxref("overscroll-behavior-block")}}、{{cssxref("overscroll-behavior-inline")}}) を、`overflow: hidden` を適用した要素などスクロール可能なオーバーフローがないスクロールコンテナーに正しく適用するようになりました。以前は、それらの要素でプロパティが無視されていました ([Firefox bug 1837436](https://bugzil.la/1837436))。
@@ -56,6 +54,11 @@ Firefox 150 は、米国時間 [2026 年 4 月 21 日](https://whattrainisitnow.
 
 - {{domxref("Document/ariaNotify","Document")}} および {{domxref("Element/ariaNotify","Element")}} で `ariaNotify()` メソッドをサポートしました。
   これは {{glossary("screen reader", "スクリーンリーダー")}} が読み上げるテキスト文字列をキューに登録するもので、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) に代わる、より人間工学的で信頼性が高い代替手段を提供します ([Firefox bug 2018095](https://bugzil.la/2018095))。
+#### Media、WebRTC、Web Audio
+
+- {{domxref("RTCError")}} および {{domxref("RTCErrorEvent")}} をサポートしました。SDP のパースエラーを報告できます ([Firefox bug 1814459](https://bugzil.la/1814459))。
+- {{domxref("RTCPeerConnectionIceErrorEvent")}} および [`RTCPeerConnection.icecandidateerror` event](/ja/docs/Web/API/RTCPeerConnection/icecandidateerror_event) をサポートしました ([Firefox bug 1561441](https://bugzil.la/1561441))。
+- {{domxref("RTCIceTransport.role")}} をサポートしました ([Firefox bug 2018843](https://bugzil.la/2018843))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
