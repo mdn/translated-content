@@ -47,17 +47,17 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Propriedades de Função
 
-- As propriedades {{jsxref("Global_Objects/Function/caller", "caller")}} e {{jsxref("Global_Objects/Function/arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade _arguments_, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.
+- As propriedades {{jsxref("Function.caller", "caller")}} e {{jsxref("Function.arguments", "arguments")}} foram descontinuadas, porque elas estouram o chamador de funções. Ao invés da propriedade _arguments_, deve-se usar o objeto {{jsxref("Functions/arguments", "arguments")}} dentro dos fechamentos da função.
 
 ### Legacy generator
 
-- {{jsxref("Statements/Legacy_generator_function", "Legacy generator function statement")}} e {{jsxref("Operators/Legacy_generator_function", "Legacy generator function expression")}} foram descontinuados. No lugar deles, use {{jsxref("Statements/function*", "function* statement")}} e {{jsxref("Operators/function*", "function* expression")}}.
-- O {{jsxref("Operators/Array_comprehensions", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} e o {{jsxref("Operators/Generator_comprehensions", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} foram descontinuados.
+- {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function statement")}} e {{jsxref("Deprecated_and_obsolete_features", "Legacy generator function expression")}} foram descontinuados. No lugar deles, use {{jsxref("Statements/function*", "function* statement")}} e {{jsxref("Operators/function*", "function* expression")}}.
+- O {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Array comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} e o {{jsxref("Deprecated_and_obsolete_features", "JS1.7/JS1.8 Generator comprehension", "#Differences_to_the_older_JS1.7.2FJS1.8_comprehensions")}} foram descontinuados.
 
 ### Iterador
 
-- {{jsxref("Global_Objects/StopIteration", "StopIteration")}} foi descontinuado.
-- {{jsxref("Global_Objects/Iterator", "Iterator")}} foi descontinuado.
+- {{jsxref("StopIteration")}} foi descontinuado.
+- {{jsxref("Iterator")}} foi descontinuado.
 
 ### Métodos de objeto
 
@@ -67,13 +67,13 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 
 ### Métodos de data
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} e {{jsxref("Global_Objects/Date/setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} e {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}}.
-- Deve-se usar {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} em códigos novos.
-- {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
+- {{jsxref("Date.getYear", "getYear")}} e {{jsxref("Date.setYear", "setYear")}} foram afetados pelo Bug do Milênio e foram reagrupados em {{jsxref("Date.getFullYear", "getFullYear")}} e {{jsxref("Date.setFullYear", "setFullYear")}}.
+- Deve-se usar {{jsxref("Date.toISOString", "toISOString")}} ao invés do método descontinuado {{jsxref("Date.toUTCString", "toGMTString")}} em códigos novos.
+- {{jsxref("Date.toLocaleFormat", "toLocaleFormat")}} foi descontinuado.
 
 ### Funções
 
-- {{jsxref("Operators/Expression_closures", "Expression closures", "", 1)}} foram descontinuadas. Use {{jsxref("Operators/function", "functions")}} normais ou {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} no lugar delas.
+- {{jsxref("Deprecated_and_obsolete_features", "Expression closures", "", 1)}} foram descontinuadas. Use {{jsxref("Operators/function", "functions")}} normais ou {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} no lugar delas.
 
 ### Proxy
 
@@ -91,7 +91,7 @@ As propriedades a seguir pertencem a instâncias de um `RegExp`, não mais ao ob
 ### Sequências de escape
 
 - Sequências de escape octais (\ seguido por um, dois ou três dígitos octais) foram descontinuadas em literais _string_ e expressões regulares.
-- As funções {{jsxref("Global_Objects/escape", "escape")}} e {{jsxref("Global_Objects/unescape", "unescape")}} foram descontinuadas. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}}, {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}, {{jsxref("Global_Objects/decodeURI", "decodeURI")}} ou {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.
+- As funções {{jsxref("escape")}} e {{jsxref("unescape")}} foram descontinuadas. Use {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} para codificar e decodificar sequências de escape para caracteres especiais.
 
 ### Métodos de _string_
 
@@ -110,9 +110,9 @@ Estas _features_ obsoletas foram totamente removidas do JavaScript e não podem 
 
 ### Function
 
-| Property                                             | Description                 |
-| ---------------------------------------------------- | --------------------------- |
-| {{jsxref("Global_Objects/Function/arity", "arity")}} | Number of formal arguments. |
+| Property                              | Description                 |
+| ------------------------------------- | --------------------------- |
+| {{jsxref("Function.arity", "arity")}} | Number of formal arguments. |
 
 ### Array
 

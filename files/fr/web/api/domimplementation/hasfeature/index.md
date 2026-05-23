@@ -20,9 +20,9 @@ flag = document.implementation.hasFeature(feature, version);
 ### Paramètres
 
 - _feature_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le nom de la fonctionnalité.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) représentant le nom de la fonctionnalité.
 - _version_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la version de la spécification définissant la fonctionnalité.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) représentant la version de la spécification définissant la fonctionnalité.
 
 ## Spécifications
 

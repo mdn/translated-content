@@ -41,13 +41,13 @@ Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères pa
 
 ## Description
 
-Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :
+Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat()")}} :
 
 ```js
 Number.parseFloat === parseFloat; // true
 ```
 
-Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.
+Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat()")}}.
 
 ## Prothèse d'émulation (_polyfill_)
 

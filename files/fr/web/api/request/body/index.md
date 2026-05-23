@@ -16,7 +16,7 @@ et `null` est retourné dans ces cas.
 
 ## Valeur
 
-Un objet {{DOMxRef("ReadableStream")}} ou {{JSxRef("Operators/null", "null")}}.
+Un objet {{DOMxRef("ReadableStream")}} ou {{JSxRef("null")}}.
 
 ## Exemples
 

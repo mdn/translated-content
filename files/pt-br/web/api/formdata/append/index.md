@@ -28,9 +28,9 @@ formData.append(name, value, filename);
 - `name`
   - : O nome do campo cujos dados estão contidas em value.
 - `value`
-  - : O valor deste campo . Nas duas versões este é a {{domxref("USVString")}}, ou caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou {{domxref("USVString")}}, de novo, caso nenhum deses forem especificados este valor é convertido em uma string.
+  - : O valor deste campo . Nas duas versões este é a {{jsxref("String")}}, ou caso não seja , este é convertido em string. Na versão de tres parametros este pode ser {{domxref("Blob")}}, {{domxref("File")}}, ou {{jsxref("String")}}, de novo, caso nenhum deses forem especificados este valor é convertido em uma string.
 - `filename` {{optional_inline}}
-  - : O filename reporta para o servidor (a {{domxref("USVString")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
+  - : O filename reporta para o servidor (a {{jsxref("String")}}), quando a {{domxref("Blob")}} ou {{domxref("File")}} é passado como o segundo parametro. O default filename para {{domxref("Blob")}} o objecto é "blob".
 
 > [!NOTE]
 > Se espisificares {{domxref("Blob")}} como a data append para o objecto `FormData` , o filename a ser reportado para o servidor no "Content-Disposition" header usado para mudar de browser em browser.

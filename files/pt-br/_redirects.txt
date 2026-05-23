@@ -1606,7 +1606,11 @@
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas	/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function
 /pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta	/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta
+/pt-BR/docs/Web/JavaScript/Reference/instanceof	/pt-BR/docs/Web/JavaScript/Reference/Operators/instanceof
+/pt-BR/docs/Web/JavaScript/Reference/new	/pt-BR/docs/Web/JavaScript/Reference/Operators/new
+/pt-BR/docs/Web/JavaScript/Reference/null	/pt-BR/docs/Web/JavaScript/Reference/Operators/null
 /pt-BR/docs/Web/JavaScript/Reference/template_strings	/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+/pt-BR/docs/Web/JavaScript/Reference/this	/pt-BR/docs/Web/JavaScript/Reference/Operators/this
 /pt-BR/docs/Web/JavaScript/Typed_arrays	/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays
 /pt-BR/docs/Web/Manifest	/pt-BR/docs/Web/Progressive_web_apps/Manifest
 /pt-BR/docs/Web/MathML/Element	/pt-BR/docs/Web/MathML/Reference/Element

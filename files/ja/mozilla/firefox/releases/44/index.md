@@ -81,7 +81,7 @@ l10n:
 #### 変更点
 
 - グローバルレベルにおける [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) のバインディングを、ES2015 に準拠させました。[Firefox bug 589199](https://bugzil.la/589199) およびブログ記事 ["Breaking changes in let and const in Firefox Nightly 44"](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) をご覧ください。また、`let` が既定でウェブ JavaScript （厳格モードおよび非厳格モード）で使用できるようになり、バージョンのオプトインが不要になりました ([Firefox bug 932517](https://bugzil.la/932517))。
-- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクターを {{jsxref("Operators/new", "new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ([Firefox bug 980945](https://bugzil.la/980945)、[Firefox bug 1214936](https://bugzil.la/1214936))。
+- [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) ({{jsxref("Int8Array", "Int8Array")}} や {{jsxref("ArrayBuffer", "ArrayBuffer")}} など) のコンストラクターを {{jsxref("new")}} 演算子をつけずに関数として呼び出した場合に、ES6 仕様に従って {{jsxref("TypeError")}} が発生するようになりました ([Firefox bug 980945](https://bugzil.la/980945)、[Firefox bug 1214936](https://bugzil.la/1214936))。
 - {{jsxref("RegExp")}} のスティッキーフラグが、ES2015 標準の [anchored sticky regular expressions](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky#anchored_sticky_flag) に従うようになりました ([Firefox bug 773687](https://bugzil.la/773687))。
 - JavaScript シェル (SpiderMonkey の REPL) の既定 JS バージョンが、ウェブ互換の JS バージョンになりました (JS1.7 以降ではありません) ([Firefox bug 1192329](https://bugzil.la/1192329))。
 

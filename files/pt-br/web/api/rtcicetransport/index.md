@@ -14,11 +14,11 @@ _A interface `RTCIceTransport` herda propriedades de sua interface pai, {{domxre
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
   - : O componente ICE que esta sendo usado pela transporte. O valor é uma das strings do {{domxref("RTCIceTransport")}} tipo enumerável: `{{Glossary("RTP", '"RTP"')}}` ou `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
-  - : O {{domxref("DOMString")}} indica em qual estado de recolhimento o agente ICE esta atualmente. O valor é um dos incluidos no {{domxref("RTCIceGathererState")}} tipo enumerável: `"new"`, `"gathering"`, ou `"complete"`.
+  - : O {{jsxref("String")}} indica em qual estado de recolhimento o agente ICE esta atualmente. O valor é um dos incluidos no {{domxref("RTCIceGathererState")}} tipo enumerável: `"new"`, `"gathering"`, ou `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
-  - : Retorna uma {{domxref("DOMString")}} cujo valor é um membro do tipo enumerável {{domxref("RTCIceRole")}}: `"controlling"` ou `"controlled"`; Isso indica se o agente ICE é aquele que toma a decisão final quanto ao par candidato a ser usado ou não.
+  - : Retorna uma {{jsxref("String")}} cujo valor é um membro do tipo enumerável {{domxref("RTCIceRole")}}: `"controlling"` ou `"controlled"`; Isso indica se o agente ICE é aquele que toma a decisão final quanto ao par candidato a ser usado ou não.
 - {{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}
-  - : O {{domxref("DOMString")}} indica qual o atual estado do agente ICE. O valor do `state` pode ser usado para determinar se o agente ICE fez uma conecxão inicial usando uma par de candidatos viável (`"connected"`), fez a seleção final do par de candidatos (`"completed"`), ou em um estado de erro (`"failed"`), além de outros estados. Veja o tipo enumerável {{domxref("RTCIceTransportState")}} para uma lista completa de estados.
+  - : O {{jsxref("String")}} indica qual o atual estado do agente ICE. O valor do `state` pode ser usado para determinar se o agente ICE fez uma conecxão inicial usando uma par de candidatos viável (`"connected"`), fez a seleção final do par de candidatos (`"completed"`), ou em um estado de erro (`"failed"`), além de outros estados. Veja o tipo enumerável {{domxref("RTCIceTransportState")}} para uma lista completa de estados.
 
 ## Métodos
 

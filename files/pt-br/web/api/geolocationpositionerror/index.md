@@ -21,7 +21,7 @@ _A interface `PositionError` não herda nenhuma propriedade_.
     | `3`   | `TIMEOUT`              | O tempo máximo permitido para obter a geolocalização, definido por {{domxref("PositionOptions.timeout")}} foi atingido antes de se obter a informação. |
 
 - {{domxref("PositionError.message")}} {{readonlyInline}}
-  - : Retorna um {{domxref("DOMString")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
+  - : Retorna um {{jsxref("String")}} humanamente legível descrevendo os detalhes do erro. A especificação observa que esta informação é primariamente projetada para propósitos de debug e não deve ser exibida diretamente na interface com o usuário.
 
 ## Métodos
 

@@ -29,7 +29,7 @@ l10n:
 
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} および {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} を、Release ビルドでサポートしました。`formatRange()` メソッドは、2 つの {{jsxref("Date")}} オブジェクトの間の期間をローカライズおよび整形した文字列で返します (例: "21/01/05 – 21/01/10")。`formatRangeToParts()` メソッドは、整形された期間のロケール固有の*部品*を持つ配列を返します ([Firefox バグ 1653024](https://bugzil.la/1653024))。
 - {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() コンストラクター")}} が、タイムゾーンの表示方法を整形するための `timeZoneName` オプションを新たに 4 種類受け入れるようになりました。これにはローカライズされた GMT 形式の `shortOffset` および `longOffset` と、一般的な非ロケーション形式の `shortGeneric` および `longGeneric` が含まれます ([Firefox バグ 1653024](https://bugzil.la/1653024))。
-- {{jsxref("Global_Objects/Error/Error", "Error() コンストラクター")}} が、`option` 引数の値として `cause` をとれるようになりました。これはコードがエラーをキャッチして、元のエラーやスタックトレースを持つ新たなバージョン、または変更したバージョンのエラーを発生させることができます ([Firefox バグ 1679653](https://bugzil.la/1679653))。
+- {{jsxref("Error.Error", "Error() コンストラクター")}} が、`option` 引数の値として `cause` をとれるようになりました。これはコードがエラーをキャッチして、元のエラーやスタックトレースを持つ新たなバージョン、または変更したバージョンのエラーを発生させることができます ([Firefox バグ 1679653](https://bugzil.la/1679653))。
 
 ### HTTP
 

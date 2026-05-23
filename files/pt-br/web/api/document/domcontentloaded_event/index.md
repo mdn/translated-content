@@ -32,7 +32,7 @@ Se você quer que o DOM seja analisado o mais rápido possível após uma requis
 | Property                        | Type                       | Description                           |
 | ------------------------------- | -------------------------- | ------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Alvo do evento (O topo do DOM).       |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo de evento                        |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | Tipo de evento                        |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | O evento é por padrão bubbles ou não. |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | O evento pode ser cancelado ou não.   |
 

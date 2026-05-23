@@ -24,7 +24,7 @@ Um {{jsxref("Boolean")}} indicando se o valor passado é ou não um número fini
 
 ## Descrição
 
-Em comparação com a função global {{jsxref("isFinite", "isFinite()")}}, esse método não força a conversão do parâmetro para número. Isso significa que só valores do tipo número, que são também finitos, retornam `true`.
+Em comparação com a função global {{jsxref("isFinite()")}}, esse método não força a conversão do parâmetro para número. Isso significa que só valores do tipo número, que são também finitos, retornam `true`.
 
 ## Exemplos
 
