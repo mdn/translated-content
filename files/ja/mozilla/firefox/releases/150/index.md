@@ -54,6 +54,7 @@ Firefox 150 は、米国時間 [2026 年 4 月 21 日](https://whattrainisitnow.
 
 - {{domxref("Document/ariaNotify","Document")}} および {{domxref("Element/ariaNotify","Element")}} で `ariaNotify()` メソッドをサポートしました。
   これは {{glossary("screen reader", "スクリーンリーダー")}} が読み上げるテキスト文字列をキューに登録するもので、[ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions) に代わる、より人間工学的で信頼性が高い代替手段を提供します ([Firefox bug 2018095](https://bugzil.la/2018095))。
+
 #### Media、WebRTC、Web Audio
 
 - {{domxref("RTCError")}} および {{domxref("RTCErrorEvent")}} をサポートしました。SDP のパースエラーを報告できます ([Firefox bug 1814459](https://bugzil.la/1814459))。
