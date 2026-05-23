@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : writingsuggestions"
+title: "Attribut HTML universel : `writingsuggestions`"
 short-title: writingsuggestions
 slug: Web/HTML/Reference/Global_attributes/writingsuggestions
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) {{Glossary("enumerated", "énuméré")}} **`writingsuggestions`** indique si les suggestions d'écriture fournies par le navigateur doivent être activées dans le cadre de l'élément ou non.

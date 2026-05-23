@@ -60,5 +60,5 @@ Más allá de lo básico, CSS permite técnicas de diseño muy avanzadas. Estos 
 
 ### Diseño
 
-- [Usar cajas flexibles en CSS](/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Uso de diseños de varias columnas en CSS](/es/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Usar cajas flexibles en CSS](/es/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Uso de diseños de varias columnas en CSS](/es/docs/Web/CSS/Guides/Multicol_layout/Using)

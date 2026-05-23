@@ -1,12 +1,12 @@
 ---
-title: paint()
+title: Fonction CSS `paint()`
+short-title: paint()
 slug: Web/CSS/Reference/Values/image/paint
-original_slug: Web/CSS/image/paint
 l10n:
-  sourceCommit: 70285e396b5c97675e90b85d573be42078e0168e
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type {{cssxref("&lt;image&gt;")}} générée avec un `PaintWorklet`.
+Le [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type {{CSSxRef("&lt;image&gt;")}} générée avec un `PaintWorklet`.
 
 ## Syntaxe
 
@@ -18,7 +18,7 @@ paint(workletName, ...parameters)
 
 - `workletName`
   - : Le nom du <i lang="en">worklet</i> enregistré.
-- `parameters` {{optional_inline}}
+- `parameters` {{Optional_Inline}}
   - : Des paramètres supplémentaires, optionnels, à passer à `paintWorklet`.
 
 ## Syntaxe formelle
@@ -55,7 +55,7 @@ CSS.paintWorklet.addModule(
 );
 ```
 
-Dans le CSS, on définit la propriété `background-image` comme un type `paint()` avec le nom du worklet, `boxbg`, ainsi que toutes les variables (par ex.&nbsp;: `--box-color` et `--width-subtractor`) que le worklet utilisera&nbsp;:
+Dans le CSS, on définit la propriété `background-image` comme un type `paint()` avec le nom du worklet, `boxbg`, ainsi que toutes les variables (par ex.&nbsp;: `--box-color` et `--width-subtractor`) que le worklet utilise&nbsp;:
 
 ```css live-sample___example-boxbg
 body {
@@ -126,9 +126,9 @@ li:nth-of-type(3n + 1) {
 }
 ```
 
-On a inclus une propriété personnalisée dans le bloc du sélecteur définissant une couleur de boîte (`boxColor`). Les propriétés personnalisées sont accessibles au PaintWorklet.
+On a inclus une propriété personnalisée dans le bloc du sélecteur définissant une couleur de boîte (`--box-color`). Les propriétés personnalisées sont accessibles au PaintWorklet.
 
-{{EmbedLiveSample("example-highlight", "", "300px")}}
+{{EmbedLiveSample("example-highlight", "", 300)}}
 
 ## Spécifications
 
@@ -140,8 +140,8 @@ On a inclus une propriété personnalisée dans le bloc du sélecteur définissa
 
 ## Voir aussi
 
-- L'interface {{domxref('PaintWorkletGlobalScope')}}
+- L'interface {{DOMxRef('PaintWorkletGlobalScope')}}
 - [L'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API)
 - [Utiliser l'API CSS Painting](/fr/docs/Web/API/CSS_Painting_API/Guide)
-- {{cssxref("&lt;image&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;image&gt;")}}
 - [L'API Canvas](/fr/docs/Web/API/Canvas_API)

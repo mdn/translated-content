@@ -6,7 +6,7 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-La méthode statique **`supportedLocalesOf()`** des instances de {{JSxRef("Intl.DurationFormat")}} retourne un tableau contenant celles des locales fournies qui sont prises en charge pour le formatage de durée sans avoir à revenir à la locale par défaut de l'environnement d'exécution.
+La méthode statique **`Intl.DurationFormat.supportedLocalesOf()`** retourne un tableau contenant celles des locales fournies qui sont prises en charge pour le formatage de durée sans avoir à revenir à la locale par défaut de l'environnement d'exécution.
 
 ## Syntaxe
 
@@ -30,7 +30,7 @@ Un tableau de chaînes de caractères représentant un sous-ensemble des balises
 
 ## Exemples
 
-### Utiliser la méthode `supportedLocalesOf()`
+### Utiliser la méthode `Intl.DurationFormat.supportedLocalesOf()`
 
 En supposant un environnement d'exécution qui prend en charge l'indonésien et l'allemand mais pas le balinais pour le formatage de durée, `supportedLocalesOf` retourne les balises de langue indonésienne et allemande inchangées, même si la collation `pinyin` n'est ni pertinente pour le formatage de durée ni utilisée avec l'indonésien, et qu'un allemand spécialisé pour l'Indonésie est peu susceptible d'être pris en charge. Notez la spécification de l'algorithme `"lookup"` ici — un comparateur `"best fit"` pourrait décider que l'indonésien est une correspondance adéquate pour le balinais puisque la plupart des locuteurs balinais comprennent aussi l'indonésien, et donc retourner également la balise de langue balinaise.
 

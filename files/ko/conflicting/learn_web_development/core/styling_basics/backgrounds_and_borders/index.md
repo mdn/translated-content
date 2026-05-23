@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 198d4613e48ec627c860551526131f363f244d36
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴보겠습니다. 그라데이션 (gradients), 배경 이미지, 둥근 테두리를 추가하는 것에서 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.
 
@@ -21,15 +21,15 @@ l10n:
           >기본 소프트웨어 설치</a
         >,
         <a
-          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/ko/docs/Learn/CSS/First_steps"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >CSS 첫 번째 단계</a
         >
         학습)

@@ -6,7 +6,7 @@ original_slug: WebAssembly/JavaScript_interface/Memory/Memory
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Memory()`** コンストラクターは新しい `Memory` オブジェクトを生成します。これは {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティがサイズ変更可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または `SharedArrayBuffer` であり、 WebAssembly の `Instance` からアクセスする生のバイト列のメモリーであるものです。
+**`WebAssembly.Memory()`** コンストラクターは新しい `Memory` オブジェクトを生成します。これは [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティがサイズ変更可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または `SharedArrayBuffer` であり、 WebAssembly の `Instance` からアクセスする生のバイト列のメモリーであるものです。
 
 JavaScript または WebAssembly コードから生成されたメモリーは JavaScript と WebAssembly のどちらからもアクセス、変更が可能になります。
 
@@ -45,7 +45,7 @@ new WebAssembly.Memory(memoryDescriptor);
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
-2 つ目は WebAssembly モジュールからエクスポートされた `WebAssembly.Memory` オブジェクトを使用する方法です。次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドで読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
+2 つ目は WebAssembly モジュールからエクスポートされた `WebAssembly.Memory` オブジェクトを使用する方法です。次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) メソッドで読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {

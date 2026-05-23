@@ -149,7 +149,7 @@ function log(result) {
 ```
 
 {{cssxref("@container")}} で記述されているように、コンテナー要素の CSS はコンテナーの型を指定し、コンテナーの名前を指定することもできます。
-カードには既定のフォントサイズをがあり、最小幅が 700px を超える場合、 `sidebar` という名前の `@container` で上書きされます。
+カードには既定のフォントサイズがあり、最小幅が 700px を超える場合、 `sidebar` という名前の `@container` で上書きされます。
 
 ```html
 <style id="example-styles">

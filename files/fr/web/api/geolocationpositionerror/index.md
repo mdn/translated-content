@@ -21,7 +21,7 @@ _L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
     | `3`    | `TIMEOUT`              | Le temps alloué pour obtenir la position défini par {{domxref("PositionOptions.timeout")}} est écoulé avant que l'information soit obtenu. |
 
 - {{domxref("GeolocationPositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Retourne une {{domxref("DOMString")}} compréhensible par un humain décrivant les détails de l'erreur. Les spécifications indiquent que cela sert au débogage et ne doit pas être directement affiché à l'utilisateur.
+  - : Retourne une {{jsxref("String")}} compréhensible par un humain décrivant les détails de l'erreur. Les spécifications indiquent que cela sert au débogage et ne doit pas être directement affiché à l'utilisateur.
 
 ## Méthodes
 

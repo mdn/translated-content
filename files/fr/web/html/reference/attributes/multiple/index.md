@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : multiple"
+title: "Attribut HTML : `multiple`"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
 l10n:
-  sourceCommit: 7fdf1972da2094ecf91427a578685670c2fbdb17
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email) et [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file) et l'élément {{HTMLElement("select")}}, la manière dont l'utilisateur·ice opte pour plusieurs valeurs dépend du contrôle de formulaire.

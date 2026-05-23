@@ -1,8 +1,9 @@
 ---
-title: content-visibility
+title: Propriété CSS `content-visibility`
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content-visibility`** détermine si un élément affiche son contenu ou non, tout en forçant un solide jeu de restrictions permettant aux agents utilisateurs de potentiellement omettre de larges pans de la mise en page et du travail de rendu jusqu'au moment où le contenu doit être affiché. Fondamentalement, cela permet à l'agent utilisateur d'éviter le travail de rendu d'un élément (comprenant sa mise en page et sa peinture) tant qu'il n'y en a pas besoin — ce qui accélère la vitesse de chargement de la page initiale.

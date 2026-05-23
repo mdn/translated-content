@@ -3,7 +3,7 @@ title: Как настроить локальный сервер для тест
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Эта статья объясняет как установить простой локальный тестовый сервер на вашем компьютере, а так же основы его использования.
 

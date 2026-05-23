@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : form"
+title: "Attribut HTML : `form`"
 short-title: form
 slug: Web/HTML/Reference/Attributes/form
 l10n:
-  sourceCommit: 6afda999d054c2ba12d13d129b13eb35952b4fbe
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`form`** associe un élément lié à un formulaire à un élément HTML {{HTMLElement("form")}} du même document. Cet attribut s'applique aux éléments HTML {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.

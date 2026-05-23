@@ -15,7 +15,7 @@ O cabeçalho deve ser enviado se o servidor responde com um código de resposta 
       <td>{{Glossary("Entity header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

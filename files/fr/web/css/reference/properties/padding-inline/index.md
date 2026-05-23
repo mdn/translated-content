@@ -1,37 +1,93 @@
 ---
-title: padding-inline
+title: Propriété CSS `padding-inline`
+short-title: padding-inline
 slug: Web/CSS/Reference/Properties/padding-inline
-original_slug: Web/CSS/padding-inline
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding-inline`** définit le remplissage logique au début et à la fin de l'axe en ligne d'un élément, ce qui correspond aux propriétés de remplissage physiques en fonction du mode d'écriture, de la direction et de l'orientation du texte de l'élément.
 
-La propriété **`padding-inline`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe en ligne de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+{{InteractiveExample("Démonstration CSS&nbsp;: padding-inline")}}
+
+```css interactive-example-choice
+padding-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline: 15px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline: 5% 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Loin dans les régions inexplorées de l'extrémité démodée du bras spiral
+      occidental de la Galaxie se trouve un petit soleil jaune négligé.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
+
+## Propriétés constitutives
+
+Cette propriété est une propriété raccourcie pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("padding-inline-end")}}
+- {{CSSxRef("padding-inline-start")}}
+
+## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 padding-inline: 10px 20px; /* Des longueurs absolues */
 padding-inline: 1em 2em; /* Des longueurs relatives à la taille du texte */
-padding-inline: 5% 2%; /* Des longueurs relatives à la taille du bloc englobant */
 padding-inline: 10px; /* Une seule valeur définit le remplissage des deux côtés */
 
-/* Valeurs avec un mot-clé */
-padding-inline: auto;
+/* Valeurs de type <percentage> */
+padding-inline: 5% 2%; /* Des longueurs relatives à la taille du bloc englobant */
 
 /* Valeurs globales */
 padding-inline: inherit;
 padding-inline: initial;
+padding-inline: revert;
+padding-inline: revert-layer;
 padding-inline: unset;
 ```
 
-Ces valeurs peuvent être définies individuellement grâce aux propriétés détaillées {{cssxref("padding-inline-start")}} et {{cssxref("padding-inline-end")}}. Pour définir le remplissage sur l'axe de bloc, on pourra utiliser la propriété logique raccourcie {{cssxref("padding-block")}} qui définit {{cssxref("padding-block-start")}} et {{cssxref("padding-block-end")}}.
+La propriété `padding-inline` peut être définie avec une ou deux valeurs. Si une seule valeur est donnée, elle est utilisée comme valeur pour {{CSSxRef("padding-inline-start")}} et {{CSSxRef("padding-inline-end")}}. Si deux valeurs sont données, la première est utilisée pour {{CSSxRef("padding-inline-start")}} et la seconde pour {{CSSxRef("padding-inline-end")}}.
 
-## Syntaxe
+### Valeurs
 
-### Valeur
+- {{CSSxRef("&lt;length&gt;")}}
+  - : La taille du remplissage exprimée avec une valeur absolue. Cette valeur ne peut être négative.
+- {{CSSxRef("&lt;percentage&gt;")}}
+  - : La taille du remplissage exprimée en pourcentage, relative à la taille en ligne (_largeur_ dans une langue horizontale, définie par {{CSSxRef("writing-mode")}}) du [bloc englobant](/fr/docs/Web/CSS/Guides/Display/Containing_block). Cette valeur ne peut être négative.
 
-La propriété `padding-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
+## Description
+
+Les valeurs de remplissage définies par `padding-inline` peuvent être équivalentes aux propriétés {{CSSxRef("padding-top")}} et {{CSSxRef("padding-bottom")}} ou aux propriétés {{CSSxRef("padding-right")}} et {{CSSxRef("padding-left")}}, en fonction des valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.
 
 ## Définition formelle
 
@@ -43,7 +99,17 @@ La propriété `padding-inline` peut prendre les mêmes valeurs que la propriét
 
 ## Exemples
 
-### CSS
+### Définir le remplissage en ligne pour le texte vertical
+
+#### HTML
+
+```html
+<div>
+  <p class="texteExemple">Texte d'exemple</p>
+</div>
+```
+
+#### CSS
 
 ```css
 div {
@@ -59,17 +125,9 @@ div {
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<div>
-  <p class="texteExemple">Texte d'exemple</p>
-</div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", 140, 140)}}
+{{EmbedLiveSample("Définir le remplissage en ligne pour le texte vertical", 140, 140)}}
 
 ## Spécifications
 
@@ -81,13 +139,6 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes :
-  - {{cssxref("padding-top")}},
-  - {{cssxref("padding-right")}},
-  - {{cssxref("padding-bottom")}},
-  - {{cssxref("padding-left")}}
-
-- Les propriétés influençant les propriétés logiques :
-  - {{cssxref("writing-mode")}},
-  - {{cssxref("direction")}},
-  - {{cssxref("text-orientation")}}
+- [Propriétés et valeurs logiques CSS](/fr/docs/Web/CSS/Guides/Logical_properties_and_values)
+- Les propriétés physiques correspondantes&nbsp;: {{CSSxRef("padding-top")}}, {{CSSxRef("padding-right")}}, {{CSSxRef("padding-bottom")}} et {{CSSxRef("padding-left")}}
+- Les propriétés {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

@@ -1,6 +1,9 @@
 ---
-title: Window.focus()
+title: "Window: focus() メソッド"
+short-title: focus()
 slug: Web/API/Window/focus
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
@@ -9,8 +12,8 @@ slug: Web/API/Window/focus
 
 ## 構文
 
-```js
-focus();
+```js-nolint
+focus()
 ```
 
 ### 引数

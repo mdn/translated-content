@@ -31,7 +31,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>accesskey</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_Globales" title="/es/docs/Web/HTML/Atributos_Globales">Atributos Globales</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos_Globales">Atributos Globales</a></td>
       <td>Define una tecla que activa o agrega un foco al elemento.</td>
      </tr>
      <tr>
@@ -116,7 +116,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>class</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Usualmente empleado con CSS para aplicar estilos a elementos con propiedades en comun.</td>
      </tr>
      <tr>
@@ -146,12 +146,12 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>contenteditable</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Indica si el contenido del elemento es editable.</td>
      </tr>
      <tr>
       <td><code>contextmenu</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Define el ID del elemento {{ HTMLElement("menu") }} que servira como menú de contexto para otro elemento.</td>
      </tr>
      <tr>
@@ -171,7 +171,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>data-*</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Permite asociar atributos presonalizados a un elemento HTML.</td>
      </tr>
      <tr>
@@ -191,7 +191,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>dir</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Define la dirección del texto. Los valores permitidos son ltr (Izquierda-a-Derecha) o rtl (Derecha-a-Izquierda).</td>
      </tr>
      <tr>
@@ -211,12 +211,12 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>draggable</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Define si el elemento puede ser arrastrado.</td>
      </tr>
      <tr>
       <td><code>dropzone</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Indica que el elemento acepta contenido soltado en el mismo.</td>
      </tr>
      <tr>
@@ -256,7 +256,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>hidden</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Evita la prestación del elemento dado, manteniendo los elementos secundarios, p.ej. los elementos de script</td>
      </tr>
      <tr>
@@ -291,7 +291,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>id</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Identificador el elemento para acceder al mismo desde CSS o Javascript, este indicador debe ser unico para cada elemento.</td>
      </tr>
      <tr>
@@ -301,7 +301,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>itemprop</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Indica que el elemento contiene el valor de la propiedad especificada de un conjunto.</td>
      </tr>
      <tr>
@@ -316,7 +316,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>lang</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Define el lenguaje utilizado en el elemento.</td>
      </tr>
      <tr>
@@ -516,7 +516,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>spellcheck</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Indica si se permite la corrección ortográfica para el elemento.</td>
      </tr>
      <tr>
@@ -551,7 +551,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>style</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Define los estilos CSS que anulan los estilos establecidos previamente.</td>
      </tr>
      <tr>
@@ -564,7 +564,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>tabindex</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Sobrescribe el orden de tabulacion del navegador y usa el especificado.</td>
      </tr>
      <tr>
@@ -577,7 +577,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>title</code></td>
-      <td><a href="/es/docs/Web/HTML/Atributos_globales" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
+      <td><a href="/es/docs/Web/HTML/Reference/Global_attributes" title="/es/docs/Web/HTML/Atributos globales">Atributo Global</a></td>
       <td>Texto a ser mostrado cuando el cursor esté sobre el elemento.</td>
      </tr>
      <tr>

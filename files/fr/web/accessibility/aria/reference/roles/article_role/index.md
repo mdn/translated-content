@@ -81,11 +81,11 @@ Voir [l'exemple d'affichage de recommandations de restaurants <sup>(angl.)</sup>
 
 ## Ordre de précédence
 
-Ce rôle correspond à l'élément {{HTMLElement('article')}} en HTML et, si possible, c'est cet élément qui devrait être utilisé. Ce rôle ne requiert pas la présence de rôles spécifiques parmi les éléments enfants. Il s'agit du seul rôle autorisé pour un enfant direct d'un élément ayant le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role).
+Ce rôle correspond à l'élément {{HTMLElement('article')}} en HTML et, si possible, c'est cet élément qui devrait être utilisé. Ce rôle ne requiert pas la présence de rôles spécifiques parmi les éléments enfants. Il s'agit du seul rôle autorisé pour un enfant direct d'un élément ayant le rôle [`feed`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role).
 
 ## Voir aussi
 
-- [ARIA&nbsp;: rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Roles/feed_role)
-- [ARIA&nbsp;: rôle `section`](/fr/docs/Web/Accessibility/ARIA/Roles/section_role)
+- [ARIA&nbsp;: rôle `feed`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
+- [ARIA&nbsp;: rôle `section`](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/section_role)
 - L'élément HTML {{HTMLElement('article')}}
 - L'entrée du glossaire {{Glossary("RSS")}}

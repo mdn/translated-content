@@ -1,8 +1,9 @@
 ---
-title: grid-template-rows
+title: Propriété CSS `grid-template-rows`
+short-title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`grid-template-rows`** définit les noms de lignes et les fonctions de dimensionnement des pistes des {{Glossary("grid_row", "lignes de grille")}}.

@@ -1,9 +1,9 @@
 ---
-title: "<sup> : l'élément de mise en exposant"
+title: "Élément HTML `<sup>` : l'élément de mise en exposant"
+short-title: <sup>
 slug: Web/HTML/Reference/Elements/sup
-original_slug: Web/HTML/Element/sup
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément HTML **`<sup>`** permet d'afficher du texte en exposant, uniquement pour des raisons typographiques. Le texte est alors positionné plus haut que la ligne de base et généralement en plus petit.

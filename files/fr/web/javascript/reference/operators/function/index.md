@@ -120,11 +120,11 @@ var b = "monde";
 
 ## Voir aussi
 
-- {{jsxref("Fonctions", "Fonctions et portée des fonctions")}}
-- {{jsxref("Objets_globaux/Function","L'objet Function")}}
-- {{jsxref("Instructions/function", "Instruction function")}}
-- {{jsxref("Instructions/function*", "Instruction function*")}}
-- {{jsxref("Opérateurs/function*", "Expression function*")}}
+- {{jsxref("Functions", "Fonctions et portée des fonctions")}}
+- {{jsxref("Function","L'objet Function")}}
+- {{jsxref("Statements/function", "Instruction function")}}
+- {{jsxref("Statements/function*", "Instruction function*")}}
+- {{jsxref("Operators/function*", "Expression function*")}}
 - {{jsxref("GeneratorFunction")}}
 - [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [Les expressions de fonctions asynchrones (l'opérateur `async function`)](/fr/docs/Web/JavaScript/Reference/Operators/async_function)

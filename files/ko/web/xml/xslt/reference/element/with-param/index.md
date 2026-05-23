@@ -4,7 +4,7 @@ slug: Web/XML/XSLT/Reference/Element/with-param
 original_slug: Web/XSLT/Element/with-param
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `<xsl:with-param>` 요소는 템플릿에 건네는 매개변수 값을 지정합니다.
 

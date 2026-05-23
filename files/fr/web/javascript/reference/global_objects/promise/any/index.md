@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 {{JSRef}}
 
-La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
+La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
 
 {{InteractiveExample("JavaScript Demo: Promise.any()")}}
 
@@ -52,7 +52,7 @@ La promesse renvoyée par `Promise.any()` est résolue avec la première valeur 
 
 ### Toutes les promesses sont rompues
 
-Si toutes les promesses de l'itérable échouent, `Promise.any()` échoue de asynchrone avec pour valeur d'échec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}}, qui étend {{JSxRef("Error")}}, et contient une propriété `errors` qui est un tableau contenant l'ensemble des valeurs d'échec des différentes promesses de l'itérable.
+Si toutes les promesses de l'itérable échouent, `Promise.any()` échoue de asynchrone avec pour valeur d'échec un objet {{JSxRef("AggregateError")}}, qui étend {{JSxRef("Error")}}, et contient une propriété `errors` qui est un tableau contenant l'ensemble des valeurs d'échec des différentes promesses de l'itérable.
 
 - Si l'itérable reçu était vide, alors la promesse retournée par cette méthode est rejetée de manière synchrone et la propriété `errors` de l'objet `AggregateError` est un tableau vide.
 

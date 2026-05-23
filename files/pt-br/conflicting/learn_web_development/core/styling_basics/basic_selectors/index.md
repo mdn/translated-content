@@ -14,17 +14,17 @@ Nesta lição, vamos analisar alguns dos seletores simples, o qual provavelmente
       <th scope="row">Pré-requisitos:</th>
       <td>Familiaridade básica com uso de computadores,
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >Instalando software básico</a
         >, conhecimento básico em
         <a
-          href="/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >como trabalhar com arquivos</a
         >, HTML básico (estude
-        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introdução ao HTML</a
         >), e uma ideia de como o CSS funciona (estude
-        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics">CSS primeiros passos</a>.)
       </td>
     </tr>
     <tr>

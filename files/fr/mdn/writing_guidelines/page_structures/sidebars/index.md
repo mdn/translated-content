@@ -271,9 +271,9 @@ Si une locale MDN n'a pas de valeur définie pour un espace réservé, la versio
 
 Certaines barres latérales sur MDN n'utilisent pas le système standard décrit ci-dessus. Ce sont des macros plus complexes nécessitant un traitement particulier&nbsp;:
 
-- `{{APIRef("<API>")}}`
+- `\{{APIRef("<API>")}}`
   - : La barre latérale API affichée sur les [pages de référence d'API](/fr/docs/Web/API#interfaces). Pour chaque interface, la macro génère automatiquement des liens vers les membres définis sur l'interface — propriétés, méthodes, événements, etc. Le paramètre unique est le nom du groupe d'API défini dans le fichier [`GroupData.json` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json). Pour modifier les pages associées affichées en bas de la barre latérale, modifiez l'entrée GroupData de cette API.
-- `{{DefaultAPISidebar("<API>")}}`
+- `\{{DefaultAPISidebar("<API>")}}`
   - : La barre latérale API affichée sur les [pages d'accueil d'API](/fr/docs/Web/API#spécifications). Le paramètre unique est le nom du groupe d'API défini dans le fichier [`GroupData.json` <sup>(angl.)</sup>](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json). Pour modifier les guides, interfaces, etc. liés dans la barre latérale d'une API, modifiez l'entrée GroupData de cette API.
 - `sidebar: jsref`
   - : La barre latérale sur les [pages de référence JavaScript](/fr/docs/Web/JavaScript/Reference) incluse via le front-matter.

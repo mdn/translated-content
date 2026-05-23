@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 original_slug: Learn/Forms/How_to_build_custom_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript", "Learn_web_development/Extensions/Forms")}}
 
 Hay muchos casos donde los [widgets de formularios HTML disponibles](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) simplemente no son suficientes. si desea [establecer un estilo avanzado](/es/docs/Learn/Forms/Advanced_form_styling) en algunos widgets como el elemento {{HTMLElement("select")}} o si desea proporcionar comportamientos personalizados, no tiene más opción que crear sus propios widgets.
 
@@ -1674,7 +1674,7 @@ To support the [`listbox`](/es/docs/Web/Accessibility/ARIA/Roles/listbox_role) r
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Attribute_selectors).
+> Including both the `role` attribute and a `class` attribute is only necessary if you want to support legacy browsers that do not support the [CSS attribute selectors](/es/docs/Web/CSS/Reference/Selectors/Attribute_selectors).
 
 ### The `aria-selected` attribute
 
@@ -1973,4 +1973,4 @@ Here are a few libraries you should consider before coding your own:
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise. Also, you need to make it feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
 
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript", "Learn_web_development/Extensions/Forms")}}

@@ -156,5 +156,5 @@ Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
 
 ## Mira también
 
-- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/Guides/Transitions/Using)
 - {{domxref("Window.requestAnimationFrame()")}}

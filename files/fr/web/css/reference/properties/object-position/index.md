@@ -1,17 +1,16 @@
 ---
-title: object-position
+title: Propriété CSS `object-position`
+short-title: object-position
 slug: Web/CSS/Reference/Properties/object-position
-original_slug: Web/CSS/object-position
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`object-position`** définit l'alignement du contenu d'un {{Glossary("replaced elements", "élément remplacé")}} au sein de la boîte de l'élément. Les zones de la boîte qui ne sont pas couvertes par l'objet de l'élément remplacé afficheront l'arrière-plan de l'élément.
 
-La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/Guides/Images/Replaced_element_properties) au sein de sa boîte. Les zones de la boîte qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
+Il est possible de modifier la taille intrinsèque de l'objet de l'élément remplacé (c'est-à-dire sa taille naturelle) pour l'adapter à la boîte de l'élément en utilisant la propriété {{CSSxRef("object-fit")}}.
 
-> [!NOTE]
-> Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit).
-
-{{InteractiveExample("CSS Demo: object-position")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: object-position")}}
 
 ```css interactive-example-choice
 object-position: 50% 50%;
@@ -50,43 +49,64 @@ object-position: 250px 125px;
 ## Syntaxe
 
 ```css
-/* Valeurs de positionnement */
-/* Type <position>           */
-object-position: center top;
-object-position: 100px 50px;
+/* Valeurs avec un mot-clé */
+object-position: top;
+object-position: bottom;
+object-position: left;
+object-position: right;
+object-position: center;
+
+/* Valeurs de type <percentage> */
+object-position: 25% 75%;
+
+/* Valeurs de type <length> */
+object-position: 0 0;
+object-position: 1cm 2cm;
+object-position: 10ch 8em;
+
+/* Valeurs de décalage par rapport aux bords */
+object-position: bottom 10px right 20px;
+object-position: right 3em bottom 10px;
+object-position: top 0 right 10px;
 
 /* Valeurs globales */
 object-position: inherit;
 object-position: initial;
 object-position: revert;
+object-position: revert-layer;
 object-position: unset;
 ```
 
 ### Valeurs
 
-- `<position>`
-  - : Une valeur de type [`<position>`](/fr/docs/Web/CSS/Reference/Values/position_value), c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.
+- {{CSSxRef("&lt;position&gt;")}}
+  - : De une à quatre valeurs qui définissent la position en 2D de l'élément. Des décalages relatifs ou absolus peuvent être utilisés.
+
+> [!NOTE]
+> La position peut être définie de manière à ce que l'élément remplacé soit dessiné en dehors de sa boîte.
 
 ## Définition formelle
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## Syntaxe formelle
 
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## Exemples
 
-### HTML
+### Positionner le contenu d'une image
 
-Dans ce fragment HTML, on a deux éléments [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img), chacun affichant le logo de MDN.
+#### HTML
+
+Dans ce fragment HTML, on a deux éléments HTML {{HTMLElement("img")}}, chacun affichant le logo de MDN.
 
 ```html
 <img id="object-position-1" src="mdn.svg" alt="Logo MDN" />
 <img id="object-position-2" src="mdn.svg" alt="Logo MDN" />
 ```
 
-### CSS
+#### CSS
 
 Le code CSS implique la mise en forme par défaut pour les éléments `<img>` et des styles différents pour les deux images.
 
@@ -111,9 +131,9 @@ img {
 
 La première image est positionnée avec son bord gauche situé à 10 pixels du bord gauche de la boîte de l'élément. La seconde image est positionnée avec son bord droit poussé sur le bord droit de la boîte de l'élément et est située vers le bas de 10% de la hauteur de la boîte de l'élément.
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('', '100%','600px')}}
+{{EmbedLiveSample("Positionner le contenu d'une image", "100%", 600)}}
 
 ## Spécifications
 
@@ -125,8 +145,4 @@ La première image est positionnée avec son bord gauche situé à 10 pixels du 
 
 ## Voir aussi
 
-- Les autres propriétés CSS liées aux images&nbsp;:
-  - [`object-fit`](/fr/docs/Web/CSS/Reference/Properties/object-fit)
-  - [`image-orientation`](/fr/docs/Web/CSS/Reference/Properties/image-orientation)
-  - [`image-rendering`](/fr/docs/Web/CSS/Reference/Properties/image-rendering)
-  - [`image-resolution`](/fr/docs/Web/CSS/Reference/Properties/image-resolution)
+- Les autres propriétés CSS associées aux images&nbsp;: {{CSSxRef("object-fit")}}, {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("image-resolution")}}.

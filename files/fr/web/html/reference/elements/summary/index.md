@@ -1,8 +1,9 @@
 ---
-title: "<summary> : l'élément de révélation d'un résumé"
+title: "Élément HTML `<summary>` : l'élément de révélation d'un résumé"
+short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
 l10n:
-  sourceCommit: 0ab262675372b83fc870accf3dc46d6a367c451c
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<summary>`** représente une boîte permettant de révéler le contenu d'un résumé ou d'une légende pour le contenu d'un élément {{HTMLElement("details")}}. En cliquant sur l'élément `<summary>`, on passe de l'état affiché à l'état masqué (et vice versa) de l'élément `<details>` parent.
@@ -189,7 +190,7 @@ details:last-of-type summary::-webkit-details-marker {
 }
 ```
 
-Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
+Le CSS inclut le [sélecteur d'attribut](/fr/docs/Web/CSS/Reference/Selectors/Attribute_selectors) `[open]`, qui ne correspond que lorsque l'attribut `open` est présent (c'est-à-dire lorsque l'élément `<details>` est ouvert). Les pseudo-classes {{CSSxRef(":first-of-type")}} et {{CSSxRef(":last-of-type")}} ciblent respectivement le premier et le dernier élément du même type. Nous avons inclus le pseudo-élément préfixé `-webkit-` dans une pseudo-classe {{CSSxRef(":is()")}} car elle accepte une [liste de sélecteurs tolérante](/fr/docs/Web/CSS/Reference/Selectors/Selector_list#liste_de_sélecteurs_tolérante)&nbsp;: si le pseudo-élément préfixé est invalide dans un navigateur, tout le bloc de sélecteurs ne sera pas invalidé. Nous avons aussi utilisé la [syntaxe imbriquée de CSS](/fr/docs/Web/CSS/Reference/Selectors/Nesting_selector). Voir le module [Sélecteurs CSS](/fr/docs/Web/CSS/Guides/Selectors).
 
 #### HTML
 

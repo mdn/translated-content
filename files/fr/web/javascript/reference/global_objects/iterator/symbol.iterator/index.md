@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-La méthode **`[Symbol.iterator]()`** des instances de {{JSxRef("Iterator")}} implémente le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) et permet aux itérateurs intégrés d'être consommés par la plupart des syntaxes s'attendant à des objets itérables, comme la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) et les boucles {{JSxRef("Statements/for...of", "for...of")}}. Elle retourne la valeur de {{JSxRef("Operators/this", "this")}}, qui est l'objet itérateur lui-même.
+La méthode **`[Symbol.iterator]()`** des instances de {{JSxRef("Iterator")}} implémente le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) et permet aux itérateurs intégrés d'être consommés par la plupart des syntaxes s'attendant à des objets itérables, comme la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) et les boucles {{JSxRef("Statements/for...of", "for...of")}}. Elle retourne la valeur de {{JSxRef("this")}}, qui est l'objet itérateur lui-même.
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ Aucun.
 
 ### Valeur de retour
 
-La valeur de {{JSxRef("Operators/this", "this")}}, qui est l'objet itérateur lui-même.
+La valeur de {{JSxRef("this")}}, qui est l'objet itérateur lui-même.
 
 ## Exemples
 

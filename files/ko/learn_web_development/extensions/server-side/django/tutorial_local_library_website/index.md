@@ -13,7 +13,7 @@ original_slug: Learn/Server-side/Django/Tutorial_local_library_website
     <tr>
       <th scope="row">사전학습:</th>
       <td>
-        <a href="/ko/docs/Learn/Server-side/Django/Introduction">Django 소개</a>
+        <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/Introduction">Django 소개</a>
         파트를 읽으세요. 이어지는 파트를 위해서는
         <a href="/ko/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"
           >Django개발 환경 설치하기</a

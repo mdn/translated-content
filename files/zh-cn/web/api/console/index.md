@@ -176,17 +176,17 @@ console.log(
 
 可以使用嵌套组来把视觉上相关的元素合并，以协助组织你的输出。使用`console.group()`创建新的嵌套块，或者用`console.groupCollapsed()` 创建默认折叠的块，这种块需要点击闭合按钮来展开才能读到。
 
-直接调用 `console.groupEnd()`.就可以退出当前组。比如下面的代码：
+直接调用 `console.groupEnd()` 就可以退出当前组。比如下面的代码：
 
 ```js
 console.log("This is the outer level");
-console.group();
-console.log("Level 2");
-console.group();
-console.log("Level 3");
-console.warn("More of level 3");
+console.group("First group");
+console.log("In the first group");
+console.group("Second group");
+console.log("In the second group");
+console.warn("Still in the second group");
 console.groupEnd();
-console.log("Back to level 2");
+console.log("Back to the first group");
 console.groupEnd();
 console.debug("Back to the outer level");
 ```

@@ -1,15 +1,15 @@
 ---
-title: hsl()
+title: Fonction CSS `hsl()`
+short-title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
-original_slug: Web/CSS/color_value/hsl
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]
 > La notation fonctionnelle `hsla()` est un alias de `hsl()`. Elles sont exactement équivalentes. Il est recommandé d'utiliser `hsl()`.
 
-La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{glossary("color space", "espace de couleur")}} {{glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`hsl()`** exprime un {{Glossary("color space", "espace de couleur")}} {{Glossary("RGB", "sRGB")}} selon ses composantes de _teinte_ (<i lang="en">hue</i> en anglais), _saturation_, et _luminosité_. Une composante _alpha_ optionnelle représente l'opacité de la couleur.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: hsl()")}}
 
@@ -83,23 +83,23 @@ hsl(H S L[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `H`
-  - : Un {{CSSXref("&lt;number&gt;")}}, un {{CSSXref("&lt;angle&gt;")}} ou le mot‑clé `none` (équivalent à `0deg` dans ce cas)&nbsp;: représentant l'angle de {{CSSXref("&lt;hue&gt;")}} de la couleur.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un angle ({{CSSxRef("&lt;angle&gt;")}}) ou le mot‑clé `none` (équivalent à `0deg` dans ce cas)&nbsp;: représentant l'angle de la valeur {{CSSxRef("&lt;hue&gt;")}} de la couleur.
 
     > [!NOTE]
-    > Les angles correspondant à des teintes particulières, varient entre les espaces colorimétriques sRGB (utilisé par `hsl()` et {{CSSXref("color_value/hwb", "hwb()")}}), CIELAB (utilisé par {{CSSXref("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSXref("color_value/oklch", "oklch()")}})&nbsp;: consultez la page de référence {{CSSXref("&lt;hue&gt;")}} pour des détails et des exemples.
+    > Les angles correspondant à des teintes particulières, varient entre les espaces colorimétriques sRGB (utilisé par `hsl()` et {{CSSxRef("color_value/hwb", "hwb()")}}), CIELAB (utilisé par {{CSSxRef("color_value/lch", "lch()")}}) et Oklab (utilisé par {{CSSxRef("color_value/oklch", "oklch()")}})&nbsp;: consultez la page de référence {{CSSxRef("&lt;hue&gt;")}} pour des détails et des exemples.
 
 - `S`
-  - : Un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la saturation de la couleur. `100%` est complètement saturé, tandis que `0%` est complètement désaturé (gris).
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la saturation de la couleur. `100%` est complètement saturé, tandis que `0%` est complètement désaturé (gris).
 - `L`
-  - : Un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur. `100%` correspond au blanc, `0%` au noir, et `50%` à la valeur « normale ».
-- `A` {{optional_inline}}
-  - : Un {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle vaut par défaut `100%`. Si elle est incluse, elle est précédée d'un slash (`/`).
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Cette valeur représente la luminosité de la couleur. `100%` correspond au blanc, `0%` au noir, et `50%` à la valeur « normale ».
+- `A` {{Optional_Inline}}
+  - : Un {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle vaut par défaut `100%`. Si elle est incluse, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
-> Voir les [Composants de couleur manquants](/fr/docs/Web/CSS/Reference/Values/color_value#missing_color_components) pour plus d'informations sur l'effet de `none`.
+> Voir les [Composantes de couleur manquantes](/fr/docs/Web/CSS/Reference/Values/color_value#composantes_de_couleur_manquantes) pour plus d'informations sur l'effet de `none`.
 
 > [!NOTE]
-> Les couleurs absolues `hsl()` sont sérialisées en valeurs {{CSSXref("color_value/rgb", "rgb()")}}. Les valeurs des composantes rouge, verte et bleue peuvent être arrondies lors de la sérialisation.
+> Les couleurs absolues `hsl()` sont sérialisées en valeurs {{CSSxRef("color_value/rgb", "rgb()")}}. Les valeurs des composantes rouge, verte et bleue peuvent être arrondies lors de la sérialisation.
 
 #### Syntaxe des valeurs relatives
 
@@ -110,24 +110,24 @@ hsl(from <color> H S L[ / A])
 Les paramètres sont les suivants&nbsp;:
 
 - `from <color>`
-  - : Le mot‑clé `from` est toujours présent pour définir une couleur relative, suivi d'une valeur {{cssxref("&lt;color&gt;")}} représentant la couleur d'**origine**. Il s'agit de la couleur de départ sur laquelle se base la couleur relative. La couleur d'origine peut être _n'importe quelle_ syntaxe {{cssxref("&lt;color&gt;")}} valide, y compris une autre couleur relative.
+  - : Le mot‑clé `from` est toujours présent pour définir une couleur relative, suivi d'une valeur {{CSSxRef("&lt;color&gt;")}} représentant la couleur d'**origine**. Il s'agit de la couleur de départ sur laquelle se base la couleur relative. La couleur d'origine peut être _n'importe quelle_ syntaxe {{CSSxRef("&lt;color&gt;")}} valide, y compris une autre couleur relative.
 - `H`
-  - : Un nombre ({{CSSXref("&lt;number&gt;")}}), un {{CSSXref("&lt;angle&gt;")}} ou le mot‑clé `none` (équivalent à `0deg` dans ce cas) représentant l'angle de {{CSSXref("&lt;hue&gt;")}} de la couleur de sortie.
+  - : Un nombre ({{CSSxRef("&lt;number&gt;")}}), un {{CSSxRef("&lt;angle&gt;")}} ou le mot‑clé `none` (équivalent à `0deg` dans ce cas) représentant l'angle de {{CSSxRef("&lt;hue&gt;")}} de la couleur de sortie.
 - `S`
-  - : Un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Ceci représente la saturation de la couleur de sortie. `100%` est complètement saturé, tandis que `0%` est complètement désaturé (gris).
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Ceci représente la saturation de la couleur de sortie. `100%` est complètement saturé, tandis que `0%` est complètement désaturé (gris).
 - `L`
-  - : Un pourcentage ({{CSSXref("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Ceci représente la luminosité de la couleur de sortie. `100%` correspond au blanc, `0%` au noir, et `50%` à la valeur «&nbsp;normale&nbsp;».
-- `A` {{optional_inline}}
-  - : Une valeur {{CSSXref("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, elle est précédée d'un slash (`/`).
+  - : Un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou le mot‑clé `none` (équivalent à `0%` dans ce cas). Ceci représente la luminosité de la couleur de sortie. `100%` correspond au blanc, `0%` au noir, et `50%` à la valeur «&nbsp;normale&nbsp;».
+- `A` {{Optional_Inline}}
+  - : Une valeur {{CSSxRef("&lt;alpha-value&gt;")}} représentant la valeur du canal alpha de la couleur de sortie, où `0` correspond à `0%` (entièrement transparent) et `1` correspond à `100%` (entièrement opaque). Le mot‑clé `none` peut également être utilisé pour indiquer explicitement l'absence de canal alpha. Si la valeur du canal `A` n'est pas précisée, elle prend par défaut la valeur du canal alpha de la couleur d'origine. Si elle est incluse, elle est précédée d'un slash (`/`).
 
 > [!NOTE]
-> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur via la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} renvoie la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
+> Pour permettre la représentation de l'ensemble du spectre des couleurs visibles, la sortie des fonctions de couleur relative `hsl()` est sérialisée en `color(srgb)`. Ainsi, l'obtention de la valeur de couleur avec la propriété {{DOMxRef("HTMLElement.style")}} ou la méthode {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} renvoie la couleur de sortie sous la forme d'une valeur [`color(srgb ...)`](/fr/docs/Web/CSS/Reference/Values/color_value/color).
 
 #### Définition des composantes de canal de sortie pour les couleurs relatives
 
-Lorsqu'on utilise la syntaxe de couleur relative à l'intérieur d'une fonction `hsl()`, le navigateur convertit la couleur d'origine en une couleur HSL équivalente (si elle n'est pas déjà spécifiée ainsi). La couleur est définie par trois valeurs de canal distinctes — `h` (teinte), `s` (saturation) et `l` (luminosité) — plus une valeur de canal alpha (`alpha`). Ces valeurs de canal sont mises à disposition à l'intérieur de la fonction pour être utilisées lors de la définition des valeurs des canaux de la couleur de sortie&nbsp;:
+Lorsqu'on utilise la syntaxe de couleur relative à l'intérieur d'une fonction `hsl()`, le navigateur convertit la couleur d'origine en une couleur HSL équivalente (si elle n'est pas déjà définie ainsi). La couleur est définie par trois valeurs de canal distinctes — `h` (teinte), `s` (saturation) et `l` (luminosité) — plus une valeur de canal alpha (`alpha`). Ces valeurs de canal sont mises à disposition à l'intérieur de la fonction pour être utilisées lors de la définition des valeurs des canaux de la couleur de sortie&nbsp;:
 
-- La valeur `h` est résolue en un nombre {{cssxref("&lt;number&gt;")}} compris entre `0` et `360`, qui représente la valeur en degrés de la {{cssxref("&lt;hue&gt;")}} de la couleur d'origine.
+- La valeur `h` est résolue en un nombre {{CSSxRef("&lt;number&gt;")}} compris entre `0` et `360`, qui représente la valeur en degrés de la {{CSSxRef("&lt;hue&gt;")}} de la couleur d'origine.
 - Les valeurs `s` et `l` sont chacune résolues en un `<number>` entre `0` et `100`, inclus, où `100` équivaut à `100%`.
 - La valeur `alpha` est résolue en un `<number>` entre `0` et `1`, inclus.
 
@@ -180,7 +180,7 @@ hsl(from rgb(255 0 0 / 0.8) h s l / 0.5)
 /* Couleur de sortie calculée : color(srgb 1 0 0 / 0.5) */
 ```
 
-Dans l'exemple suivant, la couleur d'origine `rgb()` est à nouveau convertie en une représentation `hsl()` — `hsl(0 100% 50% / 0.8)`. Des calculs {{cssxref("calc")}} sont appliqués aux valeurs `H`, `S`, `L` et `A`, et la couleur de sortie finale est l'équivalent de `hsl(60 80% 30% / 0.7)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.72 0.72 0.08 / 0.7)`.
+Dans l'exemple suivant, la couleur d'origine `rgb()` est à nouveau convertie en une représentation `hsl()` — `hsl(0 100% 50% / 0.8)`. Des calculs {{CSSxRef("calc")}} sont appliqués aux valeurs `H`, `S`, `L` et `A`, et la couleur de sortie finale est l'équivalent de `hsl(60 80% 30% / 0.7)` dans l'espace colorimétrique sRGB&nbsp;: `color(srgb 0.72 0.72 0.08 / 0.7)`.
 
 ```css
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
@@ -230,9 +230,9 @@ div {
 
 ### Utiliser les couleurs relatives avec `hsl()`
 
-Cet exemple met en forme trois éléments {{htmlelement("div")}} avec des couleurs d'arrière-plan différentes. Celui du milieu reçoit la variable `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
+Cet exemple met en forme trois éléments {{HTMLElement("div")}} avec des couleurs d'arrière-plan différentes. Celui du milieu reçoit la variable `--base-color` non modifiée, tandis que ceux de gauche et de droite reçoivent des variantes éclaircies et assombries de cette `--base-color`.
 
-Ces variantes sont définies à l'aide de couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est transmise à une fonction `hsl()`, et la couleur de sortie a son canal de luminosité modifié pour obtenir l'effet souhaité via une fonction `calc()`, tandis que la teinte et la saturation restent inchangées. La couleur éclaircie ajoute 20% au canal de luminosité, et la couleur assombrie soustrait 20% à ce canal.
+Ces variantes sont définies à l'aide de couleurs relatives — la [propriété personnalisée](/fr/docs/Web/CSS/Reference/Properties/--*) `--base-color` est transmise à une fonction `hsl()`, et la couleur de sortie a son canal de luminosité modifié pour obtenir l'effet souhaité avec une fonction `calc()`, tandis que la teinte et la saturation restent inchangées. La couleur éclaircie ajoute 20% au canal de luminosité, et la couleur assombrie soustrait 20% à ce canal.
 
 ```html hidden
 <div id="container">
@@ -394,7 +394,7 @@ div.legacyHSLA {
 
 ## Voir aussi
 
-- Le type de donnée {{CSSXref("&lt;hue&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
 - Les fonctions de couleur [`lch()`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) et [`hwb()`](/fr/docs/Web/CSS/Reference/Values/color_value/hwb)
 - [Interpolation de la teinte dans `color-mix()`](/fr/docs/Web/CSS/Reference/Values/color_value/color-mix#utiliser_linterpolation_de_teinte_avec_color-mix)
 - [Liste de toutes les notations de couleur](/fr/docs/Web/CSS/Reference/Values/color_value)

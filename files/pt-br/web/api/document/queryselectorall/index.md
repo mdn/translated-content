@@ -32,13 +32,13 @@ var matches = document.querySelectorAll("div.note, div.alert");
 
 ## Notas
 
-Retorna uma {{ jsxref("NodeList") }} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.
+Retorna uma {{domxref("NodeList")}} não-viva (alterações no DOM não refletem na lista) de todos os elementos que coincidam com os seletores informados.
 
 Lança uma exceção `SYNTAX_ERR` se o grupo especificado de seletores for inválido.
 
 `querySelectorAll()` foi introduzida na WebApps API.
 
-Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/Web/CSS/Pseudo-elements), a {{ jsxref("NodeList") }} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
+Navegadores baseados em _WebKit_ têm um _bug_: quando a string `seletores` contém um [pseudo-elemento CSS](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-elements), a {{domxref("NodeList")}} retornada não esta vazia, neste caso ela contém o elemento {{ HTMLElement("html") }}.
 
 ## Compatibilidade com navegadores
 

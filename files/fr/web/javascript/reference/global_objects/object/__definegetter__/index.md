@@ -29,7 +29,7 @@ obj.__defineGetter__(prop, func);
 
 ## Description
 
-La méthode `__defineGetter__` permet de définir un {{jsxref("Opérateurs/L_opérateur_get", "accesseur", "", 1)}} sur un objet pré-existant.
+La méthode `__defineGetter__` permet de définir un {{jsxref("Functions/get", "accesseur", "", 1)}} sur un objet pré-existant.
 
 ## Exemples
 
@@ -73,7 +73,7 @@ console.log(o.gimmeFive); // 5
 ## Voir aussi
 
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- L'opérateur {{jsxref("Opérateurs/L_opérateur_get", "get")}}
+- L'opérateur {{jsxref("Functions/get", "get")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)

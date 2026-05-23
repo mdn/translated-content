@@ -45,5 +45,5 @@ Cet objet contient une propriété `url` qui indique l'URL de base du module. Da
 
 ## Voir aussi
 
-- {{jsxref("Instructions/import","import")}}
-- {{jsxref("Instructions/export","export")}}
+- {{jsxref("Statements/import","import")}}
+- {{jsxref("Statements/export","export")}}

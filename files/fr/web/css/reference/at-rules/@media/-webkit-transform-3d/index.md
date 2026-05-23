@@ -1,8 +1,9 @@
 ---
-title: -webkit-transform-3d
+title: Caractéristique média CSS `-webkit-transform-3d`
+short-title: -webkit-transform-3d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-3d
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) booléenne [CSS](/fr/docs/Web/CSS) **`-webkit-transform-3d`** est une [extension WebKit](/fr/docs/Web/CSS/Reference/Webkit_extensions) qui vaut `true` si les transformations CSS 3D {{CSSxRef("transform")}} préfixées sont prises en charge.
@@ -56,7 +57,6 @@ Une meilleure méthode pour vérifier la prise en charge par le navigateur consi
 - La caractéristique média {{CSSxRef("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-transition", "-webkit-transition")}}
 - La caractéristique média {{CSSxRef("@media/-webkit-animation", "-webkit-animation")}}
-- [Page de test sur quirksmode.org <sup>(angl.)</sup>](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - La propriété {{CSSxRef("transform")}} et [utiliser les transformations CSS](/fr/docs/Web/CSS/Guides/Transforms/Using)
 - La règle {{CSSxRef("@media")}} et [utiliser les requêtes média](/fr/docs/Web/CSS/Guides/Media_queries/Using)
 - La règle {{CSSxRef("@supports")}} et [utiliser les requêtes de fonctionnalité](/fr/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

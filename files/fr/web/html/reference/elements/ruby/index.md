@@ -1,8 +1,9 @@
 ---
-title: "<ruby> : l'élément d'annotation de Ruby"
+title: "Élément HTML `<ruby>` : l'élément d'annotation de Ruby"
+short-title: <ruby>
 slug: Web/HTML/Reference/Elements/ruby
 l10n:
-  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<ruby>`** représente de petites annotations affichées au-dessus, en dessous ou à côté du texte de base, généralement utilisées pour indiquer la prononciation des caractères d'Asie orientale. Il peut aussi servir à annoter d'autres types de texte, mais cet usage est moins courant.

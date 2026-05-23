@@ -26,7 +26,7 @@ Un objeto {{DOMxRef("Storage")}} que se puede utilizar para acceder al espacio d
 ### Excepciones
 
 - `SecurityError`
-  - : La solicitud viola una decisión de política, o el origen no es [una tupla válida de protocolo/host/puerto](/es/docs/Web/Security/Same-origin_policy) (esto puede suceder si el origen usa el protocolo `file:` o `data:`, por ejemplo). Por ejemplo, el usuario puede tener su navegador configurado a fin de denegar el permiso para conservar datos al origen especificado.
+  - : La solicitud viola una decisión de política, o el origen no es [una tupla válida de protocolo/host/puerto](/es/docs/Web/Security/Defenses/Same-origin_policy) (esto puede suceder si el origen usa el protocolo `file:` o `data:`, por ejemplo). Por ejemplo, el usuario puede tener su navegador configurado a fin de denegar el permiso para conservar datos al origen especificado.
 
 ## Ejemplo
 

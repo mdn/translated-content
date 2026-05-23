@@ -2,7 +2,7 @@
 title: image-rendering
 slug: Web/SVG/Reference/Attribute/image-rendering
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
 **`image-rendering`** 属性は、画像処理を行う際に速度と品質のトレードオフをどのように行うかについて、ブラウザーにヒントを提供します。

@@ -600,18 +600,3 @@ Le premier paragraphe devrait donc être à la fois bref et informatif.
 ### Référence de la discussion
 
 Voir l'<i lang="en">issue</i> GitHub suivante pour la discussion et le consensus <https://github.com/mdn/content/issues/3923> (en anglais).
-
-## KumaScript
-
-Au sein d'une page, on pourra inclure des appels à des macros KumaScript dans les contenus en prose&nbsp;:
-
-```md
-La propriété **`margin`** [CSS](/fr/docs/Web/CSS) définit la taille des marges sur les quatres côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}} et \{{cssxref("margin-left")}}.
-
-\{{EmbedInteractiveExample("pages/css/margin.html")}}
-
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (inline) qui ne sont pas remplacés
-(par exemple les \{{HTMLElement("span")}} ou \{{HTMLElement("code")}}).
-```
-
-Voir [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros) pour plus d'informations sur les macros.

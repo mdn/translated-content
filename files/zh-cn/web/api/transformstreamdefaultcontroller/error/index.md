@@ -1,9 +1,12 @@
 ---
-title: TransformStreamDefaultController.error()
+title: TransformStreamDefaultController：error() 方法
+short-title: error()
 slug: Web/API/TransformStreamDefaultController/error
+l10n:
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的 **`error()`** 方法会使流的两端出错。与它的进一步交互都会失败并携带给定的错误信息，并且队列中的任何分块都将被丢弃。
 
@@ -24,12 +27,23 @@ error(reason)
 
 ## 示例
 
-在这个示例中，当一个分块中包含 symbol 时，`error()` 方法被使用。
+在此示例中，当某个分块无法进行转换时，会调用 `error()` 方法。
 
 ```js
-case 'symbol':
-  controller.error("Cannot send a symbol as a chunk part")
-  break
+const transformContent = {
+  start() {
+    /* … */
+  },
+  async transform(chunk, controller) {
+    try {
+      chunk = await applyMyTransformation(chunk);
+    } catch (err) {
+      controller.error(`无法转换分块：${err}`);
+    }
+    // …
+  },
+  // …
+};
 ```
 
 ## 规范

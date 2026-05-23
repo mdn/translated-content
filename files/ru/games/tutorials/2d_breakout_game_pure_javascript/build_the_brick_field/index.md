@@ -108,4 +108,4 @@ drawBricks();
 
 Итак, теперь у нас есть кирпичи! Но мяч вообще не взаимодействует с ними - мы изменим это, поскольку мы переходим в седьмую главу: [Collision detection](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}

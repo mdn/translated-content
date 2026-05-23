@@ -1,8 +1,9 @@
 ---
-title: <time>
+title: Type CSS `<time>`
+short-title: <time>
 slug: Web/CSS/Reference/Values/time
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<time>`** représente une valeur temporelle exprimée en secondes ou en millisecondes. Il est utilisé dans {{CSSxRef("animation")}}, {{CSSxRef("transition")}} et les propriétés associées.

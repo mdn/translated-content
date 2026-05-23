@@ -1,9 +1,9 @@
 ---
-title: <blend-mode>
+title: Type CSS `<blend-mode>`
+short-title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
-original_slug: Web/CSS/blend-mode
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<blend-mode>`** définit la façon dont les couleurs doivent apparaître lorsque des éléments se superposent. Il est utilisé dans les propriétés {{CSSxRef("background-blend-mode")}} et {{CSSxRef("mix-blend-mode")}}.

@@ -1,8 +1,9 @@
 ---
-title: <input type="month">
+title: Valeur d'attribut HTML `<input type="month">`
+short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 l10n:
-  sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisateur·ice peut saisir un mois et année.

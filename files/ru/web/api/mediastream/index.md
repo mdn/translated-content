@@ -33,9 +33,9 @@ _Этот интерфейс наследует свойства своего р
 ### Обработчики событий
 
 - {{domxref("MediaStream.onaddtrack")}}
-  - : Объект [`event handler`](/ru/docs/Web/Events/Event_handlers), содержащий действие, которое должно выполняться, когда случается событие [`addtrack`](/ru/docs/Web/API/VideoTrackList/addtrack_event) при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
+  - : Объект [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), содержащий действие, которое должно выполняться, когда случается событие [`addtrack`](/ru/docs/Web/API/VideoTrackList/addtrack_event) при добавлении нового объекта {{domxref("MediaStreamTrack")}}.
 - {{domxref("MediaStream.onremovetrack")}}
-  - : Объект [`event handler`](/ru/docs/Web/Events/Event_handlers), содержащий действие, которое должно выполняться, когда случается событие [`removetrack`](/ru/docs/Web/API/VideoTrackList/removetrack_event) при удалении объекта {{domxref("MediaStreamTrack")}}.
+  - : Объект [`event handler`](/ru/docs/Web/API/Document_Object_Model/Events), содержащий действие, которое должно выполняться, когда случается событие [`removetrack`](/ru/docs/Web/API/VideoTrackList/removetrack_event) при удалении объекта {{domxref("MediaStreamTrack")}}.
 
 ## Методы
 

@@ -1,9 +1,9 @@
 ---
-title: <number>
+title: Type CSS `<number>`
+short-title: <number>
 slug: Web/CSS/Reference/Values/number
-original_slug: Web/CSS/number
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<number>`** représente un nombre, qu'il s'agisse d'un entier, d'un nombre avec une partie fractionnaire ou d'un exposant en base dix en notation scientifique.

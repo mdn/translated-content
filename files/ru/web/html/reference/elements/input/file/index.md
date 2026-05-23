@@ -365,14 +365,14 @@ The example looks like this; have a play:
     </tr>
     <tr>
       <td><strong>Поддерживаемые общие атрибуты</strong></td>
-      <td><a href="/ru/docs/Web/HTML/Element/input#attr-required"><code>required</code></a></td>
+      <td><a href="/ru/docs/Web/HTML/Reference/Elements/input#attr-required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>Дополнительные атрибуты</strong></td>
       <td>
-        <a href="/ru/docs/Web/HTML/Element/input#attr-accept"><code>accept</code></a>,
+        <a href="/ru/docs/Web/HTML/Reference/Elements/input#attr-accept"><code>accept</code></a>,
         <a href="/ru/docs/Web/HTML/Attributes/capture"><code>capture</code></a>,
-        <a href="/ru/docs/Web/HTML/Element/input##attr-multiple"><code>multiple</code></a>
+        <a href="/ru/docs/Web/HTML/Reference/Elements/input##attr-multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>

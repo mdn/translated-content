@@ -1,13 +1,13 @@
 ---
-title: cubic-bezier()
+title: Fonction CSS `cubic-bezier()`
+short-title: cubic-bezier()
 slug: Web/CSS/Reference/Values/easing-function/cubic-bezier
-original_slug: Web/CSS/easing-function/cubic-bezier
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`cubic-bezier()`** permet de créer une transition fluide à l'aide d'une [courbe de Bézier](/fr/docs/Glossary/Bezier_curve) cubique.
-En tant que {{CSSxRef("&lt;easing-function&gt;")}}, elle permet d'adoucir le début et la fin de l'{{Glossary("interpolation")}}.
+En tant que {{CSSxRef("&lt;easing-function&gt;")}}, elle permet d'adoucir le début et la fin de {{Glossary("interpolation", "l'interpolation")}}.
 
 ## Syntaxe
 
@@ -41,13 +41,13 @@ Une courbe de Bézier cubique est définie par quatre points&nbsp;: P0, P1, P2 e
 
 ![Graphique de la progression d'entrée vers la progression de sortie montrant une courbe en S partant de l'origine vers (1, 1) avec les points de contrôle Bézier P1(0.1, 0.6) et P2(0.7, 0.2).](cubic-bezier.svg)
 
-Toutes les courbes de Bézier cubique ne conviennent pas comme fonctions d'assouplissement, car toutes ne sont pas des [fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)>)&nbsp;: c'est-à-dire des courbes qui, pour une valeur de l'axe x donnée, ont zéro ou une valeur. Avec P0 et P3 fixés comme défini par CSS, une courbe de Bézier cubique est une fonction, et donc valide, si et seulement si les coordonnées x de P1 et P2 sont toutes deux dans l'intervalle `[0, 1]`.
+Toutes les courbes de Bézier cubique ne conviennent pas comme fonctions d'assouplissement, car toutes ne sont pas des [fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)>)&nbsp;: c'est-à-dire des courbes qui, pour une valeur de l'axe x donnée, ont zéro ou une valeur. Avec P0 et P3 fixés comme défini par CSS, une courbe de Bézier cubique est une fonction, et est valide lorsque les coordonnées de l'axe horizontal pour P1 et P2 sont toutes deux dans l'intervalle `[0, 1]`.
 
 Les courbes de Bézier cubique dont l'ordonnée de P1 ou P2 sort de l'intervalle `[0, 1]` peuvent faire dépasser la valeur finale puis revenir. En animation, cela crée un effet de «&nbsp;rebond&nbsp;».
 
 ![Graphiques de la fonction d'assouplissement cubic-bezier(0.3, 0.2, 0.2, 1.4), dont l'un montre la progression de sortie dépassant 1 à partir d'une certaine progression d'entrée, l'autre montre la progression de sortie atteignant puis restant à 1.](cubic-bezier_out_of_range.svg)
 
-Cependant, certaines propriétés limitent la sortie si elle sort d'une plage autorisée. Par exemple, une composante de couleur supérieure à `255` ou inférieure à `0` dans {{CSSxRef("color_value/rgb", "rgb()")}} sera ramenée à la valeur autorisée la plus proche (`255` ou `0`). Certaines valeurs de `cubic-bezier()` présentent ce comportement.
+Cependant, certaines propriétés limitent la sortie si elle sort d'une plage autorisée. Par exemple, une composante de couleur supérieure à `255` ou inférieure à `0` dans {{CSSxRef("color_value/rgb", "rgb()")}} est ramenée à la valeur autorisée la plus proche (`255` ou `0`). Certaines valeurs de `cubic-bezier()` présentent ce comportement.
 
 ## Syntaxe formelle
 

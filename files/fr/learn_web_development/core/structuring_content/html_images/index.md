@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}
 
 Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureusement, il n'a pas fallu longtemps pour que la possibilité d'intégrer des images ( et d'autres types de contenu intéressants) dans une page web soit ajoutée. Bien qu'il y ait plusieurs types de contenu multimedia, il est logique de commencer avec l'humble élément {{htmlelement("img")}}, utilisé pour intégrer une image dans une page web. Dans cet article, nous approfondirons son utilisation en abordant les principes fondamentaux, l'annotation par légendes utilisant {{htmlelement("figure")}}, et en analysant sa relation avec les images d'arrière-plan du {{glossary("CSS")}} .
 
@@ -13,17 +13,14 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
     <tr>
       <th scope="row">Prérequis :</th>
       <td>
-        Notions élémentaires en informatique,
-        <a
-          href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >installation des outils de base</a
-        >, bases de la
-        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >manipulation des fichiers</a
-        >, fondamentaux du HTML (comme décrit dans <a
-          href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started"
-          >Commencer avec le Web).</a
-        >
+        Avoir une connaissance de base en HTML, comme expliqué dans
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >Syntaxe de base HTML</a
+        >. Les sémantiques au niveau du texte telles que <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
+          >les titres et les paragraphes</a
+        > et <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Lists"
+          >les listes</a
+        >.
       </td>
     </tr>
     <tr>
@@ -39,7 +36,7 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 ## Comment intégrer une image à une page web ?
 
-Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: _source_). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
+Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("Void_element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: _source_). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
 
 > [!NOTE]
 > Vous devriez lire [Une brève présentation des URL et des chemins](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links#url) pour vous rafraîchir la mémoire avant de continuer.
@@ -519,4 +516,4 @@ En résumé : si une image a du sens, en terme de contenu, vous devriez utiliser
 
 C'est tout pour l'instant. Nous avons découvert en détails les images et légendes. Dans le prochain article, nous monterons en régime pour aborder la manière d'utiliser HTML pour intégrer des vidéos et de l'audio dans une page web.
 
-{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/Test_your_skills/Images", "Learn_web_development/Core/Structuring_content")}}

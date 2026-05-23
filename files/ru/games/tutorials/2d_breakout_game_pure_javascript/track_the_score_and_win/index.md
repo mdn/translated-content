@@ -104,4 +104,4 @@ function collisionDetection() {
 
 На данный момент игра выглядит довольно хорошо. В следующем уроке вы расширите привлекательность игры, добавив [Mouse controls](/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}

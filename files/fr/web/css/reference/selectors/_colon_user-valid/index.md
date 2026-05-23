@@ -1,8 +1,9 @@
 ---
-title: :user-valid
+title: Pseudo-classe CSS `:user-valid`
+short-title: :user-valid
 slug: Web/CSS/Reference/Selectors/:user-valid
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/Web/HTML/Guides/Constraint_validation). Toutefois, à la différence de {{CSSxRef(":valid")}}, cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.

@@ -32,7 +32,7 @@ console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 
 「[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#コンストラクター)」に、コンストラクター関数の `prototype` プロパティと、結果オブジェクトのプロトタイプ間の操作に関する詳しい情報があります。
 
-ある関数に `prototype` プロパティがあるというだけでは、コンストラクターとして認められるには不十分です。[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は `prototype` プロパティを持っていますがが、 `new` で呼び出すことはできません。
+ある関数に `prototype` プロパティがあるというだけでは、コンストラクターとして認められるには不十分です。[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)は `prototype` プロパティを持っていますが、 `new` で呼び出すことはできません。
 
 ```js
 async function* asyncGeneratorFunction() {}

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSStyleSheet()`** コンストラクターは、新しい {{domxref("CSSStyleSheet")}} オブジェクトを生成します。これは、単一の[スタイルシート](/ja/docs/Glossary/Stylesheet)を表します。
+**`CSSStyleSheet()`** コンストラクターは、新しい {{domxref("CSSStyleSheet")}} オブジェクトを生成します。これは、単一の[スタイルシート](/ja/docs/Glossary/Style_sheet)を表します。
 
 スタイルシートを構築した後は、{{domxref("CSSStyleSheet.replace()")}}、{{domxref("CSSStyleSheet.replaceSync()")}}、{{domxref("CSSStyleSheet.insertRule()")}}、{{domxref("CSSStyleSheet.deleteRule()")}} の各メソッドを使用して、新しいスタイルシートのルールを変更することができます。
 

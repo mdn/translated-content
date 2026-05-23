@@ -39,7 +39,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
         <p>
           Attention, si on utilise le point dans
           <a
-            href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Groupes_et_intervalles"
+            href="/fr/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences"
             >un intervalle de caractères</a
           >, il n'aura plus cette signification spéciale.
         </p>
@@ -150,7 +150,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
       <td>
         Correspond pour un retour arrière (U+0008). (À ne pas confondre avec
         <code>\b</code>, voir
-        <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières/Limites"
+        <a href="/fr/docs/Web/JavaScript/Guide/Regular_expressions/Assertions"
           >les limites</a
         >).
       </td>
@@ -161,7 +161,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
         Correspond au caractère NULL (U+0000). Il ne doit pas être suivi d'un
         autre chiffre car <code>\0&#x3C;chiffres></code> est une
         <a
-          href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d&#x27;échappement"
+          href="/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_caractères_déchappement"
           >séquence d'échappement</a
         >
         pour les nombres en notation octale (si besoin d'utiliser un chiffre

@@ -1,8 +1,9 @@
 ---
-title: translate()
+title: CSS `translate()` 関数
+short-title: translate()
 slug: Web/CSS/Reference/Values/transform-function/translate
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

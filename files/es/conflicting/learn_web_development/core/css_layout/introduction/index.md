@@ -16,10 +16,10 @@ Este artículo explica el flujo normal, o la forma en que se presentan los eleme
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML"
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción al HTML</a
         >) y nociones de cómo funciona el CSS (véase
-        <a href="/es/docs/Learn/CSS/First_steps">Introducción al CSS</a>).
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics">Introducción al CSS</a>).
       </td>
     </tr>
     <tr>
@@ -42,7 +42,7 @@ En primer lugar, se toma de las cajas de cada uno de los elementos el contenido,
 
 De manera predeterminada, el contenido de un [elemento de nivel de bloque](/es/docs/Glossary/Block-level_content) es el 100% del ancho de su elemento padre y su altura viene determinada por su contenido. Los [elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements) tienen su altura y anchura determinados por su contenido. No puedes establecer el ancho o la altura de los elementos en línea, simplemente se ubican dentro del contenido de los elementos de nivel de bloque. Si deseas controlar el tamaño de un elemento en línea de esta manera, debes configurarlo para que se comporte como un elemento de nivel de bloque con `display: block;` (o incluso, `display: inline-block;`, que combina características de ambos).
 
-Esto explica los elementos individuales, pero ¿qué hay del modo como los elementos interactúan entre sí? El flujo de diseño normal (mencionado en el artículo de introducción al diseño) es el sistema mediante el cual los elementos se colocan en la ventana gráfica del navegador. De manera predeterminada, los elementos de nivel de bloque se presentan en la _dirección del flujo del bloque_, en función del [modo de escritura](/es/docs/Web/CSS/writing-mode) de los padres (_initial_: horizontal-tb): cada uno aparecerá en una línea nueva debajo de la última, y estarán separados por cualquier margen que se establezca en ellos. Por lo tanto, en inglés, o en cualquier otro modo de escritura horizontal y de arriba a abajo, los elementos de nivel de bloque se disponen verticalmente.
+Esto explica los elementos individuales, pero ¿qué hay del modo como los elementos interactúan entre sí? El flujo de diseño normal (mencionado en el artículo de introducción al diseño) es el sistema mediante el cual los elementos se colocan en la ventana gráfica del navegador. De manera predeterminada, los elementos de nivel de bloque se presentan en la _dirección del flujo del bloque_, en función del [modo de escritura](/es/docs/Web/CSS/Reference/Properties/writing-mode) de los padres (_initial_: horizontal-tb): cada uno aparecerá en una línea nueva debajo de la última, y estarán separados por cualquier margen que se establezca en ellos. Por lo tanto, en inglés, o en cualquier otro modo de escritura horizontal y de arriba a abajo, los elementos de nivel de bloque se disponen verticalmente.
 
 Los elementos en línea se comportan de manera diferente: no aparecen en líneas nuevas; en su lugar, se asientan en la misma línea entre sí y con cualquier contenido de texto adyacente (o envuelto), siempre que tengan espacio dentro del ancho del elemento de nivel de bloque primario. Si no hay espacio, el texto o los elementos que desborden bajarán a la línea siguiente.
 

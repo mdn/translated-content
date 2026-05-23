@@ -1,9 +1,9 @@
 ---
-title: <length>
+title: Type CSS `<length>`
+short-title: <length>
 slug: Web/CSS/Reference/Values/length
-original_slug: Web/CSS/length
 l10n:
-  sourceCommit: 81e6735431b50ded681b760b702e68b80000b58c
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de données](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<length>`** correspond à une mesure de distance. Les longueurs peuvent être utilisées dans de nombreuses propriétés CSS, comme {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, {{CSSxRef("border-width")}}, {{CSSxRef("font-size")}} et {{CSSxRef("text-shadow")}}.

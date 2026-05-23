@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : placeholder"
+title: "Attribut HTML : `placeholder`"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`placeholder`** définit le texte affiché dans un contrôle de formulaire lorsque celui-ci n'a pas de valeur. Le texte d'exemple doit fournir un indice bref à l'utilisateur·ice sur le type de donnée attendu dans le contrôle.

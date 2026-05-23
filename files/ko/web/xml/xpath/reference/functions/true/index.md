@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/true
 original_slug: Web/XPath/Functions/true
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `true` 함수는 불린값 true를 반환합니다.
 

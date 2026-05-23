@@ -1,8 +1,9 @@
 ---
-title: range
+title: Descripteur de règle CSS `range`
+short-title: range
 slug: Web/CSS/Reference/At-rules/@counter-style/range
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`range`** de la règle {{CSSxRef("@counter-style")}} permet à l'auteur·ice de définir une ou plusieurs plages de valeurs du compteur pour lesquelles le style est appliqué lors de la définition de styles de compteur personnalisés. Lorsque le descripteur `range` est inclus, le compteur défini ne sera utilisé que pour les valeurs comprises dans les plages définies. Si la valeur du compteur est en dehors de la plage définie, le style de repli sera utilisé pour construire la représentation de ce marqueur.

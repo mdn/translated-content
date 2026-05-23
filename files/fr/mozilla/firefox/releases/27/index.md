@@ -42,7 +42,7 @@ Plus de détails dans [cet article](https://hacks.mozilla.org/2013/11/firefox-de
 L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) se poursuit!
 
 - L'[opérateur de diffusion](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) est désormais pris en charge dans les appels de fonction ([bug Firefox 762363](https://bugzil.la/762363)).
-- La fonction mathématique {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} a été implémentée ([bug Firefox 896264](https://bugzil.la/896264)).
+- La fonction mathématique {{jsxref("Math.hypot()")}} a été implémentée ([bug Firefox 896264](https://bugzil.la/896264)).
 - L'expression {{jsxref("Operators/yield*", "yield*")}} est maintenant implémentée ([bug Firefox 666396](https://bugzil.la/666396)).
 - Les objets `MapIterator`, `SetIterator` et `ArrayIterator` correspondent désormais à la spécification ([bug Firefox 881226](https://bugzil.la/881226)).
 - [for..of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucles s'attendent maintenant à ce que le [protocole d'itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant `StopIteration`.

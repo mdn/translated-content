@@ -30,9 +30,9 @@ l10n:
 
 - ["어째서" 웹 성능인가](/ko/docs/Learn_web_development/Extensions/Performance/why_web_performance)
   - : 접근성, 사용자 경험, 비즈니스 목표 달성 측면에서 웹 접근성이 왜 중요한지 다룹니다.
-- [웹 성능이란 무엇인가?](/ko/docs/Learn/Performance/What_is_web_performance)
+- [웹 성능이란 무엇인가?](/ko/docs/Learn_web_development/Extensions/Performance/What_is_web_performance)
   - : 웹 성능이 중요하다는 것은 누구나 압니다. 그렇다면 웹 성능이란 구체적으로 무엇일까요? 이 문서에서는 웹페이지의 로딩과 렌더링에서부터 웹 성능을 검토할 때 어떤 집단의 사람들을 고려해야 하는지까지 웹 성능의 요소들을 소개합니다. 이는 콘텐츠가 사용자의 브라우저에 보여지는 과정을 포함합니다.
-- [사용자들은 어떻게 웹 성능을 인지하는가?](/ko/docs/Learn/Performance/Perceived_performance)
+- [사용자들은 어떻게 웹 성능을 인지하는가?](/ko/docs/Learn_web_development/Extensions/Performance/Perceived_performance)
   - : 웹사이트가 밀리초 단위로 얼마나 빠른지보다 중요한 것은 사용자들이 웹사이트를 어느 정도로 빠르다고 느끼는지입니다. 사용자들의 인지는 웹페이지의 실제 로드 시간, 지연 시간, 사용자의 상호작용에 대한 반응성, 스크롤이나 다른 애니메이션의 부드러움 등에 영향을 받습니다. 이 문서에서는 로딩과 애니메이션, 반응성을 나타내는 다양한 지표들과 실제 타이밍을 제외하더라도 사용자의 인지 작용을 개선할 수 있는 모범 사례들을 논합니다.
 - [웹 성능 측정하기](/ko/docs/Learn_web_development/Extensions/Performance/Measuring_performance)
   - : 이제 당신은 몇 가지의 웹 성능 지표를 이해하게 되었습니다. 웹 성능 도구와 지표, API, 웹 성능을 웹 개발과정의 일부로 편입시킬 수 있는 방법에 대해 더 깊게 살펴봅니다.
@@ -42,9 +42,9 @@ l10n:
   - : 많은 경우에 가장 쉬운 웹 성능 개선 방법은 미디어 최적화입니다. 이 문서에서는 비디오 콘텐츠가 웹 성능에 미치는 영향, 배경 영상에서 오디오 트랙을 제거하여 웹 성능 높이기와 같은 팁들을 다룹니다.
 - [JavaScript를 활용한 웹 성능 모범사례](/ko/docs/Learn/Performance/JavaScript)
   - : 적절하게 JavaScript를 사용하면 상호작용할 수 있고 몰입되는 웹 경험을 줄 수 있습니다. 하지만 JavaScript를 잘못 사용할 경우 다운로드 시간, 렌더링 시간, 앱 자체의 성능, 배터리 수명, 사용자 경험을 심각하게 해칠 수도 있습니다. 이 문서에서는 컨텐츠가 복잡하더라도 최대한의 성능을 발휘할 수 있도록 고려해야 할 JavaScript 모범사례에 대해 소개합니다.
-- [HTML과 웹 성능](/ko/docs/Learn/Performance/HTML)
+- [HTML과 웹 성능](/ko/docs/Learn_web_development/Extensions/Performance/HTML)
   - : 마크업이 배치된 순서나 속성은 웹사이트 성능에 영향을 미칠 수 있습니다. DOM 노드의 개수를 최소화하고 HTML 문서에 콘텐츠(스타일, 스크립트, 미디어, 써드파티 스크립트 등)를 포함시키는 순서와 속성을 최적화하여 사용자 경험을 크게 개선할 수 있습니다. 이 문서에서는 최고의 성능을 끌어내려면 어떻게 HTML을 사용해야 하는지를 자세히 다룹니다.
-- [CSS와 웹 성능](/ko/docs/Learn/Performance/CSS)
+- [CSS와 웹 성능](/ko/docs/Learn_web_development/Extensions/Performance/CSS)
   - : 성능 개선에서 CSS 최적화는 상대적으로 덜 중요할 수 있습니다. 하지만 웹 성능에 더 많은 영향을 끼치는 CSS 기능이 몇 있습니다. 이 글에서는 해당 CSS 속성들과 웹 성능에 부정적인 영향을 끼치지 않으면서 스타일을 다루기 위해 권장되는 방법을 살펴봅니다.
 - [글꼴과 웹 성능](/ko/docs/Learn/Performance/Fonts)
   - : 외부 글꼴을 포함해야 하는지, 만약 포함해야 한다면 어떻게 웹사이트의 성능에 미치는 영향을 최소화하면서 디자인이 요구하는 글꼴을 포함시킬 수 있는지를 살펴봅니다.

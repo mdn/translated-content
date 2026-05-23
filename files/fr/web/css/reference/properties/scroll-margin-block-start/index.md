@@ -1,14 +1,14 @@
 ---
-title: scroll-margin-block-start
+title: Propriété CSS `scroll-margin-block-start`
+short-title: scroll-margin-block-start
 slug: Web/CSS/Reference/Properties/scroll-margin-block-start
-original_slug: Web/CSS/scroll-margin-block-start
+l10n:
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
-{{CSSRef}}
+La propriété [CSS](/fr/docs/Web/CSS) **`scroll-margin-block-start`** définit la marge de la zone de capture de défilement au début de la dimension de bloc, utilisée pour accrocher cette boîte au [port d'accrochage](/fr/docs/Glossary/Scroll_snap#port_daccrochage). La zone de capture de défilement est déterminée en prenant la boîte de bordure transformée, en trouvant sa boîte englobante rectangulaire (alignée sur les axes dans l'espace de coordonnées du conteneur de défilement), puis en ajoutant les décalages définis.
 
-La propriété **`scroll-margin-block-start`** définit la marge de défilement de l'élément sur le début de l'axe de bloc. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
-
-{{InteractiveExample("CSS Demo: scroll-margin-block-start")}}
+{{InteractiveExample("Démonstration CSS&nbsp;: scroll-margin-block-start")}}
 
 ```css interactive-example-choice
 scroll-margin-block-start: 0;
@@ -29,7 +29,7 @@ scroll-margin-block-start: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">Défiler »</div>
 </section>
 ```
 
@@ -56,7 +56,7 @@ scroll-margin-block-start: 2em;
 .scroller > div {
   flex: 0 0 250px;
   background-color: rebeccapurple;
-  color: #fff;
+  color: white;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -65,7 +65,7 @@ scroll-margin-block-start: 2em;
 }
 
 .scroller > div:nth-child(even) {
-  background-color: #fff;
+  background-color: white;
   color: rebeccapurple;
 }
 ```
@@ -73,21 +73,22 @@ scroll-margin-block-start: 2em;
 ## Syntaxe
 
 ```css
-/* Valeurs de longueur */
-/* Type <length> */
+/* Valeurs de type <length> */
 scroll-margin-block-start: 10px;
 scroll-margin-block-start: 1em;
 
 /* Valeurs globales */
 scroll-margin-block-start: inherit;
 scroll-margin-block-start: initial;
+scroll-margin-block-start: revert;
+scroll-margin-block-start: revert-layer;
 scroll-margin-block-start: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
+- {{CSSxRef("&lt;length&gt;")}}
+  - : Un décalage par rapport au bord de départ du conteneur de défilement.
 
 ## Définition formelle
 
@@ -104,3 +105,8 @@ scroll-margin-block-start: unset;
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- Le module [d'accrochage au défilement CSS](/fr/docs/Web/CSS/Guides/Scroll_snap)
+- [Contrôler précisément le défilement avec l'accrochage CSS <sup>(angl.)</sup>](https://web.dev/articles/css-scroll-snap) sur web.dev (2018)

@@ -1,9 +1,9 @@
 ---
-title: <ident>
+title: Type CSS `<ident>`
+short-title: <ident>
 slug: Web/CSS/Reference/Values/ident
-original_slug: Web/CSS/ident
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<ident>`** désigne une chaîne de caractères arbitraire utilisée comme {{Glossary("identifier", "identifiant")}}.

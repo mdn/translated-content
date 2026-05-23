@@ -1,8 +1,9 @@
 ---
-title: <time-percentage>
+title: Type CSS `<time-percentage>`
+short-title: <time-percentage>
 slug: Web/CSS/Reference/Values/time-percentage
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<time-percentage>`** représente une valeur qui peut être soit un {{CSSxRef("time")}}, soit un {{CSSxRef("percentage")}}.

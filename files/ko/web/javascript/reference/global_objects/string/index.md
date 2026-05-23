@@ -58,7 +58,7 @@ ECMAScript 2015 이후, 문자열 리터럴은 소위 [템플릿 리터럴](/ko/
 
 작성한 코드가 매우 긴 문자열을 포함해야 하는 경우, 끝 없이 뻗어나가는 한 줄이나 편집기의 재량에 따라 자동으로 줄을 넘기는 대신 직접 여러 줄로 나누되 내용에는 영향을 주지 않고 싶을 때가 있을겁니다. 이런 상황에는 두 가지 방법을 사용할 수 있습니다.
 
-우선 다음과 같이 [+](</ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#%EB%8D%94%ED%95%98%EA%B8%B0_()>) 연산자를 사용할 수 있습니다.
+우선 다음과 같이 [+](</ko/docs/Web/JavaScript/Reference/Operators#%EB%8D%94%ED%95%98%EA%B8%B0_()>) 연산자를 사용할 수 있습니다.
 
 ```js
 let longString =

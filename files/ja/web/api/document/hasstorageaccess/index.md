@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Storage Access API")}}
 
-**`hasStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、この文書が[サードパーティ](/ja/docs/Web/Privacy/Third-party_cookies)の[分離された](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権を持っているかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
+**`hasStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、この文書が[サードパーティ](/ja/docs/Web/Privacy/Guides/Third-party_cookies)の[分離された](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権を持っているかどうかを示す論理値で解決する {{jsxref("Promise")}} を返します。
 
 詳しくは [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) を参照してください。
 

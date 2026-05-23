@@ -71,7 +71,7 @@ var float64 = new Float64Array(iterable);
 
 ### 互換性ノート
 
-ECMAScript 2015 から、 `Float64Array` コンストラクターは {{jsxref("Operators/new", "new")}} 演算子を使用して構築する必要があります。 `new` 演算子を使用せずに `Float64Array` コンストラクターを呼び出した場合、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Float64Array` コンストラクターは {{jsxref("new")}} 演算子を使用して構築する必要があります。 `new` 演算子を使用せずに `Float64Array` コンストラクターを呼び出した場合、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Float64Array([1, 2, 3]);

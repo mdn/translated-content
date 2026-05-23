@@ -101,7 +101,7 @@ btn.addEventListener("click", () => {
 
 ## do...while 文
 
-{{jsxref("statements/do...while", "do...while")}} 文は指定された条件が偽になるまで繰り返します。
+{{jsxref("Statements/do...while", "do...while")}} 文は指定された条件が偽になるまで繰り返します。
 
 `do...while` 文は以下のような形です。
 
@@ -336,7 +336,7 @@ car.model = Mustang
 
 ## for...of 文
 
-{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
+{{jsxref("Statements/for...of","for...of")}} 文は、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)（{{jsxref("Array")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("Functions/arguments","arguments")}} オブジェクトなどを含む）を反復処理するループを生成し、それぞれのプロパティの値に対して実行したい文をともなって作られた反復処理フックを呼び出します。
 
 ```js-nolint
 for (変数 of オブジェクト)

@@ -1,8 +1,9 @@
 ---
-title: display-mode
+title: Caractéristique média CSS `display-mode`
+short-title: display-mode
 slug: Web/CSS/Reference/At-rules/@media/display-mode
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`display-mode`** permet de tester si une application web est affichée dans un onglet de navigateur classique ou d'une autre manière, comme une application autonome ou en mode plein écran.

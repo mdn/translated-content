@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Authentication
 original_slug: Learn/Server-side/Django/Authentication
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu site com suas próprias contas e como controlar o que eles podem fazer e ver com base em se eles estão ou não conectados e em suas permissões. Como parte desta demonstração, estenderemos o [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adicionando páginas de login e logout e páginas específicas do usuário e da equipe para visualizar os livros emprestados.
 
