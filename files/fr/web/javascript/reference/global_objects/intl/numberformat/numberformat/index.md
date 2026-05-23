@@ -50,7 +50,7 @@ Intl.NumberFormat(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Intl.NumberFormat`. Cependant, il y a un comportement spécial lorsqu'il est appelé sans `new` et que la valeur de `this` est une autre instance de `Intl.NumberFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
+> `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `Intl.NumberFormat`. Cependant, il y a un comportement spécial lorsqu'il est appelé sans `new` et que la valeur de `this` est une autre instance de `Intl.NumberFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
 
 ### Paramètres
 
@@ -233,7 +233,7 @@ Un nouvel objet `Intl.NumberFormat`.
 > [!NOTE]
 > Le texte ci-dessous décrit un comportement marqué par la spécification comme «&nbsp;optionnel&nbsp;". Il peut ne pas fonctionner dans tous les environnements. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
-Normalement, `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}, et une nouvelle instance de `Intl.NumberFormat` est renvoyée dans les deux cas. Cependant, si la valeur de {{JSxRef("Operators/this", "this")}} est un objet qui est {{JSxRef("Operators/instanceof", "instanceof")}} `Intl.NumberFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.NumberFormat`&nbsp;; cela signifie simplement qu'il a `Intl.NumberFormat.prototype` dans sa chaîne de caractères de prototypes), alors la valeur de `this` est renvoyée à la place, avec le nouvel objet `Intl.NumberFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
+Normalement, `Intl.NumberFormat()` peut être appelé avec ou sans {{JSxRef("new")}}, et une nouvelle instance de `Intl.NumberFormat` est renvoyée dans les deux cas. Cependant, si la valeur de {{JSxRef("this")}} est un objet qui est {{JSxRef("instanceof")}} `Intl.NumberFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.NumberFormat`&nbsp;; cela signifie simplement qu'il a `Intl.NumberFormat.prototype` dans sa chaîne de caractères de prototypes), alors la valeur de `this` est renvoyée à la place, avec le nouvel objet `Intl.NumberFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
 
 ```js
 const formateur = Intl.NumberFormat.call(

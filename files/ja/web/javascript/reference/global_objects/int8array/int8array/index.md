@@ -71,7 +71,7 @@ var int8 = new Int8Array(iterable);
 
 ### 互換性メモ
 
-ECMAScript 2015 から、 `Int8Array` コンストラクターは構築に {{jsxref("Operators/new", "new")}} 演算子が必要になりました。 `Int8Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
+ECMAScript 2015 から、 `Int8Array` コンストラクターは構築に {{jsxref("new")}} 演算子が必要になりました。 `Int8Array` コンストラクターを `new` なしで関数として呼び出すと、 {{jsxref("TypeError")}} が発生するようになりました。
 
 ```js example-bad
 var dv = Int8Array([1, 2, 3]);
