@@ -53,7 +53,7 @@ maFonction("un", "deux", "trois", "quatre", "cinq");
 
 ### Les différences entre les paramètres du reste et l'objet `arguments`
 
-Il y a trois principales différences entre les paramètres du reste et l'objet {{jsxref("Fonctions/arguments","arguments")}} :
+Il y a trois principales différences entre les paramètres du reste et l'objet {{jsxref("Functions/arguments","arguments")}} :
 
 - les paramètres du reste sont uniquement ceux qui ne possèdent pas de noms à part entière (autrement dit ceux qui ne sont pas formellement définis dans l'expression de fonction), l'objet `arguments` contient chaque argument passé à la fonction
 - l'objet `arguments` n'est pas, à strictement parler, un tableau. Le paramètre représentant les arguments restant est une instance d'{{jsxref("Array","Array")}} à laquelle on peut appliquer directement des méthodes comme {{jsxref("Array/sort","sort")}}, {{jsxref("Array/map","map")}}, {{jsxref("Array/forEach","forEach")}} ou {{jsxref("Array/pop","pop")}}
@@ -210,9 +210,9 @@ console.log(trierArguments(5, 3, 7, 1)); // [1, 3, 5, 7]
 
 ## Voir aussi
 
-- L'objet {{jsxref("Fonctions/arguments","arguments")}}
+- L'objet {{jsxref("Functions/arguments","arguments")}}
 - {{jsxref("Array","Array")}}
-- {{jsxref("Fonctions","Les fonctions et leurs portées","",1)}}
-- {{jsxref("Opérateurs/Syntaxe_décomposition","L'opérateur de décomposition","",1)}}
+- {{jsxref("Functions","Les fonctions et leurs portées","",1)}}
+- {{jsxref("Operators/Spread_syntax","L'opérateur de décomposition","",1)}}
 - [Proposition originale sur ecmascript.org](https://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters) (en anglais)
 - [JavaScript arguments object and beyond](https://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/) (article en anglais)

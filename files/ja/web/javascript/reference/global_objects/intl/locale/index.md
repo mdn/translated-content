@@ -59,7 +59,9 @@ console.log(korean.hourCycle, japanese.hourCycle);
 - {{jsxref("Intl/Locale/baseName", "Intl.Locale.prototype.baseName")}}
   - : この `Locale` に関する基本的な情報を、完全なデータ文字列の部分文字列の形で返します。
 - {{jsxref("Intl/Locale/calendar", "Intl.Locale.prototype.calendar")}}
-  - : このロケールの暦を示す `Locale` の部分を返します。
+  - : このロケールの暦年を示す `Locale` の部分を返します。
+- {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.calendars")}}
+  - : ロケールの規則に従い、利用可能なカレンダー識別子の {{jsxref("Array")}} を返します。
 - {{jsxref("Intl/Locale/caseFirst", "Intl.Locale.prototype.caseFirst")}}
   - : このロケールの照合規則で大文字・小文字を考慮しているかどうかを返します。
 - {{jsxref("Intl/Locale/collation", "Intl.Locale.prototype.collation")}}
@@ -68,10 +70,14 @@ console.log(korean.hourCycle, japanese.hourCycle);
   - : このインスタンスオブジェクトを作成したコンストラクター関数。 `Intl.Locale` インスタンスの場合、初期値は {{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターです。
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : このロケールが使用している時刻保持書式の規則を返します。
+- {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.hourCycles")}}
+  - : {{jsxref("Array")}} で 12 時制 ("h11", "h12") または 24 時制 ("h23", "h24") を示す時周期識別子を返します。
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : このロケールに関連づけられた言語を返します。
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
-  - : このロケールが使用している記数法を返します。
+  - : このロケールが使用している数値表記法を返します。
+- {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.numberingSystems")}}
+  - : ロケールの規則に従って利用できる数値表記法の識別子の {{jsxref("Array")}} を返します。
 - {{jsxref("Intl/Locale/numeric", "Intl.Locale.prototype.numeric")}}
   - : このロケールが数字に対して特殊な照合順序を持っているかどうかを返します。
 - {{jsxref("Intl/Locale/region", "Intl.Locale.prototype.region")}}

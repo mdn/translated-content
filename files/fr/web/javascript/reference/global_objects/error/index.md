@@ -98,7 +98,7 @@ try {
 
 ### Gestion d'une erreur spécifique
 
-Vous pouvez choisir de gérer uniquement certains types d'erreur en testant le type de l'erreur avec le mot-clé {{JSxRef("Operators/instanceof", "instanceof")}}&nbsp;:
+Vous pouvez choisir de gérer uniquement certains types d'erreur en testant le type de l'erreur avec le mot-clé {{JSxRef("instanceof")}}&nbsp;:
 
 ```js
 try {

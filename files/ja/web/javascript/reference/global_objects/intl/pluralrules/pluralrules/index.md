@@ -102,4 +102,4 @@ formatOrdinals(103); // '103rd'
 ## 関連情報
 
 - {{jsxref("Intl.PluralRules")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

@@ -277,7 +277,7 @@ console.log(A() && B() || C());
       <td>[3]</td>
     </tr>
     <tr>
-      <td>引数リスト付きの {{jsxref("Operators/new", "new")}}<br><code>new x(y)</code></td>
+      <td>引数リスト付きの {{jsxref("new")}}<br><code>new x(y)</code></td>
       <td rowspan="3">[4]</td>
     </tr>
     <tr>
@@ -291,7 +291,7 @@ console.log(A() && B() || C());
     <tr>
       <td>16: new</td>
       <td>なし</td>
-      <td>引数リストなしの {{jsxref("Operators/new", "new")}}<br><code>new x</code></td>
+      <td>引数リストなしの {{jsxref("new")}}<br><code>new x</code></td>
     </tr>
     <tr>
       <td rowspan="2">15: 後置演算子</td>
@@ -611,7 +611,7 @@ console.log(A() && B() || C());
       <td>1: カンマ</td>
       <td>左→右</td>
       <td>
-        {{jsxref("Operators/Comma_Operator", "カンマ演算子", "", 1)}}<br><code>x, y</code>
+        {{jsxref("Operators/Comma_operator", "カンマ演算子", "", 1)}}<br><code>x, y</code>
       </td>
     </tr>
   </tbody>

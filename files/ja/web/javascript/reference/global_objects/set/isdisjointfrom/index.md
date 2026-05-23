@@ -37,7 +37,7 @@ isDisjointFrom(other)
 
 ![2 つの円からなるベン図。A と B は重複する領域を持たないため、互いに素です。](diagram.svg)
 
-`isDisjointFrom()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("Operators/this", "this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
+`isDisjointFrom()` は、[Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects)オブジェクトを `other` 引数として受け入れます。{{jsxref("this")}} は、ユーザーコードを呼び出すことなく、`this` オブジェクトに格納されているデータに直接アクセスするため、実際の {{jsxref("Set")}} インスタンスであることが要求されます。その後、その動作は `this` と `other` のサイズに依存します。
 
 - `this` の中の要素が `other.size` よりも多かった場合、`other` を `keys()` メソッドを呼び出すことで走査し、`other` の中のある要素が `this` の中にあれば `false` を返し（そして `return()` メソッドを呼び出すことで `keys()` イテレーターを閉じる）、そうでなければ `true` を返します。
 - そうでなければ、`this` の要素を走査し、`this` の要素 `e` のうち、`other.has(e)` が[真値](/ja/docs/Glossary/Truthy)であれば `false` を返します。そうでなければ `true` を返します。

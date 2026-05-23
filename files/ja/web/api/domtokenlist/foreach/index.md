@@ -29,7 +29,7 @@ forEach(callback, thisArg)
       - : `forEach()` を実行中の配列です。
 
 - `thisArg` {{Optional_inline}}
-  - : `callback` を実行する際に {{jsxref("Operators/this", "this")}} として使用する値です。
+  - : `callback` を実行する際に {{jsxref("this")}} として使用する値です。
 
 ### 返値
 

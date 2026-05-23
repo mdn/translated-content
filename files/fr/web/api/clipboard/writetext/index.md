@@ -19,7 +19,7 @@ var promesse = navigator.clipboard.writeText(nouveauTexte);
 ### Paramètres
 
 - `nouveauTexte`
-  - : La {{domxref("DOMString")}} devant être écrite dans le presse-papiers.
+  - : La {{jsxref("String")}} devant être écrite dans le presse-papiers.
 
 ### Valeur de retour
 

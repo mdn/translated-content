@@ -41,7 +41,7 @@ O método `push` adiciona valores a um array.
 
 Esse método é intencionalmente genérico. Podendo ser utilizado por {{jsxref("Function.call", "call()")}} ou {{jsxref("Function.apply", "apply()")}} em objetos que implementam arrays. O método push depende da propriedade length para determinar onde começar a inserir os valores. Caso a propriedade `length` não possa ser convertida em número, é utilizado 0 como índice. Isto inclui a possibilidade de `length` não existir, nesse caso, essa propriedade será criada.
 
-Os únicos objetos que implementam nativamente array são as {{jsxref("Global_Objects/String", "strings", "", 1)}}, porém elas não são adequadas para a aplicação desse método, pois são imutáveis.
+Os únicos objetos que implementam nativamente array são as {{jsxref("String", "strings", "", 1)}}, porém elas não são adequadas para a aplicação desse método, pois são imutáveis.
 
 ## Exemplos
 

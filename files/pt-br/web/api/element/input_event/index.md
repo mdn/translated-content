@@ -25,7 +25,7 @@ O evento `input` do DOM é disparado sincronicamente quando o valor de um elemen
 | Propriedade                     | Tipo                       | Descrição                                          |
 | ------------------------------- | -------------------------- | -------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | O alvo do evento (o alvo mais alto na árvore DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Tipo do evento.                                    |
+| `type` {{readonlyInline}}       | {{jsxref("String")}}       | Tipo do evento.                                    |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Se o evento borbulha ou não.                       |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Se o evento é cancelável, ou não.                  |
 

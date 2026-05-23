@@ -104,8 +104,8 @@ console.log(newstr); // ###34567
 ## Voir aussi
 
 - {{jsxref("String.prototype.replace()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp/Symbol.match", "RegExp.prototype[@@match]()")}}
+- {{jsxref("RegExp/Symbol.search", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp/Symbol.split", "RegExp.prototype[@@split]()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}

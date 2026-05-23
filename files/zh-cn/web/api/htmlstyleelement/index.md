@@ -16,9 +16,9 @@ slug: Web/API/HTMLStyleElement
 _Inherits properties from its parent, {{domxref("HTMLElement")}}**, and implements {{domxref("LinkStyle")}}**._
 
 - {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing the intended destination medium for style information.
+  - : Is a {{jsxref("String")}} representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}}
-  - : Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.
+  - : Is a {{jsxref("String")}} representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
   - : Is a {{domxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
