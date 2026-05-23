@@ -1,9 +1,8 @@
 ---
 title: 視覚整形モデル
 slug: Web/CSS/Guides/Display/Visual_formatting_model
-original_slug: Web/CSS/CSS_display/Visual_formatting_model
 l10n:
-  sourceCommit: 06639598f7805417a0331fe403304af9c7ecc2de
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/Guides/Paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
@@ -162,7 +161,7 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 要素が浮動ボックス、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
 
-詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)を参照してください。
+詳しくは [CSS 位置指定レイアウト](/ja/docs/Web/CSS/Guides/Positioned_layout)を参照してください。
 
 ## 整形コンテキストと display プロパティ
 

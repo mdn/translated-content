@@ -606,8 +606,8 @@ Pour maintenir la cohérence, gardez à l'esprit les points suivants lors de l'a
   > Si le lien mène vers une page en anglais, on ajoutera la mention «&nbsp;<sup>(angl.)</sup>&nbsp;» après le texte du lien.
 - Sur MDN, vous pouvez utiliser une macro pour lier une page, comme expliqué dans [Lier des pages dans les références](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#lien_vers_les_pages_de_références) sur la page _Macros couramment utilisées_. L'usage d'une macro ajoute un formatage de code au mot-clé dans le texte du lien, comme ci-dessous.
 - Aucune ponctuation en fin d'élément, il s'agira d'un terme ou d'un syntagme.
-  - **Correct**&nbsp;: Le mot-clé [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - **Incorrect**&nbsp;: [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
+  - **Correct**&nbsp;: Le mot-clé [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
+  - **Incorrect**&nbsp;: [`revert-layer`](/fr/docs/Web/CSS/Reference/Values/revert-layer)
   - **Correct**&nbsp;: L'[API HTML DOM](/fr/docs/Web/API/HTML_DOM_API)
   - **Incorrect**&nbsp;: [HTML DOM API](/fr/docs/Web/API/HTML_DOM_API)
 - Comme montré, ajoutez un formatage code avec des accents graves aux mots-clés et littéraux dans le texte du lien, même si ce formatage n'apparaît pas dans les titres. Par exemple, pour le titre «&nbsp;le constructeur Array()&nbsp;», le texte du lien sera [le constructeur `Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array).

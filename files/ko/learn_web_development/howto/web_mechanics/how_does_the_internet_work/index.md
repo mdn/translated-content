@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 글에서는 인터넷의 개념과 작동 원리에 대해 설명합니다.
 
@@ -16,7 +16,7 @@ l10n:
       <th scope="row">선행 지식:</th>
       <td>
         선행지식은 필요없습니다. 하지만 '프로젝트의 목표 설정에 대한 글(<a
-          href="/ko/docs/Learn/Thinking_before_coding"
+          href="/ko/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding"
           >Article on setting project goals</a
         >)에 대한 글을 먼저 읽어보세요.
       </td>

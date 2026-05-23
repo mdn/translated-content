@@ -10,13 +10,13 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -24,7 +24,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -37,7 +37,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>

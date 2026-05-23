@@ -3,7 +3,7 @@ title: Что такое доменные имена
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 В этом материале мы обсудим доменные имена: что это такое, как они формируются и как зарегистрировать домен для себя.
 

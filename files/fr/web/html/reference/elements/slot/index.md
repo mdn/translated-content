@@ -1,8 +1,9 @@
 ---
-title: "<slot> : l'élément d'emplacement de composant web"
+title: "Élément HTML `<slot>` : l'élément d'emplacement de composant web"
+short-title: <slot>
 slug: Web/HTML/Reference/Elements/slot
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<slot>`** — qui fait partie de la suite technologique [des Composants Web](/fr/docs/Web/API/Web_components) — est un emplacement à l'intérieur d'un composant web que vous pouvez remplir avec votre propre balisage, ce qui permet de créer des arbres DOM distincts et de les présenter ensemble.

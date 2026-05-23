@@ -3,7 +3,7 @@ title: Propriété CSS `width`
 short-title: width
 slug: Web/CSS/Reference/Properties/width
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`width`** définit la largeur d'un élément. Par défaut, elle définit la largeur de la [zone de contenu](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_contenu), mais si {{CSSxRef("box-sizing")}} est définie sur `border-box`, elle définit la largeur de la [zone de bordure](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_bordure).
@@ -109,7 +109,7 @@ width: unset;
 
 ## Accessibilité
 
-Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.
+Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur·ice zoome afin d'agrandir la taille du texte.
 
 - [Comprendre le WCAG sur le MDN, explication de la règle 1.4](/fr/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#règle_1.4_—_faciliter_la_perception_visuelle_et_auditive_du_contenu_notamment_en_séparant_le_premier_plan_de_larrière-plan)
 - [Comprendre le critère de succès 1.4.4 | Explications du WCAG 2.0 du W3C <sup>(angl.)</sup>](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
@@ -197,7 +197,7 @@ L'élément `longueur_px` est défini à `200px` tandis que l'élément `longueu
 
 {{EmbedLiveSample("Utiliser des unités de longueur", 600, 60)}}
 
-L'élément `longueur_px` aura toujours une largeur de 200px. La largeur rendue de l'élément `longueur_em` dépend de la taille de la police.
+L'élément `longueur_px` a toujours une largeur de 200px. La largeur rendue de l'élément `longueur_em` dépend de la taille de la police.
 
 ### Utiliser les pourcentages
 
@@ -234,7 +234,7 @@ Cet exemple compare `max-content` et `min-content`, et introduit `calc-size`.
 
 #### HTML
 
-Nous incluons trois paragraphes avec le même contenu ; seules leurs classes diffèrent.
+Nous incluons trois paragraphes avec le même contenu&nbsp;; seules leurs classes diffèrent.
 
 ```html
 <p class="max-green">
@@ -277,12 +277,12 @@ p.min-pink {
 
 ```css hidden
 @supports not (width: calc-size(min-content, size * 2)) {
-  body::after {
-    content: "Votre navigateur ne prend pas encore en charge la fonction calc-size().";
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la fonction calc-size().";
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```
@@ -331,12 +331,12 @@ Nous utilisons la propriété {{CSSxRef("display")}} pour rendre le parent un co
 
 ```css hidden
 @supports not (width: stretch) {
-  body::after {
-    content: "Votre navigateur ne prend pas encore en charge la valeur stretch.";
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la valeur stretch.";
     background-color: wheat;
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
 }
 ```
@@ -353,7 +353,7 @@ Cet exemple démontre l'utilisation de la fonction `anchor-size()` pour définir
 
 #### HTML
 
-Nous définissons deux éléments {{HTMLElement("div")}}&nbsp;: un élément `ancre` et un élément `boite-info` que nous positionnerons par rapport à l'ancre.
+Nous définissons deux éléments {{HTMLElement("div")}}&nbsp;: un élément `ancre` et un élément `boite-info` que nous positionnons par rapport à l'ancre.
 
 ```html
 <div class="ancre">⚓︎</div>
@@ -398,6 +398,16 @@ Nous déclarons le `<div>` `ancre` comme un élément ancre en lui donnant un {{
 ```css hidden
 body {
   padding: 5em;
+}
+
+@supports not (width: anchor-size(width)) {
+  body::before {
+    content: "Votre navigateur ne prend pas en charge la fonction anchor-size().";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 ```
 

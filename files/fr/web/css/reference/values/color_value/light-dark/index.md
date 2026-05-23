@@ -1,8 +1,9 @@
 ---
-title: light-dark()
+title: Fonction CSS `light-dark()`
+short-title: light-dark()
 slug: Web/CSS/Reference/Values/color_value/light-dark
 l10n:
-  sourceCommit: f07826b83e8d2af50d69e3ff28c527d4ef572c19
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`light-dark()`** accepte deux couleurs ou deux images et retourne une couleur ou une image en fonction du schéma de couleurs actif, sans avoir besoin d'une [fonctionnalité média](/fr/docs/Web/CSS/Guides/Media_queries/Using#cibler_des_types_de_média) [`prefers-color-scheme`](/fr/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme).

@@ -1,8 +1,9 @@
 ---
-title: "<td> : l'élément de cellule de tableau"
+title: "Élément HTML `<td>` : l'élément de cellule de tableau"
+short-title: <td>
 slug: Web/HTML/Reference/Elements/td
 l10n:
-  sourceCommit: 7c28cd21b705e7b7664d53b4d7822469ea8e6e15
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<td>`** définit une cellule d'un tableau qui contient des données et peut être utilisé comme enfant de l'élément {{HTMLElement("tr")}}.

@@ -3,16 +3,16 @@ title: En-tête Attribution-Reporting-Eligible
 short-title: Attribution-Reporting-Eligible
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{Deprecated_Header}}
+{{Deprecated_Header}}{{Non-standard_Header}}
 
-L'{{Glossary("request header", "en-tête de requête")}} HTTP **`Attribution-Reporting-Eligible`** indique que la réponse correspondante est éligible à l'enregistrement d'une source ou d'un déclencheur d'attribution.
+{{Glossary("request header", "L'en-tête de requête")}} HTTP **`Attribution-Reporting-Eligible`** indique que la réponse correspondante est éligible à l'enregistrement d'une source ou d'un déclencheur d'attribution.
 
 Cet en-tête n'est jamais défini manuellement et est envoyé par le navigateur en réponse à divers paramètres d'éléments HTML ou de requêtes JavaScript. Selon les enregistrements autorisés définis dans la valeur `Attribution-Reporting-Eligible`, le serveur doit répondre avec un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} ou {{HTTPHeader("Attribution-Reporting-Register-Trigger")}} pour compléter l'enregistrement d'une source ou d'un déclencheur d'attribution, respectivement.
 
-Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 <table class="properties">
   <tbody>

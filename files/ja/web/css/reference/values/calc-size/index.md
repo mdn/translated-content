@@ -1,8 +1,9 @@
 ---
-title: calc-size()
+title: CSS `calc-size()` 関数
+short-title: calc-size()
 slug: Web/CSS/Reference/Values/calc-size
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 {{seecompattable}}

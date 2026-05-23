@@ -3,16 +3,16 @@ title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
 ---
 
-**`fit-content()`** [CSS](/zh-CN/docs/Web/CSS) 函数将给定大小夹紧为可用大小 根据公式 `min(maximum size, max(minimum size, argument))`.
+**`fit-content()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/Reference/Values/Functions)根据公式 `min(maximum size, max(minimum size, argument))` 将给定大小钳制为可用大小。
 
 ```css
-/* <length> values */
+/* <length> 值 */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
 fit-content(100ch)
 
-/* <percentage> value */
+/* <percentage> 值 */
 fit-content(40%)
 ```
 
@@ -20,11 +20,11 @@ The function can be used as a track size in [CSS Grid](/zh-CN/docs/Web/CSS/Guide
 
 The function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
-## Syntax
+## 语法
 
 The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argument.
 
-### Values
+### 值
 
 - {{cssxref("&lt;length&gt;")}}
   - : An absolute length.
@@ -32,11 +32,11 @@ The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argu
   - : A percentage relative to the available space in the given axis.
     In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
 
-### Formal syntax
+### 形式语法
 
-{{csssyntax}}
+{{CSSSyntax("fit-content")}}
 
-## Example
+## 示例
 
 ### CSS
 
@@ -71,14 +71,14 @@ The `fit-content()` function accepts a `<length>` or a `<percentage>` as an argu
 </div>
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Example", "100%", 200)}}
+{{EmbedLiveSample("示例", "100%", 200)}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

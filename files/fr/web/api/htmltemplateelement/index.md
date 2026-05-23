@@ -2,7 +2,7 @@
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 9c4d4cb78a55340b46855e47aba76729a59e11ce
 ---
 
 {{APIRef("Web Components")}}
@@ -28,6 +28,8 @@ _Cette interface hérite des propriétés de {{DOMxRef("HTMLElement")}}._
   - : Un booléen qui reflète la valeur de l'attribut [`shadowrootdelegatesfocus`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootdelegatesfocus) de l'élément HTML `<template>` associé.
 - {{DOMxRef("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
   - : Un booléen qui reflète la valeur de l'attribut [`shadowrootclonable`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) de l'élément HTML `<template>` associé.
+- {{DOMxRef("HTMLTemplateElement.shadowRootCustomElementRegistry", "shadowRootCustomElementRegistry")}}
+  - : Une chaîne de caractères qui reflète la valeur de l'attribut [`shadowrootcustomelementregistry`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) de l'élément `<template>` associé, indiquant que la racine d'ombre déclarative utilise un {{DOMxRef("CustomElementRegistry")}} avec une portée.
 - {{DOMxRef("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
   - : Un booléen qui reflète la valeur de l'attribut [`shadowrootserializable`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) de l'élément HTML `<template>` associé.
 

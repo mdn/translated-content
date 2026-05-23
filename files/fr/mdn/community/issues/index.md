@@ -2,10 +2,10 @@
 title: Créer et travailler sur des problèmes
 slug: MDN/Community/Issues
 l10n:
-  sourceCommit: a2b29d9159294f1437e0adf49cdf3019e9c1c24b
+  sourceCommit: 912a46f223ac76dca0ea29fab6aa0ba1e5e80216
 ---
 
-En tant que contributeur, vous pouvez [signaler](#directives_pour_signaler_un_problème) et [travailler](#directives_pour_travailler_sur_un_problème) sur des problèmes.
+En tant que contributeur·ice, vous pouvez [signaler](#directives_pour_signaler_un_problème) et [travailler](#directives_pour_travailler_sur_un_problème) sur des problèmes.
 Après avoir signalé un problème, celui-ci est trié. Le [tri](#directives_pour_le_tri_des_problèmes) des problèmes est généralement effectué par des personnes assignées au rôle de mainteneur ou de propriétaire.
 
 ## Directives générales de participation
@@ -71,7 +71,7 @@ Assurez-vous que les sections suivent l'ordre défini dans le modèle de page de
 ### Description
 
 La page de modèle de propriété CSS est définie [ici](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template).
-La liste des tâches dans ce problème sera utilisée pour comparer les propriétés CSS documentées avec le modèle et suivre les modifications apportées aux pages de propriétés pour garantir leur conformité.
+La liste des tâches dans ce problème est utilisée pour comparer les propriétés CSS documentées avec le modèle et suivre les modifications apportées aux pages de propriétés pour garantir leur conformité.
 
 ### Liste des pages vérifiées
 
@@ -82,27 +82,52 @@ La liste des tâches dans ce problème sera utilisée pour comparer les proprié
 
 ## Directives pour travailler sur un problème
 
-N'oubliez pas que si vous prenez un problème en charge, l'attente est que le travail soit terminé dans un délai raisonnable. Si vous n'êtes pas en mesure de progresser pendant une semaine après avoir été assigné ou si vous ne pouvez plus terminer la tâche requise, laissez un commentaire et désignez-vous comme non assigné au problème.
+N'oubliez pas que si vous prenez un problème en charge, l'attente est que le travail soit terminé dans un délai raisonnable.
+Si vous ne parvenez pas à faire avancer le travail sur un ticket que vous avez pris en charge, veuillez ajouter un commentaire afin d'en informer les responsables et de permettre à un·e autre contributeur·ice de reprendre le ticket.
 
-Voici les étapes générales pour travailler sur un problème :
+Voici les étapes générales pour travailler sur un problème&nbsp;:
 
-1. **Trouvez un problème&nbsp;:** Si vous cherchez à contribuer, recherchez des problèmes avec les étiquettes [`good first issue`, `help wanted`](#définir_dautres_étiquettes). La plupart des dépôts ont des problèmes avec ces étiquettes. Vous êtes libre de parcourir et de choisir un problème qui convient à vos compétences. Un autre endroit utile pour chercher des problèmes à résoudre est le [Tableau de contribution du MDN Francophone](https://github.com/orgs/mdn/projects/44). Cette vue de projet répertorie les problèmes ouverts du dépôt des traductions françaises.
+1. **Trouvez un problème&nbsp;:**
+
+   Si vous cherchez à contribuer, recherchez des problèmes avec les étiquettes [`good first issue`, `help wanted`](#définir_dautres_étiquettes). La plupart des dépôts ont des problèmes avec ces étiquettes. Vous êtes libre de parcourir et de choisir un problème qui convient à vos compétences. Un autre endroit utile pour chercher des problèmes à résoudre est le [Tableau de contribution du MDN Francophone](https://github.com/orgs/mdn/projects/44). Cette vue de projet répertorie les problèmes ouverts du dépôt des traductions françaises.
 
    > [!NOTE]
    > Un problème avec l'étiquette `needs triage` indique que l'équipe principale de MDN Web Docs n'a pas encore examiné le problème, et vous ne devriez pas commencer à travailler dessus.
 
-2. **Assignez le problème à vous-même&nbsp;:** Après avoir trouvé un problème sur lequel vous souhaitez travailler, assurez-vous que le problème n'est assigné à personne d'autre. Ajoutez un commentaire disant que vous aimeriez travailler sur le problème, et si vous en êtes capable, [assignez le problème à vous-même](https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
+2. **Assignez le problème à vous-même&nbsp;:**
 
-3. **Faites des recherches&nbsp;:** La plupart des problèmes nécessitent une certaine enquête avant que le travail puisse commencer.
+   Avant de commencer à travailler sur un problème, vérifiez d'abord que personne n'est assigné au problème (le champ _Assignees_ doit être «&nbsp;Unassigned&nbsp;»).
+
+   Ensuite, vérifiez qu'il n'y a pas de [requêtes de tirage](/fr/docs/MDN/Community/Pull_requests) liées, car cela pourrait indiquer qu'un·e autre contributeur·ice a revendiqué le problème et a commencé à travailler dessus.
+
+3. **Faites des recherches&nbsp;:**
+
+   La plupart des problèmes nécessitent une certaine enquête avant que le travail puisse commencer.
    - Déterminez l'ampleur du travail à réaliser. Si vous avez besoin de poser des questions, posez-les dans les [salles de discussion de MDN Web Docs](/fr/docs/MDN/Community/Communication_channels#salles_de_discussion).
    - Si le problème est bien décrit et que le travail est assez évident, allez-y et faites-le.
-   - Si le problème n'est pas bien décrit et/ou si vous n'êtes pas sûr de ce qui est nécessaire, n'hésitez pas à @mentionner l'auteur et à demander plus d'informations.
+   - Si le problème n'est pas bien décrit et/ou si vous n'êtes pas sûr de ce qui est nécessaire, n'hésitez pas à @mentionner l'auteur·ice et à demander plus d'informations.
 
-4. **Apportez les modifications&nbsp;:** Dupliquez (_Fork_) le dépôt et créez une branche. Faites votre travail et ouvrez une [requête de tirage](/fr/docs/MDN/Community/Pull_requests) dans le dépôt. [Faites référence au problème](https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue) dans la description de la requête de tirage. En fonction des fichiers que vous avez mis à jour dans la requête de tirage, un réviseur sera automatiquement assigné à votre requête de tirage. (Les équipes par domaine thématique sont définies dans le fichier [CODEOWNERS](https://github.com/mdn/translated-content/blob/main/.github/CODEOWNERS)).
+4. **Revendiquez le problème&nbsp;:**
 
-   Après avoir ouvert la requête de tirage, si vous constatez que vous n'avez plus le temps d'apporter des modifications ou d'incorporer les commentaires de révision, faites-le savoir à l'équipe dès que possible dans un commentaire de la requête de tirage. Cela aidera l'équipe à assigner un autre contributeur intéressé pour terminer le travail sur la requête de tirage et fermer le problème lié.
+   Vous pouvez «&nbsp;revendiquer&nbsp;» un problème non assigné et non revendiqué en suivant ces étapes&nbsp;:
+   1. Dupliquez (_Fork_) le dépôt et créez votre branche de travail.
+   2. Corrigez le problème, puis ouvrez une [requête de tirage (PR)](/fr/docs/MDN/Community/Pull_requests) dans le dépôt.
+   3. Dans la description de la PR, incluez le texte `Fixes #<issue_number>` (si la PR ne corrige qu'une partie du problème, ajoutez le texte `Related to #<issue_number>`).
 
-5. Après que votre requête de tirage a été examinée et fusionnée, vous pouvez marquer le problème lié comme fermé. Si vous avez ouvert la requête de tirage avec le texte `Fixes #<issue>`, le problème sera automatiquement fermé lorsque la requête de tirage sera fusionnée.
+      L'ajout de ce texte crée une référence croisée entre le problème et la PR, et marque implicitement le problème comme revendiqué par vous.
+
+      > [!NOTE]
+      > Si vous avez les permissions nécessaires, vous devriez également _assigner explicitement le problème à vous-même_([assigner un problème ou une PR à un·e utilisateur·ice GitHub](https://docs.github.com/fr/issues/tracking-your-work-with-issues/using-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request)).
+
+   En fonction des fichiers que vous avez mis à jour dans la requête de tirage, un relecteur est automatiquement assigné à votre requête de tirage. (Les équipes par domaine sont définies dans le fichier [CODEOWNERS <sup>(angl.)</sup>](https://github.com/mdn/translated-content/blob/main/.github/CODEOWNERS)).
+
+   > [!WARNING]
+   > Après avoir ouvert la requête de tirage, si vous constatez que vous n'avez plus le temps d'apporter des modifications ou d'intégrer les commentaires de révision, informez l'équipe dès que possible dans un commentaire de la requête de tirage.
+   > Cela aide l'équipe à assigner un·e autre contributeur·ice intéressé·e pour terminer le travail sur la requête de tirage et fermer le problème lié.
+
+5. **Fermer le problème comme terminé&nbsp;:**
+
+   Si vous avez ouvert la requête de tirage avec le texte `Fixes #<issue>` dans la description, le problème est automatiquement fermé lorsque la PR est fusionnée. Sinon, vous pouvez ajouter un commentaire au problème en lien avec une ou plusieurs requêtes de tirage qui le corrigent, et un·e mainteneur·euse fermera le problème comme terminé.
 
 ### Corriger les problèmes vous-même
 
@@ -118,9 +143,9 @@ Ajoutez un commentaire sur votre intention de travailler sur le problème et, si
 
 Utilisez les [directives pour travailler sur un problème](#directives_pour_travailler_sur_un_problème), essayez de résoudre le problème en mettant à jour la source appropriée, telle que&nbsp;:
 
-- Le **contenu** de MDN Web Docs (en anglais) dans le dépôt [mdn/content](https://github.com/mdn/content)
-- Le **contenu traduit** de MDN Web Docs dans le dépôt [mdn/translated-content](https://github.com/mdn/translated-content)
-- Le **frontend** de MDN Web Docs dans le dépôt [mdn/fred](https://github.com/mdn/fred)
+- Le **contenu** de MDN Web Docs (en anglais) dans le dépôt [mdn/content <sup>(angl.)</sup>](https://github.com/mdn/content)
+- Le **contenu traduit** de MDN Web Docs dans le dépôt [mdn/translated-content <sup>(angl.)</sup>](https://github.com/mdn/translated-content)
+- Le **frontend** de MDN Web Docs dans le dépôt [mdn/fred <sup>(angl.)</sup>](https://github.com/mdn/fred)
 
 Chaque dépôt comprend des informations utiles pour vous guider sur la façon de contribuer.
 Pour plus d'informations, consultez [nos principaux dépôts GitHub](/fr/docs/MDN/Community/Our_repositories).
@@ -133,18 +158,18 @@ Le processus global de tri comprend certaines tâches [générales](#tâches_gé
 
 ### Tâches générales de tri
 
-- Lorsqu'un problème est ouvert, l'étiquette `needs triage` est automatiquement définie sur le problème. Vous pouvez rechercher cette étiquette pour trouver des problèmes qui [ont besoin d'être triés](#tâches_spécifiques_aux_problèmes). Les contributeurs ou toute autre personne ne doivent pas travailler sur le problème tant qu'il n'a pas été trié. (Les personnes en charge du tri doivent se souvenir de supprimer l'étiquette `needs triage` après avoir trié le problème.)
+- Lorsqu'un problème est ouvert, l'étiquette `needs triage` est automatiquement définie sur le problème. Vous pouvez rechercher cette étiquette pour trouver des problèmes qui [ont besoin d'être triés](#tâches_spécifiques_aux_problèmes). Les contributeur·ice·s ou toute autre personne ne doivent pas travailler sur le problème tant qu'il n'a pas été trié. (Les personnes en charge du tri doivent se souvenir de supprimer l'étiquette `needs triage` après avoir trié le problème.)
 
-- Dans le [dépôt mdn/content](https://github.com/mdn/content/issues), une étiquette `Content:` supplémentaire, telle que `Content:CSS` ou `Content:WebAPI`, est automatiquement définie sur le problème. Cela est défini en fonction de l'URL MDN mentionnée dans le problème. Vous pouvez utiliser l'étiquette spécifique au contenu pour rechercher des problèmes à trier dans votre domaine de sujet spécifique.
+- Dans le [dépôt mdn/content <sup>(angl.)</sup>](https://github.com/mdn/content/issues), une étiquette `Content:` supplémentaire, telle que `Content:CSS` ou `Content:WebAPI`, est automatiquement définie sur le problème. Cela est défini en fonction de l'URL MDN mentionnée dans le problème. Vous pouvez utiliser l'étiquette spécifique au contenu pour rechercher des problèmes à trier dans votre domaine de sujet spécifique.
 
-- Si un problème concerne une locale active et non-en-US, définissez l'étiquette appropriée, telle que `l10n-fr`, `l10n-zh` ou `l10n-ja`. Les équipes pour ces locales prendront en charge ces problèmes et les trieront.
+- Si un problème concerne une locale active et non-en-US, définissez l'étiquette appropriée, telle que `l10n-fr`, `l10n-zh` ou `l10n-ja`. Les équipes pour ces locales prennent en charge ces problèmes et les trient.
 
 - Vous n'avez pas besoin de trier activement les problèmes tout le temps. Réservez du temps, disons 30 minutes chaque semaine, pour trier les problèmes de manière régulière dans votre domaine de responsabilité. Le tri n'a pas besoin d'être fait dans le cadre d'une réunion synchrone ou même en même temps que tout le monde, mais il doit être fait régulièrement pour s'assurer que le backlog de bogues non triés ne devienne pas trop important.
 
 - En plus de trier les problèmes entrants chaque semaine, passez en revue la liste des anciens bogues pour voir s'il y en a qui sont bloqués, qui doivent être fermés ou qui ne sont plus pertinents. L'étiquette `idle` (pour le dépôt anglais) est automatiquement définie sur les problèmes qui n'ont eu aucune activité pendant 30 jours.
-  - Vérifiez les problèmes assignés qui sont toujours ouverts pour voir si l'assigné progresse. S'il n'y a pas de progrès après une semaine d'assignation, demandez-lui s'il a encore le temps de travailler sur le problème. Si une autre semaine passe sans progrès, désaffectez-le et laissez un commentaire indiquant que vous rendez le problème disponible pour d'autres contributeurs intéressés.
-  - Si une demande de tirage a été ouverte pour corriger le problème mais n'a pas été examinée pendant une semaine, envoyez un rappel au réviseur pour lui demander s'il peut s'en occuper.
-  - Si une demande de tirage pour corriger le problème attend des commentaires de révision à traiter après une semaine, demandez alors à l'auteur s'il peut répondre à sa révision. Si une autre semaine passe, soit corrigez vous-même les commentaires de révision si vous avez le temps, soit fermez la demande de tirage et désaffectez le problème connexe.
+  - Vérifiez les problèmes assignés qui sont toujours ouverts pour voir si l'assigné progresse. S'il n'y a pas de progrès après une semaine d'assignation, demandez-lui s'il·elle a encore le temps de travailler sur le problème. Si une autre semaine passe sans progrès, désaffectez-le et laissez un commentaire indiquant que vous rendez le problème disponible pour d'autres contributeur·ice·s intéressé·e·s.
+  - Si une demande de tirage a été ouverte pour corriger le problème mais n'a pas été examinée pendant une semaine, envoyez un rappel au réviseur pour lui demander s'il·elle peut s'en occuper.
+  - Si une demande de tirage pour corriger le problème attend des commentaires de révision à traiter après une semaine, demandez alors à l'auteur·ice s'il·elle peut répondre à sa révision. Si une autre semaine passe, soit corrigez vous-même les commentaires de révision si vous avez le temps, soit fermez la demande de tirage et désaffectez le problème connexe.
 
 ### Tâches spécifiques aux problèmes
 
@@ -152,23 +177,23 @@ Ce sont les directives à suivre lors du tri de chaque problème.
 
 #### Vérifiez si le problème est valide
 
-Voici quelques éléments à garder à l'esprit lors de l'examen de la validité d'un problème :
+Voici quelques éléments à garder à l'esprit lors de l'examen de la validité d'un problème&nbsp;:
 
-- Vérifiez si le problème soulevé est valide et si la solution améliorera le contenu pour les lecteurs et le site Web.
-- Évaluez si l'impact de la solution sera mineur ou généralisé.
-- Évaluez si la solution au problème nécessitera d'abord une discussion, auquel cas, indiquez à l'auteur d'ouvrir une [discussion <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions) à la place.
+- Vérifiez si le problème soulevé est valide et si la solution améliore le contenu pour les lecteurs et le site Web.
+- Évaluez si l'impact de la solution est mineur ou généralisé.
+- Évaluez si la solution au problème nécessite d'abord une discussion, auquel cas, indiquez à l'auteur·ice d'ouvrir une [discussion <sup>(angl.)</sup>](https://github.com/orgs/mdn/discussions) à la place.
 - Vérifiez si le problème est conforme à nos [directives de rédaction](/fr/docs/MDN/Writing_guidelines/Writing_style_guide) et [modèles](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types).
 - Vérifiez si les suggestions d'ajout de liens sont conformes à notre [politique de liens externes](/fr/docs/MDN/Writing_guidelines/Writing_style_guide#liens_externes).
 
 #### Vérifiez le problème pour l'exhaustivité des informations
 
-Examinez chaque problème par rapport à la liste de contrôle suivante pour vous assurer que le problème contient les informations décrites pour que quelqu'un puisse commencer à travailler sur le bogue :
+Examinez chaque problème par rapport à la liste de contrôle suivante pour vous assurer que le problème contient les informations décrites pour que quelqu'un puisse commencer à travailler sur le bogue&nbsp;:
 
 - URL de la page MDN Web Docs avec le problème ou URL d'une page d'exemple MDN Web Docs si le problème existe sur plusieurs pages
 - Le titre ou la section spécifique de la page MDN Web Docs où le problème a été trouvé
 - Une description claire de l'information incorrecte, inutile, incomplète ou manquante
 
-Si l'une des informations ci-dessus n'est pas présente, vous devez demander à l'auteur du problème de fournir ces détails et ajouter le label `needs info` au problème. Reprenez le tri du problème uniquement après que ces détails ont été fournis (après quoi, vous pouvez supprimer le label `needs info`). Il est acceptable d'attendre jusqu'à une semaine pour obtenir une réponse de l'auteur.
+Si l'une des informations ci-dessus n'est pas présente, vous devez demander à l'auteur·ice du problème de fournir ces détails et ajouter le label `needs info` au problème. Reprenez le tri du problème uniquement après que ces détails ont été fournis (après quoi, vous pouvez supprimer le label `needs info`). Il est acceptable d'attendre jusqu'à une semaine pour obtenir une réponse de l'auteur·ice.
 
 #### Définir un label de priorité
 
@@ -179,25 +204,25 @@ Si l'une des informations ci-dessus n'est pas présente, vous devez demander à 
 
 Pour chaque bogue, nous définissons un niveau de priorité en fonction de la gravité du problème afin d'aider les personnes qui souhaitent travailler sur les problèmes ou domaines les plus importants.
 
-- Problème critique&nbsp;: Ce type de problème doit être corrigé dès que possible, peu importe où il apparaît sur le site. Ce type de problème pourrait gravement nuire à la réputation de MDN et/ou nuire aux utilisateurs. Des exemples de ce problème incluent un extrait de code incorrect, qui, s'il est utilisé en production, pourrait créer un problème de sécurité grave et un contenu indésirable tel que des logiciels malveillants, de la pornographie, des discours haineux ou des liens vers ce type de contenu.
-  - Étiquette&nbsp;: `P0 - Urgent` (sera traité immédiatement)
+- Problème critique&nbsp;: Ce type de problème doit être corrigé dès que possible, peu importe où il apparaît sur le site. Ce type de problème pourrait gravement nuire à la réputation de MDN et/ou nuire aux utilisateur·ice·s. Des exemples de ce problème incluent un extrait de code incorrect, qui, s'il est utilisé en production, pourrait créer un problème de sécurité grave et un contenu indésirable tel que des logiciels malveillants, de la pornographie, des discours haineux ou des liens vers ce type de contenu.
+  - Étiquette&nbsp;: `P0 - Urgent` (est traité immédiatement)
 
 - Problème majeur&nbsp;: Ce type de problème pourrait gravement affecter l'utilité d'une page. Par exemple, une quantité significative d'informations obsolètes, un exemple de code complexe et important qui ne fonctionne pas, une quantité significative de prose mal écrite et difficile à comprendre, ou un grand nombre de liens brisés.
-  - Étiquettes&nbsp;: `P1 - High` (sera traité bientôt) et `P2 - Medium` (sera traité bientôt, mais les éléments de priorité supérieure seront traités en premier)
+  - Étiquettes&nbsp;: `P1 - High` (est bientôt traité) et `P2 - Medium` (est bientôt traité, mais les éléments de priorité supérieure sont traités en premier)
 
-- Problème mineur&nbsp;: Il s'agit d'un type de problème d'amélioration qui peut améliorer le contenu existant mais n'affecte pas l'apprentissage ou n'a qu'un effet mineur sur l'apprentissage. Étant donné que ces types de problèmes ne sont pas activement planifiés, l'aide des contributeurs pour résoudre ces problèmes est la bienvenue et très appréciée. La résolution de certains de ces problèmes peut également fournir la pratique nécessaire aux contributeurs débutants qui commencent à se familiariser avec le processus de contribution. Des exemples incluent des fautes de frappe, une mauvaise grammaire, un lien brisé, une petite quantité d'informations obsolètes ou une prose mal écrite, ou un extrait de code qui ne fonctionne pas.
-  - Étiquette&nbsp;: `P3 - Low` (aucune visibilité sur le moment de quand le problème sera résolu)
+- Problème mineur&nbsp;: Il s'agit d'un type de problème d'amélioration qui peut améliorer le contenu existant mais n'affecte pas l'apprentissage ou n'a qu'un effet mineur sur l'apprentissage. Étant donné que ces types de problèmes ne sont pas activement planifiés, l'aide des contributeur·ice·s pour résoudre ces problèmes est la bienvenue et très appréciée. La résolution de certains de ces problèmes peut également fournir la pratique nécessaire aux contributeur·ice·s débutant·e·s qui commencent à se familiariser avec le processus de contribution. Des exemples incluent des fautes de frappe, une mauvaise grammaire, un lien brisé, une petite quantité d'informations obsolètes ou une prose mal écrite, ou un extrait de code qui ne fonctionne pas.
+  - Étiquette&nbsp;: `P3 - Low` (aucune visibilité sur le moment de quand le problème est résolu)
 
 En général, les problèmes critiques doivent être corrigés immédiatement et sont le plus souvent traités par le personnel et les pairs de MDN Web Docs.
 
 #### Ajouter des informations utiles
 
-Si possible, ajoutez des informations qui peuvent aider les contributeurs à résoudre le problème. Les informations peuvent prendre la forme d'étapes, d'approches générales, de liens vers d'autres problèmes similaires résolus ou de ressources de lecture. Un plan ou des étapes bien définis sont particulièrement nécessaires dans les problèmes étiquetés `good first issue` et peuvent aider à intégrer rapidement de nouveaux contributeurs. Vous pouvez limiter cette tâche à 5-10 minutes.
+Si possible, ajoutez des informations qui peuvent aider les contributeur·ice·s à résoudre le problème. Les informations peuvent prendre la forme d'étapes, d'approches générales, de liens vers d'autres problèmes similaires résolus ou de ressources de lecture. Un plan ou des étapes bien définis sont particulièrement nécessaires dans les problèmes étiquetés `good first issue` et peuvent aider à intégrer rapidement de nouveaux·elles contributeur·ice·s. Vous pouvez limiter cette tâche à 5-10 minutes.
 
 Par exemple, au tri, vous pouvez ajouter les informations suivantes au problème que vous traitez&nbsp;:
 
 ```md
-À celui qui résoudra ce problème, il semble que les mesures suivantes soient nécessaires :
+À celui ou celle qui résoudra ce problème, il semble que les mesures suivantes soient nécessaires&nbsp;:
 
 - Mettre à jour le premier paragraphe sous la rubrique X pour corriger le problème avec Y
 - Ajouter une description de X
@@ -209,8 +234,8 @@ Par exemple, au tri, vous pouvez ajouter les informations suivantes au problème
 Ensuite, définissez les étiquettes suivantes selon le cas&nbsp;:
 
 - `good first issue`&nbsp;: Ajoutez cette étiquette au problème si la correction du problème est vraiment simple et si la résolution du problème offrirait une bonne pratique à un nouvel arrivant qui s'habitue au processus.
-- `help wanted`&nbsp;: Ajoutez cette étiquette si le problème nécessite de l'aide de quelqu'un qui connaît ou est familier avec le sujet. C'est une étiquette populaire et certains contributeurs l'utilisent pour rechercher des problèmes à résoudre dans des projets open source dans leurs domaines de familiarité ou d'expertise.
-- `needs content update`&nbsp;: Ajoutez cette étiquette si la correction du problème dans un autre dépôt nécessitera une correction équivalente dans le dépôt `mdn/content`.
+- `help wanted`&nbsp;: Ajoutez cette étiquette si le problème nécessite de l'aide de quelqu'un qui connaît ou est familier avec le sujet. C'est une étiquette populaire et certain·e·s contributeur·ice·s l'utilisent pour rechercher des problèmes à résoudre dans des projets open source dans leurs domaines de familiarité ou d'expertise.
+- `needs content update`&nbsp;: Ajoutez cette étiquette si la correction du problème dans un autre dépôt nécessite une correction équivalente dans le dépôt `mdn/content`.
 
   > [!NOTE]
   > Après le processus de tri, supprimez l'étiquette `needs triage`.

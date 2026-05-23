@@ -39,7 +39,7 @@ bind(thisArg, arg1, arg2, /* …, */ argN)
 ### 引数
 
 - `thisArg`
-  - : バインド済み関数が呼び出される際、 `this` 引数としてターゲット関数 `func` に渡される値です。関数が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) はグローバルオブジェクトに置き換わり、プリミティブ値はオブジェクトに変換されます。バインド済み関数が {{jsxref("Operators/new", "new")}} 演算子によって構築された場合、この引数は無視されます。
+  - : バインド済み関数が呼び出される際、 `this` 引数としてターゲット関数 `func` に渡される値です。関数が[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)でない場合、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) はグローバルオブジェクトに置き換わり、プリミティブ値はオブジェクトに変換されます。バインド済み関数が {{jsxref("new")}} 演算子によって構築された場合、この引数は無視されます。
 - `arg1`, …, `argN` {{optional_inline}}
   - : `func` を呼び出す時、バインド済み関数に与えられる引数の前に付けて渡す引数。
 
@@ -64,7 +64,7 @@ const boundLog2 = boundLog.bind("new this value", 3, 4);
 boundLog2(5, 6); // "this value", 1, 2, 3, 4, 5, 6
 ```
 
-バインド済み関数は、そのターゲット関数が構築可能であれば、{{jsxref("Operators/new", "new")}} 演算子を使用してオブジェクトを構築することもできます。これは、あたかもターゲット関数で構築されたかのように動作します。前置された引数は通常通りターゲット関数に提供されますが、指定された `this` 値は無視されます（コンストラクターは {{jsxref("Reflect.construct")}} の引数で見られるように、自分自身で `this` を用意するためです）。バインド済み関数が直接構築された場合、代わりに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) がターゲット関数になります（つまり、バインドされた関数は `new.target` に対して透過的です）。
+バインド済み関数は、そのターゲット関数が構築可能であれば、{{jsxref("new")}} 演算子を使用してオブジェクトを構築することもできます。これは、あたかもターゲット関数で構築されたかのように動作します。前置された引数は通常通りターゲット関数に提供されますが、指定された `this` 値は無視されます（コンストラクターは {{jsxref("Reflect.construct")}} の引数で見られるように、自分自身で `this` を用意するためです）。バインド済み関数が直接構築された場合、代わりに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) がターゲット関数になります（つまり、バインドされた関数は `new.target` に対して透過的です）。
 
 ```js
 class Base {
@@ -212,7 +212,7 @@ class LateBloomer {
 
 ### コンストラクターとして使用するバインド済み関数
 
-バインド済み関数は自動的に、 {{jsxref("Operators/new", "new")}} 演算子を使ってターゲット関数の新しいインスタンスを構築できるようになっています。新たな値を構築するためにバインド済み関数を使った場合、 `this` を与えても無視されます。しかし、同時に与える引数はコンストラクター呼び出しの先頭部分に挿入されます。
+バインド済み関数は自動的に、 {{jsxref("new")}} 演算子を使ってターゲット関数の新しいインスタンスを構築できるようになっています。新たな値を構築するためにバインド済み関数を使った場合、 `this` を与えても無視されます。しかし、同時に与える引数はコンストラクター呼び出しの先頭部分に挿入されます。
 
 ```js
 function Point(x, y) {
@@ -239,9 +239,9 @@ axisPoint instanceof YAxisPoint; // true
 new YAxisPoint(17, 42) instanceof Point; // true
 ```
 
-{{jsxref("Operators/new", "new")}}で使用するためのバインド済み関数を作成するために、特別なことをする必要はないことに注意してください。[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target), [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof), [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) などはすべて期待通り、まるでこのコンストラクターがバインドされていないかのように処理されます。唯一の異なる形は、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) には使用できなくなるということです。
+{{jsxref("new")}}で使用するためのバインド済み関数を作成するために、特別なことをする必要はないことに注意してください。[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target), [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof), [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) などはすべて期待通り、まるでこのコンストラクターがバインドされていないかのように処理されます。唯一の異なる形は、 [`extends`](/ja/docs/Web/JavaScript/Reference/Classes/extends) には使用できなくなるということです。
 
-このことから、たとえバインド済み関数が {{jsxref("Operators/new", "new")}} を使用してのみ呼び出すことを要求したい場合でも、プレーンに呼び出される関数を作成することと比べて、特別なことをする必要はないことがわかります。 `new` を使わずに呼び出すと、バインドされた `this` は突然無視されなくなります。
+このことから、たとえバインド済み関数が {{jsxref("new")}} を使用してのみ呼び出すことを要求したい場合でも、プレーンに呼び出される関数を作成することと比べて、特別なことをする必要はないことがわかります。 `new` を使わずに呼び出すと、バインドされた `this` は突然無視されなくなります。
 
 ```js
 const emptyObj = {};
@@ -255,7 +255,7 @@ YAxisPoint(13);
 console.log(emptyObj); // { x: 0, y: 13 }
 ```
 
-バインドされた関数が {{jsxref("Operators/new", "new")}} でしか呼び出せないように制限したい場合、あるいは `new` なしでのみ呼び出せるようにしたい場合、ターゲット関数は `new.target !== undefined` を参照するか、代わりに[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を使用して、その制限を実施しなければなりません。
+バインドされた関数が {{jsxref("new")}} でしか呼び出せないように制限したい場合、あるいは `new` なしでのみ呼び出せるようにしたい場合、ターゲット関数は `new.target !== undefined` を参照するか、代わりに[クラス](/ja/docs/Web/JavaScript/Reference/Classes)を使用して、その制限を実施しなければなりません。
 
 ### クラスのバインド
 

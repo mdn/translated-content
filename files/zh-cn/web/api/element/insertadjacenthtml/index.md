@@ -14,14 +14,14 @@ insertAdjacentHTML(position, text)
 ```
 
 - `position`
-  - : 一个 {{domxref("DOMString")}}，表示插入内容相对于元素的位置，并且必须是以下字符串之一：
+  - : 一个 {{jsxref("String")}}，表示插入内容相对于元素的位置，并且必须是以下字符串之一：
     - `'beforebegin'`：元素自身的前面。
     - `'afterbegin'`：插入元素内部的第一个子节点之前。
     - `'beforeend'`：插入元素内部的最后一个子节点之后。
     - `'afterend'`：元素自身的后面。
 
 - `text`
-  - : 是要被解析为 HTML 或 XML 元素，并插入到 DOM 树中的 {{domxref("DOMString")}}。
+  - : 是要被解析为 HTML 或 XML 元素，并插入到 DOM 树中的 {{jsxref("String")}}。
 
 ### 位置名称的可视化
 

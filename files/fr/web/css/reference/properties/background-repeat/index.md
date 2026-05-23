@@ -3,10 +3,10 @@ title: Propriété CSS `background-repeat`
 short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 3d7f42187a7b92addbcf8b35a8e382b79da00dfe
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
+La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan peut ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: background-repeat")}}
 
@@ -49,6 +49,13 @@ background-repeat: space repeat;
 }
 ```
 
+## Propriétés constitutives
+
+Cette propriété est un raccourci pour les propriétés CSS suivantes&nbsp;:
+
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
+
 ## Syntaxe
 
 ```css
@@ -82,7 +89,7 @@ La propriété accepte une liste de deux mots-clés `<repeat-style>` séparés p
   - : Valeur par défaut. L'image est répétée autant de fois que nécessaire pour couvrir toute la zone de peinture de l'arrière-plan, l'image sur le bord étant rognée si la dimension de la zone n'est pas un multiple de la dimension de l'image d'arrière-plan.
 
 - `no-repeat`
-  - : L'image n'est pas répétée (et donc la zone de peinture de l'image d'arrière-plan ne sera pas forcément entièrement couverte). La position de l'image d'arrière-plan non répétée est définie par la propriété CSS {{CSSxRef("background-position")}}.
+  - : L'image n'est pas répétée (et donc la zone de peinture de l'image d'arrière-plan n'est pas forcément entièrement couverte). La position de l'image d'arrière-plan non répétée est définie par la propriété CSS {{CSSxRef("background-position")}}.
 
 - `space`
   - : L'image est répétée autant que possible sans être rognée. La première et la dernière image sont collées de chaque côté de l'élément, et l'espace blanc est réparti uniformément entre les images. La propriété {{CSSxRef("background-position")}} est ignorée sauf si une seule image peut être affichée sans rognage. Le seul cas où un rognage se produit avec `space` est lorsqu'il n'y a pas assez de place pour afficher une image.
@@ -114,9 +121,9 @@ Les valeurs de propriété peuvent être utilisées pour répéter uniquement ho
 
 La valeur par défaut est `repeat repeat`. Avec cette valeur, l'image d'arrière-plan conserve son {{Glossary("aspect ratio", "rapport d'aspect")}} intrinsèque, se répétant à la fois horizontalement et verticalement pour couvrir toute la zone de peinture de l'arrière-plan, les images sur les bords étant rognées à la taille de l'élément. Les bords rognés dépendent de la valeur de la propriété {{CSSxRef("background-position")}} correspondante. Le nombre de répétitions et la quantité d'images rognées sur les bords dépendent de la taille de la zone de peinture de l'arrière-plan et de la valeur de {{CSSxRef("background-size")}} correspondante.
 
-Les images répétées peuvent être espacées uniformément, ce qui garantit que l'image répétée conserve son rapport d'aspect sans être rognée. Avec la valeur `space`, si la zone de peinture de l'arrière-plan a un rapport d'aspect différent de celui de l'image ou n'a pas une taille qui est un multiple de la taille de l'arrière-plan dans l'une ou l'autre direction, il y aura des zones non couvertes par l'image d'arrière-plan.
+Les images répétées peuvent être espacées uniformément, ce qui garantit que l'image répétée conserve son rapport d'aspect sans être rognée. Avec la valeur `space`, si la zone de peinture de l'arrière-plan a un rapport d'aspect différent de celui de l'image ou n'a pas une taille qui est un multiple de la taille de l'arrière-plan dans l'une ou l'autre direction, il y a des zones non couvertes par l'image d'arrière-plan.
 
-L'image d'arrière-plan répétée peut aussi être étirée pour couvrir toute la zone sans rognage. Avec la valeur `round`, l'image répétée est étirée pour remplir tout l'espace disponible jusqu'à ce qu'il y ait de la place pour en ajouter une de plus, si le rapport d'aspect de l'image d'arrière-plan diffère de celui de la zone de peinture. Par exemple, pour une image d'arrière-plan de 100px sur 100px et une zone de peinture de 1099px sur 750px, l'image sera répétée 10 fois horizontalement et 7 fois verticalement, soit 70 répétitions au total, chaque image étant étirée dans les deux directions pour mesurer 109.9px sur 105px, modifiant ainsi le rapport d'aspect de l'image et pouvant la déformer. Si la largeur de la zone de peinture augmente de 1px pour atteindre 1100px, une 11e image pourra tenir horizontalement pour un total de 77 répétitions, chaque image étant alors peinte à 100px de large et 105px de haut, étirée uniquement dans le sens vertical.
+L'image d'arrière-plan répétée peut aussi être étirée pour couvrir toute la zone sans rognage. Avec la valeur `round`, l'image répétée est étirée pour remplir tout l'espace disponible jusqu'à ce qu'il y ait de la place pour en ajouter une de plus, si le rapport d'aspect de l'image d'arrière-plan diffère de celui de la zone de peinture. Par exemple, pour une image d'arrière-plan de 100px sur 100px et une zone de peinture de 1099px sur 750px, l'image est répétée 10 fois horizontalement et 7 fois verticalement, soit 70 répétitions au total, chaque image étant étirée dans les deux directions pour mesurer 109.9px sur 105px, modifiant ainsi le rapport d'aspect de l'image et pouvant la déformer. Si la largeur de la zone de peinture augmente de 1px pour atteindre 1100px, une 11e image peut tenir horizontalement pour un total de 77 répétitions, chaque image étant alors peinte à 100px de large et 105px de haut, étirée uniquement dans le sens vertical.
 
 ## Définition formelle
 

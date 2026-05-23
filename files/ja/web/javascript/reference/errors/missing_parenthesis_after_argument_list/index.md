@@ -1,20 +1,20 @@
 ---
 title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+l10n:
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 JavaScript の例外 "missing ) after argument list" は、関数の呼び出し方にエラーがあった場合に発生します。これは入力ミス、演算子の欠落、文字列のエスケープ忘れなどの可能性があります。
 
 ## エラーメッセージ
 
-```js
-SyntaxError: Expected ')' (Edge)
-SyntaxError: missing ) after argument list (Firefox)
+```plain
+SyntaxError: missing ) after argument list (V8-based & Firefox)
+SyntaxError: Unexpected identifier 'x'. Expected ')' to end an argument list. (Safari)
 ```
 
-## エラーの種類
+## エラー型
 
 {{jsxref("SyntaxError")}}
 
@@ -26,8 +26,8 @@ SyntaxError: missing ) after argument list (Firefox)
 
 文字列を連結する "+" 演算子がないため、JavaScript は `log` 関数の引数として、 `"PI: "` だけを想定します。この場合、閉じ括弧で終了する必要があります。
 
-```js example-bad
-console.log('PI: ' Math.PI);
+```js-nolint example-bad
+console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
@@ -38,10 +38,17 @@ console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
+あるいは、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)の使用を検討したり、[`console.log`](/ja/docs/Web/API/console/log_static) が複数の引数を受け入れるという特徴を活用したりすることもできます。
+
+```js example-good
+console.log(`PI: ${Math.PI}`);
+console.log("PI:", Math.PI);
+```
+
 ### 終了していない文字列
 
-```js example-bad
-console.log('"Java" + "Script" = \"' + 'Java' + 'Script\");
+```js-nolint example-bad
+console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 // SyntaxError: missing ) after argument list
 ```
 

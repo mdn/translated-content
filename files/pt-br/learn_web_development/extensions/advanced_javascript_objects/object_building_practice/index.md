@@ -19,7 +19,7 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
         <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Building blocks</a
         >) e o básico de OOJS (veja
-        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics"
           >Introduction to objects</a
         >).
       </td>

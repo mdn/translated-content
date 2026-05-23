@@ -16,11 +16,11 @@ new Intl.RelativeTimeFormat([locales[, options]])
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグを持つ文字列か、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+  - : BCP 47 言語タグを持つ文字列か、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
   - : 以下のプロパティのうち一部またはすべてを持つオブジェクトです。
     - `localeMatcher`
-      - : 使用するロケールの一致アルゴリズムです。使用可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページを参照してください。
+      - : 使用するロケールの一致アルゴリズムです。使用可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} のページを参照してください。
     - `numeric`
       - : メッセージを出力する書式です。使用可能な値は次の通りです。
         - "`always`" (既定値、例えば `1 日前`)
@@ -85,5 +85,5 @@ rtf.format(1, "day");
 ## 関連情報
 
 - {{jsxref("Intl.RelativeTimeFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}
 - [The Intl.RelativeTimeFormat API](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)

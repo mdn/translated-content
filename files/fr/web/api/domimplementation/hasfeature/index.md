@@ -5,7 +5,7 @@ slug: Web/API/DOMImplementation/hasFeature
 
 {{ApiRef("DOM")}}
 
-{{deprecated_header()}}
+{{deprecated_header}}
 
 La méthode **`DOMImplementation.hasFeature()`** renvoie un {{domxref("Boolean")}} (_booléen_) indiquant si une fonctionnalité donnée est prise en charge. Cette méthode est dépréciée et les navigateurs modernes renvoient `true` (_vrai_) dans tous les cas.
 
@@ -20,9 +20,9 @@ flag = document.implementation.hasFeature(feature, version);
 ### Paramètres
 
 - _feature_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant le nom de la fonctionnalité.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) représentant le nom de la fonctionnalité.
 - _version_
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) représentant la version de la spécification définissant la fonctionnalité.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) représentant la version de la spécification définissant la fonctionnalité.
 
 ## Spécifications
 

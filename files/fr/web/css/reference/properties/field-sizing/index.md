@@ -3,10 +3,8 @@ title: Propriété CSS `field-sizing`
 short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: ee2ece4eb07c07cae8baf6ab7b2ee748f4644565
 ---
-
-{{SeeCompatTable}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`field-sizing`** permet de contrôler le comportement de dimensionnement des éléments qui reçoivent une taille préférée par défaut, comme les éléments de contrôle de formulaire. Cette propriété permet de remplacer le comportement de dimensionnement par défaut, afin que les contrôles de formulaire s'ajustent à la taille de leur contenu.
 
@@ -43,21 +41,21 @@ field-sizing: unset;
 Plus précisément, `field-sizing` à `content` affecte les éléments suivants&nbsp;:
 
 - Les types de champs de saisie de formulaire qui acceptent une saisie de texte directe par l'utilisateur·ice. Cela inclut les types [`email`](/fr/docs/Web/HTML/Reference/Elements/input/email), [`number`](/fr/docs/Web/HTML/Reference/Elements/input/number), [`password`](/fr/docs/Web/HTML/Reference/Elements/input/password), [`search`](/fr/docs/Web/HTML/Reference/Elements/input/search), [`tel`](/fr/docs/Web/HTML/Reference/Elements/input/tel), [`text`](/fr/docs/Web/HTML/Reference/Elements/input/text) et [`url`](/fr/docs/Web/HTML/Reference/Elements/input/url).
-  - Si aucune largeur minimale n'est définie sur le contrôle, il n'aura que la largeur du curseur de texte.
-  - Les contrôles avec un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) seront affichés assez larges pour montrer le texte d'exemple.
+  - Si aucune largeur minimale n'est définie sur le contrôle, il n'a que la largeur du curseur de texte.
+  - Les contrôles avec un attribut [`placeholder`](/fr/docs/Web/HTML/Reference/Elements/input#placeholder) sont affichés assez larges pour montrer le texte d'exemple.
   - L'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/input#size) modifie la taille préférée par défaut de ces éléments `<input>`. Par conséquent, `size` n'a aucun effet sur les éléments `<input>` avec `field-sizing: content`.
 - Les champs [`file`](/fr/docs/Web/HTML/Reference/Elements/input/file). La saisie de texte directe n'est pas possible&nbsp;; cependant, le nom de fichier affiché change lorsque l'utilisateur·ice sélectionne un nouveau fichier à téléverser. Quand `field-sizing: content` est activé, le contrôle change de taille pour épouser le nom de fichier.
 - Les contrôles {{HTMLElement("textarea")}}. À noter que les éléments `<textarea>` avec `field-sizing: content` se comportent comme des champs de texte sur une seule ligne, avec les ajouts suivants&nbsp;:
-  - Si les éléments `<textarea>` ne peuvent pas grandir à cause d'une contrainte de largeur, ils commenceront à grandir en hauteur pour afficher des lignes supplémentaires. Lorsqu'une contrainte de hauteur est atteinte, une barre de défilement apparaît pour permettre de voir tout le contenu.
-  - Les attributs [`rows`](/fr/docs/Web/HTML/Reference/Elements/textarea#cols) et [`cols`](/fr/docs/Web/HTML/Reference/Elements/textarea#cols) modifient la taille préférée par défaut d'un `<textarea>`. Par conséquent, `rows`/`cols` n'ont aucun effet sur les éléments `<textarea>` avec `field-sizing: content`.
+  - Si les éléments `<textarea>` ne peuvent pas grandir à cause d'une contrainte de largeur, ils commencent à grandir en hauteur pour afficher des lignes supplémentaires. Lorsqu'une contrainte de hauteur est atteinte, une barre de défilement apparaît pour permettre de voir tout le contenu.
+  - Les attributs [`rows`](/fr/docs/Web/HTML/Reference/Elements/textarea#rows) et [`cols`](/fr/docs/Web/HTML/Reference/Elements/textarea#cols) modifient la taille préférée par défaut d'un `<textarea>`. Par conséquent, `rows`/`cols` n'ont aucun effet sur les éléments `<textarea>` avec `field-sizing: content`.
 - Les contrôles {{HTMLElement("select")}}. Ceux-ci se comportent un peu différemment de ce que l'on pourrait attendre avec `field-sizing: content`. L'effet dépend du type de contrôle `<select>` créé&nbsp;:
   - Les menus déroulants classiques changent de largeur pour toujours s'adapter à la valeur de l'option affichée au fur et à mesure que de nouvelles valeurs sont sélectionnées. (Par défaut, la taille du menu déroulant est suffisante pour afficher la valeur de l'option la plus longue.)
-  - Les boîtes de liste (`<select>` avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple) ou [`size`](/fr/docs/Web/HTML/Reference/Elements/select#multiple)) seront assez grandes pour afficher toutes les options sans avoir besoin de faire défiler. (Par défaut, la boîte déroulante nécessite un défilement pour voir toutes les options.)
-  - L'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/select#size) a très peu d'effet sur les éléments `<select>` ayant `field-sizing: content`. Dans ce cas, le navigateur vérifie si `size` vaut `1` pour déterminer si le contrôle `<select>` doit apparaître comme un menu déroulant ou une boîte de liste. Cependant, il affichera toujours toutes les options d'une boîte de liste, même si `size` est inférieur au nombre d'options.
+  - Les boîtes de liste (`<select>` avec l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/select#multiple) ou [`size`](/fr/docs/Web/HTML/Reference/Elements/select#size)) sont assez grandes pour afficher toutes les options sans avoir besoin de faire défiler. (Par défaut, la boîte déroulante nécessite un défilement pour voir toutes les options.)
+  - L'attribut [`size`](/fr/docs/Web/HTML/Reference/Elements/select#size) a très peu d'effet sur les éléments `<select>` ayant `field-sizing: content`. Dans ce cas, le navigateur vérifie si `size` vaut `1` pour déterminer si le contrôle `<select>` doit apparaître comme un menu déroulant ou une boîte de liste. Cependant, il affiche toujours toutes les options d'une boîte de liste, même si `size` est inférieur au nombre d'options.
 
 ### Interaction de `field-sizing` avec d'autres réglages de taille
 
-La flexibilité de dimensionnement offerte aux contrôles de formulaire par `field-sizing: content` peut être annulée si vous utilisez d'autres propriétés CSS de dimensionnement. Évitez de définir une {{CSSxRef("width")}} ou une {{CSSxRef("height")}} fixe avec `field-sizing: content` car cela réimposera une taille fixe au contrôle. Cependant, utiliser des propriétés comme {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} avec `field-sizing: content` est très efficace car cela permet au contrôle de grandir et de rétrécir avec le texte saisi tout en évitant qu'il ne devienne trop grand ou trop petit.
+La flexibilité de dimensionnement offerte aux contrôles de formulaire par `field-sizing: content` peut être annulée si vous utilisez d'autres propriétés CSS de dimensionnement. Évitez de définir une {{CSSxRef("width")}} ou une {{CSSxRef("height")}} fixe avec `field-sizing: content`, car cela réimpose une taille fixe au contrôle. Cependant, utiliser des propriétés comme {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} avec `field-sizing: content` est très efficace car cela permet au contrôle de grandir et de rétrécir avec le texte saisi tout en évitant qu'il ne devienne trop grand ou trop petit.
 
 L'attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) fait que le contrôle cesse de grandir lorsque la limite maximale de caractères est atteinte.
 
@@ -98,11 +96,11 @@ Remarquez les points suivants concernant le HTML&nbsp;:
 
 - Les deux premiers champs ont un attribut [`maxlength`](/fr/docs/Web/HTML/Reference/Elements/input#maxlength) qui empêche la taille du champ d'augmenter lorsque la limite de caractères est atteinte.
 - Le `<textarea>` grandit dans la direction en ligne jusqu'à atteindre la contrainte {{CSSxRef("min-width")}} (définie dans le code CSS ci-dessous), puis commence à ajouter de nouvelles lignes dans la direction bloc pour contenir les caractères supplémentaires.
-- Le champ `email` a un texte d'exemple (placeholder). Cela fait que le champ est affiché assez grand pour montrer tout le texte d'exemple. Une fois le champ sélectionné et que l'utilisateur commence à saisir, le champ change de taille pour la valeur de `min-width`. Le champ `text`, qui n'a pas de texte d'exemple, s'affiche initialement à `min-width`.
+- Le champ `email` a un texte d'exemple (placeholder). Cela fait que le champ est affiché assez grand pour montrer tout le texte d'exemple. Une fois le champ sélectionné et que l'utilisateur·ice commence à saisir, le champ change de taille pour la valeur de `min-width`. Le champ `text`, qui n'a pas de texte d'exemple, s'affiche initialement à `min-width`.
 
 #### CSS
 
-Dans le CSS, nous appliquons `field-sizing: content` sur les trois champs de formulaire, ainsi que {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} pour limiter la taille de saisie. Il est important de rappeler que, si aucune largeur minimale n'est définie sur les champs, ils n'auront que la largeur du curseur de texte.
+Dans le CSS, nous appliquons `field-sizing: content` sur les trois champs de formulaire, ainsi que {{CSSxRef("min-width")}} et {{CSSxRef("max-width")}} pour limiter la taille de saisie. Il est important de rappeler que, si aucune largeur minimale n'est définie sur les champs, ils n'ont que la largeur du curseur de texte.
 
 Nous appliquons également un style de base aux `<label>` pour qu'ils soient bien alignés à côté des champs.
 

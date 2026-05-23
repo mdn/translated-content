@@ -21,7 +21,7 @@ new Temporal.PlainYearMonth(year, month, calendar, referenceDay)
 ```
 
 > [!NOTE]
-> `Temporal.PlainYearMonth()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
+> `Temporal.PlainYearMonth()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` déclenche une {{JSxRef("TypeError")}}.
 
 > [!WARNING]
 > Évitez d'utiliser les paramètres `calendar` et `referenceDay`, car {{JSxRef("Temporal/PlainYearMonth/equals", "equals()")}} et {{JSxRef("Temporal/PlainYearMonth/compare", "compare()")}} prendront en compte le jour de référence pour la comparaison, ce qui peut entraîner que deux mois et années équivalentes soient considérées comme différentes si elles ont des jours de référence différents. Pour créer un objet `Temporal.PlainYearMonth` avec un calendrier non ISO, utilisez la méthode statique {{JSxRef("Temporal/PlainYearMonth/from", "Temporal.PlainYearMonth.from()")}}.

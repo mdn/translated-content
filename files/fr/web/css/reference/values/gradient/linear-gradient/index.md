@@ -1,9 +1,9 @@
 ---
-title: linear-gradient()
+title: Fonction CSS `linear-gradient()`
+short-title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
-original_slug: Web/CSS/gradient/linear-gradient
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`linear-gradient()`** crée une image qui est un dégradé entre deux ou plusieurs couleurs le long d'une ligne droite. Elle fournit une valeur de type [`<gradient>`](/fr/docs/Web/CSS/Reference/Values/gradient) qui est un type spécial d'image ([`<image>`](/fr/docs/Web/CSS/Reference/Values/image)).
@@ -94,31 +94,31 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%);
 ### Values
 
 - `<side-or-corner>`
-  - : La position du point de départ de la ligne selon laquelle évolue le dégradé. Si elle est indiquée, elle se compose du mot `to` et peut contenir jusqu'à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` ou `right` pour indiquer respectivement gauche ou droite), et le second indiquant le côté vertical (`top` ou `bottom` pour indiquer respectivement haut ou bas). L'ordre des deux mots-clés n'a pas d'importance. Si aucun n'est utilisé, la valeur par défaut sera `to bottom`.
+  - : La position du point de départ de la ligne selon laquelle évolue le dégradé. Si elle est indiquée, elle se compose du mot `to` et peut contenir jusqu'à deux mots-clés&nbsp;: le premier indiquant le côté horizontal (`left` ou `right` pour indiquer respectivement gauche ou droite), et le second indiquant le côté vertical (`top` ou `bottom` pour indiquer respectivement haut ou bas). L'ordre des deux mots-clés n'a pas d'importance. Si aucun n'est utilisé, la valeur par défaut est `to bottom`.
 
     Les valeurs `to top`, `to bottom`, `to left`, et `to right` sont respectivement équivalentes aux angles `0deg`, `180deg`, `270deg`, et `90deg`. Les autres valeurs sont traduites en un angle.
 
 - {{CSSxRef("&lt;angle&gt;")}}
-  - : L'angle de la ligne du dégradé. Une valeur de `0deg` sera équivalente à `to top`&nbsp;; les valeurs plus élevées évoluant dans le sens horaire.
+  - : L'angle de la ligne du dégradé. Une valeur de `0deg` est équivalente à `to top`&nbsp;; les valeurs plus élevées évoluant dans le sens horaire.
 - `<linear-color-stop>`
   - : Un arrêt de couleur indiqué par une valeur {{CSSxRef("&lt;color&gt;")}} suivie d'une ou deux positions d'arrêt (chacune étant indiquée comme un pourcentage ({{CSSxRef("&lt;percentage&gt;")}}) ou une longueur ({{CSSxRef("&lt;length&gt;")}}) le long de l'axe du dégradé).
 - `<color-hint>`
-  - : Une indication d'{{Glossary("interpolation")}} qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire sera atteinte à mi-parcours entre les deux arrêts.
+  - : Une indication {{Glossary("interpolation", "d'interpolation")}} qui définit la progression du dégradé entre deux arrêts de couleur adjacents. La longueur définit à quel point entre les deux arrêts le dégradé doit atteindre la couleur intermédiaire. Si cette valeur est absente, la valeur intermédiaire est atteinte à mi-parcours entre les deux arrêts.
 
 > [!NOTE]
 > Le rendu des [arrêts de couleur pour les dégradés CSS](#dégradé_avec_plusieurs_arrêts_de_couleur) suit les mêmes règles que [celui des arrêts de couleur pour les dégradés SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients).
 
 ## Description
 
-Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspondra à celle de l'élément auquel il s'applique.
+Comme tout autre dégradé, un dégradé linéaire [ne possède pas de dimensions intrinsèques](/fr/docs/Web/CSS/Reference/Values/image#description)&nbsp;; c'est-à-dire qu'il n'a pas de taille naturelle ou préférée ni de ratio d'affichage préféré. Sa taille réelle correspond à celle de l'élément auquel il s'applique.
 
-Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilisera plutôt la fonction {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
+Pour créer un dégradé linéaire qui se répète jusqu'à remplir son conteneur, on utilise plutôt la fonction {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}.
 
-Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des {{CSSxRef("&lt;image&gt;")}} sont acceptées. Pour cette raison, `linear-gradient()` ne fonctionnera pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
+Comme les `<gradient>` appartiennent au type de données `<image>`, ils ne peuvent être utilisés que là où des {{CSSxRef("&lt;image&gt;")}} sont acceptées. Pour cette raison, `linear-gradient()` ne fonctionne pas avec {{CSSxRef("background-color")}} ni avec d'autres propriétés qui utilisent le type de données {{CSSxRef("&lt;color&gt;")}}.
 
 ### Composition d'un dégradé linéaire
 
-Un dégradé linéaire est défini par un axe&nbsp;: la _ligne du dégradé_ et deux ou plusieurs _arrêts de couleur_. Chaque point sur l'axe aura une couleur distincte. Pour créer un dégradé doux, la fonction `linear-gradient()` dessine une suite de lignes colorées, perpendiculaires à l'axe du dégradé, dont la couleur de chacune correspond à la couleur du point d'intersection sur la ligne du dégradé.
+Un dégradé linéaire est défini par un axe&nbsp;: la _ligne du dégradé_ et deux ou plusieurs _arrêts de couleur_. Chaque point sur l'axe a une couleur distincte. Pour créer un dégradé doux, la fonction `linear-gradient()` dessine une suite de lignes colorées, perpendiculaires à l'axe du dégradé, dont la couleur de chacune correspond à la couleur du point d'intersection sur la ligne du dégradé.
 
 ![linear-gradient.png](linear-gradient.png)
 
@@ -128,7 +128,7 @@ Le _point de départ_ est situé sur la ligne du dégradé où la première coul
 
 #### Personnaliser des dégradés
 
-En ajoutant plusieurs arrêts de couleur sur la ligne du dégradé, il est possible de créer une transition personnalisée entre plusieurs couleurs. La position d'un point d'arrêt de couleur peut être explicitement définie en utilisant une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Si on n'indique pas l'emplacement d'un arrêt de couleur, celui-ci sera placé à la position intermédiaire entre celui qui précède et le suivant. Ainsi, les deux dégradés qui suivent sont équivalents&nbsp;:
+En ajoutant plusieurs arrêts de couleur sur la ligne du dégradé, il est possible de créer une transition personnalisée entre plusieurs couleurs. La position d'un point d'arrêt de couleur peut être explicitement définie en utilisant une longueur ([`<length>`](/fr/docs/Web/CSS/Reference/Values/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/Reference/Values/percentage)). Si on n'indique pas l'emplacement d'un arrêt de couleur, celui-ci est placé à la position intermédiaire entre celui qui précède et le suivant. Ainsi, les deux dégradés qui suivent sont équivalents&nbsp;:
 
 ```css
 linear-gradient(red, orange, yellow, green, blue);
@@ -141,9 +141,9 @@ Par défaut, les couleurs évoluent de façon progressive entre deux arrêts de 
 linear-gradient(red 10%, 30%, blue 90%);
 ```
 
-Si deux arrêts de couleur sont situés au même endroit, la transition sera une ligne dure entre la première et la dernière couleur déclarées à cet emplacement.
+Si deux arrêts de couleur sont situés au même endroit, la transition est une ligne dure entre la première et la dernière couleur déclarées à cet emplacement.
 
-Les arrêts de couleur doivent être listés dans l'ordre croissant. Les arrêts de couleur qui suivent avec une valeur inférieure écraseront les valeurs des arrêts de couleur précédents et créeront une transition dure. Dans l'exemple qui suit, on passe du rouge au jaune à 40% puis la transition se fait entre le jaune et le bleu pour 25% du dégradé.
+Les arrêts de couleur doivent être listés dans l'ordre croissant. Les arrêts de couleur qui suivent avec une valeur inférieure écrasent les valeurs des arrêts de couleur précédents et créent une transition dure. Dans l'exemple qui suit, on passe du rouge au jaune à 40% puis la transition se fait entre le jaune et le bleu pour 25% du dégradé.
 
 ```css
 linear-gradient(red 40%, yellow 30%, blue 65%);
@@ -157,7 +157,7 @@ linear-gradient(red, orange 10% 30%, yellow 50% 70%, green 90%);
 linear-gradient(red 0%, orange 10% 30%, yellow 50% 70%, green 90% 100%);
 ```
 
-Par défaut, s'il n'y a pas de couleur avec un arrêt situé à 0%, ce sera la première couleur déclarée qui sera utilisée à ce point. De même la dernière couleur déclarée continuera jusqu'à 100%.
+Par défaut, s'il n'y a pas de couleur avec un arrêt situé à 0%, ce est la première couleur déclarée qui est utilisée à ce point. De même la dernière couleur déclarée continue jusqu'à 100%.
 
 ## Exemples
 
@@ -240,4 +240,4 @@ Voir la page [Utiliser les dégradés CSS](/fr/docs/Web/CSS/Guides/Images/Using_
 - Le type de donnée {{CSSxRef("&lt;hue-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;image&gt;")}}
-- Le module d'[images CSS](/fr/docs/Web/CSS/Guides/Images)
+- Le module [d'images CSS](/fr/docs/Web/CSS/Guides/Images)

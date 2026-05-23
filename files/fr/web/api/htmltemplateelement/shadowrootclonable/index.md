@@ -3,16 +3,17 @@ title: "HTMLTemplateElement : propriété shadowRootClonable"
 short-title: shadowRootClonable
 slug: Web/API/HTMLTemplateElement/shadowRootClonable
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 9c4d4cb78a55340b46855e47aba76729a59e11ce
 ---
 
 {{APIRef("Web Components")}}
 
 La propriété **`shadowRootClonable`** de l'interface {{DOMxRef("HTMLTemplateElement")}} reflète la valeur de l'attribut [`shadowrootclonable`](/fr/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) de l'élément HTML {{HTMLElement("template")}} associé.
 
-Notez que cette propriété n'est pas utile pour les développeur·euse·s.
-Si un élément `<template>` est utilisé pour créer de manière déclarative un {{DOMxRef("ShadowRoot")}}, alors cet objet et cette propriété n'existent pas.
-Sinon, si un `HTMLTemplateElement` est créé, la valeur de cette propriété n'a pas d'importance car l'objet n'est pas une racine d'ombre (<i lang="en">shadow root</i> en anglais) et ne peut pas ensuite être transformé en racine d'ombre.
+> [!NOTE]
+> Cette propriété n'est pas utile pour les développeur·euse·s, et n'est documentée que pour des raisons de complétion.
+> Si un élément `<template>` est utilisé pour créer de manière déclarative un {{DOMxRef("ShadowRoot")}}, alors cet objet et cette propriété n'existent pas.
+> Sinon, si un `HTMLTemplateElement` est créé, la valeur de cette propriété n'a pas d'importance, car l'objet n'est pas une racine d'ombre (<i lang="en">shadow root</i> en anglais) et ne peut pas ensuite être transformé en racine d'ombre.
 
 ## Valeur
 

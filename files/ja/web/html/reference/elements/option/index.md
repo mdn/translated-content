@@ -1,8 +1,9 @@
 ---
-title: "<option>: HTML 選択肢要素"
+title: HTML `<option>` 選択肢要素
+short-title: <option>
 slug: Web/HTML/Reference/Elements/option
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 **`<option>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("select")}}、{{HTMLElement("optgroup")}}、{{HTMLElement("datalist")}} の各要素内で選択肢を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー選択肢や、その他の選択肢の一覧を表すことができます。
@@ -55,7 +56,7 @@ select {
 
 ### 従来の option のスタイル設定
 
-最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、 `<option>` 要素で利用できるスタイルは、ブラウザーとオペレーティングシステムによって異なって慰安した。 Firefox と Chromium においては、オペレーティングシステムによっては、所有元の `<select>` の [`font-size`](/ja/docs/Web/CSS/Reference/Properties/font-size) が尊重されます。 Chromium は、追加で [`color`](/ja/docs/Web/CSS/Reference/Properties/color)、[`background-color`](/ja/docs/Web/CSS/Reference/Properties/background-color)、[`font-family`](/ja/docs/Web/CSS/Reference/Properties/font-family)、[`font-variant`](/ja/docs/Web/CSS/Reference/Properties/font-variant)、[`text-align`](/ja/docs/Web/CSS/Reference/Properties/text-align) が設定可能な場合があります。
+最新のカスタマイズ機能に対応していないブラウザー（またはそれらを使用できない古いコードベース）では、 `<option>` 要素で利用できるスタイルは、ブラウザーとオペレーティングシステムによって異なって慰安した。 Firefox と Chromium においては、オペレーティングシステムによっては、所有元の `<select>` の {{cssxref("font-size")}} が尊重されます。 Chromium は、追加で {{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("font-family")}}、{{cssxref("font-variant")}}、{{cssxref("text-align")}} が設定可能な場合があります。
 
 従来の `<option>` のスタイル設定についての詳細は、[フォームへの高度なスタイル設定のガイド](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)を参照してください。
 

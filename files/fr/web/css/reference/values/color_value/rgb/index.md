@@ -1,8 +1,9 @@
 ---
-title: rgb()
+title: Fonction CSS `rgb()`
+short-title: rgb()
 slug: Web/CSS/Reference/Values/color_value/rgb
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 > [!NOTE]

@@ -3,7 +3,7 @@ title: Propriété CSS `baseline-shift`
 short-title: baseline-shift
 slug: Web/CSS/Reference/Properties/baseline-shift
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`baseline-shift`** repositionne la ligne de base dominante d'un élément de texte par rapport à la ligne de base dominante de son élément parent de contenu textuel. L'élément déplacé peut être un indice ou un exposant. Si la propriété est présente, la valeur remplace l'attribut {{SVGAttr("baseline-shift")}} de l'élément.
@@ -144,9 +144,8 @@ svg {
     content: "Votre navigateur ne prend pas en charge la propriété `baseline-shift`.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 0.5em;
+    padding: 1rem 0;
   }
 }
 ```

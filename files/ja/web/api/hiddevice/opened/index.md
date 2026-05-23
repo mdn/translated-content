@@ -11,7 +11,7 @@ l10n:
 
 ## 値
 
-{{jsxref("boolean")}} 値です。接続が開かれているとき `true` です。
+{{jsxref("Boolean")}} 値です。接続が開かれているとき `true` です。
 
 ## 例
 

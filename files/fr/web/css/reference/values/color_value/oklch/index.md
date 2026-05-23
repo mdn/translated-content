@@ -1,8 +1,9 @@
 ---
-title: oklch()
+title: Fonction CSS `oklch()`
+short-title: oklch()
 slug: Web/CSS/Reference/Values/color_value/oklch
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction de type `<color>`](/fr/docs/Web/CSS/Reference/Values/Functions#les_fonctions_de_couleur) [CSS](/fr/docs/Web/CSS) **`oklch()`** exprime une couleur donnée dans {{Glossary("color space", "l'espace de couleur")}} OKLCH. `oklch()` est la forme cylindrique de {{CSSxRef("color_value/oklab", "oklab()")}}, utilisant le même axe `L`, mais avec des coordonnées polaires Chroma (`C`) et teinte (`h` pour <i lang="en">hue</i> en anglais).

@@ -50,12 +50,12 @@ nav {
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><dfn><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></dfn></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>, <a href="/zh-CN/docs/HTML/Content_categories#Sectioning_content">区块内容</a>, 可视的内容。</td>
+   <th scope="row"><dfn><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a></dfn></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流式内容</a>, <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Sectioning_content">区块内容</a>, 可视的内容。</td>
   </tr>
   <tr>
    <th scope="row"><dfn>允许的内容</dfn></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>.</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流式内容</a>.</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -63,7 +63,7 @@ nav {
   </tr>
   <tr>
    <th scope="row"><dfn>允许的父元素</dfn></th>
-   <td>所有允许<a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>的元素</td>
+   <td>所有允许<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#Flow_content">流式内容</a>的元素</td>
   </tr>
   <tr>
    <th scope="row"><dfn>允许的</dfn> ARIA roles</th>

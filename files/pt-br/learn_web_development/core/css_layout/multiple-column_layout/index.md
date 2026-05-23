@@ -17,7 +17,7 @@ A especificação de layout de várias colunas fornece um método de disposiçã
         <a href="/pt-BR/docs/Learn_web_development/Core/Structuring_content"
           >Introduction to HTML</a
         >) e uma ideia de como CSS funciona (estude
-        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/pt-BR/docs/Learn_web_development/Core/Styling_basics"
           >Introduction to CSS</a
         >).
       </td>

@@ -32,7 +32,7 @@ async function [name]([param1[, param2[, …, paramN]]]) {
 
 ## Description
 
-Une expression `async function` est très proche, et partage quasiment la même syntaxe avec {{jsxref('Instructions/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async `function` et une instruction async `function` est qu'on peut omettre le nom de la fonction dans les expressions `async function`. On peut donc utiliser une expression `async function` afin de créer une _IIFE_ (pour _Immediately Invoked Function Expression_) qu'on appelle au moment de sa définition. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
+Une expression `async function` est très proche, et partage quasiment la même syntaxe avec {{jsxref('Statements/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async `function` et une instruction async `function` est qu'on peut omettre le nom de la fonction dans les expressions `async function`. On peut donc utiliser une expression `async function` afin de créer une _IIFE_ (pour _Immediately Invoked Function Expression_) qu'on appelle au moment de sa définition. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Functions) pour plus d'informations.
 
 ## Exemples
 
@@ -77,6 +77,6 @@ add(10).then((v) => {
 
 ## Voir aussi
 
-- {{jsxref("Instructions/async_function", "async function")}}
+- {{jsxref("Statements/async_function", "async function")}}
 - L'objet {{jsxref("AsyncFunction")}}
-- {{jsxref("Opérateurs/await", "await")}}
+- {{jsxref("Operators/await", "await")}}

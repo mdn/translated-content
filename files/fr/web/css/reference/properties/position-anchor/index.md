@@ -3,18 +3,21 @@ title: Propriété CSS `position-anchor`
 short-title: position-anchor
 slug: Web/CSS/Reference/Properties/position-anchor
 l10n:
-  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
+  sourceCommit: 31086145b865d6c5c2fec3ba700fd424d57fdf42
 ---
 
-La propriété [CSS](/fr/docs/Web/CSS) **`position-anchor`** définit le nom de l'ancre de **l'élément d'ancrage** (c'est-à-dire un élément qui a un **nom d'ancre** défini avec la propriété {{CSSxRef("anchor-name")}}) auquel un élément positionné est associé.
+La propriété [CSS](/fr/docs/Web/CSS) **`position-anchor`** définit le nom de l'ancre de **l'élément d'ancrage** pour un élément positionné.
+Cette valeur par défaut est utilisée par {{CSSxRef("position-area")}} et {{CSSxRef("position-try")}}, ainsi que par les fonctions d'ancrage ({{CSSxRef("anchor()")}} et {{CSSxRef("anchor-size()")}}) lorsqu'aucun argument `<anchor-name>` n'est fourni à ces fonctions.
 
 ## Syntaxe
 
 ```css
 /* Valeurs uniques */
+position-anchor: normal;
 position-anchor: auto;
 position-anchor: none;
 position-anchor: --anchor-name;
+position-anchor: match-parent;
 
 /* Valeurs globales */
 position-anchor: inherit;
@@ -26,14 +29,20 @@ position-anchor: unset;
 
 ### Valeurs
 
+- `normal`
+  - : Si {{CSSxRef("position-area")}} est `none`, elle se comporte comme `none`. Sinon, elle se comporte comme `auto`.
+
 - `auto`
   - : Associe un élément positionné à son élément d'ancrage implicite, s'il en a un — par exemple, comme défini par l'attribut HTML non standard [`anchor`](/fr/docs/Web/HTML/Reference/Global_attributes/anchor).
 
 - `none`
-  - : La valeur initiale (par défaut). L'élément positionné n'est pas associé à un élément d'ancrage.
+  - : L'élément positionné n'est pas associé à un élément d'ancrage.
 
 - {{CSSxRef("dashed-ident")}}
   - : Le nom de l'élément d'ancrage auquel associer l'élément positionné, tel qu'indiqué dans la propriété {{CSSxRef("anchor-name")}} de l'élément d'ancrage. Cela est connu sous le nom de **spécificateur d'ancrage par défaut**.
+
+- `match-parent`
+  - : Utilise le même élément d'ancrage par défaut que l'élément parent, ou l'élément d'origine si c'est un {{Glossary("Pseudo-element", "pseudo-élément")}}, à condition que ce soit un élément d'ancrage acceptable (c'est-à-dire [faisant partie de l'arbre](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements#les_pseudo-éléments_conformes_à_larborescence)). Sinon, il n'a pas d'élément d'ancrage par défaut.
 
 ## Description
 
@@ -43,13 +52,13 @@ Pour positionner un élément par rapport à un élément d'ancrage, l'élément
 
 L'élément d'ancrage accepte un ou plusieurs noms d'ancrage `<dashed-ident>` définis sur lui par la propriété `anchor-name`. Lorsqu'un de ces noms est ensuite défini comme valeur de la propriété `position-anchor` de l'élément positionné, les deux éléments sont associés.
 
-S'il y a plusieurs éléments d'ancrage avec le même nom d'ancrage listé dans la propriété `position-anchor`, l'élément positionné sera associé au dernier élément d'ancrage dans l'ordre source avec ce nom d'ancrage.
+S'il y a plusieurs éléments d'ancrage avec le même nom d'ancrage listé dans la propriété `position-anchor`, l'élément positionné est associé au dernier élément d'ancrage dans l'ordre source avec ce nom d'ancrage.
 
 Pour annuler une association précédemment établie entre un élément positionné et un élément d'ancrage, vous pouvez définir la valeur de `position-anchor` de l'élément positionné sur `none`.
 
 Pour attacher un élément positionné à son ancre, il doit être placé par rapport à un élément d'ancrage en utilisant une fonctionnalité de positionnement d'ancrage, telle que la fonction {{CSSxRef("anchor()")}} (définie comme valeur sur les {{Glossary("inset properties", "propriétés d'encart")}}) ou la propriété {{CSSxRef("position-area")}}.
 
-Si l'ancre associée est masquée, par exemple avec {{CSSxRef("display", "display: none")}} ou {{CSSxRef("visibility", "visibility: hidden")}}, ou si elle fait partie des [contenus ignorés](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_son_contenu) d'un autre élément en raison de la définition de {{CSSxRef("content-visibility", "content-visibility: hidden")}} sur celui-ci, l'élément positionné par rapport à l'ancre ne sera pas affiché.
+Si l'ancre associée est masquée, par exemple avec {{CSSxRef("display", "display: none")}} ou {{CSSxRef("visibility", "visibility: hidden")}}, ou si elle fait partie des [contenus ignorés](/fr/docs/Web/CSS/Guides/Containment/Using#ignorer_son_contenu) d'un autre élément en raison de la définition de {{CSSxRef("content-visibility", "content-visibility: hidden")}} sur celui-ci, l'élément positionné par rapport à l'ancre n'est pas affiché.
 
 La propriété `position-anchor` est prise en charge sur tous les éléments positionnés, y compris les [pseudo-éléments](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-elements) comme {{CSSxRef("::before")}} et {{CSSxRef("::after")}}. Les pseudo-éléments sont implicitement ancrés au même élément que l'élément d'origine du pseudo-élément, sauf indication contraire.
 
@@ -114,7 +123,7 @@ Nous avons quatre ancres et deux éléments positionnés, distingués par des va
 
 #### CSS
 
-Nous déclarons le premier `<div>` `ancre` comme une ancre en utilisant la propriété `anchor-name`, à laquelle sont attribués deux noms d'ancre séparés par des virgules, un pour chaque élément positionné. C'est l'état initial de la démo — les deux éléments positionnés seront attachés à la première ancre.
+Nous déclarons le premier `<div>` `ancre` comme une ancre en utilisant la propriété `anchor-name`, à laquelle sont attribués deux noms d'ancre séparés par des virgules, un pour chaque élément positionné. C'est l'état initial de la démo — les deux éléments positionnés sont attachés à la première ancre.
 
 ```css hidden
 body {
@@ -231,7 +240,7 @@ Dans cet exemple, un élément HTML {{HTMLElement("output")}} est positionné pa
 
 #### HTML
 
-Nous incluons un élément HTML [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) et un élément HTML {{HTMLElement("output")}} pour afficher la valeur de la plage. La valeur affichée dans l'élément `<output>` est mise à jour via JavaScript lorsque la valeur du curseur change.
+Nous incluons un élément HTML [`<input type="range">`](/fr/docs/Web/HTML/Reference/Elements/input/range) et un élément HTML {{HTMLElement("output")}} pour afficher la valeur de la plage. La valeur affichée dans l'élément `<output>` est mise à jour avec JavaScript lorsque la valeur du curseur change.
 
 ```html
 <label for="glissiere">Changer la valeur&nbsp;:</label>
@@ -297,7 +306,7 @@ entree.addEventListener("input", (event) => {
 
 #### Résultats
 
-La sortie est ancrée au curseur. Modifiez la valeur et la sortie restera au-dessus et à droite du curseur, quelle que soit sa position sur la glissière.
+La sortie est ancrée au curseur. Modifiez la valeur et la sortie reste au-dessus et à droite du curseur, quelle que soit sa position sur la glissière.
 
 {{EmbedLiveSample("Utiliser le curseur d'une plage comme ancre", "100%", 225)}}
 
