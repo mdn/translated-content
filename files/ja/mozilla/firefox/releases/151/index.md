@@ -18,7 +18,7 @@ Firefox 151 は、米国時間 [2026 年 5 月 19 日](https://whattrainisitnow.
 
 ### CSS
 
-- [`@container`](/ja/docs/Web/CSS/Reference/At-rules/@container) CSS アットルールは [`style()`](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) クエリーをサポートします。これはコンテナーが有効な CSS 宣言、CSS プロパティ、カスタムプロパティを保持しているかを確認して、その結果に従って子孫にスタイルを適用することができます ([Firefox bug 2016929](https://bugzil.la/2016929)、[Firefox bug 2019254](https://bugzil.la/2019254)、[Firefox bug 2024601](https://bugzil.la/2024601)、[Firefox bug 2030645](https://bugzil.la/2030645))。
+- [`@container`](/ja/docs/Web/CSS/Reference/At-rules/@container) CSS アットルールは [`style()`](/ja/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#コンテナースタイルクエリー) クエリーをサポートします。これはコンテナーが有効な CSS 宣言、CSS プロパティ、カスタムプロパティを保持しているかを確認して、その結果に従って子孫にスタイルを適用することができます ([Firefox bug 2016929](https://bugzil.la/2016929)、[Firefox bug 2019254](https://bugzil.la/2019254)、[Firefox bug 2024601](https://bugzil.la/2024601)、[Firefox bug 2030645](https://bugzil.la/2030645))。
 
 - {{cssxref("position-anchor")}} CSS プロパティで値 `normal` (既定値) をサポートしました。これにより {{cssxref("position-area")}} プロパティとのマッチングが可能になり、`position-area` プロパティを更新すると `position-anchor` プロパティも同様に更新されます ([Firefox bug 2030351](https://bugzil.la/2030351))。
 
@@ -28,7 +28,7 @@ Firefox 151 は、米国時間 [2026 年 5 月 19 日](https://whattrainisitnow.
 
 ### API
 
-- {{domxref("Sanitizer.replaceElementWithChildren()")}} メソッドが、([Firefox 150](/ja/docs/Mozilla/Firefox/Releases/150#apis) で不可になった {{htmlelement("html")}} に加えて) SVG [名前空間](/ja/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace) で置き換えられる要素が {{svgelement("svg")}} である場合、あるいは MathML 名前空間で置き換えられる要素が {{mathmlelement("math")}} である場合に `false` を返すようになりました ([Firefox bug 2032359](https://bugzil.la/2032359))。
+- {{domxref("Sanitizer.replaceElementWithChildren()")}} メソッドが、([Firefox 150](/ja/docs/Mozilla/Firefox/Releases/150#api) で不可になった {{htmlelement("html")}} に加えて) SVG [名前空間](/ja/docs/Web/API/Sanitizer/replaceElementWithChildren#namespace) で置き換えられる要素が {{svgelement("svg")}} である場合、あるいは MathML 名前空間で置き換えられる要素が {{mathmlelement("math")}} である場合に `false` を返すようになりました ([Firefox bug 2032359](https://bugzil.la/2032359))。
 - [Document Picture-in-Picture API](/ja/docs/Web/API/Document_Picture-in-Picture_API) をデスクトップ版でサポートしました。
   これは、任意の HTML コンテンツを収められる [最前面表示ウィンドウ](/ja/docs/Web/API/Document_Picture-in-Picture_API#how_does_it_work) を開くことができます。
   これはビデオ会議の参加者を表示するストリームのセット、ストックティッカー、カウントダウンタイマーなど、ユーザーが起動ページ (またはブラウザー) から切り離して表示したい任意のコンテンツを表示するために使用できます ([Firefox bug 2006594](https://bugzil.la/2006594))。
