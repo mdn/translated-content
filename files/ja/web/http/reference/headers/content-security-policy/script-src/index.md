@@ -210,7 +210,7 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 もしページに CSP ヘッダーがあり、 `'unsafe-eval'` が `script-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-- {{jsxref("Function", "Function()")}}
+- {{jsxref("Function()")}}
 - メソッドの文字列リテラルを `setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
   - {{domxref("Window.setTimeout", "setTimeout()")}}
   - {{domxref("Window.setInterval", "setInterval()")}}

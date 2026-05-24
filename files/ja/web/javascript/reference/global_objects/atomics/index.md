@@ -132,7 +132,7 @@ Atomics.notify(int32, 0, 1);
 ## 関連情報
 
 - {{jsxref("ArrayBuffer")}}
-- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript 型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)ガイド
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)
 - [Shared Memory – 短いチュートリアル](https://github.com/tc39/proposal-ecmascript-sharedmem/blob/main/TUTORIAL.md) (TC39 ecmascript-sharedmem proposal)
 - [A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) (hacks.mozilla.org, 2016)

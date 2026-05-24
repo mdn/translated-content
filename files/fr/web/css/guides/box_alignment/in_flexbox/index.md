@@ -1,95 +1,154 @@
 ---
-title: L'alignement des boîtes avec Flexbox
+title: Aligner des boîtes dans des boîtes flexibles
+short-title: En disposition flexible
 slug: Web/CSS/Guides/Box_alignment/In_flexbox
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
+l10n:
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-{{CSSRef}}
-
-Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec les boîtes flexibles (_flexbox_). Cette page détaille les aspects spécifiques relatifs à l'alignement et aux boîtes flexibles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/Guides/Box_alignment).
+Le module [d'alignement de boîte](/fr/docs/Web/CSS/Guides/Box_alignment) décrit comment l'alignement fonctionne dans différentes méthodes de mise en page. Dans ce guide, nous explorons comment l'alignement des boîtes fonctionne dans le contexte de [boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) (<i lang="en">flexbox</i> en anglais). Comme ce guide vise à détailler les aspects spécifiques aux boîtes flexibles et à l'alignement des boîtes, il doit être lu en conjonction avec le guide [aperçu de l'alignement des boîtes](/fr/docs/Web/CSS/Guides/Box_alignment/Overview), qui détaille les fonctionnalités communes de l'alignement des boîtes dans différentes méthodes de mise en page.
 
 ## Exemple simple
 
-Dans cet exemple, trois objets flexibles sont alignés sur l'axe principal avec {{cssxref("justify-content")}} et sur l'axe secondaire grâce à {{cssxref("align-items")}}. Le premier objet surcharge l'alignement fourni par `align-items` en utilisant `center` comme valeur pour la propriété {{cssxref("align-self")}}.
+Dans cet exemple de boîte flexible, trois éléments flexibles sont alignés sur l'axe principal à l'aide de {{CSSxRef("justify-content")}} et sur l'axe secondaire à l'aide de {{CSSxRef("align-items")}}. Le premier élément remplace les valeurs de `align-items` définies sur le groupe en définissant {{CSSxRef("align-self")}} sur `center`.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
+```css hidden live-sample___gap live-sample___flex-align-items live-sample___auto-margins
+body {
+  font-family: sans-serif;
+}
+.boite > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```html live-sample___flex-align-items
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois <br />a <br />du <br />texte <br />supplémentaire</div>
+</div>
+```
+
+```css live-sample___flex-align-items
+.boite {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.boite :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("flex-align-items")}}
 
 ## Liens entre les axes et `flex-direction`
 
-Les boîtes flexibles respectent le mode d'écriture du document. Aussi, si on travaille sur un document en français et qu'on utilise {{cssxref("justify-content")}} avec `flex-end`, les éléments seront alignés à la fin du conteneur flexible. Si on utilise {{cssxref("flex-direction")}} avec la valeur `row`, cet alignement suivra la direction en ligne (celle selon laquelle le texte est écrit).
+Les boîtes flexibles respectent le mode d'écriture du document, donc si vous travaillez en français et que vous définissez {{CSSxRef("justify-content")}} sur `flex-end`, ça aligne les éléments à la fin du conteneur flexible. Si vous travaillez avec {{CSSxRef("flex-direction")}} défini sur `row`, cet alignement se fait dans la direction en ligne.
 
-Toutefois, _Flexbox_ permet de modifier l'axe principal en utilisant `flex-direction` avec la valeur `column`. Dans ce cas, `justify-content` alignera les objets selon la direction de bloc. Aussi, mieux vaut penser en termes d'axes principal (_main axis_) et d'axe secondaire (_cross axis_) lorsqu'on travaille sur des boîtes flexibles :
+Cependant, dans les boîtes flexibles, vous pouvez changer l'axe principal en définissant `flex-direction` sur `column`. Dans ce cas, `justify-content` aligne les éléments dans la direction de bloc. Il est donc plus facile de penser en termes d'axe principal et d'axe secondaire lorsqu'on travaille avec les boîtes flexibles&nbsp;:
 
-- L'axe principal correspond à la direction fournie par `flex-direction` et l'alignement sur cet axe s'effectue avec `justify-content`
-- L'axe secondaire est orthogonal à l'axe principal et l'alignement s'effectue avec `align-content`, `align-self`/`align-items`
+- L'axe principal = direction définie par `flex-direction` = alignement avec `justify-content`
+- L'axe secondaire = perpendiculaire à l'axe principal = alignement avec {{CSSxRef("align-content")}}, {{CSSxRef("align-self")}}/{{CSSxRef("align-items")}}
 
 ### Alignement sur l'axe principal
 
-- {{cssxref("justify-content")}}
+- {{CSSxRef("justify-content")}}
 
 ### Alignement sur l'axe secondaire
 
-- {{cssxref("align-self")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-content")}}
+- {{CSSxRef("align-self")}}
+- {{CSSxRef("align-items")}}
+- {{CSSxRef("align-content")}}
 
-### Absence de `justify-self` pour _Flexbox_
+### Absence de `justify-self` pour les boîtes flexibles
 
-Sur l'axe principal et avec les boîtes flexibles, le contenu est considéré comme un seul groupe. La quantité d'espace nécessaire est calculée pour disposer les différents éléments et l'espace restant peut être réparti. La propriété `justify-content` contrôle la répartition de cet espace. Avec `justify-content: flex-end`, l'espace supplémentaire sera ajouté avant les éléments et avec `justify-content: space-around`, il sera placé de chaque côté.
+Sur l'axe principal, les boîtes flexibles considèrent les éléments flexibles comme un groupe. La quantité d'espace nécessaire pour disposer les éléments est calculée, et l'espace restant est ensuite disponible pour la distribution. La propriété `justify-content` contrôle comment cet espace restant est utilisé. Avec `justify-content: flex-end`, l'espace supplémentaire est placé avant les éléments, avec `justify-content: space-around`, il est placé de chaque côté de l'élément dans cette dimension, etc.
 
-Autrement dit, `justify-self` n'a pas de sens pour les boîtes flexibles car le contenu est considéré comme un seul « tenant » qui est déplacé.
+Cela signifie qu'une propriété `justify-self` n'a pas de sens dans les boîtes flexibles, car nous traitons toujours le déplacement de l'ensemble du groupe d'éléments.
 
-Pour l'axe secondaire, `align-self` peut être pertinent car il peut y avoir un espace supplémentaire sur cet axe et selon lequel on peut déplacer un seul des éléments.
+Sur l'axe secondaire, `align-self` a du sens, car il peut y avoir un espace supplémentaire dans le conteneur flexible dans cette dimension, dans lequel un seul élément peut être déplacé vers le début ou la fin.
 
 ## Alignement et marges automatiques
 
-`justify-self` pourrait être utile lorsqu'on souhaite séparer un ensemble d'éléments flexibles pour créer un menu de navigation. Dans ce cas, on peut utiliser des marges automatiques avec `auto`. En effet, une marge avec cette valeur consommera tout l'espace disponible sur cette dimension. En définissant les marges gauche et droite avec `auto`, les deux côtés du bloc occuperont tout l'espace disponible et la boîte sera alors placée au centre.
+Il existe un cas d'utilisation spécifique dans les boîtes flexibles où l'on peut penser qu'une propriété `justify-self` est nécessaire, et c'est lorsque l'on souhaite séparer un ensemble d'éléments flexibles, peut-être pour créer un modèle de navigation fractionnée. Pour ce cas d'utilisation, nous pouvons utiliser une marge `auto`. Une marge définie sur `auto` absorbe tout l'espace disponible dans sa dimension. C'est ainsi que fonctionne le centrage d'un bloc avec des marges automatiques. En définissant la marge gauche et droite sur `auto`, les deux côtés de notre bloc essaient de prendre tout l'espace disponible et poussent ainsi la boîte au centre.
 
-En utilisant {{cssxref("margin")}} avec `auto` sur un élément d'un ensemble d'éléments flexibles alignés vers le début, on peut créer un tel effet. Dès qu'il n'y a plus d'espace disponible pour les marges automatiques, l'objet se comporte comme les autres objets flexibles et se réduit pour s'inscrire dans l'espace disponible.
+En définissant une marge ({{CSSxRef("margin")}}) à `auto` sur un élément d'un ensemble d'éléments flexibles tous alignés au début, nous pouvons créer une navigation fractionnée. Cela fonctionne bien avec les boîtes flexibles et les propriétés d'alignement. Dès qu'il n'y a plus d'espace disponible pour la marge automatique, l'élément se comporte de la même manière que tous les autres éléments flexibles et se réduit pour essayer de s'adapter à l'espace disponible.
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}
+```html live-sample___auto-margins
+<div class="boîte">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div class="pousse">Quatre</div>
+  <div>Cinq</div>
+</div>
+```
+
+```css live-sample___auto-margins
+.boîte {
+  display: flex;
+  border: 2px dotted rgb(96 139 168);
+}
+.pousse {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("auto-margins")}}
 
 ## Les propriétés `gap`
 
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+- {{CSSxRef("row-gap")}}
+- {{CSSxRef("column-gap")}}
+- {{CSSxRef("gap")}}
 
 ### Créer des gouttières fixes entre chaque objet
 
-Sur l'axe principal, la propriété `column-gap` permettra de créer des gouttières de taille fixe de chaque côté de l'objet.
+Sur l'axe principal, la propriété `column-gap` permet de créer des gouttières de taille fixe entre les éléments adjacents.
 
-Sur l'axe secondaire, `row-gap` permettra d'espace les lignes adjacentes. Aussi, il faut que `flex-wrap` vaille `wrap` afin que `row-gap` ait un effet.
+Sur l'axe secondaire, la propriété `row-gap` crée un espacement entre les lignes flexibles adjacentes, donc {{CSSxRef("flex-wrap")}} doit également être défini sur `wrap` pour que cela ait un effet.
 
-> [!NOTE]
-> À l'heure où ces lignes sont écrites, seul Firefox 63 prend en charge les propriétés `gap` pour les boîtes flexibles. En effet, le comportement de ces propriétés pour les dispositions flexibles est un ajout récent à la spécification.
+```html live-sample___gap
+<div class="boite">
+  <div>Un</div>
+  <div>Deux</div>
+  <div>Trois</div>
+  <div>Quatre</div>
+  <div>Cinq</div>
+  <div>Six</div>
+</div>
+```
 
-## Référence
+```css live-sample___gap
+.boite {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 2em;
+  border: 2px dotted rgb(96 139 168);
+}
 
-### Propriétés CSS
+.boite > * {
+  flex: 1;
+}
+```
 
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("place-content")}}t
-- {{cssxref("justify-items")}}
-- {{cssxref("align-items")}}
-- {{cssxref("place-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
+{{EmbedLiveSample("gap")}}
 
-### Termes du glossaire
+## Voir aussi
 
-- [Axe secondaire](/fr/docs/Glossary/Cross_Axis)
-- [Axe principal](/fr/docs/Glossary/Main_Axis)
-
-## Guides
-
-- [L'alignement avec _Flexbox_](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
-
-## Ressources externes
-
-- [Anti-sèche pour l'alignement des boîtes (en anglais)](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
-- [Alignement pour les grilles, les boîtes flexibles et les boîtes (en anglais)](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Quelques pensées sur les implémentations partielles de _Box Alignment_ (en anglais)](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)
+- Le module [d'alignement de boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- [Aperçu de l'alignement des boîtes](/fr/docs/Web/CSS/Guides/Box_alignment/Overview)
+- [Alignement des boîtes dans une grille CSS](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [Alignement des boîtes dans une disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Box_alignment/In_multi-column_layout)
+- [Alignement des boîtes pour les dispositions bloc, positionnées absolument et tableaux](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)
+- [Alignement des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- L'entrée de glossaire {{Glossary("Cross axis", "Axe secondaire")}}
+- L'entrée de glossaire {{Glossary("Main axis", "Axe principal")}}

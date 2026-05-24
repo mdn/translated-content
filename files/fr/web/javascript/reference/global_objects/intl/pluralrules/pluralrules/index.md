@@ -17,7 +17,7 @@ new Intl.PluralRules(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.PluralRules()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> `Intl.PluralRules()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

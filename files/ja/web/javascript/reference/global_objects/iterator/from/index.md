@@ -21,7 +21,7 @@ Iterator.from(object)
 
 ### 返値
 
-`object` が反復可能オブジェクトである場合、そのオブジェクトの `[Symbol.iterator]()` メソッドが呼び出され、イテレーターが取得されます。 それ以外の場合は、 `object` がイテレーターであると見なされます。 イテレーターがすでに {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} である場合（つまり、そのプロトタイプチェーンに `Iterator.prototype` がある場合）は、直接返されます。 それ以外の場合は、元のイテレーターをラップする新しい {{jsxref("Iterator")}} オブジェクトが作成されます。
+`object` が反復可能オブジェクトである場合、そのオブジェクトの `[Symbol.iterator]()` メソッドが呼び出され、イテレーターが取得されます。 それ以外の場合は、 `object` がイテレーターであると見なされます。 イテレーターがすでに {{jsxref("instanceof")}} {{jsxref("Iterator")}} である場合（つまり、そのプロトタイプチェーンに `Iterator.prototype` がある場合）は、直接返されます。 それ以外の場合は、元のイテレーターをラップする新しい {{jsxref("Iterator")}} オブジェクトが作成されます。
 
 ## 解説
 

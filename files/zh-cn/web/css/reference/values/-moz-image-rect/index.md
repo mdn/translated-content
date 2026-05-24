@@ -11,13 +11,13 @@ This works very similarly to the {{CSSxRef("-moz-image-region")}} property, whic
 
 The syntax for the rectangle is similar to the [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/shape#Syntax) function generating a {{CSSxRef("&lt;shape&gt;")}} CSS type. All four values are relative to the upper left corner of the image.
 
-## Syntax
+## 语法
 
-```plain
--moz-image-rect({{CSSxRef("&lt;uri&gt;")}}, top, right, bottom, left);
+```css
+-moz-image-rect(url("my-url"), top, right, bottom, left);
 ```
 
-### Values
+### 值
 
 - {{CSSxRef("&lt;url&gt;")}}
   - : The URI of the image from which to take the sub-image.
@@ -30,11 +30,13 @@ The syntax for the rectangle is similar to the [`rect()`](/zh-CN/docs/Web/CSS/Re
 - `left`
   - : The left edge, specified as an {{CSSxRef("&lt;integer&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}}, of the sub-image within the specified image.
 
-### Formal syntax
+## 描述
 
-{{CSSSyntax}}
+例如，此属性允许你将一张较大图片的不同部分用作内容中不同部分的背景。
 
-## Example
+矩形的语法类似于生成 {{CSSxRef("&lt;shape&gt;")}} CSS 类型的 [`rect()`](/zh-CN/docs/Web/CSS/Reference/Values/shape#语法) 函数。所有四个值都是相对于图片左上角的。
+
+## 示例
 
 This example loads an image and uses it in four segments to draw the Firefox logo in four {{HTMLElement("div")}} blocks. Clicking on their container causes the four segments to rotate around by swapping the {{CSSxRef("background-image")}} property values among the four {{HTMLElement("div")}} blocks.
 
@@ -113,7 +115,7 @@ The HTML is quite simple:
 
 This places the four segments of our image in a two-by-two box grid. These four segments are all contained within a larger {{HTMLElement("div")}} block whose primary purpose is to receive click events and dispatch them to our JavaScript code.
 
-### The JavaScript code
+### JavaScript 代码
 
 This code handles the click event when the container receives a mouse click.
 
@@ -141,10 +143,10 @@ function rotate() {
 
 This uses {{DOMxRef("window.getComputedStyle()")}} to fetch the style of each element, shifting it to the following element. Notice that before it begins doing so it saves a copy of the last box's style since it will be overwritten by the third element's style. By simply copying the values of the {{CSSxRef("background-image")}} property from one element to the next with each mouse click, we achieve the desired effect.
 
-### What it looks like
+### 它看起来像什么
 
-{{EmbedLiveSample("Example","400","400")}}
+{{EmbedLiveSample("示例","400","400")}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}

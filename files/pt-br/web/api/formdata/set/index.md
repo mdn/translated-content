@@ -28,9 +28,9 @@ formData.set(name, value, filename);
 - `name`
   - : O nome do campo cujo dado está em `value`.
 - `value`
-  - : O valor do campo. Na versão de dois parâmetros, esse é um {{domxref("USVString")}}, e caso não seja, ele é convertido para uma string. Na versão de três parâmetros ele pode ser um {domxref("Blob")}}, {{domxref("File")}}, ou um {{domxref("USVString")}}. Se nenhum desses valores forem especificados, o valor será convertido para string.
+  - : O valor do campo. Na versão de dois parâmetros, esse é um {{jsxref("String")}}, e caso não seja, ele é convertido para uma string. Na versão de três parâmetros ele pode ser um {domxref("Blob")}}, {{domxref("File")}}, ou um {{jsxref("String")}}. Se nenhum desses valores forem especificados, o valor será convertido para string.
 - `filename` {{optional_inline}}
-  - : O nome do arquivo a ser enviado (um {{domxref("USVString")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".
+  - : O nome do arquivo a ser enviado (um {{jsxref("String")}}), quando um {{domxref("Blob")}} ou um {{domxref("File")}} é passdo como o segundo parâmetro. O nome de arquivo padrão para objetos do tipo {{domxref("Blob")}} é "blob".
 
 > [!NOTE]
 > Se você especificar um {{domxref("Blob")}} como o dado a ser acrescentado ao objeto `FormData`, o nome do arquivo que será enviado para o servidor, enviado no atributo "Content-Disposition" no cabeçalho varia de navegador para navegador.
