@@ -327,7 +327,7 @@ HTML は最初にレンダリングされるとき、最初の画像に示すよ
   <span slot="title">title スロットのテキスト</span>
   <span slot="meta">meta スロットのテキスト</span>
   <p>
-    スロット属性をつけていないテキスト2です。同時に、"body" の div 内のデフォルト（名前なし）のスロットにも配置されます。
+    スロット属性をつけていないテキスト 2 です。同時に、"body" の div 内のデフォルト（名前なし）のスロットにも配置されます。
   </p>
 </article>
 ```
@@ -354,7 +354,7 @@ HTML は最初にレンダリングされるとき、最初の画像に示すよ
 まず、非表示の対応に関する警告があります。
 この警告は、ブラウザーが `shadowrootslotassignment` 属性を対応していない場合、後で JavaScript で表示させるように設定されています。
 
-```html
+```html-nolint
 <p id="support-warning" hidden>
   ⛔ このブラウザーは、まだ <code>shadowrootslotassignment</code> 属性に対応していません。
 </p>
