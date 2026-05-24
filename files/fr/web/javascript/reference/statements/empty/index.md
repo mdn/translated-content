@@ -51,7 +51,7 @@ if (condition); // Attention, ce "if" ne fait rien !
 finDuMonde(); // Cette méthode est donc toujours lancée !!!
 ```
 
-Un autre exemple avec une instruction {{jsxref("Instructions/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
+Un autre exemple avec une instruction {{jsxref("Statements/if...else")}} sans accolade (`{}`). Si `trois` vaut `true`, rien ne sera exécuté, peu importera la valeur de `quatre`, la fonction `chargerFusée()` ne sera pas exécutée.
 
 ```js
 if (un) faire1èreEtape();
@@ -73,4 +73,4 @@ else chargerFusée();
 
 ## Voir aussi
 
-- {{jsxref("Instructions/block", "L'instruction de bloc","",1)}}
+- {{jsxref("Statements/block", "L'instruction de bloc","",1)}}

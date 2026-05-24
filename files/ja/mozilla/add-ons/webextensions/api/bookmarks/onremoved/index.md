@@ -34,18 +34,18 @@ browser.bookmarks.onRemoved.hasListener(listener)
 - `callback`
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
     - `id`
-      - : 削除された要素の ID を表す {{jsxref("string")}}
+      - : 削除された要素の ID を表す {{jsxref("String")}}
 
     <!---->
     - `removeInfo`
-      - : 削除された要素の詳細を含んだ {{jsxref("object")}}
+      - : 削除された要素の詳細を含んだ {{jsxref("Object")}}
 
 ## 付随するオブジェクト
 
 ### removeInfo
 
 - `parentId`
-  - : 要素の親の ID を表す {{jsxref("string")}}
+  - : 要素の親の ID を表す {{jsxref("String")}}
 - `index`
   - : この要素が親からみて何番目にあるかを表す 0 以上の整数
 - `node`

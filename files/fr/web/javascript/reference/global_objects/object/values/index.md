@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 
 {{JSRef}}
 
-La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
+La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Statements/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
 
 {{InteractiveExample("JavaScript Demo: Object.values()")}}
 

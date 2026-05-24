@@ -16,14 +16,14 @@ insertAdjacentText(where, data)
 ### 参数
 
 - position
-  - : A {{domxref("DOMString")}} representing the position relative to the `element`; must be one of the following strings:
+  - : A {{jsxref("String")}} representing the position relative to the `element`; must be one of the following strings:
     - `'beforebegin'`: Before the `element` itself.
     - `'afterbegin'`: Just inside the `element`, before its first child.
     - `'beforeend'`: Just inside the `element`, after its last child.
     - `'afterend'`: After the `element` itself.
 
 - element
-  - : A {{domxref("DOMString")}} representing the text to be inserted into the tree.
+  - : A {{jsxref("String")}} representing the text to be inserted into the tree.
 
 ### 返回值
 

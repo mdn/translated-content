@@ -57,7 +57,7 @@ Object.getOwnPropertyDescriptor(obj, "toto").set;
 ## Voir aussi
 
 - [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-- L'opérateur {{jsxref("Fonctions/set", "set")}}
+- L'opérateur {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} et {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

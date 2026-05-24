@@ -22,7 +22,7 @@ new Float16Array(buffer, byteOffset, length)
 ```
 
 > [!NOTE]
-> Le constructeur `Float16Array()` ne peut être appelé qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
+> Le constructeur `Float16Array()` ne peut être appelé qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` provoque une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

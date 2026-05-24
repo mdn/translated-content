@@ -20,7 +20,7 @@ console.log(new Polygon(4, 3).area);
 // Expected output: 12
 ```
 
-Il est aussi possible de définir une classe avec une {{jsxref("Opérateurs/class", "expression class","",1)}}.
+Il est aussi possible de définir une classe avec une {{jsxref("Operators/class", "expression class","",1)}}.
 
 ## Syntaxe
 

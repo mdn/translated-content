@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 ## Resumo
 
-O método **`toString()`** retorna uma string representando o objeto {{jsxref("Global_Objects/Number", "Number")}} especificado.
+O método **`toString()`** retorna uma string representando o objeto {{jsxref("Number")}} especificado.
 
 ## Sintaxe
 
@@ -22,12 +22,12 @@ numObj.toString([radix])
 
 ### Exceções
 
-- {{jsxref("Global_Objects/RangeError", "RangeError")}}
-  - : se `toString()` receber um valor de radix fora do intervalo entre 2 e 36, uma exceção {{jsxref("Global_Objects/RangeError", "RangeError")}} é lançada.
+- {{jsxref("RangeError")}}
+  - : se `toString()` receber um valor de radix fora do intervalo entre 2 e 36, uma exceção {{jsxref("RangeError")}} é lançada.
 
 ## Descrição
 
-O objeto {{jsxref("Global_Objects/Number", "Number")}} sobrescreve o método `toString()` do objeto {{jsxref("Global_Objects/Object", "Object")}}; ele não herda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("Global_Objects/Number", "Number")}}, o método `toString()` retorna uma representação string do objeto na base especificada.
+O objeto {{jsxref("Number")}} sobrescreve o método `toString()` do objeto {{jsxref("Object")}}; ele não herda de {{jsxref("Object.prototype.toString()")}}. Para objetos {{jsxref("Number")}}, o método `toString()` retorna uma representação string do objeto na base especificada.
 
 O método `toString()` analisa seu primeiro argumento e tenta retornar uma representação string na raiz (base) especificada. Para raizes maiores que 10, as letras do alfabeto indicam valores maiores que 9. Por exemplo, para números hexadecimais (base 16), letras entre `a` e `f` são utilizadas.
 

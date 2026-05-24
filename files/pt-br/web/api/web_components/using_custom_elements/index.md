@@ -16,7 +16,7 @@ O controlador de custom elements em um documento da web é o objeto {{domxref("C
 
 Para registar um custom element na página, use o método {{domxref("CustomElementRegistry.define()")}}. Isso leva como argumentos:
 
-- Um {{domxref("DOMString")}} que representa o nome que você está dando ao elemento. Observe que os nomes dos custom elements [requerem o uso de um traço](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); não podem ser palavras isoladas.
+- Um {{jsxref("String")}} que representa o nome que você está dando ao elemento. Observe que os nomes dos custom elements [requerem o uso de um traço](https://html.spec.whatwg.org/#valid-custom-element-name) (kebab-case); não podem ser palavras isoladas.
 - Um objeto de [classe](/pt-BR/docs/Web/JavaScript/Reference/Classes) que define o comportamento do elemento.
 - Opcionalmente, um objeto de opções contendo uma propriedade `extends`, que especifica o elemento integrado do qual seu elemento herda, se houver (relevante apenas para elementos integrados personalizados; consulte a definição abaixo).
 

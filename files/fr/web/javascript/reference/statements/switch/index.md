@@ -68,9 +68,9 @@ switch (expression) {
 
 Une instruction `switch` commence par évaluer l'expression fournie (cette évaluation ne se produit qu'une fois). Si une correspondance est trouvée, le programme exécutera les instructions associées. Si plusieurs cas de figure correspondent, le premier sera sélectionné (même si les cas sont différents les uns des autres).
 
-Le programme recherche tout d'abord une clause `case` dont l'expression est évaluée avec la même valeur que l'expression d'entrée (au sens de {{jsxref("Opérateurs/Opérateurs_de_comparaison","l'égalité stricte","#égalité_stricte_(===)",1)}}. Si une telle clause est trouvée, les instructions associées sont exécutées. Si aucune clause `case` n'est trouvée, le programme recherche la clause optionnelle `default` et si elle existe, les instructions correspondantes sont exécutées. Si cette clause optionnelle n'est pas utilisée, le programme continue son exécution après l'instruction `switch`. Par convention, la clause `default` est utilisée en dernière mais cela n'est pas nécessaire.
+Le programme recherche tout d'abord une clause `case` dont l'expression est évaluée avec la même valeur que l'expression d'entrée (au sens de {{jsxref("Operators","l'égalité stricte","#égalité_stricte_(===)",1)}}. Si une telle clause est trouvée, les instructions associées sont exécutées. Si aucune clause `case` n'est trouvée, le programme recherche la clause optionnelle `default` et si elle existe, les instructions correspondantes sont exécutées. Si cette clause optionnelle n'est pas utilisée, le programme continue son exécution après l'instruction `switch`. Par convention, la clause `default` est utilisée en dernière mais cela n'est pas nécessaire.
 
-L'instruction {{jsxref("Instructions/break","break")}} peut optionnellement être utilisée pour chaque cas et permet de s'assurer que seules les instructions associées à ce cas seront exécutées. Si `break` n'est pas utilisé, le programme continuera son exécution avec les instructions suivantes (des autres cas de l'instruction `switch`).
+L'instruction {{jsxref("Statements/break","break")}} peut optionnellement être utilisée pour chaque cas et permet de s'assurer que seules les instructions associées à ce cas seront exécutées. Si `break` n'est pas utilisé, le programme continuera son exécution avec les instructions suivantes (des autres cas de l'instruction `switch`).
 
 ## Exemples
 
@@ -154,7 +154,7 @@ Pour la source depuis laquelle les exemples suivants ont été adaptés, voir [c
 
 #### Regrouper différents cas pour exécuter une unique opération
 
-Cette méthode utilise le fait que s'il n'y a pas d'instruction {{jsxref("Instructions/break","break")}}, l'exécution se poursuivra avec les instructions des cas suivants (même si les expressions de ces cas ne correspondent pas à la valeur de l'expression d'entrée).
+Cette méthode utilise le fait que s'il n'y a pas d'instruction {{jsxref("Statements/break","break")}}, l'exécution se poursuivra avec les instructions des cas suivants (même si les expressions de ces cas ne correspondent pas à la valeur de l'expression d'entrée).
 
 On peut donc regrouper différentes valeurs les unes à la suite des autres pour exécuter des instructions pour ces valeurs :
 
@@ -279,5 +279,5 @@ Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans c
 
 ## Voir aussi
 
-- {{jsxref("Instructions/if...else","if...else")}}
-- {{jsxref("Instructions/break","break")}}
+- {{jsxref("Statements/if...else","if...else")}}
+- {{jsxref("Statements/break","break")}}

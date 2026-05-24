@@ -9,7 +9,7 @@ Ce chapitre documente tous les objets standards intégrés de JavaScript, y comp
 
 Le terme «&nbsp;objets globaux&nbsp;» (ou objets natifs standards) ne doit pas être confondu avec **l'objet global**. Ici, «&nbsp;objets globaux&nbsp;» fait référence aux **objets dans la portée globale**.
 
-L'**objet global** lui-même peut être accédé à l'aide de l'opérateur {{JSxRef("Operators/this", "this")}} dans la portée globale. En fait, la portée globale **est constituée** des propriétés de l'objet global, y compris les propriétés héritées, le cas échéant.
+L'**objet global** lui-même peut être accédé à l'aide de l'opérateur {{JSxRef("this")}} dans la portée globale. En fait, la portée globale **est constituée** des propriétés de l'objet global, y compris les propriétés héritées, le cas échéant.
 
 Les autres objets dans la portée globale sont soit [créés par le script utilisateur](/fr/docs/Web/JavaScript/Guide/Working_with_objects#creating_new_objects), soit fournis par l'application hôte. Les objets hôtes disponibles dans les contextes de navigateur sont documentés dans la [référence des API](/fr/docs/Web/API).
 
