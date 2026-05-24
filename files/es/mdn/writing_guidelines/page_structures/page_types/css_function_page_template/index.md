@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 754b68246f4e69e404309fee4a1699e047e43994
 ---
 
-> [!Nota]
+> [!NOTE]
 > _Elimina este bloque de notas antes de publicar._
 >
 > ---
@@ -79,7 +79,7 @@ Comienza el contenido de la página con un párrafo introductorio que nombre la 
 
 ## Pruébalo
 
-Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Pruébalo" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Directrices de escritura_ para más información.
+Esta sección es generada por la macro `InteractiveExample`. Incluye el título de la sección "Pruébalo" y el editor de código. Consulta la sección de [Ejemplos interactivos](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples) en nuestras _Guías de escritura_ para más información.
 
 ## Sintaxis
 
@@ -121,7 +121,7 @@ Incluye un término y una definición para cada parámetro.
 - `<valor-de-declaracion>` {{optional_inline}}
   - : Incluye una descripción del parámetro, su tipo de datos y su valor predeterminado si lo hubiera.
 
-> [!Advertencia]
+> [!WARNING]
 > No añadas [macros de estado en línea](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_icons_in_definition_lists) en las páginas de CSS.
 
 ### Valor de retorno
@@ -154,7 +154,7 @@ Cada ejemplo debe tener un encabezado H3 (`###`) que nombre el ejemplo. El encab
 
 Consulta nuestra guía sobre cómo añadir [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) para más información.
 
-> [!Nota]
+> [!NOTE]
 > A veces querrás enlazar a ejemplos dados en otra página.
 >
 > **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
@@ -197,7 +197,7 @@ _Para usar esta macro, elimina las comillas invertidas y la barra invertida en e
 
 ## Véase también
 
-Incluye enlaces a páginas de referencia y guías relacionadas con la función actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) en la _Guía de estilo de escritura_.
+Incluye enlaces a páginas de referencia y guías relacionadas con la función actual. Para más pautas, consulta la [sección Véase también](/es/docs/MDN/Writing_guidelines/Writing_style_guide#véase_también) en la _Guía de estilo de escritura_.
 
 - enlace1
 - enlace2
