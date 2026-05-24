@@ -284,7 +284,7 @@ l.speak();
 
 ### インスタンスメソッドと静的メソッドのバインド
 
-静的メソッドやインスタンスメソッドを {{jsxref("Operators/this", "this")}} の値なしで呼び出した場合、例えばメソッドを変数に割り当ててから呼び出すと、メソッド内部では `this` の値が `undefined` になります。この動作は、 [`"use strict"`](/ja/docs/Web/JavaScript/Reference/Strict_mode) ディレクティブが存在しない場合でも同じです。 `class` 本体の中のコードは常に厳格モードで実行されるからです。
+静的メソッドやインスタンスメソッドを {{jsxref("this")}} の値なしで呼び出した場合、例えばメソッドを変数に割り当ててから呼び出すと、メソッド内部では `this` の値が `undefined` になります。この動作は、 [`"use strict"`](/ja/docs/Web/JavaScript/Reference/Strict_mode) ディレクティブが存在しない場合でも同じです。 `class` 本体の中のコードは常に厳格モードで実行されるからです。
 
 ```js
 class Animal {

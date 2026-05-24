@@ -28,9 +28,9 @@ O maior dos números passados como argumentos. Se pelo menos um dos argumentos n
 
 Por `max` ser um método estático em `Math`, você sempre irá usá-lo da seguinte maneira `Math.max()`, e não como um método da classe `Math` que você tenha instanciado.
 
-Se nenhum argumento for passado o resultado sempre será - {{jsxref("Global_Objects/Infinity", "Infinity")}}.
+Se nenhum argumento for passado o resultado sempre será - {{jsxref("Infinity")}}.
 
-Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("Global_Objects/NaN", "NaN")}}.
+Se um dos argumentos não puder ser convertido em um número, o resultado será {{jsxref("NaN")}}.
 
 ## Exemplos
 
@@ -81,5 +81,5 @@ Entretanto, tanto spread(`...`) quanto `apply` irão ou falhar ou retornar o res
 
 ## Veja também
 
-- O objeto {{jsxref("Global_Objects/Math", "Math")}} pertence a.
+- O objeto {{jsxref("Math")}} pertence a.
 - {{jsxref("Math.min()")}}

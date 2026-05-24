@@ -8,7 +8,7 @@ slug: Web/API/CSSValue
 ## 属性
 
 - {{domxref("CSSValue.cssText")}}
-  - : {{domxref("DOMString")}} 代表当前值。
+  - : {{jsxref("String")}} 代表当前值。
 - {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
   - : 一个 `unsigned short` 类型的数据用来定义了值的类型。可取值为：
 

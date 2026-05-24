@@ -53,7 +53,7 @@ La méthode `forEach()` exécute la fonction `callback` fournie pour chaque vale
 - la **clé de l'élément**
 - l'objet **`Set` qui est parcouru**
 
-Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.foreach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
+Les objets `Set` n'ont pas de clé (_key_). Cependant les deux premiers arguments correspondent à la **valeur** contenue dans l'objet {{jsxref("Set")}}. Cela permet d'utiliser les fonctions callback de façon cohérente avec les méthodes `forEach()` de {{jsxref("Map.forEach", "Map")}} et {{jsxref("Array.forEach","Array")}}.
 
 Si un paramètre `thisArg` est fourni, il sera passé à la fonction `callback` lors de l'appel comme valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée comme argument `this`. La valeur `this` effectivement reçue par la fonction `callback` est déterminée selon [les règles usuelles de détermination de `this` par une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 

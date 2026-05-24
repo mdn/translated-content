@@ -39,7 +39,7 @@ Obtient tous les élements qui ont une classe `test`, à l'intérieur d'un élem
 document.getElementById("main").getElementsByClassName("test");
 ```
 
-On peut aussi utiliser les méthodes de {{jsxref("Array.prototype")}} sur chaque {{ domxref("HTMLCollection") }} en passant la `HTMLCollection` comme valeur _this_ de la méthode. Ci-dessous on trouvera tous les {{HTMLElement("div")}} avec une classe `test`:
+On peut aussi utiliser les méthodes de {{jsxref("Array")}} sur chaque {{ domxref("HTMLCollection") }} en passant la `HTMLCollection` comme valeur _this_ de la méthode. Ci-dessous on trouvera tous les {{HTMLElement("div")}} avec une classe `test`:
 
 ```js
 var testElements = document.getElementsByClassName("test");

@@ -67,13 +67,13 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>crossOrigin</code></td>
-      <td>{{ domxref("DOMString") }}</td>
+      <td>{{ jsxref("String") }}</td>
       <td>
         一个表示媒体元素
         <a
           href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS 设置</a
-        >的{{ domxref("DOMString") }}。从
+        >的{{ jsxref("String") }}。从
         <a href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin"
           >CORS settings attributes</a
         >
@@ -82,9 +82,9 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>currentSrc</code> {{readonlyinline}}</td>
-      <td>{{ domxref("DOMString") }}</td>
+      <td>{{ jsxref("String") }}</td>
       <td>
-        用{{domxref("DOMString")}}表示媒体文件的绝对 URL。如果<code
+        用{{jsxref("String")}}表示媒体文件的绝对 URL。如果<code
           >networkState</code
         >
         为<code>EMPTY，</code>那么值为空字符串。
@@ -154,7 +154,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>mediaGroup</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         反映在 HTML <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#mediagroup"><code>mediagroup</code></a>
         标签上。
@@ -176,7 +176,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
       <td>
         <code>mozAudioChannelType</code> {{ non-standard_inline() }}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         Can be used to set the audio channel that the sound coming from an
         {{htmlelement("audio")}} or {{htmlelement("video")}}
@@ -317,7 +317,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>preload</code></td>
-      <td>{{ domxref("DOMString") }}</td>
+      <td>{{ jsxref("String") }}</td>
       <td>
         Reflects the <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#preload"><code>preload</code></a> HTML
         attribute, indicating what data should be preloaded, if any. Possible
@@ -404,7 +404,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
         <code>sinkId</code>
         {{readonlyinline}}{{experimental_inline}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{jsxref("String")}}</td>
       <td>
         The unique ID of the audio device delivering output, or an empty string
         if it is using the user agent default. This ID should be one of the
@@ -415,7 +415,7 @@ _从父级 {{domxref("HTMLElement")}}、{{domxref("Element")}}、{{domxref("Node
     </tr>
     <tr>
       <td><code>src</code></td>
-      <td>{{ domxref("DOMString") }}</td>
+      <td>{{ jsxref("String") }}</td>
       <td>
         Reflects the <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#src"><code>src</code></a> HTML
         attribute, containing the URL of a media resource to use. Gecko
@@ -469,12 +469,12 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
   <tbody>
     <tr>
       <td>
-        <code>canPlayType(in </code>{{ domxref("DOMString") }}<code>
+        <code>canPlayType(in </code>{{ jsxref("String") }}<code>
           type)</code
         >
       </td>
       <td>
-        <p>{{ domxref("DOMString") }}</p>
+        <p>{{ jsxref("String") }}</p>
         <ul>
           <li>
             <code>probably</code>: if the specified type appears to be playable.

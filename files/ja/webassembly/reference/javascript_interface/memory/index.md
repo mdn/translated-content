@@ -35,7 +35,7 @@ JavaScript または WebAssembly コードから生成されたメモリーは J
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
-次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
+次の例では (GitHub 上の [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) および[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)も参照)、 memory.wasm バイトコードを [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming) メソッドを使用して読み込みんでインスタンス化し、その上の行で生成されたメモリーにインポートします。それから、メモリーにいくつかの値を格納し、関数をエクスポートして使用し、いくつかの値を合計します。
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {

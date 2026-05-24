@@ -21,7 +21,7 @@ formData.has(name);
 ### Parâmetros
 
 - `name`
-  - : Uma {{domxref("USVString")}} que representa o nome da chave que você que testar.
+  - : Uma {{jsxref("String")}} que representa o nome da chave que você que testar.
 
 ### Retorna
 
