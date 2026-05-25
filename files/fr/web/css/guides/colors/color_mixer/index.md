@@ -1,12 +1,11 @@
 ---
 title: Mélangeur de couleurs
 slug: Web/CSS/Guides/Colors/Color_mixer
-original_slug: Web/CSS/CSS_colors/Color_mixer
 l10n:
-  sourceCommit: a6d1fd388b053e6fc6ce21003348f34d0ef8115f
+  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
 ---
 
-Cet outil vous permet de mélanger deux couleurs dans n'importe quel espace colorimétrique en utilisant la fonction {{cssxref("color_value/color-mix")}} et de copier la couleur résultante dans n'importe quel format de couleur CSS.
+Cet outil vous permet de mélanger deux couleurs dans n'importe quel espace colorimétrique en utilisant la fonction {{CSSxRef("color_value/color-mix")}} et de copier la couleur résultante dans n'importe quel format de couleur CSS.
 
 Les deux couleurs d'entrée, `couleur-une` et `couleur-deux`, sont affichées à l'extérieur, et la couleur mélangée renvoyée par la fonction est affichée au milieu. Cliquez sur les échantillons extérieurs pour sélectionner de nouvelles couleurs à mélanger. Utilisez les curseurs pour modifier les pourcentages de chaque couleur d'entrée inclus dans le mélange. Utilisez le menu déroulant pour changer l'espace colorimétrique de la sortie de la fonction. Les valeurs de la couleur résultante dans différents formats apparaissent dans un tableau suivant le widget et peuvent être copiées. Vous pouvez également cliquer sur le nom d'un format de couleur pour en savoir plus.
 
@@ -886,7 +885,7 @@ init();
 
 ## Voir aussi
 
-- {{CSSXref("&lt;color&gt;")}}
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-- {{cssxref("&lt;hue&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
+- Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
 - [Couleurs relatives CSS](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
