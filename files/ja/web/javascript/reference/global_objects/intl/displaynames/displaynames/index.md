@@ -1,11 +1,10 @@
 ---
 title: Intl.DisplayNames() コンストラクター
+short-title: Intl.DisplayNames()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 l10n:
-  sourceCommit: 21d44fab158378a975fd89ec37e46ec68a411bf2
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
-
-{{JSRef}}
 
 **`Intl.DisplayNames()`** コンストラクターは、 {{jsxref("Intl.DisplayNames")}} オブジェクトを生成します。
 
@@ -36,7 +35,7 @@ new Intl.DisplayNames(locales, options)
 ### 引数
 
 - `locales`
-  - : BCP 47 の言語タグを持つ文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列。 `undefined` が渡された場合や、指定したロケール識別子に対応していない場合は、ランタイムの既定ロケールが使用されます。 `locales` 引数の一般的な形式や 解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}を持つ文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列。 `undefined` が渡された場合や、指定したロケール識別子に対応していない場合は、ランタイムの既定ロケールが使用されます。 `locales` 引数の一般的な形式や 解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options`
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
     - `localeMatcher` {{optional_inline}}
