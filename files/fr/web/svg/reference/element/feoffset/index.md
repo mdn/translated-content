@@ -1,36 +1,26 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Reference/Element/feOffset
-original_slug: Web/SVG/Element/feOffset
+l10n:
+  sourceCommit: 48afb4da7957efe672d7fd837413ee1a69a842fd
 ---
 
-{{SVGRef}}
-
-La primitive de filtre **`<feOffset>`** permet de décaler l'image qu'elle a en entrée selon les attributs {{SVGAttr("dx")}} et {{SVGAttr("dy")}}.
+La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feOffset>`** permet de décaler une image en entrée par rapport à sa position courante. L'image en entrée est décalée globalement selon les valeurs définies par les attributs {{SVGAttr("dx")}} et {{SVGAttr("dy")}}.
 
 ## Contexte d'utilisation
 
-{{svginfo}}
+{{SVGInfo}}
 
 ## Attributs
-
-### Attributs globaux
-
-- [Attributs de base](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_base)
-- [Attributs de présentation](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_présentation)
-- [Attributs de primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_de_primitives_de_filtre)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Attributs spécifiques
 
 - {{SVGAttr("in")}}
 - {{SVGAttr("dx")}}
 - {{SVGAttr("dy")}}
+- [Attributs des primitives de filtres](/fr/docs/Web/SVG/Reference/Attribute#attributs_pour_les_primitives_de_filtre)&nbsp;: {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
+Cet élément implémente l'interface {{DOMxRef("SVGFEOffsetElement")}}.
 
 ## Exemple
 
@@ -39,7 +29,7 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="offset" width="180" height="180">
+    <filter id="offset" width="180" height="180" filterUnits="userSpaceOnUse">
       <feOffset in="SourceGraphic" dx="60" dy="60" />
     </filter>
   </defs>
@@ -58,7 +48,7 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple", 200, 200)}}
+{{EmbedLiveSample("Exemple", "", 200)}}
 
 ## Spécifications
 
@@ -70,22 +60,22 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
 
 ## Voir aussi
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [Tutoriel SVG: Effets de filtre](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- L'élément {{SVGElement("filter")}}
+- L'élément {{SVGElement("animate")}}
+- L'élément {{SVGElement("set")}}
+- L'élément {{SVGElement("feBlend")}}
+- L'élément {{SVGElement("feColorMatrix")}}
+- L'élément {{SVGElement("feComponentTransfer")}}
+- L'élément {{SVGElement("feComposite")}}
+- L'élément {{SVGElement("feConvolveMatrix")}}
+- L'élément {{SVGElement("feDiffuseLighting")}}
+- L'élément {{SVGElement("feDisplacementMap")}}
+- L'élément {{SVGElement("feFlood")}}
+- L'élément {{SVGElement("feGaussianBlur")}}
+- L'élément {{SVGElement("feImage")}}
+- L'élément {{SVGElement("feMerge")}}
+- L'élément {{SVGElement("feMorphology")}}
+- L'élément {{SVGElement("feSpecularLighting")}}
+- L'élément {{SVGElement("feTile")}}
+- L'élément {{SVGElement("feTurbulence")}}
+- [Tutoriel SVG&nbsp;: Effets de filtre](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
