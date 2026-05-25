@@ -4,7 +4,7 @@ slug: Web/CSS/Reference/Properties/font-size
 original_slug: Web/CSS/font-size
 ---
 
-**`font-size`** [CSS](/ko/docs/Web/CSS) 속성은 폰트의 크기(대문자 "M"의 크기)를 지정합니다. 폰트 크기를 바꾸면 `em` 과 `ex` {{cssxref("&lt;length&gt;")}} 단위로 계산된 다른 항목들의 크기를 바꿉니다.
+**`font-size`** [CSS](/ko/docs/Web/CSS) 속성은 폰트의 크기(대문자 "M"의 크기)를 지정합니다. 폰트 크기를 바꾸면 `em` 과 `ex` 등과 같은 {{cssxref("&lt;length&gt;")}} 단위로 계산된 항목들의 크기를 바꿉니다.
 
 {{InteractiveExample("CSS Demo: font-size")}}
 
@@ -94,7 +94,7 @@ The `font-size` property is specified in one of the following ways:
 
 ## 접근법
 
-폰트 크기는 키워드나 pixel과 em처럼 수치 단위처럼 여러가지 방법으로 지정할 수 있습니다. 각 웹 페이지에 맞는 적합한 방법을 선택해야 합니다.
+폰트 크기는 키워드나 pixel과 em의 수치 값처럼 여러가지 방법으로 지정할 수 있습니다. 각 웹 페이지에 맞는 적합한 방법을 선택해야 합니다.
 
 ### 키워드
 
