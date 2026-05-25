@@ -5,25 +5,25 @@ l10n:
   sourceCommit: ac806e34aba086be141689c64dc4dd73636fbd62
 ---
 
-L'élément **`<desc>`** [SVG](/fr/docs/Web/SVG) fournit une description textuelle longue et accessible de tout [élément conteneur](/fr/docs/Web/SVG/Reference/Element#container_elements) ou [élément graphique](/fr/docs/Web/SVG/Reference/Element#graphics_elements) SVG.
+L'élément [SVG](/fr/docs/Web/SVG) **`<desc>`** fournit une description textuelle longue et accessible de tout [élément SVG conteneur](/fr/docs/Web/SVG/Reference/Element#éléments_conteneurs) ou [élément SVG graphique](/fr/docs/Web/SVG/Reference/Element#éléments_graphiques).
 
 Le texte d'un élément `<desc>` n'est pas affiché dans le rendu graphique. Si l'élément peut être décrit par du texte visible, il est possible de référencer ce texte avec l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby). Si `aria-describedby` est utilisé, il prendra le pas sur `<desc>`.
 
-Le texte masqué d'un élément `<desc>` peut également être concaténé avec le texte visible d'autres éléments en utilisant plusieurs ID dans une valeur `aria-describedby`. Dans ce cas, l'élément `<desc>` doit fournir un ID pour être référencé.
+Le texte masqué d'un élément `<desc>` peut également être concaténé avec le texte visible d'autres éléments en utilisant plusieurs ID dans la valeur de `aria-describedby`. Dans ce cas, l'élément `<desc>` doit fournir un ID pour être référencé.
 
 ## Contexte d'utilisation
 
-{{svginfo}}
+{{SVGInfo}}
 
 ## Attributs
 
-Cet élément n'inclut que les attributs globaux.
+Cet élément n'inclut que les attributs universels.
 
 ## Interface DOM
 
-Cet élément implémente l'interface {{domxref("SVGDescElement")}}.
+Cet élément implémente l'interface {{DOMxRef("SVGDescElement")}}.
 
-## Exemple
+## Exemples
 
 ```css hidden
 html,
@@ -45,7 +45,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample("Exemples", 150, "100%")}}
 
 ## Spécifications
 
@@ -57,4 +57,4 @@ svg {
 
 ## Voir aussi
 
-- {{SVGElement("title")}}
+- L'élément {{SVGElement("title")}}
