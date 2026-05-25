@@ -1,11 +1,11 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
+l10n:
+  sourceCommit: 21d44fab158378a975fd89ec37e46ec68a411bf2
 ---
 
-{{JSRef}}
-
-**`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。
+**`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳ができるようにします。
 
 {{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
 
@@ -25,19 +25,28 @@ console.log(regionNamesInTraditionalChinese.of("US"));
 ## コンストラクター
 
 - {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
-  - : `Intl.DisplayNames` オブジェクトを作成します。
+  - : 新しい `Intl.DisplayNames` オブジェクトを生成します。
 
 ## 静的メソッド
 
 - {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
-  - : 提供されたロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているロケールを含む配列を返します。
+  - : 指定されたロケールのうち、実行環境のデフォルトのロケールで代替されることなく対応するものを、配列に収めて返します。
+
+## インスタンスプロパティ
+
+これらのプロパティは `Intl.DisplayNames.prototype` で定義されており、すべての `Intl.DisplayNames` インスタンスで共有されます。
+
+- {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
+  - : このインスタンスオブジェクトを作成したコンストラクター関数です。`Intl.DisplayNames` インスタンスの場合、初期値は {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}} コンストラクターとなります。
+- `Intl.DisplayNames.prototype[Symbol.toStringTag]`
+  - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"Intl.DisplayNames"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド
 
 - {{jsxref("Intl/DisplayNames/of", "Intl.DisplayNames.prototype.of()")}}
   - : このメソッドは `code` を受け取り、`Intl.DisplayNames` をインスタンス化したときに指定したロケールとオプションに基づく文字列を返します。
 - {{jsxref("Intl/DisplayNames/resolvedOptions", "Intl.DisplayNames.prototype.resolvedOptions()")}}
-  - : オブジェクトの初期化時に計算されたロケールや書式設定のオプションを反映したプロパティを持つ新しいオブジェクトを返します。
+  - : オブジェクトの初期化時に計算されたロケールや書式化のオプションを反映したプロパティを持つ、新しいオブジェクトを返します。
 
 ## 例
 
@@ -134,4 +143,5 @@ currencyNames.of("CNY"); // "人民幣"
 
 ## 関連情報
 
+- [`Intl.DisplayNames` のポリフィル (FormatJS)](https://formatjs.github.io/docs/polyfills/intl-displaynames/)
 - {{jsxref("Intl")}}
