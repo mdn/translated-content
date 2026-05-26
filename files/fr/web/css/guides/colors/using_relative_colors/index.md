@@ -445,7 +445,7 @@ Le HTML complet est inclus ci-dessous à titre de référence. Les parties les p
 
 Ci-dessous, nous affichons uniquement le CSS qui définit les couleurs de la palette. Remarquez comment, dans chaque cas, des sélecteurs descendants sont utilisés pour appliquer la propriété {{CSSxRef("background-color")}} correcte à chaque enfant `<div>` de la palette choisie. L'ordre source des `<div>` importe davantage que le type d'élément, nous avons donc utilisé {{CSSxRef(":nth-child")}} pour les cibler.
 
-Dans la règle précédente, nous avons utilisé le [sélecteur de voisins généraux (`~`)](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) pour cibler les éléments `<div>` inutilisés dans chaque type de palette, en leur attribuant la propriété [`display: none`] (/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) pour empêcher leur affichage.
+Dans la règle précédente, nous avons utilisé le [sélecteur de voisins généraux (`~`)](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) pour cibler les éléments `<div>` inutilisés dans chaque type de palette, en leur attribuant la propriété [`display: none`](/fr/docs/Web/CSS/Reference/Selectors/Subsequent-sibling_combinator) pour empêcher leur affichage.
 
 Les couleurs elles‑mêmes incluent la `--couleur-de-base`, ainsi que des couleurs relatives dérivées de cette `--couleur-de-base`. Les couleurs relatives utilisent la fonction {{CSSxRef("color_value/lch", "lch()")}} — en passant la `--couleur-de-base` d'origine et en définissant une couleur de sortie avec un ajustement du canal de luminosité ou de teinte selon le cas.
 
@@ -674,7 +674,7 @@ Cela ajuste à son tour le schéma de couleurs pour l'ensemble de l'interface ut
 Le HTML de l'exemple est montré ci-dessous.
 
 - L'élément {{HTMLElement("main")}} agit comme un conteneur externe pour contenir le reste du contenu, permettant à la carte et au formulaire d'être centrés verticalement et horizontalement à l'intérieur de `<main>` en tant qu'unité.
-- L'élément {{HTMLElement("section")}} contient les éléments [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et {{HTMLElement("p")}} qui définissent le contenu de la carte.
+- L'élément {{HTMLElement("section")}} contient les éléments `{{HTMLElement("Heading_Elements", "&lt;h1&gt;")}}` et {{HTMLElement("p")}} qui définissent le contenu de la carte.
 - L'élément {{HTMLElement("form")}} contient le contrôle (`{{HTMLElement("input/range", "&lt;input type=\"range\"&gt;")}}`) et son {{HTMLElement("label")}}.
 
 ```html
@@ -706,7 +706,7 @@ Le HTML de l'exemple est montré ci-dessous.
 
 #### CSS
 
-Dans le CSS, le `:root` a une valeur par défaut `--teinte` définie, des couleurs relatives [`lch()`](/fr/docs/Web/CSS/Reference/Values/color_value/lch) pour définir le schéma de couleurs, ainsi qu'un dégradé radial qui remplit tout le corps.
+Dans le CSS, le `:root` a une valeur par défaut `--teinte` définie, des couleurs relatives {{CSSxRef("color_value/lch", "lch()")}} pour définir le schéma de couleurs, ainsi qu'un dégradé radial qui remplit tout le corps.
 
 Les couleurs relatives sont les suivantes&nbsp;:
 
