@@ -40,7 +40,7 @@
     "front-matter": "^4.0.2",
     "html-to-text": "^10.0.0",
     "lefthook": "^2.1.8",
-    "markdown-it": "^14.1.1",
+    "markdown-it": "^14.2.0",
     "markdownlint-cli2": "^0.22.1",
     "markdownlint-rule-search-replace": "^1.2.0",
     "mdast-util-from-markdown": "^2.0.3",
