@@ -970,6 +970,9 @@
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment	/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring
+/zh-TW/docs/Web/JavaScript/Reference/delete	/zh-TW/docs/Web/JavaScript/Reference/Operators/delete
+/zh-TW/docs/Web/JavaScript/Reference/new	/zh-TW/docs/Web/JavaScript/Reference/Operators/new
+/zh-TW/docs/Web/JavaScript/Reference/this	/zh-TW/docs/Web/JavaScript/Reference/Operators/this
 /zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Defenses/Same-origin_policy
 /zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Typed_arrays	/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays
