@@ -140,7 +140,7 @@ o === o; // true
 
 ### 条件
 
-`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于 {{jsxref("Operators", "Logical Operators")}} `||`, `&&`, 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
+`BigInt` 在需要转换成 {{jsxref("Global_Objects/Boolean", "Boolean")}} 的时表现跟 {{jsxref("Global_Objects/Number", "Number")}} 类似：如通过 {{jsxref("Global_Objects/Boolean", "Boolean")}} 函数转换；用于{{jsxref("Operators", "二元逻辑运算符", "二元逻辑运算符", 1)}} `||`、`&&` 和 `!` 的操作数；或者用于在像 {{jsxref("Statements/if...else", "if statement")}} 这样的条件语句中。
 
 ```js
 if (0n) {
