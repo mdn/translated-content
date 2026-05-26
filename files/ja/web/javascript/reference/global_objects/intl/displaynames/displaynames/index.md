@@ -35,24 +35,24 @@ new Intl.DisplayNames(locales, options)
 ### 引数
 
 - `locales`
-  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}を持つ文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列。 `undefined` が渡された場合や、指定したロケール識別子に対応していない場合は、ランタイムの既定ロケールが使用されます。 `locales` 引数の一般的な形式や 解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}を持つ文字列または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列。 `undefined` が渡された場合や、指定したロケール識別子に対応していない場合は、ランタイムのデフォルトロケールが使用されます。 `locales` 引数の一般的な形式や 解釈については、 [`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options`
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
     - `localeMatcher` {{optional_inline}}
-      - : 使用するロケール照合アルゴリズムです。利用可能な値は、 "`lookup`" と "`best fit`" です。既定値は "`best fit`" です。このオプションについての情報は、[ロケール識別子とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
+      - : 使用するロケール照合アルゴリズムです。利用可能な値は、 `"lookup"` と `"best fit"` です。デフォルト値は `"best fit"` です。このオプションについての情報は、[ロケール識別子とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `style` {{optional_inline}}
-      - : 使用する書式化スタイルです。取りうる値は `"narrow"`, `"short"`, `"long"` です。既定値は `"long"` です。
+      - : 使用する書式化スタイルです。取りうる値は `"narrow"`, `"short"`, `"long"` です。デフォルト値は `"long"` です。
     - `type`
       - : The[`of()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of) から返すための表示名の種類です。取りうる値は `"language"`, `"region"`, `"script"`, `"currency"`, `"calendar"`, `"dateTimeField"` です。
     - `fallback` {{optional_inline}}
       - : 入力値が構造的には有効だが、一致する表示名がない場合に `of()` から返す値です。取りうる値は次の通りです。
-        - `"code"` （既定値）
+        - `"code"` （デフォルト値）
           - : 入力コード自体を返します。
         - `"none"`
           - : `undefined` を返します。
     - `languageDisplay` {{optional_inline}}
       - : 言語名をどのように表示するかです。 `type: "language"` と共にのみ使用可能です。取りうる値は次の通りです。
-        - `"dialect"` （既定値）
+        - `"dialect"` （デフォルト値）
           - : 特別な地域の方言を、その名前を使用して表示します。例えば、`"nl-BE"` は `"Flemish"` と表示されます。
         - `"standard"`
           - : 標準形式を使用してすべての言語を表示します。例: `"nl-BE"` は `"Dutch (Belgium)"` と表示されます。
@@ -68,7 +68,7 @@ new Intl.DisplayNames(locales, options)
 
 ### 基本的な使用法
 
-ロケールを指定しない基本的な使用法では、既定のロケールと既定のオプションで書式化された文字列が返されます。
+ロケールを指定しない基本的な使用法では、デフォルトのロケールとデフォルトのオプションで書式化された文字列が返されます。
 
 ```js
 console.log(new Intl.DisplayNames([], { type: "language" }).of("US"));
