@@ -79,4 +79,4 @@ let greetList = ["Hello", " ", "Venkat", "!"];
 ## 參見
 
 - {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators", "Assignment operators", "Assignment_operators", 1)}}
+- {{jsxref("Operators", "賦值運算子", "賦值運算子", 1)}}
