@@ -44,7 +44,7 @@ concat(str1, str2, ... , strN)
 
 ## 效能
 
-對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators", "assignment operators", "Assignment_operators", 1)}} 來達成，
+對於字串的串接，強烈建議直接使用{{jsxref("Operators", "賦值運算子", "賦值運算子", 1)}}來達成，
 像是 `+` 及 `+=`，而不是使用 `concat()` 方法。
 
 ## 範例

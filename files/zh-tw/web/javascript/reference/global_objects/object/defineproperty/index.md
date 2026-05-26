@@ -65,7 +65,7 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
   - : The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).
     **預設 {{jsxref("undefined")}}.**
 - `writable`
-  - : `true` 則該物件屬性可透過{{jsxref("Operators", "賦予運算子", "Assignment_operators", 1)}}改變其值。
+  - : `true` 則該物件屬性可透過{{jsxref("Operators", "賦予運算子", "賦值運算子", 1)}}改變其值。
     **預設 `false`**
 
 一個 accessor descriptor 也擁有下述之 optional keys:

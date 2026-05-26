@@ -58,13 +58,13 @@ slug: Web/JavaScript/Reference/Operators
 
 字尾/字首遞增與字尾/字首遞減運算子。
 
-- {{jsxref("Operators", "A++", "#Increment")}}
+- {{jsxref("Operators/Increment", "A++")}}
   - : 字尾遞增運算子。
-- {{jsxref("Operators", "A--", "#Decrement")}}
+- {{jsxref("Operators/Decrement", "A--")}}
   - : 字尾遞減運算子。
-- {{jsxref("Operators", "++A", "#Increment")}}
+- {{jsxref("Operators/Increment", "++A")}}
   - : 字首遞增運算子。
-- {{jsxref("Operators", "--A", "#Decrement")}}
+- {{jsxref("Operators/Decrement", "--A")}}
   - : 字首遞減運算子。
 
 ### 一元運算子
@@ -77,30 +77,30 @@ slug: Web/JavaScript/Reference/Operators
   - : `void` 運算子可放棄一個運算式的回傳值。
 - {{jsxref("Operators/typeof", "typeof")}}
   - : `typeof` 運算子可以判斷一個指定物件的型態。
-- {{jsxref("Operators", "+", "#Unary_plus")}}
+- {{jsxref("Operators/Unary_plus", "+")}}
   - : 一元正運算子可以轉換其運算元成為數值 (Number) 型態。
-- {{jsxref("Operators", "-", "#Unary_negation")}}
+- {{jsxref("Operators/Unary_negation", "-")}}
   - : 一元負運算子可以轉換其運算元成為數值 (Number) 型態並轉為負值。
-- {{jsxref("Operators", "~", "#Bitwise_NOT")}}
+- {{jsxref("Operators/Bitwise_NOT", "~")}}
   - : 元位 NOT 運算子。
-- {{jsxref("Operators", "!", "#Logical_NOT")}}
+- {{jsxref("Operators/Logical_NOT", "!")}}
   - : 邏輯 NOT 運算子。
 
 ### 算術運算子
 
 算術運算子會要用到數值 (不論是字面值或者變數) 做為運算元，並且會回傳單一數值結果。
 
-- {{jsxref("Operators", "+", "#Addition")}}
+- {{jsxref("Operators/Addition", "+")}}
   - : 加法運算子。
-- {{jsxref("Operators", "-", "#Subtraction")}}
+- {{jsxref("Operators/Subtraction", "-")}}
   - : 減法運算子。
-- {{jsxref("Operators", "/", "#Division")}}
+- {{jsxref("Operators/Division", "/")}}
   - : 除法運算子。
-- {{jsxref("Operators", "*", "#Multiplication")}}
+- {{jsxref("Operators/Multiplication", "*")}}
   - : 乘法運算子。
-- {{jsxref("Operators", "%", "#Remainder")}}
+- {{jsxref("Operators/Remainder", "%")}}
   - : 餘數運算子。
-- {{jsxref("Operators", "**", "#Exponentiation")}}
+- {{jsxref("Operators/Exponentiation", "**")}}
   - : 指數運算子。
 
 ### 關係運算子
@@ -111,13 +111,13 @@ slug: Web/JavaScript/Reference/Operators
   - : `in` 運算子會判斷一個物件是否有指定的屬性。
 - {{jsxref("Operators/instanceof", "instanceof")}}
   - : `instanceof` 運算子會判斷一個物件是否為另一個物件的實例。
-- {{jsxref("Operators", "&lt;", "#Less_than_operator")}}
+- {{jsxref("Operators/Less_than", "&lt;")}}
   - : 小於運算子。
-- {{jsxref("Operators", "&gt;", "#Greater_than_operator")}}
+- {{jsxref("Operators/Greater_than", "&gt;")}}
   - : 大於運算子。
-- {{jsxref("Operators", "&lt;=", "#Less_than_or_equal_operator")}}
+- {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
   - : 小於等於運算子。
-- {{jsxref("Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : 大於等於運算子。
 
 > [!NOTE]
@@ -127,44 +127,44 @@ slug: Web/JavaScript/Reference/Operators
 
 執行相對運算子後的結果為比較結果是否成立的 `Boolean` 值。
 
-- {{jsxref("Operators", "==", "#Equality")}}
+- {{jsxref("Operators/Equality", "==")}}
   - : 相等運算子。
-- {{jsxref("Operators", "!=", "#Inequality")}}
+- {{jsxref("Operators/Inequality", "!=")}}
   - : 不相等運算子。
-- {{jsxref("Operators", "===", "#Identity")}}
+- {{jsxref("Operators/Strict_equality", "===")}}
   - : 恆等運算子。
-- {{jsxref("Operators", "!==", "#Nonidentity")}}
+- {{jsxref("Operators/Strict_inequality", "!==")}}
   - : 不恆等運算子。
 
 ### 位元移位運算子
 
 用來位移運算元所有位元的運算。
 
-- {{jsxref("Operators", "&lt;&lt;", "#Left_shift")}}
+- {{jsxref("Operators/Left_shift", "&lt;&lt;")}}
   - : 左移位元運算子。
-- {{jsxref("Operators", "&gt;&gt;", "#Right_shift")}}
+- {{jsxref("Operators/Right_shift", "&gt;&gt;")}}
   - : 右移位元運算子。
-- {{jsxref("Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{jsxref("Operators/Unsigned_right_shift", "&gt;&gt;&gt;")}}
   - : 右移無號位元運算子。
 
 ### 二元位元運算子
 
 位元運算子將其運算元當做是 32 位元 (32 個零與一) 的數值處理並回傳標準 JavaScript 數值。
 
-- {{jsxref("Operators", "&amp;", "#Bitwise_AND")}}
+- {{jsxref("Operators/Bitwise_AND", "&amp;")}}
   - : 位元 AND。
-- {{jsxref("Operators", "|", "#Bitwise_OR")}}
+- {{jsxref("Operators/Bitwise_OR", "|")}}
   - : 位元 OR。
-- {{jsxref("Operators", "^", "#Bitwise_XOR")}}
+- {{jsxref("Operators/Bitwise_XOR", "^")}}
   - : 位元 XOR。
 
 ### 二元邏輯運算子
 
 邏輯運算子一般用在處理布林 (邏輯) 值，它們存在的地方會回傳一個布林 (Boolean) 值。
 
-- {{jsxref("Operators", "&amp;&amp;", "#Logical_AND")}}
+- {{jsxref("Operators/Logical_AND", "&amp;&amp;")}}
   - : 邏輯 AND。
-- {{jsxref("Operators", "||", "#Logical_OR")}}
+- {{jsxref("Operators/Logical_OR", "||")}}
   - : 邏輯 OR。
 
 ### 條件 (三元) 運算子
@@ -176,29 +176,29 @@ slug: Web/JavaScript/Reference/Operators
 
 賦值運算子會根據其右側運算元的數值處理後賦值給其左側的運算元。
 
-- {{jsxref("Operators", "=", "#Assignment")}}
+- {{jsxref("Operators/Assignment", "=")}}
   - : 賦值運算子。
-- {{jsxref("Operators", "*=", "#Multiplication_assignment")}}
+- {{jsxref("Operators/Multiplication_assignment", "*=")}}
   - : 乘法賦值。
-- {{jsxref("Operators", "/=", "#Division_assignment")}}
+- {{jsxref("Operators/Division_assignment", "/=")}}
   - : 除法賦值。
-- {{jsxref("Operators", "%=", "#Remainder_assignment")}}
+- {{jsxref("Operators/Remainder_assignment", "%=")}}
   - : 餘數賦值。
-- {{jsxref("Operators", "+=", "#Addition_assignment")}}
+- {{jsxref("Operators/Addition_assignment", "+=")}}
   - : 加法賦值。
-- {{jsxref("Operators", "-=", "#Subtraction_assignment")}}
+- {{jsxref("Operators/Subtraction_assignment", "-=")}}
   - : 減法賦值。
-- {{jsxref("Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
+- {{jsxref("Operators/Left_shift_assignment", "&lt;&lt;=")}}
   - : 左移賦值。
-- {{jsxref("Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
+- {{jsxref("Operators/Right_shift_assignment", "&gt;&gt;=")}}
   - : 右移賦值。
-- {{jsxref("Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
+- {{jsxref("Operators/Unsigned_right_shift_assignment", "&gt;&gt;&gt;=")}}
   - : 無號右移賦值。
-- {{jsxref("Operators", "&amp;=", "#Bitwise_AND_assignment")}}
+- {{jsxref("Operators/Bitwise_AND_assignment", "&amp;=")}}
   - : 位元 AND 賦值。
-- {{jsxref("Operators", "^=", "#Bitwise_XOR_assignment")}}
+- {{jsxref("Operators/Bitwise_XOR_assignment", "^=")}}
   - : 位元 XOR 賦值。
-- {{jsxref("Operators", "|=", "#Bitwise_OR_assignment")}}
+- {{jsxref("Operators/Bitwise_OR_assignment", "|=")}}
   - : 位元 OR 賦值。
 - {{jsxref("Operators/Destructuring", "[a, b] = [1, 2]")}}
   {{jsxref("Operators/Destructuring", "{a, b} = {a:1, b:2}")}}
