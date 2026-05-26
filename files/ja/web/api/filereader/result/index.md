@@ -28,7 +28,7 @@ l10n:
         {{domxref("FileReader/readAsArrayBuffer", "readAsArrayBuffer()")}}
       </td>
       <td>
-        <code>result</code> はバイナリーデータを含む JavaScript の {{jsxref("Global_Objects/ArrayBuffer", "ArrayBuffer")}} になります。
+        <code>result</code> はバイナリーデータを含む JavaScript の {{jsxref("ArrayBuffer")}} になります。
       </td>
     </tr>
     <tr>

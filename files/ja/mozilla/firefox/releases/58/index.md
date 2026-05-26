@@ -30,9 +30,9 @@ _変更なし。_
 ### JavaScript
 
 - {{jsxref("Promise.prototype.finally()")}} メソッドを実装しました ([Firefox バグ 1019116](https://bugzil.la/1019116))。
-- {{jsxref("PluralRules", "Intl.PluralRules")}} オブジェクトを実装しました ([Firefox バグ 1403318](https://bugzil.la/1403318))。
-- {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1403319](https://bugzil.la/1403319))。
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトで `hourCycle` オプションと `hc` 言語タグをサポートしました ([Firefox バグ 1386146](https://bugzil.la/1386146))。
+- {{jsxref("Intl/PluralRules", "Intl.PluralRules")}} オブジェクトを実装しました ([Firefox バグ 1403318](https://bugzil.la/1403318))。
+- {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}} メソッドを実装しました ([Firefox バグ 1403319](https://bugzil.la/1403319))。
+- {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトで `hourCycle` オプションと `hc` 言語タグをサポートしました ([Firefox バグ 1386146](https://bugzil.la/1386146))。
 - [optional catch binding 提案](https://github.com/tc39/proposal-optional-catch-binding) を実装しました ([Firefox バグ 1380881](https://bugzil.la/1380881))。
 
 ### API
@@ -85,7 +85,7 @@ _変更なし。_
 ### その他
 
 - [プログレッシブ ウェブアプリ](/ja/docs/Web/Progressive_web_apps) の取り組みの一環として、Android 版 Firefox で "ホーム画面に追加" をサポートしました ([Firefox バグ 1212648](https://bugzil.la/1212648))。
-- [WebAssembly](/ja/docs/WebAssembly) に、読み込み時間を最適化する階層型コンパイラー ([Firefox バグ 1277562](https://bugzil.la/1277562)) と、新たなストリーミング API ({{jsxref("WebAssembly.compileStreaming()")}} および {{jsxref("WebAssembly.installStreaming()")}}) を搭載しました ([Firefox バグ 1347644](https://bugzil.la/1347644))。
+- [WebAssembly](/ja/docs/WebAssembly) に、読み込み時間を最適化する階層型コンパイラー ([Firefox バグ 1277562](https://bugzil.la/1277562)) と、新たなストリーミング API ([`WebAssembly.compileStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming) および [`WebAssembly.installStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/installStreaming)) を搭載しました ([Firefox バグ 1347644](https://bugzil.la/1347644))。
 
 ## ウェブプラットフォームから廃止
 

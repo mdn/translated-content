@@ -1,11 +1,10 @@
 ---
-title: "<summary>: 概要明示要素"
+title: HTML `<summary>` 概要明示要素
+short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折りたたみボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
@@ -22,7 +21,7 @@ l10n:
 
 ```css interactive-example
 details {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa;
   border-radius: 4px;
   padding: 0.5em 0.5em 0;
 }
@@ -38,7 +37,7 @@ details[open] {
 }
 
 details[open] summary {
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
 ```
@@ -55,13 +54,13 @@ details[open] summary {
 
 `<details>` の内容は、`<summary>` の{{glossary("accessible description", "アクセシブル説明")}}となります。
 
-### 既定のラベルテキスト
+### デフォルトのラベルテキスト
 
-`<details>` 要素の最初の子が `<summary>` 要素でない場合、{{Glossary("user agent", "ユーザーエージェント")}}は既定の文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
+`<details>` 要素の最初の子が `<summary>` 要素でない場合、{{Glossary("user agent", "ユーザーエージェント")}}はデフォルトの文字列（ふつうは「詳細」）を折りたたみボックスのラベルとして使用します。
 
-### 既定のスタイル
+### デフォルトのスタイル
 
-HTML 仕様書では、`<summary>` の既定のスタイルに `display: list-item` が含まれています。これで、ラベルの隣に既定で（多くは三角形で）表示される折りたたみウィジェットとして表示されるアイコンを変更したり削除したりすることができます。
+HTML 仕様書では、`<summary>` のデフォルトのスタイルに `display: list-item` が含まれています。これで、ラベルの隣にデフォルトで（多くは三角形で）表示される折りたたみウィジェットとして表示されるアイコンを変更したり削除したりすることができます。
 
 スタイルを `display: block` に変更すると、展開用の三角印を削除することができます。
 
@@ -114,7 +113,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
 > [!WARNING]
-> `<summary>` 要素の既定のロールは [button](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)（子要素からはすべてのロールを外す）ですので、この例はスクリーンリーダーのような支援技術のユーザーには動作しません。`<h4>` のロールが削除されますので、これらのユーザーからは見出しとして扱われなくなります。
+> `<summary>` 要素に割り当てられたロールは、ブラウザーによって異なります。ブラウザーによってはデフォルトで [`button`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role) ロールを割り当て、子要素からはすべてのロールを外します。この不整合は、スクリーンリーダーなどの支援技術を利用するユーザーにとって、問題を引き起こす可能性があります（前回の例にある `<h4>` では、role 属性が除去されるため、これらのユーザーにとっては見出しとして扱われません）。アクセシビリティの対応を一貫して確実にするため、`<summary>` の実装を複数のプラットフォームでテストする必要があります。
 
 ### 概要の中の HTML
 
@@ -146,7 +145,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 ```css
 details {
   font-size: 1rem;
-  font-family: "Open Sans", Calibri, sans-serif;
+  font-family: "Open Sans", "Calibri", sans-serif;
   border: solid;
   padding: 2px 6px;
   margin-bottom: 1em;
@@ -214,7 +213,7 @@ CSS には、 `[open]` [属性セレクター](/ja/docs/Web/CSS/Reference/Select
 
 <table class="properties">
   <tbody>
-    <tr>
+     <tr>
       <th scope="row">
         <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
@@ -244,7 +243,7 @@ CSS には、 `[open]` [属性セレクター](/ja/docs/Web/CSS/Reference/Select
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+      <td> <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

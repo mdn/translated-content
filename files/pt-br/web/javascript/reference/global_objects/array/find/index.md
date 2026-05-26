@@ -48,11 +48,11 @@ O **valor** do **primeiro elemento** do array que satisfaz a função de teste f
 
 ## Descrição
 
-O método `find` executa a função `callback` uma vez para cada elemento presente no array até que encontre um onde `callback` retorne o valor true. Se o elemento é encontrado, `find` retorna imediatamente o valor deste elemento. Caso contrário, `find` retorna {{jsxref("Global_Objects/undefined", "undefined")}}. O `callback` é acionado para todos os índices do array de `0` a `tamanho-1`, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.
+O método `find` executa a função `callback` uma vez para cada elemento presente no array até que encontre um onde `callback` retorne o valor true. Se o elemento é encontrado, `find` retorna imediatamente o valor deste elemento. Caso contrário, `find` retorna {{jsxref("undefined")}}. O `callback` é acionado para todos os índices do array de `0` a `tamanho-1`, não apenas para aqueles que possuem valores atribuídos. Sendo assim, ele pode ser menos eficiente para arrays muito grandes em que existem outros métodos que só visitam os índices que tenham valor atribuído.
 
 O `callback` é acionado com três argumentos: o valor do elemento, o índice do elemento e o objeto do Array que está sendo executado.
 
-Se um parâmetro `thisArg` é provido ao `find`, ele será usado como o `this` para cada acionamento do `callback`. Se não for provido, então {{jsxref("Global_Objects/undefined", "undefined")}} é usado.
+Se um parâmetro `thisArg` é provido ao `find`, ele será usado como o `this` para cada acionamento do `callback`. Se não for provido, então {{jsxref("undefined")}} é usado.
 
 O `find` não altera a array à qual foi acionado.
 
@@ -93,7 +93,7 @@ console.log(result); // { name: 'cherries', quantity: 5 }
 
 ### Encontrar um número primo em um array
 
-O exemplo a seguir encontra um elemento dentro da array que é número primo (ou retorna {{jsxref("Global_Objects/undefined", "undefined")}} se não houverem números primos).
+O exemplo a seguir encontra um elemento dentro da array que é número primo (ou retorna {{jsxref("undefined")}} se não houverem números primos).
 
 ```js
 function isPrime(element, index, array) {

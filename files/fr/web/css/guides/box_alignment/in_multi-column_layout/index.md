@@ -1,40 +1,29 @@
 ---
-title: L'alignement des boîtes avec une disposition en colonnes
+title: L'alignement des boîtes avec une disposition en multi-colonnes
+short-title: En disposition de multi-colonnes
 slug: Web/CSS/Guides/Box_alignment/In_multi-column_layout
-original_slug: Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
+l10n:
+  sourceCommit: ca5d9f9e63b460fc0c9e15ac57d9739e10e4ea0d
 ---
 
-{{CSSRef}}
+Le module [d'alignement des boîtes CSS](/fr/docs/Web/CSS/Guides/Box_alignment) détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous voyons comment fonctionne l'alignement des boîtes avec [une disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). Cette page détaille les aspects spécifiques relatifs à l'alignement et au module <i lang="en">Multi-Column Layout</i>. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/Guides/Box_alignment).
 
-Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/Guides/Box_alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [une disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout). Cette page détaille les aspects spécifiques relatifs à l'alignement et au module _Multi-Column Layout_. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/Guides/Box_alignment).
-
-Pour une disposition en colonne, le conteneur d'alignement est le conteneur de colonnes. Le sujet d'alignement correspond à la boîte de colonne. Les propriétés qui s'appliquent pour ce type de disposition sont détaillées ci-après.
-
-> [!NOTE]
-> Le module de spécification de la disposition en colonnes (_Multi-Column Layout_) précède celui pour l'alignement des boîtes. Aussi, certaines des propriétés décrites ici, bien que spécifiées afin de fonctionner pour ce mode de disposition, peuvent ne pas encore être prises en charge par les navigateurs.
+Dans [la disposition multi-colonnes](/fr/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts), le {{Glossary("alignment container", "conteneur d'alignement")}} est la boîte de contenu du conteneur multi-colonnes. Le {{Glossary("alignment subject", "sujet d'alignement")}} est la boîte de colonne. Les propriétés qui s'appliquent aux dispositions multi-colonnes sont détaillées ci-dessous.
 
 ## `align-content` et `justify-content`
 
-La propriété {{cssxref("align-content")}} s'applique à l'axe de bloc et la propriété {{cssxref("justify-content")}} s'applique à l'axe en ligne. Tout espace ajouté entre les colonnes selon la distribution choisie sera ajouté entre les colonnes. Les gouttières pourront donc être plus larges que celles indiquées par la propriété {{cssxref("column-gap")}}.
+La propriété {{CSSxRef("align-content")}} s'applique à l'axe de bloc et {{CSSxRef("justify-content")}} à l'axe en ligne. Tout espace ajouté entre les colonnes selon la distribution choisie est ajouté entre les colonnes, ce qui peut rendre les gouttières plus larges que celles définies par la propriété {{CSSxRef("column-gap")}} (ou le raccourci {{CSSxRef("gap")}}).
 
-Utiliser `justify-content` avec une valeur différente de `normal` ou `stretch` entraînera un dimensionnement des colonnes avec la valeur de {{cssxref("column-width")}}, définie sur le conteneur multi-colonnes. L'espace restant sera alors réparti selon la valeur de `justify-content`.
+L'utilisation d'une valeur de `justify-content` autre que `normal` ou `stretch` entraîne l'affichage des boîtes de colonne à la {{CSSxRef("column-width")}} définie sur le conteneur multi-colonnes, et l'espace restant est réparti selon la valeur de `justify-content`.
 
 ## `column-gap`
 
-La propriété {{cssxref("column-gap")}} a été définie dans des versions antérieures du module de spécification pour la disposition multi-colonne. Son rôle a été généralisé avec les autres propriétés d'espacement dans le module d'alignement des boîtes.
+La propriété {{CSSxRef("column-gap")}} a été initialement définie dans la spécification de la disposition multi-colonnes, puis unifiée avec les propriétés d'espacement pour d'autres méthodes de disposition dans le module d'alignement des boîtes. Alors que d'autres méthodes de disposition traitent la valeur initiale de `column-gap` comme `0`, la disposition multi-colonnes la traite comme `1em` — vous voulez généralement un espace entre les colonnes.
 
-On notera que, si les autres modes de disposition utilisent une valeur initiale de `0` pour `column-gap`, la disposition multi-colonne utilise une valeur initiale de `1em`.
+## Voir aussi
 
-## Référence
-
-### Propriétés CSS
-
-- {{cssxref("justify-content")}}
-- {{cssxref("align-content")}}
-- {{cssxref("column-gap")}}
-
-### Termes du glossaire
-
-- [Sujet d'alignement](/fr/docs/Glossary/Alignment_Subject)
-- [Conteneur d'alignement](/fr/docs/Glossary/Alignment_Container)
-- [Alignement de recours](/fr/docs/Glossary/Fallback_Alignment)
+- Le module [d'alignement de boîte CSS](/fr/docs/Web/CSS/Guides/Box_alignment)
+- [Aperçu de l'alignement de boîte](/fr/docs/Web/CSS/Guides/Box_alignment/Overview)
+- [Alignement de boîte dans des boîtes flexibles](/fr/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
+- [Alignement de boîte dans une disposition en grille](/fr/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [Alignement de boîte pour les dispositions en bloc, positionnées en absolu et les tableaux](/fr/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables)

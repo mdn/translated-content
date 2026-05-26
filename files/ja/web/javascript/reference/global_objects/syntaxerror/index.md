@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 
 ## コンストラクター
 
-- {{jsxref("Global_Objects/SyntaxError/SyntaxError", "SyntaxError()")}}
+- {{jsxref("SyntaxError.SyntaxError", "SyntaxError()")}}
   - : 新しい `SyntaxError` オブジェクトを生成します。
 
 ## インスタンスプロパティ

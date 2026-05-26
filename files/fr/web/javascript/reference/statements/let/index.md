@@ -38,11 +38,11 @@ let var1 [= valeur1] [, var2 [= valeur2]] [, …, varN [= valeurN]];
 
 ## Description
 
-`let` permet de déclarer des variables dont la portée est limitée à celle du [bloc](/fr/docs/Web/JavaScript/Reference/Statements/block) dans lequel elles sont déclarées. Le mot-clé {{jsxref("Instructions/var","var")}}, quant à lui, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
+`let` permet de déclarer des variables dont la portée est limitée à celle du [bloc](/fr/docs/Web/JavaScript/Reference/Statements/block) dans lequel elles sont déclarées. Le mot-clé {{jsxref("Statements/var","var")}}, quant à lui, permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
 
 Une autre différence entre `let` et `var` est la façon dont la variable est initialisée : pour `let`, la variable est initialisée à l'endroit où le parseur évalue son contenu (cf. ci-après).
 
-À l'instar de {{jsxref("instructions/const", "const")}}, `let` ne crée pas de propriété sur l'objet {{domxref("window")}} quand les variables sont déclarées au niveau global.
+À l'instar de {{jsxref("Statements/const", "const")}}, `let` ne crée pas de propriété sur l'objet {{domxref("window")}} quand les variables sont déclarées au niveau global.
 
 L'origine du nom `let` est décrite [dans cette réponse (en anglais)](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
@@ -109,7 +109,7 @@ for (var i = 1; i <= 5; i++) {
 }
 ```
 
-Dans l'exemple précédent, cela fonctionne comme on l'attend car les cinq instances de la fonction anonyme sont liées à cinq instances différentes de `i`. Si on remplace `let` par {{jsxref("Instructions/var","var")}}, on n'obtiendra pas l'effet escompté car on aura une même variable pour cette portée `i=6` (au lieu de 5 différentes).
+Dans l'exemple précédent, cela fonctionne comme on l'attend car les cinq instances de la fonction anonyme sont liées à cinq instances différentes de `i`. Si on remplace `let` par {{jsxref("Statements/var","var")}}, on n'obtiendra pas l'effet escompté car on aura une même variable pour cette portée `i=6` (au lieu de 5 différentes).
 
 #### Règles de portées
 
@@ -213,7 +213,7 @@ function faire_quelque_chose() {
 }
 ```
 
-Il est possible d'obtenir des erreurs au sein de l'instruction {{jsxref("Instructions/switch")}}. En effet, il y a un seul bloc implicite pour cette instruction.
+Il est possible d'obtenir des erreurs au sein de l'instruction {{jsxref("Statements/switch")}}. En effet, il y a un seul bloc implicite pour cette instruction.
 
 ```js example-bad
 switch (x) {
@@ -374,8 +374,8 @@ console.log(i); // i n'est pas défini
 
 ## Voir aussi
 
-- {{jsxref("Instructions/var","var")}}
-- {{jsxref("Instructions/const","const")}}
+- {{jsxref("Statements/var","var")}}
+- {{jsxref("Statements/const","const")}}
 - [ES6 en détails : `let` et `const`](https://tech.mozfr.org/post/2015/08/06/ES6-en-details-%3A-let-et-const)
 - [Changements liés à `let` et `const` dans Firefox 44 (en anglais)](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
 - [Le chapitre de _You Don't Know JS_ sur la portée des fonctions et des blocs](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md) (en anglais)

@@ -97,5 +97,5 @@ console.log(monObj + 3); // 7 car l'opération a implicitement utilisé valueOf
 ## Voir aussi
 
 - {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("parseInt", "parseInt()")}}
+- {{jsxref("parseInt()")}}
 - {{jsxref("Symbol.toPrimitive")}}

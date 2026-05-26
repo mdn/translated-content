@@ -10,7 +10,7 @@ l10n:
 
 **`deviceorientation`** イベントは、端末の現在の向きを地球座標フレームと比較した場合に、方角センサーから最新のデータが得られた場合に発生します。このデータは端末内部の方位磁針から収集されます。
 
-詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
+詳しくは[方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -79,4 +79,4 @@ const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
 
 - [`devicemotion`](/ja/docs/Web/API/Window/devicemotion_event)
 - [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [方向と動きのデータの解説](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

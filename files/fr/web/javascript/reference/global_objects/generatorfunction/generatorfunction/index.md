@@ -39,7 +39,7 @@ GeneratorFunction(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > [!NOTE]
-> `GeneratorFunction()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `GeneratorFunction`.
+> `GeneratorFunction()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `GeneratorFunction`.
 
 ### Paramètres
 

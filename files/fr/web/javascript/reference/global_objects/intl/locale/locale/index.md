@@ -35,7 +35,7 @@ new Intl.Locale(tag, options)
 ```
 
 > [!NOTE]
-> `Intl.Locale()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> `Intl.Locale()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

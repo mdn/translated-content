@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ko/docs/Learn/Common_questions")}}
 
 이 문서에서는 URL(Uniform Resource Locator)이 무엇이며 어떻게 구성되어 있는지 설명합니다.
 

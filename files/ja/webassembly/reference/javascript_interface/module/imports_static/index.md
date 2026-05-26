@@ -17,7 +17,7 @@ WebAssembly.Module.imports(module);
 ### 引数
 
 - _module_
-  - : {{jsxref("WebAssembly.Module")}} オブジェクトです。
+  - : [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトです。
 
 ### 返値
 
@@ -25,7 +25,7 @@ WebAssembly.Module.imports(module);
 
 ### 例外
 
-module が {{jsxref("WebAssembly.Module")}} オブジェクトインスタンスでなかった場合は、 {{jsxref("TypeError")}} が発生します。
+module が [`WebAssembly.Module`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Module) オブジェクトインスタンスでなかった場合は、 {{jsxref("TypeError")}} が発生します。
 
 ## 例
 

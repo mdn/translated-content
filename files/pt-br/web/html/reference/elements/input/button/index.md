@@ -57,7 +57,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Um {{domxref("DOMString")}} usado como uma etiqueta de botão.
+        Um {{jsxref("String")}} usado como uma etiqueta de botão.
       </td>
     </tr>
     <tr>
@@ -84,7 +84,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
 
 ## Value
 
-Seu atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) de um elemento `<input type="button">` contém uma {{domxref("DOMString")}} que é usado como uma etiqueta (label) de um botão
+Seu atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value) de um elemento `<input type="button">` contém uma {{jsxref("String")}} que é usado como uma etiqueta (label) de um botão
 
 ```html
 <input type="button" value="Click Me" />

@@ -5,13 +5,13 @@ slug: Web/API/URL/username
 
 {{ApiRef("URL API")}}
 
-A propriedade **`username`** da interface {{domxref("URL")}} é uma {{domxref("USVString")}} contendo o nome de usuário especificado antes do nome do domínio.
+A propriedade **`username`** da interface {{domxref("URL")}} é uma {{jsxref("String")}} contendo o nome de usuário especificado antes do nome do domínio.
 
 {{AvailableInWorkers}}
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 
