@@ -1,8 +1,9 @@
 ---
 title: Intl.NumberFormat() コンストラクター
+short-title: Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 l10n:
-  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
+  sourceCommit: 06e6e54baef7032c4e81ca93291fde0a0585de8b
 ---
 
 **`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の書式化ができる {{jsxref("Intl.NumberFormat")}} オブジェクトを生成します。
@@ -54,7 +55,7 @@ Intl.NumberFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または {{jsxref("Intl.Locale")}} インスタンス、またはそのようなロケール識別子の配列です。 `undefined` が渡された場合、または指定されたロケール識別子が対応していない場合は、実行時の既定のロケールが使用されます。 `locales` 引数の一般的な形式および解釈については、[`Intl` メインページにある引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument)を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}または {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。`undefined` が渡された場合、または指定されたロケール識別子のいずれも対応していない場合は、ランタイムのデフォルトのロケールが使用されます。`locales` 引数の一般的な形と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 
     次の Unicode 拡張キーが許可されています。
     - `nu`
@@ -72,7 +73,7 @@ Intl.NumberFormat(locales, options)
     このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
 
 - `numberingSystem`
-  - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hans"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
+  - : 数値の書式化に使用する記数法。たとえば、`"arab"`、`"hans"`、`"mathsans"`などが使用されます。対応している記数法の種類の一覧については、 [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している記数法) を参照してください。デフォルト値はロケールによります。このオプションは、Unicode 拡張キー `nu` を使用して設定することもできます。両方が指定されている場合、この `options` プロパティが優先されます。
 
 #### スタイルオプション
 
@@ -104,7 +105,7 @@ Intl.NumberFormat(locales, options)
 - `currencySign`
   - : 多くのロケールでは、会計の書式はマイナス記号を追加する代わりに数値を括弧で囲みます。指定可能な値は `"standard"` と `"accounting"` です。既定値は `"standard"` です。
 - `unit`
-  - : `unit` の書式化で使用する単位で、使用可能な値は [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している単位識別子) に書かれています。一組の単純な単位を "-per-" で結合し、複合単位を作り出すことができます。既定値はありません。 `style` が `"unit"` である場合、 `unit` プロパティを指定する必要があります。
+  - : `unit` の書式化で使用する単位です。使用可能な値は [`Intl.supportedValuesOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#対応している単位識別子) に書かれています。一組の単純な単位を "-per-" で結合し、複合単位を作り出すことができます。既定値はありません。 `style` が `"unit"` である場合、 `unit` プロパティを指定する必要があります。
 - `unitDisplay`
   - : `unit` の書式化で使用する単位の書式化スタイルです。利用可能な値は次の通りです。
     - `"short"` （既定値）
