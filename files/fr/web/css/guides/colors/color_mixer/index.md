@@ -888,4 +888,4 @@ init();
 - Le type de donnée {{CSSxRef("&lt;color&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;color-interpolation-method&gt;")}}
 - Le type de donnée {{CSSxRef("&lt;hue&gt;")}}
-- [Couleurs relatives CSS](/fr/docs/Web/CSS/Guides/Colors/Relative_colors)
+- [Couleurs relatives CSS](/fr/docs/Web/CSS/Guides/Colors/Using_relative_colors)
