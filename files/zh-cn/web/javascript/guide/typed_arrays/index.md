@@ -277,7 +277,7 @@ const typedArray = new Uint8Array([1, 2, 3, 4]);
 const normalArray = Array.from(typedArray);
 ```
 
-也可以使用{{jsxref("operators/spread_syntax", "展开语法", "", 1)}}。
+也可以使用{{jsxref("Operators/Spread_syntax", "展开语法", "", 1)}}。
 
 ```js
 const typedArray = new Uint8Array([1, 2, 3, 4]);

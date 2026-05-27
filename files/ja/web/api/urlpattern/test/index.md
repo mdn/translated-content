@@ -37,7 +37,7 @@ test(url, baseURL)
 
 ### 返値
 
-論理値 ({{jsxref("boolean")}}) です。
+論理値 ({{jsxref("Boolean")}}) です。
 
 ### 例外
 

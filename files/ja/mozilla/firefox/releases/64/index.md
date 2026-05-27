@@ -57,7 +57,7 @@ _変更なし。_
 
 - {{jsxref("JSON.stringify")}} が正しくない Unicode 文字列を返すのを避けるため、TC39 [Well-formed JSON.stringify](https://github.com/tc39/proposal-well-formed-stringify) 提案を実装しました ([Firefox バグ 1469021](https://bugzil.la/1469021))。
 - Proxy 化した関数を {{jsxref("Function.prototype.toString")}}`.call()` に渡すことが可能になりました ([Firefox バグ 1440468](https://bugzil.la/1440468))。
-- {{jsxref("WebAssembly.Global")}} コンストラクターで、何も値を指定しない場合に型付きの値 0 を使用するようになりました。これは [`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue) で示されています ([Firefox バグ 1490286](https://bugzil.la/1490286))。
+- [`WebAssembly.Global`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターで、何も値を指定しない場合に型付きの値 0 を使用するようになりました。これは [`DefaultValue` アルゴリズム](https://webassembly.github.io/spec/js-api/#defaultvalue) で示されています ([Firefox バグ 1490286](https://bugzil.la/1490286))。
 
 ### API
 

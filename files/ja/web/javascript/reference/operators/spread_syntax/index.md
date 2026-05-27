@@ -98,7 +98,7 @@ myFunction(-1, ...args, 2, ...[3]);
 
 #### new 演算子の適用
 
-コンストラクターを {{jsxref("Operators/new", "new")}} で呼び出す場合、配列を**直接**使用して `apply()` を実行することはできません。なぜなら、`apply()` は対象関数を構築するのではなく呼び出すためです。つまり、[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) は `undefined` になります。しかし、配列は `new` を使用すると、スプレッド構文のおかげで簡単に使用することができます。
+コンストラクターを {{jsxref("new")}} で呼び出す場合、配列を**直接**使用して `apply()` を実行することはできません。なぜなら、`apply()` は対象関数を構築するのではなく呼び出すためです。つまり、[`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) は `undefined` になります。しかし、配列は `new` を使用すると、スプレッド構文のおかげで簡単に使用することができます。
 
 ```js
 const dateFields = [1970, 0, 1]; // 1 Jan 1970

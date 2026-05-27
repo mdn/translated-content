@@ -43,14 +43,14 @@ new Intl.ListFormat(locales, options);
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
+  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
         - "`best fit`" （既定値）
         - "`lookup`"
-          このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
+          このオプションについての詳細は、 {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
     - `type`
       - : グループ化の種類を示します。取りうる値は以下の通りです。
         - "`conjunction`" - リスト項目の "and" ベースのグループ化: "A, B, and C" （既定値）
@@ -173,4 +173,4 @@ console.log(
 ## 関連情報
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

@@ -40,7 +40,7 @@ var foo = true; // foo 目前是布林值
 
 ### Null 型別
 
-Null 型別只有一個值：`null`。請參見 {{jsxref("null")}} 與 {{Glossary("Null")}}。
+Null 型別只有一個值：`null`。請參見 {{jsxref("Operators/null", "null")}} 與 {{Glossary("Null")}}。
 
 ### 未定義型別
 
@@ -65,7 +65,7 @@ Although a number often represents only its value, JavaScript provides [some bin
 
 ### 字串型別
 
-JavaScript 的 {{jsxref("Global_Objects/String", "字串")}}型別用來代表文字資料。它是一組 16 位的未宣告「元素」值。每個字串的元素，在字串內皆佔有一位。第一個元素位於索引的第 0 位，下一個元素位於第 1 位，並依此類推。字串的長度，是指該字串有多少元素。
+JavaScript 的 {{jsxref("String", "字串")}}型別用來代表文字資料。它是一組 16 位的未宣告「元素」值。每個字串的元素，在字串內皆佔有一位。第一個元素位於索引的第 0 位，下一個元素位於第 1 位，並依此類推。字串的長度，是指該字串有多少元素。
 
 與 C 這類的語言不同，JavaScript 字串是不變的，意思是說當字串被創造出來以後，你不可能修改它。不過，可以基於操作原來的字串，來產生新的字串。例如：
 
