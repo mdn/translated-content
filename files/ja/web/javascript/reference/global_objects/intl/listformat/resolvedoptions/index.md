@@ -1,49 +1,49 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
+short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
-
-**`Intl.ListFormat.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
+**`resolvedOptions()`** は {{jsxref("Intl.ListFormat")}} インスタンスのメソッドで、現在の `ListFormat` オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
 {{InteractiveExample("JavaScript デモ: Intl.ListFormat.prototype.resolvedOptions()")}}
 
 ```js interactive-example
-const deListFormatter1 = new Intl.ListFormat("de-DE", { type: "disjunction" });
-const options1 = deListFormatter1.resolvedOptions();
+const deListFormatter = new Intl.ListFormat("de-DE", { type: "disjunction" });
+const options = deListFormatter.resolvedOptions();
 
-console.log(options1.locale);
-// Expected output (Firefox / Safari): "de-DE"
-// Expected output (Chrome): "de"
+console.log(options.locale);
+// 予想される結果: "de-DE"
 
-console.log(options1.style);
+console.log(options.style);
 // 予想される結果: "long"
 
-console.log(options1.type);
+console.log(options.type);
 // 予想される結果: "disjunction"
 ```
 
 ## 構文
 
-```js
-listFormat.resolvedOptions();
+```js-nolint
+resolvedOptions()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
 指定された {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールと整形オプションを反映したプロパティを持つオブジェクトです。
 
-## 解説
-
-`resolvedOptions()` から返されるオブジェクトには、以下のプロパティがあります。
-
 - `locale`
-  - : 実際に使用したロケールの BCP 47 言語タグ。このロケールにつながる入力 BCP 47 言語タグに Unicode 拡張値が要求された場合、要求されたキーと値のペアのうち、このロケールで対応しているものが `locale` に含まれます。
-- `style`
-  - : コンストラクターの `options` 引数の中でこのプロパティに指定された値、または既定値 ("`long`") がです。この値は、"`long`"、"`short`"、"`narrow`" のいずれかです。
+  - : 実際に使用されているロケールの {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}です。これは、[ロケールネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)のプロセスによって決定されます。出力には、Unicode 拡張キーは記載されません。
 - `type`
-  - : コンストラクターの `options` 引数の中でこのプロパティに指定された値、または既定値 ("`conjunction`") がです。この値は、"`conjunction`"、"`disjunction`"、"`unit`" のいずれかです。
+  - : `options` 引数でこのプロパティに指定された値です。値は `"conjunction"`、`"disjunction"`、`"unit"` のいずれかです。デフォルト値は `"conjunction"` です。
+- `style`
+  - : `options` 引数でこのプロパティに指定された値です。必要に応じてデフォルト値が設定されます。値は `"long"`、`"short"`、`"narrow"` のいずれかです。デフォルト値は `"long"` です。
 
 ## 例
 
@@ -55,7 +55,7 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
 console.log(usedOptions.style); // "short"
-console.log(usedOptions.type); // "conjunction" (the default value)
+console.log(usedOptions.type); // "conjunction" （デフォルト値）
 ```
 
 ## 仕様書
