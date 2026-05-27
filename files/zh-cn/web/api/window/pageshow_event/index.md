@@ -30,7 +30,7 @@ slug: Web/API/Window/pageshow_event
 | `type` {{readonlyInline}}       | {{jsxref("String")}}       | The type of event.                                     |
 | `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
 | `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | 表示网页是否是来自缓存。                               |
+| `persisted` {{readonlyInline}}  | {{jsxref("Boolean")}}      | 表示网页是否是来自缓存。                               |
 
 ## 示例
 
