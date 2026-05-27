@@ -2,7 +2,7 @@
 title: min-width
 slug: Web/CSS/Reference/Properties/min-width
 l10n:
-  sourceCommit: 925b2bd8beeae6ce8237863637bcd28ccbb8d47f
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 `min-width` [CSS](/zh-CN/docs/Web/CSS) 属性为给定元素设置最小宽度。它可以阻止 {{cssxref("width")}} 属性的[应用值](/zh-CN/docs/Web/CSS/Guides/Cascade/Property_value_processing#应用值)小于 `min-width` 指定的值。
@@ -76,7 +76,12 @@ min-width: unset;
 - `<percentage>`
   - : 以包含区块的宽度百分比定义 `min-width`。
 - `auto`
-  - : 浏览器将计算并选择指定元素的 `min-width`。
+  - : 默认值。对于指定元素，`auto` 值的具体来源取决于其 `display` 属性。对于块级盒子、行内盒子、行内块以及所有表格布局盒子，`auto` 会解析为 `0`。
+
+    对于 [flex item](/zh-CN/docs/Glossary/Flex_Item) 和 grid item，最小宽度值会按以下优先级确定：首先取指定的建议尺寸（如 `width` 属性的值）；其次取传递尺寸（当元素设置了 `aspect-ratio` 且高度为确定尺寸时，会据此计算）；否则使用 `min-content` 尺寸。
+
+    此外，如果 flex item 或 grid item 是{{glossary("scroll container")}}，或者 grid item 跨越了多个弹性列轨道，则自动最小尺寸为 `0`。
+
 - `max-content` {{ experimental_inline() }}
   - : 固有首选 `min-width`。
 - `min-content` {{ experimental_inline() }}
