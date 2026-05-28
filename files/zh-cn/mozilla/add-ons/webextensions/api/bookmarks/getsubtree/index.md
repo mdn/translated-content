@@ -22,7 +22,7 @@ let gettingSubTree = browser.bookmarks.getSubTree(
 ### 参数
 
 - `id`
-  - : 一个指定要检索的子树根的 ID 的{{jsxref("string", "字符串", "", 1)}}。
+  - : 一个指定要检索的子树根的 ID 的{{jsxref("String", "字符串", "", 1)}}。
 
 ### 返回值
 
