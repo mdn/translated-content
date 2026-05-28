@@ -16,7 +16,7 @@ newDoc = document.implementation.createHTMLDocument(titre);
 ### Paramètres
 
 - _title_ {{optional_inline}} (excepté dans IE)
-  - : C'est une {{domxref("DOMString")}} qui contient le titre à donner au nouveau document HTML.
+  - : C'est une {{jsxref("String")}} qui contient le titre à donner au nouveau document HTML.
 
 ## Exemple
 

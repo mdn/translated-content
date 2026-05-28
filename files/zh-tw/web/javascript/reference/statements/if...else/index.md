@@ -146,4 +146,4 @@ if (x = y) {
 
 - {{jsxref("Statements/block", "block")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/conditional_operator", "conditional operator")}}
+- {{jsxref("Operators/Conditional_operator", "conditional operator")}}

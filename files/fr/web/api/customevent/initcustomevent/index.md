@@ -23,7 +23,7 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 ### Paramètres
 
 - `type`
-  - : est une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom de l'évènement.
+  - : est une {{jsxref("String")}} (_chaîne de caractères_) contenant le nom de l'évènement.
 - _`canBubble`_
   - : est un {{jsxref("Boolean")}} (_booléen_) indiquant si l'événement passe à travers le DOM ou non.
 - `cancelable`

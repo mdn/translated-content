@@ -193,7 +193,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 主要な式
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - [リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#リテラル)
 - {{jsxref("Array", "[]")}}
 - {{jsxref("Operators/Object_initializer", "{}")}}
@@ -210,7 +210,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 - {{jsxref("Operators/Property_accessors", "プロパティアクセサー", "", 1)}}
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Operators/new.target", "new.target")}}
 - {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
@@ -225,7 +225,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 ### 単項演算子
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/void", "void")}}
 - {{jsxref("Operators/typeof", "typeof")}}
 - {{jsxref("Operators/Unary_plus", "+")}}
@@ -249,7 +249,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 - {{jsxref("Operators/Greater_than", "&gt;")}} (大なり)
 - {{jsxref("Operators/Less_than_or_equal", "&lt;=")}}
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - {{jsxref("Operators/in", "in")}}
 
 ### 等価演算子
@@ -330,7 +330,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 [JavaScript のクラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
-- {{jsxref("Classes/Constructor", "constructor")}}
+- {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
 - [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)

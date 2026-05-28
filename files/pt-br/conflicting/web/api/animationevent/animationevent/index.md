@@ -24,7 +24,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 - `typeArg`
 
-  - : Um {{domxref("DOMString")}} identificado com um tipo específico de evento animação que ocorreu. Os seguintes valores são aceitados:
+  - : Um {{jsxref("String")}} identificado com um tipo específico de evento animação que ocorreu. Os seguintes valores são aceitados:
 
     | Valor                | Significado                       |
     | -------------------- | --------------------------------- |
@@ -37,7 +37,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 - `cancelableArg`
   - : Uma {{domxref("Boolean")}} bandeira indicando se o evento associado pode ser evitado (`true`) ou não (`false)`.
 - `animationNameArg`
-  - : Um {{domxref("DOMString")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.
+  - : Um {{jsxref("String")}} contendo o valor do{{cssxref("animation-name")}} propriedade CSS associada com a transição.
 - `elapsedTimeArg`
   - : Um ponto flutuante indicando a quantidade de tempo que a animação esteve rodando, em segundos, com o tempo do evento terminar, excluirá-se o tempo em que a animação esteve em pausa.Para um `"animationstart"` evento, `elapsedTime` é `0.0` a não ser que haja um valor negativo para [`animation-delay`](/pt-BR/docs/Web/CSS/Reference/Properties/animation-delay "The animation-delay CSS property specifies when the animation should start. This lets the animation sequence begin some time after it's applied to an element."), nesse caso o evento irá terminar com `elapsedTime` contendo `(-1 * delay)`.
 

@@ -38,7 +38,7 @@ new Promise(executor)
 ### 引数
 
 - `executor`
-  - : コンストラクターが実行する関数 ({{jsxref("function")}}) です。これは、引数として `resolveFunc` と `rejectFunc` の 2 つの関数を受け取ります。`executor` で発生したエラーはすべてプロミスを拒否させ、返値は無視されます。`executor` の意味づけについては下記で詳しく説明します。
+  - : コンストラクターが実行する関数 ({{jsxref("Operators/function", "function")}}) です。これは、引数として `resolveFunc` と `rejectFunc` の 2 つの関数を受け取ります。`executor` で発生したエラーはすべてプロミスを拒否させ、返値は無視されます。`executor` の意味づけについては下記で詳しく説明します。
 
 ### 返値
 

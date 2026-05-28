@@ -104,5 +104,5 @@ function fillTableWithParameters(tbl) {
 
 - {{domxref("Fetch API", "フェッチ API", "", "nocode")}}
 - CSS {{cssxref("url_value")}} 型
-- {{jsxref("encodeURI", "encodeURI()")}}
-- {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

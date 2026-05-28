@@ -21,7 +21,7 @@ formData.has(name);
 ### Paramètres
 
 - `name`
-  - : Un {{domxref("USVString")}} représentant le nom de la clé que vous voulez tester.
+  - : Un {{jsxref("String")}} représentant le nom de la clé que vous voulez tester.
 
 ### Retours
 

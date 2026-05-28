@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 
 Le symbole connu **`Symbol.replace`** définit la méthode utilisée pour remplacer les correspondances trouvées dans une chaîne de caractères. Cette fonction est appelée par la méthode {{jsxref("String.prototype.replace()")}}.
 
-Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} et {{jsxref("String.prototype.replace()")}}.
+Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}} et {{jsxref("String.prototype.replace()")}}.
 
 {{InteractiveExample("JavaScript Demo: Symbol.replace")}}
 
@@ -40,4 +40,4 @@ console.log("foo".replace(new Replace1("bar")));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp/Symbol.replace", "RegExp.prototype[@@replace]()")}}

@@ -32,7 +32,7 @@ new Intl.Segmenter(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.Segmenter()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
+> `Intl.Segmenter()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` génère une {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

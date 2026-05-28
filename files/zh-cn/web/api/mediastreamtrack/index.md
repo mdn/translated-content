@@ -14,11 +14,11 @@ slug: Web/API/MediaStreamTrack
 - {{domxref("MediaStreamTrack.enabled")}}
   - : 布尔值，为 true 时表示轨道有效，并且可以被渲染。为 false 时表示轨道失效，只能被渲染为静音或黑屏。如果该轨道连接中断，该值还是可以被改变但不会有任何效果了。
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
-  - : 返回一个由浏览器产生的{{domxref("DOMString")}}类型的 GUID 值，作为这个轨道的唯一标识值。
+  - : 返回一个由浏览器产生的{{jsxref("String")}}类型的 GUID 值，作为这个轨道的唯一标识值。
 - {{domxref("MediaStreamTrack.kind")}} {{readonlyInline}}
-  - : 返回一个{{domxref("DOMString")}}类型的值。如果为“audio”表示轨道为音频轨道，为“video”则为视频轨道。如果该轨道从它的源上分离，这个值也不会改变。
+  - : 返回一个{{jsxref("String")}}类型的值。如果为“audio”表示轨道为音频轨道，为“video”则为视频轨道。如果该轨道从它的源上分离，这个值也不会改变。
 - {{domxref("MediaStreamTrack.label")}} {{readonlyInline}}
-  - : 返回一个{{domxref("DOMString")}}类型。内容为一个用户代理指定的标签，来标识该轨道的来源，比如“internal microphone”。该字符串可以为空，并且在没有源与这个轨道连接的情况下会一直为空。当该轨道从它的源上分离时，这个值也不会改变。
+  - : 返回一个{{jsxref("String")}}类型。内容为一个用户代理指定的标签，来标识该轨道的来源，比如“internal microphone”。该字符串可以为空，并且在没有源与这个轨道连接的情况下会一直为空。当该轨道从它的源上分离时，这个值也不会改变。
 - {{domxref("MediaStreamTrack.muted")}} {{readonlyInline}}
   - : 返回一个布尔类型的值，为 true 时表示轨道是静音，其他为 false。
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}

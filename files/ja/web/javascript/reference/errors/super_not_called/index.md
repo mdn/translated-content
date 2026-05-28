@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-JavaScript の例外 "must call super constructor before using 'this' in derived class constructor" は、派生クラスのコンストラクターで {{jsxref("Operators/super", "super()")}} を呼び出していない状態で、{{jsxref("Operators/this", "this")}} の値にアクセスしようとした場合や、派生コンストラクターがすでに終了しており、その戻り値がオブジェクトでない場合に発生します。
+JavaScript の例外 "must call super constructor before using 'this' in derived class constructor" は、派生クラスのコンストラクターで {{jsxref("Operators/super", "super()")}} を呼び出していない状態で、{{jsxref("this")}} の値にアクセスしようとした場合や、派生コンストラクターがすでに終了しており、その戻り値がオブジェクトでない場合に発生します。
 
 ## エラーメッセージ
 

@@ -5,7 +5,7 @@ slug: Web/API/URL/search
 
 {{ApiRef("URL API")}}
 
-A propriedade **`search`** da interface {{domxref("URL")}} é uma string de pesquisa, também chamada de _query string_, ela é uma {{domxref("USVString")}} contendo uma `'?'` seguido pelos parâmetros da URL.
+A propriedade **`search`** da interface {{domxref("URL")}} é uma string de pesquisa, também chamada de _query string_, ela é uma {{jsxref("String")}} contendo uma `'?'` seguido pelos parâmetros da URL.
 
 Navegadores modernos fornecem a propriedade {{domxref("URL.searchParams")}} para facilitar a análise de parâmetros da query string.
 
@@ -13,7 +13,7 @@ Navegadores modernos fornecem a propriedade {{domxref("URL.searchParams")}} para
 
 ## Valor
 
-Uma {{domxref("USVString")}}.
+Uma {{jsxref("String")}}.
 
 ## Exemplos
 

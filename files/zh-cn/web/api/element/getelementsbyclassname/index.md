@@ -39,7 +39,7 @@ element.getElementsByClassName("red test");
 document.getElementById("main").getElementsByClassName("test");
 ```
 
-可以在任何 {{domxref("HTMLCollection")}} 上面使用 {{jsxref("Array.prototype")}} 的方法，要把 `HTMLCollection` 作为该方法的上下文对象（this）。下例，查找类名为 `test` 的元素中的所有 {{HTMLElement("div")}} 元素：
+可以在任何 {{domxref("HTMLCollection")}} 上面使用 {{jsxref("Array")}} 的方法，要把 `HTMLCollection` 作为该方法的上下文对象（this）。下例，查找类名为 `test` 的元素中的所有 {{HTMLElement("div")}} 元素：
 
 ```js
 var testElements = document.getElementsByClassName("test");

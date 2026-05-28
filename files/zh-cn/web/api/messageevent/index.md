@@ -31,11 +31,11 @@ slug: Web/API/MessageEvent
 _继承其父类 {{domxref("Event")}} 的属性。_
 
 - {{domxref("MessageEvent.data")}} {{ReadonlyInline}}
-  - : 返回 {{domxref("DOMString")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。
+  - : 返回 {{jsxref("String")}}, {{domxref("Blob")}} 或者 {{domxref("ArrayBuffer")}}，包含来自发送者的数据。
 - {{domxref("MessageEvent.origin")}}
-  - : 返回一个表示消息发送者来源的{{domxref("USVString")}}
+  - : 返回一个表示消息发送者来源的{{jsxref("String")}}
 - {{domxref("MessageEvent.lastEventId")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}} representing a unique ID for the event.
+  - : {{jsxref("String")}} representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}}
   - : `MessageEventSource` (可以是 {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, 或 {{domxref("ServiceWorker")}} 对象) 代表消息发送者。
 - {{domxref("MessageEvent.ports")}}

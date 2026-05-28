@@ -5,7 +5,7 @@ slug: Web/API/Response/text
 
 {{APIRef("Fetch")}}
 
-{{domxref("Response")}} mixin 的 **`text()`** 方法提供了一个可供读取的“返回流”（{{domxref("Response")}} stream），并将它读取完。它返回一个包含 {{domxref("USVString")}} 对象（也就是文本）的 Promise 对象，返回结果的编码*永远是* UTF-8。
+{{domxref("Response")}} mixin 的 **`text()`** 方法提供了一个可供读取的“返回流”（{{domxref("Response")}} stream），并将它读取完。它返回一个包含 {{jsxref("String")}} 对象（也就是文本）的 Promise 对象，返回结果的编码*永远是* UTF-8。
 
 ## 语法
 
@@ -21,13 +21,13 @@ response.text().then(function (text) {
 
 ### 返回值
 
-A promise that resolves with a {{domxref("USVString")}}.
+A promise that resolves with a {{jsxref("String")}}.
 
 ## 示例
 
 在我们 [fetch text example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-text) (运行 [fetch text live](https://mdn.github.io/fetch-examples/fetch-text/)) 的案例中，我们有一个 {{htmlelement("article")}} 元素和三个链接（储存在 `myLinks` 数组中），首先，遍历 `myLinks` 数组，并且给数组中的所有元素添加 `onclick` 事件监听器，当按钮被点击的时候，链接的 `data-page` 标识作为会参数传入 `getData()` 中。
 
-当进入 `getData()` 函数，我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建了一个请求（Request）对象，然后，使用它获取指定的`.txt`的文件，当 fetch 函数执行成功，我们使用 `text()` 函数来返回一个{{jsxref("USVString")}} (text) 对象，将它设置到 {{htmlelement("article")}} 对象的{{domxref("Element.innerHTML","innerHTML")}}（元素文本）中。
+当进入 `getData()` 函数，我们使用 {{domxref("Request.Request","Request()")}} 构造函数创建了一个请求（Request）对象，然后，使用它获取指定的`.txt`的文件，当 fetch 函数执行成功，我们使用 `text()` 函数来返回一个{{domxref("String")}}（text）对象，将它设置到 {{htmlelement("article")}} 对象的{{domxref("Element.innerHTML","innerHTML")}}（元素文本）中。
 
 ```js
 const myArticle = document.querySelector("article");

@@ -18,7 +18,7 @@ storage.removeItem(nomCle);
 ### Paramètres
 
 - `nomCle`
-  - : Un {{domxref("DOMString")}} contenant le nom de la clé que vous voulez supprimer.
+  - : Un {{jsxref("String")}} contenant le nom de la clé que vous voulez supprimer.
 
 ### Valeur de retour
 
