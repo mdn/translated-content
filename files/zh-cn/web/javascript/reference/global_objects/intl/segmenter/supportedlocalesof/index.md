@@ -8,7 +8,7 @@ l10n:
 
 **`Intl.Segmenter.supportedLocalesOf()`** 静态方法返回一个数组，其中包含在分割操作中受支持的、无需回退到运行时默认区域设置的区域设置。
 
-{{InteractiveExample("JavaScript演示：Intl.Segmenter.supportedLocalesOf()", "shorter")}}
+{{InteractiveExample("JavaScript 演示：Intl.Segmenter.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];
