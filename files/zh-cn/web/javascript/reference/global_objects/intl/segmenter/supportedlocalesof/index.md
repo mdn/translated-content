@@ -6,9 +6,9 @@ l10n:
   sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-**`Intl.Segmenter.supportedLocalesOf()`** 静态方法返回一个数组，其中包含在分割操作中受支持的、且无需回退到运行时默认区域设置的指定区域设置。
+**`Intl.Segmenter.supportedLocalesOf()`** 静态方法返回一个数组，其中包含在分割操作中受支持的、无需回退到运行时默认区域设置的区域设置。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.supportedLocalesOf()", "shorter")}}
+{{InteractiveExample("JavaScript演示：Intl.Segmenter.supportedLocalesOf()", "shorter")}}
 
 ```js interactive-example
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];
@@ -33,7 +33,7 @@ Intl.Segmenter.supportedLocalesOf(locales, options)
 - `options` {{optional_inline}}
   - : 一个可能具有以下属性的对象：
     - `localeMatcher`
-      - : 要使用的语言环境匹配算法。可选的值为 `"lookup"` 和 `"best fit"`；默认值为 `"best fit"`。关于此选项的更多信息，参见 {{jsxref("Intl", "Intl", "#语言区域识别和判定", 1)}} 页面。
+      - : 要使用的区域设置匹配算法。可选的值为 `"lookup"` 和 `"best fit"`；默认值为 `"best fit"`。关于此选项的更多信息，参见 {{jsxref("Intl", "Intl", "#语言区域识别和判定", 1)}} 页面。
 
 ### 返回值
 

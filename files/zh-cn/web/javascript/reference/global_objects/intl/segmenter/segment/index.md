@@ -6,9 +6,9 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Intl.Segmenter")}} 实例的 **`segment()`** 方法根据此 `Intl.Segmenter` 对象的语言环境和粒度对字符串进行分割。
+{{jsxref("Intl.Segmenter")}} 实例的 **`segment()`** 方法根据当前 `Intl.Segmenter` 对象的区域设置和粒度对字符串进行分割。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter.prototype.segment()")}}
+{{InteractiveExample("JavaScript 演示：Intl.Segmenter.prototype.segment()")}}
 
 ```js interactive-example
 const string1 = "Que ma joie demeure";
@@ -36,7 +36,7 @@ segment(input)
 
 ### 返回值
 
-一个新的可迭代的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象，其中包含根据当前分割器的语言环境和粒度对输入字符串分割后生成的片段。
+一个新的可迭代的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 对象，其中包含根据当前分割器的区域设置和粒度对输入字符串分割后生成的片段。
 
 ## 示例
 
@@ -51,24 +51,24 @@ const segments = segmenter.segment(input);
 // 使用迭代器进行分割
 for (const { segment, index, isWordLike } of segments) {
   console.log(
-    "segment at code units [%d, %d]: «%s»%s",
+    "对码元进行分割 [%d, %d]：«%s»%s",
     index,
     index + segment.length,
     segment,
     isWordLike ? " (word-like)" : "",
   );
 }
-// segment at code units [0, 3]: «Moi» (word-like)
-// segment at code units [3, 4]: « »
-// segment at code units [4, 5]: «?»
-// segment at code units [5, 6]: « »
-// segment at code units [6, 11]: «N'est» (word-like)
-// segment at code units [11, 12]: «-»
-// segment at code units [12, 14]: «ce» (word-like)
-// segment at code units [14, 15]: « »
-// segment at code units [15, 18]: «pas» (word-like)
-// segment at code units [18, 19]: « »
-// segment at code units [19, 20]: «?»
+// 对码元进行分割 [0, 3]:«Moi»（类似单词）
+// 对码元进行分割 [3, 4]：« »
+// 对码元进行分割 [4, 5]：«?»
+// 对码元进行分割 [5, 6]：« »
+// 对码元进行分割 [6, 11]：«N'est»（类似单词）
+// 对码元进行分割 [11, 12]：«-»
+// 对码元进行分割 [12, 14]：«ce»（类似单词）
+// 对码元进行分割 [14, 15]：« »
+// 对码元进行分割 [15, 18]：«pas»（类似单词）
+// 对码元进行分割 [18, 19]：« »
+// 对码元进行分割 [19, 20]：«?»
 ```
 
 ## 规范

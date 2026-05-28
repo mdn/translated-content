@@ -6,9 +6,9 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-[`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许 `Segments` 对象被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个[片段迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会生成有关每个片段的数据。
+[`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例的 **`[Symbol.iterator]()`** 方法实现了[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)，允许 `Segments` 对象被大多数期望可迭代对象的语法所使用，例如[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)和 {{jsxref("Statements/for...of", "for...of")}} 循环。它返回一个会生成有关每个片段的数据的[片段迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript 演示：Segments.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
@@ -37,13 +37,13 @@ segments[Symbol.iterator]()
 
 ### 返回值
 
-一个新的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)，该对象会生成有关每个片段的数据。每个生成的对象与 [`containing()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) 方法返回的对象具有相同的属性。
+一个新的会生成有关每个片段数据的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)。每个生成的对象与 [`containing()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing) 方法返回的对象具有相同的属性。
 
 ## 示例
 
 ### 使用 for...of 循环进行迭代
 
-请注意，你很少需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使得 `Segments` 对象成为[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的，而像 `for...of` 循环这样的迭代语法会自动调用此方法来获取用于循环的迭代器。
+请注意，你很少需要直接调用此方法。`[Symbol.iterator]()` 方法的存在使得 `Segments` 对象是[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的，而像 `for...of` 循环这样的迭代语法会自动调用此方法来获取用于循环的迭代器。
 
 ```js
 const segmenter = new Intl.Segmenter("zh-CN", { granularity: "word" });

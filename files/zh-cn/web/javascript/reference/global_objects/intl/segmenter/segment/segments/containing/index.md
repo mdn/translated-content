@@ -6,9 +6,9 @@ l10n:
   sourceCommit: cd22b9f18cf2450c0cc488379b8b780f0f343397
 ---
 
-[`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例的 **`containing()`** 方法返回一个对象，描述字符串中包含指定索引处的代码单元的片段。
+[`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例的 **`containing()`** 方法返回一个描述字符串中包含指定索引处的码元片段的对象。
 
-{{InteractiveExample("JavaScript Demo: Segments.prototype.containing()")}}
+{{InteractiveExample("JavaScript 演示：Segments.prototype.containing()")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
@@ -34,7 +34,7 @@ containing(codeUnitIndex)
 
 ### 返回值
 
-一个描述原始字符串片段的对象，具有以下属性；如果提供的索引值超出范围，则返回 `undefined`。
+一个（具有以下属性的）描述原始字符串片段的对象，如果提供的索引值超出范围则返回 `undefined`。
 
 - `segment`
   - : 包含从原始输入字符串中提取的片段的字符串。

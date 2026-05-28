@@ -10,7 +10,7 @@ l10n:
 ## 实例方法
 
 - [`Segments.prototype.containing()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing)
-  - : 返回一个对象，描述原始字符串中包含指定索引处的代码单元的片段。
+  - : 返回一个描述原始字符串中包含指定索引处的代码单元的片段的对象。
 - [`Segments.prototype[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator)
   - : 返回一个用于迭代片段的迭代器。
 
