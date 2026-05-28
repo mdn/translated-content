@@ -72,7 +72,7 @@ l10n:
 
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-Comenza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando que hace.
+Comienza el contenido de la página con un párrafo introductorio — empieza nombrando el elemento y explicando qué hace.
 Lo ideal sería que sea de una o dos oraciones cortas.
 
 ## Contexto de uso
