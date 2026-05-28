@@ -55,7 +55,7 @@ for (const { segment, index, isWordLike } of segments) {
     index,
     index + segment.length,
     segment,
-    isWordLike ? " (word-like)" : "",
+    isWordLike ? "（类似单词）" : "",
   );
 }
 // 对码元进行分割 [0, 3]:«Moi»（类似单词）
