@@ -84,7 +84,7 @@ try {
 
 ### 处理一个特定错误
 
-你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 JavaScript 引擎时，可使用 {{jsxref("Operators/instanceof", "instanceof")}} 关键字：
+你可以通过判断异常的类型来特定处理某一类的异常，即判断 {{jsxref("Object.prototype.constructor", "constructor")}} 属性，当使用现代 JavaScript 引擎时，可使用 {{jsxref("instanceof")}} 关键字：
 
 ```js
 try {
