@@ -41,7 +41,7 @@ segment(input)
 ## 示例
 
 ```js
-// 创建一个特定语言环境的分词器
+// 创建一个特定区域设置的分词器
 const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 
 // 使用它获取字符串片段的迭代器
