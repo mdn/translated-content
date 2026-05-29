@@ -361,9 +361,9 @@ console.log("hello".toUpperCase()); // HELLO
 
 - 查询：获取特定字符串索引处的字符或字符编码。方法包括 {{jsxref("String/at", "at()")}}、{{jsxref("String/charAt", "charAt()")}}、{{jsxref("String/charCodeAt", "charCodeAt()")}} 和 {{jsxref("String/codePointAt", "codePointAt()")}}。
 - 搜索：获取符合特定模式的子字符串信息，或检测特定子字符串是否存在。方法包括 {{jsxref("String/indexOf", "indexOf()")}}、{{jsxref("String/lastIndexOf", "lastIndexOf()")}}、{{jsxref("String/startsWith", "startsWith()")}}、{{jsxref("String/endsWith", "endsWith()")}}、{{jsxref("String/includes", "includes()")}}、{{jsxref("String/match", "match()")}}、{{jsxref("String/matchAll", "matchAll()")}} 和 {{jsxref("String/search", "search()")}}。
-- 组合：将字符串组合成一个更长的字符串。方法包括  {{jsxref("String/padStart", "padStart()")}}、{{jsxref("String/padEnd", "padEnd()")}}、{{jsxref("String/concat", "concat()")}} 和 {{jsxref("String/repeat", "repeat()")}}。
+- 组合：将字符串组合成一个更长的字符串。方法包括 {{jsxref("String/padStart", "padStart()")}}、{{jsxref("String/padEnd", "padEnd()")}}、{{jsxref("String/concat", "concat()")}} 和 {{jsxref("String/repeat", "repeat()")}}。
 - 分解：将字符串拆分为较短的字符串。方法包括 {{jsxref("String/split", "split()")}}、{{jsxref("String/slice", "slice()")}}、{{jsxref("String/substring", "substring()")}}、{{jsxref("String/substr", "substr()")}}、{{jsxref("String/trim", "trim()")}}、{{jsxref("String/trimStart", "trimStart()")}} 和 {{jsxref("String/trimEnd", "trimEnd()")}}。
-- 转换：根据当前字符串的内容返回一个新字符串。方法包括  {{jsxref("String/toLowerCase", "toLowerCase()")}}、{{jsxref("String/toUpperCase", "toUpperCase()")}}、{{jsxref("String/toLocaleLowerCase", "toLocaleLowerCase()")}}、{{jsxref("String/toLocaleUpperCase", "toLocaleUpperCase()")}}、{{jsxref("String/normalize", "normalize()")}} 和 {{jsxref("String/toWellFormed", "toWellFormed()")}}。
+- 转换：根据当前字符串的内容返回一个新字符串。方法包括 {{jsxref("String/toLowerCase", "toLowerCase()")}}、{{jsxref("String/toUpperCase", "toUpperCase()")}}、{{jsxref("String/toLocaleLowerCase", "toLocaleLowerCase()")}}、{{jsxref("String/toLocaleUpperCase", "toLocaleUpperCase()")}}、{{jsxref("String/normalize", "normalize()")}} 和 {{jsxref("String/toWellFormed", "toWellFormed()")}}。
 
 在处理字符串时，还有另外两个对象提供了重要的字符串操作功能：{{jsxref("RegExp")}} 和 {{jsxref("Intl")}}。它们分别在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)和[国际化](/zh-CN/docs/Web/JavaScript/Guide/Internationalization)中进行了介绍。
 
@@ -402,9 +402,7 @@ console.log(`字符串文本第一行
 ```js
 const five = 5;
 const ten = 10;
-console.log(
-  "十五是 " + (five + ten) + " 而不是 " + (2 * five + ten) + "。",
-);
+console.log("十五是 " + (five + ten) + " 而不是 " + (2 * five + ten) + "。");
 // "十五是 15 而不是 20。"
 ```
 
