@@ -2,8 +2,8 @@
 title: "HTML: Lenguaje de Marcado de Hipertexto"
 short-title: HTML
 slug: Web/HTML
-l10n.sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
-sidebar: htmlsidebar
+l10n:
+  sourceCommit: d1f3f179175c80c18b1b78ba0df0ea7d15ca32cc
 ---
 
 HTML (Lenguaje de Marcado de Hipertexto, del inglés _HyperText Markup Language_) es el componente más básico de la Web. Define el significado y la estructura del contenido web. Además de HTML, normalmente se utilizan otras tecnologías para describir la apariencia o presentación de una página web ([CSS](/es/docs/Web/CSS)) y su funcionalidad o comportamiento ([JavaScript](/es/docs/Web/JavaScript)).
@@ -15,8 +15,6 @@ HTML utiliza "marcado" para etiquetar texto, imágenes y otros contenidos que se
 Un elemento HTML se diferencia del resto del contenido de un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por `<` y `>`. El nombre de un elemento dentro de una etiqueta no distingue entre mayúsculas y minúsculas. Es decir, puede escribirse en mayúsculas, minúsculas o una combinación de ambas. Por ejemplo, la etiqueta `<title>` puede escribirse como `<Title>`, `<TITLE>` o de cualquier otra forma. No obstante, la convención y la práctica recomendada es escribir las etiquetas en minúsculas.
 
 Los siguientes artículos pueden ayudarte a aprender más sobre HTML.
-
----
 
 ## Tutoriales para principiantes
 
@@ -31,8 +29,6 @@ Nuestros módulos principales de aprendizaje de desarrollo web contienen tutoria
 **[Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)**
 : Los formularios son una parte fundamental de la Web: proporcionan gran parte de la funcionalidad necesaria para interactuar con los sitios web, como registrarse, iniciar sesión, enviar comentarios o realizar compras. Este módulo te ayuda a comenzar a crear la parte del cliente (interfaz de usuario) de los formularios.
 
----
-
 ## Guías
 
 Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para la Web. Cubren temas como formularios, CORS, precarga de contenido e imágenes responsivas.
@@ -40,7 +36,7 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 **[Hoja de referencia de HTML para sintaxis y tareas comunes](/es/docs/Web/HTML/Guides/Cheatsheet)**
 : Referencia rápida de la sintaxis y las tareas más habituales en HTML.
 
-**[Uso de comentarios HTML ``](/es/docs/Web/HTML/Guides/Comments)**
+**[Uso de comentarios HTML `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)**
 : Los comentarios HTML se utilizan para añadir notas explicativas al marcado o para evitar que el navegador procese partes específicas del documento.
 
 **[Uso de la validación de formularios HTML y la API de validación de restricciones](/es/docs/Web/HTML/Guides/Constraint_validation)**
@@ -67,8 +63,6 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 **[Tipos y formatos de medios en la Web](/es/docs/Web/Media/Guides/Formats)**
 : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} permiten reproducir contenido multimedia de forma nativa sin necesidad de software adicional.
 
----
-
 ## Cómo...
 
 **[Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)**
@@ -88,8 +82,6 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 
 **[Añadir JavaScript a una página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)**
 : Este artículo explica cómo integrar código JavaScript en un documento HTML.
-
----
 
 ## Referencia
 
@@ -119,8 +111,6 @@ HTML está compuesto por elementos que pueden modificarse mediante atributos. Lo
 
 **[Valores del atributo `rel`](/es/docs/Web/HTML/Reference/Attributes/rel)**
 : Definen la relación entre un recurso enlazado y el documento actual.
-
----
 
 ## Temas relacionados
 
