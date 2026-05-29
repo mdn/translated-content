@@ -299,7 +299,7 @@ const bigintDiv = 5n / 2n; // 2n，BigInt 不存在 2.5
 
 `Math` 函数不能用于 BigInt 值；它们仅适用于数字。
 
-选择 BigInt 还是数字取决于您的具体用例和输入的范围。数字的精度通常已足以满足大多数日常任务的需求，而 BigInt 最适合处理二进制数据。
+选择 BigInt 还是数字取决于具体用例和输入的范围。数字的精度通常已足以满足大多数日常任务的需求，而 BigInt 最适合处理二进制数据。
 
 有关 BigInt 值的更多用法，请参阅[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#bigint_运算符)章节，或 [BigInt 参考文档](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)。
 
