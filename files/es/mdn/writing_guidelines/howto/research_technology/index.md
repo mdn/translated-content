@@ -59,7 +59,7 @@ Es posible que también sea necesario definir o actualizar el menú lateral de l
 
 ### Ejemplos de código
 
-Algunos de los ejemplos de código para MDN Web Docs se guardan en repositorios separados. En particular, estos son los ejemplos interactivos que aparecen en la sección "Pruébalo" en las páginas de referencia y el código de demostración más grande necesario para las guías. Si necesita agregar o modificar uno de estos repositorios, es una buena idea anotarlo en tu lista.
+Algunos de los ejemplos de código para MDN Web Docs se guardan en repositorios separados. En particular, estos son los ejemplos interactivos que aparecen en la sección "Pruébalo" en las páginas de referencia y el código de demostración más grande necesario para las guías. Si necesitas agregar o modificar uno de estos repositorios, es una buena idea anotarlo en tu lista.
 
 Los [ejemplos de código](/es/docs/MDN/Writing_guidelines/Page_structures/Code_examples) describen los diferentes tipos de ejemplos de código que utilizamos en MDN Web Docs.
 
