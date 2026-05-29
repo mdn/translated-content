@@ -107,6 +107,6 @@ Luego puedes ampliarlo con más detalles, agregando cada interfaz y sus miembros
 
 Es una buena idea en este punto crear un [_issue_] de seguimiento (https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto le permite no sólo a vos, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También podes vincular las solicitudes de cambios a este problema para que todos tengan más contexto.
 
-## Crear las paginas
+## Crear las páginas
 
 Ahora crea las páginas que necesites. Para crear una nueva página, consulta las instrucciones en nuestra guía [cómo crear, mover, borrar y editar páginas](/es/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting). Consulta nuestra guía [Tipos de páginas](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types) para ver plantillas de páginas que pueden resultarte útiles.
