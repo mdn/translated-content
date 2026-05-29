@@ -77,7 +77,7 @@ Digamos que estás documentando una nueva API web, su lista inicial de secciones
 8. Ejemplos de código
 9. Menús laterales
 
-Luego puede ampliarlo con más detalles, agregando cada interfaz y sus miembros. Por ejemplo, si estuvieras documentando la API Web Audio, tu lista podría verse más parecida a esta:
+Luego puedes ampliarlo con más detalles, agregando cada interfaz y sus miembros. Por ejemplo, si estuvieras documentando la API Web Audio, tu lista podría verse más parecida a esta:
 
 - Web_Audio_API
 - AudioContext
