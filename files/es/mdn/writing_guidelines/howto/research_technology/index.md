@@ -12,14 +12,14 @@ Este artículo te brinda información útil sobre cómo abordar la documentació
 
 Antes de comenzar a documentar o actualizar algo en MDN Web Docs, hay algunas cosas que debes preparar y planificar antes de comenzar a escribir.
 
-Se supone que antes de leer esta guía usted tiene un conocimiento razonable de:
+Se supone que antes de leer esta guía tienes un conocimiento razonable de:
 
 - Tecnologías web como HTML, CSS y JavaScript.
 - Lectura de especificaciones de tecnología web. Los verás mucho a medida que documentes las API.
 
 Todo lo demás se puede aprender en el camino.
 
-### Consulte los recursos
+### Consulta los recursos
 
 Los recursos útiles para redactar cualquier documentación incluyen:
 
@@ -46,8 +46,8 @@ Además, tenemos una guía sobre [Información contenida en un archivo WebIDL](/
 Escribirás ejemplos de código o crearás demostraciones muchas veces durante el proceso de documentación de una tecnología, pero es muy útil comenzar dedicando tiempo a familiarizarte con cómo funciona la tecnología. Este es un ejercicio realmente valioso porque te brinda una buena comprensión de cuáles son los casos de uso (_por qué_ un desarrollador usaría esta tecnología) y te ayuda a crear algunos ejemplos de código al mismo tiempo.
 
 > [!NOTE]
-> Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrá que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
-> Si necesita ayuda, consulte las demostraciones que haya encontrado o consulte a un contacto de ingeniería.
+> Si la especificación se actualizó recientemente de modo que, digamos, un método ahora se define de manera diferente, pero el método anterior aún funciona en los navegadores, a menudo tendrás que documentar ambos en el mismo lugar para que los métodos antiguos y nuevos estén cubiertos.
+> Si necesitas ayuda, consulta las demostraciones que haya encontrado o consulte a un contacto de ingeniería.
 
 ## Crear la lista de páginas para escribir o actualizar
 
@@ -105,7 +105,7 @@ Luego puedes ampliarlo con más detalles, agregando cada interfaz y sus miembros
 
 ## Crear un _issue_
 
-Es una buena idea en este punto crear un [_issue_ de seguimiento](https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto te permite no solo a ti, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También puedes vincular las solicitudes de cambios a este problema para que todos tengan más contexto.
+Es una buena idea en este punto crear un [issue_ de seguimiento](https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto te permite no solo a ti, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También puedes vincular las solicitudes de cambios a este problema para que todos tengan más contexto.
 
 ## Crear las páginas
 
