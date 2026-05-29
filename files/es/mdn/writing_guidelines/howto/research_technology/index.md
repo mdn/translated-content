@@ -32,7 +32,7 @@ También puede ser aconsejable intentar encontrar a alguien que te ayude a respo
 
 ### Lectura de especificaciones
 
-Esto puede parecer un poco extraño al principio, pero cuanto más lo haces, más te acostumbras. Aquí hay algunos buenos enlaces que le ayudarán a empezar:
+Esto puede parecer un poco extraño al principio, pero cuanto más lo haces, más te acostumbras. Aquí hay algunos buenos enlaces que te ayudarán a empezar:
 
 - [Cómo leer las especificaciones del W3C](https://alistapart.com/article/readspec/) por J. David Eisenberg en A List Apart
 - [Comprensión de las especificaciones CSS](https://www.w3.org/Style/CSS/read) de la w3c
