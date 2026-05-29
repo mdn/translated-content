@@ -12,7 +12,7 @@ l10n:
 ## 指南
 
 - [坐标系](/zh-CN/docs/Web/API/CSSOM_view_API/Coordinate_systems)
-  - : 坐标系常用于指示上下文中位置, 例如显示器的窗口、移动设备上的视口，或打印时纸张上的位置。
+  - : 坐标系常用于指示上下文中位置，例如显示器的窗口、移动设备上的视口，或打印时纸张上的位置。
 - [视口概念](/zh-CN/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
   - : 视口的概念——什么是视口，视口在 CSS、SVG 和移动设备中的影响，以及视觉视口与布局视口之间的区别。
 
