@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/for...in
 
 {{jsSidebar("Statements")}}
 
-La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
+La instrucción {{JSxRef("Statements/for...in", "for-in")}} itera sobre todas las [propiedades enumerables](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
 
 {{InteractiveExample("JavaScript Demo: Statement - For...In")}}
 
@@ -40,7 +40,7 @@ Un bucle `for...in` solo itera sobre propiedades enumerables que no son símbolo
 
 ### Propiedades `deleted`, `added` o `modified`
 
-Un bucle `for...in` itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("Operadores/delete", "delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).
+Un bucle `for...in` itera sobre las propiedades de un objeto en un orden arbitrario (consulta el operador {{JSxRef("delete")}} para obtener más información sobre por qué no puede depender del aparente orden de la iteración, al menos en una configuración entre navegadores).
 
 Si una propiedad se modifica en una iteración y luego se visita en un momento posterior, su valor en el bucle es su valor en ese momento posterior. Una propiedad que se elimina antes de haber sido visitada no se visitará más tarde. Las propiedades agregadas al objeto sobre el que se está produciendo la iteración se pueden visitar u omitir de la iteración.
 
@@ -53,7 +53,7 @@ En general, es mejor no agregar, modificar o eliminar propiedades del objeto dur
 
 Los índices del arreglo son solo propiedades enumerables con nombres enteros y, por lo demás, son idénticos a las propiedades generales del objeto. No hay garantía de que `for...in` devuelva los índices en un orden en particular. La instrucción de bucle `for...in` devolverá todas las propiedades enumerables, incluidas aquellas con nombres no enteros y aquellas que se heredan.
 
-Debido a que el orden de iteración depende de la implementación, es posible que la iteración sobre un arreglo no visite los elementos en un orden coherente. Por lo tanto, es mejor usar un bucle {{JSxRef("Sentencias/for", "for")}} con un índice numérico (o {{JSxRef("Array.prototype.forEach()")}} o el bucle {{JSxRef("Sentencias/for...of", "for...of")}}) cuando se itera sobre arreglos donde el orden de acceso es importante.
+Debido a que el orden de iteración depende de la implementación, es posible que la iteración sobre un arreglo no visite los elementos en un orden coherente. Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} con un índice numérico (o {{JSxRef("Array.prototype.forEach()")}} o el bucle {{JSxRef("Statements/for...of", "for...of")}}) cuando se itera sobre arreglos donde el orden de acceso es importante.
 
 ### Iterar solo sobre propiedades directas
 
@@ -119,11 +119,11 @@ for (const prop in obj) {
 
 ## Ve también
 
-- {{JSxRef("Sentencias/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad `values`
-- {{JSxRef("Sentencias/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
-- {{JSxRef("Sentencias/for", "for")}}
-- {{JSxRef("../Guide/Iterators_and_Generators", "Expresiones generadoras")}} (usa la sintaxis `for...in`)
-- {{JSxRef("../Enumerability_and_ownership_of_properties", "Enumerabilidad y posesión de propiedades")}}
+- {{JSxRef("Statements/for...of", "for...of")}} — una declaración similar que itera sobre la propiedad `values`
+- {{JSxRef("Statements/for_each...in", "for each...in")}} — una declaración similar pero obsoleta que itera sobre los valores de las propiedades de un objeto, en lugar de los nombres de las propiedades en sí
+- {{JSxRef("Statements/for", "for")}}
+- [Expresiones generadoras](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators) (usa la sintaxis `for...in`)
+- [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{JSxRef("Object.getOwnPropertyNames()")}}
 - {{JSxRef("Object.prototype.hasOwnProperty()")}}
 - {{JSxRef("Array.prototype.forEach()")}}
