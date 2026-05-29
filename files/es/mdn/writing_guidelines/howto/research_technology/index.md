@@ -105,7 +105,7 @@ Luego puedes ampliarlo con más detalles, agregando cada interfaz y sus miembros
 
 ## Crear un _issue_
 
-Es una buena idea en este punto crear un [_issue_] de seguimiento (https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto le permite no sólo a vos, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También podes vincular las solicitudes de cambios a este problema para que todos tengan más contexto.
+Es una buena idea en este punto crear un [_issue_ de seguimiento](https://github.com/mdn/content/issues) en el repositorio `mdn/content` o `mdn/translated-content` (para traducir las páginas) con las páginas enumeradas como una lista de tareas pendientes (casilla de verificación). Esto te permite no solo a ti, sino a otras personas que trabajan en la documentación realizar un seguimiento público del estado. También puedes vincular las solicitudes de cambios a este problema para que todos tengan más contexto.
 
 ## Crear las páginas
 
