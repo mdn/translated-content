@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bdb97b3e01499ce52f02caa3f51d6dd245a48782
 ---
 
-Este artículo le brinda información útil sobre cómo abordar la documentación de tecnologías.
+Este artículo te brinda información útil sobre cómo abordar la documentación de tecnologías.
 
 ## Haz el trabajo de preparación
 
