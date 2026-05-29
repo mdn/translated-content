@@ -35,7 +35,7 @@ También puede ser aconsejable intentar encontrar a alguien que te ayude a respo
 Esto puede parecer un poco extraño al principio, pero cuanto más lo haces, más te acostumbras. Aquí hay algunos buenos enlaces que te ayudarán a empezar:
 
 - [Cómo leer las especificaciones del W3C](https://alistapart.com/article/readspec/) por J. David Eisenberg en A List Apart
-- [Comprensión de las especificaciones CSS](https://www.w3.org/Style/CSS/read) de la w3c
+- [Comprensión de las especificaciones CSS](https://www.w3.org/Style/CSS/read) del W3C
 - [Cómo leer las especificaciones web, Parte I – O: WebVR, ¿cómo funciona?](https://surma.dev/things/reading-specs/) explica específicamente la lectura de las especificaciones WebVR, pero es una excelente introducción a leyendo las especificaciones de la API web.
 - [Cómo leer las especificaciones web Parte IIa – O: Símbolos ECMAScript](https://surma.dev/things/reading-specs-2/) la segunda parte del enlace anterior contiene información sobre cómo comprender la especificación ECMAScript que describe JavaScript
 
