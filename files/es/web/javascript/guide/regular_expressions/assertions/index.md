@@ -27,7 +27,7 @@ console.log(text.match(regexpFoxQuality));
 
 ## Tipos
 
-La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Expressions/Hoja_de_referencia", "esta hoja de trucos")}}. No olvides editarla también, ¡gracias!
+La siguiente sección también está duplicada en [esta hoja de trucos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 ### Aserciones de tipo límite
 
@@ -44,7 +44,7 @@ La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Exp
       <td>
        <p>Coincide con el comienzo de la entrada. Si el indicador multilínea se establece en <code>true</code>, también busca inmediatamente después de un caracter de salto de línea. Por ejemplo, <code>/^A/</code> no coincide con la "A" en "alias A", pero coincide con la primera "A" en "Alias A".</p>
        <div class="blockIndicator note">
-       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupo")}}.</p>
+       <p>Este caracter tiene un significado diferente cuando aparece al comienzo de un [grupo](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).</p>
        </div>
       </td>
      </tr>
@@ -65,7 +65,7 @@ La siguiente sección también está duplicada en {{JSxRef("../Guide/Regular_Exp
         <li><code>/una\b/</code> coincide con "una" en "luna", porque "una" es el final de la cadena, por lo tanto no va seguido de un carácter de palabra.</li>
         <li><code>/\w\b\w/</code> nunca encontrará con nada, porque un caracter de palabra nunca puede ir seguido de un caracter que no sea de palabra y otro de palabra.</li>
        </ul>
-       <p>Para hacer coincidir un carácter de retroceso (<code>[\b]</code>), consulta {{JSxRef("../Guide/Regular_Expressions/Clases_de_caracteres", "Clases de caracteres")}}.</p>
+       <p>Para hacer coincidir un carácter de retroceso (<code>[\b]</code>), consulta [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes).</p>
       </td>
      </tr>
      <tr>
@@ -117,7 +117,7 @@ console.log(4, multilineaCorrecta); // corrige  'manzena' pero no toca 'en'.
 
 ### Busca al comienzo de la entrada usando un caracter de control `^`
 
-Usa `^` para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular `/^A/`. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Objetos_globales/Array/filter", "filter")}} con un {{JSxRef("Funciones/Arrow_functions", "función flecha")}}.
+Usa `^` para hacer coincidir al comienzo de la entrada. En este ejemplo, podemos obtener las frutas que comienzan con 'A' con una expresión regular `/^A/`. Para seleccionar las frutas adecuadas, podemos utilizar el método {{JSxRef("Array.filter", "filter")}} con un {{JSxRef("Functions/Arrow_functions", "función flecha")}}.
 
 ```js
 let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
@@ -129,7 +129,7 @@ let frutasEmpiezanConM = frutas.filter((fruta) => /^M/.test(fruta));
 console.log(frutasEmpiezanConM); // [ 'Manzana', 'Melón' ]
 ```
 
-En el segundo ejemplo, `^` se usa tanto para hacer coincidir al comienzo de la entrada como para crear conjuntos de caracteres negados o complementados cuando se usa dentro de {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "grupos")}}.
+En el segundo ejemplo, `^` se usa tanto para hacer coincidir al comienzo de la entrada como para crear conjuntos de caracteres negados o complementados cuando se usa dentro de [grupos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 ```js
 let frutas = ["Manzana", "Sandía", "Naranja", "Aguacate", "Fresa", "Melón"];
@@ -181,7 +181,7 @@ console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 
 ### Diferente significado del uso de la combinación '?!' en aserciones y rangos
 
-Diferente significado del uso de la combinación `?!` en {{JSxRef("../Guide/Regular_Expressions/Aserciones", "Aserciones")}} `/x(?!y)/` y de `[^?!]` en {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Rangos")}}.
+Diferente significado del uso de la combinación `?!` en [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) `/x(?!y)/` y de `[^?!]` en [Rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 
 ```js
 let naranjaNoLimon =
@@ -212,14 +212,14 @@ console.log(naranjas_maduras); // [ 'naranja madura A ', 'naranja madura C' ]
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la {{JSxRef("../Guide/Regular_Expressions", "tabla principal de compatibilidad de expresiones regulares", "#Compatibilidad_del_navegador")}}.
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Cuantificadores", "Cuantificadores")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}
-  - {{JSxRef("../Guide/Regular_Expressions/Grupos_y_rangos", "Grupos y rangos")}}
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+  - [Clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
+  - [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+  - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
-- {{JSxRef("Objetos_globales/RegExp", "El constructor RegExp()")}}
+- {{JSxRef("RegExp", "El constructor RegExp()")}}

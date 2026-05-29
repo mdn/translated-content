@@ -67,7 +67,7 @@ Number(undefined); // NaN
   - : Valor especial para representar infinitos negativos; retorno de un desborde de pila overflow.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
   - : Valor especial para representar infinitos positivos; retorno de un desborde de pila overflow.
-- {{jsxref("Number.prototype")}}
+- {{jsxref("Number")}}
   - : Permite la adición de propiedades a un objeto `Number`.
 
 ## Métodos
@@ -81,15 +81,15 @@ Number(undefined); // NaN
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
 - ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
-  - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
+  - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Infinity")}}), pero ha sido eliminado.~~
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.
 - {{jsxref("Number.parseInt()")}}
-  - : El valor es el mismo que {{jsxref("parseInt", "parseInt()")}} del objeto global.
+  - : El valor es el mismo que {{jsxref("parseInt()")}} del objeto global.
 
 ## Instancias `Number`
 
-Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El objeto prototipo del constructor de `Number` puede modificarse para aceptar a todas las instancias de `Number`.
+Todas las instancias `Number` heredan de {{jsxref("Number")}}. El objeto prototipo del constructor de `Number` puede modificarse para aceptar a todas las instancias de `Number`.
 
 ### Métodos
 
@@ -99,7 +99,7 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
   - : Devuelve una cadena que representa el número en notación de punto fijo.
 - {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
-  - : Devuelve una cadena con una representación sensible al idioma de este número. Invalida el método {{jsxref ("Object.prototype.toLocaleString ()")}}.
+  - : Devuelve una cadena con una representación sensible al idioma de este número. Invalida el método {{jsxref("Object.prototype.toLocaleString()")}}.
 
 ## Ejemplos
 
@@ -169,6 +169,6 @@ Number("-Infinity"); //-Infinity
 
 ### Vea También
 
-- {{jsxref("Global_Objects/NaN", "NaN")}}
-- {{jsxref("Global_Objects/Math", "Math")}}
-- {{jsxref("Arithmetic operators")}}
+- {{jsxref("NaN")}}
+- {{jsxref("Math")}}
+- {{jsxref("Operators", "Arithmetic operators")}}

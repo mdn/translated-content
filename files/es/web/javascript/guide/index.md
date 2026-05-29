@@ -5,113 +5,113 @@ slug: Web/JavaScript/Guide
 
 {{jsSidebar("JavaScript Guide")}}
 
-La Guía de JavaScript te muestra cómo usar {{JSxRef("../../JavaScript", "JavaScript")}} y te brinda una perspectiva general del lenguaje. Si necesitas información exhaustiva sobre una característica del lenguaje, consulta la {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
+La Guía de JavaScript te muestra cómo usar [JavaScript](/es/docs/Web/JavaScript) y te brinda una perspectiva general del lenguaje. Si necesitas información exhaustiva sobre una característica del lenguaje, consulta la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 ## Capítulos
 
 Esta guía se divide en varios capítulos:
 
-- {{JSxRef("../Guide/Introducción", "Introducción")}}
-  - {{JSxRef("../Guide/Introducción", "Acerca de esta guía", "#Donde_encontrar_informacion_sobre_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "Acerca de JavaScript", "#Que_es_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "JavaScript y Java", "#JavaScript_y_Java")}}
-  - {{JSxRef("../Guide/Introducción", "ECMAScript", "#JavaScript_y_la_especificacion_ECMAScript")}}
-  - {{JSxRef("../Guide/Introducción", "Herramientas", "#Como_empezar_con_JavaScript")}}
-  - {{JSxRef("../Guide/Introducción", "Hola, Mundo", "#Hola_mundo")}}
+- [Introducción](/es/docs/Web/JavaScript/Guide/Introduction)
+  - [Acerca de esta guía](/es/docs/Web/JavaScript/Guide/Introduction#Donde_encontrar_informacion_sobre_JavaScript)
+  - [Acerca de JavaScript](/es/docs/Web/JavaScript/Guide/Introduction#Que_es_JavaScript)
+  - [JavaScript y Java](/es/docs/Web/JavaScript/Guide/Introduction#JavaScript_y_Java)
+  - [ECMAScript](/es/docs/Web/JavaScript/Guide/Introduction#JavaScript_y_la_especificacion_ECMAScript)
+  - [Herramientas](/es/docs/Web/JavaScript/Guide/Introduction#Como_empezar_con_JavaScript)
+  - [Hola, Mundo](/es/docs/Web/JavaScript/Guide/Introduction#Hola_mundo)
 
-- {{JSxRef("../Guide/Grammar_and_types", "Gramática y tipos")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Sintaxis básica y comentarios", "#Conceptos_basicos")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Declaración de variables", "#Declaraciones")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Ámbito de variables", "#Ambito_de_variables")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Elevación de variables (hoisting)", "Elevacion_de_variables")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Estructuras y tipos de datos", "#Estructuras_y_tipos_de_datos")}}
-  - {{JSxRef("../Guide/Grammar_and_types", "Literales", "#Literales")}}
+- [Gramática y tipos](/es/docs/Web/JavaScript/Guide/Grammar_and_types)
+  - [Sintaxis básica y comentarios](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Conceptos_basicos)
+  - [Declaración de variables](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaraciones)
+  - [Ámbito de variables](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Ambito_de_variables)
+  - [Elevación de variables (hoisting)](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Elevacion_de_variables)
+  - [Estructuras y tipos de datos](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Estructuras_y_tipos_de_datos)
+  - [Literales](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales)
 
-- {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Control de flujo y manejo de errores")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "if...else", "#delacacion_if...else")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "switch", "#declaracion_switch")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "try/catch/throw", "Declaraciones_para_el_manejo_de_excepciones")}}
-  - {{JSxRef("../Guide/Control_de_flujo_y_manejo_de_errores", "Objetos Error", "#Utilizar_objetos_error")}}
+- [Control de flujo y manejo de errores](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+  - [if...else](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#delacacion_if...else)
+  - [switch](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#declaracion_switch)
+  - [try/catch/throw](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Declaraciones_para_el_manejo_de_excepciones)
+  - [Objetos Error](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Utilizar_objetos_error)
 
-- {{JSxRef("../Guide/Bucles_e_iteracion", "Bucles e iteración")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for", "#instruccion_for")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "while", "#instruccion_while")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "do...while", "#instruccion_do...while")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "break", "#instruccion_break")}}/{{JSxRef("../Guide/Bucles_e_iteracion", "continue", "#instruccion_continue")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for..in", "#instruccion_for...in")}}
-  - {{JSxRef("../Guide/Bucles_e_iteracion", "for..of", "#instruccion_for...of")}}
+- [Bucles e iteración](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion)
+  - [for](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_for)
+  - [while](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_while)
+  - [do...while](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_do...while)
+  - [break](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_break)/[continue](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_continue)
+  - [for..in](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_for...in)
+  - [for..of](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion#instruccion_for...of)
 
 - [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
-  - {{JSxRef("../Guide/Funciones", "Definir funciones", "#Definir_funciones")}}
-  - {{JSxRef("../Guide/Funciones", "Llamar funciones", "#Llamar_funciones")}}
-  - {{JSxRef("../Guide/Funciones", "Ámbito de una función", "#Ambito_de_una_funcion")}}
-  - {{JSxRef("../Guide/Funciones", "Cierres", "#Cierres")}}
-  - {{JSxRef("../Guide/Funciones", "Argumentos", "#Utilizar_el_objeto_arguments")}} y {{JSxRef("../Guide/Funciones", "parámetros", "#Utilizar_parametros_de_funcion")}}
-  - {{JSxRef("../Guide/Funciones", "Funciones flecha", "#Funciones_flecha")}}
+  - [Definir funciones](/es/docs/Web/JavaScript/Guide/Functions#Definir_funciones)
+  - [Llamar funciones](/es/docs/Web/JavaScript/Guide/Functions#Llamar_funciones)
+  - [Ámbito de una función](/es/docs/Web/JavaScript/Guide/Functions#Ambito_de_una_funcion)
+  - [Cierres](/es/docs/Web/JavaScript/Guide/Functions#Cierres)
+  - [Argumentos](/es/docs/Web/JavaScript/Guide/Functions#Utilizar_el_objeto_arguments) y [parámetros](/es/docs/Web/JavaScript/Guide/Functions#Utilizar_parametros_de_funcion)
+  - [Funciones flecha](/es/docs/Web/JavaScript/Guide/Functions#Funciones_flecha)
 
-- {{JSxRef("../Guide/Expressions_and_Operators", "Expresiones y operadores")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Asignación", "#Operadores_de_asignacion")}} y {{JSxRef("../Guide/Expressions_and_Operators", "Comparación", "#Operadores_de_comparacion")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operadores aritméticos", "#Operadores_aritmeticos")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operadores lógicos", "#Operadores_logicos")}} y {{JSxRef("../Guide/Expressions_and_Operators", "a nivel de bits", "#Operadores_bit_a_bit")}}
-  - {{JSxRef("../Guide/Expressions_and_Operators", "Operador condicional (ternario)", "#Operador_condicional_ternario")}}
+- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+  - [Asignación](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_asignacion) y [Comparación](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_comparacion)
+  - [Operadores aritméticos](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_aritmeticos)
+  - [Operadores lógicos](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_logicos) y [a nivel de bits](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_bit_a_bit)
+  - [Operador condicional (ternario)](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operador_condicional_ternario)
 
-- {{JSxRef("../Guide/Numbers_and_dates", "Números y fechas")}}{{JSxRef("../Guide/Numbers_and_dates", "Números literales", "#Numeros")}}
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Number", "#El_objeto_Number")}}
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Math", "#El_objeto_Math")}}
-  - {{JSxRef("../Guide/Numbers_and_dates", "Objeto Date", "#El_objeto_Date")}}
+- [Números y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_strings)[Números literales](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#Numeros)
+  - [Objeto Number](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#El_objeto_Number)
+  - [Objeto Math](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#El_objeto_Math)
+  - [Objeto Date](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#El_objeto_Date)
 
-- {{JSxRef("../Guide/Text_formatting", "Formateo de texto")}}
-  - {{JSxRef("../Guide/Text_formatting", "Cadenas literales", "#Cadenas_literales")}}
-  - {{JSxRef("../Guide/Text_formatting", "Objeto String", "#Objetos_string")}}
-  - {{JSxRef("../Guide/Text_formatting", "Plantillas literales", "#Plantillas_literales_multilinea")}}
-  - {{JSxRef("../Guide/Text_formatting", "Internacionalización", "#Internacionalizacion")}}
-  - {{JSxRef("../Guide/Regular_Expressions", "Expresiones Regulares")}}
+- [Formateo de texto](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
+  - [Cadenas literales](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Cadenas_literales)
+  - [Objeto String](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Objetos_string)
+  - [Plantillas literales](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Plantillas_literales_multilinea)
+  - [Internacionalización](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Internacionalizacion)
+  - [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-- {{JSxRef("../Guide/Regular_Expressions", "Colecciones indexadas")}}
-  - {{JSxRef("../Guide/colecciones_indexadas", "Arreglos", "#El_objeto_Array")}}
-  - {{JSxRef("../Guide/colecciones_indexadas", "Arreglos tipados", "#Arrays_tipados")}}
+- [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+  - [Arreglos](/es/docs/Web/JavaScript/Guide/Indexed_collections#El_objeto_Array)
+  - [Arreglos tipados](/es/docs/Web/JavaScript/Guide/Indexed_collections#Arrays_tipados)
 
-- {{JSxRef("../Guide/Keyed_collections", "Colecciones con clave")}}
-  - {{JSxRef("../Guide/Keyed_collections", "Mapa", "#Objeto_map")}}
-  - {{JSxRef("../Guide/Keyed_collections", "WeakMap", "#El_objeto_WeakMap")}}
-  - {{JSxRef("../Guide/Keyed_collections", "Set", "#El_objeto_Set")}}
-  - {{JSxRef("../Guide/Keyed_collections", "WeakSet", "#El_objeto_WeakSet")}}
+- [Colecciones con clave](/es/docs/Web/JavaScript/Guide/Keyed_collections)
+  - [Mapa](/es/docs/Web/JavaScript/Guide/Keyed_collections#Objeto_map)
+  - [WeakMap](/es/docs/Web/JavaScript/Guide/Keyed_collections#El_objeto_WeakMap)
+  - [Set](/es/docs/Web/JavaScript/Guide/Keyed_collections#El_objeto_Set)
+  - [WeakSet](/es/docs/Web/JavaScript/Guide/Keyed_collections#El_objeto_WeakSet)
 
-- {{JSxRef("../Guide/Trabajando_con_objectos", "Trabajar con objetos")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Objetos y propiedades", "#Objetos_y_propiedades")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Creación de objetos", "#Creacion_de_objetos")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Definición de métodos", "#Definicion_de_metodos")}}
-  - {{JSxRef("../Guide/Trabajando_con_objectos", "Captadores —getter— y establecedores —setter—", "#Definicion__de_captadores_getters_y_establecedores_setters")}}
+- [Trabajar con objetos](/es/docs/Web/JavaScript/Guide/Working_with_objects)
+  - [Objetos y propiedades](/es/docs/Web/JavaScript/Guide/Working_with_objects#Objetos_y_propiedades)
+  - [Creación de objetos](/es/docs/Web/JavaScript/Guide/Working_with_objects#Creacion_de_objetos)
+  - [Definición de métodos](/es/docs/Web/JavaScript/Guide/Working_with_objects#Definicion_de_metodos)
+  - [Captadores —getter— y establecedores —setter—](/es/docs/Web/JavaScript/Guide/Working_with_objects#Definicion__de_captadores_getters_y_establecedores_setters)
 
-- {{JSxRef("../Guide/Details_of_the_Object_Model", "Detalles del modelo de objetos")}}
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Programación Orientada a Objetos basada en prototipos", "#Lenguajes_basados_en_clases_vs._basados_en_prototipos")}}
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Crear jerarquía de objetos", "#Creacion_de_la_jerarquia")}}
-  - {{JSxRef("../Guide/Details_of_the_Object_Model", "Herencia", "#Herencia_de_propiedades_revisada")}}
+- [Detalles del modelo de objetos](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain)
+  - [Programación Orientada a Objetos basada en prototipos](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#Lenguajes_basados_en_clases_vs._basados_en_prototipos)
+  - [Crear jerarquía de objetos](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#Creacion_de_la_jerarquia)
+  - [Herencia](/es/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#Herencia_de_propiedades_revisada)
 
-- {{JSxRef("../Guide/Usar_promesas", "Promesas")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Garantías", "#Garantias")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Encadenamiento", "#Encadenamiento")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Propagación de errores", "#Propagacion_de_errores")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Composición", "#Composicion")}}
-  - {{JSxRef("../Guide/Usar_promesas", "Temporizador", "#Temporizador")}}
+- [Promesas](/es/docs/Web/JavaScript/Guide/Using_promises)
+  - [Garantías](/es/docs/Web/JavaScript/Guide/Using_promises#Garantias)
+  - [Encadenamiento](/es/docs/Web/JavaScript/Guide/Using_promises#Encadenamiento)
+  - [Propagación de errores](/es/docs/Web/JavaScript/Guide/Using_promises#Propagacion_de_errores)
+  - [Composición](/es/docs/Web/JavaScript/Guide/Using_promises#Composicion)
+  - [Temporizador](/es/docs/Web/JavaScript/Guide/Using_promises#Temporizador)
 
-- {{JSxRef("../Guide/Iterators_and_Generators", "Iteradores y generadores")}}
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Iteradores", "#Iteradores")}}
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Iterables", "#Iterables")}}
-  - {{JSxRef("../Guide/Iterators_and_Generators", "Generadores", "#Generadores")}}
+- [Iteradores y generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+  - [Iteradores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iteradores)
+  - [Iterables](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)
+  - [Generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generadores)
 
-- {{JSxRef("../Guide/Meta_programming", "Metaprogramación")}}
-  - {{JSxRef("../Guide/Meta_programming", "Proxy", "#Proxies")}}
-  - {{JSxRef("../Guide/Meta_programming", "Controladores y trampas", "#Controladores_y_trampas")}}
-  - {{JSxRef("../Guide/Meta_programming", "Proxy revocable", "#Proxy_revocable")}}
-  - {{JSxRef("../Guide/Meta_programming", "Reflexión", "#Reflexion")}}
+- [Metaprogramación](/es/docs/Web/JavaScript/Guide/Meta_programming)
+  - [Proxy](/es/docs/Web/JavaScript/Guide/Meta_programming#Proxies)
+  - [Controladores y trampas](/es/docs/Web/JavaScript/Guide/Meta_programming#Controladores_y_trampas)
+  - [Proxy revocable](/es/docs/Web/JavaScript/Guide/Meta_programming#Proxy_revocable)
+  - [Reflexión](/es/docs/Web/JavaScript/Guide/Meta_programming#Reflexion)
 
-- {{JSxRef("../Guide/Modules", "Módulos JavaScript")}}
-  - {{JSxRef("../Guide/Modules", "Exportar", "#Exportar_caracteristicas_del_modulo")}}
-  - {{JSxRef("../Guide/Modules", "Importar", "#Importacion_de_caracteristicas_en_tu_script")}}
-  - {{JSxRef("../Guide/Modules", "Exportaciones predeterminadas", "#Exportaciones_predeterminadas_vs._exportaciones_con_nombre")}}
-  - {{JSxRef("../Guide/Modules", "Cambio de nombre de funciones", "#Renombrar_importaciones_y_exportaciones")}}
-  - {{JSxRef("../Guide/Modules", "Carga estática de módulos", "#Carga_estatica_de_modulos")}}
-  - {{JSxRef("../Guide/Modules", "Carga dinámica de módulos", "#Carga_dinamica_de_modulos")}}
+- [Módulos JavaScript](/es/docs/Web/JavaScript/Guide/Modules)
+  - [Exportar](/es/docs/Web/JavaScript/Guide/Modules#Exportar_caracteristicas_del_modulo)
+  - [Importar](/es/docs/Web/JavaScript/Guide/Modules#Importacion_de_caracteristicas_en_tu_script)
+  - [Exportaciones predeterminadas](/es/docs/Web/JavaScript/Guide/Modules#Exportaciones_predeterminadas_vs._exportaciones_con_nombre)
+  - [Cambio de nombre de funciones](/es/docs/Web/JavaScript/Guide/Modules#Renombrar_importaciones_y_exportaciones)
+  - [Carga estática de módulos](/es/docs/Web/JavaScript/Guide/Modules#Carga_estatica_de_modulos)
+  - [Carga dinámica de módulos](/es/docs/Web/JavaScript/Guide/Modules#Carga_dinamica_de_modulos)
 
 {{Next("Web/JavaScript/Guide/Introduction")}}

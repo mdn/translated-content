@@ -16,7 +16,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : Un {{domxref("AudioTrackList")}} que lista los {{domxref("AudioTrack")}} objetos contenidos en el elemento.
 - {{domxref("HTMLMediaElement.autoplay")}}
-  - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Reference/Elements/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
+  - : Un {{jsxref("Boolean", "Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Reference/Elements/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
 
     > [!NOTE]
     > Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
@@ -26,7 +26,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.controller")}}
   - : Es un objeto {{domxref("MediaController")}} que representa el controlador de medios asignado al elemento, o nulo si no se asigna ninguno.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : Es un {{jsxref('booleano')}} que refleja el [`controles`](/es/docs/Web/HTML/Element/vídeo#controles)\[1]. Atributo HTML, que indica si deben visualizarse las posiciones de la interfase de usuario para controlar el recurso.
+  - : Es un {{jsxref('Boolean', 'booleano')}} que refleja el [`controles`](/es/docs/Web/HTML/Element/vídeo#controles)\[1]. Atributo HTML, que indica si deben visualizarse las posiciones de la interfase de usuario para controlar el recurso.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : Devuelve un {{domxref("DOMTokenList")}} que ayuda al agente de usuario a seleccionar qué controles mostrar en el elemento multimedia cuando el agente de usuario muestra su propio conjunto de controles. La DOMTokenList toma uno o más de los tres valores posibles: nodownload, nofullscreen y noremoteplayback.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -36,15 +36,15 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : Es un doble indicador del tiempo de reproducción actual en segundos. Fijar este valor busca que los medios de comunicación se adapten a los nuevos tiempos.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : Es un {{jsxref('booleano')}} que refleja el [`silenciado`](/es/docs/Web/HTML/Reference/Elements/video#silenciado). Atributo HTML, que indica si la salida de audio del elemento multimedia debe silenciarse de forma predeterminada.
+  - : Es un {{jsxref('Boolean', 'booleano')}} que refleja el [`silenciado`](/es/docs/Web/HTML/Reference/Elements/video#silenciado). Atributo HTML, que indica si la salida de audio del elemento multimedia debe silenciarse de forma predeterminada.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : Es un doble que indica la velocidad de reproducción predeterminada del material.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
-  - : Es un {{jsxref('Booleano')}} que establece o devuelve el estado de reproducción remota, indicando si el elemento multimedia puede tener una interfaz de reproducción remota.
+  - : Es un {{jsxref('Boolean', 'Booleano')}} que establece o devuelve el estado de reproducción remota, indicando si el elemento multimedia puede tener una interfaz de reproducción remota.
 - {{domxref("HTMLMediaElement.duration")}} {{readonlyinline}}
   - : Devuelve un doble indicando la longitud del material en segundos, o 0 si no hay datos de material disponibles.
 - {{domxref("HTMLMediaElement.ended")}} {{readonlyinline}}
-  - : Devuelve un {{jsxref('Booleano')}} que indica si el elemento multimedia ha terminado de reproducirse.
+  - : Devuelve un {{jsxref('Boolean', 'Booleano')}} que indica si el elemento multimedia ha terminado de reproducirse.
 - {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}

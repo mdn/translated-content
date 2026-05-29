@@ -74,9 +74,9 @@ En esta función se utilizan mayúsculas en lugar de minúsculas, debido a probl
 
 ### Primitivas `String` y objetos `String`
 
-Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glossary("Primitive", "primitivas string")}}. (Lo mismo ocurre con {{jsxref("Boolean", "Booleanos")}} y {{jsxref("Global_Objects/Number", "Números")}}).
+Ten en cuenta que JavaScript distingue entre objetos `String` y valores de {{Glossary("Primitive", "primitivas string")}}. (Lo mismo ocurre con {{jsxref("Boolean", "Booleanos")}} y {{jsxref("Number", "Números")}}).
 
-Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("Operators/new", "new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
+Las cadenas literales (denotadas por comillas simples o dobles) y cadenas devueltas de llamadas a `String` en un contexto que no es de constructor (es decir, llamado sin usar la palabra clave {{jsxref("new")}}) son cadenas primitivas. JavaScript automáticamente convierte las primitivas en objetos `String`, por lo que es posible utilizar métodos del objeto `String` en cadenas primitivas. En contextos donde se va a invocar a un método en una cadena primitiva o se produce una búsqueda de propiedad, JavaScript ajustará automáticamente la cadena primitiva y llamará al método o realizará la búsqueda de la propiedad.
 
 ```js
 let s_prim = "foo";
@@ -238,7 +238,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
   - : Recorta los espacios en blanco del final de la cadena.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Devuelve el valor primitivo del objeto especificado. Redefine el método {{jsxref("Object.prototype.valueOf()")}}.
-- {{jsxref("String.prototype.@@iterator()")}}
+- {{jsxref("String/Symbol.iterator")}}
   - : Devuelve un nuevo objeto `Iterator` que itera sobre los puntos de código de un valor de cadena, devolviendo cada punto de código como un valor de cadena.
 
 ## Métodos de contenedor HTML

@@ -135,8 +135,8 @@ console.log("Hola mundo");
 - {{jsxref("Statements/const", "const")}}
 - {{jsxref("Statements/continue", "continue")}}
 - {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/default", "default")}}
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Statements/switch", "default")}}
+- {{jsxref("delete")}}
 - {{jsxref("Statements/do...while", "do")}}
 - {{jsxref("Statements/if...else", "else")}}
 - {{jsxref("Statements/export", "export")}}
@@ -147,12 +147,12 @@ console.log("Hola mundo");
 - {{jsxref("Statements/if...else", "if")}}
 - {{jsxref("Statements/import", "import")}}
 - {{jsxref("Operators/in", "in")}}
-- {{jsxref("Operators/instanceof", "instanceof")}}
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("instanceof")}}
+- {{jsxref("new")}}
 - {{jsxref("Statements/return", "return")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
 - {{jsxref("Statements/throw", "throw")}}
 - {{jsxref("Statements/try...catch", "try")}}
 - {{jsxref("Operators/typeof", "typeof")}}
@@ -267,7 +267,7 @@ Los tipos {{jsxref("Number")}} y {{jsxref("BigInt")}} usan literales numéricos.
 0777; // procesado como octal, 511 en decimal
 ```
 
-Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si todos los dígitos después del `0` inicial son menores que 8, el número se interpreta como un número octal. Esto no arrojará JavaScript, consulta [error 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). Consulta también la página sobre {{jsxref("parseInt", "parseInt()")}}
+Ten en cuenta que los decimales literales pueden comenzar con un cero (`0`) seguido de otro dígito decimal, pero si todos los dígitos después del `0` inicial son menores que 8, el número se interpreta como un número octal. Esto no arrojará JavaScript, consulta [error 957513](https://bugzilla.mozilla.org/show_bug.cgi?id=957513). Consulta también la página sobre {{jsxref("parseInt()")}}
 
 ##### Exponencial
 
