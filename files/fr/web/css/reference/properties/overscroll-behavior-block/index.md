@@ -1,8 +1,9 @@
 ---
-title: overscroll-behavior-block
+title: Propriété CSS `overscroll-behavior-block`
+short-title: overscroll-behavior-block
 slug: Web/CSS/Reference/Properties/overscroll-behavior-block
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overscroll-behavior-block`** définit le comportement d'un navigateur lorsqu'il atteint la limite de défilement dans la direction du bloc (_verticale_).

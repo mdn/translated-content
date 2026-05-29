@@ -3,7 +3,7 @@ title: Document.bgColor
 slug: Web/API/Document/bgColor
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{APIRef("DOM")}} {{ Deprecated_header }}
 
 A propriedade obsoleta `bgColor` obtém ou atribue a cor de fundo do documento atual.
 

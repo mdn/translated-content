@@ -46,7 +46,7 @@ Intl.DateTimeFormat(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}. Les deux créent une nouvelle instance de `Intl.DateTimeFormat`. Cependant, il existe un comportement spécial lorsque la fonction est appelée sans `new` et que la valeur de `this` est une autre instance de `Intl.DateTimeFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
+> `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("new")}}. Les deux créent une nouvelle instance de `Intl.DateTimeFormat`. Cependant, il existe un comportement spécial lorsque la fonction est appelée sans `new` et que la valeur de `this` est une autre instance de `Intl.DateTimeFormat`&nbsp;; voir [Valeur de retour](#valeur_de_retour).
 
 ### Paramètres
 
@@ -71,7 +71,7 @@ Intl.DateTimeFormat(locales, options)
 - `calendar`
   - : Le calendrier à utiliser, tel que `"chinese"`, `"gregory"`, `"persian"`, etc. Pour une liste des types de calendriers pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_calendriers_pris_en_charge)&nbsp;; la valeur par défaut dépend de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `ca`&nbsp;; si les deux sont fournies, cette propriété d'`options` prévaut.
 - `numberingSystem`
-  - : Le système de numération à utiliser pour le formatage des nombres, tel que `"arab"`, `"hans"`, `"mathsans"`, etc. Pour une liste des types de systèmes de numération pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numérotation_pris_en_charge)&nbsp;; la valeur par défaut dépend de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `nu`&nbsp;; si les deux sont fournies, cette propriété de `options` prévaut.
+  - : Le système de numération à utiliser pour le formatage des nombres, tel que `"arab"`, `"hans"`, `"mathsans"`, etc. Pour une liste des types de systèmes de numération pris en charge, voir [`Intl.supportedValuesOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#types_de_systèmes_de_numération_pris_en_charge)&nbsp;; la valeur par défaut dépend de la locale. Cette option peut aussi être définie via la clé d'extension Unicode `nu`&nbsp;; si les deux sont fournies, cette propriété de `options` prévaut.
 - `hour12`
   - : Indique s'il faut utiliser une horloge sur 12 heures (par opposition à 24 heures). Les valeurs possibles sont `true` et `false`&nbsp;; la valeur par défaut dépend de la locale. Lorsque `true`, cette option définit `hourCycle` sur `"h11"` ou `"h12"`, selon la locale. Lorsque `false`, elle définit `hourCycle` sur `"h23"`. `hour12` surcharge à la fois la balise d'extension de locale `hc` et l'option `hourCycle`, si l'une ou l'autre ou les deux sont présentes.
 - `hourCycle`
@@ -196,7 +196,7 @@ Un nouvel objet `Intl.DateTimeFormat`.
 > [!NOTE]
 > Le texte ci-dessous décrit un comportement marqué comme «&nbsp;optionnel&nbsp;» par la spécification. Il se peut qu'il ne fonctionne pas dans tous les environnements. Consultez le [tableau de compatibilité des navigateurs](#compatibilité_des_navigateurs).
 
-Normalement, `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("Operators/new", "new")}}, et une nouvelle instance `Intl.DateTimeFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("Operators/this", "this")}} est un objet qui est {{JSxRef("Operators/instanceOf", "instanceOf")}} de `Intl.DateTimeFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.DateTimeFormat`&nbsp;; cela signifie simplement qu'il possède `Intl.DateTimeFormat.prototype` dans sa chaîne de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.DateTimeFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
+Normalement, `Intl.DateTimeFormat()` peut être appelé avec ou sans {{JSxRef("new")}}, et une nouvelle instance `Intl.DateTimeFormat` est retournée dans les deux cas. Cependant, si la valeur de {{JSxRef("this")}} est un objet qui est {{JSxRef("Operators/instanceOf", "instanceOf")}} de `Intl.DateTimeFormat` (cela ne signifie pas nécessairement qu'il a été créé via `new Intl.DateTimeFormat`&nbsp;; cela signifie simplement qu'il possède `Intl.DateTimeFormat.prototype` dans sa chaîne de prototypes), alors la valeur de `this` est retournée à la place, avec le nouvel objet `Intl.DateTimeFormat` caché dans une propriété `[Symbol(IntlLegacyConstructedSymbol)]` (un symbole unique réutilisé entre les instances).
 
 ```js
 const formateur = Intl.DateTimeFormat.call(

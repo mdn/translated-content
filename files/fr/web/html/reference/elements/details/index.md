@@ -1,8 +1,9 @@
 ---
-title: "<details> : l'élément de divulgation des détails"
+title: "Élément HTML `<details>` : l'élément de divulgation des détails"
+short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 l10n:
-  sourceCommit: 7615562a3689a3e23a2b6b623597f4391740a53e
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<details>`** crée un composant de divulgation dans lequel l'information n'est visible que lorsque le composant est ouvert. Un résumé ou une étiquette doit être fourni·e à l'aide de l'élément HTML {{HTMLElement("summary")}}.

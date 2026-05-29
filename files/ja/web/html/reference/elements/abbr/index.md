@@ -1,11 +1,10 @@
 ---
-title: "<abbr>: 略語要素"
+title: HTML `<abbr>` 略語要素
+short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{HTMLSidebar}}
 
 **`<abbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、略語や頭字語を表します。
 
@@ -49,9 +48,9 @@ abbr {
 
 [文法的に数を表現する](<https://ja.wikipedia.org/wiki/数_(文法)>)言語（つまり、項目の数が文の文法に影響する言語）では、`<abbr>` 要素内の `title` 属性で同じ文法的な数値を使用してください。これは、アラビア語のように 2 よりも大きい数の文法を持つ言語で特に重要ですが、英語にも当てはまります。
 
-## 既定のスタイル
+## デフォルトのスタイル
 
-この要素の目的は単に作者の利便性のためであり、すべてのブラウザーが既定でこの要素を行内 ({{cssxref("display", "display: inline")}}) で表示します。ただし、既定のスタイルはブラウザーによりさまざまです。
+この要素の目的は単に作者の利便性のためであり、すべてのブラウザーがデフォルトでこの要素を行内 ({{cssxref("display", "display: inline")}}) で表示します。ただし、デフォルトのスタイルはブラウザーによりさまざまです。
 
 一部のブラウザーでは、この要素の内容に点線の下線を引きます。他にも点線の下線を引くだけでなく、小さな大文字で表示するものもあります。それ以外のものは {{HTMLElement("span")}} 要素以上のスタイルを適用しません。このスタイルを制御するには {{cssxref('text-decoration')}} および {{cssxref('font-variant')}} を使用してください。
 

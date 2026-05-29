@@ -1,8 +1,9 @@
 ---
-title: view-timeline-axis
+title: Propriété CSS `view-timeline-axis`
+short-title: view-timeline-axis
 slug: Web/CSS/Reference/Properties/view-timeline-axis
 l10n:
-  sourceCommit: f8ef875113a7d3e9952f41de68be1e3a3a1e6988
+  sourceCommit: a8b7faffbd3fdeae5c0be97793d963d8a31cd1cf
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`view-timeline-axis`** définit la direction de défilement à utiliser pour une [chronologie de progression de la vue nommée](/fr/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#chronologie_de_progression_de_la_vue_nommée).
@@ -39,7 +40,7 @@ Par défaut, les animations CSS {{CSSxRef("@keyframes")}} progressent le long de
 
 Pour les chronologies de progression de la vue, la progression de l'animation le long des chronologies est basée sur la visibilité de l'élément, ou _sujet_. La propriété `view-timeline-axis` est définie sur le sujet.
 
-Le sujet doit être imbriqué à l'intérieur d'un élément défilable. Si l'élément défilable ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne sera créée.
+Le sujet doit être imbriqué à l'intérieur d'un élément défilable. Si l'élément défilable ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne est créée.
 
 La propriété `view-timeline-axis`, ainsi que les propriétés {{CSSxRef("view-timeline-inset")}} et {{CSSxRef("view-timeline-name")}}, fait partie de la propriété raccourcie {{CSSxRef("view-timeline")}}.
 
@@ -162,7 +163,7 @@ p {
   body::before {
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
   @supports not (view-timeline-axis: inherit) {
     body::before {

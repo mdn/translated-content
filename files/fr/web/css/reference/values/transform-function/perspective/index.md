@@ -1,8 +1,9 @@
 ---
-title: perspective()
+title: Fonction CSS `perspective()`
+short-title: perspective()
 slug: Web/CSS/Reference/Values/transform-function/perspective
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`perspective()`** définit une transformation qui fixe la distance entre l'utilisateur·ice et le plan z=0, soit la perspective depuis laquelle l'interface bidimensionnelle serait perçue comme tridimensionnelle. Son résultat est un type de donnée {{CSSxRef("&lt;transform-function&gt;")}}.

@@ -1,8 +1,9 @@
 ---
-title: line-height-step
+title: Propriété CSS `line-height-step`
+short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : accesskey"
+title: "Attribut HTML universel : `accesskey`"
 short-title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 l10n:
-  sourceCommit: 1696e3eadd2b142341a65a1cf6e9a4f3416412d1
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`accesskey`** indique un raccourci clavier possible pour l'élément courant. La valeur de l'attribut doit être un seul caractère imprimable (ce qui inclut les caractères accentués et autres caractères pouvant être générés par le clavier).

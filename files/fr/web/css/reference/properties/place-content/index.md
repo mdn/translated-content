@@ -1,8 +1,9 @@
 ---
-title: place-content
+title: Propriété CSS `place-content`
+short-title: place-content
 slug: Web/CSS/Reference/Properties/place-content
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`place-content`** permet d'aligner le contenu à la fois dans les directions bloc et en ligne (c'est-à-dire les propriétés {{CSSxRef("align-content")}} et {{CSSxRef("justify-content")}}) dans un système de mise en page pertinent tel que [la grille](/fr/docs/Web/CSS/Guides/Grid_layout) ou [les boîtes flexibles](/fr/docs/Web/CSS/Guides/Flexible_box_layout).

@@ -1,47 +1,116 @@
 ---
-title: GlobalEventHandlers.onloadstart
+title: "HTMLMediaElement : évènement loadstart"
+short-title: loadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
+l10n:
+  sourceCommit: a7265fc3effa7c25b9997135104370c057a65293
 ---
 
-{{ApiRef}}
+{{APIRef("HTML DOM")}}
 
-La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement `loadstart` est déclenché (quand la progression est commencée sur le chargement d'une ressource).
+L'évènement **`loadstart`** est déclenché lorsque le navigateur commence à charger une ressource.
 
 ## Syntaxe
 
-```js
-img.onloadstart = funcRef;
+Utilisez le nom de l'évènement dans des méthodes comme {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}}, ou définissez une propriété de gestionnaire d'évènement.
+
+```js-nolint
+addEventListener("loadstart", (event) => { })
+
+onloadstart = (event) => { }
 ```
 
-### Valeur
+## Type d'évènement
 
-`funcRef` est la fonction du gestionnaire à appeler lorsque l'évènement `loadstart` de la ressource est déclenché.
+Un objet {{DOMxRef("Event")}} générique.
 
 ## Exemples
 
-### Contenu HTML
+### Exemple en direct
+
+#### HTML
 
 ```html
-<img src="myImage.jpg" />
+<div class="example">
+  <button type="button">Charger la vidéo</button>
+  <video controls width="250"></video>
+
+  <div class="event-log">
+    <label for="eventLog">Journal des évènements&nbsp;:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
+</div>
 ```
 
-### Contenu JavaScript
+```css hidden
+.event-log-contents {
+  width: 18rem;
+  height: 5rem;
+  border: 1px solid black;
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+.example {
+  display: grid;
+  grid-template-areas:
+    "button log"
+    "video  log";
+}
+
+button {
+  grid-area: button;
+  width: 10rem;
+  margin: 0.5rem 0;
+}
+
+video {
+  grid-area: video;
+}
+
+.event-log {
+  grid-area: log;
+}
+
+.event-log > label {
+  display: block;
+}
+```
+
+#### JavaScript
 
 ```js
-// 'loadstart' est lancé le premier, puis 'load', puis 'loadend'
+const chargementVideo = document.querySelector("button");
+const video = document.querySelector("video");
+const journauxEvents = document.querySelector(".event-log-contents");
+let source = null;
 
-image.addEventListener("load", function (e) {
-  console.log("Image loaded");
-});
+function handleEvent(event) {
+  journauxEvents.textContent += `${event.type}\n`;
+}
 
-image.addEventListener("loadstart", function (e) {
-  console.log("Image load started");
-});
+video.addEventListener("loadstart", handleEvent);
+video.addEventListener("progress", handleEvent);
+video.addEventListener("canplay", handleEvent);
+video.addEventListener("canplaythrough", handleEvent);
 
-image.addEventListener("loadend", function (e) {
-  console.log("Image load finished");
+chargementVideo.addEventListener("click", () => {
+  if (source) {
+    document.location.reload();
+  } else {
+    chargementVideo.textContent = "Réinitialiser l'exemple";
+    source = document.createElement("source");
+    source.setAttribute("src", "/shared-assets/videos/flower.webm");
+    source.setAttribute("type", "video/webm");
+
+    video.appendChild(source);
+  }
 });
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("Exemple en direct", "100%", 200)}}
 
 ## Spécifications
 
@@ -50,3 +119,10 @@ image.addEventListener("loadend", function (e) {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- L'interface {{DOMxRef("HTMLAudioElement")}}
+- L'interface {{DOMxRef("HTMLVideoElement")}}
+- L'élément HTML {{HTMLElement("audio")}}
+- L'élément HTML {{HTMLElement("video")}}

@@ -600,9 +600,9 @@ a * c + b * c; // 9
 
 解析是 JavaScript 中的一個實驗性功能， 在未來版本的 ECMAScript 計畫被導入。有兩種不同類型的解析:
 
-- {{experimental_inline}} {{jsxref("Operators/Array_comprehensions", "[for (x of y) x]")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "[for (x of y) x]")}}
   - : 陣列解析。
-- {{experimental_inline}} {{jsxref("Operators/Generator_comprehensions", "(for (x of y) y)")}}
+- {{experimental_inline}} {{jsxref("Deprecated_and_obsolete_features", "(for (x of y) y)")}}
   - : 產生器解析。
 
 解析在許多程式語言中都存在，允許你快速地基於現存陣列產生新的陣列，例如:

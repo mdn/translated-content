@@ -54,7 +54,7 @@ var sym3 = Symbol("foo");
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-下面带有 {{jsxref("Operators/new", "new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：
+下面带有 {{jsxref("new")}} 运算符的语法将抛出 {{jsxref("TypeError")}} 错误：
 
 ```js
 var sym = new Symbol(); // TypeError
@@ -83,7 +83,7 @@ typeof symObj; // "object"
 
 - `Symbol.length`
   - : 长度属性，值为 0。
-- {{jsxref("Symbol.prototype")}}
+- {{jsxref("Symbol")}}
   - : `symbol` 构造函数的原型。
 
 ### 内置通用（well-known）symbol
@@ -103,7 +103,7 @@ typeof symObj; // "object"
 - {{jsxref("Symbol.split")}}
   - : 一个在匹配正则表达式的索引处拆分一个字符串的方法.。被 {{jsxref("String.prototype.split()")}} 使用。
 - 其他 symbols {{jsxref("Symbol.hasInstance")}}
-  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("Operators/instanceof", "instanceof")}} 使用。
+  - : 一个确定一个构造器对象识别的对象是否为它的实例的方法。被 {{jsxref("instanceof")}} 使用。
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : 一个布尔值，表明一个对象是否应该 flattened 为它的数组元素。被 {{jsxref("Array.prototype.concat()")}} 使用。
 - {{jsxref("Symbol.unscopables")}}
@@ -124,7 +124,7 @@ typeof symObj; // "object"
 
 ## Symbol 原型
 
-所有 Symbols 继承自 {{jsxref("Symbol.prototype")}}.
+所有 Symbols 继承自 {{jsxref("Symbol")}}.
 
 ### 实例属性
 
@@ -133,8 +133,8 @@ typeof symObj; // "object"
 
 ### 实例方法
 
-- {{jsxref("Symbol.prototype.toSource")}}
-  - : 返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toSource")}} 方法
+- {{jsxref("Symbol.prototype.toString", "Symbol.prototype.toSource")}}
+  - : 返回该 Symbol 对象的源代码。该方法重写了 {{jsxref("Object.prototype.toString", "Object.prototype.toSource")}} 方法
 - {{jsxref("Symbol.prototype.toString")}}
   - : 返回一个包含着该 Symbol 对象描述的字符串。该方法重写了 {{jsxref("Object.prototype.toString")}} 方法
 - {{jsxref("Symbol.prototype.valueOf")}}

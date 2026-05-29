@@ -1,8 +1,9 @@
 ---
-title: transition-behavior
+title: Propriété CSS `transition-behavior`
+short-title: transition-behavior
 slug: Web/CSS/Reference/Properties/transition-behavior
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transition-behavior`** définit si les transitions seront démarrées pour les propriétés dont le comportement d'animation est [discret](/fr/docs/Web/CSS/Guides/Animations/Animatable_properties#discrète).

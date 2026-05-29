@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : nonce"
+title: "Attribut HTML universel : `nonce`"
 short-title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
 l10n:
-  sourceCommit: dc788bf0ea36cb1ebe809c82aaae2c77cb3e18c0
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`nonce`** est un attribut de contenu qui définit un {{Glossary("Nonce", "nonce")}} cryptographique («&nbsp;nombre utilisé une fois&nbsp;») pouvant être utilisé par une [règle de sécurité du contenu (CSP)](/fr/docs/Web/HTTP/Guides/CSP) afin de déterminer si la récupération d'un élément sera autorisée ou non.

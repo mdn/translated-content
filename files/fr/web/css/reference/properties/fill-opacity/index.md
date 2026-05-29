@@ -1,8 +1,9 @@
 ---
-title: fill-opacity
+title: Propriété CSS `fill-opacity`
+short-title: fill-opacity
 slug: Web/CSS/Reference/Properties/fill-opacity
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`fill-opacity`** définit l'opacité de l'opération de peinture (couleur, dégradé, motif, etc.) appliquée aux formes SVG ou aux éléments de contenu textuel SVG pour remplir l'élément. Cette propriété définit uniquement l'opacité du `fill` de l'élément&nbsp;; elle n'affecte pas le contour. Si elle est présente, elle remplace l'attribut SVG {{SVGAttr("fill-opacity")}} de l'élément.

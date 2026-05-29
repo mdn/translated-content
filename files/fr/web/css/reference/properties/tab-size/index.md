@@ -1,8 +1,9 @@
 ---
-title: tab-size
+title: Propriété CSS `tab-size`
+short-title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).

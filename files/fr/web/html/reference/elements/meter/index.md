@@ -1,8 +1,9 @@
 ---
-title: "<meter> : l'élément de mesure"
+title: "Élément HTML `<meter>` : l'élément de mesure"
+short-title: <meter>
 slug: Web/HTML/Reference/Elements/meter
 l10n:
-  sourceCommit: 877e5882a590ade070954ee37e64fea5144f31db
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<meter>`** représente une valeur scalaire dans un intervalle donné ou une valeur fractionnaire.

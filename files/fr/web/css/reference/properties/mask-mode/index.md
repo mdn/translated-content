@@ -1,8 +1,9 @@
 ---
-title: mask-mode
+title: Propriété CSS `mask-mode`
+short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 l10n:
-  sourceCommit: b65091ba804acb13233eef3c545502f9038b6a80
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-mode`** détermine si le masque défini par {{CSSxRef("mask-image")}} est considéré comme un masque de luminance ou un masque alpha (transparence).

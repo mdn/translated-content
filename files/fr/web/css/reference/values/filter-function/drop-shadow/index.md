@@ -1,9 +1,9 @@
 ---
-title: drop-shadow()
+title: Fonction CSS `drop-shadow()`
+short-title: drop-shadow()
 slug: Web/CSS/Reference/Values/filter-function/drop-shadow
-original_slug: Web/CSS/filter-function/drop-shadow
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
@@ -73,7 +73,7 @@ La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (tel que d�
   - : Définit la couleur de l'ombre. Si elle n'est pas précisée, la valeur de la propriété {{CSSxRef("color")}} définie sur l'élément parent est utilisée.
 
 - `<length>`
-  - : Définit la longueur de décalage de l'ombre. Ce paramètre accepte deux ou trois valeurs. Si deux valeurs sont précisées, elles correspondent à `<offset-x>` (décalage horizontal) et `<offset-y>` (décalage vertical). Une valeur négative pour `<offset-x>` place l'ombre à gauche de l'élément. Une valeur négative pour `<offset-y>` place l'ombre au-dessus de l'élément. Si une valeur n'est pas précisée, `0` est utilisé par défaut. Si une troisième valeur est précisée, elle correspond à `<standard-deviation>`, c'est-à-dire l'écart type utilisé pour la fonction de [flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien). Plus la valeur de `<standard-deviation>` est grande, plus l'ombre sera grande et floue. Les valeurs négatives pour `<standard-deviation>` ne sont pas autorisées.
+  - : Définit la longueur de décalage de l'ombre. Ce paramètre accepte deux ou trois valeurs. Si deux valeurs sont précisées, elles correspondent à `<offset-x>` (décalage horizontal) et `<offset-y>` (décalage vertical). Une valeur négative pour `<offset-x>` place l'ombre à gauche de l'élément. Une valeur négative pour `<offset-y>` place l'ombre au-dessus de l'élément. Si une valeur n'est pas précisée, `0` est utilisé par défaut. Si une troisième valeur est précisée, elle correspond à `<standard-deviation>`, c'est-à-dire l'écart type utilisé pour la fonction de [flou gaussien](https://fr.wikipedia.org/wiki/Flou_gaussien). Plus la valeur de `<standard-deviation>` est grande, plus l'ombre est grande et floue. Les valeurs négatives pour `<standard-deviation>` ne sont pas autorisées.
 
 ## Syntaxe formelle
 

@@ -56,7 +56,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 - [`<attr-name>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-name)
 - [`<attr-type>`](/fr/docs/Web/CSS/Reference/Values/attr#attr-type)
 - {{CSSxRef("&lt;calc-keyword&gt;")}} (`e`, `pi`, `infinity`, {{glossary("NaN")}})
-- [`<calc-size-basis>`](/fr/docs/Web/CSS/calc-size#calc-size-basis)
+- [`<calc-size-basis>`](/fr/docs/Web/CSS/Reference/Values/calc-size#calc-size-basis)
 - [`<calc-sum>`](/fr/docs/Web/CSS/Reference/Values/calc-sum)
 - [`<custom-ident>`](/fr/docs/Web/CSS/Reference/Values/custom-ident)
 - [`<dashed-ident>`](/fr/docs/Web/CSS/Reference/Values/dashed-ident)
@@ -72,7 +72,7 @@ Le module des valeurs et unités CSS introduit également les fonctions `calc-mi
 - [`<position>`](/fr/docs/Web/CSS/Reference/Properties/position)
 - [`<ratio>`](/fr/docs/Web/CSS/Reference/Values/ratio)
 - [`<resolution>`](/fr/docs/Web/CSS/Reference/Values/resolution)
-- [`<rounding-strategy>`](/fr/docs/Web/CSS/round#rounding-strategy) (`down`, `up`, `to-zero`)
+- [`<rounding-strategy>`](/fr/docs/Web/CSS/Reference/Values/round#rounding-strategy) (`down`, `up`, `to-zero`)
 - [`<string>`](/fr/docs/Web/CSS/Reference/Values/string)
 - [`<syntax>`](/fr/docs/Web/CSS/Guides/Syntax/Introduction)
 - [`<time-percentage>`](/fr/docs/Web/CSS/Reference/Values/time-percentage)
@@ -206,7 +206,7 @@ Le module des valeurs et unités CSS introduit également les types de données 
 
 ## Modules associés
 
-- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascad)
+- Le module de [cascade et héritage CSS](/fr/docs/Web/CSS/Guides/Cascade)
   - {{cssxref("initial")}}
   - {{cssxref("inherit")}}
   - {{cssxref("revert")}}

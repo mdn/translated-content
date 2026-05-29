@@ -71,7 +71,7 @@ slug: Web/API/MediaStreamTrack
   - : 데이터를 다시 사용할 수 있어서 `muted` 상태가 끝날 때 발생합니다.
     [`onunmute`](/ko/docs/Web/API/MediaStreamTrack/unmute_event) 이벤트 처리기 속성으로도 수신할 수 있습니다.
 
-<dl class="hidden"><dt><code><a href="/ko/docs/Web/API/MediaStreamTrack/overconstrained_event">overconstrained</a></code> {{deprecated_inline}}</dt><dd>지정한 제약이 트랙과 호환되지 않아서 해당 제약을 무시할 때 발생합니다.<br><code><a href="/ko/docs/Web/API/MediaStreamTrack/onoverconstrained">onoverconstrained</a></code> 이벤트 처리기 속성으로도 수신할 수 있습니다.</dd></dl>
+<dl class="hidden"><dt><code><a href="/ko/docs/Web/API/MediaStreamTrack">overconstrained</a></code> {{deprecated_inline}}</dt><dd>지정한 제약이 트랙과 호환되지 않아서 해당 제약을 무시할 때 발생합니다.<br><code><a href="/ko/docs/Web/API/MediaStreamTrack">onoverconstrained</a></code> 이벤트 처리기 속성으로도 수신할 수 있습니다.</dd></dl>
 
 ## 명세
 

@@ -1,11 +1,12 @@
 ---
-title: scale3d()
+title: CSS `scale3d()` 関数
+short-title: scale3d()
 slug: Web/CSS/Reference/Values/transform-function/scale3d
 l10n:
-  sourceCommit: 8fd626a7b7f1fcb19193325bbac5b87e719f83ea
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
+**`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、三次元空間において要素を変倍する座標変換を定義します。
 変倍量はベクトル [sx, sy, sz] で定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scale3d()")}}
@@ -127,7 +128,7 @@ scale3d(sx, sy, sz)
   <tbody>
     <tr>
       <td colspan="2">
-        この座標変換は 3D 空間に適用され、平面で表すことはできません。
+        この座標変換は三次元空間に適用され、平面で表すことはできません。
       </td>
       <td>
         <math display="block">
@@ -220,7 +221,7 @@ div {
 - {{cssxref("&lt;transform-function&gt;")}}
 - [`scaleZ()`](/ja/docs/Web/CSS/Reference/Values/transform-function/scaleZ)
 - [`translate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/translate3d)
-- [`rotate3d()`](/ja/docs/Web/CSS/Reference/Values/transform-function/rotate3d)
+- {{cssxref("transform-function/rotate3d")}}
 - 独立した座標変換プロパティ:
   - {{cssxref("translate")}}
   - {{cssxref("scale")}}

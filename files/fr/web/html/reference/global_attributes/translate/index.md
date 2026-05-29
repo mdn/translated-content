@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML universel : translate"
+title: "Attribut HTML universel : `translate`"
 short-title: translate
 slug: Web/HTML/Reference/Global_attributes/translate
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 9c70c6ff09189cad43d40e241fbd2fe67349c3c2
 ---
 
 [L'attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`translate`** est un attribut [énuméré](/fr/docs/Glossary/Enumerated) utilisé pour définir si les valeurs _des attributs traduisibles_ d'un élément et ses nœuds enfants {{DOMxRef("Text")}} doivent être traduits lors de la localisation de la page, ou laissés inchangés.

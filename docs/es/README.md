@@ -24,8 +24,6 @@ Guía para colaborar traduciendo y manteniendo el contenido de MDN Web Docs al e
 
 Si no sabes por dónde comenzar, revisa los [issues con la etiqueta `l10n-es`](https://github.com/mdn/translated-content/issues?q=is%3Aissue+is%3Aopen+label%3Al10n-es). Allí publicamos documentos que necesitan traducción nueva, actualización o revisión. Comenta en el issue que te interese para evitar duplicar esfuerzos.
 
-También puedes revisar el [proyecto `ES` en GitHub](https://github.com/mdn/translated-content/projects/7) para ver el trabajo priorizado por la comunidad.
-
 ---
 
 ## Tipos de contribución que preferimos

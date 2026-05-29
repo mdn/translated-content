@@ -1,8 +1,9 @@
 ---
-title: "<dd> : l'élément de détail d'une description"
+title: "Élément HTML `<dd>` : l'élément de détail d'une description"
+short-title: <dd>
 slug: Web/HTML/Reference/Elements/dd
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dd>`** fournit la description, la définition ou la valeur du terme précédent ({{HTMLElement("dt")}}) dans une liste de description ({{HTMLElement("dl")}}).

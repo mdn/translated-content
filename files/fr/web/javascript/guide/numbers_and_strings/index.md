@@ -159,14 +159,14 @@ Le tableau qui suit liste certaines des propriétés de `Number`.
   </tbody>
 </table>
 
-| Méthode                              | Description                                                                                                                                                                               |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | Analyse un argument qui est une chaîne de caractères et renvoie un nombre décimal. Cette méthode est équivalente à la fonction {{jsxref("parseFloat", "parseFloat()")}}.                  |
-| {{jsxref("Number.parseInt()")}}      | Analyse un argument qui est une chaîne de caractères et renvoie un entier exprimé dans une base donnée. Cette méthode est équivalente à la fonction {{jsxref("parseInt", "parseInt()")}}. |
-| {{jsxref("Number.isFinite()")}}      | Détermine si la valeur passée en argument est un nombre fini.                                                                                                                             |
-| {{jsxref("Number.isInteger()")}}     | Détermine si la valeur passée en argument est un nombre entier.                                                                                                                           |
-| {{jsxref("Number.isNaN()")}}         | Détermine si la valeur passée en argument est {{jsxref("NaN")}}. Cette version est plus robuste que la fonction globale {{jsxref("Objets_globaux/isNaN", "isNaN()")}}.                    |
-| {{jsxref("Number.isSafeInteger()")}} | Détermine si la valeur fournie est un nombre qu'il est possible de représenter comme un entier sans perdre d'information.                                                                 |
+| Méthode                              | Description                                                                                                                                                                   |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Analyse un argument qui est une chaîne de caractères et renvoie un nombre décimal. Cette méthode est équivalente à la fonction {{jsxref("parseFloat()")}}.                    |
+| {{jsxref("Number.parseInt()")}}      | Analyse un argument qui est une chaîne de caractères et renvoie un entier exprimé dans une base donnée. Cette méthode est équivalente à la fonction {{jsxref("parseInt()")}}. |
+| {{jsxref("Number.isFinite()")}}      | Détermine si la valeur passée en argument est un nombre fini.                                                                                                                 |
+| {{jsxref("Number.isInteger()")}}     | Détermine si la valeur passée en argument est un nombre entier.                                                                                                               |
+| {{jsxref("Number.isNaN()")}}         | Détermine si la valeur passée en argument est {{jsxref("NaN")}}. Cette version est plus robuste que la fonction globale {{jsxref("isNaN()")}}.                                |
+| {{jsxref("Number.isSafeInteger()")}} | Détermine si la valeur fournie est un nombre qu'il est possible de représenter comme un entier sans perdre d'information.                                                     |
 
 Le prototype de `Number` fournit certaines méthodes pour exprimer les valeurs représentées par les objets `Number` dans différents formats. Le tableau suivant liste certaines de ces méthodes de `Number.prototype`.
 

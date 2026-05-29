@@ -1,8 +1,9 @@
 ---
-title: symbols
+title: Descripteur de règle CSS `symbols`
+short-title: symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/symbols
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`symbols`** de la règle {{CSSxRef("@counter-style")}} est utilisé pour définir les symboles servant à créer les représentations du compteur dans le système de compteur indiqué. Ce descripteur est obligatoire lorsque la valeur du descripteur {{CSSxRef('@counter-style/system', 'system')}} est `cyclic`, `numeric`, `alphabetic`, `symbolic` ou `fixed`.

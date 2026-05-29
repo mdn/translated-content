@@ -1,8 +1,9 @@
 ---
-title: hyphens
+title: Propriété CSS `hyphens`
+short-title: hyphens
 slug: Web/CSS/Reference/Properties/hyphens
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 The **`hyphens`** [CSS](/fr/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.

@@ -1,8 +1,9 @@
 ---
-title: page
+title: Propriété CSS `page`
+short-title: page
 slug: Web/CSS/Reference/Properties/page
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`page`** est utilisée pour définir la page nommée, un type spécifique de page défini par la [règle](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@page")}}.

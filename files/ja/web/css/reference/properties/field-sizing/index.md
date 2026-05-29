@@ -1,12 +1,10 @@
 ---
-title: field-sizing
+title: CSS `field-sizing` プロパティ
+short-title: field-sizing
 slug: Web/CSS/Reference/Properties/field-sizing
-original_slug: Web/CSS/field-sizing
 l10n:
-  sourceCommit: c88c96a09084aadc20ac2cabae2e19609b4a30d8
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
-
-{{seecompattable}}
 
 **`field-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォームコントロール要素のような、既定の推奨サイズが指定された要素のサイズ設定を制御することができます。このプロパティを使用すると、既定のサイズ設定を上書きすることができ、あるフォームコントロールがそのコンテンツに合わせてサイズを調整できるようになります。
 
@@ -36,7 +34,7 @@ field-sizing: unset;
 
 ## 解説
 
-`field-sizing: content` とすると、フォーム要素の既定の推奨サイズ設定を上書きします。この設定は、テキスト入力欄を内容がちょうど収まるように縮小し、テキストが入力されるにつれて大きくなるように設定する簡単な方法を提供します。コンテンツを含む要素のサイズによって定義されるか、 CSS によって設定されます）最大サイズの制限に達すると展開されなくなり、この点ではすべてのコンテンツを表示するにはスクロールが要求されます。
+`field-sizing: content` とすると、フォーム要素の既定の推奨サイズ設定を上書きします。この設定は、テキスト入力欄を内容がちょうど収まるように縮小し、テキストが入力されるにつれて大きくなるように設定する簡単な方法を提供します。コンテンツを含む要素のサイズによって定義されるか、CSS によって設定されます）最大サイズの制限に達すると展開されなくなり、この点ではすべてのコンテンツを表示するにはスクロールが要求されます。
 
 ### `field-sizing: content` の影響を受ける要素
 
@@ -49,10 +47,10 @@ field-sizing: unset;
 - [`file`](/ja/docs/Web/HTML/Reference/Elements/input/file) 入力型に対応しています。しかし、ユーザーがアップロードする新しいファイルを選択すると、表示されるファイル名が変わります。 `field-sizing: content` が設定されている場合、コントロールはファイル名がちょうど収まるようにサイズを変更します。
 - {{htmlelement("textarea")}} コントロールを制御します。 `field-sizing: content` を設定した `<textarea>` 要素は、以下の追加を除いて、単一の行テキストコントロールと同じように動作することは注目に値します。
   - もし `<textarea>` 要素が幅の制約のために大きくできない場合、新しい行のコンテンツを表示するために高さを大きくし始めます。高さの制約に達すると、すべてのコンテンツが表示されるようにスクロールバーを表示し始めます。
-  - [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) と [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) 属性は `<textarea>` の既定の推奨サイズを変更します。その結果、 `rows`/`cols` は `field-sizing: content` を設定した `<textarea>` 要素には効果がありません。
+  - [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows) と [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) 属性は `<textarea>` の既定の推奨サイズを変更します。そのため、`rows`/`cols` は `field-sizing: content` を設定した `<textarea>` 要素には効果がありません。
 - {{htmlelement("select")}} コントロールです。これらは、 `field-sizing: content` を設定した場合の動作とは少し異なります。効果の種類は作成する `<select>` コントロールの種類によって異なります。
   - 通常のドロップダウンボックスは、新しい値が選択されると、常に表示される選択肢の値に合わせて幅が変更されます。（既定では、ドロップダウンのサイズは、最長の選択肢の値を表示するのに十分な大きさに設定されています。）
-  - リストボックス（`<select>` 要素に [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) または [`size`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性を指定したもの）はスクロールしなくてもすべての選択肢を表示できる大きさになります。（既定では、ドロップダウンボックスはすべての選択肢の値を表示するためにスクロールを要求されます。）
+  - リストボックス（`<select>` 要素に [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) または [`size`](/ja/docs/Web/HTML/Reference/Elements/select#size) 属性を指定したもの）はスクロールしなくてもすべての選択肢を表示できる大きさになります。（既定では、ドロップダウンボックスはすべての選択肢の値を表示するためにスクロールを要求されます。）
   - [`size`](/ja/docs/Web/HTML/Reference/Elements/select#size) 属性は `<select>` 要素に `field-sizing: content` が設定することによる影響はとても小さくなります。このような場合、ブラウザーは `size` が `1` に等しいかどうかを調べて、 `<select>` コントロールがドロップダウンとして現れるか、リストボックスとして現れるかを判断します。しかし、 `size` が選択肢の数よりも小さい場合でも、常にリストボックスのすべての選択肢を表示されます。
 
 ### `field-sizing` と他のサイズ設定との相互作用
@@ -141,7 +139,7 @@ label {
 
 ### `<select>` 要素の表示を制御
 
-この例は、 `field-sizing: content` のドロップダウンメニュー型と複数行リストボックス型の {{htmlelement("select")}} 要素に対する効果の種類を示しています。
+この例は、`field-sizing: content` のドロップダウンメニュー型と複数行リストボックス型の {{htmlelement("select")}} 要素に対する効果の種類を示しています。
 
 #### HTML
 
@@ -213,10 +211,6 @@ div {
   align-items: flex-start;
   justify-content: space-around;
   flex-flow: row wrap;
-}
-
-select {
-  valign: top;
 }
 ```
 

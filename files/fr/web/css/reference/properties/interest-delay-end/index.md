@@ -1,8 +1,9 @@
 ---
-title: interest-delay-end
+title: Propriété CSS `interest-delay-end`
+short-title: interest-delay-end
 slug: Web/CSS/Reference/Properties/interest-delay-end
 l10n:
-  sourceCommit: e00212a2a707a57b49b58b37a6a6c978aaef2bbd
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}

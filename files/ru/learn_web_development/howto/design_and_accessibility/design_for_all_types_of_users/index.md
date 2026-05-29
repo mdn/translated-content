@@ -3,7 +3,7 @@ title: Как создать дизайн, подходящий для всех 
 slug: Learn_web_development/Howto/Design_and_accessibility/Design_for_all_types_of_users
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/ru/docs/Learn/Common_questions")}}
 
 Эта статья содержит основные советы, которые помогут вам создавать веб-сайты для любого типа пользователей.
 

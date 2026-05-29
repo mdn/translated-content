@@ -1,8 +1,9 @@
 ---
-title: padding
+title: Propriété CSS `padding`
+short-title: padding
 slug: Web/CSS/Reference/Properties/padding
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`padding`** définit la [zone de remplissage](/fr/docs/Web/CSS/Guides/Box_model/Introduction#zone_de_remplissage) sur les quatre côtés d'un élément en une seule fois.

@@ -220,7 +220,7 @@ Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître
 
 ### Conversions entre chaînes et tableaux
 
-Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref ("String. prototype. prototype. split ()","split ()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
+Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref("String.prototype.split()", "split()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
 
 > [!NOTE]
 > D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.

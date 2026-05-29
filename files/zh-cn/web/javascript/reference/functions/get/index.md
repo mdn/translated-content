@@ -129,7 +129,7 @@ get notifier() {
 
 ### `get` vs. `defineProperty`
 
-当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("classes")}}中使用时，二者有细微的差别。
+当使用 `get` 关键字时，它和{{jsxref("Object.defineProperty()")}} 有类似的效果，在{{jsxref("Classes")}}中使用时，二者有细微的差别。
 
 当使用 `get` 关键字时，属性将被定义在实例的原型上，当使用{{jsxref("Object.defineProperty()")}}时，属性将被定义在实例自身上。
 
@@ -164,7 +164,7 @@ console.log(
 ## 参见
 
 - [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)

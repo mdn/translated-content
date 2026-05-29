@@ -1,8 +1,9 @@
 ---
-title: "<rb> : l'élément de base ruby"
+title: "Élément HTML `<rb>` : l'élément de base ruby"
+short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 l10n:
-  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 {{Deprecated_Header}}

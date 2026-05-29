@@ -1,8 +1,9 @@
 ---
-title: rel="modulepreload"
+title: Valeur d'attribut HTML `rel="modulepreload"`
+short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: f529eadda54e8a3ed37b7c9d2182be61ce666b6a
+  sourceCommit: bf5017c389132af39b50106cf1763fa7106e87b4
 ---
 
 Le mot-clé **`modulepreload`** pour l'attribut [`rel`](/fr/docs/Web/HTML/Reference/Attributes/rel) de l'élément HTML {{HTMLElement("link")}} offre un moyen déclaratif de précharger un [module JavaScript](/fr/docs/Web/JavaScript/Guide/Modules), de l'analyser, de le compiler et de le stocker dans la carte des modules du document pour une exécution ultérieure.

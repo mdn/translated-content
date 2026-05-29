@@ -31,7 +31,7 @@ SVG の `fill` 属性は、以下の SVG 要素でアニメーションの最後
 
 ## 例
 
-### 基本色とグラデーションの塗り潰し、およびアニメーション
+### 基本色とグラデーションの塗りつぶし、およびアニメーション
 
 ```css hidden
 html,
@@ -43,10 +43,10 @@ svg {
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- 基本色の塗り潰し -->
+  <!-- 基本色の塗りつぶし -->
   <circle cx="50" cy="50" r="40" fill="pink" />
 
-  <!-- 円をグラデーションで塗り潰し -->
+  <!-- 円をグラデーションで塗りつぶし -->
   <defs>
     <radialGradient id="myGradient">
       <stop offset="0%" stop-color="pink" />
@@ -124,7 +124,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>remove</code></td>
     </tr>
     <tr>
@@ -150,7 +150,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>remove</code></td>
     </tr>
     <tr>
@@ -176,7 +176,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>remove</code></td>
     </tr>
     <tr>
@@ -201,7 +201,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -226,7 +226,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -251,7 +251,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -276,7 +276,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -301,7 +301,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -326,7 +326,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -352,12 +352,12 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>remove</code></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>No</td>
+      <td>不可</td>
     </tr>
   </tbody>
 </table>
@@ -377,7 +377,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -402,7 +402,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>
@@ -427,7 +427,7 @@ svg {
       </td>
     </tr>
     <tr>
-      <th scope="row">既定値</th>
+      <th scope="row">デフォルト値</th>
       <td><code>black</code></td>
     </tr>
     <tr>

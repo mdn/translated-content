@@ -22,7 +22,7 @@ from(object)
 
 ### 返回值
 
-如果 `object` 是一个可迭代对象，则会调用其 `[Symbol.iterator]()` 以获取迭代器。否则，`object` 将被视为一个迭代器。如果该迭代器的 `{{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}}` 结果为真（这意味着它在原型链中有 `Iterator.prototype`），则直接返回它。否则，创建一个包装了原始迭代器的新 {{jsxref("Iterator")}} 对象。
+如果 `object` 是一个可迭代对象，则会调用其 `[Symbol.iterator]()` 以获取迭代器。否则，`object` 将被视为一个迭代器。如果该迭代器的 `{{jsxref("instanceof")}} {{jsxref("Iterator")}}` 结果为真（这意味着它在原型链中有 `Iterator.prototype`），则直接返回它。否则，创建一个包装了原始迭代器的新 {{jsxref("Iterator")}} 对象。
 
 ## 描述
 

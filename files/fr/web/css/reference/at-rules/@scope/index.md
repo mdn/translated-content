@@ -1,8 +1,9 @@
 ---
-title: "@scope"
+title: Règle CSS `@scope`
+short-title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@scope`** permet de sélectionner des éléments dans des sous-arbres spécifiques du DOM, en ciblant précisément les éléments sans écrire des sélecteurs trop spécifiques difficiles à surcharger, et sans lier vos sélecteurs de façon trop étroite à la structure du DOM.

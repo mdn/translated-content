@@ -1,8 +1,9 @@
 ---
-title: "<script>: スクリプト要素"
+title: HTML `<script>` スクリプト要素
+short-title: <script>
 slug: Web/HTML/Reference/Elements/script
 l10n:
-  sourceCommit: 0e2ec54f4eb55cccad11af843d83061857918bee
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
 **`<script>`** は [HTML](/ja/docs/Web/HTML) の要素で、実行できるコードやデータを埋め込むために使用します。ふつうは JavaScript のコードの埋め込みや参照に使用されます。 `<script>` 要素は [WebGL](/ja/docs/Web/API/WebGL_API) の GLSL shader プログラミング言語、 [JSON](/ja/docs/Glossary/JSON) 等の他の言語にも使用することができます。
@@ -27,7 +28,7 @@ l10n:
 
     ブラウザーの対応状況については[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
 
-- `attributionsrc` {{experimental_inline}}
+- `attributionsrc` {{deprecated_inline}} {{non-standard_inline}}
   - : ブラウザーに、スクリプトリソースのリクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。サーバー側では、このヘッダーを使用して、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信し、それぞれ JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。どのレスポンスヘッダーを返すかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
 
     > [!NOTE]
@@ -76,8 +77,8 @@ l10n:
 
     この属性を `async` 属性とともに指定した場合、その要素は `async` 属性のみが指定されている場合と同等に動作します。
 
-- `fetchpriority`
-  - : 外部スクリプトをフェッチするときに使用する相対的な優先度のヒントを提供されます。
+- [`fetchpriority`](/ja/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : 外部スクリプト読み取るときに使用する相対的な優先度のヒントを提供されます。
     取りうる値は次の通りです。
     - `high`
       - : 外部スクリプトを、他の外部スクリプトと比較して高い優先度で取得します。
@@ -87,15 +88,12 @@ l10n:
       - : 取得の優先度の環境設定を指定しません。
         これが既定値です。
         値がない場合や、無効な値が設定されていた場合に使用されます。
-
-    詳しくは {{domxref("HTMLScriptElement.fetchPriority")}} を参照してください。
-
-- `integrity`
-  - : この属性には、取得したリソースが予期せぬ操作なしに配信されたことをユーザーエージェントが確認するために使用できるインラインメタデータが含まれています。 `src` 属性がない場合は、この属性を指定してはいけません。[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)を参照してください。
+- [`integrity`](/ja/docs/Web/HTML/Reference/Attributes/integrity)
+  - : この属性には、スクリプトの 1 つ以上の{{glossary("hash function", "ハッシュ")}}が含まれます。これは、スクリプトのコンテンツが開発者が想定した通りであり、[サプライチェーン攻撃](/ja/docs/Web/Security/Attacks/Supply_chain_attacks)によって悪意のあるスクリプトに置き換えられていないことを確実に確認するために使用されます。`src` 属性が存在しない場合、この属性を指定してはなりません。また、[サブリソース完全性](/ja/docs/Web/Security/Defenses/Subresource_Integrity)も同時に参照してください。
 - `nomodule`
   - : この論理属性は、 [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応しているブラウザーでは、スクリプトを実行するべきではないことを示します。要するに、モジュール式の JavaScript コードに対応していない古いブラウザー向けの代替スクリプトを提供するために使用できます。
 - `nonce`
-  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)内のスクリプトをホワイトリストに入れるための暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
+  - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)内のスクリプトを許可するための暗号{{Glossary("Nonce", "ノンス")}} (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
 - `referrerpolicy`
   - : スクリプトを読み込んだり、スクリプトがリソースを読み込んだりする際に、どの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信しません。
@@ -178,7 +176,7 @@ l10n:
 
 これは、さまざまなスクリプト読み込み方法と、それがページに意味していることを視覚的に表現したものです。
 
-![スクリプトの 3 種類の読み込み方法の動作: 既定では、 JavaScript を取得し実行する間、構文解析がブロックされます。 async では、構文解析は実行のみ一時停止します。 deferでは、構文解析は一時停止しませんが、他のすべての構文解析が完了した後に実行されます。](async-defer.jpg)
+![スクリプトの 3 種類の読み込み方法の動作: 既定では、 JavaScript を取得し実行する間、構文解析がブロックされます。 async では、構文解析は実行のみ一時停止します。 deferでは、構文解析は一時停止しませんが、他のすべての構文解析が完了した後に実行されます。](async-defer.png)
 
 _この画像は [HTML 仕様書](https://html.spec.whatwg.org/images/asyncdefer.svg) から取得したもので、 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ライセンス規定に基づいて縮小のためにコピーし切り抜いたものです。_
 
@@ -342,5 +340,5 @@ import { name as squareName, draw } from "square";
 ## 関連情報
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes' article on loading JavaScript efficiently and explaining the differences between `async` and `defer`](https://thevalleyofcode.com/javascript-async-defer/)
 - [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)ガイド

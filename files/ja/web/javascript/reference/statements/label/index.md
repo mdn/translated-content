@@ -22,7 +22,7 @@ loop1: for (let i = 0; i < 5; i++) {
 }
 
 console.log(str);
-// Expected output: "0234"
+// 予想される結果: "0234"
 ```
 
 ## 構文

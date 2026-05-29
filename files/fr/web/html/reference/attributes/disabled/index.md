@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : disabled"
+title: "Attribut HTML : `disabled`"
 short-title: disabled
 slug: Web/HTML/Reference/Attributes/disabled
 l10n:
-  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut booléen **`disabled`**, lorsqu'il est présent, rend l'élément non modifiable, non sélectionnable, ou même non soumis avec le formulaire. L'utilisateur·rice ne peut ni modifier ni sélectionner le contrôle, ni les descendants du contrôle de formulaire. Si l'attribut `disabled` est défini sur un contrôle de formulaire, l'élément et ses descendants de contrôle de formulaire ne participent pas à la validation des contraintes. Souvent, les navigateurs grisent ces contrôles et ils ne reçoivent aucun événement de navigation, comme les clics de souris ou les événements liés à la sélection.

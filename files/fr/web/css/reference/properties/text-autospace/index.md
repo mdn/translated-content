@@ -1,8 +1,9 @@
 ---
-title: text-autospace
+title: Propriété CSS `text-autospace`
+short-title: text-autospace
 slug: Web/CSS/Reference/Properties/text-autospace
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`text-autospace`** permet de définir l'espacement appliqué entre les caractères chinois/japonais/coréens (CJK) et les caractères non-CJK.

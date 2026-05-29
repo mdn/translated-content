@@ -53,7 +53,7 @@ Intl.NumberFormat.call(this[, locales[, options]])
 - `options`
   - : Opcional. Um objeto com alguns ou todas as seguintes propriedades:
     - `localeMatcher`
-      - : O algoritmo de comparação de localização para utilizar. Os valores permitidos são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para mais informações sobre esta opção, veja {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.
+      - : O algoritmo de comparação de localização para utilizar. Os valores permitidos são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para mais informações sobre esta opção, veja {{jsxref("Intl", "Intl page", "#Locale_negotiation", 1)}}.
     - `style`
       - : O estilo do formato a ser utilizado. Os valores permitidos são `"decimal"` para formato de número simples, `"currency"` para formato monetário e `"percent"` para formato percentual; o padrão é `"decimal"`.
     - `currency`
@@ -79,12 +79,12 @@ Intl.NumberFormat.call(this[, locales[, options]])
 
 ### Propriedades
 
-- {{jsxref("NumberFormat.prototype", "Intl.NumberFormat.prototype")}}
+- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat.prototype")}}
   - : Pertime a inclusão de propriedades a todos os objetos.
 
 ### Métodos
 
-- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
   - : Retorna uma matriz contendo as localizações fornecidas que são suportadas sem retornar a localização padrão em tempo de execução.
 
 ## Instâncias `NumberFormat`

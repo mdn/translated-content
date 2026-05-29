@@ -1,8 +1,9 @@
 ---
-title: rotate
+title: Propriété CSS `rotate`
+short-title: rotate
 slug: Web/CSS/Reference/Properties/rotate
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`rotate`** vous permet de définir des transformations de rotation individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela correspond mieux à l'utilisation typique de l'interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformation à spécifier dans la propriété `transform`.

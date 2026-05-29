@@ -1,8 +1,9 @@
 ---
-title: transform-box
+title: Propriété CSS `transform-box`
+short-title: transform-box
 slug: Web/CSS/Reference/Properties/transform-box
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`transform-box`** définit la boîte de mise en page à laquelle les propriétés {{CSSxRef("transform")}}, les propriétés de transformation individuelles {{CSSxRef("translate")}}, {{CSSxRef("scale")}} et {{CSSxRef("rotate")}}, ainsi que la propriété {{CSSxRef("transform-origin")}} se rapportent.

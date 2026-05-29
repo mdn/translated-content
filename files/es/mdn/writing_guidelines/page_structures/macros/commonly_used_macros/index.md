@@ -129,7 +129,6 @@ Estas plantillas tienen la misma semántica que sus contrapartes en línea descr
 - [`Non-standard_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/yari/tree/main/kumascript/macros/SeeCompatTable.ejs) se debe usar en páginas que documentan [características experimentales](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). Ejemplo: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
-- [`Deprecated_Header`](https://github.com/mdn/yari/tree/main/kumascript/macros/Deprecated_Header.ejs) con parámetro: `\{{Deprecated_Header("gecko5")}}` {{Deprecated_Header("gecko5")}} No utilices el parámetro en ninguna área de diagnóstico del navegador (HTML, APIs, JS, CSS, …).
 - [`secureContext_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/secureContext_header.ejs): `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### Indica que una función está disponible en `workers` web

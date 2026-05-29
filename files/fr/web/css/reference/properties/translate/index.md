@@ -1,8 +1,9 @@
 ---
-title: translate
+title: Propriété CSS `translate`
+short-title: translate
 slug: Web/CSS/Reference/Properties/translate
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`translate`** permet de définir des opérations de décalage, individuellement et indépendamment de la propriété {{CSSxRef("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à définir pour `transform`.

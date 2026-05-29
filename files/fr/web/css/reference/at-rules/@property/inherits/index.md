@@ -1,8 +1,9 @@
 ---
-title: inherits
+title: Descripteur de règle CSS `inherits`
+short-title: inherits
 slug: Web/CSS/Reference/At-rules/@property/inherits
 l10n:
-  sourceCommit: 98bbdcd90e5487539cebe19b12fe3d731fb5a03e
+  sourceCommit: f0094356d3acb19475dde45508dfeac6abf596db
 ---
 
 Le {{Glossary("CSS_Descriptor", "descripteur")}} [CSS](/fr/docs/Web/CSS) **`inherits`** de la [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) {{CSSxRef("@property")}} contrôle si la [propriété personnalisée CSS](/fr/docs/Web/CSS/Reference/Properties/--*) enregistrée hérite ou non de sa valeur par défaut.

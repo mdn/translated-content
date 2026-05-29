@@ -1,8 +1,9 @@
 ---
-title: offset-position
+title: Propriété CSS `offset-position`
+short-title: offset-position
 slug: Web/CSS/Reference/Properties/offset-position
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la position initiale d'un élément le long d'un chemin. Cette propriété est généralement utilisée en combinaison avec la propriété {{CSSxRef("offset-path")}} pour créer un effet de mouvement. La valeur de `offset-position` détermine où l'élément est placé initialement pour se déplacer le long d'un chemin de décalage si une fonction `offset-path` telle que {{CSSxRef("basic-shape/path", "path()")}} ne définit pas sa propre position de départ.

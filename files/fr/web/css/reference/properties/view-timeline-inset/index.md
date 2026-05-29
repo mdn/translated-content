@@ -1,8 +1,9 @@
 ---
-title: view-timeline-inset
+title: Propriété CSS `view-timeline-inset`
+short-title: view-timeline-inset
 slug: Web/CSS/Reference/Properties/view-timeline-inset
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`view-timeline-inset`** est utilisée pour définir une ou deux valeurs représentant un ajustement de la position de la zone d'affichage de défilement (voir {{Glossary("Scroll container", "Conteneur de défilement")}} pour plus de détails) dans lequel l'élément sujet d'une animation de _chronologie de progression de la vue nommée_ est considéré comme visible. En d'autres termes, cela permet de définir des valeurs d'encart (ou de retrait) de début et/ou de fin qui décalent la position de la chronologie.
@@ -11,7 +12,7 @@ Cela peut être combiné avec ou utilisé à la place de {{CSSxRef("animation-ra
 Voir [Animations CSS pilotées par le défilement](/fr/docs/Web/CSS/Guides/Scroll-driven_animations) pour plus de détails.
 
 > [!NOTE]
-> Si l'élément défilant ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne sera créée.
+> Si l'élément défilant ne déborde pas de son conteneur dans la dimension de l'axe ou si le débordement est masqué ou coupé, aucune chronologie de progression de défilement ne est créée.
 
 Les propriétés `view-timeline-inset`, {{CSSxRef("view-timeline-axis")}} et {{CSSxRef("view-timeline-name")}} peuvent également être définies en utilisant la propriété raccourcie {{CSSxRef("view-timeline")}}.
 
@@ -34,11 +35,11 @@ view-timeline-inset: 20% 200px;
 Les valeurs autorisées pour `view-timeline-inset` sont&nbsp;:
 
 - `auto`
-  - : Si défini, le {{CSSxRef("scroll-padding")}} correspondant (ou la valeur longue équivalente) pour ce bord du conteneur de défilement est utilisé. Si cela n'est pas défini (ou défini sur `auto`), la valeur sera généralement 0, bien que certains agents utilisateurs puissent utiliser des heuristiques pour déterminer une valeur par défaut différente si nécessaire.
+  - : Si défini, le {{CSSxRef("scroll-padding")}} correspondant (ou la valeur longue équivalente) pour ce bord du conteneur de défilement est utilisé. Si cela n'est pas défini (ou défini sur `auto`), la valeur est généralement 0, bien que certains agents utilisateurs puissent utiliser des heuristiques pour déterminer une valeur par défaut différente si nécessaire.
 - {{CSSxRef("length-percentage")}}
   - : Toute valeur valide de `<length-percentage>` est acceptée comme valeur d'encart/retrait.
-    - Si la valeur est positive, la position du début/fin de l'animation sera déplacée à l'intérieur du conteneur de défilement de la longueur ou du pourcentage défini.
-    - Si la valeur est négative, la position du début/fin de l'animation sera déplacée à l'extérieur du conteneur de défilement de la longueur ou du pourcentage défini, c'est-à-dire que l'animation commencera avant que l'élément n'apparaisse dans le conteneur de défilement, ou se terminera après qu'il ait quitté le conteneur de défilement.
+    - Si la valeur est positive, la position du début/fin de l'animation est déplacée à l'intérieur du conteneur de défilement de la longueur ou du pourcentage défini.
+    - Si la valeur est négative, la position du début/fin de l'animation est déplacée à l'extérieur du conteneur de défilement de la longueur ou du pourcentage défini, c'est-à-dire que l'animation commence avant que l'élément n'apparaisse dans le conteneur de défilement, ou se termine après qu'il ait quitté le conteneur de défilement.
 
 Si deux valeurs sont fournies, la première valeur représente l'encart/retrait de début dans l'axe pertinent (où l'animation commence) et la deuxième valeur représente l'encart/retrait de fin (où l'animation se termine). Si une seule valeur est fournie, l'encart/retrait de début et de fin est défini sur la même valeur.
 
@@ -131,7 +132,7 @@ p {
 }
 ```
 
-L'élément `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline` est défini pour créer une chronologie de progression de vue nommée. Nous lui donnons également une déclaration `view-timeline-inset` pour que l'animation commence plus tard que prévu et se termine plus tôt. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément sera animé au fur et à mesure de la progression de la chronologie de progression de vue.
+L'élément `<div>` avec la classe `sujet` reçoit également une classe `animation` — c'est ici que `view-timeline` est défini pour créer une chronologie de progression de vue nommée. Nous lui donnons également une déclaration `view-timeline-inset` pour que l'animation commence plus tard que prévu et se termine plus tôt. Il reçoit également un nom `animation-timeline` avec la même valeur pour déclarer que cet élément est animé au fur et à mesure de la progression de la chronologie de progression de vue.
 
 Enfin, une animation est définie sur l'élément qui anime son opacité et son échelle, ce qui lui permet de s'estomper et de grandir à mesure qu'il se déplace vers le haut du défileur.
 

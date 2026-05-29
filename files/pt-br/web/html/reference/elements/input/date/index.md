@@ -33,7 +33,7 @@ O controle de data do Firefox se parece assim:
         <strong><a href="#value">Value</a></strong>
       </td>
       <td>
-        Um {{domxref("DOMString")}} que representa uma data no formato
+        Um {{jsxref("String")}} que representa uma data no formato
         AAAA-MM-DD ou vazio
       </td>
     </tr>
@@ -70,7 +70,7 @@ O controle de data do Firefox se parece assim:
 
 ## Valores
 
-Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value), como:
+Um {{jsxref("String")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Reference/Elements/input#value), como:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />

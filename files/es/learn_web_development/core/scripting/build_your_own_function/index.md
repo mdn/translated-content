@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Functions","Learn_web_development/Core/Scripting/Return_values", "Learn_web_development/Core/Scripting")}}
 
 Con la mayor parte de la teoría esencial tratada en el artículo anterior, este artículo proporciona experiencia práctica. Aquí obtendrás práctica construyendo tu propia función personalizada. En el camino, también explicaremos algunos detalles útiles sobre cómo tratar las funciones.
 
