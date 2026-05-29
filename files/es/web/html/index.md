@@ -63,7 +63,7 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 **[Tipos y formatos de medios en la Web](/es/docs/Web/Media/Guides/Formats)**
 : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} permiten reproducir contenido multimedia de forma nativa sin necesidad de software adicional.
 
-## Cómo...
+## Cómo
 
 **[Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)**
 : HTML ofrece varias formas de representar definiciones, ya sea en línea o mediante glosarios estructurados. Proporciona contexto semántico a los términos para los lectores y los motores de búsqueda.
