@@ -28,7 +28,7 @@ Los recursos útiles para redactar cualquier documentación incluyen:
 3. Los últimos navegadores web modernos: Estas deberían ser compilaciones experimentales/alfa como [Firefox Nightly](https://www.mozilla.org/es/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/es/chrome/canary/) que tienen más probabilidades de admitir las funciones que estás documentando. Esto es especialmente pertinente si estás documentando una función que está en "camino" (upcoming).
 4. Demostraciones/publicaciones de blog/otra información: busca tanta información como puedas. Si estás actualizando una tecnología porque ha cambiado, asegúrate de que los recursos que estás utilizando para aprender no estén desactualizados. Por eso los dos primeros puntos anteriores son importantes.
 
-También puede ser aconsejable intentar encontrar a alguien que le ayude a responder sus preguntas. Pueden ser los autores de las especificaciones o los ingenieros que implementan las características del navegador.
+También puede ser aconsejable intentar encontrar a alguien que te ayude a responder tus preguntas. Pueden ser los autores de las especificaciones o los ingenieros que implementan las características del navegador.
 
 ### Lectura de especificaciones
 
