@@ -298,6 +298,6 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 - [Formato de texto en la Guía de JavaScript](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 - {{jsxref("RegExp")}}
-- {{domxref("DOMString")}}
+- {{jsxref("String")}}
 - [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/docs/Mozilla/Add-ons/Code_snippets/StringView)
 - [Cadenas binarias](/es/docs/Web/API/Window/btoa)
