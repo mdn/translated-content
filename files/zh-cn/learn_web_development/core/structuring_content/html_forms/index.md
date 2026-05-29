@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 5f677b960051016819ecb3b1f40bc3d36a43156d
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content/Debugging_HTML", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 中的表单和按钮是与网站用户进行交互的强大工具。它们常用于为用户提供控件，以便操作用户界面（UI）或在需要时输入数据。
 
