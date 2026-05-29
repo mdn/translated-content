@@ -16,7 +16,7 @@ l10n:
 ## 関連情報
 
 - {{Glossary("Visual viewport", "視覚的ビューポート")}}
-{{Glossary("layout viewport", "レイアウトビューポート")}}
+- {{Glossary("layout viewport", "レイアウトビューポート")}}
 - [ビューポートの概念](/ja/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
 - [CSSOM ビュー](/ja/docs/Web/CSS/Guides/CSSOM_view) モジュール
 - [CSSOM ビュー API](/ja/docs/Web/API/CSSOM_view_API)
