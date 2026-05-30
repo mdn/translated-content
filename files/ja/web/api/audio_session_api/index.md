@@ -71,9 +71,9 @@ navigator.mediaDevices
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("AudioSession")}}
 - {{domxref("Navigator.audioSession")}}
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - {{domxref("HTMLMediaElement")}}
