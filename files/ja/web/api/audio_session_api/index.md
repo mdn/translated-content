@@ -11,7 +11,7 @@ l10n:
 
 ## 概念と使用法
 
-People increasingly consume media through the web: it is now a primary channel for accessing audio and video content. However, media on the web often lacks seamless integration with underlying platforms. The Audio Session API addresses this gap by allowing developers to specify how the audio produced by their web applications interacts with audio from other applications on the device — for example, playing along with other audio, ducking it (reducing its volume), or pausing it so their audio can play on its own.
+人々はますますウェブを通じてメディアを消費するようになり、ウェブは今やオーディオやビデオコンテンツにアクセスするための主要なチャネルとなっています。しかし、ウェブ上のメディアは、基盤となるプラットフォームとのシームレスな統合が欠けている場合が少なくありません。 Audio Session API は、開発者がウェブアプリケーションで生成されたオーディオがデバイス上の他のアプリケーションのオーディオとどのように相互作用するかを指定できるようにすることで、このギャップを解消します。例えば、他のオーディオと同時に再生したり、音量を下げたり、一時停止してオーディオを単独で再生したりできます。
 
 A web page can perform audio processing in various ways using APIs such as {{domxref("HTMLMediaElement")}} and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). An **audio session** represents the aggregated audio produced by a web page, enabling it to express the general nature of its audio output.
 
