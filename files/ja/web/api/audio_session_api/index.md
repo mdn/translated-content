@@ -9,7 +9,7 @@ l10n:
 
 **オーディオセッション API** は、 Web アプリケーションが、デバイス上で再生されている他のオーディオとの相互作用を制御するためのメカニズムを提供します。
 
-## Concepts and usage
+## 概念と使用法
 
 People increasingly consume media through the web: it is now a primary channel for accessing audio and video content. However, media on the web often lacks seamless integration with underlying platforms. The Audio Session API addresses this gap by allowing developers to specify how the audio produced by their web applications interacts with audio from other applications on the device — for example, playing along with other audio, ducking it (reducing its volume), or pausing it so their audio can play on its own.
 
