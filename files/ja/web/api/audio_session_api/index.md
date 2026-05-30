@@ -20,7 +20,7 @@ l10n:
 API は、アプリケーションが生成するオーディオの種類を指定する、いくつかのオーディオセッションタイプをサポートしています。
 
 - `"auto"` — デフォルト。ユーザーエージェントは、使用されているオーディオ API に基づいて最適なタイプを自動的に選択します。
-- `"playback"` — For media playback such as music or video. This type should not mix with other audio playback .
+- `"playback"` — 音楽や動画などのメディア再生用です。このタイプの機器は、他のオーディオ再生機器と混用しないでください。
 - `"transient"` — For short sounds like notifications. This type usually plays on top of other audio.
 - `"transient-solo"` — For audio that should play exclusively, pausing all other audio (such as voice prompts).
 - `"ambient"` — For audio that can mix with other audio sources.
