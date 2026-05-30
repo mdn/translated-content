@@ -1,12 +1,8 @@
 ---
-title: Audio Session API
+title: オーディオセッション API
 slug: Web/API/Audio_Session_API
-page-type: web-api-overview
-status:
-  - experimental
-browser-compat:
-  - api.AudioSession
-  - api.Navigator.audioSession
+l10n:
+  sourceCommit: 7afb60028792bba6b9c809867bc6c5304f9868a6
 ---
 
 {{DefaultAPISidebar("Audio Session API")}}{{SeeCompatTable}}
