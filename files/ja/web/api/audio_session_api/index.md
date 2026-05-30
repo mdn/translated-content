@@ -17,7 +17,7 @@ l10n:
 
 ### 音声セッションの種類
 
-The API supports several audio session types, which specify the type of audio an application is producing:
+API は、アプリケーションが生成するオーディオの種類を指定する、いくつかのオーディオセッションタイプをサポートしています。
 
 - `"auto"` — The default. The user agent automatically chooses the best type based on the audio APIs being used.
 - `"playback"` — For media playback such as music or video. This type should not mix with other audio playback .
