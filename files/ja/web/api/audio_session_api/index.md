@@ -15,7 +15,7 @@ l10n:
 
 ウェブページは、 {{domxref("HTMLMediaElement")}} や [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)どのAPIを使用して、さまざまな方法で音声処理を実行できます。**オーディオセッション**は、ウェブページによって生成された集約された音声を表し、ウェブページが音声出力の一般的な性質を表現できるようにします。
 
-### Audio session types
+### 音声セッションの種類
 
 The API supports several audio session types, which specify the type of audio an application is producing:
 
