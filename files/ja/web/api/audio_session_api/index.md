@@ -63,7 +63,7 @@ navigator.mediaDevices
   });
 ```
 
-## Specifications
+## 仕様
 
 {{Specifications}}
 
