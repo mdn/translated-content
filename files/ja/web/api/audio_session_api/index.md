@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Audio Session API")}}{{SeeCompatTable}}
 
-The **Audio Session API** provides a mechanism for web applications to control how their audio interacts with other audio playing on a device.
+**オーディオセッション API** は、 Web アプリケーションが、デバイス上で再生されている他のオーディオとの相互作用を制御するためのメカニズムを提供します。
 
 ## Concepts and usage
 
