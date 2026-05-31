@@ -106,7 +106,7 @@ if (!Array.prototype.flatMap) {
 
 ## Ver también
 
-- {{jsxref("Array.prototype.flatten()")}}
+- {{jsxref("Array.prototype.flat()", "Array.prototype.flatten()")}}
 - {{jsxref("Array.prototype.map()")}}
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.concat()")}}

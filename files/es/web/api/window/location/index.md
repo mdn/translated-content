@@ -7,7 +7,7 @@ slug: Web/API/Window/location
 
 La propiedad de sólo lectura `Window.location` retorna un objeto {{domxref("Location")}} con información acerca de la ubicación actual del documento.
 
-`Window.location` no sólo es una propiedad de sólo lectura, también se le puede asignar un {{domxref("DOMString")}}. Esto significa que puedes trabajar con `location` como si fuera una cadena de caracteres en la mayoría de los casos: `location = 'http://www.example.com'` es un sinónimo de `location.href = 'http://www.example.com'`.
+`Window.location` no sólo es una propiedad de sólo lectura, también se le puede asignar un {{jsxref("String")}}. Esto significa que puedes trabajar con `location` como si fuera una cadena de caracteres en la mayoría de los casos: `location = 'http://www.example.com'` es un sinónimo de `location.href = 'http://www.example.com'`.
 
 ## Sintaxis
 
