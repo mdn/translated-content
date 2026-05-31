@@ -8,7 +8,7 @@ l10n:
 > [!WARNING]
 > L'approche décrite dans ce sujet n'est pas standard et n'est pas recommandée.
 >
-> La meilleure façon de demander des ressources via HTTP est d'utiliser {{DOMxRef("Window/fetch", "fetch()")}}, qui permet de définir la priorité ([`priority`](/fr/docs/Web/API/RequestInit#priority)).
+> La meilleure façon de demander des ressources avec HTTP est d'utiliser {{DOMxRef("Window/fetch", "fetch()")}}, qui permet de définir la priorité ([`priority`](/fr/docs/Web/API/RequestInit#priority)).
 > Vous pouvez également définir la priorité HTTP sur les éléments [`HTMLLinkElement`](/fr/docs/Web/API/HTMLLinkElement/fetchPriority), {{DOMxRef("HTMLIFrameElement")}} et [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement/fetchPriority) (et les balises associées) en utilisant l'attribut `fetchpriority`.
 
 Dans [Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5), une API a été ajoutée pour prendre en charge la modification de la priorité des requêtes [HTTP](/fr/docs/Web/HTTP). Avant cela, il n'existait aucun moyen d'indiquer directement qu'une requête avait une priorité différente. L'API est définie dans `nsISupportsPriority`, mais elle est exprimée en termes très génériques afin que tout objet puisse implémenter cette interface pour activer le concept de priorité. Cet article traite spécifiquement de l'utilisation de cette interface pour modifier la priorité des requêtes HTTP.
@@ -27,7 +27,7 @@ Pour modifier la priorité d'une requête HTTP, vous devez accéder au `nsIChann
 var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(
   Components.interfaces.nsIIOService,
 );
-var ch = ios.newChannel("https://www.example.com/", null, null);
+var ch = ios.newChannel("https://www.exemple.com/", null, null);
 ```
 
 Une fois que vous disposez d'un `nsIChannel`, vous pouvez accéder à la priorité de la manière suivante&nbsp;:
@@ -42,11 +42,11 @@ Pour plus de commodité, l'interface définit plusieurs valeurs de priorité sta
 
 ## Obtenir un `nsIChannel` depuis `XMLHttpRequest`
 
-Si vous programmez en [JavaScript](/fr/docs/Web/JavaScript), vous voudrez probablement utiliser {{DOMxRef("XMLHttpRequest")}}, une abstraction de niveau supérieur pour une requête HTTP. Vous pouvez accéder au membre `channel` d'un {{DOMxRef("XMLHttpRequest")}} une fois que vous avez appelé sa méthode `open`, comme suit&nbsp;:
+Si vous programmez en [JavaScript](/fr/docs/Web/JavaScript), vous voulez probablement utiliser {{DOMxRef("XMLHttpRequest")}}, une abstraction de niveau supérieur pour une requête HTTP. Vous pouvez accéder au membre `channel` d'un {{DOMxRef("XMLHttpRequest")}} une fois que vous avez appelé sa méthode `open`, comme suit&nbsp;:
 
 ```js
 var req = new XMLHttpRequest();
-req.open("GET", "https://www.example.com", false);
+req.open("GET", "https://www.exemple.com", false);
 if (req.channel instanceof Components.interfaces.nsISupportsPriority) {
   req.channel.priority =
     Components.interfaces.nsISupportsPriority.PRIORITY_LOWEST;
@@ -68,4 +68,4 @@ if (ch instanceof Components.interfaces.nsISupportsPriority) {
 }
 ```
 
-Rappelez-vous que des nombres plus faibles signifient une priorité plus élevée, donc ajuster par un nombre négatif augmentera la priorité de la requête.
+Rappelez-vous que des nombres plus faibles signifient une priorité plus élevée, donc ajuster par un nombre négatif augmente la priorité de la requête.
