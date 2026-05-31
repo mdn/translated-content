@@ -1,70 +1,51 @@
 ---
-title: Vary
+title: Vary ヘッダー
+short-title: Vary
 slug: Web/HTTP/Reference/Headers/Vary
-original_slug: Web/HTTP/Headers/Vary
+l10n:
+  sourceCommit: 7f6778934020a9b5b82b4dd8ca79a99bc9950c2a
 ---
 
-**`Vary`** HTTP レスポンスヘッダーは、オリジンのサーバーから新しく要求するのではなく、キャッシュされたレスポンスを使用できるかどうかを決定するために将来のリクエストヘッダーをどのように一致させるかを決定します。これは、[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)アルゴリズムでリソースの表現を選択するときにどのヘッダーを使用したかを示すためにサーバーによって使用されます。
+HTTP の **`Vary`** {{Glossary("response header", "レスポンスヘッダー")}} は、そのヘッダーが含まれるレスポンスのコンテンツに影響を与えた、リクエストメッセージの要素（メソッドと URL 以外のもの）を説明するものです。
+`Vary` ヘッダーを設定するすることで、`Vary` フィールドに設定されているヘッダーに基づいて、レスポンスが別個にキャッシュされるようにすることができます。
+多くの場合、これは[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)が使用されている際に、キャッシュキーを作成するために用いられます。
 
-`Vary` ヘッダーは {{HTTPStatus("200")}} `OK` レスポンスに設定されるのと同様に、 {{HTTPStatus("304")}} `Not Modified` にも設定されます。
+指定されたURLに対するすべてのレスポンスでは、{{HTTPStatus("304")}} `Not Modified` レスポンスや「デフォルト」のレスポンスを含め、同じ `Vary` ヘッダー値を使用してください。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">ヘッダー種別</th>
-      <td>
-        {{Glossary("Response header", "レスポンスヘッダー")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
-      </th>
-      <td>いいえ</td>
+      <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
   </tbody>
 </table>
 
 ## 構文
 
-```
+```http
 Vary: *
-Vary: <header-name>, <header-name>, ...
+Vary: <header-name>, …, <header-nameN>
 ```
 
 ## ディレクティブ
 
-- \*
-  - : URL のための各リクエストは、固有でキャッシュ不可能なリクエストとして扱われると仮定されます。これを示すのには {{HTTPHeader("Cache-Control")}}: `no-store` を使用したほうが良く、こちらはより明確に読むことができ、オブジェクトが保存されないことを示します。
-- \<header-name>
-  - : コンマ区切りで、キャッシュされたレスポンスが使用されるかどうかを決定する際に関わるヘッダー名のリストです。
-
-## 例
-
-### 動的な提供
-
-`Vary: User-Agent` ヘッダーが使用されたとき、キャッシュサーバーはキャッシュからページを提供するかどうかを決定する際にユーザーエージェントを考慮するべきです。例えば、モバイルユーザーに対して異なるコンテンツを提供しているのであれば、誤ってサイトのデスクトップ版のサイトをモバイルユーザーに対して提供してしまうことを防ぐのに役立ちます。これは Google 等の検索エンジンがページのモバイル版を発見するのに役立ち、 [クローキング](https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0) を求めずに区別することができる可能性があります。
-
-```
-Vary: User-Agent
-```
+- `*` (ワイルドカード)
+  - : リクエストヘッダー以外 の要因が、このレスポンスの生成に影響を与えました。これは、このレスポンスがキャッシュ不可であることを意味します。
+- `<header-name>`
+  - : このレスポンスの生成に影響を与えた可能性のあるリクエストヘッダー名です。
 
 ## 仕様書
 
-| 仕様書                           | 題名                                                          |
-| -------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 {{Compat}}
 
-## 互換性メモ
-
-- [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
-
 ## 関連情報
 
-- [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
-- [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](/ja/docs/Web/HTTP/Guides/Content_negotiation)
+- [コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation)
+- [HTTP キャッシュ: Vary](/ja/docs/Web/HTTP/Guides/Caching#vary)
+- [Understanding The Vary Header](https://www.smashingmagazine.com/2017/11/understanding-vary-header/) - smashingmagazine.com (2017)
+- [Best Practices for Using the Vary Header](https://www.fastly.com/blog/best-practices-using-vary-header) - fastly.com
