@@ -74,4 +74,4 @@ Es importante aclarar a los lectores el estado de estandarización actual de est
 - Añadir una sección "Posiciones sobre estándares" en la misma página que el banner anterior, como subsección de la sección estándar "Especificaciones".
 
 > [!NOTE]
-> Consulta [Related Website Sets](/es/docs/Web/API/Storage_Access_API/Related_website_sets) para ver un ejemplo de la sección "Posiciones sobre estándares", lo que debería contene y el banner de la página de inicio.
+> Consulta [Related Website Sets](/es/docs/Web/API/Storage_Access_API/Related_website_sets) para ver un ejemplo de la sección "Posiciones sobre estándares", lo que debería contener y el banner de la página de inicio.
