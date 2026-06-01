@@ -2,7 +2,7 @@
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 l10n:
-  sourceCommit: 21d44fab158378a975fd89ec37e46ec68a411bf2
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
 **`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳ができるようにします。
