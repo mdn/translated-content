@@ -182,4 +182,4 @@ try {
 
 ## 参见
 
-- [使用 Media Session API 自定义媒体通知和播放控制](https://web.dev/articles/media-session) 在 web.dev (2024)
+- [使用 Media Session API 自定义媒体通知和播放控制](https://web.developers.google.cn/articles/media-session) 在 web.dev (2024)
