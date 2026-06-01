@@ -14,8 +14,8 @@ HTTP の **`Connection`** ヘッダーは、現在のトランザクションが
 
 標準の[ホップバイホップ](/ja/docs/Web/HTTP/Reference/Headers#hop-by-hop_headers)ヘッダー ({{HTTPHeader("Keep-Alive")}}、{{HTTPHeader("Transfer-Encoding")}}、{{HTTPHeader("TE")}}、`Connection`、{{HTTPHeader("Trailer")}}、{{HTTPHeader("Upgrade")}}、{{HTTPHeader("Proxy-Authorization")}}、{{HTTPHeader("Proxy-Authenticate")}}) を除き、メッセージで使用しているホップバイホップヘッダーは `Connection` ヘッダーに列挙する必要があります。これにより、最初のプロキシーは、これらの情報を転送せずに自身で処理しなければならないことを認識できるようになります。
 
-`Connection` のデフォルト値が、変更されました。
-そのため、下位互換性を確保するために、HTTP/1.1 ではデフォルト設定となっているにもかかわらず、ブラウザーはしばしば明示的に `Connection: keep-alive` を送信します。
+`Connection` のデフォルト値が、HTTP/1.0 と HTTP/1.1 の間で変更されました。
+下位互換性を確保するために、HTTP/1.1 ではデフォルト設定となっているにもかかわらず、ブラウザーはしばしば明示的に `Connection: keep-alive` を送信します。
 
 <table class="properties">
   <tbody>
@@ -27,7 +27,7 @@ HTTP の **`Connection`** ヘッダーは、現在のトランザクションが
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
-      <td>yes</td>
+      <td>はい</td>
     </tr>
   </tbody>
 </table>

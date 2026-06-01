@@ -13,10 +13,10 @@ Los errores en tiempo de ejecución dan como resultado la creación y lanzamient
 
 ### Tipos `Error`
 
-Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta {{JSxRef("Guide/Control_de_flujo_y_manejo_de_errores", "Declaraciones para el manejo de excepciones", "#Sentencias_de_manejo_de_excepciones", 1)}}.
+Además del constructor genérico `Error`, hay otros siete constructores de errores en el núcleo de JavaScript. Para conocer las excepciones de lado del cliente, consulta [Declaraciones para el manejo de excepciones](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Sentencias_de_manejo_de_excepciones).
 
 - {{JSxRef("EvalError")}}
-  - : Crea una instancia que representa un error que ocurre con respecto a la función global {{JSxRef("eval", "eval()")}}.
+  - : Crea una instancia que representa un error que ocurre con respecto a la función global {{JSxRef("Global_Objects/eval", "eval()")}}.
 - {{JSxRef("InternalError")}}
   - : Crea una instancia que representa un error que ocurre cuando se produce un error interno en el motor de JavaScript. Por ejemplo: "demasiada recursividad".
 - {{JSxRef("RangeError")}}
@@ -28,11 +28,11 @@ Además del constructor genérico `Error`, hay otros siete constructores de erro
 - {{JSxRef("TypeError")}}
   - : Crea una instancia que representa un error que ocurre cuando una variable o parámetro no es de un tipo válido.
 - {{JSxRef("URIError")}}
-  - : Crea una instancia que representa un error que ocurre cuando {{JSxRef("encodeURI", "encodeURI()")}} o {{JSxRef("decodeURI", "decodeURI()")}} pasan parámetros no válidos.
+  - : Crea una instancia que representa un error que ocurre cuando {{JSxRef("encodeURI()")}} o {{JSxRef("decodeURI()")}} pasan parámetros no válidos.
 
 ## Constructor
 
-- {{JSxRef("Objetos_globales/Error/Error", "Error()")}}
+- {{JSxRef("Error.Error", "Error()")}}
   - : Crea un nuevo objeto `Error`.
 
 ## Métodos estáticos
@@ -68,7 +68,7 @@ Además del constructor genérico `Error`, hay otros siete constructores de erro
 
 ### Lanzar un error genérico
 
-Normalmente, creas un objeto `Error` con la intención de generarlo utilizando la palabra clave {{JSxRef("Sentencias/throw", "throw")}}. Puedes manejar el error usando la construcción {{JSxRef("Sentencias/try...catch", "try...catch")}}:
+Normalmente, creas un objeto `Error` con la intención de generarlo utilizando la palabra clave {{JSxRef("Statements/throw", "throw")}}. Puedes manejar el error usando la construcción {{JSxRef("Statements/try...catch", "try...catch")}}:
 
 ```js
 try {
@@ -80,7 +80,7 @@ try {
 
 ### Manejar de un error específico
 
-Puede elegir manejar solo tipos de error específicos probando el tipo de error con la propiedad {{JSxRef("Object.prototype.constructor", "constructor")}} del error o, si estás escribiendo para motores JavaScript modernos, la palabra clave {{JSxRef("Operators/instanceof", "instanceof")}}:
+Puede elegir manejar solo tipos de error específicos probando el tipo de error con la propiedad {{JSxRef("Object.prototype.constructor", "constructor")}} del error o, si estás escribiendo para motores JavaScript modernos, la palabra clave {{JSxRef("instanceof")}}:
 
 ```js
 try {
@@ -104,7 +104,7 @@ Consulta ["¿Cuál es una buena manera de extender `Error` en JavaScript?"](http
 #### Clase `Error` personalizado en ES6
 
 > [!WARNING]
-> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Objetos_globales/Object/defineProperty", "Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
+> Las versiones de Babel anteriores a la 7 pueden manejar métodos de clase `CustomError`, pero solo cuando se declaran con {{JSxRef("Object.defineProperty()")}}. De lo contrario, las versiones antiguas de Babel y otros transpiladores no manejarán correctamente el siguiente código sin [configuración adicional](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend).
 
 > [!NOTE]
 > Algunos navegadores incluyen el constructor `CustomError` en el seguimiento de la pila cuando se utilizan clases de ES2015.
@@ -188,5 +188,5 @@ try {
 
 ## Ve también
 
-- {{JSxRef("Sentencias/throw", "throw")}}
-- {{JSxRef("Sentencias/try...catch", "try...catch")}}
+- {{JSxRef("Statements/throw", "throw")}}
+- {{JSxRef("Statements/try...catch", "try...catch")}}

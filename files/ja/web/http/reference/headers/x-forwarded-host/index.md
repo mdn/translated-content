@@ -3,10 +3,10 @@ title: X-Forwarded-Host ヘッダー
 short-title: X-Forwarded-Host
 slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 l10n:
-  sourceCommit: 0e40ec22841891d42376ad8a6d29135953c5106c
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP の **X-Forwarded-Host** (XFH) {{Glossary("request header", "リクエストヘッダー")}}は、HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントからリクエストされたオリジンホストを特定するための事実上の標準となっているヘッダーです。
+HTTP の **`X-Forwarded-Host`** (XFH) {{Glossary("request header", "リクエストヘッダー")}}は、HTTP の {{HTTPHeader("Host")}} リクエストヘッダー内でクライアントからリクエストされたオリジンホストを特定するための事実上の標準となっているヘッダーです。
 
 リバース{{Glossary("Proxy_server", "プロキシー")}}（ロードバランサー、CDN）のホスト名とポート番号は、リクエストを扱うオリジンサーバーとは異なってもよく、この場合はもともと使用されていたのがどのホストであるかを特定するのに `X-Forwarded-Host` ヘッダーが便利です。
 

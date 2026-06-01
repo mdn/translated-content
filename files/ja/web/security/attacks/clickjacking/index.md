@@ -57,7 +57,7 @@ iframe {
 ここで、関連するツールが 2 つあります。
 
 - [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の [`frame-ancestors` ディレクティブ](/ja/docs/Web/HTTP/Guides/CSP#clickjacking_protection)。このディレクティブを使用すると、自分の文書を埋め込むことができる他文書を正確に制御できます。
-- {{httpheader(「X-Frame-Options」)}} レスポンスヘッダー。このヘッダーは制御の精度が低く、埋め込みを完全に無効にするか、[同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy) の文書にのみすることができます。
+- {{httpheader("X-Frame-Options")}} レスポンスヘッダー。このヘッダーは制御の精度が低く、埋め込みを完全に無効にするか、[同一オリジン](/ja/docs/Web/Security/Defenses/Same-origin_policy) の文書にのみすることができます。
 
 `frame-ancestors` ディレクティブは、`X-Frame-Options` を置き換えます。`frame-ancestors` と `X-Frame-Options` の両方を設定することで、`frame-ancestors` に対応していないブラウザーでの埋め込みを防止することができます。[`frame-ancestors` のブラウザーの対応状況はとても良好](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors#ブラウザーの互換性)であるため、これは大きな懸念事項ではありません。
 
