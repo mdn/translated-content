@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 El objeto **`RegExp`** se utiliza para hacer coincidir texto con un patrón.
 
-Para obtener una introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+Para obtener una introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Regular_expressions).
 
 ## Descripción
 
@@ -236,7 +236,7 @@ Ten en cuenta que, debido a la compatibilidad web, `RegExp.$N` seguirá devolvie
 
 ## Ve también
 
-- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
+- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{JSxRef("String.prototype.match()")}}
 - {{JSxRef("String.prototype.replace()")}}
 - {{JSxRef("String.prototype.split()")}}
