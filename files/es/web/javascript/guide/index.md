@@ -49,11 +49,11 @@ Esta guía se divide en varios capítulos:
   - [Argumentos](/es/docs/Web/JavaScript/Guide/Functions#Utilizar_el_objeto_arguments) y [parámetros](/es/docs/Web/JavaScript/Guide/Functions#Utilizar_parametros_de_funcion)
   - [Funciones flecha](/es/docs/Web/JavaScript/Guide/Functions#Funciones_flecha)
 
-- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators)
-  - [Asignación](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_asignacion) y [Comparación](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_de_comparacion)
-  - [Operadores aritméticos](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_aritmeticos)
-  - [Operadores lógicos](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_logicos) y [a nivel de bits](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operadores_bit_a_bit)
-  - [Operador condicional (ternario)](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operador_condicional_ternario)
+- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators)
+  - [Asignación](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operadores_de_asignacion) y [Comparación](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operadores_de_comparacion)
+  - [Operadores aritméticos](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operadores_aritmeticos)
+  - [Operadores lógicos](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operadores_logicos) y [a nivel de bits](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operadores_bit_a_bit)
+  - [Operador condicional (ternario)](/es/docs/Web/JavaScript/Guide/Expressions_and_operators#Operador_condicional_ternario)
 
 - [Números y fechas](/es/docs/Web/JavaScript/Guide/Numbers_and_strings)[Números literales](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#Numeros)
   - [Objeto Number](/es/docs/Web/JavaScript/Guide/Numbers_and_strings#El_objeto_Number)
@@ -65,9 +65,9 @@ Esta guía se divide en varios capítulos:
   - [Objeto String](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Objetos_string)
   - [Plantillas literales](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Plantillas_literales_multilinea)
   - [Internacionalización](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings#Internacionalizacion)
-  - [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+  - [Expresiones Regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
 
-- [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Colecciones indexadas](/es/docs/Web/JavaScript/Guide/Regular_expressions)
   - [Arreglos](/es/docs/Web/JavaScript/Guide/Indexed_collections#El_objeto_Array)
   - [Arreglos tipados](/es/docs/Web/JavaScript/Guide/Indexed_collections#Arrays_tipados)
 
@@ -95,10 +95,10 @@ Esta guía se divide en varios capítulos:
   - [Composición](/es/docs/Web/JavaScript/Guide/Using_promises#Composicion)
   - [Temporizador](/es/docs/Web/JavaScript/Guide/Using_promises#Temporizador)
 
-- [Iteradores y generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators)
-  - [Iteradores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iteradores)
-  - [Iterables](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)
-  - [Generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators#Generadores)
+- [Iteradores y generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_generators)
+  - [Iteradores](/es/docs/Web/JavaScript/Guide/Iterators_and_generators#Iteradores)
+  - [Iterables](/es/docs/Web/JavaScript/Guide/Iterators_and_generators#Iterables)
+  - [Generadores](/es/docs/Web/JavaScript/Guide/Iterators_and_generators#Generadores)
 
 - [Metaprogramación](/es/docs/Web/JavaScript/Guide/Meta_programming)
   - [Proxy](/es/docs/Web/JavaScript/Guide/Meta_programming#Proxies)
