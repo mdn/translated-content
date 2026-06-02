@@ -22,8 +22,10 @@ Nuestros [módulos principales de aprendizaje de desarrollo web](/es/docs/Learn_
 
 - [Tu primer sitio web: creación del contenido](/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
   - : Este artículo ofrece una introducción a qué es HTML y cómo utilizarlo, dirigido a personas sin experiencia previa en desarrollo web.
+
 - [Estructuración del contenido con HTML](/es/docs/Learn_web_development/Core/Structuring_content)
   - : Este módulo cubre los conceptos básicos del lenguaje HTML, así como aspectos clave como la estructura del documento, enlaces, listas, imágenes, formularios y más.
+
 - [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios son una parte fundamental de la Web: proporcionan gran parte de la funcionalidad necesaria para interactuar con los sitios web, como registrarse, iniciar sesión, enviar comentarios o realizar compras. Este módulo te ayuda a comenzar a crear la parte del cliente (interfaz de usuario) de los formularios.
 
@@ -33,22 +35,31 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 
 - [Hoja de referencia de HTML para sintaxis y tareas comunes](/es/docs/Web/HTML/Guides/Cheatsheet)
   - : Referencia rápida de la sintaxis y las tareas más habituales en HTML.
-- [Uso de comentarios HTML `<!-- … -->`](/es/docs/Web/HTML/Guides/Comments)
+
+- [Uso de comentarios HTML ``](/es/docs/Web/HTML/Guides/Comments)
   - : Los comentarios HTML se utilizan para añadir notas explicativas al marcado o para evitar que el navegador procese partes específicas del documento.
+
 - [Uso de la validación de formularios HTML y la API de validación de restricciones](/es/docs/Web/HTML/Guides/Constraint_validation)
   - : HTML5 introdujo la validación de restricciones para facilitar la validación de formularios en el lado del cliente. Las restricciones básicas pueden comprobarse sin necesidad de JavaScript mediante atributos en los elementos del formulario.
+
 - [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories)
   - : HTML se compone de distintos tipos de contenido, cada uno de los cuales puede utilizarse en ciertos contextos y está restringido en otros. Del mismo modo, cada contexto define qué categorías de contenido puede contener y qué elementos pueden o no utilizarse en él.
+
 - [Uso de formatos de fecha y hora en HTML](/es/docs/Web/HTML/Guides/Date_and_time_formats)
   - : Algunos elementos HTML utilizan valores de fecha y/o de hora. Esta guía describe los formatos de las cadenas que representan dichos valores.
+
 - [Uso de microdatos en HTML](/es/docs/Web/HTML/Guides/Microdata)
   - : Los microdatos permiten incrustar metadatos dentro del contenido existente en páginas web. Los motores de búsqueda y otros sistemas pueden procesarlos para ofrecer una experiencia de navegación más rica.
+
 - [Uso de microformatos en HTML](/es/docs/Web/HTML/Guides/Microformats)
   - : Los microformatos son estándares que permiten incrustar semántica y datos estructurados en HTML para su uso por aplicaciones web, motores de búsqueda, agregadores y otras herramientas.
+
 - [Comprender el modo Quirks y el modo estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
   - : Información histórica sobre estos modos de renderizado de los navegadores.
+
 - [Uso de imágenes responsivas en HTML](/es/docs/Web/HTML/Guides/Responsive_images)
   - : Aprende a utilizar imágenes que se adapten correctamente a dispositivos con distintos tamaños de pantalla, resoluciones y capacidades, mejorando el rendimiento.
+
 - [Tipos y formatos de medios en la Web](/es/docs/Web/Media/Guides/Formats)
   - : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} permiten reproducir contenido multimedia de forma nativa sin necesidad de software adicional.
 
@@ -56,14 +67,19 @@ Las [guías de HTML](/es/docs/Web/HTML/Guides) te ayudan a crear contenido para 
 
 - [Definir términos con HTML](/es/docs/Web/HTML/How_to/Define_terms_with_HTML)
   - : HTML ofrece varias formas de representar definiciones, ya sea en línea o mediante glosarios estructurados. Proporciona contexto semántico a los términos para los lectores y los motores de búsqueda.
+
 - [Uso de atributos de datos](/es/docs/Web/HTML/How_to/Use_data_attributes)
   - : HTML5 permite asociar datos personalizados a elementos mediante atributos `data-*`, sin afectar a su significado semántico.
+
 - [Uso de imágenes de origen cruzado en un canvas](/es/docs/Web/HTML/How_to/CORS_enabled_image)
   - : Algunos elementos como {{HTMLElement("img")}} o {{HTMLElement("video")}} admiten el atributo `crossorigin`, que permite configurar solicitudes CORS.
+
 - [Añadir un mapa de imagen](/es/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
   - : Los mapas de imagen permiten asociar enlaces a distintas áreas de una imagen.
+
 - [Crear páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Una página optimizada mejora la experiencia del usuario y reduce la carga en los servidores y en la red. También puede mejorar el posicionamiento en los motores de búsqueda de tu sitio web.
+
 - [Añadir JavaScript a una página web](/es/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
   - : Este artículo explica cómo integrar código JavaScript en un documento HTML.
 
@@ -73,8 +89,10 @@ HTML está compuesto por elementos que pueden modificarse mediante atributos. Lo
 
 - [Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Referencia de todos los {{glossary("Element", "elementos")}} HTML. Incluye descripciones de cada elemento, además de los atributos que admiten.
+
 - [Atributos HTML](/es/docs/Web/HTML/Reference/Attributes)
   - : Referencia de todos los atributos HTML. Incluye descripciones de cada atributo y los elementos en los que se pueden utilizar.
+
 - [Atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)
   - : Atributos que pueden aplicarse a todos los elementos HTML, incluso a los no estándar.
 
@@ -82,8 +100,10 @@ HTML está compuesto por elementos que pueden modificarse mediante atributos. Lo
 
 - [Tipos de `<input>`](/es/docs/Web/HTML/Reference/Elements/input)
   - : Permiten crear controles interactivos en formularios web.
+
 - [Tipos de script](/es/docs/Web/HTML/Reference/Elements/script/type)
   - : Indican el tipo de script representado por el elemento.
+
 - [Valores del atributo `name` en `<meta>`](/es/docs/Web/HTML/Reference/Elements/meta/name)
   - : Proporcionan metadatos en pares clave-valor para toda la página.
 
