@@ -6,7 +6,7 @@ original_slug: Web/CSS/flex-flow
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-flow`** é uma [junção](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-flow`** é uma [junção](/pt-BR/docs/Web/CSS/Guides/Cascade/Shorthand_properties) das propriedades {{cssxref("flex-direction")}} e {{cssxref("flex-wrap")}}.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 
@@ -110,5 +110,5 @@ elemento {
 
 ## Veja também
 
-- Guia de Flexbox CSS: _[Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- Guia de Flexbox CSS: _[Conceitos básicos de flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - Guia de Flexbox CSS: _[Ordenando itens flex](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

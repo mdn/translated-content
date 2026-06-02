@@ -16,7 +16,7 @@ The {{glossary("simple header", "simple headers")}}, {{HTTPHeader("Accept")}}, {
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>нет</td>
     </tr>
   </tbody>

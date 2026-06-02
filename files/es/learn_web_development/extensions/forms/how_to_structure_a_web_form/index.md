@@ -14,7 +14,7 @@ Una vez examinados los conceptos básicos, vamos a ver más en detalle los eleme
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimientos básicos de informática y de
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">lenguajes HTML</a>.
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">lenguajes HTML</a>.
       </td>
     </tr>
     <tr>
@@ -312,7 +312,7 @@ Debajo puedes ver en acción el formulario terminado (también lo encontrarás e
 
 ## ¡Prueba tus habilidades!
 
-Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita [Prueba tus habilidades: Estructura de formularios](/es/docs/Learn/Forms/Test_your_skills:_Form_structure).
+Has llegado al final de este artículo pero ¿puedes recordar la información más importante? Puedes encontrar pruebas adicionales para comprobar que has comprendido la información antes de continuar — visita [Prueba tus habilidades: Estructura de formularios](/es/docs/Learn_web_development/Extensions/Forms).
 
 ## Resumen
 
@@ -330,4 +330,4 @@ Ahora tienes todos los conocimientos necesarios para estructurar adecuadamente t
 - [Cómo crear controles de formulario personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
-- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls) según su código propietario
+- [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn_web_development/Extensions/Forms) según su código propietario

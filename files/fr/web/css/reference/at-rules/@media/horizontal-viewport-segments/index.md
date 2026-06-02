@@ -1,8 +1,9 @@
 ---
-title: horizontal-viewport-segments
+title: Caractéristique média CSS `horizontal-viewport-segments`
+short-title: horizontal-viewport-segments
 slug: Web/CSS/Reference/At-rules/@media/horizontal-viewport-segments
 l10n:
-  sourceCommit: ad9776a6cf53eaf570ac0515402247e82ecefcfe
+  sourceCommit: 67d40334c8b90e4623f3b0d3aea466b9882d8236
 ---
 
 La [caractéristique média](/fr/docs/Web/CSS/Reference/At-rules/@media#caractéristiques_média) [CSS](/fr/docs/Web/CSS) **`horizontal-viewport-segments`** permet de détecter si l'appareil possède un nombre spécifié de segments de zone d'affichage disposés horizontalement (côte à côte).

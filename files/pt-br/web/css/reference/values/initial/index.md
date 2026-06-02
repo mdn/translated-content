@@ -6,12 +6,12 @@ original_slug: Web/CSS/initial
 
 {{CSSRef}}
 
-A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
+A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/conflicting/Web/CSS/Guides/Cascade/Property_value_processing_bcdd1173c035d5a1f45a73ceb7da30cc58d8ff6e84066662a7d88acaf52fcc37) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
 
 Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
 
 > [!NOTE]
-> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
+> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/Guides/Cascade/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
 
 ## Exemplo
 

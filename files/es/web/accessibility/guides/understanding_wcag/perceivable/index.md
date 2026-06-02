@@ -31,7 +31,7 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
         alternativo.
       </td>
       <td>
-        <a href="/es/docs/Learn/Accessibility/HTML#Text_alternatives"
+        <a href="/es/docs/Learn_web_development/Core/Accessibility/HTML#Text_alternatives"
           >Texto alternativo.</a
         >
       </td>
@@ -47,12 +47,12 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
       <td>
         <p>
           Una alternativa textual o una tabla puede resolverlo (ver
-          <a href="/es/docs/Learn/HTML/Tables/Advanced"
+          <a href="/es/docs/Learn_web_development/Core/Structuring_content/Table_accessibility"
             >HTML table advanced features and accessibility</a
           >
           y
           <a
-            href="/es/docs/Learn/Accessibility/HTML#Other_text_alternative_mechanisms"
+            href="/es/docs/Learn_web_development/Core/Accessibility/HTML#Other_text_alternative_mechanisms"
             >Other text alternative mechanisms</a
           >
           para leer sobre el argumento en contra de <code>longdesc</code>.
@@ -67,7 +67,7 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
       <td>
         <p>
           Ver
-          <a href="/es/docs/Learn/Accessibility/HTML#Text_alternatives"
+          <a href="/es/docs/Learn_web_development/Core/Accessibility/HTML#Text_alternatives"
             >alternativas de texto</a
           >
           para opciones de captions, y
@@ -95,7 +95,7 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
         Deberás asegurarte de que los botones describan su función (por ejemplo,
         <code>&#x3C;button>Subir imagen&#x3C;/button></code>). Para más
         información ver
-        <a href="/es/docs/Learn/Accessibility/HTML#UI_controls"
+        <a href="/es/docs/Learn_web_development/Core/Accessibility/HTML#UI_controls"
           >UI controls</a
         >.
       </td>
@@ -177,11 +177,11 @@ Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser cons
         </ul>
       </td>
       <td>The whole of
-        <p><a href="/es/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed
+        <p><a href="/es/docs/Learn_web_development/Core/Accessibility/HTML">HTML: A good basis for accessibility</a> is packed
           with information about this, but you should particularly refer to <a
-            href="/es/docs/Learn/Accessibility/HTML#Good_semantics">Good semantics</a>, <a
-            href="/es/docs/Learn/Accessibility/HTML#UI_controls">UI controls</a>, and <a
-            href="/es/docs/Learn/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
+            href="/es/docs/Learn_web_development/Core/Accessibility/HTML#Good_semantics">Good semantics</a>, <a
+            href="/es/docs/Learn_web_development/Core/Accessibility/HTML#UI_controls">UI controls</a>, and <a
+            href="/es/docs/Learn_web_development/Core/Accessibility/HTML#Text_alternatives">Text alternatives</a>.</p>
       </td>
     </tr>
     <tr>
@@ -190,7 +190,7 @@ Esta pauta hace referencia a la posibilidad de que todo contenido pueda ser cons
         presented in an unusual way. The order should be made obvious by use of correct semantic elements (e.g.
         headings, paragraphs), with CSS being used to create any unusual layout styles, irrespective of the
         markup.</td>
-      <td>Again, refer to <a href="/es/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a>.
+      <td>Again, refer to <a href="/es/docs/Learn_web_development/Core/Accessibility/HTML">HTML: A good basis for accessibility</a>.
       </td>
     </tr>
     <tr>
@@ -271,8 +271,8 @@ Esta pauta tiene como objetivo la creación de contenido que sea fácil de difer
           required fields purely with a color (like red). Instead (or as well as), something like an asterisk with a
           label of "required" would be more appropriate.</p>
       </td>
-      <td>See <a href="/es/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
-          contrast</a> and <a href="/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form#Multiple_labels">Multiple
+      <td>See <a href="/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
+          contrast</a> and <a href="/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#Multiple_labels">Multiple
           labels</a>.</td>
     </tr>
     <tr>
@@ -294,7 +294,7 @@ Esta pauta tiene como objetivo la creación de contenido que sea fácil de difer
             18pt, or 14pt bold.</li>
         </ul>
       </td>
-      <td>See <a href="/es/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
+      <td>See <a href="/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color
           contrast</a>.</td>
     </tr>
     <tr>

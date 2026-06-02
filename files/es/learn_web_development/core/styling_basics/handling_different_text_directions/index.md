@@ -17,15 +17,15 @@ Sin embargo, en los últimos años, CSS ha evolucionado para soportar de mejor f
       <td>
         Literatura computacional básica,
         <a
-          href="/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico instalado</a
         >, conocimiento básico de
-        <a href="/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+        <a href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >manejo de archivos</a
-        >, HTML básico (<a href="/es/docs/Learn/HTML/Introduction_to_HTML"
+        >, HTML básico (<a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >Introducción a HTML</a
         >), y una idea de cómo funciona CSS (<a
-          href="/es/docs/Learn/CSS/First_steps"
+          href="/es/docs/conflicting/Learn_web_development/Core/Styling_basics"
           >Primeros pasos en CSS</a
         >.)
       </td>
@@ -134,7 +134,7 @@ Las propiedades lógicas y los valores son más recientes que su equivalente fí
 
 ## ¡Prueba tus habilidades!
 
-Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: [Prueba tus habilidades: modos de escritura.](/es/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks)
+Tenemos mucho terreno cubierto en este artículo, pero puedes recordad la información más importante? Puedes encontrar algunas pruebas adicionales para verificar que has retenido esta información antes de seguir adelante: [Prueba tus habilidades: modos de escritura.](/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 
 ## Resumen
 

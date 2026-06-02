@@ -41,7 +41,7 @@ new Intl.ListFormat(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.ListFormat()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une exception {{JSxRef("TypeError")}}.
+> `Intl.ListFormat()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève une exception {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

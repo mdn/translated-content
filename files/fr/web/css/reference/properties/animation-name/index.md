@@ -1,8 +1,9 @@
 ---
-title: animation-name
+title: Propriété CSS `animation-name`
+short-title: animation-name
 slug: Web/CSS/Reference/Properties/animation-name
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-name`** définit les noms d'une ou plusieurs règles {{CSSxRef("@keyframes")}} qui décrivent l'animation à appliquer à un élément. Plusieurs règles `@keyframes` sont indiquées sous forme de liste de noms séparés par des virgules. Si le nom indiqué ne correspond à aucune règle `@keyframes`, aucune propriété n'est animée.

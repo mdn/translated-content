@@ -15,7 +15,7 @@ Aplicações [WebAssembly](/pt-BR/docs/WebAssembly) ou _asm.js_ podem usar grand
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>não</td>
     </tr>
   </tbody>

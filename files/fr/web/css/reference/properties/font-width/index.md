@@ -1,8 +1,9 @@
 ---
-title: font-width
+title: Propriété CSS `font-width`
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 l10n:
-  sourceCommit: de5b557883e8eff2514f0fe6eeb180db782575b1
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 {{SeeCompatTable}}
@@ -337,6 +338,7 @@ p {
 - La propriété alias héritée {{CSSxRef("font-stretch")}} avec une meilleure compatibilité navigateur
 - La propriété {{CSSxRef("font-style")}}
 - La propriété {{CSSxRef("font-weight")}}
+- L'attribut SVG {{SVGAttr("font-width")}}
 - L'attribut SVG {{SVGAttr("font-stretch")}}
 - [Apprendre&nbsp;: Fondamentaux du texte et du style de police](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - Le module [des polices CSS](/fr/docs/Web/CSS/Guides/Fonts)

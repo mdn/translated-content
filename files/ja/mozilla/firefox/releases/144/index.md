@@ -52,7 +52,7 @@ Firefox 144 は、米国時間 [2025 年 10 月 14 日](https://whattrainisitnow
 
 #### Media、WebRTC、Web Audio
 
-- 異なるオリジンの {{htmlelement("iframe")}} は、`window.top.location` を使用してトップレベルのページをリダイレクトするためにユーザー操作 ({{glossary("sticky activation", "粘着的な有効化")}}) または明示的な許可が必要になりました。
+- 異なるオリジンの {{htmlelement("iframe")}} は、`window.top.location` を使用してトップレベルのページをリダイレクトするためにユーザー操作 ({{glossary("sticky activation", "持続的な有効化")}}) または明示的な許可が必要になりました。
   詳しくは [Top navigation in cross-origin frames](/ja/docs/Web/HTML/Reference/Elements/iframe#top_navigation_in_cross-origin_frames) をご覧ください ([Firefox bug 1419501](https://bugzil.la/1419501))。
 - {{domxref("RTCDataChannel")}} のインスタンスが [移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects) になり、[ワーカー](/ja/docs/Web/API/Worker) に渡すことも可能になりました ([Firefox bug 1209163](https://bugzil.la/1209163))。
 - [`closing` イベント](/ja/docs/Web/API/RTCDataChannel/closing_event) および `onclosing()` イベントハンドラーを {{domxref("RTCDataChannel")}} インターフェイスでサポートしました ([Firefox bug 1611953](https://bugzil.la/1611953))。

@@ -1,8 +1,9 @@
 ---
-title: animation-delay
+title: Propriété CSS `animation-delay`
+short-title: animation-delay
 slug: Web/CSS/Reference/Properties/animation-delay
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`animation-delay`** définit le temps à attendre entre l'application de l'animation sur un élément et le début de l'animation. L'animation peut démarrer plus tard, immédiatement depuis le début, ou immédiatement en étant déjà avancée.

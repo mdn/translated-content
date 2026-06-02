@@ -1,8 +1,9 @@
 ---
-title: "@counter-style"
+title: Règle CSS `@counter-style`
+short-title: "@counter-style"
 slug: Web/CSS/Reference/At-rules/@counter-style
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@counter-style`** vous permet d'étendre les styles de liste prédéfinis et de définir vos propres styles de compteurs qui ne font pas partie de l'ensemble des styles prédéfinis. La règle `@counter-style` contient des [descripteurs](#descripteurs) définissant comment la valeur du compteur est convertie en une représentation sous forme de chaîne de caractères.

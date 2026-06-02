@@ -147,7 +147,7 @@ button {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/List_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role"
             >list</a
           ></code
         >

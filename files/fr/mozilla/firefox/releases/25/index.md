@@ -32,11 +32,11 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 
 - La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ([bug Firefox 866849](https://bugzil.la/866849)).
 - Le support des méthodes {{jsxref("Array.prototype.find()")}} et {{jsxref("Array.prototype.findIndex()")}} a été ajouté ([bug Firefox 885553](https://bugzil.la/885553)).
-- Les méthodes {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} et {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} ont été implémentées ([bug Firefox 886949](https://bugzil.la/886949)).
+- Les méthodes {{jsxref("Number.parseInt()")}} et {{jsxref("Number.parseFloat()")}} ont été implémentées ([bug Firefox 886949](https://bugzil.la/886949)).
 - Les méthodes {{jsxref("Map.prototype.forEach()")}} et {{jsxref("Set.prototype.forEach()")}} sont maintenant implémentées ([bug Firefox 866847](https://bugzil.la/866847)).
 - De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` et `Math.cbrt()` ([bug Firefox 717379](https://bugzil.la/717379)).
 - La prise en charge des littéraux d'entiers binaires et octaux a été ajoutée: `0b10101010`, `0B1010`, `0o777`, `0O237` sont désormais valides ([bug Firefox 894026](https://bugzil.la/894026)).
-- La constante epsilon de la machine, c'est-à-dire le plus petit nombre représentable qui ajouté à 1 ne sera pas 1, est désormais disponible sous la forme {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ([bug Firefox 885798](https://bugzil.la/885798)).
+- La constante epsilon de la machine, c'est-à-dire le plus petit nombre représentable qui ajouté à 1 ne sera pas 1, est désormais disponible sous la forme {{jsxref("Number.EPSILON")}} ([bug Firefox 885798](https://bugzil.la/885798)).
 - Les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ont été mis à jour pour [ne plus rechercher dans la chaîne de prototypes les propriétés indexées](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#indexed_property_access) ([bug Firefox 829896](https://bugzil.la/829896)).
 
 ### Interfaces/APIs/DOM
@@ -44,7 +44,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - L'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ([bug Firefox 779297](https://bugzil.la/779297)).
 - Certaines clés liées à IME sous Windows sont prises en charge par `KeyboardEvent.key` ([bug Firefox 865565](https://bugzil.la/865565)), voir [le tableau des noms de clé](/fr/docs/Web/API/KeyboardEvent#keyname_table_win) pour plus de détails.
 - Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ([bug Firefox 843236](https://bugzil.la/843236)).
-- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ([bug Firefox 501496](https://bugzil.la/501496)), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
+- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ([bug Firefox 501496](https://bugzil.la/501496)), voir [le document de l'événement `keydown`](</fr/docs/Web/API/Element/keydown_event#preventDefault()_of_keydown_event>) pour plus de détails.
 - L'interface `Future` a été renommée `Promise` ([bug Firefox 884279](https://bugzil.la/884279)).
 - La propriété `srcDoc` sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ([bug Firefox 802895](https://bugzil.la/802895)).
 - La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ([bug Firefox 813034](https://bugzil.la/813034)).

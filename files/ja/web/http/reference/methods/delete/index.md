@@ -69,7 +69,7 @@ DELETE /file.html HTTP/1.1
 Host: example.com
 ```
 
-リクエストが成功した場合、いくつかの[成功レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)が返る可能性ががあります。
+リクエストが成功した場合、いくつかの[成功レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)が返る可能性があります。
 {{HTTPStatus("204", "204 No Content")}} レスポンスは、リクエストが成功し、クライアントに追加情報が必要でないということです。
 
 ```http

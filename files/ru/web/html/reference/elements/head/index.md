@@ -38,7 +38,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ru/docs/Web/Guide/HTML/Content_categories">Категории контента</a>
+        <a href="/ru/docs/Web/HTML/Guides/Content_categories">Категории контента</a>
       </th>
       <td>Отсутствуют.</td>
     </tr>

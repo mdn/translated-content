@@ -1,8 +1,9 @@
 ---
-title: hue-rotate()
+title: CSS `hue-rotate()` 関数
+short-title: hue-rotate()
 slug: Web/CSS/Reference/Values/filter-function/hue-rotate
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
 **`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/Reference/Values/Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("filter-function")}} です。

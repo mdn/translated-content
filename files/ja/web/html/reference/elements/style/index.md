@@ -1,18 +1,16 @@
 ---
-title: "<style>: スタイル情報要素"
+title: HTML `<style>` スタイル情報要素
+short-title: <style>
 slug: Web/HTML/Reference/Elements/style
-original_slug: Web/HTML/Element/style
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
-
-{{HTMLSidebar}}
 
 **`<style>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書あるいは文書の一部分のスタイル情報を含みます。 `<style>` 要素を含んでいる文書のコンテンツに適用される CSS を含みます。
 
 {{InteractiveExample("HTML デモ: &lt;style&gt;", "tabbed-standard")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <style>
   p {
     color: #26b72b;
@@ -23,18 +21,17 @@ l10n:
 </style>
 
 <p>
-  This text will be green. Inline styles take precedence over CSS included
-  externally.
+  このテキストは緑色になります。インラインスタイルは、外部から読み込まれた CSS よりも優先されます。
 </p>
 
 <p style="color: blue">
-  The <code>style</code> attribute can override it, though.
+  ただし、<code>style</code> 属性で上書きすることは可能です。
 </p>
 ```
 
 ```css interactive-example
 p {
-  color: #f00;
+  color: red;
 }
 ```
 
@@ -48,15 +45,19 @@ p {
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
+- `blocking`
+  - : この属性は、重要なサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。{{cssxref("@import")}} でインポートされたスタイルシートは、ふつう重要なサブリソースと見なされますが、一方で {{cssxref("background-image")}} やフォントはそうとはみなされません。ブロック対象となる操作は、以下の一覧に挙げるブロック対象トークンの空白区切りリストでなければなりません。現在、トークンは次の 1 つだけです。
+    - `render`: 画面へのコンテンツの描画がブロックされます。
+
+    > [!NOTE]
+    > `style` 要素は文書の `<head>` 内に含まれる場合のみ、レンダリングをブロックする可能性があります。デフォルトで、`style` 要素が `<head>` 内にある場合は、ブラウザーが構文解析中にそれを検出した際にレンダリングをブロックします。スクリプトを介して動的にそのような `style` 要素を追加する場合、レンダリングをブロックさせるには、さらに `blocking = "render"` を設定する必要があります。
+
 - `media`
   - : この属性はスタイルを適用するメディアを定義します。値は[メディアクエリー](/ja/docs/Web/CSS/Guides/Media_queries/Using)であり、省略した場合の既定値は `all` です。
 - `nonce`
-  - : [style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスクリプトをホワイトリストに入れるために使われる暗号ノンス（ワンタイム番号）です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
+  - : 暗号学的{{Glossary("Nonce", "ノンス")}} (number used once) で、[style-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src)内のインラインスタイルを許可するために使用されます。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスとして推測できないノンスを提供することが重要です。
 - `title`
   - : この属性は[代替スタイルシート](/ja/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)のセットを指定します。
-- `blocking` {{Experimental_Inline}}
-  - : この属性は、クリティカルなサブリソースの取得時に、特定の処理をブロックすべきであることを明示的に示します。{{cssxref("@import")}} でインポートされたスタイルシートは、ふつうクリティカルなサブリソースと見なされますが、一方で {{cssxref("background-image")}} やフォントはそうとはみなされません。
-    - `render`: 画面へのコンテンツの描画がブロックされます。
 
 ### 非推奨の属性
 
@@ -65,16 +66,16 @@ p {
 
 ## 例
 
-### 単純なスタイルシート
+### 基本的なスタイルシート
 
-以下の例では、文書にとても単純なスタイルシートを適用します。
+以下の例では、文書に短いスタイルシートを適用します。
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja-JP">
   <head>
     <meta charset="UTF-8" />
-    <title>Test page</title>
+    <title>テストページ</title>
     <style>
       p {
         color: red;
@@ -82,14 +83,14 @@ p {
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>これは段落です。</p>
   </body>
 </html>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('A_simple_stylesheet', '100%', '100')}}
+{{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
 
 ### 複数の style 要素
 
@@ -97,10 +98,10 @@ p {
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja-JP">
   <head>
     <meta charset="UTF-8" />
-    <title>Test page</title>
+    <title>テストページ</title>
     <style>
       p {
         color: white;
@@ -117,7 +118,7 @@ p {
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>これは段落です。</p>
   </body>
 </html>
 ```
@@ -132,10 +133,10 @@ p {
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja-JP">
   <head>
     <meta charset="UTF-8" />
-    <title>Test page</title>
+    <title>テストページ</title>
     <style>
       p {
         color: white;
@@ -144,7 +145,7 @@ p {
         border: 1px solid black;
       }
     </style>
-    <style media="all and (max-width: 500px)">
+    <style media="(width < 500px)">
       p {
         color: blue;
         background-color: yellow;
@@ -152,7 +153,7 @@ p {
     </style>
   </head>
   <body>
-    <p>This is my paragraph.</p>
+    <p>これは段落です。</p>
   </body>
 </html>
 ```
@@ -167,7 +168,9 @@ p {
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Guides/Content_categories#メタデータコンテンツ"

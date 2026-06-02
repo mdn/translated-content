@@ -1,8 +1,9 @@
 ---
-title: border-right-color
+title: Propriété CSS `border-right-color`
+short-title: border-right-color
 slug: Web/CSS/Reference/Properties/border-right-color
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-right-color`** permet de définir la couleur de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à droite d'un élément. Elle peut aussi être définie avec les propriétés raccourcies CSS {{CSSxRef("border-color")}} ou {{CSSxRef("border-right")}}.

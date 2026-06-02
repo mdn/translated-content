@@ -6,7 +6,7 @@ original_slug: Web/CSS/:visited
 
 {{ CSSRef }}
 
-O **`:visited`** é uma [Pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) do [CSS](/pt-BR/docs/Web/CSS) para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.
+O **`:visited`** é uma [Pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) do [CSS](/pt-BR/docs/Web/CSS) para indicar se o link em questão já foi visitado pelo usuário. Por questões de privacidade, os styles que podem ser modificados usando este seletor são muito limitados.
 
 ```css
 /* Seleciona qualquer <a> que poderá ser visitado */
@@ -37,7 +37,7 @@ Por razões de privacidade, navegadores limitam estritamente quais estilos você
 - Embora esses estilos podem mudar como as cores serão mostradas ao usuário, o método {{domxref("window.getComputedStyle")}} vai mentir e sempre retornar o valor da cor em non-`:visited.`
 
 > [!NOTE]
-> Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector). Obs: No momento estará apenas disponível em inglês.
+> Para mais informações quanto a essas limitações e as razões por trás delas, veja [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited). Obs: No momento estará apenas disponível em inglês.
 
 ## Syntaxe
 
@@ -97,5 +97,5 @@ a:visited {
 
 ## Veja também (inglês)
 
-- [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [Privacy and the :visited selector](/pt-BR/docs/Web/CSS/Guides/Selectors/Privacy_and_:visited)
 - Link-related pseudo-classes: {{cssxref(":link")}}, {{cssxref(":active")}}, {{cssxref(":hover")}}

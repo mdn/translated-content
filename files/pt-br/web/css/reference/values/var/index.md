@@ -6,7 +6,7 @@ original_slug: Web/CSS/var
 
 {{CSSRef}}
 
-A função [CSS](/pt-BR/docs/Web/CSS) **`var()`** pode ser usada para inserir o valor de uma [custom property](/pt-BR/docs/Web/CSS/--*) (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.
+A função [CSS](/pt-BR/docs/Web/CSS) **`var()`** pode ser usada para inserir o valor de uma [custom property](/pt-BR/docs/Web/CSS/Reference/Properties/--*) (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.
 
 ```css
 var(--header-color, blue);
@@ -69,4 +69,4 @@ body {
 
 ## Veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)

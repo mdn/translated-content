@@ -1,8 +1,9 @@
 ---
-title: "<template> : l'élément de modèle de contenu"
+title: "Élément HTML `<template>` : l'élément de modèle de contenu"
+short-title: <template>
 slug: Web/HTML/Reference/Elements/template
 l10n:
-  sourceCommit: 9c4d4cb78a55340b46855e47aba76729a59e11ce
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<template>`** sert de mécanisme pour contenir des fragments {{Glossary("HTML")}}, qui peuvent être utilisés plus tard via JavaScript ou générés immédiatement dans le DOM d'ombre.

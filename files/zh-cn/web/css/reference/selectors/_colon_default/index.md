@@ -18,7 +18,11 @@ input:default {
 
 ## 语法
 
-{{csssyntax}}
+```css
+:default {
+  /* ... */
+}
+```
 
 ## 示例
 

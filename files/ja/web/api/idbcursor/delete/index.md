@@ -68,7 +68,7 @@ function deleteResult() {
       }
       cursor.continue();
     } else {
-      console.log("項目をを表示しました。");
+      console.log("項目を表示しました。");
     }
   };
 }

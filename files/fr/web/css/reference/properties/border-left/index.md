@@ -1,8 +1,9 @@
 ---
-title: border-left
+title: Propriété CSS `border-left`
+short-title: border-left
 slug: Web/CSS/Reference/Properties/border-left
 l10n:
-  sourceCommit: 46a4425d4b7160129fd4c8d0f684ccd0617326b7
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`border-left`** permet de définir toutes les propriétés de la [bordure](/fr/docs/Web/CSS/Reference/Properties/border) à gauche d'un élément.

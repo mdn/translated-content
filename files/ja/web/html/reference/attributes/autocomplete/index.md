@@ -1,12 +1,10 @@
 ---
-title: "HTML 属性: autocomplete"
+title: HTML `autocomplete` 属性
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
-
-{{HTMLSidebar}}
 
 HTML の `autocomplete` 属性により、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
 
@@ -39,11 +37,11 @@ label {
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、 {{HTMLElement("form")}} 要素のうち `id` が [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された値に等しい要素（存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、 {{HTMLElement("form")}} 要素のうち `id` が [`form`](/ja/docs/Web/HTML/Reference/Attributes/form) 属性で指定された値に等しい要素（存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
 
 > [!NOTE]
 > 自動入力を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
@@ -124,7 +122,7 @@ label {
   - : 後続のトークンによって識別される連絡先種別は、場所に関係なく受信者に連絡するためのものです。
 - `fax`
   - : 後続のトークンによって識別される受信者はファックス用です。
-- `page`
+- `pager`
   - : 後続のトークンによって識別される受信者は、ページャーまたはポケベル用です。
 
 ##### デジタル連絡先トークン
@@ -140,7 +138,7 @@ label {
     - `tel-area-code`
       - : 市外局番で、必要に応じて市外局番の接頭辞（日本では 0）を含みます。
     - `tel-local`
-      - : 国番号や市外局番を含まない電話番号です。これはさらに、市内局番と加入者番号の2つに分割することができます。 "555-6502" という電話番号では、 `tel-local-prefix` は "555"、 `tel-local-suffix` は "6502" となります。
+      - : 国番号や市外局番を除いた電話番号です。これはさらに、市内局番と、その加入者番号の 2 つの部分に分けることができます。 "555-6502" という電話番号では、 `tel-local-prefix` は "555"、 `tel-local-suffix` は "6502" となります。
 
 - `tel-extension`
   - : 電話番号の下の内線番号です。例えば、ホテルの部屋番号やスイートルーム番号、企業オフィスの内線番号などです。
@@ -225,7 +223,7 @@ label {
 - `transaction-amount`
   - : 支払を行う金額の `transaction-currency` の単位による量です。
 - `language`
-  - : 優先言語で、有効な [BCP 47 言語タグ](https://ja.wikipedia.org/wiki/IETF%E8%A8%80%E8%AA%9E%E3%82%BF%E3%82%B0) で指定されたものです。
+  - : 優先言語で、有効な {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}で指定されたものです。
 - `bday`
   - : 生年月日の全体です。
     - `bday-day`
@@ -247,6 +245,20 @@ label {
 
 - `webauthn`
   - : [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) によって、条件付きの {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出し（すなわち、 `mediation: 'conditional'` を含む呼び出し）によってリクエストされた、生成されたパスキー。詳しくは [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) を参照してください。
+
+## アクセシビリティ
+
+適切な `autocomplete` 値を使用することで、認知障碍や運動機能障害、その他の状態にあるユーザーが、情報を入力したり記憶したりする手間を減らし、フォームをより迅速かつ正確に記入できるようになります。ブラウザーが `autocomplete` 値を通じてフォームフィールドの目的を識別できる場合、名前、住所、支払い情報などの保存データを提案することができます。これはすべてのユーザーにとって有益ですが、手動でのデータ入力が困難なユーザーにとっては特に重要です。
+
+有効な自動補完トークンを提供することは、[WCAG 2.2 達成基準 1.3.5: 入力の目的を特定する](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose)（レベル AA）の要件と同時に満たします。この基準では、ユーザー情報を収集する入力フィールドの目的が、プログラムによって判別可能であることが要求されています。これにより、ユーザーエージェントや支援技術は、フィールドの横に馴染みのあるアイコンを表示するなど、パーソナライズされた表示を適用し、ユーザーがフォームを理解して記入するのを支援できるようになります。
+
+### 自動補完機能を無効にしない
+
+`autocomplete="off"` を設定すると、ブラウザーがそのフィールドに対して保存データを提案しなくなります。開発者はセキュリティ上の理由（ワンタイムコードなど）から自動入力を防ぐためにこれを使用することがありますが、多くのユーザーが頼りにしている機能が利用できなくなります。認知障害のあるユーザーは、個人情報の入力に自動補完に頼っていることがあり、また、運動機能に障害のあるユーザーにとっては、入力の手間が省けるという利点があります。また、ブラウザーはパスワードマネージャーに対応するため、ログインフィールドにおける `autocomplete="off"` を無視する場合があります。
+
+### 無効な自動補完値を避ける
+
+不正な値や標準外の値（自動入力機能を回避するために作り上げた文字列など）を使用した場合も、同様の影響が表れます。ブラウザーはフィールドの目的を既知のものと一致させることができないため、適切な候補を提示することができません。また、入力の目的がプログラム的に判別できなくなるため、前述の WCAG 要件にも違反することになります。特定のフィールドで自動入力機能を無効にする必要がある場合は、フォーム全体に広く適用するのではなく、真に必要な場合（CAPTCHA やワンタイムトークンのフィールドなど）にのみ `autocomplete="off"` を使用することを検討してください。
 
 ## 例
 

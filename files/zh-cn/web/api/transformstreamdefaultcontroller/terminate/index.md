@@ -1,9 +1,12 @@
 ---
-title: TransformStreamDefaultController.terminate()
+title: TransformStreamDefaultController：terminate() 方法
+short-title: terminate()
 slug: Web/API/TransformStreamDefaultController/terminate
+l10n:
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{DefaultAPISidebar("Streams API")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 {{domxref("TransformStreamDefaultController")}} 接口的 **`terminate()`** 方法用于关闭流的可读端并且会使流的可写端出错。
 

@@ -1,8 +1,9 @@
 ---
-title: aspect-ratio
+title: Propriété CSS `aspect-ratio`
+short-title: aspect-ratio
 slug: Web/CSS/Reference/Properties/aspect-ratio
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** permet de définir le rapport largeur/hauteur désiré pour la boîte d'un élément. Cela signifie que même si la taille du conteneur parent ou de la zone d'affichage change, le navigateur ajuste les dimensions de l'élément pour maintenir le rapport largeur/hauteur défini. Le {{Glossary("aspect ratio", "ratio d'aspect")}} défini est utilisé dans le calcul des tailles automatiques et d'autres fonctions de mise en page.

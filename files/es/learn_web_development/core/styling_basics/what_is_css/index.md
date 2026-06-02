@@ -16,16 +16,16 @@ Hemos aprendido los conceptos básicos de CSS, para qué sirve y cómo escribir 
       <td>
         Conocimientos básicos de informática, tener el
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >software básico</a
         >
         instalado, conocimientos básicos de cómo
         <a
-          href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos"
+          href="/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >trabajar con archivos</a
         >
         y conceptos básicos de HTML (véase
-        <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción a HTML</a
+        <a href="/es/docs/conflicting/Learn_web_development/Core/Structuring_content">Introducción a HTML</a
         >).
       </td>
     </tr>

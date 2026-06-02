@@ -20,7 +20,7 @@ Gamepad 对象有两种方式返回值：通过 [`gamepadconnected`](/zh-CN/docs
 - {{domxref("Gamepad.displayId")}} {{readonlyInline}}
   - : _返回与 {{domxref("VRDisplay")}} 相关的 {{domxref("VRDisplay.displayId")}} (如果有相关) — 控制器所控制的 `VRDisplay` 场景。_
 - {{domxref("Gamepad.id")}} {{readonlyInline}}
-  - : 一个包含着控制器标识信息的 {{domxref("DOMString")}}。
+  - : 一个包含着控制器标识信息的 {{jsxref("String")}}。
 - {{domxref("Gamepad.index")}} {{readonlyInline}}
   - : 一个自增的整形数字，对于当前连接到系统的每一个设备是唯一的。
 - {{domxref("Gamepad.mapping")}} {{readonlyInline}}

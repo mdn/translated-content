@@ -1,8 +1,9 @@
 ---
-title: "@media"
+title: Règle CSS `@media`
+short-title: "@media"
 slug: Web/CSS/Reference/At-rules/@media
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: e328268bb418551ab451881845881b5837c9da83
 ---
 
 La [règle @](/fr/docs/Web/CSS/Guides/Syntax/At-rules) [CSS](/fr/docs/Web/CSS) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Guides/Media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.

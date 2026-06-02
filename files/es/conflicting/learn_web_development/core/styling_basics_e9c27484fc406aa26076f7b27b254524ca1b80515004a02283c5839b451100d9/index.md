@@ -4,7 +4,7 @@ slug: conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076
 original_slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 Has avanzado mucho en este módulo, debes sentirte orgulloso de haber llegado hasta el final. El último paso antes de terminar es intentar el examen del módulo — que incluye completar varios ejercicios para crear el último diseño — una tarjeta de presentación/de jugador/perfil de redes sociales.
 
@@ -88,4 +88,4 @@ La siguiente captura de pantalla muestra un ejemplo de cómo debe ser el diseño
 
 Si estás siguiendo esta evaluación como parte de un curso organizado, deberías ser capaz de entregar tu trabajo a tu profesor/mentor para que lo califique. Si eres autodidacta, entonces puedes obtener la guía de puntuación fácilmente preguntando en el hilo del [Discurso del Área de Aprendizaje](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), o en el canal IRC [#mdn](irc://irc.mozilla.org/mdn) en [Mozilla IRC](https://wiki.mozilla.org/IRC). Haz el ejercicio primero - ¡No hay nada que ganar haciendo trampa!
 
-{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{PreviousMenu("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}

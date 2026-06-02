@@ -39,7 +39,7 @@ textarea:read-only {
 
 `readonly` 属性が input 要素に指定された場合、その入力欄をユーザーが編集できないので、その要素は制約検証が行われません。
 
-`readonly` 属性は、次のようなテキストのフォームコントロールで対応してます。
+`readonly` 属性は、次のようなテキストのフォームコントロールで対応しています。
 
 - {{HTMLElement("input")}} 要素の型:
   - `{{HTMLElement("input/text","text")}}`

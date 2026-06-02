@@ -1,9 +1,9 @@
 ---
-title: <angle>
+title: Type CSS `<angle>`
+short-title: <angle>
 slug: Web/CSS/Reference/Values/angle
-original_slug: Web/CSS/angle
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<angle>`** représente une valeur d'angle exprimée en degrés, grades, radians ou tours. Il est utilisé, par exemple, dans les {{CSSxRef("&lt;gradient&gt;")}} et dans certaines fonctions {{CSSxRef("transform")}}.

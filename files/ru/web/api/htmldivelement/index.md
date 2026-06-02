@@ -7,7 +7,7 @@ slug: Web/API/HTMLDivElement
 
 Интерфейс **HTMLDivElement** предоставляет специальные свойства (не входящее в интерфейс {{domxref("HTMLElement")}} ) для манипулирования DIV элементов.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

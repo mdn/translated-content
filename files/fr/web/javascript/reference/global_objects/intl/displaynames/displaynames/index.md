@@ -30,7 +30,7 @@ new Intl.DisplayNames(locales, options)
 ```
 
 > [!NOTE]
-> `Intl.DisplayNames()` ne peut être construit qu'avec {{JSxRef("Operators/new", "new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
+> `Intl.DisplayNames()` ne peut être construit qu'avec {{JSxRef("new")}}. Tenter de l'appeler sans `new` lève une erreur {{JSxRef("TypeError")}}.
 
 ### Paramètres
 

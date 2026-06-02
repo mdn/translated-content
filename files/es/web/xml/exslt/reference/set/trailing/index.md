@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/set/trailing
 original_slug: Web/EXSLT/set/trailing
 ---
 
-{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}{{XsltRef}}
+{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 `set:trailing()` devuelve los nodos de un conjunto de nodos que vienen después del primer nodo de otro conjunto de nodos.
 

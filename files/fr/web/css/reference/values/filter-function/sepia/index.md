@@ -1,12 +1,12 @@
 ---
-title: sepia()
+title: Fonction CSS `sepia()`
+short-title: sepia()
 slug: Web/CSS/Reference/Values/filter-function/sepia
-original_slug: Web/CSS/filter-function/sepia
 l10n:
-  sourceCommit: f69b6693212029ce4b9fa0c753729044577af548
+  sourceCommit: b760560abe30bd69ca968dac38528102f423b5ea
 ---
 
-La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`sepia()`** convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vielli. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
+La [fonction](/fr/docs/Web/CSS/Reference/Values/Functions) [CSS](/fr/docs/Web/CSS) **`sepia()`** convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vieilli. Le résultat de cette fonction est une valeur {{CSSxRef("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("Démonstration CSS&nbsp;: sepia()")}}
 

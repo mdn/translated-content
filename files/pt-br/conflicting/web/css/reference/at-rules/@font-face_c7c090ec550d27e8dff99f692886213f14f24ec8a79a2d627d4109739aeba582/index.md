@@ -16,7 +16,7 @@ A distância horizontal entre dois glifos podem ser bem ajustados com um element
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Atributos específicos
 

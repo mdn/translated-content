@@ -151,7 +151,7 @@ La fonction de rappel l'utilise comme valeur de `this`.
 > Si la fonction de rappel passée était une
 > [fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
 > le paramètre `thisArg` pourrait être omis,
-> car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("Operators/this", "this")}}.
+> car toutes les fonctions fléchées lient lexicalement la valeur de {{JSxRef("this")}}.
 
 ### Fonction de copie d'objet
 

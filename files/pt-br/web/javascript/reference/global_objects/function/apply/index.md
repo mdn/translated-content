@@ -19,7 +19,7 @@ fun.apply(thisArg, [argsArray])
 ### Parâmetros
 
 - `thisArg`
-  - : O valor de `this` é fornecido para a chamada de _fun._ Note que isso talvez não seja o valor real visto pelo método: se um método é uma função em código {{jsxref("Functions/Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.
+  - : O valor de `this` é fornecido para a chamada de _fun._ Note que isso talvez não seja o valor real visto pelo método: se um método é uma função em código {{jsxref("Strict_mode", "non-strict mode", "", 1)}} , {{jsxref("null")}} e {{jsxref("undefined")}} serão substituidos com o objeto global, e os valores primitivos serão embalados.
 - `argsArray`
   - : Um objeto parecido com um array (array-like), especificando os argumentos com os quais _fun_ deve ser chamado, ou {{jsxref("null")}} ou {{jsxref("undefined")}} se não houverem argumentos que possam ser passados para a função. Começando com ECMAScript5 esses argumentos podem ser um objeto genérico array-like ao invés de um array. Veja abaixo a informação de [compatibilidade de browsers](#browser_compatibility).
 
@@ -40,7 +40,7 @@ Desde a 5a versão do ECMAScript você pode utilizar qualquer tipo de objeto que
 
 ### Usando `apply` para cadeia de construtores
 
-Você pode usar `apply` para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Global_Objects/Function", "Função")}} global chamado `construct`, que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos
+Você pode usar `apply` para encadear {{jsxref("Operators/new", "construtores", "", 1)}} em um objeto, similar ao Java. No exemplo seguinte nós iremos criar um método de {{jsxref("Function", "Função")}} global chamado `construct`, que fará você capaz de usar um objeto parecido com um array com um construtor ao invés de uma lista de argumentos
 
 ```js
 Function.prototype.construct = function (aArgs) {
@@ -82,7 +82,7 @@ console.log(myInstance.constructor); // logs 'MyConstructor'
 ```
 
 > [!NOTE]
-> Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Global_Objects/Date", "Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
+> Este método não nativo `Function.construct` não irá funcionar com alguns construtores nativos (como {{jsxref("Date")}}, por exemplo). Nestes casos você tem que usar o método {{jsxref("Function.prototype.bind")}} (por exemplo, imagine ter um array como o seguinte, para ser usado com o construtor {{jsxref("Date")}}: `[2012, 11, 4]`; Neste caso você tem que escrever algom como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` - de qualquer maneira essa não é a melhor forma de fazer as coisas e provavelmente não deve ser utilizado em qualquer ambiente de produção.
 
 ### Usando `apply` e funções embutidas
 

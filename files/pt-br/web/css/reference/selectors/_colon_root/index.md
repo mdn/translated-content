@@ -6,7 +6,7 @@ original_slug: Web/CSS/:root
 
 {{CSSRef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:root`** se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}} e é idêntico ao seletor `html`, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity) é mais alta.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:root`** se equipara à raiz de uma árvore, que por sua vez representa o documento. Aplicado ao HTML, `:root` representa o elemento {{HTMLElement("html")}} e é idêntico ao seletor `html`, exceto que sua [especificidade](/pt-BR/docs/Web/CSS/Guides/Cascade/Specificity) é mais alta.
 
 ```css
 /* Seleciona o elemento raiz do documento:
@@ -26,7 +26,7 @@ A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS)
 
 ### Declarando variáveis CSS globais
 
-O`:root` pode ser útil para declarar uma [variável CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) global:
+O`:root` pode ser útil para declarar uma [variável CSS](/pt-BR/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) global:
 
 ```css
 :root {

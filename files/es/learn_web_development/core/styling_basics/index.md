@@ -63,9 +63,9 @@ En este módulo encontrarás artículos que cubren los fundamentos más esencial
 
 - [Comprensión de CSS básica](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_e9c27484fc406aa26076f7b27b254524ca1b80515004a02283c5839b451100d9)
   - : Esta evaluación evalúa su comprensión de la sintaxis básica, selectores, especificidad, modelo de caja y más.
-- [Crear papel con membrete elegante](/es/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
+- [Crear papel con membrete elegante](/es/docs/Learn_web_development/Core/Styling_basics)
   - : Si desea causar la impresión correcta, escribir una carta en papel con membrete puede ser un buen comienzo. En esta evaluación, lo retaremos a crear una plantilla en línea para lograr ese aspecto.
-- [Una caja de aspecto genial](/es/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+- [Una caja de aspecto genial](/es/docs/Learn_web_development/Core/Styling_basics)
   - : Aquí aprenderás a usar el estilo de fondo y borde para crear un cuadro llamativo.
 
 ## Ver también

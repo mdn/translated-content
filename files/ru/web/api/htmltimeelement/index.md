@@ -7,7 +7,7 @@ slug: Web/API/HTMLTimeElement
 
 **`HTMLTimeElement`** даёт специальные свойства (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) для управления {{HTMLElement("time")}} элементами.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## Свойства
 

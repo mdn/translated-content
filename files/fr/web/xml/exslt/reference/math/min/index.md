@@ -4,7 +4,7 @@ slug: Web/XML/EXSLT/Reference/math/min
 original_slug: Web/EXSLT/math/min
 ---
 
-{{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}
 
 `math:min()` renvoie la valeur minimale d'un ensemble de nœuds.
 

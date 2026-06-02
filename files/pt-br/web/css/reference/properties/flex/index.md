@@ -279,5 +279,5 @@ flex.addEventListener("click", function () {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/pt-BR/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)_
 - CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

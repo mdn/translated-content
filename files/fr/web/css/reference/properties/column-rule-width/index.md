@@ -1,8 +1,9 @@
 ---
-title: column-rule-width
+title: Propriété CSS `column-rule-width`
+short-title: column-rule-width
 slug: Web/CSS/Reference/Properties/column-rule-width
 l10n:
-  sourceCommit: 2d78abb3e793352e24e976ce0e68c08d817bd7f3
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`column-rule-width`** définit la largeur de la ligne tracée entre les colonnes dans une mise en page multi-colonnes.

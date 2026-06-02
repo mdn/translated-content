@@ -25,7 +25,7 @@ l10n:
           >파일 작업</a
         >
         에 대한 기본 지식 및 HTML 기본 지식 (<a
-          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/conflicting/Learn_web_development/Core/Structuring_content"
           >HTML 소개</a
         >
         학습)

@@ -408,7 +408,7 @@ button.addEventListener("click", handleClick);
 ## 같이 보기
 
 - [domevents.dev](https://domevents.dev/) — 탐색을 통해 DOM 이벤트 시스템의 동작에 대해 학습할 수 있는 매우 유용한 대화형 놀이터 앱입니다.
-- [이벤트 참고서](/ko/docs/Web/Events)
+- [이벤트 참고서](/ko/docs/Web/API/Document_Object_Model/Events)
 - [이벤트 순서](https://www.quirksmode.org/js/events_order.html) (캡처링과 버블링에 대한 논의) — 피터-폴 코흐가 매우 자세하게 설명한 글입니다.
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}

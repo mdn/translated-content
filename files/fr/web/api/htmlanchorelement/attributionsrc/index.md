@@ -3,16 +3,16 @@ title: "HTMLAnchorElement : propriété attributionSrc"
 short-title: attributionSrc
 slug: Web/API/HTMLAnchorElement/attributionSrc
 l10n:
-  sourceCommit: e936e7271df947f25184a5ba8a21445bbd4d056c
+  sourceCommit: 44a5fa2aace490e0114349d9d683675b2f5cacce
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{APIRef("Attribution Reporting API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 La propriété **`attributionSrc`** de l'interface {{DOMxRef("HTMLAnchorElement")}} permet d'obtenir et de définir l'attribut [`attributionsrc`](/fr/docs/Web/HTML/Reference/Elements/a#attributionsrc) sur un élément HTML {{HTMLElement("a")}} de façon programmatique, reflétant la valeur de cet attribut. `attributionsrc` indique que vous souhaitez que le navigateur envoie un en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}}. Côté serveur, cela sert à déclencher l'envoi d'un en-tête {{HTTPHeader("Attribution-Reporting-Register-Source")}} dans la réponse, afin d'enregistrer une [source d'attribution basée sur la navigation](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources).
 
 Le navigateur stocke les données de la source associée à la source d'attribution basée sur la navigation (telles que fournies dans l'en-tête de réponse {{HTTPHeader("Attribution-Reporting-Register-Source")}}) lorsqu'il reçoit la réponse de navigation.
 
-Voir l'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
+Voir [l'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
 > [!NOTE]
 > Les éléments `<a>` ne peuvent pas être utilisés comme déclencheurs d'attribution, uniquement comme sources.
@@ -29,7 +29,7 @@ Une chaîne de caractères. Il existe deux versions de cette propriété que vou
     "https://a.exemple/register-source https://b.exemple/register-source";
   ```
 
-  Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionSrc`. Lorsque la requête de ressource a lieu, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} sera envoyé à l'(aux) URL(s) spécifiée(s) dans `attributionSrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{HTTPHeader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
+  Ceci est utile dans les cas où la ressource demandée n'est pas sur un serveur que vous contrôlez, ou si vous souhaitez simplement gérer l'enregistrement de la source d'attribution sur un autre serveur. Dans ce cas, vous pouvez définir une ou plusieurs URL comme valeur de `attributionSrc`. Lorsque la requête de ressource a lieu, l'en-tête {{HTTPHeader("Attribution-Reporting-Eligible")}} est envoyé à l'(aux) URL(s) définie(s) dans `attributionSrc` en plus de l'origine de la ressource. Ces URL peuvent alors répondre avec {{HTTPHeader("Attribution-Reporting-Register-Source")}} pour compléter l'enregistrement.
 
   > [!NOTE]
   > Définir plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées sur la même fonctionnalité. Par exemple, vous pouvez avoir différentes campagnes dont vous souhaitez mesurer le succès, ce qui implique de générer différents rapports sur différentes données.
@@ -73,4 +73,4 @@ aElem.attributionSrc = `${encodedUrlA} ${encodedUrlB}`;
 
 ## Voir aussi
 
-- L'[API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).
+- [L'API Attribution Reporting](/fr/docs/Web/API/Attribution_Reporting_API).

@@ -10,7 +10,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 ### HTML
 
 - {{ HTMLElement("progress") }}元素不在错误的归为一个表单元素，因此不再有一个`form`属性。
-- The default modifier keys for the [`accesskey`](/zh-CN/docs/HTML/Global_attributes) of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.
+- The default modifier keys for the [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes) of HTML contents on Mac are changed to Control+Option. This is the same as WebKit-based browsers on Mac.
 
 ### DOM
 
@@ -19,7 +19,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 - {{ domxref("Range.insertNode()") }} method now works correctly when used on collapsed ranges.
 - The {{ domxref("BlobBuilder", "MozBlobBuilder") }} interface has been deprecated in favor of the constructor on {{ domxref("Blob") }}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.
 - The {{domxref("Blob.Blob", "Blob()")}} constructor is now available to workers ([Firefox bug 736686](https://bugzil.la/736686)).
-- Support for the [Mutation Observers](/zh-CN/docs/DOM/DOM_Mutation_Observers) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
+- Support for the [Mutation Observers](/zh-CN/docs/Web/API/MutationObserver) has been landed. It is designed as a replacement for the Mutation Events in DOM3, which has a number of issues regarding performance.
 - The {{ domxref("HTMLImageElement") }} interface's `x` and `y` properties were removed in Gecko 7.0 but restored in this release for compatibility reasons.
 - {{ domxref("Document") }}上的方法`execCommandShowHelp()`和`queryCommandText()`,没有任何作用，已被删除。
 - The `GeoPositionAddress` interface, an obsolete part of the [Geolocation](/zh-CN/Using_geolocation) API, has been removed.

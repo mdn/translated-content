@@ -41,9 +41,9 @@ O elemento `symbol` é usado para definir um template que pode ser inicializado 
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
-- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
-- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Reference/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

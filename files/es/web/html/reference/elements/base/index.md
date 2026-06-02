@@ -20,7 +20,7 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
     <tr>
       <th>
         <a
-          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/categorias_de_contenido"
+          href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de Contenido</a
         >
       </th>

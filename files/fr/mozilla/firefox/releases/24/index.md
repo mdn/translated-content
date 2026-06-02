@@ -42,7 +42,7 @@ slug: Mozilla/Firefox/Releases/24
 ### MathML
 
 - L'attribut `dir` pour contrôler le sens de lecture des formules, par ex. sur les éléments {{MathMLElement("math")}} ou {{MathMLElement("mrow")}}, est désormais équivalent à l'utilisation de la propriété CSS {{cssxref("direction")}}.
-- Le signe égal ("=") est désormais [extensible](/fr/docs/Web/MathML/Element/mo#attr-stretchy).
+- Le signe égal ("=") est désormais [extensible](/fr/docs/Web/MathML/Element/mo#stretchy).
 - La valeur "`updiagonalarrow`" pour la notation de l'attribut `notation` sur l'élément {{MathMLElement("menclose")}} a été ajouté.
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on

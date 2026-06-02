@@ -1,8 +1,9 @@
 ---
-title: inset
+title: Propriété CSS `inset`
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 l10n:
-  sourceCommit: 2fe84cf3af6fab1d4009fe99b4a69332e1629838
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`inset`** correspond aux propriétés {{CSSxRef("top")}}, {{CSSxRef("right")}}, {{CSSxRef("bottom")}} et/ou {{CSSxRef("left")}}. Elle utilise la même syntaxe à valeurs multiples que la propriété raccourcie {{CSSxRef("margin")}}.

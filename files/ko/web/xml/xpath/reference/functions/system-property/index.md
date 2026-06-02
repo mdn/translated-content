@@ -4,7 +4,7 @@ slug: Web/XML/XPath/Reference/Functions/system-property
 original_slug: Web/XPath/Functions/system-property
 ---
 
-{{XsltSidebar}}{{ XsltRef() }}
+{{XsltSidebar}}
 
 `system-property` 함수는 인수로 준 시스템 속성을 나타내는 개체를 반환합니다.
 

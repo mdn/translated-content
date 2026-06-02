@@ -85,7 +85,7 @@ Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um compleme
 - [Compartilhando objetos com scripts de páginas](/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
 - [Publicando sua extensão](/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)
 - [Descontinuando sua extensão](/docs/Mozilla/Add-ons/WebExtensions/Retiring_your_extension)
-- [Dicas e truques](/docs/Mozilla/Add-ons/WebExtensions/Tips)
+- [Dicas e truques](/docs/Mozilla/Add-ons/WebExtensions)
 
 ### Referências
 

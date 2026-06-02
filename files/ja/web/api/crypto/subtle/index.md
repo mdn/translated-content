@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-**`Crypto.subtle`** 読み取り専用プロパティは、低水準の暗号化操作をができる {{domxref("SubtleCrypto")}} オブジェクトを返します。
+**`Crypto.subtle`** 読み取り専用プロパティは、低水準の暗号化操作ができる {{domxref("SubtleCrypto")}} オブジェクトを返します。
 
 ## 値
 

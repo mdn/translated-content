@@ -43,7 +43,7 @@ _変更なし。_
   - これは [getter](/ja/docs/Web/JavaScript/Reference/Functions/get) および [setter](/ja/docs/Web/JavaScript/Reference/Functions/set) のメソッド名も同様に含まれており ([Firefox バグ 1048384](https://bugzil.la/1048384))、また [構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#計算されたオブジェクトのプロパティの名前と構造分解)と共に使用することもできます。
 
 - ES6 の、オブジェクトの[メソッド定義における短縮記法](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を実装しました ([Firefox バグ 924672](https://bugzil.la/924672))。
-- ES6 の `Object` のメソッドである {{jsxref("Object.assign", "Object.assign()")}} を実装しました ([Firefox バグ 937855](https://bugzil.la/937855))。
+- ES6 の `Object` のメソッドである {{jsxref("Object.assign()")}} を実装しました ([Firefox バグ 937855](https://bugzil.la/937855))。
 - ES6 の [template strings](/ja/docs/Web/JavaScript/Reference/Template_literals) および {{jsxref("String.raw()")}} メソッドをサポートしました ([Firefox バグ 1038259](https://bugzil.la/1038259)、[Firefox バグ 1039774](https://bugzil.la/1039774))。
 - ES6 の新たなオブジェクトである {{jsxref("WeakSet")}} を実装しました ([Firefox バグ 792439](https://bugzil.la/792439))。
 - 最近の仕様の変更に合致するよう、ES6 の [Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (Nightly チャンネルのみ有効) を更新しました ([Firefox バグ 1042602](https://bugzil.la/1042602)):

@@ -66,7 +66,7 @@ const y = ++x;
 // x は 4; y = 4
 
 let x2 = 3n;
-const y2 = --x2;
+const y2 = ++x2;
 // x2 は 4n; y2 は 4n
 ```
 
@@ -86,6 +86,6 @@ const y2 = --x2;
 - [乗算演算子 (`*`)](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
 - [剰余演算子 (`%`)](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [べき乗演算子 (`**`)](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
+- [デクリメント演算子 (`--`)](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [単項マイナス演算子 (`-`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [単項プラス演算子 (`+`)](/ja/docs/Web/JavaScript/Reference/Operators/Unary_plus)

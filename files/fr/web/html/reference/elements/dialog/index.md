@@ -1,8 +1,9 @@
 ---
-title: "<dialog> : l'élément de boîte de dialogue"
+title: "Élément HTML `<dialog>` : l'élément de boîte de dialogue"
+short-title: <dialog>
 slug: Web/HTML/Reference/Elements/dialog
 l10n:
-  sourceCommit: 483ce811e1ea52cb2d9d2a5af0c4d1c4d591ea4a
+  sourceCommit: 599ae8b7ad414e91df473d91983f4ffc5cafabb3
 ---
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de dialogue ou un composant interactif (par exemple un inspecteur ou une fenêtre).
@@ -26,7 +27,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Glob
     - `closerequest`
       - : Le dialogue peut être fermé par une action spécifique à la plateforme ou un mécanisme défini par le·la développeur·euse.
     - `none`
-    - : Le dialogue ne peut être fermé que par un mécanisme défini par le·la développeur·euse.
+      - : Le dialogue ne peut être fermé que par un mécanisme défini par le·la développeur·euse.
 
     Si l'élément `<dialog>` ne possède pas de valeur `closedby` valide&nbsp;:
     - s'il a été ouvert avec {{DOMxRef("HTMLDialogElement.showModal()", "showModal()")}}, il se comporte comme si la valeur était `"closerequest"`

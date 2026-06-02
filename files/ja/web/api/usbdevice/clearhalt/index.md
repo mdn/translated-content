@@ -24,7 +24,7 @@ clearHalt(direction, endpointNumber)
 
 ### 返値
 
-{{jsxref("promise")}} です。
+{{jsxref("Promise")}} です。
 
 ## 例
 

@@ -88,15 +88,15 @@ Tal como as tabelas, grid layout permite ao autor alinhar os componentes da pág
 
 ## Guias
 
-- [Conceitos básicos de Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Relação do Grid Layout com outros métodos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+- [Conceitos básicos de Grid Layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
+- [Relação do Grid Layout com outros métodos de layout](/pt-BR/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods)
 - [Layout usando grid lines nomeadas](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
 - [Grid template areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
 - [Posicionamento Automático CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Alinhamento Box no CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Grid, Valores Lógicos e Modos de Escrita](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS Grid Layout e Acessibilidade](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid e Aprimoramento Progressivo](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS Grid e Aprimoramento Progressivo](/pt-BR/docs/Web/CSS/Guides/Grid_layout)
 - [Realizando layouts comuns usando CSS Grid](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ## Especificações

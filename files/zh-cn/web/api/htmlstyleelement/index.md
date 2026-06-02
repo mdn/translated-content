@@ -9,16 +9,16 @@ slug: Web/API/HTMLStyleElement
 
 这个接口不允许修改包含其中的 CSS（大多数情况下）。如果需要修改 CSS，前往[关于使用动态样式的信息](/zh-CN/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)查看在 DOM 中用于修改特定 CSS 属性的对象。
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
 ## 属性
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}**, and implements {{domxref("LinkStyle")}}**._
 
 - {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing the intended destination medium for style information.
+  - : Is a {{jsxref("String")}} representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}}
-  - : Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.
+  - : Is a {{jsxref("String")}} representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
   - : Is a {{domxref("Boolean")}} value representing whether or not the stylesheet is disabled (true) or not (false).
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}

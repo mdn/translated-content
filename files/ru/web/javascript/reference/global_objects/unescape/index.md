@@ -3,7 +3,7 @@ title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
 ---
 
-{{jsSidebar("Objects")}} {{deprecated_header()}}
+{{jsSidebar("Objects")}} {{deprecated_header}}
 
 Устаревший метод **`unescape(str)`** создаёт новую строку в которой шестнадцатеричная последовательность символов вида %xx заменяется эквивалентами из кодировки ASCII. Знаки, закодированные в формате %uxxxx (знаки Юникода), заменяются знаками Юникода в шестнадцатеричной кодировке xxxx.
 

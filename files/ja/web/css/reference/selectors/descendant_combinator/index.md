@@ -2,7 +2,7 @@
 title: 子孫結合子
 slug: Web/CSS/Reference/Selectors/Descendant_combinator
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
 ---
 
 **子孫結合子** (descendant combinator) — 通常は単一の空白文字 (" ") で表される — は 2 つの CSS セレクターを結合し、 1 つ目のセレクターに一致する要素が祖先 (親、親の親、親の親の親、など) となっている 2 つ目のセレクターに一致します。子孫結合子を利用したセレクターは _子孫セレクター_ と呼ばれます。

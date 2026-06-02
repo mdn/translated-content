@@ -1,8 +1,9 @@
 ---
-title: :active-view-transition
+title: Pseudo-classe CSS `:active-view-transition`
+short-title: :active-view-transition
 slug: Web/CSS/Reference/Selectors/:active-view-transition
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: bf90d24ddf56e3f60df25fcbc0d4e3e084004794
 ---
 
 La [pseudo-classe](/fr/docs/Web/CSS/Reference/Selectors/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:active-view-transition`** correspond à l'élément racine d'un document lorsqu'une [transition de vue](/fr/docs/Web/API/View_Transition_API#concepts_et_utilisation) est en cours (_active_) et cesse de correspondre une fois la transition terminée.

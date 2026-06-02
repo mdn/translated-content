@@ -14,7 +14,7 @@ O primeiro artigo da nossa série de tutoriais práticos explica o que você ir�
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler a
-        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Introduction"
           >introdução ao Django</a
         >. Para os próximos artigos você também necessitará ter montando o
         <a href="/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment"

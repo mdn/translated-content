@@ -4,7 +4,7 @@ slug: Web/HTML/How_to/Use_data_attributes
 original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 ---
 
-O [HTML5](/pt-BR/docs/Glossary/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element/classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
+O [HTML5](/pt-BR/docs/Glossary/HTML5) foi criado pensando na extensibilidade dos dados que precisam ser associados a um determinado elemento mas não necessariamente tem um significado definido. [Atributos data-\*](/pt-BR/docs/Web/HTML/Reference/Global_attributes#dataset) nos permite armazenar informações extras em elementos HTML padrões e semânticos, sem a necessidades de hacks como [classList](/pt-BR/docs/Web/API/Element/classList), atributos fora do padrão, propriedades extras no DOM ou o método depreciado [setUserData](/pt-BR/docs/Web/API/Node.setUserData).
 
 ## Sintaxe HTML
 
@@ -38,7 +38,7 @@ Cada propriedade é uma String e pode ser lida e escrita. No exemplo acima a atr
 
 ## Acesso no CSS
 
-Note que os atributos data são atributos em HTML puro, e você pode inclusive acessá-los via [CSS](/pt-BR/docs/Web/CSS). Por exemplo, para mostrar o elemento pai em um artigo, você pode usar [conteúdo gerado](/pt-BR/docs/Web/CSS/content) em CSS com a função {{cssxref("attr")}}:
+Note que os atributos data são atributos em HTML puro, e você pode inclusive acessá-los via [CSS](/pt-BR/docs/Web/CSS). Por exemplo, para mostrar o elemento pai em um artigo, você pode usar [conteúdo gerado](/pt-BR/docs/Web/CSS/Reference/Properties/content) em CSS com a função {{cssxref("attr")}}:
 
 ```css
 article::before {
@@ -46,7 +46,7 @@ article::before {
 }
 ```
 
-Pode-se também usar os [seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) em CSS para alterar estilos de acordo com o atributo data:
+Pode-se também usar os [seletores de atributos](/pt-BR/docs/Web/CSS/Reference/Selectors/Attribute_selectors) em CSS para alterar estilos de acordo com o atributo data:
 
 ```css
 article[data-columns="3"] {

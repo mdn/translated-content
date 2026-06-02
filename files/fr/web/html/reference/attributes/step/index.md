@@ -1,9 +1,9 @@
 ---
-title: "Attribut HTML : step"
+title: "Attribut HTML : `step`"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 l10n:
-  sourceCommit: 13856107d2cab5bb9e40de608ee38a5770ef7c4d
+  sourceCommit: b50ed7ac1c2ca21b4b5cfb594474a17da3f2e6c2
 ---
 
 L'attribut **`step`** est un nombre qui définit la granularité à laquelle la valeur doit adhérer ou le mot-clé `any`. Il est valide pour les types d'entrée numériques, y compris les types `{{HTMLElement("input/date", "date")}}`, `{{HTMLElement("input/month", "month")}}`, `{{HTMLElement("input/week", "week")}}`, `{{HTMLElement("input/time", "time")}}`, `{{HTMLElement("input/datetime-local", "datetime-local")}}`, `{{HTMLElement("input/number", "number")}}` et `{{HTMLElement("input/range", "range")}}`.

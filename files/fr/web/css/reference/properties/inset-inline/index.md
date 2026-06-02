@@ -1,8 +1,9 @@
 ---
-title: inset-inline
+title: Propriété CSS `inset-inline`
+short-title: inset-inline
 slug: Web/CSS/Reference/Properties/inset-inline
 l10n:
-  sourceCommit: 2fe84cf3af6fab1d4009fe99b4a69332e1629838
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`inset-inline`** définit les décalages logiques de début et de fin d'un élément dans la direction en ligne, qui correspondent à des décalages physiques selon le mode d'écriture, la direction et l'orientation du texte de l'élément. Elle correspond aux propriétés {{CSSxRef("top")}} et {{CSSxRef("bottom")}}, ou {{CSSxRef("right")}} et {{CSSxRef("left")}} selon les valeurs définies pour {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}} et {{CSSxRef("text-orientation")}}.

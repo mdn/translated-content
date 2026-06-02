@@ -69,7 +69,7 @@ delete trees[3];
 3 in trees; // retorna false
 ```
 
-Se você definir uma propriedade como {{jsxref("Global_Objects/undefined", "undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
+Se você definir uma propriedade como {{jsxref("undefined")}}, mas não a remover, o operador `in` retorna `true` para essa propriedade.
 
 ```js
 var mycar = { make: "Honda", model: "Accord", year: 1998 };

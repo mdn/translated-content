@@ -12,7 +12,7 @@ O elemento [HTML](/pt-BR/docs/Web/HTML) **`<abbr>`** representa uma abreviação
 
 Ao incluir uma abreviação ou acrônimo, forneça uma expansão completa do termo em texto simples no primeiro uso, junto com o `<abbr>` para marcar a abreviação. Isso informa à pessoa usuária o que a abreviação ou acrônimo significa.
 
-O atributo opcional [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) pode fornecer uma expansão para a abreviação ou acrônimo quando uma expansão completa não estiver presente. Isso fornece uma dica para os agentes da pessoa usuária sobre como anunciar/exibir o conteúdo enquanto informa a todas as pessoas usuárias o que a abreviação significa. Se presente, `title` deve conter esta descrição completa e nada mais.
+O atributo opcional [`title`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/title) pode fornecer uma expansão para a abreviação ou acrônimo quando uma expansão completa não estiver presente. Isso fornece uma dica para os agentes da pessoa usuária sobre como anunciar/exibir o conteúdo enquanto informa a todas as pessoas usuárias o que a abreviação significa. Se presente, `title` deve conter esta descrição completa e nada mais.
 
 {{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
 
@@ -34,7 +34,7 @@ abbr {
 
 ## Atributos
 
-Este elemento suporta apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes). O atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) tem um significado semântico específico quando usado com o elemento `<abbr>`; ele _deve_ conter uma descrição completa legível para pessoas ou uma expansão da abreviação. Este texto é frequentemente apresentado pelos navegadores como uma dica de ferramenta quando o cursor do mouse é passado sobre o elemento.
+Este elemento suporta apenas os [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes). O atributo [`title`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/title) tem um significado semântico específico quando usado com o elemento `<abbr>`; ele _deve_ conter uma descrição completa legível para pessoas ou uma expansão da abreviação. Este texto é frequentemente apresentado pelos navegadores como uma dica de ferramenta quando o cursor do mouse é passado sobre o elemento.
 
 Cada elemento `<abbr>` que você usa é independente de todos os outros; fornecer um `title` para um não anexa automaticamente o mesmo texto de expansão a outros com o mesmo texto de conteúdo.
 
@@ -44,7 +44,7 @@ Cada elemento `<abbr>` que você usa é independente de todos os outros; fornece
 
 Certamente não é necessário que todas as abreviações sejam marcadas usando `<abbr>`. Existem, no entanto, alguns casos em que é útil fazer isso:
 
-- Quando uma abreviação é usada e você deseja fornecer uma expansão ou definição fora do fluxo do conteúdo do documento, use `<abbr>` com um [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) apropriado.
+- Quando uma abreviação é usada e você deseja fornecer uma expansão ou definição fora do fluxo do conteúdo do documento, use `<abbr>` com um [`title`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/title) apropriado.
 - Para definir uma abreviação que pode ser desconhecida para a pessoa leitora, apresente o termo usando `<abbr>` e um texto em linha fornecendo a definição. Inclua um atributo `title` somente quando a expansão ou definição em linha não estiver disponível.
 - Quando a presença de uma abreviação no texto precisa ser semanticamente notada, o elemento `<abbr>` é útil. Isso pode ser usado, por sua vez, para fins de estilo ou script.
 - Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para estabelecer definições para termos que são abreviações ou acrônimos. Veja o exemplo [Definindo uma abreviação](#definindo_uma_abreviação) abaixo.
@@ -116,7 +116,7 @@ abbr {
 
 ### Fornecendo uma expansão
 
-Adicionar um atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes/title) permite que você forneça uma expansão ou definição para a abreviação ou acrônimo.
+Adicionar um atributo [`title`](/pt-BR/docs/Web/HTML/Reference/Global_attributes/title) permite que você forneça uma expansão ou definição para a abreviação ou acrônimo.
 
 #### HTML
 
@@ -157,15 +157,15 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_de_fluxo"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_de_fluxo"
           >Conteúdo de fluxo</a
         >,
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >conteúdo fraseado</a
         >, conteúdo palpável
       </td>
@@ -173,7 +173,7 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >Conteúdo fraseado</a
         >
       </td>
@@ -186,7 +186,7 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#conte%C3%BAdo_fraseado"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#conte%C3%BAdo_fraseado"
           >conteúdo fraseado</a
         >
       </td>

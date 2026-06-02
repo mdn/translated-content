@@ -1,8 +1,9 @@
 ---
-title: overflow-y
+title: Propriété CSS `overflow-y`
+short-title: overflow-y
 slug: Web/CSS/Reference/Properties/overflow-y
 l10n:
-  sourceCommit: 1dbba9f7a2c2e35c6e01e8a63159e2aac64b601b
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`overflow-y`** définit ce qui s'affiche lorsque le contenu dépasse les bords supérieur et inférieur d'un élément de niveau bloc. Cela peut être rien, une barre de défilement ou le contenu débordant. Cette propriété peut également être définie en utilisant la propriété raccourcie {{CSSxRef("overflow")}}.

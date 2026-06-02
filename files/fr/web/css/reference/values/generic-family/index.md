@@ -1,9 +1,9 @@
 ---
-title: <generic-family>
+title: Type CSS `<generic-family>`
+short-title: <generic-family>
 slug: Web/CSS/Reference/Values/generic-family
-original_slug: Web/CSS/generic-family
 l10n:
-  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 Le [type de donnée](/fr/docs/Web/CSS/Reference/Values/Data_types) [CSS](/fr/docs/Web/CSS) **`<generic-family>`** représente les mots-clés des familles de polices génériques utilisés dans la propriété abrégée {{CSSxRef("font")}} et la propriété longue {{CSSxRef("font-family")}}. Le `<generic-family>` désigne une ou plusieurs polices installées localement appartenant à cette catégorie.

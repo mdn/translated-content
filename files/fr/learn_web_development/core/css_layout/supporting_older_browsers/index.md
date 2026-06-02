@@ -14,11 +14,11 @@ Dans ce module, nous vous recommandons d'utiliser Flexbox et les grilles CSS com
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content"
           >Introduction au HTML</a
         >), et une idée du fonctionnement de CSS (étudiez
-        <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas avec CSS</a> et
-        <a href="/fr/docs/Learn/CSS/Building_blocks">Blocs de base en CSS</a>.)
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics/Getting_started">Premiers pas avec CSS</a> et
+        <a href="/fr/docs/Learn_web_development/Core/Styling_basics">Blocs de base en CSS</a>.)
       </td>
     </tr>
     <tr>

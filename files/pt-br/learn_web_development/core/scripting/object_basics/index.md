@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Scripting/Object_basics
 original_slug: Learn/JavaScript/Objects/Basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremos alguns recursos JavaScript vistos anteriormente no curso, reiterando o fato de que muitos dos recursos que você já utilizou são objetos.
 
@@ -15,9 +15,9 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
       <td>
         Interação básica com o computador, entendimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (ver
-        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn_web_development/Core/Scripting">Primeiros passos</a>
         e
-        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting"
           >Elementos construtivos</a
         >).
       </td>
@@ -316,7 +316,7 @@ Parabéns, você chegou ao final de nosso primeiro artigo sobre objetos JS - ago
 
 No próximo artigo vamos começar a ver a teoria de programação orientada a objetos (OOP) e em como suas técnicas podem ser usadas em Javascript.
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 ## Nesse módulo
 

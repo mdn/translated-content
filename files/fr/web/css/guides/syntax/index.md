@@ -33,7 +33,7 @@ Ce module ne définit aucune propriété, [types de données](/fr/docs/Web/CSS/R
 
 - {{Glossary("CSS_Descriptor", "Descripteur CSS")}}
 - {{Glossary("Parse", "Analyse")}}
-- {{Glossary("Stylesheet", "Feuille de style")}}
+- {{Glossary("Style sheet", "Feuille de style")}}
 - {{Glossary("Whitespace", "Espace blanc")}}
 
 ## Guides

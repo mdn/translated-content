@@ -26,16 +26,16 @@ s {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/pt-BR/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Conteúdo fraseado</a
         >
         ou
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>
@@ -43,7 +43,7 @@ s {
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >Conteúdo freaseado</a
         >.
       </td>
@@ -56,7 +56,7 @@ s {
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Guides/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -74,7 +74,7 @@ s {
 
 ## Atributos
 
-Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
+Esse atributo incluí [atributos globais](/pt-BR/docs/Web/HTML/Reference/Global_attributes).
 
 > **Note:** **Notas de implementação:** Até Gecko 1.9.2 inclusive, Firefox implementa [`HTMLSpanElement`](/pt-BR/docs/DOM/span) para a interface deste elemento.
 

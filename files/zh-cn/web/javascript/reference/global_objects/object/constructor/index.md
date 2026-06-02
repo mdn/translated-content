@@ -306,6 +306,6 @@ console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, off
 
 ## 参见
 
-- {{jsxref("statements/class","Class declaration","",1)}}
+- {{jsxref("Statements/class","Class declaration","",1)}}
 - {{jsxref("Classes/constructor","Class constructor","",1)}}
 - 术语：{{Glossary("constructor", "", 1)}}

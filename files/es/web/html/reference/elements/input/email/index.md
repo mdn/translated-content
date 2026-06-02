@@ -39,7 +39,7 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
     <tr>
       <td><strong><a href="#value">Valor</a></strong></td>
       <td>
-        Un {{domxref("DOMString")}} representando una dirreción de correo o
+        Un {{jsxref("String")}} representando una dirreción de correo o
         vacío
       </td>
     </tr>
@@ -53,17 +53,17 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
     <tr>
       <td><strong>Atributos comunes soprtados</strong></td>
       <td>
-        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#name"><code>name</code></a>, <a href="/es/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/es/docs/Web/HTML/Element/input#size"><code>size</code></a> y
-        <a href="/es/docs/Web/HTML/Element/input#type"><code>type</code></a>
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#multiple"><code>multiple</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#name"><code>name</code></a>, <a href="/es/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a>,
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a> y
+        <a href="/es/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a>
       </td>
     </tr>
     <tr>
@@ -85,7 +85,7 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
 
 ## Valor
 
-El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) del elemento {{HTMLElement("input")}} contiene un {{DOMxRef("DOMString")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) del elemento {{HTMLElement("input")}} contiene un {{jsxref("String")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
 
 1. Una cadena vacía ("") — indica que el usuario no ingresó un valor o que el valor fue eliminado.
 2. Una única dirección de correo debidamente formada. Esto no necesariamente significa que exista la dirección de correo electrónico, pero al menos tiene el formato correcto. En términos simples, esto significa `nombreusuario@dominio` o `nombreusuario@dominio.tld`. Hay más que eso, por supuesto; consulta [Validación](#validación) para obtener una {{Glossary("regular expression")}} que coincida con el algoritmo de validación de la dirección de correo.
@@ -432,4 +432,4 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
   - [`readonly`](/es/docs/Web/HTML/Attributes/readonly)
   - [`size`](/es/docs/Web/HTML/Attributes/size)
 
-- [Compatibilidad con propiedades CSS](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Compatibilidad con propiedades CSS](/es/docs/Learn_web_development/Extensions/Forms)

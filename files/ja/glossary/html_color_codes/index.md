@@ -2,7 +2,7 @@
 title: HTML color codes (HTML カラーコード)
 slug: Glossary/html_color_codes
 l10n:
-  sourceCommit: 51872f3d8311c3c071cbfea613da40036911e4d7
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **HTML カラーコード** は事実上、ウェブページの色を指定する方法の中で、最も楽に使える方法の一般的な用語です。これは `black`、 `purple`、 `aqua` のような HTML 色名、`#000000`、 `#800080`、 `#00ffff` のような 16 進数表記を含みます。これらは元々 HTML 仕様に定義されています。例えば、オリジナルの 16 色の HTML カラーに関する [HTML 3.2 色定義](https://www.w3.org/TR/2018/SPSD-html32-20180315/#colors) を参照してください。

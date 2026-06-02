@@ -2,9 +2,8 @@
 title: CSS アットルール関数
 short-title: アットルール関数
 slug: Web/CSS/Reference/At-rules/At-rule_functions
-original_slug: Web/CSS/CSS_syntax/At-rule_functions
 l10n:
-  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
+  sourceCommit: 85fccefc8066bd49af4ddafc12c77f35265c7e2d
 ---
 
 **[CSS](/ja/docs/Web/CSS) [アットルール](/ja/docs/Web/CSS/Guides/Syntax/At-rules)関数**は、複雑なルールを表したり、特別なデータ処理や計算を呼び出すことができるアットルール文です。
@@ -28,7 +27,7 @@ l10n:
   - : 指定した URL からスタイルシートファイルをインポートします。
 - {{CSSxRef("@import", "@import supports()")}}
   - : ブラウザーの対応状況に基づいてスタイルシートファイルをインポートします。
-- [`@import layer()`](/ja/docs/Web/CSS/@import/layer_function)
+- [`@import layer()`](/ja/docs/Web/CSS/Reference/At-rules/@import/layer_function)
   - : 指定されたカスケードレイヤーの中にスタイルシートファイルをインポートします。
 
 ## @supports 関数
@@ -58,4 +57,5 @@ l10n:
 
 ## 関連情報
 
+- [CSS アットルール](/ja/docs/Web/CSS/Reference/At-rules)
 - [CSS 構文](/ja/docs/Web/CSS/Guides/Syntax)モジュール

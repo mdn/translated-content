@@ -536,6 +536,7 @@
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
 /zh-CN/docs/Glossary/Simple_header	/zh-CN/docs/Glossary/CORS-safelisted_request_header
 /zh-CN/docs/Glossary/Simple_response_header	/zh-CN/docs/Glossary/CORS-safelisted_response_header
+/zh-CN/docs/Glossary/Stylesheet	/zh-CN/docs/Glossary/Style_sheet
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
 /zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
 /zh-CN/docs/Glossary/eTLD	/zh-CN/docs/Glossary/Registrable_domain
@@ -4468,9 +4469,14 @@
 /zh-CN/docs/Web/JavaScript/Reference/WeakMap/delete	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 /zh-CN/docs/Web/JavaScript/Reference/arrow_functions	/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /zh-CN/docs/Web/JavaScript/Reference/default_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/zh-CN/docs/Web/JavaScript/Reference/delete	/zh-CN/docs/Web/JavaScript/Reference/Operators/delete
 /zh-CN/docs/Web/JavaScript/Reference/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
+/zh-CN/docs/Web/JavaScript/Reference/instanceof	/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof
+/zh-CN/docs/Web/JavaScript/Reference/new	/zh-CN/docs/Web/JavaScript/Reference/Operators/new
+/zh-CN/docs/Web/JavaScript/Reference/null	/zh-CN/docs/Web/JavaScript/Reference/Operators/null
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
+/zh-CN/docs/Web/JavaScript/Reference/this	/zh-CN/docs/Web/JavaScript/Reference/Operators/this
 /zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Defenses/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview

@@ -14,19 +14,19 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/es/docs/Web/Guide/HTML/categorias_de_contenido"
+        <a href="/es/docs/Web/HTML/Guides/Content_categories"
           >Categorías de contenido</a
         >
       </th>
       <td>
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_dinámico"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_dinámico"
           >Contenido dinámico</a
         >, enlistado, presentable, reajustable, elemento asociado a formulario,
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_textual_o_estático"
           >contenido textual</a
-        >. Si su atributo <a href="/es/docs/Web/HTML/Element/input#type"><code>type</code></a> no es
+        >. Si su atributo <a href="/es/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> no es
         <code>hidden</code>, entonces contenido etiquetable, contenido palpable.
       </td>
     </tr>
@@ -48,7 +48,7 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
       <td>
         Cualquier elemento que acepte
         <a
-          href="/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_textual_o_estático"
+          href="/es/docs/Web/HTML/Guides/Content_categories#Contenido_textual_o_estático"
           >contenido textual</a
         >.
       </td>

@@ -4,17 +4,17 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_dat
 original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 これで[地域図書館](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)のウェブサイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。
 
-| 前提条件: | 以前のチュートリアルのトピック ([Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn/Server-side/Express_Nodejs/routes)を含む) を完了してください。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | async モジュールと Pug テンプレート言語の使い方、そしてコントローラ関数の URL からデータを取得する方法を理解すること。                                              |
+| 前提条件: | 以前のチュートリアルのトピック ([Express チュートリアル Part 4: ルートとコントローラ](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)を含む) を完了してください。 |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | async モジュールと Pug テンプレート言語の使い方、そしてコントローラ関数の URL からデータを取得する方法を理解すること。                                                                         |
 
 ## 概要
 
-前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリーレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
+前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリーレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
 
 次のステップは、私たちの図書館情報を表示するページに適切な実装をすることです (後の記事で情報を作成、更新、または削除するフォームを特徴とする実装ページを見ます)。これには、モデルを使用してレコードを取得するためのコントローラ機能の更新、およびこの情報をユーザーに表示するためのテンプレートの定義が含まれます。
 
@@ -52,4 +52,4 @@ original_slug: Learn/Server-side/Express_Nodejs/Displaying_data
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug ドキュメント)
 - [Moment](http://momentjs.com/docs/) (Moment ドキュメント)
 
-{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

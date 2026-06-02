@@ -1,8 +1,9 @@
 ---
-title: ::-moz-range-thumb
+title: Pseudo-élément CSS `::-moz-range-thumb`
+short-title: ::-moz-range-thumb
 slug: Web/CSS/Reference/Selectors/::-moz-range-thumb
 l10n:
-  sourceCommit: c52ed787442db9d65b21f5c2874fa6bfd08a253a
+  sourceCommit: 6cf697a8965ecdc4967258cc0282fe789b60318e
 ---
 
 {{Non-standard_Header}}

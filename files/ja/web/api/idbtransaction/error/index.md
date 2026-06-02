@@ -77,7 +77,7 @@ function addData() {
   const objectStoreRequest = objectStore.add(newItem[0]);
 
   objectStoreRequest.onsuccess = (event) => {
-    // 要求の成功を報告する (これは、アイテムがデータベースにに正常に格納されたことを意味しません。
+    // 要求の成功を報告する (これは、アイテムがデータベースに正常に格納されたことを意味しません。
     // これを知るには、transaction.onsuccess を用いる必要があります)
     note.innerHTML += "<li>要求に成功しました。</li>";
   };

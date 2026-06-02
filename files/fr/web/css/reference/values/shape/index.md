@@ -1,8 +1,9 @@
 ---
-title: <shape>
+title: Type CSS `<shape>`
+short-title: <shape>
 slug: Web/CSS/Reference/Values/shape
 l10n:
-  sourceCommit: 33094d735e90b4dcae5733331b79c51fee997410
+  sourceCommit: c88e03530319b73272fd4f9a9f6ebe878f026004
 ---
 
 {{Deprecated_Header}}

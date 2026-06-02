@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
 
-En programmation, la **liaison** (<i lang="en">binding</i> en anglais) correspond à l'association d'un {{Glossary("identifier", "identifiant")}} avec une valeur. C'est le cas pour les {{Glossary("variable", "variables")}} — par exemple les {{Glossary("parameter", "paramètres")}} des fonctions et celles créées par les blocs {{JSxRef("Statements/try...catch", "catch (e)")}} ne sont pas des «&nbsp;variables&nbsp;» au sens strict du terme. De plus, certaines liaisons sont implicitement créées par le langage — par exemple, {{JSxRef("Operators/this", "this")}} et [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) en JavaScript.
+En programmation, la **liaison** (<i lang="en">binding</i> en anglais) correspond à l'association d'un {{Glossary("identifier", "identifiant")}} avec une valeur. C'est le cas pour les {{Glossary("variable", "variables")}} — par exemple les {{Glossary("parameter", "paramètres")}} des fonctions et celles créées par les blocs {{JSxRef("Statements/try...catch", "catch (e)")}} ne sont pas des «&nbsp;variables&nbsp;» au sens strict du terme. De plus, certaines liaisons sont implicitement créées par le langage — par exemple, {{JSxRef("this")}} et [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) en JavaScript.
 
 On dit d'une liaison qu'elle est {{Glossary("mutable", "muable")}} si elle peut être réaffectée et {{Glossary("immutable", "immuable")}} dans le cas contraire&nbsp;; cela _ne_ signifie _pas_ que la valeur correspondante est immuable.
 

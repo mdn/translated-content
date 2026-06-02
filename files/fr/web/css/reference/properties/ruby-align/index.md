@@ -1,8 +1,9 @@
 ---
-title: ruby-align
+title: Propriété CSS `ruby-align`
+short-title: ruby-align
 slug: Web/CSS/Reference/Properties/ruby-align
 l10n:
-  sourceCommit: 038bda33048810c222cc32b71f52f14d53495a1d
+  sourceCommit: bcbb4bd6a80292c0663b723d5466759cfaaa8315
 ---
 
 La propriété [CSS](/fr/docs/Web/CSS) **`ruby-align`** définit la façon dont les éléments ruby sont distribués autour du texte de base.

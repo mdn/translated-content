@@ -7,7 +7,7 @@ l10n:
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
-アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアでです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
+アクセシビリティの問題を引き起こす他のカテゴリーは、マルチメディアです。映像、音声、画像といったコンテンツは、支援技術 (assistive technologies) とそのユーザーが理解可能となる適切な代替テキストを必要とします。この記事ではその方法を説明します。
 
 <table>
   <tbody>
