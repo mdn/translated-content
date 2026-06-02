@@ -17,16 +17,16 @@ l10n:
 
 {{domxref("MediaMetadata")}} 接口允许网站为正在播放的媒体内容向平台用户界面提供丰富的元数据。这些元数据包括标题、艺术家（创作者）名称、专辑（合集）、封面图以及章节信息。平台可以在媒体中心、通知、设备锁屏界面等处显示这些元数据。例如，不同设备可能会以如下方式呈现媒体会话 API 的数据：
 
-![桌面浏览器、手机和智能手表上显示的 Sintel 预告片标题及封面图的媒体会话数据](media-session-ui.jpg)
+![桌面浏览器、手机和智能手表上显示的《辛特尔》预告片标题及封面图的媒体会话数据](media-session-ui.jpg)
 
 > [!CALLOUT]
-> 原始图片资源：[桌面设备上的媒体中心、移动设备上的媒体通知和穿戴式设备](https://web.developers.google.cn/articles/media-session)在 web.dev (2024)
+> 原始图片资源：web.dev 上的[桌面设备上的媒体中心、移动设备上的媒体通知和穿戴式设备](https://web.developers.google.cn/articles/media-session)（2024）
 
 {{domxref("MediaSession")}} 接口允许用户通过用户代理定义的界面元素来控制媒体的播放。与这些元素的交互会触发正在播放媒体的网页上的操作处理程序。由于可能有多个页面同时使用此 API，因此用户代理负责调用正确页面的操作处理程序。当没有页面定义的行为时，用户代理会提供默认行为。
 
 ## 访问媒体会话 API
 
-{{domxref("MediaSession")}} 是媒体会话 API 的主要接口。与其创建自己的 `MediaSession` 实例，不如通过 navigator.mediaSession 属性来访问该 API。例如，将媒体会话的当前状态设置为 `playing`：
+{{domxref("MediaSession")}} 是媒体会话 API 的主要接口。与其创建自己的 `MediaSession` 实例，不如通过 {{domxref("navigator.mediaSession")}} 属性来访问该 API。例如，将媒体会话的当前状态设置为 `playing`：
 
 ```js
 navigator.mediaSession.playbackState = "playing";
@@ -45,7 +45,7 @@ navigator.mediaSession.playbackState = "playing";
 
 ### 为音乐播放器设置动作处理程序
 
-以下示例演示了媒体会话 API 的功能检测。它为该会话实例化了一个元数据对象，并为用户控制操作添加了操作处理程序：
+以下示例演示了媒体会话 API 的特性检测。它为该会话实例化了一个元数据对象，并为用户控制操作添加了操作处理程序：
 
 ```js
 if ("mediaSession" in navigator) {
@@ -151,26 +151,26 @@ playButton.addEventListener("pointerup", (event) => {
 ```js
 try {
   navigator.mediaSession.setActionHandler("previousslide", () => {
-    log('> 用户点击 "向前翻页" 图标。');
+    log('> 用户点击“向前翻页”图标。');
     if (slideNumber > 1) slideNumber--;
     updateSlide();
   });
 } catch (error) {
-  log('警告！媒体会话操作 "previousslide" 不被支持。');
+  log('警告！不支持媒体会话操作“previousslide”。');
 }
 
 try {
   navigator.mediaSession.setActionHandler("nextslide", () => {
-    log('> 用户点击 "向后翻页" 图标。');
+    log('> 用户点击“向后翻页”图标。');
     slideNumber++;
     updateSlide();
   });
 } catch (error) {
-  log('警告！媒体会话操作 "nextslide" 不被支持。');
+  log('警告！不支持媒体会话操作“nextslide”。');
 }
 ```
 
-查看[演示文稿的媒体会话示例](https://googlechrome.github.io/samples/media-session/slides.html)。
+参见[媒体会话示例：幻灯片演示](https://googlechrome.github.io/samples/media-session/slides.html)以查看实际示例。
 
 ## 规范
 
@@ -182,4 +182,4 @@ try {
 
 ## 参见
 
-- [使用 Media Session API 自定义媒体通知和播放控制](https://web.developers.google.cn/articles/media-session) 在 web.dev (2024)
+- web.dev 上的[使用媒体绘画 API 自定义媒体通知和播放控制](https://web.developers.google.cn/articles/media-session)（2024）
