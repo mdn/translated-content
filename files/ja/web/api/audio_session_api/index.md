@@ -67,7 +67,7 @@ navigator.mediaDevices
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
