@@ -1,46 +1,55 @@
 ---
 title: Intl.PluralRules() コンストラクター
+short-title: Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
+l10n:
+  sourceCommit: e7bc0ed5466f5834641d75d416fa81886cf6b37e
 ---
 
-{{JSRef}}
-
-**`Intl.PluralRules()`** コンストラクターは {{jsxref("Intl/PluralRules", "Intl.PluralRules")}} オブジェクトを作成します。
+**`Intl.PluralRules()`** コンストラクターは {{jsxref("Intl.PluralRules")}} オブジェクトを生成します。
 
 ## 構文
 
-```js
-new Intl.PluralRules();
-new Intl.PluralRules(locales);
-new Intl.PluralRules(locales, options);
+```js-nolint
+new Intl.PluralRules()
+new Intl.PluralRules(locales)
+new Intl.PluralRules(locales, options)
 ```
+
+> [!NOTE]
+> `Intl.PluralRules()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式と解釈ついては、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
+  - : {{glossary("BCP 47 language tag", "BCP 47 言語タグ")}}または {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。`undefined` が渡された場合、または指定されたロケール識別子のいずれも対応していない場合は、ランタイムのデフォルトのロケールが使用されます。`locales` 引数の一般的な形と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 - `options` {{optional_inline}}
-  - : 以下のプロパティの全部または一部を持つオブジェクトです。
+  - : 以下のプロパティ（取得順、すべてオプション）が含まれているオブジェクトです。
     - `localeMatcher`
-      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
+  - : 使用するロケール照合アルゴリズムです。使用可能な値は `"lookup"` および `"best fit"` です。既定値は `"best fit"` です。このオプションについての情報は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `type`
       - : 使用する種別です。指定可能な値は次の通りです。
-        - "`cardinal`" は基数です（物の数量を表します）。これが既定値です。
-        - "`ordinal`" は序数です（物事の順序や順位を表します。たとえば英語では "1st", "2nd", "3rd" です）。
+        - `"cardinal"` （デフォルト）
+          - : 数値です（物の数量を表します）。
+        - `"ordinal"`
+          - : 序数です（物事の順序や順位を表します。たとえば英語では "1st", "2nd", "3rd" です）。
 
-    以下のプロパティは 2 つのグループに分けられます。
-    `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits` が 1 つのグループで、
-    `minimumSignificantDigits` と `maximumSignificantDigits` がもう一方です。第 2 のグループから 1 つでもプロパティが定義されると、第 1 のグループは無視されます。
+    `Intl.PluralRules` は `Intl.NumberFormat()` の[桁オプション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#桁オプション)にも対応しています（詳しくは `Intl.NumberFormat()` を参照してください）。
     - `minimumIntegerDigits`
-      - : 使用する整数部の最小桁数です。取りうる値は 1 から 21 までです。既定値は 1 です。
     - `minimumFractionDigits`
-      - : 使用する小数部の最小桁数です。取りうる値は 0 から 20 までです。通常の数とパーセントの形式の既定値は 0 です。通貨形式の既定値は、 [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供される下位単位の桁数です（リストに情報がない場合は 2 です）。
     - `maximumFractionDigits`
-      - : 使用する小数部の最大桁数です。取りうる値は 0 から 20 までです。通常の数の形式では既定値は `minimumFractionDigits` と 3 の大きい方です。通貨形式の既定値は、 `minimumFractionDigits` と [ISO 4217 通貨コードリスト](https://www.currency-iso.org/en/home/tables/table-a1.html)で提供される下位単位の桁数（リストに情報がない場合は 2）の大きい方です。パーセント形式の既定値は、 `minimumFractionDigits` と 0 の大きい方です。
     - `minimumSignificantDigits`
-      - : 使用する有効数字の最小桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
     - `maximumSignificantDigits`
-      - : 使用する有効数字の最大桁数です。使用可能な値は 1 から 21 までです。既定値は 21 です。
+    - `roundingPriority`
+    - `roundingIncrement`
+    - `roundingMode`
+
+    これらのオプションは、`Intl.NumberFormat` の `notation` オプションが `"standard"`、`style` が `"decimal"` であるかのように解釈されます。
+
+### 例外
+
+- {{jsxref("RangeError")}}
+  - : `locales` または `options` に無効な値が含まれている場合に発生します。
 
 ## 例
 
@@ -49,16 +58,13 @@ new Intl.PluralRules(locales, options);
 ロケールを指定しない基本的な使い方では、既定のロケールと既定のオプションで書式化された文字列が返されます。これは、例えば "dog" と "dogs" のように単数形と複数形を区別するのに便利です。
 
 ```js
-var pr = new Intl.PluralRules();
+const pr = new Intl.PluralRules();
 
-pr.select(0);
-// → 'other' （アメリカ英語のロケールの場合）
+pr.select(0); // 'other' （アメリカ英語のロケールの場合）
 
-pr.select(1);
-// → 'one' （アメリカ英語のロケールの場合）
+pr.select(1); // 'one' （アメリカ英語のロケールの場合）
 
-pr.select(2);
-// → 'other' （アメリカ英語のロケールの場合）
+pr.select(2); // 'other' （アメリカ英語のロケールの場合）
 ```
 
 ### options の使用
@@ -66,7 +72,7 @@ pr.select(2);
 引数 `options` には `type` というプロパティがあり、`ordinal` に設定することで結果をカスタマイズすることができます。これは、例えば "1st", "2nd", "3rd", "4th", "42nd" などのように、序数を把握するのに便利です。
 
 ```js
-var pr = new Intl.PluralRules("en-US", { type: "ordinal" });
+const pr = new Intl.PluralRules("en-US", { type: "ordinal" });
 
 const suffixes = new Map([
   ["one", "st"],

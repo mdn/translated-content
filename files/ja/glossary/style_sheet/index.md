@@ -1,14 +1,11 @@
 ---
-title: Stylesheet (スタイルシート)
+title: Style sheet (スタイルシート)
 slug: Glossary/Style_sheet
-original_slug: Glossary/Stylesheet
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{GlossarySidebar}}
-
-**スタイルシート** (stylesheet) は、レイアウトやウェブページまたは文書のデザインを制御する CSS ルールの集合です。*内部*スタイルシートは、ウェブ文書の {{htmlelement("head")}} 内の {{htmlelement("style")}} 要素内に置かれ、*外部*スタイルシートは独立した `.css` ファイルの中に置かれ、文書ヘッダーの {{htmlelement("link")}}　内で参照することにより文書に適用されます。
+**スタイルシート** (style sheet または stylesheet) は、レイアウトやウェブページまたは文書のデザインを制御する CSS ルールの集合です。*内部*スタイルシートは、ウェブ文書の {{htmlelement("head")}} 内の {{htmlelement("style")}} 要素内に置かれ、*外部*スタイルシートは独立した `.css` ファイルの中に置かれ、文書ヘッダーの {{htmlelement("link")}}　内で参照することにより文書に適用されます。
 
 外部スタイルシートは各ページに繰り返し CSS を適用するのではなく、一箇所から複数のページのスタイル設定を制御することができるため、一般的に好ましいとされています。
 

@@ -150,7 +150,7 @@ Pero también hay otras colecciones en JavaScript, como {{jsxref ("Set")}} y {{j
 
 ### El bucle for...of
 
-La herramienta básica para recorrer una colección es el bucle {{jsxref("statements/for...of","for...of")}}:
+La herramienta básica para recorrer una colección es el bucle {{jsxref("Statements/for...of","for...of")}}:
 
 ```js
 const cats = ["Leopardo", "Serval", "Jaguar", "Tigre", "Caracal", "León"];
@@ -227,7 +227,7 @@ console.log(filtrado);
 ## El bucle estándar for
 
 En el ejemplo anterior de "círculos de dibujo", no tiene una colección de elementos para recorrer: realmente solo desea ejecutar el mismo código 100 veces.
-En un caso como ese, debes usar el bucle {{jsxref("statements/for","for")}}.
+En un caso como ese, debes usar el bucle {{jsxref("Statements/for","for")}}.
 Tiene la siguiente sintaxis:
 
 ```js-nolint
