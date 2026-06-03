@@ -46,8 +46,7 @@ CSS 弹性盒子布局可让你：
 弹性盒子特性可能是满足一维布局需求的完美解决方案。让我们深入探讨，一探究竟！
 
 > [!NOTE]
-> Scrimba 的 [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) 入门指南 <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> Scrimba 提供了一份交互式指南，介绍了弹性盒子在 Web 中的广泛应用及其学习的重要性，并通过一个典型用例展示弹性盒子
-> 的强大功能。
+> Scrimba 的 [Flexbox](https://scrimba.com/learn-html-and-css-c0p/~017?via=mdn) 入门指南 <sup>[_MDN 学习合作伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> 提供了一份交互式指南，介绍了弹性盒子在 Web 中的广泛应用及其学习的重要性，并通过一个典型用例展示弹性盒子的强大功能。
 
 ## 一个简单的例子
 
