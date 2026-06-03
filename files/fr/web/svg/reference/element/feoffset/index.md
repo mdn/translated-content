@@ -2,7 +2,7 @@
 title: <feOffset>
 slug: Web/SVG/Reference/Element/feOffset
 l10n:
-  sourceCommit: 48afb4da7957efe672d7fd837413ee1a69a842fd
+  sourceCommit: 0cc1adcc7df8f3f7072ef5454036f449e0f923cd
 ---
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feOffset>`** permet de décaler une image en entrée par rapport à sa position courante. L'image en entrée est décalée globalement selon les valeurs définies par les attributs {{SVGAttr("dx")}} et {{SVGAttr("dy")}}.
