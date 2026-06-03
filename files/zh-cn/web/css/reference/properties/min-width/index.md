@@ -28,9 +28,7 @@ min-width: 40ch;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    改变最小宽度。
-  </div>
+  <div class="transition-all" id="example-element">改变最小宽度。</div>
 </section>
 ```
 
@@ -90,7 +88,7 @@ min-width: unset;
 - [`fit-content(<length-percentage>)`](/zh-CN/docs/Web/CSS/Reference/Values/fit-content_function)
   - : 使用 `fit-content` 公式，用指定参数替换可用空间，即 `min(max-content, max(min-content, argument))`。
 - `stretch`
-  - : 限制元素的[外边距盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)的最小宽度，使其等于其[包含区块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)的宽度。它会尝试使外边距盒子填充包含区块中的可用空间，因此在某种程度上类似于`100%`，但将结果大小应用于外边距盒子，而不是由 [box-sizing](/en-US/docs/Web/CSS/Reference/Properties/box-sizing) 确定的盒子。
+  - : 限制元素的[外边距盒子](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#盒模型的各个部分)的最小宽度，使其等于其[包含区块](/zh-CN/docs/Web/CSS/Guides/Display/Containing_block#确定包含块)的宽度。它会尝试使外边距盒子填充包含区块中的可用空间，因此在某种程度上类似于`100%`，但将结果大小应用于外边距盒子，而不是由 [box-sizing](/zh-CN/docs/Web/CSS/Reference/Properties/box-sizing) 确定的盒子。
 
     > [!NOTE]
     > 要查看浏览器对 `stretch` 值使用的别名及其实现状态，请参阅[浏览器兼容性](#浏览器兼容性)部分。
