@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 El constructor **`RegExp`** crea un objeto de expresión regular para hacer coincidir el texto con un patrón.
 
-Para ver la introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide).
+Para ver la introducción a las expresiones regulares, lee el [capítulo sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide).
 
 {{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
 
@@ -40,7 +40,7 @@ RegExp(patrón[, banderas])
 - `patrón`
   - : El texto de la expresión regular.
 
-    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir [caracteres especiales](/es/docs/Web/JavaScript/Guide/Regular_Expressions#Usar_caracteres_especiales) para que coincidan con un rango de valores más amplio que el de una cadena literal.
+    A partir de ES5, también puede ser otro objeto o `RegExp` literal (solo para las dos notaciones del constructor RegExp). Los patrones pueden incluir [caracteres especiales](/es/docs/Web/JavaScript/Guide/Regular_expressions#Usar_caracteres_especiales) para que coincidan con un rango de valores más amplio que el de una cadena literal.
 
 - `banderas`
   - : Si se especifica, `banderas` es una cadena que contiene las banderas para agregar.
@@ -94,6 +94,6 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 ## Ve también
 
-- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
+- El capítulo de [Expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions) en la [Guía de JavaScript](/es/docs/Web/JavaScript/Guide)
 - {{JSxRef("String.prototype.match()")}}
 - {{JSxRef("String.prototype.replace()")}}

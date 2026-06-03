@@ -567,7 +567,7 @@ var obj = {
 
 ### Expresiones regulares («RegExp») literales
 
-Un expresión regular literal (que se define en detalle [más adelante](/es/docs/Web/JavaScript/Guide/Regular_Expressions)) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
+Un expresión regular literal (que se define en detalle [más adelante](/es/docs/Web/JavaScript/Guide/Regular_expressions)) es un patrón incluido entre barras. El siguiente es un ejemplo de una expresión regular literal.
 
 ```js
 var re = /ab+c/;
@@ -713,7 +713,7 @@ Este capítulo se enfoca en la sintaxis básica para los tipos y las declaracion
 - [Control de flujo y manejo de errores](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - [Bucles e iteración](/es/docs/Web/JavaScript/Guide/Bucles_e_iteracion)
 - [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
-- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expresiones y operadores](/es/docs/Web/JavaScript/Guide/Expressions_and_operators)
 
 En el próximo capítulo, veremos las construcciones de control de flujo y el manejo de errores.
 
