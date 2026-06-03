@@ -23,7 +23,7 @@ console.log(moods.match(regexpEmoticons));
 
 ## Tipos
 
-La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet). No olvides editarla también, ¡gracias!
+La siguiente tabla también está duplicada en [esta hoja de referencia](/es/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet). No olvides editarla también, ¡gracias!
 
 <table class="standard-table">
     <thead>
@@ -195,12 +195,12 @@ Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emoji
 
 ## Compatibilidad del navegador
 
-Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions#Compatibilidad_del_navegador).
+Para obtener información sobre la compatibilidad del navegador, consulta la [tabla principal de compatibilidad de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions#Compatibilidad_del_navegador).
 
 ## Ve también
 
-- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions)
-  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
+- [Guía de expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_expressions)
+  - [Aserciones](/es/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [Cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
   - [Escapes de propiedades Unicode](/es/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [Grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
